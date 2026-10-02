@@ -320,4 +320,6 @@
     <string name="access_remove">Cabut</string>
     <string name="access_remove_title">Cabut akses?</string>
     <string name="access_remove_message">Busak aturan akses kanggo \"%1$s\"?</string>
+    <string name="color_picker_custom">Khusus</string>
+    <string name="color_picker_clear">Resiki</string>
 </resources>

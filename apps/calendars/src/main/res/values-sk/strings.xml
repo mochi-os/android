@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Hľadať</string>
     <string name="calendars_event_title">Názov</string>
     <string name="calendars_event_location">Poloha</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Popis</string>
     <string name="calendars_repeat_never">Nikdy</string>
     <string name="calendars_repeat_monthly">Mesačne</string>
@@ -218,4 +219,12 @@
         <item quantity="few">%1$s udalosti sa nepodarilo importovať</item>
         <item quantity="other">%1$s udalostí sa nepodarilo importovať</item>
     </plurals>
+    <string name="calendars_event_colour_value">Hodnota farby</string>
+    <string name="calendars_discard_title">Zahodiť koncept?</string>
+    <string name="calendars_discard_message">Vaše zmeny budú stratené.</string>
+    <string name="calendars_discard">Zahodiť</string>
+    <string name="calendars_event_deleted">Udalosť bola odstránená</string>
+    <string name="calendars_link_replace_title">Nahradiť adresu kalendára?</string>
+    <string name="calendars_list_unmatched">Žiadne zhody</string>
+    <string name="calendars_list_search_events">Hľadať udalosti</string>
 </resources>

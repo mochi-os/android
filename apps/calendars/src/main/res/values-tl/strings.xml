@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Maghanap</string>
     <string name="calendars_event_title">Pamagat</string>
     <string name="calendars_event_location">Lokasyon</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Paglalarawan</string>
     <string name="calendars_repeat_never">Hindi kailanman</string>
     <string name="calendars_repeat_monthly">Buwanang</string>
@@ -208,4 +209,12 @@
         <item quantity="one">Hindi ma-import ang %1$s kaganapan</item>
         <item quantity="other">Hindi ma-import ang %1$s kaganapan</item>
     </plurals>
+    <string name="calendars_event_colour_value">Halaga ng kulay</string>
+    <string name="calendars_discard_title">Itapon ang draft?</string>
+    <string name="calendars_discard_message">Mawawala ang iyong mga pagbabago.</string>
+    <string name="calendars_discard">Itapon</string>
+    <string name="calendars_event_deleted">Na-delete ang kaganapan</string>
+    <string name="calendars_link_replace_title">Palitan ang address ng kalendaryo?</string>
+    <string name="calendars_list_unmatched">Walang tugma</string>
+    <string name="calendars_list_search_events">Maghanap ng mga kaganapan</string>
 </resources>

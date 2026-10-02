@@ -325,4 +325,6 @@
     <string name="access_remove">Tynnu</string>
     <string name="access_remove_title">Tynnu mynediad?</string>
     <string name="access_remove_message">Tynnu\'r rheol mynediad ar gyfer \"%1$s\"?</string>
+    <string name="color_picker_custom">Wedi\'i addasu</string>
+    <string name="color_picker_clear">Clirio</string>
 </resources>

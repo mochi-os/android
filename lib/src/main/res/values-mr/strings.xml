@@ -320,4 +320,6 @@
     <string name="access_remove">काढा</string>
     <string name="access_remove_title">प्रवेश काढायचा?</string>
     <string name="access_remove_message">\"%1$s\" साठी प्रवेश नियम काढायचा?</string>
+    <string name="color_picker_custom">सानुकूल</string>
+    <string name="color_picker_clear">साफ करा</string>
 </resources>

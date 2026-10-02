@@ -15,6 +15,7 @@
     <string name="calendars_list_search">ស្វែងរក</string>
     <string name="calendars_event_title">ចំណងជើង</string>
     <string name="calendars_event_location">ទីតាំង</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">ការពិពណ៌នា</string>
     <string name="calendars_repeat_never">មិនដែល</string>
     <string name="calendars_repeat_monthly">ប្រចាំខែ</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">មិនអាចនាំចូលព្រឹត្តិការណ៍ %1$s បានទេ</item>
     </plurals>
+    <string name="calendars_event_colour_value">តម្លៃពណ៌</string>
+    <string name="calendars_discard_title">បោះចោលសេចក្ដីព្រាងឬ?</string>
+    <string name="calendars_discard_message">ការផ្លាស់ប្ដូររបស់អ្នកនឹងបាត់បង់។</string>
+    <string name="calendars_discard">បោះចោល</string>
+    <string name="calendars_event_deleted">បានលុបព្រឹត្តិការណ៍</string>
+    <string name="calendars_link_replace_title">ជំនួសអាសយដ្ឋានប្រតិទិនឬ?</string>
+    <string name="calendars_list_unmatched">មិនមានការផ្គូផ្គង</string>
+    <string name="calendars_list_search_events">ស្វែងរកព្រឹត្តិការណ៍</string>
 </resources>

@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Axtar</string>
     <string name="calendars_event_title">Başlıq</string>
     <string name="calendars_event_location">Yer</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Təsvir</string>
     <string name="calendars_repeat_never">Heç vaxt</string>
     <string name="calendars_repeat_monthly">Aylıq</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s tədbiri idxal etmək mümkün olmadı</item>
         <item quantity="other">%1$s tədbiri idxal etmək mümkün olmadı</item>
     </plurals>
+    <string name="calendars_event_colour_value">Rəng dəyəri</string>
+    <string name="calendars_discard_title">Qaralama atılsın?</string>
+    <string name="calendars_discard_message">Dəyişiklikləriniz itəcək.</string>
+    <string name="calendars_discard">At</string>
+    <string name="calendars_event_deleted">Tədbir silindi</string>
+    <string name="calendars_link_replace_title">Təqvim ünvanı əvəz edilsin?</string>
+    <string name="calendars_list_unmatched">Uyğunluq yoxdur</string>
+    <string name="calendars_list_search_events">Tədbir axtar</string>
 </resources>

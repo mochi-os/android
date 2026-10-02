@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Хайх</string>
     <string name="calendars_event_title">Гарчиг</string>
     <string name="calendars_event_location">Байршил</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Тайлбар</string>
     <string name="calendars_repeat_never">Хэзээ ч</string>
     <string name="calendars_repeat_monthly">Сар бүр</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s үйл явдлыг импортлох боломжгүй байлаа</item>
         <item quantity="other">%1$s үйл явдлыг импортлох боломжгүй байлаа</item>
     </plurals>
+    <string name="calendars_event_colour_value">Өнгөний утга</string>
+    <string name="calendars_discard_title">Ноорогийг хаах уу?</string>
+    <string name="calendars_discard_message">Таны өөрчлөлт алдагдана.</string>
+    <string name="calendars_discard">Хаях</string>
+    <string name="calendars_event_deleted">Үйл явдал устлаа</string>
+    <string name="calendars_link_replace_title">Хуанлийн хаягийг солих уу?</string>
+    <string name="calendars_list_unmatched">Тохирох зүйл алга</string>
+    <string name="calendars_list_search_events">Үйл явдал хайх</string>
 </resources>

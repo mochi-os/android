@@ -341,9 +341,9 @@ class CalendarsRepository @Inject constructor(
      * seconds. A 412 means the server moved on, so the event is read again
      * and the exclusion applied to that copy.
      */
-    suspend fun excludeOccurrence(event: String, occurrence: Long) {
+    suspend fun excludeOccurrence(event: String, occurrence: Long): Event {
         val current = getEvent(event)
-        try {
+        return try {
             updateEvent(event, current.etag, null, excluded(current.components, occurrence))
         } catch (_: EventChangedException) {
             val fresh = getEvent(event)
@@ -359,21 +359,35 @@ class CalendarsRepository @Inject constructor(
      * server moved on, so the event is read again and the cut applied to
      * that copy.
      */
-    suspend fun truncateEvent(event: String, occurrence: Long) {
-        suspend fun cut(current: Event) {
+    suspend fun truncateEvent(event: String, occurrence: Long): Event? {
+        suspend fun cut(current: Event): Event? {
             val components = truncated(current.components, occurrence)
             if (components == null) {
                 deleteEvent(event, current.etag)
-            } else {
-                updateEvent(event, current.etag, null, components)
+                return null
             }
+            return updateEvent(event, current.etag, null, components)
         }
-        try {
+        return try {
             cut(getEvent(event))
         } catch (_: EventChangedException) {
             cut(getEvent(event))
         }
     }
+
+    /**
+     * How to put back what the editor last deleted, held until the calendar
+     * offers it with Undo: a whole event comes back as a new one, a deleted
+     * occurrence by writing its series back as it was.
+     */
+    @Volatile private var restore: (suspend () -> Unit)? = null
+
+    fun deleted(restore: suspend () -> Unit) {
+        this.restore = restore
+    }
+
+    /** The way back from the last delete, taken once. */
+    fun restoring(): (suspend () -> Unit)? = restore.also { restore = null }
 
     // ---- preferences, links and devices ----
 

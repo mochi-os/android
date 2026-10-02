@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Cari</string>
     <string name="calendars_event_title">Judul</string>
     <string name="calendars_event_location">Lokasi</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Deskripsi</string>
     <string name="calendars_repeat_never">Tidak pernah</string>
     <string name="calendars_repeat_monthly">Bulanan</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">%1$s acara tidak dapat diimpor</item>
     </plurals>
+    <string name="calendars_event_colour_value">Nilai warna</string>
+    <string name="calendars_discard_title">Buang draf?</string>
+    <string name="calendars_discard_message">Perubahanmu akan hilang.</string>
+    <string name="calendars_discard">Buang</string>
+    <string name="calendars_event_deleted">Acara dihapus</string>
+    <string name="calendars_link_replace_title">Ganti alamat kalender?</string>
+    <string name="calendars_list_unmatched">Tidak ada yang cocok</string>
+    <string name="calendars_list_search_events">Cari acara</string>
 </resources>

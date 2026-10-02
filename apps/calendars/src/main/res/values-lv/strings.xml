@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Meklēt</string>
     <string name="calendars_event_title">Virsraksts</string>
     <string name="calendars_event_location">Atrašanās vieta</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Apraksts</string>
     <string name="calendars_repeat_never">Nekad</string>
     <string name="calendars_repeat_monthly">Mēneša</string>
@@ -215,4 +216,12 @@
         <item quantity="one">Neizdevās importēt %1$s notikumu</item>
         <item quantity="other">Neizdevās importēt %1$s notikumus</item>
     </plurals>
+    <string name="calendars_event_colour_value">Krāsas vērtība</string>
+    <string name="calendars_discard_title">Atmest melnrakstu?</string>
+    <string name="calendars_discard_message">Tavas izmaiņas tiks zaudētas.</string>
+    <string name="calendars_discard">Atmest</string>
+    <string name="calendars_event_deleted">Notikums dzēsts</string>
+    <string name="calendars_link_replace_title">Aizstāt kalendāra adresi?</string>
+    <string name="calendars_list_unmatched">Nav atbilstību</string>
+    <string name="calendars_list_search_events">Meklēt notikumus</string>
 </resources>

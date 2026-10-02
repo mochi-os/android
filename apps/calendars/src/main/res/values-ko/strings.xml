@@ -15,6 +15,7 @@
     <string name="calendars_list_search">검색</string>
     <string name="calendars_event_title">제목</string>
     <string name="calendars_event_location">위치</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">설명</string>
     <string name="calendars_repeat_never">안 함</string>
     <string name="calendars_repeat_monthly">월간</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">일정 %1$s개를 가져오지 못했어요</item>
     </plurals>
+    <string name="calendars_event_colour_value">색상 값</string>
+    <string name="calendars_discard_title">초안을 버릴까요?</string>
+    <string name="calendars_discard_message">변경한 내용이 사라져요.</string>
+    <string name="calendars_discard">버리기</string>
+    <string name="calendars_event_deleted">일정이 삭제되었어요</string>
+    <string name="calendars_link_replace_title">캘린더 주소를 교체할까요?</string>
+    <string name="calendars_list_unmatched">일치하는 항목이 없어요</string>
+    <string name="calendars_list_search_events">일정 검색</string>
 </resources>

@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Barbaadi</string>
     <string name="calendars_event_title">Mata duree</string>
     <string name="calendars_event_location">Iddoo</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Ibsa</string>
     <string name="calendars_repeat_never">Gonkumaa</string>
     <string name="calendars_repeat_monthly">Ji\'aan</string>
@@ -208,4 +209,12 @@
         <item quantity="one">Taateen %1$s alaa galchuu hin dandeenye</item>
         <item quantity="other">Taateewwan %1$s alaa galchuu hin dandeenye</item>
     </plurals>
+    <string name="calendars_event_colour_value">Gatii halluu</string>
+    <string name="calendars_discard_title">Wixinee gatuu?</string>
+    <string name="calendars_discard_message">Jijjiiramni kee ni bada.</string>
+    <string name="calendars_discard">Gati</string>
+    <string name="calendars_event_deleted">Taateen haqame</string>
+    <string name="calendars_link_replace_title">Teessoo kaalaandarii bakka buusuu barbaaddaa?</string>
+    <string name="calendars_list_unmatched">Wanti walsimu hin jiru</string>
+    <string name="calendars_list_search_events">Taateewwan barbaadi</string>
 </resources>

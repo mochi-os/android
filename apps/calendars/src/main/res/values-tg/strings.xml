@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Ҷустуҷӯ</string>
     <string name="calendars_event_title">Сарлавҳа</string>
     <string name="calendars_event_location">Маҳал</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Тавсиф</string>
     <string name="calendars_repeat_never">Ҳеҷ гоҳ</string>
     <string name="calendars_repeat_monthly">Ҳармоҳа</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s рӯйдодро ворид кардан муяссар нашуд</item>
         <item quantity="other">%1$s рӯйдодро ворид кардан муяссар нашуд</item>
     </plurals>
+    <string name="calendars_event_colour_value">Арзиши ранг</string>
+    <string name="calendars_discard_title">Сиёҳнависро партофта мешавад?</string>
+    <string name="calendars_discard_message">Тағйироти шумо гум мешавад.</string>
+    <string name="calendars_discard">Партофтан</string>
+    <string name="calendars_event_deleted">Рӯйдод нест карда шуд</string>
+    <string name="calendars_link_replace_title">Суроғаи тақвим иваз карда шавад?</string>
+    <string name="calendars_list_unmatched">Мувофиқат нест</string>
+    <string name="calendars_list_search_events">Ҷустуҷӯи рӯйдодҳо</string>
 </resources>

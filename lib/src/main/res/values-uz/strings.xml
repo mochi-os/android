@@ -321,4 +321,6 @@
     <string name="access_remove">Olib tashlash</string>
     <string name="access_remove_title">Kirishni olib tashlasinmi?</string>
     <string name="access_remove_message">\"%1$s\" uchun kirish qoidasi olib tashlansinmi?</string>
+    <string name="color_picker_custom">Maxsus</string>
+    <string name="color_picker_clear">Tozalash</string>
 </resources>

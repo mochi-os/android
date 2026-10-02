@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Keresés</string>
     <string name="calendars_event_title">Cím</string>
     <string name="calendars_event_location">Hely</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Leírás</string>
     <string name="calendars_repeat_never">Soha</string>
     <string name="calendars_repeat_monthly">Havi</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s eseményt nem sikerült importálni</item>
         <item quantity="other">%1$s eseményt nem sikerült importálni</item>
     </plurals>
+    <string name="calendars_event_colour_value">Színérték</string>
+    <string name="calendars_discard_title">Elveted a piszkozatot?</string>
+    <string name="calendars_discard_message">A módosításaid elvesznek.</string>
+    <string name="calendars_discard">Elvetés</string>
+    <string name="calendars_event_deleted">Esemény törölve</string>
+    <string name="calendars_link_replace_title">Lecseréli a naptár címét?</string>
+    <string name="calendars_list_unmatched">Nincs egyezés</string>
+    <string name="calendars_list_search_events">Események keresése</string>
 </resources>

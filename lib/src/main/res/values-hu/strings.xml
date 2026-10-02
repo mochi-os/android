@@ -320,4 +320,6 @@
     <string name="access_remove">Eltávolítás</string>
     <string name="access_remove_title">Eltávolítja a hozzáférést?</string>
     <string name="access_remove_message">Eltávolítja a(z) „%1$s” hozzáférési szabályát?</string>
+    <string name="color_picker_custom">Egyéni</string>
+    <string name="color_picker_clear">Törlés</string>
 </resources>

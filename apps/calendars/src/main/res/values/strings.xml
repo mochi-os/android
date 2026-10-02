@@ -49,6 +49,8 @@
     <string name="calendars_span_day">%1$s, %2$s to %3$s</string>
     <string name="calendars_truncated">Some events in this range are not shown.</string>
     <string name="calendars_list_empty">No events</string>
+    <string name="calendars_list_unmatched">No matches</string>
+    <string name="calendars_list_search_events">Search events</string>
     <string name="calendars_list_search">Search</string>
     <plurals name="calendars_minutes">
         <item quantity="one">%1$s minute</item>
@@ -75,6 +77,11 @@
     <string name="calendars_event_zone_finish">End time zone</string>
     <string name="calendars_event_backwards">Ends before it starts</string>
     <string name="calendars_event_location">Location</string>
+    <string name="calendars_event_colour_value">Colour value</string>
+    <string name="calendars_discard_title">Discard draft?</string>
+    <string name="calendars_discard_message">Your changes will be lost.</string>
+    <string name="calendars_discard">Discard</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_repeat">Repeat</string>
     <string name="calendars_event_reminder">Reminder</string>
     <string name="calendars_event_description">Description</string>
@@ -90,6 +97,7 @@
     <string name="calendars_scope_all">All events</string>
     <string name="calendars_event_resize">Change end time</string>
     <string name="calendars_event_moved">Event moved</string>
+    <string name="calendars_event_deleted">Event deleted</string>
     <string name="calendars_event_changed">This event changed somewhere else.</string>
     <string name="calendars_undo">Undo</string>
 
@@ -152,6 +160,7 @@
     <string name="calendars_link_exists">A link already exists for this calendar.</string>
     <string name="calendars_link_replace">Replace</string>
     <string name="calendars_link_revoke">Revoke</string>
+    <string name="calendars_link_replace_title">Replace the calendar address?</string>
     <string name="calendars_link_revoke_title">Revoke the calendar address?</string>
     <string name="calendars_link_revoke_message">Calendars subscribed to this address will stop updating.</string>
 

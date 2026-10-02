@@ -45,6 +45,9 @@ object CalendarsApp {
     /** The flag the calendar screen's back-stack entry carries once a copy is saved. */
     const val COPIED = "copied"
 
+    /** The flag it carries once the editor deleted something, which it offers to undo. */
+    const val DELETED = "deleted"
+
     /**
      * A new event, optionally starting at a moment the user picked out of a
      * grid. [allday] is what the tap chose, timed or all day, and null when
@@ -120,6 +123,7 @@ fun NavGraphBuilder.calendarsNavGraph(
         // A saved copy sets the flag on this entry on its way back, and the
         // screen says so once.
         val copied by entry.savedStateHandle.getStateFlow(CalendarsApp.COPIED, false).collectAsState()
+        val deleted by entry.savedStateHandle.getStateFlow(CalendarsApp.DELETED, false).collectAsState()
         CalendarScreen(
             onCreateCalendar = { navController.navigate(CalendarsApp.CREATE) },
             onSubscribe = { navController.navigate(CalendarsApp.SUBSCRIBE) },
@@ -132,6 +136,8 @@ fun NavGraphBuilder.calendarsNavGraph(
             onCopyOccurrence = { instance -> navController.navigate(CalendarsApp.copyOccurrence(instance)) },
             copied = copied,
             onCopiedShown = { entry.savedStateHandle[CalendarsApp.COPIED] = false },
+            deleted = deleted,
+            onDeletedShown = { entry.savedStateHandle[CalendarsApp.DELETED] = false },
             onLogout = onLogout,
         )
     }
@@ -201,7 +207,13 @@ fun NavGraphBuilder.calendarsNavGraph(
             onBack = { navController.popBackStack() },
             onSaved = { navController.popBackStack() },
             onCopied = { navController.popBackStack() },
-            onDeleted = { navController.popBackStack() },
+            onDeleted = {
+                // The calendar says so with its Undo; an editor opened from a
+                // reminder has no calendar beneath it to say it.
+                runCatching { navController.getBackStackEntry(CalendarsApp.HOME) }
+                    .getOrNull()?.savedStateHandle?.set(CalendarsApp.DELETED, true)
+                navController.popBackStack()
+            },
             onCopy = { event, occurrence, scope ->
                 navController.navigate(CalendarsApp.copyEvent(event, occurrence, scope))
             },

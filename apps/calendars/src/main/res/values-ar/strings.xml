@@ -15,6 +15,7 @@
     <string name="calendars_list_search">بحث</string>
     <string name="calendars_event_title">العنوان</string>
     <string name="calendars_event_location">الموقع</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">الوصف</string>
     <string name="calendars_repeat_never">أبداً</string>
     <string name="calendars_repeat_monthly">شهريًا</string>
@@ -236,4 +237,12 @@
         <item quantity="many">تعذّر استيراد %1$s حدثًا</item>
         <item quantity="other">تعذّر استيراد %1$s حدث</item>
     </plurals>
+    <string name="calendars_event_colour_value">قيمة اللون</string>
+    <string name="calendars_discard_title">تجاهل المسودة؟</string>
+    <string name="calendars_discard_message">ستُفقد تغييراتك.</string>
+    <string name="calendars_discard">تجاهل</string>
+    <string name="calendars_event_deleted">تم حذف الحدث</string>
+    <string name="calendars_link_replace_title">استبدال عنوان التقويم؟</string>
+    <string name="calendars_list_unmatched">لا توجد تطابقات</string>
+    <string name="calendars_list_search_events">البحث في الأحداث</string>
 </resources>

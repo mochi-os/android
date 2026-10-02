@@ -15,6 +15,7 @@
     <string name="calendars_list_search">搜尋</string>
     <string name="calendars_event_title">標題</string>
     <string name="calendars_event_location">位置</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">說明</string>
     <string name="calendars_repeat_never">永不</string>
     <string name="calendars_repeat_monthly">每月</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">%1$s 個活動無法匯入</item>
     </plurals>
+    <string name="calendars_event_colour_value">顏色值</string>
+    <string name="calendars_discard_title">捨棄草稿?</string>
+    <string name="calendars_discard_message">你的變更將會遺失。</string>
+    <string name="calendars_discard">捨棄</string>
+    <string name="calendars_event_deleted">已刪除活動</string>
+    <string name="calendars_link_replace_title">要取代行事曆網址嗎？</string>
+    <string name="calendars_list_unmatched">沒有相符項目</string>
+    <string name="calendars_list_search_events">搜尋活動</string>
 </resources>

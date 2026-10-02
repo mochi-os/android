@@ -2,5 +2,6 @@
 <resources>
     <string name="calendars_view">Voir</string>
     <string name="calendars_event_location">Emplacement</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_title_required">Le titre est obligatoire</string>
 </resources>

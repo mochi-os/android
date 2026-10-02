@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Пошук</string>
     <string name="calendars_event_title">Заголовок</string>
     <string name="calendars_event_location">Розташування</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Опис</string>
     <string name="calendars_repeat_never">Ніколи</string>
     <string name="calendars_repeat_monthly">Щомісяця</string>
@@ -222,4 +223,12 @@
         <item quantity="many">Не вдалося імпортувати %1$s подій</item>
         <item quantity="other">Не вдалося імпортувати %1$s події</item>
     </plurals>
+    <string name="calendars_event_colour_value">Значення кольору</string>
+    <string name="calendars_discard_title">Відхилити чернетку?</string>
+    <string name="calendars_discard_message">Ваші зміни буде втрачено.</string>
+    <string name="calendars_discard">Відхилити</string>
+    <string name="calendars_event_deleted">Подію видалено</string>
+    <string name="calendars_link_replace_title">Замінити адресу календаря?</string>
+    <string name="calendars_list_unmatched">Збігів немає</string>
+    <string name="calendars_list_search_events">Пошук подій</string>
 </resources>

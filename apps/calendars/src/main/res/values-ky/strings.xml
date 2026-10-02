@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Издөө</string>
     <string name="calendars_event_title">Аталышы</string>
     <string name="calendars_event_location">Жайгашкан жери</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Сүрөттөмө</string>
     <string name="calendars_repeat_never">Эч качан</string>
     <string name="calendars_repeat_monthly">Айлык</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s иш-чараны импорттоо мүмкүн болбоду</item>
         <item quantity="other">%1$s иш-чараны импорттоо мүмкүн болбоду</item>
     </plurals>
+    <string name="calendars_event_colour_value">Түстүн мааниси</string>
+    <string name="calendars_discard_title">Долбоорду таштайсызбы?</string>
+    <string name="calendars_discard_message">Өзгөртүүлөрүңүз жоголот.</string>
+    <string name="calendars_discard">Таштоо</string>
+    <string name="calendars_event_deleted">Иш-чара өчүрүлдү</string>
+    <string name="calendars_link_replace_title">Календардын дарегин алмаштыруу керекпи?</string>
+    <string name="calendars_list_unmatched">Дал келүүлөр жок</string>
+    <string name="calendars_list_search_events">Иш-чараларды издөө</string>
 </resources>

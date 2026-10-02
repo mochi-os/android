@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Lorg</string>
     <string name="calendars_event_title">Tiotal</string>
     <string name="calendars_event_location">Àite</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Tuairisgeul</string>
     <string name="calendars_repeat_never">Chaoidh</string>
     <string name="calendars_repeat_monthly">Mìosail</string>
@@ -222,4 +223,12 @@
         <item quantity="few">Cha b\' urrainn dhuinn %1$s tachartasan ion-phortadh</item>
         <item quantity="other">Cha b\' urrainn dhuinn %1$s tachartas ion-phortadh</item>
     </plurals>
+    <string name="calendars_event_colour_value">Luach an dath</string>
+    <string name="calendars_discard_title">A bheil thu airson an dreachd a thilgeil air falbh?</string>
+    <string name="calendars_discard_message">Thèid na h-atharraichean agad air chall.</string>
+    <string name="calendars_discard">Tilg air falbh</string>
+    <string name="calendars_event_deleted">Chaidh an tachartas a sguabadh às</string>
+    <string name="calendars_link_replace_title">A bheil thu airson seòladh a\' mhìosachain a chur \'na àite?</string>
+    <string name="calendars_list_unmatched">Gun mhaidseadh</string>
+    <string name="calendars_list_search_events">Lorg tachartasan</string>
 </resources>

@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Tafuta</string>
     <string name="calendars_event_title">Kichwa</string>
     <string name="calendars_event_location">Eneo</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Maelezo</string>
     <string name="calendars_repeat_never">Kamwe</string>
     <string name="calendars_repeat_monthly">Kila mwezi</string>
@@ -208,4 +209,12 @@
         <item quantity="one">Tukio %1$s halikuweza kuingizwa</item>
         <item quantity="other">Matukio %1$s hayakuweza kuingizwa</item>
     </plurals>
+    <string name="calendars_event_colour_value">Thamani ya rangi</string>
+    <string name="calendars_discard_title">Tupa rasimu?</string>
+    <string name="calendars_discard_message">Mabadiliko yako yatapotea.</string>
+    <string name="calendars_discard">Tupa</string>
+    <string name="calendars_event_deleted">Tukio limefutwa</string>
+    <string name="calendars_link_replace_title">Je, ubadilishe anwani ya kalenda?</string>
+    <string name="calendars_list_unmatched">Hakuna zinazolingana</string>
+    <string name="calendars_list_search_events">Tafuta matukio</string>
 </resources>

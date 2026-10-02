@@ -320,4 +320,6 @@
     <string name="access_remove">அகற்று</string>
     <string name="access_remove_title">அணுகலை அகற்றவா?</string>
     <string name="access_remove_message">\"%1$s\" க்கான அணுகல் விதியை அகற்றவா?</string>
+    <string name="color_picker_custom">தனிப்பயன்</string>
+    <string name="color_picker_clear">அழி</string>
 </resources>

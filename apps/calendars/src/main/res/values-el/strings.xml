@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Αναζήτηση</string>
     <string name="calendars_event_title">Τίτλος</string>
     <string name="calendars_event_location">Τοποθεσία</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Περιγραφή</string>
     <string name="calendars_repeat_never">Ποτέ</string>
     <string name="calendars_repeat_monthly">Μηνιαία</string>
@@ -208,4 +209,12 @@
         <item quantity="one">Δεν ήταν δυνατή η εισαγωγή %1$s συμβάντος</item>
         <item quantity="other">Δεν ήταν δυνατή η εισαγωγή %1$s συμβάντων</item>
     </plurals>
+    <string name="calendars_event_colour_value">Τιμή χρώματος</string>
+    <string name="calendars_discard_title">Απόρριψη πρόχειρου;</string>
+    <string name="calendars_discard_message">Οι αλλαγές σας θα χαθούν.</string>
+    <string name="calendars_discard">Απόρριψη</string>
+    <string name="calendars_event_deleted">Το συμβάν διαγράφηκε</string>
+    <string name="calendars_link_replace_title">Αντικατάσταση της διεύθυνσης του ημερολογίου;</string>
+    <string name="calendars_list_unmatched">Καμία αντιστοιχία</string>
+    <string name="calendars_list_search_events">Αναζήτηση συμβάντων</string>
 </resources>

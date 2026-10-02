@@ -320,4 +320,6 @@
     <string name="access_remove">Hapus</string>
     <string name="access_remove_title">Hapus akses?</string>
     <string name="access_remove_message">Hapus aturan akses untuk \"%1$s\"?</string>
+    <string name="color_picker_custom">Kustom</string>
+    <string name="color_picker_clear">Bersihkan</string>
 </resources>

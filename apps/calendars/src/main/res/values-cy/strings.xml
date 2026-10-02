@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Chwilio</string>
     <string name="calendars_event_title">Teitl</string>
     <string name="calendars_event_location">Lleoliad</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Disgrifiad</string>
     <string name="calendars_repeat_never">Byth</string>
     <string name="calendars_repeat_monthly">Misol</string>
@@ -236,4 +237,12 @@
         <item quantity="many">Methu mewnforio %1$s digwyddiad</item>
         <item quantity="other">Methu mewnforio %1$s digwyddiad</item>
     </plurals>
+    <string name="calendars_event_colour_value">Gwerth y lliw</string>
+    <string name="calendars_discard_title">Hepgor y drafft?</string>
+    <string name="calendars_discard_message">Bydd eich newidiadau\'n cael eu colli.</string>
+    <string name="calendars_discard">Hepgor</string>
+    <string name="calendars_event_deleted">Digwyddiad wedi\'i ddileu</string>
+    <string name="calendars_link_replace_title">Newid cyfeiriad y calendr?</string>
+    <string name="calendars_list_unmatched">Dim cyfatebiaeth</string>
+    <string name="calendars_list_search_events">Chwilio digwyddiadau</string>
 </resources>

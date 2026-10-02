@@ -15,6 +15,7 @@
     <string name="calendars_list_search">جست‌وجو</string>
     <string name="calendars_event_title">عنوان</string>
     <string name="calendars_event_location">مکان</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">توضیحات</string>
     <string name="calendars_repeat_never">هرگز</string>
     <string name="calendars_repeat_monthly">ماهانه</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s رویداد وارد نشد</item>
         <item quantity="other">%1$s رویداد وارد نشد</item>
     </plurals>
+    <string name="calendars_event_colour_value">مقدار رنگ</string>
+    <string name="calendars_discard_title">پیش‌نویس دور انداخته شود؟</string>
+    <string name="calendars_discard_message">تغییرات شما از بین خواهد رفت.</string>
+    <string name="calendars_discard">دور انداختن</string>
+    <string name="calendars_event_deleted">رویداد حذف شد</string>
+    <string name="calendars_link_replace_title">نشانی تقویم جایگزین شود؟</string>
+    <string name="calendars_list_unmatched">موردی منطبق نیست</string>
+    <string name="calendars_list_search_events">جست‌وجوی رویدادها</string>
 </resources>

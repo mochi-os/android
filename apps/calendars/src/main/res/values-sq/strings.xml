@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Kërko</string>
     <string name="calendars_event_title">Titulli</string>
     <string name="calendars_event_location">Vendndodhja</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Përshkrimi</string>
     <string name="calendars_repeat_never">Asnjëherë</string>
     <string name="calendars_repeat_monthly">Mujore</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s ngjarje nuk mund të importohej</item>
         <item quantity="other">%1$s ngjarje nuk mund të importoheshin</item>
     </plurals>
+    <string name="calendars_event_colour_value">Vlera e ngjyrës</string>
+    <string name="calendars_discard_title">Ta hedhësh draftin?</string>
+    <string name="calendars_discard_message">Ndryshimet e tua do të humbasin.</string>
+    <string name="calendars_discard">Hidh</string>
+    <string name="calendars_event_deleted">Ngjarja u fshi</string>
+    <string name="calendars_link_replace_title">Të zëvendësohet adresa e kalendarit?</string>
+    <string name="calendars_list_unmatched">Asnjë përputhje</string>
+    <string name="calendars_list_search_events">Kërko ngjarje</string>
 </resources>

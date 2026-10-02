@@ -20,6 +20,7 @@ object VisibilityStore {
 
     private const val PREFERENCES = "mochi_calendars_visibility"
     private const val HIDDEN = "hidden"
+    private const val WORKWEEK = "workweek"
 
     /** The calendars the user has hidden. */
     fun hidden(context: Context): Set<String> =
@@ -27,6 +28,17 @@ object VisibilityStore {
 
     fun hidden(context: Context, value: Set<String>) {
         preferences(context).edit().putStringSet(HIDDEN, value).apply()
+    }
+
+    /**
+     * Whether the week view shows the working days only, kept per device as
+     * the web keeps it per browser: the same viewing choice as a hidden
+     * calendar, and off until it is turned on here.
+     */
+    fun workweek(context: Context): Boolean = preferences(context).getBoolean(WORKWEEK, false)
+
+    fun workweek(context: Context, value: Boolean) {
+        preferences(context).edit().putBoolean(WORKWEEK, value).apply()
     }
 
     /** Whether a calendar is shown. */

@@ -320,4 +320,6 @@
     <string name="access_remove">Ondoa</string>
     <string name="access_remove_title">Ondoa ufikiaji?</string>
     <string name="access_remove_message">Ondoa sheria ya ufikiaji ya \"%1$s\"?</string>
+    <string name="color_picker_custom">Maalum</string>
+    <string name="color_picker_clear">Futa</string>
 </resources>

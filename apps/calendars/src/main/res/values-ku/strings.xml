@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Lêger</string>
     <string name="calendars_event_title">Sernav</string>
     <string name="calendars_event_location">Cih</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Şirove</string>
     <string name="calendars_repeat_never">Tu car</string>
     <string name="calendars_repeat_monthly">Mehane</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s bûyer nehate hawirdekirin</item>
         <item quantity="other">%1$s bûyer nehatin hawirdekirin</item>
     </plurals>
+    <string name="calendars_event_colour_value">Nirxa rengê</string>
+    <string name="calendars_discard_title">Reşnivîs bê avêtin?</string>
+    <string name="calendars_discard_message">Guhertinên te dê winda bibin.</string>
+    <string name="calendars_discard">Bavêje</string>
+    <string name="calendars_event_deleted">Bûyer hate jêbirin</string>
+    <string name="calendars_link_replace_title">Navnîşana salnameyê were guhertin?</string>
+    <string name="calendars_list_unmatched">Tu lihevhatin tune</string>
+    <string name="calendars_list_search_events">Li bûyeran bigere</string>
 </resources>

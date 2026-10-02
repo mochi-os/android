@@ -320,4 +320,6 @@
     <string name="access_remove">Yọ kúrò</string>
     <string name="access_remove_title">Yọ àyè kúrò?</string>
     <string name="access_remove_message">Yọ òfin ìwọlé fún \"%1$s\" kúrò?</string>
+    <string name="color_picker_custom">Àdáni</string>
+    <string name="color_picker_clear">Pa rẹ́</string>
 </resources>

@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Търсене</string>
     <string name="calendars_event_title">Заглавие</string>
     <string name="calendars_event_location">Местоположение</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Описание</string>
     <string name="calendars_repeat_never">Никога</string>
     <string name="calendars_repeat_monthly">Месечно</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s събитие не можа да бъде импортирано</item>
         <item quantity="other">%1$s събития не можаха да бъдат импортирани</item>
     </plurals>
+    <string name="calendars_event_colour_value">Стойност на цвета</string>
+    <string name="calendars_discard_title">Да се отхвърли ли черновата?</string>
+    <string name="calendars_discard_message">Промените ви ще бъдат загубени.</string>
+    <string name="calendars_discard">Отхвърли</string>
+    <string name="calendars_event_deleted">Събитието е изтрито</string>
+    <string name="calendars_link_replace_title">Да се замени ли адресът на календара?</string>
+    <string name="calendars_list_unmatched">Няма съвпадения</string>
+    <string name="calendars_list_search_events">Търси събития</string>
 </resources>

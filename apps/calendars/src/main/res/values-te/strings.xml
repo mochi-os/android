@@ -15,6 +15,7 @@
     <string name="calendars_list_search">శోధన</string>
     <string name="calendars_event_title">శీర్షిక</string>
     <string name="calendars_event_location">స్థానం</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">వివరణ</string>
     <string name="calendars_repeat_never">ఎప్పుడూ లేదు</string>
     <string name="calendars_repeat_monthly">నెలవారీ</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s ఈవెంట్‌ను దిగుమతి చేయలేకపోయాం</item>
         <item quantity="other">%1$s ఈవెంట్‌లను దిగుమతి చేయలేకపోయాం</item>
     </plurals>
+    <string name="calendars_event_colour_value">రంగు విలువ</string>
+    <string name="calendars_discard_title">డ్రాఫ్ట్‌ను విస్మరించాలా?</string>
+    <string name="calendars_discard_message">మీ మార్పులు పోతాయి.</string>
+    <string name="calendars_discard">విస్మరించు</string>
+    <string name="calendars_event_deleted">ఈవెంట్ తొలగించబడింది</string>
+    <string name="calendars_link_replace_title">క్యాలెండర్ చిరునామాను భర్తీ చేయాలా?</string>
+    <string name="calendars_list_unmatched">సరిపోలికలు లేవు</string>
+    <string name="calendars_list_search_events">ఈవెంట్‌లను శోధించండి</string>
 </resources>

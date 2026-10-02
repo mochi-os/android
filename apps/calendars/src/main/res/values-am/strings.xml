@@ -15,6 +15,7 @@
     <string name="calendars_list_search">ይፈልጉ</string>
     <string name="calendars_event_title">ርዕስ</string>
     <string name="calendars_event_location">አካባቢ</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">መግለጫ</string>
     <string name="calendars_repeat_never">በፍፁም</string>
     <string name="calendars_repeat_monthly">ወርሃዊ</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s ክስተት ማስገባት አልተቻለም</item>
         <item quantity="other">%1$s ክስተቶችን ማስገባት አልተቻለም</item>
     </plurals>
+    <string name="calendars_event_colour_value">የቀለም እሴት</string>
+    <string name="calendars_discard_title">ረቂቁን ይጣል?</string>
+    <string name="calendars_discard_message">ለውጦችዎ ይጠፋሉ።</string>
+    <string name="calendars_discard">ጣል</string>
+    <string name="calendars_event_deleted">ክስተት ተሰርዟል</string>
+    <string name="calendars_link_replace_title">የቀን መቁጠሪያ አድራሻው ይተካ?</string>
+    <string name="calendars_list_unmatched">ምንም ተዛማጅ የለም</string>
+    <string name="calendars_list_search_events">ክስተቶችን ይፈልጉ</string>
 </resources>

@@ -14,4 +14,12 @@
     <string name="calendars_polled_synced">Agenda gesynchroniseerd</string>
     <string name="calendars_link_revoke_title">Agenda-adres intrekken?</string>
     <string name="calendars_link_revoke_message">Agenda\'s die op dit adres geabonneerd zijn, worden niet meer bijgewerkt.</string>
+    <string name="calendars_event_colour_value">Kleurwaarde</string>
+    <string name="calendars_discard_title">Klad verwerpen?</string>
+    <string name="calendars_discard_message">Uw wijzigingen gaan verloren.</string>
+    <string name="calendars_discard">Verwerpen</string>
+    <string name="calendars_event_deleted">Afspraak verwijderd</string>
+    <string name="calendars_link_replace_title">Agenda-adres vervangen?</string>
+    <string name="calendars_list_unmatched">Geen overeenkomsten</string>
+    <string name="calendars_list_search_events">Afspraken zoeken</string>
 </resources>

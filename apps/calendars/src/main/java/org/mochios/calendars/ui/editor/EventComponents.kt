@@ -56,6 +56,10 @@ data class EventForm(
     val allday: Boolean = false,
     val zone: Zone = Zone(),
     val location: String = "",
+    /** The event's own colour, its `COLOR`; blank draws it in its calendar's. */
+    val colour: String = "",
+    /** A web address the event carries, its `URL`. */
+    val url: String = "",
     val description: String = "",
     val original: String = "",
     val recurrence: Recurrence = Recurrence(),
@@ -146,7 +150,7 @@ private fun zoneOf(name: String): ZoneId =
 
 /** The properties the editor owns; every other one is carried through. */
 private val MANAGED = setOf(
-    "SUMMARY", "LOCATION", "DESCRIPTION", "DTSTART", "DTEND", "DURATION",
+    "SUMMARY", "LOCATION", "COLOR", "URL", "DESCRIPTION", "DTSTART", "DTEND", "DURATION",
     "RRULE", "RDATE", "EXDATE", "RECURRENCE-ID",
 )
 
@@ -219,6 +223,8 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
         allday = allday,
         zone = written(component, user),
         location = component.value("LOCATION"),
+        colour = component.value("COLOR"),
+        url = component.value("URL"),
         description = descriptionText(component.value("DESCRIPTION")),
         original = component.value("DESCRIPTION"),
         recurrence = recurrence(component.value("RRULE")),
@@ -269,6 +275,22 @@ fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: 
     val override = events.firstOrNull { it.exception() && matches(it, occurrence) }
     val own = if (override != null) draft(override, user) else draft(master, user, occurrence)
     return own.copy(recurrence = Recurrence())
+}
+
+/**
+ * The form a copy opens on when the form it is copied from holds edits, as
+ * the web editor builds it: [Scope.ONE] is the form as it stands without its
+ * repeat, the whole series is the form moved back onto the series' own start,
+ * as saving it to the series would. Either is a new event, of no occurrence.
+ */
+fun duplicate(form: EventForm, scope: Scope): EventForm {
+    val moved = if (scope != Scope.ONE && form.occurrence > 0 && form.series > 0) {
+        shifted(form, form.series - form.occurrence)
+    } else {
+        form
+    }
+    val recurrence = if (scope == Scope.ONE) Recurrence() else form.recurrence
+    return moved.copy(recurrence = recurrence, occurrence = 0, series = 0)
 }
 
 /**
@@ -561,6 +583,8 @@ private fun component(
     properties.add(CalendarsMapping.stamp("DTSTART", start * 1000, zone, form.allday))
     properties.add(CalendarsMapping.stamp("DTEND", finish * 1000, ends, form.allday))
     if (form.location.isNotBlank()) properties.add(property("LOCATION", form.location.trim()))
+    if (form.colour.isNotBlank()) properties.add(property("COLOR", form.colour.trim()))
+    if (form.url.isNotBlank()) properties.add(property("URL", form.url.trim()))
     val description = if (form.description == descriptionText(form.original)) form.original else form.description.trim()
     if (description.isNotBlank()) properties.add(property("DESCRIPTION", description))
     if (recurrence) {

@@ -15,6 +15,7 @@
     <string name="calendars_list_search">തിരയുക</string>
     <string name="calendars_event_title">തലക്കെട്ട്</string>
     <string name="calendars_event_location">ലൊക്കേഷൻ</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">വിവരണം</string>
     <string name="calendars_repeat_never">ഒരിക്കലുമില്ല</string>
     <string name="calendars_repeat_monthly">പ്രതിമാസ</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s ഇവന്റ് ഇറക്കുമതി ചെയ്യാനായില്ല</item>
         <item quantity="other">%1$s ഇവന്റുകൾ ഇറക്കുമതി ചെയ്യാനായില്ല</item>
     </plurals>
+    <string name="calendars_event_colour_value">നിറത്തിന്റെ മൂല്യം</string>
+    <string name="calendars_discard_title">ഡ്രാഫ്റ്റ് ഉപേക്ഷിക്കണോ?</string>
+    <string name="calendars_discard_message">നിങ്ങളുടെ മാറ്റങ്ങൾ നഷ്ടപ്പെടും.</string>
+    <string name="calendars_discard">ഉപേക്ഷിക്കുക</string>
+    <string name="calendars_event_deleted">ഇവന്റ് ഇല്ലാതാക്കി</string>
+    <string name="calendars_link_replace_title">കലണ്ടറിന്റെ വിലാസം മാറ്റിസ്ഥാപിക്കണോ?</string>
+    <string name="calendars_list_unmatched">പൊരുത്തങ്ങളൊന്നുമില്ല</string>
+    <string name="calendars_list_search_events">ഇവന്റുകൾ തിരയുക</string>
 </resources>

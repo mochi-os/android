@@ -321,4 +321,6 @@
     <string name="access_remove">Retirer</string>
     <string name="access_remove_title">Supprimer l\'accès ?</string>
     <string name="access_remove_message">Supprimer la règle d\'accès pour « %1$s » ?</string>
+    <string name="color_picker_custom">Personnalisé</string>
+    <string name="color_picker_clear">Effacer</string>
 </resources>

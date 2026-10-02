@@ -320,4 +320,6 @@
     <string name="access_remove">ລຶບອອກ</string>
     <string name="access_remove_title">ລຶບການເຂົ້າເຖິງ?</string>
     <string name="access_remove_message">ລຶບກົດການເຂົ້າເຖິງສຳລັບ \"%1$s\" ບໍ?</string>
+    <string name="color_picker_custom">ກຳນົດເອງ</string>
+    <string name="color_picker_clear">ລ້າງ</string>
 </resources>

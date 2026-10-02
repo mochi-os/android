@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Hledat</string>
     <string name="calendars_event_title">Název</string>
     <string name="calendars_event_location">Umístění</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Popis</string>
     <string name="calendars_repeat_never">Nikdy</string>
     <string name="calendars_repeat_monthly">Měsíčně</string>
@@ -215,4 +216,12 @@
         <item quantity="few">%1$s události se nepodařilo importovat</item>
         <item quantity="other">%1$s událostí se nepodařilo importovat</item>
     </plurals>
+    <string name="calendars_event_colour_value">Hodnota barvy</string>
+    <string name="calendars_discard_title">Zahodit koncept?</string>
+    <string name="calendars_discard_message">Vaše změny budou ztraceny.</string>
+    <string name="calendars_discard">Zahodit</string>
+    <string name="calendars_event_deleted">Událost smazána</string>
+    <string name="calendars_link_replace_title">Nahradit adresu kalendáře?</string>
+    <string name="calendars_list_unmatched">Žádné shody</string>
+    <string name="calendars_list_search_events">Hledat události</string>
 </resources>

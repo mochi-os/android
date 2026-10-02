@@ -28,9 +28,12 @@ import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -514,7 +517,39 @@ fun AgendaList(
     LaunchedEffect(atHead, state.paging, state.earliest, state.bounds) {
         if (atHead && !state.paging) viewModel.earlier()
     }
+    // A search that has matched nothing so far keeps loading later pages, as
+    // the web's list does, until something matches or there is none left;
+    // nothing to scroll means nothing else would ask for them.
+    val searched = searched(search, matched.size, state.paging, viewModel.hasLater(state))
+    LaunchedEffect(searched, state.paging, state.latest, state.bounds) {
+        if (searched == Searched.LOADING && !state.paging && viewModel.hasLater(state)) viewModel.later()
+    }
 
+    if (searched == Searched.LOADING) {
+        Paging()
+        return
+    }
+    if (searched == Searched.NONE) {
+        // Matched nothing in everything there is to load, which is not the
+        // same as a calendar with nothing on it.
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Icon(
+                Icons.Outlined.Search,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Text(
+                text = stringResource(R.string.calendars_list_unmatched),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        return
+    }
     if (grouped.isEmpty() && !state.paging) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             Text(
@@ -552,6 +587,20 @@ fun AgendaList(
             item(key = "later") { Paging() }
         }
     }
+}
+
+/** What the list shows for a search. */
+internal enum class Searched { MATCHES, LOADING, NONE }
+
+/**
+ * What the list shows for [search]: its [matches], or with none yet a
+ * spinner while a page is [paging] or [later] ones may still match, and
+ * "No matches" once there are none left to load. No search shows the list.
+ */
+internal fun searched(search: String, matches: Int, paging: Boolean, later: Boolean): Searched = when {
+    search.isEmpty() || matches > 0 -> Searched.MATCHES
+    paging || later -> Searched.LOADING
+    else -> Searched.NONE
 }
 
 /** The spinner at either end of the list while a page is on its way. */

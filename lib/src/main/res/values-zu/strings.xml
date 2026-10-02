@@ -320,4 +320,6 @@
     <string name="access_remove">Khipha</string>
     <string name="access_remove_title">Khipha ukufinyelela?</string>
     <string name="access_remove_message">Susa umthetho wokufinyelela we-\"%1$s\"?</string>
+    <string name="color_picker_custom">Okuzenzelwe</string>
+    <string name="color_picker_clear">Sula</string>
 </resources>

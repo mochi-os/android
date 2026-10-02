@@ -15,6 +15,7 @@
     <string name="calendars_list_search">ਖੋਜ</string>
     <string name="calendars_event_title">ਸਿਰਲੇਖ</string>
     <string name="calendars_event_location">ਟਿਕਾਣਾ</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">ਵੇਰਵਾ</string>
     <string name="calendars_repeat_never">ਕਦੇ ਨਹੀਂ</string>
     <string name="calendars_repeat_monthly">ਮਾਸਿਕ</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s ਇਵੈਂਟ ਆਯਾਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</item>
         <item quantity="other">%1$s ਇਵੈਂਟ ਆਯਾਤ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕੇ</item>
     </plurals>
+    <string name="calendars_event_colour_value">ਰੰਗ ਦਾ ਮੁੱਲ</string>
+    <string name="calendars_discard_title">ਡਰਾਫਟ ਛੱਡ ਦੇਣਾ ਹੈ?</string>
+    <string name="calendars_discard_message">ਤੁਹਾਡੀਆਂ ਤਬਦੀਲੀਆਂ ਗੁੰਮ ਹੋ ਜਾਣਗੀਆਂ।</string>
+    <string name="calendars_discard">ਛੱਡ ਦਿਓ</string>
+    <string name="calendars_event_deleted">ਇਵੈਂਟ ਮਿਟਾਇਆ ਗਿਆ</string>
+    <string name="calendars_link_replace_title">ਕੈਲੰਡਰ ਦਾ ਪਤਾ ਬਦਲਣਾ ਹੈ?</string>
+    <string name="calendars_list_unmatched">ਕੋਈ ਮੇਲ ਨਹੀਂ</string>
+    <string name="calendars_list_search_events">ਇਵੈਂਟ ਖੋਜੋ</string>
 </resources>

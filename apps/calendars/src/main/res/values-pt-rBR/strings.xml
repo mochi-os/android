@@ -28,4 +28,12 @@
     <string name="calendars_link_revoke_title">Revogar o endereço do calendário?</string>
     <string name="calendars_link_revoke_message">Os calendários inscritos neste endereço deixarão de ser atualizados.</string>
     <string name="calendars_export_failed">Não foi possível salvar a exportação</string>
+    <string name="calendars_event_colour_value">Valor da cor</string>
+    <string name="calendars_discard_title">Descartar rascunho?</string>
+    <string name="calendars_discard_message">Suas alterações serão perdidas.</string>
+    <string name="calendars_discard">Descartar</string>
+    <string name="calendars_event_deleted">Evento excluído</string>
+    <string name="calendars_link_replace_title">Substituir o endereço do calendário?</string>
+    <string name="calendars_list_unmatched">Nenhuma correspondência</string>
+    <string name="calendars_list_search_events">Pesquisar eventos</string>
 </resources>

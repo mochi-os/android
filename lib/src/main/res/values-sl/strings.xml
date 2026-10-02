@@ -322,4 +322,6 @@
     <string name="access_remove">Odstrani</string>
     <string name="access_remove_title">Odstrani dostop?</string>
     <string name="access_remove_message">Ali želite odstraniti pravilo dostopa za »%1$s«?</string>
+    <string name="color_picker_custom">Po meri</string>
+    <string name="color_picker_clear">Počisti</string>
 </resources>

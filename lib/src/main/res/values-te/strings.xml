@@ -320,4 +320,6 @@
     <string name="access_remove">తొలగించండి</string>
     <string name="access_remove_title">యాక్సెస్‌ను తొలగించాలా?</string>
     <string name="access_remove_message">\"%1$s\" కోసం యాక్సెస్ నియమాన్ని తీసివేయాలా?</string>
+    <string name="color_picker_custom">అనుకూల</string>
+    <string name="color_picker_clear">క్లియర్ చేయండి</string>
 </resources>

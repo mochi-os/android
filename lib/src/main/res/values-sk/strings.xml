@@ -322,4 +322,6 @@
     <string name="access_remove">Odstrániť</string>
     <string name="access_remove_title">Odstrániť prístup?</string>
     <string name="access_remove_message">Odstrániť pravidlo prístupu pre „%1$s“?</string>
+    <string name="color_picker_custom">Vlastné</string>
+    <string name="color_picker_clear">Vymazať</string>
 </resources>

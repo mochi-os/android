@@ -15,6 +15,7 @@
     <string name="calendars_list_search">தேடு</string>
     <string name="calendars_event_title">தலைப்பு</string>
     <string name="calendars_event_location">இடம்</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">விளக்கம்</string>
     <string name="calendars_repeat_never">ஒருபோதும் இல்லை</string>
     <string name="calendars_repeat_monthly">மாதாந்திர</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s நிகழ்வை இறக்குமதி செய்ய முடியவில்லை</item>
         <item quantity="other">%1$s நிகழ்வுகளை இறக்குமதி செய்ய முடியவில்லை</item>
     </plurals>
+    <string name="calendars_event_colour_value">நிற மதிப்பு</string>
+    <string name="calendars_discard_title">வரைவை நிராகரிக்கவா?</string>
+    <string name="calendars_discard_message">உங்கள் மாற்றங்கள் இழக்கப்படும்.</string>
+    <string name="calendars_discard">நிராகரி</string>
+    <string name="calendars_event_deleted">நிகழ்வு நீக்கப்பட்டது</string>
+    <string name="calendars_link_replace_title">நாட்காட்டி முகவரியை மாற்றவா?</string>
+    <string name="calendars_list_unmatched">பொருத்தங்கள் இல்லை</string>
+    <string name="calendars_list_search_events">நிகழ்வுகளைத் தேடு</string>
 </resources>

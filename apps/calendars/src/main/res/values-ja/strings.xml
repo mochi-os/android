@@ -15,6 +15,7 @@
     <string name="calendars_list_search">検索</string>
     <string name="calendars_event_title">タイトル</string>
     <string name="calendars_event_location">場所</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">説明</string>
     <string name="calendars_repeat_never">なし</string>
     <string name="calendars_repeat_monthly">月額</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">%1$s 件の予定をインポートできませんでした</item>
     </plurals>
+    <string name="calendars_event_colour_value">色の値</string>
+    <string name="calendars_discard_title">下書きを破棄しますか？</string>
+    <string name="calendars_discard_message">変更内容は失われます。</string>
+    <string name="calendars_discard">破棄</string>
+    <string name="calendars_event_deleted">予定を削除しました</string>
+    <string name="calendars_link_replace_title">カレンダーのアドレスを置き換えますか？</string>
+    <string name="calendars_list_unmatched">一致するものはありません</string>
+    <string name="calendars_list_search_events">予定を検索</string>
 </resources>

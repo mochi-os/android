@@ -323,4 +323,6 @@
     <string name="access_remove">Bain</string>
     <string name="access_remove_title">Bain rochtain?</string>
     <string name="access_remove_message">An bhfuil fonn ort riail rochtana \"%1$s\" a bhaint?</string>
+    <string name="color_picker_custom">Saincheaptha</string>
+    <string name="color_picker_clear">Glan</string>
 </resources>

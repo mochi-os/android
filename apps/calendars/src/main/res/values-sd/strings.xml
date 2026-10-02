@@ -15,6 +15,7 @@
     <string name="calendars_list_search">ڳوليو</string>
     <string name="calendars_event_title">عنوان</string>
     <string name="calendars_event_location">هنڌ</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">تفصيل</string>
     <string name="calendars_repeat_never">ڪڏهن به نه</string>
     <string name="calendars_repeat_monthly">ماهوار</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s واقعو درآمد نه ٿي سگهيو</item>
         <item quantity="other">%1$s واقعا درآمد نه ٿي سگهيا</item>
     </plurals>
+    <string name="calendars_event_colour_value">رنگ جي قيمت</string>
+    <string name="calendars_discard_title">مسودو رد ڪجي؟</string>
+    <string name="calendars_discard_message">توهان جون تبديليون ضايع ٿي وينديون.</string>
+    <string name="calendars_discard">رد ڪريو</string>
+    <string name="calendars_event_deleted">واقعو ختم ٿي ويو</string>
+    <string name="calendars_link_replace_title">ڪئلينڊر جو پتو بدلجي؟</string>
+    <string name="calendars_list_unmatched">ڪو ميل ناهي</string>
+    <string name="calendars_list_search_events">واقعا ڳوليو</string>
 </resources>

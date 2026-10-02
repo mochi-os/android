@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Ieškoti</string>
     <string name="calendars_event_title">Pavadinimas</string>
     <string name="calendars_event_location">Vieta</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Aprašymas</string>
     <string name="calendars_repeat_never">Niekada</string>
     <string name="calendars_repeat_monthly">Mėnesinis</string>
@@ -218,4 +219,12 @@
         <item quantity="few">Nepavyko importuoti %1$s įvykių</item>
         <item quantity="other">Nepavyko importuoti %1$s įvykių</item>
     </plurals>
+    <string name="calendars_event_colour_value">Spalvos reikšmė</string>
+    <string name="calendars_discard_title">Atmesti juodraštį?</string>
+    <string name="calendars_discard_message">Tavo pakeitimai bus prarasti.</string>
+    <string name="calendars_discard">Atmesti</string>
+    <string name="calendars_event_deleted">Įvykis ištrintas</string>
+    <string name="calendars_link_replace_title">Pakeisti kalendoriaus adresą?</string>
+    <string name="calendars_list_unmatched">Atitikmenų nėra</string>
+    <string name="calendars_list_search_events">Ieškoti įvykių</string>
 </resources>

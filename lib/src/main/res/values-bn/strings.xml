@@ -320,4 +320,6 @@
     <string name="access_remove">সরান</string>
     <string name="access_remove_title">অ্যাক্সেস সরাবেন?</string>
     <string name="access_remove_message">\"%1$s\" এর জন্য অ্যাক্সেস নিয়ম সরাবেন?</string>
+    <string name="color_picker_custom">কাস্টম</string>
+    <string name="color_picker_clear">পরিষ্কার করুন</string>
 </resources>

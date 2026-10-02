@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Cuardach</string>
     <string name="calendars_event_title">Teideal</string>
     <string name="calendars_event_location">Suíomh</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Cur síos</string>
     <string name="calendars_repeat_never">Riamh</string>
     <string name="calendars_repeat_monthly">Míosúil</string>
@@ -229,4 +230,12 @@
         <item quantity="many">Níorbh fhéidir %1$s imeacht a iompórtáil</item>
         <item quantity="other">Níorbh fhéidir %1$s imeacht a iompórtáil</item>
     </plurals>
+    <string name="calendars_event_colour_value">Luach an datha</string>
+    <string name="calendars_discard_title">An gcuirfear an dréacht i leataobh?</string>
+    <string name="calendars_discard_message">Caillfear do chuid athruithe.</string>
+    <string name="calendars_discard">Cuir i leataobh</string>
+    <string name="calendars_event_deleted">Imeacht scriosta</string>
+    <string name="calendars_link_replace_title">Seoladh an fhéilire a athchur?</string>
+    <string name="calendars_list_unmatched">Gan meaitseáil</string>
+    <string name="calendars_list_search_events">Cuardaigh imeachtaí</string>
 </resources>

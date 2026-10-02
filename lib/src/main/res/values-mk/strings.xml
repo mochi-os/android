@@ -320,4 +320,6 @@
     <string name="access_remove">Отстрани</string>
     <string name="access_remove_title">Да го отстраниме пристапот?</string>
     <string name="access_remove_message">Да се отстрани правилото за пристап за „%1$s“?</string>
+    <string name="color_picker_custom">Прилагодено</string>
+    <string name="color_picker_clear">Исчисти</string>
 </resources>

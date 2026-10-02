@@ -321,4 +321,6 @@
     <string name="access_remove">Жою</string>
     <string name="access_remove_title">Қатынауды жою керек пе?</string>
     <string name="access_remove_message">\"%1$s\" үшін қатынау ережесі жойылсын ба?</string>
+    <string name="color_picker_custom">Реттелетін</string>
+    <string name="color_picker_clear">Тазалау</string>
 </resources>

@@ -320,4 +320,6 @@
     <string name="access_remove">Retire</string>
     <string name="access_remove_title">Retire aksè?</string>
     <string name="access_remove_message">Retire règ aksè pou \"%1$s\"?</string>
+    <string name="color_picker_custom">Pèsonalize</string>
+    <string name="color_picker_clear">Efase</string>
 </resources>

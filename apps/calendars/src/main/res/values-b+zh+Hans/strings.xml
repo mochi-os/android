@@ -15,6 +15,7 @@
     <string name="calendars_list_search">搜索</string>
     <string name="calendars_event_title">标题</string>
     <string name="calendars_event_location">位置</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">描述</string>
     <string name="calendars_repeat_never">从不</string>
     <string name="calendars_repeat_monthly">每月</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">%1$s 个活动无法导入</item>
     </plurals>
+    <string name="calendars_event_colour_value">颜色值</string>
+    <string name="calendars_discard_title">放弃草稿?</string>
+    <string name="calendars_discard_message">你的更改将会丢失。</string>
+    <string name="calendars_discard">放弃</string>
+    <string name="calendars_event_deleted">活动已删除</string>
+    <string name="calendars_link_replace_title">替换日历地址？</string>
+    <string name="calendars_list_unmatched">无匹配项</string>
+    <string name="calendars_list_search_events">搜索活动</string>
 </resources>

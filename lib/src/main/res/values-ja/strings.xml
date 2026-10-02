@@ -320,4 +320,6 @@
     <string name="access_remove">削除</string>
     <string name="access_remove_title">アクセスを削除しますか?</string>
     <string name="access_remove_message">「%1$s」のアクセスルールを削除しますか？</string>
+    <string name="color_picker_custom">カスタム</string>
+    <string name="color_picker_clear">クリア</string>
 </resources>

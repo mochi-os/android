@@ -15,6 +15,7 @@
     <string name="calendars_list_search">खोजें</string>
     <string name="calendars_event_title">टाइटल</string>
     <string name="calendars_event_location">स्थान</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">विवरण</string>
     <string name="calendars_repeat_never">कभी नहीं</string>
     <string name="calendars_repeat_monthly">मासिक</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s इवेंट आयात नहीं किया जा सका</item>
         <item quantity="other">%1$s इवेंट आयात नहीं किए जा सके</item>
     </plurals>
+    <string name="calendars_event_colour_value">रंग का मान</string>
+    <string name="calendars_discard_title">ड्राफ्ट त्यागें?</string>
+    <string name="calendars_discard_message">आपके बदलाव खो जाएंगे।</string>
+    <string name="calendars_discard">त्यागें</string>
+    <string name="calendars_event_deleted">इवेंट हटाया गया</string>
+    <string name="calendars_link_replace_title">कैलेंडर का पता बदलें?</string>
+    <string name="calendars_list_unmatched">कोई मेल नहीं</string>
+    <string name="calendars_list_search_events">इवेंट खोजें</string>
 </resources>

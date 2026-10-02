@@ -15,6 +15,7 @@
     <string name="calendars_list_search">تلاش کریں</string>
     <string name="calendars_event_title">عنوان</string>
     <string name="calendars_event_location">مقام</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">تفصیل</string>
     <string name="calendars_repeat_never">کبھی نہیں</string>
     <string name="calendars_repeat_monthly">ماہانہ</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s ایونٹ درآمد نہیں ہو سکا</item>
         <item quantity="other">%1$s ایونٹس درآمد نہیں ہو سکے</item>
     </plurals>
+    <string name="calendars_event_colour_value">رنگ کی قدر</string>
+    <string name="calendars_discard_title">مسودہ رد کریں؟</string>
+    <string name="calendars_discard_message">آپ کی تبدیلیاں ضائع ہو جائیں گی۔</string>
+    <string name="calendars_discard">رد کریں</string>
+    <string name="calendars_event_deleted">ایونٹ حذف ہو گیا</string>
+    <string name="calendars_link_replace_title">کیلنڈر کا پتہ بدلیں؟</string>
+    <string name="calendars_list_unmatched">کوئی مماثلت نہیں</string>
+    <string name="calendars_list_search_events">ایونٹس تلاش کریں</string>
 </resources>

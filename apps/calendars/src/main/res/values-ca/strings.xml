@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Cerca</string>
     <string name="calendars_event_title">Títol</string>
     <string name="calendars_event_location">Ubicació</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Descripció</string>
     <string name="calendars_repeat_never">Mai</string>
     <string name="calendars_repeat_monthly">Mensual</string>
@@ -208,4 +209,12 @@
         <item quantity="one">No s\'ha pogut importar %1$s esdeveniment</item>
         <item quantity="other">No s\'han pogut importar %1$s esdeveniments</item>
     </plurals>
+    <string name="calendars_event_colour_value">Valor del color</string>
+    <string name="calendars_discard_title">Vols descartar l\'esborrany?</string>
+    <string name="calendars_discard_message">Els canvis es perdran.</string>
+    <string name="calendars_discard">Descarta</string>
+    <string name="calendars_event_deleted">S\'ha suprimit l\'esdeveniment</string>
+    <string name="calendars_link_replace_title">Substituir l\'adreça del calendari?</string>
+    <string name="calendars_list_unmatched">Cap coincidència</string>
+    <string name="calendars_list_search_events">Cerca esdeveniments</string>
 </resources>

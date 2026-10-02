@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Gözle</string>
     <string name="calendars_event_title">At</string>
     <string name="calendars_event_location">Ýerleşýän ýeri</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Düşündiriş</string>
     <string name="calendars_repeat_never">Hiç haçan</string>
     <string name="calendars_repeat_monthly">Aýlyk</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s çäräni import edip bolmady</item>
         <item quantity="other">%1$s çäräni import edip bolmady</item>
     </plurals>
+    <string name="calendars_event_colour_value">Reňk bahasy</string>
+    <string name="calendars_discard_title">Taslamany taşlamaly?</string>
+    <string name="calendars_discard_message">Üýtgeşmeleriňiz ýitiriler.</string>
+    <string name="calendars_discard">Taşla</string>
+    <string name="calendars_event_deleted">Çäre pozuldy</string>
+    <string name="calendars_link_replace_title">Senenamanyň salgysy çalşyrylsynmy?</string>
+    <string name="calendars_list_unmatched">Gabat gelýän ýok</string>
+    <string name="calendars_list_search_events">Çäreleri gözle</string>
 </resources>

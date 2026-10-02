@@ -320,4 +320,6 @@
     <string name="access_remove">Qichuy</string>
     <string name="access_remove_title">¿Yaykuyta qichunkichu?</string>
     <string name="access_remove_message">¿\"%1$s\"-paq yaykuy kamachiyta qichunkichu?</string>
+    <string name="color_picker_custom">Sapankuq</string>
+    <string name="color_picker_clear">Pichay</string>
 </resources>

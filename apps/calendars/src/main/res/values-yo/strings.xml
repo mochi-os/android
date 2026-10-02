@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Wá</string>
     <string name="calendars_event_title">Àkọlé</string>
     <string name="calendars_event_location">Ibi</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Àpèjúwe</string>
     <string name="calendars_repeat_never">Láéláé</string>
     <string name="calendars_repeat_monthly">Oṣooṣù</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">A kò lè kó ìṣẹ̀lẹ̀ %1$s wọlé</item>
     </plurals>
+    <string name="calendars_event_colour_value">Iye àwọ̀</string>
+    <string name="calendars_discard_title">Sọ àkọ̀tẹ́lẹ̀ nù?</string>
+    <string name="calendars_discard_message">Àwọn àyípadà rẹ yóò sọnù.</string>
+    <string name="calendars_discard">Sọnu</string>
+    <string name="calendars_event_deleted">A ti pa ìṣẹ̀lẹ̀ rẹ́</string>
+    <string name="calendars_link_replace_title">Ṣé kí a rọ́pò àdírẹ́sì kàlẹ́ńdà?</string>
+    <string name="calendars_list_unmatched">Kò sí èyí tó bá mu</string>
+    <string name="calendars_list_search_events">Wá àwọn ìṣẹ̀lẹ̀</string>
 </resources>

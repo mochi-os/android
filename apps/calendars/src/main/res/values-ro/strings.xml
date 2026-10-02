@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Caută</string>
     <string name="calendars_event_title">Titlu</string>
     <string name="calendars_event_location">Locație</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Descriere</string>
     <string name="calendars_repeat_never">Niciodată</string>
     <string name="calendars_repeat_monthly">Lunar</string>
@@ -215,4 +216,12 @@
         <item quantity="few">%1$s evenimente nu au putut fi importate</item>
         <item quantity="other">%1$s de evenimente nu au putut fi importate</item>
     </plurals>
+    <string name="calendars_event_colour_value">Valoarea culorii</string>
+    <string name="calendars_discard_title">Renunți la ciornă?</string>
+    <string name="calendars_discard_message">Modificările tale se vor pierde.</string>
+    <string name="calendars_discard">Renunță</string>
+    <string name="calendars_event_deleted">Eveniment șters</string>
+    <string name="calendars_link_replace_title">Înlocuiești adresa calendarului?</string>
+    <string name="calendars_list_unmatched">Nicio potrivire</string>
+    <string name="calendars_list_search_events">Caută evenimente</string>
 </resources>

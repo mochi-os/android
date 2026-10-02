@@ -68,6 +68,9 @@ data class EditorUiState(
     val zone: Zone = Zone(),
     val revealed: Boolean = false,
     val location: String = "",
+    /** The event's own colour, blank for its calendar's. */
+    val colour: String = "",
+    val url: String = "",
     val description: String = "",
     /** The description as the event holds it, which [description] shows as text. */
     val original: String = "",
@@ -88,7 +91,11 @@ data class EditorUiState(
     val isDeleting: Boolean = false,
     val confirming: Boolean = false,
     val error: MochiError? = null,
-    val changed: Boolean = false,
+    /**
+     * The form and calendar as the editor opened them, which an edit is
+     * measured against: leaving with anything different asks first.
+     */
+    val opened: Pair<EventForm, String>? = null,
     val saved: Boolean = false,
     val deleted: Boolean = false,
 ) {
@@ -183,6 +190,7 @@ class EventEditViewModel @Inject constructor(
                     reminders = defaultReminders(preferences?.reminder ?: 15),
                     isLoading = false,
                 )
+                settled()
                 return@launch
             }
             try {
@@ -228,8 +236,17 @@ class EventEditViewModel @Inject constructor(
         }
     }
 
-    /** The editor on a copy's [form], in [calendar]: a new event, so saving creates. */
-    private fun open(form: EventForm, calendars: List<Calendar>, calendar: String) {
+    /**
+     * The editor on a copy's [form], in [calendar]: a new event, so saving
+     * creates. [baseline] is what closing measures edits against when the
+     * copy already carries some: the copy as the stored event would give it.
+     */
+    private fun open(
+        form: EventForm,
+        calendars: List<Calendar>,
+        calendar: String,
+        baseline: Pair<EventForm, String>? = null,
+    ) {
         _uiState.value = EditorUiState(
             copying = true,
             calendars = calendars,
@@ -240,12 +257,16 @@ class EventEditViewModel @Inject constructor(
             finish = form.finish,
             zone = form.zone,
             location = form.location,
+            colour = form.colour,
+            url = form.url,
             description = form.description,
             original = form.original,
             recurrence = form.recurrence,
             reminders = form.reminders,
             isLoading = false,
         )
+        settled()
+        if (baseline != null) _uiState.value = _uiState.value.copy(opened = baseline)
     }
 
     /** The calendars the editor offers, the default first; null once a failure to list them is shown. */
@@ -312,6 +333,8 @@ class EventEditViewModel @Inject constructor(
             finish = ends,
             zone = written(shown, zone),
             location = shown.value("LOCATION"),
+            colour = shown.value("COLOR"),
+            url = shown.value("URL"),
             description = descriptionText(shown.value("DESCRIPTION")),
             original = shown.value("DESCRIPTION"),
             recurrence = recurrence(master?.value("RRULE")),
@@ -321,6 +344,7 @@ class EventEditViewModel @Inject constructor(
             series = master?.property("DTSTART")?.let { CalendarsMapping.moment(it) / 1000 } ?: 0,
             isLoading = false,
         )
+        settled()
     }
 
     // ---- the form ----
@@ -330,6 +354,10 @@ class EventEditViewModel @Inject constructor(
     fun calendar(value: String) = edit { copy(calendar = value) }
 
     fun location(value: String) = edit { copy(location = value) }
+
+    fun colour(value: String) = edit { copy(colour = value) }
+
+    fun url(value: String) = edit { copy(url = value) }
 
     fun description(value: String) = edit { copy(description = value) }
 
@@ -378,8 +406,17 @@ class EventEditViewModel @Inject constructor(
     }
 
     private inline fun edit(change: EditorUiState.() -> EditorUiState) {
-        _uiState.value = _uiState.value.change().copy(changed = true, error = null)
+        _uiState.value = _uiState.value.change().copy(error = null)
     }
+
+    /** Marks the form now showing as the one the editor opened. */
+    private fun settled() {
+        val state = _uiState.value
+        _uiState.value = state.copy(opened = form(state) to state.calendar)
+    }
+
+    /** Whether the form or calendar differs from the one the editor opened. */
+    fun dirty(state: EditorUiState): Boolean = dirty(state, zone)
 
     // ---- saving ----
 
@@ -408,7 +445,7 @@ class EventEditViewModel @Inject constructor(
         when (prompt) {
             Prompt.SAVE -> commit(scope)
             Prompt.DELETE -> erase(scope)
-            Prompt.COPY -> _uiState.value = _uiState.value.copy(copy = scope)
+            Prompt.COPY -> clone(scope)
             null -> Unit
         }
     }
@@ -427,8 +464,31 @@ class EventEditViewModel @Inject constructor(
         if (state.recurring && state.occurrence > 0) {
             _uiState.value = state.copy(prompt = Prompt.COPY)
         } else {
-            _uiState.value = state.copy(copy = Scope.ALL)
+            clone(Scope.ALL)
         }
+    }
+
+    /**
+     * Opens the copy asked for. A form with edits becomes the copy in place,
+     * edits and all, as the web editor does: [Scope.ONE] without its repeat,
+     * the whole series moved back to its own start. Closing it still asks,
+     * measured against the copy the stored event gives. An unchanged form
+     * opens the stored event's copy.
+     */
+    private fun clone(scope: Scope) {
+        val state = _uiState.value
+        if (!dirty(state)) {
+            _uiState.value = state.copy(copy = scope)
+            return
+        }
+        val stored = carried?.components?.let { copied(it, state.occurrence, scope, zone) } ?: EventForm()
+        val writable = { id: String -> state.calendars.firstOrNull { it.id == id }?.id }
+        val fallback = state.calendars.firstOrNull()?.id.orEmpty()
+        val calendar = writable(state.calendar) ?: fallback
+        val original = state.opened?.second?.let(writable) ?: fallback
+        // The copy is a new event: nothing of the original's tree goes with it.
+        carried = null
+        open(duplicate(form(state), scope), state.calendars, calendar, stored to original)
     }
 
     /** The screen has opened the editor on the copy asked for. */
@@ -509,20 +569,33 @@ class EventEditViewModel @Inject constructor(
     private fun erase(scope: Scope) {
         val state = _uiState.value
         val event = state.event ?: return
+        // What Undo puts back, as the web's delete does: the event as it was
+        // read, recreated whole, or written back over its series when only
+        // an occurrence, or the ones from it on, went.
+        val stored = carried
+        val whole: suspend () -> Unit = { stored?.let { repository.createEvent(it.calendar, it.components) } }
+        val series: (Event) -> (suspend () -> Unit) = { changed ->
+            { stored?.let { repository.updateEvent(changed.id, changed.etag, null, it.components) } }
+        }
         viewModelScope.launch {
             _uiState.value = state.copy(isDeleting = true, error = null)
             try {
-                when (scope) {
-                    Scope.ALL -> repository.deleteEvent(event, state.etag)
-                    Scope.FOLLOWING -> repository.truncateEvent(event, state.occurrence)
-                    Scope.ONE -> repository.excludeOccurrence(event, state.occurrence)
+                val back: suspend () -> Unit = when (scope) {
+                    Scope.ALL -> {
+                        repository.deleteEvent(event, state.etag)
+                        whole
+                    }
+                    Scope.FOLLOWING -> repository.truncateEvent(event, state.occurrence)?.let { series(it) } ?: whole
+                    Scope.ONE -> series(repository.excludeOccurrence(event, state.occurrence))
                 }
+                if (stored != null) repository.deleted(back)
                 _uiState.value = _uiState.value.copy(isDeleting = false, deleted = true)
             } catch (_: EventChangedException) {
                 try {
                     // Only an "all events" delete can be stale here; the other
                     // paths read the event themselves and retry.
                     repository.deleteEvent(event, repository.getEvent(event).etag)
+                    if (stored != null) repository.deleted(whole)
                     _uiState.value = _uiState.value.copy(isDeleting = false, deleted = true)
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(isDeleting = false, error = e.toMochiError())
@@ -540,20 +613,7 @@ class EventEditViewModel @Inject constructor(
         components(form(state), carried?.components.orEmpty(), scope)
 
     /** The editor's fields, as the tree builder wants them. */
-    private fun form(state: EditorUiState) = EventForm(
-        title = state.title,
-        start = state.start,
-        finish = state.finish,
-        allday = state.allday,
-        zone = Zone(state.zone.start.ifBlank { zone }, state.zone.finish.ifBlank { zone }),
-        location = state.location,
-        description = state.description,
-        original = state.original,
-        recurrence = state.recurrence,
-        reminders = state.reminders,
-        occurrence = state.occurrence,
-        series = state.series,
-    )
+    private fun form(state: EditorUiState) = form(state, zone)
 
     /**
      * Where a new event opened with no time at all starts: today's next whole
@@ -601,3 +661,28 @@ fun minutes(trigger: String): Int {
     if (seconds < 0) return -1
     return if (value.startsWith("-")) (seconds / 60).toInt() else -(seconds / 60).toInt()
 }
+
+/** The editor's fields, as the tree builder wants them; a blank zone is the [user]'s. */
+internal fun form(state: EditorUiState, user: String) = EventForm(
+    title = state.title,
+    start = state.start,
+    finish = state.finish,
+    allday = state.allday,
+    zone = Zone(state.zone.start.ifBlank { user }, state.zone.finish.ifBlank { user }),
+    location = state.location,
+    colour = state.colour,
+    url = state.url,
+    description = state.description,
+    original = state.original,
+    recurrence = state.recurrence,
+    reminders = state.reminders,
+    occurrence = state.occurrence,
+    series = state.series,
+)
+
+/**
+ * Whether the form or calendar differs from the one the editor opened, so
+ * leaving would drop something; an edit undone by hand is no change.
+ */
+internal fun dirty(state: EditorUiState, user: String): Boolean =
+    state.opened != null && (form(state, user) to state.calendar) != state.opened

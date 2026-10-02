@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Fittex</string>
     <string name="calendars_event_title">Titlu</string>
     <string name="calendars_event_location">Post</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Deskrizzjoni</string>
     <string name="calendars_repeat_never">Qatt</string>
     <string name="calendars_repeat_monthly">Kull xahar</string>
@@ -229,4 +230,12 @@
         <item quantity="many">Ma setgħux jiġu importati %1$s avveniment</item>
         <item quantity="other">Ma setgħux jiġu importati %1$s avveniment</item>
     </plurals>
+    <string name="calendars_event_colour_value">Valur tal-kulur</string>
+    <string name="calendars_discard_title">Tarmi l-abbozz?</string>
+    <string name="calendars_discard_message">It-tibdiliet tiegħek se jintilfu.</string>
+    <string name="calendars_discard">Armi</string>
+    <string name="calendars_event_deleted">Tħassar l-avveniment</string>
+    <string name="calendars_link_replace_title">Tibdel l-indirizz tal-kalendarju?</string>
+    <string name="calendars_list_unmatched">L-ebda tqabbil</string>
+    <string name="calendars_list_search_events">Fittex avvenimenti</string>
 </resources>

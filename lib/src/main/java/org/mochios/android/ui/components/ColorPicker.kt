@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -26,6 +27,12 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -43,24 +50,27 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.takeOrElse
+import org.mochios.android.R
 import kotlin.math.roundToInt
 
-/** Twelve presets matching the web palette: white + slate, a spectrum, then black. */
+/** The web picker's twelve presets (`PRESET_COLOURS`): white and slate, a spectrum, then black. */
 val COLOR_PICKER_PRESETS = listOf(
     "#ffffff", // white
     "#94a3b8", // slate
-    "#ef4444", // red
-    "#f97316", // orange
-    "#f59e0b", // amber
-    "#22c55e", // green
-    "#14b8a6", // teal
-    "#06b6d4", // cyan
-    "#3b82f6", // blue
+    "#f87171", // red
+    "#fb923c", // orange
+    "#fbbf24", // amber
+    "#4ade80", // green
+    "#2dd4bf", // teal
+    "#22d3ee", // cyan
+    "#60a5fa", // blue
     "#a78bfa", // violet
-    "#ec4899", // pink
+    "#f472b6", // pink
     "#000000", // black
 )
 
@@ -77,6 +87,11 @@ private val HUE_THUMB_WIDTH = 10.dp
  * Colour picker mirroring the web `<ColourPicker>`, controlled by [hex] through
  * [onHexChange]. A hex the picker cannot parse stays in the text box without
  * moving the field and slider.
+ *
+ * [collapsible] is the web's compact form: the presets with a Custom toggle
+ * beside their first line, Clear on a row below when [onClear] is given and a
+ * colour is set, and the field, slider and hex box only once Custom is open.
+ * It opens by itself on a colour that is not a preset.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -86,8 +101,13 @@ fun ColorPicker(
     modifier: Modifier = Modifier,
     presets: List<String> = COLOR_PICKER_PRESETS,
     hexPlaceholder: String? = null,
+    collapsible: Boolean = false,
+    onClear: (() -> Unit)? = null,
     trailing: @Composable RowScope.() -> Unit = {},
 ) {
+    var open by remember {
+        mutableStateOf(!collapsible || (hex.isNotBlank() && presets.none { it.equals(hex, ignoreCase = true) }))
+    }
     // Seed HSV from the incoming hex, defaulting to a mid violet.
     val initial = remember {
         parseHexColour(hex)?.let { colour -> rgbToHsv(colour) } ?: Triple(270f, 0.5f, 0.5f)
@@ -135,11 +155,7 @@ fun ColorPicker(
 
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(16.dp)) {
         // ── Preset swatches (wrap by width) ──
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
+        val swatches: @Composable () -> Unit = {
             presets.forEach { preset ->
                 val selected = hexText.equals(preset, ignoreCase = true)
                 // Ring + inner gap + colour fill: the border sits on the outer
@@ -169,142 +185,202 @@ fun ColorPicker(
                 )
             }
         }
-
-        // ── 2D saturation (x) / value (y) field ──
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(FIELD_HEIGHT)
-                .clip(RoundedCornerShape(8.dp))
-                .background(Color.hsv(hue, 1f, 1f))
-                .onSizeChanged { size -> svSize = size }
-                .pointerInput(Unit) {
-                    detectTapGestures { offset ->
-                        if (size.width > 0 && size.height > 0) {
-                            commit(
-                                hue,
-                                (offset.x / size.width).coerceIn(0f, 1f),
-                                (1f - offset.y / size.height).coerceIn(0f, 1f),
-                            )
-                        }
-                    }
+        if (collapsible) {
+            // The swatches wrap among themselves, so the Custom toggle stays on
+            // their first line however narrow the row, as on the web. The first
+            // line is set down to sit level with the toggle's middle.
+            val toggle = maxOf(
+                ButtonDefaults.MinHeight,
+                LocalMinimumInteractiveComponentSize.current.takeOrElse { 0.dp },
+            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.Top,
+            ) {
+                FlowRow(
+                    modifier = Modifier
+                        .weight(1f, fill = false)
+                        .padding(top = (toggle - PRESET_SIZE) / 2),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    swatches()
                 }
-                .pointerInput(Unit) {
-                    detectDragGestures { change, _ ->
-                        if (size.width > 0 && size.height > 0) {
-                            change.consume()
-                            commit(
-                                hue,
-                                (change.position.x / size.width).coerceIn(0f, 1f),
-                                (1f - change.position.y / size.height).coerceIn(0f, 1f),
-                            )
-                        }
-                    }
-                },
-        ) {
-            Box(
-                Modifier
-                    .matchParentSize()
-                    .background(Brush.horizontalGradient(listOf(Color.White, Color.Transparent))),
-            )
-            Box(
-                Modifier
-                    .matchParentSize()
-                    .background(Brush.verticalGradient(listOf(Color.Transparent, Color.Black))),
-            )
-            Box(
-                modifier = Modifier
-                    .offset {
-                        val radius = FIELD_THUMB.toPx() / 2f
-                        IntOffset(
-                            (sat * svSize.width - radius).roundToInt(),
-                            ((1f - bright) * svSize.height - radius).roundToInt(),
+                MochiOutlinedButton(onClick = { open = !open }) {
+                    parseHexColour(hex.trim())?.let { colour ->
+                        Box(
+                            modifier = Modifier
+                                .size(ButtonDefaults.IconSize)
+                                .clip(CircleShape)
+                                .background(colour)
+                                .border(1.dp, MaterialTheme.colorScheme.outlineVariant, CircleShape),
                         )
+                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                     }
-                    .size(FIELD_THUMB)
-                    .clip(CircleShape)
-                    .background(Color.hsv(hue, sat, bright))
-                    .border(2.dp, Color.White, CircleShape),
-            )
+                    Text(stringResource(R.string.color_picker_custom))
+                    Icon(
+                        if (open) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+                        contentDescription = null,
+                        modifier = Modifier.size(ButtonDefaults.IconSize),
+                    )
+                }
+            }
+        } else {
+            FlowRow(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                swatches()
+            }
         }
 
-        // ── Hue slider ──
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(HUE_HEIGHT)
-                .clip(RoundedCornerShape(8.dp))
-                .background(hueBrush)
-                .onSizeChanged { size -> hueSize = size }
-                .pointerInput(Unit) {
-                    detectTapGestures { offset ->
-                        if (size.width > 0) {
-                            commit((offset.x / size.width * 360f).coerceIn(0f, 360f), sat, bright)
+        if (collapsible && onClear != null && hex.isNotBlank()) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+                MochiOutlinedButton(onClick = onClear) {
+                    Text(stringResource(R.string.color_picker_clear))
+                }
+            }
+        }
+
+        if (open) {
+            // ── 2D saturation (x) / value (y) field ──
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(FIELD_HEIGHT)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(Color.hsv(hue, 1f, 1f))
+                    .onSizeChanged { size -> svSize = size }
+                    .pointerInput(Unit) {
+                        detectTapGestures { offset ->
+                            if (size.width > 0 && size.height > 0) {
+                                commit(
+                                    hue,
+                                    (offset.x / size.width).coerceIn(0f, 1f),
+                                    (1f - offset.y / size.height).coerceIn(0f, 1f),
+                                )
+                            }
                         }
                     }
-                }
-                .pointerInput(Unit) {
-                    detectDragGestures { change, _ ->
-                        if (size.width > 0) {
-                            change.consume()
-                            commit(
-                                (change.position.x / size.width * 360f).coerceIn(0f, 360f),
-                                sat,
-                                bright,
+                    .pointerInput(Unit) {
+                        detectDragGestures { change, _ ->
+                            if (size.width > 0 && size.height > 0) {
+                                change.consume()
+                                commit(
+                                    hue,
+                                    (change.position.x / size.width).coerceIn(0f, 1f),
+                                    (1f - change.position.y / size.height).coerceIn(0f, 1f),
+                                )
+                            }
+                        }
+                    },
+            ) {
+                Box(
+                    Modifier
+                        .matchParentSize()
+                        .background(Brush.horizontalGradient(listOf(Color.White, Color.Transparent))),
+                )
+                Box(
+                    Modifier
+                        .matchParentSize()
+                        .background(Brush.verticalGradient(listOf(Color.Transparent, Color.Black))),
+                )
+                Box(
+                    modifier = Modifier
+                        .offset {
+                            val radius = FIELD_THUMB.toPx() / 2f
+                            IntOffset(
+                                (sat * svSize.width - radius).roundToInt(),
+                                ((1f - bright) * svSize.height - radius).roundToInt(),
                             )
                         }
-                    }
-                },
-        ) {
-            Box(
-                modifier = Modifier
-                    .offset {
-                        val thumbHalf = HUE_THUMB_WIDTH.toPx() / 2f
-                        IntOffset((hue / 360f * hueSize.width - thumbHalf).roundToInt(), 0)
-                    }
-                    .width(HUE_THUMB_WIDTH)
-                    .fillMaxHeight()
-                    .clip(RoundedCornerShape(5.dp))
-                    .background(Color.White)
-                    .border(
-                        width = 1.dp,
-                        color = MaterialTheme.colorScheme.outlineVariant,
-                        shape = RoundedCornerShape(5.dp),
-                    ),
-            )
-        }
+                        .size(FIELD_THUMB)
+                        .clip(CircleShape)
+                        .background(Color.hsv(hue, sat, bright))
+                        .border(2.dp, Color.White, CircleShape),
+                )
+            }
 
-        // ── Preview + hex + whatever the caller adds ──
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            val previewColour = parseHexColour(hexText.trim())
+            // ── Hue slider ──
             Box(
                 modifier = Modifier
-                    .size(32.dp)
-                    .clip(CircleShape)
-                    .background(previewColour ?: Color.Transparent)
-                    .border(1.dp, MaterialTheme.colorScheme.outlineVariant, CircleShape),
-            )
-            MochiTextField(
-                value = hexText,
-                onValueChange = { input ->
-                    hexText = input
-                    val colour = parseHexColour(input.trim())
-                    if (colour != null) {
-                        val (h, s, v) = rgbToHsv(colour)
-                        hue = h
-                        sat = s
-                        bright = v
-                        onHexState.value(input.trim())
+                    .fillMaxWidth()
+                    .height(HUE_HEIGHT)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(hueBrush)
+                    .onSizeChanged { size -> hueSize = size }
+                    .pointerInput(Unit) {
+                        detectTapGestures { offset ->
+                            if (size.width > 0) {
+                                commit((offset.x / size.width * 360f).coerceIn(0f, 360f), sat, bright)
+                            }
+                        }
                     }
-                },
-                singleLine = true,
-                placeholder = hexPlaceholder?.let { text -> { Text(text) } },
-                modifier = Modifier.weight(1f),
-            )
-            trailing()
+                    .pointerInput(Unit) {
+                        detectDragGestures { change, _ ->
+                            if (size.width > 0) {
+                                change.consume()
+                                commit(
+                                    (change.position.x / size.width * 360f).coerceIn(0f, 360f),
+                                    sat,
+                                    bright,
+                                )
+                            }
+                        }
+                    },
+            ) {
+                Box(
+                    modifier = Modifier
+                        .offset {
+                            val thumbHalf = HUE_THUMB_WIDTH.toPx() / 2f
+                            IntOffset((hue / 360f * hueSize.width - thumbHalf).roundToInt(), 0)
+                        }
+                        .width(HUE_THUMB_WIDTH)
+                        .fillMaxHeight()
+                        .clip(RoundedCornerShape(5.dp))
+                        .background(Color.White)
+                        .border(
+                            width = 1.dp,
+                            color = MaterialTheme.colorScheme.outlineVariant,
+                            shape = RoundedCornerShape(5.dp),
+                        ),
+                )
+            }
+
+            // ── Preview + hex + whatever the caller adds ──
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                val previewColour = parseHexColour(hexText.trim())
+                Box(
+                    modifier = Modifier
+                        .size(32.dp)
+                        .clip(CircleShape)
+                        .background(previewColour ?: Color.Transparent)
+                        .border(1.dp, MaterialTheme.colorScheme.outlineVariant, CircleShape),
+                )
+                MochiTextField(
+                    value = hexText,
+                    onValueChange = { input ->
+                        hexText = input
+                        val colour = parseHexColour(input.trim())
+                        if (colour != null) {
+                            val (h, s, v) = rgbToHsv(colour)
+                            hue = h
+                            sat = s
+                            bright = v
+                            onHexState.value(input.trim())
+                        }
+                    },
+                    singleLine = true,
+                    placeholder = hexPlaceholder?.let { text -> { Text(text) } },
+                    modifier = Modifier.weight(1f),
+                )
+                trailing()
+            }
         }
     }
 }

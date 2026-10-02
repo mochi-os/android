@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Bilatu</string>
     <string name="calendars_event_title">Izenburua</string>
     <string name="calendars_event_location">Kokapena</string>
+    <string name="calendars_event_url">URLa</string>
     <string name="calendars_event_description">Deskribapena</string>
     <string name="calendars_repeat_never">Inoiz ez</string>
     <string name="calendars_repeat_monthly">Hilekoa</string>
@@ -208,4 +209,12 @@
         <item quantity="one">Ezin izan da %1$s gertaera inportatu</item>
         <item quantity="other">Ezin izan dira %1$s gertaera inportatu</item>
     </plurals>
+    <string name="calendars_event_colour_value">Kolorearen balioa</string>
+    <string name="calendars_discard_title">Zirriborroa baztertu?</string>
+    <string name="calendars_discard_message">Zure aldaketak galduko dira.</string>
+    <string name="calendars_discard">Baztertu</string>
+    <string name="calendars_event_deleted">Gertaera ezabatu da</string>
+    <string name="calendars_link_replace_title">Egutegiaren helbidea ordeztu?</string>
+    <string name="calendars_list_unmatched">Bat-etortzerik ez</string>
+    <string name="calendars_list_search_events">Bilatu gertaerak</string>
 </resources>

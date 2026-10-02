@@ -15,6 +15,7 @@
     <string name="calendars_list_search">ຄົ້ນຫາ</string>
     <string name="calendars_event_title">ຊື່ເລື່ອງ</string>
     <string name="calendars_event_location">ສະຖານທີ່</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">ລາຍລະອຽດ</string>
     <string name="calendars_repeat_never">ບໍ່ເຄີຍ</string>
     <string name="calendars_repeat_monthly">ລາຍເດືອນ</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">ບໍ່ສາມາດນຳເຂົ້າ %1$s ເຫດການໄດ້</item>
     </plurals>
+    <string name="calendars_event_colour_value">ຄ່າສີ</string>
+    <string name="calendars_discard_title">ຖິ້ມສະບັບຮ່າງບໍ?</string>
+    <string name="calendars_discard_message">ການປ່ຽນແປງຂອງເຈົ້າຈະຫາຍໄປ.</string>
+    <string name="calendars_discard">ຖິ້ມ</string>
+    <string name="calendars_event_deleted">ລຶບເຫດການແລ້ວ</string>
+    <string name="calendars_link_replace_title">ແທນທີ່ທີ່ຢູ່ປະຕິທິນບໍ?</string>
+    <string name="calendars_list_unmatched">ບໍ່ມີລາຍການທີ່ກົງກັນ</string>
+    <string name="calendars_list_search_events">ຄົ້ນຫາເຫດການ</string>
 </resources>

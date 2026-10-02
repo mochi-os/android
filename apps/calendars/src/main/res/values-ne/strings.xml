@@ -15,6 +15,7 @@
     <string name="calendars_list_search">खोज्नुहोस्</string>
     <string name="calendars_event_title">शीर्षक</string>
     <string name="calendars_event_location">स्थान</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">विवरण</string>
     <string name="calendars_repeat_never">कहिल्यै होइन</string>
     <string name="calendars_repeat_monthly">मासिक</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s कार्यक्रम आयात गर्न सकिएन</item>
         <item quantity="other">%1$s कार्यक्रम आयात गर्न सकिएन</item>
     </plurals>
+    <string name="calendars_event_colour_value">रङको मान</string>
+    <string name="calendars_discard_title">मस्यौदा हटाउने?</string>
+    <string name="calendars_discard_message">तपाईंका परिवर्तनहरू हराउनेछन्।</string>
+    <string name="calendars_discard">हटाउनुहोस्</string>
+    <string name="calendars_event_deleted">कार्यक्रम मेटाइयो</string>
+    <string name="calendars_link_replace_title">क्यालेन्डरको ठेगाना बदल्ने?</string>
+    <string name="calendars_list_unmatched">कुनै मिल्दो छैन</string>
+    <string name="calendars_list_search_events">कार्यक्रमहरू खोज्नुहोस्</string>
 </resources>

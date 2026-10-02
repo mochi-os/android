@@ -320,4 +320,6 @@
     <string name="access_remove">Fjern</string>
     <string name="access_remove_title">Fjerne tilgang?</string>
     <string name="access_remove_message">Fjerne tilgangsregel for «%1$s»?</string>
+    <string name="color_picker_custom">Tilpasset</string>
+    <string name="color_picker_clear">Tøm</string>
 </resources>

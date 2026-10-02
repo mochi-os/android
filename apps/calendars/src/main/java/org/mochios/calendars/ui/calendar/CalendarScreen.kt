@@ -25,6 +25,7 @@ import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.CalendarToday
 import androidx.compose.material.icons.outlined.CalendarViewMonth
 import androidx.compose.material.icons.outlined.CalendarViewWeek
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Today
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -54,6 +55,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -83,6 +86,7 @@ import org.mochios.calendars.ui.dialogs.ImportDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
 import org.mochios.calendars.ui.dialogs.PreferencesDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
+import org.mochios.calendars.ui.dialogs.ReplaceLinkDialog
 import org.mochios.calendars.ui.dialogs.RevokeLinkDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.editor.Scope
@@ -98,7 +102,9 @@ import java.time.LocalDate
  * editor on a copy of a stored event's occurrence, with how far the copy
  * reaches; [onCopyOccurrence] on a copy of one the editor cannot load, a
  * subscription's or a birthday. [copied] says a copy was just saved, which
- * the screen reports once and [onCopiedShown] clears.
+ * the screen reports once and [onCopiedShown] clears; [deleted] that the
+ * editor deleted something, reported once with Undo and cleared by
+ * [onDeletedShown].
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -112,6 +118,8 @@ fun CalendarScreen(
     onCopyOccurrence: (Instance) -> Unit,
     copied: Boolean = false,
     onCopiedShown: () -> Unit = {},
+    deleted: Boolean = false,
+    onDeletedShown: () -> Unit = {},
     onLogout: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
@@ -186,6 +194,20 @@ fun CalendarScreen(
         if (copied) {
             onCopiedShown()
             scope.launch { snackbar.showSnackbar(resources.getString(R.string.calendars_event_copied)) }
+        }
+    }
+
+    LaunchedEffect(deleted) {
+        if (deleted) {
+            onDeletedShown()
+            scope.launch {
+                val chosen = snackbar.showSnackbar(
+                    message = resources.getString(R.string.calendars_event_deleted),
+                    actionLabel = resources.getString(R.string.calendars_undo),
+                    duration = SnackbarDuration.Long,
+                )
+                if (chosen == SnackbarResult.ActionPerformed) viewModel.restore()
+            }
         }
     }
 
@@ -397,16 +419,14 @@ fun CalendarScreen(
     linking?.let { calendar ->
         val link by viewModel.link.collectAsState()
         LaunchedEffect(calendar.id) { viewModel.openLink(calendar.id) }
-        LinkDialog(
+        AddressDialogs(
             calendar = calendar,
-            url = link.url,
-            exists = link.exists,
-            busy = link.busy,
-            onDismiss = {
+            link = link,
+            onReplace = { viewModel.openLink(calendar.id, regenerate = true) },
+            onClose = {
                 linking = null
                 viewModel.closeLink()
             },
-            onReplace = { viewModel.openLink(calendar.id, regenerate = true) },
             onRevoke = {
                 linking = null
                 viewModel.closeLink()
@@ -518,14 +538,17 @@ private fun View(
         // The list view opens on the anchor day and pages on as the reader
         // scrolls, so it has no range to pick — only something to search.
         else -> Column(modifier = Modifier.fillMaxSize()) {
+            val searching = stringResource(R.string.calendars_list_search)
             MochiTextField(
                 value = state.search,
                 onValueChange = viewModel::search,
-                label = { Text(stringResource(R.string.calendars_list_search)) },
+                placeholder = { Text(stringResource(R.string.calendars_list_search_events)) },
+                leadingIcon = { Icon(Icons.Outlined.Search, contentDescription = null) },
                 singleLine = true,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                    .padding(horizontal = 16.dp, vertical = 8.dp)
+                    .semantics { contentDescription = searching },
             )
             AgendaList(state, viewModel, onOpen, selected)
         }
@@ -636,5 +659,40 @@ private fun DisposableRefresh(owner: androidx.lifecycle.LifecycleOwner, onResume
         }
         owner.lifecycle.addObserver(observer)
         onDispose { owner.lifecycle.removeObserver(observer) }
+    }
+}
+
+/**
+ * A calendar's address: the address dialog, and in its place, once Replace
+ * is tapped, the question whether to break the address everyone subscribed
+ * has. The question stays while the new address is minted and after a
+ * failure, so it can be tried again; the new address shows once it is out.
+ */
+@Composable
+internal fun AddressDialogs(
+    calendar: Calendar,
+    link: LinkState,
+    onReplace: () -> Unit,
+    onClose: () -> Unit,
+    onRevoke: () -> Unit,
+) {
+    var replacing by remember(calendar.id) { mutableStateOf(false) }
+    LaunchedEffect(link.url) { if (link.url != null) replacing = false }
+    if (replacing) {
+        ReplaceLinkDialog(
+            busy = link.busy,
+            onDismiss = { replacing = false },
+            onConfirm = onReplace,
+        )
+    } else {
+        LinkDialog(
+            calendar = calendar,
+            url = link.url,
+            exists = link.exists,
+            busy = link.busy,
+            onDismiss = onClose,
+            onReplace = { replacing = true },
+            onRevoke = onRevoke,
+        )
     }
 }

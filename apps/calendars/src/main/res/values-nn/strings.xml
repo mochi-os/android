@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Søk</string>
     <string name="calendars_event_title">Tittel</string>
     <string name="calendars_event_location">Stad</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Skildring</string>
     <string name="calendars_repeat_never">Aldri</string>
     <string name="calendars_repeat_monthly">Månadleg</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s hending kunne ikkje importerast</item>
         <item quantity="other">%1$s hendingar kunne ikkje importerast</item>
     </plurals>
+    <string name="calendars_event_colour_value">Fargeverdi</string>
+    <string name="calendars_discard_title">Vil du forkaste utkastet?</string>
+    <string name="calendars_discard_message">Endringane dine går tapt.</string>
+    <string name="calendars_discard">Forkast</string>
+    <string name="calendars_event_deleted">Hending sletta</string>
+    <string name="calendars_link_replace_title">Byte ut kalenderadressa?</string>
+    <string name="calendars_list_unmatched">Ingen samsvar</string>
+    <string name="calendars_list_search_events">Søk i hendingar</string>
 </resources>

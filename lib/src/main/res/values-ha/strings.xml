@@ -320,4 +320,6 @@
     <string name="access_remove">Cire</string>
     <string name="access_remove_title">A cire damar shiga?</string>
     <string name="access_remove_message">A cire ka\'idar shiga don \"%1$s\"?</string>
+    <string name="color_picker_custom">Na musamman</string>
+    <string name="color_picker_clear">Share</string>
 </resources>

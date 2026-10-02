@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Претражи</string>
     <string name="calendars_event_title">Наслов</string>
     <string name="calendars_event_location">Локација</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Опис</string>
     <string name="calendars_repeat_never">Никад</string>
     <string name="calendars_repeat_monthly">Месечно</string>
@@ -215,4 +216,12 @@
         <item quantity="few">%1$s догађаја није могуће увести</item>
         <item quantity="other">%1$s догађаја није могуће увести</item>
     </plurals>
+    <string name="calendars_event_colour_value">Вредност боје</string>
+    <string name="calendars_discard_title">Одбацити нацрт?</string>
+    <string name="calendars_discard_message">Ваше измене ће бити изгубљене.</string>
+    <string name="calendars_discard">Одбаци</string>
+    <string name="calendars_event_deleted">Догађај је обрисан</string>
+    <string name="calendars_link_replace_title">Заменити адресу календара?</string>
+    <string name="calendars_list_unmatched">Нема подударања</string>
+    <string name="calendars_list_search_events">Претражи догађаје</string>
 </resources>

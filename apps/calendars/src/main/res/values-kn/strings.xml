@@ -15,6 +15,7 @@
     <string name="calendars_list_search">ಹುಡುಕಿ</string>
     <string name="calendars_event_title">ಶೀರ್ಷಿಕೆ</string>
     <string name="calendars_event_location">ಸ್ಥಳ</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">ವಿವರಣೆ</string>
     <string name="calendars_repeat_never">ಎಂದಿಗೂ ಇಲ್ಲ</string>
     <string name="calendars_repeat_monthly">ಮಾಸಿಕ</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s ಈವೆಂಟ್ ಆಮದು ಮಾಡಲಾಗಲಿಲ್ಲ</item>
         <item quantity="other">%1$s ಈವೆಂಟ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಲಾಗಲಿಲ್ಲ</item>
     </plurals>
+    <string name="calendars_event_colour_value">ಬಣ್ಣದ ಮೌಲ್ಯ</string>
+    <string name="calendars_discard_title">ಕರಡನ್ನು ತಿರಸ್ಕರಿಸಬೇಕೇ?</string>
+    <string name="calendars_discard_message">ನಿಮ್ಮ ಬದಲಾವಣೆಗಳು ಕಳೆದುಹೋಗುತ್ತವೆ.</string>
+    <string name="calendars_discard">ತಿರಸ್ಕರಿಸಿ</string>
+    <string name="calendars_event_deleted">ಈವೆಂಟ್ ಅನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
+    <string name="calendars_link_replace_title">ಕ್ಯಾಲೆಂಡರ್ ವಿಳಾಸವನ್ನು ಬದಲಾಯಿಸಬೇಕೇ?</string>
+    <string name="calendars_list_unmatched">ಯಾವುದೇ ಹೊಂದಾಣಿಕೆಗಳಿಲ್ಲ</string>
+    <string name="calendars_list_search_events">ಈವೆಂಟ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
 </resources>

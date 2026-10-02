@@ -15,6 +15,7 @@
     <string name="calendars_list_search">گەڕان</string>
     <string name="calendars_event_title">ناونیشان</string>
     <string name="calendars_event_location">شوێن</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">وەسف</string>
     <string name="calendars_repeat_never">هەرگیز</string>
     <string name="calendars_repeat_monthly">مانگانە</string>
@@ -208,4 +209,12 @@
         <item quantity="one">نەتوانرا %1$s ڕووداو هاوردە بکرێت</item>
         <item quantity="other">نەتوانرا %1$s ڕووداو هاوردە بکرێت</item>
     </plurals>
+    <string name="calendars_event_colour_value">بەهای ڕەنگ</string>
+    <string name="calendars_discard_title">ڕەشنووسەکە فڕێبدرێت؟</string>
+    <string name="calendars_discard_message">گۆڕانکارییەکانت لەدەست دەچن.</string>
+    <string name="calendars_discard">فڕێدان</string>
+    <string name="calendars_event_deleted">ڕووداو سڕایەوە</string>
+    <string name="calendars_link_replace_title">ناونیشانی ڕۆژژمێر بگۆڕدرێت؟</string>
+    <string name="calendars_list_unmatched">هیچ هاوتایەک نییە</string>
+    <string name="calendars_list_search_events">گەڕان لە ڕووداوەکان</string>
 </resources>

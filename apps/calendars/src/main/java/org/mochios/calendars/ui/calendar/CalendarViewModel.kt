@@ -132,7 +132,9 @@ class CalendarViewModel @Inject constructor(
     private val sessionManager: SessionManager,
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(CalendarUiState(hidden = VisibilityStore.hidden(context)))
+    private val _uiState = MutableStateFlow(
+        CalendarUiState(hidden = VisibilityStore.hidden(context), workweek = VisibilityStore.workweek(context)),
+    )
     val uiState: StateFlow<CalendarUiState> = _uiState.asStateFlow()
 
     private val _events = MutableSharedFlow<CalendarEvent>(extraBufferCapacity = 4)
@@ -376,6 +378,7 @@ class CalendarViewModel @Inject constructor(
     fun next() = anchor(step(_uiState.value.view, _uiState.value.anchor, 1))
 
     fun workweek(value: Boolean) {
+        VisibilityStore.workweek(context, value)
         _uiState.value = _uiState.value.copy(workweek = value)
     }
 
@@ -577,6 +580,20 @@ class CalendarViewModel @Inject constructor(
         }
     }
 
+    /** Puts back what the editor last deleted, as its Undo asks. */
+    fun restore() {
+        val back = repository.restoring() ?: return
+        viewModelScope.launch {
+            try {
+                back()
+            } catch (_: EventChangedException) {
+                _events.tryEmit(CalendarEvent.Changed)
+            } catch (e: Exception) {
+                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            }
+        }
+    }
+
     /** One call whose only outcome that matters is whether it failed. */
     private inline fun act(crossinline request: suspend () -> Unit) {
         viewModelScope.launch {
@@ -603,8 +620,11 @@ class CalendarViewModel @Inject constructor(
     fun openLink(calendar: String, regenerate: Boolean = false) {
         if (_link.value.busy) return
         if (!regenerate && _link.value.calendar == calendar) return
+        // A replace keeps the "already issued" state it started from, so a
+        // failed one leaves the address, and its Replace, as they were.
+        val issued = _link.value.calendar == calendar && _link.value.exists
         viewModelScope.launch {
-            _link.value = LinkState(calendar = calendar, busy = true)
+            _link.value = LinkState(calendar = calendar, busy = true, exists = issued)
             try {
                 val answer = repository.link(calendar, regenerate)
                 val base = server()
@@ -615,7 +635,7 @@ class CalendarViewModel @Inject constructor(
                     exists = answer.exists || answer.token.isNotBlank(),
                 )
             } catch (e: Exception) {
-                _link.value = LinkState(calendar = calendar)
+                _link.value = LinkState(calendar = calendar, exists = issued)
                 _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
             }
         }

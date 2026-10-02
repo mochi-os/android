@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Chèche</string>
     <string name="calendars_event_title">Tit</string>
     <string name="calendars_event_location">Lokasyon</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Deskripsyon</string>
     <string name="calendars_repeat_never">Janmen</string>
     <string name="calendars_repeat_monthly">Chak mwa</string>
@@ -205,4 +206,12 @@
         <item quantity="one">%1$s evènman pa t ka enpòte</item>
         <item quantity="other">%1$s evènman pa t ka enpòte</item>
     </plurals>
+    <string name="calendars_event_colour_value">Valè koulè a</string>
+    <string name="calendars_discard_title">Jete bouyon an?</string>
+    <string name="calendars_discard_message">Chanjman ou yo pral pèdi.</string>
+    <string name="calendars_discard">Jete</string>
+    <string name="calendars_event_deleted">Evènman efase</string>
+    <string name="calendars_link_replace_title">Ranplase adrès kalandriye a?</string>
+    <string name="calendars_list_unmatched">Pa gen koresponn</string>
+    <string name="calendars_list_search_events">Chèche evènman</string>
 </resources>

@@ -15,6 +15,7 @@
     <string name="calendars_list_search">शोधा</string>
     <string name="calendars_event_title">शीर्षक</string>
     <string name="calendars_event_location">स्थान</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">वर्णन</string>
     <string name="calendars_repeat_never">कधीही नाही</string>
     <string name="calendars_repeat_monthly">मासिक</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s कार्यक्रम आयात करता आला नाही</item>
         <item quantity="other">%1$s कार्यक्रम आयात करता आले नाहीत</item>
     </plurals>
+    <string name="calendars_event_colour_value">रंगाचे मूल्य</string>
+    <string name="calendars_discard_title">मसुदा टाकून द्यायचा?</string>
+    <string name="calendars_discard_message">तुमचे बदल हरवतील.</string>
+    <string name="calendars_discard">टाकून द्या</string>
+    <string name="calendars_event_deleted">कार्यक्रम हटवला</string>
+    <string name="calendars_link_replace_title">कॅलेंडरचा पत्ता बदलायचा का?</string>
+    <string name="calendars_list_unmatched">कोणतेही जुळणारे नाहीत</string>
+    <string name="calendars_list_search_events">कार्यक्रम शोधा</string>
 </resources>

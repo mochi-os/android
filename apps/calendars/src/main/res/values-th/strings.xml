@@ -15,6 +15,7 @@
     <string name="calendars_list_search">ค้นหา</string>
     <string name="calendars_event_title">ชื่อ</string>
     <string name="calendars_event_location">ตำแหน่ง</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">คำอธิบาย</string>
     <string name="calendars_repeat_never">ไม่เลย</string>
     <string name="calendars_repeat_monthly">รายเดือน</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">ไม่สามารถนำเข้า %1$s กิจกรรมได้</item>
     </plurals>
+    <string name="calendars_event_colour_value">ค่าสี</string>
+    <string name="calendars_discard_title">ละทิ้งฉบับร่างใช่ไหม?</string>
+    <string name="calendars_discard_message">การเปลี่ยนแปลงของคุณจะหายไป</string>
+    <string name="calendars_discard">ละทิ้ง</string>
+    <string name="calendars_event_deleted">ลบกิจกรรมแล้ว</string>
+    <string name="calendars_link_replace_title">แทนที่ที่อยู่ปฏิทินหรือไม่</string>
+    <string name="calendars_list_unmatched">ไม่มีรายการที่ตรงกัน</string>
+    <string name="calendars_list_search_events">ค้นหากิจกรรม</string>
 </resources>

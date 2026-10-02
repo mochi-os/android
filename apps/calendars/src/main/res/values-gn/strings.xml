@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Eheka</string>
     <string name="calendars_event_title">Teratee</string>
     <string name="calendars_event_location">Tenda</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Ñemombe\'u</string>
     <string name="calendars_repeat_never">Araka\'eve</string>
     <string name="calendars_repeat_monthly">Peteĩteĩ jasy</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s evento ndaikatúi oñemoinge</item>
         <item quantity="other">%1$s evento ndaikatúi oñemoinge</item>
     </plurals>
+    <string name="calendars_event_colour_value">Sa\'y valor</string>
+    <string name="calendars_discard_title">¿Remboykese borrador?</string>
+    <string name="calendars_discard_message">Ne ñemoambue okañyta.</string>
+    <string name="calendars_discard">Mboyke</string>
+    <string name="calendars_event_deleted">Evento oñembogue</string>
+    <string name="calendars_link_replace_title">¿Embyekovia arapapaha dirección?</string>
+    <string name="calendars_list_unmatched">Ndaipóri ojojoguáva</string>
+    <string name="calendars_list_search_events">Eheka evento</string>
 </resources>

@@ -23,6 +23,7 @@ import org.mochios.calendars.ui.editor.Recurrence
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.editor.components
 import org.mochios.calendars.ui.editor.draft
+import org.mochios.calendars.ui.editor.duplicate
 import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.follow
 import org.mochios.calendars.ui.editor.foreign
@@ -209,6 +210,58 @@ class EventComponentsTest {
         val tree = components(form(title = "Renamed"), listOf(master()), Scope.ALL)
         assertEquals("mailto:a@b.c", tree[0].value("ORGANIZER"))
         assertEquals("uid-1@mochi", tree[0].value("UID"))
+    }
+
+    // ---- a copy of an edited form ----
+
+    @Test
+    fun `a copy of this event carries the edits and drops the repeat`() {
+        val copy = duplicate(form(title = "Renamed").copy(colour = "#f87171"), Scope.ONE)
+        assertEquals("Renamed", copy.title)
+        assertEquals("#f87171", copy.colour)
+        assertEquals(NEXT, copy.start)
+        assertEquals(NEXT_END, copy.finish)
+        assertNull(copy.recurrence.rule())
+        assertEquals(0L, copy.occurrence)
+        assertEquals(0L, copy.series)
+    }
+
+    @Test
+    fun `a copy of all events carries the edits onto the series' own start`() {
+        // The occurrence a week on, moved by an hour: the series copy starts an hour after the series did.
+        val copy = duplicate(form(title = "Renamed", start = NEXT + 3_600, finish = NEXT_END + 3_600), Scope.ALL)
+        assertEquals("Renamed", copy.title)
+        assertEquals(TEN + 3_600, copy.start)
+        assertEquals(ELEVEN + 3_600, copy.finish)
+        assertEquals("FREQ=WEEKLY", copy.recurrence.rule())
+        assertEquals(0L, copy.occurrence)
+    }
+
+    // ---- colour and link ----
+
+    private fun coloured() = master().let {
+        it.copy(properties = it.properties + property("COLOR", "#22c55e") + property("URL", "https://example.org/a"))
+    }
+
+    @Test
+    fun `an event's colour and link open in the editor`() {
+        val opened = draft(coloured(), LONDON)
+        assertEquals("#22c55e", opened.colour)
+        assertEquals("https://example.org/a", opened.url)
+    }
+
+    @Test
+    fun `a colour and link set in the editor are saved`() {
+        val tree = components(form().copy(colour = "#f87171", url = "https://example.org/b"), listOf(master()), Scope.ALL)
+        assertEquals("#f87171", tree[0].value("COLOR"))
+        assertEquals("https://example.org/b", tree[0].value("URL"))
+    }
+
+    @Test
+    fun `a cleared colour and link are dropped`() {
+        val tree = components(form(), listOf(coloured()), Scope.ALL)
+        assertNull(tree[0].property("COLOR"))
+        assertNull(tree[0].property("URL"))
     }
 
     @Test

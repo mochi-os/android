@@ -320,4 +320,6 @@
     <string name="access_remove">Pupus</string>
     <string name="access_remove_title">Cabut aksés?</string>
     <string name="access_remove_message">Piceun aturan aksés pikeun \"%1$s\"?</string>
+    <string name="color_picker_custom">Kustom</string>
+    <string name="color_picker_clear">Bersihkeun</string>
 </resources>

@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Qidirish</string>
     <string name="calendars_event_title">Sarlavha</string>
     <string name="calendars_event_location">Joylashuv</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Tavsif</string>
     <string name="calendars_repeat_never">Hech qachon</string>
     <string name="calendars_repeat_monthly">Oylik</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s ta tadbirni import qilib boʻlmadi</item>
         <item quantity="other">%1$s ta tadbirni import qilib boʻlmadi</item>
     </plurals>
+    <string name="calendars_event_colour_value">Rang qiymati</string>
+    <string name="calendars_discard_title">Qoralama tashlab yuborilsinmi?</string>
+    <string name="calendars_discard_message">O\'zgarishlaringiz yo\'qoladi.</string>
+    <string name="calendars_discard">Tashlab yuborish</string>
+    <string name="calendars_event_deleted">Tadbir oʻchirildi</string>
+    <string name="calendars_link_replace_title">Kalendar manzili almashtirilsinmi?</string>
+    <string name="calendars_list_unmatched">Mos keladiganlar yoʻq</string>
+    <string name="calendars_list_search_events">Tadbirlarni qidirish</string>
 </resources>

@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Поиск</string>
     <string name="calendars_event_title">Заголовок</string>
     <string name="calendars_event_location">Местоположение</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Описание</string>
     <string name="calendars_repeat_never">Никогда</string>
     <string name="calendars_repeat_monthly">Ежемесячно</string>
@@ -222,4 +223,12 @@
         <item quantity="many">Не удалось импортировать %1$s событий</item>
         <item quantity="other">Не удалось импортировать %1$s события</item>
     </plurals>
+    <string name="calendars_event_colour_value">Значение цвета</string>
+    <string name="calendars_discard_title">Отменить черновик?</string>
+    <string name="calendars_discard_message">Ваши изменения будут потеряны.</string>
+    <string name="calendars_discard">Отменить</string>
+    <string name="calendars_event_deleted">Событие удалено</string>
+    <string name="calendars_link_replace_title">Заменить адрес календаря?</string>
+    <string name="calendars_list_unmatched">Совпадений нет</string>
+    <string name="calendars_list_search_events">Поиск событий</string>
 </resources>

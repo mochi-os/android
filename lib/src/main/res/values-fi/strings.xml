@@ -320,4 +320,6 @@
     <string name="access_remove">Poista</string>
     <string name="access_remove_title">Poistetaanko käyttöoikeus?</string>
     <string name="access_remove_message">Poistetaanko käyttöoikeussääntö kohteelle ”%1$s”?</string>
+    <string name="color_picker_custom">Mukautettu</string>
+    <string name="color_picker_clear">Tyhjennä</string>
 </resources>

@@ -221,6 +221,29 @@ fun LinkDialog(
     )
 }
 
+/**
+ * Confirms replacing a calendar's ICS link, which stops every subscriber's
+ * copy updating. It stays open while the new one is minted, and after a
+ * failure, so the replace can be tried again.
+ */
+@Composable
+fun ReplaceLinkDialog(
+    busy: Boolean,
+    onDismiss: () -> Unit,
+    onConfirm: () -> Unit,
+) {
+    MochiAlertDialog(
+        onDismissRequest = onDismiss,
+        title = stringResource(R.string.calendars_link_replace_title),
+        text = stringResource(R.string.calendars_link_revoke_message),
+        confirmText = stringResource(R.string.calendars_link_replace),
+        onConfirm = onConfirm,
+        confirmLoading = busy,
+        destructive = true,
+        dismissText = stringResource(MochiR.string.common_cancel),
+    )
+}
+
 /** Confirms revoking a calendar's ICS link, which stops every subscriber's copy updating. */
 @Composable
 fun RevokeLinkDialog(

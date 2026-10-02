@@ -320,4 +320,6 @@
     <string name="access_remove">Alih keluar</string>
     <string name="access_remove_title">Alih keluar akses?</string>
     <string name="access_remove_message">Alih keluar peraturan akses untuk \"%1$s\"?</string>
+    <string name="color_picker_custom">Tersuai</string>
+    <string name="color_picker_clear">Kosongkan</string>
 </resources>

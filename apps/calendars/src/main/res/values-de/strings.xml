@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Suchen</string>
     <string name="calendars_event_title">Titel</string>
     <string name="calendars_event_location">Ort</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Beschreibung</string>
     <string name="calendars_repeat_never">Nie</string>
     <string name="calendars_repeat_monthly">Monatlich</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s Termin konnte nicht importiert werden</item>
         <item quantity="other">%1$s Termine konnten nicht importiert werden</item>
     </plurals>
+    <string name="calendars_event_colour_value">Farbwert</string>
+    <string name="calendars_discard_title">Entwurf verwerfen?</string>
+    <string name="calendars_discard_message">Ihre Änderungen gehen verloren.</string>
+    <string name="calendars_discard">Verwerfen</string>
+    <string name="calendars_event_deleted">Termin gelöscht</string>
+    <string name="calendars_link_replace_title">Kalenderadresse ersetzen?</string>
+    <string name="calendars_list_unmatched">Keine Treffer</string>
+    <string name="calendars_list_search_events">Termine suchen</string>
 </resources>

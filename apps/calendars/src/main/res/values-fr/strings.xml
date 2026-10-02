@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Rechercher</string>
     <string name="calendars_event_title">Titre</string>
     <string name="calendars_event_location">Lieu</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Description</string>
     <string name="calendars_repeat_never">Jamais</string>
     <string name="calendars_repeat_monthly">Mensuel</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s événement n\'a pas pu être importé</item>
         <item quantity="other">%1$s événements n\'ont pas pu être importés</item>
     </plurals>
+    <string name="calendars_event_colour_value">Valeur de la couleur</string>
+    <string name="calendars_discard_title">Abandonner le brouillon ?</string>
+    <string name="calendars_discard_message">Vos modifications seront perdues.</string>
+    <string name="calendars_discard">Abandonner</string>
+    <string name="calendars_event_deleted">Événement supprimé</string>
+    <string name="calendars_link_replace_title">Remplacer l\'adresse du calendrier ?</string>
+    <string name="calendars_list_unmatched">Aucune correspondance</string>
+    <string name="calendars_list_search_events">Rechercher des événements</string>
 </resources>

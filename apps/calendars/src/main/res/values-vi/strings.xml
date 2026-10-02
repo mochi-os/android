@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Tìm kiếm</string>
     <string name="calendars_event_title">Tiêu đề</string>
     <string name="calendars_event_location">Vị trí</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Mô tả</string>
     <string name="calendars_repeat_never">Không bao giờ</string>
     <string name="calendars_repeat_monthly">Hàng tháng</string>
@@ -201,4 +202,12 @@
     <plurals name="calendars_import_failed">
         <item quantity="other">Không thể nhập %1$s sự kiện</item>
     </plurals>
+    <string name="calendars_event_colour_value">Giá trị màu</string>
+    <string name="calendars_discard_title">Loại bỏ bản nháp?</string>
+    <string name="calendars_discard_message">Các thay đổi của bạn sẽ bị mất.</string>
+    <string name="calendars_discard">Loại bỏ</string>
+    <string name="calendars_event_deleted">Đã xóa sự kiện</string>
+    <string name="calendars_link_replace_title">Thay thế địa chỉ lịch?</string>
+    <string name="calendars_list_unmatched">Không có kết quả khớp</string>
+    <string name="calendars_list_search_events">Tìm kiếm sự kiện</string>
 </resources>

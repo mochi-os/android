@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Zoeken</string>
     <string name="calendars_event_title">Titel</string>
     <string name="calendars_event_location">Locatie</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Beschrijving</string>
     <string name="calendars_repeat_never">Nooit</string>
     <string name="calendars_repeat_monthly">Maandelijks</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s afspraak kon niet worden geïmporteerd</item>
         <item quantity="other">%1$s afspraken konden niet worden geïmporteerd</item>
     </plurals>
+    <string name="calendars_event_colour_value">Kleurwaarde</string>
+    <string name="calendars_discard_title">Concept verwerpen?</string>
+    <string name="calendars_discard_message">Je wijzigingen gaan verloren.</string>
+    <string name="calendars_discard">Verwerpen</string>
+    <string name="calendars_event_deleted">Afspraak verwijderd</string>
+    <string name="calendars_link_replace_title">Agenda-adres vervangen?</string>
+    <string name="calendars_list_unmatched">Geen overeenkomsten</string>
+    <string name="calendars_list_search_events">Afspraken zoeken</string>
 </resources>

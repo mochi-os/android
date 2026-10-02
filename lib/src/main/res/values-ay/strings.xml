@@ -320,4 +320,6 @@
     <string name="access_remove">Aparma</string>
     <string name="access_remove_title">¿Mantaña aparañati?</string>
     <string name="access_remove_message">¿\"%1$s\" mantañataki kamachi apsuñati?</string>
+    <string name="color_picker_custom">Personalizado</string>
+    <string name="color_picker_clear">Q\'umachaña</string>
 </resources>

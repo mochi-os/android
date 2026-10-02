@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Maskay</string>
     <string name="calendars_event_title">Sutinchay</string>
     <string name="calendars_event_location">Lugar</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Willariy</string>
     <string name="calendars_repeat_never">Mana hayk\'aqpas</string>
     <string name="calendars_repeat_monthly">Killantin</string>
@@ -208,4 +209,12 @@
         <item quantity="one">%1$s evento mana importayta atikurqanchu</item>
         <item quantity="other">%1$s evento mana importayta atikurqanchu</item>
     </plurals>
+    <string name="calendars_event_colour_value">Llimp\'i chanin</string>
+    <string name="calendars_discard_title">¿Borradorta wikch\'unkichu?</string>
+    <string name="calendars_discard_message">Hukchasqaykikuna chinkanqa.</string>
+    <string name="calendars_discard">Wikch\'uy</string>
+    <string name="calendars_event_deleted">Evento wischusqa</string>
+    <string name="calendars_link_replace_title">¿Calendario direccionta tikrankichu?</string>
+    <string name="calendars_list_unmatched">Mana tupaqkuna kanchu</string>
+    <string name="calendars_list_search_events">Eventokunata maskay</string>
 </resources>

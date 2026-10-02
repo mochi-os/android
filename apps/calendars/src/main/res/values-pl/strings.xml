@@ -15,6 +15,7 @@
     <string name="calendars_list_search">Szukaj</string>
     <string name="calendars_event_title">Tytuł</string>
     <string name="calendars_event_location">Lokalizacja</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Opis</string>
     <string name="calendars_repeat_never">Nigdy</string>
     <string name="calendars_repeat_monthly">Miesięcznie</string>
@@ -222,4 +223,12 @@
         <item quantity="many">Nie udało się zaimportować %1$s wydarzeń</item>
         <item quantity="other">Nie udało się zaimportować %1$s wydarzenia</item>
     </plurals>
+    <string name="calendars_event_colour_value">Wartość koloru</string>
+    <string name="calendars_discard_title">Odrzucić wersję roboczą?</string>
+    <string name="calendars_discard_message">Twoje zmiany zostaną utracone.</string>
+    <string name="calendars_discard">Odrzuć</string>
+    <string name="calendars_event_deleted">Usunięto wydarzenie</string>
+    <string name="calendars_link_replace_title">Zastąpić adres kalendarza?</string>
+    <string name="calendars_list_unmatched">Brak dopasowań</string>
+    <string name="calendars_list_search_events">Szukaj wydarzeń</string>
 </resources>
