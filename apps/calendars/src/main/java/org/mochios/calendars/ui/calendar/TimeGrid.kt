@@ -42,6 +42,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateMapOf
@@ -49,6 +50,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.withFrameMillis
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -65,11 +67,14 @@ import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.addOutline
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalConfiguration
@@ -85,16 +90,17 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.ui.theme.LocalEntityRadius
-import org.mochios.calendars.R
-import org.mochios.calendars.model.Instance
 import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.ZoneId
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalEntityRadius
+import org.mochios.calendars.R
+import org.mochios.calendars.model.Instance
 
 /** The height of one hour row; the whole day is twenty-four of these. */
 private val HOUR = 56.dp
@@ -546,7 +552,6 @@ private fun DayColumn(
                 Block(
                     instance = placed.instance,
                     backwards = placed.backwards,
-                    zones = zones,
                     handle = placed.instance.editable && !placed.backwards,
                     stacked = stacked,
                     chosen = same(placed.instance, selected),
@@ -565,7 +570,6 @@ private fun DayColumn(
             ) {
                 Block(
                     instance = lifted,
-                    zones = zones,
                     span = interval(lifted.copy(start = drop.start, finish = drop.finish), zones, format::formatTime, ranged()),
                     stacked = stacked,
                     modifier = Modifier.shadow(6.dp, corners()),
@@ -691,98 +695,133 @@ private fun lay(instances: List<Instance>, viewModel: CalendarViewModel, day: Lo
 }
 
 /**
- * A timed occurrence's block: the neutral surface of the time grid,
- * its outline dashed for a tentative one and in the primary colour, over the
- * primary colour's tint, when [chosen]. Its time is its span, "09:00 to
- * 10:00", each end read in its own zone when [zones] is on, or [span] when
- * given, which a lifted block uses for where it would land. A [backwards] block stands in for an occurrence whose end reads
- * before its start, and says so with a mark. With [handle] on, a strip along
- * the bottom edge marks where a long press takes the end.
+ * A timed occurrence's block: a card filled with its colour, its words in
+ * white, or a light wash of it in a dashed outline for a tentative one, and
+ * ringed when [chosen]. Its time is read off the hours beside it, so it
+ * writes none, but a lifted block writes [span], where it would land. A
+ * [backwards] block stands in for an occurrence whose end reads before its
+ * start, and in the day view says so with a mark. With [handle] on, a strip
+ * along the bottom edge, where a long press takes the end, is named for
+ * screen readers, and in the day view a short bar marks it when the block's
+ * words leave the strip clear; a short block, and the week view's narrow
+ * ones, draw no bar, so it never sits on the title.
  *
- * On one line, as the day view draws it, the block reads dot, title, marks
- * and the time at the far end, with the location beneath when the block is
- * tall enough. [stacked], as the week view's narrow columns draw it, puts
- * the dot and title on the first line, the time and marks on a second in a
- * smaller type, and the location on a third, each only when the block is
- * tall enough to hold it.
+ * As the day view draws it, the block reads its title in a larger type with
+ * its marks at the far end, the reminder bell and the repeat glyph, and the
+ * location beneath when the block is tall enough. The title's size goes by
+ * the block's height alone: at full size it wraps onto as many lines as the
+ * block holds, up to three, one fewer when the location takes the last; a
+ * block too short for one full line shrinks it to fit. A block with room to
+ * spare keeps a little more of it at its start and top.
+ *
+ * [stacked], as the week view's narrow columns draw it, the block reads its
+ * title alone in a small type, wrapping onto as many lines as it holds.
  */
 @Composable
 fun Block(
     instance: Instance,
     backwards: Boolean = false,
-    zones: Boolean = false,
     span: String? = null,
     handle: Boolean = false,
     stacked: Boolean = false,
     chosen: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
-    val format = LocalFormat.current
-    val time = span ?: interval(instance, zones, format::formatTime, ranged())
-    BoxWithConstraints(modifier = modifier.fillMaxSize().panel(corners(), dashed = instance.tentative, chosen = chosen)) {
-        val height = maxHeight
-        if (stacked) {
-            val first = MaterialTheme.typography.labelMedium.packed()
-            val second = MaterialTheme.typography.labelSmall.packed()
-            val two = leading(first) + leading(second) + 1.dp
-            val three = two + leading(second)
-            Column(modifier = Modifier.fillMaxWidth().padding(start = 4.dp, end = 4.dp, top = 1.dp)) {
-                Title(instance, first)
-                if (height >= two) {
-                    Detail(instance, time, second, backwards = backwards)
+    val colour = instance.colour.toColour(MaterialTheme.colorScheme.primary)
+    val ink = if (instance.tentative) {
+        Ink(MaterialTheme.colorScheme.onSurface, MaterialTheme.colorScheme.onSurfaceVariant)
+    } else {
+        Ink(Color.White, Color.White.copy(alpha = 0.85f))
+    }
+    val card = modifier.fillMaxSize().filled(corners(), colour, instance.tentative, chosen)
+    CompositionLocalProvider(LocalInk provides ink) {
+        BoxWithConstraints(modifier = card) {
+            val height = maxHeight
+            val density = LocalDensity.current
+            var filled by remember { mutableStateOf<Dp?>(null) }
+            if (stacked) {
+                val small = MaterialTheme.typography.labelSmall
+                val size = if (small.fontSize.isSp) small.fontSize else 11.sp
+                val line = with(density) { (size * LINE).toDp() }
+                val lines = ((height - 3.dp) / line).toInt() - if (span != null) 1 else 0
+                Column(modifier = Modifier.fillMaxWidth().padding(start = 4.dp, end = 4.dp, top = 1.dp)) {
+                    Fitted(instance, small, lines.coerceAtLeast(1))
+                    if (span != null) {
+                        Landing(span, small)
+                    }
                 }
-                if (height >= three && instance.location.isNotBlank()) {
-                    Text(
-                        text = instance.location,
-                        style = second,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.padding(start = DOT + GAP),
-                    )
+            } else {
+                val first = MaterialTheme.typography.titleMedium
+                val second = MaterialTheme.typography.labelSmall
+                val largest = if (first.fontSize.isSp) first.fontSize else 16.sp
+                val line = with(LocalDensity.current) { (largest * LINE).toDp() }
+                val roomy = height >= line + ROOMY + 2.dp
+                val wide = maxWidth >= WIDE
+                val top = if (roomy) ROOMY else 2.dp
+                val room = height - top - 2.dp
+                val lines = (room / line).toInt()
+                val located = instance.location.isNotBlank() && lines >= 2
+                val titled = (if (located) lines - 1 else lines).coerceIn(1, LINES)
+                val size = if (lines >= 1) {
+                    largest
+                } else {
+                    with(LocalDensity.current) { maxOf((room / LINE).toSp().value, SMALLEST.value).sp }
+                }
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .onSizeChanged { size -> filled = with(density) { size.height.toDp() } }
+                        .padding(
+                            start = if (wide) START else 4.dp,
+                            end = 4.dp,
+                            top = top,
+                            bottom = 2.dp,
+                        ),
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.Top,
+                        horizontalArrangement = Arrangement.spacedBy(GAP),
+                    ) {
+                        Fitted(instance, first.copy(fontSize = size), titled, Modifier.weight(1f))
+                        for (mark in marks(instance, backwards)) {
+                            Glyph(mark, 16.dp)
+                        }
+                    }
+                    if (span != null) {
+                        Landing(span, second)
+                    }
+                    if (located) {
+                        Text(
+                            text = instance.location,
+                            style = second,
+                            color = ink.muted,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
                 }
             }
-        } else {
-            val first = MaterialTheme.typography.labelMedium
-            val second = MaterialTheme.typography.labelSmall
-            val two = leading(first) + leading(second) + 4.dp
-            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 2.dp)) {
-                Line(
-                    instance = instance,
-                    time = time,
-                    style = first,
-                    clock = second,
-                    backwards = backwards,
-                )
-                if (height >= two && instance.location.isNotBlank()) {
-                    Text(
-                        text = instance.location,
-                        style = second,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.padding(start = DOT + GAP),
-                    )
-                }
-            }
-        }
-        if (handle) {
-            val description = stringResource(R.string.calendars_event_resize)
-            Box(
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .fillMaxWidth()
-                    .height(HANDLE)
-                    .semantics { contentDescription = description },
-                contentAlignment = Alignment.Center,
-            ) {
+            if (handle) {
+                val description = stringResource(R.string.calendars_event_resize)
                 Box(
                     modifier = Modifier
-                        .width(16.dp)
-                        .height(2.dp)
-                        .clip(RoundedCornerShape(1.dp))
-                        .background(MaterialTheme.colorScheme.outline),
-                )
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .height(HANDLE)
+                        .semantics { contentDescription = description },
+                    contentAlignment = Alignment.Center,
+                ) {
+                    val used = filled
+                    if (!stacked && used != null && height - used >= HANDLE) {
+                        Box(
+                            modifier = Modifier
+                                .width(16.dp)
+                                .height(2.dp)
+                                .clip(RoundedCornerShape(1.dp))
+                                .background(ink.muted),
+                        )
+                    }
+                }
             }
         }
     }
@@ -864,7 +903,9 @@ fun Line(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(gap),
     ) {
-        Dot(instance)
+        if (LocalInk.current == null) {
+            Dot(instance)
+        }
         Name(instance, style, Modifier.weight(1f))
         for (mark in marks(instance, backwards)) {
             Glyph(mark, glyph)
@@ -873,7 +914,7 @@ fun Line(
             Text(
                 text = time,
                 style = clock,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = LocalInk.current?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
                 softWrap = false,
             )
@@ -920,7 +961,7 @@ private fun Glyph(mark: Mark, size: Dp) {
         imageVector = mark.icon(),
         contentDescription = stringResource(mark.label),
         modifier = Modifier.size(size),
-        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        tint = LocalInk.current?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant,
     )
 }
 
@@ -932,7 +973,9 @@ fun Title(instance: Instance, style: TextStyle, modifier: Modifier = Modifier) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GAP),
     ) {
-        Dot(instance)
+        if (LocalInk.current == null) {
+            Dot(instance)
+        }
         Name(instance, style, Modifier.weight(1f))
     }
 }
@@ -944,8 +987,9 @@ fun Title(instance: Instance, style: TextStyle, modifier: Modifier = Modifier) {
  */
 @Composable
 fun Detail(instance: Instance, time: String?, style: TextStyle, modifier: Modifier = Modifier, backwards: Boolean = false) {
+    val ink = LocalInk.current
     Row(
-        modifier = modifier.padding(start = DOT + GAP),
+        modifier = modifier.padding(start = if (ink == null) DOT + GAP else 0.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GAP),
     ) {
@@ -953,7 +997,7 @@ fun Detail(instance: Instance, time: String?, style: TextStyle, modifier: Modifi
             Text(
                 text = time,
                 style = style,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = ink?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
                 softWrap = false,
             )
@@ -996,13 +1040,68 @@ fun Name(instance: Instance, style: TextStyle, modifier: Modifier = Modifier) {
     Text(
         text = if (instance.untitled) stringResource(R.string.calendars_untitled) else instance.summary,
         style = style,
-        color = if (instance.untitled) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface,
+        color = LocalInk.current?.let { ink -> if (instance.untitled) ink.muted else ink.text }
+            ?: if (instance.untitled) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface,
         textDecoration = if (instance.cancelled) TextDecoration.LineThrough else null,
         maxLines = 1,
         overflow = TextOverflow.Ellipsis,
         modifier = modifier,
     )
 }
+
+/**
+ * An occurrence's title as [Name] writes it, wrapping onto as many as
+ * [lines] lines at [style]'s size and cut short with an ellipsis after the
+ * last. Its line height is [LINE] times its size, as the block sizes it by.
+ */
+@Composable
+private fun Fitted(instance: Instance, style: TextStyle, lines: Int, modifier: Modifier = Modifier) {
+    val ink = LocalInk.current
+    val colour = if (instance.untitled) {
+        ink?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant
+    } else {
+        ink?.text ?: MaterialTheme.colorScheme.onSurface
+    }
+    Text(
+        text = if (instance.untitled) stringResource(R.string.calendars_untitled) else instance.summary,
+        style = style.copy(lineHeight = LINE.em),
+        color = colour,
+        textDecoration = if (instance.cancelled) TextDecoration.LineThrough else null,
+        maxLines = lines,
+        overflow = TextOverflow.Ellipsis,
+        modifier = modifier,
+    )
+}
+
+/** Where a lifted block would land, "10:00 to 11:00", under its title. */
+@Composable
+private fun Landing(span: String, style: TextStyle) {
+    Text(
+        text = span,
+        style = style,
+        color = LocalInk.current?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant,
+        maxLines = 1,
+        softWrap = false,
+    )
+}
+
+/** A day card title's line height, as a multiple of its size. */
+private const val LINE = 1.2f
+
+/** The most lines a day card's title wraps onto. */
+private const val LINES = 3
+
+/** The smallest a day card's title shrinks to on a block too short for one full line. */
+private val SMALLEST = 8.sp
+
+/** The room a day card keeps at its top when it has the space. */
+private val ROOMY = 6.dp
+
+/** The room a day card keeps at its start when it has the space. */
+private val START = 8.dp
+
+/** How wide a day card must be to keep [START] at its start. */
+private val WIDE = 96.dp
 
 /**
  * [style] with its lines packed closer than its own line height, so a short
@@ -1017,6 +1116,59 @@ fun TextStyle.packed(): TextStyle = if (fontSize.isSp) copy(lineHeight = fontSiz
  */
 @Composable
 fun corners(): Shape = RoundedCornerShape(minOf(LocalEntityRadius.current, CORNER))
+
+/**
+ * The colours an entry's words take on a card filled with its own colour:
+ * [text] for its title, [muted] for its time, location and marks.
+ */
+internal class Ink(val text: Color, val muted: Color)
+
+/**
+ * The [Ink] of the card an entry is drawn on, null where it stands on the
+ * grid itself and opens with its [Dot] instead.
+ */
+internal val LocalInk = staticCompositionLocalOf<Ink?> { null }
+
+/**
+ * [colour] darkened toward black, keeping its hue, just far enough for white
+ * text on it to reach a contrast of 4.5 to 1, the WCAG minimum for body text;
+ * a colour dark enough already comes back as it is. A card's words are
+ * always white, as Google Calendar's are, so a pale colour is what gives.
+ */
+internal fun deepened(colour: Color): Color {
+    var shade = colour
+    var step = 0
+    while (shade.luminance() > WHITE_ON && step < 20) {
+        step++
+        shade = lerp(colour, Color.Black, step * 0.05f)
+    }
+    return shade
+}
+
+/** The most luminance a fill may have for white on it to read at 4.5 to 1. */
+private const val WHITE_ON = 1.05f / 4.5f - 0.05f
+
+/**
+ * The card a timed block is drawn on, filled with the occurrence's
+ * [colour], [deepened] for its white words, as Google Calendar draws one. A
+ * [tentative] occurrence is a light wash of the colour in a dashed outline
+ * of it instead, with dark words. A thin edge in
+ * the page's colour keeps back-to-back cards apart; [chosen] rings the card
+ * in the text colour instead.
+ */
+@Composable
+private fun Modifier.filled(shape: Shape, colour: Color, tentative: Boolean, chosen: Boolean): Modifier {
+    val base = this
+        .clip(shape)
+        .background(MaterialTheme.colorScheme.surfaceContainer)
+        .background(if (tentative) colour.copy(alpha = 0.25f) else deepened(colour))
+        .then(if (tentative) Modifier.dashed(colour, shape) else Modifier)
+    return if (chosen) {
+        base.border(2.dp, MaterialTheme.colorScheme.onSurface, shape)
+    } else {
+        base.border(1.dp, MaterialTheme.colorScheme.surface, shape)
+    }
+}
 
 /**
  * The neutral surface a timed block or a carried chip sits on: the cards'
