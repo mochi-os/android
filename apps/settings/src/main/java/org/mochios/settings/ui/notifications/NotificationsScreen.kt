@@ -65,6 +65,7 @@ import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
+import org.mochios.settings.ui.notificationprefs.ordered
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -153,7 +154,7 @@ fun NotificationsScreen(
                 tabs = listOf(
                     MochiTab(
                         if (unreadCount > 0) {
-                            stringResource(R.string.notifications_tab_unread_count, unreadCount)
+                            stringResource(R.string.notifications_tab_unread_count, LocalFormat.current.formatNumber(unreadCount))
                         } else {
                             stringResource(R.string.notifications_tab_unread)
                         },
@@ -233,7 +234,7 @@ fun NotificationsScreen(
 }
 
 @Composable
-private fun NotificationCard(
+internal fun NotificationCard(
     notification: MochiNotification,
     topic: NotifTopic?,
     categories: List<NotifCategory>,
@@ -292,7 +293,7 @@ private fun NotificationCard(
                             .padding(horizontal = 6.dp),
                     ) {
                         Text(
-                            text = "×${notification.count}",
+                            text = "×${format.formatNumber(notification.count)}",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSecondaryContainer,
                         )
@@ -318,7 +319,7 @@ private fun NotificationCard(
  * notification preferences.
  */
 @Composable
-private fun CategoryPicker(
+internal fun CategoryPicker(
     topic: NotifTopic,
     categories: List<NotifCategory>,
     onSetCategory: (NotifTopic, String?) -> Unit,
@@ -326,12 +327,7 @@ private fun CategoryPicker(
     var menu by remember { mutableStateOf(false) }
     // "No notifications" is the seeded id "0" and belongs at the end as the
     // opt-out; the rest read alphabetically, which is where a reader looks.
-    val ordered = remember(categories) {
-        categories.sortedWith(
-            compareBy<NotifCategory> { it.id == "0" }
-                .thenBy(String.CASE_INSENSITIVE_ORDER) { it.label },
-        )
-    }
+    val ordered = remember(categories) { categories.ordered() }
     Box {
         MochiIconButton(onClick = { menu = true }) {
             Icon(
@@ -350,7 +346,7 @@ private fun CategoryPicker(
             )
             for (category in ordered) {
                 MochiDropdownMenuItem(
-                    text = { Text(category.label) },
+                    text = { Text(category.shown) },
                     onClick = {
                         menu = false
                         onSetCategory(topic, category.id)

@@ -5,11 +5,11 @@
     <string name="settings_home_logout">ထွက်</string>
     <string name="settings_home_account">အကောင့်</string>
     <string name="settings_home_preferences">ဦးစားပေးချက်များ</string>
-    <string name="settings_home_display">ဖော်ပြချက်</string>
+    <string name="settings_home_display">ပြသမှု</string>
     <string name="settings_home_notification_prefs">အကြောင်းကြားချက် ဦးစားပေးချက်များ</string>
     <string name="settings_home_accounts">ချိတ်ဆက်ထားသော အကောင့်များ</string>
     <string name="settings_home_interests">စိတ်ဝင်စားမှုများ</string>
-    <string name="account_section_passkeys">Passkey များ</string>
+    <string name="account_section_passkeys">ဝင်ရောက်ခွင့်သော့များ</string>
     <string name="account_passkey_register">ဝင်ရောက်ခွင့်သော့ ထည့်မည်</string>
     <string name="account_passkey_delete_title">ဝင်ရောက်ခွင့်သော့ ဖျက်မလား?</string>
     <string name="account_section_totp">အထောက်အထားစိစစ်သည့် အက်ပ်</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">လမ်းကြောင်း ဖျက်မလား?</string>
     <string name="route_path">လမ်းကြောင်း</string>
     <string name="route_method">နည်းလမ်း</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">အက်ပ်</string>
     <string name="route_method_entity">အရာ</string>
     <string name="route_method_redirect">လမ်းကြောင်းလွှဲ</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org မှ ဒေါင်းလုဒ်လုပ်ပါ</string>
     <string name="system_status_copy">ကူးမည်</string>
     <string name="system_status_peers">ပီယာများ</string>
-    <string name="system_status_known">သိရှိ</string>
+    <string name="system_status_peers_totals">သိရှိ %1$s · ချိတ်ဆက်ပြီး %2$s · ထုတ်လွှင့်မှု မက်ရှ် %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">သိရှိ %1$s · ချိတ်ဆက်ပြီး %2$s</string>
     <string name="system_status_peer_connected">ချိတ်ဆက်ပြီး</string>
     <string name="system_status_peer_disconnected">ချိတ်ဆက်မှု ပြတ်တောက်ပြီး</string>
     <string name="system_status_peer_queued">တန်းစီထားသော မက်ဆေ့ဂျ်များ</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">ဖယ်ရှား</string>
     <string name="accounts_remove_title">အကောင့် ဖယ်ရှားမလား?</string>
     <string name="system_documents_title">စာရွက်စာတမ်းများ</string>
-    <string name="system_documents_description">သုံးစွဲသူများကို ပြသမည့် ဆာဗာ စည်းမျဉ်းများ၊ စည်းကမ်းချက်များနှင့် ကိုယ်ရေးအချက်အလက် မူဝါဒ</string>
     <string name="system_documents_tab_rules">ဆာဗာ စည်းမျဉ်းများ</string>
     <string name="system_documents_tab_terms">စည်းကမ်းချက်များ</string>
     <string name="system_documents_tab_privacy">ကိုယ်ရေးကိုယ်တာ</string>
     <string name="system_documents_language">ဘာသာစကား</string>
     <string name="system_documents_no_language">ဤဘာသာစကားအတွက် စာရွက်စာတမ်း မရရှိနိုင်ပါ။</string>
-    <string name="system_documents_customised">စိတ်ကြိုက် ပြင်ဆင်ထားသည်</string>
     <string name="system_documents_using_default">ပါဝင်ပြီးသား ပုံသေကို သုံးနေသည်</string>
     <string name="system_documents_revert">ပုံသေသို့ ပြန်ပြင်</string>
     <string name="system_documents_save">သိမ်းမည်</string>
@@ -137,7 +138,7 @@
     <string name="system_settings_reset_title">ပုံသေသို့ ပြန်ထားမလား?</string>
     <string name="system_setting_apps_install_user">သုံးစွဲသူများကို app များ ထည့်သွင်းခွင့်ပြုမည်</string>
     <string name="system_setting_auth_email">အီးမေးလ် ကုဒ်ဖြင့် ဝင်</string>
-    <string name="system_setting_auth_passkey">ပတ်စကီးဖြင့် ဝင်</string>
+    <string name="system_setting_auth_passkey">ဝင်ရောက်ခွင့်သော့ဖြင့် ဝင်</string>
     <string name="system_setting_auth_totp">TOTP အထောက်အထား အက်ပ်ဖြင့် ဝင်</string>
     <string name="system_setting_auth_recovery">ပြန်လည်ရယူရေး ကုဒ်ဖြင့် ဝင်</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 ဖြင့် ဝင်</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">သုံးစွဲသူ ဖျက်မည်</string>
     <string name="system_users_delete_title">သုံးစွဲသူ ဖျက်မလား?</string>
     <string name="system_users_manage_sessions">စက်ရှင်များ စီမံ</string>
-    <string name="system_users_sessions_description">ဤသုံးစွဲသူ၏ လက်ရှိ စက်ရှင် များကို ကြည့်ရှု၍ ရုပ်သိမ်းပါ။</string>
     <string name="system_users_sessions_empty">ဤသုံးစွဲသူတွင် လက်ရှိ စက်ရှင် မရှိပါ။</string>
     <string name="system_users_revoke">ရုပ်သိမ်း</string>
     <string name="system_users_revoke_all">session များအားလုံး ရုပ်သိမ်း</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">ရှေ့သို့</string>
     <string name="system_users_empty">သုံးစွဲသူများ မတွေ့ပါ</string>
     <string name="system_users_empty_search">သင့်ရှာဖွေချက်နှင့် ကိုက်ညီသော သုံးစွဲသူများ မရှိပါ</string>
-    <string name="system_users_empty_search_hint">သင်၏ ရှာဖွေမှု စံသတ်မှတ်ချက်များကို ပြင်ဆင်ကြည့်ပါ</string>
     <string name="system_users_toast_created">သုံးစွဲသူ ဖန်တီးပြီး</string>
     <string name="system_users_toast_updated">သုံးစွဲသူ အပ်ဒိတ်လုပ်ပြီး</string>
     <string name="system_users_toast_deleted">သုံးစွဲသူ ဖျက်ပြီး</string>
@@ -209,19 +208,19 @@
     <string name="settings_home_privacy">ကိုယ်ရေးကိုယ်တာမူဝါဒ</string>
     <string name="settings_home_rules">စည်းမျဉ်းများ</string>
     <string name="settings_home_terms">ဝန်ဆောင်မှု စည်းမျဉ်းများ</string>
-    <string name="account_passkeys_empty">မှတ်ပုံတင်ထားသော passkey မရှိပါ။</string>
+    <string name="account_passkeys_empty">မှတ်ပုံတင်ထားသော ဝင်ရောက်ခွင့်သော့ မရှိပါ။</string>
     <string name="account_passkey_register_title">ဝင်ရောက်ခွင့်သော့ ထည့်ပါ</string>
-    <string name="account_passkey_register_message">သင့်စက်ပစ္စည်းမှ အတည်ပြုရန် တောင်းဆိုပါမည်။ ဝင်ရောက်ခွင့်သော့ သည် ဤစက်ပစ္စည်းနှင့် ချိတ်ဆက်ထားပြီး အနာဂတ်ဝင်ရောက်မှုများအတွက် အသုံးပြုပါမည်။</string>
     <string name="account_passkey_name_label">အမည် (ရွေးချယ်နိုင်)</string>
     <string name="account_passkey_delete_message">\"%1$s\" သင့်ကို ထပ်မံ ဝင်မရောက်စေတော့ပါ။</string>
-    <string name="account_totp_description">စစ်မှန်ကြောင်းအတည်ပြုသည့်အက်ပ်မှ 6-လုံး ကုဒ်ဖြင့် ဝင်ပါ။</string>
     <string name="account_totp_enabled">စစ်မှန်ကြောင်းအတည်ပြုသူ ဖွင့်ထားသည်။</string>
     <string name="account_totp_setup_step1">ဤလျှို့ဝှက်ချက်ကို သင့်စစ်မှန်ကြောင်းအတည်ပြုသည့်အက်ပ်တွင် စကင်ဖတ်ပါ သို့ ထည့်ပါ။</string>
     <string name="account_totp_setup_step2">သင့်အက်ပ်ပြသည့် 6-လုံး ကုဒ်ကို ထည့်ပါ။</string>
     <string name="account_totp_code">ကုဒ်</string>
     <string name="account_totp_disable_message">စစ်မှန်ကြောင်းအတည်ပြုသူ ကုဒ်ဖြင့် ထပ်မံ ဝင်နိုင်တော့မည် မဟုတ်ပါ။</string>
     <string name="account_recovery_none">ပြန်လည်ရယူသည့် ကုဒ်များ မထုတ်ထားပါ။</string>
-    <string name="account_recovery_count">%1$d အသုံးမပြုသေးသော ပြန်လည်ရယူသည့် ကုဒ်များ။</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">ပြန်လည်ရယူသည့် ကုဒ် %1$s ခု ကျန်ပါသည်။</item>
+    </plurals>
     <string name="account_recovery_generate">ကုဒ်များ ထုတ်ပါ</string>
     <string name="account_recovery_regenerate">ကုဒ်များ ပြန်ထုတ်ပါ</string>
     <string name="account_recovery_regen_title">ပြန်လည်ရယူသည့် ကုဒ်များ ပြန်ထုတ်မလား?</string>
@@ -237,7 +236,7 @@
     <string name="account_last_used">နောက်ဆုံး အသုံးပြုခဲ့သည် %1$s</string>
     <string name="route_delete_message">ဤသည် လမ်းကြောင်း \"%1$s\" အတွက် လမ်းကြောင်းကို ဖယ်ရှားပါမည်။</string>
     <string name="route_empty">စီစဉ်ထားသော လမ်းကြောင်းများ မရှိပါ။</string>
-    <string name="route_meta">ဦးစားပေး %1$d · %2$s</string>
+    <string name="route_meta">ဦးစားပေး %1$s · %2$s</string>
     <string name="interests_search_placeholder">ထည့်ရန် ခေါင်းစဉ်များ ရှာဖွေပါ…</string>
     <string name="interests_empty">စိတ်ဝင်စားမှုများ မရှိသေးပါ။</string>
     <string name="interests_summary_regenerate">အကျဉ်းချုပ် ပြန်ထုတ်</string>
@@ -270,7 +269,9 @@
     <string name="system_users_session_last_accessed">နောက်ဆုံး ဝင်ရောက်ခြင်း- %1$s</string>
     <string name="system_users_revoke_all_title">အစည်းအဝေးအားလုံး ပယ်ဖျက်မလား?</string>
     <string name="system_users_revoke_all_message">ဤအသုံးပြုသူ၏ လှုပ်ရှားနေသော အစည်းအဝေး အားလုံးမှ ထွက်သွားပါမည်။</string>
-    <string name="system_users_pagination_status">%3$d အသုံးပြုသူများထဲမှ %1$d–%2$d ပြသနေသည်</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">အသုံးပြုသူ %3$s ဦးအနက် %1$s–%2$s ကို ပြသနေသည်</item>
+    </plurals>
     <string name="account_title">အကောင့်</string>
     <string name="account_section_identity">ကိုယ်ပိုင်</string>
     <string name="account_identity_identity">ကိုယ်ပိုင်</string>
@@ -303,10 +304,10 @@
     <string name="domain_verify">DNS အတည်ပြုမည်</string>
     <string name="settings_home_domains">Domain များ</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="other">ဦးတည်ရာ %1$d ခုသို့ စမ်းသပ်ချက် ပို့ပြီး</item>
+        <item quantity="other">ဦးတည်ရာ %1$s ခုသို့ စမ်းသပ်ချက် ပို့ပြီး</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">Session %1$d ခုကို ရုပ်သိမ်းပြီး</item>
+        <item quantity="other">Session %1$s ခုကို ရုပ်သိမ်းပြီး</item>
     </plurals>
     <string name="login_title">ဝင်ရောက်ခြင်း</string>
     <string name="login_section_methods">လော့ဂ်အင်နည်းလမ်းများ</string>
@@ -337,18 +338,15 @@
     <string name="system_status_reachability_public">အများသုံး</string>
     <string name="system_status_reachability_private">သီးသန့်</string>
     <string name="system_status_reachability_unknown">မသိရသော</string>
-    <string name="system_status_relay">ထပ်ဆင့်ပို့မှု မှတဆင့်</string>
-    <string name="system_status_mesh">ထုတ်လွှင့်မှု မက်ရှ်</string>
+    <string name="system_status_reachability_relay">%1$s · ထပ်ဆင့်ပို့မှု မှတဆင့်</string>
     <string name="system_status_broadcast">နောက်ဆုံး ထုတ်လွှင့်မှု</string>
     <string name="system_status_queued_broadcasts">တန်းစီထားသော ထုတ်လွှင့်မက်ဆေ့ဂျ်များ</string>
     <string name="system_setting_hostname_publish">Host အမည်နှင့် ဒိုမိန်းများကို အခြားဆာဗာများသို့ ကြေညာရန်</string>
     <string name="system_setting_hostname">အခြားဆာဗာများသို့ ကြေညာထားသော host အမည်</string>
     <string name="system_status_peer_id">တွဲဖက် ID</string>
     <string name="system_status_holepunch">ပေါက်ဖောက်ခြင်း</string>
-    <string name="system_status_holepunch_value">%1$d အောင်မြင် · %2$d မအောင်မြင်</string>
     <string name="system_status_awaiting_routing">လမ်းကြောင်းသတ်မှတ်ရန် စောင့်ဆိုင်းနေသော မက်ဆေ့ဂျ်များ</string>
     <string name="system_status_relay_service">ထပ်ဆင့်ပို့ဝန်ဆောင်မှု</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ကြိုတင်နေရာယူမှု · %3$d လမ်းကြောင်းများ · %4$d ငြင်းပယ်</string>
     <string name="route_target_select">ရွေးချယ်ရန်</string>
     <string name="account_data_description">ဤ သို့မဟုတ် အခြား Mochi ဆာဗာတွင် ပြန်လည်ရယူနိုင်သော အပြည့်အစုံ အရန်သိမ်းမှုကို ဒေါင်းလုဒ်လုပ်ပါ။</string>
     <string name="route_target_none">ရရှိနိုင်သော ပစ်မှတ်များ မရှိပါ</string>
@@ -373,7 +371,11 @@
     <string name="accounts_device_seen">နောက်ဆုံးတွေ့ %1$s</string>
     <string name="notifprefs_device_app">%1$s · အက်ပ်</string>
     <string name="notifprefs_device_push">%1$s · တွန်းပို့</string>
-    <string name="notifprefs_test_partial">စမ်းသပ်မှုကို ဦးတည်ရာ %2$d ခုအနက် %1$d ခုသို့ ပို့ပြီးပါပြီ</string>
+    <string name="notifprefs_destination_rss">RSS - %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">စမ်းသပ်မှုကို ဦးတည်ရာ %2$s ခုအနက် %1$s ခုသို့ ပို့ပြီးပါပြီ</item>
+    </plurals>
     <string name="notifprefs_test_none">destination များ မသတ်မှတ်ထားပါ</string>
     <string name="notifprefs_transport_fcm">Android တွန်းပို့ အကြောင်းကြားချက်</string>
     <string name="notifprefs_no_destinations">ဦးတည်ရာ မရှိပါ</string>
@@ -392,4 +394,22 @@
     <string name="accounts_revoke_confirm">၎င်းသည် %1$s ၏ ပြက္ခဒိန် အသုံးပြုခွင့်ကို ရုပ်သိမ်းပါမည်။ %2$s ဖြင့် ဝင်ရောက်ခြင်းသည် လော့ဂ်အင်စာမျက်နှာတွင် ချိတ်ဆက်မှု ဖြုတ်သည်အထိ ဆက်ရှိနေပါမည်။</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">အမည်မသိ အပြင်အဆင်</string>
+    <string name="system_documents_modified">ပြင်ဆင်ထားသည်</string>
+    <string name="system_documents_discard_title">အပြောင်းအလဲများကို ဖျက်ပစ်မလား။</string>
+    <string name="system_documents_discard">ဖျက်ပစ်ရန်</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">%1$s အောင်မြင်</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">%1$s မအောင်မြင်</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$s / %2$s ကြိုတင်နေရာယူမှု</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$s လမ်းကြောင်း</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">%1$s ငြင်းပယ်</item>
+    </plurals>
 </resources>

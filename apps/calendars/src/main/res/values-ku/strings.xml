@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">Herdem</string>
     <string name="calendars_reminder_time">Di dema bûyerê de</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d xulek berê</item>
-        <item quantity="other">%1$d xulek berê</item>
+        <item quantity="one">%1$s xulek berê</item>
+        <item quantity="other">%1$s xulek berê</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d saet berê</item>
-        <item quantity="other">%1$d saet berê</item>
+        <item quantity="one">%1$s saet berê</item>
+        <item quantity="other">%1$s saet berê</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d roj berê</item>
-        <item quantity="other">%1$d roj berê</item>
+        <item quantity="one">%1$s roj berê</item>
+        <item quantity="other">%1$s roj berê</item>
     </plurals>
     <string name="calendars_reminder_add">Bîranînê zêde bike</string>
     <string name="calendars_reminder_remove">Bîranînê rake</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">Salname pir mezin e</string>
     <string name="calendars_poll_invalid">Navnîşanê salname venegerand</string>
     <string name="calendars_poll_unreachable">Nekarî bigihîje navnîşanê</string>
-    <string name="calendars_poll_status">Navnîşanê bersiv da %1$d</string>
+    <string name="calendars_poll_status">Navnîşanê bersiv da %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d xulek</item>
-        <item quantity="other">%1$d xulek</item>
+        <item quantity="one">%1$s xulek</item>
+        <item quantity="other">%1$s xulek</item>
     </plurals>
     <string name="calendars_preferences_zones">Bûyeran di herêma demê ya wan de nîşan bide</string>
     <string name="calendars_event_backwards">Berî ku dest pê bike diqede</string>
@@ -187,6 +187,6 @@
     <string name="calendars_span_day">%1$s, ji %2$s heta %3$s</string>
     <string name="calendars_polled_current">Salname nûjen e</string>
     <string name="calendars_polled_synced">Salname hat hevdemkirin</string>
-    <string name="calendars_link_revoke_title">Navnîşana salnameyê were betalkirin?</string>
+    <string name="calendars_link_revoke_title">Navnîşana salnameyê were vekişandin?</string>
     <string name="calendars_link_revoke_message">Salnameyên ku bi vê navnîşanê ve abone ne dê êdî nûve nebin.</string>
 </resources>

@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Ніколи не отримувалося</string>
     <string name="feeds_source_poll">Опитування</string>
     <string name="feeds_source_transform">AI-перетворення</string>
-    <string name="feeds_remove_source_confirm">Видалити \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Також видалити імпортовані дописи</string>
+    <string name="feeds_remove_source_confirm">Це зупинить імпорт вмісту з \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Також видалити дописи, імпортовані з цього джерела</string>
     <string name="feeds_suggested_credibility_title">Запропонована достовірність</string>
-    <string name="feeds_suggested_credibility_body">Mochi пропонує достовірність %1$d. Прийняти?</string>
+    <string name="feeds_suggested_credibility_body">Mochi пропонує достовірність %1$s. Прийняти?</string>
     <string name="feeds_suggested_credibility_keep">Залишити поточну</string>
     <string name="feeds_ai_processing_mode">Режим обробки ШІ</string>
     <string name="feeds_ai_account">Обліковий запис ШІ</string>
@@ -140,10 +140,10 @@
     <string name="feeds_saved_empty_subtitle">Торкніться закладки на будь-якому дописі, щоб зберегти його тут на потім.</string>
     <string name="feeds_saved_error_clear">Не вдалося очистити збережені дописи</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d новий допис</item>
-        <item quantity="few">%d нові дописи</item>
-        <item quantity="many">%d нових дописів</item>
-        <item quantity="other">%d нового допису</item>
+        <item quantity="one">%s новий допис</item>
+        <item quantity="few">%s нові дописи</item>
+        <item quantity="many">%s нових дописів</item>
+        <item quantity="other">%s нового допису</item>
     </plurals>
     <string name="feeds_caught_up">Ви переглянули все</string>
     <string name="feeds_all_caught_up">Все переглянуто</string>
@@ -194,16 +194,16 @@
     <string name="feeds_source_url_hint_feed">ID сутності стрічки або відбиток</string>
     <string name="feeds_source_credibility_label">Достовірність</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d година</item>
-        <item quantity="few">%1$d години</item>
-        <item quantity="many">%1$d годин</item>
-        <item quantity="other">%1$d години</item>
+        <item quantity="one">%1$s година</item>
+        <item quantity="few">%1$s години</item>
+        <item quantity="many">%1$s годин</item>
+        <item quantity="other">%1$s години</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d хвилина</item>
-        <item quantity="few">%1$d хвилини</item>
-        <item quantity="many">%1$d хвилин</item>
-        <item quantity="other">%1$d хвилини</item>
+        <item quantity="one">%1$s хвилина</item>
+        <item quantity="few">%1$s хвилини</item>
+        <item quantity="many">%1$s хвилин</item>
+        <item quantity="other">%1$s хвилини</item>
     </plurals>
     <string name="feeds_source_polling_interval">Опитування кожні %1$s</string>
     <string name="feeds_access_level_react_full">Реагувати і переглядати</string>
@@ -220,28 +220,28 @@
     <string name="feeds_link">Посилання</string>
     <string name="feeds_share_link_title">Посилання на стрічку</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d коментар</item>
-        <item quantity="few">%1$d коментарі</item>
-        <item quantity="many">%1$d коментарів</item>
-        <item quantity="other">%1$d коментарів</item>
+        <item quantity="one">%1$s коментар</item>
+        <item quantity="few">%1$s коментарі</item>
+        <item quantity="many">%1$s коментарів</item>
+        <item quantity="other">%1$s коментарів</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d вкладення</item>
-        <item quantity="few">%1$d вкладення</item>
-        <item quantity="many">%1$d вкладень</item>
-        <item quantity="other">%1$d вкладення</item>
+        <item quantity="one">%1$s вкладення</item>
+        <item quantity="few">%1$s вкладення</item>
+        <item quantity="many">%1$s вкладень</item>
+        <item quantity="other">%1$s вкладення</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Показати ще %1$d комментар</item>
-        <item quantity="few">Показати ще %1$d комментарі</item>
-        <item quantity="many">Показати ще %1$d комментарів</item>
-        <item quantity="other">Показати ще %1$d комментаря</item>
+        <item quantity="one">Показати ще %1$s коментар</item>
+        <item quantity="few">Показати ще %1$s коментарі</item>
+        <item quantity="many">Показати ще %1$s коментарів</item>
+        <item quantity="other">Показати ще %1$s коментаря</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d рік тому цього дня</item>
-        <item quantity="few">%1$d роки тому цього дня</item>
-        <item quantity="many">%1$d років тому цього дня</item>
-        <item quantity="other">%1$d року тому цього дня</item>
+        <item quantity="one">%1$s рік тому цього дня</item>
+        <item quantity="few">%1$s роки тому цього дня</item>
+        <item quantity="many">%1$s років тому цього дня</item>
+        <item quantity="other">%1$s року тому цього дня</item>
     </plurals>
     <string name="feeds_block">Заблокувати</string>
     <string name="feeds_removed_from_feed">Вас видалили з цієї стрічки</string>

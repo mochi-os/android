@@ -396,12 +396,12 @@
     <string name="market_dispute_dialog_submitting">Versturen…</string>
     <string name="market_sale_review_response_submitting">Versturen…</string>
     <string name="market_filter_remove">Filter verwijderen</string>
-    <string name="market_listing_detail_sales_count">%1$d verkopen</string>
-    <string name="market_profile_sales_count">%1$d verkopen</string>
+    <string name="market_listing_detail_sales_count">%1$s verkopen</string>
+    <string name="market_profile_sales_count">%1$s verkopen</string>
     <string name="market_purchase_dispute_response">Antwoord van de verkoper</string>
     <string name="market_purchases_order_label">Bestelling nr. %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Vertel kopers iets over jezelf…</string>
     <string name="market_account_load_failed">Kan account niet laden</string>
     <string name="market_account_save_failed">Kan wijzigingen niet opslaan</string>
@@ -427,8 +427,8 @@
     <string name="market_bids_current_bid">Huidig: %1$s</string>
     <string name="market_bids_ends_in">Eindigt over %1$s</string>
     <string name="market_bids_your_bid">Uw bod: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d van %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatuur %1$d</string>
+    <string name="market_carousel_main">Foto %1$s van %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatuur %1$s</string>
     <string name="market_checkout_browser_unavailable">Geen browser beschikbaar om de betaalpagina te openen</string>
     <string name="market_checkout_pay_button">Betalen met Stripe</string>
     <string name="market_checkout_processing">Verwerken…</string>
@@ -437,7 +437,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Bewijs toevoegen</string>
-    <string name="market_dispute_dialog_attach_count">%1$d bestand(en) toegevoegd</string>
+    <string name="market_dispute_dialog_attach_count">%1$s bestand(en) toegevoegd</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi-personeel</string>
     <string name="market_dispute_dialog_evidence_section_title">Ingediend bewijs</string>
     <string name="market_dispute_dialog_evidence_submitter_line">ingediend door %1$s</string>
@@ -451,7 +451,7 @@
     <string name="market_editor_asset_external_url">Referentie-URL</string>
     <string name="market_editor_assets_empty">Nog geen bestanden</string>
     <string name="market_editor_category_none">Selecteer een categorie</string>
-    <string name="market_editor_days">%1$d dagen</string>
+    <string name="market_editor_days">%1$s dagen</string>
     <string name="market_editor_delete">Advertentie verwijderen</string>
     <string name="market_editor_delete_confirm_message">Hiermee wordt de advertentie definitief verwijderd.</string>
     <string name="market_editor_delete_confirm_title">Advertentie verwijderen?</string>
@@ -543,8 +543,7 @@
     <string name="market_messages_load_failed">Kon gesprek niet laden</string>
     <string name="market_messages_send_failed">Kon bericht niet verzenden</string>
     <string name="market_messages_thread_title">Gesprek</string>
-    <string name="market_messages_unread_badge">%1$d ongelezen</string>
-    <string name="market_price_from">vanaf %1$s</string>
+    <string name="market_messages_unread_badge">%1$s ongelezen</string>
     <string name="market_price_high_bid">Hoogste bod: %1$s</string>
     <string name="market_price_instant_buy">direct kopen: %1$s</string>
     <string name="market_price_per_month">%1$s / maand</string>
@@ -556,16 +555,16 @@
     <string name="market_profile_joined">Lid geworden op %1$s</string>
     <string name="market_profile_no_reviews">Nog geen recensies.</string>
     <string name="market_profile_rating_breakdown">Beoordelingsoverzicht</string>
-    <string name="market_profile_stars_value">%1$d sterren</string>
+    <string name="market_profile_stars_value">%1$s sterren</string>
     <string name="market_purchase_dispute_chargeback">Terugboeking %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Uw bank heeft een terugboeking ingediend voor deze bestelling. Stripe handelt het geschil af met de verkoper; de uitkomst verschijnt hier zodra die bekend is.</string>
-    <string name="market_purchase_download_many">Download hieronder uw %1$d bestanden.</string>
+    <string name="market_purchase_download_many">Download hieronder uw %1$s bestanden.</string>
     <string name="market_purchase_download_one">Download hieronder uw bestand.</string>
     <string name="market_purchase_review_from">Recensie van %1$s</string>
     <string name="market_purchases_auction_label">Veiling #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s terugbetaald</string>
     <string name="market_purchases_won_for">Gewonnen voor %1$s</string>
-    <string name="market_rating_reviews">(%1$d beoordelingen)</string>
+    <string name="market_rating_reviews">(%1$s beoordelingen)</string>
     <string name="market_refund_amount_label">Bedrag</string>
     <string name="market_refund_dialog_amount_help">Laat leeg om de volledige bestelling terug te betalen.</string>
     <string name="market_refund_dialog_amount_label">Bedrag</string>

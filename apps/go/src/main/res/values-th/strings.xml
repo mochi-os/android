@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">ลบ</string>
     <string name="go_delete_message">เกมนี้จะถูกลบออกจากรายการของคุณ ไม่สามารถยกเลิกได้</string>
     <string name="go_delete_title">ลบเกม?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">ยอมรับ</string>
     <string name="go_draw_decline">ปฏิเสธ</string>
     <string name="go_draw_offered_received">%1$s เสนอเสมอ</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">ยอมแพ้</string>
     <string name="go_new_game_title">เกม Go ใหม่</string>
     <string name="go_new_game_no_friends">คุณต้องเพิ่มเพื่อนก่อนจึงจะเริ่มเกมได้</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">คะแนนที่เพิ่มให้ฝ่ายขาวเพื่อชดเชยที่ฝ่ายดำเดินก่อน</string>
 
-    <string name="go_board_a11y">กระดาน Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">กระดานโกะ %1$d×%1$d ถึงตาคุณวางหมากดำ</string>
-    <string name="go_board_a11y_turn_white">กระดานโกะ %1$d×%1$d ถึงตาคุณวางหมากขาว</string>
+    <string name="go_board_a11y">กระดาน Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">กระดานโกะ %1$s×%1$s ถึงตาคุณวางหมากดำ</string>
+    <string name="go_board_a11y_turn_white">กระดานโกะ %1$s×%1$s ถึงตาคุณวางหมากขาว</string>
     <string name="go_status_scoring">นับแต้ม — ตกลงคะแนนหรือเล่นต่อ</string>
     <string name="go_score_proposed">คะแนนที่เสนอ: ดำ %1$s, ขาว %2$s</string>
     <string name="go_score_opponent_accepted">คู่แข่งของคุณยอมรับคะแนนนี้: ดำ %1$s, ขาว %2$s</string>

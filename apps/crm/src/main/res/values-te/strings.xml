@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">ఆబ్జెక్ట్‌లు లేవు</string>
     <string name="crm_board_no_columns">ఈ వీక్షణకు ఏ నిలువు వరుసలూ కాన్ఫిగర్ చేయబడలేదు</string>
     <string name="crm_board_no_options">కాలమ్ ఫీల్డ్ కోసం ఎంపికలు కాన్ఫిగర్ చేయబడలేదు</string>
-    <string name="crm_board_nested_count">+%1$d సమూహితం</string>
+    <string name="crm_board_nested_count">+%1$s సమూహితం</string>
     <string name="crm_move_to_column">కాలమ్‌కు తరలించండి</string>
     <string name="crm_move_to_row">వరుసకు తరలించండి</string>
     <string name="crm_move_after">%1$s తర్వాత</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">యాక్సెస్ నిర్వహణ</string>
     <string name="crm_settings_not_set">సెట్ చేయబడలేదు</string>
     <string name="crm_settings_access_updated">యాక్సెస్ నవీకరించబడింది</string>
-    <string name="crm_settings_access_revoked">ప్రవేశీఙీ రద్దు చేయబడింది</string>
+    <string name="crm_settings_access_revoked">యాక్సెస్ ఉపసంహరించబడింది</string>
     <string name="crm_people_search">వ్యక్తులను వెతకండి</string>
     <string name="crm_access_tab_other">ఇతర</string>
     <string name="crm_access_select_group">ఒక సమూహాన్ని ఎంచుకోండి</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM డేటా సేవ్ చేయబడింది</string>
     <string name="crm_create_upload_json">.zip లేదా .json ఫైల్‌ను అప్‌లోడ్ చేయండి</string>
     <string name="crm_create_blocked_no_options">సృష్టించలేరు: %1$s అవసరం కానీ ఎంచుకోవడానికి ఎంపికలు లేవు. డిజైన్‌లో ఎంపికలను జోడించండి.</string>
-    <string name="crm_design_sample">నమూనా %1$d</string>
+    <string name="crm_design_sample">నమూనా %1$s</string>
     <string name="crm_option_delete_title">ఎంపికను తొలగించండి</string>
     <string name="crm_option_delete_message">మీరు \"%1$s\" ఎంపికను తొలగించాలనుకుంటున్నారని ఖచ్చితంగా ఉన్నారా?</string>
 </resources>

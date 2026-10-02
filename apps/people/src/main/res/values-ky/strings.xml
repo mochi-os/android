@@ -180,8 +180,8 @@
     <string name="people_books_create">Дарек китепчесин түзүү</string>
     <string name="people_books_delete">Дарек китепчесин өчүрүү</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s жана андагы %2$d байланыш өчүрүлсүнбү?</item>
-        <item quantity="other">%1$s жана андагы %2$d байланыш өчүрүлсүнбү?</item>
+        <item quantity="one">%1$s жана андагы %2$s байланыш өчүрүлсүнбү?</item>
+        <item quantity="other">%1$s жана андагы %2$s байланыш өчүрүлсүнбү?</item>
     </plurals>
     <string name="people_welcome_body">Mochi боюнча досторду таап, байланышыңыз. Чакыруу жөнөтүү үчүн Байланыш кошуу баскычын басыңыз.</string>
     <string name="people_person_state_contact">Байланыштарда</string>

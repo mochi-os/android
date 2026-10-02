@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Cerrar sesión</string>
     <string name="settings_home_account">Cuenta</string>
     <string name="settings_home_preferences">Preferencias</string>
-    <string name="settings_home_display">Mostrar</string>
+    <string name="settings_home_display">Pantalla</string>
     <string name="settings_home_notification_prefs">Preferencias de notificaciones</string>
     <string name="settings_home_accounts">Cuentas conectadas</string>
     <string name="settings_home_interests">Intereses</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">¿Eliminar ruta?</string>
     <string name="route_path">Ruta</string>
     <string name="route_method">Método</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplicación</string>
     <string name="route_method_entity">Entidad</string>
     <string name="route_method_redirect">Redirección</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Descargar desde packages.mochi-os.org</string>
     <string name="system_status_copy">Copiar</string>
     <string name="system_status_peers">Pares</string>
-    <string name="system_status_known">Conocidos</string>
+    <string name="system_status_peers_totals">Conocidos %1$s · Conectados %2$s · Malla de difusión %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Conocidos %1$s · Conectados %2$s</string>
     <string name="system_status_peer_connected">Conectado</string>
     <string name="system_status_peer_disconnected">Desconectado</string>
     <string name="system_status_peer_queued">Mensajes en cola</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Eliminar</string>
     <string name="accounts_remove_title">¿Eliminar la cuenta?</string>
     <string name="system_documents_title">Documentos</string>
-    <string name="system_documents_description">Normas del servidor, términos y condiciones, y aviso de privacidad que se muestran a tus usuarios</string>
     <string name="system_documents_tab_rules">Normas del servidor</string>
     <string name="system_documents_tab_terms">Términos y condiciones</string>
     <string name="system_documents_tab_privacy">Privacidad</string>
     <string name="system_documents_language">Idioma</string>
     <string name="system_documents_no_language">No hay ningún documento disponible para este idioma.</string>
-    <string name="system_documents_customised">Personalizado</string>
     <string name="system_documents_using_default">Se usa el valor predeterminado incorporado</string>
     <string name="system_documents_revert">Restablecer al valor predeterminado</string>
     <string name="system_documents_save">Guardar</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">Eliminar usuario</string>
     <string name="system_users_delete_title">¿Eliminar usuario?</string>
     <string name="system_users_manage_sessions">Gestionar sesiones</string>
-    <string name="system_users_sessions_description">Ver y revocar las sesiones activas de este usuario.</string>
     <string name="system_users_sessions_empty">Este usuario no tiene sesiones activas.</string>
     <string name="system_users_revoke">Revocar</string>
     <string name="system_users_revoke_all">Revocar todas las sesiones</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">Siguiente</string>
     <string name="system_users_empty">No se encontraron usuarios</string>
     <string name="system_users_empty_search">Ningún usuario coincide con tu búsqueda</string>
-    <string name="system_users_empty_search_hint">Intenta ajustar tus criterios de búsqueda</string>
     <string name="system_users_toast_created">Usuario creado</string>
     <string name="system_users_toast_updated">Usuario actualizado</string>
     <string name="system_users_toast_deleted">Usuario eliminado</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Términos del servicio</string>
     <string name="account_passkeys_empty">No hay claves de acceso registradas.</string>
     <string name="account_passkey_register_title">Añadir clave de acceso</string>
-    <string name="account_passkey_register_message">Tu dispositivo te pedirá confirmar. La clave de acceso se vincula a este dispositivo y se usa para futuros inicios de sesión.</string>
     <string name="account_passkey_name_label">Nombre (opcional)</string>
     <string name="account_passkey_delete_message">«%1$s» ya no podrá iniciar tu sesión.</string>
-    <string name="account_totp_description">Inicia sesión con un código de 6 dígitos desde una aplicación de autenticación.</string>
     <string name="account_totp_enabled">El autenticador está activado.</string>
     <string name="account_totp_setup_step1">Escanea o introduce este secreto en tu aplicación de autenticación.</string>
     <string name="account_totp_setup_step2">Introduce el código de 6 dígitos que muestra tu aplicación.</string>
     <string name="account_totp_code">Código</string>
     <string name="account_totp_disable_message">No podrás iniciar sesión con un código de autenticador.</string>
     <string name="account_recovery_none">No se han generado códigos de recuperación.</string>
-    <string name="account_recovery_count">%1$d códigos de recuperación sin usar.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Queda %1$s código de recuperación.</item>
+        <item quantity="other">Quedan %1$s códigos de recuperación.</item>
+    </plurals>
     <string name="account_recovery_generate">Generar códigos</string>
     <string name="account_recovery_regenerate">Regenerar códigos</string>
     <string name="account_recovery_regen_title">¿Regenerar los códigos de recuperación?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Último uso %1$s</string>
     <string name="route_delete_message">Esto eliminará la ruta para la ruta «%1$s».</string>
     <string name="route_empty">No hay rutas configuradas.</string>
-    <string name="route_meta">Prioridad %1$d · %2$s</string>
+    <string name="route_meta">Prioridad %1$s · %2$s</string>
     <string name="interests_search_placeholder">Buscar temas para añadir…</string>
     <string name="interests_empty">Aún no hay intereses.</string>
     <string name="interests_summary_regenerate">Regenerar resumen</string>
@@ -270,7 +270,10 @@
     <string name="system_users_session_last_accessed">Último acceso: %1$s</string>
     <string name="system_users_revoke_all_title">¿Revocar todas las sesiones?</string>
     <string name="system_users_revoke_all_message">Todas las sesiones activas de este usuario se cerrarán.</string>
-    <string name="system_users_pagination_status">Mostrando %1$d–%2$d de %3$d usuarios</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Mostrando %1$s–%2$s de %3$s usuario</item>
+        <item quantity="other">Mostrando %1$s–%2$s de %3$s usuarios</item>
+    </plurals>
     <string name="account_title">Cuenta</string>
     <string name="account_section_identity">Identidad</string>
     <string name="account_identity_identity">Identidad</string>
@@ -303,13 +306,13 @@
     <string name="domain_verify">Verificar DNS</string>
     <string name="settings_home_domains">Dominios</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Prueba enviada a %1$d destino</item>
-        <item quantity="other">Prueba enviada a %1$d destinos</item>
+        <item quantity="one">Prueba enviada a %1$s destino</item>
+        <item quantity="other">Prueba enviada a %1$s destinos</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="many">Se revocaron %1$d sesiones</item>
-        <item quantity="one">Se revocó 1 sesión</item>
-        <item quantity="other">Se revocaron %1$d sesiones</item>
+        <item quantity="one">Se revocó %1$s sesión</item>
+        <item quantity="many">Se revocaron %1$s sesiones</item>
+        <item quantity="other">Se revocaron %1$s sesiones</item>
     </plurals>
     <string name="login_title">Iniciar sesión</string>
     <string name="login_section_methods">Métodos de inicio de sesión</string>
@@ -340,18 +343,15 @@
     <string name="system_status_reachability_public">Público</string>
     <string name="system_status_reachability_private">Privado</string>
     <string name="system_status_reachability_unknown">Desconocido</string>
-    <string name="system_status_relay">Vía relay</string>
-    <string name="system_status_mesh">Malla de difusión</string>
+    <string name="system_status_reachability_relay">%1$s · mediante retransmisión</string>
     <string name="system_status_broadcast">Última difusión</string>
     <string name="system_status_queued_broadcasts">Mensajes de difusión en cola</string>
     <string name="system_setting_hostname_publish">Anunciar el nombre de host y los dominios a otros servidores</string>
     <string name="system_setting_hostname">Nombre de host anunciado a otros servidores</string>
     <string name="system_status_peer_id">ID de par</string>
     <string name="system_status_holepunch">Perforación</string>
-    <string name="system_status_holepunch_value">%1$d con éxito · %2$d fallidas</string>
     <string name="system_status_awaiting_routing">Mensajes en espera de enrutamiento</string>
     <string name="system_status_relay_service">Servicio de retransmisión</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservas · %3$d circuitos · %4$d rechazadas</string>
     <string name="route_target_select">Seleccionar</string>
     <string name="account_data_description">Descarga una copia de seguridad completa que puedes restaurar en este servidor Mochi o en otro.</string>
     <string name="route_target_none">No hay destinos disponibles</string>
@@ -376,7 +376,12 @@
     <string name="accounts_device_seen">Visto por última vez %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplicación</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Prueba enviada a %1$d de %2$d destinos</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Prueba enviada a %1$s de %2$s destino</item>
+        <item quantity="other">Prueba enviada a %1$s de %2$s destinos</item>
+    </plurals>
     <string name="notifprefs_test_none">No hay destinos configurados</string>
     <string name="notifprefs_transport_fcm">Push de Android</string>
     <string name="notifprefs_no_destinations">Sin destinos</string>
@@ -395,4 +400,27 @@
     <string name="accounts_revoke_confirm">Esto revocará el acceso al calendario de %1$s. El inicio de sesión con %2$s se mantiene hasta que lo desvincules en la página de inicio de sesión.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema desconocido</string>
+    <string name="system_documents_modified">Modificado</string>
+    <string name="system_documents_discard_title">¿Descartar los cambios?</string>
+    <string name="system_documents_discard">Descartar</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s con éxito</item>
+        <item quantity="other">%1$s con éxito</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s fallida</item>
+        <item quantity="other">%1$s fallidas</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s reserva</item>
+        <item quantity="other">%1$s / %2$s reservas</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s circuito</item>
+        <item quantity="other">%1$s circuitos</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s rechazada</item>
+        <item quantity="other">%1$s rechazadas</item>
+    </plurals>
 </resources>

@@ -180,8 +180,8 @@
     <string name="people_books_create">Yenza incwadi yeedilesi</string>
     <string name="people_books_delete">Cima incwadi yeedilesi</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Cima %1$s kunye noqhagamshelwano olu-%2$d olukuyo?</item>
-        <item quantity="other">Cima %1$s kunye noqhagamshelwano olu-%2$d olukuyo?</item>
+        <item quantity="one">Cima %1$s kunye noqhagamshelwano olu-%2$s olukuyo?</item>
+        <item quantity="other">Cima %1$s kunye noqhagamshelwano olu-%2$s olukuyo?</item>
     </plurals>
     <string name="people_welcome_body">Fumana abahlobo kuyo yonke i-Mochi uze uqhagamshelane nabo. Cofa u-Yongeza uqhagamshelwano ukuze uthumele isimemo.</string>
     <string name="people_person_state_contact">Kwabaqhagamshelwana nabo</string>

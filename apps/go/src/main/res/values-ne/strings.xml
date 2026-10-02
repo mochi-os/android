@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">मेटाउनुहोस्</string>
     <string name="go_delete_message">यो खेल तपाईंको सूचीबाट हटाइनेछ। यो पूर्ववत गर्न सकिँदैन।</string>
     <string name="go_delete_title">खेल मेटाउने?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">स्वीकार गर्नुहोस्</string>
     <string name="go_draw_decline">अस्वीकार गर्नुहोस्</string>
     <string name="go_draw_offered_received">%1$s ले बराबरीको प्रस्ताव गर्‍यो</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">हार स्वीकारियो</string>
     <string name="go_new_game_title">नयाँ Go खेल</string>
     <string name="go_new_game_no_friends">खेल सुरु गर्नुअघि तपाईंले साथी थप्नुपर्छ।</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">कालोले पहिले खेल्ने कुराको क्षतिपूर्तिका लागि सेतोको अंकमा थपिने अंकहरू</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go बोर्ड</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d गो बोर्ड, कालो गोटी राख्ने तपाईंको पालो</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d गो बोर्ड, सेतो गोटी राख्ने तपाईंको पालो</string>
+    <string name="go_board_a11y">%1$s×%1$s Go बोर्ड</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s गो बोर्ड, कालो गोटी राख्ने तपाईंको पालो</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s गो बोर्ड, सेतो गोटी राख्ने तपाईंको पालो</string>
     <string name="go_status_scoring">गणना — अंकमा सहमत हुनुहोस् वा खेल जारी राख्नुहोस्</string>
     <string name="go_score_proposed">प्रस्तावित स्कोर: कालो %1$s, सेतो %2$s</string>
     <string name="go_score_opponent_accepted">तपाईंको प्रतिद्वन्द्वीले यो स्कोर स्वीकार गर्नुहुन्छ: कालो %1$s, सेतो %2$s</string>

@@ -40,7 +40,7 @@
     <string name="discovery_recommended">רעקאָמענדירט</string>
     <string name="access_add_rule">צוגעבן כלל</string>
     <string name="access_owner">אייגנטימער</string>
-    <string name="access_revoke">אָפּזאָגן</string>
+    <string name="access_revoke">צוריקנעמען</string>
     <string name="access_level_comment">קאָמענטיר</string>
     <string name="access_level_view">באַקוקן</string>
     <string name="access_level_none">קיינס</string>
@@ -60,7 +60,7 @@
     <string name="notifications_empty">קיין מעלדונגען</string>
     <string name="notifications_empty_unread">איר האָט אַלץ געזען</string>
     <string name="notifications_tab_unread">אומגעלייענט</string>
-    <string name="notifications_tab_unread_count">אומגעלייענט (%1$d)</string>
+    <string name="notifications_tab_unread_count">אומגעלייענט (%1$s)</string>
     <string name="notifications_tab_all">אַלע</string>
     <string name="notifications_mark_all_read">צייכענען אַלץ געלייענט</string>
     <string name="notifications_clear_all">רייניקן אַלץ</string>
@@ -103,9 +103,9 @@
     <string name="settings_time_zone">צײַט־זאָנע</string>
     <string name="settings_reset_to_defaults">צוריקזעצן צו פֿאַרשטעלונגען</string>
     <string name="settings_reset_confirm_title">צוריקזעצן פֿאָרצוגן?</string>
-    <string name="settings_reset_confirm_message">דאָס וועט נײַ שטעלן אַלע פּרעפֿערענצן צו זייערע פֿאָרויסבאַשטימטע ווערטן.</string>
+    <string name="settings_reset_confirm_message">דאָס וועט נײַ שטעלן די דאָזיקע פּרעפֿערענצן צו זייערע פֿאָרויסבאַשטימטע ווערטן.</string>
     <string name="settings_reset">צוריקזעצן</string>
-    <string name="settings_display_title">ווײַזן</string>
+    <string name="settings_display_title">עקראַן</string>
     <string name="settings_display_reset">צוריקזעצן צו פֿאַרשטעלונגען</string>
     <string name="settings_display_reset_confirm_title">ריסעט דיספּלאַי?</string>
     <string name="settings_display_reset_confirm_message">דאָס וועט ריסעט די דיספּלאַי באַשטעטיקונגען צו זייער פעלער ווערט.</string>
@@ -122,7 +122,7 @@
     <string name="common_not_saved">ניט געהיט</string>
     <string name="auth_server_url">סערווער URL</string>
     <string name="auth_link_rules">כללים</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="lightbox_position">%1$s / %2$s</string>
     <string name="about_label">וועגן</string>
     <string name="game_chat_move_played">%1$s האָט געשפּילט %2$s</string>
 
@@ -130,7 +130,7 @@
     <string name="error_network">ניט מעגלעך זיך צו פֿאַרבינדן. קאָנטראָלירט אײַער אינטערנעץ־פֿאַרבינדונג און פּרוּווט נאָך אַ מאָל.</string>
     <string name="error_authentication_required">אויטענטיפֿיקאַציע נייטיק</string>
     <string name="error_not_found">נישט געפֿונען</string>
-    <string name="error_server">סערװער־טעות (%1$d). פּרוּווט שפּעטער נאָך אַ מאָל.</string>
+    <string name="error_server">סערװער־טעות (%1$s). פּרוּווט שפּעטער נאָך אַ מאָל.</string>
     <string name="error_unexpected">אַן אומגעריכטע טעות איז פֿאָרגעקומען</string>
     <string name="error_enter_server_url">גיט אַרײַן אַ סערװער־URL</string>
     <string name="error_enter_email">גיט אַרײַן אײַער בליצפּאָסט</string>
@@ -146,7 +146,7 @@
     <string name="auth_next">ווײַטער</string>
     <string name="auth_or_log_in_with">אָדער אַרײַנגײן מיט</string>
     <string name="auth_passkey">פּאַסקיי</string>
-    <string name="auth_use_passkey">ניצט אַ דורכשליסל</string>
+    <string name="auth_use_passkey">ניצט אַ פּאַסקיי</string>
     <string name="auth_email_me_a_code">שיקט מיר אַ קאָד אױף בליצפּאָסט</string>
     <string name="auth_or_enter_authenticator_code">אָדער גיט אַרײַן דעם אויטענטיפֿיקאַטאָר־קאָד</string>
     <string name="auth_log_in">אַרײַנקומען</string>
@@ -180,19 +180,19 @@
     <string name="access_level_react">רעאַגירן</string>
     <string name="notifications_clear">רייניקן מעלדונגען</string>
     <string name="entity_avatar_alt">אַװאַטאַר פֿאַר %1$s</string>
-    <string name="media_grid_more_count">+%1$d</string>
+    <string name="media_grid_more_count">+%1$s</string>
     <string name="format_time_just_now">פּונקט אַצינד</string>
-    <string name="format_time_minutes_ago">מיט %1$dמ צוריק</string>
-    <string name="format_time_hours_ago">מיט %1$dש צוריק</string>
-    <string name="format_time_days_ago">מיט %1$dט צוריק</string>
-    <string name="format_time_weeks_ago">מיט %1$dװ צוריק</string>
-    <string name="format_time_months_ago">מיט %1$dחד צוריק</string>
-    <string name="format_time_years_ago">מיט %1$dי צוריק</string>
-    <string name="format_time_minutes_short">%1$dמ</string>
-    <string name="format_time_hours_short">%1$dש</string>
-    <string name="format_time_days_short">%1$dט</string>
-    <string name="format_time_weeks_short">%1$dװ</string>
-    <string name="format_time_months_short">%1$dחד</string>
+    <string name="format_time_minutes_ago">מיט %1$sמ צוריק</string>
+    <string name="format_time_hours_ago">מיט %1$sש צוריק</string>
+    <string name="format_time_days_ago">מיט %1$sט צוריק</string>
+    <string name="format_time_weeks_ago">מיט %1$sװ צוריק</string>
+    <string name="format_time_months_ago">מיט %1$sחד צוריק</string>
+    <string name="format_time_years_ago">מיט %1$sי צוריק</string>
+    <string name="format_time_minutes_short">%1$sמ</string>
+    <string name="format_time_hours_short">%1$sש</string>
+    <string name="format_time_days_short">%1$sט</string>
+    <string name="format_time_weeks_short">%1$sװ</string>
+    <string name="format_time_months_short">%1$sחד</string>
     <string name="reaction_add">צולייגן אַ רעאַקציע</string>
     <string name="push_service_channel">Mochi שטופּן</string>
     <string name="push_service_channel_description">האַלט Mochi פֿאַרבונדן צו באַקומען באַנאָכריכטיקונגען</string>
@@ -285,8 +285,8 @@
     <string name="comment_anchor_open">זען דאָס בילד וועגן וועלכן דער קאָמענטאַר איז</string>
     <string name="comment_anchor_default">אויף דעם בילד</string>
     <plurals name="lightbox_comments_others">
-        <item quantity="one">ווײַזן נאָך %1$d קאָמענטאַר אויף דעם פּאָסט</item>
-        <item quantity="other">ווײַזן נאָך %1$d קאָמענטאַרן אויף דעם פּאָסט</item>
+        <item quantity="one">ווײַזן נאָך %1$s קאָמענטאַר אויף דעם פּאָסט</item>
+        <item quantity="other">ווײַזן נאָך %1$s קאָמענטאַרן אויף דעם פּאָסט</item>
     </plurals>
     <string name="lightbox_comments">קאָמענטאַרן</string>
     <string name="common_attachment_unavailable">צוגאב איז דערווייל נישט פאראן</string>
@@ -299,12 +299,12 @@
     <string name="format_code">קאָד</string>
     <string name="format_list">רשימה מיט פּינטלעך</string>
     <string name="common_preview">פֿאָרזע</string>
-    <string name="rss_revoke_confirm">אָפּזאָגן</string>
-    <string name="rss_revoke">רופֿט צוריק צוטריט</string>
-    <string name="rss_revoke_title">אַנולירן RSS צוטריט?</string>
+    <string name="rss_revoke_confirm">צוריקנעמען</string>
+    <string name="rss_revoke">צוריקנעמען צוטריט</string>
+    <string name="rss_revoke_title">צוריקנעמען RSS צוטריט?</string>
     <string name="rss_revoke_message">אַלץ וואָס איז אַבאָנירט אויף דעם פֿיד וועט אויפֿהערן עס צו באַקומען. איר קענט קאָפּירן אַ נייַעם URL דערנאָך.</string>
-    <string name="rss_revoked">RSS צוטריט צוריקגערופֿן</string>
-    <string name="rss_revoke_failed">דורכפֿאַל צו רופֿן צוריק RSS צוטריט</string>
+    <string name="rss_revoked">RSS צוטריט צוריקגענומען</string>
+    <string name="rss_revoke_failed">ניט געלונגען צוריקצונעמען RSS צוטריט</string>
     <string name="game_empty_title">נאָך קיין שפּילן</string>
     <string name="game_select_title">קלײַבט אױס אַ שפּיל</string>
     <string name="game_select_subtitle">קלײַבט אױס אַ שפּיל פֿון זײַטבאַלקן אָדער הייבט אָן אַ נײַע.</string>

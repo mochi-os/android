@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Susa</string>
     <string name="go_delete_message">Lo mdlalo uzosuswa ohlwini lwakho. Lokhu akukwazi ukuhlehliswa.</string>
     <string name="go_delete_title">Susa umdlalo?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Yamukela</string>
     <string name="go_draw_decline">Yenqaba</string>
     <string name="go_draw_offered_received">%1$s unikeze idrowu</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Uyekile</string>
     <string name="go_new_game_title">Umdlalo omusha we-Go</string>
     <string name="go_new_game_no_friends">Kudingeka wengeze umngane ngaphambi kokuba uqale umdlalo.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Amaphuzu engezwa esikoreni seMhlophe ukunxephezela ukuthi oMnyama uhamba kuqala</string>
 
-    <string name="go_board_a11y">Ibhodi le-Go le-%1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Ibhodi ye-Go %1$d×%1$d, ithuba lakho lokubeka itshe elimnyama</string>
-    <string name="go_board_a11y_turn_white">Ibhodi ye-Go %1$d×%1$d, ithuba lakho lokubeka itshe elimhlophe</string>
+    <string name="go_board_a11y">Ibhodi le-Go le-%1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Ibhodi ye-Go %1$s×%1$s, ithuba lakho lokubeka itshe elimnyama</string>
+    <string name="go_board_a11y_turn_white">Ibhodi ye-Go %1$s×%1$s, ithuba lakho lokubeka itshe elimhlophe</string>
     <string name="go_status_scoring">Ukubala — vumelanani ngamaphuzu noma niqhubeke nokudlala</string>
     <string name="go_score_proposed">Amaphuzu aphakanyisiwe: mnyama %1$s, mhlophe %2$s</string>
     <string name="go_score_opponent_accepted">Imbangi yakho iyawamukela la maphuzu: mnyama %1$s, mhlophe %2$s</string>

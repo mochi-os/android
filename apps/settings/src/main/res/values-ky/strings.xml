@@ -45,6 +45,8 @@
     <string name="route_delete_title">Маршрутту жок кылабызбы?</string>
     <string name="route_path">Жол</string>
     <string name="route_method">Ыкма</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Колдонмо</string>
     <string name="route_method_entity">Субъект</string>
     <string name="route_method_redirect">Кайра багыттоо</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org дарегинен жүктөп алуу</string>
     <string name="system_status_copy">Көчүрүү</string>
     <string name="system_status_peers">Теңдер</string>
-    <string name="system_status_known">Белгилүү</string>
+    <string name="system_status_peers_totals">Белгилүү %1$s · Туташкан %2$s · Берүү тармагы %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Белгилүү %1$s · Туташкан %2$s</string>
     <string name="system_status_peer_connected">Байланышты</string>
     <string name="system_status_peer_disconnected">Ажыратылды</string>
     <string name="system_status_peer_queued">Кезектеги билдирүүлөр</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Алуу</string>
     <string name="accounts_remove_title">Аккаунтту аласызбы?</string>
     <string name="system_documents_title">Документтер</string>
-    <string name="system_documents_description">Колдонуучуларга көрсөтүлүүчү сервер эрежелери, шарттары жана купуялык билдирүүсү</string>
     <string name="system_documents_tab_rules">Сервердин эрежелери</string>
     <string name="system_documents_tab_terms">Эрежелер жана шарттар</string>
     <string name="system_documents_tab_privacy">Купуялык</string>
     <string name="system_documents_language">Тил</string>
     <string name="system_documents_no_language">Бул тил үчүн документ жеткиликсиз.</string>
-    <string name="system_documents_customised">Ыңгайлаштырылган</string>
     <string name="system_documents_using_default">Топтомдогу демейки колдонулууда</string>
     <string name="system_documents_revert">Демейкиге кайтаруу</string>
     <string name="system_documents_save">Сактоо</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">Колдонуучуну жок кылуу</string>
     <string name="system_users_delete_title">Колдонуучуну жок кылабызбы?</string>
     <string name="system_users_manage_sessions">Сессияларды башкаруу</string>
-    <string name="system_users_sessions_description">Бул колдонуучу үчүн активдүү сессияларды көрүү жана жокко чыгаруу.</string>
     <string name="system_users_sessions_empty">Бул колдонуучуда активдүү сессиялар жок.</string>
     <string name="system_users_revoke">Кайтарып алуу</string>
     <string name="system_users_revoke_all">Бардык сессияларды кайтарып алуу</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">Кийинки</string>
     <string name="system_users_empty">Колдонуучулар табылган жок</string>
     <string name="system_users_empty_search">Колдонуучулар издөөңүзгө дал келген жок</string>
-    <string name="system_users_empty_search_hint">Издөө критерийлериңизди тууралап көрүңүз</string>
     <string name="system_users_toast_created">Колдонуучу түзүлдү</string>
     <string name="system_users_toast_updated">Колдонуучу жаңыланды</string>
     <string name="system_users_toast_deleted">Колдонуучу өчүрүлдү</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Кызмат шарттары</string>
     <string name="account_passkeys_empty">Катталган кирүү ачкычтары жок.</string>
     <string name="account_passkey_register_title">Кирүү ачкычын кошуу</string>
-    <string name="account_passkey_register_message">Түзмөгүңүз ырастоону сурайт. Кирүү ачкычы бул түзмөккө байланышкан жана келечектеги кирүүлөр үчүн колдонулат.</string>
     <string name="account_passkey_name_label">Аты (милдеттүү эмес)</string>
     <string name="account_passkey_delete_message">\"%1$s\" эми сизди киргизбейт.</string>
-    <string name="account_totp_description">Аутентификация колдонмосунан 6 сандуу код менен кириңиз.</string>
     <string name="account_totp_enabled">Аутентификатор иштетилген.</string>
     <string name="account_totp_setup_step1">Бул сырды аутентификация колдонмоңузда сканерлеңиз же киргизиңиз.</string>
     <string name="account_totp_setup_step2">Колдонмоңуз көрсөткөн 6 сандуу кодду киргизиңиз.</string>
     <string name="account_totp_code">Код</string>
     <string name="account_totp_disable_message">Сиз эми аутентификатор коду менен кире албайсыз.</string>
     <string name="account_recovery_none">Калыбына келтирүү коддору түзүлгөн эмес.</string>
-    <string name="account_recovery_count">%1$d колдонулбаган калыбына келтирүү коду.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s калыбына келтирүү коду калды.</item>
+        <item quantity="other">%1$s калыбына келтирүү коду калды.</item>
+    </plurals>
     <string name="account_recovery_generate">Коддорду түзүү</string>
     <string name="account_recovery_regenerate">Коддорду кайра түзүү</string>
     <string name="account_recovery_regen_title">Калыбына келтирүү коддорун кайра түзүүбү?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Акыркы колдонуу %1$s</string>
     <string name="route_delete_message">Бул \"%1$s\" жолу үчүн маршрутту алып салат.</string>
     <string name="route_empty">Конфигурацияланган жолдор жок.</string>
-    <string name="route_meta">Артыкчылык %1$d · %2$s</string>
+    <string name="route_meta">Артыкчылык %1$s · %2$s</string>
     <string name="interests_search_placeholder">Кошуу үчүн темаларды издөө…</string>
     <string name="interests_empty">Азырынча кызыгуулар жок.</string>
     <string name="interests_summary_regenerate">Жыйынтыкты кайра түзүү</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Бул \"%1$s\" колдонуучусун биротоло жок кылат. Бул аракетти жокко чыгаруу мүмкүн эмес.</string>
     <string name="system_users_sessions_title">%1$s сессиялары</string>
     <string name="system_users_session_last_accessed">Акыркы кирүү: %1$s</string>
-    <string name="system_users_revoke_all_title">Бардык сессияларды жокко чыгарууну каалайсызбы?</string>
+    <string name="system_users_revoke_all_title">Бардык сессияларды кайтарып алууну каалайсызбы?</string>
     <string name="system_users_revoke_all_message">Бул колдонуучунун бардык активдүү сессиялары чыгат.</string>
-    <string name="system_users_pagination_status">%3$d колдонуучудан %1$d–%2$d көрсөтүлүүдө</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$s колдонуучудан %1$s–%2$s көрсөтүлүүдө</item>
+        <item quantity="other">%3$s колдонуучудан %1$s–%2$s көрсөтүлүүдө</item>
+    </plurals>
     <string name="account_title">Аккаунт</string>
     <string name="account_section_identity">Идентификация</string>
     <string name="account_identity_identity">Идентификация</string>
@@ -303,17 +306,17 @@
     <string name="domain_verify">DNSти текшерүү</string>
     <string name="settings_home_domains">Домендер</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Сыноо %1$d дарекке жөнөтүлдү</item>
-        <item quantity="other">Сыноо %1$d дарекке жөнөтүлдү</item>
+        <item quantity="one">Сыноо %1$s дарекке жөнөтүлдү</item>
+        <item quantity="other">Сыноо %1$s дарекке жөнөтүлдү</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 сессия жокко чыгарылды</item>
-        <item quantity="other">%1$d сессия жокко чыгарылды</item>
+        <item quantity="one">%1$s сессия жокко чыгарылды</item>
+        <item quantity="other">%1$s сессия жокко чыгарылды</item>
     </plurals>
     <string name="login_title">Кирүү</string>
     <string name="login_section_methods">Кирүү ыкмалары</string>
     <string name="login_method_email">Электрондук почта коду</string>
-    <string name="login_method_passkey">Мүмкүндүк ачкычы</string>
+    <string name="login_method_passkey">Кирүү ачкычы</string>
     <string name="login_method_totp">Аутентификатор колдонмосу</string>
     <string name="login_method_oauth">Үчүнчү жактын кирүүсү</string>
     <string name="login_method_recovery">Калыбына келтирүү коддору</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Ачык</string>
     <string name="system_status_reachability_private">Купуя</string>
     <string name="system_status_reachability_unknown">Белгисиз</string>
-    <string name="system_status_relay">Реле аркылуу</string>
-    <string name="system_status_mesh">Берүү меш-тармагы</string>
+    <string name="system_status_reachability_relay">%1$s · реле аркылуу</string>
     <string name="system_status_broadcast">Акыркы берүү</string>
     <string name="system_status_queued_broadcasts">Кезектеги жайылтуу билдирүүлөрү</string>
     <string name="system_setting_hostname_publish">Хост атын жана домендерди башка серверлерге жарыялоо</string>
     <string name="system_setting_hostname">Башка серверлерге жарыяланган хост аты</string>
     <string name="system_status_peer_id">Теңтуш ID</string>
     <string name="system_status_holepunch">Тешүү</string>
-    <string name="system_status_holepunch_value">%1$d ийгиликтүү · %2$d ишке ашкан жок</string>
     <string name="system_status_awaiting_routing">Багыттоону күтүп жаткан билдирүүлөр</string>
     <string name="system_status_relay_service">Реле кызматы</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d брондоолор · %3$d чынжырлар · %4$d четке кагылды</string>
     <string name="route_target_select">Тандоо</string>
     <string name="account_data_description">Бул же башка Mochi серверинде калыбына келтире турган толук камдык көчүрмөнү жүктөп алыңыз.</string>
     <string name="route_target_none">Жеткиликтүү багыттар жок</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Акыркы жолу көрүлгөн %1$s</string>
     <string name="notifprefs_device_app">%1$s · колдонмо</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
-    <string name="notifprefs_test_partial">Тест %2$d багыттан %1$d-ине жөнөтүлдү</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Сыноо %2$s даректин ичинен %1$s дарекке жөнөтүлдү</item>
+        <item quantity="other">Сыноо %2$s даректин ичинен %1$s дарекке жөнөтүлдү</item>
+    </plurals>
     <string name="notifprefs_test_none">Багыттар конфигурацияланган эмес</string>
     <string name="notifprefs_transport_fcm">Android пуш билдирүүсү</string>
     <string name="notifprefs_no_destinations">Багыттар жок</string>
@@ -391,7 +396,30 @@
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Кирүү</string>
     <string name="accounts_provider_caldav">Календарь сервери</string>
-    <string name="accounts_revoke_confirm">Бул %1$s календарына кирүүнү жокко чыгарат. %2$s аркылуу кирүү, аны Кирүү барагында ажыратмайынча сакталат.</string>
+    <string name="accounts_revoke_confirm">Бул %1$s календарына кирүүнү кайтарып алат. %2$s аркылуу кирүү, аны Кирүү барагында ажыратмайынча сакталат.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Белгисиз тема</string>
+    <string name="system_documents_modified">Өзгөртүлгөн</string>
+    <string name="system_documents_discard_title">Өзгөртүүлөрдү таштайсызбы?</string>
+    <string name="system_documents_discard">Таштоо</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s ийгиликтүү</item>
+        <item quantity="other">%1$s ийгиликтүү</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s ийгиликсиз</item>
+        <item quantity="other">%1$s ийгиликсиз</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s брондоо</item>
+        <item quantity="other">%1$s / %2$s брондоо</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s чынжыр</item>
+        <item quantity="other">%1$s чынжыр</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s четке кагылды</item>
+        <item quantity="other">%1$s четке кагылды</item>
+    </plurals>
 </resources>

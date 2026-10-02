@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">Persone</string>
     <string name="projects_option_icon">Icona</string>
     <string name="projects_option_icon_placeholder">es. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Annulla iscrizione</string>
+    <string name="projects_settings_unsubscribe">Disiscriviti</string>
     <string name="projects_settings_delete_project">Elimina progetto</string>
     <string name="projects_settings_delete_confirm_title">Elimina progetto</string>
-    <string name="projects_settings_unsubscribe_title">Annulla iscrizione</string>
-    <string name="projects_settings_unsubscribe_message">Sei sicuro di voler annullare l\'iscrizione a questo progetto?</string>
+    <string name="projects_settings_unsubscribe_title">Disiscriviti</string>
+    <string name="projects_settings_unsubscribe_message">Sei sicuro di volerti disiscrivere da questo progetto?</string>
     <string name="projects_access_level_owner">Proprietario</string>
     <string name="projects_object_watch">Segui</string>
     <string name="projects_object_tab_properties">Proprietà</string>
@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">ha apportato una modifica</string>
     <string name="projects_attachment_empty">Nessun allegato</string>
     <string name="projects_attachment_default_name">allegato</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nuova richiesta di merge</string>
     <string name="projects_request_status_closed">Chiusa</string>
     <string name="projects_request_back_to_list">Torna all\'elenco</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Verifica dello stato del merge…</string>
     <string name="projects_request_can_merge">Può essere unita</string>
     <string name="projects_request_cannot_merge">Impossibile unire</string>
-    <string name="projects_request_ahead_behind">%1$d avanti, %2$d indietro</string>
+    <string name="projects_request_ahead_behind">%1$s avanti, %2$s indietro</string>
     <string name="projects_request_draft_notice">Questa è una bozza. Contrassegnala come pronta prima di unirla.</string>
     <string name="projects_request_view_diff">Visualizza diff</string>
     <string name="projects_request_mark_ready">Contrassegna come pronta</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Nessuna colonna configurata per questa vista</string>
     <string name="projects_board_no_options">Nessuna opzione configurata per il campo colonna</string>
     <string name="projects_board_column_options">Opzioni colonna</string>
-    <string name="projects_board_nested_count">+%1$d annidati</string>
+    <string name="projects_board_nested_count">+%1$s annidati</string>
     <string name="projects_move_to_column">Sposta nella colonna</string>
     <string name="projects_move_to_row">Sposta nella riga</string>
     <string name="projects_move_after">Dopo %1$s</string>
@@ -360,13 +360,13 @@
     <string name="projects_activity_commented">ha commentato</string>
     <string name="projects_attachment_delete_confirm_message">Questo allegato verrà eliminato definitivamente.</string>
     <string name="projects_attachment_delete_confirm_title">Eliminare l\'allegato?</string>
-    <string name="projects_settings_unsubscribe_section">Annulla l\'iscrizione al progetto</string>
+    <string name="projects_settings_unsubscribe_section">Disiscriviti dal progetto</string>
     <string name="projects_share_link_title">Condividi progetto</string>
     <string name="projects_sort_filter_title">Ordina e filtra</string>
     <string name="projects_create_prefix_hint">Usato per ID leggibili come %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d file in conflitto</item>
-        <item quantity="other">%1$d file in conflitto</item>
+        <item quantity="one">%1$s file in conflitto</item>
+        <item quantity="other">%1$s file in conflitto</item>
     </plurals>
     <string name="projects_design_export_saved">Progetto salvato</string>
     <string name="projects_design_import_failed">Impossibile leggere il file</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Dati del progetto salvati</string>
     <string name="projects_exporting">Preparazione dell\'esportazione…</string>
     <string name="projects_board_add_column">Aggiungi colonna</string>
-    <string name="projects_design_sample">Esempio %1$d</string>
+    <string name="projects_design_sample">Esempio %1$s</string>
     <string name="projects_option_delete_title">Elimina opzione</string>
     <string name="projects_option_delete_message">Vuoi davvero eliminare l\'opzione \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Nessun tipo di elemento può essere creato per ora. Crea prima gli elementi padre richiesti.</string>

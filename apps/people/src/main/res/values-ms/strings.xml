@@ -180,7 +180,7 @@
     <string name="people_books_create">Cipta buku alamat</string>
     <string name="people_books_delete">Padam buku alamat</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">Padam %1$s dan %2$d kenalan di dalamnya?</item>
+        <item quantity="other">Padam %1$s dan %2$s kenalan di dalamnya?</item>
     </plurals>
     <string name="people_welcome_body">Cari rakan di seluruh Mochi dan berhubung. Ketik Tambah kenalan untuk menghantar jemputan.</string>
     <string name="people_person_state_contact">Dalam kenalan</string>

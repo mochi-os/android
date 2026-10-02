@@ -180,8 +180,8 @@
     <string name="people_books_create">Címjegyzék létrehozása</string>
     <string name="people_books_delete">Címjegyzék törlése</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Törli a(z) %1$s címjegyzéket és a benne lévő %2$d névjegyet?</item>
-        <item quantity="other">Törli a(z) %1$s címjegyzéket és a benne lévő %2$d névjegyet?</item>
+        <item quantity="one">Törli a(z) %1$s címjegyzéket és a benne lévő %2$s névjegyet?</item>
+        <item quantity="other">Törli a(z) %1$s címjegyzéket és a benne lévő %2$s névjegyet?</item>
     </plurals>
     <string name="people_welcome_body">Találjon ismerősöket a Mochi egészén, és lépjen velük kapcsolatba. Meghívó küldéséhez koppintson a Névjegy hozzáadása lehetőségre.</string>
     <string name="people_person_state_contact">A névjegyek között</string>

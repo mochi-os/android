@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">Ag athcheangal…</string>
     <string name="chess_ws_failed">Theip ar an gceangal</string>
     <string name="chess_move_capture">Thóg %1$s %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">Bán %1$s</string>
     <string name="chess_piece_black">Dubh %1$s</string>

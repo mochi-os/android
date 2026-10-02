@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">Persones</string>
     <string name="crm_option_icon">Icona</string>
     <string name="crm_option_icon_placeholder">p. ex. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Cancel·la la subscripció</string>
+    <string name="crm_settings_unsubscribe">Dona\'t de baixa</string>
     <string name="crm_settings_delete_crm">Suprimeix el CRM</string>
     <string name="crm_settings_delete_confirm_title">Suprimeix el CRM</string>
-    <string name="crm_settings_unsubscribe_title">Cancel·la la subscripció</string>
-    <string name="crm_settings_unsubscribe_message">Segur que vols cancel·lar la subscripció a aquest CRM?</string>
+    <string name="crm_settings_unsubscribe_title">Dona\'t de baixa</string>
+    <string name="crm_settings_unsubscribe_message">Segur que vols donar-te de baixa d\'aquest CRM?</string>
     <string name="crm_access_level_owner">Propietari</string>
     <string name="crm_object_watch">Segueix</string>
     <string name="crm_object_tab_properties">Propietats</string>
@@ -133,7 +133,7 @@
     <string name="crm_tree_empty">Cap objecte</string>
     <string name="crm_board_no_columns">No hi ha columnes configurades per a aquesta vista</string>
     <string name="crm_board_no_options">No hi ha opcions configurades per al camp de columna</string>
-    <string name="crm_board_nested_count">+%1$d imbricats</string>
+    <string name="crm_board_nested_count">+%1$s imbricats</string>
     <string name="crm_move_to_column">Mou a la columna</string>
     <string name="crm_move_to_row">Mou a la fila</string>
     <string name="crm_move_after">Després de %1$s</string>
@@ -276,7 +276,7 @@
     <string name="crm_access_role_view">Només visualització</string>
     <string name="crm_access_role_none">Sense accés</string>
     <string name="crm_all_crms">Tots els CRM</string>
-    <string name="crm_settings_unsubscribe_section">Cancel·la la subscripció al CRM</string>
+    <string name="crm_settings_unsubscribe_section">Dona\'t de baixa del CRM</string>
     <string name="crm_settings_updated">S\'ha actualitzat el CRM</string>
     <string name="crm_create_import_backup">Importa des d\'una còpia de seguretat (opcional)</string>
     <string name="crm_export">Exporta les dades</string>
@@ -289,7 +289,7 @@
     <string name="crm_export_saved">Dades del CRM desades</string>
     <string name="crm_create_upload_json">Carrega un fitxer .zip o .json</string>
     <string name="crm_create_blocked_no_options">No es pot crear: %1$s és obligatori però no té opcions per triar. Afegeix opcions a Disseny.</string>
-    <string name="crm_design_sample">Mostra %1$d</string>
+    <string name="crm_design_sample">Mostra %1$s</string>
     <string name="crm_option_delete_title">Suprimeix l\'opció</string>
     <string name="crm_option_delete_message">Esteu segur que voleu eliminar l\'opció \"%1$s\"?</string>
 </resources>

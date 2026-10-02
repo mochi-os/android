@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Varsler om sideredigeringer, kommentarer og invitasjoner.</string>
     <string name="wikis_pageview_toc_expand">Vis innholdsfortegnelse</string>
     <string name="wikis_pageview_toc_collapse">Skjul innholdsfortegnelse</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Oppdatert %1$s</string>
     <string name="wikis_pageview_not_found_description">Siden \"%1$s\" finnes ikke ennå.</string>
     <string name="wikis_pageview_share_chooser">Wiki-lenke</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Du er i ferd med å slette siden \"%1$s\" (%2$s). Denne handlingen kan angres ved å gjenopprette fra historikken.</string>
     <string name="wikis_delete_page_success">Side slettet</string>
     <string name="wikis_revert_page_title">Tilbakestill side</string>
-    <string name="wikis_revert_page_message">Du er i ferd med å tilbakestille %1$s til versjon %2$d. Dette oppretter en ny revisjon med innholdet fra versjon %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Tilbakestilt til versjon %1$d</string>
-    <string name="wikis_revert_page_success">Tilbakestilt til versjon %1$d</string>
+    <string name="wikis_revert_page_message">Du er i ferd med å tilbakestille %1$s til versjon %2$s. Dette oppretter en ny revisjon med innholdet fra versjon %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Tilbakestilt til versjon %1$s</string>
+    <string name="wikis_revert_page_success">Tilbakestilt til versjon %1$s</string>
     <string name="wikis_rename_page_renaming">Endrer navn…</string>
     <string name="wikis_rename_page_success">Side fikk nytt navn</string>
-    <string name="wikis_history_viewing">Viser historikk for %1$s, gjeldende versjon %2$d</string>
-    <string name="wikis_revision_version_badge">Versjon %1$d</string>
+    <string name="wikis_history_viewing">Viser historikk for %1$s, gjeldende versjon %2$s</string>
+    <string name="wikis_revision_version_badge">Versjon %1$s</string>
     <string name="wikis_search_pages_placeholder">Søk sider etter tittel eller innhold…</string>
     <string name="wikis_search_no_results">Ingen sider funnet for \"%1$s\". Prøv andre søkeord.</string>
     <string name="wikis_search_updated">Oppdatert %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">av %1$s</string>
     <string name="wikis_revision_show_page">Vis side</string>
     <string name="wikis_revision_compare_failed">Kunne ikke laste inn forrige versjon for sammenligning.</string>
-    <string name="wikis_revision_changes_from">Endringer fra versjon %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Endringer fra versjon %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d kommentar</item>
-        <item quantity="other">%d kommentarer</item>
+        <item quantity="one">%s kommentar</item>
+        <item quantity="other">%s kommentarer</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d svar</item>
-        <item quantity="other">+%d flere svar</item>
+        <item quantity="one">%s svar</item>
+        <item quantity="other">+%s flere svar</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d side</item>
-        <item quantity="other">%d sider</item>
+        <item quantity="one">%s side</item>
+        <item quantity="other">%s sider</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fil</item>
-        <item quantity="other">%d filer</item>
+        <item quantity="one">%s fil</item>
+        <item quantity="other">%s filer</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d bilde</item>
-        <item quantity="other">%d bilder</item>
+        <item quantity="one">%s bilde</item>
+        <item quantity="other">%s bilder</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="other">%d dokumenter</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="other">%s dokumenter</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d side med denne taggen</item>
-        <item quantity="other">%d sider med denne taggen</item>
+        <item quantity="one">%s side med denne taggen</item>
+        <item quantity="other">%s sider med denne taggen</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Fant %1$d resultat for «%2$s»</item>
-        <item quantity="other">Fant %1$d resultater for «%2$s»</item>
+        <item quantity="one">Fant %1$s resultat for «%2$s»</item>
+        <item quantity="other">Fant %1$s resultater for «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Kunne ikke lagre bildeteksten</string>
     <string name="wikis_attachments_upload_types">Støttede filer: bilder, PDF, DOC, DOCX, TXT og MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Ny RSS-URL kopiert til utklippstavlen</string>
     <string name="wikis_rss_exists">Denne feed-URL-en er allerede utstedt og kan ikke vises igjen.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Viser den første %1$d kommentaren.</item>
-        <item quantity="other">Viser de første %1$d kommentarene.</item>
+        <item quantity="one">Viser den første %1$s kommentaren.</item>
+        <item quantity="other">Viser de første %1$s kommentarene.</item>
     </plurals>
 </resources>

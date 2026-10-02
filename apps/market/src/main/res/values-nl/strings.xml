@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Versturen…</string>
     <string name="market_checkout_subscribing">Abonneren…</string>
     <string name="market_filter_remove">Filter verwijderen</string>
-    <string name="market_listing_detail_sales_count">%1$d verkopen</string>
-    <string name="market_profile_sales_count">%1$d verkopen</string>
+    <string name="market_listing_detail_sales_count">%1$s verkopen</string>
+    <string name="market_profile_sales_count">%1$s verkopen</string>
     <string name="market_purchase_dispute_response">Antwoord van de verkoper</string>
     <string name="market_purchases_order_label">Bestelling nr. %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Vertel kopers iets over jezelf…</string>
     <string name="market_account_load_failed">Kan account niet laden</string>
     <string name="market_account_save_failed">Kan wijzigingen niet opslaan</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Huidig: %1$s</string>
     <string name="market_bids_ends_in">Eindigt over %1$s</string>
     <string name="market_bids_your_bid">Uw bod: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d van %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatuur %1$d</string>
+    <string name="market_carousel_main">Foto %1$s van %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatuur %1$s</string>
     <string name="market_checkout_browser_unavailable">Geen browser beschikbaar om de betaalpagina te openen</string>
     <string name="market_checkout_pay_button">Betalen met Stripe</string>
     <string name="market_checkout_processing">Verwerken…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Bewijs toevoegen</string>
-    <string name="market_dispute_dialog_attach_count">%1$d bestand(en) toegevoegd</string>
+    <string name="market_dispute_dialog_attach_count">%1$s bestand(en) toegevoegd</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi-medewerker</string>
     <string name="market_dispute_dialog_evidence_section_title">Ingediend bewijs</string>
     <string name="market_dispute_dialog_evidence_submitter_line">ingediend door %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Referentie-URL</string>
     <string name="market_editor_assets_empty">Nog geen items</string>
     <string name="market_editor_category_none">Selecteer een categorie</string>
-    <string name="market_editor_days">%1$d dagen</string>
+    <string name="market_editor_days">%1$s dagen</string>
     <string name="market_editor_delete">Advertentie verwijderen</string>
     <string name="market_editor_delete_confirm_message">Hiermee wordt de advertentie definitief verwijderd.</string>
     <string name="market_editor_delete_confirm_title">Advertentie verwijderen?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Gesprek kon niet worden geladen</string>
     <string name="market_messages_send_failed">Bericht kon niet worden verzonden</string>
     <string name="market_messages_thread_title">Gesprek</string>
-    <string name="market_messages_unread_badge">%1$d ongelezen</string>
-    <string name="market_price_from">vanaf %1$s</string>
+    <string name="market_messages_unread_badge">%1$s ongelezen</string>
+    <string name="market_price_from">Vanaf %1$s</string>
     <string name="market_price_high_bid">Hoogste bod: %1$s</string>
     <string name="market_price_instant_buy">direct kopen: %1$s</string>
     <string name="market_price_per_month">%1$s / maand</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Lid geworden op %1$s</string>
     <string name="market_profile_no_reviews">Nog geen recensies.</string>
     <string name="market_profile_rating_breakdown">Verdeling beoordelingen</string>
-    <string name="market_profile_stars_value">%1$d sterren</string>
+    <string name="market_profile_stars_value">%1$s sterren</string>
     <string name="market_purchase_dispute_chargeback">Terugboeking %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Je bank heeft een terugboeking op deze bestelling ingediend. Stripe behandelt het geschil met de verkoper; de uitkomst verschijnt hier zodra er een besluit is.</string>
-    <string name="market_purchase_download_many">Download hieronder je %1$d bestanden.</string>
+    <string name="market_purchase_download_many">Download hieronder je %1$s bestanden.</string>
     <string name="market_purchase_download_one">Download hieronder je bestand.</string>
     <string name="market_purchase_review_from">Recensie van %1$s</string>
     <string name="market_purchases_auction_label">Veiling #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s terugbetaald</string>
     <string name="market_purchases_won_for">Gewonnen voor %1$s</string>
-    <string name="market_rating_reviews">(%1$d beoordelingen)</string>
+    <string name="market_rating_reviews">(%1$s beoordelingen)</string>
     <string name="market_refund_amount_label">Bedrag</string>
     <string name="market_refund_dialog_amount_help">Laat leeg om de volledige bestelling terug te betalen.</string>
     <string name="market_refund_dialog_amount_label">Bedrag</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Hiermee wordt de veiling geannuleerd. De advertentie wordt verborgen voor kopers; je kunt deze later opnieuw plaatsen als een nieuw concept.</string>
     <string name="market_listings_remove_title">Deze advertentie verwijderen?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Hiermee wordt de veiling geannuleerd en wordt %1$d actieve bieder op de hoogte gebracht. De advertentie wordt verborgen voor kopers; u kunt deze later opnieuw plaatsen als nieuw concept.</item>
-        <item quantity="other">Hiermee wordt de veiling geannuleerd en worden %1$d actieve bieders op de hoogte gebracht. De advertentie wordt verborgen voor kopers; u kunt deze later opnieuw plaatsen als nieuw concept.</item>
+        <item quantity="one">Hiermee wordt de veiling geannuleerd en wordt %1$s actieve bieder op de hoogte gebracht. De advertentie wordt verborgen voor kopers; u kunt deze later opnieuw plaatsen als nieuw concept.</item>
+        <item quantity="other">Hiermee wordt de veiling geannuleerd en worden %1$s actieve bieders op de hoogte gebracht. De advertentie wordt verborgen voor kopers; u kunt deze later opnieuw plaatsen als nieuw concept.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Hiermee wordt %1$d actief abonnement aan het einde van de huidige factureringsperiode opgezegd. Abonnees worden op de hoogte gebracht. De advertentie wordt verborgen voor kopers.</item>
-        <item quantity="other">Hiermee worden %1$d actieve abonnementen aan het einde van de huidige factureringsperiode opgezegd. Abonnees worden op de hoogte gebracht. De advertentie wordt verborgen voor kopers.</item>
+        <item quantity="one">Hiermee wordt %1$s actief abonnement aan het einde van de huidige factureringsperiode opgezegd. Abonnees worden op de hoogte gebracht. De advertentie wordt verborgen voor kopers.</item>
+        <item quantity="other">Hiermee worden %1$s actieve abonnementen aan het einde van de huidige factureringsperiode opgezegd. Abonnees worden op de hoogte gebracht. De advertentie wordt verborgen voor kopers.</item>
     </plurals>
 </resources>

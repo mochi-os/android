@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Objekturik ez</string>
     <string name="crm_board_no_columns">Ez dago zutaberik konfiguratuta ikuspegi honetarako</string>
     <string name="crm_board_no_options">Ez dago aukerarik konfiguratuta zutabe-eremurako</string>
-    <string name="crm_board_nested_count">+%1$d habiaratuta</string>
+    <string name="crm_board_nested_count">+%1$s habiaratuta</string>
     <string name="crm_move_to_column">Mugitu zutabera</string>
     <string name="crm_move_to_row">Mugitu errenkadara</string>
     <string name="crm_move_after">%1$s ondoren</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM datuak gordeta</string>
     <string name="crm_create_upload_json">Igo .zip edo .json fitxategia</string>
     <string name="crm_create_blocked_no_options">Ezin da sortu: %1$s beharrezkoa da baina ez du aukerarik. Gehitu aukerak Diseinuan.</string>
-    <string name="crm_design_sample">Adibidea %1$d</string>
+    <string name="crm_design_sample">Adibidea %1$s</string>
     <string name="crm_option_delete_title">Ezabatu aukera</string>
     <string name="crm_option_delete_message">Ziur zaude \"%1$s\" aukera ezabatu nahi duzula?</string>
 </resources>

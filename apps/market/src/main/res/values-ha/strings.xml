@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Kasuwa</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Tarihin rayuwa</string>
     <string name="market_account_biography_placeholder">Faɗa wa masu saye game da kanka…</string>
     <string name="market_account_load_failed">Ba a iya loda asusu ba</string>
@@ -59,7 +59,7 @@
     <string name="market_bids_tab_outbid">An ci tayi</string>
     <string name="market_bids_tab_won">Ya ci nasara</string>
     <string name="market_bids_title">Taye-taye</string>
-    <string name="market_carousel_main">Hoto %1$d na %2$d</string>
+    <string name="market_carousel_main">Hoto %1$s na %2$s</string>
     <string name="market_channel_name">Kasuwa</string>
     <string name="market_chargeback_reason_bank_cannot_process">Banki bai iya sarrafawa ba</string>
     <string name="market_chargeback_reason_check_returned">An mayar da check</string>
@@ -139,7 +139,7 @@
     <string name="market_editor_condition_refurbished">An sabunta</string>
     <string name="market_editor_condition_used">An yi amfani</string>
     <string name="market_editor_currency">Kuɗi</string>
-    <string name="market_editor_days">%1$d kwana</string>
+    <string name="market_editor_days">%1$s kwana</string>
     <string name="market_editor_delete">Share talla</string>
     <string name="market_editor_delete_confirm_title">Share talla?</string>
     <string name="market_editor_description">Bayani</string>
@@ -284,7 +284,7 @@
     <string name="market_onboarding_dismiss">Kau da shi</string>
     <string name="market_onboarding_title">Barka da zuwa Market</string>
     <string name="market_open_sidebar">Buɗe menu</string>
-    <string name="market_price_from">daga %1$s</string>
+    <string name="market_price_from">Daga %1$s</string>
     <string name="market_price_per_month">%1$s / wata</string>
     <string name="market_price_per_year">%1$s / shekara</string>
     <string name="market_profile_biography">Game da</string>
@@ -336,7 +336,7 @@
     <string name="market_purchases_title">Siye</string>
     <string name="market_rating_label">Ƙima</string>
     <string name="market_rating_no_reviews">Babu reviews tukuna</string>
-    <string name="market_rating_reviews">(%1$d sharhi)</string>
+    <string name="market_rating_reviews">(%1$s sharhi)</string>
     <string name="market_refund_amount_label">Adadi</string>
     <string name="market_refund_body">Ba da dalili don buƙatar mayar da kuɗinka.</string>
     <string name="market_refund_details_label">Cikakkun bayanai</string>
@@ -503,11 +503,11 @@
     <string name="market_bids_current_bid">Na yanzu: %1$s</string>
     <string name="market_bids_ends_in">Yana ƙarewa cikin %1$s</string>
     <string name="market_bids_your_bid">Tayin ku: %1$s</string>
-    <string name="market_carousel_thumbnail">Ƙaramin hoto %1$d</string>
+    <string name="market_carousel_thumbnail">Ƙaramin hoto %1$s</string>
     <string name="market_checkout_browser_unavailable">Babu mai bincike da ya samu don buɗe shafin biya</string>
     <string name="market_checkout_pwyw_label">Farashin ku (mafi ƙanƙanta %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Adadi dole ya zama akalla %1$s</string>
-    <string name="market_dispute_dialog_attach_count">Fayil(oji) %1$d a haɗe</string>
+    <string name="market_dispute_dialog_attach_count">Fayil(oji) %1$s a haɗe</string>
     <string name="market_dispute_dialog_evidence_section_title">Shaidar da aka gabatar</string>
     <string name="market_dispute_dialog_evidence_submitter_line">gabatar daga %1$s</string>
     <string name="market_editor_appeal">Ƙara kan tantancewa</string>
@@ -556,7 +556,7 @@
     <string name="market_listing_detail_loading">Ana loda tallan</string>
     <string name="market_listing_detail_relist_failed">Ba a iya sake bayar da tallan ba</string>
     <string name="market_listing_detail_relist_in_progress">Ana sake bayar da tallan</string>
-    <string name="market_listing_detail_sales_count">Tallace-tallace %1$d</string>
+    <string name="market_listing_detail_sales_count">Tallace-tallace %1$s</string>
     <string name="market_listing_detail_seller_banned_banner">An hana mai siyarwa. Ba za a iya yin sabbin odoji ba.</string>
     <string name="market_listing_detail_seller_suspended_banner">An dakatar da mai siyarwa. Sabbin odoji sun tsaya har sai an mayar da asusun.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">An kashe siye yayin da asusun mai siyarwa ke ƙarƙashin taƙaitawa.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">Babu tattaunawa tukuna</string>
     <string name="market_messages_load_failed">Ba a iya loda zaren ba</string>
     <string name="market_messages_send_failed">Ba a iya aika saƙo ba</string>
-    <string name="market_messages_unread_badge">%1$d da ba a karanta ba</string>
+    <string name="market_messages_unread_badge">%1$s da ba a karanta ba</string>
     <string name="market_price_high_bid">Babban tayi: %1$s</string>
     <string name="market_price_instant_buy">Saya nan take: %1$s</string>
     <string name="market_price_starting_bid">Tayin farawa: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">Memba tun %1$s</string>
     <string name="market_profile_joined">Ya shiga %1$s</string>
     <string name="market_profile_rating_breakdown">Cikakken bayanin kima</string>
-    <string name="market_profile_sales_count">Sayarwa %1$d</string>
-    <string name="market_profile_stars_value">Taurari %1$d</string>
+    <string name="market_profile_sales_count">Sayarwa %1$s</string>
+    <string name="market_profile_stars_value">Taurari %1$s</string>
     <string name="market_purchase_dispute_chargeback">Mayar da kuɗi %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankin ku ya gabatar da koken mayar da kuɗi kan wannan oda. Stripe na sarrafa takaddamar tare da mai sayarwa; sakamakon zai bayyana a nan idan an yanke shawara.</string>
     <string name="market_purchase_dispute_response">Amsar mai sayarwa</string>
-    <string name="market_purchase_download_many">Sauke fayilolinku %1$d a ƙasa.</string>
+    <string name="market_purchase_download_many">Sauke fayilolinku %1$s a ƙasa.</string>
     <string name="market_purchase_download_one">Sauke fayilinku a ƙasa.</string>
     <string name="market_purchase_review_from">Bita daga %1$s</string>
     <string name="market_purchases_auction_label">Gwanjo #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Wannan zai soke gwanjon. Za a ɓoye jeren daga masu siye; za ka iya sake jera shi daga baya a matsayin sabon daftari.</string>
     <string name="market_listings_remove_title">Cire wannan jeri?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Wannan zai soke gwanjon kuma ya sanar da mai neman %1$d mai aiki. Za a ɓoye tallar daga masu saye; za ka iya sake lissafa ta daga baya a matsayin sabon daftari.</item>
-        <item quantity="other">Wannan zai soke gwanjon kuma ya sanar da masu nema %1$d masu aiki. Za a ɓoye tallar daga masu saye; za ka iya sake lissafa ta daga baya a matsayin sabon daftari.</item>
+        <item quantity="one">Wannan zai soke gwanjon kuma ya sanar da mai neman %1$s mai aiki. Za a ɓoye tallar daga masu saye; za ka iya sake lissafa ta daga baya a matsayin sabon daftari.</item>
+        <item quantity="other">Wannan zai soke gwanjon kuma ya sanar da masu nema %1$s masu aiki. Za a ɓoye tallar daga masu saye; za ka iya sake lissafa ta daga baya a matsayin sabon daftari.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Wannan zai soke biyan kuɗin shiga %1$d mai aiki a ƙarshen lokacin biyan kuɗi na yanzu. Za a sanar da masu biyan kuɗin shiga. Za a ɓoye tallar daga masu saye.</item>
-        <item quantity="other">Wannan zai soke biyan kuɗin shiga %1$d masu aiki a ƙarshen lokacin biyan kuɗi na yanzu. Za a sanar da masu biyan kuɗin shiga. Za a ɓoye tallar daga masu saye.</item>
+        <item quantity="one">Wannan zai soke biyan kuɗin shiga %1$s mai aiki a ƙarshen lokacin biyan kuɗi na yanzu. Za a sanar da masu biyan kuɗin shiga. Za a ɓoye tallar daga masu saye.</item>
+        <item quantity="other">Wannan zai soke biyan kuɗin shiga %1$s masu aiki a ƙarshen lokacin biyan kuɗi na yanzu. Za a sanar da masu biyan kuɗin shiga. Za a ɓoye tallar daga masu saye.</item>
     </plurals>
 </resources>

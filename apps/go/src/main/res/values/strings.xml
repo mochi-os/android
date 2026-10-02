@@ -18,7 +18,7 @@
     <!-- Game card -->
 
     <!-- Game detail -->
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_color_black">Black</string>
     <string name="go_color_white">White</string>
     <string name="go_status_your_move">Your move</string>
@@ -73,15 +73,15 @@
     <string name="go_new_game_no_friends">You need to add a friend before you can start a game.</string>
     <string name="go_new_game_add_friends">Add friends</string>
     <string name="go_new_game_board_size_label">Board size</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_label">Komi</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_range_error">Must be between 0 and 10</string>
     <string name="go_new_game_komi_hint">Points added to White\'s score to compensate for Black going first</string>
     <string name="go_new_game_start">Start game</string>
-    <string name="go_board_a11y">%1$d×%1$d Go board</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go board, your turn to place a black stone</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go board, your turn to place a white stone</string>
+    <string name="go_board_a11y">%1$s×%1$s Go board</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go board, your turn to place a black stone</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go board, your turn to place a white stone</string>
     <string name="go_status_scoring">Counting — agree the score or play on</string>
     <string name="go_score_proposed">Proposed score: black %1$s, white %2$s</string>
     <string name="go_score_opponent_accepted">Your opponent accepts this score: black %1$s, white %2$s</string>

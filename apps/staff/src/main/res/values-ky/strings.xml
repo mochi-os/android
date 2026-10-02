@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Эскертүүлөр</string>
     <string name="staff_accounts_reason_label">Себеп</string>
     <string name="staff_accounts_reason_optional_label">Себеп (милдеттүү эмес)</string>
-    <string name="staff_accounts_sales">%1$d сатуу</string>
+    <string name="staff_accounts_sales">%1$s сатуу</string>
     <string name="staff_accounts_search_clear">Издөөнү тазалоо</string>
     <string name="staff_accounts_search_placeholder">Издөө</string>
     <string name="staff_accounts_seller_buyers">Сатып алуучулар гана</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Аталышы жок</string>
     <string name="staff_accounts_unsuspend">Токтотууну алуу</string>
     <string name="staff_accounts_unsuspended_toast">Аккаунт калыбына келтирилди</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Жокко чыгаруу</string>
     <string name="staff_appeals_decide">Чечүү</string>
     <string name="staff_appeals_decision_denied">Жарнама четке кагылды</string>

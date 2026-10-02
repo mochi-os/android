@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">పేరు లేని</string>
     <string name="staff_accounts_unsuspend">సస్పెండ్‌ను తీసివేయండి</string>
     <string name="staff_accounts_unsuspended_toast">ఖాతా సస్పెన్షన్ తొలగించబడింది</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">రద్దు చేయండి</string>
     <string name="staff_appeals_decide">నిర్ణయించండి</string>
     <string name="staff_appeals_decision_denied">జాబితాను తిరస్కరించినట్లు ఉంచండి</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">ఆర్డర్ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">కారణం (ఐచ్ఛికం)</string>
-    <string name="staff_accounts_sales">%1$d అమ్మకాలు</string>
+    <string name="staff_accounts_sales">%1$s అమ్మకాలు</string>
     <string name="staff_appeals_reason_label">విక్రేత అప్పీలు కారణం</string>
     <string name="staff_audit_action_staff_team_role_changed">సిబ్బంది పాత్ర మార్చబడింది</string>
     <string name="staff_categories_delete_desc">“%1$s”ని తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>

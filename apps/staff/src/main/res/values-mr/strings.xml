@@ -5,7 +5,7 @@
     <string name="staff_accounts_action_ban_title">खाते प्रतिबंधित करा</string>
     <string name="staff_accounts_action_suspend_title">खाते निलंबित करा</string>
     <string name="staff_accounts_action_unban_title">बंदी हटवा</string>
-    <string name="staff_accounts_action_unsuspend_title">निलंबन हटवा</string>
+    <string name="staff_accounts_action_unsuspend_title">निलंबन मागे घ्या</string>
     <string name="staff_accounts_any_seller">सर्व</string>
     <string name="staff_accounts_any_status">सर्व</string>
     <string name="staff_accounts_ban">प्रतिबंध करा</string>
@@ -32,9 +32,9 @@
     <string name="staff_accounts_unban">अनबॅन करा</string>
     <string name="staff_accounts_unbanned_toast">खाते अप्रतिबंधित केले</string>
     <string name="staff_accounts_unnamed">नावाशिवाय</string>
-    <string name="staff_accounts_unsuspend">निलंबन रद्द करा</string>
-    <string name="staff_accounts_unsuspended_toast">खाते निलंबन रद्द केले</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_unsuspend">निलंबन मागे घ्या</string>
+    <string name="staff_accounts_unsuspended_toast">खात्याचे निलंबन मागे घेतले</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">रद्द करा</string>
     <string name="staff_appeals_decide">निर्णय घ्या</string>
     <string name="staff_appeals_decision_denied">सूची नाकारलेली ठेवा</string>
@@ -58,7 +58,7 @@
     <string name="staff_audit_action_account_stripe_restricted">Stripe प्रतिबंधित</string>
     <string name="staff_audit_action_account_suspended">विक्रेता म्हणून निलंबित</string>
     <string name="staff_audit_action_account_unbanned">अनबॅन केले</string>
-    <string name="staff_audit_action_account_unsuspended">निलंबन रद्द केले</string>
+    <string name="staff_audit_action_account_unsuspended">निलंबन मागे घेतले</string>
     <string name="staff_audit_action_auction_bid_placed">बोली लावली</string>
     <string name="staff_audit_action_auction_created">लिलाव तयार केला</string>
     <string name="staff_audit_action_auction_ended_sold">लिलाव विकला</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">ऑर्डर #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">कारण (पर्यायी)</string>
-    <string name="staff_accounts_sales">%1$d विक्री</string>
+    <string name="staff_accounts_sales">%1$s विक्री</string>
     <string name="staff_appeals_reason_label">विक्रेत्याचे अपील कारण</string>
     <string name="staff_audit_action_staff_team_role_changed">कर्मचारी भूमिका बदलली</string>
     <string name="staff_categories_delete_desc">“%1$s” हटवायचे? हे पूर्ववत करता येणार नाही.</string>

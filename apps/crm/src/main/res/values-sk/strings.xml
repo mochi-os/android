@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Žiadne objekty</string>
     <string name="crm_board_no_columns">Pre toto zobrazenie nie sú nakonfigurované žiadne stĺpce</string>
     <string name="crm_board_no_options">Pre pole stĺpca nie sú nastavené žiadne možnosti</string>
-    <string name="crm_board_nested_count">+%1$d vnorených</string>
+    <string name="crm_board_nested_count">+%1$s vnorených</string>
     <string name="crm_move_to_column">Presunúť do stĺpca</string>
     <string name="crm_move_to_row">Presunúť do riadka</string>
     <string name="crm_move_after">Za %1$s</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Správa prístupu</string>
     <string name="crm_settings_not_set">Nenastavené</string>
     <string name="crm_settings_access_updated">Prístup aktualizovaný</string>
-    <string name="crm_settings_access_revoked">Prístup zrušený</string>
+    <string name="crm_settings_access_revoked">Prístup odvolaný</string>
     <string name="crm_people_search">Hľadať ľudí</string>
     <string name="crm_access_tab_other">Iné</string>
     <string name="crm_access_select_group">Vyberte skupinu</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Dáta CRM uložené</string>
     <string name="crm_create_upload_json">Nahrajte súbor .zip alebo .json</string>
     <string name="crm_create_blocked_no_options">Nedá sa vytvoriť: %1$s je povinné, ale nemá žiadne možnosti na výber. Pridajte možnosti v Návrhu.</string>
-    <string name="crm_design_sample">Ukážka %1$d</string>
+    <string name="crm_design_sample">Ukážka %1$s</string>
     <string name="crm_option_delete_title">Odstrániť možnosť</string>
     <string name="crm_option_delete_message">Naozaj chcete odstrániť možnosť \"%1$s\"?</string>
 </resources>

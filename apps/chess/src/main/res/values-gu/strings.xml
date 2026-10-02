@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">ફરી કનેક્ટ થઈ રહ્યું છે…</string>
     <string name="chess_ws_failed">કનેક્શન નિષ્ફળ ગયું</string>
     <string name="chess_move_capture">%1$s એ %2$s લીધું</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">સફેદ %1$s</string>
     <string name="chess_piece_black">કાળો %1$s</string>

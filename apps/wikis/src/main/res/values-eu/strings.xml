@@ -220,7 +220,7 @@
     <string name="wikis_channel_description">Orrialde-edizioak, iruzkinak eta gonbidapenak buruzko jakinarazpenak.</string>
     <string name="wikis_pageview_toc_expand">Erakutsi edukien aurkibidea</string>
     <string name="wikis_pageview_toc_collapse">Ezkutatu edukien aurkibidea</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Eguneratua %1$s</string>
     <string name="wikis_pageview_not_found_description">«%1$s» orria ez da existitzen oraindik.</string>
     <string name="wikis_pageview_share_chooser">Wikiaren esteka</string>
@@ -245,13 +245,13 @@
     <string name="wikis_delete_page_message">«%1$s» orria (%2$s) ezabatzera zoaz. Ekintza hau historian zehar leheneratuta desegin daiteke.</string>
     <string name="wikis_delete_page_success">Orria ezabatu da</string>
     <string name="wikis_revert_page_title">Leheneratu orria</string>
-    <string name="wikis_revert_page_message">%1$s %2$d bertsiora leheneratzera zoaz. Honek %2$d bertsioaren edukiarekin berrikuspen berri bat sortuko du.</string>
-    <string name="wikis_revert_page_default_comment">%1$d bertsiora leheneratua</string>
-    <string name="wikis_revert_page_success">%1$d bertsiora leheneratua</string>
+    <string name="wikis_revert_page_message">%1$s %2$s bertsiora leheneratzera zoaz. Honek %2$s bertsioaren edukiarekin berrikuspen berri bat sortuko du.</string>
+    <string name="wikis_revert_page_default_comment">%1$s bertsiora leheneratua</string>
+    <string name="wikis_revert_page_success">%1$s bertsiora leheneratua</string>
     <string name="wikis_rename_page_renaming">Berrizendatzen…</string>
     <string name="wikis_rename_page_success">Orria berrizendatu da</string>
-    <string name="wikis_history_viewing">%1$s historia ikusten, oraingo bertsioa %2$d</string>
-    <string name="wikis_revision_version_badge">%1$d bertsioa</string>
+    <string name="wikis_history_viewing">%1$s historia ikusten, oraingo bertsioa %2$s</string>
+    <string name="wikis_revision_version_badge">%1$s bertsioa</string>
     <string name="wikis_search_pages_placeholder">Bilatu orriak izenburuaren edo edukiaren arabera…</string>
     <string name="wikis_search_no_results">Ez da «%1$s»rentzat orririk aurkitu. Saiatu beste bilaketa-termino batzuekin.</string>
     <string name="wikis_search_updated">Eguneratua %1$s</string>
@@ -286,38 +286,38 @@
     <string name="wikis_revision_author">%1$s arabera</string>
     <string name="wikis_revision_show_page">Erakutsi orria</string>
     <string name="wikis_revision_compare_failed">Ezin izan da aurreko bertsioa kargatu konparatzeko.</string>
-    <string name="wikis_revision_changes_from">Aldaketak %1$d → %2$d bertsiotik</string>
+    <string name="wikis_revision_changes_from">Aldaketak %1$s → %2$s bertsiotik</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d iruzkin</item>
-        <item quantity="other">%d iruzkin</item>
+        <item quantity="one">%s iruzkin</item>
+        <item quantity="other">%s iruzkin</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d erantzun</item>
-        <item quantity="other">+%d erantzun gehiago</item>
+        <item quantity="one">%s erantzun</item>
+        <item quantity="other">+%s erantzun gehiago</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d orri</item>
-        <item quantity="other">%d orri</item>
+        <item quantity="one">%s orri</item>
+        <item quantity="other">%s orri</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fitxategi</item>
-        <item quantity="other">%d fitxategi</item>
+        <item quantity="one">%s fitxategi</item>
+        <item quantity="other">%s fitxategi</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d irudi</item>
-        <item quantity="other">%d irudi</item>
+        <item quantity="one">%s irudi</item>
+        <item quantity="other">%s irudi</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokumentu</item>
-        <item quantity="other">%d dokumentu</item>
+        <item quantity="one">%s dokumentu</item>
+        <item quantity="other">%s dokumentu</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Etiketa hau duen %d orri</item>
-        <item quantity="other">Etiketa hau duen %d orri</item>
+        <item quantity="one">Etiketa hau duen %s orri</item>
+        <item quantity="other">Etiketa hau duen %s orri</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d emaitza aurkitu dira "%2$s" bilatzean</item>
-        <item quantity="other">%1$d emaitza aurkitu dira "%2$s" bilatzean</item>
+        <item quantity="one">%1$s emaitza aurkitu dira \"%2$s\" bilatzean</item>
+        <item quantity="other">%1$s emaitza aurkitu dira \"%2$s\" bilatzean</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ezin izan da epigrafea gorde</string>
     <string name="wikis_attachments_upload_types">Onartutako fitxategiak: irudiak, PDF, DOC, DOCX, TXT eta MD.</string>
@@ -326,7 +326,7 @@
     <string name="wikis_rss_copied_new">RSS URL berria arbelera kopiatu da</string>
     <string name="wikis_rss_exists">Jario URL hau dagoeneko eman da eta ezin da berriro erakutsi.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Lehen %1$d iruzkina erakusten.</item>
-        <item quantity="other">Lehen %1$d iruzkinak erakusten.</item>
+        <item quantity="one">Lehen %1$s iruzkina erakusten.</item>
+        <item quantity="other">Lehen %1$s iruzkinak erakusten.</item>
     </plurals>
 </resources>

@@ -16,7 +16,7 @@
     <string name="go_delete_confirm">Выдаліць</string>
     <string name="go_delete_message">Гэтая гульня будзе выдаленая са спісу. Гэта нельга адмяніць.</string>
     <string name="go_delete_title">Выдаліць гульню?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Прыняць</string>
     <string name="go_draw_decline">Адхіліць</string>
     <string name="go_draw_offered_received">%1$s прапанаваў нічыю</string>
@@ -67,11 +67,11 @@
     <string name="go_status_resigned">Здаўся</string>
     <string name="go_new_game_title">Новая Go партыя</string>
     <string name="go_new_game_no_friends">Вам трэба дадаць сябра перад тым, як пачаць партыю.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Балы, дададзеныя да рахунку Белага, каб кампенсаваць, што Чорны ходзіць першым</string>
-    <string name="go_board_a11y">Дошка для Го %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Дошка го %1$d×%1$d, ваш ход паставіць чорны камень</string>
-    <string name="go_board_a11y_turn_white">Дошка го %1$d×%1$d, ваш ход паставіць белы камень</string>
+    <string name="go_board_a11y">Дошка для Го %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Дошка го %1$s×%1$s, ваш ход паставіць чорны камень</string>
+    <string name="go_board_a11y_turn_white">Дошка го %1$s×%1$s, ваш ход паставіць белы камень</string>
     <string name="go_status_scoring">Падлік — пагадзіцеся з лікам або працягвайце гульню</string>
     <string name="go_score_proposed">Прапанаваны лік: чорныя %1$s, белыя %2$s</string>
     <string name="go_score_opponent_accepted">Ваш сапернік прымае гэты лік: чорныя %1$s, белыя %2$s</string>

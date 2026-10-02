@@ -60,7 +60,7 @@
     <string name="chat_delete_confirm_title">លុបសារ?</string>
     <string name="chat_delete_confirm_body">សកម្មភាពនេះលុបសារសម្រាប់មនុស្សគ្រប់គ្នា ហើយមិនអាចត្រឡប់វិញបានទេ។</string>
     <string name="chat_delete_own_only">អ្នកអាចលុបបានតែសាររបស់អ្នកប៉ុណ្ណោះ</string>
-    <string name="chat_selection_title">បានជ្រើស %1$d</string>
+    <string name="chat_selection_title">បានជ្រើស %1$s</string>
     <string name="chat_forward_subtitle">ជ្រើសរើសការជជែក ឬមិត្តភ័ក្តិដើម្បីបញ្ជូនសារដែលបានជ្រើសរើស</string>
     <string name="chat_forward_chats">ការជជែក</string>
     <string name="chat_forward_friends">មិត្ត</string>

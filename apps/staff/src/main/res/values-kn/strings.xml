@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">ಹೆಸರಿಲ್ಲದ</string>
     <string name="staff_accounts_unsuspend">ಅಮಾನತು ತೆಗೆಯಿರಿ</string>
     <string name="staff_accounts_unsuspended_toast">ಖಾತೆಯ ಅಮಾನತು ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="staff_appeals_decide">ನಿರ್ಧರಿಸಿ</string>
     <string name="staff_appeals_decision_denied">ಪಟ್ಟಿ ತಿರಸ್ಕರಿಸಿ ಇರಿಸಿ</string>
@@ -115,7 +115,7 @@
     <string name="staff_audit_action_subscription_chargeback_won">ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_subscription_created">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಶನ್ ರಚಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_subscription_past_due">ಪಾವತಿಯ ಗಡುವು ಮುಗಿದಿದೆ</string>
-    <string name="staff_audit_action_subscription_paused">ಪಾಸ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="staff_audit_action_subscription_paused">ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_subscription_reactivated">ಮರುಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_action_subscription_resumed">ಮುಂದುವರಿಸಲಾಗಿದೆ</string>
     <string name="staff_audit_actor_system">ಸಿಸ್ಟಮ್</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">ಆದೇಶ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">ಕಾರಣ (ಐಚ್ಛಿಕ)</string>
-    <string name="staff_accounts_sales">%1$d ಮಾರಾಟಗಳು</string>
+    <string name="staff_accounts_sales">%1$s ಮಾರಾಟಗಳು</string>
     <string name="staff_appeals_reason_label">ಮಾರಾಟಗಾರನ ಮನವಿಯ ಕಾರಣ</string>
     <string name="staff_audit_action_staff_team_role_changed">ಸಿಬ್ಬಂದಿ ಪಾತ್ರ ಬದಲಾಯಿಸಲಾಗಿದೆ</string>
     <string name="staff_categories_delete_desc">“%1$s” ಅನ್ನು ಅಳಿಸಬೇಕೇ? ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>

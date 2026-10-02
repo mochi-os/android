@@ -214,7 +214,7 @@
     <string name="crm_board_add_column">Add column</string>
     <string name="crm_board_rename">Rename</string>
     <string name="crm_board_rename_column">Rename column</string>
-    <string name="crm_board_nested_count">+%1$d nested</string>
+    <string name="crm_board_nested_count">+%1$s nested</string>
 
     <!-- Move sheet -->
     <string name="crm_move_to_column">Move to column</string>
@@ -348,5 +348,5 @@
     <string name="crm_design_preview_no_options">No options on the columns field</string>
     <string name="crm_design_preview_empty">Nothing to show</string>
     <string name="crm_not_found">CRM not found</string>
-    <string name="crm_design_sample">Sample %1$d</string>
+    <string name="crm_design_sample">Sample %1$s</string>
 </resources>

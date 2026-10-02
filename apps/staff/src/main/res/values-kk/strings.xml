@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Жазбалар</string>
     <string name="staff_accounts_reason_label">Себеп</string>
     <string name="staff_accounts_reason_optional_label">Себеп (міндетті емес)</string>
-    <string name="staff_accounts_sales">%1$d сатылым</string>
+    <string name="staff_accounts_sales">%1$s сатылым</string>
     <string name="staff_accounts_search_clear">Іздеуді тазалау</string>
     <string name="staff_accounts_search_placeholder">Іздеу</string>
     <string name="staff_accounts_seller_buyers">Тек сатып алушылар</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Атаусыз</string>
     <string name="staff_accounts_unsuspend">Тоқтатудан босату</string>
     <string name="staff_accounts_unsuspended_toast">Тіркелгі қалпына келтірілді</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Болдырмау</string>
     <string name="staff_appeals_decide">Шешу</string>
     <string name="staff_appeals_decision_denied">Хабарландыру қабылданбауы сақталды</string>

@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">өөрчлөлт хийв</string>
     <string name="projects_attachment_empty">Хавсралт байхгүй</string>
     <string name="projects_attachment_default_name">хавсралт</string>
-    <string name="projects_attachment_size_bytes">%1$d Б</string>
-    <string name="projects_attachment_size_kb">%1$d КБ</string>
-    <string name="projects_attachment_size_mb">%1$d МБ</string>
-    <string name="projects_attachment_size_gb">%1$d ГБ</string>
+    <string name="projects_attachment_size_bytes">%1$s Б</string>
+    <string name="projects_attachment_size_kb">%1$s КБ</string>
+    <string name="projects_attachment_size_mb">%1$s МБ</string>
+    <string name="projects_attachment_size_gb">%1$s ГБ</string>
     <string name="projects_request_new">Шинэ нэгтгэх хүсэлт</string>
     <string name="projects_request_status_closed">Хаагдсан</string>
     <string name="projects_request_back_to_list">Жагсаалт руу буцах</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Нэгтгэх төлөвийг шалгаж байна…</string>
     <string name="projects_request_can_merge">Нэгтгэх боломжтой</string>
     <string name="projects_request_cannot_merge">Нэгтгэх боломжгүй</string>
-    <string name="projects_request_ahead_behind">%1$d урьд, %2$d хойш</string>
+    <string name="projects_request_ahead_behind">%1$s урьд, %2$s хойш</string>
     <string name="projects_request_draft_notice">Энэ бол ноорог. Нэгтгэхээс өмнө бэлэн гэж тэмдэглэнэ үү.</string>
     <string name="projects_request_view_diff">Зөрүүг харах</string>
     <string name="projects_request_mark_ready">Бэлэн гэж тэмдэглэх</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Энэ үзлэгт багана тохируулаагүй байна</string>
     <string name="projects_board_no_options">Баганын талбарт сонголт тохируулаагүй байна</string>
     <string name="projects_board_column_options">Баганын сонголтууд</string>
-    <string name="projects_board_nested_count">+%1$d үүрлэсэн</string>
+    <string name="projects_board_nested_count">+%1$s үүрлэсэн</string>
     <string name="projects_move_to_column">Багана руу зөөх</string>
     <string name="projects_move_to_row">Мөр рүү зөөх</string>
     <string name="projects_move_after">%1$s-ийн дараа</string>
@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Шинэ</string>
     <string name="projects_settings_section_identity">Танилт</string>
     <string name="projects_settings_access_updated">Хандалт шинэчлэгдсэн</string>
-    <string name="projects_settings_access_revoked">Нэвтрэх эрхийг цуцалсан</string>
+    <string name="projects_settings_access_revoked">Хандалтыг хүчингүй болголоо</string>
     <string name="projects_settings_section_access">Хандалтын удирдлага</string>
     <string name="projects_people_search">Хүмүүсийг хайх</string>
     <string name="projects_settings_field_entity_id">Нэгжийн ID</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Эрэмбэлэх ба шүүх</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 гэх мэт уншигдахуйц ID-д ашиглагдана</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d зөрчилтэй файл</item>
-        <item quantity="other">%1$d зөрчилтэй файл</item>
+        <item quantity="one">%1$s зөрчилтэй файл</item>
+        <item quantity="other">%1$s зөрчилтэй файл</item>
     </plurals>
     <string name="projects_design_export_saved">Загвар хадгалагдлаа</string>
     <string name="projects_design_import_failed">Тэр файлыг уншиж чадсангүй</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Төслийн өгөгдөл хадгалагдлаа</string>
     <string name="projects_exporting">Экспортыг бэлтгэж байна…</string>
     <string name="projects_board_add_column">Багана нэмэх</string>
-    <string name="projects_design_sample">Жишээ %1$d</string>
+    <string name="projects_design_sample">Жишээ %1$s</string>
     <string name="projects_option_delete_title">Сонголтыг устгах</string>
     <string name="projects_option_delete_message">\"%1$s\" сонголтыг устгахдаа итгэлтэй байна уу?</string>
     <string name="projects_create_object_no_types">Одоогоор зүйл үүсгэх боломжгүй. Эхлээд шаардлагатай эх зүйлийг үүсгэнэ үү.</string>

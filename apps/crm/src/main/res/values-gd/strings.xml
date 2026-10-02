@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Chan eil nithean ann</string>
     <string name="crm_board_no_columns">Chan eil colbh sam bith air a rèiteachadh airson an t-seallaidh seo</string>
     <string name="crm_board_no_options">Chan eil roghainn sam bith air a rèiteachadh airson raon a\' chuilbh</string>
-    <string name="crm_board_nested_count">+%1$d neadaichte</string>
+    <string name="crm_board_nested_count">+%1$s neadaichte</string>
     <string name="crm_move_to_column">Gluais dhan cholbh</string>
     <string name="crm_move_to_row">Gluais gu sreath</string>
     <string name="crm_move_after">An dèidh %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Chaidh dàta CRM a shàbhaladh</string>
     <string name="crm_create_upload_json">Luchdaich suas faidhle .zip no .json</string>
     <string name="crm_create_blocked_no_options">Cha ghabh a chruthachadh: tha %1$s riatanach ach chan eil roghainnean aige. Cuir roghainnean ris san Dealbhachd.</string>
-    <string name="crm_design_sample">Sampall %1$d</string>
+    <string name="crm_design_sample">Sampall %1$s</string>
     <string name="crm_option_delete_title">Sguab às roghainn</string>
     <string name="crm_option_delete_message">A bheil thu cinnteach gu bheil thu airson an roghainn \"%1$s\" a sguabadh às?</string>
 </resources>

@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">Persones</string>
     <string name="projects_option_icon">Icona</string>
     <string name="projects_option_icon_placeholder">p. ex. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Cancel·la la subscripció</string>
+    <string name="projects_settings_unsubscribe">Dona\'t de baixa</string>
     <string name="projects_settings_delete_project">Suprimeix el projecte</string>
     <string name="projects_settings_delete_confirm_title">Suprimeix el projecte</string>
-    <string name="projects_settings_unsubscribe_title">Cancel·la la subscripció</string>
-    <string name="projects_settings_unsubscribe_message">Segur que vols cancel·lar la subscripció a aquest projecte?</string>
+    <string name="projects_settings_unsubscribe_title">Dona\'t de baixa</string>
+    <string name="projects_settings_unsubscribe_message">Segur que vols donar-te de baixa d\'aquest projecte?</string>
     <string name="projects_access_level_owner">Propietari</string>
     <string name="projects_object_watch">Segueix</string>
     <string name="projects_object_tab_properties">Propietats</string>
@@ -214,10 +214,10 @@
     <string name="projects_activity_made_change">ha fet un canvi</string>
     <string name="projects_attachment_empty">Cap adjunt</string>
     <string name="projects_attachment_default_name">adjunt</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nova sol·licitud de fusió</string>
     <string name="projects_request_status_closed">Tancada</string>
     <string name="projects_request_back_to_list">Torna a la llista</string>
@@ -227,7 +227,7 @@
     <string name="projects_request_checking_merge">S\'està comprovant l\'estat de la fusió…</string>
     <string name="projects_request_can_merge">Es pot fusionar</string>
     <string name="projects_request_cannot_merge">No es pot fusionar</string>
-    <string name="projects_request_ahead_behind">%1$d per davant, %2$d per darrere</string>
+    <string name="projects_request_ahead_behind">%1$s per davant, %2$s per darrere</string>
     <string name="projects_request_draft_notice">Aquest és un esborrany. Marqueu-lo com a llest abans de fusionar.</string>
     <string name="projects_request_view_diff">Mostra les diferències</string>
     <string name="projects_request_mark_ready">Marca com a llest</string>
@@ -247,7 +247,7 @@
     <string name="projects_board_no_columns">No hi ha columnes configurades per a aquesta vista</string>
     <string name="projects_board_no_options">No hi ha opcions configurades per al camp de columna</string>
     <string name="projects_board_column_options">Opcions de columna</string>
-    <string name="projects_board_nested_count">+%1$d imbricats</string>
+    <string name="projects_board_nested_count">+%1$s imbricats</string>
     <string name="projects_move_to_column">Mou a la columna</string>
     <string name="projects_move_to_row">Mou a la fila</string>
     <string name="projects_move_after">Després de %1$s</string>
@@ -360,13 +360,13 @@
     <string name="projects_activity_commented">ha comentat</string>
     <string name="projects_attachment_delete_confirm_message">Aquest fitxer adjunt se suprimirà permanentment.</string>
     <string name="projects_attachment_delete_confirm_title">Voleu suprimir l\'adjunt?</string>
-    <string name="projects_settings_unsubscribe_section">Cancel·la la subscripció al projecte</string>
+    <string name="projects_settings_unsubscribe_section">Dona\'t de baixa del projecte</string>
     <string name="projects_share_link_title">Comparteix el projecte</string>
     <string name="projects_sort_filter_title">Ordena i filtra</string>
     <string name="projects_create_prefix_hint">S\'utilitza per a identificadors llegibles com %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d fitxer en conflicte</item>
-        <item quantity="other">%1$d fitxers en conflicte</item>
+        <item quantity="one">%1$s fitxer en conflicte</item>
+        <item quantity="other">%1$s fitxers en conflicte</item>
     </plurals>
     <string name="projects_design_export_saved">Disseny desat</string>
     <string name="projects_design_import_failed">No s\'ha pogut llegir el fitxer</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Dades del projecte desades</string>
     <string name="projects_exporting">S\'està preparant l\'exportació…</string>
     <string name="projects_board_add_column">Afegeix una columna</string>
-    <string name="projects_design_sample">Mostra %1$d</string>
+    <string name="projects_design_sample">Mostra %1$s</string>
     <string name="projects_option_delete_title">Suprimeix l\'opció</string>
     <string name="projects_option_delete_message">Esteu segur que voleu eliminar l\'opció \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Encara no es pot crear cap tipus d\'element. Crea primer els elements pare necessaris.</string>

@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">刪除</string>
     <string name="go_delete_message">此對局將從您的列表中移除。此操作無法復原。</string>
     <string name="go_delete_title">刪除對局?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">接受</string>
     <string name="go_draw_decline">拒絕</string>
     <string name="go_draw_offered_received">%1$s 提議和棋</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">已認輸</string>
     <string name="go_new_game_title">新圍棋棋局</string>
     <string name="go_new_game_no_friends">您需要先新增朋友,然後才能開始棋局。</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">為補償黑棋先行而加到白棋分數上的點數</string>
 
-    <string name="go_board_a11y">%1$d×%1$d 圍棋棋盤</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d 圍棋棋盤，輪到你下黑子</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d 圍棋棋盤，輪到你下白子</string>
+    <string name="go_board_a11y">%1$s×%1$s 圍棋棋盤</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s 圍棋棋盤，輪到你下黑子</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s 圍棋棋盤，輪到你下白子</string>
     <string name="go_status_scoring">點目 — 就目數達成一致或繼續對局</string>
     <string name="go_score_proposed">提議分數：黑 %1$s，白 %2$s</string>
     <string name="go_score_opponent_accepted">對手同意此分數：黑 %1$s，白 %2$s</string>

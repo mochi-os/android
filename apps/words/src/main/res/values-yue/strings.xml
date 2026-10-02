@@ -15,7 +15,7 @@
     <string name="words_new_game_title">新對局</string>
     <string name="words_new_game_choose_opponents">揀對手</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d 個玩家</string>
+    <string name="words_new_game_player_count">%1$s 個玩家</string>
     <string name="words_new_game_language">語言</string>
     <string name="words_new_game_language_uk">英文(英式)</string>
     <string name="words_new_game_language_us">英文(美式)</string>
@@ -31,9 +31,9 @@
     <string name="words_detail_status_game_over">對局結束</string>
     <string name="words_detail_status_opponent_resigned">對手認輸 — 你贏咗!</string>
     <string name="words_detail_status_you_resigned">你認咗輸</string>
-    <string name="words_detail_player_fallback">玩家 %1$d</string>
-    <string name="words_detail_player_count">%1$d 個玩家</string>
-    <string name="words_detail_label_tiles_left">仲有 %1$d 個字母</string>
+    <string name="words_detail_player_fallback">玩家 %1$s</string>
+    <string name="words_detail_player_count">%1$s 個玩家</string>
+    <string name="words_detail_label_tiles_left">仲有 %1$s 個字母</string>
     <string name="words_detail_action_shuffle">重排字母架</string>
     <string name="words_detail_action_pass">略過</string>
     <string name="words_detail_action_exchange">換字母</string>
@@ -47,7 +47,7 @@
     <string name="words_detail_recall">收回</string>
     <string name="words_detail_submit">提交</string>
     <string name="words_detail_exchange">換字母</string>
-    <string name="words_detail_exchange_count">換字母 (%1$d)</string>
+    <string name="words_detail_exchange_count">換字母 (%1$s)</string>
     <string name="words_detail_blank_title">揀一個字母</string>
     <string name="words_detail_resign_title">認輸?</string>
     <string name="words_detail_resign_message">你確定要認輸?</string>

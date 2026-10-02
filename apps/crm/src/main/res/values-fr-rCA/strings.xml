@@ -148,7 +148,7 @@
     <string name="crm_board_no_columns">Aucune colonne configurée pour cette vue</string>
     <string name="crm_board_no_options">Aucune option configurée pour le champ de colonne</string>
     <string name="crm_board_rename_column">Renommer la colonne</string>
-    <string name="crm_board_nested_count">+%1$d imbriqués</string>
+    <string name="crm_board_nested_count">+%1$s imbriqués</string>
     <string name="crm_move_to_column">Déplacer vers la colonne</string>
     <string name="crm_move_to_row">Déplacer vers la ligne</string>
     <string name="crm_move_after">Après %1$s</string>

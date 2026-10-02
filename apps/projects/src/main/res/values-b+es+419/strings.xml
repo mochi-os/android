@@ -39,11 +39,8 @@
     <string name="projects_settings_tab_access">Acceso</string>
     <string name="projects_settings_tab_people">Personas</string>
     <string name="projects_option_icon">Icono</string>
-    <string name="projects_settings_unsubscribe">Cancelar suscripción</string>
     <string name="projects_settings_delete_project">Eliminar proyecto</string>
     <string name="projects_settings_delete_confirm_title">Eliminar proyecto</string>
-    <string name="projects_settings_unsubscribe_title">Cancelar suscripción</string>
-    <string name="projects_settings_unsubscribe_message">¿Seguro que quieres cancelar la suscripción a este proyecto?</string>
     <string name="projects_access_level_owner">Propietario</string>
     <string name="projects_object_watch">Seguir</string>
     <string name="projects_object_tab_properties">Propiedades</string>
@@ -220,10 +217,10 @@
     <string name="projects_activity_made_change">hizo un cambio</string>
     <string name="projects_attachment_empty">Sin archivos adjuntos</string>
     <string name="projects_attachment_default_name">archivo adjunto</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nueva solicitud de fusión</string>
     <string name="projects_request_status_closed">Cerrada</string>
     <string name="projects_request_back_to_list">Volver a la lista</string>
@@ -233,7 +230,7 @@
     <string name="projects_request_checking_merge">Comprobando estado de la fusión…</string>
     <string name="projects_request_can_merge">Se puede fusionar</string>
     <string name="projects_request_cannot_merge">No se puede fusionar</string>
-    <string name="projects_request_ahead_behind">%1$d adelante, %2$d atrás</string>
+    <string name="projects_request_ahead_behind">%1$s adelante, %2$s atrás</string>
     <string name="projects_request_draft_notice">Este es un borrador. Márcalo como listo antes de fusionar.</string>
     <string name="projects_request_view_diff">Ver diferencias</string>
     <string name="projects_request_mark_ready">Marcar como listo</string>
@@ -253,7 +250,7 @@
     <string name="projects_board_no_columns">No hay columnas configuradas para esta vista</string>
     <string name="projects_board_no_options">No hay opciones configuradas para el campo de columna</string>
     <string name="projects_board_column_options">Opciones de columna</string>
-    <string name="projects_board_nested_count">+%1$d anidados</string>
+    <string name="projects_board_nested_count">+%1$s anidados</string>
     <string name="projects_move_to_column">Mover a columna</string>
     <string name="projects_move_to_row">Mover a fila</string>
     <string name="projects_move_after">Después de %1$s</string>
@@ -360,13 +357,12 @@
     <string name="projects_activity_commented">comentó</string>
     <string name="projects_attachment_delete_confirm_message">Este adjunto se eliminará permanentemente.</string>
     <string name="projects_attachment_delete_confirm_title">¿Eliminar adjunto?</string>
-    <string name="projects_settings_unsubscribe_section">Cancelar suscripción al proyecto</string>
     <string name="projects_share_link_title">Compartir proyecto</string>
     <string name="projects_sort_filter_title">Ordenar y filtrar</string>
     <string name="projects_create_prefix_hint">Se usa para identificadores legibles como %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d archivo en conflicto</item>
-        <item quantity="other">%1$d archivos en conflicto</item>
+        <item quantity="one">%1$s archivo en conflicto</item>
+        <item quantity="other">%1$s archivos en conflicto</item>
     </plurals>
     <string name="projects_design_export_saved">Diseño guardado</string>
     <string name="projects_design_import_failed">No se pudo leer ese archivo</string>
@@ -376,7 +372,7 @@
     <string name="projects_export_saved">Datos del proyecto guardados</string>
     <string name="projects_exporting">Preparando la exportación…</string>
     <string name="projects_board_add_column">Añadir columna</string>
-    <string name="projects_design_sample">Ejemplo %1$d</string>
+    <string name="projects_design_sample">Ejemplo %1$s</string>
     <string name="projects_option_delete_title">Eliminar opción</string>
     <string name="projects_option_delete_message">¿Seguro que quieres eliminar la opción \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Aún no se pueden crear tipos de elementos. Crea primero los elementos principales requeridos.</string>

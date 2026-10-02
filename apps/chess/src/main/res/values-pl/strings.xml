@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">Skoczek</string>
     <string name="chess_piece_pawn">Pion</string>
     <string name="chess_move_played">%1$s zagrał %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">Powiadomienia o ruchach szachowych, propozycjach remisu i wynikach gier.</string>
     <string name="chess_channel_name">Powiadomienia szachowe</string>
     <string name="chess_delete_message">Usuwa partię z twojej listy.</string>

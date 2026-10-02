@@ -30,11 +30,11 @@
     <string name="crm_settings_tab_access">Acesso</string>
     <string name="crm_settings_tab_people">Pessoas</string>
     <string name="crm_option_icon">Ícone</string>
-    <string name="crm_settings_unsubscribe">Cancelar inscrição</string>
+    <string name="crm_settings_unsubscribe">Remover inscrição</string>
     <string name="crm_settings_delete_crm">Excluir CRM</string>
     <string name="crm_settings_delete_confirm_title">Excluir CRM</string>
-    <string name="crm_settings_unsubscribe_title">Cancelar inscrição</string>
-    <string name="crm_settings_unsubscribe_message">Tem certeza de que deseja cancelar a assinatura deste CRM?</string>
+    <string name="crm_settings_unsubscribe_title">Remover inscrição</string>
+    <string name="crm_settings_unsubscribe_message">Tem certeza de que deseja remover a inscrição deste CRM?</string>
     <string name="crm_access_level_owner">Proprietário</string>
     <string name="crm_object_watch">Observar</string>
     <string name="crm_object_tab_properties">Propriedades</string>
@@ -180,7 +180,7 @@
     <string name="crm_tree_empty">Nenhum objeto</string>
     <string name="crm_board_no_columns">Nenhuma coluna configurada para esta visualização</string>
     <string name="crm_board_no_options">Nenhuma opção configurada para o campo da coluna</string>
-    <string name="crm_board_nested_count">+%1$d aninhados</string>
+    <string name="crm_board_nested_count">+%1$s aninhados</string>
     <string name="crm_move_to_column">Mover para coluna</string>
     <string name="crm_move_to_row">Mover para linha</string>
     <string name="crm_move_after">Depois de %1$s</string>

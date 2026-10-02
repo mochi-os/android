@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Sender…</string>
     <string name="market_checkout_subscribing">Abonnerer…</string>
     <string name="market_filter_remove">Fjern filter</string>
-    <string name="market_listing_detail_sales_count">%1$d salg</string>
-    <string name="market_profile_sales_count">%1$d salg</string>
+    <string name="market_listing_detail_sales_count">%1$s salg</string>
+    <string name="market_profile_sales_count">%1$s salg</string>
     <string name="market_purchase_dispute_response">Selgerens svar</string>
     <string name="market_purchases_order_label">Ordre #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Fortell kjøpere om deg selv…</string>
     <string name="market_account_load_failed">Kunne ikke laste kontoen</string>
     <string name="market_account_save_failed">Kunne ikke lagre endringene</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Nåværende: %1$s</string>
     <string name="market_bids_ends_in">Avsluttes om %1$s</string>
     <string name="market_bids_your_bid">Ditt bud: %1$s</string>
-    <string name="market_carousel_main">Bilde %1$d av %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatyrbilde %1$d</string>
+    <string name="market_carousel_main">Bilde %1$s av %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatyrbilde %1$s</string>
     <string name="market_checkout_browser_unavailable">Ingen nettleser tilgjengelig for å åpne betalingssiden</string>
     <string name="market_checkout_pay_button">Betal med Stripe</string>
     <string name="market_checkout_processing">Behandler…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Legg ved bevis</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fil(er) vedlagt</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fil(er) vedlagt</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi-stab</string>
     <string name="market_dispute_dialog_evidence_section_title">Innsendt bevis</string>
     <string name="market_dispute_dialog_evidence_submitter_line">sendt inn av %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Referanse-URL</string>
     <string name="market_editor_assets_empty">Ingen ressurser ennå</string>
     <string name="market_editor_category_none">Velg en kategori</string>
-    <string name="market_editor_days">%1$d dager</string>
+    <string name="market_editor_days">%1$s dager</string>
     <string name="market_editor_delete">Slett oppføring</string>
     <string name="market_editor_delete_confirm_message">Dette vil slette oppføringen permanent.</string>
     <string name="market_editor_delete_confirm_title">Slette annonsen?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Kunne ikke laste inn samtalen</string>
     <string name="market_messages_send_failed">Kunne ikke sende meldingen</string>
     <string name="market_messages_thread_title">Samtale</string>
-    <string name="market_messages_unread_badge">%1$d uleste</string>
-    <string name="market_price_from">fra %1$s</string>
+    <string name="market_messages_unread_badge">%1$s uleste</string>
+    <string name="market_price_from">Fra %1$s</string>
     <string name="market_price_high_bid">Høyeste bud: %1$s</string>
     <string name="market_price_instant_buy">kjøp nå: %1$s</string>
     <string name="market_price_per_month">%1$s / måned</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Ble med %1$s</string>
     <string name="market_profile_no_reviews">Ingen anmeldelser ennå.</string>
     <string name="market_profile_rating_breakdown">Vurderingsfordeling</string>
-    <string name="market_profile_stars_value">%1$d stjerner</string>
+    <string name="market_profile_stars_value">%1$s stjerner</string>
     <string name="market_purchase_dispute_chargeback">Tilbakeføring %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Banken din har bedt om tilbakeføring for denne bestillingen. Stripe håndterer tvisten med selgeren; resultatet vises her når avgjørelsen er tatt.</string>
-    <string name="market_purchase_download_many">Last ned de %1$d filene dine nedenfor.</string>
+    <string name="market_purchase_download_many">Last ned de %1$s filene dine nedenfor.</string>
     <string name="market_purchase_download_one">Last ned filen din nedenfor.</string>
     <string name="market_purchase_review_from">Anmeldelse fra %1$s</string>
     <string name="market_purchases_auction_label">Auksjon nr. %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s refundert</string>
     <string name="market_purchases_won_for">Vunnet for %1$s</string>
-    <string name="market_rating_reviews">(%1$d anmeldelser)</string>
+    <string name="market_rating_reviews">(%1$s anmeldelser)</string>
     <string name="market_refund_amount_label">Beløp</string>
     <string name="market_refund_dialog_amount_help">La feltet stå tomt for å refundere hele bestillingen.</string>
     <string name="market_refund_dialog_amount_label">Beløp</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Dette vil avbryte auksjonen. Annonsen skjules for kjøpere; du kan legge den ut igjen senere som et nytt utkast.</string>
     <string name="market_listings_remove_title">Fjern denne annonsen?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Dette avbryter auksjonen og varsler %1$d aktiv budgiver. Annonsen skjules for kjøpere; du kan legge den ut igjen senere som et nytt utkast.</item>
-        <item quantity="other">Dette avbryter auksjonen og varsler %1$d aktive budgivere. Annonsen skjules for kjøpere; du kan legge den ut igjen senere som et nytt utkast.</item>
+        <item quantity="one">Dette avbryter auksjonen og varsler %1$s aktiv budgiver. Annonsen skjules for kjøpere; du kan legge den ut igjen senere som et nytt utkast.</item>
+        <item quantity="other">Dette avbryter auksjonen og varsler %1$s aktive budgivere. Annonsen skjules for kjøpere; du kan legge den ut igjen senere som et nytt utkast.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Dette avslutter %1$d aktivt abonnement ved slutten av gjeldende faktureringsperiode. Abonnentene blir varslet. Annonsen skjules for kjøpere.</item>
-        <item quantity="other">Dette avslutter %1$d aktive abonnementer ved slutten av gjeldende faktureringsperiode. Abonnentene blir varslet. Annonsen skjules for kjøpere.</item>
+        <item quantity="one">Dette avslutter %1$s aktivt abonnement ved slutten av gjeldende faktureringsperiode. Abonnentene blir varslet. Annonsen skjules for kjøpere.</item>
+        <item quantity="other">Dette avslutter %1$s aktive abonnementer ved slutten av gjeldende faktureringsperiode. Abonnentene blir varslet. Annonsen skjules for kjøpere.</item>
     </plurals>
 </resources>

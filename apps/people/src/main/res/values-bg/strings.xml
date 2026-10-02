@@ -180,8 +180,8 @@
     <string name="people_books_create">Създаване на адресна книга</string>
     <string name="people_books_delete">Изтриване на адресната книга</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Да се изтрие ли %1$s и %2$d контакт в нея?</item>
-        <item quantity="other">Да се изтрие ли %1$s и %2$d контакта в нея?</item>
+        <item quantity="one">Да се изтрие ли %1$s и %2$s контакт в нея?</item>
+        <item quantity="other">Да се изтрие ли %1$s и %2$s контакта в нея?</item>
     </plurals>
     <string name="people_welcome_body">Намирайте приятели в Mochi и се свързвайте с тях. Докоснете Добавяне на контакт, за да изпратите покана.</string>
     <string name="people_person_state_contact">В контактите</string>

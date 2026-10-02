@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Обриши</string>
     <string name="go_delete_message">Ова игра ће бити уклоњена са листе. Ово се не може опозвати.</string>
     <string name="go_delete_title">Обрисати игру?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Прихвати</string>
     <string name="go_draw_decline">Одбиј</string>
     <string name="go_draw_offered_received">%1$s је понудио нерешено</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Предана</string>
     <string name="go_new_game_title">Нова Go партија</string>
     <string name="go_new_game_no_friends">Морате додати пријатеља пре него што можете да покренете партију.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Бодови додати резултату Белог да би се компензовало то што Црни игра први</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go табла</string>
-    <string name="go_board_a11y_turn_black">Го табла %1$d×%1$d, ваш је ред да поставите црни камен</string>
-    <string name="go_board_a11y_turn_white">Го табла %1$d×%1$d, ваш је ред да поставите бели камен</string>
+    <string name="go_board_a11y">%1$s×%1$s Go табла</string>
+    <string name="go_board_a11y_turn_black">Го табла %1$s×%1$s, ваш је ред да поставите црни камен</string>
+    <string name="go_board_a11y_turn_white">Го табла %1$s×%1$s, ваш је ред да поставите бели камен</string>
     <string name="go_status_scoring">Бројање — сложите се око резултата или наставите игру</string>
     <string name="go_score_proposed">Предложени резултат: црни %1$s, бели %2$s</string>
     <string name="go_score_opponent_accepted">Ваш противник прихвата овај резултат: црни %1$s, бели %2$s</string>

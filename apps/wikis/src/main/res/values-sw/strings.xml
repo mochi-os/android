@@ -220,7 +220,7 @@
     <string name="wikis_channel_description">Arifa kuhusu uhariri wa kurasa, maoni, na mialiko.</string>
     <string name="wikis_pageview_toc_expand">Onyesha jedwali la yaliyomo</string>
     <string name="wikis_pageview_toc_collapse">Ficha jedwali la yaliyomo</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Imesasishwa %1$s</string>
     <string name="wikis_pageview_not_found_description">Ukurasa „%1$s\" haupo bado.</string>
     <string name="wikis_pageview_share_chooser">Kiungo cha wiki</string>
@@ -245,13 +245,13 @@
     <string name="wikis_delete_page_message">Unakaribia kufuta ukurasa „%1$s\" (%2$s). Kitendo hiki kinaweza kutendekwa kwa kurudisha kutoka historia.</string>
     <string name="wikis_delete_page_success">Ukurasa umefutwa</string>
     <string name="wikis_revert_page_title">Rejesha ukurasa</string>
-    <string name="wikis_revert_page_message">Unakaribia kurejesha %1$s kwa toleo %2$d. Hii itaunda marekebisho mapya na maudhui ya toleo %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Imerejeshwa kwa toleo %1$d</string>
-    <string name="wikis_revert_page_success">Imerejeshwa kwa toleo %1$d</string>
+    <string name="wikis_revert_page_message">Unakaribia kurejesha %1$s kwa toleo %2$s. Hii itaunda marekebisho mapya na maudhui ya toleo %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Imerejeshwa kwa toleo %1$s</string>
+    <string name="wikis_revert_page_success">Imerejeshwa kwa toleo %1$s</string>
     <string name="wikis_rename_page_renaming">Inabadilisha jina…</string>
     <string name="wikis_rename_page_success">Ukurasa umebadilishwa jina</string>
-    <string name="wikis_history_viewing">Inatazama historia ya %1$s, toleo la sasa %2$d</string>
-    <string name="wikis_revision_version_badge">Toleo %1$d</string>
+    <string name="wikis_history_viewing">Inatazama historia ya %1$s, toleo la sasa %2$s</string>
+    <string name="wikis_revision_version_badge">Toleo %1$s</string>
     <string name="wikis_search_pages_placeholder">Tafuta kurasa kwa kichwa au maudhui…</string>
     <string name="wikis_search_no_results">Hakuna kurasa zimepatikana kwa „%1$s\". Jaribu maneno mengine ya utafutaji.</string>
     <string name="wikis_search_updated">Imesasishwa %1$s</string>
@@ -286,38 +286,38 @@
     <string name="wikis_revision_author">kwa %1$s</string>
     <string name="wikis_revision_show_page">Onyesha ukurasa</string>
     <string name="wikis_revision_compare_failed">Haikuweza kupakia toleo la awali kwa ajili ya kulinganisha.</string>
-    <string name="wikis_revision_changes_from">Mabadiliko kutoka toleo %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Mabadiliko kutoka toleo %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">maoni %d</item>
-        <item quantity="other">maoni %d</item>
+        <item quantity="one">maoni %s</item>
+        <item quantity="other">maoni %s</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">Jibu %d</item>
-        <item quantity="other">+%d majibu zaidi</item>
+        <item quantity="one">Jibu %s</item>
+        <item quantity="other">+%s majibu zaidi</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">Ukurasa %d</item>
-        <item quantity="other">Kurasa %d</item>
+        <item quantity="one">Ukurasa %s</item>
+        <item quantity="other">Kurasa %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">Faili %d</item>
-        <item quantity="other">Faili %d</item>
+        <item quantity="one">Faili %s</item>
+        <item quantity="other">Faili %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">Picha %d</item>
-        <item quantity="other">Picha %d</item>
+        <item quantity="one">Picha %s</item>
+        <item quantity="other">Picha %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">Hati %d</item>
-        <item quantity="other">Hati %d</item>
+        <item quantity="one">Hati %s</item>
+        <item quantity="other">Hati %s</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Ukurasa %d yenye lebo hii</item>
-        <item quantity="other">Kurasa %d yenye lebo hii</item>
+        <item quantity="one">Ukurasa %s yenye lebo hii</item>
+        <item quantity="other">Kurasa %s yenye lebo hii</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Imepatikana Matokeo %1$d kwa «%2$s»</item>
-        <item quantity="other">Imepatikana Matokeo %1$d kwa «%2$s»</item>
+        <item quantity="one">Imepatikana Matokeo %1$s kwa «%2$s»</item>
+        <item quantity="other">Imepatikana Matokeo %1$s kwa «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Imeshindwa kuhifadhi maelezo mafupi</string>
     <string name="wikis_attachments_upload_types">Faili zinazotumika: picha, PDF, DOC, DOCX, TXT, na MD.</string>
@@ -326,7 +326,7 @@
     <string name="wikis_rss_copied_new">URL mpya ya RSS imenakiliwa kwenye ubao wa kunakili</string>
     <string name="wikis_rss_exists">URL hii ya mlisho tayari imetolewa na haiwezi kuonyeshwa tena.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Inaonyesha maoni %1$d ya kwanza.</item>
-        <item quantity="other">Inaonyesha maoni %1$d ya kwanza.</item>
+        <item quantity="one">Inaonyesha maoni %1$s ya kwanza.</item>
+        <item quantity="other">Inaonyesha maoni %1$s ya kwanza.</item>
     </plurals>
 </resources>

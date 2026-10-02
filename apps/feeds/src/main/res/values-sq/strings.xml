@@ -86,8 +86,8 @@
     <string name="feeds_move_up">Lëviz lart</string>
     <string name="feeds_move_down">Lëviz poshtë</string>
 
-    <string name="notification_channel_feeds">Njoftime për burimet</string>
-    <string name="feeds_search_placeholder">Kërkoni burime ose ngjisni URL-në…</string>
+    <string name="notification_channel_feeds">Njoftime për feed-et</string>
+    <string name="feeds_search_placeholder">Kërkoni feed-e ose ngjisni URL-në…</string>
     <string name="feeds_url_result">Rezultat URL-je</string>
     <string name="feeds_search_results">Rezultatet e kërkimit</string>
     <string name="feeds_unread_only">Vetëm të palexuara</string>
@@ -104,18 +104,18 @@
     <string name="feeds_replying_to_author">Po i përgjigjeni %1$s</string>
     <string name="feeds_attach_file">Bashkëngjit skedar</string>
     <string name="feeds_file">Skedar</string>
-    <string name="feeds_select_feed">Zgjidhni një burim</string>
-    <string name="feeds_loading_feeds">Po ngarkohen burimet…</string>
+    <string name="feeds_select_feed">Zgjidhni një feed</string>
+    <string name="feeds_loading_feeds">Po ngarkohen feed-et…</string>
     <string name="feeds_sources_title_named">Burimet e %1$s</string>
-    <string name="feeds_delete_feed_confirm">Ky veprim do ta fshijë përgjithmonë burimin dhe të gjitha postimet e tij. Nuk mund të zhbëhet.</string>
+    <string name="feeds_delete_feed_confirm">Ky veprim do ta fshijë përgjithmonë feed-in dhe të gjitha postimet e tij. Nuk mund të zhbëhet.</string>
     <string name="feeds_clipboard_label_rss">URL RSS</string>
     <string name="feeds_source_never_fetched">Asnjëherë e marrë</string>
     <string name="feeds_source_poll">Sondazh</string>
     <string name="feeds_source_transform">Transformim AI</string>
-    <string name="feeds_remove_source_confirm">Të hiqet \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Fshi gjithashtu postimet e importuara</string>
+    <string name="feeds_remove_source_confirm">Kjo do të ndalojë importimin e përmbajtjes nga \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Fshi gjithashtu postimet e importuara nga ky burim</string>
     <string name="feeds_suggested_credibility_title">Besueshmëri e sugjeruar</string>
-    <string name="feeds_suggested_credibility_body">Mochi sugjeron një besueshmëri prej %1$d. Pranoni?</string>
+    <string name="feeds_suggested_credibility_body">Mochi sugjeron një besueshmëri prej %1$s. Pranoni?</string>
     <string name="feeds_suggested_credibility_keep">Mbaj aktualen</string>
     <string name="feeds_ai_processing_mode">Mënyra e përpunimit me AI</string>
     <string name="feeds_ai_account">Llogaria AI</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Trokit te faqeruajtësi i çdo postimi për ta ruajtur këtu për më vonë.</string>
     <string name="feeds_saved_error_clear">Pastrimi i postimeve të ruajtura dështoi</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d postim i ri</item>
-        <item quantity="other">%d postime të reja</item>
+        <item quantity="one">%s postim i ri</item>
+        <item quantity="other">%s postime të reja</item>
     </plurals>
     <string name="feeds_caught_up">I keni parë të gjitha</string>
     <string name="feeds_all_caught_up">Të gjitha të arrira</string>
@@ -187,17 +187,17 @@
     <string name="feeds_create_first_post">Krijo postimin e parë</string>
     <string name="feeds_rss_mode_posts">Postimet</string>
     <string name="feeds_source_last_checked">Kontrolluar për herë të fundit %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Çabonohu nga burimi</string>
+    <string name="feeds_settings_unsubscribe_section">Çabonohu nga feed-i</string>
     <string name="feeds_source_transform_hint">Përkthe në anglisht dhe shfaq si pika me yje.</string>
     <string name="feeds_source_url_hint_feed">ID ose gjurmë e entitetit të feed</string>
     <string name="feeds_source_credibility_label">Besueshmëria</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d orë</item>
-        <item quantity="other">%1$d orë</item>
+        <item quantity="one">%1$s orë</item>
+        <item quantity="other">%1$s orë</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minutë</item>
-        <item quantity="other">%1$d minuta</item>
+        <item quantity="one">%1$s minutë</item>
+        <item quantity="other">%1$s minuta</item>
     </plurals>
     <string name="feeds_source_polling_interval">Kontrollohet çdo %1$s</string>
     <string name="feeds_access_level_react_full">Reago dhe shiko</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Lidhje</string>
     <string name="feeds_share_link_title">Lidhja e feed-it</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d koment</item>
-        <item quantity="other">%1$d komente</item>
+        <item quantity="one">%1$s koment</item>
+        <item quantity="other">%1$s komente</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d bashkëngjitje</item>
-        <item quantity="other">%1$d bashkëngjitje</item>
+        <item quantity="one">%1$s bashkëngjitje</item>
+        <item quantity="other">%1$s bashkëngjitje</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Shiko %1$d komentim më</item>
-        <item quantity="other">Shiko %1$d komentime më</item>
+        <item quantity="one">Shiko %1$s komentim më</item>
+        <item quantity="other">Shiko %1$s komentime më</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d vit më parë, sot</item>
-        <item quantity="other">%1$d vjet më parë, sot</item>
+        <item quantity="one">%1$s vit më parë, sot</item>
+        <item quantity="other">%1$s vjet më parë, sot</item>
     </plurals>
     <string name="feeds_block">Blloko</string>
     <string name="feeds_removed_from_feed">U hoqe nga ky feed</string>

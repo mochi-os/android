@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Kustuta</string>
     <string name="go_delete_message">See mäng eemaldatakse teie loendist. Seda ei saa tagasi võtta.</string>
     <string name="go_delete_title">Kas kustutada mäng?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Nõustu</string>
     <string name="go_draw_decline">Keeldu</string>
     <string name="go_draw_offered_received">%1$s pakkus viiki</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Andis alla</string>
     <string name="go_new_game_title">Uus Go partii</string>
     <string name="go_new_game_no_friends">Enne partii alustamist pead lisama sõbra.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Valgele lisatud punktid, et kompenseerida Musta esimene käik</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go laud</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go laud, teie kord asetada must kivi</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go laud, teie kord asetada valge kivi</string>
+    <string name="go_board_a11y">%1$s×%1$s Go laud</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go laud, teie kord asetada must kivi</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go laud, teie kord asetada valge kivi</string>
     <string name="go_status_scoring">Loendamine — leppige tulemus kokku või mängige edasi</string>
     <string name="go_score_proposed">Pakutud skoor: must %1$s, valge %2$s</string>
     <string name="go_score_opponent_accepted">Sinu vastane nõustub selle skooriga: must %1$s, valge %2$s</string>

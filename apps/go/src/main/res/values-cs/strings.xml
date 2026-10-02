@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Smazat</string>
     <string name="go_delete_message">Tato hra bude odstraněna z vašeho seznamu. Tuto akci nelze vrátit zpět.</string>
     <string name="go_delete_title">Smazat hru?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Přijmout</string>
     <string name="go_draw_decline">Odmítnout</string>
     <string name="go_draw_offered_received">%1$s nabídl remízu</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Vzdáno</string>
     <string name="go_new_game_title">Nová partie Go</string>
     <string name="go_new_game_no_friends">Před zahájením partie musíte přidat přítele.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Body přidané ke skóre Bílého jako kompenzace za to, že Černý táhne první</string>
 
-    <string name="go_board_a11y">Deska Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Deska go %1$d×%1$d, jste na tahu a pokládáte černý kámen</string>
-    <string name="go_board_a11y_turn_white">Deska go %1$d×%1$d, jste na tahu a pokládáte bílý kámen</string>
+    <string name="go_board_a11y">Deska Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Deska go %1$s×%1$s, jste na tahu a pokládáte černý kámen</string>
+    <string name="go_board_a11y_turn_white">Deska go %1$s×%1$s, jste na tahu a pokládáte bílý kámen</string>
     <string name="go_status_scoring">Počítání — shodněte se na skóre nebo hrajte dál</string>
     <string name="go_score_proposed">Navržené skóre: černý %1$s, bílý %2$s</string>
     <string name="go_score_opponent_accepted">Váš soupeř přijímá toto skóre: černý %1$s, bílý %2$s</string>

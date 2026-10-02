@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Ghi chú</string>
     <string name="staff_accounts_reason_label">Lý do</string>
     <string name="staff_accounts_reason_optional_label">Lý do (tùy chọn)</string>
-    <string name="staff_accounts_sales">%1$d lượt bán</string>
+    <string name="staff_accounts_sales">%1$s lượt bán</string>
     <string name="staff_accounts_search_clear">Xóa tìm kiếm</string>
     <string name="staff_accounts_search_placeholder">Tìm kiếm</string>
     <string name="staff_accounts_seller_buyers">Chỉ người mua</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Không tên</string>
     <string name="staff_accounts_unsuspend">Bỏ đình chỉ</string>
     <string name="staff_accounts_unsuspended_toast">Đã bỏ tạm ngưng tài khoản</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Hủy</string>
     <string name="staff_appeals_decide">Quyết định</string>
     <string name="staff_appeals_decision_denied">Giữ mục đăng bị từ chối</string>

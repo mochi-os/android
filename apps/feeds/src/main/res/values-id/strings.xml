@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Belum pernah diambil</string>
     <string name="feeds_source_poll">Polling</string>
     <string name="feeds_source_transform">Transformasi AI</string>
-    <string name="feeds_remove_source_confirm">Hapus \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Hapus juga kiriman yang diimpor</string>
+    <string name="feeds_remove_source_confirm">Ini akan menghentikan impor konten dari \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Hapus juga kiriman yang diimpor dari sumber ini</string>
     <string name="feeds_suggested_credibility_title">Kredibilitas yang disarankan</string>
-    <string name="feeds_suggested_credibility_body">Mochi menyarankan kredibilitas %1$d. Terima?</string>
+    <string name="feeds_suggested_credibility_body">Mochi menyarankan kredibilitas %1$s. Terima?</string>
     <string name="feeds_suggested_credibility_keep">Pertahankan saat ini</string>
     <string name="feeds_ai_processing_mode">Mode pemrosesan AI</string>
     <string name="feeds_ai_account">Akun AI</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Ketuk markah pada kiriman mana pun untuk menyimpannya di sini untuk nanti.</string>
     <string name="feeds_saved_error_clear">Gagal membersihkan kiriman tersimpan</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d kiriman baru</item>
-        <item quantity="other">%d kiriman baru</item>
+        <item quantity="one">%s kiriman baru</item>
+        <item quantity="other">%s kiriman baru</item>
     </plurals>
     <string name="feeds_caught_up">Kamu sudah melihat semuanya</string>
     <string name="feeds_all_caught_up">Semua sudah terbaca</string>
@@ -192,10 +192,10 @@
     <string name="feeds_source_url_hint_feed">ID entitas feed atau sidik jari</string>
     <string name="feeds_source_credibility_label">Kredibilitas</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d jam</item>
+        <item quantity="other">%1$s jam</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d menit</item>
+        <item quantity="other">%1$s menit</item>
     </plurals>
     <string name="feeds_source_polling_interval">Memeriksa setiap %1$s</string>
     <string name="feeds_access_level_react_full">Reaksi dan lihat</string>
@@ -212,19 +212,19 @@
     <string name="feeds_link">Tautan</string>
     <string name="feeds_share_link_title">Tautan umpan</string>
     <plurals name="feeds_comment_count">
-        <item quantity="other">%1$d komentar</item>
+        <item quantity="other">%1$s komentar</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d lampiran</item>
-        <item quantity="other">%1$d lampiran</item>
+        <item quantity="one">%1$s lampiran</item>
+        <item quantity="other">%1$s lampiran</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Lihat %1$d komentar lagi</item>
-        <item quantity="other">Lihat %1$d komentar lagi</item>
+        <item quantity="one">Lihat %1$s komentar lagi</item>
+        <item quantity="other">Lihat %1$s komentar lagi</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d tahun lalu hari ini</item>
-        <item quantity="other">%1$d tahun lalu hari ini</item>
+        <item quantity="one">%1$s tahun lalu hari ini</item>
+        <item quantity="other">%1$s tahun lalu hari ini</item>
     </plurals>
     <string name="feeds_block">Blokir</string>
     <string name="feeds_removed_from_feed">Anda dikeluarkan dari feed ini</string>

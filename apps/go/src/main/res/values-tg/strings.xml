@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Нест кардан</string>
     <string name="go_delete_message">Ин бозӣ аз рӯйхати шумо хориҷ карда мешавад. Инро бекор кардан мумкин нест.</string>
     <string name="go_delete_title">Бозӣ нест карда шавад?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Қабул кардан</string>
     <string name="go_draw_decline">Рад кардан</string>
     <string name="go_draw_offered_received">%1$s баробариро пешниҳод кард</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Таслим шуд</string>
     <string name="go_new_game_title">Бозии нави Go</string>
     <string name="go_new_game_no_friends">Пеш аз оғози бозӣ бояд дӯст илова кунед.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Холҳое, ки ба ҳисоби Сафед илова мешаванд, то оғози аввали Сиёҳро ҷуброн кунанд</string>
 
-    <string name="go_board_a11y">Тахтаи Go-и %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Тахтаи го %1$d×%1$d, навбати шумост, ки санги сиёҳ гузоред</string>
-    <string name="go_board_a11y_turn_white">Тахтаи го %1$d×%1$d, навбати шумост, ки санги сафед гузоред</string>
+    <string name="go_board_a11y">Тахтаи Go-и %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Тахтаи го %1$s×%1$s, навбати шумост, ки санги сиёҳ гузоред</string>
+    <string name="go_board_a11y_turn_white">Тахтаи го %1$s×%1$s, навбати шумост, ки санги сафед гузоред</string>
     <string name="go_status_scoring">Ҳисоб — дар бораи натиҷа розӣ шавед ё бозиро идома диҳед</string>
     <string name="go_score_proposed">Натиҷаи пешниҳодшуда: сиёҳ %1$s, сафед %2$s</string>
     <string name="go_score_opponent_accepted">Рақиби шумо ин натиҷаро қабул мекунад: сиёҳ %1$s, сафед %2$s</string>

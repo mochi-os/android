@@ -180,8 +180,8 @@
     <string name="people_books_create">Хаягийн дэвтэр үүсгэх</string>
     <string name="people_books_delete">Хаягийн дэвтэр устгах</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s болон дотор нь буй %2$d харилцагчийг устгах уу?</item>
-        <item quantity="other">%1$s болон дотор нь буй %2$d харилцагчийг устгах уу?</item>
+        <item quantity="one">%1$s болон дотор нь буй %2$s харилцагчийг устгах уу?</item>
+        <item quantity="other">%1$s болон дотор нь буй %2$s харилцагчийг устгах уу?</item>
     </plurals>
     <string name="people_welcome_body">Mochi даяар найзуудаа олж, холбоо тогтоо. Урилга илгээхийн тулд Харилцагч нэмэх дээр дарна уу.</string>
     <string name="people_person_state_contact">Харилцагчдад байна</string>

@@ -204,6 +204,16 @@ private fun ModerationCard(content: @Composable ColumnScope.() -> Unit) {
     )
 }
 
+/** "Pending posts (N)", the count as the user writes numbers. */
+@Composable
+internal fun pendingPostsHeading(count: Int): String =
+    stringResource(R.string.forums_moderation_pending_posts, LocalFormat.current.formatNumber(count))
+
+/** "Pending comments (N)", the count as the user writes numbers. */
+@Composable
+internal fun pendingCommentsHeading(count: Int): String =
+    stringResource(R.string.forums_moderation_pending_comments, LocalFormat.current.formatNumber(count))
+
 @Composable
 private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel) {
     // The reason the server records against a rejection, in the moderator's
@@ -228,10 +238,7 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
         if (queue.posts.isNotEmpty()) {
             item {
                 Text(
-                    stringResource(
-                        R.string.forums_moderation_pending_posts,
-                        queue.counts.posts,
-                    ),
+                    pendingPostsHeading(queue.counts.posts),
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier.padding(vertical = 4.dp),
                 )
@@ -266,10 +273,7 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
         if (queue.comments.isNotEmpty()) {
             item {
                 Text(
-                    stringResource(
-                        R.string.forums_moderation_pending_comments,
-                        queue.counts.comments,
-                    ),
+                    pendingCommentsHeading(queue.counts.comments),
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier.padding(vertical = 4.dp),
                 )

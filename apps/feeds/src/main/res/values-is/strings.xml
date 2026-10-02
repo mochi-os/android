@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Aldrei sótt</string>
     <string name="feeds_source_poll">Sækja</string>
     <string name="feeds_source_transform">Gervigreindarumbreyting</string>
-    <string name="feeds_remove_source_confirm">Fjarlægja \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Eyða einnig innfluttum færslum</string>
+    <string name="feeds_remove_source_confirm">Þetta stöðvar innflutning efnis frá \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Eyða einnig færslum sem voru fluttar inn frá þessari uppsprettu</string>
     <string name="feeds_suggested_credibility_title">Tillagður trúverðugleiki</string>
-    <string name="feeds_suggested_credibility_body">Mochi stingur upp á trúverðugleika %1$d. Samþykkja?</string>
+    <string name="feeds_suggested_credibility_body">Mochi stingur upp á trúverðugleika %1$s. Samþykkja?</string>
     <string name="feeds_suggested_credibility_keep">Halda núverandi</string>
     <string name="feeds_ai_processing_mode">Vinnsluhamur gervigreindar</string>
     <string name="feeds_ai_account">Gervigreindarreikningur</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Pikkaðu á bókamerkið á hvaða færslu sem er til að vista hana hér til síðari tíma.</string>
     <string name="feeds_saved_error_clear">Mistókst að hreinsa vistaðar færslur</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d ný færsla</item>
-        <item quantity="other">%d nýjar færslur</item>
+        <item quantity="one">%s ný færsla</item>
+        <item quantity="other">%s nýjar færslur</item>
     </plurals>
     <string name="feeds_caught_up">Þú hefur séð allt</string>
     <string name="feeds_all_caught_up">Allt klárað</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Auðkenni straumefnis eða fingrafar</string>
     <string name="feeds_source_credibility_label">Trúverðugleiki</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d klukkustund</item>
-        <item quantity="other">%1$d klukkustundir</item>
+        <item quantity="one">%1$s klukkustund</item>
+        <item quantity="other">%1$s klukkustundir</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d mínúta</item>
-        <item quantity="other">%1$d mínútur</item>
+        <item quantity="one">%1$s mínúta</item>
+        <item quantity="other">%1$s mínútur</item>
     </plurals>
     <string name="feeds_source_polling_interval">Sótt á %1$s fresti</string>
     <string name="feeds_access_level_react_full">Bregðast við og skoða</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Tengill</string>
     <string name="feeds_share_link_title">Streymistengill</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d athugasemd</item>
-        <item quantity="other">%1$d athugasemdir</item>
+        <item quantity="one">%1$s athugasemd</item>
+        <item quantity="other">%1$s athugasemdir</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d viðhengi</item>
-        <item quantity="other">%1$d viðhengi</item>
+        <item quantity="one">%1$s viðhengi</item>
+        <item quantity="other">%1$s viðhengi</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Sjá %1$d umsögn í viðbót</item>
-        <item quantity="other">Sjá %1$d umsagnir í viðbót</item>
+        <item quantity="one">Sjá %1$s umsögn í viðbót</item>
+        <item quantity="other">Sjá %1$s umsagnir í viðbót</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">fyrir %1$d ári í dag</item>
-        <item quantity="other">fyrir %1$d árum í dag</item>
+        <item quantity="one">fyrir %1$s ári í dag</item>
+        <item quantity="other">fyrir %1$s árum í dag</item>
     </plurals>
     <string name="feeds_block">Loka á</string>
     <string name="feeds_removed_from_feed">Þú varst fjarlægður úr þessu streymi</string>

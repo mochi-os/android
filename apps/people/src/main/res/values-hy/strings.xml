@@ -180,8 +180,8 @@
     <string name="people_books_create">Ստեղծել հասցեագիրք</string>
     <string name="people_books_delete">Ջնջել հասցեագիրքը</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Ջնջե՞լ %1$s-ը և նրա %2$d կոնտակտը։</item>
-        <item quantity="other">Ջնջե՞լ %1$s-ը և նրա %2$d կոնտակտները։</item>
+        <item quantity="one">Ջնջե՞լ %1$s-ը և նրա %2$s կոնտակտը։</item>
+        <item quantity="other">Ջնջե՞լ %1$s-ը և նրա %2$s կոնտակտները։</item>
     </plurals>
     <string name="people_welcome_body">Գտեք ընկերների Mochi-ի ողջ տարածքում և կապ հաստատեք։ Հրավեր ուղարկելու համար հպեք Ավելացնել կոնտակտ։</string>
     <string name="people_person_state_contact">Կոնտակտներում</string>

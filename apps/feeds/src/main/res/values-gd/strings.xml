@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Cha deach a thoirt a-nuas a-riamh</string>
     <string name="feeds_source_poll">Cunntas-bheachd</string>
     <string name="feeds_source_transform">Cruth-atharrachadh AI</string>
-    <string name="feeds_remove_source_confirm">Thoir air falbh \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Sguab às na postaichean a chaidh ion-phortadh cuideachd</string>
+    <string name="feeds_remove_source_confirm">Sguiridh seo de dh\'ion-phortadh susbaint o \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Sguab às cuideachd na postaichean a chaidh ion-phortadh on tùs seo</string>
     <string name="feeds_suggested_credibility_title">Earbsachd a thathar a\' moladh</string>
-    <string name="feeds_suggested_credibility_body">Tha Mochi a\' moladh earbsachd de %1$d. A bheil thu ag aontachadh?</string>
+    <string name="feeds_suggested_credibility_body">Tha Mochi a\' moladh earbsachd de %1$s. A bheil thu ag aontachadh?</string>
     <string name="feeds_suggested_credibility_keep">Cùm na tha ann</string>
     <string name="feeds_ai_processing_mode">Modh giullachd IF</string>
     <string name="feeds_ai_account">Cunntas IF</string>
@@ -142,10 +142,10 @@
     <string name="feeds_saved_empty_subtitle">Thoir gnogag air a\' chomharra-lìn air post sam bith gus a shàbhaladh an seo airson às dèidh seo.</string>
     <string name="feeds_saved_error_clear">Cha b\' urrainn na postaichean sàbhailte fhalamhachadh</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d phost ùr</item>
-        <item quantity="two">%d phost ùr</item>
-        <item quantity="few">%d postaichean ùra</item>
-        <item quantity="other">%d post ùr</item>
+        <item quantity="one">%s phost ùr</item>
+        <item quantity="two">%s phost ùr</item>
+        <item quantity="few">%s postaichean ùra</item>
+        <item quantity="other">%s post ùr</item>
     </plurals>
     <string name="feeds_caught_up">Chunnaic thu a h-uile càil</string>
     <string name="feeds_all_caught_up">Tha thu ri là</string>
@@ -196,16 +196,16 @@
     <string name="feeds_source_url_hint_feed">ID no meur-lorg an inbhir</string>
     <string name="feeds_source_credibility_label">Creideas</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d uair a thìde</item>
-        <item quantity="two">%1$d uair a thìde</item>
-        <item quantity="few">%1$d uairean a thìde</item>
-        <item quantity="other">%1$d uair a thìde</item>
+        <item quantity="one">%1$s uair a thìde</item>
+        <item quantity="two">%1$s uair a thìde</item>
+        <item quantity="few">%1$s uairean a thìde</item>
+        <item quantity="other">%1$s uair a thìde</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d mhionaid</item>
-        <item quantity="two">%1$d mhionaid</item>
-        <item quantity="few">%1$d mionaidean</item>
-        <item quantity="other">%1$d mionaid</item>
+        <item quantity="one">%1$s mhionaid</item>
+        <item quantity="two">%1$s mhionaid</item>
+        <item quantity="few">%1$s mionaidean</item>
+        <item quantity="other">%1$s mionaid</item>
     </plurals>
     <string name="feeds_source_polling_interval">A\' toirt sùil gach %1$s</string>
     <string name="feeds_access_level_react_full">Dèan ath-bhualadh is seall</string>
@@ -222,28 +222,28 @@
     <string name="feeds_link">Ceangal</string>
     <string name="feeds_share_link_title">Ceangal inbhir</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d bheachd</item>
-        <item quantity="two">%1$d bheachd</item>
-        <item quantity="few">%1$d beachdan</item>
-        <item quantity="other">%1$d beachdan</item>
+        <item quantity="one">%1$s bheachd</item>
+        <item quantity="two">%1$s bheachd</item>
+        <item quantity="few">%1$s beachdan</item>
+        <item quantity="other">%1$s beachd</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d cheanglachan</item>
-        <item quantity="two">%1$d cheanglachan</item>
-        <item quantity="few">%1$d ceanglachain</item>
-        <item quantity="other">%1$d ceanglachan</item>
+        <item quantity="one">%1$s cheanglachan</item>
+        <item quantity="two">%1$s cheanglachan</item>
+        <item quantity="few">%1$s ceanglachain</item>
+        <item quantity="other">%1$s ceanglachan</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Seall %1$d bheachd eile</item>
-        <item quantity="two">Seall %1$d bheachd eile</item>
-        <item quantity="few">Seall %1$d beachdan eile</item>
-        <item quantity="other">Seall %1$d beachd eile</item>
+        <item quantity="one">Seall %1$s bheachd eile</item>
+        <item quantity="two">Seall %1$s bheachd eile</item>
+        <item quantity="few">Seall %1$s beachdan eile</item>
+        <item quantity="other">Seall %1$s beachd eile</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d bhliadhna air ais an-diugh</item>
-        <item quantity="two">%1$d bhliadhna air ais an-diugh</item>
-        <item quantity="few">%1$d bliadhnaichean air ais an-diugh</item>
-        <item quantity="other">%1$d bliadhna air ais an-diugh</item>
+        <item quantity="one">%1$s bhliadhna air ais an-diugh</item>
+        <item quantity="two">%1$s bhliadhna air ais an-diugh</item>
+        <item quantity="few">%1$s bliadhnaichean air ais an-diugh</item>
+        <item quantity="other">%1$s bliadhna air ais an-diugh</item>
     </plurals>
     <string name="feeds_block">Bac</string>
     <string name="feeds_removed_from_feed">Chaidh do thoirt air falbh bhon inbhir seo</string>

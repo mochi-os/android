@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">ਸਰੋਤ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="feeds_settings_source_polling">ਸਰੋਤ ਪੋਲ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="feeds_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
-    <string name="feeds_settings_access_revoked">ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
+    <string name="feeds_settings_access_revoked">ਪਹੁੰਚ ਵਾਪਸ ਲੈ ਲਈ ਗਈ</string>
     <string name="feeds_settings_member_removed">ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="feeds_settings_ai_mode_updated">AI ਮੋਡ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="feeds_settings_ai_account_updated">AI ਖਾਤਾ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">ਕਦੇ ਨਹੀਂ ਲਿਆ</string>
     <string name="feeds_source_poll">ਪੋਲ</string>
     <string name="feeds_source_transform">AI ਤਬਦੀਲੀ</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</string>
-    <string name="feeds_remove_also_delete_posts">ਆਯਾਤ ਕੀਤੀਆਂ ਪੋਸਟਾਂ ਵੀ ਮਿਟਾਓ</string>
+    <string name="feeds_remove_source_confirm">ਇਹ \"%1$s\" ਤੋਂ ਸਮੱਗਰੀ ਆਯਾਤ ਕਰਨਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ।</string>
+    <string name="feeds_remove_also_delete_posts">ਇਸ ਸਰੋਤ ਤੋਂ ਆਯਾਤ ਕੀਤੀਆਂ ਪੋਸਟਾਂ ਵੀ ਮਿਟਾਓ</string>
     <string name="feeds_suggested_credibility_title">ਸੁਝਾਈ ਭਰੋਸੇਯੋਗਤਾ</string>
-    <string name="feeds_suggested_credibility_body">Mochi %1$d ਦੀ ਭਰੋਸੇਯੋਗਤਾ ਦਾ ਸੁਝਾਅ ਦਿੰਦਾ ਹੈ। ਮੰਨਣਾ ਹੈ?</string>
+    <string name="feeds_suggested_credibility_body">Mochi %1$s ਦੀ ਭਰੋਸੇਯੋਗਤਾ ਦਾ ਸੁਝਾਅ ਦਿੰਦਾ ਹੈ। ਮੰਨਣਾ ਹੈ?</string>
     <string name="feeds_suggested_credibility_keep">ਮੌਜੂਦਾ ਰੱਖੋ</string>
     <string name="feeds_ai_processing_mode">AI ਪ੍ਰੋਸੈਸਿੰਗ ਮੋਡ</string>
     <string name="feeds_ai_account">AI ਖਾਤਾ</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">ਕਿਸੇ ਵੀ ਪੋਸਟ ਨੂੰ ਇੱਥੇ ਬਾਅਦ ਲਈ ਸੰਭਾਲਣ ਲਈ ਉਸ ਦੇ ਬੁੱਕਮਾਰਕ \'ਤੇ ਟੈਪ ਕਰੋ।</string>
     <string name="feeds_saved_error_clear">ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ ਸਾਫ਼ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d ਨਵੀਂ ਪੋਸਟ</item>
-        <item quantity="other">%d ਨਵੀਆਂ ਪੋਸਟਾਂ</item>
+        <item quantity="one">%s ਨਵੀਂ ਪੋਸਟ</item>
+        <item quantity="other">%s ਨਵੀਆਂ ਪੋਸਟਾਂ</item>
     </plurals>
     <string name="feeds_caught_up">ਤੁਸੀਂ ਸਭ ਕੁਝ ਦੇਖ ਲਿਆ ਹੈ</string>
     <string name="feeds_all_caught_up">ਸਭ ਕੁਝ ਪੜ੍ਹ ਲਿਆ</string>
@@ -166,8 +166,8 @@
     <string name="feeds_settings_field_server">ਸਰਵਰ</string>
     <string name="feeds_settings_name_edit_cd">ਨਾਮ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="feeds_settings_section_identity">ਪਛਾਣ</string>
-    <string name="feeds_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
-    <string name="feeds_unsubscribed">ਗਾਹਕੀ ਰੱਦ ਕੀਤੀ</string>
+    <string name="feeds_unsubscribe">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
+    <string name="feeds_unsubscribed">ਗਾਹਕੀ ਖਤਮ ਕੀਤੀ</string>
     <string name="feeds_access_level_comment_full">ਟਿੱਪਣੀ ਕਰੋ, ਪ੍ਰਤੀਕਿਰਿਆ ਦਿਓ ਅਤੇ ਦੇਖੋ</string>
     <string name="feeds_rss_mode_posts_comments">ਪੋਸਟਾਂ ਅਤੇ ਟਿੱਪਣੀਆਂ</string>
     <string name="feeds_access_add_title">ਪਹੁੰਚ ਜੋੜੋ</string>
@@ -176,9 +176,9 @@
     <string name="feeds_post_content">ਪੋਸਟ ਸਮੱਗਰੀ</string>
     <string name="feeds_enable_memories">ਯਾਦਾਂ ਨੂੰ ਸਮਰੱਥ ਕਰੋ</string>
     <string name="feeds_permission_request_title">ਇਜਾਜ਼ਤ ਬੇਨਤੀ</string>
-    <string name="feeds_unsubscribe_confirm">ਫੀਡ ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਹੈ?</string>
+    <string name="feeds_unsubscribe_confirm">ਫੀਡ ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰਨੀ ਹੈ?</string>
     <string name="feeds_settings_title">%1$s ਸੈਟਿੰਗਾਂ</string>
-    <string name="feeds_source_transform_help">ਲਿਸਟਿੰਗ ID</string>
+    <string name="feeds_source_transform_help">ਬੰਦ ਕਰਨ ਲਈ ਖਾਲੀ ਛੱਡੋ।</string>
     <string name="feeds_settings_name_cancel_cd">ਸੋਧਣਾ ਰੱਦ ਕਰੋ</string>
     <string name="feeds_source_url_hint_rss">https://example.com/feed.xml</string>
     <string name="feeds_access_management">ਪਹੁੰਚ ਪ੍ਰਬੰਧਨ</string>
@@ -187,17 +187,17 @@
     <string name="feeds_create_first_post">ਪਹਿਲੀ ਪੋਸਟ ਬਣਾਓ</string>
     <string name="feeds_rss_mode_posts">ਪੋਸਟਾਂ</string>
     <string name="feeds_source_last_checked">ਆਖਰੀ ਜਾਂਚ %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">ਫੀਡ ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="feeds_settings_unsubscribe_section">ਫੀਡ ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="feeds_source_transform_hint">ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ, ਅਤੇ ਬੁਲੇਟ ਪੁਆਇੰਟ ਵਜੋਂ ਦਿਖਾਓ।</string>
     <string name="feeds_source_url_hint_feed">ਫੀਡ ਇਕਾਈ ID ਜਾਂ ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
     <string name="feeds_source_credibility_label">ਭਰੋਸੇਯੋਗਤਾ</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d ਘੰਟਾ</item>
-        <item quantity="other">%1$d ਘੰਟੇ</item>
+        <item quantity="one">%1$s ਘੰਟਾ</item>
+        <item quantity="other">%1$s ਘੰਟੇ</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d ਮਿੰਟ</item>
-        <item quantity="other">%1$d ਮਿੰਟ</item>
+        <item quantity="one">%1$s ਮਿੰਟ</item>
+        <item quantity="other">%1$s ਮਿੰਟ</item>
     </plurals>
     <string name="feeds_source_polling_interval">ਹਰ %1$s ਬਾਅਦ ਜਾਂਚ ਕੀਤੀ ਜਾਂਦੀ ਹੈ</string>
     <string name="feeds_access_level_react_full">ਪ੍ਰਤੀਕਿਰਿਆ ਦਿਓ ਅਤੇ ਦੇਖੋ</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">ਲਿੰਕ</string>
     <string name="feeds_share_link_title">ਫੀਡ ਲਿੰਕ</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d ਟਿੱਪਣੀ</item>
-        <item quantity="other">%1$d ਟਿੱਪਣੀਆਂ</item>
+        <item quantity="one">%1$s ਟਿੱਪਣੀ</item>
+        <item quantity="other">%1$s ਟਿੱਪਣੀਆਂ</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d ਨਾਲ ਜੁੜੀ ਫ਼ਾਈਲ</item>
-        <item quantity="other">%1$d ਨਾਲ ਜੁੜੀਆਂ ਫ਼ਾਈਲਾਂ</item>
+        <item quantity="one">%1$s ਨਾਲ ਜੁੜੀ ਫ਼ਾਈਲ</item>
+        <item quantity="other">%1$s ਨਾਲ ਜੁੜੀਆਂ ਫ਼ਾਈਲਾਂ</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d ਹੋਰ ਟਿੱਪਣੀ ਦੇਖੋ</item>
-        <item quantity="other">%1$d ਹੋਰ ਟਿੱਪਣੀਆਂ ਦੇਖੋ</item>
+        <item quantity="one">%1$s ਹੋਰ ਟਿੱਪਣੀ ਦੇਖੋ</item>
+        <item quantity="other">%1$s ਹੋਰ ਟਿੱਪਣੀਆਂ ਦੇਖੋ</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">ਅੱਜ %1$d ਸਾਲ ਪਹਿਲਾਂ</item>
-        <item quantity="other">ਅੱਜ %1$d ਸਾਲ ਪਹਿਲਾਂ</item>
+        <item quantity="one">ਅੱਜ %1$s ਸਾਲ ਪਹਿਲਾਂ</item>
+        <item quantity="other">ਅੱਜ %1$s ਸਾਲ ਪਹਿਲਾਂ</item>
     </plurals>
     <string name="feeds_block">ਬਲੌਕ ਕਰੋ</string>
     <string name="feeds_removed_from_feed">ਤੁਹਾਨੂੰ ਇਸ ਫੀਡ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਗਿਆ</string>

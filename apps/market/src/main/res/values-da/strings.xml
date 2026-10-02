@@ -407,11 +407,11 @@
     <string name="market_appeal_dialog_submitting">Sender…</string>
     <string name="market_dispute_dialog_submitting">Sender…</string>
     <string name="market_sale_review_response_submitting">Sender…</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_checkout_subscribing">Abonnerer…</string>
     <string name="market_filter_remove">Fjern filter</string>
-    <string name="market_listing_detail_sales_count">%1$d salg</string>
-    <string name="market_profile_sales_count">%1$d salg</string>
+    <string name="market_listing_detail_sales_count">%1$s salg</string>
+    <string name="market_profile_sales_count">%1$s salg</string>
     <string name="market_purchase_dispute_response">Sælgers svar</string>
     <string name="market_purchases_order_label">Bestilling #%1$s</string>
 
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Nuværende: %1$s</string>
     <string name="market_bids_ends_in">Slutter om %1$s</string>
     <string name="market_bids_your_bid">Dit bud: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d af %2$d</string>
-    <string name="market_carousel_thumbnail">Miniature %1$d</string>
+    <string name="market_carousel_main">Foto %1$s af %2$s</string>
+    <string name="market_carousel_thumbnail">Miniature %1$s</string>
     <string name="market_checkout_browser_unavailable">Ingen browser tilgængelig til at åbne betalingssiden</string>
     <string name="market_checkout_pay_button">Betal med Stripe</string>
     <string name="market_checkout_processing">Behandler…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Vedhæft dokumentation</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fil(er) vedhæftet</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fil(er) vedhæftet</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi-personale</string>
     <string name="market_dispute_dialog_evidence_section_title">Indsendt dokumentation</string>
     <string name="market_dispute_dialog_evidence_submitter_line">indsendt af %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Reference-URL</string>
     <string name="market_editor_assets_empty">Ingen aktiver endnu</string>
     <string name="market_editor_category_none">Vælg en kategori</string>
-    <string name="market_editor_days">%1$d dage</string>
+    <string name="market_editor_days">%1$s dage</string>
     <string name="market_editor_delete">Slet annonce</string>
     <string name="market_editor_delete_confirm_message">Dette vil slette annoncen permanent.</string>
     <string name="market_editor_delete_confirm_title">Slet annonce?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Kunne ikke indlæse tråden</string>
     <string name="market_messages_send_failed">Kunne ikke sende beskeden</string>
     <string name="market_messages_thread_title">Samtale</string>
-    <string name="market_messages_unread_badge">%1$d ulæste</string>
-    <string name="market_price_from">fra %1$s</string>
+    <string name="market_messages_unread_badge">%1$s ulæste</string>
+    <string name="market_price_from">Fra %1$s</string>
     <string name="market_price_high_bid">Højeste bud: %1$s</string>
     <string name="market_price_instant_buy">straksKøb: %1$s</string>
     <string name="market_price_per_month">%1$s / måned</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Tilmeldt %1$s</string>
     <string name="market_profile_no_reviews">Ingen anmeldelser endnu.</string>
     <string name="market_profile_rating_breakdown">Vurderingsoversigt</string>
-    <string name="market_profile_stars_value">%1$d stjerner</string>
+    <string name="market_profile_stars_value">%1$s stjerner</string>
     <string name="market_purchase_dispute_chargeback">Tilbageførsel %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Din bank har indgivet en tilbageførsel på denne ordre. Stripe håndterer tvisten med sælgeren; resultatet vises her, når det er afgjort.</string>
-    <string name="market_purchase_download_many">Download dine %1$d filer nedenfor.</string>
+    <string name="market_purchase_download_many">Download dine %1$s filer nedenfor.</string>
     <string name="market_purchase_download_one">Download din fil nedenfor.</string>
     <string name="market_purchase_review_from">Anmeldelse fra %1$s</string>
     <string name="market_purchases_auction_label">Auktion #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s refunderet</string>
     <string name="market_purchases_won_for">Vundet for %1$s</string>
-    <string name="market_rating_reviews">(%1$d anmeldelser)</string>
+    <string name="market_rating_reviews">(%1$s anmeldelser)</string>
     <string name="market_refund_amount_label">Beløb</string>
     <string name="market_refund_dialog_amount_help">Lad feltet stå tomt for at refundere hele ordren.</string>
     <string name="market_refund_dialog_amount_label">Beløb</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Dette annullerer auktionen. Annoncen skjules for købere; du kan genoplade den senere som et nyt udkast.</string>
     <string name="market_listings_remove_title">Fjern denne annonce?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Dette annullerer auktionen og underretter %1$d aktiv byder. Annoncen skjules for købere; du kan senere slå den op igen som en ny kladde.</item>
-        <item quantity="other">Dette annullerer auktionen og underretter %1$d aktive bydere. Annoncen skjules for købere; du kan senere slå den op igen som en ny kladde.</item>
+        <item quantity="one">Dette annullerer auktionen og underretter %1$s aktiv byder. Annoncen skjules for købere; du kan senere slå den op igen som en ny kladde.</item>
+        <item quantity="other">Dette annullerer auktionen og underretter %1$s aktive bydere. Annoncen skjules for købere; du kan senere slå den op igen som en ny kladde.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Dette annullerer %1$d aktivt abonnement ved udgangen af den nuværende faktureringsperiode. Abonnenterne får besked. Annoncen skjules for købere.</item>
-        <item quantity="other">Dette annullerer %1$d aktive abonnementer ved udgangen af den nuværende faktureringsperiode. Abonnenterne får besked. Annoncen skjules for købere.</item>
+        <item quantity="one">Dette annullerer %1$s aktivt abonnement ved udgangen af den nuværende faktureringsperiode. Abonnenterne får besked. Annoncen skjules for købere.</item>
+        <item quantity="other">Dette annullerer %1$s aktive abonnementer ved udgangen af den nuværende faktureringsperiode. Abonnenterne får besked. Annoncen skjules for købere.</item>
     </plurals>
 </resources>

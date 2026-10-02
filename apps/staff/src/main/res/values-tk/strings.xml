@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">Atsyz</string>
     <string name="staff_accounts_unsuspend">Togtatmany ýatyr</string>
     <string name="staff_accounts_unsuspended_toast">Hasap dikeldildi</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Ýatyrmak</string>
     <string name="staff_appeals_decide">Karar</string>
     <string name="staff_appeals_decision_denied">Sanawy ret edilen ýagdaýynda sakla</string>
@@ -399,7 +399,7 @@
     <string name="staff_dashboard_order_fallback">Sargyt #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">Sebäp (hökmany däl)</string>
-    <string name="staff_accounts_sales">%1$d satuw</string>
+    <string name="staff_accounts_sales">%1$s satuw</string>
     <string name="staff_appeals_reason_label">Satyjynyň şikaýat sebäbi</string>
     <string name="staff_audit_action_staff_team_role_changed">Işgär roly üýtgedildi</string>
     <string name="staff_categories_delete_desc">“%1$s” pozulsynmy? Bu yzyna gaýtaryp bolmaýar.</string>

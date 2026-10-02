@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Объект байхгүй</string>
     <string name="crm_board_no_columns">Энэ харагдацад багана тохируулаагүй байна</string>
     <string name="crm_board_no_options">Баганын талбарт сонголт тохируулагдаагүй байна</string>
-    <string name="crm_board_nested_count">+%1$d үүрлэсэн</string>
+    <string name="crm_board_nested_count">+%1$s үүрлэсэн</string>
     <string name="crm_move_to_column">Багана руу зөөх</string>
     <string name="crm_move_to_row">Мөр рүү зөөх</string>
     <string name="crm_move_after">%1$s-ийн дараа</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Хандалтын удирдлага</string>
     <string name="crm_settings_not_set">Тохируулаагүй</string>
     <string name="crm_settings_access_updated">Хандалт шинэчлэгдсэн</string>
-    <string name="crm_settings_access_revoked">Нэвтрэх эрхийг цуцалсан</string>
+    <string name="crm_settings_access_revoked">Хандалтыг хүчингүй болголоо</string>
     <string name="crm_people_search">Хүмүүсийг хайх</string>
     <string name="crm_access_tab_other">Бусад</string>
     <string name="crm_access_select_group">Бүлэг сонгоно уу</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM өгөгдөл хадгалагдлаа</string>
     <string name="crm_create_upload_json">.zip эсвэл .json файл байршуулна уу</string>
     <string name="crm_create_blocked_no_options">Үүсгэх боломжгүй: %1$s шаардлагатай боловч сонгох сонголт байхгүй. Загварт сонголт нэмнэ үү.</string>
-    <string name="crm_design_sample">Жишээ %1$d</string>
+    <string name="crm_design_sample">Жишээ %1$s</string>
     <string name="crm_option_delete_title">Сонголтыг устгах</string>
     <string name="crm_option_delete_message">\"%1$s\" сонголтыг устгахдаа итгэлтэй байна уу?</string>
 </resources>

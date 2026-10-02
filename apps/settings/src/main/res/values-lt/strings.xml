@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Atsijungti</string>
     <string name="settings_home_account">Paskyra</string>
     <string name="settings_home_preferences">Nuostatos</string>
-    <string name="settings_home_display">Rodyti</string>
+    <string name="settings_home_display">Rodymas</string>
     <string name="settings_home_notification_prefs">Pranešimų nuostatos</string>
     <string name="settings_home_accounts">Susietos paskyros</string>
     <string name="settings_home_interests">Pomėgiai</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Atkūrimo kodai</string>
     <string name="account_recovery_codes_title">Atkūrimo kodai</string>
     <string name="sessions_unknown_agent">Nežinomas įrenginys</string>
-    <string name="sessions_revoke_title">Atšaukti sesiją?</string>
+    <string name="sessions_revoke_title">Panaikinti sesiją?</string>
     <string name="account_section_oauth">Trečiosios šalies prisijungimas</string>
     <string name="account_oauth_link">Susieti paskyrą</string>
     <string name="account_unlink">Atsieti</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Atlikta</string>
     <string name="account_delete">Ištrinti</string>
     <string name="account_rename">Pervadinti</string>
-    <string name="sessions_revoke">Atšaukti</string>
+    <string name="sessions_revoke">Panaikinti</string>
     <string name="account_disable">Išjungti</string>
     <string name="account_copy">Kopijuoti</string>
     <string name="account_copy_all">Kopijuoti viską</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Ištrinti maršrutą?</string>
     <string name="route_path">Kelias</string>
     <string name="route_method">Metodas</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Programėlė</string>
     <string name="route_method_entity">Subjektas</string>
     <string name="route_method_redirect">Peradresavimas</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Atsisiųsti iš packages.mochi-os.org</string>
     <string name="system_status_copy">Kopijuoti</string>
     <string name="system_status_peers">Lygiaverčiai</string>
-    <string name="system_status_known">Žinomi</string>
+    <string name="system_status_peers_totals">Žinomi %1$s · Prijungti %2$s · Transliacijos mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Žinomi %1$s · Prijungti %2$s</string>
     <string name="system_status_peer_connected">Prijungta</string>
     <string name="system_status_peer_disconnected">Atjungta</string>
     <string name="system_status_peer_queued">Žinutės eilėje</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Šalinti</string>
     <string name="accounts_remove_title">Šalinti paskyrą?</string>
     <string name="system_documents_title">Dokumentai</string>
-    <string name="system_documents_description">Serverio taisyklės, sąlygos ir privatumo pranešimas, rodomi jūsų vartotojams</string>
     <string name="system_documents_tab_rules">Serverio taisyklės</string>
     <string name="system_documents_tab_terms">Sąlygos ir nuostatos</string>
     <string name="system_documents_tab_privacy">Privatumas</string>
     <string name="system_documents_language">Kalba</string>
     <string name="system_documents_no_language">Šia kalba dokumentas neprieinamas.</string>
-    <string name="system_documents_customised">Pritaikyta</string>
     <string name="system_documents_using_default">Naudojamas įdėtasis numatytasis</string>
     <string name="system_documents_revert">Atstatyti į numatytąjį</string>
     <string name="system_documents_save">Išsaugoti</string>
@@ -182,46 +183,46 @@
     <string name="system_users_delete">Ištrinti vartotoją</string>
     <string name="system_users_delete_title">Ištrinti vartotoją?</string>
     <string name="system_users_manage_sessions">Tvarkyti seansus</string>
-    <string name="system_users_sessions_description">Peržiūrėti ir atšaukti aktyvias šio vartotojo sesijas.</string>
     <string name="system_users_sessions_empty">Šis vartotojas neturi aktyvių sesijų.</string>
-    <string name="system_users_revoke">Atšaukti</string>
-    <string name="system_users_revoke_all">Atšaukti visas sesijas</string>
+    <string name="system_users_revoke">Panaikinti</string>
+    <string name="system_users_revoke_all">Panaikinti visas sesijas</string>
     <string name="system_users_unknown_browser">Nežinoma naršyklė</string>
     <string name="system_users_unknown">Nežinoma</string>
     <string name="system_users_previous">Ankstesnis</string>
     <string name="system_users_next">Toliau</string>
     <string name="system_users_empty">Vartotojų nerasta</string>
     <string name="system_users_empty_search">Pagal jūsų paiešką vartotojų nerasta</string>
-    <string name="system_users_empty_search_hint">Pabandykite koreguoti paieškos kriterijus</string>
     <string name="system_users_toast_created">Vartotojas sukurtas</string>
     <string name="system_users_toast_updated">Vartotojas atnaujintas</string>
     <string name="system_users_toast_deleted">Vartotojas ištrintas</string>
     <string name="system_users_toast_suspended">Vartotojas sustabdytas</string>
     <string name="system_users_toast_suspension_removed">Sustabdymas pašalintas</string>
-    <string name="system_users_toast_session_revoked">Sesija atšaukta</string>
+    <string name="system_users_toast_session_revoked">Sesija panaikinta</string>
     <string name="system_users_toast_create_failed">Nepavyko sukurti naudotojo</string>
     <string name="system_users_toast_update_failed">Nepavyko atnaujinti naudotojo</string>
     <string name="system_users_toast_delete_failed">Nepavyko ištrinti naudotojo</string>
     <string name="system_users_toast_status_failed">Nepavyko atnaujinti naudotojo būsenos</string>
-    <string name="system_users_toast_revoke_failed">Nepavyko atšaukti seanso</string>
+    <string name="system_users_toast_revoke_failed">Nepavyko panaikinti sesijos</string>
 
     <string name="settings_home_sessions">Sesijos</string>
     <string name="settings_home_privacy">Privatumo politika</string>
     <string name="settings_home_rules">Taisyklės</string>
     <string name="settings_home_terms">Paslaugos sąlygos</string>
-    <string name="account_passkeys_empty">Nėra užregistruotų prieigos raktų.</string>
-    <string name="account_passkey_register_title">Pridėti prieigos raktą</string>
-    <string name="account_passkey_register_message">Jūsų įrenginys paprašys patvirtinti. Prieigos raktas susietas su šiuo įrenginiu ir naudojamas ateities prisijungimams.</string>
+    <string name="account_passkeys_empty">Nėra užregistruotų slaptarakčių.</string>
+    <string name="account_passkey_register_title">Pridėti slaptaraktį</string>
     <string name="account_passkey_name_label">Pavadinimas (neprivaloma)</string>
     <string name="account_passkey_delete_message">\"%1$s\" daugiau jūsų neprijungs.</string>
-    <string name="account_totp_description">Prisijunkite 6 skaitmenų kodu iš autentifikatoriaus programėlės.</string>
     <string name="account_totp_enabled">Autentifikatorius įjungtas.</string>
     <string name="account_totp_setup_step1">Nuskaitykite arba įveskite šią paslaptį savo autentifikatoriaus programėlėje.</string>
     <string name="account_totp_setup_step2">Įveskite 6 skaitmenų kodą, kurį rodo jūsų programėlė.</string>
     <string name="account_totp_code">Kodas</string>
     <string name="account_totp_disable_message">Jūs nebegalėsite prisijungti autentifikatoriaus kodu.</string>
     <string name="account_recovery_none">Atkūrimo kodų nesugeneruota.</string>
-    <string name="account_recovery_count">%1$d nenaudotų atkūrimo kodų.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Liko %1$s atkūrimo kodas.</item>
+        <item quantity="few">Liko %1$s atkūrimo kodai.</item>
+        <item quantity="other">Liko %1$s atkūrimo kodų.</item>
+    </plurals>
     <string name="account_recovery_generate">Generuoti kodus</string>
     <string name="account_recovery_regenerate">Regeneruoti kodus</string>
     <string name="account_recovery_regen_title">Regeneruoti atkūrimo kodus?</string>
@@ -237,7 +238,7 @@
     <string name="account_last_used">Paskutinį kartą naudota %1$s</string>
     <string name="route_delete_message">Tai pašalins maršrutą kelio \"%1$s\".</string>
     <string name="route_empty">Nesukonfigūruota maršrutų.</string>
-    <string name="route_meta">Prioritetas %1$d · %2$s</string>
+    <string name="route_meta">Prioritetas %1$s · %2$s</string>
     <string name="interests_search_placeholder">Ieškoti temų pridėti…</string>
     <string name="interests_empty">Pomėgių dar nėra.</string>
     <string name="interests_summary_regenerate">Atnaujinti santrauką</string>
@@ -268,9 +269,13 @@
     <string name="system_users_delete_message">Tai visam laikui ištrins naudotoją \"%1$s\". Šio veiksmo negalima atšaukti.</string>
     <string name="system_users_sessions_title">%1$s seansai</string>
     <string name="system_users_session_last_accessed">Paskutinė prieiga: %1$s</string>
-    <string name="system_users_revoke_all_title">Atšaukti visus seansus?</string>
+    <string name="system_users_revoke_all_title">Panaikinti visas sesijas?</string>
     <string name="system_users_revoke_all_message">Visi šio naudotojo aktyvūs seansai bus atjungti.</string>
-    <string name="system_users_pagination_status">Rodoma %1$d–%2$d iš %3$d naudotojų</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Rodoma %1$s–%2$s iš %3$s naudotojo</item>
+        <item quantity="few">Rodoma %1$s–%2$s iš %3$s naudotojų</item>
+        <item quantity="other">Rodoma %1$s–%2$s iš %3$s naudotojų</item>
+    </plurals>
     <string name="account_title">Paskyra</string>
     <string name="account_section_identity">Tapatybė</string>
     <string name="account_identity_identity">Tapatybė</string>
@@ -303,16 +308,16 @@
     <string name="domain_verify">Patvirtinti DNS</string>
     <string name="settings_home_domains">Domenai</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Bandymas išsiųstas į %1$d paskirties vietą</item>
-        <item quantity="few">Bandymas išsiųstas į %1$d paskirties vietas</item>
-        <item quantity="many">Bandymas išsiųstas į %1$d paskirties vietos</item>
-        <item quantity="other">Bandymas išsiųstas į %1$d paskirties vietų</item>
+        <item quantity="one">Bandymas išsiųstas į %1$s paskirties vietą</item>
+        <item quantity="few">Bandymas išsiųstas į %1$s paskirties vietas</item>
+        <item quantity="many">Bandymas išsiųstas į %1$s paskirties vietos</item>
+        <item quantity="other">Bandymas išsiųstas į %1$s paskirties vietų</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="few">Atšauktos %1$d sesijos</item>
-        <item quantity="many">Atšaukta %1$d sesijų</item>
-        <item quantity="one">Atšaukta %1$d sesija</item>
-        <item quantity="other">Atšaukta %1$d sesijų</item>
+        <item quantity="few">Panaikintos %1$s sesijos</item>
+        <item quantity="many">Panaikinta %1$s sesijų</item>
+        <item quantity="one">Panaikinta %1$s sesija</item>
+        <item quantity="other">Panaikinta %1$s sesijų</item>
     </plurals>
     <string name="login_title">Prisijungimas</string>
     <string name="login_section_methods">Prisijungimo būdai</string>
@@ -343,18 +348,15 @@
     <string name="system_status_reachability_public">Viešas</string>
     <string name="system_status_reachability_private">Privatus</string>
     <string name="system_status_reachability_unknown">Nežinoma</string>
-    <string name="system_status_relay">Per retransliatorių</string>
-    <string name="system_status_mesh">Transliacijos mesh</string>
+    <string name="system_status_reachability_relay">%1$s · per retransliatorių</string>
     <string name="system_status_broadcast">Paskutinė transliacija</string>
     <string name="system_status_queued_broadcasts">Transliacijos žinutės eilėje</string>
     <string name="system_setting_hostname_publish">Skelbti pagrindinio kompiuterio vardą ir domenus kitiems serveriams</string>
     <string name="system_setting_hostname">Kitiems serveriams skelbiamas pagrindinio kompiuterio vardas</string>
     <string name="system_status_peer_id">Lygiarangio ID</string>
     <string name="system_status_holepunch">Pragręžimas</string>
-    <string name="system_status_holepunch_value">%1$d sėkmingų · %2$d nesėkmingų</string>
     <string name="system_status_awaiting_routing">Žinutės, laukiančios maršruto</string>
     <string name="system_status_relay_service">Perdavimo paslauga</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervacijos · %3$d grandinės · %4$d atmesta</string>
     <string name="route_target_select">Pasirinkti</string>
     <string name="account_data_description">Atsisiųskite visą atsarginę kopiją, kurią galite atkurti šiame arba kitame Mochi serveryje.</string>
     <string name="route_target_none">Nėra galimų tikslų</string>
@@ -379,7 +381,13 @@
     <string name="accounts_device_seen">Paskutinį kartą matytas %1$s</string>
     <string name="notifprefs_device_app">%1$s · programėlė</string>
     <string name="notifprefs_device_push">%1$s · push pranešimai</string>
-    <string name="notifprefs_test_partial">Testas išsiųstas į %1$d iš %2$d paskirties vietų</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Bandymas išsiųstas į %1$s iš %2$s paskirties vietos</item>
+        <item quantity="few">Bandymas išsiųstas į %1$s iš %2$s paskirties vietų</item>
+        <item quantity="other">Bandymas išsiųstas į %1$s iš %2$s paskirties vietų</item>
+    </plurals>
     <string name="notifprefs_test_none">Paskirties vietų nesukonfigūruota</string>
     <string name="notifprefs_transport_fcm">Android push pranešimai</string>
     <string name="notifprefs_no_destinations">Tikslų nėra</string>
@@ -389,7 +397,7 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Pasirašymo paslaptis</string>
     <string name="account_totp_open">Atidaryti autentifikavimo programoje</string>
-    <string name="accounts_revoke">Atšaukti prieigą</string>
+    <string name="accounts_revoke">Panaikinti prieigą</string>
     <string name="accounts_capability_calendar">Kalendorius</string>
     <string name="accounts_capability_notify">Pranešimai</string>
     <string name="accounts_capability_ai">DI</string>
@@ -398,4 +406,32 @@
     <string name="accounts_revoke_confirm">Tai panaikins %1$s prieigą prie kalendoriaus. Prisijungimas naudojant %2$s išliks, kol atsiesite jį prisijungimo puslapyje.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Nežinoma tema</string>
+    <string name="system_documents_modified">Pakeista</string>
+    <string name="system_documents_discard_title">Atmesti pakeitimus?</string>
+    <string name="system_documents_discard">Atmesti</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s sėkmingas</item>
+        <item quantity="few">%1$s sėkmingi</item>
+        <item quantity="other">%1$s sėkmingų</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s nesėkmingas</item>
+        <item quantity="few">%1$s nesėkmingi</item>
+        <item quantity="other">%1$s nesėkmingų</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s rezervacija</item>
+        <item quantity="few">%1$s / %2$s rezervacijos</item>
+        <item quantity="other">%1$s / %2$s rezervacijų</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s grandinė</item>
+        <item quantity="few">%1$s grandinės</item>
+        <item quantity="other">%1$s grandinių</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s atmesta</item>
+        <item quantity="few">%1$s atmestos</item>
+        <item quantity="other">%1$s atmesta</item>
+    </plurals>
 </resources>

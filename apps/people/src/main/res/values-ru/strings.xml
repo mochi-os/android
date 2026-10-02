@@ -180,10 +180,10 @@
     <string name="people_books_create">Создать адресную книгу</string>
     <string name="people_books_delete">Удалить адресную книгу</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Удалить %1$s и %2$d контакт в ней?</item>
-        <item quantity="few">Удалить %1$s и %2$d контакта в ней?</item>
-        <item quantity="many">Удалить %1$s и %2$d контактов в ней?</item>
-        <item quantity="other">Удалить %1$s и %2$d контакта в ней?</item>
+        <item quantity="one">Удалить %1$s и %2$s контакт в ней?</item>
+        <item quantity="few">Удалить %1$s и %2$s контакта в ней?</item>
+        <item quantity="many">Удалить %1$s и %2$s контактов в ней?</item>
+        <item quantity="other">Удалить %1$s и %2$s контакта в ней?</item>
     </plurals>
     <string name="people_welcome_body">Находите друзей по всему Mochi и общайтесь. Нажмите Добавить контакт, чтобы отправить приглашение.</string>
     <string name="people_person_state_contact">В контактах</string>

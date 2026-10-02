@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Notater</string>
     <string name="staff_accounts_reason_label">Årsak</string>
     <string name="staff_accounts_reason_optional_label">Grunn (valgfritt)</string>
-    <string name="staff_accounts_sales">%1$d salg</string>
+    <string name="staff_accounts_sales">%1$s salg</string>
     <string name="staff_accounts_search_clear">Tøm søk</string>
     <string name="staff_accounts_search_placeholder">Søk</string>
     <string name="staff_accounts_seller_buyers">Kun kjøpere</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Uten navn</string>
     <string name="staff_accounts_unsuspend">Opphev suspensjon</string>
     <string name="staff_accounts_unsuspended_toast">Suspensjon opphevet</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Avbryt</string>
     <string name="staff_appeals_decide">Avgjør</string>
     <string name="staff_appeals_decision_denied">Hold annonse avvist</string>

@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Inga objekt</string>
     <string name="crm_board_no_columns">Inga kolumner konfigurerade för denna vy</string>
     <string name="crm_board_no_options">Inga alternativ konfigurerade för kolumnfältet</string>
-    <string name="crm_board_nested_count">+%1$d nästlade</string>
+    <string name="crm_board_nested_count">+%1$s nästlade</string>
     <string name="crm_move_to_column">Flytta till kolumn</string>
     <string name="crm_move_to_row">Flytta till rad</string>
     <string name="crm_move_after">Efter %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM-data sparad</string>
     <string name="crm_create_upload_json">Ladda upp en .zip- eller .json-fil</string>
     <string name="crm_create_blocked_no_options">Kan inte skapa: %1$s krävs men har inga alternativ att välja mellan. Lägg till alternativ i Design.</string>
-    <string name="crm_design_sample">Exempel %1$d</string>
+    <string name="crm_design_sample">Exempel %1$s</string>
     <string name="crm_option_delete_title">Ta bort alternativ</string>
     <string name="crm_option_delete_message">Är du säker på att du vill radera alternativet \"%1$s\"?</string>
 </resources>

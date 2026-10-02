@@ -1148,7 +1148,7 @@ private fun ReplyQuote(replied: ChatMessage, isOwn: Boolean) {
  * and batch Forward / Delete actions for the current selection.
  */
 @Composable
-private fun SelectionBar(
+internal fun SelectionBar(
     count: Int,
     onClose: () -> Unit,
     onCopy: () -> Unit,
@@ -1166,7 +1166,7 @@ private fun SelectionBar(
             Icon(Icons.Default.Close, contentDescription = null)
         }
         Text(
-            text = stringResource(R.string.chat_selection_title, count),
+            text = stringResource(R.string.chat_selection_title, LocalFormat.current.formatNumber(count)),
             style = MaterialTheme.typography.titleMedium,
             modifier = Modifier.weight(1f),
         )

@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">聯絡人</string>
     <string name="projects_option_icon">圖示</string>
     <string name="projects_option_icon_placeholder">例如 Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">取消訂閱</string>
+    <string name="projects_settings_unsubscribe">退訂</string>
     <string name="projects_settings_delete_project">刪除專案</string>
     <string name="projects_settings_delete_confirm_title">刪除專案</string>
-    <string name="projects_settings_unsubscribe_title">取消訂閱</string>
-    <string name="projects_settings_unsubscribe_message">您確定要取消訂閱此專案嗎?</string>
+    <string name="projects_settings_unsubscribe_title">退訂</string>
+    <string name="projects_settings_unsubscribe_message">您確定要退訂此專案嗎?</string>
     <string name="projects_access_level_owner">擁有者</string>
     <string name="projects_object_watch">關注</string>
     <string name="projects_object_tab_properties">屬性</string>
@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">進行了變更</string>
     <string name="projects_attachment_empty">無附件</string>
     <string name="projects_attachment_default_name">附件</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">新增合併請求</string>
     <string name="projects_request_status_closed">已關閉</string>
     <string name="projects_request_back_to_list">返回清單</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">正在檢查合併狀態…</string>
     <string name="projects_request_can_merge">可以合併</string>
     <string name="projects_request_cannot_merge">無法合併</string>
-    <string name="projects_request_ahead_behind">領先 %1$d,落後 %2$d</string>
+    <string name="projects_request_ahead_behind">領先 %1$s,落後 %2$s</string>
     <string name="projects_request_draft_notice">此為草稿。請於合併前標示為就緒。</string>
     <string name="projects_request_view_diff">檢視差異</string>
     <string name="projects_request_mark_ready">標示為就緒</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">此檢視未設定欄位</string>
     <string name="projects_board_no_options">尚未為欄位設定選項</string>
     <string name="projects_board_column_options">欄位選項</string>
-    <string name="projects_board_nested_count">+%1$d 個巢狀項目</string>
+    <string name="projects_board_nested_count">+%1$s 個巢狀項目</string>
     <string name="projects_move_to_column">移至欄</string>
     <string name="projects_move_to_row">移至列</string>
     <string name="projects_move_after">位於 %1$s 之後</string>
@@ -360,13 +360,13 @@
     <string name="projects_activity_commented">發表了留言</string>
     <string name="projects_attachment_delete_confirm_message">此附件將被永久刪除。</string>
     <string name="projects_attachment_delete_confirm_title">刪除附件?</string>
-    <string name="projects_settings_unsubscribe_section">取消訂閱專案</string>
+    <string name="projects_settings_unsubscribe_section">退訂專案</string>
     <string name="projects_share_link_title">分享專案</string>
     <string name="projects_sort_filter_title">排序與篩選</string>
     <string name="projects_create_prefix_hint">用於可讀的 ID，例如 %1$s-1、%1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d 個衝突檔案</item>
-        <item quantity="other">%1$d 個衝突檔案</item>
+        <item quantity="one">%1$s 個衝突檔案</item>
+        <item quantity="other">%1$s 個衝突檔案</item>
     </plurals>
     <string name="projects_design_export_saved">設計已儲存</string>
     <string name="projects_design_import_failed">無法讀取該檔案</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">專案資料已儲存</string>
     <string name="projects_exporting">正在準備匯出…</string>
     <string name="projects_board_add_column">新增欄位</string>
-    <string name="projects_design_sample">範例 %1$d</string>
+    <string name="projects_design_sample">範例 %1$s</string>
     <string name="projects_option_delete_title">刪除選項</string>
     <string name="projects_option_delete_message">您確定要刪除選項「%1$s」嗎?</string>
     <string name="projects_create_object_no_types">尚無法建立任何項目類型。請先建立所需的父項目。</string>

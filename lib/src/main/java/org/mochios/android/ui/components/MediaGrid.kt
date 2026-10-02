@@ -29,6 +29,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * Grid of image attachments in the conventional Mochi layout: one full-width,
@@ -149,7 +150,7 @@ fun MediaGrid(
                                     Text(
                                         text = stringResource(
                                             R.string.media_grid_more_count,
-                                            urls.size - maxDisplay
+                                            LocalFormat.current.formatNumber(urls.size - maxDisplay)
                                         ),
                                         color = Color.White,
                                         style = MaterialTheme.typography.titleLarge

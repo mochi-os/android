@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Kaynak kaldırıldı</string>
     <string name="feeds_settings_source_polling">Kaynak yoklaınıyor…</string>
     <string name="feeds_settings_access_updated">Erişim güncellendi</string>
-    <string name="feeds_settings_access_revoked">Erişim iptal edildi</string>
+    <string name="feeds_settings_access_revoked">Erişim kaldırıldı</string>
     <string name="feeds_settings_member_removed">Üye kaldırıldı</string>
     <string name="feeds_settings_ai_mode_updated">AI modu güncellendi</string>
     <string name="feeds_settings_ai_account_updated">AI hesabı güncellendi</string>
@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Hiç alınmadı</string>
     <string name="feeds_source_poll">Sorgula</string>
     <string name="feeds_source_transform">AI dönüşümü</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" kaldırılsın mı?</string>
-    <string name="feeds_remove_also_delete_posts">İçe aktarılan gönderiler de silinsin</string>
+    <string name="feeds_remove_source_confirm">Bu, \"%1$s\" kaynağından içerik aktarımını durduracak.</string>
+    <string name="feeds_remove_also_delete_posts">Bu kaynaktan içe aktarılan gönderiler de silinsin</string>
     <string name="feeds_suggested_credibility_title">Önerilen güvenilirlik</string>
-    <string name="feeds_suggested_credibility_body">Mochi %1$d güvenilirlik öneriyor. Kabul edilsin mi?</string>
+    <string name="feeds_suggested_credibility_body">Mochi %1$s güvenilirlik öneriyor. Kabul edilsin mi?</string>
     <string name="feeds_suggested_credibility_keep">Mevcut değeri koru</string>
     <string name="feeds_ai_processing_mode">AI işleme modu</string>
     <string name="feeds_ai_account">AI hesabı</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Herhangi bir gönderiyi sonrası için buraya kaydetmek için yer iminize dokunun.</string>
     <string name="feeds_saved_error_clear">Kaydedilen gönderiler temizlenemedi</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d yeni gönderi</item>
-        <item quantity="other">%d yeni gönderi</item>
+        <item quantity="one">%s yeni gönderi</item>
+        <item quantity="other">%s yeni gönderi</item>
     </plurals>
     <string name="feeds_caught_up">Her şeyi gördünüz</string>
     <string name="feeds_all_caught_up">Hepsi okundu</string>
@@ -166,8 +166,8 @@
     <string name="feeds_settings_field_server">Sunucu</string>
     <string name="feeds_settings_name_edit_cd">Adı düzenle</string>
     <string name="feeds_settings_section_identity">Kimlik</string>
-    <string name="feeds_unsubscribe">Aboneliği iptal et</string>
-    <string name="feeds_unsubscribed">Abonelik iptal edildi</string>
+    <string name="feeds_unsubscribe">Abonelikten çık</string>
+    <string name="feeds_unsubscribed">Abonelikten çıkıldı</string>
     <string name="feeds_access_level_comment_full">Yorum yap, tepki ver ve görüntüle</string>
     <string name="feeds_rss_mode_posts_comments">Gönderiler ve yorumlar</string>
     <string name="feeds_access_add_title">Erişim ekle</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">Gönderi içeriği</string>
     <string name="feeds_enable_memories">Anıları etkinleştir</string>
     <string name="feeds_permission_request_title">İzin isteği</string>
-    <string name="feeds_unsubscribe_confirm">Akış aboneliği iptal edilsin mi?</string>
+    <string name="feeds_unsubscribe_confirm">Akış aboneliğinden çıkılsın mı?</string>
     <string name="feeds_settings_title">%1$s ayarları</string>
     <string name="feeds_source_transform_help">Devre dışı bırakmak için boş bırakın.</string>
     <string name="feeds_settings_name_cancel_cd">Düzenlemeyi iptal et</string>
@@ -187,17 +187,17 @@
     <string name="feeds_create_first_post">İlk gönderiyi oluştur</string>
     <string name="feeds_rss_mode_posts">Gönderiler</string>
     <string name="feeds_source_last_checked">Son kontrol %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Akış aboneliğini iptal et</string>
+    <string name="feeds_settings_unsubscribe_section">Akış aboneliğinden çık</string>
     <string name="feeds_source_transform_hint">İngilizceye çevir ve madde işaretleri olarak göster.</string>
     <string name="feeds_source_url_hint_feed">Akış varlık kimliği veya parmak izi</string>
     <string name="feeds_source_credibility_label">Güvenilirlik</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d saat</item>
-        <item quantity="other">%1$d saat</item>
+        <item quantity="one">%1$s saat</item>
+        <item quantity="other">%1$s saat</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d dakika</item>
-        <item quantity="other">%1$d dakika</item>
+        <item quantity="one">%1$s dakika</item>
+        <item quantity="other">%1$s dakika</item>
     </plurals>
     <string name="feeds_source_polling_interval">%1$s aralıkla sorgulanıyor</string>
     <string name="feeds_access_level_react_full">Tepki ver ve görüntüle</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Bağlantı</string>
     <string name="feeds_share_link_title">Akış bağlantısı</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d yorum</item>
-        <item quantity="other">%1$d yorum</item>
+        <item quantity="one">%1$s yorum</item>
+        <item quantity="other">%1$s yorum</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d ek</item>
-        <item quantity="other">%1$d ek</item>
+        <item quantity="one">%1$s ek</item>
+        <item quantity="other">%1$s ek</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d yorum daha gör</item>
-        <item quantity="other">%1$d yorum daha gör</item>
+        <item quantity="one">%1$s yorum daha gör</item>
+        <item quantity="other">%1$s yorum daha gör</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">bugün %1$d yıl önce</item>
-        <item quantity="other">bugün %1$d yıl önce</item>
+        <item quantity="one">bugün %1$s yıl önce</item>
+        <item quantity="other">bugün %1$s yıl önce</item>
     </plurals>
     <string name="feeds_block">Engelle</string>
     <string name="feeds_removed_from_feed">Bu akıştan çıkarıldınız</string>

@@ -20,7 +20,7 @@
     <string name="account_section_recovery">קודי שחזור</string>
     <string name="account_recovery_codes_title">קודי שחזור</string>
     <string name="sessions_unknown_agent">מכשיר לא ידוע</string>
-    <string name="sessions_revoke_title">לבטל הפעלה?</string>
+    <string name="sessions_revoke_title">לשלול הפעלה?</string>
     <string name="account_section_oauth">התחברות צד שלישי</string>
     <string name="account_oauth_link">קשר חשבון</string>
     <string name="account_unlink">בטל קישור</string>
@@ -29,7 +29,7 @@
     <string name="account_done">בוצע</string>
     <string name="account_delete">מחק</string>
     <string name="account_rename">שנה שם</string>
-    <string name="sessions_revoke">בטל</string>
+    <string name="sessions_revoke">שלול</string>
     <string name="account_disable">השבת</string>
     <string name="account_copy">העתק</string>
     <string name="account_copy_all">העתק הכול</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">למחוק נתיב?</string>
     <string name="route_path">נתיב</string>
     <string name="route_method">שיטה</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">אפליקציה</string>
     <string name="route_method_entity">ישות</string>
     <string name="route_method_redirect">הפניה</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">הורד מ-packages.mochi-os.org</string>
     <string name="system_status_copy">העתק</string>
     <string name="system_status_peers">עמיתים</string>
-    <string name="system_status_known">מוכרים</string>
+    <string name="system_status_peers_totals">מוכרים %1$s · מחוברים %2$s · רשת שידור %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">מוכרים %1$s · מחוברים %2$s</string>
     <string name="system_status_peer_connected">מחובר</string>
     <string name="system_status_peer_disconnected">מנותק</string>
     <string name="system_status_peer_queued">הודעות בתור</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">הסר</string>
     <string name="accounts_remove_title">להסיר חשבון?</string>
     <string name="system_documents_title">מסמכים</string>
-    <string name="system_documents_description">כללי השרת, תנאים והגבלות, והודעת הפרטיות המוצגים למשתמשים שלך</string>
     <string name="system_documents_tab_rules">כללי השרת</string>
     <string name="system_documents_tab_terms">תנאים והגבלות</string>
     <string name="system_documents_tab_privacy">פרטיות</string>
     <string name="system_documents_language">שפה</string>
     <string name="system_documents_no_language">אין מסמך זמין עבור שפה זו.</string>
-    <string name="system_documents_customised">מותאם אישית</string>
     <string name="system_documents_using_default">משתמש בברירת המחדל המצורפת</string>
     <string name="system_documents_revert">החזר לברירת מחדל</string>
     <string name="system_documents_save">שמור</string>
@@ -182,28 +183,26 @@
     <string name="system_users_delete">מחק משתמש</string>
     <string name="system_users_delete_title">למחוק משתמש?</string>
     <string name="system_users_manage_sessions">ניהול הפעלות</string>
-    <string name="system_users_sessions_description">הצג ובטל הפעלות פעילות עבור משתמש זה.</string>
     <string name="system_users_sessions_empty">למשתמש זה אין הפעלות פעילות.</string>
-    <string name="system_users_revoke">בטל</string>
-    <string name="system_users_revoke_all">בטל את כל ההפעלות</string>
+    <string name="system_users_revoke">שלול</string>
+    <string name="system_users_revoke_all">שלול את כל ההפעלות</string>
     <string name="system_users_unknown_browser">דפדפן לא ידוע</string>
     <string name="system_users_unknown">לא ידוע</string>
     <string name="system_users_previous">הקודם</string>
     <string name="system_users_next">הבא</string>
     <string name="system_users_empty">לא נמצאו משתמשים</string>
     <string name="system_users_empty_search">לא נמצאו משתמשים תואמים לחיפוש שלך</string>
-    <string name="system_users_empty_search_hint">נסה להתאים את קריטריוני החיפוש שלך</string>
     <string name="system_users_toast_created">המשתמש נוצר</string>
     <string name="system_users_toast_updated">המשתמש עודכן</string>
     <string name="system_users_toast_deleted">המשתמש נמחק</string>
     <string name="system_users_toast_suspended">המשתמש הושעה</string>
     <string name="system_users_toast_suspension_removed">ההשעיה הוסרה</string>
-    <string name="system_users_toast_session_revoked">ההפעלה בוטלה</string>
+    <string name="system_users_toast_session_revoked">ההפעלה נשללה</string>
     <string name="system_users_toast_create_failed">יצירת המשתמש נכשלה</string>
     <string name="system_users_toast_update_failed">עדכון המשתמש נכשל</string>
     <string name="system_users_toast_delete_failed">מחיקת המשתמש נכשלה</string>
     <string name="system_users_toast_status_failed">עדכון סטטוס המשתמש נכשל</string>
-    <string name="system_users_toast_revoke_failed">ביטול ההפעלה נכשל</string>
+    <string name="system_users_toast_revoke_failed">שלילת ההפעלה נכשלה</string>
 
     <string name="settings_home_sessions">הפעלות</string>
     <string name="settings_home_privacy">מדיניות פרטיות</string>
@@ -211,17 +210,19 @@
     <string name="settings_home_terms">תנאי שירות</string>
     <string name="account_passkeys_empty">אין מפתחות גישה רשומים.</string>
     <string name="account_passkey_register_title">הוסף מפתח גישה</string>
-    <string name="account_passkey_register_message">המכשיר שלך יבקש ממך לאשר. מפתח הגישה קשור למכשיר זה ומשמש לכניסות עתידיות.</string>
     <string name="account_passkey_name_label">שם (אופציונלי)</string>
     <string name="account_passkey_delete_message">\"%1$s\" כבר לא יחבר אותך.</string>
-    <string name="account_totp_description">התחבר עם קוד בן 6 ספרות מאפליקציית אימות.</string>
     <string name="account_totp_enabled">מאמת מופעל.</string>
     <string name="account_totp_setup_step1">סרוק או הזן סוד זה באפליקציית האימות שלך.</string>
     <string name="account_totp_setup_step2">הזן את הקוד בן 6 הספרות שהאפליקציה שלך מציגה.</string>
     <string name="account_totp_code">קוד</string>
     <string name="account_totp_disable_message">לא תוכל יותר להתחבר עם קוד מאמת.</string>
     <string name="account_recovery_none">לא נוצרו קודי שחזור.</string>
-    <string name="account_recovery_count">%1$d קודי שחזור לא בשימוש.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">נותר %1$s קוד שחזור.</item>
+        <item quantity="two">נותרו %1$s קודי שחזור.</item>
+        <item quantity="other">נותרו %1$s קודי שחזור.</item>
+    </plurals>
     <string name="account_recovery_generate">צור קודים</string>
     <string name="account_recovery_regenerate">צור קודים מחדש</string>
     <string name="account_recovery_regen_title">לייצר מחדש קודי שחזור?</string>
@@ -237,7 +238,7 @@
     <string name="account_last_used">שימוש אחרון %1$s</string>
     <string name="route_delete_message">פעולה זו תסיר את המסלול עבור הנתיב \"%1$s\".</string>
     <string name="route_empty">לא הוגדרו מסלולים.</string>
-    <string name="route_meta">עדיפות %1$d · %2$s</string>
+    <string name="route_meta">עדיפות %1$s · %2$s</string>
     <string name="interests_search_placeholder">חפש נושאים להוספה…</string>
     <string name="interests_empty">עדיין אין תחומי עניין.</string>
     <string name="interests_summary_regenerate">צור סיכום מחדש</string>
@@ -268,9 +269,13 @@
     <string name="system_users_delete_message">פעולה זו תמחק לצמיתות את המשתמש \"%1$s\". לא ניתן לבטל פעולה זו.</string>
     <string name="system_users_sessions_title">הפעלות של %1$s</string>
     <string name="system_users_session_last_accessed">גישה אחרונה: %1$s</string>
-    <string name="system_users_revoke_all_title">לבטל את כל ההפעלות?</string>
+    <string name="system_users_revoke_all_title">לשלול את כל ההפעלות?</string>
     <string name="system_users_revoke_all_message">כל ההפעלות הפעילות של משתמש זה יתנתקו.</string>
-    <string name="system_users_pagination_status">מציג %1$d–%2$d מתוך %3$d משתמשים</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">מציג %1$s–%2$s מתוך %3$s משתמש</item>
+        <item quantity="two">מציג %1$s–%2$s מתוך %3$s משתמשים</item>
+        <item quantity="other">מציג %1$s–%2$s מתוך %3$s משתמשים</item>
+    </plurals>
     <string name="account_title">חשבון</string>
     <string name="account_section_identity">זהות</string>
     <string name="account_identity_identity">זהות</string>
@@ -305,14 +310,14 @@
     <plurals name="notifprefs_test_sent">
         <item quantity="one">הבדיקה נשלחה ליעד אחד</item>
         <item quantity="two">הבדיקה נשלחה לשני יעדים</item>
-        <item quantity="many">הבדיקה נשלחה ל-%1$d יעדים</item>
-        <item quantity="other">הבדיקה נשלחה ל-%1$d יעדים</item>
+        <item quantity="many">הבדיקה נשלחה ל-%1$s יעדים</item>
+        <item quantity="other">הבדיקה נשלחה ל-%1$s יעדים</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">הופסקה הפעלה אחת</item>
-        <item quantity="two">הופסקו שתי הפעלות</item>
-        <item quantity="many">הופסקו %1$d הפעלות</item>
-        <item quantity="other">הופסקו %1$d הפעלות</item>
+        <item quantity="one">נשללה הפעלה אחת</item>
+        <item quantity="two">נשללו שתי הפעלות</item>
+        <item quantity="many">נשללו %1$s הפעלות</item>
+        <item quantity="other">נשללו %1$s הפעלות</item>
     </plurals>
     <string name="login_title">התחברות</string>
     <string name="login_section_methods">שיטות התחברות</string>
@@ -343,18 +348,15 @@
     <string name="system_status_reachability_public">ציבורי</string>
     <string name="system_status_reachability_private">פרטי</string>
     <string name="system_status_reachability_unknown">לא ידוע</string>
-    <string name="system_status_relay">דרך ממסר</string>
-    <string name="system_status_mesh">רשת שידור</string>
+    <string name="system_status_reachability_relay">%1$s · דרך ממסר</string>
     <string name="system_status_broadcast">שידור אחרון</string>
     <string name="system_status_queued_broadcasts">הודעות שידור בתור</string>
     <string name="system_setting_hostname_publish">הכרזת שם המארח והדומיינים לשרתים אחרים</string>
     <string name="system_setting_hostname">שם המארח המוכרז לשרתים אחרים</string>
     <string name="system_status_peer_id">מזהה עמית</string>
     <string name="system_status_holepunch">ניקוב</string>
-    <string name="system_status_holepunch_value">%1$d הצליחו · %2$d נכשלו</string>
     <string name="system_status_awaiting_routing">הודעות הממתינות לניתוב</string>
     <string name="system_status_relay_service">שירות ממסר</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d הזמנות · %3$d מעגלים · %4$d נדחו</string>
     <string name="route_target_select">בחר</string>
     <string name="account_data_description">הורד גיבוי מלא שתוכל לשחזר בשרת הזה או בשרת Mochi אחר.</string>
     <string name="route_target_none">אין יעדים זמינים</string>
@@ -379,7 +381,13 @@
     <string name="accounts_device_seen">נראה לאחרונה %1$s</string>
     <string name="notifprefs_device_app">%1$s · אפליקציה</string>
     <string name="notifprefs_device_push">%1$s · פוש</string>
-    <string name="notifprefs_test_partial">הבדיקה נשלחה אל %1$d מתוך %2$d יעדים</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">הבדיקה נשלחה אל %1$s מתוך %2$s יעד</item>
+        <item quantity="two">הבדיקה נשלחה אל %1$s מתוך %2$s יעדים</item>
+        <item quantity="other">הבדיקה נשלחה אל %1$s מתוך %2$s יעדים</item>
+    </plurals>
     <string name="notifprefs_test_none">לא הוגדרו יעדים</string>
     <string name="notifprefs_transport_fcm">פוש ל-Android</string>
     <string name="notifprefs_no_destinations">אין יעדים</string>
@@ -389,13 +397,41 @@
     <string name="accounts_field_topic">נושא</string>
     <string name="accounts_field_secret">סוד חתימה</string>
     <string name="account_totp_open">פתיחה באפליקציית האימות</string>
-    <string name="accounts_revoke">בטל גישה</string>
+    <string name="accounts_revoke">שלול גישה</string>
     <string name="accounts_capability_calendar">יומן</string>
     <string name="accounts_capability_notify">התראות</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">התחברות</string>
     <string name="accounts_provider_caldav">שרת יומנים</string>
-    <string name="accounts_revoke_confirm">פעולה זו תבטל את גישת היומן של %1$s. הכניסה עם %2$s תישאר עד שתנתק אותה בדף הכניסה.</string>
+    <string name="accounts_revoke_confirm">פעולה זו תשלול את גישת היומן של %1$s. הכניסה עם %2$s תישאר עד שתנתק אותה בדף הכניסה.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ערכת נושא לא ידועה</string>
+    <string name="system_documents_modified">שונה</string>
+    <string name="system_documents_discard_title">למחוק את השינויים?</string>
+    <string name="system_documents_discard">מחיקה</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s הצליח</item>
+        <item quantity="two">%1$s הצליחו</item>
+        <item quantity="other">%1$s הצליחו</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s נכשל</item>
+        <item quantity="two">%1$s נכשלו</item>
+        <item quantity="other">%1$s נכשלו</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s הזמנה</item>
+        <item quantity="two">%1$s / %2$s הזמנות</item>
+        <item quantity="other">%1$s / %2$s הזמנות</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s מעגל</item>
+        <item quantity="two">%1$s מעגלים</item>
+        <item quantity="other">%1$s מעגלים</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s נדחתה</item>
+        <item quantity="two">%1$s נדחו</item>
+        <item quantity="other">%1$s נדחו</item>
+    </plurals>
 </resources>

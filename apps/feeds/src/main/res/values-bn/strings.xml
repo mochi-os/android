@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">কখনো আনা হয়নি</string>
     <string name="feeds_source_poll">পোল</string>
     <string name="feeds_source_transform">AI রূপান্তর</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" সরাবেন?</string>
-    <string name="feeds_remove_also_delete_posts">আমদানি করা পোস্টগুলিও মুছুন</string>
+    <string name="feeds_remove_source_confirm">এটি \"%1$s\" থেকে কনটেন্ট আমদানি বন্ধ করবে।</string>
+    <string name="feeds_remove_also_delete_posts">এই উৎস থেকে আমদানি করা পোস্টগুলিও মুছুন</string>
     <string name="feeds_suggested_credibility_title">প্রস্তাবিত বিশ্বাসযোগ্যতা</string>
-    <string name="feeds_suggested_credibility_body">Mochi %1$d বিশ্বাসযোগ্যতার পরামর্শ দিচ্ছে। গ্রহণ করবেন?</string>
+    <string name="feeds_suggested_credibility_body">Mochi %1$s বিশ্বাসযোগ্যতার পরামর্শ দিচ্ছে। গ্রহণ করবেন?</string>
     <string name="feeds_suggested_credibility_keep">বর্তমান রাখুন</string>
     <string name="feeds_ai_processing_mode">AI প্রক্রিয়াকরণ মোড</string>
     <string name="feeds_ai_account">AI অ্যাকাউন্ট</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">পরে দেখার জন্য এখানে সংরক্ষণ করতে যেকোনো পোস্টের বুকমার্কে ট্যাপ করুন।</string>
     <string name="feeds_saved_error_clear">সংরক্ষিত পোস্ট মোছা যায়নি</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d নতুন পোস্ট</item>
-        <item quantity="other">%d নতুন পোস্ট</item>
+        <item quantity="one">%s নতুন পোস্ট</item>
+        <item quantity="other">%s নতুন পোস্ট</item>
     </plurals>
     <string name="feeds_caught_up">আপনি সব দেখে ফেলেছেন</string>
     <string name="feeds_all_caught_up">সব দেখা হয়ে গেছে</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">ফিড এন্টিটি আইডি বা ফিঙ্গারপ্রিন্ট</string>
     <string name="feeds_source_credibility_label">বিশ্বাসযোগ্যতা</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d ঘণ্টা</item>
-        <item quantity="other">%1$d ঘণ্টা</item>
+        <item quantity="one">%1$s ঘণ্টা</item>
+        <item quantity="other">%1$s ঘণ্টা</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d মিনিট</item>
-        <item quantity="other">%1$d মিনিট</item>
+        <item quantity="one">%1$s মিনিট</item>
+        <item quantity="other">%1$s মিনিট</item>
     </plurals>
     <string name="feeds_source_polling_interval">প্রতি %1$s অন্তর পোলিং</string>
     <string name="feeds_access_level_react_full">প্রতিক্রিয়া এবং দেখুন</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">লিঙ্ক</string>
     <string name="feeds_share_link_title">ফিড লিঙ্ক</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$dটি মন্তব্য</item>
-        <item quantity="other">%1$dটি মন্তব্য</item>
+        <item quantity="one">%1$sটি মন্তব্য</item>
+        <item quantity="other">%1$sটি মন্তব্য</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d সংযুক্তি</item>
-        <item quantity="other">%1$d সংযুক্তি</item>
+        <item quantity="one">%1$s সংযুক্তি</item>
+        <item quantity="other">%1$s সংযুক্তি</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">আরও %1$d মন্তব্য দেখুন</item>
-        <item quantity="other">আরও %1$d মন্তব্য দেখুন</item>
+        <item quantity="one">আরও %1$s মন্তব্য দেখুন</item>
+        <item quantity="other">আরও %1$s মন্তব্য দেখুন</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">আজ %1$d বছর আগে</item>
-        <item quantity="other">আজ %1$d বছর আগে</item>
+        <item quantity="one">আজ %1$s বছর আগে</item>
+        <item quantity="other">আজ %1$s বছর আগে</item>
     </plurals>
     <string name="feeds_block">ব্লক করুন</string>
     <string name="feeds_removed_from_feed">আপনাকে এই ফিড থেকে সরানো হয়েছে</string>

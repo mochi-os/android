@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Notas</string>
     <string name="staff_accounts_reason_label">Motivo</string>
     <string name="staff_accounts_reason_optional_label">Motivo (opcional)</string>
-    <string name="staff_accounts_sales">%1$d vendas</string>
+    <string name="staff_accounts_sales">%1$s vendas</string>
     <string name="staff_accounts_search_clear">Borrar busca</string>
     <string name="staff_accounts_search_placeholder">Buscar</string>
     <string name="staff_accounts_seller_buyers">Só compradores</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Sen nome</string>
     <string name="staff_accounts_unsuspend">Levantar suspensión</string>
     <string name="staff_accounts_unsuspended_toast">Conta non suspendida</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Cancelar</string>
     <string name="staff_appeals_decide">Decidir</string>
     <string name="staff_appeals_decision_denied">Manter o anuncio rexeitado</string>

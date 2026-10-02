@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Obavijesti o uređivanjima stranica, komentarima i pozivnicama.</string>
     <string name="wikis_pageview_toc_expand">Prikaži sadržaj</string>
     <string name="wikis_pageview_toc_collapse">Sakrij sadržaj</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Ažurirano %1$s</string>
     <string name="wikis_pageview_not_found_description">Stranica „%1$s\" još ne postoji.</string>
     <string name="wikis_pageview_share_chooser">Poveznica wikija</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Spremate se izbrisati stranicu „%1$s\" (%2$s). Ovu radnju možete poništiti vraćanjem iz povijesti.</string>
     <string name="wikis_delete_page_success">Stranica izbrisana</string>
     <string name="wikis_revert_page_title">Vrati stranicu</string>
-    <string name="wikis_revert_page_message">Spremate se vratiti %1$s na verziju %2$d. Ovo će stvoriti novu reviziju sa sadržajem verzije %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Vraćeno na verziju %1$d</string>
-    <string name="wikis_revert_page_success">Vraćeno na verziju %1$d</string>
+    <string name="wikis_revert_page_message">Spremate se vratiti %1$s na verziju %2$s. Ovo će stvoriti novu reviziju sa sadržajem verzije %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Vraćeno na verziju %1$s</string>
+    <string name="wikis_revert_page_success">Vraćeno na verziju %1$s</string>
     <string name="wikis_rename_page_renaming">Preimenovanje…</string>
     <string name="wikis_rename_page_success">Stranica preimenovana</string>
-    <string name="wikis_history_viewing">Pregled povijesti za %1$s, trenutna verzija %2$d</string>
-    <string name="wikis_revision_version_badge">Verzija %1$d</string>
+    <string name="wikis_history_viewing">Pregled povijesti za %1$s, trenutna verzija %2$s</string>
+    <string name="wikis_revision_version_badge">Verzija %1$s</string>
     <string name="wikis_search_pages_placeholder">Pretraži stranice po naslovu ili sadržaju…</string>
     <string name="wikis_search_no_results">Nema stranica za „%1$s\". Pokušajte druge termine pretrage.</string>
     <string name="wikis_search_updated">Ažurirano %1$s</string>
@@ -289,46 +289,46 @@
     <string name="wikis_revision_author">prema %1$s</string>
     <string name="wikis_revision_show_page">Prikaži stranicu</string>
     <string name="wikis_revision_compare_failed">Nije moguće učitati prethodnu verziju za usporedbu.</string>
-    <string name="wikis_revision_changes_from">Promjene od verzije %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Promjene od verzije %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d komentar</item>
-        <item quantity="few">%d komentara</item>
-        <item quantity="other">%d komentara</item>
+        <item quantity="one">%s komentar</item>
+        <item quantity="few">%s komentara</item>
+        <item quantity="other">%s komentara</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d odgovor</item>
-        <item quantity="few">+%d još odgovora</item>
-        <item quantity="other">+%d još odgovora</item>
+        <item quantity="one">%s odgovor</item>
+        <item quantity="few">+%s još odgovora</item>
+        <item quantity="other">+%s još odgovora</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d stranica</item>
-        <item quantity="few">%d stranice</item>
-        <item quantity="other">%d stranica</item>
+        <item quantity="one">%s stranica</item>
+        <item quantity="few">%s stranice</item>
+        <item quantity="other">%s stranica</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d datoteka</item>
-        <item quantity="few">%d datoteke</item>
-        <item quantity="other">%d datoteka</item>
+        <item quantity="one">%s datoteka</item>
+        <item quantity="few">%s datoteke</item>
+        <item quantity="other">%s datoteka</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d slika</item>
-        <item quantity="few">%d slike</item>
-        <item quantity="other">%d slika</item>
+        <item quantity="one">%s slika</item>
+        <item quantity="few">%s slike</item>
+        <item quantity="other">%s slika</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="few">%d dokumenta</item>
-        <item quantity="other">%d dokumenata</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="few">%s dokumenta</item>
+        <item quantity="other">%s dokumenata</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d stranica s ovom oznakom</item>
-        <item quantity="few">%d stranice s ovom oznakom</item>
-        <item quantity="other">%d stranica s ovom oznakom</item>
+        <item quantity="one">%s stranica s ovom oznakom</item>
+        <item quantity="few">%s stranice s ovom oznakom</item>
+        <item quantity="other">%s stranica s ovom oznakom</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Pronađeno %1$d rezultat za "%2$s"</item>
-        <item quantity="few">Pronađeno %1$d rezultata za "%2$s"</item>
-        <item quantity="other">Pronađeno %1$d rezultata za "%2$s"</item>
+        <item quantity="one">Pronađen %1$s rezultat za \"%2$s\"</item>
+        <item quantity="few">Pronađena %1$s rezultata za \"%2$s\"</item>
+        <item quantity="other">Pronađeno %1$s rezultata za \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Opis nije bilo moguće spremiti</string>
     <string name="wikis_attachments_upload_types">Podržane datoteke: slike, PDF, DOC, DOCX, TXT i MD.</string>
@@ -337,8 +337,8 @@
     <string name="wikis_rss_copied_new">Novi RSS URL kopiran u međuspremnik</string>
     <string name="wikis_rss_exists">Ovaj URL kanala već je izdan i ne može se ponovno prikazati.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Prikazuje se prvi %1$d komentar.</item>
-        <item quantity="few">Prikazuje se prvih %1$d komentara.</item>
-        <item quantity="other">Prikazuje se prvih %1$d komentara.</item>
+        <item quantity="one">Prikazuje se prvi %1$s komentar.</item>
+        <item quantity="few">Prikazuju se prva %1$s komentara.</item>
+        <item quantity="other">Prikazuje se prvih %1$s komentara.</item>
     </plurals>
 </resources>

@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">已連結帳戶</string>
     <string name="settings_home_interests">興趣</string>
     <string name="account_section_passkeys">通行密鑰</string>
-    <string name="account_passkey_register">新增通行金鑰</string>
-    <string name="account_passkey_delete_title">刪除通行金鑰?</string>
+    <string name="account_passkey_register">新增通行密鑰</string>
+    <string name="account_passkey_delete_title">刪除通行密鑰?</string>
     <string name="account_section_totp">驗證器應用程式</string>
     <string name="account_totp_setup">設定驗證器</string>
     <string name="account_totp_setup_title">設定驗證器</string>
@@ -23,7 +23,7 @@
     <string name="sessions_revoke_title">撤銷工作階段？</string>
     <string name="account_section_oauth">第三方登入</string>
     <string name="account_oauth_link">連結帳號</string>
-    <string name="account_unlink">取消連結</string>
+    <string name="account_unlink">解除連結</string>
     <string name="account_cancel">取消</string>
     <string name="account_save">儲存</string>
     <string name="account_done">完成</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">刪除路由?</string>
     <string name="route_path">路徑</string>
     <string name="route_method">方法</string>
+    <string name="route_picker_value">%1$s：%2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">應用程式</string>
     <string name="route_method_entity">實體</string>
     <string name="route_method_redirect">重新導向</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">從 packages.mochi-os.org 下載</string>
     <string name="system_status_copy">複製</string>
     <string name="system_status_peers">對等節點</string>
-    <string name="system_status_known">已知</string>
+    <string name="system_status_peers_totals">已知 %1$s · 已連結 %2$s · 廣播網狀網路 %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">已知 %1$s · 已連結 %2$s</string>
     <string name="system_status_peer_connected">已連結</string>
     <string name="system_status_peer_disconnected">已斷線</string>
     <string name="system_status_peer_queued">佇列中的訊息</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">移除</string>
     <string name="accounts_remove_title">移除帳戶?</string>
     <string name="system_documents_title">文件</string>
-    <string name="system_documents_description">向您的使用者顯示的伺服器規則、條款與細則,以及隱私通知</string>
     <string name="system_documents_tab_rules">伺服器規則</string>
     <string name="system_documents_tab_terms">條款與細則</string>
     <string name="system_documents_tab_privacy">隱私</string>
     <string name="system_documents_language">語言</string>
     <string name="system_documents_no_language">此語言無可用文件。</string>
-    <string name="system_documents_customised">已自訂</string>
     <string name="system_documents_using_default">使用內建預設值</string>
     <string name="system_documents_revert">還原為預設值</string>
     <string name="system_documents_save">儲存</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">刪除使用者</string>
     <string name="system_users_delete_title">刪除使用者?</string>
     <string name="system_users_manage_sessions">管理工作階段</string>
-    <string name="system_users_sessions_description">檢視並撤銷此使用者作用中的工作階段。</string>
     <string name="system_users_sessions_empty">此使用者沒有作用中的工作階段。</string>
     <string name="system_users_revoke">撤銷</string>
     <string name="system_users_revoke_all">撤銷所有工作階段</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">下一個</string>
     <string name="system_users_empty">找不到使用者</string>
     <string name="system_users_empty_search">沒有使用者符合您的搜尋</string>
-    <string name="system_users_empty_search_hint">嘗試調整您的搜尋條件</string>
     <string name="system_users_toast_created">使用者已建立</string>
     <string name="system_users_toast_updated">使用者已更新</string>
     <string name="system_users_toast_deleted">使用者已刪除</string>
@@ -211,17 +210,17 @@
     <string name="settings_home_terms">服務條款</string>
     <string name="account_passkeys_empty">未註冊任何通行密鑰。</string>
     <string name="account_passkey_register_title">新增通行密鑰</string>
-    <string name="account_passkey_register_message">您的裝置會提示您確認。通行密鑰會繫結到此裝置，用於日後登入。</string>
     <string name="account_passkey_name_label">名稱（選填）</string>
     <string name="account_passkey_delete_message">\"%1$s\"將無法再用於登入。</string>
-    <string name="account_totp_description">使用驗證器應用程式的 6 位數代碼登入。</string>
     <string name="account_totp_enabled">驗證器已啟用。</string>
     <string name="account_totp_setup_step1">在您的驗證器應用程式中掃描或輸入此密鑰。</string>
     <string name="account_totp_setup_step2">輸入應用程式顯示的 6 位數代碼。</string>
     <string name="account_totp_code">代碼</string>
     <string name="account_totp_disable_message">您將無法使用驗證器代碼登入。</string>
     <string name="account_recovery_none">尚未產生復原代碼。</string>
-    <string name="account_recovery_count">%1$d 個未使用的復原代碼。</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">剩餘 %1$s 個復原代碼。</item>
+    </plurals>
     <string name="account_recovery_generate">產生代碼</string>
     <string name="account_recovery_regenerate">重新產生代碼</string>
     <string name="account_recovery_regen_title">重新產生復原代碼？</string>
@@ -237,7 +236,7 @@
     <string name="account_last_used">上次使用 %1$s</string>
     <string name="route_delete_message">這會移除路徑\"%1$s\"的路由。</string>
     <string name="route_empty">未設定任何路由。</string>
-    <string name="route_meta">優先順序 %1$d · %2$s</string>
+    <string name="route_meta">優先順序 %1$s · %2$s</string>
     <string name="interests_search_placeholder">搜尋要新增的主題…</string>
     <string name="interests_empty">還沒有興趣。</string>
     <string name="interests_summary_regenerate">重新產生摘要</string>
@@ -270,7 +269,9 @@
     <string name="system_users_session_last_accessed">上次存取：%1$s</string>
     <string name="system_users_revoke_all_title">撤銷所有工作階段？</string>
     <string name="system_users_revoke_all_message">此使用者所有使用中的工作階段都會被登出。</string>
-    <string name="system_users_pagination_status">顯示 %3$d 位使用者中的第 %1$d–%2$d 位</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">顯示 %3$s 位使用者中的第 %1$s–%2$s 位</item>
+    </plurals>
     <string name="account_title">帳戶</string>
     <string name="account_section_identity">身分</string>
     <string name="account_identity_identity">身分</string>
@@ -303,11 +304,11 @@
     <string name="domain_verify">驗證 DNS</string>
     <string name="settings_home_domains">網域</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">已向 %1$d 個目標傳送測試</item>
-        <item quantity="other">已向 %1$d 個目標傳送測試</item>
+        <item quantity="one">已向 %1$s 個目標傳送測試</item>
+        <item quantity="other">已向 %1$s 個目標傳送測試</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">已撤銷 %1$d 個工作階段</item>
+        <item quantity="other">已撤銷 %1$s 個工作階段</item>
     </plurals>
     <string name="login_title">登入</string>
     <string name="login_section_methods">登入方式</string>
@@ -338,18 +339,15 @@
     <string name="system_status_reachability_public">公開</string>
     <string name="system_status_reachability_private">私人</string>
     <string name="system_status_reachability_unknown">未知</string>
-    <string name="system_status_relay">經由中繼</string>
-    <string name="system_status_mesh">廣播網狀網路</string>
+    <string name="system_status_reachability_relay">%1$s · 經由中繼</string>
     <string name="system_status_broadcast">最後廣播</string>
     <string name="system_status_queued_broadcasts">佇列中的廣播訊息</string>
     <string name="system_setting_hostname_publish">向其他伺服器公告主機名稱和網域</string>
     <string name="system_setting_hostname">向其他伺服器公告的主機名稱</string>
     <string name="system_status_peer_id">對等節點 ID</string>
     <string name="system_status_holepunch">打洞穿透</string>
-    <string name="system_status_holepunch_value">%1$d 成功 · %2$d 失敗</string>
     <string name="system_status_awaiting_routing">等待路由的訊息</string>
     <string name="system_status_relay_service">中繼服務</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d 預留 · %3$d 線路 · %4$d 拒絕</string>
     <string name="route_target_select">選取</string>
     <string name="account_data_description">下載完整備份，你可以在本伺服器或其他 Mochi 伺服器上還原。</string>
     <string name="route_target_none">沒有可用的目標</string>
@@ -374,7 +372,11 @@
     <string name="accounts_device_seen">最後看到 %1$s</string>
     <string name="notifprefs_device_app">%1$s · 應用程式</string>
     <string name="notifprefs_device_push">%1$s · 推播</string>
-    <string name="notifprefs_test_partial">測試已傳送至 %2$d 個目的地中的 %1$d 個</string>
+    <string name="notifprefs_destination_rss">RSS：%1$s</string>
+    <string name="notifprefs_topic_title">%1$s：%2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">測試已傳送至 %2$s 個目的地中的 %1$s 個</item>
+    </plurals>
     <string name="notifprefs_test_none">未設定目的地</string>
     <string name="notifprefs_transport_fcm">Android 推播</string>
     <string name="notifprefs_no_destinations">沒有目標</string>
@@ -393,4 +395,22 @@
     <string name="accounts_revoke_confirm">這將撤銷 %1$s 的行事曆存取權。使用 %2$s 登入會保留，直到你在登入頁面解除連結。</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">未知主題</string>
+    <string name="system_documents_modified">已修改</string>
+    <string name="system_documents_discard_title">捨棄變更？</string>
+    <string name="system_documents_discard">捨棄</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">成功 %1$s 次</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">失敗 %1$s 次</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$s / %2$s 個預留</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$s 條線路</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">拒絕 %1$s 次</item>
+    </plurals>
 </resources>

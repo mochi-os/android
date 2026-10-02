@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Wysyłanie…</string>
     <string name="market_checkout_subscribing">Subskrybowanie…</string>
     <string name="market_filter_remove">Usuń filtr</string>
-    <string name="market_listing_detail_sales_count">%1$d sprzedaży</string>
-    <string name="market_profile_sales_count">%1$d sprzedaży</string>
+    <string name="market_listing_detail_sales_count">%1$s sprzedaży</string>
+    <string name="market_profile_sales_count">%1$s sprzedaży</string>
     <string name="market_purchase_dispute_response">Odpowiedź sprzedawcy</string>
     <string name="market_purchases_order_label">Zamówienie #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Opowiedz kupującym o sobie…</string>
     <string name="market_account_load_failed">Nie udało się załadować konta</string>
     <string name="market_account_save_failed">Nie udało się zapisać zmian</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Aktualna: %1$s</string>
     <string name="market_bids_ends_in">Kończy się za %1$s</string>
     <string name="market_bids_your_bid">Twoja oferta: %1$s</string>
-    <string name="market_carousel_main">Zdjęcie %1$d z %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatura %1$d</string>
+    <string name="market_carousel_main">Zdjęcie %1$s z %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatura %1$s</string>
     <string name="market_checkout_browser_unavailable">Brak dostępnej przeglądarki do otwarcia strony płatności</string>
     <string name="market_checkout_pay_button">Zapłać przez Stripe</string>
     <string name="market_checkout_processing">Przetwarzanie…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Dołącz dowody</string>
-    <string name="market_dispute_dialog_attach_count">Załączono pliki: %1$d</string>
+    <string name="market_dispute_dialog_attach_count">Załączono pliki: %1$s</string>
     <string name="market_dispute_dialog_evidence_role_staff">Personel Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Przesłane dowody</string>
     <string name="market_dispute_dialog_evidence_submitter_line">przesłane przez %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Adres URL</string>
     <string name="market_editor_assets_empty">Brak zasobów</string>
     <string name="market_editor_category_none">Wybierz kategorię</string>
-    <string name="market_editor_days">%1$d dni</string>
+    <string name="market_editor_days">%1$s dni</string>
     <string name="market_editor_delete">Usuń ofertę</string>
     <string name="market_editor_delete_confirm_message">Spowoduje to trwałe usunięcie oferty.</string>
     <string name="market_editor_delete_confirm_title">Usunąć ofertę?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Nie udało się wczytać rozmowy</string>
     <string name="market_messages_send_failed">Nie udało się wysłać wiadomości</string>
     <string name="market_messages_thread_title">Rozmowa</string>
-    <string name="market_messages_unread_badge">%1$d nieprzeczytanych</string>
-    <string name="market_price_from">od %1$s</string>
+    <string name="market_messages_unread_badge">%1$s nieprzeczytanych</string>
+    <string name="market_price_from">Od %1$s</string>
     <string name="market_price_high_bid">Najwyższa oferta: %1$s</string>
     <string name="market_price_instant_buy">kup teraz: %1$s</string>
     <string name="market_price_per_month">%1$s / miesiąc</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Dołączył(a) %1$s</string>
     <string name="market_profile_no_reviews">Brak recenzji.</string>
     <string name="market_profile_rating_breakdown">Rozkład ocen</string>
-    <string name="market_profile_stars_value">%1$d gwiazdek</string>
+    <string name="market_profile_stars_value">%1$s gwiazdek</string>
     <string name="market_purchase_dispute_chargeback">Obciążenie zwrotne %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Twój bank zgłosił obciążenie zwrotne dla tego zamówienia. Stripe rozpatruje spór ze sprzedawcą; wynik pojawi się tutaj po jego rozstrzygnięciu.</string>
-    <string name="market_purchase_download_many">Pobierz swoje %1$d plików poniżej.</string>
+    <string name="market_purchase_download_many">Pobierz swoje %1$s plików poniżej.</string>
     <string name="market_purchase_download_one">Pobierz swój plik poniżej.</string>
     <string name="market_purchase_review_from">Recenzja od %1$s</string>
     <string name="market_purchases_auction_label">Aukcja #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s zwrócone</string>
     <string name="market_purchases_won_for">Wygrana za %1$s</string>
-    <string name="market_rating_reviews">(%1$d recenzji)</string>
+    <string name="market_rating_reviews">(%1$s recenzji)</string>
     <string name="market_refund_amount_label">Kwota</string>
     <string name="market_refund_dialog_amount_help">Pozostaw puste, aby zwrócić całość zamówienia.</string>
     <string name="market_refund_dialog_amount_label">Kwota</string>
@@ -785,15 +785,15 @@
     <string name="market_listings_remove_message_auction">Spowoduje to anulowanie aukcji. Ogłoszenie zostanie ukryte przed kupującymi; możesz je później wystawić ponownie jako nowy szkic.</string>
     <string name="market_listings_remove_title">Usunąć tę ofertę?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Spowoduje to anulowanie aukcji i powiadomienie %1$d aktywnego licytującego. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>
-        <item quantity="few">Spowoduje to anulowanie aukcji i powiadomienie %1$d aktywnych licytujących. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>
-        <item quantity="many">Spowoduje to anulowanie aukcji i powiadomienie %1$d aktywnych licytujących. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>
-        <item quantity="other">Spowoduje to anulowanie aukcji i powiadomienie %1$d aktywnych licytujących. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>
+        <item quantity="one">Spowoduje to anulowanie aukcji i powiadomienie %1$s aktywnego licytującego. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>
+        <item quantity="few">Spowoduje to anulowanie aukcji i powiadomienie %1$s aktywnych licytujących. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>
+        <item quantity="many">Spowoduje to anulowanie aukcji i powiadomienie %1$s aktywnych licytujących. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>
+        <item quantity="other">Spowoduje to anulowanie aukcji i powiadomienie %1$s aktywnych licytujących. Oferta zostanie ukryta przed kupującymi; później możesz wystawić ją ponownie jako nowy szkic.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Spowoduje to anulowanie %1$d aktywnej subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
-        <item quantity="few">Spowoduje to anulowanie %1$d aktywnych subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
-        <item quantity="many">Spowoduje to anulowanie %1$d aktywnych subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
-        <item quantity="other">Spowoduje to anulowanie %1$d aktywnych subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
+        <item quantity="one">Spowoduje to anulowanie %1$s aktywnej subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
+        <item quantity="few">Spowoduje to anulowanie %1$s aktywnych subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
+        <item quantity="many">Spowoduje to anulowanie %1$s aktywnych subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
+        <item quantity="other">Spowoduje to anulowanie %1$s aktywnych subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
     </plurals>
 </resources>

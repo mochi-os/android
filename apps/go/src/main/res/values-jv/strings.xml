@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Busak</string>
     <string name="go_delete_message">Game iki bakal dibusak saka daftar sampeyan. Iki ora bisa dibatalake.</string>
     <string name="go_delete_title">Busak game?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Trima</string>
     <string name="go_draw_decline">Tolak</string>
     <string name="go_draw_offered_received">%1$s nawakaké imbang</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Nyerah</string>
     <string name="go_new_game_title">Dolanan Go anyar</string>
     <string name="go_new_game_no_friends">Sampeyan kudu nambah kanca sadurunge bisa miwiti dolanan.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Poin sing ditambahake ing skor Putih kanggo ngimbangi Ireng sing mlaku dhisik</string>
 
-    <string name="go_board_a11y">Papan Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Papan Go %1$d×%1$d, giliran sampeyan nyelehake watu ireng</string>
-    <string name="go_board_a11y_turn_white">Papan Go %1$d×%1$d, giliran sampeyan nyelehake watu putih</string>
+    <string name="go_board_a11y">Papan Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Papan Go %1$s×%1$s, giliran sampeyan nyelehake watu ireng</string>
+    <string name="go_board_a11y_turn_white">Papan Go %1$s×%1$s, giliran sampeyan nyelehake watu putih</string>
     <string name="go_status_scoring">Ngitung — sarujuk skore utawa terusake dolanan</string>
     <string name="go_score_proposed">Skor sing diusulaké: ireng %1$s, putih %2$s</string>
     <string name="go_score_opponent_accepted">Mungsuhmu nampa skor iki: ireng %1$s, putih %2$s</string>

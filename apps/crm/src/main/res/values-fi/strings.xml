@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Ei kohteita</string>
     <string name="crm_board_no_columns">Tälle näkymälle ei ole määritetty sarakkeita</string>
     <string name="crm_board_no_options">Sarakekentälle ei ole määritetty vaihtoehtoja</string>
-    <string name="crm_board_nested_count">+%1$d sisäkkäistä</string>
+    <string name="crm_board_nested_count">+%1$s sisäkkäistä</string>
     <string name="crm_move_to_column">Siirrä sarakkeeseen</string>
     <string name="crm_move_to_row">Siirrä riville</string>
     <string name="crm_move_after">Kohteen %1$s jälkeen</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Käyttöoikeuksien hallinta</string>
     <string name="crm_settings_not_set">Ei asetettu</string>
     <string name="crm_settings_access_updated">Käyttöoikeus päivitetty</string>
-    <string name="crm_settings_access_revoked">Käyttöoikeus peruutettu</string>
+    <string name="crm_settings_access_revoked">Käyttöoikeus poistettu</string>
     <string name="crm_people_search">Hae henkilöitä</string>
     <string name="crm_access_tab_other">Muu</string>
     <string name="crm_access_select_group">Valitse ryhmä</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM-tiedot tallennettu</string>
     <string name="crm_create_upload_json">Lataa .zip- tai .json-tiedosto</string>
     <string name="crm_create_blocked_no_options">Ei voi luoda: %1$s on pakollinen, mutta sillä ei ole valittavia vaihtoehtoja. Lisää vaihtoehtoja Suunnittelussa.</string>
-    <string name="crm_design_sample">Esimerkki %1$d</string>
+    <string name="crm_design_sample">Esimerkki %1$s</string>
     <string name="crm_option_delete_title">Poista vaihtoehto</string>
     <string name="crm_option_delete_message">Haluatko varmasti poistaa vaihtoehdon \"%1$s\"?</string>
 </resources>

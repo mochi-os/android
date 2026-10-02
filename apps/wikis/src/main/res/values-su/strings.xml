@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Bewara ngeunaan éditan kaca wiki, koméntar, jeung ondangan.</string>
     <string name="wikis_pageview_toc_expand">Témbongkeun daptar eusi</string>
     <string name="wikis_pageview_toc_collapse">Buni daptar eusi</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Diropéa %1$s</string>
     <string name="wikis_pageview_not_found_description">Kaca “%1$s” can aya.</string>
     <string name="wikis_pageview_share_chooser">Tautan wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Anjeun bade mupus kaca “%1$s” (%2$s). Tindakan ieu tiasa dibolaykeun ku cara mulangkeun tina sajarah.</string>
     <string name="wikis_delete_page_success">Kaca dihapus</string>
     <string name="wikis_revert_page_title">Balikkeun kaca</string>
-    <string name="wikis_revert_page_message">Anjeun bade mulangkeun %1$s ka vérsi %2$d. Ieu bakal nyieun révisi anyar kalayan eusi ti vérsi %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Dipulangkeun ka vérsi %1$d</string>
-    <string name="wikis_revert_page_success">Dipulangkeun ka vérsi %1$d</string>
+    <string name="wikis_revert_page_message">Anjeun bade mulangkeun %1$s ka vérsi %2$s. Ieu bakal nyieun révisi anyar kalayan eusi ti vérsi %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Dipulangkeun ka vérsi %1$s</string>
+    <string name="wikis_revert_page_success">Dipulangkeun ka vérsi %1$s</string>
     <string name="wikis_rename_page_renaming">Nuju ngaganti ngaran…</string>
     <string name="wikis_rename_page_success">Kaca diganti ngaran</string>
-    <string name="wikis_history_viewing">Ningali sajarah pikeun %1$s, vérsi ayeuna %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Ningali sajarah pikeun %1$s, vérsi ayeuna %2$s</string>
+    <string name="wikis_revision_version_badge">Vérsi %1$s</string>
     <string name="wikis_search_pages_placeholder">Sungsi kaca dumasar judul atawa eusi…</string>
     <string name="wikis_search_no_results">Teu aya kaca pikeun “%1$s”. Cobian kecap paluruhan séjén.</string>
     <string name="wikis_search_updated">Diropéa %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">ku %1$s</string>
     <string name="wikis_revision_show_page">Témbongkeun kaca</string>
     <string name="wikis_revision_compare_failed">Teu bisa ngamuat versi saméméhna pikeun dibandingkeun.</string>
-    <string name="wikis_revision_changes_from">Parobahan ti versi %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Parobahan ti versi %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d koméntar</item>
-        <item quantity="other">%d koméntar</item>
+        <item quantity="one">%s koméntar</item>
+        <item quantity="other">%s koméntar</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d balesan</item>
-        <item quantity="other">+%d balesan deui</item>
+        <item quantity="one">%s balesan</item>
+        <item quantity="other">+%s balesan deui</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d halaman</item>
-        <item quantity="other">%d halaman</item>
+        <item quantity="one">%s halaman</item>
+        <item quantity="other">%s halaman</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d file</item>
-        <item quantity="other">%d file</item>
+        <item quantity="one">%s file</item>
+        <item quantity="other">%s file</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d gambar</item>
-        <item quantity="other">%d gambar</item>
+        <item quantity="one">%s gambar</item>
+        <item quantity="other">%s gambar</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokumen</item>
-        <item quantity="other">%d dokumen</item>
+        <item quantity="one">%s dokumen</item>
+        <item quantity="other">%s dokumen</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d halaman ku tag ieu</item>
-        <item quantity="other">%d halaman ku tag ieu</item>
+        <item quantity="one">%s halaman ku tag ieu</item>
+        <item quantity="other">%s halaman ku tag ieu</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Manggih %1$d hasil pikeun "%2$s"</item>
-        <item quantity="other">Manggih %1$d hasil pikeun "%2$s"</item>
+        <item quantity="one">Manggih %1$s hasil pikeun \"%2$s\"</item>
+        <item quantity="other">Manggih %1$s hasil pikeun \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Katerangan teu tiasa disimpen</string>
     <string name="wikis_attachments_upload_types">Berkas anu didukung: gambar, PDF, DOC, DOCX, TXT, jeung MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">URL RSS anyar disalin ka clipboard</string>
     <string name="wikis_rss_exists">URL asupan ieu geus dikaluarkeun sarta teu bisa ditembongkeun deui.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Némbongkeun %1$d koméntar munggaran.</item>
-        <item quantity="other">Némbongkeun %1$d koméntar munggaran.</item>
+        <item quantity="one">Némbongkeun %1$s koméntar munggaran.</item>
+        <item quantity="other">Némbongkeun %1$s koméntar munggaran.</item>
     </plurals>
 </resources>

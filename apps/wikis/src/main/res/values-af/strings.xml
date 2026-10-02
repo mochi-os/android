@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Kennisgewings oor wiki-bladsyredigerings, kommentaar en uitnodigings.</string>
     <string name="wikis_pageview_toc_expand">Wys inhoudsopgawe</string>
     <string name="wikis_pageview_toc_collapse">Versteek inhoudsopgawe</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Opgedateer %1$s</string>
     <string name="wikis_pageview_not_found_description">Die bladsy “%1$s” bestaan nog nie.</string>
     <string name="wikis_pageview_share_chooser">Wiki-skakel</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Jy is op die punt om die bladsy “%1$s” (%2$s) te skrap. Hierdie handeling kan ongedaan gemaak word deur uit die geskiedenis te herstel.</string>
     <string name="wikis_delete_page_success">Bladsy geskrap</string>
     <string name="wikis_revert_page_title">Herstel bladsy</string>
-    <string name="wikis_revert_page_message">Jy is op die punt om %1$s na weergawe %2$d terug te keer. Dit sal ’n nuwe hersiening met die inhoud van weergawe %2$d skep.</string>
-    <string name="wikis_revert_page_default_comment">Teruggekeer na weergawe %1$d</string>
-    <string name="wikis_revert_page_success">Teruggekeer na weergawe %1$d</string>
+    <string name="wikis_revert_page_message">Jy is op die punt om %1$s na weergawe %2$s terug te keer. Dit sal ’n nuwe hersiening met die inhoud van weergawe %2$s skep.</string>
+    <string name="wikis_revert_page_default_comment">Teruggekeer na weergawe %1$s</string>
+    <string name="wikis_revert_page_success">Teruggekeer na weergawe %1$s</string>
     <string name="wikis_rename_page_renaming">Hernoem tans…</string>
     <string name="wikis_rename_page_success">Bladsy hernoem</string>
-    <string name="wikis_history_viewing">Bekyk geskiedenis vir %1$s, huidige weergawe %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Bekyk geskiedenis vir %1$s, huidige weergawe %2$s</string>
+    <string name="wikis_revision_version_badge">Weergawe %1$s</string>
     <string name="wikis_search_pages_placeholder">Soek bladsye volgens titel of inhoud…</string>
     <string name="wikis_search_no_results">Geen bladsye vir “%1$s” gevind nie. Probeer ander soekterme.</string>
     <string name="wikis_search_updated">Opgedateer %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">volgens %1$s</string>
     <string name="wikis_revision_show_page">Wys bladsy</string>
     <string name="wikis_revision_compare_failed">Kon nie die vorige weergawe vir vergelyking laai nie.</string>
-    <string name="wikis_revision_changes_from">Veranderinge van weergawe %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Veranderinge van weergawe %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d kommentaar</item>
-        <item quantity="other">%d kommentaar</item>
+        <item quantity="one">%s kommentaar</item>
+        <item quantity="other">%s kommentaar</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d antwoord</item>
-        <item quantity="other">+%d meer antwoorde</item>
+        <item quantity="one">%s antwoord</item>
+        <item quantity="other">+%s meer antwoorde</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d bladsy</item>
-        <item quantity="other">%d bladsye</item>
+        <item quantity="one">%s bladsy</item>
+        <item quantity="other">%s bladsye</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d lêer</item>
-        <item quantity="other">%d lêers</item>
+        <item quantity="one">%s lêer</item>
+        <item quantity="other">%s lêers</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d beeld</item>
-        <item quantity="other">%d beelde</item>
+        <item quantity="one">%s beeld</item>
+        <item quantity="other">%s beelde</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="other">%d dokumente</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="other">%s dokumente</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d bladsy met hierdie etiket</item>
-        <item quantity="other">%d bladsye met hierdie etiket</item>
+        <item quantity="one">%s bladsy met hierdie etiket</item>
+        <item quantity="other">%s bladsye met hierdie etiket</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d resultaat gevind vir «%2$s»</item>
-        <item quantity="other">%1$d resultate gevind vir «%2$s»</item>
+        <item quantity="one">%1$s resultaat gevind vir «%2$s»</item>
+        <item quantity="other">%1$s resultate gevind vir «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Kon nie byskrif stoor nie</string>
     <string name="wikis_attachments_upload_types">Ondersteunde lêers: beelde, PDF, DOC, DOCX, TXT en MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Nuwe RSS-URL na knipbord gekopieer</string>
     <string name="wikis_rss_exists">Hierdie voer-URL is reeds uitgereik en kan nie weer gewys word nie.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Wys die eerste %1$d opmerking.</item>
-        <item quantity="other">Wys die eerste %1$d opmerkings.</item>
+        <item quantity="one">Wys die eerste %1$s opmerking.</item>
+        <item quantity="other">Wys die eerste %1$s opmerkings.</item>
     </plurals>
 </resources>

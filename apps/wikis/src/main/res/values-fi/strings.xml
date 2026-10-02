@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Muutokset ja kommentit</string>
     <string name="wikis_rss_copied">RSS-URL kopioitu leikepöydälle</string>
     <string name="wikis_rss_failed">RSS-tunnisteen hakeminen epäonnistui</string>
-    <string name="wikis_rss_revoke">Peruuta käyttöoikeus</string>
-    <string name="wikis_rss_revoked">RSS-käyttöoikeus peruutettu</string>
+    <string name="wikis_rss_revoke">Poista käyttöoikeus</string>
+    <string name="wikis_rss_revoked">RSS-käyttöoikeus mitätöity</string>
     <string name="wikis_find_title">Etsi wikejä</string>
     <string name="wikis_find_no_results">Wikejä ei löytynyt</string>
     <string name="wikis_find_recommended_section">Suositellut wikit</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Ilmoitukset sivumuokkauksista, kommenteista ja kutsuista.</string>
     <string name="wikis_pageview_toc_expand">Näytä sisällysluettelo</string>
     <string name="wikis_pageview_toc_collapse">Piilota sisällysluettelo</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Päivitetty %1$s</string>
     <string name="wikis_pageview_not_found_description">Sivua \"%1$s\" ei vielä ole olemassa.</string>
     <string name="wikis_pageview_share_chooser">Wikin linkki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Olet poistamassa sivua \"%1$s\" (%2$s). Tämä toimenpide voidaan kumota palauttamalla historiasta.</string>
     <string name="wikis_delete_page_success">Sivu poistettu</string>
     <string name="wikis_revert_page_title">Palauta sivu</string>
-    <string name="wikis_revert_page_message">Olet palauttamassa %1$s versioon %2$d. Tämä luo uuden version, jonka sisältö on versiosta %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Palautettu versioon %1$d</string>
-    <string name="wikis_revert_page_success">Palautettu versioon %1$d</string>
+    <string name="wikis_revert_page_message">Olet palauttamassa %1$s versioon %2$s. Tämä luo uuden version, jonka sisältö on versiosta %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Palautettu versioon %1$s</string>
+    <string name="wikis_revert_page_success">Palautettu versioon %1$s</string>
     <string name="wikis_rename_page_renaming">Nimetään uudelleen…</string>
     <string name="wikis_rename_page_success">Sivu nimetty uudelleen</string>
-    <string name="wikis_history_viewing">Tarkastellaan %1$s historiaa, nykyinen versio %2$d</string>
-    <string name="wikis_revision_version_badge">Versio %1$d</string>
+    <string name="wikis_history_viewing">Tarkastellaan %1$s historiaa, nykyinen versio %2$s</string>
+    <string name="wikis_revision_version_badge">Versio %1$s</string>
     <string name="wikis_search_pages_placeholder">Etsi sivuja otsikon tai sisällön perusteella…</string>
     <string name="wikis_search_no_results">Sivuja ei löytynyt haulle \"%1$s\". Kokeile eri hakutermejä.</string>
     <string name="wikis_search_updated">Päivitetty %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">tekijältä %1$s</string>
     <string name="wikis_revision_show_page">Näytä sivu</string>
     <string name="wikis_revision_compare_failed">Aiempaa versiota ei voitu ladata vertailua varten.</string>
-    <string name="wikis_revision_changes_from">Muutokset versiosta %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Muutokset versiosta %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d kommentti</item>
-        <item quantity="other">%d kommenttia</item>
+        <item quantity="one">%s kommentti</item>
+        <item quantity="other">%s kommenttia</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d vastaus</item>
-        <item quantity="other">+%d lisävastausta</item>
+        <item quantity="one">%s vastaus</item>
+        <item quantity="other">+%s lisävastausta</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d sivu</item>
-        <item quantity="other">%d sivua</item>
+        <item quantity="one">%s sivu</item>
+        <item quantity="other">%s sivua</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d tiedosto</item>
-        <item quantity="other">%d tiedostoa</item>
+        <item quantity="one">%s tiedosto</item>
+        <item quantity="other">%s tiedostoa</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d kuva</item>
-        <item quantity="other">%d kuvaa</item>
+        <item quantity="one">%s kuva</item>
+        <item quantity="other">%s kuvaa</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d asiakirja</item>
-        <item quantity="other">%d asiakirjaa</item>
+        <item quantity="one">%s asiakirja</item>
+        <item quantity="other">%s asiakirjaa</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d sivu tällä tunnisteella</item>
-        <item quantity="other">%d sivua tällä tunnisteella</item>
+        <item quantity="one">%s sivu tällä tunnisteella</item>
+        <item quantity="other">%s sivua tällä tunnisteella</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Löytyi %1$d tulos hakusanalle «%2$s»</item>
-        <item quantity="other">Löytyi %1$d tulosta hakusanalle «%2$s»</item>
+        <item quantity="one">Löytyi %1$s tulos hakusanalle «%2$s»</item>
+        <item quantity="other">Löytyi %1$s tulosta hakusanalle «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Kuvatekstin tallentaminen epäonnistui</string>
     <string name="wikis_attachments_upload_types">Tuetut tiedostot: kuvat, PDF, DOC, DOCX, TXT ja MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Uusi RSS-URL kopioitu leikepöydälle</string>
     <string name="wikis_rss_exists">Tämä syötteen URL on jo myönnetty, eikä sitä voi näyttää uudelleen.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Näytetään ensimmäinen %1$d kommentti.</item>
-        <item quantity="other">Näytetään ensimmäiset %1$d kommenttia.</item>
+        <item quantity="one">Näytetään ensimmäinen %1$s kommentti.</item>
+        <item quantity="other">Näytetään ensimmäiset %1$s kommenttia.</item>
     </plurals>
 </resources>

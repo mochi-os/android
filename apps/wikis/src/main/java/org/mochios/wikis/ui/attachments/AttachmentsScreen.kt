@@ -377,20 +377,20 @@ private fun UploadBar(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun AttachmentsTopBar(
+internal fun AttachmentsTopBar(
     attachments: List<Attachment>,
     onBack: () -> Unit,
 ) {
     val imageCount = attachments.count { isImage(it.type) }
     val docCount = attachments.size - imageCount
     val totalLabel = pluralStringResource(
-        R.plurals.wikis_attachments_total_files, attachments.size, attachments.size,
+        R.plurals.wikis_attachments_total_files, attachments.size, LocalFormat.current.formatNumber(attachments.size),
     )
     val imagesLabel = pluralStringResource(
-        R.plurals.wikis_attachments_total_images, imageCount, imageCount,
+        R.plurals.wikis_attachments_total_images, imageCount, LocalFormat.current.formatNumber(imageCount),
     )
     val docsLabel = pluralStringResource(
-        R.plurals.wikis_attachments_total_documents, docCount, docCount,
+        R.plurals.wikis_attachments_total_documents, docCount, LocalFormat.current.formatNumber(docCount),
     )
     val subtitle = "$totalLabel ($imagesLabel, $docsLabel)"
 

@@ -74,6 +74,7 @@ import org.mochios.projects.model.MergeCheck
 import org.mochios.projects.model.MergeRequest
 import org.mochios.projects.model.Repository
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -216,6 +217,13 @@ private fun StatusChip(status: String, draft: Boolean) {
     StatusBadge(label = label, tone = tone, icon = icon)
 }
 
+/** "N ahead, M behind": how far a request's branch sits from its target, as the user writes numbers. */
+@Composable
+internal fun aheadBehind(check: MergeCheck): String {
+    val format = LocalFormat.current
+    return stringResource(R.string.projects_request_ahead_behind, format.formatNumber(check.ahead), format.formatNumber(check.behind))
+}
+
 @Composable
 private fun RequestDetailView(
     request: MergeRequest,
@@ -321,7 +329,7 @@ private fun RequestDetailView(
                     }
                     if (check.ahead > 0 || check.behind > 0) {
                         Text(
-                            text = stringResource(R.string.projects_request_ahead_behind, check.ahead, check.behind),
+                            text = aheadBehind(check),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -330,7 +338,7 @@ private fun RequestDetailView(
                     if (check.conflicts.isNotEmpty()) {
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(
-                            text = pluralStringResource(R.plurals.projects_request_conflicts, check.conflicts.size, check.conflicts.size),
+                            text = pluralStringResource(R.plurals.projects_request_conflicts, check.conflicts.size, LocalFormat.current.formatNumber(check.conflicts.size)),
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.SemiBold,
                             color = MaterialTheme.colorScheme.error

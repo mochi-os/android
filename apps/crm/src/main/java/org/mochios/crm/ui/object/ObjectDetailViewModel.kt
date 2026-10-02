@@ -23,6 +23,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
+import org.mochios.android.ui.components.CommentDrafts
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.Attachment
@@ -66,6 +67,12 @@ class ObjectDetailViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ObjectDetailUiState())
     val uiState: StateFlow<ObjectDetailUiState> = _uiState.asStateFlow()
+
+    /**
+     * Comments typed but not yet sent, by object. Held here, not in the sheet,
+     * so one survives the sheet closing or its tab changing.
+     */
+    val drafts = CommentDrafts()
 
     private var debounceJobs = mutableMapOf<String, Job>()
 

@@ -83,7 +83,7 @@
     <string name="chess_promotion_title">Promote to:</string>
 
     <!-- Captured-pieces strip -->
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <!-- Piece names -->
     <string name="chess_piece_white">White %1$s</string>

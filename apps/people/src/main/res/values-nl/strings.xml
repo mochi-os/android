@@ -180,8 +180,8 @@
     <string name="people_books_create">Adresboek maken</string>
     <string name="people_books_delete">Adresboek verwijderen</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s en het %2$d contact erin verwijderen?</item>
-        <item quantity="other">%1$s en de %2$d contacten erin verwijderen?</item>
+        <item quantity="one">%1$s en het %2$s contact erin verwijderen?</item>
+        <item quantity="other">%1$s en de %2$s contacten erin verwijderen?</item>
     </plurals>
     <string name="people_welcome_body">Vind vrienden op heel Mochi en maak verbinding. Tik op Contact toevoegen om een uitnodiging te sturen.</string>
     <string name="people_person_state_contact">In contacten</string>

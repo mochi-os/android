@@ -6,8 +6,8 @@
     <string name="forums_list_title">포럼</string>
     <string name="forums_list_find">포럼 찾기</string>
     <string name="forums_list_logout">로그아웃</string>
-    <string name="forums_list_unsubscribe">구독 취소</string>
-    <string name="forums_list_unsubscribe_title">구독 취소</string>
+    <string name="forums_list_unsubscribe">구독 해지</string>
+    <string name="forums_list_unsubscribe_title">구독 해지</string>
     <string name="forums_create_title">포럼 생성</string>
     <string name="forums_create_name">포럼 이름</string>
     <string name="forums_create_privacy">개인정보</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">태그</string>
     <string name="forums_ai_account_default">기본 계정</string>
     <string name="forums_ai_prompt_reset">기본값으로 재설정</string>
-    <string name="forums_settings_unsubscribe">구독 취소</string>
+    <string name="forums_settings_unsubscribe">구독 해지</string>
     <string name="forums_moderation_title">모더레이션</string>
     <string name="forums_moderation_tab_queue">대기열</string>
     <string name="forums_moderation_tab_reports">신고</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">%1$s(으)로 전송된 코드를 입력하세요</string>
     <string name="forums_auth_create_identity">신원 만들기</string>
     <string name="forums_list_empty">아직 포럼이 없습니다</string>
-    <string name="forums_list_unsubscribe_message">이 포럼의 구독을 취소하시겠습니까?</string>
+    <string name="forums_list_unsubscribe_message">이 포럼의 구독을 해지하시겠습니까?</string>
     <string name="forums_find_search_placeholder">포럼을 검색하거나 URL을 붙여넣으세요</string>
     <string name="forums_find_search_hint">구독할 포럼을 검색하세요</string>
     <string name="forums_post_delete_message">이 게시물을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.</string>
@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">모더레이션</string>
     <string name="forums_members_search">구성원 필터</string>
     <string name="forums_banner_description">포럼 상단에 표시되는 Markdown입니다.</string>
-    <string name="forums_banner_placeholder">이 포럼에 오신 것을 환영합니다…</string>
+    <string name="forums_banner_placeholder">배너 텍스트 입력(Markdown 지원)…</string>
     <string name="forums_ai_mode_label">모드: %1$s</string>
     <string name="forums_ai_mode_heading">AI 모드</string>
     <string name="forums_ai_mode_off">비활성화됨</string>
@@ -202,7 +202,7 @@
     <string name="forums_saved_empty_subtitle">게시물의 북마크를 탭하여 여기에 나중에 보기 위해 저장하세요.</string>
     <string name="forums_saved_error_clear">저장된 게시물을 지우지 못했습니다</string>
     <plurals name="forums_new_posts">
-        <item quantity="other">새 게시물 %d개</item>
+        <item quantity="other">새 게시물 %s개</item>
     </plurals>
     <string name="forums_rss_feed">RSS 피드</string>
     <string name="forums_rss_mode_posts">게시물</string>
@@ -241,7 +241,7 @@
     <string name="forums_moderation_unit_days">일</string>
     <string name="forums_settings_banner_saved">배너가 저장되었습니다</string>
     <string name="forums_settings_access_updated">접근이 업데이트되었어요</string>
-    <string name="forums_settings_access_revoked">액세스가 취소되었습니다</string>
+    <string name="forums_settings_access_revoked">액세스가 철회되었습니다</string>
     <string name="forums_settings_member_removed">멤버가 제거되었어요</string>
     <string name="forums_settings_prompt_saved">프롬프트가 저장되었어요</string>
     <string name="forums_settings_section_identity">신원</string>
@@ -292,11 +292,11 @@
     <string name="forums_settings_ai_updated">AI 설정이 업데이트되었습니다</string>
     <string name="forums_settings_forum_renamed">포럼 이름이 변경되었어요</string>
     <string name="forums_settings_name_clear_cd">이름 지우기</string>
-    <string name="forums_settings_unsubscribe_section">포럼 구독 취소</string>
+    <string name="forums_settings_unsubscribe_section">포럼 구독 해지</string>
     <string name="forums_share_link_title">포럼 링크</string>
     <string name="forums_find_found_by_url">URL로 찾음</string>
-    <string name="forums_moderation_pending_posts">대기 중인 게시물 (%1$d)</string>
-    <string name="forums_moderation_pending_comments">대기 중인 댓글 (%1$d)</string>
+    <string name="forums_moderation_pending_posts">대기 중인 게시물 (%1$s)</string>
+    <string name="forums_moderation_pending_comments">대기 중인 댓글 (%1$s)</string>
     <string name="forums_moderation_on_image">이미지에 대해: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">이 포럼에 게시할 권한이 없습니다</string>

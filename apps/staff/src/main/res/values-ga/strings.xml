@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Nótaí</string>
     <string name="staff_accounts_reason_label">Cúis</string>
     <string name="staff_accounts_reason_optional_label">Cúis (roghnach)</string>
-    <string name="staff_accounts_sales">%1$d díolacháin</string>
+    <string name="staff_accounts_sales">%1$s díolacháin</string>
     <string name="staff_accounts_search_clear">Glan cuardach</string>
     <string name="staff_accounts_search_placeholder">Cuardach</string>
     <string name="staff_accounts_seller_buyers">Ceannaitheoirí amháin</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Gan ainm</string>
     <string name="staff_accounts_unsuspend">Bain an fhionraí</string>
     <string name="staff_accounts_unsuspended_toast">Cuntas curtha ar ais ón fionraí</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Cealaigh</string>
     <string name="staff_appeals_decide">Cinn</string>
     <string name="staff_appeals_decision_denied">Coinnigh liostú diúltaithe</string>

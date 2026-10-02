@@ -180,7 +180,7 @@
     <string name="people_books_create">Ṣẹ̀dá ìwé àdírẹ́sì</string>
     <string name="people_books_delete">Pa ìwé àdírẹ́sì rẹ́</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">Pa %1$s àti olùbásọ̀rọ̀ %2$d tó wà nínú rẹ̀ rẹ́?</item>
+        <item quantity="other">Pa %1$s àti olùbásọ̀rọ̀ %2$s tó wà nínú rẹ̀ rẹ́?</item>
     </plurals>
     <string name="people_welcome_body">Wá àwọn ọ̀rẹ́ káàkiri Mochi kí o sì bá wọn ṣepọ̀. Tẹ Fi olùbásọ̀rọ̀ kún láti fi ìpè ránṣẹ́.</string>
     <string name="people_person_state_contact">Nínú àwọn olùbásọ̀rọ̀</string>

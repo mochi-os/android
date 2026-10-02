@@ -23,8 +23,8 @@
     <string name="crm_create_object_type">類型</string>
     <string name="crm_field_type">類型</string>
     <string name="crm_views_type">類型</string>
-    <string name="crm_settings_unsubscribe">取消訂閱</string>
-    <string name="crm_settings_unsubscribe_title">取消訂閱</string>
+    <string name="crm_settings_unsubscribe">退訂</string>
+    <string name="crm_settings_unsubscribe_title">退訂</string>
     <string name="crm_board_new">新增</string>
     <string name="crm_field_type_user">用戶</string>
     <string name="crm_access_level_owner">擁有者</string>
@@ -101,7 +101,7 @@
     <string name="crm_settings_delete_crm">刪除 CRM</string>
     <string name="crm_settings_delete_confirm_title">刪除 CRM</string>
     <string name="crm_settings_delete_confirm_message">你確定要刪除呢個 CRM？所有物件、留言同設定都會被永久移除。</string>
-    <string name="crm_settings_unsubscribe_message">你確定要取消訂閱呢個 CRM？</string>
+    <string name="crm_settings_unsubscribe_message">你確定要退訂呢個 CRM？</string>
     <string name="crm_object_unwatch">取消關注</string>
     <string name="crm_object_tab_properties">屬性</string>
     <string name="crm_object_delete_title">刪除物件</string>
@@ -150,7 +150,7 @@
     <string name="crm_board_no_columns">呢個檢視未設定欄</string>
     <string name="crm_board_no_options">欄位未設定選項</string>
     <string name="crm_board_rename_column">重新命名欄</string>
-    <string name="crm_board_nested_count">+%1$d 個巢狀</string>
+    <string name="crm_board_nested_count">+%1$s 個巢狀</string>
     <string name="crm_move_to_column">移到欄</string>
     <string name="crm_move_to_row">移到列</string>
     <string name="crm_move_after">喺 %1$s 之後</string>
@@ -278,7 +278,7 @@
     <string name="crm_access_role_view">只可檢視</string>
     <string name="crm_access_role_none">無權限</string>
     <string name="crm_all_crms">所有 CRM</string>
-    <string name="crm_settings_unsubscribe_section">取消訂閱該 CRM</string>
+    <string name="crm_settings_unsubscribe_section">退訂 CRM</string>
     <string name="crm_settings_updated">CRM 已更新</string>
     <string name="crm_create_import_backup">從備份匯入（選用）</string>
     <string name="crm_export">匯出資料</string>
@@ -291,5 +291,5 @@
     <string name="crm_no_crms_found">搵唔到 CRM</string>
     <string name="crm_create_blocked_no_parents">而家仲未可以建立任何項目類型。請先建立所需嘅上層項目。</string>
     <string name="crm_export_csv">匯出 CSV</string>
-    <string name="crm_design_sample">範例 %1$d</string>
+    <string name="crm_design_sample">範例 %1$s</string>
 </resources>

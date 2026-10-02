@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Canje-canje da sharhi</string>
     <string name="wikis_rss_copied">An kwafi URL ɗin RSS zuwa clipboard</string>
     <string name="wikis_rss_failed">An gaza samun RSS token</string>
-    <string name="wikis_rss_revoke">Soke damar shiga</string>
-    <string name="wikis_rss_revoked">An soke damar shiga RSS</string>
+    <string name="wikis_rss_revoke">Janye damar shiga</string>
+    <string name="wikis_rss_revoked">An janye damar shiga RSS</string>
     <string name="wikis_find_title">Nemo wikis</string>
     <string name="wikis_find_no_results">Babu wikis da aka samu</string>
     <string name="wikis_find_recommended_section">Wikis da aka ba da shawara</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Sanarwa game da gyare-gyaren shafin wiki, sharhi, da gayyata.</string>
     <string name="wikis_pageview_toc_expand">Nuna jerin abubuwan ciki</string>
     <string name="wikis_pageview_toc_collapse">Ɓoye jerin abubuwan ciki</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">An sabunta %1$s</string>
     <string name="wikis_pageview_not_found_description">Shafin “%1$s” bai wanzu ba tukuna.</string>
     <string name="wikis_pageview_share_chooser">Hanyar haɗin wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Kana gab da share shafin “%1$s” (%2$s). Ana iya soke wannan aikin ta hanyar dawo da shi daga tarihi.</string>
     <string name="wikis_delete_page_success">An share shafi</string>
     <string name="wikis_revert_page_title">Mayar da shafi</string>
-    <string name="wikis_revert_page_message">Kana gab da mayar da %1$s zuwa sigar %2$d. Wannan zai ƙirƙiri sabon bita da abun ciki daga sigar %2$d.</string>
-    <string name="wikis_revert_page_default_comment">An mayar zuwa sigar %1$d</string>
-    <string name="wikis_revert_page_success">An mayar zuwa sigar %1$d</string>
+    <string name="wikis_revert_page_message">Kana gab da mayar da %1$s zuwa sigar %2$s. Wannan zai ƙirƙiri sabon bita da abun ciki daga sigar %2$s.</string>
+    <string name="wikis_revert_page_default_comment">An mayar zuwa sigar %1$s</string>
+    <string name="wikis_revert_page_success">An mayar zuwa sigar %1$s</string>
     <string name="wikis_rename_page_renaming">Ana sake suna…</string>
     <string name="wikis_rename_page_success">An sake sunan shafi</string>
-    <string name="wikis_history_viewing">Ana duba tarihin %1$s, sigar yanzu %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Ana duba tarihin %1$s, sigar yanzu %2$s</string>
+    <string name="wikis_revision_version_badge">Sigar %1$s</string>
     <string name="wikis_search_pages_placeholder">Nemi shafuka ta take ko abun ciki…</string>
     <string name="wikis_search_no_results">Ba a sami shafuka don “%1$s” ba. Gwada wasu kalmomin bincike.</string>
     <string name="wikis_search_updated">An sabunta %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">ta %1$s</string>
     <string name="wikis_revision_show_page">Nuna shafin</string>
     <string name="wikis_revision_compare_failed">An kasa loda sigar baya don kwatanta.</string>
-    <string name="wikis_revision_changes_from">Canje daga sigar %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Canje daga sigar %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">sharhi %d</item>
-        <item quantity="other">sharhi %d</item>
+        <item quantity="one">sharhi %s</item>
+        <item quantity="other">sharhi %s</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">Amsa %d</item>
-        <item quantity="other">+%d ƙarin amsoshi</item>
+        <item quantity="one">Amsa %s</item>
+        <item quantity="other">+%s ƙarin amsoshi</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">Shafi %d</item>
-        <item quantity="other">Shafuka %d</item>
+        <item quantity="one">Shafi %s</item>
+        <item quantity="other">Shafuka %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">Fayil %d</item>
-        <item quantity="other">Fayiloli %d</item>
+        <item quantity="one">Fayil %s</item>
+        <item quantity="other">Fayiloli %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">Hoto %d</item>
-        <item quantity="other">Hotuna %d</item>
+        <item quantity="one">Hoto %s</item>
+        <item quantity="other">Hotuna %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">Takarda %d</item>
-        <item quantity="other">Takardu %d</item>
+        <item quantity="one">Takarda %s</item>
+        <item quantity="other">Takardu %s</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Shafi %d tare da wannan tag</item>
-        <item quantity="other">Shafuka %d tare da wannan tag</item>
+        <item quantity="one">Shafi %s tare da wannan tag</item>
+        <item quantity="other">Shafuka %s tare da wannan tag</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">An sami Sakamako %1$d don «%2$s»</item>
-        <item quantity="other">An sami Sakamako %1$d don «%2$s»</item>
+        <item quantity="one">An sami Sakamako %1$s don «%2$s»</item>
+        <item quantity="other">An sami Sakamako %1$s don «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">An kasa adana bayanin hoto</string>
     <string name="wikis_attachments_upload_types">Fayilolin da ake tallafawa: hotuna, PDF, DOC, DOCX, TXT, da MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">An kwafi sabon URL ɗin RSS zuwa clipboard</string>
     <string name="wikis_rss_exists">An riga an fitar da wannan URL ɗin ciyarwa kuma ba za a iya nuna shi kuma ba.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Ana nuna sharhi %1$d na farko.</item>
-        <item quantity="other">Ana nuna sharhi %1$d na farko.</item>
+        <item quantity="one">Ana nuna sharhi %1$s na farko.</item>
+        <item quantity="other">Ana nuna sharhi %1$s na farko.</item>
     </plurals>
 </resources>

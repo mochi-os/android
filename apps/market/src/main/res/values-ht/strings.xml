@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mache</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Byografi</string>
     <string name="market_account_biography_placeholder">Pale achtè yo sou tèt ou…</string>
     <string name="market_account_load_failed">Pa t kapab chaje kont la</string>
@@ -59,7 +59,7 @@
     <string name="market_bids_tab_outbid">Òf depase</string>
     <string name="market_bids_tab_won">Genyen</string>
     <string name="market_bids_title">Enchè yo</string>
-    <string name="market_carousel_main">Foto %1$d nan %2$d</string>
+    <string name="market_carousel_main">Foto %1$s nan %2$s</string>
     <string name="market_channel_name">Mache</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank lan pa t kapab trete</string>
     <string name="market_chargeback_reason_check_returned">Tchèk retounen</string>
@@ -139,7 +139,7 @@
     <string name="market_editor_condition_refurbished">Refè</string>
     <string name="market_editor_condition_used">Itilize</string>
     <string name="market_editor_currency">Lajan</string>
-    <string name="market_editor_days">%1$d jou</string>
+    <string name="market_editor_days">%1$s jou</string>
     <string name="market_editor_delete">Efase lis la</string>
     <string name="market_editor_delete_confirm_title">Efase lis la?</string>
     <string name="market_editor_description">Deskripsyon</string>
@@ -284,7 +284,7 @@
     <string name="market_onboarding_dismiss">Fèmen</string>
     <string name="market_onboarding_title">Byenveni nan Market</string>
     <string name="market_open_sidebar">Ouvri meni</string>
-    <string name="market_price_from">depi %1$s</string>
+    <string name="market_price_from">Depi %1$s</string>
     <string name="market_price_per_month">%1$s / mwa</string>
     <string name="market_price_per_year">%1$s / ane</string>
     <string name="market_profile_biography">Konsènan</string>
@@ -336,7 +336,7 @@
     <string name="market_purchases_title">Acha yo</string>
     <string name="market_rating_label">Evalyasyon</string>
     <string name="market_rating_no_reviews">Poko gen revizyon</string>
-    <string name="market_rating_reviews">(%1$d revi)</string>
+    <string name="market_rating_reviews">(%1$s revi)</string>
     <string name="market_refund_amount_label">Kantite</string>
     <string name="market_refund_body">Bay yon rezon pou demand ranbousman ou.</string>
     <string name="market_refund_details_label">Detay</string>
@@ -473,7 +473,7 @@
     <string name="market_subscriptions_empty">Pa gen abònman</string>
     <string name="market_subscriptions_empty_body">Abònman se acha rekiran — vandè yo lis yo ak pri pa mwa oswa pa ane.</string>
     <string name="market_subscriptions_pause_failed">Echwe pou pause</string>
-    <string name="market_subscriptions_paused">Abònman pa</string>
+    <string name="market_subscriptions_paused">Abònman an an pòz</string>
     <string name="market_subscriptions_reactivate_failed">Echwe pou reaktive</string>
     <string name="market_subscriptions_reactivated">Abònman reaktive</string>
     <string name="market_subscriptions_resume_failed">Echwe pou repran</string>
@@ -486,11 +486,11 @@
     <string name="market_sale_review_response_submitting">Ap voye…</string>
     <string name="market_checkout_subscribing">Ap abone…</string>
     <string name="market_filter_remove">Retire filt la</string>
-    <string name="market_listing_detail_sales_count">%1$d vant</string>
+    <string name="market_listing_detail_sales_count">%1$s vant</string>
     <string name="market_listings_action_appeal">Apèl pou retire</string>
     <string name="market_listings_delete_title">Efase lis la?</string>
     <string name="market_listings_share_chooser">Pataje lis la</string>
-    <string name="market_profile_sales_count">%1$d vant</string>
+    <string name="market_profile_sales_count">%1$s vant</string>
     <string name="market_refund_dialog_amount_label">Kantite</string>
 
     <string name="market_account_status_restrictions">Kèk aksyon, tankou kreye nouvo lis ak konplete kòmand, restrenn pandan kont ou nan eta sa a.</string>
@@ -505,11 +505,11 @@
     <string name="market_bids_current_bid">Aktyèl: %1$s</string>
     <string name="market_bids_ends_in">Fini nan %1$s</string>
     <string name="market_bids_your_bid">Òf ou: %1$s</string>
-    <string name="market_carousel_thumbnail">Imaj miniati %1$d</string>
+    <string name="market_carousel_thumbnail">Imaj miniati %1$s</string>
     <string name="market_checkout_browser_unavailable">Pa gen okenn navigatè disponib pou louvri paj peman an</string>
     <string name="market_checkout_pwyw_label">Pri ou (minimòm %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Montan an dwe omwen %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fichye atache</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fichye atache</string>
     <string name="market_dispute_dialog_evidence_section_title">Prèv soumèt</string>
     <string name="market_dispute_dialog_evidence_submitter_line">soumèt pa %1$s</string>
     <string name="market_editor_appeal">Fè apèl kont moderasyon</string>
@@ -572,7 +572,7 @@
     <string name="market_messages_inbox_empty_title">Pa gen konvèsasyon ankò</string>
     <string name="market_messages_load_failed">Pa t kapab chaje konvèsasyon an</string>
     <string name="market_messages_send_failed">Pa t kapab voye mesaj la</string>
-    <string name="market_messages_unread_badge">%1$d ki poko li</string>
+    <string name="market_messages_unread_badge">%1$s ki poko li</string>
     <string name="market_price_high_bid">Pi gwo òf: %1$s</string>
     <string name="market_price_instant_buy">achte imedyatman: %1$s</string>
     <string name="market_price_starting_bid">Òf kòmansman: %1$s</string>
@@ -580,11 +580,11 @@
     <string name="market_profile_member_since">Manm depi %1$s</string>
     <string name="market_profile_joined">Antre %1$s</string>
     <string name="market_profile_rating_breakdown">Detay evalyasyon</string>
-    <string name="market_profile_stars_value">%1$d zetwal</string>
+    <string name="market_profile_stars_value">%1$s zetwal</string>
     <string name="market_purchase_dispute_chargeback">Ranbousman bankè %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bank ou a te depoze yon ranbousman bankè sou kòmand sa a. Stripe ap jere diskisyon an avèk vandè a; rezilta a ap parèt isit la lè li deside.</string>
     <string name="market_purchase_dispute_response">Repons vandè a</string>
-    <string name="market_purchase_download_many">Telechaje %1$d fichye ou yo anba a.</string>
+    <string name="market_purchase_download_many">Telechaje %1$s fichye ou yo anba a.</string>
     <string name="market_purchase_download_one">Telechaje fichye ou a anba a.</string>
     <string name="market_purchase_review_from">Revizyon ki soti nan men %1$s</string>
     <string name="market_purchases_auction_label">Lavant ozanchè #%1$s</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe konfigire</string>
     <string name="market_audit_account_stripe_restricted">Stripe restriksyone</string>
     <string name="market_audit_account_suspended">Sispann kòm vandè</string>
-    <string name="market_audit_account_unbanned">Defande</string>
-    <string name="market_audit_account_unsuspended">Sispansyon anile</string>
+    <string name="market_audit_account_unbanned">Entèdiksyon leve</string>
+    <string name="market_audit_account_unsuspended">Sispansyon leve</string>
     <string name="market_audit_auction_bid_placed">Enchè plase</string>
     <string name="market_audit_auction_created">Lavant kreye</string>
     <string name="market_audit_auction_ended_sold">Lavant vann</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Sa pral anile vant lan. Lis la pral kache nan men acheteur; ou ka relis li pita kòm yon nouvo bouyon.</string>
     <string name="market_listings_remove_title">Retire lis sa a?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Sa pral anile vant o anchè a epi avèti %1$d moun ki t ap ofri aktivman. Anons lan pral kache pou achtè yo; ou ka mete l ankò pita kòm yon nouvo bouyon.</item>
-        <item quantity="other">Sa pral anile vant o anchè a epi avèti %1$d moun ki t ap ofri aktivman. Anons lan pral kache pou achtè yo; ou ka mete l ankò pita kòm yon nouvo bouyon.</item>
+        <item quantity="one">Sa pral anile vant o anchè a epi avèti %1$s moun ki t ap ofri aktivman. Anons lan pral kache pou achtè yo; ou ka mete l ankò pita kòm yon nouvo bouyon.</item>
+        <item quantity="other">Sa pral anile vant o anchè a epi avèti %1$s moun ki t ap ofri aktivman. Anons lan pral kache pou achtè yo; ou ka mete l ankò pita kòm yon nouvo bouyon.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Sa pral anile %1$d abònman aktif nan fen peryòd faktirasyon aktyèl la. Abòne yo pral avèti. Anons lan pral kache pou achtè yo.</item>
-        <item quantity="other">Sa pral anile %1$d abònman aktif nan fen peryòd faktirasyon aktyèl la. Abòne yo pral avèti. Anons lan pral kache pou achtè yo.</item>
+        <item quantity="one">Sa pral anile %1$s abònman aktif nan fen peryòd faktirasyon aktyèl la. Abòne yo pral avèti. Anons lan pral kache pou achtè yo.</item>
+        <item quantity="other">Sa pral anile %1$s abònman aktif nan fen peryòd faktirasyon aktyèl la. Abòne yo pral avèti. Anons lan pral kache pou achtè yo.</item>
     </plurals>
 </resources>

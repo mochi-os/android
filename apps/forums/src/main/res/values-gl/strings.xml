@@ -6,8 +6,8 @@
     <string name="forums_list_title">Foros</string>
     <string name="forums_list_find">Buscar foros</string>
     <string name="forums_list_logout">Pechar sesión</string>
-    <string name="forums_list_unsubscribe">Cancelar subscrición</string>
-    <string name="forums_list_unsubscribe_title">Cancelar subscrición</string>
+    <string name="forums_list_unsubscribe">Anular subscrición</string>
+    <string name="forums_list_unsubscribe_title">Anular subscrición</string>
     <string name="forums_create_title">Crear foro</string>
     <string name="forums_create_name">Nome do foro</string>
     <string name="forums_create_privacy">Privacidade</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Etiquetar</string>
     <string name="forums_ai_account_default">Conta predeterminada</string>
     <string name="forums_ai_prompt_reset">Restablecer ao valor por defecto</string>
-    <string name="forums_settings_unsubscribe">Cancelar subscrición</string>
+    <string name="forums_settings_unsubscribe">Anular subscrición</string>
     <string name="forums_moderation_title">Moderación</string>
     <string name="forums_moderation_tab_queue">Cola</string>
     <string name="forums_moderation_tab_reports">Informes</string>
@@ -137,7 +137,7 @@
     <string name="notification_channel_forums">Notificacións de foros</string>
     <string name="forums_auth_brand">Mochi Foros</string>
     <string name="forums_list_empty">Aínda non hai foros</string>
-    <string name="forums_list_unsubscribe_message">Seguro que quere darse de baixa deste foro?</string>
+    <string name="forums_list_unsubscribe_message">Seguro que queres anular a subscrición a este foro?</string>
     <string name="forums_find_search_placeholder">Buscar foros ou pegar URL</string>
     <string name="forums_find_search_hint">Busque foros aos que subscribirse</string>
     <string name="forums_post_delete_message">Seguro que quere eliminar esta publicación? Non se pode desfacer.</string>
@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderar</string>
     <string name="forums_members_search">Filtrar membros</string>
     <string name="forums_banner_description">Markdown que aparece na parte superior do foro.</string>
-    <string name="forums_banner_placeholder">Benvido a este foro…</string>
+    <string name="forums_banner_placeholder">Introduce o texto do báner (admite Markdown)…</string>
     <string name="forums_ai_mode_label">Modo: %1$s</string>
     <string name="forums_ai_mode_heading">Modo IA</string>
     <string name="forums_ai_mode_off">Desactivado</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">Toca o marcador de calquera publicación para gardala aquí para máis tarde.</string>
     <string name="forums_saved_error_clear">Non se puideron borrar as publicacións gardadas</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d publicación nova</item>
-        <item quantity="other">%d publicacións novas</item>
+        <item quantity="one">%s publicación nova</item>
+        <item quantity="other">%s publicacións novas</item>
     </plurals>
     <string name="forums_rss_feed">Feed RSS</string>
     <string name="forums_rss_mode_posts">Publicacións</string>
@@ -293,11 +293,11 @@
     <string name="forums_settings_ai_updated">Actualizouse a configuración de IA</string>
     <string name="forums_settings_forum_renamed">Foro renomeado</string>
     <string name="forums_settings_name_clear_cd">Borrar o nome</string>
-    <string name="forums_settings_unsubscribe_section">Cancelar a subscrición ao foro</string>
+    <string name="forums_settings_unsubscribe_section">Anular a subscrición ao foro</string>
     <string name="forums_share_link_title">Ligazón do foro</string>
     <string name="forums_find_found_by_url">Atopado por URL</string>
-    <string name="forums_moderation_pending_posts">Publicacións pendentes (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Comentarios pendentes (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Publicacións pendentes (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Comentarios pendentes (%1$s)</string>
     <string name="forums_moderation_on_image">Na imaxe: %1$s</string>
     <string name="forums_sort_ai">IA</string>
     <string name="forums_reject_post_access">Non tes permiso para publicar neste foro</string>

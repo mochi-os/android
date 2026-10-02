@@ -180,8 +180,8 @@
     <string name="people_books_create">पत्तावही तयार करा</string>
     <string name="people_books_delete">पत्तावही हटवा</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s आणि त्यातील %2$d संपर्क हटवायचा?</item>
-        <item quantity="other">%1$s आणि त्यातील %2$d संपर्क हटवायचे?</item>
+        <item quantity="one">%1$s आणि त्यातील %2$s संपर्क हटवायचा?</item>
+        <item quantity="other">%1$s आणि त्यातील %2$s संपर्क हटवायचे?</item>
     </plurals>
     <string name="people_welcome_body">Mochi वर मित्र शोधा आणि जोडले जा. आमंत्रण पाठवण्यासाठी संपर्क जोडा दाबा.</string>
     <string name="people_person_state_contact">संपर्कांमध्ये</string>

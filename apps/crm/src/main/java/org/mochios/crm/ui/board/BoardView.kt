@@ -111,13 +111,14 @@ fun BoardView(
         ?: crmDetails?.classes?.firstOrNull()?.id?.takeIf { id -> id.isNotBlank() }
 
     val columnFieldId = view.columns
-    // Drawn from every class the view shows, not just the first one that
-    // defines the field: each class holds its own options under a shared field
-    // id, and a column missing from the board leaves its cards in Unassigned.
-    val columnOptions = viewModel.getOptionsForClasses(columnFieldId, view.classes)
+    // The board class's options, as the web's board takes them: the columns
+    // are the same on both, and a column added on either shows on the other.
+    // A card of another class whose value is not among them sits in
+    // Unassigned, as it does on the web.
+    val columnOptions = viewModel.getBoardOptions(view, columnFieldId)
     val rowFieldId = view.rows.takeIf { it.isNotBlank() }
     val rowOptions = rowFieldId?.let { fieldId ->
-        viewModel.getOptionsForClasses(fieldId, view.classes)
+        viewModel.getBoardOptions(view, fieldId)
     } ?: emptyList()
     val borderFieldId = view.border.takeIf { it.isNotBlank() }
 

@@ -19,7 +19,7 @@
     <string name="staff_accounts_notes_label">Notaichean</string>
     <string name="staff_accounts_reason_label">Adhbhar</string>
     <string name="staff_accounts_reason_optional_label">Adhbhar (roghainneil)</string>
-    <string name="staff_accounts_sales">%1$d reic</string>
+    <string name="staff_accounts_sales">%1$s reic</string>
     <string name="staff_accounts_search_clear">Falamhaich an lorg</string>
     <string name="staff_accounts_search_placeholder">Lorg</string>
     <string name="staff_accounts_seller_buyers">Ceannaichean a-mhàin</string>
@@ -36,7 +36,7 @@
     <string name="staff_accounts_unnamed">Gun ainm</string>
     <string name="staff_accounts_unsuspend">Cuir cur an cois dheth</string>
     <string name="staff_accounts_unsuspended_toast">Cunntas ath-bheothaichte</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Sguir dheth</string>
     <string name="staff_appeals_decide">Dèan co-dhùnadh</string>
     <string name="staff_appeals_decision_denied">Cùm an liosta diùltaichte</string>

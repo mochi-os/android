@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Tacan kungsi dicokot</string>
     <string name="feeds_source_poll">Cokot</string>
     <string name="feeds_source_transform">Robah ku AI</string>
-    <string name="feeds_remove_source_confirm">Cabut \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Pupus ogé kintunan nu diimpor</string>
+    <string name="feeds_remove_source_confirm">Ieu bakal ngeureunkeun impor eusi ti \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Pupus ogé kintunan nu diimpor ti sumber ieu</string>
     <string name="feeds_suggested_credibility_title">Kredibilitas nu disarankeun</string>
-    <string name="feeds_suggested_credibility_body">Mochi nyarankeun kredibilitas %1$d. Tampi?</string>
+    <string name="feeds_suggested_credibility_body">Mochi nyarankeun kredibilitas %1$s. Tampi?</string>
     <string name="feeds_suggested_credibility_keep">Tahan nu ayeuna</string>
     <string name="feeds_ai_processing_mode">Modeu ngolah AI</string>
     <string name="feeds_ai_account">Akun AI</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Toél markah dina kintunan mana waé pikeun nyimpen di dieu kanggo engké.</string>
     <string name="feeds_saved_error_clear">Gagal mupus kintunan nu disimpen</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d kintunan anyar</item>
-        <item quantity="other">%d kintunan anyar</item>
+        <item quantity="one">%s kintunan anyar</item>
+        <item quantity="other">%s kintunan anyar</item>
     </plurals>
     <string name="feeds_caught_up">Anjeun parantos ningali sadayana</string>
     <string name="feeds_all_caught_up">Sadaya geus dibaca</string>
@@ -192,10 +192,10 @@
     <string name="feeds_source_url_hint_feed">ID éntitas feed atawa fingerprint</string>
     <string name="feeds_source_credibility_label">Kredibilitas</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d jam</item>
+        <item quantity="other">%1$s jam</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d menit</item>
+        <item quantity="other">%1$s menit</item>
     </plurals>
     <string name="feeds_source_polling_interval">Polling unggal %1$s</string>
     <string name="feeds_access_level_react_full">Réaksi jeung tempo</string>
@@ -212,20 +212,20 @@
     <string name="feeds_link">Tumbu</string>
     <string name="feeds_share_link_title">Tumbu feed</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d koméntar</item>
-        <item quantity="other">%1$d koméntar</item>
+        <item quantity="one">%1$s koméntar</item>
+        <item quantity="other">%1$s koméntar</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d lampiran</item>
-        <item quantity="other">%1$d lampiran</item>
+        <item quantity="one">%1$s lampiran</item>
+        <item quantity="other">%1$s lampiran</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Tempo %1$d koméntar deui</item>
-        <item quantity="other">Tempo %1$d koméntar deui</item>
+        <item quantity="one">Tempo %1$s koméntar deui</item>
+        <item quantity="other">Tempo %1$s koméntar deui</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d taun ka tukang poé ieu</item>
-        <item quantity="other">%1$d taun ka tukang poé ieu</item>
+        <item quantity="one">%1$s taun ka tukang poé ieu</item>
+        <item quantity="other">%1$s taun ka tukang poé ieu</item>
     </plurals>
     <string name="feeds_block">Blokir</string>
     <string name="feeds_removed_from_feed">Anjeun dipiceun ti feed ieu</string>

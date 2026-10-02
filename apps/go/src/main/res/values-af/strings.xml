@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Verwyder</string>
     <string name="go_delete_message">Hierdie speletjie sal uit jou lys verwyder word. Dit kan nie ongedaan gemaak word nie.</string>
     <string name="go_delete_title">Verwyder spel?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Aanvaar</string>
     <string name="go_draw_decline">Wys af</string>
     <string name="go_draw_offered_received">%1$s het gelykop aangebied</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Oorgegee</string>
     <string name="go_new_game_title">Nuwe Go-speletjie</string>
     <string name="go_new_game_no_friends">Jy moet ’n vriend byvoeg voordat jy ’n speletjie kan begin.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Punte by Wit se telling gevoeg om te vergoed dat Swart eerste speel</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go-bord</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go-bord, jou beurt om \'n swart steen te plaas</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go-bord, jou beurt om \'n wit steen te plaas</string>
+    <string name="go_board_a11y">%1$s×%1$s Go-bord</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go-bord, jou beurt om \'n swart steen te plaas</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go-bord, jou beurt om \'n wit steen te plaas</string>
     <string name="go_status_scoring">Tel — stem saam oor die telling of speel voort</string>
     <string name="go_score_proposed">Voorgestelde telling: swart %1$s, wit %2$s</string>
     <string name="go_score_opponent_accepted">Jou teenstander aanvaar hierdie telling: swart %1$s, wit %2$s</string>

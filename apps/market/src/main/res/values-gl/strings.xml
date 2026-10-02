@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mercado</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografía</string>
     <string name="market_account_biography_placeholder">Cóntalles aos compradores sobre ti…</string>
     <string name="market_account_load_failed">Non se puido cargar a conta</string>
@@ -59,7 +59,7 @@
     <string name="market_bids_tab_outbid">Superado</string>
     <string name="market_bids_tab_won">Gañado</string>
     <string name="market_bids_title">Poxas</string>
-    <string name="market_carousel_main">Foto %1$d de %2$d</string>
+    <string name="market_carousel_main">Foto %1$s de %2$s</string>
     <string name="market_channel_name">Mercado</string>
     <string name="market_chargeback_reason_bank_cannot_process">O banco non puido procesar</string>
     <string name="market_chargeback_reason_check_returned">Cheque devolto</string>
@@ -138,7 +138,7 @@
     <string name="market_editor_condition_refurbished">Reacondicionado</string>
     <string name="market_editor_condition_used">Usado</string>
     <string name="market_editor_currency">Moeda</string>
-    <string name="market_editor_days">%1$d días</string>
+    <string name="market_editor_days">%1$s días</string>
     <string name="market_editor_delete">Eliminar anuncio</string>
     <string name="market_editor_description">Descrición</string>
     <string name="market_editor_interval_monthly">Mensual</string>
@@ -277,7 +277,7 @@
     <string name="market_onboarding_dismiss">Descartar</string>
     <string name="market_onboarding_title">Benvido a Market</string>
     <string name="market_open_sidebar">Abrir menú</string>
-    <string name="market_price_from">desde %1$s</string>
+    <string name="market_price_from">Desde %1$s</string>
     <string name="market_price_per_month">%1$s / mes</string>
     <string name="market_price_per_year">%1$s / ano</string>
     <string name="market_profile_biography">Sobre</string>
@@ -329,7 +329,7 @@
     <string name="market_purchases_title">Compras</string>
     <string name="market_rating_label">Valoración</string>
     <string name="market_rating_no_reviews">Aínda non hai reseñas</string>
-    <string name="market_rating_reviews">(%1$d opinión)</string>
+    <string name="market_rating_reviews">(%1$s opinión)</string>
     <string name="market_refund_amount_label">Importe</string>
     <string name="market_refund_body">Indica un motivo para a túa solicitude de reembolso.</string>
     <string name="market_refund_details_label">Detalles</string>
@@ -479,10 +479,10 @@
     <string name="market_sale_review_response_submitting">Enviando…</string>
     <string name="market_checkout_subscribing">Subscribindo…</string>
     <string name="market_filter_remove">Eliminar o filtro</string>
-    <string name="market_listing_detail_sales_count">%1$d vendas</string>
+    <string name="market_listing_detail_sales_count">%1$s vendas</string>
     <string name="market_listings_action_appeal">Recurso de eliminación</string>
     <string name="market_listings_share_chooser">Compartir anuncio</string>
-    <string name="market_profile_sales_count">%1$d vendas</string>
+    <string name="market_profile_sales_count">%1$s vendas</string>
     <string name="market_purchase_dispute_response">Resposta do vendedor</string>
     <string name="market_refund_dialog_amount_label">Importe</string>
 
@@ -498,11 +498,11 @@
     <string name="market_bids_current_bid">Actual: %1$s</string>
     <string name="market_bids_ends_in">Remata en %1$s</string>
     <string name="market_bids_your_bid">A túa poxa: %1$s</string>
-    <string name="market_carousel_thumbnail">Miniatura %1$d</string>
+    <string name="market_carousel_thumbnail">Miniatura %1$s</string>
     <string name="market_checkout_browser_unavailable">Non hai ningún navegador dispoñible para abrir a páxina de pagamento</string>
     <string name="market_checkout_pwyw_label">O teu prezo (mínimo %1$s)</string>
     <string name="market_checkout_pwyw_min_error">A cantidade debe ser polo menos %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ficheiro(s) anexado(s)</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ficheiro(s) anexado(s)</string>
     <string name="market_dispute_dialog_evidence_section_title">Probas enviadas</string>
     <string name="market_dispute_dialog_evidence_submitter_line">enviado por %1$s</string>
     <string name="market_editor_appeal">Recorrer moderación</string>
@@ -573,7 +573,7 @@
     <string name="market_messages_inbox_empty_title">Aínda non hai conversas</string>
     <string name="market_messages_load_failed">Non se puido cargar o fío</string>
     <string name="market_messages_send_failed">Non se puido enviar a mensaxe</string>
-    <string name="market_messages_unread_badge">%1$d sen ler</string>
+    <string name="market_messages_unread_badge">%1$s sen ler</string>
     <string name="market_price_high_bid">Puxa máis alta: %1$s</string>
     <string name="market_price_instant_buy">compra inmediata: %1$s</string>
     <string name="market_price_starting_bid">Puxa inicial: %1$s</string>
@@ -581,10 +581,10 @@
     <string name="market_profile_member_since">Membro desde %1$s</string>
     <string name="market_profile_joined">Uniuse o %1$s</string>
     <string name="market_profile_rating_breakdown">Desglose da valoración</string>
-    <string name="market_profile_stars_value">%1$d estrelas</string>
+    <string name="market_profile_stars_value">%1$s estrelas</string>
     <string name="market_purchase_dispute_chargeback">Devolución de cargo %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">O teu banco presentou unha devolución de cargo neste pedido. Stripe está xestionando a disputa co vendedor; o resultado aparecerá aquí cando se decida.</string>
-    <string name="market_purchase_download_many">Descarga os teus %1$d ficheiros máis abaixo.</string>
+    <string name="market_purchase_download_many">Descarga os teus %1$s ficheiros máis abaixo.</string>
     <string name="market_purchase_download_one">Descarga o teu ficheiro máis abaixo.</string>
     <string name="market_purchase_review_from">Reseña de %1$s</string>
     <string name="market_purchases_auction_label">Poxa #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Isto cancelará a poxa. A listaxe será ocultada dos compradores; podes volver listala máis tarde como un novo borrador.</string>
     <string name="market_listings_remove_title">Eliminar esta listaxe?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Isto cancelará a poxa e avisará a %1$d poxador activo. O anuncio ocultarase aos compradores; máis adiante podes volver publicalo como un borrador novo.</item>
-        <item quantity="other">Isto cancelará a poxa e avisará a %1$d poxadores activos. O anuncio ocultarase aos compradores; máis adiante podes volver publicalo como un borrador novo.</item>
+        <item quantity="one">Isto cancelará a poxa e avisará a %1$s poxador activo. O anuncio ocultarase aos compradores; máis adiante podes volver publicalo como un borrador novo.</item>
+        <item quantity="other">Isto cancelará a poxa e avisará a %1$s poxadores activos. O anuncio ocultarase aos compradores; máis adiante podes volver publicalo como un borrador novo.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Isto cancelará %1$d subscrición activa ao final do período de facturación actual. Avisarase aos subscritores. O anuncio ocultarase aos compradores.</item>
-        <item quantity="other">Isto cancelará %1$d subscricións activas ao final do período de facturación actual. Avisarase aos subscritores. O anuncio ocultarase aos compradores.</item>
+        <item quantity="one">Isto cancelará %1$s subscrición activa ao final do período de facturación actual. Avisarase aos subscritores. O anuncio ocultarase aos compradores.</item>
+        <item quantity="other">Isto cancelará %1$s subscricións activas ao final do período de facturación actual. Avisarase aos subscritores. O anuncio ocultarase aos compradores.</item>
     </plurals>
 </resources>

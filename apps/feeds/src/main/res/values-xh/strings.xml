@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Umthombo ususiwe</string>
     <string name="feeds_settings_source_polling">Iyabuyisela umthombo…</string>
     <string name="feeds_settings_access_updated">Ufikelelo luhlaziyiwe</string>
-    <string name="feeds_settings_access_revoked">Ufikelelo lurhoxisiwe</string>
+    <string name="feeds_settings_access_revoked">Ufikelelo lususiwe</string>
     <string name="feeds_settings_member_removed">Ilungu lisusiwe</string>
     <string name="feeds_settings_ai_mode_updated">Imo ye-AI ihlaziyiwe</string>
     <string name="feeds_settings_ai_account_updated">I-akhawunti ye-AI ihlaziyiwe</string>
@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Ayizange ithathwe</string>
     <string name="feeds_source_poll">Vota</string>
     <string name="feeds_source_transform">Utshintsho lwe-AI</string>
-    <string name="feeds_remove_source_confirm">Susa \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Cima nazo iiposti ezingenisiweyo</string>
+    <string name="feeds_remove_source_confirm">Oku kuya kuyeka ukungeniswa komxholo ovela ku-\"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Cima nazo iiposti ezingeniswe kulo mthombo</string>
     <string name="feeds_suggested_credibility_title">Ukuthembeka okucetyiswayo</string>
-    <string name="feeds_suggested_credibility_body">I-Mochi icebisa ukuthembeka kwe-%1$d. Yamkela?</string>
+    <string name="feeds_suggested_credibility_body">I-Mochi icebisa ukuthembeka kwe-%1$s. Yamkela?</string>
     <string name="feeds_suggested_credibility_keep">Gcina okukhoyo</string>
     <string name="feeds_ai_processing_mode">Imo yokusebenza kwe-AI</string>
     <string name="feeds_ai_account">Iakhawunti ye-AI</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Cofa ibhukimaki kuyo nayiphi na iposti ukuze uyigcine apha ukuze uyijonge kamva.</string>
     <string name="feeds_saved_error_clear">Akuphumelelanga ukucima iiposti ezigciniweyo</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d iposti entsha</item>
-        <item quantity="other">%d iiposti ezintsha</item>
+        <item quantity="one">%s iposti entsha</item>
+        <item quantity="other">%s iiposti ezintsha</item>
     </plurals>
     <string name="feeds_caught_up">Uyibonile yonke into</string>
     <string name="feeds_all_caught_up">Konke kuhleli</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Isazisi sentlangano yesipili okanye umngeso</string>
     <string name="feeds_source_credibility_label">Ukuthembeka</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">iyure engu-%1$d</item>
-        <item quantity="other">iiyure ezingu-%1$d</item>
+        <item quantity="one">iyure engu-%1$s</item>
+        <item quantity="other">iiyure ezingu-%1$s</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">umzuzu ongu-%1$d</item>
-        <item quantity="other">imizuzu engu-%1$d</item>
+        <item quantity="one">umzuzu ongu-%1$s</item>
+        <item quantity="other">imizuzu engu-%1$s</item>
     </plurals>
     <string name="feeds_source_polling_interval">Ikhangela rhoqo nge-%1$s</string>
     <string name="feeds_access_level_react_full">Sabela ukhe ujonge</string>
@@ -215,19 +215,19 @@
     <string name="feeds_share_link_title">Ikhonkco lefidi</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">ilizwi elinye</item>
-        <item quantity="other">amazwi ayi-%1$d</item>
+        <item quantity="other">amazwi ayi-%1$s</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">isiqhoboshelo %1$d</item>
-        <item quantity="other">iziqhoboshelo %1$d</item>
+        <item quantity="one">isiqhoboshelo %1$s</item>
+        <item quantity="other">iziqhoboshelo %1$s</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Bona elinye igqabaza %1$d</item>
-        <item quantity="other">Bona amanye amagqabaza %1$d</item>
+        <item quantity="one">Bona elinye igqabaza %1$s</item>
+        <item quantity="other">Bona amanye amagqabaza %1$s</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">kwiminyaka engu-%1$d eyadlulayo namhlanje</item>
-        <item quantity="other">kwiminyaka engu-%1$d eyadlulayo namhlanje</item>
+        <item quantity="one">kwiminyaka engu-%1$s eyadlulayo namhlanje</item>
+        <item quantity="other">kwiminyaka engu-%1$s eyadlulayo namhlanje</item>
     </plurals>
     <string name="feeds_block">Vimbela</string>
     <string name="feeds_removed_from_feed">Ususiwe kule fidi</string>

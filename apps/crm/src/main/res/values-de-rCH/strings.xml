@@ -145,7 +145,7 @@
     <string name="crm_board_no_columns">Keine Spalten für diese Ansicht konfiguriert</string>
     <string name="crm_board_no_options">Keine Optionen für das Spaltenfeld konfiguriert</string>
     <string name="crm_board_rename_column">Spalte umbenennen</string>
-    <string name="crm_board_nested_count">+%1$d verschachtelt</string>
+    <string name="crm_board_nested_count">+%1$s verschachtelt</string>
     <string name="crm_move_to_column">In Spalte verschieben</string>
     <string name="crm_move_to_row">In Zeile verschieben</string>
     <string name="crm_move_after">Nach %1$s</string>

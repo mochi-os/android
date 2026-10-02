@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Notizen</string>
     <string name="staff_accounts_reason_label">Grund</string>
     <string name="staff_accounts_reason_optional_label">Grund (optional)</string>
-    <string name="staff_accounts_sales">%1$d Verkäufe</string>
+    <string name="staff_accounts_sales">%1$s Verkäufe</string>
     <string name="staff_accounts_search_clear">Suche leeren</string>
     <string name="staff_accounts_search_placeholder">Suchen</string>
     <string name="staff_accounts_seller_buyers">Nur Käufer</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Unbenannt</string>
     <string name="staff_accounts_unsuspend">Sperre aufheben</string>
     <string name="staff_accounts_unsuspended_toast">Kontoaussetzung aufgehoben</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Abbrechen</string>
     <string name="staff_appeals_decide">Entscheiden</string>
     <string name="staff_appeals_decision_denied">Anzeige abgelehnt lassen</string>

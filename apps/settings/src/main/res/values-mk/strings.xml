@@ -5,11 +5,11 @@
     <string name="settings_home_logout">Одјави се</string>
     <string name="settings_home_account">Сметка</string>
     <string name="settings_home_preferences">Преференции</string>
-    <string name="settings_home_display">Прикажи</string>
+    <string name="settings_home_display">Приказ</string>
     <string name="settings_home_notification_prefs">Преференции за известувања</string>
     <string name="settings_home_accounts">Поврзани сметки</string>
     <string name="settings_home_interests">Интереси</string>
-    <string name="account_section_passkeys">Passkey-и</string>
+    <string name="account_section_passkeys">Клучеви за пристап</string>
     <string name="account_passkey_register">Додај клуч за пристап</string>
     <string name="account_passkey_delete_title">Да се избрише клучот за пристап?</string>
     <string name="account_section_totp">Апликација за автентикација</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Да се избрише рутата?</string>
     <string name="route_path">Патека</string>
     <string name="route_method">Метод</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Апликација</string>
     <string name="route_method_entity">Ентитет</string>
     <string name="route_method_redirect">Пренасочување</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Преземете од packages.mochi-os.org</string>
     <string name="system_status_copy">Копирај</string>
     <string name="system_status_peers">Рамноправни</string>
-    <string name="system_status_known">Познати</string>
+    <string name="system_status_peers_totals">Познати %1$s · Поврзани %2$s · Мрежа за емитување %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Познати %1$s · Поврзани %2$s</string>
     <string name="system_status_peer_connected">Поврзано</string>
     <string name="system_status_peer_disconnected">Исклучено</string>
     <string name="system_status_peer_queued">Пораки во ред на чекање</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Отстрани</string>
     <string name="accounts_remove_title">Да ја отстраниме сметката?</string>
     <string name="system_documents_title">Документи</string>
-    <string name="system_documents_description">Правила на серверот, услови и одредби и известување за приватност прикажани на вашите корисници</string>
     <string name="system_documents_tab_rules">Правила на серверот</string>
     <string name="system_documents_tab_terms">Услови и одредби</string>
     <string name="system_documents_tab_privacy">Приватност</string>
     <string name="system_documents_language">Јазик</string>
     <string name="system_documents_no_language">Нема достапен документ за овој јазик.</string>
-    <string name="system_documents_customised">Прилагодено</string>
     <string name="system_documents_using_default">Се користи стандардно од пакетот</string>
     <string name="system_documents_revert">Врати на стандардно</string>
     <string name="system_documents_save">Зачувај</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">Избриши корисник</string>
     <string name="system_users_delete_title">Да се избрише корисникот?</string>
     <string name="system_users_manage_sessions">Управувај со сесии</string>
-    <string name="system_users_sessions_description">Прикажи и отповикај активни сесии за овој корисник.</string>
     <string name="system_users_sessions_empty">Овој корисник нема активни сесии.</string>
     <string name="system_users_revoke">Отповикај</string>
     <string name="system_users_revoke_all">Отповикај ги сите сесии</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">Следно</string>
     <string name="system_users_empty">Не се пронајдени корисници</string>
     <string name="system_users_empty_search">Ниту еден корисник не одговара на пребарувањето</string>
-    <string name="system_users_empty_search_hint">Обидете се да ги прилагодите критериумите за пребарување</string>
     <string name="system_users_toast_created">Корисникот е создаден</string>
     <string name="system_users_toast_updated">Корисникот е ажуриран</string>
     <string name="system_users_toast_deleted">Корисникот е избришан</string>
@@ -209,19 +208,20 @@
     <string name="settings_home_privacy">Политика за приватност</string>
     <string name="settings_home_rules">Правила</string>
     <string name="settings_home_terms">Услови за услуга</string>
-    <string name="account_passkeys_empty">Нема регистрирани пристапни клучеви.</string>
-    <string name="account_passkey_register_title">Додај пристапен клуч</string>
-    <string name="account_passkey_register_message">Уредот ќе побара да потврдите. Пристапниот клуч е поврзан со овој уред и се користи за идни најавувања.</string>
+    <string name="account_passkeys_empty">Нема регистрирани клучеви за пристап.</string>
+    <string name="account_passkey_register_title">Додај клуч за пристап</string>
     <string name="account_passkey_name_label">Име (опционално)</string>
     <string name="account_passkey_delete_message">„%1$s\" повеќе нема да ве најавува.</string>
-    <string name="account_totp_description">Најавете се со 6-цифрен код од апликација за автентикација.</string>
     <string name="account_totp_enabled">Автентикаторот е овозможен.</string>
     <string name="account_totp_setup_step1">Скенирајте или внесете ја оваа тајна во вашата апликација за автентикација.</string>
     <string name="account_totp_setup_step2">Внесете го 6-цифрениот код што го прикажува вашата апликација.</string>
     <string name="account_totp_code">Код</string>
     <string name="account_totp_disable_message">Повеќе нема да можете да се најавите со код од автентикаторот.</string>
     <string name="account_recovery_none">Не се генерирани кодови за обновување.</string>
-    <string name="account_recovery_count">%1$d неискористени кодови за обновување.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Преостанува %1$s код за обновување.</item>
+        <item quantity="other">Преостануваат %1$s кодови за обновување.</item>
+    </plurals>
     <string name="account_recovery_generate">Генерирај кодови</string>
     <string name="account_recovery_regenerate">Регенерирај кодови</string>
     <string name="account_recovery_regen_title">Регенерирај кодови за обновување?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Последно користен %1$s</string>
     <string name="route_delete_message">Ова ќе ја отстрани патеката за патот „%1$s\".</string>
     <string name="route_empty">Нема конфигурирани патеки.</string>
-    <string name="route_meta">Приоритет %1$d · %2$s</string>
+    <string name="route_meta">Приоритет %1$s · %2$s</string>
     <string name="interests_search_placeholder">Барај теми за додавање…</string>
     <string name="interests_empty">Сè уште нема интереси.</string>
     <string name="interests_summary_regenerate">Регенерирај резиме</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Ова трајно ќе го избрише корисникот „%1$s\". Оваа акција не може да се откаже.</string>
     <string name="system_users_sessions_title">Сесии на %1$s</string>
     <string name="system_users_session_last_accessed">Последен пристап: %1$s</string>
-    <string name="system_users_revoke_all_title">Откажи ги сите сесии?</string>
+    <string name="system_users_revoke_all_title">Отповикај ги сите сесии?</string>
     <string name="system_users_revoke_all_message">Сите активни сесии на овој корисник ќе бидат одјавени.</string>
-    <string name="system_users_pagination_status">Покажувам %1$d–%2$d од %3$d корисници</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Се прикажуваат %1$s–%2$s од %3$s корисник</item>
+        <item quantity="other">Се прикажуваат %1$s–%2$s од %3$s корисници</item>
+    </plurals>
     <string name="account_title">Сметка</string>
     <string name="account_section_identity">Идентитет</string>
     <string name="account_identity_identity">Идентитет</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Потврди DNS</string>
     <string name="settings_home_domains">Домени</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Тестот е испратен до %1$d дестинација</item>
-        <item quantity="other">Тестот е испратен до %1$d дестинации</item>
+        <item quantity="one">Тестот е испратен до %1$s дестинација</item>
+        <item quantity="other">Тестот е испратен до %1$s дестинации</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Отповикана %1$d сесија</item>
-        <item quantity="other">Отповикани %1$d сесии</item>
+        <item quantity="one">Отповикана %1$s сесија</item>
+        <item quantity="other">Отповикани %1$s сесии</item>
     </plurals>
     <string name="login_title">Најава</string>
     <string name="login_section_methods">Методи за најавување</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Јавно</string>
     <string name="system_status_reachability_private">Приватно</string>
     <string name="system_status_reachability_unknown">Непознато</string>
-    <string name="system_status_relay">Преку реле</string>
-    <string name="system_status_mesh">Меш мрежа за емитување</string>
+    <string name="system_status_reachability_relay">%1$s · преку реле</string>
     <string name="system_status_broadcast">Последно емитување</string>
     <string name="system_status_queued_broadcasts">Емитувани пораки на чекање</string>
     <string name="system_setting_hostname_publish">Објавувај го името на хостот и домените на други сервери</string>
     <string name="system_setting_hostname">Име на хост објавено на други сервери</string>
     <string name="system_status_peer_id">ID на пирот</string>
     <string name="system_status_holepunch">Пробивање</string>
-    <string name="system_status_holepunch_value">%1$d успешни · %2$d неуспешни</string>
     <string name="system_status_awaiting_routing">Пораки што чекаат рутирање</string>
     <string name="system_status_relay_service">Релејна услуга</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d резервации · %3$d кола · %4$d одбиено</string>
     <string name="route_target_select">Избери</string>
     <string name="account_data_description">Преземете целосна резервна копија што можете да ја вратите на овој или на друг Mochi сервер.</string>
     <string name="route_target_none">Нема достапни цели</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Последен пат виден %1$s</string>
     <string name="notifprefs_device_app">%1$s · апликација</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
-    <string name="notifprefs_test_partial">Тестот е испратен до %1$d од %2$d дестинации</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Тестот е испратен до %1$s од %2$s дестинација</item>
+        <item quantity="other">Тестот е испратен до %1$s од %2$s дестинации</item>
+    </plurals>
     <string name="notifprefs_test_none">Не се конфигурирани одредишта</string>
     <string name="notifprefs_transport_fcm">Пуш за Android</string>
     <string name="notifprefs_no_destinations">Нема дестинации</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">Ова ќе го отповика пристапот до календарот на %1$s. Најавата со %2$s останува додека не ја прекинете на страницата за најава.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Непозната тема</string>
+    <string name="system_documents_modified">Изменето</string>
+    <string name="system_documents_discard_title">Да се отфрлат промените?</string>
+    <string name="system_documents_discard">Отфрли</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s успешен</item>
+        <item quantity="other">%1$s успешни</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s неуспешен</item>
+        <item quantity="other">%1$s неуспешни</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s резервација</item>
+        <item quantity="other">%1$s / %2$s резервации</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s коло</item>
+        <item quantity="other">%1$s кола</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s одбиено</item>
+        <item quantity="other">%1$s одбиени</item>
+    </plurals>
 </resources>

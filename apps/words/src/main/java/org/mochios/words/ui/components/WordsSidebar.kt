@@ -13,6 +13,7 @@ import org.mochios.words.model.GameListItem
 import org.mochios.words.model.getOpponentId
 import org.mochios.words.model.getPlayerNames
 import org.mochios.words.model.playerScore
+import org.mochios.android.i18n.LocalFormat
 
 @Composable
 fun wordsDrawerItems(
@@ -40,7 +41,7 @@ fun wordsDrawerItems(
  */
 @Composable
 private fun GameListItem.playersLabel(): String =
-    stringResource(R.string.words_detail_player_count, player_count)
+    stringResource(R.string.words_detail_player_count, LocalFormat.current.formatNumber(player_count))
 
 private fun GameListItem.toDrawerItem(
     myIdentity: String,

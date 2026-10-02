@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">Žmonės</string>
     <string name="crm_option_icon">Piktograma</string>
     <string name="crm_option_icon_placeholder">pvz. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Atšaukti prenumeratą</string>
+    <string name="crm_settings_unsubscribe">Atsisakyti prenumeratos</string>
     <string name="crm_settings_delete_crm">Ištrinti CRM</string>
     <string name="crm_settings_delete_confirm_title">Ištrinti CRM</string>
-    <string name="crm_settings_unsubscribe_title">Atšaukti prenumeratą</string>
+    <string name="crm_settings_unsubscribe_title">Atsisakyti prenumeratos</string>
     <string name="crm_settings_unsubscribe_message">Ar tikrai norite atsisakyti šio CRM prenumeratos?</string>
     <string name="crm_access_level_owner">Savininkas</string>
     <string name="crm_object_watch">Stebėti</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Objektų nėra</string>
     <string name="crm_board_no_columns">Šiam vaizdui nesukonfigūruota stulpelių</string>
     <string name="crm_board_no_options">Stulpelio laukui nesukonfigūruota jokių parinkčių</string>
-    <string name="crm_board_nested_count">+%1$d įdėtų</string>
+    <string name="crm_board_nested_count">+%1$s įdėtų</string>
     <string name="crm_move_to_column">Perkelti į stulpelį</string>
     <string name="crm_move_to_row">Perkelti į eilutę</string>
     <string name="crm_move_after">Po %1$s</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Prieigos valdymas</string>
     <string name="crm_settings_not_set">Nenustatyta</string>
     <string name="crm_settings_access_updated">Prieiga atnaujinta</string>
-    <string name="crm_settings_access_revoked">Prieiga atšaukta</string>
+    <string name="crm_settings_access_revoked">Prieiga panaikinta</string>
     <string name="crm_people_search">Ieškoti žmonių</string>
     <string name="crm_access_tab_other">Kita</string>
     <string name="crm_access_select_group">Pasirinkite grupę</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM duomenys išsaugoti</string>
     <string name="crm_create_upload_json">Įkelkite .zip arba .json failą</string>
     <string name="crm_create_blocked_no_options">Nepavyko sukurti: %1$s privalomas, bet neturi pasirinkimų. Pridėkite parinkčių Dizaine.</string>
-    <string name="crm_design_sample">Pavyzdys %1$d</string>
+    <string name="crm_design_sample">Pavyzdys %1$s</string>
     <string name="crm_option_delete_title">Ištrinti parinktį</string>
     <string name="crm_option_delete_message">Ar tikrai norite ištrinti parinktį \"%1$s\"?</string>
 </resources>

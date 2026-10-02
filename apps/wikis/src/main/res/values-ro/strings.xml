@@ -96,9 +96,9 @@
     <string name="wikis_delete_page_confirm">Șterge</string>
     <string name="wikis_delete_page_cancel">Anulează</string>
     <string name="wikis_delete_page_failed">Ștergerea paginii a eșuat</string>
-    <string name="wikis_revert_page_comment_label">Anulează modificarea comentariului</string>
-    <string name="wikis_revert_page_confirm">Anulează modificarea</string>
-    <string name="wikis_revert_page_failed">Restabilirea paginii a eșuat</string>
+    <string name="wikis_revert_page_comment_label">Comentariu pentru restaurare</string>
+    <string name="wikis_revert_page_confirm">Restaurează</string>
+    <string name="wikis_revert_page_failed">Restaurarea paginii a eșuat</string>
     <string name="wikis_rename_page_title">Redenumește pagina</string>
     <string name="wikis_rename_page_label">URL nou</string>
     <string name="wikis_rename_page_redirects">Creează redirecționare de la URL-ul vechi</string>
@@ -110,9 +110,9 @@
     <string name="wikis_history_title">Istoric</string>
     <string name="wikis_history_empty">Nu s-au găsit revizii</string>
     <string name="wikis_history_view_action">Vizualizează</string>
-    <string name="wikis_history_revert_action">Revino la această versiune</string>
+    <string name="wikis_history_revert_action">Restaurează această versiune</string>
     <string name="wikis_revision_current_badge">Curent</string>
-    <string name="wikis_revision_revert_to_this">Revino la această versiune</string>
+    <string name="wikis_revision_revert_to_this">Restaurează această versiune</string>
     <string name="wikis_changes_title">Modificări recente</string>
     <string name="wikis_changes_subtitle">Editări recente din toate paginile acestui wiki.</string>
     <string name="wikis_changes_empty">Încă nicio modificare</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Notificări despre modificări de pagini, comentarii și invitații.</string>
     <string name="wikis_pageview_toc_expand">Afișează cuprinsul</string>
     <string name="wikis_pageview_toc_collapse">Ascunde cuprinsul</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Actualizat %1$s</string>
     <string name="wikis_pageview_not_found_description">Pagina „%1$s\" încă nu există.</string>
     <string name="wikis_pageview_share_chooser">Link către wiki</string>
@@ -246,14 +246,14 @@
     <string name="wikis_insert_dialog_empty">Încă nu există atașamente. Încarcă un fișier pentru a începe.</string>
     <string name="wikis_delete_page_message">Sunteți pe cale să ștergeți pagina „%1$s\" (%2$s). Această acțiune poate fi anulată prin restaurare din istoric.</string>
     <string name="wikis_delete_page_success">Pagină ștearsă</string>
-    <string name="wikis_revert_page_title">Anulează modificarea paginii</string>
-    <string name="wikis_revert_page_message">Sunteți pe cale să restaurați %1$s la versiunea %2$d. Aceasta va crea o nouă revizie cu conținutul versiunii %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Restaurat la versiunea %1$d</string>
-    <string name="wikis_revert_page_success">Restaurat la versiunea %1$d</string>
+    <string name="wikis_revert_page_title">Restaurează pagina</string>
+    <string name="wikis_revert_page_message">Sunteți pe cale să restaurați %1$s la versiunea %2$s. Aceasta va crea o nouă revizie cu conținutul versiunii %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Restaurat la versiunea %1$s</string>
+    <string name="wikis_revert_page_success">Restaurat la versiunea %1$s</string>
     <string name="wikis_rename_page_renaming">Se redenumește…</string>
     <string name="wikis_rename_page_success">Pagină redenumită</string>
-    <string name="wikis_history_viewing">Vizualizare istoric pentru %1$s, versiunea curentă %2$d</string>
-    <string name="wikis_revision_version_badge">Versiunea %1$d</string>
+    <string name="wikis_history_viewing">Vizualizare istoric pentru %1$s, versiunea curentă %2$s</string>
+    <string name="wikis_revision_version_badge">Versiunea %1$s</string>
     <string name="wikis_search_pages_placeholder">Caută pagini după titlu sau conținut…</string>
     <string name="wikis_search_no_results">Nu s-au găsit pagini pentru „%1$s\". Încercați alți termeni de căutare.</string>
     <string name="wikis_search_updated">Actualizat %1$s</string>
@@ -289,46 +289,46 @@
     <string name="wikis_revision_author">după %1$s</string>
     <string name="wikis_revision_show_page">Afișează pagina</string>
     <string name="wikis_revision_compare_failed">Versiunea anterioară nu a putut fi încărcată pentru comparație.</string>
-    <string name="wikis_revision_changes_from">Modificări de la versiunea %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Modificări de la versiunea %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d comentariu</item>
-        <item quantity="few">%d comentarii</item>
-        <item quantity="other">%d de comentarii</item>
+        <item quantity="one">%s comentariu</item>
+        <item quantity="few">%s comentarii</item>
+        <item quantity="other">%s de comentarii</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d răspuns</item>
-        <item quantity="few">+%d răspunsuri în plus</item>
-        <item quantity="other">+%d de răspunsuri în plus</item>
+        <item quantity="one">%s răspuns</item>
+        <item quantity="few">+%s răspunsuri în plus</item>
+        <item quantity="other">+%s de răspunsuri în plus</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d pagină</item>
-        <item quantity="few">%d pagini</item>
-        <item quantity="other">%d de pagini</item>
+        <item quantity="one">%s pagină</item>
+        <item quantity="few">%s pagini</item>
+        <item quantity="other">%s de pagini</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fișier</item>
-        <item quantity="few">%d fișiere</item>
-        <item quantity="other">%d de fișiere</item>
+        <item quantity="one">%s fișier</item>
+        <item quantity="few">%s fișiere</item>
+        <item quantity="other">%s de fișiere</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d imagine</item>
-        <item quantity="few">%d imagini</item>
-        <item quantity="other">%d de imagini</item>
+        <item quantity="one">%s imagine</item>
+        <item quantity="few">%s imagini</item>
+        <item quantity="other">%s de imagini</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d document</item>
-        <item quantity="few">%d documente</item>
-        <item quantity="other">%d de documente</item>
+        <item quantity="one">%s document</item>
+        <item quantity="few">%s documente</item>
+        <item quantity="other">%s de documente</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d pagină cu această etichetă</item>
-        <item quantity="few">%d pagini cu această etichetă</item>
-        <item quantity="other">%d de pagini cu această etichetă</item>
+        <item quantity="one">%s pagină cu această etichetă</item>
+        <item quantity="few">%s pagini cu această etichetă</item>
+        <item quantity="other">%s de pagini cu această etichetă</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">S-au găsit %1$d rezultat pentru „%2$s”</item>
-        <item quantity="few">S-au găsit %1$d rezultate pentru „%2$s”</item>
-        <item quantity="other">S-au găsit %1$d de rezultate pentru „%2$s”</item>
+        <item quantity="one">S-au găsit %1$s rezultat pentru „%2$s”</item>
+        <item quantity="few">S-au găsit %1$s rezultate pentru „%2$s”</item>
+        <item quantity="other">S-au găsit %1$s de rezultate pentru „%2$s”</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Legenda nu a putut fi salvată</string>
     <string name="wikis_attachments_upload_types">Fișiere acceptate: imagini, PDF, DOC, DOCX, TXT și MD.</string>
@@ -337,8 +337,8 @@
     <string name="wikis_rss_copied_new">Noul URL RSS copiat în clipboard</string>
     <string name="wikis_rss_exists">Acest URL de flux a fost deja emis și nu mai poate fi afișat.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Se afișează primul %1$d comentariu.</item>
-        <item quantity="few">Se afișează primele %1$d comentarii.</item>
-        <item quantity="other">Se afișează primele %1$d comentarii.</item>
+        <item quantity="one">Se afișează primul %1$s comentariu.</item>
+        <item quantity="few">Se afișează primele %1$s comentarii.</item>
+        <item quantity="other">Se afișează primele %1$s de comentarii.</item>
     </plurals>
 </resources>

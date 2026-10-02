@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Aucun objet</string>
     <string name="crm_board_no_columns">Aucune colonne configurée pour cette vue</string>
     <string name="crm_board_no_options">Aucune option configurée pour le champ de colonne</string>
-    <string name="crm_board_nested_count">+%1$d imbriqués</string>
+    <string name="crm_board_nested_count">+%1$s imbriqués</string>
     <string name="crm_move_to_column">Déplacer vers la colonne</string>
     <string name="crm_move_to_row">Déplacer vers la ligne</string>
     <string name="crm_move_after">Après %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Données CRM enregistrées</string>
     <string name="crm_create_upload_json">Téléversez un fichier .zip ou .json</string>
     <string name="crm_create_blocked_no_options">Impossible de créer : %1$s est obligatoire mais n\'a aucune option à choisir. Ajoutez des options dans Conception.</string>
-    <string name="crm_design_sample">Exemple %1$d</string>
+    <string name="crm_design_sample">Exemple %1$s</string>
     <string name="crm_option_delete_title">Supprimer l\'option</string>
     <string name="crm_option_delete_message">Êtes-vous sûr de vouloir supprimer l\'option \"%1$s\" ?</string>
 </resources>

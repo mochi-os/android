@@ -5,7 +5,7 @@
     <string name="settings_home_logout">אַרויסקומען</string>
     <string name="settings_home_account">קאָנטע</string>
     <string name="settings_home_preferences">פֿאָרצוגן</string>
-    <string name="settings_home_display">ווײַזן</string>
+    <string name="settings_home_display">עקראַן</string>
     <string name="settings_home_notification_prefs">באשטעטיקונג בעטעלעכץ</string>
     <string name="settings_home_accounts">פֿאַרבונדענע קאָנטעס</string>
     <string name="settings_home_interests">אינטערעסן</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">אומקער קאָדן</string>
     <string name="account_recovery_codes_title">אומקער קאָדן</string>
     <string name="sessions_unknown_agent">אומבאַקאַנטער מיטל</string>
-    <string name="sessions_revoke_title">אָפּזאָגן סעסיע?</string>
+    <string name="sessions_revoke_title">צוריקנעמען סעסיע?</string>
     <string name="account_section_oauth">דריט־פּאַרטיי לאָגין</string>
     <string name="account_oauth_link">פֿאַרבינדן קאָנטע</string>
     <string name="account_unlink">אָפּקניפּן</string>
@@ -29,7 +29,7 @@
     <string name="account_done">געטאָן</string>
     <string name="account_delete">אויסמעקן</string>
     <string name="account_rename">איבערטויפֿן</string>
-    <string name="sessions_revoke">אָפּזאָגן</string>
+    <string name="sessions_revoke">צוריקנעמען</string>
     <string name="account_disable">אומדערלויבן</string>
     <string name="account_copy">קאָפּירן</string>
     <string name="account_copy_all">קאָפּירן אַלץ</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">אויסמעקן וועג?</string>
     <string name="route_path">וועג</string>
     <string name="route_method">מעטאָד</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">אַפּ</string>
     <string name="route_method_entity">ענטיטעט</string>
     <string name="route_method_redirect">רעדירעקט</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">לאָדט אַראָפּ פֿון packages.mochi-os.org</string>
     <string name="system_status_copy">קאָפּירן</string>
     <string name="system_status_peers">גלייכע</string>
-    <string name="system_status_known">באקאנט</string>
+    <string name="system_status_peers_totals">באַקאַנט %1$s · פֿאַרבונדן %2$s · בראָדקאַסט־נעץ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">באַקאַנט %1$s · פֿאַרבונדן %2$s</string>
     <string name="system_status_peer_connected">פֿאַרבונדן</string>
     <string name="system_status_peer_disconnected">אפגעשניטן</string>
     <string name="system_status_peer_queued">מעלדונגען אין ריי</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">אַראָפּנעמען</string>
     <string name="accounts_remove_title">אַראָפּנעמען קאָנטע?</string>
     <string name="system_documents_title">דאָקומענטן</string>
-    <string name="system_documents_description">סערווער־כּללים, תּנאָים, און פּריוואַטקייט־מעלדונג ווערן געוויזן אײַערע באַניצערס</string>
     <string name="system_documents_tab_rules">סערווער־כּללים</string>
     <string name="system_documents_tab_terms">תּנאָים</string>
     <string name="system_documents_tab_privacy">פּריוואַטקײַט</string>
     <string name="system_documents_language">שפּראַך</string>
     <string name="system_documents_no_language">קיין דאָקומענט פֿאַראַן פֿאַר דעם שפּראַך.</string>
-    <string name="system_documents_customised">פּערזענלעך</string>
     <string name="system_documents_using_default">ניצן אײַנגעבונדענעם פֿאָרויסבאַשטימטן</string>
     <string name="system_documents_revert">אומקערן צו פֿאַרשטעלונג</string>
     <string name="system_documents_save">היט אויף</string>
@@ -182,46 +183,45 @@
     <string name="system_users_delete">אויסמעקן באַניצער</string>
     <string name="system_users_delete_title">אויסמעקן באַניצער?</string>
     <string name="system_users_manage_sessions">פֿירן סעסיעס</string>
-    <string name="system_users_sessions_description">זע און רוף אָפּ אַקטיווע סעסיעס פֿאַר דעם באַניצער.</string>
     <string name="system_users_sessions_empty">דער באַניצער האָט נישט קיין אַקטיווע סעסיעס.</string>
-    <string name="system_users_revoke">אָפּזאָגן</string>
-    <string name="system_users_revoke_all">אָפּזאָגן אַלע סעסיעס</string>
+    <string name="system_users_revoke">צוריקנעמען</string>
+    <string name="system_users_revoke_all">צוריקנעמען אַלע סעסיעס</string>
     <string name="system_users_unknown_browser">אומבאַקאַנטער ברויזער</string>
     <string name="system_users_unknown">אומבאַקאַנט</string>
     <string name="system_users_previous">פֿריִער</string>
     <string name="system_users_next">ווײַטער</string>
     <string name="system_users_empty">קיין באַניצערס ניט געפֿונען</string>
     <string name="system_users_empty_search">קיין באַניצערס שטימען מיט אײַער זוך</string>
-    <string name="system_users_empty_search_hint">פּרוּווט באַאַרבעטן אײַערע זוך־קריטעריעס</string>
     <string name="system_users_toast_created">באַניצער באַשאַפֿן</string>
     <string name="system_users_toast_updated">באַניצער באַנײַט</string>
     <string name="system_users_toast_deleted">באַניצער אויסגעמעקט</string>
     <string name="system_users_toast_suspended">באַניצער סוספּענדירט</string>
     <string name="system_users_toast_suspension_removed">סוספּענסיע אַראָפּגענומען</string>
-    <string name="system_users_toast_session_revoked">סעסיע אָפּגערופֿן</string>
+    <string name="system_users_toast_session_revoked">סעסיע צוריקגענומען</string>
     <string name="system_users_toast_create_failed">ניט געלונגען צו שאַפֿן באַניצער</string>
     <string name="system_users_toast_update_failed">ניט געלונגען צו דערהײַנטיקן באַניצער</string>
     <string name="system_users_toast_delete_failed">ניט געלונגען צו מעקן באַניצער</string>
     <string name="system_users_toast_status_failed">ניט געלונגען צו דערהײַנטיקן באַניצער־סטאַטוס</string>
-    <string name="system_users_toast_revoke_failed">ניט געלונגען צו אומקערן סעסיע</string>
+    <string name="system_users_toast_revoke_failed">ניט געלונגען צוריקצונעמען סעסיע</string>
 
     <string name="settings_home_sessions">סעסיעס</string>
     <string name="settings_home_privacy">פּריוואַטקייט פּאָליסי</string>
     <string name="settings_home_rules">כללים</string>
     <string name="settings_home_terms">דינסט באדינגונגען</string>
-    <string name="account_passkeys_empty">קײנע פּאַסקיז רעגיסטרירט.</string>
-    <string name="account_passkey_register_title">לייגן פּאַסקי</string>
-    <string name="account_passkey_register_message">דיין מיטל וועט בעטן באַשטעטיקן. דער פּאַסקי איז געבונדן צו דעם מיטל און איז גענוצט פֿאַר צוקונפֿטיקע לאָגינס.</string>
+    <string name="account_passkeys_empty">קיין פּאַסקייס רעגיסטרירט.</string>
+    <string name="account_passkey_register_title">צולייגן אַ פּאַסקיי</string>
     <string name="account_passkey_name_label">נאָמען (אַפּציאָנעל)</string>
     <string name="account_passkey_delete_message">\"%1$s\" וועט אייך מער ניט אַרײַנלאָזן.</string>
-    <string name="account_totp_description">לאָגין מיט 6 ציפֿערן קאָד פֿון אַן אָטענטיקאַציע אַפּ.</string>
     <string name="account_totp_enabled">אָטענטיקאַטאָר איז ענייבלד.</string>
     <string name="account_totp_setup_step1">סקאַנירן אָדער אַרײַנגעבן דעם סוד אין דיין אָטענטיקאַציע אַפּ.</string>
     <string name="account_totp_setup_step2">אַרײַנגעבן דעם 6 ציפֿערן קאָד וואָס דיין אַפּ ווייזט.</string>
     <string name="account_totp_code">קאָד</string>
     <string name="account_totp_disable_message">איר וועט מער ניט קענען לאָגין מיט אַן אָטענטיקאַטאָר קאָד.</string>
     <string name="account_recovery_none">קײנע אױפֿשטעלן קאָדן זענען געשאַפֿן.</string>
-    <string name="account_recovery_count">%1$d ניט גענוצטע אױפֿשטעלן קאָדן.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s איבעריקער אױפֿשטעלן קאָד.</item>
+        <item quantity="other">%1$s איבעריקע אױפֿשטעלן קאָדן.</item>
+    </plurals>
     <string name="account_recovery_generate">גענערירן קאָדן</string>
     <string name="account_recovery_regenerate">רעגענערירן קאָדן</string>
     <string name="account_recovery_regen_title">רעגענערירן אױפֿשטעלן קאָדן?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">לעצטע מאָל גענוצט %1$s</string>
     <string name="route_delete_message">דאָס וועט אַרױסנעמען די רוט פֿאַר וועג \"%1$s\".</string>
     <string name="route_empty">קײנע רעטעס פֿאַרקאָנפֿיגירט.</string>
-    <string name="route_meta">פּריאָריטעט %1$d · %2$s</string>
+    <string name="route_meta">פּריאָריטעט %1$s · %2$s</string>
     <string name="interests_search_placeholder">זוך טעמעס צוצולײגן…</string>
     <string name="interests_empty">קײנע אינטערעסן ביז איצט.</string>
     <string name="interests_summary_regenerate">סך־הכּל אויסשאַפֿן ווידער</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">דאָס וועט אױסמעקן באַניצער \"%1$s\" פֿאַר אייביק. די אַקציע קען ניט אַנטו\'ט ווערן.</string>
     <string name="system_users_sessions_title">סעסיעס פֿאַר %1$s</string>
     <string name="system_users_session_last_accessed">לעצטע צוטריט: %1$s</string>
-    <string name="system_users_revoke_all_title">רעוואָקירן אַלע סעסיעס?</string>
+    <string name="system_users_revoke_all_title">צוריקנעמען אַלע סעסיעס?</string>
     <string name="system_users_revoke_all_message">אַלע אַקטיווע סעסיעס פֿון דעם באַניצער וועלן אַרויסגיין.</string>
-    <string name="system_users_pagination_status">וואָס ווייזט %1$d–%2$d פֿון %3$d באַניצערס</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">ווײַזט %1$s–%2$s פֿון %3$s באַניצער</item>
+        <item quantity="other">ווײַזט %1$s–%2$s פֿון %3$s באַניצערס</item>
+    </plurals>
     <string name="account_title">קאָנטע</string>
     <string name="account_section_identity">אידענטיטעט</string>
     <string name="account_identity_identity">אידענטיטעט</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">פֿאַריפֿיצירן DNS</string>
     <string name="settings_home_domains">דאָמיינס</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">פּרוּװ געשיקט צו %1$d דעסטינאַציע</item>
-        <item quantity="other">פּרוּװ געשיקט צו %1$d דעסטינאַציעס</item>
+        <item quantity="one">פּרוּװ געשיקט צו %1$s דעסטינאַציע</item>
+        <item quantity="other">פּרוּװ געשיקט צו %1$s דעסטינאַציעס</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">אָפּגערופֿן 1 סעסיע</item>
-        <item quantity="other">אָפּגערופֿן %1$d סעסיעס</item>
+        <item quantity="one">צוריקגענומען %1$s סעסיע</item>
+        <item quantity="other">צוריקגענומען %1$s סעסיעס</item>
     </plurals>
     <string name="login_title">אַרײַנלאָג</string>
     <string name="login_section_methods">אַרײַנגאַנג מעטאָדן</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">עפֿנטלעך</string>
     <string name="system_status_reachability_private">פּריוואַט</string>
     <string name="system_status_reachability_unknown">אומבאַקאַנט</string>
-    <string name="system_status_relay">דורך רעלע</string>
-    <string name="system_status_mesh">בראָדקאַסט־נעץ</string>
+    <string name="system_status_reachability_relay">%1$s · דורך רעלע</string>
     <string name="system_status_broadcast">לעצטע בראָדקאַסט</string>
     <string name="system_status_queued_broadcasts">בראָדקאַסט מעלדונגען אין ריי</string>
     <string name="system_setting_hostname_publish">מעלדן האָסטנאָמען און דאָמענען צו אַנדערע סערווערס</string>
     <string name="system_setting_hostname">האָסטנאָמען געמאלדן צו אַנדערע סערווערס</string>
     <string name="system_status_peer_id">פּיר ID</string>
     <string name="system_status_holepunch">לאך-שלאג</string>
-    <string name="system_status_holepunch_value">%1$d געלונגען · %2$d דורכגעפאלן</string>
     <string name="system_status_awaiting_routing">מעלדונגען וואָס ווארטן אויף ראוטינג</string>
     <string name="system_status_relay_service">רעלע סערוויס</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d רעזערוואַציעס · %3$d סערקאַטס · %4$d אפגעזאגט</string>
     <string name="route_target_select">אויסקלײַבן</string>
     <string name="account_data_description">לאָדט אַראָפּ אַ פֿולע רעזערוו־קאָפּיע וואָס איר קענט צוריקשטעלן אויף דעם אָדער אַן אַנדער Mochi סערווער.</string>
     <string name="route_target_none">קײן צילן זײַנען נישט פֿאַראַן</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">לעצט געזען %1$s</string>
     <string name="notifprefs_device_app">%1$s · אַפּ</string>
     <string name="notifprefs_device_push">%1$s · פּוש</string>
-    <string name="notifprefs_test_partial">דער טעסט איז געשיקט געוואָרן צו %1$d פֿון %2$d דעסטינאַציעס</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">פּרוּװ געשיקט צו %1$s פֿון %2$s דעסטינאַציע</item>
+        <item quantity="other">פּרוּװ געשיקט צו %1$s פֿון %2$s דעסטינאַציעס</item>
+    </plurals>
     <string name="notifprefs_test_none">קיין דעסטינאַציעס קאָנפֿיגורירט</string>
     <string name="notifprefs_transport_fcm">Android פּוש</string>
     <string name="notifprefs_no_destinations">קיין דעסטיניישאנס</string>
@@ -385,7 +390,7 @@
     <string name="accounts_field_topic">טעמע</string>
     <string name="accounts_field_secret">אונטערשריפט סוד</string>
     <string name="account_totp_open">עפֿענען אין דער אויטענטיקאַציע־אַפּ</string>
-    <string name="accounts_revoke">רופֿט צוריק צוטריט</string>
+    <string name="accounts_revoke">צוריקנעמען צוטריט</string>
     <string name="accounts_capability_calendar">קאַלענדאַר</string>
     <string name="accounts_capability_notify">מעלדונגען</string>
     <string name="accounts_capability_ai">AI</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">דאָס וועט אָפּרופֿן דעם קאַלענדאַר־צוטריט פֿון %1$s. אײַנלאָגירן מיט %2$s בלײַבט ביז איר וועט עס אָפּבינדן אויף דער אײַנלאָג־זײַט.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">אומבאַקאַנטע טעמע</string>
+    <string name="system_documents_modified">געענדערט</string>
+    <string name="system_documents_discard_title">אַװעקװאַרפֿן די ענדערונגען?</string>
+    <string name="system_documents_discard">אַװעקװאַרפֿן</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s געלונגען</item>
+        <item quantity="other">%1$s געלונגען</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s דורכגעפֿאַלן</item>
+        <item quantity="other">%1$s דורכגעפֿאַלן</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s רעזערוואַציע</item>
+        <item quantity="other">%1$s / %2$s רעזערוואַציעס</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s סערקאַט</item>
+        <item quantity="other">%1$s סערקאַטס</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s אָפּגעזאָגט</item>
+        <item quantity="other">%1$s אָפּגעזאָגט</item>
+    </plurals>
 </resources>

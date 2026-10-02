@@ -180,8 +180,8 @@
     <string name="people_books_create">Crear libreta de direcciones</string>
     <string name="people_books_delete">Eliminar libreta de direcciones</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">¿Eliminar %1$s y su %2$d contacto?</item>
-        <item quantity="other">¿Eliminar %1$s y sus %2$d contactos?</item>
+        <item quantity="one">¿Eliminar %1$s y su %2$s contacto?</item>
+        <item quantity="other">¿Eliminar %1$s y sus %2$s contactos?</item>
     </plurals>
     <string name="people_welcome_body">Encuentra amigos en todo Mochi y conecta con ellos. Toca Añadir contacto para enviar una invitación.</string>
     <string name="people_person_state_contact">En contactos</string>

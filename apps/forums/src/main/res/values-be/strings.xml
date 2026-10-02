@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Мадэраваць</string>
     <string name="forums_members_search">Фільтр удзельнікаў</string>
     <string name="forums_banner_description">Markdown, які паказваецца ў верхняй частцы форуму.</string>
-    <string name="forums_banner_placeholder">Сардэчна запрашаем на гэты форум…</string>
+    <string name="forums_banner_placeholder">Увядзіце тэкст банера (падтрымліваецца Markdown)…</string>
     <string name="forums_ai_mode_label">Рэжым: %1$s</string>
     <string name="forums_ai_mode_heading">Рэжым AI</string>
     <string name="forums_ai_mode_off">Адключана</string>
@@ -202,10 +202,10 @@
     <string name="forums_saved_empty_subtitle">Націсніце закладку на любым допісе, каб захаваць яго тут на потым.</string>
     <string name="forums_saved_error_clear">Не ўдалося ачысціць захаваныя допісы</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d новы допіс</item>
-        <item quantity="few">%d новыя допісы</item>
-        <item quantity="many">%d новых допісаў</item>
-        <item quantity="other">%d новага допісу</item>
+        <item quantity="one">%s новы допіс</item>
+        <item quantity="few">%s новыя допісы</item>
+        <item quantity="many">%s новых допісаў</item>
+        <item quantity="other">%s новага допісу</item>
     </plurals>
     <string name="forums_rss_feed">RSS-стужка</string>
     <string name="forums_rss_mode_posts">Пасты</string>
@@ -298,8 +298,8 @@
     <string name="forums_settings_unsubscribe_section">Адпісацца ад форуму</string>
     <string name="forums_share_link_title">Спасылка на форум</string>
     <string name="forums_find_found_by_url">Знойдзена па URL</string>
-    <string name="forums_moderation_pending_posts">Публікацыі ў чаканні (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Каментарыі ў чаканні (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Публікацыі ў чаканні (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Каментарыі ў чаканні (%1$s)</string>
     <string name="forums_moderation_on_image">На здымку: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">У вас няма дазволу публікаваць на гэтым форуме</string>

@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">소스가 삭제되었어요</string>
     <string name="feeds_settings_source_polling">소스 가져오는 중…</string>
     <string name="feeds_settings_access_updated">접근이 업데이트되었어요</string>
-    <string name="feeds_settings_access_revoked">액세스가 취소되었습니다</string>
+    <string name="feeds_settings_access_revoked">액세스가 철회되었습니다</string>
     <string name="feeds_settings_member_removed">멤버가 제거되었어요</string>
     <string name="feeds_settings_ai_mode_updated">AI 모드가 업데이트되었습니다</string>
     <string name="feeds_settings_ai_account_updated">AI 계정이 업데이트되었습니다</string>
@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">가져온 적 없음</string>
     <string name="feeds_source_poll">폴링</string>
     <string name="feeds_source_transform">AI 변환</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\"을(를) 제거하시겠습니까?</string>
-    <string name="feeds_remove_also_delete_posts">가져온 게시물도 삭제</string>
+    <string name="feeds_remove_source_confirm">\"%1$s\"에서 콘텐츠 가져오기를 중지합니다.</string>
+    <string name="feeds_remove_also_delete_posts">이 소스에서 가져온 게시물도 삭제</string>
     <string name="feeds_suggested_credibility_title">추천 신뢰도</string>
-    <string name="feeds_suggested_credibility_body">Mochi가 신뢰도 %1$d을(를) 추천합니다. 수락하시겠습니까?</string>
+    <string name="feeds_suggested_credibility_body">Mochi가 신뢰도 %1$s을(를) 추천합니다. 수락하시겠습니까?</string>
     <string name="feeds_suggested_credibility_keep">현재 값 유지</string>
     <string name="feeds_ai_processing_mode">AI 처리 모드</string>
     <string name="feeds_ai_account">AI 계정</string>
@@ -140,7 +140,7 @@
     <string name="feeds_saved_empty_subtitle">게시물의 북마크를 탭하여 여기에 나중에 보기 위해 저장하세요.</string>
     <string name="feeds_saved_error_clear">저장된 게시물을 지우지 못했습니다</string>
     <plurals name="feeds_new_posts">
-        <item quantity="other">새 게시물 %d개</item>
+        <item quantity="other">새 게시물 %s개</item>
     </plurals>
     <string name="feeds_caught_up">모두 확인했습니다</string>
     <string name="feeds_all_caught_up">모두 확인했어요</string>
@@ -165,8 +165,8 @@
     <string name="feeds_settings_field_server">서버</string>
     <string name="feeds_settings_name_edit_cd">이름 편집</string>
     <string name="feeds_settings_section_identity">신원</string>
-    <string name="feeds_unsubscribe">구독 취소</string>
-    <string name="feeds_unsubscribed">구독이 취소되었어요</string>
+    <string name="feeds_unsubscribe">구독 해지</string>
+    <string name="feeds_unsubscribed">구독이 해지되었어요</string>
     <string name="feeds_access_level_comment_full">댓글, 반응 및 보기</string>
     <string name="feeds_rss_mode_posts_comments">게시물 및 댓글</string>
     <string name="feeds_access_add_title">접근 추가</string>
@@ -175,7 +175,7 @@
     <string name="feeds_post_content">게시물 내용</string>
     <string name="feeds_enable_memories">메모리 사용</string>
     <string name="feeds_permission_request_title">권한 요청</string>
-    <string name="feeds_unsubscribe_confirm">피드 구독을 취소할까요?</string>
+    <string name="feeds_unsubscribe_confirm">피드 구독을 해지할까요?</string>
     <string name="feeds_settings_title">%1$s 설정</string>
     <string name="feeds_source_transform_help">비활성화하려면 비워 두세요.</string>
     <string name="feeds_settings_name_cancel_cd">편집 취소</string>
@@ -186,15 +186,15 @@
     <string name="feeds_create_first_post">첫 게시물을 작성하세요</string>
     <string name="feeds_rss_mode_posts">게시물</string>
     <string name="feeds_source_last_checked">마지막 확인: %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">피드 구독 취소</string>
+    <string name="feeds_settings_unsubscribe_section">피드 구독 해지</string>
     <string name="feeds_source_transform_hint">영어로 번역하여 글머리 기호로 표시해 주세요.</string>
     <string name="feeds_source_url_hint_feed">피드 엔티티 ID 또는 지문</string>
     <string name="feeds_source_credibility_label">신뢰도</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d시간</item>
+        <item quantity="other">%1$s시간</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d분</item>
+        <item quantity="other">%1$s분</item>
     </plurals>
     <string name="feeds_source_polling_interval">%1$s마다 폴링</string>
     <string name="feeds_access_level_react_full">반응 및 보기</string>
@@ -211,16 +211,16 @@
     <string name="feeds_link">링크</string>
     <string name="feeds_share_link_title">피드 링크</string>
     <plurals name="feeds_comment_count">
-        <item quantity="other">댓글 %1$d개</item>
+        <item quantity="other">댓글 %1$s개</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="other">첨부 파일 %1$d개</item>
+        <item quantity="other">첨부 파일 %1$s개</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="other">댓글 %1$d개 더 보기</item>
+        <item quantity="other">댓글 %1$s개 더 보기</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">%1$d년 전 오늘</item>
+        <item quantity="other">%1$s년 전 오늘</item>
     </plurals>
     <string name="feeds_block">차단</string>
     <string name="feeds_removed_from_feed">이 피드에서 제거되었어요</string>

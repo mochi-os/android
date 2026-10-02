@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Bilješke</string>
     <string name="staff_accounts_reason_label">Razlog</string>
     <string name="staff_accounts_reason_optional_label">Razlog (opcionalno)</string>
-    <string name="staff_accounts_sales">%1$d prodaja</string>
+    <string name="staff_accounts_sales">%1$s prodaja</string>
     <string name="staff_accounts_search_clear">Očisti pretragu</string>
     <string name="staff_accounts_search_placeholder">Pretraži</string>
     <string name="staff_accounts_seller_buyers">Samo kupci</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Bez naziva</string>
     <string name="staff_accounts_unsuspend">Ukini suspenziju</string>
     <string name="staff_accounts_unsuspended_toast">Suspenzija računa uklonjena</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Otkaži</string>
     <string name="staff_appeals_decide">Odluči</string>
     <string name="staff_appeals_decision_denied">Zadrži oglas odbijen</string>

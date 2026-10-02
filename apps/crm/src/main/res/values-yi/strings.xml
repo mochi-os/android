@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">קײן אָביעקטן</string>
     <string name="crm_board_no_columns">קײן זײַלן זײַנען נישט קאָנפֿיגורירט פֿאַר דעם אױסבליק</string>
     <string name="crm_board_no_options">קיין אָפּציעס קאָנפֿיגורירט פֿאַר זײַל פֿעלד</string>
-    <string name="crm_board_nested_count">+%1$d פֿאַרנעסטעט</string>
+    <string name="crm_board_nested_count">+%1$s פֿאַרנעסטעט</string>
     <string name="crm_move_to_column">באַוועגן צו זײַל</string>
     <string name="crm_move_to_row">באַוועגן צו רײ</string>
     <string name="crm_move_after">נאָך %1$s</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">צוטריט פֿאַרוואַלטונג</string>
     <string name="crm_settings_not_set">ניט געשטעלט</string>
     <string name="crm_settings_access_updated">צוטריט באַנײַט</string>
-    <string name="crm_settings_access_revoked">צוגאנג צונופגענומען</string>
+    <string name="crm_settings_access_revoked">צוטריט צוריקגענומען</string>
     <string name="crm_people_search">זוך מענטשן</string>
     <string name="crm_access_tab_other">אַנדער</string>
     <string name="crm_access_select_group">קלייַבט אויס אַ גרופּע</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM־דאַטן געשפּיכלערט</string>
     <string name="crm_create_upload_json">אַרויפֿלאָדן אַ .zip אָדער .json טעקע</string>
     <string name="crm_create_blocked_no_options">מ׳קען נישט שאַפֿן: %1$s איז נייטיק אָבער האָט נישט קיין אויסוואַלן. לייגט צו אויסוואַלן אין דיזײַן.</string>
-    <string name="crm_design_sample">מוסטער %1$d</string>
+    <string name="crm_design_sample">מוסטער %1$s</string>
     <string name="crm_option_delete_title">אויסמעקן אָפּציע</string>
     <string name="crm_option_delete_message">זײַט איר זיכער איר ווילט אױסמעקן די אָפּציע \"%1$s\"?</string>
 </resources>

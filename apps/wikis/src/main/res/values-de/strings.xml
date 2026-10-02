@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Benachrichtigungen über Seitenbearbeitungen, Kommentare und Einladungen.</string>
     <string name="wikis_pageview_toc_expand">Inhaltsverzeichnis anzeigen</string>
     <string name="wikis_pageview_toc_collapse">Inhaltsverzeichnis ausblenden</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Aktualisiert %1$s</string>
     <string name="wikis_pageview_not_found_description">Die Seite „%1$s\" existiert noch nicht.</string>
     <string name="wikis_pageview_share_chooser">Wiki-Link</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Du bist dabei, die Seite „%1$s\" (%2$s) zu löschen. Diese Aktion kann durch Wiederherstellung aus dem Verlauf rückgängig gemacht werden.</string>
     <string name="wikis_delete_page_success">Seite gelöscht</string>
     <string name="wikis_revert_page_title">Seite zurücksetzen</string>
-    <string name="wikis_revert_page_message">Du bist dabei, %1$s auf Version %2$d zurückzusetzen. Dies erstellt eine neue Revision mit dem Inhalt von Version %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Auf Version %1$d zurückgesetzt</string>
-    <string name="wikis_revert_page_success">Auf Version %1$d zurückgesetzt</string>
+    <string name="wikis_revert_page_message">Du bist dabei, %1$s auf Version %2$s zurückzusetzen. Dies erstellt eine neue Revision mit dem Inhalt von Version %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Auf Version %1$s zurückgesetzt</string>
+    <string name="wikis_revert_page_success">Auf Version %1$s zurückgesetzt</string>
     <string name="wikis_rename_page_renaming">Wird umbenannt…</string>
     <string name="wikis_rename_page_success">Seite umbenannt</string>
-    <string name="wikis_history_viewing">Verlauf für %1$s wird angezeigt, aktuelle Version %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Verlauf für %1$s wird angezeigt, aktuelle Version %2$s</string>
+    <string name="wikis_revision_version_badge">Version %1$s</string>
     <string name="wikis_search_pages_placeholder">Seiten nach Titel oder Inhalt durchsuchen…</string>
     <string name="wikis_search_no_results">Keine Seiten gefunden für „%1$s\". Versuche andere Suchbegriffe.</string>
     <string name="wikis_search_updated">Aktualisiert %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">nach %1$s</string>
     <string name="wikis_revision_show_page">Seite anzeigen</string>
     <string name="wikis_revision_compare_failed">Die vorherige Version konnte nicht zum Vergleich geladen werden.</string>
-    <string name="wikis_revision_changes_from">Änderungen von Version %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Änderungen von Version %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d Kommentar</item>
-        <item quantity="other">%d Kommentare</item>
+        <item quantity="one">%s Kommentar</item>
+        <item quantity="other">%s Kommentare</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d Antwort</item>
-        <item quantity="other">+%d weitere Antworten</item>
+        <item quantity="one">%s Antwort</item>
+        <item quantity="other">+%s weitere Antworten</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d Seite</item>
-        <item quantity="other">%d Seiten</item>
+        <item quantity="one">%s Seite</item>
+        <item quantity="other">%s Seiten</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d Datei</item>
-        <item quantity="other">%d Dateien</item>
+        <item quantity="one">%s Datei</item>
+        <item quantity="other">%s Dateien</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d Bild</item>
-        <item quantity="other">%d Bilder</item>
+        <item quantity="one">%s Bild</item>
+        <item quantity="other">%s Bilder</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d Dokument</item>
-        <item quantity="other">%d Dokumente</item>
+        <item quantity="one">%s Dokument</item>
+        <item quantity="other">%s Dokumente</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d Seite mit diesem Tag</item>
-        <item quantity="other">%d Seiten mit diesem Tag</item>
+        <item quantity="one">%s Seite mit diesem Tag</item>
+        <item quantity="other">%s Seiten mit diesem Tag</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d Ergebnis für „%2$s" gefunden</item>
-        <item quantity="other">%1$d Ergebnisse für „%2$s" gefunden</item>
+        <item quantity="one">%1$s Ergebnis für „%2$s“ gefunden</item>
+        <item quantity="other">%1$s Ergebnisse für „%2$s“ gefunden</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Bildunterschrift konnte nicht gespeichert werden</string>
     <string name="wikis_attachments_upload_types">Unterstützte Dateien: Bilder, PDF, DOC, DOCX, TXT und MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Neue RSS-URL in die Zwischenablage kopiert</string>
     <string name="wikis_rss_exists">Diese Feed-URL wurde bereits ausgestellt und kann nicht erneut angezeigt werden.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Der erste %1$d Kommentar wird angezeigt.</item>
-        <item quantity="other">Die ersten %1$d Kommentare werden angezeigt.</item>
+        <item quantity="one">Der erste %1$s Kommentar wird angezeigt.</item>
+        <item quantity="other">Die ersten %1$s Kommentare werden angezeigt.</item>
     </plurals>
 </resources>

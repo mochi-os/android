@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">ڪڏهن به حاصل نه ڪيو</string>
     <string name="feeds_source_poll">پول</string>
     <string name="feeds_source_transform">AI تبديلي</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" هٽايو؟</string>
-    <string name="feeds_remove_also_delete_posts">درآمد ڪيل پوسٽون پڻ ڊاهيو</string>
+    <string name="feeds_remove_source_confirm">هي \"%1$s\" مان مواد درآمد ڪرڻ بند ڪري ڇڏيندو.</string>
+    <string name="feeds_remove_also_delete_posts">هن ذريعي مان درآمد ڪيل پوسٽون پڻ ڊاهيو</string>
     <string name="feeds_suggested_credibility_title">تجويز ڪيل اعتبار</string>
-    <string name="feeds_suggested_credibility_body">Mochi %1$d جو اعتبار تجويز ڪري ٿو. قبول ڪريو؟</string>
+    <string name="feeds_suggested_credibility_body">Mochi %1$s جو اعتبار تجويز ڪري ٿو. قبول ڪريو؟</string>
     <string name="feeds_suggested_credibility_keep">موجوده رکو</string>
     <string name="feeds_ai_processing_mode">AI پروسيسنگ موڊ</string>
     <string name="feeds_ai_account">AI اڪائونٽ</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">ڪنهن به پوسٽ کي هتي پوءِ لاءِ محفوظ ڪرڻ لاءِ ان جي بوڪ مارڪ تي ٽيپ ڪريو.</string>
     <string name="feeds_saved_error_clear">محفوظ ٿيل پوسٽون صاف ڪرڻ ۾ ناڪامي</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d نئين پوسٽ</item>
-        <item quantity="other">%d نيون پوسٽون</item>
+        <item quantity="one">%s نئين پوسٽ</item>
+        <item quantity="other">%s نيون پوسٽون</item>
     </plurals>
     <string name="feeds_caught_up">توھان سڀ ڪجھ ڏسي ورتو</string>
     <string name="feeds_all_caught_up">سڀ ڪجهه پڙهيو ويو</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">فيڊ اينٽٽي ID يا فنگر پرنٽ</string>
     <string name="feeds_source_credibility_label">اعتبار</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d ڪلاڪ</item>
-        <item quantity="other">%1$d ڪلاڪ</item>
+        <item quantity="one">%1$s ڪلاڪ</item>
+        <item quantity="other">%1$s ڪلاڪ</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d منٽ</item>
-        <item quantity="other">%1$d منٽ</item>
+        <item quantity="one">%1$s منٽ</item>
+        <item quantity="other">%1$s منٽ</item>
     </plurals>
     <string name="feeds_source_polling_interval">هر %1$s تي چڪاس ٿئي ٿي</string>
     <string name="feeds_access_level_react_full">ري ايڪٽ ۽ ڏسو</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">لنڪ</string>
     <string name="feeds_share_link_title">فيڊ لنڪ</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d تبصرو</item>
-        <item quantity="other">%1$d تبصرا</item>
+        <item quantity="one">%1$s تبصرو</item>
+        <item quantity="other">%1$s تبصرا</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d ڳنڍيل</item>
-        <item quantity="other">%1$d ڳنڍيل</item>
+        <item quantity="one">%1$s ڳنڍيل</item>
+        <item quantity="other">%1$s ڳنڍيل</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d وڌيڪ راءِ ڏسو</item>
-        <item quantity="other">%1$d وڌيڪ رايا ڏسو</item>
+        <item quantity="one">%1$s وڌيڪ راءِ ڏسو</item>
+        <item quantity="other">%1$s وڌيڪ رايا ڏسو</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">اڄ کان %1$d سال اڳ</item>
-        <item quantity="other">اڄ کان %1$d سال اڳ</item>
+        <item quantity="one">اڄ کان %1$s سال اڳ</item>
+        <item quantity="other">اڄ کان %1$s سال اڳ</item>
     </plurals>
     <string name="feeds_block">بلاڪ ڪريو</string>
     <string name="feeds_removed_from_feed">توھان کي ھن فيڊ مان ھٽايو ويو</string>

@@ -6,8 +6,8 @@
     <string name="forums_list_title">فۆڕەمەکان</string>
     <string name="forums_list_find">دۆزینەوەی Forumەکان</string>
     <string name="forums_list_logout">دەرچوون</string>
-    <string name="forums_list_unsubscribe">بەشداری هەڵبوەشێنەوە</string>
-    <string name="forums_list_unsubscribe_title">بەشداری هەڵبوەشێنەوە</string>
+    <string name="forums_list_unsubscribe">لابردنی بەشداری</string>
+    <string name="forums_list_unsubscribe_title">لابردنی بەشداری</string>
     <string name="forums_create_title">دروستکردنی فۆڕەم</string>
     <string name="forums_create_name">ناوی فۆڕەم</string>
     <string name="forums_create_privacy">تایبەتمەندی</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">تاگکردن</string>
     <string name="forums_ai_account_default">هەژماری بنەڕەت</string>
     <string name="forums_ai_prompt_reset">گەڕاندنەوە بۆ بنەڕەت</string>
-    <string name="forums_settings_unsubscribe">بەشداری هەڵبوەشێنەوە</string>
+    <string name="forums_settings_unsubscribe">لابردنی بەشداری</string>
     <string name="forums_moderation_title">چاودێری</string>
     <string name="forums_moderation_tab_queue">ڕیز</string>
     <string name="forums_moderation_tab_reports">ڕاپۆرتەکان</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_enter_code_sent">ئەو کۆدە بنووسە کە نێردراوە بۆ %1$s</string>
     <string name="forums_auth_create_identity">ناسنامەکەت دروست بکە</string>
     <string name="forums_list_empty">هێشتا هیچ فۆڕەمێک نییە</string>
-    <string name="forums_list_unsubscribe_message">دڵنیایت کە دەتەوێت بەشداری ئەم فۆڕەمە هەڵبوەشێنیتەوە؟</string>
+    <string name="forums_list_unsubscribe_message">دڵنیایت کە دەتەوێت بەشداری ئەم فۆڕەمە لابەیت؟</string>
     <string name="forums_find_search_placeholder">گەڕان لە فۆڕەمەکاندا یان URL بلکێنە</string>
     <string name="forums_find_search_hint">گەڕان بۆ فۆڕەمەکان بۆ بەشداریکردن</string>
     <string name="forums_post_body_field">ناوەڕۆک</string>
@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">چاودێری</string>
     <string name="forums_members_search">فلتەرکردنی ئەندامان</string>
     <string name="forums_banner_description">Markdown کە لە سەرەوەی فۆڕەمەکەدا پیشان دەدرێت.</string>
-    <string name="forums_banner_placeholder">بەخێربێیت بۆ ئەم فۆڕەمە…</string>
+    <string name="forums_banner_placeholder">دەقی بانەر بنووسە (Markdown پشتگیری دەکرێت)…</string>
     <string name="forums_ai_mode_label">دۆخ: %1$s</string>
     <string name="forums_ai_mode_heading">دۆخی AI</string>
     <string name="forums_ai_mode_off">ناچالاک</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">بۆ پاشەکەوتکردنی هەر پۆستێک بۆ دواتر لێرە، دەست بنێ بە نیشانەکەی.</string>
     <string name="forums_saved_error_clear">سڕینەوەی پۆستە پاشەکەوتکراوەکان سەرکەوتوو نەبوو</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d پۆستی نوێ</item>
-        <item quantity="other">%d پۆستی نوێ</item>
+        <item quantity="one">%s پۆستی نوێ</item>
+        <item quantity="other">%s پۆستی نوێ</item>
     </plurals>
     <string name="forums_rss_feed">فیدی RSS</string>
     <string name="forums_rss_mode_posts">پۆستەکان</string>
@@ -293,11 +293,11 @@
     <string name="forums_settings_ai_updated">ڕێکخستنەکانی AI نوێکرانەوە</string>
     <string name="forums_settings_forum_renamed">ناوی فۆڕەم گۆڕدرا</string>
     <string name="forums_settings_name_clear_cd">ناو پاک بکەرەوە</string>
-    <string name="forums_settings_unsubscribe_section">بەشداری فۆڕەم هەڵبوەشێنەوە</string>
+    <string name="forums_settings_unsubscribe_section">لابردنی بەشداری لە فۆڕەم</string>
     <string name="forums_share_link_title">بەستەری فۆڕەم</string>
     <string name="forums_find_found_by_url">بە URL دۆزرایەوە</string>
-    <string name="forums_moderation_pending_posts">بابەتە چاوەڕوانەکان (%1$d)</string>
-    <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان (%1$d)</string>
+    <string name="forums_moderation_pending_posts">بابەتە چاوەڕوانەکان (%1$s)</string>
+    <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان (%1$s)</string>
     <string name="forums_moderation_on_image">لەسەر وێنە: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">تۆ مۆڵەتی بڵاوکردنەوەت لەم فۆڕەمە نییە</string>

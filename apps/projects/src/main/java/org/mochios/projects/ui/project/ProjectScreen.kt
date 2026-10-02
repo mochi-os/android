@@ -721,11 +721,7 @@ private fun ProjectContent(
                                         onClick = {
                                             showOverflow = false
                                             val fieldId = activeView.columns
-                                            val classId = details?.fields?.entries
-                                                ?.firstOrNull { (_, fields) ->
-                                                    fields.any { field -> field.id == fieldId }
-                                                }
-                                                ?.key
+                                            val classId = viewModel.getBoardClass(activeView)
                                             if (classId != null) {
                                                 refreshPending = true
                                                 onAddColumn(viewModel.projectId, classId, fieldId)
@@ -874,7 +870,6 @@ private fun ProjectContent(
             objectId = uiState.selectedObjectId!!,
             projectDetails = details,
             initialObject = uiState.objects.find { it.id == uiState.selectedObjectId },
-            viewFieldIds = viewModel.getActiveViewFieldIds(),
             onDismiss = { viewModel.selectObject(null) },
             // deleteObject deletes, clears the selection when it matches, and
             // refreshes — so this must not pre-clear the selection it needs.

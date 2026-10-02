@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">Zdroj odstránený</string>
     <string name="feeds_settings_source_polling">Dopytuje sa zdroj…</string>
     <string name="feeds_settings_access_updated">Prístup aktualizovaný</string>
-    <string name="feeds_settings_access_revoked">Prístup zrušený</string>
+    <string name="feeds_settings_access_revoked">Prístup odvolaný</string>
     <string name="feeds_settings_member_removed">Člen odstránený</string>
     <string name="feeds_settings_ai_mode_updated">Režim AI aktualizovaný</string>
     <string name="feeds_settings_ai_account_updated">Účet AI aktualizovaný</string>
@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Nikdy nenačítané</string>
     <string name="feeds_source_poll">Dopyt</string>
     <string name="feeds_source_transform">Transformácia pomocou AI</string>
-    <string name="feeds_remove_source_confirm">Odstrániť \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Odstrániť aj importované príspevky</string>
+    <string name="feeds_remove_source_confirm">Tým sa zastaví import obsahu z \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Odstrániť aj príspevky importované z tohto zdroja</string>
     <string name="feeds_suggested_credibility_title">Navrhovaná dôveryhodnosť</string>
-    <string name="feeds_suggested_credibility_body">Mochi navrhuje dôveryhodnosť %1$d. Prijať?</string>
+    <string name="feeds_suggested_credibility_body">Mochi navrhuje dôveryhodnosť %1$s. Prijať?</string>
     <string name="feeds_suggested_credibility_keep">Ponechať aktuálnu</string>
     <string name="feeds_ai_processing_mode">Režim spracovania AI</string>
     <string name="feeds_ai_account">Účet AI</string>
@@ -140,10 +140,10 @@
     <string name="feeds_saved_empty_subtitle">Klepnutím na záložku pri ľubovoľnom príspevku ho sem uložíte na neskôr.</string>
     <string name="feeds_saved_error_clear">Uložené príspevky sa nepodarilo vymazať</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d nový príspevok</item>
-        <item quantity="few">%d nové príspevky</item>
-        <item quantity="many">%d nového príspevku</item>
-        <item quantity="other">%d nových príspevkov</item>
+        <item quantity="one">%s nový príspevok</item>
+        <item quantity="few">%s nové príspevky</item>
+        <item quantity="many">%s nového príspevku</item>
+        <item quantity="other">%s nových príspevkov</item>
     </plurals>
     <string name="feeds_caught_up">Máte všetko prečítané</string>
     <string name="feeds_all_caught_up">Všetko prečítané</string>
@@ -194,16 +194,16 @@
     <string name="feeds_source_url_hint_feed">ID entity kanála alebo odtlačok</string>
     <string name="feeds_source_credibility_label">Dôveryhodnosť</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d hodina</item>
-        <item quantity="few">%1$d hodiny</item>
-        <item quantity="many">%1$d hodiny</item>
-        <item quantity="other">%1$d hodín</item>
+        <item quantity="one">%1$s hodina</item>
+        <item quantity="few">%1$s hodiny</item>
+        <item quantity="many">%1$s hodiny</item>
+        <item quantity="other">%1$s hodín</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minúta</item>
-        <item quantity="few">%1$d minúty</item>
-        <item quantity="many">%1$d minúty</item>
-        <item quantity="other">%1$d minút</item>
+        <item quantity="one">%1$s minúta</item>
+        <item quantity="few">%1$s minúty</item>
+        <item quantity="many">%1$s minúty</item>
+        <item quantity="other">%1$s minút</item>
     </plurals>
     <string name="feeds_source_polling_interval">Kontrola každých %1$s</string>
     <string name="feeds_access_level_react_full">Reagovať a prezerať</string>
@@ -220,28 +220,28 @@
     <string name="feeds_link">Odkaz</string>
     <string name="feeds_share_link_title">Odkaz na kanál</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d komentár</item>
-        <item quantity="few">%1$d komentáre</item>
-        <item quantity="many">%1$d komentárov</item>
-        <item quantity="other">%1$d komentárov</item>
+        <item quantity="one">%1$s komentár</item>
+        <item quantity="few">%1$s komentáre</item>
+        <item quantity="many">%1$s komentárov</item>
+        <item quantity="other">%1$s komentárov</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d príloha</item>
-        <item quantity="few">%1$d prílohy</item>
-        <item quantity="many">%1$d prílohy</item>
-        <item quantity="other">%1$d príloh</item>
+        <item quantity="one">%1$s príloha</item>
+        <item quantity="few">%1$s prílohy</item>
+        <item quantity="many">%1$s prílohy</item>
+        <item quantity="other">%1$s príloh</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Zobraziť %1$d ďalší komentár</item>
-        <item quantity="few">Zobraziť %1$d ďalšie komentáre</item>
-        <item quantity="many">Zobraziť %1$d ďalšieho komentára</item>
-        <item quantity="other">Zobraziť %1$d ďalších komentárov</item>
+        <item quantity="one">Zobraziť %1$s ďalší komentár</item>
+        <item quantity="few">Zobraziť %1$s ďalšie komentáre</item>
+        <item quantity="many">Zobraziť %1$s ďalšieho komentára</item>
+        <item quantity="other">Zobraziť %1$s ďalších komentárov</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">pred %1$d rokom dnes</item>
-        <item quantity="few">pred %1$d rokmi dnes</item>
-        <item quantity="many">pred %1$d roka dnes</item>
-        <item quantity="other">pred %1$d rokmi dnes</item>
+        <item quantity="one">pred %1$s rokom dnes</item>
+        <item quantity="few">pred %1$s rokmi dnes</item>
+        <item quantity="many">pred %1$s roka dnes</item>
+        <item quantity="other">pred %1$s rokmi dnes</item>
     </plurals>
     <string name="feeds_block">Zablokovať</string>
     <string name="feeds_removed_from_feed">Boli ste odstránení z tohto kanála</string>

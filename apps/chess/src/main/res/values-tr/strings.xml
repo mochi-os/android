@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">At</string>
     <string name="chess_piece_pawn">Piyon</string>
     <string name="chess_move_played">%1$s %2$s oynadı</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">Satranç hamleleri, beraberlik teklifleri ve oyun sonuçları hakkında bildirimler.</string>
     <string name="chess_channel_name">Satranç bildirimleri</string>
     <string name="chess_delete_message">Oyunu listenizden kaldırır.</string>

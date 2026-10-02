@@ -56,6 +56,7 @@ import org.mochios.wikis.R
 import org.mochios.wikis.model.Tag
 import org.mochios.wikis.navigation.WikisApp
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -184,8 +185,8 @@ private fun TagBadge(
 }
 
 @Composable
-private fun CountPill(count: Int) {
-    val pluralLabel = pluralStringResource(R.plurals.wikis_tags_count, count, count)
+internal fun CountPill(count: Int) {
+    val pluralLabel = pluralStringResource(R.plurals.wikis_tags_count, count, LocalFormat.current.formatNumber(count))
     Box(
         modifier = Modifier
             .clip(CircleShape)
@@ -195,7 +196,7 @@ private fun CountPill(count: Int) {
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = count.toString(),
+            text = LocalFormat.current.formatNumber(count),
             style = MaterialTheme.typography.labelSmall,
         )
     }

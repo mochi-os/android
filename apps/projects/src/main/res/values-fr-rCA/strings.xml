@@ -175,10 +175,10 @@
     <string name="projects_attachment_empty">Aucune pièce jointe</string>
     <string name="projects_attachment_add">Ajouter une pièce jointe</string>
     <string name="projects_attachment_default_name">pièce jointe</string>
-    <string name="projects_attachment_size_bytes">%1$d o</string>
-    <string name="projects_attachment_size_kb">%1$d Ko</string>
-    <string name="projects_attachment_size_mb">%1$d Mo</string>
-    <string name="projects_attachment_size_gb">%1$d Go</string>
+    <string name="projects_attachment_size_bytes">%1$s o</string>
+    <string name="projects_attachment_size_kb">%1$s Ko</string>
+    <string name="projects_attachment_size_mb">%1$s Mo</string>
+    <string name="projects_attachment_size_gb">%1$s Go</string>
     <string name="projects_request_empty">Aucune demande de fusion</string>
     <string name="projects_request_new">Nouvelle demande de fusion</string>
     <string name="projects_request_status_merged">Fusionnée</string>
@@ -190,7 +190,7 @@
     <string name="projects_request_checking_merge">Vérification de l\'état de fusion…</string>
     <string name="projects_request_can_merge">Peut être fusionnée</string>
     <string name="projects_request_cannot_merge">Fusion impossible</string>
-    <string name="projects_request_ahead_behind">%1$d en avance, %2$d en retard</string>
+    <string name="projects_request_ahead_behind">%1$s en avance, %2$s en retard</string>
     <string name="projects_request_draft_notice">Ceci est un brouillon. Marquez comme prêt avant la fusion.</string>
     <string name="projects_request_view_diff">Voir les différences</string>
     <string name="projects_request_mark_ready">Marquer comme prêt</string>
@@ -216,7 +216,7 @@
     <string name="projects_board_no_options">Aucune option configurée pour le champ de colonne</string>
     <string name="projects_board_column_options">Options de colonne</string>
     <string name="projects_board_rename_column">Renommer la colonne</string>
-    <string name="projects_board_nested_count">+%1$d imbriqués</string>
+    <string name="projects_board_nested_count">+%1$s imbriqués</string>
     <string name="projects_move_to_column">Déplacer vers la colonne</string>
     <string name="projects_move_to_row">Déplacer vers la ligne</string>
     <string name="projects_move_after">Après %1$s</string>

@@ -21,17 +21,17 @@
     <string name="wikis_page_action_recent_changes">Cambios recentes</string>
     <string name="wikis_page_action_new_page">Nova páxina</string>
     <string name="wikis_page_action_settings">Configuración</string>
-    <string name="wikis_page_action_unsubscribe">Cancelar subscrición</string>
+    <string name="wikis_page_action_unsubscribe">Anular subscrición</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Comeza a túa primeira wiki</string>
     <string name="wikis_empty_subtitle">Busca unha wiki á que subscribirte ou crea unha para publicar a túa propia documentación.</string>
     <string name="wikis_create_button">Crear wiki</string>
     <string name="wikis_recommended_section">Wikis recomendadas</string>
     <string name="wikis_subscribe_button">Subscribirse</string>
-    <string name="wikis_unsubscribe_action">Cancelar subscrición</string>
-    <string name="wikis_unsubscribing">Cancelando subscrición…</string>
-    <string name="wikis_unsubscribe_confirm_title">Cancelar subscrición</string>
-    <string name="wikis_unsubscribe_success">Subscrición cancelada</string>
+    <string name="wikis_unsubscribe_action">Anular subscrición</string>
+    <string name="wikis_unsubscribing">Anulando a subscrición…</string>
+    <string name="wikis_unsubscribe_confirm_title">Anular subscrición</string>
+    <string name="wikis_unsubscribe_success">Subscrición anulada</string>
     <string name="wikis_subscribe_failed">Non se puido subscribir</string>
     <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Cambios</string>
@@ -220,7 +220,7 @@
     <string name="wikis_channel_description">Notificacións sobre edicións de páxinas, comentarios e invitacións.</string>
     <string name="wikis_pageview_toc_expand">Mostrar índice</string>
     <string name="wikis_pageview_toc_collapse">Ocultar índice</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Actualizado %1$s</string>
     <string name="wikis_pageview_not_found_description">A páxina «%1$s» aínda non existe.</string>
     <string name="wikis_pageview_share_chooser">Ligazón do wiki</string>
@@ -228,7 +228,7 @@
     <string name="wikis_page_action_share">Ligazón</string>
     <string name="wikis_open_sidebar">Abrir barra lateral</string>
     <string name="wikis_search_placeholder">Buscar unha wiki…</string>
-    <string name="wikis_unsubscribe_confirm_message">Tes a certeza de que queres cancelar a subscrición a %1$s?</string>
+    <string name="wikis_unsubscribe_confirm_message">Tes a certeza de que queres anular a subscrición a %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL RSS da wiki</string>
     <string name="wikis_find_search_placeholder">Buscar por nome, ID, pegada ou URL…</string>
     <string name="wikis_join_search_button">Buscar wikis…</string>
@@ -245,13 +245,13 @@
     <string name="wikis_delete_page_message">Vas eliminar a páxina «%1$s» (%2$s). Esta acción pódese desfacer restaurando dende o historial.</string>
     <string name="wikis_delete_page_success">Páxina eliminada</string>
     <string name="wikis_revert_page_title">Reverter páxina</string>
-    <string name="wikis_revert_page_message">Vas reverter %1$s á versión %2$d. Isto creará unha nova revisión co contido da versión %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Revertido á versión %1$d</string>
-    <string name="wikis_revert_page_success">Revertido á versión %1$d</string>
+    <string name="wikis_revert_page_message">Vas reverter %1$s á versión %2$s. Isto creará unha nova revisión co contido da versión %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Revertido á versión %1$s</string>
+    <string name="wikis_revert_page_success">Revertido á versión %1$s</string>
     <string name="wikis_rename_page_renaming">Renomeando…</string>
     <string name="wikis_rename_page_success">Páxina renomeada</string>
-    <string name="wikis_history_viewing">Vendo o historial de %1$s, versión actual %2$d</string>
-    <string name="wikis_revision_version_badge">Versión %1$d</string>
+    <string name="wikis_history_viewing">Vendo o historial de %1$s, versión actual %2$s</string>
+    <string name="wikis_revision_version_badge">Versión %1$s</string>
     <string name="wikis_search_pages_placeholder">Buscar páxinas por título ou contido…</string>
     <string name="wikis_search_no_results">Non se atoparon páxinas para «%1$s». Proba outros termos de busca.</string>
     <string name="wikis_search_updated">Actualizado %1$s</string>
@@ -286,47 +286,47 @@
     <string name="wikis_revision_author">por %1$s</string>
     <string name="wikis_revision_show_page">Amosar a páxina</string>
     <string name="wikis_revision_compare_failed">Non se puido cargar a versión anterior para comparala.</string>
-    <string name="wikis_revision_changes_from">Cambios da versión %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Cambios da versión %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d comentario</item>
-        <item quantity="other">%d comentarios</item>
+        <item quantity="one">%s comentario</item>
+        <item quantity="other">%s comentarios</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d resposta</item>
-        <item quantity="other">+%d respostas máis</item>
+        <item quantity="one">%s resposta</item>
+        <item quantity="other">+%s respostas máis</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d páxina</item>
-        <item quantity="other">%d páxinas</item>
+        <item quantity="one">%s páxina</item>
+        <item quantity="other">%s páxinas</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d ficheiro</item>
-        <item quantity="other">%d ficheiros</item>
+        <item quantity="one">%s ficheiro</item>
+        <item quantity="other">%s ficheiros</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d imaxe</item>
-        <item quantity="other">%d imaxes</item>
+        <item quantity="one">%s imaxe</item>
+        <item quantity="other">%s imaxes</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d documento</item>
-        <item quantity="other">%d documentos</item>
+        <item quantity="one">%s documento</item>
+        <item quantity="other">%s documentos</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d páxina con esta etiqueta</item>
-        <item quantity="other">%d páxinas con esta etiqueta</item>
+        <item quantity="one">%s páxina con esta etiqueta</item>
+        <item quantity="other">%s páxinas con esta etiqueta</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Atopáronse %1$d resultado para "%2$s"</item>
-        <item quantity="other">Atopáronse %1$d resultados para "%2$s"</item>
+        <item quantity="one">Atopáronse %1$s resultado para \"%2$s\"</item>
+        <item quantity="other">Atopáronse %1$s resultados para \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Non se puido gardar a lenda</string>
     <string name="wikis_attachments_upload_types">Ficheiros admitidos: imaxes, PDF, DOC, DOCX, TXT e MD.</string>
     <string name="wikis_attachments_upload_limits">A configuración do teu servidor ou proxy pode limitar as cargas grandes.</string>
     <string name="wikis_rss_replace">Substituír</string>
     <string name="wikis_rss_copied_new">Nova URL RSS copiada ao portapapeis</string>
-    <string name="wikis_rss_exists">Este URL de fonte xa se emitiu e non se pode mostrar de novo.</string>
+    <string name="wikis_rss_exists">Este URL de fío xa se emitiu e non se pode mostrar de novo.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Amosando o primeiro %1$d comentario.</item>
-        <item quantity="other">Amosando os primeiros %1$d comentarios.</item>
+        <item quantity="one">Amosando o primeiro %1$s comentario.</item>
+        <item quantity="other">Amosando os primeiros %1$s comentarios.</item>
     </plurals>
 </resources>

@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Υποβολή…</string>
     <string name="market_checkout_subscribing">Εγγραφή…</string>
     <string name="market_filter_remove">Αφαίρεση φίλτρου</string>
-    <string name="market_listing_detail_sales_count">%1$d πωλήσεις</string>
-    <string name="market_profile_sales_count">%1$d πωλήσεις</string>
+    <string name="market_listing_detail_sales_count">%1$s πωλήσεις</string>
+    <string name="market_profile_sales_count">%1$s πωλήσεις</string>
     <string name="market_purchase_dispute_response">Απάντηση πωλητή</string>
     <string name="market_purchases_order_label">Παραγγελία #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Πείτε στους αγοραστές για εσάς…</string>
     <string name="market_account_load_failed">Δεν ήταν δυνατή η φόρτωση του λογαριασμού</string>
     <string name="market_account_save_failed">Δεν ήταν δυνατή η αποθήκευση των αλλαγών</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Τρέχουσα: %1$s</string>
     <string name="market_bids_ends_in">Λήγει σε %1$s</string>
     <string name="market_bids_your_bid">Η προσφορά σας: %1$s</string>
-    <string name="market_carousel_main">Φωτογραφία %1$d από %2$d</string>
-    <string name="market_carousel_thumbnail">Μικρογραφία %1$d</string>
+    <string name="market_carousel_main">Φωτογραφία %1$s από %2$s</string>
+    <string name="market_carousel_thumbnail">Μικρογραφία %1$s</string>
     <string name="market_checkout_browser_unavailable">Δεν υπάρχει διαθέσιμο πρόγραμμα περιήγησης για το άνοιγμα της σελίδας πληρωμής</string>
     <string name="market_checkout_pay_button">Πληρωμή με Stripe</string>
     <string name="market_checkout_processing">Γίνεται επεξεργασία…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Επισύναψη αποδεικτικών</string>
-    <string name="market_dispute_dialog_attach_count">%1$d αρχείο(α) συνημμένα</string>
+    <string name="market_dispute_dialog_attach_count">%1$s αρχείο(α) συνημμένα</string>
     <string name="market_dispute_dialog_evidence_role_staff">Προσωπικό Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Υποβληθέντα αποδεικτικά</string>
     <string name="market_dispute_dialog_evidence_submitter_line">υποβλήθηκε από %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL αναφοράς</string>
     <string name="market_editor_assets_empty">Δεν υπάρχουν πόροι ακόμη</string>
     <string name="market_editor_category_none">Επιλέξτε κατηγορία</string>
-    <string name="market_editor_days">%1$d ημέρες</string>
+    <string name="market_editor_days">%1$s ημέρες</string>
     <string name="market_editor_delete">Διαγραφή καταχώρισης</string>
     <string name="market_editor_delete_confirm_message">Αυτό θα διαγράψει οριστικά την καταχώριση.</string>
     <string name="market_editor_delete_confirm_title">Διαγραφή καταχώρισης;</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Δεν ήταν δυνατή η φόρτωση της συνομιλίας</string>
     <string name="market_messages_send_failed">Δεν ήταν δυνατή η αποστολή μηνύματος</string>
     <string name="market_messages_thread_title">Συνομιλία</string>
-    <string name="market_messages_unread_badge">%1$d μη αναγνωσμένα</string>
-    <string name="market_price_from">από %1$s</string>
+    <string name="market_messages_unread_badge">%1$s μη αναγνωσμένα</string>
+    <string name="market_price_from">Από %1$s</string>
     <string name="market_price_high_bid">Υψηλότερη προσφορά: %1$s</string>
     <string name="market_price_instant_buy">άμεση αγορά: %1$s</string>
     <string name="market_price_per_month">%1$s / μήνα</string>
@@ -569,10 +569,10 @@
     <string name="market_profile_joined">Εγγραφή %1$s</string>
     <string name="market_profile_no_reviews">Δεν υπάρχουν κριτικές ακόμη.</string>
     <string name="market_profile_rating_breakdown">Ανάλυση βαθμολογίας</string>
-    <string name="market_profile_stars_value">%1$d αστέρια</string>
+    <string name="market_profile_stars_value">%1$s αστέρια</string>
     <string name="market_purchase_dispute_chargeback">Αντιλογισμός %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Η τράπεζά σας υπέβαλε αντιλογισμό για αυτήν την παραγγελία. Η Stripe χειρίζεται τη διαφορά με τον πωλητή· το αποτέλεσμα θα εμφανιστεί εδώ όταν αποφασιστεί.</string>
-    <string name="market_purchase_download_many">Κατεβάστε τα %1$d αρχεία σας παρακάτω.</string>
+    <string name="market_purchase_download_many">Κατεβάστε τα %1$s αρχεία σας παρακάτω.</string>
     <string name="market_purchase_download_one">Κατεβάστε το αρχείο σας παρακάτω.</string>
     <string name="market_purchase_review_from">Κριτική από %1$s</string>
     <string name="market_purchases_auction_label">Δημοπρασία #%1$s</string>
@@ -580,7 +580,7 @@
 
     <string name="market_purchases_refunded_partial">−%1$s επιστράφηκαν</string>
     <string name="market_purchases_won_for">Κερδήθηκε για %1$s</string>
-    <string name="market_rating_reviews">(%1$d κριτικές)</string>
+    <string name="market_rating_reviews">(%1$s κριτικές)</string>
     <string name="market_refund_amount_label">Ποσό</string>
     <string name="market_refund_dialog_amount_help">Αφήστε κενό για πλήρη επιστροφή της παραγγελίας.</string>
     <string name="market_refund_dialog_amount_label">Ποσό</string>
@@ -787,11 +787,11 @@
     <string name="market_listings_remove_message_auction">Αυτό θα ακυρώσει τη δημοπρασία. Η καταχώριση θα κρυφτεί από τους αγοραστές· μπορείτε να την επανακαταχωρίσετε αργότερα ως νέο πρόχειρο.</string>
     <string name="market_listings_remove_title">Αφαίρεση αυτής της αγγελίας;</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Αυτό θα ακυρώσει τη δημοπρασία και θα ειδοποιήσει %1$d ενεργό πλειοδότη. Η καταχώριση θα κρυφτεί από τους αγοραστές· μπορείτε να την καταχωρίσετε ξανά αργότερα ως νέο πρόχειρο.</item>
-        <item quantity="other">Αυτό θα ακυρώσει τη δημοπρασία και θα ειδοποιήσει %1$d ενεργούς πλειοδότες. Η καταχώριση θα κρυφτεί από τους αγοραστές· μπορείτε να την καταχωρίσετε ξανά αργότερα ως νέο πρόχειρο.</item>
+        <item quantity="one">Αυτό θα ακυρώσει τη δημοπρασία και θα ειδοποιήσει %1$s ενεργό πλειοδότη. Η καταχώριση θα κρυφτεί από τους αγοραστές· μπορείτε να την καταχωρίσετε ξανά αργότερα ως νέο πρόχειρο.</item>
+        <item quantity="other">Αυτό θα ακυρώσει τη δημοπρασία και θα ειδοποιήσει %1$s ενεργούς πλειοδότες. Η καταχώριση θα κρυφτεί από τους αγοραστές· μπορείτε να την καταχωρίσετε ξανά αργότερα ως νέο πρόχειρο.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Αυτό θα ακυρώσει %1$d ενεργή συνδρομή στο τέλος της τρέχουσας περιόδου χρέωσης. Οι συνδρομητές θα ειδοποιηθούν. Η καταχώριση θα κρυφτεί από τους αγοραστές.</item>
-        <item quantity="other">Αυτό θα ακυρώσει %1$d ενεργές συνδρομές στο τέλος της τρέχουσας περιόδου χρέωσης. Οι συνδρομητές θα ειδοποιηθούν. Η καταχώριση θα κρυφτεί από τους αγοραστές.</item>
+        <item quantity="one">Αυτό θα ακυρώσει %1$s ενεργή συνδρομή στο τέλος της τρέχουσας περιόδου χρέωσης. Οι συνδρομητές θα ειδοποιηθούν. Η καταχώριση θα κρυφτεί από τους αγοραστές.</item>
+        <item quantity="other">Αυτό θα ακυρώσει %1$s ενεργές συνδρομές στο τέλος της τρέχουσας περιόδου χρέωσης. Οι συνδρομητές θα ειδοποιηθούν. Η καταχώριση θα κρυφτεί από τους αγοραστές.</item>
     </plurals>
 </resources>

@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">Altijd</string>
     <string name="calendars_reminder_time">Op het tijdstip</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minuut ervoor</item>
-        <item quantity="other">%1$d minuten ervoor</item>
+        <item quantity="one">%1$s minuut ervoor</item>
+        <item quantity="other">%1$s minuten ervoor</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d uur ervoor</item>
-        <item quantity="other">%1$d uur ervoor</item>
+        <item quantity="one">%1$s uur ervoor</item>
+        <item quantity="other">%1$s uur ervoor</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d dag ervoor</item>
-        <item quantity="other">%1$d dagen ervoor</item>
+        <item quantity="one">%1$s dag ervoor</item>
+        <item quantity="other">%1$s dagen ervoor</item>
     </plurals>
     <string name="calendars_reminder_add">Herinnering toevoegen</string>
     <string name="calendars_reminder_remove">Herinnering verwijderen</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">De agenda is te groot</string>
     <string name="calendars_poll_invalid">Het adres gaf geen agenda terug</string>
     <string name="calendars_poll_unreachable">Kan het adres niet bereiken</string>
-    <string name="calendars_poll_status">Het adres antwoordde %1$d</string>
+    <string name="calendars_poll_status">Het adres antwoordde %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minuut</item>
-        <item quantity="other">%1$d minuten</item>
+        <item quantity="one">%1$s minuut</item>
+        <item quantity="other">%1$s minuten</item>
     </plurals>
     <string name="calendars_preferences_zones">Gebeurtenissen in hun eigen tijdzone tonen</string>
     <string name="calendars_event_backwards">Eindigt voordat het begint</string>

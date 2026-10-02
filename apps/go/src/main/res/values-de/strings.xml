@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Löschen</string>
     <string name="go_delete_message">Diese Partie wird aus deiner Liste entfernt. Dies kann nicht rückgängig gemacht werden.</string>
     <string name="go_delete_title">Spiel löschen?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Annehmen</string>
     <string name="go_draw_decline">Ablehnen</string>
     <string name="go_draw_offered_received">%1$s hat ein Remis angeboten</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Aufgegeben</string>
     <string name="go_new_game_title">Neue Go-Partie</string>
     <string name="go_new_game_no_friends">Du musst einen Freund hinzufügen, bevor du eine Partie starten kannst.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Punkte, die Weiß zur Kompensation gutgeschrieben werden, weil Schwarz zuerst zieht</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go-Brett</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go-Brett, Sie sind am Zug mit einem schwarzen Stein</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go-Brett, Sie sind am Zug mit einem weißen Stein</string>
+    <string name="go_board_a11y">%1$s×%1$s Go-Brett</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go-Brett, Sie sind am Zug mit einem schwarzen Stein</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go-Brett, Sie sind am Zug mit einem weißen Stein</string>
     <string name="go_status_scoring">Auszählen — einigt euch auf das Ergebnis oder spielt weiter</string>
     <string name="go_score_proposed">Vorgeschlagene Punktzahl: Schwarz %1$s, Weiß %2$s</string>
     <string name="go_score_opponent_accepted">Ihr Gegner nimmt diese Punktzahl an: Schwarz %1$s, Weiß %2$s</string>

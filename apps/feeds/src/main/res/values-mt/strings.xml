@@ -118,10 +118,10 @@
     <string name="feeds_source_never_fetched">Qatt ma nġieb</string>
     <string name="feeds_source_poll">Stħarriġ</string>
     <string name="feeds_source_transform">Trasformazzjoni AI</string>
-    <string name="feeds_remove_source_confirm">Tneħħi \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Ħassar ukoll il-posts importati</string>
+    <string name="feeds_remove_source_confirm">Dan se jwaqqaf l-importazzjoni tal-kontenut minn \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Ħassar ukoll il-posts importati minn dan is-sors</string>
     <string name="feeds_suggested_credibility_title">Kredibbiltà suġġerita</string>
-    <string name="feeds_suggested_credibility_body">Mochi jissuġġerixxi kredibbiltà ta\' %1$d. Taċċetta?</string>
+    <string name="feeds_suggested_credibility_body">Mochi jissuġġerixxi kredibbiltà ta\' %1$s. Taċċetta?</string>
     <string name="feeds_suggested_credibility_keep">Żomm dik attwali</string>
     <string name="feeds_ai_processing_mode">Modalità ta\' proċessar bl-AI</string>
     <string name="feeds_ai_account">Kont tal-AI</string>
@@ -142,11 +142,11 @@
     <string name="feeds_saved_empty_subtitle">Agħfas il-bookmark fuq kwalunkwe post biex issejvjah hawn għal aktar tard.</string>
     <string name="feeds_saved_error_clear">Ma rnexxiex jitnaddfu l-postijiet salvati</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d post ġdid</item>
-        <item quantity="two">%d postijiet ġodda</item>
-        <item quantity="few">%d postijiet ġodda</item>
-        <item quantity="many">%d post ġdid</item>
-        <item quantity="other">%d post ġdid</item>
+        <item quantity="one">%s post ġdid</item>
+        <item quantity="two">%s posts ġodda</item>
+        <item quantity="few">%s posts ġodda</item>
+        <item quantity="many">%s post ġdid</item>
+        <item quantity="other">%s post ġdid</item>
     </plurals>
     <string name="feeds_caught_up">Rajt kollox</string>
     <string name="feeds_all_caught_up">Kollox aġġornat</string>
@@ -197,18 +197,18 @@
     <string name="feeds_source_url_hint_feed">ID jew fingerprint tal-entità tal-feed</string>
     <string name="feeds_source_credibility_label">Kredibbiltà</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d siegħa</item>
-        <item quantity="two">%1$d sigħat</item>
-        <item quantity="few">%1$d sigħat</item>
-        <item quantity="many">%1$d-il siegħa</item>
-        <item quantity="other">%1$d siegħa</item>
+        <item quantity="one">%1$s siegħa</item>
+        <item quantity="two">%1$s sigħat</item>
+        <item quantity="few">%1$s sigħat</item>
+        <item quantity="many">%1$s-il siegħa</item>
+        <item quantity="other">%1$s siegħa</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="two">%1$d minuti</item>
-        <item quantity="few">%1$d minuti</item>
-        <item quantity="many">%1$d-il minuta</item>
-        <item quantity="other">%1$d minuta</item>
+        <item quantity="one">%1$s minuta</item>
+        <item quantity="two">%1$s minuti</item>
+        <item quantity="few">%1$s minuti</item>
+        <item quantity="many">%1$s-il minuta</item>
+        <item quantity="other">%1$s minuta</item>
     </plurals>
     <string name="feeds_source_polling_interval">Iċċekkjar kull %1$s</string>
     <string name="feeds_access_level_react_full">Reaġixxi u ara</string>
@@ -225,32 +225,32 @@
     <string name="feeds_link">Ħolqa</string>
     <string name="feeds_share_link_title">Ħolqa tal-feed</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d kumment</item>
-        <item quantity="two">%1$d kummenti</item>
-        <item quantity="few">%1$d kummenti</item>
-        <item quantity="many">%1$d kummenti</item>
-        <item quantity="other">%1$d kummenti</item>
+        <item quantity="one">%1$s kumment</item>
+        <item quantity="two">%1$s kummenti</item>
+        <item quantity="few">%1$s kummenti</item>
+        <item quantity="many">%1$s kumment</item>
+        <item quantity="other">%1$s kumment</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">anness %1$d</item>
-        <item quantity="two">%1$d annessi</item>
-        <item quantity="few">%1$d annessi</item>
-        <item quantity="many">%1$d annessi</item>
-        <item quantity="other">%1$d annessi</item>
+        <item quantity="one">%1$s anness</item>
+        <item quantity="two">%1$s annessi</item>
+        <item quantity="few">%1$s annessi</item>
+        <item quantity="many">%1$s anness</item>
+        <item quantity="other">%1$s anness</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Ara %1$d kumment oħra</item>
-        <item quantity="two">Ara %1$d kummenti oħra</item>
-        <item quantity="few">Ara %1$d kummenti oħra</item>
-        <item quantity="many">Ara %1$d kummenti oħra</item>
-        <item quantity="other">Ara %1$d kummenti oħra</item>
+        <item quantity="one">Ara %1$s kumment ieħor</item>
+        <item quantity="two">Ara %1$s kummenti oħra</item>
+        <item quantity="few">Ara %1$s kummenti oħra</item>
+        <item quantity="many">Ara %1$s kumment ieħor</item>
+        <item quantity="other">Ara %1$s kumment ieħor</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d sena ilu llum</item>
-        <item quantity="two">%1$d snin ilu llum</item>
-        <item quantity="few">%1$d snin ilu llum</item>
-        <item quantity="many">%1$d snin ilu llum</item>
-        <item quantity="other">%1$d snin ilu llum</item>
+        <item quantity="one">%1$s sena ilu llum</item>
+        <item quantity="two">%1$s snin ilu llum</item>
+        <item quantity="few">%1$s snin ilu llum</item>
+        <item quantity="many">%1$s sena ilu llum</item>
+        <item quantity="other">%1$s sena ilu llum</item>
     </plurals>
     <string name="feeds_block">Imblokka</string>
     <string name="feeds_removed_from_feed">Int tneħħejt minn dan il-feed</string>

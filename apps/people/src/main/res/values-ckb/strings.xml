@@ -180,8 +180,8 @@
     <string name="people_books_create">دروستکردنی دەفتەری ناونیشان</string>
     <string name="people_books_delete">سڕینەوەی دەفتەری ناونیشان</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s و %2$d پەیوەندییەکەی بسڕدرێتەوە؟</item>
-        <item quantity="other">%1$s و %2$d پەیوەندییەکەی بسڕدرێتەوە؟</item>
+        <item quantity="one">%1$s و %2$s پەیوەندییەکەی بسڕدرێتەوە؟</item>
+        <item quantity="other">%1$s و %2$s پەیوەندییەکەی بسڕدرێتەوە؟</item>
     </plurals>
     <string name="people_welcome_body">لە Mochi هاوڕێ بدۆزەرەوە و پەیوەندی بکە. بۆ ناردنی بانگهێشت دەست بنێ بە زیادکردنی پەیوەندی.</string>
     <string name="people_person_state_contact">لە پەیوەندییەکاندا</string>

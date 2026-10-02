@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">聯絡人</string>
     <string name="crm_option_icon">圖示</string>
     <string name="crm_option_icon_placeholder">例如 Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">取消訂閱</string>
+    <string name="crm_settings_unsubscribe">退訂</string>
     <string name="crm_settings_delete_crm">刪除 CRM</string>
     <string name="crm_settings_delete_confirm_title">刪除 CRM</string>
-    <string name="crm_settings_unsubscribe_title">取消訂閱</string>
-    <string name="crm_settings_unsubscribe_message">您確定要取消訂閱此 CRM 嗎?</string>
+    <string name="crm_settings_unsubscribe_title">退訂</string>
+    <string name="crm_settings_unsubscribe_message">您確定要退訂此 CRM 嗎?</string>
     <string name="crm_access_level_owner">擁有者</string>
     <string name="crm_object_watch">關注</string>
     <string name="crm_object_tab_properties">屬性</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">無物件</string>
     <string name="crm_board_no_columns">此檢視未設定欄位</string>
     <string name="crm_board_no_options">欄位欄目尚未設定選項</string>
-    <string name="crm_board_nested_count">+%1$d 個巢狀項目</string>
+    <string name="crm_board_nested_count">+%1$s 個巢狀項目</string>
     <string name="crm_move_to_column">移至欄目</string>
     <string name="crm_move_to_row">移至列</string>
     <string name="crm_move_after">%1$s 之後</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">僅檢視</string>
     <string name="crm_access_role_none">無存取權</string>
     <string name="crm_all_crms">所有 CRM</string>
-    <string name="crm_settings_unsubscribe_section">取消訂閱該 CRM</string>
+    <string name="crm_settings_unsubscribe_section">退訂 CRM</string>
     <string name="crm_settings_updated">已更新 CRM</string>
     <string name="crm_create_import_backup">從備份匯入（選用）</string>
     <string name="crm_export">匯出資料</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM 資料已儲存</string>
     <string name="crm_create_upload_json">上傳 .zip 或 .json 檔案</string>
     <string name="crm_create_blocked_no_options">無法建立：%1$s 為必填項目，但沒有可選選項。請在設計中新增選項。</string>
-    <string name="crm_design_sample">範例 %1$d</string>
+    <string name="crm_design_sample">範例 %1$s</string>
     <string name="crm_option_delete_title">刪除選項</string>
     <string name="crm_option_delete_message">您確定要刪除選項「%1$s」嗎?</string>
 </resources>

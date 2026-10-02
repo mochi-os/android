@@ -22,19 +22,19 @@
     <string name="wikis_page_action_recent_changes">Недавне промене</string>
     <string name="wikis_page_action_new_page">Нова страница</string>
     <string name="wikis_page_action_settings">Подешавања</string>
-    <string name="wikis_page_action_unsubscribe">Откажи претплату</string>
+    <string name="wikis_page_action_unsubscribe">Прекини претплату</string>
     <string name="wikis_title">Викији</string>
     <string name="wikis_empty_title">Започни први wiki</string>
     <string name="wikis_empty_subtitle">Претражи wiki за претплату или креирајте један за објављивање сопствене документације.</string>
     <string name="wikis_create_button">Креирај wiki</string>
     <string name="wikis_recommended_section">Препоручени wiki-ји</string>
     <string name="wikis_subscribe_button">Претплати се</string>
-    <string name="wikis_unsubscribe_action">Откажи претплату</string>
-    <string name="wikis_unsubscribing">Отказивање претплате…</string>
-    <string name="wikis_unsubscribe_confirm_title">Откажи претплату</string>
-    <string name="wikis_unsubscribe_success">Претплата отказана</string>
+    <string name="wikis_unsubscribe_action">Прекини претплату</string>
+    <string name="wikis_unsubscribing">Прекидање претплате…</string>
+    <string name="wikis_unsubscribe_confirm_title">Прекини претплату</string>
+    <string name="wikis_unsubscribe_success">Претплата прекинута</string>
     <string name="wikis_subscribe_failed">Претплата није успела</string>
-    <string name="wikis_rss_menu">RSS извор</string>
+    <string name="wikis_rss_menu">RSS фид</string>
     <string name="wikis_rss_changes">Измене</string>
     <string name="wikis_rss_comments">Коментари</string>
     <string name="wikis_rss_both">Измене и коментари</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Обавештења о уређивањима страница, коментарима и позивима.</string>
     <string name="wikis_pageview_toc_expand">Прикажи садржај</string>
     <string name="wikis_pageview_toc_collapse">Сакриј садржај</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Ажурирано %1$s</string>
     <string name="wikis_pageview_not_found_description">Страница „%1$s\" још не постоји.</string>
     <string name="wikis_pageview_share_chooser">Веза викија</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">Веза</string>
     <string name="wikis_open_sidebar">Отвори бочну траку</string>
     <string name="wikis_search_placeholder">Претражи wiki…</string>
-    <string name="wikis_unsubscribe_confirm_message">Сигурно желите да откажете претплату на %1$s?</string>
+    <string name="wikis_unsubscribe_confirm_message">Сигурно желите да прекинете претплату на %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Претражи по називу, ID, отиску или URL…</string>
     <string name="wikis_join_search_button">Претражи wikije…</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Спремате се да обришете страницу „%1$s\" (%2$s). Ову радњу можете поништити враћањем из историје.</string>
     <string name="wikis_delete_page_success">Страница обрисана</string>
     <string name="wikis_revert_page_title">Поништи страницу</string>
-    <string name="wikis_revert_page_message">Спремате се да вратите %1$s на верзију %2$d. Ово ће створити нову ревизију са садржајем верзије %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Враћено на верзију %1$d</string>
-    <string name="wikis_revert_page_success">Враћено на верзију %1$d</string>
+    <string name="wikis_revert_page_message">Спремате се да вратите %1$s на верзију %2$s. Ово ће створити нову ревизију са садржајем верзије %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Враћено на верзију %1$s</string>
+    <string name="wikis_revert_page_success">Враћено на верзију %1$s</string>
     <string name="wikis_rename_page_renaming">Преименовање…</string>
     <string name="wikis_rename_page_success">Страница преименована</string>
-    <string name="wikis_history_viewing">Преглед историје за %1$s, тренутна верзија %2$d</string>
-    <string name="wikis_revision_version_badge">Верзија %1$d</string>
+    <string name="wikis_history_viewing">Преглед историје за %1$s, тренутна верзија %2$s</string>
+    <string name="wikis_revision_version_badge">Верзија %1$s</string>
     <string name="wikis_search_pages_placeholder">Претражи странице по наслову или садржају…</string>
     <string name="wikis_search_no_results">Нема страница за „%1$s\". Покушајте друге термине претраге.</string>
     <string name="wikis_search_updated">Ажурирано %1$s</string>
@@ -289,46 +289,46 @@
     <string name="wikis_revision_author">по %1$s</string>
     <string name="wikis_revision_show_page">Прикажи страницу</string>
     <string name="wikis_revision_compare_failed">Претходна верзија није могла да се учита ради поређења.</string>
-    <string name="wikis_revision_changes_from">Измене из верзије %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Измене из верзије %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d коментар</item>
-        <item quantity="few">%d коментара</item>
-        <item quantity="other">%d коментара</item>
+        <item quantity="one">%s коментар</item>
+        <item quantity="few">%s коментара</item>
+        <item quantity="other">%s коментара</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d одговор</item>
-        <item quantity="few">+%d додатних одговора</item>
-        <item quantity="other">+%d додатних одговора</item>
+        <item quantity="one">%s одговор</item>
+        <item quantity="few">+%s додатна одговора</item>
+        <item quantity="other">+%s додатних одговора</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d страница</item>
-        <item quantity="few">%d странице</item>
-        <item quantity="other">%d страница</item>
+        <item quantity="one">%s страница</item>
+        <item quantity="few">%s странице</item>
+        <item quantity="other">%s страница</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d фајл</item>
-        <item quantity="few">%d фајла</item>
-        <item quantity="other">%d фајлова</item>
+        <item quantity="one">%s фајл</item>
+        <item quantity="few">%s фајла</item>
+        <item quantity="other">%s фајлова</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d слика</item>
-        <item quantity="few">%d слике</item>
-        <item quantity="other">%d слика</item>
+        <item quantity="one">%s слика</item>
+        <item quantity="few">%s слике</item>
+        <item quantity="other">%s слика</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d документ</item>
-        <item quantity="few">%d документа</item>
-        <item quantity="other">%d докумената</item>
+        <item quantity="one">%s документ</item>
+        <item quantity="few">%s документа</item>
+        <item quantity="other">%s докумената</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d страница са овом ознаком</item>
-        <item quantity="few">%d странице са овом ознаком</item>
-        <item quantity="other">%d страница са овом ознаком</item>
+        <item quantity="one">%s страница са овом ознаком</item>
+        <item quantity="few">%s странице са овом ознаком</item>
+        <item quantity="other">%s страница са овом ознаком</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Пронађено %1$d резултат за „%2$s“</item>
-        <item quantity="few">Пронађено %1$d резултата за „%2$s“</item>
-        <item quantity="other">Пронађено %1$d резултата за „%2$s“</item>
+        <item quantity="one">Пронађен %1$s резултат за „%2$s“</item>
+        <item quantity="few">Пронађена %1$s резултата за „%2$s“</item>
+        <item quantity="other">Пронађено %1$s резултата за „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Натпис није могуће сачувати</string>
     <string name="wikis_attachments_upload_types">Подржане датотеке: слике, PDF, DOC, DOCX, TXT и MD.</string>
@@ -337,8 +337,8 @@
     <string name="wikis_rss_copied_new">Нови RSS URL копиран у клипборд</string>
     <string name="wikis_rss_exists">Овај URL канала је већ издат и не може се поново приказати.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Приказује се први %1$d коментар.</item>
-        <item quantity="few">Приказује се првих %1$d коментара.</item>
-        <item quantity="other">Приказује се првих %1$d коментара.</item>
+        <item quantity="one">Приказује се први %1$s коментар.</item>
+        <item quantity="few">Приказују се прва %1$s коментара.</item>
+        <item quantity="other">Приказује се првих %1$s коментара.</item>
     </plurals>
 </resources>

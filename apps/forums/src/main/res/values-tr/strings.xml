@@ -6,8 +6,8 @@
     <string name="forums_list_title">Forumlar</string>
     <string name="forums_list_find">Forum bul</string>
     <string name="forums_list_logout">Oturumu kapat</string>
-    <string name="forums_list_unsubscribe">Aboneliği iptal et</string>
-    <string name="forums_list_unsubscribe_title">Aboneliği iptal et</string>
+    <string name="forums_list_unsubscribe">Abonelikten çık</string>
+    <string name="forums_list_unsubscribe_title">Abonelikten çık</string>
     <string name="forums_create_title">Forum oluştur</string>
     <string name="forums_create_name">Forum adı</string>
     <string name="forums_create_privacy">Gizlilik</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Etiketle</string>
     <string name="forums_ai_account_default">Varsayılan hesap</string>
     <string name="forums_ai_prompt_reset">Varsayılana sıfırla</string>
-    <string name="forums_settings_unsubscribe">Aboneliği iptal et</string>
+    <string name="forums_settings_unsubscribe">Abonelikten çık</string>
     <string name="forums_moderation_title">Denetim</string>
     <string name="forums_moderation_tab_queue">Kuyruk</string>
     <string name="forums_moderation_tab_reports">Raporlar</string>
@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderasyon</string>
     <string name="forums_members_search">Üyeleri filtrele</string>
     <string name="forums_banner_description">Forumun üstünde gösterilen Markdown.</string>
-    <string name="forums_banner_placeholder">Bu foruma hoş geldiniz…</string>
+    <string name="forums_banner_placeholder">Banner metnini girin (Markdown desteklenir)…</string>
     <string name="forums_ai_mode_label">Mod: %1$s</string>
     <string name="forums_ai_mode_heading">Yapay zekâ modu</string>
     <string name="forums_ai_mode_off">Devre dışı</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">Herhangi bir gönderiyi sonrası için buraya kaydetmek için yer iminize dokunun.</string>
     <string name="forums_saved_error_clear">Kaydedilen gönderiler temizlenemedi</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d yeni gönderi</item>
-        <item quantity="other">%d yeni gönderi</item>
+        <item quantity="one">%s yeni gönderi</item>
+        <item quantity="other">%s yeni gönderi</item>
     </plurals>
     <string name="forums_rss_feed">RSS akışı</string>
     <string name="forums_rss_mode_posts">Gönderiler</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">gün</string>
     <string name="forums_settings_banner_saved">Banner kaydedildi</string>
     <string name="forums_settings_access_updated">Erişim güncellendi</string>
-    <string name="forums_settings_access_revoked">Erişim iptal edildi</string>
+    <string name="forums_settings_access_revoked">Erişim kaldırıldı</string>
     <string name="forums_settings_member_removed">Üye kaldırıldı</string>
     <string name="forums_settings_prompt_saved">İstem kaydedildi</string>
     <string name="forums_settings_section_identity">Kimlik</string>
@@ -296,8 +296,8 @@
     <string name="forums_settings_unsubscribe_section">Forum aboneliğinden çık</string>
     <string name="forums_share_link_title">Forum bağlantısı</string>
     <string name="forums_find_found_by_url">URL ile bulundu</string>
-    <string name="forums_moderation_pending_posts">Bekleyen gönderiler (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Bekleyen yorumlar (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Bekleyen gönderiler (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Bekleyen yorumlar (%1$s)</string>
     <string name="forums_moderation_on_image">Görselde: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">Bu forumda gönderi paylaşma izniniz yok</string>

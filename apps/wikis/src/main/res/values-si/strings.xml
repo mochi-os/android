@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">වෙනස්කම් සහ අදහස්</string>
     <string name="wikis_rss_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="wikis_rss_failed">RSS ටෝකනය ලබා ගැනීමට අසමත් විය</string>
-    <string name="wikis_rss_revoke">ප්‍රවේශය අවලංගු කරන්න</string>
-    <string name="wikis_rss_revoked">RSS ප්‍රවේශය අවලංගු කරන ලදී</string>
+    <string name="wikis_rss_revoke">ප්‍රවේශය අහෝසි කරන්න</string>
+    <string name="wikis_rss_revoked">RSS ප්‍රවේශය අහෝසි කරන ලදී</string>
     <string name="wikis_find_title">විකි සොයන්න</string>
     <string name="wikis_find_no_results">wikis හමු නොවීය</string>
     <string name="wikis_find_recommended_section">නිර්දේශිත wikis</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki පිටු සංස්කරණ, අදහස් සහ ආරාධනා පිළිබඳ දැනුම්දීම්.</string>
     <string name="wikis_pageview_toc_expand">අන්තර්ගත වගුව පෙන්වන්න</string>
     <string name="wikis_pageview_toc_collapse">අන්තර්ගත වගුව සඟවන්න</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">යාවත්කාලීන කළේ: %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” පිටුව තවම නොපවතී.</string>
     <string name="wikis_pageview_share_chooser">විකි සබැඳිය</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">ඔබ “%1$s” (%2$s) පිටුව මැකීමට යයි. ඉතිහාසයෙන් ප්‍රතිසාධනය කිරීමෙන් මෙම ක්‍රියාව පසුගමනය කළ හැක.</string>
     <string name="wikis_delete_page_success">පිටුව මකා දමන ලදී</string>
     <string name="wikis_revert_page_title">පිටුව ආපසු හරවන්න</string>
-    <string name="wikis_revert_page_message">ඔබ %1$s අනුවාදය %2$d වෙත ආපසු ගෙන යාමට යයි. මෙය අනුවාදය %2$d හි අන්තර්ගතය සමඟ නව සංශෝධනයක් සාදයි.</string>
-    <string name="wikis_revert_page_default_comment">අනුවාදය %1$d වෙත ආපසු ගෙන ගියේය</string>
-    <string name="wikis_revert_page_success">අනුවාදය %1$d වෙත ආපසු ගෙන ගියේය</string>
+    <string name="wikis_revert_page_message">ඔබ %1$s අනුවාදය %2$s වෙත ආපසු ගෙන යාමට යයි. මෙය අනුවාදය %2$s හි අන්තර්ගතය සමඟ නව සංශෝධනයක් සාදයි.</string>
+    <string name="wikis_revert_page_default_comment">අනුවාදය %1$s වෙත ආපසු ගෙන ගියේය</string>
+    <string name="wikis_revert_page_success">අනුවාදය %1$s වෙත ආපසු ගෙන ගියේය</string>
     <string name="wikis_rename_page_renaming">නැවත නම් කරමින්…</string>
     <string name="wikis_rename_page_success">පිටුව නැවත නම් කරන ලදී</string>
-    <string name="wikis_history_viewing">%1$s සඳහා ඉතිහාසය බලමින්, වත්මන් අනුවාදය %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">%1$s සඳහා ඉතිහාසය බලමින්, වත්මන් අනුවාදය %2$s</string>
+    <string name="wikis_revision_version_badge">අනුවාදය %1$s</string>
     <string name="wikis_search_pages_placeholder">මාතෘකාව හෝ අන්තර්ගතය අනුව පිටු සොයන්න…</string>
     <string name="wikis_search_no_results">“%1$s” සඳහා පිටු හමු නොවීය. වෙනත් සෙවුම් පද උත්සාහ කරන්න.</string>
     <string name="wikis_search_updated">යාවත්කාලීන කළේ: %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s අනුව</string>
     <string name="wikis_revision_show_page">පිටුව පෙන්වන්න</string>
     <string name="wikis_revision_compare_failed">සංසන්දනය සඳහා පෙර අනුවාදය පූරණය කළ නොහැකි විය.</string>
-    <string name="wikis_revision_changes_from">%1$d → %2$d අනුවාදයේ වෙනස්කම්</string>
+    <string name="wikis_revision_changes_from">%1$s → %2$s අනුවාදයේ වෙනස්කම්</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">අදහස් %dක්</item>
-        <item quantity="other">අදහස් %dක්</item>
+        <item quantity="one">අදහස් %sක්</item>
+        <item quantity="other">අදහස් %sක්</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d පිළිතුර</item>
-        <item quantity="other">+%d තවත් පිළිතුරු</item>
+        <item quantity="one">%s පිළිතුර</item>
+        <item quantity="other">+%s තවත් පිළිතුරු</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d පිටුව</item>
-        <item quantity="other">%d පිටු</item>
+        <item quantity="one">%s පිටුව</item>
+        <item quantity="other">%s පිටු</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d ගොනුව</item>
-        <item quantity="other">%d ගොනු</item>
+        <item quantity="one">%s ගොනුව</item>
+        <item quantity="other">%s ගොනු</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d රූපය</item>
-        <item quantity="other">%d රූප</item>
+        <item quantity="one">%s රූපය</item>
+        <item quantity="other">%s රූප</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d ලේඛනය</item>
-        <item quantity="other">%d ලේඛන</item>
+        <item quantity="one">%s ලේඛනය</item>
+        <item quantity="other">%s ලේඛන</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">මෙම ටැගය සමඟ %d පිටුව</item>
-        <item quantity="other">මෙම ටැගය සමඟ %d පිටු</item>
+        <item quantity="one">මෙම ටැගය සමඟ %s පිටුව</item>
+        <item quantity="other">මෙම ටැගය සමඟ %s පිටු</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">«%2$s» සඳහා %1$d ප්‍රතිඵලය සොයා ගත්තා</item>
-        <item quantity="other">«%2$s» සඳහා %1$d ප්‍රතිඵල සොයා ගත්තා</item>
+        <item quantity="one">«%2$s» සඳහා %1$s ප්‍රතිඵලය සොයා ගත්තා</item>
+        <item quantity="other">«%2$s» සඳහා %1$s ප්‍රතිඵල සොයා ගත්තා</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">සිරස්තලය සුරැකීමට නොහැකි විය</string>
     <string name="wikis_attachments_upload_types">සහාය දක්වන ගොනු: රූප, PDF, DOC, DOCX, TXT, සහ MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">නව RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
     <string name="wikis_rss_exists">මෙම සංග්‍රහ URL දැනටමත් නිකුත් කර ඇති අතර නැවත පෙන්විය නොහැක.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">පළමු %1$d අදහස පෙන්වයි.</item>
-        <item quantity="other">පළමු %1$d අදහස් පෙන්වයි.</item>
+        <item quantity="one">පළමු %1$s අදහස පෙන්වයි.</item>
+        <item quantity="other">පළමු %1$s අදහස් පෙන්වයි.</item>
     </plurals>
 </resources>

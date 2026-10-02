@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">ਲੋਕ</string>
     <string name="crm_option_icon">ਆਈਕਨ</string>
     <string name="crm_option_icon_placeholder">ਉਦਾ. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="crm_settings_unsubscribe">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="crm_settings_delete_crm">CRM ਮਿਟਾਓ</string>
     <string name="crm_settings_delete_confirm_title">CRM ਮਿਟਾਓ</string>
-    <string name="crm_settings_unsubscribe_title">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="crm_settings_unsubscribe_title">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="crm_settings_unsubscribe_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਇਸ CRM ਤੋਂ ਅਨਸਬਸਕ੍ਰਾਈਬ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="crm_access_level_owner">ਮਾਲਕ</string>
     <string name="crm_object_watch">ਦੇਖੋ</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">ਕੋਈ ਆਬਜੈਕਟ ਨਹੀਂ</string>
     <string name="crm_board_no_columns">ਇਸ ਦ੍ਰਿਸ਼ ਲਈ ਕੋਈ ਕਾਲਮ ਸੰਰਚਿਤ ਨਹੀਂ ਹੈ</string>
     <string name="crm_board_no_options">ਕਾਲਮ ਫੀਲਡ ਲਈ ਕੋਈ ਵਿਕਲਪ ਸੰਰਚਿਤ ਨਹੀਂ ਹਨ</string>
-    <string name="crm_board_nested_count">+%1$d ਨੈਸਟਡ</string>
+    <string name="crm_board_nested_count">+%1$s ਨੈਸਟਡ</string>
     <string name="crm_move_to_column">ਕਾਲਮ ਵਿੱਚ ਲੈ ਜਾਓ</string>
     <string name="crm_move_to_row">ਕਤਾਰ ਵਿੱਚ ਲੈ ਜਾਓ</string>
     <string name="crm_move_after">%1$s ਤੋਂ ਬਾਅਦ</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">ਪਹੁੰਚ ਪ੍ਰਬੰਧਨ</string>
     <string name="crm_settings_not_set">ਸੈੱਟ ਨਹੀਂ</string>
     <string name="crm_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
-    <string name="crm_settings_access_revoked">ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
+    <string name="crm_settings_access_revoked">ਪਹੁੰਚ ਵਾਪਸ ਲੈ ਲਈ ਗਈ</string>
     <string name="crm_people_search">ਲੋਕ ਖੋਜੋ</string>
     <string name="crm_access_tab_other">ਹੋਰ</string>
     <string name="crm_access_select_group">ਇੱਕ ਗਰੁੱਪ ਚੁਣੋ</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">ਸਿਰਫ਼ ਦੇਖੋ</string>
     <string name="crm_access_role_none">ਪਹੁੰਚ ਨਹੀਂ</string>
     <string name="crm_all_crms">ਸਾਰੇ CRM</string>
-    <string name="crm_settings_unsubscribe_section">CRM ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="crm_settings_unsubscribe_section">CRM ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="crm_settings_updated">CRM ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="crm_create_import_backup">ਬੈਕਅੱਪ ਤੋਂ ਇੰਪੋਰਟ ਕਰੋ (ਵਿਕਲਪਿਕ)</string>
     <string name="crm_export">ਡਾਟਾ ਐਕਸਪੋਰਟ ਕਰੋ</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM ਡਾਟਾ ਸੰਭਾਲਿਆ</string>
     <string name="crm_create_upload_json">.zip ਜਾਂ .json ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ</string>
     <string name="crm_create_blocked_no_options">ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ: %1$s ਲੋੜੀਂਦਾ ਹੈ ਪਰ ਚੁਣਨ ਲਈ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਹੈ। ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਵਿਕਲਪ ਸ਼ਾਮਲ ਕਰੋ।</string>
-    <string name="crm_design_sample">ਨਮੂਨਾ %1$d</string>
+    <string name="crm_design_sample">ਨਮੂਨਾ %1$s</string>
     <string name="crm_option_delete_title">ਵਿਕਲਪ ਮਿਟਾਓ</string>
     <string name="crm_option_delete_message">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਵਿਕਲਪ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
 </resources>

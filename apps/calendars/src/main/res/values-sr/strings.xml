@@ -97,19 +97,19 @@
     <string name="calendars_repeat_forever">Заувек</string>
     <string name="calendars_reminder_time">У време догађаја</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d минут раније</item>
-        <item quantity="few">%1$d минута раније</item>
-        <item quantity="other">%1$d минута раније</item>
+        <item quantity="one">%1$s минут раније</item>
+        <item quantity="few">%1$s минута раније</item>
+        <item quantity="other">%1$s минута раније</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d сат раније</item>
-        <item quantity="few">%1$d сата раније</item>
-        <item quantity="other">%1$d сати раније</item>
+        <item quantity="one">%1$s сат раније</item>
+        <item quantity="few">%1$s сата раније</item>
+        <item quantity="other">%1$s сати раније</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d дан раније</item>
-        <item quantity="few">%1$d дана раније</item>
-        <item quantity="other">%1$d дана раније</item>
+        <item quantity="one">%1$s дан раније</item>
+        <item quantity="few">%1$s дана раније</item>
+        <item quantity="other">%1$s дана раније</item>
     </plurals>
     <string name="calendars_reminder_add">Додај подсетник</string>
     <string name="calendars_reminder_remove">Уклони подсетник</string>
@@ -143,11 +143,11 @@
     <string name="calendars_poll_large">Календар је превелик</string>
     <string name="calendars_poll_invalid">Адреса није вратила календар</string>
     <string name="calendars_poll_unreachable">Није могуће доћи до адресе</string>
-    <string name="calendars_poll_status">Адреса је одговорила %1$d</string>
+    <string name="calendars_poll_status">Адреса је одговорила %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d минут</item>
-        <item quantity="few">%1$d минута</item>
-        <item quantity="other">%1$d минута</item>
+        <item quantity="one">%1$s минут</item>
+        <item quantity="few">%1$s минута</item>
+        <item quantity="other">%1$s минута</item>
     </plurals>
     <string name="calendars_preferences_zones">Прикажи догађаје у њиховој временској зони</string>
     <string name="calendars_event_backwards">Завршава се пре него што почне</string>

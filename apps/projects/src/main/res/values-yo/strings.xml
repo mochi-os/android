@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">ṣe ìyípadà</string>
     <string name="projects_attachment_empty">Kò sí àfikún</string>
     <string name="projects_attachment_default_name">àfikún</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Ìbéèrè ìdàpọ̀ tuntun</string>
     <string name="projects_request_status_closed">Tí a ti pa</string>
     <string name="projects_request_back_to_list">Padà sí àkójọ</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Ń ṣàyẹ̀wò ipò ìdàpọ̀…</string>
     <string name="projects_request_can_merge">Ó lè dàpọ̀</string>
     <string name="projects_request_cannot_merge">Kò lè dàpọ̀</string>
-    <string name="projects_request_ahead_behind">%1$d níwájú, %2$d lẹ́yìn</string>
+    <string name="projects_request_ahead_behind">%1$s níwájú, %2$s lẹ́yìn</string>
     <string name="projects_request_draft_notice">Èyí jẹ́ àkọsílẹ̀. Sàmì sí bí ó ti ṣe tán kí o tó dàpọ̀.</string>
     <string name="projects_request_view_diff">Wo ìyàtọ̀</string>
     <string name="projects_request_mark_ready">Sàmì sí bí ó ti ṣe tán</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Kò sí ọwọ̀n tí a ti ṣètò fún ìwòye yìí</string>
     <string name="projects_board_no_options">Kò sí àṣàyàn tí a ṣètò fún pápá ọwọ̀n</string>
     <string name="projects_board_column_options">Àwọn àṣàyàn ọwọ̀n</string>
-    <string name="projects_board_nested_count">+%1$d tí a tò sínú</string>
+    <string name="projects_board_nested_count">+%1$s tí a tò sínú</string>
     <string name="projects_move_to_column">Gbé lọ sí ọwọ̀n</string>
     <string name="projects_move_to_row">Gbé lọ sí ìlà</string>
     <string name="projects_move_after">Lẹ́yìn %1$s</string>
@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Tuntun</string>
     <string name="projects_settings_section_identity">Ìdánimọ̀</string>
     <string name="projects_settings_access_updated">A ti ṣe àtúnyẹ̀wò ìwọlé</string>
-    <string name="projects_settings_access_revoked">Ati gba aṣèsẹbí</string>
+    <string name="projects_settings_access_revoked">A ti gba ìwọlé padà</string>
     <string name="projects_settings_section_access">Ìṣàkóso Ìwọlé</string>
     <string name="projects_people_search">Wa awọn eniyan</string>
     <string name="projects_settings_field_entity_id">ID Ẹ̀ka</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Tò kí o sì sẹ́</string>
     <string name="projects_create_prefix_hint">A ń lò fún àwọn ID tí a lè kà bíi %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d fáìlì tó tako</item>
-        <item quantity="other">%1$d fáìlì tó tako</item>
+        <item quantity="one">%1$s fáìlì tó tako</item>
+        <item quantity="other">%1$s fáìlì tó tako</item>
     </plurals>
     <string name="projects_design_export_saved">A ti fi àpẹẹrẹ pamọ́</string>
     <string name="projects_design_import_failed">A kò lè ka fáìlì náà</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">A ti fi dátà iṣẹ́ pamọ́</string>
     <string name="projects_exporting">Ń múra ìkójáde sílẹ̀…</string>
     <string name="projects_board_add_column">Fi ọ̀wọ́n kún</string>
-    <string name="projects_design_sample">Àpẹẹrẹ %1$d</string>
+    <string name="projects_design_sample">Àpẹẹrẹ %1$s</string>
     <string name="projects_option_delete_title">Pa àṣàyàn rẹ́</string>
     <string name="projects_option_delete_message">Ṣé o dájú pé o fẹ́ pa àṣàyàn \"%1$s\" rẹ́?</string>
     <string name="projects_create_object_no_types">A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́.</string>

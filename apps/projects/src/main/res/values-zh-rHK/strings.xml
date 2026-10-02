@@ -32,8 +32,6 @@
     <string name="projects_field_type">類型</string>
     <string name="projects_views_type">類型</string>
     <string name="projects_request_field_title">標題</string>
-    <string name="projects_settings_unsubscribe">取消訂閱</string>
-    <string name="projects_settings_unsubscribe_title">取消訂閱</string>
     <string name="projects_request_status_open">開啟</string>
     <string name="projects_board_new">新增</string>
     <string name="projects_create_public">公開</string>
@@ -120,7 +118,7 @@
     <string name="projects_settings_delete_project">刪除專案</string>
     <string name="projects_settings_delete_confirm_title">刪除專案</string>
     <string name="projects_settings_delete_confirm_message">你確定要刪除此專案嗎?所有項目、留言及設定將會永久移除。</string>
-    <string name="projects_settings_unsubscribe_message">你確定要取消訂閱此專案嗎?</string>
+    <string name="projects_settings_unsubscribe_message">你確定要退訂此專案嗎?</string>
     <string name="projects_object_unwatch">取消關注</string>
     <string name="projects_object_tab_properties">屬性</string>
     <string name="projects_object_tab_requests">請求</string>
@@ -165,10 +163,10 @@
     <string name="projects_attachment_empty">沒有附件</string>
     <string name="projects_attachment_add">新增附件</string>
     <string name="projects_attachment_default_name">附件</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_empty">沒有合併請求</string>
     <string name="projects_request_new">新增合併請求</string>
     <string name="projects_request_status_merged">已合併</string>
@@ -180,7 +178,7 @@
     <string name="projects_request_checking_merge">正在檢查合併狀態…</string>
     <string name="projects_request_can_merge">可以合併</string>
     <string name="projects_request_cannot_merge">無法合併</string>
-    <string name="projects_request_ahead_behind">領先 %1$d 個，落後 %2$d 個</string>
+    <string name="projects_request_ahead_behind">領先 %1$s 個，落後 %2$s 個</string>
     <string name="projects_request_draft_notice">此為草稿。請先標示為就緒,然後再進行合併。</string>
     <string name="projects_request_view_diff">檢視差異</string>
     <string name="projects_request_mark_ready">標示為就緒</string>
@@ -207,7 +205,7 @@
     <string name="projects_board_unassigned">未指派</string>
     <string name="projects_board_column_options">欄位選項</string>
     <string name="projects_board_rename_column">重新命名欄位</string>
-    <string name="projects_board_nested_count">+%1$d 個巢狀項目</string>
+    <string name="projects_board_nested_count">+%1$s 個巢狀項目</string>
     <string name="projects_move_to_column">移動到欄</string>
     <string name="projects_move_to_row">移動到列</string>
     <string name="projects_move_after">於 %1$s 之後</string>
@@ -333,7 +331,6 @@
     <string name="projects_activity_commented">發表了留言</string>
     <string name="projects_attachment_delete_confirm_message">此附件將被永久刪除。</string>
     <string name="projects_attachment_delete_confirm_title">刪除附件?</string>
-    <string name="projects_settings_unsubscribe_section">取消訂閱專案</string>
     <string name="projects_share_link_title">分享專案</string>
     <string name="projects_sort_filter_title">排序與篩選</string>
     <string name="projects_create_prefix_hint">用於可讀的 ID，例如 %1$s-1、%1$s-2</string>
@@ -347,8 +344,8 @@
     <string name="projects_settings_not_set">未設定</string>
     <string name="projects_settings_updated">已更新專案</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d 個衝突檔案</item>
-        <item quantity="other">%1$d 個衝突檔案</item>
+        <item quantity="one">%1$s 個衝突檔案</item>
+        <item quantity="other">%1$s 個衝突檔案</item>
     </plurals>
     <string name="projects_settings_section_identity">身份</string>
     <string name="projects_settings_access_updated">存取權限已更新</string>

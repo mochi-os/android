@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">အမည်မရှိ</string>
     <string name="staff_accounts_unsuspend">ဆိုင်းငံ့ခြင်း ဖြုတ်မည်</string>
     <string name="staff_accounts_unsuspended_toast">အကောင့် ဆိုင်းငံ့မှု ဖြုတ်ပြီး</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">မလုပ်တော့ပါ</string>
     <string name="staff_appeals_decide">ဆုံးဖြတ်မည်</string>
     <string name="staff_appeals_decision_denied">စာရင်းကို ငြင်းပယ်ထားမည်</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">အမှာစာ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">အကြောင်းပြချက် (ရွေးချယ်နိုင်)</string>
-    <string name="staff_accounts_sales">ရောင်းအား %1$d ခု</string>
+    <string name="staff_accounts_sales">ရောင်းအား %1$s ခု</string>
     <string name="staff_appeals_reason_label">ရောင်းသူ၏ အယူခံအကြောင်းပြချက်</string>
     <string name="staff_audit_action_staff_team_role_changed">ဝန်ထမ်းအခန်းကဏ္ဍ ပြောင်းလဲခဲ့သည်</string>
     <string name="staff_categories_delete_desc">“%1$s” ကို ဖျက်မလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။</string>

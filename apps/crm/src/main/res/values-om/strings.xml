@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Wantoonni hin jiran</string>
     <string name="crm_board_no_columns">Mul\'ata kanaaf koolamoonni hin qindeeffamne</string>
     <string name="crm_board_no_options">Filannoon tarjaa kanaaf hin qindoofne</string>
-    <string name="crm_board_nested_count">+%1$d kessoo</string>
+    <string name="crm_board_nested_count">+%1$s kessoo</string>
     <string name="crm_move_to_column">Gara tarjaatti dabarsi</string>
     <string name="crm_move_to_row">Gara sararaatti dabarsi</string>
     <string name="crm_move_after">%1$s booda</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Bulchiinsa Seensaa</string>
     <string name="crm_settings_not_set">Hin qabamne</string>
     <string name="crm_settings_access_updated">Seensi haaromfame</string>
-    <string name="crm_settings_access_revoked">Seensi haqamee jira</string>
+    <string name="crm_settings_access_revoked">Argamni deebifatame</string>
     <string name="crm_people_search">Namoota barbaadi</string>
     <string name="crm_access_tab_other">Biraa</string>
     <string name="crm_access_select_group">Garee filadhu</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Daataan CRM olkaa\'ameera</string>
     <string name="crm_create_upload_json">Faayilii .zip yookaan .json ol kaa\'i</string>
     <string name="crm_create_blocked_no_options">Uumuun hin danda\'amne: %1$s barbaachisaa dha garuu filannoo hin qabu. Dizaayinii keessatti filannoo dabali.</string>
-    <string name="crm_design_sample">Fakkeenya %1$d</string>
+    <string name="crm_design_sample">Fakkeenya %1$s</string>
     <string name="crm_option_delete_title">Filannoo haqi</string>
     <string name="crm_option_delete_message">Dhugumatti filannoo \"%1$s\" haquu barbaaddaa?</string>
 </resources>

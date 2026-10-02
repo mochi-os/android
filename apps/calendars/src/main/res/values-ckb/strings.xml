@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">بۆ هەمیشە</string>
     <string name="calendars_reminder_time">لە کاتی خۆیدا</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d خولەک پێشتر</item>
-        <item quantity="other">%1$d خولەک پێشتر</item>
+        <item quantity="one">%1$s خولەک پێشتر</item>
+        <item quantity="other">%1$s خولەک پێشتر</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d کاتژمێر پێشتر</item>
-        <item quantity="other">%1$d کاتژمێر پێشتر</item>
+        <item quantity="one">%1$s کاتژمێر پێشتر</item>
+        <item quantity="other">%1$s کاتژمێر پێشتر</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ڕۆژ پێشتر</item>
-        <item quantity="other">%1$d ڕۆژ پێشتر</item>
+        <item quantity="one">%1$s ڕۆژ پێشتر</item>
+        <item quantity="other">%1$s ڕۆژ پێشتر</item>
     </plurals>
     <string name="calendars_reminder_add">زیادکردنی بیرخەرەوە</string>
     <string name="calendars_reminder_remove">لابردنی بیرخەرەوە</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">ڕۆژژمێرەکە زۆر گەورەیە</string>
     <string name="calendars_poll_invalid">ناونیشانەکە هیچ ڕۆژژمێرێکی نەگەڕاندەوە</string>
     <string name="calendars_poll_unreachable">نەتوانرا بگەیت بە ناونیشانەکە</string>
-    <string name="calendars_poll_status">ناونیشانەکە وەڵامی %1$d دایەوە</string>
+    <string name="calendars_poll_status">ناونیشانەکە وەڵامی %1$s دایەوە</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d خولەک</item>
-        <item quantity="other">%1$d خولەک</item>
+        <item quantity="one">%1$s خولەک</item>
+        <item quantity="other">%1$s خولەک</item>
     </plurals>
     <string name="calendars_preferences_zones">ڕووداوەکان لە ناوچەی کاتی خۆیاندا پیشان بدە</string>
     <string name="calendars_event_backwards">پێش دەستپێکردن کۆتایی دێت</string>

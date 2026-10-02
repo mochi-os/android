@@ -27,7 +27,7 @@
     <string name="calendars_day_friday">جمعه</string>
     <string name="calendars_day_saturday">شنبه</string>
     <string name="calendars_link_replace">جایگزینی</string>
-    <string name="calendars_link_revoke">لغو</string>
+    <string name="calendars_link_revoke">ابطال</string>
     <string name="calendars_permission_allow">اجازه</string>
     <string name="calendars_permission_deny">رد</string>
     <string name="calendars_sync_title">همگام‌سازی با این تلفن</string>
@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">برای همیشه</string>
     <string name="calendars_reminder_time">در همان زمان</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d دقیقه قبل</item>
-        <item quantity="other">%1$d دقیقه قبل</item>
+        <item quantity="one">%1$s دقیقه قبل</item>
+        <item quantity="other">%1$s دقیقه قبل</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d ساعت قبل</item>
-        <item quantity="other">%1$d ساعت قبل</item>
+        <item quantity="one">%1$s ساعت قبل</item>
+        <item quantity="other">%1$s ساعت قبل</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d روز قبل</item>
-        <item quantity="other">%1$d روز قبل</item>
+        <item quantity="one">%1$s روز قبل</item>
+        <item quantity="other">%1$s روز قبل</item>
     </plurals>
     <string name="calendars_reminder_add">افزودن یادآور</string>
     <string name="calendars_reminder_remove">حذف یادآور</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">تقویم بیش از حد بزرگ است</string>
     <string name="calendars_poll_invalid">آدرس هیچ تقویمی برنگرداند</string>
     <string name="calendars_poll_unreachable">دسترسی به آدرس ممکن نشد</string>
-    <string name="calendars_poll_status">آدرس پاسخ %1$d داد</string>
+    <string name="calendars_poll_status">آدرس پاسخ %1$s داد</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d دقیقه</item>
-        <item quantity="other">%1$d دقیقه</item>
+        <item quantity="one">%1$s دقیقه</item>
+        <item quantity="other">%1$s دقیقه</item>
     </plurals>
     <string name="calendars_preferences_zones">نمایش رویدادها در منطقهٔ زمانی خودشان</string>
     <string name="calendars_event_backwards">پیش از شروع پایان می‌یابد</string>

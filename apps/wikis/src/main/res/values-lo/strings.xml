@@ -22,17 +22,17 @@
     <string name="wikis_page_action_recent_changes">ການປ່ຽນແປງລ່າສຸດ</string>
     <string name="wikis_page_action_new_page">ໜ້າໃໝ່</string>
     <string name="wikis_page_action_settings">ການຕັ້ງຄ່າ</string>
-    <string name="wikis_page_action_unsubscribe">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
+    <string name="wikis_page_action_unsubscribe">ເຊົາຕິດຕາມ</string>
     <string name="wikis_title">ວິກິ</string>
     <string name="wikis_empty_title">ເລີ່ມ wiki ທຳອິດຂອງທ່ານ</string>
     <string name="wikis_empty_subtitle">ຄົ້ນຫາ wiki ເພື່ອສະໝັກ, ຫຼືສ້າງເພື່ອເຜີຍແຜ່ເອກະສານຂອງທ່ານເອງ.</string>
     <string name="wikis_create_button">ສ້າງ wiki</string>
     <string name="wikis_recommended_section">Wiki ທີ່ແນະນຳ</string>
     <string name="wikis_subscribe_button">ສະໝັກສະມາຊິກ</string>
-    <string name="wikis_unsubscribe_action">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
-    <string name="wikis_unsubscribing">ກຳລັງຍົກເລີກການສະໝັກສະມາຊິກ…</string>
-    <string name="wikis_unsubscribe_confirm_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
-    <string name="wikis_unsubscribe_success">ຍົກເລີກການສະໝັກສະມາຊິກແລ້ວ</string>
+    <string name="wikis_unsubscribe_action">ເຊົາຕິດຕາມ</string>
+    <string name="wikis_unsubscribing">ກຳລັງເຊົາຕິດຕາມ…</string>
+    <string name="wikis_unsubscribe_confirm_title">ເຊົາຕິດຕາມ</string>
+    <string name="wikis_unsubscribe_success">ເຊົາຕິດຕາມແລ້ວ</string>
     <string name="wikis_subscribe_failed">ສະໝັກລົ້ມເຫຼວ</string>
     <string name="wikis_rss_menu">ຟີດ RSS</string>
     <string name="wikis_rss_changes">ການປ່ຽນແປງ</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">ການແຈ້ງເຕືອນກ່ຽວກັບການແກ້ໄຂໜ້າ wiki, ຄຳເຫັນ ແລະ ຄຳເຊີນ.</string>
     <string name="wikis_pageview_toc_expand">ສະແດງສາລະບານ</string>
     <string name="wikis_pageview_toc_collapse">ເຊື່ອງສາລະບານ</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">ອັບເດດແລ້ວ %1$s</string>
     <string name="wikis_pageview_not_found_description">ໜ້າ “%1$s” ຍັງບໍ່ມີ.</string>
     <string name="wikis_pageview_share_chooser">ລິ້ງວິກິ</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">ລິ້ງ</string>
     <string name="wikis_open_sidebar">ເປີດແຖບຂ້າງ</string>
     <string name="wikis_search_placeholder">ຄົ້ນຫາ wiki…</string>
-    <string name="wikis_unsubscribe_confirm_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການຍົກເລີກການສະໝັກ %1$s?</string>
+    <string name="wikis_unsubscribe_confirm_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການເຊົາຕິດຕາມ %1$s?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">ຄົ້ນຫາຕາມຊື່, ID, ລາຍນິ້ວມື ຫຼື URL…</string>
     <string name="wikis_join_search_button">ຄົ້ນຫາ wiki…</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">ທ່ານກຳລັງຈະລຶບໜ້າ “%1$s” (%2$s). ການກະທຳນີ້ສາມາດຍົກເລີກໄດ້ໂດຍການກູ້ຄືນຈາກປະຫວັດ.</string>
     <string name="wikis_delete_page_success">ລຶບໜ້າແລ້ວ</string>
     <string name="wikis_revert_page_title">ກັບຄືນໜ້າ</string>
-    <string name="wikis_revert_page_message">ທ່ານກຳລັງຈະກັບຄືນ %1$s ສູ່ເວີຊັນ %2$d. ນີ້ຈະສ້າງການແກ້ໄຂໃໝ່ດ້ວຍເນື້ອຫາຈາກເວີຊັນ %2$d.</string>
-    <string name="wikis_revert_page_default_comment">ກັບຄືນສູ່ເວີຊັນ %1$d</string>
-    <string name="wikis_revert_page_success">ກັບຄືນສູ່ເວີຊັນ %1$d</string>
+    <string name="wikis_revert_page_message">ທ່ານກຳລັງຈະກັບຄືນ %1$s ສູ່ເວີຊັນ %2$s. ນີ້ຈະສ້າງການແກ້ໄຂໃໝ່ດ້ວຍເນື້ອຫາຈາກເວີຊັນ %2$s.</string>
+    <string name="wikis_revert_page_default_comment">ກັບຄືນສູ່ເວີຊັນ %1$s</string>
+    <string name="wikis_revert_page_success">ກັບຄືນສູ່ເວີຊັນ %1$s</string>
     <string name="wikis_rename_page_renaming">ກຳລັງປ່ຽນຊື່…</string>
     <string name="wikis_rename_page_success">ປ່ຽນຊື່ໜ້າແລ້ວ</string>
-    <string name="wikis_history_viewing">ກຳລັງເບິ່ງປະຫວັດຂອງ %1$s, ເວີຊັນປັດຈຸບັນ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">ກຳລັງເບິ່ງປະຫວັດຂອງ %1$s, ເວີຊັນປັດຈຸບັນ %2$s</string>
+    <string name="wikis_revision_version_badge">ເວີຊັນ %1$s</string>
     <string name="wikis_search_pages_placeholder">ຄົ້ນຫາໜ້າຕາມຫົວຂໍ້ ຫຼື ເນື້ອຫາ…</string>
     <string name="wikis_search_no_results">ບໍ່ພົບໜ້າສຳລັບ “%1$s”. ລອງຄຳຄົ້ນຫາອື່ນ.</string>
     <string name="wikis_search_updated">ອັບເດດແລ້ວ %1$s</string>
@@ -289,30 +289,30 @@
     <string name="wikis_revision_author">ໂດຍ %1$s</string>
     <string name="wikis_revision_show_page">ສະແດງໜ້າ</string>
     <string name="wikis_revision_compare_failed">ບໍ່ສາມາດໂຫຼດລຸ້ນກ່ອນໜ້າເພື່ອປຽບທຽບໄດ້.</string>
-    <string name="wikis_revision_changes_from">ການປ່ຽນແປງຈາກລຸ້ນ %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">ການປ່ຽນແປງຈາກລຸ້ນ %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d ຄຳເຫັນ</item>
+        <item quantity="other">%s ຄຳເຫັນ</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="other">+%d ຕອບກັບເພີ່ມເຕີມ</item>
+        <item quantity="other">+%s ຕອບກັບເພີ່ມເຕີມ</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="other">%d ໜ້າ</item>
+        <item quantity="other">%s ໜ້າ</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="other">%d ໄຟລ໌</item>
+        <item quantity="other">%s ໄຟລ໌</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="other">%d ຮູບ</item>
+        <item quantity="other">%s ຮູບ</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="other">%d ເອກະສານ</item>
+        <item quantity="other">%s ເອກະສານ</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="other">%d ໜ້າ ກັບ tag ນີ້</item>
+        <item quantity="other">%s ໜ້າ ກັບ tag ນີ້</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">ພົບ %1$d ຜົນ ສຳລັບ "%2$s"</item>
+        <item quantity="other">ພົບ %1$s ຜົນ ສຳລັບ \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ບໍ່ສາມາດບັນທຶກຄຳບັນຍາຍໄດ້</string>
     <string name="wikis_attachments_upload_types">ໄຟລ໌ທີ່ຮອງຮັບ: ຮູບພາບ, PDF, DOC, DOCX, TXT, ແລະ MD.</string>
@@ -321,6 +321,6 @@
     <string name="wikis_rss_copied_new">ຄັດລອກ RSS URL ໃໝ່ ໄປຄລິບບອດແລ້ວ</string>
     <string name="wikis_rss_exists">URL ຟີດນີ້ຖືກອອກໃຫ້ແລ້ວ ແລະບໍ່ສາມາດສະແດງໄດ້ອີກ.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">ກຳລັງສະແດງ %1$d ຄຳເຫັນທຳອິດ.</item>
+        <item quantity="other">ກຳລັງສະແດງ %1$s ຄຳເຫັນທຳອິດ.</item>
     </plurals>
 </resources>

@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Σημειώσεις</string>
     <string name="staff_accounts_reason_label">Αιτία</string>
     <string name="staff_accounts_reason_optional_label">Αιτία (προαιρετικό)</string>
-    <string name="staff_accounts_sales">%1$d πωλήσεις</string>
+    <string name="staff_accounts_sales">%1$s πωλήσεις</string>
     <string name="staff_accounts_search_clear">Εκκαθάριση αναζήτησης</string>
     <string name="staff_accounts_search_placeholder">Αναζήτηση</string>
     <string name="staff_accounts_seller_buyers">Μόνο αγοραστές</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Χωρίς όνομα</string>
     <string name="staff_accounts_unsuspend">Άρση αναστολής</string>
     <string name="staff_accounts_unsuspended_toast">Άρθηκε η αναστολή λογαριασμού</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Ακύρωση</string>
     <string name="staff_appeals_decide">Απόφαση</string>
     <string name="staff_appeals_decision_denied">Διατήρηση απόρριψης</string>

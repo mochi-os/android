@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Tanca la sessió</string>
     <string name="settings_home_account">Compte</string>
     <string name="settings_home_preferences">Preferències</string>
-    <string name="settings_home_display">Mostra</string>
+    <string name="settings_home_display">Pantalla</string>
     <string name="settings_home_notification_prefs">Preferències de notificacions</string>
     <string name="settings_home_accounts">Comptes connectats</string>
     <string name="settings_home_interests">Interessos</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Vols suprimir la ruta?</string>
     <string name="route_path">Ruta</string>
     <string name="route_method">Mètode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplicació</string>
     <string name="route_method_entity">Entitat</string>
     <string name="route_method_redirect">Redirecció</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Descarrega des de packages.mochi-os.org</string>
     <string name="system_status_copy">Copia</string>
     <string name="system_status_peers">Iguals</string>
-    <string name="system_status_known">Coneguts</string>
+    <string name="system_status_peers_totals">Coneguts %1$s · Connectats %2$s · Malla de difusió %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Coneguts %1$s · Connectats %2$s</string>
     <string name="system_status_peer_connected">Connectat</string>
     <string name="system_status_peer_disconnected">Desconnectat</string>
     <string name="system_status_peer_queued">Missatges en cua</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Elimina</string>
     <string name="accounts_remove_title">Vols eliminar el compte?</string>
     <string name="system_documents_title">Documents</string>
-    <string name="system_documents_description">Regles del servidor, termes i condicions, i avís de privacitat que es mostren als usuaris</string>
     <string name="system_documents_tab_rules">Regles del servidor</string>
     <string name="system_documents_tab_terms">Termes i condicions</string>
     <string name="system_documents_tab_privacy">Privadesa</string>
     <string name="system_documents_language">Idioma</string>
     <string name="system_documents_no_language">Cap document disponible per a aquest idioma.</string>
-    <string name="system_documents_customised">Personalitzat</string>
     <string name="system_documents_using_default">S\'utilitza el valor per defecte inclòs</string>
     <string name="system_documents_revert">Reverteix al valor per defecte</string>
     <string name="system_documents_save">Desa</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">Suprimeix l\'usuari</string>
     <string name="system_users_delete_title">Vols suprimir l\'usuari?</string>
     <string name="system_users_manage_sessions">Gestiona les sessions</string>
-    <string name="system_users_sessions_description">Visualitza i revoca les sessions actives d\'aquest usuari.</string>
     <string name="system_users_sessions_empty">Aquest usuari no té sessions actives.</string>
     <string name="system_users_revoke">Revoca</string>
     <string name="system_users_revoke_all">Revoca totes les sessions</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">Següent</string>
     <string name="system_users_empty">No s\'ha trobat cap usuari</string>
     <string name="system_users_empty_search">Cap usuari coincideix amb la cerca</string>
-    <string name="system_users_empty_search_hint">Prova d\'ajustar els criteris de cerca</string>
     <string name="system_users_toast_created">Usuari creat</string>
     <string name="system_users_toast_updated">Usuari actualitzat</string>
     <string name="system_users_toast_deleted">Usuari eliminat</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Termes del servei</string>
     <string name="account_passkeys_empty">No hi ha claus d\'accés registrades.</string>
     <string name="account_passkey_register_title">Afegir clau d\'accés</string>
-    <string name="account_passkey_register_message">El vostre dispositiu us demanarà confirmar. La clau d\'accés està vinculada a aquest dispositiu i s\'utilitza per a futures sessions.</string>
     <string name="account_passkey_name_label">Nom (opcional)</string>
     <string name="account_passkey_delete_message">«%1$s» ja no us iniciarà la sessió.</string>
-    <string name="account_totp_description">Inicieu sessió amb un codi de 6 dígits d\'una aplicació d\'autenticació.</string>
     <string name="account_totp_enabled">L\'autenticador està activat.</string>
     <string name="account_totp_setup_step1">Escanegeu o introduïu aquest secret a la vostra aplicació d\'autenticació.</string>
     <string name="account_totp_setup_step2">Introduïu el codi de 6 dígits que mostra la vostra aplicació.</string>
     <string name="account_totp_code">Codi</string>
     <string name="account_totp_disable_message">Ja no podreu iniciar sessió amb un codi d\'autenticador.</string>
     <string name="account_recovery_none">No s\'han generat codis de recuperació.</string>
-    <string name="account_recovery_count">%1$d codis de recuperació no utilitzats.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Queda %1$s codi de recuperació.</item>
+        <item quantity="other">Queden %1$s codis de recuperació.</item>
+    </plurals>
     <string name="account_recovery_generate">Generar codis</string>
     <string name="account_recovery_regenerate">Regenerar codis</string>
     <string name="account_recovery_regen_title">Regenerar els codis de recuperació?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Darrer ús %1$s</string>
     <string name="route_delete_message">Això eliminarà la ruta per al camí «%1$s».</string>
     <string name="route_empty">No hi ha rutes configurades.</string>
-    <string name="route_meta">Prioritat %1$d · %2$s</string>
+    <string name="route_meta">Prioritat %1$s · %2$s</string>
     <string name="interests_search_placeholder">Cercar temes per afegir…</string>
     <string name="interests_empty">Encara no hi ha interessos.</string>
     <string name="interests_summary_regenerate">Regenera el resum</string>
@@ -270,7 +270,10 @@
     <string name="system_users_session_last_accessed">Darrer accés: %1$s</string>
     <string name="system_users_revoke_all_title">Revocar totes les sessions?</string>
     <string name="system_users_revoke_all_message">Totes les sessions actives d\'aquest usuari es tancaran.</string>
-    <string name="system_users_pagination_status">Mostrant %1$d–%2$d de %3$d usuaris</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Mostrant %1$s–%2$s de %3$s usuari</item>
+        <item quantity="other">Mostrant %1$s–%2$s de %3$s usuaris</item>
+    </plurals>
     <string name="account_title">Compte</string>
     <string name="account_section_identity">Identitat</string>
     <string name="account_identity_identity">Identitat</string>
@@ -303,13 +306,13 @@
     <string name="domain_verify">Verifica el DNS</string>
     <string name="settings_home_domains">Dominis</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Prova enviada a %1$d destinació</item>
-        <item quantity="other">Prova enviada a %1$d destinacions</item>
+        <item quantity="one">Prova enviada a %1$s destinació</item>
+        <item quantity="other">Prova enviada a %1$s destinacions</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="many">S\'han revocat %1$d sessions</item>
-        <item quantity="one">S\'ha revocat 1 sessió</item>
-        <item quantity="other">S\'han revocat %1$d sessions</item>
+        <item quantity="one">S\'ha revocat %1$s sessió</item>
+        <item quantity="many">S\'han revocat %1$s sessions</item>
+        <item quantity="other">S\'han revocat %1$s sessions</item>
     </plurals>
     <string name="login_title">Inici de sessió</string>
     <string name="login_section_methods">Mètodes d\'inici de sessió</string>
@@ -340,18 +343,15 @@
     <string name="system_status_reachability_public">Públic</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Desconegut</string>
-    <string name="system_status_relay">Mitjançant relay</string>
-    <string name="system_status_mesh">Malla de difusió</string>
+    <string name="system_status_reachability_relay">%1$s · mitjançant repetidor</string>
     <string name="system_status_broadcast">Última difusió</string>
     <string name="system_status_queued_broadcasts">Missatges de difusió en cua</string>
     <string name="system_setting_hostname_publish">Anuncia el nom d\'amfitrió i els dominis a altres servidors</string>
     <string name="system_setting_hostname">Nom d\'amfitrió anunciat a altres servidors</string>
     <string name="system_status_peer_id">ID del parell</string>
     <string name="system_status_holepunch">Perforació</string>
-    <string name="system_status_holepunch_value">%1$d amb èxit · %2$d fallits</string>
     <string name="system_status_awaiting_routing">Missatges a l\'espera d\'encaminament</string>
     <string name="system_status_relay_service">Servei de repetidor</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reserves · %3$d circuits · %4$d rebutjades</string>
     <string name="route_target_select">Selecciona</string>
     <string name="account_data_description">Baixeu una còpia de seguretat completa que podeu restaurar en aquest servidor Mochi o en un altre.</string>
     <string name="route_target_none">No hi ha destinacions disponibles</string>
@@ -376,7 +376,12 @@
     <string name="accounts_device_seen">Vist per última vegada %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplicació</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Prova enviada a %1$d de %2$d destinacions</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Prova enviada a %1$s de %2$s destinació</item>
+        <item quantity="other">Prova enviada a %1$s de %2$s destinacions</item>
+    </plurals>
     <string name="notifprefs_test_none">Cap destinació configurada</string>
     <string name="notifprefs_transport_fcm">Push d\'Android</string>
     <string name="notifprefs_no_destinations">Sense destinacions</string>
@@ -395,4 +400,27 @@
     <string name="accounts_revoke_confirm">Això revocarà l\'accés al calendari de %1$s. L\'inici de sessió amb %2$s es manté fins que el desenllaceu a la pàgina d\'inici de sessió.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tema desconegut</string>
+    <string name="system_documents_modified">Modificat</string>
+    <string name="system_documents_discard_title">Vols descartar els canvis?</string>
+    <string name="system_documents_discard">Descarta</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s amb èxit</item>
+        <item quantity="other">%1$s amb èxit</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s fallit</item>
+        <item quantity="other">%1$s fallits</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s reserva</item>
+        <item quantity="other">%1$s / %2$s reserves</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s circuit</item>
+        <item quantity="other">%1$s circuits</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s rebutjada</item>
+        <item quantity="other">%1$s rebutjades</item>
+    </plurals>
 </resources>

@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">Örökké</string>
     <string name="calendars_reminder_time">Az esemény időpontjában</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d perccel korábban</item>
-        <item quantity="other">%1$d perccel korábban</item>
+        <item quantity="one">%1$s perccel korábban</item>
+        <item quantity="other">%1$s perccel korábban</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d órával korábban</item>
-        <item quantity="other">%1$d órával korábban</item>
+        <item quantity="one">%1$s órával korábban</item>
+        <item quantity="other">%1$s órával korábban</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d nappal korábban</item>
-        <item quantity="other">%1$d nappal korábban</item>
+        <item quantity="one">%1$s nappal korábban</item>
+        <item quantity="other">%1$s nappal korábban</item>
     </plurals>
     <string name="calendars_reminder_add">Emlékeztető hozzáadása</string>
     <string name="calendars_reminder_remove">Emlékeztető eltávolítása</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">A naptár túl nagy</string>
     <string name="calendars_poll_invalid">A cím nem naptárat adott vissza</string>
     <string name="calendars_poll_unreachable">A cím nem érhető el</string>
-    <string name="calendars_poll_status">A cím válasza: %1$d</string>
+    <string name="calendars_poll_status">A cím válasza: %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d perc</item>
-        <item quantity="other">%1$d perc</item>
+        <item quantity="one">%1$s perc</item>
+        <item quantity="other">%1$s perc</item>
     </plurals>
     <string name="calendars_preferences_zones">Események megjelenítése a saját időzónájukban</string>
     <string name="calendars_event_backwards">Előbb ér véget, mint elkezdődik</string>

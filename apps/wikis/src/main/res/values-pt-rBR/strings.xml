@@ -21,17 +21,17 @@
     <string name="wikis_page_action_recent_changes">Alterações recentes</string>
     <string name="wikis_page_action_new_page">Nova página</string>
     <string name="wikis_page_action_settings">Configurações</string>
-    <string name="wikis_page_action_unsubscribe">Cancelar inscrição</string>
+    <string name="wikis_page_action_unsubscribe">Remover inscrição</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Comece seu primeiro wiki</string>
     <string name="wikis_empty_subtitle">Busque um wiki para se inscrever, ou crie um para publicar sua própria documentação.</string>
     <string name="wikis_create_button">Criar wiki</string>
     <string name="wikis_recommended_section">Wikis recomendados</string>
     <string name="wikis_subscribe_button">Inscrever-se</string>
-    <string name="wikis_unsubscribe_action">Cancelar inscrição</string>
-    <string name="wikis_unsubscribing">Cancelando inscrição…</string>
-    <string name="wikis_unsubscribe_confirm_title">Cancelar inscrição</string>
-    <string name="wikis_unsubscribe_success">Inscrição cancelada</string>
+    <string name="wikis_unsubscribe_action">Remover inscrição</string>
+    <string name="wikis_unsubscribing">Removendo inscrição…</string>
+    <string name="wikis_unsubscribe_confirm_title">Remover inscrição</string>
+    <string name="wikis_unsubscribe_success">Inscrição removida</string>
     <string name="wikis_subscribe_failed">Falha ao assinar</string>
     <string name="wikis_rss_menu">Feed RSS</string>
     <string name="wikis_rss_changes">Alterações</string>
@@ -220,7 +220,7 @@
     <string name="wikis_channel_description">Notificações sobre edições de páginas, comentários e convites.</string>
     <string name="wikis_pageview_toc_expand">Mostrar sumário</string>
     <string name="wikis_pageview_toc_collapse">Ocultar sumário</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Atualizado %1$s</string>
     <string name="wikis_pageview_not_found_description">A página «%1$s» ainda não existe.</string>
     <string name="wikis_pageview_share_chooser">Link do wiki</string>
@@ -228,7 +228,7 @@
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Abrir barra lateral</string>
     <string name="wikis_search_placeholder">Procurar um wiki…</string>
-    <string name="wikis_unsubscribe_confirm_message">Tem certeza de que deseja cancelar a inscrição em %1$s?</string>
+    <string name="wikis_unsubscribe_confirm_message">Tem certeza de que deseja remover a inscrição em %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL do RSS do wiki</string>
     <string name="wikis_find_search_placeholder">Procurar por nome, ID, impressão digital ou URL…</string>
     <string name="wikis_join_search_button">Procurar wikis…</string>
@@ -245,13 +245,13 @@
     <string name="wikis_delete_page_message">Você está prestes a excluir a página «%1$s» (%2$s). Esta ação pode ser desfeita restaurando do histórico.</string>
     <string name="wikis_delete_page_success">Página excluída</string>
     <string name="wikis_revert_page_title">Reverter página</string>
-    <string name="wikis_revert_page_message">Você está prestes a reverter %1$s para a versão %2$d. Isto criará uma nova revisão com o conteúdo da versão %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Revertido para a versão %1$d</string>
-    <string name="wikis_revert_page_success">Revertido para a versão %1$d</string>
+    <string name="wikis_revert_page_message">Você está prestes a reverter %1$s para a versão %2$s. Isto criará uma nova revisão com o conteúdo da versão %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Revertido para a versão %1$s</string>
+    <string name="wikis_revert_page_success">Revertido para a versão %1$s</string>
     <string name="wikis_rename_page_renaming">Renomeando…</string>
     <string name="wikis_rename_page_success">Página renomeada</string>
-    <string name="wikis_history_viewing">Visualizando histórico de %1$s, versão atual %2$d</string>
-    <string name="wikis_revision_version_badge">Versão %1$d</string>
+    <string name="wikis_history_viewing">Visualizando histórico de %1$s, versão atual %2$s</string>
+    <string name="wikis_revision_version_badge">Versão %1$s</string>
     <string name="wikis_search_pages_placeholder">Procurar páginas por título ou conteúdo…</string>
     <string name="wikis_search_no_results">Nenhuma página encontrada para «%1$s». Tente outros termos de busca.</string>
     <string name="wikis_search_updated">Atualizado %1$s</string>
@@ -287,7 +287,7 @@
     <string name="wikis_revision_author">por %1$s</string>
     <string name="wikis_revision_show_page">Mostrar página</string>
     <string name="wikis_revision_compare_failed">Não foi possível carregar a versão anterior para comparação.</string>
-    <string name="wikis_revision_changes_from">Alterações da versão %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Alterações da versão %1$s → %2$s</string>
     <string name="wikis_attachments_caption_save_failed">Não foi possível salvar a legenda</string>
     <string name="wikis_attachments_upload_types">Arquivos suportados: imagens, PDF, DOC, DOCX, TXT e MD.</string>
     <string name="wikis_attachments_upload_limits">O envio de arquivos grandes pode ser limitado pela configuração do seu servidor ou proxy.</string>
@@ -295,7 +295,7 @@
     <string name="wikis_rss_copied_new">Nova URL RSS copiada para a área de transferência</string>
     <string name="wikis_rss_exists">Esta URL de feed já foi emitida e não pode ser exibida novamente.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Mostrando o primeiro %1$d comentário.</item>
-        <item quantity="other">Mostrando os primeiros %1$d comentários.</item>
+        <item quantity="one">Mostrando o primeiro %1$s comentário.</item>
+        <item quantity="other">Mostrando os primeiros %1$s comentários.</item>
     </plurals>
 </resources>

@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">メモ</string>
     <string name="staff_accounts_reason_label">理由</string>
     <string name="staff_accounts_reason_optional_label">理由(任意)</string>
-    <string name="staff_accounts_sales">%1$d 件の販売</string>
+    <string name="staff_accounts_sales">%1$s 件の販売</string>
     <string name="staff_accounts_search_clear">検索をクリア</string>
     <string name="staff_accounts_search_placeholder">検索</string>
     <string name="staff_accounts_seller_buyers">購入者のみ</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">名称未設定</string>
     <string name="staff_accounts_unsuspend">停止を解除</string>
     <string name="staff_accounts_unsuspended_toast">アカウント停止を解除しました</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">キャンセル</string>
     <string name="staff_appeals_decide">決定</string>
     <string name="staff_appeals_decision_denied">出品を却下のままにする</string>

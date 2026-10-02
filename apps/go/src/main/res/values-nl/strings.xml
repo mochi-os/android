@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Verwijderen</string>
     <string name="go_delete_message">Dit spel wordt uit je lijst verwijderd. Dit kan niet ongedaan worden gemaakt.</string>
     <string name="go_delete_title">Spel verwijderen?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Accepteren</string>
     <string name="go_draw_decline">Weigeren</string>
     <string name="go_draw_offered_received">%1$s bood remise aan</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Opgegeven</string>
     <string name="go_new_game_title">Nieuwe Go-partij</string>
     <string name="go_new_game_no_friends">Je moet een vriend toevoegen voordat je een partij kunt beginnen.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Punten toegevoegd aan Wits score om te compenseren dat Zwart eerst zet</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go-bord</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go-bord, u bent aan zet met een zwarte steen</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go-bord, u bent aan zet met een witte steen</string>
+    <string name="go_board_a11y">%1$s×%1$s Go-bord</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go-bord, u bent aan zet met een zwarte steen</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go-bord, u bent aan zet met een witte steen</string>
     <string name="go_status_scoring">Tellen — word het eens over de score of speel verder</string>
     <string name="go_score_proposed">Voorgestelde score: zwart %1$s, wit %2$s</string>
     <string name="go_score_opponent_accepted">Je tegenstander accepteert deze score: zwart %1$s, wit %2$s</string>

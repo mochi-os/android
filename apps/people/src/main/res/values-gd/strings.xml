@@ -180,10 +180,10 @@
     <string name="people_books_create">Cruthaich leabhar sheòlaidhean</string>
     <string name="people_books_delete">Sguab às an leabhar sheòlaidhean</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Sguab às %1$s agus an %2$d neach-aithne ann?</item>
-        <item quantity="two">Sguab às %1$s agus an %2$d neach-aithne ann?</item>
-        <item quantity="few">Sguab às %1$s agus na %2$d luchd-aithne ann?</item>
-        <item quantity="other">Sguab às %1$s agus na %2$d luchd-aithne ann?</item>
+        <item quantity="one">Sguab às %1$s agus an %2$s neach-aithne ann?</item>
+        <item quantity="two">Sguab às %1$s agus an %2$s neach-aithne ann?</item>
+        <item quantity="few">Sguab às %1$s agus na %2$s luchd-aithne ann?</item>
+        <item quantity="other">Sguab às %1$s agus na %2$s luchd-aithne ann?</item>
     </plurals>
     <string name="people_welcome_body">Lorg caraidean air feadh Mochi is ceangail riutha. Thoir gnogag air Cuir neach-aithne ris gus cuireadh a chur.</string>
     <string name="people_person_state_contact">San luchd-aithne</string>

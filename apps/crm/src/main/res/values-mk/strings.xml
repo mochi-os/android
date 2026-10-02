@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">Луѓе</string>
     <string name="crm_option_icon">Икона</string>
     <string name="crm_option_icon_placeholder">напр. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Откажи претплата</string>
+    <string name="crm_settings_unsubscribe">Отпиши се</string>
     <string name="crm_settings_delete_crm">Избриши CRM</string>
     <string name="crm_settings_delete_confirm_title">Избриши CRM</string>
-    <string name="crm_settings_unsubscribe_title">Откажи претплата</string>
+    <string name="crm_settings_unsubscribe_title">Отпиши се</string>
     <string name="crm_settings_unsubscribe_message">Сигурен ли си дека сакаш да се одјавиш од овој CRM?</string>
     <string name="crm_access_level_owner">Сопственик</string>
     <string name="crm_object_watch">Следи</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Нема објекти</string>
     <string name="crm_board_no_columns">Нема конфигурирани колони за овој преглед</string>
     <string name="crm_board_no_options">Не се конфигурирани опции за полето на колоната</string>
-    <string name="crm_board_nested_count">+%1$d вгнездени</string>
+    <string name="crm_board_nested_count">+%1$s вгнездени</string>
     <string name="crm_move_to_column">Премести во колона</string>
     <string name="crm_move_to_row">Премести во ред</string>
     <string name="crm_move_after">По %1$s</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">Само прикажување</string>
     <string name="crm_access_role_none">Без пристап</string>
     <string name="crm_all_crms">Сите CRM</string>
-    <string name="crm_settings_unsubscribe_section">Одјави се од CRM</string>
+    <string name="crm_settings_unsubscribe_section">Отпиши се од CRM</string>
     <string name="crm_settings_updated">CRM е ажуриран</string>
     <string name="crm_create_import_backup">Увези од резерва (опционално)</string>
     <string name="crm_export">Извези податоци</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Податоците за CRM се зачувани</string>
     <string name="crm_create_upload_json">Прикачете .zip или .json датотека</string>
     <string name="crm_create_blocked_no_options">Не може да се создаде: %1$s е задолжително, но нема опции за избор. Додајте опции во Дизајн.</string>
-    <string name="crm_design_sample">Примерок %1$d</string>
+    <string name="crm_design_sample">Примерок %1$s</string>
     <string name="crm_option_delete_title">Избриши опција</string>
     <string name="crm_option_delete_message">Дали сте сигурни дека сакате да ја избришете опцијата \"%1$s\"?</string>
 </resources>

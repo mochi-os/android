@@ -970,7 +970,7 @@ fun FeedScreen(
                                             label = pluralStringResource(
                                                 R.plurals.feeds_new_posts,
                                                 newPostsCount,
-                                                newPostsCount
+                                                LocalFormat.current.formatNumber(newPostsCount)
                                             ),
                                             onClick = {
                                                 // Refresh and jump to the top: the
@@ -1221,7 +1221,7 @@ private const val GALLERY_TILE_LIMIT = 6
 // Byline (source/feed name + timestamp) and the compact metadata lines
 // (memory, check-in, travelling), shared by the article and gallery layouts.
 @Composable
-private fun PostByline(post: Post) {
+internal fun PostByline(post: Post) {
     // formatTimestamp obeys every timestamp preference (relative / absolute /
     // auto, and the date+time+timezone format).
     Row(
@@ -1257,7 +1257,7 @@ private fun PostByline(post: Post) {
                 text = pluralStringResource(
                     R.plurals.feeds_memory_years_ago_today,
                     memory.yearsAgo,
-                    memory.yearsAgo
+                    LocalFormat.current.formatNumber(memory.yearsAgo)
                 ),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.primary,
@@ -1433,7 +1433,7 @@ private fun GalleryContent(
                         text = pluralStringResource(
                             R.plurals.feeds_attachment_count,
                             files.size,
-                            files.size
+                            LocalFormat.current.formatNumber(files.size)
                         ),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.primary,
@@ -1538,7 +1538,7 @@ private fun GalleryMosaic(
 // video frame with a play glyph, with a "+N" overlay on the last tile when
 // the post has more media than the mosaic shows.
 @Composable
-private fun GalleryTile(
+internal fun GalleryTile(
     attachment: Attachment,
     model: Any,
     contentScale: ContentScale,
@@ -1590,7 +1590,7 @@ private fun GalleryTile(
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = stringResource(MochiR.string.media_grid_more_count, more),
+                    text = stringResource(MochiR.string.media_grid_more_count, LocalFormat.current.formatNumber(more)),
                     color = Color.White,
                     style = MaterialTheme.typography.titleLarge,
                 )
@@ -1811,7 +1811,7 @@ private fun PostCard(
                             text = pluralStringResource(
                                 R.plurals.feeds_attachment_count,
                                 otherAttachments.size,
-                                otherAttachments.size
+                                LocalFormat.current.formatNumber(otherAttachments.size)
                             ),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.primary
@@ -1925,7 +1925,7 @@ private fun PostCard(
  * @param onViewComments opens the post with its comments expanded.
  */
 @Composable
-private fun PostCommentsPreview(
+internal fun PostCommentsPreview(
     post: Post,
     fallbackFeedId: String,
     onViewComments: () -> Unit,
@@ -1962,7 +1962,7 @@ private fun PostCommentsPreview(
                 text = pluralStringResource(
                     R.plurals.feeds_view_more_comments,
                     remaining,
-                    remaining
+                    LocalFormat.current.formatNumber(remaining)
                 ),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.primary,

@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">Reconectando…</string>
     <string name="chess_ws_failed">Falló la conexión</string>
     <string name="chess_move_capture">%1$s tomó %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">%1$s blanco</string>
     <string name="chess_piece_black">%1$s negro</string>

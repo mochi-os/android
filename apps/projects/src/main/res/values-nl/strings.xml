@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">heeft een wijziging aangebracht</string>
     <string name="projects_attachment_empty">Geen bijlagen</string>
     <string name="projects_attachment_default_name">bijlage</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d kB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s kB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nieuw merge-verzoek</string>
     <string name="projects_request_status_closed">Gesloten</string>
     <string name="projects_request_back_to_list">Terug naar lijst</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Mergestatus controleren…</string>
     <string name="projects_request_can_merge">Kan worden samengevoegd</string>
     <string name="projects_request_cannot_merge">Kan niet worden samengevoegd</string>
-    <string name="projects_request_ahead_behind">%1$d vooruit, %2$d achter</string>
+    <string name="projects_request_ahead_behind">%1$s vooruit, %2$s achter</string>
     <string name="projects_request_draft_notice">Dit is een concept. Markeer als gereed voordat u samenvoegt.</string>
     <string name="projects_request_view_diff">Diff bekijken</string>
     <string name="projects_request_mark_ready">Markeren als gereed</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Geen kolommen geconfigureerd voor deze weergave</string>
     <string name="projects_board_no_options">Geen opties geconfigureerd voor kolomveld</string>
     <string name="projects_board_column_options">Kolomopties</string>
-    <string name="projects_board_nested_count">+%1$d genest</string>
+    <string name="projects_board_nested_count">+%1$s genest</string>
     <string name="projects_move_to_column">Verplaats naar kolom</string>
     <string name="projects_move_to_row">Verplaats naar rij</string>
     <string name="projects_move_after">Na %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Sorteren en filteren</string>
     <string name="projects_create_prefix_hint">Gebruikt voor leesbare ID\'s zoals %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d conflicterend bestand</item>
-        <item quantity="other">%1$d conflicterende bestanden</item>
+        <item quantity="one">%1$s conflicterend bestand</item>
+        <item quantity="other">%1$s conflicterende bestanden</item>
     </plurals>
     <string name="projects_design_export_saved">Ontwerp opgeslagen</string>
     <string name="projects_design_import_failed">Dat bestand kon niet worden gelezen</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Projectgegevens opgeslagen</string>
     <string name="projects_exporting">Export voorbereiden…</string>
     <string name="projects_board_add_column">Kolom toevoegen</string>
-    <string name="projects_design_sample">Voorbeeld %1$d</string>
+    <string name="projects_design_sample">Voorbeeld %1$s</string>
     <string name="projects_option_delete_title">Optie verwijderen</string>
     <string name="projects_option_delete_message">Weet je zeker dat je de optie \"%1$s\" wilt verwijderen?</string>
     <string name="projects_create_object_no_types">Er kunnen nog geen itemtypen worden aangemaakt. Maak eerst de vereiste bovenliggende items aan.</string>

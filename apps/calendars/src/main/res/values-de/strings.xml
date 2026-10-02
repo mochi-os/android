@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">Für immer</string>
     <string name="calendars_reminder_time">Zum Zeitpunkt</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d Minute vorher</item>
-        <item quantity="other">%1$d Minuten vorher</item>
+        <item quantity="one">%1$s Minute vorher</item>
+        <item quantity="other">%1$s Minuten vorher</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d Stunde vorher</item>
-        <item quantity="other">%1$d Stunden vorher</item>
+        <item quantity="one">%1$s Stunde vorher</item>
+        <item quantity="other">%1$s Stunden vorher</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d Tag vorher</item>
-        <item quantity="other">%1$d Tage vorher</item>
+        <item quantity="one">%1$s Tag vorher</item>
+        <item quantity="other">%1$s Tage vorher</item>
     </plurals>
     <string name="calendars_reminder_add">Erinnerung hinzufügen</string>
     <string name="calendars_reminder_remove">Erinnerung entfernen</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">Der Kalender ist zu groß</string>
     <string name="calendars_poll_invalid">Die Adresse hat keinen Kalender geliefert</string>
     <string name="calendars_poll_unreachable">Die Adresse war nicht erreichbar</string>
-    <string name="calendars_poll_status">Die Adresse antwortete mit %1$d</string>
+    <string name="calendars_poll_status">Die Adresse antwortete mit %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d Minute</item>
-        <item quantity="other">%1$d Minuten</item>
+        <item quantity="one">%1$s Minute</item>
+        <item quantity="other">%1$s Minuten</item>
     </plurals>
     <string name="calendars_preferences_zones">Termine in ihrer eigenen Zeitzone anzeigen</string>
     <string name="calendars_event_backwards">Endet vor dem Beginn</string>

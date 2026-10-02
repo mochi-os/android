@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">افراد</string>
     <string name="crm_option_icon">آیکون</string>
     <string name="crm_option_icon_placeholder">مثلاً Check، Star، Flag</string>
-    <string name="crm_settings_unsubscribe">لغو اشتراک</string>
+    <string name="crm_settings_unsubscribe">قطع اشتراک</string>
     <string name="crm_settings_delete_crm">حذف CRM</string>
     <string name="crm_settings_delete_confirm_title">حذف CRM</string>
-    <string name="crm_settings_unsubscribe_title">لغو اشتراک</string>
-    <string name="crm_settings_unsubscribe_message">آیا از لغو اشتراک این CRM مطمئن هستید؟</string>
+    <string name="crm_settings_unsubscribe_title">قطع اشتراک</string>
+    <string name="crm_settings_unsubscribe_message">آیا از قطع اشتراک این CRM مطمئن هستید؟</string>
     <string name="crm_access_level_owner">مالک</string>
     <string name="crm_object_watch">تماشا</string>
     <string name="crm_object_tab_properties">ویژگی‌ها</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">بدون شیء</string>
     <string name="crm_board_no_columns">برای این نما هیچ ستونی پیکربندی نشده است</string>
     <string name="crm_board_no_options">برای فیلد ستون هیچ گزینه‌ای پیکربندی نشده است</string>
-    <string name="crm_board_nested_count">%1$d+ تودرتو</string>
+    <string name="crm_board_nested_count">%1$s+ تودرتو</string>
     <string name="crm_move_to_column">انتقال به ستون</string>
     <string name="crm_move_to_row">انتقال به ردیف</string>
     <string name="crm_move_after">پس از %1$s</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">مدیریت دسترسی</string>
     <string name="crm_settings_not_set">تنظیم نشده</string>
     <string name="crm_settings_access_updated">دسترسی به‌روزرسانی شد</string>
-    <string name="crm_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="crm_settings_access_revoked">دسترسی ابطال شد</string>
     <string name="crm_people_search">جستجوی افراد</string>
     <string name="crm_access_tab_other">سایر</string>
     <string name="crm_access_select_group">یک گروه انتخاب کنید</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">فقط نمایش</string>
     <string name="crm_access_role_none">بدون دسترسی</string>
     <string name="crm_all_crms">همهٔ CRMها</string>
-    <string name="crm_settings_unsubscribe_section">لغو اشتراک از CRM</string>
+    <string name="crm_settings_unsubscribe_section">قطع اشتراک از CRM</string>
     <string name="crm_settings_updated">CRM به‌روزرسانی شد</string>
     <string name="crm_create_import_backup">وارد کردن از پشتیبان (اختیاری)</string>
     <string name="crm_export">خروجی داده‌ها</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">داده‌های CRM ذخیره شد</string>
     <string name="crm_create_upload_json">یک فایل .zip یا .json بارگذاری کنید</string>
     <string name="crm_create_blocked_no_options">امکان ایجاد نیست: %1$s الزامی است اما گزینه‌ای برای انتخاب ندارد. در طرح گزینه اضافه کنید.</string>
-    <string name="crm_design_sample">نمونه %1$d</string>
+    <string name="crm_design_sample">نمونه %1$s</string>
     <string name="crm_option_delete_title">حذف گزینه</string>
     <string name="crm_option_delete_message">آیا مطمئن هستید که می‌خواهید گزینهٔ \"%1$s\" را حذف کنید؟</string>
 </resources>

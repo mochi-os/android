@@ -31,6 +31,7 @@ import com.github.bhlangonijr.chesslib.Piece
 import com.github.bhlangonijr.chesslib.PieceType
 import com.github.bhlangonijr.chesslib.Side
 import org.mochios.chess.R
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * Least valuable first; mirrors the web's `CAPTURED_PIECE_ORDER`.
@@ -162,7 +163,7 @@ private fun CapturedPieceCell(side: Side, entry: CapturedPiece) {
         }
         if (entry.count > 1) {
             Text(
-                text = stringResource(R.string.chess_captured_multiplier, entry.count),
+                text = stringResource(R.string.chess_captured_multiplier, LocalFormat.current.formatNumber(entry.count)),
                 style = MaterialTheme.typography.labelSmall.copy(
                     fontSize = 11.sp,
                     fontWeight = FontWeight.Medium,

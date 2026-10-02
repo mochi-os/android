@@ -6,8 +6,8 @@
     <string name="forums_list_title">ਫੋਰਮ</string>
     <string name="forums_list_find">ਫੋਰਮ ਲੱਭੋ</string>
     <string name="forums_list_logout">ਲੌਗ ਆਊਟ</string>
-    <string name="forums_list_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
-    <string name="forums_list_unsubscribe_title">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="forums_list_unsubscribe">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
+    <string name="forums_list_unsubscribe_title">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="forums_create_title">ਫੋਰਮ ਬਣਾਓ</string>
     <string name="forums_create_name">ਫੋਰਮ ਦਾ ਨਾਮ</string>
     <string name="forums_create_privacy">ਪ੍ਰਾਈਵੇਸੀ</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">ਟੈਗ</string>
     <string name="forums_ai_account_default">ਡਿਫਾਲਟ ਖਾਤਾ</string>
     <string name="forums_ai_prompt_reset">ਡਿਫਾਲਟ \'ਤੇ ਰੀਸੈੱਟ ਕਰੋ</string>
-    <string name="forums_settings_unsubscribe">ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="forums_settings_unsubscribe">ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="forums_moderation_title">ਸੰਚਾਲਨ</string>
     <string name="forums_moderation_tab_queue">ਕਤਾਰ</string>
     <string name="forums_moderation_tab_reports">ਰਿਪੋਰਟਾਂ</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">%1$s ਨੂੰ ਭੇਜਿਆ ਗਿਆ ਕੋਡ ਦਰਜ ਕਰੋ</string>
     <string name="forums_auth_create_identity">ਆਪਣੀ ਪਛਾਣ ਬਣਾਓ</string>
     <string name="forums_list_empty">ਅਜੇ ਕੋਈ ਫੋਰਮ ਨਹੀਂ</string>
-    <string name="forums_list_unsubscribe_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਫੋਰਮ ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="forums_list_unsubscribe_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਫੋਰਮ ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="forums_find_search_placeholder">ਫੋਰਮ ਖੋਜੋ ਜਾਂ URL ਪੇਸਟ ਕਰੋ</string>
     <string name="forums_find_search_hint">ਗਾਹਕੀ ਲੈਣ ਲਈ ਫੋਰਮ ਖੋਜੋ</string>
     <string name="forums_post_delete_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਪੋਸਟ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਸਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">ਸੰਚਾਲਨ</string>
     <string name="forums_members_search">ਮੈਂਬਰ ਫਿਲਟਰ ਕਰੋ</string>
     <string name="forums_banner_description">ਫੋਰਮ ਦੇ ਸਿਖਰ \'ਤੇ ਦਿਖਾਇਆ ਜਾਣ ਵਾਲਾ Markdown।</string>
-    <string name="forums_banner_placeholder">ਇਸ ਫੋਰਮ ਵਿੱਚ ਜੀ ਆਇਆਂ ਨੂੰ…</string>
+    <string name="forums_banner_placeholder">ਬੈਨਰ ਦਾ ਟੈਕਸਟ ਦਰਜ ਕਰੋ (Markdown ਸਮਰਥਿਤ)…</string>
     <string name="forums_ai_mode_label">ਮੋਡ: %1$s</string>
     <string name="forums_ai_mode_heading">AI ਮੋਡ</string>
     <string name="forums_ai_mode_off">ਬੰਦ ਕੀਤਾ</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">ਕਿਸੇ ਵੀ ਪੋਸਟ ਨੂੰ ਇੱਥੇ ਬਾਅਦ ਲਈ ਸੰਭਾਲਣ ਲਈ ਉਸ ਦੇ ਬੁੱਕਮਾਰਕ \'ਤੇ ਟੈਪ ਕਰੋ।</string>
     <string name="forums_saved_error_clear">ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ ਸਾਫ਼ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d ਨਵੀਂ ਪੋਸਟ</item>
-        <item quantity="other">%d ਨਵੀਆਂ ਪੋਸਟਾਂ</item>
+        <item quantity="one">%s ਨਵੀਂ ਪੋਸਟ</item>
+        <item quantity="other">%s ਨਵੀਆਂ ਪੋਸਟਾਂ</item>
     </plurals>
     <string name="forums_rss_feed">RSS ਫੀਡ</string>
     <string name="forums_rss_mode_posts">ਪੋਸਟਾਂ</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">ਦਿਨ</string>
     <string name="forums_settings_banner_saved">ਬੈਨਰ ਸੈਵ ਹੋ ਗਿਆ</string>
     <string name="forums_settings_access_updated">ਪਹੁੰਚ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ</string>
-    <string name="forums_settings_access_revoked">ਪਹੁੰਚ ਰੱਦ ਕੀਤੀ ਗਈ</string>
+    <string name="forums_settings_access_revoked">ਪਹੁੰਚ ਵਾਪਸ ਲੈ ਲਈ ਗਈ</string>
     <string name="forums_settings_member_removed">ਮੈਂਬਰ ਹਟਾਇਆ ਗਿਆ</string>
     <string name="forums_settings_prompt_saved">ਪ੍ਰਾਂਪਟ ਸੇਵ ਹੋ ਗਿਆ</string>
     <string name="forums_settings_section_identity">ਪਛਾਣ</string>
@@ -293,11 +293,11 @@
     <string name="forums_settings_ai_updated">AI ਸੈਟਿੰਗਾਂ ਅੱਪਡੇਟ ਹੋਈਆਂ</string>
     <string name="forums_settings_forum_renamed">ਫੋਰਮ ਦਾ ਨਾਮ ਬਦਲਿਆ ਗਿਆ</string>
     <string name="forums_settings_name_clear_cd">ਨਾਂ ਸਾਫ਼ ਕਰੋ</string>
-    <string name="forums_settings_unsubscribe_section">ਫੋਰਮ ਤੋਂ ਗਾਹਕੀ ਰੱਦ ਕਰੋ</string>
+    <string name="forums_settings_unsubscribe_section">ਫੋਰਮ ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="forums_share_link_title">ਫੋਰਮ ਲਿੰਕ</string>
     <string name="forums_find_found_by_url">URL ਰਾਹੀਂ ਮਿਲਿਆ</string>
-    <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ (%1$d)</string>
-    <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ (%1$d)</string>
+    <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ (%1$s)</string>
+    <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ (%1$s)</string>
     <string name="forums_moderation_on_image">ਤਸਵੀਰ \'ਤੇ: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">ਇਸ ਫੋਰਮ ਵਿੱਚ ਪੋਸਟ ਕਰਨ ਦੀ ਤੁਹਾਨੂੰ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ</string>

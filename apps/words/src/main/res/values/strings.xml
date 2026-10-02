@@ -18,7 +18,7 @@
     <string name="words_new_game_title">New game</string>
     <string name="words_new_game_choose_opponents">Choose opponents</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d players</string>
+    <string name="words_new_game_player_count">%1$s players</string>
     <string name="words_new_game_language">Language</string>
     <string name="words_new_game_language_uk">English (UK)</string>
     <string name="words_new_game_language_us">English (US)</string>
@@ -38,10 +38,10 @@
     <string name="words_detail_status_game_over">Game over</string>
     <string name="words_detail_status_opponent_resigned">Opponent resigned — you win!</string>
     <string name="words_detail_status_you_resigned">You resigned</string>
-    <string name="words_detail_player_fallback">Player %1$d</string>
-    <string name="words_detail_player_count">%1$d players</string>
+    <string name="words_detail_player_fallback">Player %1$s</string>
+    <string name="words_detail_player_count">%1$s players</string>
     <string name="words_detail_label_you">You</string>
-    <string name="words_detail_label_tiles_left">%1$d tiles left</string>
+    <string name="words_detail_label_tiles_left">%1$s tiles left</string>
     <string name="words_detail_action_shuffle">Shuffle rack</string>
     <string name="words_detail_action_pass">Pass</string>
     <string name="words_detail_action_exchange">Exchange tiles</string>
@@ -56,7 +56,7 @@
     <string name="words_detail_submit">Submit</string>
     <string name="words_detail_cancel">Cancel</string>
     <string name="words_detail_exchange">Exchange</string>
-    <string name="words_detail_exchange_count">Exchange (%1$d)</string>
+    <string name="words_detail_exchange_count">Exchange (%1$s)</string>
     <string name="words_detail_blank_title">Choose a letter</string>
     <string name="words_detail_resign_title">Resign game?</string>
     <string name="words_detail_resign_message">Are you sure you want to resign?</string>

@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">未取得</string>
     <string name="feeds_source_poll">ポーリング</string>
     <string name="feeds_source_transform">AI 変換</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" を削除しますか？</string>
-    <string name="feeds_remove_also_delete_posts">インポートした投稿も削除する</string>
+    <string name="feeds_remove_source_confirm">\"%1$s\" からのコンテンツのインポートを停止します。</string>
+    <string name="feeds_remove_also_delete_posts">このソースからインポートした投稿も削除する</string>
     <string name="feeds_suggested_credibility_title">おすすめの信頼度</string>
-    <string name="feeds_suggested_credibility_body">Mochi は信頼度 %1$d を提案しています。承認しますか？</string>
+    <string name="feeds_suggested_credibility_body">Mochi は信頼度 %1$s を提案しています。承認しますか？</string>
     <string name="feeds_suggested_credibility_keep">現在の値を維持</string>
     <string name="feeds_ai_processing_mode">AI 処理モード</string>
     <string name="feeds_ai_account">AI アカウント</string>
@@ -140,7 +140,7 @@
     <string name="feeds_saved_empty_subtitle">投稿のブックマークをタップすると、ここに後で見るために保存できます。</string>
     <string name="feeds_saved_error_clear">保存した投稿を消去できませんでした</string>
     <plurals name="feeds_new_posts">
-        <item quantity="other">%d 件の新着投稿</item>
+        <item quantity="other">%s 件の新着投稿</item>
     </plurals>
     <string name="feeds_caught_up">すべて表示しました</string>
     <string name="feeds_all_caught_up">未読はありません</string>
@@ -191,10 +191,10 @@
     <string name="feeds_source_url_hint_feed">フィードのエンティティIDまたはフィンガープリント</string>
     <string name="feeds_source_credibility_label">信頼性</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d時間</item>
+        <item quantity="other">%1$s時間</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d分</item>
+        <item quantity="other">%1$s分</item>
     </plurals>
     <string name="feeds_source_polling_interval">%1$sごとにポーリング</string>
     <string name="feeds_access_level_react_full">リアクションと表示</string>
@@ -211,16 +211,16 @@
     <string name="feeds_link">リンク</string>
     <string name="feeds_share_link_title">フィードのリンク</string>
     <plurals name="feeds_comment_count">
-        <item quantity="other">%1$d件のコメント</item>
+        <item quantity="other">%1$s件のコメント</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="other">添付ファイル %1$d 件</item>
+        <item quantity="other">添付ファイル %1$s 件</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="other">さらに %1$d 件のコメントを表示</item>
+        <item quantity="other">さらに %1$s 件のコメントを表示</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">%1$d 年前の今日</item>
+        <item quantity="other">%1$s 年前の今日</item>
     </plurals>
     <string name="feeds_block">ブロック</string>
     <string name="feeds_removed_from_feed">このフィードから削除されました</string>

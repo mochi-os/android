@@ -33,7 +33,7 @@
     <string name="staff_accounts_unnamed">Ba a sa wa suna ba</string>
     <string name="staff_accounts_unsuspend">Cire dakatarwa</string>
     <string name="staff_accounts_unsuspended_toast">An ɗage dakatar da asusu</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Soke</string>
     <string name="staff_appeals_decide">Yanke shawara</string>
     <string name="staff_appeals_decision_denied">Ci gaba da ƙin jeri</string>
@@ -399,7 +399,7 @@
 
     <string name="staff_accounts_action_unsuspend_title">Ɗage dakatarwa</string>
     <string name="staff_accounts_reason_optional_label">Dalili (na zaɓi)</string>
-    <string name="staff_accounts_sales">Sayarwa %1$d</string>
+    <string name="staff_accounts_sales">Sayarwa %1$s</string>
     <string name="staff_appeals_reason_label">Dalilin ƙara na mai sayarwa</string>
     <string name="staff_audit_action_staff_team_role_changed">An canza matsayin ma\'aikaci</string>
     <string name="staff_categories_delete_desc">A goge \"%1$s\"? Ba za a iya warware wannan ba.</string>

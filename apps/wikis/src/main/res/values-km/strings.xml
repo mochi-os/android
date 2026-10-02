@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">ការជូនដំណឹងអំពីការកែសម្រួលទំព័រ wiki មតិយោបល់ និងការអញ្ជើញ។</string>
     <string name="wikis_pageview_toc_expand">បង្ហាញមាតិកា</string>
     <string name="wikis_pageview_toc_collapse">លាក់មាតិកា</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">បានធ្វើបច្ចុប្បន្នភាព %1$s</string>
     <string name="wikis_pageview_not_found_description">ទំព័រ “%1$s” មិនទាន់មានទេ។</string>
     <string name="wikis_pageview_share_chooser">តំណវិគី</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">អ្នកកំពុងលុបទំព័រ “%1$s” (%2$s)។ សកម្មភាពនេះអាចត្រឡប់វិញបានដោយស្តារពីប្រវត្តិ។</string>
     <string name="wikis_delete_page_success">បានលុបទំព័រ</string>
     <string name="wikis_revert_page_title">ត្រឡប់ទំព័រវិញ</string>
-    <string name="wikis_revert_page_message">អ្នកកំពុងត្រឡប់ %1$s ទៅកំណែ %2$d។ នេះនឹងបង្កើតការកែសម្រួលថ្មីជាមួយមាតិកាពីកំណែ %2$d។</string>
-    <string name="wikis_revert_page_default_comment">បានត្រឡប់ទៅកំណែ %1$d</string>
-    <string name="wikis_revert_page_success">បានត្រឡប់ទៅកំណែ %1$d</string>
+    <string name="wikis_revert_page_message">អ្នកកំពុងត្រឡប់ %1$s ទៅកំណែ %2$s។ នេះនឹងបង្កើតការកែសម្រួលថ្មីជាមួយមាតិកាពីកំណែ %2$s។</string>
+    <string name="wikis_revert_page_default_comment">បានត្រឡប់ទៅកំណែ %1$s</string>
+    <string name="wikis_revert_page_success">បានត្រឡប់ទៅកំណែ %1$s</string>
     <string name="wikis_rename_page_renaming">កំពុងប្តូរឈ្មោះ…</string>
     <string name="wikis_rename_page_success">បានប្តូរឈ្មោះទំព័រ</string>
-    <string name="wikis_history_viewing">កំពុងមើលប្រវត្តិសម្រាប់ %1$s កំណែបច្ចុប្បន្ន %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">កំពុងមើលប្រវត្តិសម្រាប់ %1$s កំណែបច្ចុប្បន្ន %2$s</string>
+    <string name="wikis_revision_version_badge">កំណែ %1$s</string>
     <string name="wikis_search_pages_placeholder">ស្វែងរកទំព័រតាមចំណងជើង ឬមាតិកា…</string>
     <string name="wikis_search_no_results">រកមិនឃើញទំព័រសម្រាប់ “%1$s” ទេ។ សាកល្បងពាក្យស្វែងរកផ្សេង។</string>
     <string name="wikis_search_updated">បានធ្វើបច្ចុប្បន្នភាព %1$s</string>
@@ -289,30 +289,30 @@
     <string name="wikis_revision_author">ដោយ %1$s</string>
     <string name="wikis_revision_show_page">បង្ហាញទំព័រ</string>
     <string name="wikis_revision_compare_failed">មិនអាចផ្ទុកកំណែមុនសម្រាប់ការប្រៀបធៀបបានទេ។</string>
-    <string name="wikis_revision_changes_from">ការផ្លាស់ប្ដូរពីកំណែ %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">ការផ្លាស់ប្ដូរពីកំណែ %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d មតិយោបល់</item>
+        <item quantity="other">%s មតិយោបល់</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="other">+%d ការឆ្លើយតបបន្ថែម</item>
+        <item quantity="other">+%s ការឆ្លើយតបបន្ថែម</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="other">%d ទំព័រ</item>
+        <item quantity="other">%s ទំព័រ</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="other">%d ឯកសារ</item>
+        <item quantity="other">%s ឯកសារ</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="other">%d រូបភាព</item>
+        <item quantity="other">%s រូបភាព</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="other">%d ឯកសារ</item>
+        <item quantity="other">%s ឯកសារ</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="other">%d ទំព័រ ជាមួយស្លាកនេះ</item>
+        <item quantity="other">%s ទំព័រ ជាមួយស្លាកនេះ</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">បានរកឃើញ %1$d លទ្ធផល សម្រាប់ "%2$s"</item>
+        <item quantity="other">បានរកឃើញ %1$s លទ្ធផល សម្រាប់ \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">មិនអាចរក្សាទុកចំណងជើងបានទេ</string>
     <string name="wikis_attachments_upload_types">ឯកសារដែលគាំទ្រ៖ រូបភាព, PDF, DOC, DOCX, TXT និង MD។</string>
@@ -321,6 +321,6 @@
     <string name="wikis_rss_copied_new">បានចម្លង RSS URL ថ្មី ទៅ ក្ដារតម្បៀតខ្ទាស់</string>
     <string name="wikis_rss_exists">URL មតិព័ត៌មាននេះត្រូវបានចេញរួចហើយ ហើយមិនអាចបង្ហាញម្តងទៀតបានទេ។</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">កំពុងបង្ហាញមតិយោបល់ %1$d ដំបូង។</item>
+        <item quantity="other">កំពុងបង្ហាញមតិយោបល់ %1$s ដំបូង។</item>
     </plurals>
 </resources>

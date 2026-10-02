@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Àwọn ààyò ìfitónilétí</string>
     <string name="settings_home_accounts">Àwọn àkáǹtì tí a so pọ̀</string>
     <string name="settings_home_interests">Àwọn ìfẹ́</string>
-    <string name="account_section_passkeys">Àwọn passkey</string>
-    <string name="account_passkey_register">Fi passkey kún</string>
-    <string name="account_passkey_delete_title">Pa passkey rẹ́?</string>
+    <string name="account_section_passkeys">Àwọn kọ́kọ́rọ́-ìwọlé</string>
+    <string name="account_passkey_register">Fi kọ́kọ́rọ́-ìwọlé kún</string>
+    <string name="account_passkey_delete_title">Pa kọ́kọ́rọ́-ìwọlé rẹ́?</string>
     <string name="account_section_totp">App olùfọwọ́sí</string>
     <string name="account_totp_setup">Ṣètò authenticator</string>
     <string name="account_totp_setup_title">Ṣètò authenticator</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Àwọn kóòdù ìgbàpadà</string>
     <string name="account_recovery_codes_title">Àwọn kóòdù ìgbàpadà</string>
     <string name="sessions_unknown_agent">Ohun èlò tí a kò mọ̀</string>
-    <string name="sessions_revoke_title">Fagi lé session?</string>
+    <string name="sessions_revoke_title">Gba ìpàdé padà?</string>
     <string name="account_section_oauth">Iwọle ẹnikẹta</string>
     <string name="account_oauth_link">Ìjápọ̀ àkántì</string>
     <string name="account_unlink">Yọ ìsopọ̀ kúrò</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Ti parí</string>
     <string name="account_delete">Pa rẹ́</string>
     <string name="account_rename">Tún sọ orúkọ</string>
-    <string name="sessions_revoke">Fagi lé</string>
+    <string name="sessions_revoke">Gbà padà</string>
     <string name="account_disable">Pa á</string>
     <string name="account_copy">Ṣe àdàkọ</string>
     <string name="account_copy_all">Ṣe àdàkọ gbogbo rẹ̀</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Pa ọ̀nà rẹ́?</string>
     <string name="route_path">Ọ̀nà</string>
     <string name="route_method">Ọ̀nà</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Ẹ̀ka</string>
     <string name="route_method_redirect">Ìdarí</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Gba lati packages.mochi-os.org</string>
     <string name="system_status_copy">Ṣe àdàkọ</string>
     <string name="system_status_peers">Àwọn èkànná</string>
-    <string name="system_status_known">Tí a mọ̀</string>
+    <string name="system_status_peers_totals">Tí a mọ̀ %1$s · Tí a so pọ̀ %2$s · Mesh ìgbóhùnsáfẹ́fẹ́ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Tí a mọ̀ %1$s · Tí a so pọ̀ %2$s</string>
     <string name="system_status_peer_connected">Tí a so pọ̀</string>
     <string name="system_status_peer_disconnected">Ti ge asopọ̀</string>
     <string name="system_status_peer_queued">Àwọn ìfiránṣẹ́ nínú ìlà</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Yọ kúrò</string>
     <string name="accounts_remove_title">Yọ ìròyìn kúrò?</string>
     <string name="system_documents_title">Àwọn ìwé</string>
-    <string name="system_documents_description">Àwọn òfin sáfà, àwọn ọ̀rọ̀ àti àwọn ipò, àti àkíyèsí ìpamọ́ tí a ń fi hàn àwọn olùmúlò rẹ</string>
     <string name="system_documents_tab_rules">Àwọn òfin sáfà</string>
     <string name="system_documents_tab_terms">Àwọn ọ̀rọ̀ àti àwọn ipò</string>
     <string name="system_documents_tab_privacy">Aṣírí</string>
     <string name="system_documents_language">Èdè</string>
     <string name="system_documents_no_language">Kò sí ìwé fún èdè yìí.</string>
-    <string name="system_documents_customised">Tí a ṣe àkànṣe</string>
     <string name="system_documents_using_default">Ń lo àìyípadà tí a kó pọ̀</string>
     <string name="system_documents_revert">Padà sí àìyípadà</string>
     <string name="system_documents_save">Fi pamọ́</string>
@@ -137,11 +138,11 @@
     <string name="system_settings_reset_title">Pa padà sí àìyípadà?</string>
     <string name="system_setting_apps_install_user">Jẹ́ kí àwọn olùmúlò fi àwọn app sí ẹ̀rọ</string>
     <string name="system_setting_auth_email">Wọlé pẹ̀lú kóòdù ímeèlì</string>
-    <string name="system_setting_auth_passkey">Wọlé pẹ̀lú passkey</string>
+    <string name="system_setting_auth_passkey">Wọlé pẹ̀lú kọ́kọ́rọ́-ìwọlé</string>
     <string name="system_setting_auth_totp">Wọlé pẹ̀lú àpótí ìjẹ́rìí TOTP</string>
     <string name="system_setting_auth_recovery">Wọlé pẹ̀lú kóòdù ìgbàpadà</string>
     <string name="system_setting_auth_oauth">Wọlé pẹ̀lú OAuth 2.0</string>
-    <string name="system_setting_default_theme">Theme àìyípadà</string>
+    <string name="system_setting_default_theme">Àkòrí àìyípadà</string>
     <string name="system_setting_domains_verification">Nílò ìjẹ́rìí domain</string>
     <string name="system_setting_email_from">Àdírẹ́sì àìyípadà láti ọ̀dọ̀ fún àwọn ímeèlì system</string>
     <string name="system_setting_oauth_public_url">URL gbangba fún àwọn redirect OAuth</string>
@@ -182,23 +183,21 @@
     <string name="system_users_delete">Pa olùmúlò rẹ́</string>
     <string name="system_users_delete_title">Pa olùmúlò rẹ́?</string>
     <string name="system_users_manage_sessions">Ṣàkóso àwọn sáà</string>
-    <string name="system_users_sessions_description">Wo kí o sì fagi lé àwọn active sessions fún user yìí.</string>
     <string name="system_users_sessions_empty">User yìí kò ní active sessions.</string>
-    <string name="system_users_revoke">Fagi lé</string>
-    <string name="system_users_revoke_all">Yọ gbogbo ìpàdé kúrò</string>
+    <string name="system_users_revoke">Gbà padà</string>
+    <string name="system_users_revoke_all">Gba gbogbo ìpàdé padà</string>
     <string name="system_users_unknown_browser">Olùṣàwákiri tí a kò mọ̀</string>
     <string name="system_users_unknown">Aláìmọ̀</string>
     <string name="system_users_previous">Tó kọjá</string>
     <string name="system_users_next">Tó kàn</string>
     <string name="system_users_empty">A kò rí olùlò kankan</string>
     <string name="system_users_empty_search">Kò sí olùlò tó bámu ìwákiri rẹ</string>
-    <string name="system_users_empty_search_hint">Gbìyànjú láti ṣàtúnṣe àwọn ìlànà ìwákiri rẹ</string>
     <string name="system_users_toast_created">User ti dá</string>
     <string name="system_users_toast_updated">User ti ṣe imudojúìwọ̀n</string>
     <string name="system_users_toast_deleted">User ti pa rẹ́</string>
     <string name="system_users_toast_suspended">A ti dáwọ́ olùṣàmúlò dúró</string>
     <string name="system_users_toast_suspension_removed">Ìdúró ti yọ kúrò</string>
-    <string name="system_users_toast_session_revoked">Session ti fagi lé</string>
+    <string name="system_users_toast_session_revoked">A ti gba ìpàdé padà</string>
     <string name="system_users_toast_create_failed">Kò lè dá oníṣe</string>
     <string name="system_users_toast_update_failed">Kò lè mú oníṣe dòde</string>
     <string name="system_users_toast_delete_failed">Kò lè pa oníṣe rẹ́</string>
@@ -209,19 +208,19 @@
     <string name="settings_home_privacy">Ìlànà àdáni</string>
     <string name="settings_home_rules">Àwọn òfin</string>
     <string name="settings_home_terms">Àwọn àdéhùn iṣẹ́</string>
-    <string name="account_passkeys_empty">Kò sí àwọn kọ́kọ́rọ́ àkọsílẹ̀.</string>
-    <string name="account_passkey_register_title">Fi kọ́kọ́rọ́ kún</string>
-    <string name="account_passkey_register_message">Ẹ̀rọ rẹ yóò béèrè fún ìjẹ́rìísí. A so kọ́kọ́rọ́ náà mọ́ ẹ̀rọ yìí àti pé a ó lò ó fún àwọn àkọsílẹ̀ ọjọ́ iwájú.</string>
+    <string name="account_passkeys_empty">Kò sí kọ́kọ́rọ́-ìwọlé tí a forúkọ rẹ̀ sílẹ̀.</string>
+    <string name="account_passkey_register_title">Fi kọ́kọ́rọ́-ìwọlé kún</string>
     <string name="account_passkey_name_label">Orúkọ (yíyàn)</string>
     <string name="account_passkey_delete_message">\"%1$s\" kò ní jẹ́ kí o wọlé mọ́.</string>
-    <string name="account_totp_description">Wọlé pẹ̀lú kóòdù alámì 6 láti inú ohun ìṣàfilọ́lẹ̀.</string>
     <string name="account_totp_enabled">A ti mu àṣàfọ́jú ṣiṣẹ́.</string>
     <string name="account_totp_setup_step1">Ṣe àyẹ̀wò tàbí tẹ ìpamọ́ yìí sí inú ohun àṣàfọ́jú rẹ.</string>
     <string name="account_totp_setup_step2">Tẹ kóòdù alámì 6 tí ohun rẹ ń fihàn.</string>
     <string name="account_totp_code">Kóòdù</string>
     <string name="account_totp_disable_message">O kò ní lè wọlé pẹ̀lú kóòdù àṣàfọ́jú mọ́.</string>
     <string name="account_recovery_none">Kò sí àwọn kóòdù ìgbàpadà tí a ṣe.</string>
-    <string name="account_recovery_count">%1$d àwọn kóòdù ìgbàpadà tí a kò lò.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">Kóòdù ìgbàpadà %1$s ló kù.</item>
+    </plurals>
     <string name="account_recovery_generate">Ṣe àwọn kóòdù</string>
     <string name="account_recovery_regenerate">Ṣe àwọn kóòdù lẹ́ẹ̀kan sí</string>
     <string name="account_recovery_regen_title">Ṣe àwọn kóòdù ìgbàpadà lẹ́ẹ̀kan sí?</string>
@@ -237,7 +236,7 @@
     <string name="account_last_used">Lò gbẹyìn %1$s</string>
     <string name="route_delete_message">Èyí yóò mú ọ̀nà fún ọ̀nà \"%1$s\" kúrò.</string>
     <string name="route_empty">Kò sí àwọn ọ̀nà tí a tò.</string>
-    <string name="route_meta">Ìpataki %1$d · %2$s</string>
+    <string name="route_meta">Ìpataki %1$s · %2$s</string>
     <string name="interests_search_placeholder">Wá àwọn ohun láti fikún…</string>
     <string name="interests_empty">Kò sí àwọn ìfẹ́ síbẹ̀.</string>
     <string name="interests_summary_regenerate">Tún ìṣàkójọ dá</string>
@@ -268,9 +267,11 @@
     <string name="system_users_delete_message">Èyí yóò pa olùmúlò \"%1$s\" rẹ́ pátápátá. Kò sí lè yí ìṣe yìí padà.</string>
     <string name="system_users_sessions_title">Àwọn ìpàdé fún %1$s</string>
     <string name="system_users_session_last_accessed">Wọlé gbẹyìn: %1$s</string>
-    <string name="system_users_revoke_all_title">Kò gbogbo àwọn ìpàdé sílẹ̀?</string>
+    <string name="system_users_revoke_all_title">Gba gbogbo ìpàdé padà?</string>
     <string name="system_users_revoke_all_message">Gbogbo àwọn ìpàdé tó nṣiṣẹ́ ti olùmúlò yìí yóò jáde.</string>
-    <string name="system_users_pagination_status">Ń fi %1$d–%2$d nínú %3$d olùmúlò hàn</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">Ń fi %1$s–%2$s nínú %3$s olùmúlò hàn</item>
+    </plurals>
     <string name="account_title">Àkáǹtì</string>
     <string name="account_section_identity">Ìdánimọ̀</string>
     <string name="account_identity_identity">Ìdánimọ̀</string>
@@ -303,11 +304,11 @@
     <string name="domain_verify">Ṣe ẹ̀rí DNS</string>
     <string name="settings_home_domains">Àwọn domain</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">A rán ìdánwò sí ibi %1$d</item>
-        <item quantity="other">A rán ìdánwò sí ibi %1$d</item>
+        <item quantity="one">A rán ìdánwò sí ibi %1$s</item>
+        <item quantity="other">A rán ìdánwò sí ibi %1$s</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">Gbé ìpàdé %1$d padà</item>
+        <item quantity="other">A ti gba ìpàdé %1$s padà</item>
     </plurals>
     <string name="login_title">Wọlé</string>
     <string name="login_section_methods">Àwọn ọ̀nà ìwọlé</string>
@@ -338,18 +339,15 @@
     <string name="system_status_reachability_public">Gbangba</string>
     <string name="system_status_reachability_private">Aṣírí</string>
     <string name="system_status_reachability_unknown">Aláìmọ̀</string>
-    <string name="system_status_relay">Nípasẹ̀ relay</string>
-    <string name="system_status_mesh">Mesh ìgbóhùnsáfẹ́fẹ́</string>
+    <string name="system_status_reachability_relay">%1$s · nípasẹ̀ àfisẹ́</string>
     <string name="system_status_broadcast">Ìgbóhùnsáfẹ́fẹ́ tó kẹ́yìn</string>
     <string name="system_status_queued_broadcasts">Àwọn iṣẹ́ ìgbóhùnsáfẹ́fẹ́ tó wà ní ìlà</string>
     <string name="system_setting_hostname_publish">Kéde orúkọ agbàlejò àti àwọn domain sí àwọn olupin míràn</string>
     <string name="system_setting_hostname">Orúkọ agbàlejò tí a kéde sí àwọn olupin míràn</string>
     <string name="system_status_peer_id">ID alábàákẹ́gbẹ́</string>
     <string name="system_status_holepunch">Lilu iho</string>
-    <string name="system_status_holepunch_value">%1$d  aṣeyọrí · %2$d kùnà</string>
     <string name="system_status_awaiting_routing">Àwọn iṣẹ́ tó ń dúró de ìpa-ọ̀nà</string>
     <string name="system_status_relay_service">Iṣẹ́ àfisẹ́</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d àkọsílẹ̀ · %3$d àyíká · %4$d kọ̀</string>
     <string name="route_target_select">Yàn</string>
     <string name="account_data_description">Ṣe àgbàsílẹ̀ ẹ̀dà ìpamọ́ pípé tí o lè dá padà sí olùpèsè Mochi yìí tàbí sí òmíràn.</string>
     <string name="route_target_none">Kò sí ibi tí a lè fi sí</string>
@@ -374,7 +372,11 @@
     <string name="accounts_device_seen">Tí a rí kẹ́yìn %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · ìfitónilétí push</string>
-    <string name="notifprefs_test_partial">A fi ìdánwò ránṣẹ́ sí %1$d nínú %2$d àyè</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">A fi ìdánwò ránṣẹ́ sí %1$s nínú %2$s àyè</item>
+    </plurals>
     <string name="notifprefs_test_none">A kò ṣètò àwọn ibi-àfojúsùn kankan</string>
     <string name="notifprefs_transport_fcm">Ìfitónilétí push Android</string>
     <string name="notifprefs_no_destinations">Kò sí àyè dèsìnò</string>
@@ -384,13 +386,31 @@
     <string name="accounts_field_topic">Àkòrí</string>
     <string name="accounts_field_secret">Àṣírí ìfọwọ́sí</string>
     <string name="account_totp_open">Ṣí nínú ohun èlò ìjẹ́rìísí</string>
-    <string name="accounts_revoke">Fagilé ìwọlé</string>
+    <string name="accounts_revoke">Gba ìwọlé padà</string>
     <string name="accounts_capability_calendar">Kàlẹ́ńdà</string>
     <string name="accounts_capability_notify">Àwọn ìfìtọ́nisí</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Ìwọlé</string>
     <string name="accounts_provider_caldav">Sáfà kàlẹ́ńdà</string>
-    <string name="accounts_revoke_confirm">Èyí yóò fagilé ìwọlé kàlẹ́ńdà ti %1$s. Ìwọlé pẹ̀lú %2$s yóò dúró títí tí ìwọ yóò fi tú u sílẹ̀ ní ojú-ìwé Ìwọlé.</string>
+    <string name="accounts_revoke_confirm">Èyí yóò gba ìwọlé kàlẹ́ńdà ti %1$s padà. Ìwọlé pẹ̀lú %2$s yóò dúró títí tí ìwọ yóò fi tú u sílẹ̀ ní ojú-ìwé Ìwọlé.</string>
     <string name="accounts_capability_mcp">MCP</string>
-    <string name="system_settings_theme_unknown">Theme àìmọ̀</string>
+    <string name="system_settings_theme_unknown">Àkòrí àìmọ̀</string>
+    <string name="system_documents_modified">Ti yípadà</string>
+    <string name="system_documents_discard_title">Sọ àwọn àyípadà nù?</string>
+    <string name="system_documents_discard">Sọ nù</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">%1$s aṣeyọrí</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">%1$s kùnà</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$s / %2$s àkọsílẹ̀</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$s àyíká</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">%1$s kọ̀</item>
+    </plurals>
 </resources>

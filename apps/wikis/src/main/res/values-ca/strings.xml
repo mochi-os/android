@@ -22,17 +22,17 @@
     <string name="wikis_page_action_recent_changes">Canvis recents</string>
     <string name="wikis_page_action_new_page">Pàgina nova</string>
     <string name="wikis_page_action_settings">Configuració</string>
-    <string name="wikis_page_action_unsubscribe">Cancel·la la subscripció</string>
+    <string name="wikis_page_action_unsubscribe">Dona\'t de baixa</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_empty_title">Comença la teva primera wiki</string>
     <string name="wikis_empty_subtitle">Cerca un wiki per subscriure-t\'hi, o crea\'n un per publicar la teva documentació.</string>
     <string name="wikis_create_button">Crea una wiki</string>
     <string name="wikis_recommended_section">Wikis recomanats</string>
     <string name="wikis_subscribe_button">Subscriu-te</string>
-    <string name="wikis_unsubscribe_action">Cancel·la la subscripció</string>
-    <string name="wikis_unsubscribing">Cancel·lant la subscripció…</string>
-    <string name="wikis_unsubscribe_confirm_title">Cancel·la la subscripció</string>
-    <string name="wikis_unsubscribe_success">Subscripció cancel·lada</string>
+    <string name="wikis_unsubscribe_action">Dona\'t de baixa</string>
+    <string name="wikis_unsubscribing">S\'està donant de baixa…</string>
+    <string name="wikis_unsubscribe_confirm_title">Dona\'t de baixa</string>
+    <string name="wikis_unsubscribe_success">T\'has donat de baixa</string>
     <string name="wikis_subscribe_failed">No s\'ha pogut subscriure</string>
     <string name="wikis_rss_menu">Canal RSS</string>
     <string name="wikis_rss_changes">Canvis</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Notificacions sobre edicions de pàgines, comentaris i invitacions.</string>
     <string name="wikis_pageview_toc_expand">Mostra la taula de contingut</string>
     <string name="wikis_pageview_toc_collapse">Amaga la taula de contingut</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Actualitzat %1$s</string>
     <string name="wikis_pageview_not_found_description">La pàgina «%1$s» encara no existeix.</string>
     <string name="wikis_pageview_share_chooser">Enllaç del wiki</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">Enllaç</string>
     <string name="wikis_open_sidebar">Obre la barra lateral</string>
     <string name="wikis_search_placeholder">Cerca un wiki…</string>
-    <string name="wikis_unsubscribe_confirm_message">Segur que vols cancel·lar la subscripció a %1$s?</string>
+    <string name="wikis_unsubscribe_confirm_message">Segur que vols donar-te de baixa de %1$s?</string>
     <string name="wikis_clipboard_label_rss">URL RSS del wiki</string>
     <string name="wikis_find_search_placeholder">Cerca per nom, ID, empremta o URL…</string>
     <string name="wikis_join_search_button">Cerca wikis…</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Estàs a punt d\'eliminar la pàgina «%1$s» (%2$s). Aquesta acció es pot desfer restaurant des de l\'historial.</string>
     <string name="wikis_delete_page_success">Pàgina eliminada</string>
     <string name="wikis_revert_page_title">Reverteix la pàgina</string>
-    <string name="wikis_revert_page_message">Estàs a punt de revertir %1$s a la versió %2$d. Això crearà una revisió nova amb el contingut de la versió %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Revertit a la versió %1$d</string>
-    <string name="wikis_revert_page_success">Revertit a la versió %1$d</string>
+    <string name="wikis_revert_page_message">Estàs a punt de revertir %1$s a la versió %2$s. Això crearà una revisió nova amb el contingut de la versió %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Revertit a la versió %1$s</string>
+    <string name="wikis_revert_page_success">Revertit a la versió %1$s</string>
     <string name="wikis_rename_page_renaming">Reanomenant…</string>
     <string name="wikis_rename_page_success">Pàgina reanomenada</string>
-    <string name="wikis_history_viewing">Veient l\'historial de %1$s, versió actual %2$d</string>
-    <string name="wikis_revision_version_badge">Versió %1$d</string>
+    <string name="wikis_history_viewing">Veient l\'historial de %1$s, versió actual %2$s</string>
+    <string name="wikis_revision_version_badge">Versió %1$s</string>
     <string name="wikis_search_pages_placeholder">Cerca pàgines per títol o contingut…</string>
     <string name="wikis_search_no_results">No s\'han trobat pàgines per a «%1$s». Prova altres termes de cerca.</string>
     <string name="wikis_search_updated">Actualitzat %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">per %1$s</string>
     <string name="wikis_revision_show_page">Mostra la pàgina</string>
     <string name="wikis_revision_compare_failed">No s\'ha pogut carregar la versió anterior per comparar.</string>
-    <string name="wikis_revision_changes_from">Canvis de la versió %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Canvis de la versió %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d comentari</item>
-        <item quantity="other">%d comentaris</item>
+        <item quantity="one">%s comentari</item>
+        <item quantity="other">%s comentaris</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d resposta</item>
-        <item quantity="other">+%d respostes més</item>
+        <item quantity="one">%s resposta</item>
+        <item quantity="other">+%s respostes més</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d pàgina</item>
-        <item quantity="other">%d pàgines</item>
+        <item quantity="one">%s pàgina</item>
+        <item quantity="other">%s pàgines</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fitxer</item>
-        <item quantity="other">%d fitxers</item>
+        <item quantity="one">%s fitxer</item>
+        <item quantity="other">%s fitxers</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d imatge</item>
-        <item quantity="other">%d imatges</item>
+        <item quantity="one">%s imatge</item>
+        <item quantity="other">%s imatges</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d document</item>
-        <item quantity="other">%d documents</item>
+        <item quantity="one">%s document</item>
+        <item quantity="other">%s documents</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d pàgina amb aquesta etiqueta</item>
-        <item quantity="other">%d pàgines amb aquesta etiqueta</item>
+        <item quantity="one">%s pàgina amb aquesta etiqueta</item>
+        <item quantity="other">%s pàgines amb aquesta etiqueta</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">S\'han trobat %1$d resultat per a "%2$s"</item>
-        <item quantity="other">S\'han trobat %1$d resultats per a "%2$s"</item>
+        <item quantity="one">S\'han trobat %1$s resultat per a \"%2$s\"</item>
+        <item quantity="other">S\'han trobat %1$s resultats per a \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">No s\'ha pogut desar la llegenda</string>
     <string name="wikis_attachments_upload_types">Fitxers admesos: imatges, PDF, DOC, DOCX, TXT i MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Nou URL RSS copiat al porta-retalls</string>
     <string name="wikis_rss_exists">Aquest URL de canal ja s\'ha emès i no es pot tornar a mostrar.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Es mostra el primer %1$d comentari.</item>
-        <item quantity="other">Es mostren els primers %1$d comentaris.</item>
+        <item quantity="one">Es mostra el primer %1$s comentari.</item>
+        <item quantity="other">Es mostren els primers %1$s comentaris.</item>
     </plurals>
 </resources>

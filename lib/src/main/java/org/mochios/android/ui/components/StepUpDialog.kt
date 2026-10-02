@@ -29,7 +29,10 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.job
 import kotlinx.coroutines.launch
 import org.mochios.android.util.webUri
 import org.mochios.android.R
@@ -63,7 +66,12 @@ fun StepUpDialog(
     val scope = rememberCoroutineScope()
 
     var loading by remember { mutableStateOf(true) }
+    // A code or passkey submit in flight: short, and the dialog stays until it answers.
     var busy by remember { mutableStateOf(false) }
+    // The OAuth browser wait. It can run for two minutes on a browser the user
+    // has abandoned, so it never holds the dialog open: leaving cancels it.
+    var waiting by remember { mutableStateOf<Job?>(null) }
+    val locked = busy || waiting != null
     var error by remember { mutableStateOf<String?>(null) }
     var remaining by remember { mutableStateOf<List<String>>(emptyList()) }
     var providers by remember { mutableStateOf<List<String>>(emptyList()) }
@@ -93,6 +101,12 @@ fun StepUpDialog(
         } finally {
             loading = false
         }
+    }
+
+    fun leave() {
+        waiting?.cancel()
+        waiting = null
+        onDismiss()
     }
 
     fun apply(result: StepUpResult) {
@@ -142,8 +156,8 @@ fun StepUpDialog(
     }
 
     fun useOauth(provider: String) {
-        scope.launch {
-            busy = true
+        waiting = scope.launch {
+            val self = coroutineContext.job
             error = null
             try {
                 val url = client.oauthBegin(provider)
@@ -170,22 +184,24 @@ fun StepUpDialog(
                         break
                     }
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) {
                 error = errOauth
             } finally {
-                busy = false
+                if (waiting === self) waiting = null
             }
         }
     }
 
-    val canVerify = !busy && (
+    val canVerify = !locked && (
         (remaining.contains("email") && emailCode.isNotBlank()) ||
             (remaining.contains("totp") && totpCode.isNotBlank())
         )
     val showFooterVerify = !loading && (remaining.contains("email") || remaining.contains("totp"))
 
     MochiAlertDialog(
-        onDismissRequest = { if (!busy) onDismiss() },
+        onDismissRequest = { if (!busy) leave() },
         title = stringResource(R.string.stepup_title),
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -205,7 +221,7 @@ fun StepUpDialog(
                                 label = { Text(stringResource(R.string.stepup_email_label)) },
                                 placeholder = { Text(stringResource(R.string.stepup_email_placeholder)) },
                                 singleLine = true,
-                                enabled = !busy,
+                                enabled = !locked,
                                 keyboardOptions = KeyboardOptions(
                                     keyboardType = KeyboardType.Number,
                                     imeAction = ImeAction.Done,
@@ -219,7 +235,7 @@ fun StepUpDialog(
                                         runCatching { client.send() }.onSuccess { sent = true }
                                     }
                                 },
-                                enabled = !busy,
+                                enabled = !locked,
                             ) { Text(stringResource(R.string.stepup_resend_email)) }
                         } else {
                             MochiOutlinedButton(
@@ -229,7 +245,7 @@ fun StepUpDialog(
                                         runCatching { client.send() }.onSuccess { sent = true }
                                     }
                                 },
-                                enabled = !busy,
+                                enabled = !locked,
                                 modifier = Modifier.fillMaxWidth(),
                             ) { Text(stringResource(R.string.stepup_send_email)) }
                         }
@@ -241,7 +257,7 @@ fun StepUpDialog(
                             label = { Text(stringResource(R.string.stepup_totp_label)) },
                             placeholder = { Text(stringResource(R.string.stepup_totp_placeholder)) },
                             singleLine = true,
-                            enabled = !busy,
+                            enabled = !locked,
                             keyboardOptions = KeyboardOptions(
                                 keyboardType = KeyboardType.Number,
                                 imeAction = ImeAction.Done,
@@ -252,14 +268,14 @@ fun StepUpDialog(
                     if (remaining.contains("passkey")) {
                         MochiOutlinedButton(
                             onClick = { usePasskey() },
-                            enabled = !busy,
+                            enabled = !locked,
                             modifier = Modifier.fillMaxWidth(),
                         ) { Text(stringResource(R.string.stepup_use_passkey)) }
                     }
                     providers.forEach { provider ->
                         MochiOutlinedButton(
                             onClick = { useOauth(provider) },
-                            enabled = !busy,
+                            enabled = !locked,
                             modifier = Modifier.fillMaxWidth(),
                         ) {
                             Text(stringResource(R.string.stepup_continue_with, oauthLabel(provider)))
@@ -281,7 +297,7 @@ fun StepUpDialog(
         onConfirm = { submit() },
         confirmEnabled = canVerify,
         dismissText = stringResource(R.string.common_cancel),
-        onDismiss = onDismiss,
+        onDismiss = { leave() },
         dismissEnabled = !busy,
     )
 }

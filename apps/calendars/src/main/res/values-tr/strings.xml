@@ -27,7 +27,7 @@
     <string name="calendars_day_friday">Cuma</string>
     <string name="calendars_day_saturday">Cumartesi</string>
     <string name="calendars_link_replace">Değiştir</string>
-    <string name="calendars_link_revoke">İptal et</string>
+    <string name="calendars_link_revoke">Geçersiz kıl</string>
     <string name="calendars_permission_allow">İzin ver</string>
     <string name="calendars_permission_deny">Reddet</string>
     <string name="calendars_sync_title">Bu telefonla senkronize et</string>
@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">Sonsuza kadar</string>
     <string name="calendars_reminder_time">Etkinlik saatinde</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d dakika önce</item>
-        <item quantity="other">%1$d dakika önce</item>
+        <item quantity="one">%1$s dakika önce</item>
+        <item quantity="other">%1$s dakika önce</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d saat önce</item>
-        <item quantity="other">%1$d saat önce</item>
+        <item quantity="one">%1$s saat önce</item>
+        <item quantity="other">%1$s saat önce</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d gün önce</item>
-        <item quantity="other">%1$d gün önce</item>
+        <item quantity="one">%1$s gün önce</item>
+        <item quantity="other">%1$s gün önce</item>
     </plurals>
     <string name="calendars_reminder_add">Hatırlatıcı ekle</string>
     <string name="calendars_reminder_remove">Hatırlatıcıyı kaldır</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">Takvim çok büyük</string>
     <string name="calendars_poll_invalid">Adres bir takvim döndürmedi</string>
     <string name="calendars_poll_unreachable">Adrese ulaşılamadı</string>
-    <string name="calendars_poll_status">Adres %1$d yanıtı verdi</string>
+    <string name="calendars_poll_status">Adres %1$s yanıtı verdi</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d dakika</item>
-        <item quantity="other">%1$d dakika</item>
+        <item quantity="one">%1$s dakika</item>
+        <item quantity="other">%1$s dakika</item>
     </plurals>
     <string name="calendars_preferences_zones">Etkinlikleri kendi saat dilimlerinde göster</string>
     <string name="calendars_event_backwards">Başlamadan önce bitiyor</string>
@@ -187,6 +187,6 @@
     <string name="calendars_span_day">%1$s, %2$s - %3$s</string>
     <string name="calendars_polled_current">Takvim güncel</string>
     <string name="calendars_polled_synced">Takvim senkronize edildi</string>
-    <string name="calendars_link_revoke_title">Takvim adresi iptal edilsin mi?</string>
+    <string name="calendars_link_revoke_title">Takvim adresi geçersiz kılınsın mı?</string>
     <string name="calendars_link_revoke_message">Bu adrese abone olan takvimler artık güncellenmeyecek.</string>
 </resources>

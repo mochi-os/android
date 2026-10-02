@@ -180,9 +180,9 @@
     <string name="people_books_create">Sukurti adresų knygelę</string>
     <string name="people_books_delete">Ištrinti adresų knygelę</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Ištrinti %1$s ir jos %2$d kontaktą?</item>
-        <item quantity="few">Ištrinti %1$s ir jos %2$d kontaktus?</item>
-        <item quantity="other">Ištrinti %1$s ir jos %2$d kontaktų?</item>
+        <item quantity="one">Ištrinti %1$s ir jos %2$s kontaktą?</item>
+        <item quantity="few">Ištrinti %1$s ir jos %2$s kontaktus?</item>
+        <item quantity="other">Ištrinti %1$s ir jos %2$s kontaktų?</item>
     </plurals>
     <string name="people_welcome_body">Raskite draugų visoje Mochi ir susisiekite. Palieskite Pridėti kontaktą, kad išsiųstumėte kvietimą.</string>
     <string name="people_person_state_contact">Kontaktuose</string>

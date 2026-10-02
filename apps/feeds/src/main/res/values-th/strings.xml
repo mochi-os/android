@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">ยังไม่เคยดึงข้อมูล</string>
     <string name="feeds_source_poll">ตรวจสอบ</string>
     <string name="feeds_source_transform">การแปลงโดย AI</string>
-    <string name="feeds_remove_source_confirm">ลบ \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">ลบโพสต์ที่นำเข้ามาด้วย</string>
+    <string name="feeds_remove_source_confirm">การดำเนินการนี้จะหยุดนำเข้าเนื้อหาจาก \"%1$s\"</string>
+    <string name="feeds_remove_also_delete_posts">ลบโพสต์ที่นำเข้าจากแหล่งที่มานี้ด้วย</string>
     <string name="feeds_suggested_credibility_title">ความน่าเชื่อถือที่แนะนำ</string>
-    <string name="feeds_suggested_credibility_body">Mochi แนะนำความน่าเชื่อถือเป็น %1$d ยอมรับหรือไม่?</string>
+    <string name="feeds_suggested_credibility_body">Mochi แนะนำความน่าเชื่อถือเป็น %1$s ยอมรับหรือไม่?</string>
     <string name="feeds_suggested_credibility_keep">คงค่าปัจจุบัน</string>
     <string name="feeds_ai_processing_mode">โหมดการประมวลผล AI</string>
     <string name="feeds_ai_account">บัญชี AI</string>
@@ -140,7 +140,7 @@
     <string name="feeds_saved_empty_subtitle">แตะที่บุ๊กมาร์กบนโพสต์ใดก็ได้เพื่อบันทึกไว้ที่นี่สำหรับดูภายหลัง</string>
     <string name="feeds_saved_error_clear">ล้างโพสต์ที่บันทึกไม่สำเร็จ</string>
     <plurals name="feeds_new_posts">
-        <item quantity="other">%d โพสต์ใหม่</item>
+        <item quantity="other">%s โพสต์ใหม่</item>
     </plurals>
     <string name="feeds_caught_up">คุณดูครบทั้งหมดแล้ว</string>
     <string name="feeds_all_caught_up">อัปเดตครบแล้ว</string>
@@ -165,8 +165,8 @@
     <string name="feeds_settings_field_server">เซิร์ฟเวอร์</string>
     <string name="feeds_settings_name_edit_cd">แก้ไขชื่อ</string>
     <string name="feeds_settings_section_identity">ตัวตน</string>
-    <string name="feeds_unsubscribe">ยกเลิกการติดตาม</string>
-    <string name="feeds_unsubscribed">ยกเลิกการติดตามแล้ว</string>
+    <string name="feeds_unsubscribe">เลิกติดตาม</string>
+    <string name="feeds_unsubscribed">เลิกติดตามแล้ว</string>
     <string name="feeds_access_level_comment_full">แสดงความคิดเห็น ตอบสนอง และดู</string>
     <string name="feeds_rss_mode_posts_comments">โพสต์และความคิดเห็น</string>
     <string name="feeds_access_add_title">เพิ่มการเข้าถึง</string>
@@ -175,7 +175,7 @@
     <string name="feeds_post_content">เนื้อหาโพสต์</string>
     <string name="feeds_enable_memories">เปิดใช้งานความทรงจำ</string>
     <string name="feeds_permission_request_title">คำขอสิทธิ์</string>
-    <string name="feeds_unsubscribe_confirm">ยกเลิกการติดตามฟีด?</string>
+    <string name="feeds_unsubscribe_confirm">เลิกติดตามฟีด?</string>
     <string name="feeds_settings_title">การตั้งค่า %1$s</string>
     <string name="feeds_source_transform_help">เว้นว่างเพื่อปิดใช้งาน</string>
     <string name="feeds_settings_name_cancel_cd">ยกเลิกการแก้ไข</string>
@@ -186,15 +186,15 @@
     <string name="feeds_create_first_post">สร้างโพสต์แรก</string>
     <string name="feeds_rss_mode_posts">โพสต์</string>
     <string name="feeds_source_last_checked">ตรวจสอบล่าสุด %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">ยกเลิกการติดตามฟีด</string>
+    <string name="feeds_settings_unsubscribe_section">เลิกติดตามฟีด</string>
     <string name="feeds_source_transform_hint">แปลเป็นภาษาอังกฤษและแสดงเป็นรายการบุลเล็ต</string>
     <string name="feeds_source_url_hint_feed">รหัสเอนทิตีฟีดหรือลายนิ้วมือ</string>
     <string name="feeds_source_credibility_label">ความน่าเชื่อถือ</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d ชั่วโมง</item>
+        <item quantity="other">%1$s ชั่วโมง</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d นาที</item>
+        <item quantity="other">%1$s นาที</item>
     </plurals>
     <string name="feeds_source_polling_interval">ดึงข้อมูลทุก %1$s</string>
     <string name="feeds_access_level_react_full">ตอบสนองและดู</string>
@@ -211,16 +211,16 @@
     <string name="feeds_link">ลิงก์</string>
     <string name="feeds_share_link_title">ลิงก์ฟีด</string>
     <plurals name="feeds_comment_count">
-        <item quantity="other">%1$d ความคิดเห็น</item>
+        <item quantity="other">%1$s ความคิดเห็น</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="other">ไฟล์แนบ %1$d รายการ</item>
+        <item quantity="other">ไฟล์แนบ %1$s รายการ</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="other">ดูความคิดเห็นอีก %1$d รายการ</item>
+        <item quantity="other">ดูความคิดเห็นอีก %1$s รายการ</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">%1$d ปีก่อน ในวันนี้</item>
+        <item quantity="other">%1$s ปีก่อน ในวันนี้</item>
     </plurals>
     <string name="feeds_block">บล็อก</string>
     <string name="feeds_removed_from_feed">คุณถูกลบออกจากฟีดนี้</string>

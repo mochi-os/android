@@ -108,9 +108,9 @@ fun GoBoard(
     // The canvas carried no semantics at all, so the board was invisible to a
     // screen reader. Web pairs role="application" with the same description.
     val description = when {
-        !canPlay -> stringResource(R.string.go_board_a11y, size)
-        myColor == Stone.WHITE -> stringResource(R.string.go_board_a11y_turn_white, size)
-        else -> stringResource(R.string.go_board_a11y_turn_black, size)
+        !canPlay -> stringResource(R.string.go_board_a11y, size.toString())
+        myColor == Stone.WHITE -> stringResource(R.string.go_board_a11y_turn_white, size.toString())
+        else -> stringResource(R.string.go_board_a11y_turn_black, size.toString())
     }
     val textMeasurer = rememberTextMeasurer()
     // Territory is only meaningful once the game is scored, and only web showed

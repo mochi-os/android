@@ -60,6 +60,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -69,6 +70,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.DestinationsAvailable
@@ -96,15 +98,7 @@ fun NotificationPrefsScreen(
             viewModel.testSent.collect { tested = it }
         }
     }
-    val snack = tested?.let { result ->
-        when {
-            result.total == 0 -> stringResource(R.string.notifprefs_test_none)
-            result.sent < result.total -> stringResource(
-                R.string.notifprefs_test_partial, result.sent, result.total
-            )
-            else -> pluralStringResource(R.plurals.notifprefs_test_sent, result.sent, result.sent)
-        }
-    }
+    val snack = tested?.let { result -> testMessage(result) }
 
     var deleting by remember { mutableStateOf<NotifCategory?>(null) }
 
@@ -226,7 +220,7 @@ private fun CategoriesList(
     onDelete: (NotifCategory) -> Unit,
     onTest: (NotifCategory) -> Unit,
 ) {
-    val visible = categories.filter { category -> category.id != "0" }
+    val visible = categories.filter { category -> category.id != "0" }.ordered()
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -245,7 +239,7 @@ private fun CategoriesList(
 }
 
 @Composable
-private fun CategoryCard(
+internal fun CategoryCard(
     category: NotifCategory,
     available: DestinationsAvailable,
     onEdit: () -> Unit,
@@ -264,7 +258,7 @@ private fun CategoryCard(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
-                        text = category.label,
+                        text = category.shown,
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.SemiBold,
                         maxLines = 1,
@@ -319,11 +313,16 @@ private fun CategoryCard(
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 } else {
+                    // The chosen destinations by name, as the web lists them;
+                    // tapping expands them one to a line.
                     Text(
-                        text = stringResource(R.string.notifprefs_destinations) +
-                            " \u00b7 ${selected.size}/${options.size}",
+                        text = LocalFormat.current.formatList(
+                            selected.map { (_, label) -> label }.sortedWith(NaturalCompare)
+                        ),
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.weight(1f),
                     )
                     Icon(
@@ -383,19 +382,19 @@ private fun TopicsList(
         }
         return
     }
-    val byApp = topics
-        .groupBy { topic -> topic.app.name }
-        .toSortedMap(String.CASE_INSENSITIVE_ORDER)
+    val groups = topics.grouped()
     var isFirstGroup = true
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        for ((appName, appTopics) in byApp) {
+        for (group in groups) {
+            val app = group.first().app
+            val appName = app.name
             val leadsWithSpace = !isFirstGroup
             isFirstGroup = false
             if (appName.isNotBlank()) {
-                item("app/$appName") {
+                item("app/${app.id}") {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         if (leadsWithSpace) {
                             Spacer(Modifier.height(16.dp))
@@ -409,10 +408,7 @@ private fun TopicsList(
                     }
                 }
             }
-            val sorted = appTopics.sortedWith(
-                compareBy(String.CASE_INSENSITIVE_ORDER) { topic -> topicTitle(topic) }
-            )
-            items(sorted, key = { topic -> "${topic.app.id}/${topic.topic}/${topic.`object`}" }) { topic ->
+            items(group, key = { topic -> "${topic.app.id}/${topic.topic}/${topic.`object`}" }) { topic ->
                 TopicRow(
                     topic = topic,
                     categories = categories,
@@ -424,14 +420,72 @@ private fun TopicsList(
     }
 }
 
-/** The "No notifications" pseudo-category is listed last, never among the real ones. */
-private fun List<NotifCategory>.noNotificationsLast(): List<NotifCategory> =
-    sortedBy { category -> if (category.id == "0") 1 else 0 }
+/** What a test send reached. The noun agrees with the total, the number it sits beside. */
+@Composable
+internal fun testMessage(result: TestResult): String {
+    val format = LocalFormat.current
+    return when {
+        result.total == 0 -> stringResource(R.string.notifprefs_test_none)
+        result.sent < result.total -> pluralStringResource(
+            R.plurals.notifprefs_test_partial,
+            result.total,
+            format.formatNumber(result.sent),
+            format.formatNumber(result.total),
+        )
+        else -> pluralStringResource(R.plurals.notifprefs_test_sent, result.sent, format.formatNumber(result.sent))
+    }
+}
 
-/** A topic reads as "what happened: which thing", falling back to the raw key. */
-private fun topicTitle(topic: NotifTopic): String {
-    val label = topic.label.ifBlank { topic.topic }
-    return if (topic.name.isNotBlank()) "$label: ${topic.name}" else label
+/**
+ * Categories as every list of them reads: by the name shown, naturally, with
+ * the "No notifications" pseudo-category last. The default keeps its place.
+ */
+internal fun List<NotifCategory>.ordered(): List<NotifCategory> =
+    sortedWith(
+        compareBy<NotifCategory> { category -> category.id == "0" }
+            .thenBy(NaturalCompare) { category -> category.shown },
+    )
+
+/**
+ * Topics grouped by the app they come from, the apps in order of name and each
+ * app's topics by what happened, then by which thing.
+ */
+internal fun List<NotifTopic>.grouped(): List<List<NotifTopic>> =
+    groupBy { topic -> topic.app.id }
+        .values
+        .map { group ->
+            group.sortedWith(
+                compareBy<NotifTopic, String>(NaturalCompare) { topic -> topicLabel(topic) }
+                    .thenBy(NaturalCompare) { topic -> topic.name },
+            )
+        }
+        .sortedWith(compareBy(NaturalCompare) { group -> group.first().app.name })
+
+/**
+ * A raw label key (dotted, lowercase) reaches the topics table when an app
+ * labels a topic before adding the key; the calling app's labels are not
+ * reachable here, so such a label falls back to the humanised topic name.
+ */
+private val rawLabelKey = Regex("^[a-z0-9_]+(\\.[a-z0-9_]+)+$", RegexOption.IGNORE_CASE)
+
+internal fun isRawLabelKey(label: String): Boolean = rawLabelKey.matches(label)
+
+/** A topic key as words: "/" and "_" become spaces, the first letter capitalised. */
+internal fun humanizeTopic(topic: String): String {
+    val flat = topic.replace(Regex("[/_]"), " ").trim()
+    if (flat.isEmpty()) return topic
+    return flat.replaceFirstChar { first -> first.uppercase() }
+}
+
+/** What happened, falling back to the humanised topic key. */
+internal fun topicLabel(topic: NotifTopic): String =
+    if (topic.label.isNotBlank() && !isRawLabelKey(topic.label)) topic.label else humanizeTopic(topic.topic)
+
+/** A topic reads as "what happened: which thing". */
+@Composable
+internal fun topicTitle(topic: NotifTopic): String {
+    val label = topicLabel(topic)
+    return if (topic.name.isNotBlank()) stringResource(R.string.notifprefs_topic_title, label, topic.name) else label
 }
 
 @Composable
@@ -459,7 +513,7 @@ private fun TopicRow(
             }
             Spacer(Modifier.height(8.dp))
             MochiDropdownField(
-                value = current?.label ?: unassigned,
+                value = current?.shown ?: unassigned,
                 expanded = menu,
                 onExpandedChange = { open -> menu = open },
                 modifier = Modifier.fillMaxWidth(),
@@ -472,9 +526,9 @@ private fun TopicRow(
                     },
                     selected = topic.category.isNullOrEmpty(),
                 )
-                for (category in categories.noNotificationsLast()) {
+                for (category in categories.ordered()) {
                     MochiDropdownMenuItem(
-                        text = { Text(category.label) },
+                        text = { Text(category.shown) },
                         onClick = {
                             menu = false
                             onSetCategory(topic, category.id)
@@ -500,20 +554,20 @@ private fun DeleteCategoryDialog(
     var menu by remember { mutableStateOf(false) }
     MochiAlertDialog(
         onDismissRequest = { if (!busy) onDismiss() },
-        title = stringResource(R.string.notifprefs_delete_title, category.label),
+        title = stringResource(R.string.notifprefs_delete_title, category.shown),
         content = {
             Column {
                 Text(stringResource(R.string.notifprefs_reassign_label))
                 Spacer(Modifier.height(8.dp))
                 MochiDropdownField(
-                    value = others.firstOrNull { other -> other.id == target }?.label.orEmpty(),
+                    value = others.firstOrNull { other -> other.id == target }?.shown.orEmpty(),
                     expanded = menu,
                     onExpandedChange = { open -> menu = open },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
-                    for (other in others.noNotificationsLast()) {
+                    for (other in others.ordered()) {
                         MochiDropdownMenuItem(
-                            text = { Text(other.label) },
+                            text = { Text(other.shown) },
                             onClick = {
                                 target = other.id
                                 menu = false

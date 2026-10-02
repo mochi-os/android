@@ -8,7 +8,7 @@
     <string name="people_person_title">პიროვნება</string>
     <string name="people_friends_search_placeholder">ძიება…</string>
     <string name="people_friends_no_people_found">ხალხი ვერ მოიძებნა</string>
-    <string name="people_friends_try_adjusting">სცადეთ ფილტრების კორექტირება ან გასუფთავება</string>
+    <string name="people_friends_try_adjusting">სცადეთ ძიების შეცვლა</string>
     <string name="people_friends_pending">მოლოდინში</string>
     <string name="people_friends_received_tab">მიღებული</string>
     <string name="people_friends_sent_tab">გაგზავნილი</string>
@@ -120,7 +120,7 @@
     <string name="people_contacts_accept">მიღება</string>
     <string name="people_contacts_message">შეტყობინების გაგზავნა</string>
     <string name="people_contacts_no_people_found">ხალხი ვერ მოიძებნა</string>
-    <string name="people_contacts_try_adjusting">სცადეთ ფილტრების კორექტირება ან გასუფთავება</string>
+    <string name="people_contacts_try_adjusting">სცადეთ ძიების შეცვლა</string>
     <string name="people_contact_section_address">მისამართი</string>
     <string name="people_contact_section_detail">დეტალები</string>
     <string name="people_contact_name">სახელი</string>
@@ -180,8 +180,8 @@
     <string name="people_books_create">მისამართების წიგნაკის შექმნა</string>
     <string name="people_books_delete">მისამართების წიგნაკის წაშლა</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">წაიშალოს %1$s და მისი %2$d კონტაქტი?</item>
-        <item quantity="other">წაიშალოს %1$s და მისი %2$d კონტაქტი?</item>
+        <item quantity="one">წაიშალოს %1$s და მისი %2$s კონტაქტი?</item>
+        <item quantity="other">წაიშალოს %1$s და მისი %2$s კონტაქტი?</item>
     </plurals>
     <string name="people_welcome_body">იპოვეთ მეგობრები Mochi-ს მასშტაბით და დაუკავშირდით. მოსაწვევის გასაგზავნად შეეხეთ კონტაქტის დამატებას.</string>
     <string name="people_person_state_contact">კონტაქტებშია</string>

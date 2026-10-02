@@ -180,7 +180,7 @@
     <string name="people_books_create">បង្កើតសៀវភៅអាសយដ្ឋាន</string>
     <string name="people_books_delete">លុបសៀវភៅអាសយដ្ឋាន</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">លុប %1$s និងទំនាក់ទំនង %2$d ក្នុងវា?</item>
+        <item quantity="other">លុប %1$s និងទំនាក់ទំនង %2$s ក្នុងវា?</item>
     </plurals>
     <string name="people_welcome_body">ស្វែងរកមិត្តភក្តិនៅទូទាំង Mochi ហើយភ្ជាប់ទំនាក់ទំនង។ ចុច បន្ថែមទំនាក់ទំនង ដើម្បីផ្ញើការអញ្ជើញ។</string>
     <string name="people_person_state_contact">មានក្នុងទំនាក់ទំនង</string>

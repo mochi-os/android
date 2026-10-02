@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">အရာဝတ္ထုများ မရှိပါ</string>
     <string name="crm_board_no_columns">ဤမြင်ကွင်းအတွက် ကော်လံများ မပြင်ဆင်ထားပါ</string>
     <string name="crm_board_no_options">ကော်လံအကွက်အတွက် ရွေးချယ်စရာများ မသတ်မှတ်ထားပါ</string>
-    <string name="crm_board_nested_count">+%1$d ထပ်ဆင့်</string>
+    <string name="crm_board_nested_count">+%1$s ထပ်ဆင့်</string>
     <string name="crm_move_to_column">ကော်လံသို့ ရွှေ့ရန်</string>
     <string name="crm_move_to_row">အတန်းသို့ ရွှေ့ရန်</string>
     <string name="crm_move_after">%1$s ၏နောက်တွင်</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM ဒေတာ သိမ်းဆည်းပြီး</string>
     <string name="crm_create_upload_json">.zip သို့မဟုတ် .json ဖိုင် အပ်လုဒ်လုပ်ပါ</string>
     <string name="crm_create_blocked_no_options">ဖန်တီး၍မရပါ- %1$s လိုအပ်သော်လည်း ရွေးချယ်စရာ မရှိပါ။ ဒီဇိုင်းတွင် ရွေးချယ်စရာများ ထည့်ပါ။</string>
-    <string name="crm_design_sample">နမူနာ %1$d</string>
+    <string name="crm_design_sample">နမူနာ %1$s</string>
     <string name="crm_option_delete_title">ရွေးချယ်စရာ ဖျက်မည်</string>
     <string name="crm_option_delete_message">ရွေးချယ်စရာ \"%1$s\" ကို ဖျက်လိုသည်မှာ သေချာပါသလား။</string>
 </resources>

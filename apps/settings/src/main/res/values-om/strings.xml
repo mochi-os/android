@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Ba\'i</string>
     <string name="settings_home_account">Akkaawuntii</string>
     <string name="settings_home_preferences">Filannoowwan</string>
-    <string name="settings_home_display">Mul\'isi</string>
+    <string name="settings_home_display">Agarsiisa</string>
     <string name="settings_home_notification_prefs">Filannoo beeksisaa</string>
     <string name="settings_home_accounts">Akkaawuntiilee walitti hidhaman</string>
     <string name="settings_home_interests">Fedhota</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Koodiwwan deebii</string>
     <string name="account_recovery_codes_title">Koodiwwan deebii</string>
     <string name="sessions_unknown_agent">Meeshaa hin beekamne</string>
-    <string name="sessions_revoke_title">Galii haquuf?</string>
+    <string name="sessions_revoke_title">Galii deebifachuu?</string>
     <string name="account_section_oauth">Seensa qooda sadaffaa</string>
     <string name="account_oauth_link">Akkaawuntii hidhi</string>
     <string name="account_unlink">Hidhuu kaasi</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Xumurame</string>
     <string name="account_delete">Haqi</string>
     <string name="account_rename">Maqaa jijjiiri</string>
-    <string name="sessions_revoke">Haqi</string>
+    <string name="sessions_revoke">Deebifadhu</string>
     <string name="account_disable">Cufi</string>
     <string name="account_copy">Garagalchi</string>
     <string name="account_copy_all">Hunda garagalchi</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Karaa haqu?</string>
     <string name="route_path">Daandii</string>
     <string name="route_method">Mala</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Appii</string>
     <string name="route_method_entity">Qaama</string>
     <string name="route_method_redirect">Deebi\'iinsa</string>
@@ -72,7 +74,7 @@
     <string name="notifprefs_topics_empty">Hanga ammaatti mata dureewwan hin jiran</string>
     <string name="settings_home_system_status">Haala</string>
     <string name="system_status_title">Haala</string>
-    <string name="system_status_version">Fooyya\'iinsa</string>
+    <string name="system_status_version">Vershinii</string>
     <string name="system_status_started">Jalqabameera</string>
     <string name="system_status_update">Haaromsi</string>
     <string name="system_status_refresh">Haaromsi</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org irraa buufadhu</string>
     <string name="system_status_copy">Garagalchi</string>
     <string name="system_status_peers">Hiriyoota</string>
-    <string name="system_status_known">Beekamaa</string>
+    <string name="system_status_peers_totals">Beekamaa %1$s · Walitti hidhame %2$s · Mesh tamsaasaa %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Beekamaa %1$s · Walitti hidhame %2$s</string>
     <string name="system_status_peer_connected">Walitti hidhame</string>
     <string name="system_status_peer_disconnected">Hidhaan citeera</string>
     <string name="system_status_peer_queued">Ergaawwan tartiiba keessaa</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Haqi</string>
     <string name="accounts_remove_title">Akkaawuntii haquuf?</string>
     <string name="system_documents_title">Galmeewwan</string>
-    <string name="system_documents_description">Seerota, haalota fi tarsiimoo iccitii fayyadamtoota keetiif agarsiifaman</string>
     <string name="system_documents_tab_rules">Seerota server</string>
     <string name="system_documents_tab_terms">Haalota fi tarsiimoolee</string>
     <string name="system_documents_tab_privacy">Iccitii</string>
     <string name="system_documents_language">Afaan</string>
     <string name="system_documents_no_language">Afaan kanaaf sanada hin jiru.</string>
-    <string name="system_documents_customised">Mataa kee waliin walqixxaa\'e</string>
     <string name="system_documents_using_default">Sirnaan dursaa walitti makame fayyadamaa</string>
     <string name="system_documents_revert">Gara durtiitti deebisi</string>
     <string name="system_documents_save">Olkaa\'i</string>
@@ -182,46 +183,45 @@
     <string name="system_users_delete">Fayyadamaa haqi</string>
     <string name="system_users_delete_title">Fayyadamaa haqu?</string>
     <string name="system_users_manage_sessions">Sessenota bulchi</string>
-    <string name="system_users_sessions_description">Yeroowwan turtii ka\'aa fayyadamaa kanaaf daawwadhu fi haqi.</string>
     <string name="system_users_sessions_empty">Fayyadamaan kun yeroo turtii ka\'aa hin qabu.</string>
-    <string name="system_users_revoke">Haqi</string>
-    <string name="system_users_revoke_all">Galiiwwan hunda haqi</string>
+    <string name="system_users_revoke">Deebifadhu</string>
+    <string name="system_users_revoke_all">Galiiwwan hunda deebifadhu</string>
     <string name="system_users_unknown_browser">Brawuzaarii hin beekamne</string>
     <string name="system_users_unknown">Hin beekamu</string>
     <string name="system_users_previous">Duraa</string>
     <string name="system_users_next">Itti aanu</string>
     <string name="system_users_empty">Fayyadamtoonni hin argamne</string>
     <string name="system_users_empty_search">Fayyadamtoonni barbaacha keetiin walsiman hin jiran</string>
-    <string name="system_users_empty_search_hint">Ulaagaa barbaacha kee sirreessuu yaali</string>
     <string name="system_users_toast_created">Fayyadamaan uumameera</string>
     <string name="system_users_toast_updated">Fayyadamaan haaromfameera</string>
     <string name="system_users_toast_deleted">Fayyadamaan haqameera</string>
     <string name="system_users_toast_suspended">Fayyadamaan hidhameera</string>
     <string name="system_users_toast_suspension_removed">Hidhamuun haqameera</string>
-    <string name="system_users_toast_session_revoked">Yeroon turtii haqameera</string>
+    <string name="system_users_toast_session_revoked">Galiin deebifatameera</string>
     <string name="system_users_toast_create_failed">Fayyadamaa uumuu hin dandeenye</string>
     <string name="system_users_toast_update_failed">Fayyadamaa haaromsuu hin dandeenye</string>
     <string name="system_users_toast_delete_failed">Fayyadamaa haquu hin dandeenye</string>
     <string name="system_users_toast_status_failed">Haala fayyadamaa haaromsuu hin dandeenye</string>
-    <string name="system_users_toast_revoke_failed">Sessenii haquu hin dandeenye</string>
+    <string name="system_users_toast_revoke_failed">Galii deebifachuu hin dandeenye</string>
 
     <string name="settings_home_sessions">Yeroowwan turtii</string>
     <string name="settings_home_privacy">Imaammata iccitii</string>
     <string name="settings_home_rules">Seerota</string>
     <string name="settings_home_terms">Haalota tajaajilaa</string>
-    <string name="account_passkeys_empty">Furtuwwan seensaa galmaa\'an hin jiran.</string>
-    <string name="account_passkey_register_title">Furtuu seensaa dabaluu</string>
-    <string name="account_passkey_register_message">Meeshaan kee mirkanaa\'uu sii eera. Furtuun seensaa meeshaa kanaaf hidhamee jira fi seenuu boodaaf ittiin fayyadamuuf.</string>
+    <string name="account_passkeys_empty">Passkey-wwan galmaa\'an hin jiran.</string>
+    <string name="account_passkey_register_title">Passkey dabaluu</string>
     <string name="account_passkey_name_label">Maqaa (filannoodhaan)</string>
     <string name="account_passkey_delete_message">\"%1$s\" siif galchuu hin danda\'u.</string>
-    <string name="account_totp_description">Lakkoofsa figira 6 qabu sirna mirkaneessaa irraa seenii.</string>
     <string name="account_totp_enabled">Mirkaneessaan hojiirra oolfameera.</string>
     <string name="account_totp_setup_step1">Iccitii kana sirna mirkaneessaa keessatti iskaanii ykn galchii.</string>
     <string name="account_totp_setup_step2">Lakkoofsa figira 6 sirni kee agarsiisu galchii.</string>
     <string name="account_totp_code">Lakkoofsa</string>
     <string name="account_totp_disable_message">Siif hin danda\'amu lakkoofsa mirkaneessaa fayyadamtee seenuu.</string>
     <string name="account_recovery_none">Lakkoofsi deebii uumamee hin jiru.</string>
-    <string name="account_recovery_count">%1$d lakkoofsi deebii hin fayyadamamne.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Lakkoofsi deebii %1$s hafeera.</item>
+        <item quantity="other">Lakkoofsonni deebii %1$s hafaniiru.</item>
+    </plurals>
     <string name="account_recovery_generate">Lakkoofsa uumi</string>
     <string name="account_recovery_regenerate">Lakkoofsa irra deebi\'i</string>
     <string name="account_recovery_regen_title">Lakkoofsa deebii irra deebi\'isuun?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Yeroo dhumaa fayyadamame %1$s</string>
     <string name="route_delete_message">Kunis karoora karoora \"%1$s\" haqa.</string>
     <string name="route_empty">Karoorawwan qaroomfaman hin jiran.</string>
-    <string name="route_meta">Dursinsii %1$d · %2$s</string>
+    <string name="route_meta">Dursinsii %1$s · %2$s</string>
     <string name="interests_search_placeholder">Mataduree dabaluuf barbaadi…</string>
     <string name="interests_empty">Hammataan ammayyuu hin jiru.</string>
     <string name="interests_summary_regenerate">Cuunfaa deebisanii uumuu</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Kunis dhaabbii fayyadamtuu \"%1$s\" haqa. Hojii kana deebisuun hin danda\'amu.</string>
     <string name="system_users_sessions_title">Mariiwwan %1$s</string>
     <string name="system_users_session_last_accessed">Argachuu dhumaa: %1$s</string>
-    <string name="system_users_revoke_all_title">Marii hunda kaasuu?</string>
+    <string name="system_users_revoke_all_title">Galiiwwan hunda deebifachuu?</string>
     <string name="system_users_revoke_all_message">Mariiwwan dalagaa fayyadamtuu kanaa hundi ni ba\'u.</string>
-    <string name="system_users_pagination_status">%3$d fayyadamtoota keessaa %1$d–%2$d agarsiifa</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Fayyadamaa %3$s keessaa %1$s–%2$s agarsiisa</item>
+        <item quantity="other">Fayyadamtoota %3$s keessaa %1$s–%2$s agarsiisa</item>
+    </plurals>
     <string name="account_title">Akkaawuntii</string>
     <string name="account_section_identity">Eenyummaa</string>
     <string name="account_identity_identity">Eenyummaa</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS Mirkaneessi</string>
     <string name="settings_home_domains">Domeeniwwan</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Qorannoon gara bakka %1$d ergameera</item>
-        <item quantity="other">Qorannoon gara bakkeewwan %1$d ergameera</item>
+        <item quantity="one">Qorannoon gara bakka %1$s ergameera</item>
+        <item quantity="other">Qorannoon gara bakkeewwan %1$s ergameera</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Yeroo turtii 1 kaafame</item>
-        <item quantity="other">Yeroowwan turtii %1$d kaafaman</item>
+        <item quantity="one">Galii %1$s deebifatame</item>
+        <item quantity="other">Galiiwwan %1$s deebifataman</item>
     </plurals>
     <string name="login_title">Galchuu</string>
     <string name="login_section_methods">Mala seenii</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Ifa</string>
     <string name="system_status_reachability_private">Dhuunfaa</string>
     <string name="system_status_reachability_unknown">Hin beekamu</string>
-    <string name="system_status_relay">Karaa relay</string>
-    <string name="system_status_mesh">Mesh tamsaasaa</string>
+    <string name="system_status_reachability_relay">%1$s · karaa daddabarsaa</string>
     <string name="system_status_broadcast">Tamsaasa dhumaa</string>
     <string name="system_status_queued_broadcasts">Ergaawwan tamsaasaa sarara keessa</string>
     <string name="system_setting_hostname_publish">Maqaa keessummeessaa fi domeenota serveroota birootti beeksisi</string>
     <string name="system_setting_hostname">Maqaa keessummeessaa serveroota birootti beeksifame</string>
     <string name="system_status_peer_id">ID hiriyaa</string>
     <string name="system_status_holepunch">Holee punch</string>
-    <string name="system_status_holepunch_value">%1$d milkaa\'e · %2$d kufe</string>
     <string name="system_status_awaiting_routing">Ergaawwan daandii eeggachaa jiran</string>
     <string name="system_status_relay_service">Tajaajila daddabarsaa</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d qabannoo · %3$d geengoo · %4$d didame</string>
     <string name="route_target_select">Filadhu</string>
     <string name="account_data_description">Kuusaa guutuu Mochi sarvarii kana irratti yookaan kan biraa irratti deebisuu dandeessu buufadhu.</string>
     <string name="route_target_none">Galmi jiru hin jiru</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Yeroo dhumaaf mul\'ate %1$s</string>
     <string name="notifprefs_device_app">%1$s · appii</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Qormaanni bakka %2$d keessaa %1$dtti ergame</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Qorannoon bakka %2$s keessaa %1$stti ergame</item>
+        <item quantity="other">Qorannoon bakkeewwan %2$s keessaa %1$stti ergame</item>
+    </plurals>
     <string name="notifprefs_test_none">Galmi qindaa\'e hin jiru</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Gahee hin jiru</string>
@@ -385,13 +390,36 @@
     <string name="accounts_field_topic">Mata duree</string>
     <string name="accounts_field_secret">Iccitii mallattoo</string>
     <string name="account_totp_open">Appii mirkaneessaa keessatti bani</string>
-    <string name="accounts_revoke">Argama haqi</string>
+    <string name="accounts_revoke">Argama deebifadhu</string>
     <string name="accounts_capability_calendar">Kaalaandarii</string>
     <string name="accounts_capability_notify">Beeksisaalee</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Seensa</string>
     <string name="accounts_provider_caldav">Sarvarii kaalaandarii</string>
-    <string name="accounts_revoke_confirm">Kun qaqqabummaa kaalaandarii %1$s ni haqa. %2$s waliin seensi hamma fuula Seensaa irratti hiiktutti ni tura.</string>
+    <string name="accounts_revoke_confirm">Kun qaqqabummaa kaalaandarii %1$s ni deebifata. %2$s waliin seensi hamma fuula Seensaa irratti hiiktutti ni tura.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Bifa hin beekamne</string>
+    <string name="system_documents_modified">Jijjiirame</string>
+    <string name="system_documents_discard_title">Jijjiiramoota gatuu?</string>
+    <string name="system_documents_discard">Gati</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s milkaa\'e</item>
+        <item quantity="other">%1$s milkaa\'an</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s kufe</item>
+        <item quantity="other">%1$s kufan</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s qabannoo</item>
+        <item quantity="other">%1$s / %2$s qabannoo</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s geengoo</item>
+        <item quantity="other">%1$s geengoo</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s didame</item>
+        <item quantity="other">%1$s didaman</item>
+    </plurals>
 </resources>

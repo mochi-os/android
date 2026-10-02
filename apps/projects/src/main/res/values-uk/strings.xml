@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">вніс зміну</string>
     <string name="projects_attachment_empty">Немає вкладень</string>
     <string name="projects_attachment_default_name">вкладення</string>
-    <string name="projects_attachment_size_bytes">%1$d Б</string>
-    <string name="projects_attachment_size_kb">%1$d КБ</string>
-    <string name="projects_attachment_size_mb">%1$d МБ</string>
-    <string name="projects_attachment_size_gb">%1$d ГБ</string>
+    <string name="projects_attachment_size_bytes">%1$s Б</string>
+    <string name="projects_attachment_size_kb">%1$s КБ</string>
+    <string name="projects_attachment_size_mb">%1$s МБ</string>
+    <string name="projects_attachment_size_gb">%1$s ГБ</string>
     <string name="projects_request_new">Новий запит на злиття</string>
     <string name="projects_request_status_closed">Закрито</string>
     <string name="projects_request_back_to_list">Назад до списку</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Перевірка стану злиття…</string>
     <string name="projects_request_can_merge">Можна злити</string>
     <string name="projects_request_cannot_merge">Неможливо злити</string>
-    <string name="projects_request_ahead_behind">%1$d попереду, %2$d позаду</string>
+    <string name="projects_request_ahead_behind">%1$s попереду, %2$s позаду</string>
     <string name="projects_request_draft_notice">Це чернетка. Позначте як готову перед злиттям.</string>
     <string name="projects_request_view_diff">Переглянути відмінності</string>
     <string name="projects_request_mark_ready">Позначити як готове</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Для цього подання не налаштовано стовпців</string>
     <string name="projects_board_no_options">Для поля стовпця не налаштовано параметрів</string>
     <string name="projects_board_column_options">Параметри стовпця</string>
-    <string name="projects_board_nested_count">+%1$d вкладених</string>
+    <string name="projects_board_nested_count">+%1$s вкладених</string>
     <string name="projects_move_to_column">Перемістити до стовпця</string>
     <string name="projects_move_to_row">Перемістити до рядка</string>
     <string name="projects_move_after">Після %1$s</string>
@@ -365,10 +365,10 @@
     <string name="projects_sort_filter_title">Сортування та фільтр</string>
     <string name="projects_create_prefix_hint">Використовується для читабельних ідентифікаторів, як-от %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d конфліктний файл</item>
-        <item quantity="few">%1$d конфліктні файли</item>
-        <item quantity="many">%1$d конфліктних файлів</item>
-        <item quantity="other">%1$d конфліктного файла</item>
+        <item quantity="one">%1$s конфліктний файл</item>
+        <item quantity="few">%1$s конфліктні файли</item>
+        <item quantity="many">%1$s конфліктних файлів</item>
+        <item quantity="other">%1$s конфліктного файла</item>
     </plurals>
     <string name="projects_design_export_saved">Дизайн збережено</string>
     <string name="projects_design_import_failed">Не вдалося прочитати файл</string>
@@ -378,7 +378,7 @@
     <string name="projects_export_saved">Дані проєкту збережено</string>
     <string name="projects_exporting">Підготовка експорту…</string>
     <string name="projects_board_add_column">Додати стовпець</string>
-    <string name="projects_design_sample">Зразок %1$d</string>
+    <string name="projects_design_sample">Зразок %1$s</string>
     <string name="projects_option_delete_title">Видалити варіант</string>
     <string name="projects_option_delete_message">Ви впевнені, що хочете видалити варіант \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Жоден тип елемента ще не можна створити. Спершу створіть необхідні батьківські елементи.</string>

@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Dar nėra partijų.</string>
     <string name="words_new_game_choose_opponents">Pasirinkite varžovus</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d žaidėjai</string>
+    <string name="words_new_game_player_count">%1$s žaidėjai</string>
     <string name="words_new_game_no_friends_subtitle">Pridėkite draugų programėlėje Žmonės, kad pradėtumėte žaisti.</string>
     <string name="words_detail_title">Partija</string>
     <string name="words_detail_status_opponent_move">%1$s eilė</string>
     <string name="words_detail_status_winner_wins">%1$s laimi</string>
-    <string name="words_detail_player_fallback">Žaidėjas %1$d</string>
-    <string name="words_detail_player_count">%1$d žaidėjai</string>
-    <string name="words_detail_label_tiles_left">Liko %1$d kortelių</string>
+    <string name="words_detail_player_fallback">Žaidėjas %1$s</string>
+    <string name="words_detail_player_count">%1$s žaidėjai</string>
+    <string name="words_detail_label_tiles_left">Liko %1$s kortelių</string>
     <string name="words_detail_action_open_chat">Atidaryti pokalbį</string>
     <string name="words_detail_action_more">Partijos veiksmai</string>
-    <string name="words_detail_exchange_count">Pakeisti (%1$d)</string>
+    <string name="words_detail_exchange_count">Pakeisti (%1$s)</string>
     <string name="words_detail_chat_you_played">Jūs žaidėte %1$s</string>
     <string name="words_detail_chat_player_played">%1$s žaidė %2$s</string>
 

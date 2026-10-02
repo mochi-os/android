@@ -134,7 +134,7 @@ private fun ResultsList(
                 text = pluralStringResource(
                     R.plurals.wikis_search_results_count,
                     count,
-                    count,
+                    LocalFormat.current.formatNumber(count),
                     query,
                 ),
                 style = MaterialTheme.typography.bodySmall,

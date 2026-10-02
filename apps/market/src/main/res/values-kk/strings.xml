@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Нарық</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Өмірбаян</string>
     <string name="market_account_biography_placeholder">Сатып алушыларға өзіңіз туралы айтыңыз…</string>
     <string name="market_account_load_failed">Аккаунтты жүктеу мүмкін болмады</string>
@@ -72,8 +72,8 @@
     <string name="market_bids_tab_won">Жеңді</string>
     <string name="market_bids_title">Ставкалар</string>
     <string name="market_bids_your_bid">Сіздің ұсынысыңыз: %1$s</string>
-    <string name="market_carousel_main">Фото %1$d / %2$d</string>
-    <string name="market_carousel_thumbnail">Нобай %1$d</string>
+    <string name="market_carousel_main">Фото %1$s / %2$s</string>
+    <string name="market_carousel_thumbnail">Нобай %1$s</string>
     <string name="market_channel_name">Нарық</string>
     <string name="market_chargeback_reason_bank_cannot_process">Банк өңдей алмады</string>
     <string name="market_chargeback_reason_check_returned">Тексеру қайтарылды</string>
@@ -135,7 +135,7 @@
     <string name="market_condition_refurbished">Қалпына келтірілген</string>
     <string name="market_condition_used">Пайдаланылған</string>
     <string name="market_dispute_dialog_attach">Дәлел тіркеу</string>
-    <string name="market_dispute_dialog_attach_count">%1$d файл тіркелген</string>
+    <string name="market_dispute_dialog_attach_count">%1$s файл тіркелген</string>
     <string name="market_dispute_dialog_cancel">Болдырмау</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Сатып алушы</string>
     <string name="market_dispute_dialog_evidence_role_seller">Сатушы</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_condition_refurbished">Қалпына келтірілген</string>
     <string name="market_editor_condition_used">Пайдаланылған</string>
     <string name="market_editor_currency">Валюта</string>
-    <string name="market_editor_days">%1$d күн</string>
+    <string name="market_editor_days">%1$s күн</string>
     <string name="market_editor_delete">Хабарландыруды жою</string>
     <string name="market_editor_delete_confirm_message">Бұл хабарландыруды біржола жояды.</string>
     <string name="market_editor_delete_confirm_title">Хабарландыру жойылсын ба?</string>
@@ -312,7 +312,7 @@
     <string name="market_listing_detail_relist_failed">Қайта жариялау мүмкін болмады</string>
     <string name="market_listing_detail_relist_in_progress">Қайта жариялануда</string>
     <string name="market_listing_detail_report">Хабарландыруға шағымдану</string>
-    <string name="market_listing_detail_sales_count">%1$d сату</string>
+    <string name="market_listing_detail_sales_count">%1$s сату</string>
     <string name="market_listing_detail_save">Сақтау</string>
     <string name="market_listing_detail_seller_banned_banner">Бұл сатушы тыйым салынған. Жаңа тапсырыстар берілмейді.</string>
     <string name="market_listing_detail_seller_heading">Сатушы</string>
@@ -364,7 +364,7 @@
     <string name="market_messages_send_failed">Хабарды жіберу мүмкін болмады</string>
     <string name="market_messages_thread_listing_chip">Хабарландыру</string>
     <string name="market_messages_thread_title">Сөйлесу</string>
-    <string name="market_messages_unread_badge">%1$d оқылмаған</string>
+    <string name="market_messages_unread_badge">%1$s оқылмаған</string>
     <string name="market_onboarding_activate">Белсендіру</string>
     <string name="market_onboarding_activating">Белсендірілуде…</string>
     <string name="market_onboarding_body">Сатып алу мен сатуды бастау үшін тіркелгіңізді іске қосыңыз.</string>
@@ -384,8 +384,8 @@
     <string name="market_profile_no_reviews">Әлі пікірлер жоқ.</string>
     <string name="market_profile_rating_breakdown">Рейтинг бөлінісі</string>
     <string name="market_profile_reviews_section">Шолулар</string>
-    <string name="market_profile_sales_count">%1$d сату</string>
-    <string name="market_profile_stars_value">%1$d жұлдыз</string>
+    <string name="market_profile_sales_count">%1$s сату</string>
+    <string name="market_profile_stars_value">%1$s жұлдыз</string>
     <string name="market_profile_status_banned">Тыйым салынды</string>
     <string name="market_profile_status_suspended">Тоқтатылды</string>
     <string name="market_profile_verified">Тексерілді</string>
@@ -403,7 +403,7 @@
     <string name="market_purchase_dispute_response">Сатушының жауабы</string>
     <string name="market_purchase_dispute_title">Қайтару сұрауы</string>
     <string name="market_purchase_download_failed">Жүктеп алу сәтсіз аяқталды</string>
-    <string name="market_purchase_download_many">%1$d файлдарыңызды төменде жүктеп алыңыз.</string>
+    <string name="market_purchase_download_many">%1$s файлдарыңызды төменде жүктеп алыңыз.</string>
     <string name="market_purchase_download_one">Файлыңызды төменде жүктеп алыңыз.</string>
     <string name="market_purchase_download_section">Сатып алуыңыз дайын</string>
     <string name="market_purchase_item">Элемент</string>
@@ -441,7 +441,7 @@
     <string name="market_purchases_won_for">%1$s үшін жеңіс</string>
     <string name="market_rating_label">Бағалау</string>
     <string name="market_rating_no_reviews">Шолулар әлі жоқ</string>
-    <string name="market_rating_reviews">(%1$d пікір)</string>
+    <string name="market_rating_reviews">(%1$s пікір)</string>
     <string name="market_refund_amount_label">Сома</string>
     <string name="market_refund_body">Қайтару сұрауыңыздың себебін көрсетіңіз.</string>
     <string name="market_refund_details_label">Мәліметтер</string>
@@ -784,11 +784,11 @@
     <string name="market_listings_remove_message_auction">Бұл аукционды болдырмайды. Тізім сатып алушылардан жасырылады; оны кейінірек жаңа жоба ретінде қайта тізімге қосуға болады.</string>
     <string name="market_listings_remove_title">Бұл хабарландыруды жою керек пе?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Бұл аукционды тоқтатып, %1$d белсенді қатысушыға хабарлайды. Хабарландыру сатып алушылардан жасырылады; кейін оны жаңа жоба ретінде қайта орналастыра аласыз.</item>
-        <item quantity="other">Бұл аукционды тоқтатып, %1$d белсенді қатысушыға хабарлайды. Хабарландыру сатып алушылардан жасырылады; кейін оны жаңа жоба ретінде қайта орналастыра аласыз.</item>
+        <item quantity="one">Бұл аукционды тоқтатып, %1$s белсенді қатысушыға хабарлайды. Хабарландыру сатып алушылардан жасырылады; кейін оны жаңа жоба ретінде қайта орналастыра аласыз.</item>
+        <item quantity="other">Бұл аукционды тоқтатып, %1$s белсенді қатысушыға хабарлайды. Хабарландыру сатып алушылардан жасырылады; кейін оны жаңа жоба ретінде қайта орналастыра аласыз.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Бұл ағымдағы төлем кезеңінің соңында %1$d белсенді жазылымды тоқтатады. Жазылушыларға хабарланады. Хабарландыру сатып алушылардан жасырылады.</item>
-        <item quantity="other">Бұл ағымдағы төлем кезеңінің соңында %1$d белсенді жазылымды тоқтатады. Жазылушыларға хабарланады. Хабарландыру сатып алушылардан жасырылады.</item>
+        <item quantity="one">Бұл ағымдағы төлем кезеңінің соңында %1$s белсенді жазылымды тоқтатады. Жазылушыларға хабарланады. Хабарландыру сатып алушылардан жасырылады.</item>
+        <item quantity="other">Бұл ағымдағы төлем кезеңінің соңында %1$s белсенді жазылымды тоқтатады. Жазылушыларға хабарланады. Хабарландыру сатып алушылардан жасырылады.</item>
     </plurals>
 </resources>

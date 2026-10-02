@@ -38,6 +38,7 @@ import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiPermissions
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * Material3 has no nested-DropdownMenu, so web's RSS fly-out becomes one row
@@ -108,7 +109,7 @@ fun PageOverflowMenu(
             label = pluralStringResource(
                 id = R.plurals.wikis_page_action_comments,
                 count = commentCount,
-                commentCount,
+                LocalFormat.current.formatNumber(commentCount),
             ),
             onClick = onComments,
         )

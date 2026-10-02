@@ -22,17 +22,17 @@
     <string name="wikis_page_action_recent_changes">وروستي بدلونونه</string>
     <string name="wikis_page_action_new_page">نوې پاڼه</string>
     <string name="wikis_page_action_settings">تنظیمات</string>
-    <string name="wikis_page_action_unsubscribe">ګډون لغوه کول</string>
+    <string name="wikis_page_action_unsubscribe">له ګډون وتل</string>
     <string name="wikis_title">ویکي ګانې</string>
     <string name="wikis_empty_title">خپل لومړی wiki پیل کړئ</string>
     <string name="wikis_empty_subtitle">د ګډون لپاره د wiki لټون وکړئ، یا د خپلې اسنادو خپرولو لپاره یو جوړ کړئ.</string>
     <string name="wikis_create_button">ویکي جوړ کړئ</string>
     <string name="wikis_recommended_section">سپارښتل شوي wikis</string>
     <string name="wikis_subscribe_button">ګډون وکړئ</string>
-    <string name="wikis_unsubscribe_action">ګډون لغوه کول</string>
-    <string name="wikis_unsubscribing">ګډون لغوه کیږي…</string>
-    <string name="wikis_unsubscribe_confirm_title">ګډون لغوه کول</string>
-    <string name="wikis_unsubscribe_success">ګډون لغوه شو</string>
+    <string name="wikis_unsubscribe_action">له ګډون وتل</string>
+    <string name="wikis_unsubscribing">له ګډون وتل روان دي…</string>
+    <string name="wikis_unsubscribe_confirm_title">له ګډون وتل</string>
+    <string name="wikis_unsubscribe_success">له ګډون ووتلئ</string>
     <string name="wikis_subscribe_failed">د ګډون پاتې راغلل</string>
     <string name="wikis_rss_menu">RSS فیډ</string>
     <string name="wikis_rss_changes">بدلونونه</string>
@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">بدلونونه او تبصرې</string>
     <string name="wikis_rss_copied">د RSS URL کلیپبورډ ته کاپي شو</string>
     <string name="wikis_rss_failed">د RSS ټوکن ترلاسه کولو پاتې راغلل</string>
-    <string name="wikis_rss_revoke">لاسرسی لغوه کړئ</string>
-    <string name="wikis_rss_revoked">د RSS لاسرسی لغوه شو</string>
+    <string name="wikis_rss_revoke">لاسرسی بیرته واخلئ</string>
+    <string name="wikis_rss_revoked">د RSS لاسرسی بیرته واخیستل شو</string>
     <string name="wikis_find_title">ویکیانه ومومئ</string>
     <string name="wikis_find_no_results">هیڅ wikis ونه موندل شوې</string>
     <string name="wikis_find_recommended_section">سپارښتل شوي wikis</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">د wiki پاڼې د سمونونو، څرګندونو او بلنو په اړه خبرتیاوې.</string>
     <string name="wikis_pageview_toc_expand">فهرست وښیه</string>
     <string name="wikis_pageview_toc_collapse">فهرست پټ کړه</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">تازه شو %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” پاڼه تر اوسه شتون نلري.</string>
     <string name="wikis_pageview_share_chooser">د ویکي لینک</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">لینک</string>
     <string name="wikis_open_sidebar">د څنګ بار خلاص کړئ</string>
     <string name="wikis_search_placeholder">د wiki لټون…</string>
-    <string name="wikis_unsubscribe_confirm_message">ایا تاسو ډاډه یاست چې د %1$s ګډون لغوه کړئ؟</string>
+    <string name="wikis_unsubscribe_confirm_message">ایا تاسو ډاډه یاست چې د %1$s له ګډون ووځئ؟</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">د نوم، ID، ګوتنښې یا URL له مخې ولټوئ…</string>
     <string name="wikis_join_search_button">د wiki لټون…</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">تاسو د “%1$s” (%2$s) پاڼې ړنګولو ته چمتو یاست. دا کړنه له تاریخچې څخه د بیا رغولو له لارې بیرته اخیستل کیدی شي.</string>
     <string name="wikis_delete_page_success">پاڼه ړنګه شوه</string>
     <string name="wikis_revert_page_title">پاڼه بیرته راګرځول</string>
-    <string name="wikis_revert_page_message">تاسو %1$s بیرته نسخې %2$d ته ګرځوئ. دا به د نسخې %2$d منځپانګې سره نوې بیاکتنه جوړه کړي.</string>
-    <string name="wikis_revert_page_default_comment">بیرته نسخې %1$d ته وګرځېد</string>
-    <string name="wikis_revert_page_success">بیرته نسخې %1$d ته وګرځېد</string>
+    <string name="wikis_revert_page_message">تاسو %1$s بیرته نسخې %2$s ته ګرځوئ. دا به د نسخې %2$s منځپانګې سره نوې بیاکتنه جوړه کړي.</string>
+    <string name="wikis_revert_page_default_comment">بیرته نسخې %1$s ته وګرځېد</string>
+    <string name="wikis_revert_page_success">بیرته نسخې %1$s ته وګرځېد</string>
     <string name="wikis_rename_page_renaming">نوم بدلیږي…</string>
     <string name="wikis_rename_page_success">د پاڼې نوم بدل شو</string>
-    <string name="wikis_history_viewing">د %1$s تاریخچه لیدل کیږي، اوسنۍ نسخه %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">د %1$s تاریخچه لیدل کیږي، اوسنۍ نسخه %2$s</string>
+    <string name="wikis_revision_version_badge">نسخه %1$s</string>
     <string name="wikis_search_pages_placeholder">پاڼې د سرلیک یا منځپانګې له مخې ولټوئ…</string>
     <string name="wikis_search_no_results">د “%1$s” لپاره پاڼې ونه موندل شوې. نور د لټون کلمې وآزمویئ.</string>
     <string name="wikis_search_updated">تازه شو %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">د %1$s له خوا</string>
     <string name="wikis_revision_show_page">پاڼه وښیه</string>
     <string name="wikis_revision_compare_failed">د پرتلې لپاره مخکینۍ نسخه نه شوه پورته کیدای.</string>
-    <string name="wikis_revision_changes_from">د نسخې له %1$d → %2$d بدلونونه</string>
+    <string name="wikis_revision_changes_from">د نسخې له %1$s → %2$s بدلونونه</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d تبصره</item>
-        <item quantity="other">%d تبصرې</item>
+        <item quantity="one">%s تبصره</item>
+        <item quantity="other">%s تبصرې</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d ځواب</item>
-        <item quantity="other">+%d نور ځوابونه</item>
+        <item quantity="one">%s ځواب</item>
+        <item quantity="other">+%s نور ځوابونه</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d پاڼه</item>
-        <item quantity="other">%d پاڼې</item>
+        <item quantity="one">%s پاڼه</item>
+        <item quantity="other">%s پاڼې</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d فایل</item>
-        <item quantity="other">%d فایلونه</item>
+        <item quantity="one">%s فایل</item>
+        <item quantity="other">%s فایلونه</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d عکس</item>
-        <item quantity="other">%d عکسونه</item>
+        <item quantity="one">%s عکس</item>
+        <item quantity="other">%s عکسونه</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d سند</item>
-        <item quantity="other">%d سندونه</item>
+        <item quantity="one">%s سند</item>
+        <item quantity="other">%s سندونه</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d پاڼه له دې ټاګ سره</item>
-        <item quantity="other">%d پاڼې له دې ټاګ سره</item>
+        <item quantity="one">%s پاڼه له دې ټاګ سره</item>
+        <item quantity="other">%s پاڼې له دې ټاګ سره</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">د "%2$s" لپاره %1$d پایله وموندل شو</item>
-        <item quantity="other">د "%2$s" لپاره %1$d پایلې وموندل شو</item>
+        <item quantity="one">د \"%2$s\" لپاره %1$s پایله وموندل شو</item>
+        <item quantity="other">د \"%2$s\" لپاره %1$s پایلې وموندل شو</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">تشریح خوندي نشوه</string>
     <string name="wikis_attachments_upload_types">ملاتړ شوي فایلونه: انځورونه، PDF، DOC، DOCX، TXT، او MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">نوی د RSS URL کلیپبورډ ته کاپي شو</string>
     <string name="wikis_rss_exists">دا د فیډ URL دمخه صادر شوی او بیا نه ښودل کیږي.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">لومړی %1$d تبصره ښودل کیږي.</item>
-        <item quantity="other">لومړۍ %1$d تبصرې ښودل کیږي.</item>
+        <item quantity="one">لومړی %1$s تبصره ښودل کیږي.</item>
+        <item quantity="other">لومړۍ %1$s تبصرې ښودل کیږي.</item>
     </plurals>
 </resources>

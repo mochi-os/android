@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">馬</string>
     <string name="chess_piece_pawn">兵</string>
     <string name="chess_move_played">%1$s 走了 %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">關於國際象棋走子、提和與對局結果的通知。</string>
     <string name="chess_channel_name">國際象棋通知</string>
     <string name="chess_delete_message">從你的列表中移除該對局。</string>

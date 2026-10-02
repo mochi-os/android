@@ -16,7 +16,7 @@
     <string name="go_delete_confirm">Slett</string>
     <string name="go_delete_message">Dette spelet vert fjerna frå lista di. Dette kan ikkje gjerast om att.</string>
     <string name="go_delete_title">Slette spelet?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Godta</string>
     <string name="go_draw_decline">Avslå</string>
     <string name="go_draw_offered_received">%1$s tilbaud uavgjort</string>
@@ -67,11 +67,11 @@
     <string name="go_status_resigned">Gitt opp</string>
     <string name="go_new_game_title">Nytt Go-parti</string>
     <string name="go_new_game_no_friends">Du må leggje til ein ven før du kan starte eit parti.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Poeng lagt til Kvitts skår for å kompensere for at Svart startar</string>
-    <string name="go_board_a11y">%1$d×%1$d Go-brett</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go-brett, din tur til å leggje ein svart stein</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go-brett, din tur til å leggje ein kvit stein</string>
+    <string name="go_board_a11y">%1$s×%1$s Go-brett</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go-brett, din tur til å leggje ein svart stein</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go-brett, din tur til å leggje ein kvit stein</string>
     <string name="go_status_scoring">Oppteljing — bli samde om stillinga eller spel vidare</string>
     <string name="go_score_proposed">Framlagd score: svart %1$s, kvit %2$s</string>
     <string name="go_score_opponent_accepted">Motstandaren din godtek denne scoren: svart %1$s, kvit %2$s</string>

@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Ingen partier ennå.</string>
     <string name="words_new_game_choose_opponents">Velg motstandere</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d spillere</string>
+    <string name="words_new_game_player_count">%1$s spillere</string>
     <string name="words_new_game_no_friends_subtitle">Legg til venner i Personer-appen for å begynne å spille.</string>
     <string name="words_detail_title">Parti</string>
     <string name="words_detail_status_opponent_move">%1$s sin tur</string>
     <string name="words_detail_status_winner_wins">%1$s vinner</string>
-    <string name="words_detail_player_fallback">Spiller %1$d</string>
-    <string name="words_detail_player_count">%1$d spillere</string>
-    <string name="words_detail_label_tiles_left">%1$d brikker igjen</string>
+    <string name="words_detail_player_fallback">Spiller %1$s</string>
+    <string name="words_detail_player_count">%1$s spillere</string>
+    <string name="words_detail_label_tiles_left">%1$s brikker igjen</string>
     <string name="words_detail_action_open_chat">Åpne chat</string>
     <string name="words_detail_action_more">Partihandlinger</string>
-    <string name="words_detail_exchange_count">Bytt (%1$d)</string>
+    <string name="words_detail_exchange_count">Bytt (%1$s)</string>
     <string name="words_detail_chat_you_played">Du spilte %1$s</string>
     <string name="words_detail_chat_player_played">%1$s spilte %2$s</string>
 

@@ -45,7 +45,7 @@
     <string name="wikis_pageview_toc">Sur cette page</string>
     <string name="wikis_pageview_toc_expand">Afficher la table des matières</string>
     <string name="wikis_pageview_toc_collapse">Masquer la table des matières</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Mis à jour %1$s</string>
     <string name="wikis_pageview_not_found_title">Page introuvable</string>
     <string name="wikis_pageview_not_found_description">La page « %1$s » n\'existe pas encore.</string>
@@ -105,7 +105,6 @@
     <string name="wikis_comment_form_remove_attachment">Retirer la pièce jointe</string>
     <string name="wikis_comment_expand">(développer)</string>
     <string name="wikis_comment_attachment_size">(%1$s)</string>
-    <string name="wikis_editor_title_new">Créer une nouvelle page</string>
     <string name="wikis_editor_preview">Aperçu</string>
     <string name="wikis_editor_preview_untitled">Sans titre</string>
     <string name="wikis_editor_insert">Insérer</string>
@@ -136,11 +135,11 @@
     <string name="wikis_delete_page_success">Page supprimée</string>
     <string name="wikis_delete_page_failed">Échec de la suppression de la page</string>
     <string name="wikis_revert_page_title">Restaurer la page</string>
-    <string name="wikis_revert_page_message">Vous êtes sur le point de restaurer %1$s à la version %2$d. Cela créera une nouvelle révision avec le contenu de la version %2$d.</string>
+    <string name="wikis_revert_page_message">Vous êtes sur le point de restaurer %1$s à la version %2$s. Cela créera une nouvelle révision avec le contenu de la version %2$s.</string>
     <string name="wikis_revert_page_comment_label">Commentaire de restauration</string>
-    <string name="wikis_revert_page_default_comment">Restaurée à la version %1$d</string>
+    <string name="wikis_revert_page_default_comment">Restaurée à la version %1$s</string>
     <string name="wikis_revert_page_confirm">Restaurer</string>
-    <string name="wikis_revert_page_success">Restaurée à la version %1$d</string>
+    <string name="wikis_revert_page_success">Restaurée à la version %1$s</string>
     <string name="wikis_revert_page_failed">Échec de la restauration de la page</string>
     <string name="wikis_rename_page_title">Renommer la page</string>
     <string name="wikis_rename_page_label">Nouvelle URL</string>
@@ -152,10 +151,10 @@
     <string name="wikis_rename_page_success">Page renommée</string>
     <string name="wikis_rename_page_failed">Échec du renommage de la page</string>
     <string name="wikis_history_title">Historique</string>
-    <string name="wikis_history_viewing">Consultation de l\'historique de %1$s, version actuelle %2$d</string>
+    <string name="wikis_history_viewing">Consultation de l\'historique de %1$s, version actuelle %2$s</string>
     <string name="wikis_history_empty">Aucune révision trouvée</string>
     <string name="wikis_history_revert_action">Restaurer à cette version</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Version %1$s</string>
     <string name="wikis_revision_current_badge">Actuelle</string>
     <string name="wikis_revision_revert_to_this">Restaurer à cette version</string>
     <string name="wikis_changes_title">Modifications récentes</string>

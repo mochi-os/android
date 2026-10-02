@@ -97,19 +97,19 @@
     <string name="calendars_repeat_forever">Navždy</string>
     <string name="calendars_reminder_time">V čase události</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minutu předem</item>
-        <item quantity="few">%1$d minuty předem</item>
-        <item quantity="other">%1$d minut předem</item>
+        <item quantity="one">%1$s minutu předem</item>
+        <item quantity="few">%1$s minuty předem</item>
+        <item quantity="other">%1$s minut předem</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d hodinu předem</item>
-        <item quantity="few">%1$d hodiny předem</item>
-        <item quantity="other">%1$d hodin předem</item>
+        <item quantity="one">%1$s hodinu předem</item>
+        <item quantity="few">%1$s hodiny předem</item>
+        <item quantity="other">%1$s hodin předem</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d den předem</item>
-        <item quantity="few">%1$d dny předem</item>
-        <item quantity="other">%1$d dní předem</item>
+        <item quantity="one">%1$s den předem</item>
+        <item quantity="few">%1$s dny předem</item>
+        <item quantity="other">%1$s dní předem</item>
     </plurals>
     <string name="calendars_reminder_add">Přidat připomenutí</string>
     <string name="calendars_reminder_remove">Odebrat připomenutí</string>
@@ -143,11 +143,11 @@
     <string name="calendars_poll_large">Kalendář je příliš velký</string>
     <string name="calendars_poll_invalid">Adresa nevrátila žádný kalendář</string>
     <string name="calendars_poll_unreachable">Adresu se nepodařilo kontaktovat</string>
-    <string name="calendars_poll_status">Adresa odpověděla %1$d</string>
+    <string name="calendars_poll_status">Adresa odpověděla %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="few">%1$d minuty</item>
-        <item quantity="other">%1$d minut</item>
+        <item quantity="one">%1$s minuta</item>
+        <item quantity="few">%1$s minuty</item>
+        <item quantity="other">%1$s minut</item>
     </plurals>
     <string name="calendars_preferences_zones">Zobrazovat události v jejich vlastním časovém pásmu</string>
     <string name="calendars_event_backwards">Končí dříve, než začne</string>

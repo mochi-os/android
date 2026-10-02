@@ -9,7 +9,7 @@
     <string name="settings_home_notification_prefs">Мэдэгдлийн тохиргоо</string>
     <string name="settings_home_accounts">Холбогдсон бүртгэлүүд</string>
     <string name="settings_home_interests">Сонирхлууд</string>
-    <string name="account_section_passkeys">Passkey-ууд</string>
+    <string name="account_section_passkeys">Нэвтрэх түлхүүрүүд</string>
     <string name="account_passkey_register">Нэвтрэх түлхүүр нэмэх</string>
     <string name="account_passkey_delete_title">Нэвтрэх түлхүүр устгах уу?</string>
     <string name="account_section_totp">Баталгаажуулагч апп</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Сэргээх кодууд</string>
     <string name="account_recovery_codes_title">Сэргээх кодууд</string>
     <string name="sessions_unknown_agent">Үл мэдэгдэх төхөөрөмж</string>
-    <string name="sessions_revoke_title">Сесс цуцлах уу?</string>
+    <string name="sessions_revoke_title">Сессийг хүчингүй болгох уу?</string>
     <string name="account_section_oauth">Гуравдагч талын нэвтрэлт</string>
     <string name="account_oauth_link">Бүртгэл холбох</string>
     <string name="account_unlink">Холбоо тасалах</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Дууссан</string>
     <string name="account_delete">Устгах</string>
     <string name="account_rename">Нэр өөрчлөх</string>
-    <string name="sessions_revoke">Цуцлах</string>
+    <string name="sessions_revoke">Хүчингүй болгох</string>
     <string name="account_disable">Идэвхгүй болгох</string>
     <string name="account_copy">Хуулах</string>
     <string name="account_copy_all">Бүгдийг хуулах</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Зам устгах уу?</string>
     <string name="route_path">Зам</string>
     <string name="route_method">Арга</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Апп</string>
     <string name="route_method_entity">Нэгж</string>
     <string name="route_method_redirect">Дахин чиглүүлэлт</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org-оос татах</string>
     <string name="system_status_copy">Хуулах</string>
     <string name="system_status_peers">Үеүүд</string>
-    <string name="system_status_known">Мэдэгдсэн</string>
+    <string name="system_status_peers_totals">Мэдэгдсэн %1$s · Холбогдсон %2$s · Цацалтын тор %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Мэдэгдсэн %1$s · Холбогдсон %2$s</string>
     <string name="system_status_peer_connected">Холбогдсон</string>
     <string name="system_status_peer_disconnected">Салгагдсан</string>
     <string name="system_status_peer_queued">Дараалалд буй зурвасууд</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Хасах</string>
     <string name="accounts_remove_title">Бүртгэл хасах уу?</string>
     <string name="system_documents_title">Баримтууд</string>
-    <string name="system_documents_description">Хэрэглэгчдэд харуулах серверийн дүрэм, нөхцөл, нууцлалын мэдэгдэл</string>
     <string name="system_documents_tab_rules">Серверийн дүрэм</string>
     <string name="system_documents_tab_terms">Нөхцөл</string>
     <string name="system_documents_tab_privacy">Нууцлал</string>
     <string name="system_documents_language">Хэл</string>
     <string name="system_documents_no_language">Энэ хэлэнд зориулсан баримт байхгүй.</string>
-    <string name="system_documents_customised">Тохируулсан</string>
     <string name="system_documents_using_default">Багц анхдагч ашиглаж байна</string>
     <string name="system_documents_revert">Анхдагчид буцаах</string>
     <string name="system_documents_save">Хадгалах</string>
@@ -178,32 +179,30 @@
     <string name="system_users_create_title">Хэрэглэгч үүсгэх</string>
     <string name="system_users_save_changes">Өөрчлөлт хадгалах</string>
     <string name="system_users_suspend">Хэрэглэгчийг түр зогсоох</string>
-    <string name="system_users_remove_suspension">Түр зогсолт хасах</string>
+    <string name="system_users_remove_suspension">Түр зогсоолтыг арилгах</string>
     <string name="system_users_delete">Хэрэглэгч устгах</string>
     <string name="system_users_delete_title">Хэрэглэгч устгах уу?</string>
     <string name="system_users_manage_sessions">Сешн удирдах</string>
-    <string name="system_users_sessions_description">Энэ хэрэглэгчийн идэвхтэй сессүүдийг үзэх, цуцлах.</string>
     <string name="system_users_sessions_empty">Энэ хэрэглэгч идэвхтэй сесстэй биш байна.</string>
-    <string name="system_users_revoke">Цуцлах</string>
-    <string name="system_users_revoke_all">Бүх сесс цуцлах</string>
+    <string name="system_users_revoke">Хүчингүй болгох</string>
+    <string name="system_users_revoke_all">Бүх сессийг хүчингүй болгох</string>
     <string name="system_users_unknown_browser">Үл мэдэгдэх хөтөч</string>
     <string name="system_users_unknown">Үл мэдэгдэх</string>
     <string name="system_users_previous">Өмнөх</string>
     <string name="system_users_next">Дараах</string>
     <string name="system_users_empty">Хэрэглэгч олдсонгүй</string>
     <string name="system_users_empty_search">Хайлтанд тохирох хэрэглэгч алга</string>
-    <string name="system_users_empty_search_hint">Хайлтын шалгуураа засахыг туршаад үз</string>
     <string name="system_users_toast_created">Хэрэглэгч үүсгэгдсэн</string>
     <string name="system_users_toast_updated">Хэрэглэгч шинэчлэгдсэн</string>
     <string name="system_users_toast_deleted">Хэрэглэгч устгагдсан</string>
     <string name="system_users_toast_suspended">Хэрэглэгчийг түр зогсоосон</string>
-    <string name="system_users_toast_suspension_removed">Түр зогсоолт хасагдсан</string>
-    <string name="system_users_toast_session_revoked">Сесс цуцалсан</string>
+    <string name="system_users_toast_suspension_removed">Түр зогсоолтыг арилгалаа</string>
+    <string name="system_users_toast_session_revoked">Сессийг хүчингүй болголоо</string>
     <string name="system_users_toast_create_failed">Хэрэглэгч үүсгэж чадсангүй</string>
     <string name="system_users_toast_update_failed">Хэрэглэгч шинэчилж чадсангүй</string>
     <string name="system_users_toast_delete_failed">Хэрэглэгч устгаж чадсангүй</string>
     <string name="system_users_toast_status_failed">Хэрэглэгчийн төлвийг шинэчилж чадсангүй</string>
-    <string name="system_users_toast_revoke_failed">Сешн хүчингүй болгож чадсангүй</string>
+    <string name="system_users_toast_revoke_failed">Сессийг хүчингүй болгож чадсангүй</string>
 
     <string name="settings_home_sessions">Сессүүд</string>
     <string name="settings_home_privacy">Нууцлалын бодлого</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Үйлчилгээний нөхцөл</string>
     <string name="account_passkeys_empty">Бүртгэгдсэн нэвтрэх түлхүүр байхгүй.</string>
     <string name="account_passkey_register_title">Нэвтрэх түлхүүр нэмэх</string>
-    <string name="account_passkey_register_message">Таны төхөөрөмж баталгаажуулахыг хүсэх болно. Нэвтрэх түлхүүр энэ төхөөрөмжтэй холбогдсон бөгөөд ирээдүйн нэвтрэлтүүдэд ашиглагдана.</string>
     <string name="account_passkey_name_label">Нэр (заавал биш)</string>
     <string name="account_passkey_delete_message">\"%1$s\" таныг дахин нэвтрүүлэхгүй.</string>
-    <string name="account_totp_description">Баталгаажуулах апп-аас 6 оронтой кодоор нэвтэрнэ үү.</string>
     <string name="account_totp_enabled">Баталгаажуулагч идэвхтэй.</string>
     <string name="account_totp_setup_step1">Энэ нууцыг өөрийн баталгаажуулах апп-д сканнердах эсвэл оруулна уу.</string>
     <string name="account_totp_setup_step2">Таны апп харуулсан 6 оронтой кодыг оруулна уу.</string>
     <string name="account_totp_code">Код</string>
     <string name="account_totp_disable_message">Та цаашид баталгаажуулагчийн кодоор нэвтэрч чадахгүй.</string>
     <string name="account_recovery_none">Сэргээх код үүсгээгүй.</string>
-    <string name="account_recovery_count">%1$d ашиглаагүй сэргээх код.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s сэргээх код үлдсэн.</item>
+        <item quantity="other">%1$s сэргээх код үлдсэн.</item>
+    </plurals>
     <string name="account_recovery_generate">Код үүсгэх</string>
     <string name="account_recovery_regenerate">Кодыг дахин үүсгэх</string>
     <string name="account_recovery_regen_title">Сэргээх кодуудыг дахин үүсгэх үү?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Сүүлд ашигласан %1$s</string>
     <string name="route_delete_message">Энэ нь \"%1$s\" замын маршрутыг арилгана.</string>
     <string name="route_empty">Тохируулсан маршрут алга.</string>
-    <string name="route_meta">Тэргүүлэх %1$d · %2$s</string>
+    <string name="route_meta">Тэргүүлэх %1$s · %2$s</string>
     <string name="interests_search_placeholder">Нэмэх сэдвээ хайна уу…</string>
     <string name="interests_empty">Одоохондоо сонирхол байхгүй.</string>
     <string name="interests_summary_regenerate">Хураангуйг дахин үүсгэх</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Энэ нь \"%1$s\" хэрэглэгчийг бүрмөсөн устгана. Энэ үйлдлийг буцаах боломжгүй.</string>
     <string name="system_users_sessions_title">%1$s-ийн сесс</string>
     <string name="system_users_session_last_accessed">Сүүлийн хандалт: %1$s</string>
-    <string name="system_users_revoke_all_title">Бүх сессийг цуцлах уу?</string>
+    <string name="system_users_revoke_all_title">Бүх сессийг хүчингүй болгох уу?</string>
     <string name="system_users_revoke_all_message">Энэ хэрэглэгчийн идэвхтэй бүх сесс гарна.</string>
-    <string name="system_users_pagination_status">%3$d хэрэглэгчээс %1$d–%2$d харагдаж байна</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$s хэрэглэгчээс %1$s–%2$s харагдаж байна</item>
+        <item quantity="other">%3$s хэрэглэгчээс %1$s–%2$s харагдаж байна</item>
+    </plurals>
     <string name="account_title">Бүртгэл</string>
     <string name="account_section_identity">Танилт</string>
     <string name="account_identity_identity">Танилт</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS баталгаажуулах</string>
     <string name="settings_home_domains">Домэйнүүд</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d хаяг руу туршилт илгээлээ</item>
-        <item quantity="other">%1$d хаяг руу туршилт илгээлээ</item>
+        <item quantity="one">%1$s хаяг руу туршилт илгээлээ</item>
+        <item quantity="other">%1$s хаяг руу туршилт илгээлээ</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 сесс цуцалсан</item>
-        <item quantity="other">%1$d сесс цуцалсан</item>
+        <item quantity="one">%1$s сессийг хүчингүй болголоо</item>
+        <item quantity="other">%1$s сессийг хүчингүй болголоо</item>
     </plurals>
     <string name="login_title">Нэвтрэх</string>
     <string name="login_section_methods">Нэвтрэх аргууд</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Нийтийн</string>
     <string name="system_status_reachability_private">Хувийн</string>
     <string name="system_status_reachability_unknown">Үл мэдэгдэх</string>
-    <string name="system_status_relay">Релегээр дамжуулан</string>
-    <string name="system_status_mesh">Цацалтын тор</string>
+    <string name="system_status_reachability_relay">%1$s · релегээр дамжуулан</string>
     <string name="system_status_broadcast">Сүүлийн цацалт</string>
     <string name="system_status_queued_broadcasts">Дараалалд буй өргөн нэвтрүүлгийн мессежүүд</string>
     <string name="system_setting_hostname_publish">Хостын нэр болон доменуудыг бусад серверт зарлах</string>
     <string name="system_setting_hostname">Бусад серверт зарласан хостын нэр</string>
     <string name="system_status_peer_id">Хосын ID</string>
     <string name="system_status_holepunch">Нүхлэлт</string>
-    <string name="system_status_holepunch_value">%1$d амжилттай · %2$d амжилтгүй</string>
     <string name="system_status_awaiting_routing">Чиглүүлэлт хүлээж буй мессежүүд</string>
     <string name="system_status_relay_service">Дамжуулагч үйлчилгээ</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d захиалга · %3$d хэлхээ · %4$d татгалзсан</string>
     <string name="route_target_select">Сонгох</string>
     <string name="account_data_description">Энэ болон бусад Mochi серверт сэргээж болох бүрэн нөөцлөлтийг татаж авна уу.</string>
     <string name="route_target_none">Боломжтой зорилтууд байхгүй</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Сүүлд харагдсан %1$s</string>
     <string name="notifprefs_device_app">%1$s · апп</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
-    <string name="notifprefs_test_partial">Тестийг %2$d хүрэх газраас %1$d-д илгээлээ</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Тестийг %2$s хаягаас %1$s хаяг руу илгээлээ</item>
+        <item quantity="other">Тестийг %2$s хаягаас %1$s хаяг руу илгээлээ</item>
+    </plurals>
     <string name="notifprefs_test_none">Очих газар тохируулаагүй</string>
     <string name="notifprefs_transport_fcm">Android пуш мэдэгдэл</string>
     <string name="notifprefs_no_destinations">Хүрэх газар алга</string>
@@ -385,13 +390,36 @@
     <string name="accounts_field_topic">Сэдэв</string>
     <string name="accounts_field_secret">Гарын үсгийн нууц</string>
     <string name="account_totp_open">Баталгаажуулагч аппад нээх</string>
-    <string name="accounts_revoke">Хандалтыг цуцлах</string>
+    <string name="accounts_revoke">Хандалтыг хүчингүй болгох</string>
     <string name="accounts_capability_calendar">Хуанли</string>
     <string name="accounts_capability_notify">Мэдэгдлүүд</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Нэвтрэх</string>
     <string name="accounts_provider_caldav">Хуанлийн сервер</string>
-    <string name="accounts_revoke_confirm">Энэ нь %1$s-ийн хуанлийн хандалтыг цуцална. %2$s-ээр нэвтрэх нь Нэвтрэх хуудсан дээр салгах хүртэл хэвээр байна.</string>
+    <string name="accounts_revoke_confirm">Энэ нь %1$s-ийн хуанлийн хандалтыг хүчингүй болгоно. %2$s-ээр нэвтрэх нь Нэвтрэх хуудсан дээр салгах хүртэл хэвээр байна.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Тодорхойгүй загвар</string>
+    <string name="system_documents_modified">Өөрчилсөн</string>
+    <string name="system_documents_discard_title">Өөрчлөлтийг хаях уу?</string>
+    <string name="system_documents_discard">Хаях</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s амжилттай</item>
+        <item quantity="other">%1$s амжилттай</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s амжилтгүй</item>
+        <item quantity="other">%1$s амжилтгүй</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s захиалга</item>
+        <item quantity="other">%1$s / %2$s захиалга</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s хэлхээ</item>
+        <item quantity="other">%1$s хэлхээ</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s татгалзсан</item>
+        <item quantity="other">%1$s татгалзсан</item>
+    </plurals>
 </resources>

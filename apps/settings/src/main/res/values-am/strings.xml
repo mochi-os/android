@@ -45,6 +45,8 @@
     <string name="route_delete_title">መንገድ ይሰረዝ?</string>
     <string name="route_path">መንገድ</string>
     <string name="route_method">ዘዴ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">መተግበሪያ</string>
     <string name="route_method_entity">አካል</string>
     <string name="route_method_redirect">ድጋሚ ማዘዋወር</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">ከ packages.mochi-os.org አውርድ</string>
     <string name="system_status_copy">ቅዳ</string>
     <string name="system_status_peers">አቻዎች</string>
-    <string name="system_status_known">የታወቁ</string>
+    <string name="system_status_peers_totals">የታወቁ %1$s · የተገናኙ %2$s · የስርጭት መረብ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">የታወቁ %1$s · የተገናኙ %2$s</string>
     <string name="system_status_peer_connected">ተገናኝቷል</string>
     <string name="system_status_peer_disconnected">ተቋርጧል</string>
     <string name="system_status_peer_queued">በሰልፍ ላይ ያሉ መልዕክቶች</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">አስወግድ</string>
     <string name="accounts_remove_title">መለያ ይወገድ?</string>
     <string name="system_documents_title">ሰነዶች</string>
-    <string name="system_documents_description">ለተጠቃሚዎችዎ የሚታዩ የሰርቨር ህጎች፣ ውሎችና መመሪያዎች፣ እና የግላዊነት ማስታወቂያ</string>
     <string name="system_documents_tab_rules">የሰርቨር ህጎች</string>
     <string name="system_documents_tab_terms">ውሎችና መመሪያዎች</string>
     <string name="system_documents_tab_privacy">ግላዊነት</string>
     <string name="system_documents_language">ቋንቋ</string>
     <string name="system_documents_no_language">ለዚህ ቋንቋ ምንም ሰነድ የለም።</string>
-    <string name="system_documents_customised">የተበጀ</string>
     <string name="system_documents_using_default">የተጠቃለለ ነባሪ በመጠቀም</string>
     <string name="system_documents_revert">ወደ ነባሪ መልስ</string>
     <string name="system_documents_save">ያስቀምጡ</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">ተጠቃሚ ሰርዝ</string>
     <string name="system_users_delete_title">ተጠቃሚ ይሰረዝ?</string>
     <string name="system_users_manage_sessions">ክፍለ ጊዜዎችን አስተዳድር</string>
-    <string name="system_users_sessions_description">ለዚህ ተጠቃሚ ንቁ ክፍለ-ጊዜዎችን ይመልከቱ እና ይሻሩ።</string>
     <string name="system_users_sessions_empty">ይህ ተጠቃሚ ምንም ንቁ ክፍለ-ጊዜዎች የሉትም።</string>
     <string name="system_users_revoke">ይሻሩ</string>
     <string name="system_users_revoke_all">ሁሉንም ክፍለ ጊዜዎች ይሰርዙ</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">ቀጣይ</string>
     <string name="system_users_empty">ምንም ተጠቃሚዎች አልተገኙም</string>
     <string name="system_users_empty_search">ከፍለጋዎ ጋር የሚዛመዱ ተጠቃሚዎች የሉም</string>
-    <string name="system_users_empty_search_hint">የፍለጋ መስፈርቶችዎን ለማስተካከል ይሞክሩ</string>
     <string name="system_users_toast_created">ተጠቃሚ ተፈጥሯል</string>
     <string name="system_users_toast_updated">ተጠቃሚ ተዘምኗል</string>
     <string name="system_users_toast_deleted">ተጠቃሚ ተሰርዟል</string>
@@ -209,19 +208,20 @@
     <string name="settings_home_privacy">የግል መረጃ ፖሊሲ</string>
     <string name="settings_home_rules">ህጎች</string>
     <string name="settings_home_terms">የአገልግሎት ውሎች</string>
-    <string name="account_passkeys_empty">የተመዘገቡ የመግቢያ ቁልፎች የሉም።</string>
-    <string name="account_passkey_register_title">የመግቢያ ቁልፍ ጨምር</string>
-    <string name="account_passkey_register_message">መሣሪያዎ እንዲያረጋግጡ ይጠይቅዎታል። የመግቢያ ቁልፉ ለዚህ መሣሪያ የተያያዘ ሲሆን ለወደፊት መግቢያዎች ጥቅም ላይ ይውላል።</string>
+    <string name="account_passkeys_empty">ምንም ፓስኪዎች አልተመዘገቡም።</string>
+    <string name="account_passkey_register_title">ፓስኪ ጨምር</string>
     <string name="account_passkey_name_label">ስም (አማራጭ)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ከአሁን በኋላ አያስገባዎትም።</string>
-    <string name="account_totp_description">ከማረጋገጫ መተግበሪያ በ6-አሃዝ ኮድ ይግቡ።</string>
     <string name="account_totp_enabled">አረጋጋጭ ነቅቷል።</string>
     <string name="account_totp_setup_step1">ይህን ሚስጥር በማረጋገጫ መተግበሪያዎ ይቃኙ ወይም ያስገቡ።</string>
     <string name="account_totp_setup_step2">መተግበሪያዎ የሚያሳየውን 6-አሃዝ ኮድ ያስገቡ።</string>
     <string name="account_totp_code">ኮድ</string>
     <string name="account_totp_disable_message">ከአሁን በኋላ በማረጋገጫ ኮድ መግባት አይችሉም።</string>
     <string name="account_recovery_none">የመልሶ ማግኛ ኮዶች አልተፈጠሩም።</string>
-    <string name="account_recovery_count">%1$d ያልተጠቀሙ የመልሶ ማግኛ ኮዶች።</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s ቀሪ የመልሶ ማግኛ ኮድ።</item>
+        <item quantity="other">%1$s ቀሪ የመልሶ ማግኛ ኮዶች።</item>
+    </plurals>
     <string name="account_recovery_generate">ኮዶችን ፍጠር</string>
     <string name="account_recovery_regenerate">ኮዶችን ዳግም ፍጠር</string>
     <string name="account_recovery_regen_title">የመልሶ ማግኛ ኮዶችን ዳግም መፍጠር?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">መጨረሻ የተጠቀመው %1$s</string>
     <string name="route_delete_message">ይህ ለ \"%1$s\" መንገድ ሩትን ያስወግዳል።</string>
     <string name="route_empty">የተዋቀሩ መንገዶች የሉም።</string>
-    <string name="route_meta">ቅድሚያ %1$d · %2$s</string>
+    <string name="route_meta">ቅድሚያ %1$s · %2$s</string>
     <string name="interests_search_placeholder">ለመጨመር ርዕሶችን ይፈልጉ…</string>
     <string name="interests_empty">እስካሁን ምንም ፍላጎቶች የሉም።</string>
     <string name="interests_summary_regenerate">ማጠቃለያውን እንደገና ፍጠር</string>
@@ -270,7 +270,10 @@
     <string name="system_users_session_last_accessed">የመጨረሻ መድረስ: %1$s</string>
     <string name="system_users_revoke_all_title">ሁሉንም ክፍለ ጊዜዎች ሰርዝ?</string>
     <string name="system_users_revoke_all_message">የዚህ ተጠቃሚ ሁሉም ንቁ ክፍለ ጊዜዎች ይወጣሉ።</string>
-    <string name="system_users_pagination_status">%3$d ተጠቃሚዎች ውስጥ %1$d–%2$d በማሳየት ላይ</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">ከ%3$s ተጠቃሚ ውስጥ %1$s–%2$s በማሳየት ላይ</item>
+        <item quantity="other">ከ%3$s ተጠቃሚዎች ውስጥ %1$s–%2$s በማሳየት ላይ</item>
+    </plurals>
     <string name="account_title">መለያ</string>
     <string name="account_section_identity">ማንነት</string>
     <string name="account_identity_identity">ማንነት</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ያረጋግጡ</string>
     <string name="settings_home_domains">ዶሜኖች</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">ሙከራ ወደ %1$d መድረሻ ተልኳል</item>
-        <item quantity="other">ሙከራ ወደ %1$d መድረሻዎች ተልኳል</item>
+        <item quantity="one">ሙከራ ወደ %1$s መድረሻ ተልኳል</item>
+        <item quantity="other">ሙከራ ወደ %1$s መድረሻዎች ተልኳል</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d ክፍለ ጊዜ ተሰርዟል</item>
-        <item quantity="other">%1$d ክፍለ ጊዜዎች ተሰርዘዋል</item>
+        <item quantity="one">%1$s ክፍለ ጊዜ ተሰርዟል</item>
+        <item quantity="other">%1$s ክፍለ ጊዜዎች ተሰርዘዋል</item>
     </plurals>
     <string name="login_title">ግባ</string>
     <string name="login_section_methods">የመግቢያ ዘዴዎች</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">ሕዝባዊ</string>
     <string name="system_status_reachability_private">የግል</string>
     <string name="system_status_reachability_unknown">ያልታወቀ</string>
-    <string name="system_status_relay">በሪሌይ በኩል</string>
-    <string name="system_status_mesh">የስርጭት መሽ</string>
+    <string name="system_status_reachability_relay">%1$s · በሪሌይ በኩል</string>
     <string name="system_status_broadcast">የመጨረሻ ስርጭት</string>
     <string name="system_status_queued_broadcasts">በወረፋ ላይ ያሉ የስርጭት መልዕክቶች</string>
     <string name="system_setting_hostname_publish">የአስተናጋጅ ስም እና ጎራዎችን ለሌሎች አገልጋዮች አሳውቅ</string>
     <string name="system_setting_hostname">ለሌሎች አገልጋዮች የተገለጸ የአስተናጋጅ ስም</string>
     <string name="system_status_peer_id">የእኩያ መታወቂያ</string>
     <string name="system_status_holepunch">የጉድጓድ ምት</string>
-    <string name="system_status_holepunch_value">%1$d ተሳክቷል · %2$d አልተሳካም</string>
     <string name="system_status_awaiting_routing">መልዕክቶች ለማስተላለፍ በመጠባበቅ ላይ</string>
     <string name="system_status_relay_service">የማስተላለፊያ አገልግሎት</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ቦታ ማስያዣ · %3$d ዙረቶች · %4$d ተከልክሏል</string>
     <string name="route_target_select">ምረጥ</string>
     <string name="account_data_description">በዚህ ወይም በሌላ የMochi አገልጋይ ላይ መመለስ የሚችሉትን ሙሉ ምትኬ ያውርዱ።</string>
     <string name="route_target_none">ምንም ዒላማዎች አይገኙም</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">መጨረሻ የታየው %1$s</string>
     <string name="notifprefs_device_app">%1$s · መተግበሪያ</string>
     <string name="notifprefs_device_push">%1$s · ግፋ</string>
-    <string name="notifprefs_test_partial">ሙከራው ከ%2$d መድረሻዎች ወደ %1$d ተልኳል</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">ሙከራው ከ%2$s መድረሻ ወደ %1$s ተልኳል</item>
+        <item quantity="other">ሙከራው ከ%2$s መድረሻዎች ወደ %1$s ተልኳል</item>
+    </plurals>
     <string name="notifprefs_test_none">ምንም መድረሻዎች አልተዋቀሩም</string>
     <string name="notifprefs_transport_fcm">የAndroid ግፋ</string>
     <string name="notifprefs_no_destinations">ምንም መድረሻ የለም</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">ይህ የ%1$s የቀን መቁጠሪያ መዳረሻን ይሽራል። በ%2$s መግባት በመግቢያ ገጽ ላይ እስኪያላቅቁት ድረስ ይቀጥላል።</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ያልታወቀ ገጽታ</string>
+    <string name="system_documents_modified">የተሻሻለ</string>
+    <string name="system_documents_discard_title">ለውጦቹ ይጣሉ?</string>
+    <string name="system_documents_discard">ጣል</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s ተሳክቷል</item>
+        <item quantity="other">%1$s ተሳክቷል</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s አልተሳካም</item>
+        <item quantity="other">%1$s አልተሳካም</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s ቦታ ማስያዣ</item>
+        <item quantity="other">%1$s / %2$s ቦታ ማስያዣዎች</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s ዙረት</item>
+        <item quantity="other">%1$s ዙረቶች</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s ተከልክሏል</item>
+        <item quantity="other">%1$s ተከልክሏል</item>
+    </plurals>
 </resources>

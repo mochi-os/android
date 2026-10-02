@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Utshintsho nezimvo</string>
     <string name="wikis_rss_copied">I-URL ye-RSS ikhutshelwe ku-clipboard</string>
     <string name="wikis_rss_failed">Ayiphumelelanga ukufumana ithokheni ye-RSS</string>
-    <string name="wikis_rss_revoke">Rhoxisa ufikelelo</string>
-    <string name="wikis_rss_revoked">Ufikelelo lwe-RSS lurhoxisiwe</string>
+    <string name="wikis_rss_revoke">Susa ufikelelo</string>
+    <string name="wikis_rss_revoked">Ufikelelo lwe-RSS lususiwe</string>
     <string name="wikis_find_title">Fumana iiwiki</string>
     <string name="wikis_find_no_results">Akukho zi-wiki zifumanekileyo</string>
     <string name="wikis_find_recommended_section">Iindululo zee-wiki</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Izaziso ngokuhlelwa kwamaphepha e-wiki, amagqabantshintshi nezimemo.</string>
     <string name="wikis_pageview_toc_expand">Bonisa itheyibhile yeziqulatho</string>
     <string name="wikis_pageview_toc_collapse">Fihla itheyibhile yeziqulatho</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Ihlaziyiwe %1$s</string>
     <string name="wikis_pageview_not_found_description">Iphepha “%1$s” alikho okwangoku.</string>
     <string name="wikis_pageview_share_chooser">Ikhonkco lewiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Sele uza kucima iphepha “%1$s” (%2$s). Esi senzo sinokubuyiselwa ngokubuyisela kwimbali.</string>
     <string name="wikis_delete_page_success">Iphepha licinyiwe</string>
     <string name="wikis_revert_page_title">Buyisela iphepha</string>
-    <string name="wikis_revert_page_message">Sele uza kubuyisela i-%1$s kuhlobo %2$d. Oku kuya kudala uhlaziyo olutsha ngesiqulatho sohlobo %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Kubuyiselwe kuhlobo %1$d</string>
-    <string name="wikis_revert_page_success">Kubuyiselwe kuhlobo %1$d</string>
+    <string name="wikis_revert_page_message">Sele uza kubuyisela i-%1$s kwinguqulelo %2$s. Oku kuya kudala uhlaziyo olutsha ngesiqulatho senguqulelo %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Kubuyiselwe kwinguqulelo %1$s</string>
+    <string name="wikis_revert_page_success">Kubuyiselwe kwinguqulelo %1$s</string>
     <string name="wikis_rename_page_renaming">Kutshintshwa igama…</string>
     <string name="wikis_rename_page_success">Igama lephepha litshintshiwe</string>
-    <string name="wikis_history_viewing">Ujonga imbali ye-%1$s, uhlobo lwangoku %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Ujonga imbali ye-%1$s, inguqulelo yangoku %2$s</string>
+    <string name="wikis_revision_version_badge">Inguqulelo %1$s</string>
     <string name="wikis_search_pages_placeholder">Khangela amaphepha ngesihloko okanye isiqulatho…</string>
     <string name="wikis_search_no_results">Akukho maphepha afunyenweyo e-“%1$s”. Zama amagama ahlukileyo okukhangela.</string>
     <string name="wikis_search_updated">Ihlaziyiwe %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">ngo-%1$s</string>
     <string name="wikis_revision_show_page">Bonisa iphepha</string>
     <string name="wikis_revision_compare_failed">Ayikwazanga ukulayisha inguqulelo yangaphambili ukuze kuthelekiswe.</string>
-    <string name="wikis_revision_changes_from">Iinguqu ukusuka kwinguqulelo %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Iinguqu ukusuka kwinguqulelo %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">ilizwi elinye</item>
-        <item quantity="other">amazwi ayi-%d</item>
+        <item quantity="other">amazwi ayi-%s</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">Impendulo %d</item>
-        <item quantity="other">+%d ezinye iimpendulo</item>
+        <item quantity="one">Impendulo %s</item>
+        <item quantity="other">+%s ezinye iimpendulo</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">Iphepha %d</item>
-        <item quantity="other">Amaphepha %d</item>
+        <item quantity="one">Iphepha %s</item>
+        <item quantity="other">Amaphepha %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">Ifayile %d</item>
-        <item quantity="other">Iifayile %d</item>
+        <item quantity="one">Ifayile %s</item>
+        <item quantity="other">Iifayile %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">Umfanekiso %d</item>
-        <item quantity="other">Imifanekiso %d</item>
+        <item quantity="one">Umfanekiso %s</item>
+        <item quantity="other">Imifanekiso %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">Uxwebhu %d</item>
-        <item quantity="other">Amaxwebhu %d</item>
+        <item quantity="one">Uxwebhu %s</item>
+        <item quantity="other">Amaxwebhu %s</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Iphepha %d nale thegi</item>
-        <item quantity="other">Amaphepha %d nale thegi</item>
+        <item quantity="one">Iphepha %s nale thegi</item>
+        <item quantity="other">Amaphepha %s nale thegi</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Kufunyenwe Iziphumo %1$d ku-«%2$s»</item>
-        <item quantity="other">Kufunyenwe Iziphumo %1$d ku-«%2$s»</item>
+        <item quantity="one">Kufunyenwe Iziphumo %1$s ku-«%2$s»</item>
+        <item quantity="other">Kufunyenwe Iziphumo %1$s ku-«%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ayikwazanga ukugcina umbhalo</string>
     <string name="wikis_attachments_upload_types">Iifayile ezixhaswayo: imifanekiso, i-PDF, i-DOC, i-DOCX, i-TXT, kunye ne-MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">I-URL entsha ye-RSS ikhutshelwe ku-clipboard</string>
     <string name="wikis_rss_exists">Le URL yosasazo sele ikhutshiwe kwaye ayinakuboniswa kwakhona.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Kubonisa uluvo %1$d lokuqala.</item>
-        <item quantity="other">Kubonisa izimvo %1$d zokuqala.</item>
+        <item quantity="one">Kubonisa uluvo %1$s lokuqala.</item>
+        <item quantity="other">Kubonisa izimvo %1$s zokuqala.</item>
     </plurals>
 </resources>

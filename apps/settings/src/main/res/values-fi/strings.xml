@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Yhdistetyt tilit</string>
     <string name="settings_home_interests">Kiinnostuksen kohteet</string>
     <string name="account_section_passkeys">Avainkoodit</string>
-    <string name="account_passkey_register">Lisää avain</string>
-    <string name="account_passkey_delete_title">Poistetaanko avain?</string>
+    <string name="account_passkey_register">Lisää avainkoodi</string>
+    <string name="account_passkey_delete_title">Poistetaanko avainkoodi?</string>
     <string name="account_section_totp">Todennussovellus</string>
     <string name="account_totp_setup">Aseta todennussovellus</string>
     <string name="account_totp_setup_title">Aseta todennussovellus</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Palautuskoodit</string>
     <string name="account_recovery_codes_title">Palautuskoodit</string>
     <string name="sessions_unknown_agent">Tuntematon laite</string>
-    <string name="sessions_revoke_title">Peruutetaanko istunto?</string>
+    <string name="sessions_revoke_title">Mitätöidäänkö istunto?</string>
     <string name="account_section_oauth">Kolmannen osapuolen kirjautuminen</string>
     <string name="account_oauth_link">Linkitä tili</string>
     <string name="account_unlink">Poista liitos</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Valmis</string>
     <string name="account_delete">Poista</string>
     <string name="account_rename">Nimeä uudelleen</string>
-    <string name="sessions_revoke">Peruuta</string>
+    <string name="sessions_revoke">Mitätöi</string>
     <string name="account_disable">Poista käytöstä</string>
     <string name="account_copy">Kopioi</string>
     <string name="account_copy_all">Kopioi kaikki</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Poistetaanko reitti?</string>
     <string name="route_path">Polku</string>
     <string name="route_method">Tapa</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Sovellus</string>
     <string name="route_method_entity">Entiteetti</string>
     <string name="route_method_redirect">Uudelleenohjaus</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Lataa osoitteesta packages.mochi-os.org</string>
     <string name="system_status_copy">Kopioi</string>
     <string name="system_status_peers">Vertaiset</string>
-    <string name="system_status_known">Tunnetut</string>
+    <string name="system_status_peers_totals">Tunnetut %1$s · Yhdistetyt %2$s · Lähetysmesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Tunnetut %1$s · Yhdistetyt %2$s</string>
     <string name="system_status_peer_connected">Yhdistetty</string>
     <string name="system_status_peer_disconnected">Ei yhteyttä</string>
     <string name="system_status_peer_queued">Jonossa olevat viestit</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Poista</string>
     <string name="accounts_remove_title">Poistetaanko tili?</string>
     <string name="system_documents_title">Asiakirjat</string>
-    <string name="system_documents_description">Palvelimen säännöt, käyttöehdot ja tietosuojailmoitus, jotka näytetään käyttäjillesi</string>
     <string name="system_documents_tab_rules">Palvelimen säännöt</string>
     <string name="system_documents_tab_terms">Käyttöehdot</string>
     <string name="system_documents_tab_privacy">Yksityisyys</string>
     <string name="system_documents_language">Kieli</string>
     <string name="system_documents_no_language">Tällä kielellä ei ole saatavilla dokumenttia.</string>
-    <string name="system_documents_customised">Mukautettu</string>
     <string name="system_documents_using_default">Käytössä mukana toimitettu oletus</string>
     <string name="system_documents_revert">Palauta oletukseen</string>
     <string name="system_documents_save">Tallenna</string>
@@ -182,28 +183,26 @@
     <string name="system_users_delete">Poista käyttäjä</string>
     <string name="system_users_delete_title">Poistetaanko käyttäjä?</string>
     <string name="system_users_manage_sessions">Hallitse istuntoja</string>
-    <string name="system_users_sessions_description">Näytä ja peruuta tämän käyttäjän aktiiviset istunnot.</string>
     <string name="system_users_sessions_empty">Tällä käyttäjällä ei ole aktiivisia istuntoja.</string>
-    <string name="system_users_revoke">Peruuta</string>
-    <string name="system_users_revoke_all">Peruuta kaikki istunnot</string>
+    <string name="system_users_revoke">Mitätöi</string>
+    <string name="system_users_revoke_all">Mitätöi kaikki istunnot</string>
     <string name="system_users_unknown_browser">Tuntematon selain</string>
     <string name="system_users_unknown">Tuntematon</string>
     <string name="system_users_previous">Edellinen</string>
     <string name="system_users_next">Seuraava</string>
     <string name="system_users_empty">Käyttäjiä ei löytynyt</string>
     <string name="system_users_empty_search">Yksikään käyttäjä ei vastaa hakuasi</string>
-    <string name="system_users_empty_search_hint">Yritä säätää hakuehtojasi</string>
     <string name="system_users_toast_created">Käyttäjä luotu</string>
     <string name="system_users_toast_updated">Käyttäjä päivitetty</string>
     <string name="system_users_toast_deleted">Käyttäjä poistettu</string>
     <string name="system_users_toast_suspended">Käyttäjä keskeytetty</string>
     <string name="system_users_toast_suspension_removed">Keskeytys poistettu</string>
-    <string name="system_users_toast_session_revoked">Istunto peruutettu</string>
+    <string name="system_users_toast_session_revoked">Istunto mitätöity</string>
     <string name="system_users_toast_create_failed">Käyttäjän luominen epäonnistui</string>
     <string name="system_users_toast_update_failed">Käyttäjän päivitys epäonnistui</string>
     <string name="system_users_toast_delete_failed">Käyttäjän poistaminen epäonnistui</string>
     <string name="system_users_toast_status_failed">Käyttäjän tilan päivitys epäonnistui</string>
-    <string name="system_users_toast_revoke_failed">Istunnon peruutus epäonnistui</string>
+    <string name="system_users_toast_revoke_failed">Istunnon mitätöinti epäonnistui</string>
 
     <string name="settings_home_sessions">Istunnot</string>
     <string name="settings_home_privacy">Tietosuojakäytäntö</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Käyttöehdot</string>
     <string name="account_passkeys_empty">Ei rekisteröityjä avainkoodeja.</string>
     <string name="account_passkey_register_title">Lisää avainkoodi</string>
-    <string name="account_passkey_register_message">Laitteesi pyytää sinua vahvistamaan. Avainkoodi on sidottu tähän laitteeseen ja sitä käytetään tulevissa kirjautumisissa.</string>
     <string name="account_passkey_name_label">Nimi (valinnainen)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ei enää kirjaa sinua sisään.</string>
-    <string name="account_totp_description">Kirjaudu sisään 6-numeroisella koodilla todennussovelluksesta.</string>
     <string name="account_totp_enabled">Todennin on käytössä.</string>
     <string name="account_totp_setup_step1">Skannaa tai syötä tämä salaisuus todennussovellukseesi.</string>
     <string name="account_totp_setup_step2">Syötä sovelluksen näyttämä 6-numeroinen koodi.</string>
     <string name="account_totp_code">Koodi</string>
     <string name="account_totp_disable_message">Et voi enää kirjautua sisään todenninkoodilla.</string>
     <string name="account_recovery_none">Palautuskoodeja ei ole luotu.</string>
-    <string name="account_recovery_count">%1$d käyttämätöntä palautuskoodia.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s palautuskoodi jäljellä.</item>
+        <item quantity="other">%1$s palautuskoodia jäljellä.</item>
+    </plurals>
     <string name="account_recovery_generate">Luo koodit</string>
     <string name="account_recovery_regenerate">Luo koodit uudelleen</string>
     <string name="account_recovery_regen_title">Luodaanko palautuskoodit uudelleen?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Viimeksi käytetty %1$s</string>
     <string name="route_delete_message">Tämä poistaa reitin polulle \"%1$s\".</string>
     <string name="route_empty">Reittejä ei ole määritetty.</string>
-    <string name="route_meta">Prioriteetti %1$d · %2$s</string>
+    <string name="route_meta">Prioriteetti %1$s · %2$s</string>
     <string name="interests_search_placeholder">Hae lisättäviä aiheita…</string>
     <string name="interests_empty">Ei vielä kiinnostuksen kohteita.</string>
     <string name="interests_summary_regenerate">Luo yhteenveto uudelleen</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Tämä poistaa pysyvästi käyttäjän \"%1$s\". Tätä toimintoa ei voi peruuttaa.</string>
     <string name="system_users_sessions_title">Käyttäjän %1$s istunnot</string>
     <string name="system_users_session_last_accessed">Viimeisin käyttö: %1$s</string>
-    <string name="system_users_revoke_all_title">Peruutetaanko kaikki istunnot?</string>
+    <string name="system_users_revoke_all_title">Mitätöidäänkö kaikki istunnot?</string>
     <string name="system_users_revoke_all_message">Kaikki tämän käyttäjän aktiiviset istunnot kirjataan ulos.</string>
-    <string name="system_users_pagination_status">Näytetään %1$d–%2$d / %3$d käyttäjää</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Näytetään %1$s–%2$s / %3$s käyttäjä</item>
+        <item quantity="other">Näytetään %1$s–%2$s / %3$s käyttäjää</item>
+    </plurals>
     <string name="account_title">Tili</string>
     <string name="account_section_identity">Identiteetti</string>
     <string name="account_identity_identity">Identiteetti</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Vahvista DNS</string>
     <string name="settings_home_domains">Verkkotunnukset</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Testi lähetetty %1$d kohteeseen</item>
-        <item quantity="other">Testi lähetetty %1$d kohteeseen</item>
+        <item quantity="one">Testi lähetetty %1$s kohteeseen</item>
+        <item quantity="other">Testi lähetetty %1$s kohteeseen</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 istunto peruutettu</item>
-        <item quantity="other">%1$d istuntoa peruutettu</item>
+        <item quantity="one">%1$s istunto mitätöity</item>
+        <item quantity="other">%1$s istuntoa mitätöity</item>
     </plurals>
     <string name="login_title">Kirjaudu sisään</string>
     <string name="login_section_methods">Kirjautumistavat</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Julkinen</string>
     <string name="system_status_reachability_private">Yksityinen</string>
     <string name="system_status_reachability_unknown">Tuntematon</string>
-    <string name="system_status_relay">Releen kautta</string>
-    <string name="system_status_mesh">Lähetysmesh</string>
+    <string name="system_status_reachability_relay">%1$s · välittäjän kautta</string>
     <string name="system_status_broadcast">Viimeisin lähetys</string>
     <string name="system_status_queued_broadcasts">Jonossa olevat lähetysviestit</string>
     <string name="system_setting_hostname_publish">Ilmoita isäntänimi ja verkkotunnukset muille palvelimille</string>
     <string name="system_setting_hostname">Muille palvelimille ilmoitettu isäntänimi</string>
     <string name="system_status_peer_id">Vertaistunnus</string>
     <string name="system_status_holepunch">Reiän puhkaisu</string>
-    <string name="system_status_holepunch_value">%1$d onnistui · %2$d epäonnistui</string>
     <string name="system_status_awaiting_routing">Reititystä odottavat viestit</string>
     <string name="system_status_relay_service">Välityspalvelu</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d varaukset · %3$d piirit · %4$d hylätty</string>
     <string name="route_target_select">Valitse</string>
     <string name="account_data_description">Lataa täydellinen varmuuskopio, jonka voit palauttaa tälle tai toiselle Mochi-palvelimelle.</string>
     <string name="route_target_none">Kohteita ei ole saatavilla</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Viimeksi nähty %1$s</string>
     <string name="notifprefs_device_app">%1$s · sovellus</string>
     <string name="notifprefs_device_push">%1$s · push-ilmoitukset</string>
-    <string name="notifprefs_test_partial">Testi lähetetty %1$d/%2$d kohteeseen</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Testi lähetetty %1$s/%2$s kohteeseen</item>
+        <item quantity="other">Testi lähetetty %1$s/%2$s kohteeseen</item>
+    </plurals>
     <string name="notifprefs_test_none">Kohteita ei ole määritetty</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Ei kohteita</string>
@@ -385,13 +390,36 @@
     <string name="accounts_field_topic">Aihe</string>
     <string name="accounts_field_secret">Allekirjoitussalaisuus</string>
     <string name="account_totp_open">Avaa todennussovelluksessa</string>
-    <string name="accounts_revoke">Peruuta käyttöoikeus</string>
+    <string name="accounts_revoke">Poista käyttöoikeus</string>
     <string name="accounts_capability_calendar">Kalenteri</string>
     <string name="accounts_capability_notify">Ilmoitukset</string>
     <string name="accounts_capability_ai">Tekoäly</string>
     <string name="accounts_capability_login">Kirjautuminen</string>
     <string name="accounts_provider_caldav">Kalenteripalvelin</string>
-    <string name="accounts_revoke_confirm">Tämä peruuttaa tilin %1$s kalenterin käyttöoikeuden. Kirjautuminen tilillä %2$s säilyy, kunnes poistat sen linkityksen kirjautumissivulla.</string>
+    <string name="accounts_revoke_confirm">Tämä poistaa tilin %1$s kalenterin käyttöoikeuden. Kirjautuminen tilillä %2$s säilyy, kunnes poistat sen linkityksen kirjautumissivulla.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tuntematon teema</string>
+    <string name="system_documents_modified">Muokattu</string>
+    <string name="system_documents_discard_title">Hylätäänkö muutokset?</string>
+    <string name="system_documents_discard">Hylkää</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s onnistui</item>
+        <item quantity="other">%1$s onnistui</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s epäonnistui</item>
+        <item quantity="other">%1$s epäonnistui</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s varaus</item>
+        <item quantity="other">%1$s / %2$s varausta</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s piiri</item>
+        <item quantity="other">%1$s piiriä</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s hylätty</item>
+        <item quantity="other">%1$s hylätty</item>
+    </plurals>
 </resources>

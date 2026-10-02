@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">बदल आणि टिप्पण्या</string>
     <string name="wikis_rss_copied">RSS URL क्लिपबोर्डवर कॉपी केले</string>
     <string name="wikis_rss_failed">RSS टोकन मिळवण्यात अयशस्वी</string>
-    <string name="wikis_rss_revoke">प्रवेश रद्द करा</string>
-    <string name="wikis_rss_revoked">RSS प्रवेश रद्द केला</string>
+    <string name="wikis_rss_revoke">प्रवेश मागे घ्या</string>
+    <string name="wikis_rss_revoked">RSS प्रवेश मागे घेतला</string>
     <string name="wikis_find_title">विकीज शोधा</string>
     <string name="wikis_find_no_results">विकीज सापडले नाहीत</string>
     <string name="wikis_find_recommended_section">शिफारस केलेले विकीज</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki पृष्ठ संपादने, टिप्पण्या आणि आमंत्रणांबद्दल सूचना.</string>
     <string name="wikis_pageview_toc_expand">अनुक्रमणिका दाखवा</string>
     <string name="wikis_pageview_toc_collapse">अनुक्रमणिका लपवा</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">अपडेट केले: %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” हे पृष्ठ अद्याप अस्तित्वात नाही.</string>
     <string name="wikis_pageview_share_chooser">विकी दुवा</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">तुम्ही “%1$s” (%2$s) हे पृष्ठ हटवणार आहात. इतिहासातून पुनर्संचयित करून ही क्रिया पूर्ववत करता येते.</string>
     <string name="wikis_delete_page_success">पृष्ठ हटवले</string>
     <string name="wikis_revert_page_title">पृष्ठ पूर्ववत करा</string>
-    <string name="wikis_revert_page_message">तुम्ही %1$s ला आवृत्ती %2$d वर परत आणणार आहात. यामुळे आवृत्ती %2$d च्या मजकुरासह नवीन पुनरावृत्ती तयार होईल.</string>
-    <string name="wikis_revert_page_default_comment">आवृत्ती %1$d वर परत आणले</string>
-    <string name="wikis_revert_page_success">आवृत्ती %1$d वर परत आणले</string>
+    <string name="wikis_revert_page_message">तुम्ही %1$s ला आवृत्ती %2$s वर परत आणणार आहात. यामुळे आवृत्ती %2$s च्या मजकुरासह नवीन पुनरावृत्ती तयार होईल.</string>
+    <string name="wikis_revert_page_default_comment">आवृत्ती %1$s वर परत आणले</string>
+    <string name="wikis_revert_page_success">आवृत्ती %1$s वर परत आणले</string>
     <string name="wikis_rename_page_renaming">नाव बदलत आहे…</string>
     <string name="wikis_rename_page_success">पृष्ठाचे नाव बदलले</string>
-    <string name="wikis_history_viewing">%1$s चा इतिहास पाहत आहात, सध्याची आवृत्ती %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">%1$s चा इतिहास पाहत आहात, सध्याची आवृत्ती %2$s</string>
+    <string name="wikis_revision_version_badge">आवृत्ती %1$s</string>
     <string name="wikis_search_pages_placeholder">शीर्षक किंवा मजकुरानुसार पृष्ठे शोधा…</string>
     <string name="wikis_search_no_results">“%1$s” साठी कोणतेही पृष्ठ सापडले नाही. वेगळे शोध शब्द वापरून पहा.</string>
     <string name="wikis_search_updated">अपडेट केले: %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s नुसार</string>
     <string name="wikis_revision_show_page">पृष्ठ दाखवा</string>
     <string name="wikis_revision_compare_failed">तुलनेसाठी मागील आवृत्ती लोड करता आली नाही.</string>
-    <string name="wikis_revision_changes_from">आवृत्ती %1$d → %2$d पासूनचे बदल</string>
+    <string name="wikis_revision_changes_from">आवृत्ती %1$s → %2$s पासूनचे बदल</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d टिप्पणी</item>
-        <item quantity="other">%d टिप्पण्या</item>
+        <item quantity="one">%s टिप्पणी</item>
+        <item quantity="other">%s टिप्पण्या</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d प्रतिसाद</item>
-        <item quantity="other">+%d अधिक प्रतिसाद</item>
+        <item quantity="one">%s प्रतिसाद</item>
+        <item quantity="other">+%s अधिक प्रतिसाद</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d पान</item>
-        <item quantity="other">%d पाने</item>
+        <item quantity="one">%s पान</item>
+        <item quantity="other">%s पाने</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d फाइल</item>
-        <item quantity="other">%d फाइल्स</item>
+        <item quantity="one">%s फाइल</item>
+        <item quantity="other">%s फाइल्स</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d प्रतिमा</item>
-        <item quantity="other">%d प्रतिमा</item>
+        <item quantity="one">%s प्रतिमा</item>
+        <item quantity="other">%s प्रतिमा</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d दस्तऐवज</item>
-        <item quantity="other">%d दस्तऐवज</item>
+        <item quantity="one">%s दस्तऐवज</item>
+        <item quantity="other">%s दस्तऐवज</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">या टॅगसह %d पान</item>
-        <item quantity="other">या टॅगसह %d पाने</item>
+        <item quantity="one">या टॅगसह %s पान</item>
+        <item quantity="other">या टॅगसह %s पाने</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">«%2$s» साठी %1$d निकाल सापडले</item>
-        <item quantity="other">«%2$s» साठी %1$d निकाल सापडले</item>
+        <item quantity="one">«%2$s» साठी %1$s निकाल सापडले</item>
+        <item quantity="other">«%2$s» साठी %1$s निकाल सापडले</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">कॅप्शन जतन करता आले नाही</string>
     <string name="wikis_attachments_upload_types">समर्थित फायली: प्रतिमा, PDF, DOC, DOCX, TXT, आणि MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">नवीन RSS URL क्लिपबोर्डवर कॉपी केले</string>
     <string name="wikis_rss_exists">हा फीड URL आधीच जारी केला आहे आणि पुन्हा दाखवता येणार नाही.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">पहिली %1$d टिप्पणी दाखवत आहे.</item>
-        <item quantity="other">पहिल्या %1$d टिप्पण्या दाखवत आहे.</item>
+        <item quantity="one">पहिली %1$s टिप्पणी दाखवत आहे.</item>
+        <item quantity="other">पहिल्या %1$s टिप्पण्या दाखवत आहे.</item>
     </plurals>
 </resources>

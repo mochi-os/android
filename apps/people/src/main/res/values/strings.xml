@@ -83,8 +83,8 @@
     <string name="people_books_rename">Rename</string>
     <string name="people_books_delete">Delete address book</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Delete %1$s and its %2$d contact?</item>
-        <item quantity="other">Delete %1$s and its %2$d contacts?</item>
+        <item quantity="one">Delete %1$s and its %2$s contact?</item>
+        <item quantity="other">Delete %1$s and its %2$s contacts?</item>
     </plurals>
 
     <!-- Invitations -->

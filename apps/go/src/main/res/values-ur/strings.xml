@@ -16,7 +16,7 @@
     <string name="go_delete_confirm">حذف کریں</string>
     <string name="go_delete_message">یہ گیم آپ کی فہرست سے ہٹا دی جائے گی۔ اسے واپس نہیں لیا جا سکتا۔</string>
     <string name="go_delete_title">گیم حذف کریں؟</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">قبول کریں</string>
     <string name="go_draw_decline">انکار کریں</string>
     <string name="go_draw_offered_received">%1$s نے ڈرا کی پیشکش کی</string>
@@ -67,11 +67,11 @@
     <string name="go_status_resigned">ہار مان لی</string>
     <string name="go_new_game_title">نیا Go کھیل</string>
     <string name="go_new_game_no_friends">کھیل شروع کرنے سے پہلے آپ کو دوست شامل کرنا ہوگا۔</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">سیاہ کے پہلے چلنے کی تلافی کے لیے سفید کے اسکور میں شامل کردہ پوائنٹس</string>
-    <string name="go_board_a11y">%1$d×%1$d Go بورڈ</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d گو بورڈ، سیاہ مہرہ رکھنے کی آپ کی باری</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d گو بورڈ، سفید مہرہ رکھنے کی آپ کی باری</string>
+    <string name="go_board_a11y">%1$s×%1$s Go بورڈ</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s گو بورڈ، سیاہ مہرہ رکھنے کی آپ کی باری</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s گو بورڈ، سفید مہرہ رکھنے کی آپ کی باری</string>
     <string name="go_status_scoring">گنتی — اسکور پر متفق ہوں یا کھیلتے رہیں</string>
     <string name="go_score_proposed">تجویز کردہ اسکور: کالا %1$s، سفید %2$s</string>
     <string name="go_score_opponent_accepted">آپ کا حریف یہ اسکور قبول کرتا ہے: کالا %1$s، سفید %2$s</string>

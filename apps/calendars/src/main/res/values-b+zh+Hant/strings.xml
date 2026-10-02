@@ -87,7 +87,7 @@
     <string name="calendars_event_delete_message">此操作無法復原。</string>
     <string name="calendars_scope_edit">變更此活動還是所有活動？</string>
     <string name="calendars_scope_delete">刪除此活動還是所有活動？</string>
-    <string name="calendars_scope_one">此活動</string>
+    <string name="calendars_scope_one">僅此活動</string>
     <string name="calendars_scope_all">所有活動</string>
     <string name="calendars_repeat_daily">每天</string>
     <string name="calendars_repeat_weekly">每週</string>
@@ -97,13 +97,13 @@
     <string name="calendars_repeat_forever">永久</string>
     <string name="calendars_reminder_time">準時</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">%1$d 分鐘前</item>
+        <item quantity="other">%1$s 分鐘前</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">%1$d 小時前</item>
+        <item quantity="other">%1$s 小時前</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">%1$d 天前</item>
+        <item quantity="other">%1$s 天前</item>
     </plurals>
     <string name="calendars_reminder_add">新增提醒</string>
     <string name="calendars_reminder_remove">移除提醒</string>
@@ -137,9 +137,9 @@
     <string name="calendars_poll_large">行事曆過大</string>
     <string name="calendars_poll_invalid">該地址未傳回行事曆</string>
     <string name="calendars_poll_unreachable">無法連線到該地址</string>
-    <string name="calendars_poll_status">該地址回應 %1$d</string>
+    <string name="calendars_poll_status">該地址回應 %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="other">%1$d 分鐘</item>
+        <item quantity="other">%1$s 分鐘</item>
     </plurals>
     <string name="calendars_preferences_zones">依事件本身的時區顯示</string>
     <string name="calendars_event_backwards">結束早於開始</string>

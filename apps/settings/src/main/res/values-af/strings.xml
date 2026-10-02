@@ -5,13 +5,13 @@
     <string name="settings_home_logout">Meld af</string>
     <string name="settings_home_account">Rekening</string>
     <string name="settings_home_preferences">Voorkeure</string>
-    <string name="settings_home_display">Vertoon</string>
+    <string name="settings_home_display">Vertoning</string>
     <string name="settings_home_notification_prefs">Kennisgewing-voorkeure</string>
     <string name="settings_home_accounts">Verbinde rekeninge</string>
     <string name="settings_home_interests">Belange</string>
-    <string name="account_section_passkeys">Wagwoordsleutels</string>
-    <string name="account_passkey_register">Voeg sleutelpas by</string>
-    <string name="account_passkey_delete_title">Verwyder sleutelpas?</string>
+    <string name="account_section_passkeys">Toegangsleutels</string>
+    <string name="account_passkey_register">Voeg toegangsleutel by</string>
+    <string name="account_passkey_delete_title">Verwyder toegangsleutel?</string>
     <string name="account_section_totp">Verifikasie-app</string>
     <string name="account_totp_setup">Stel verifikasie-program op</string>
     <string name="account_totp_setup_title">Stel verifikasie-program op</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Verwyder roete?</string>
     <string name="route_path">Pad</string>
     <string name="route_method">Metode</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Toepassing</string>
     <string name="route_method_entity">Entiteit</string>
     <string name="route_method_redirect">Herlei</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Laai af van packages.mochi-os.org</string>
     <string name="system_status_copy">Kopieer</string>
     <string name="system_status_peers">Eweknieë</string>
-    <string name="system_status_known">Bekend</string>
+    <string name="system_status_peers_totals">Bekend %1$s · Verbind %2$s · Uitsaai-mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Bekend %1$s · Verbind %2$s</string>
     <string name="system_status_peer_connected">Verbind</string>
     <string name="system_status_peer_disconnected">Ontkoppel</string>
     <string name="system_status_peer_queued">Boodskappe in tou</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Verwyder</string>
     <string name="accounts_remove_title">Verwyder rekening?</string>
     <string name="system_documents_title">Dokumente</string>
-    <string name="system_documents_description">Bediener-reëls, bepalings en voorwaardes, en privaatheidkennisgewing wat aan jou gebruikers gewys word</string>
     <string name="system_documents_tab_rules">Bediener-reëls</string>
     <string name="system_documents_tab_terms">Bepalings en voorwaardes</string>
     <string name="system_documents_tab_privacy">Privaatheid</string>
     <string name="system_documents_language">Taal</string>
     <string name="system_documents_no_language">Geen dokument beskikbaar vir hierdie taal nie.</string>
-    <string name="system_documents_customised">Aangepas</string>
     <string name="system_documents_using_default">Gebruik gebondelde verstek</string>
     <string name="system_documents_revert">Stel terug na verstek</string>
     <string name="system_documents_save">Stoor</string>
@@ -137,7 +138,7 @@
     <string name="system_settings_reset_title">Stel terug na verstek?</string>
     <string name="system_setting_apps_install_user">Laat gebruikers toe om apps te installeer</string>
     <string name="system_setting_auth_email">Meld aan met e-poskode</string>
-    <string name="system_setting_auth_passkey">Meld aan met passkey</string>
+    <string name="system_setting_auth_passkey">Meld aan met toegangsleutel</string>
     <string name="system_setting_auth_totp">Meld aan met TOTP-verifikasieprogram</string>
     <string name="system_setting_auth_recovery">Meld aan met herstelkode</string>
     <string name="system_setting_auth_oauth">Meld aan met OAuth 2.0</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">Verwyder gebruiker</string>
     <string name="system_users_delete_title">Verwyder gebruiker?</string>
     <string name="system_users_manage_sessions">Bestuur sessies</string>
-    <string name="system_users_sessions_description">Bekyk en herroep aktiewe sessies vir hierdie gebruiker.</string>
     <string name="system_users_sessions_empty">Hierdie gebruiker het geen aktiewe sessies nie.</string>
     <string name="system_users_revoke">Herroep</string>
     <string name="system_users_revoke_all">Herroep alle sessies</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">Volgende</string>
     <string name="system_users_empty">Geen gebruikers gevind nie</string>
     <string name="system_users_empty_search">Geen gebruikers stem ooreen met jou soektog nie</string>
-    <string name="system_users_empty_search_hint">Probeer jou soekkriteria aanpas</string>
     <string name="system_users_toast_created">Gebruiker geskep</string>
     <string name="system_users_toast_updated">Gebruiker opgedateer</string>
     <string name="system_users_toast_deleted">Gebruiker geskrap</string>
@@ -209,19 +208,20 @@
     <string name="settings_home_privacy">Privaatheidsbeleid</string>
     <string name="settings_home_rules">Reëls</string>
     <string name="settings_home_terms">Diensbepalings</string>
-    <string name="account_passkeys_empty">Geen toegangssleutels geregistreer nie.</string>
-    <string name="account_passkey_register_title">Voeg toegangssleutel by</string>
-    <string name="account_passkey_register_message">Jou toestel sal vra om te bevestig. Die toegangssleutel is aan hierdie toestel gekoppel en word gebruik vir toekomstige aanmeldings.</string>
+    <string name="account_passkeys_empty">Geen toegangsleutels geregistreer nie.</string>
+    <string name="account_passkey_register_title">Voeg \'n toegangsleutel by</string>
     <string name="account_passkey_name_label">Naam (opsioneel)</string>
     <string name="account_passkey_delete_message">\"%1$s\" sal jou nie meer aanteken nie.</string>
-    <string name="account_totp_description">Teken aan met \'n 6-syfer-kode vanaf \'n verifiëringstoepassing.</string>
     <string name="account_totp_enabled">Verifieerder is geaktiveer.</string>
     <string name="account_totp_setup_step1">Skandeer of voer hierdie geheim in jou verifiëringstoepassing in.</string>
     <string name="account_totp_setup_step2">Voer die 6-syfer-kode in wat jou toepassing wys.</string>
     <string name="account_totp_code">Kode</string>
     <string name="account_totp_disable_message">Jy sal nie meer met \'n verifieerderkode kan aanteken nie.</string>
     <string name="account_recovery_none">Geen herstelkodes gegenereer nie.</string>
-    <string name="account_recovery_count">%1$d ongebruikte herstelkodes.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s oorblywende herstelkode.</item>
+        <item quantity="other">%1$s oorblywende herstelkodes.</item>
+    </plurals>
     <string name="account_recovery_generate">Genereer kodes</string>
     <string name="account_recovery_regenerate">Hergenereer kodes</string>
     <string name="account_recovery_regen_title">Hergenereer herstelkodes?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Laaste gebruik %1$s</string>
     <string name="route_delete_message">Hierdie sal die roete vir die pad \"%1$s\" verwyder.</string>
     <string name="route_empty">Geen roetes gekonfigureer nie.</string>
-    <string name="route_meta">Prioriteit %1$d · %2$s</string>
+    <string name="route_meta">Prioriteit %1$s · %2$s</string>
     <string name="interests_search_placeholder">Soek onderwerpe om by te voeg…</string>
     <string name="interests_empty">Nog geen belangstellings nie.</string>
     <string name="interests_summary_regenerate">Hergenereer opsomming</string>
@@ -270,7 +270,10 @@
     <string name="system_users_session_last_accessed">Laaste toegang: %1$s</string>
     <string name="system_users_revoke_all_title">Herroep alle sessies?</string>
     <string name="system_users_revoke_all_message">Alle aktiewe sessies van hierdie gebruiker sal afgeteken word.</string>
-    <string name="system_users_pagination_status">Wys %1$d–%2$d van %3$d gebruikers</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Wys %1$s–%2$s van %3$s gebruiker</item>
+        <item quantity="other">Wys %1$s–%2$s van %3$s gebruikers</item>
+    </plurals>
     <string name="account_title">Rekening</string>
     <string name="account_section_identity">Identiteit</string>
     <string name="account_identity_identity">Identiteit</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Verifieer DNS</string>
     <string name="settings_home_domains">Domeine</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Toets na %1$d bestemming gestuur</item>
-        <item quantity="other">Toets na %1$d bestemmings gestuur</item>
+        <item quantity="one">Toets na %1$s bestemming gestuur</item>
+        <item quantity="other">Toets na %1$s bestemmings gestuur</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 sessie herroep</item>
-        <item quantity="other">%1$d sessies herroep</item>
+        <item quantity="one">%1$s sessie herroep</item>
+        <item quantity="other">%1$s sessies herroep</item>
     </plurals>
     <string name="login_title">Aanmelding</string>
     <string name="login_section_methods">Aanmeldmetodes</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Publiek</string>
     <string name="system_status_reachability_private">Privaat</string>
     <string name="system_status_reachability_unknown">Onbekend</string>
-    <string name="system_status_relay">Via relê</string>
-    <string name="system_status_mesh">Uitsaai-mesh</string>
+    <string name="system_status_reachability_relay">%1$s · via relê</string>
     <string name="system_status_broadcast">Laaste uitsending</string>
     <string name="system_status_queued_broadcasts">Uitsaaiboodskappe in die ry</string>
     <string name="system_setting_hostname_publish">Kondig gasheernaam en domeine aan ander bedieners aan</string>
     <string name="system_setting_hostname">Gasheernaam aan ander bedieners aangekondig</string>
     <string name="system_status_peer_id">Eweknoop-ID</string>
     <string name="system_status_holepunch">Gaatjie-deurboor</string>
-    <string name="system_status_holepunch_value">%1$d geslaag · %2$d misluk</string>
     <string name="system_status_awaiting_routing">Boodskappe wag op roetering</string>
     <string name="system_status_relay_service">Relêdiens</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reserverings · %3$d stroombane · %4$d geweier</string>
     <string name="route_target_select">Kies</string>
     <string name="account_data_description">Laai \'n volledige rugsteun af wat jy op hierdie of \'n ander Mochi-bediener kan herstel.</string>
     <string name="route_target_none">Geen teikens beskikbaar nie</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Laas gesien %1$s</string>
     <string name="notifprefs_device_app">%1$s · toepassing</string>
     <string name="notifprefs_device_push">%1$s · stoot</string>
-    <string name="notifprefs_test_partial">Toets na %1$d van %2$d bestemmings gestuur</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Toets na %1$s van %2$s bestemming gestuur</item>
+        <item quantity="other">Toets na %1$s van %2$s bestemmings gestuur</item>
+    </plurals>
     <string name="notifprefs_test_none">Geen bestemmings gekonfigureer nie</string>
     <string name="notifprefs_transport_fcm">Android-stoot</string>
     <string name="notifprefs_no_destinations">Geen bestemmings</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">Dit sal die kalendertoegang van %1$s herroep. Aanmelding met %2$s bly totdat jy dit op die Aanmeldbladsy ontkoppel.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Onbekende tema</string>
+    <string name="system_documents_modified">Gewysig</string>
+    <string name="system_documents_discard_title">Veranderinge weggooi?</string>
+    <string name="system_documents_discard">Gooi weg</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s geslaag</item>
+        <item quantity="other">%1$s geslaag</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s misluk</item>
+        <item quantity="other">%1$s misluk</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s reservering</item>
+        <item quantity="other">%1$s / %2$s reserverings</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s stroombaan</item>
+        <item quantity="other">%1$s stroombane</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s geweier</item>
+        <item quantity="other">%1$s geweier</item>
+    </plurals>
 </resources>

@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Փոփոխություններ և մեկնաբանություններ</string>
     <string name="wikis_rss_copied">RSS URL-ը պատճենվեց սեղմատախտակին</string>
     <string name="wikis_rss_failed">Չհաջողվեց ստանալ RSS տոկենը</string>
-    <string name="wikis_rss_revoke">Չեղարկել մուտքը</string>
-    <string name="wikis_rss_revoked">RSS մուտքը չեղարկվել է</string>
+    <string name="wikis_rss_revoke">Հետ վերցնել մուտքը</string>
+    <string name="wikis_rss_revoked">RSS մուտքը հետ է վերցվել</string>
     <string name="wikis_find_title">Գտնել wiki-ներ</string>
     <string name="wikis_find_no_results">Wiki-ներ չեն գտնվել</string>
     <string name="wikis_find_recommended_section">Առաջարկվող wiki-ներ</string>
@@ -74,7 +74,7 @@
     <string name="wikis_editor_save">Պահպանել</string>
     <string name="wikis_editor_saving">Պահպանում…</string>
     <string name="wikis_editor_create">Ստեղծել էջ</string>
-    <string name="wikis_editor_creating">Արժանահավատություն</string>
+    <string name="wikis_editor_creating">Ստեղծվում է…</string>
     <string name="wikis_editor_title_label">Վերնագիր</string>
     <string name="wikis_editor_slug_label">Էջի URL</string>
     <string name="wikis_editor_slug_hint">my-page-name</string>
@@ -132,7 +132,7 @@
     <string name="wikis_redirect_delete_confirm_title">Ջնջե՞լ վերահղումը։</string>
     <string name="wikis_tags_title">Բոլոր պիտակները</string>
     <string name="wikis_tags_empty_title">Թեգեր չեն գտնվել</string>
-    <string name="wikis_tags_empty_description">Ավելացնել թիմի անդամ</string>
+    <string name="wikis_tags_empty_description">Ավելացրեք պիտակներ՝ ձեր վիքիի էջերը խմբավորելու համար։</string>
     <string name="wikis_tag_pages_empty_title">Այս թեգով էջեր չեն գտնվել</string>
     <string name="wikis_tag_pages_empty_description">Փորձեք այլ թեգ:</string>
     <string name="wikis_tag_pages_all_tags_action">Բոլոր պիտակները</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Ծանուցումներ wiki էջերի խմբագրումների, մեկնաբանությունների և հրավերների մասին։</string>
     <string name="wikis_pageview_toc_expand">Ցուցադրել բովանդակությունը</string>
     <string name="wikis_pageview_toc_collapse">Թաքցնել բովանդակությունը</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Թարմացվեց %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” էջը դեռ գոյություն չունի։</string>
     <string name="wikis_pageview_share_chooser">Վիքիի հղում</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Դուք պատրաստվում եք ջնջել «%1$s» (%2$s) էջը։ Այս գործողությունը կարելի է հետարկել՝ պատմությունից վերականգնելով։</string>
     <string name="wikis_delete_page_success">Էջը ջնջվեց</string>
     <string name="wikis_revert_page_title">Հետ վերադարձնել էջը</string>
-    <string name="wikis_revert_page_message">Դուք պատրաստվում եք %1$s-ը վերադարձնել %2$d տարբերակին։ Սա կստեղծի նոր վերանայում՝ %2$d տարբերակի բովանդակությամբ։</string>
-    <string name="wikis_revert_page_default_comment">Վերադարձվել է %1$d տարբերակին</string>
-    <string name="wikis_revert_page_success">Վերադարձվել է %1$d տարբերակին</string>
+    <string name="wikis_revert_page_message">Դուք պատրաստվում եք %1$s-ը վերադարձնել %2$s տարբերակին։ Սա կստեղծի նոր վերանայում՝ %2$s տարբերակի բովանդակությամբ։</string>
+    <string name="wikis_revert_page_default_comment">Վերադարձվել է %1$s տարբերակին</string>
+    <string name="wikis_revert_page_success">Վերադարձվել է %1$s տարբերակին</string>
     <string name="wikis_rename_page_renaming">Վերանվանվում է…</string>
     <string name="wikis_rename_page_success">Էջը վերանվանվեց</string>
-    <string name="wikis_history_viewing">Դիտվում է %1$s-ի պատմությունը, ընթացիկ տարբերակը՝ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Դիտվում է %1$s-ի պատմությունը, ընթացիկ տարբերակը՝ %2$s</string>
+    <string name="wikis_revision_version_badge">Տարբերակ %1$s</string>
     <string name="wikis_search_pages_placeholder">Որոնել էջեր վերնագրով կամ բովանդակությամբ…</string>
     <string name="wikis_search_no_results">«%1$s»-ի համար էջեր չեն գտնվել։ Փորձեք այլ որոնման բառեր։</string>
     <string name="wikis_search_updated">Թարմացվեց %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">ըստ %1$s</string>
     <string name="wikis_revision_show_page">Ցույց տալ էջը</string>
     <string name="wikis_revision_compare_failed">Չհաջողվեց բեռնել նախորդ տարբերակը համեմատության համար։</string>
-    <string name="wikis_revision_changes_from">Փոփոխությունները %1$d → %2$d տարբերակից</string>
+    <string name="wikis_revision_changes_from">Փոփոխությունները %1$s → %2$s տարբերակից</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d մեկնաբանություն</item>
-        <item quantity="other">%d մեկնաբանություն</item>
+        <item quantity="one">%s մեկնաբանություն</item>
+        <item quantity="other">%s մեկնաբանություն</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d պատասխան</item>
-        <item quantity="other">+%d ևս պատասխան</item>
+        <item quantity="one">%s պատասխան</item>
+        <item quantity="other">+%s ևս պատասխան</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d էջ</item>
-        <item quantity="other">%d էջ</item>
+        <item quantity="one">%s էջ</item>
+        <item quantity="other">%s էջ</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d ֆայլ</item>
-        <item quantity="other">%d ֆայլ</item>
+        <item quantity="one">%s ֆայլ</item>
+        <item quantity="other">%s ֆայլ</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d պատկեր</item>
-        <item quantity="other">%d պատկեր</item>
+        <item quantity="one">%s պատկեր</item>
+        <item quantity="other">%s պատկեր</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d փաստաթուղթ</item>
-        <item quantity="other">%d փաստաթուղթ</item>
+        <item quantity="one">%s փաստաթուղթ</item>
+        <item quantity="other">%s փաստաթուղթ</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d էջ այս թեգով:</item>
-        <item quantity="other">%d էջ այս թեգով:</item>
+        <item quantity="one">%s էջ այս թեգով:</item>
+        <item quantity="other">%s էջ այս թեգով:</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Գտնվեց %1$d արդյունք «%2$s»-ի համար</item>
-        <item quantity="other">Գտնվեց %1$d արդյունք «%2$s»-ի համար</item>
+        <item quantity="one">Գտնվեց %1$s արդյունք «%2$s»-ի համար</item>
+        <item quantity="other">Գտնվեց %1$s արդյունք «%2$s»-ի համար</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Չհաջողվեց պահպանել մակագրությունը</string>
     <string name="wikis_attachments_upload_types">Աջակցվող ֆայլեր՝ պատկերներ, PDF, DOC, DOCX, TXT և MD։</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Նոր RSS URL-ը պատճենվեց սեղմատախտակին</string>
     <string name="wikis_rss_exists">Այս հոսքի URL-ն արդեն տրվել է և չի կարող կրկին ցուցադրվել։</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Ցուցադրվում է առաջին %1$d մեկնաբանությունը։</item>
-        <item quantity="other">Ցուցադրվում են առաջին %1$d մեկնաբանությունները։</item>
+        <item quantity="one">Ցուցադրվում է առաջին %1$s մեկնաբանությունը։</item>
+        <item quantity="other">Ցուցադրվում են առաջին %1$s մեկնաբանությունները։</item>
     </plurals>
 </resources>

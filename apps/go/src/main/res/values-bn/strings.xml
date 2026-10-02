@@ -16,7 +16,7 @@
     <string name="go_delete_confirm">মুছুন</string>
     <string name="go_delete_message">এই গেমটি আপনার তালিকা থেকে সরানো হবে। এটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
     <string name="go_delete_title">গেম মুছবেন?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">গ্রহণ করুন</string>
     <string name="go_draw_decline">প্রত্যাখ্যান করুন</string>
     <string name="go_draw_offered_received">%1$s ড্র প্রস্তাব করেছে</string>
@@ -67,11 +67,11 @@
     <string name="go_status_resigned">ছেড়ে দিয়েছে</string>
     <string name="go_new_game_title">নতুন Go গেম</string>
     <string name="go_new_game_no_friends">গেম শুরু করার আগে আপনাকে একজন বন্ধু যোগ করতে হবে।</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">কালো প্রথমে চাল দেওয়ার ক্ষতিপূরণ হিসেবে সাদার স্কোরে যোগ করা পয়েন্ট</string>
-    <string name="go_board_a11y">%1$d×%1$d Go বোর্ড</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d গো বোর্ড, কালো পাথর রাখার আপনার পালা</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d গো বোর্ড, সাদা পাথর রাখার আপনার পালা</string>
+    <string name="go_board_a11y">%1$s×%1$s Go বোর্ড</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s গো বোর্ড, কালো পাথর রাখার আপনার পালা</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s গো বোর্ড, সাদা পাথর রাখার আপনার পালা</string>
     <string name="go_status_scoring">গণনা — স্কোরে সম্মত হন বা খেলা চালিয়ে যান</string>
     <string name="go_score_proposed">প্রস্তাবিত স্কোর: কালো %1$s, সাদা %2$s</string>
     <string name="go_score_opponent_accepted">আপনার প্রতিপক্ষ এই স্কোর গ্রহণ করছেন: কালো %1$s, সাদা %2$s</string>

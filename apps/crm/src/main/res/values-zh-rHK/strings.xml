@@ -24,8 +24,6 @@
     <string name="crm_create_object_type">類型</string>
     <string name="crm_field_type">類型</string>
     <string name="crm_views_type">類型</string>
-    <string name="crm_settings_unsubscribe">取消訂閱</string>
-    <string name="crm_settings_unsubscribe_title">取消訂閱</string>
     <string name="crm_board_new">新增</string>
     <string name="crm_access_level_owner">擁有者</string>
     <string name="crm_loading">載入中…</string>
@@ -89,7 +87,7 @@
     <string name="crm_settings_delete_crm">刪除 CRM</string>
     <string name="crm_settings_delete_confirm_title">刪除 CRM</string>
     <string name="crm_settings_delete_confirm_message">確定要刪除此 CRM 嗎?所有物件、留言及設定將會永久移除。</string>
-    <string name="crm_settings_unsubscribe_message">確定要取消訂閱此 CRM 嗎?</string>
+    <string name="crm_settings_unsubscribe_message">確定要退訂此 CRM 嗎?</string>
     <string name="crm_object_unwatch">取消關注</string>
     <string name="crm_object_tab_properties">屬性</string>
     <string name="crm_object_delete_title">刪除物件</string>
@@ -139,7 +137,7 @@
     <string name="crm_board_no_options">欄位欄未設定任何選項</string>
     <string name="crm_board_unassigned">未指派</string>
     <string name="crm_board_rename_column">重新命名欄</string>
-    <string name="crm_board_nested_count">+%1$d 個巢狀</string>
+    <string name="crm_board_nested_count">+%1$s 個巢狀</string>
     <string name="crm_move_to_column">移至欄</string>
     <string name="crm_move_to_row">移至列</string>
     <string name="crm_move_after">於 %1$s 之後</string>

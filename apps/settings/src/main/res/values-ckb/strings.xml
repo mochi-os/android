@@ -45,6 +45,8 @@
     <string name="route_delete_title">ڕێچکە بسڕەوە؟</string>
     <string name="route_path">ڕێگا</string>
     <string name="route_method">ڕێگا</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s ← %2$s</string>
     <string name="route_method_app">ئەپ</string>
     <string name="route_method_entity">ئەنتیتی</string>
     <string name="route_method_redirect">ڕەوانەکردنەوە</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">داگرتن لە packages.mochi-os.org</string>
     <string name="system_status_copy">کۆپیکردن</string>
     <string name="system_status_peers">هاوتاکان</string>
-    <string name="system_status_known">ناسراو</string>
+    <string name="system_status_peers_totals">ناسراو %1$s · پەیوەستکراو %2$s · تۆڕی بڵاوکردنەوە %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ناسراو %1$s · پەیوەستکراو %2$s</string>
     <string name="system_status_peer_connected">پەیوەستکراو</string>
     <string name="system_status_peer_disconnected">پەیوەست نییە</string>
     <string name="system_status_peer_queued">پەیامەکانی ناو ڕیز</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">لابردن</string>
     <string name="accounts_remove_title">هەژمار لاببەیت؟</string>
     <string name="system_documents_title">دۆکومێنتەکان</string>
-    <string name="system_documents_description">ڕێساکانی ڕاژەکار، مەرج و یاساکان، و ڕاگەیاندنی نهێنی بۆ بەکارهێنەرانت پیشاندەدرێت</string>
     <string name="system_documents_tab_rules">ڕێساکانی ڕاژەکار</string>
     <string name="system_documents_tab_terms">مەرج و یاساکان</string>
     <string name="system_documents_tab_privacy">تایبەتمەندی</string>
     <string name="system_documents_language">زمان</string>
     <string name="system_documents_no_language">هیچ بەڵگەنامەیەک بۆ ئەم زمانە بەردەست نییە.</string>
-    <string name="system_documents_customised">تایبەتکراو</string>
     <string name="system_documents_using_default">بەکارهێنانی بنەڕەتی پێکەوەکراو</string>
     <string name="system_documents_revert">گەڕاندنەوە بۆ بنەڕەت</string>
     <string name="system_documents_save">پاشەکەوتکردن</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">سڕینەوەی بەکارهێنەر</string>
     <string name="system_users_delete_title">بەکارهێنەر بسڕەوە؟</string>
     <string name="system_users_manage_sessions">بەڕێوەبردنی نشستەکان</string>
-    <string name="system_users_sessions_description">دانیشتنە چالاکەکانی ئەم بەکارهێنەرە ببینە و هەڵبوەشێنەوە.</string>
     <string name="system_users_sessions_empty">ئەم بەکارهێنەرە هیچ دانیشتنێکی چالاکی نییە.</string>
     <string name="system_users_revoke">ڕاگرتن</string>
     <string name="system_users_revoke_all">ڕاگرتنی هەموو دانیشتنەکان</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">دواتر</string>
     <string name="system_users_empty">هیچ بەکارهێنەرێک نەدۆزرایەوە</string>
     <string name="system_users_empty_search">هیچ بەکارهێنەرێک لەگەڵ گەڕانەکەت یەکناگرێتەوە</string>
-    <string name="system_users_empty_search_hint">هەوڵبدە پێوەرەکانی گەڕانت ڕێکبخەیت</string>
     <string name="system_users_toast_created">بەکارهێنەر دروستکرا</string>
     <string name="system_users_toast_updated">بەکارهێنەر نوێکرایەوە</string>
     <string name="system_users_toast_deleted">بەکارهێنەر سڕایەوە</string>
@@ -209,19 +208,20 @@
     <string name="settings_home_privacy">ڕێنماییەکانی پاراستنی نهێنی</string>
     <string name="settings_home_rules">ڕێساکان</string>
     <string name="settings_home_terms">مەرجەکانی خزمەتگوزاری</string>
-    <string name="account_passkeys_empty">ھیچ کلیلێکی چوونەژوورەوە تۆمار نەکراوە.</string>
-    <string name="account_passkey_register_title">کلیلی چوونەژوورەوە زیاد بکە</string>
-    <string name="account_passkey_register_message">ئامێرەکەت داوای پشتڕاستکردنەوەت لێ دەکات. کلیلەکە بەم ئامێرە بەستراوەتەوە و بۆ چوونەژوورەوەی داھاتوو بەکاردێت.</string>
+    <string name="account_passkeys_empty">هیچ پاسکییەک تۆمار نەکراوە.</string>
+    <string name="account_passkey_register_title">پاسکییەک زیاد بکە</string>
     <string name="account_passkey_name_label">ناو (ھەڵبژاردن)</string>
     <string name="account_passkey_delete_message">\"%1$s\" چیتر تۆ ناھێنێتە ژوورەوە.</string>
-    <string name="account_totp_description">بە کۆدێکی 6 ژمارەیی لە ئەپی پشتڕاستکردنەوە بێرە ژوورەوە.</string>
     <string name="account_totp_enabled">پشتڕاستکەرەوە چالاککراوە.</string>
     <string name="account_totp_setup_step1">ئەم نهێنییە لە ئەپی پشتڕاستکردنەوەکەت سکان بکە یان بنووسە.</string>
     <string name="account_totp_setup_step2">کۆدی 6 ژمارەیی کە ئەپەکەت پیشانی دەدات بنووسە.</string>
     <string name="account_totp_code">کۆد</string>
     <string name="account_totp_disable_message">چیتر ناتوانیت بە کۆدی پشتڕاستکەرەوە بێیتە ژوورەوە.</string>
     <string name="account_recovery_none">کۆدی گەڕاندنەوە دروست نەکراوە.</string>
-    <string name="account_recovery_count">%1$d کۆدی گەڕاندنەوەی بەکارنەھاتوو.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s کۆدی گەڕاندنەوە ماوە.</item>
+        <item quantity="other">%1$s کۆدی گەڕاندنەوە ماوە.</item>
+    </plurals>
     <string name="account_recovery_generate">کۆدەکان دروست بکە</string>
     <string name="account_recovery_regenerate">کۆدەکان دوبارە دروست بکە</string>
     <string name="account_recovery_regen_title">کۆدەکانی گەڕاندنەوە دوبارە دروست بکەینەوە؟</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">کۆتا بەکارھێنان %1$s</string>
     <string name="route_delete_message">ئەمە ڕێگای \"%1$s\" لادەبات.</string>
     <string name="route_empty">ڕێگایەک ڕێکخراو نییە.</string>
-    <string name="route_meta">پێشینەیی %1$d · %2$s</string>
+    <string name="route_meta">پێشینەیی %1$s · %2$s</string>
     <string name="interests_search_placeholder">بابەت بگەڕێ بۆ زیادکردن…</string>
     <string name="interests_empty">ھێشتا ھیچ ئارەزوویەک نییە.</string>
     <string name="interests_summary_regenerate">دروستکردنەوەی پوختە</string>
@@ -270,7 +270,10 @@
     <string name="system_users_session_last_accessed">کۆتا دەستپێگەیشتن: %1$s</string>
     <string name="system_users_revoke_all_title">ھەموو دانیشتنەکان ھەڵبوەشێنرێتەوە؟</string>
     <string name="system_users_revoke_all_message">ھەموو دانیشتنە چالاکەکانی ئەم بەکارھێنەرە دەربەرکراو دەبن.</string>
-    <string name="system_users_pagination_status">پیشاندانی %1$d–%2$d لە %3$d بەکارھێنەر</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">پیشاندانی %1$s–%2$s لە %3$s بەکارھێنەر</item>
+        <item quantity="other">پیشاندانی %1$s–%2$s لە %3$s بەکارھێنەر</item>
+    </plurals>
     <string name="account_title">هەژمار</string>
     <string name="account_section_identity">ناسنامە</string>
     <string name="account_identity_identity">ناسنامە</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS پشتڕاستبکە</string>
     <string name="settings_home_domains">دۆمەینەکان</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">تاقیکردنەوە بۆ %1$d مەبەست نێردرا</item>
-        <item quantity="other">تاقیکردنەوە بۆ %1$d مەبەست نێردرا</item>
+        <item quantity="one">تاقیکردنەوە بۆ %1$s مەبەست نێردرا</item>
+        <item quantity="other">تاقیکردنەوە بۆ %1$s مەبەست نێردرا</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">١ دانیشتن هەڵوەشایەوە</item>
-        <item quantity="other">%1$d دانیشتن هەڵوەشایەوە</item>
+        <item quantity="one">%1$s دانیشتن هەڵوەشایەوە</item>
+        <item quantity="other">%1$s دانیشتن هەڵوەشایەوە</item>
     </plurals>
     <string name="login_title">چوونەژوورەوە</string>
     <string name="login_section_methods">شێوازەکانی چوونەژوورەوە</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">گشتی</string>
     <string name="system_status_reachability_private">تایبەت</string>
     <string name="system_status_reachability_unknown">نەناسراو</string>
-    <string name="system_status_relay">لە ڕێگەی گواستنەوە</string>
-    <string name="system_status_mesh">تۆڕی بڵاوکردنەوە</string>
+    <string name="system_status_reachability_relay">%1$s · لە ڕێگەی گواستنەوە</string>
     <string name="system_status_broadcast">دوایین بڵاوکردنەوە</string>
     <string name="system_status_queued_broadcasts">نامە بڵاوکراوەکانی ڕیزکراو</string>
     <string name="system_setting_hostname_publish">ناوی هۆست و دۆمەینەکان بە ڕاژەکارەکانی تر ڕابگەیەنە</string>
     <string name="system_setting_hostname">ناوی هۆستی ڕاگەیەنراو بە ڕاژەکارەکانی تر</string>
     <string name="system_status_peer_id">ناسنامەی هاوتا</string>
     <string name="system_status_holepunch">کونکردن</string>
-    <string name="system_status_holepunch_value">%1$d سەرکەوتوو · %2$d شکستخواردوو</string>
     <string name="system_status_awaiting_routing">نامەکان چاوەڕێی ڕێڕەوکردنن</string>
     <string name="system_status_relay_service">خزمەتی گواستنەوە</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d حیجزکردن · %3$d بازنە · %4$d ڕەتکراوە</string>
     <string name="route_target_select">هەڵبژاردن</string>
     <string name="account_data_description">پاڵپشتێکی تەواو دابەزێنە کە دەتوانیت لەم ڕاژە یان ڕاژەیەکی تری Mochi بگەڕێنیتەوە.</string>
     <string name="route_target_none">هیچ ئامانجێک بەردەست نییە</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">دوایین جار بینرا %1$s</string>
     <string name="notifprefs_device_app">%1$s · ئەپ</string>
     <string name="notifprefs_device_push">%1$s · پوش</string>
-    <string name="notifprefs_test_partial">تاقیکردنەوە نێردرا بۆ %1$d لە %2$d مەبەست</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">تاقیکردنەوە نێردرا بۆ %1$s لە %2$s مەبەست</item>
+        <item quantity="other">تاقیکردنەوە نێردرا بۆ %1$s لە %2$s مەبەست</item>
+    </plurals>
     <string name="notifprefs_test_none">هیچ گەیشتنگایەک ڕێکنەخراوە</string>
     <string name="notifprefs_transport_fcm">پاڵنانی Android</string>
     <string name="notifprefs_no_destinations">هیچ ئامانجێک نییە</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">ئەمە دەستڕاگەیشتنی ڕۆژژمێری %1$s هەڵدەوەشێنێتەوە. چوونەژوورەوە بە %2$s دەمێنێتەوە تا لە پەڕەی چوونەژوورەوە لێی جیا دەکەیتەوە.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">ڕووکاری نەناسراو</string>
+    <string name="system_documents_modified">دەستکاریکراو</string>
+    <string name="system_documents_discard_title">گۆڕانکارییەکان فڕێبدرێن؟</string>
+    <string name="system_documents_discard">فڕێدان</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s سەرکەوتوو</item>
+        <item quantity="other">%1$s سەرکەوتوو</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s شکستخواردوو</item>
+        <item quantity="other">%1$s شکستخواردوو</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s حیجزکردن</item>
+        <item quantity="other">%1$s / %2$s حیجزکردن</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s بازنە</item>
+        <item quantity="other">%1$s بازنە</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s ڕەتکراوە</item>
+        <item quantity="other">%1$s ڕەتکراوە</item>
+    </plurals>
 </resources>

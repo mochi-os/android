@@ -215,7 +215,7 @@ fun GoGameDetailScreen(
     val isActive = game?.status == "active"
     val canPass = isActive && state.isMyTurn
     val title = if (game != null && game.boardSize != 19) {
-        stringResource(R.string.go_detail_title_with_size, opponentName, game.boardSize)
+        stringResource(R.string.go_detail_title_with_size, opponentName, game.boardSize.toString())
     } else {
         opponentName
     }

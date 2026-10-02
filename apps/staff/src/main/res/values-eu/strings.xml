@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Oharrak</string>
     <string name="staff_accounts_reason_label">Arrazoia</string>
     <string name="staff_accounts_reason_optional_label">Arrazoia (aukerakoa)</string>
-    <string name="staff_accounts_sales">%1$d salmenta</string>
+    <string name="staff_accounts_sales">%1$s salmenta</string>
     <string name="staff_accounts_search_clear">Garbitu bilaketa</string>
     <string name="staff_accounts_search_placeholder">Bilatu</string>
     <string name="staff_accounts_seller_buyers">Erostaileak soilik</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Izengabea</string>
     <string name="staff_accounts_unsuspend">Etena kendu</string>
     <string name="staff_accounts_unsuspended_toast">Kontuaren etena kendua</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Utzi</string>
     <string name="staff_appeals_decide">Erabaki</string>
     <string name="staff_appeals_decision_denied">Mantendu zerrendapena errefusatuta</string>

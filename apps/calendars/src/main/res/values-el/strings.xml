@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">Για πάντα</string>
     <string name="calendars_reminder_time">Την ώρα του συμβάντος</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d λεπτό πριν</item>
-        <item quantity="other">%1$d λεπτά πριν</item>
+        <item quantity="one">%1$s λεπτό πριν</item>
+        <item quantity="other">%1$s λεπτά πριν</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d ώρα πριν</item>
-        <item quantity="other">%1$d ώρες πριν</item>
+        <item quantity="one">%1$s ώρα πριν</item>
+        <item quantity="other">%1$s ώρες πριν</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ημέρα πριν</item>
-        <item quantity="other">%1$d ημέρες πριν</item>
+        <item quantity="one">%1$s ημέρα πριν</item>
+        <item quantity="other">%1$s ημέρες πριν</item>
     </plurals>
     <string name="calendars_reminder_add">Προσθήκη υπενθύμισης</string>
     <string name="calendars_reminder_remove">Αφαίρεση υπενθύμισης</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">Το ημερολόγιο είναι πολύ μεγάλο</string>
     <string name="calendars_poll_invalid">Η διεύθυνση δεν επέστρεψε ημερολόγιο</string>
     <string name="calendars_poll_unreachable">Δεν ήταν δυνατή η πρόσβαση στη διεύθυνση</string>
-    <string name="calendars_poll_status">Η διεύθυνση απάντησε %1$d</string>
+    <string name="calendars_poll_status">Η διεύθυνση απάντησε %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d λεπτό</item>
-        <item quantity="other">%1$d λεπτά</item>
+        <item quantity="one">%1$s λεπτό</item>
+        <item quantity="other">%1$s λεπτά</item>
     </plurals>
     <string name="calendars_preferences_zones">Εμφάνιση συμβάντων στη δική τους ζώνη ώρας</string>
     <string name="calendars_event_backwards">Λήγει πριν αρχίσει</string>

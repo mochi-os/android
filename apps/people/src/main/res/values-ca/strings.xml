@@ -180,8 +180,8 @@
     <string name="people_books_create">Crea una llibreta d\'adreces</string>
     <string name="people_books_delete">Suprimeix la llibreta d\'adreces</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Voleu suprimir %1$s i el seu %2$d contacte?</item>
-        <item quantity="other">Voleu suprimir %1$s i els seus %2$d contactes?</item>
+        <item quantity="one">Voleu suprimir %1$s i el seu %2$s contacte?</item>
+        <item quantity="other">Voleu suprimir %1$s i els seus %2$s contactes?</item>
     </plurals>
     <string name="people_welcome_body">Trobeu amics per tot Mochi i connecteu-vos-hi. Toqueu Afegeix un contacte per enviar una invitació.</string>
     <string name="people_person_state_contact">Als contactes</string>

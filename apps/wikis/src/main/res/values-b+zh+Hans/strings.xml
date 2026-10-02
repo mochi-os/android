@@ -22,17 +22,17 @@
     <string name="wikis_page_action_recent_changes">最近更改</string>
     <string name="wikis_page_action_new_page">新页面</string>
     <string name="wikis_page_action_settings">设置</string>
-    <string name="wikis_page_action_unsubscribe">取消订阅</string>
+    <string name="wikis_page_action_unsubscribe">退订</string>
     <string name="wikis_title">维基</string>
     <string name="wikis_empty_title">创建您的第一个 Wiki</string>
     <string name="wikis_empty_subtitle">搜索 wiki 以订阅,或创建一个以发布你自己的文档。</string>
     <string name="wikis_create_button">创建 Wiki</string>
     <string name="wikis_recommended_section">推荐的 Wiki</string>
     <string name="wikis_subscribe_button">订阅</string>
-    <string name="wikis_unsubscribe_action">取消订阅</string>
-    <string name="wikis_unsubscribing">正在取消订阅…</string>
-    <string name="wikis_unsubscribe_confirm_title">取消订阅</string>
-    <string name="wikis_unsubscribe_success">已取消订阅</string>
+    <string name="wikis_unsubscribe_action">退订</string>
+    <string name="wikis_unsubscribing">正在退订…</string>
+    <string name="wikis_unsubscribe_confirm_title">退订</string>
+    <string name="wikis_unsubscribe_success">已退订</string>
     <string name="wikis_subscribe_failed">订阅失败</string>
     <string name="wikis_rss_menu">RSS 订阅源</string>
     <string name="wikis_rss_changes">更改</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">关于 wiki 页面编辑、评论和邀请的通知。</string>
     <string name="wikis_pageview_toc_expand">显示目录</string>
     <string name="wikis_pageview_toc_collapse">隐藏目录</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">更新于 %1$s</string>
     <string name="wikis_pageview_not_found_description">页面\"%1$s\"尚不存在。</string>
     <string name="wikis_pageview_share_chooser">维基链接</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">链接</string>
     <string name="wikis_open_sidebar">打开侧边栏</string>
     <string name="wikis_search_placeholder">搜索 wiki…</string>
-    <string name="wikis_unsubscribe_confirm_message">确定要取消订阅 %1$s 吗?</string>
+    <string name="wikis_unsubscribe_confirm_message">确定要退订 %1$s 吗?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">按名称、ID、指纹或 URL 搜索…</string>
     <string name="wikis_join_search_button">搜索 wikis…</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">您即将删除页面\"%1$s\"(%2$s)。此操作可通过从历史记录恢复来撤销。</string>
     <string name="wikis_delete_page_success">页面已删除</string>
     <string name="wikis_revert_page_title">还原页面</string>
-    <string name="wikis_revert_page_message">您即将将 %1$s 还原到版本 %2$d。这将使用版本 %2$d 的内容创建新修订。</string>
-    <string name="wikis_revert_page_default_comment">已还原到版本 %1$d</string>
-    <string name="wikis_revert_page_success">已还原到版本 %1$d</string>
+    <string name="wikis_revert_page_message">您即将将 %1$s 还原到版本 %2$s。这将使用版本 %2$s 的内容创建新修订。</string>
+    <string name="wikis_revert_page_default_comment">已还原到版本 %1$s</string>
+    <string name="wikis_revert_page_success">已还原到版本 %1$s</string>
     <string name="wikis_rename_page_renaming">正在重命名…</string>
     <string name="wikis_rename_page_success">页面已重命名</string>
-    <string name="wikis_history_viewing">正在查看 %1$s 的历史记录,当前版本 %2$d</string>
-    <string name="wikis_revision_version_badge">版本 %1$d</string>
+    <string name="wikis_history_viewing">正在查看 %1$s 的历史记录,当前版本 %2$s</string>
+    <string name="wikis_revision_version_badge">版本 %1$s</string>
     <string name="wikis_search_pages_placeholder">按标题或内容搜索页面…</string>
     <string name="wikis_search_no_results">未找到\"%1$s\"的页面。请尝试其他搜索词。</string>
     <string name="wikis_search_updated">更新于 %1$s</string>
@@ -289,37 +289,37 @@
     <string name="wikis_revision_author">按 %1$s</string>
     <string name="wikis_revision_show_page">显示页面</string>
     <string name="wikis_revision_compare_failed">无法加载先前版本进行比较。</string>
-    <string name="wikis_revision_changes_from">从版本 %1$d → %2$d 的更改</string>
+    <string name="wikis_revision_changes_from">从版本 %1$s → %2$s 的更改</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d 条评论</item>
+        <item quantity="other">%s 条评论</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d 条回复</item>
-        <item quantity="other">+%d 条更多回复</item>
+        <item quantity="one">%s 条回复</item>
+        <item quantity="other">+%s 条更多回复</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d 个页面</item>
-        <item quantity="other">%d 个页面</item>
+        <item quantity="one">%s 个页面</item>
+        <item quantity="other">%s 个页面</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d 个文件</item>
-        <item quantity="other">%d 个文件</item>
+        <item quantity="one">%s 个文件</item>
+        <item quantity="other">%s 个文件</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d 张图片</item>
-        <item quantity="other">%d 张图片</item>
+        <item quantity="one">%s 张图片</item>
+        <item quantity="other">%s 张图片</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d 个文档</item>
-        <item quantity="other">%d 个文档</item>
+        <item quantity="one">%s 个文档</item>
+        <item quantity="other">%s 个文档</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d 个页面带有此标签</item>
-        <item quantity="other">%d 个页面带有此标签</item>
+        <item quantity="one">%s 个页面带有此标签</item>
+        <item quantity="other">%s 个页面带有此标签</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">找到 %1$d 个结果,查询「%2$s」</item>
-        <item quantity="other">找到 %1$d 个结果,查询「%2$s」</item>
+        <item quantity="one">找到 %1$s 个结果,查询「%2$s」</item>
+        <item quantity="other">找到 %1$s 个结果,查询「%2$s」</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">无法保存说明文字</string>
     <string name="wikis_attachments_upload_types">支持的文件：图片、PDF、DOC、DOCX、TXT 和 MD。</string>
@@ -328,6 +328,6 @@
     <string name="wikis_rss_copied_new">新的 RSS URL 已复制到剪贴板</string>
     <string name="wikis_rss_exists">此订阅 URL 已发放，无法再次显示。</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">正在显示前 %1$d 条评论。</item>
+        <item quantity="other">正在显示前 %1$s 条评论。</item>
     </plurals>
 </resources>

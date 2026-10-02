@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="launcher_feeds">Mochi Çavkanî</string>
+    <string name="launcher_feeds">Mochi Feed</string>
     <string name="launcher_chat">Mochi Sohbet</string>
     <string name="launcher_forums">Mochi Forum</string>
     <string name="launcher_projects">Mochi Proje</string>

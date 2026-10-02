@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Hapus</string>
     <string name="go_delete_message">Permainan ini akan dihapus dari daftar Anda. Ini tidak dapat dibatalkan.</string>
     <string name="go_delete_title">Hapus permainan?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Terima</string>
     <string name="go_draw_decline">Tolak</string>
     <string name="go_draw_offered_received">%1$s menawarkan remis</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Menyerah</string>
     <string name="go_new_game_title">Pertandingan Go baru</string>
     <string name="go_new_game_no_friends">Anda perlu menambahkan teman sebelum bisa memulai pertandingan.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Poin yang ditambahkan ke skor Putih untuk mengkompensasi Hitam yang bergerak pertama</string>
 
-    <string name="go_board_a11y">Papan Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Papan Go %1$d×%1$d, giliran Anda menempatkan batu hitam</string>
-    <string name="go_board_a11y_turn_white">Papan Go %1$d×%1$d, giliran Anda menempatkan batu putih</string>
+    <string name="go_board_a11y">Papan Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Papan Go %1$s×%1$s, giliran Anda menempatkan batu hitam</string>
+    <string name="go_board_a11y_turn_white">Papan Go %1$s×%1$s, giliran Anda menempatkan batu putih</string>
     <string name="go_status_scoring">Penghitungan — sepakati skor atau lanjutkan bermain</string>
     <string name="go_score_proposed">Skor yang diusulkan: hitam %1$s, putih %2$s</string>
     <string name="go_score_opponent_accepted">Lawan Anda menerima skor ini: hitam %1$s, putih %2$s</string>

@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Valvo</string>
     <string name="forums_members_search">Suodata jäseniä</string>
     <string name="forums_banner_description">Foorumin yläosassa näytettävä Markdown-teksti.</string>
-    <string name="forums_banner_placeholder">Tervetuloa tälle foorumille…</string>
+    <string name="forums_banner_placeholder">Kirjoita bannerin teksti (Markdown on tuettu)…</string>
     <string name="forums_ai_mode_label">Tila: %1$s</string>
     <string name="forums_ai_mode_heading">Tekoälytila</string>
     <string name="forums_ai_mode_off">Pois käytöstä</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">Tallenna julkaisu tähän myöhemmäksi napauttamalla sen kirjanmerkkiä.</string>
     <string name="forums_saved_error_clear">Tallennettujen julkaisujen tyhjentäminen epäonnistui</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d uusi julkaisu</item>
-        <item quantity="other">%d uutta julkaisua</item>
+        <item quantity="one">%s uusi julkaisu</item>
+        <item quantity="other">%s uutta julkaisua</item>
     </plurals>
     <string name="forums_rss_feed">RSS-syöte</string>
     <string name="forums_rss_mode_posts">Julkaisut</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">päivää</string>
     <string name="forums_settings_banner_saved">Banneri tallennettu</string>
     <string name="forums_settings_access_updated">Käyttöoikeus päivitetty</string>
-    <string name="forums_settings_access_revoked">Käyttöoikeus peruutettu</string>
+    <string name="forums_settings_access_revoked">Käyttöoikeus poistettu</string>
     <string name="forums_settings_member_removed">Jäsen poistettu</string>
     <string name="forums_settings_prompt_saved">Kehote tallennettu</string>
     <string name="forums_settings_section_identity">Identiteetti</string>
@@ -296,8 +296,8 @@
     <string name="forums_settings_unsubscribe_section">Lopeta foorumin tilaus</string>
     <string name="forums_share_link_title">Foorumin linkki</string>
     <string name="forums_find_found_by_url">Löytyi URL-osoitteella</string>
-    <string name="forums_moderation_pending_posts">Odottavat julkaisut (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Odottavat kommentit (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Odottavat julkaisut (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Odottavat kommentit (%1$s)</string>
     <string name="forums_moderation_on_image">Kuvassa: %1$s</string>
     <string name="forums_sort_ai">Tekoäly</string>
     <string name="forums_reject_post_access">Sinulla ei ole lupaa lähettää viestejä tällä foorumilla</string>

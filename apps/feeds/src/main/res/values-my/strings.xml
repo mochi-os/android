@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">မဆွဲယူဖူးပါ</string>
     <string name="feeds_source_poll">ပိုလ်</string>
     <string name="feeds_source_transform">AI ပြောင်းလဲခြင်း</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\" ကို ဖယ်ရှားမည်လား?</string>
-    <string name="feeds_remove_also_delete_posts">တင်သွင်းခဲ့သော ပို့စ်များကိုလည်း ဖျက်ပါ</string>
+    <string name="feeds_remove_source_confirm">၎င်းသည် \"%1$s\" မှ အကြောင်းအရာ တင်သွင်းခြင်းကို ရပ်တန့်ပါမည်။</string>
+    <string name="feeds_remove_also_delete_posts">ဤအရင်းအမြစ်မှ တင်သွင်းခဲ့သော ပို့စ်များကိုလည်း ဖျက်ပါ</string>
     <string name="feeds_suggested_credibility_title">အကြံပြုထားသော ယုံကြည်စိတ်ချရမှု</string>
-    <string name="feeds_suggested_credibility_body">Mochi က ယုံကြည်စိတ်ချရမှု %1$d ကို အကြံပြုသည်။ လက်ခံမည်လား?</string>
+    <string name="feeds_suggested_credibility_body">Mochi က ယုံကြည်စိတ်ချရမှု %1$s ကို အကြံပြုသည်။ လက်ခံမည်လား?</string>
     <string name="feeds_suggested_credibility_keep">လက်ရှိအတိုင်း ထားပါ</string>
     <string name="feeds_ai_processing_mode">AI လုပ်ဆောင်ခြင်း မုဒ်</string>
     <string name="feeds_ai_account">AI အကောင့်</string>
@@ -140,7 +140,7 @@
     <string name="feeds_saved_empty_subtitle">မည်သည့်ပို့စ်ကိုမဆို နောက်မှကြည့်ရန် ဤနေရာတွင်သိမ်းရန် ၎င်း၏ booklink ကို တို့ပါ။</string>
     <string name="feeds_saved_error_clear">သိမ်းထားသောပို့စ်များကို ရှင်းရန် မအောင်မြင်ပါ</string>
     <plurals name="feeds_new_posts">
-        <item quantity="other">ပို့စ်အသစ် %dခု</item>
+        <item quantity="other">ပို့စ်အသစ် %sခု</item>
     </plurals>
     <string name="feeds_caught_up">အားလုံးကို ကြည့်ပြီးပါပြီ</string>
     <string name="feeds_all_caught_up">အားလုံးကြည့်ပြီး</string>
@@ -191,10 +191,10 @@
     <string name="feeds_source_url_hint_feed">ဖိဒ် အရာ ID သို့မဟုတ် လက်ဗွေ</string>
     <string name="feeds_source_credibility_label">ယုံကြည်စိတ်ချရမှု</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d နာရီ</item>
+        <item quantity="other">%1$s နာရီ</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d မိနစ်</item>
+        <item quantity="other">%1$s မိနစ်</item>
     </plurals>
     <string name="feeds_source_polling_interval">%1$s တိုင်း စစ်ဆေးနေသည်</string>
     <string name="feeds_access_level_react_full">တုံ့ပြန်ပြီး ကြည့်ရှု</string>
@@ -211,16 +211,16 @@
     <string name="feeds_link">လင့်ခ်</string>
     <string name="feeds_share_link_title">ဖိဒ်လင့်ခ်</string>
     <plurals name="feeds_comment_count">
-        <item quantity="other">မှတ်ချက် %1$d</item>
+        <item quantity="other">မှတ်ချက် %1$s</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="other">တွဲဖက်ဖိုင် %1$d ခု</item>
+        <item quantity="other">တွဲဖက်ဖိုင် %1$s ခု</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="other">မှတ်ချက် %1$d ခု ထပ်ကြည့်ရန်</item>
+        <item quantity="other">မှတ်ချက် %1$s ခု ထပ်ကြည့်ရန်</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">ယနေ့ %1$d နှစ်အကြာ</item>
+        <item quantity="other">ယနေ့ %1$s နှစ်အကြာ</item>
     </plurals>
     <string name="feeds_block">ပိတ်ဆို့မည်</string>
     <string name="feeds_removed_from_feed">သင်ကို ဤဖိဒ်မှ ဖယ်ရှားလိုက်ပါပြီ</string>

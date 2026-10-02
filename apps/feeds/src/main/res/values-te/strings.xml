@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">సోర్స్ తీసివేయబడింది</string>
     <string name="feeds_settings_source_polling">మూలం నుండి తలఖరే చేరెనీ…</string>
     <string name="feeds_settings_access_updated">యాక్సెస్ నవీకరించబడింది</string>
-    <string name="feeds_settings_access_revoked">ప్రవేశీఙీ రద్దు చేయబడింది</string>
+    <string name="feeds_settings_access_revoked">యాక్సెస్ ఉపసంహరించబడింది</string>
     <string name="feeds_settings_member_removed">సభ్యుడు తొలగించబడ్డారు</string>
     <string name="feeds_settings_ai_mode_updated">AI మోడ్ నవీకరించబడింది</string>
     <string name="feeds_settings_ai_account_updated">AI ఖాతా నవీకరించబడింది</string>
@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">ఎప్పుడూ తేబడలేదు</string>
     <string name="feeds_source_poll">పోల్</string>
     <string name="feeds_source_transform">AI రూపాంతరం</string>
-    <string name="feeds_remove_source_confirm">\"%1$s\"ను తీసివేయాలా?</string>
-    <string name="feeds_remove_also_delete_posts">దిగుమతి చేసిన పోస్ట్‌లను కూడా తొలగించండి</string>
+    <string name="feeds_remove_source_confirm">ఇది \"%1$s\" నుండి కంటెంట్ దిగుమతిని ఆపివేస్తుంది.</string>
+    <string name="feeds_remove_also_delete_posts">ఈ మూలం నుండి దిగుమతి చేసిన పోస్ట్‌లను కూడా తొలగించండి</string>
     <string name="feeds_suggested_credibility_title">సూచించిన విశ్వసనీయత</string>
-    <string name="feeds_suggested_credibility_body">Mochi %1$d విశ్వసనీయతను సూచిస్తుంది. అంగీకరిస్తారా?</string>
+    <string name="feeds_suggested_credibility_body">Mochi %1$s విశ్వసనీయతను సూచిస్తుంది. అంగీకరిస్తారా?</string>
     <string name="feeds_suggested_credibility_keep">ప్రస్తుతం ఉన్నదాన్ని ఉంచు</string>
     <string name="feeds_ai_processing_mode">AI ప్రాసెసింగ్ మోడ్</string>
     <string name="feeds_ai_account">AI ఖాతా</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">ఏదైనా పోస్ట్‌ను ఇక్కడ తర్వాత కోసం సేవ్ చేయడానికి దాని బుక్‌మార్క్‌ను ట్యాప్ చేయండి.</string>
     <string name="feeds_saved_error_clear">సేవ్ చేసిన పోస్ట్‌లను క్లియర్ చేయడం విఫలమైంది</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d కొత్త పోస్ట్</item>
-        <item quantity="other">%d కొత్త పోస్ట్‌లు</item>
+        <item quantity="one">%s కొత్త పోస్ట్</item>
+        <item quantity="other">%s కొత్త పోస్ట్‌లు</item>
     </plurals>
     <string name="feeds_caught_up">మీరు అన్నీ చూశారు</string>
     <string name="feeds_all_caught_up">అన్నీ చూసేశారు</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">ఫీడ్ ఎంటిటీ ID లేదా ఫింగర్‌ప్రింట్</string>
     <string name="feeds_source_credibility_label">విశ్వసనీయత</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d గంట</item>
-        <item quantity="other">%1$d గంటలు</item>
+        <item quantity="one">%1$s గంట</item>
+        <item quantity="other">%1$s గంటలు</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d నిమిషం</item>
-        <item quantity="other">%1$d నిమిషాలు</item>
+        <item quantity="one">%1$s నిమిషం</item>
+        <item quantity="other">%1$s నిమిషాలు</item>
     </plurals>
     <string name="feeds_source_polling_interval">ప్రతి %1$s కు పోలింగ్</string>
     <string name="feeds_access_level_react_full">స్పందించండి మరియు చూడండి</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">లింక్</string>
     <string name="feeds_share_link_title">ఫీడ్ లింక్</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d వ్యాఖ్య</item>
-        <item quantity="other">%1$d వ్యాఖ్యలు</item>
+        <item quantity="one">%1$s వ్యాఖ్య</item>
+        <item quantity="other">%1$s వ్యాఖ్యలు</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d అటాచ్‌మెంట్</item>
-        <item quantity="other">%1$d అటాచ్‌మెంట్‌లు</item>
+        <item quantity="one">%1$s అటాచ్‌మెంట్</item>
+        <item quantity="other">%1$s అటాచ్‌మెంట్‌లు</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d మరో వ్యాఖ్యను చూడండి</item>
-        <item quantity="other">%1$d మరిన్ని వ్యాఖ్యలను చూడండి</item>
+        <item quantity="one">%1$s మరో వ్యాఖ్యను చూడండి</item>
+        <item quantity="other">%1$s మరిన్ని వ్యాఖ్యలను చూడండి</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">ఈరోజు %1$d సంవత్సరం క్రితం</item>
-        <item quantity="other">ఈరోజు %1$d సంవత్సరాల క్రితం</item>
+        <item quantity="one">ఈరోజు %1$s సంవత్సరం క్రితం</item>
+        <item quantity="other">ఈరోజు %1$s సంవత్సరాల క్రితం</item>
     </plurals>
     <string name="feeds_block">బ్లాక్ చేయండి</string>
     <string name="feeds_removed_from_feed">మిమ్మల్ని ఈ ఫీడ్ నుండి తీసివేశారు</string>

@@ -32,7 +32,7 @@
     <string name="staff_accounts_unnamed">Aláìlórúkọ</string>
     <string name="staff_accounts_unsuspend">Yọ ìdádúró kúrò</string>
     <string name="staff_accounts_unsuspended_toast">A ti yọ ìdádúró àkáǹtì</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Fagilé</string>
     <string name="staff_appeals_decide">Pinnu</string>
     <string name="staff_appeals_decision_denied">Mú àkójọpọ̀ tí a kọ̀sí</string>
@@ -397,7 +397,7 @@
     <string name="staff_accounts_action_unban_title">Gbé ìfòfindè kúrò</string>
     <string name="staff_accounts_action_unsuspend_title">Gbé ìdádúró kúrò</string>
     <string name="staff_accounts_reason_optional_label">Ìdí (ìyàn)</string>
-    <string name="staff_accounts_sales">%1$d títà</string>
+    <string name="staff_accounts_sales">%1$s títà</string>
     <string name="staff_appeals_reason_label">Ìdí ẹ̀bẹ̀ olùtà</string>
     <string name="staff_audit_action_staff_team_role_changed">Ipa òṣìṣẹ́ ti yí padà</string>
     <string name="staff_categories_delete_desc">Pa “%1$s” rẹ́? A kò lè yí èyí padà.</string>

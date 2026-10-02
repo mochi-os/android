@@ -7,7 +7,7 @@
     <string name="feeds_all_feeds">Сви фидови</string>
     <string name="feeds_name">Назив</string>
     <string name="feeds_create">Креирај</string>
-    <string name="feeds_no_feeds_found">Нема пронађених извора</string>
+    <string name="feeds_no_feeds_found">Нема пронађених фидова</string>
     <string name="feeds_feed_title_default">Фид</string>
     <string name="feeds_mark_all_read">Означи све прочитаним</string>
     <string name="feeds_settings">Подешавања</string>
@@ -86,8 +86,8 @@
     <string name="feeds_move_up">Помери горе</string>
     <string name="feeds_move_down">Помери доле</string>
 
-    <string name="notification_channel_feeds">Обавештења извора</string>
-    <string name="feeds_search_placeholder">Претражите изворе или налепите URL…</string>
+    <string name="notification_channel_feeds">Обавештења фидова</string>
+    <string name="feeds_search_placeholder">Претражите фидове или налепите URL…</string>
     <string name="feeds_url_result">Резултат URL-а</string>
     <string name="feeds_search_results">Резултати претраге</string>
     <string name="feeds_unread_only">Само непрочитано</string>
@@ -104,18 +104,18 @@
     <string name="feeds_replying_to_author">Одговор на %1$s</string>
     <string name="feeds_attach_file">Приложи датотеку</string>
     <string name="feeds_file">Датотека</string>
-    <string name="feeds_select_feed">Изаберите извор</string>
-    <string name="feeds_loading_feeds">Учитавање извора…</string>
+    <string name="feeds_select_feed">Изаберите фид</string>
+    <string name="feeds_loading_feeds">Учитавање фидова…</string>
     <string name="feeds_sources_title_named">Извори: %1$s</string>
-    <string name="feeds_delete_feed_confirm">Ово ће трајно обрисати извор и све његове објаве. Ова радња се не може поништити.</string>
+    <string name="feeds_delete_feed_confirm">Ово ће трајно обрисати фид и све његове објаве. Ова радња се не може поништити.</string>
     <string name="feeds_clipboard_label_rss">RSS URL</string>
     <string name="feeds_source_never_fetched">Никада преузето</string>
     <string name="feeds_source_poll">Провера</string>
     <string name="feeds_source_transform">AI трансформација</string>
-    <string name="feeds_remove_source_confirm">Уклонити \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Обриши и увезене објаве</string>
+    <string name="feeds_remove_source_confirm">Ово ће зауставити увоз садржаја из \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Обриши и објаве увезене из овог извора</string>
     <string name="feeds_suggested_credibility_title">Предложена веродостојност</string>
-    <string name="feeds_suggested_credibility_body">Mochi предлаже веродостојност од %1$d. Прихватити?</string>
+    <string name="feeds_suggested_credibility_body">Mochi предлаже веродостојност од %1$s. Прихватити?</string>
     <string name="feeds_suggested_credibility_keep">Задржи тренутно</string>
     <string name="feeds_ai_processing_mode">Режим AI обраде</string>
     <string name="feeds_ai_account">AI налог</string>
@@ -140,9 +140,9 @@
     <string name="feeds_saved_empty_subtitle">Додирните ознаку на било којој објави да је сачувате овде за касније.</string>
     <string name="feeds_saved_error_clear">Брисање сачуваних објава није успело</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d нова објава</item>
-        <item quantity="few">%d нове објаве</item>
-        <item quantity="other">%d нових објава</item>
+        <item quantity="one">%s нова објава</item>
+        <item quantity="few">%s нове објаве</item>
+        <item quantity="other">%s нових објава</item>
     </plurals>
     <string name="feeds_caught_up">Видели сте све</string>
     <string name="feeds_all_caught_up">Све је на текућем</string>
@@ -158,7 +158,7 @@
     <string name="feeds_access_subject_authenticated">Аутентификовани корисници</string>
     <string name="feeds_markdown_supported">Markdown подржан</string>
     <string name="feeds_permission_deny">Одбиј</string>
-    <string name="feeds_rss_feed">RSS извор</string>
+    <string name="feeds_rss_feed">RSS фид</string>
     <string name="feeds_notifications_post">Нови постови</string>
     <string name="feeds_follow_thread">Прати тему</string>
     <string name="feeds_unfollow_thread">Престани да пратиш тему</string>
@@ -167,8 +167,8 @@
     <string name="feeds_settings_field_server">Сервер</string>
     <string name="feeds_settings_name_edit_cd">Уреди назив</string>
     <string name="feeds_settings_section_identity">Идентитет</string>
-    <string name="feeds_unsubscribe">Откажи претплату</string>
-    <string name="feeds_unsubscribed">Претплата отказана</string>
+    <string name="feeds_unsubscribe">Прекини претплату</string>
+    <string name="feeds_unsubscribed">Претплата прекинута</string>
     <string name="feeds_access_level_comment_full">Коментариши, реагуј и прегледај</string>
     <string name="feeds_rss_mode_posts_comments">Постови и коментари</string>
     <string name="feeds_access_add_title">Додај приступ</string>
@@ -177,7 +177,7 @@
     <string name="feeds_post_content">Садржај поста</string>
     <string name="feeds_enable_memories">Омогући успомене</string>
     <string name="feeds_permission_request_title">Захтев за дозволу</string>
-    <string name="feeds_unsubscribe_confirm">Отказати пријаву на фид?</string>
+    <string name="feeds_unsubscribe_confirm">Прекинути претплату на фид?</string>
     <string name="feeds_settings_title">Подешавања за %1$s</string>
     <string name="feeds_source_transform_help">Оставите празно да онемогућите.</string>
     <string name="feeds_settings_name_cancel_cd">Откажи уређивање</string>
@@ -188,19 +188,19 @@
     <string name="feeds_create_first_post">Креирај прву објаву</string>
     <string name="feeds_rss_mode_posts">Постови</string>
     <string name="feeds_source_last_checked">Последња провера %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Откажи претплату на фид</string>
+    <string name="feeds_settings_unsubscribe_section">Прекини претплату на фид</string>
     <string name="feeds_source_transform_hint">Преведи на енглески и прикажи као ставке листе.</string>
     <string name="feeds_source_url_hint_feed">ID ентитета или отисак прста фида</string>
     <string name="feeds_source_credibility_label">Веродостојност</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d сат</item>
-        <item quantity="few">%1$d сата</item>
-        <item quantity="other">%1$d сати</item>
+        <item quantity="one">%1$s сат</item>
+        <item quantity="few">%1$s сата</item>
+        <item quantity="other">%1$s сати</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d минут</item>
-        <item quantity="few">%1$d минута</item>
-        <item quantity="other">%1$d минута</item>
+        <item quantity="one">%1$s минут</item>
+        <item quantity="few">%1$s минута</item>
+        <item quantity="other">%1$s минута</item>
     </plurals>
     <string name="feeds_source_polling_interval">Провера сваких %1$s</string>
     <string name="feeds_access_level_react_full">Реагуј и прегледај</string>
@@ -217,24 +217,24 @@
     <string name="feeds_link">Веза</string>
     <string name="feeds_share_link_title">Веза фида</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d коментар</item>
-        <item quantity="few">%1$d коментара</item>
-        <item quantity="other">%1$d коментара</item>
+        <item quantity="one">%1$s коментар</item>
+        <item quantity="few">%1$s коментара</item>
+        <item quantity="other">%1$s коментара</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d прилог</item>
-        <item quantity="few">%1$d прилога</item>
-        <item quantity="other">%1$d прилога</item>
+        <item quantity="one">%1$s прилог</item>
+        <item quantity="few">%1$s прилога</item>
+        <item quantity="other">%1$s прилога</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Прикажи још %1$d коментар</item>
-        <item quantity="few">Прикажи још %1$d коментара</item>
-        <item quantity="other">Прикажи још %1$d коментара</item>
+        <item quantity="one">Прикажи још %1$s коментар</item>
+        <item quantity="few">Прикажи још %1$s коментара</item>
+        <item quantity="other">Прикажи још %1$s коментара</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">пре %1$d године данас</item>
-        <item quantity="few">пре %1$d године данас</item>
-        <item quantity="other">пре %1$d година данас</item>
+        <item quantity="one">пре %1$s године данас</item>
+        <item quantity="few">пре %1$s године данас</item>
+        <item quantity="other">пре %1$s година данас</item>
     </plurals>
     <string name="feeds_block">Блокирај</string>
     <string name="feeds_removed_from_feed">Уклоњени сте из овог фида</string>

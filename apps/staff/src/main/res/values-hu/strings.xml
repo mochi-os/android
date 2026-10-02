@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Jegyzetek</string>
     <string name="staff_accounts_reason_label">Indok</string>
     <string name="staff_accounts_reason_optional_label">Indok (nem kötelező)</string>
-    <string name="staff_accounts_sales">%1$d eladás</string>
+    <string name="staff_accounts_sales">%1$s eladás</string>
     <string name="staff_accounts_search_clear">Keresés törlése</string>
     <string name="staff_accounts_search_placeholder">Keresés</string>
     <string name="staff_accounts_seller_buyers">Csak vevők</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Névtelen</string>
     <string name="staff_accounts_unsuspend">Felfüggesztés feloldása</string>
     <string name="staff_accounts_unsuspended_toast">Felfüggesztés feloldva</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Mégse</string>
     <string name="staff_appeals_decide">Döntés</string>
     <string name="staff_appeals_decision_denied">Hirdetés elutasítva tartása</string>

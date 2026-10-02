@@ -6,7 +6,7 @@
     <string name="staff_accounts_action_ban_title">Entèdi kont</string>
     <string name="staff_accounts_action_suspend_title">Sispann kont</string>
     <string name="staff_accounts_action_unban_title">Retire entèdiksyon an</string>
-    <string name="staff_accounts_action_unsuspend_title">Retire sispansyon an</string>
+    <string name="staff_accounts_action_unsuspend_title">Leve sispansyon an</string>
     <string name="staff_accounts_any_seller">Tout</string>
     <string name="staff_accounts_any_status">Tout</string>
     <string name="staff_accounts_ban">Entèdi</string>
@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Nòt</string>
     <string name="staff_accounts_reason_label">Rezon</string>
     <string name="staff_accounts_reason_optional_label">Rezon (opsyonèl)</string>
-    <string name="staff_accounts_sales">%1$d vant</string>
+    <string name="staff_accounts_sales">%1$s vant</string>
     <string name="staff_accounts_search_clear">Efase rechèch</string>
     <string name="staff_accounts_search_placeholder">Chèche</string>
     <string name="staff_accounts_seller_buyers">Achtè sèlman</string>
@@ -32,12 +32,12 @@
     <string name="staff_accounts_submitting">Ap voye…</string>
     <string name="staff_accounts_suspend">Sispann</string>
     <string name="staff_accounts_suspended_toast">Kont sispann</string>
-    <string name="staff_accounts_unban">Defann</string>
+    <string name="staff_accounts_unban">Leve entèdiksyon</string>
     <string name="staff_accounts_unbanned_toast">Kont pa entèdi ankò</string>
     <string name="staff_accounts_unnamed">San non</string>
-    <string name="staff_accounts_unsuspend">Anile sispansyon</string>
-    <string name="staff_accounts_unsuspended_toast">Kont pa sispann ankò</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_unsuspend">Leve sispansyon</string>
+    <string name="staff_accounts_unsuspended_toast">Sispansyon kont lan leve</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Anile</string>
     <string name="staff_appeals_decide">Deside</string>
     <string name="staff_appeals_decision_denied">Kenbe lis rejte</string>
@@ -60,8 +60,8 @@
     <string name="staff_audit_action_account_stripe_onboarded">Stripe konfigire</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe restriksyone</string>
     <string name="staff_audit_action_account_suspended">Sispann kòm vandè</string>
-    <string name="staff_audit_action_account_unbanned">Defande</string>
-    <string name="staff_audit_action_account_unsuspended">Sispansyon anile</string>
+    <string name="staff_audit_action_account_unbanned">Entèdiksyon leve</string>
+    <string name="staff_audit_action_account_unsuspended">Sispansyon leve</string>
     <string name="staff_audit_action_auction_bid_placed">Enchè plase</string>
     <string name="staff_audit_action_auction_created">Lavant kreye</string>
     <string name="staff_audit_action_auction_ended_sold">Lavant vann</string>

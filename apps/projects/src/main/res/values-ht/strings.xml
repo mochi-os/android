@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">fè yon chanjman</string>
     <string name="projects_attachment_empty">Pa gen atachman</string>
     <string name="projects_attachment_default_name">atachman</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nouvo demann fizyon</string>
     <string name="projects_request_status_closed">Fèmen</string>
     <string name="projects_request_back_to_list">Retounen nan lis</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Y ap verifye estati fizyon…</string>
     <string name="projects_request_can_merge">Kapab fizyone</string>
     <string name="projects_request_cannot_merge">Pa ka fizyone</string>
-    <string name="projects_request_ahead_behind">%1$d devan, %2$d dèyè</string>
+    <string name="projects_request_ahead_behind">%1$s devan, %2$s dèyè</string>
     <string name="projects_request_draft_notice">Sa a se yon bouyon. Make kòm pare anvan w fizyone.</string>
     <string name="projects_request_view_diff">Gade diferans</string>
     <string name="projects_request_mark_ready">Make kòm pare</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Pa gen kolòn konfigire pou vi sa a</string>
     <string name="projects_board_no_options">Pa gen opsyon konfigire pou jaden kolòn nan</string>
     <string name="projects_board_column_options">Opsyon kolòn</string>
-    <string name="projects_board_nested_count">+%1$d nich</string>
+    <string name="projects_board_nested_count">+%1$s nich</string>
     <string name="projects_move_to_column">Deplase nan kolòn</string>
     <string name="projects_move_to_row">Deplase nan ranje</string>
     <string name="projects_move_after">Apre %1$s</string>
@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">Nouvo</string>
     <string name="projects_settings_section_identity">Idantite</string>
     <string name="projects_settings_access_updated">Aksè mete ajou</string>
-    <string name="projects_settings_access_revoked">Akè retire</string>
+    <string name="projects_settings_access_revoked">Aksè retire</string>
     <string name="projects_settings_section_access">Jesyon Aksè</string>
     <string name="projects_people_search">Chèche moun</string>
     <string name="projects_settings_field_entity_id">ID Antite</string>
@@ -365,7 +365,7 @@
     <string name="projects_sort_filter_title">Triye ak filtre</string>
     <string name="projects_create_prefix_hint">Itilize pou ID moun ka li tankou %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="other">%1$d fichye ki an konfli</item>
+        <item quantity="other">%1$s fichye ki an konfli</item>
     </plurals>
     <string name="projects_design_export_saved">Konsèp anrejistre</string>
     <string name="projects_design_import_failed">Nou pa t kapab li fichye sa a</string>
@@ -375,7 +375,7 @@
     <string name="projects_export_saved">Done pwojè a anrejistre</string>
     <string name="projects_exporting">Prepare ekspòtasyon an…</string>
     <string name="projects_board_add_column">Ajoute kolòn</string>
-    <string name="projects_design_sample">Echantiyon %1$d</string>
+    <string name="projects_design_sample">Echantiyon %1$s</string>
     <string name="projects_option_delete_title">Efase opsyon</string>
     <string name="projects_option_delete_message">Èske ou sèten ou vle efase opsyon \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Okenn kalite atik pa ka kreye ankò. Kreye atik paran ki nesesè yo dabò.</string>

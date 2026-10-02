@@ -97,13 +97,13 @@
     <string name="calendars_repeat_forever">Selamanya</string>
     <string name="calendars_reminder_time">Saat acara dimulai</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">%1$d menit sebelumnya</item>
+        <item quantity="other">%1$s menit sebelumnya</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">%1$d jam sebelumnya</item>
+        <item quantity="other">%1$s jam sebelumnya</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">%1$d hari sebelumnya</item>
+        <item quantity="other">%1$s hari sebelumnya</item>
     </plurals>
     <string name="calendars_reminder_add">Tambah pengingat</string>
     <string name="calendars_reminder_remove">Hapus pengingat</string>
@@ -137,9 +137,9 @@
     <string name="calendars_poll_large">Kalender terlalu besar</string>
     <string name="calendars_poll_invalid">Alamat tidak mengembalikan kalender</string>
     <string name="calendars_poll_unreachable">Alamat tidak dapat dijangkau</string>
-    <string name="calendars_poll_status">Alamat menjawab %1$d</string>
+    <string name="calendars_poll_status">Alamat menjawab %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="other">%1$d menit</item>
+        <item quantity="other">%1$s menit</item>
     </plurals>
     <string name="calendars_preferences_zones">Tampilkan acara dalam zona waktunya sendiri</string>
     <string name="calendars_event_backwards">Berakhir sebelum dimulai</string>

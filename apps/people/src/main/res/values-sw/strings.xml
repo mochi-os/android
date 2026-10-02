@@ -180,8 +180,8 @@
     <string name="people_books_create">Unda kitabu cha anwani</string>
     <string name="people_books_delete">Futa kitabu cha anwani</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Ufute %1$s na anwani %2$d iliyomo?</item>
-        <item quantity="other">Ufute %1$s na anwani %2$d zilizomo?</item>
+        <item quantity="one">Ufute %1$s na anwani %2$s iliyomo?</item>
+        <item quantity="other">Ufute %1$s na anwani %2$s zilizomo?</item>
     </plurals>
     <string name="people_welcome_body">Tafuta marafiki kote kwenye Mochi na uungane nao. Gusa Ongeza anwani ili kutuma mwaliko.</string>
     <string name="people_person_state_contact">Katika anwani</string>

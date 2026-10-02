@@ -180,8 +180,8 @@
     <string name="people_books_create">ঠিকানা বই তৈরি করুন</string>
     <string name="people_books_delete">ঠিকানা বই মুছুন</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s এবং এর %2$d পরিচিতি মুছবেন?</item>
-        <item quantity="other">%1$s এবং এর %2$d পরিচিতি মুছবেন?</item>
+        <item quantity="one">%1$s এবং এর %2$s পরিচিতি মুছবেন?</item>
+        <item quantity="other">%1$s এবং এর %2$s পরিচিতি মুছবেন?</item>
     </plurals>
     <string name="people_welcome_body">Mochi জুড়ে বন্ধু খুঁজুন ও যুক্ত হোন। আমন্ত্রণ পাঠাতে পরিচিতি যোগ করুন চাপুন।</string>
     <string name="people_person_state_contact">পরিচিতিতে আছে</string>

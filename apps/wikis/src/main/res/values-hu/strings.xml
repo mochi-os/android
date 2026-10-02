@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Értesítések oldalszerkesztésekről, megjegyzésekről és meghívókról.</string>
     <string name="wikis_pageview_toc_expand">Tartalomjegyzék megjelenítése</string>
     <string name="wikis_pageview_toc_collapse">Tartalomjegyzék elrejtése</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Frissítve %1$s</string>
     <string name="wikis_pageview_not_found_description">A „%1$s\" oldal még nem létezik.</string>
     <string name="wikis_pageview_share_chooser">Wiki-hivatkozás</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">A „%1$s\" oldalt (%2$s) készül törölni. Ez a művelet visszavonható az előzményekből történő visszaállítással.</string>
     <string name="wikis_delete_page_success">Oldal törölve</string>
     <string name="wikis_revert_page_title">Oldal visszaállítása</string>
-    <string name="wikis_revert_page_message">A(z) %1$s-t a(z) %2$d verzióra készül visszaállítani. Ezzel új verzió jön létre a(z) %2$d verzió tartalmával.</string>
-    <string name="wikis_revert_page_default_comment">Visszaállítva a(z) %1$d verzióra</string>
-    <string name="wikis_revert_page_success">Visszaállítva a(z) %1$d verzióra</string>
+    <string name="wikis_revert_page_message">A(z) %1$s-t a(z) %2$s verzióra készül visszaállítani. Ezzel új verzió jön létre a(z) %2$s verzió tartalmával.</string>
+    <string name="wikis_revert_page_default_comment">Visszaállítva a(z) %1$s verzióra</string>
+    <string name="wikis_revert_page_success">Visszaállítva a(z) %1$s verzióra</string>
     <string name="wikis_rename_page_renaming">Átnevezés…</string>
     <string name="wikis_rename_page_success">Oldal átnevezve</string>
-    <string name="wikis_history_viewing">%1$s előzményeinek megtekintése, jelenlegi verzió: %2$d</string>
-    <string name="wikis_revision_version_badge">%1$d. verzió</string>
+    <string name="wikis_history_viewing">%1$s előzményeinek megtekintése, jelenlegi verzió: %2$s</string>
+    <string name="wikis_revision_version_badge">%1$s. verzió</string>
     <string name="wikis_search_pages_placeholder">Oldalak keresése cím vagy tartalom alapján…</string>
     <string name="wikis_search_no_results">Nem található oldal a következőre: „%1$s\". Próbálkozzon más keresési feltételekkel.</string>
     <string name="wikis_search_updated">Frissítve %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s szerint</string>
     <string name="wikis_revision_show_page">Oldal megjelenítése</string>
     <string name="wikis_revision_compare_failed">Az előző verziót nem sikerült betölteni az összehasonlításhoz.</string>
-    <string name="wikis_revision_changes_from">Változások a(z) %1$d → %2$d verzióhoz képest</string>
+    <string name="wikis_revision_changes_from">Változások a(z) %1$s → %2$s verzióhoz képest</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d hozzászólás</item>
-        <item quantity="other">%d hozzászólás</item>
+        <item quantity="one">%s hozzászólás</item>
+        <item quantity="other">%s hozzászólás</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d válasz</item>
-        <item quantity="other">+%d további válasz</item>
+        <item quantity="one">%s válasz</item>
+        <item quantity="other">+%s további válasz</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d oldal</item>
-        <item quantity="other">%d oldal</item>
+        <item quantity="one">%s oldal</item>
+        <item quantity="other">%s oldal</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fájl</item>
-        <item quantity="other">%d fájl</item>
+        <item quantity="one">%s fájl</item>
+        <item quantity="other">%s fájl</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d kép</item>
-        <item quantity="other">%d kép</item>
+        <item quantity="one">%s kép</item>
+        <item quantity="other">%s kép</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokumentum</item>
-        <item quantity="other">%d dokumentum</item>
+        <item quantity="one">%s dokumentum</item>
+        <item quantity="other">%s dokumentum</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d oldal ezzel a címkével</item>
-        <item quantity="other">%d oldal ezzel a címkével</item>
+        <item quantity="one">%s oldal ezzel a címkével</item>
+        <item quantity="other">%s oldal ezzel a címkével</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d találat találat «%2$s» kifejezésre</item>
-        <item quantity="other">%1$d találat találat «%2$s» kifejezésre</item>
+        <item quantity="one">%1$s találat találat «%2$s» kifejezésre</item>
+        <item quantity="other">%1$s találat találat «%2$s» kifejezésre</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Nem sikerült menteni a képaláírást</string>
     <string name="wikis_attachments_upload_types">Támogatott fájlok: képek, PDF, DOC, DOCX, TXT és MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Új RSS URL vágólapra másolva</string>
     <string name="wikis_rss_exists">Ezt a hírcsatorna-URL-t már kiadták, és nem jeleníthető meg újra.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Az első %1$d hozzászólás látható.</item>
-        <item quantity="other">Az első %1$d hozzászólás látható.</item>
+        <item quantity="one">Az első %1$s hozzászólás látható.</item>
+        <item quantity="other">Az első %1$s hozzászólás látható.</item>
     </plurals>
 </resources>

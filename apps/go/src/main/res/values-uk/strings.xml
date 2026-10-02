@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Видалити</string>
     <string name="go_delete_message">Цю гру буде видалено з вашого списку. Цю дію не можна скасувати.</string>
     <string name="go_delete_title">Видалити гру?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Прийняти</string>
     <string name="go_draw_decline">Відхилити</string>
     <string name="go_draw_offered_received">%1$s запропонував нічию</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Здана</string>
     <string name="go_new_game_title">Нова партія Го</string>
     <string name="go_new_game_no_friends">Вам потрібно додати друга, перш ніж ви зможете розпочати партію.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Очки, додані до рахунку Білого, щоб компенсувати, що Чорний ходить першим</string>
 
-    <string name="go_board_a11y">Дошка Ґо %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Дошка ґо %1$d×%1$d, ваш хід поставити чорний камінь</string>
-    <string name="go_board_a11y_turn_white">Дошка ґо %1$d×%1$d, ваш хід поставити білий камінь</string>
+    <string name="go_board_a11y">Дошка Ґо %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Дошка ґо %1$s×%1$s, ваш хід поставити чорний камінь</string>
+    <string name="go_board_a11y_turn_white">Дошка ґо %1$s×%1$s, ваш хід поставити білий камінь</string>
     <string name="go_status_scoring">Підрахунок — узгодьте рахунок або продовжуйте гру</string>
     <string name="go_score_proposed">Запропонована оцінка: чорні %1$s, білі %2$s</string>
     <string name="go_score_opponent_accepted">Ваш суперник приймає цю оцінку: чорні %1$s, білі %2$s</string>

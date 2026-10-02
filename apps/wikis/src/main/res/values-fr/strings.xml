@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Notifications concernant les modifications de pages, les commentaires et les invitations.</string>
     <string name="wikis_pageview_toc_expand">Afficher la table des matières</string>
     <string name="wikis_pageview_toc_collapse">Masquer la table des matières</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Mis à jour %1$s</string>
     <string name="wikis_pageview_not_found_description">La page « %1$s » n\'existe pas encore.</string>
     <string name="wikis_pageview_share_chooser">Lien du wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Vous êtes sur le point de supprimer la page « %1$s » (%2$s). Cette action peut être annulée en restaurant depuis l\'historique.</string>
     <string name="wikis_delete_page_success">Page supprimée</string>
     <string name="wikis_revert_page_title">Restaurer la page</string>
-    <string name="wikis_revert_page_message">Vous êtes sur le point de restaurer %1$s à la version %2$d. Cela créera une nouvelle révision avec le contenu de la version %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Restauration à la version %1$d</string>
-    <string name="wikis_revert_page_success">Restauré à la version %1$d</string>
+    <string name="wikis_revert_page_message">Vous êtes sur le point de restaurer %1$s à la version %2$s. Cela créera une nouvelle révision avec le contenu de la version %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Restauration à la version %1$s</string>
+    <string name="wikis_revert_page_success">Restauré à la version %1$s</string>
     <string name="wikis_rename_page_renaming">Renommage…</string>
     <string name="wikis_rename_page_success">Page renommée</string>
-    <string name="wikis_history_viewing">Consultation de l\'historique pour %1$s, version actuelle %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Consultation de l\'historique pour %1$s, version actuelle %2$s</string>
+    <string name="wikis_revision_version_badge">Version %1$s</string>
     <string name="wikis_search_pages_placeholder">Rechercher des pages par titre ou contenu…</string>
     <string name="wikis_search_no_results">Aucune page trouvée pour « %1$s ». Essayez d\'autres termes.</string>
     <string name="wikis_search_updated">Mis à jour %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">par %1$s</string>
     <string name="wikis_revision_show_page">Afficher la page</string>
     <string name="wikis_revision_compare_failed">Impossible de charger la version précédente pour la comparaison.</string>
-    <string name="wikis_revision_changes_from">Modifications de la version %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Modifications de la version %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d commentaire</item>
-        <item quantity="other">%d commentaires</item>
+        <item quantity="one">%s commentaire</item>
+        <item quantity="other">%s commentaires</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d réponse</item>
-        <item quantity="other">+%d autres réponses</item>
+        <item quantity="one">%s réponse</item>
+        <item quantity="other">+%s autres réponses</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d page</item>
-        <item quantity="other">%d pages</item>
+        <item quantity="one">%s page</item>
+        <item quantity="other">%s pages</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fichier</item>
-        <item quantity="other">%d fichiers</item>
+        <item quantity="one">%s fichier</item>
+        <item quantity="other">%s fichiers</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d image</item>
-        <item quantity="other">%d images</item>
+        <item quantity="one">%s image</item>
+        <item quantity="other">%s images</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d document</item>
-        <item quantity="other">%d documents</item>
+        <item quantity="one">%s document</item>
+        <item quantity="other">%s documents</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d page avec cette étiquette</item>
-        <item quantity="other">%d pages avec cette étiquette</item>
+        <item quantity="one">%s page avec cette étiquette</item>
+        <item quantity="other">%s pages avec cette étiquette</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d résultat trouvé(s) pour « %2$s »</item>
-        <item quantity="other">%1$d résultats trouvé(s) pour « %2$s »</item>
+        <item quantity="one">%1$s résultat trouvé(s) pour « %2$s »</item>
+        <item quantity="other">%1$s résultats trouvé(s) pour « %2$s »</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Impossible d\'enregistrer la légende</string>
     <string name="wikis_attachments_upload_types">Fichiers pris en charge : images, PDF, DOC, DOCX, TXT et MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Nouvelle URL RSS copiée dans le presse-papiers</string>
     <string name="wikis_rss_exists">Cette URL de flux a déjà été émise et ne peut plus être affichée.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Affichage du premier %1$d commentaire.</item>
-        <item quantity="other">Affichage des %1$d premiers commentaires.</item>
+        <item quantity="one">Affichage du premier %1$s commentaire.</item>
+        <item quantity="other">Affichage des %1$s premiers commentaires.</item>
     </plurals>
 </resources>

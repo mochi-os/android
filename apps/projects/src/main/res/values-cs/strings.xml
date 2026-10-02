@@ -40,10 +40,10 @@
     <string name="projects_settings_tab_people">Lidé</string>
     <string name="projects_option_icon">Ikona</string>
     <string name="projects_option_icon_placeholder">např. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Zrušit odběr</string>
+    <string name="projects_settings_unsubscribe">Odhlásit odběr</string>
     <string name="projects_settings_delete_project">Smazat projekt</string>
     <string name="projects_settings_delete_confirm_title">Smazat projekt</string>
-    <string name="projects_settings_unsubscribe_title">Zrušit odběr</string>
+    <string name="projects_settings_unsubscribe_title">Odhlásit odběr</string>
     <string name="projects_settings_unsubscribe_message">Opravdu se chcete odhlásit z odběru tohoto projektu?</string>
     <string name="projects_access_level_owner">Vlastník</string>
     <string name="projects_object_watch">Sledovat</string>
@@ -214,10 +214,10 @@
     <string name="projects_activity_made_change">provedl(a) změnu</string>
     <string name="projects_attachment_empty">Žádné přílohy</string>
     <string name="projects_attachment_default_name">příloha</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d kB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s kB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nový požadavek na sloučení</string>
     <string name="projects_request_status_closed">Uzavřeno</string>
     <string name="projects_request_back_to_list">Zpět na seznam</string>
@@ -227,7 +227,7 @@
     <string name="projects_request_checking_merge">Kontrola stavu sloučení…</string>
     <string name="projects_request_can_merge">Lze sloučit</string>
     <string name="projects_request_cannot_merge">Nelze sloučit</string>
-    <string name="projects_request_ahead_behind">%1$d napřed, %2$d pozadu</string>
+    <string name="projects_request_ahead_behind">%1$s napřed, %2$s pozadu</string>
     <string name="projects_request_draft_notice">Toto je koncept. Před sloučením označte jako připravené.</string>
     <string name="projects_request_view_diff">Zobrazit rozdíl</string>
     <string name="projects_request_mark_ready">Označit jako připravené</string>
@@ -247,7 +247,7 @@
     <string name="projects_board_no_columns">Pro toto zobrazení nejsou nakonfigurovány žádné sloupce</string>
     <string name="projects_board_no_options">Pro pole sloupce nejsou nakonfigurovány žádné možnosti</string>
     <string name="projects_board_column_options">Možnosti sloupce</string>
-    <string name="projects_board_nested_count">+%1$d vnořených</string>
+    <string name="projects_board_nested_count">+%1$s vnořených</string>
     <string name="projects_move_to_column">Přesunout do sloupce</string>
     <string name="projects_move_to_row">Přesunout do řádku</string>
     <string name="projects_move_after">Za %1$s</string>
@@ -365,9 +365,9 @@
     <string name="projects_sort_filter_title">Řazení a filtr</string>
     <string name="projects_create_prefix_hint">Používá se pro čitelná ID jako %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d konfliktní soubor</item>
-        <item quantity="few">%1$d konfliktní soubory</item>
-        <item quantity="other">%1$d konfliktních souborů</item>
+        <item quantity="one">%1$s konfliktní soubor</item>
+        <item quantity="few">%1$s konfliktní soubory</item>
+        <item quantity="other">%1$s konfliktních souborů</item>
     </plurals>
     <string name="projects_design_export_saved">Návrh uložen</string>
     <string name="projects_design_import_failed">Soubor se nepodařilo přečíst</string>
@@ -377,7 +377,7 @@
     <string name="projects_export_saved">Data projektu uložena</string>
     <string name="projects_exporting">Připravuje se export…</string>
     <string name="projects_board_add_column">Přidat sloupec</string>
-    <string name="projects_design_sample">Ukázka %1$d</string>
+    <string name="projects_design_sample">Ukázka %1$s</string>
     <string name="projects_option_delete_title">Smazat možnost</string>
     <string name="projects_option_delete_message">Opravdu chcete smazat možnost \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Zatím nelze vytvořit žádné typy položek. Nejprve vytvořte potřebné nadřazené položky.</string>

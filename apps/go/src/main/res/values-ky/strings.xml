@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Жок кылуу</string>
     <string name="go_delete_message">Бул оюн тизмеңизден өчүрүлөт. Бул кайтарылбайт.</string>
     <string name="go_delete_title">Оюн жок кылынсынбы?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Кабыл алуу</string>
     <string name="go_draw_decline">Четке кагуу</string>
     <string name="go_draw_offered_received">%1$s теңме-тең сунуш кылды</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Багынды</string>
     <string name="go_new_game_title">Жаңы Go оюну</string>
     <string name="go_new_game_no_friends">Оюнду баштоодон мурун дос кошуу керек.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Кара биринчи жүргөнүн ордуна толтуруу үчүн Актын упайына кошулган упайлар</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go тактайы</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d го тактасы, кара таш коюу кезегиңиз</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d го тактасы, ак таш коюу кезегиңиз</string>
+    <string name="go_board_a11y">%1$s×%1$s Go тактайы</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s го тактасы, кара таш коюу кезегиңиз</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s го тактасы, ак таш коюу кезегиңиз</string>
     <string name="go_status_scoring">Эсептөө — упайга макул болуңуз же оюнду улантыңыз</string>
     <string name="go_score_proposed">Сунушталган упай: кара %1$s, ак %2$s</string>
     <string name="go_score_opponent_accepted">Атаандашыңыз бул упайды кабыл алат: кара %1$s, ак %2$s</string>

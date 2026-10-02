@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">مارڪيٽ</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">سوانح</string>
     <string name="market_account_biography_placeholder">خريدارن کي پنهنجي باري ۾ ٻڌايو…</string>
     <string name="market_account_load_failed">اڪائونٽ لوڊ نه ٿيو</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">وڌيڪ بولي</string>
     <string name="market_bids_tab_won">کٽيو</string>
     <string name="market_bids_title">بوليون</string>
-    <string name="market_carousel_main">تصوير %1$d / %2$d</string>
+    <string name="market_carousel_main">تصوير %1$s / %2$s</string>
     <string name="market_channel_name">مارڪيٽ</string>
     <string name="market_chargeback_reason_bank_cannot_process">بئنڪ پروسيس نه ڪري سگهي</string>
     <string name="market_chargeback_reason_check_returned">چيڪ واپس</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">بحال ٿيل</string>
     <string name="market_editor_condition_used">استعمال ٿيل</string>
     <string name="market_editor_currency">ڪرنسي</string>
-    <string name="market_editor_days">%1$d ڏينهن</string>
+    <string name="market_editor_days">%1$s ڏينهن</string>
     <string name="market_editor_delete">اشتهار ختم ڪريو</string>
     <string name="market_editor_description">تفصيل</string>
     <string name="market_editor_interval_monthly">ماهوار</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">خريداريون</string>
     <string name="market_rating_label">درجه بندي</string>
     <string name="market_rating_no_reviews">اڃا ڪو جائزو نه آهي</string>
-    <string name="market_rating_reviews">(%1$d جائزو)</string>
+    <string name="market_rating_reviews">(%1$s جائزو)</string>
     <string name="market_refund_amount_label">مقدار</string>
     <string name="market_refund_body">پنهنجي رقم واپسي درخواست لاءِ سبب ڏيو.</string>
     <string name="market_refund_details_label">تفصيل</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">موجوده: %1$s</string>
     <string name="market_bids_ends_in">%1$s ۾ ختم ٿيندي</string>
     <string name="market_bids_your_bid">توهان جي بِڊ: %1$s</string>
-    <string name="market_carousel_thumbnail">ٿمب نيل %1$d</string>
+    <string name="market_carousel_thumbnail">ٿمب نيل %1$s</string>
     <string name="market_checkout_browser_unavailable">ادائگيءَ جو صفحو کولڻ لاءِ ڪو برائوزر دستياب ناهي</string>
     <string name="market_checkout_pwyw_label">توهان جي قيمت (گهٽ ۾ گهٽ %1$s)</string>
     <string name="market_checkout_pwyw_min_error">رقم گهٽ ۾ گهٽ %1$s هجڻ گهرجي</string>
-    <string name="market_dispute_dialog_attach_count">%1$d فائل(ون) منسلڪ ٿيل</string>
+    <string name="market_dispute_dialog_attach_count">%1$s فائل(ون) منسلڪ ٿيل</string>
     <string name="market_dispute_dialog_evidence_section_title">جمع ٿيل ثبوت</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s پاران جمع ٿيل</string>
     <string name="market_editor_appeal">اعتدال خلاف اپيل ڪريو</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">لسٽنگ لوڊ ٿي رهي آهي</string>
     <string name="market_listing_detail_relist_failed">ٻيهر لسٽ نه ٿي سگهيو</string>
     <string name="market_listing_detail_relist_in_progress">ٻيهر لسٽ ٿي رهيو آهي</string>
-    <string name="market_listing_detail_sales_count">%1$d وڪرا</string>
+    <string name="market_listing_detail_sales_count">%1$s وڪرا</string>
     <string name="market_listing_detail_seller_banned_banner">هي وڪرو ڪندڙ بند ٿيل آهي. نوان آرڊر نه ٿا ڏئي سگھجن.</string>
     <string name="market_listing_detail_seller_suspended_banner">هي وڪرو ڪندڙ معطل آهي. اڪائونٽ بحال ٿيڻ تائين نوان آرڊر روڪيل آهن.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">جڏهن وڪرو ڪندڙ جو اڪائونٽ محدود آهي ته خريداري بند آهي.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">اڃا ڪا گفتگو ناهي</string>
     <string name="market_messages_load_failed">سلسلو لوڊ نه ٿي سگھيو</string>
     <string name="market_messages_send_failed">پيغام موڪلي نه سگھيو</string>
-    <string name="market_messages_unread_badge">%1$d اڻ پڙهيل</string>
+    <string name="market_messages_unread_badge">%1$s اڻ پڙهيل</string>
     <string name="market_price_high_bid">اعليٰ بولي: %1$s</string>
     <string name="market_price_instant_buy">فوري خريداري: %1$s</string>
     <string name="market_price_starting_bid">شروعاتي بولي: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">ميمبر %1$s کان</string>
     <string name="market_profile_joined">%1$s ۾ شامل ٿيو</string>
     <string name="market_profile_rating_breakdown">ريٽنگ جي تفصيل</string>
-    <string name="market_profile_sales_count">%1$d وڪرا</string>
-    <string name="market_profile_stars_value">%1$d تارا</string>
+    <string name="market_profile_sales_count">%1$s وڪرا</string>
+    <string name="market_profile_stars_value">%1$s تارا</string>
     <string name="market_purchase_dispute_chargeback">چارج بيڪ %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">توهان جي بئنڪ هن آرڊر تي چارج بيڪ داخل ڪيو آهي. Stripe وڪرو ڪندڙ سان تڪرار سنڀالي رهيو آهي؛ فيصلو ٿيڻ تي نتيجو هتي ظاهر ٿيندو.</string>
     <string name="market_purchase_dispute_response">وڪرو ڪندڙ جو جواب</string>
-    <string name="market_purchase_download_many">هيٺ پنهنجون %1$d فائلون ڊائون لوڊ ڪريو.</string>
+    <string name="market_purchase_download_many">هيٺ پنهنجون %1$s فائلون ڊائون لوڊ ڪريو.</string>
     <string name="market_purchase_download_one">هيٺ پنهنجي فائل ڊائون لوڊ ڪريو.</string>
     <string name="market_purchase_review_from">%1$s پاران جائزو</string>
     <string name="market_purchases_auction_label">نيلامي #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">ھي نيلامي منسوخ ڪندو. لسٽ خريد ڪندڙن کان لڪائي ويندي؛ توھان ان کي بعد ۾ نئون ڊرافٽ طور لسٽ ڪري سگھو ٿا.</string>
     <string name="market_listings_remove_title">هن فهرست کي هٽائجي؟</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">اهو نيلامي منسوخ ڪندو ۽ %1$d سرگرم بولي ڏيندڙن کي اطلاع ڏيندو. لسٽنگ خريدارن کان لڪائي ويندي؛ توهان ان کي بعد ۾ نئين مسودي طور ٻيهر لسٽ ڪري سگهو ٿا.</item>
-        <item quantity="other">اهو نيلامي منسوخ ڪندو ۽ %1$d سرگرم بولي ڏيندڙن کي اطلاع ڏيندو. لسٽنگ خريدارن کان لڪائي ويندي؛ توهان ان کي بعد ۾ نئين مسودي طور ٻيهر لسٽ ڪري سگهو ٿا.</item>
+        <item quantity="one">اهو نيلامي منسوخ ڪندو ۽ %1$s سرگرم بولي ڏيندڙن کي اطلاع ڏيندو. لسٽنگ خريدارن کان لڪائي ويندي؛ توهان ان کي بعد ۾ نئين مسودي طور ٻيهر لسٽ ڪري سگهو ٿا.</item>
+        <item quantity="other">اهو نيلامي منسوخ ڪندو ۽ %1$s سرگرم بولي ڏيندڙن کي اطلاع ڏيندو. لسٽنگ خريدارن کان لڪائي ويندي؛ توهان ان کي بعد ۾ نئين مسودي طور ٻيهر لسٽ ڪري سگهو ٿا.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">اهو موجوده بلنگ مدت جي آخر ۾ %1$d سرگرم رڪنيتون منسوخ ڪندو. رڪنن کي اطلاع ڏنو ويندو. لسٽنگ خريدارن کان لڪائي ويندي.</item>
-        <item quantity="other">اهو موجوده بلنگ مدت جي آخر ۾ %1$d سرگرم رڪنيتون منسوخ ڪندو. رڪنن کي اطلاع ڏنو ويندو. لسٽنگ خريدارن کان لڪائي ويندي.</item>
+        <item quantity="one">اهو موجوده بلنگ مدت جي آخر ۾ %1$s سرگرم رڪنيتون منسوخ ڪندو. رڪنن کي اطلاع ڏنو ويندو. لسٽنگ خريدارن کان لڪائي ويندي.</item>
+        <item quantity="other">اهو موجوده بلنگ مدت جي آخر ۾ %1$s سرگرم رڪنيتون منسوخ ڪندو. رڪنن کي اطلاع ڏنو ويندو. لسٽنگ خريدارن کان لڪائي ويندي.</item>
     </plurals>
 </resources>

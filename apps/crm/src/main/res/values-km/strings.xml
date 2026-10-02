@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">មិនមានវត្ថុ</string>
     <string name="crm_board_no_columns">មិនមានជួរឈរត្រូវបានកំណត់រចនាសម្ព័ន្ធសម្រាប់ទិដ្ឋភាពនេះទេ</string>
     <string name="crm_board_no_options">មិនមានជម្រើសត្រូវបានកំណត់សម្រាប់វាលជួរឈរ</string>
-    <string name="crm_board_nested_count">+%1$d ខាងក្នុង</string>
+    <string name="crm_board_nested_count">+%1$s ខាងក្នុង</string>
     <string name="crm_move_to_column">ផ្លាស់ទីទៅជួរឈរ</string>
     <string name="crm_move_to_row">ផ្លាស់ទីទៅជួរ</string>
     <string name="crm_move_after">បន្ទាប់ពី %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">បានរក្សាទុកទិន្នន័យ CRM</string>
     <string name="crm_create_upload_json">បញ្ចូលឯកសារ .zip ឬ .json</string>
     <string name="crm_create_blocked_no_options">មិនអាចបង្កើតបានទេ៖ %1$s ត្រូវការ ប៉ុន្តែគ្មានជម្រើសឱ្យជ្រើសរើសទេ។ បន្ថែមជម្រើសក្នុងការរចនា។</string>
-    <string name="crm_design_sample">គំរូ %1$d</string>
+    <string name="crm_design_sample">គំរូ %1$s</string>
     <string name="crm_option_delete_title">លុបជម្រើស</string>
     <string name="crm_option_delete_message">តើអ្នកប្រាកដថាចង់លុបជម្រើស \"%1$s\" មែនទេ?</string>
 </resources>

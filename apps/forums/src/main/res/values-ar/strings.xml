@@ -6,8 +6,8 @@
     <string name="forums_list_title">المنتديات</string>
     <string name="forums_list_find">البحث عن المنتديات</string>
     <string name="forums_list_logout">تسجيل الخروج</string>
-    <string name="forums_list_unsubscribe">إلغاء الاشتراك</string>
-    <string name="forums_list_unsubscribe_title">إلغاء الاشتراك</string>
+    <string name="forums_list_unsubscribe">إنهاء الاشتراك</string>
+    <string name="forums_list_unsubscribe_title">إنهاء الاشتراك</string>
     <string name="forums_create_title">إنشاء منتدى</string>
     <string name="forums_create_name">اسم المنتدى</string>
     <string name="forums_create_privacy">الخصوصية</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">وسم</string>
     <string name="forums_ai_account_default">الحساب الافتراضي</string>
     <string name="forums_ai_prompt_reset">إعادة تعيين إلى الافتراضي</string>
-    <string name="forums_settings_unsubscribe">إلغاء الاشتراك</string>
+    <string name="forums_settings_unsubscribe">إنهاء الاشتراك</string>
     <string name="forums_moderation_title">الإشراف</string>
     <string name="forums_moderation_tab_queue">قائمة الانتظار</string>
     <string name="forums_moderation_tab_reports">التقارير</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_enter_code_sent">أدخل الرمز المرسل إلى %1$s</string>
     <string name="forums_auth_create_identity">أنشئ هويتك</string>
     <string name="forums_list_empty">لا توجد منتديات بعد</string>
-    <string name="forums_list_unsubscribe_message">هل أنت متأكد من أنك تريد إلغاء الاشتراك في هذا المنتدى؟</string>
+    <string name="forums_list_unsubscribe_message">هل أنت متأكد من أنك تريد إنهاء الاشتراك في هذا المنتدى؟</string>
     <string name="forums_find_search_placeholder">ابحث في المنتديات أو الصق عنوان URL</string>
     <string name="forums_find_search_hint">ابحث عن منتديات للاشتراك فيها</string>
     <string name="forums_post_body_field">المحتوى</string>
@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">إشراف</string>
     <string name="forums_members_search">تصفية الأعضاء</string>
     <string name="forums_banner_description">نص Markdown يُعرض في أعلى المنتدى.</string>
-    <string name="forums_banner_placeholder">مرحبًا بك في هذا المنتدى…</string>
+    <string name="forums_banner_placeholder">أدخل نص اللافتة (يدعم Markdown)…</string>
     <string name="forums_ai_mode_label">الوضع: %1$s</string>
     <string name="forums_ai_mode_heading">وضع الذكاء الاصطناعي</string>
     <string name="forums_ai_mode_off">معطّل</string>
@@ -202,12 +202,12 @@
     <string name="forums_saved_empty_subtitle">انقر على علامة الإشارة في أي منشور لحفظه هنا لوقت لاحق.</string>
     <string name="forums_saved_error_clear">تعذّر مسح المنشورات المحفوظة</string>
     <plurals name="forums_new_posts">
-        <item quantity="zero">%d منشور جديد</item>
-        <item quantity="one">%d منشور جديد</item>
-        <item quantity="two">%d منشوران جديدان</item>
-        <item quantity="few">%d منشورات جديدة</item>
-        <item quantity="many">%d منشورًا جديدًا</item>
-        <item quantity="other">%d منشور جديد</item>
+        <item quantity="zero">%s منشور جديد</item>
+        <item quantity="one">%s منشور جديد</item>
+        <item quantity="two">%s منشوران جديدان</item>
+        <item quantity="few">%s منشورات جديدة</item>
+        <item quantity="many">%s منشورًا جديدًا</item>
+        <item quantity="other">%s منشور جديد</item>
     </plurals>
     <string name="forums_rss_feed">موجز RSS</string>
     <string name="forums_rss_mode_posts">المنشورات</string>
@@ -246,7 +246,7 @@
     <string name="forums_moderation_unit_days">أيام</string>
     <string name="forums_settings_banner_saved">تم حفظ اللافتة</string>
     <string name="forums_settings_access_updated">تم تحديث الوصول</string>
-    <string name="forums_settings_access_revoked">تم إلغاء الوصول</string>
+    <string name="forums_settings_access_revoked">تم إبطال الوصول</string>
     <string name="forums_settings_member_removed">تمت إزالة العضو</string>
     <string name="forums_settings_prompt_saved">تم حفظ الموجه</string>
     <string name="forums_settings_section_identity">الهوية</string>
@@ -297,11 +297,11 @@
     <string name="forums_settings_ai_updated">تم تحديث إعدادات الذكاء الاصطناعي</string>
     <string name="forums_settings_forum_renamed">تمت إعادة تسمية المنتدى</string>
     <string name="forums_settings_name_clear_cd">مسح الاسم</string>
-    <string name="forums_settings_unsubscribe_section">إلغاء الاشتراك في المنتدى</string>
+    <string name="forums_settings_unsubscribe_section">إنهاء الاشتراك في المنتدى</string>
     <string name="forums_share_link_title">رابط المنتدى</string>
     <string name="forums_find_found_by_url">تم العثور عليه عبر الرابط</string>
-    <string name="forums_moderation_pending_posts">منشورات معلقة (%1$d)</string>
-    <string name="forums_moderation_pending_comments">تعليقات معلقة (%1$d)</string>
+    <string name="forums_moderation_pending_posts">منشورات معلقة (%1$s)</string>
+    <string name="forums_moderation_pending_comments">تعليقات معلقة (%1$s)</string>
     <string name="forums_moderation_on_image">على الصورة: %1$s</string>
     <string name="forums_sort_ai">الذكاء الاصطناعي</string>
     <string name="forums_reject_post_access">ليس لديك إذن للنشر في هذا المنتدى</string>

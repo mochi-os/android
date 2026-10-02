@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">Kişiler</string>
     <string name="crm_option_icon">Simge</string>
     <string name="crm_option_icon_placeholder">ör. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Aboneliği iptal et</string>
+    <string name="crm_settings_unsubscribe">Abonelikten çık</string>
     <string name="crm_settings_delete_crm">CRM\'i sil</string>
     <string name="crm_settings_delete_confirm_title">CRM\'i sil</string>
-    <string name="crm_settings_unsubscribe_title">Aboneliği iptal et</string>
-    <string name="crm_settings_unsubscribe_message">Bu CRM aboneliğini iptal etmek istediğinizden emin misiniz?</string>
+    <string name="crm_settings_unsubscribe_title">Abonelikten çık</string>
+    <string name="crm_settings_unsubscribe_message">Bu CRM aboneliğinden çıkmak istediğinizden emin misiniz?</string>
     <string name="crm_access_level_owner">Sahip</string>
     <string name="crm_object_watch">İzle</string>
     <string name="crm_object_tab_properties">Özellikler</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Nesne yok</string>
     <string name="crm_board_no_columns">Bu görünüm için sütun yapılandırılmamış</string>
     <string name="crm_board_no_options">Sütun alanı için seçenek yapılandırılmamış</string>
-    <string name="crm_board_nested_count">+%1$d iç içe</string>
+    <string name="crm_board_nested_count">+%1$s iç içe</string>
     <string name="crm_move_to_column">Sütuna taşı</string>
     <string name="crm_move_to_row">Satıra taşı</string>
     <string name="crm_move_after">%1$s sonrasına</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Erişim yönetimi</string>
     <string name="crm_settings_not_set">Ayarlanmamış</string>
     <string name="crm_settings_access_updated">Erişim güncellendi</string>
-    <string name="crm_settings_access_revoked">Erişim iptal edildi</string>
+    <string name="crm_settings_access_revoked">Erişim kaldırıldı</string>
     <string name="crm_people_search">Kişileri ara</string>
     <string name="crm_access_tab_other">Diğer</string>
     <string name="crm_access_select_group">Bir grup seçin</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM verileri kaydedildi</string>
     <string name="crm_create_upload_json">.zip veya .json dosyası yükleyin</string>
     <string name="crm_create_blocked_no_options">Oluşturulamıyor: %1$s gerekli ancak seçenek yok. Tasarım bölümünde seçenek ekleyin.</string>
-    <string name="crm_design_sample">Örnek %1$d</string>
+    <string name="crm_design_sample">Örnek %1$s</string>
     <string name="crm_option_delete_title">Seçeneği sil</string>
     <string name="crm_option_delete_message">\"%1$s\" seçeneğini silmek istediğinizden emin misiniz?</string>
 </resources>

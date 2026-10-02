@@ -6,8 +6,8 @@
     <string name="forums_list_title">फोरम</string>
     <string name="forums_list_find">फोरम खोजीं</string>
     <string name="forums_list_logout">लॉग आउट</string>
-    <string name="forums_list_unsubscribe">सदस्यता रद्द करीं</string>
-    <string name="forums_list_unsubscribe_title">सदस्यता रद्द करीं</string>
+    <string name="forums_list_unsubscribe">सदस्यता खतम करीं</string>
+    <string name="forums_list_unsubscribe_title">सदस्यता खतम करीं</string>
     <string name="forums_create_title">फोरम बनाईं</string>
     <string name="forums_create_name">फोरम के नाम</string>
     <string name="forums_create_privacy">गोपनीयता</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">टैग करीं</string>
     <string name="forums_ai_account_default">डिफ़ॉल्ट खाता</string>
     <string name="forums_ai_prompt_reset">डिफ़ॉल्ट पर रीसेट करीं</string>
-    <string name="forums_settings_unsubscribe">सदस्यता रद्द करीं</string>
+    <string name="forums_settings_unsubscribe">सदस्यता खतम करीं</string>
     <string name="forums_moderation_title">मॉडरेशन</string>
     <string name="forums_moderation_tab_queue">कतार</string>
     <string name="forums_moderation_tab_reports">रिपोर्ट</string>
@@ -160,7 +160,7 @@
     <string name="forums_access_level_moderate">मॉडरेट</string>
     <string name="forums_members_search">सदस्य छाँटीं</string>
     <string name="forums_banner_description">फोरम के सबसे ऊपर देखावल जाए वाला मार्कडाउन।</string>
-    <string name="forums_banner_placeholder">ए फोरम में रउआ के स्वागत बा…</string>
+    <string name="forums_banner_placeholder">बैनर के टेक्स्ट डालीं (मार्कडाउन समर्थित बा)…</string>
     <string name="forums_ai_mode_label">मोड: %1$s</string>
     <string name="forums_ai_mode_heading">AI मोड</string>
     <string name="forums_ai_mode_off">अक्षम</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">कौनो पोस्ट के इहाँ बाद खातिर सहेजे खातिर ओकर बुकमार्क दबाईं।</string>
     <string name="forums_saved_error_clear">सहेजल पोस्ट साफ करे में नाकाम</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d नया पोस्ट</item>
-        <item quantity="other">%d नया पोस्ट</item>
+        <item quantity="one">%s नया पोस्ट</item>
+        <item quantity="other">%s नया पोस्ट</item>
     </plurals>
     <string name="forums_rss_feed">RSS फीड</string>
     <string name="forums_rss_mode_posts">पोस्ट</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">दिन</string>
     <string name="forums_settings_banner_saved">बैनर सहेजल</string>
     <string name="forums_settings_access_updated">पहुंच अद्यतन कइल गइल</string>
-    <string name="forums_settings_access_revoked">पहुँच हटा देहल गइल</string>
+    <string name="forums_settings_access_revoked">पहुँच वापस ले लिहल गइल</string>
     <string name="forums_settings_member_removed">सदस्य हटल</string>
     <string name="forums_settings_prompt_saved">प्रॉम्प्ट सहेजल गइल</string>
     <string name="forums_settings_section_identity">पहचान</string>
@@ -294,10 +294,10 @@
     <string name="forums_settings_ai_updated">AI सेटिंग अपडेट भइल</string>
     <string name="forums_settings_forum_renamed">फोरम के नाम बदल गइल</string>
     <string name="forums_settings_name_clear_cd">नाम साफ करीं</string>
-    <string name="forums_settings_unsubscribe_section">फोरम से सदस्यता छोड़ीं</string>
+    <string name="forums_settings_unsubscribe_section">मंच से सदस्यता खतम करीं</string>
     <string name="forums_share_link_title">फोरम लिंक</string>
-    <string name="forums_moderation_pending_posts">लंबित पोस्ट (%1$d)</string>
-    <string name="forums_moderation_pending_comments">लंबित टिप्पणी (%1$d)</string>
+    <string name="forums_moderation_pending_posts">लंबित पोस्ट (%1$s)</string>
+    <string name="forums_moderation_pending_comments">लंबित टिप्पणी (%1$s)</string>
     <string name="forums_moderation_on_image">तस्वीर पर: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">रउरा के एह फोरम में पोस्ट करे के अनुमति नइखे</string>

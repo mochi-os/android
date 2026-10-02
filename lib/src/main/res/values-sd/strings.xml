@@ -60,7 +60,7 @@
     <string name="notifications_empty">ڪا اطلاع نه آهي</string>
     <string name="notifications_empty_unread">سڀ ڪجهه پڙهي ورتو اٿوَ</string>
     <string name="notifications_tab_unread">اڻ پڙهيل</string>
-    <string name="notifications_tab_unread_count">اڻ پڙهيل (%1$d)</string>
+    <string name="notifications_tab_unread_count">اڻ پڙهيل (%1$s)</string>
     <string name="notifications_tab_all">سڀ</string>
     <string name="notifications_mark_all_read">سڀ پڙهيل نشانبر ڪريو</string>
     <string name="notifications_clear_all">سڀ صاف ڪريو</string>
@@ -103,7 +103,7 @@
     <string name="settings_time_zone">وقت جو زون</string>
     <string name="settings_reset_to_defaults">ڊفالٽ تي ري سيٽ ڪريو</string>
     <string name="settings_reset_confirm_title">ترجيحون ري سيٽ ڪجن؟</string>
-    <string name="settings_reset_confirm_message">ھي سڀ ترجيحون انھن جي ڊفالٽ قدرن تي ري سيٽ ڪندو.</string>
+    <string name="settings_reset_confirm_message">ھي اهي ترجيحون انھن جي ڊفالٽ قدرن تي ري سيٽ ڪندو.</string>
     <string name="settings_reset">ري سيٽ</string>
     <string name="settings_display_title">ڊسپلي</string>
     <string name="settings_display_reset">ڊفالٽ تي ري سيٽ ڪريو</string>
@@ -123,14 +123,14 @@
     <string name="app_brand">Mochi</string>
     <string name="auth_server_url">سرور URL</string>
     <string name="auth_link_rules">قاعدا</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="lightbox_position">%1$s / %2$s</string>
     <string name="about_label">بابت</string>
     <string name="game_chat_move_played">%1$s %2$s کيڏيو</string>
 
     <string name="error_network">ڪنيڪشن ٿي نه سگھيو. پنھنجو انٽرنيٽ ڪنيڪشن چيڪ ڪريو ۽ ٻيھر ڪوشش ڪريو.</string>
     <string name="error_authentication_required">تصديق گهربل</string>
     <string name="error_not_found">نه مليو</string>
-    <string name="error_server">سرور جي خرابي (%1$d). مھرباني ڪري بعد ۾ ٻيھر ڪوشش ڪريو.</string>
+    <string name="error_server">سرور جي خرابي (%1$s). مھرباني ڪري بعد ۾ ٻيھر ڪوشش ڪريو.</string>
     <string name="error_unexpected">ھڪ غير متوقع خرابي ٿي</string>
     <string name="error_enter_server_url">مھرباني ڪري سرور URL داخل ڪريو</string>
     <string name="error_enter_email">مھرباني ڪري پنھنجو اي ميل داخل ڪريو</string>
@@ -145,8 +145,8 @@
     <string name="auth_login_title">Mochi ۾ لاگ ان ٿيو</string>
     <string name="auth_next">اڳيون</string>
     <string name="auth_or_log_in_with">يا ھن سان لاگ ان ٿيو</string>
-    <string name="auth_passkey">پاس ڪيئي</string>
-    <string name="auth_use_passkey">ھڪ پاس ڪي استعمال ڪريو</string>
+    <string name="auth_passkey">پاس ڪي</string>
+    <string name="auth_use_passkey">هڪ پاس ڪي استعمال ڪريو</string>
     <string name="auth_email_me_a_code">مون کي اي ميل تي ڪوڊ موڪليو</string>
     <string name="auth_or_enter_authenticator_code">يا تصديق ڪندڙ ڪوڊ داخل ڪريو</string>
     <string name="auth_log_in">لاگ ان</string>
@@ -180,19 +180,19 @@
     <string name="access_level_react">ردِعمل</string>
     <string name="notifications_clear">اطلاعون صاف ڪريو</string>
     <string name="entity_avatar_alt">%1$s لاءِ اوتار</string>
-    <string name="media_grid_more_count">+%1$d</string>
+    <string name="media_grid_more_count">+%1$s</string>
     <string name="format_time_just_now">هينئر ئي</string>
-    <string name="format_time_minutes_ago">%1$dm اڳ</string>
-    <string name="format_time_hours_ago">%1$dh اڳ</string>
-    <string name="format_time_days_ago">%1$dd اڳ</string>
-    <string name="format_time_weeks_ago">%1$dw اڳ</string>
-    <string name="format_time_months_ago">%1$dmo اڳ</string>
-    <string name="format_time_years_ago">%1$dy اڳ</string>
-    <string name="format_time_minutes_short">%1$dm</string>
-    <string name="format_time_hours_short">%1$dh</string>
-    <string name="format_time_days_short">%1$dd</string>
-    <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$d مهينا</string>
+    <string name="format_time_minutes_ago">%1$sm اڳ</string>
+    <string name="format_time_hours_ago">%1$sh اڳ</string>
+    <string name="format_time_days_ago">%1$sd اڳ</string>
+    <string name="format_time_weeks_ago">%1$sw اڳ</string>
+    <string name="format_time_months_ago">%1$smo اڳ</string>
+    <string name="format_time_years_ago">%1$sy اڳ</string>
+    <string name="format_time_minutes_short">%1$sm</string>
+    <string name="format_time_hours_short">%1$sh</string>
+    <string name="format_time_days_short">%1$sd</string>
+    <string name="format_time_weeks_short">%1$sw</string>
+    <string name="format_time_months_short">%1$s مهينا</string>
     <string name="reaction_add">ردِعمل شامل ڪريو</string>
     <string name="push_service_channel">Mochi پش</string>
     <string name="push_service_channel_description">Mochi کي اطلاع وصول ڪرڻ لاءِ ڳنڍيل رکي ٿو</string>
@@ -285,8 +285,8 @@
     <string name="comment_anchor_open">اها تصوير ڏسو جنهن بابت هي تبصرو آهي</string>
     <string name="comment_anchor_default">هن تصوير تي</string>
     <plurals name="lightbox_comments_others">
-        <item quantity="one">هن پوسٽ تي %1$d ٻيو تبصرو ڏيکاريو</item>
-        <item quantity="other">هن پوسٽ تي %1$d ٻيا تبصرا ڏيکاريو</item>
+        <item quantity="one">هن پوسٽ تي %1$s ٻيو تبصرو ڏيکاريو</item>
+        <item quantity="other">هن پوسٽ تي %1$s ٻيا تبصرا ڏيکاريو</item>
     </plurals>
     <string name="lightbox_comments">تبصرا</string>
     <string name="common_attachment_unavailable">منسلڪ عارضي طور دستياب ناهي</string>
@@ -301,7 +301,7 @@
     <string name="common_preview">پيش نظر</string>
     <string name="rss_revoke_confirm">رد ڪريو</string>
     <string name="rss_revoke">رسائي واپس وٺو</string>
-    <string name="rss_revoke_title">RSS رسائي منسوخ ڪجي؟</string>
+    <string name="rss_revoke_title">RSS رسائي رد ڪجي؟</string>
     <string name="rss_revoke_message">هن فيڊ جي رڪنيت وٺندڙ سڀ ڪجهه ان کي حاصل ڪرڻ بند ڪري ڇڏيندو. بعد ۾ توهان نئون URL ڪاپي ڪري سگهو ٿا.</string>
     <string name="rss_revoked">RSS رسائي واپس ورتي وئي</string>
     <string name="rss_revoke_failed">RSS رسائي واپس وٺڻ ۾ ناڪام</string>

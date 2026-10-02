@@ -45,6 +45,7 @@ import org.mochios.calendars.model.defaultCalendar
 import org.mochios.calendars.ui.editor.REMINDER_LEADS
 import org.mochios.calendars.ui.editor.reminderLeads
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 /** Renames a calendar. */
 @Composable
@@ -299,7 +300,7 @@ fun PreferencesDialog(
                     placeholder = "",
                     // Zero is a real choice: an event that ends when it starts.
                     options = listOf(0, 15, 30, 45, 60, 90, 120).map {
-                        it.toString() to pluralStringResource(R.plurals.calendars_minutes, it, it)
+                        it.toString() to pluralStringResource(R.plurals.calendars_minutes, it, LocalFormat.current.formatNumber(it))
                     },
                     selected = duration.toString(),
                     onSelect = { duration = it.toIntOrNull() ?: duration },
@@ -341,11 +342,14 @@ fun reminderChoices(current: Int): List<Pair<String, String>> =
 
 /** A reminder as the editor names it: at the time, or so long before the start. */
 @Composable
-fun reminderLabel(minutes: Int): String = when {
-    minutes == 0 -> stringResource(R.string.calendars_reminder_time)
-    minutes % 1440 == 0 -> pluralStringResource(R.plurals.calendars_reminder_days, minutes / 1440, minutes / 1440)
-    minutes % 60 == 0 -> pluralStringResource(R.plurals.calendars_reminder_hours, minutes / 60, minutes / 60)
-    else -> pluralStringResource(R.plurals.calendars_reminder_minutes, minutes, minutes)
+fun reminderLabel(minutes: Int): String {
+    val format = LocalFormat.current
+    return when {
+        minutes == 0 -> stringResource(R.string.calendars_reminder_time)
+        minutes % 1440 == 0 -> pluralStringResource(R.plurals.calendars_reminder_days, minutes / 1440, format.formatNumber(minutes / 1440))
+        minutes % 60 == 0 -> pluralStringResource(R.plurals.calendars_reminder_hours, minutes / 60, format.formatNumber(minutes / 60))
+        else -> pluralStringResource(R.plurals.calendars_reminder_minutes, minutes, format.formatNumber(minutes))
+    }
 }
 
 /**

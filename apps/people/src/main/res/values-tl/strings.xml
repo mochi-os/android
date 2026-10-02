@@ -180,8 +180,8 @@
     <string name="people_books_create">Gumawa ng address book</string>
     <string name="people_books_delete">Tanggalin ang address book</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Tanggalin ang %1$s at ang %2$d contact nito?</item>
-        <item quantity="other">Tanggalin ang %1$s at ang %2$d na contact nito?</item>
+        <item quantity="one">Tanggalin ang %1$s at ang %2$s contact nito?</item>
+        <item quantity="other">Tanggalin ang %1$s at ang %2$s na contact nito?</item>
     </plurals>
     <string name="people_welcome_body">Maghanap ng mga kaibigan sa buong Mochi at makipag-ugnayan. I-tap ang Magdagdag ng contact para magpadala ng imbitasyon.</string>
     <string name="people_person_state_contact">Nasa mga contact</string>

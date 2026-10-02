@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Merkatua</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografia</string>
     <string name="market_account_biography_placeholder">Kontatu erosleei zure berri…</string>
     <string name="market_account_load_failed">Ezin izan da kontua kargatu</string>
@@ -72,8 +72,8 @@
     <string name="market_bids_tab_won">Irabazia</string>
     <string name="market_bids_title">Eskaintzak</string>
     <string name="market_bids_your_bid">Zure eskaintza: %1$s</string>
-    <string name="market_carousel_main">Argazkia %1$d / %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatura %1$d</string>
+    <string name="market_carousel_main">Argazkia %1$s / %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatura %1$s</string>
     <string name="market_channel_name">Merkatua</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bankuak ezin izan du prozesatu</string>
     <string name="market_chargeback_reason_check_returned">Egiaztatzea itzulia</string>
@@ -135,7 +135,7 @@
     <string name="market_condition_refurbished">Berritua</string>
     <string name="market_condition_used">Erabilia</string>
     <string name="market_dispute_dialog_attach">Erantsi froga</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fitxategi erantsita</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fitxategi erantsita</string>
     <string name="market_dispute_dialog_cancel">Utzi</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Erostailea</string>
     <string name="market_dispute_dialog_evidence_role_seller">Saltzailea</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_condition_refurbished">Berritua</string>
     <string name="market_editor_condition_used">Erabilia</string>
     <string name="market_editor_currency">Moneta</string>
-    <string name="market_editor_days">%1$d egun</string>
+    <string name="market_editor_days">%1$s egun</string>
     <string name="market_editor_delete">Ezabatu zerrenda</string>
     <string name="market_editor_delete_confirm_message">Honek zerrenda betiko ezabatuko du.</string>
     <string name="market_editor_delete_confirm_title">Zerrenda ezabatu?</string>
@@ -312,7 +312,7 @@
     <string name="market_listing_detail_relist_failed">Ezin izan da birzerrendatu</string>
     <string name="market_listing_detail_relist_in_progress">Birzerrendatzen</string>
     <string name="market_listing_detail_report">Salatu zerrenda</string>
-    <string name="market_listing_detail_sales_count">%1$d salmenta</string>
+    <string name="market_listing_detail_sales_count">%1$s salmenta</string>
     <string name="market_listing_detail_save">Gorde</string>
     <string name="market_listing_detail_seller_banned_banner">Saltzaile hau debekatuta dago. Ezin dira eskaera berriak egin.</string>
     <string name="market_listing_detail_seller_heading">Saltzailea</string>
@@ -364,7 +364,7 @@
     <string name="market_messages_send_failed">Ezin izan da mezua bidali</string>
     <string name="market_messages_thread_listing_chip">Zerrendapena</string>
     <string name="market_messages_thread_title">Elkarrizketa</string>
-    <string name="market_messages_unread_badge">%1$d irakurri gabe</string>
+    <string name="market_messages_unread_badge">%1$s irakurri gabe</string>
     <string name="market_onboarding_activate">Aktibatu</string>
     <string name="market_onboarding_activating">Aktibatzen…</string>
     <string name="market_onboarding_body">Aktibatu zure kontua erosten eta saltzen hasteko.</string>
@@ -384,8 +384,8 @@
     <string name="market_profile_no_reviews">Oraindik iritzirik ez.</string>
     <string name="market_profile_rating_breakdown">Balorazioaren banaketa</string>
     <string name="market_profile_reviews_section">Iritziak</string>
-    <string name="market_profile_sales_count">%1$d salmenta</string>
-    <string name="market_profile_stars_value">%1$d izar</string>
+    <string name="market_profile_sales_count">%1$s salmenta</string>
+    <string name="market_profile_stars_value">%1$s izar</string>
     <string name="market_profile_status_banned">Debekatua</string>
     <string name="market_profile_status_suspended">Etenda</string>
     <string name="market_profile_verified">Egiaztatuta</string>
@@ -403,7 +403,7 @@
     <string name="market_purchase_dispute_response">Saltzailearen erantzuna</string>
     <string name="market_purchase_dispute_title">Itzulketa-eskaera</string>
     <string name="market_purchase_download_failed">Ezin izan da deskargatu</string>
-    <string name="market_purchase_download_many">Deskargatu zure %1$d fitxategiak behean.</string>
+    <string name="market_purchase_download_many">Deskargatu zure %1$s fitxategiak behean.</string>
     <string name="market_purchase_download_one">Deskargatu zure fitxategia behean.</string>
     <string name="market_purchase_download_section">Zure erosketa prest dago</string>
     <string name="market_purchase_item">Elementua</string>
@@ -441,7 +441,7 @@
     <string name="market_purchases_won_for">%1$s-rengatik irabazia</string>
     <string name="market_rating_label">Balorazioa</string>
     <string name="market_rating_no_reviews">Oraindik iritzirik ez</string>
-    <string name="market_rating_reviews">(%1$d iritzi)</string>
+    <string name="market_rating_reviews">(%1$s iritzi)</string>
     <string name="market_refund_amount_label">Zenbatekoa</string>
     <string name="market_refund_body">Eman zure itzulketa-eskaeraren arrazoia.</string>
     <string name="market_refund_details_label">Xehetasunak</string>
@@ -784,11 +784,11 @@
     <string name="market_listings_remove_message_auction">Honek enkantea bertan behera utziko du. Zerrenda erosleengandik ezkutatuko da; geroago zirriborro berri gisa berriro zerrendatu dezakezu.</string>
     <string name="market_listings_remove_title">Zerrenda hau kendu?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Honek enkantea bertan behera utziko du eta %1$d lizitatzaile aktibori jakinaraziko dio. Iragarkia erosleei ezkutatuko zaie; geroago zirriborro berri gisa argitaratu dezakezu berriro.</item>
-        <item quantity="other">Honek enkantea bertan behera utziko du eta %1$d lizitatzaile aktibori jakinaraziko die. Iragarkia erosleei ezkutatuko zaie; geroago zirriborro berri gisa argitaratu dezakezu berriro.</item>
+        <item quantity="one">Honek enkantea bertan behera utziko du eta %1$s lizitatzaile aktibori jakinaraziko dio. Iragarkia erosleei ezkutatuko zaie; geroago zirriborro berri gisa argitaratu dezakezu berriro.</item>
+        <item quantity="other">Honek enkantea bertan behera utziko du eta %1$s lizitatzaile aktibori jakinaraziko die. Iragarkia erosleei ezkutatuko zaie; geroago zirriborro berri gisa argitaratu dezakezu berriro.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Honek %1$d harpidetza aktibo bertan behera utziko du uneko fakturazio-aldiaren amaieran. Harpidedunei jakinaraziko zaie. Iragarkia erosleei ezkutatuko zaie.</item>
-        <item quantity="other">Honek %1$d harpidetza aktibo bertan behera utziko ditu uneko fakturazio-aldiaren amaieran. Harpidedunei jakinaraziko zaie. Iragarkia erosleei ezkutatuko zaie.</item>
+        <item quantity="one">Honek %1$s harpidetza aktibo bertan behera utziko du uneko fakturazio-aldiaren amaieran. Harpidedunei jakinaraziko zaie. Iragarkia erosleei ezkutatuko zaie.</item>
+        <item quantity="other">Honek %1$s harpidetza aktibo bertan behera utziko ditu uneko fakturazio-aldiaren amaieran. Harpidedunei jakinaraziko zaie. Iragarkia erosleei ezkutatuko zaie.</item>
     </plurals>
 </resources>

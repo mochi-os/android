@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Obje tune</string>
     <string name="crm_board_no_columns">Ji bo vê dîtinê stûn nehatine veavakirin</string>
     <string name="crm_board_no_options">Ji bo qada stûnê ti vebijêrk nehatine veavakirin</string>
-    <string name="crm_board_nested_count">+%1$d hêlandî</string>
+    <string name="crm_board_nested_count">+%1$s hêlandî</string>
     <string name="crm_move_to_column">Veguhêze stûnê</string>
     <string name="crm_move_to_row">Veguhêze rêzê</string>
     <string name="crm_move_after">Piştî %1$s</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">Birêvebirina gihîştinê</string>
     <string name="crm_settings_not_set">Nehatiye danîn</string>
     <string name="crm_settings_access_updated">Gihîştin hat nûkirin</string>
-    <string name="crm_settings_access_revoked">Gihiştin hate betalkirin</string>
+    <string name="crm_settings_access_revoked">Gihîştin hate vekişandin</string>
     <string name="crm_people_search">Li kesan bigere</string>
     <string name="crm_access_tab_other">Yên din</string>
     <string name="crm_access_select_group">Komekê hilbijêre</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Daneyên CRM hatin tomarkirin</string>
     <string name="crm_create_upload_json">Pelê .zip an .json bar bike</string>
     <string name="crm_create_blocked_no_options">Nayê afirandin: %1$s pêwîst e lê vebijarkên wê tune ne. Di Sêwiranê de vebijarkan lê zêde bike.</string>
-    <string name="crm_design_sample">Nimûne %1$d</string>
+    <string name="crm_design_sample">Nimûne %1$s</string>
     <string name="crm_option_delete_title">Vebijêrkê jê bibe</string>
     <string name="crm_option_delete_message">Ma tu pê ewle yî ku dixwazî vebijêrka \"%1$s\" jê bibî?</string>
 </resources>

@@ -27,7 +27,7 @@
     <string name="calendars_day_friday">פֿרײַטיק</string>
     <string name="calendars_day_saturday">שבת</string>
     <string name="calendars_link_replace">פארטוישן</string>
-    <string name="calendars_link_revoke">אָפּזאָגן</string>
+    <string name="calendars_link_revoke">צוריקנעמען</string>
     <string name="calendars_permission_allow">דערלויבן</string>
     <string name="calendars_permission_deny">אָפּזאָגן</string>
     <string name="calendars_sync_title">סינכראָניזירן מיט דעם טעלעפֿאָן</string>
@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">אויף שטענדיק</string>
     <string name="calendars_reminder_time">אין דער צײַט</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d מינוט פֿריִער</item>
-        <item quantity="other">%1$d מינוט פֿריִער</item>
+        <item quantity="one">%1$s מינוט פֿריִער</item>
+        <item quantity="other">%1$s מינוט פֿריִער</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d שעה פֿריִער</item>
-        <item quantity="other">%1$d שעה פֿריִער</item>
+        <item quantity="one">%1$s שעה פֿריִער</item>
+        <item quantity="other">%1$s שעה פֿריִער</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d טאָג פֿריִער</item>
-        <item quantity="other">%1$d טעג פֿריִער</item>
+        <item quantity="one">%1$s טאָג פֿריִער</item>
+        <item quantity="other">%1$s טעג פֿריִער</item>
     </plurals>
     <string name="calendars_reminder_add">צולייגן דערמאָנונג</string>
     <string name="calendars_reminder_remove">אַראָפּנעמען דערמאָנונג</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">דער קאַלענדאַר איז צו גרויס</string>
     <string name="calendars_poll_invalid">דער אַדרעס האָט ניט צוריקגעגעבן קיין קאַלענדאַר</string>
     <string name="calendars_poll_unreachable">מען האָט ניט געקענט דערגרייכן דעם אַדרעס</string>
-    <string name="calendars_poll_status">דער אַדרעס האָט געענטפֿערט %1$d</string>
+    <string name="calendars_poll_status">דער אַדרעס האָט געענטפֿערט %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d מינוט</item>
-        <item quantity="other">%1$d מינוט</item>
+        <item quantity="one">%1$s מינוט</item>
+        <item quantity="other">%1$s מינוט</item>
     </plurals>
     <string name="calendars_preferences_zones">ווײַזן געשעענישן אין זייער אייגענער צײַט־זאָנע</string>
     <string name="calendars_event_backwards">ענדיקט זיך איידער עס הייבט זיך אָן</string>
@@ -187,6 +187,6 @@
     <string name="calendars_span_day">%1$s, %2$s ביז %3$s</string>
     <string name="calendars_polled_current">קאַלענדאַר איז אַקטועל</string>
     <string name="calendars_polled_synced">קאַלענדאַר סינכראָניזירט</string>
-    <string name="calendars_link_revoke_title">אָפּרופֿן דעם קאַלענדאַר־אַדרעס?</string>
+    <string name="calendars_link_revoke_title">צוריקנעמען דעם קאַלענדאַר־אַדרעס?</string>
     <string name="calendars_link_revoke_message">קאַלענדאַרן וואָס זענען אַבאָנירט אויף דעם אַדרעס וועלן מער ניט ווערן דערהיינטיקט.</string>
 </resources>

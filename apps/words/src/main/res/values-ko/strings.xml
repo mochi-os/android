@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">아직 게임이 없습니다.</string>
     <string name="words_new_game_choose_opponents">상대 선택</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">플레이어 %1$d명</string>
+    <string name="words_new_game_player_count">플레이어 %1$s명</string>
     <string name="words_new_game_no_friends_subtitle">사람 앱에서 친구를 추가하여 플레이를 시작하세요.</string>
     <string name="words_detail_title">게임</string>
     <string name="words_detail_status_opponent_move">%1$s 차례</string>
     <string name="words_detail_status_winner_wins">%1$s 승리</string>
-    <string name="words_detail_player_fallback">플레이어 %1$d</string>
-    <string name="words_detail_player_count">플레이어 %1$d명</string>
-    <string name="words_detail_label_tiles_left">타일 %1$d개 남음</string>
+    <string name="words_detail_player_fallback">플레이어 %1$s</string>
+    <string name="words_detail_player_count">플레이어 %1$s명</string>
+    <string name="words_detail_label_tiles_left">타일 %1$s개 남음</string>
     <string name="words_detail_action_open_chat">채팅 열기</string>
     <string name="words_detail_action_more">게임 액션</string>
-    <string name="words_detail_exchange_count">교환 (%1$d)</string>
+    <string name="words_detail_exchange_count">교환 (%1$s)</string>
     <string name="words_detail_chat_you_played">당신이 %1$s을(를) 놓았습니다</string>
     <string name="words_detail_chat_player_played">%1$s이(가) %2$s을(를) 놓았습니다</string>
 

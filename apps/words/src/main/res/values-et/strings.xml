@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Veel pole partiisid.</string>
     <string name="words_new_game_choose_opponents">Vali vastased</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d mängijat</string>
+    <string name="words_new_game_player_count">%1$s mängijat</string>
     <string name="words_new_game_no_friends_subtitle">Lisa sõpru rakenduses Inimesed, et alustada mängimist.</string>
     <string name="words_detail_title">Partii</string>
     <string name="words_detail_status_opponent_move">%1$s käik</string>
     <string name="words_detail_status_winner_wins">%1$s võidab</string>
-    <string name="words_detail_player_fallback">Mängija %1$d</string>
-    <string name="words_detail_player_count">%1$d mängijat</string>
-    <string name="words_detail_label_tiles_left">%1$d kivi järel</string>
+    <string name="words_detail_player_fallback">Mängija %1$s</string>
+    <string name="words_detail_player_count">%1$s mängijat</string>
+    <string name="words_detail_label_tiles_left">%1$s kivi järel</string>
     <string name="words_detail_action_open_chat">Ava vestlus</string>
     <string name="words_detail_action_more">Partii toimingud</string>
-    <string name="words_detail_exchange_count">Vaheta (%1$d)</string>
+    <string name="words_detail_exchange_count">Vaheta (%1$s)</string>
     <string name="words_detail_chat_you_played">Mängisid %1$s</string>
     <string name="words_detail_chat_player_played">%1$s mängis %2$s</string>
 

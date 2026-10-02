@@ -2,12 +2,12 @@
 <resources>
 
     <string name="forums_auth_display_name">ნაჩვენები სახელი</string>
-    <string name="forums_auth_verification_failed">შემოწმების კოდი გაიგზავნა</string>
+    <string name="forums_auth_verification_failed">დადასტურება ვერ მოხერხდა</string>
     <string name="forums_list_title">ფორუმები</string>
     <string name="forums_list_find">ფორუმების ძიება</string>
     <string name="forums_list_logout">გასვლა</string>
-    <string name="forums_list_unsubscribe">გამოწერის გაუქმება</string>
-    <string name="forums_list_unsubscribe_title">გამოწერის გაუქმება</string>
+    <string name="forums_list_unsubscribe">გამოწერის შეწყვეტა</string>
+    <string name="forums_list_unsubscribe_title">გამოწერის შეწყვეტა</string>
     <string name="forums_create_title">ფორუმის შექმნა</string>
     <string name="forums_create_name">ფორუმის სახელი</string>
     <string name="forums_create_privacy">კონფიდენციალურობა</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">ტეგების მინიჭება</string>
     <string name="forums_ai_account_default">ნაგულისხმევი ანგარიში</string>
     <string name="forums_ai_prompt_reset">ნაგულისხმევზე გადაყენება</string>
-    <string name="forums_settings_unsubscribe">გამოწერის გაუქმება</string>
+    <string name="forums_settings_unsubscribe">გამოწერის შეწყვეტა</string>
     <string name="forums_moderation_title">მოდერაცია</string>
     <string name="forums_moderation_tab_queue">რიგი</string>
     <string name="forums_moderation_tab_reports">საჩივრები</string>
@@ -137,7 +137,7 @@
     <string name="forums_auth_enter_code_sent">შეიყვანეთ კოდი, რომელიც გაიგზავნა მისამართზე %1$s</string>
     <string name="forums_auth_create_identity">შექმენით თქვენი იდენტობა</string>
     <string name="forums_list_empty">ფორუმები ჯერ არ არის</string>
-    <string name="forums_list_unsubscribe_message">ნამდვილად გსურთ ამ ფორუმის გამოწერის გაუქმება?</string>
+    <string name="forums_list_unsubscribe_message">ნამდვილად გსურთ ამ ფორუმის გამოწერის შეწყვეტა?</string>
     <string name="forums_find_search_placeholder">მოძებნეთ ფორუმები ან ჩასვით URL</string>
     <string name="forums_find_search_hint">მოძებნეთ ფორუმები გამოსაწერად</string>
     <string name="forums_post_delete_message">ნამდვილად გსურთ ამ პოსტის წაშლა? ეს ქმედება შეუქცევადია.</string>
@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">მოდერაცია</string>
     <string name="forums_members_search">წევრების ფილტრი</string>
     <string name="forums_banner_description">Markdown, რომელიც ნაჩვენებია ფორუმის თავში.</string>
-    <string name="forums_banner_placeholder">კეთილი იყოს თქვენი მობრძანება ამ ფორუმზე…</string>
+    <string name="forums_banner_placeholder">შეიყვანეთ ბანერის ტექსტი (მხარდაჭერილია Markdown)…</string>
     <string name="forums_ai_mode_label">რეჟიმი: %1$s</string>
     <string name="forums_ai_mode_heading">AI რეჟიმი</string>
     <string name="forums_ai_mode_off">გათიშულია</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">შესანახად აქ მოგვიანებისთვის შეეხეთ ნებისმიერი პოსტის სანიშნეს.</string>
     <string name="forums_saved_error_clear">შენახული პოსტების წაშლა ვერ მოხერხდა</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d ახალი პოსტი</item>
-        <item quantity="other">%d ახალი პოსტი</item>
+        <item quantity="one">%s ახალი პოსტი</item>
+        <item quantity="other">%s ახალი პოსტი</item>
     </plurals>
     <string name="forums_rss_feed">RSS ფიდი</string>
     <string name="forums_rss_mode_posts">პოსტები</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">დღე</string>
     <string name="forums_settings_banner_saved">ბანერი შენახულია</string>
     <string name="forums_settings_access_updated">წვდომა განახლდა</string>
-    <string name="forums_settings_access_revoked">წვდომა გაუქმდა</string>
+    <string name="forums_settings_access_revoked">წვდომა გაწვეულია</string>
     <string name="forums_settings_member_removed">წევრი წაიშალა</string>
     <string name="forums_settings_prompt_saved">მოთხოვნა შენახულია</string>
     <string name="forums_settings_section_identity">ვინაობა</string>
@@ -293,11 +293,11 @@
     <string name="forums_settings_ai_updated">AI პარამეტრები განახლდა</string>
     <string name="forums_settings_forum_renamed">ფორუმს გადაერქვა სახელი</string>
     <string name="forums_settings_name_clear_cd">სახელის გასუფთავება</string>
-    <string name="forums_settings_unsubscribe_section">ფორუმიდან გამოწერის გაუქმება</string>
+    <string name="forums_settings_unsubscribe_section">ფორუმის გამოწერის შეწყვეტა</string>
     <string name="forums_share_link_title">ფორუმის ბმული</string>
     <string name="forums_find_found_by_url">ნაპოვნია URL-ით</string>
-    <string name="forums_moderation_pending_posts">მოლოდინში მყოფი პოსტები (%1$d)</string>
-    <string name="forums_moderation_pending_comments">მოლოდინში მყოფი კომენტარები (%1$d)</string>
+    <string name="forums_moderation_pending_posts">მოლოდინში მყოფი პოსტები (%1$s)</string>
+    <string name="forums_moderation_pending_comments">მოლოდინში მყოფი კომენტარები (%1$s)</string>
     <string name="forums_moderation_on_image">სურათზე: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">თქვენ არ გაქვთ ნებართვა გამოაქვეყნოთ ამ ფორუმზე</string>

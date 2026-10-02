@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">Persone</string>
     <string name="crm_option_icon">Icona</string>
     <string name="crm_option_icon_placeholder">es. Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">Annulla iscrizione</string>
+    <string name="crm_settings_unsubscribe">Disiscriviti</string>
     <string name="crm_settings_delete_crm">Elimina CRM</string>
     <string name="crm_settings_delete_confirm_title">Elimina CRM</string>
-    <string name="crm_settings_unsubscribe_title">Annulla iscrizione</string>
-    <string name="crm_settings_unsubscribe_message">Sei sicuro di voler annullare l\'iscrizione a questo CRM?</string>
+    <string name="crm_settings_unsubscribe_title">Disiscriviti</string>
+    <string name="crm_settings_unsubscribe_message">Sei sicuro di volerti disiscrivere da questo CRM?</string>
     <string name="crm_access_level_owner">Proprietario</string>
     <string name="crm_object_watch">Segui</string>
     <string name="crm_object_tab_properties">Proprietà</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Nessun oggetto</string>
     <string name="crm_board_no_columns">Nessuna colonna configurata per questa vista</string>
     <string name="crm_board_no_options">Nessuna opzione configurata per il campo colonna</string>
-    <string name="crm_board_nested_count">+%1$d annidati</string>
+    <string name="crm_board_nested_count">+%1$s annidati</string>
     <string name="crm_move_to_column">Sposta nella colonna</string>
     <string name="crm_move_to_row">Sposta nella riga</string>
     <string name="crm_move_after">Dopo %1$s</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">Solo visualizzazione</string>
     <string name="crm_access_role_none">Nessun accesso</string>
     <string name="crm_all_crms">Tutti i CRM</string>
-    <string name="crm_settings_unsubscribe_section">Annulla l\'iscrizione al CRM</string>
+    <string name="crm_settings_unsubscribe_section">Disiscriviti dal CRM</string>
     <string name="crm_settings_updated">CRM aggiornato</string>
     <string name="crm_create_import_backup">Importa da backup (facoltativo)</string>
     <string name="crm_export">Esporta dati</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Dati CRM salvati</string>
     <string name="crm_create_upload_json">Carica un file .zip o .json</string>
     <string name="crm_create_blocked_no_options">Impossibile creare: %1$s è obbligatorio ma non ha opzioni tra cui scegliere. Aggiungi opzioni in Progettazione.</string>
-    <string name="crm_design_sample">Esempio %1$d</string>
+    <string name="crm_design_sample">Esempio %1$s</string>
     <string name="crm_option_delete_title">Elimina opzione</string>
     <string name="crm_option_delete_message">Vuoi davvero eliminare l\'opzione \"%1$s\"?</string>
 </resources>

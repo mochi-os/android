@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Nooit opgehaal nie</string>
     <string name="feeds_source_poll">Peiling</string>
     <string name="feeds_source_transform">KI-transformasie</string>
-    <string name="feeds_remove_source_confirm">Verwyder \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Skrap ook ingevoerde plasings</string>
+    <string name="feeds_remove_source_confirm">Dit sal die invoer van inhoud uit \"%1$s\" stop.</string>
+    <string name="feeds_remove_also_delete_posts">Skrap ook plasings wat uit hierdie bron ingevoer is</string>
     <string name="feeds_suggested_credibility_title">Voorgestelde geloofwaardigheid</string>
-    <string name="feeds_suggested_credibility_body">Mochi stel \'n geloofwaardigheid van %1$d voor. Aanvaar?</string>
+    <string name="feeds_suggested_credibility_body">Mochi stel \'n geloofwaardigheid van %1$s voor. Aanvaar?</string>
     <string name="feeds_suggested_credibility_keep">Behou huidige</string>
     <string name="feeds_ai_processing_mode">KI-verwerkingsmodus</string>
     <string name="feeds_ai_account">KI-rekening</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Tik die boekmerk op enige plasing om dit hier vir later te stoor.</string>
     <string name="feeds_saved_error_clear">Kon nie gestoorde plasings uitvee nie</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d nuwe plasing</item>
-        <item quantity="other">%d nuwe plasings</item>
+        <item quantity="one">%s nuwe plasing</item>
+        <item quantity="other">%s nuwe plasings</item>
     </plurals>
     <string name="feeds_caught_up">Jy is heeltemal op datum</string>
     <string name="feeds_all_caught_up">Alles ingehaal</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Voer-entiteit-ID of vingerafdruk</string>
     <string name="feeds_source_credibility_label">Geloofwaardigheid</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d uur</item>
-        <item quantity="other">%1$d ure</item>
+        <item quantity="one">%1$s uur</item>
+        <item quantity="other">%1$s ure</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuut</item>
-        <item quantity="other">%1$d minute</item>
+        <item quantity="one">%1$s minuut</item>
+        <item quantity="other">%1$s minute</item>
     </plurals>
     <string name="feeds_source_polling_interval">Word elke %1$s nagegaan</string>
     <string name="feeds_access_level_react_full">Reageer en kyk</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Skakel</string>
     <string name="feeds_share_link_title">Voerskakel</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d kommentaar</item>
-        <item quantity="other">%1$d kommentaar</item>
+        <item quantity="one">%1$s kommentaar</item>
+        <item quantity="other">%1$s kommentaar</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d aanhegsel</item>
-        <item quantity="other">%1$d aanhegsels</item>
+        <item quantity="one">%1$s aanhegsel</item>
+        <item quantity="other">%1$s aanhegsels</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Bekyk %1$d meer opmerking</item>
-        <item quantity="other">Bekyk %1$d meer opmerkings</item>
+        <item quantity="one">Bekyk %1$s meer opmerking</item>
+        <item quantity="other">Bekyk %1$s meer opmerkings</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d jaar gelede vandag</item>
-        <item quantity="other">%1$d jaar gelede vandag</item>
+        <item quantity="one">%1$s jaar gelede vandag</item>
+        <item quantity="other">%1$s jaar gelede vandag</item>
     </plurals>
     <string name="feeds_block">Blokkeer</string>
     <string name="feeds_removed_from_feed">Jy is uit hierdie feed verwyder</string>

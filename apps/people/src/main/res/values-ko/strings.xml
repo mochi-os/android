@@ -180,7 +180,7 @@
     <string name="people_books_create">주소록 만들기</string>
     <string name="people_books_delete">주소록 삭제</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">%1$s와 그 안의 연락처 %2$d개를 삭제할까요?</item>
+        <item quantity="other">%1$s와 그 안의 연락처 %2$s개를 삭제할까요?</item>
     </plurals>
     <string name="people_welcome_body">Mochi 전체에서 친구를 찾아 소통하세요. 초대를 보내려면 연락처 추가를 누르세요.</string>
     <string name="people_person_state_contact">연락처에 있음</string>

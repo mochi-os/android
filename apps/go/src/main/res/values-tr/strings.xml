@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Sil</string>
     <string name="go_delete_message">Bu oyun listenizden kaldırılacaktır. Bu işlem geri alınamaz.</string>
     <string name="go_delete_title">Oyun silinsin mi?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Kabul et</string>
     <string name="go_draw_decline">Reddet</string>
     <string name="go_draw_offered_received">%1$s beraberlik teklif etti</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Çekildi</string>
     <string name="go_new_game_title">Yeni Go oyunu</string>
     <string name="go_new_game_no_friends">Oyuna başlamadan önce bir arkadaş eklemeniz gerekiyor.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Siyahın ilk hamleyi yapmasını telafi etmek için Beyaz\'ın puanına eklenen puanlar</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go tahtası</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go tahtası, siyah taş koyma sırası sizde</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go tahtası, beyaz taş koyma sırası sizde</string>
+    <string name="go_board_a11y">%1$s×%1$s Go tahtası</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go tahtası, siyah taş koyma sırası sizde</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go tahtası, beyaz taş koyma sırası sizde</string>
     <string name="go_status_scoring">Sayım — skor üzerinde anlaşın veya oynamaya devam edin</string>
     <string name="go_score_proposed">Önerilen skor: siyah %1$s, beyaz %2$s</string>
     <string name="go_score_opponent_accepted">Rakibiniz bu skoru kabul ediyor: siyah %1$s, beyaz %2$s</string>

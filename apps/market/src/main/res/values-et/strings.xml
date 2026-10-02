@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Saatmine…</string>
     <string name="market_checkout_subscribing">Tellitakse…</string>
     <string name="market_filter_remove">Eemalda filter</string>
-    <string name="market_listing_detail_sales_count">%1$d müüki</string>
-    <string name="market_profile_sales_count">%1$d müüki</string>
+    <string name="market_listing_detail_sales_count">%1$s müüki</string>
+    <string name="market_profile_sales_count">%1$s müüki</string>
     <string name="market_purchase_dispute_response">Müüja vastus</string>
     <string name="market_purchases_order_label">Tellimus #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Rääkige ostjatele endast…</string>
     <string name="market_account_load_failed">Konto laadimine ebaõnnestus</string>
     <string name="market_account_save_failed">Muudatuste salvestamine ebaõnnestus</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Praegune: %1$s</string>
     <string name="market_bids_ends_in">Lõpeb %1$s pärast</string>
     <string name="market_bids_your_bid">Teie pakkumine: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d/%2$d</string>
-    <string name="market_carousel_thumbnail">Pisipilt %1$d</string>
+    <string name="market_carousel_main">Foto %1$s/%2$s</string>
+    <string name="market_carousel_thumbnail">Pisipilt %1$s</string>
     <string name="market_checkout_browser_unavailable">Makselehe avamiseks pole brauserit saadaval</string>
     <string name="market_checkout_pay_button">Maksa Stripe\'iga</string>
     <string name="market_checkout_processing">Töötlemine…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Lisa tõend</string>
-    <string name="market_dispute_dialog_attach_count">Lisatud faile: %1$d</string>
+    <string name="market_dispute_dialog_attach_count">Lisatud faile: %1$s</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi töötajad</string>
     <string name="market_dispute_dialog_evidence_section_title">Esitatud tõendid</string>
     <string name="market_dispute_dialog_evidence_submitter_line">esitas %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Viite URL</string>
     <string name="market_editor_assets_empty">Varasid veel pole</string>
     <string name="market_editor_category_none">Valige kategooria</string>
-    <string name="market_editor_days">%1$d päeva</string>
+    <string name="market_editor_days">%1$s päeva</string>
     <string name="market_editor_delete">Kustuta kuulutus</string>
     <string name="market_editor_delete_confirm_message">See kustutab kuulutuse jäädavalt.</string>
     <string name="market_editor_delete_confirm_title">Kas kustutada kuulutus?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Vestlust ei õnnestunud laadida</string>
     <string name="market_messages_send_failed">Sõnumi saatmine ebaõnnestus</string>
     <string name="market_messages_thread_title">Vestlus</string>
-    <string name="market_messages_unread_badge">%1$d lugemata</string>
-    <string name="market_price_from">alates %1$s</string>
+    <string name="market_messages_unread_badge">%1$s lugemata</string>
+    <string name="market_price_from">Alates %1$s</string>
     <string name="market_price_high_bid">Kõrgeim pakkumine: %1$s</string>
     <string name="market_price_instant_buy">kohene ost: %1$s</string>
     <string name="market_price_per_month">%1$s / kuu</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Liitus %1$s</string>
     <string name="market_profile_no_reviews">Ülevaateid pole veel.</string>
     <string name="market_profile_rating_breakdown">Hinnangute jaotus</string>
-    <string name="market_profile_stars_value">%1$d tärni</string>
+    <string name="market_profile_stars_value">%1$s tärni</string>
     <string name="market_purchase_dispute_chargeback">Tagasimakse %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Sinu pank esitas selle tellimuse kohta tagasimakse nõude. Stripe käsitleb vaidlust müüjaga; tulemus ilmub siia, kui see on otsustatud.</string>
-    <string name="market_purchase_download_many">Laadi alla oma %1$d faili allpool.</string>
+    <string name="market_purchase_download_many">Laadi alla oma %1$s faili allpool.</string>
     <string name="market_purchase_download_one">Laadi oma fail alla allpool.</string>
     <string name="market_purchase_review_from">Ülevaade kasutajalt %1$s</string>
     <string name="market_purchases_auction_label">Oksjon nr %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s tagastatud</string>
     <string name="market_purchases_won_for">Võidetud hinnaga %1$s</string>
-    <string name="market_rating_reviews">(%1$d arvustust)</string>
+    <string name="market_rating_reviews">(%1$s arvustust)</string>
     <string name="market_refund_amount_label">Summa</string>
     <string name="market_refund_dialog_amount_help">Jätke tühjaks, et tagastada kogu tellimuse summa.</string>
     <string name="market_refund_dialog_amount_label">Summa</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe seadistatud</string>
     <string name="market_audit_account_stripe_restricted">Stripe piiratud</string>
     <string name="market_audit_account_suspended">Peatatud müüjana</string>
-    <string name="market_audit_account_unbanned">Bann tühistatud</string>
-    <string name="market_audit_account_unsuspended">Peatamine tühistatud</string>
+    <string name="market_audit_account_unbanned">Bann eemaldatud</string>
+    <string name="market_audit_account_unsuspended">Peatamine eemaldatud</string>
     <string name="market_audit_auction_bid_placed">Pakkumine tehtud</string>
     <string name="market_audit_auction_created">Oksjon loodud</string>
     <string name="market_audit_auction_ended_sold">Oksjon müüdud</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">See tühistab oksjoni. Kuulutus peidetakse ostjate eest; saad selle hiljem uue mustandina uuesti üles panna.</string>
     <string name="market_listings_remove_title">Kas eemaldada see kuulutus?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">See tühistab oksjoni ja teavitab %1$d aktiivset pakkujat. Kuulutus peidetakse ostjate eest; hiljem saate selle uue mustandina uuesti avaldada.</item>
-        <item quantity="other">See tühistab oksjoni ja teavitab %1$d aktiivset pakkujat. Kuulutus peidetakse ostjate eest; hiljem saate selle uue mustandina uuesti avaldada.</item>
+        <item quantity="one">See tühistab oksjoni ja teavitab %1$s aktiivset pakkujat. Kuulutus peidetakse ostjate eest; hiljem saate selle uue mustandina uuesti avaldada.</item>
+        <item quantity="other">See tühistab oksjoni ja teavitab %1$s aktiivset pakkujat. Kuulutus peidetakse ostjate eest; hiljem saate selle uue mustandina uuesti avaldada.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">See tühistab praeguse arveldusperioodi lõpus %1$d aktiivse tellimuse. Tellijaid teavitatakse. Kuulutus peidetakse ostjate eest.</item>
-        <item quantity="other">See tühistab praeguse arveldusperioodi lõpus %1$d aktiivset tellimust. Tellijaid teavitatakse. Kuulutus peidetakse ostjate eest.</item>
+        <item quantity="one">See tühistab praeguse arveldusperioodi lõpus %1$s aktiivse tellimuse. Tellijaid teavitatakse. Kuulutus peidetakse ostjate eest.</item>
+        <item quantity="other">See tühistab praeguse arveldusperioodi lõpus %1$s aktiivset tellimust. Tellijaid teavitatakse. Kuulutus peidetakse ostjate eest.</item>
     </plurals>
 </resources>

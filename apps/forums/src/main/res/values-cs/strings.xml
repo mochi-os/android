@@ -6,8 +6,8 @@
     <string name="forums_list_title">Fóra</string>
     <string name="forums_list_find">Najít fóra</string>
     <string name="forums_list_logout">Odhlásit se</string>
-    <string name="forums_list_unsubscribe">Zrušit odběr</string>
-    <string name="forums_list_unsubscribe_title">Zrušit odběr</string>
+    <string name="forums_list_unsubscribe">Odhlásit odběr</string>
+    <string name="forums_list_unsubscribe_title">Odhlásit odběr</string>
     <string name="forums_create_title">Vytvořit fórum</string>
     <string name="forums_create_name">Název fóra</string>
     <string name="forums_create_privacy">Soukromí</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Štítkování</string>
     <string name="forums_ai_account_default">Výchozí účet</string>
     <string name="forums_ai_prompt_reset">Obnovit na výchozí</string>
-    <string name="forums_settings_unsubscribe">Zrušit odběr</string>
+    <string name="forums_settings_unsubscribe">Odhlásit odběr</string>
     <string name="forums_moderation_title">Moderování</string>
     <string name="forums_moderation_tab_queue">Fronta</string>
     <string name="forums_moderation_tab_reports">Hlášení</string>
@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Moderovat</string>
     <string name="forums_members_search">Filtrovat členy</string>
     <string name="forums_banner_description">Markdown zobrazený v horní části fóra.</string>
-    <string name="forums_banner_placeholder">Vítejte na tomto fóru…</string>
+    <string name="forums_banner_placeholder">Zadejte text banneru (podporuje Markdown)…</string>
     <string name="forums_ai_mode_label">Režim: %1$s</string>
     <string name="forums_ai_mode_heading">Režim AI</string>
     <string name="forums_ai_mode_off">Zakázáno</string>
@@ -202,10 +202,10 @@
     <string name="forums_saved_empty_subtitle">Klepnutím na záložku u libovolného příspěvku jej zde uložíte na později.</string>
     <string name="forums_saved_error_clear">Uložené příspěvky se nepodařilo vymazat</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d nový příspěvek</item>
-        <item quantity="few">%d nové příspěvky</item>
-        <item quantity="many">%d nového příspěvku</item>
-        <item quantity="other">%d nových příspěvků</item>
+        <item quantity="one">%s nový příspěvek</item>
+        <item quantity="few">%s nové příspěvky</item>
+        <item quantity="many">%s nového příspěvku</item>
+        <item quantity="other">%s nových příspěvků</item>
     </plurals>
     <string name="forums_rss_feed">RSS kanál</string>
     <string name="forums_rss_mode_posts">Příspěvky</string>
@@ -298,8 +298,8 @@
     <string name="forums_settings_unsubscribe_section">Odhlásit odběr fóra</string>
     <string name="forums_share_link_title">Odkaz na fórum</string>
     <string name="forums_find_found_by_url">Nalezeno podle URL</string>
-    <string name="forums_moderation_pending_posts">Čekající příspěvky (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Čekající komentáře (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Čekající příspěvky (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Čekající komentáře (%1$s)</string>
     <string name="forums_moderation_on_image">K obrázku: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">Nemáte oprávnění přispívat do tohoto fóra</string>

@@ -180,7 +180,7 @@
     <string name="people_books_create">လိပ်စာစာအုပ် ဖန်တီးရန်</string>
     <string name="people_books_delete">လိပ်စာစာအုပ် ဖျက်ရန်</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">%1$s နှင့် ၎င်းအတွင်းရှိ အဆက်အသွယ် %2$d ခုကို ဖျက်မလား။</item>
+        <item quantity="other">%1$s နှင့် ၎င်းအတွင်းရှိ အဆက်အသွယ် %2$s ခုကို ဖျက်မလား။</item>
     </plurals>
     <string name="people_welcome_body">Mochi တစ်လျှောက် သူငယ်ချင်းများကို ရှာဖွေပြီး ဆက်သွယ်ပါ။ ဖိတ်ကြားစာ ပို့ရန် အဆက်အသွယ် ထည့်ရန် ကို နှိပ်ပါ။</string>
     <string name="people_person_state_contact">အဆက်အသွယ်များတွင်</string>

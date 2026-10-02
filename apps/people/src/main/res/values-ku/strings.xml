@@ -180,8 +180,8 @@
     <string name="people_books_create">Pirtûka navnîşanan çêbike</string>
     <string name="people_books_delete">Pirtûka navnîşanan jê bibe</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s û %2$d têkiliya wê were jêbirin?</item>
-        <item quantity="other">%1$s û %2$d têkiliyên wê werin jêbirin?</item>
+        <item quantity="one">%1$s û %2$s têkiliya wê were jêbirin?</item>
+        <item quantity="other">%1$s û %2$s têkiliyên wê werin jêbirin?</item>
     </plurals>
     <string name="people_welcome_body">Li seranserê Mochi hevalan bibîne û têkilî deyne. Ji bo şandina vexwendinê Têkilî lê zêde bike bitikîne.</string>
     <string name="people_person_state_contact">Di têkiliyan de</string>

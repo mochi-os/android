@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Nekad nav iegūts</string>
     <string name="feeds_source_poll">Aptaujāt</string>
     <string name="feeds_source_transform">AI transformācija</string>
-    <string name="feeds_remove_source_confirm">Noņemt \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Arī dzēst importētos ierakstus</string>
+    <string name="feeds_remove_source_confirm">Tas apturēs satura importēšanu no \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Arī dzēst no šī avota importētos ierakstus</string>
     <string name="feeds_suggested_credibility_title">Ieteiktā uzticamība</string>
-    <string name="feeds_suggested_credibility_body">Mochi iesaka uzticamību %1$d. Pieņemt?</string>
+    <string name="feeds_suggested_credibility_body">Mochi iesaka uzticamību %1$s. Pieņemt?</string>
     <string name="feeds_suggested_credibility_keep">Paturēt pašreizējo</string>
     <string name="feeds_ai_processing_mode">MI apstrādes režīms</string>
     <string name="feeds_ai_account">AI konts</string>
@@ -140,9 +140,9 @@
     <string name="feeds_saved_empty_subtitle">Pieskarieties jebkura ieraksta grāmatzīmei, lai saglabātu to šeit vēlākam laikam.</string>
     <string name="feeds_saved_error_clear">Neizdevās notīrīt saglabātos ierakstus</string>
     <plurals name="feeds_new_posts">
-        <item quantity="zero">%d jaunu ierakstu</item>
-        <item quantity="one">%d jauns ieraksts</item>
-        <item quantity="other">%d jauni ieraksti</item>
+        <item quantity="zero">%s jaunu ierakstu</item>
+        <item quantity="one">%s jauns ieraksts</item>
+        <item quantity="other">%s jauni ieraksti</item>
     </plurals>
     <string name="feeds_caught_up">Esat apskatījis visu</string>
     <string name="feeds_all_caught_up">Viss apstrādāts</string>
@@ -193,14 +193,14 @@
     <string name="feeds_source_url_hint_feed">Plūsmas entītijas ID vai pirkstu nospiedums</string>
     <string name="feeds_source_credibility_label">Uzticamība</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="zero">%1$d stundu</item>
-        <item quantity="one">%1$d stunda</item>
-        <item quantity="other">%1$d stundas</item>
+        <item quantity="zero">%1$s stundu</item>
+        <item quantity="one">%1$s stunda</item>
+        <item quantity="other">%1$s stundas</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="zero">%1$d minūšu</item>
-        <item quantity="one">%1$d minūte</item>
-        <item quantity="other">%1$d minūtes</item>
+        <item quantity="zero">%1$s minūšu</item>
+        <item quantity="one">%1$s minūte</item>
+        <item quantity="other">%1$s minūtes</item>
     </plurals>
     <string name="feeds_source_polling_interval">Pārbauda ik pēc %1$s</string>
     <string name="feeds_access_level_react_full">Reaģēt un skatīt</string>
@@ -217,24 +217,24 @@
     <string name="feeds_link">Saite</string>
     <string name="feeds_share_link_title">Plūsmas saite</string>
     <plurals name="feeds_comment_count">
-        <item quantity="zero">%1$d komentāru</item>
-        <item quantity="one">%1$d komentārs</item>
-        <item quantity="other">%1$d komentāri</item>
+        <item quantity="zero">%1$s komentāru</item>
+        <item quantity="one">%1$s komentārs</item>
+        <item quantity="other">%1$s komentāri</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="zero">%1$d pielikumu</item>
-        <item quantity="one">%1$d pielikums</item>
-        <item quantity="other">%1$d pielikumi</item>
+        <item quantity="zero">%1$s pielikumu</item>
+        <item quantity="one">%1$s pielikums</item>
+        <item quantity="other">%1$s pielikumi</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="zero">Skatīt vēl %1$d komentāru</item>
-        <item quantity="one">Skatīt vēl %1$d komentāru</item>
-        <item quantity="other">Skatīt vēl %1$d komentārus</item>
+        <item quantity="zero">Skatīt vēl %1$s komentāru</item>
+        <item quantity="one">Skatīt vēl %1$s komentāru</item>
+        <item quantity="other">Skatīt vēl %1$s komentārus</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="zero">pirms %1$d gadiem šodien</item>
-        <item quantity="one">pirms %1$d gada šodien</item>
-        <item quantity="other">pirms %1$d gadiem šodien</item>
+        <item quantity="zero">pirms %1$s gadiem šodien</item>
+        <item quantity="one">pirms %1$s gada šodien</item>
+        <item quantity="other">pirms %1$s gadiem šodien</item>
     </plurals>
     <string name="feeds_block">Bloķēt</string>
     <string name="feeds_removed_from_feed">Jūs noņēma no šīs plūsmas</string>

@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">gjorde en endring</string>
     <string name="projects_attachment_empty">Ingen vedlegg</string>
     <string name="projects_attachment_default_name">vedlegg</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Ny flettforespørsel</string>
     <string name="projects_request_status_closed">Lukket</string>
     <string name="projects_request_back_to_list">Tilbake til listen</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Sjekker flettestatus…</string>
     <string name="projects_request_can_merge">Kan flettes</string>
     <string name="projects_request_cannot_merge">Kan ikke flettes</string>
-    <string name="projects_request_ahead_behind">%1$d foran, %2$d bak</string>
+    <string name="projects_request_ahead_behind">%1$s foran, %2$s bak</string>
     <string name="projects_request_draft_notice">Dette er et utkast. Marker som klar før fletting.</string>
     <string name="projects_request_view_diff">Vis diff</string>
     <string name="projects_request_mark_ready">Marker som klar</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Ingen kolonner er konfigurert for denne visningen</string>
     <string name="projects_board_no_options">Ingen alternativer konfigurert for kolonnefelt</string>
     <string name="projects_board_column_options">Kolonnealternativer</string>
-    <string name="projects_board_nested_count">+%1$d nestede</string>
+    <string name="projects_board_nested_count">+%1$s nestede</string>
     <string name="projects_move_to_column">Flytt til kolonne</string>
     <string name="projects_move_to_row">Flytt til rad</string>
     <string name="projects_move_after">Etter %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Sorter og filtrer</string>
     <string name="projects_create_prefix_hint">Brukes til lesbare ID-er som %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d fil med konflikt</item>
-        <item quantity="other">%1$d filer med konflikter</item>
+        <item quantity="one">%1$s fil med konflikt</item>
+        <item quantity="other">%1$s filer med konflikter</item>
     </plurals>
     <string name="projects_design_export_saved">Design lagret</string>
     <string name="projects_design_import_failed">Kunne ikke lese filen</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Prosjektdata lagret</string>
     <string name="projects_exporting">Forbereder eksport…</string>
     <string name="projects_board_add_column">Legg til kolonne</string>
-    <string name="projects_design_sample">Eksempel %1$d</string>
+    <string name="projects_design_sample">Eksempel %1$s</string>
     <string name="projects_option_delete_title">Slett alternativ</string>
     <string name="projects_option_delete_message">Er du sikker på at du vil slette alternativet \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ingen elementtyper kan opprettes ennå. Opprett de nødvendige overordnede elementene først.</string>

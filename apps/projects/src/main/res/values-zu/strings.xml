@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">wenze ushintsho</string>
     <string name="projects_attachment_empty">Azikho izinamathiselo</string>
     <string name="projects_attachment_default_name">isinamathiselo</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Isicelo sokuhlanganisa esisha</string>
     <string name="projects_request_status_closed">Kuvaliwe</string>
     <string name="projects_request_back_to_list">Buyela ohlwini</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Kuhlolwa isimo sokuhlanganisa…</string>
     <string name="projects_request_can_merge">Kungahlanganiswa</string>
     <string name="projects_request_cannot_merge">Akukwazi ukuhlanganiswa</string>
-    <string name="projects_request_ahead_behind">%1$d phambili, %2$d emuva</string>
+    <string name="projects_request_ahead_behind">%1$s phambili, %2$s emuva</string>
     <string name="projects_request_draft_notice">Lokhu kuyilungiselelo. Maka njengokulungele ngaphambi kokuhlanganisa.</string>
     <string name="projects_request_view_diff">Buka umehluko</string>
     <string name="projects_request_mark_ready">Maka njengokulungele</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Awekho amakholomu amisiwe alolu kubuka</string>
     <string name="projects_board_no_options">Awekho amathuba amisiwe enkambini yekholomu</string>
     <string name="projects_board_column_options">Amathuba ekholomu</string>
-    <string name="projects_board_nested_count">+%1$d ezifakelwe ngaphakathi</string>
+    <string name="projects_board_nested_count">+%1$s ezifakelwe ngaphakathi</string>
     <string name="projects_move_to_column">Hambisa ekholomini</string>
     <string name="projects_move_to_row">Hambisa emugqeni</string>
     <string name="projects_move_after">Ngemva kuka-%1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Hlunga futhi uhlele</string>
     <string name="projects_create_prefix_hint">Isetshenziselwa ama-ID afundekayo njenge-%1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">ifayela eli-%1$d elingqubuzanayo</item>
-        <item quantity="other">amafayela angu-%1$d angqubuzanayo</item>
+        <item quantity="one">ifayela eli-%1$s elingqubuzanayo</item>
+        <item quantity="other">amafayela angu-%1$s angqubuzanayo</item>
     </plurals>
     <string name="projects_design_export_saved">Umklamo ulondoloziwe</string>
     <string name="projects_design_import_failed">Ayikwazanga ukufundwa leyo fayela</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Idatha yephrojekthi ilondoloziwe</string>
     <string name="projects_exporting">Ilungiselela okuthunyelwayo…</string>
     <string name="projects_board_add_column">Engeza ikholomu</string>
-    <string name="projects_design_sample">Isampula %1$d</string>
+    <string name="projects_design_sample">Isampula %1$s</string>
     <string name="projects_option_delete_title">Susa inketho</string>
     <string name="projects_option_delete_message">Ingabe uqinisekile ukuthi ufuna ukususa inketho ethi \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Azikho izinhlobo zezinto ezingadalwa okwamanje. Dala izinto zomzali ezidingekayo kuqala.</string>

@@ -401,12 +401,12 @@
     <string name="market_sale_review_response_submitting">Enviando…</string>
     <string name="market_checkout_subscribing">Inscrevendo…</string>
     <string name="market_filter_remove">Remover filtro</string>
-    <string name="market_listing_detail_sales_count">%1$d vendas</string>
-    <string name="market_profile_sales_count">%1$d vendas</string>
+    <string name="market_listing_detail_sales_count">%1$s vendas</string>
+    <string name="market_profile_sales_count">%1$s vendas</string>
     <string name="market_purchase_dispute_response">Resposta do vendedor</string>
     <string name="market_purchases_order_label">Pedido nº %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Conte aos compradores sobre você…</string>
     <string name="market_account_load_failed">Não foi possível carregar a conta</string>
     <string name="market_account_save_failed">Não foi possível salvar as alterações</string>
@@ -432,8 +432,8 @@
     <string name="market_bids_current_bid">Atual: %1$s</string>
     <string name="market_bids_ends_in">Termina em %1$s</string>
     <string name="market_bids_your_bid">Seu lance: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d de %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatura %1$d</string>
+    <string name="market_carousel_main">Foto %1$s de %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatura %1$s</string>
     <string name="market_checkout_browser_unavailable">Nenhum navegador disponível para abrir a página de pagamento</string>
     <string name="market_checkout_pay_button">Pagar com Stripe</string>
     <string name="market_checkout_processing">Processando…</string>
@@ -442,7 +442,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Anexar evidências</string>
-    <string name="market_dispute_dialog_attach_count">%1$d arquivo(s) anexado(s)</string>
+    <string name="market_dispute_dialog_attach_count">%1$s arquivo(s) anexado(s)</string>
     <string name="market_dispute_dialog_evidence_role_staff">Equipe Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Evidências enviadas</string>
     <string name="market_dispute_dialog_evidence_submitter_line">enviado por %1$s</string>
@@ -456,7 +456,7 @@
     <string name="market_editor_asset_external_url">URL de referência</string>
     <string name="market_editor_assets_empty">Ainda não há recursos</string>
     <string name="market_editor_category_none">Selecione uma categoria</string>
-    <string name="market_editor_days">%1$d dias</string>
+    <string name="market_editor_days">%1$s dias</string>
     <string name="market_editor_delete">Excluir anúncio</string>
     <string name="market_editor_delete_confirm_message">Isso excluirá o anúncio permanentemente.</string>
     <string name="market_editor_delete_confirm_title">Excluir anúncio?</string>
@@ -548,8 +548,7 @@
     <string name="market_messages_load_failed">Não foi possível carregar a conversa</string>
     <string name="market_messages_send_failed">Não foi possível enviar a mensagem</string>
     <string name="market_messages_thread_title">Conversa</string>
-    <string name="market_messages_unread_badge">%1$d não lidas</string>
-    <string name="market_price_from">a partir de %1$s</string>
+    <string name="market_messages_unread_badge">%1$s não lidas</string>
     <string name="market_price_high_bid">Lance mais alto: %1$s</string>
     <string name="market_price_instant_buy">compra imediata: %1$s</string>
     <string name="market_price_per_month">%1$s / mês</string>
@@ -561,16 +560,16 @@
     <string name="market_profile_joined">Entrou em %1$s</string>
     <string name="market_profile_no_reviews">Nenhuma avaliação ainda.</string>
     <string name="market_profile_rating_breakdown">Detalhamento das avaliações</string>
-    <string name="market_profile_stars_value">%1$d estrelas</string>
+    <string name="market_profile_stars_value">%1$s estrelas</string>
     <string name="market_purchase_dispute_chargeback">Estorno %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Seu banco abriu um estorno neste pedido. O Stripe está conduzindo a disputa com o vendedor; o resultado aparecerá aqui quando for decidido.</string>
-    <string name="market_purchase_download_many">Baixe seus %1$d arquivos abaixo.</string>
+    <string name="market_purchase_download_many">Baixe seus %1$s arquivos abaixo.</string>
     <string name="market_purchase_download_one">Baixe seu arquivo abaixo.</string>
     <string name="market_purchase_review_from">Avaliação de %1$s</string>
     <string name="market_purchases_auction_label">Leilão #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsado</string>
     <string name="market_purchases_won_for">Arrematado por %1$s</string>
-    <string name="market_rating_reviews">(%1$d avaliações)</string>
+    <string name="market_rating_reviews">(%1$s avaliações)</string>
     <string name="market_refund_amount_label">Valor</string>
     <string name="market_refund_dialog_amount_help">Deixe em branco para reembolsar o pedido completo.</string>
     <string name="market_refund_dialog_amount_label">Valor</string>

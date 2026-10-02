@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">ナイト</string>
     <string name="chess_piece_pawn">ポーン</string>
     <string name="chess_move_played">%1$sが%2$sを指しました</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">チェスの手、引き分けの提案、対局結果に関する通知。</string>
     <string name="chess_channel_name">チェスの通知</string>
     <string name="chess_delete_message">対局を一覧から削除します。</string>

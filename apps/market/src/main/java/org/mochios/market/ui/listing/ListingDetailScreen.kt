@@ -880,7 +880,7 @@ private fun ListingDetailContent(
                     Text(
                         text = stringResource(
                             R.string.market_listing_detail_sales_count,
-                            sellerSales,
+                            LocalFormat.current.formatNumber(sellerSales),
                         ),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,

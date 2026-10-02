@@ -16,7 +16,7 @@
     <string name="chess_new_no_friends_subtitle">Ավելացրեք ընկերներ «Մարդիկ» հավելվածում՝ խաղալու համար</string>
     <string name="chess_new_add_friends">Ավելացնել ընկերներ</string>
     <string name="chess_new_start_button">Սկսել խաղը</string>
-    <string name="chess_new_creating">Արժանահավատություն</string>
+    <string name="chess_new_creating">Ստեղծվում է…</string>
     <string name="chess_chat_title">Զրույց</string>
     <string name="chess_open_chat">Բացել զրույցի վահանակը</string>
     <string name="chess_open_actions">Բացել խաղի գործողությունները</string>
@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">Վերամիացում…</string>
     <string name="chess_ws_failed">Միացումը ձախողվեց</string>
     <string name="chess_move_capture">%1$s վերցրեց %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">Սպիտակ %1$s</string>
     <string name="chess_piece_black">Սև %1$s</string>

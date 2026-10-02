@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">बजार</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">जीवनी</string>
     <string name="market_account_biography_placeholder">खरिदकर्ताहरूलाई आफ्नो बारेमा बताउनुहोस्…</string>
     <string name="market_account_load_failed">खाता लोड गर्न सकिएन</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">बढी बोली</string>
     <string name="market_bids_tab_won">जित्यो</string>
     <string name="market_bids_title">बोलीहरू</string>
-    <string name="market_carousel_main">फोटो %1$d / %2$d</string>
+    <string name="market_carousel_main">फोटो %1$s / %2$s</string>
     <string name="market_channel_name">बजार</string>
     <string name="market_chargeback_reason_bank_cannot_process">बैंकले प्रशोधन गर्न सकेन</string>
     <string name="market_chargeback_reason_check_returned">चेक फिर्ता</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">नूतनीकृत</string>
     <string name="market_editor_condition_used">प्रयोग गरिएको</string>
     <string name="market_editor_currency">मुद्रा</string>
-    <string name="market_editor_days">%1$d दिन</string>
+    <string name="market_editor_days">%1$s दिन</string>
     <string name="market_editor_delete">विज्ञापन हटाउनुहोस्</string>
     <string name="market_editor_description">विवरण</string>
     <string name="market_editor_interval_monthly">मासिक</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">किनमेलहरू</string>
     <string name="market_rating_label">रेटिङ</string>
     <string name="market_rating_no_reviews">अहिलेसम्म कुनै समीक्षा छैन</string>
-    <string name="market_rating_reviews">(%1$d समीक्षा)</string>
+    <string name="market_rating_reviews">(%1$s समीक्षा)</string>
     <string name="market_refund_amount_label">रकम</string>
     <string name="market_refund_body">तपाईंको फिर्ता अनुरोधको लागि कारण प्रदान गर्नुहोस्।</string>
     <string name="market_refund_details_label">विवरणहरू</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">हालको: %1$s</string>
     <string name="market_bids_ends_in">%1$s मा समाप्त हुन्छ</string>
     <string name="market_bids_your_bid">तपाईंको बोली: %1$s</string>
-    <string name="market_carousel_thumbnail">थम्बनेल %1$d</string>
+    <string name="market_carousel_thumbnail">थम्बनेल %1$s</string>
     <string name="market_checkout_browser_unavailable">भुक्तानी पृष्ठ खोल्न कुनै ब्राउजर उपलब्ध छैन</string>
     <string name="market_checkout_pwyw_label">तपाईंको मूल्य (न्यूनतम %1$s)</string>
     <string name="market_checkout_pwyw_min_error">रकम कम्तीमा %1$s हुनुपर्छ</string>
-    <string name="market_dispute_dialog_attach_count">%1$d फाइल संलग्न गरिएको</string>
+    <string name="market_dispute_dialog_attach_count">%1$s फाइल संलग्न गरिएको</string>
     <string name="market_dispute_dialog_evidence_section_title">पेस गरिएको प्रमाण</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s द्वारा पेस गरिएको</string>
     <string name="market_editor_appeal">मध्यस्थतामा अपील गर्नुहोस्</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">सूची लोड हुँदै</string>
     <string name="market_listing_detail_relist_failed">पुनः सूचीबद्ध गर्न सकिएन</string>
     <string name="market_listing_detail_relist_in_progress">पुनः सूचीबद्ध गर्दै</string>
-    <string name="market_listing_detail_sales_count">%1$d बिक्री</string>
+    <string name="market_listing_detail_sales_count">%1$s बिक्री</string>
     <string name="market_listing_detail_seller_banned_banner">यो बिक्रेतालाई प्रतिबन्ध लगाइएको छ। नयाँ अर्डरहरू राख्न सकिँदैन।</string>
     <string name="market_listing_detail_seller_suspended_banner">यो बिक्रेतालाई निलम्बन गरिएको छ। खाता पुनर्बहाली नभएसम्म नयाँ अर्डरहरू रोकिएका छन्।</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">बिक्रेताको खाता प्रतिबन्धित हुँदा खरिद असक्षम छ।</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">अहिलेसम्म कुनै कुराकानी छैन</string>
     <string name="market_messages_load_failed">थ्रेड लोड गर्न सकिएन</string>
     <string name="market_messages_send_failed">सन्देश पठाउन सकिएन</string>
-    <string name="market_messages_unread_badge">%1$d नपढिएको</string>
+    <string name="market_messages_unread_badge">%1$s नपढिएको</string>
     <string name="market_price_high_bid">उच्च बोली: %1$s</string>
     <string name="market_price_instant_buy">तत्काल खरिद: %1$s</string>
     <string name="market_price_starting_bid">सुरुवाती बोली: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">%1$s देखि सदस्य</string>
     <string name="market_profile_joined">%1$s मा सामेल भयो</string>
     <string name="market_profile_rating_breakdown">मूल्याङ्कन विवरण</string>
-    <string name="market_profile_sales_count">%1$d बिक्री</string>
-    <string name="market_profile_stars_value">%1$d तारा</string>
+    <string name="market_profile_sales_count">%1$s बिक्री</string>
+    <string name="market_profile_stars_value">%1$s तारा</string>
     <string name="market_purchase_dispute_chargeback">चार्जब्याक %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">तपाईंको बैंकले यस अर्डरमा चार्जब्याक दायर गरेको छ। Stripe ले बिक्रेतासँग विवाद ह्यान्डल गरिरहेको छ; निर्णय भएपछि नतिजा यहाँ देखिनेछ।</string>
     <string name="market_purchase_dispute_response">बिक्रेताको प्रतिक्रिया</string>
-    <string name="market_purchase_download_many">तल आफ्ना %1$d फाइलहरू डाउनलोड गर्नुहोस्।</string>
+    <string name="market_purchase_download_many">तल आफ्ना %1$s फाइलहरू डाउनलोड गर्नुहोस्।</string>
     <string name="market_purchase_download_one">तल आफ्नो फाइल डाउनलोड गर्नुहोस्।</string>
     <string name="market_purchase_review_from">%1$s बाट समीक्षा</string>
     <string name="market_purchases_auction_label">लिलाम #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">यसले लिलामी रद्द गर्नेछ। सूची खरिदकर्ताबाट लुकाइनेछ; तपाईं पछि यसलाई नयाँ मस्यौदाको रूपमा फेरि सूचीबद्ध गर्न सक्नुहुन्छ।</string>
     <string name="market_listings_remove_title">यो सूची हटाउने?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">यसले लिलामी रद्द गर्नेछ र %1$d सक्रिय बोलकर्तालाई सूचित गर्नेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ; तपाईं यसलाई पछि नयाँ मस्यौदाको रूपमा फेरि सूचीबद्ध गर्न सक्नुहुन्छ।</item>
-        <item quantity="other">यसले लिलामी रद्द गर्नेछ र %1$d सक्रिय बोलकर्तालाई सूचित गर्नेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ; तपाईं यसलाई पछि नयाँ मस्यौदाको रूपमा फेरि सूचीबद्ध गर्न सक्नुहुन्छ।</item>
+        <item quantity="one">यसले लिलामी रद्द गर्नेछ र %1$s सक्रिय बोलकर्तालाई सूचित गर्नेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ; तपाईं यसलाई पछि नयाँ मस्यौदाको रूपमा फेरि सूचीबद्ध गर्न सक्नुहुन्छ।</item>
+        <item quantity="other">यसले लिलामी रद्द गर्नेछ र %1$s सक्रिय बोलकर्तालाई सूचित गर्नेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ; तपाईं यसलाई पछि नयाँ मस्यौदाको रूपमा फेरि सूचीबद्ध गर्न सक्नुहुन्छ।</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">यसले हालको बिलिङ अवधिको अन्त्यमा %1$d सक्रिय सदस्यता रद्द गर्नेछ। सदस्यहरूलाई सूचित गरिनेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ।</item>
-        <item quantity="other">यसले हालको बिलिङ अवधिको अन्त्यमा %1$d सक्रिय सदस्यता रद्द गर्नेछ। सदस्यहरूलाई सूचित गरिनेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ।</item>
+        <item quantity="one">यसले हालको बिलिङ अवधिको अन्त्यमा %1$s सक्रिय सदस्यता रद्द गर्नेछ। सदस्यहरूलाई सूचित गरिनेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ।</item>
+        <item quantity="other">यसले हालको बिलिङ अवधिको अन्त्यमा %1$s सक्रिय सदस्यता रद्द गर्नेछ। सदस्यहरूलाई सूचित गरिनेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ।</item>
     </plurals>
 </resources>

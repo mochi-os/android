@@ -27,7 +27,7 @@
     <string name="words_detail_action_rematch">Lîstika ji nû</string>
     <string name="words_detail_action_delete">Lîstikê jê bibe</string>
     <string name="words_detail_chat_title">Sohbet</string>
-    <string name="words_detail_recall">Vegere bîr</string>
+    <string name="words_detail_recall">Vegerîne</string>
     <string name="words_detail_submit">Bişîne</string>
     <string name="words_detail_cancel">Betal bike</string>
     <string name="words_detail_exchange">Guherandin</string>
@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Hîn tu lîstik tune.</string>
     <string name="words_new_game_choose_opponents">Hevrikan hilbijêre</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d lîstikvan</string>
+    <string name="words_new_game_player_count">%1$s lîstikvan</string>
     <string name="words_new_game_no_friends_subtitle">Ji bo destpêkirina lîstikê di sepana Mirovan de hevalan zêde bike.</string>
     <string name="words_detail_title">Lîstik</string>
     <string name="words_detail_status_opponent_move">Tevgera %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s bi ser dikeve</string>
-    <string name="words_detail_player_fallback">Lîstikvan %1$d</string>
-    <string name="words_detail_player_count">%1$d lîstikvan</string>
-    <string name="words_detail_label_tiles_left">%1$d kevir mane</string>
+    <string name="words_detail_player_fallback">Lîstikvan %1$s</string>
+    <string name="words_detail_player_count">%1$s lîstikvan</string>
+    <string name="words_detail_label_tiles_left">%1$s kevir mane</string>
     <string name="words_detail_action_open_chat">Sohbetê veke</string>
     <string name="words_detail_action_more">Çalakiyên lîstikê</string>
-    <string name="words_detail_exchange_count">Guherandin (%1$d)</string>
+    <string name="words_detail_exchange_count">Guherandin (%1$s)</string>
     <string name="words_detail_chat_you_played">Te %1$s lîst</string>
     <string name="words_detail_chat_player_played">%1$s %2$s lîst</string>
 

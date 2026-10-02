@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">Завинаги</string>
     <string name="calendars_reminder_time">В момента на събитието</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d минута преди</item>
-        <item quantity="other">%1$d минути преди</item>
+        <item quantity="one">%1$s минута преди</item>
+        <item quantity="other">%1$s минути преди</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d час преди</item>
-        <item quantity="other">%1$d часа преди</item>
+        <item quantity="one">%1$s час преди</item>
+        <item quantity="other">%1$s часа преди</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ден преди</item>
-        <item quantity="other">%1$d дни преди</item>
+        <item quantity="one">%1$s ден преди</item>
+        <item quantity="other">%1$s дни преди</item>
     </plurals>
     <string name="calendars_reminder_add">Добави напомняне</string>
     <string name="calendars_reminder_remove">Премахни напомнянето</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">Календарът е твърде голям</string>
     <string name="calendars_poll_invalid">Адресът не върна календар</string>
     <string name="calendars_poll_unreachable">Адресът е недостъпен</string>
-    <string name="calendars_poll_status">Адресът отговори с %1$d</string>
+    <string name="calendars_poll_status">Адресът отговори с %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d минута</item>
-        <item quantity="other">%1$d минути</item>
+        <item quantity="one">%1$s минута</item>
+        <item quantity="other">%1$s минути</item>
     </plurals>
     <string name="calendars_preferences_zones">Показвай събитията в собствената им часова зона</string>
     <string name="calendars_event_backwards">Свършва преди да е започнало</string>

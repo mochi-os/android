@@ -6,12 +6,9 @@
     <string name="wikis_page_action_rename">Renombrá</string>
     <string name="wikis_page_action_delete">Eliminá</string>
     <string name="wikis_page_action_search">Buscá</string>
-    <string name="wikis_page_action_unsubscribe">Cancelá la suscripción</string>
     <string name="wikis_empty_subtitle">Buscá una wiki para suscribirte, o creá una para publicar tu propia documentación.</string>
     <string name="wikis_create_button">Creá una wiki</string>
     <string name="wikis_subscribe_button">Suscribite</string>
-    <string name="wikis_unsubscribe_action">Cancelá la suscripción</string>
-    <string name="wikis_unsubscribe_confirm_title">Cancelá la suscripción</string>
     <string name="wikis_create_title">Creá una wiki</string>
     <string name="wikis_create_privacy_label">Permití que cualquiera busque la wiki</string>
     <string name="wikis_comment_replying_to">Respondiendo a %1$s</string>
@@ -20,7 +17,6 @@
     <string name="wikis_comment_action_save">Guardá</string>
     <string name="wikis_comment_delete_confirm_title">Eliminá el comentario</string>
     <string name="wikis_comment_delete_confirm_message">¿Estás seguro de que querés eliminar este comentario? Esto también eliminará todas las respuestas. Esta acción no se puede deshacer.</string>
-    <string name="wikis_editor_title_new">Creá una página nueva</string>
     <string name="wikis_editor_delete">Eliminá la página</string>
     <string name="wikis_editor_save">Guardá</string>
     <string name="wikis_editor_create">Creá una página</string>
@@ -55,7 +51,7 @@
 
     <string name="launcher_wikis">Mochi Wikis</string>
     <string name="wikis_sidebar_header">Wikis</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_join_id_hint">abc123…</string>

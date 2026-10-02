@@ -60,6 +60,7 @@ import org.mochios.android.ui.components.MultiPersonPicker
 import org.mochios.words.R
 import org.mochios.words.model.NewGameFriend
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 /** Opponents a words game can hold besides the player: four seats, minus one. */
 private const val MAX_OPPONENTS = 3
@@ -218,7 +219,7 @@ fun NewWordsGameScreen(
                 Text(
                     text = stringResource(
                         R.string.words_new_game_player_count,
-                        selectedFriends.size + 1,
+                        LocalFormat.current.formatNumber(selectedFriends.size + 1),
                     ),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,

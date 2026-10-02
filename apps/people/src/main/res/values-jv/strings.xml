@@ -180,7 +180,7 @@
     <string name="people_books_create">Gawe buku alamat</string>
     <string name="people_books_delete">Busak buku alamat</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">Busak %1$s lan %2$d kontak ing njerone?</item>
+        <item quantity="other">Busak %1$s lan %2$s kontak ing njerone?</item>
     </plurals>
     <string name="people_welcome_body">Golek kanca ing saindenging Mochi lan sesambungan. Ketuk Tambah kontak kanggo ngirim undangan.</string>
     <string name="people_person_state_contact">Ana ing kontak</string>

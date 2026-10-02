@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">שינויים ותגובות</string>
     <string name="wikis_rss_copied">כתובת ה-URL של RSS הועתקה ללוח</string>
     <string name="wikis_rss_failed">קבלת טוקן RSS נכשלה</string>
-    <string name="wikis_rss_revoke">בטל גישה</string>
-    <string name="wikis_rss_revoked">גישת RSS בוטלה</string>
+    <string name="wikis_rss_revoke">שלול גישה</string>
+    <string name="wikis_rss_revoked">גישת RSS נשללה</string>
     <string name="wikis_find_title">חפש ויקיים</string>
     <string name="wikis_find_no_results">לא נמצאו ויקיים</string>
     <string name="wikis_find_recommended_section">ויקיים מומלצים</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">התראות על עריכת דפים, תגובות והזמנות.</string>
     <string name="wikis_pageview_toc_expand">הצג תוכן עניינים</string>
     <string name="wikis_pageview_toc_collapse">הסתר תוכן עניינים</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">עודכן %1$s</string>
     <string name="wikis_pageview_not_found_description">הדף „%1$s\" עדיין לא קיים.</string>
     <string name="wikis_pageview_share_chooser">קישור לוויקי</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">אתה עומד למחוק את הדף „%1$s\" (%2$s). ניתן לבטל פעולה זו על ידי שחזור מההיסטוריה.</string>
     <string name="wikis_delete_page_success">הדף נמחק</string>
     <string name="wikis_revert_page_title">שחזר דף</string>
-    <string name="wikis_revert_page_message">אתה עומד להחזיר את %1$s לגרסה %2$d. זה ייצור גרסה חדשה עם תוכן גרסה %2$d.</string>
-    <string name="wikis_revert_page_default_comment">הוחזר לגרסה %1$d</string>
-    <string name="wikis_revert_page_success">הוחזר לגרסה %1$d</string>
+    <string name="wikis_revert_page_message">אתה עומד להחזיר את %1$s לגרסה %2$s. זה ייצור גרסה חדשה עם תוכן גרסה %2$s.</string>
+    <string name="wikis_revert_page_default_comment">הוחזר לגרסה %1$s</string>
+    <string name="wikis_revert_page_success">הוחזר לגרסה %1$s</string>
     <string name="wikis_rename_page_renaming">משנה שם…</string>
     <string name="wikis_rename_page_success">שם הדף שונה</string>
-    <string name="wikis_history_viewing">מציג היסטוריה של %1$s, גרסה נוכחית %2$d</string>
-    <string name="wikis_revision_version_badge">גרסה %1$d</string>
+    <string name="wikis_history_viewing">מציג היסטוריה של %1$s, גרסה נוכחית %2$s</string>
+    <string name="wikis_revision_version_badge">גרסה %1$s</string>
     <string name="wikis_search_pages_placeholder">חפש דפים לפי כותרת או תוכן…</string>
     <string name="wikis_search_no_results">לא נמצאו דפים עבור „%1$s\". נסה מונחי חיפוש אחרים.</string>
     <string name="wikis_search_updated">עודכן %1$s</string>
@@ -289,54 +289,54 @@
     <string name="wikis_revision_author">לפי %1$s</string>
     <string name="wikis_revision_show_page">הצגת הדף</string>
     <string name="wikis_revision_compare_failed">לא ניתן לטעון את הגרסה הקודמת להשוואה.</string>
-    <string name="wikis_revision_changes_from">שינויים מגרסה %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">שינויים מגרסה %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
         <item quantity="one">תגובה אחת</item>
-        <item quantity="two">%d תגובות</item>
-        <item quantity="many">%d תגובות</item>
-        <item quantity="other">%d תגובות</item>
+        <item quantity="two">%s תגובות</item>
+        <item quantity="many">%s תגובות</item>
+        <item quantity="other">%s תגובות</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
         <item quantity="one">תגובה אחת</item>
-        <item quantity="two">+%d תגובות נוספות</item>
-        <item quantity="many">+%d תגובות נוספות</item>
-        <item quantity="other">+%d תגובות נוספות</item>
+        <item quantity="two">+%s תגובות נוספות</item>
+        <item quantity="many">+%s תגובות נוספות</item>
+        <item quantity="other">+%s תגובות נוספות</item>
     </plurals>
     <plurals name="wikis_tags_count">
         <item quantity="one">עמוד אחד</item>
-        <item quantity="two">%d עמודים</item>
-        <item quantity="many">%d עמודים</item>
-        <item quantity="other">%d עמודים</item>
+        <item quantity="two">%s עמודים</item>
+        <item quantity="many">%s עמודים</item>
+        <item quantity="other">%s עמודים</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
         <item quantity="one">קובץ אחד</item>
-        <item quantity="two">%d קבצים</item>
-        <item quantity="many">%d קבצים</item>
-        <item quantity="other">%d קבצים</item>
+        <item quantity="two">%s קבצים</item>
+        <item quantity="many">%s קבצים</item>
+        <item quantity="other">%s קבצים</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
         <item quantity="one">תמונה אחת</item>
-        <item quantity="two">%d תמונות</item>
-        <item quantity="many">%d תמונות</item>
-        <item quantity="other">%d תמונות</item>
+        <item quantity="two">%s תמונות</item>
+        <item quantity="many">%s תמונות</item>
+        <item quantity="other">%s תמונות</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
         <item quantity="one">מסמך אחד</item>
-        <item quantity="two">%d מסמכים</item>
-        <item quantity="many">%d מסמכים</item>
-        <item quantity="other">%d מסמכים</item>
+        <item quantity="two">%s מסמכים</item>
+        <item quantity="many">%s מסמכים</item>
+        <item quantity="other">%s מסמכים</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
         <item quantity="one">עמוד אחד עם תגית זו</item>
-        <item quantity="two">%d עמודים עם תגית זו</item>
-        <item quantity="many">%d עמודים עם תגית זו</item>
-        <item quantity="other">%d עמודים עם תגית זו</item>
+        <item quantity="two">%s עמודים עם תגית זו</item>
+        <item quantity="many">%s עמודים עם תגית זו</item>
+        <item quantity="other">%s עמודים עם תגית זו</item>
     </plurals>
     <plurals name="wikis_search_results_count">
         <item quantity="one">נמצאו תוצאה אחת עבור «%2$s»</item>
-        <item quantity="two">נמצאו %1$d תוצאות עבור «%2$s»</item>
-        <item quantity="many">נמצאו %1$d תוצאות עבור «%2$s»</item>
-        <item quantity="other">נמצאו %1$d תוצאות עבור «%2$s»</item>
+        <item quantity="two">נמצאו %1$s תוצאות עבור «%2$s»</item>
+        <item quantity="many">נמצאו %1$s תוצאות עבור «%2$s»</item>
+        <item quantity="other">נמצאו %1$s תוצאות עבור «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">שמירת הכיתוב נכשלה</string>
     <string name="wikis_attachments_upload_types">קבצים נתמכים: תמונות, PDF, DOC, DOCX, TXT ו־MD.</string>
@@ -345,9 +345,9 @@
     <string name="wikis_rss_copied_new">כתובת ה-URL החדשה של RSS הועתקה ללוח</string>
     <string name="wikis_rss_exists">כתובת הפיד הזו כבר הונפקה ולא ניתן להציג אותה שוב.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">מוצגת %1$d התגובה הראשונה.</item>
-        <item quantity="two">מוצגות %1$d התגובות הראשונות.</item>
-        <item quantity="many">מוצגות %1$d התגובות הראשונות.</item>
-        <item quantity="other">מוצגות %1$d התגובות הראשונות.</item>
+        <item quantity="one">מוצגת %1$s התגובה הראשונה.</item>
+        <item quantity="two">מוצגות %1$s התגובות הראשונות.</item>
+        <item quantity="many">מוצגות %1$s התגובות הראשונות.</item>
+        <item quantity="other">מוצגות %1$s התגובות הראשונות.</item>
     </plurals>
 </resources>

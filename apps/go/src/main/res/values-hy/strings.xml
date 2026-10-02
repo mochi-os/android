@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Ջնջել</string>
     <string name="go_delete_message">Այս խաղը կհեռացվի ձեր ցուցակից։ Սա հնարավոր չէ չեղարկել։</string>
     <string name="go_delete_title">Ջնջե՞լ խաղը։</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Ընդունել</string>
     <string name="go_draw_decline">Մերժել</string>
     <string name="go_draw_offered_received">%1$s-ը ոչ-ոքի առաջարկեց</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Հանձնվել է</string>
     <string name="go_new_game_title">Նոր Go խաղ</string>
     <string name="go_new_game_no_friends">Խաղ սկսելուց առաջ պետք է ընկեր ավելացնեք։</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Միավորներ՝ ավելացված Սպիտակների միավորին՝ Սևերի առաջինը գնալը փոխհատուցելու համար</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go գրատախտակ</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go տախտակ, ձեր հերթն է դնել սև քար</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go տախտակ, ձեր հերթն է դնել սպիտակ քար</string>
+    <string name="go_board_a11y">%1$s×%1$s Go գրատախտակ</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go տախտակ, ձեր հերթն է դնել սև քար</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go տախտակ, ձեր հերթն է դնել սպիտակ քար</string>
     <string name="go_status_scoring">Հաշվարկ — համաձայնեք հաշվի շուրջ կամ շարունակեք խաղը</string>
     <string name="go_score_proposed">Առաջարկվող միավոր՝ սև %1$s, սպիտակ %2$s</string>
     <string name="go_score_opponent_accepted">Ձեր մրցակիցն ընդունում է այս միավորը՝ սև %1$s, սպիտակ %2$s</string>

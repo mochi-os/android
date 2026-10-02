@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">নোট</string>
     <string name="staff_accounts_reason_label">কারণ</string>
     <string name="staff_accounts_reason_optional_label">কারণ (ঐচ্ছিক)</string>
-    <string name="staff_accounts_sales">%1$d বিক্রয়</string>
+    <string name="staff_accounts_sales">%1$s বিক্রয়</string>
     <string name="staff_accounts_search_clear">অনুসন্ধান পরিষ্কার করুন</string>
     <string name="staff_accounts_search_placeholder">অনুসন্ধান</string>
     <string name="staff_accounts_seller_buyers">শুধুমাত্র ক্রেতা</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">নামহীন</string>
     <string name="staff_accounts_unsuspend">স্থগিতাদেশ প্রত্যাহার করুন</string>
     <string name="staff_accounts_unsuspended_toast">অ্যাকাউন্টের স্থগিতাদেশ প্রত্যাহার করা হয়েছে</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">বাতিল করুন</string>
     <string name="staff_appeals_decide">সিদ্ধান্ত নিন</string>
     <string name="staff_appeals_decision_denied">তালিকা প্রত্যাখ্যাত রাখুন</string>

@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Dzēst</string>
     <string name="go_delete_message">Šī spēle tiks noņemta no jūsu saraksta. To nevar atsaukt.</string>
     <string name="go_delete_title">Dzēst spēli?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Pieņemt</string>
     <string name="go_draw_decline">Noraidīt</string>
     <string name="go_draw_offered_received">%1$s piedāvāja neizšķirtu</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Padevās</string>
     <string name="go_new_game_title">Jauna Go spēle</string>
     <string name="go_new_game_no_friends">Pirms spēles sākšanas jums jāpievieno draugs.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Punkti, kas pievienoti Baltā rezultātam, lai kompensētu, ka Melnais sāk pirmais</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go dēlis</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go galdiņš, jūsu kārta likt melno akmeni</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go galdiņš, jūsu kārta likt balto akmeni</string>
+    <string name="go_board_a11y">%1$s×%1$s Go dēlis</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go galdiņš, jūsu kārta likt melno akmeni</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go galdiņš, jūsu kārta likt balto akmeni</string>
     <string name="go_status_scoring">Skaitīšana — vienojieties par rezultātu vai turpiniet spēli</string>
     <string name="go_score_proposed">Piedāvātais rezultāts: melnie %1$s, baltie %2$s</string>
     <string name="go_score_opponent_accepted">Jūsu pretinieks pieņem šo rezultātu: melnie %1$s, baltie %2$s</string>

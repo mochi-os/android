@@ -1057,7 +1057,7 @@ private fun AttachmentComments(
                     MochiTextButton(onClick = { showAll = !showAll }) {
                         Text(
                             if (showAll) stringResource(MochiR.string.lightbox_comments_only)
-                            else pluralStringResource(MochiR.plurals.lightbox_comments_others, others, others)
+                            else pluralStringResource(MochiR.plurals.lightbox_comments_others, others, LocalFormat.current.formatNumber(others))
                         )
                     }
                 }

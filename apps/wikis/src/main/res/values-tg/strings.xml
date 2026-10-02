@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Тағйирот ва шарҳҳо</string>
     <string name="wikis_rss_copied">URL-и RSS ба буфер нусха карда шуд</string>
     <string name="wikis_rss_failed">Гирифтани токени RSS ба анҷом нарасид</string>
-    <string name="wikis_rss_revoke">Дастрасиро бекор кунед</string>
-    <string name="wikis_rss_revoked">Дастрасии RSS бекор карда шуд</string>
+    <string name="wikis_rss_revoke">Дастрасиро бозхонд кунед</string>
+    <string name="wikis_rss_revoked">Дастрасии RSS бозхонд карда шуд</string>
     <string name="wikis_find_title">Викиҳоро ёбед</string>
     <string name="wikis_find_no_results">Ягон вики ёфт нашуд</string>
     <string name="wikis_find_recommended_section">Викиҳои тавсияшуда</string>
@@ -96,8 +96,8 @@
     <string name="wikis_delete_page_confirm">Нест кардан</string>
     <string name="wikis_delete_page_cancel">Бекор кардан</string>
     <string name="wikis_delete_page_failed">Ҳазфи саҳифа ба анҷом нарасид</string>
-    <string name="wikis_revert_page_comment_label">Бекор кардани шарҳ</string>
-    <string name="wikis_revert_page_confirm">Бекор кардан</string>
+    <string name="wikis_revert_page_comment_label">Шарҳи бозгардонӣ</string>
+    <string name="wikis_revert_page_confirm">Бозгардонидан</string>
     <string name="wikis_revert_page_failed">Бозгардонии саҳифа ба анҷом нарасид</string>
     <string name="wikis_rename_page_title">Тағйири номи саҳифа</string>
     <string name="wikis_rename_page_label">URL-и нав</string>
@@ -110,9 +110,9 @@
     <string name="wikis_history_title">Таърих</string>
     <string name="wikis_history_empty">Ягон ревизия ёфт нашуд</string>
     <string name="wikis_history_view_action">Намоиш</string>
-    <string name="wikis_history_revert_action">Бекор кардан ба ин версия</string>
+    <string name="wikis_history_revert_action">Бозгардонидан ба ин версия</string>
     <string name="wikis_revision_current_badge">Ҷорӣ</string>
-    <string name="wikis_revision_revert_to_this">Бекор кардан ба ин версия</string>
+    <string name="wikis_revision_revert_to_this">Бозгардонидан ба ин версия</string>
     <string name="wikis_changes_title">Тағйиротҳои охирин</string>
     <string name="wikis_changes_subtitle">Таҳриротҳои охирин дар тамоми саҳифаҳои ин вики.</string>
     <string name="wikis_changes_empty">То ҳол ягон тағйирот нест</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Огоҳиҳо дар бораи таҳрири саҳифаи wiki, шарҳҳо ва даъватҳо.</string>
     <string name="wikis_pageview_toc_expand">Мундариҷаро нишон диҳед</string>
     <string name="wikis_pageview_toc_collapse">Мундариҷаро пинҳон кунед</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Навсозӣ шуд: %1$s</string>
     <string name="wikis_pageview_not_found_description">Саҳифаи “%1$s” ҳанӯз вуҷуд надорад.</string>
     <string name="wikis_pageview_share_chooser">Пайванди вики</string>
@@ -246,14 +246,14 @@
     <string name="wikis_insert_dialog_empty">Ҳанӯз замима нест. Барои оғоз файл бор кунед.</string>
     <string name="wikis_delete_page_message">Шумо мехоҳед саҳифаи “%1$s” (%2$s)-ро нест кунед. Ин амалро бо барқарорсозӣ аз таърих бекор кардан мумкин аст.</string>
     <string name="wikis_delete_page_success">Саҳифа нест карда шуд</string>
-    <string name="wikis_revert_page_title">Баргардондани саҳифа</string>
-    <string name="wikis_revert_page_message">Шумо мехоҳед %1$s-ро ба нусхаи %2$d баргардонед. Ин таҳрири нав бо мундариҷаи нусхаи %2$d эҷод мекунад.</string>
-    <string name="wikis_revert_page_default_comment">Ба нусхаи %1$d баргардонида шуд</string>
-    <string name="wikis_revert_page_success">Ба нусхаи %1$d баргардонида шуд</string>
+    <string name="wikis_revert_page_title">Бозгардонидани саҳифа</string>
+    <string name="wikis_revert_page_message">Шумо мехоҳед %1$s-ро ба нусхаи %2$s баргардонед. Ин таҳрири нав бо мундариҷаи нусхаи %2$s эҷод мекунад.</string>
+    <string name="wikis_revert_page_default_comment">Ба нусхаи %1$s бозгардонида шуд</string>
+    <string name="wikis_revert_page_success">Ба нусхаи %1$s бозгардонида шуд</string>
     <string name="wikis_rename_page_renaming">Тағйири ном…</string>
     <string name="wikis_rename_page_success">Номи саҳифа иваз карда шуд</string>
-    <string name="wikis_history_viewing">Таърихи %1$s дида мешавад, нусхаи ҷорӣ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Таърихи %1$s дида мешавад, нусхаи ҷорӣ %2$s</string>
+    <string name="wikis_revision_version_badge">Версияи %1$s</string>
     <string name="wikis_search_pages_placeholder">Ҷустуҷӯи саҳифаҳо аз рӯи унвон ё мундариҷа…</string>
     <string name="wikis_search_no_results">Барои “%1$s” саҳифае ёфт нашуд. Калимаҳои дигари ҷустуҷӯро санҷед.</string>
     <string name="wikis_search_updated">Навсозӣ шуд: %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">аз рӯи %1$s</string>
     <string name="wikis_revision_show_page">Нишон додани саҳифа</string>
     <string name="wikis_revision_compare_failed">Версияи қаблиро барои муқоиса бор кардан имконнопазир буд.</string>
-    <string name="wikis_revision_changes_from">Тағйирот аз версияи %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Тағйирот аз версияи %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d шарҳ</item>
-        <item quantity="other">%d шарҳ</item>
+        <item quantity="one">%s шарҳ</item>
+        <item quantity="other">%s шарҳ</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d ҷавоб</item>
-        <item quantity="other">+%d ҷавоби бештар</item>
+        <item quantity="one">%s ҷавоб</item>
+        <item quantity="other">+%s ҷавоби бештар</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d саҳифа</item>
-        <item quantity="other">%d саҳифа</item>
+        <item quantity="one">%s саҳифа</item>
+        <item quantity="other">%s саҳифа</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d файл</item>
-        <item quantity="other">%d файл</item>
+        <item quantity="one">%s файл</item>
+        <item quantity="other">%s файл</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d тасвир</item>
-        <item quantity="other">%d тасвир</item>
+        <item quantity="one">%s тасвир</item>
+        <item quantity="other">%s тасвир</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d ҳуҷҷат</item>
-        <item quantity="other">%d ҳуҷҷат</item>
+        <item quantity="one">%s ҳуҷҷат</item>
+        <item quantity="other">%s ҳуҷҷат</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d саҳифа бо ин барчасп</item>
-        <item quantity="other">%d саҳифа бо ин барчасп</item>
+        <item quantity="one">%s саҳифа бо ин барчасп</item>
+        <item quantity="other">%s саҳифа бо ин барчасп</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d натиҷа барои "%2$s" ёфт шуд</item>
-        <item quantity="other">%1$d натиҷа барои "%2$s" ёфт шуд</item>
+        <item quantity="one">%1$s натиҷа барои \"%2$s\" ёфт шуд</item>
+        <item quantity="other">%1$s натиҷа барои \"%2$s\" ёфт шуд</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Зернавис захира нашуд</string>
     <string name="wikis_attachments_upload_types">Файлҳои дастгиришаванда: тасвирҳо, PDF, DOC, DOCX, TXT ва MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">URL-и нави RSS ба буфер нусха карда шуд</string>
     <string name="wikis_rss_exists">Ин URL-и лента аллакай дода шудааст ва дубора нишон дода намешавад.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Шарҳи якуми %1$d нишон дода мешавад.</item>
-        <item quantity="other">Шарҳҳои якуми %1$d нишон дода мешаванд.</item>
+        <item quantity="one">Шарҳи якуми %1$s нишон дода мешавад.</item>
+        <item quantity="other">Шарҳҳои якуми %1$s нишон дода мешаванд.</item>
     </plurals>
 </resources>

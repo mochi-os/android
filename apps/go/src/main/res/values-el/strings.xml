@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Διαγραφή</string>
     <string name="go_delete_message">Αυτό το παιχνίδι θα αφαιρεθεί από τη λίστα σας. Αυτή η ενέργεια δεν αναιρείται.</string>
     <string name="go_delete_title">Διαγραφή παιχνιδιού;</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Αποδοχή</string>
     <string name="go_draw_decline">Απόρριψη</string>
     <string name="go_draw_offered_received">Ο/Η %1$s πρότεινε ισοπαλία</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Παραιτήθηκε</string>
     <string name="go_new_game_title">Νέα παρτίδα Go</string>
     <string name="go_new_game_no_friends">Πρέπει να προσθέσετε έναν φίλο πριν μπορέσετε να ξεκινήσετε μια παρτίδα.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Πόντοι που προστίθενται στο σκορ του Λευκού για να αντισταθμίσουν ότι ο Μαύρος ξεκινάει πρώτος</string>
 
-    <string name="go_board_a11y">Πίνακας Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Ταμπλό Go %1$d×%1$d, σειρά σας να τοποθετήσετε μαύρο πιόνι</string>
-    <string name="go_board_a11y_turn_white">Ταμπλό Go %1$d×%1$d, σειρά σας να τοποθετήσετε λευκό πιόνι</string>
+    <string name="go_board_a11y">Πίνακας Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Ταμπλό Go %1$s×%1$s, σειρά σας να τοποθετήσετε μαύρο πιόνι</string>
+    <string name="go_board_a11y_turn_white">Ταμπλό Go %1$s×%1$s, σειρά σας να τοποθετήσετε λευκό πιόνι</string>
     <string name="go_status_scoring">Καταμέτρηση — συμφωνήστε στο σκορ ή συνεχίστε το παιχνίδι</string>
     <string name="go_score_proposed">Προτεινόμενη βαθμολογία: μαύρα %1$s, λευκά %2$s</string>
     <string name="go_score_opponent_accepted">Ο αντίπαλός σας αποδέχεται αυτή τη βαθμολογία: μαύρα %1$s, λευκά %2$s</string>

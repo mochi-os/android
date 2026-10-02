@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Moderatu</string>
     <string name="forums_members_search">Iragazi kideak</string>
     <string name="forums_banner_description">Foroaren goialdean erakusten den Markdown edukia.</string>
-    <string name="forums_banner_placeholder">Ongi etorri foro honetara…</string>
+    <string name="forums_banner_placeholder">Idatzi bannerraren testua (Markdown onartzen da)…</string>
     <string name="forums_ai_mode_label">Modua: %1$s</string>
     <string name="forums_ai_mode_heading">IA modua</string>
     <string name="forums_ai_mode_off">Desgaituta</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">Sakatu edozein argitalpenetako laster-marka hemen geroko gordetzeko.</string>
     <string name="forums_saved_error_clear">Ezin izan dira gordetako argitalpenak garbitu</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d argitalpen berri</item>
-        <item quantity="other">%d argitalpen berri</item>
+        <item quantity="one">%s argitalpen berri</item>
+        <item quantity="other">%s argitalpen berri</item>
     </plurals>
     <string name="forums_rss_feed">RSS jarioa</string>
     <string name="forums_rss_mode_posts">Argitalpenak</string>
@@ -296,8 +296,8 @@
     <string name="forums_settings_unsubscribe_section">Utzi foroaren harpidetza</string>
     <string name="forums_share_link_title">Foroaren esteka</string>
     <string name="forums_find_found_by_url">URL bidez aurkituta</string>
-    <string name="forums_moderation_pending_posts">Zain dauden argitalpenak (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Zain dauden iruzkinak (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Zain dauden argitalpenak (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Zain dauden iruzkinak (%1$s)</string>
     <string name="forums_moderation_on_image">Irudian: %1$s</string>
     <string name="forums_sort_ai">AA</string>
     <string name="forums_reject_post_access">Ez duzu baimenik foro honetan argitaratzeko</string>

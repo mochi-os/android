@@ -409,8 +409,8 @@
     <string name="market_sale_review_response_submitting">Beküldés…</string>
     <string name="market_checkout_subscribing">Feliratkozás…</string>
     <string name="market_filter_remove">Szűrő eltávolítása</string>
-    <string name="market_listing_detail_sales_count">%1$d eladás</string>
-    <string name="market_profile_sales_count">%1$d eladás</string>
+    <string name="market_listing_detail_sales_count">%1$s eladás</string>
+    <string name="market_profile_sales_count">%1$s eladás</string>
     <string name="market_purchase_dispute_response">Eladó válasza</string>
     <string name="market_purchases_order_label">Rendelés #%1$s</string>
 
@@ -474,8 +474,8 @@
     <string name="market_messages_load_failed">A beszélgetés nem tölthető be</string>
     <string name="market_messages_send_failed">Az üzenet nem küldhető el</string>
     <string name="market_messages_thread_title">Beszélgetés</string>
-    <string name="market_messages_unread_badge">%1$d olvasatlan</string>
-    <string name="market_price_from">ettől: %1$s</string>
+    <string name="market_messages_unread_badge">%1$s olvasatlan</string>
+    <string name="market_price_from">Ettől: %1$s</string>
     <string name="market_price_high_bid">Legmagasabb ajánlat: %1$s</string>
     <string name="market_price_instant_buy">azonnali vásárlás: %1$s</string>
     <string name="market_price_per_month">%1$s / hónap</string>
@@ -487,16 +487,16 @@
     <string name="market_profile_joined">Csatlakozott: %1$s</string>
     <string name="market_profile_no_reviews">Még nincsenek értékelések.</string>
     <string name="market_profile_rating_breakdown">Értékelés megoszlása</string>
-    <string name="market_profile_stars_value">%1$d csillag</string>
+    <string name="market_profile_stars_value">%1$s csillag</string>
     <string name="market_purchase_dispute_chargeback">Visszaterhelés: %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">A bankja visszaterhelést nyújtott be erre a rendelésre. A Stripe intézi a vitát az eladóval; az eredmény itt jelenik meg, amint döntés születik.</string>
-    <string name="market_purchase_download_many">Töltse le a(z) %1$d fájlt alább.</string>
+    <string name="market_purchase_download_many">Töltse le a(z) %1$s fájlt alább.</string>
     <string name="market_purchase_download_one">Töltse le a fájlt alább.</string>
     <string name="market_purchase_review_from">Értékelés tőle: %1$s</string>
     <string name="market_purchases_auction_label">Aukció #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s visszatérítve</string>
     <string name="market_purchases_won_for">Megnyerve ennyiért: %1$s</string>
-    <string name="market_rating_reviews">(%1$d értékelés)</string>
+    <string name="market_rating_reviews">(%1$s értékelés)</string>
     <string name="market_refund_amount_label">Összeg</string>
     <string name="market_refund_dialog_amount_help">Hagyja üresen a teljes rendelés visszatérítéséhez.</string>
     <string name="market_refund_dialog_amount_label">Összeg</string>
@@ -562,7 +562,7 @@
     <string name="market_warnings_title">Figyelmeztetések</string>
 
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Meséljen magáról a vásárlóknak…</string>
     <string name="market_account_load_failed">A fiók betöltése sikertelen</string>
     <string name="market_account_save_failed">A módosítások mentése sikertelen</string>
@@ -588,8 +588,8 @@
     <string name="market_bids_current_bid">Jelenlegi: %1$s</string>
     <string name="market_bids_ends_in">Vége: %1$s múlva</string>
     <string name="market_bids_your_bid">Az ön ajánlata: %1$s</string>
-    <string name="market_carousel_main">%1$d / %2$d fénykép</string>
-    <string name="market_carousel_thumbnail">%1$d. miniatűr</string>
+    <string name="market_carousel_main">%1$s / %2$s fénykép</string>
+    <string name="market_carousel_thumbnail">%1$s. miniatűr</string>
     <string name="market_checkout_browser_unavailable">Nincs elérhető böngésző a fizetési oldal megnyitásához</string>
     <string name="market_checkout_pay_button">Fizetés Stripe-pal</string>
     <string name="market_checkout_processing">Feldolgozás…</string>
@@ -598,7 +598,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Bizonyíték csatolása</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fájl csatolva</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fájl csatolva</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi munkatárs</string>
     <string name="market_dispute_dialog_evidence_section_title">Benyújtott bizonyítékok</string>
     <string name="market_dispute_dialog_evidence_submitter_line">benyújtotta: %1$s</string>
@@ -612,7 +612,7 @@
     <string name="market_editor_asset_external_url">Hivatkozási URL</string>
     <string name="market_editor_assets_empty">Még nincsenek eszközök</string>
     <string name="market_editor_category_none">Válasszon kategóriát</string>
-    <string name="market_editor_days">%1$d nap</string>
+    <string name="market_editor_days">%1$s nap</string>
     <string name="market_editor_delete">Hirdetés törlése</string>
     <string name="market_editor_delete_confirm_message">Ez véglegesen törli a hirdetést.</string>
     <string name="market_editor_delete_confirm_title">Törli a hirdetést?</string>
@@ -787,11 +787,11 @@
     <string name="market_listings_remove_message_auction">Ez törli az árverést. A hirdetés el lesz rejtve a vásárlók elől; később új vázlatként újra meghirdetheti.</string>
     <string name="market_listings_remove_title">Eltávolítod ezt a hirdetést?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Ez törli az aukciót, és értesít %1$d aktív licitálót. A hirdetés el lesz rejtve a vevők elől; később új piszkozatként újra közzéteheti.</item>
-        <item quantity="other">Ez törli az aukciót, és értesít %1$d aktív licitálót. A hirdetés el lesz rejtve a vevők elől; később új piszkozatként újra közzéteheti.</item>
+        <item quantity="one">Ez törli az aukciót, és értesít %1$s aktív licitálót. A hirdetés el lesz rejtve a vevők elől; később új piszkozatként újra közzéteheti.</item>
+        <item quantity="other">Ez törli az aukciót, és értesít %1$s aktív licitálót. A hirdetés el lesz rejtve a vevők elől; később új piszkozatként újra közzéteheti.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Ez a jelenlegi számlázási időszak végén megszüntet %1$d aktív előfizetést. Az előfizetők értesítést kapnak. A hirdetés el lesz rejtve a vevők elől.</item>
-        <item quantity="other">Ez a jelenlegi számlázási időszak végén megszüntet %1$d aktív előfizetést. Az előfizetők értesítést kapnak. A hirdetés el lesz rejtve a vevők elől.</item>
+        <item quantity="one">Ez a jelenlegi számlázási időszak végén megszüntet %1$s aktív előfizetést. Az előfizetők értesítést kapnak. A hirdetés el lesz rejtve a vevők elől.</item>
+        <item quantity="other">Ez a jelenlegi számlázási időszak végén megszüntet %1$s aktív előfizetést. Az előfizetők értesítést kapnak. A hirdetés el lesz rejtve a vevők elől.</item>
     </plurals>
 </resources>

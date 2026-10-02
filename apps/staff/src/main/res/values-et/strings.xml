@@ -5,8 +5,8 @@
     <string name="launcher_staff">Mochi tugitiim</string>
     <string name="staff_accounts_action_ban_title">Blokeeri konto</string>
     <string name="staff_accounts_action_suspend_title">Peata konto</string>
-    <string name="staff_accounts_action_unban_title">Tühista keeld</string>
-    <string name="staff_accounts_action_unsuspend_title">Tühista peatamine</string>
+    <string name="staff_accounts_action_unban_title">Eemalda bann</string>
+    <string name="staff_accounts_action_unsuspend_title">Eemalda peatamine</string>
     <string name="staff_accounts_any_seller">Kõik</string>
     <string name="staff_accounts_any_status">Kõik</string>
     <string name="staff_accounts_ban">Blokeeri</string>
@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Märkmed</string>
     <string name="staff_accounts_reason_label">Põhjus</string>
     <string name="staff_accounts_reason_optional_label">Põhjus (valikuline)</string>
-    <string name="staff_accounts_sales">%1$d müüki</string>
+    <string name="staff_accounts_sales">%1$s müüki</string>
     <string name="staff_accounts_search_clear">Tühjenda otsing</string>
     <string name="staff_accounts_search_placeholder">Otsi</string>
     <string name="staff_accounts_seller_buyers">Ainult ostjad</string>
@@ -32,12 +32,12 @@
     <string name="staff_accounts_submitting">Saatmine…</string>
     <string name="staff_accounts_suspend">Peata</string>
     <string name="staff_accounts_suspended_toast">Konto peatatud</string>
-    <string name="staff_accounts_unban">Tühista bann</string>
+    <string name="staff_accounts_unban">Eemalda bann</string>
     <string name="staff_accounts_unbanned_toast">Konto blokeering eemaldatud</string>
     <string name="staff_accounts_unnamed">Nimetu</string>
-    <string name="staff_accounts_unsuspend">Tühista peatamine</string>
-    <string name="staff_accounts_unsuspended_toast">Konto peatamine tühistatud</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_unsuspend">Eemalda peatamine</string>
+    <string name="staff_accounts_unsuspended_toast">Konto peatamine eemaldatud</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Tühista</string>
     <string name="staff_appeals_decide">Otsusta</string>
     <string name="staff_appeals_decision_denied">Säilita kuulutus tagasi lükatud</string>
@@ -61,8 +61,8 @@
     <string name="staff_audit_action_account_stripe_onboarded">Stripe seadistatud</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe piiratud</string>
     <string name="staff_audit_action_account_suspended">Peatatud müüjana</string>
-    <string name="staff_audit_action_account_unbanned">Bann tühistatud</string>
-    <string name="staff_audit_action_account_unsuspended">Peatamine tühistatud</string>
+    <string name="staff_audit_action_account_unbanned">Bann eemaldatud</string>
+    <string name="staff_audit_action_account_unsuspended">Peatamine eemaldatud</string>
     <string name="staff_audit_action_auction_bid_placed">Pakkumine tehtud</string>
     <string name="staff_audit_action_auction_cancelled">Oksjon tühistatud</string>
     <string name="staff_audit_action_auction_created">Oksjon loodud</string>

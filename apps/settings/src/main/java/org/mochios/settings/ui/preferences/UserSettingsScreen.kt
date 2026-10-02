@@ -53,6 +53,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.ZonePicker
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.Zones
+import java.text.Normalizer
 import java.util.Locale
 
 /** Public, shared by the dropdown row. Display screen owns its own dropdown. */
@@ -60,6 +61,8 @@ internal data class PrefSpec(
     val key: String,
     val label: String,
     val options: List<Pair<String, String>>,
+    /** A list long enough to need narrowing by typing, such as the languages. */
+    val searchable: Boolean = false,
 )
 
 /** Keys this screen renders. The Display screen has its own list; we use this
@@ -88,6 +91,7 @@ private fun prefSchema(
             current = currentLanguage,
             defaultLabel = stringResource(R.string.settings_value_auto),
         ),
+        searchable = true,
     ),
     PrefSpec(
         key = "timezone",
@@ -360,6 +364,23 @@ private fun ZoneRow(label: String, current: String, automatic: String, onChange:
     }
 }
 
+/** The accents NFD splits off a letter. */
+private val Combining = Regex("\\p{InCombiningDiacriticalMarks}+")
+
+/** [text] as a search compares it: without accents, in lower case. */
+private fun searchFold(text: String): String =
+    Normalizer.normalize(text, Normalizer.Form.NFD).replace(Combining, "").lowercase(Locale.ROOT)
+
+/**
+ * The options whose label holds [query], ignoring case and accents, so
+ * "espanol" finds "Español"; a blank query keeps them all.
+ */
+internal fun optionFilter(options: List<Pair<String, String>>, query: String): List<Pair<String, String>> {
+    val wanted = searchFold(query.trim())
+    if (wanted.isEmpty()) return options
+    return options.filter { (_, label) -> searchFold(label).contains(wanted) }
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun PrefRow(
@@ -370,7 +391,6 @@ internal fun PrefRow(
     val selectedLabel = spec.options.firstOrNull { it.first == current }?.second
         ?: spec.options.firstOrNull()?.second
         ?: ""
-    var expanded by remember { mutableStateOf(false) }
     Column(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
         Text(
             text = spec.label,
@@ -378,32 +398,75 @@ internal fun PrefRow(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
         Spacer(Modifier.height(4.dp))
-        ExposedDropdownMenuBox(
+        PrefDropdown(
+            options = spec.options,
+            selectedLabel = selectedLabel,
+            onChange = onChange,
+            searchable = spec.searchable,
+        )
+    }
+}
+
+/**
+ * A dropdown of [options] (value to label) showing [selectedLabel]. A
+ * [searchable] one takes typing while open: the field clears, keeps the
+ * choice in view as its placeholder, and narrows the list by [optionFilter].
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+internal fun PrefDropdown(
+    options: List<Pair<String, String>>,
+    selectedLabel: String,
+    onChange: (String) -> Unit,
+    searchable: Boolean = false,
+) {
+    var expanded by remember { mutableStateOf(false) }
+    var query by remember { mutableStateOf("") }
+    fun close() {
+        expanded = false
+        query = ""
+    }
+    val listed = if (searchable) optionFilter(options, query) else options
+    ExposedDropdownMenuBox(
+        expanded = expanded,
+        onExpandedChange = { open -> if (open) expanded = true else close() },
+    ) {
+        MochiTextField(
+            value = if (searchable && expanded) query else selectedLabel,
+            onValueChange = { text ->
+                query = text
+                expanded = true
+            },
+            readOnly = !searchable,
+            singleLine = true,
+            placeholder = if (searchable) {
+                { Text(selectedLabel) }
+            } else {
+                null
+            },
+            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+            modifier = Modifier
+                .menuAnchor(
+                    if (searchable) {
+                        ExposedDropdownMenuAnchorType.PrimaryEditable
+                    } else {
+                        ExposedDropdownMenuAnchorType.PrimaryNotEditable
+                    },
+                )
+                .fillMaxWidth(),
+        )
+        ExposedDropdownMenu(
             expanded = expanded,
-            onExpandedChange = { expanded = it },
+            onDismissRequest = { close() },
         ) {
-            MochiTextField(
-                value = selectedLabel,
-                onValueChange = {},
-                readOnly = true,
-                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-                modifier = Modifier
-                    .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                    .fillMaxWidth(),
-            )
-            ExposedDropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false },
-            ) {
-                spec.options.forEach { (value, label) ->
-                    MochiDropdownMenuItem(
-                        text = { Text(label) },
-                        onClick = {
-                            expanded = false
-                            onChange(value)
-                        },
-                    )
-                }
+            listed.forEach { (value, label) ->
+                MochiDropdownMenuItem(
+                    text = { Text(label) },
+                    onClick = {
+                        close()
+                        onChange(value)
+                    },
+                )
             }
         }
     }

@@ -6,8 +6,8 @@
     <string name="forums_list_title">انجمن‌ها</string>
     <string name="forums_list_find">یافتن انجمن‌ها</string>
     <string name="forums_list_logout">خروج</string>
-    <string name="forums_list_unsubscribe">لغو اشتراک</string>
-    <string name="forums_list_unsubscribe_title">لغو اشتراک</string>
+    <string name="forums_list_unsubscribe">قطع اشتراک</string>
+    <string name="forums_list_unsubscribe_title">قطع اشتراک</string>
     <string name="forums_create_title">ساخت انجمن</string>
     <string name="forums_create_name">نام انجمن</string>
     <string name="forums_create_privacy">حریم خصوصی</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">برچسب‌گذاری</string>
     <string name="forums_ai_account_default">حساب پیش‌فرض</string>
     <string name="forums_ai_prompt_reset">بازنشانی به پیش‌فرض</string>
-    <string name="forums_settings_unsubscribe">لغو اشتراک</string>
+    <string name="forums_settings_unsubscribe">قطع اشتراک</string>
     <string name="forums_moderation_title">نظارت</string>
     <string name="forums_moderation_tab_queue">صف</string>
     <string name="forums_moderation_tab_reports">گزارش‌ها</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_enter_code_sent">کد ارسال‌شده به %1$s را وارد کنید</string>
     <string name="forums_auth_create_identity">هویت خود را ایجاد کنید</string>
     <string name="forums_list_empty">هنوز انجمنی وجود ندارد</string>
-    <string name="forums_list_unsubscribe_message">آیا مطمئن هستید که می‌خواهید اشتراک این انجمن را لغو کنید؟</string>
+    <string name="forums_list_unsubscribe_message">آیا مطمئن هستید که می‌خواهید اشتراک این انجمن را قطع کنید؟</string>
     <string name="forums_find_search_placeholder">جستجوی انجمن‌ها یا چسباندن نشانی اینترنتی</string>
     <string name="forums_find_search_hint">برای اشتراک، انجمن‌ها را جستجو کنید</string>
     <string name="forums_post_body_field">متن</string>
@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">نظارت</string>
     <string name="forums_members_search">فیلتر اعضا</string>
     <string name="forums_banner_description">متن مارک‌داون که در بالای انجمن نمایش داده می‌شود.</string>
-    <string name="forums_banner_placeholder">به این انجمن خوش آمدید…</string>
+    <string name="forums_banner_placeholder">متن بنر را وارد کنید (از مارک‌داون پشتیبانی می‌شود)…</string>
     <string name="forums_ai_mode_label">حالت: %1$s</string>
     <string name="forums_ai_mode_heading">حالت هوش مصنوعی</string>
     <string name="forums_ai_mode_off">غیرفعال</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">برای ذخیره هر پست در اینجا برای بعد، روی نشانک آن ضربه بزنید.</string>
     <string name="forums_saved_error_clear">پاک‌کردن پست‌های ذخیره‌شده ناموفق بود</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d پست جدید</item>
-        <item quantity="other">%d پست جدید</item>
+        <item quantity="one">%s پست جدید</item>
+        <item quantity="other">%s پست جدید</item>
     </plurals>
     <string name="forums_rss_feed">فید RSS</string>
     <string name="forums_rss_mode_posts">پست‌ها</string>
@@ -242,7 +242,7 @@
     <string name="forums_moderation_unit_days">روز</string>
     <string name="forums_settings_banner_saved">بنر ذخیره شد</string>
     <string name="forums_settings_access_updated">دسترسی به‌روزرسانی شد</string>
-    <string name="forums_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="forums_settings_access_revoked">دسترسی ابطال شد</string>
     <string name="forums_settings_member_removed">عضو حذف شد</string>
     <string name="forums_settings_prompt_saved">پرامپت ذخیره شد</string>
     <string name="forums_settings_section_identity">هویت</string>
@@ -293,11 +293,11 @@
     <string name="forums_settings_ai_updated">تنظیمات هوش مصنوعی به‌روزرسانی شد</string>
     <string name="forums_settings_forum_renamed">نام انجمن تغییر کرد</string>
     <string name="forums_settings_name_clear_cd">پاک کردن نام</string>
-    <string name="forums_settings_unsubscribe_section">لغو اشتراک انجمن</string>
+    <string name="forums_settings_unsubscribe_section">قطع اشتراک از انجمن</string>
     <string name="forums_share_link_title">پیوند انجمن</string>
     <string name="forums_find_found_by_url">یافت‌شده با نشانی اینترنتی</string>
-    <string name="forums_moderation_pending_posts">فرسته‌های در انتظار (%1$d)</string>
-    <string name="forums_moderation_pending_comments">نظرات در انتظار (%1$d)</string>
+    <string name="forums_moderation_pending_posts">فرسته‌های در انتظار (%1$s)</string>
+    <string name="forums_moderation_pending_comments">نظرات در انتظار (%1$s)</string>
     <string name="forums_moderation_on_image">دربارهٔ تصویر: %1$s</string>
     <string name="forums_sort_ai">هوش مصنوعی</string>
     <string name="forums_reject_post_access">شما اجازه ارسال در این انجمن را ندارید</string>

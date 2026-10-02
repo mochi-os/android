@@ -97,22 +97,22 @@
     <string name="calendars_repeat_forever">Navždy</string>
     <string name="calendars_reminder_time">V čase udalosti</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minútu vopred</item>
-        <item quantity="few">%1$d minúty vopred</item>
-        <item quantity="many">%1$d minút vopred</item>
-        <item quantity="other">%1$d minút vopred</item>
+        <item quantity="one">%1$s minútu vopred</item>
+        <item quantity="few">%1$s minúty vopred</item>
+        <item quantity="many">%1$s minút vopred</item>
+        <item quantity="other">%1$s minút vopred</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d hodinu vopred</item>
-        <item quantity="few">%1$d hodiny vopred</item>
-        <item quantity="many">%1$d hodín vopred</item>
-        <item quantity="other">%1$d hodín vopred</item>
+        <item quantity="one">%1$s hodinu vopred</item>
+        <item quantity="few">%1$s hodiny vopred</item>
+        <item quantity="many">%1$s hodín vopred</item>
+        <item quantity="other">%1$s hodín vopred</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d deň vopred</item>
-        <item quantity="few">%1$d dni vopred</item>
-        <item quantity="many">%1$d dní vopred</item>
-        <item quantity="other">%1$d dní vopred</item>
+        <item quantity="one">%1$s deň vopred</item>
+        <item quantity="few">%1$s dni vopred</item>
+        <item quantity="many">%1$s dní vopred</item>
+        <item quantity="other">%1$s dní vopred</item>
     </plurals>
     <string name="calendars_reminder_add">Pridať pripomienku</string>
     <string name="calendars_reminder_remove">Odstrániť pripomienku</string>
@@ -146,11 +146,11 @@
     <string name="calendars_poll_large">Kalendár je príliš veľký</string>
     <string name="calendars_poll_invalid">Adresa nevrátila kalendár</string>
     <string name="calendars_poll_unreachable">Adresu sa nepodarilo dosiahnuť</string>
-    <string name="calendars_poll_status">Adresa odpovedala %1$d</string>
+    <string name="calendars_poll_status">Adresa odpovedala %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minúta</item>
-        <item quantity="few">%1$d minúty</item>
-        <item quantity="other">%1$d minút</item>
+        <item quantity="one">%1$s minúta</item>
+        <item quantity="few">%1$s minúty</item>
+        <item quantity="other">%1$s minút</item>
     </plurals>
     <string name="calendars_preferences_zones">Zobrazovať udalosti v ich vlastnom časovom pásme</string>
     <string name="calendars_event_backwards">Končí skôr, ako začne</string>

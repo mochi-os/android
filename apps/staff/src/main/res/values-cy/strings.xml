@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Nodiadau</string>
     <string name="staff_accounts_reason_label">Rheswm</string>
     <string name="staff_accounts_reason_optional_label">Rheswm (dewisol)</string>
-    <string name="staff_accounts_sales">%1$d gwerthiant</string>
+    <string name="staff_accounts_sales">%1$s gwerthiant</string>
     <string name="staff_accounts_search_clear">Clirio chwiliad</string>
     <string name="staff_accounts_search_placeholder">Chwilio</string>
     <string name="staff_accounts_seller_buyers">Prynwyr yn unig</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Heb enw</string>
     <string name="staff_accounts_unsuspend">Codi ataliad</string>
     <string name="staff_accounts_unsuspended_toast">Cyfrif heb ei atal</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Canslo</string>
     <string name="staff_appeals_decide">Penderfynu</string>
     <string name="staff_appeals_decision_denied">Cadw\'r rhestriad wedi\'i wrthod</string>

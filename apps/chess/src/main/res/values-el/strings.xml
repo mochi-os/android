@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">Επανασύνδεση…</string>
     <string name="chess_ws_failed">Η σύνδεση απέτυχε</string>
     <string name="chess_move_capture">Ο %1$s πήρε το %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">Λευκό %1$s</string>
     <string name="chess_piece_black">Μαύρο %1$s</string>

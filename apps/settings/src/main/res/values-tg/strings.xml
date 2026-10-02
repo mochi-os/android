@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Ҳисобҳои пайвастшуда</string>
     <string name="settings_home_interests">Шавқҳо</string>
     <string name="account_section_passkeys">Калидҳои дастрасӣ</string>
-    <string name="account_passkey_register">Иловаи калиди гузар</string>
-    <string name="account_passkey_delete_title">Калиди гузарро нест кунем?</string>
+    <string name="account_passkey_register">Калиди дастрасӣ илова кунед</string>
+    <string name="account_passkey_delete_title">Калиди дастрасиро нест кунем?</string>
     <string name="account_section_totp">Барномаи аутентификатор</string>
     <string name="account_totp_setup">Аутентификаторро танзим кунед</string>
     <string name="account_totp_setup_title">Аутентификаторро танзим кунед</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Рамзҳои барқарорсозӣ</string>
     <string name="account_recovery_codes_title">Рамзҳои барқарорсозӣ</string>
     <string name="sessions_unknown_agent">Дастгоҳи номаълум</string>
-    <string name="sessions_revoke_title">Сессияро бекор кардан?</string>
+    <string name="sessions_revoke_title">Сессияро бозхонд кардан?</string>
     <string name="account_section_oauth">Воридшавӣ аз тариқи тарафи сеюм</string>
     <string name="account_oauth_link">Пайвасткунии ҳисоб</string>
     <string name="account_unlink">Қатъи пайвастшавӣ</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Иҷро шуд</string>
     <string name="account_delete">Нест кардан</string>
     <string name="account_rename">Тағйири ном</string>
-    <string name="sessions_revoke">Бекор кардан</string>
+    <string name="sessions_revoke">Бозхонд кардан</string>
     <string name="account_disable">Ғайрифаъол кардан</string>
     <string name="account_copy">Нусхабардорӣ</string>
     <string name="account_copy_all">Нусхабардории ҳама</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Роҳро нест кунем?</string>
     <string name="route_path">Роҳ</string>
     <string name="route_method">Усул</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Барнома</string>
     <string name="route_method_entity">Объект</string>
     <string name="route_method_redirect">Тағйири масир</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Аз packages.mochi-os.org боргирӣ кунед</string>
     <string name="system_status_copy">Нусхабардорӣ</string>
     <string name="system_status_peers">Ҳамтарафҳо</string>
-    <string name="system_status_known">Маълум</string>
+    <string name="system_status_peers_totals">Маълум %1$s · Пайваст %2$s · Шабакаи пахш %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Маълум %1$s · Пайваст %2$s</string>
     <string name="system_status_peer_connected">Пайваст шуда</string>
     <string name="system_status_peer_disconnected">Ҷудо шуда</string>
     <string name="system_status_peer_queued">Паёмҳои дар навбат</string>
@@ -104,15 +107,13 @@
     <string name="accounts_remove">Хориҷ кардан</string>
     <string name="accounts_remove_title">Ҳисобро хориҷ кардан?</string>
     <string name="system_documents_title">Ҳуҷҷатҳо</string>
-    <string name="system_documents_description">Қоидаҳои сервер, шартҳо ва шартномаҳо ва огоҳии махфият, ки ба корбарони шумо нишон дода мешавад</string>
     <string name="system_documents_tab_rules">Қоидаҳои сервер</string>
     <string name="system_documents_tab_terms">Шартҳо ва шартномаҳо</string>
     <string name="system_documents_tab_privacy">Махфият</string>
     <string name="system_documents_language">Забон</string>
     <string name="system_documents_no_language">Барои ин забон ҳуҷҷат дастрас нест.</string>
-    <string name="system_documents_customised">Танзимшуда</string>
     <string name="system_documents_using_default">Пешфарзи бастабандишуда истифода мешавад</string>
-    <string name="system_documents_revert">Бекор кардан ба нобаёнӣ</string>
+    <string name="system_documents_revert">Бозгардонидан ба нобаёнӣ</string>
     <string name="system_documents_save">Захира</string>
     <string name="system_documents_saved">Ҳуҷҷат захира шуд</string>
     <string name="system_documents_save_failed">Захира кардани ҳуҷҷат ба анҷом нарасид</string>
@@ -182,28 +183,26 @@
     <string name="system_users_delete">Нест кардани корбар</string>
     <string name="system_users_delete_title">Корбарро нест кунем?</string>
     <string name="system_users_manage_sessions">Идоракунии ҷаласаҳо</string>
-    <string name="system_users_sessions_description">Сессияҳои фаъоли ин корбарро бубинед ва бекор кунед.</string>
     <string name="system_users_sessions_empty">Ин корбар сессияҳои фаъол надорад.</string>
-    <string name="system_users_revoke">Бекор кардан</string>
-    <string name="system_users_revoke_all">Бекор кардани ҳамаи сессияҳо</string>
+    <string name="system_users_revoke">Бозхонд кардан</string>
+    <string name="system_users_revoke_all">Бозхонд кардани ҳамаи сессияҳо</string>
     <string name="system_users_unknown_browser">Браузери номаълум</string>
     <string name="system_users_unknown">Номаълум</string>
     <string name="system_users_previous">Қаблӣ</string>
     <string name="system_users_next">Баъдӣ</string>
     <string name="system_users_empty">Ягон корбар ёфт нашуд</string>
     <string name="system_users_empty_search">Ягон корбар ба ҷустуҷӯи шумо мувофиқ нест</string>
-    <string name="system_users_empty_search_hint">Меъёрҳои ҷустуҷӯи худро танзим кунед</string>
     <string name="system_users_toast_created">Корбар сохта шуд</string>
     <string name="system_users_toast_updated">Корбар навсозӣ шуд</string>
     <string name="system_users_toast_deleted">Корбар нест карда шуд</string>
     <string name="system_users_toast_suspended">Корбар боздошта шуд</string>
     <string name="system_users_toast_suspension_removed">Боздорӣ хориҷ карда шуд</string>
-    <string name="system_users_toast_session_revoked">Сессия бекор карда шуд</string>
+    <string name="system_users_toast_session_revoked">Сессия бозхонд карда шуд</string>
     <string name="system_users_toast_create_failed">Эҷоди корбар ба анҷом нарасид</string>
     <string name="system_users_toast_update_failed">Навсозии корбар ба анҷом нарасид</string>
     <string name="system_users_toast_delete_failed">Ҳазфи корбар ба анҷом нарасид</string>
     <string name="system_users_toast_status_failed">Навсозии ҳолати корбар ба анҷом нарасид</string>
-    <string name="system_users_toast_revoke_failed">Лағви ҷаласа ба анҷом нарасид</string>
+    <string name="system_users_toast_revoke_failed">Бозхонд кардани сессия ба анҷом нарасид</string>
 
     <string name="settings_home_sessions">Сессияҳо</string>
     <string name="settings_home_privacy">Сиёсати махфият</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Шартҳои хидмат</string>
     <string name="account_passkeys_empty">Калидҳои дастрасии сабтшуда нестанд.</string>
     <string name="account_passkey_register_title">Калиди дастрасӣ илова кунед</string>
-    <string name="account_passkey_register_message">Дастгоҳи шумо тасдиқро дархост мекунад. Калиди дастрасӣ ба ин дастгоҳ алоқаманд аст ва барои воридшавиҳои оянда истифода мешавад.</string>
     <string name="account_passkey_name_label">Ном (ихтиёрӣ)</string>
     <string name="account_passkey_delete_message">\"%1$s\" дигар шуморо ворид намекунад.</string>
-    <string name="account_totp_description">Бо коди 6-рақамӣ аз барномаи тасдиқкунӣ ворид шавед.</string>
     <string name="account_totp_enabled">Тасдиқкунанда фаъол аст.</string>
     <string name="account_totp_setup_step1">Ин сирро дар барномаи тасдиқкунии худ скан кунед ё ворид кунед.</string>
     <string name="account_totp_setup_step2">Коди 6-рақамиро, ки барномаи шумо нишон медиҳад, ворид кунед.</string>
     <string name="account_totp_code">Код</string>
     <string name="account_totp_disable_message">Шумо дигар бо коди тасдиқкунанда ворид шуда наметавонед.</string>
     <string name="account_recovery_none">Кодҳои барқарорсозӣ эҷод нашудаанд.</string>
-    <string name="account_recovery_count">%1$d коди барқарорсозии истифоданашуда.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s коди барқарорсозӣ боқӣ мондааст.</item>
+        <item quantity="other">%1$s коди барқарорсозӣ боқӣ мондааст.</item>
+    </plurals>
     <string name="account_recovery_generate">Кодҳо эҷод кунед</string>
     <string name="account_recovery_regenerate">Кодҳоро аз нав эҷод кунед</string>
     <string name="account_recovery_regen_title">Кодҳои барқарорсозиро аз нав эҷод кунед?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Истифодаи охирин %1$s</string>
     <string name="route_delete_message">Ин роҳро барои масири \"%1$s\" нест мекунад.</string>
     <string name="route_empty">Роҳҳои танзимшуда нестанд.</string>
-    <string name="route_meta">Афзалият %1$d · %2$s</string>
+    <string name="route_meta">Афзалият %1$s · %2$s</string>
     <string name="interests_search_placeholder">Мавзӯъҳоро барои илова ҷустуҷӯ кунед…</string>
     <string name="interests_empty">Ҳанӯз шавқҳо нестанд.</string>
     <string name="interests_summary_regenerate">Хулосаро аз нав сохтан</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Ин корбари \"%1$s\" ро ҳамеша нест мекунад. Ин амалро бекор кардан мумкин нест.</string>
     <string name="system_users_sessions_title">Сессияҳои %1$s</string>
     <string name="system_users_session_last_accessed">Дастрасии охирин: %1$s</string>
-    <string name="system_users_revoke_all_title">Ҳамаи сессияҳоро бекор кунед?</string>
+    <string name="system_users_revoke_all_title">Бозхонд кардани ҳамаи сессияҳо?</string>
     <string name="system_users_revoke_all_message">Ҳамаи сессияҳои фаъоли ин корбар баромад мекунанд.</string>
-    <string name="system_users_pagination_status">Нишон додани %1$d–%2$d аз %3$d корбарон</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Нишон додани %1$s–%2$s аз %3$s корбар</item>
+        <item quantity="other">Нишон додани %1$s–%2$s аз %3$s корбар</item>
+    </plurals>
     <string name="account_title">Ҳисоб</string>
     <string name="account_section_identity">Шахсият</string>
     <string name="account_identity_identity">Шахсият</string>
@@ -303,11 +306,11 @@
     <string name="domain_verify">Тасдиқи DNS</string>
     <string name="settings_home_domains">Доменҳо</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Санҷиш ба %1$d мақсад фиристода шуд</item>
-        <item quantity="other">Санҷиш ба %1$d мақсад фиристода шуд</item>
+        <item quantity="one">Санҷиш ба %1$s мақсад фиристода шуд</item>
+        <item quantity="other">Санҷиш ба %1$s мақсад фиристода шуд</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">%1$d сессия бекор карда шуд</item>
+        <item quantity="other">%1$s сессия бозхонд карда шуд</item>
     </plurals>
     <string name="login_title">Вуруд</string>
     <string name="login_section_methods">Усулҳои воридшавӣ</string>
@@ -338,18 +341,15 @@
     <string name="system_status_reachability_public">Ҷамъиятӣ</string>
     <string name="system_status_reachability_private">Хусусӣ</string>
     <string name="system_status_reachability_unknown">Номаълум</string>
-    <string name="system_status_relay">Тавассути реле</string>
-    <string name="system_status_mesh">Меши пахш</string>
+    <string name="system_status_reachability_relay">%1$s · тавассути реле</string>
     <string name="system_status_broadcast">Пахши охирин</string>
     <string name="system_status_queued_broadcasts">Паёмҳои пахши навбатӣ</string>
     <string name="system_setting_hostname_publish">Эълони номи ҳост ва доменҳо ба серверҳои дигар</string>
     <string name="system_setting_hostname">Номи ҳости ба серверҳои дигар эълоншуда</string>
     <string name="system_status_peer_id">ID-и шарик</string>
     <string name="system_status_holepunch">Сӯрохкунӣ</string>
-    <string name="system_status_holepunch_value">%1$d муваффақ · %2$d ноком</string>
     <string name="system_status_awaiting_routing">Паёмҳои дар интизори масирёбӣ</string>
     <string name="system_status_relay_service">Хидмати реле</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d захираҳо · %3$d занҷирҳо · %4$d рад шуд</string>
     <string name="route_target_select">Интихоб кардан</string>
     <string name="account_data_description">Нусхаи эҳтиётии пурраро зеркашӣ кунед, ки метавонед дар ин ё дигар сервери Mochi барқарор кунед.</string>
     <string name="route_target_none">Ҳадафҳои дастрас нестанд</string>
@@ -374,7 +374,12 @@
     <string name="accounts_device_seen">Бори охир дида шуд %1$s</string>
     <string name="notifprefs_device_app">%1$s · барнома</string>
     <string name="notifprefs_device_push">%1$s · пуш</string>
-    <string name="notifprefs_test_partial">Тест ба %1$d аз %2$d ҷои таъинот фиристода шуд</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Санҷиш ба %1$s аз %2$s мақсад фиристода шуд</item>
+        <item quantity="other">Санҷиш ба %1$s аз %2$s мақсад фиристода шуд</item>
+    </plurals>
     <string name="notifprefs_test_none">Ягон ҷои таъинот танзим нашудааст</string>
     <string name="notifprefs_transport_fcm">Огоҳиҳои пуш барои Android</string>
     <string name="notifprefs_no_destinations">Бидуни таъинот</string>
@@ -384,13 +389,36 @@
     <string name="accounts_field_topic">Мавзӯъ</string>
     <string name="accounts_field_secret">Сирри имзо</string>
     <string name="account_totp_open">Дар барномаи аутентификатор кушодан</string>
-    <string name="accounts_revoke">Дастрасиро бекор кунед</string>
+    <string name="accounts_revoke">Дастрасиро бозхонд кунед</string>
     <string name="accounts_capability_calendar">Тақвим</string>
     <string name="accounts_capability_notify">Огоҳиҳо</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Воридшавӣ</string>
     <string name="accounts_provider_caldav">Сервери тақвим</string>
-    <string name="accounts_revoke_confirm">Ин дастрасии тақвими %1$s-ро бекор мекунад. Воридшавӣ бо %2$s то он даме ки шумо онро дар саҳифаи воридшавӣ ҷудо накунед, боқӣ мемонад.</string>
+    <string name="accounts_revoke_confirm">Ин дастрасии тақвими %1$s-ро бозхонд мекунад. Воридшавӣ бо %2$s то он даме ки шумо онро дар саҳифаи воридшавӣ ҷудо накунед, боқӣ мемонад.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Мавзӯи номаълум</string>
+    <string name="system_documents_modified">Тағйирёфта</string>
+    <string name="system_documents_discard_title">Тағйирот партофта шаванд?</string>
+    <string name="system_documents_discard">Партофтан</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s муваффақ</item>
+        <item quantity="other">%1$s муваффақ</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s ноком</item>
+        <item quantity="other">%1$s ноком</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s захира</item>
+        <item quantity="other">%1$s / %2$s захира</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s занҷир</item>
+        <item quantity="other">%1$s занҷир</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s рад шуд</item>
+        <item quantity="other">%1$s рад шуд</item>
+    </plurals>
 </resources>

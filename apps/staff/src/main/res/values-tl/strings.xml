@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Mga Tala</string>
     <string name="staff_accounts_reason_label">Dahilan</string>
     <string name="staff_accounts_reason_optional_label">Dahilan (opsyonal)</string>
-    <string name="staff_accounts_sales">%1$d benta</string>
+    <string name="staff_accounts_sales">%1$s benta</string>
     <string name="staff_accounts_search_clear">Burahin ang paghahanap</string>
     <string name="staff_accounts_search_placeholder">Maghanap</string>
     <string name="staff_accounts_seller_buyers">Mga mamimili lamang</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Walang pangalan</string>
     <string name="staff_accounts_unsuspend">I-unsuspend</string>
     <string name="staff_accounts_unsuspended_toast">Inalis ang suspensyon sa account</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Kanselahin</string>
     <string name="staff_appeals_decide">Magdesisyon</string>
     <string name="staff_appeals_decision_denied">Panatilihing tinanggihan ang listahan</string>

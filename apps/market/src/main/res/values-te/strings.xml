@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">మార్కెట్</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">జీవిత చరిత్ర</string>
     <string name="market_account_biography_placeholder">కొనుగోలుదారులకు మీ గురించి చెప్పండి…</string>
     <string name="market_account_load_failed">ఖాతాను లోడ్ చేయలేకపోయింది</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">బిడ్ దాటింది</string>
     <string name="market_bids_tab_won">గెలిచారు</string>
     <string name="market_bids_title">బిడ్‌లు</string>
-    <string name="market_carousel_main">ఫోటో %1$d / %2$d</string>
+    <string name="market_carousel_main">ఫోటో %1$s / %2$s</string>
     <string name="market_channel_name">మార్కెట్</string>
     <string name="market_chargeback_reason_bank_cannot_process">బ్యాంక్ ప్రాసెస్ చేయలేకపోయింది</string>
     <string name="market_chargeback_reason_check_returned">చెక్ తిరిగి వచ్చింది</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">పునరుద్ధరించినది</string>
     <string name="market_editor_condition_used">వాడినది</string>
     <string name="market_editor_currency">కరెన్సీ</string>
-    <string name="market_editor_days">%1$d రోజులు</string>
+    <string name="market_editor_days">%1$s రోజులు</string>
     <string name="market_editor_delete">జాబితాను తొలగించండి</string>
     <string name="market_editor_description">వివరణ</string>
     <string name="market_editor_interval_monthly">నెలవారీ</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">కొనుగోళ్లు</string>
     <string name="market_rating_label">రేటింగ్</string>
     <string name="market_rating_no_reviews">ఇంకా రివ్యూలు లేవు</string>
-    <string name="market_rating_reviews">(%1$d సమీక్ష)</string>
+    <string name="market_rating_reviews">(%1$s సమీక్ష)</string>
     <string name="market_refund_amount_label">మొత్తం</string>
     <string name="market_refund_body">మీ రీఫండ్ రిక్వెస్ట్‌కు కారణాన్ని అందించండి.</string>
     <string name="market_refund_details_label">వివరాలు</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">ప్రస్తుతం: %1$s</string>
     <string name="market_bids_ends_in">%1$s లో ముగుస్తుంది</string>
     <string name="market_bids_your_bid">మీ బిడ్: %1$s</string>
-    <string name="market_carousel_thumbnail">థంబ్‌నెయిల్ %1$d</string>
+    <string name="market_carousel_thumbnail">థంబ్‌నెయిల్ %1$s</string>
     <string name="market_checkout_browser_unavailable">చెల్లింపు పేజీని తెరవడానికి బ్రౌజర్ అందుబాటులో లేదు</string>
     <string name="market_checkout_pwyw_label">మీ ధర (కనీసం %1$s)</string>
     <string name="market_checkout_pwyw_min_error">మొత్తం కనీసం %1$s ఉండాలి</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ఫైల్(లు) జత చేయబడ్డాయి</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ఫైల్(లు) జత చేయబడ్డాయి</string>
     <string name="market_dispute_dialog_evidence_section_title">సమర్పించిన సాక్ష్యం</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s ద్వారా సమర్పించబడింది</string>
     <string name="market_editor_appeal">మోడరేషన్‌ను అప్పీల్ చేయండి</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">జాబితాను లోడ్ చేస్తోంది</string>
     <string name="market_listing_detail_relist_failed">మళ్లీ జాబితా చేయలేకపోయాము</string>
     <string name="market_listing_detail_relist_in_progress">మళ్లీ జాబితా చేస్తోంది</string>
-    <string name="market_listing_detail_sales_count">%1$d విక్రయాలు</string>
+    <string name="market_listing_detail_sales_count">%1$s విక్రయాలు</string>
     <string name="market_listing_detail_seller_banned_banner">ఈ విక్రేత నిషేధించబడ్డారు. కొత్త ఆర్డర్‌లు ఇవ్వడం సాధ్యం కాదు.</string>
     <string name="market_listing_detail_seller_suspended_banner">ఈ విక్రేత తాత్కాలికంగా నిలిపివేయబడ్డారు. ఖాతా పునరుద్ధరించబడే వరకు కొత్త ఆర్డర్‌లు నిలిపివేయబడ్డాయి.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">విక్రేత ఖాతా పరిమితం చేయబడినప్పుడు కొనుగోలు నిలిపివేయబడుతుంది.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">ఇంకా సంభాషణలు లేవు</string>
     <string name="market_messages_load_failed">థ్రెడ్‌ను లోడ్ చేయడం సాధ్యం కాలేదు</string>
     <string name="market_messages_send_failed">సందేశాన్ని పంపడం సాధ్యం కాలేదు</string>
-    <string name="market_messages_unread_badge">%1$d చదవనివి</string>
+    <string name="market_messages_unread_badge">%1$s చదవనివి</string>
     <string name="market_price_high_bid">అత్యధిక బిడ్: %1$s</string>
     <string name="market_price_instant_buy">తక్షణ కొనుగోలు: %1$s</string>
     <string name="market_price_starting_bid">ప్రారంభ బిడ్: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">%1$s నుండి సభ్యుడు</string>
     <string name="market_profile_joined">%1$s లో చేరారు</string>
     <string name="market_profile_rating_breakdown">రేటింగ్ విభజన</string>
-    <string name="market_profile_sales_count">%1$d అమ్మకాలు</string>
-    <string name="market_profile_stars_value">%1$d నక్షత్రాలు</string>
+    <string name="market_profile_sales_count">%1$s అమ్మకాలు</string>
+    <string name="market_profile_stars_value">%1$s నక్షత్రాలు</string>
     <string name="market_purchase_dispute_chargeback">చార్జ్‌బ్యాక్ %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">మీ బ్యాంక్ ఈ ఆర్డర్‌పై చార్జ్‌బ్యాక్ దాఖలు చేసింది. Stripe విక్రేతతో వివాదాన్ని నిర్వహిస్తోంది; నిర్ణయం తీసుకున్నప్పుడు ఫలితం ఇక్కడ కనిపిస్తుంది.</string>
     <string name="market_purchase_dispute_response">విక్రేత ప్రతిస్పందన</string>
-    <string name="market_purchase_download_many">మీ %1$d ఫైళ్లను దిగువన డౌన్‌లోడ్ చేయండి.</string>
+    <string name="market_purchase_download_many">మీ %1$s ఫైళ్లను దిగువన డౌన్‌లోడ్ చేయండి.</string>
     <string name="market_purchase_download_one">మీ ఫైల్‌ను దిగువన డౌన్‌లోడ్ చేయండి.</string>
     <string name="market_purchase_review_from">%1$s నుండి సమీక్ష</string>
     <string name="market_purchases_auction_label">వేలం #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">ఇది వేలాన్ని రద్దు చేస్తుంది. జాబితా కొనుగోలుదారుల నుండి దాచబడుతుంది; మీరు దానిని తర్వాత కొత్త డ్రాఫ్ట్‌గా మళ్లీ జాబితా చేయవచ్చు.</string>
     <string name="market_listings_remove_title">ఈ జాబితాను తొలగించాలా?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">ఇది వేలాన్ని రద్దు చేసి, %1$d యాక్టివ్ బిడ్డర్‌లకు తెలియజేస్తుంది. లిస్టింగ్ కొనుగోలుదారుల నుండి దాచబడుతుంది; మీరు దీన్ని తర్వాత కొత్త డ్రాఫ్ట్‌గా మళ్లీ లిస్ట్ చేయవచ్చు.</item>
-        <item quantity="other">ఇది వేలాన్ని రద్దు చేసి, %1$d యాక్టివ్ బిడ్డర్‌లకు తెలియజేస్తుంది. లిస్టింగ్ కొనుగోలుదారుల నుండి దాచబడుతుంది; మీరు దీన్ని తర్వాత కొత్త డ్రాఫ్ట్‌గా మళ్లీ లిస్ట్ చేయవచ్చు.</item>
+        <item quantity="one">ఇది వేలాన్ని రద్దు చేసి, %1$s యాక్టివ్ బిడ్డర్‌లకు తెలియజేస్తుంది. లిస్టింగ్ కొనుగోలుదారుల నుండి దాచబడుతుంది; మీరు దీన్ని తర్వాత కొత్త డ్రాఫ్ట్‌గా మళ్లీ లిస్ట్ చేయవచ్చు.</item>
+        <item quantity="other">ఇది వేలాన్ని రద్దు చేసి, %1$s యాక్టివ్ బిడ్డర్‌లకు తెలియజేస్తుంది. లిస్టింగ్ కొనుగోలుదారుల నుండి దాచబడుతుంది; మీరు దీన్ని తర్వాత కొత్త డ్రాఫ్ట్‌గా మళ్లీ లిస్ట్ చేయవచ్చు.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">ఇది ప్రస్తుత బిల్లింగ్ వ్యవధి ముగింపులో %1$d యాక్టివ్ సబ్‌స్క్రిప్షన్‌లను రద్దు చేస్తుంది. సబ్‌స్క్రైబర్‌లకు తెలియజేయబడుతుంది. లిస్టింగ్ కొనుగోలుదారుల నుండి దాచబడుతుంది.</item>
-        <item quantity="other">ఇది ప్రస్తుత బిల్లింగ్ వ్యవధి ముగింపులో %1$d యాక్టివ్ సబ్‌స్క్రిప్షన్‌లను రద్దు చేస్తుంది. సబ్‌స్క్రైబర్‌లకు తెలియజేయబడుతుంది. లిస్టింగ్ కొనుగోలుదారుల నుండి దాచబడుతుంది.</item>
+        <item quantity="one">ఇది ప్రస్తుత బిల్లింగ్ వ్యవధి ముగింపులో %1$s యాక్టివ్ సబ్‌స్క్రిప్షన్‌లను రద్దు చేస్తుంది. సబ్‌స్క్రైబర్‌లకు తెలియజేయబడుతుంది. లిస్టింగ్ కొనుగోలుదారుల నుండి దాచబడుతుంది.</item>
+        <item quantity="other">ఇది ప్రస్తుత బిల్లింగ్ వ్యవధి ముగింపులో %1$s యాక్టివ్ సబ్‌స్క్రిప్షన్‌లను రద్దు చేస్తుంది. సబ్‌స్క్రైబర్‌లకు తెలియజేయబడుతుంది. లిస్టింగ్ కొనుగోలుదారుల నుండి దాచబడుతుంది.</item>
     </plurals>
 </resources>

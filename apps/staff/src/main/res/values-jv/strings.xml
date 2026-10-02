@@ -19,7 +19,7 @@
     <string name="staff_accounts_notes_label">Cathetan</string>
     <string name="staff_accounts_reason_label">Alesan</string>
     <string name="staff_accounts_reason_optional_label">Alesan (opsional)</string>
-    <string name="staff_accounts_sales">%1$d dol</string>
+    <string name="staff_accounts_sales">%1$s dol</string>
     <string name="staff_accounts_search_clear">Resiki panggolékan</string>
     <string name="staff_accounts_search_placeholder">Goleki</string>
     <string name="staff_accounts_seller_buyers">Pembeli waé</string>
@@ -36,7 +36,7 @@
     <string name="staff_accounts_unnamed">Tanpa jeneng</string>
     <string name="staff_accounts_unsuspend">Buka setop</string>
     <string name="staff_accounts_unsuspended_toast">Akun ora digantung manèh</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Batal</string>
     <string name="staff_appeals_decide">Putusaké</string>
     <string name="staff_appeals_decision_denied">Tetep listing ditolak</string>

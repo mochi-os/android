@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">કોઈ ઑબ્જેક્ટ્સ નથી</string>
     <string name="crm_board_no_columns">આ દૃશ્ય માટે કોઈ કૉલમ ગોઠવેલ નથી</string>
     <string name="crm_board_no_options">કૉલમ ફીલ્ડ માટે કોઈ વિકલ્પો ગોઠવેલ નથી</string>
-    <string name="crm_board_nested_count">+%1$d નેસ્ટેડ</string>
+    <string name="crm_board_nested_count">+%1$s નેસ્ટેડ</string>
     <string name="crm_move_to_column">કૉલમ પર ખસેડો</string>
     <string name="crm_move_to_row">પંક્તિ પર ખસેડો</string>
     <string name="crm_move_after">%1$s પછી</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">ઍક્સેસ વ્યવસ્થાપન</string>
     <string name="crm_settings_not_set">સેટ કર્યું નથી</string>
     <string name="crm_settings_access_updated">ઍક્સેસ અપડેટ થયું</string>
-    <string name="crm_settings_access_revoked">એક્સેસ રદ કર્યો</string>
+    <string name="crm_settings_access_revoked">ઍક્સેસ પાછું ખેંચ્યું</string>
     <string name="crm_people_search">લોકો શોધો</string>
     <string name="crm_access_tab_other">અન્ય</string>
     <string name="crm_access_select_group">એક જૂથ પસંદ કરો</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM ડેટા સાચવ્યો</string>
     <string name="crm_create_upload_json">.zip અથવા .json ફાઇલ અપલોડ કરો</string>
     <string name="crm_create_blocked_no_options">બનાવી શકાતું નથી: %1$s જરૂરી છે પણ પસંદ કરવા માટે કોઈ વિકલ્પ નથી. ડિઝાઇનમાં વિકલ્પો ઉમેરો.</string>
-    <string name="crm_design_sample">નમૂનો %1$d</string>
+    <string name="crm_design_sample">નમૂનો %1$s</string>
     <string name="crm_option_delete_title">વિકલ્પ કાઢી નાખો</string>
     <string name="crm_option_delete_message">શું તમે ખરેખર \"%1$s\" વિકલ્પને કાઢી નાખવા માગો છો?</string>
 </resources>

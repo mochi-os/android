@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">یادداشت‌ها</string>
     <string name="staff_accounts_reason_label">دلیل</string>
     <string name="staff_accounts_reason_optional_label">دلیل (اختیاری)</string>
-    <string name="staff_accounts_sales">%1$d فروش</string>
+    <string name="staff_accounts_sales">%1$s فروش</string>
     <string name="staff_accounts_search_clear">پاک کردن جست‌وجو</string>
     <string name="staff_accounts_search_placeholder">جست‌وجو</string>
     <string name="staff_accounts_seller_buyers">فقط خریداران</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">بدون نام</string>
     <string name="staff_accounts_unsuspend">رفع تعلیق</string>
     <string name="staff_accounts_unsuspended_toast">رفع تعلیق حساب</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">لغو</string>
     <string name="staff_appeals_decide">تصمیم‌گیری</string>
     <string name="staff_appeals_decision_denied">آگهی همچنان رد بماند</string>

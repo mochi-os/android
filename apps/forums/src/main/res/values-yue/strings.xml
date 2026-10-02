@@ -34,9 +34,9 @@
     <string name="forums_moderation_restriction_type">類型</string>
     <string name="forums_post_title_field">標題</string>
     <string name="forums_post_edit_title_field">標題</string>
-    <string name="forums_list_unsubscribe">取消訂閱</string>
-    <string name="forums_list_unsubscribe_title">取消訂閱</string>
-    <string name="forums_settings_unsubscribe">取消訂閱</string>
+    <string name="forums_list_unsubscribe">退訂</string>
+    <string name="forums_list_unsubscribe_title">退訂</string>
+    <string name="forums_settings_unsubscribe">退訂</string>
     <string name="forums_sort_new">新增</string>
     <string name="forums_post_default_author">用戶</string>
     <string name="forums_moderation_reports_all">全部</string>
@@ -96,7 +96,7 @@
     <string name="forums_list_title">論壇</string>
     <string name="forums_list_find">尋找論壇</string>
     <string name="forums_list_empty">暫時未有論壇</string>
-    <string name="forums_list_unsubscribe_message">你確定要取消訂閱呢個論壇?</string>
+    <string name="forums_list_unsubscribe_message">你確定要退訂呢個論壇?</string>
     <string name="forums_create_title">建立論壇</string>
     <string name="forums_find_title">尋找論壇</string>
     <string name="forums_find_search_placeholder">搜尋論壇或貼上網址</string>
@@ -134,7 +134,7 @@
     <string name="forums_access_level_moderate">管理員</string>
     <string name="forums_members_search">篩選成員</string>
     <string name="forums_banner_description">顯示喺論壇頂部嘅 Markdown 內容。</string>
-    <string name="forums_banner_placeholder">歡迎嚟到呢個論壇…</string>
+    <string name="forums_banner_placeholder">輸入橫額文字（支援 Markdown）…</string>
     <string name="forums_banner_dismiss">關閉橫額</string>
     <string name="forums_ai_mode_label">模式:%1$s</string>
     <string name="forums_ai_mode_heading">AI 模式</string>
@@ -209,7 +209,7 @@
     <string name="forums_saved_title">已儲存</string>
     <string name="forums_saved_remove">由已儲存中移除</string>
     <string name="forums_saved_clear_all">全部清除</string>
-    <string name="forums_rss_feed">RSS 訊息來源</string>
+    <string name="forums_rss_feed">RSS 訂閱源</string>
     <string name="forums_rss_mode_posts">帖文</string>
     <string name="forums_rss_mode_posts_comments">帖文同留言</string>
     <string name="forums_rss_copied">RSS 網址已複製到剪貼簿</string>
@@ -271,7 +271,7 @@
     <string name="forums_ai_prompt_score_label">評分提示詞</string>
     <string name="forums_ai_prompt_custom">自訂</string>
     <string name="forums_ai_prompt_variables">變數：%1$s</string>
-    <string name="forums_settings_unsubscribe_section">取消訂閱論壇</string>
+    <string name="forums_settings_unsubscribe_section">退訂論壇</string>
     <string name="forums_moderation_settings_updated">管理設定已更新</string>
     <string name="forums_moderation_queue_empty_subtitle">所有貼文和留言均已審核</string>
     <string name="forums_moderation_mute_title">禁言 %1$s？</string>
@@ -306,10 +306,10 @@
     <string name="forums_saved_empty_title">暫時未有已儲存的內容</string>
     <string name="forums_saved_error_clear">清除已儲存的貼文失敗</string>
     <string name="forums_saved_save">稍後儲存</string>
-    <string name="forums_moderation_pending_posts">待處理貼文 (%1$d)</string>
-    <string name="forums_moderation_pending_comments">待處理留言 (%1$d)</string>
+    <string name="forums_moderation_pending_posts">待處理貼文 (%1$s)</string>
+    <string name="forums_moderation_pending_comments">待處理留言 (%1$s)</string>
     <plurals name="forums_new_posts">
-        <item quantity="other">%d 篇新帖</item>
+        <item quantity="other">%s 篇新帖</item>
     </plurals>
     <string name="forums_moderation_on_image">關於圖片：%1$s</string>
     <string name="forums_moderation_rejected">已拒絕</string>

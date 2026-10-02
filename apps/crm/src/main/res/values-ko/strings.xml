@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">사람</string>
     <string name="crm_option_icon">아이콘</string>
     <string name="crm_option_icon_placeholder">예: Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">구독 취소</string>
+    <string name="crm_settings_unsubscribe">구독 해지</string>
     <string name="crm_settings_delete_crm">CRM 삭제</string>
     <string name="crm_settings_delete_confirm_title">CRM 삭제</string>
-    <string name="crm_settings_unsubscribe_title">구독 취소</string>
-    <string name="crm_settings_unsubscribe_message">이 CRM 구독을 취소할까요?</string>
+    <string name="crm_settings_unsubscribe_title">구독 해지</string>
+    <string name="crm_settings_unsubscribe_message">이 CRM 구독을 해지할까요?</string>
     <string name="crm_access_level_owner">소유자</string>
     <string name="crm_object_watch">관찰</string>
     <string name="crm_object_tab_properties">속성</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">개체 없음</string>
     <string name="crm_board_no_columns">이 보기에 구성된 열이 없습니다</string>
     <string name="crm_board_no_options">열 필드에 구성된 옵션이 없습니다</string>
-    <string name="crm_board_nested_count">+%1$d개 중첩됨</string>
+    <string name="crm_board_nested_count">+%1$s개 중첩됨</string>
     <string name="crm_move_to_column">열로 이동</string>
     <string name="crm_move_to_row">행으로 이동</string>
     <string name="crm_move_after">%1$s 뒤로</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">접근 관리</string>
     <string name="crm_settings_not_set">설정되지 않음</string>
     <string name="crm_settings_access_updated">접근이 업데이트되었어요</string>
-    <string name="crm_settings_access_revoked">액세스가 취소되었습니다</string>
+    <string name="crm_settings_access_revoked">액세스가 철회되었습니다</string>
     <string name="crm_people_search">사람 검색</string>
     <string name="crm_access_tab_other">기타</string>
     <string name="crm_access_select_group">그룹 선택</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">보기 전용</string>
     <string name="crm_access_role_none">접근 권한 없음</string>
     <string name="crm_all_crms">모든 CRM</string>
-    <string name="crm_settings_unsubscribe_section">CRM 구독 취소</string>
+    <string name="crm_settings_unsubscribe_section">CRM 구독 해지</string>
     <string name="crm_settings_updated">CRM이 업데이트되었습니다</string>
     <string name="crm_create_import_backup">백업에서 가져오기 (선택 사항)</string>
     <string name="crm_export">데이터 내보내기</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM 데이터가 저장됨</string>
     <string name="crm_create_upload_json">.zip 또는 .json 파일 업로드</string>
     <string name="crm_create_blocked_no_options">만들 수 없음: %1$s은(는) 필수이지만 선택할 옵션이 없습니다. 디자인에서 옵션을 추가하세요.</string>
-    <string name="crm_design_sample">샘플 %1$d</string>
+    <string name="crm_design_sample">샘플 %1$s</string>
     <string name="crm_option_delete_title">옵션 삭제</string>
     <string name="crm_option_delete_message">옵션 \"%1$s\"을(를) 삭제하시겠습니까?</string>
 </resources>

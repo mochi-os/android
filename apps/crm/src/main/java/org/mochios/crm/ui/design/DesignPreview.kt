@@ -91,7 +91,7 @@ fun DesignPreview(
 
     val resources = LocalResources.current
     val sampleObjects = remember(view, candidateClasses, crm.options, crm.fields, resources) {
-        buildSampleObjects(crm, candidateClasses, view) { index -> resources.getString(R.string.crm_design_sample, index) }
+        buildSampleObjects(crm, candidateClasses, view) { index -> resources.getString(R.string.crm_design_sample, index.toString()) }
     }
 
     Column(modifier = modifier.fillMaxWidth()) {

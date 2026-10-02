@@ -180,8 +180,8 @@
     <string name="people_books_create">ایجاد دفترچه نشانی</string>
     <string name="people_books_delete">حذف دفترچه نشانی</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s و %2$d مخاطب آن حذف شود؟</item>
-        <item quantity="other">%1$s و %2$d مخاطب آن حذف شود؟</item>
+        <item quantity="one">%1$s و %2$s مخاطب آن حذف شود؟</item>
+        <item quantity="other">%1$s و %2$s مخاطب آن حذف شود؟</item>
     </plurals>
     <string name="people_welcome_body">در سراسر Mochi دوستان را بیابید و ارتباط بگیرید. برای فرستادن دعوت، افزودن مخاطب را بزنید.</string>
     <string name="people_person_state_contact">در مخاطبین</string>

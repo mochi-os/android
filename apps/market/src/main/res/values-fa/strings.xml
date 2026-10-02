@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">در حال ارسال…</string>
     <string name="market_checkout_subscribing">در حال اشتراک…</string>
     <string name="market_filter_remove">حذف فیلتر</string>
-    <string name="market_listing_detail_sales_count">%1$d فروش</string>
-    <string name="market_profile_sales_count">%1$d فروش</string>
+    <string name="market_listing_detail_sales_count">%1$s فروش</string>
+    <string name="market_profile_sales_count">%1$s فروش</string>
     <string name="market_purchase_dispute_response">پاسخ فروشنده</string>
     <string name="market_purchases_order_label">سفارش #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">درباره خودتان به خریداران بگویید…</string>
     <string name="market_account_load_failed">بارگذاری حساب ممکن نشد</string>
     <string name="market_account_save_failed">ذخیره تغییرات ممکن نشد</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">فعلی: %1$s</string>
     <string name="market_bids_ends_in">پایان در %1$s</string>
     <string name="market_bids_your_bid">پیشنهاد شما: %1$s</string>
-    <string name="market_carousel_main">عکس %1$d از %2$d</string>
-    <string name="market_carousel_thumbnail">تصویر کوچک %1$d</string>
+    <string name="market_carousel_main">عکس %1$s از %2$s</string>
+    <string name="market_carousel_thumbnail">تصویر کوچک %1$s</string>
     <string name="market_checkout_browser_unavailable">مرورگری برای باز کردن صفحه پرداخت در دسترس نیست</string>
     <string name="market_checkout_pay_button">پرداخت با Stripe</string>
     <string name="market_checkout_processing">در حال پردازش…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">پیوست مدرک</string>
-    <string name="market_dispute_dialog_attach_count">%1$d فایل پیوست شد</string>
+    <string name="market_dispute_dialog_attach_count">%1$s فایل پیوست شد</string>
     <string name="market_dispute_dialog_evidence_role_staff">کارکنان Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">مدارک ارائه‌شده</string>
     <string name="market_dispute_dialog_evidence_submitter_line">ارائه‌شده توسط %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">نشانی مرجع</string>
     <string name="market_editor_assets_empty">هنوز دارایی‌ای وجود ندارد</string>
     <string name="market_editor_category_none">یک دسته‌بندی انتخاب کنید</string>
-    <string name="market_editor_days">%1$d روز</string>
+    <string name="market_editor_days">%1$s روز</string>
     <string name="market_editor_delete">حذف آگهی</string>
     <string name="market_editor_delete_confirm_message">این کار آگهی را برای همیشه حذف می‌کند.</string>
     <string name="market_editor_delete_confirm_title">آگهی حذف شود؟</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">بارگذاری گفت‌وگو ممکن نشد</string>
     <string name="market_messages_send_failed">ارسال پیام ممکن نشد</string>
     <string name="market_messages_thread_title">گفت‌وگو</string>
-    <string name="market_messages_unread_badge">%1$d خوانده‌نشده</string>
+    <string name="market_messages_unread_badge">%1$s خوانده‌نشده</string>
     <string name="market_price_from">از %1$s</string>
     <string name="market_price_high_bid">بالاترین پیشنهاد: %1$s</string>
     <string name="market_price_instant_buy">خرید فوری: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">عضو شده در %1$s</string>
     <string name="market_profile_no_reviews">هنوز نظری ثبت نشده است.</string>
     <string name="market_profile_rating_breakdown">تفکیک امتیاز</string>
-    <string name="market_profile_stars_value">%1$d ستاره</string>
+    <string name="market_profile_stars_value">%1$s ستاره</string>
     <string name="market_purchase_dispute_chargeback">بازپرداخت اعتراضی %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">بانک شما برای این سفارش درخواست بازپرداخت اعتراضی ثبت کرده است. Stripe در حال رسیدگی به اختلاف با فروشنده است؛ نتیجه پس از تصمیم‌گیری اینجا نمایش داده می‌شود.</string>
-    <string name="market_purchase_download_many">%1$d فایل خود را در پایین دانلود کنید.</string>
+    <string name="market_purchase_download_many">%1$s فایل خود را در پایین دانلود کنید.</string>
     <string name="market_purchase_download_one">فایل خود را در پایین دانلود کنید.</string>
     <string name="market_purchase_review_from">نظر از %1$s</string>
     <string name="market_purchases_auction_label">حراج #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s بازپرداخت شد</string>
     <string name="market_purchases_won_for">برنده شد به مبلغ %1$s</string>
-    <string name="market_rating_reviews">(%1$d نظر)</string>
+    <string name="market_rating_reviews">(%1$s نظر)</string>
     <string name="market_refund_amount_label">مبلغ</string>
     <string name="market_refund_dialog_amount_help">برای بازپرداخت کامل سفارش، خالی بگذارید.</string>
     <string name="market_refund_dialog_amount_label">مبلغ</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">این کار حراج را لغو می‌کند. آگهی از خریداران پنهان خواهد شد؛ می‌توانید بعداً آن را به‌عنوان پیش‌نویس جدید دوباره فهرست کنید.</string>
     <string name="market_listings_remove_title">این آگهی را حذف می‌کنید؟</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">این کار مزایده را لغو می‌کند و به %1$d پیشنهاددهنده فعال اطلاع می‌دهد. آگهی از دید خریداران پنهان می‌شود؛ بعداً می‌توانید آن را به‌عنوان پیش‌نویس جدید دوباره ثبت کنید.</item>
-        <item quantity="other">این کار مزایده را لغو می‌کند و به %1$d پیشنهاددهنده فعال اطلاع می‌دهد. آگهی از دید خریداران پنهان می‌شود؛ بعداً می‌توانید آن را به‌عنوان پیش‌نویس جدید دوباره ثبت کنید.</item>
+        <item quantity="one">این کار مزایده را لغو می‌کند و به %1$s پیشنهاددهنده فعال اطلاع می‌دهد. آگهی از دید خریداران پنهان می‌شود؛ بعداً می‌توانید آن را به‌عنوان پیش‌نویس جدید دوباره ثبت کنید.</item>
+        <item quantity="other">این کار مزایده را لغو می‌کند و به %1$s پیشنهاددهنده فعال اطلاع می‌دهد. آگهی از دید خریداران پنهان می‌شود؛ بعداً می‌توانید آن را به‌عنوان پیش‌نویس جدید دوباره ثبت کنید.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">این کار %1$d اشتراک فعال را در پایان دوره صورت‌حساب فعلی لغو می‌کند. به مشترکان اطلاع داده می‌شود. آگهی از دید خریداران پنهان می‌شود.</item>
-        <item quantity="other">این کار %1$d اشتراک فعال را در پایان دوره صورت‌حساب فعلی لغو می‌کند. به مشترکان اطلاع داده می‌شود. آگهی از دید خریداران پنهان می‌شود.</item>
+        <item quantity="one">این کار %1$s اشتراک فعال را در پایان دوره صورت‌حساب فعلی لغو می‌کند. به مشترکان اطلاع داده می‌شود. آگهی از دید خریداران پنهان می‌شود.</item>
+        <item quantity="other">این کار %1$s اشتراک فعال را در پایان دوره صورت‌حساب فعلی لغو می‌کند. به مشترکان اطلاع داده می‌شود. آگهی از دید خریداران پنهان می‌شود.</item>
     </plurals>
 </resources>

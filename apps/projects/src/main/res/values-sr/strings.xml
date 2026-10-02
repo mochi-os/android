@@ -40,10 +40,10 @@
     <string name="projects_settings_tab_people">Људи</string>
     <string name="projects_option_icon">Икона</string>
     <string name="projects_option_icon_placeholder">нпр. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Откажи претплату</string>
+    <string name="projects_settings_unsubscribe">Прекини претплату</string>
     <string name="projects_settings_delete_project">Обриши пројекат</string>
     <string name="projects_settings_delete_confirm_title">Обриши пројекат</string>
-    <string name="projects_settings_unsubscribe_title">Откажи претплату</string>
+    <string name="projects_settings_unsubscribe_title">Прекини претплату</string>
     <string name="projects_settings_unsubscribe_message">Да ли сте сигурни да желите да се одјавите са овог пројекта?</string>
     <string name="projects_access_level_owner">Власник</string>
     <string name="projects_object_watch">Прати</string>
@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">направио измену</string>
     <string name="projects_attachment_empty">Нема прилога</string>
     <string name="projects_attachment_default_name">прилог</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Нови захтев за спајање</string>
     <string name="projects_request_status_closed">Затворен</string>
     <string name="projects_request_back_to_list">Назад на списак</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Провера статуса спајања…</string>
     <string name="projects_request_can_merge">Може се спојити</string>
     <string name="projects_request_cannot_merge">Не може се спојити</string>
-    <string name="projects_request_ahead_behind">%1$d испред, %2$d иза</string>
+    <string name="projects_request_ahead_behind">%1$s испред, %2$s иза</string>
     <string name="projects_request_draft_notice">Ово је нацрт. Означите као спремно пре спајања.</string>
     <string name="projects_request_view_diff">Прикажи разлике</string>
     <string name="projects_request_mark_ready">Означи као спремно</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Нема колона подешених за овај приказ</string>
     <string name="projects_board_no_options">Нема подешених опција за поље колоне</string>
     <string name="projects_board_column_options">Опције колоне</string>
-    <string name="projects_board_nested_count">+%1$d угнежђено</string>
+    <string name="projects_board_nested_count">+%1$s угнежђено</string>
     <string name="projects_move_to_column">Премести у колону</string>
     <string name="projects_move_to_row">Премести у ред</string>
     <string name="projects_move_after">После %1$s</string>
@@ -360,14 +360,14 @@
     <string name="projects_activity_commented">коментарисао/ла</string>
     <string name="projects_attachment_delete_confirm_message">Овај прилог ће бити трајно избрисан.</string>
     <string name="projects_attachment_delete_confirm_title">Избрисати прилог?</string>
-    <string name="projects_settings_unsubscribe_section">Откажи претплату на пројекат</string>
+    <string name="projects_settings_unsubscribe_section">Прекини претплату на пројекат</string>
     <string name="projects_share_link_title">Подели пројекат</string>
     <string name="projects_sort_filter_title">Сортирање и филтер</string>
     <string name="projects_create_prefix_hint">Користи се за читљиве ИД-ове попут %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d сукобљена датотека</item>
-        <item quantity="few">%1$d сукобљене датотеке</item>
-        <item quantity="other">%1$d сукобљених датотека</item>
+        <item quantity="one">%1$s сукобљена датотека</item>
+        <item quantity="few">%1$s сукобљене датотеке</item>
+        <item quantity="other">%1$s сукобљених датотека</item>
     </plurals>
     <string name="projects_design_export_saved">Дизајн је сачуван</string>
     <string name="projects_design_import_failed">Датотеку није могуће прочитати</string>
@@ -377,7 +377,7 @@
     <string name="projects_export_saved">Подаци пројекта су сачувани</string>
     <string name="projects_exporting">Припрема извоза…</string>
     <string name="projects_board_add_column">Додај колону</string>
-    <string name="projects_design_sample">Пример %1$d</string>
+    <string name="projects_design_sample">Пример %1$s</string>
     <string name="projects_option_delete_title">Обриши опцију</string>
     <string name="projects_option_delete_message">Да ли сте сигурни да желите да обришете опцију \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Још се не могу креирати типови ставки. Прво креирајте потребне родитељске ставке.</string>

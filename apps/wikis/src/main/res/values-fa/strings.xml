@@ -22,17 +22,17 @@
     <string name="wikis_page_action_recent_changes">تغییرات اخیر</string>
     <string name="wikis_page_action_new_page">صفحه جدید</string>
     <string name="wikis_page_action_settings">تنظیمات</string>
-    <string name="wikis_page_action_unsubscribe">لغو اشتراک</string>
+    <string name="wikis_page_action_unsubscribe">قطع اشتراک</string>
     <string name="wikis_title">ویکی‌ها</string>
     <string name="wikis_empty_title">اولین ویکی خود را آغاز کنید</string>
     <string name="wikis_empty_subtitle">ویکی‌ای را برای اشتراک جست‌وجو کنید، یا یکی را برای انتشار مستندات خود ایجاد کنید.</string>
     <string name="wikis_create_button">ساخت ویکی</string>
     <string name="wikis_recommended_section">ویکی‌های توصیه‌شده</string>
     <string name="wikis_subscribe_button">اشتراک</string>
-    <string name="wikis_unsubscribe_action">لغو اشتراک</string>
-    <string name="wikis_unsubscribing">در حال لغو اشتراک…</string>
-    <string name="wikis_unsubscribe_confirm_title">لغو اشتراک</string>
-    <string name="wikis_unsubscribe_success">لغو اشتراک شد</string>
+    <string name="wikis_unsubscribe_action">قطع اشتراک</string>
+    <string name="wikis_unsubscribing">در حال قطع اشتراک…</string>
+    <string name="wikis_unsubscribe_confirm_title">قطع اشتراک</string>
+    <string name="wikis_unsubscribe_success">اشتراک قطع شد</string>
     <string name="wikis_subscribe_failed">اشتراک ناموفق بود</string>
     <string name="wikis_rss_menu">فید RSS</string>
     <string name="wikis_rss_changes">تغییرات</string>
@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">تغییرات و نظرها</string>
     <string name="wikis_rss_copied">URL RSS در کلیپ‌بورد کپی شد</string>
     <string name="wikis_rss_failed">دریافت توکن RSS ناموفق بود</string>
-    <string name="wikis_rss_revoke">لغو دسترسی</string>
-    <string name="wikis_rss_revoked">دسترسی RSS لغو شد</string>
+    <string name="wikis_rss_revoke">ابطال دسترسی</string>
+    <string name="wikis_rss_revoked">دسترسی RSS ابطال شد</string>
     <string name="wikis_find_title">یافتن ویکی‌ها</string>
     <string name="wikis_find_no_results">ویکی‌ای یافت نشد</string>
     <string name="wikis_find_recommended_section">ویکی‌های توصیه‌شده</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">اعلان‌ها در مورد ویرایش صفحات، نظرات و دعوت‌نامه‌ها.</string>
     <string name="wikis_pageview_toc_expand">نمایش فهرست مطالب</string>
     <string name="wikis_pageview_toc_collapse">پنهان کردن فهرست مطالب</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">به‌روزرسانی شده %1$s</string>
     <string name="wikis_pageview_not_found_description">صفحه «%1$s» هنوز وجود ندارد.</string>
     <string name="wikis_pageview_share_chooser">پیوند ویکی</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">پیوند</string>
     <string name="wikis_open_sidebar">باز کردن نوار کناری</string>
     <string name="wikis_search_placeholder">جستجوی ویکی…</string>
-    <string name="wikis_unsubscribe_confirm_message">آیا مطمئنید که می‌خواهید اشتراک از %1$s را لغو کنید؟</string>
+    <string name="wikis_unsubscribe_confirm_message">آیا مطمئنید که می‌خواهید اشتراک %1$s را قطع کنید؟</string>
     <string name="wikis_clipboard_label_rss">URL RSS ویکی</string>
     <string name="wikis_find_search_placeholder">جستجو بر اساس نام، شناسه، اثر انگشت یا URL…</string>
     <string name="wikis_join_search_button">جستجوی ویکی‌ها…</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">شما در حال حذف صفحه «%1$s» (%2$s) هستید. این عمل را می‌توان با بازیابی از تاریخچه لغو کرد.</string>
     <string name="wikis_delete_page_success">صفحه حذف شد</string>
     <string name="wikis_revert_page_title">بازگردانی صفحه</string>
-    <string name="wikis_revert_page_message">شما در حال بازگردانی %1$s به نسخه %2$d هستید. این یک ویرایش جدید با محتوای نسخه %2$d ایجاد می‌کند.</string>
-    <string name="wikis_revert_page_default_comment">به نسخه %1$d بازگردانده شد</string>
-    <string name="wikis_revert_page_success">به نسخه %1$d بازگردانده شد</string>
+    <string name="wikis_revert_page_message">شما در حال بازگردانی %1$s به نسخه %2$s هستید. این یک ویرایش جدید با محتوای نسخه %2$s ایجاد می‌کند.</string>
+    <string name="wikis_revert_page_default_comment">به نسخه %1$s بازگردانده شد</string>
+    <string name="wikis_revert_page_success">به نسخه %1$s بازگردانده شد</string>
     <string name="wikis_rename_page_renaming">در حال تغییر نام…</string>
     <string name="wikis_rename_page_success">نام صفحه تغییر کرد</string>
-    <string name="wikis_history_viewing">مشاهده تاریخچه برای %1$s، نسخه فعلی %2$d</string>
-    <string name="wikis_revision_version_badge">نسخه %1$d</string>
+    <string name="wikis_history_viewing">مشاهده تاریخچه برای %1$s، نسخه فعلی %2$s</string>
+    <string name="wikis_revision_version_badge">نسخه %1$s</string>
     <string name="wikis_search_pages_placeholder">جستجوی صفحات بر اساس عنوان یا محتوا…</string>
     <string name="wikis_search_no_results">صفحه‌ای برای «%1$s» یافت نشد. عبارات جستجوی دیگری را امتحان کنید.</string>
     <string name="wikis_search_updated">به‌روزرسانی شده %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">بر اساس %1$s</string>
     <string name="wikis_revision_show_page">نمایش صفحه</string>
     <string name="wikis_revision_compare_failed">بارگذاری نسخهٔ پیشین برای مقایسه ممکن نشد.</string>
-    <string name="wikis_revision_changes_from">تغییرات از نسخهٔ %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">تغییرات از نسخهٔ %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d نظر</item>
-        <item quantity="other">%d نظر</item>
+        <item quantity="one">%s نظر</item>
+        <item quantity="other">%s نظر</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d پاسخ</item>
-        <item quantity="other">+%d پاسخ دیگر</item>
+        <item quantity="one">%s پاسخ</item>
+        <item quantity="other">+%s پاسخ دیگر</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d صفحه</item>
-        <item quantity="other">%d صفحه</item>
+        <item quantity="one">%s صفحه</item>
+        <item quantity="other">%s صفحه</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d فایل</item>
-        <item quantity="other">%d فایل</item>
+        <item quantity="one">%s فایل</item>
+        <item quantity="other">%s فایل</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d تصویر</item>
-        <item quantity="other">%d تصویر</item>
+        <item quantity="one">%s تصویر</item>
+        <item quantity="other">%s تصویر</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d سند</item>
-        <item quantity="other">%d سند</item>
+        <item quantity="one">%s سند</item>
+        <item quantity="other">%s سند</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d صفحه با این برچسب</item>
-        <item quantity="other">%d صفحه با این برچسب</item>
+        <item quantity="one">%s صفحه با این برچسب</item>
+        <item quantity="other">%s صفحه با این برچسب</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d نتیجه برای «%2$s» یافت شد</item>
-        <item quantity="other">%1$d نتیجه برای «%2$s» یافت شد</item>
+        <item quantity="one">%1$s نتیجه برای «%2$s» یافت شد</item>
+        <item quantity="other">%1$s نتیجه برای «%2$s» یافت شد</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ذخیرهٔ شرح انجام نشد</string>
     <string name="wikis_attachments_upload_types">فایل‌های پشتیبانی‌شده: تصاویر، PDF، DOC، DOCX، TXT و MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">URL جدید RSS در کلیپ‌بورد کپی شد</string>
     <string name="wikis_rss_exists">این نشانی خوراک قبلاً صادر شده و دوباره نمایش داده نمی‌شود.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">نمایش %1$d دیدگاه نخست.</item>
-        <item quantity="other">نمایش %1$d دیدگاه نخست.</item>
+        <item quantity="one">نمایش %1$s دیدگاه نخست.</item>
+        <item quantity="other">نمایش %1$s دیدگاه نخست.</item>
     </plurals>
 </resources>

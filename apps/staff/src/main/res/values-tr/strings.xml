@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Notlar</string>
     <string name="staff_accounts_reason_label">Neden</string>
     <string name="staff_accounts_reason_optional_label">Sebep (isteğe bağlı)</string>
-    <string name="staff_accounts_sales">%1$d satış</string>
+    <string name="staff_accounts_sales">%1$s satış</string>
     <string name="staff_accounts_search_clear">Aramayı temizle</string>
     <string name="staff_accounts_search_placeholder">Ara</string>
     <string name="staff_accounts_seller_buyers">Yalnızca alıcılar</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">İsimsiz</string>
     <string name="staff_accounts_unsuspend">Askıyı kaldır</string>
     <string name="staff_accounts_unsuspended_toast">Hesap askıdan çıkarıldı</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">İptal</string>
     <string name="staff_appeals_decide">Karar ver</string>
     <string name="staff_appeals_decision_denied">İlanı reddedilmiş tut</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ဈေး</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ကိုယ်ရေးအချက်အလက်</string>
     <string name="market_account_biography_placeholder">ဝယ်သူများကို သင့်အကြောင်း ပြောပြပါ…</string>
     <string name="market_account_load_failed">အကောင့်ကို ဖွင့်၍မရပါ</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">ဈေးပိုဆွဲခံရ</string>
     <string name="market_bids_tab_won">နိုင်ပြီး</string>
     <string name="market_bids_title">လေလံများ</string>
-    <string name="market_carousel_main">ဓာတ်ပုံ %1$d / %2$d</string>
+    <string name="market_carousel_main">ဓာတ်ပုံ %1$s / %2$s</string>
     <string name="market_channel_name">ဈေး</string>
     <string name="market_chargeback_reason_bank_cannot_process">ဘဏ်က လုပ်ဆောင်၍ မရပါ</string>
     <string name="market_chargeback_reason_check_returned">ချက်လက်မှတ် ပြန်လည်ပို့ပြီး</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">ပြန်လည်ပြုပြင်ထား</string>
     <string name="market_editor_condition_used">သုံးပြီး</string>
     <string name="market_editor_currency">ငွေကြေး</string>
-    <string name="market_editor_days">%1$d ရက်</string>
+    <string name="market_editor_days">%1$s ရက်</string>
     <string name="market_editor_delete">ကြော်ငြာကို ဖျက်ပါ</string>
     <string name="market_editor_description">ဖော်ပြချက်</string>
     <string name="market_editor_interval_monthly">လစဉ်</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">ဝယ်ယူမှုများ</string>
     <string name="market_rating_label">အဆင့်သတ်မှတ်ချက်</string>
     <string name="market_rating_no_reviews">သုံးသပ်ချက်များ မရှိသေးပါ</string>
-    <string name="market_rating_reviews">(%1$d သုံးသပ်ချက်)</string>
+    <string name="market_rating_reviews">(%1$s သုံးသပ်ချက်)</string>
     <string name="market_refund_amount_label">ပမာဏ</string>
     <string name="market_refund_body">သင့်ပြန်အမ်းတောင်းခံချက်အတွက် အကြောင်းပြချက် ပေးပါ။</string>
     <string name="market_refund_details_label">အသေးစိတ်များ</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">လက်ရှိ: %1$s</string>
     <string name="market_bids_ends_in">%1$s အတွင်း ပြီးဆုံးမည်</string>
     <string name="market_bids_your_bid">သင့်ဈေး: %1$s</string>
-    <string name="market_carousel_thumbnail">ပုံငယ် %1$d</string>
+    <string name="market_carousel_thumbnail">ပုံငယ် %1$s</string>
     <string name="market_checkout_browser_unavailable">ငွေပေးချေမှုစာမျက်နှာဖွင့်ရန် ဘရောက်ဆာ မရှိပါ</string>
     <string name="market_checkout_pwyw_label">သင့်ဈေး (အနည်းဆုံး %1$s)</string>
     <string name="market_checkout_pwyw_min_error">ပမာဏသည် အနည်းဆုံး %1$s ဖြစ်ရမည်</string>
-    <string name="market_dispute_dialog_attach_count">ဖိုင် %1$d ခု ပူးတွဲထားသည်</string>
+    <string name="market_dispute_dialog_attach_count">ဖိုင် %1$s ခု ပူးတွဲထားသည်</string>
     <string name="market_dispute_dialog_evidence_section_title">တင်ပြထားသော အထောက်အထား</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s မှ တင်ပြထားသည်</string>
     <string name="market_editor_appeal">စစ်ဆေးမှုကို အယူခံဝင်ရန်</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">စာရင်းသွင်းမှု တင်နေသည်</string>
     <string name="market_listing_detail_relist_failed">ပြန်လည်စာရင်းသွင်း၍ မရပါ</string>
     <string name="market_listing_detail_relist_in_progress">ပြန်လည်စာရင်းသွင်းနေသည်</string>
-    <string name="market_listing_detail_sales_count">ရောင်းအား %1$d ခု</string>
+    <string name="market_listing_detail_sales_count">ရောင်းအား %1$s ခု</string>
     <string name="market_listing_detail_seller_banned_banner">ဤရောင်းသူသည် ပိတ်ပင်ခံထားရသည်။ မှာယူမှုအသစ်များ မပြုလုပ်နိုင်ပါ။</string>
     <string name="market_listing_detail_seller_suspended_banner">ဤရောင်းသူသည် ယာယီရပ်ဆိုင်းခံထားရသည်။ အကောင့်ပြန်လည်ဖွင့်လှစ်သည်အထိ မှာယူမှုအသစ်များ ရပ်ဆိုင်းထားသည်။</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">ရောင်းသူ၏အကောင့်ကို ကန့်သတ်ထားစဉ် ဝယ်ယူခြင်းအား ပိတ်ထားသည်။</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">စကားဝိုင်းများ မရှိသေးပါ</string>
     <string name="market_messages_load_failed">စကားဝိုင်းကို ဖွင့်၍ မရပါ</string>
     <string name="market_messages_send_failed">စာပို့၍ မရပါ</string>
-    <string name="market_messages_unread_badge">မဖတ်ရသေး %1$d ခု</string>
+    <string name="market_messages_unread_badge">မဖတ်ရသေး %1$s ခု</string>
     <string name="market_price_high_bid">အမြင့်ဆုံးလေလံ: %1$s</string>
     <string name="market_price_instant_buy">ချက်ချင်းဝယ်ယူရန်: %1$s</string>
     <string name="market_price_starting_bid">စတင်လေလံ: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">%1$s မှစ၍ အဖွဲ့ဝင်</string>
     <string name="market_profile_joined">%1$s တွင် ဝင်ရောက်ခဲ့သည်</string>
     <string name="market_profile_rating_breakdown">အဆင့်သတ်မှတ်ချက် အသေးစိတ်</string>
-    <string name="market_profile_sales_count">ရောင်းချမှု %1$d ခု</string>
-    <string name="market_profile_stars_value">ကြယ် %1$d ပွင့်</string>
+    <string name="market_profile_sales_count">ရောင်းချမှု %1$s ခု</string>
+    <string name="market_profile_stars_value">ကြယ် %1$s ပွင့်</string>
     <string name="market_purchase_dispute_chargeback">ပြန်အမ်းငွေတောင်းခံမှု %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">သင်၏ဘဏ်က ဤမှာယူမှုအတွက် ပြန်အမ်းငွေတောင်းခံမှု တင်သွင်းခဲ့သည်။ Stripe က ရောင်းသူနှင့်အတူ အငြင်းပွားမှုကို ကိုင်တွယ်နေပါသည်။ ဆုံးဖြတ်ချက်ထွက်လာသည့်အခါ ဤနေရာတွင် ပေါ်လာပါမည်။</string>
     <string name="market_purchase_dispute_response">ရောင်းသူ၏ တုံ့ပြန်ချက်</string>
-    <string name="market_purchase_download_many">သင်၏ ဖိုင် %1$d ခုကို အောက်တွင် ဒေါင်းလုဒ်လုပ်ပါ။</string>
+    <string name="market_purchase_download_many">သင်၏ ဖိုင် %1$s ခုကို အောက်တွင် ဒေါင်းလုဒ်လုပ်ပါ။</string>
     <string name="market_purchase_download_one">သင်၏ ဖိုင်ကို အောက်တွင် ဒေါင်းလုဒ်လုပ်ပါ။</string>
     <string name="market_purchase_review_from">%1$s ထံမှ သုံးသပ်ချက်</string>
     <string name="market_purchases_auction_label">လေလံပွဲ #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">၎င်းသည် လေလံ ကို ပယ်ဖျက်ပါမည်။ စာရင်းသွင်းပစ္စည်းကို ဝယ်သူများထံမှ ဝှက်ထားပါမည်; နောက်မှ မူကြမ်း အသစ်အဖြစ် ပြန်တင်နိုင်သည်။</string>
     <string name="market_listings_remove_title">ဤစာရင်းကို ဖယ်ရှားမလား?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">၎င်းသည် လေလံကို ပယ်ဖျက်ပြီး တက်ကြွသော လေလံဆွဲသူ %1$d ဦးကို အကြောင်းကြားပါမည်။ စာရင်းကို ဝယ်သူများထံမှ ဖျောက်ထားပါမည်၊ နောက်ပိုင်းတွင် မူကြမ်းအသစ်အဖြစ် ပြန်လည်တင်နိုင်ပါသည်။</item>
-        <item quantity="other">၎င်းသည် လေလံကို ပယ်ဖျက်ပြီး တက်ကြွသော လေလံဆွဲသူ %1$d ဦးကို အကြောင်းကြားပါမည်။ စာရင်းကို ဝယ်သူများထံမှ ဖျောက်ထားပါမည်၊ နောက်ပိုင်းတွင် မူကြမ်းအသစ်အဖြစ် ပြန်လည်တင်နိုင်ပါသည်။</item>
+        <item quantity="one">၎င်းသည် လေလံကို ပယ်ဖျက်ပြီး တက်ကြွသော လေလံဆွဲသူ %1$s ဦးကို အကြောင်းကြားပါမည်။ စာရင်းကို ဝယ်သူများထံမှ ဖျောက်ထားပါမည်၊ နောက်ပိုင်းတွင် မူကြမ်းအသစ်အဖြစ် ပြန်လည်တင်နိုင်ပါသည်။</item>
+        <item quantity="other">၎င်းသည် လေလံကို ပယ်ဖျက်ပြီး တက်ကြွသော လေလံဆွဲသူ %1$s ဦးကို အကြောင်းကြားပါမည်။ စာရင်းကို ဝယ်သူများထံမှ ဖျောက်ထားပါမည်၊ နောက်ပိုင်းတွင် မူကြမ်းအသစ်အဖြစ် ပြန်လည်တင်နိုင်ပါသည်။</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">၎င်းသည် လက်ရှိငွေတောင်းခံကာလ အဆုံးတွင် တက်ကြွသော စာရင်းသွင်းမှု %1$d ခုကို ပယ်ဖျက်ပါမည်။ စာရင်းသွင်းသူများကို အကြောင်းကြားပါမည်။ စာရင်းကို ဝယ်သူများထံမှ ဖျောက်ထားပါမည်။</item>
-        <item quantity="other">၎င်းသည် လက်ရှိငွေတောင်းခံကာလ အဆုံးတွင် တက်ကြွသော စာရင်းသွင်းမှု %1$d ခုကို ပယ်ဖျက်ပါမည်။ စာရင်းသွင်းသူများကို အကြောင်းကြားပါမည်။ စာရင်းကို ဝယ်သူများထံမှ ဖျောက်ထားပါမည်။</item>
+        <item quantity="one">၎င်းသည် လက်ရှိငွေတောင်းခံကာလ အဆုံးတွင် တက်ကြွသော စာရင်းသွင်းမှု %1$s ခုကို ပယ်ဖျက်ပါမည်။ စာရင်းသွင်းသူများကို အကြောင်းကြားပါမည်။ စာရင်းကို ဝယ်သူများထံမှ ဖျောက်ထားပါမည်။</item>
+        <item quantity="other">၎င်းသည် လက်ရှိငွေတောင်းခံကာလ အဆုံးတွင် တက်ကြွသော စာရင်းသွင်းမှု %1$s ခုကို ပယ်ဖျက်ပါမည်။ စာရင်းသွင်းသူများကို အကြောင်းကြားပါမည်။ စာရင်းကို ဝယ်သူများထံမှ ဖျောက်ထားပါမည်။</item>
     </plurals>
 </resources>

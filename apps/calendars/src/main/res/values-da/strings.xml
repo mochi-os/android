@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">For altid</string>
     <string name="calendars_reminder_time">På tidspunktet</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minut før</item>
-        <item quantity="other">%1$d minutter før</item>
+        <item quantity="one">%1$s minut før</item>
+        <item quantity="other">%1$s minutter før</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d time før</item>
-        <item quantity="other">%1$d timer før</item>
+        <item quantity="one">%1$s time før</item>
+        <item quantity="other">%1$s timer før</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d dag før</item>
-        <item quantity="other">%1$d dage før</item>
+        <item quantity="one">%1$s dag før</item>
+        <item quantity="other">%1$s dage før</item>
     </plurals>
     <string name="calendars_reminder_add">Tilføj påmindelse</string>
     <string name="calendars_reminder_remove">Fjern påmindelse</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">Kalenderen er for stor</string>
     <string name="calendars_poll_invalid">Adressen returnerede ingen kalender</string>
     <string name="calendars_poll_unreachable">Adressen kunne ikke nås</string>
-    <string name="calendars_poll_status">Adressen svarede %1$d</string>
+    <string name="calendars_poll_status">Adressen svarede %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minutter</item>
+        <item quantity="one">%1$s minut</item>
+        <item quantity="other">%1$s minutter</item>
     </plurals>
     <string name="calendars_preferences_zones">Vis begivenheder i deres egen tidszone</string>
     <string name="calendars_event_backwards">Slutter før den begynder</string>

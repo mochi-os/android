@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">منبع حذف شد</string>
     <string name="feeds_settings_source_polling">در حال دریافت منبع…</string>
     <string name="feeds_settings_access_updated">دسترسی به‌روزرسانی شد</string>
-    <string name="feeds_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="feeds_settings_access_revoked">دسترسی ابطال شد</string>
     <string name="feeds_settings_member_removed">عضو حذف شد</string>
     <string name="feeds_settings_ai_mode_updated">حالت هوش مصنوعی به‌روز شد</string>
     <string name="feeds_settings_ai_account_updated">حساب هوش مصنوعی به‌روز شد</string>
@@ -113,10 +113,10 @@
     <string name="feeds_source_never_fetched">هرگز دریافت نشده</string>
     <string name="feeds_source_poll">بازرسی</string>
     <string name="feeds_source_transform">تبدیل با هوش مصنوعی</string>
-    <string name="feeds_remove_source_confirm">حذف \"%1$s\"؟</string>
-    <string name="feeds_remove_also_delete_posts">نوشته‌های وارد شده نیز حذف شوند</string>
+    <string name="feeds_remove_source_confirm">این کار وارد کردن محتوا از \"%1$s\" را متوقف می‌کند.</string>
+    <string name="feeds_remove_also_delete_posts">نوشته‌هایی که از این منبع وارد شده‌اند نیز حذف شوند</string>
     <string name="feeds_suggested_credibility_title">اعتبار پیشنهادی</string>
-    <string name="feeds_suggested_credibility_body">Mochi اعتبار %1$d را پیشنهاد می‌کند. می‌پذیرید؟</string>
+    <string name="feeds_suggested_credibility_body">Mochi اعتبار %1$s را پیشنهاد می‌کند. می‌پذیرید؟</string>
     <string name="feeds_suggested_credibility_keep">حفظ مقدار فعلی</string>
     <string name="feeds_ai_processing_mode">حالت پردازش هوش مصنوعی</string>
     <string name="feeds_ai_prompt_new">برچسب‌گذاری نوشته‌های جدید</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">برای ذخیره هر پست در اینجا برای بعد، روی نشانک آن ضربه بزنید.</string>
     <string name="feeds_saved_error_clear">پاک‌کردن پست‌های ذخیره‌شده ناموفق بود</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d پست جدید</item>
-        <item quantity="other">%d پست جدید</item>
+        <item quantity="one">%s پست جدید</item>
+        <item quantity="other">%s پست جدید</item>
     </plurals>
     <string name="feeds_caught_up">همه‌چیز را دیده‌اید</string>
     <string name="feeds_all_caught_up">همه‌چیز خوانده شد</string>
@@ -166,8 +166,8 @@
     <string name="feeds_settings_field_server">سرور</string>
     <string name="feeds_settings_name_edit_cd">ویرایش نام</string>
     <string name="feeds_settings_section_identity">هویت</string>
-    <string name="feeds_unsubscribe">لغو اشتراک</string>
-    <string name="feeds_unsubscribed">لغو اشتراک شد</string>
+    <string name="feeds_unsubscribe">قطع اشتراک</string>
+    <string name="feeds_unsubscribed">اشتراک قطع شد</string>
     <string name="feeds_access_level_comment_full">نظر دادن، واکنش نشان دادن و دیدن</string>
     <string name="feeds_rss_mode_posts_comments">پست‌ها و نظرات</string>
     <string name="feeds_access_add_title">افزودن دسترسی</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">محتوای پست</string>
     <string name="feeds_enable_memories">فعال‌سازی خاطرات</string>
     <string name="feeds_permission_request_title">درخواست مجوز</string>
-    <string name="feeds_unsubscribe_confirm">لغو اشتراک از فید؟</string>
+    <string name="feeds_unsubscribe_confirm">قطع اشتراک از فید؟</string>
     <string name="feeds_settings_title">تنظیمات %1$s</string>
     <string name="feeds_source_transform_help">برای غیرفعال‌سازی خالی بگذارید.</string>
     <string name="feeds_settings_name_cancel_cd">لغو ویرایش</string>
@@ -187,17 +187,17 @@
     <string name="feeds_create_first_post">اولین پست را بسازید</string>
     <string name="feeds_rss_mode_posts">پست‌ها</string>
     <string name="feeds_source_last_checked">آخرین بررسی %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">لغو اشتراک از فید</string>
+    <string name="feeds_settings_unsubscribe_section">قطع اشتراک از فید</string>
     <string name="feeds_source_transform_hint">به انگلیسی ترجمه کنید و به‌صورت فهرست نقطه‌ای نمایش دهید.</string>
     <string name="feeds_source_url_hint_feed">شناسه موجودیت یا اثر انگشت فید</string>
     <string name="feeds_source_credibility_label">اعتبار</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d ساعت</item>
-        <item quantity="other">%1$d ساعت</item>
+        <item quantity="one">%1$s ساعت</item>
+        <item quantity="other">%1$s ساعت</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d دقیقه</item>
-        <item quantity="other">%1$d دقیقه</item>
+        <item quantity="one">%1$s دقیقه</item>
+        <item quantity="other">%1$s دقیقه</item>
     </plurals>
     <string name="feeds_source_polling_interval">بررسی هر %1$s</string>
     <string name="feeds_access_level_react_full">واکنش و مشاهده</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">پیوند</string>
     <string name="feeds_share_link_title">پیوند خوراک</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d نظر</item>
-        <item quantity="other">%1$d نظر</item>
+        <item quantity="one">%1$s نظر</item>
+        <item quantity="other">%1$s نظر</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d پیوست</item>
-        <item quantity="other">%1$d پیوست</item>
+        <item quantity="one">%1$s پیوست</item>
+        <item quantity="other">%1$s پیوست</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d نظر دیگر را ببینید</item>
-        <item quantity="other">%1$d نظر دیگر را ببینید</item>
+        <item quantity="one">%1$s نظر دیگر را ببینید</item>
+        <item quantity="other">%1$s نظر دیگر را ببینید</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">امروز %1$d سال پیش</item>
-        <item quantity="other">امروز %1$d سال پیش</item>
+        <item quantity="one">امروز %1$s سال پیش</item>
+        <item quantity="other">امروز %1$s سال پیش</item>
     </plurals>
     <string name="feeds_block">مسدود کردن</string>
     <string name="feeds_removed_from_feed">شما از این فید حذف شدید</string>

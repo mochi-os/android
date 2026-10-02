@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">తొలగించండి</string>
     <string name="go_delete_message">ఈ గేమ్ మీ జాబితా నుండి తీసివేయబడుతుంది. దీన్ని రద్దు చేయలేరు.</string>
     <string name="go_delete_title">గేమ్‌ను తొలగించాలా?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">అంగీకరించండి</string>
     <string name="go_draw_decline">తిరస్కరించండి</string>
     <string name="go_draw_offered_received">%1$s డ్రా అందించారు</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">ఓటమిని అంగీకరించారు</string>
     <string name="go_new_game_title">కొత్త Go గేమ్</string>
     <string name="go_new_game_no_friends">గేమ్ ప్రారంభించే ముందు మీరు స్నేహితుడిని జోడించాలి.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">నలుపు మొదట ఆడటాన్ని భర్తీ చేయడానికి తెలుపు స్కోరుకు జోడించే పాయింట్లు</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go బోర్డ్</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d గో బోర్డు, నల్ల రాయి ఉంచడానికి మీ వంతు</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d గో బోర్డు, తెల్ల రాయి ఉంచడానికి మీ వంతు</string>
+    <string name="go_board_a11y">%1$s×%1$s Go బోర్డ్</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s గో బోర్డు, నల్ల రాయి ఉంచడానికి మీ వంతు</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s గో బోర్డు, తెల్ల రాయి ఉంచడానికి మీ వంతు</string>
     <string name="go_status_scoring">లెక్కింపు — స్కోరుపై అంగీకరించండి లేదా ఆట కొనసాగించండి</string>
     <string name="go_score_proposed">ప్రతిపాదిత స్కోర్: నలుపు %1$s, తెలుపు %2$s</string>
     <string name="go_score_opponent_accepted">మీ ప్రత్యర్థి ఈ స్కోర్‌ను అంగీకరిస్తున్నారు: నలుపు %1$s, తెలుపు %2$s</string>

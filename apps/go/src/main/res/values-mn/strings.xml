@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Устгах</string>
     <string name="go_delete_message">Энэ тоглоом таны жагсаалтаас устах болно. Үүнийг буцаах боломжгүй.</string>
     <string name="go_delete_title">Тоглоомыг устгах уу?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Зөвшөөрөх</string>
     <string name="go_draw_decline">Татгалзах</string>
     <string name="go_draw_offered_received">%1$s тэнцлэлд санал болгосон</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Бууж өгсөн</string>
     <string name="go_new_game_title">Шинэ Go тоглоом</string>
     <string name="go_new_game_no_friends">Тоглоом эхлүүлэхийн өмнө найз нэмэх шаардлагатай.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Хар түрүүлж явдгийг нөхөхийн тулд Цагааны онооонд нэмэгдэх оноо</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go самбар</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Го самбар, хар чулуу тавих ээлж тань</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Го самбар, цагаан чулуу тавих ээлж тань</string>
+    <string name="go_board_a11y">%1$s×%1$s Go самбар</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Го самбар, хар чулуу тавих ээлж тань</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Го самбар, цагаан чулуу тавих ээлж тань</string>
     <string name="go_status_scoring">Тоолол — оноог зөвшөөрөх эсвэл тоглоомоо үргэлжлүүлнэ үү</string>
     <string name="go_score_proposed">Санал болгосон оноо: хар %1$s, цагаан %2$s</string>
     <string name="go_score_opponent_accepted">Таны өрсөлдөгч энэ оноог зөвшөөрч байна: хар %1$s, цагаан %2$s</string>

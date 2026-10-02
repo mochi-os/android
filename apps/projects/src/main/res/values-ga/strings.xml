@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">rinne athrú</string>
     <string name="projects_attachment_empty">Gan iatáin</string>
     <string name="projects_attachment_default_name">iatán</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Iarratas cumaisc nua</string>
     <string name="projects_request_status_closed">Dúnta</string>
     <string name="projects_request_back_to_list">Ar ais chuig an liosta</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Ag seiceáil stádas an chumaisc…</string>
     <string name="projects_request_can_merge">Is féidir é a chumasc</string>
     <string name="projects_request_cannot_merge">Ní féidir cumasc</string>
-    <string name="projects_request_ahead_behind">%1$d chun tosaigh, %2$d ar gcúl</string>
+    <string name="projects_request_ahead_behind">%1$s chun tosaigh, %2$s ar gcúl</string>
     <string name="projects_request_draft_notice">Is dréacht é seo. Marcáil mar réidh sular féidir é a chumasc.</string>
     <string name="projects_request_view_diff">Féach ar an difríocht</string>
     <string name="projects_request_mark_ready">Marcáil mar réidh</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Níl aon cholún cumraithe don amharc seo</string>
     <string name="projects_board_no_options">Níl aon rogha cumraithe do réimse an cholúin</string>
     <string name="projects_board_column_options">Roghanna colúin</string>
-    <string name="projects_board_nested_count">+%1$d neadaithe</string>
+    <string name="projects_board_nested_count">+%1$s neadaithe</string>
     <string name="projects_move_to_column">Bog go colún</string>
     <string name="projects_move_to_row">Bog go ró</string>
     <string name="projects_move_after">I ndiaidh %1$s</string>
@@ -365,11 +365,11 @@
     <string name="projects_sort_filter_title">Sórtáil agus scag</string>
     <string name="projects_create_prefix_hint">Úsáidtear le haghaidh IDanna inléite mar %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d chomhad contrártha</item>
-        <item quantity="two">%1$d chomhad chontrártha</item>
-        <item quantity="few">%1$d chomhad chontrártha</item>
-        <item quantity="many">%1$d gcomhad chontrártha</item>
-        <item quantity="other">%1$d comhad contrártha</item>
+        <item quantity="one">%1$s chomhad contrártha</item>
+        <item quantity="two">%1$s chomhad chontrártha</item>
+        <item quantity="few">%1$s chomhad chontrártha</item>
+        <item quantity="many">%1$s gcomhad chontrártha</item>
+        <item quantity="other">%1$s comhad contrártha</item>
     </plurals>
     <string name="projects_design_export_saved">Sábháladh an dearadh</string>
     <string name="projects_design_import_failed">Níorbh fhéidir an comhad sin a léamh</string>
@@ -379,7 +379,7 @@
     <string name="projects_export_saved">Sábháladh sonraí an tionscadail</string>
     <string name="projects_exporting">Easpórtáil á hullmhú…</string>
     <string name="projects_board_add_column">Cuir colún leis</string>
-    <string name="projects_design_sample">Sampla %1$d</string>
+    <string name="projects_design_sample">Sampla %1$s</string>
     <string name="projects_option_delete_title">Scrios rogha</string>
     <string name="projects_option_delete_message">An bhfuil tú cinnte gur mhaith leat an rogha \"%1$s\" a scriosadh?</string>
     <string name="projects_create_object_no_types">Ní féidir aon chineál míre a chruthú fós. Cruthaigh na míreanna tuismitheora riachtanacha ar dtús.</string>

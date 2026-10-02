@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">წაშლა</string>
     <string name="go_delete_message">ეს თამაში წაიშლება სიიდან. ამის გაუქმება შეუძლებელია.</string>
     <string name="go_delete_title">თამაშის წაშლა?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">მიღება</string>
     <string name="go_draw_decline">უარის თქმა</string>
     <string name="go_draw_offered_received">%1$s-მა ფრე შემოგთავაზათ</string>
@@ -54,8 +54,8 @@
     <string name="go_status_draw_text">ფრე</string>
     <string name="go_status_game_over">თამაში დასრულდა</string>
     <string name="go_status_opponent_move">%1$s-ის სვლა</string>
-    <string name="go_status_opponent_wins">%1$s თავი დანებდა — თქვენ იმარჯვებთ!</string>
-    <string name="go_status_resigned_opponent">%1$s-მა შემოგთავაზათ ფრე</string>
+    <string name="go_status_opponent_wins">%1$s იმარჯვებს</string>
+    <string name="go_status_resigned_opponent">%1$s დანებდა — თქვენ მოიგეთ!</string>
     <string name="go_status_resigned_self">თქვენ დათმეთ — %1$s იგებს</string>
     <string name="go_status_score">%1$s იგებს — შ:%2$s თ:%3$s</string>
     <string name="go_status_you_win">თქვენ გაიმარჯვეთ!</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">დანებდა</string>
     <string name="go_new_game_title">ახალი Go თამაში</string>
     <string name="go_new_game_no_friends">თამაშის დაწყებამდე უნდა დაამატოთ მეგობარი.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">ქულები, რომლებიც ემატება თეთრის ანგარიშს შავის პირველად სვლის საკომპენსაციოდ</string>
 
-    <string name="go_board_a11y">%1$d×%1$d გოს დაფა</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go-ს დაფა, თქვენი რიგია შავი ქვის დადება</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go-ს დაფა, თქვენი რიგია თეთრი ქვის დადება</string>
+    <string name="go_board_a11y">%1$s×%1$s გოს დაფა</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go-ს დაფა, თქვენი რიგია შავი ქვის დადება</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go-ს დაფა, თქვენი რიგია თეთრი ქვის დადება</string>
     <string name="go_status_scoring">დათვლა — შეთანხმდით ქულებზე ან განაგრძეთ თამაში</string>
     <string name="go_score_proposed">შემოთავაზებული ქულა: შავი %1$s, თეთრი %2$s</string>
     <string name="go_score_opponent_accepted">თქვენი მოწინააღმდეგე ეთანხმება ამ ქულას: შავი %1$s, თეთრი %2$s</string>

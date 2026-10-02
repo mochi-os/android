@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Taastekoodid</string>
     <string name="account_recovery_codes_title">Taastekoodid</string>
     <string name="sessions_unknown_agent">Tundmatu seade</string>
-    <string name="sessions_revoke_title">Kas tühistada sessioon?</string>
+    <string name="sessions_revoke_title">Kas võtta sessioon ära?</string>
     <string name="account_section_oauth">Kolmanda osapoole sisselogimine</string>
     <string name="account_oauth_link">Lingi konto</string>
     <string name="account_unlink">Eemalda link</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Tehtud</string>
     <string name="account_delete">Kustuta</string>
     <string name="account_rename">Nimeta ümber</string>
-    <string name="sessions_revoke">Tühista</string>
+    <string name="sessions_revoke">Võta ära</string>
     <string name="account_disable">Keela</string>
     <string name="account_copy">Kopeeri</string>
     <string name="account_copy_all">Kopeeri kõik</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Kustutada tee?</string>
     <string name="route_path">Tee</string>
     <string name="route_method">Meetod</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Rakendus</string>
     <string name="route_method_entity">Olem</string>
     <string name="route_method_redirect">Ümbersuunamine</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Laadi alla aadressilt packages.mochi-os.org</string>
     <string name="system_status_copy">Kopeeri</string>
     <string name="system_status_peers">Eakaaslased</string>
-    <string name="system_status_known">Teada</string>
+    <string name="system_status_peers_totals">Teada %1$s · Ühendatud %2$s · Edastus-mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Teada %1$s · Ühendatud %2$s</string>
     <string name="system_status_peer_connected">Ühendatud</string>
     <string name="system_status_peer_disconnected">Ühendus puudub</string>
     <string name="system_status_peer_queued">Järjekorras sõnumid</string>
@@ -104,15 +107,13 @@
     <string name="accounts_remove">Eemalda</string>
     <string name="accounts_remove_title">Kas eemaldada konto?</string>
     <string name="system_documents_title">Dokumendid</string>
-    <string name="system_documents_description">Serveri reeglid, tingimused ja privaatsusteade, mida kasutajatele näidatakse</string>
     <string name="system_documents_tab_rules">Serveri reeglid</string>
     <string name="system_documents_tab_terms">Tingimused</string>
     <string name="system_documents_tab_privacy">Privaatsus</string>
     <string name="system_documents_language">Keel</string>
     <string name="system_documents_no_language">Selle keele kohta dokumenti pole.</string>
-    <string name="system_documents_customised">Kohandatud</string>
     <string name="system_documents_using_default">Kasutan komplektis olevat vaikeväärtust</string>
-    <string name="system_documents_revert">Tühista vaikeväärtusele</string>
+    <string name="system_documents_revert">Taasta vaikeväärtus</string>
     <string name="system_documents_save">Salvesta</string>
     <string name="system_documents_saved">Dokument salvestatud</string>
     <string name="system_documents_save_failed">Dokumendi salvestamine ebaõnnestus</string>
@@ -182,28 +183,26 @@
     <string name="system_users_delete">Kustuta kasutaja</string>
     <string name="system_users_delete_title">Kustutada kasutaja?</string>
     <string name="system_users_manage_sessions">Halda seansse</string>
-    <string name="system_users_sessions_description">Vaata ja tühista selle kasutaja aktiivseid sessioone.</string>
     <string name="system_users_sessions_empty">Sellel kasutajal pole aktiivseid sessioone.</string>
-    <string name="system_users_revoke">Tühista</string>
-    <string name="system_users_revoke_all">Tühista kõik sessioonid</string>
+    <string name="system_users_revoke">Võta ära</string>
+    <string name="system_users_revoke_all">Lõpeta kõik sessioonid</string>
     <string name="system_users_unknown_browser">Tundmatu brauser</string>
     <string name="system_users_unknown">Tundmatu</string>
     <string name="system_users_previous">Eelmine</string>
     <string name="system_users_next">Edasi</string>
     <string name="system_users_empty">Kasutajaid ei leitud</string>
     <string name="system_users_empty_search">Otsingule vastavaid kasutajaid pole</string>
-    <string name="system_users_empty_search_hint">Proovi otsingukriteeriume kohandada</string>
     <string name="system_users_toast_created">Kasutaja loodud</string>
     <string name="system_users_toast_updated">Kasutaja uuendatud</string>
     <string name="system_users_toast_deleted">Kasutaja kustutatud</string>
     <string name="system_users_toast_suspended">Kasutaja peatatud</string>
     <string name="system_users_toast_suspension_removed">Peatamine eemaldatud</string>
-    <string name="system_users_toast_session_revoked">Sessioon tühistatud</string>
+    <string name="system_users_toast_session_revoked">Sessioon võeti ära</string>
     <string name="system_users_toast_create_failed">Kasutaja loomine ebaõnnestus</string>
     <string name="system_users_toast_update_failed">Kasutaja värskendamine ebaõnnestus</string>
     <string name="system_users_toast_delete_failed">Kasutaja kustutamine ebaõnnestus</string>
     <string name="system_users_toast_status_failed">Kasutaja oleku värskendamine ebaõnnestus</string>
-    <string name="system_users_toast_revoke_failed">Seansi tühistamine ebaõnnestus</string>
+    <string name="system_users_toast_revoke_failed">Sessiooni äravõtmine ebaõnnestus</string>
 
     <string name="settings_home_sessions">Seansid</string>
     <string name="settings_home_privacy">Privaatsuspoliitika</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Teenusetingimused</string>
     <string name="account_passkeys_empty">Pääsuvõtmeid pole registreeritud.</string>
     <string name="account_passkey_register_title">Lisa pääsuvõti</string>
-    <string name="account_passkey_register_message">Teie seade küsib kinnitust. Pääsuvõti on seotud selle seadmega ja seda kasutatakse tulevasteks sisselogimisteks.</string>
     <string name="account_passkey_name_label">Nimi (valikuline)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ei logi teid enam sisse.</string>
-    <string name="account_totp_description">Logi sisse 6-kohalise koodiga autentimisrakendusest.</string>
     <string name="account_totp_enabled">Autentija on lubatud.</string>
     <string name="account_totp_setup_step1">Skanni või sisesta see saladus oma autentimisrakendusse.</string>
     <string name="account_totp_setup_step2">Sisesta 6-kohaline kood, mida sinu rakendus näitab.</string>
     <string name="account_totp_code">Kood</string>
     <string name="account_totp_disable_message">Sa ei saa enam autentija koodiga sisse logida.</string>
     <string name="account_recovery_none">Taastekoodi pole genereeritud.</string>
-    <string name="account_recovery_count">%1$d kasutamata taastekoodi.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Alles on %1$s taastekood.</item>
+        <item quantity="other">Alles on %1$s taastekoodi.</item>
+    </plurals>
     <string name="account_recovery_generate">Genereeri koodid</string>
     <string name="account_recovery_regenerate">Genereeri uuesti koodid</string>
     <string name="account_recovery_regen_title">Kas genereerida uuesti taastekoodid?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Viimati kasutatud %1$s</string>
     <string name="route_delete_message">See eemaldab marsruudi tee \"%1$s\".</string>
     <string name="route_empty">Marsruute pole konfigureeritud.</string>
-    <string name="route_meta">Prioriteet %1$d · %2$s</string>
+    <string name="route_meta">Prioriteet %1$s · %2$s</string>
     <string name="interests_search_placeholder">Otsi lisamiseks teemasid…</string>
     <string name="interests_empty">Veel pole huvisid.</string>
     <string name="interests_summary_regenerate">Genereeri kokkuvõte uuesti</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">See kustutab jäädavalt kasutaja \"%1$s\". Seda toimingut ei saa tagasi võtta.</string>
     <string name="system_users_sessions_title">%1$s seansid</string>
     <string name="system_users_session_last_accessed">Viimane juurdepääs: %1$s</string>
-    <string name="system_users_revoke_all_title">Tühista kõik seansid?</string>
+    <string name="system_users_revoke_all_title">Kas lõpetada kõik sessioonid?</string>
     <string name="system_users_revoke_all_message">Kõik selle kasutaja aktiivsed seansid logitakse välja.</string>
-    <string name="system_users_pagination_status">Kuvatakse %1$d–%2$d / %3$d kasutajat</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Kuvatakse %1$s–%2$s / %3$s kasutaja</item>
+        <item quantity="other">Kuvatakse %1$s–%2$s / %3$s kasutajat</item>
+    </plurals>
     <string name="account_title">Konto</string>
     <string name="account_section_identity">Identiteet</string>
     <string name="account_identity_identity">Identiteet</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Kontrolli DNS-i</string>
     <string name="settings_home_domains">Domeenid</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test saadeti %1$d sihtkohta</item>
-        <item quantity="other">Test saadeti %1$d sihtkohta</item>
+        <item quantity="one">Test saadeti %1$s sihtkohta</item>
+        <item quantity="other">Test saadeti %1$s sihtkohta</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Tühistatud 1 sessioon</item>
-        <item quantity="other">Tühistatud %1$d sessiooni</item>
+        <item quantity="one">Lõpetatud %1$s sessioon</item>
+        <item quantity="other">Lõpetatud %1$s sessiooni</item>
     </plurals>
     <string name="login_title">Sisselogimine</string>
     <string name="login_section_methods">Sisselogimismeetodid</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Avalik</string>
     <string name="system_status_reachability_private">Privaatne</string>
     <string name="system_status_reachability_unknown">Tundmatu</string>
-    <string name="system_status_relay">Relee kaudu</string>
-    <string name="system_status_mesh">Edastus-mesh</string>
+    <string name="system_status_reachability_relay">%1$s · relee kaudu</string>
     <string name="system_status_broadcast">Viimane edastus</string>
     <string name="system_status_queued_broadcasts">Järjekorras olevad eetrisõnumid</string>
     <string name="system_setting_hostname_publish">Teata hostinimi ja domeenid teistele serveritele</string>
     <string name="system_setting_hostname">Teistele serveritele teatatud hostinimi</string>
     <string name="system_status_peer_id">Partneri ID</string>
     <string name="system_status_holepunch">Augustamine</string>
-    <string name="system_status_holepunch_value">%1$d õnnestus · %2$d ebaõnnestus</string>
     <string name="system_status_awaiting_routing">Marsruutimist ootavad sõnumid</string>
     <string name="system_status_relay_service">Releeteenus</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d broneeringud · %3$d ahelad · %4$d tagasi lükatud</string>
     <string name="route_target_select">Vali</string>
     <string name="account_data_description">Laadige alla täielik varukoopia, mille saate taastada sellel või mõnel teisel Mochi serveril.</string>
     <string name="route_target_none">Sihtkohti pole saadaval</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Viimati nähtud %1$s</string>
     <string name="notifprefs_device_app">%1$s · rakendus</string>
     <string name="notifprefs_device_push">%1$s · tõuketeade</string>
-    <string name="notifprefs_test_partial">Test saadeti %1$d sihtkohta %2$d-st</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test saadeti %1$s sihtkohta %2$s-st</item>
+        <item quantity="other">Test saadeti %1$s sihtkohta %2$s-st</item>
+    </plurals>
     <string name="notifprefs_test_none">Sihtkohti pole seadistatud</string>
     <string name="notifprefs_transport_fcm">Androidi tõuketeade</string>
     <string name="notifprefs_no_destinations">Sihtkohti pole</string>
@@ -385,13 +390,36 @@
     <string name="accounts_field_topic">Teema</string>
     <string name="accounts_field_secret">Allkirjastamise saladus</string>
     <string name="account_totp_open">Ava autentimisrakenduses</string>
-    <string name="accounts_revoke">Tühista juurdepääs</string>
+    <string name="accounts_revoke">Eemalda juurdepääs</string>
     <string name="accounts_capability_calendar">Kalender</string>
     <string name="accounts_capability_notify">Teavitused</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Sisselogimine</string>
     <string name="accounts_provider_caldav">Kalendriserver</string>
-    <string name="accounts_revoke_confirm">See tühistab %1$s kalendri juurdepääsu. Sisselogimine %2$s kaudu jääb alles, kuni selle sisselogimislehel lahutate.</string>
+    <string name="accounts_revoke_confirm">See eemaldab %1$s kalendri juurdepääsu. Sisselogimine %2$s kaudu jääb alles, kuni selle sisselogimislehel lahutate.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Tundmatu teema</string>
+    <string name="system_documents_modified">Muudetud</string>
+    <string name="system_documents_discard_title">Kas loobuda muudatustest?</string>
+    <string name="system_documents_discard">Loobu</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s õnnestus</item>
+        <item quantity="other">%1$s õnnestus</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s ebaõnnestus</item>
+        <item quantity="other">%1$s ebaõnnestus</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s broneering</item>
+        <item quantity="other">%1$s / %2$s broneeringut</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s ahel</item>
+        <item quantity="other">%1$s ahelat</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s tagasi lükatud</item>
+        <item quantity="other">%1$s tagasi lükatud</item>
+    </plurals>
 </resources>

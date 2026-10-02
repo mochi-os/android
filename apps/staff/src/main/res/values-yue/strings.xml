@@ -85,7 +85,7 @@
     <string name="staff_reports_type_listing">刊登</string>
     <string name="staff_dashboard_tab_listings">刊登</string>
     <string name="staff_sidebar_listings">刊登</string>
-    <string name="staff_accounts_sales">%1$d 件售出</string>
+    <string name="staff_accounts_sales">%1$s 件售出</string>
     <string name="staff_accounts_search_clear">清除搜尋</string>
     <string name="staff_accounts_status_suspended">已暫停</string>
     <string name="staff_audit_title">歷史</string>
@@ -160,7 +160,7 @@
     <string name="staff_accounts_unnamed">未命名</string>
     <string name="staff_accounts_unsuspend">解除暫停</string>
     <string name="staff_accounts_unsuspended_toast">帳戶已解除暫停</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_decide">裁決</string>
     <string name="staff_appeals_decision_denied">維持拒絕刊登</string>
     <string name="staff_appeals_decision_label">裁決</string>

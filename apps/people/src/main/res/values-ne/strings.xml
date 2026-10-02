@@ -180,8 +180,8 @@
     <string name="people_books_create">ठेगाना पुस्तिका सिर्जना गर्नुहोस्</string>
     <string name="people_books_delete">ठेगाना पुस्तिका मेट्नुहोस्</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s र यसको %2$d सम्पर्क मेट्ने?</item>
-        <item quantity="other">%1$s र यसका %2$d सम्पर्कहरू मेट्ने?</item>
+        <item quantity="one">%1$s र यसको %2$s सम्पर्क मेट्ने?</item>
+        <item quantity="other">%1$s र यसका %2$s सम्पर्कहरू मेट्ने?</item>
     </plurals>
     <string name="people_welcome_body">Mochi भरि साथीहरू खोज्नुहोस् र जोडिनुहोस्। निमन्त्रणा पठाउन सम्पर्क थप्नुहोस् थिच्नुहोस्।</string>
     <string name="people_person_state_contact">सम्पर्कहरूमा</string>

@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">خەڵک</string>
     <string name="projects_option_icon">ئایکۆن</string>
     <string name="projects_option_icon_placeholder">بۆ نموونە Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">بەشداری هەڵبوەشێنەوە</string>
+    <string name="projects_settings_unsubscribe">لابردنی بەشداری</string>
     <string name="projects_settings_delete_project">سڕینەوەی پڕۆژە</string>
     <string name="projects_settings_delete_confirm_title">سڕینەوەی پڕۆژە</string>
-    <string name="projects_settings_unsubscribe_title">بەشداری هەڵبوەشێنەوە</string>
-    <string name="projects_settings_unsubscribe_message">ئایا دڵنیایت لە هەڵوەشاندنەوەی بەشداری ئەم پڕۆژەیە؟</string>
+    <string name="projects_settings_unsubscribe_title">لابردنی بەشداری</string>
+    <string name="projects_settings_unsubscribe_message">ئایا دڵنیایت لە لابردنی بەشداری ئەم پڕۆژەیە؟</string>
     <string name="projects_access_level_owner">خاوەن</string>
     <string name="projects_object_watch">چاودێری</string>
     <string name="projects_object_tab_properties">تایبەتمەندییەکان</string>
@@ -171,7 +171,7 @@
     <string name="projects_board_no_columns">هیچ ستوونێک بۆ ئەم ڕوانینە دانەنراوە</string>
     <string name="projects_board_no_options">هیچ بژاردەیەک بۆ خانەی ستوون دانەنراوە</string>
     <string name="projects_board_column_options">بژاردەکانی ستوون</string>
-    <string name="projects_board_nested_count">+%1$d هێلانەکراو</string>
+    <string name="projects_board_nested_count">+%1$s هێلانەکراو</string>
     <string name="projects_move_to_column">گواستنەوە بۆ ستوون</string>
     <string name="projects_move_to_row">گواستنەوە بۆ ڕیز</string>
     <string name="projects_move_after">دوای %1$s</string>
@@ -284,10 +284,10 @@
     <string name="projects_activity_made_change">گۆڕانکارییەکی کرد</string>
     <string name="projects_attachment_empty">هیچ هاوپێچێک نییە</string>
     <string name="projects_attachment_default_name">هاوپێچ</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">داواکاری تێکەڵکردنی نوێ</string>
     <string name="projects_request_status_closed">داخراو</string>
     <string name="projects_request_back_to_list">گەڕانەوە بۆ لیست</string>
@@ -297,7 +297,7 @@
     <string name="projects_request_checking_merge">پشکنینی دۆخی تێکەڵکردن…</string>
     <string name="projects_request_can_merge">دەکرێت تێکەڵ بکرێت</string>
     <string name="projects_request_cannot_merge">ناتوانرێت تێکەڵ بکرێت</string>
-    <string name="projects_request_ahead_behind">%1$d پێشەوە، %2$d دواوە</string>
+    <string name="projects_request_ahead_behind">%1$s پێشەوە، %2$s دواوە</string>
     <string name="projects_request_draft_notice">ئەمە ڕەشنووسە. پێش تێکەڵکردن وەک ئامادە نیشانی بکە.</string>
     <string name="projects_request_view_diff">بینینی جیاوازی</string>
     <string name="projects_request_mark_ready">نیشانکردنی وەک ئامادە</string>
@@ -362,13 +362,13 @@
     <string name="projects_activity_commented">لێدوانی دا</string>
     <string name="projects_attachment_delete_confirm_message">ئەم هاوپێچە بە هەمیشەیی دەسڕدرێتەوە.</string>
     <string name="projects_attachment_delete_confirm_title">هاوپێچ بسڕدرێتەوە؟</string>
-    <string name="projects_settings_unsubscribe_section">بەشداری پڕۆژە ڕابگرە</string>
+    <string name="projects_settings_unsubscribe_section">لابردنی بەشداری لە پڕۆژە</string>
     <string name="projects_share_link_title">پڕۆژە هاوبەش بکە</string>
     <string name="projects_sort_filter_title">ڕیزکردن و پاڵاوتن</string>
     <string name="projects_create_prefix_hint">بۆ ناسنامەی خوێندنەوەیی وەک %1$s-1، %1$s-2 بەکاردێت</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d پەڕگەی ناکۆک</item>
-        <item quantity="other">%1$d پەڕگەی ناکۆک</item>
+        <item quantity="one">%1$s پەڕگەی ناکۆک</item>
+        <item quantity="other">%1$s پەڕگەی ناکۆک</item>
     </plurals>
     <string name="projects_design_export_saved">دیزاین پاشەکەوت کرا</string>
     <string name="projects_design_import_failed">نەتوانرا ئەو فایلە بخوێنرێتەوە</string>
@@ -378,7 +378,7 @@
     <string name="projects_export_saved">داتای پڕۆژە پاشەکەوت کرا</string>
     <string name="projects_exporting">هەناردە ئامادە دەکرێت…</string>
     <string name="projects_board_add_column">زیادکردنی ستوون</string>
-    <string name="projects_design_sample">نموونە %1$d</string>
+    <string name="projects_design_sample">نموونە %1$s</string>
     <string name="projects_option_delete_title">سڕینەوەی هەڵبژاردە</string>
     <string name="projects_option_delete_message">دڵنیایت دەتەوێت هەڵبژاردەی \"%1$s\" بسڕیتەوە؟</string>
     <string name="projects_create_object_no_types">هێشتا هیچ جۆرە بڕگەیەک ناتوانرێت دروست بکرێت. سەرەتا بڕگە باوانە پێویستەکان دروست بکە.</string>

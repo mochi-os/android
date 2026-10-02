@@ -60,7 +60,7 @@
     <string name="notifications_empty">அறிவிப்புகள் இல்லை</string>
     <string name="notifications_empty_unread">அனைத்தையும் பார்த்துவிட்டீர்கள்</string>
     <string name="notifications_tab_unread">படிக்கப்படாதது</string>
-    <string name="notifications_tab_unread_count">படிக்காதவை (%1$d)</string>
+    <string name="notifications_tab_unread_count">படிக்காதவை (%1$s)</string>
     <string name="notifications_tab_all">அனைத்தும்</string>
     <string name="notifications_mark_all_read">அனைத்தையும் படித்ததாகக் குறிக்கவும்</string>
     <string name="notifications_clear_all">அனைத்தையும் அழி</string>
@@ -103,7 +103,7 @@
     <string name="settings_time_zone">நேர மண்டலம்</string>
     <string name="settings_reset_to_defaults">இயல்புநிலைகளுக்கு மீட்டமை</string>
     <string name="settings_reset_confirm_title">விருப்பத்தேர்வுகளை மீட்டமைக்கவா?</string>
-    <string name="settings_reset_confirm_message">இது அனைத்து விருப்பத்தேர்வுகளையும் அவற்றின் இயல்பு மதிப்புகளுக்கு மீட்டமைக்கும்.</string>
+    <string name="settings_reset_confirm_message">இது இந்த விருப்பத்தேர்வுகளை அவற்றின் இயல்பு மதிப்புகளுக்கு மீட்டமைக்கும்.</string>
     <string name="settings_reset">மீட்டமை</string>
     <string name="settings_display_title">காட்சி</string>
     <string name="settings_display_reset">இயல்புநிலைகளுக்கு மீட்டமை</string>
@@ -123,14 +123,14 @@
     <string name="app_brand">Mochi</string>
     <string name="auth_server_url">சேவையக URL</string>
     <string name="auth_link_rules">விதிகள்</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="lightbox_position">%1$s / %2$s</string>
     <string name="about_label">பற்றி</string>
     <string name="game_chat_move_played">%1$s %2$s விளையாடினார்</string>
 
     <string name="error_network">இணைக்க முடியவில்லை. உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="error_authentication_required">அங்கீகாரம் தேவை</string>
     <string name="error_not_found">கிடைக்கவில்லை</string>
-    <string name="error_server">சேவையக பிழை (%1$d). பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="error_server">சேவையக பிழை (%1$s). பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="error_unexpected">எதிர்பாராத பிழை ஏற்பட்டது</string>
     <string name="error_enter_server_url">சேவையக URL ஐ உள்ளிடவும்</string>
     <string name="error_enter_email">உங்கள் மின்னஞ்சலை உள்ளிடவும்</string>
@@ -180,19 +180,19 @@
     <string name="access_level_react">எதிர்வினையாற்று</string>
     <string name="notifications_clear">அறிவிப்புகளை அழி</string>
     <string name="entity_avatar_alt">%1$s க்கான அவதார்</string>
-    <string name="media_grid_more_count">+%1$d</string>
+    <string name="media_grid_more_count">+%1$s</string>
     <string name="format_time_just_now">இப்போதுதான்</string>
-    <string name="format_time_minutes_ago">%1$dநி முன்</string>
-    <string name="format_time_hours_ago">%1$dம முன்</string>
-    <string name="format_time_days_ago">%1$dநா முன்</string>
-    <string name="format_time_weeks_ago">%1$dவா முன்</string>
-    <string name="format_time_months_ago">%1$dமா முன்</string>
-    <string name="format_time_years_ago">%1$dஆ முன்</string>
-    <string name="format_time_minutes_short">%1$dநி</string>
-    <string name="format_time_hours_short">%1$dம</string>
-    <string name="format_time_days_short">%1$dநா</string>
-    <string name="format_time_weeks_short">%1$dவா</string>
-    <string name="format_time_months_short">%1$dமா</string>
+    <string name="format_time_minutes_ago">%1$sநி முன்</string>
+    <string name="format_time_hours_ago">%1$sம முன்</string>
+    <string name="format_time_days_ago">%1$sநா முன்</string>
+    <string name="format_time_weeks_ago">%1$sவா முன்</string>
+    <string name="format_time_months_ago">%1$sமா முன்</string>
+    <string name="format_time_years_ago">%1$sஆ முன்</string>
+    <string name="format_time_minutes_short">%1$sநி</string>
+    <string name="format_time_hours_short">%1$sம</string>
+    <string name="format_time_days_short">%1$sநா</string>
+    <string name="format_time_weeks_short">%1$sவா</string>
+    <string name="format_time_months_short">%1$sமா</string>
     <string name="reaction_add">ரியாக்ஷன் சேர்</string>
     <string name="push_service_channel">Mochi புஷ்</string>
     <string name="push_service_channel_description">அறிவிப்புகளைப் பெற Mochi ஐ இணைப்பில் வைத்திருக்கிறது</string>
@@ -285,8 +285,8 @@
     <string name="comment_anchor_open">இந்தக் கருத்து எந்தப் படத்தைப் பற்றியதோ அதைப் பார்க்கவும்</string>
     <string name="comment_anchor_default">இந்தப் படத்தில்</string>
     <plurals name="lightbox_comments_others">
-        <item quantity="one">இந்தப் பதிவில் மேலும் %1$d கருத்தைக் காட்டு</item>
-        <item quantity="other">இந்தப் பதிவில் மேலும் %1$d கருத்துகளைக் காட்டு</item>
+        <item quantity="one">இந்தப் பதிவில் மேலும் %1$s கருத்தைக் காட்டு</item>
+        <item quantity="other">இந்தப் பதிவில் மேலும் %1$s கருத்துகளைக் காட்டு</item>
     </plurals>
     <string name="lightbox_comments">கருத்துகள்</string>
     <string name="common_attachment_unavailable">இணைப்பு தற்காலிகமாக கிடைக்கவில்லை</string>
@@ -301,7 +301,7 @@
     <string name="common_preview">முன்னோட்டம்</string>
     <string name="rss_revoke_confirm">திரும்பப் பெறு</string>
     <string name="rss_revoke">அணுகலை நீக்கு</string>
-    <string name="rss_revoke_title">RSS அணுகலை ரத்துசெய்யவா?</string>
+    <string name="rss_revoke_title">RSS அணுகலை திரும்பப் பெறவா?</string>
     <string name="rss_revoke_message">இந்த ஊட்டத்திற்கு குழுசேர்ந்த அனைத்தும் அதைப் பெறுவதை நிறுத்தும். பிறகு நீங்கள் புதிய URL ஐ நகலெடுக்கலாம்.</string>
     <string name="rss_revoked">RSS அணுகல் நீக்கப்பட்டது</string>
     <string name="rss_revoke_failed">RSS அணுகலை நீக்க முடியவில்லை</string>

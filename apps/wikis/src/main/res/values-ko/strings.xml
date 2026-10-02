@@ -22,17 +22,17 @@
     <string name="wikis_page_action_recent_changes">최근 변경 사항</string>
     <string name="wikis_page_action_new_page">새 페이지</string>
     <string name="wikis_page_action_settings">설정</string>
-    <string name="wikis_page_action_unsubscribe">구독 취소</string>
+    <string name="wikis_page_action_unsubscribe">구독 해지</string>
     <string name="wikis_title">위키</string>
     <string name="wikis_empty_title">첫 위키를 시작해 주세요</string>
     <string name="wikis_empty_subtitle">구독할 위키를 검색하거나, 자신의 문서를 게시할 위키를 만드세요.</string>
     <string name="wikis_create_button">위키 생성</string>
     <string name="wikis_recommended_section">추천 위키</string>
     <string name="wikis_subscribe_button">구독</string>
-    <string name="wikis_unsubscribe_action">구독 취소</string>
-    <string name="wikis_unsubscribing">구독 취소 중…</string>
-    <string name="wikis_unsubscribe_confirm_title">구독 취소</string>
-    <string name="wikis_unsubscribe_success">구독이 취소되었어요</string>
+    <string name="wikis_unsubscribe_action">구독 해지</string>
+    <string name="wikis_unsubscribing">구독 해지 중…</string>
+    <string name="wikis_unsubscribe_confirm_title">구독 해지</string>
+    <string name="wikis_unsubscribe_success">구독이 해지되었어요</string>
     <string name="wikis_subscribe_failed">구독에 실패했어요</string>
     <string name="wikis_rss_menu">RSS 피드</string>
     <string name="wikis_rss_changes">변경 사항</string>
@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">변경 사항 및 댓글</string>
     <string name="wikis_rss_copied">RSS URL이 클립보드에 복사되었어요</string>
     <string name="wikis_rss_failed">RSS 토큰을 가져오지 못했어요</string>
-    <string name="wikis_rss_revoke">액세스 취소</string>
-    <string name="wikis_rss_revoked">RSS 액세스가 취소되었습니다</string>
+    <string name="wikis_rss_revoke">액세스 철회</string>
+    <string name="wikis_rss_revoked">RSS 액세스가 철회되었습니다</string>
     <string name="wikis_find_title">위키 찾기</string>
     <string name="wikis_find_no_results">위키를 찾을 수 없어요</string>
     <string name="wikis_find_recommended_section">추천 위키</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">페이지 편집, 댓글, 초대에 관한 알림.</string>
     <string name="wikis_pageview_toc_expand">목차 표시</string>
     <string name="wikis_pageview_toc_collapse">목차 숨기기</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">업데이트 %1$s</string>
     <string name="wikis_pageview_not_found_description">「%1$s」 페이지가 아직 존재하지 않습니다.</string>
     <string name="wikis_pageview_share_chooser">위키 링크</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">링크</string>
     <string name="wikis_open_sidebar">사이드바 열기</string>
     <string name="wikis_search_placeholder">위키 검색…</string>
-    <string name="wikis_unsubscribe_confirm_message">%1$s 구독을 정말 취소하시겠습니까?</string>
+    <string name="wikis_unsubscribe_confirm_message">%1$s 구독을 정말 해지하시겠습니까?</string>
     <string name="wikis_clipboard_label_rss">위키 RSS URL</string>
     <string name="wikis_find_search_placeholder">이름, ID, 지문 또는 URL로 검색…</string>
     <string name="wikis_join_search_button">위키 검색…</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">「%1$s」 페이지(%2$s)를 삭제하려고 합니다. 이 작업은 기록에서 복원하여 취소할 수 있습니다.</string>
     <string name="wikis_delete_page_success">페이지가 삭제되었습니다</string>
     <string name="wikis_revert_page_title">페이지 되돌리기</string>
-    <string name="wikis_revert_page_message">%1$s을(를) 버전 %2$d(으)로 되돌리려고 합니다. 이렇게 하면 버전 %2$d의 내용으로 새 개정판이 생성됩니다.</string>
-    <string name="wikis_revert_page_default_comment">버전 %1$d(으)로 되돌림</string>
-    <string name="wikis_revert_page_success">버전 %1$d(으)로 되돌렸습니다</string>
+    <string name="wikis_revert_page_message">%1$s을(를) 버전 %2$s(으)로 되돌리려고 합니다. 이렇게 하면 버전 %2$s의 내용으로 새 개정판이 생성됩니다.</string>
+    <string name="wikis_revert_page_default_comment">버전 %1$s(으)로 되돌림</string>
+    <string name="wikis_revert_page_success">버전 %1$s(으)로 되돌렸습니다</string>
     <string name="wikis_rename_page_renaming">이름 변경 중…</string>
     <string name="wikis_rename_page_success">페이지 이름이 변경되었습니다</string>
-    <string name="wikis_history_viewing">%1$s 기록 보기 중, 현재 버전 %2$d</string>
-    <string name="wikis_revision_version_badge">버전 %1$d</string>
+    <string name="wikis_history_viewing">%1$s 기록 보기 중, 현재 버전 %2$s</string>
+    <string name="wikis_revision_version_badge">버전 %1$s</string>
     <string name="wikis_search_pages_placeholder">제목 또는 내용으로 페이지 검색…</string>
     <string name="wikis_search_no_results">「%1$s」에 대한 페이지를 찾을 수 없습니다. 다른 검색어를 시도해보세요.</string>
     <string name="wikis_search_updated">업데이트 %1$s</string>
@@ -289,37 +289,37 @@
     <string name="wikis_revision_author">%1$s 기준</string>
     <string name="wikis_revision_show_page">페이지 표시</string>
     <string name="wikis_revision_compare_failed">비교할 이전 버전을 불러올 수 없습니다.</string>
-    <string name="wikis_revision_changes_from">버전 %1$d → %2$d의 변경 사항</string>
+    <string name="wikis_revision_changes_from">버전 %1$s → %2$s의 변경 사항</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">댓글 %d개</item>
+        <item quantity="other">댓글 %s개</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">답글 %d개</item>
-        <item quantity="other">답글 +%d개 더</item>
+        <item quantity="one">답글 %s개</item>
+        <item quantity="other">답글 +%s개 더</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">페이지 %d개</item>
-        <item quantity="other">페이지 %d개</item>
+        <item quantity="one">페이지 %s개</item>
+        <item quantity="other">페이지 %s개</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">파일 %d개</item>
-        <item quantity="other">파일 %d개</item>
+        <item quantity="one">파일 %s개</item>
+        <item quantity="other">파일 %s개</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">이미지 %d개</item>
-        <item quantity="other">이미지 %d개</item>
+        <item quantity="one">이미지 %s개</item>
+        <item quantity="other">이미지 %s개</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">문서 %d개</item>
-        <item quantity="other">문서 %d개</item>
+        <item quantity="one">문서 %s개</item>
+        <item quantity="other">문서 %s개</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">이 태그가 있는 페이지 %d개</item>
-        <item quantity="other">이 태그가 있는 페이지 %d개</item>
+        <item quantity="one">이 태그가 있는 페이지 %s개</item>
+        <item quantity="other">이 태그가 있는 페이지 %s개</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">「%2$s」에 대해 결과 %1$d개을(를) 찾았습니다</item>
-        <item quantity="other">「%2$s」에 대해 결과 %1$d개을(를) 찾았습니다</item>
+        <item quantity="one">「%2$s」에 대해 결과 %1$s개을(를) 찾았습니다</item>
+        <item quantity="other">「%2$s」에 대해 결과 %1$s개을(를) 찾았습니다</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">캡션을 저장하지 못했습니다</string>
     <string name="wikis_attachments_upload_types">지원되는 파일: 이미지, PDF, DOC, DOCX, TXT 및 MD.</string>
@@ -328,6 +328,6 @@
     <string name="wikis_rss_copied_new">새 RSS URL이 클립보드에 복사되었어요</string>
     <string name="wikis_rss_exists">이 피드 URL은 이미 발급되어 다시 표시할 수 없어요.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">처음 %1$d 개의 댓글을 표시하고 있습니다.</item>
+        <item quantity="other">처음 %1$s 개의 댓글을 표시하고 있습니다.</item>
     </plurals>
 </resources>

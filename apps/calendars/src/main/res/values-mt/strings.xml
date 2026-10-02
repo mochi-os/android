@@ -97,25 +97,25 @@
     <string name="calendars_repeat_forever">Għal dejjem</string>
     <string name="calendars_reminder_time">Fil-ħin tal-avveniment</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minuta qabel</item>
-        <item quantity="two">%1$d minuti qabel</item>
-        <item quantity="few">%1$d minuti qabel</item>
-        <item quantity="many">%1$d minuta qabel</item>
-        <item quantity="other">%1$d minuta qabel</item>
+        <item quantity="one">%1$s minuta qabel</item>
+        <item quantity="two">%1$s minuti qabel</item>
+        <item quantity="few">%1$s minuti qabel</item>
+        <item quantity="many">%1$s minuta qabel</item>
+        <item quantity="other">%1$s minuta qabel</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d siegħa qabel</item>
+        <item quantity="one">%1$s siegħa qabel</item>
         <item quantity="two">sagħtejn qabel</item>
-        <item quantity="few">%1$d sigħat qabel</item>
-        <item quantity="many">%1$d siegħa qabel</item>
-        <item quantity="other">%1$d siegħa qabel</item>
+        <item quantity="few">%1$s sigħat qabel</item>
+        <item quantity="many">%1$s siegħa qabel</item>
+        <item quantity="other">%1$s siegħa qabel</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d jum qabel</item>
+        <item quantity="one">%1$s jum qabel</item>
         <item quantity="two">jumejn qabel</item>
-        <item quantity="few">%1$d ijiem qabel</item>
-        <item quantity="many">%1$d jum qabel</item>
-        <item quantity="other">%1$d jum qabel</item>
+        <item quantity="few">%1$s ijiem qabel</item>
+        <item quantity="many">%1$s jum qabel</item>
+        <item quantity="other">%1$s jum qabel</item>
     </plurals>
     <string name="calendars_reminder_add">Żid tfakkira</string>
     <string name="calendars_reminder_remove">Neħħi t-tfakkira</string>
@@ -149,13 +149,13 @@
     <string name="calendars_poll_large">Il-kalendarju huwa kbir wisq</string>
     <string name="calendars_poll_invalid">L-indirizz ma rritornax kalendarju</string>
     <string name="calendars_poll_unreachable">Ma rnexxiex jilħaq l-indirizz</string>
-    <string name="calendars_poll_status">L-indirizz wieġeb %1$d</string>
+    <string name="calendars_poll_status">L-indirizz wieġeb %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="two">%1$d minuti</item>
-        <item quantity="few">%1$d minuti</item>
-        <item quantity="many">%1$d minuta</item>
-        <item quantity="other">%1$d minuta</item>
+        <item quantity="one">%1$s minuta</item>
+        <item quantity="two">%1$s minuti</item>
+        <item quantity="few">%1$s minuti</item>
+        <item quantity="many">%1$s minuta</item>
+        <item quantity="other">%1$s minuta</item>
     </plurals>
     <string name="calendars_preferences_zones">Uri l-avvenimenti fiż-żona tal-ħin tagħhom stess</string>
     <string name="calendars_event_backwards">Jispiċċa qabel ma jibda</string>

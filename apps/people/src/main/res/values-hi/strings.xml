@@ -180,8 +180,8 @@
     <string name="people_books_create">पता पुस्तिका बनाएँ</string>
     <string name="people_books_delete">पता पुस्तिका हटाएँ</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">क्या %1$s और उसका %2$d संपर्क हटाना है?</item>
-        <item quantity="other">क्या %1$s और उसके %2$d संपर्क हटाने हैं?</item>
+        <item quantity="one">क्या %1$s और उसका %2$s संपर्क हटाना है?</item>
+        <item quantity="other">क्या %1$s और उसके %2$s संपर्क हटाने हैं?</item>
     </plurals>
     <string name="people_welcome_body">Mochi पर मित्र खोजें और जुड़ें। आमंत्रण भेजने के लिए संपर्क जोड़ें पर टैप करें।</string>
     <string name="people_person_state_contact">संपर्कों में</string>

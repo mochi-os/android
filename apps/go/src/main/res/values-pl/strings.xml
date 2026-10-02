@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Usuń</string>
     <string name="go_delete_message">Ta gra zostanie usunięta z Twojej listy. Tego nie można cofnąć.</string>
     <string name="go_delete_title">Usunąć grę?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Akceptuj</string>
     <string name="go_draw_decline">Odrzuć</string>
     <string name="go_draw_offered_received">%1$s zaproponował remis</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Poddana</string>
     <string name="go_new_game_title">Nowa partia Go</string>
     <string name="go_new_game_no_friends">Musisz dodać znajomego, zanim rozpoczniesz partię.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Punkty dodawane do wyniku Białego, aby zrekompensować, że Czarny rusza pierwszy</string>
 
-    <string name="go_board_a11y">Plansza Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Plansza go %1$d×%1$d, twoja kolej postawić czarny kamień</string>
-    <string name="go_board_a11y_turn_white">Plansza go %1$d×%1$d, twoja kolej postawić biały kamień</string>
+    <string name="go_board_a11y">Plansza Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Plansza go %1$s×%1$s, twoja kolej postawić czarny kamień</string>
+    <string name="go_board_a11y_turn_white">Plansza go %1$s×%1$s, twoja kolej postawić biały kamień</string>
     <string name="go_status_scoring">Liczenie — uzgodnijcie wynik albo grajcie dalej</string>
     <string name="go_score_proposed">Proponowany wynik: czarne %1$s, białe %2$s</string>
     <string name="go_score_opponent_accepted">Twój przeciwnik akceptuje ten wynik: czarne %1$s, białe %2$s</string>

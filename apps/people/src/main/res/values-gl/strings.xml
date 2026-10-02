@@ -180,8 +180,8 @@
     <string name="people_books_create">Crear axenda de enderezos</string>
     <string name="people_books_delete">Eliminar axenda de enderezos</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Queres eliminar %1$s e o seu %2$d contacto?</item>
-        <item quantity="other">Queres eliminar %1$s e os seus %2$d contactos?</item>
+        <item quantity="one">Queres eliminar %1$s e o seu %2$s contacto?</item>
+        <item quantity="other">Queres eliminar %1$s e os seus %2$s contactos?</item>
     </plurals>
     <string name="people_welcome_body">Atopa amigos por todo Mochi e conecta con eles. Toca Engadir contacto para enviar un convite.</string>
     <string name="people_person_state_contact">Nos contactos</string>

@@ -33,7 +33,7 @@
     <string name="staff_accounts_unnamed">Tanpa ngaran</string>
     <string name="staff_accounts_unsuspend">Cabut tunda</string>
     <string name="staff_accounts_unsuspended_toast">Akun teu diskors</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Batalkeun</string>
     <string name="staff_appeals_decide">Putuskeun</string>
     <string name="staff_appeals_decision_denied">Tetep tampik listing</string>
@@ -398,7 +398,7 @@
 
     <string name="staff_accounts_action_unsuspend_title">Cabut panyepenan</string>
     <string name="staff_accounts_reason_optional_label">Alesan (opsional)</string>
-    <string name="staff_accounts_sales">%1$d penjualan</string>
+    <string name="staff_accounts_sales">%1$s penjualan</string>
     <string name="staff_appeals_reason_label">Alesan banding ti penjual</string>
     <string name="staff_audit_action_staff_team_role_changed">Peran staf dirobah</string>
     <string name="staff_categories_delete_desc">Hapus “%1$s”? Ieu teu bisa dibatalkeun.</string>

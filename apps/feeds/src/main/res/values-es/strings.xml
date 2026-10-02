@@ -90,8 +90,8 @@
     <string name="feeds_move_down">Mover abajo</string>
     <string name="feeds_ai_account">Cuenta de IA</string>
 
-    <string name="notification_channel_feeds">Notificaciones de fuentes</string>
-    <string name="feeds_search_placeholder">Buscar fuentes o pegar URL…</string>
+    <string name="notification_channel_feeds">Notificaciones de feeds</string>
+    <string name="feeds_search_placeholder">Buscar feeds o pegar URL…</string>
     <string name="feeds_url_result">Resultado de URL</string>
     <string name="feeds_search_results">Resultados de búsqueda</string>
     <string name="feeds_unread_only">Solo no leídos</string>
@@ -105,18 +105,18 @@
     <string name="feeds_anonymous">Anónimo</string>
     <string name="feeds_replying_to_author">Respondiendo a %1$s</string>
     <string name="feeds_attach_file">Adjuntar archivo</string>
-    <string name="feeds_select_feed">Selecciona una fuente</string>
-    <string name="feeds_loading_feeds">Cargando fuentes…</string>
+    <string name="feeds_select_feed">Selecciona un feed</string>
+    <string name="feeds_loading_feeds">Cargando feeds…</string>
     <string name="feeds_sources_title_named">Fuentes de %1$s</string>
-    <string name="feeds_delete_feed_confirm">Esto eliminará permanentemente la fuente y todas sus publicaciones. No se puede deshacer.</string>
+    <string name="feeds_delete_feed_confirm">Esto eliminará permanentemente el feed y todas sus publicaciones. No se puede deshacer.</string>
     <string name="feeds_clipboard_label_rss">URL de RSS</string>
     <string name="feeds_source_never_fetched">Nunca obtenida</string>
     <string name="feeds_source_poll">Sondeo</string>
     <string name="feeds_source_transform">Transformación con IA</string>
-    <string name="feeds_remove_source_confirm">¿Eliminar \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Eliminar también las publicaciones importadas</string>
+    <string name="feeds_remove_source_confirm">Esto dejará de importar contenido de \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Eliminar también las publicaciones importadas de esta fuente</string>
     <string name="feeds_suggested_credibility_title">Credibilidad sugerida</string>
-    <string name="feeds_suggested_credibility_body">Mochi sugiere una credibilidad de %1$d. ¿Aceptar?</string>
+    <string name="feeds_suggested_credibility_body">Mochi sugiere una credibilidad de %1$s. ¿Aceptar?</string>
     <string name="feeds_suggested_credibility_keep">Mantener actual</string>
     <string name="feeds_ai_processing_mode">Modo de procesamiento de IA</string>
     <string name="feeds_ai_prompt_new">Etiquetar publicaciones nuevas</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Toca el marcador de cualquier publicación para guardarla aquí para más tarde.</string>
     <string name="feeds_saved_error_clear">No se pudieron borrar las publicaciones guardadas</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d publicación nueva</item>
-        <item quantity="other">%d publicaciones nuevas</item>
+        <item quantity="one">%s publicación nueva</item>
+        <item quantity="other">%s publicaciones nuevas</item>
     </plurals>
     <string name="feeds_caught_up">Estás al día</string>
     <string name="feeds_all_caught_up">Todo al día</string>
@@ -166,8 +166,8 @@
     <string name="feeds_settings_field_server">Servidor</string>
     <string name="feeds_settings_name_edit_cd">Editar nombre</string>
     <string name="feeds_settings_section_identity">Identidad</string>
-    <string name="feeds_unsubscribe">Cancelar suscripción</string>
-    <string name="feeds_unsubscribed">Suscripción cancelada</string>
+    <string name="feeds_unsubscribe">Anular suscripción</string>
+    <string name="feeds_unsubscribed">Suscripción anulada</string>
     <string name="feeds_access_level_comment_full">Comentar, reaccionar y ver</string>
     <string name="feeds_rss_mode_posts_comments">Publicaciones y comentarios</string>
     <string name="feeds_access_add_title">Añadir acceso</string>
@@ -176,7 +176,7 @@
     <string name="feeds_post_content">Contenido de la publicación</string>
     <string name="feeds_enable_memories">Habilitar recuerdos</string>
     <string name="feeds_permission_request_title">Solicitud de permiso</string>
-    <string name="feeds_unsubscribe_confirm">¿Cancelar suscripción al feed?</string>
+    <string name="feeds_unsubscribe_confirm">¿Anular la suscripción al feed?</string>
     <string name="feeds_settings_title">Configuración de %1$s</string>
     <string name="feeds_source_transform_help">Déjalo vacío para desactivarlo.</string>
     <string name="feeds_settings_name_cancel_cd">Cancelar edición</string>
@@ -187,17 +187,17 @@
     <string name="feeds_create_first_post">Crear la primera publicación</string>
     <string name="feeds_rss_mode_posts">Publicaciones</string>
     <string name="feeds_source_last_checked">Última comprobación: %1$s</string>
-    <string name="feeds_settings_unsubscribe_section">Cancelar suscripción de la fuente</string>
+    <string name="feeds_settings_unsubscribe_section">Anular la suscripción al feed</string>
     <string name="feeds_source_transform_hint">Traduce al inglés y muestra en forma de viñetas.</string>
     <string name="feeds_source_url_hint_feed">ID de entidad del canal o huella digital</string>
     <string name="feeds_source_credibility_label">Credibilidad</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d hora</item>
-        <item quantity="other">%1$d horas</item>
+        <item quantity="one">%1$s hora</item>
+        <item quantity="other">%1$s horas</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d minutos</item>
+        <item quantity="one">%1$s minuto</item>
+        <item quantity="other">%1$s minutos</item>
     </plurals>
     <string name="feeds_source_polling_interval">Consultando cada %1$s</string>
     <string name="feeds_access_level_react_full">Reaccionar y ver</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Enlace</string>
     <string name="feeds_share_link_title">Enlace del feed</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d comentario</item>
-        <item quantity="other">%1$d comentarios</item>
+        <item quantity="one">%1$s comentario</item>
+        <item quantity="other">%1$s comentarios</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d adjunto</item>
-        <item quantity="other">%1$d adjuntos</item>
+        <item quantity="one">%1$s adjunto</item>
+        <item quantity="other">%1$s adjuntos</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Ver %1$d comentario más</item>
-        <item quantity="other">Ver %1$d comentarios más</item>
+        <item quantity="one">Ver %1$s comentario más</item>
+        <item quantity="other">Ver %1$s comentarios más</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">hace %1$d año, hoy</item>
-        <item quantity="other">hace %1$d años, hoy</item>
+        <item quantity="one">hace %1$s año, hoy</item>
+        <item quantity="other">hace %1$s años, hoy</item>
     </plurals>
     <string name="feeds_block">Bloquear</string>
     <string name="feeds_removed_from_feed">Te han eliminado de este feed</string>

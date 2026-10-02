@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Нотатки</string>
     <string name="staff_accounts_reason_label">Причина</string>
     <string name="staff_accounts_reason_optional_label">Причина (необов\'язково)</string>
-    <string name="staff_accounts_sales">Продажів: %1$d</string>
+    <string name="staff_accounts_sales">Продажів: %1$s</string>
     <string name="staff_accounts_search_clear">Очистити пошук</string>
     <string name="staff_accounts_search_placeholder">Пошук</string>
     <string name="staff_accounts_seller_buyers">Лише покупці</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Без назви</string>
     <string name="staff_accounts_unsuspend">Зняти призупинення</string>
     <string name="staff_accounts_unsuspended_toast">Обліковий запис відновлено</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Скасувати</string>
     <string name="staff_appeals_decide">Вирішити</string>
     <string name="staff_appeals_decision_denied">Залишити оголошення відхиленим</string>

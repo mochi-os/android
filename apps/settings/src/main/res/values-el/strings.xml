@@ -45,6 +45,8 @@
     <string name="route_delete_title">Διαγραφή διαδρομής;</string>
     <string name="route_path">Διαδρομή</string>
     <string name="route_method">Μέθοδος</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Εφαρμογή</string>
     <string name="route_method_entity">Οντότητα</string>
     <string name="route_method_redirect">Ανακατεύθυνση</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Λήψη από packages.mochi-os.org</string>
     <string name="system_status_copy">Αντιγραφή</string>
     <string name="system_status_peers">Ομότιμοι</string>
-    <string name="system_status_known">Γνωστοί</string>
+    <string name="system_status_peers_totals">Γνωστοί %1$s · Συνδεδεμένοι %2$s · Πλέγμα μετάδοσης %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Γνωστοί %1$s · Συνδεδεμένοι %2$s</string>
     <string name="system_status_peer_connected">Συνδεδεμένο</string>
     <string name="system_status_peer_disconnected">Αποσυνδεδεμένο</string>
     <string name="system_status_peer_queued">Μηνύματα σε αναμονή</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Αφαίρεση</string>
     <string name="accounts_remove_title">Αφαίρεση λογαριασμού;</string>
     <string name="system_documents_title">Έγγραφα</string>
-    <string name="system_documents_description">Κανόνες του διακομιστή, όροι και προϋποθέσεις, και ειδοποίηση απορρήτου που εμφανίζονται στους χρήστες σας</string>
     <string name="system_documents_tab_rules">Κανόνες του διακομιστή</string>
     <string name="system_documents_tab_terms">Όροι και προϋποθέσεις</string>
     <string name="system_documents_tab_privacy">Ιδιωτικότητα</string>
     <string name="system_documents_language">Γλώσσα</string>
     <string name="system_documents_no_language">Δεν υπάρχει διαθέσιμο έγγραφο για αυτή τη γλώσσα.</string>
-    <string name="system_documents_customised">Προσαρμοσμένο</string>
     <string name="system_documents_using_default">Χρήση της ενσωματωμένης προεπιλογής</string>
     <string name="system_documents_revert">Επαναφορά στην προεπιλογή</string>
     <string name="system_documents_save">Αποθήκευση</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">Διαγραφή χρήστη</string>
     <string name="system_users_delete_title">Διαγραφή χρήστη;</string>
     <string name="system_users_manage_sessions">Διαχείριση συνεδριών</string>
-    <string name="system_users_sessions_description">Προβολή και ανάκληση ενεργών συνεδριών για αυτόν τον χρήστη.</string>
     <string name="system_users_sessions_empty">Αυτός ο χρήστης δεν έχει ενεργές συνεδρίες.</string>
     <string name="system_users_revoke">Ανάκληση</string>
     <string name="system_users_revoke_all">Ανάκληση όλων των συνεδριών</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">Επόμενο</string>
     <string name="system_users_empty">Δεν βρέθηκαν χρήστες</string>
     <string name="system_users_empty_search">Κανένας χρήστης δεν ταιριάζει με την αναζήτησή σας</string>
-    <string name="system_users_empty_search_hint">Δοκιμάστε να προσαρμόσετε τα κριτήρια αναζήτησής σας</string>
     <string name="system_users_toast_created">Ο χρήστης δημιουργήθηκε</string>
     <string name="system_users_toast_updated">Ο χρήστης ενημερώθηκε</string>
     <string name="system_users_toast_deleted">Ο χρήστης διαγράφηκε</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Όροι υπηρεσίας</string>
     <string name="account_passkeys_empty">Δεν υπάρχουν εγγεγραμμένα κλειδιά πρόσβασης.</string>
     <string name="account_passkey_register_title">Προσθήκη κλειδιού πρόσβασης</string>
-    <string name="account_passkey_register_message">Η συσκευή σας θα ζητήσει επιβεβαίωση. Το κλειδί πρόσβασης συνδέεται με αυτή τη συσκευή και χρησιμοποιείται για μελλοντικές συνδέσεις.</string>
     <string name="account_passkey_name_label">Όνομα (προαιρετικό)</string>
     <string name="account_passkey_delete_message">Το \"%1$s\" δεν θα σας συνδέει πλέον.</string>
-    <string name="account_totp_description">Συνδεθείτε με κωδικό 6 ψηφίων από μια εφαρμογή ελέγχου ταυτότητας.</string>
     <string name="account_totp_enabled">Ο έλεγχος ταυτότητας είναι ενεργοποιημένος.</string>
     <string name="account_totp_setup_step1">Σαρώστε ή εισάγετε αυτό το μυστικό στην εφαρμογή ελέγχου ταυτότητας.</string>
     <string name="account_totp_setup_step2">Εισάγετε τον κωδικό 6 ψηφίων που εμφανίζει η εφαρμογή.</string>
     <string name="account_totp_code">Κωδικός</string>
     <string name="account_totp_disable_message">Δεν θα μπορείτε πλέον να συνδέεστε με κωδικό ελέγχου ταυτότητας.</string>
     <string name="account_recovery_none">Δεν δημιουργήθηκαν κωδικοί ανάκτησης.</string>
-    <string name="account_recovery_count">%1$d αχρησιμοποίητοι κωδικοί ανάκτησης.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Απομένει %1$s κωδικός ανάκτησης.</item>
+        <item quantity="other">Απομένουν %1$s κωδικοί ανάκτησης.</item>
+    </plurals>
     <string name="account_recovery_generate">Δημιουργία κωδικών</string>
     <string name="account_recovery_regenerate">Αναδημιουργία κωδικών</string>
     <string name="account_recovery_regen_title">Αναδημιουργία κωδικών ανάκτησης;</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Τελευταία χρήση %1$s</string>
     <string name="route_delete_message">Αυτό θα αφαιρέσει τη διαδρομή για το μονοπάτι \"%1$s\".</string>
     <string name="route_empty">Δεν έχουν διαμορφωθεί διαδρομές.</string>
-    <string name="route_meta">Προτεραιότητα %1$d · %2$s</string>
+    <string name="route_meta">Προτεραιότητα %1$s · %2$s</string>
     <string name="interests_search_placeholder">Αναζήτηση θεμάτων προς προσθήκη…</string>
     <string name="interests_empty">Δεν υπάρχουν ενδιαφέροντα ακόμα.</string>
     <string name="interests_summary_regenerate">Αναδημιουργία σύνοψης</string>
@@ -270,7 +270,10 @@
     <string name="system_users_session_last_accessed">Τελευταία πρόσβαση: %1$s</string>
     <string name="system_users_revoke_all_title">Ανάκληση όλων των συνεδριών;</string>
     <string name="system_users_revoke_all_message">Όλες οι ενεργές συνεδρίες αυτού του χρήστη θα αποσυνδεθούν.</string>
-    <string name="system_users_pagination_status">Εμφάνιση %1$d–%2$d από %3$d χρήστες</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Εμφάνιση %1$s–%2$s από %3$s χρήστη</item>
+        <item quantity="other">Εμφάνιση %1$s–%2$s από %3$s χρήστες</item>
+    </plurals>
     <string name="account_title">Λογαριασμός</string>
     <string name="account_section_identity">Ταυτότητα</string>
     <string name="account_identity_identity">Ταυτότητα</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Επαλήθευση DNS</string>
     <string name="settings_home_domains">Τομείς</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Η δοκιμή στάλθηκε σε %1$d προορισμό</item>
-        <item quantity="other">Η δοκιμή στάλθηκε σε %1$d προορισμούς</item>
+        <item quantity="one">Η δοκιμή στάλθηκε σε %1$s προορισμό</item>
+        <item quantity="other">Η δοκιμή στάλθηκε σε %1$s προορισμούς</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 συνεδρία ανακλήθηκε</item>
-        <item quantity="other">%1$d συνεδρίες ανακλήθηκαν</item>
+        <item quantity="one">%1$s συνεδρία ανακλήθηκε</item>
+        <item quantity="other">%1$s συνεδρίες ανακλήθηκαν</item>
     </plurals>
     <string name="login_title">Σύνδεση</string>
     <string name="login_section_methods">Μέθοδοι σύνδεσης</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Δημόσιο</string>
     <string name="system_status_reachability_private">Ιδιωτικό</string>
     <string name="system_status_reachability_unknown">Άγνωστο</string>
-    <string name="system_status_relay">Μέσω αναμεταδότη</string>
-    <string name="system_status_mesh">Πλέγμα μετάδοσης</string>
+    <string name="system_status_reachability_relay">%1$s · μέσω αναμεταδότη</string>
     <string name="system_status_broadcast">Τελευταία μετάδοση</string>
     <string name="system_status_queued_broadcasts">Μηνύματα εκπομπής σε αναμονή</string>
     <string name="system_setting_hostname_publish">Ανακοίνωση ονόματος κεντρικού υπολογιστή και τομέων σε άλλους διακομιστές</string>
     <string name="system_setting_hostname">Όνομα κεντρικού υπολογιστή που ανακοινώνεται σε άλλους διακομιστές</string>
     <string name="system_status_peer_id">Αναγνωριστικό ομότιμου</string>
     <string name="system_status_holepunch">Διάτρηση</string>
-    <string name="system_status_holepunch_value">%1$d επιτυχείς · %2$d αποτυχημένες</string>
     <string name="system_status_awaiting_routing">Μηνύματα σε αναμονή δρομολόγησης</string>
     <string name="system_status_relay_service">Υπηρεσία αναμετάδοσης</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d κρατήσεις · %3$d κυκλώματα · %4$d απορρίφθηκαν</string>
     <string name="route_target_select">Επιλογή</string>
     <string name="account_data_description">Κατεβάστε ένα πλήρες αντίγραφο ασφαλείας που μπορείτε να επαναφέρετε σε αυτόν ή σε άλλον διακομιστή Mochi.</string>
     <string name="route_target_none">Δεν υπάρχουν διαθέσιμοι προορισμοί</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Τελευταία εμφάνιση %1$s</string>
     <string name="notifprefs_device_app">%1$s · εφαρμογή</string>
     <string name="notifprefs_device_push">%1$s · ειδοποιήσεις push</string>
-    <string name="notifprefs_test_partial">Το δοκιμαστικό στάλθηκε σε %1$d από %2$d προορισμούς</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Το δοκιμαστικό στάλθηκε σε %1$s από %2$s προορισμό</item>
+        <item quantity="other">Το δοκιμαστικό στάλθηκε σε %1$s από %2$s προορισμούς</item>
+    </plurals>
     <string name="notifprefs_test_none">Δεν έχουν διαμορφωθεί προορισμοί</string>
     <string name="notifprefs_transport_fcm">Ειδοποιήσεις push Android</string>
     <string name="notifprefs_no_destinations">Δεν υπάρχουν προορισμοί</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">Αυτό θα ανακαλέσει την πρόσβαση στο ημερολόγιο του %1$s. Η σύνδεση με %2$s παραμένει μέχρι να την αποσυνδέσετε στη σελίδα σύνδεσης.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Άγνωστο θέμα</string>
+    <string name="system_documents_modified">Τροποποιημένο</string>
+    <string name="system_documents_discard_title">Απόρριψη αλλαγών;</string>
+    <string name="system_documents_discard">Απόρριψη</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s επιτυχής</item>
+        <item quantity="other">%1$s επιτυχείς</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s αποτυχημένη</item>
+        <item quantity="other">%1$s αποτυχημένες</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s κράτηση</item>
+        <item quantity="other">%1$s / %2$s κρατήσεις</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s κύκλωμα</item>
+        <item quantity="other">%1$s κυκλώματα</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s απορρίφθηκε</item>
+        <item quantity="other">%1$s απορρίφθηκαν</item>
+    </plurals>
 </resources>

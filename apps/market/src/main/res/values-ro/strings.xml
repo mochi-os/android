@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Se trimite…</string>
     <string name="market_checkout_subscribing">Se abonează…</string>
     <string name="market_filter_remove">Elimină filtrul</string>
-    <string name="market_listing_detail_sales_count">%1$d vânzări</string>
-    <string name="market_profile_sales_count">%1$d vânzări</string>
+    <string name="market_listing_detail_sales_count">%1$s vânzări</string>
+    <string name="market_profile_sales_count">%1$s vânzări</string>
     <string name="market_purchase_dispute_response">Răspunsul vânzătorului</string>
     <string name="market_purchases_order_label">Comanda nr. %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Spuneți cumpărătorilor despre dvs…</string>
     <string name="market_account_load_failed">Contul nu a putut fi încărcat</string>
     <string name="market_account_save_failed">Modificările nu au putut fi salvate</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Curentă: %1$s</string>
     <string name="market_bids_ends_in">Se încheie în %1$s</string>
     <string name="market_bids_your_bid">Oferta dvs.: %1$s</string>
-    <string name="market_carousel_main">Fotografia %1$d din %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatura %1$d</string>
+    <string name="market_carousel_main">Fotografia %1$s din %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatura %1$s</string>
     <string name="market_checkout_browser_unavailable">Niciun browser disponibil pentru a deschide pagina de plată</string>
     <string name="market_checkout_pay_button">Plătiți cu Stripe</string>
     <string name="market_checkout_processing">Se procesează…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Atașați dovezi</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fișier(e) atașat(e)</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fișier(e) atașat(e)</string>
     <string name="market_dispute_dialog_evidence_role_staff">Personal Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Dovezi trimise</string>
     <string name="market_dispute_dialog_evidence_submitter_line">trimise de %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL de referință</string>
     <string name="market_editor_assets_empty">Nicio resursă încă</string>
     <string name="market_editor_category_none">Selectați o categorie</string>
-    <string name="market_editor_days">%1$d zile</string>
+    <string name="market_editor_days">%1$s zile</string>
     <string name="market_editor_delete">Ștergeți anunțul</string>
     <string name="market_editor_delete_confirm_message">Aceasta va șterge definitiv anunțul.</string>
     <string name="market_editor_delete_confirm_title">Ștergi anunțul?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Conversația nu a putut fi încărcată</string>
     <string name="market_messages_send_failed">Mesajul nu a putut fi trimis</string>
     <string name="market_messages_thread_title">Conversație</string>
-    <string name="market_messages_unread_badge">%1$d necitite</string>
-    <string name="market_price_from">de la %1$s</string>
+    <string name="market_messages_unread_badge">%1$s necitite</string>
+    <string name="market_price_from">De la %1$s</string>
     <string name="market_price_high_bid">Cea mai mare ofertă: %1$s</string>
     <string name="market_price_instant_buy">cumpărare instantanee: %1$s</string>
     <string name="market_price_per_month">%1$s / lună</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">S-a alăturat în %1$s</string>
     <string name="market_profile_no_reviews">Nicio recenzie încă.</string>
     <string name="market_profile_rating_breakdown">Distribuția evaluărilor</string>
-    <string name="market_profile_stars_value">%1$d stele</string>
+    <string name="market_profile_stars_value">%1$s stele</string>
     <string name="market_purchase_dispute_chargeback">Stornare %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Banca ta a inițiat o stornare pentru această comandă. Stripe gestionează disputa cu vânzătorul; rezultatul va apărea aici după ce va fi decis.</string>
-    <string name="market_purchase_download_many">Descarcă cele %1$d fișiere ale tale mai jos.</string>
+    <string name="market_purchase_download_many">Descarcă cele %1$s fișiere ale tale mai jos.</string>
     <string name="market_purchase_download_one">Descarcă fișierul tău mai jos.</string>
     <string name="market_purchase_review_from">Recenzie de la %1$s</string>
     <string name="market_purchases_auction_label">Licitație nr. %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s rambursat</string>
     <string name="market_purchases_won_for">Câștigat pentru %1$s</string>
-    <string name="market_rating_reviews">(%1$d recenzii)</string>
+    <string name="market_rating_reviews">(%1$s recenzii)</string>
     <string name="market_refund_amount_label">Sumă</string>
     <string name="market_refund_dialog_amount_help">Lăsați necompletat pentru a rambursa comanda integral.</string>
     <string name="market_refund_dialog_amount_label">Sumă</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe înregistrat</string>
     <string name="market_audit_account_stripe_restricted">Stripe restricționat</string>
     <string name="market_audit_account_suspended">Suspendat ca vânzător</string>
-    <string name="market_audit_account_unbanned">Interdicție anulată</string>
-    <string name="market_audit_account_unsuspended">Suspendare anulată</string>
+    <string name="market_audit_account_unbanned">Interdicție ridicată</string>
+    <string name="market_audit_account_unsuspended">Suspendare ridicată</string>
     <string name="market_audit_auction_bid_placed">Ofertă plasată</string>
     <string name="market_audit_auction_created">Licitație creată</string>
     <string name="market_audit_auction_ended_sold">Licitație vândută</string>
@@ -785,13 +785,13 @@
     <string name="market_listings_remove_message_auction">Aceasta va anula licitația. Anunțul va fi ascuns de cumpărători; îl poți relista mai târziu ca o nouă schiță.</string>
     <string name="market_listings_remove_title">Elimini acest anunț?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Aceasta va anula licitația și va notifica %1$d ofertant activ. Anunțul va fi ascuns cumpărătorilor; îl puteți republica ulterior ca schiță nouă.</item>
-        <item quantity="few">Aceasta va anula licitația și va notifica %1$d ofertanți activi. Anunțul va fi ascuns cumpărătorilor; îl puteți republica ulterior ca schiță nouă.</item>
-        <item quantity="other">Aceasta va anula licitația și va notifica %1$d de ofertanți activi. Anunțul va fi ascuns cumpărătorilor; îl puteți republica ulterior ca schiță nouă.</item>
+        <item quantity="one">Aceasta va anula licitația și va notifica %1$s ofertant activ. Anunțul va fi ascuns cumpărătorilor; îl puteți republica ulterior ca schiță nouă.</item>
+        <item quantity="few">Aceasta va anula licitația și va notifica %1$s ofertanți activi. Anunțul va fi ascuns cumpărătorilor; îl puteți republica ulterior ca schiță nouă.</item>
+        <item quantity="other">Aceasta va anula licitația și va notifica %1$s de ofertanți activi. Anunțul va fi ascuns cumpărătorilor; îl puteți republica ulterior ca schiță nouă.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Aceasta va anula %1$d abonament activ la sfârșitul perioadei curente de facturare. Abonații vor fi notificați. Anunțul va fi ascuns cumpărătorilor.</item>
-        <item quantity="few">Aceasta va anula %1$d abonamente active la sfârșitul perioadei curente de facturare. Abonații vor fi notificați. Anunțul va fi ascuns cumpărătorilor.</item>
-        <item quantity="other">Aceasta va anula %1$d de abonamente active la sfârșitul perioadei curente de facturare. Abonații vor fi notificați. Anunțul va fi ascuns cumpărătorilor.</item>
+        <item quantity="one">Aceasta va anula %1$s abonament activ la sfârșitul perioadei curente de facturare. Abonații vor fi notificați. Anunțul va fi ascuns cumpărătorilor.</item>
+        <item quantity="few">Aceasta va anula %1$s abonamente active la sfârșitul perioadei curente de facturare. Abonații vor fi notificați. Anunțul va fi ascuns cumpărătorilor.</item>
+        <item quantity="other">Aceasta va anula %1$s de abonamente active la sfârșitul perioadei curente de facturare. Abonații vor fi notificați. Anunțul va fi ascuns cumpărătorilor.</item>
     </plurals>
 </resources>

@@ -60,7 +60,7 @@
     <string name="chat_delete_confirm_title">Ջնջե՞լ հաղորդագրությունը։</string>
     <string name="chat_delete_confirm_body">Սա ջնջում է հաղորդագրությունը բոլորի համար և հնարավոր չէ հետարկել։</string>
     <string name="chat_delete_own_only">Կարող եք ջնջել միայն ձեր սեփական հաղորդագրությունները</string>
-    <string name="chat_selection_title">%1$d ընտրված</string>
+    <string name="chat_selection_title">%1$s ընտրված</string>
     <string name="chat_forward_subtitle">Ընտրեք զրույց կամ ընկեր՝ ընտրված հաղորդագրությունները փոխանցելու համար</string>
     <string name="chat_forward_chats">Զրույցներ</string>
     <string name="chat_forward_friends">Ընկերներ</string>

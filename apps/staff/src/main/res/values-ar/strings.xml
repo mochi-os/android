@@ -6,7 +6,7 @@
     <string name="staff_accounts_action_ban_title">حظر الحساب</string>
     <string name="staff_accounts_action_suspend_title">تعليق الحساب</string>
     <string name="staff_accounts_action_unban_title">رفع الحظر</string>
-    <string name="staff_accounts_action_unsuspend_title">رفع الإيقاف</string>
+    <string name="staff_accounts_action_unsuspend_title">رفع التعليق</string>
     <string name="staff_accounts_any_seller">الكل</string>
     <string name="staff_accounts_any_status">الكل</string>
     <string name="staff_accounts_ban">حظر</string>
@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">ملاحظات</string>
     <string name="staff_accounts_reason_label">السبب</string>
     <string name="staff_accounts_reason_optional_label">السبب (اختياري)</string>
-    <string name="staff_accounts_sales">%1$d مبيعات</string>
+    <string name="staff_accounts_sales">%1$s مبيعات</string>
     <string name="staff_accounts_search_clear">مسح البحث</string>
     <string name="staff_accounts_search_placeholder">بحث</string>
     <string name="staff_accounts_seller_buyers">المشترون فقط</string>
@@ -32,12 +32,12 @@
     <string name="staff_accounts_submitting">جارٍ الإرسال…</string>
     <string name="staff_accounts_suspend">تعليق</string>
     <string name="staff_accounts_suspended_toast">تم تعليق الحساب</string>
-    <string name="staff_accounts_unban">إلغاء الحظر</string>
+    <string name="staff_accounts_unban">رفع الحظر</string>
     <string name="staff_accounts_unbanned_toast">تم رفع الحظر عن الحساب</string>
     <string name="staff_accounts_unnamed">بدون اسم</string>
-    <string name="staff_accounts_unsuspend">إلغاء التعليق</string>
+    <string name="staff_accounts_unsuspend">رفع التعليق</string>
     <string name="staff_accounts_unsuspended_toast">تم رفع تعليق الحساب</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">إلغاء</string>
     <string name="staff_appeals_decide">اتخاذ قرار</string>
     <string name="staff_appeals_decision_denied">الإبقاء على رفض الإدراج</string>
@@ -61,8 +61,8 @@
     <string name="staff_audit_action_account_stripe_onboarded">تم الانضمام إلى Stripe</string>
     <string name="staff_audit_action_account_stripe_restricted">Stripe مقيد</string>
     <string name="staff_audit_action_account_suspended">معلق كبائع</string>
-    <string name="staff_audit_action_account_unbanned">تم إلغاء الحظر</string>
-    <string name="staff_audit_action_account_unsuspended">تم إلغاء التعليق</string>
+    <string name="staff_audit_action_account_unbanned">تم رفع الحظر</string>
+    <string name="staff_audit_action_account_unsuspended">تم رفع التعليق</string>
     <string name="staff_audit_action_auction_bid_placed">تم تقديم المزايدة</string>
     <string name="staff_audit_action_auction_cancelled">تم إلغاء المزاد</string>
     <string name="staff_audit_action_auction_created">تم إنشاء المزاد</string>

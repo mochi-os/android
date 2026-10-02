@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Llogaritë e lidhura</string>
     <string name="settings_home_interests">Interesat</string>
     <string name="account_section_passkeys">Kyçet</string>
-    <string name="account_passkey_register">Shto passkey</string>
-    <string name="account_passkey_delete_title">Të fshihet passkey?</string>
+    <string name="account_passkey_register">Shto kyç</string>
+    <string name="account_passkey_delete_title">Të fshihet kyçi?</string>
     <string name="account_section_totp">Aplikacion autentikues</string>
     <string name="account_totp_setup">Konfiguro autentikuesin</string>
     <string name="account_totp_setup_title">Konfiguro autentikuesin</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Të fshihet rruga?</string>
     <string name="route_path">Shtegu</string>
     <string name="route_method">Metoda</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikacioni</string>
     <string name="route_method_entity">Entiteti</string>
     <string name="route_method_redirect">Ridrejto</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Shkarko nga packages.mochi-os.org</string>
     <string name="system_status_copy">Kopjo</string>
     <string name="system_status_peers">Pairs</string>
-    <string name="system_status_known">Të njohur</string>
+    <string name="system_status_peers_totals">Të njohur %1$s · Të lidhur %2$s · Mesh i transmetimit %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Të njohur %1$s · Të lidhur %2$s</string>
     <string name="system_status_peer_connected">I lidhur</string>
     <string name="system_status_peer_disconnected">I shkëputur</string>
     <string name="system_status_peer_queued">Mesazhe në radhë</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Hiq</string>
     <string name="accounts_remove_title">Të hiqet llogaria?</string>
     <string name="system_documents_title">Dokumentet</string>
-    <string name="system_documents_description">Rregullat e serverit, kushtet dhe njoftimi i privatësisë që u shfaqen përdoruesve tuaj</string>
     <string name="system_documents_tab_rules">Rregullat e serverit</string>
     <string name="system_documents_tab_terms">Kushtet dhe rregullat</string>
     <string name="system_documents_tab_privacy">Privatësia</string>
     <string name="system_documents_language">Gjuha</string>
     <string name="system_documents_no_language">Asnjë dokument i disponueshëm për këtë gjuhë.</string>
-    <string name="system_documents_customised">I personalizuar</string>
     <string name="system_documents_using_default">Duke përdorur parazgjedhjen e paketuar</string>
     <string name="system_documents_revert">Kthe në parazgjedhje</string>
     <string name="system_documents_save">Ruaj</string>
@@ -137,7 +138,7 @@
     <string name="system_settings_reset_title">Të rivendoset në parazgjedhje?</string>
     <string name="system_setting_apps_install_user">Lejo përdoruesit të instalojnë aplikacione</string>
     <string name="system_setting_auth_email">Kyçu duke përdorur kodin me email</string>
-    <string name="system_setting_auth_passkey">Kyçu duke përdorur passkey</string>
+    <string name="system_setting_auth_passkey">Hyrje me kyç</string>
     <string name="system_setting_auth_totp">Kyçu duke përdorur aplikacionin autentikues TOTP</string>
     <string name="system_setting_auth_recovery">Kyçu duke përdorur kodin e rikuperimit</string>
     <string name="system_setting_auth_oauth">Kyçu duke përdorur OAuth 2.0</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">Fshi përdoruesin</string>
     <string name="system_users_delete_title">Të fshihet përdoruesi?</string>
     <string name="system_users_manage_sessions">Menaxho sesionet</string>
-    <string name="system_users_sessions_description">Shiko dhe revoko sesionet aktive për këtë përdorues.</string>
     <string name="system_users_sessions_empty">Ky përdorues nuk ka sesione aktive.</string>
     <string name="system_users_revoke">Revoko</string>
     <string name="system_users_revoke_all">Revoko të gjitha seancat</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">Tjetri</string>
     <string name="system_users_empty">S\'u gjet asnjë përdorues</string>
     <string name="system_users_empty_search">Asnjë përdorues nuk përputhet me kërkimin tuaj</string>
-    <string name="system_users_empty_search_hint">Provo të rregullosh kriteret e kërkimit</string>
     <string name="system_users_toast_created">Përdoruesi u krijua</string>
     <string name="system_users_toast_updated">Përdoruesi u përditësua</string>
     <string name="system_users_toast_deleted">Përdoruesi u fshi</string>
@@ -209,19 +208,20 @@
     <string name="settings_home_privacy">Politika e privatësisë</string>
     <string name="settings_home_rules">Rregullat</string>
     <string name="settings_home_terms">Kushtet e shërbimit</string>
-    <string name="account_passkeys_empty">Nuk ka çelësa kalimi të regjistruar.</string>
-    <string name="account_passkey_register_title">Shto çelës kalimi</string>
-    <string name="account_passkey_register_message">Pajisja juaj do t\'ju kërkojë të konfirmoni. Çelësi i kalimit është i lidhur me këtë pajisje dhe përdoret për hyrjet e ardhshme.</string>
+    <string name="account_passkeys_empty">Nuk ka kyçe të regjistruar.</string>
+    <string name="account_passkey_register_title">Shto kyç</string>
     <string name="account_passkey_name_label">Emri (opsional)</string>
     <string name="account_passkey_delete_message">\"%1$s\" nuk do t\'ju lejojë më të hyni.</string>
-    <string name="account_totp_description">Hyni me një kod 6-shifror nga një aplikacion vërtetimi.</string>
     <string name="account_totp_enabled">Vërtetuesi është aktivizuar.</string>
     <string name="account_totp_setup_step1">Skanoni ose futni këtë sekret në aplikacionin tuaj të vërtetimit.</string>
     <string name="account_totp_setup_step2">Futni kodin 6-shifror që shfaq aplikacioni juaj.</string>
     <string name="account_totp_code">Kodi</string>
     <string name="account_totp_disable_message">Nuk do të jeni më në gjendje të hyni me një kod vërtetimi.</string>
     <string name="account_recovery_none">Asnjë kod rikuperimi nuk është gjeneruar.</string>
-    <string name="account_recovery_count">%1$d kode rikuperimi të papërdorur.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s kod rikuperimi i mbetur.</item>
+        <item quantity="other">%1$s kode rikuperimi të mbetura.</item>
+    </plurals>
     <string name="account_recovery_generate">Gjenero kodet</string>
     <string name="account_recovery_regenerate">Rigjenero kodet</string>
     <string name="account_recovery_regen_title">Rigjenerimi i kodeve të rikuperimit?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Përdorur së fundi %1$s</string>
     <string name="route_delete_message">Kjo do të heqë rrugën për shtegun \"%1$s\".</string>
     <string name="route_empty">Asnjë rrugë e konfiguruar.</string>
-    <string name="route_meta">Prioriteti %1$d · %2$s</string>
+    <string name="route_meta">Prioriteti %1$s · %2$s</string>
     <string name="interests_search_placeholder">Kërkoni tema për të shtuar…</string>
     <string name="interests_empty">Asnjë interes ende.</string>
     <string name="interests_summary_regenerate">Rigjenero përmbledhjen</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Kjo do të fshijë përgjithmonë përdoruesin \"%1$s\". Ky veprim nuk mund të zhbëhet.</string>
     <string name="system_users_sessions_title">Sesionet e %1$s</string>
     <string name="system_users_session_last_accessed">Aksesi i fundit: %1$s</string>
-    <string name="system_users_revoke_all_title">Të anulohen të gjitha sesionet?</string>
+    <string name="system_users_revoke_all_title">Të revokohen të gjitha sesionet?</string>
     <string name="system_users_revoke_all_message">Të gjitha sesionet aktive të këtij përdoruesi do të dalin.</string>
-    <string name="system_users_pagination_status">Duke shfaqur %1$d–%2$d nga %3$d përdorues</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Duke shfaqur %1$s–%2$s nga %3$s përdorues</item>
+        <item quantity="other">Duke shfaqur %1$s–%2$s nga %3$s përdorues</item>
+    </plurals>
     <string name="account_title">Llogaria</string>
     <string name="account_section_identity">Identiteti</string>
     <string name="account_identity_identity">Identiteti</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Verifiko DNS</string>
     <string name="settings_home_domains">Domenet</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Testi u dërgua te %1$d destinacion</item>
-        <item quantity="other">Testi u dërgua te %1$d destinacione</item>
+        <item quantity="one">Testi u dërgua te %1$s destinacion</item>
+        <item quantity="other">Testi u dërgua te %1$s destinacione</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">U revokua 1 sesion</item>
-        <item quantity="other">U revokuan %1$d sesione</item>
+        <item quantity="one">U revokua %1$s sesion</item>
+        <item quantity="other">U revokuan %1$s sesione</item>
     </plurals>
     <string name="login_title">Hyrja</string>
     <string name="login_section_methods">Mënyrat e hyrjes</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Publik</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">I panjohur</string>
-    <string name="system_status_relay">Me rele</string>
-    <string name="system_status_mesh">Mesh i transmetimit</string>
+    <string name="system_status_reachability_relay">%1$s · me rele</string>
     <string name="system_status_broadcast">Transmetimi i fundit</string>
     <string name="system_status_queued_broadcasts">Mesazhe transmetimi në radhë</string>
     <string name="system_setting_hostname_publish">Njofto emrin e hostit dhe domenet te serverët e tjerë</string>
     <string name="system_setting_hostname">Emri i hostit i njoftuar te serverët e tjerë</string>
     <string name="system_status_peer_id">ID e palës</string>
     <string name="system_status_holepunch">Shpim</string>
-    <string name="system_status_holepunch_value">%1$d të suksesshme · %2$d të dështuara</string>
     <string name="system_status_awaiting_routing">Mesazhe në pritje të rrugëzimit</string>
     <string name="system_status_relay_service">Shërbim rele</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervime · %3$d qarqe · %4$d refuzuar</string>
     <string name="route_target_select">Zgjidh</string>
     <string name="account_data_description">Shkarkoni një kopje rezervë të plotë që mund ta rikthesh në këtë ose në një server tjetër Mochi.</string>
     <string name="route_target_none">Nuk ka objektiva të disponueshme</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Parë për herë të fundit %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikacion</string>
     <string name="notifprefs_device_push">%1$s · njoftime push</string>
-    <string name="notifprefs_test_partial">Testi u dërgua te %1$d nga %2$d destinacione</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Testi u dërgua te %1$s nga %2$s destinacion</item>
+        <item quantity="other">Testi u dërgua te %1$s nga %2$s destinacione</item>
+    </plurals>
     <string name="notifprefs_test_none">Asnjë destinacion i konfiguruar</string>
     <string name="notifprefs_transport_fcm">Push Android</string>
     <string name="notifprefs_no_destinations">Asnjë destinacion</string>
@@ -385,7 +390,7 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Sekreti i nënshkrimit</string>
     <string name="account_totp_open">Hap në aplikacionin e vërtetimit</string>
-    <string name="accounts_revoke">Anulo aksesin</string>
+    <string name="accounts_revoke">Revoko aksesin</string>
     <string name="accounts_capability_calendar">Kalendari</string>
     <string name="accounts_capability_notify">Njoftime</string>
     <string name="accounts_capability_ai">AI</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">Kjo do të revokojë qasjen në kalendar të %1$s. Hyrja me %2$s mbetet derisa ta shkëputni në faqen e hyrjes.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Temë e panjohur</string>
+    <string name="system_documents_modified">I modifikuar</string>
+    <string name="system_documents_discard_title">T\'i hedhësh ndryshimet?</string>
+    <string name="system_documents_discard">Hidh</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s e suksesshme</item>
+        <item quantity="other">%1$s të suksesshme</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s e dështuar</item>
+        <item quantity="other">%1$s të dështuara</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s rezervim</item>
+        <item quantity="other">%1$s / %2$s rezervime</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s qark</item>
+        <item quantity="other">%1$s qarqe</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s e refuzuar</item>
+        <item quantity="other">%1$s të refuzuara</item>
+    </plurals>
 </resources>

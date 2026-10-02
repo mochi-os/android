@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Надсилання…</string>
     <string name="market_checkout_subscribing">Підписка…</string>
     <string name="market_filter_remove">Видалити фільтр</string>
-    <string name="market_listing_detail_sales_count">Продажів: %1$d</string>
-    <string name="market_profile_sales_count">Продажів: %1$d</string>
+    <string name="market_listing_detail_sales_count">Продажів: %1$s</string>
+    <string name="market_profile_sales_count">Продажів: %1$s</string>
     <string name="market_purchase_dispute_response">Відповідь продавця</string>
     <string name="market_purchases_order_label">Замовлення № %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Розкажіть покупцям про себе…</string>
     <string name="market_account_load_failed">Не вдалося завантажити обліковий запис</string>
     <string name="market_account_save_failed">Не вдалося зберегти зміни</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Поточна: %1$s</string>
     <string name="market_bids_ends_in">Завершується через %1$s</string>
     <string name="market_bids_your_bid">Ваша ставка: %1$s</string>
-    <string name="market_carousel_main">Фото %1$d з %2$d</string>
-    <string name="market_carousel_thumbnail">Мініатюра %1$d</string>
+    <string name="market_carousel_main">Фото %1$s з %2$s</string>
+    <string name="market_carousel_thumbnail">Мініатюра %1$s</string>
     <string name="market_checkout_browser_unavailable">Немає доступного браузера для відкриття сторінки оплати</string>
     <string name="market_checkout_pay_button">Сплатити через Stripe</string>
     <string name="market_checkout_processing">Обробка…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Додати докази</string>
-    <string name="market_dispute_dialog_attach_count">Прикріплено файлів: %1$d</string>
+    <string name="market_dispute_dialog_attach_count">Прикріплено файлів: %1$s</string>
     <string name="market_dispute_dialog_evidence_role_staff">Персонал Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Подані докази</string>
     <string name="market_dispute_dialog_evidence_submitter_line">подано користувачем %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL-адреса</string>
     <string name="market_editor_assets_empty">Поки немає ресурсів</string>
     <string name="market_editor_category_none">Виберіть категорію</string>
-    <string name="market_editor_days">%1$d днів</string>
+    <string name="market_editor_days">%1$s днів</string>
     <string name="market_editor_delete">Видалити оголошення</string>
     <string name="market_editor_delete_confirm_message">Це назавжди видалить оголошення.</string>
     <string name="market_editor_delete_confirm_title">Видалити оголошення?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Не вдалося завантажити розмову</string>
     <string name="market_messages_send_failed">Не вдалося надіслати повідомлення</string>
     <string name="market_messages_thread_title">Розмова</string>
-    <string name="market_messages_unread_badge">%1$d непрочитаних</string>
-    <string name="market_price_from">від %1$s</string>
+    <string name="market_messages_unread_badge">%1$s непрочитаних</string>
+    <string name="market_price_from">Від %1$s</string>
     <string name="market_price_high_bid">Найвища ставка: %1$s</string>
     <string name="market_price_instant_buy">миттєва купівля: %1$s</string>
     <string name="market_price_per_month">%1$s / місяць</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Приєднався %1$s</string>
     <string name="market_profile_no_reviews">Відгуків ще немає.</string>
     <string name="market_profile_rating_breakdown">Розподіл оцінок</string>
-    <string name="market_profile_stars_value">%1$d зірок</string>
+    <string name="market_profile_stars_value">%1$s зірок</string>
     <string name="market_purchase_dispute_chargeback">Повернення коштів %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ваш банк ініціював повернення коштів за цим замовленням. Stripe вирішує спір із продавцем; результат з\'явиться тут, коли буде ухвалено рішення.</string>
-    <string name="market_purchase_download_many">Завантажте свої %1$d файлів нижче.</string>
+    <string name="market_purchase_download_many">Завантажте свої %1$s файлів нижче.</string>
     <string name="market_purchase_download_one">Завантажте свій файл нижче.</string>
     <string name="market_purchase_review_from">Відгук від %1$s</string>
     <string name="market_purchases_auction_label">Аукціон №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s повернено</string>
     <string name="market_purchases_won_for">Виграно за %1$s</string>
-    <string name="market_rating_reviews">(%1$d відгуків)</string>
+    <string name="market_rating_reviews">(%1$s відгуків)</string>
     <string name="market_refund_amount_label">Сума</string>
     <string name="market_refund_dialog_amount_help">Залиште порожнім, щоб повернути всю суму замовлення.</string>
     <string name="market_refund_dialog_amount_label">Сума</string>
@@ -785,15 +785,15 @@
     <string name="market_listings_remove_message_auction">Це скасує аукціон. Оголошення буде приховано від покупців; ви можете опублікувати його пізніше як новий чернетку.</string>
     <string name="market_listings_remove_title">Видалити це оголошення?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Це скасує аукціон і сповістить %1$d активного учасника. Оголошення буде приховано від покупців; пізніше ви зможете розмістити його знову як нову чернетку.</item>
-        <item quantity="few">Це скасує аукціон і сповістить %1$d активних учасників. Оголошення буде приховано від покупців; пізніше ви зможете розмістити його знову як нову чернетку.</item>
-        <item quantity="many">Це скасує аукціон і сповістить %1$d активних учасників. Оголошення буде приховано від покупців; пізніше ви зможете розмістити його знову як нову чернетку.</item>
-        <item quantity="other">Це скасує аукціон і сповістить %1$d активних учасників. Оголошення буде приховано від покупців; пізніше ви зможете розмістити його знову як нову чернетку.</item>
+        <item quantity="one">Це скасує аукціон і сповістить %1$s активного учасника. Оголошення буде приховано від покупців; пізніше ви зможете розмістити його знову як нову чернетку.</item>
+        <item quantity="few">Це скасує аукціон і сповістить %1$s активних учасників. Оголошення буде приховано від покупців; пізніше ви зможете розмістити його знову як нову чернетку.</item>
+        <item quantity="many">Це скасує аукціон і сповістить %1$s активних учасників. Оголошення буде приховано від покупців; пізніше ви зможете розмістити його знову як нову чернетку.</item>
+        <item quantity="other">Це скасує аукціон і сповістить %1$s активних учасників. Оголошення буде приховано від покупців; пізніше ви зможете розмістити його знову як нову чернетку.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Це скасує %1$d активну підписку наприкінці поточного платіжного періоду. Підписників буде сповіщено. Оголошення буде приховано від покупців.</item>
-        <item quantity="few">Це скасує %1$d активні підписки наприкінці поточного платіжного періоду. Підписників буде сповіщено. Оголошення буде приховано від покупців.</item>
-        <item quantity="many">Це скасує %1$d активних підписок наприкінці поточного платіжного періоду. Підписників буде сповіщено. Оголошення буде приховано від покупців.</item>
-        <item quantity="other">Це скасує %1$d активних підписок наприкінці поточного платіжного періоду. Підписників буде сповіщено. Оголошення буде приховано від покупців.</item>
+        <item quantity="one">Це скасує %1$s активну підписку наприкінці поточного платіжного періоду. Підписників буде сповіщено. Оголошення буде приховано від покупців.</item>
+        <item quantity="few">Це скасує %1$s активні підписки наприкінці поточного платіжного періоду. Підписників буде сповіщено. Оголошення буде приховано від покупців.</item>
+        <item quantity="many">Це скасує %1$s активних підписок наприкінці поточного платіжного періоду. Підписників буде сповіщено. Оголошення буде приховано від покупців.</item>
+        <item quantity="other">Це скасує %1$s активних підписок наприкінці поточного платіжного періоду. Підписників буде сповіщено. Оголошення буде приховано від покупців.</item>
     </plurals>
 </resources>

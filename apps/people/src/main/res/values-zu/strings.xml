@@ -180,8 +180,8 @@
     <string name="people_books_create">Dala incwadi yamakheli</string>
     <string name="people_books_delete">Susa incwadi yamakheli</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Susa %1$s nalowo %2$d oxhumana naye okuyo?</item>
-        <item quantity="other">Susa %1$s nabo %2$d abaxhumana nabo abakuyo?</item>
+        <item quantity="one">Susa %1$s nalowo %2$s oxhumana naye okuyo?</item>
+        <item quantity="other">Susa %1$s nabo %2$s abaxhumana nabo abakuyo?</item>
     </plurals>
     <string name="people_welcome_body">Thola abangane kuyo yonke i-Mochi bese uxhumana nabo. Thepha u-Engeza oxhumana naye ukuze uthumele isimemo.</string>
     <string name="people_person_state_contact">Koxhumana nabo</string>

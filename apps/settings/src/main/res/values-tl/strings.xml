@@ -45,6 +45,8 @@
     <string name="route_delete_title">I-delete ang route?</string>
     <string name="route_path">Path</string>
     <string name="route_method">Paraan</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entity</string>
     <string name="route_method_redirect">Redirect</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">I-download mula sa packages.mochi-os.org</string>
     <string name="system_status_copy">Kopyahin</string>
     <string name="system_status_peers">Mga peer</string>
-    <string name="system_status_known">Kilala</string>
+    <string name="system_status_peers_totals">Kilala %1$s · Konektado %2$s · Mesh ng broadcast %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Kilala %1$s · Konektado %2$s</string>
     <string name="system_status_peer_connected">Konektado</string>
     <string name="system_status_peer_disconnected">Nadiskonekta</string>
     <string name="system_status_peer_queued">Mga mensaheng nakapila</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Alisin</string>
     <string name="accounts_remove_title">Alisin ang account?</string>
     <string name="system_documents_title">Mga dokumento</string>
-    <string name="system_documents_description">Mga patakaran ng server, mga tuntunin at kundisyon, at privacy notice na ipinapakita sa iyong mga user</string>
     <string name="system_documents_tab_rules">Mga patakaran ng server</string>
     <string name="system_documents_tab_terms">Mga tuntunin at kundisyon</string>
     <string name="system_documents_tab_privacy">Pagkapribado</string>
     <string name="system_documents_language">Wika</string>
     <string name="system_documents_no_language">Walang available na document para sa wikang ito.</string>
-    <string name="system_documents_customised">Naka-customise</string>
     <string name="system_documents_using_default">Ginagamit ang bundled default</string>
     <string name="system_documents_revert">Ibalik sa default</string>
     <string name="system_documents_save">I-save</string>
@@ -141,7 +142,7 @@
     <string name="system_setting_auth_totp">Mag-login gamit ang TOTP authenticator app</string>
     <string name="system_setting_auth_recovery">Mag-login gamit ang recovery code</string>
     <string name="system_setting_auth_oauth">Mag-login gamit ang OAuth 2.0</string>
-    <string name="system_setting_default_theme">Default na theme</string>
+    <string name="system_setting_default_theme">Default na tema</string>
     <string name="system_setting_domains_verification">Kailanganin ang domain verification</string>
     <string name="system_setting_email_from">Default na from address para sa mga system email</string>
     <string name="system_setting_oauth_public_url">Pampublikong URL para sa mga OAuth redirect</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">I-delete ang user</string>
     <string name="system_users_delete_title">I-delete ang user?</string>
     <string name="system_users_manage_sessions">Pamahalaan ang mga session</string>
-    <string name="system_users_sessions_description">Tingnan at bawiin ang mga aktibong session para sa user na ito.</string>
     <string name="system_users_sessions_empty">Walang aktibong session ang user na ito.</string>
     <string name="system_users_revoke">Bawiin</string>
     <string name="system_users_revoke_all">Pawalang-bisa ang lahat ng session</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">Susunod</string>
     <string name="system_users_empty">Walang nakitang user</string>
     <string name="system_users_empty_search">Walang user na tumutugma sa iyong paghahanap</string>
-    <string name="system_users_empty_search_hint">Subukang ayusin ang iyong pamantayan sa paghahanap</string>
     <string name="system_users_toast_created">Nalikha ang user</string>
     <string name="system_users_toast_updated">Na-update ang user</string>
     <string name="system_users_toast_deleted">Natanggal ang user</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Mga tuntunin ng serbisyo</string>
     <string name="account_passkeys_empty">Walang mga rehistradong passkey.</string>
     <string name="account_passkey_register_title">Magdagdag ng passkey</string>
-    <string name="account_passkey_register_message">Hihilingin ng iyong device na kumpirmahin. Ang passkey ay nakatali sa device na ito at ginagamit para sa hinaharap na mga pag-sign-in.</string>
     <string name="account_passkey_name_label">Pangalan (opsyonal)</string>
     <string name="account_passkey_delete_message">Hindi na ka ilo-log in ng \"%1$s\".</string>
-    <string name="account_totp_description">Mag-sign in gamit ang 6-digit na code mula sa authenticator app.</string>
     <string name="account_totp_enabled">Pinagana ang authenticator.</string>
     <string name="account_totp_setup_step1">I-scan o ilagay ang lihim na ito sa iyong authenticator app.</string>
     <string name="account_totp_setup_step2">Ilagay ang 6-digit code na ipinapakita ng iyong app.</string>
     <string name="account_totp_code">Code</string>
     <string name="account_totp_disable_message">Hindi ka na makakapag-sign in gamit ang isang authenticator code.</string>
     <string name="account_recovery_none">Walang mga recovery code na nabuo.</string>
-    <string name="account_recovery_count">%1$d na hindi nagamit na recovery codes.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s natitirang recovery code.</item>
+        <item quantity="other">%1$s natitirang recovery code.</item>
+    </plurals>
     <string name="account_recovery_generate">Bumuo ng mga code</string>
     <string name="account_recovery_regenerate">Bumuo muli ng mga code</string>
     <string name="account_recovery_regen_title">Bumuo muli ng mga recovery code?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Huling ginamit %1$s</string>
     <string name="route_delete_message">Aalisin nito ang ruta para sa path na \"%1$s\".</string>
     <string name="route_empty">Walang mga naka-configure na ruta.</string>
-    <string name="route_meta">Prayoridad %1$d · %2$s</string>
+    <string name="route_meta">Prayoridad %1$s · %2$s</string>
     <string name="interests_search_placeholder">Maghanap ng mga paksa na idadagdag…</string>
     <string name="interests_empty">Wala pang mga interes.</string>
     <string name="interests_summary_regenerate">Muling buoin ang buod</string>
@@ -270,7 +270,10 @@
     <string name="system_users_session_last_accessed">Huling na-access: %1$s</string>
     <string name="system_users_revoke_all_title">Bawiin ang lahat ng mga session?</string>
     <string name="system_users_revoke_all_message">Ang lahat ng mga aktibong session ng user na ito ay mag-sign out.</string>
-    <string name="system_users_pagination_status">Ipinapakita %1$d–%2$d ng %3$d na users</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Ipinapakita ang %1$s–%2$s sa %3$s na user</item>
+        <item quantity="other">Ipinapakita ang %1$s–%2$s sa %3$s na user</item>
+    </plurals>
     <string name="account_title">Account</string>
     <string name="account_section_identity">Identity</string>
     <string name="account_identity_identity">Identity</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">I-verify ang DNS</string>
     <string name="settings_home_domains">Mga domain</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Ipinadala ang test sa %1$d destinasyon</item>
-        <item quantity="other">Ipinadala ang test sa %1$d na destinasyon</item>
+        <item quantity="one">Ipinadala ang test sa %1$s destinasyon</item>
+        <item quantity="other">Ipinadala ang test sa %1$s na destinasyon</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">Pinawalang-bisa ang %1$d session</item>
-        <item quantity="other">Pinawalang-bisa ang %1$d na session</item>
+        <item quantity="one">Pinawalang-bisa ang %1$s session</item>
+        <item quantity="other">Pinawalang-bisa ang %1$s na session</item>
     </plurals>
     <string name="login_title">Mag-login</string>
     <string name="login_section_methods">Mga paraan ng pag-login</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Pampubliko</string>
     <string name="system_status_reachability_private">Pribado</string>
     <string name="system_status_reachability_unknown">Hindi alam</string>
-    <string name="system_status_relay">Sa pamamagitan ng relay</string>
-    <string name="system_status_mesh">Mesh ng broadcast</string>
+    <string name="system_status_reachability_relay">%1$s · sa pamamagitan ng relay</string>
     <string name="system_status_broadcast">Huling broadcast</string>
     <string name="system_status_queued_broadcasts">Mga naka-queue na broadcast na mensahe</string>
     <string name="system_setting_hostname_publish">Ianunsyo ang hostname at mga domain sa ibang mga server</string>
     <string name="system_setting_hostname">Hostname na inanunsyo sa ibang mga server</string>
     <string name="system_status_peer_id">ID ng peer</string>
     <string name="system_status_holepunch">Hole punch</string>
-    <string name="system_status_holepunch_value">%1$d nagtagumpay · %2$d nabigo</string>
     <string name="system_status_awaiting_routing">Mga mensaheng naghihintay ng ruta</string>
     <string name="system_status_relay_service">Serbisyo ng relay</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d mga reserbasyon · %3$d mga sirkito · %4$d tinanggihan</string>
     <string name="route_target_select">Piliin</string>
     <string name="account_data_description">I-download ang kumpletong backup na maibabalik mo sa server na ito o sa ibang Mochi server.</string>
     <string name="route_target_none">Walang available na target</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Huling nakita %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Naipadala ang pagsubok sa %1$d sa %2$d na destinasyon</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Naipadala ang test sa %1$s mula sa %2$s na destinasyon</item>
+        <item quantity="other">Naipadala ang test sa %1$s mula sa %2$s na destinasyon</item>
+    </plurals>
     <string name="notifprefs_test_none">Walang naka-configure na destination</string>
     <string name="notifprefs_transport_fcm">Android push</string>
     <string name="notifprefs_no_destinations">Walang destinasyon</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">Aalisin nito ang access sa kalendaryo ng %1$s. Mananatili ang pag-sign in gamit ang %2$s hanggang sa i-unlink mo ito sa pahina ng Login.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Hindi kilalang tema</string>
+    <string name="system_documents_modified">Binago</string>
+    <string name="system_documents_discard_title">Itapon ang mga pagbabago?</string>
+    <string name="system_documents_discard">Itapon</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s nagtagumpay</item>
+        <item quantity="other">%1$s nagtagumpay</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s nabigo</item>
+        <item quantity="other">%1$s nabigo</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s na reserbasyon</item>
+        <item quantity="other">%1$s / %2$s na reserbasyon</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s na sirkito</item>
+        <item quantity="other">%1$s na sirkito</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s tinanggihan</item>
+        <item quantity="other">%1$s tinanggihan</item>
+    </plurals>
 </resources>

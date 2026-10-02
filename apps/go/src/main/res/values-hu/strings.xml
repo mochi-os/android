@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Törlés</string>
     <string name="go_delete_message">Ez a játszma eltávolításra kerül a listáról. Ez nem vonható vissza.</string>
     <string name="go_delete_title">Törli a játékot?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Elfogadás</string>
     <string name="go_draw_decline">Elutasítás</string>
     <string name="go_draw_offered_received">%1$s döntetlent ajánlott</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Feladva</string>
     <string name="go_new_game_title">Új Go játszma</string>
     <string name="go_new_game_no_friends">Hozzá kell adnia egy barátot, mielőtt játszmát indíthatna.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Pontok hozzáadva a Fehér pontszámához kompenzációként, hogy a Fekete kezd</string>
 
-    <string name="go_board_a11y">%1$d×%1$d-es Go-tábla</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d-es gótábla, ön következik fekete kővel</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d-es gótábla, ön következik fehér kővel</string>
+    <string name="go_board_a11y">%1$s×%1$s-es Go-tábla</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s-es gótábla, ön következik fekete kővel</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s-es gótábla, ön következik fehér kővel</string>
     <string name="go_status_scoring">Számolás — egyezzetek meg az eredményben vagy játsszatok tovább</string>
     <string name="go_score_proposed">Javasolt pontszám: fekete %1$s, fehér %2$s</string>
     <string name="go_score_opponent_accepted">Az ellenfeled elfogadja ezt a pontszámot: fekete %1$s, fehér %2$s</string>

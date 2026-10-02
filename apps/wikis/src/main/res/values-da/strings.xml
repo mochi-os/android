@@ -96,9 +96,9 @@
     <string name="wikis_delete_page_confirm">Slet</string>
     <string name="wikis_delete_page_cancel">Annuller</string>
     <string name="wikis_delete_page_failed">Kunne ikke slette side</string>
-    <string name="wikis_revert_page_comment_label">Tilbagefør kommentar</string>
-    <string name="wikis_revert_page_confirm">Annuller ændring</string>
-    <string name="wikis_revert_page_failed">Kunne ikke tilbageføre side</string>
+    <string name="wikis_revert_page_comment_label">Kommentar til gendannelse</string>
+    <string name="wikis_revert_page_confirm">Gendan</string>
+    <string name="wikis_revert_page_failed">Kunne ikke gendanne side</string>
     <string name="wikis_rename_page_title">Omdøb side</string>
     <string name="wikis_rename_page_label">Ny URL</string>
     <string name="wikis_rename_page_redirects">Opret omdirigering fra gammel URL</string>
@@ -110,9 +110,9 @@
     <string name="wikis_history_title">Historik</string>
     <string name="wikis_history_empty">Ingen revisioner fundet</string>
     <string name="wikis_history_view_action">Vis</string>
-    <string name="wikis_history_revert_action">Tilbagefør til denne version</string>
+    <string name="wikis_history_revert_action">Gendan til denne version</string>
     <string name="wikis_revision_current_badge">Aktuel</string>
-    <string name="wikis_revision_revert_to_this">Tilbagefør til denne version</string>
+    <string name="wikis_revision_revert_to_this">Gendan til denne version</string>
     <string name="wikis_changes_title">Nylige ændringer</string>
     <string name="wikis_changes_subtitle">Nylige redigeringer på tværs af alle sider i denne wiki.</string>
     <string name="wikis_changes_empty">Ingen ændringer endnu</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Notifikationer om sideredigeringer, kommentarer og invitationer.</string>
     <string name="wikis_pageview_toc_expand">Vis indholdsfortegnelse</string>
     <string name="wikis_pageview_toc_collapse">Skjul indholdsfortegnelse</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Opdateret %1$s</string>
     <string name="wikis_pageview_not_found_description">Siden \"%1$s\" eksisterer ikke endnu.</string>
     <string name="wikis_pageview_share_chooser">Wiki-link</string>
@@ -246,14 +246,14 @@
     <string name="wikis_insert_dialog_empty">Ingen vedhæftninger endnu. Upload en fil for at komme i gang.</string>
     <string name="wikis_delete_page_message">Du er ved at slette siden \"%1$s\" (%2$s). Denne handling kan fortrydes ved at gendanne fra historikken.</string>
     <string name="wikis_delete_page_success">Side slettet</string>
-    <string name="wikis_revert_page_title">Tilbagefør side</string>
-    <string name="wikis_revert_page_message">Du er ved at gendanne %1$s til version %2$d. Dette opretter en ny revision med indholdet fra version %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Gendannet til version %1$d</string>
-    <string name="wikis_revert_page_success">Gendannet til version %1$d</string>
+    <string name="wikis_revert_page_title">Gendan side</string>
+    <string name="wikis_revert_page_message">Du er ved at gendanne %1$s til version %2$s. Dette opretter en ny revision med indholdet fra version %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Gendannet til version %1$s</string>
+    <string name="wikis_revert_page_success">Gendannet til version %1$s</string>
     <string name="wikis_rename_page_renaming">Omdøber…</string>
     <string name="wikis_rename_page_success">Side omdøbt</string>
-    <string name="wikis_history_viewing">Viser historik for %1$s, aktuel version %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Viser historik for %1$s, aktuel version %2$s</string>
+    <string name="wikis_revision_version_badge">Version %1$s</string>
     <string name="wikis_search_pages_placeholder">Søg sider efter titel eller indhold…</string>
     <string name="wikis_search_no_results">Ingen sider fundet for \"%1$s\". Prøv andre søgeord.</string>
     <string name="wikis_search_updated">Opdateret %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">efter %1$s</string>
     <string name="wikis_revision_show_page">Vis side</string>
     <string name="wikis_revision_compare_failed">Kunne ikke indlæse den forrige version til sammenligning.</string>
-    <string name="wikis_revision_changes_from">Ændringer fra version %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Ændringer fra version %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d kommentar</item>
-        <item quantity="other">%d kommentarer</item>
+        <item quantity="one">%s kommentar</item>
+        <item quantity="other">%s kommentarer</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d svar</item>
-        <item quantity="other">+%d flere svar</item>
+        <item quantity="one">%s svar</item>
+        <item quantity="other">+%s flere svar</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d side</item>
-        <item quantity="other">%d sider</item>
+        <item quantity="one">%s side</item>
+        <item quantity="other">%s sider</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fil</item>
-        <item quantity="other">%d filer</item>
+        <item quantity="one">%s fil</item>
+        <item quantity="other">%s filer</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d billede</item>
-        <item quantity="other">%d billeder</item>
+        <item quantity="one">%s billede</item>
+        <item quantity="other">%s billeder</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="other">%d dokumenter</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="other">%s dokumenter</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d side med dette tag</item>
-        <item quantity="other">%d sider med dette tag</item>
+        <item quantity="one">%s side med dette tag</item>
+        <item quantity="other">%s sider med dette tag</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Fandt %1$d resultat for «%2$s»</item>
-        <item quantity="other">Fandt %1$d resultater for «%2$s»</item>
+        <item quantity="one">Fandt %1$s resultat for «%2$s»</item>
+        <item quantity="other">Fandt %1$s resultater for «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Billedteksten kunne ikke gemmes</string>
     <string name="wikis_attachments_upload_types">Understøttede filer: billeder, PDF, DOC, DOCX, TXT og MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Ny RSS-URL kopieret til udklipsholderen</string>
     <string name="wikis_rss_exists">Denne feed-URL er allerede udstedt og kan ikke vises igen.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Viser den første %1$d kommentar.</item>
-        <item quantity="other">Viser de første %1$d kommentarer.</item>
+        <item quantity="one">Viser den første %1$s kommentar.</item>
+        <item quantity="other">Viser de første %1$s kommentarer.</item>
     </plurals>
 </resources>

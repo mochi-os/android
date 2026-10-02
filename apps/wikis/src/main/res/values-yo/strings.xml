@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Àwọn ìyípadà àti àwọn àlàyé</string>
     <string name="wikis_rss_copied">A ti ṣàdàkọ URL RSS sí clipboard</string>
     <string name="wikis_rss_failed">Kò lè rí token RSS</string>
-    <string name="wikis_rss_revoke">Fagilé ìwọlé</string>
-    <string name="wikis_rss_revoked">Ìwọlé RSS ti fagilé</string>
+    <string name="wikis_rss_revoke">Gba ìwọlé padà</string>
+    <string name="wikis_rss_revoked">A ti gba ìwọlé RSS padà</string>
     <string name="wikis_find_title">Wa àwọn wiki</string>
     <string name="wikis_find_no_results">A kò rí wiki kankan</string>
     <string name="wikis_find_recommended_section">Àwọn wiki tí a dábàá</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Àwọn ìfitónilétí nípa àtúnṣe ojú-ìwé wiki, àsọyé àti ìpè.</string>
     <string name="wikis_pageview_toc_expand">Fi àtòjọ àkóónú hàn</string>
     <string name="wikis_pageview_toc_collapse">Fi àtòjọ àkóónú pamọ́</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">A ṣe àtúnṣe ní %1$s</string>
     <string name="wikis_pageview_not_found_description">Ojú-ìwé “%1$s” kò tíì sí.</string>
     <string name="wikis_pageview_share_chooser">Ọ̀nà àsopọ̀ wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">O fẹ́ pa ojú-ìwé “%1$s” (%2$s) rẹ́. A lè yí ìṣe yìí padà nípa mímú padà láti inú ìtàn.</string>
     <string name="wikis_delete_page_success">A ti pa ojú-ìwé rẹ́</string>
     <string name="wikis_revert_page_title">Mú ojú-ìwé padà</string>
-    <string name="wikis_revert_page_message">O fẹ́ da %1$s padà sí ẹ̀dà %2$d. Èyí yóò ṣẹ̀dá àtúnyẹ̀wò tuntun pẹ̀lú àkóónú láti ẹ̀dà %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Ti padà sí ẹ̀dà %1$d</string>
-    <string name="wikis_revert_page_success">Ti padà sí ẹ̀dà %1$d</string>
+    <string name="wikis_revert_page_message">O fẹ́ da %1$s padà sí ẹ̀dà %2$s. Èyí yóò ṣẹ̀dá àtúnyẹ̀wò tuntun pẹ̀lú àkóónú láti ẹ̀dà %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Ti padà sí ẹ̀dà %1$s</string>
+    <string name="wikis_revert_page_success">Ti padà sí ẹ̀dà %1$s</string>
     <string name="wikis_rename_page_renaming">Ó ń tún orúkọ sọ…</string>
     <string name="wikis_rename_page_success">A ti tún ojú-ìwé sọ lórúkọ</string>
-    <string name="wikis_history_viewing">Ń wo ìtàn fún %1$s, ẹ̀dà lọ́wọ́lọ́wọ́ %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Ń wo ìtàn fún %1$s, ẹ̀dà lọ́wọ́lọ́wọ́ %2$s</string>
+    <string name="wikis_revision_version_badge">Ẹ̀dà %1$s</string>
     <string name="wikis_search_pages_placeholder">Wá àwọn ojú-ìwé nípa àkọlé tàbí àkóónú…</string>
     <string name="wikis_search_no_results">Kò sí ojú-ìwé fún “%1$s”. Gbìyànjú àwọn ọ̀rọ̀ ìwádìí mìíràn.</string>
     <string name="wikis_search_updated">A ṣe àtúnṣe ní %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">nípa %1$s</string>
     <string name="wikis_revision_show_page">Fi ojú-ìwé hàn</string>
     <string name="wikis_revision_compare_failed">Kò lè gbé ẹ̀yà tẹ́lẹ̀ wọlé fún ìfiwéra.</string>
-    <string name="wikis_revision_changes_from">Àwọn àyípadà láti ẹ̀yà %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Àwọn àyípadà láti ẹ̀yà %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">àsọyé %d</item>
-        <item quantity="other">àsọyé %d</item>
+        <item quantity="one">àsọyé %s</item>
+        <item quantity="other">àsọyé %s</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">Ìdáhùn %d</item>
-        <item quantity="other">+%d àwọn ìdáhùn síi</item>
+        <item quantity="one">Ìdáhùn %s</item>
+        <item quantity="other">+%s àwọn ìdáhùn síi</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">Ojú-ìwé %d</item>
-        <item quantity="other">Ojú-ìwé %d</item>
+        <item quantity="one">Ojú-ìwé %s</item>
+        <item quantity="other">Ojú-ìwé %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">Fáìlì %d</item>
-        <item quantity="other">Fáìlì %d</item>
+        <item quantity="one">Fáìlì %s</item>
+        <item quantity="other">Fáìlì %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">Àwòrán %d</item>
-        <item quantity="other">Àwòrán %d</item>
+        <item quantity="one">Àwòrán %s</item>
+        <item quantity="other">Àwòrán %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">Ìwé %d</item>
-        <item quantity="other">Ìwé %d</item>
+        <item quantity="one">Ìwé %s</item>
+        <item quantity="other">Ìwé %s</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Ojú-ìwé %d pẹ̀lú àmì tag yìí</item>
-        <item quantity="other">Ojú-ìwé %d pẹ̀lú àmì tag yìí</item>
+        <item quantity="one">Ojú-ìwé %s pẹ̀lú àmì tag yìí</item>
+        <item quantity="other">Ojú-ìwé %s pẹ̀lú àmì tag yìí</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">A rí Èsì %1$d fún «%2$s»</item>
-        <item quantity="other">A rí Èsì %1$d fún «%2$s»</item>
+        <item quantity="one">A rí Èsì %1$s fún «%2$s»</item>
+        <item quantity="other">A rí Èsì %1$s fún «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Kò ṣeé ṣe láti fi àlàyé pamọ́</string>
     <string name="wikis_attachments_upload_types">Àwọn fáìlì tí a ti ìlẹ̀kùn fún: àwòrán, PDF, DOC, DOCX, TXT, àti MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">A ti ṣàdàkọ URL RSS tuntun sí clipboard</string>
     <string name="wikis_rss_exists">A ti gbé URL ìjẹun yìí jáde tẹ́lẹ̀, kò sì ṣeé fi hàn lẹ́ẹ̀kansí.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Ń fi àsọyé %1$d àkọ́kọ́ hàn.</item>
-        <item quantity="other">Ń fi àwọn àsọyé %1$d àkọ́kọ́ hàn.</item>
+        <item quantity="one">Ń fi àsọyé %1$s àkọ́kọ́ hàn.</item>
+        <item quantity="other">Ń fi àwọn àsọyé %1$s àkọ́kọ́ hàn.</item>
     </plurals>
 </resources>

@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">افراد</string>
     <string name="projects_option_icon">آیکون</string>
     <string name="projects_option_icon_placeholder">مثلاً Check، Star، Flag</string>
-    <string name="projects_settings_unsubscribe">لغو اشتراک</string>
+    <string name="projects_settings_unsubscribe">قطع اشتراک</string>
     <string name="projects_settings_delete_project">حذف پروژه</string>
     <string name="projects_settings_delete_confirm_title">حذف پروژه</string>
-    <string name="projects_settings_unsubscribe_title">لغو اشتراک</string>
-    <string name="projects_settings_unsubscribe_message">آیا از لغو اشتراک این پروژه مطمئن هستید؟</string>
+    <string name="projects_settings_unsubscribe_title">قطع اشتراک</string>
+    <string name="projects_settings_unsubscribe_message">آیا از قطع اشتراک این پروژه مطمئن هستید؟</string>
     <string name="projects_access_level_owner">مالک</string>
     <string name="projects_object_watch">تماشا</string>
     <string name="projects_object_tab_properties">ویژگی‌ها</string>
@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">تغییری انجام داد</string>
     <string name="projects_attachment_empty">بدون پیوست</string>
     <string name="projects_attachment_default_name">پیوست</string>
-    <string name="projects_attachment_size_bytes">%1$d بایت</string>
-    <string name="projects_attachment_size_kb">%1$d کیلوبایت</string>
-    <string name="projects_attachment_size_mb">%1$d مگابایت</string>
-    <string name="projects_attachment_size_gb">%1$d گیگابایت</string>
+    <string name="projects_attachment_size_bytes">%1$s بایت</string>
+    <string name="projects_attachment_size_kb">%1$s کیلوبایت</string>
+    <string name="projects_attachment_size_mb">%1$s مگابایت</string>
+    <string name="projects_attachment_size_gb">%1$s گیگابایت</string>
     <string name="projects_request_new">درخواست ادغام جدید</string>
     <string name="projects_request_status_closed">بسته شده</string>
     <string name="projects_request_back_to_list">بازگشت به فهرست</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">در حال بررسی وضعیت ادغام…</string>
     <string name="projects_request_can_merge">قابل ادغام است</string>
     <string name="projects_request_cannot_merge">قابل ادغام نیست</string>
-    <string name="projects_request_ahead_behind">%1$d جلوتر، %2$d عقب‌تر</string>
+    <string name="projects_request_ahead_behind">%1$s جلوتر، %2$s عقب‌تر</string>
     <string name="projects_request_draft_notice">این یک پیش‌نویس است. پیش از ادغام، به‌عنوان آماده علامت بزنید.</string>
     <string name="projects_request_view_diff">نمایش تفاوت</string>
     <string name="projects_request_mark_ready">علامت‌گذاری به‌عنوان آماده</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">هیچ ستونی برای این نما پیکربندی نشده است</string>
     <string name="projects_board_no_options">هیچ گزینه‌ای برای فیلد ستون پیکربندی نشده است</string>
     <string name="projects_board_column_options">گزینه‌های ستون</string>
-    <string name="projects_board_nested_count">+%1$d تو در تو</string>
+    <string name="projects_board_nested_count">+%1$s تو در تو</string>
     <string name="projects_move_to_column">انتقال به ستون</string>
     <string name="projects_move_to_row">انتقال به ردیف</string>
     <string name="projects_move_after">پس از %1$s</string>
@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">جدید</string>
     <string name="projects_settings_section_identity">هویت</string>
     <string name="projects_settings_access_updated">دسترسی به‌روزرسانی شد</string>
-    <string name="projects_settings_access_revoked">دسترسی لغو شد</string>
+    <string name="projects_settings_access_revoked">دسترسی ابطال شد</string>
     <string name="projects_settings_section_access">مدیریت دسترسی</string>
     <string name="projects_people_search">جستجوی افراد</string>
     <string name="projects_settings_field_entity_id">شناسه موجودیت</string>
@@ -360,13 +360,13 @@
     <string name="projects_activity_commented">نظر داد</string>
     <string name="projects_attachment_delete_confirm_message">این پیوست برای همیشه حذف خواهد شد.</string>
     <string name="projects_attachment_delete_confirm_title">پیوست حذف شود؟</string>
-    <string name="projects_settings_unsubscribe_section">لغو اشتراک پروژه</string>
+    <string name="projects_settings_unsubscribe_section">قطع اشتراک از پروژه</string>
     <string name="projects_share_link_title">اشتراک‌گذاری پروژه</string>
     <string name="projects_sort_filter_title">مرتب‌سازی و پالایش</string>
     <string name="projects_create_prefix_hint">برای شناسه‌های خوانا مانند %1$s-1 و %1$s-2 استفاده می‌شود</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d فایل متناقض</item>
-        <item quantity="other">%1$d فایل متناقض</item>
+        <item quantity="one">%1$s فایل متناقض</item>
+        <item quantity="other">%1$s فایل متناقض</item>
     </plurals>
     <string name="projects_design_export_saved">طرح ذخیره شد</string>
     <string name="projects_design_import_failed">خواندن آن فایل ممکن نشد</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">داده‌های پروژه ذخیره شد</string>
     <string name="projects_exporting">در حال آماده‌سازی خروجی…</string>
     <string name="projects_board_add_column">افزودن ستون</string>
-    <string name="projects_design_sample">نمونه %1$d</string>
+    <string name="projects_design_sample">نمونه %1$s</string>
     <string name="projects_option_delete_title">حذف گزینه</string>
     <string name="projects_option_delete_message">آیا مطمئن هستید که می‌خواهید گزینهٔ \"%1$s\" را حذف کنید؟</string>
     <string name="projects_create_object_no_types">هیچ نوع آیتمی هنوز قابل ایجاد نیست. ابتدا آیتم‌های والد مورد نیاز را ایجاد کنید.</string>

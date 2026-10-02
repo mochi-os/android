@@ -26,6 +26,18 @@ import org.mochios.settings.api.DestinationsAvailable
 import org.mochios.settings.api.NotificationPrefsApi
 import javax.inject.Inject
 
+/**
+ * The label an edit sends, or null to leave the stored one alone. The form
+ * opens on the shown name, which for a seeded category is a translation of its
+ * stored English, so saving it untouched must not write that translation over
+ * the label - the category would then stay in this language after the user
+ * changes theirs.
+ */
+internal fun categoryLabelChange(name: String, loaded: String): String? {
+    val label = name.trim()
+    return if (label == loaded.trim()) null else label
+}
+
 /** Form state for one notification category, new or existing. */
 data class CategoryEditUiState(
     val isLoading: Boolean = true,
@@ -33,6 +45,8 @@ data class CategoryEditUiState(
     val isSaving: Boolean = false,
     val isNew: Boolean = true,
     val name: String = "",
+    /** The name the form opened with: the category's shown name, or "" for a new one. */
+    val loadedName: String = "",
     val isDefault: Boolean = false,
     val selected: Set<Pair<String, String>> = emptySet(),
     val available: DestinationsAvailable = DestinationsAvailable(),
@@ -72,10 +86,12 @@ class CategoryEditViewModel @Inject constructor(
                     ?.map { row -> row.type to row.target }
                     ?.toSet()
                     ?: everyDestination(dests)
+                val shown = category?.shown.orEmpty()
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     isLoaded = true,
-                    name = category?.label.orEmpty(),
+                    name = shown,
+                    loadedName = shown,
                     isDefault = category?.default == 1,
                     selected = selected,
                     available = dests,
@@ -123,7 +139,7 @@ class CategoryEditViewModel @Inject constructor(
                 } else {
                     api.updateCategory(
                         id = categoryId,
-                        label = state.name.trim(),
+                        label = categoryLabelChange(state.name, state.loadedName),
                         destinations = destinations,
                         default = default,
                     ).unwrapEmpty()

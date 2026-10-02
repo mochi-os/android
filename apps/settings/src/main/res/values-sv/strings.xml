@@ -5,7 +5,7 @@
     <string name="settings_home_logout">Logga ut</string>
     <string name="settings_home_account">Konto</string>
     <string name="settings_home_preferences">Inställningar</string>
-    <string name="settings_home_display">Visa</string>
+    <string name="settings_home_display">Visning</string>
     <string name="settings_home_notification_prefs">Aviseringsinställningar</string>
     <string name="settings_home_accounts">Anslutna konton</string>
     <string name="settings_home_interests">Intressen</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Ta bort rutt?</string>
     <string name="route_path">Sökväg</string>
     <string name="route_method">Metod</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">App</string>
     <string name="route_method_entity">Entitet</string>
     <string name="route_method_redirect">Omdirigering</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Hämta från packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiera</string>
     <string name="system_status_peers">Peers</string>
-    <string name="system_status_known">Kända</string>
+    <string name="system_status_peers_totals">Kända %1$s · Anslutna %2$s · Broadcast-mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Kända %1$s · Anslutna %2$s</string>
     <string name="system_status_peer_connected">Ansluten</string>
     <string name="system_status_peer_disconnected">Frånkopplad</string>
     <string name="system_status_peer_queued">Meddelanden i kö</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Ta bort</string>
     <string name="accounts_remove_title">Ta bort konto?</string>
     <string name="system_documents_title">Dokument</string>
-    <string name="system_documents_description">Serverregler, villkor och integritetsinformation som visas för dina användare</string>
     <string name="system_documents_tab_rules">Serverregler</string>
     <string name="system_documents_tab_terms">Villkor</string>
     <string name="system_documents_tab_privacy">Integritet</string>
     <string name="system_documents_language">Språk</string>
     <string name="system_documents_no_language">Inget dokument tillgängligt för detta språk.</string>
-    <string name="system_documents_customised">Anpassad</string>
     <string name="system_documents_using_default">Använder medföljande standard</string>
     <string name="system_documents_revert">Återställ till standard</string>
     <string name="system_documents_save">Spara</string>
@@ -137,7 +138,7 @@
     <string name="system_settings_reset_title">Återställ till standard?</string>
     <string name="system_setting_apps_install_user">Tillåt användare att installera appar</string>
     <string name="system_setting_auth_email">Logga in med e-postkod</string>
-    <string name="system_setting_auth_passkey">Logga in med passkey</string>
+    <string name="system_setting_auth_passkey">Logga in med nyckel</string>
     <string name="system_setting_auth_totp">Logga in med TOTP-autentiseringsapp</string>
     <string name="system_setting_auth_recovery">Logga in med återställningskod</string>
     <string name="system_setting_auth_oauth">Logga in med OAuth 2.0</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">Ta bort användare</string>
     <string name="system_users_delete_title">Ta bort användare?</string>
     <string name="system_users_manage_sessions">Hantera sessioner</string>
-    <string name="system_users_sessions_description">Visa och återkalla aktiva sessioner för denna användare.</string>
     <string name="system_users_sessions_empty">Den här användaren har inga aktiva sessioner.</string>
     <string name="system_users_revoke">Återkalla</string>
     <string name="system_users_revoke_all">Återkalla alla sessioner</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">Nästa</string>
     <string name="system_users_empty">Inga användare hittades</string>
     <string name="system_users_empty_search">Inga användare matchar din sökning</string>
-    <string name="system_users_empty_search_hint">Försök justera dina sökkriterier</string>
     <string name="system_users_toast_created">Användare skapad</string>
     <string name="system_users_toast_updated">Användare uppdaterad</string>
     <string name="system_users_toast_deleted">Användare borttagen</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Användarvillkor</string>
     <string name="account_passkeys_empty">Inga nycklar registrerade.</string>
     <string name="account_passkey_register_title">Lägg till nyckel</string>
-    <string name="account_passkey_register_message">Din enhet ber dig bekräfta. Nyckeln är bunden till denna enhet och används för framtida inloggningar.</string>
     <string name="account_passkey_name_label">Namn (valfritt)</string>
     <string name="account_passkey_delete_message">\"%1$s\" kommer inte längre att logga in dig.</string>
-    <string name="account_totp_description">Logga in med en 6-siffrig kod från en autentiseringsapp.</string>
     <string name="account_totp_enabled">Autentisering är aktiverad.</string>
     <string name="account_totp_setup_step1">Skanna eller ange denna hemlighet i din autentiseringsapp.</string>
     <string name="account_totp_setup_step2">Ange den 6-siffriga koden som appen visar.</string>
     <string name="account_totp_code">Kod</string>
     <string name="account_totp_disable_message">Du kan inte längre logga in med en autentiseringskod.</string>
     <string name="account_recovery_none">Inga återställningskoder genererade.</string>
-    <string name="account_recovery_count">%1$d oanvända återställningskoder.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s återstående återställningskod.</item>
+        <item quantity="other">%1$s återstående återställningskoder.</item>
+    </plurals>
     <string name="account_recovery_generate">Generera koder</string>
     <string name="account_recovery_regenerate">Återskapa koder</string>
     <string name="account_recovery_regen_title">Återskapa återställningskoder?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Senast använd %1$s</string>
     <string name="route_delete_message">Detta tar bort rutten för sökvägen \"%1$s\".</string>
     <string name="route_empty">Inga rutter konfigurerade.</string>
-    <string name="route_meta">Prioritet %1$d · %2$s</string>
+    <string name="route_meta">Prioritet %1$s · %2$s</string>
     <string name="interests_search_placeholder">Sök ämnen att lägga till…</string>
     <string name="interests_empty">Inga intressen ännu.</string>
     <string name="interests_summary_regenerate">Generera om sammanfattningen</string>
@@ -270,7 +270,10 @@
     <string name="system_users_session_last_accessed">Senaste åtkomst: %1$s</string>
     <string name="system_users_revoke_all_title">Återkalla alla sessioner?</string>
     <string name="system_users_revoke_all_message">Alla aktiva sessioner för denna användare loggas ut.</string>
-    <string name="system_users_pagination_status">Visar %1$d–%2$d av %3$d användare</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Visar %1$s–%2$s av %3$s användare</item>
+        <item quantity="other">Visar %1$s–%2$s av %3$s användare</item>
+    </plurals>
     <string name="account_title">Konto</string>
     <string name="account_section_identity">Identitet</string>
     <string name="account_identity_identity">Identitet</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Verifiera DNS</string>
     <string name="settings_home_domains">Domäner</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test skickat till %1$d destination</item>
-        <item quantity="other">Test skickat till %1$d destinationer</item>
+        <item quantity="one">Test skickat till %1$s destination</item>
+        <item quantity="other">Test skickat till %1$s destinationer</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 session återkallad</item>
-        <item quantity="other">%1$d sessioner återkallade</item>
+        <item quantity="one">%1$s session återkallad</item>
+        <item quantity="other">%1$s sessioner återkallade</item>
     </plurals>
     <string name="login_title">Logga in</string>
     <string name="login_section_methods">Inloggningsmetoder</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Offentlig</string>
     <string name="system_status_reachability_private">Privat</string>
     <string name="system_status_reachability_unknown">Okänd</string>
-    <string name="system_status_relay">Via relä</string>
-    <string name="system_status_mesh">Broadcast-mesh</string>
+    <string name="system_status_reachability_relay">%1$s · via relä</string>
     <string name="system_status_broadcast">Senaste utsändning</string>
     <string name="system_status_queued_broadcasts">Sändningsmeddelanden i kö</string>
     <string name="system_setting_hostname_publish">Annonsera värdnamn och domäner till andra servrar</string>
     <string name="system_setting_hostname">Värdnamn annonserat till andra servrar</string>
     <string name="system_status_peer_id">Peer-ID</string>
     <string name="system_status_holepunch">Hålslagning</string>
-    <string name="system_status_holepunch_value">%1$d lyckades · %2$d misslyckades</string>
     <string name="system_status_awaiting_routing">Meddelanden som väntar på routing</string>
     <string name="system_status_relay_service">Relätjänst</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d reservationer · %3$d kretsar · %4$d nekade</string>
     <string name="route_target_select">Välj</string>
     <string name="account_data_description">Ladda ner en fullständig säkerhetskopia som du kan återställa på den här eller en annan Mochi-server.</string>
     <string name="route_target_none">Inga mål tillgängliga</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Senast sedd %1$s</string>
     <string name="notifprefs_device_app">%1$s · app</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Test skickat till %1$d av %2$d destinationer</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test skickat till %1$s av %2$s destination</item>
+        <item quantity="other">Test skickat till %1$s av %2$s destinationer</item>
+    </plurals>
     <string name="notifprefs_test_none">Inga destinationer konfigurerade</string>
     <string name="notifprefs_transport_fcm">Android-push</string>
     <string name="notifprefs_no_destinations">Inga destinationer</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">Detta återkallar kalenderåtkomsten för %1$s. Inloggning med %2$s finns kvar tills du tar bort länken på inloggningssidan.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Okänt tema</string>
+    <string name="system_documents_modified">Ändrad</string>
+    <string name="system_documents_discard_title">Kasta ändringarna?</string>
+    <string name="system_documents_discard">Kasta</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s lyckades</item>
+        <item quantity="other">%1$s lyckades</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s misslyckades</item>
+        <item quantity="other">%1$s misslyckades</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s reservation</item>
+        <item quantity="other">%1$s / %2$s reservationer</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s krets</item>
+        <item quantity="other">%1$s kretsar</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s nekad</item>
+        <item quantity="other">%1$s nekade</item>
+    </plurals>
 </resources>

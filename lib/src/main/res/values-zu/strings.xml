@@ -60,7 +60,7 @@
     <string name="notifications_empty">Azikho izaziso</string>
     <string name="notifications_empty_unread">Usuzifundile zonke</string>
     <string name="notifications_tab_unread">Okungafundwanga</string>
-    <string name="notifications_tab_unread_count">Ezingafundiwe (%1$d)</string>
+    <string name="notifications_tab_unread_count">Ezingafundiwe (%1$s)</string>
     <string name="notifications_tab_all">Konke</string>
     <string name="notifications_mark_all_read">Maka konke njengokufundiwe</string>
     <string name="notifications_clear_all">Sula konke</string>
@@ -103,9 +103,9 @@
     <string name="settings_time_zone">Izoni yesikhathi</string>
     <string name="settings_reset_to_defaults">Setha kabusha kokuzenzakalelayo</string>
     <string name="settings_reset_confirm_title">Setha kabusha okuthandayo?</string>
-    <string name="settings_reset_confirm_message">Lokhu kuzosetha kabusha zonke izintandokazi zibe yizilinganiso ezizenzakalelayo.</string>
+    <string name="settings_reset_confirm_message">Lokhu kuzosetha kabusha lezi zintandokazi zibe yizilinganiso ezizenzakalelayo.</string>
     <string name="settings_reset">Setha kabusha</string>
-    <string name="settings_display_title">Bonisa</string>
+    <string name="settings_display_title">Isibonisi</string>
     <string name="settings_display_reset">Setha kabusha kokuzenzakalelayo</string>
     <string name="settings_display_reset_confirm_title">Buyisela isibonisi?</string>
     <string name="settings_display_reset_confirm_message">Lokhu kuzobuyisela izilungiselelo zesibonisi emananí awo azenzakalelayo.</string>
@@ -122,7 +122,7 @@
     <string name="common_not_saved">Akulondoloziwe</string>
     <string name="auth_server_url">I-URL yeseva</string>
     <string name="auth_link_rules">Imithetho</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="lightbox_position">%1$s / %2$s</string>
     <string name="about_label">Mayelana</string>
     <string name="game_chat_move_played">%1$s udlale %2$s</string>
 
@@ -130,7 +130,7 @@
     <string name="error_network">Ayikwazi ukuxhumeka. Hlola uxhumano lwakho lwe-inthanethi bese uzama futhi.</string>
     <string name="error_authentication_required">Kudingeka ukuqinisekiswa</string>
     <string name="error_not_found">Ayitholakalanga</string>
-    <string name="error_server">Iphutha leseva (%1$d). Sicela uzame futhi kamuva.</string>
+    <string name="error_server">Iphutha leseva (%1$s). Sicela uzame futhi kamuva.</string>
     <string name="error_unexpected">Kwenzeke iphutha elingalindelekile</string>
     <string name="error_enter_server_url">Sicela ufake i-URL yeseva</string>
     <string name="error_enter_email">Sicela ufake i-imeyili yakho</string>
@@ -146,7 +146,7 @@
     <string name="auth_next">Okulandelayo</string>
     <string name="auth_or_log_in_with">Noma ngena ngemvume nge</string>
     <string name="auth_passkey">Ukhiye wokungena</string>
-    <string name="auth_use_passkey">Sebenzisa i-passkey</string>
+    <string name="auth_use_passkey">Sebenzisa ukhiye wokungena</string>
     <string name="auth_email_me_a_code">Ngithumelele ikhodi nge-imeyili</string>
     <string name="auth_or_enter_authenticator_code">Noma faka ikhodi yesiqinisekisi</string>
     <string name="auth_log_in">Ngena</string>
@@ -180,19 +180,19 @@
     <string name="access_level_react">Sabela</string>
     <string name="notifications_clear">Sula izaziso</string>
     <string name="entity_avatar_alt">I-avatar ka-%1$s</string>
-    <string name="media_grid_more_count">+%1$d</string>
+    <string name="media_grid_more_count">+%1$s</string>
     <string name="format_time_just_now">Manje nje</string>
-    <string name="format_time_minutes_ago">%1$dm edlule</string>
-    <string name="format_time_hours_ago">%1$dh edlule</string>
-    <string name="format_time_days_ago">%1$dd edlule</string>
-    <string name="format_time_weeks_ago">%1$dw edlule</string>
-    <string name="format_time_months_ago">%1$dmo edlule</string>
-    <string name="format_time_years_ago">%1$dy edlule</string>
-    <string name="format_time_minutes_short">%1$dm</string>
-    <string name="format_time_hours_short">%1$dh</string>
-    <string name="format_time_days_short">%1$dd</string>
-    <string name="format_time_weeks_short">%1$dw</string>
-    <string name="format_time_months_short">%1$dmo</string>
+    <string name="format_time_minutes_ago">%1$sm edlule</string>
+    <string name="format_time_hours_ago">%1$sh edlule</string>
+    <string name="format_time_days_ago">%1$sd edlule</string>
+    <string name="format_time_weeks_ago">%1$sw edlule</string>
+    <string name="format_time_months_ago">%1$smo edlule</string>
+    <string name="format_time_years_ago">%1$sy edlule</string>
+    <string name="format_time_minutes_short">%1$sm</string>
+    <string name="format_time_hours_short">%1$sh</string>
+    <string name="format_time_days_short">%1$sd</string>
+    <string name="format_time_weeks_short">%1$sw</string>
+    <string name="format_time_months_short">%1$smo</string>
     <string name="reaction_add">Engeza ukusabela</string>
     <string name="push_service_channel">Ukusunduzwa kwe-Mochi</string>
     <string name="push_service_channel_description">Igcina i-Mochi ixhumekile ukuze ithole izaziso</string>
@@ -230,14 +230,14 @@
     <string name="stepup_email_placeholder">Faka ikhodi evela ku-imeyili yakho</string>
     <string name="stepup_totp_label">Ikhodi yesiqinisekisi</string>
     <string name="stepup_totp_placeholder">Faka ikhodi yakho yesiqinisekisi</string>
-    <string name="stepup_use_passkey">Sebenzisa i-passkey yakho</string>
+    <string name="stepup_use_passkey">Sebenzisa ukhiye wakho wokungena</string>
     <string name="stepup_send_email">Thumela i-imeyili</string>
     <string name="stepup_resend_email">Thumela i-imeyili futhi</string>
     <string name="stepup_verify">Qinisekisa</string>
     <string name="stepup_continue_with">Qhubeka nge-%1$s</string>
     <string name="stepup_error_start">Ayikwazanga ukuqala ukuqinisekiswa kabusha. Sicela uzame futhi.</string>
     <string name="stepup_error_code">Leyo khodi ayilungile noma isiphelelwe yisikhathi.</string>
-    <string name="stepup_error_passkey">Ukuqinisekiswa kwe-passkey kuhlulekile. Sicela uzame futhi.</string>
+    <string name="stepup_error_passkey">Ukuqinisekiswa kukakhiye wokungena kuhlulekile. Sicela uzame futhi.</string>
     <string name="stepup_error_oauth">Ayikwazanga ukuqinisekisa ngaleyo akhawunti. Sicela uzame futhi.</string>
     <string name="game_system_resign">%1$s udedele</string>
     <string name="game_system_draw_offer">%1$s uhlongoze ukulingana</string>
@@ -285,8 +285,8 @@
     <string name="comment_anchor_open">Buka isithombe okuphawulwe ngaso lapha</string>
     <string name="comment_anchor_default">Kulesi sithombe</string>
     <plurals name="lightbox_comments_others">
-        <item quantity="one">Bonisa okunye okuphawuliwe oku-%1$d kulokhu okuthunyelwe</item>
-        <item quantity="other">Bonisa okunye okuphawuliwe oku-%1$d kulokhu okuthunyelwe</item>
+        <item quantity="one">Bonisa okunye okuphawuliwe oku-%1$s kulokhu okuthunyelwe</item>
+        <item quantity="other">Bonisa okunye okuphawuliwe oku-%1$s kulokhu okuthunyelwe</item>
     </plurals>
     <string name="lightbox_comments">Imibono</string>
     <string name="common_attachment_unavailable">Isinamathiselo asitholakali okwesikhashana</string>

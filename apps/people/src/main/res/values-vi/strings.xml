@@ -180,7 +180,7 @@
     <string name="people_books_create">Tạo sổ địa chỉ</string>
     <string name="people_books_delete">Xóa sổ địa chỉ</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">Xóa %1$s và %2$d liên hệ trong đó?</item>
+        <item quantity="other">Xóa %1$s và %2$s liên hệ trong đó?</item>
     </plurals>
     <string name="people_welcome_body">Tìm bạn bè trên khắp Mochi và kết nối. Nhấn Thêm liên hệ để gửi lời mời.</string>
     <string name="people_person_state_contact">Có trong danh bạ</string>

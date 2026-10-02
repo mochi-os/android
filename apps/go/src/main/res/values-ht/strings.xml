@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Efase</string>
     <string name="go_delete_message">Pati sa ap retire de lis ou. Sa pa kab anile.</string>
     <string name="go_delete_title">Efase jwèt la?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Aksepte</string>
     <string name="go_draw_decline">Refize</string>
     <string name="go_draw_offered_received">%1$s ofri yon egal</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Demisyone</string>
     <string name="go_new_game_title">Nouvo jwèt Go</string>
     <string name="go_new_game_no_friends">Ou dwe ajoute yon zanmi anvan ou ka kòmanse yon jwèt.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Pwen ki ajoute nan nòt Blan an pou konpanse pou Nwa a kòmanse anvan</string>
 
-    <string name="go_board_a11y">Tablo Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Tablo Go %1$d×%1$d, se tou pa w pou mete yon wòch nwa</string>
-    <string name="go_board_a11y_turn_white">Tablo Go %1$d×%1$d, se tou pa w pou mete yon wòch blan</string>
+    <string name="go_board_a11y">Tablo Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Tablo Go %1$s×%1$s, se tou pa w pou mete yon wòch nwa</string>
+    <string name="go_board_a11y_turn_white">Tablo Go %1$s×%1$s, se tou pa w pou mete yon wòch blan</string>
     <string name="go_status_scoring">Konte — antann nou sou nòt la oswa kontinye jwe</string>
     <string name="go_score_proposed">Eskò pwopoze: nwa %1$s, blan %2$s</string>
     <string name="go_score_opponent_accepted">Advèsè ou aksepte eskò sa a: nwa %1$s, blan %2$s</string>

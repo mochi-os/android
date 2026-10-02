@@ -97,13 +97,13 @@
     <string name="calendars_repeat_forever">ជារៀងរហូត</string>
     <string name="calendars_reminder_time">នៅពេលនោះ</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">%1$d នាទីមុន</item>
+        <item quantity="other">%1$s នាទីមុន</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">%1$d ម៉ោងមុន</item>
+        <item quantity="other">%1$s ម៉ោងមុន</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">%1$d ថ្ងៃមុន</item>
+        <item quantity="other">%1$s ថ្ងៃមុន</item>
     </plurals>
     <string name="calendars_reminder_add">បន្ថែមការរំលឹក</string>
     <string name="calendars_reminder_remove">យកការរំលឹកចេញ</string>
@@ -137,9 +137,9 @@
     <string name="calendars_poll_large">ប្រតិទិននេះធំពេក</string>
     <string name="calendars_poll_invalid">អាសយដ្ឋាននេះមិនបានផ្ដល់ប្រតិទិនទេ</string>
     <string name="calendars_poll_unreachable">មិនអាចភ្ជាប់ទៅអាសយដ្ឋាននេះបានទេ</string>
-    <string name="calendars_poll_status">អាសយដ្ឋានបានឆ្លើយតប %1$d</string>
+    <string name="calendars_poll_status">អាសយដ្ឋានបានឆ្លើយតប %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="other">%1$d នាទី</item>
+        <item quantity="other">%1$s នាទី</item>
     </plurals>
     <string name="calendars_preferences_zones">បង្ហាញព្រឹត្តិការណ៍តាមល្វែងម៉ោងរបស់វា</string>
     <string name="calendars_event_backwards">បញ្ចប់មុនពេលចាប់ផ្ដើម</string>

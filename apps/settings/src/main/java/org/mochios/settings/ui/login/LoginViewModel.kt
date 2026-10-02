@@ -30,6 +30,25 @@ import org.mochios.settings.api.Passkey
 import org.mochios.settings.api.TotpSetupResponse
 import javax.inject.Inject
 
+/** Longest passkey name the server stores, in code points; it refuses a longer one. */
+internal const val PASSKEY_NAME_MAXIMUM = 255
+
+/** [text] cut to [PASSKEY_NAME_MAXIMUM] code points, never splitting a surrogate pair. */
+internal fun passkeyNameLimit(text: String): String {
+    if (text.codePointCount(0, text.length) <= PASSKEY_NAME_MAXIMUM) return text
+    return text.substring(0, text.offsetByCodePoints(0, PASSKEY_NAME_MAXIMUM))
+}
+
+/** The name a new passkey is registered under: the user's, or [fallback] when blank. */
+internal fun passkeyRegisterName(draft: String, fallback: String): String =
+    passkeyNameLimit(draft.trim()).ifBlank { fallback }
+
+/** The name a rename sends, or null when there is nothing to send: blank, or unchanged. */
+internal fun passkeyRename(draft: String, current: String): String? {
+    val name = passkeyNameLimit(draft.trim())
+    return if (name.isEmpty() || name == current) null else name
+}
+
 data class LoginUiState(
     val isLoading: Boolean = true,
     val error: MochiError? = null,
@@ -172,18 +191,23 @@ class LoginViewModel @Inject constructor(
 
     // ---------- Passkeys ----------
 
-    fun registerPasskey(name: String) = requestStepUp { token ->
+    /** [fallback] is the translated name a passkey takes when the user gives none. */
+    fun registerPasskey(name: String, fallback: String) = requestStepUp { token ->
         val begin = api.beginPasskeyRegister().unwrapRaw()
         if (begin.ceremony.isBlank()) throw RuntimeException("missing ceremony")
         val credentialJson = passkeyManager.register(begin.options)
-        val finishName = name.trim().ifBlank { "Passkey" }
+        val finishName = passkeyRegisterName(name, fallback)
         api.finishPasskeyRegister(token, begin.ceremony, credentialJson, finishName).unwrapRaw()
         refresh()
     }
 
-    fun renamePasskey(id: String, name: String) = mutate {
-        api.renamePasskey(id, name).unwrapRaw()
-        refresh()
+    fun renamePasskey(id: String, name: String) {
+        val current = _uiState.value.passkeys.firstOrNull { it.id == id } ?: return
+        val next = passkeyRename(name, current.name) ?: return
+        mutate {
+            api.renamePasskey(id, next).unwrapRaw()
+            refresh()
+        }
     }
 
     fun deletePasskey(id: String) = requestStepUp { token ->

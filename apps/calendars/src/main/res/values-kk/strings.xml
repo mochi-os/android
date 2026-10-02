@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">Мәңгі</string>
     <string name="calendars_reminder_time">Іс-шара басталғанда</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d минут бұрын</item>
-        <item quantity="other">%1$d минут бұрын</item>
+        <item quantity="one">%1$s минут бұрын</item>
+        <item quantity="other">%1$s минут бұрын</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d сағат бұрын</item>
-        <item quantity="other">%1$d сағат бұрын</item>
+        <item quantity="one">%1$s сағат бұрын</item>
+        <item quantity="other">%1$s сағат бұрын</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d күн бұрын</item>
-        <item quantity="other">%1$d күн бұрын</item>
+        <item quantity="one">%1$s күн бұрын</item>
+        <item quantity="other">%1$s күн бұрын</item>
     </plurals>
     <string name="calendars_reminder_add">Еске салғыш қосу</string>
     <string name="calendars_reminder_remove">Еске салғышты жою</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">Күнтізбе тым үлкен</string>
     <string name="calendars_poll_invalid">Мекенжай күнтізбе қайтармады</string>
     <string name="calendars_poll_unreachable">Мекенжайға қосыла алмады</string>
-    <string name="calendars_poll_status">Мекенжай %1$d деп жауап берді</string>
+    <string name="calendars_poll_status">Мекенжай %1$s деп жауап берді</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d минут</item>
-        <item quantity="other">%1$d минут</item>
+        <item quantity="one">%1$s минут</item>
+        <item quantity="other">%1$s минут</item>
     </plurals>
     <string name="calendars_preferences_zones">Оқиғаларды өз уақыт белдеуінде көрсету</string>
     <string name="calendars_event_backwards">Басталмай тұрып аяқталады</string>

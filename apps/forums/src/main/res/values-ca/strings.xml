@@ -6,8 +6,8 @@
     <string name="forums_list_title">Fòrums</string>
     <string name="forums_list_find">Cerca fòrums</string>
     <string name="forums_list_logout">Tanca la sessió</string>
-    <string name="forums_list_unsubscribe">Cancel·la la subscripció</string>
-    <string name="forums_list_unsubscribe_title">Cancel·la la subscripció</string>
+    <string name="forums_list_unsubscribe">Dona\'t de baixa</string>
+    <string name="forums_list_unsubscribe_title">Dona\'t de baixa</string>
     <string name="forums_create_title">Crea un fòrum</string>
     <string name="forums_create_name">Nom del fòrum</string>
     <string name="forums_create_privacy">Privadesa</string>
@@ -70,7 +70,7 @@
     <string name="forums_ai_mode_tag">Etiqueta</string>
     <string name="forums_ai_account_default">Compte per defecte</string>
     <string name="forums_ai_prompt_reset">Restableix al valor per defecte</string>
-    <string name="forums_settings_unsubscribe">Cancel·la la subscripció</string>
+    <string name="forums_settings_unsubscribe">Dona\'t de baixa</string>
     <string name="forums_moderation_title">Moderació</string>
     <string name="forums_moderation_tab_queue">Cua</string>
     <string name="forums_moderation_tab_reports">Informes</string>
@@ -131,7 +131,7 @@
     <string name="forums_auth_enter_code_sent">Introduïu el codi enviat a %1$s</string>
     <string name="forums_auth_create_identity">Creeu la vostra identitat</string>
     <string name="forums_list_empty">Encara no hi ha cap fòrum</string>
-    <string name="forums_list_unsubscribe_message">Segur que voleu cancel·lar la subscripció a aquest fòrum?</string>
+    <string name="forums_list_unsubscribe_message">Segur que voleu donar-vos de baixa d\'aquest fòrum?</string>
     <string name="forums_find_search_placeholder">Cerca fòrums o enganxa un URL</string>
     <string name="forums_find_search_hint">Cerca fòrums als quals subscriure\'s</string>
     <string name="forums_post_body_field">Cos</string>
@@ -151,7 +151,7 @@
     <string name="forums_access_level_moderate">Modera</string>
     <string name="forums_members_search">Filtra els membres</string>
     <string name="forums_banner_description">Markdown que es mostra a la part superior del fòrum.</string>
-    <string name="forums_banner_placeholder">Us donem la benvinguda a aquest fòrum…</string>
+    <string name="forums_banner_placeholder">Introdueix el text del bàner (s\'admet Markdown)…</string>
     <string name="forums_ai_mode_label">Mode: %1$s</string>
     <string name="forums_ai_mode_heading">Mode IA</string>
     <string name="forums_ai_mode_off">Desactivat</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">Toqueu el marcador de qualsevol publicació per desar-la aquí per a més tard.</string>
     <string name="forums_saved_error_clear">No s\'han pogut esborrar les publicacions desades</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d publicació nova</item>
-        <item quantity="other">%d publicacions noves</item>
+        <item quantity="one">%s publicació nova</item>
+        <item quantity="other">%s publicacions noves</item>
     </plurals>
     <string name="forums_rss_feed">Canal RSS</string>
     <string name="forums_rss_mode_posts">Publicacions</string>
@@ -293,11 +293,11 @@
     <string name="forums_settings_ai_updated">S\'ha actualitzat la configuració d\'IA</string>
     <string name="forums_settings_forum_renamed">S\'ha canviat el nom del fòrum</string>
     <string name="forums_settings_name_clear_cd">Esborra el nom</string>
-    <string name="forums_settings_unsubscribe_section">Cancel·la la subscripció al fòrum</string>
+    <string name="forums_settings_unsubscribe_section">Dona\'t de baixa del fòrum</string>
     <string name="forums_share_link_title">Enllaç del fòrum</string>
     <string name="forums_find_found_by_url">Trobat per URL</string>
-    <string name="forums_moderation_pending_posts">Publicacions pendents (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Comentaris pendents (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Publicacions pendents (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Comentaris pendents (%1$s)</string>
     <string name="forums_moderation_on_image">A la imatge: %1$s</string>
     <string name="forums_sort_ai">IA</string>
     <string name="forums_reject_post_access">No tens permís per publicar en aquest fòrum</string>

@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">ሰርዝ</string>
     <string name="go_delete_message">ይህ ጨዋታ ከዝርዝርዎ ይወገዳል። ይህ ሊወገድ አይችልም።</string>
     <string name="go_delete_title">ጨዋታ ይሰረዝ?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">ተቀበል</string>
     <string name="go_draw_decline">አትቀበል</string>
     <string name="go_draw_offered_received">%1$s አቻ አቅርቧል</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">እጅ ሰጥቷል</string>
     <string name="go_new_game_title">አዲስ የGo ጨዋታ</string>
     <string name="go_new_game_no_friends">ጨዋታ ከመጀመርዎ በፊት ጓደኛ ማከል አለብዎት።</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">ጥቁር መጀመሪያ ስለሚጫወት ለነጭ ውጤት የሚጨመሩ ነጥቦች</string>
 
-    <string name="go_board_a11y">%1$d×%1$d የGo ሰሌዳ</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d የጎ ሰሌዳ፣ ጥቁር ድንጋይ ለማስቀመጥ ተራዎ ነው</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d የጎ ሰሌዳ፣ ነጭ ድንጋይ ለማስቀመጥ ተራዎ ነው</string>
+    <string name="go_board_a11y">%1$s×%1$s የGo ሰሌዳ</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s የጎ ሰሌዳ፣ ጥቁር ድንጋይ ለማስቀመጥ ተራዎ ነው</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s የጎ ሰሌዳ፣ ነጭ ድንጋይ ለማስቀመጥ ተራዎ ነው</string>
     <string name="go_status_scoring">መቁጠር — በውጤቱ ተስማሙ ወይም መጫወት ይቀጥሉ</string>
     <string name="go_score_proposed">የተጠቆመ ውጤት፦ ጥቁር %1$s፣ ነጭ %2$s</string>
     <string name="go_score_opponent_accepted">ተጋጣሚዎ ይህን ውጤት ተቀብለዋል፦ ጥቁር %1$s፣ ነጭ %2$s</string>

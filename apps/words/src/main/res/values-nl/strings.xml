@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Nog geen partijen.</string>
     <string name="words_new_game_choose_opponents">Tegenstanders kiezen</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d spelers</string>
+    <string name="words_new_game_player_count">%1$s spelers</string>
     <string name="words_new_game_no_friends_subtitle">Voeg vrienden toe in de Mensen-app om te beginnen met spelen.</string>
     <string name="words_detail_title">Partij</string>
     <string name="words_detail_status_opponent_move">Beurt van %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s wint</string>
-    <string name="words_detail_player_fallback">Speler %1$d</string>
-    <string name="words_detail_player_count">%1$d spelers</string>
-    <string name="words_detail_label_tiles_left">%1$d stenen over</string>
+    <string name="words_detail_player_fallback">Speler %1$s</string>
+    <string name="words_detail_player_count">%1$s spelers</string>
+    <string name="words_detail_label_tiles_left">%1$s stenen over</string>
     <string name="words_detail_action_open_chat">Chat openen</string>
     <string name="words_detail_action_more">Partij-acties</string>
-    <string name="words_detail_exchange_count">Ruilen (%1$d)</string>
+    <string name="words_detail_exchange_count">Ruilen (%1$s)</string>
     <string name="words_detail_chat_you_played">Je speelde %1$s</string>
     <string name="words_detail_chat_player_played">%1$s speelde %2$s</string>
 

@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Shënime</string>
     <string name="staff_accounts_reason_label">Arsyeja</string>
     <string name="staff_accounts_reason_optional_label">Arsyeja (opsionale)</string>
-    <string name="staff_accounts_sales">%1$d shitje</string>
+    <string name="staff_accounts_sales">%1$s shitje</string>
     <string name="staff_accounts_search_clear">Pastro kërkimin</string>
     <string name="staff_accounts_search_placeholder">Kërko</string>
     <string name="staff_accounts_seller_buyers">Vetëm blerësit</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Pa emër</string>
     <string name="staff_accounts_unsuspend">Hiq pezullimin</string>
     <string name="staff_accounts_unsuspended_toast">Llogaria u çpezullua</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Anulo</string>
     <string name="staff_appeals_decide">Vendos</string>
     <string name="staff_appeals_decision_denied">Mbaj shpalljen e refuzuar</string>

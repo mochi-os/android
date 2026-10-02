@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Још нема партија.</string>
     <string name="words_new_game_choose_opponents">Изаберите противнике</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d играча</string>
+    <string name="words_new_game_player_count">%1$s играча</string>
     <string name="words_new_game_no_friends_subtitle">Додајте пријатеље у апликацији Особе да бисте почели да играте.</string>
     <string name="words_detail_title">Партија</string>
     <string name="words_detail_status_opponent_move">Ред %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s побеђује</string>
-    <string name="words_detail_player_fallback">Играч %1$d</string>
-    <string name="words_detail_player_count">%1$d играча</string>
-    <string name="words_detail_label_tiles_left">Преостало %1$d плочица</string>
+    <string name="words_detail_player_fallback">Играч %1$s</string>
+    <string name="words_detail_player_count">%1$s играча</string>
+    <string name="words_detail_label_tiles_left">Преостало %1$s плочица</string>
     <string name="words_detail_action_open_chat">Отвори чет</string>
     <string name="words_detail_action_more">Акције партије</string>
-    <string name="words_detail_exchange_count">Размени (%1$d)</string>
+    <string name="words_detail_exchange_count">Размени (%1$s)</string>
     <string name="words_detail_chat_you_played">Одиграли сте %1$s</string>
     <string name="words_detail_chat_player_played">%1$s је одиграо %2$s</string>
 

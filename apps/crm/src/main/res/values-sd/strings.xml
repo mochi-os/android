@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">ڪابه شيءِ ناهي</string>
     <string name="crm_board_no_columns">هن نظر لاءِ ڪوبه ڪالم ترتيب ڏنل ناهي</string>
     <string name="crm_board_no_options">ڪالم فيلڊ لاءِ ڪو به آپشن ترتيب نه ڏنل آھي</string>
-    <string name="crm_board_nested_count">+%1$d نيسٽڊ</string>
+    <string name="crm_board_nested_count">+%1$s نيسٽڊ</string>
     <string name="crm_move_to_column">ڪالم ڏانھن منتقل ڪريو</string>
     <string name="crm_move_to_row">قطار ڏانھن منتقل ڪريو</string>
     <string name="crm_move_after">%1$s کان پوءِ</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM ڊيٽا محفوظ ٿي</string>
     <string name="crm_create_upload_json">.zip يا .json فائل اپلوڊ ڪريو</string>
     <string name="crm_create_blocked_no_options">ٺاهي نه ٿو سگهجي: %1$s گهربل آهي پر ان لاءِ ڪو اختيار ناهي. ڊيزائن ۾ اختيار شامل ڪريو.</string>
-    <string name="crm_design_sample">نمونو %1$d</string>
+    <string name="crm_design_sample">نمونو %1$s</string>
     <string name="crm_option_delete_title">اختيار ختم ڪريو</string>
     <string name="crm_option_delete_message">ڇا توھان واقعي اختيار \"%1$s\" حذف ڪرڻ چاھيو ٿا؟</string>
 </resources>

@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Қайдҳо</string>
     <string name="staff_accounts_reason_label">Сабаб</string>
     <string name="staff_accounts_reason_optional_label">Сабаб (ихтиёрӣ)</string>
-    <string name="staff_accounts_sales">%1$d фурӯш</string>
+    <string name="staff_accounts_sales">%1$s фурӯш</string>
     <string name="staff_accounts_search_clear">Тоза кардани ҷустуҷӯ</string>
     <string name="staff_accounts_search_placeholder">Ҷустуҷӯ</string>
     <string name="staff_accounts_seller_buyers">Танҳо харидорон</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Беном</string>
     <string name="staff_accounts_unsuspend">Аз боздошт хориҷ кардан</string>
     <string name="staff_accounts_unsuspended_toast">Боздошти ҳисоб бекор карда шуд</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Бекор кардан</string>
     <string name="staff_appeals_decide">Қарор</string>
     <string name="staff_appeals_decision_denied">Эълони радшуда нигоҳ доред</string>

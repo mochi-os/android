@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">나이트</string>
     <string name="chess_piece_pawn">폰</string>
     <string name="chess_move_played">%1$s이(가) %2$s을(를) 두었습니다</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">체스 수, 무승부 제안, 대국 결과에 대한 알림.</string>
     <string name="chess_channel_name">체스 알림</string>
     <string name="chess_delete_message">목록에서 대국을 제거합니다.</string>

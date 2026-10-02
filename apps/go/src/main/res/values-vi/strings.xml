@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Xóa</string>
     <string name="go_delete_message">Trận đấu này sẽ bị xoá khỏi danh sách của bạn. Không thể hoàn tác.</string>
     <string name="go_delete_title">Xóa trận đấu?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Chấp nhận</string>
     <string name="go_draw_decline">Từ chối</string>
     <string name="go_draw_offered_received">%1$s đã đề nghị hòa</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Đã đầu hàng</string>
     <string name="go_new_game_title">Ván cờ vây mới</string>
     <string name="go_new_game_no_friends">Bạn cần thêm bạn bè trước khi có thể bắt đầu ván cờ.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Điểm cộng cho Trắng để bù đắp việc Đen đi trước</string>
 
-    <string name="go_board_a11y">Bàn cờ Vây %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Bàn cờ vây %1$d×%1$d, đến lượt bạn đặt quân đen</string>
-    <string name="go_board_a11y_turn_white">Bàn cờ vây %1$d×%1$d, đến lượt bạn đặt quân trắng</string>
+    <string name="go_board_a11y">Bàn cờ Vây %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Bàn cờ vây %1$s×%1$s, đến lượt bạn đặt quân đen</string>
+    <string name="go_board_a11y_turn_white">Bàn cờ vây %1$s×%1$s, đến lượt bạn đặt quân trắng</string>
     <string name="go_status_scoring">Đếm điểm — thống nhất tỉ số hoặc chơi tiếp</string>
     <string name="go_score_proposed">Điểm số đề xuất: đen %1$s, trắng %2$s</string>
     <string name="go_score_opponent_accepted">Đối thủ của bạn chấp nhận điểm số này: đen %1$s, trắng %2$s</string>

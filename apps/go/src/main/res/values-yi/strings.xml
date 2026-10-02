@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">אויסמעקן</string>
     <string name="go_delete_message">די שפּיל וועט זיין אַראָפּגענומען פֿון אײַער ליסטע. דאָס קען נישט זיין צוריקגעטאָן.</string>
     <string name="go_delete_title">אויסמעקן דעם שפּיל?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">אָננעמען</string>
     <string name="go_draw_decline">אָפּזאָגן</string>
     <string name="go_draw_offered_received">%1$s האָט פֿאָרגעלייגט אַ תּיקו</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">רעזיגנירט</string>
     <string name="go_new_game_title">נײַע Go־שפּיל</string>
     <string name="go_new_game_no_friends">איר דאַרפֿט צולייגן אַ פֿרײַנד איידער איר קענט אָנהייבן אַ שפּיל.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">פּונקטן צוגעלייגט צום ווײַסן זײַן רעזולטאַט צו קאָמפּענסירן וואָס שוואַרץ גייט ערשט</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go־ברעט</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d גו ברעט, אײַער רײ צו לייגן אַ שוואַרצן שטיין</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d גו ברעט, אײַער רײ צו לייגן אַ ווײַסן שטיין</string>
+    <string name="go_board_a11y">%1$s×%1$s Go־ברעט</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s גו ברעט, אײַער רײ צו לייגן אַ שוואַרצן שטיין</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s גו ברעט, אײַער רײ צו לייגן אַ ווײַסן שטיין</string>
     <string name="go_status_scoring">ציילן — קומט צו אן אפמאך וועגן די רעזולטאטן אדער שפילט ווייטער</string>
     <string name="go_score_proposed">פֿאָרגעלייגטע צאָל: שוואַרץ %1$s, ווײַס %2$s</string>
     <string name="go_score_opponent_accepted">אײַער קעגנער נעמט אָן די דאָזיקע צאָל: שוואַרץ %1$s, ווײַס %2$s</string>

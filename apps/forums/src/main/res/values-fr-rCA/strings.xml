@@ -3,8 +3,6 @@
 
     <string name="forums_report_reason_spam">Pourriel</string>
 
-    <string name="forums_create_name">Nom</string>
-    <string name="forums_create_action">Créer</string>
     <string name="forums_post_save">Enregistrer</string>
     <string name="forums_comment_save">Enregistrer</string>
     <string name="forums_settings_save">Enregistrer</string>
@@ -106,7 +104,6 @@
     <string name="forums_members_search">Filtrer les membres</string>
     <string name="forums_members_empty">Aucun membre</string>
     <string name="forums_banner_description">Markdown affiché en haut du forum.</string>
-    <string name="forums_banner_placeholder">Bienvenue dans ce forum…</string>
     <string name="forums_banner_dismiss">Masquer la bannière</string>
     <string name="forums_ai_mode_label">Mode : %1$s</string>
     <string name="forums_ai_mode_heading">Mode IA</string>
@@ -288,7 +285,7 @@
     <string name="forums_saved_empty_title">Rien d\'enregistré pour l\'instant</string>
     <string name="forums_saved_error_clear">Échec de l\'effacement des publications enregistrées</string>
     <string name="forums_saved_save">Enregistrer pour plus tard</string>
-    <string name="forums_moderation_pending_posts">Publications en attente (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Commentaires en attente (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Publications en attente (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Commentaires en attente (%1$s)</string>
     <string name="forums_moderation_reason_spam">Pourriel</string>
 </resources>

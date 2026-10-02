@@ -180,9 +180,9 @@
     <string name="people_books_create">יצירת פנקס כתובות</string>
     <string name="people_books_delete">מחיקת פנקס כתובות</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">למחוק את %1$s ואת איש הקשר %2$d שבו?</item>
-        <item quantity="two">למחוק את %1$s ואת %2$d אנשי הקשר שבו?</item>
-        <item quantity="other">למחוק את %1$s ואת %2$d אנשי הקשר שבו?</item>
+        <item quantity="one">למחוק את %1$s ואת איש הקשר %2$s שבו?</item>
+        <item quantity="two">למחוק את %1$s ואת %2$s אנשי הקשר שבו?</item>
+        <item quantity="other">למחוק את %1$s ואת %2$s אנשי הקשר שבו?</item>
     </plurals>
     <string name="people_welcome_body">מצאו חברים בכל Mochi והתחברו אליהם. הקישו על הוספת איש קשר כדי לשלוח הזמנה.</string>
     <string name="people_person_state_contact">באנשי הקשר</string>

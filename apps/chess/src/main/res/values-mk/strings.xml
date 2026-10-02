@@ -20,13 +20,13 @@
     <string name="chess_open_chat">Отвори панел за разговор</string>
     <string name="chess_open_actions">Отвори акции на играта</string>
     <string name="chess_offer_draw">Понуди реми</string>
-    <string name="chess_resign">Откажи се</string>
+    <string name="chess_resign">Предај се</string>
     <string name="chess_rematch">Реванш</string>
     <string name="chess_delete_game">Избриши игра</string>
     <string name="chess_side_white">Бела</string>
     <string name="chess_side_black">Црн</string>
-    <string name="chess_resign_title">Да се откажете од играта?</string>
-    <string name="chess_resign_confirm">Откажи се</string>
+    <string name="chess_resign_title">Да ја предадете играта?</string>
+    <string name="chess_resign_confirm">Предај се</string>
     <string name="chess_delete_confirm">Избриши игра</string>
     <string name="chess_draw_accept">Прифати</string>
     <string name="chess_draw_decline">Одбиј</string>
@@ -65,7 +65,7 @@
     <string name="chess_ws_reconnecting">Се поврзува повторно…</string>
     <string name="chess_ws_failed">Поврзувањето не успеа</string>
     <string name="chess_move_capture">%1$s зеде %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_piece_white">Бела %1$s</string>
     <string name="chess_piece_black">Црн %1$s</string>
 </resources>

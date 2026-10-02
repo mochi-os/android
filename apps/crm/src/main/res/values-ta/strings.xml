@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">பொருள்கள் இல்லை</string>
     <string name="crm_board_no_columns">இந்த பார்வைக்கு நெடுவரிசைகள் கட்டமைக்கப்படவில்லை</string>
     <string name="crm_board_no_options">நெடுவரிசை புலத்திற்கு விருப்பங்கள் எதுவும் அமைக்கப்படவில்லை</string>
-    <string name="crm_board_nested_count">+%1$d உள்ளமைக்கப்பட்டவை</string>
+    <string name="crm_board_nested_count">+%1$s உள்ளமைக்கப்பட்டவை</string>
     <string name="crm_move_to_column">நெடுவரிசைக்கு நகர்த்து</string>
     <string name="crm_move_to_row">வரிசைக்கு நகர்த்து</string>
     <string name="crm_move_after">%1$s க்குப் பிறகு</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM தரவு சேமிக்கப்பட்டது</string>
     <string name="crm_create_upload_json">.zip அல்லது .json கோப்பைப் பதிவேற்றவும்</string>
     <string name="crm_create_blocked_no_options">உருவாக்க முடியாது: %1$s தேவை ஆனால் தேர்ந்தெடுக்க விருப்பங்கள் இல்லை. வடிவமைப்பில் விருப்பங்களைச் சேர்க்கவும்.</string>
-    <string name="crm_design_sample">மாதிரி %1$d</string>
+    <string name="crm_design_sample">மாதிரி %1$s</string>
     <string name="crm_option_delete_title">விருப்பத்தை நீக்கு</string>
     <string name="crm_option_delete_message">\"%1$s\" விருப்பத்தை நீக்க விரும்புகிறீர்களா?</string>
 </resources>

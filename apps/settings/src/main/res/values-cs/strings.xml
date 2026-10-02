@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Připojené účty</string>
     <string name="settings_home_interests">Zájmy</string>
     <string name="account_section_passkeys">Přístupové klíče</string>
-    <string name="account_passkey_register">Přidat passkey</string>
-    <string name="account_passkey_delete_title">Smazat passkey?</string>
+    <string name="account_passkey_register">Přidat přístupový klíč</string>
+    <string name="account_passkey_delete_title">Smazat přístupový klíč?</string>
     <string name="account_section_totp">Autentizační aplikace</string>
     <string name="account_totp_setup">Nastavit autentizátor</string>
     <string name="account_totp_setup_title">Nastavit autentizátor</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Smazat trasu?</string>
     <string name="route_path">Cesta</string>
     <string name="route_method">Metoda</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikace</string>
     <string name="route_method_entity">Entita</string>
     <string name="route_method_redirect">Přesměrování</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Stáhnout z packages.mochi-os.org</string>
     <string name="system_status_copy">Kopírovat</string>
     <string name="system_status_peers">Vrstevníci</string>
-    <string name="system_status_known">Známé</string>
+    <string name="system_status_peers_totals">Známé %1$s · Připojené %2$s · Vysílací mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Známé %1$s · Připojené %2$s</string>
     <string name="system_status_peer_connected">Připojeno</string>
     <string name="system_status_peer_disconnected">Odpojeno</string>
     <string name="system_status_peer_queued">Zprávy ve frontě</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Odebrat</string>
     <string name="accounts_remove_title">Odebrat účet?</string>
     <string name="system_documents_title">Dokumenty</string>
-    <string name="system_documents_description">Pravidla serveru, smluvní podmínky a zásady ochrany soukromí zobrazované vašim uživatelům</string>
     <string name="system_documents_tab_rules">Pravidla serveru</string>
     <string name="system_documents_tab_terms">Smluvní podmínky</string>
     <string name="system_documents_tab_privacy">Soukromí</string>
     <string name="system_documents_language">Jazyk</string>
     <string name="system_documents_no_language">Pro tento jazyk není k dispozici žádný dokument.</string>
-    <string name="system_documents_customised">Přizpůsobeno</string>
     <string name="system_documents_using_default">Používá se výchozí dodaná verze</string>
     <string name="system_documents_revert">Obnovit výchozí</string>
     <string name="system_documents_save">Uložit</string>
@@ -137,7 +138,7 @@
     <string name="system_settings_reset_title">Obnovit na výchozí?</string>
     <string name="system_setting_apps_install_user">Povolit uživatelům instalovat aplikace</string>
     <string name="system_setting_auth_email">Přihlášení pomocí e-mailového kódu</string>
-    <string name="system_setting_auth_passkey">Přihlášení pomocí passkey</string>
+    <string name="system_setting_auth_passkey">Přihlášení pomocí přístupového klíče</string>
     <string name="system_setting_auth_totp">Přihlášení pomocí aplikace TOTP</string>
     <string name="system_setting_auth_recovery">Přihlášení pomocí obnovovacího kódu</string>
     <string name="system_setting_auth_oauth">Přihlášení pomocí OAuth 2.0</string>
@@ -178,32 +179,30 @@
     <string name="system_users_create_title">Vytvořit uživatele</string>
     <string name="system_users_save_changes">Uložit změny</string>
     <string name="system_users_suspend">Pozastavit uživatele</string>
-    <string name="system_users_remove_suspension">Zrušit pozastavení</string>
+    <string name="system_users_remove_suspension">Ukončit pozastavení</string>
     <string name="system_users_delete">Smazat uživatele</string>
     <string name="system_users_delete_title">Smazat uživatele?</string>
     <string name="system_users_manage_sessions">Spravovat relace</string>
-    <string name="system_users_sessions_description">Zobrazit a odvolat aktivní relace tohoto uživatele.</string>
     <string name="system_users_sessions_empty">Tento uživatel nemá žádné aktivní relace.</string>
     <string name="system_users_revoke">Odvolat</string>
-    <string name="system_users_revoke_all">Zrušit všechny relace</string>
+    <string name="system_users_revoke_all">Odvolat všechny relace</string>
     <string name="system_users_unknown_browser">Neznámý prohlížeč</string>
     <string name="system_users_unknown">Neznámý</string>
     <string name="system_users_previous">Předchozí</string>
     <string name="system_users_next">Další</string>
     <string name="system_users_empty">Žádní uživatelé nenalezeni</string>
     <string name="system_users_empty_search">Žádní uživatelé neodpovídají vašemu vyhledávání</string>
-    <string name="system_users_empty_search_hint">Zkuste upravit kritéria vyhledávání</string>
     <string name="system_users_toast_created">Uživatel vytvořen</string>
     <string name="system_users_toast_updated">Uživatel aktualizován</string>
     <string name="system_users_toast_deleted">Uživatel smazán</string>
     <string name="system_users_toast_suspended">Uživatel pozastaven</string>
-    <string name="system_users_toast_suspension_removed">Pozastavení odstraněno</string>
+    <string name="system_users_toast_suspension_removed">Pozastavení ukončeno</string>
     <string name="system_users_toast_session_revoked">Relace odvolána</string>
     <string name="system_users_toast_create_failed">Nepodařilo se vytvořit uživatele</string>
     <string name="system_users_toast_update_failed">Nepodařilo se aktualizovat uživatele</string>
     <string name="system_users_toast_delete_failed">Nepodařilo se smazat uživatele</string>
     <string name="system_users_toast_status_failed">Nepodařilo se aktualizovat stav uživatele</string>
-    <string name="system_users_toast_revoke_failed">Nepodařilo se zrušit relaci</string>
+    <string name="system_users_toast_revoke_failed">Nepodařilo se odvolat relaci</string>
 
     <string name="settings_home_sessions">Relace</string>
     <string name="settings_home_privacy">Zásady ochrany osobních údajů</string>
@@ -211,17 +210,19 @@
     <string name="settings_home_terms">Podmínky služby</string>
     <string name="account_passkeys_empty">Žádné registrované přístupové klíče.</string>
     <string name="account_passkey_register_title">Přidat přístupový klíč</string>
-    <string name="account_passkey_register_message">Vaše zařízení vás vyzve k potvrzení. Přístupový klíč je vázán na toto zařízení a slouží pro budoucí přihlášení.</string>
     <string name="account_passkey_name_label">Název (volitelně)</string>
     <string name="account_passkey_delete_message">\"%1$s\" vás již nebude přihlašovat.</string>
-    <string name="account_totp_description">Přihlaste se 6místným kódem z autentizační aplikace.</string>
     <string name="account_totp_enabled">Autentizátor je povolen.</string>
     <string name="account_totp_setup_step1">Naskenujte nebo zadejte toto tajemství ve své autentizační aplikaci.</string>
     <string name="account_totp_setup_step2">Zadejte 6místný kód, který aplikace zobrazuje.</string>
     <string name="account_totp_code">Kód</string>
     <string name="account_totp_disable_message">Již se nebudete moci přihlásit kódem autentizátoru.</string>
     <string name="account_recovery_none">Nebyly vygenerovány žádné obnovovací kódy.</string>
-    <string name="account_recovery_count">%1$d nepoužitých obnovovacích kódů.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Zbývá %1$s obnovovací kód.</item>
+        <item quantity="few">Zbývají %1$s obnovovací kódy.</item>
+        <item quantity="other">Zbývá %1$s obnovovacích kódů.</item>
+    </plurals>
     <string name="account_recovery_generate">Vygenerovat kódy</string>
     <string name="account_recovery_regenerate">Vygenerovat nové kódy</string>
     <string name="account_recovery_regen_title">Vygenerovat nové obnovovací kódy?</string>
@@ -237,7 +238,7 @@
     <string name="account_last_used">Naposledy použito %1$s</string>
     <string name="route_delete_message">Tímto se odstraní trasa pro cestu \"%1$s\".</string>
     <string name="route_empty">Nejsou nakonfigurovány žádné trasy.</string>
-    <string name="route_meta">Priorita %1$d · %2$s</string>
+    <string name="route_meta">Priorita %1$s · %2$s</string>
     <string name="interests_search_placeholder">Hledat témata k přidání…</string>
     <string name="interests_empty">Zatím žádné zájmy.</string>
     <string name="interests_summary_regenerate">Znovu vygenerovat souhrn</string>
@@ -268,9 +269,13 @@
     <string name="system_users_delete_message">Tímto se trvale smaže uživatel \"%1$s\". Tuto akci nelze vrátit zpět.</string>
     <string name="system_users_sessions_title">Relace uživatele %1$s</string>
     <string name="system_users_session_last_accessed">Poslední přístup: %1$s</string>
-    <string name="system_users_revoke_all_title">Zrušit všechny relace?</string>
+    <string name="system_users_revoke_all_title">Odvolat všechny relace?</string>
     <string name="system_users_revoke_all_message">Všechny aktivní relace tohoto uživatele budou odhlášeny.</string>
-    <string name="system_users_pagination_status">Zobrazeno %1$d–%2$d z %3$d uživatelů</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Zobrazeno %1$s–%2$s z %3$s uživatele</item>
+        <item quantity="few">Zobrazeno %1$s–%2$s z %3$s uživatelů</item>
+        <item quantity="other">Zobrazeno %1$s–%2$s z %3$s uživatelů</item>
+    </plurals>
     <string name="account_title">Účet</string>
     <string name="account_section_identity">Identita</string>
     <string name="account_identity_identity">Identita</string>
@@ -303,15 +308,15 @@
     <string name="domain_verify">Ověřit DNS</string>
     <string name="settings_home_domains">Domény</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test odeslán na %1$d cíl</item>
-        <item quantity="few">Test odeslán na %1$d cíle</item>
-        <item quantity="other">Test odeslán na %1$d cílů</item>
+        <item quantity="one">Test odeslán na %1$s cíl</item>
+        <item quantity="few">Test odeslán na %1$s cíle</item>
+        <item quantity="other">Test odeslán na %1$s cílů</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="few">%1$d relace zrušeny</item>
-        <item quantity="many">%1$d relací zrušeno</item>
-        <item quantity="one">1 relace zrušena</item>
-        <item quantity="other">%1$d relací zrušeno</item>
+        <item quantity="one">%1$s relace odvolána</item>
+        <item quantity="few">%1$s relace odvolány</item>
+        <item quantity="many">%1$s relací odvoláno</item>
+        <item quantity="other">%1$s relací odvoláno</item>
     </plurals>
     <string name="login_title">Přihlášení</string>
     <string name="login_section_methods">Způsoby přihlášení</string>
@@ -320,9 +325,9 @@
     <string name="login_method_totp">Autentizační aplikace</string>
     <string name="login_method_oauth">Přihlášení třetí strany</string>
     <string name="login_method_recovery">Obnovovací kódy</string>
-    <string name="account_close_section">Zrušit účet</string>
-    <string name="account_close_action">Zrušit účet</string>
-    <string name="account_close_confirm_title">Zrušit váš účet?</string>
+    <string name="account_close_section">Uzavřít účet</string>
+    <string name="account_close_action">Uzavřít účet</string>
+    <string name="account_close_confirm_title">Uzavřít váš účet?</string>
     <string name="account_close_confirm_body">Váš účet bude naplánován ke smazání a budete odhlášeni. Smazání můžete kdykoli před datem smazání zrušit opětovným přihlášením.</string>
     <string name="account_data_download">Stáhnout</string>
     <string name="route_target_app">Aplikace</string>
@@ -342,18 +347,15 @@
     <string name="system_status_reachability_public">Veřejné</string>
     <string name="system_status_reachability_private">Soukromé</string>
     <string name="system_status_reachability_unknown">Neznámý</string>
-    <string name="system_status_relay">Přes relay</string>
-    <string name="system_status_mesh">Vysílací mesh</string>
+    <string name="system_status_reachability_relay">%1$s · přes relé</string>
     <string name="system_status_broadcast">Poslední vysílání</string>
     <string name="system_status_queued_broadcasts">Vysílané zprávy ve frontě</string>
     <string name="system_setting_hostname_publish">Oznamovat název hostitele a domény ostatním serverům</string>
     <string name="system_setting_hostname">Název hostitele oznamovaný ostatním serverům</string>
     <string name="system_status_peer_id">ID protějšku</string>
     <string name="system_status_holepunch">Proražení</string>
-    <string name="system_status_holepunch_value">%1$d úspěšných · %2$d neúspěšných</string>
     <string name="system_status_awaiting_routing">Zprávy čekající na směrování</string>
     <string name="system_status_relay_service">Služba relé</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervace · %3$d okruhy · %4$d odmítnuto</string>
     <string name="route_target_select">Vybrat</string>
     <string name="account_data_description">Stáhněte si úplnou záložní kopii, kterou můžete obnovit na tomto nebo jiném serveru Mochi.</string>
     <string name="route_target_none">Nejsou dostupné žádné cíle</string>
@@ -378,7 +380,13 @@
     <string name="accounts_device_seen">Naposledy viděn %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikace</string>
     <string name="notifprefs_device_push">%1$s · push</string>
-    <string name="notifprefs_test_partial">Test odeslán do %1$d z %2$d cílů</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test odeslán do %1$s z %2$s cíle</item>
+        <item quantity="few">Test odeslán do %1$s z %2$s cílů</item>
+        <item quantity="other">Test odeslán do %1$s z %2$s cílů</item>
+    </plurals>
     <string name="notifprefs_test_none">Žádné nakonfigurované cíle</string>
     <string name="notifprefs_transport_fcm">Push oznámení pro Android</string>
     <string name="notifprefs_no_destinations">Žádná místa určení</string>
@@ -388,13 +396,41 @@
     <string name="accounts_field_topic">Téma</string>
     <string name="accounts_field_secret">Tajný klíč pro podpis</string>
     <string name="account_totp_open">Otevřít v ověřovací aplikaci</string>
-    <string name="accounts_revoke">Zrušit přístup</string>
+    <string name="accounts_revoke">Odvolat přístup</string>
     <string name="accounts_capability_calendar">Kalendář</string>
     <string name="accounts_capability_notify">Oznámení</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Přihlášení</string>
     <string name="accounts_provider_caldav">Kalendářový server</string>
-    <string name="accounts_revoke_confirm">Tím se zruší přístup ke kalendáři pro %1$s. Přihlašování přes %2$s zůstane, dokud ho neodpojíte na stránce přihlášení.</string>
+    <string name="accounts_revoke_confirm">Tím se odvolá přístup ke kalendáři pro %1$s. Přihlašování přes %2$s zůstane, dokud ho neodpojíte na stránce přihlášení.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Neznámý motiv</string>
+    <string name="system_documents_modified">Upraveno</string>
+    <string name="system_documents_discard_title">Zahodit změny?</string>
+    <string name="system_documents_discard">Zahodit</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s úspěšný</item>
+        <item quantity="few">%1$s úspěšné</item>
+        <item quantity="other">%1$s úspěšných</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s neúspěšný</item>
+        <item quantity="few">%1$s neúspěšné</item>
+        <item quantity="other">%1$s neúspěšných</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s rezervace</item>
+        <item quantity="few">%1$s / %2$s rezervace</item>
+        <item quantity="other">%1$s / %2$s rezervací</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s okruh</item>
+        <item quantity="few">%1$s okruhy</item>
+        <item quantity="other">%1$s okruhů</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s odmítnutý</item>
+        <item quantity="few">%1$s odmítnuté</item>
+        <item quantity="other">%1$s odmítnutých</item>
+    </plurals>
 </resources>

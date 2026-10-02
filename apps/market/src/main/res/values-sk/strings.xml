@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Odosielanie…</string>
     <string name="market_checkout_subscribing">Prihlasovanie na odber…</string>
     <string name="market_filter_remove">Odstrániť filter</string>
-    <string name="market_listing_detail_sales_count">%1$d predajov</string>
-    <string name="market_profile_sales_count">%1$d predajov</string>
+    <string name="market_listing_detail_sales_count">%1$s predajov</string>
+    <string name="market_profile_sales_count">%1$s predajov</string>
     <string name="market_purchase_dispute_response">Odpoveď predajcu</string>
     <string name="market_purchases_order_label">Objednávka č. %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Povedzte kupujúcim o sebe…</string>
     <string name="market_account_load_failed">Účet sa nepodarilo načítať</string>
     <string name="market_account_save_failed">Zmeny sa nepodarilo uložiť</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Aktuálna: %1$s</string>
     <string name="market_bids_ends_in">Končí o %1$s</string>
     <string name="market_bids_your_bid">Vaša ponuka: %1$s</string>
-    <string name="market_carousel_main">Fotografia %1$d z %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatúra %1$d</string>
+    <string name="market_carousel_main">Fotografia %1$s z %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatúra %1$s</string>
     <string name="market_checkout_browser_unavailable">Nie je dostupný žiadny prehliadač na otvorenie platobnej stránky</string>
     <string name="market_checkout_pay_button">Zaplatiť cez Stripe</string>
     <string name="market_checkout_processing">Spracováva sa…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Pripojiť dôkazy</string>
-    <string name="market_dispute_dialog_attach_count">Pripojených súborov: %1$d</string>
+    <string name="market_dispute_dialog_attach_count">Pripojených súborov: %1$s</string>
     <string name="market_dispute_dialog_evidence_role_staff">Personál Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Predložené dôkazy</string>
     <string name="market_dispute_dialog_evidence_submitter_line">predložil(a) %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Referenčná URL</string>
     <string name="market_editor_assets_empty">Zatiaľ žiadne položky</string>
     <string name="market_editor_category_none">Vyberte kategóriu</string>
-    <string name="market_editor_days">%1$d dní</string>
+    <string name="market_editor_days">%1$s dní</string>
     <string name="market_editor_delete">Odstrániť inzerát</string>
     <string name="market_editor_delete_confirm_message">Týmto sa inzerát natrvalo odstráni.</string>
     <string name="market_editor_delete_confirm_title">Odstrániť inzerát?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Konverzáciu sa nepodarilo načítať</string>
     <string name="market_messages_send_failed">Správu sa nepodarilo odoslať</string>
     <string name="market_messages_thread_title">Konverzácia</string>
-    <string name="market_messages_unread_badge">%1$d neprečítaných</string>
-    <string name="market_price_from">od %1$s</string>
+    <string name="market_messages_unread_badge">%1$s neprečítaných</string>
+    <string name="market_price_from">Od %1$s</string>
     <string name="market_price_high_bid">Najvyššia ponuka: %1$s</string>
     <string name="market_price_instant_buy">okamžitý nákup: %1$s</string>
     <string name="market_price_per_month">%1$s / mesiac</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Pripojil(a) sa %1$s</string>
     <string name="market_profile_no_reviews">Zatiaľ žiadne recenzie.</string>
     <string name="market_profile_rating_breakdown">Rozloženie hodnotení</string>
-    <string name="market_profile_stars_value">%1$d hviezdičiek</string>
+    <string name="market_profile_stars_value">%1$s hviezdičiek</string>
     <string name="market_purchase_dispute_chargeback">Vrátenie platby %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Vaša banka podala k tejto objednávke žiadosť o vrátenie platby. Stripe rieši spor s predajcom; výsledok sa zobrazí tu, keď bude rozhodnuté.</string>
-    <string name="market_purchase_download_many">Stiahnite si svojich %1$d súborov nižšie.</string>
+    <string name="market_purchase_download_many">Stiahnite si svojich %1$s súborov nižšie.</string>
     <string name="market_purchase_download_one">Stiahnite si svoj súbor nižšie.</string>
     <string name="market_purchase_review_from">Recenzia od %1$s</string>
     <string name="market_purchases_auction_label">Aukcia č. %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s vrátené</string>
     <string name="market_purchases_won_for">Vyhrané za %1$s</string>
-    <string name="market_rating_reviews">(%1$d recenzií)</string>
+    <string name="market_rating_reviews">(%1$s recenzií)</string>
     <string name="market_refund_amount_label">Suma</string>
     <string name="market_refund_dialog_amount_help">Ponechajte prázdne pre vrátenie celej objednávky.</string>
     <string name="market_refund_dialog_amount_label">Suma</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe nakonfigurovaný</string>
     <string name="market_audit_account_stripe_restricted">Stripe obmedzený</string>
     <string name="market_audit_account_suspended">Pozastavený ako predajca</string>
-    <string name="market_audit_account_unbanned">Zákaz zrušený</string>
-    <string name="market_audit_account_unsuspended">Pozastavenie zrušené</string>
+    <string name="market_audit_account_unbanned">Zákaz odvolaný</string>
+    <string name="market_audit_account_unsuspended">Pozastavenie ukončené</string>
     <string name="market_audit_auction_bid_placed">Ponuka podaná</string>
     <string name="market_audit_auction_created">Aukcia vytvorená</string>
     <string name="market_audit_auction_ended_sold">Aukcia predaná</string>
@@ -785,13 +785,13 @@
     <string name="market_listings_remove_message_auction">Týmto sa zruší aukcia. Ponuka bude skrytá pred kupujúcimi; môžete ju neskôr znovu zoznamovať ako nový koncept.</string>
     <string name="market_listings_remove_title">Odstrániť tento inzerát?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Tým sa zruší aukcia a upozorní sa %1$d aktívny dražiteľ. Inzerát bude pred kupujúcimi skrytý; neskôr ho môžete znova zverejniť ako nový koncept.</item>
-        <item quantity="few">Tým sa zruší aukcia a upozorní sa %1$d aktívni dražitelia. Inzerát bude pred kupujúcimi skrytý; neskôr ho môžete znova zverejniť ako nový koncept.</item>
-        <item quantity="other">Tým sa zruší aukcia a upozorní sa %1$d aktívnych dražiteľov. Inzerát bude pred kupujúcimi skrytý; neskôr ho môžete znova zverejniť ako nový koncept.</item>
+        <item quantity="one">Tým sa zruší aukcia a upozorní sa %1$s aktívny dražiteľ. Inzerát bude pred kupujúcimi skrytý; neskôr ho môžete znova zverejniť ako nový koncept.</item>
+        <item quantity="few">Tým sa zruší aukcia a upozorní sa %1$s aktívni dražitelia. Inzerát bude pred kupujúcimi skrytý; neskôr ho môžete znova zverejniť ako nový koncept.</item>
+        <item quantity="other">Tým sa zruší aukcia a upozorní sa %1$s aktívnych dražiteľov. Inzerát bude pred kupujúcimi skrytý; neskôr ho môžete znova zverejniť ako nový koncept.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Tým sa na konci aktuálneho fakturačného obdobia zruší %1$d aktívne predplatné. Odberatelia budú upozornení. Inzerát bude pred kupujúcimi skrytý.</item>
-        <item quantity="few">Tým sa na konci aktuálneho fakturačného obdobia zruší %1$d aktívne predplatné. Odberatelia budú upozornení. Inzerát bude pred kupujúcimi skrytý.</item>
-        <item quantity="other">Tým sa na konci aktuálneho fakturačného obdobia zruší %1$d aktívnych predplatných. Odberatelia budú upozornení. Inzerát bude pred kupujúcimi skrytý.</item>
+        <item quantity="one">Tým sa na konci aktuálneho fakturačného obdobia zruší %1$s aktívne predplatné. Odberatelia budú upozornení. Inzerát bude pred kupujúcimi skrytý.</item>
+        <item quantity="few">Tým sa na konci aktuálneho fakturačného obdobia zruší %1$s aktívne predplatné. Odberatelia budú upozornení. Inzerát bude pred kupujúcimi skrytý.</item>
+        <item quantity="other">Tým sa na konci aktuálneho fakturačného obdobia zruší %1$s aktívnych predplatných. Odberatelia budú upozornení. Inzerát bude pred kupujúcimi skrytý.</item>
     </plurals>
 </resources>

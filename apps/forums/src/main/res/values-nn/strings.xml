@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">Moderer</string>
     <string name="forums_members_search">Filtrer medlemer</string>
     <string name="forums_banner_description">Markdown vist øvst i forumet.</string>
-    <string name="forums_banner_placeholder">Velkomen til dette forumet…</string>
+    <string name="forums_banner_placeholder">Skriv inn bannertekst (markdown er støtta)…</string>
     <string name="forums_ai_mode_label">Modus: %1$s</string>
     <string name="forums_ai_mode_heading">AI-modus</string>
     <string name="forums_ai_mode_off">Deaktivert</string>
@@ -292,11 +292,11 @@
     <string name="forums_saved_empty_title">Ingenting lagra enno</string>
     <string name="forums_saved_error_clear">Kunne ikkje tømme lagra innlegg</string>
     <string name="forums_saved_save">Lagra til seinare</string>
-    <string name="forums_moderation_pending_posts">Ventande innlegg (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Ventande kommentarar (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Ventande innlegg (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Ventande kommentarar (%1$s)</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d nytt innlegg</item>
-        <item quantity="other">%d nye innlegg</item>
+        <item quantity="one">%s nytt innlegg</item>
+        <item quantity="other">%s nye innlegg</item>
     </plurals>
     <string name="forums_moderation_on_image">Til bilete: %1$s</string>
     <string name="forums_sort_ai">KI</string>

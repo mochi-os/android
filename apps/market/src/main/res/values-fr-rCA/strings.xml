@@ -87,7 +87,6 @@
     <string name="market_checkout_shipping">Livraison</string>
     <string name="market_editor_shipping">Livraison</string>
     <string name="market_filter_delivery_shipping">Livraison</string>
-    <string name="market_listing_detail_shipping_heading">Livraison</string>
     <string name="market_purchase_shipping_line">Livraison</string>
     <string name="market_sale_section_shipping">Livraison</string>
     <string name="market_dispute_dialog_evidence_role_seller">Vendeur</string>
@@ -135,7 +134,7 @@
     <string name="market_editor_section_tags">Étiquettes</string>
     <string name="market_filter_pricing_subscription">Abonnement</string>
     <string name="market_filter_remove">Retirer le filtre</string>
-    <string name="market_listing_detail_sales_count">%1$d ventes</string>
+    <string name="market_listing_detail_sales_count">%1$s ventes</string>
     <string name="market_listing_detail_tags_heading">Étiquettes</string>
     <string name="market_listing_detail_verified">Vérifié</string>
     <string name="market_listings_filter_expired">Expirée</string>
@@ -143,7 +142,7 @@
     <string name="market_listings_filter_sold">Vendue</string>
     <string name="market_messages_inbox_title">Messages</string>
     <string name="market_profile_reviews_section">Évaluations</string>
-    <string name="market_profile_sales_count">%1$d ventes</string>
+    <string name="market_profile_sales_count">%1$s ventes</string>
     <string name="market_profile_status_banned">Banni</string>
     <string name="market_profile_status_suspended">Suspendu</string>
     <string name="market_profile_verified">Vérifié</string>
@@ -195,7 +194,7 @@
     <string name="market_filter_type_physical">Physique</string>
     <string name="market_type_physical">Physique</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biographie</string>
     <string name="market_account_biography_placeholder">Parlez de vous aux acheteurs…</string>
     <string name="market_account_load_failed">Impossible de charger le compte</string>
@@ -233,8 +232,8 @@
     <string name="market_bids_tab_won">Gagnées</string>
     <string name="market_bids_title">Enchères</string>
     <string name="market_bids_your_bid">Votre enchère : %1$s</string>
-    <string name="market_carousel_main">Photo %1$d sur %2$d</string>
-    <string name="market_carousel_thumbnail">Vignette %1$d</string>
+    <string name="market_carousel_main">Photo %1$s sur %2$s</string>
+    <string name="market_carousel_thumbnail">Vignette %1$s</string>
     <string name="market_chargeback_reason_bank_cannot_process">La banque n\'a pas pu traiter</string>
     <string name="market_chargeback_reason_check_returned">Chèque retourné</string>
     <string name="market_chargeback_reason_credit_not_processed">Crédit non traité</string>
@@ -282,7 +281,7 @@
     <string name="market_condition_refurbished">Remis à neuf</string>
     <string name="market_condition_used">Usagé</string>
     <string name="market_dispute_dialog_attach">Joindre une preuve</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fichier(s) joint(s)</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fichier(s) joint(s)</string>
     <string name="market_dispute_dialog_evidence_role_staff">Personnel de Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Preuves soumises</string>
     <string name="market_dispute_dialog_evidence_submitter_line">soumis par %1$s</string>
@@ -306,7 +305,7 @@
     <string name="market_editor_condition_refurbished">Remis à neuf</string>
     <string name="market_editor_condition_used">Usagé</string>
     <string name="market_editor_currency">Devise</string>
-    <string name="market_editor_days">%1$d jours</string>
+    <string name="market_editor_days">%1$s jours</string>
     <string name="market_editor_delete">Supprimer l\'annonce</string>
     <string name="market_editor_delete_confirm_message">Cette action supprimera définitivement l\'annonce.</string>
     <string name="market_editor_delete_confirm_title">Supprimer l\'annonce?</string>
@@ -449,9 +448,8 @@
     <string name="market_messages_load_failed">Impossible de charger la conversation</string>
     <string name="market_messages_send_failed">Impossible d\'envoyer le message</string>
     <string name="market_messages_thread_title">Conversation</string>
-    <string name="market_messages_unread_badge">%1$d non lus</string>
+    <string name="market_messages_unread_badge">%1$s non lus</string>
     <string name="market_open_sidebar">Ouvrir le menu</string>
-    <string name="market_price_from">à partir de %1$s</string>
     <string name="market_price_high_bid">Enchère la plus élevée : %1$s</string>
     <string name="market_price_instant_buy">achat immédiat : %1$s</string>
     <string name="market_price_per_month">%1$s / mois</string>
@@ -463,7 +461,7 @@
     <string name="market_profile_joined">Inscrit le %1$s</string>
     <string name="market_profile_no_reviews">Aucun avis pour le moment.</string>
     <string name="market_profile_rating_breakdown">Détail des évaluations</string>
-    <string name="market_profile_stars_value">%1$d étoiles</string>
+    <string name="market_profile_stars_value">%1$s étoiles</string>
     <string name="market_purchase_confirm_delivery">Confirmer la réception</string>
     <string name="market_purchase_confirm_done">Réception confirmée</string>
     <string name="market_purchase_confirm_failed">Échec de la confirmation</string>
@@ -474,7 +472,7 @@
     <string name="market_purchase_dispute_resolution">Décision du personnel</string>
     <string name="market_purchase_dispute_title">Demande de remboursement</string>
     <string name="market_purchase_download_failed">Échec du téléchargement</string>
-    <string name="market_purchase_download_many">Téléchargez vos %1$d fichiers ci-dessous.</string>
+    <string name="market_purchase_download_many">Téléchargez vos %1$s fichiers ci-dessous.</string>
     <string name="market_purchase_download_one">Téléchargez votre fichier ci-dessous.</string>
     <string name="market_purchase_download_section">Votre achat est prêt</string>
     <string name="market_purchase_item">Article</string>
@@ -502,7 +500,7 @@
     <string name="market_purchases_title">Achats</string>
     <string name="market_purchases_won_for">Remporté pour %1$s</string>
     <string name="market_rating_no_reviews">Aucun avis pour le moment</string>
-    <string name="market_rating_reviews">(%1$d avis)</string>
+    <string name="market_rating_reviews">(%1$s avis)</string>
     <string name="market_refund_amount_label">Montant</string>
     <string name="market_refund_body">Indiquez la raison de votre demande de remboursement.</string>
     <string name="market_refund_dialog_amount_help">Laissez vide pour rembourser la totalité de la commande.</string>

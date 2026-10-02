@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">ገበያ</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">የሕይወት ታሪክ</string>
     <string name="market_account_biography_placeholder">ስለራስዎ ለገዢዎች ይንገሩ…</string>
     <string name="market_account_load_failed">መለያውን መጫን አልተቻለም</string>
@@ -72,8 +72,8 @@
     <string name="market_bids_tab_won">አሸንፏል</string>
     <string name="market_bids_title">ጨረታዎች</string>
     <string name="market_bids_your_bid">የእርስዎ ጨረታ፦ %1$s</string>
-    <string name="market_carousel_main">ፎቶ %1$d ከ%2$d</string>
-    <string name="market_carousel_thumbnail">ጥቃቅን %1$d</string>
+    <string name="market_carousel_main">ፎቶ %1$s ከ%2$s</string>
+    <string name="market_carousel_thumbnail">ጥቃቅን %1$s</string>
     <string name="market_channel_name">ገበያ</string>
     <string name="market_chargeback_reason_bank_cannot_process">ባንክ ሊያስኬድ አልቻለም</string>
     <string name="market_chargeback_reason_check_returned">ቼክ ተመልሷል</string>
@@ -135,7 +135,7 @@
     <string name="market_condition_refurbished">የታደሰ</string>
     <string name="market_condition_used">ጥቅም ላይ የዋለ</string>
     <string name="market_dispute_dialog_attach">ማስረጃ አያይዝ</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ፋይል(ሎች) ተያይዘዋል</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ፋይል(ሎች) ተያይዘዋል</string>
     <string name="market_dispute_dialog_cancel">ይቅር</string>
     <string name="market_dispute_dialog_evidence_role_buyer">ገዢ</string>
     <string name="market_dispute_dialog_evidence_role_seller">ሻጭ</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_condition_refurbished">የታደሰ</string>
     <string name="market_editor_condition_used">ጥቅም ላይ የዋለ</string>
     <string name="market_editor_currency">ምንዛሬ</string>
-    <string name="market_editor_days">%1$d ቀናት</string>
+    <string name="market_editor_days">%1$s ቀናት</string>
     <string name="market_editor_delete">ዝርዝር ሰርዝ</string>
     <string name="market_editor_delete_confirm_message">ይህ ዝርዝሩን ሙሉ ለሙሉ ይሰርዘዋል።</string>
     <string name="market_editor_delete_confirm_title">ዝርዝር ይሰረዝ?</string>
@@ -312,7 +312,7 @@
     <string name="market_listing_detail_relist_failed">እንደገና መዘርዘር አልተቻለም</string>
     <string name="market_listing_detail_relist_in_progress">እንደገና በመዘርዘር ላይ</string>
     <string name="market_listing_detail_report">ዝርዝርን ሪፖርት አድርግ</string>
-    <string name="market_listing_detail_sales_count">%1$d ሽያጮች</string>
+    <string name="market_listing_detail_sales_count">%1$s ሽያጮች</string>
     <string name="market_listing_detail_save">ያስቀምጡ</string>
     <string name="market_listing_detail_seller_banned_banner">ይህ ሻጭ ታግዷል። አዲስ ትዕዛዞች ሊቀመጡ አይችሉም።</string>
     <string name="market_listing_detail_seller_heading">ሻጭ</string>
@@ -364,7 +364,7 @@
     <string name="market_messages_send_failed">መልዕክት መላክ አልተቻለም</string>
     <string name="market_messages_thread_listing_chip">ዝርዝር</string>
     <string name="market_messages_thread_title">ውይይት</string>
-    <string name="market_messages_unread_badge">%1$d ያልተነበቡ</string>
+    <string name="market_messages_unread_badge">%1$s ያልተነበቡ</string>
     <string name="market_onboarding_activate">አንቃ</string>
     <string name="market_onboarding_activating">በማንቃት ላይ…</string>
     <string name="market_onboarding_body">ለመግዛት እና ለመሸጥ መለያዎን ያንቁ።</string>
@@ -384,8 +384,8 @@
     <string name="market_profile_no_reviews">ገና ግምገማዎች የሉም።</string>
     <string name="market_profile_rating_breakdown">የደረጃ ስርጭት</string>
     <string name="market_profile_reviews_section">ግምገማዎች</string>
-    <string name="market_profile_sales_count">%1$d ሽያጮች</string>
-    <string name="market_profile_stars_value">%1$d ኮከቦች</string>
+    <string name="market_profile_sales_count">%1$s ሽያጮች</string>
+    <string name="market_profile_stars_value">%1$s ኮከቦች</string>
     <string name="market_profile_status_banned">ታግዷል</string>
     <string name="market_profile_status_suspended">ቆሟል</string>
     <string name="market_profile_verified">ተረጋግጧል</string>
@@ -403,7 +403,7 @@
     <string name="market_purchase_dispute_response">የሻጭ ምላሽ</string>
     <string name="market_purchase_dispute_title">የተመላሽ ገንዘብ ጥያቄ</string>
     <string name="market_purchase_download_failed">ማውረድ አልተሳካም</string>
-    <string name="market_purchase_download_many">%1$d ፋይሎችዎን ከታች ያውርዱ።</string>
+    <string name="market_purchase_download_many">%1$s ፋይሎችዎን ከታች ያውርዱ።</string>
     <string name="market_purchase_download_one">ፋይልዎን ከታች ያውርዱ።</string>
     <string name="market_purchase_download_section">ግዢዎ ዝግጁ ነው</string>
     <string name="market_purchase_item">ንጥል</string>
@@ -441,7 +441,7 @@
     <string name="market_purchases_won_for">በ%1$s ተሸንፏል</string>
     <string name="market_rating_label">ደረጃ</string>
     <string name="market_rating_no_reviews">እስካሁን ግምገማዎች የሉም</string>
-    <string name="market_rating_reviews">(%1$d ግምገማዎች)</string>
+    <string name="market_rating_reviews">(%1$s ግምገማዎች)</string>
     <string name="market_refund_amount_label">መጠን</string>
     <string name="market_refund_body">ለተመላሽ ገንዘብ ጥያቄዎ ምክንያት ያቅርቡ።</string>
     <string name="market_refund_details_label">ዝርዝሮች</string>
@@ -784,11 +784,11 @@
     <string name="market_listings_remove_message_auction">ይህ ጨረታውን ይሰርዛል። ዝርዝሩ ከገዢዎች ይደበቃል፣ በኋላ እንደ አዲስ ረቂቅ እንደገና መዘርዘር ይችላሉ።</string>
     <string name="market_listings_remove_title">ይህን ዝርዝር ያስወግዱ?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">ይህ ጨረታውን ይሰርዛል እና %1$d ንቁ ተጫራች ያሳውቃል። ዝርዝሩ ከገዢዎች ይደበቃል፤ በኋላ እንደ አዲስ ረቂቅ እንደገና መዘርዘር ይችላሉ።</item>
-        <item quantity="other">ይህ ጨረታውን ይሰርዛል እና %1$d ንቁ ተጫራቾችን ያሳውቃል። ዝርዝሩ ከገዢዎች ይደበቃል፤ በኋላ እንደ አዲስ ረቂቅ እንደገና መዘርዘር ይችላሉ።</item>
+        <item quantity="one">ይህ ጨረታውን ይሰርዛል እና %1$s ንቁ ተጫራች ያሳውቃል። ዝርዝሩ ከገዢዎች ይደበቃል፤ በኋላ እንደ አዲስ ረቂቅ እንደገና መዘርዘር ይችላሉ።</item>
+        <item quantity="other">ይህ ጨረታውን ይሰርዛል እና %1$s ንቁ ተጫራቾችን ያሳውቃል። ዝርዝሩ ከገዢዎች ይደበቃል፤ በኋላ እንደ አዲስ ረቂቅ እንደገና መዘርዘር ይችላሉ።</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">ይህ %1$d ንቁ ምዝገባን በአሁኑ የክፍያ ጊዜ መጨረሻ ይሰርዛል። ተመዝጋቢዎች ይነገራቸዋል። ዝርዝሩ ከገዢዎች ይደበቃል።</item>
-        <item quantity="other">ይህ %1$d ንቁ ምዝገባዎችን በአሁኑ የክፍያ ጊዜ መጨረሻ ይሰርዛል። ተመዝጋቢዎች ይነገራቸዋል። ዝርዝሩ ከገዢዎች ይደበቃል።</item>
+        <item quantity="one">ይህ %1$s ንቁ ምዝገባን በአሁኑ የክፍያ ጊዜ መጨረሻ ይሰርዛል። ተመዝጋቢዎች ይነገራቸዋል። ዝርዝሩ ከገዢዎች ይደበቃል።</item>
+        <item quantity="other">ይህ %1$s ንቁ ምዝገባዎችን በአሁኑ የክፍያ ጊዜ መጨረሻ ይሰርዛል። ተመዝጋቢዎች ይነገራቸዋል። ዝርዝሩ ከገዢዎች ይደበቃል።</item>
     </plurals>
 </resources>

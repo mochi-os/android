@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Bildirishnoma sozlamalari</string>
     <string name="settings_home_accounts">Ulangan hisoblar</string>
     <string name="settings_home_interests">Qiziqishlar</string>
-    <string name="account_section_passkeys">Passkey’lar</string>
-    <string name="account_passkey_register">Passkey qoʻshish</string>
-    <string name="account_passkey_delete_title">Passkey oʻchirilsinmi?</string>
+    <string name="account_section_passkeys">Kirish kalitlari</string>
+    <string name="account_passkey_register">Kirish kaliti qoʻshish</string>
+    <string name="account_passkey_delete_title">Kirish kaliti oʻchirilsinmi?</string>
     <string name="account_section_totp">Autentifikator ilova</string>
     <string name="account_totp_setup">Autentifikatorni sozlash</string>
     <string name="account_totp_setup_title">Autentifikatorni sozlash</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Tiklash kodlari</string>
     <string name="account_recovery_codes_title">Tiklash kodlari</string>
     <string name="sessions_unknown_agent">Nomaʼlum qurilma</string>
-    <string name="sessions_revoke_title">Seans bekor qilinsinmi?</string>
+    <string name="sessions_revoke_title">Seans qaytarib olinsinmi?</string>
     <string name="account_section_oauth">Uchinchi tomon kirishi</string>
     <string name="account_oauth_link">Hisobni bogʻlash</string>
     <string name="account_unlink">Bogʻlamani yechish</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Bajarildi</string>
     <string name="account_delete">Oʻchirish</string>
     <string name="account_rename">Nomini oʻzgartirish</string>
-    <string name="sessions_revoke">Bekor qilish</string>
+    <string name="sessions_revoke">Qaytarib olish</string>
     <string name="account_disable">Oʻchirish</string>
     <string name="account_copy">Nusxalash</string>
     <string name="account_copy_all">Hammasini nusxalash</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Marshrut oʻchirilsinmi?</string>
     <string name="route_path">Yoʻl</string>
     <string name="route_method">Usul</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Ilova</string>
     <string name="route_method_entity">Obyekt</string>
     <string name="route_method_redirect">Yoʻnaltirish</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org dan yuklab oling</string>
     <string name="system_status_copy">Nusxalash</string>
     <string name="system_status_peers">Hamkorlar</string>
-    <string name="system_status_known">Ma\'lum</string>
+    <string name="system_status_peers_totals">Maʼlum %1$s · Ulangan %2$s · Translyatsiya tarmogʻi %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Maʼlum %1$s · Ulangan %2$s</string>
     <string name="system_status_peer_connected">Ulangan</string>
     <string name="system_status_peer_disconnected">Uzilgan</string>
     <string name="system_status_peer_queued">Navbatdagi xabarlar</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Olib tashlash</string>
     <string name="accounts_remove_title">Hisobni olib tashlasinmi?</string>
     <string name="system_documents_title">Hujjatlar</string>
-    <string name="system_documents_description">Foydalanuvchilarga koʻrsatiladigan server qoidalari, shartlari va maxfiylik bildirishnomasi</string>
     <string name="system_documents_tab_rules">Server qoidalari</string>
     <string name="system_documents_tab_terms">Shartlar va qoidalar</string>
     <string name="system_documents_tab_privacy">Maxfiylik</string>
     <string name="system_documents_language">Til</string>
     <string name="system_documents_no_language">Bu til uchun hujjat mavjud emas.</string>
-    <string name="system_documents_customised">Moslashtirilgan</string>
     <string name="system_documents_using_default">Birga keladigan standart ishlatilmoqda</string>
     <string name="system_documents_revert">Standartga qaytarish</string>
     <string name="system_documents_save">Saqlash</string>
@@ -137,7 +138,7 @@
     <string name="system_settings_reset_title">Standartga qaytarilsinmi?</string>
     <string name="system_setting_apps_install_user">Foydalanuvchilarga ilovalar oʻrnatishga ruxsat berish</string>
     <string name="system_setting_auth_email">Email kodi yordamida kirish</string>
-    <string name="system_setting_auth_passkey">Passkey yordamida kirish</string>
+    <string name="system_setting_auth_passkey">Kirish kaliti yordamida tizimga kirish</string>
     <string name="system_setting_auth_totp">TOTP autentifikator ilovasi yordamida kirish</string>
     <string name="system_setting_auth_recovery">Tiklash kodi yordamida kirish</string>
     <string name="system_setting_auth_oauth">OAuth 2.0 yordamida kirish</string>
@@ -182,46 +183,45 @@
     <string name="system_users_delete">Foydalanuvchini oʻchirish</string>
     <string name="system_users_delete_title">Foydalanuvchi oʻchirilsinmi?</string>
     <string name="system_users_manage_sessions">Sessiyalarni boshqarish</string>
-    <string name="system_users_sessions_description">Ushbu foydalanuvchining faol sessiyalarini koʻrish va bekor qilish.</string>
     <string name="system_users_sessions_empty">Bu foydalanuvchining faol sessiyalari yoʻq.</string>
-    <string name="system_users_revoke">Bekor qilish</string>
-    <string name="system_users_revoke_all">Barcha seanslarni bekor qilish</string>
+    <string name="system_users_revoke">Qaytarib olish</string>
+    <string name="system_users_revoke_all">Barcha seanslarni qaytarib olish</string>
     <string name="system_users_unknown_browser">Nomaʼlum brauzer</string>
     <string name="system_users_unknown">Nomaʼlum</string>
     <string name="system_users_previous">Oldingisi</string>
     <string name="system_users_next">Keyingi</string>
     <string name="system_users_empty">Foydalanuvchilar topilmadi</string>
     <string name="system_users_empty_search">Qidiruvingizga mos foydalanuvchilar yoʻq</string>
-    <string name="system_users_empty_search_hint">Qidiruv mezonlaringizni sozlashga harakat qiling</string>
     <string name="system_users_toast_created">Foydalanuvchi yaratildi</string>
     <string name="system_users_toast_updated">Foydalanuvchi yangilandi</string>
     <string name="system_users_toast_deleted">Foydalanuvchi oʻchirildi</string>
     <string name="system_users_toast_suspended">Foydalanuvchi toʻxtatib qoʻyildi</string>
-    <string name="system_users_toast_suspension_removed">Toʻxtatib qoʻyish bekor qilindi</string>
-    <string name="system_users_toast_session_revoked">Sessiya bekor qilindi</string>
+    <string name="system_users_toast_suspension_removed">Toʻxtatib qoʻyish olib tashlandi</string>
+    <string name="system_users_toast_session_revoked">Seans qaytarib olindi</string>
     <string name="system_users_toast_create_failed">Foydalanuvchi yaratib boʻlmadi</string>
     <string name="system_users_toast_update_failed">Foydalanuvchini yangilab boʻlmadi</string>
     <string name="system_users_toast_delete_failed">Foydalanuvchini oʻchirib boʻlmadi</string>
     <string name="system_users_toast_status_failed">Foydalanuvchi holatini yangilab boʻlmadi</string>
-    <string name="system_users_toast_revoke_failed">Sessiyani bekor qilib boʻlmadi</string>
+    <string name="system_users_toast_revoke_failed">Seansni qaytarib olib boʻlmadi</string>
 
     <string name="settings_home_sessions">Seanslar</string>
     <string name="settings_home_privacy">Maxfiylik siyosati</string>
     <string name="settings_home_rules">Qoidalar</string>
     <string name="settings_home_terms">Xizmat shartlari</string>
-    <string name="account_passkeys_empty">Roʻyxatdan oʻtgan kalitlar yoʻq.</string>
-    <string name="account_passkey_register_title">Kalit qoʻshish</string>
-    <string name="account_passkey_register_message">Qurilmangiz tasdiqlashni soʻraydi. Kalit ushbu qurilmaga bogʻlangan va keyingi kirishlar uchun ishlatiladi.</string>
+    <string name="account_passkeys_empty">Roʻyxatdan oʻtgan kirish kalitlari yoʻq.</string>
+    <string name="account_passkey_register_title">Kirish kaliti qoʻshish</string>
     <string name="account_passkey_name_label">Nom (ixtiyoriy)</string>
     <string name="account_passkey_delete_message">\"%1$s\" sizni endi kiritmaydi.</string>
-    <string name="account_totp_description">Autentifikator ilovasidan 6 raqamli kod bilan kiring.</string>
     <string name="account_totp_enabled">Autentifikator yoqilgan.</string>
     <string name="account_totp_setup_step1">Ushbu sirni autentifikator ilovangizda skanerlang yoki kiriting.</string>
     <string name="account_totp_setup_step2">Ilovangiz koʻrsatadigan 6 raqamli kodni kiriting.</string>
     <string name="account_totp_code">Kod</string>
     <string name="account_totp_disable_message">Siz endi autentifikator kodi bilan kira olmaysiz.</string>
     <string name="account_recovery_none">Tiklash kodlari yaratilmagan.</string>
-    <string name="account_recovery_count">%1$d foydalanilmagan tiklash kodlari.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s ta tiklash kodi qoldi.</item>
+        <item quantity="other">%1$s ta tiklash kodi qoldi.</item>
+    </plurals>
     <string name="account_recovery_generate">Kodlar yaratish</string>
     <string name="account_recovery_regenerate">Kodlarni qayta yaratish</string>
     <string name="account_recovery_regen_title">Tiklash kodlarini qayta yaratasizmi?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Oxirgi foydalanish %1$s</string>
     <string name="route_delete_message">Bu yoʻl \"%1$s\" uchun marshrutni olib tashlaydi.</string>
     <string name="route_empty">Sozlangan marshrutlar yoʻq.</string>
-    <string name="route_meta">Ustuvorlik %1$d · %2$s</string>
+    <string name="route_meta">Ustuvorlik %1$s · %2$s</string>
     <string name="interests_search_placeholder">Qoʻshish uchun mavzularni qidiring…</string>
     <string name="interests_empty">Hali qiziqishlar yoʻq.</string>
     <string name="interests_summary_regenerate">Qisqacha mazmunni qayta yaratish</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Bu doimiy ravishda \"%1$s\" foydalanuvchisini oʻchiradi. Bu amalni qaytarib boʻlmaydi.</string>
     <string name="system_users_sessions_title">%1$s sessiyalari</string>
     <string name="system_users_session_last_accessed">Oxirgi kirish: %1$s</string>
-    <string name="system_users_revoke_all_title">Barcha sessiyalarni bekor qilasizmi?</string>
+    <string name="system_users_revoke_all_title">Barcha seanslar qaytarib olinsinmi?</string>
     <string name="system_users_revoke_all_message">Bu foydalanuvchining barcha faol sessiyalaridan chiqiladi.</string>
-    <string name="system_users_pagination_status">%3$d foydalanuvchidan %1$d–%2$d koʻrsatilmoqda</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$s foydalanuvchidan %1$s–%2$s koʻrsatilmoqda</item>
+        <item quantity="other">%3$s foydalanuvchidan %1$s–%2$s koʻrsatilmoqda</item>
+    </plurals>
     <string name="account_title">Hisob</string>
     <string name="account_section_identity">Identifikatsiya</string>
     <string name="account_identity_identity">Identifikatsiya</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ni tasdiqlash</string>
     <string name="settings_home_domains">Domenlar</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Sinov %1$d manzilga yuborildi</item>
-        <item quantity="other">Sinov %1$d manzilga yuborildi</item>
+        <item quantity="one">Sinov %1$s manzilga yuborildi</item>
+        <item quantity="other">Sinov %1$s manzilga yuborildi</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 sessiya bekor qilindi</item>
-        <item quantity="other">%1$d sessiya bekor qilindi</item>
+        <item quantity="one">%1$s seans qaytarib olindi</item>
+        <item quantity="other">%1$s seans qaytarib olindi</item>
     </plurals>
     <string name="login_title">Kirish</string>
     <string name="login_section_methods">Kirish usullari</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Ommaviy</string>
     <string name="system_status_reachability_private">Shaxsiy</string>
     <string name="system_status_reachability_unknown">Nomaʼlum</string>
-    <string name="system_status_relay">Rele orqali</string>
-    <string name="system_status_mesh">Translyatsiya mesh</string>
+    <string name="system_status_reachability_relay">%1$s · rele orqali</string>
     <string name="system_status_broadcast">Oxirgi uzatish</string>
     <string name="system_status_queued_broadcasts">Navbatdagi eshittirish xabarlari</string>
     <string name="system_setting_hostname_publish">Xost nomi va domenlarni boshqa serverlarga e\'lon qilish</string>
     <string name="system_setting_hostname">Boshqa serverlarga e\'lon qilingan xost nomi</string>
     <string name="system_status_peer_id">Tengdosh ID</string>
     <string name="system_status_holepunch">Teshish</string>
-    <string name="system_status_holepunch_value">%1$d muvaffaqiyatli · %2$d muvaffaqiyatsiz</string>
     <string name="system_status_awaiting_routing">Marshrutlashni kutayotgan xabarlar</string>
     <string name="system_status_relay_service">Relay xizmati</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d bronlar · %3$d zanjirlar · %4$d rad etilgan</string>
     <string name="route_target_select">Tanlash</string>
     <string name="account_data_description">Bu yoki boshqa Mochi serverida tiklashingiz mumkin boʻlgan toʻliq zaxira nusxasini yuklab oling.</string>
     <string name="route_target_none">Mavjud maqsadlar yoʻq</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Oxirgi marta ko‘rilgan %1$s</string>
     <string name="notifprefs_device_app">%1$s · ilova</string>
     <string name="notifprefs_device_push">%1$s · push bildirishnomalar</string>
-    <string name="notifprefs_test_partial">Sinov %2$d manzildan %1$d tasiga yuborildi</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Sinov %2$s manzildan %1$s tasiga yuborildi</item>
+        <item quantity="other">Sinov %2$s manzildan %1$s tasiga yuborildi</item>
+    </plurals>
     <string name="notifprefs_test_none">Manzillar sozlanmagan</string>
     <string name="notifprefs_transport_fcm">Android push bildirishnomalari</string>
     <string name="notifprefs_no_destinations">Manzillar yo\'q</string>
@@ -385,13 +390,36 @@
     <string name="accounts_field_topic">Mavzu</string>
     <string name="accounts_field_secret">Imzo maxfiy kaliti</string>
     <string name="account_totp_open">Autentifikator ilovasida ochish</string>
-    <string name="accounts_revoke">Kirishni bekor qilish</string>
+    <string name="accounts_revoke">Kirish huquqini qaytarib olish</string>
     <string name="accounts_capability_calendar">Kalendar</string>
     <string name="accounts_capability_notify">Bildirishnomalar</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Kirish</string>
     <string name="accounts_provider_caldav">Kalendar serveri</string>
-    <string name="accounts_revoke_confirm">Bu %1$s kalendariga kirishni bekor qiladi. %2$s bilan kirish, uni Kirish sahifasida uzmaguningizcha saqlanadi.</string>
+    <string name="accounts_revoke_confirm">Bu %1$s kalendariga kirish huquqini qaytarib oladi. %2$s bilan kirish, uni Kirish sahifasida uzmaguningizcha saqlanadi.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Nomaʼlum mavzu</string>
+    <string name="system_documents_modified">Oʻzgartirilgan</string>
+    <string name="system_documents_discard_title">Oʻzgarishlar tashlab yuborilsinmi?</string>
+    <string name="system_documents_discard">Tashlab yuborish</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s muvaffaqiyatli</item>
+        <item quantity="other">%1$s muvaffaqiyatli</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s muvaffaqiyatsiz</item>
+        <item quantity="other">%1$s muvaffaqiyatsiz</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s bron</item>
+        <item quantity="other">%1$s / %2$s bron</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s zanjir</item>
+        <item quantity="other">%1$s zanjir</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s rad etildi</item>
+        <item quantity="other">%1$s rad etildi</item>
+    </plurals>
 </resources>

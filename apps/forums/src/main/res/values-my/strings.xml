@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">ထိန်းညှိပါ</string>
     <string name="forums_members_search">အဖွဲ့ဝင်များကို စစ်ထုတ်ပါ</string>
     <string name="forums_banner_description">ဖိုရမ်၏ ထိပ်တွင် ပြသမည့် Markdown။</string>
-    <string name="forums_banner_placeholder">ဤဖိုရမ်သို့ ကြိုဆိုပါသည်…</string>
+    <string name="forums_banner_placeholder">နဖူးစည်း စာသား ထည့်ပါ (Markdown ပံ့ပိုးသည်)…</string>
     <string name="forums_ai_mode_label">မုဒ်: %1$s</string>
     <string name="forums_ai_mode_heading">AI မုဒ်</string>
     <string name="forums_ai_mode_off">ပိတ်ထားသည်</string>
@@ -202,7 +202,7 @@
     <string name="forums_saved_empty_subtitle">မည်သည့်ပို့စ်ကိုမဆို နောက်မှကြည့်ရန် ဤနေရာတွင်သိမ်းရန် ၎င်း၏ booklink ကို တို့ပါ။</string>
     <string name="forums_saved_error_clear">သိမ်းထားသောပို့စ်များကို ရှင်းရန် မအောင်မြင်ပါ</string>
     <plurals name="forums_new_posts">
-        <item quantity="other">ပို့စ်အသစ် %dခု</item>
+        <item quantity="other">ပို့စ်အသစ် %sခု</item>
     </plurals>
     <string name="forums_rss_feed">RSS ဖိဒ်</string>
     <string name="forums_rss_mode_posts">ပို့စ်များ</string>
@@ -295,8 +295,8 @@
     <string name="forums_settings_unsubscribe_section">ဖိုရမ်မှ စာရင်းသွင်းမှု ရပ်ဆိုင်းပါ</string>
     <string name="forums_share_link_title">ဖိုရမ်လင့်ခ်</string>
     <string name="forums_find_found_by_url">URL ဖြင့် တွေ့ရှိသည်</string>
-    <string name="forums_moderation_pending_posts">စောင့်ဆိုင်းနေသော ပို့စ်များ (%1$d)</string>
-    <string name="forums_moderation_pending_comments">စောင့်ဆိုင်းနေသော မှတ်ချက်များ (%1$d)</string>
+    <string name="forums_moderation_pending_posts">စောင့်ဆိုင်းနေသော ပို့စ်များ (%1$s)</string>
+    <string name="forums_moderation_pending_comments">စောင့်ဆိုင်းနေသော မှတ်ချက်များ (%1$s)</string>
     <string name="forums_moderation_on_image">ပုံအပေါ်- %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">ဤဖိုရမ်တွင် ပို့စ်တင်ရန် သင်တွင် ခွင့်ပြုချက် မရှိပါ</string>

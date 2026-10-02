@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">Конь</string>
     <string name="chess_piece_pawn">Пешка</string>
     <string name="chess_move_played">%1$s сыграл %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">Уведомления о шахматных ходах, предложениях ничьей и результатах партий.</string>
     <string name="chess_channel_name">Уведомления шахмат</string>
     <string name="chess_delete_message">Удаляет партию из вашего списка.</string>

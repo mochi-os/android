@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Noter</string>
     <string name="staff_accounts_reason_label">Årsag</string>
     <string name="staff_accounts_reason_optional_label">Årsag (valgfri)</string>
-    <string name="staff_accounts_sales">%1$d salg</string>
+    <string name="staff_accounts_sales">%1$s salg</string>
     <string name="staff_accounts_search_clear">Ryd søgning</string>
     <string name="staff_accounts_search_placeholder">Søg</string>
     <string name="staff_accounts_seller_buyers">Kun købere</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Unavngivet</string>
     <string name="staff_accounts_unsuspend">Ophæv suspendering</string>
     <string name="staff_accounts_unsuspended_toast">Konto genoptaget</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Annuller</string>
     <string name="staff_appeals_decide">Afgør</string>
     <string name="staff_appeals_decision_denied">Hold annonce afvist</string>

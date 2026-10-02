@@ -33,11 +33,11 @@
     <string name="crm_settings_tab_people">ผู้คน</string>
     <string name="crm_option_icon">ไอคอน</string>
     <string name="crm_option_icon_placeholder">เช่น Check, Star, Flag</string>
-    <string name="crm_settings_unsubscribe">ยกเลิกการติดตาม</string>
+    <string name="crm_settings_unsubscribe">เลิกติดตาม</string>
     <string name="crm_settings_delete_crm">ลบ CRM</string>
     <string name="crm_settings_delete_confirm_title">ลบ CRM</string>
-    <string name="crm_settings_unsubscribe_title">ยกเลิกการติดตาม</string>
-    <string name="crm_settings_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการสมัครสมาชิก CRM นี้?</string>
+    <string name="crm_settings_unsubscribe_title">เลิกติดตาม</string>
+    <string name="crm_settings_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการเลิกติดตาม CRM นี้?</string>
     <string name="crm_access_level_owner">เจ้าของ</string>
     <string name="crm_object_watch">ติดตาม</string>
     <string name="crm_object_tab_properties">คุณสมบัติ</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">ไม่มีวัตถุ</string>
     <string name="crm_board_no_columns">ไม่มีคอลัมน์ที่กำหนดค่าไว้สำหรับมุมมองนี้</string>
     <string name="crm_board_no_options">ไม่ได้กำหนดตัวเลือกสำหรับฟิลด์คอลัมน์</string>
-    <string name="crm_board_nested_count">+%1$d ซ้อน</string>
+    <string name="crm_board_nested_count">+%1$s ซ้อน</string>
     <string name="crm_move_to_column">ย้ายไปที่คอลัมน์</string>
     <string name="crm_move_to_row">ย้ายไปที่แถว</string>
     <string name="crm_move_after">หลัง %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">บันทึกข้อมูล CRM แล้ว</string>
     <string name="crm_create_upload_json">อัปโหลดไฟล์ .zip หรือ .json</string>
     <string name="crm_create_blocked_no_options">สร้างไม่ได้: %1$s จำเป็นแต่ไม่มีตัวเลือกให้เลือก เพิ่มตัวเลือกในการออกแบบ</string>
-    <string name="crm_design_sample">ตัวอย่าง %1$d</string>
+    <string name="crm_design_sample">ตัวอย่าง %1$s</string>
     <string name="crm_option_delete_title">ลบตัวเลือก</string>
     <string name="crm_option_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบตัวเลือก \"%1$s\"</string>
 </resources>

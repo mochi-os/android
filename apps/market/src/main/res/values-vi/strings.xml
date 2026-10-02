@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Đang gửi…</string>
     <string name="market_checkout_subscribing">Đang đăng ký…</string>
     <string name="market_filter_remove">Xóa bộ lọc</string>
-    <string name="market_listing_detail_sales_count">%1$d lượt bán</string>
-    <string name="market_profile_sales_count">%1$d lượt bán</string>
+    <string name="market_listing_detail_sales_count">%1$s lượt bán</string>
+    <string name="market_profile_sales_count">%1$s lượt bán</string>
     <string name="market_purchase_dispute_response">Phản hồi của người bán</string>
     <string name="market_purchases_order_label">Đơn hàng #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Hãy giới thiệu về bạn cho người mua…</string>
     <string name="market_account_load_failed">Không thể tải tài khoản</string>
     <string name="market_account_save_failed">Không thể lưu thay đổi</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Hiện tại: %1$s</string>
     <string name="market_bids_ends_in">Kết thúc sau %1$s</string>
     <string name="market_bids_your_bid">Mức đặt giá của bạn: %1$s</string>
-    <string name="market_carousel_main">Ảnh %1$d trên %2$d</string>
-    <string name="market_carousel_thumbnail">Ảnh thu nhỏ %1$d</string>
+    <string name="market_carousel_main">Ảnh %1$s trên %2$s</string>
+    <string name="market_carousel_thumbnail">Ảnh thu nhỏ %1$s</string>
     <string name="market_checkout_browser_unavailable">Không có trình duyệt khả dụng để mở trang thanh toán</string>
     <string name="market_checkout_pay_button">Thanh toán bằng Stripe</string>
     <string name="market_checkout_processing">Đang xử lý…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Đính kèm bằng chứng</string>
-    <string name="market_dispute_dialog_attach_count">Đã đính kèm %1$d tệp</string>
+    <string name="market_dispute_dialog_attach_count">Đã đính kèm %1$s tệp</string>
     <string name="market_dispute_dialog_evidence_role_staff">Nhân viên Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Bằng chứng đã gửi</string>
     <string name="market_dispute_dialog_evidence_submitter_line">đã gửi bởi %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL tham chiếu</string>
     <string name="market_editor_assets_empty">Chưa có tài sản nào</string>
     <string name="market_editor_category_none">Chọn một danh mục</string>
-    <string name="market_editor_days">%1$d ngày</string>
+    <string name="market_editor_days">%1$s ngày</string>
     <string name="market_editor_delete">Xóa danh sách</string>
     <string name="market_editor_delete_confirm_message">Thao tác này sẽ xóa vĩnh viễn danh sách.</string>
     <string name="market_editor_delete_confirm_title">Xóa tin đăng?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Không thể tải cuộc trò chuyện</string>
     <string name="market_messages_send_failed">Không thể gửi tin nhắn</string>
     <string name="market_messages_thread_title">Cuộc trò chuyện</string>
-    <string name="market_messages_unread_badge">%1$d chưa đọc</string>
-    <string name="market_price_from">từ %1$s</string>
+    <string name="market_messages_unread_badge">%1$s chưa đọc</string>
+    <string name="market_price_from">Từ %1$s</string>
     <string name="market_price_high_bid">Giá đặt cao nhất: %1$s</string>
     <string name="market_price_instant_buy">mua ngay: %1$s</string>
     <string name="market_price_per_month">%1$s / tháng</string>
@@ -569,10 +569,10 @@
     <string name="market_profile_joined">Đã tham gia %1$s</string>
     <string name="market_profile_no_reviews">Chưa có đánh giá nào.</string>
     <string name="market_profile_rating_breakdown">Phân tích đánh giá</string>
-    <string name="market_profile_stars_value">%1$d sao</string>
+    <string name="market_profile_stars_value">%1$s sao</string>
     <string name="market_purchase_dispute_chargeback">Bồi hoàn %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ngân hàng của bạn đã gửi yêu cầu bồi hoàn cho đơn hàng này. Stripe đang xử lý tranh chấp với người bán; kết quả sẽ hiển thị ở đây khi có quyết định.</string>
-    <string name="market_purchase_download_many">Tải xuống %1$d tệp của bạn bên dưới.</string>
+    <string name="market_purchase_download_many">Tải xuống %1$s tệp của bạn bên dưới.</string>
     <string name="market_purchase_download_one">Tải xuống tệp của bạn bên dưới.</string>
     <string name="market_purchase_review_from">Đánh giá từ %1$s</string>
     <string name="market_purchases_auction_label">Đấu giá #%1$s</string>
@@ -580,7 +580,7 @@
 
     <string name="market_purchases_refunded_partial">Đã hoàn −%1$s</string>
     <string name="market_purchases_won_for">Đã thắng với giá %1$s</string>
-    <string name="market_rating_reviews">(%1$d đánh giá)</string>
+    <string name="market_rating_reviews">(%1$s đánh giá)</string>
     <string name="market_refund_amount_label">Số tiền</string>
     <string name="market_refund_dialog_amount_help">Để trống để hoàn lại toàn bộ đơn hàng.</string>
     <string name="market_refund_dialog_amount_label">Số tiền</string>
@@ -787,11 +787,11 @@
     <string name="market_listings_remove_message_auction">Việc này sẽ hủy phiên đấu giá. Tin đăng sẽ bị ẩn khỏi người mua; bạn có thể đăng lại sau dưới dạng bản nháp mới.</string>
     <string name="market_listings_remove_title">Gỡ tin đăng này?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Thao tác này sẽ hủy phiên đấu giá và thông báo cho %1$d người đấu giá đang hoạt động. Tin đăng sẽ bị ẩn khỏi người mua; bạn có thể đăng lại sau dưới dạng bản nháp mới.</item>
-        <item quantity="other">Thao tác này sẽ hủy phiên đấu giá và thông báo cho %1$d người đấu giá đang hoạt động. Tin đăng sẽ bị ẩn khỏi người mua; bạn có thể đăng lại sau dưới dạng bản nháp mới.</item>
+        <item quantity="one">Thao tác này sẽ hủy phiên đấu giá và thông báo cho %1$s người đấu giá đang hoạt động. Tin đăng sẽ bị ẩn khỏi người mua; bạn có thể đăng lại sau dưới dạng bản nháp mới.</item>
+        <item quantity="other">Thao tác này sẽ hủy phiên đấu giá và thông báo cho %1$s người đấu giá đang hoạt động. Tin đăng sẽ bị ẩn khỏi người mua; bạn có thể đăng lại sau dưới dạng bản nháp mới.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Thao tác này sẽ hủy %1$d gói đăng ký đang hoạt động vào cuối kỳ thanh toán hiện tại. Người đăng ký sẽ được thông báo. Tin đăng sẽ bị ẩn khỏi người mua.</item>
-        <item quantity="other">Thao tác này sẽ hủy %1$d gói đăng ký đang hoạt động vào cuối kỳ thanh toán hiện tại. Người đăng ký sẽ được thông báo. Tin đăng sẽ bị ẩn khỏi người mua.</item>
+        <item quantity="one">Thao tác này sẽ hủy %1$s gói đăng ký đang hoạt động vào cuối kỳ thanh toán hiện tại. Người đăng ký sẽ được thông báo. Tin đăng sẽ bị ẩn khỏi người mua.</item>
+        <item quantity="other">Thao tác này sẽ hủy %1$s gói đăng ký đang hoạt động vào cuối kỳ thanh toán hiện tại. Người đăng ký sẽ được thông báo. Tin đăng sẽ bị ẩn khỏi người mua.</item>
     </plurals>
 </resources>

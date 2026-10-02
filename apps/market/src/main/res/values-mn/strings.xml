@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Зах зээл</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Намтар</string>
     <string name="market_account_biography_placeholder">Худалдан авагчдад өөрийнхөө тухай хэлээрэй…</string>
     <string name="market_account_load_failed">Бүртгэлийг ачаалж чадсангүй</string>
@@ -72,8 +72,8 @@
     <string name="market_bids_tab_won">Хожсон</string>
     <string name="market_bids_title">Саналууд</string>
     <string name="market_bids_your_bid">Таны санал: %1$s</string>
-    <string name="market_carousel_main">Зураг %1$d/%2$d</string>
-    <string name="market_carousel_thumbnail">Жижиг зураг %1$d</string>
+    <string name="market_carousel_main">Зураг %1$s/%2$s</string>
+    <string name="market_carousel_thumbnail">Жижиг зураг %1$s</string>
     <string name="market_channel_name">Зах зээл</string>
     <string name="market_chargeback_reason_bank_cannot_process">Банк боловсруулж чадсангүй</string>
     <string name="market_chargeback_reason_check_returned">Шалгалт буцсан</string>
@@ -135,7 +135,7 @@
     <string name="market_condition_refurbished">Сэргээгдсэн</string>
     <string name="market_condition_used">Хэрэглэсэн</string>
     <string name="market_dispute_dialog_attach">Нотлох баримт хавсаргах</string>
-    <string name="market_dispute_dialog_attach_count">%1$d файл хавсаргасан</string>
+    <string name="market_dispute_dialog_attach_count">%1$s файл хавсаргасан</string>
     <string name="market_dispute_dialog_cancel">Цуцлах</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Худалдан авагч</string>
     <string name="market_dispute_dialog_evidence_role_seller">Худалдагч</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_condition_refurbished">Сэргээгдсэн</string>
     <string name="market_editor_condition_used">Хэрэглэсэн</string>
     <string name="market_editor_currency">Валют</string>
-    <string name="market_editor_days">%1$d хоног</string>
+    <string name="market_editor_days">%1$s хоног</string>
     <string name="market_editor_delete">Зар устгах</string>
     <string name="market_editor_delete_confirm_message">Энэ нь зарыг бүрэн устгана.</string>
     <string name="market_editor_delete_confirm_title">Зар устгах уу?</string>
@@ -312,7 +312,7 @@
     <string name="market_listing_detail_relist_failed">Дахин жагсааж чадсангүй</string>
     <string name="market_listing_detail_relist_in_progress">Дахин жагсааж байна</string>
     <string name="market_listing_detail_report">Зар гомдол</string>
-    <string name="market_listing_detail_sales_count">%1$d борлуулалт</string>
+    <string name="market_listing_detail_sales_count">%1$s борлуулалт</string>
     <string name="market_listing_detail_save">Хадгалах</string>
     <string name="market_listing_detail_seller_banned_banner">Энэ худалдагч хориглогдсон. Шинэ захиалга хийх боломжгүй.</string>
     <string name="market_listing_detail_seller_heading">Худалдагч</string>
@@ -364,7 +364,7 @@
     <string name="market_messages_send_failed">Мессеж илгээж чадсангүй</string>
     <string name="market_messages_thread_listing_chip">Зар</string>
     <string name="market_messages_thread_title">Яриа</string>
-    <string name="market_messages_unread_badge">%1$d уншаагүй</string>
+    <string name="market_messages_unread_badge">%1$s уншаагүй</string>
     <string name="market_onboarding_activate">Идэвхжүүлэх</string>
     <string name="market_onboarding_activating">Идэвхжүүлж байна…</string>
     <string name="market_onboarding_body">Худалдан авалт, борлуулалтыг эхлүүлэхийн тулд бүртгэлээ идэвхжүүлнэ үү.</string>
@@ -384,8 +384,8 @@
     <string name="market_profile_no_reviews">Одоогоор үнэлгээ алга.</string>
     <string name="market_profile_rating_breakdown">Үнэлгээний задаргаа</string>
     <string name="market_profile_reviews_section">Шүүмжүүд</string>
-    <string name="market_profile_sales_count">%1$d борлуулалт</string>
-    <string name="market_profile_stars_value">%1$d од</string>
+    <string name="market_profile_sales_count">%1$s борлуулалт</string>
+    <string name="market_profile_stars_value">%1$s од</string>
     <string name="market_profile_status_banned">Хориглосон</string>
     <string name="market_profile_status_suspended">Түр зогсоосон</string>
     <string name="market_profile_verified">Баталгаажсан</string>
@@ -403,7 +403,7 @@
     <string name="market_purchase_dispute_response">Худалдагчийн хариу</string>
     <string name="market_purchase_dispute_title">Буцаалтын хүсэлт</string>
     <string name="market_purchase_download_failed">Татаж чадсангүй</string>
-    <string name="market_purchase_download_many">Доорх %1$d файлуудаа татна уу.</string>
+    <string name="market_purchase_download_many">Доорх %1$s файлуудаа татна уу.</string>
     <string name="market_purchase_download_one">Доорх файлаа татна уу.</string>
     <string name="market_purchase_download_section">Таны худалдан авалт бэлэн боллоо</string>
     <string name="market_purchase_item">Зүйл</string>
@@ -441,7 +441,7 @@
     <string name="market_purchases_won_for">%1$s-аар хожсон</string>
     <string name="market_rating_label">Үнэлгээ</string>
     <string name="market_rating_no_reviews">Шүүмж алга</string>
-    <string name="market_rating_reviews">(%1$d үнэлгээ)</string>
+    <string name="market_rating_reviews">(%1$s үнэлгээ)</string>
     <string name="market_refund_amount_label">Дүн</string>
     <string name="market_refund_body">Буцаах хүсэлтийн шалтгаанаа өгнө үү.</string>
     <string name="market_refund_details_label">Дэлгэрэнгүй</string>
@@ -537,7 +537,7 @@
     <string name="market_sale_ship_submitting">Тэмдэглэж байна…</string>
     <string name="market_sale_ship_success">Илгээгдсэн гэж тэмдэглэгдсэн</string>
     <string name="market_sale_shipped_label">Илгээгдсэн</string>
-    <string name="market_sale_title">Хямдрал</string>
+    <string name="market_sale_title">Борлуулалт</string>
     <string name="market_sale_tracking_label">Хяналтын дугаар</string>
     <string name="market_sale_tracking_url_label">Дагах URL (заавал биш)</string>
     <string name="market_sales_empty_subtitle">Танай нийтэлсэн зараас захиалгууд энд харагдана.</string>
@@ -725,7 +725,7 @@
     <string name="market_audit_account_stripe_restricted">Stripe хязгаарлагдсан</string>
     <string name="market_audit_account_suspended">Худалдагчаар түр зогсоосон</string>
     <string name="market_audit_account_unbanned">Хоригоос гаргасан</string>
-    <string name="market_audit_account_unsuspended">Түр зогсоолт цуцлагдсан</string>
+    <string name="market_audit_account_unsuspended">Түр зогсоолтыг арилгалаа</string>
     <string name="market_audit_auction_bid_placed">Санал гаргасан</string>
     <string name="market_audit_auction_created">Дуудлага худалдаа үүсгэсэн</string>
     <string name="market_audit_auction_ended_sold">Дуудлага худалдаа зарагдсан</string>
@@ -784,11 +784,11 @@
     <string name="market_listings_remove_message_auction">Энэ нь дуудлага худалдааг цуцална. Зар худалдан авагчдаас далдлагдах ба дараа нь шинэ ноорог болгон дахин зарлаж болно.</string>
     <string name="market_listings_remove_title">Энэ зарыг хасах уу?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Энэ нь дуудлага худалдааг цуцалж, %1$d идэвхтэй оролцогчид мэдэгдэнэ. Зар худалдан авагчдаас нуугдана; дараа нь шинэ ноорог болгон дахин байршуулж болно.</item>
-        <item quantity="other">Энэ нь дуудлага худалдааг цуцалж, %1$d идэвхтэй оролцогчид мэдэгдэнэ. Зар худалдан авагчдаас нуугдана; дараа нь шинэ ноорог болгон дахин байршуулж болно.</item>
+        <item quantity="one">Энэ нь дуудлага худалдааг цуцалж, %1$s идэвхтэй оролцогчид мэдэгдэнэ. Зар худалдан авагчдаас нуугдана; дараа нь шинэ ноорог болгон дахин байршуулж болно.</item>
+        <item quantity="other">Энэ нь дуудлага худалдааг цуцалж, %1$s идэвхтэй оролцогчид мэдэгдэнэ. Зар худалдан авагчдаас нуугдана; дараа нь шинэ ноорог болгон дахин байршуулж болно.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Энэ нь одоогийн төлбөрийн хугацааны төгсгөлд %1$d идэвхтэй захиалгыг цуцална. Захиалагчдад мэдэгдэнэ. Зар худалдан авагчдаас нуугдана.</item>
-        <item quantity="other">Энэ нь одоогийн төлбөрийн хугацааны төгсгөлд %1$d идэвхтэй захиалгыг цуцална. Захиалагчдад мэдэгдэнэ. Зар худалдан авагчдаас нуугдана.</item>
+        <item quantity="one">Энэ нь одоогийн төлбөрийн хугацааны төгсгөлд %1$s идэвхтэй захиалгыг цуцална. Захиалагчдад мэдэгдэнэ. Зар худалдан авагчдаас нуугдана.</item>
+        <item quantity="other">Энэ нь одоогийн төлбөрийн хугацааны төгсгөлд %1$s идэвхтэй захиалгыг цуцална. Захиалагчдад мэдэгдэнэ. Зар худалдан авагчдаас нуугдана.</item>
     </plurals>
 </resources>

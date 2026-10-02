@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">घोड़ा</string>
     <string name="chess_piece_pawn">प्यादा</string>
     <string name="chess_move_played">%1$s ने %2$s चला</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">शतरंज की चालों, ड्रॉ प्रस्तावों और खेल परिणामों के बारे में सूचनाएँ.</string>
     <string name="chess_channel_name">शतरंज सूचनाएँ</string>
     <string name="chess_delete_message">खेल को आपकी सूची से हटा देता है.</string>

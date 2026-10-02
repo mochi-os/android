@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">الأشخاص</string>
     <string name="projects_option_icon">أيقونة</string>
     <string name="projects_option_icon_placeholder">مثل Check، Star، Flag</string>
-    <string name="projects_settings_unsubscribe">إلغاء الاشتراك</string>
+    <string name="projects_settings_unsubscribe">إنهاء الاشتراك</string>
     <string name="projects_settings_delete_project">حذف المشروع</string>
     <string name="projects_settings_delete_confirm_title">حذف المشروع</string>
-    <string name="projects_settings_unsubscribe_title">إلغاء الاشتراك</string>
-    <string name="projects_settings_unsubscribe_message">هل أنت متأكد من إلغاء الاشتراك من هذا المشروع؟</string>
+    <string name="projects_settings_unsubscribe_title">إنهاء الاشتراك</string>
+    <string name="projects_settings_unsubscribe_message">هل أنت متأكد من إنهاء الاشتراك في هذا المشروع؟</string>
     <string name="projects_access_level_owner">المالك</string>
     <string name="projects_object_watch">متابعة</string>
     <string name="projects_object_tab_properties">الخصائص</string>
@@ -214,10 +214,10 @@
     <string name="projects_activity_made_change">أجرى تغييرًا</string>
     <string name="projects_attachment_empty">لا توجد مرفقات</string>
     <string name="projects_attachment_default_name">مرفق</string>
-    <string name="projects_attachment_size_bytes">%1$d بايت</string>
-    <string name="projects_attachment_size_kb">%1$d كيلوبايت</string>
-    <string name="projects_attachment_size_mb">%1$d ميغابايت</string>
-    <string name="projects_attachment_size_gb">%1$d غيغابايت</string>
+    <string name="projects_attachment_size_bytes">%1$s بايت</string>
+    <string name="projects_attachment_size_kb">%1$s كيلوبايت</string>
+    <string name="projects_attachment_size_mb">%1$s ميغابايت</string>
+    <string name="projects_attachment_size_gb">%1$s غيغابايت</string>
     <string name="projects_request_new">طلب دمج جديد</string>
     <string name="projects_request_status_closed">مغلق</string>
     <string name="projects_request_back_to_list">العودة إلى القائمة</string>
@@ -227,7 +227,7 @@
     <string name="projects_request_checking_merge">جارٍ التحقق من حالة الدمج…</string>
     <string name="projects_request_can_merge">يمكن الدمج</string>
     <string name="projects_request_cannot_merge">لا يمكن الدمج</string>
-    <string name="projects_request_ahead_behind">%1$d متقدم، %2$d متأخر</string>
+    <string name="projects_request_ahead_behind">%1$s متقدم، %2$s متأخر</string>
     <string name="projects_request_draft_notice">هذه مسودة. ضع علامة جاهز قبل الدمج.</string>
     <string name="projects_request_view_diff">عرض الفروق</string>
     <string name="projects_request_mark_ready">وضع علامة جاهز</string>
@@ -247,7 +247,7 @@
     <string name="projects_board_no_columns">لا توجد أعمدة مهيأة لهذا العرض</string>
     <string name="projects_board_no_options">لا توجد خيارات مهيأة لحقل العمود</string>
     <string name="projects_board_column_options">خيارات العمود</string>
-    <string name="projects_board_nested_count">+%1$d متداخل</string>
+    <string name="projects_board_nested_count">+%1$s متداخل</string>
     <string name="projects_move_to_column">النقل إلى عمود</string>
     <string name="projects_move_to_row">النقل إلى صف</string>
     <string name="projects_move_after">بعد %1$s</string>
@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">جديد</string>
     <string name="projects_settings_section_identity">الهوية</string>
     <string name="projects_settings_access_updated">تم تحديث الوصول</string>
-    <string name="projects_settings_access_revoked">تم إلغاء الوصول</string>
+    <string name="projects_settings_access_revoked">تم إبطال الوصول</string>
     <string name="projects_settings_section_access">إدارة الوصول</string>
     <string name="projects_people_search">البحث عن أشخاص</string>
     <string name="projects_settings_field_entity_id">معرّف الكيان</string>
@@ -360,7 +360,7 @@
     <string name="projects_activity_commented">علّق</string>
     <string name="projects_attachment_delete_confirm_message">سيتم حذف هذا المرفق نهائيًا.</string>
     <string name="projects_attachment_delete_confirm_title">حذف المرفق؟</string>
-    <string name="projects_settings_unsubscribe_section">إلغاء الاشتراك في المشروع</string>
+    <string name="projects_settings_unsubscribe_section">إنهاء الاشتراك في المشروع</string>
     <string name="projects_share_link_title">مشاركة المشروع</string>
     <string name="projects_sort_filter_title">فرز وتصفية</string>
     <string name="projects_create_prefix_hint">يُستخدم لمعرّفات مقروءة مثل %1$s-1 و%1$s-2</string>
@@ -368,9 +368,9 @@
         <item quantity="zero">لا ملفات متعارضة</item>
         <item quantity="one">ملف متعارض واحد</item>
         <item quantity="two">ملفان متعارضان</item>
-        <item quantity="few">%1$d ملفات متعارضة</item>
-        <item quantity="many">%1$d ملفًا متعارضًا</item>
-        <item quantity="other">%1$d ملف متعارض</item>
+        <item quantity="few">%1$s ملفات متعارضة</item>
+        <item quantity="many">%1$s ملفًا متعارضًا</item>
+        <item quantity="other">%1$s ملف متعارض</item>
     </plurals>
     <string name="projects_design_export_saved">تم حفظ التصميم</string>
     <string name="projects_design_import_failed">تعذّرت قراءة ذلك الملف</string>
@@ -380,7 +380,7 @@
     <string name="projects_export_saved">تم حفظ بيانات المشروع</string>
     <string name="projects_exporting">جارٍ تحضير التصدير…</string>
     <string name="projects_board_add_column">إضافة عمود</string>
-    <string name="projects_design_sample">عينة %1$d</string>
+    <string name="projects_design_sample">عينة %1$s</string>
     <string name="projects_option_delete_title">حذف الخيار</string>
     <string name="projects_option_delete_message">هل أنت متأكد أنك تريد حذف الخيار \"%1$s\"؟</string>
     <string name="projects_create_object_no_types">لا يمكن إنشاء أنواع عناصر بعد. أنشئ العناصر الأصلية المطلوبة أولاً.</string>

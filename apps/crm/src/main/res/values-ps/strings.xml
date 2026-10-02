@@ -33,10 +33,10 @@
     <string name="crm_settings_tab_people">خلک</string>
     <string name="crm_option_icon">آیکون</string>
     <string name="crm_option_icon_placeholder">لکه چېنه Check، Star، Flag</string>
-    <string name="crm_settings_unsubscribe">ګډون لغوه کول</string>
+    <string name="crm_settings_unsubscribe">له ګډون وتل</string>
     <string name="crm_settings_delete_crm">CRM ړنګ کړئ</string>
     <string name="crm_settings_delete_confirm_title">CRM ړنګ کړئ</string>
-    <string name="crm_settings_unsubscribe_title">ګډون لغوه کول</string>
+    <string name="crm_settings_unsubscribe_title">له ګډون وتل</string>
     <string name="crm_settings_unsubscribe_message">ایا تاسو ډاډه یاست چې غواړئ د دې CRM ګډون ختم کړئ؟</string>
     <string name="crm_access_level_owner">مالک</string>
     <string name="crm_object_watch">وګورئ</string>
@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">هیڅ توکي نشته</string>
     <string name="crm_board_no_columns">د دې لید لپاره هیڅ کالمونه نه دي تنظیم شوي</string>
     <string name="crm_board_no_options">د کالم ساحې لپاره هیڅ اختیارونه ترتیب شوي نه دي</string>
-    <string name="crm_board_nested_count">+%1$d ځړول شوي</string>
+    <string name="crm_board_nested_count">+%1$s ځړول شوي</string>
     <string name="crm_move_to_column">کالم ته انتقال</string>
     <string name="crm_move_to_row">کتار ته انتقال</string>
     <string name="crm_move_after">د %1$s وروسته</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">د لاسرسي اداره</string>
     <string name="crm_settings_not_set">نه دی ټاکل شوی</string>
     <string name="crm_settings_access_updated">لاسرسی نوی شو</string>
-    <string name="crm_settings_access_revoked">لاسرسی پرېګدل و</string>
+    <string name="crm_settings_access_revoked">لاسرسی بیرته واخیستل شو</string>
     <string name="crm_people_search">خلک ولټوئ</string>
     <string name="crm_access_tab_other">نور</string>
     <string name="crm_access_select_group">یوه ډله وټاکئ</string>
@@ -274,7 +274,7 @@
     <string name="crm_access_role_view">یوازې لیدل</string>
     <string name="crm_access_role_none">د لاسرسي اجازه نشته</string>
     <string name="crm_all_crms">ټول CRM</string>
-    <string name="crm_settings_unsubscribe_section">له CRM څخه ګډون لغوه کړئ</string>
+    <string name="crm_settings_unsubscribe_section">د CRM له ګډون وتل</string>
     <string name="crm_settings_updated">CRM تازه شو</string>
     <string name="crm_create_import_backup">له بیک اپ څخه وارد کړئ (اختیاري)</string>
     <string name="crm_export">ډاټا صادرول</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">د CRM ډاټا خوندي شوه</string>
     <string name="crm_create_upload_json">د .zip یا .json فایل پورته کړئ</string>
     <string name="crm_create_blocked_no_options">جوړول نشي کیدی: %1$s اړین دی خو د غوره کولو لپاره کوم انتخاب نلري. په ډیزاین کې انتخابونه اضافه کړئ.</string>
-    <string name="crm_design_sample">نمونه %1$d</string>
+    <string name="crm_design_sample">نمونه %1$s</string>
     <string name="crm_option_delete_title">اختیار ړنګ کړئ</string>
     <string name="crm_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>
 </resources>

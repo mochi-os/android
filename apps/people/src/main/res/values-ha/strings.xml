@@ -180,8 +180,8 @@
     <string name="people_books_create">Ƙirƙiri littafin adireshi</string>
     <string name="people_books_delete">Share littafin adireshi</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">A share %1$s da lamba %2$d da ke ciki?</item>
-        <item quantity="other">A share %1$s da lambobi %2$d da ke ciki?</item>
+        <item quantity="one">A share %1$s da lamba %2$s da ke ciki?</item>
+        <item quantity="other">A share %1$s da lambobi %2$s da ke ciki?</item>
     </plurals>
     <string name="people_welcome_body">Nemo abokai a duk faɗin Mochi ka haɗu da su. Danna Ƙara lamba don aika gayyata.</string>
     <string name="people_person_state_contact">Cikin lambobin sadarwa</string>

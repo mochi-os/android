@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Aldrig hämtad</string>
     <string name="feeds_source_poll">Avsökning</string>
     <string name="feeds_source_transform">AI-omvandling</string>
-    <string name="feeds_remove_source_confirm">Ta bort \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Radera även importerade inlägg</string>
+    <string name="feeds_remove_source_confirm">Detta stoppar importen av innehåll från \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Radera även inlägg som importerats från den här källan</string>
     <string name="feeds_suggested_credibility_title">Föreslagen trovärdighet</string>
-    <string name="feeds_suggested_credibility_body">Mochi föreslår en trovärdighet på %1$d. Acceptera?</string>
+    <string name="feeds_suggested_credibility_body">Mochi föreslår en trovärdighet på %1$s. Acceptera?</string>
     <string name="feeds_suggested_credibility_keep">Behåll nuvarande</string>
     <string name="feeds_ai_processing_mode">AI-bearbetningsläge</string>
     <string name="feeds_ai_account">AI-konto</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Tryck på bokmärket på ett inlägg för att spara det här till senare.</string>
     <string name="feeds_saved_error_clear">Det gick inte att rensa sparade inlägg</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d nytt inlägg</item>
-        <item quantity="other">%d nya inlägg</item>
+        <item quantity="one">%s nytt inlägg</item>
+        <item quantity="other">%s nya inlägg</item>
     </plurals>
     <string name="feeds_caught_up">Du är ikapp</string>
     <string name="feeds_all_caught_up">Allt är ikapp</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Flödesentitets-ID eller fingeravtryck</string>
     <string name="feeds_source_credibility_label">Trovärdighet</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d timme</item>
-        <item quantity="other">%1$d timmar</item>
+        <item quantity="one">%1$s timme</item>
+        <item quantity="other">%1$s timmar</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minuter</item>
+        <item quantity="one">%1$s minut</item>
+        <item quantity="other">%1$s minuter</item>
     </plurals>
     <string name="feeds_source_polling_interval">Hämtar var %1$s</string>
     <string name="feeds_access_level_react_full">Reagera och visa</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Länk</string>
     <string name="feeds_share_link_title">Flödeslänk</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d kommentar</item>
-        <item quantity="other">%1$d kommentarer</item>
+        <item quantity="one">%1$s kommentar</item>
+        <item quantity="other">%1$s kommentarer</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d bilaga</item>
-        <item quantity="other">%1$d bilagor</item>
+        <item quantity="one">%1$s bilaga</item>
+        <item quantity="other">%1$s bilagor</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Visa %1$d kommentar mer</item>
-        <item quantity="other">Visa %1$d kommentarer mer</item>
+        <item quantity="one">Visa %1$s kommentar mer</item>
+        <item quantity="other">Visa %1$s kommentarer mer</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">för %1$d år sedan i dag</item>
-        <item quantity="other">för %1$d år sedan i dag</item>
+        <item quantity="one">för %1$s år sedan i dag</item>
+        <item quantity="other">för %1$s år sedan i dag</item>
     </plurals>
     <string name="feeds_block">Blockera</string>
     <string name="feeds_removed_from_feed">Du togs bort från det här flödet</string>

@@ -181,7 +181,7 @@
     <string name="crm_tree_empty">Няма аб\'ектаў</string>
     <string name="crm_board_no_columns">Для гэтага выгляду не настроены слупкі</string>
     <string name="crm_board_no_options">Для поля слупка не настроены параметры</string>
-    <string name="crm_board_nested_count">+%1$d укладзеных</string>
+    <string name="crm_board_nested_count">+%1$s укладзеных</string>
     <string name="crm_move_to_column">Перамясціць у слупок</string>
     <string name="crm_move_to_row">Перамясціць у радок</string>
     <string name="crm_move_after">Пасля %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Даныя CRM захаваны</string>
     <string name="crm_create_upload_json">Запампуйце файл .zip або .json</string>
     <string name="crm_create_blocked_no_options">Немагчыма стварыць: %1$s абавязковы, але не мае варыянтаў выбару. Дадайце варыянты ў Дызайне.</string>
-    <string name="crm_design_sample">Узор %1$d</string>
+    <string name="crm_design_sample">Узор %1$s</string>
     <string name="crm_option_delete_title">Выдаліць опцыю</string>
     <string name="crm_option_delete_message">Вы ўпэўнены, што хочаце выдаліць опцыю \"%1$s\"?</string>
 </resources>

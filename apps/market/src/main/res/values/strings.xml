@@ -3,7 +3,7 @@
     <string name="app_name">Market</string>
     <string name="market_account_address_desc">Pre-fills on future checkouts once checkout integration is added.</string>
     <string name="market_account_address_title">Default shipping address</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biography</string>
     <string name="market_account_biography_placeholder">Tell buyers about yourself…</string>
     <string name="market_account_business_desc">Used for invoices and tax compliance. Not shown on your public profile.</string>
@@ -150,8 +150,8 @@
     <string name="market_bids_tab_won">Won</string>
     <string name="market_bids_title">Bids</string>
     <string name="market_bids_your_bid">Your bid: %1$s</string>
-    <string name="market_carousel_main">Photo %1$d of %2$d</string>
-    <string name="market_carousel_thumbnail">Thumbnail %1$d</string>
+    <string name="market_carousel_main">Photo %1$s of %2$s</string>
+    <string name="market_carousel_thumbnail">Thumbnail %1$s</string>
     <string name="market_channel_name">Market</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank could not process</string>
     <string name="market_chargeback_reason_check_returned">Check returned</string>
@@ -213,7 +213,7 @@
     <string name="market_condition_refurbished">Refurbished</string>
     <string name="market_condition_used">Used</string>
     <string name="market_dispute_dialog_attach">Attach evidence</string>
-    <string name="market_dispute_dialog_attach_count">%1$d file(s) attached</string>
+    <string name="market_dispute_dialog_attach_count">%1$s file(s) attached</string>
     <string name="market_dispute_dialog_cancel">Cancel</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Buyer</string>
     <string name="market_dispute_dialog_evidence_role_seller">Seller</string>
@@ -247,7 +247,7 @@
     <string name="market_editor_condition_refurbished">Refurbished</string>
     <string name="market_editor_condition_used">Used</string>
     <string name="market_editor_currency">Currency</string>
-    <string name="market_editor_days">%1$d days</string>
+    <string name="market_editor_days">%1$s days</string>
     <string name="market_editor_delete">Delete listing</string>
     <string name="market_editor_delete_confirm_message">This will permanently delete the listing.</string>
     <string name="market_editor_delete_confirm_title">Delete listing?</string>
@@ -399,7 +399,7 @@
     <string name="market_listing_detail_relist_failed">Could not relist</string>
     <string name="market_listing_detail_relist_in_progress">Relisting</string>
     <string name="market_listing_detail_report">Report listing</string>
-    <string name="market_listing_detail_sales_count">%1$d sales</string>
+    <string name="market_listing_detail_sales_count">%1$s sales</string>
     <string name="market_listing_detail_save">Save</string>
     <string name="market_listing_detail_seller_banned_banner">This seller is banned. New orders cannot be placed.</string>
     <string name="market_listing_detail_seller_heading">Seller</string>
@@ -458,7 +458,7 @@
     <string name="market_messages_send_failed">Could not send message</string>
     <string name="market_messages_thread_listing_chip">Listing</string>
     <string name="market_messages_thread_title">Conversation</string>
-    <string name="market_messages_unread_badge">%1$d unread</string>
+    <string name="market_messages_unread_badge">%1$s unread</string>
     <string name="market_onboarding_activate">Activate</string>
     <string name="market_onboarding_activating">Activating…</string>
     <string name="market_onboarding_body">Activate your account to start buying and selling.</string>
@@ -478,8 +478,8 @@
     <string name="market_profile_no_reviews">No reviews yet.</string>
     <string name="market_profile_rating_breakdown">Rating breakdown</string>
     <string name="market_profile_reviews_section">Reviews</string>
-    <string name="market_profile_sales_count">%1$d sales</string>
-    <string name="market_profile_stars_value">%1$d stars</string>
+    <string name="market_profile_sales_count">%1$s sales</string>
+    <string name="market_profile_stars_value">%1$s stars</string>
     <string name="market_profile_status_banned">Banned</string>
     <string name="market_profile_status_suspended">Suspended</string>
     <string name="market_profile_verified">Verified</string>
@@ -497,7 +497,7 @@
     <string name="market_purchase_dispute_response">Seller\'s response</string>
     <string name="market_purchase_dispute_title">Refund request</string>
     <string name="market_purchase_download_failed">Failed to download</string>
-    <string name="market_purchase_download_many">Download your %1$d files below.</string>
+    <string name="market_purchase_download_many">Download your %1$s files below.</string>
     <string name="market_purchase_download_one">Download your file below.</string>
     <string name="market_purchase_download_section">Your purchase is ready</string>
     <string name="market_purchase_item">Item</string>
@@ -535,7 +535,7 @@
     <string name="market_purchases_won_for">Won for %1$s</string>
     <string name="market_rating_label">Rating</string>
     <string name="market_rating_no_reviews">No reviews yet</string>
-    <string name="market_rating_reviews">(%1$d reviews)</string>
+    <string name="market_rating_reviews">(%1$s reviews)</string>
     <string name="market_refund_amount_label">Amount</string>
     <string name="market_refund_body">Provide a reason for your refund request.</string>
     <string name="market_refund_details_label">Details</string>
@@ -784,11 +784,11 @@
     <string name="market_listing_checkout_cancelled">Checkout cancelled</string>
     <string name="market_listing_checkout_cancel_failed">Failed to cancel checkout</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">This will cancel the auction and notify %1$d active bidder. The listing will be hidden from buyers; you can relist it later as a new draft.</item>
-        <item quantity="other">This will cancel the auction and notify %1$d active bidders. The listing will be hidden from buyers; you can relist it later as a new draft.</item>
+        <item quantity="one">This will cancel the auction and notify %1$s active bidder. The listing will be hidden from buyers; you can relist it later as a new draft.</item>
+        <item quantity="other">This will cancel the auction and notify %1$s active bidders. The listing will be hidden from buyers; you can relist it later as a new draft.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">This will cancel %1$d active subscription at the end of the current billing period. Subscribers will be notified. The listing will be hidden from buyers.</item>
-        <item quantity="other">This will cancel %1$d active subscriptions at the end of the current billing period. Subscribers will be notified. The listing will be hidden from buyers.</item>
+        <item quantity="one">This will cancel %1$s active subscription at the end of the current billing period. Subscribers will be notified. The listing will be hidden from buyers.</item>
+        <item quantity="other">This will cancel %1$s active subscriptions at the end of the current billing period. Subscribers will be notified. The listing will be hidden from buyers.</item>
     </plurals>
 </resources>

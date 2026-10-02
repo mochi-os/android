@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Нататкі</string>
     <string name="staff_accounts_reason_label">Прычына</string>
     <string name="staff_accounts_reason_optional_label">Прычына (неабавязкова)</string>
-    <string name="staff_accounts_sales">%1$d продажаў</string>
+    <string name="staff_accounts_sales">%1$s продажаў</string>
     <string name="staff_accounts_search_clear">Ачысціць пошук</string>
     <string name="staff_accounts_search_placeholder">Пошук</string>
     <string name="staff_accounts_seller_buyers">Толькі пакупнікі</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Без назвы</string>
     <string name="staff_accounts_unsuspend">Зняць прыпыненне</string>
     <string name="staff_accounts_unsuspended_toast">Уліковы запіс адноўлены</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Адмена</string>
     <string name="staff_appeals_decide">Вырашыць</string>
     <string name="staff_appeals_decision_denied">Аб\'ява пакінута адхіленай</string>

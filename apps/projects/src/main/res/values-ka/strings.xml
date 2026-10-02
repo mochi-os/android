@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="projects_auth_display_name">ნაჩვენები სახელი</string>
-    <string name="projects_auth_verification_failed">შემოწმების კოდი გაიგზავნა</string>
+    <string name="projects_auth_verification_failed">დადასტურება ვერ მოხერხდა</string>
     <string name="projects_list_title">პროექტები</string>
     <string name="projects_list_close_search">ძიების დახურვა</string>
     <string name="projects_list_search">ძიება</string>
@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">ადამიანები</string>
     <string name="projects_option_icon">ხატულა</string>
     <string name="projects_option_icon_placeholder">მაგალითად. Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">გამოწერის გაუქმება</string>
+    <string name="projects_settings_unsubscribe">გამოწერის შეწყვეტა</string>
     <string name="projects_settings_delete_project">პროექტის წაშლა</string>
     <string name="projects_settings_delete_confirm_title">პროექტის წაშლა</string>
-    <string name="projects_settings_unsubscribe_title">გამოწერის გაუქმება</string>
-    <string name="projects_settings_unsubscribe_message">დარწმუნებული ხართ, რომ გსურთ ამ პროექტიდან გამოწერის გაუქმება?</string>
+    <string name="projects_settings_unsubscribe_title">გამოწერის შეწყვეტა</string>
+    <string name="projects_settings_unsubscribe_message">დარწმუნებული ხართ, რომ გსურთ ამ პროექტიდან გამოწერის შეწყვეტა?</string>
     <string name="projects_access_level_owner">მფლობელი</string>
     <string name="projects_object_watch">თვალყურის დევნება</string>
     <string name="projects_object_tab_properties">თვისებები</string>
@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">შეიტანა ცვლილება</string>
     <string name="projects_attachment_empty">დანართები არ არის</string>
     <string name="projects_attachment_default_name">დანართი</string>
-    <string name="projects_attachment_size_bytes">%1$d ბ</string>
-    <string name="projects_attachment_size_kb">%1$d კბ</string>
-    <string name="projects_attachment_size_mb">%1$d მბ</string>
-    <string name="projects_attachment_size_gb">%1$d გბ</string>
+    <string name="projects_attachment_size_bytes">%1$s ბ</string>
+    <string name="projects_attachment_size_kb">%1$s კბ</string>
+    <string name="projects_attachment_size_mb">%1$s მბ</string>
+    <string name="projects_attachment_size_gb">%1$s გბ</string>
     <string name="projects_request_new">ახალი შერწყმის მოთხოვნა</string>
     <string name="projects_request_status_closed">დახურული</string>
     <string name="projects_request_back_to_list">სიაში დაბრუნება</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">მიმდინარეობს შერწყმის სტატუსის შემოწმება…</string>
     <string name="projects_request_can_merge">შერწყმა შესაძლებელია</string>
     <string name="projects_request_cannot_merge">შერწყმა შეუძლებელია</string>
-    <string name="projects_request_ahead_behind">%1$d წინ, %2$d უკან</string>
+    <string name="projects_request_ahead_behind">%1$s წინ, %2$s უკან</string>
     <string name="projects_request_draft_notice">ეს არის მონახაზი. შერწყმამდე მონიშნეთ მზად.</string>
     <string name="projects_request_view_diff">სხვაობის ნახვა</string>
     <string name="projects_request_mark_ready">მონიშნეთ მზად</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">ამ ხედისთვის სვეტები არ არის კონფიგურირებული</string>
     <string name="projects_board_no_options">სვეტის ველისთვის ვარიანტები არ არის კონფიგურირებული</string>
     <string name="projects_board_column_options">სვეტის ვარიანტები</string>
-    <string name="projects_board_nested_count">+%1$d ჩადგმული</string>
+    <string name="projects_board_nested_count">+%1$s ჩადგმული</string>
     <string name="projects_move_to_column">სვეტში გადატანა</string>
     <string name="projects_move_to_row">მწკრივში გადატანა</string>
     <string name="projects_move_after">%1$s-ის შემდეგ</string>
@@ -323,7 +323,7 @@
     <string name="projects_create_object_title">ახალი</string>
     <string name="projects_settings_section_identity">ვინაობა</string>
     <string name="projects_settings_access_updated">წვდომა განახლდა</string>
-    <string name="projects_settings_access_revoked">წვდომა გაუქმდა</string>
+    <string name="projects_settings_access_revoked">წვდომა გაწვეულია</string>
     <string name="projects_settings_section_access">წვდომის მართვა</string>
     <string name="projects_people_search">ხალხის ძებნა</string>
     <string name="projects_settings_field_entity_id">ერთეულის ID</string>
@@ -352,7 +352,7 @@
     <string name="projects_all_projects">ყველა პროექტი</string>
     <string name="projects_create_allow_search">ნებისმიერს პროექტის ძიების ნება დართე</string>
     <string name="projects_create_import_backup">იმპორტი სარეზერვო ასლიდან (არასავალდებულო)</string>
-    <string name="projects_create_upload_json">ატვირთვა</string>
+    <string name="projects_create_upload_json">.json ფაილის ატვირთვა</string>
     <string name="projects_settings_not_set">არ არის დაყენებული</string>
     <string name="projects_settings_updated">პროექტი განახლდა</string>
     <string name="projects_property_select">აირჩიეთ …</string>
@@ -360,13 +360,13 @@
     <string name="projects_activity_commented">დააკომენტარა</string>
     <string name="projects_attachment_delete_confirm_message">ეს დანართი სამუდამოდ წაიშლება.</string>
     <string name="projects_attachment_delete_confirm_title">წაიშალოს დანართი?</string>
-    <string name="projects_settings_unsubscribe_section">პროექტის გამოწერის გაუქმება</string>
+    <string name="projects_settings_unsubscribe_section">პროექტის გამოწერის შეწყვეტა</string>
     <string name="projects_share_link_title">პროექტის გაზიარება</string>
     <string name="projects_sort_filter_title">დალაგება და გაფილტვრა</string>
-    <string name="projects_create_prefix_hint">გამოიყენება წაკითხვადი ID-ებისთვის, როგorc %1$s-1, %1$s-2</string>
+    <string name="projects_create_prefix_hint">გამოიყენება წაკითხვადი ID-ებისთვის, როგორიცაა %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d კონფლიქტური ფაილი</item>
-        <item quantity="other">%1$d კონფლიქტური ფაილი</item>
+        <item quantity="one">%1$s კონფლიქტური ფაილი</item>
+        <item quantity="other">%1$s კონფლიქტური ფაილი</item>
     </plurals>
     <string name="projects_design_export_saved">დიზაინი შენახულია</string>
     <string name="projects_design_import_failed">ამ ფაილის წაკითხვა ვერ მოხერხდა</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">პროექტის მონაცემები შენახულია</string>
     <string name="projects_exporting">ექსპორტის მომზადება…</string>
     <string name="projects_board_add_column">სვეტის დამატება</string>
-    <string name="projects_design_sample">ნიმუში %1$d</string>
+    <string name="projects_design_sample">ნიმუში %1$s</string>
     <string name="projects_option_delete_title">ვარიანტის წაშლა</string>
     <string name="projects_option_delete_message">ნამდვილად გსურთ ვარიანტის \"%1$s\" წაშლა?</string>
     <string name="projects_create_object_no_types">ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები.</string>

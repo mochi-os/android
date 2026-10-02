@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">Hindi pa nakukuha</string>
     <string name="feeds_source_poll">Kunin ngayon</string>
     <string name="feeds_source_transform">Pag-transform ng AI</string>
-    <string name="feeds_remove_source_confirm">Tanggalin ang \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Tanggalin din ang mga na-import na post</string>
+    <string name="feeds_remove_source_confirm">Ititigil nito ang pag-import ng nilalaman mula sa \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Tanggalin din ang mga post na na-import mula sa source na ito</string>
     <string name="feeds_suggested_credibility_title">Iminumungkahing kredibilidad</string>
-    <string name="feeds_suggested_credibility_body">Nagmumungkahi ang Mochi ng kredibilidad na %1$d. Tatanggapin?</string>
+    <string name="feeds_suggested_credibility_body">Nagmumungkahi ang Mochi ng kredibilidad na %1$s. Tatanggapin?</string>
     <string name="feeds_suggested_credibility_keep">Panatilihin ang kasalukuyan</string>
     <string name="feeds_ai_processing_mode">Mode ng AI processing</string>
     <string name="feeds_ai_account">AI account</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">I-tap ang bookmark sa anumang post para i-save ito rito para sa mamaya.</string>
     <string name="feeds_saved_error_clear">Hindi nabura ang mga naka-save na post</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d bagong post</item>
-        <item quantity="other">%d bagong post</item>
+        <item quantity="one">%s bagong post</item>
+        <item quantity="other">%s bagong post</item>
     </plurals>
     <string name="feeds_caught_up">Nakita mo na ang lahat</string>
     <string name="feeds_all_caught_up">Updated na lahat</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Feed entity ID o fingerprint</string>
     <string name="feeds_source_credibility_label">Kredibilidad</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d oras</item>
-        <item quantity="other">%1$d na oras</item>
+        <item quantity="one">%1$s oras</item>
+        <item quantity="other">%1$s na oras</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d na minuto</item>
+        <item quantity="one">%1$s minuto</item>
+        <item quantity="other">%1$s na minuto</item>
     </plurals>
     <string name="feeds_source_polling_interval">Nagpo-poll bawat %1$s</string>
     <string name="feeds_access_level_react_full">Mag-react at tingnan</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Link</string>
     <string name="feeds_share_link_title">Link ng feed</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d komento</item>
-        <item quantity="other">%1$d na komento</item>
+        <item quantity="one">%1$s komento</item>
+        <item quantity="other">%1$s na komento</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d kalakip</item>
-        <item quantity="other">%1$d kalakip</item>
+        <item quantity="one">%1$s kalakip</item>
+        <item quantity="other">%1$s kalakip</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Tingnan ang %1$d pang komento</item>
-        <item quantity="other">Tingnan ang %1$d pang komento</item>
+        <item quantity="one">Tingnan ang %1$s pang komento</item>
+        <item quantity="other">Tingnan ang %1$s pang komento</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d taon na ang nakalipas ngayong araw</item>
-        <item quantity="other">%1$d taon na ang nakalipas ngayong araw</item>
+        <item quantity="one">%1$s taon na ang nakalipas ngayong araw</item>
+        <item quantity="other">%1$s taon na ang nakalipas ngayong araw</item>
     </plurals>
     <string name="feeds_block">I-block</string>
     <string name="feeds_removed_from_feed">Tinanggal ka sa feed na ito</string>

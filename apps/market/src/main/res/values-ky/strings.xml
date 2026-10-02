@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Базар</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Биография</string>
     <string name="market_account_biography_placeholder">Сатып алуучуларга өзүңүз жөнүндө айтыңыз…</string>
     <string name="market_account_load_failed">Эсепти жүктөө мүмкүн болгон жок</string>
@@ -54,7 +54,7 @@
     <string name="market_bids_tab_outbid">Сунуштан ашты</string>
     <string name="market_bids_tab_won">Жеңди</string>
     <string name="market_bids_title">Соодалар</string>
-    <string name="market_carousel_main">Сүрөт %1$d / %2$d</string>
+    <string name="market_carousel_main">Сүрөт %1$s / %2$s</string>
     <string name="market_channel_name">Базар</string>
     <string name="market_chargeback_reason_bank_cannot_process">Банк иштете алган жок</string>
     <string name="market_chargeback_reason_check_returned">Чек кайтарылды</string>
@@ -133,7 +133,7 @@
     <string name="market_editor_condition_refurbished">Калыбына келтирилген</string>
     <string name="market_editor_condition_used">Колдонулган</string>
     <string name="market_editor_currency">Валюта</string>
-    <string name="market_editor_days">%1$d күн</string>
+    <string name="market_editor_days">%1$s күн</string>
     <string name="market_editor_delete">Жарнаманы өчүрүү</string>
     <string name="market_editor_description">Сүрөттөмө</string>
     <string name="market_editor_interval_monthly">Айлык</string>
@@ -324,7 +324,7 @@
     <string name="market_purchases_title">Сатып алуулар</string>
     <string name="market_rating_label">Рейтинг</string>
     <string name="market_rating_no_reviews">Пикирлер азырынча жок</string>
-    <string name="market_rating_reviews">(%1$d сын-пикир)</string>
+    <string name="market_rating_reviews">(%1$s сын-пикир)</string>
     <string name="market_refund_amount_label">Сумма</string>
     <string name="market_refund_body">Кайтаруу сурамыңыздын себебин көрсөтүңүз.</string>
     <string name="market_refund_details_label">Деталдар</string>
@@ -474,10 +474,10 @@
     <string name="market_sale_review_response_submitting">Жөнөтүлүүдө…</string>
     <string name="market_checkout_subscribing">Жазылууда…</string>
     <string name="market_filter_remove">Чыпканы алып салуу</string>
-    <string name="market_listing_detail_sales_count">%1$d сатуу</string>
+    <string name="market_listing_detail_sales_count">%1$s сатуу</string>
     <string name="market_listings_action_appeal">Жок кылууга даттануу</string>
     <string name="market_listings_share_chooser">Жарнаманы бөлүшүү</string>
-    <string name="market_profile_sales_count">%1$d сатуу</string>
+    <string name="market_profile_sales_count">%1$s сатуу</string>
     <string name="market_refund_dialog_amount_label">Сумма</string>
 
     <string name="market_account_status_restrictions">Аккаунт ушул абалда турганда айрым аракеттер, анын ичинде жаңы тизмелерди түзүү жана буйрутмаларды аяктоо чектелген.</string>
@@ -497,11 +497,11 @@
     <string name="market_bids_current_bid">Учурдагы: %1$s</string>
     <string name="market_bids_ends_in">%1$s ичинде аяктайт</string>
     <string name="market_bids_your_bid">Сиздин сунушуңуз: %1$s</string>
-    <string name="market_carousel_thumbnail">Эскиз %1$d</string>
+    <string name="market_carousel_thumbnail">Эскиз %1$s</string>
     <string name="market_checkout_browser_unavailable">Төлөм бетин ачуу үчүн браузер жок</string>
     <string name="market_checkout_pwyw_label">Сиздин баа (эң аз %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Сумма эң аз %1$s болушу керек</string>
-    <string name="market_dispute_dialog_attach_count">%1$d файл тиркелди</string>
+    <string name="market_dispute_dialog_attach_count">%1$s файл тиркелди</string>
     <string name="market_dispute_dialog_evidence_section_title">Тапшырылган далилдер</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s тарабынан тапшырылды</string>
     <string name="market_editor_appeal">Модерацияга даттануу</string>
@@ -572,7 +572,7 @@
     <string name="market_messages_inbox_empty_title">Азырынча жазышуулар жок</string>
     <string name="market_messages_load_failed">Жазышууну жүктөө мүмкүн болгон жок</string>
     <string name="market_messages_send_failed">Билдирүүнү жөнөтүү мүмкүн болгон жок</string>
-    <string name="market_messages_unread_badge">%1$d окулган эмес</string>
+    <string name="market_messages_unread_badge">%1$s окулган эмес</string>
     <string name="market_price_high_bid">Жогорку сунуш: %1$s</string>
     <string name="market_price_instant_buy">дароо сатып алуу: %1$s</string>
     <string name="market_price_starting_bid">Баштапкы сунуш: %1$s</string>
@@ -580,11 +580,11 @@
     <string name="market_profile_member_since">%1$s жылдан бери катышуучу</string>
     <string name="market_profile_joined">%1$s кошулду</string>
     <string name="market_profile_rating_breakdown">Рейтинг бөлүштүрүлүшү</string>
-    <string name="market_profile_stars_value">%1$d жылдыз</string>
+    <string name="market_profile_stars_value">%1$s жылдыз</string>
     <string name="market_purchase_dispute_chargeback">Чарджбэк %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Банкыңыз бул буйрутма боюнча чарджбэк жасады. Stripe сатуучу менен талашты иштеп жатат; чечими белгилүү болгондо бул жерде көрүнөт.</string>
     <string name="market_purchase_dispute_response">Сатуучунун жообу</string>
-    <string name="market_purchase_download_many">Төмөндө %1$d файлыңызды жүктөп алыңыз.</string>
+    <string name="market_purchase_download_many">Төмөндө %1$s файлыңызды жүктөп алыңыз.</string>
     <string name="market_purchase_download_one">Төмөндө файлыңызды жүктөп алыңыз.</string>
     <string name="market_purchase_review_from">%1$s баалоосу</string>
     <string name="market_purchases_auction_label">Аукцион №%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Бул аукционду жокко чыгарат. Тизме сатып алуучулардан жашырылат; кийин аны жаңы долбоор катары кайра тизмелесе болот.</string>
     <string name="market_listings_remove_title">Бул жарнаманы аласызбы?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Бул аукционду жокко чыгарып, %1$d активдүү катышуучуга кабарлайт. Жарнама сатып алуучулардан жашырылат; кийин аны жаңы долбоор катары кайра жайгаштыра аласыз.</item>
-        <item quantity="other">Бул аукционду жокко чыгарып, %1$d активдүү катышуучуга кабарлайт. Жарнама сатып алуучулардан жашырылат; кийин аны жаңы долбоор катары кайра жайгаштыра аласыз.</item>
+        <item quantity="one">Бул аукционду жокко чыгарып, %1$s активдүү катышуучуга кабарлайт. Жарнама сатып алуучулардан жашырылат; кийин аны жаңы долбоор катары кайра жайгаштыра аласыз.</item>
+        <item quantity="other">Бул аукционду жокко чыгарып, %1$s активдүү катышуучуга кабарлайт. Жарнама сатып алуучулардан жашырылат; кийин аны жаңы долбоор катары кайра жайгаштыра аласыз.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Бул учурдагы төлөм мезгилинин аягында %1$d активдүү жазылууну жокко чыгарат. Жазылуучуларга кабарланат. Жарнама сатып алуучулардан жашырылат.</item>
-        <item quantity="other">Бул учурдагы төлөм мезгилинин аягында %1$d активдүү жазылууну жокко чыгарат. Жазылуучуларга кабарланат. Жарнама сатып алуучулардан жашырылат.</item>
+        <item quantity="one">Бул учурдагы төлөм мезгилинин аягында %1$s активдүү жазылууну жокко чыгарат. Жазылуучуларга кабарланат. Жарнама сатып алуучулардан жашырылат.</item>
+        <item quantity="other">Бул учурдагы төлөм мезгилинин аягында %1$s активдүү жазылууну жокко чыгарат. Жазылуучуларга кабарланат. Жарнама сатып алуучулардан жашырылат.</item>
     </plurals>
 </resources>

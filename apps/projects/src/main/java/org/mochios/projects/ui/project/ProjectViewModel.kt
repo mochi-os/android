@@ -30,6 +30,9 @@ import org.mochios.android.files.SavedExport
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.projects.ui.board.allOptions
+import org.mochios.projects.ui.board.boardClass
+import org.mochios.projects.ui.board.boardOptions
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectClass
@@ -709,13 +712,22 @@ class ProjectViewModel @Inject constructor(
         return getAllOptionsForField(fieldId)
     }
 
+    /** Every option [fieldId] can take, across all of the project's classes. */
     fun getAllOptionsForField(fieldId: String): List<FieldOption> {
         val details = _uiState.value.projectDetails ?: return emptyList()
-        for ((_, classOptions) in details.options) {
-            val options = classOptions[fieldId]
-            if (!options.isNullOrEmpty()) return options
-        }
-        return emptyList()
+        return allOptions(details, fieldId)
+    }
+
+    /** The class [view]'s board keeps its columns in, or null before the project loads. */
+    fun getBoardClass(view: ProjectView? = getActiveView()): String? {
+        val details = _uiState.value.projectDetails ?: return null
+        return boardClass(details, view)
+    }
+
+    /** The options of [fieldId] that [view]'s board shows as its columns or lanes. */
+    fun getBoardOptions(view: ProjectView?, fieldId: String): List<FieldOption> {
+        val details = _uiState.value.projectDetails ?: return emptyList()
+        return boardOptions(details, view, fieldId)
     }
 
     fun reparentObject(objectId: String, newParentId: String) {
@@ -733,17 +745,9 @@ class ProjectViewModel @Inject constructor(
         return _uiState.value.projectDetails?.classes?.find { it.id == classId }
     }
 
-    /** Find the classId that owns a given fieldId. */
-    private fun findClassForField(fieldId: String): String? {
-        val details = _uiState.value.projectDetails ?: return null
-        for ((classId, fields) in details.fields) {
-            if (fields.any { it.id == fieldId }) return classId
-        }
-        return null
-    }
-
     fun renameColumnOption(fieldId: String, optionId: String, name: String) {
-        val classId = findClassForField(fieldId) ?: return
+        // A column is an option of the board class, so that is the class changed.
+        val classId = getBoardClass() ?: return
         viewModelScope.launch {
             try {
                 repository.updateOption(projectId, classId, fieldId, optionId, name, null, null)
@@ -755,7 +759,8 @@ class ProjectViewModel @Inject constructor(
     }
 
     fun deleteColumnOption(fieldId: String, optionId: String) {
-        val classId = findClassForField(fieldId) ?: return
+        // A column is an option of the board class, so that is the class changed.
+        val classId = getBoardClass() ?: return
         viewModelScope.launch {
             try {
                 repository.deleteOption(projectId, classId, fieldId, optionId)
@@ -770,7 +775,8 @@ class ProjectViewModel @Inject constructor(
      * Persists a drag-reorder: [order] is every option id in display order.
      */
     fun reorderColumnOptions(fieldId: String, order: List<String>) {
-        val classId = findClassForField(fieldId) ?: return
+        // A column is an option of the board class, so that is the class changed.
+        val classId = getBoardClass() ?: return
         viewModelScope.launch {
             try {
                 repository.reorderOptions(projectId, classId, fieldId, order.joinToString(","))

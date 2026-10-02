@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Pošiljanje…</string>
     <string name="market_checkout_subscribing">Naročanje…</string>
     <string name="market_filter_remove">Odstrani filter</string>
-    <string name="market_listing_detail_sales_count">%1$d prodaj</string>
-    <string name="market_profile_sales_count">%1$d prodaj</string>
+    <string name="market_listing_detail_sales_count">%1$s prodaj</string>
+    <string name="market_profile_sales_count">%1$s prodaj</string>
     <string name="market_purchase_dispute_response">Odgovor prodajalca</string>
     <string name="market_purchases_order_label">Naročilo #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Povejte kupcem o sebi…</string>
     <string name="market_account_load_failed">Računa ni mogoče naložiti</string>
     <string name="market_account_save_failed">Sprememb ni mogoče shraniti</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Trenutna: %1$s</string>
     <string name="market_bids_ends_in">Konča se čez %1$s</string>
     <string name="market_bids_your_bid">Vaša ponudba: %1$s</string>
-    <string name="market_carousel_main">Fotografija %1$d od %2$d</string>
-    <string name="market_carousel_thumbnail">Sličica %1$d</string>
+    <string name="market_carousel_main">Fotografija %1$s od %2$s</string>
+    <string name="market_carousel_thumbnail">Sličica %1$s</string>
     <string name="market_checkout_browser_unavailable">Na voljo ni brskalnika za odpiranje strani za plačilo</string>
     <string name="market_checkout_pay_button">Plačaj s Stripe</string>
     <string name="market_checkout_processing">Obdelava…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Priloži dokaze</string>
-    <string name="market_dispute_dialog_attach_count">%1$d priloženih datotek</string>
+    <string name="market_dispute_dialog_attach_count">%1$s priloženih datotek</string>
     <string name="market_dispute_dialog_evidence_role_staff">Osebje Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Predloženi dokazi</string>
     <string name="market_dispute_dialog_evidence_submitter_line">predložil %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Referenčni URL</string>
     <string name="market_editor_assets_empty">Še ni sredstev</string>
     <string name="market_editor_category_none">Izberite kategorijo</string>
-    <string name="market_editor_days">%1$d dni</string>
+    <string name="market_editor_days">%1$s dni</string>
     <string name="market_editor_delete">Izbriši ponudbo</string>
     <string name="market_editor_delete_confirm_message">S tem boste ponudbo trajno izbrisali.</string>
     <string name="market_editor_delete_confirm_title">Izbrišem ponudbo?</string>
@@ -556,8 +556,8 @@
     <string name="market_messages_load_failed">Pogovora ni bilo mogoče naložiti</string>
     <string name="market_messages_send_failed">Sporočila ni bilo mogoče poslati</string>
     <string name="market_messages_thread_title">Pogovor</string>
-    <string name="market_messages_unread_badge">%1$d neprebranih</string>
-    <string name="market_price_from">od %1$s</string>
+    <string name="market_messages_unread_badge">%1$s neprebranih</string>
+    <string name="market_price_from">Od %1$s</string>
     <string name="market_price_high_bid">Najvišja ponudba: %1$s</string>
     <string name="market_price_instant_buy">takojšen nakup: %1$s</string>
     <string name="market_price_per_month">%1$s / mesec</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Pridružil(a) se %1$s</string>
     <string name="market_profile_no_reviews">Še ni mnenj.</string>
     <string name="market_profile_rating_breakdown">Razčlenitev ocen</string>
-    <string name="market_profile_stars_value">%1$d zvezdic</string>
+    <string name="market_profile_stars_value">%1$s zvezdic</string>
     <string name="market_purchase_dispute_chargeback">Vračilo bremenitve %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Vaša banka je za to naročilo vložila zahtevek za vračilo bremenitve. Stripe obravnava spor s prodajalcem; izid bo prikazan tukaj, ko bo znan.</string>
-    <string name="market_purchase_download_many">Spodaj prenesite svoje datoteke (%1$d).</string>
+    <string name="market_purchase_download_many">Spodaj prenesite svoje datoteke (%1$s).</string>
     <string name="market_purchase_download_one">Spodaj prenesite svojo datoteko.</string>
     <string name="market_purchase_review_from">Mnenje od %1$s</string>
     <string name="market_purchases_auction_label">Dražba #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s vrnjeno</string>
     <string name="market_purchases_won_for">Pridobljeno za %1$s</string>
-    <string name="market_rating_reviews">(%1$d mnenj)</string>
+    <string name="market_rating_reviews">(%1$s mnenj)</string>
     <string name="market_refund_amount_label">Znesek</string>
     <string name="market_refund_dialog_amount_help">Pustite prazno za vračilo celotnega naročila.</string>
     <string name="market_refund_dialog_amount_label">Znesek</string>
@@ -785,15 +785,15 @@
     <string name="market_listings_remove_message_auction">S tem boste preklicali dražbo. Oglas bo skrit pred kupci; lahko ga znova objavite kasneje kot nov osnutek.</string>
     <string name="market_listings_remove_title">Odstrani ta oglas?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">To bo preklicalo dražbo in obvestilo %1$d aktivnega ponudnika. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>
-        <item quantity="two">To bo preklicalo dražbo in obvestilo %1$d aktivna ponudnika. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>
-        <item quantity="few">To bo preklicalo dražbo in obvestilo %1$d aktivne ponudnike. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>
-        <item quantity="other">To bo preklicalo dražbo in obvestilo %1$d aktivnih ponudnikov. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>
+        <item quantity="one">To bo preklicalo dražbo in obvestilo %1$s aktivnega ponudnika. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>
+        <item quantity="two">To bo preklicalo dražbo in obvestilo %1$s aktivna ponudnika. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>
+        <item quantity="few">To bo preklicalo dražbo in obvestilo %1$s aktivne ponudnike. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>
+        <item quantity="other">To bo preklicalo dražbo in obvestilo %1$s aktivnih ponudnikov. Oglas bo skrit pred kupci; pozneje ga lahko znova objavite kot nov osnutek.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$d aktivno naročnino. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
-        <item quantity="two">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$d aktivni naročnini. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
-        <item quantity="few">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$d aktivne naročnine. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
-        <item quantity="other">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$d aktivnih naročnin. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
+        <item quantity="one">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$s aktivno naročnino. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
+        <item quantity="two">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$s aktivni naročnini. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
+        <item quantity="few">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$s aktivne naročnine. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
+        <item quantity="other">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$s aktivnih naročnin. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
     </plurals>
 </resources>

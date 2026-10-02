@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">कुनै वस्तु छैन</string>
     <string name="crm_board_no_columns">यो दृश्यका लागि कुनै स्तम्भ कन्फिगर गरिएको छैन</string>
     <string name="crm_board_no_options">स्तम्भ क्षेत्रका लागि कुनै विकल्प कन्फिगर गरिएको छैन</string>
-    <string name="crm_board_nested_count">+%1$d नेस्टेड</string>
+    <string name="crm_board_nested_count">+%1$s नेस्टेड</string>
     <string name="crm_move_to_column">स्तम्भमा सार्नुहोस्</string>
     <string name="crm_move_to_row">पङ्क्तिमा सार्नुहोस्</string>
     <string name="crm_move_after">%1$s पछि</string>
@@ -257,7 +257,7 @@
     <string name="crm_settings_section_access">पहुँच व्यवस्थापन</string>
     <string name="crm_settings_not_set">सेट गरिएको छैन</string>
     <string name="crm_settings_access_updated">पहुँच अद्यावधिक गरियो</string>
-    <string name="crm_settings_access_revoked">पहुँच रद्द गरियो</string>
+    <string name="crm_settings_access_revoked">पहुँच फिर्ता लिइयो</string>
     <string name="crm_people_search">मानिसहरू खोज्नुहोस्</string>
     <string name="crm_access_tab_other">अन्य</string>
     <string name="crm_access_select_group">समूह छान्नुहोस्</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM डेटा सुरक्षित गरियो</string>
     <string name="crm_create_upload_json">.zip वा .json फाइल अपलोड गर्नुहोस्</string>
     <string name="crm_create_blocked_no_options">सिर्जना गर्न सकिँदैन: %1$s आवश्यक छ तर छनोट गर्न कुनै विकल्प छैन। डिजाइनमा विकल्पहरू थप्नुहोस्।</string>
-    <string name="crm_design_sample">नमूना %1$d</string>
+    <string name="crm_design_sample">नमूना %1$s</string>
     <string name="crm_option_delete_title">विकल्प मेटाउनुहोस्</string>
     <string name="crm_option_delete_message">के तपाईं \"%1$s\" विकल्प मेटाउन निश्चित हुनुहुन्छ?</string>
 </resources>

@@ -5,13 +5,13 @@
     <string name="settings_home_logout">Fita</string>
     <string name="settings_home_account">Asusu</string>
     <string name="settings_home_preferences">Abubuwan da kake so</string>
-    <string name="settings_home_display">Nuna</string>
+    <string name="settings_home_display">Nuni</string>
     <string name="settings_home_notification_prefs">Saiyyun sanarwa</string>
     <string name="settings_home_accounts">Asusai da aka haɗa</string>
     <string name="settings_home_interests">Abubuwan sha\'awa</string>
     <string name="account_section_passkeys">Makullan shiga</string>
-    <string name="account_passkey_register">Ƙara passkey</string>
-    <string name="account_passkey_delete_title">Goge passkey?</string>
+    <string name="account_passkey_register">Ƙara maɓallin shiga</string>
+    <string name="account_passkey_delete_title">Share maɓallin shiga?</string>
     <string name="account_section_totp">Manhajar tabbatarwa</string>
     <string name="account_totp_setup">Saita authenticator</string>
     <string name="account_totp_setup_title">Saita authenticator</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Goge hanya?</string>
     <string name="route_path">Hanya</string>
     <string name="route_method">Hanya</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Manhaja</string>
     <string name="route_method_entity">Hukuma</string>
     <string name="route_method_redirect">Karkatarwa</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Sauke daga packages.mochi-os.org</string>
     <string name="system_status_copy">Kwafi</string>
     <string name="system_status_peers">Takwarori</string>
-    <string name="system_status_known">Sananne</string>
+    <string name="system_status_peers_totals">Sananne %1$s · An haɗa %2$s · Ragar watsawa %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Sananne %1$s · An haɗa %2$s</string>
     <string name="system_status_peer_connected">An haɗa</string>
     <string name="system_status_peer_disconnected">An cire haɗi</string>
     <string name="system_status_peer_queued">Saƙonni a jerin gwano</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Cire</string>
     <string name="accounts_remove_title">A cire account?</string>
     <string name="system_documents_title">Takardu</string>
-    <string name="system_documents_description">Ƙa\'idojin sabar, sharuɗɗa da yanayi, da sanarwar sirri da ake nunawa masu amfani da ka</string>
     <string name="system_documents_tab_rules">Ƙa\'idojin sabar</string>
     <string name="system_documents_tab_terms">Sharuɗɗa da yanayi</string>
     <string name="system_documents_tab_privacy">Sirri</string>
     <string name="system_documents_language">Harshe</string>
     <string name="system_documents_no_language">Babu takarda da ke samuwa don wannan yare.</string>
-    <string name="system_documents_customised">An keɓance</string>
     <string name="system_documents_using_default">Ana amfani da default da aka haɗa</string>
     <string name="system_documents_revert">Mayar zuwa default</string>
     <string name="system_documents_save">Adana</string>
@@ -137,11 +138,11 @@
     <string name="system_settings_reset_title">A mayar zuwa asali?</string>
     <string name="system_setting_apps_install_user">Ba masu amfani damar shigar da apps</string>
     <string name="system_setting_auth_email">Shiga ta amfani da lambar imel</string>
-    <string name="system_setting_auth_passkey">Shiga ta amfani da passkey</string>
+    <string name="system_setting_auth_passkey">Shiga ta amfani da maɓallin shiga</string>
     <string name="system_setting_auth_totp">Shiga ta amfani da app na TOTP authenticator</string>
     <string name="system_setting_auth_recovery">Shiga ta amfani da lambar dawowa</string>
     <string name="system_setting_auth_oauth">Shiga ta amfani da OAuth 2.0</string>
-    <string name="system_setting_default_theme">Theme na default</string>
+    <string name="system_setting_default_theme">Jigo na tsoho</string>
     <string name="system_setting_domains_verification">Buƙaci tabbatar da domain</string>
     <string name="system_setting_email_from">Default from adireshi don imel ɗin tsarin</string>
     <string name="system_setting_oauth_public_url">URL na jama\'a don OAuth redirects</string>
@@ -182,17 +183,15 @@
     <string name="system_users_delete">Goge mai amfani</string>
     <string name="system_users_delete_title">Goge mai amfani?</string>
     <string name="system_users_manage_sessions">Sarrafa sessions</string>
-    <string name="system_users_sessions_description">Kalla kuma janye sessions masu aiki don wannan mai amfani.</string>
     <string name="system_users_sessions_empty">Wannan mai amfani ba shi da sessions masu aiki.</string>
     <string name="system_users_revoke">Janyewa</string>
-    <string name="system_users_revoke_all">Soke duk zama</string>
+    <string name="system_users_revoke_all">Janye duk zama</string>
     <string name="system_users_unknown_browser">Mai bincike da ba a sani ba</string>
     <string name="system_users_unknown">Ba a sani ba</string>
     <string name="system_users_previous">Na baya</string>
     <string name="system_users_next">Na gaba</string>
     <string name="system_users_empty">Babu masu amfani da aka samu</string>
     <string name="system_users_empty_search">Babu masu amfani da suka yi daidai da binciken ka</string>
-    <string name="system_users_empty_search_hint">Gwada daidaita ma\'aunin binciken ka</string>
     <string name="system_users_toast_created">An ƙirƙira mai amfani</string>
     <string name="system_users_toast_updated">An sabunta mai amfani</string>
     <string name="system_users_toast_deleted">An share mai amfani</string>
@@ -209,19 +208,20 @@
     <string name="settings_home_privacy">Manufar sirri</string>
     <string name="settings_home_rules">Dokoki</string>
     <string name="settings_home_terms">Sharuɗɗan sabis</string>
-    <string name="account_passkeys_empty">Babu maɓallin shiga da aka rajista.</string>
+    <string name="account_passkeys_empty">Babu makullan shiga da aka yi wa rajista.</string>
     <string name="account_passkey_register_title">Ƙara maɓallin shiga</string>
-    <string name="account_passkey_register_message">Na\'urar ka za ta tambaye ka ka tabbatar. Ana ɗaure maɓallin shiga ga wannan na\'urar kuma za a yi amfani da shi don shiga na gaba.</string>
     <string name="account_passkey_name_label">Suna (na zaɓi)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ba zai shigar da kai ba.</string>
-    <string name="account_totp_description">Shiga da lambar lamba 6 daga aikace-aikacen tabbatarwa.</string>
     <string name="account_totp_enabled">An kunna mai tabbatarwa.</string>
     <string name="account_totp_setup_step1">Sake duba ko shigar da wannan asirin a cikin aikace-aikacen tabbatarwarka.</string>
     <string name="account_totp_setup_step2">Shigar da lambar lamba 6 da aikace-aikacenka ke nunawa.</string>
     <string name="account_totp_code">Lamba</string>
     <string name="account_totp_disable_message">Ba za ka iya shiga da lambar mai tabbatarwa ba.</string>
     <string name="account_recovery_none">Babu lambobin dawowa da aka ƙirƙira.</string>
-    <string name="account_recovery_count">%1$d lambobin dawowa marasa amfani.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Lambar dawowa %1$s ta rage.</item>
+        <item quantity="other">Lambobin dawowa %1$s sun rage.</item>
+    </plurals>
     <string name="account_recovery_generate">Ƙirƙira lambobi</string>
     <string name="account_recovery_regenerate">Sake ƙirƙira lambobi</string>
     <string name="account_recovery_regen_title">Sake ƙirƙira lambobin dawowa?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Amfani na ƙarshe %1$s</string>
     <string name="route_delete_message">Wannan zai cire hanya don hanyar \"%1$s\".</string>
     <string name="route_empty">Babu hanyoyin da aka saita.</string>
-    <string name="route_meta">Fifiko %1$d · %2$s</string>
+    <string name="route_meta">Fifiko %1$s · %2$s</string>
     <string name="interests_search_placeholder">Bincika batutuwa don ƙarawa…</string>
     <string name="interests_empty">Babu sha\'awa tukuna.</string>
     <string name="interests_summary_regenerate">Sake samar da taƙaitawa</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Wannan zai goge mai amfani \"%1$s\" har abada. Ba za a iya gyara wannan aikin ba.</string>
     <string name="system_users_sessions_title">Zaman %1$s</string>
     <string name="system_users_session_last_accessed">Samun dama na ƙarshe: %1$s</string>
-    <string name="system_users_revoke_all_title">Soke duk zaman?</string>
+    <string name="system_users_revoke_all_title">Janye duk zaman?</string>
     <string name="system_users_revoke_all_message">Duk zaman da ke aiki na wannan mai amfani za su fita.</string>
-    <string name="system_users_pagination_status">Ana nuna %1$d–%2$d na %3$d masu amfani</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Ana nuna %1$s–%2$s daga cikin mai amfani %3$s</item>
+        <item quantity="other">Ana nuna %1$s–%2$s daga cikin masu amfani %3$s</item>
+    </plurals>
     <string name="account_title">Asusu</string>
     <string name="account_section_identity">Asali</string>
     <string name="account_identity_identity">Asali</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">Tabbatar da DNS</string>
     <string name="settings_home_domains">Yankuna</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">An aika gwaji zuwa wuri %1$d</item>
-        <item quantity="other">An aika gwaji zuwa wurare %1$d</item>
+        <item quantity="one">An aika gwaji zuwa wuri %1$s</item>
+        <item quantity="other">An aika gwaji zuwa wurare %1$s</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">An soke 1 zaman</item>
-        <item quantity="other">An soke zama %1$d</item>
+        <item quantity="one">An janye zama %1$s</item>
+        <item quantity="other">An janye zama %1$s</item>
     </plurals>
     <string name="login_title">Shiga</string>
     <string name="login_section_methods">Hanyoyin shiga</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Na jama\'a</string>
     <string name="system_status_reachability_private">Na sirri</string>
     <string name="system_status_reachability_unknown">Ba a sani ba</string>
-    <string name="system_status_relay">Ta hanyar relay</string>
-    <string name="system_status_mesh">Mesh na watsawa</string>
+    <string name="system_status_reachability_relay">%1$s · ta hanyar relay</string>
     <string name="system_status_broadcast">Watsa na ƙarshe</string>
     <string name="system_status_queued_broadcasts">Saƙonnin watsa labarai a layi</string>
     <string name="system_setting_hostname_publish">Sanar da sunan host da yankuna ga sauran sabar</string>
     <string name="system_setting_hostname">Sunan host da aka sanar wa sauran sabar</string>
     <string name="system_status_peer_id">ID na takwara</string>
     <string name="system_status_holepunch">Hudawa</string>
-    <string name="system_status_holepunch_value">%1$d nasara · %2$d kasawa</string>
     <string name="system_status_awaiting_routing">Saƙonni masu jiran turawa hanya</string>
     <string name="system_status_relay_service">Sabis na watsawa</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ajiyewa · %3$d da\'irori · %4$d an ƙi</string>
     <string name="route_target_select">Zaɓa</string>
     <string name="account_data_description">Sauke cikakken ajiyar da za ku iya maidowa a wannan uwar garke ko wata ta Mochi.</string>
     <string name="route_target_none">Babu wuraren da ake da su</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Ganin ƙarshe %1$s</string>
     <string name="notifprefs_device_app">%1$s · manhaja</string>
     <string name="notifprefs_device_push">%1$s · tura</string>
-    <string name="notifprefs_test_partial">An aika gwaji zuwa %1$d daga cikin %2$d wurare</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">An aika gwaji zuwa %1$s daga cikin wuri %2$s</item>
+        <item quantity="other">An aika gwaji zuwa %1$s daga cikin wurare %2$s</item>
+    </plurals>
     <string name="notifprefs_test_none">Ba a saita destinations ba</string>
     <string name="notifprefs_transport_fcm">Tura ta Android</string>
     <string name="notifprefs_no_destinations">Babu wuraren ƙarshe</string>
@@ -385,13 +390,36 @@
     <string name="accounts_field_topic">Batu</string>
     <string name="accounts_field_secret">Sirrin sa hannu</string>
     <string name="account_totp_open">Buɗe a manhajar tantancewa</string>
-    <string name="accounts_revoke">Soke damar shiga</string>
+    <string name="accounts_revoke">Janye damar shiga</string>
     <string name="accounts_capability_calendar">Kalanda</string>
     <string name="accounts_capability_notify">Sanarwa</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Shiga</string>
     <string name="accounts_provider_caldav">Sabar kalanda</string>
-    <string name="accounts_revoke_confirm">Wannan zai soke izinin kalanda na %1$s. Shiga da %2$s zai ci gaba har sai ka cire haɗin sa a shafin Shiga.</string>
+    <string name="accounts_revoke_confirm">Wannan zai janye izinin kalanda na %1$s. Shiga da %2$s zai ci gaba har sai ka cire haɗin sa a shafin Shiga.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Jigo da ba a sani ba</string>
+    <string name="system_documents_modified">An gyara</string>
+    <string name="system_documents_discard_title">A watsar da canje-canjen?</string>
+    <string name="system_documents_discard">Watsar</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s nasara</item>
+        <item quantity="other">%1$s nasara</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s kasawa</item>
+        <item quantity="other">%1$s kasawa</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s ajiyewa</item>
+        <item quantity="other">%1$s / %2$s ajiyewa</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s da\'ira</item>
+        <item quantity="other">%1$s da\'irori</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s an ƙi</item>
+        <item quantity="other">%1$s an ƙi</item>
+    </plurals>
 </resources>

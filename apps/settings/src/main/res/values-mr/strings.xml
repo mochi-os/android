@@ -20,7 +20,7 @@
     <string name="account_section_recovery">रिकव्हरी कोड्स</string>
     <string name="account_recovery_codes_title">रिकव्हरी कोड्स</string>
     <string name="sessions_unknown_agent">अज्ञात डिव्हाइस</string>
-    <string name="sessions_revoke_title">सेशन रद्द करायचे?</string>
+    <string name="sessions_revoke_title">सेशन मागे घ्यायचे?</string>
     <string name="account_section_oauth">तृतीय पक्ष लॉगिन</string>
     <string name="account_oauth_link">खाते लिंक करा</string>
     <string name="account_unlink">अनलिंक करा</string>
@@ -29,7 +29,7 @@
     <string name="account_done">पूर्ण</string>
     <string name="account_delete">हटवा</string>
     <string name="account_rename">पुन्हा नाव द्या</string>
-    <string name="sessions_revoke">रद्द करा</string>
+    <string name="sessions_revoke">मागे घ्या</string>
     <string name="account_disable">बंद करा</string>
     <string name="account_copy">कॉपी करा</string>
     <string name="account_copy_all">सर्व कॉपी करा</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">रूट हटवायचा?</string>
     <string name="route_path">पथ</string>
     <string name="route_method">पद्धत</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">अॅप</string>
     <string name="route_method_entity">एंटिटी</string>
     <string name="route_method_redirect">रीडायरेक्ट</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org वरून डाउनलोड करा</string>
     <string name="system_status_copy">कॉपी करा</string>
     <string name="system_status_peers">समकक्ष</string>
-    <string name="system_status_known">ज्ञात</string>
+    <string name="system_status_peers_totals">ज्ञात %1$s · कनेक्ट केलेले %2$s · प्रसारण मेश %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ज्ञात %1$s · कनेक्ट केलेले %2$s</string>
     <string name="system_status_peer_connected">कनेक्ट केले</string>
     <string name="system_status_peer_disconnected">डिस्कनेक्ट केले</string>
     <string name="system_status_peer_queued">रांगेतील संदेश</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">काढा</string>
     <string name="accounts_remove_title">अकाउंट काढायचे?</string>
     <string name="system_documents_title">दस्तऐवज</string>
-    <string name="system_documents_description">आपल्या वापरकर्त्यांना दाखवलेले सर्व्हर नियम, अटी आणि शर्ती, आणि गोपनीयता सूचना</string>
     <string name="system_documents_tab_rules">सर्व्हर नियम</string>
     <string name="system_documents_tab_terms">अटी आणि शर्ती</string>
     <string name="system_documents_tab_privacy">गोपनीयता</string>
     <string name="system_documents_language">भाषा</string>
     <string name="system_documents_no_language">या भाषेसाठी कोणताही दस्तऐवज उपलब्ध नाही.</string>
-    <string name="system_documents_customised">सानुकूलित</string>
     <string name="system_documents_using_default">बंडल केलेले डीफॉल्ट वापरत आहे</string>
     <string name="system_documents_revert">डीफॉल्टवर परत जा</string>
     <string name="system_documents_save">जतन करा</string>
@@ -178,32 +179,30 @@
     <string name="system_users_create_title">वापरकर्ता तयार करा</string>
     <string name="system_users_save_changes">बदल जतन करा</string>
     <string name="system_users_suspend">वापरकर्ता निलंबित करा</string>
-    <string name="system_users_remove_suspension">निलंबन काढा</string>
+    <string name="system_users_remove_suspension">निलंबन मागे घ्या</string>
     <string name="system_users_delete">वापरकर्ता हटवा</string>
     <string name="system_users_delete_title">वापरकर्ता हटवायचा?</string>
     <string name="system_users_manage_sessions">सेशन्स व्यवस्थापित करा</string>
-    <string name="system_users_sessions_description">या वापरकर्त्यासाठी सक्रिय सेशन्स पहा आणि रद्द करा.</string>
     <string name="system_users_sessions_empty">या वापरकर्त्याकडे कोणतेही सक्रिय सेशन्स नाहीत.</string>
-    <string name="system_users_revoke">रद्द करा</string>
-    <string name="system_users_revoke_all">सर्व सेशन्स रद्द करा</string>
+    <string name="system_users_revoke">मागे घ्या</string>
+    <string name="system_users_revoke_all">सर्व सेशन्स मागे घ्या</string>
     <string name="system_users_unknown_browser">अज्ञात ब्राउझर</string>
     <string name="system_users_unknown">अज्ञात</string>
     <string name="system_users_previous">मागील</string>
     <string name="system_users_next">पुढे</string>
     <string name="system_users_empty">वापरकर्ते सापडले नाहीत</string>
     <string name="system_users_empty_search">तुमच्या शोधाशी जुळणारे वापरकर्ते नाहीत</string>
-    <string name="system_users_empty_search_hint">तुमचे शोध निकष समायोजित करण्याचा प्रयत्न करा</string>
     <string name="system_users_toast_created">वापरकर्ता तयार केला</string>
     <string name="system_users_toast_updated">वापरकर्ता अद्ययावत केला</string>
     <string name="system_users_toast_deleted">वापरकर्ता हटवला</string>
     <string name="system_users_toast_suspended">वापरकर्ता निलंबित</string>
-    <string name="system_users_toast_suspension_removed">निलंबन काढले</string>
-    <string name="system_users_toast_session_revoked">सेशन रद्द केले</string>
+    <string name="system_users_toast_suspension_removed">निलंबन मागे घेतले</string>
+    <string name="system_users_toast_session_revoked">सेशन मागे घेतले</string>
     <string name="system_users_toast_create_failed">वापरकर्ता तयार करण्यात अयशस्वी</string>
     <string name="system_users_toast_update_failed">वापरकर्ता अद्यतनित करण्यात अयशस्वी</string>
     <string name="system_users_toast_delete_failed">वापरकर्ता हटवण्यात अयशस्वी</string>
     <string name="system_users_toast_status_failed">वापरकर्त्याची स्थिती अद्यतनित करण्यात अयशस्वी</string>
-    <string name="system_users_toast_revoke_failed">सेशन रद्द करण्यात अयशस्वी</string>
+    <string name="system_users_toast_revoke_failed">सेशन मागे घेण्यात अयशस्वी</string>
 
     <string name="settings_home_sessions">सेशन्स</string>
     <string name="settings_home_privacy">गोपनीयता धोरण</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">सेवा अटी</string>
     <string name="account_passkeys_empty">नोंदणीकृत पासकीज नाहीत.</string>
     <string name="account_passkey_register_title">पासकी जोडा</string>
-    <string name="account_passkey_register_message">तुमचे डिव्हाइस तुम्हाला पुष्टी करण्यास सांगेल. पासकी या डिव्हाइसशी जोडलेली आहे आणि भविष्यातील साइन-इनसाठी वापरली जाते.</string>
     <string name="account_passkey_name_label">नाव (वैकल्पिक)</string>
     <string name="account_passkey_delete_message">\"%1$s\" यापुढे तुम्हाला साइन इन करणार नाही.</string>
-    <string name="account_totp_description">प्रमाणीकरण अॅपवरून 6-अंकी कोडसह साइन इन करा.</string>
     <string name="account_totp_enabled">प्रमाणकर्ता सक्षम केला आहे.</string>
     <string name="account_totp_setup_step1">हे गुप्त तुमच्या प्रमाणीकरण अॅपमध्ये स्कॅन करा किंवा प्रविष्ट करा.</string>
     <string name="account_totp_setup_step2">तुमचे अॅप दर्शविणारा 6-अंकी कोड प्रविष्ट करा.</string>
     <string name="account_totp_code">कोड</string>
     <string name="account_totp_disable_message">तुम्ही यापुढे प्रमाणकर्ता कोडसह साइन इन करू शकणार नाही.</string>
     <string name="account_recovery_none">पुनर्प्राप्ती कोड तयार केले नाहीत.</string>
-    <string name="account_recovery_count">%1$d न वापरलेले पुनर्प्राप्ती कोड.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s पुनर्प्राप्ती कोड शिल्लक आहे.</item>
+        <item quantity="other">%1$s पुनर्प्राप्ती कोड शिल्लक आहेत.</item>
+    </plurals>
     <string name="account_recovery_generate">कोड तयार करा</string>
     <string name="account_recovery_regenerate">कोड पुन्हा तयार करा</string>
     <string name="account_recovery_regen_title">पुनर्प्राप्ती कोड पुन्हा तयार करायचे?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">शेवटचे वापरले %1$s</string>
     <string name="route_delete_message">हे मार्ग \"%1$s\" साठीचा मार्ग काढून टाकेल.</string>
     <string name="route_empty">मार्ग कॉन्फिगर केलेले नाहीत.</string>
-    <string name="route_meta">प्राधान्य %1$d · %2$s</string>
+    <string name="route_meta">प्राधान्य %1$s · %2$s</string>
     <string name="interests_search_placeholder">जोडण्यासाठी विषय शोधा…</string>
     <string name="interests_empty">अद्याप कोणत्याही आवडी नाहीत.</string>
     <string name="interests_summary_regenerate">सारांश पुन्हा निर्माण करा</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">हे कायमस्वरूपी वापरकर्ता \"%1$s\" हटवेल. ही क्रिया पूर्ववत केली जाऊ शकत नाही.</string>
     <string name="system_users_sessions_title">%1$s चे सेशन्स</string>
     <string name="system_users_session_last_accessed">शेवटचा प्रवेश: %1$s</string>
-    <string name="system_users_revoke_all_title">सर्व सेशन्स रद्द करायचे?</string>
+    <string name="system_users_revoke_all_title">सर्व सेशन्स मागे घ्यायचे?</string>
     <string name="system_users_revoke_all_message">या वापरकर्त्याचे सर्व सक्रिय सेशन्स साइन आउट होतील.</string>
-    <string name="system_users_pagination_status">%3$d वापरकर्त्यांपैकी %1$d–%2$d दर्शवित आहे</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$s वापरकर्त्यापैकी %1$s–%2$s दर्शवित आहे</item>
+        <item quantity="other">%3$s वापरकर्त्यांपैकी %1$s–%2$s दर्शवित आहे</item>
+    </plurals>
     <string name="account_title">खाते</string>
     <string name="account_section_identity">ओळख</string>
     <string name="account_identity_identity">ओळख</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS सत्यापित करा</string>
     <string name="settings_home_domains">डोमेन</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d गंतव्यावर चाचणी पाठवली</item>
-        <item quantity="other">%1$d गंतव्यांवर चाचणी पाठवली</item>
+        <item quantity="one">%1$s गंतव्यावर चाचणी पाठवली</item>
+        <item quantity="other">%1$s गंतव्यांवर चाचणी पाठवली</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 सत्र रद्द केले</item>
-        <item quantity="other">%1$d सत्रे रद्द केली</item>
+        <item quantity="one">%1$s सेशन मागे घेतले</item>
+        <item quantity="other">%1$s सेशन्स मागे घेतले</item>
     </plurals>
     <string name="login_title">लॉगिन</string>
     <string name="login_section_methods">लॉगिन पद्धती</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">सार्वजनिक</string>
     <string name="system_status_reachability_private">खाजगी</string>
     <string name="system_status_reachability_unknown">अज्ञात</string>
-    <string name="system_status_relay">रिलेद्वारे</string>
-    <string name="system_status_mesh">प्रसारण मेश</string>
+    <string name="system_status_reachability_relay">%1$s · रिलेद्वारे</string>
     <string name="system_status_broadcast">शेवटचे प्रसारण</string>
     <string name="system_status_queued_broadcasts">रांगेतील प्रसारण संदेश</string>
     <string name="system_setting_hostname_publish">होस्टनेम आणि डोमेन इतर सर्व्हरना जाहीर करा</string>
     <string name="system_setting_hostname">इतर सर्व्हरना जाहीर केलेले होस्टनेम</string>
     <string name="system_status_peer_id">पीअर ID</string>
     <string name="system_status_holepunch">होल पंच</string>
-    <string name="system_status_holepunch_value">%1$d यशस्वी · %2$d अयशस्वी</string>
     <string name="system_status_awaiting_routing">राउटिंगची प्रतीक्षा करणारे संदेश</string>
     <string name="system_status_relay_service">रिले सेवा</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d आरक्षणे · %3$d सर्किट · %4$d नाकारले</string>
     <string name="route_target_select">निवडा</string>
     <string name="account_data_description">संपूर्ण बॅकअप डाउनलोड करा जो तुम्ही या किंवा दुसऱ्या Mochi सर्व्हरवर पुनर्संचयित करू शकता.</string>
     <string name="route_target_none">कोणतेही लक्ष्य उपलब्ध नाही</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">शेवटचे पाहिले %1$s</string>
     <string name="notifprefs_device_app">%1$s · अॅप</string>
     <string name="notifprefs_device_push">%1$s · पुश</string>
-    <string name="notifprefs_test_partial">%2$dपैकी %1$d गंतव्यांना चाचणी पाठवली</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">%2$s गंतव्यापैकी %1$s वर चाचणी पाठवली</item>
+        <item quantity="other">%2$s गंतव्यांपैकी %1$s वर चाचणी पाठवली</item>
+    </plurals>
     <string name="notifprefs_test_none">डेस्टिनेशन्स कॉन्फिगर केलेले नाहीत</string>
     <string name="notifprefs_transport_fcm">Android पुश</string>
     <string name="notifprefs_no_destinations">कोणतेही गंतव्य नाही</string>
@@ -385,13 +390,36 @@
     <string name="accounts_field_topic">विषय</string>
     <string name="accounts_field_secret">स्वाक्षरी गुप्त की</string>
     <string name="account_totp_open">ऑथेंटिकेटर ॲपमध्ये उघडा</string>
-    <string name="accounts_revoke">प्रवेश रद्द करा</string>
+    <string name="accounts_revoke">प्रवेश मागे घ्या</string>
     <string name="accounts_capability_calendar">कॅलेंडर</string>
     <string name="accounts_capability_notify">सूचना</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">लॉगिन</string>
     <string name="accounts_provider_caldav">कॅलेंडर सर्व्हर</string>
-    <string name="accounts_revoke_confirm">यामुळे %1$s चा कॅलेंडर प्रवेश रद्द होईल. लॉगिन पृष्ठावर अनलिंक करेपर्यंत %2$s सह साइन-इन राहील.</string>
+    <string name="accounts_revoke_confirm">यामुळे %1$s चा कॅलेंडर प्रवेश मागे घेतला जाईल. लॉगिन पृष्ठावर अनलिंक करेपर्यंत %2$s सह साइन-इन राहील.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">अज्ञात थीम</string>
+    <string name="system_documents_modified">सुधारित</string>
+    <string name="system_documents_discard_title">बदल टाकून द्यायचे?</string>
+    <string name="system_documents_discard">टाकून द्या</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s यशस्वी</item>
+        <item quantity="other">%1$s यशस्वी</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s अयशस्वी</item>
+        <item quantity="other">%1$s अयशस्वी</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s आरक्षण</item>
+        <item quantity="other">%1$s / %2$s आरक्षणे</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s सर्किट</item>
+        <item quantity="other">%1$s सर्किट</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s नाकारले</item>
+        <item quantity="other">%1$s नाकारले</item>
+    </plurals>
 </resources>

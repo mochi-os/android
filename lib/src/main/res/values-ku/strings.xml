@@ -60,7 +60,7 @@
     <string name="notifications_empty">Tu agahdarî tune</string>
     <string name="notifications_empty_unread">Te hemû xwendin</string>
     <string name="notifications_tab_unread">Nexwendî</string>
-    <string name="notifications_tab_unread_count">Nexwendî (%1$d)</string>
+    <string name="notifications_tab_unread_count">Nexwendî (%1$s)</string>
     <string name="notifications_tab_all">Hemû</string>
     <string name="notifications_mark_all_read">Hemû wek xwendî nîşan bike</string>
     <string name="notifications_clear_all">Hemûyan paqij bike</string>
@@ -103,8 +103,8 @@
     <string name="settings_time_zone">Cona demê</string>
     <string name="settings_reset_to_defaults">Ber bi standardan ve veguhêze</string>
     <string name="settings_reset_confirm_title">Tercihan veguhêze?</string>
-    <string name="settings_reset_confirm_message">Ev dê hemû tercîhan ji nû ve bo nirxên standard ên wan saz bike.</string>
-    <string name="settings_reset">Bişkojka veguhastinê</string>
+    <string name="settings_reset_confirm_message">Ev dê van tercîhan ji nû ve bo nirxên standard ên wan saz bike.</string>
+    <string name="settings_reset">Ji nû ve saz bike</string>
     <string name="settings_display_title">Xuyabûn</string>
     <string name="settings_display_reset">Ber bi standardan ve veguhêze</string>
     <string name="settings_display_reset_confirm_title">Pêşandanê vegerîne?</string>
@@ -122,7 +122,7 @@
     <string name="common_not_saved">Nehat tomarkirin</string>
     <string name="auth_server_url">URLa pêşkêşkerê</string>
     <string name="auth_link_rules">Rêbaz</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="lightbox_position">%1$s / %2$s</string>
     <string name="about_label">Derbarê</string>
     <string name="game_chat_move_played">%1$s %2$s lîst</string>
 
@@ -130,7 +130,7 @@
     <string name="error_network">Nikare girêbide. Girêdana înternetê kontrol bike û dîsa biceribîne.</string>
     <string name="error_authentication_required">Rastandin pêwîst e</string>
     <string name="error_not_found">Nehat dîtin</string>
-    <string name="error_server">Çewtiya servera (%1$d). Ji kerema xwe paşê dîsa biceribîne.</string>
+    <string name="error_server">Çewtiya servera (%1$s). Ji kerema xwe paşê dîsa biceribîne.</string>
     <string name="error_unexpected">Çewtiyek nepayî qewimî</string>
     <string name="error_enter_server_url">Ji kerema xwe URL\'ya serverê binivîse</string>
     <string name="error_enter_email">Ji kerema xwe e-nameya xwe binivîse</string>
@@ -180,19 +180,19 @@
     <string name="access_level_react">Bertek</string>
     <string name="notifications_clear">Agahdariyan paqij bike</string>
     <string name="entity_avatar_alt">Avatara %1$s</string>
-    <string name="media_grid_more_count">+%1$d</string>
+    <string name="media_grid_more_count">+%1$s</string>
     <string name="format_time_just_now">Nuha</string>
-    <string name="format_time_minutes_ago">%1$dx berê</string>
-    <string name="format_time_hours_ago">%1$dst berê</string>
-    <string name="format_time_days_ago">%1$dr berê</string>
-    <string name="format_time_weeks_ago">%1$dh berê</string>
-    <string name="format_time_months_ago">%1$dme berê</string>
-    <string name="format_time_years_ago">%1$ds berê</string>
-    <string name="format_time_minutes_short">%1$dx</string>
-    <string name="format_time_hours_short">%1$dst</string>
-    <string name="format_time_days_short">%1$dr</string>
-    <string name="format_time_weeks_short">%1$dh</string>
-    <string name="format_time_months_short">%1$dme</string>
+    <string name="format_time_minutes_ago">%1$sx berê</string>
+    <string name="format_time_hours_ago">%1$sst berê</string>
+    <string name="format_time_days_ago">%1$sr berê</string>
+    <string name="format_time_weeks_ago">%1$sh berê</string>
+    <string name="format_time_months_ago">%1$sme berê</string>
+    <string name="format_time_years_ago">%1$ss berê</string>
+    <string name="format_time_minutes_short">%1$sx</string>
+    <string name="format_time_hours_short">%1$sst</string>
+    <string name="format_time_days_short">%1$sr</string>
+    <string name="format_time_weeks_short">%1$sh</string>
+    <string name="format_time_months_short">%1$sme</string>
     <string name="reaction_add">Bertekê zêde bike</string>
     <string name="push_service_channel">Agahdariyên Mochi</string>
     <string name="push_service_channel_description">Mochi girêdayî dimîne da ku agahdariyan wergire</string>
@@ -217,7 +217,7 @@
     <string name="notifications_clear_all_title">Hemû agahdarî bên paqijkirin?</string>
     <string name="notifications_clear_all_message">Ev ê hemû agahdariyan jê bibe. Ew nikarin bên vegerandin.</string>
     <string name="settings_value_auto">Xweber</string>
-    <string name="settings_value_theme">Bineya rûkarê</string>
+    <string name="settings_value_theme">Standarda temayê</string>
     <string name="settings_radius">Tîrêja goşeyê</string>
     <string name="settings_timestamp_display">Nîşandana dema demjimêrê</string>
     <string name="settings_timestamp_relative">Têkildar</string>
@@ -285,8 +285,8 @@
     <string name="comment_anchor_open">Wêneya ku ev şîrove li ser e bibîne</string>
     <string name="comment_anchor_default">Li ser vê wêneyê</string>
     <plurals name="lightbox_comments_others">
-        <item quantity="one">%1$d şîroveya din a li ser vê şandiyê nîşan bide</item>
-        <item quantity="other">%1$d şîroveyên din ên li ser vê şandiyê nîşan bide</item>
+        <item quantity="one">%1$s şîroveya din a li ser vê şandiyê nîşan bide</item>
+        <item quantity="other">%1$s şîroveyên din ên li ser vê şandiyê nîşan bide</item>
     </plurals>
     <string name="lightbox_comments">Şîrove</string>
     <string name="common_attachment_unavailable">Pêvek demkî ne berdest e</string>
@@ -300,11 +300,11 @@
     <string name="format_list">Lîsteya xalan</string>
     <string name="common_preview">Pêşbînî</string>
     <string name="rss_revoke_confirm">Vekişîne</string>
-    <string name="rss_revoke">Gihîştinê betal bike</string>
+    <string name="rss_revoke">Gihîştinê vekişîne</string>
     <string name="rss_revoke_title">Gihîştina RSS were vekişandin?</string>
-    <string name="rss_revoke_message">Her tiştê ku li vê xwarinê abone ye dê wergirtinê rawestîne. Piştre tu dikarî URLyeke nû jiber bigirî.</string>
-    <string name="rss_revoked">Gihîştina RSS betal kirin</string>
-    <string name="rss_revoke_failed">Betalkirina gihîştina RSS bi ser neket</string>
+    <string name="rss_revoke_message">Her tiştê ku li vê feedê abone ye dê wergirtinê rawestîne. Piştre tu dikarî URLyeke nû jiber bigirî.</string>
+    <string name="rss_revoked">Gihîştina RSS hate vekişandin</string>
+    <string name="rss_revoke_failed">Vekişandina gihîştina RSS bi ser neket</string>
     <string name="game_empty_title">Hêj tu lîstik tune</string>
     <string name="game_select_title">Lîstikekê hilbijêre</string>
     <string name="game_select_subtitle">Ji darikê kêlekê lîstikekê hilbijêre an jî ya nû dest pê bike.</string>

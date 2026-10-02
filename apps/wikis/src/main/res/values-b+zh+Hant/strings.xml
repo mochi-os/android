@@ -22,19 +22,19 @@
     <string name="wikis_page_action_recent_changes">近期變更</string>
     <string name="wikis_page_action_new_page">新頁面</string>
     <string name="wikis_page_action_settings">設定</string>
-    <string name="wikis_page_action_unsubscribe">取消訂閱</string>
+    <string name="wikis_page_action_unsubscribe">退訂</string>
     <string name="wikis_title">Wiki</string>
     <string name="wikis_empty_title">建立您的第一個 wiki</string>
     <string name="wikis_empty_subtitle">搜尋 wiki 以訂閱,或建立一個以發佈你自己的文件。</string>
     <string name="wikis_create_button">建立維基</string>
     <string name="wikis_recommended_section">推薦的 Wiki</string>
     <string name="wikis_subscribe_button">訂閱</string>
-    <string name="wikis_unsubscribe_action">取消訂閱</string>
-    <string name="wikis_unsubscribing">取消訂閱中…</string>
-    <string name="wikis_unsubscribe_confirm_title">取消訂閱</string>
-    <string name="wikis_unsubscribe_success">已取消訂閱</string>
+    <string name="wikis_unsubscribe_action">退訂</string>
+    <string name="wikis_unsubscribing">退訂中…</string>
+    <string name="wikis_unsubscribe_confirm_title">退訂</string>
+    <string name="wikis_unsubscribe_success">已退訂</string>
     <string name="wikis_subscribe_failed">訂閱失敗</string>
-    <string name="wikis_rss_menu">RSS 訊息來源</string>
+    <string name="wikis_rss_menu">RSS 訂閱源</string>
     <string name="wikis_rss_changes">變更</string>
     <string name="wikis_rss_comments">留言</string>
     <string name="wikis_rss_both">變更與留言</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">關於 wiki 頁面編輯、評論和邀請的通知。</string>
     <string name="wikis_pageview_toc_expand">顯示目錄</string>
     <string name="wikis_pageview_toc_collapse">隱藏目錄</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">更新於 %1$s</string>
     <string name="wikis_pageview_not_found_description">頁面「%1$s」尚不存在。</string>
     <string name="wikis_pageview_share_chooser">Wiki 連結</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">連結</string>
     <string name="wikis_open_sidebar">開啟側邊欄</string>
     <string name="wikis_search_placeholder">搜尋 wiki…</string>
-    <string name="wikis_unsubscribe_confirm_message">確定要取消訂閱 %1$s 嗎?</string>
+    <string name="wikis_unsubscribe_confirm_message">確定要退訂 %1$s 嗎?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">依名稱、ID、指紋或 URL 搜尋…</string>
     <string name="wikis_join_search_button">搜尋 wikis…</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">您即將刪除頁面「%1$s」(%2$s)。此操作可透過從歷史紀錄還原來復原。</string>
     <string name="wikis_delete_page_success">頁面已刪除</string>
     <string name="wikis_revert_page_title">還原頁面</string>
-    <string name="wikis_revert_page_message">您即將將 %1$s 還原到版本 %2$d。這將使用版本 %2$d 的內容建立新修訂。</string>
-    <string name="wikis_revert_page_default_comment">已還原到版本 %1$d</string>
-    <string name="wikis_revert_page_success">已還原到版本 %1$d</string>
+    <string name="wikis_revert_page_message">您即將將 %1$s 還原到版本 %2$s。這將使用版本 %2$s 的內容建立新修訂。</string>
+    <string name="wikis_revert_page_default_comment">已還原到版本 %1$s</string>
+    <string name="wikis_revert_page_success">已還原到版本 %1$s</string>
     <string name="wikis_rename_page_renaming">正在重新命名…</string>
     <string name="wikis_rename_page_success">頁面已重新命名</string>
-    <string name="wikis_history_viewing">正在檢視 %1$s 的歷史紀錄,目前版本 %2$d</string>
-    <string name="wikis_revision_version_badge">版本 %1$d</string>
+    <string name="wikis_history_viewing">正在檢視 %1$s 的歷史紀錄,目前版本 %2$s</string>
+    <string name="wikis_revision_version_badge">版本 %1$s</string>
     <string name="wikis_search_pages_placeholder">依標題或內容搜尋頁面…</string>
     <string name="wikis_search_no_results">未找到「%1$s」的頁面。請嘗試其他搜尋詞。</string>
     <string name="wikis_search_updated">更新於 %1$s</string>
@@ -289,37 +289,37 @@
     <string name="wikis_revision_author">依 %1$s</string>
     <string name="wikis_revision_show_page">顯示頁面</string>
     <string name="wikis_revision_compare_failed">無法載入先前版本進行比較。</string>
-    <string name="wikis_revision_changes_from">從版本 %1$d → %2$d 的變更</string>
+    <string name="wikis_revision_changes_from">從版本 %1$s → %2$s 的變更</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d 則留言</item>
+        <item quantity="other">%s 則留言</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d 則回覆</item>
-        <item quantity="other">+%d 則更多回覆</item>
+        <item quantity="one">%s 則回覆</item>
+        <item quantity="other">+%s 則更多回覆</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d 個頁面</item>
-        <item quantity="other">%d 個頁面</item>
+        <item quantity="one">%s 個頁面</item>
+        <item quantity="other">%s 個頁面</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d 個檔案</item>
-        <item quantity="other">%d 個檔案</item>
+        <item quantity="one">%s 個檔案</item>
+        <item quantity="other">%s 個檔案</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d 張圖片</item>
-        <item quantity="other">%d 張圖片</item>
+        <item quantity="one">%s 張圖片</item>
+        <item quantity="other">%s 張圖片</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d 個文件</item>
-        <item quantity="other">%d 個文件</item>
+        <item quantity="one">%s 個文件</item>
+        <item quantity="other">%s 個文件</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d 個頁面有此標籤</item>
-        <item quantity="other">%d 個頁面有此標籤</item>
+        <item quantity="one">%s 個頁面有此標籤</item>
+        <item quantity="other">%s 個頁面有此標籤</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">找到 %1$d 個結果,查詢「%2$s」</item>
-        <item quantity="other">找到 %1$d 個結果,查詢「%2$s」</item>
+        <item quantity="one">找到 %1$s 個結果,查詢「%2$s」</item>
+        <item quantity="other">找到 %1$s 個結果,查詢「%2$s」</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">無法儲存說明文字</string>
     <string name="wikis_attachments_upload_types">支援的檔案：圖片、PDF、DOC、DOCX、TXT 和 MD。</string>
@@ -328,6 +328,6 @@
     <string name="wikis_rss_copied_new">已複製新的 RSS URL 至剪貼簿</string>
     <string name="wikis_rss_exists">此訂閱 URL 已發放，無法再次顯示。</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">正在顯示前 %1$d 則留言。</item>
+        <item quantity="other">正在顯示前 %1$s 則留言。</item>
     </plurals>
 </resources>

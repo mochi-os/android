@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Өөрчлөлтүүд ба сэтгэгдлүүд</string>
     <string name="wikis_rss_copied">RSS URL түр санах ой руу хуулагдсан</string>
     <string name="wikis_rss_failed">RSS токен авч чадсангүй</string>
-    <string name="wikis_rss_revoke">Хандалтыг цуцлах</string>
-    <string name="wikis_rss_revoked">RSS хандалтыг цуцаллаа</string>
+    <string name="wikis_rss_revoke">Хандалтыг хүчингүй болгох</string>
+    <string name="wikis_rss_revoked">RSS хандалтыг хүчингүй болголоо</string>
     <string name="wikis_find_title">Wiki хайх</string>
     <string name="wikis_find_no_results">Wiki олдсонгүй</string>
     <string name="wikis_find_recommended_section">Зөвлөмжтэй wiki</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki хуудасны засвар, сэтгэгдэл, урилгын мэдэгдэл.</string>
     <string name="wikis_pageview_toc_expand">Гарчгийг харуулах</string>
     <string name="wikis_pageview_toc_collapse">Гарчгийг нуух</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">%1$s шинэчлэгдсэн</string>
     <string name="wikis_pageview_not_found_description">“%1$s” хуудас хараахан байхгүй байна.</string>
     <string name="wikis_pageview_share_chooser">Викигийн холбоос</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Та “%1$s” (%2$s) хуудсыг устгах гэж байна. Энэ үйлдлийг түүхээс сэргээж буцаах боломжтой.</string>
     <string name="wikis_delete_page_success">Хуудас устгагдсан</string>
     <string name="wikis_revert_page_title">Хуудас буцаах</string>
-    <string name="wikis_revert_page_message">Та %1$s-г %2$d хувилбарт буцаах гэж байна. Энэ нь %2$d хувилбарын агуулгатай шинэ хувилбар үүсгэнэ.</string>
-    <string name="wikis_revert_page_default_comment">%1$d хувилбарт буцаалаа</string>
-    <string name="wikis_revert_page_success">%1$d хувилбарт буцаалаа</string>
+    <string name="wikis_revert_page_message">Та %1$s-г %2$s хувилбарт буцаах гэж байна. Энэ нь %2$s хувилбарын агуулгатай шинэ хувилбар үүсгэнэ.</string>
+    <string name="wikis_revert_page_default_comment">%1$s хувилбарт буцаалаа</string>
+    <string name="wikis_revert_page_success">%1$s хувилбарт буцаалаа</string>
     <string name="wikis_rename_page_renaming">Нэр өөрчилж байна…</string>
     <string name="wikis_rename_page_success">Хуудасны нэр өөрчлөгдсөн</string>
-    <string name="wikis_history_viewing">%1$s-ийн түүхийг үзэж байна, одоогийн хувилбар %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">%1$s-ийн түүхийг үзэж байна, одоогийн хувилбар %2$s</string>
+    <string name="wikis_revision_version_badge">Хувилбар %1$s</string>
     <string name="wikis_search_pages_placeholder">Хуудсуудыг гарчиг эсвэл агуулгаар хайх…</string>
     <string name="wikis_search_no_results">“%1$s”-д тохирох хуудас олдсонгүй. Өөр хайлтын үг оролдоно уу.</string>
     <string name="wikis_search_updated">%1$s шинэчлэгдсэн</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s-ээр</string>
     <string name="wikis_revision_show_page">Хуудсыг харуулах</string>
     <string name="wikis_revision_compare_failed">Харьцуулахын тулд өмнөх хувилбарыг ачаалж чадсангүй.</string>
-    <string name="wikis_revision_changes_from">%1$d → %2$d хувилбараас гарсан өөрчлөлтүүд</string>
+    <string name="wikis_revision_changes_from">%1$s → %2$s хувилбараас гарсан өөрчлөлтүүд</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d сэтгэгдэл</item>
-        <item quantity="other">%d сэтгэгдэл</item>
+        <item quantity="one">%s сэтгэгдэл</item>
+        <item quantity="other">%s сэтгэгдэл</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d хариу</item>
-        <item quantity="other">+%d илүү хариу</item>
+        <item quantity="one">%s хариу</item>
+        <item quantity="other">+%s илүү хариу</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d хуудас</item>
-        <item quantity="other">%d хуудас</item>
+        <item quantity="one">%s хуудас</item>
+        <item quantity="other">%s хуудас</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d файл</item>
-        <item quantity="other">%d файл</item>
+        <item quantity="one">%s файл</item>
+        <item quantity="other">%s файл</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d зураг</item>
-        <item quantity="other">%d зураг</item>
+        <item quantity="one">%s зураг</item>
+        <item quantity="other">%s зураг</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d баримт бичиг</item>
-        <item quantity="other">%d баримт бичиг</item>
+        <item quantity="one">%s баримт бичиг</item>
+        <item quantity="other">%s баримт бичиг</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Энэ тэгтэй %d хуудас</item>
-        <item quantity="other">Энэ тэгтэй %d хуудас</item>
+        <item quantity="one">Энэ тэгтэй %s хуудас</item>
+        <item quantity="other">Энэ тэгтэй %s хуудас</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">"%2$s"-н хувьд %1$d үр дүн олдлоо</item>
-        <item quantity="other">"%2$s"-н хувьд %1$d үр дүн олдлоо</item>
+        <item quantity="one">\"%2$s\"-н хувьд %1$s үр дүн олдлоо</item>
+        <item quantity="other">\"%2$s\"-н хувьд %1$s үр дүн олдлоо</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Тайлбарыг хадгалж чадсангүй</string>
     <string name="wikis_attachments_upload_types">Дэмжигдсэн файлууд: зургууд, PDF, DOC, DOCX, TXT болон MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Шинэ RSS URL түр санах ой руу хуулагдсан</string>
     <string name="wikis_rss_exists">Энэ хангамжийн URL аль хэдийн олгогдсон бөгөөд дахин харуулах боломжгүй.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Эхний %1$d сэтгэгдлийг харуулж байна.</item>
-        <item quantity="other">Эхний %1$d сэтгэгдлийг харуулж байна.</item>
+        <item quantity="one">Эхний %1$s сэтгэгдлийг харуулж байна.</item>
+        <item quantity="other">Эхний %1$s сэтгэгдлийг харуулж байна.</item>
     </plurals>
 </resources>

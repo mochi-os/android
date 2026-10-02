@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Üýtgeşmeler we teswirler</string>
     <string name="wikis_rss_copied">RSS URL bufer ýadyna göçürildi</string>
     <string name="wikis_rss_failed">RSS tokeni alynmady</string>
-    <string name="wikis_rss_revoke">Elýeterliligi ýatyr</string>
-    <string name="wikis_rss_revoked">RSS elýeterliligi ýatyryldy</string>
+    <string name="wikis_rss_revoke">Elýeterliligi yzyna al</string>
+    <string name="wikis_rss_revoked">RSS elýeterliligi yzyna alyndy</string>
     <string name="wikis_find_title">Wikileri tap</string>
     <string name="wikis_find_no_results">Wikiler tapylmady</string>
     <string name="wikis_find_recommended_section">Maslahat berilýän wikiler</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Wiki sahypa üýtgeşmeleri, teswirler we çakylyklar barada habarlar.</string>
     <string name="wikis_pageview_toc_expand">Mazmuny görkez</string>
     <string name="wikis_pageview_toc_collapse">Mazmuny gizle</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">%1$s täzelendi</string>
     <string name="wikis_pageview_not_found_description">“%1$s” sahypasy entek ýok.</string>
     <string name="wikis_pageview_share_chooser">Wiki salgysy</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Siz “%1$s” (%2$s) sahypasyny pozmakçy. Bu hereketi taryhdan dikeltmek arkaly yzyna gaýtaryp bolar.</string>
     <string name="wikis_delete_page_success">Sahypa pozuldy</string>
     <string name="wikis_revert_page_title">Sahypany yzyna gaýtar</string>
-    <string name="wikis_revert_page_message">Siz %1$s-i %2$d wersiýasyna gaýtarmakçy. Bu %2$d wersiýasynyň mazmuny bilen täze redaksiýa döreder.</string>
-    <string name="wikis_revert_page_default_comment">%1$d wersiýasyna gaýtaryldy</string>
-    <string name="wikis_revert_page_success">%1$d wersiýasyna gaýtaryldy</string>
+    <string name="wikis_revert_page_message">Siz %1$s-i %2$s wersiýasyna gaýtarmakçy. Bu %2$s wersiýasynyň mazmuny bilen täze redaksiýa döreder.</string>
+    <string name="wikis_revert_page_default_comment">%1$s wersiýasyna gaýtaryldy</string>
+    <string name="wikis_revert_page_success">%1$s wersiýasyna gaýtaryldy</string>
     <string name="wikis_rename_page_renaming">Adyny üýtgedilýär…</string>
     <string name="wikis_rename_page_success">Sahypanyň ady üýtgedildi</string>
-    <string name="wikis_history_viewing">%1$s taryhy görülýär, häzirki wersiýa %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">%1$s taryhy görülýär, häzirki wersiýa %2$s</string>
+    <string name="wikis_revision_version_badge">Wersiýa %1$s</string>
     <string name="wikis_search_pages_placeholder">Sahypalary at ýa-da mazmun boýunça gözle…</string>
     <string name="wikis_search_no_results">“%1$s” üçin sahypa tapylmady. Başga gözleg sözlerini synanyşyň.</string>
     <string name="wikis_search_updated">%1$s täzelendi</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s boýunça</string>
     <string name="wikis_revision_show_page">Sahypany görkez</string>
     <string name="wikis_revision_compare_failed">Deňeşdirmek üçin öňki wersiýany ýükläp bolmady.</string>
-    <string name="wikis_revision_changes_from">%1$d → %2$d wersiýasyndan üýtgeşmeler</string>
+    <string name="wikis_revision_changes_from">%1$s → %2$s wersiýasyndan üýtgeşmeler</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d teswir</item>
-        <item quantity="other">%d teswir</item>
+        <item quantity="one">%s teswir</item>
+        <item quantity="other">%s teswir</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d jogap</item>
-        <item quantity="other">+%d köp jogap</item>
+        <item quantity="one">%s jogap</item>
+        <item quantity="other">+%s köp jogap</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d sahypa</item>
-        <item quantity="other">%d sahypa</item>
+        <item quantity="one">%s sahypa</item>
+        <item quantity="other">%s sahypa</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d faýl</item>
-        <item quantity="other">%d faýl</item>
+        <item quantity="one">%s faýl</item>
+        <item quantity="other">%s faýl</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d surat</item>
-        <item quantity="other">%d surat</item>
+        <item quantity="one">%s surat</item>
+        <item quantity="other">%s surat</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d resminama</item>
-        <item quantity="other">%d resminama</item>
+        <item quantity="one">%s resminama</item>
+        <item quantity="other">%s resminama</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Bu bellik bilen %d sahypa</item>
-        <item quantity="other">Bu bellik bilen %d sahypa</item>
+        <item quantity="one">Bu bellik bilen %s sahypa</item>
+        <item quantity="other">Bu bellik bilen %s sahypa</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">"%2$s" üçin %1$d netije tapyldy</item>
-        <item quantity="other">"%2$s" üçin %1$d netije tapyldy</item>
+        <item quantity="one">\"%2$s\" üçin %1$s netije tapyldy</item>
+        <item quantity="other">\"%2$s\" üçin %1$s netije tapyldy</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Düşündirişi ýatda saklap bolmady</string>
     <string name="wikis_attachments_upload_types">Goldanýan faýllar: suratlar, PDF, DOC, DOCX, TXT we MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Täze RSS URL bufer ýadyna göçürildi</string>
     <string name="wikis_rss_exists">Bu akym URL-i eýýäm berildi we gaýtadan görkezip bolmaýar.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Ilkinji %1$d teswir görkezilýär.</item>
-        <item quantity="other">Ilkinji %1$d teswir görkezilýär.</item>
+        <item quantity="one">Ilkinji %1$s teswir görkezilýär.</item>
+        <item quantity="other">Ilkinji %1$s teswir görkezilýär.</item>
     </plurals>
 </resources>

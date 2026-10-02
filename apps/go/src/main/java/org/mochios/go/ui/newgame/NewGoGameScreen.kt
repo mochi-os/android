@@ -274,7 +274,7 @@ fun NewGoGameScreen(
 }
 
 @Composable
-private fun BoardSizeRow(
+internal fun BoardSizeRow(
     boardSize: Int,
     enabled: Boolean,
     onSelect: (Int) -> Unit,
@@ -290,13 +290,13 @@ private fun BoardSizeRow(
                     onClick = { onSelect(size) },
                     enabled = enabled,
                     modifier = Modifier.weight(1f),
-                ) { Text(stringResource(R.string.go_new_game_board_size_value, size, size)) }
+                ) { Text(stringResource(R.string.go_new_game_board_size_value, size.toString(), size.toString())) }
             } else {
                 MochiOutlinedButton(
                     onClick = { onSelect(size) },
                     enabled = enabled,
                     modifier = Modifier.weight(1f),
-                ) { Text(stringResource(R.string.go_new_game_board_size_value, size, size)) }
+                ) { Text(stringResource(R.string.go_new_game_board_size_value, size.toString(), size.toString())) }
             }
         }
     }

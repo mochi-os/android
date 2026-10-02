@@ -9,9 +9,9 @@
     <string name="settings_home_notification_prefs">Bildirim tercihleri</string>
     <string name="settings_home_accounts">Bağlı hesaplar</string>
     <string name="settings_home_interests">İlgi alanları</string>
-    <string name="account_section_passkeys">Passkey\'ler</string>
-    <string name="account_passkey_register">Passkey ekle</string>
-    <string name="account_passkey_delete_title">Passkey silinsin mi?</string>
+    <string name="account_section_passkeys">Geçiş anahtarları</string>
+    <string name="account_passkey_register">Geçiş anahtarı ekle</string>
+    <string name="account_passkey_delete_title">Geçiş anahtarı silinsin mi?</string>
     <string name="account_section_totp">Authenticator uygulaması</string>
     <string name="account_totp_setup">Authenticator kur</string>
     <string name="account_totp_setup_title">Authenticator kur</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Kurtarma kodları</string>
     <string name="account_recovery_codes_title">Kurtarma kodları</string>
     <string name="sessions_unknown_agent">Bilinmeyen cihaz</string>
-    <string name="sessions_revoke_title">Oturum iptal edilsin mi?</string>
+    <string name="sessions_revoke_title">Oturum geçersiz kılınsın mı?</string>
     <string name="account_section_oauth">Üçüncü taraf girişi</string>
     <string name="account_oauth_link">Hesabı bağla</string>
     <string name="account_unlink">Bağlantıyı kaldır</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Tamamlandı</string>
     <string name="account_delete">Sil</string>
     <string name="account_rename">Yeniden adlandır</string>
-    <string name="sessions_revoke">İptal et</string>
+    <string name="sessions_revoke">Geçersiz kıl</string>
     <string name="account_disable">Devre dışı bırak</string>
     <string name="account_copy">Kopyala</string>
     <string name="account_copy_all">Tümünü kopyala</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Rota silinsin mi?</string>
     <string name="route_path">Yol</string>
     <string name="route_method">Yöntem</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Uygulama</string>
     <string name="route_method_entity">Varlık</string>
     <string name="route_method_redirect">Yönlendirme</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org adresinden indirin</string>
     <string name="system_status_copy">Kopyala</string>
     <string name="system_status_peers">Eşler</string>
-    <string name="system_status_known">Bilinen</string>
+    <string name="system_status_peers_totals">Bilinen %1$s · Bağlı %2$s · Yayın ağı %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Bilinen %1$s · Bağlı %2$s</string>
     <string name="system_status_peer_connected">Bağlandı</string>
     <string name="system_status_peer_disconnected">Bağlantı kesildi</string>
     <string name="system_status_peer_queued">Kuyruktaki mesajlar</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Kaldır</string>
     <string name="accounts_remove_title">Hesap kaldırılsın mı?</string>
     <string name="system_documents_title">Belgeler</string>
-    <string name="system_documents_description">Kullanıcılarınıza gösterilen sunucu kuralları, şartlar ve gizlilik bildirimi</string>
     <string name="system_documents_tab_rules">Sunucu kuralları</string>
     <string name="system_documents_tab_terms">Şartlar ve koşullar</string>
     <string name="system_documents_tab_privacy">Gizlilik</string>
     <string name="system_documents_language">Dil</string>
     <string name="system_documents_no_language">Bu dil için belge mevcut değil.</string>
-    <string name="system_documents_customised">Özelleştirildi</string>
     <string name="system_documents_using_default">Paket varsayılanı kullanılıyor</string>
     <string name="system_documents_revert">Varsayılana geri dön</string>
     <string name="system_documents_save">Kaydet</string>
@@ -182,28 +183,26 @@
     <string name="system_users_delete">Kullanıcıyı sil</string>
     <string name="system_users_delete_title">Kullanıcı silinsin mi?</string>
     <string name="system_users_manage_sessions">Oturumları yönet</string>
-    <string name="system_users_sessions_description">Bu kullanıcı için aktif oturumları görüntüle ve iptal et.</string>
     <string name="system_users_sessions_empty">Bu kullanıcının aktif oturumu yok.</string>
-    <string name="system_users_revoke">İptal et</string>
-    <string name="system_users_revoke_all">Tüm oturumları iptal et</string>
+    <string name="system_users_revoke">Geçersiz kıl</string>
+    <string name="system_users_revoke_all">Tüm oturumları geçersiz kıl</string>
     <string name="system_users_unknown_browser">Bilinmeyen tarayıcı</string>
     <string name="system_users_unknown">Bilinmiyor</string>
     <string name="system_users_previous">Önceki</string>
     <string name="system_users_next">İleri</string>
     <string name="system_users_empty">Kullanıcı bulunamadı</string>
     <string name="system_users_empty_search">Aramanızla eşleşen kullanıcı yok</string>
-    <string name="system_users_empty_search_hint">Arama kriterlerini ayarlamayı dene</string>
     <string name="system_users_toast_created">Kullanıcı oluşturuldu</string>
     <string name="system_users_toast_updated">Kullanıcı güncellendi</string>
     <string name="system_users_toast_deleted">Kullanıcı silindi</string>
     <string name="system_users_toast_suspended">Kullanıcı askıya alındı</string>
     <string name="system_users_toast_suspension_removed">Askı kaldırıldı</string>
-    <string name="system_users_toast_session_revoked">Oturum iptal edildi</string>
+    <string name="system_users_toast_session_revoked">Oturum geçersiz kılındı</string>
     <string name="system_users_toast_create_failed">Kullanıcı oluşturulamadı</string>
     <string name="system_users_toast_update_failed">Kullanıcı güncellenemedi</string>
     <string name="system_users_toast_delete_failed">Kullanıcı silinemedi</string>
     <string name="system_users_toast_status_failed">Kullanıcı durumu güncellenemedi</string>
-    <string name="system_users_toast_revoke_failed">Oturum iptal edilemedi</string>
+    <string name="system_users_toast_revoke_failed">Oturum geçersiz kılınamadı</string>
 
     <string name="settings_home_sessions">Oturumlar</string>
     <string name="settings_home_privacy">Gizlilik politikası</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">Hizmet koşulları</string>
     <string name="account_passkeys_empty">Kayıtlı geçiş anahtarı yok.</string>
     <string name="account_passkey_register_title">Geçiş anahtarı ekle</string>
-    <string name="account_passkey_register_message">Cihazınız onaylamanızı isteyecek. Geçiş anahtarı bu cihaza bağlıdır ve gelecekteki girişlerde kullanılır.</string>
     <string name="account_passkey_name_label">Ad (isteğe bağlı)</string>
     <string name="account_passkey_delete_message">\"%1$s\" artık sizi içeri almayacak.</string>
-    <string name="account_totp_description">Bir kimlik doğrulayıcı uygulamadan 6 haneli kodla giriş yapın.</string>
     <string name="account_totp_enabled">Kimlik doğrulayıcı etkin.</string>
     <string name="account_totp_setup_step1">Bu gizli kodu kimlik doğrulayıcı uygulamanıza tarayın veya girin.</string>
     <string name="account_totp_setup_step2">Uygulamanızın gösterdiği 6 haneli kodu girin.</string>
     <string name="account_totp_code">Kod</string>
     <string name="account_totp_disable_message">Kimlik doğrulayıcı koduyla giriş yapamayacaksınız.</string>
     <string name="account_recovery_none">Kurtarma kodu oluşturulmadı.</string>
-    <string name="account_recovery_count">%1$d kullanılmamış kurtarma kodu.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s kurtarma kodu kaldı.</item>
+        <item quantity="other">%1$s kurtarma kodu kaldı.</item>
+    </plurals>
     <string name="account_recovery_generate">Kod oluştur</string>
     <string name="account_recovery_regenerate">Kodları yeniden oluştur</string>
     <string name="account_recovery_regen_title">Kurtarma kodları yeniden oluşturulsun mu?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">Son kullanım %1$s</string>
     <string name="route_delete_message">Bu, \"%1$s\" yolu için rotayı kaldıracak.</string>
     <string name="route_empty">Yapılandırılmış rota yok.</string>
-    <string name="route_meta">Öncelik %1$d · %2$s</string>
+    <string name="route_meta">Öncelik %1$s · %2$s</string>
     <string name="interests_search_placeholder">Eklenecek konuları ara…</string>
     <string name="interests_empty">Henüz ilgi alanı yok.</string>
     <string name="interests_summary_regenerate">Özeti yeniden oluştur</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">Bu, \"%1$s\" kullanıcısını kalıcı olarak silecek. Bu işlem geri alınamaz.</string>
     <string name="system_users_sessions_title">%1$s için oturumlar</string>
     <string name="system_users_session_last_accessed">Son erişim: %1$s</string>
-    <string name="system_users_revoke_all_title">Tüm oturumlar iptal edilsin mi?</string>
+    <string name="system_users_revoke_all_title">Tüm oturumlar geçersiz kılınsın mı?</string>
     <string name="system_users_revoke_all_message">Bu kullanıcının tüm aktif oturumları kapatılacak.</string>
-    <string name="system_users_pagination_status">%3$d kullanıcıdan %1$d–%2$d gösteriliyor</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$s kullanıcıdan %1$s–%2$s gösteriliyor</item>
+        <item quantity="other">%3$s kullanıcıdan %1$s–%2$s gösteriliyor</item>
+    </plurals>
     <string name="account_title">Hesap</string>
     <string name="account_section_identity">Kimlik</string>
     <string name="account_identity_identity">Kimlik</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS doğrula</string>
     <string name="settings_home_domains">Alan adları</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Test %1$d hedefe gönderildi</item>
-        <item quantity="other">Test %1$d hedefe gönderildi</item>
+        <item quantity="one">Test %1$s hedefe gönderildi</item>
+        <item quantity="other">Test %1$s hedefe gönderildi</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 oturum iptal edildi</item>
-        <item quantity="other">%1$d oturum iptal edildi</item>
+        <item quantity="one">%1$s oturum geçersiz kılındı</item>
+        <item quantity="other">%1$s oturum geçersiz kılındı</item>
     </plurals>
     <string name="login_title">Oturum aç</string>
     <string name="login_section_methods">Oturum açma yöntemleri</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">Herkese açık</string>
     <string name="system_status_reachability_private">Özel</string>
     <string name="system_status_reachability_unknown">Bilinmiyor</string>
-    <string name="system_status_relay">Aktarıcı üzerinden</string>
-    <string name="system_status_mesh">Yayın mesh</string>
+    <string name="system_status_reachability_relay">%1$s · aktarıcı üzerinden</string>
     <string name="system_status_broadcast">Son yayın</string>
     <string name="system_status_queued_broadcasts">Kuyruktaki yayın mesajları</string>
     <string name="system_setting_hostname_publish">Ana bilgisayar adını ve alan adlarını diğer sunuculara duyur</string>
     <string name="system_setting_hostname">Diğer sunuculara duyurulan ana bilgisayar adı</string>
     <string name="system_status_peer_id">Eş kimliği</string>
     <string name="system_status_holepunch">Delik açma</string>
-    <string name="system_status_holepunch_value">%1$d başarılı · %2$d başarısız</string>
     <string name="system_status_awaiting_routing">Yönlendirme bekleyen mesajlar</string>
     <string name="system_status_relay_service">Aktarma hizmeti</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervasyonlar · %3$d devreler · %4$d reddedildi</string>
     <string name="route_target_select">Seç</string>
     <string name="account_data_description">Bu sunucuda veya başka bir Mochi sunucusunda geri yükleyebileceğiniz tam bir yedeği indirin.</string>
     <string name="route_target_none">Kullanılabilir hedef yok</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">Son görülme %1$s</string>
     <string name="notifprefs_device_app">%1$s · uygulama</string>
     <string name="notifprefs_device_push">%1$s · anlık bildirim</string>
-    <string name="notifprefs_test_partial">Test %2$d hedeften %1$d tanesine gönderildi</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Test %2$s hedeften %1$s tanesine gönderildi</item>
+        <item quantity="other">Test %2$s hedeften %1$s tanesine gönderildi</item>
+    </plurals>
     <string name="notifprefs_test_none">Hedef yapılandırılmamış</string>
     <string name="notifprefs_transport_fcm">Android anlık bildirim</string>
     <string name="notifprefs_no_destinations">Hedef yok</string>
@@ -385,13 +390,36 @@
     <string name="accounts_field_topic">Konu</string>
     <string name="accounts_field_secret">İmzalama sırrı</string>
     <string name="account_totp_open">Kimlik doğrulayıcı uygulamasında aç</string>
-    <string name="accounts_revoke">Erişimi iptal et</string>
+    <string name="accounts_revoke">Erişimi kaldır</string>
     <string name="accounts_capability_calendar">Takvim</string>
     <string name="accounts_capability_notify">Bildirimler</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Oturum açma</string>
     <string name="accounts_provider_caldav">Takvim sunucusu</string>
-    <string name="accounts_revoke_confirm">Bu, %1$s hesabının takvim erişimini iptal eder. %2$s ile oturum açma, Giriş sayfasında bağlantıyı kaldırana kadar devam eder.</string>
+    <string name="accounts_revoke_confirm">Bu, %1$s hesabının takvim erişimini kaldırır. %2$s ile oturum açma, Giriş sayfasında bağlantıyı kaldırana kadar devam eder.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Bilinmeyen tema</string>
+    <string name="system_documents_modified">Değiştirildi</string>
+    <string name="system_documents_discard_title">Değişiklikler atılsın mı?</string>
+    <string name="system_documents_discard">At</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s başarılı</item>
+        <item quantity="other">%1$s başarılı</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s başarısız</item>
+        <item quantity="other">%1$s başarısız</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s rezervasyon</item>
+        <item quantity="other">%1$s / %2$s rezervasyon</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s devre</item>
+        <item quantity="other">%1$s devre</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s reddedildi</item>
+        <item quantity="other">%1$s reddedildi</item>
+    </plurals>
 </resources>

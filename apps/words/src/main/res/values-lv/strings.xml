@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Vēl nav spēļu.</string>
     <string name="words_new_game_choose_opponents">Izvēlieties pretiniekus</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d spēlētāji</string>
+    <string name="words_new_game_player_count">%1$s spēlētāji</string>
     <string name="words_new_game_no_friends_subtitle">Pievienojiet draugus lietotnē Cilvēki, lai sāktu spēlēt.</string>
     <string name="words_detail_title">Spēle</string>
     <string name="words_detail_status_opponent_move">%1$s kārta</string>
     <string name="words_detail_status_winner_wins">%1$s uzvar</string>
-    <string name="words_detail_player_fallback">Spēlētājs %1$d</string>
-    <string name="words_detail_player_count">%1$d spēlētāji</string>
-    <string name="words_detail_label_tiles_left">%1$d kauliņi atlikuši</string>
+    <string name="words_detail_player_fallback">Spēlētājs %1$s</string>
+    <string name="words_detail_player_count">%1$s spēlētāji</string>
+    <string name="words_detail_label_tiles_left">%1$s kauliņi atlikuši</string>
     <string name="words_detail_action_open_chat">Atvērt tērzēšanu</string>
     <string name="words_detail_action_more">Spēles darbības</string>
-    <string name="words_detail_exchange_count">Apmainīt (%1$d)</string>
+    <string name="words_detail_exchange_count">Apmainīt (%1$s)</string>
     <string name="words_detail_chat_you_played">Jūs spēlējāt %1$s</string>
     <string name="words_detail_chat_player_played">%1$s spēlēja %2$s</string>
 

@@ -22,17 +22,17 @@
     <string name="wikis_page_action_recent_changes">Hiljutised muudatused</string>
     <string name="wikis_page_action_new_page">Uus leht</string>
     <string name="wikis_page_action_settings">Seaded</string>
-    <string name="wikis_page_action_unsubscribe">Tühista tellimus</string>
+    <string name="wikis_page_action_unsubscribe">Loobu tellimusest</string>
     <string name="wikis_title">Vikid</string>
     <string name="wikis_empty_title">Alusta oma esimest wikit</string>
     <string name="wikis_empty_subtitle">Otsi vikit, et tellida, või loo uus, et avaldada oma dokumentatsioon.</string>
     <string name="wikis_create_button">Loo wiki</string>
     <string name="wikis_recommended_section">Soovitatud vikid</string>
     <string name="wikis_subscribe_button">Telli</string>
-    <string name="wikis_unsubscribe_action">Tühista tellimus</string>
-    <string name="wikis_unsubscribing">Tühistan tellimust…</string>
-    <string name="wikis_unsubscribe_confirm_title">Tühista tellimus</string>
-    <string name="wikis_unsubscribe_success">Tellimus tühistatud</string>
+    <string name="wikis_unsubscribe_action">Loobu tellimusest</string>
+    <string name="wikis_unsubscribing">Loobun tellimusest…</string>
+    <string name="wikis_unsubscribe_confirm_title">Loobu tellimusest</string>
+    <string name="wikis_unsubscribe_success">Tellimusest loobutud</string>
     <string name="wikis_subscribe_failed">Tellimine ebaõnnestus</string>
     <string name="wikis_rss_menu">RSS-voog</string>
     <string name="wikis_rss_changes">Muudatused</string>
@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Muudatused ja kommentaarid</string>
     <string name="wikis_rss_copied">RSS URL kopeeritud lõikepuhvrisse</string>
     <string name="wikis_rss_failed">RSS-tokeni hankimine ebaõnnestus</string>
-    <string name="wikis_rss_revoke">Tühista juurdepääs</string>
-    <string name="wikis_rss_revoked">RSS-juurdepääs tühistatud</string>
+    <string name="wikis_rss_revoke">Eemalda juurdepääs</string>
+    <string name="wikis_rss_revoked">RSS-i juurdepääs võeti ära</string>
     <string name="wikis_find_title">Otsi wikisid</string>
     <string name="wikis_find_no_results">Vikisid ei leitud</string>
     <string name="wikis_find_recommended_section">Soovitatud vikid</string>
@@ -96,8 +96,8 @@
     <string name="wikis_delete_page_confirm">Kustuta</string>
     <string name="wikis_delete_page_cancel">Tühista</string>
     <string name="wikis_delete_page_failed">Lehe kustutamine ebaõnnestus</string>
-    <string name="wikis_revert_page_comment_label">Tühista kommentaari muudatused</string>
-    <string name="wikis_revert_page_confirm">Tühista muudatused</string>
+    <string name="wikis_revert_page_comment_label">Taastamise kommentaar</string>
+    <string name="wikis_revert_page_confirm">Taasta</string>
     <string name="wikis_revert_page_failed">Lehe taastamine ebaõnnestus</string>
     <string name="wikis_rename_page_title">Nimeta leht ümber</string>
     <string name="wikis_rename_page_label">Uus URL</string>
@@ -110,9 +110,9 @@
     <string name="wikis_history_title">Ajalugu</string>
     <string name="wikis_history_empty">Versioone ei leitud</string>
     <string name="wikis_history_view_action">Vaata</string>
-    <string name="wikis_history_revert_action">Tühista see versioon</string>
+    <string name="wikis_history_revert_action">Taasta see versioon</string>
     <string name="wikis_revision_current_badge">Praegune</string>
-    <string name="wikis_revision_revert_to_this">Tühista see versioon</string>
+    <string name="wikis_revision_revert_to_this">Taasta see versioon</string>
     <string name="wikis_changes_title">Hiljutised muudatused</string>
     <string name="wikis_changes_subtitle">Hiljutised muudatused selle viki kõigil lehtedel.</string>
     <string name="wikis_changes_empty">Muudatusi veel pole</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Teavitused lehe muudatuste, kommentaaride ja kutsete kohta.</string>
     <string name="wikis_pageview_toc_expand">Näita sisukorda</string>
     <string name="wikis_pageview_toc_collapse">Peida sisukord</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Uuendatud %1$s</string>
     <string name="wikis_pageview_not_found_description">Lehte „%1$s\" ei ole veel olemas.</string>
     <string name="wikis_pageview_share_chooser">Viki link</string>
@@ -230,7 +230,7 @@
     <string name="wikis_page_action_share">Link</string>
     <string name="wikis_open_sidebar">Ava külgriba</string>
     <string name="wikis_search_placeholder">Otsi wikit…</string>
-    <string name="wikis_unsubscribe_confirm_message">Kas oled kindel, et soovid tellimust %1$s tühistada?</string>
+    <string name="wikis_unsubscribe_confirm_message">Kas oled kindel, et soovid tellimusest %1$s loobuda?</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS URL</string>
     <string name="wikis_find_search_placeholder">Otsi nime, ID, sõrmejälje või URL järgi…</string>
     <string name="wikis_join_search_button">Otsi wikist…</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Sa kustutad lehte „%1$s\" (%2$s). Selle saab tagasi võtta ajaloost taastamise teel.</string>
     <string name="wikis_delete_page_success">Leht kustutatud</string>
     <string name="wikis_revert_page_title">Taasta leht</string>
-    <string name="wikis_revert_page_message">Sa taastad %1$s versioonile %2$d. See loob uue redaktsiooni versiooni %2$d sisuga.</string>
-    <string name="wikis_revert_page_default_comment">Taastatud versioonile %1$d</string>
-    <string name="wikis_revert_page_success">Taastatud versioonile %1$d</string>
+    <string name="wikis_revert_page_message">Sa taastad %1$s versioonile %2$s. See loob uue redaktsiooni versiooni %2$s sisuga.</string>
+    <string name="wikis_revert_page_default_comment">Taastatud versioonile %1$s</string>
+    <string name="wikis_revert_page_success">Taastatud versioonile %1$s</string>
     <string name="wikis_rename_page_renaming">Ümbernimetamine…</string>
     <string name="wikis_rename_page_success">Leht ümbernimetatud</string>
-    <string name="wikis_history_viewing">Vaatan %1$s ajalugu, praegune versioon %2$d</string>
-    <string name="wikis_revision_version_badge">Versioon %1$d</string>
+    <string name="wikis_history_viewing">Vaatan %1$s ajalugu, praegune versioon %2$s</string>
+    <string name="wikis_revision_version_badge">Versioon %1$s</string>
     <string name="wikis_search_pages_placeholder">Otsi lehti pealkirja või sisu järgi…</string>
     <string name="wikis_search_no_results">Lehti „%1$s\" ei leitud. Proovi teisi otsingutermineid.</string>
     <string name="wikis_search_updated">Uuendatud %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s järgi</string>
     <string name="wikis_revision_show_page">Näita lehte</string>
     <string name="wikis_revision_compare_failed">Eelmist versiooni ei õnnestunud võrdlemiseks laadida.</string>
-    <string name="wikis_revision_changes_from">Muudatused versioonist %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Muudatused versioonist %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d kommentaar</item>
-        <item quantity="other">%d kommentaari</item>
+        <item quantity="one">%s kommentaar</item>
+        <item quantity="other">%s kommentaari</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d vastus</item>
-        <item quantity="other">+%d veel vastust</item>
+        <item quantity="one">%s vastus</item>
+        <item quantity="other">+%s veel vastust</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d leht</item>
-        <item quantity="other">%d lehte</item>
+        <item quantity="one">%s leht</item>
+        <item quantity="other">%s lehte</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fail</item>
-        <item quantity="other">%d faili</item>
+        <item quantity="one">%s fail</item>
+        <item quantity="other">%s faili</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d pilt</item>
-        <item quantity="other">%d pilti</item>
+        <item quantity="one">%s pilt</item>
+        <item quantity="other">%s pilti</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="other">%d dokumenti</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="other">%s dokumenti</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d leht selle sildiga</item>
-        <item quantity="other">%d lehte selle sildiga</item>
+        <item quantity="one">%s leht selle sildiga</item>
+        <item quantity="other">%s lehte selle sildiga</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Leiti %1$d tulemus päringule „%2$s“</item>
-        <item quantity="other">Leiti %1$d tulemust päringule „%2$s“</item>
+        <item quantity="one">Leiti %1$s tulemus päringule „%2$s“</item>
+        <item quantity="other">Leiti %1$s tulemust päringule „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Pealdise salvestamine ebaõnnestus</string>
     <string name="wikis_attachments_upload_types">Toetatud failid: pildid, PDF, DOC, DOCX, TXT ja MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Uus RSS URL kopeeritud lõikepuhvrisse</string>
     <string name="wikis_rss_exists">See voo URL on juba väljastatud ja seda ei saa uuesti kuvada.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Kuvatakse esimene %1$d kommentaar.</item>
-        <item quantity="other">Kuvatakse esimesed %1$d kommentaari.</item>
+        <item quantity="one">Kuvatakse esimene %1$s kommentaar.</item>
+        <item quantity="other">Kuvatakse esimesed %1$s kommentaari.</item>
     </plurals>
 </resources>

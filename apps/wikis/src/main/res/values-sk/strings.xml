@@ -40,8 +40,8 @@
     <string name="wikis_rss_both">Zmeny a komentáre</string>
     <string name="wikis_rss_copied">URL RSS skopírovaná do schránky</string>
     <string name="wikis_rss_failed">Nepodarilo sa získať RSS token</string>
-    <string name="wikis_rss_revoke">Zrušiť prístup</string>
-    <string name="wikis_rss_revoked">Prístup RSS zrušený</string>
+    <string name="wikis_rss_revoke">Odvolať prístup</string>
+    <string name="wikis_rss_revoked">Prístup RSS odvolaný</string>
     <string name="wikis_find_title">Nájsť wiki</string>
     <string name="wikis_find_no_results">Nenašli sa žiadne wiki</string>
     <string name="wikis_find_recommended_section">Odporúčané wiki</string>
@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Oznámenia o úpravách stránok, komentároch a pozvánkach.</string>
     <string name="wikis_pageview_toc_expand">Zobraziť obsah</string>
     <string name="wikis_pageview_toc_collapse">Skryť obsah</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Aktualizované %1$s</string>
     <string name="wikis_pageview_not_found_description">Stránka „%1$s\" zatiaľ neexistuje.</string>
     <string name="wikis_pageview_share_chooser">Odkaz na wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Chystáte sa zmazať stránku „%1$s\" (%2$s). Túto akciu možno vrátiť obnovou z histórie.</string>
     <string name="wikis_delete_page_success">Stránka zmazaná</string>
     <string name="wikis_revert_page_title">Vrátiť stránku späť</string>
-    <string name="wikis_revert_page_message">Chystáte sa vrátiť %1$s na verziu %2$d. Tým vznikne nová revízia s obsahom verzie %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Vrátené na verziu %1$d</string>
-    <string name="wikis_revert_page_success">Vrátené na verziu %1$d</string>
+    <string name="wikis_revert_page_message">Chystáte sa vrátiť %1$s na verziu %2$s. Tým vznikne nová revízia s obsahom verzie %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Vrátené na verziu %1$s</string>
+    <string name="wikis_revert_page_success">Vrátené na verziu %1$s</string>
     <string name="wikis_rename_page_renaming">Premenovanie…</string>
     <string name="wikis_rename_page_success">Stránka premenovaná</string>
-    <string name="wikis_history_viewing">Prezeranie histórie %1$s, aktuálna verzia %2$d</string>
-    <string name="wikis_revision_version_badge">Verzia %1$d</string>
+    <string name="wikis_history_viewing">Prezeranie histórie %1$s, aktuálna verzia %2$s</string>
+    <string name="wikis_revision_version_badge">Verzia %1$s</string>
     <string name="wikis_search_pages_placeholder">Hľadať stránky podľa názvu alebo obsahu…</string>
     <string name="wikis_search_no_results">Pre „%1$s\" sa nenašli žiadne stránky. Skúste iné výrazy.</string>
     <string name="wikis_search_updated">Aktualizované %1$s</string>
@@ -289,54 +289,54 @@
     <string name="wikis_revision_author">podľa %1$s</string>
     <string name="wikis_revision_show_page">Zobraziť stránku</string>
     <string name="wikis_revision_compare_failed">Predchádzajúcu verziu na porovnanie sa nepodarilo načítať.</string>
-    <string name="wikis_revision_changes_from">Zmeny z verzie %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Zmeny z verzie %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d komentár</item>
-        <item quantity="few">%d komentáre</item>
-        <item quantity="many">%d komentárov</item>
-        <item quantity="other">%d komentárov</item>
+        <item quantity="one">%s komentár</item>
+        <item quantity="few">%s komentáre</item>
+        <item quantity="many">%s komentárov</item>
+        <item quantity="other">%s komentárov</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d odpoveď</item>
-        <item quantity="few">+%d ďalšie odpovede</item>
-        <item quantity="many">+%d ďalších odpovedí</item>
-        <item quantity="other">+%d ďalších odpovedí</item>
+        <item quantity="one">%s odpoveď</item>
+        <item quantity="few">+%s ďalšie odpovede</item>
+        <item quantity="many">+%s ďalších odpovedí</item>
+        <item quantity="other">+%s ďalších odpovedí</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d stránka</item>
-        <item quantity="few">%d stránky</item>
-        <item quantity="many">%d stránok</item>
-        <item quantity="other">%d stránok</item>
+        <item quantity="one">%s stránka</item>
+        <item quantity="few">%s stránky</item>
+        <item quantity="many">%s stránok</item>
+        <item quantity="other">%s stránok</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d súbor</item>
-        <item quantity="few">%d súbory</item>
-        <item quantity="many">%d súborov</item>
-        <item quantity="other">%d súborov</item>
+        <item quantity="one">%s súbor</item>
+        <item quantity="few">%s súbory</item>
+        <item quantity="many">%s súborov</item>
+        <item quantity="other">%s súborov</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d obrázok</item>
-        <item quantity="few">%d obrázky</item>
-        <item quantity="many">%d obrázkov</item>
-        <item quantity="other">%d obrázkov</item>
+        <item quantity="one">%s obrázok</item>
+        <item quantity="few">%s obrázky</item>
+        <item quantity="many">%s obrázkov</item>
+        <item quantity="other">%s obrázkov</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="few">%d dokumenty</item>
-        <item quantity="many">%d dokumentov</item>
-        <item quantity="other">%d dokumentov</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="few">%s dokumenty</item>
+        <item quantity="many">%s dokumentov</item>
+        <item quantity="other">%s dokumentov</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d stránka s týmto tagom</item>
-        <item quantity="few">%d stránky s týmto tagom</item>
-        <item quantity="many">%d stránok s týmto tagom</item>
-        <item quantity="other">%d stránok s týmto tagom</item>
+        <item quantity="one">%s stránka s týmto tagom</item>
+        <item quantity="few">%s stránky s týmto tagom</item>
+        <item quantity="many">%s stránok s týmto tagom</item>
+        <item quantity="other">%s stránok s týmto tagom</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Nájdené %1$d výsledok pre „%2$s“</item>
-        <item quantity="few">Nájdené %1$d výsledky pre „%2$s“</item>
-        <item quantity="many">Nájdené %1$d výsledkov pre „%2$s“</item>
-        <item quantity="other">Nájdené %1$d výsledkov pre „%2$s“</item>
+        <item quantity="one">Nájdený %1$s výsledok pre „%2$s“</item>
+        <item quantity="few">Nájdené %1$s výsledky pre „%2$s“</item>
+        <item quantity="many">Nájdené %1$s výsledkov pre „%2$s“</item>
+        <item quantity="other">Nájdených %1$s výsledkov pre „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Popis sa nepodarilo uložiť</string>
     <string name="wikis_attachments_upload_types">Podporované súbory: obrázky, PDF, DOC, DOCX, TXT a MD.</string>
@@ -345,9 +345,9 @@
     <string name="wikis_rss_copied_new">Nová URL RSS skopírovaná do schránky</string>
     <string name="wikis_rss_exists">Táto URL kanála už bola vydaná a nedá sa znova zobraziť.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Zobrazuje sa prvý %1$d komentár.</item>
-        <item quantity="few">Zobrazuje sa prvých %1$d komentárov.</item>
-        <item quantity="many">Zobrazuje sa prvých %1$d komentárov.</item>
-        <item quantity="other">Zobrazuje sa prvých %1$d komentárov.</item>
+        <item quantity="one">Zobrazuje sa prvý %1$s komentár.</item>
+        <item quantity="few">Zobrazujú sa prvé %1$s komentáre.</item>
+        <item quantity="many">Zobrazuje sa prvých %1$s komentárov.</item>
+        <item quantity="other">Zobrazuje sa prvých %1$s komentárov.</item>
     </plurals>
 </resources>

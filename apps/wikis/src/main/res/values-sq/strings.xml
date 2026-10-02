@@ -39,8 +39,8 @@
     <string name="wikis_rss_both">Ndryshimet dhe komentet</string>
     <string name="wikis_rss_copied">URL e RSS u kopjua në clipboard</string>
     <string name="wikis_rss_failed">Marrja e token RSS dështoi</string>
-    <string name="wikis_rss_revoke">Anulo aksesin</string>
-    <string name="wikis_rss_revoked">Aksesi RSS u anulua</string>
+    <string name="wikis_rss_revoke">Revoko aksesin</string>
+    <string name="wikis_rss_revoked">Qasja RSS u revokua</string>
     <string name="wikis_find_title">Gjej wikis</string>
     <string name="wikis_find_no_results">S\'u gjet asnjë wiki</string>
     <string name="wikis_find_recommended_section">Wiki të rekomanduara</string>
@@ -220,7 +220,7 @@
     <string name="wikis_channel_description">Njoftime për redaktime faqesh, komente dhe ftesa.</string>
     <string name="wikis_pageview_toc_expand">Shfaq tabelën e përmbajtjes</string>
     <string name="wikis_pageview_toc_collapse">Fshih tabelën e përmbajtjes</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Përditësuar %1$s</string>
     <string name="wikis_pageview_not_found_description">Faqja „%1$s\" nuk ekziston ende.</string>
     <string name="wikis_pageview_share_chooser">Lidhja e wiki-t</string>
@@ -245,13 +245,13 @@
     <string name="wikis_delete_page_message">Po fshin faqen „%1$s\" (%2$s). Ky veprim mund të zhbëhet duke rikuperuar nga historia.</string>
     <string name="wikis_delete_page_success">Faqja u fshi</string>
     <string name="wikis_revert_page_title">Rikthe faqen</string>
-    <string name="wikis_revert_page_message">Po rikthen %1$s në versionin %2$d. Kjo do të krijojë një rishikim të ri me përmbajtjen e versionit %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Rikthyer në versionin %1$d</string>
-    <string name="wikis_revert_page_success">Rikthyer në versionin %1$d</string>
+    <string name="wikis_revert_page_message">Po rikthen %1$s në versionin %2$s. Kjo do të krijojë një rishikim të ri me përmbajtjen e versionit %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Rikthyer në versionin %1$s</string>
+    <string name="wikis_revert_page_success">Rikthyer në versionin %1$s</string>
     <string name="wikis_rename_page_renaming">Duke u riemërtuar…</string>
     <string name="wikis_rename_page_success">Faqja u riemërtua</string>
-    <string name="wikis_history_viewing">Duke parë historinë për %1$s, versioni aktual %2$d</string>
-    <string name="wikis_revision_version_badge">Versioni %1$d</string>
+    <string name="wikis_history_viewing">Duke parë historinë për %1$s, versioni aktual %2$s</string>
+    <string name="wikis_revision_version_badge">Versioni %1$s</string>
     <string name="wikis_search_pages_placeholder">Kërko faqe sipas titullit ose përmbajtjes…</string>
     <string name="wikis_search_no_results">Asnjë faqe nuk u gjet për „%1$s\". Provo terma të tjerë kërkimi.</string>
     <string name="wikis_search_updated">Përditësuar %1$s</string>
@@ -286,38 +286,38 @@
     <string name="wikis_revision_author">sipas %1$s</string>
     <string name="wikis_revision_show_page">Shfaq faqen</string>
     <string name="wikis_revision_compare_failed">Versioni i mëparshëm nuk mund të ngarkohej për krahasim.</string>
-    <string name="wikis_revision_changes_from">Ndryshimet nga versioni %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Ndryshimet nga versioni %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d koment</item>
-        <item quantity="other">%d komente</item>
+        <item quantity="one">%s koment</item>
+        <item quantity="other">%s komente</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d përgjigje</item>
-        <item quantity="other">+%d përgjigje të tjera</item>
+        <item quantity="one">%s përgjigje</item>
+        <item quantity="other">+%s përgjigje të tjera</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d faqe</item>
-        <item quantity="other">%d faqe</item>
+        <item quantity="one">%s faqe</item>
+        <item quantity="other">%s faqe</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d skedar</item>
-        <item quantity="other">%d skedarë</item>
+        <item quantity="one">%s skedar</item>
+        <item quantity="other">%s skedarë</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d imazh</item>
-        <item quantity="other">%d imazhe</item>
+        <item quantity="one">%s imazh</item>
+        <item quantity="other">%s imazhe</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="other">%d dokumente</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="other">%s dokumente</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d faqe me këtë etiketë</item>
-        <item quantity="other">%d faqe me këtë etiketë</item>
+        <item quantity="one">%s faqe me këtë etiketë</item>
+        <item quantity="other">%s faqe me këtë etiketë</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">U gjetën %1$d rezultat për "%2$s"</item>
-        <item quantity="other">U gjetën %1$d rezultate për "%2$s"</item>
+        <item quantity="one">U gjetën %1$s rezultat për \"%2$s\"</item>
+        <item quantity="other">U gjetën %1$s rezultate për \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Legjenda nuk u ruajt dot</string>
     <string name="wikis_attachments_upload_types">Skedarët e mbështetur: imazhe, PDF, DOC, DOCX, TXT dhe MD.</string>
@@ -326,7 +326,7 @@
     <string name="wikis_rss_copied_new">URL e re e RSS u kopjua në clipboard</string>
     <string name="wikis_rss_exists">Kjo URL e prurjes tashmë është lëshuar dhe nuk mund të shfaqet sërish.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Po shfaqet %1$d komenti i parë.</item>
-        <item quantity="other">Po shfaqen %1$d komentet e para.</item>
+        <item quantity="one">Po shfaqet %1$s komenti i parë.</item>
+        <item quantity="other">Po shfaqen %1$s komentet e para.</item>
     </plurals>
 </resources>

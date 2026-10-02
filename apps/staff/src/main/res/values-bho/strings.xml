@@ -32,7 +32,7 @@
     <string name="staff_accounts_unnamed">बेनाम</string>
     <string name="staff_accounts_unsuspend">निलंबन हटाईं</string>
     <string name="staff_accounts_unsuspended_toast">खाता पर से निलंबन हटा दिहल गइल</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">रद्द करीं</string>
     <string name="staff_appeals_decide">तय करीं</string>
     <string name="staff_appeals_decision_denied">लिस्टिंग के अस्वीकार रहे दीं</string>
@@ -395,7 +395,7 @@
     <string name="staff_accounts_action_unban_title">बैन हटाईं</string>
     <string name="staff_accounts_action_unsuspend_title">निलंबन हटाईं</string>
     <string name="staff_accounts_reason_optional_label">कारण (वैकल्पिक)</string>
-    <string name="staff_accounts_sales">%1$d बिक्री</string>
+    <string name="staff_accounts_sales">%1$s बिक्री</string>
     <string name="staff_appeals_reason_label">विक्रेता के अपील के कारण</string>
     <string name="staff_audit_action_auction_cancelled">नीलामी रद्द कइल गइल</string>
     <string name="staff_audit_action_staff_team_role_changed">स्टाफ भूमिका बदलल गइल</string>

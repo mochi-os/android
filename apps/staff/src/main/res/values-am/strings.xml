@@ -19,7 +19,7 @@
     <string name="staff_accounts_notes_label">ማስታወሻዎች</string>
     <string name="staff_accounts_reason_label">ምክንያት</string>
     <string name="staff_accounts_reason_optional_label">ምክንያት (አማራጭ)</string>
-    <string name="staff_accounts_sales">%1$d ሽያጮች</string>
+    <string name="staff_accounts_sales">%1$s ሽያጮች</string>
     <string name="staff_accounts_search_clear">ፍለጋ አጽዳ</string>
     <string name="staff_accounts_search_placeholder">ይፈልጉ</string>
     <string name="staff_accounts_seller_buyers">ገዢዎች ብቻ</string>
@@ -36,7 +36,7 @@
     <string name="staff_accounts_unnamed">ስም የለሽ</string>
     <string name="staff_accounts_unsuspend">እገዳ ያንሱ</string>
     <string name="staff_accounts_unsuspended_toast">መለያ ከእገዳ ተለቋል</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">ይቅር</string>
     <string name="staff_appeals_decide">ወስን</string>
     <string name="staff_appeals_decision_denied">ዝርዝሩ ተቀባይነት እንዳላገኘ ይቆይ</string>

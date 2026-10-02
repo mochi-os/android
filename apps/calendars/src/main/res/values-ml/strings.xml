@@ -27,7 +27,7 @@
     <string name="calendars_day_friday">വെള്ളിയാഴ്ച</string>
     <string name="calendars_day_saturday">ശനിയാഴ്ച</string>
     <string name="calendars_link_replace">മാറ്റിസ്ഥാപിക്കുക</string>
-    <string name="calendars_link_revoke">റദ്ദാക്കുക</string>
+    <string name="calendars_link_revoke">പിൻവലിക്കുക</string>
     <string name="calendars_permission_allow">അനുവദിക്കുക</string>
     <string name="calendars_permission_deny">നിഷേധിക്കുക</string>
     <string name="calendars_sync_title">ഈ ഫോണിലേക്ക് സിങ്ക് ചെയ്യുക</string>
@@ -97,16 +97,16 @@
     <string name="calendars_repeat_forever">എന്നേക്കും</string>
     <string name="calendars_reminder_time">ഇവന്റിന്റെ സമയത്ത്</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d മിനിറ്റ് മുമ്പ്</item>
-        <item quantity="other">%1$d മിനിറ്റ് മുമ്പ്</item>
+        <item quantity="one">%1$s മിനിറ്റ് മുമ്പ്</item>
+        <item quantity="other">%1$s മിനിറ്റ് മുമ്പ്</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d മണിക്കൂർ മുമ്പ്</item>
-        <item quantity="other">%1$d മണിക്കൂർ മുമ്പ്</item>
+        <item quantity="one">%1$s മണിക്കൂർ മുമ്പ്</item>
+        <item quantity="other">%1$s മണിക്കൂർ മുമ്പ്</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ദിവസം മുമ്പ്</item>
-        <item quantity="other">%1$d ദിവസം മുമ്പ്</item>
+        <item quantity="one">%1$s ദിവസം മുമ്പ്</item>
+        <item quantity="other">%1$s ദിവസം മുമ്പ്</item>
     </plurals>
     <string name="calendars_reminder_add">ഓർമ്മപ്പെടുത്തൽ ചേർക്കുക</string>
     <string name="calendars_reminder_remove">ഓർമ്മപ്പെടുത്തൽ നീക്കം ചെയ്യുക</string>
@@ -140,10 +140,10 @@
     <string name="calendars_poll_large">കലണ്ടർ വളരെ വലുതാണ്</string>
     <string name="calendars_poll_invalid">വിലാസം കലണ്ടർ നൽകിയില്ല</string>
     <string name="calendars_poll_unreachable">വിലാസത്തിലേക്ക് എത്താൻ കഴിഞ്ഞില്ല</string>
-    <string name="calendars_poll_status">വിലാസം %1$d എന്ന് മറുപടി നൽകി</string>
+    <string name="calendars_poll_status">വിലാസം %1$s എന്ന് മറുപടി നൽകി</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d മിനിറ്റ്</item>
-        <item quantity="other">%1$d മിനിറ്റ്</item>
+        <item quantity="one">%1$s മിനിറ്റ്</item>
+        <item quantity="other">%1$s മിനിറ്റ്</item>
     </plurals>
     <string name="calendars_preferences_zones">ഇവന്റുകൾ അവയുടെ സ്വന്തം സമയമേഖലയിൽ കാണിക്കുക</string>
     <string name="calendars_event_backwards">തുടങ്ങുന്നതിനു മുമ്പ് അവസാനിക്കുന്നു</string>

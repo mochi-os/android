@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">הערות</string>
     <string name="staff_accounts_reason_label">סיבה</string>
     <string name="staff_accounts_reason_optional_label">סיבה (אופציונלי)</string>
-    <string name="staff_accounts_sales">%1$d מכירות</string>
+    <string name="staff_accounts_sales">%1$s מכירות</string>
     <string name="staff_accounts_search_clear">נקה חיפוש</string>
     <string name="staff_accounts_search_placeholder">חיפוש</string>
     <string name="staff_accounts_seller_buyers">קונים בלבד</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">ללא שם</string>
     <string name="staff_accounts_unsuspend">בטל השעיה</string>
     <string name="staff_accounts_unsuspended_toast">השעיית החשבון בוטלה</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">ביטול</string>
     <string name="staff_appeals_decide">החלט</string>
     <string name="staff_appeals_decision_denied">השאר רישום דחוי</string>

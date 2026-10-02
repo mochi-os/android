@@ -41,6 +41,7 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.launch
 import org.mochios.market.R
+import org.mochios.android.i18n.LocalFormat
 
 @Composable
 fun PhotoCarousel(
@@ -78,7 +79,7 @@ fun PhotoCarousel(
                         .crossfade(true)
                         .build(),
                     contentDescription = stringResource(
-                        R.string.market_carousel_main, page + 1, photoUrls.size,
+                        R.string.market_carousel_main, LocalFormat.current.formatNumber(page + 1), LocalFormat.current.formatNumber(photoUrls.size),
                     ),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.fillMaxSize(),
@@ -117,7 +118,7 @@ fun PhotoCarousel(
                                 .crossfade(true)
                                 .build(),
                             contentDescription = stringResource(
-                                R.string.market_carousel_thumbnail, index + 1,
+                                R.string.market_carousel_thumbnail, (index + 1).toString(),
                             ),
                             contentScale = ContentScale.Crop,
                             modifier = Modifier.fillMaxSize(),

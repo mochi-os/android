@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Noti</string>
     <string name="staff_accounts_reason_label">Raġuni</string>
     <string name="staff_accounts_reason_optional_label">Raġuni (mhux obbligatorju)</string>
-    <string name="staff_accounts_sales">%1$d bejgħ</string>
+    <string name="staff_accounts_sales">%1$s bejgħ</string>
     <string name="staff_accounts_search_clear">Naddaf it-tiftix</string>
     <string name="staff_accounts_search_placeholder">Fittex</string>
     <string name="staff_accounts_seller_buyers">Xerrejja biss</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Bla isem</string>
     <string name="staff_accounts_unsuspend">Neħħi s-sospensjoni</string>
     <string name="staff_accounts_unsuspended_toast">Kont mhux iktar sospiż</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Ikkanċella</string>
     <string name="staff_appeals_decide">Iddeċiedi</string>
     <string name="staff_appeals_decision_denied">Listing miżmum irrifjutat</string>

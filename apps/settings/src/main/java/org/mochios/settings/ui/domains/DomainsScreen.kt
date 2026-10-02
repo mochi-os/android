@@ -49,6 +49,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -432,18 +433,13 @@ private fun RouteRow(route: Route, onEdit: () -> Unit, onDelete: () -> Unit) {
                 fontFamily = FontFamily.Monospace,
             )
             Text(
-                text = "${stringResource(routeMethodLabel(route.method))} → " +
-                    (route.targetName ?: route.target),
+                text = routeSummary(route),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             if (route.priority != 0 || route.enabled == 0) {
                 Text(
-                    text = stringResource(
-                        R.string.route_meta,
-                        route.priority,
-                        stringResource(if (route.enabled == 1) R.string.route_enabled else R.string.route_disabled),
-                    ),
+                    text = routeMeta(route),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -627,13 +623,30 @@ internal fun routeMethodLabel(method: String): Int = when (method) {
     else -> R.string.route_method_app
 }
 
+/** A route row's second line: how the path is served, then what serves it. */
+@Composable
+internal fun routeSummary(route: Route): String =
+    stringResource(R.string.route_summary, stringResource(routeMethodLabel(route.method)), route.targetName ?: route.target)
+
+/** A route's priority, written as the user writes numbers, and whether it is on. */
+@Composable
+internal fun routeMeta(route: Route): String = stringResource(
+    R.string.route_meta,
+    LocalFormat.current.formatNumber(route.priority),
+    stringResource(if (route.enabled == 1) R.string.route_enabled else R.string.route_disabled),
+)
+
+/** A picker button names the field it sets and the value chosen for it. */
+@Composable
+internal fun pickerValue(label: String, value: String): String = stringResource(R.string.route_picker_value, label, value)
+
 @Composable
 private fun MethodPicker(value: String, onChange: (String) -> Unit) {
     var open by remember { mutableStateOf(false) }
     val labelRes = routeMethodLabel(value)
     Box {
         MochiOutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
-            Text(stringResource(R.string.route_method) + ": " + stringResource(labelRes))
+            Text(pickerValue(stringResource(R.string.route_method), stringResource(labelRes)))
         }
         MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             MochiDropdownMenuItem(
@@ -665,7 +678,7 @@ private fun TargetPicker(
     var open by remember { mutableStateOf(false) }
     Box {
         MochiOutlinedButton(onClick = { open = true }, modifier = Modifier.fillMaxWidth()) {
-            Text(label + ": " + (selectedLabel ?: stringResource(R.string.route_target_select)))
+            Text(pickerValue(label, selectedLabel ?: stringResource(R.string.route_target_select)))
         }
         MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             if (options.isEmpty()) {

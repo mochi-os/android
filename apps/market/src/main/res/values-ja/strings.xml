@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">送信中…</string>
     <string name="market_checkout_subscribing">購読中…</string>
     <string name="market_filter_remove">フィルターを削除</string>
-    <string name="market_listing_detail_sales_count">%1$d 件の販売</string>
-    <string name="market_profile_sales_count">%1$d 件の販売</string>
+    <string name="market_listing_detail_sales_count">%1$s 件の販売</string>
+    <string name="market_profile_sales_count">%1$s 件の販売</string>
     <string name="market_purchase_dispute_response">出品者の回答</string>
     <string name="market_purchases_order_label">注文 #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">購入者に自己紹介をしましょう…</string>
     <string name="market_account_load_failed">アカウントを読み込めませんでした</string>
     <string name="market_account_save_failed">変更を保存できませんでした</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">現在: %1$s</string>
     <string name="market_bids_ends_in">終了まで %1$s</string>
     <string name="market_bids_your_bid">あなたの入札: %1$s</string>
-    <string name="market_carousel_main">写真 %1$d / %2$d</string>
-    <string name="market_carousel_thumbnail">サムネイル %1$d</string>
+    <string name="market_carousel_main">写真 %1$s / %2$s</string>
+    <string name="market_carousel_thumbnail">サムネイル %1$s</string>
     <string name="market_checkout_browser_unavailable">支払いページを開くためのブラウザがありません</string>
     <string name="market_checkout_pay_button">Stripeで支払う</string>
     <string name="market_checkout_processing">処理中…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">証拠を添付</string>
-    <string name="market_dispute_dialog_attach_count">%1$d 件の添付ファイル</string>
+    <string name="market_dispute_dialog_attach_count">%1$s 件の添付ファイル</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochiスタッフ</string>
     <string name="market_dispute_dialog_evidence_section_title">提出済みの証拠</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s が提出</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">参照URL</string>
     <string name="market_editor_assets_empty">アセットはまだありません</string>
     <string name="market_editor_category_none">カテゴリを選択</string>
-    <string name="market_editor_days">%1$d 日</string>
+    <string name="market_editor_days">%1$s 日</string>
     <string name="market_editor_delete">出品を削除</string>
     <string name="market_editor_delete_confirm_message">この出品は完全に削除されます。</string>
     <string name="market_editor_delete_confirm_title">出品を削除しますか?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">スレッドを読み込めませんでした</string>
     <string name="market_messages_send_failed">メッセージを送信できませんでした</string>
     <string name="market_messages_thread_title">会話</string>
-    <string name="market_messages_unread_badge">未読 %1$d 件</string>
+    <string name="market_messages_unread_badge">未読 %1$s 件</string>
     <string name="market_price_from">%1$s から</string>
     <string name="market_price_high_bid">最高入札額: %1$s</string>
     <string name="market_price_instant_buy">即決価格: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">%1$s に参加</string>
     <string name="market_profile_no_reviews">レビューはまだありません。</string>
     <string name="market_profile_rating_breakdown">評価の内訳</string>
-    <string name="market_profile_stars_value">%1$d つ星</string>
+    <string name="market_profile_stars_value">%1$s つ星</string>
     <string name="market_purchase_dispute_chargeback">チャージバック %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">この注文に対して銀行からチャージバックが申請されました。Stripeが出品者との紛争を処理しており、結果は決定次第ここに表示されます。</string>
-    <string name="market_purchase_download_many">下記の %1$d 個のファイルをダウンロードしてください。</string>
+    <string name="market_purchase_download_many">下記の %1$s 個のファイルをダウンロードしてください。</string>
     <string name="market_purchase_download_one">下記からファイルをダウンロードしてください。</string>
     <string name="market_purchase_review_from">%1$s からのレビュー</string>
     <string name="market_purchases_auction_label">オークション #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s 返金済み</string>
     <string name="market_purchases_won_for">%1$s で落札</string>
-    <string name="market_rating_reviews">（レビュー %1$d 件）</string>
+    <string name="market_rating_reviews">（レビュー %1$s 件）</string>
     <string name="market_refund_amount_label">金額</string>
     <string name="market_refund_dialog_amount_help">注文全額を返金する場合は空欄のままにしてください。</string>
     <string name="market_refund_dialog_amount_label">金額</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">オークションがキャンセルされます。出品は購入者から非表示になりますが、後で新しい下書きとして再出品できます。</string>
     <string name="market_listings_remove_title">この出品を削除しますか？</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">オークションをキャンセルし、%1$d 人の入札者に通知します。出品は購入者に表示されなくなります。後で新しい下書きとして再出品できます。</item>
-        <item quantity="other">オークションをキャンセルし、%1$d 人の入札者に通知します。出品は購入者に表示されなくなります。後で新しい下書きとして再出品できます。</item>
+        <item quantity="one">オークションをキャンセルし、%1$s 人の入札者に通知します。出品は購入者に表示されなくなります。後で新しい下書きとして再出品できます。</item>
+        <item quantity="other">オークションをキャンセルし、%1$s 人の入札者に通知します。出品は購入者に表示されなくなります。後で新しい下書きとして再出品できます。</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">現在の請求期間の終了時に %1$d 件の有効なサブスクリプションをキャンセルします。購読者に通知されます。出品は購入者に表示されなくなります。</item>
-        <item quantity="other">現在の請求期間の終了時に %1$d 件の有効なサブスクリプションをキャンセルします。購読者に通知されます。出品は購入者に表示されなくなります。</item>
+        <item quantity="one">現在の請求期間の終了時に %1$s 件の有効なサブスクリプションをキャンセルします。購読者に通知されます。出品は購入者に表示されなくなります。</item>
+        <item quantity="other">現在の請求期間の終了時に %1$s 件の有効なサブスクリプションをキャンセルします。購読者に通知されます。出品は購入者に表示されなくなります。</item>
     </plurals>
 </resources>

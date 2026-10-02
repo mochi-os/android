@@ -180,7 +180,7 @@
     <string name="people_books_create">ສ້າງປຶ້ມທີ່ຢູ່</string>
     <string name="people_books_delete">ລຶບປຶ້ມທີ່ຢູ່</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">ລຶບ %1$s ແລະ %2$d ຜູ້ຕິດຕໍ່ໃນນັ້ນບໍ?</item>
+        <item quantity="other">ລຶບ %1$s ແລະ %2$s ຜູ້ຕິດຕໍ່ໃນນັ້ນບໍ?</item>
     </plurals>
     <string name="people_welcome_body">ຊອກຫາໝູ່ທົ່ວ Mochi ແລະເຊື່ອມຕໍ່. ແຕະ ເພີ່ມຜູ້ຕິດຕໍ່ ເພື່ອສົ່ງຄຳເຊີນ.</string>
     <string name="people_person_state_contact">ຢູ່ໃນຜູ້ຕິດຕໍ່</string>

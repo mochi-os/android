@@ -405,7 +405,7 @@
     <string name="market_type_physical">Fyzické</string>
     <string name="market_messages_send">Odeslat</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Řekněte kupujícím něco o sobě…</string>
     <string name="market_account_load_failed">Účet se nepodařilo načíst</string>
     <string name="market_account_save_failed">Změny se nepodařilo uložit</string>
@@ -432,8 +432,8 @@
     <string name="market_bids_current_bid">Aktuální: %1$s</string>
     <string name="market_bids_ends_in">Končí za %1$s</string>
     <string name="market_bids_your_bid">Vaše nabídka: %1$s</string>
-    <string name="market_carousel_main">Fotografie %1$d z %2$d</string>
-    <string name="market_carousel_thumbnail">Náhled %1$d</string>
+    <string name="market_carousel_main">Fotografie %1$s z %2$s</string>
+    <string name="market_carousel_thumbnail">Náhled %1$s</string>
     <string name="market_checkout_browser_unavailable">Není k dispozici žádný prohlížeč pro otevření platební stránky</string>
     <string name="market_checkout_pay_button">Zaplatit přes Stripe</string>
     <string name="market_checkout_processing">Zpracovává se…</string>
@@ -443,7 +443,7 @@
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_checkout_subscribing">Přihlašování k odběru…</string>
     <string name="market_dispute_dialog_attach">Přiložit důkazy</string>
-    <string name="market_dispute_dialog_attach_count">Přiloženo souborů: %1$d</string>
+    <string name="market_dispute_dialog_attach_count">Přiloženo souborů: %1$s</string>
     <string name="market_dispute_dialog_evidence_role_staff">Tým Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Odeslané důkazy</string>
     <string name="market_dispute_dialog_evidence_submitter_line">odeslal(a) %1$s</string>
@@ -458,7 +458,7 @@
     <string name="market_editor_asset_external_url">Referenční URL</string>
     <string name="market_editor_assets_empty">Zatím žádné položky</string>
     <string name="market_editor_category_none">Vyberte kategorii</string>
-    <string name="market_editor_days">%1$d dnů</string>
+    <string name="market_editor_days">%1$s dnů</string>
     <string name="market_editor_delete">Smazat nabídku</string>
     <string name="market_editor_delete_confirm_message">Tímto bude nabídka trvale smazána.</string>
     <string name="market_editor_delete_confirm_title">Smazat nabídku?</string>
@@ -527,7 +527,7 @@
     <string name="market_listing_detail_loading">Načítání nabídky</string>
     <string name="market_listing_detail_relist_failed">Nepodařilo se znovu zveřejnit</string>
     <string name="market_listing_detail_relist_in_progress">Probíhá opětovné zveřejnění</string>
-    <string name="market_listing_detail_sales_count">%1$d prodejů</string>
+    <string name="market_listing_detail_sales_count">%1$s prodejů</string>
     <string name="market_listing_detail_seller_banned_banner">Tento prodejce má zákaz. Nové objednávky nelze vytvářet.</string>
     <string name="market_listing_detail_seller_suspended_banner">Tento prodejce je pozastaven. Nové objednávky jsou pozastaveny, dokud nebude účet obnoven.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Nákup je zakázán, dokud je účet prodejce omezen.</string>
@@ -552,8 +552,8 @@
     <string name="market_messages_load_failed">Konverzaci se nepodařilo načíst</string>
     <string name="market_messages_send_failed">Zprávu se nepodařilo odeslat</string>
     <string name="market_messages_thread_title">Konverzace</string>
-    <string name="market_messages_unread_badge">%1$d nepřečtených</string>
-    <string name="market_price_from">od %1$s</string>
+    <string name="market_messages_unread_badge">%1$s nepřečtených</string>
+    <string name="market_price_from">Od %1$s</string>
     <string name="market_price_high_bid">Nejvyšší nabídka: %1$s</string>
     <string name="market_price_instant_buy">okamžitý nákup: %1$s</string>
     <string name="market_price_per_month">%1$s / měsíc</string>
@@ -565,19 +565,19 @@
     <string name="market_profile_joined">Připojil se %1$s</string>
     <string name="market_profile_no_reviews">Zatím žádné recenze.</string>
     <string name="market_profile_rating_breakdown">Rozpis hodnocení</string>
-    <string name="market_profile_sales_count">%1$d prodejů</string>
-    <string name="market_profile_stars_value">%1$d hvězd</string>
+    <string name="market_profile_sales_count">%1$s prodejů</string>
+    <string name="market_profile_stars_value">%1$s hvězd</string>
     <string name="market_purchase_dispute_chargeback">Vrácení platby %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Vaše banka podala k této objednávce žádost o vrácení platby. Spor řeší Stripe s prodejcem; výsledek se zde zobrazí, jakmile bude rozhodnuto.</string>
     <string name="market_purchase_dispute_response">Odpověď prodejce</string>
-    <string name="market_purchase_download_many">Stáhněte si níže své soubory (%1$d).</string>
+    <string name="market_purchase_download_many">Stáhněte si níže své soubory (%1$s).</string>
     <string name="market_purchase_download_one">Stáhněte si svůj soubor níže.</string>
     <string name="market_purchase_review_from">Recenze od %1$s</string>
     <string name="market_purchases_auction_label">Aukce č. %1$s</string>
     <string name="market_purchases_order_label">Objednávka č. %1$s</string>
     <string name="market_purchases_refunded_partial">Vráceno −%1$s</string>
     <string name="market_purchases_won_for">Vyhráno za %1$s</string>
-    <string name="market_rating_reviews">(%1$d recenzí)</string>
+    <string name="market_rating_reviews">(%1$s recenzí)</string>
     <string name="market_refund_amount_label">Částka</string>
     <string name="market_refund_dialog_amount_help">Ponechte prázdné pro vrácení celé objednávky.</string>
     <string name="market_refund_dialog_amount_label">Částka</string>
@@ -725,8 +725,8 @@
     <string name="market_audit_account_stripe_onboarded">Stripe nakonfigurován</string>
     <string name="market_audit_account_stripe_restricted">Stripe omezen</string>
     <string name="market_audit_account_suspended">Pozastaveno jako prodávající</string>
-    <string name="market_audit_account_unbanned">Zákaz zrušen</string>
-    <string name="market_audit_account_unsuspended">Pozastavení zrušeno</string>
+    <string name="market_audit_account_unbanned">Zákaz odvolán</string>
+    <string name="market_audit_account_unsuspended">Pozastavení ukončeno</string>
     <string name="market_audit_auction_bid_placed">Nabídka podána</string>
     <string name="market_audit_auction_created">Aukce vytvořena</string>
     <string name="market_audit_auction_ended_sold">Aukce prodána</string>
@@ -785,13 +785,13 @@
     <string name="market_listings_remove_message_auction">Tímto se zruší aukce. Inzerát bude skryt před kupujícími; můžete jej později znovu zveřejnit jako nový koncept.</string>
     <string name="market_listings_remove_title">Odstranit tuto nabídku?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Tím se zruší aukce a upozorní se %1$d aktivní dražitel. Inzerát bude před kupujícími skryt; později jej můžete znovu vystavit jako nový koncept.</item>
-        <item quantity="few">Tím se zruší aukce a upozorní se %1$d aktivní dražitelé. Inzerát bude před kupujícími skryt; později jej můžete znovu vystavit jako nový koncept.</item>
-        <item quantity="other">Tím se zruší aukce a upozorní se %1$d aktivních dražitelů. Inzerát bude před kupujícími skryt; později jej můžete znovu vystavit jako nový koncept.</item>
+        <item quantity="one">Tím se zruší aukce a upozorní se %1$s aktivní dražitel. Inzerát bude před kupujícími skryt; později jej můžete znovu vystavit jako nový koncept.</item>
+        <item quantity="few">Tím se zruší aukce a upozorní se %1$s aktivní dražitelé. Inzerát bude před kupujícími skryt; později jej můžete znovu vystavit jako nový koncept.</item>
+        <item quantity="other">Tím se zruší aukce a upozorní se %1$s aktivních dražitelů. Inzerát bude před kupujícími skryt; později jej můžete znovu vystavit jako nový koncept.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Tím se na konci aktuálního fakturačního období zruší %1$d aktivní předplatné. Odběratelé budou upozorněni. Inzerát bude před kupujícími skryt.</item>
-        <item quantity="few">Tím se na konci aktuálního fakturačního období zruší %1$d aktivní předplatná. Odběratelé budou upozorněni. Inzerát bude před kupujícími skryt.</item>
-        <item quantity="other">Tím se na konci aktuálního fakturačního období zruší %1$d aktivních předplatných. Odběratelé budou upozorněni. Inzerát bude před kupujícími skryt.</item>
+        <item quantity="one">Tím se na konci aktuálního fakturačního období zruší %1$s aktivní předplatné. Odběratelé budou upozorněni. Inzerát bude před kupujícími skryt.</item>
+        <item quantity="few">Tím se na konci aktuálního fakturačního období zruší %1$s aktivní předplatná. Odběratelé budou upozorněni. Inzerát bude před kupujícími skryt.</item>
+        <item quantity="other">Tím se na konci aktuálního fakturačního období zruší %1$s aktivních předplatných. Odběratelé budou upozorněni. Inzerát bude před kupujícími skryt.</item>
     </plurals>
 </resources>

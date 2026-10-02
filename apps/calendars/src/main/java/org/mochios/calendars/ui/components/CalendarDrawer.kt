@@ -337,7 +337,7 @@ private fun CalendarRow(
  * not.
  */
 @Composable
-private fun pollFailure(failure: String): String? = when (val reason = pollReason(failure)) {
+internal fun pollFailure(failure: String): String? = when (val reason = pollReason(failure)) {
     null -> null
     PollReason.Large -> stringResource(R.string.calendars_poll_large)
     PollReason.Invalid -> stringResource(R.string.calendars_poll_invalid)
@@ -345,7 +345,7 @@ private fun pollFailure(failure: String): String? = when (val reason = pollReaso
     PollReason.Unauthorised -> stringResource(R.string.calendars_poll_unauthorised)
     PollReason.Conflict -> stringResource(R.string.calendars_poll_conflict)
     PollReason.Missing -> stringResource(R.string.calendars_poll_missing)
-    is PollReason.Status -> stringResource(R.string.calendars_poll_status, reason.code)
+    is PollReason.Status -> stringResource(R.string.calendars_poll_status, reason.code.toString())
     is PollReason.Other -> reason.token
 }
 

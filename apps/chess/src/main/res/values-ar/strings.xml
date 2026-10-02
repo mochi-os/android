@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">حصان</string>
     <string name="chess_piece_pawn">بيدق</string>
     <string name="chess_move_played">لعب %1$s %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">إشعارات بشأن نقلات الشطرنج وعروض التعادل ونتائج المباريات.</string>
     <string name="chess_channel_name">إشعارات الشطرنج</string>
     <string name="chess_delete_message">تزيل اللعبة من قائمتك.</string>

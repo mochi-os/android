@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Сповіщення про редагування сторінок, коментарі та запрошення.</string>
     <string name="wikis_pageview_toc_expand">Показати зміст</string>
     <string name="wikis_pageview_toc_collapse">Сховати зміст</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Оновлено %1$s</string>
     <string name="wikis_pageview_not_found_description">Сторінка „%1$s\" ще не існує.</string>
     <string name="wikis_pageview_share_chooser">Посилання на вікі</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Ви збираєтеся видалити сторінку „%1$s\" (%2$s). Цю дію можна скасувати, відновивши з історії.</string>
     <string name="wikis_delete_page_success">Сторінку видалено</string>
     <string name="wikis_revert_page_title">Відкотити сторінку</string>
-    <string name="wikis_revert_page_message">Ви збираєтеся повернути %1$s до версії %2$d. Це створить нову редакцію з вмістом версії %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Повернуто до версії %1$d</string>
-    <string name="wikis_revert_page_success">Повернуто до версії %1$d</string>
+    <string name="wikis_revert_page_message">Ви збираєтеся повернути %1$s до версії %2$s. Це створить нову редакцію з вмістом версії %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Повернуто до версії %1$s</string>
+    <string name="wikis_revert_page_success">Повернуто до версії %1$s</string>
     <string name="wikis_rename_page_renaming">Перейменування…</string>
     <string name="wikis_rename_page_success">Сторінку перейменовано</string>
-    <string name="wikis_history_viewing">Перегляд історії для %1$s, поточна версія %2$d</string>
-    <string name="wikis_revision_version_badge">Версія %1$d</string>
+    <string name="wikis_history_viewing">Перегляд історії для %1$s, поточна версія %2$s</string>
+    <string name="wikis_revision_version_badge">Версія %1$s</string>
     <string name="wikis_search_pages_placeholder">Пошук сторінок за назвою або вмістом…</string>
     <string name="wikis_search_no_results">Сторінок не знайдено для „%1$s\". Спробуйте інші терміни пошуку.</string>
     <string name="wikis_search_updated">Оновлено %1$s</string>
@@ -289,54 +289,54 @@
     <string name="wikis_revision_author">за %1$s</string>
     <string name="wikis_revision_show_page">Показати сторінку</string>
     <string name="wikis_revision_compare_failed">Не вдалося завантажити попередню версію для порівняння.</string>
-    <string name="wikis_revision_changes_from">Зміни з версії %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Зміни з версії %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d коментар</item>
-        <item quantity="few">%d коментарі</item>
-        <item quantity="many">%d коментарів</item>
-        <item quantity="other">%d коментарів</item>
+        <item quantity="one">%s коментар</item>
+        <item quantity="few">%s коментарі</item>
+        <item quantity="many">%s коментарів</item>
+        <item quantity="other">%s коментарів</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d відповідь</item>
-        <item quantity="few">ще +%d відповідей</item>
-        <item quantity="many">ще +%d відповідей</item>
-        <item quantity="other">ще +%d відповідей</item>
+        <item quantity="one">%s відповідь</item>
+        <item quantity="few">ще +%s відповіді</item>
+        <item quantity="many">ще +%s відповідей</item>
+        <item quantity="other">ще +%s відповіді</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d сторінка</item>
-        <item quantity="few">%d сторінок</item>
-        <item quantity="many">%d сторінок</item>
-        <item quantity="other">%d сторінок</item>
+        <item quantity="one">%s сторінка</item>
+        <item quantity="few">%s сторінки</item>
+        <item quantity="many">%s сторінок</item>
+        <item quantity="other">%s сторінки</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d файл</item>
-        <item quantity="few">%d файлів</item>
-        <item quantity="many">%d файлів</item>
-        <item quantity="other">%d файлів</item>
+        <item quantity="one">%s файл</item>
+        <item quantity="few">%s файли</item>
+        <item quantity="many">%s файлів</item>
+        <item quantity="other">%s файлу</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d зображення</item>
-        <item quantity="few">%d зображень</item>
-        <item quantity="many">%d зображень</item>
-        <item quantity="other">%d зображень</item>
+        <item quantity="one">%s зображення</item>
+        <item quantity="few">%s зображення</item>
+        <item quantity="many">%s зображень</item>
+        <item quantity="other">%s зображення</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d документ</item>
-        <item quantity="few">%d документів</item>
-        <item quantity="many">%d документів</item>
-        <item quantity="other">%d документів</item>
+        <item quantity="one">%s документ</item>
+        <item quantity="few">%s документи</item>
+        <item quantity="many">%s документів</item>
+        <item quantity="other">%s документа</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d сторінка із цим тегом</item>
-        <item quantity="few">%d сторінок із цим тегом</item>
-        <item quantity="many">%d сторінок із цим тегом</item>
-        <item quantity="other">%d сторінок із цим тегом</item>
+        <item quantity="one">%s сторінка із цим тегом</item>
+        <item quantity="few">%s сторінки із цим тегом</item>
+        <item quantity="many">%s сторінок із цим тегом</item>
+        <item quantity="other">%s сторінки із цим тегом</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Знайдено %1$d результат за запитом «%2$s»</item>
-        <item quantity="few">Знайдено %1$d результатів за запитом «%2$s»</item>
-        <item quantity="many">Знайдено %1$d результатів за запитом «%2$s»</item>
-        <item quantity="other">Знайдено %1$d результатів за запитом «%2$s»</item>
+        <item quantity="one">Знайдено %1$s результат за запитом «%2$s»</item>
+        <item quantity="few">Знайдено %1$s результати за запитом «%2$s»</item>
+        <item quantity="many">Знайдено %1$s результатів за запитом «%2$s»</item>
+        <item quantity="other">Знайдено %1$s результату за запитом «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Не вдалося зберегти підпис</string>
     <string name="wikis_attachments_upload_types">Підтримувані файли: зображення, PDF, DOC, DOCX, TXT та MD.</string>
@@ -345,9 +345,9 @@
     <string name="wikis_rss_copied_new">Новий RSS URL скопійовано в буфер обміну</string>
     <string name="wikis_rss_exists">Цей URL стрічки вже видано і не може бути показаний знову.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Показано перший %1$d коментар.</item>
-        <item quantity="few">Показано перші %1$d коментарів.</item>
-        <item quantity="many">Показано перші %1$d коментарів.</item>
-        <item quantity="other">Показано перші %1$d коментарів.</item>
+        <item quantity="one">Показано перший %1$s коментар.</item>
+        <item quantity="few">Показано перші %1$s коментарі.</item>
+        <item quantity="many">Показано перші %1$s коментарів.</item>
+        <item quantity="other">Показано перші %1$s коментаря.</item>
     </plurals>
 </resources>

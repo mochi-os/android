@@ -180,10 +180,10 @@
     <string name="people_books_create">Ustvari imenik</string>
     <string name="people_books_delete">Izbriši imenik</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Izbrišem %1$s in %2$d stik v njem?</item>
-        <item quantity="two">Izbrišem %1$s in %2$d stika v njem?</item>
-        <item quantity="few">Izbrišem %1$s in %2$d stike v njem?</item>
-        <item quantity="other">Izbrišem %1$s in %2$d stikov v njem?</item>
+        <item quantity="one">Izbrišem %1$s in %2$s stik v njem?</item>
+        <item quantity="two">Izbrišem %1$s in %2$s stika v njem?</item>
+        <item quantity="few">Izbrišem %1$s in %2$s stike v njem?</item>
+        <item quantity="other">Izbrišem %1$s in %2$s stikov v njem?</item>
     </plurals>
     <string name="people_welcome_body">Poiščite prijatelje po vsem Mochi in se povežite. Za pošiljanje povabila se dotaknite Dodaj stik.</string>
     <string name="people_person_state_contact">Med stiki</string>

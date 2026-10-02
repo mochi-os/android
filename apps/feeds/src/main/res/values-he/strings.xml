@@ -76,7 +76,7 @@
     <string name="feeds_settings_source_removed">המקור הוסר</string>
     <string name="feeds_settings_source_polling">בודק את המקור…</string>
     <string name="feeds_settings_access_updated">הגישה עודכנה</string>
-    <string name="feeds_settings_access_revoked">הגישה בוטלה</string>
+    <string name="feeds_settings_access_revoked">הגישה נשללה</string>
     <string name="feeds_settings_member_removed">החבר הוסר</string>
     <string name="feeds_settings_ai_mode_updated">מצב הבינה המלאכותית עודכן</string>
     <string name="feeds_settings_ai_account_updated">חשבון הבינה המלאכותית עודכן</string>
@@ -112,10 +112,10 @@
     <string name="feeds_source_never_fetched">מעולם לא נמשך</string>
     <string name="feeds_source_poll">תשאול</string>
     <string name="feeds_source_transform">המרת AI</string>
-    <string name="feeds_remove_source_confirm">להסיר את \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">מחק גם את הפוסטים המיובאים</string>
+    <string name="feeds_remove_source_confirm">פעולה זו תפסיק את ייבוא התוכן מ-\"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">מחק גם את הפוסטים שיובאו ממקור זה</string>
     <string name="feeds_suggested_credibility_title">אמינות מוצעת</string>
-    <string name="feeds_suggested_credibility_body">Mochi מציע אמינות של %1$d. לקבל?</string>
+    <string name="feeds_suggested_credibility_body">Mochi מציע אמינות של %1$s. לקבל?</string>
     <string name="feeds_suggested_credibility_keep">השאר את הנוכחי</string>
     <string name="feeds_ai_processing_mode">מצב עיבוד AI</string>
     <string name="feeds_ai_account">חשבון AI</string>
@@ -141,9 +141,9 @@
     <string name="feeds_saved_error_clear">ניקוי הפוסטים השמורים נכשל</string>
     <plurals name="feeds_new_posts">
         <item quantity="one">פוסט חדש אחד</item>
-        <item quantity="two">%d פוסטים חדשים</item>
-        <item quantity="many">%d פוסטים חדשים</item>
-        <item quantity="other">%d פוסטים חדשים</item>
+        <item quantity="two">%s פוסטים חדשים</item>
+        <item quantity="many">%s פוסטים חדשים</item>
+        <item quantity="other">%s פוסטים חדשים</item>
     </plurals>
     <string name="feeds_caught_up">צפית בכל הפוסטים</string>
     <string name="feeds_all_caught_up">הושלם הכול</string>
@@ -194,16 +194,16 @@
     <string name="feeds_source_url_hint_feed">מזהה ישות פיד או טביעת אצבע</string>
     <string name="feeds_source_credibility_label">אמינות</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d שעה</item>
-        <item quantity="two">%1$d שעות</item>
-        <item quantity="many">%1$d שעות</item>
-        <item quantity="other">%1$d שעות</item>
+        <item quantity="one">%1$s שעה</item>
+        <item quantity="two">%1$s שעות</item>
+        <item quantity="many">%1$s שעות</item>
+        <item quantity="other">%1$s שעות</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d דקה</item>
-        <item quantity="two">%1$d דקות</item>
-        <item quantity="many">%1$d דקות</item>
-        <item quantity="other">%1$d דקות</item>
+        <item quantity="one">%1$s דקה</item>
+        <item quantity="two">%1$s דקות</item>
+        <item quantity="many">%1$s דקות</item>
+        <item quantity="other">%1$s דקות</item>
     </plurals>
     <string name="feeds_source_polling_interval">תשאול כל %1$s</string>
     <string name="feeds_access_level_react_full">הגב וצפה</string>
@@ -221,27 +221,27 @@
     <string name="feeds_share_link_title">קישור לפיד</string>
     <plurals name="feeds_comment_count">
         <item quantity="one">תגובה אחת</item>
-        <item quantity="two">%1$d תגובות</item>
-        <item quantity="many">%1$d תגובות</item>
-        <item quantity="other">%1$d תגובות</item>
+        <item quantity="two">%1$s תגובות</item>
+        <item quantity="many">%1$s תגובות</item>
+        <item quantity="other">%1$s תגובות</item>
     </plurals>
     <plurals name="feeds_attachment_count">
         <item quantity="one">קובץ מצורף אחד</item>
         <item quantity="two">שני קבצים מצורפים</item>
-        <item quantity="many">%1$d קבצים מצורפים</item>
-        <item quantity="other">%1$d קבצים מצורפים</item>
+        <item quantity="many">%1$s קבצים מצורפים</item>
+        <item quantity="other">%1$s קבצים מצורפים</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
         <item quantity="one">הצג תגובה אחת נוספת</item>
         <item quantity="two">הצג שתי תגובות נוספות</item>
-        <item quantity="many">הצג %1$d תגובות נוספות</item>
-        <item quantity="other">הצג %1$d תגובות נוספות</item>
+        <item quantity="many">הצג %1$s תגובות נוספות</item>
+        <item quantity="other">הצג %1$s תגובות נוספות</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
         <item quantity="one">לפני שנה אחת, היום</item>
         <item quantity="two">לפני שנתיים, היום</item>
-        <item quantity="many">לפני %1$d שנים, היום</item>
-        <item quantity="other">לפני %1$d שנים, היום</item>
+        <item quantity="many">לפני %1$s שנים, היום</item>
+        <item quantity="other">לפני %1$s שנים, היום</item>
     </plurals>
     <string name="feeds_block">חסום</string>
     <string name="feeds_removed_from_feed">הוסרת מהפיד הזה</string>

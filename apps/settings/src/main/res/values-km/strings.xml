@@ -5,13 +5,13 @@
     <string name="settings_home_logout">ចាកចេញ</string>
     <string name="settings_home_account">គណនី</string>
     <string name="settings_home_preferences">ចំណូលចិត្ត</string>
-    <string name="settings_home_display">បង្ហាញ</string>
+    <string name="settings_home_display">ការបង្ហាញ</string>
     <string name="settings_home_notification_prefs">ចំណូលចិត្តការជូនដំណឹង</string>
     <string name="settings_home_accounts">គណនីដែលបានភ្ជាប់</string>
     <string name="settings_home_interests">ចំណាប់អារម្មណ៍</string>
     <string name="account_section_passkeys">កូនសោចូល</string>
-    <string name="account_passkey_register">បន្ថែមកូនសោ</string>
-    <string name="account_passkey_delete_title">លុបកូនសោ?</string>
+    <string name="account_passkey_register">បន្ថែមកូនសោចូល</string>
+    <string name="account_passkey_delete_title">លុបកូនសោចូល?</string>
     <string name="account_section_totp">កម្មវិធីផ្ទៀងផ្ទាត់</string>
     <string name="account_totp_setup">រៀបចំកម្មវិធីផ្ទៀងផ្ទាត់</string>
     <string name="account_totp_setup_title">រៀបចំកម្មវិធីផ្ទៀងផ្ទាត់</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">លុបផ្លូវ?</string>
     <string name="route_path">ផ្លូវ</string>
     <string name="route_method">វិធីសាស្ត្រ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">កម្មវិធី</string>
     <string name="route_method_entity">អង្គភាព</string>
     <string name="route_method_redirect">ការបញ្ជូនបន្ត</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">ទាញយកពី packages.mochi-os.org</string>
     <string name="system_status_copy">ចម្លង</string>
     <string name="system_status_peers">មិត្តស្មើ</string>
-    <string name="system_status_known">ស្គាល់</string>
+    <string name="system_status_peers_totals">ស្គាល់ %1$s · បានភ្ជាប់ %2$s · បណ្ដាញសំណាញ់ផ្សាយ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">ស្គាល់ %1$s · បានភ្ជាប់ %2$s</string>
     <string name="system_status_peer_connected">បានភ្ជាប់</string>
     <string name="system_status_peer_disconnected">បានផ្ដាច់</string>
     <string name="system_status_peer_queued">សារក្នុងជួរ</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">យកចេញ</string>
     <string name="accounts_remove_title">យកគណនីចេញ?</string>
     <string name="system_documents_title">ឯកសារ</string>
-    <string name="system_documents_description">ច្បាប់ម៉ាស៊ីនមេ លក្ខខណ្ឌ និងគោលការណ៍ឯកជនភាពដែលបង្ហាញដល់អ្នកប្រើប្រាស់របស់អ្នក</string>
     <string name="system_documents_tab_rules">ច្បាប់ម៉ាស៊ីនមេ</string>
     <string name="system_documents_tab_terms">លក្ខខណ្ឌ</string>
     <string name="system_documents_tab_privacy">ឯកជនភាព</string>
     <string name="system_documents_language">ភាសា</string>
     <string name="system_documents_no_language">មិនមានឯកសារសម្រាប់ភាសានេះទេ។</string>
-    <string name="system_documents_customised">បានប្តូរតាមតម្រូវការ</string>
     <string name="system_documents_using_default">កំពុងប្រើលំនាំដើមដែលភ្ជាប់មកជាមួយ</string>
     <string name="system_documents_revert">ត្រឡប់ទៅលំនាំដើម</string>
     <string name="system_documents_save">រក្សាទុក</string>
@@ -137,7 +138,7 @@
     <string name="system_settings_reset_title">កំណត់ឡើងវិញទៅលំនាំដើម?</string>
     <string name="system_setting_apps_install_user">អនុញ្ញាតឱ្យអ្នកប្រើប្រាស់ដំឡើងកម្មវិធី</string>
     <string name="system_setting_auth_email">ចូលដោយប្រើកូដអ៊ីមែល</string>
-    <string name="system_setting_auth_passkey">ចូលដោយប្រើសោចូល</string>
+    <string name="system_setting_auth_passkey">ចូលដោយប្រើកូនសោចូល</string>
     <string name="system_setting_auth_totp">ចូលដោយប្រើកម្មវិធីផ្ទៀងផ្ទាត់ TOTP</string>
     <string name="system_setting_auth_recovery">ចូលដោយប្រើកូដសង្គ្រោះ</string>
     <string name="system_setting_auth_oauth">ចូលដោយប្រើ OAuth 2.0</string>
@@ -182,7 +183,6 @@
     <string name="system_users_delete">លុបអ្នកប្រើប្រាស់</string>
     <string name="system_users_delete_title">លុបអ្នកប្រើប្រាស់?</string>
     <string name="system_users_manage_sessions">គ្រប់គ្រងវគ្គ</string>
-    <string name="system_users_sessions_description">មើល និងដកហូតវគ្គសកម្មសម្រាប់អ្នកប្រើប្រាស់នេះ។</string>
     <string name="system_users_sessions_empty">អ្នកប្រើប្រាស់នេះមិនមានវគ្គសកម្មទេ។</string>
     <string name="system_users_revoke">ដកសិទ្ធិ</string>
     <string name="system_users_revoke_all">ដកវគ្គទាំងអស់</string>
@@ -192,7 +192,6 @@
     <string name="system_users_next">បន្ទាប់</string>
     <string name="system_users_empty">រកមិនឃើញអ្នកប្រើ</string>
     <string name="system_users_empty_search">មិនមានអ្នកប្រើត្រូវនឹងការស្វែងរករបស់អ្នក</string>
-    <string name="system_users_empty_search_hint">សាកល្បងកែតម្រូវលក្ខណៈវិនិច្ឆ័យស្វែងរករបស់អ្នក</string>
     <string name="system_users_toast_created">បានបង្កើតអ្នកប្រើប្រាស់</string>
     <string name="system_users_toast_updated">បានធ្វើបច្ចុប្បន្នភាពអ្នកប្រើប្រាស់</string>
     <string name="system_users_toast_deleted">បានលុបអ្នកប្រើប្រាស់</string>
@@ -209,19 +208,19 @@
     <string name="settings_home_privacy">គោលនយោបាយឯកជន</string>
     <string name="settings_home_rules">ច្បាប់</string>
     <string name="settings_home_terms">លក្ខខណ្ឌសេវាកម្ម</string>
-    <string name="account_passkeys_empty">មិនមានសោចូលប្រើដែលបានចុះឈ្មោះទេ។</string>
-    <string name="account_passkey_register_title">បន្ថែមសោចូលប្រើ</string>
-    <string name="account_passkey_register_message">ឧបករណ៍របស់អ្នកនឹងសុំឱ្យអ្នកបញ្ជាក់។ សោចូលប្រើត្រូវបានភ្ជាប់ទៅឧបករណ៍នេះហើយប្រើសម្រាប់ការចូលនាពេលអនាគត។</string>
+    <string name="account_passkeys_empty">មិនមានកូនសោចូលដែលបានចុះឈ្មោះទេ។</string>
+    <string name="account_passkey_register_title">បន្ថែមកូនសោចូល</string>
     <string name="account_passkey_name_label">ឈ្មោះ (ស្រេចចិត្ត)</string>
     <string name="account_passkey_delete_message">\"%1$s\" នឹងលែងបញ្ចូលអ្នកទេ។</string>
-    <string name="account_totp_description">ចូលដោយលេខកូដ 6 ខ្ទង់ពីកម្មវិធីផ្ទៀងផ្ទាត់។</string>
     <string name="account_totp_enabled">ការផ្ទៀងផ្ទាត់ត្រូវបានបើក។</string>
     <string name="account_totp_setup_step1">ស្កេនឬបញ្ចូលសម្ងាត់នេះក្នុងកម្មវិធីផ្ទៀងផ្ទាត់របស់អ្នក។</string>
     <string name="account_totp_setup_step2">បញ្ចូលលេខកូដ 6 ខ្ទង់ដែលកម្មវិធីរបស់អ្នកបង្ហាញ។</string>
     <string name="account_totp_code">លេខកូដ</string>
     <string name="account_totp_disable_message">អ្នកនឹងលែងអាចចូលដោយលេខកូដផ្ទៀងផ្ទាត់ទេ។</string>
     <string name="account_recovery_none">គ្មានកូដស្ដារដែលត្រូវបានបង្កើតទេ។</string>
-    <string name="account_recovery_count">កូដស្ដារដែលមិនទាន់ប្រើ %1$d។</string>
+    <plurals name="account_recovery_count">
+        <item quantity="other">នៅសល់កូដស្ដារ %1$s។</item>
+    </plurals>
     <string name="account_recovery_generate">បង្កើតកូដ</string>
     <string name="account_recovery_regenerate">បង្កើតកូដឡើងវិញ</string>
     <string name="account_recovery_regen_title">បង្កើតកូដស្ដារឡើងវិញ?</string>
@@ -237,7 +236,7 @@
     <string name="account_last_used">ប្រើចុងក្រោយ %1$s</string>
     <string name="route_delete_message">វានឹងលុបផ្លូវសម្រាប់ផ្លូវ \"%1$s\"។</string>
     <string name="route_empty">គ្មានផ្លូវដែលបានកំណត់ទេ។</string>
-    <string name="route_meta">អាទិភាព %1$d · %2$s</string>
+    <string name="route_meta">អាទិភាព %1$s · %2$s</string>
     <string name="interests_search_placeholder">ស្វែងរកប្រធានបទដើម្បីបន្ថែម…</string>
     <string name="interests_empty">មិនទាន់មានចំណាប់អារម្មណ៍ទេ។</string>
     <string name="interests_summary_regenerate">បង្កើតសង្ខេបឡើងវិញ</string>
@@ -270,7 +269,9 @@
     <string name="system_users_session_last_accessed">ការចូលដំណើរការចុងក្រោយ៖ %1$s</string>
     <string name="system_users_revoke_all_title">ដកវគ្គទាំងអស់?</string>
     <string name="system_users_revoke_all_message">វគ្គដែលដំណើរការទាំងអស់របស់អ្នកប្រើនេះនឹងចេញ។</string>
-    <string name="system_users_pagination_status">បង្ហាញ %1$d–%2$d នៃ %3$d អ្នកប្រើ</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="other">បង្ហាញ %1$s–%2$s នៃ %3$s អ្នកប្រើ</item>
+    </plurals>
     <string name="account_title">គណនី</string>
     <string name="account_section_identity">អត្តសញ្ញាណ</string>
     <string name="account_identity_identity">អត្តសញ្ញាណ</string>
@@ -303,10 +304,10 @@
     <string name="domain_verify">ផ្ទៀងផ្ទាត់ DNS</string>
     <string name="settings_home_domains">ដែន</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="other">បានផ្ញើការសាកល្បងទៅកាន់ទិសដៅ %1$d </item>
+        <item quantity="other">បានផ្ញើការសាកល្បងទៅកាន់ទិសដៅ %1$s </item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="other">បានដកហូត %1$d វគ្គ</item>
+        <item quantity="other">បានដកហូត %1$s វគ្គ</item>
     </plurals>
     <string name="login_title">ចូល</string>
     <string name="login_section_methods">វិធីសាស្ត្រចូល</string>
@@ -337,18 +338,15 @@
     <string name="system_status_reachability_public">សាធារណៈ</string>
     <string name="system_status_reachability_private">ឯកជន</string>
     <string name="system_status_reachability_unknown">មិនស្គាល់</string>
-    <string name="system_status_relay">តាមរយៈម៉ាស៊ីនបញ្ជូនបន្ត</string>
-    <string name="system_status_mesh">បណ្ដាញសំណាញ់ផ្សាយ</string>
+    <string name="system_status_reachability_relay">%1$s · តាមរយៈម៉ាស៊ីនបញ្ជូនបន្ត</string>
     <string name="system_status_broadcast">ការផ្សាយចុងក្រោយ</string>
     <string name="system_status_queued_broadcasts">សារផ្សាយក្នុងជួរ</string>
     <string name="system_setting_hostname_publish">ប្រកាសឈ្មោះម៉ាស៊ីន និងដែនទៅម៉ាស៊ីនមេផ្សេងទៀត</string>
     <string name="system_setting_hostname">ឈ្មោះម៉ាស៊ីនដែលប្រកាសទៅម៉ាស៊ីនមេផ្សេងទៀត</string>
     <string name="system_status_peer_id">លេខសម្គាល់​​ភាគី</string>
     <string name="system_status_holepunch">ការទម្លុះ</string>
-    <string name="system_status_holepunch_value">%1$d បានជោគជ័យ · %2$d បានបរាជ័យ</string>
     <string name="system_status_awaiting_routing">សារកំពុងរង់ចាំការនាំផ្លូវ</string>
     <string name="system_status_relay_service">សេវាបញ្ជូនបន្ត</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d ការកក់ · %3$d សៀគ្វី · %4$d បានបដិសេធ</string>
     <string name="route_target_select">ជ្រើសរើស</string>
     <string name="account_data_description">ទាញយកការបម្រុងទុកពេញលេញដែលអ្នកអាចស្ដារឡើងវិញនៅលើម៉ាស៊ីនមេ Mochi នេះ ឬម៉ាស៊ីនមេផ្សេងទៀត។</string>
     <string name="route_target_none">មិនមានគោលដៅដែលអាចប្រើបានទេ</string>
@@ -373,7 +371,11 @@
     <string name="accounts_device_seen">ឃើញចុងក្រោយ %1$s</string>
     <string name="notifprefs_device_app">%1$s · កម្មវិធី</string>
     <string name="notifprefs_device_push">%1$s · ការជូនដំណឹងរុញ</string>
-    <string name="notifprefs_test_partial">បានផ្ញើការសាកល្បងទៅ %1$d ក្នុងចំណោម %2$d ទិសដៅ</string>
+    <string name="notifprefs_destination_rss">RSS៖ %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="other">បានផ្ញើការសាកល្បងទៅ %1$s ក្នុងចំណោម %2$s ទិសដៅ</item>
+    </plurals>
     <string name="notifprefs_test_none">មិនមានទិសដៅដែលបានកំណត់រចនាសម្ព័ន្ធ</string>
     <string name="notifprefs_transport_fcm">ការជូនដំណឹង Android</string>
     <string name="notifprefs_no_destinations">គ្មានគោលដៅ</string>
@@ -392,4 +394,22 @@
     <string name="accounts_revoke_confirm">នេះនឹងដកសិទ្ធិចូលប្រើប្រតិទិនរបស់ %1$s។ ការចូលដោយ %2$s នៅតែមានរហូតដល់អ្នកផ្តាច់វានៅលើទំព័រចូល។</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">រូបរាងមិនស្គាល់</string>
+    <string name="system_documents_modified">បានកែប្រែ</string>
+    <string name="system_documents_discard_title">បោះចោលការផ្លាស់ប្ដូរឬ?</string>
+    <string name="system_documents_discard">បោះចោល</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="other">%1$s បានជោគជ័យ</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="other">%1$s បានបរាជ័យ</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="other">%1$s / %2$s ការកក់</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="other">%1$s សៀគ្វី</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="other">%1$s បានបដិសេធ</item>
+    </plurals>
 </resources>

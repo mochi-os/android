@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Hakuna vitu</string>
     <string name="crm_board_no_columns">Hakuna safu zilizosanidiwa kwa muonekano huu</string>
     <string name="crm_board_no_options">Hakuna chaguo zilizosanidiwa kwa uga wa safu</string>
-    <string name="crm_board_nested_count">+%1$d zilizopachikwa</string>
+    <string name="crm_board_nested_count">+%1$s zilizopachikwa</string>
     <string name="crm_move_to_column">Hamishia kwenye safu</string>
     <string name="crm_move_to_row">Hamishia kwenye mstari</string>
     <string name="crm_move_after">Baada ya %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Data ya CRM imehifadhiwa</string>
     <string name="crm_create_upload_json">Pakia faili ya .zip au .json</string>
     <string name="crm_create_blocked_no_options">Haiwezi kuunda: %1$s inahitajika lakini haina chaguo za kuchagua. Ongeza chaguo katika Muundo.</string>
-    <string name="crm_design_sample">Sampuli %1$d</string>
+    <string name="crm_design_sample">Sampuli %1$s</string>
     <string name="crm_option_delete_title">Futa chaguo</string>
     <string name="crm_option_delete_message">Una uhakika unataka kufuta chaguo \"%1$s\"?</string>
 </resources>

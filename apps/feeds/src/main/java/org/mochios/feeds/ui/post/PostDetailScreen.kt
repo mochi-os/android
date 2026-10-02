@@ -503,7 +503,7 @@ private fun PostContent(
                     text = pluralStringResource(
                         R.plurals.feeds_memory_years_ago_today,
                         memory.yearsAgo,
-                        memory.yearsAgo
+                        LocalFormat.current.formatNumber(memory.yearsAgo)
                     ),
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.primary,

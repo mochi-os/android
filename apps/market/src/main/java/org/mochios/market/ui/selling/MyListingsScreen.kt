@@ -83,6 +83,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -285,14 +286,14 @@ fun MyListingsScreen(
             check?.hasActiveAuction == true && check.activeBidders > 0 -> pluralStringResource(
                 R.plurals.market_listings_remove_message_bidders,
                 check.activeBidders.toInt(),
-                check.activeBidders.toInt(),
+                LocalFormat.current.formatNumber(check.activeBidders.toInt()),
             )
             check?.hasActiveAuction == true ->
                 stringResource(R.string.market_listings_remove_message_auction)
             check != null && check.activeSubscribers > 0 -> pluralStringResource(
                 R.plurals.market_listings_remove_message_subscribers,
                 check.activeSubscribers.toInt(),
-                check.activeSubscribers.toInt(),
+                LocalFormat.current.formatNumber(check.activeSubscribers.toInt()),
             )
             else -> stringResource(R.string.market_listings_remove_message)
         }

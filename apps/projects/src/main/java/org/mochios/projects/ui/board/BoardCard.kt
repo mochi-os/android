@@ -64,6 +64,7 @@ import org.mochios.projects.R
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.ui.project.ProjectViewModel
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 private const val MAX_NESTING_DEPTH = 3
 
@@ -97,7 +98,7 @@ fun BoardCard(
     val borderColor = if (borderFieldId != null) {
         val borderValue = obj.stringValue(borderFieldId)
         if (borderValue.isNotBlank()) {
-            val options = viewModel.getAllOptionsForField(borderFieldId)
+            val options = viewModel.getOptionsForObject(obj.objectClass, borderFieldId)
             val option = options.find { it.id == borderValue }
             if (option != null && option.colour.isNotBlank()) {
                 parseColor(option.colour)
@@ -281,7 +282,7 @@ fun BoardCard(
                                 val value = obj.stringValue(field.id)
                                 when (field.fieldtype) {
                                     "enumerated" -> {
-                                        val options = viewModel.getAllOptionsForField(field.id)
+                                        val options = viewModel.getOptionsForObject(obj.objectClass, field.id)
                                         val opt = options.find { it.id == value }
                                         Row(verticalAlignment = Alignment.CenterVertically) {
                                             if (opt != null && opt.colour.isNotBlank()) {
@@ -356,7 +357,7 @@ fun BoardCard(
                     } else {
                         val deepCount = countDeepChildren(obj.id, childrenByParent)
                         Text(
-                            text = stringResource(R.string.projects_board_nested_count, deepCount),
+                            text = nestedCount(deepCount),
                             fontSize = 10.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -373,6 +374,11 @@ fun BoardCard(
         )
     }
 }
+
+/** "+N nested": the cards folded under one past the deepest level drawn. */
+@Composable
+internal fun nestedCount(count: Int): String =
+    stringResource(R.string.projects_board_nested_count, LocalFormat.current.formatNumber(count))
 
 private fun countDeepChildren(parentId: String, childrenByParent: Map<String, List<ProjectObject>>): Int {
     val direct = childrenByParent[parentId] ?: return 0

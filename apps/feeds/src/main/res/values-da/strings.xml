@@ -113,10 +113,10 @@
     <string name="feeds_source_never_fetched">Aldrig hentet</string>
     <string name="feeds_source_poll">Forespørg</string>
     <string name="feeds_source_transform">AI-transformation</string>
-    <string name="feeds_remove_source_confirm">Fjern \"%1$s\"?</string>
-    <string name="feeds_remove_also_delete_posts">Slet også importerede indlæg</string>
+    <string name="feeds_remove_source_confirm">Dette stopper importen af indhold fra \"%1$s\".</string>
+    <string name="feeds_remove_also_delete_posts">Slet også indlæg importeret fra denne kilde</string>
     <string name="feeds_suggested_credibility_title">Foreslået troværdighed</string>
-    <string name="feeds_suggested_credibility_body">Mochi foreslår en troværdighed på %1$d. Accepter?</string>
+    <string name="feeds_suggested_credibility_body">Mochi foreslår en troværdighed på %1$s. Accepter?</string>
     <string name="feeds_suggested_credibility_keep">Behold nuværende</string>
     <string name="feeds_ai_processing_mode">AI-behandlingstilstand</string>
     <string name="feeds_ai_prompt_new">Tag nye indlæg</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Tryk på bogmærket på et opslag for at gemme det her til senere.</string>
     <string name="feeds_saved_error_clear">De gemte opslag kunne ikke ryddes</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d nyt opslag</item>
-        <item quantity="other">%d nye opslag</item>
+        <item quantity="one">%s nyt opslag</item>
+        <item quantity="other">%s nye opslag</item>
     </plurals>
     <string name="feeds_caught_up">Du er helt opdateret</string>
     <string name="feeds_all_caught_up">Alt er læst</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Feed-entitets-ID eller fingeraftryk</string>
     <string name="feeds_source_credibility_label">Troværdighed</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d time</item>
-        <item quantity="other">%1$d timer</item>
+        <item quantity="one">%1$s time</item>
+        <item quantity="other">%1$s timer</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minutter</item>
+        <item quantity="one">%1$s minut</item>
+        <item quantity="other">%1$s minutter</item>
     </plurals>
     <string name="feeds_source_polling_interval">Tjekker hver %1$s</string>
     <string name="feeds_access_level_react_full">Reagere og vise</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Link</string>
     <string name="feeds_share_link_title">Feed-link</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d kommentar</item>
-        <item quantity="other">%1$d kommentarer</item>
+        <item quantity="one">%1$s kommentar</item>
+        <item quantity="other">%1$s kommentarer</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d vedhæftet fil</item>
-        <item quantity="other">%1$d vedhæftede filer</item>
+        <item quantity="one">%1$s vedhæftet fil</item>
+        <item quantity="other">%1$s vedhæftede filer</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Vis %1$d kommentar mere</item>
-        <item quantity="other">Vis %1$d kommentarer mere</item>
+        <item quantity="one">Vis %1$s kommentar mere</item>
+        <item quantity="other">Vis %1$s kommentarer mere</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">for %1$d år siden i dag</item>
-        <item quantity="other">for %1$d år siden i dag</item>
+        <item quantity="one">for %1$s år siden i dag</item>
+        <item quantity="other">for %1$s år siden i dag</item>
     </plurals>
     <string name="feeds_block">Bloker</string>
     <string name="feeds_removed_from_feed">Du blev fjernet fra dette feed</string>

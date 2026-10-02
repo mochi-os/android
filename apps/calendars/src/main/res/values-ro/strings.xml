@@ -97,19 +97,19 @@
     <string name="calendars_repeat_forever">Pentru totdeauna</string>
     <string name="calendars_reminder_time">La ora evenimentului</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">cu %1$d minut înainte</item>
-        <item quantity="few">cu %1$d minute înainte</item>
-        <item quantity="other">cu %1$d de minute înainte</item>
+        <item quantity="one">cu %1$s minut înainte</item>
+        <item quantity="few">cu %1$s minute înainte</item>
+        <item quantity="other">cu %1$s de minute înainte</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">cu %1$d oră înainte</item>
-        <item quantity="few">cu %1$d ore înainte</item>
-        <item quantity="other">cu %1$d de ore înainte</item>
+        <item quantity="one">cu %1$s oră înainte</item>
+        <item quantity="few">cu %1$s ore înainte</item>
+        <item quantity="other">cu %1$s de ore înainte</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">cu %1$d zi înainte</item>
-        <item quantity="few">cu %1$d zile înainte</item>
-        <item quantity="other">cu %1$d de zile înainte</item>
+        <item quantity="one">cu %1$s zi înainte</item>
+        <item quantity="few">cu %1$s zile înainte</item>
+        <item quantity="other">cu %1$s de zile înainte</item>
     </plurals>
     <string name="calendars_reminder_add">Adaugă un memento</string>
     <string name="calendars_reminder_remove">Elimină mementoul</string>
@@ -143,11 +143,11 @@
     <string name="calendars_poll_large">Calendarul este prea mare</string>
     <string name="calendars_poll_invalid">Adresa nu a returnat un calendar</string>
     <string name="calendars_poll_unreachable">Adresa nu a putut fi accesată</string>
-    <string name="calendars_poll_status">Adresa a răspuns %1$d</string>
+    <string name="calendars_poll_status">Adresa a răspuns %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="few">%1$d minute</item>
-        <item quantity="other">%1$d de minute</item>
+        <item quantity="one">%1$s minut</item>
+        <item quantity="few">%1$s minute</item>
+        <item quantity="other">%1$s de minute</item>
     </plurals>
     <string name="calendars_preferences_zones">Afișează evenimentele în propriul lor fus orar</string>
     <string name="calendars_event_backwards">Se termină înainte să înceapă</string>

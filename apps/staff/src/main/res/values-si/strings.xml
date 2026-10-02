@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">නම නැති</string>
     <string name="staff_accounts_unsuspend">අත්හිටුවීම ඉවත් කරන්න</string>
     <string name="staff_accounts_unsuspended_toast">ගිණුමේ අත්හිටුවීම ඉවත් කරන ලදී</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">අවලංගු කරන්න</string>
     <string name="staff_appeals_decide">තීරණය කරන්න</string>
     <string name="staff_appeals_decision_denied">ලැයිස්තුව ප්‍රතික්ෂේප කළ ලෙස තබන්න</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">ඇණවුම #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">හේතුව (අත්‍යවශ්‍ය නොවේ)</string>
-    <string name="staff_accounts_sales">විකුණුම් %1$d</string>
+    <string name="staff_accounts_sales">විකුණුම් %1$s</string>
     <string name="staff_appeals_reason_label">විකුණුම්කරුගේ අභියාචනා හේතුව</string>
     <string name="staff_audit_action_staff_team_role_changed">කාර්ය මණ්ඩල භූමිකාව වෙනස් කරන ලදී</string>
     <string name="staff_categories_delete_desc">“%1$s” මකන්නද? මෙය ආපසු හැරවිය නොහැක.</string>

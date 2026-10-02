@@ -118,6 +118,7 @@ import org.mochios.words.ui.detail.board.TileRack
 import org.mochios.words.ui.detail.board.WordsBoard
 import org.mochios.words.ui.router.WORDS_FEATURE
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -1069,8 +1070,9 @@ data class WordsHeaderModel(
 )
 
 @Composable
-private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
+internal fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
     val resources = LocalResources.current
+    val format = LocalFormat.current
     val playerName = { num: Int ->
         val raw = when (num) {
             1 -> game.player1_name
@@ -1079,7 +1081,7 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
             4 -> game.player4_name ?: ""
             else -> ""
         }
-        raw.ifBlank { resources.getString(R.string.words_detail_player_fallback, num) }
+        raw.ifBlank { resources.getString(R.string.words_detail_player_fallback, num.toString()) }
     }
     val playerIdentity = { num: Int ->
         when (num) {
@@ -1169,11 +1171,11 @@ private fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel {
         title = title,
         status = status,
         players = players,
-        tilesLeftLabel = resources.getString(R.string.words_detail_label_tiles_left, game.bag_count),
+        tilesLeftLabel = resources.getString(R.string.words_detail_label_tiles_left, format.formatNumber(game.bag_count)),
         // A game always seats two to four, so the singular never arises and the
         // plain string - which every catalogue already carries - is enough.
         playersLabel = if (game.player_count > 2) {
-            resources.getString(R.string.words_detail_player_count, game.player_count)
+            resources.getString(R.string.words_detail_player_count, format.formatNumber(game.player_count))
         } else {
             null
         },

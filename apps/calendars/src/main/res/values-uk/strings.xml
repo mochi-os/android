@@ -97,22 +97,22 @@
     <string name="calendars_repeat_forever">Завжди</string>
     <string name="calendars_reminder_time">У момент події</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">за %1$d хвилину</item>
-        <item quantity="few">за %1$d хвилини</item>
-        <item quantity="many">за %1$d хвилин</item>
-        <item quantity="other">за %1$d хвилини</item>
+        <item quantity="one">за %1$s хвилину</item>
+        <item quantity="few">за %1$s хвилини</item>
+        <item quantity="many">за %1$s хвилин</item>
+        <item quantity="other">за %1$s хвилини</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">за %1$d годину</item>
-        <item quantity="few">за %1$d години</item>
-        <item quantity="many">за %1$d годин</item>
-        <item quantity="other">за %1$d години</item>
+        <item quantity="one">за %1$s годину</item>
+        <item quantity="few">за %1$s години</item>
+        <item quantity="many">за %1$s годин</item>
+        <item quantity="other">за %1$s години</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">за %1$d день</item>
-        <item quantity="few">за %1$d дні</item>
-        <item quantity="many">за %1$d днів</item>
-        <item quantity="other">за %1$d дня</item>
+        <item quantity="one">за %1$s день</item>
+        <item quantity="few">за %1$s дні</item>
+        <item quantity="many">за %1$s днів</item>
+        <item quantity="other">за %1$s дня</item>
     </plurals>
     <string name="calendars_reminder_add">Додати нагадування</string>
     <string name="calendars_reminder_remove">Видалити нагадування</string>
@@ -146,12 +146,12 @@
     <string name="calendars_poll_large">Календар завеликий</string>
     <string name="calendars_poll_invalid">За адресою не знайдено календаря</string>
     <string name="calendars_poll_unreachable">Не вдалося підключитися до адреси</string>
-    <string name="calendars_poll_status">Адреса відповіла: %1$d</string>
+    <string name="calendars_poll_status">Адреса відповіла: %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d хвилина</item>
-        <item quantity="few">%1$d хвилини</item>
-        <item quantity="many">%1$d хвилин</item>
-        <item quantity="other">%1$d хвилини</item>
+        <item quantity="one">%1$s хвилина</item>
+        <item quantity="few">%1$s хвилини</item>
+        <item quantity="many">%1$s хвилин</item>
+        <item quantity="other">%1$s хвилини</item>
     </plurals>
     <string name="calendars_preferences_zones">Показувати події в їхньому власному часовому поясі</string>
     <string name="calendars_event_backwards">Закінчується раніше, ніж починається</string>

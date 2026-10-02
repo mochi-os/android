@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Mga notipikasyon tungkol sa pag-edit ng wiki page, komento, at imbitasyon.</string>
     <string name="wikis_pageview_toc_expand">Ipakita ang talaan ng nilalaman</string>
     <string name="wikis_pageview_toc_collapse">Itago ang talaan ng nilalaman</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Na-update %1$s</string>
     <string name="wikis_pageview_not_found_description">Wala pa ang pahinang “%1$s”.</string>
     <string name="wikis_pageview_share_chooser">Link ng wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Tatanggalin mo ang pahinang “%1$s” (%2$s). Maibabalik ang aksyong ito sa pamamagitan ng pag-restore mula sa kasaysayan.</string>
     <string name="wikis_delete_page_success">Tinanggal ang pahina</string>
     <string name="wikis_revert_page_title">Ibalik ang pahina</string>
-    <string name="wikis_revert_page_message">Ibabalik mo ang %1$s sa bersyon %2$d. Gagawa ito ng bagong rebisyon gamit ang nilalaman mula sa bersyon %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Naibalik sa bersyon %1$d</string>
-    <string name="wikis_revert_page_success">Naibalik sa bersyon %1$d</string>
+    <string name="wikis_revert_page_message">Ibabalik mo ang %1$s sa bersyon %2$s. Gagawa ito ng bagong rebisyon gamit ang nilalaman mula sa bersyon %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Naibalik sa bersyon %1$s</string>
+    <string name="wikis_revert_page_success">Naibalik sa bersyon %1$s</string>
     <string name="wikis_rename_page_renaming">Pinapalitan ang pangalan…</string>
     <string name="wikis_rename_page_success">Pinalitan ang pangalan ng pahina</string>
-    <string name="wikis_history_viewing">Tinitingnan ang kasaysayan ng %1$s, kasalukuyang bersyon %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Tinitingnan ang kasaysayan ng %1$s, kasalukuyang bersyon %2$s</string>
+    <string name="wikis_revision_version_badge">Bersyon %1$s</string>
     <string name="wikis_search_pages_placeholder">Maghanap ng mga pahina ayon sa pamagat o nilalaman…</string>
     <string name="wikis_search_no_results">Walang nahanap na pahina para sa “%1$s”. Sumubok ng ibang termino sa paghahanap.</string>
     <string name="wikis_search_updated">Na-update %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">ayon kay %1$s</string>
     <string name="wikis_revision_show_page">Ipakita ang pahina</string>
     <string name="wikis_revision_compare_failed">Hindi ma-load ang nakaraang bersyon para sa paghahambing.</string>
-    <string name="wikis_revision_changes_from">Mga pagbabago mula sa bersyon %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Mga pagbabago mula sa bersyon %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d komento</item>
-        <item quantity="other">%d na komento</item>
+        <item quantity="one">%s komento</item>
+        <item quantity="other">%s na komento</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d tugon</item>
-        <item quantity="other">+%d pang tugon</item>
+        <item quantity="one">%s tugon</item>
+        <item quantity="other">+%s pang tugon</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d pahina</item>
-        <item quantity="other">%d pahina</item>
+        <item quantity="one">%s pahina</item>
+        <item quantity="other">%s pahina</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d file</item>
-        <item quantity="other">%d files</item>
+        <item quantity="one">%s file</item>
+        <item quantity="other">%s files</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d larawan</item>
-        <item quantity="other">%d larawan</item>
+        <item quantity="one">%s larawan</item>
+        <item quantity="other">%s larawan</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokumento</item>
-        <item quantity="other">%d dokumento</item>
+        <item quantity="one">%s dokumento</item>
+        <item quantity="other">%s dokumento</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d pahina na may tag na ito</item>
-        <item quantity="other">%d pahina na may tag na ito</item>
+        <item quantity="one">%s pahina na may tag na ito</item>
+        <item quantity="other">%s pahina na may tag na ito</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Nakahanap ng %1$d resulta para sa «%2$s»</item>
-        <item quantity="other">Nakahanap ng %1$d resulta para sa «%2$s»</item>
+        <item quantity="one">Nakahanap ng %1$s resulta para sa «%2$s»</item>
+        <item quantity="other">Nakahanap ng %1$s resulta para sa «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Hindi na-save ang caption</string>
     <string name="wikis_attachments_upload_types">Mga sinusuportahang file: mga larawan, PDF, DOC, DOCX, TXT, at MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Nakopya ang bagong RSS URL sa clipboard</string>
     <string name="wikis_rss_exists">Naibigay na ang feed URL na ito at hindi na ito maipapakita muli.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Ipinapakita ang unang %1$d komento.</item>
-        <item quantity="other">Ipinapakita ang unang %1$d komento.</item>
+        <item quantity="one">Ipinapakita ang unang %1$s komento.</item>
+        <item quantity="other">Ipinapakita ang unang %1$s komento.</item>
     </plurals>
 </resources>

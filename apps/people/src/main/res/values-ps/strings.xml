@@ -180,8 +180,8 @@
     <string name="people_books_create">د پتو کتاب جوړ کړئ</string>
     <string name="people_books_delete">د پتو کتاب ړنګ کړئ</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s او په هغه کې %2$d اړیکه ړنګه شي؟</item>
-        <item quantity="other">%1$s او په هغه کې %2$d اړیکې ړنګې شي؟</item>
+        <item quantity="one">%1$s او په هغه کې %2$s اړیکه ړنګه شي؟</item>
+        <item quantity="other">%1$s او په هغه کې %2$s اړیکې ړنګې شي؟</item>
     </plurals>
     <string name="people_welcome_body">په ټول Mochi کې ملګري ومومئ او اړیکه ونیسئ. بلنه لیږلو لپاره اړیکه ورزیاته کړئ کېکاږئ.</string>
     <string name="people_person_state_contact">په اړیکو کې</string>

@@ -20,7 +20,7 @@
     <string name="account_section_recovery">రికవరీ కోడ్‌లు</string>
     <string name="account_recovery_codes_title">రికవరీ కోడ్‌లు</string>
     <string name="sessions_unknown_agent">తెలియని పరికరం</string>
-    <string name="sessions_revoke_title">సెషన్‌ను రద్దు చేయాలా?</string>
+    <string name="sessions_revoke_title">సెషన్‌ను ఉపసంహరించాలా?</string>
     <string name="account_section_oauth">థర్డ్-పార్టీ లాగిన్</string>
     <string name="account_oauth_link">ఖాతాను లింక్ చేయండి</string>
     <string name="account_unlink">అన్‌లింక్ చేయండి</string>
@@ -29,7 +29,7 @@
     <string name="account_done">పూర్తయింది</string>
     <string name="account_delete">తొలగించండి</string>
     <string name="account_rename">పేరు మార్చండి</string>
-    <string name="sessions_revoke">రద్దు చేయండి</string>
+    <string name="sessions_revoke">ఉపసంహరించండి</string>
     <string name="account_disable">నిలిపివేయండి</string>
     <string name="account_copy">కాపీ చేయండి</string>
     <string name="account_copy_all">అన్నీ కాపీ చేయండి</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">మార్గాన్ని తొలగించాలా?</string>
     <string name="route_path">పాత్</string>
     <string name="route_method">విధానం</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">యాప్</string>
     <string name="route_method_entity">సంస్థ</string>
     <string name="route_method_redirect">రీడైరెక్ట్</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org నుండి డౌన్‌లోడ్ చేయండి</string>
     <string name="system_status_copy">కాపీ చేయండి</string>
     <string name="system_status_peers">పీర్లు</string>
-    <string name="system_status_known">తెలిసినవి</string>
+    <string name="system_status_peers_totals">తెలిసినవి %1$s · కనెక్ట్ అయినవి %2$s · ప్రసార మెష్ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">తెలిసినవి %1$s · కనెక్ట్ అయినవి %2$s</string>
     <string name="system_status_peer_connected">కనెక్ట్ చేయబడింది</string>
     <string name="system_status_peer_disconnected">డిస్‌కనెక్ట్ అయింది</string>
     <string name="system_status_peer_queued">క్యూలో ఉన్న సందేశాలు</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">తొలగించండి</string>
     <string name="accounts_remove_title">ఖాతాను తొలగించాలా?</string>
     <string name="system_documents_title">పత్రాలు</string>
-    <string name="system_documents_description">మీ వినియోగదారులకు చూపబడే సర్వర్ నియమాలు, నియమాలు మరియు షరతులు, మరియు గోప్యత నోటీసు</string>
     <string name="system_documents_tab_rules">సర్వర్ నియమాలు</string>
     <string name="system_documents_tab_terms">నియమాలు మరియు షరతులు</string>
     <string name="system_documents_tab_privacy">గోప్యత</string>
     <string name="system_documents_language">భాష</string>
     <string name="system_documents_no_language">ఈ భాషకు పత్రం అందుబాటులో లేదు.</string>
-    <string name="system_documents_customised">అనుకూలీకరించబడింది</string>
     <string name="system_documents_using_default">బండిల్ చేయబడిన డిఫాల్ట్‌ను ఉపయోగిస్తోంది</string>
     <string name="system_documents_revert">డిఫాల్ట్‌కు తిరిగి మార్చండి</string>
     <string name="system_documents_save">సేవ్ చేయండి</string>
@@ -182,23 +183,21 @@
     <string name="system_users_delete">వినియోగదారుని తొలగించండి</string>
     <string name="system_users_delete_title">వినియోగదారుని తొలగించాలా?</string>
     <string name="system_users_manage_sessions">సెషన్‌లను నిర్వహించండి</string>
-    <string name="system_users_sessions_description">ఈ యూజర్ కోసం యాక్టివ్ సెషన్‌లను వీక్షించండి మరియు రద్దు చేయండి.</string>
     <string name="system_users_sessions_empty">ఈ యూజర్‌కు యాక్టివ్ సెషన్‌లు లేవు.</string>
-    <string name="system_users_revoke">రద్దు చేయండి</string>
-    <string name="system_users_revoke_all">అన్ని సెషన్‌లను రద్దు చేయండి</string>
+    <string name="system_users_revoke">ఉపసంహరించండి</string>
+    <string name="system_users_revoke_all">అన్ని సెషన్‌లను ఉపసంహరించండి</string>
     <string name="system_users_unknown_browser">తెలియని బ్రౌజర్</string>
     <string name="system_users_unknown">తెలియదు</string>
     <string name="system_users_previous">మునుపటి</string>
     <string name="system_users_next">తదుపరి</string>
     <string name="system_users_empty">యూజర్‌లు ఎవరూ కనుగొనబడలేదు</string>
     <string name="system_users_empty_search">మీ సెర్చ్‌కు సరిపోయే యూజర్‌లు ఎవరూ లేరు</string>
-    <string name="system_users_empty_search_hint">మీ శోధన ప్రమాణాలను సర్దుబాటు చేయడానికి ప్రయత్నించండి</string>
     <string name="system_users_toast_created">యూజర్ సృష్టించబడ్డారు</string>
     <string name="system_users_toast_updated">యూజర్ నవీకరించబడ్డారు</string>
     <string name="system_users_toast_deleted">యూజర్ తొలగించబడ్డారు</string>
     <string name="system_users_toast_suspended">వినియోగదారుడు నిషేధించబడ్డారు</string>
     <string name="system_users_toast_suspension_removed">నిషేధం తొలగించబడింది</string>
-    <string name="system_users_toast_session_revoked">సెషన్ రద్దు చేయబడింది</string>
+    <string name="system_users_toast_session_revoked">సెషన్ ఉపసంహరించబడింది</string>
     <string name="system_users_toast_create_failed">వినియోగదారుని సృష్టించడంలో విఫలమైంది</string>
     <string name="system_users_toast_update_failed">వినియోగదారుని నవీకరించడంలో విఫలమైంది</string>
     <string name="system_users_toast_delete_failed">వినియోగదారుని తొలగించడంలో విఫలమైంది</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">సేవా నిబంధనలు</string>
     <string name="account_passkeys_empty">నమోదు చేయబడిన పాస్‌కీలు లేవు.</string>
     <string name="account_passkey_register_title">పాస్‌కీని జోడించు</string>
-    <string name="account_passkey_register_message">మీ పరికరం మిమ్మల్ని నిర్ధారించమని అడుగుతుంది. పాస్‌కీ ఈ పరికరానికి బంధించబడింది మరియు భవిష్యత్ సైన్-ఇన్‌ల కోసం ఉపయోగించబడుతుంది.</string>
     <string name="account_passkey_name_label">పేరు (ఐచ్ఛికం)</string>
     <string name="account_passkey_delete_message">\"%1$s\" ఇకపై మిమ్మల్ని సైన్ ఇన్ చేయదు.</string>
-    <string name="account_totp_description">ప్రామాణీకరణ యాప్ నుండి 6-అంకెల కోడ్‌తో సైన్ ఇన్ చేయండి.</string>
     <string name="account_totp_enabled">ప్రామాణీకరణ ప్రారంభించబడింది.</string>
     <string name="account_totp_setup_step1">మీ ప్రామాణీకరణ యాప్‌లో ఈ రహస్యాన్ని స్కాన్ చేయండి లేదా నమోదు చేయండి.</string>
     <string name="account_totp_setup_step2">మీ యాప్ చూపే 6-అంకెల కోడ్‌ను నమోదు చేయండి.</string>
     <string name="account_totp_code">కోడ్</string>
     <string name="account_totp_disable_message">మీరు ఇకపై ప్రామాణీకరణ కోడ్‌తో సైన్ ఇన్ చేయలేరు.</string>
     <string name="account_recovery_none">పునరుద్ధరణ కోడ్‌లు సృష్టించబడలేదు.</string>
-    <string name="account_recovery_count">%1$d ఉపయోగించని పునరుద్ధరణ కోడ్‌లు.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s పునరుద్ధరణ కోడ్ మిగిలి ఉంది.</item>
+        <item quantity="other">%1$s పునరుద్ధరణ కోడ్‌లు మిగిలి ఉన్నాయి.</item>
+    </plurals>
     <string name="account_recovery_generate">కోడ్‌లను సృష్టించు</string>
     <string name="account_recovery_regenerate">కోడ్‌లను తిరిగి సృష్టించు</string>
     <string name="account_recovery_regen_title">పునరుద్ధరణ కోడ్‌లను తిరిగి సృష్టించాలా?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">చివరిగా ఉపయోగించబడింది %1$s</string>
     <string name="route_delete_message">ఇది మార్గం \"%1$s\" కోసం రూట్‌ను తొలగిస్తుంది.</string>
     <string name="route_empty">కాన్ఫిగర్ చేయబడిన మార్గాలు లేవు.</string>
-    <string name="route_meta">ప్రాధాన్యత %1$d · %2$s</string>
+    <string name="route_meta">ప్రాధాన్యత %1$s · %2$s</string>
     <string name="interests_search_placeholder">జోడించడానికి అంశాలను శోధించండి…</string>
     <string name="interests_empty">ఇంకా ఆసక్తులు లేవు.</string>
     <string name="interests_summary_regenerate">సారాంశాన్ని రీజెనరేట్ చేయండి</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">ఇది శాశ్వతంగా వినియోగదారు \"%1$s\"ని తొలగిస్తుంది. ఈ చర్యను రద్దు చేయడం సాధ్యం కాదు.</string>
     <string name="system_users_sessions_title">%1$s యొక్క సెషన్‌లు</string>
     <string name="system_users_session_last_accessed">చివరి యాక్సెస్: %1$s</string>
-    <string name="system_users_revoke_all_title">అన్ని సెషన్‌లను రద్దు చేయాలా?</string>
+    <string name="system_users_revoke_all_title">అన్ని సెషన్‌లను ఉపసంహరించాలా?</string>
     <string name="system_users_revoke_all_message">ఈ వినియోగదారు యొక్క అన్ని క్రియాశీల సెషన్‌లు సైన్ అవుట్ అవుతాయి.</string>
-    <string name="system_users_pagination_status">%3$d వినియోగదారుల్లో %1$d–%2$d చూపుతోంది</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$s వినియోగదారులో %1$s–%2$s చూపుతోంది</item>
+        <item quantity="other">%3$s వినియోగదారుల్లో %1$s–%2$s చూపుతోంది</item>
+    </plurals>
     <string name="account_title">ఖాతా</string>
     <string name="account_section_identity">గుర్తింపు</string>
     <string name="account_identity_identity">గుర్తింపు</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNSను ధృవీకరించండి</string>
     <string name="settings_home_domains">డొమైన్‌లు</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d గమ్యస్థానానికి పరీక్ష పంపబడింది</item>
-        <item quantity="other">%1$d గమ్యస్థానాలకు పరీక్ష పంపబడింది</item>
+        <item quantity="one">%1$s గమ్యస్థానానికి పరీక్ష పంపబడింది</item>
+        <item quantity="other">%1$s గమ్యస్థానాలకు పరీక్ష పంపబడింది</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">1 సెషన్ రద్దు చేయబడింది</item>
-        <item quantity="other">%1$d సెషన్‌లు రద్దు చేయబడ్డాయి</item>
+        <item quantity="one">%1$s సెషన్ ఉపసంహరించబడింది</item>
+        <item quantity="other">%1$s సెషన్‌లు ఉపసంహరించబడ్డాయి</item>
     </plurals>
     <string name="login_title">లాగిన్</string>
     <string name="login_section_methods">లాగిన్ పద్ధతులు</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">పబ్లిక్</string>
     <string name="system_status_reachability_private">ప్రైవేట్</string>
     <string name="system_status_reachability_unknown">తెలియదు</string>
-    <string name="system_status_relay">రిలే ద్వారా</string>
-    <string name="system_status_mesh">ప్రసార మెష్</string>
+    <string name="system_status_reachability_relay">%1$s · రిలే ద్వారా</string>
     <string name="system_status_broadcast">చివరి ప్రసారం</string>
     <string name="system_status_queued_broadcasts">క్యూలో ఉన్న ప్రసార సందేశాలు</string>
     <string name="system_setting_hostname_publish">హోస్ట్ పేరు మరియు డొమైన్‌లను ఇతర సర్వర్‌లకు ప్రకటించండి</string>
     <string name="system_setting_hostname">ఇతర సర్వర్‌లకు ప్రకటించిన హోస్ట్ పేరు</string>
     <string name="system_status_peer_id">పీర్ ID</string>
     <string name="system_status_holepunch">హోల్ పంచ్</string>
-    <string name="system_status_holepunch_value">%1$d విజయవంతం · %2$d విఫలం</string>
     <string name="system_status_awaiting_routing">రూటింగ్ కోసం వేచి ఉన్న సందేశాలు</string>
     <string name="system_status_relay_service">రిలే సేవ</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d రిజర్వేషన్‌లు · %3$d సర్క్యూట్‌లు · %4$d తిరస్కరించబడింది</string>
     <string name="route_target_select">ఎంచుకోండి</string>
     <string name="account_data_description">ఈ లేదా మరొక Mochi సర్వర్‌లో పునరుద్ధరించగల పూర్తి బ్యాకప్‌ను డౌన్‌లోడ్ చేయండి.</string>
     <string name="route_target_none">లక్ష్యాలు అందుబాటులో లేవు</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">చివరిసారి కనిపించింది %1$s</string>
     <string name="notifprefs_device_app">%1$s · యాప్</string>
     <string name="notifprefs_device_push">%1$s · పుష్</string>
-    <string name="notifprefs_test_partial">%2$dలో %1$d గమ్యాలకు పరీక్ష పంపబడింది</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">%2$s గమ్యస్థానంలో %1$sకి పరీక్ష పంపబడింది</item>
+        <item quantity="other">%2$s గమ్యస్థానాలలో %1$sకి పరీక్ష పంపబడింది</item>
+    </plurals>
     <string name="notifprefs_test_none">డెస్టినేషన్‌లు ఏవీ కాన్ఫిగర్ చేయబడలేదు</string>
     <string name="notifprefs_transport_fcm">Android పుష్</string>
     <string name="notifprefs_no_destinations">గమ్యస్థానాలు లేవు</string>
@@ -394,4 +399,27 @@
     <string name="accounts_revoke_confirm">ఇది %1$s యొక్క క్యాలెండర్ యాక్సెస్‌ను ఉపసంహరిస్తుంది. లాగిన్ పేజీలో అన్‌లింక్ చేసే వరకు %2$s తో సైన్-ఇన్ కొనసాగుతుంది.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">తెలియని థీమ్</string>
+    <string name="system_documents_modified">సవరించబడింది</string>
+    <string name="system_documents_discard_title">మార్పులను విస్మరించాలా?</string>
+    <string name="system_documents_discard">విస్మరించు</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s విజయవంతం</item>
+        <item quantity="other">%1$s విజయవంతం</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s విఫలం</item>
+        <item quantity="other">%1$s విఫలం</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s రిజర్వేషన్</item>
+        <item quantity="other">%1$s / %2$s రిజర్వేషన్‌లు</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s సర్క్యూట్</item>
+        <item quantity="other">%1$s సర్క్యూట్‌లు</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s తిరస్కరించబడింది</item>
+        <item quantity="other">%1$s తిరస్కరించబడ్డాయి</item>
+    </plurals>
 </resources>

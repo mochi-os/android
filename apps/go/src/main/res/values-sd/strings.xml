@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">ختم ڪريو</string>
     <string name="go_delete_message">هي راند توهان جي فهرست مان هٽائي ويندي. ان کي واپس نٿو ڪري سگهجي.</string>
     <string name="go_delete_title">گيم ختم ڪجي؟</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">قبول ڪريو</string>
     <string name="go_draw_decline">رد ڪريو</string>
     <string name="go_draw_offered_received">%1$s ڊرا جي پيشڪش ڪئي</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">هار مڃي</string>
     <string name="go_new_game_title">نئين Go راند</string>
     <string name="go_new_game_no_friends">راند شروع ڪرڻ کان اڳ اوھان کي دوست شامل ڪرڻو پوندو.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">ڪاري جي پھريائين ھلڻ جي تلافي لاءِ اڇي جي سکور ۾ شامل ٿيندڙ پوائنٽ</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go بورڊ</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d گو بورڊ، ڪارو پٿر رکڻ جو توهان جو وارو</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d گو بورڊ، اڇو پٿر رکڻ جو توهان جو وارو</string>
+    <string name="go_board_a11y">%1$s×%1$s Go بورڊ</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s گو بورڊ، ڪارو پٿر رکڻ جو توهان جو وارو</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s گو بورڊ، اڇو پٿر رکڻ جو توهان جو وارو</string>
     <string name="go_status_scoring">ڳڻپ — اسڪور تي متفق ٿيو يا راند جاري رکو</string>
     <string name="go_score_proposed">تجويز ڪيل اسڪور: ڪارو %1$s، اڇو %2$s</string>
     <string name="go_score_opponent_accepted">اوهان جو مخالف هي اسڪور قبول ڪري ٿو: ڪارو %1$s، اڇو %2$s</string>

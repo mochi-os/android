@@ -5,7 +5,7 @@
     <string name="settings_home_logout">લૉગ આઉટ કરો</string>
     <string name="settings_home_account">ખાતું</string>
     <string name="settings_home_preferences">પસંદગીઓ</string>
-    <string name="settings_home_display">દર્શાવો</string>
+    <string name="settings_home_display">પ્રદર્શન</string>
     <string name="settings_home_notification_prefs">સૂચના પસંદગીઓ</string>
     <string name="settings_home_accounts">જોડાયેલા ખાતાઓ</string>
     <string name="settings_home_interests">રુચિઓ</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">રિકવરી કોડ્સ</string>
     <string name="account_recovery_codes_title">રિકવરી કોડ્સ</string>
     <string name="sessions_unknown_agent">અજાણ્યું ઉપકરણ</string>
-    <string name="sessions_revoke_title">સત્ર રદ કરવું છે?</string>
+    <string name="sessions_revoke_title">સત્ર પાછું ખેંચવું છે?</string>
     <string name="account_section_oauth">તૃતીય પક્ષ લોગિન</string>
     <string name="account_oauth_link">એકાઉન્ટ લિંક કરો</string>
     <string name="account_unlink">અનલિંક કરો</string>
@@ -29,7 +29,7 @@
     <string name="account_done">થઈ ગયું</string>
     <string name="account_delete">કાઢી નાખો</string>
     <string name="account_rename">નામ બદલો</string>
-    <string name="sessions_revoke">રદ કરો</string>
+    <string name="sessions_revoke">પાછું ખેંચો</string>
     <string name="account_disable">નિષ્ક્રિય કરો</string>
     <string name="account_copy">કૉપિ કરો</string>
     <string name="account_copy_all">બધું કૉપિ કરો</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">રૂટ કાઢી નાખવો છે?</string>
     <string name="route_path">પાથ</string>
     <string name="route_method">પદ્ધતિ</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">એપ્લિકેશન</string>
     <string name="route_method_entity">સંસ્થા</string>
     <string name="route_method_redirect">રિડાયરેક્ટ</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">packages.mochi-os.org માંથી ડાઉનલોડ કરો</string>
     <string name="system_status_copy">કૉપિ કરો</string>
     <string name="system_status_peers">પીઅર્સ</string>
-    <string name="system_status_known">જાણીતા</string>
+    <string name="system_status_peers_totals">જાણીતા %1$s · જોડાયેલ %2$s · પ્રસારણ મેશ %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">જાણીતા %1$s · જોડાયેલ %2$s</string>
     <string name="system_status_peer_connected">જોડાયેલ</string>
     <string name="system_status_peer_disconnected">ડિસ્કનેક્ટેડ</string>
     <string name="system_status_peer_queued">કતારમાં સંદેશા</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">દૂર કરો</string>
     <string name="accounts_remove_title">ખાતું દૂર કરો?</string>
     <string name="system_documents_title">દસ્તાવેજો</string>
-    <string name="system_documents_description">તમારા યુઝરને બતાવવામાં આવતા સર્વર નિયમો, નિયમો અને શરતો, અને ગોપનીયતા સૂચના</string>
     <string name="system_documents_tab_rules">સર્વર નિયમો</string>
     <string name="system_documents_tab_terms">નિયમો અને શરતો</string>
     <string name="system_documents_tab_privacy">ગોપનીયતા</string>
     <string name="system_documents_language">ભાષા</string>
     <string name="system_documents_no_language">આ ભાષા માટે કોઈ દસ્તાવેજ ઉપલબ્ધ નથી.</string>
-    <string name="system_documents_customised">કસ્ટમાઇઝ કરેલ</string>
     <string name="system_documents_using_default">બંડલ થયેલ ડિફૉલ્ટનો ઉપયોગ</string>
     <string name="system_documents_revert">ડિફૉલ્ટ પર પાછા ફરો</string>
     <string name="system_documents_save">સાચવો</string>
@@ -182,28 +183,26 @@
     <string name="system_users_delete">વપરાશકર્તા કાઢી નાખો</string>
     <string name="system_users_delete_title">વપરાશકર્તા કાઢી નાખવો છે?</string>
     <string name="system_users_manage_sessions">સેશન્સ મેનેજ કરો</string>
-    <string name="system_users_sessions_description">આ વપરાશકર્તા માટે સક્રિય સત્રો જુઓ અને રદ કરો.</string>
     <string name="system_users_sessions_empty">આ વપરાશકર્તા પાસે કોઈ સક્રિય સત્ર નથી.</string>
-    <string name="system_users_revoke">રદ કરો</string>
-    <string name="system_users_revoke_all">બધા સત્રો રદ કરો</string>
+    <string name="system_users_revoke">પાછું ખેંચો</string>
+    <string name="system_users_revoke_all">બધા સત્રો પાછા ખેંચો</string>
     <string name="system_users_unknown_browser">અજાણ્યું બ્રાઉઝર</string>
     <string name="system_users_unknown">અજાણ્યું</string>
     <string name="system_users_previous">પાછળ</string>
     <string name="system_users_next">આગળ</string>
     <string name="system_users_empty">કોઈ યુઝર્સ મળ્યા નથી</string>
     <string name="system_users_empty_search">તમારી શોધ સાથે મેળ ખાતા કોઈ યુઝર્સ નથી</string>
-    <string name="system_users_empty_search_hint">તમારા શોધ માપદંડોને સમાયોજિત કરવાનો પ્રયાસ કરો</string>
     <string name="system_users_toast_created">વપરાશકર્તા બનાવ્યો</string>
     <string name="system_users_toast_updated">વપરાશકર્તા અપડેટ કર્યો</string>
     <string name="system_users_toast_deleted">વપરાશકર્તા કાઢી નાખ્યો</string>
     <string name="system_users_toast_suspended">વપરાશકર્તા સસ્પેન્ડ કર્યો</string>
     <string name="system_users_toast_suspension_removed">સસ્પેન્શન દૂર કર્યું</string>
-    <string name="system_users_toast_session_revoked">સત્ર રદ કર્યું</string>
+    <string name="system_users_toast_session_revoked">સત્ર પાછું ખેંચ્યું</string>
     <string name="system_users_toast_create_failed">યુઝર બનાવવામાં નિષ્ફળ</string>
     <string name="system_users_toast_update_failed">યુઝર અપડેટ કરવામાં નિષ્ફળ</string>
     <string name="system_users_toast_delete_failed">યુઝર કાઢી નાખવામાં નિષ્ફળ</string>
     <string name="system_users_toast_status_failed">યુઝર સ્ટેટસ અપડેટ કરવામાં નિષ્ફળ</string>
-    <string name="system_users_toast_revoke_failed">સેશન રદ કરવામાં નિષ્ફળ</string>
+    <string name="system_users_toast_revoke_failed">સત્ર પાછું ખેંચવામાં નિષ્ફળ</string>
 
     <string name="settings_home_sessions">સત્રો</string>
     <string name="settings_home_privacy">ગોપનીયતા નીતિ</string>
@@ -211,17 +210,18 @@
     <string name="settings_home_terms">સેવાની શરતો</string>
     <string name="account_passkeys_empty">કોઈ પાસકી નોંધાયેલ નથી.</string>
     <string name="account_passkey_register_title">પાસકી ઉમેરો</string>
-    <string name="account_passkey_register_message">તમારું ઉપકરણ તમને ખાતરી કરવા માટે કહેશે. પાસકી આ ઉપકરણ સાથે જોડાયેલ છે અને ભવિષ્યના સાઇન-ઇન માટે વાપરવામાં આવશે.</string>
     <string name="account_passkey_name_label">નામ (વૈકલ્પિક)</string>
     <string name="account_passkey_delete_message">\"%1$s\" હવે તમને સાઇન ઇન કરશે નહીં.</string>
-    <string name="account_totp_description">પ્રમાણીકરણ એપ્લિકેશનમાંથી 6-અંકના કોડ સાથે સાઇન ઇન કરો.</string>
     <string name="account_totp_enabled">પ્રમાણીકરણ સક્ષમ છે.</string>
     <string name="account_totp_setup_step1">તમારી પ્રમાણીકરણ એપ્લિકેશનમાં આ ગુપ્ત સ્કેન કરો અથવા દાખલ કરો.</string>
     <string name="account_totp_setup_step2">તમારી એપ્લિકેશન દર્શાવે છે તે 6-અંકનો કોડ દાખલ કરો.</string>
     <string name="account_totp_code">કોડ</string>
     <string name="account_totp_disable_message">તમે હવે પ્રમાણીકરણ કોડ સાથે સાઇન ઇન કરી શકશો નહીં.</string>
     <string name="account_recovery_none">કોઈ પુનઃપ્રાપ્તિ કોડ બનાવ્યા નથી.</string>
-    <string name="account_recovery_count">%1$d ઉપયોગ ન થયેલા પુનઃપ્રાપ્તિ કોડ.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">%1$s પુનઃપ્રાપ્તિ કોડ બાકી છે.</item>
+        <item quantity="other">%1$s પુનઃપ્રાપ્તિ કોડ બાકી છે.</item>
+    </plurals>
     <string name="account_recovery_generate">કોડ બનાવો</string>
     <string name="account_recovery_regenerate">કોડ ફરીથી બનાવો</string>
     <string name="account_recovery_regen_title">પુનઃપ્રાપ્તિ કોડ ફરીથી બનાવવા?</string>
@@ -237,7 +237,7 @@
     <string name="account_last_used">છેલ્લે ઉપયોગ કર્યો %1$s</string>
     <string name="route_delete_message">આ માર્ગ \"%1$s\" માટેનો રૂટ દૂર કરશે.</string>
     <string name="route_empty">કોઈ માર્ગ રૂપરેખાંકિત નથી.</string>
-    <string name="route_meta">પ્રાથમિકતા %1$d · %2$s</string>
+    <string name="route_meta">પ્રાથમિકતા %1$s · %2$s</string>
     <string name="interests_search_placeholder">ઉમેરવા માટેના વિષયો શોધો…</string>
     <string name="interests_empty">હજુ સુધી કોઈ રસ નથી.</string>
     <string name="interests_summary_regenerate">સારાંશ ફરી જનરેટ કરો</string>
@@ -268,9 +268,12 @@
     <string name="system_users_delete_message">આ કાયમ માટે વપરાશકર્તા \"%1$s\" ને કાઢી નાખશે. આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.</string>
     <string name="system_users_sessions_title">%1$s ના સત્રો</string>
     <string name="system_users_session_last_accessed">છેલ્લે ઍક્સેસ: %1$s</string>
-    <string name="system_users_revoke_all_title">બધા સત્રો રદ કરવા?</string>
+    <string name="system_users_revoke_all_title">બધા સત્રો પાછા ખેંચવા છે?</string>
     <string name="system_users_revoke_all_message">આ વપરાશકર્તાના તમામ સક્રિય સત્રો સાઇન આઉટ થશે.</string>
-    <string name="system_users_pagination_status">%3$d વપરાશકર્તાઓમાંથી %1$d–%2$d દર્શાવી રહ્યું છે</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">%3$s વપરાશકર્તામાંથી %1$s–%2$s દર્શાવી રહ્યું છે</item>
+        <item quantity="other">%3$s વપરાશકર્તાઓમાંથી %1$s–%2$s દર્શાવી રહ્યું છે</item>
+    </plurals>
     <string name="account_title">ખાતું</string>
     <string name="account_section_identity">ઓળખ</string>
     <string name="account_identity_identity">ઓળખ</string>
@@ -303,12 +306,12 @@
     <string name="domain_verify">DNS ચકાસો</string>
     <string name="settings_home_domains">ડોમેન્સ</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">%1$d ગંતવ્ય પર પરીક્ષણ મોકલાયું</item>
-        <item quantity="other">%1$d ગંતવ્યો પર પરીક્ષણ મોકલાયું</item>
+        <item quantity="one">%1$s ગંતવ્ય પર પરીક્ષણ મોકલાયું</item>
+        <item quantity="other">%1$s ગંતવ્યો પર પરીક્ષણ મોકલાયું</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="one">%1$d સત્ર રદ કર્યું</item>
-        <item quantity="other">%1$d સત્રો રદ કર્યા</item>
+        <item quantity="one">%1$s સત્ર પાછું ખેંચ્યું</item>
+        <item quantity="other">%1$s સત્રો પાછા ખેંચ્યા</item>
     </plurals>
     <string name="login_title">લોગિન</string>
     <string name="login_section_methods">લૉગિન પદ્ધતિઓ</string>
@@ -339,18 +342,15 @@
     <string name="system_status_reachability_public">જાહેર</string>
     <string name="system_status_reachability_private">ખાનગી</string>
     <string name="system_status_reachability_unknown">અજાણ્યું</string>
-    <string name="system_status_relay">રિલે દ્વારા</string>
-    <string name="system_status_mesh">પ્રસારણ મેશ</string>
+    <string name="system_status_reachability_relay">%1$s · રિલે દ્વારા</string>
     <string name="system_status_broadcast">છેલ્લું પ્રસારણ</string>
     <string name="system_status_queued_broadcasts">કતારમાં બ્રોડકાસ્ટ સંદેશા</string>
     <string name="system_setting_hostname_publish">હોસ્ટનેમ અને ડોમેન્સ અન્ય સર્વરોને જાહેર કરો</string>
     <string name="system_setting_hostname">અન્ય સર્વરોને જાહેર કરાયેલ હોસ્ટનેમ</string>
     <string name="system_status_peer_id">પીઅર ID</string>
     <string name="system_status_holepunch">હોલ પંચ</string>
-    <string name="system_status_holepunch_value">%1$d સફળ · %2$d નિષ્ફળ</string>
     <string name="system_status_awaiting_routing">રૂટિંગની રાહ જોતા સંદેશા</string>
     <string name="system_status_relay_service">રિલે સેવા</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d આરક્ષણો · %3$d સર્કિટ · %4$d નકારેલ</string>
     <string name="route_target_select">પસંદ કરો</string>
     <string name="account_data_description">સંપૂર્ણ બેકઅપ ડાઉનલોડ કરો જે તમે આ અથવા અન્ય Mochi સર્વર પર પુનઃસ્થાપિત કરી શકો છો.</string>
     <string name="route_target_none">કોઈ લક્ષ્ય ઉપલબ્ધ નથી</string>
@@ -375,7 +375,12 @@
     <string name="accounts_device_seen">છેલ્લે જોવાયું %1$s</string>
     <string name="notifprefs_device_app">%1$s · ઍપ</string>
     <string name="notifprefs_device_push">%1$s · પુશ</string>
-    <string name="notifprefs_test_partial">%2$dમાંથી %1$d લક્ષ્યસ્થાનો પર પરીક્ષણ મોકલાયું</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">%2$s ગંતવ્યમાંથી %1$s પર પરીક્ષણ મોકલાયું</item>
+        <item quantity="other">%2$s ગંતવ્યોમાંથી %1$s પર પરીક્ષણ મોકલાયું</item>
+    </plurals>
     <string name="notifprefs_test_none">કોઈ ડેસ્ટિનેશન્સ કન્ફિગર કર્યા નથી</string>
     <string name="notifprefs_transport_fcm">Android પુશ</string>
     <string name="notifprefs_no_destinations">કોઈ ગંતવ્ય નથી</string>
@@ -385,13 +390,36 @@
     <string name="accounts_field_topic">વિષય</string>
     <string name="accounts_field_secret">સહી ગુપ્ત કી</string>
     <string name="account_totp_open">ઓથેન્ટિકેટર ઍપમાં ખોલો</string>
-    <string name="accounts_revoke">ઍક્સેસ રદ કરો</string>
+    <string name="accounts_revoke">ઍક્સેસ પાછું ખેંચો</string>
     <string name="accounts_capability_calendar">કૅલેન્ડર</string>
     <string name="accounts_capability_notify">સૂચનાઓ</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">સાઇન-ઇન</string>
     <string name="accounts_provider_caldav">કૅલેન્ડર સર્વર</string>
-    <string name="accounts_revoke_confirm">આ %1$s ની કૅલેન્ડર ઍક્સેસ રદ કરશે. %2$s સાથે સાઇન-ઇન ત્યાં સુધી રહેશે જ્યાં સુધી તમે લૉગિન પૃષ્ઠ પર તેને અનલિંક ન કરો.</string>
+    <string name="accounts_revoke_confirm">આ %1$s ની કૅલેન્ડર ઍક્સેસ પાછી ખેંચશે. %2$s સાથે સાઇન-ઇન ત્યાં સુધી રહેશે જ્યાં સુધી તમે લૉગિન પૃષ્ઠ પર તેને અનલિંક ન કરો.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">અજાણી થીમ</string>
+    <string name="system_documents_modified">સંશોધિત</string>
+    <string name="system_documents_discard_title">ફેરફારો છોડી દઈએ?</string>
+    <string name="system_documents_discard">છોડી દો</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s સફળ</item>
+        <item quantity="other">%1$s સફળ</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s નિષ્ફળ</item>
+        <item quantity="other">%1$s નિષ્ફળ</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s આરક્ષણ</item>
+        <item quantity="other">%1$s / %2$s આરક્ષણો</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s સર્કિટ</item>
+        <item quantity="other">%1$s સર્કિટ</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s નકારેલ</item>
+        <item quantity="other">%1$s નકારેલ</item>
+    </plurals>
 </resources>

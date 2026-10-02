@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Gan réada</string>
     <string name="crm_board_no_columns">Níl aon cholún cumraithe don amharc seo</string>
     <string name="crm_board_no_options">Níl aon rogha cumraithe don réimse colúin</string>
-    <string name="crm_board_nested_count">+%1$d neadaithe</string>
+    <string name="crm_board_nested_count">+%1$s neadaithe</string>
     <string name="crm_move_to_column">Bog go colún</string>
 
 
@@ -289,7 +289,7 @@
     <string name="crm_export_saved">Sábháladh sonraí CRM</string>
     <string name="crm_create_upload_json">Uaslódáil comhad .zip nó .json</string>
     <string name="crm_create_blocked_no_options">Ní féidir a chruthú: tá %1$s riachtanach ach níl aon roghanna aige. Cuir roghanna leis sa Dearadh.</string>
-    <string name="crm_design_sample">Sampla %1$d</string>
+    <string name="crm_design_sample">Sampla %1$s</string>
     <string name="crm_option_delete_title">Scrios rogha</string>
     <string name="crm_option_delete_message">An bhfuil tú cinnte gur mhaith leat an rogha \"%1$s\" a scriosadh?</string>
 </resources>

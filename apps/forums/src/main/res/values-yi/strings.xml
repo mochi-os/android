@@ -153,7 +153,7 @@
     <string name="forums_access_level_moderate">מאָדערירן</string>
     <string name="forums_members_search">פֿילטרירן מיטגלידער</string>
     <string name="forums_banner_description">Markdown וואָס ווערט געוויזן אויבן אין פֿאָרום.</string>
-    <string name="forums_banner_placeholder">ברוכים הבאים צו דעם פֿאָרום…</string>
+    <string name="forums_banner_placeholder">אַרײַנשרײַבן באַנער־טעקסט (markdown ווערט געשטיצט)…</string>
     <string name="forums_ai_mode_label">מאָדע: %1$s</string>
     <string name="forums_ai_mode_heading">AI־מאָדע</string>
     <string name="forums_ai_mode_off">אומדערלויבט</string>
@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">טאַפּ דעם לייענצייכן אויף וועלכן עס איז אַרײַנשרײַב צו היטן עס דאָ אויף שפּעטער.</string>
     <string name="forums_saved_error_clear">ניט געלונגען צו רייניקן די געהיטענע אַרײַנשרײַבן</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d נײַער אַרײַנשרײַב</item>
-        <item quantity="other">%d נײַע אַרײַנשרײַבן</item>
+        <item quantity="one">%s נײַער אַרײַנשרײַב</item>
+        <item quantity="other">%s נײַע אַרײַנשרײַבן</item>
     </plurals>
     <string name="forums_rss_feed">RSS פֿיד</string>
     <string name="forums_rss_mode_posts">פּאָסטן</string>
@@ -236,13 +236,13 @@
     <string name="forums_clear">רייניקן</string>
     <string name="forums_ai_account_label">קאָנטע</string>
     <string name="forums_ai_prompt_default">סטאַנדאַרד</string>
-    <string name="forums_moderation_reject">אָפּזאָגן</string>
+    <string name="forums_moderation_reject">אָפּוואַרפֿן</string>
     <string name="forums_moderation_report_by">פֿון %1$s</string>
     <string name="forums_moderation_restriction_state_banned">פֿאַרבאָטן</string>
     <string name="forums_moderation_unit_days">טעג</string>
     <string name="forums_settings_banner_saved">באאנער געזיכערט</string>
     <string name="forums_settings_access_updated">צוטריט באַנײַט</string>
-    <string name="forums_settings_access_revoked">צוגאנג צונופגענומען</string>
+    <string name="forums_settings_access_revoked">צוטריט צוריקגענומען</string>
     <string name="forums_settings_member_removed">מיטגליד אַראָפּגענומען</string>
     <string name="forums_settings_prompt_saved">פּראָמפּט אויפֿגעהיט</string>
     <string name="forums_settings_section_identity">אידענטיטעט</string>
@@ -296,8 +296,8 @@
     <string name="forums_settings_unsubscribe_section">אַבאָנירט זיך אָפּ פֿון פֿאָרום</string>
     <string name="forums_share_link_title">פֿאָרום לינק</string>
     <string name="forums_find_found_by_url">געפֿונען דורך URL</string>
-    <string name="forums_moderation_pending_posts">ווארטנדיקע פּאָסטן (%1$d)</string>
-    <string name="forums_moderation_pending_comments">ווארטנדיקע באַמערקונגען (%1$d)</string>
+    <string name="forums_moderation_pending_posts">ווארטנדיקע פּאָסטן (%1$s)</string>
+    <string name="forums_moderation_pending_comments">ווארטנדיקע באַמערקונגען (%1$s)</string>
     <string name="forums_moderation_on_image">אויפֿן בילד: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">איר האָט נישט קיין דערלויבעניש צו פּאָסטן אין דעם פֿאָרום</string>

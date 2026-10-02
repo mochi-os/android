@@ -10,8 +10,8 @@
     <string name="settings_home_accounts">Povezani računi</string>
     <string name="settings_home_interests">Zanimanja</string>
     <string name="account_section_passkeys">Geslo-ključi</string>
-    <string name="account_passkey_register">Dodaj geslo</string>
-    <string name="account_passkey_delete_title">Izbriši geslo?</string>
+    <string name="account_passkey_register">Dodaj geslo-ključ</string>
+    <string name="account_passkey_delete_title">Izbriši geslo-ključ?</string>
     <string name="account_section_totp">Aplikacija za avtentikacijo</string>
     <string name="account_totp_setup">Nastavi avtentikator</string>
     <string name="account_totp_setup_title">Nastavi avtentikator</string>
@@ -20,7 +20,7 @@
     <string name="account_section_recovery">Obnovitvene kode</string>
     <string name="account_recovery_codes_title">Obnovitvene kode</string>
     <string name="sessions_unknown_agent">Neznana naprava</string>
-    <string name="sessions_revoke_title">Prekliči sejo?</string>
+    <string name="sessions_revoke_title">Odvzeti sejo?</string>
     <string name="account_section_oauth">Prijava tretje osebe</string>
     <string name="account_oauth_link">Poveži račun</string>
     <string name="account_unlink">Odstrani povezavo</string>
@@ -29,7 +29,7 @@
     <string name="account_done">Končano</string>
     <string name="account_delete">Izbriši</string>
     <string name="account_rename">Preimenuj</string>
-    <string name="sessions_revoke">Prekliči</string>
+    <string name="sessions_revoke">Odvzemi</string>
     <string name="account_disable">Onemogoči</string>
     <string name="account_copy">Kopiraj</string>
     <string name="account_copy_all">Kopiraj vse</string>
@@ -45,6 +45,8 @@
     <string name="route_delete_title">Izbriši pot?</string>
     <string name="route_path">Pot</string>
     <string name="route_method">Metoda</string>
+    <string name="route_picker_value">%1$s: %2$s</string>
+    <string name="route_summary">%1$s → %2$s</string>
     <string name="route_method_app">Aplikacija</string>
     <string name="route_method_entity">Entiteta</string>
     <string name="route_method_redirect">Preusmeritev</string>
@@ -81,7 +83,8 @@
     <string name="system_status_download_from_packages">Prenesite s packages.mochi-os.org</string>
     <string name="system_status_copy">Kopiraj</string>
     <string name="system_status_peers">Vrstniki</string>
-    <string name="system_status_known">Znani</string>
+    <string name="system_status_peers_totals">Znani %1$s · Povezani %2$s · Oddajni mesh %3$s</string>
+    <string name="system_status_peers_totals_without_mesh">Znani %1$s · Povezani %2$s</string>
     <string name="system_status_peer_connected">Povezano</string>
     <string name="system_status_peer_disconnected">Prekinjena povezava</string>
     <string name="system_status_peer_queued">Sporočila v čakalni vrsti</string>
@@ -104,13 +107,11 @@
     <string name="accounts_remove">Odstrani</string>
     <string name="accounts_remove_title">Odstrani račun?</string>
     <string name="system_documents_title">Dokumenti</string>
-    <string name="system_documents_description">Pravila strežnika, pogoji uporabe in obvestilo o zasebnosti, prikazano vašim uporabnikom</string>
     <string name="system_documents_tab_rules">Pravila strežnika</string>
     <string name="system_documents_tab_terms">Pogoji uporabe</string>
     <string name="system_documents_tab_privacy">Zasebnost</string>
     <string name="system_documents_language">Jezik</string>
     <string name="system_documents_no_language">Za ta jezik dokument ni na voljo.</string>
-    <string name="system_documents_customised">Prilagojeno</string>
     <string name="system_documents_using_default">Uporablja se priložena privzeta vrednost</string>
     <string name="system_documents_revert">Vrni na privzeto</string>
     <string name="system_documents_save">Shrani</string>
@@ -137,7 +138,7 @@
     <string name="system_settings_reset_title">Ponastavi na privzeto?</string>
     <string name="system_setting_apps_install_user">Dovoli uporabnikom namestitev aplikacij</string>
     <string name="system_setting_auth_email">Prijava z e-poštno kodo</string>
-    <string name="system_setting_auth_passkey">Prijava s ključem</string>
+    <string name="system_setting_auth_passkey">Prijava z geslo-ključem</string>
     <string name="system_setting_auth_totp">Prijava z aplikacijo overitelja TOTP</string>
     <string name="system_setting_auth_recovery">Prijava z obnovitveno kodo</string>
     <string name="system_setting_auth_oauth">Prijava z OAuth 2.0</string>
@@ -182,46 +183,47 @@
     <string name="system_users_delete">Izbriši uporabnika</string>
     <string name="system_users_delete_title">Izbriši uporabnika?</string>
     <string name="system_users_manage_sessions">Upravljaj seje</string>
-    <string name="system_users_sessions_description">Prikaži in prekliči aktivne seje za tega uporabnika.</string>
     <string name="system_users_sessions_empty">Ta uporabnik nima aktivnih sej.</string>
-    <string name="system_users_revoke">Prekliči</string>
-    <string name="system_users_revoke_all">Prekliči vse seje</string>
+    <string name="system_users_revoke">Odvzemi</string>
+    <string name="system_users_revoke_all">Odvzemi vse seje</string>
     <string name="system_users_unknown_browser">Neznan brskalnik</string>
     <string name="system_users_unknown">Neznano</string>
     <string name="system_users_previous">Prejšnje</string>
     <string name="system_users_next">Naprej</string>
     <string name="system_users_empty">Uporabnikov ni mogoče najti</string>
     <string name="system_users_empty_search">Noben uporabnik ne ustreza vašemu iskanju</string>
-    <string name="system_users_empty_search_hint">Poskusi prilagoditi merila iskanja</string>
     <string name="system_users_toast_created">Uporabnik ustvarjen</string>
     <string name="system_users_toast_updated">Uporabnik posodobljen</string>
     <string name="system_users_toast_deleted">Uporabnik izbrisan</string>
     <string name="system_users_toast_suspended">Uporabnik začasno ustavljen</string>
     <string name="system_users_toast_suspension_removed">Ustavitev odstranjena</string>
-    <string name="system_users_toast_session_revoked">Seja preklicana</string>
+    <string name="system_users_toast_session_revoked">Seja odvzeta</string>
     <string name="system_users_toast_create_failed">Neuspešno ustvarjanje uporabnika</string>
     <string name="system_users_toast_update_failed">Neuspešna posodobitev uporabnika</string>
     <string name="system_users_toast_delete_failed">Neuspešno brisanje uporabnika</string>
     <string name="system_users_toast_status_failed">Neuspešna posodobitev stanja uporabnika</string>
-    <string name="system_users_toast_revoke_failed">Neuspešen preklic seje</string>
+    <string name="system_users_toast_revoke_failed">Neuspešen odvzem seje</string>
 
     <string name="settings_home_sessions">Seje</string>
     <string name="settings_home_privacy">Pravilnik o zasebnosti</string>
     <string name="settings_home_rules">Pravila</string>
     <string name="settings_home_terms">Pogoji storitve</string>
-    <string name="account_passkeys_empty">Ni registriranih dostopnih ključev.</string>
-    <string name="account_passkey_register_title">Dodaj dostopni ključ</string>
-    <string name="account_passkey_register_message">Vaša naprava vas bo prosila za potrditev. Dostopni ključ je vezan na to napravo in se uporablja za prihodnje prijave.</string>
+    <string name="account_passkeys_empty">Ni registriranih geslo-ključev.</string>
+    <string name="account_passkey_register_title">Dodaj geslo-ključ</string>
     <string name="account_passkey_name_label">Ime (neobvezno)</string>
     <string name="account_passkey_delete_message">„%1$s\" vas ne bo več prijavil.</string>
-    <string name="account_totp_description">Prijavite se s 6-mestno kodo iz aplikacije za preverjanje pristnosti.</string>
     <string name="account_totp_enabled">Preverjevalnik je omogočen.</string>
     <string name="account_totp_setup_step1">Optično preberite ali vnesite to skrivnost v svoji aplikaciji za preverjanje pristnosti.</string>
     <string name="account_totp_setup_step2">Vnesite 6-mestno kodo, ki jo prikaže aplikacija.</string>
     <string name="account_totp_code">Koda</string>
     <string name="account_totp_disable_message">Ne boste se več mogli prijaviti s kodo preverjevalnika.</string>
     <string name="account_recovery_none">Obnovitvene kode niso bile ustvarjene.</string>
-    <string name="account_recovery_count">%1$d neuporabljenih obnovitvenih kod.</string>
+    <plurals name="account_recovery_count">
+        <item quantity="one">Preostala je %1$s obnovitvena koda.</item>
+        <item quantity="two">Preostali sta %1$s obnovitveni kodi.</item>
+        <item quantity="few">Preostale so %1$s obnovitvene kode.</item>
+        <item quantity="other">Preostalo je %1$s obnovitvenih kod.</item>
+    </plurals>
     <string name="account_recovery_generate">Ustvari kode</string>
     <string name="account_recovery_regenerate">Znova ustvari kode</string>
     <string name="account_recovery_regen_title">Znova ustvariti obnovitvene kode?</string>
@@ -237,7 +239,7 @@
     <string name="account_last_used">Nazadnje uporabljeno %1$s</string>
     <string name="route_delete_message">To bo odstranilo pot za pot „%1$s\".</string>
     <string name="route_empty">Ni konfiguriranih poti.</string>
-    <string name="route_meta">Prioriteta %1$d · %2$s</string>
+    <string name="route_meta">Prioriteta %1$s · %2$s</string>
     <string name="interests_search_placeholder">Iskanje tem za dodajanje…</string>
     <string name="interests_empty">Še ni interesov.</string>
     <string name="interests_summary_regenerate">Znova ustvari povzetek</string>
@@ -268,9 +270,14 @@
     <string name="system_users_delete_message">To bo trajno izbrisalo uporabnika „%1$s\". Tega dejanja ni mogoče razveljaviti.</string>
     <string name="system_users_sessions_title">Seje uporabnika %1$s</string>
     <string name="system_users_session_last_accessed">Zadnji dostop: %1$s</string>
-    <string name="system_users_revoke_all_title">Preklicati vse seje?</string>
+    <string name="system_users_revoke_all_title">Odvzeti vse seje?</string>
     <string name="system_users_revoke_all_message">Vse aktivne seje tega uporabnika bodo odjavljene.</string>
-    <string name="system_users_pagination_status">Prikaz %1$d–%2$d od %3$d uporabnikov</string>
+    <plurals name="system_users_pagination_status">
+        <item quantity="one">Prikaz %1$s–%2$s od %3$s uporabnika</item>
+        <item quantity="two">Prikaz %1$s–%2$s od %3$s uporabnikov</item>
+        <item quantity="few">Prikaz %1$s–%2$s od %3$s uporabnikov</item>
+        <item quantity="other">Prikaz %1$s–%2$s od %3$s uporabnikov</item>
+    </plurals>
     <string name="account_title">Račun</string>
     <string name="account_section_identity">Identiteta</string>
     <string name="account_identity_identity">Identiteta</string>
@@ -303,16 +310,16 @@
     <string name="domain_verify">Preveri DNS</string>
     <string name="settings_home_domains">Domene</string>
     <plurals name="notifprefs_test_sent">
-        <item quantity="one">Preizkus poslan na %1$d cilj</item>
-        <item quantity="two">Preizkus poslan na %1$d cilja</item>
-        <item quantity="few">Preizkus poslan na %1$d cilje</item>
-        <item quantity="other">Preizkus poslan na %1$d ciljev</item>
+        <item quantity="one">Preizkus poslan na %1$s cilj</item>
+        <item quantity="two">Preizkus poslan na %1$s cilja</item>
+        <item quantity="few">Preizkus poslan na %1$s cilje</item>
+        <item quantity="other">Preizkus poslan na %1$s ciljev</item>
     </plurals>
     <plurals name="system_users_sessions_revoked">
-        <item quantity="few">Preklicane %1$d seje</item>
-        <item quantity="one">Preklicana %1$d seja</item>
-        <item quantity="other">Preklicanih %1$d sej</item>
-        <item quantity="two">Preklicani %1$d seji</item>
+        <item quantity="few">Odvzete %1$s seje</item>
+        <item quantity="one">Odvzeta %1$s seja</item>
+        <item quantity="other">Odvzetih %1$s sej</item>
+        <item quantity="two">Odvzeti %1$s seji</item>
     </plurals>
     <string name="login_title">Prijava</string>
     <string name="login_section_methods">Načini prijave</string>
@@ -343,18 +350,15 @@
     <string name="system_status_reachability_public">Javno</string>
     <string name="system_status_reachability_private">Zasebno</string>
     <string name="system_status_reachability_unknown">Neznano</string>
-    <string name="system_status_relay">Prek releja</string>
-    <string name="system_status_mesh">Oddajni mesh</string>
+    <string name="system_status_reachability_relay">%1$s · prek releja</string>
     <string name="system_status_broadcast">Zadnje oddajanje</string>
     <string name="system_status_queued_broadcasts">Oddajna sporočila v čakalni vrsti</string>
     <string name="system_setting_hostname_publish">Objavi ime gostitelja in domene drugim strežnikom</string>
     <string name="system_setting_hostname">Ime gostitelja, objavljeno drugim strežnikom</string>
     <string name="system_status_peer_id">ID soležnika</string>
     <string name="system_status_holepunch">Preboj</string>
-    <string name="system_status_holepunch_value">%1$d uspešnih · %2$d neuspešnih</string>
     <string name="system_status_awaiting_routing">Sporočila, ki čakajo na usmerjanje</string>
     <string name="system_status_relay_service">Storitev releja</string>
-    <string name="system_status_relay_service_value">%1$d / %2$d rezervacije · %3$d vezja · %4$d zavrnjeno</string>
     <string name="route_target_select">Izberi</string>
     <string name="account_data_description">Prenesite celotno varnostno kopijo, ki jo lahko obnovite na tem ali drugem strežniku Mochi.</string>
     <string name="route_target_none">Ni razpoložljivih ciljev</string>
@@ -379,7 +383,14 @@
     <string name="accounts_device_seen">Nazadnje viden %1$s</string>
     <string name="notifprefs_device_app">%1$s · aplikacija</string>
     <string name="notifprefs_device_push">%1$s · push obvestila</string>
-    <string name="notifprefs_test_partial">Test poslan na %1$d od %2$d ciljev</string>
+    <string name="notifprefs_destination_rss">RSS: %1$s</string>
+    <string name="notifprefs_topic_title">%1$s: %2$s</string>
+    <plurals name="notifprefs_test_partial">
+        <item quantity="one">Preizkus poslan na %1$s od %2$s cilja</item>
+        <item quantity="two">Preizkus poslan na %1$s od %2$s ciljev</item>
+        <item quantity="few">Preizkus poslan na %1$s od %2$s ciljev</item>
+        <item quantity="other">Preizkus poslan na %1$s od %2$s ciljev</item>
+    </plurals>
     <string name="notifprefs_test_none">Ni nastavljenih ciljev</string>
     <string name="notifprefs_transport_fcm">Android push obvestila</string>
     <string name="notifprefs_no_destinations">Brez ciljev</string>
@@ -389,13 +400,46 @@
     <string name="accounts_field_topic">Tema</string>
     <string name="accounts_field_secret">Skrivnost za podpisovanje</string>
     <string name="account_totp_open">Odpri v aplikaciji za preverjanje pristnosti</string>
-    <string name="accounts_revoke">Prekliči dostop</string>
+    <string name="accounts_revoke">Odvzemi dostop</string>
     <string name="accounts_capability_calendar">Koledar</string>
     <string name="accounts_capability_notify">Obvestila</string>
     <string name="accounts_capability_ai">AI</string>
     <string name="accounts_capability_login">Prijava</string>
     <string name="accounts_provider_caldav">Koledarski strežnik</string>
-    <string name="accounts_revoke_confirm">S tem bo preklican dostop do koledarja za %1$s. Prijava z %2$s ostane, dokler je ne prekinete na strani za prijavo.</string>
+    <string name="accounts_revoke_confirm">S tem bo odvzet dostop do koledarja za %1$s. Prijava z %2$s ostane, dokler je ne prekinete na strani za prijavo.</string>
     <string name="accounts_capability_mcp">MCP</string>
     <string name="system_settings_theme_unknown">Neznana tema</string>
+    <string name="system_documents_modified">Spremenjeno</string>
+    <string name="system_documents_discard_title">Zavržem spremembe?</string>
+    <string name="system_documents_discard">Zavrzi</string>
+    <plurals name="system_status_holepunch_succeeded">
+        <item quantity="one">%1$s uspešen</item>
+        <item quantity="two">%1$s uspešna</item>
+        <item quantity="few">%1$s uspešni</item>
+        <item quantity="other">%1$s uspešnih</item>
+    </plurals>
+    <plurals name="system_status_holepunch_failed">
+        <item quantity="one">%1$s neuspešen</item>
+        <item quantity="two">%1$s neuspešna</item>
+        <item quantity="few">%1$s neuspešni</item>
+        <item quantity="other">%1$s neuspešnih</item>
+    </plurals>
+    <plurals name="system_status_relay_reservations">
+        <item quantity="one">%1$s / %2$s rezervacija</item>
+        <item quantity="two">%1$s / %2$s rezervaciji</item>
+        <item quantity="few">%1$s / %2$s rezervacije</item>
+        <item quantity="other">%1$s / %2$s rezervacij</item>
+    </plurals>
+    <plurals name="system_status_relay_circuits">
+        <item quantity="one">%1$s vezje</item>
+        <item quantity="two">%1$s vezji</item>
+        <item quantity="few">%1$s vezja</item>
+        <item quantity="other">%1$s vezij</item>
+    </plurals>
+    <plurals name="system_status_relay_refused">
+        <item quantity="one">%1$s zavrnjena</item>
+        <item quantity="two">%1$s zavrnjeni</item>
+        <item quantity="few">%1$s zavrnjene</item>
+        <item quantity="other">%1$s zavrnjenih</item>
+    </plurals>
 </resources>

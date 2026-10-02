@@ -40,11 +40,11 @@
     <string name="projects_settings_tab_people">Mọi người</string>
     <string name="projects_option_icon">Biểu tượng</string>
     <string name="projects_option_icon_placeholder">ví dụ Check, Star, Flag</string>
-    <string name="projects_settings_unsubscribe">Hủy đăng ký</string>
+    <string name="projects_settings_unsubscribe">Ngừng đăng ký</string>
     <string name="projects_settings_delete_project">Xóa dự án</string>
     <string name="projects_settings_delete_confirm_title">Xóa dự án</string>
-    <string name="projects_settings_unsubscribe_title">Hủy đăng ký</string>
-    <string name="projects_settings_unsubscribe_message">Bạn có chắc muốn hủy đăng ký dự án này?</string>
+    <string name="projects_settings_unsubscribe_title">Ngừng đăng ký</string>
+    <string name="projects_settings_unsubscribe_message">Bạn có chắc muốn ngừng đăng ký dự án này?</string>
     <string name="projects_access_level_owner">Chủ sở hữu</string>
     <string name="projects_object_watch">Theo dõi</string>
     <string name="projects_object_tab_properties">Thuộc tính</string>
@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">đã thực hiện thay đổi</string>
     <string name="projects_attachment_empty">Không có tệp đính kèm</string>
     <string name="projects_attachment_default_name">tệp đính kèm</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Yêu cầu hợp nhất mới</string>
     <string name="projects_request_status_closed">Đã đóng</string>
     <string name="projects_request_back_to_list">Quay lại danh sách</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Đang kiểm tra trạng thái hợp nhất…</string>
     <string name="projects_request_can_merge">Có thể hợp nhất</string>
     <string name="projects_request_cannot_merge">Không thể hợp nhất</string>
-    <string name="projects_request_ahead_behind">%1$d trước, %2$d sau</string>
+    <string name="projects_request_ahead_behind">%1$s trước, %2$s sau</string>
     <string name="projects_request_draft_notice">Đây là bản nháp. Đánh dấu là sẵn sàng trước khi hợp nhất.</string>
     <string name="projects_request_view_diff">Xem khác biệt</string>
     <string name="projects_request_mark_ready">Đánh dấu là sẵn sàng</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Không có cột nào được cấu hình cho chế độ xem này</string>
     <string name="projects_board_no_options">Không có tùy chọn nào được cấu hình cho trường cột</string>
     <string name="projects_board_column_options">Tùy chọn cột</string>
-    <string name="projects_board_nested_count">+%1$d lồng nhau</string>
+    <string name="projects_board_nested_count">+%1$s lồng nhau</string>
     <string name="projects_move_to_column">Chuyển sang cột</string>
     <string name="projects_move_to_row">Chuyển sang hàng</string>
     <string name="projects_move_after">Sau %1$s</string>
@@ -360,13 +360,13 @@
     <string name="projects_activity_commented">đã bình luận</string>
     <string name="projects_attachment_delete_confirm_message">Tệp đính kèm này sẽ bị xóa vĩnh viễn.</string>
     <string name="projects_attachment_delete_confirm_title">Xóa tệp đính kèm?</string>
-    <string name="projects_settings_unsubscribe_section">Hủy đăng ký dự án</string>
+    <string name="projects_settings_unsubscribe_section">Ngừng đăng ký dự án</string>
     <string name="projects_share_link_title">Chia sẻ dự án</string>
     <string name="projects_sort_filter_title">Sắp xếp và lọc</string>
     <string name="projects_create_prefix_hint">Dùng cho các ID dễ đọc như %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d tệp xung đột</item>
-        <item quantity="other">%1$d tệp xung đột</item>
+        <item quantity="one">%1$s tệp xung đột</item>
+        <item quantity="other">%1$s tệp xung đột</item>
     </plurals>
     <string name="projects_design_export_saved">Đã lưu thiết kế</string>
     <string name="projects_design_import_failed">Không thể đọc tệp đó</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Đã lưu dữ liệu dự án</string>
     <string name="projects_exporting">Đang chuẩn bị bản xuất…</string>
     <string name="projects_board_add_column">Thêm cột</string>
-    <string name="projects_design_sample">Mẫu %1$d</string>
+    <string name="projects_design_sample">Mẫu %1$s</string>
     <string name="projects_option_delete_title">Xóa tùy chọn</string>
     <string name="projects_option_delete_message">Bạn có chắc chắn muốn xóa tùy chọn \"%1$s\" không?</string>
     <string name="projects_create_object_no_types">Chưa thể tạo loại mục nào. Hãy tạo các mục cha cần thiết trước.</string>

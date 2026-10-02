@@ -180,9 +180,9 @@
     <string name="people_books_create">Izveidot adrešu grāmatu</string>
     <string name="people_books_delete">Dzēst adrešu grāmatu</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="zero">Vai dzēst %1$s un tās %2$d kontaktus?</item>
-        <item quantity="one">Vai dzēst %1$s un tās %2$d kontaktu?</item>
-        <item quantity="other">Vai dzēst %1$s un tās %2$d kontaktus?</item>
+        <item quantity="zero">Vai dzēst %1$s un tās %2$s kontaktus?</item>
+        <item quantity="one">Vai dzēst %1$s un tās %2$s kontaktu?</item>
+        <item quantity="other">Vai dzēst %1$s un tās %2$s kontaktus?</item>
     </plurals>
     <string name="people_welcome_body">Atrodiet draugus visā Mochi un sazinieties. Pieskarieties Pievienot kontaktu, lai nosūtītu ielūgumu.</string>
     <string name="people_person_state_contact">Kontaktos</string>

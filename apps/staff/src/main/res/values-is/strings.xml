@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Athugasemdir</string>
     <string name="staff_accounts_reason_label">Ástæða</string>
     <string name="staff_accounts_reason_optional_label">Ástæða (valfrjáls)</string>
-    <string name="staff_accounts_sales">%1$d sölur</string>
+    <string name="staff_accounts_sales">%1$s sölur</string>
     <string name="staff_accounts_search_clear">Hreinsa leit</string>
     <string name="staff_accounts_search_placeholder">Leita</string>
     <string name="staff_accounts_seller_buyers">Aðeins kaupendur</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Ónefnt</string>
     <string name="staff_accounts_unsuspend">Afturkalla frestun</string>
     <string name="staff_accounts_unsuspended_toast">Frystingu reiknings aflétt</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Hætta við</string>
     <string name="staff_appeals_decide">Ákveða</string>
     <string name="staff_appeals_decision_denied">Halda skráningu hafnað</string>

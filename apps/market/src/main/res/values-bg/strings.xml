@@ -405,7 +405,7 @@
     <string name="market_type_physical">Физически</string>
     <string name="market_messages_send">Изпрати</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Разкажете на купувачите за себе си…</string>
     <string name="market_account_load_failed">Акаунтът не може да бъде зареден</string>
     <string name="market_account_save_failed">Промените не могат да бъдат запазени</string>
@@ -432,8 +432,8 @@
     <string name="market_bids_current_bid">Текуща: %1$s</string>
     <string name="market_bids_ends_in">Завършва след %1$s</string>
     <string name="market_bids_your_bid">Вашата оферта: %1$s</string>
-    <string name="market_carousel_main">Снимка %1$d от %2$d</string>
-    <string name="market_carousel_thumbnail">Миниатюра %1$d</string>
+    <string name="market_carousel_main">Снимка %1$s от %2$s</string>
+    <string name="market_carousel_thumbnail">Миниатюра %1$s</string>
     <string name="market_checkout_browser_unavailable">Няма наличен браузър за отваряне на страницата за плащане</string>
     <string name="market_checkout_pay_button">Плащане със Stripe</string>
     <string name="market_checkout_processing">Обработва се…</string>
@@ -443,7 +443,7 @@
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_checkout_subscribing">Абониране…</string>
     <string name="market_dispute_dialog_attach">Прикачи доказателство</string>
-    <string name="market_dispute_dialog_attach_count">%1$d прикачени файла</string>
+    <string name="market_dispute_dialog_attach_count">%1$s прикачени файла</string>
     <string name="market_dispute_dialog_evidence_role_staff">Персонал на Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Подадени доказателства</string>
     <string name="market_dispute_dialog_evidence_submitter_line">подадено от %1$s</string>
@@ -458,7 +458,7 @@
     <string name="market_editor_asset_external_url">Препратка към URL</string>
     <string name="market_editor_assets_empty">Все още няма ресурси</string>
     <string name="market_editor_category_none">Изберете категория</string>
-    <string name="market_editor_days">%1$d дни</string>
+    <string name="market_editor_days">%1$s дни</string>
     <string name="market_editor_delete">Изтриване на обявата</string>
     <string name="market_editor_delete_confirm_message">Това ще изтрие обявата завинаги.</string>
     <string name="market_editor_delete_confirm_title">Изтриване на обявата?</string>
@@ -490,14 +490,14 @@
     <string name="market_purchase_dispute_chargeback">Обратно плащане %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Вашата банка подаде обратно плащане за тази поръчка. Stripe обработва спора с продавача; резултатът ще се покаже тук, когато бъде решен.</string>
     <string name="market_purchase_dispute_response">Отговор на продавача</string>
-    <string name="market_purchase_download_many">Изтеглете вашите %1$d файла по-долу.</string>
+    <string name="market_purchase_download_many">Изтеглете вашите %1$s файла по-долу.</string>
     <string name="market_purchase_download_one">Изтеглете вашия файл по-долу.</string>
     <string name="market_purchase_review_from">Отзив от %1$s</string>
     <string name="market_purchases_auction_label">Търг №%1$s</string>
     <string name="market_purchases_order_label">Поръчка №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s възстановени</string>
     <string name="market_purchases_won_for">Спечелено за %1$s</string>
-    <string name="market_rating_reviews">(%1$d отзива)</string>
+    <string name="market_rating_reviews">(%1$s отзива)</string>
     <string name="market_refund_amount_label">Сума</string>
     <string name="market_refund_dialog_amount_help">Оставете празно, за да възстановите цялата поръчка.</string>
     <string name="market_refund_dialog_amount_label">Сума</string>
@@ -565,12 +565,12 @@
 
     <string name="market_fee_preview_mochi_fee">Такса на Mochi</string>
     <string name="market_filter_remove">Премахни филтъра</string>
-    <string name="market_listing_detail_sales_count">%1$d продажби</string>
+    <string name="market_listing_detail_sales_count">%1$s продажби</string>
     <string name="market_listings_action_appeal">Обжалване на премахването</string>
     <string name="market_listings_delete_title">Изтриване на обявата?</string>
     <string name="market_listings_new">Нова обява</string>
     <string name="market_profile_biography">Относно</string>
-    <string name="market_profile_sales_count">%1$d продажби</string>
+    <string name="market_profile_sales_count">%1$s продажби</string>
 
     <string name="market_editor_zone_country_ca">Канада</string>
     <string name="market_editor_zone_country_de">Германия</string>
@@ -631,8 +631,8 @@
     <string name="market_messages_load_failed">Разговорът не може да бъде зареден</string>
     <string name="market_messages_send_failed">Съобщението не може да бъде изпратено</string>
     <string name="market_messages_thread_title">Разговор</string>
-    <string name="market_messages_unread_badge">%1$d непрочетени</string>
-    <string name="market_price_from">от %1$s</string>
+    <string name="market_messages_unread_badge">%1$s непрочетени</string>
+    <string name="market_price_from">От %1$s</string>
     <string name="market_price_high_bid">Най-висока оферта: %1$s</string>
     <string name="market_price_instant_buy">незабавна покупка: %1$s</string>
     <string name="market_price_per_month">%1$s / месец</string>
@@ -643,7 +643,7 @@
     <string name="market_profile_joined">Присъедини се на %1$s</string>
     <string name="market_profile_no_reviews">Все още няма отзиви.</string>
     <string name="market_profile_rating_breakdown">Разбивка на рейтинга</string>
-    <string name="market_profile_stars_value">%1$d звезди</string>
+    <string name="market_profile_stars_value">%1$s звезди</string>
 
     <string name="market_account_address_desc">Ще се попълва автоматично при бъдещи поръчки след добавяне на интеграцията на плащането.</string>
     <string name="market_account_address_title">Адрес за доставка по подразбиране</string>
@@ -787,11 +787,11 @@
     <string name="market_listings_remove_message_auction">Това ще отмени търга. Обявата ще бъде скрита от купувачите; можете да я обявите по-късно като нова чернова.</string>
     <string name="market_listings_remove_title">Да премахна ли тази обява?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Това ще отмени търга и ще уведоми %1$d активен наддаващ. Обявата ще бъде скрита от купувачите; по-късно можете да я публикувате отново като нова чернова.</item>
-        <item quantity="other">Това ще отмени търга и ще уведоми %1$d активни наддаващи. Обявата ще бъде скрита от купувачите; по-късно можете да я публикувате отново като нова чернова.</item>
+        <item quantity="one">Това ще отмени търга и ще уведоми %1$s активен наддаващ. Обявата ще бъде скрита от купувачите; по-късно можете да я публикувате отново като нова чернова.</item>
+        <item quantity="other">Това ще отмени търга и ще уведоми %1$s активни наддаващи. Обявата ще бъде скрита от купувачите; по-късно можете да я публикувате отново като нова чернова.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Това ще отмени %1$d активен абонамент в края на текущия период на фактуриране. Абонатите ще бъдат уведомени. Обявата ще бъде скрита от купувачите.</item>
-        <item quantity="other">Това ще отмени %1$d активни абонамента в края на текущия период на фактуриране. Абонатите ще бъдат уведомени. Обявата ще бъде скрита от купувачите.</item>
+        <item quantity="one">Това ще отмени %1$s активен абонамент в края на текущия период на фактуриране. Абонатите ще бъдат уведомени. Обявата ще бъде скрита от купувачите.</item>
+        <item quantity="other">Това ще отмени %1$s активни абонамента в края на текущия период на фактуриране. Абонатите ще бъдат уведомени. Обявата ще бъде скрита от купувачите.</item>
     </plurals>
 </resources>

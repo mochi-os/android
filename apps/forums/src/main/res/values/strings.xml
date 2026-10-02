@@ -209,8 +209,8 @@
     <string name="forums_moderation_tab_restrictions">Restrictions</string>
     <string name="forums_moderation_queue_empty">Moderation queue is empty</string>
     <string name="forums_moderation_queue_empty_subtitle">All posts and comments have been reviewed</string>
-    <string name="forums_moderation_pending_posts">Pending posts (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Pending comments (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Pending posts (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Pending comments (%1$s)</string>
     <string name="forums_moderation_on_image">On image: %1$s</string>
     <string name="forums_moderation_reject">Reject</string>
     <string name="forums_moderation_rejected">Rejected</string>
@@ -354,8 +354,8 @@
     <string name="forums_saved_empty_subtitle">Tap the bookmark on any post to save it here for later.</string>
     <string name="forums_saved_error_clear">Failed to clear saved posts</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d new post</item>
-        <item quantity="other">%d new posts</item>
+        <item quantity="one">%s new post</item>
+        <item quantity="other">%s new posts</item>
     </plurals>
     <string name="forums_moderation_action_remove">Removed</string>
     <string name="forums_moderation_action_restore">Restored</string>
