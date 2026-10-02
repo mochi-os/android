@@ -37,6 +37,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDatePickerState
@@ -53,15 +54,18 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.mochios.android.model.User
+import org.mochios.android.ui.components.ChoicePrefix
 import org.mochios.android.ui.components.FormField
 import org.mochios.android.ui.components.FormHeading
 import org.mochios.android.ui.components.FormRow
+import org.mochios.android.ui.components.choiceFits
 import org.mochios.android.ui.components.formPairs
 import org.mochios.android.ui.components.formRows
 import org.mochios.android.ui.components.oneLine
@@ -97,15 +101,26 @@ fun PropertiesTab(
     val canWrite = canWriteAccess(uiState.access)
     val titleFieldId = crmDetails.classes.find { cls -> cls.id == obj.objectClass }?.title
         .orEmpty()
-    val pairs = formPairs(
-        width = LocalConfiguration.current.screenWidthDp.dp - FORM_PADDING * 2,
-        fontScale = LocalDensity.current.fontScale,
-    )
-    val rows = remember(fields, titleFieldId, pairs) {
+    val density = LocalDensity.current
+    val width = LocalConfiguration.current.screenWidthDp.dp - FORM_PADDING * 2
+    val pairs = formPairs(width = width, fontScale = density.fontScale)
+    val cell = (width - FORM_GAP) / 2
+    val measurer = rememberTextMeasurer()
+    val style = LocalTextStyle.current
+    val rows = remember(fields, classOptions, titleFieldId, pairs, cell, style, density) {
         formRows(
             fields = formFields(fields),
             title = { field -> field.id == titleFieldId },
-            short = { field -> shortField(field.fieldtype) },
+            // A choice field shares a row only when every name it can show
+            // fits half the form on one line.
+            short = { field ->
+                shortField(field.fieldtype) && classOptions[field.id].orEmpty().all { option ->
+                    val text = with(density) {
+                        measurer.measure(option.name, style, maxLines = 1).size.width.toDp()
+                    }
+                    choiceFits(text, swatch = option.colour.isNotBlank(), cell = cell)
+                }
+            },
             pairs = pairs,
         )
     }
@@ -426,8 +441,8 @@ internal fun FieldEditor(
                             readOnly = true,
                             label = fieldLabel,
                             placeholder = { Text(stringResource(R.string.crm_property_select)) },
-                            leadingIcon = if (selectedOption != null && selectedOption.colour.isNotBlank()) {
-                                { OptionColourSwatch(selectedOption.colour) }
+                            prefix = if (selectedOption != null && selectedOption.colour.isNotBlank()) {
+                                { ChoicePrefix(parseOptionColour(selectedOption.colour)) }
                             } else {
                                 null
                             },
