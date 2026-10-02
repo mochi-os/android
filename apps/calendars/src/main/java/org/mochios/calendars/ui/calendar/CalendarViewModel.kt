@@ -180,20 +180,26 @@ class CalendarViewModel @Inject constructor(
         val view = calendarsView(LastViewedStore.get(context, CALENDARS_FEATURE).orEmpty())
         _uiState.value = _uiState.value.copy(view = view)
         viewModelScope.launch {
-            repository.calendarsChanged.collect { reload(refreshing = true) }
+            repository.calendarsChanged.collect { reload() }
         }
         viewModelScope.launch {
             // An edit must not throw the reader back to the anchor day.
-            repository.eventsChanged.collect { load(refreshing = true, reset = false) }
+            repository.eventsChanged.collect { load(reset = false) }
         }
         reload()
     }
 
-    /** The calendars, the preferences and the range, from cold. */
+    /**
+     * The calendars, the preferences and the range, from cold. [refreshing]
+     * only for the reader's own pull, which shows the pull's spinner; every
+     * other reload is silent, and shows the full loader only the first time,
+     * before any calendar is known.
+     */
     fun reload(refreshing: Boolean = false) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(
-                isLoading = !refreshing && _uiState.value.instances.isEmpty(),
+            val state = _uiState.value
+            _uiState.value = state.copy(
+                isLoading = !refreshing && state.instances.isEmpty() && state.calendars.isEmpty(),
                 isRefreshing = refreshing,
                 error = null,
             )
@@ -549,7 +555,7 @@ class CalendarViewModel @Inject constructor(
             ),
         )
         _uiState.value = _uiState.value.copy(preferences = saved)
-        load(refreshing = true)
+        load()
     }
 
     // ---- moving an occurrence ----

@@ -165,7 +165,7 @@ fun CalendarScreen(
     var about by remember { mutableStateOf(false) }
 
     DisposableRefresh(lifecycle) {
-        viewModel.load(refreshing = true, reset = false)
+        viewModel.load(reset = false)
         viewModel.refresh()
     }
 
