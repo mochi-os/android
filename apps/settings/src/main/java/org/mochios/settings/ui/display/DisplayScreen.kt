@@ -59,6 +59,8 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiSheetHeader
+import org.mochios.android.ui.components.MochiSheetPadding
 import org.mochios.android.ui.theme.oklch
 import org.mochios.settings.ui.preferences.PrefRow
 import org.mochios.settings.ui.preferences.PrefSpec
@@ -262,6 +264,9 @@ fun DisplayScreen(
                 onDismissRequest = { showThemeSheet = false },
                 sheetState = sheetState,
             ) {
+                MochiSheetHeader(
+                    title = stringResource(R.string.settings_theme_title),
+                )
                 ThemePickerContent(
                     themes = uiState.themes,
                     currentThemeId = currentTheme,
@@ -334,13 +339,8 @@ private fun ThemePickerContent(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
+            .padding(MochiSheetPadding),
     ) {
-        Text(
-            text = stringResource(R.string.settings_theme_title),
-            style = MaterialTheme.typography.titleMedium,
-        )
-        Spacer(Modifier.height(12.dp))
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             verticalArrangement = Arrangement.spacedBy(12.dp),

@@ -95,6 +95,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.StoneColor
@@ -359,20 +360,10 @@ fun ChessGameDetailScreen(
             sheetState = mobileChatSheetState,
             onDismissRequest = { showMobileChat = false },
         ) {
-            Column(modifier = Modifier.fillMaxWidth().height(480.dp)) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 8.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Text(
-                        text = stringResource(R.string.chess_chat_title),
-                        style = MaterialTheme.typography.titleSmall,
-                        modifier = Modifier.weight(1f),
-                    )
-                }
-                HorizontalDivider()
+            Column(modifier = Modifier.fillMaxWidth().fillMaxHeight(0.85f)) {
+                MochiSheetHeader(
+                    title = stringResource(R.string.chess_chat_title),
+                )
                 ChatPanel(
                     state = state,
                     myIdentity = state.identity,

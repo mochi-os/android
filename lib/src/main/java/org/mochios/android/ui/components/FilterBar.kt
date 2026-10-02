@@ -173,7 +173,6 @@ private fun ChoiceSheet(filters: List<ChoiceFilter>, onDismiss: () -> Unit) {
     FilterSheet(
         title = stringResource(R.string.common_filter),
         onDismiss = onDismiss,
-        titleWeight = null,
         sectionSpacing = 8.dp,
     ) {
         filters.forEach { filter ->

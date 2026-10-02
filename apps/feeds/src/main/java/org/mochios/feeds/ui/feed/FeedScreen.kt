@@ -153,6 +153,7 @@ import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
@@ -1023,11 +1024,14 @@ fun FeedScreen(
             MochiBottomSheet(
                 onDismissRequest = { viewModel.closeCommentComposer() },
                 sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
-                // Hide the drag handle and match the input bar's surface colour
-                // so the sheet reads as one continuous composer.
-                dragHandle = null,
-                containerColor = MaterialTheme.colorScheme.surface,
             ) {
+                MochiSheetHeader(
+                    title = if (target.parentId != null) {
+                        stringResource(MochiR.string.comment_reply)
+                    } else {
+                        stringResource(R.string.feeds_comments)
+                    },
+                )
                 Column(modifier = Modifier.fillMaxWidth()) {
                     // Chat-style reply preview: who/what you're replying to.
                     if (target.parentId != null) {

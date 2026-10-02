@@ -18,10 +18,10 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.consumeWindowInsets
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -66,6 +66,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -94,7 +95,6 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.launch
-import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
@@ -102,7 +102,6 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ComposeBar
@@ -110,6 +109,7 @@ import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.EntityIconCircle
@@ -123,6 +123,8 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiSearchTopBar
+import org.mochios.android.ui.components.MochiSheetHeader
+import org.mochios.android.ui.components.MochiSheetPadding
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
@@ -137,6 +139,7 @@ import org.mochios.chat.ui.chatlist.ChatListViewModel
 import org.mochios.chat.ui.chatlist.unreadBadge
 import org.mochios.chat.ui.policy.ChatPolicyDialog
 import org.mochios.chat.ui.router.CHAT_FEATURE
+import org.mochios.android.R as MochiR
 
 /**
  * Chat detail inside a [MochiListDrawer] holding the chat list; an empty
@@ -1263,79 +1266,78 @@ private fun ChatForwardSheet(
         if (filter.isBlank()) friends
         else friends.filter { it.name.contains(filter.trim(), ignoreCase = true) }
     }
-    MochiBottomSheet(onDismissRequest = onDismiss) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp)
-                .padding(bottom = 16.dp)
-        ) {
-            Text(
-                text = stringResource(R.string.chat_forward_title),
-                style = MaterialTheme.typography.titleMedium,
+    MochiBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+    ) {
+        Column(modifier = Modifier.fillMaxWidth().fillMaxHeight(0.85f)) {
+            MochiSheetHeader(
+                title = stringResource(R.string.chat_forward_title),
+                subtitle = stringResource(R.string.chat_forward_subtitle),
             )
-            Text(
-                text = stringResource(R.string.chat_forward_subtitle),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(bottom = 8.dp),
-            )
-            MochiTextField(
-                value = filter,
-                onValueChange = { filter = it },
-                placeholder = { Text(stringResource(R.string.chat_forward_search)) },
-                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                singleLine = true,
-                modifier = Modifier.fillMaxWidth(),
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-            when {
-                loading -> Box(
-                    modifier = Modifier.fillMaxWidth().padding(24.dp),
-                    contentAlignment = Alignment.Center,
-                ) { CircularProgressIndicator() }
-                filtered.isEmpty() && filteredFriends.isEmpty() -> Text(
-                    text = stringResource(R.string.chat_forward_empty),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(vertical = 16.dp),
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f)
+                    .padding(MochiSheetPadding)
+            ) {
+                MochiTextField(
+                    value = filter,
+                    onValueChange = { filter = it },
+                    placeholder = { Text(stringResource(R.string.chat_forward_search)) },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
                 )
-                else -> LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 400.dp)) {
-                    if (filtered.isNotEmpty()) {
-                        // Only label the sections when both are present.
-                        if (filteredFriends.isNotEmpty()) {
-                            item("chats-header") {
-                                ForwardSectionHeader(stringResource(R.string.chat_forward_chats))
-                            }
-                        }
-                        items(filtered, key = { "chat-" + it.id }) { chat ->
-                            Text(
-                                text = chat.name,
-                                style = MaterialTheme.typography.bodyLarge,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .clickable { onSelect(chat) }
-                                    .padding(vertical = 12.dp),
-                            )
-                            HorizontalDivider()
-                        }
-                    }
-                    if (filteredFriends.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(8.dp))
+                when {
+                    loading -> Box(
+                        modifier = Modifier.fillMaxWidth().padding(24.dp),
+                        contentAlignment = Alignment.Center,
+                    ) { CircularProgressIndicator() }
+                    filtered.isEmpty() && filteredFriends.isEmpty() -> Text(
+                        text = stringResource(R.string.chat_forward_empty),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(vertical = 16.dp),
+                    )
+                    else -> LazyColumn(modifier = Modifier.fillMaxWidth().weight(1f)) {
                         if (filtered.isNotEmpty()) {
-                            item("friends-header") {
-                                ForwardSectionHeader(stringResource(R.string.chat_forward_friends))
+                            // Only label the sections when both are present.
+                            if (filteredFriends.isNotEmpty()) {
+                                item("chats-header") {
+                                    ForwardSectionHeader(stringResource(R.string.chat_forward_chats))
+                                }
+                            }
+                            items(filtered, key = { "chat-" + it.id }) { chat ->
+                                Text(
+                                    text = chat.name,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .clickable { onSelect(chat) }
+                                        .padding(vertical = 12.dp),
+                                )
+                                HorizontalDivider()
                             }
                         }
-                        items(filteredFriends, key = { "friend-" + it.id }) { friend ->
-                            Text(
-                                text = friend.name,
-                                style = MaterialTheme.typography.bodyLarge,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .clickable { onSelectFriend(friend) }
-                                    .padding(vertical = 12.dp),
-                            )
-                            HorizontalDivider()
+                        if (filteredFriends.isNotEmpty()) {
+                            if (filtered.isNotEmpty()) {
+                                item("friends-header") {
+                                    ForwardSectionHeader(stringResource(R.string.chat_forward_friends))
+                                }
+                            }
+                            items(filteredFriends, key = { "friend-" + it.id }) { friend ->
+                                Text(
+                                    text = friend.name,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .clickable { onSelectFriend(friend) }
+                                        .padding(vertical = 12.dp),
+                                )
+                                HorizontalDivider()
+                            }
                         }
                     }
                 }

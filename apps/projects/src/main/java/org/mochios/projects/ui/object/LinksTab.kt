@@ -47,6 +47,8 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiSheetHeader
+import org.mochios.android.ui.components.MochiSheetPadding
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.projects.R
 import org.mochios.projects.model.Link
@@ -301,17 +303,14 @@ private fun AddLinkSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState
     ) {
+        MochiSheetHeader(
+            title = stringResource(R.string.projects_links_add),
+        )
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp)
+                .padding(MochiSheetPadding)
         ) {
-            Text(
-                text = stringResource(R.string.projects_links_add),
-                style = MaterialTheme.typography.titleMedium
-            )
-            Spacer(modifier = Modifier.height(12.dp))
-
             ExposedDropdownMenuBox(
                 expanded = typeExpanded,
                 onExpandedChange = { typeExpanded = it }
