@@ -21,7 +21,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
@@ -72,7 +72,8 @@ private val CELL = 36.dp
  * whenever it moves; [today] is in the primary colour; [weekStart] counts
  * Sunday 0 to Saturday 6. A swipe that settles the small month on another
  * month picks that month's first day, as a tap on its chip does. Without
- * [days], as the month view wants, the panel is the chip row alone.
+ * [days], as the month view wants, the panel is the chip row alone. Its page
+ * is not saved, for the same reason as the calendar's own pager.
  */
 @Composable
 fun DatePanel(
@@ -84,7 +85,7 @@ fun DatePanel(
     days: Boolean = true,
 ) {
     val base = remember { YearMonth.from(focus) }
-    val pager = rememberPagerState(initialPage = MONTH_CENTRE) { MONTH_PAGES }
+    val pager = remember { PagerState(currentPage = MONTH_CENTRE) { MONTH_PAGES } }
     val chips = rememberLazyListState(initialFirstVisibleItemIndex = CHIP_REACH - 1)
     val locale = LocalConfiguration.current.locales[0]
     val shown = if (days) {

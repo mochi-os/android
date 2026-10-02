@@ -21,7 +21,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
@@ -474,7 +474,9 @@ private class Move(val instance: Instance, val run: (Scope) -> Unit)
  * Google Calendar does, and settling on it moves the anchor there. The today
  * button slides the pager the same way. The list view scrolls on its own and
  * is drawn as it is. The occurrence whose summary is open, [selected], is
- * tinted in each.
+ * tinted in each. The pager's page is not saved across a trip to the editor:
+ * its pages count from the anchor it opened with, and a restored page counted
+ * from a newer anchor would move the view.
  */
 @Composable
 private fun View(
@@ -493,7 +495,7 @@ private fun View(
     }
     key(state.view) {
         val base = remember { state.anchor }
-        val pager = rememberPagerState(initialPage = SWIPE_CENTRE) { SWIPE_PAGES }
+        val pager = remember { PagerState(currentPage = SWIPE_CENTRE) { SWIPE_PAGES } }
         val target = SWIPE_CENTRE + steps(state.view, base, state.anchor, viewModel::week)
         val anchor by rememberUpdatedState(state.anchor)
 
