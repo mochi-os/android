@@ -25,6 +25,7 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.ContentCopy
+import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material.icons.outlined.ErrorOutline
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Delete
@@ -35,6 +36,7 @@ import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Smartphone
 import androidx.compose.material.icons.outlined.Sync
+import androidx.compose.material.icons.outlined.Upload
 import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.HorizontalDivider
@@ -76,6 +78,8 @@ enum class CalendarAction {
     COLOUR,
     LINK,
     POLL,
+    IMPORT,
+    EXPORT,
     DELETE,
 }
 
@@ -181,10 +185,11 @@ fun CalendarDrawer(
  * One calendar: a checkbox in its own colour, its name, the linked marker
  * where the calendar mirrors one on another server, and its overflow menu.
  * The row itself is the checkbox, so a tap anywhere on it shows or hides the
- * calendar.
+ * calendar. Any calendar can be exported, but only one the user can write in
+ * can be imported into.
  */
 @Composable
-private fun CalendarRow(
+internal fun CalendarRow(
     calendar: Calendar,
     shown: Boolean,
     onToggle: () -> Unit,
@@ -310,6 +315,24 @@ private fun CalendarRow(
                         },
                     )
                 }
+                if (!calendar.readonly) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.calendars_import)) },
+                        leadingIcon = { Icon(Icons.Outlined.Upload, contentDescription = null) },
+                        onClick = {
+                            expanded = false
+                            onAction(CalendarAction.IMPORT)
+                        },
+                    )
+                }
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.calendars_export)) },
+                    leadingIcon = { Icon(Icons.Outlined.Download, contentDescription = null) },
+                    onClick = {
+                        expanded = false
+                        onAction(CalendarAction.EXPORT)
+                    },
+                )
                 if (!calendar.default && !calendar.birthdays) {
                     MochiDropdownMenuItem(
                         text = {

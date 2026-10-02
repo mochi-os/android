@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">קאַלענדאַר סינכראָניזירט</string>
     <string name="calendars_link_revoke_title">צוריקנעמען דעם קאַלענדאַר־אַדרעס?</string>
     <string name="calendars_link_revoke_message">קאַלענדאַרן וואָס זענען אַבאָנירט אויף דעם אַדרעס וועלן מער ניט ווערן דערהיינטיקט.</string>
+    <string name="calendars_export_failed">מ׳האָט נישט געקענט אויפֿהיטן דעם עקספּאָרט</string>
+    <string name="calendars_import_progress">%1$s פֿון %2$s</string>
+    <string name="calendars_import">אימפּאָרט</string>
+    <string name="calendars_export">עקספּאָרט</string>
+    <string name="calendars_exported">קאַלענדאַר עקספּאָרטירט</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s געשעעניש אימפּאָרטירט</item>
+        <item quantity="other">%1$s געשעענישן אימפּאָרטירט</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s געשעעניש איז שוין אין קאַלענדאַר</item>
+        <item quantity="other">%1$s געשעענישן זענען שוין אין קאַלענדאַר</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s געשעעניש האָט מען נישט געקענט אימפּאָרטירן</item>
+        <item quantity="other">%1$s געשעענישן האָט מען נישט געקענט אימפּאָרטירן</item>
+    </plurals>
 </resources>

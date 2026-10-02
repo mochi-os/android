@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Salname hat hevdemkirin</string>
     <string name="calendars_link_revoke_title">Navnîşana salnameyê were vekişandin?</string>
     <string name="calendars_link_revoke_message">Salnameyên ku bi vê navnîşanê ve abone ne dê êdî nûve nebin.</string>
+    <string name="calendars_export_failed">Nekarî hinardekirin tomar bike</string>
+    <string name="calendars_import_progress">%1$s ji %2$s</string>
+    <string name="calendars_import">Hawirdekirin</string>
+    <string name="calendars_export">Hinardekirin</string>
+    <string name="calendars_exported">Salname hate hinardekirin</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s bûyer hate hawirdekirin</item>
+        <item quantity="other">%1$s bûyer hatin hawirdekirin</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s bûyer jixwe di salnameyê de ye</item>
+        <item quantity="other">%1$s bûyer jixwe di salnameyê de ne</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s bûyer nehate hawirdekirin</item>
+        <item quantity="other">%1$s bûyer nehatin hawirdekirin</item>
+    </plurals>
 </resources>

@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Kalenda imesawazishwa</string>
     <string name="calendars_link_revoke_title">Je, ubatilishe anwani ya kalenda?</string>
     <string name="calendars_link_revoke_message">Kalenda zilizojisajili kwenye anwani hii zitaacha kusasishwa.</string>
+    <string name="calendars_export_failed">Uhamishaji haukuweza kuhifadhiwa</string>
+    <string name="calendars_import_progress">%1$s kati ya %2$s</string>
+    <string name="calendars_import">Ingiza</string>
+    <string name="calendars_export">Hamisha</string>
+    <string name="calendars_exported">Kalenda imehamishwa</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Tukio %1$s limeingizwa</item>
+        <item quantity="other">Matukio %1$s yameingizwa</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">Tukio %1$s tayari liko kwenye kalenda</item>
+        <item quantity="other">Matukio %1$s tayari yako kwenye kalenda</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Tukio %1$s halikuweza kuingizwa</item>
+        <item quantity="other">Matukio %1$s hayakuweza kuingizwa</item>
+    </plurals>
 </resources>

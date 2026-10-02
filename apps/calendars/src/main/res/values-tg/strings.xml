@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Тақвим ҳамоҳанг шуд</string>
     <string name="calendars_link_revoke_title">Суроғаи тақвим бозхонд карда шавад?</string>
     <string name="calendars_link_revoke_message">Тақвимҳое, ки ба ин суроға обуна шудаанд, дигар навсозӣ намешаванд.</string>
+    <string name="calendars_export_failed">Содиротро нигоҳ доштан нашуд</string>
+    <string name="calendars_import_progress">%1$s аз %2$s</string>
+    <string name="calendars_import">Воридот</string>
+    <string name="calendars_export">Содирот</string>
+    <string name="calendars_exported">Тақвим содир шуд</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s рӯйдод ворид шуд</item>
+        <item quantity="other">%1$s рӯйдод ворид шуд</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s рӯйдод аллакай дар тақвим ҳаст</item>
+        <item quantity="other">%1$s рӯйдод аллакай дар тақвим ҳаст</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s рӯйдодро ворид кардан муяссар нашуд</item>
+        <item quantity="other">%1$s рӯйдодро ворид кардан муяссар нашуд</item>
+    </plurals>
 </resources>

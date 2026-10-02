@@ -188,4 +188,21 @@
     <string name="calendars_polled_synced">Kalandriye sinkronize</string>
     <string name="calendars_link_revoke_title">Retire adrès kalandriye a?</string>
     <string name="calendars_link_revoke_message">Kalandriye ki abòne ak adrès sa a p ap mete ajou ankò.</string>
+    <string name="calendars_export_failed">Nou pa t kapab anrejistre ekspòtasyon an</string>
+    <string name="calendars_import_progress">%1$s sou %2$s</string>
+    <string name="calendars_import">Enpòte</string>
+    <string name="calendars_export">Ekspòte</string>
+    <string name="calendars_exported">Kalandriye a ekspòte</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s evènman enpòte</item>
+        <item quantity="other">%1$s evènman enpòte</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s evènman deja nan kalandriye a</item>
+        <item quantity="other">%1$s evènman deja nan kalandriye a</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s evènman pa t ka enpòte</item>
+        <item quantity="other">%1$s evènman pa t ka enpòte</item>
+    </plurals>
 </resources>

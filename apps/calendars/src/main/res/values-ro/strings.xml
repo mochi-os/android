@@ -195,4 +195,24 @@
     <string name="calendars_polled_synced">Calendar sincronizat</string>
     <string name="calendars_link_revoke_title">Revoci adresa calendarului?</string>
     <string name="calendars_link_revoke_message">Calendarele abonate la această adresă nu se vor mai actualiza.</string>
+    <string name="calendars_export_failed">Exportul nu a putut fi salvat</string>
+    <string name="calendars_import_progress">%1$s din %2$s</string>
+    <string name="calendars_import">Importă</string>
+    <string name="calendars_export">Exportă</string>
+    <string name="calendars_exported">Calendar exportat</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s eveniment importat</item>
+        <item quantity="few">%1$s evenimente importate</item>
+        <item quantity="other">%1$s de evenimente importate</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s eveniment este deja în calendar</item>
+        <item quantity="few">%1$s evenimente sunt deja în calendar</item>
+        <item quantity="other">%1$s de evenimente sunt deja în calendar</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s eveniment nu a putut fi importat</item>
+        <item quantity="few">%1$s evenimente nu au putut fi importate</item>
+        <item quantity="other">%1$s de evenimente nu au putut fi importate</item>
+    </plurals>
 </resources>

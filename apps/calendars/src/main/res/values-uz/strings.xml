@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Kalendar sinxronlandi</string>
     <string name="calendars_link_revoke_title">Kalendar manzili qaytarib olinsinmi?</string>
     <string name="calendars_link_revoke_message">Bu manzilga obuna boʻlgan kalendarlar endi yangilanmaydi.</string>
+    <string name="calendars_export_failed">Eksportni saqlab bo\'lmadi</string>
+    <string name="calendars_import_progress">%2$s dan %1$s</string>
+    <string name="calendars_import">Import</string>
+    <string name="calendars_export">Eksport</string>
+    <string name="calendars_exported">Kalendar eksport qilindi</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s ta tadbir import qilindi</item>
+        <item quantity="other">%1$s ta tadbir import qilindi</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ta tadbir allaqachon kalendarda bor</item>
+        <item quantity="other">%1$s ta tadbir allaqachon kalendarda bor</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ta tadbirni import qilib boʻlmadi</item>
+        <item quantity="other">%1$s ta tadbirni import qilib boʻlmadi</item>
+    </plurals>
 </resources>

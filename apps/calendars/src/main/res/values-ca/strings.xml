@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Calendari sincronitzat</string>
     <string name="calendars_link_revoke_title">Revocar l\'adreça del calendari?</string>
     <string name="calendars_link_revoke_message">Els calendaris subscrits a aquesta adreça deixaran d\'actualitzar-se.</string>
+    <string name="calendars_export_failed">No s\'ha pogut desar l\'exportació</string>
+    <string name="calendars_import_progress">%1$s de %2$s</string>
+    <string name="calendars_import">Importa</string>
+    <string name="calendars_export">Exporta</string>
+    <string name="calendars_exported">S\'ha exportat el calendari</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">S\'ha importat %1$s esdeveniment</item>
+        <item quantity="other">S\'han importat %1$s esdeveniments</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s esdeveniment ja és al calendari</item>
+        <item quantity="other">%1$s esdeveniments ja són al calendari</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">No s\'ha pogut importar %1$s esdeveniment</item>
+        <item quantity="other">No s\'han pogut importar %1$s esdeveniments</item>
+    </plurals>
 </resources>

@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Senenama sinhronlaşdyryldy</string>
     <string name="calendars_link_revoke_title">Senenamanyň salgysy yzyna alynsynmy?</string>
     <string name="calendars_link_revoke_message">Bu salga ýazylan kalendarlar mundan beýläk täzelenmez.</string>
+    <string name="calendars_export_failed">Eksporty saklap bolmady</string>
+    <string name="calendars_import_progress">%2$s-den %1$s</string>
+    <string name="calendars_import">Import etmek</string>
+    <string name="calendars_export">Eksport etmek</string>
+    <string name="calendars_exported">Senenama eksport edildi</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s çäre import edildi</item>
+        <item quantity="other">%1$s çäre import edildi</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s çäre eýýäm senenamada bar</item>
+        <item quantity="other">%1$s çäre eýýäm senenamada bar</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s çäräni import edip bolmady</item>
+        <item quantity="other">%1$s çäräni import edip bolmady</item>
+    </plurals>
 </resources>

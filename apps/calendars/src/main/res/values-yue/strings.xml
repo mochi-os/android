@@ -187,4 +187,18 @@
     <string name="calendars_subscribe_google_enable">呢個伺服器仲未啟用 Google 帳戶。請喺 設定、系統設定 度啟用。</string>
     <string name="calendars_subscribe_google_connect">你仲未連接 Google 帳戶。</string>
     <string name="calendars_subscribe_google_connect_action">連接 Google</string>
+    <string name="calendars_export_failed">無法儲存匯出內容</string>
+    <string name="calendars_import">匯入</string>
+    <string name="calendars_export">匯出</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_exported">日曆已經匯出</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">已匯入 %1$s 個活動</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s 個活動已經喺日曆入面</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">%1$s 個活動匯入唔到</item>
+    </plurals>
 </resources>

@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Təqvim sinxronlaşdırıldı</string>
     <string name="calendars_link_revoke_title">Təqvim ünvanı geri çağırılsın?</string>
     <string name="calendars_link_revoke_message">Bu ünvana abunə olan təqvimlər yenilənməyi dayandıracaq.</string>
+    <string name="calendars_export_failed">İxrac saxlanıla bilmədi</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">İdxal et</string>
+    <string name="calendars_export">İxrac et</string>
+    <string name="calendars_exported">Təqvim ixrac edildi</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s tədbir idxal edildi</item>
+        <item quantity="other">%1$s tədbir idxal edildi</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s tədbir artıq təqvimdə var</item>
+        <item quantity="other">%1$s tədbir artıq təqvimdə var</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s tədbiri idxal etmək mümkün olmadı</item>
+        <item quantity="other">%1$s tədbiri idxal etmək mümkün olmadı</item>
+    </plurals>
 </resources>

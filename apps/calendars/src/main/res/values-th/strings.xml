@@ -187,4 +187,18 @@
     <string name="calendars_polled_synced">ซิงค์ปฏิทินแล้ว</string>
     <string name="calendars_link_revoke_title">เพิกถอนที่อยู่ปฏิทินหรือไม่</string>
     <string name="calendars_link_revoke_message">ปฏิทินที่สมัครรับที่อยู่นี้จะไม่ได้รับการปรับปรุงอีก</string>
+    <string name="calendars_export_failed">บันทึกการส่งออกไม่สำเร็จ</string>
+    <string name="calendars_import_progress">%1$s จาก %2$s</string>
+    <string name="calendars_import">นำเข้า</string>
+    <string name="calendars_export">ส่งออก</string>
+    <string name="calendars_exported">ส่งออกปฏิทินแล้ว</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">นำเข้า %1$s กิจกรรมแล้ว</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s กิจกรรมมีอยู่ในปฏิทินแล้ว</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">ไม่สามารถนำเข้า %1$s กิจกรรมได้</item>
+    </plurals>
 </resources>

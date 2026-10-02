@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Kalender synkroniserad</string>
     <string name="calendars_link_revoke_title">Återkalla kalenderadressen?</string>
     <string name="calendars_link_revoke_message">Kalendrar som prenumererar på den här adressen slutar att uppdateras.</string>
+    <string name="calendars_export_failed">Exporten kunde inte sparas</string>
+    <string name="calendars_import_progress">%1$s av %2$s</string>
+    <string name="calendars_import">Importera</string>
+    <string name="calendars_export">Exportera</string>
+    <string name="calendars_exported">Kalendern har exporterats</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s händelse importerad</item>
+        <item quantity="other">%1$s händelser importerade</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s händelse finns redan i kalendern</item>
+        <item quantity="other">%1$s händelser finns redan i kalendern</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s händelse kunde inte importeras</item>
+        <item quantity="other">%1$s händelser kunde inte importeras</item>
+    </plurals>
 </resources>

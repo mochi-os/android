@@ -203,4 +203,30 @@
     <string name="calendars_polled_synced">Il-kalendarju ġie sinkronizzat</string>
     <string name="calendars_link_revoke_title">Tirrevoka l-indirizz tal-kalendarju?</string>
     <string name="calendars_link_revoke_message">Il-kalendarji abbonati għal dan l-indirizz ma jibqgħux jiġu aġġornati.</string>
+    <string name="calendars_export_failed">L-esportazzjoni ma setgħetx tiġi salvata</string>
+    <string name="calendars_import_progress">%1$s minn %2$s</string>
+    <string name="calendars_import">Importa</string>
+    <string name="calendars_export">Esporta</string>
+    <string name="calendars_exported">Il-kalendarju ġie esportat</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Ġie importat %1$s avveniment</item>
+        <item quantity="two">Ġew importati %1$s avvenimenti</item>
+        <item quantity="few">Ġew importati %1$s avvenimenti</item>
+        <item quantity="many">Ġew importati %1$s avveniment</item>
+        <item quantity="other">Ġew importati %1$s avveniment</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s avveniment diġà jinsab fil-kalendarju</item>
+        <item quantity="two">%1$s avvenimenti diġà jinsabu fil-kalendarju</item>
+        <item quantity="few">%1$s avvenimenti diġà jinsabu fil-kalendarju</item>
+        <item quantity="many">%1$s avveniment diġà jinsabu fil-kalendarju</item>
+        <item quantity="other">%1$s avveniment diġà jinsabu fil-kalendarju</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Ma setax jiġi importat %1$s avveniment</item>
+        <item quantity="two">Ma setgħux jiġu importati %1$s avvenimenti</item>
+        <item quantity="few">Ma setgħux jiġu importati %1$s avvenimenti</item>
+        <item quantity="many">Ma setgħux jiġu importati %1$s avveniment</item>
+        <item quantity="other">Ma setgħux jiġu importati %1$s avveniment</item>
+    </plurals>
 </resources>

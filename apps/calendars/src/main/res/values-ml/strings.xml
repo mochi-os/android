@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">കലണ്ടർ സിങ്ക് ചെയ്തു</string>
     <string name="calendars_link_revoke_title">കലണ്ടറിന്റെ വിലാസം പിൻവലിക്കണോ?</string>
     <string name="calendars_link_revoke_message">ഈ വിലാസത്തിന്റെ വരിക്കാരായ കലണ്ടറുകൾ ഇനി പുതുക്കപ്പെടില്ല.</string>
+    <string name="calendars_export_failed">കയറ്റുമതി സംരക്ഷിക്കാനായില്ല</string>
+    <string name="calendars_import_progress">%2$s-ൽ %1$s</string>
+    <string name="calendars_import">ഇറക്കുമതി</string>
+    <string name="calendars_export">കയറ്റുമതി</string>
+    <string name="calendars_exported">കലണ്ടർ കയറ്റുമതി ചെയ്തു</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s ഇവന്റ് ഇറക്കുമതി ചെയ്തു</item>
+        <item quantity="other">%1$s ഇവന്റുകൾ ഇറക്കുമതി ചെയ്തു</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ഇവന്റ് ഇതിനകം കലണ്ടറിലുണ്ട്</item>
+        <item quantity="other">%1$s ഇവന്റുകൾ ഇതിനകം കലണ്ടറിലുണ്ട്</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ഇവന്റ് ഇറക്കുമതി ചെയ്യാനായില്ല</item>
+        <item quantity="other">%1$s ഇവന്റുകൾ ഇറക്കുമതി ചെയ്യാനായില്ല</item>
+    </plurals>
 </resources>

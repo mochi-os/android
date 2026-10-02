@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">कैलेंडर सिंक हो गया</string>
     <string name="calendars_link_revoke_title">कैलेंडर का पता वापस लें?</string>
     <string name="calendars_link_revoke_message">इस पते की सदस्यता लेने वाले कैलेंडर अद्यतन होना बंद कर देंगे।</string>
+    <string name="calendars_export_failed">निर्यात सहेजा नहीं जा सका</string>
+    <string name="calendars_import_progress">%2$s में से %1$s</string>
+    <string name="calendars_import">आयात</string>
+    <string name="calendars_export">निर्यात</string>
+    <string name="calendars_exported">कैलेंडर निर्यात किया गया</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s इवेंट आयात किया गया</item>
+        <item quantity="other">%1$s इवेंट आयात किए गए</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s इवेंट पहले से कैलेंडर में है</item>
+        <item quantity="other">%1$s इवेंट पहले से कैलेंडर में हैं</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s इवेंट आयात नहीं किया जा सका</item>
+        <item quantity="other">%1$s इवेंट आयात नहीं किए जा सके</item>
+    </plurals>
 </resources>

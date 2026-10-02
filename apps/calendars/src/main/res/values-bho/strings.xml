@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">कैलेंडर सिंक हो गइल</string>
     <string name="calendars_link_revoke_title">कैलेंडर के पता वापस लीं?</string>
     <string name="calendars_link_revoke_message">एह पता के सदस्यता लेले कैलेंडर अब अद्यतन ना होई।</string>
+    <string name="calendars_export_failed">एक्सपोर्ट सेव ना हो सकल</string>
+    <string name="calendars_import_progress">%2$s में से %1$s</string>
+    <string name="calendars_import">आयात</string>
+    <string name="calendars_export">निर्यात</string>
+    <string name="calendars_exported">कैलेंडर निर्यात हो गइल</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s कार्यक्रम आयात भइल</item>
+        <item quantity="other">%1$s कार्यक्रम आयात भइल</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s कार्यक्रम पहिले से कैलेंडर में बा</item>
+        <item quantity="other">%1$s कार्यक्रम पहिले से कैलेंडर में बा</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s कार्यक्रम आयात ना हो सकल</item>
+        <item quantity="other">%1$s कार्यक्रम आयात ना हो सकल</item>
+    </plurals>
 </resources>

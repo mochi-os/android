@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Dagatal samstillt</string>
     <string name="calendars_link_revoke_title">Afturkalla vistfang dagatalsins?</string>
     <string name="calendars_link_revoke_message">Dagatöl sem eru áskrifandi að þessu vistfangi hætta að uppfærast.</string>
+    <string name="calendars_export_failed">Ekki tókst að vista útflutninginn</string>
+    <string name="calendars_import_progress">%1$s af %2$s</string>
+    <string name="calendars_import">Flytja inn</string>
+    <string name="calendars_export">Flytja út</string>
+    <string name="calendars_exported">Dagatal flutt út</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s viðburður fluttur inn</item>
+        <item quantity="other">%1$s viðburðir fluttir inn</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s viðburður er þegar í dagatalinu</item>
+        <item quantity="other">%1$s viðburðir eru þegar í dagatalinu</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Ekki tókst að flytja inn %1$s viðburð</item>
+        <item quantity="other">Ekki tókst að flytja inn %1$s viðburði</item>
+    </plurals>
 </resources>

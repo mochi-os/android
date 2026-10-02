@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">දින දර්ශනය සමමුහුර්ත කළා</string>
     <string name="calendars_link_revoke_title">දින දර්ශනයේ ලිපිනය අහෝසි කරන්නද?</string>
     <string name="calendars_link_revoke_message">මෙම ලිපිනයට දායක වූ දින දර්ශන යාවත්කාලීන වීම නවතිනු ඇත.</string>
+    <string name="calendars_export_failed">නිර්යාතය සුරැකිය නොහැකි විය</string>
+    <string name="calendars_import_progress">%2$sන් %1$s</string>
+    <string name="calendars_import">ආනයනය</string>
+    <string name="calendars_export">අපනයනය</string>
+    <string name="calendars_exported">දින දර්ශනය අපනයනය කරන ලදී</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">සිදුවීම් %1$s ක් ආයාත කරන ලදී</item>
+        <item quantity="other">සිදුවීම් %1$s ක් ආයාත කරන ලදී</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">සිදුවීම් %1$s ක් දැනටමත් දින දර්ශනයේ ඇත</item>
+        <item quantity="other">සිදුවීම් %1$s ක් දැනටමත් දින දර්ශනයේ ඇත</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">සිදුවීම් %1$s ක් ආයාත කළ නොහැකි විය</item>
+        <item quantity="other">සිදුවීම් %1$s ක් ආයාත කළ නොහැකි විය</item>
+    </plurals>
 </resources>

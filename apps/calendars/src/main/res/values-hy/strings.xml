@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Օրացույցը համաժամանակեցվեց</string>
     <string name="calendars_link_revoke_title">Հետ վերցնե՞լ օրացույցի հասցեն</string>
     <string name="calendars_link_revoke_message">Այս հասցեին բաժանորդագրված օրացույցներն այլևս չեն թարմացվի։</string>
+    <string name="calendars_export_failed">Չհաջողվեց պահպանել արտահանումը</string>
+    <string name="calendars_import_progress">%1$s՝ %2$s-ից</string>
+    <string name="calendars_import">Ներմուծել</string>
+    <string name="calendars_export">Արտահանել</string>
+    <string name="calendars_exported">Օրացույցն արտահանվեց</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Ներմուծվեց %1$s միջոցառում</item>
+        <item quantity="other">Ներմուծվեց %1$s միջոցառում</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s միջոցառում արդեն օրացույցում է</item>
+        <item quantity="other">%1$s միջոցառում արդեն օրացույցում է</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Չհաջողվեց ներմուծել %1$s միջոցառում</item>
+        <item quantity="other">Չհաջողվեց ներմուծել %1$s միջոցառում</item>
+    </plurals>
 </resources>

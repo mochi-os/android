@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">კალენდარი დასინქრონდა</string>
     <string name="calendars_link_revoke_title">კალენდრის მისამართის გაწვევა?</string>
     <string name="calendars_link_revoke_message">ამ მისამართზე გამოწერილი კალენდრები აღარ განახლდება.</string>
+    <string name="calendars_export_failed">ექსპორტის შენახვა ვერ მოხერხდა</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">იმპორტი</string>
+    <string name="calendars_export">ექსპორტი</string>
+    <string name="calendars_exported">კალენდარი ექსპორტირებულია</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">იმპორტირებულია %1$s ღონისძიება</item>
+        <item quantity="other">იმპორტირებულია %1$s ღონისძიება</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ღონისძიება უკვე არის კალენდარში</item>
+        <item quantity="other">%1$s ღონისძიება უკვე არის კალენდარში</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ღონისძიების იმპორტი ვერ მოხერხდა</item>
+        <item quantity="other">%1$s ღონისძიების იმპორტი ვერ მოხერხდა</item>
+    </plurals>
 </resources>

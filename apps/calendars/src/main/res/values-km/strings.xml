@@ -187,4 +187,18 @@
     <string name="calendars_polled_synced">បានធ្វើសមកាលកម្មប្រតិទិន</string>
     <string name="calendars_link_revoke_title">ដកហូតអាសយដ្ឋានប្រតិទិនឬ?</string>
     <string name="calendars_link_revoke_message">ប្រតិទិនដែលបានជាវអាសយដ្ឋាននេះនឹងឈប់ធ្វើបច្ចុប្បន្នភាព។</string>
+    <string name="calendars_export_failed">មិនអាចរក្សាទុកការនាំចេញបានទេ</string>
+    <string name="calendars_import_progress">%1$s នៃ %2$s</string>
+    <string name="calendars_import">នាំចូល</string>
+    <string name="calendars_export">នាំចេញ</string>
+    <string name="calendars_exported">បាននាំចេញប្រតិទិន</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">បាននាំចូលព្រឹត្តិការណ៍ %1$s</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">ព្រឹត្តិការណ៍ %1$s មាននៅក្នុងប្រតិទិនរួចហើយ</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">មិនអាចនាំចូលព្រឹត្តិការណ៍ %1$s បានទេ</item>
+    </plurals>
 </resources>

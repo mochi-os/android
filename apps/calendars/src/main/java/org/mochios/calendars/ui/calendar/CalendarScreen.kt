@@ -5,6 +5,8 @@
 
 package org.mochios.calendars.ui.calendar
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -45,6 +47,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -59,6 +62,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
@@ -75,6 +79,7 @@ import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.components.CalendarDrawer
 import org.mochios.calendars.ui.dialogs.ColourCalendarDialog
 import org.mochios.calendars.ui.dialogs.DeleteCalendarDialog
+import org.mochios.calendars.ui.dialogs.ImportDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
 import org.mochios.calendars.ui.dialogs.PreferencesDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
@@ -82,6 +87,7 @@ import org.mochios.calendars.ui.dialogs.RevokeLinkDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
+import org.mochios.android.R as MochiR
 import java.time.LocalDate
 
 /**
@@ -126,6 +132,17 @@ fun CalendarScreen(
     var revoking by remember { mutableStateOf<Calendar?>(null) }
     var preferences by remember { mutableStateOf(false) }
     var about by remember { mutableStateOf(false) }
+    // The calendar a file is being picked for, kept by id so it outlasts the
+    // activity being recreated behind the picker.
+    var importing by rememberSaveable { mutableStateOf<String?>(null) }
+
+    val picker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        val calendar = uiState.calendars.firstOrNull { it.id == importing }
+        importing = null
+        if (uri != null && calendar != null) viewModel.import(calendar, uri)
+    }
+    // The picker only says where the export goes; the ViewModel writes it.
+    val saver = rememberFileSaveLauncher(Icalendar.TYPE) { uri -> viewModel.save(uri) }
 
     DisposableRefresh(lifecycle) {
         viewModel.load(refreshing = true, reset = false)
@@ -153,6 +170,11 @@ fun CalendarScreen(
                         if (chosen == SnackbarResult.ActionPerformed) viewModel.undo()
                     }
                     CalendarEvent.Changed -> snackbar.showSnackbar(resources.getString(R.string.calendars_event_changed))
+                    CalendarEvent.Unreadable -> snackbar.showSnackbar(resources.getString(MochiR.string.common_file_open_failed))
+                    is CalendarEvent.Save -> saver.launch(event.name)
+                    is CalendarEvent.Exported -> snackbar.showSnackbar(
+                        resources.getString(if (event.saved) R.string.calendars_exported else R.string.calendars_export_failed),
+                    )
                 }
             }
         }
@@ -188,6 +210,11 @@ fun CalendarScreen(
                 CalendarAction.COLOUR -> colouring = calendar
                 CalendarAction.LINK -> linking = calendar
                 CalendarAction.POLL -> viewModel.poll(calendar.id)
+                CalendarAction.IMPORT -> {
+                    importing = calendar.id
+                    picker.launch(Icalendar.ACCEPTED)
+                }
+                CalendarAction.EXPORT -> viewModel.export(calendar)
                 CalendarAction.DELETE -> deleting = calendar
             }
         },
@@ -399,6 +426,9 @@ fun CalendarScreen(
     if (about) {
         AboutDialog(onDismiss = { about = false })
     }
+
+    val tally by viewModel.importing.collectAsState()
+    tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport) }
 
     if (preferences) {
         PreferencesDialog(

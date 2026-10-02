@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Το ημερολόγιο συγχρονίστηκε</string>
     <string name="calendars_link_revoke_title">Ανάκληση της διεύθυνσης του ημερολογίου;</string>
     <string name="calendars_link_revoke_message">Τα ημερολόγια που έχουν εγγραφεί σε αυτή τη διεύθυνση θα σταματήσουν να ενημερώνονται.</string>
+    <string name="calendars_export_failed">Δεν ήταν δυνατή η αποθήκευση της εξαγωγής</string>
+    <string name="calendars_import_progress">%1$s από %2$s</string>
+    <string name="calendars_import">Εισαγωγή</string>
+    <string name="calendars_export">Εξαγωγή</string>
+    <string name="calendars_exported">Το ημερολόγιο εξήχθη</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Εισήχθη %1$s συμβάν</item>
+        <item quantity="other">Εισήχθησαν %1$s συμβάντα</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s συμβάν υπάρχει ήδη στο ημερολόγιο</item>
+        <item quantity="other">%1$s συμβάντα υπάρχουν ήδη στο ημερολόγιο</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Δεν ήταν δυνατή η εισαγωγή %1$s συμβάντος</item>
+        <item quantity="other">Δεν ήταν δυνατή η εισαγωγή %1$s συμβάντων</item>
+    </plurals>
 </resources>

@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Calendario sincronizata</string>
     <string name="calendars_link_revoke_title">¿Calendario dirección apaqañati?</string>
     <string name="calendars_link_revoke_message">Aka direcciónar qillqantat calendarionakax janiw juk\'amp machaqtayatäxaniti.</string>
+    <string name="calendars_export_failed">Apsuta janiw imañjamäkiti</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">Apantaña</string>
+    <string name="calendars_export">Apsuña</string>
+    <string name="calendars_exported">Calendariox apsutawa</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s luräwix apantatawa</item>
+        <item quantity="other">%1$s luräwix apantatawa</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s luräwix calendarion utjxiwa</item>
+        <item quantity="other">%1$s luräwix calendarion utjxiwa</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s luräwix janiw apantañjamäkiti</item>
+        <item quantity="other">%1$s luräwix janiw apantañjamäkiti</item>
+    </plurals>
 </resources>

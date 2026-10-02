@@ -199,4 +199,27 @@
     <string name="calendars_polled_synced">Koledar sinhroniziran</string>
     <string name="calendars_link_revoke_title">Odvzeti naslov koledarja?</string>
     <string name="calendars_link_revoke_message">Koledarji, naročeni na ta naslov, se ne bodo več posodabljali.</string>
+    <string name="calendars_export_failed">Izvoza ni bilo mogoče shraniti</string>
+    <string name="calendars_import_progress">%1$s od %2$s</string>
+    <string name="calendars_import">Uvozi</string>
+    <string name="calendars_export">Izvozi</string>
+    <string name="calendars_exported">Koledar je izvožen</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Uvožen je %1$s dogodek</item>
+        <item quantity="two">Uvožena sta %1$s dogodka</item>
+        <item quantity="few">Uvoženi so %1$s dogodki</item>
+        <item quantity="other">Uvoženih je %1$s dogodkov</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s dogodek je že v koledarju</item>
+        <item quantity="two">%1$s dogodka sta že v koledarju</item>
+        <item quantity="few">%1$s dogodki so že v koledarju</item>
+        <item quantity="other">%1$s dogodkov je že v koledarju</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s dogodka ni bilo mogoče uvoziti</item>
+        <item quantity="two">%1$s dogodkov ni bilo mogoče uvoziti</item>
+        <item quantity="few">%1$s dogodkov ni bilo mogoče uvoziti</item>
+        <item quantity="other">%1$s dogodkov ni bilo mogoče uvoziti</item>
+    </plurals>
 </resources>

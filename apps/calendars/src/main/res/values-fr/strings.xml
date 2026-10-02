@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Calendrier synchronisé</string>
     <string name="calendars_link_revoke_title">Révoquer l\'adresse du calendrier ?</string>
     <string name="calendars_link_revoke_message">Les calendriers abonnés à cette adresse ne seront plus mis à jour.</string>
+    <string name="calendars_export_failed">Impossible d\'enregistrer l\'export</string>
+    <string name="calendars_import_progress">%1$s sur %2$s</string>
+    <string name="calendars_import">Importer</string>
+    <string name="calendars_export">Exporter</string>
+    <string name="calendars_exported">Calendrier exporté</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s événement importé</item>
+        <item quantity="other">%1$s événements importés</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s événement déjà dans le calendrier</item>
+        <item quantity="other">%1$s événements déjà dans le calendrier</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s événement n\'a pas pu être importé</item>
+        <item quantity="other">%1$s événements n\'ont pas pu être importés</item>
+    </plurals>
 </resources>

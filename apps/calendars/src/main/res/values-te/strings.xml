@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">క్యాలెండర్ సింక్ చేయబడింది</string>
     <string name="calendars_link_revoke_title">క్యాలెండర్ చిరునామాను ఉపసంహరించాలా?</string>
     <string name="calendars_link_revoke_message">ఈ చిరునామాకు చందా చేసిన క్యాలెండర్‌లు ఇకపై నవీకరించబడవు.</string>
+    <string name="calendars_export_failed">ఎగుమతిని సేవ్ చేయలేకపోయాము</string>
+    <string name="calendars_import_progress">%2$sలో %1$s</string>
+    <string name="calendars_import">దిగుమతి</string>
+    <string name="calendars_export">ఎగుమతి</string>
+    <string name="calendars_exported">క్యాలెండర్ ఎగుమతి చేయబడింది</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s ఈవెంట్ దిగుమతి చేయబడింది</item>
+        <item quantity="other">%1$s ఈవెంట్‌లు దిగుమతి చేయబడ్డాయి</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ఈవెంట్ ఇప్పటికే క్యాలెండర్‌లో ఉంది</item>
+        <item quantity="other">%1$s ఈవెంట్‌లు ఇప్పటికే క్యాలెండర్‌లో ఉన్నాయి</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ఈవెంట్‌ను దిగుమతి చేయలేకపోయాం</item>
+        <item quantity="other">%1$s ఈవెంట్‌లను దిగుమతి చేయలేకపోయాం</item>
+    </plurals>
 </resources>

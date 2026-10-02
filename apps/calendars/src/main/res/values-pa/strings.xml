@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">ਕੈਲੰਡਰ ਸਿੰਕ ਹੋ ਗਿਆ</string>
     <string name="calendars_link_revoke_title">ਕੈਲੰਡਰ ਦਾ ਪਤਾ ਵਾਪਸ ਲੈਣਾ ਹੈ?</string>
     <string name="calendars_link_revoke_message">ਇਸ ਪਤੇ ਦੀ ਗਾਹਕੀ ਵਾਲੇ ਕੈਲੰਡਰ ਹੁਣ ਨਵਿਆਏ ਨਹੀਂ ਜਾਣਗੇ।</string>
+    <string name="calendars_export_failed">ਐਕਸਪੋਰਟ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ</string>
+    <string name="calendars_import_progress">%2$s ਵਿੱਚੋਂ %1$s</string>
+    <string name="calendars_import">ਆਯਾਤ</string>
+    <string name="calendars_export">ਨਿਰਯਾਤ</string>
+    <string name="calendars_exported">ਕੈਲੰਡਰ ਨਿਰਯਾਤ ਕੀਤਾ ਗਿਆ</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s ਇਵੈਂਟ ਆਯਾਤ ਕੀਤਾ ਗਿਆ</item>
+        <item quantity="other">%1$s ਇਵੈਂਟ ਆਯਾਤ ਕੀਤੇ ਗਏ</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ਇਵੈਂਟ ਪਹਿਲਾਂ ਹੀ ਕੈਲੰਡਰ ਵਿੱਚ ਹੈ</item>
+        <item quantity="other">%1$s ਇਵੈਂਟ ਪਹਿਲਾਂ ਹੀ ਕੈਲੰਡਰ ਵਿੱਚ ਹਨ</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ਇਵੈਂਟ ਆਯਾਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</item>
+        <item quantity="other">%1$s ਇਵੈਂਟ ਆਯਾਤ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕੇ</item>
+    </plurals>
 </resources>

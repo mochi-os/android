@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Takvim senkronize edildi</string>
     <string name="calendars_link_revoke_title">Takvim adresi geçersiz kılınsın mı?</string>
     <string name="calendars_link_revoke_message">Bu adrese abone olan takvimler artık güncellenmeyecek.</string>
+    <string name="calendars_export_failed">Dışa aktarma kaydedilemedi</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">İçe aktar</string>
+    <string name="calendars_export">Dışa aktar</string>
+    <string name="calendars_exported">Takvim dışa aktarıldı</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s etkinlik içe aktarıldı</item>
+        <item quantity="other">%1$s etkinlik içe aktarıldı</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s etkinlik zaten takvimde</item>
+        <item quantity="other">%1$s etkinlik zaten takvimde</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s etkinlik içe aktarılamadı</item>
+        <item quantity="other">%1$s etkinlik içe aktarılamadı</item>
+    </plurals>
 </resources>

@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Egutegia sinkronizatuta</string>
     <string name="calendars_link_revoke_title">Egutegiaren helbidea indargabetu?</string>
     <string name="calendars_link_revoke_message">Helbide honetara harpidetutako egutegiak eguneratzeari utziko diote.</string>
+    <string name="calendars_export_failed">Ezin izan da esportazioa gorde</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">Inportatu</string>
+    <string name="calendars_export">Esportatu</string>
+    <string name="calendars_exported">Egutegia esportatu da</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s gertaera inportatu da</item>
+        <item quantity="other">%1$s gertaera inportatu dira</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s gertaera egutegian dago jada</item>
+        <item quantity="other">%1$s gertaera egutegian daude jada</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Ezin izan da %1$s gertaera inportatu</item>
+        <item quantity="other">Ezin izan dira %1$s gertaera inportatu</item>
+    </plurals>
 </resources>

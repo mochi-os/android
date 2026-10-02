@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Күнтізбе синхрондалды</string>
     <string name="calendars_link_revoke_title">Күнтізбе мекенжайын қайтарып аласыз ба?</string>
     <string name="calendars_link_revoke_message">Осы мекенжайға жазылған күнтізбелер бұдан былай жаңартылмайды.</string>
+    <string name="calendars_export_failed">Экспортты сақтау мүмкін болмады</string>
+    <string name="calendars_import_progress">%2$s ішінен %1$s</string>
+    <string name="calendars_import">Импорттау</string>
+    <string name="calendars_export">Экспорттау</string>
+    <string name="calendars_exported">Күнтізбе экспортталды</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s іс-шара импортталды</item>
+        <item quantity="other">%1$s іс-шара импортталды</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s іс-шара күнтізбеде бұрыннан бар</item>
+        <item quantity="other">%1$s іс-шара күнтізбеде бұрыннан бар</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s іс-шараны импорттау мүмкін болмады</item>
+        <item quantity="other">%1$s іс-шараны импорттау мүмкін болмады</item>
+    </plurals>
 </resources>

@@ -27,4 +27,5 @@
     <string name="calendars_polled_synced">Calendário sincronizado</string>
     <string name="calendars_link_revoke_title">Revogar o endereço do calendário?</string>
     <string name="calendars_link_revoke_message">Os calendários inscritos neste endereço deixarão de ser atualizados.</string>
+    <string name="calendars_export_failed">Não foi possível salvar a exportação</string>
 </resources>

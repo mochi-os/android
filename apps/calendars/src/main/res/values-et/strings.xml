@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Kalender sünkroniseeritud</string>
     <string name="calendars_link_revoke_title">Kas võtta kalendri aadress ära?</string>
     <string name="calendars_link_revoke_message">Selle aadressi tellinud kalendrid ei uuene enam.</string>
+    <string name="calendars_export_failed">Eksporti salvestamine ebaõnnestus</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">Impordi</string>
+    <string name="calendars_export">Ekspordi</string>
+    <string name="calendars_exported">Kalender eksporditud</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s sündmus imporditud</item>
+        <item quantity="other">%1$s sündmust imporditud</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s sündmus on juba kalendris</item>
+        <item quantity="other">%1$s sündmust on juba kalendris</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s sündmust ei õnnestunud importida</item>
+        <item quantity="other">%1$s sündmust ei õnnestunud importida</item>
+    </plurals>
 </resources>

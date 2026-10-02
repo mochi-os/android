@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Ikhalenda ilungelelanisiwe</string>
     <string name="calendars_link_revoke_title">Ufuna ukususa idilesi yekhalenda?</string>
     <string name="calendars_link_revoke_message">Iikhalenda ezibhalisele kule dilesi ziza kuyeka ukuhlaziywa.</string>
+    <string name="calendars_export_failed">Ayikwazanga ukugcinwa into ethunyelwe</string>
+    <string name="calendars_import_progress">%1$s kwi-%2$s</string>
+    <string name="calendars_import">Ngenisa</string>
+    <string name="calendars_export">Thumela ngaphandle</string>
+    <string name="calendars_exported">Ikhalenda ithunyelwe ngaphandle</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Kungeniswe umsitho o-%1$s</item>
+        <item quantity="other">Kungeniswe imisitho engu-%1$s</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">Umsitho o-%1$s sele ukhona kwikhalenda</item>
+        <item quantity="other">Imisitho engu-%1$s sele ikhona kwikhalenda</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Umsitho o-%1$s awukwazanga ukungeniswa</item>
+        <item quantity="other">Imisitho engu-%1$s ayikwazanga ukungeniswa</item>
+    </plurals>
 </resources>

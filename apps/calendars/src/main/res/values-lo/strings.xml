@@ -187,4 +187,18 @@
     <string name="calendars_polled_synced">ຊິງຄ໌ປະຕິທິນແລ້ວ</string>
     <string name="calendars_link_revoke_title">ຖອນທີ່ຢູ່ປະຕິທິນບໍ?</string>
     <string name="calendars_link_revoke_message">ປະຕິທິນທີ່ສະໝັກຮັບທີ່ຢູ່ນີ້ຈະບໍ່ຖືກປັບປຸງອີກ</string>
+    <string name="calendars_export_failed">ບໍ່ສາມາດບັນທຶກການສົ່ງອອກໄດ້</string>
+    <string name="calendars_import_progress">%1$s ຈາກ %2$s</string>
+    <string name="calendars_import">ນຳເຂົ້າ</string>
+    <string name="calendars_export">ສົ່ງອອກ</string>
+    <string name="calendars_exported">ສົ່ງອອກປະຕິທິນແລ້ວ</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">ນຳເຂົ້າ %1$s ເຫດການແລ້ວ</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s ເຫດການມີຢູ່ໃນປະຕິທິນແລ້ວ</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">ບໍ່ສາມາດນຳເຂົ້າ %1$s ເຫດການໄດ້</item>
+    </plurals>
 </resources>

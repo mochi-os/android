@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">ক্যালেন্ডার সিঙ্ক করা হয়েছে</string>
     <string name="calendars_link_revoke_title">ক্যালেন্ডারের ঠিকানা প্রত্যাহার করবেন?</string>
     <string name="calendars_link_revoke_message">এই ঠিকানায় সদস্যতা নেওয়া ক্যালেন্ডারগুলো আর হালনাগাদ হবে না।</string>
+    <string name="calendars_export_failed">রপ্তানি সংরক্ষণ করা যায়নি</string>
+    <string name="calendars_import_progress">%2$s-এর মধ্যে %1$s</string>
+    <string name="calendars_import">ইমপোর্ট</string>
+    <string name="calendars_export">এক্সপোর্ট</string>
+    <string name="calendars_exported">ক্যালেন্ডার এক্সপোর্ট করা হয়েছে</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$sটি ইভেন্ট ইমপোর্ট করা হয়েছে</item>
+        <item quantity="other">%1$sটি ইভেন্ট ইমপোর্ট করা হয়েছে</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$sটি ইভেন্ট আগে থেকেই ক্যালেন্ডারে আছে</item>
+        <item quantity="other">%1$sটি ইভেন্ট আগে থেকেই ক্যালেন্ডারে আছে</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$sটি ইভেন্ট ইমপোর্ট করা যায়নি</item>
+        <item quantity="other">%1$sটি ইভেন্ট ইমপোর্ট করা যায়নি</item>
+    </plurals>
 </resources>

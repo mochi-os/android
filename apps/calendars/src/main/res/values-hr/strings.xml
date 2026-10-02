@@ -195,4 +195,24 @@
     <string name="calendars_polled_synced">Kalendar sinkroniziran</string>
     <string name="calendars_link_revoke_title">Opozvati adresu kalendara?</string>
     <string name="calendars_link_revoke_message">Kalendari pretplaćeni na ovu adresu prestat će se ažurirati.</string>
+    <string name="calendars_export_failed">Izvoz nije moguće spremiti</string>
+    <string name="calendars_import_progress">%1$s od %2$s</string>
+    <string name="calendars_import">Uvezi</string>
+    <string name="calendars_export">Izvezi</string>
+    <string name="calendars_exported">Kalendar je izvezen</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Uvezen je %1$s događaj</item>
+        <item quantity="few">Uvezena su %1$s događaja</item>
+        <item quantity="other">Uvezeno je %1$s događaja</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s događaj već je u kalendaru</item>
+        <item quantity="few">%1$s događaja već su u kalendaru</item>
+        <item quantity="other">%1$s događaja već je u kalendaru</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s događaj nije moguće uvesti</item>
+        <item quantity="few">%1$s događaja nije moguće uvesti</item>
+        <item quantity="other">%1$s događaja nije moguće uvesti</item>
+    </plurals>
 </resources>

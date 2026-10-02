@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Naptár szinkronizálva</string>
     <string name="calendars_link_revoke_title">Visszavonja a naptár címét?</string>
     <string name="calendars_link_revoke_message">Az erre a címre feliratkozott naptárak nem frissülnek tovább.</string>
+    <string name="calendars_export_failed">Az exportálást nem sikerült menteni</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">Importálás</string>
+    <string name="calendars_export">Exportálás</string>
+    <string name="calendars_exported">Naptár exportálva</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s esemény importálva</item>
+        <item quantity="other">%1$s esemény importálva</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s esemény már szerepel a naptárban</item>
+        <item quantity="other">%1$s esemény már szerepel a naptárban</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s eseményt nem sikerült importálni</item>
+        <item quantity="other">%1$s eseményt nem sikerült importálni</item>
+    </plurals>
 </resources>

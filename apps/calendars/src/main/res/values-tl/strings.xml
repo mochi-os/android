@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Na-sync ang kalendaryo</string>
     <string name="calendars_link_revoke_title">Bawiin ang address ng kalendaryo?</string>
     <string name="calendars_link_revoke_message">Hindi na mapapanibago ang mga kalendaryong sumusubaybay sa address na ito.</string>
+    <string name="calendars_export_failed">Hindi ma-save ang export</string>
+    <string name="calendars_import_progress">%1$s sa %2$s</string>
+    <string name="calendars_import">I-import</string>
+    <string name="calendars_export">I-export</string>
+    <string name="calendars_exported">Na-export ang kalendaryo</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Na-import ang %1$s kaganapan</item>
+        <item quantity="other">Na-import ang %1$s kaganapan</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">Nasa kalendaryo na ang %1$s kaganapan</item>
+        <item quantity="other">Nasa kalendaryo na ang %1$s kaganapan</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Hindi ma-import ang %1$s kaganapan</item>
+        <item quantity="other">Hindi ma-import ang %1$s kaganapan</item>
+    </plurals>
 </resources>

@@ -199,4 +199,27 @@
     <string name="calendars_polled_synced">Mìosachan sioncronaichte</string>
     <string name="calendars_link_revoke_title">A bheil thu airson seòladh a\' mhìosachain a chùl-ghairm?</string>
     <string name="calendars_link_revoke_message">Cha tèid na mìosachain a tha fo-sgrìobhte ris an t-seòladh seo ùrachadh tuilleadh.</string>
+    <string name="calendars_export_failed">Cha b\' urrainn an t-às-phortadh a shàbhaladh</string>
+    <string name="calendars_import_progress">%1$s à %2$s</string>
+    <string name="calendars_import">Ion-phortaich</string>
+    <string name="calendars_export">Às-phortaich</string>
+    <string name="calendars_exported">Chaidh am mìosachan às-phortadh</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Chaidh %1$s tachartas ion-phortadh</item>
+        <item quantity="two">Chaidh %1$s thachartas ion-phortadh</item>
+        <item quantity="few">Chaidh %1$s tachartasan ion-phortadh</item>
+        <item quantity="other">Chaidh %1$s tachartas ion-phortadh</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">Tha %1$s tachartas sa mhìosachan mu thràth</item>
+        <item quantity="two">Tha %1$s thachartas sa mhìosachan mu thràth</item>
+        <item quantity="few">Tha %1$s tachartasan sa mhìosachan mu thràth</item>
+        <item quantity="other">Tha %1$s tachartas sa mhìosachan mu thràth</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Cha b\' urrainn dhuinn %1$s tachartas ion-phortadh</item>
+        <item quantity="two">Cha b\' urrainn dhuinn %1$s thachartas ion-phortadh</item>
+        <item quantity="few">Cha b\' urrainn dhuinn %1$s tachartasan ion-phortadh</item>
+        <item quantity="other">Cha b\' urrainn dhuinn %1$s tachartas ion-phortadh</item>
+    </plurals>
 </resources>

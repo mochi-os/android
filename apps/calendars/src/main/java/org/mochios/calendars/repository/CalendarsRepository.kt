@@ -17,6 +17,9 @@ import org.mochios.android.api.ApiException
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapRaw
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.android.sync.EventComponent
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.EventCreateRequest
@@ -35,11 +38,16 @@ import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.model.GrantResponse
+import org.mochios.calendars.model.ImportResponse
 import org.mochios.calendars.model.PollResponse
 import org.mochios.calendars.model.RemoteCalendar
 import org.mochios.calendars.ui.calendar.Bounds
+import org.mochios.calendars.ui.calendar.Icalendar
 import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.truncated
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
+import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -73,7 +81,8 @@ class EventChangedException : Exception("event changed on the server")
 class CalendarsRepository @Inject constructor(
     private val api: CalendarsApi,
     private val menuApi: MenuApi,
-) {
+    fileStore: FileStore,
+) : FileRepository(fileStore) {
 
     private val _calendars = MutableStateFlow<List<Calendar>>(emptyList())
 
@@ -220,6 +229,26 @@ class CalendarsRepository @Inject constructor(
     suspend fun pollCalendar(calendar: String): PollResponse = call {
         api.pollCalendar(calendar).unwrap()
     }.also { announce() }
+
+    /**
+     * One round of an iCalendar import into [calendar]. The first round
+     * uploads [file], which the server stages; each round after it sends no
+     * file, only the [staged] id the first answered and the [offset] the last
+     * round reached.
+     */
+    suspend fun importRound(calendar: String, file: File?, staged: String?, offset: Int): ImportResponse = call {
+        api.importCalendar(
+            calendar = calendar.toRequestBody(TEXT),
+            offset = offset.toString().toRequestBody(TEXT),
+            staged = staged?.toRequestBody(TEXT),
+            file = file?.let { fileStore.filePart("file", it, Icalendar.TYPE) },
+        ).unwrap()
+    }
+
+    /** The whole of [calendar] as iCalendar text: any calendar the user has. */
+    suspend fun exportCalendar(calendar: String): String = call {
+        api.exportCalendar(calendar).unwrapRaw().string()
+    }
 
     /** Resolve a permission key to its human label. */
     suspend fun permissionName(permission: String): String = call {
@@ -386,5 +415,9 @@ class CalendarsRepository @Inject constructor(
         if (e.code == 412) throw EventChangedException() else throw e.toMochiError()
     } catch (e: Exception) {
         throw e.toMochiError()
+    }
+
+    private companion object {
+        val TEXT = "text/plain".toMediaType()
     }
 }

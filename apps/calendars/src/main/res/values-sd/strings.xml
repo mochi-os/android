@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">ڪئلينڊر سنڪ ٿي ويو</string>
     <string name="calendars_link_revoke_title">ڪئلينڊر جو پتو رد ڪجي؟</string>
     <string name="calendars_link_revoke_message">هن پتي جي رڪنيت وارا ڪئلينڊر تازه ٿيڻ بند ٿي ويندا.</string>
+    <string name="calendars_export_failed">ايڪسپورٽ محفوظ نه ٿي سگهيو</string>
+    <string name="calendars_import_progress">%2$s مان %1$s</string>
+    <string name="calendars_import">درآمد</string>
+    <string name="calendars_export">برآمد</string>
+    <string name="calendars_exported">ڪئلينڊر برآمد ٿيو</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s واقعو درآمد ٿيو</item>
+        <item quantity="other">%1$s واقعا درآمد ٿيا</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s واقعو اڳ ۾ ئي ڪئلينڊر ۾ آهي</item>
+        <item quantity="other">%1$s واقعا اڳ ۾ ئي ڪئلينڊر ۾ آهن</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s واقعو درآمد نه ٿي سگهيو</item>
+        <item quantity="other">%1$s واقعا درآمد نه ٿي سگهيا</item>
+    </plurals>
 </resources>

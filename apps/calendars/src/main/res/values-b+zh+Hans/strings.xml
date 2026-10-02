@@ -187,4 +187,18 @@
     <string name="calendars_polled_synced">日历已同步</string>
     <string name="calendars_link_revoke_title">撤销日历地址？</string>
     <string name="calendars_link_revoke_message">订阅此地址的日历将停止更新。</string>
+    <string name="calendars_export_failed">无法保存导出内容</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">导入</string>
+    <string name="calendars_export">导出</string>
+    <string name="calendars_exported">日历已导出</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">已导入 %1$s 个活动</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s 个活动已在日历中</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">%1$s 个活动无法导入</item>
+    </plurals>
 </resources>

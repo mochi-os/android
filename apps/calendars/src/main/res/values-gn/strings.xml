@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Arapapaha ojembojoja</string>
     <string name="calendars_link_revoke_title">¿Remboguesépa arapapaha dirección?</string>
     <string name="calendars_link_revoke_message">Umi arapapahakuéra oñemboheraguapýva ko dirección-pe ndoñembohekopyahumo\'ãvéima.</string>
+    <string name="calendars_export_failed">Ndaikatúi oñeñongatu ñemosẽ</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">Ñemoinge</string>
+    <string name="calendars_export">Ñemosẽ</string>
+    <string name="calendars_exported">Arapapaha oñemosẽma</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s evento oñemoingéma</item>
+        <item quantity="other">%1$s evento oñemoingéma</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s evento oĩma arapapahápe</item>
+        <item quantity="other">%1$s evento oĩma arapapahápe</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s evento ndaikatúi oñemoinge</item>
+        <item quantity="other">%1$s evento ndaikatúi oñemoinge</item>
+    </plurals>
 </resources>

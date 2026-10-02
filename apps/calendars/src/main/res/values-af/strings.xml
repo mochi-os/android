@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Kalender gesinkroniseer</string>
     <string name="calendars_link_revoke_title">Herroep die kalenderadres?</string>
     <string name="calendars_link_revoke_message">Kalenders wat op hierdie adres ingeteken is, sal nie meer bygewerk word nie.</string>
+    <string name="calendars_export_failed">Kon nie die uitvoer stoor nie</string>
+    <string name="calendars_import_progress">%1$s van %2$s</string>
+    <string name="calendars_import">Voer in</string>
+    <string name="calendars_export">Voer uit</string>
+    <string name="calendars_exported">Kalender uitgevoer</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s gebeurtenis ingevoer</item>
+        <item quantity="other">%1$s gebeurtenisse ingevoer</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s gebeurtenis is reeds in die kalender</item>
+        <item quantity="other">%1$s gebeurtenisse is reeds in die kalender</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s gebeurtenis kon nie ingevoer word nie</item>
+        <item quantity="other">%1$s gebeurtenisse kon nie ingevoer word nie</item>
+    </plurals>
 </resources>

@@ -187,4 +187,18 @@
     <string name="calendars_polled_synced">Kalender wis disinkronisasi</string>
     <string name="calendars_link_revoke_title">Cabut alamat kalender?</string>
     <string name="calendars_link_revoke_message">Kalèndher sing langganan alamat iki bakal mandheg dianyari.</string>
+    <string name="calendars_export_failed">Ekspor ora bisa disimpen</string>
+    <string name="calendars_import_progress">%1$s saka %2$s</string>
+    <string name="calendars_import">Impor</string>
+    <string name="calendars_export">Ekspor</string>
+    <string name="calendars_exported">Kalender wis diekspor</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">%1$s acara diimpor</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s acara wis ana ing kalender</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">%1$s acara ora bisa diimpor</item>
+    </plurals>
 </resources>

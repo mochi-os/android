@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Agenda gesynchroniseerd</string>
     <string name="calendars_link_revoke_title">Agenda-adres intrekken?</string>
     <string name="calendars_link_revoke_message">Agenda\'s die op dit adres zijn geabonneerd, worden niet meer bijgewerkt.</string>
+    <string name="calendars_export_failed">De export kon niet worden opgeslagen</string>
+    <string name="calendars_import_progress">%1$s van %2$s</string>
+    <string name="calendars_import">Importeren</string>
+    <string name="calendars_export">Exporteren</string>
+    <string name="calendars_exported">Agenda geëxporteerd</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s afspraak geïmporteerd</item>
+        <item quantity="other">%1$s afspraken geïmporteerd</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s afspraak staat al in de agenda</item>
+        <item quantity="other">%1$s afspraken staan al in de agenda</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s afspraak kon niet worden geïmporteerd</item>
+        <item quantity="other">%1$s afspraken konden niet worden geïmporteerd</item>
+    </plurals>
 </resources>

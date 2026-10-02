@@ -59,3 +59,20 @@ data class PollResponse(val changed: Boolean = false, val calendar: Calendar = C
 
 /** `-/calendars/refresh`: whether syncing the stale linked calendars changed anything. */
 data class RefreshResponse(val changed: Boolean = false)
+
+/**
+ * One round of `-/calendars/import`. [import] names the file the server
+ * staged on the first round, and the next round sends it back with [offset],
+ * how far into the file's [total] objects this round reached, until
+ * [finished]. The counts are this round's own: written, [skipped] as already
+ * in the calendar, and [failed] as unreadable.
+ */
+data class ImportResponse(
+    val import: String = "",
+    val offset: Int = 0,
+    val total: Int = 0,
+    val imported: Int = 0,
+    val skipped: Int = 0,
+    val failed: Int = 0,
+    val finished: Boolean = false,
+)

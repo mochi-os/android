@@ -187,4 +187,18 @@
     <string name="calendars_polled_synced">Kalendar disegerakkan</string>
     <string name="calendars_link_revoke_title">Tarik balik alamat kalendar?</string>
     <string name="calendars_link_revoke_message">Kalendar yang melanggan alamat ini akan berhenti dikemas kini.</string>
+    <string name="calendars_export_failed">Eksport tidak dapat disimpan</string>
+    <string name="calendars_import_progress">%1$s daripada %2$s</string>
+    <string name="calendars_import">Import</string>
+    <string name="calendars_export">Eksport</string>
+    <string name="calendars_exported">Kalendar dieksport</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">%1$s acara diimport</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s acara sudah ada dalam kalendar</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">%1$s acara tidak dapat diimport</item>
+    </plurals>
 </resources>

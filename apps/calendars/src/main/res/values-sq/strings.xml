@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Kalendari u sinkronizua</string>
     <string name="calendars_link_revoke_title">Të revokohet adresa e kalendarit?</string>
     <string name="calendars_link_revoke_message">Kalendarët e abonuar në këtë adresë do të ndalojnë së përditësuari.</string>
+    <string name="calendars_export_failed">Eksporti nuk u ruajt dot</string>
+    <string name="calendars_import_progress">%1$s nga %2$s</string>
+    <string name="calendars_import">Importo</string>
+    <string name="calendars_export">Eksporto</string>
+    <string name="calendars_exported">Kalendari u eksportua</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">U importua %1$s ngjarje</item>
+        <item quantity="other">U importuan %1$s ngjarje</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ngjarje është tashmë në kalendar</item>
+        <item quantity="other">%1$s ngjarje janë tashmë në kalendar</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ngjarje nuk mund të importohej</item>
+        <item quantity="other">%1$s ngjarje nuk mund të importoheshin</item>
+    </plurals>
 </resources>

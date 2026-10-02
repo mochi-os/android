@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Calendario sincronizasqa</string>
     <string name="calendars_link_revoke_title">¿Calendario direccionta qichunkichu?</string>
     <string name="calendars_link_revoke_message">Kay direccionman suscribisqa calendariokunaqa manañam musuqchakunqachu.</string>
+    <string name="calendars_export_failed">Exportasqata mana waqaychayta atikurqanchu</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">Importay</string>
+    <string name="calendars_export">Exportay</string>
+    <string name="calendars_exported">Calendario exportasqa</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s evento importasqa</item>
+        <item quantity="other">%1$s evento importasqa</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s evento calendariopi kachkanña</item>
+        <item quantity="other">%1$s evento calendariopi kachkanña</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s evento mana importayta atikurqanchu</item>
+        <item quantity="other">%1$s evento mana importayta atikurqanchu</item>
+    </plurals>
 </resources>

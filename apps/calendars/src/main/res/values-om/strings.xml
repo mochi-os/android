@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Kaalaandariin walsimsiifame</string>
     <string name="calendars_link_revoke_title">Teessoo kaalaandarii deebifachuu barbaaddaa?</string>
     <string name="calendars_link_revoke_message">Kaalandariileen teessoo kana irratti galmaa\'an kana booda hin haaromfaman.</string>
+    <string name="calendars_export_failed">Alergiinsi olkaa\'amuu hin dandeenye</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">Alaa galchuu</string>
+    <string name="calendars_export">Alaa erguu</string>
+    <string name="calendars_exported">Kaalaandariin alaa ergame</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Taateen %1$s alaa galfame</item>
+        <item quantity="other">Taateewwan %1$s alaa galfaman</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">Taateen %1$s duraanuu kaalaandarii keessa jira</item>
+        <item quantity="other">Taateewwan %1$s duraanuu kaalaandarii keessa jiru</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Taateen %1$s alaa galchuu hin dandeenye</item>
+        <item quantity="other">Taateewwan %1$s alaa galchuu hin dandeenye</item>
+    </plurals>
 </resources>

@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Kalender synkronisert</string>
     <string name="calendars_link_revoke_title">Tilbakekalle kalenderadressen?</string>
     <string name="calendars_link_revoke_message">Kalendere som abonnerer på denne adressen, slutter å oppdateres.</string>
+    <string name="calendars_export_failed">Kunne ikke lagre eksporten</string>
+    <string name="calendars_import_progress">%1$s av %2$s</string>
+    <string name="calendars_import">Importer</string>
+    <string name="calendars_export">Eksporter</string>
+    <string name="calendars_exported">Kalenderen er eksportert</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s hendelse importert</item>
+        <item quantity="other">%1$s hendelser importert</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s hendelse er allerede i kalenderen</item>
+        <item quantity="other">%1$s hendelser er allerede i kalenderen</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s hendelse kunne ikke importeres</item>
+        <item quantity="other">%1$s hendelser kunne ikke importeres</item>
+    </plurals>
 </resources>

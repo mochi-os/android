@@ -203,4 +203,30 @@
     <string name="calendars_polled_synced">Féilire sioncronaithe</string>
     <string name="calendars_link_revoke_title">Seoladh an fhéilire a chúlghairm?</string>
     <string name="calendars_link_revoke_message">Ní nuashonrófar a thuilleadh na féilirí atá liostáilte leis an seoladh seo.</string>
+    <string name="calendars_export_failed">Níorbh fhéidir an easpórtáil a shábháil</string>
+    <string name="calendars_import_progress">%1$s as %2$s</string>
+    <string name="calendars_import">Iompórtáil</string>
+    <string name="calendars_export">Easpórtáil</string>
+    <string name="calendars_exported">Easpórtáladh an féilire</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Iompórtáladh %1$s imeacht</item>
+        <item quantity="two">Iompórtáladh %1$s imeacht</item>
+        <item quantity="few">Iompórtáladh %1$s imeacht</item>
+        <item quantity="many">Iompórtáladh %1$s imeacht</item>
+        <item quantity="other">Iompórtáladh %1$s imeacht</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s imeacht sa fhéilire cheana</item>
+        <item quantity="two">%1$s imeacht sa fhéilire cheana</item>
+        <item quantity="few">%1$s imeacht sa fhéilire cheana</item>
+        <item quantity="many">%1$s imeacht sa fhéilire cheana</item>
+        <item quantity="other">%1$s imeacht sa fhéilire cheana</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Níorbh fhéidir %1$s imeacht a iompórtáil</item>
+        <item quantity="two">Níorbh fhéidir %1$s imeacht a iompórtáil</item>
+        <item quantity="few">Níorbh fhéidir %1$s imeacht a iompórtáil</item>
+        <item quantity="many">Níorbh fhéidir %1$s imeacht a iompórtáil</item>
+        <item quantity="other">Níorbh fhéidir %1$s imeacht a iompórtáil</item>
+    </plurals>
 </resources>

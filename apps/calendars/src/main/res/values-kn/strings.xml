@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">ಕ್ಯಾಲೆಂಡರ್ ಸಿಂಕ್ ಆಗಿದೆ</string>
     <string name="calendars_link_revoke_title">ಕ್ಯಾಲೆಂಡರ್ ವಿಳಾಸವನ್ನು ಹಿಂಪಡೆಯಬೇಕೇ?</string>
     <string name="calendars_link_revoke_message">ಈ ವಿಳಾಸಕ್ಕೆ ಚಂದಾದಾರರಾಗಿರುವ ಕ್ಯಾಲೆಂಡರ್‌ಗಳು ಇನ್ನು ಮುಂದೆ ನವೀಕರಣಗೊಳ್ಳುವುದಿಲ್ಲ.</string>
+    <string name="calendars_export_failed">ರಫ್ತು ಉಳಿಸಲಾಗಲಿಲ್ಲ</string>
+    <string name="calendars_import_progress">%2$sರಲ್ಲಿ %1$s</string>
+    <string name="calendars_import">ಆಮದು</string>
+    <string name="calendars_export">ರಫ್ತು</string>
+    <string name="calendars_exported">ಕ್ಯಾಲೆಂಡರ್ ಅನ್ನು ರಫ್ತು ಮಾಡಲಾಗಿದೆ</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s ಈವೆಂಟ್ ಆಮದು ಮಾಡಲಾಗಿದೆ</item>
+        <item quantity="other">%1$s ಈವೆಂಟ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ಈವೆಂಟ್ ಈಗಾಗಲೇ ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿದೆ</item>
+        <item quantity="other">%1$s ಈವೆಂಟ್‌ಗಳು ಈಗಾಗಲೇ ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿವೆ</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ಈವೆಂಟ್ ಆಮದು ಮಾಡಲಾಗಲಿಲ್ಲ</item>
+        <item quantity="other">%1$s ಈವೆಂಟ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಲಾಗಲಿಲ್ಲ</item>
+    </plurals>
 </resources>

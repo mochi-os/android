@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.DialogProperties
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.DataChip
@@ -42,6 +44,7 @@ import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.model.defaultCalendar
+import org.mochios.calendars.ui.calendar.Tally
 import org.mochios.calendars.ui.editor.REMINDER_LEADS
 import org.mochios.calendars.ui.editor.reminderLeads
 import org.mochios.android.R as MochiR
@@ -95,6 +98,72 @@ fun ColourCalendarDialog(
         dismissText = stringResource(MochiR.string.common_cancel),
         content = {
             ColorPicker(hex = colour, onHexChange = { colour = it }, modifier = Modifier.fillMaxWidth())
+        },
+    )
+}
+
+/**
+ * An import into a calendar: how far through the file it is while the rounds
+ * run, then what came of it. Until it finishes it has no button and ignores
+ * back and a tap outside, since closing it would not stop the import.
+ */
+@Composable
+fun ImportDialog(
+    tally: Tally,
+    onClose: () -> Unit,
+) {
+    MochiAlertDialog(
+        onDismissRequest = { if (tally.finished) onClose() },
+        title = stringResource(R.string.calendars_import),
+        subtitle = tally.name,
+        confirmText = if (tally.finished) stringResource(MochiR.string.common_close) else null,
+        onConfirm = onClose,
+        properties = DialogProperties(dismissOnBackPress = tally.finished, dismissOnClickOutside = tally.finished),
+        content = {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                when {
+                    tally.finished -> importCounts(tally).forEach { Text(it) }
+                    // The first round's answer brings the file's size; until
+                    // then there is nothing to measure against.
+                    tally.total == 0 -> LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                    else -> {
+                        LinearProgressIndicator(
+                            progress = { tally.done.toFloat() / tally.total },
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                        Text(importProgress(tally))
+                    }
+                }
+            }
+        },
+    )
+}
+
+/** How far an import has read: so many of the file's objects. */
+@Composable
+fun importProgress(tally: Tally): String {
+    val format = LocalFormat.current
+    return stringResource(R.string.calendars_import_progress, format.formatNumber(tally.done), format.formatNumber(tally.total))
+}
+
+/**
+ * What an import came to: the objects written, and those already in the
+ * calendar and those that could not be read, when there were any.
+ */
+@Composable
+fun importCounts(tally: Tally): List<String> {
+    val format = LocalFormat.current
+    return listOfNotNull(
+        pluralStringResource(R.plurals.calendars_import_imported, tally.imported, format.formatNumber(tally.imported)),
+        if (tally.skipped > 0) {
+            pluralStringResource(R.plurals.calendars_import_skipped, tally.skipped, format.formatNumber(tally.skipped))
+        } else {
+            null
+        },
+        if (tally.failed > 0) {
+            pluralStringResource(R.plurals.calendars_import_failed, tally.failed, format.formatNumber(tally.failed))
+        } else {
+            null
         },
     )
 }

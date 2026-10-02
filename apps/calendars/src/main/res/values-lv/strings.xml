@@ -195,4 +195,24 @@
     <string name="calendars_polled_synced">Kalendārs sinhronizēts</string>
     <string name="calendars_link_revoke_title">Atsaukt kalendāra adresi?</string>
     <string name="calendars_link_revoke_message">Kalendāri, kas abonē šo adresi, vairs netiks atjaunināti.</string>
+    <string name="calendars_export_failed">Neizdevās saglabāt eksportu</string>
+    <string name="calendars_import_progress">%1$s no %2$s</string>
+    <string name="calendars_import">Importēt</string>
+    <string name="calendars_export">Eksportēt</string>
+    <string name="calendars_exported">Kalendārs eksportēts</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="zero">Importēti %1$s notikumi</item>
+        <item quantity="one">Importēts %1$s notikums</item>
+        <item quantity="other">Importēti %1$s notikumi</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="zero">%1$s notikumi jau ir kalendārā</item>
+        <item quantity="one">%1$s notikums jau ir kalendārā</item>
+        <item quantity="other">%1$s notikumi jau ir kalendārā</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="zero">Neizdevās importēt %1$s notikumus</item>
+        <item quantity="one">Neizdevās importēt %1$s notikumu</item>
+        <item quantity="other">Neizdevās importēt %1$s notikumus</item>
+    </plurals>
 </resources>

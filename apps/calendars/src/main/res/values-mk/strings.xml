@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Календарот е синхронизиран</string>
     <string name="calendars_link_revoke_title">Да се отповика адресата на календарот?</string>
     <string name="calendars_link_revoke_message">Календарите претплатени на оваа адреса ќе престанат да се ажурираат.</string>
+    <string name="calendars_export_failed">Извозот не можеше да се зачува</string>
+    <string name="calendars_import_progress">%1$s од %2$s</string>
+    <string name="calendars_import">Увези</string>
+    <string name="calendars_export">Извези</string>
+    <string name="calendars_exported">Календарот е извезен</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Увезен е %1$s настан</item>
+        <item quantity="other">Увезени се %1$s настани</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s настан веќе е во календарот</item>
+        <item quantity="other">%1$s настани веќе се во календарот</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s настан не можеше да се увезе</item>
+        <item quantity="other">%1$s настани не можеа да се увезат</item>
+    </plurals>
 </resources>

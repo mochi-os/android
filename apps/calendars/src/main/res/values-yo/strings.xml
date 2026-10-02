@@ -187,4 +187,18 @@
     <string name="calendars_polled_synced">A ti mú kàlẹ́ńdà bá ara mu</string>
     <string name="calendars_link_revoke_title">Ṣé kí a gba àdírẹ́sì kàlẹ́ńdà padà?</string>
     <string name="calendars_link_revoke_message">Àwọn kàlẹ́ńdà tí wọ́n forúkọ sílẹ̀ fún àdírẹ́sì yìí kò ní ṣe ìmúdójúìwọ̀n mọ́.</string>
+    <string name="calendars_export_failed">A kò lè fi ìkójáde pamọ́</string>
+    <string name="calendars_import_progress">%1$s nínú %2$s</string>
+    <string name="calendars_import">Kó wọlé</string>
+    <string name="calendars_export">Kó jáde</string>
+    <string name="calendars_exported">A ti kó kàlẹ́ńdà jáde</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">A ti kó ìṣẹ̀lẹ̀ %1$s wọlé</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">Ìṣẹ̀lẹ̀ %1$s ti wà nínú kàlẹ́ńdà tẹ́lẹ̀</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">A kò lè kó ìṣẹ̀lẹ̀ %1$s wọlé</item>
+    </plurals>
 </resources>

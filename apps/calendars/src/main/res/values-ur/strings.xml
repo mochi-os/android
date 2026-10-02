@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">کیلنڈر سنک ہو گیا</string>
     <string name="calendars_link_revoke_title">کیلنڈر کا پتہ واپس لیں؟</string>
     <string name="calendars_link_revoke_message">جن کیلنڈرز نے اس پتے کی رکنیت لی ہے وہ اب تازہ نہیں ہوں گے۔</string>
+    <string name="calendars_export_failed">ایکسپورٹ محفوظ نہیں ہو سکا</string>
+    <string name="calendars_import_progress">%2$s میں سے %1$s</string>
+    <string name="calendars_import">درآمد</string>
+    <string name="calendars_export">برآمد</string>
+    <string name="calendars_exported">کیلنڈر برآمد ہو گیا</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s ایونٹ درآمد ہو گیا</item>
+        <item quantity="other">%1$s ایونٹس درآمد ہو گئے</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ایونٹ پہلے سے کیلنڈر میں ہے</item>
+        <item quantity="other">%1$s ایونٹس پہلے سے کیلنڈر میں ہیں</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ایونٹ درآمد نہیں ہو سکا</item>
+        <item quantity="other">%1$s ایونٹس درآمد نہیں ہو سکے</item>
+    </plurals>
 </resources>

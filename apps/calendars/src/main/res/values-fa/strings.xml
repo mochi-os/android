@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">تقویم همگام‌سازی شد</string>
     <string name="calendars_link_revoke_title">نشانی تقویم باطل شود؟</string>
     <string name="calendars_link_revoke_message">تقویم‌هایی که در این نشانی مشترک شده‌اند دیگر به‌روزرسانی نمی‌شوند.</string>
+    <string name="calendars_export_failed">ذخیره خروجی ممکن نشد</string>
+    <string name="calendars_import_progress">%1$s از %2$s</string>
+    <string name="calendars_import">وارد کردن</string>
+    <string name="calendars_export">خروجی گرفتن</string>
+    <string name="calendars_exported">از تقویم خروجی گرفته شد</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s رویداد وارد شد</item>
+        <item quantity="other">%1$s رویداد وارد شد</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s رویداد از قبل در تقویم هست</item>
+        <item quantity="other">%1$s رویداد از قبل در تقویم هست</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s رویداد وارد نشد</item>
+        <item quantity="other">%1$s رویداد وارد نشد</item>
+    </plurals>
 </resources>

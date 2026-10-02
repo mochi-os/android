@@ -187,4 +187,18 @@
     <string name="calendars_polled_synced">カレンダーを同期しました</string>
     <string name="calendars_link_revoke_title">カレンダーのアドレスを無効にしますか？</string>
     <string name="calendars_link_revoke_message">このアドレスを購読しているカレンダーは更新されなくなります。</string>
+    <string name="calendars_export_failed">エクスポートを保存できませんでした</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">インポート</string>
+    <string name="calendars_export">エクスポート</string>
+    <string name="calendars_exported">カレンダーをエクスポートしました</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">%1$s 件の予定をインポートしました</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s 件の予定はすでにカレンダーにあります</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">%1$s 件の予定をインポートできませんでした</item>
+    </plurals>
 </resources>

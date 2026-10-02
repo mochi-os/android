@@ -198,4 +198,24 @@
     <string name="calendars_polled_synced">Kalendorius sinchronizuotas</string>
     <string name="calendars_link_revoke_title">Panaikinti kalendoriaus adresą?</string>
     <string name="calendars_link_revoke_message">Kalendoriai, užsiprenumeravę šį adresą, nebebus atnaujinami.</string>
+    <string name="calendars_export_failed">Nepavyko išsaugoti eksporto</string>
+    <string name="calendars_import_progress">%1$s iš %2$s</string>
+    <string name="calendars_import">Importuoti</string>
+    <string name="calendars_export">Eksportuoti</string>
+    <string name="calendars_exported">Kalendorius eksportuotas</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Importuotas %1$s įvykis</item>
+        <item quantity="few">Importuoti %1$s įvykiai</item>
+        <item quantity="other">Importuota %1$s įvykių</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s įvykis jau yra kalendoriuje</item>
+        <item quantity="few">%1$s įvykiai jau yra kalendoriuje</item>
+        <item quantity="other">%1$s įvykių jau yra kalendoriuje</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Nepavyko importuoti %1$s įvykio</item>
+        <item quantity="few">Nepavyko importuoti %1$s įvykių</item>
+        <item quantity="other">Nepavyko importuoti %1$s įvykių</item>
+    </plurals>
 </resources>

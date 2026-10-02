@@ -198,4 +198,24 @@
     <string name="calendars_polled_synced">היומן סונכרן</string>
     <string name="calendars_link_revoke_title">לשלול את כתובת היומן?</string>
     <string name="calendars_link_revoke_message">לוחות שנה שנרשמו לכתובת זו יפסיקו להתעדכן.</string>
+    <string name="calendars_export_failed">לא ניתן היה לשמור את הייצוא</string>
+    <string name="calendars_import_progress">%1$s מתוך %2$s</string>
+    <string name="calendars_import">ייבוא</string>
+    <string name="calendars_export">ייצוא</string>
+    <string name="calendars_exported">היומן יוצא</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">יובא %1$s אירוע</item>
+        <item quantity="two">יובאו %1$s אירועים</item>
+        <item quantity="other">יובאו %1$s אירועים</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s אירוע כבר נמצא ביומן</item>
+        <item quantity="two">%1$s אירועים כבר נמצאים ביומן</item>
+        <item quantity="other">%1$s אירועים כבר נמצאים ביומן</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">לא ניתן היה לייבא %1$s אירוע</item>
+        <item quantity="two">לא ניתן היה לייבא %1$s אירועים</item>
+        <item quantity="other">לא ניתן היה לייבא %1$s אירועים</item>
+    </plurals>
 </resources>

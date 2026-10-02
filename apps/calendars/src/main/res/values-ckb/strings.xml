@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">ڕۆژژمێر هاوکات کرا</string>
     <string name="calendars_link_revoke_title">ناونیشانی ڕۆژژمێر ڕەتبکرێتەوە؟</string>
     <string name="calendars_link_revoke_message">ئەو ڕۆژژمێرانەی بەشداری ئەم ناونیشانەیان کردووە، چیتر نوێ ناکرێنەوە.</string>
+    <string name="calendars_export_failed">نەتوانرا هەناردەکە پاشەکەوت بکرێت</string>
+    <string name="calendars_import_progress">%1$s لە %2$s</string>
+    <string name="calendars_import">هاوردەکردن</string>
+    <string name="calendars_export">هەناردەکردن</string>
+    <string name="calendars_exported">ڕۆژژمێر هەناردە کرا</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s ڕووداو هاوردە کرا</item>
+        <item quantity="other">%1$s ڕووداو هاوردە کران</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ڕووداو پێشتر لە ڕۆژژمێرەکەدا هەیە</item>
+        <item quantity="other">%1$s ڕووداو پێشتر لە ڕۆژژمێرەکەدا هەیە</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">نەتوانرا %1$s ڕووداو هاوردە بکرێت</item>
+        <item quantity="other">نەتوانرا %1$s ڕووداو هاوردە بکرێت</item>
+    </plurals>
 </resources>

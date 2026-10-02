@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">क्यालेन्डर सिङ्क भयो</string>
     <string name="calendars_link_revoke_title">क्यालेन्डरको ठेगाना फिर्ता लिने?</string>
     <string name="calendars_link_revoke_message">यो ठेगानाको सदस्यता लिएका पात्रोहरू अब अद्यावधिक हुने छैनन्।</string>
+    <string name="calendars_export_failed">निर्यात सुरक्षित गर्न सकिएन</string>
+    <string name="calendars_import_progress">%2$sमध्ये %1$s</string>
+    <string name="calendars_import">आयात</string>
+    <string name="calendars_export">निर्यात</string>
+    <string name="calendars_exported">क्यालेन्डर निर्यात गरियो</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s कार्यक्रम आयात गरियो</item>
+        <item quantity="other">%1$s कार्यक्रम आयात गरियो</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s कार्यक्रम पहिले नै क्यालेन्डरमा छ</item>
+        <item quantity="other">%1$s कार्यक्रम पहिले नै क्यालेन्डरमा छन्</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s कार्यक्रम आयात गर्न सकिएन</item>
+        <item quantity="other">%1$s कार्यक्रम आयात गर्न सकिएन</item>
+    </plurals>
 </resources>

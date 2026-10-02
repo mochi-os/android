@@ -199,4 +199,27 @@
     <string name="calendars_polled_synced">Каляндар сінхранізаваны</string>
     <string name="calendars_link_revoke_title">Адклікаць адрас календара?</string>
     <string name="calendars_link_revoke_message">Календары, падпісаныя на гэты адрас, перастануць абнаўляцца.</string>
+    <string name="calendars_export_failed">Не ўдалося захаваць экспарт</string>
+    <string name="calendars_import_progress">%1$s з %2$s</string>
+    <string name="calendars_import">Імпарт</string>
+    <string name="calendars_export">Экспарт</string>
+    <string name="calendars_exported">Каляндар экспартаваны</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Імпартавана %1$s падзея</item>
+        <item quantity="few">Імпартавана %1$s падзеі</item>
+        <item quantity="many">Імпартавана %1$s падзей</item>
+        <item quantity="other">Імпартавана %1$s падзеі</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s падзея ўжо ёсць у календары</item>
+        <item quantity="few">%1$s падзеі ўжо ёсць у календары</item>
+        <item quantity="many">%1$s падзей ужо ёсць у календары</item>
+        <item quantity="other">%1$s падзеі ўжо ёсць у календары</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Не ўдалося імпартаваць %1$s падзею</item>
+        <item quantity="few">Не ўдалося імпартаваць %1$s падзеі</item>
+        <item quantity="many">Не ўдалося імпартаваць %1$s падзей</item>
+        <item quantity="other">Не ўдалося імпартаваць %1$s падзеі</item>
+    </plurals>
 </resources>

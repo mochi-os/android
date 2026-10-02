@@ -207,4 +207,33 @@
     <string name="calendars_polled_synced">Cysonwyd y calendr</string>
     <string name="calendars_link_revoke_title">Dirymu cyfeiriad y calendr?</string>
     <string name="calendars_link_revoke_message">Bydd calendrau sydd wedi tanysgrifio i\'r cyfeiriad hwn yn peidio â chael eu diweddaru.</string>
+    <string name="calendars_export_failed">Methwyd cadw\'r allforio</string>
+    <string name="calendars_import_progress">%1$s o %2$s</string>
+    <string name="calendars_import">Mewnforio</string>
+    <string name="calendars_export">Allforio</string>
+    <string name="calendars_exported">Wedi allforio\'r calendr</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="zero">Wedi mewnforio %1$s digwyddiad</item>
+        <item quantity="one">Wedi mewnforio %1$s digwyddiad</item>
+        <item quantity="two">Wedi mewnforio %1$s digwyddiad</item>
+        <item quantity="few">Wedi mewnforio %1$s digwyddiad</item>
+        <item quantity="many">Wedi mewnforio %1$s digwyddiad</item>
+        <item quantity="other">Wedi mewnforio %1$s digwyddiad</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="zero">%1$s digwyddiad eisoes yn y calendr</item>
+        <item quantity="one">%1$s digwyddiad eisoes yn y calendr</item>
+        <item quantity="two">%1$s digwyddiad eisoes yn y calendr</item>
+        <item quantity="few">%1$s digwyddiad eisoes yn y calendr</item>
+        <item quantity="many">%1$s digwyddiad eisoes yn y calendr</item>
+        <item quantity="other">%1$s digwyddiad eisoes yn y calendr</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="zero">Methu mewnforio %1$s digwyddiad</item>
+        <item quantity="one">Methu mewnforio %1$s digwyddiad</item>
+        <item quantity="two">Methu mewnforio %1$s digwyddiad</item>
+        <item quantity="few">Methu mewnforio %1$s digwyddiad</item>
+        <item quantity="many">Methu mewnforio %1$s digwyddiad</item>
+        <item quantity="other">Methu mewnforio %1$s digwyddiad</item>
+    </plurals>
 </resources>

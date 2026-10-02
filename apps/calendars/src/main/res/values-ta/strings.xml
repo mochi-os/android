@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">நாட்காட்டி ஒத்திசைக்கப்பட்டது</string>
     <string name="calendars_link_revoke_title">நாட்காட்டி முகவரியை திரும்பப் பெறவா?</string>
     <string name="calendars_link_revoke_message">இந்த முகவரிக்குக் குழுசேர்ந்த நாள்காட்டிகள் இனி புதுப்பிக்கப்படாது.</string>
+    <string name="calendars_export_failed">ஏற்றுமதியைச் சேமிக்க முடியவில்லை</string>
+    <string name="calendars_import_progress">%2$sஇல் %1$s</string>
+    <string name="calendars_import">இறக்குமதி</string>
+    <string name="calendars_export">ஏற்றுமதி</string>
+    <string name="calendars_exported">நாட்காட்டி ஏற்றுமதி செய்யப்பட்டது</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s நிகழ்வு இறக்குமதி செய்யப்பட்டது</item>
+        <item quantity="other">%1$s நிகழ்வுகள் இறக்குமதி செய்யப்பட்டன</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s நிகழ்வு ஏற்கனவே நாட்காட்டியில் உள்ளது</item>
+        <item quantity="other">%1$s நிகழ்வுகள் ஏற்கனவே நாட்காட்டியில் உள்ளன</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s நிகழ்வை இறக்குமதி செய்ய முடியவில்லை</item>
+        <item quantity="other">%1$s நிகழ்வுகளை இறக்குமதி செய்ய முடியவில்லை</item>
+    </plurals>
 </resources>

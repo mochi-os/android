@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">An daidaita kalanda</string>
     <string name="calendars_link_revoke_title">A janye adireshin kalanda?</string>
     <string name="calendars_link_revoke_message">Kalandocin da suka yi rajista da wannan adireshin za su daina sabuntawa.</string>
+    <string name="calendars_export_failed">An kasa ajiye fitarwar</string>
+    <string name="calendars_import_progress">%1$s cikin %2$s</string>
+    <string name="calendars_import">Shigarwa</string>
+    <string name="calendars_export">Fitarwa</string>
+    <string name="calendars_exported">An fitar da kalanda</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">An shigar da taro %1$s</item>
+        <item quantity="other">An shigar da taruka %1$s</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">Taro %1$s yana cikin kalanda tuni</item>
+        <item quantity="other">Taruka %1$s suna cikin kalanda tuni</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Ba a iya shigar da taro %1$s ba</item>
+        <item quantity="other">Ba a iya shigar da taruka %1$s ba</item>
+    </plurals>
 </resources>

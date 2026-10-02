@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">የቀን መቁጠሪያ ተመሳስሏል</string>
     <string name="calendars_link_revoke_title">የቀን መቁጠሪያ አድራሻው ይሻር?</string>
     <string name="calendars_link_revoke_message">በዚህ አድራሻ የተመዘገቡ የቀን መቁጠሪያዎች መዘመን ያቆማሉ።</string>
+    <string name="calendars_export_failed">ወደ ውጪ መላኩን ማስቀመጥ አልተቻለም</string>
+    <string name="calendars_import_progress">%1$s ከ %2$s</string>
+    <string name="calendars_import">አስገባ</string>
+    <string name="calendars_export">ላክ</string>
+    <string name="calendars_exported">ቀን መቁጠሪያው ተልኳል</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s ክስተት ገብቷል</item>
+        <item quantity="other">%1$s ክስተቶች ገብተዋል</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ክስተት አስቀድሞ በቀን መቁጠሪያው ውስጥ አለ</item>
+        <item quantity="other">%1$s ክስተቶች አስቀድመው በቀን መቁጠሪያው ውስጥ አሉ</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ክስተት ማስገባት አልተቻለም</item>
+        <item quantity="other">%1$s ክስተቶችን ማስገባት አልተቻለም</item>
+    </plurals>
 </resources>

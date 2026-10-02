@@ -187,4 +187,18 @@
     <string name="calendars_polled_synced">Đã đồng bộ lịch</string>
     <string name="calendars_link_revoke_title">Thu hồi địa chỉ lịch?</string>
     <string name="calendars_link_revoke_message">Các lịch đã đăng ký địa chỉ này sẽ ngừng cập nhật.</string>
+    <string name="calendars_export_failed">Không thể lưu bản xuất</string>
+    <string name="calendars_import_progress">%1$s trên %2$s</string>
+    <string name="calendars_import">Nhập</string>
+    <string name="calendars_export">Xuất</string>
+    <string name="calendars_exported">Đã xuất lịch</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">Đã nhập %1$s sự kiện</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s sự kiện đã có trong lịch</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">Không thể nhập %1$s sự kiện</item>
+    </plurals>
 </resources>

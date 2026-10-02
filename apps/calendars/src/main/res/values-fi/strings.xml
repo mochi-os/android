@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Kalenteri synkronoitu</string>
     <string name="calendars_link_revoke_title">Mitätöidäänkö kalenterin osoite?</string>
     <string name="calendars_link_revoke_message">Tämän osoitteen tilanneet kalenterit lakkaavat päivittymästä.</string>
+    <string name="calendars_export_failed">Vientiä ei voitu tallentaa</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">Tuo</string>
+    <string name="calendars_export">Vie</string>
+    <string name="calendars_exported">Kalenteri viety</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s tapahtuma tuotu</item>
+        <item quantity="other">%1$s tapahtumaa tuotu</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s tapahtuma on jo kalenterissa</item>
+        <item quantity="other">%1$s tapahtumaa on jo kalenterissa</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s tapahtumaa ei voitu tuoda</item>
+        <item quantity="other">%1$s tapahtumaa ei voitu tuoda</item>
+    </plurals>
 </resources>

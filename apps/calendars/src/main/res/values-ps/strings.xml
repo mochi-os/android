@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">کليز همغږی شو</string>
     <string name="calendars_link_revoke_title">د کليز پته بیرته واخلئ؟</string>
     <string name="calendars_link_revoke_message">هغه کليزونه چې دې پتې ته ګډون لري نور به نه تازه کیږي.</string>
+    <string name="calendars_export_failed">صادرول خوندي نه شو</string>
+    <string name="calendars_import_progress">%1$s له %2$s څخه</string>
+    <string name="calendars_import">واردول</string>
+    <string name="calendars_export">صادرول</string>
+    <string name="calendars_exported">کليز صادر شو</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s پېښه وارده شوه</item>
+        <item quantity="other">%1$s پېښې وارد شوې</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s پېښه دمخه په کليز کې ده</item>
+        <item quantity="other">%1$s پېښې دمخه په کليز کې دي</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s پېښه وارد نه شوه</item>
+        <item quantity="other">%1$s پېښې وارد نه شوې</item>
+    </plurals>
 </resources>

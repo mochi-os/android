@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">કૅલેન્ડર સિંક થયું</string>
     <string name="calendars_link_revoke_title">કૅલેન્ડરનું સરનામું પાછું ખેંચવું છે?</string>
     <string name="calendars_link_revoke_message">આ સરનામાંની સદસ્યતા ધરાવતાં કૅલેન્ડર હવે અદ્યતન થશે નહીં.</string>
+    <string name="calendars_export_failed">નિકાસ સાચવી શકાઈ નથી</string>
+    <string name="calendars_import_progress">%2$sમાંથી %1$s</string>
+    <string name="calendars_import">આયાત</string>
+    <string name="calendars_export">નિકાસ</string>
+    <string name="calendars_exported">કૅલેન્ડર નિકાસ કર્યું</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s ઇવેન્ટ આયાત કરી</item>
+        <item quantity="other">%1$s ઇવેન્ટ આયાત કરી</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s ઇવેન્ટ પહેલેથી કૅલેન્ડરમાં છે</item>
+        <item quantity="other">%1$s ઇવેન્ટ પહેલેથી કૅલેન્ડરમાં છે</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s ઇવેન્ટ આયાત કરી શકાઈ નથી</item>
+        <item quantity="other">%1$s ઇવેન્ટ આયાત કરી શકાઈ નથી</item>
+    </plurals>
 </resources>

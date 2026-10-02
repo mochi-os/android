@@ -191,4 +191,21 @@
     <string name="calendars_polled_synced">Хуанли синк хийгдлээ</string>
     <string name="calendars_link_revoke_title">Хуанлийн хаягийг хүчингүй болгох уу?</string>
     <string name="calendars_link_revoke_message">Энэ хаягийг захиалсан календарууд шинэчлэгдэхээ болино.</string>
+    <string name="calendars_export_failed">Экспортыг хадгалж чадсангүй</string>
+    <string name="calendars_import_progress">%2$s-с %1$s</string>
+    <string name="calendars_import">Импортлох</string>
+    <string name="calendars_export">Экспортлох</string>
+    <string name="calendars_exported">Хуанли экспортлогдлоо</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s үйл явдал импортлогдлоо</item>
+        <item quantity="other">%1$s үйл явдал импортлогдлоо</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s үйл явдал хуанлид аль хэдийн байна</item>
+        <item quantity="other">%1$s үйл явдал хуанлид аль хэдийн байна</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s үйл явдлыг импортлох боломжгүй байлаа</item>
+        <item quantity="other">%1$s үйл явдлыг импортлох боломжгүй байлаа</item>
+    </plurals>
 </resources>

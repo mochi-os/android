@@ -207,4 +207,33 @@
     <string name="calendars_polled_synced">تمت مزامنة التقويم</string>
     <string name="calendars_link_revoke_title">إبطال عنوان التقويم؟</string>
     <string name="calendars_link_revoke_message">ستتوقف التقويمات المشتركة في هذا العنوان عن التحديث.</string>
+    <string name="calendars_export_failed">تعذّر حفظ التصدير</string>
+    <string name="calendars_import_progress">%1$s من %2$s</string>
+    <string name="calendars_import">استيراد</string>
+    <string name="calendars_export">تصدير</string>
+    <string name="calendars_exported">تم تصدير التقويم</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="zero">تم استيراد %1$s حدث</item>
+        <item quantity="one">تم استيراد %1$s حدث</item>
+        <item quantity="two">تم استيراد %1$s حدثين</item>
+        <item quantity="few">تم استيراد %1$s أحداث</item>
+        <item quantity="many">تم استيراد %1$s حدثًا</item>
+        <item quantity="other">تم استيراد %1$s حدث</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="zero">يوجد مسبقًا في التقويم %1$s حدث</item>
+        <item quantity="one">يوجد مسبقًا في التقويم %1$s حدث</item>
+        <item quantity="two">يوجد مسبقًا في التقويم %1$s حدثان</item>
+        <item quantity="few">يوجد مسبقًا في التقويم %1$s أحداث</item>
+        <item quantity="many">يوجد مسبقًا في التقويم %1$s حدثًا</item>
+        <item quantity="other">يوجد مسبقًا في التقويم %1$s حدث</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="zero">تعذّر استيراد %1$s حدث</item>
+        <item quantity="one">تعذّر استيراد %1$s حدث</item>
+        <item quantity="two">تعذّر استيراد %1$s حدثين</item>
+        <item quantity="few">تعذّر استيراد %1$s أحداث</item>
+        <item quantity="many">تعذّر استيراد %1$s حدثًا</item>
+        <item quantity="other">تعذّر استيراد %1$s حدث</item>
+    </plurals>
 </resources>

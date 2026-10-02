@@ -199,4 +199,27 @@
     <string name="calendars_polled_synced">Календарь синхронизирован</string>
     <string name="calendars_link_revoke_title">Отозвать адрес календаря?</string>
     <string name="calendars_link_revoke_message">Календари, подписанные на этот адрес, перестанут обновляться.</string>
+    <string name="calendars_export_failed">Не удалось сохранить экспорт</string>
+    <string name="calendars_import_progress">%1$s из %2$s</string>
+    <string name="calendars_import">Импорт</string>
+    <string name="calendars_export">Экспорт</string>
+    <string name="calendars_exported">Календарь экспортирован</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Импортировано %1$s событие</item>
+        <item quantity="few">Импортировано %1$s события</item>
+        <item quantity="many">Импортировано %1$s событий</item>
+        <item quantity="other">Импортировано %1$s события</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s событие уже есть в календаре</item>
+        <item quantity="few">%1$s события уже есть в календаре</item>
+        <item quantity="many">%1$s событий уже есть в календаре</item>
+        <item quantity="other">%1$s события уже есть в календаре</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Не удалось импортировать %1$s событие</item>
+        <item quantity="few">Не удалось импортировать %1$s события</item>
+        <item quantity="many">Не удалось импортировать %1$s событий</item>
+        <item quantity="other">Не удалось импортировать %1$s события</item>
+    </plurals>
 </resources>
