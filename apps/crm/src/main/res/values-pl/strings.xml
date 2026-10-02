@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Usuń</string>
     <string name="crm_attachments">Załączniki</string>
     <string name="crm_attachment_add">Dodaj załącznik</string>
-    <string name="crm_board_unassigned">Nieprzypisane</string>
+    <string name="crm_board_unset">[nie ustawiono]</string>
     <string name="crm_board_new">Nowy</string>
     <string name="crm_board_rename">Zmień nazwę</string>
     <string name="crm_board_rename_column">Zmień nazwę kolumny</string>

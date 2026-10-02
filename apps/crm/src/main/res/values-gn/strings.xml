@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Embogue</string>
     <string name="crm_attachments">Adjuntokuéra</string>
     <string name="crm_attachment_add">Embojuaju adjunto</string>
-    <string name="crm_board_unassigned">Avave\'ỹre</string>
+    <string name="crm_board_unset">[noñemoĩva]</string>
     <string name="crm_board_new">Pyahu</string>
     <string name="crm_board_rename">Embohera jey</string>
     <string name="crm_board_rename_column">Embohera jey columna</string>

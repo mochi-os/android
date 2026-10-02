@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Aparma</string>
     <string name="crm_attachments">Adjuntonaka</string>
     <string name="crm_attachment_add">Adjunto yapxataña</string>
-    <string name="crm_board_unassigned">Jan asignata</string>
+    <string name="crm_board_unset">[jan uskuta]</string>
     <string name="crm_board_new">Machaqa</string>
     <string name="crm_board_rename">Suti mayjt\'ayaña</string>
     <string name="crm_board_rename_column">Columna suti mayjt\'ayaña</string>

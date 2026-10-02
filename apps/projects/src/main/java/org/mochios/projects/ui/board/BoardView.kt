@@ -142,7 +142,7 @@ fun BoardView(
     // Add unassigned column
     val assignedIds = objectsByColumn.values.flatten().map { it.id }.toSet()
     val unassigned = filteredObjects.filter { it.id !in assignedIds }
-    val unassignedLabel = stringResource(R.string.projects_board_unassigned)
+    val unassignedLabel = stringResource(R.string.projects_board_unset)
 
     // Card drag-drop state shared across all columns. Re-keyed when the
     // column field changes so a leftover registration doesn't survive a view
@@ -542,7 +542,7 @@ private fun BoardColumn(
                 if (shownUnassignedRow.isNotEmpty()) {
                     item(key = "header_unassigned_row") {
                         Text(
-                            text = stringResource(R.string.projects_board_unassigned),
+                            text = stringResource(R.string.projects_board_unset),
                             style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)

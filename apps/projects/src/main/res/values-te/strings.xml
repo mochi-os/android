@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ఏకీకృత</string>
     <string name="projects_diff_split">విభజించండి</string>
     <string name="projects_diff_empty">డిఫ్ అందుబాటులో లేదు</string>
-    <string name="projects_board_unassigned">కేటాయించబడలేదు</string>
+    <string name="projects_board_unset">[సెట్ చేయలేదు]</string>
     <string name="projects_board_new">కొత్తది</string>
     <string name="projects_board_rename">పేరు మార్చండి</string>
     <string name="projects_board_rename_column">కాలమ్ పేరును మార్చండి</string>

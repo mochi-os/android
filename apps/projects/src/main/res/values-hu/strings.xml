@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Egységes</string>
     <string name="projects_diff_split">Osztott</string>
     <string name="projects_diff_empty">Nincs elérhető diff</string>
-    <string name="projects_board_unassigned">Hozzárendelés nélküli</string>
+    <string name="projects_board_unset">[nincs beállítva]</string>
     <string name="projects_board_new">Új</string>
     <string name="projects_board_rename">Átnevezés</string>
     <string name="projects_board_rename_column">Oszlop átnevezése</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Vienots</string>
     <string name="projects_diff_split">Sadalīt</string>
     <string name="projects_diff_empty">Diferenciāldiagramma nav pieejama</string>
-    <string name="projects_board_unassigned">Nepiešķirts</string>
+    <string name="projects_board_unset">[nav iestatīts]</string>
     <string name="projects_board_new">Jauns</string>
     <string name="projects_board_rename">Pārdēvēt</string>
     <string name="projects_board_rename_column">Pārdēvēt kolonnu</string>

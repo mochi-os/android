@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Unifikat</string>
     <string name="projects_diff_split">Aqsam</string>
     <string name="projects_diff_empty">L-ebda diff disponibbli</string>
-    <string name="projects_board_unassigned">Mhux assenjat</string>
+    <string name="projects_board_unset">[mhux issettjat]</string>
     <string name="projects_board_new">Ġdid</string>
     <string name="projects_board_rename">Irrinomina</string>
     <string name="projects_board_rename_column">Irrinomina kolonna</string>

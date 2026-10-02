@@ -88,7 +88,7 @@
     <string name="projects_diff_unified">Gecombineerd</string>
     <string name="projects_diff_split">Splitsen</string>
     <string name="projects_diff_empty">Geen diff beschikbaar</string>
-    <string name="projects_board_unassigned">Niet toegewezen</string>
+    <string name="projects_board_unset">[niet ingesteld]</string>
     <string name="projects_board_new">Nieuw</string>
     <string name="projects_board_rename">Hernoemen</string>
     <string name="projects_board_rename_column">Kolom hernoemen</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Біріктірілген</string>
     <string name="projects_diff_split">Бөлу</string>
     <string name="projects_diff_empty">Айырма қолжетімсіз</string>
-    <string name="projects_board_unassigned">Тағайындалмаған</string>
+    <string name="projects_board_unset">[орнатылмаған]</string>
     <string name="projects_board_new">Жаңа</string>
     <string name="projects_board_rename">Атын өзгерту</string>
     <string name="projects_board_rename_column">Бағанның атын өзгерту</string>

@@ -135,7 +135,6 @@
     <string name="crm_tree_empty">沒有物件</string>
     <string name="crm_board_no_columns">此檢視未設定任何欄</string>
     <string name="crm_board_no_options">欄位欄未設定任何選項</string>
-    <string name="crm_board_unassigned">未指派</string>
     <string name="crm_board_rename_column">重新命名欄</string>
     <string name="crm_board_nested_count">+%1$s 個巢狀</string>
     <string name="crm_move_to_column">移至欄</string>

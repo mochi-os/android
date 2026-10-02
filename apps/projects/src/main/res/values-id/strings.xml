@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Terpadu</string>
     <string name="projects_diff_split">Bagi</string>
     <string name="projects_diff_empty">Tidak ada diff yang tersedia</string>
-    <string name="projects_board_unassigned">Tidak ditugaskan</string>
+    <string name="projects_board_unset">[tidak diatur]</string>
     <string name="projects_board_new">Baru</string>
     <string name="projects_board_rename">Ubah nama</string>
     <string name="projects_board_rename_column">Ubah nama kolom</string>

@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Ondoa</string>
     <string name="crm_attachments">Viambatisho</string>
     <string name="crm_attachment_add">Ongeza kiambatisho</string>
-    <string name="crm_board_unassigned">Haijapewa</string>
+    <string name="crm_board_unset">[haijawekwa]</string>
     <string name="crm_board_new">Mpya</string>
     <string name="crm_board_rename">Badilisha jina</string>
     <string name="crm_board_rename_column">Badilisha jina la safuwima</string>

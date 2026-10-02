@@ -77,7 +77,6 @@
     <string name="projects_comment_empty">Noch keine Kommentare</string>
     <string name="projects_comment_attach">Dateien anhängen</string>
     <string name="projects_comment_remove_attachment">Anhang entfernen</string>
-    <string name="projects_board_unassigned">Nicht zugewiesen</string>
     <string name="projects_board_rename">Umbenennen</string>
     <string name="projects_move_position">Position</string>
     <string name="projects_class_move_up">Nach oben verschieben</string>

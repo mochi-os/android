@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">გაერთიანებული</string>
     <string name="projects_diff_split">გაყოფა</string>
     <string name="projects_diff_empty">სხვაობა მიუწვდომელია</string>
-    <string name="projects_board_unassigned">მიუნიჭებელი</string>
+    <string name="projects_board_unset">[არ არის მითითებული]</string>
     <string name="projects_board_new">ახალი</string>
     <string name="projects_board_rename">სახელის შეცვლა</string>
     <string name="projects_board_rename_column">სვეტის სახელის შეცვლა</string>

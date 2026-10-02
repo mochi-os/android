@@ -50,7 +50,6 @@
     <string name="crm_comment_attach">Joindre des fichiers</string>
     <string name="crm_comment_remove_attachment">Retirer la pièce jointe</string>
     <string name="crm_attachments">Pièces jointes</string>
-    <string name="crm_board_unassigned">Non assigné</string>
     <string name="crm_board_rename">Renommer</string>
     <string name="crm_move_position_top">Meilleurs</string>
     <string name="crm_move_current">Actuelle</string>

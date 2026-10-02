@@ -62,7 +62,7 @@
     <string name="crm_property_remove">ඉවත් කරන්න</string>
     <string name="crm_attachments">ඇමුණුම්</string>
     <string name="crm_attachment_add">ඇමුණුමක් එක් කරන්න</string>
-    <string name="crm_board_unassigned">පවරා නැත</string>
+    <string name="crm_board_unset">[සකසා නැත]</string>
     <string name="crm_board_new">අලුත්</string>
     <string name="crm_board_rename">නැවත නම් කරන්න</string>
     <string name="crm_board_rename_column">තීරුව නැවත නම් කරන්න</string>

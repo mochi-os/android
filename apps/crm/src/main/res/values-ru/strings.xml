@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Удалить</string>
     <string name="crm_attachments">Вложения</string>
     <string name="crm_attachment_add">Добавить вложение</string>
-    <string name="crm_board_unassigned">Не назначено</string>
+    <string name="crm_board_unset">[не задано]</string>
     <string name="crm_board_new">Новый</string>
     <string name="crm_board_rename">Переименовать</string>
     <string name="crm_board_rename_column">Переименовать столбец</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ഏകീകൃതം</string>
     <string name="projects_diff_split">സ്പ്ലിറ്റ്</string>
     <string name="projects_diff_empty">വ്യത്യാസം ലഭ്യമല്ല</string>
-    <string name="projects_board_unassigned">നിയോഗിച്ചിട്ടില്ല</string>
+    <string name="projects_board_unset">[സജ്ജമാക്കിയിട്ടില്ല]</string>
     <string name="projects_board_new">പുതിയത്</string>
     <string name="projects_board_rename">പുനർനാമകരണം ചെയ്യുക</string>
     <string name="projects_board_rename_column">കോളം പുനർനാമകരണം ചെയ്യുക</string>

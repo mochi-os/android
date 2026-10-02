@@ -62,7 +62,7 @@
     <string name="crm_property_remove">አስወግድ</string>
     <string name="crm_attachments">አባሪዎች</string>
     <string name="crm_attachment_add">አባሪ ጨምር</string>
-    <string name="crm_board_unassigned">ያልተመደበ</string>
+    <string name="crm_board_unset">[አልተዘጋጀም]</string>
     <string name="crm_board_new">አዲስ</string>
     <string name="crm_board_rename">ስም ቀይር</string>
     <string name="crm_board_rename_column">የአምድ ስም ቀይር</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Birləşdirilmiş</string>
     <string name="projects_diff_split">Böl</string>
     <string name="projects_diff_empty">Diff mövcud deyil</string>
-    <string name="projects_board_unassigned">Təyin edilməyib</string>
+    <string name="projects_board_unset">[təyin edilməyib]</string>
     <string name="projects_board_new">Yeni</string>
     <string name="projects_board_rename">Adı dəyiş</string>
     <string name="projects_board_rename_column">Sütun adını dəyiş</string>

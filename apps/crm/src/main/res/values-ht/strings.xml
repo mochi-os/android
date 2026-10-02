@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Retire</string>
     <string name="crm_attachments">Atachman yo</string>
     <string name="crm_attachment_add">Ajoute atachman</string>
-    <string name="crm_board_unassigned">Pa asiyen</string>
+    <string name="crm_board_unset">[pa mete]</string>
     <string name="crm_board_new">Nouvo</string>
     <string name="crm_board_rename">Rebatize</string>
     <string name="crm_board_rename_column">Rebatize kolòn</string>

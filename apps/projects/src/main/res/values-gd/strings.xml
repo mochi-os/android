@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Aonaichte</string>
     <string name="projects_diff_split">Sgaradh</string>
     <string name="projects_diff_empty">Chan eil diff ri làimh</string>
-    <string name="projects_board_unassigned">Gun shònrachadh</string>
+    <string name="projects_board_unset">[gun shuidheachadh]</string>
     <string name="projects_board_new">Ùr</string>
     <string name="projects_board_rename">Cuir ainm ùr air</string>
     <string name="projects_board_rename_column">Cuir ainm ùr air a\' cholbh</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">פֿאַראייניקט</string>
     <string name="projects_diff_split">טייל</string>
     <string name="projects_diff_empty">קיין דיף פֿאַראַן</string>
-    <string name="projects_board_unassigned">אומצוגעטיילט</string>
+    <string name="projects_board_unset">[נישט געשטעלט]</string>
     <string name="projects_board_new">נײַ</string>
     <string name="projects_board_rename">איבערטויפֿן</string>
     <string name="projects_board_rename_column">איבערטויפֿן זײַל</string>

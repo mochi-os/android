@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Միասնական</string>
     <string name="projects_diff_split">Բաժանել</string>
     <string name="projects_diff_empty">Տարբերություն հասանելի չէ</string>
-    <string name="projects_board_unassigned">Չվերագրված</string>
+    <string name="projects_board_unset">[չի սահմանվել]</string>
     <string name="projects_board_new">Նոր</string>
     <string name="projects_board_rename">Վերանվանել</string>
     <string name="projects_board_rename_column">Վերանվանել սյունակը</string>

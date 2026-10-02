@@ -62,7 +62,7 @@
     <string name="crm_property_remove">દૂર કરો</string>
     <string name="crm_attachments">જોડાણો</string>
     <string name="crm_attachment_add">જોડાણ ઉમેરો</string>
-    <string name="crm_board_unassigned">અસોંપાયેલ</string>
+    <string name="crm_board_unset">[સેટ નથી]</string>
     <string name="crm_board_new">નવું</string>
     <string name="crm_board_rename">નામ બદલો</string>
     <string name="crm_board_rename_column">કૉલમનું નામ બદલો</string>

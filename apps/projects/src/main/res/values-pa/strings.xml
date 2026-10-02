@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ਏਕੀਕ੍ਰਿਤ</string>
     <string name="projects_diff_split">ਵੰਡੋ</string>
     <string name="projects_diff_empty">ਕੋਈ ਅੰਤਰ ਉਪਲਬਧ ਨਹੀਂ</string>
-    <string name="projects_board_unassigned">ਨਾ ਨਿਰਧਾਰਤ</string>
+    <string name="projects_board_unset">[ਸੈੱਟ ਨਹੀਂ]</string>
     <string name="projects_board_new">ਨਵਾਂ</string>
     <string name="projects_board_rename">ਨਾਮ ਬਦਲੋ</string>
     <string name="projects_board_rename_column">ਕਾਲਮ ਦਾ ਨਾਮ ਬਦਲੋ</string>

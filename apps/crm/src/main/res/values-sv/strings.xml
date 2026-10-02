@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Ta bort</string>
     <string name="crm_attachments">Bilagor</string>
     <string name="crm_attachment_add">Lägg till bilaga</string>
-    <string name="crm_board_unassigned">Otilldelad</string>
+    <string name="crm_board_unset">[ej angivet]</string>
     <string name="crm_board_new">Ny</string>
     <string name="crm_board_rename">Byt namn</string>
     <string name="crm_board_rename_column">Byt namn på kolumn</string>

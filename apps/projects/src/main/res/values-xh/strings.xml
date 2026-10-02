@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Imanyiweyo</string>
     <string name="projects_diff_split">Yahlula</string>
     <string name="projects_diff_empty">Akukho mahluko ufumanekayo</string>
-    <string name="projects_board_unassigned">Akwabelwanga</string>
+    <string name="projects_board_unset">[ayisetwanga]</string>
     <string name="projects_board_new">Entsha</string>
     <string name="projects_board_rename">Guqula igama</string>
     <string name="projects_board_rename_column">Guqula igama lekholamu</string>

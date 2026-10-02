@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Yekkirî</string>
     <string name="projects_diff_split">Parçe bike</string>
     <string name="projects_diff_empty">Tu diff peyda nabe</string>
-    <string name="projects_board_unassigned">Nehatiye diyarkirin</string>
+    <string name="projects_board_unset">[neyî sazkirin]</string>
     <string name="projects_board_new">Nû</string>
     <string name="projects_board_rename">Navê biguhere</string>
     <string name="projects_board_rename_column">Navê stûnê biguhere</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Objedinjeno</string>
     <string name="projects_diff_split">Podijeli</string>
     <string name="projects_diff_empty">Diff nije dostupan</string>
-    <string name="projects_board_unassigned">Nedodijeljeno</string>
+    <string name="projects_board_unset">[nije postavljeno]</string>
     <string name="projects_board_new">Novo</string>
     <string name="projects_board_rename">Preimenuj</string>
     <string name="projects_board_rename_column">Preimenuj stupac</string>

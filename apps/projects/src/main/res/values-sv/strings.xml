@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Enhetlig</string>
     <string name="projects_diff_split">Dela</string>
     <string name="projects_diff_empty">Ingen diff tillgänglig</string>
-    <string name="projects_board_unassigned">Otilldelad</string>
+    <string name="projects_board_unset">[ej angivet]</string>
     <string name="projects_board_new">Ny</string>
     <string name="projects_board_rename">Byt namn</string>
     <string name="projects_board_rename_column">Byt namn på kolumn</string>

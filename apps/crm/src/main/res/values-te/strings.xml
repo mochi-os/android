@@ -62,7 +62,7 @@
     <string name="crm_property_remove">తొలగించండి</string>
     <string name="crm_attachments">అటాచ్‌మెంట్‌లు</string>
     <string name="crm_attachment_add">అటాచ్‌మెంట్‌ను జోడించండి</string>
-    <string name="crm_board_unassigned">కేటాయించబడలేదు</string>
+    <string name="crm_board_unset">[సెట్ చేయలేదు]</string>
     <string name="crm_board_new">కొత్తది</string>
     <string name="crm_board_rename">పేరు మార్చండి</string>
     <string name="crm_board_rename_column">కాలమ్ పేరును మార్చండి</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Samlet</string>
     <string name="projects_diff_split">Del</string>
     <string name="projects_diff_empty">Ingen diff tilgjengelig</string>
-    <string name="projects_board_unassigned">Ikke tilordnet</string>
+    <string name="projects_board_unset">[ikke satt]</string>
     <string name="projects_board_new">Ny</string>
     <string name="projects_board_rename">Gi nytt navn</string>
     <string name="projects_board_rename_column">Gi kolonnen nytt navn</string>

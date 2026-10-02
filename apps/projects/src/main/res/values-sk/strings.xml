@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Zjednotené</string>
     <string name="projects_diff_split">Rozdeliť</string>
     <string name="projects_diff_empty">Diff nie je k dispozícii</string>
-    <string name="projects_board_unassigned">Nepriradené</string>
+    <string name="projects_board_unset">[nenastavené]</string>
     <string name="projects_board_new">Nový</string>
     <string name="projects_board_rename">Premenovať</string>
     <string name="projects_board_rename_column">Premenovať stĺpec</string>

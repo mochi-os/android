@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">متحد شوی</string>
     <string name="projects_diff_split">وېشل</string>
     <string name="projects_diff_empty">هیڅ توپیر شتون نه لري</string>
-    <string name="projects_board_unassigned">نه ګمارل شوی</string>
+    <string name="projects_board_unset">[نه دی ټاکل شوی]</string>
     <string name="projects_board_new">نوی</string>
     <string name="projects_board_rename">بیا نومول</string>
     <string name="projects_board_rename_column">د کالم نوم بدل کړئ</string>

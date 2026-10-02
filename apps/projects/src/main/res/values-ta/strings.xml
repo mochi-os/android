@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ஒருங்கிணைந்த</string>
     <string name="projects_diff_split">பிரி</string>
     <string name="projects_diff_empty">வேறுபாடு கிடைக்கவில்லை</string>
-    <string name="projects_board_unassigned">ஒதுக்கப்படாதது</string>
+    <string name="projects_board_unset">[அமைக்கப்படவில்லை]</string>
     <string name="projects_board_new">புதியது</string>
     <string name="projects_board_rename">பெயர் மாற்று</string>
     <string name="projects_board_rename_column">நெடுவரிசையின் பெயரை மாற்று</string>

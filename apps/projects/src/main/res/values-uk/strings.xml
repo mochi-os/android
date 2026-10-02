@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Уніфіковано</string>
     <string name="projects_diff_split">Розділити</string>
     <string name="projects_diff_empty">Порівняння недоступне</string>
-    <string name="projects_board_unassigned">Не призначено</string>
+    <string name="projects_board_unset">[не задано]</string>
     <string name="projects_board_new">Нове</string>
     <string name="projects_board_rename">Перейменувати</string>
     <string name="projects_board_rename_column">Перейменувати стовпець</string>

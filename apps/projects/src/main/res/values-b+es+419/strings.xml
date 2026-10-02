@@ -90,7 +90,7 @@
     <string name="projects_diff_unified">Unificado</string>
     <string name="projects_diff_split">Dividido</string>
     <string name="projects_diff_empty">No hay diff disponible</string>
-    <string name="projects_board_unassigned">Sin asignar</string>
+    <string name="projects_board_unset">[sin definir]</string>
     <string name="projects_board_new">Nuevo</string>
     <string name="projects_board_rename">Renombrar</string>
     <string name="projects_board_rename_column">Renombrar columna</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Aontaithe</string>
     <string name="projects_diff_split">Scoilt</string>
     <string name="projects_diff_empty">Níl aon difríocht ar fáil</string>
-    <string name="projects_board_unassigned">Gan sannadh</string>
+    <string name="projects_board_unset">[gan socrú]</string>
     <string name="projects_board_new">Nua</string>
     <string name="projects_board_rename">Athainmnigh</string>
     <string name="projects_board_rename_column">Athainmnigh colún</string>

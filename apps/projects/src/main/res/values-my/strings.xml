@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ပေါင်းစပ်ထား</string>
     <string name="projects_diff_split">ခွဲခြားမည်</string>
     <string name="projects_diff_empty">ကွဲပြားချက် မရရှိနိုင်ပါ</string>
-    <string name="projects_board_unassigned">မသတ်မှတ်ထား</string>
+    <string name="projects_board_unset">[မသတ်မှတ်ရသေး]</string>
     <string name="projects_board_new">အသစ်</string>
     <string name="projects_board_rename">အမည်ပြောင်း</string>
     <string name="projects_board_rename_column">ကော်လံ အမည်ပြောင်း</string>

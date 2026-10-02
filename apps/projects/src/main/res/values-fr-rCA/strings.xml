@@ -77,7 +77,6 @@
     <string name="projects_comment_remove_attachment">Retirer la pièce jointe</string>
     <string name="projects_attachments">Pièces jointes</string>
     <string name="projects_request_method">Méthode</string>
-    <string name="projects_board_unassigned">Non assigné</string>
     <string name="projects_board_rename">Renommer</string>
     <string name="projects_move_position_top">Meilleurs</string>
     <string name="projects_move_current">Actuelle</string>

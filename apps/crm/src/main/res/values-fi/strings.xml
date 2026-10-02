@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Poista</string>
     <string name="crm_attachments">Liitteet</string>
     <string name="crm_attachment_add">Lisää liite</string>
-    <string name="crm_board_unassigned">Ei määritetty</string>
+    <string name="crm_board_unset">[ei asetettu]</string>
     <string name="crm_board_new">Uusi</string>
     <string name="crm_board_rename">Nimeä uudelleen</string>
     <string name="crm_board_rename_column">Nimeä sarake uudelleen</string>

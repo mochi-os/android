@@ -62,7 +62,7 @@
     <string name="crm_property_remove">ತೆಗೆದುಹಾಕಿ</string>
     <string name="crm_attachments">ಲಗತ್ತುಗಳು</string>
     <string name="crm_attachment_add">ಲಗತ್ತು ಸೇರಿಸಿ</string>
-    <string name="crm_board_unassigned">ನಿಯೋಜಿಸದ</string>
+    <string name="crm_board_unset">[ಸಜ್ಜುಗೊಳಿಸಿಲ್ಲ]</string>
     <string name="crm_board_new">ಹೊಸ</string>
     <string name="crm_board_rename">ಮರುಹೆಸರಿಸಿ</string>
     <string name="crm_board_rename_column">ಕಾಲಮ್ ಮರುಹೆಸರಿಸಿ</string>

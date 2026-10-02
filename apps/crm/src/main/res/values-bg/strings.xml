@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Премахни</string>
     <string name="crm_attachments">Прикачени файлове</string>
     <string name="crm_attachment_add">Добави прикачен файл</string>
-    <string name="crm_board_unassigned">Неприсвоено</string>
+    <string name="crm_board_unset">[не е зададено]</string>
     <string name="crm_board_new">Ново</string>
     <string name="crm_board_rename">Преименувай</string>
     <string name="crm_board_rename_column">Преименувай колона</string>

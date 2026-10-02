@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Ngumpul</string>
     <string name="projects_diff_split">Pisah</string>
     <string name="projects_diff_empty">Ora ana diff kasedhiya</string>
-    <string name="projects_board_unassigned">Ora ditugasaké</string>
+    <string name="projects_board_unset">[ora disetel]</string>
     <string name="projects_board_new">Anyar</string>
     <string name="projects_board_rename">Owahi jeneng</string>
     <string name="projects_board_rename_column">Owahi jeneng kolom</string>

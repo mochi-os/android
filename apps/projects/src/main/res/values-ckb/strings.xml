@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">یەکگرتوو</string>
     <string name="projects_diff_split">دابەشکردن</string>
     <string name="projects_diff_empty">هیچ جیاوازییەک بەردەست نییە</string>
-    <string name="projects_board_unassigned">دیارینەکراو</string>
+    <string name="projects_board_unset">[دانەنراوە]</string>
     <string name="projects_board_new">نوێ</string>
     <string name="projects_board_rename">ناوگۆڕکردن</string>
     <string name="projects_board_rename_column">ناوگۆڕکردنی ستوون</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Verenig</string>
     <string name="projects_diff_split">Verdeel</string>
     <string name="projects_diff_empty">Geen diff beskikbaar nie</string>
-    <string name="projects_board_unassigned">Nie toegewys nie</string>
+    <string name="projects_board_unset">[nie gestel nie]</string>
     <string name="projects_board_new">Nuut</string>
     <string name="projects_board_rename">Hernoem</string>
     <string name="projects_board_rename_column">Hernoem kolom</string>

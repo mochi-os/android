@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Bateratua</string>
     <string name="projects_diff_split">Banatu</string>
     <string name="projects_diff_empty">Ez dago diff erabilgarririk</string>
-    <string name="projects_board_unassigned">Esleitu gabe</string>
+    <string name="projects_board_unset">[ezarri gabe]</string>
     <string name="projects_board_new">Berria</string>
     <string name="projects_board_rename">Aldatu izena</string>
     <string name="projects_board_rename_column">Aldatu zutabearen izena</string>

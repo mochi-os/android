@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Thoir air falbh</string>
     <string name="crm_attachments">Ceanglachain</string>
     <string name="crm_attachment_add">Cuir ceanglachan ris</string>
-    <string name="crm_board_unassigned">Gun shònrachadh</string>
+    <string name="crm_board_unset">[gun shuidheachadh]</string>
     <string name="crm_board_new">Ùr</string>
     <string name="crm_board_rename">Cuir ainm ùr air</string>
     <string name="crm_board_rename_column">Cuir ainm ùr air a\' cholbh</string>

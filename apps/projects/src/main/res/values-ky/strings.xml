@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Бирдиктештирилген</string>
     <string name="projects_diff_split">Бөлүү</string>
     <string name="projects_diff_empty">Айырмачылык жеткиликсиз</string>
-    <string name="projects_board_unassigned">Дайындалган эмес</string>
+    <string name="projects_board_unset">[орнотулган эмес]</string>
     <string name="projects_board_new">Жаңы</string>
     <string name="projects_board_rename">Атын өзгөртүү</string>
     <string name="projects_board_rename_column">Тилкенин атын өзгөртүү</string>

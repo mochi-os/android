@@ -42,7 +42,7 @@
     <string name="crm_comment_attach">附加檔案</string>
     <string name="crm_comment_remove_attachment">移除附件</string>
     <string name="crm_attachments">附件</string>
-    <string name="crm_board_unassigned">未指派</string>
+    <string name="crm_board_unset">[未設定]</string>
     <string name="crm_board_rename">重新命名</string>
     <string name="crm_move_current">目前</string>
     <string name="crm_class_save_name">儲存名稱</string>

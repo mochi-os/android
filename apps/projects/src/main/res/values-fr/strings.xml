@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Unifié</string>
     <string name="projects_diff_split">Séparé</string>
     <string name="projects_diff_empty">Aucun diff disponible</string>
-    <string name="projects_board_unassigned">Non assigné</string>
+    <string name="projects_board_unset">[non défini]</string>
     <string name="projects_board_new">Nouveau</string>
     <string name="projects_board_rename">Renommer</string>
     <string name="projects_board_rename_column">Renommer la colonne</string>

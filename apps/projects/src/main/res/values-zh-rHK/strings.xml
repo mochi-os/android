@@ -202,7 +202,6 @@
     <string name="projects_tree_empty">沒有物件</string>
     <string name="projects_board_no_columns">此檢視未設定欄位</string>
     <string name="projects_board_no_options">欄位未設定選項</string>
-    <string name="projects_board_unassigned">未指派</string>
     <string name="projects_board_column_options">欄位選項</string>
     <string name="projects_board_rename_column">重新命名欄位</string>
     <string name="projects_board_nested_count">+%1$s 個巢狀項目</string>

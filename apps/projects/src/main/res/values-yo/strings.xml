@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Iṣọkan</string>
     <string name="projects_diff_split">Pínyà</string>
     <string name="projects_diff_empty">Kò sí diff tó wà</string>
-    <string name="projects_board_unassigned">Aláìyàn</string>
+    <string name="projects_board_unset">[kò sí]</string>
     <string name="projects_board_new">Tuntun</string>
     <string name="projects_board_rename">Tún sọ orúkọ</string>
     <string name="projects_board_rename_column">Tún ọ̀wọ́n sọ orúkọ</string>

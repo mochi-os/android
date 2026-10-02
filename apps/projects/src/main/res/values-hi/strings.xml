@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">यूनिफ़ाइड</string>
     <string name="projects_diff_split">स्प्लिट</string>
     <string name="projects_diff_empty">कोई अंतर उपलब्ध नहीं</string>
-    <string name="projects_board_unassigned">असाइन नहीं किया गया</string>
+    <string name="projects_board_unset">[सेट नहीं]</string>
     <string name="projects_board_new">नया</string>
     <string name="projects_board_rename">नाम बदलें</string>
     <string name="projects_board_rename_column">कॉलम का नाम बदलें</string>

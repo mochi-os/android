@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Inifye</string>
     <string name="projects_diff_split">Divize</string>
     <string name="projects_diff_empty">Pa gen diff disponib</string>
-    <string name="projects_board_unassigned">Pa asiyen</string>
+    <string name="projects_board_unset">[pa mete]</string>
     <string name="projects_board_new">Nouvo</string>
     <string name="projects_board_rename">Rebatize</string>
     <string name="projects_board_rename_column">Rebatize kolòn</string>

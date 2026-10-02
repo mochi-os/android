@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Unificado</string>
     <string name="projects_diff_split">Dividido</string>
     <string name="projects_diff_empty">Ndaipóri diff oĩva</string>
-    <string name="projects_board_unassigned">Avave\'ỹre</string>
+    <string name="projects_board_unset">[noñemoĩva]</string>
     <string name="projects_board_new">Pyahu</string>
     <string name="projects_board_rename">Embohera jey</string>
     <string name="projects_board_rename_column">Embohera jey columna</string>

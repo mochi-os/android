@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Mayachata</string>
     <string name="projects_diff_split">T\'aqaña</string>
     <string name="projects_diff_empty">Jan diff utjki</string>
-    <string name="projects_board_unassigned">Jan asignata</string>
+    <string name="projects_board_unset">[jan uskuta]</string>
     <string name="projects_board_new">Machaqa</string>
     <string name="projects_board_rename">Suti mayjt\'ayaña</string>
     <string name="projects_board_rename_column">Columna suti mayjt\'ayaña</string>

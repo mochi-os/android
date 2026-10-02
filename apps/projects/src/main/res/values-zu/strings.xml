@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Kuhlanganisiwe</string>
     <string name="projects_diff_split">Hlukanisa</string>
     <string name="projects_diff_empty">Awukho umehluko otholakalayo</string>
-    <string name="projects_board_unassigned">Akwabelwanga</string>
+    <string name="projects_board_unset">[akusethiwe]</string>
     <string name="projects_board_new">Okusha</string>
     <string name="projects_board_rename">Qamba kabusha</string>
     <string name="projects_board_rename_column">Qamba kabusha ikholomu</string>

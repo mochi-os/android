@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Tynnu</string>
     <string name="crm_attachments">Atodiadau</string>
     <string name="crm_attachment_add">Ychwanegu atodiad</string>
-    <string name="crm_board_unassigned">Heb ei neilltuo</string>
+    <string name="crm_board_unset">[heb ei osod]</string>
     <string name="crm_board_new">Newydd</string>
     <string name="crm_board_rename">Ailenwi</string>
     <string name="crm_board_rename_column">Ailenwi colofn</string>

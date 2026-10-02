@@ -102,7 +102,6 @@
     <string name="projects_comment_attach">Adjuntar archivos</string>
     <string name="projects_comment_remove_attachment">Quitar adjunto</string>
     <string name="projects_request_method">Método</string>
-    <string name="projects_board_unassigned">Sin asignar</string>
     <string name="projects_move_position">Posición</string>
     <string name="projects_move_position_top">Mejores</string>
     <string name="projects_class_move_up">Mover hacia arriba</string>

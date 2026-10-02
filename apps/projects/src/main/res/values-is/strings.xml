@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Sameinað</string>
     <string name="projects_diff_split">Skipta</string>
     <string name="projects_diff_empty">Enginn samanburður tiltækur</string>
-    <string name="projects_board_unassigned">Ekki úthlutað</string>
+    <string name="projects_board_unset">[ekki stillt]</string>
     <string name="projects_board_new">Nýtt</string>
     <string name="projects_board_rename">Endurnefna</string>
     <string name="projects_board_rename_column">Endurnefna dálk</string>

@@ -157,7 +157,7 @@ private fun BoardPreview(
     val samplesByColumn = columnOptions.associate { opt ->
         opt.id to samples.filter { it.stringValue(columnFieldId) == opt.id }
     }
-    val unassignedLabel = stringResource(R.string.projects_board_unassigned)
+    val unassignedLabel = stringResource(R.string.projects_board_unset)
 
     Row(
         modifier = Modifier

@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Kendu</string>
     <string name="crm_attachments">Eranskinak</string>
     <string name="crm_attachment_add">Gehitu eranskina</string>
-    <string name="crm_board_unassigned">Esleitu gabe</string>
+    <string name="crm_board_unset">[ezarri gabe]</string>
     <string name="crm_board_new">Berria</string>
     <string name="crm_board_rename">Aldatu izena</string>
     <string name="crm_board_rename_column">Aldatu zutabearen izena</string>

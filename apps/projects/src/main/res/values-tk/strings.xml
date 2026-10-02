@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Birleşdirilen</string>
     <string name="projects_diff_split">Bölmek</string>
     <string name="projects_diff_empty">Diff elýeterli däl</string>
-    <string name="projects_board_unassigned">Bellenilmedik</string>
+    <string name="projects_board_unset">[bellenilmedik]</string>
     <string name="projects_board_new">Täze</string>
     <string name="projects_board_rename">Adyny üýtget</string>
     <string name="projects_board_rename_column">Sütünüň adyny üýtget</string>

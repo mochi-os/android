@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">एकीकृत</string>
     <string name="projects_diff_split">विभाजन</string>
     <string name="projects_diff_empty">कुनै भिन्नता उपलब्ध छैन</string>
-    <string name="projects_board_unassigned">नतोकिएको</string>
+    <string name="projects_board_unset">[सेट छैन]</string>
     <string name="projects_board_new">नयाँ</string>
     <string name="projects_board_rename">नाम परिवर्तन गर्नुहोस्</string>
     <string name="projects_board_rename_column">स्तम्भको नाम परिवर्तन गर्नुहोस्</string>

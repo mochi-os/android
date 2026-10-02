@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Hapus</string>
     <string name="crm_attachments">Lampiran</string>
     <string name="crm_attachment_add">Tambah lampiran</string>
-    <string name="crm_board_unassigned">Tidak ditugaskan</string>
+    <string name="crm_board_unset">[tidak diatur]</string>
     <string name="crm_board_new">Baru</string>
     <string name="crm_board_rename">Ubah nama</string>
     <string name="crm_board_rename_column">Ubah nama kolom</string>

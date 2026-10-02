@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Unificat</string>
     <string name="projects_diff_split">Împarte</string>
     <string name="projects_diff_empty">Niciun diff disponibil</string>
-    <string name="projects_board_unassigned">Neatribuit</string>
+    <string name="projects_board_unset">[nesetat]</string>
     <string name="projects_board_new">Nou</string>
     <string name="projects_board_rename">Redenumește</string>
     <string name="projects_board_rename_column">Redenumește coloana</string>

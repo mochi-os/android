@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">متحد</string>
     <string name="projects_diff_split">تقسیم کریں</string>
     <string name="projects_diff_empty">کوئی فرق دستیاب نہیں</string>
-    <string name="projects_board_unassigned">غیر تفویض شدہ</string>
+    <string name="projects_board_unset">[سیٹ نہیں]</string>
     <string name="projects_board_new">نیا</string>
     <string name="projects_board_rename">نام تبدیل کریں</string>
     <string name="projects_board_rename_column">کالم کا نام تبدیل کریں</string>

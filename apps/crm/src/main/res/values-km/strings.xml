@@ -62,7 +62,7 @@
     <string name="crm_property_remove">យកចេញ</string>
     <string name="crm_attachments">ឯកសារភ្ជាប់</string>
     <string name="crm_attachment_add">បន្ថែមឯកសារភ្ជាប់</string>
-    <string name="crm_board_unassigned">មិនបានកំណត់</string>
+    <string name="crm_board_unset">[មិនបានកំណត់]</string>
     <string name="crm_board_new">ថ្មី</string>
     <string name="crm_board_rename">ប្តូរឈ្មោះ</string>
     <string name="crm_board_rename_column">ប្តូរឈ្មោះជួរឈរ</string>

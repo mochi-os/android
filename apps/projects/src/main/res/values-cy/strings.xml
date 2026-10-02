@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Unedig</string>
     <string name="projects_diff_split">Hollti</string>
     <string name="projects_diff_empty">Dim diff ar gael</string>
-    <string name="projects_board_unassigned">Heb ei neilltuo</string>
+    <string name="projects_board_unset">[heb ei osod]</string>
     <string name="projects_board_new">Newydd</string>
     <string name="projects_board_rename">Ailenwi</string>
     <string name="projects_board_rename_column">Ailenwi colofn</string>

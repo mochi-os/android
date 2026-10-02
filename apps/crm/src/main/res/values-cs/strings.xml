@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Odebrat</string>
     <string name="crm_attachments">Přílohy</string>
     <string name="crm_attachment_add">Přidat přílohu</string>
-    <string name="crm_board_unassigned">Nepřiřazeno</string>
+    <string name="crm_board_unset">[neuvedeno]</string>
     <string name="crm_board_new">Nové</string>
     <string name="crm_board_rename">Přejmenovat</string>
     <string name="crm_board_rename_column">Přejmenovat sloupec</string>

@@ -61,7 +61,7 @@
     <string name="projects_comment_remove_attachment">移除附件</string>
     <string name="projects_attachments">附件</string>
     <string name="projects_request_method">方式</string>
-    <string name="projects_board_unassigned">未指派</string>
+    <string name="projects_board_unset">[未設定]</string>
     <string name="projects_board_rename">重新命名</string>
     <string name="projects_move_current">目前</string>
     <string name="projects_class_save_name">儲存名稱</string>

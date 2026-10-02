@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Samlet</string>
     <string name="projects_diff_split">Opdel</string>
     <string name="projects_diff_empty">Ingen diff tilgængelig</string>
-    <string name="projects_board_unassigned">Ikke tildelt</string>
+    <string name="projects_board_unset">[ikke angivet]</string>
     <string name="projects_board_new">Ny</string>
     <string name="projects_board_rename">Omdøb</string>
     <string name="projects_board_rename_column">Omdøb kolonne</string>

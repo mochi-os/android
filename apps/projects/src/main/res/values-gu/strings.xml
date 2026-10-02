@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">એકીકૃત</string>
     <string name="projects_diff_split">વિભાજિત કરો</string>
     <string name="projects_diff_empty">કોઈ ડિફ ઉપલબ્ધ નથી</string>
-    <string name="projects_board_unassigned">અસોંપાયેલ</string>
+    <string name="projects_board_unset">[સેટ નથી]</string>
     <string name="projects_board_new">નવું</string>
     <string name="projects_board_rename">નામ બદલો</string>
     <string name="projects_board_rename_column">કૉલમનું નામ બદલો</string>

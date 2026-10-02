@@ -62,7 +62,7 @@
     <string name="crm_property_remove">ลบ</string>
     <string name="crm_attachments">ไฟล์แนบ</string>
     <string name="crm_attachment_add">เพิ่มไฟล์แนบ</string>
-    <string name="crm_board_unassigned">ยังไม่กำหนด</string>
+    <string name="crm_board_unset">[ไม่ได้ตั้ง]</string>
     <string name="crm_board_new">ใหม่</string>
     <string name="crm_board_rename">เปลี่ยนชื่อ</string>
     <string name="crm_board_rename_column">เปลี่ยนชื่อคอลัมน์</string>

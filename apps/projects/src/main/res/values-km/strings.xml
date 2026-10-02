@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">រួមបញ្ចូលគ្នា</string>
     <string name="projects_diff_split">បំបែក</string>
     <string name="projects_diff_empty">មិនមានភាពខុសគ្នា</string>
-    <string name="projects_board_unassigned">មិនបានកំណត់</string>
+    <string name="projects_board_unset">[មិនបានកំណត់]</string>
     <string name="projects_board_new">ថ្មី</string>
     <string name="projects_board_rename">ប្តូរឈ្មោះ</string>
     <string name="projects_board_rename_column">ប្តូរឈ្មោះជួរឈរ</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Suvienodinta</string>
     <string name="projects_diff_split">Padalyti</string>
     <string name="projects_diff_empty">Skirtumų nėra</string>
-    <string name="projects_board_unassigned">Nepriskirta</string>
+    <string name="projects_board_unset">[nenustatyta]</string>
     <string name="projects_board_new">Naujas</string>
     <string name="projects_board_rename">Pervadinti</string>
     <string name="projects_board_rename_column">Pervadinti stulpelį</string>

@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">সমন্বিত</string>
     <string name="projects_diff_split">ভাগ করুন</string>
     <string name="projects_diff_empty">কোনো ডিফ উপলব্ধ নেই</string>
-    <string name="projects_board_unassigned">অ্যাসাইন করা হয়নি</string>
+    <string name="projects_board_unset">[সেট নয়]</string>
     <string name="projects_board_new">নতুন</string>
     <string name="projects_board_rename">পুনঃনামকরণ করুন</string>
     <string name="projects_board_rename_column">কলাম পুনঃনামকরণ করুন</string>

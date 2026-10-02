@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">I unifikuar</string>
     <string name="projects_diff_split">Ndaj</string>
     <string name="projects_diff_empty">Asnjë diff i disponueshëm</string>
-    <string name="projects_board_unassigned">I pacaktuar</string>
+    <string name="projects_board_unset">[i pavendosur]</string>
     <string name="projects_board_new">I ri</string>
     <string name="projects_board_rename">Riemërto</string>
     <string name="projects_board_rename_column">Riemërto kolonën</string>

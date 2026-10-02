@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Vereinheitlicht</string>
     <string name="projects_diff_split">Teilen</string>
     <string name="projects_diff_empty">Kein Diff verfügbar</string>
-    <string name="projects_board_unassigned">Nicht zugewiesen</string>
+    <string name="projects_board_unset">[nicht gesetzt]</string>
     <string name="projects_board_new">Neu</string>
     <string name="projects_board_rename">Umbenennen</string>
     <string name="projects_board_rename_column">Spalte umbenennen</string>

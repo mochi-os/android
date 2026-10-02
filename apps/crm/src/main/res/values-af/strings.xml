@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Verwyder</string>
     <string name="crm_attachments">Aanhangsels</string>
     <string name="crm_attachment_add">Voeg aanhangsel by</string>
-    <string name="crm_board_unassigned">Nie toegewys nie</string>
+    <string name="crm_board_unset">[nie gestel nie]</string>
     <string name="crm_board_new">Nuut</string>
     <string name="crm_board_rename">Hernoem</string>
     <string name="crm_board_rename_column">Hernoem kolom</string>

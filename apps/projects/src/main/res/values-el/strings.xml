@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Ενοποιημένο</string>
     <string name="projects_diff_split">Διαχωρισμός</string>
     <string name="projects_diff_empty">Δεν υπάρχουν διαθέσιμες διαφορές</string>
-    <string name="projects_board_unassigned">Χωρίς ανάθεση</string>
+    <string name="projects_board_unset">[χωρίς ορισμό]</string>
     <string name="projects_board_new">Νέο</string>
     <string name="projects_board_rename">Μετονομασία</string>
     <string name="projects_board_rename_column">Μετονομασία στήλης</string>

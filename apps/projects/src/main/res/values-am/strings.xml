@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">የተዋሃደ</string>
     <string name="projects_diff_split">ይከፋፍሉ</string>
     <string name="projects_diff_empty">ምንም ልዩነት የለም</string>
-    <string name="projects_board_unassigned">ያልተመደበ</string>
+    <string name="projects_board_unset">[አልተዘጋጀም]</string>
     <string name="projects_board_new">አዲስ</string>
     <string name="projects_board_rename">ስም ቀይር</string>
     <string name="projects_board_rename_column">የአምድ ስም ቀይር</string>

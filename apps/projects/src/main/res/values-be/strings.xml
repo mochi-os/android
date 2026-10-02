@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Аб\'яднаны</string>
     <string name="projects_diff_split">Падзяліць</string>
     <string name="projects_diff_empty">Розніца недаступная</string>
-    <string name="projects_board_unassigned">Не прызначана</string>
+    <string name="projects_board_unset">[не зададзена]</string>
     <string name="projects_board_new">Новы</string>
     <string name="projects_board_rename">Перайменаваць</string>
     <string name="projects_board_rename_column">Перайменаваць слупок</string>

@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Neħħi</string>
     <string name="crm_attachments">Mehmużin</string>
     <string name="crm_attachment_add">Żid mehmuż</string>
-    <string name="crm_board_unassigned">Mhux assenjat</string>
+    <string name="crm_board_unset">[mhux issettjat]</string>
     <string name="crm_board_new">Ġdid</string>
     <string name="crm_board_rename">Irrinomina</string>
     <string name="crm_board_rename_column">Irrinomina kolonna</string>
