@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Haqi</string>
     <string name="go_delete_message">Taphichi kun tarree keessanii ni ka\'a. Kun deebi\'ee fooyya\'uu hin danda\'u.</string>
     <string name="go_delete_title">Taphicha haqi?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Fudhadhu</string>
     <string name="go_draw_decline">Dhiisi</string>
     <string name="go_draw_offered_received">%1$s qixxee dhiyeesse</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Keessaa ba\'e</string>
     <string name="go_new_game_title">Tapha Go haaraa</string>
     <string name="go_new_game_no_friends">Tapha jalqabuu dura hiriyaa dabaluu qabda.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Qabxiiwwan Adiitti dabalaman, Gurraachi jalqaba deemuu isaa haaluuf</string>
 
-    <string name="go_board_a11y">Gabatee Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Gabatee Go %1$d×%1$d, dhagaa gurraacha kaa\'uuf dabareen kee</string>
-    <string name="go_board_a11y_turn_white">Gabatee Go %1$d×%1$d, dhagaa adii kaa\'uuf dabareen kee</string>
+    <string name="go_board_a11y">Gabatee Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Gabatee Go %1$s×%1$s, dhagaa gurraacha kaa\'uuf dabareen kee</string>
+    <string name="go_board_a11y_turn_white">Gabatee Go %1$s×%1$s, dhagaa adii kaa\'uuf dabareen kee</string>
     <string name="go_status_scoring">Lakkoofsa — qabxii irratti walii galaa yookaan taphachuu itti fufaa</string>
     <string name="go_score_proposed">Qabxii dhiyaate: gurraacha %1$s, adii %2$s</string>
     <string name="go_score_opponent_accepted">Morkataan kee qabxii kana ni fudhata: gurraacha %1$s, adii %2$s</string>

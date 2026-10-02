@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">אָן נאָמען</string>
     <string name="staff_accounts_unsuspend">אומסוספּענדירן</string>
     <string name="staff_accounts_unsuspended_toast">קאָנטע אומאויפֿגעהאַנגען</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">אָפּזאָגן</string>
     <string name="staff_appeals_decide">פּסקנען</string>
     <string name="staff_appeals_decision_denied">לאָזן רשימה אָפּגעזאָגט</string>
@@ -397,7 +397,7 @@
     <string name="staff_audit_action_auction_cancelled">אויקציע אָפּגעזאָגט</string>
     <string name="staff_dashboard_order_fallback">באשטעלונג #%1$s</string>
     <string name="staff_accounts_reason_optional_label">סיבה (אַפּציאָנעל)</string>
-    <string name="staff_accounts_sales">%1$d פֿאַרקויפֿן</string>
+    <string name="staff_accounts_sales">%1$s פֿאַרקויפֿן</string>
     <string name="staff_appeals_reason_label">סיבה פֿון פֿאַרקויפֿערס אַפּעלאַציע</string>
     <string name="staff_audit_action_staff_team_role_changed">שטאַב ראָלע איז געביטן געוואָרן</string>
     <string name="staff_categories_delete_desc">אויסמעקן „%1$s\"? דאָס קען נישט אומגעטאָן ווערן.</string>

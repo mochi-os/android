@@ -220,7 +220,7 @@
     <string name="wikis_channel_description">صفحہ ترامیم، تبصرے اور دعوت ناموں کے بارے میں اطلاعات۔</string>
     <string name="wikis_pageview_toc_expand">فہرست مضامین دکھائیں</string>
     <string name="wikis_pageview_toc_collapse">فہرست مضامین چھپائیں</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">اپ ڈیٹ %1$s</string>
     <string name="wikis_pageview_not_found_description">صفحہ „%1$s\" ابھی موجود نہیں ہے۔</string>
     <string name="wikis_pageview_share_chooser">ویکی لنک</string>
@@ -245,13 +245,13 @@
     <string name="wikis_delete_page_message">آپ صفحہ „%1$s\" (%2$s) حذف کرنے والے ہیں۔ یہ عمل ہسٹری سے بحال کر کے کالعدم کیا جا سکتا ہے۔</string>
     <string name="wikis_delete_page_success">صفحہ حذف کر دیا گیا</string>
     <string name="wikis_revert_page_title">صفحہ واپس لائیں</string>
-    <string name="wikis_revert_page_message">آپ %1$s کو ورژن %2$d پر واپس کرنے والے ہیں۔ یہ ورژن %2$d کے مواد کے ساتھ نئی ریویژن بنائے گا۔</string>
-    <string name="wikis_revert_page_default_comment">ورژن %1$d پر واپس کیا</string>
-    <string name="wikis_revert_page_success">ورژن %1$d پر واپس کیا</string>
+    <string name="wikis_revert_page_message">آپ %1$s کو ورژن %2$s پر واپس کرنے والے ہیں۔ یہ ورژن %2$s کے مواد کے ساتھ نئی ریویژن بنائے گا۔</string>
+    <string name="wikis_revert_page_default_comment">ورژن %1$s پر واپس کیا</string>
+    <string name="wikis_revert_page_success">ورژن %1$s پر واپس کیا</string>
     <string name="wikis_rename_page_renaming">نام تبدیل ہو رہا ہے…</string>
     <string name="wikis_rename_page_success">صفحہ کا نام تبدیل ہوا</string>
-    <string name="wikis_history_viewing">%1$s کی ہسٹری دیکھ رہے ہیں، موجودہ ورژن %2$d</string>
-    <string name="wikis_revision_version_badge">ورژن %1$d</string>
+    <string name="wikis_history_viewing">%1$s کی ہسٹری دیکھ رہے ہیں، موجودہ ورژن %2$s</string>
+    <string name="wikis_revision_version_badge">ورژن %1$s</string>
     <string name="wikis_search_pages_placeholder">عنوان یا مواد سے صفحات تلاش کریں…</string>
     <string name="wikis_search_no_results">„%1$s\" کے لیے کوئی صفحات نہیں ملے۔ مختلف تلاش کی اصطلاحات آزمائیں۔</string>
     <string name="wikis_search_updated">اپ ڈیٹ %1$s</string>
@@ -286,38 +286,38 @@
     <string name="wikis_revision_author">بذریعہ %1$s</string>
     <string name="wikis_revision_show_page">صفحہ دکھائیں</string>
     <string name="wikis_revision_compare_failed">موازنے کے لیے پچھلا ورژن لوڈ نہیں ہو سکا۔</string>
-    <string name="wikis_revision_changes_from">ورژن %1$d → %2$d سے تبدیلیاں</string>
+    <string name="wikis_revision_changes_from">ورژن %1$s → %2$s سے تبدیلیاں</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d تبصرہ</item>
-        <item quantity="other">%d تبصرے</item>
+        <item quantity="one">%s تبصرہ</item>
+        <item quantity="other">%s تبصرے</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d جواب</item>
-        <item quantity="other">+%d مزید جوابات</item>
+        <item quantity="one">%s جواب</item>
+        <item quantity="other">+%s مزید جوابات</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d صفحہ</item>
-        <item quantity="other">%d صفحات</item>
+        <item quantity="one">%s صفحہ</item>
+        <item quantity="other">%s صفحات</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d فائل</item>
-        <item quantity="other">%d فائلیں</item>
+        <item quantity="one">%s فائل</item>
+        <item quantity="other">%s فائلیں</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d تصویر</item>
-        <item quantity="other">%d تصاویر</item>
+        <item quantity="one">%s تصویر</item>
+        <item quantity="other">%s تصاویر</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d دستاویز</item>
-        <item quantity="other">%d دستاویزات</item>
+        <item quantity="one">%s دستاویز</item>
+        <item quantity="other">%s دستاویزات</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">اس ٹیگ کے ساتھ %d صفحہ</item>
-        <item quantity="other">اس ٹیگ کے ساتھ %d صفحات</item>
+        <item quantity="one">اس ٹیگ کے ساتھ %s صفحہ</item>
+        <item quantity="other">اس ٹیگ کے ساتھ %s صفحات</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">«%2$s» کے لیے %1$d نتیجہ ملے</item>
-        <item quantity="other">«%2$s» کے لیے %1$d نتائج ملے</item>
+        <item quantity="one">«%2$s» کے لیے %1$s نتیجہ ملے</item>
+        <item quantity="other">«%2$s» کے لیے %1$s نتائج ملے</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">کیپشن محفوظ نہیں ہو سکا</string>
     <string name="wikis_attachments_upload_types">تعاون یافتہ فائلیں: تصاویر، PDF، DOC، DOCX، TXT، اور MD۔</string>
@@ -326,7 +326,7 @@
     <string name="wikis_rss_copied_new">نیا RSS URL کلپ بورڈ پر کاپی ہو گیا</string>
     <string name="wikis_rss_exists">یہ فیڈ URL پہلے ہی جاری کیا جا چکا ہے اور دوبارہ نہیں دکھایا جا سکتا۔</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">پہلا %1$d تبصرہ دکھایا جا رہا ہے۔</item>
-        <item quantity="other">پہلے %1$d تبصرے دکھائے جا رہے ہیں۔</item>
+        <item quantity="one">پہلا %1$s تبصرہ دکھایا جا رہا ہے۔</item>
+        <item quantity="other">پہلے %1$s تبصرے دکھائے جا رہے ہیں۔</item>
     </plurals>
 </resources>

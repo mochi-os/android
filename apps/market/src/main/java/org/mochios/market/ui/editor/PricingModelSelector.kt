@@ -273,7 +273,7 @@ private fun DurationDropdown(
         onExpandedChange = { expanded = it },
     ) {
         MochiTextField(
-            value = stringResource(R.string.market_editor_days, days),
+            value = stringResource(R.string.market_editor_days, LocalFormat.current.formatNumber(days)),
             onValueChange = {},
             readOnly = true,
             label = { Text(stringResource(R.string.market_editor_duration)) },
@@ -288,7 +288,7 @@ private fun DurationDropdown(
         ) {
             AUCTION_DURATIONS.forEach { d ->
                 MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.market_editor_days, d)) },
+                    text = { Text(stringResource(R.string.market_editor_days, LocalFormat.current.formatNumber(d))) },
                     onClick = { onChange(d); expanded = false },
                     selected = days == d,
                 )

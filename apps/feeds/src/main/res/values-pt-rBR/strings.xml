@@ -104,7 +104,7 @@
     <string name="feeds_remove_source_confirm">Isso vai parar de importar conteúdo de \"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">Também excluir as publicações importadas desta fonte</string>
     <string name="feeds_suggested_credibility_title">Credibilidade sugerida</string>
-    <string name="feeds_suggested_credibility_body">Mochi sugere uma credibilidade de %1$d. Aceitar?</string>
+    <string name="feeds_suggested_credibility_body">Mochi sugere uma credibilidade de %1$s. Aceitar?</string>
     <string name="feeds_suggested_credibility_keep">Manter atual</string>
     <string name="feeds_ai_processing_mode">Modo de processamento de IA</string>
     <string name="feeds_ai_account">Conta de IA</string>
@@ -137,8 +137,8 @@
     <string name="feeds_saved_empty_subtitle">Toque no marcador de qualquer publicação para salvá-la aqui para mais tarde.</string>
     <string name="feeds_saved_error_clear">Falha ao limpar as publicações salvas</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d nova publicação</item>
-        <item quantity="other">%d novas publicações</item>
+        <item quantity="one">%s nova publicação</item>
+        <item quantity="other">%s novas publicações</item>
     </plurals>
     <string name="feeds_caught_up">Você está em dia</string>
     <string name="feeds_all_caught_up">Tudo em dia</string>
@@ -187,12 +187,12 @@
     <string name="feeds_source_url_hint_feed">ID da entidade do feed ou impressão digital</string>
     <string name="feeds_source_credibility_label">Credibilidade</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d hora</item>
-        <item quantity="other">%1$d horas</item>
+        <item quantity="one">%1$s hora</item>
+        <item quantity="other">%1$s horas</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d minutos</item>
+        <item quantity="one">%1$s minuto</item>
+        <item quantity="other">%1$s minutos</item>
     </plurals>
     <string name="feeds_source_polling_interval">Verificação a cada %1$s</string>
     <string name="feeds_access_level_react_full">Reagir e visualizar</string>

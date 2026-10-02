@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">tegi muudatuse</string>
     <string name="projects_attachment_empty">Manuseid pole</string>
     <string name="projects_attachment_default_name">manus</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Uus liitmistaotlus</string>
     <string name="projects_request_status_closed">Suletud</string>
     <string name="projects_request_back_to_list">Tagasi nimekirja</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Liitmise oleku kontrollimine…</string>
     <string name="projects_request_can_merge">Saab liita</string>
     <string name="projects_request_cannot_merge">Ei saa liita</string>
-    <string name="projects_request_ahead_behind">%1$d ees, %2$d taga</string>
+    <string name="projects_request_ahead_behind">%1$s ees, %2$s taga</string>
     <string name="projects_request_draft_notice">See on mustand. Märgi valmis enne liitmist.</string>
     <string name="projects_request_view_diff">Vaata erinevusi</string>
     <string name="projects_request_mark_ready">Märgi valmis</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Selle vaate jaoks pole veerge seadistatud</string>
     <string name="projects_board_no_options">Veeruvälja jaoks pole valikuid seadistatud</string>
     <string name="projects_board_column_options">Veeru valikud</string>
-    <string name="projects_board_nested_count">+%1$d pesastatud</string>
+    <string name="projects_board_nested_count">+%1$s pesastatud</string>
     <string name="projects_move_to_column">Liiguta veergu</string>
     <string name="projects_move_to_row">Liiguta ritta</string>
     <string name="projects_move_after">Pärast %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Sortimine ja filter</string>
     <string name="projects_create_prefix_hint">Kasutatakse loetavate ID-de jaoks, nagu %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d vastuoluline fail</item>
-        <item quantity="other">%1$d vastuolulist faili</item>
+        <item quantity="one">%1$s vastuoluline fail</item>
+        <item quantity="other">%1$s vastuolulist faili</item>
     </plurals>
     <string name="projects_design_export_saved">Kujundus salvestatud</string>
     <string name="projects_design_import_failed">Faili ei õnnestunud lugeda</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Projekti andmed salvestatud</string>
     <string name="projects_exporting">Ekspordi ettevalmistamine…</string>
     <string name="projects_board_add_column">Lisa veerg</string>
-    <string name="projects_design_sample">Näidis %1$d</string>
+    <string name="projects_design_sample">Näidis %1$s</string>
     <string name="projects_option_delete_title">Kustuta valik</string>
     <string name="projects_option_delete_message">Kas oled kindel, et soovid kustutada valiku \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ühtegi tüüpi ei saa veel luua. Loo kõigepealt vajalikud vanemüksused.</string>

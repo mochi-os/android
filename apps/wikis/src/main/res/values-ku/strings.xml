@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Agahdarî derbarê guhertinên rûpela wiki, şîrove û vexwendinan.</string>
     <string name="wikis_pageview_toc_expand">Naverokê nîşan bide</string>
     <string name="wikis_pageview_toc_collapse">Naverokê veşêre</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Hate nûkirin %1$s</string>
     <string name="wikis_pageview_not_found_description">Rûpela “%1$s” hîn tune ye.</string>
     <string name="wikis_pageview_share_chooser">Girêdana wîkiyê</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Tu li ber jêbirina rûpela “%1$s” (%2$s) yî. Ev kirin dikare bi vegerandina ji dîrokê were vegerandin.</string>
     <string name="wikis_delete_page_success">Rûpel hate jêbirin</string>
     <string name="wikis_revert_page_title">Rûpelê vegerîne</string>
-    <string name="wikis_revert_page_message">Tu li ber vegerandina %1$s bo guhertoya %2$d yî. Ev ê nirxandineke nû bi naveroka guhertoya %2$d biafirîne.</string>
-    <string name="wikis_revert_page_default_comment">Vegeriya guhertoya %1$d</string>
-    <string name="wikis_revert_page_success">Vegeriya guhertoya %1$d</string>
+    <string name="wikis_revert_page_message">Tu li ber vegerandina %1$s bo guhertoya %2$s yî. Ev ê nirxandineke nû bi naveroka guhertoya %2$s biafirîne.</string>
+    <string name="wikis_revert_page_default_comment">Vegeriya guhertoya %1$s</string>
+    <string name="wikis_revert_page_success">Vegeriya guhertoya %1$s</string>
     <string name="wikis_rename_page_renaming">Nav tê guhertin…</string>
     <string name="wikis_rename_page_success">Navê rûpelê hate guhertin</string>
-    <string name="wikis_history_viewing">Dîroka %1$s tê dîtin, guhertoya niha %2$d</string>
-    <string name="wikis_revision_version_badge">Guherto %1$d</string>
+    <string name="wikis_history_viewing">Dîroka %1$s tê dîtin, guhertoya niha %2$s</string>
+    <string name="wikis_revision_version_badge">Guherto %1$s</string>
     <string name="wikis_search_pages_placeholder">Li rûpelan bi sernav an naverokê bigere…</string>
     <string name="wikis_search_no_results">Ji bo “%1$s” tu rûpel nehat dîtin. Peyvên din ên lêgerînê biceribîne.</string>
     <string name="wikis_search_updated">Hate nûkirin %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">ji aliyê %1$s</string>
     <string name="wikis_revision_show_page">Rûpelê nîşan bide</string>
     <string name="wikis_revision_compare_failed">Ji bo berhevkirinê guhertoya berê nehat barkirin.</string>
-    <string name="wikis_revision_changes_from">Guhertin ji guhertoya %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Guhertin ji guhertoya %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d şîrove</item>
-        <item quantity="other">%d şîrove</item>
+        <item quantity="one">%s şîrove</item>
+        <item quantity="other">%s şîrove</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d bersiv</item>
-        <item quantity="other">+%d bersivên zêde</item>
+        <item quantity="one">%s bersiv</item>
+        <item quantity="other">+%s bersivên zêde</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d rûpel</item>
-        <item quantity="other">%d rûpel</item>
+        <item quantity="one">%s rûpel</item>
+        <item quantity="other">%s rûpel</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d pel</item>
-        <item quantity="other">%d pel</item>
+        <item quantity="one">%s pel</item>
+        <item quantity="other">%s pel</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d wêne</item>
-        <item quantity="other">%d wêne</item>
+        <item quantity="one">%s wêne</item>
+        <item quantity="other">%s wêne</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d belge</item>
-        <item quantity="other">%d belge</item>
+        <item quantity="one">%s belge</item>
+        <item quantity="other">%s belge</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d rûpel bi vê tagê</item>
-        <item quantity="other">%d rûpel bi vê tagê</item>
+        <item quantity="one">%s rûpel bi vê tagê</item>
+        <item quantity="other">%s rûpel bi vê tagê</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d encam ji bo \"%2$s\" hat dîtin</item>
-        <item quantity="other">%1$d encam ji bo \"%2$s\" hat dîtin</item>
+        <item quantity="one">%1$s encam ji bo \"%2$s\" hat dîtin</item>
+        <item quantity="other">%1$s encam ji bo \"%2$s\" hat dîtin</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Binnivîs nehat tomarkirin</string>
     <string name="wikis_attachments_upload_types">Pelên piştgirîkirî: wêne, PDF, DOC, DOCX, TXT, û MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">URL ya nû ya RSS hate kopîkirin</string>
     <string name="wikis_rss_exists">Ev URL ya feedê berê hate dayîn û careke din nayê nîşandan.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">%1$d şîroveya yekem tê nîşandan.</item>
-        <item quantity="other">%1$d şîroveyên yekem tên nîşandan.</item>
+        <item quantity="one">%1$s şîroveya yekem tê nîşandan.</item>
+        <item quantity="other">%1$s şîroveyên yekem tên nîşandan.</item>
     </plurals>
 </resources>

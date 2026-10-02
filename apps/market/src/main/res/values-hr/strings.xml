@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Slanje…</string>
     <string name="market_checkout_subscribing">Pretplaćivanje…</string>
     <string name="market_filter_remove">Ukloni filtar</string>
-    <string name="market_listing_detail_sales_count">%1$d prodaja</string>
-    <string name="market_profile_sales_count">%1$d prodaja</string>
+    <string name="market_listing_detail_sales_count">%1$s prodaja</string>
+    <string name="market_profile_sales_count">%1$s prodaja</string>
     <string name="market_purchase_dispute_response">Odgovor prodavača</string>
     <string name="market_purchases_order_label">Narudžba #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Recite kupcima o sebi…</string>
     <string name="market_account_load_failed">Račun nije moguće učitati</string>
     <string name="market_account_save_failed">Promjene nije moguće spremiti</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Trenutačno: %1$s</string>
     <string name="market_bids_ends_in">Završava za %1$s</string>
     <string name="market_bids_your_bid">Vaša ponuda: %1$s</string>
-    <string name="market_carousel_main">Fotografija %1$d od %2$d</string>
-    <string name="market_carousel_thumbnail">Sličica %1$d</string>
+    <string name="market_carousel_main">Fotografija %1$s od %2$s</string>
+    <string name="market_carousel_thumbnail">Sličica %1$s</string>
     <string name="market_checkout_browser_unavailable">Nema dostupnog preglednika za otvaranje stranice za plaćanje</string>
     <string name="market_checkout_pay_button">Plati putem Stripea</string>
     <string name="market_checkout_processing">Obrada…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Priloži dokaze</string>
-    <string name="market_dispute_dialog_attach_count">Priloženih datoteka: %1$d</string>
+    <string name="market_dispute_dialog_attach_count">Priloženih datoteka: %1$s</string>
     <string name="market_dispute_dialog_evidence_role_staff">Osoblje Mochija</string>
     <string name="market_dispute_dialog_evidence_section_title">Podneseni dokazi</string>
     <string name="market_dispute_dialog_evidence_submitter_line">podnio %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Referentni URL</string>
     <string name="market_editor_assets_empty">Još nema sredstava</string>
     <string name="market_editor_category_none">Odaberite kategoriju</string>
-    <string name="market_editor_days">%1$d dana</string>
+    <string name="market_editor_days">%1$s dana</string>
     <string name="market_editor_delete">Izbriši oglas</string>
     <string name="market_editor_delete_confirm_message">Ovime će oglas biti trajno izbrisan.</string>
     <string name="market_editor_delete_confirm_title">Izbrisati oglas?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">Učitavanje razgovora nije uspjelo</string>
     <string name="market_messages_send_failed">Slanje poruke nije uspjelo</string>
     <string name="market_messages_thread_title">Razgovor</string>
-    <string name="market_messages_unread_badge">%1$d nepročitano</string>
+    <string name="market_messages_unread_badge">%1$s nepročitano</string>
     <string name="market_price_from">Od %1$s</string>
     <string name="market_price_high_bid">Najviša ponuda: %1$s</string>
     <string name="market_price_instant_buy">trenutna kupnja: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Pridružio se %1$s</string>
     <string name="market_profile_no_reviews">Još nema recenzija.</string>
     <string name="market_profile_rating_breakdown">Raščlamba ocjena</string>
-    <string name="market_profile_stars_value">%1$d zvjezdica</string>
+    <string name="market_profile_stars_value">%1$s zvjezdica</string>
     <string name="market_purchase_dispute_chargeback">Povrat sredstava %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Vaša banka je pokrenula povrat sredstava za ovu narudžbu. Stripe rješava spor s prodavateljem; ishod će se ovdje prikazati kada bude odlučen.</string>
-    <string name="market_purchase_download_many">Preuzmite svojih %1$d datoteka u nastavku.</string>
+    <string name="market_purchase_download_many">Preuzmite svojih %1$s datoteka u nastavku.</string>
     <string name="market_purchase_download_one">Preuzmite svoju datoteku u nastavku.</string>
     <string name="market_purchase_review_from">Recenzija od %1$s</string>
     <string name="market_purchases_auction_label">Aukcija #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s vraćeno</string>
     <string name="market_purchases_won_for">Osvojeno za %1$s</string>
-    <string name="market_rating_reviews">(%1$d recenzija)</string>
+    <string name="market_rating_reviews">(%1$s recenzija)</string>
     <string name="market_refund_amount_label">Iznos</string>
     <string name="market_refund_dialog_amount_help">Ostavite prazno za povrat cijele narudžbe.</string>
     <string name="market_refund_dialog_amount_label">Iznos</string>
@@ -785,13 +785,13 @@
     <string name="market_listings_remove_message_auction">Ovo će otkazati aukciju. Oglas će biti skriven od kupaca; možete ga kasnije ponovno objaviti kao novu skicu.</string>
     <string name="market_listings_remove_title">Ukloniti ovaj oglas?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Ovo će otkazati aukciju i obavijestiti %1$d aktivnog ponuditelja. Oglas će biti skriven od kupaca; kasnije ga možete ponovno objaviti kao novi nacrt.</item>
-        <item quantity="few">Ovo će otkazati aukciju i obavijestiti %1$d aktivna ponuditelja. Oglas će biti skriven od kupaca; kasnije ga možete ponovno objaviti kao novi nacrt.</item>
-        <item quantity="other">Ovo će otkazati aukciju i obavijestiti %1$d aktivnih ponuditelja. Oglas će biti skriven od kupaca; kasnije ga možete ponovno objaviti kao novi nacrt.</item>
+        <item quantity="one">Ovo će otkazati aukciju i obavijestiti %1$s aktivnog ponuditelja. Oglas će biti skriven od kupaca; kasnije ga možete ponovno objaviti kao novi nacrt.</item>
+        <item quantity="few">Ovo će otkazati aukciju i obavijestiti %1$s aktivna ponuditelja. Oglas će biti skriven od kupaca; kasnije ga možete ponovno objaviti kao novi nacrt.</item>
+        <item quantity="other">Ovo će otkazati aukciju i obavijestiti %1$s aktivnih ponuditelja. Oglas će biti skriven od kupaca; kasnije ga možete ponovno objaviti kao novi nacrt.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Ovo će otkazati %1$d aktivnu pretplatu na kraju trenutačnog obračunskog razdoblja. Pretplatnici će biti obaviješteni. Oglas će biti skriven od kupaca.</item>
-        <item quantity="few">Ovo će otkazati %1$d aktivne pretplate na kraju trenutačnog obračunskog razdoblja. Pretplatnici će biti obaviješteni. Oglas će biti skriven od kupaca.</item>
-        <item quantity="other">Ovo će otkazati %1$d aktivnih pretplata na kraju trenutačnog obračunskog razdoblja. Pretplatnici će biti obaviješteni. Oglas će biti skriven od kupaca.</item>
+        <item quantity="one">Ovo će otkazati %1$s aktivnu pretplatu na kraju trenutačnog obračunskog razdoblja. Pretplatnici će biti obaviješteni. Oglas će biti skriven od kupaca.</item>
+        <item quantity="few">Ovo će otkazati %1$s aktivne pretplate na kraju trenutačnog obračunskog razdoblja. Pretplatnici će biti obaviješteni. Oglas će biti skriven od kupaca.</item>
+        <item quantity="other">Ovo će otkazati %1$s aktivnih pretplata na kraju trenutačnog obračunskog razdoblja. Pretplatnici će biti obaviješteni. Oglas će biti skriven od kupaca.</item>
     </plurals>
 </resources>

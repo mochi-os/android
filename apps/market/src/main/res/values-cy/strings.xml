@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Marchnad</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Bywgraffiad</string>
     <string name="market_account_biography_placeholder">Dywedwch wrth brynwyr amdanoch chi…</string>
     <string name="market_account_load_failed">Methwyd llwytho\'r cyfrif</string>
@@ -72,8 +72,8 @@
     <string name="market_bids_tab_won">Wedi ennill</string>
     <string name="market_bids_title">Cynigion</string>
     <string name="market_bids_your_bid">Eich cynnig: %1$s</string>
-    <string name="market_carousel_main">Llun %1$d o %2$d</string>
-    <string name="market_carousel_thumbnail">Llun bach %1$d</string>
+    <string name="market_carousel_main">Llun %1$s o %2$s</string>
+    <string name="market_carousel_thumbnail">Llun bach %1$s</string>
     <string name="market_channel_name">Marchnad</string>
     <string name="market_chargeback_reason_bank_cannot_process">Methodd y banc â phrosesu</string>
     <string name="market_chargeback_reason_check_returned">Siec wedi\'i dychwelyd</string>
@@ -135,7 +135,7 @@
     <string name="market_condition_refurbished">Wedi\'i adnewyddu</string>
     <string name="market_condition_used">Wedi\'i ddefnyddio</string>
     <string name="market_dispute_dialog_attach">Atodi tystiolaeth</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ffeil(iau) wedi\'u hatodi</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ffeil(iau) wedi\'u hatodi</string>
     <string name="market_dispute_dialog_cancel">Canslo</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Prynwr</string>
     <string name="market_dispute_dialog_evidence_role_seller">Gwerthwr</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_condition_refurbished">Wedi\'i adnewyddu</string>
     <string name="market_editor_condition_used">Wedi\'i ddefnyddio</string>
     <string name="market_editor_currency">Arian</string>
-    <string name="market_editor_days">%1$d diwrnod</string>
+    <string name="market_editor_days">%1$s diwrnod</string>
     <string name="market_editor_delete">Dileu rhestriad</string>
     <string name="market_editor_delete_confirm_message">Bydd hyn yn dileu\'r rhestriad yn barhaol.</string>
     <string name="market_editor_delete_confirm_title">Dileu rhestriad?</string>
@@ -312,7 +312,7 @@
     <string name="market_listing_detail_relist_failed">Methwyd ail-restru</string>
     <string name="market_listing_detail_relist_in_progress">Yn ail-restru</string>
     <string name="market_listing_detail_report">Riportio rhestriad</string>
-    <string name="market_listing_detail_sales_count">%1$d gwerthiant</string>
+    <string name="market_listing_detail_sales_count">%1$s gwerthiant</string>
     <string name="market_listing_detail_save">Cadw</string>
     <string name="market_listing_detail_seller_banned_banner">Mae\'r gwerthwr hwn wedi\'i wahardd. Ni ellir gosod archebion newydd.</string>
     <string name="market_listing_detail_seller_heading">Gwerthwr</string>
@@ -364,7 +364,7 @@
     <string name="market_messages_send_failed">Methwyd anfon neges</string>
     <string name="market_messages_thread_listing_chip">Rhestriad</string>
     <string name="market_messages_thread_title">Sgwrs</string>
-    <string name="market_messages_unread_badge">%1$d heb eu darllen</string>
+    <string name="market_messages_unread_badge">%1$s heb eu darllen</string>
     <string name="market_onboarding_activate">Actifadu</string>
     <string name="market_onboarding_activating">Wrthi\'n actifadu…</string>
     <string name="market_onboarding_body">Actifadwch eich cyfrif i ddechrau prynu a gwerthu.</string>
@@ -384,8 +384,8 @@
     <string name="market_profile_no_reviews">Dim adolygiadau eto.</string>
     <string name="market_profile_rating_breakdown">Dadansoddiad sgôr</string>
     <string name="market_profile_reviews_section">Adolygiadau</string>
-    <string name="market_profile_sales_count">%1$d gwerthiant</string>
-    <string name="market_profile_stars_value">%1$d seren</string>
+    <string name="market_profile_sales_count">%1$s gwerthiant</string>
+    <string name="market_profile_stars_value">%1$s seren</string>
     <string name="market_profile_status_banned">Wedi\'i wahardd</string>
     <string name="market_profile_status_suspended">Wedi\'i atal</string>
     <string name="market_profile_verified">Wedi\'i ddilysu</string>
@@ -403,7 +403,7 @@
     <string name="market_purchase_dispute_response">Ymateb y gwerthwr</string>
     <string name="market_purchase_dispute_title">Cais am ad-daliad</string>
     <string name="market_purchase_download_failed">Methwyd lawrlwytho</string>
-    <string name="market_purchase_download_many">Lawrlwythwch eich %1$d ffeil isod.</string>
+    <string name="market_purchase_download_many">Lawrlwythwch eich %1$s ffeil isod.</string>
     <string name="market_purchase_download_one">Lawrlwythwch eich ffeil isod.</string>
     <string name="market_purchase_download_section">Mae eich pryniant yn barod</string>
     <string name="market_purchase_item">Eitem</string>
@@ -441,7 +441,7 @@
     <string name="market_purchases_won_for">Enillwyd am %1$s</string>
     <string name="market_rating_label">Sgôr</string>
     <string name="market_rating_no_reviews">Dim adolygiadau eto</string>
-    <string name="market_rating_reviews">(%1$d adolygiad)</string>
+    <string name="market_rating_reviews">(%1$s adolygiad)</string>
     <string name="market_refund_amount_label">Swm</string>
     <string name="market_refund_body">Rhowch reswm dros eich cais am ad-daliad.</string>
     <string name="market_refund_details_label">Manylion</string>
@@ -784,19 +784,19 @@
     <string name="market_listings_remove_message_auction">Bydd hyn yn canslo\'r arwerthiant. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru\'n ddiweddarach fel drafft newydd.</string>
     <string name="market_listings_remove_title">Tynnu\'r rhestriad hwn?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="zero">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$d cynigwyr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
-        <item quantity="one">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$d cynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
-        <item quantity="two">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$d gynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
-        <item quantity="few">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$d cynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
-        <item quantity="many">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$d chynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
-        <item quantity="other">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$d cynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
+        <item quantity="zero">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$s cynigwyr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
+        <item quantity="one">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$s cynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
+        <item quantity="two">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$s gynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
+        <item quantity="few">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$s cynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
+        <item quantity="many">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$s chynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
+        <item quantity="other">Bydd hyn yn canslo\'r arwerthiant ac yn hysbysu %1$s cynigiwr gweithredol. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru yn ddiweddarach fel drafft newydd.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="zero">Bydd hyn yn canslo %1$d tanysgrifiadau gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
-        <item quantity="one">Bydd hyn yn canslo %1$d tanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
-        <item quantity="two">Bydd hyn yn canslo %1$d danysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
-        <item quantity="few">Bydd hyn yn canslo %1$d tanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
-        <item quantity="many">Bydd hyn yn canslo %1$d thanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
-        <item quantity="other">Bydd hyn yn canslo %1$d tanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
+        <item quantity="zero">Bydd hyn yn canslo %1$s tanysgrifiadau gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
+        <item quantity="one">Bydd hyn yn canslo %1$s tanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
+        <item quantity="two">Bydd hyn yn canslo %1$s danysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
+        <item quantity="few">Bydd hyn yn canslo %1$s tanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
+        <item quantity="many">Bydd hyn yn canslo %1$s thanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
+        <item quantity="other">Bydd hyn yn canslo %1$s tanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
     </plurals>
 </resources>

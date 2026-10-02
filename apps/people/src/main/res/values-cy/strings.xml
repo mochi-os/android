@@ -180,12 +180,12 @@
     <string name="people_books_create">Creu llyfr cyfeiriadau</string>
     <string name="people_books_delete">Dileu\'r llyfr cyfeiriadau</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="zero">Dileu %1$s a\'i %2$d cysylltiad?</item>
-        <item quantity="one">Dileu %1$s a\'i %2$d cysylltiad?</item>
-        <item quantity="two">Dileu %1$s a\'i %2$d gysylltiad?</item>
-        <item quantity="few">Dileu %1$s a\'i %2$d chysylltiad?</item>
-        <item quantity="many">Dileu %1$s a\'i %2$d chysylltiad?</item>
-        <item quantity="other">Dileu %1$s a\'i %2$d cysylltiad?</item>
+        <item quantity="zero">Dileu %1$s a\'i %2$s cysylltiad?</item>
+        <item quantity="one">Dileu %1$s a\'i %2$s cysylltiad?</item>
+        <item quantity="two">Dileu %1$s a\'i %2$s gysylltiad?</item>
+        <item quantity="few">Dileu %1$s a\'i %2$s chysylltiad?</item>
+        <item quantity="many">Dileu %1$s a\'i %2$s chysylltiad?</item>
+        <item quantity="other">Dileu %1$s a\'i %2$s cysylltiad?</item>
     </plurals>
     <string name="people_welcome_body">Dewch o hyd i ffrindiau ar draws Mochi a chysylltu â nhw. Tapiwch Ychwanegu cysylltiad i anfon gwahoddiad.</string>
     <string name="people_person_state_contact">Yn y cysylltiadau</string>

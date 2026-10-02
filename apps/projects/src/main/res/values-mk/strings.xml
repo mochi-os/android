@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">направи промена</string>
     <string name="projects_attachment_empty">Нема прилози</string>
     <string name="projects_attachment_default_name">прилог</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Ново барање за спојување</string>
     <string name="projects_request_status_closed">Затворено</string>
     <string name="projects_request_back_to_list">Назад до списокот</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Се проверува статусот за спојување…</string>
     <string name="projects_request_can_merge">Може да се спои</string>
     <string name="projects_request_cannot_merge">Не може да се спои</string>
-    <string name="projects_request_ahead_behind">%1$d напред, %2$d назад</string>
+    <string name="projects_request_ahead_behind">%1$s напред, %2$s назад</string>
     <string name="projects_request_draft_notice">Ова е нацрт. Означете како подготвено пред спојувањето.</string>
     <string name="projects_request_view_diff">Прикажи разлики</string>
     <string name="projects_request_mark_ready">Означи како подготвено</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Нема конфигурирани колони за овој преглед</string>
     <string name="projects_board_no_options">Нема конфигурирани опции за полето на колоната</string>
     <string name="projects_board_column_options">Опции на колоната</string>
-    <string name="projects_board_nested_count">+%1$d вгнездени</string>
+    <string name="projects_board_nested_count">+%1$s вгнездени</string>
     <string name="projects_move_to_column">Премести во колона</string>
     <string name="projects_move_to_row">Премести во ред</string>
     <string name="projects_move_after">По %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Подредување и филтер</string>
     <string name="projects_create_prefix_hint">Се користи за читливи ID како %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d конфликтна датотека</item>
-        <item quantity="other">%1$d конфликтни датотеки</item>
+        <item quantity="one">%1$s конфликтна датотека</item>
+        <item quantity="other">%1$s конфликтни датотеки</item>
     </plurals>
     <string name="projects_design_export_saved">Дизајнот е зачуван</string>
     <string name="projects_design_import_failed">Датотеката не можеше да се прочита</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Податоците за проектот се зачувани</string>
     <string name="projects_exporting">Се подготвува извозот…</string>
     <string name="projects_board_add_column">Додај колона</string>
-    <string name="projects_design_sample">Примерок %1$d</string>
+    <string name="projects_design_sample">Примерок %1$s</string>
     <string name="projects_option_delete_title">Избриши опција</string>
     <string name="projects_option_delete_message">Дали сте сигурни дека сакате да ја избришете опцијата \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Сè уште не може да се креираат типови ставки. Прво креирајте ги потребните родителски ставки.</string>

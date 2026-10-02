@@ -99,22 +99,22 @@
     <string name="calendars_repeat_forever">Zawsze</string>
     <string name="calendars_reminder_time">W momencie wydarzenia</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minutę wcześniej</item>
-        <item quantity="few">%1$d minuty wcześniej</item>
-        <item quantity="many">%1$d minut wcześniej</item>
-        <item quantity="other">%1$d minut wcześniej</item>
+        <item quantity="one">%1$s minutę wcześniej</item>
+        <item quantity="few">%1$s minuty wcześniej</item>
+        <item quantity="many">%1$s minut wcześniej</item>
+        <item quantity="other">%1$s minut wcześniej</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d godzinę wcześniej</item>
-        <item quantity="few">%1$d godziny wcześniej</item>
-        <item quantity="many">%1$d godzin wcześniej</item>
-        <item quantity="other">%1$d godzin wcześniej</item>
+        <item quantity="one">%1$s godzinę wcześniej</item>
+        <item quantity="few">%1$s godziny wcześniej</item>
+        <item quantity="many">%1$s godzin wcześniej</item>
+        <item quantity="other">%1$s godzin wcześniej</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d dzień wcześniej</item>
-        <item quantity="few">%1$d dni wcześniej</item>
-        <item quantity="many">%1$d dni wcześniej</item>
-        <item quantity="other">%1$d dni wcześniej</item>
+        <item quantity="one">%1$s dzień wcześniej</item>
+        <item quantity="few">%1$s dni wcześniej</item>
+        <item quantity="many">%1$s dni wcześniej</item>
+        <item quantity="other">%1$s dni wcześniej</item>
     </plurals>
     <string name="calendars_reminder_add">Dodaj przypomnienie</string>
     <string name="calendars_reminder_remove">Usuń przypomnienie</string>
@@ -148,12 +148,12 @@
     <string name="calendars_poll_large">Kalendarz jest za duży</string>
     <string name="calendars_poll_invalid">Adres nie zwrócił kalendarza</string>
     <string name="calendars_poll_unreachable">Nie można połączyć się z adresem</string>
-    <string name="calendars_poll_status">Adres odpowiedział %1$d</string>
+    <string name="calendars_poll_status">Adres odpowiedział %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="few">%1$d minuty</item>
-        <item quantity="many">%1$d minut</item>
-        <item quantity="other">%1$d minuty</item>
+        <item quantity="one">%1$s minuta</item>
+        <item quantity="few">%1$s minuty</item>
+        <item quantity="many">%1$s minut</item>
+        <item quantity="other">%1$s minuty</item>
     </plurals>
     <string name="calendars_preferences_zones">Pokazuj wydarzenia w ich własnej strefie czasowej</string>
     <string name="calendars_event_backwards">Kończy się, zanim się zacznie</string>

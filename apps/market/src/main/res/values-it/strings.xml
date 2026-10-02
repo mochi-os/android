@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Invio in corso…</string>
     <string name="market_checkout_subscribing">Iscrizione in corso…</string>
     <string name="market_filter_remove">Rimuovi filtro</string>
-    <string name="market_listing_detail_sales_count">%1$d vendite</string>
-    <string name="market_profile_sales_count">%1$d vendite</string>
+    <string name="market_listing_detail_sales_count">%1$s vendite</string>
+    <string name="market_profile_sales_count">%1$s vendite</string>
     <string name="market_purchase_dispute_response">Risposta del venditore</string>
     <string name="market_purchases_order_label">Ordine n. %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Racconta agli acquirenti qualcosa su di te…</string>
     <string name="market_account_load_failed">Impossibile caricare l\'account</string>
     <string name="market_account_save_failed">Impossibile salvare le modifiche</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Attuale: %1$s</string>
     <string name="market_bids_ends_in">Termina tra %1$s</string>
     <string name="market_bids_your_bid">La tua offerta: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d di %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatura %1$d</string>
+    <string name="market_carousel_main">Foto %1$s di %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatura %1$s</string>
     <string name="market_checkout_browser_unavailable">Nessun browser disponibile per aprire la pagina di pagamento</string>
     <string name="market_checkout_pay_button">Paga con Stripe</string>
     <string name="market_checkout_processing">Elaborazione…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Allega prove</string>
-    <string name="market_dispute_dialog_attach_count">%1$d file allegati</string>
+    <string name="market_dispute_dialog_attach_count">%1$s file allegati</string>
     <string name="market_dispute_dialog_evidence_role_staff">Staff di Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Prove inviate</string>
     <string name="market_dispute_dialog_evidence_submitter_line">inviato da %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL di riferimento</string>
     <string name="market_editor_assets_empty">Nessuna risorsa</string>
     <string name="market_editor_category_none">Seleziona una categoria</string>
-    <string name="market_editor_days">%1$d giorni</string>
+    <string name="market_editor_days">%1$s giorni</string>
     <string name="market_editor_delete">Elimina annuncio</string>
     <string name="market_editor_delete_confirm_message">L\'annuncio verrà eliminato in modo permanente.</string>
     <string name="market_editor_delete_confirm_title">Eliminare l\'annuncio?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">Impossibile caricare la conversazione</string>
     <string name="market_messages_send_failed">Impossibile inviare il messaggio</string>
     <string name="market_messages_thread_title">Conversazione</string>
-    <string name="market_messages_unread_badge">%1$d non letti</string>
+    <string name="market_messages_unread_badge">%1$s non letti</string>
     <string name="market_price_from">Da %1$s</string>
     <string name="market_price_high_bid">Offerta più alta: %1$s</string>
     <string name="market_price_instant_buy">acquisto immediato: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Iscritto il %1$s</string>
     <string name="market_profile_no_reviews">Ancora nessuna recensione.</string>
     <string name="market_profile_rating_breakdown">Dettaglio delle valutazioni</string>
-    <string name="market_profile_stars_value">%1$d stelle</string>
+    <string name="market_profile_stars_value">%1$s stelle</string>
     <string name="market_purchase_dispute_chargeback">Storno %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">La tua banca ha avviato uno storno su questo ordine. Stripe sta gestendo la controversia con il venditore; l\'esito apparirà qui quando sarà deciso.</string>
-    <string name="market_purchase_download_many">Scarica i tuoi %1$d file qui sotto.</string>
+    <string name="market_purchase_download_many">Scarica i tuoi %1$s file qui sotto.</string>
     <string name="market_purchase_download_one">Scarica il tuo file qui sotto.</string>
     <string name="market_purchase_review_from">Recensione di %1$s</string>
     <string name="market_purchases_auction_label">Asta n. %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s rimborsati</string>
     <string name="market_purchases_won_for">Vinto per %1$s</string>
-    <string name="market_rating_reviews">(%1$d recensioni)</string>
+    <string name="market_rating_reviews">(%1$s recensioni)</string>
     <string name="market_refund_amount_label">Importo</string>
     <string name="market_refund_dialog_amount_help">Lascia vuoto per rimborsare l\'intero ordine.</string>
     <string name="market_refund_dialog_amount_label">Importo</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Questo annullerà l\'asta. L\'inserzione sarà nascosta agli acquirenti; potrai riproporla in seguito come nuova bozza.</string>
     <string name="market_listings_remove_title">Rimuovere questo annuncio?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">L’asta verrà annullata e %1$d offerente attivo verrà avvisato. L’annuncio sarà nascosto agli acquirenti; potrai ripubblicarlo in seguito come nuova bozza.</item>
-        <item quantity="other">L’asta verrà annullata e %1$d offerenti attivi verranno avvisati. L’annuncio sarà nascosto agli acquirenti; potrai ripubblicarlo in seguito come nuova bozza.</item>
+        <item quantity="one">L’asta verrà annullata e %1$s offerente attivo verrà avvisato. L’annuncio sarà nascosto agli acquirenti; potrai ripubblicarlo in seguito come nuova bozza.</item>
+        <item quantity="other">L’asta verrà annullata e %1$s offerenti attivi verranno avvisati. L’annuncio sarà nascosto agli acquirenti; potrai ripubblicarlo in seguito come nuova bozza.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Verrà annullato %1$d abbonamento attivo al termine del periodo di fatturazione corrente. Gli abbonati verranno avvisati. L’annuncio sarà nascosto agli acquirenti.</item>
-        <item quantity="other">Verranno annullati %1$d abbonamenti attivi al termine del periodo di fatturazione corrente. Gli abbonati verranno avvisati. L’annuncio sarà nascosto agli acquirenti.</item>
+        <item quantity="one">Verrà annullato %1$s abbonamento attivo al termine del periodo di fatturazione corrente. Gli abbonati verranno avvisati. L’annuncio sarà nascosto agli acquirenti.</item>
+        <item quantity="other">Verranno annullati %1$s abbonamenti attivi al termine del periodo di fatturazione corrente. Gli abbonati verranno avvisati. L’annuncio sarà nascosto agli acquirenti.</item>
     </plurals>
 </resources>

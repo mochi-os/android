@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Scrios</string>
     <string name="go_delete_message">Bainfear an cluiche seo dá liosta. Ní féidir é seo a chealú.</string>
     <string name="go_delete_title">Scrios an cluiche?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Glac leis</string>
     <string name="go_draw_decline">Diúltaigh</string>
     <string name="go_draw_offered_received">Mhol %1$s comhscór</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Éirithe as</string>
     <string name="go_new_game_title">Cluiche Go nua</string>
     <string name="go_new_game_no_friends">Ní mór duit cara a chur leis sular féidir leat cluiche a thosú.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Pointí a chuirtear le scór an Bháin chun cúiteamh a dhéanamh as an Dubh a imirt ar dtús</string>
 
-    <string name="go_board_a11y">%1$d×%1$d clár Go</string>
-    <string name="go_board_a11y_turn_black">Clár Go %1$d×%1$d, do sheal cloch dhubh a chur</string>
-    <string name="go_board_a11y_turn_white">Clár Go %1$d×%1$d, do sheal cloch bhán a chur</string>
+    <string name="go_board_a11y">%1$s×%1$s clár Go</string>
+    <string name="go_board_a11y_turn_black">Clár Go %1$s×%1$s, do sheal cloch dhubh a chur</string>
+    <string name="go_board_a11y_turn_white">Clár Go %1$s×%1$s, do sheal cloch bhán a chur</string>
     <string name="go_status_scoring">Comhaireamh — aontaigh ar an scór nó lean ort ag imirt</string>
     <string name="go_score_proposed">Scór molta: dubh %1$s, bán %2$s</string>
     <string name="go_score_opponent_accepted">Glacann do chéile comhraic leis an scór seo: dubh %1$s, bán %2$s</string>

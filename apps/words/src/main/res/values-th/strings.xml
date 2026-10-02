@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">ยังไม่มีเกม</string>
     <string name="words_new_game_choose_opponents">เลือกคู่ต่อสู้</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d ผู้เล่น</string>
+    <string name="words_new_game_player_count">%1$s ผู้เล่น</string>
     <string name="words_new_game_no_friends_subtitle">เพิ่มเพื่อนในแอปผู้คนเพื่อเริ่มเล่น</string>
     <string name="words_detail_title">เกม</string>
     <string name="words_detail_status_opponent_move">ตาของ %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s ชนะ</string>
-    <string name="words_detail_player_fallback">ผู้เล่น %1$d</string>
-    <string name="words_detail_player_count">%1$d ผู้เล่น</string>
-    <string name="words_detail_label_tiles_left">เหลือ %1$d ตัว</string>
+    <string name="words_detail_player_fallback">ผู้เล่น %1$s</string>
+    <string name="words_detail_player_count">%1$s ผู้เล่น</string>
+    <string name="words_detail_label_tiles_left">เหลือ %1$s ตัว</string>
     <string name="words_detail_action_open_chat">เปิดแชท</string>
     <string name="words_detail_action_more">การกระทำในเกม</string>
-    <string name="words_detail_exchange_count">แลกเปลี่ยน (%1$d)</string>
+    <string name="words_detail_exchange_count">แลกเปลี่ยน (%1$s)</string>
     <string name="words_detail_chat_you_played">คุณเล่น %1$s</string>
     <string name="words_detail_chat_player_played">%1$s เล่น %2$s</string>
 

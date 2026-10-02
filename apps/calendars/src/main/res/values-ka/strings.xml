@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">სამუდამოდ</string>
     <string name="calendars_reminder_time">ღონისძიების დროს</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d წუთით ადრე</item>
-        <item quantity="other">%1$d წუთით ადრე</item>
+        <item quantity="one">%1$s წუთით ადრე</item>
+        <item quantity="other">%1$s წუთით ადრე</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d საათით ადრე</item>
-        <item quantity="other">%1$d საათით ადრე</item>
+        <item quantity="one">%1$s საათით ადრე</item>
+        <item quantity="other">%1$s საათით ადრე</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d დღით ადრე</item>
-        <item quantity="other">%1$d დღით ადრე</item>
+        <item quantity="one">%1$s დღით ადრე</item>
+        <item quantity="other">%1$s დღით ადრე</item>
     </plurals>
     <string name="calendars_reminder_add">შეხსენების დამატება</string>
     <string name="calendars_reminder_remove">შეხსენების წაშლა</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">კალენდარი ძალიან დიდია</string>
     <string name="calendars_poll_invalid">მისამართმა კალენდარი არ დააბრუნა</string>
     <string name="calendars_poll_unreachable">მისამართთან დაკავშირება ვერ მოხერხდა</string>
-    <string name="calendars_poll_status">მისამართმა უპასუხა %1$d</string>
+    <string name="calendars_poll_status">მისამართმა უპასუხა %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d წუთი</item>
-        <item quantity="other">%1$d წუთი</item>
+        <item quantity="one">%1$s წუთი</item>
+        <item quantity="other">%1$s წუთი</item>
     </plurals>
     <string name="calendars_preferences_zones">მოვლენების ჩვენება საკუთარ დროის სარტყელში</string>
     <string name="calendars_event_backwards">სრულდება დაწყებამდე</string>

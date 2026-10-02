@@ -678,7 +678,7 @@ private fun PageFooter(
                     color = MaterialTheme.colorScheme.surfaceVariant,
                 ) {
                     Text(
-                        text = stringResource(R.string.wikis_pageview_version, page.version),
+                        text = stringResource(R.string.wikis_pageview_version, page.version.toString()),
                         style = MaterialTheme.typography.labelSmall.copy(
                             fontFamily = FontFamily.Monospace,
                         ),

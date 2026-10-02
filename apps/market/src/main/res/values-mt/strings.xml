@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Suq</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Bijografija</string>
     <string name="market_account_biography_placeholder">Għid lix-xerrejja dwarek…</string>
     <string name="market_account_load_failed">Ma setax jiġi mgħobbi l-kont</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">Superat</string>
     <string name="market_bids_tab_won">Rebaħ</string>
     <string name="market_bids_title">Offerti</string>
-    <string name="market_carousel_main">Ritratt %1$d minn %2$d</string>
+    <string name="market_carousel_main">Ritratt %1$s minn %2$s</string>
     <string name="market_channel_name">Suq</string>
     <string name="market_chargeback_reason_bank_cannot_process">Il-bank ma setax jipproċessa</string>
     <string name="market_chargeback_reason_check_returned">Iċċekkja maħluqa</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">Rinnovat</string>
     <string name="market_editor_condition_used">Użat</string>
     <string name="market_editor_currency">Munita</string>
-    <string name="market_editor_days">%1$d jiem</string>
+    <string name="market_editor_days">%1$s jiem</string>
     <string name="market_editor_delete">Ħassar l-elenku</string>
     <string name="market_editor_description">Deskrizzjoni</string>
     <string name="market_editor_interval_monthly">Kull xahar</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">Xirjiet</string>
     <string name="market_rating_label">Klassifikazzjoni</string>
     <string name="market_rating_no_reviews">L-ebda reviews s\'issa</string>
-    <string name="market_rating_reviews">(%1$d reviżjoni)</string>
+    <string name="market_rating_reviews">(%1$s reviżjoni)</string>
     <string name="market_refund_amount_label">Ammont</string>
     <string name="market_refund_body">Ipprovdi raġuni għat-talba ta\' rifużjoni tiegħek.</string>
     <string name="market_refund_details_label">Dettalji</string>
@@ -473,10 +473,10 @@
     <string name="market_sale_review_response_submitting">Qed jintbagħat…</string>
     <string name="market_checkout_subscribing">Qed jiġi abbonat…</string>
     <string name="market_filter_remove">Neħħi l-filtru</string>
-    <string name="market_listing_detail_sales_count">%1$d bejgħ</string>
+    <string name="market_listing_detail_sales_count">%1$s bejgħ</string>
     <string name="market_listings_action_appeal">Appell tat-tneħħija</string>
     <string name="market_listings_share_chooser">Aqsam l-elenku</string>
-    <string name="market_profile_sales_count">%1$d bejgħ</string>
+    <string name="market_profile_sales_count">%1$s bejgħ</string>
     <string name="market_refund_dialog_amount_label">Ammont</string>
 
     <string name="market_account_save_failed">Ma setgħux jiġu salvati l-bidliet</string>
@@ -497,11 +497,11 @@
     <string name="market_bids_current_bid">Attwali: %1$s</string>
     <string name="market_bids_ends_in">Tintemm f\'%1$s</string>
     <string name="market_bids_your_bid">L-offerta tiegħek: %1$s</string>
-    <string name="market_carousel_thumbnail">Minjatura %1$d</string>
+    <string name="market_carousel_thumbnail">Minjatura %1$s</string>
     <string name="market_checkout_browser_unavailable">Ebda brawżer disponibbli biex tinfetaħ il-paġna tal-ħlas</string>
     <string name="market_checkout_pwyw_label">Il-prezz tiegħek (minimu %1$s)</string>
     <string name="market_checkout_pwyw_min_error">L-ammont irid ikun mill-anqas %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fajl(s) mehmużin</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fajl(s) mehmużin</string>
     <string name="market_dispute_dialog_evidence_section_title">Evidenza ppreżentata</string>
     <string name="market_dispute_dialog_evidence_submitter_line">ippreżentata minn %1$s</string>
     <string name="market_editor_appeal">Appella l-moderazzjoni</string>
@@ -572,7 +572,7 @@
     <string name="market_messages_inbox_empty_title">L-ebda konverżazzjoni s\'issa</string>
     <string name="market_messages_load_failed">Ma setax jitgħabba l-fil</string>
     <string name="market_messages_send_failed">Ma setax jintbagħat il-messaġġ</string>
-    <string name="market_messages_unread_badge">%1$d mhux moqrija</string>
+    <string name="market_messages_unread_badge">%1$s mhux moqrija</string>
     <string name="market_price_high_bid">Offerta l-aktar għolja: %1$s</string>
     <string name="market_price_instant_buy">xiri immedjat: %1$s</string>
     <string name="market_price_starting_bid">Offerta tal-bidu: %1$s</string>
@@ -580,11 +580,11 @@
     <string name="market_profile_member_since">Membru sa minn %1$s</string>
     <string name="market_profile_joined">Ingħaqad %1$s</string>
     <string name="market_profile_rating_breakdown">Tqassim tal-klassifikazzjoni</string>
-    <string name="market_profile_stars_value">%1$d stilel</string>
+    <string name="market_profile_stars_value">%1$s stilel</string>
     <string name="market_purchase_dispute_chargeback">Tnaqqis %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Il-bank tiegħek ressaq tnaqqis fuq din l-ordni. Stripe qed jittratta t-tilwima mal-bejjiegħ; ir-riżultat jidher hawn meta jiġi deċiż.</string>
     <string name="market_purchase_dispute_response">Risposta tal-bejjiegħ</string>
-    <string name="market_purchase_download_many">Niżżel il-%1$d fajls tiegħek hawn taħt.</string>
+    <string name="market_purchase_download_many">Niżżel il-%1$s fajls tiegħek hawn taħt.</string>
     <string name="market_purchase_download_one">Niżżel il-fajl tiegħek hawn taħt.</string>
     <string name="market_purchase_review_from">Reviżjoni minn %1$s</string>
     <string name="market_purchases_auction_label">Irkant #%1$s</string>
@@ -785,17 +785,17 @@
     <string name="market_listings_remove_message_auction">Dan se jikkanċella l-irkant. Il-listing se tinħeba mix-xerrejja; tista\' tilistjaha mill-ġdid aktar tard bħala abbozz ġdid.</string>
     <string name="market_listings_remove_title">Tneħħi din il-listing?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Dan se jikkanċella l-irkant u jinnotifika %1$d offerent attiv. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
-        <item quantity="two">Dan se jikkanċella l-irkant u jinnotifika %1$d offerenti attivi. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
-        <item quantity="few">Dan se jikkanċella l-irkant u jinnotifika %1$d offerenti attivi. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
-        <item quantity="many">Dan se jikkanċella l-irkant u jinnotifika %1$d offerent attiv. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
-        <item quantity="other">Dan se jikkanċella l-irkant u jinnotifika %1$d offerent attiv. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
+        <item quantity="one">Dan se jikkanċella l-irkant u jinnotifika %1$s offerent attiv. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
+        <item quantity="two">Dan se jikkanċella l-irkant u jinnotifika %1$s offerenti attivi. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
+        <item quantity="few">Dan se jikkanċella l-irkant u jinnotifika %1$s offerenti attivi. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
+        <item quantity="many">Dan se jikkanċella l-irkant u jinnotifika %1$s offerent attiv. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
+        <item quantity="other">Dan se jikkanċella l-irkant u jinnotifika %1$s offerent attiv. L-elenku se jinħeba mix-xerrejja; tista’ terġa’ telenkah aktar tard bħala abbozz ġdid.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Dan se jikkanċella %1$d abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
-        <item quantity="two">Dan se jikkanċella %1$d abbonamenti attivi fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
-        <item quantity="few">Dan se jikkanċella %1$d abbonamenti attivi fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
-        <item quantity="many">Dan se jikkanċella %1$d abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
-        <item quantity="other">Dan se jikkanċella %1$d abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
+        <item quantity="one">Dan se jikkanċella %1$s abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
+        <item quantity="two">Dan se jikkanċella %1$s abbonamenti attivi fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
+        <item quantity="few">Dan se jikkanċella %1$s abbonamenti attivi fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
+        <item quantity="many">Dan se jikkanċella %1$s abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
+        <item quantity="other">Dan se jikkanċella %1$s abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
     </plurals>
 </resources>

@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Ειδοποιήσεις σχετικά με επεξεργασίες σελίδων, σχόλια και προσκλήσεις.</string>
     <string name="wikis_pageview_toc_expand">Εμφάνιση πίνακα περιεχομένων</string>
     <string name="wikis_pageview_toc_collapse">Απόκρυψη πίνακα περιεχομένων</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Ενημερώθηκε %1$s</string>
     <string name="wikis_pageview_not_found_description">Η σελίδα «%1$s» δεν υπάρχει ακόμη.</string>
     <string name="wikis_pageview_share_chooser">Σύνδεσμος wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Πρόκειται να διαγράψετε τη σελίδα «%1$s» (%2$s). Αυτή η ενέργεια μπορεί να αναιρεθεί με επαναφορά από το ιστορικό.</string>
     <string name="wikis_delete_page_success">Η σελίδα διαγράφηκε</string>
     <string name="wikis_revert_page_title">Επαναφορά σελίδας</string>
-    <string name="wikis_revert_page_message">Πρόκειται να επαναφέρετε το %1$s στην έκδοση %2$d. Αυτό θα δημιουργήσει μια νέα αναθεώρηση με το περιεχόμενο της έκδοσης %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Επαναφορά στην έκδοση %1$d</string>
-    <string name="wikis_revert_page_success">Επαναφορά στην έκδοση %1$d</string>
+    <string name="wikis_revert_page_message">Πρόκειται να επαναφέρετε το %1$s στην έκδοση %2$s. Αυτό θα δημιουργήσει μια νέα αναθεώρηση με το περιεχόμενο της έκδοσης %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Επαναφορά στην έκδοση %1$s</string>
+    <string name="wikis_revert_page_success">Επαναφορά στην έκδοση %1$s</string>
     <string name="wikis_rename_page_renaming">Μετονομασία…</string>
     <string name="wikis_rename_page_success">Η σελίδα μετονομάστηκε</string>
-    <string name="wikis_history_viewing">Προβολή ιστορικού για %1$s, τρέχουσα έκδοση %2$d</string>
-    <string name="wikis_revision_version_badge">Έκδοση %1$d</string>
+    <string name="wikis_history_viewing">Προβολή ιστορικού για %1$s, τρέχουσα έκδοση %2$s</string>
+    <string name="wikis_revision_version_badge">Έκδοση %1$s</string>
     <string name="wikis_search_pages_placeholder">Αναζήτηση σελίδων ανά τίτλο ή περιεχόμενο…</string>
     <string name="wikis_search_no_results">Δεν βρέθηκαν σελίδες για «%1$s». Δοκιμάστε διαφορετικούς όρους αναζήτησης.</string>
     <string name="wikis_search_updated">Ενημερώθηκε %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">κατά %1$s</string>
     <string name="wikis_revision_show_page">Εμφάνιση σελίδας</string>
     <string name="wikis_revision_compare_failed">Δεν ήταν δυνατή η φόρτωση της προηγούμενης έκδοσης για σύγκριση.</string>
-    <string name="wikis_revision_changes_from">Αλλαγές από την έκδοση %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Αλλαγές από την έκδοση %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d σχόλιο</item>
-        <item quantity="other">%d σχόλια</item>
+        <item quantity="one">%s σχόλιο</item>
+        <item quantity="other">%s σχόλια</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d απάντηση</item>
-        <item quantity="other">+%d ακόμα απαντήσεις</item>
+        <item quantity="one">%s απάντηση</item>
+        <item quantity="other">+%s ακόμα απαντήσεις</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d σελίδα</item>
-        <item quantity="other">%d σελίδες</item>
+        <item quantity="one">%s σελίδα</item>
+        <item quantity="other">%s σελίδες</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d αρχείο</item>
-        <item quantity="other">%d αρχεία</item>
+        <item quantity="one">%s αρχείο</item>
+        <item quantity="other">%s αρχεία</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d εικόνα</item>
-        <item quantity="other">%d εικόνες</item>
+        <item quantity="one">%s εικόνα</item>
+        <item quantity="other">%s εικόνες</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d έγγραφο</item>
-        <item quantity="other">%d έγγραφα</item>
+        <item quantity="one">%s έγγραφο</item>
+        <item quantity="other">%s έγγραφα</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d σελίδα με αυτή την ετικέτα</item>
-        <item quantity="other">%d σελίδες με αυτή την ετικέτα</item>
+        <item quantity="one">%s σελίδα με αυτή την ετικέτα</item>
+        <item quantity="other">%s σελίδες με αυτή την ετικέτα</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Βρέθηκαν %1$d αποτέλεσμα για «%2$s»</item>
-        <item quantity="other">Βρέθηκαν %1$d αποτελέσματα για «%2$s»</item>
+        <item quantity="one">Βρέθηκαν %1$s αποτέλεσμα για «%2$s»</item>
+        <item quantity="other">Βρέθηκαν %1$s αποτελέσματα για «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Δεν ήταν δυνατή η αποθήκευση της λεζάντας</string>
     <string name="wikis_attachments_upload_types">Υποστηριζόμενα αρχεία: εικόνες, PDF, DOC, DOCX, TXT και MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Το νέο URL του RSS αντιγράφηκε στο πρόχειρο</string>
     <string name="wikis_rss_exists">Αυτό το URL ροής έχει ήδη εκδοθεί και δεν μπορεί να εμφανιστεί ξανά.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Εμφανίζεται το πρώτο %1$d σχόλιο.</item>
-        <item quantity="other">Εμφανίζονται τα πρώτα %1$d σχόλια.</item>
+        <item quantity="one">Εμφανίζεται το πρώτο %1$s σχόλιο.</item>
+        <item quantity="other">Εμφανίζονται τα πρώτα %1$s σχόλια.</item>
     </plurals>
 </resources>

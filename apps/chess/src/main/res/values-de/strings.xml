@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">Springer</string>
     <string name="chess_piece_pawn">Bauer</string>
     <string name="chess_move_played">%1$s spielte %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">Benachrichtigungen zu Schachzügen, Remisangeboten und Spielausgängen.</string>
     <string name="chess_channel_name">Schach-Benachrichtigungen</string>
     <string name="chess_delete_message">Entfernt die Partie aus Ihrer Liste.</string>

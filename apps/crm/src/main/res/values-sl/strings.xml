@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Ni objektov</string>
     <string name="crm_board_no_columns">Za ta pogled ni nastavljenih stolpcev</string>
     <string name="crm_board_no_options">Za polje stolpca ni nastavljenih možnosti</string>
-    <string name="crm_board_nested_count">+%1$d ugnezdenih</string>
+    <string name="crm_board_nested_count">+%1$s ugnezdenih</string>
     <string name="crm_move_to_column">Premakni v stolpec</string>
     <string name="crm_move_to_row">Premakni v vrstico</string>
     <string name="crm_move_after">Za %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Podatki CRM shranjeni</string>
     <string name="crm_create_upload_json">Naložite datoteko .zip ali .json</string>
     <string name="crm_create_blocked_no_options">Ni mogoče ustvariti: %1$s je obvezno, vendar nima možnosti za izbiro. Dodajte možnosti v Oblikovanju.</string>
-    <string name="crm_design_sample">Vzorec %1$d</string>
+    <string name="crm_design_sample">Vzorec %1$s</string>
     <string name="crm_option_delete_title">Izbriši možnost</string>
     <string name="crm_option_delete_message">Ali ste prepričani, da želite izbrisati možnost \"%1$s\"?</string>
 </resources>

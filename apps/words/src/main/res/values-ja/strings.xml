@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">まだゲームはありません。</string>
     <string name="words_new_game_choose_opponents">対戦相手を選ぶ</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d人のプレイヤー</string>
+    <string name="words_new_game_player_count">%1$s人のプレイヤー</string>
     <string name="words_new_game_no_friends_subtitle">ピープルアプリで友達を追加してプレイを始めましょう。</string>
     <string name="words_detail_title">ゲーム</string>
     <string name="words_detail_status_opponent_move">%1$sの番</string>
     <string name="words_detail_status_winner_wins">%1$sの勝ち</string>
-    <string name="words_detail_player_fallback">プレイヤー%1$d</string>
-    <string name="words_detail_player_count">%1$d人のプレイヤー</string>
-    <string name="words_detail_label_tiles_left">残り%1$d枚</string>
+    <string name="words_detail_player_fallback">プレイヤー%1$s</string>
+    <string name="words_detail_player_count">%1$s人のプレイヤー</string>
+    <string name="words_detail_label_tiles_left">残り%1$s枚</string>
     <string name="words_detail_action_open_chat">チャットを開く</string>
     <string name="words_detail_action_more">ゲームのアクション</string>
-    <string name="words_detail_exchange_count">交換 (%1$d)</string>
+    <string name="words_detail_exchange_count">交換 (%1$s)</string>
     <string name="words_detail_chat_you_played">あなたは%1$sを置きました</string>
     <string name="words_detail_chat_player_played">%1$sは%2$sを置きました</string>
 

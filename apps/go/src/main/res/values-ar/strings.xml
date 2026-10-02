@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">حذف</string>
     <string name="go_delete_message">ستتم إزالة هذه اللعبة من قائمتك. لا يمكن التراجع عن هذا.</string>
     <string name="go_delete_title">حذف اللعبة؟</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">قبول</string>
     <string name="go_draw_decline">رفض</string>
     <string name="go_draw_offered_received">عرض %1$s التعادل</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">تم الاستسلام</string>
     <string name="go_new_game_title">مباراة Go جديدة</string>
     <string name="go_new_game_no_friends">يجب إضافة صديق قبل بدء المباراة.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">النقاط التي تُضاف إلى نتيجة الأبيض لتعويض الأسود الذي يبدأ أولاً</string>
 
-    <string name="go_board_a11y">لوحة Go بحجم %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">لوحة غو %1$d×%1$d، دورك لوضع حجر أسود</string>
-    <string name="go_board_a11y_turn_white">لوحة غو %1$d×%1$d، دورك لوضع حجر أبيض</string>
+    <string name="go_board_a11y">لوحة Go بحجم %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">لوحة غو %1$s×%1$s، دورك لوضع حجر أسود</string>
+    <string name="go_board_a11y_turn_white">لوحة غو %1$s×%1$s، دورك لوضع حجر أبيض</string>
     <string name="go_status_scoring">العد — اتفقا على النتيجة أو تابعا اللعب</string>
     <string name="go_score_proposed">النتيجة المقترحة: الأسود %1$s، الأبيض %2$s</string>
     <string name="go_score_opponent_accepted">خصمك يقبل هذه النتيجة: الأسود %1$s، الأبيض %2$s</string>

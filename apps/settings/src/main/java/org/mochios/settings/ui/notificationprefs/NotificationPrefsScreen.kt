@@ -239,7 +239,7 @@ private fun CategoriesList(
 }
 
 @Composable
-private fun CategoryCard(
+internal fun CategoryCard(
     category: NotifCategory,
     available: DestinationsAvailable,
     onEdit: () -> Unit,
@@ -313,11 +313,16 @@ private fun CategoryCard(
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 } else {
+                    // The chosen destinations by name, as the web lists them;
+                    // tapping expands them one to a line.
                     Text(
-                        text = stringResource(R.string.notifprefs_destinations) +
-                            " \u00b7 ${selected.size}/${options.size}",
+                        text = LocalFormat.current.formatList(
+                            selected.map { (_, label) -> label }.sortedWith(NaturalCompare)
+                        ),
                         style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.weight(1f),
                     )
                     Icon(

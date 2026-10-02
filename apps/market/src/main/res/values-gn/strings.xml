@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mercado</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Tekove rembiasakue</string>
     <string name="market_account_location_label">Tenda</string>
     <string name="market_account_save">Eñongatu</string>
@@ -49,7 +49,7 @@
     <string name="market_bids_tab_outbid">Ojejogua iyvateve</string>
     <string name="market_bids_tab_won">Ipu\'aka</string>
     <string name="market_bids_title">Ofertakuéra</string>
-    <string name="market_carousel_main">Ta\'anga %1$d %2$d-gui</string>
+    <string name="market_carousel_main">Ta\'anga %1$s %2$s-gui</string>
     <string name="market_channel_name">Mercado</string>
     <string name="market_chargeback_reason_bank_cannot_process">Banco ndaikatúi oprocesa</string>
     <string name="market_chargeback_reason_check_returned">Cheque oñembojevy</string>
@@ -127,7 +127,7 @@
     <string name="market_editor_condition_refurbished">Reformado</string>
     <string name="market_editor_condition_used">Ojeporúva</string>
     <string name="market_editor_currency">Viru</string>
-    <string name="market_editor_days">%1$d ára</string>
+    <string name="market_editor_days">%1$s ára</string>
     <string name="market_editor_delete">Embogue listado</string>
     <string name="market_editor_description">Ñemombe\'u</string>
     <string name="market_editor_interval_monthly">Peteĩteĩ jasy</string>
@@ -316,7 +316,7 @@
     <string name="market_purchases_title">Jejoguakuéra</string>
     <string name="market_rating_label">Ñembovale</string>
     <string name="market_rating_no_reviews">Ndaipóri reseña gueteri</string>
-    <string name="market_rating_reviews">(%1$d reseña)</string>
+    <string name="market_rating_reviews">(%1$s reseña)</string>
     <string name="market_refund_amount_label">Atýra</string>
     <string name="market_refund_body">Eme\'ẽ peteĩ mba\'érepa ne viru ñembojevy jerurépe.</string>
     <string name="market_refund_details_label">Detallekuéra</string>
@@ -465,9 +465,9 @@
     <string name="market_sale_review_response_submitting">Oñemondohína…</string>
     <string name="market_checkout_subscribing">Oñesuscribihína…</string>
     <string name="market_filter_remove">Embogue mbogua</string>
-    <string name="market_listing_detail_sales_count">%1$d ñemu</string>
+    <string name="market_listing_detail_sales_count">%1$s ñemu</string>
     <string name="market_listings_share_chooser">Emboja\'o listado</string>
-    <string name="market_profile_sales_count">%1$d ñemu</string>
+    <string name="market_profile_sales_count">%1$s ñemu</string>
     <string name="market_purchase_dispute_response">Ñemuhára mbohovái</string>
     <string name="market_refund_dialog_amount_label">Atýra</string>
 
@@ -493,11 +493,11 @@
     <string name="market_bids_current_bid">Ko\'ágã: %1$s</string>
     <string name="market_bids_ends_in">Opa %1$s rire</string>
     <string name="market_bids_your_bid">Ne oferta: %1$s</string>
-    <string name="market_carousel_thumbnail">Ta\'angamirĩ %1$d</string>
+    <string name="market_carousel_thumbnail">Ta\'angamirĩ %1$s</string>
     <string name="market_checkout_browser_unavailable">Ndaipóri kundahára ikatúva oipe\'a jehepyme\'ẽ kuatiarogue</string>
     <string name="market_checkout_pwyw_label">Ne repykue (mínimo %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Pe papapy tekotevẽ %1$s térã hetave</string>
-    <string name="market_dispute_dialog_attach_count">%1$d archivo oñembojoaju</string>
+    <string name="market_dispute_dialog_attach_count">%1$s archivo oñembojoaju</string>
     <string name="market_dispute_dialog_evidence_section_title">Prueba oñemondova\'ekue</string>
     <string name="market_dispute_dialog_evidence_submitter_line">omoĩva\'ekue %1$s</string>
     <string name="market_editor_appeal">Apelación moderación</string>
@@ -572,7 +572,7 @@
     <string name="market_messages_inbox_empty_title">Ndaipóri gueteri ñemongeta</string>
     <string name="market_messages_load_failed">Ndaikatúi oñemyanyhẽ ñemongeta</string>
     <string name="market_messages_send_failed">Ndaikatúi oñemondo ñe\'ẽmondo</string>
-    <string name="market_messages_unread_badge">%1$d ojeleéry\'ỹva</string>
+    <string name="market_messages_unread_badge">%1$s ojeleéry\'ỹva</string>
     <string name="market_price_high_bid">Oferta yvatevéva: %1$s</string>
     <string name="market_price_instant_buy">jejogua pya\'e: %1$s</string>
     <string name="market_price_starting_bid">Oferta ñepyrũ: %1$s</string>
@@ -580,10 +580,10 @@
     <string name="market_profile_member_since">Irũ %1$s guive</string>
     <string name="market_profile_joined">Oike %1$s</string>
     <string name="market_profile_rating_breakdown">Ñembovale ñemboja\'o</string>
-    <string name="market_profile_stars_value">%1$d mbyja</string>
+    <string name="market_profile_stars_value">%1$s mbyja</string>
     <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ne banco omoĩ contracargo ko pedido rehe. Stripe oñangareko joavy rehe ñemuhára ndive; resultado ojehechaukáta ko\'ápe oñemoĩ vove.</string>
-    <string name="market_purchase_download_many">Emboguejy ne %1$d archivo yguýpe.</string>
+    <string name="market_purchase_download_many">Emboguejy ne %1$s archivo yguýpe.</string>
     <string name="market_purchase_download_one">Emboguejy ne archivo yguýpe.</string>
     <string name="market_purchase_review_from">Reseña %1$s-gui</string>
     <string name="market_purchases_auction_label">Subasta #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Kóva ombotýta subasta. Listado oñeñomíta ojoguávakuéragui; upéi ikatu remoĩ jey listape borrador pyahúramo.</string>
     <string name="market_listings_remove_title">¿Embogue ko listado?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Kóva ombotýta subasta ha omomarandúta %1$d ofertante oikóvape. Listado oñeñomíta ojoguávakuéragui; upéi ikatu remoĩ jey listape borrador pyahúramo.</item>
-        <item quantity="other">Kóva ombotýta subasta ha omomarandúta %1$d ofertante oikóvape. Listado oñeñomíta ojoguávakuéragui; upéi ikatu remoĩ jey listape borrador pyahúramo.</item>
+        <item quantity="one">Kóva ombotýta subasta ha omomarandúta %1$s ofertante oikóvape. Listado oñeñomíta ojoguávakuéragui; upéi ikatu remoĩ jey listape borrador pyahúramo.</item>
+        <item quantity="other">Kóva ombotýta subasta ha omomarandúta %1$s ofertante oikóvape. Listado oñeñomíta ojoguávakuéragui; upéi ikatu remoĩ jey listape borrador pyahúramo.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Kóva ombotýta %1$d suscripción oikóva ko facturación período opávo. Umi suscriptor oñemomarandúta. Listado oñeñomíta ojoguávakuéragui.</item>
-        <item quantity="other">Kóva ombotýta %1$d suscripción oikóva ko facturación período opávo. Umi suscriptor oñemomarandúta. Listado oñeñomíta ojoguávakuéragui.</item>
+        <item quantity="one">Kóva ombotýta %1$s suscripción oikóva ko facturación período opávo. Umi suscriptor oñemomarandúta. Listado oñeñomíta ojoguávakuéragui.</item>
+        <item quantity="other">Kóva ombotýta %1$s suscripción oikóva ko facturación período opávo. Umi suscriptor oñemomarandúta. Listado oñeñomíta ojoguávakuéragui.</item>
     </plurals>
 </resources>

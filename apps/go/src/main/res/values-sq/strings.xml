@@ -16,7 +16,7 @@
     <string name="go_delete_confirm">Fshi</string>
     <string name="go_delete_message">Kjo lojë do të hiqet nga lista juaj. Kjo veprim nuk mund të zhbëhet.</string>
     <string name="go_delete_title">Të fshihet loja?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Prano</string>
     <string name="go_draw_decline">Refuzo</string>
     <string name="go_draw_offered_received">%1$s ofroi një barazim</string>
@@ -67,11 +67,11 @@
     <string name="go_status_resigned">U dorëzua</string>
     <string name="go_new_game_title">Ndeshje e re Go</string>
     <string name="go_new_game_no_friends">Duhet të shtosh një mik para se të fillosh një ndeshje.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Pikët e shtuara në rezultatin e të Bardhit për të kompensuar që i Ziu luan i pari</string>
-    <string name="go_board_a11y">Tabela Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Tabela e Go-s %1$d×%1$d, radha juaj të vendosni një gur të zi</string>
-    <string name="go_board_a11y_turn_white">Tabela e Go-s %1$d×%1$d, radha juaj të vendosni një gur të bardhë</string>
+    <string name="go_board_a11y">Tabela Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Tabela e Go-s %1$s×%1$s, radha juaj të vendosni një gur të zi</string>
+    <string name="go_board_a11y_turn_white">Tabela e Go-s %1$s×%1$s, radha juaj të vendosni një gur të bardhë</string>
     <string name="go_status_scoring">Numërim — bini dakord për rezultatin ose vazhdoni lojën</string>
     <string name="go_score_proposed">Rezultati i propozuar: i zi %1$s, i bardhë %2$s</string>
     <string name="go_score_opponent_accepted">Kundërshtari juaj e pranon këtë rezultat: i zi %1$s, i bardhë %2$s</string>

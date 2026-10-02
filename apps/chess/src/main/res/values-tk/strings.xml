@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">Gaýtadan birikdirilýär…</string>
     <string name="chess_ws_failed">Birikme şowsuz boldy</string>
     <string name="chess_move_capture">%1$s %2$s aldy</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">Ak %1$s</string>
     <string name="chess_piece_black">Gara %1$s</string>

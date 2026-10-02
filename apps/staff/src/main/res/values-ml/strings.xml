@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">പേരില്ലാത്തത്</string>
     <string name="staff_accounts_unsuspend">സസ്പെൻഷൻ നീക്കുക</string>
     <string name="staff_accounts_unsuspended_toast">അക്കൗണ്ടിന്റെ സസ്പെൻഷൻ നീക്കി</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">റദ്ദാക്കുക</string>
     <string name="staff_appeals_decide">തീരുമാനിക്കുക</string>
     <string name="staff_appeals_decision_denied">ലിസ്റ്റിംഗ് നിരസിച്ചതായി സൂക്ഷിക്കുക</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">ഓർഡർ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">കാരണം (നിർബന്ധമല്ല)</string>
-    <string name="staff_accounts_sales">%1$d വിൽപ്പനകൾ</string>
+    <string name="staff_accounts_sales">%1$s വിൽപ്പനകൾ</string>
     <string name="staff_appeals_reason_label">വിൽപ്പനക്കാരന്റെ അപ്പീൽ കാരണം</string>
     <string name="staff_audit_action_staff_team_role_changed">സ്റ്റാഫ് റോൾ മാറ്റി</string>
     <string name="staff_categories_delete_desc">“%1$s” ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>

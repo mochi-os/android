@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">कोणतेही ऑब्जेक्ट नाहीत</string>
     <string name="crm_board_no_columns">या दृश्यासाठी कोणतेही स्तंभ कॉन्फिगर केलेले नाहीत</string>
     <string name="crm_board_no_options">स्तंभ फील्डसाठी कोणतेही पर्याय कॉन्फिगर केलेले नाहीत</string>
-    <string name="crm_board_nested_count">+%1$d नेस्टेड</string>
+    <string name="crm_board_nested_count">+%1$s नेस्टेड</string>
     <string name="crm_move_to_column">स्तंभात हलवा</string>
     <string name="crm_move_to_row">पंक्तीत हलवा</string>
     <string name="crm_move_after">%1$s नंतर</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM डेटा जतन केला</string>
     <string name="crm_create_upload_json">.zip किंवा .json फाइल अपलोड करा</string>
     <string name="crm_create_blocked_no_options">तयार करता येत नाही: %1$s आवश्यक आहे पण निवडण्यासाठी पर्याय नाहीत. डिझाइनमध्ये पर्याय जोडा.</string>
-    <string name="crm_design_sample">नमुना %1$d</string>
+    <string name="crm_design_sample">नमुना %1$s</string>
     <string name="crm_option_delete_title">पर्याय हटवा</string>
     <string name="crm_option_delete_message">तुम्हाला \"%1$s\" हा पर्याय हटवायचा आहे का?</string>
 </resources>

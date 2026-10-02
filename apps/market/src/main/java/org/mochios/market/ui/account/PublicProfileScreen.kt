@@ -337,7 +337,7 @@ private fun ProfileHeaderCard(
                     Text(
                         text = stringResource(
                             R.string.market_profile_sales_count,
-                            account.sales.toInt(),
+                            LocalFormat.current.formatNumber(account.sales),
                         ),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,

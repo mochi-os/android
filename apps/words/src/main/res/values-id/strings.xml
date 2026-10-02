@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Belum ada pertandingan.</string>
     <string name="words_new_game_choose_opponents">Pilih lawan</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d pemain</string>
+    <string name="words_new_game_player_count">%1$s pemain</string>
     <string name="words_new_game_no_friends_subtitle">Tambahkan teman di aplikasi Orang untuk mulai bermain.</string>
     <string name="words_detail_title">Pertandingan</string>
     <string name="words_detail_status_opponent_move">Giliran %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s menang</string>
-    <string name="words_detail_player_fallback">Pemain %1$d</string>
-    <string name="words_detail_player_count">%1$d pemain</string>
-    <string name="words_detail_label_tiles_left">%1$d ubin tersisa</string>
+    <string name="words_detail_player_fallback">Pemain %1$s</string>
+    <string name="words_detail_player_count">%1$s pemain</string>
+    <string name="words_detail_label_tiles_left">%1$s ubin tersisa</string>
     <string name="words_detail_action_open_chat">Buka obrolan</string>
     <string name="words_detail_action_more">Tindakan pertandingan</string>
-    <string name="words_detail_exchange_count">Tukar (%1$d)</string>
+    <string name="words_detail_exchange_count">Tukar (%1$s)</string>
     <string name="words_detail_chat_you_played">Anda memainkan %1$s</string>
     <string name="words_detail_chat_player_played">%1$s memainkan %2$s</string>
 

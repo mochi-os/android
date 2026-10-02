@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Hundi</string>
     <string name="go_delete_message">Ko ñembosarái oñemboguéta ne listagui. Kóva ndaikatúi oñembojevy.</string>
     <string name="go_delete_title">Ehundi ñembosarái?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Emoneĩ</string>
     <string name="go_draw_decline">Emboyke</string>
     <string name="go_draw_offered_received">%1$s oikuave\'ẽ peteĩcha</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Oñeme\'ẽ</string>
     <string name="go_new_game_title">Go ñembosarái pyahu</string>
     <string name="go_new_game_no_friends">Embojuaju raẽ peteĩ angirũ reñepyrũ mboyve peteĩ ñembosarái.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Puntokuéra oñembojoapy Morotĩ resultadope ombohovái haguã Hũ oñepyrũha</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go tablero</string>
-    <string name="go_board_a11y_turn_black">Go tablero %1$d×%1$d, nde jere remoĩ hag̃ua ita hũ</string>
-    <string name="go_board_a11y_turn_white">Go tablero %1$d×%1$d, nde jere remoĩ hag̃ua ita morotĩ</string>
+    <string name="go_board_a11y">%1$s×%1$s Go tablero</string>
+    <string name="go_board_a11y_turn_black">Go tablero %1$s×%1$s, nde jere remoĩ hag̃ua ita hũ</string>
+    <string name="go_board_a11y_turn_white">Go tablero %1$s×%1$s, nde jere remoĩ hag̃ua ita morotĩ</string>
     <string name="go_status_scoring">Papapy — peñemoĩ peteĩ ñe\'ẽme térã peñembosarái gueteri</string>
     <string name="go_score_proposed">Puntaje ojejeruréva: hũ %1$s, morotĩ %2$s</string>
     <string name="go_score_opponent_accepted">Nde contrincante omoneĩ ko puntaje: hũ %1$s, morotĩ %2$s</string>

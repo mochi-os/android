@@ -180,8 +180,8 @@
     <string name="people_books_create">ائڊريس بڪ ٺاهيو</string>
     <string name="people_books_delete">ائڊريس بڪ ڊاهيو</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s ۽ ان جو %2$d رابطو ڊاهجي؟</item>
-        <item quantity="other">%1$s ۽ ان جا %2$d رابطا ڊاهجن؟</item>
+        <item quantity="one">%1$s ۽ ان جو %2$s رابطو ڊاهجي؟</item>
+        <item quantity="other">%1$s ۽ ان جا %2$s رابطا ڊاهجن؟</item>
     </plurals>
     <string name="people_welcome_body">Mochi ۾ دوست ڳوليو ۽ ڳنڍجو. دعوت موڪلڻ لاءِ رابطو شامل ڪريو تي ٽيپ ڪريو.</string>
     <string name="people_person_state_contact">رابطن ۾</string>

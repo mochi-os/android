@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Нысандар жоқ</string>
     <string name="crm_board_no_columns">Бұл көрініс үшін бағандар бапталмаған</string>
     <string name="crm_board_no_options">Баған өрісі үшін опциялар бапталмаған</string>
-    <string name="crm_board_nested_count">+%1$d кірістірілген</string>
+    <string name="crm_board_nested_count">+%1$s кірістірілген</string>
     <string name="crm_move_to_column">Бағанға жылжыту</string>
     <string name="crm_move_to_row">Жолға жылжыту</string>
     <string name="crm_move_after">%1$s кейін</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM деректері сақталды</string>
     <string name="crm_create_upload_json">.zip немесе .json файлын жүктеңіз</string>
     <string name="crm_create_blocked_no_options">Жасау мүмкін емес: %1$s міндетті, бірақ таңдау нұсқалары жоқ. Дизайнда нұсқалар қосыңыз.</string>
-    <string name="crm_design_sample">Үлгі %1$d</string>
+    <string name="crm_design_sample">Үлгі %1$s</string>
     <string name="crm_option_delete_title">Опцияны жою</string>
     <string name="crm_option_delete_message">\"%1$s\" опциясын жойғыңыз келетініне сенімдісіз бе?</string>
 </resources>

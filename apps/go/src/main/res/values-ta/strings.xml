@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">நீக்கு</string>
     <string name="go_delete_message">இந்த விளையாட்டு உங்கள் பட்டியலிலிருந்து அகற்றப்படும். இதை மாற்ற முடியாது.</string>
     <string name="go_delete_title">விளையாட்டை நீக்கவா?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">ஏற்றுக்கொள்</string>
     <string name="go_draw_decline">மறு</string>
     <string name="go_draw_offered_received">%1$s சமநிலை வழங்கினார்</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">விலகினார்</string>
     <string name="go_new_game_title">புதிய Go ஆட்டம்</string>
     <string name="go_new_game_no_friends">ஆட்டத்தைத் தொடங்கும் முன் நண்பரைச் சேர்க்க வேண்டும்.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">கருப்பு முதலில் விளையாடுவதை ஈடுசெய்ய வெள்ளையின் மதிப்பெண்ணில் சேர்க்கப்படும் புள்ளிகள்</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go பலகை</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d கோ பலகை, கருப்புக் கல்லை வைக்க உங்கள் முறை</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d கோ பலகை, வெள்ளைக் கல்லை வைக்க உங்கள் முறை</string>
+    <string name="go_board_a11y">%1$s×%1$s Go பலகை</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s கோ பலகை, கருப்புக் கல்லை வைக்க உங்கள் முறை</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s கோ பலகை, வெள்ளைக் கல்லை வைக்க உங்கள் முறை</string>
     <string name="go_status_scoring">எண்ணுதல் — மதிப்பெண்ணை ஒப்புக்கொள்ளுங்கள் அல்லது ஆடுவதைத் தொடருங்கள்</string>
     <string name="go_score_proposed">முன்மொழியப்பட்ட மதிப்பெண்: கருப்பு %1$s, வெள்ளை %2$s</string>
     <string name="go_score_opponent_accepted">உங்கள் எதிராளி இந்த மதிப்பெண்ணை ஏற்கிறார்: கருப்பு %1$s, வெள்ளை %2$s</string>

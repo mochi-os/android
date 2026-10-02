@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">سڕینەوە</string>
     <string name="go_delete_message">ئەم یارییە لە لیستەکەت دەسڕێتەوە. ناتوانرێت بگەڕێنرێتەوە.</string>
     <string name="go_delete_title">یارییەکە بسڕدرێتەوە؟</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">وەرگرتن</string>
     <string name="go_draw_decline">ڕەتکردنەوە</string>
     <string name="go_draw_offered_received">%1$s پێشنیاری یەکسانی کرد</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">وازی هێنا</string>
     <string name="go_new_game_title">یاری نوێی Go</string>
     <string name="go_new_game_no_friends">پێویستە هاوڕێیەک زیاد بکەیت پێش ئەوەی یاری دەست پێ بکەیت.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">خاڵەکانی زیادکراو بۆ ئەنجامی سپی بۆ قەرەبووکردنەوەی ئەوەی ڕەش یەکەم دەیارییەت</string>
 
-    <string name="go_board_a11y">تەختەی Go-ی %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">تەختەی گۆ %1$d×%1$d، نۆرەی تۆیە بەردێکی ڕەش دابنێیت</string>
-    <string name="go_board_a11y_turn_white">تەختەی گۆ %1$d×%1$d، نۆرەی تۆیە بەردێکی سپی دابنێیت</string>
+    <string name="go_board_a11y">تەختەی Go-ی %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">تەختەی گۆ %1$s×%1$s، نۆرەی تۆیە بەردێکی ڕەش دابنێیت</string>
+    <string name="go_board_a11y_turn_white">تەختەی گۆ %1$s×%1$s، نۆرەی تۆیە بەردێکی سپی دابنێیت</string>
     <string name="go_status_scoring">ژماردن — لەسەر ئەنجام ڕێک بکەون یان بەردەوام بن</string>
     <string name="go_score_proposed">خاڵی پێشنیارکراو: ڕەش %1$s، سپی %2$s</string>
     <string name="go_score_opponent_accepted">بەرامبەرەکەت ئەم خاڵە قبووڵ دەکات: ڕەش %1$s، سپی %2$s</string>

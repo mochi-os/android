@@ -180,8 +180,8 @@
     <string name="people_books_create">Búa til heimilisfangaskrá</string>
     <string name="people_books_delete">Eyða heimilisfangaskrá</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Eyða %1$s og %2$d tengilið hennar?</item>
-        <item quantity="other">Eyða %1$s og %2$d tengiliðum hennar?</item>
+        <item quantity="one">Eyða %1$s og %2$s tengilið hennar?</item>
+        <item quantity="other">Eyða %1$s og %2$s tengiliðum hennar?</item>
     </plurals>
     <string name="people_welcome_body">Finndu vini um allt Mochi og tengstu þeim. Ýttu á Bæta við tengilið til að senda boð.</string>
     <string name="people_person_state_contact">Í tengiliðum</string>

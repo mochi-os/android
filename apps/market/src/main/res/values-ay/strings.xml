@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mercado</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Jakawi</string>
     <string name="market_account_biography_placeholder">Alasirinakar jumat parlam…</string>
     <string name="market_account_load_failed">Cuenta jan apaqasiñjamäkanti</string>
@@ -61,7 +61,7 @@
     <string name="market_bids_tab_outbid">Superata</string>
     <string name="market_bids_tab_won">Atipata</string>
     <string name="market_bids_title">Pujanaka</string>
-    <string name="market_carousel_main">Foto %1$d/%2$d</string>
+    <string name="market_carousel_main">Foto %1$s/%2$s</string>
     <string name="market_channel_name">Mercado</string>
     <string name="market_chargeback_reason_bank_cannot_process">Banco janiw lurañ atkiti</string>
     <string name="market_chargeback_reason_check_returned">Cheque kutt\'ayata</string>
@@ -143,7 +143,7 @@
     <string name="market_editor_condition_refurbished">Askichata</string>
     <string name="market_editor_condition_used">Apnaqata</string>
     <string name="market_editor_currency">Qullqi kasta</string>
-    <string name="market_editor_days">%1$d uru</string>
+    <string name="market_editor_days">%1$s uru</string>
     <string name="market_editor_delete">Listado chhaqtayaña</string>
     <string name="market_editor_delete_confirm_title">¿Listado chhaqtayañati?</string>
     <string name="market_editor_description">Qhanañchawi</string>
@@ -343,7 +343,7 @@
     <string name="market_purchases_title">Alatanaka</string>
     <string name="market_rating_label">Calificación</string>
     <string name="market_rating_no_reviews">Janïr reseñanakax utjkiti</string>
-    <string name="market_rating_reviews">(%1$d reseña)</string>
+    <string name="market_rating_reviews">(%1$s reseña)</string>
     <string name="market_refund_amount_label">Jakhu</string>
     <string name="market_refund_body">Qullqi kutt\'ayañ mayiwimatak laykum qillqam.</string>
     <string name="market_refund_details_label">Detallenaka</string>
@@ -506,12 +506,12 @@
     <string name="market_bids_current_bid">Jichha: %1$s</string>
     <string name="market_bids_ends_in">Tukuyaniwa %1$s ukana</string>
     <string name="market_bids_your_bid">Pujama: %1$s</string>
-    <string name="market_carousel_thumbnail">Jisk\'a jamuqa %1$d</string>
+    <string name="market_carousel_thumbnail">Jisk\'a jamuqa %1$s</string>
     <string name="market_checkout_browser_unavailable">Pago laphi jist\'arañatakix janiw navegador utjkiti</string>
     <string name="market_checkout_pwyw_label">Chanima (mínimo %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Qullqi jakhux %1$s jan ukax juk\'ampïñapawa</string>
     <string name="market_checkout_subscribing">Suscribiskiwa…</string>
-    <string name="market_dispute_dialog_attach_count">%1$d archivo(naka) chikt\'ata</string>
+    <string name="market_dispute_dialog_attach_count">%1$s archivo(naka) chikt\'ata</string>
     <string name="market_dispute_dialog_evidence_section_title">Apayat pruebanaka</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s tuqi apayata</string>
     <string name="market_editor_appeal_reason">¿Kunatsa apelasiñ munta?</string>
@@ -558,7 +558,7 @@
     <string name="market_listing_detail_loading">Listado apaqaskiwa</string>
     <string name="market_listing_detail_relist_failed">Janiwa wasitat aljañ uskuñjamäkiti</string>
     <string name="market_listing_detail_relist_in_progress">Wasitat uñstayaskiwa</string>
-    <string name="market_listing_detail_sales_count">%1$d aljäwinaka</string>
+    <string name="market_listing_detail_sales_count">%1$s aljäwinaka</string>
     <string name="market_listing_detail_seller_banned_banner">Aka aljirix jark\'atawa. Machaqa pedidonakax janiw uchasiñjamäkiti.</string>
     <string name="market_listing_detail_seller_suspended_banner">Aka aljirix sayt\'ayatawa. Cuentapax wasitat activatäñkamax machaqa pedidonakax sayt\'ayatawa.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Alaña jark\'atawa aljirina cuenta jark\'atapana.</string>
@@ -574,7 +574,7 @@
     <string name="market_messages_inbox_empty_subtitle">Mä aljirir mensaje apayasax (jan ukax mä alasirix jumar apayasa) aruskipäwix akan uñstaniwa.</string>
     <string name="market_messages_load_failed">Janiw aruskipäwi apaqañjamäkiti</string>
     <string name="market_messages_send_failed">Janiw mensaje apayañjamäkiti</string>
-    <string name="market_messages_unread_badge">%1$d janira ullt\'atäkiti</string>
+    <string name="market_messages_unread_badge">%1$s janira ullt\'atäkiti</string>
     <string name="market_price_high_bid">Jilïr puja: %1$s</string>
     <string name="market_price_instant_buy">jank\'aki alaña: %1$s</string>
     <string name="market_price_starting_bid">Qalltir puja: %1$s</string>
@@ -582,12 +582,12 @@
     <string name="market_profile_member_since">%1$s pachat integrante</string>
     <string name="market_profile_joined">Mantata %1$s</string>
     <string name="market_profile_rating_breakdown">Calificación jaljtäwi</string>
-    <string name="market_profile_sales_count">%1$d aljäwinaka</string>
-    <string name="market_profile_stars_value">%1$d warawaranaka</string>
+    <string name="market_profile_sales_count">%1$s aljäwinaka</string>
+    <string name="market_profile_stars_value">%1$s warawaranaka</string>
     <string name="market_purchase_dispute_chargeback">Contracargo %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bancomax aka pedidotak mä contracargo uchawayi. Stripex aljirimpi ch\'axwa apnaqaski; amtatäki ukhax tukuyawix akan uñstani.</string>
     <string name="market_purchase_dispute_response">Aljirin jaysawipa</string>
-    <string name="market_purchase_download_many">Aynachan %1$d archivonakam apaqam.</string>
+    <string name="market_purchase_download_many">Aynachan %1$s archivonakam apaqam.</string>
     <string name="market_purchase_download_one">Aynachan archivom apaqam.</string>
     <string name="market_purchase_review_from">%1$s ukan reseñapa</string>
     <string name="market_purchases_auction_label">Subasta #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Akax subasta jaytaniwa. Listadox alasirinakat imantatäniwa; qhipat machaq borradorjam wasitat uñstayasmawa.</string>
     <string name="market_listings_remove_title">¿Aka listado aparañati?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Akax subasta jaytaniwa ukat %1$d lurkaski pujirir yatiyaniwa. Listadox alasirinakat imantatäniwa; qhipat machaq borradorjam wasitat uñstayasmawa.</item>
-        <item quantity="other">Akax subasta jaytaniwa ukat %1$d lurkaski pujirinakar yatiyaniwa. Listadox alasirinakat imantatäniwa; qhipat machaq borradorjam wasitat uñstayasmawa.</item>
+        <item quantity="one">Akax subasta jaytaniwa ukat %1$s lurkaski pujirir yatiyaniwa. Listadox alasirinakat imantatäniwa; qhipat machaq borradorjam wasitat uñstayasmawa.</item>
+        <item quantity="other">Akax subasta jaytaniwa ukat %1$s lurkaski pujirinakar yatiyaniwa. Listadox alasirinakat imantatäniwa; qhipat machaq borradorjam wasitat uñstayasmawa.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Akax jichha pago periodo tukuyanx %1$d lurkaski suscripción jaytaniwa. Suscriptoranakax yatiyatäpxaniwa. Listadox alasirinakat imantatäniwa.</item>
-        <item quantity="other">Akax jichha pago periodo tukuyanx %1$d lurkaski suscripcionanak jaytaniwa. Suscriptoranakax yatiyatäpxaniwa. Listadox alasirinakat imantatäniwa.</item>
+        <item quantity="one">Akax jichha pago periodo tukuyanx %1$s lurkaski suscripción jaytaniwa. Suscriptoranakax yatiyatäpxaniwa. Listadox alasirinakat imantatäniwa.</item>
+        <item quantity="other">Akax jichha pago periodo tukuyanx %1$s lurkaski suscripcionanak jaytaniwa. Suscriptoranakax yatiyatäpxaniwa. Listadox alasirinakat imantatäniwa.</item>
     </plurals>
 </resources>

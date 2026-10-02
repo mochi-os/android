@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Sil</string>
     <string name="go_delete_message">Bu oyun sizin siyahınızdan silinəcək. Bunu geri qaytarmaq mümkün deyil.</string>
     <string name="go_delete_title">Oyun silinsin?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Qəbul et</string>
     <string name="go_draw_decline">Rədd et</string>
     <string name="go_draw_offered_received">%1$s heç-heçə təklif etdi</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Təslim oldu</string>
     <string name="go_new_game_title">Yeni Go oyunu</string>
     <string name="go_new_game_no_friends">Oyuna başlamazdan əvvəl dost əlavə etməlisiniz.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Qaranın birinci başlamasını kompensasiya etmək üçün Ağın hesabına əlavə edilən xallar</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go lövhəsi</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go lövhəsi, qara daş qoymaq növbəsi sizindir</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go lövhəsi, ağ daş qoymaq növbəsi sizindir</string>
+    <string name="go_board_a11y">%1$s×%1$s Go lövhəsi</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go lövhəsi, qara daş qoymaq növbəsi sizindir</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go lövhəsi, ağ daş qoymaq növbəsi sizindir</string>
     <string name="go_status_scoring">Sayım — hesabla razılaşın və ya oyunu davam etdirin</string>
     <string name="go_score_proposed">Təklif olunan xal: qara %1$s, ağ %2$s</string>
     <string name="go_score_opponent_accepted">Rəqibiniz bu xalı qəbul edir: qara %1$s, ağ %2$s</string>

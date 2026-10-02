@@ -180,8 +180,8 @@
     <string name="people_books_create">Adressbuch erstellen</string>
     <string name="people_books_delete">Adressbuch löschen</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s und den %2$d enthaltenen Kontakt löschen?</item>
-        <item quantity="other">%1$s und die %2$d enthaltenen Kontakte löschen?</item>
+        <item quantity="one">%1$s und den %2$s enthaltenen Kontakt löschen?</item>
+        <item quantity="other">%1$s und die %2$s enthaltenen Kontakte löschen?</item>
     </plurals>
     <string name="people_welcome_body">Finden Sie Freunde in ganz Mochi und knüpfen Sie Kontakte. Tippen Sie auf Kontakt hinzufügen, um eine Einladung zu senden.</string>
     <string name="people_person_state_contact">In Kontakten</string>

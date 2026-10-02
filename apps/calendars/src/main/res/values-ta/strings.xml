@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">எப்போதும்</string>
     <string name="calendars_reminder_time">நிகழும் நேரத்தில்</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d நிமிடம் முன்</item>
-        <item quantity="other">%1$d நிமிடங்கள் முன்</item>
+        <item quantity="one">%1$s நிமிடம் முன்</item>
+        <item quantity="other">%1$s நிமிடங்கள் முன்</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d மணி நேரம் முன்</item>
-        <item quantity="other">%1$d மணி நேரம் முன்</item>
+        <item quantity="one">%1$s மணி நேரம் முன்</item>
+        <item quantity="other">%1$s மணி நேரம் முன்</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d நாள் முன்</item>
-        <item quantity="other">%1$d நாட்கள் முன்</item>
+        <item quantity="one">%1$s நாள் முன்</item>
+        <item quantity="other">%1$s நாட்கள் முன்</item>
     </plurals>
     <string name="calendars_reminder_add">நினைவூட்டலைச் சேர்</string>
     <string name="calendars_reminder_remove">நினைவூட்டலை அகற்று</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">நாட்காட்டி மிகப் பெரியது</string>
     <string name="calendars_poll_invalid">முகவரி நாட்காட்டியைத் தரவில்லை</string>
     <string name="calendars_poll_unreachable">முகவரியை அணுக முடியவில்லை</string>
-    <string name="calendars_poll_status">முகவரி %1$d என பதிலளித்தது</string>
+    <string name="calendars_poll_status">முகவரி %1$s என பதிலளித்தது</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d நிமிடம்</item>
-        <item quantity="other">%1$d நிமிடங்கள்</item>
+        <item quantity="one">%1$s நிமிடம்</item>
+        <item quantity="other">%1$s நிமிடங்கள்</item>
     </plurals>
     <string name="calendars_preferences_zones">நிகழ்வுகளை அவற்றின் சொந்த நேர மண்டலத்தில் காட்டு</string>
     <string name="calendars_event_backwards">தொடங்குவதற்கு முன்பே முடிகிறது</string>

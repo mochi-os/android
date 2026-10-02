@@ -180,8 +180,8 @@
     <string name="people_books_create">Direccion maytuta kamariy</string>
     <string name="people_books_delete">Direccion maytuta wischuy</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">¿%1$s-ta %2$d contactontinta wischunki?</item>
-        <item quantity="other">¿%1$s-ta %2$d contactonkunantinta wischunki?</item>
+        <item quantity="one">¿%1$s-ta %2$s contactontinta wischunki?</item>
+        <item quantity="other">¿%1$s-ta %2$s contactonkunantinta wischunki?</item>
     </plurals>
     <string name="people_welcome_body">Mochi ukhupi masikunata tariy, t\'inkinakuy ima. Waqyayta apachinaykipaq Contacto yapayta ñit\'iy.</string>
     <string name="people_person_state_contact">Contactokunapi</string>

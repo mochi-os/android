@@ -99,22 +99,22 @@
     <string name="calendars_repeat_forever">Gu bràth</string>
     <string name="calendars_reminder_time">Aig an àm</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d mhionaid roimhe</item>
-        <item quantity="two">%1$d mhionaid roimhe</item>
-        <item quantity="few">%1$d mionaidean roimhe</item>
-        <item quantity="other">%1$d mionaid roimhe</item>
+        <item quantity="one">%1$s mhionaid roimhe</item>
+        <item quantity="two">%1$s mhionaid roimhe</item>
+        <item quantity="few">%1$s mionaidean roimhe</item>
+        <item quantity="other">%1$s mionaid roimhe</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d uair roimhe</item>
-        <item quantity="two">%1$d uair roimhe</item>
-        <item quantity="few">%1$d uairean roimhe</item>
-        <item quantity="other">%1$d uair roimhe</item>
+        <item quantity="one">%1$s uair roimhe</item>
+        <item quantity="two">%1$s uair roimhe</item>
+        <item quantity="few">%1$s uairean roimhe</item>
+        <item quantity="other">%1$s uair roimhe</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d latha roimhe</item>
-        <item quantity="two">%1$d latha roimhe</item>
-        <item quantity="few">%1$d làithean roimhe</item>
-        <item quantity="other">%1$d latha roimhe</item>
+        <item quantity="one">%1$s latha roimhe</item>
+        <item quantity="two">%1$s latha roimhe</item>
+        <item quantity="few">%1$s làithean roimhe</item>
+        <item quantity="other">%1$s latha roimhe</item>
     </plurals>
     <string name="calendars_reminder_add">Cuir cuimhneachan ris</string>
     <string name="calendars_reminder_remove">Thoir air falbh an cuimhneachan</string>
@@ -148,12 +148,12 @@
     <string name="calendars_poll_large">Tha am mìosachan ro mhòr</string>
     <string name="calendars_poll_invalid">Cha do thill an seòladh mìosachan</string>
     <string name="calendars_poll_unreachable">Cha b\' urrainn dhuinn an seòladh a ruigsinn</string>
-    <string name="calendars_poll_status">Fhreagair an seòladh %1$d</string>
+    <string name="calendars_poll_status">Fhreagair an seòladh %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d mhionaid</item>
-        <item quantity="two">%1$d mhionaid</item>
-        <item quantity="few">%1$d mionaidean</item>
-        <item quantity="other">%1$d mionaid</item>
+        <item quantity="one">%1$s mhionaid</item>
+        <item quantity="two">%1$s mhionaid</item>
+        <item quantity="few">%1$s mionaidean</item>
+        <item quantity="other">%1$s mionaid</item>
     </plurals>
     <string name="calendars_preferences_zones">Seall tachartasan san roinn-tìde aca fhèin</string>
     <string name="calendars_event_backwards">Thig e gu crìch mus tòisich e</string>

@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">ለዘላለም</string>
     <string name="calendars_reminder_time">በሰዓቱ</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d ደቂቃ በፊት</item>
-        <item quantity="other">%1$d ደቂቃዎች በፊት</item>
+        <item quantity="one">%1$s ደቂቃ በፊት</item>
+        <item quantity="other">%1$s ደቂቃዎች በፊት</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d ሰዓት በፊት</item>
-        <item quantity="other">%1$d ሰዓታት በፊት</item>
+        <item quantity="one">%1$s ሰዓት በፊት</item>
+        <item quantity="other">%1$s ሰዓታት በፊት</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ቀን በፊት</item>
-        <item quantity="other">%1$d ቀናት በፊት</item>
+        <item quantity="one">%1$s ቀን በፊት</item>
+        <item quantity="other">%1$s ቀናት በፊት</item>
     </plurals>
     <string name="calendars_reminder_add">አስታዋሽ ጨምር</string>
     <string name="calendars_reminder_remove">አስታዋሽ አስወግድ</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">የቀን መቁጠሪያው በጣም ትልቅ ነው</string>
     <string name="calendars_poll_invalid">አድራሻው የቀን መቁጠሪያ አልመለሰም</string>
     <string name="calendars_poll_unreachable">አድራሻው ሊደረስበት አልቻለም</string>
-    <string name="calendars_poll_status">አድራሻው %1$d መለሰ</string>
+    <string name="calendars_poll_status">አድራሻው %1$s መለሰ</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d ደቂቃ</item>
-        <item quantity="other">%1$d ደቂቃዎች</item>
+        <item quantity="one">%1$s ደቂቃ</item>
+        <item quantity="other">%1$s ደቂቃዎች</item>
     </plurals>
     <string name="calendars_preferences_zones">ክስተቶችን በራሳቸው የሰዓት ሰቅ አሳይ</string>
     <string name="calendars_event_backwards">ከመጀመሩ በፊት ያበቃል</string>

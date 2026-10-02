@@ -213,10 +213,10 @@
     <string name="projects_activity_made_change">heeft een wijziging aangebracht</string>
     <string name="projects_attachment_empty">Geen bijlagen</string>
     <string name="projects_attachment_default_name">bijlage</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nieuwe merge request</string>
     <string name="projects_request_status_closed">Gesloten</string>
     <string name="projects_request_back_to_list">Terug naar lijst</string>
@@ -226,7 +226,7 @@
     <string name="projects_request_checking_merge">Mergestatus controleren…</string>
     <string name="projects_request_can_merge">Kan gemerged worden</string>
     <string name="projects_request_cannot_merge">Kan niet gemerged worden</string>
-    <string name="projects_request_ahead_behind">%1$d voor, %2$d achter</string>
+    <string name="projects_request_ahead_behind">%1$s voor, %2$s achter</string>
     <string name="projects_request_draft_notice">Dit is een concept. Markeer als klaar voordat u merget.</string>
     <string name="projects_request_view_diff">Diff bekijken</string>
     <string name="projects_request_mark_ready">Markeren als klaar</string>
@@ -246,7 +246,7 @@
     <string name="projects_board_no_columns">Geen kolommen geconfigureerd voor deze weergave</string>
     <string name="projects_board_no_options">Geen opties geconfigureerd voor kolomveld</string>
     <string name="projects_board_column_options">Kolomopties</string>
-    <string name="projects_board_nested_count">+%1$d genest</string>
+    <string name="projects_board_nested_count">+%1$s genest</string>
     <string name="projects_move_to_column">Verplaatsen naar kolom</string>
     <string name="projects_move_to_row">Verplaatsen naar rij</string>
     <string name="projects_move_after">Na %1$s</string>

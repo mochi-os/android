@@ -181,7 +181,7 @@
     <string name="crm_tree_empty">Žádné objekty</string>
     <string name="crm_board_no_columns">Pro tento pohled nejsou nakonfigurovány žádné sloupce</string>
     <string name="crm_board_no_options">Pro pole sloupce nejsou nakonfigurovány žádné možnosti</string>
-    <string name="crm_board_nested_count">+%1$d vnořených</string>
+    <string name="crm_board_nested_count">+%1$s vnořených</string>
     <string name="crm_move_to_column">Přesunout do sloupce</string>
     <string name="crm_move_to_row">Přesunout do řádku</string>
     <string name="crm_move_after">Za %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Data CRM uložena</string>
     <string name="crm_create_upload_json">Nahrajte soubor .zip nebo .json</string>
     <string name="crm_create_blocked_no_options">Nelze vytvořit: %1$s je povinné, ale nemá žádné možnosti k výběru. Přidejte možnosti v Návrhu.</string>
-    <string name="crm_design_sample">Ukázka %1$d</string>
+    <string name="crm_design_sample">Ukázka %1$s</string>
     <string name="crm_option_delete_title">Smazat možnost</string>
     <string name="crm_option_delete_message">Opravdu chcete smazat možnost \"%1$s\"?</string>
 </resources>

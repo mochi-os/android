@@ -220,7 +220,7 @@
     <string name="wikis_channel_description">Pemberitahuan tentang suntingan halaman, komen dan jemputan.</string>
     <string name="wikis_pageview_toc_expand">Tunjukkan kandungan</string>
     <string name="wikis_pageview_toc_collapse">Sembunyikan kandungan</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Dikemaskini %1$s</string>
     <string name="wikis_pageview_not_found_description">Halaman „%1$s\" belum wujud.</string>
     <string name="wikis_pageview_share_chooser">Pautan wiki</string>
@@ -245,13 +245,13 @@
     <string name="wikis_delete_page_message">Anda akan memadam halaman „%1$s\" (%2$s). Tindakan ini boleh dibatalkan dengan memulihkan daripada sejarah.</string>
     <string name="wikis_delete_page_success">Halaman dipadam</string>
     <string name="wikis_revert_page_title">Pulihkan halaman</string>
-    <string name="wikis_revert_page_message">Anda akan memulihkan %1$s ke versi %2$d. Ini akan mencipta revisi baru dengan kandungan versi %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Dipulihkan ke versi %1$d</string>
-    <string name="wikis_revert_page_success">Dipulihkan ke versi %1$d</string>
+    <string name="wikis_revert_page_message">Anda akan memulihkan %1$s ke versi %2$s. Ini akan mencipta revisi baru dengan kandungan versi %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Dipulihkan ke versi %1$s</string>
+    <string name="wikis_revert_page_success">Dipulihkan ke versi %1$s</string>
     <string name="wikis_rename_page_renaming">Menukar nama…</string>
     <string name="wikis_rename_page_success">Nama halaman ditukar</string>
-    <string name="wikis_history_viewing">Melihat sejarah untuk %1$s, versi semasa %2$d</string>
-    <string name="wikis_revision_version_badge">Versi %1$d</string>
+    <string name="wikis_history_viewing">Melihat sejarah untuk %1$s, versi semasa %2$s</string>
+    <string name="wikis_revision_version_badge">Versi %1$s</string>
     <string name="wikis_search_pages_placeholder">Cari halaman mengikut tajuk atau kandungan…</string>
     <string name="wikis_search_no_results">Tiada halaman ditemui untuk „%1$s\". Cuba istilah carian lain.</string>
     <string name="wikis_search_updated">Dikemaskini %1$s</string>
@@ -286,37 +286,37 @@
     <string name="wikis_revision_author">mengikut %1$s</string>
     <string name="wikis_revision_show_page">Tunjukkan halaman</string>
     <string name="wikis_revision_compare_failed">Tidak dapat memuatkan versi terdahulu untuk perbandingan.</string>
-    <string name="wikis_revision_changes_from">Perubahan daripada versi %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Perubahan daripada versi %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d komen</item>
+        <item quantity="other">%s komen</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d balasan</item>
-        <item quantity="other">+%d balasan lagi</item>
+        <item quantity="one">%s balasan</item>
+        <item quantity="other">+%s balasan lagi</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d halaman</item>
-        <item quantity="other">%d halaman</item>
+        <item quantity="one">%s halaman</item>
+        <item quantity="other">%s halaman</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fail</item>
-        <item quantity="other">%d fail</item>
+        <item quantity="one">%s fail</item>
+        <item quantity="other">%s fail</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d imej</item>
-        <item quantity="other">%d imej</item>
+        <item quantity="one">%s imej</item>
+        <item quantity="other">%s imej</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokumen</item>
-        <item quantity="other">%d dokumen</item>
+        <item quantity="one">%s dokumen</item>
+        <item quantity="other">%s dokumen</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d halaman dengan tag ini</item>
-        <item quantity="other">%d halaman dengan tag ini</item>
+        <item quantity="one">%s halaman dengan tag ini</item>
+        <item quantity="other">%s halaman dengan tag ini</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Dijumpai %1$d hasil untuk «%2$s»</item>
-        <item quantity="other">Dijumpai %1$d hasil untuk «%2$s»</item>
+        <item quantity="one">Dijumpai %1$s hasil untuk «%2$s»</item>
+        <item quantity="other">Dijumpai %1$s hasil untuk «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Kapsyen tidak dapat disimpan</string>
     <string name="wikis_attachments_upload_types">Fail yang disokong: imej, PDF, DOC, DOCX, TXT, dan MD.</string>
@@ -325,6 +325,6 @@
     <string name="wikis_rss_copied_new">URL RSS baharu disalin ke papan keratan</string>
     <string name="wikis_rss_exists">URL suapan ini telah pun dikeluarkan dan tidak boleh ditunjukkan lagi.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">Memaparkan %1$d komen pertama.</item>
+        <item quantity="other">Memaparkan %1$s komen pertama.</item>
     </plurals>
 </resources>

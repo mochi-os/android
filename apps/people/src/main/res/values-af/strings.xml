@@ -180,8 +180,8 @@
     <string name="people_books_create">Skep adresboek</string>
     <string name="people_books_delete">Vee adresboek uit</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Vee %1$s en sy %2$d kontak uit?</item>
-        <item quantity="other">Vee %1$s en sy %2$d kontakte uit?</item>
+        <item quantity="one">Vee %1$s en sy %2$s kontak uit?</item>
+        <item quantity="other">Vee %1$s en sy %2$s kontakte uit?</item>
     </plurals>
     <string name="people_welcome_body">Vind vriende regoor Mochi en maak kontak. Tik Voeg kontak by om \'n uitnodiging te stuur.</string>
     <string name="people_person_state_contact">In kontakte</string>

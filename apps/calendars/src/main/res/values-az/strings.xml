@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Həmişə</string>
     <string name="calendars_reminder_time">Vaxtında</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d dəqiqə əvvəl</item>
-        <item quantity="other">%1$d dəqiqə əvvəl</item>
+        <item quantity="one">%1$s dəqiqə əvvəl</item>
+        <item quantity="other">%1$s dəqiqə əvvəl</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d saat əvvəl</item>
-        <item quantity="other">%1$d saat əvvəl</item>
+        <item quantity="one">%1$s saat əvvəl</item>
+        <item quantity="other">%1$s saat əvvəl</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d gün əvvəl</item>
-        <item quantity="other">%1$d gün əvvəl</item>
+        <item quantity="one">%1$s gün əvvəl</item>
+        <item quantity="other">%1$s gün əvvəl</item>
     </plurals>
     <string name="calendars_reminder_add">Xatırlatma əlavə et</string>
     <string name="calendars_reminder_remove">Xatırlatmanı sil</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Təqvim çox böyükdür</string>
     <string name="calendars_poll_invalid">Ünvan təqvim qaytarmadı</string>
     <string name="calendars_poll_unreachable">Ünvana çatmaq mümkün olmadı</string>
-    <string name="calendars_poll_status">Ünvan %1$d cavabı verdi</string>
+    <string name="calendars_poll_status">Ünvan %1$s cavabı verdi</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d dəqiqə</item>
-        <item quantity="other">%1$d dəqiqə</item>
+        <item quantity="one">%1$s dəqiqə</item>
+        <item quantity="other">%1$s dəqiqə</item>
     </plurals>
     <string name="calendars_preferences_zones">Tədbirləri öz saat qurşağında göstər</string>
     <string name="calendars_event_backwards">Başlamazdan əvvəl bitir</string>

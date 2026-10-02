@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Iesniedz…</string>
     <string name="market_checkout_subscribing">Abonē…</string>
     <string name="market_filter_remove">Noņemt filtru</string>
-    <string name="market_listing_detail_sales_count">%1$d pārdošanas</string>
-    <string name="market_profile_sales_count">%1$d pārdošanas</string>
+    <string name="market_listing_detail_sales_count">%1$s pārdošanas</string>
+    <string name="market_profile_sales_count">%1$s pārdošanas</string>
     <string name="market_purchase_dispute_response">Pārdevēja atbilde</string>
     <string name="market_purchases_order_label">Pasūtījums Nr. %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Pastāstiet pircējiem par sevi…</string>
     <string name="market_account_load_failed">Neizdevās ielādēt kontu</string>
     <string name="market_account_save_failed">Neizdevās saglabāt izmaiņas</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Pašreizējais: %1$s</string>
     <string name="market_bids_ends_in">Beidzas pēc %1$s</string>
     <string name="market_bids_your_bid">Jūsu piedāvājums: %1$s</string>
-    <string name="market_carousel_main">Fotoattēls %1$d no %2$d</string>
-    <string name="market_carousel_thumbnail">Sīktēls %1$d</string>
+    <string name="market_carousel_main">Fotoattēls %1$s no %2$s</string>
+    <string name="market_carousel_thumbnail">Sīktēls %1$s</string>
     <string name="market_checkout_browser_unavailable">Nav pieejama pārlūkprogramma, lai atvērtu maksājumu lapu</string>
     <string name="market_checkout_pay_button">Maksāt ar Stripe</string>
     <string name="market_checkout_processing">Apstrādā…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Pievienot pierādījumus</string>
-    <string name="market_dispute_dialog_attach_count">Pievienoti %1$d faili</string>
+    <string name="market_dispute_dialog_attach_count">Pievienoti %1$s faili</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi darbinieki</string>
     <string name="market_dispute_dialog_evidence_section_title">Iesniegtie pierādījumi</string>
     <string name="market_dispute_dialog_evidence_submitter_line">iesniedza %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Atsauces URL</string>
     <string name="market_editor_assets_empty">Vēl nav resursu</string>
     <string name="market_editor_category_none">Atlasiet kategoriju</string>
-    <string name="market_editor_days">%1$d dienas</string>
+    <string name="market_editor_days">%1$s dienas</string>
     <string name="market_editor_delete">Dzēst sludinājumu</string>
     <string name="market_editor_delete_confirm_message">Tas neatgriezeniski izdzēsīs sludinājumu.</string>
     <string name="market_editor_delete_confirm_title">Dzēst sludinājumu?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">Neizdevās ielādēt sarunu</string>
     <string name="market_messages_send_failed">Neizdevās nosūtīt ziņojumu</string>
     <string name="market_messages_thread_title">Saruna</string>
-    <string name="market_messages_unread_badge">%1$d nelasīti</string>
+    <string name="market_messages_unread_badge">%1$s nelasīti</string>
     <string name="market_price_from">No %1$s</string>
     <string name="market_price_high_bid">Augstākais piedāvājums: %1$s</string>
     <string name="market_price_instant_buy">tūlītējais pirkums: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Pievienojās %1$s</string>
     <string name="market_profile_no_reviews">Vēl nav atsauksmju.</string>
     <string name="market_profile_rating_breakdown">Vērtējuma sadalījums</string>
-    <string name="market_profile_stars_value">%1$d zvaigznes</string>
+    <string name="market_profile_stars_value">%1$s zvaigznes</string>
     <string name="market_purchase_dispute_chargeback">Maksājuma atgriešana %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Jūsu banka iesniedza maksājuma atgriešanu par šo pasūtījumu. Stripe risina strīdu ar pārdevēju; iznākums parādīsies šeit, kad būs pieņemts lēmums.</string>
-    <string name="market_purchase_download_many">Lejupielādējiet savus %1$d failus tālāk.</string>
+    <string name="market_purchase_download_many">Lejupielādējiet savus %1$s failus tālāk.</string>
     <string name="market_purchase_download_one">Lejupielādējiet savu failu tālāk.</string>
     <string name="market_purchase_review_from">Atsauksme no %1$s</string>
     <string name="market_purchases_auction_label">Izsole #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s atmaksāts</string>
     <string name="market_purchases_won_for">Iegūts par %1$s</string>
-    <string name="market_rating_reviews">(%1$d atsauksmes)</string>
+    <string name="market_rating_reviews">(%1$s atsauksmes)</string>
     <string name="market_refund_amount_label">Summa</string>
     <string name="market_refund_dialog_amount_help">Atstājiet tukšu, lai atmaksātu visu pasūtījumu.</string>
     <string name="market_refund_dialog_amount_label">Summa</string>
@@ -785,13 +785,13 @@
     <string name="market_listings_remove_message_auction">Tas atcels izsoli. Sludinājums tiks paslēpts no pircējiem; vēlāk to varat atkārtoti uzskaitīt kā jaunu melnrakstu.</string>
     <string name="market_listings_remove_title">Noņemt šo sludinājumu?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="zero">Tas atcels izsoli un paziņos %1$d aktīvu solītāju. Sludinājums tiks paslēpts no pircējiem; vēlāk to varēsiet publicēt atkārtoti kā jaunu melnrakstu.</item>
-        <item quantity="one">Tas atcels izsoli un paziņos %1$d aktīvam solītājam. Sludinājums tiks paslēpts no pircējiem; vēlāk to varēsiet publicēt atkārtoti kā jaunu melnrakstu.</item>
-        <item quantity="other">Tas atcels izsoli un paziņos %1$d aktīviem solītājiem. Sludinājums tiks paslēpts no pircējiem; vēlāk to varēsiet publicēt atkārtoti kā jaunu melnrakstu.</item>
+        <item quantity="zero">Tas atcels izsoli un paziņos %1$s aktīvu solītāju. Sludinājums tiks paslēpts no pircējiem; vēlāk to varēsiet publicēt atkārtoti kā jaunu melnrakstu.</item>
+        <item quantity="one">Tas atcels izsoli un paziņos %1$s aktīvam solītājam. Sludinājums tiks paslēpts no pircējiem; vēlāk to varēsiet publicēt atkārtoti kā jaunu melnrakstu.</item>
+        <item quantity="other">Tas atcels izsoli un paziņos %1$s aktīviem solītājiem. Sludinājums tiks paslēpts no pircējiem; vēlāk to varēsiet publicēt atkārtoti kā jaunu melnrakstu.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="zero">Tas pašreizējā norēķinu perioda beigās atcels %1$d aktīvu abonementu. Abonenti tiks informēti. Sludinājums tiks paslēpts no pircējiem.</item>
-        <item quantity="one">Tas pašreizējā norēķinu perioda beigās atcels %1$d aktīvu abonementu. Abonenti tiks informēti. Sludinājums tiks paslēpts no pircējiem.</item>
-        <item quantity="other">Tas pašreizējā norēķinu perioda beigās atcels %1$d aktīvus abonementus. Abonenti tiks informēti. Sludinājums tiks paslēpts no pircējiem.</item>
+        <item quantity="zero">Tas pašreizējā norēķinu perioda beigās atcels %1$s aktīvu abonementu. Abonenti tiks informēti. Sludinājums tiks paslēpts no pircējiem.</item>
+        <item quantity="one">Tas pašreizējā norēķinu perioda beigās atcels %1$s aktīvu abonementu. Abonenti tiks informēti. Sludinājums tiks paslēpts no pircējiem.</item>
+        <item quantity="other">Tas pašreizējā norēķinu perioda beigās atcels %1$s aktīvus abonementus. Abonenti tiks informēti. Sludinājums tiks paslēpts no pircējiem.</item>
     </plurals>
 </resources>

@@ -32,7 +32,7 @@
     <string name="staff_accounts_unnamed">Maqaa hin qabne</string>
     <string name="staff_accounts_unsuspend">Hidhamuu kaasi</string>
     <string name="staff_accounts_unsuspended_toast">Akkaawuntiin deebi\'e hojii eegale</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Haquu</string>
     <string name="staff_appeals_decide">Murteessi</string>
     <string name="staff_appeals_decision_denied">Tarreeffamicha didamuu olkaa\'i</string>
@@ -398,7 +398,7 @@
     <string name="staff_accounts_action_unban_title">Dhorkaa kaasi</string>
     <string name="staff_accounts_action_unsuspend_title">Addaan kutiinsa kaasi</string>
     <string name="staff_accounts_reason_optional_label">Sababa (filannoo)</string>
-    <string name="staff_accounts_sales">gurgurtaa %1$d</string>
+    <string name="staff_accounts_sales">gurgurtaa %1$s</string>
     <string name="staff_appeals_reason_label">Sababa ol\'iyyannoo gurguraa</string>
     <string name="staff_audit_action_staff_team_role_changed">Gahee hojjetaa jijjiirame</string>
     <string name="staff_categories_delete_desc">“%1$s” haqi? Kun deebifamuu hin danda\'u.</string>

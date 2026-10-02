@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Sem objetos</string>
     <string name="crm_board_no_columns">Nenhuma coluna configurada para esta visualização</string>
     <string name="crm_board_no_options">Nenhuma opção configurada para o campo da coluna</string>
-    <string name="crm_board_nested_count">+%1$d aninhados</string>
+    <string name="crm_board_nested_count">+%1$s aninhados</string>
     <string name="crm_move_to_column">Mover para coluna</string>
     <string name="crm_move_to_row">Mover para linha</string>
     <string name="crm_move_after">Depois de %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Dados do CRM guardados</string>
     <string name="crm_create_upload_json">Carregue um ficheiro .zip ou .json</string>
     <string name="crm_create_blocked_no_options">Não é possível criar: %1$s é obrigatório mas não tem opções para escolher. Adicione opções em Design.</string>
-    <string name="crm_design_sample">Exemplo %1$d</string>
+    <string name="crm_design_sample">Exemplo %1$s</string>
     <string name="crm_option_delete_title">Eliminar opção</string>
     <string name="crm_option_delete_message">Tem a certeza de que pretende eliminar a opção \"%1$s\"?</string>
 </resources>

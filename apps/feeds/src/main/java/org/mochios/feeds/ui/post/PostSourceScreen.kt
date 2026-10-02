@@ -97,6 +97,7 @@ import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.flattenComments
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 // Chrome-on-Android UA. Some publishers' bot/embed detection 403s the default
 // "wv" WebView user agent; impersonating regular Chrome makes most articles load.
@@ -562,7 +563,7 @@ private fun PostSourceSheet(
                     text = pluralStringResource(
                         R.plurals.feeds_comment_count,
                         commentCount,
-                        commentCount
+                        LocalFormat.current.formatNumber(commentCount)
                     ),
                 )
             }

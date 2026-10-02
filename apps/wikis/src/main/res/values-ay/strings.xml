@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Wiki laphi askichawinakat, comentarionakat ukat jawsäwinakat yatiyawinaka.</string>
     <string name="wikis_pageview_toc_expand">Contenido índice uñacht\'ayaña</string>
     <string name="wikis_pageview_toc_collapse">Contenido índice imantaña</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Machaqachata %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” laphix janïr utjkiti.</string>
     <string name="wikis_pageview_share_chooser">Wiki enlace</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">“%1$s” (%2$s) laphi chhaqtayañ munta. Aka lurawix sarawit kutt\'ayasa kutt\'ayasispawa.</string>
     <string name="wikis_delete_page_success">Laphi chhaqtayata</string>
     <string name="wikis_revert_page_title">Laphi kutt\'ayaña</string>
-    <string name="wikis_revert_page_message">%1$s ukax versión %2$d ukar kutt\'ayañ munta. Akax versión %2$d contenidompi machaq revisión luraniwa.</string>
-    <string name="wikis_revert_page_default_comment">Versión %1$d ukar kutt\'ayata</string>
-    <string name="wikis_revert_page_success">Versión %1$d ukar kutt\'ayata</string>
+    <string name="wikis_revert_page_message">%1$s ukax versión %2$s ukar kutt\'ayañ munta. Akax versión %2$s contenidompi machaq revisión luraniwa.</string>
+    <string name="wikis_revert_page_default_comment">Versión %1$s ukar kutt\'ayata</string>
+    <string name="wikis_revert_page_success">Versión %1$s ukar kutt\'ayata</string>
     <string name="wikis_rename_page_renaming">Suti mayjt\'ayaskiwa…</string>
     <string name="wikis_rename_page_success">Laphi suti machaqachata</string>
-    <string name="wikis_history_viewing">%1$s sarnaqäwip uñjaña, jichha versión %2$d</string>
-    <string name="wikis_revision_version_badge">Versión %1$d</string>
+    <string name="wikis_history_viewing">%1$s sarnaqäwip uñjaña, jichha versión %2$s</string>
+    <string name="wikis_revision_version_badge">Versión %1$s</string>
     <string name="wikis_search_pages_placeholder">Laphinak título jan ukax contenido ukamp thaqhama…</string>
     <string name="wikis_search_no_results">“%1$s” ukatakix janiw laphinakas jikxatasiti. Yaqha thaqhañ arunak yant\'am.</string>
     <string name="wikis_search_updated">Machaqachata %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s tuqi</string>
     <string name="wikis_revision_show_page">Laphi uñacht\'ayaña</string>
     <string name="wikis_revision_compare_failed">Uñakipt\'añataki nayra versión janiw apsuñjamäkiti.</string>
-    <string name="wikis_revision_changes_from">Versión %1$d → %2$d mayjt\'awinaka</string>
+    <string name="wikis_revision_changes_from">Versión %1$s → %2$s mayjt\'awinaka</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d comentario</item>
-        <item quantity="other">%d comentarionaka</item>
+        <item quantity="one">%s comentario</item>
+        <item quantity="other">%s comentarionaka</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d jaysawi</item>
-        <item quantity="other">+%d juk\'ampi jaysawinaka</item>
+        <item quantity="one">%s jaysawi</item>
+        <item quantity="other">+%s juk\'ampi jaysawinaka</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d laphi</item>
-        <item quantity="other">%d laphinaka</item>
+        <item quantity="one">%s laphi</item>
+        <item quantity="other">%s laphinaka</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d archivo</item>
-        <item quantity="other">%d archivonaka</item>
+        <item quantity="one">%s archivo</item>
+        <item quantity="other">%s archivonaka</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d jamuqa</item>
-        <item quantity="other">%d jamuqanaka</item>
+        <item quantity="one">%s jamuqa</item>
+        <item quantity="other">%s jamuqanaka</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d qillqata</item>
-        <item quantity="other">%d qillqatanaka</item>
+        <item quantity="one">%s qillqata</item>
+        <item quantity="other">%s qillqatanaka</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Aka chimpumpi %d laphi</item>
-        <item quantity="other">Aka chimpumpi %d laphinaka</item>
+        <item quantity="one">Aka chimpumpi %s laphi</item>
+        <item quantity="other">Aka chimpumpi %s laphinaka</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">\"%2$s\" ukatakix %1$d resultado jikxatatawa</item>
-        <item quantity="other">\"%2$s\" ukatakix %1$d resultadonaka jikxatatawa</item>
+        <item quantity="one">\"%2$s\" ukatakix %1$s resultado jikxatatawa</item>
+        <item quantity="other">\"%2$s\" ukatakix %1$s resultadonaka jikxatatawa</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Janiw qhanañchawi imañjamäkiti</string>
     <string name="wikis_attachments_upload_types">Yanapt\'at archivonaka: jamuqanaka, PDF, DOC, DOCX, TXT ukat MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Machaq RSS URL clipboard ukar copiata</string>
     <string name="wikis_rss_exists">Aka feed URL nayraqat churatäxiwa, janiw wasitat uñacht\'ayañjamäkiti.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Nayrïr %1$d comentario uñacht\'ayasa.</item>
-        <item quantity="other">Nayrïr %1$d comentarionaka uñacht\'ayasa.</item>
+        <item quantity="one">Nayrïr %1$s comentario uñacht\'ayasa.</item>
+        <item quantity="other">Nayrïr %1$s comentarionaka uñacht\'ayasa.</item>
     </plurals>
 </resources>

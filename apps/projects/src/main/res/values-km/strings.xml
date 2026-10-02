@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">បានធ្វើការផ្លាស់ប្ដូរ</string>
     <string name="projects_attachment_empty">មិនមានឯកសារភ្ជាប់</string>
     <string name="projects_attachment_default_name">ឯកសារភ្ជាប់</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">សំណើបញ្ចូលគ្នាថ្មី</string>
     <string name="projects_request_status_closed">បានបិទ</string>
     <string name="projects_request_back_to_list">ត្រឡប់ទៅបញ្ជី</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">កំពុងពិនិត្យស្ថានភាពបញ្ចូលគ្នា…</string>
     <string name="projects_request_can_merge">អាចបញ្ចូលគ្នាបាន</string>
     <string name="projects_request_cannot_merge">មិនអាចបញ្ចូលគ្នាបានទេ</string>
-    <string name="projects_request_ahead_behind">%1$d មុន, %2$d ក្រោយ</string>
+    <string name="projects_request_ahead_behind">%1$s មុន, %2$s ក្រោយ</string>
     <string name="projects_request_draft_notice">នេះគឺជាសេចក្ដីព្រាង។ សម្គាល់ថារួចរាល់មុនពេលបញ្ចូលគ្នា។</string>
     <string name="projects_request_view_diff">មើលភាពខុសគ្នា</string>
     <string name="projects_request_mark_ready">សម្គាល់ថារួចរាល់</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">មិនមានជួរឈរដែលបានកំណត់សម្រាប់ទិដ្ឋភាពនេះទេ</string>
     <string name="projects_board_no_options">មិនបានកំណត់ជម្រើសសម្រាប់វាលជួរឈរទេ</string>
     <string name="projects_board_column_options">ជម្រើសជួរឈរ</string>
-    <string name="projects_board_nested_count">+%1$d នៅខាងក្នុង</string>
+    <string name="projects_board_nested_count">+%1$s នៅខាងក្នុង</string>
     <string name="projects_move_to_column">ផ្លាស់ទីទៅជួរឈរ</string>
     <string name="projects_move_to_row">ផ្លាស់ទីទៅជួរដេក</string>
     <string name="projects_move_after">បន្ទាប់ពី %1$s</string>
@@ -365,7 +365,7 @@
     <string name="projects_sort_filter_title">តម្រៀប និងត្រង</string>
     <string name="projects_create_prefix_hint">ប្រើសម្រាប់លេខសម្គាល់ដែលអានបានដូចជា %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="other">%1$d ឯកសារជម្លោះ</item>
+        <item quantity="other">%1$s ឯកសារជម្លោះ</item>
     </plurals>
     <string name="projects_design_export_saved">បានរក្សាទុកការរចនា</string>
     <string name="projects_design_import_failed">មិនអាចអានឯកសារនោះបានទេ</string>
@@ -375,7 +375,7 @@
     <string name="projects_export_saved">បានរក្សាទុកទិន្នន័យគម្រោង</string>
     <string name="projects_exporting">កំពុងរៀបចំការនាំចេញ…</string>
     <string name="projects_board_add_column">បន្ថែមជួរឈរ</string>
-    <string name="projects_design_sample">គំរូ %1$d</string>
+    <string name="projects_design_sample">គំរូ %1$s</string>
     <string name="projects_option_delete_title">លុបជម្រើស</string>
     <string name="projects_option_delete_message">តើអ្នកប្រាកដថាចង់លុបជម្រើស \"%1$s\" មែនទេ?</string>
     <string name="projects_create_object_no_types">មិនអាចបង្កើតប្រភេទធាតុបានទេ។ បង្កើតធាតុមេដែលត្រូវការជាមុនសិន។</string>

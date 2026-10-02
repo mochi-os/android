@@ -88,7 +88,7 @@ fun RevisionViewScreen(
     val context = LocalContext.current
     var showRevertDialog by remember { mutableStateOf(false) }
 
-    val revertedMsg = stringResource(R.string.wikis_revert_page_success, viewModel.version)
+    val revertedMsg = stringResource(R.string.wikis_revert_page_success, viewModel.version.toString())
     val revertFailedMsg = stringResource(R.string.wikis_revert_page_failed)
 
     // A revert leaves this revision behind: the page it restored is what the
@@ -234,7 +234,7 @@ private fun RevisionBody(
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     VersionBadge(
-                        text = stringResource(R.string.wikis_revision_version_badge, revision.version),
+                        text = stringResource(R.string.wikis_revision_version_badge, revision.version.toString()),
                         primary = true,
                     )
                     if (isCurrent) {
@@ -366,8 +366,8 @@ private fun RevisionBody(
                     Text(
                         text = stringResource(
                             R.string.wikis_revision_changes_from,
-                            previousRevision.version,
-                            revision.version,
+                            previousRevision.version.toString(),
+                            revision.version.toString(),
                         ),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,

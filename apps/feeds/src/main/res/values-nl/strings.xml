@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">Hiermee stopt het importeren van inhoud uit \"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">Ook berichten verwijderen die uit deze bron zijn geïmporteerd</string>
     <string name="feeds_suggested_credibility_title">Voorgestelde geloofwaardigheid</string>
-    <string name="feeds_suggested_credibility_body">Mochi stelt een geloofwaardigheid van %1$d voor. Accepteren?</string>
+    <string name="feeds_suggested_credibility_body">Mochi stelt een geloofwaardigheid van %1$s voor. Accepteren?</string>
     <string name="feeds_suggested_credibility_keep">Huidige behouden</string>
     <string name="feeds_ai_processing_mode">AI-verwerkingsmodus</string>
     <string name="feeds_ai_account">AI-account</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Tik op de bladwijzer van een bericht om het hier voor later te bewaren.</string>
     <string name="feeds_saved_error_clear">Bewaarde berichten wissen mislukt</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d nieuw bericht</item>
-        <item quantity="other">%d nieuwe berichten</item>
+        <item quantity="one">%s nieuw bericht</item>
+        <item quantity="other">%s nieuwe berichten</item>
     </plurals>
     <string name="feeds_caught_up">Je bent helemaal bij</string>
     <string name="feeds_all_caught_up">Helemaal bij</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Feed-entiteit-ID of vingerafdruk</string>
     <string name="feeds_source_credibility_label">Geloofwaardigheid</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d uur</item>
-        <item quantity="other">%1$d uur</item>
+        <item quantity="one">%1$s uur</item>
+        <item quantity="other">%1$s uur</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuut</item>
-        <item quantity="other">%1$d minuten</item>
+        <item quantity="one">%1$s minuut</item>
+        <item quantity="other">%1$s minuten</item>
     </plurals>
     <string name="feeds_source_polling_interval">Elke %1$s opgehaald</string>
     <string name="feeds_access_level_react_full">Reageer en bekijk</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Link</string>
     <string name="feeds_share_link_title">Feedlink</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d reactie</item>
-        <item quantity="other">%1$d reacties</item>
+        <item quantity="one">%1$s reactie</item>
+        <item quantity="other">%1$s reacties</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d bijlage</item>
-        <item quantity="other">%1$d bijlagen</item>
+        <item quantity="one">%1$s bijlage</item>
+        <item quantity="other">%1$s bijlagen</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Bekijk %1$d reactie meer</item>
-        <item quantity="other">Bekijk %1$d reacties meer</item>
+        <item quantity="one">Bekijk %1$s reactie meer</item>
+        <item quantity="other">Bekijk %1$s reacties meer</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d jaar geleden vandaag</item>
-        <item quantity="other">%1$d jaar geleden vandaag</item>
+        <item quantity="one">%1$s jaar geleden vandaag</item>
+        <item quantity="other">%1$s jaar geleden vandaag</item>
     </plurals>
     <string name="feeds_block">Blokkeren</string>
     <string name="feeds_removed_from_feed">Je bent verwijderd uit deze feed</string>

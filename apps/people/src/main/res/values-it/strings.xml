@@ -180,8 +180,8 @@
     <string name="people_books_create">Crea rubrica</string>
     <string name="people_books_delete">Elimina rubrica</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Eliminare %1$s e il suo %2$d contatto?</item>
-        <item quantity="other">Eliminare %1$s e i suoi %2$d contatti?</item>
+        <item quantity="one">Eliminare %1$s e il suo %2$s contatto?</item>
+        <item quantity="other">Eliminare %1$s e i suoi %2$s contatti?</item>
     </plurals>
     <string name="people_welcome_body">Trova amici in tutto Mochi e mettiti in contatto. Tocca Aggiungi contatto per inviare un invito.</string>
     <string name="people_person_state_contact">Nei contatti</string>

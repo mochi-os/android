@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">備註</string>
     <string name="staff_accounts_reason_label">原因</string>
     <string name="staff_accounts_reason_optional_label">原因(選填)</string>
-    <string name="staff_accounts_sales">%1$d 筆銷售</string>
+    <string name="staff_accounts_sales">%1$s 筆銷售</string>
     <string name="staff_accounts_search_clear">清除搜尋</string>
     <string name="staff_accounts_search_placeholder">搜尋</string>
     <string name="staff_accounts_seller_buyers">僅限買家</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">未命名</string>
     <string name="staff_accounts_unsuspend">解除停權</string>
     <string name="staff_accounts_unsuspended_toast">帳戶已解除暫停</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">取消</string>
     <string name="staff_appeals_decide">裁決</string>
     <string name="staff_appeals_decision_denied">保持列表拒絕狀態</string>

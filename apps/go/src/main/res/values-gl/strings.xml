@@ -16,7 +16,7 @@
     <string name="go_delete_confirm">Eliminar</string>
     <string name="go_delete_message">Esta partida eliminarase da túa lista. Isto non se pode desfacer.</string>
     <string name="go_delete_title">Eliminar a partida?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Aceptar</string>
     <string name="go_draw_decline">Rexeitar</string>
     <string name="go_draw_offered_received">%1$s ofreceu un empate</string>
@@ -67,11 +67,11 @@
     <string name="go_status_resigned">Abandonada</string>
     <string name="go_new_game_title">Nova partida de Go</string>
     <string name="go_new_game_no_friends">Precisas engadir un amigo antes de comezar unha partida.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Puntos engadidos ao marcador do Branco para compensar que o Negro empeza primeiro</string>
-    <string name="go_board_a11y">Taboleiro de Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Taboleiro de Go de %1$d×%1$d, é a túa quenda de poñer unha pedra negra</string>
-    <string name="go_board_a11y_turn_white">Taboleiro de Go de %1$d×%1$d, é a túa quenda de poñer unha pedra branca</string>
+    <string name="go_board_a11y">Taboleiro de Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Taboleiro de Go de %1$s×%1$s, é a túa quenda de poñer unha pedra negra</string>
+    <string name="go_board_a11y_turn_white">Taboleiro de Go de %1$s×%1$s, é a túa quenda de poñer unha pedra branca</string>
     <string name="go_status_scoring">Reconto — acordade a puntuación ou seguide xogando</string>
     <string name="go_score_proposed">Puntuación proposta: negras %1$s, brancas %2$s</string>
     <string name="go_score_opponent_accepted">O teu adversario acepta esta puntuación: negras %1$s, brancas %2$s</string>

@@ -180,8 +180,8 @@
     <string name="people_books_create">Manzillar kitobi yaratish</string>
     <string name="people_books_delete">Manzillar kitobini o\'chirish</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s va undagi %2$d kontakt o\'chirilsinmi?</item>
-        <item quantity="other">%1$s va undagi %2$d kontakt o\'chirilsinmi?</item>
+        <item quantity="one">%1$s va undagi %2$s kontakt o\'chirilsinmi?</item>
+        <item quantity="other">%1$s va undagi %2$s kontakt o\'chirilsinmi?</item>
     </plurals>
     <string name="people_welcome_body">Mochi bo\'ylab do\'stlarni toping va bog\'laning. Taklif yuborish uchun Kontakt qo\'shish tugmasini bosing.</string>
     <string name="people_person_state_contact">Kontaktlarda</string>

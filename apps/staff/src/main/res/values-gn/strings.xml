@@ -32,7 +32,7 @@
     <string name="staff_accounts_unnamed">Téra\'ỹva</string>
     <string name="staff_accounts_unsuspend">Embogue suspensión</string>
     <string name="staff_accounts_unsuspended_toast">Ñembopytu\'u oñembogue mba\'etégui</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Heja</string>
     <string name="staff_appeals_decide">Decidi</string>
     <string name="staff_appeals_decision_denied">Listado opyta oñemboykéva</string>
@@ -394,7 +394,7 @@
     <string name="staff_accounts_action_unban_title">Eipe\'a ñemboyke</string>
     <string name="staff_accounts_action_unsuspend_title">Eipe\'a ñembopyta</string>
     <string name="staff_accounts_reason_optional_label">Mba\'érepa (oikóramo)</string>
-    <string name="staff_accounts_sales">%1$d ñemu</string>
+    <string name="staff_accounts_sales">%1$s ñemu</string>
     <string name="staff_appeals_reason_label">Ñemuhára apelación mba\'érepa</string>
     <string name="staff_audit_action_auction_cancelled">Subasta ojeheja</string>
     <string name="staff_audit_action_staff_team_role_changed">Mba\'apohára rol oñemoambue</string>

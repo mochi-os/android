@@ -181,7 +181,7 @@
     <string name="crm_tree_empty">Nema objekata</string>
     <string name="crm_board_no_columns">Za ovaj prikaz nisu konfigurirane kolone</string>
     <string name="crm_board_no_options">Za polje kolone nisu konfigurirane opcije</string>
-    <string name="crm_board_nested_count">+%1$d ugniježđeno</string>
+    <string name="crm_board_nested_count">+%1$s ugniježđeno</string>
     <string name="crm_move_to_column">Premjesti u kolonu</string>
     <string name="crm_move_to_row">Premjesti u red</string>
     <string name="crm_move_after">Nakon %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Podaci CRM-a spremljeni</string>
     <string name="crm_create_upload_json">Otpremite .zip ili .json datoteku</string>
     <string name="crm_create_blocked_no_options">Nije moguće kreirati: %1$s je obavezno, ali nema opcija za odabir. Dodajte opcije u Dizajnu.</string>
-    <string name="crm_design_sample">Primjer %1$d</string>
+    <string name="crm_design_sample">Primjer %1$s</string>
     <string name="crm_option_delete_title">Obriši opciju</string>
     <string name="crm_option_delete_message">Jeste li sigurni da želite obrisati opciju \"%1$s\"?</string>
 </resources>

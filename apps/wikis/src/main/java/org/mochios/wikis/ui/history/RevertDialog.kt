@@ -44,7 +44,7 @@ internal fun RevertDialog(
     onConfirm: (String) -> Unit,
     onDismiss: () -> Unit,
 ) {
-    val defaultComment = stringResource(R.string.wikis_revert_page_default_comment, version)
+    val defaultComment = stringResource(R.string.wikis_revert_page_default_comment, version.toString())
     var comment by remember(version) { mutableStateOf(defaultComment) }
 
     MochiAlertDialog(
@@ -53,7 +53,7 @@ internal fun RevertDialog(
         content = {
             Column {
                 Text(
-                    text = stringResource(R.string.wikis_revert_page_message, slug, version),
+                    text = stringResource(R.string.wikis_revert_page_message, slug, version.toString()),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

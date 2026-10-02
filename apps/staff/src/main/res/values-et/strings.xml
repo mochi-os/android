@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Märkmed</string>
     <string name="staff_accounts_reason_label">Põhjus</string>
     <string name="staff_accounts_reason_optional_label">Põhjus (valikuline)</string>
-    <string name="staff_accounts_sales">%1$d müüki</string>
+    <string name="staff_accounts_sales">%1$s müüki</string>
     <string name="staff_accounts_search_clear">Tühjenda otsing</string>
     <string name="staff_accounts_search_placeholder">Otsi</string>
     <string name="staff_accounts_seller_buyers">Ainult ostjad</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Nimetu</string>
     <string name="staff_accounts_unsuspend">Eemalda peatamine</string>
     <string name="staff_accounts_unsuspended_toast">Konto peatamine eemaldatud</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Tühista</string>
     <string name="staff_appeals_decide">Otsusta</string>
     <string name="staff_appeals_decision_denied">Säilita kuulutus tagasi lükatud</string>

@@ -98,7 +98,7 @@
     <string name="feeds_source_type_feed_posts">Fil Mochi</string>
     <string name="feeds_source_type_feed_memories">Souvenirs</string>
     <string name="feeds_suggested_credibility_title">Crédibilité suggérée</string>
-    <string name="feeds_suggested_credibility_body">Mochi suggère une crédibilité de %1$d. Accepter ?</string>
+    <string name="feeds_suggested_credibility_body">Mochi suggère une crédibilité de %1$s. Accepter ?</string>
     <string name="feeds_suggested_credibility_keep">Conserver l\'actuelle</string>
     <string name="feeds_ai_processing_mode">Mode de traitement IA</string>
     <string name="feeds_ai_mode_tag_deduplicate">Étiqueter + dédupliquer</string>
@@ -177,12 +177,12 @@
     <string name="feeds_access_select_rule">Sélectionner une règle d\'accès</string>
     <string name="feeds_access_authenticated_desc">Toute personne connectée</string>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$s minute</item>
+        <item quantity="other">%1$s minutes</item>
     </plurals>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d heure</item>
-        <item quantity="other">%1$d heures</item>
+        <item quantity="one">%1$s heure</item>
+        <item quantity="other">%1$s heures</item>
     </plurals>
     <string name="feeds_banner_hint">Bienvenue dans ce forum…</string>
     <string name="feeds_banner_dismiss">Masquer la bannière</string>

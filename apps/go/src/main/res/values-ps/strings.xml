@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">ړنګ کړئ</string>
     <string name="go_delete_message">دا لوبه به ستاسو له لیست څخه لرې شي. دا نه شي بیرته راګرځیدلی.</string>
     <string name="go_delete_title">لوبه ړنګه شي؟</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">ومنه</string>
     <string name="go_draw_decline">رد کړئ</string>
     <string name="go_draw_offered_received">%1$s مساوي وړاندیز کړل</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">تسلیم شو</string>
     <string name="go_new_game_title">نوې د Go لوبه</string>
     <string name="go_new_game_no_friends">د لوبې پیل کولو دمخه باید ملګری اضافه کړئ.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">هغه ټکي چې د سپین نمرې ته ورزیاتېږي ترڅو د تور د لومړي حرکت جبران وشي</string>
 
-    <string name="go_board_a11y">%1$d×%1$d د Go بورډ</string>
-    <string name="go_board_a11y_turn_black">د Go تخته %1$d×%1$d، ستاسو وار دی چې تور ډبره کېږدئ</string>
-    <string name="go_board_a11y_turn_white">د Go تخته %1$d×%1$d، ستاسو وار دی چې سپینه ډبره کېږدئ</string>
+    <string name="go_board_a11y">%1$s×%1$s د Go بورډ</string>
+    <string name="go_board_a11y_turn_black">د Go تخته %1$s×%1$s، ستاسو وار دی چې تور ډبره کېږدئ</string>
+    <string name="go_board_a11y_turn_white">د Go تخته %1$s×%1$s، ستاسو وار دی چې سپینه ډبره کېږدئ</string>
     <string name="go_status_scoring">شمېرل — پر پایله سره سلا شئ یا لوبه ته دوام ورکړئ</string>
     <string name="go_score_proposed">وړاندیز شوی سکور: تور %1$s، سپین %2$s</string>
     <string name="go_score_opponent_accepted">ستاسو مخالف دا سکور مني: تور %1$s، سپین %2$s</string>

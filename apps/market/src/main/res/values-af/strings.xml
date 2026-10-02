@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Mark</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografie</string>
     <string name="market_account_biography_placeholder">Vertel kopers van jouself…</string>
     <string name="market_account_load_failed">Kon nie rekening laai nie</string>
@@ -72,8 +72,8 @@
     <string name="market_bids_tab_won">Gewen</string>
     <string name="market_bids_title">Bod</string>
     <string name="market_bids_your_bid">Jou bod: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d van %2$d</string>
-    <string name="market_carousel_thumbnail">Duimnael %1$d</string>
+    <string name="market_carousel_main">Foto %1$s van %2$s</string>
+    <string name="market_carousel_thumbnail">Duimnael %1$s</string>
     <string name="market_channel_name">Mark</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank kon nie verwerk nie</string>
     <string name="market_chargeback_reason_check_returned">Tjek teruggestuur</string>
@@ -135,7 +135,7 @@
     <string name="market_condition_refurbished">Opgeknap</string>
     <string name="market_condition_used">Gebruik</string>
     <string name="market_dispute_dialog_attach">Heg bewys aan</string>
-    <string name="market_dispute_dialog_attach_count">%1$d lêer(s) aangeheg</string>
+    <string name="market_dispute_dialog_attach_count">%1$s lêer(s) aangeheg</string>
     <string name="market_dispute_dialog_cancel">Kanselleer</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Koper</string>
     <string name="market_dispute_dialog_evidence_role_seller">Verkoper</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_condition_refurbished">Opgeknap</string>
     <string name="market_editor_condition_used">Gebruik</string>
     <string name="market_editor_currency">Geldeenheid</string>
-    <string name="market_editor_days">%1$d dae</string>
+    <string name="market_editor_days">%1$s dae</string>
     <string name="market_editor_delete">Vee lys uit</string>
     <string name="market_editor_delete_confirm_message">Dit sal die lys permanent uitvee.</string>
     <string name="market_editor_delete_confirm_title">Lys uitvee?</string>
@@ -312,7 +312,7 @@
     <string name="market_listing_detail_relist_failed">Kon nie weer lys nie</string>
     <string name="market_listing_detail_relist_in_progress">Weer-lyst</string>
     <string name="market_listing_detail_report">Rapporteer lys</string>
-    <string name="market_listing_detail_sales_count">%1$d verkope</string>
+    <string name="market_listing_detail_sales_count">%1$s verkope</string>
     <string name="market_listing_detail_save">Stoor</string>
     <string name="market_listing_detail_seller_banned_banner">Hierdie verkoper is verban. Nuwe bestellings kan nie geplaas word nie.</string>
     <string name="market_listing_detail_seller_heading">Verkoper</string>
@@ -364,7 +364,7 @@
     <string name="market_messages_send_failed">Kon nie boodskap stuur nie</string>
     <string name="market_messages_thread_listing_chip">Lys</string>
     <string name="market_messages_thread_title">Gesprek</string>
-    <string name="market_messages_unread_badge">%1$d ongelees</string>
+    <string name="market_messages_unread_badge">%1$s ongelees</string>
     <string name="market_onboarding_activate">Aktiveer</string>
     <string name="market_onboarding_activating">Aktiveer tans…</string>
     <string name="market_onboarding_body">Aktiveer jou rekening om te begin koop en verkoop.</string>
@@ -384,8 +384,8 @@
     <string name="market_profile_no_reviews">Nog geen resensies nie.</string>
     <string name="market_profile_rating_breakdown">Graderings-uitsplitsing</string>
     <string name="market_profile_reviews_section">Resensies</string>
-    <string name="market_profile_sales_count">%1$d verkope</string>
-    <string name="market_profile_stars_value">%1$d sterre</string>
+    <string name="market_profile_sales_count">%1$s verkope</string>
+    <string name="market_profile_stars_value">%1$s sterre</string>
     <string name="market_profile_status_banned">Verban</string>
     <string name="market_profile_status_suspended">Opgeskort</string>
     <string name="market_profile_verified">Geverifieer</string>
@@ -403,7 +403,7 @@
     <string name="market_purchase_dispute_response">Verkoper se antwoord</string>
     <string name="market_purchase_dispute_title">Terugbetalingsversoek</string>
     <string name="market_purchase_download_failed">Kon nie aflaai nie</string>
-    <string name="market_purchase_download_many">Laai jou %1$d lêers hieronder af.</string>
+    <string name="market_purchase_download_many">Laai jou %1$s lêers hieronder af.</string>
     <string name="market_purchase_download_one">Laai jou lêer hieronder af.</string>
     <string name="market_purchase_download_section">Jou aankoop is gereed</string>
     <string name="market_purchase_item">Item</string>
@@ -441,7 +441,7 @@
     <string name="market_purchases_won_for">Gewen vir %1$s</string>
     <string name="market_rating_label">Gradering</string>
     <string name="market_rating_no_reviews">Nog geen resensies nie</string>
-    <string name="market_rating_reviews">(%1$d resensies)</string>
+    <string name="market_rating_reviews">(%1$s resensies)</string>
     <string name="market_refund_amount_label">Bedrag</string>
     <string name="market_refund_body">Verskaf \'n rede vir jou terugbetalingsversoek.</string>
     <string name="market_refund_details_label">Besonderhede</string>
@@ -784,11 +784,11 @@
     <string name="market_listings_remove_message_auction">Hierdie sal die veiling kanselleer. Die lys sal versteek word vir kopers; jy kan dit later as \'n nuwe konsep her-lys.</string>
     <string name="market_listings_remove_title">Verwyder hierdie lys?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Dit sal die veiling kanselleer en %1$d aktiewe bieër in kennis stel. Die advertensie sal vir kopers versteek word; jy kan dit later as \'n nuwe konsep herlys.</item>
-        <item quantity="other">Dit sal die veiling kanselleer en %1$d aktiewe bieërs in kennis stel. Die advertensie sal vir kopers versteek word; jy kan dit later as \'n nuwe konsep herlys.</item>
+        <item quantity="one">Dit sal die veiling kanselleer en %1$s aktiewe bieër in kennis stel. Die advertensie sal vir kopers versteek word; jy kan dit later as \'n nuwe konsep herlys.</item>
+        <item quantity="other">Dit sal die veiling kanselleer en %1$s aktiewe bieërs in kennis stel. Die advertensie sal vir kopers versteek word; jy kan dit later as \'n nuwe konsep herlys.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Dit sal %1$d aktiewe intekening aan die einde van die huidige faktureringstydperk kanselleer. Intekenare sal in kennis gestel word. Die advertensie sal vir kopers versteek word.</item>
-        <item quantity="other">Dit sal %1$d aktiewe intekeninge aan die einde van die huidige faktureringstydperk kanselleer. Intekenare sal in kennis gestel word. Die advertensie sal vir kopers versteek word.</item>
+        <item quantity="one">Dit sal %1$s aktiewe intekening aan die einde van die huidige faktureringstydperk kanselleer. Intekenare sal in kennis gestel word. Die advertensie sal vir kopers versteek word.</item>
+        <item quantity="other">Dit sal %1$s aktiewe intekeninge aan die einde van die huidige faktureringstydperk kanselleer. Intekenare sal in kennis gestel word. Die advertensie sal vir kopers versteek word.</item>
     </plurals>
 </resources>

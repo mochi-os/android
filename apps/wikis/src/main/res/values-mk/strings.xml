@@ -220,7 +220,7 @@
     <string name="wikis_channel_description">Известувања за уредувања на страници, коментари и покани.</string>
     <string name="wikis_pageview_toc_expand">Прикажи содржина</string>
     <string name="wikis_pageview_toc_collapse">Скриј содржина</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Ажурирано %1$s</string>
     <string name="wikis_pageview_not_found_description">Страницата „%1$s\" сè уште не постои.</string>
     <string name="wikis_pageview_share_chooser">Врска на викито</string>
@@ -245,13 +245,13 @@
     <string name="wikis_delete_page_message">Се подготвувате да ја избришете страницата „%1$s\" (%2$s). Оваа акција може да се поништи со враќање од историјата.</string>
     <string name="wikis_delete_page_success">Страницата е избришана</string>
     <string name="wikis_revert_page_title">Врати страница</string>
-    <string name="wikis_revert_page_message">Се подготвувате да ја вратите %1$s на верзија %2$d. Ова ќе создаде нова ревизија со содржината на верзија %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Вратено на верзија %1$d</string>
-    <string name="wikis_revert_page_success">Вратено на верзија %1$d</string>
+    <string name="wikis_revert_page_message">Се подготвувате да ја вратите %1$s на верзија %2$s. Ова ќе создаде нова ревизија со содржината на верзија %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Вратено на верзија %1$s</string>
+    <string name="wikis_revert_page_success">Вратено на верзија %1$s</string>
     <string name="wikis_rename_page_renaming">Преименување…</string>
     <string name="wikis_rename_page_success">Страницата е преименувана</string>
-    <string name="wikis_history_viewing">Прегледување историја за %1$s, тековна верзија %2$d</string>
-    <string name="wikis_revision_version_badge">Верзија %1$d</string>
+    <string name="wikis_history_viewing">Прегледување историја за %1$s, тековна верзија %2$s</string>
+    <string name="wikis_revision_version_badge">Верзија %1$s</string>
     <string name="wikis_search_pages_placeholder">Барај страници по наслов или содржина…</string>
     <string name="wikis_search_no_results">Не се пронајдени страници за „%1$s\". Пробајте други термини за пребарување.</string>
     <string name="wikis_search_updated">Ажурирано %1$s</string>
@@ -286,38 +286,38 @@
     <string name="wikis_revision_author">по %1$s</string>
     <string name="wikis_revision_show_page">Прикажи страница</string>
     <string name="wikis_revision_compare_failed">Не може да се вчита претходната верзија за споредба.</string>
-    <string name="wikis_revision_changes_from">Промени од верзијата %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Промени од верзијата %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d коментар</item>
-        <item quantity="other">%d коментари</item>
+        <item quantity="one">%s коментар</item>
+        <item quantity="other">%s коментари</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d одговор</item>
-        <item quantity="other">+%d повеќе одговори</item>
+        <item quantity="one">%s одговор</item>
+        <item quantity="other">+%s повеќе одговори</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d страница</item>
-        <item quantity="other">%d страници</item>
+        <item quantity="one">%s страница</item>
+        <item quantity="other">%s страници</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d датотека</item>
-        <item quantity="other">%d датотеки</item>
+        <item quantity="one">%s датотека</item>
+        <item quantity="other">%s датотеки</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d слика</item>
-        <item quantity="other">%d слики</item>
+        <item quantity="one">%s слика</item>
+        <item quantity="other">%s слики</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d документ</item>
-        <item quantity="other">%d документи</item>
+        <item quantity="one">%s документ</item>
+        <item quantity="other">%s документи</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d страница со оваа ознака</item>
-        <item quantity="other">%d страници со оваа ознака</item>
+        <item quantity="one">%s страница со оваа ознака</item>
+        <item quantity="other">%s страници со оваа ознака</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Пронајдени се %1$d резултат за „%2$s“</item>
-        <item quantity="other">Пронајдени се %1$d резултати за „%2$s“</item>
+        <item quantity="one">Пронајдени се %1$s резултат за „%2$s“</item>
+        <item quantity="other">Пронајдени се %1$s резултати за „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Натписот не можеше да се зачува</string>
     <string name="wikis_attachments_upload_types">Поддржани датотеки: слики, PDF, DOC, DOCX, TXT и MD.</string>
@@ -326,7 +326,7 @@
     <string name="wikis_rss_copied_new">Новиот RSS URL е копиран во клипборд</string>
     <string name="wikis_rss_exists">Овој URL на каналот веќе е издаден и не може повторно да се прикаже.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Се прикажува првиот %1$d коментар.</item>
-        <item quantity="other">Се прикажуваат првите %1$d коментари.</item>
+        <item quantity="one">Се прикажува првиот %1$s коментар.</item>
+        <item quantity="other">Се прикажуваат првите %1$s коментари.</item>
     </plurals>
 </resources>

@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">કાઢી નાખો</string>
     <string name="go_delete_message">આ રમત તમારી સૂચીમાંથી દૂર કરવામાં આવશે. આને પાછું ફેરવી શકાતું નથી.</string>
     <string name="go_delete_title">ગેમ કાઢી નાખવી છે?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">સ્વીકારો</string>
     <string name="go_draw_decline">નકારો</string>
     <string name="go_draw_offered_received">%1$sએ ડ્રોની ઓફર કરી</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">હાર સ્વીકારી</string>
     <string name="go_new_game_title">નવી Go રમત</string>
     <string name="go_new_game_no_friends">રમત શરૂ કરતા પહેલા તમારે મિત્ર ઉમેરવો પડશે.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">કાળા પહેલા રમે તેની ભરપાઈ માટે સફેદના સ્કોરમાં ઉમેરાતા પોઈન્ટ</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go બોર્ડ</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d ગો બોર્ડ, કાળો પથ્થર મૂકવાનો તમારો વારો</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d ગો બોર્ડ, સફેદ પથ્થર મૂકવાનો તમારો વારો</string>
+    <string name="go_board_a11y">%1$s×%1$s Go બોર્ડ</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s ગો બોર્ડ, કાળો પથ્થર મૂકવાનો તમારો વારો</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s ગો બોર્ડ, સફેદ પથ્થર મૂકવાનો તમારો વારો</string>
     <string name="go_status_scoring">ગણતરી — સ્કોર પર સંમત થાઓ અથવા રમવાનું ચાલુ રાખો</string>
     <string name="go_score_proposed">સૂચિત સ્કોર: કાળું %1$s, સફેદ %2$s</string>
     <string name="go_score_opponent_accepted">તમારો પ્રતિસ્પર્ધી આ સ્કોર સ્વીકારે છે: કાળું %1$s, સફેદ %2$s</string>

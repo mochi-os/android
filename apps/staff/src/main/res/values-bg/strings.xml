@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Бележки</string>
     <string name="staff_accounts_reason_label">Причина</string>
     <string name="staff_accounts_reason_optional_label">Причина (по избор)</string>
-    <string name="staff_accounts_sales">%1$d продажби</string>
+    <string name="staff_accounts_sales">%1$s продажби</string>
     <string name="staff_accounts_search_clear">Изчисти търсенето</string>
     <string name="staff_accounts_search_placeholder">Търсене</string>
     <string name="staff_accounts_seller_buyers">Само купувачи</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Без име</string>
     <string name="staff_accounts_unsuspend">Премахни спирането</string>
     <string name="staff_accounts_unsuspended_toast">Спирането на акаунта е премахнато</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Отказ</string>
     <string name="staff_appeals_decide">Реши</string>
     <string name="staff_appeals_decision_denied">Запазено отхвърляне на обявата</string>

@@ -180,8 +180,8 @@
     <string name="people_books_create">Создај адресар</string>
     <string name="people_books_delete">Избриши адресар</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Да се избрише %1$s и неговиот %2$d контакт?</item>
-        <item quantity="other">Да се избрише %1$s и неговите %2$d контакти?</item>
+        <item quantity="one">Да се избрише %1$s и неговиот %2$s контакт?</item>
+        <item quantity="other">Да се избрише %1$s и неговите %2$s контакти?</item>
     </plurals>
     <string name="people_welcome_body">Најдете пријатели низ Mochi и поврзете се. Допрете Додај контакт за да испратите покана.</string>
     <string name="people_person_state_contact">Во контакти</string>

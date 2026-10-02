@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki صفحي جي ترميمن، تبصرن ۽ دعوتن بابت اطلاعون.</string>
     <string name="wikis_pageview_toc_expand">فهرست ڏيکاريو</string>
     <string name="wikis_pageview_toc_collapse">فهرست لڪايو</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">اپڊيٽ ٿيو %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” صفحو اڃا موجود ناهي.</string>
     <string name="wikis_pageview_share_chooser">وڪي لنڪ</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">اوھان “%1$s” (%2$s) صفحو ڊاھڻ وارا آھيو. ھي عمل تاريخ مان بحال ڪري واپس ڪري سگھجي ٿو.</string>
     <string name="wikis_delete_page_success">صفحو ختم ڪيو ويو</string>
     <string name="wikis_revert_page_title">صفحو واپس آڻيو</string>
-    <string name="wikis_revert_page_message">اوھان %1$s کي نسخو %2$d ڏانھن واپس ڪرڻ وارا آھيو. ھي نسخو %2$d جي مواد سان نئون نظرثاني ٺاھيندو.</string>
-    <string name="wikis_revert_page_default_comment">نسخو %1$d ڏانھن واپس ڪيو ويو</string>
-    <string name="wikis_revert_page_success">نسخو %1$d ڏانھن واپس ڪيو ويو</string>
+    <string name="wikis_revert_page_message">اوھان %1$s کي نسخو %2$s ڏانھن واپس ڪرڻ وارا آھيو. ھي نسخو %2$s جي مواد سان نئون نظرثاني ٺاھيندو.</string>
+    <string name="wikis_revert_page_default_comment">نسخو %1$s ڏانھن واپس ڪيو ويو</string>
+    <string name="wikis_revert_page_success">نسخو %1$s ڏانھن واپس ڪيو ويو</string>
     <string name="wikis_rename_page_renaming">نالو تبديل ٿي رهيو آهي…</string>
     <string name="wikis_rename_page_success">صفحي جو نالو تبديل ٿيو</string>
-    <string name="wikis_history_viewing">%1$s جي تاريخ ڏسي رهيا آھيو، موجوده نسخو %2$d</string>
-    <string name="wikis_revision_version_badge">ورجن %1$d</string>
+    <string name="wikis_history_viewing">%1$s جي تاريخ ڏسي رهيا آھيو، موجوده نسخو %2$s</string>
+    <string name="wikis_revision_version_badge">ورجن %1$s</string>
     <string name="wikis_search_pages_placeholder">صفحن کي عنوان يا مواد ذريعي ڳوليو…</string>
     <string name="wikis_search_no_results">“%1$s” لاءِ ڪو صفحو نه مليو. مختلف ڳولا لفظ آزمايو.</string>
     <string name="wikis_search_updated">اپڊيٽ ٿيو %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s جي ذريعي</string>
     <string name="wikis_revision_show_page">صفحو ڏيکاريو</string>
     <string name="wikis_revision_compare_failed">ڀيٽ لاءِ اڳوڻو نسخو لوڊ نه ٿي سگهيو.</string>
-    <string name="wikis_revision_changes_from">نسخي %1$d → %2$d کان تبديليون</string>
+    <string name="wikis_revision_changes_from">نسخي %1$s → %2$s کان تبديليون</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d تبصرو</item>
-        <item quantity="other">%d تبصرا</item>
+        <item quantity="one">%s تبصرو</item>
+        <item quantity="other">%s تبصرا</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d جواب</item>
-        <item quantity="other">+%d وڌيڪ جواب</item>
+        <item quantity="one">%s جواب</item>
+        <item quantity="other">+%s وڌيڪ جواب</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d صفحو</item>
-        <item quantity="other">%d صفحا</item>
+        <item quantity="one">%s صفحو</item>
+        <item quantity="other">%s صفحا</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d فائل</item>
-        <item quantity="other">%d فائلون</item>
+        <item quantity="one">%s فائل</item>
+        <item quantity="other">%s فائلون</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d تصوير</item>
-        <item quantity="other">%d تصويرون</item>
+        <item quantity="one">%s تصوير</item>
+        <item quantity="other">%s تصويرون</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d دستاويز</item>
-        <item quantity="other">%d دستاويز</item>
+        <item quantity="one">%s دستاويز</item>
+        <item quantity="other">%s دستاويز</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">ھن ٽيگ سان %d صفحو</item>
-        <item quantity="other">ھن ٽيگ سان %d صفحا</item>
+        <item quantity="one">ھن ٽيگ سان %s صفحو</item>
+        <item quantity="other">ھن ٽيگ سان %s صفحا</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">\"%2$s\" لاءِ %1$d نتيجو مليا</item>
-        <item quantity="other">\"%2$s\" لاءِ %1$d نتيجا مليا</item>
+        <item quantity="one">\"%2$s\" لاءِ %1$s نتيجو مليا</item>
+        <item quantity="other">\"%2$s\" لاءِ %1$s نتيجا مليا</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ڪيپشن محفوظ نه ٿي سگهيو</string>
     <string name="wikis_attachments_upload_types">سهڪاري فائلون: تصويرون، PDF، DOC، DOCX، TXT، ۽ MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">نئون RSS URL ڪلپ بورڊ تي ڪاپي ٿيو</string>
     <string name="wikis_rss_exists">هي فيڊ URL اڳ ۾ ئي جاري ٿي چڪو آهي ۽ ٻيهر نه ڏيکاري سگهجي.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">پهرين %1$d تبصرو ڏيکاريو پيو وڃي.</item>
-        <item quantity="other">پهريان %1$d تبصرا ڏيکاريا پيا وڃن.</item>
+        <item quantity="one">پهرين %1$s تبصرو ڏيکاريو پيو وڃي.</item>
+        <item quantity="other">پهريان %1$s تبصرا ڏيکاريا پيا وڃن.</item>
     </plurals>
 </resources>

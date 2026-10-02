@@ -57,6 +57,7 @@ import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.WikiContextValue
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * Comments for a single wiki page. Provides [LocalWikiContext] so children can
@@ -214,7 +215,7 @@ private fun CommentsBody(
                                 text = pluralStringResource(
                                     R.plurals.wikis_comments_truncated,
                                     state.comments.size,
-                                    state.comments.size,
+                                    LocalFormat.current.formatNumber(state.comments.size),
                                 ),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,

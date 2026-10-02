@@ -82,7 +82,7 @@ fun PageHistoryScreen(
     val revertFailedMsg = stringResource(R.string.wikis_revert_page_failed)
     val revertedMsg = stringResource(
         R.string.wikis_revert_page_success,
-        revertTarget ?: 0,
+        (revertTarget ?: 0).toString(),
     )
 
     // A revert makes the page the thing worth looking at, not its history.
@@ -205,7 +205,7 @@ private fun PageHistoryBody(
             text = stringResource(
                 R.string.wikis_history_viewing,
                 slug,
-                currentVersion,
+                currentVersion.toString(),
             ),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,

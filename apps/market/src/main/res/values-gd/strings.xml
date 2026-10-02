@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Margadh</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Beatha-eachdraidh</string>
     <string name="market_account_biography_placeholder">Innis do luchd-ceannach mu do dheidhinn…</string>
     <string name="market_account_load_failed">Cha b’ urrainn an cunntas a luchdadh</string>
@@ -55,7 +55,7 @@
     <string name="market_bids_tab_outbid">Tairgse nas àirde</string>
     <string name="market_bids_tab_won">Air a bhuannachadh</string>
     <string name="market_bids_title">Tairgsean</string>
-    <string name="market_carousel_main">Dealbh %1$d às %2$d</string>
+    <string name="market_carousel_main">Dealbh %1$s às %2$s</string>
     <string name="market_channel_name">Margadh</string>
     <string name="market_chargeback_reason_bank_cannot_process">Cha b\' urrainn don bhanca a phròiseasadh</string>
     <string name="market_chargeback_reason_check_returned">Seic air a thilleadh</string>
@@ -134,7 +134,7 @@
     <string name="market_editor_condition_refurbished">Air ath-nuadhachadh</string>
     <string name="market_editor_condition_used">Air a chleachdadh</string>
     <string name="market_editor_currency">Airgeadra</string>
-    <string name="market_editor_days">%1$d làithean</string>
+    <string name="market_editor_days">%1$s làithean</string>
     <string name="market_editor_delete">Sguab às an liosta</string>
     <string name="market_editor_description">Tuairisgeul</string>
     <string name="market_editor_interval_monthly">Mìosail</string>
@@ -324,7 +324,7 @@
     <string name="market_purchases_title">Ceannachdan</string>
     <string name="market_rating_label">Rangadh</string>
     <string name="market_rating_no_reviews">Chan eil lèirmheasan ann fhathast</string>
-    <string name="market_rating_reviews">(%1$d lèirmheas)</string>
+    <string name="market_rating_reviews">(%1$s lèirmheas)</string>
     <string name="market_refund_amount_label">Suim</string>
     <string name="market_refund_body">Thoir adhbhar airson d\' iarrtas ath-dhìolaidh.</string>
     <string name="market_refund_details_label">Mion-fhiosrachadh</string>
@@ -474,10 +474,10 @@
     <string name="market_sale_review_response_submitting">Ga chur…</string>
     <string name="market_checkout_subscribing">A\' fo-sgrìobhadh…</string>
     <string name="market_filter_remove">Thoir air falbh a\' chriathrag</string>
-    <string name="market_listing_detail_sales_count">%1$d reic</string>
+    <string name="market_listing_detail_sales_count">%1$s reic</string>
     <string name="market_listings_action_appeal">Tagradh thoirt air falbh</string>
     <string name="market_listings_share_chooser">Co-roinn liosta</string>
-    <string name="market_profile_sales_count">%1$d reic</string>
+    <string name="market_profile_sales_count">%1$s reic</string>
     <string name="market_purchase_dispute_response">Freagairt an reiceadair</string>
     <string name="market_refund_dialog_amount_label">Suim</string>
 
@@ -497,11 +497,11 @@
     <string name="market_bids_current_bid">Làithreach: %1$s</string>
     <string name="market_bids_ends_in">A\' crìochnachadh an ceann %1$s</string>
     <string name="market_bids_your_bid">An tairgse agad: %1$s</string>
-    <string name="market_carousel_thumbnail">Dealbhag %1$d</string>
+    <string name="market_carousel_thumbnail">Dealbhag %1$s</string>
     <string name="market_checkout_browser_unavailable">Chan eil brabhsair ri làimh airson duilleag a\' phàighidh fhosgladh</string>
     <string name="market_checkout_pwyw_label">Do phrìs (a\' char as lugha %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Feumaidh an t-suim a bhith co-dhiù %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d faidhle(ichean) ceangailte</string>
+    <string name="market_dispute_dialog_attach_count">%1$s faidhle(ichean) ceangailte</string>
     <string name="market_dispute_dialog_evidence_section_title">Fianais a chaidh a chur a-steach</string>
     <string name="market_dispute_dialog_evidence_submitter_line">air a chur a-steach le %1$s</string>
     <string name="market_editor_appeal">Tagair an co-dhùnadh</string>
@@ -573,7 +573,7 @@
     <string name="market_messages_inbox_empty_title">Chan eil còmhradh sam bith ann fhathast</string>
     <string name="market_messages_load_failed">Cha b\' urrainnear an snàithlean a luchdadh</string>
     <string name="market_messages_send_failed">Cha b\' urrainnear an teachdaireachd a chur</string>
-    <string name="market_messages_unread_badge">%1$d gun leughadh</string>
+    <string name="market_messages_unread_badge">%1$s gun leughadh</string>
     <string name="market_price_high_bid">Tairgse as àirde: %1$s</string>
     <string name="market_price_instant_buy">ceannach sa bhad: %1$s</string>
     <string name="market_price_starting_bid">Tairgse tòiseachaidh: %1$s</string>
@@ -581,10 +581,10 @@
     <string name="market_profile_member_since">\'Na bhall bho %1$s</string>
     <string name="market_profile_joined">Air clàradh %1$s</string>
     <string name="market_profile_rating_breakdown">Briseadh sìos rangachaidh</string>
-    <string name="market_profile_stars_value">%1$d rionnagan</string>
+    <string name="market_profile_stars_value">%1$s rionnagan</string>
     <string name="market_purchase_dispute_chargeback">Cùl-thagradh %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Chuir am banca agad cùl-thagradh a-steach air an òrdugh seo. Tha Stripe a\' làimhseachadh na connspaid leis an reiceadair; nochdaidh a\' bhuil an seo nuair a thèid a co-dhùnadh.</string>
-    <string name="market_purchase_download_many">Luchdaich a-nuas na %1$d faidhlichean agad gu h-ìosal.</string>
+    <string name="market_purchase_download_many">Luchdaich a-nuas na %1$s faidhlichean agad gu h-ìosal.</string>
     <string name="market_purchase_download_one">Luchdaich a-nuas am faidhle agad gu h-ìosal.</string>
     <string name="market_purchase_review_from">Lèirmheas o %1$s</string>
     <string name="market_purchases_auction_label">Rop #%1$s</string>
@@ -785,15 +785,15 @@
     <string name="market_listings_remove_message_auction">Sguiridh seo dhen ròp. Thèid an liostachadh fhalach bho luchd-ceannach; \'s urrainn dhut ath-liostadh nas fhaide air adhart mar dhreachd ùr.</string>
     <string name="market_listings_remove_title">Thoir an liostadh seo air falbh?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Sguirear dhen rop agus thèid fios a chur gu %1$d thairgsear gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>
-        <item quantity="two">Sguirear dhen rop agus thèid fios a chur gu %1$d thairgsear gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>
-        <item quantity="few">Sguirear dhen rop agus thèid fios a chur gu %1$d tairgsearan gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>
-        <item quantity="other">Sguirear dhen rop agus thèid fios a chur gu %1$d tairgsear gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>
+        <item quantity="one">Sguirear dhen rop agus thèid fios a chur gu %1$s thairgsear gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>
+        <item quantity="two">Sguirear dhen rop agus thèid fios a chur gu %1$s thairgsear gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>
+        <item quantity="few">Sguirear dhen rop agus thèid fios a chur gu %1$s tairgsearan gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>
+        <item quantity="other">Sguirear dhen rop agus thèid fios a chur gu %1$s tairgsear gnìomhach. Thèid an sanas fhalach o luchd-ceannach; faodaidh tu a chur suas a-rithist mar dhreachd ùr uaireigin eile.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Sguirear de %1$d fho-sgrìobhadh gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
-        <item quantity="two">Sguirear de %1$d fho-sgrìobhadh gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
-        <item quantity="few">Sguirear de %1$d fo-sgrìobhaidhean gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
-        <item quantity="other">Sguirear de %1$d fo-sgrìobhadh gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
+        <item quantity="one">Sguirear de %1$s fho-sgrìobhadh gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
+        <item quantity="two">Sguirear de %1$s fho-sgrìobhadh gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
+        <item quantity="few">Sguirear de %1$s fo-sgrìobhaidhean gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
+        <item quantity="other">Sguirear de %1$s fo-sgrìobhadh gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
     </plurals>
 </resources>

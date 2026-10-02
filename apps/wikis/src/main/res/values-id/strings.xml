@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Notifikasi tentang pengeditan halaman, komentar, dan undangan.</string>
     <string name="wikis_pageview_toc_expand">Tampilkan daftar isi</string>
     <string name="wikis_pageview_toc_collapse">Sembunyikan daftar isi</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Diperbarui %1$s</string>
     <string name="wikis_pageview_not_found_description">Halaman \"%1$s\" belum ada.</string>
     <string name="wikis_pageview_share_chooser">Tautan wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Anda akan menghapus halaman \"%1$s\" (%2$s). Tindakan ini dapat dibatalkan dengan memulihkan dari riwayat.</string>
     <string name="wikis_delete_page_success">Halaman dihapus</string>
     <string name="wikis_revert_page_title">Kembalikan halaman</string>
-    <string name="wikis_revert_page_message">Anda akan mengembalikan %1$s ke versi %2$d. Ini akan membuat revisi baru dengan konten versi %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Dikembalikan ke versi %1$d</string>
-    <string name="wikis_revert_page_success">Dikembalikan ke versi %1$d</string>
+    <string name="wikis_revert_page_message">Anda akan mengembalikan %1$s ke versi %2$s. Ini akan membuat revisi baru dengan konten versi %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Dikembalikan ke versi %1$s</string>
+    <string name="wikis_revert_page_success">Dikembalikan ke versi %1$s</string>
     <string name="wikis_rename_page_renaming">Mengganti nama…</string>
     <string name="wikis_rename_page_success">Halaman diganti namanya</string>
-    <string name="wikis_history_viewing">Melihat riwayat untuk %1$s, versi saat ini %2$d</string>
-    <string name="wikis_revision_version_badge">Versi %1$d</string>
+    <string name="wikis_history_viewing">Melihat riwayat untuk %1$s, versi saat ini %2$s</string>
+    <string name="wikis_revision_version_badge">Versi %1$s</string>
     <string name="wikis_search_pages_placeholder">Cari halaman berdasarkan judul atau konten…</string>
     <string name="wikis_search_no_results">Tidak ada halaman ditemukan untuk \"%1$s\". Coba istilah pencarian lain.</string>
     <string name="wikis_search_updated">Diperbarui %1$s</string>
@@ -289,37 +289,37 @@
     <string name="wikis_revision_author">oleh %1$s</string>
     <string name="wikis_revision_show_page">Tampilkan halaman</string>
     <string name="wikis_revision_compare_failed">Tidak dapat memuat versi sebelumnya untuk perbandingan.</string>
-    <string name="wikis_revision_changes_from">Perubahan dari versi %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Perubahan dari versi %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d komentar</item>
+        <item quantity="other">%s komentar</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d balasan</item>
-        <item quantity="other">+%d balasan lainnya</item>
+        <item quantity="one">%s balasan</item>
+        <item quantity="other">+%s balasan lainnya</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d halaman</item>
-        <item quantity="other">%d halaman</item>
+        <item quantity="one">%s halaman</item>
+        <item quantity="other">%s halaman</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d berkas</item>
-        <item quantity="other">%d berkas</item>
+        <item quantity="one">%s berkas</item>
+        <item quantity="other">%s berkas</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d gambar</item>
-        <item quantity="other">%d gambar</item>
+        <item quantity="one">%s gambar</item>
+        <item quantity="other">%s gambar</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokumen</item>
-        <item quantity="other">%d dokumen</item>
+        <item quantity="one">%s dokumen</item>
+        <item quantity="other">%s dokumen</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d halaman dengan tag ini</item>
-        <item quantity="other">%d halaman dengan tag ini</item>
+        <item quantity="one">%s halaman dengan tag ini</item>
+        <item quantity="other">%s halaman dengan tag ini</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Ditemukan %1$d hasil untuk «%2$s»</item>
-        <item quantity="other">Ditemukan %1$d hasil untuk «%2$s»</item>
+        <item quantity="one">Ditemukan %1$s hasil untuk «%2$s»</item>
+        <item quantity="other">Ditemukan %1$s hasil untuk «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Gagal menyimpan keterangan</string>
     <string name="wikis_attachments_upload_types">Berkas yang didukung: gambar, PDF, DOC, DOCX, TXT, dan MD.</string>
@@ -328,6 +328,6 @@
     <string name="wikis_rss_copied_new">URL RSS baru disalin ke clipboard</string>
     <string name="wikis_rss_exists">URL umpan ini sudah diterbitkan dan tidak dapat ditampilkan lagi.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">Menampilkan %1$d komentar pertama.</item>
+        <item quantity="other">Menampilkan %1$s komentar pertama.</item>
     </plurals>
 </resources>

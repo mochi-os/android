@@ -180,11 +180,11 @@
     <string name="people_books_create">Cruthaigh leabhar seoltaí</string>
     <string name="people_books_delete">Scrios an leabhar seoltaí</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Scrios %1$s agus an %2$d teagmhálaí atá ann?</item>
-        <item quantity="two">Scrios %1$s agus an %2$d theagmhálaí atá ann?</item>
-        <item quantity="few">Scrios %1$s agus na %2$d theagmhálaí atá ann?</item>
-        <item quantity="many">Scrios %1$s agus na %2$d dteagmhálaí atá ann?</item>
-        <item quantity="other">Scrios %1$s agus na %2$d teagmhálaí atá ann?</item>
+        <item quantity="one">Scrios %1$s agus an %2$s teagmhálaí atá ann?</item>
+        <item quantity="two">Scrios %1$s agus an %2$s theagmhálaí atá ann?</item>
+        <item quantity="few">Scrios %1$s agus na %2$s theagmhálaí atá ann?</item>
+        <item quantity="many">Scrios %1$s agus na %2$s dteagmhálaí atá ann?</item>
+        <item quantity="other">Scrios %1$s agus na %2$s teagmhálaí atá ann?</item>
     </plurals>
     <string name="people_welcome_body">Aimsigh cairde ar fud Mochi agus ceangail leo. Tapáil Cuir teagmhálaí leis chun cuireadh a sheoladh.</string>
     <string name="people_person_state_contact">Sna teagmhálaithe</string>

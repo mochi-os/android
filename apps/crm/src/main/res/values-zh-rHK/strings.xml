@@ -137,7 +137,7 @@
     <string name="crm_board_no_options">欄位欄未設定任何選項</string>
     <string name="crm_board_unassigned">未指派</string>
     <string name="crm_board_rename_column">重新命名欄</string>
-    <string name="crm_board_nested_count">+%1$d 個巢狀</string>
+    <string name="crm_board_nested_count">+%1$s 個巢狀</string>
     <string name="crm_move_to_column">移至欄</string>
     <string name="crm_move_to_row">移至列</string>
     <string name="crm_move_after">於 %1$s 之後</string>

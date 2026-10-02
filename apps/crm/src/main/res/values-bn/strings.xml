@@ -181,7 +181,7 @@
     <string name="crm_tree_empty">কোনো অবজেক্ট নেই</string>
     <string name="crm_board_no_columns">এই ভিউয়ের জন্য কোনো কলাম কনফিগার করা হয়নি</string>
     <string name="crm_board_no_options">কলাম ফিল্ডের জন্য কোনো অপশন কনফিগার করা হয়নি</string>
-    <string name="crm_board_nested_count">+%1$d নেস্টেড</string>
+    <string name="crm_board_nested_count">+%1$s নেস্টেড</string>
     <string name="crm_move_to_column">কলামে সরান</string>
     <string name="crm_move_to_row">সারিতে সরান</string>
     <string name="crm_move_after">%1$s-এর পরে</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM ডেটা সংরক্ষিত হয়েছে</string>
     <string name="crm_create_upload_json">.zip বা .json ফাইল আপলোড করুন</string>
     <string name="crm_create_blocked_no_options">তৈরি করা যায়নি: %1$s আবশ্যক কিন্তু বেছে নেওয়ার মতো কোনো বিকল্প নেই। ডিজাইনে বিকল্প যোগ করুন।</string>
-    <string name="crm_design_sample">নমুনা %1$d</string>
+    <string name="crm_design_sample">নমুনা %1$s</string>
     <string name="crm_option_delete_title">অপশন মুছুন</string>
     <string name="crm_option_delete_message">আপনি কি নিশ্চিত যে আপনি \"%1$s\" অপশনটি মুছে ফেলতে চান?</string>
 </resources>

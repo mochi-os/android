@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Tilkynningar um breytingar á wiki-síðum, athugasemdir og boð.</string>
     <string name="wikis_pageview_toc_expand">Sýna efnisyfirlit</string>
     <string name="wikis_pageview_toc_collapse">Fela efnisyfirlit</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Uppfært %1$s</string>
     <string name="wikis_pageview_not_found_description">Síðan „%1$s“ er ekki til enn.</string>
     <string name="wikis_pageview_share_chooser">Wiki-tengill</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Þú ert að fara að eyða síðunni „%1$s“ (%2$s). Hægt er að afturkalla þessa aðgerð með því að endurheimta úr ferlinum.</string>
     <string name="wikis_delete_page_success">Síðu eytt</string>
     <string name="wikis_revert_page_title">Bakfæra síðu</string>
-    <string name="wikis_revert_page_message">Þú ert að fara að færa %1$s til baka í útgáfu %2$d. Þetta býr til nýja endurskoðun með efninu úr útgáfu %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Fært til baka í útgáfu %1$d</string>
-    <string name="wikis_revert_page_success">Fært til baka í útgáfu %1$d</string>
+    <string name="wikis_revert_page_message">Þú ert að fara að færa %1$s til baka í útgáfu %2$s. Þetta býr til nýja endurskoðun með efninu úr útgáfu %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Fært til baka í útgáfu %1$s</string>
+    <string name="wikis_revert_page_success">Fært til baka í útgáfu %1$s</string>
     <string name="wikis_rename_page_renaming">Endurnefni…</string>
     <string name="wikis_rename_page_success">Síða endurnefnd</string>
-    <string name="wikis_history_viewing">Skoða feril fyrir %1$s, núverandi útgáfa %2$d</string>
-    <string name="wikis_revision_version_badge">Útgáfa %1$d</string>
+    <string name="wikis_history_viewing">Skoða feril fyrir %1$s, núverandi útgáfa %2$s</string>
+    <string name="wikis_revision_version_badge">Útgáfa %1$s</string>
     <string name="wikis_search_pages_placeholder">Leita að síðum eftir titli eða efni…</string>
     <string name="wikis_search_no_results">Engar síður fundust fyrir „%1$s“. Prófaðu önnur leitarorð.</string>
     <string name="wikis_search_updated">Uppfært %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">eftir %1$s</string>
     <string name="wikis_revision_show_page">Sýna síðu</string>
     <string name="wikis_revision_compare_failed">Ekki tókst að hlaða fyrri útgáfu til samanburðar.</string>
-    <string name="wikis_revision_changes_from">Breytingar frá útgáfu %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Breytingar frá útgáfu %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d athugasemd</item>
-        <item quantity="other">%d athugasemdir</item>
+        <item quantity="one">%s athugasemd</item>
+        <item quantity="other">%s athugasemdir</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d svar</item>
-        <item quantity="other">+%d fleiri svör</item>
+        <item quantity="one">%s svar</item>
+        <item quantity="other">+%s fleiri svör</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d síða</item>
-        <item quantity="other">%d síður</item>
+        <item quantity="one">%s síða</item>
+        <item quantity="other">%s síður</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d skrá</item>
-        <item quantity="other">%d skrár</item>
+        <item quantity="one">%s skrá</item>
+        <item quantity="other">%s skrár</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d mynd</item>
-        <item quantity="other">%d myndir</item>
+        <item quantity="one">%s mynd</item>
+        <item quantity="other">%s myndir</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d skjal</item>
-        <item quantity="other">%d skjöl</item>
+        <item quantity="one">%s skjal</item>
+        <item quantity="other">%s skjöl</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d síða með þessu merki</item>
-        <item quantity="other">%d síður með þessu merki</item>
+        <item quantity="one">%s síða með þessu merki</item>
+        <item quantity="other">%s síður með þessu merki</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Fann %1$d niðurstaða fyrir «%2$s»</item>
-        <item quantity="other">Fann %1$d niðurstöður fyrir «%2$s»</item>
+        <item quantity="one">Fann %1$s niðurstaða fyrir «%2$s»</item>
+        <item quantity="other">Fann %1$s niðurstöður fyrir «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ekki tókst að vista myndatextann</string>
     <string name="wikis_attachments_upload_types">Studdar skrár: myndir, PDF, DOC, DOCX, TXT og MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Ný RSS-vefslóð afrituð á klippiborð</string>
     <string name="wikis_rss_exists">Þessi streymisslóð hefur þegar verið gefin út og ekki er hægt að sýna hana aftur.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Sýnir fyrstu %1$d athugasemd.</item>
-        <item quantity="other">Sýnir fyrstu %1$d athugasemdir.</item>
+        <item quantity="one">Sýnir fyrstu %1$s athugasemd.</item>
+        <item quantity="other">Sýnir fyrstu %1$s athugasemdir.</item>
     </plurals>
 </resources>

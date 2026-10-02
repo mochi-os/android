@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ਮਾਰਕੀਟ</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ਜੀਵਨੀ</string>
     <string name="market_account_biography_placeholder">ਖਰੀਦਦਾਰਾਂ ਨੂੰ ਆਪਣੇ ਬਾਰੇ ਦੱਸੋ…</string>
     <string name="market_account_load_failed">ਖਾਤਾ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">ਬੋਲੀ ਪਿੱਛੇ</string>
     <string name="market_bids_tab_won">ਜਿੱਤਿਆ</string>
     <string name="market_bids_title">ਬੋਲੀਆਂ</string>
-    <string name="market_carousel_main">ਫੋਟੋ %1$d / %2$d</string>
+    <string name="market_carousel_main">ਫੋਟੋ %1$s / %2$s</string>
     <string name="market_channel_name">ਮਾਰਕੀਟ</string>
     <string name="market_chargeback_reason_bank_cannot_process">ਬੈਂਕ ਪ੍ਰਕਿਰਿਆ ਨਹੀਂ ਕਰ ਸਕਿਆ</string>
     <string name="market_chargeback_reason_check_returned">ਚੈੱਕ ਵਾਪਸ ਆਇਆ</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">ਨਵਿਆਇਆ</string>
     <string name="market_editor_condition_used">ਵਰਤਿਆ</string>
     <string name="market_editor_currency">ਮੁਦਰਾ</string>
-    <string name="market_editor_days">%1$d ਦਿਨ</string>
+    <string name="market_editor_days">%1$s ਦਿਨ</string>
     <string name="market_editor_delete">ਇਸ਼ਤਿਹਾਰ ਮਿਟਾਓ</string>
     <string name="market_editor_description">ਵੇਰਵਾ</string>
     <string name="market_editor_interval_monthly">ਮਾਸਿਕ</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">ਖਰੀਦਾਰੀਆਂ</string>
     <string name="market_rating_label">ਰੇਟਿੰਗ</string>
     <string name="market_rating_no_reviews">ਅਜੇ ਕੋਈ ਸਮੀਖਿਆਵਾਂ ਨਹੀਂ</string>
-    <string name="market_rating_reviews">(%1$d ਸਮੀਖਿਆ)</string>
+    <string name="market_rating_reviews">(%1$s ਸਮੀਖਿਆ)</string>
     <string name="market_refund_amount_label">ਰਕਮ</string>
     <string name="market_refund_body">ਆਪਣੀ ਰਿਫੰਡ ਬੇਨਤੀ ਲਈ ਕਾਰਨ ਦਿਓ।</string>
     <string name="market_refund_details_label">ਵੇਰਵੇ</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">ਮੌਜੂਦਾ: %1$s</string>
     <string name="market_bids_ends_in">%1$s ਵਿੱਚ ਖਤਮ</string>
     <string name="market_bids_your_bid">ਤੁਹਾਡੀ ਬੋਲੀ: %1$s</string>
-    <string name="market_carousel_thumbnail">ਥੰਬਨੇਲ %1$d</string>
+    <string name="market_carousel_thumbnail">ਥੰਬਨੇਲ %1$s</string>
     <string name="market_checkout_browser_unavailable">ਭੁਗਤਾਨ ਪੰਨਾ ਖੋਲ੍ਹਣ ਲਈ ਕੋਈ ਬ੍ਰਾਊਜ਼ਰ ਉਪਲਬਧ ਨਹੀਂ</string>
     <string name="market_checkout_pwyw_label">ਤੁਹਾਡੀ ਕੀਮਤ (ਘੱਟੋ-ਘੱਟ %1$s)</string>
     <string name="market_checkout_pwyw_min_error">ਰਕਮ ਘੱਟੋ-ਘੱਟ %1$s ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ਫ਼ਾਈਲ(ਾਂ) ਜੋੜੀਆਂ ਗਈਆਂ</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ਫ਼ਾਈਲ(ਾਂ) ਜੋੜੀਆਂ ਗਈਆਂ</string>
     <string name="market_dispute_dialog_evidence_section_title">ਪੇਸ਼ ਕੀਤੇ ਸਬੂਤ</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s ਵੱਲੋਂ ਪੇਸ਼ ਕੀਤਾ ਗਿਆ</string>
     <string name="market_editor_appeal">ਸੰਚਾਲਨ ਖ਼ਿਲਾਫ਼ ਅਪੀਲ</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">ਸੂਚੀ ਲੋਡ ਹੋ ਰਹੀ ਹੈ</string>
     <string name="market_listing_detail_relist_failed">ਮੁੜ-ਸੂਚੀਬੱਧ ਨਹੀਂ ਹੋ ਸਕਿਆ</string>
     <string name="market_listing_detail_relist_in_progress">ਮੁੜ-ਸੂਚੀਬੱਧ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
-    <string name="market_listing_detail_sales_count">%1$d ਵਿਕਰੀਆਂ</string>
+    <string name="market_listing_detail_sales_count">%1$s ਵਿਕਰੀਆਂ</string>
     <string name="market_listing_detail_seller_banned_banner">ਇਹ ਵਿਕਰੇਤਾ ਪਾਬੰਦੀਸ਼ੁਦਾ ਹੈ। ਨਵੇਂ ਆਰਡਰ ਨਹੀਂ ਦਿੱਤੇ ਜਾ ਸਕਦੇ।</string>
     <string name="market_listing_detail_seller_suspended_banner">ਇਹ ਵਿਕਰੇਤਾ ਮੁਅੱਤਲ ਹੈ। ਖਾਤਾ ਬਹਾਲ ਹੋਣ ਤੱਕ ਨਵੇਂ ਆਰਡਰ ਰੋਕੇ ਗਏ ਹਨ।</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">ਜਦੋਂ ਵਿਕਰੇਤਾ ਦਾ ਖਾਤਾ ਸੀਮਤ ਹੈ ਤਾਂ ਖਰੀਦਣਾ ਅਯੋਗ ਹੈ।</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">ਅਜੇ ਕੋਈ ਗੱਲਬਾਤ ਨਹੀਂ</string>
     <string name="market_messages_load_failed">ਥਰੈੱਡ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ</string>
     <string name="market_messages_send_failed">ਸੁਨੇਹਾ ਨਹੀਂ ਭੇਜਿਆ ਜਾ ਸਕਿਆ</string>
-    <string name="market_messages_unread_badge">%1$d ਅਣਪੜ੍ਹੇ</string>
+    <string name="market_messages_unread_badge">%1$s ਅਣਪੜ੍ਹੇ</string>
     <string name="market_price_high_bid">ਉੱਚੀ ਬੋਲੀ: %1$s</string>
     <string name="market_price_instant_buy">ਤੁਰੰਤ ਖਰੀਦ: %1$s</string>
     <string name="market_price_starting_bid">ਸ਼ੁਰੂਆਤੀ ਬੋਲੀ: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">%1$s ਤੋਂ ਮੈਂਬਰ</string>
     <string name="market_profile_joined">%1$s ਨੂੰ ਸ਼ਾਮਲ ਹੋਏ</string>
     <string name="market_profile_rating_breakdown">ਰੇਟਿੰਗ ਵੇਰਵਾ</string>
-    <string name="market_profile_sales_count">%1$d ਵਿਕਰੀਆਂ</string>
-    <string name="market_profile_stars_value">%1$d ਤਾਰੇ</string>
+    <string name="market_profile_sales_count">%1$s ਵਿਕਰੀਆਂ</string>
+    <string name="market_profile_stars_value">%1$s ਤਾਰੇ</string>
     <string name="market_purchase_dispute_chargeback">ਚਾਰਜਬੈਕ %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ਤੁਹਾਡੇ ਬੈਂਕ ਨੇ ਇਸ ਆਰਡਰ \'ਤੇ ਚਾਰਜਬੈਕ ਦਾਇਰ ਕੀਤਾ ਹੈ। Stripe ਵਿਕਰੇਤਾ ਨਾਲ ਵਿਵਾਦ ਨੂੰ ਸੰਭਾਲ ਰਿਹਾ ਹੈ; ਫੈਸਲਾ ਹੋਣ \'ਤੇ ਨਤੀਜਾ ਇੱਥੇ ਦਿਖਾਈ ਦੇਵੇਗਾ।</string>
     <string name="market_purchase_dispute_response">ਵਿਕਰੇਤਾ ਦਾ ਜਵਾਬ</string>
-    <string name="market_purchase_download_many">ਹੇਠਾਂ ਆਪਣੀਆਂ %1$d ਫਾਈਲਾਂ ਡਾਊਨਲੋਡ ਕਰੋ।</string>
+    <string name="market_purchase_download_many">ਹੇਠਾਂ ਆਪਣੀਆਂ %1$s ਫਾਈਲਾਂ ਡਾਊਨਲੋਡ ਕਰੋ।</string>
     <string name="market_purchase_download_one">ਹੇਠਾਂ ਆਪਣੀ ਫਾਈਲ ਡਾਊਨਲੋਡ ਕਰੋ।</string>
     <string name="market_purchase_review_from">%1$s ਵੱਲੋਂ ਸਮੀਖਿਆ</string>
     <string name="market_purchases_auction_label">ਨਿਲਾਮੀ #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">ਇਹ ਨਿਲਾਮੀ ਨੂੰ ਰੱਦ ਕਰ ਦੇਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ; ਤੁਸੀਂ ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਨਵੇਂ ਡਰਾਫਟ ਵਜੋਂ ਮੁੜ ਸੂਚੀਬੱਧ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="market_listings_remove_title">ਇਹ ਸੂਚੀ ਹਟਾਉਣੀ ਹੈ?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">ਇਸ ਨਾਲ ਨਿਲਾਮੀ ਰੱਦ ਹੋ ਜਾਵੇਗੀ ਅਤੇ %1$d ਸਰਗਰਮ ਬੋਲੀਕਾਰ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ; ਤੁਸੀਂ ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਨਵੇਂ ਡਰਾਫਟ ਵਜੋਂ ਮੁੜ ਸੂਚੀਬੱਧ ਕਰ ਸਕਦੇ ਹੋ।</item>
-        <item quantity="other">ਇਸ ਨਾਲ ਨਿਲਾਮੀ ਰੱਦ ਹੋ ਜਾਵੇਗੀ ਅਤੇ %1$d ਸਰਗਰਮ ਬੋਲੀਕਾਰਾਂ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ; ਤੁਸੀਂ ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਨਵੇਂ ਡਰਾਫਟ ਵਜੋਂ ਮੁੜ ਸੂਚੀਬੱਧ ਕਰ ਸਕਦੇ ਹੋ।</item>
+        <item quantity="one">ਇਸ ਨਾਲ ਨਿਲਾਮੀ ਰੱਦ ਹੋ ਜਾਵੇਗੀ ਅਤੇ %1$s ਸਰਗਰਮ ਬੋਲੀਕਾਰ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ; ਤੁਸੀਂ ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਨਵੇਂ ਡਰਾਫਟ ਵਜੋਂ ਮੁੜ ਸੂਚੀਬੱਧ ਕਰ ਸਕਦੇ ਹੋ।</item>
+        <item quantity="other">ਇਸ ਨਾਲ ਨਿਲਾਮੀ ਰੱਦ ਹੋ ਜਾਵੇਗੀ ਅਤੇ %1$s ਸਰਗਰਮ ਬੋਲੀਕਾਰਾਂ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ; ਤੁਸੀਂ ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਨਵੇਂ ਡਰਾਫਟ ਵਜੋਂ ਮੁੜ ਸੂਚੀਬੱਧ ਕਰ ਸਕਦੇ ਹੋ।</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">ਇਸ ਨਾਲ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਮਿਆਦ ਦੇ ਅੰਤ ਵਿੱਚ %1$d ਸਰਗਰਮ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਹੋ ਜਾਵੇਗੀ। ਸਬਸਕ੍ਰਾਈਬਰਾਂ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।</item>
-        <item quantity="other">ਇਸ ਨਾਲ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਮਿਆਦ ਦੇ ਅੰਤ ਵਿੱਚ %1$d ਸਰਗਰਮ ਸਬਸਕ੍ਰਿਪਸ਼ਨਾਂ ਰੱਦ ਹੋ ਜਾਣਗੀਆਂ। ਸਬਸਕ੍ਰਾਈਬਰਾਂ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।</item>
+        <item quantity="one">ਇਸ ਨਾਲ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਮਿਆਦ ਦੇ ਅੰਤ ਵਿੱਚ %1$s ਸਰਗਰਮ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਹੋ ਜਾਵੇਗੀ। ਸਬਸਕ੍ਰਾਈਬਰਾਂ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।</item>
+        <item quantity="other">ਇਸ ਨਾਲ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਮਿਆਦ ਦੇ ਅੰਤ ਵਿੱਚ %1$s ਸਰਗਰਮ ਸਬਸਕ੍ਰਿਪਸ਼ਨਾਂ ਰੱਦ ਹੋ ਜਾਣਗੀਆਂ। ਸਬਸਕ੍ਰਾਈਬਰਾਂ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।</item>
     </plurals>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Markaður</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Æviágrip</string>
     <string name="market_account_biography_placeholder">Segðu kaupendum frá þér…</string>
     <string name="market_account_load_failed">Tókst ekki að hlaða reikning</string>
@@ -59,7 +59,7 @@
     <string name="market_bids_tab_outbid">Yfirboðið</string>
     <string name="market_bids_tab_won">Sigrað</string>
     <string name="market_bids_title">Boð</string>
-    <string name="market_carousel_main">Mynd %1$d af %2$d</string>
+    <string name="market_carousel_main">Mynd %1$s af %2$s</string>
     <string name="market_channel_name">Markaður</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bankinn gat ekki afgreitt</string>
     <string name="market_chargeback_reason_check_returned">Tékki endursendur</string>
@@ -138,7 +138,7 @@
     <string name="market_editor_condition_refurbished">Endurnýjað</string>
     <string name="market_editor_condition_used">Notað</string>
     <string name="market_editor_currency">Gjaldmiðill</string>
-    <string name="market_editor_days">%1$d daga</string>
+    <string name="market_editor_days">%1$s daga</string>
     <string name="market_editor_delete">Eyða auglýsingu</string>
     <string name="market_editor_description">Lýsing</string>
     <string name="market_editor_interval_monthly">Mánaðarlega</string>
@@ -329,7 +329,7 @@
     <string name="market_purchases_title">Kaup</string>
     <string name="market_rating_label">Einkunn</string>
     <string name="market_rating_no_reviews">Engar umsagnir ennþá</string>
-    <string name="market_rating_reviews">(%1$d umsögn)</string>
+    <string name="market_rating_reviews">(%1$s umsögn)</string>
     <string name="market_refund_amount_label">Upphæð</string>
     <string name="market_refund_body">Tilgreindu ástæðu fyrir endurgreiðslubeiðninni.</string>
     <string name="market_refund_details_label">Smáatriði</string>
@@ -479,10 +479,10 @@
     <string name="market_sale_review_response_submitting">Sendir…</string>
     <string name="market_checkout_subscribing">Skrái í áskrift…</string>
     <string name="market_filter_remove">Fjarlægja síu</string>
-    <string name="market_listing_detail_sales_count">%1$d sölur</string>
+    <string name="market_listing_detail_sales_count">%1$s sölur</string>
     <string name="market_listings_action_appeal">Áfrýja fjarlægingu</string>
     <string name="market_listings_share_chooser">Deila auglýsingu</string>
-    <string name="market_profile_sales_count">%1$d sölur</string>
+    <string name="market_profile_sales_count">%1$s sölur</string>
     <string name="market_purchase_dispute_response">Svar seljanda</string>
     <string name="market_refund_dialog_amount_label">Upphæð</string>
 
@@ -498,11 +498,11 @@
     <string name="market_bids_current_bid">Núverandi: %1$s</string>
     <string name="market_bids_ends_in">Lýkur eftir %1$s</string>
     <string name="market_bids_your_bid">Þitt boð: %1$s</string>
-    <string name="market_carousel_thumbnail">Smámynd %1$d</string>
+    <string name="market_carousel_thumbnail">Smámynd %1$s</string>
     <string name="market_checkout_browser_unavailable">Enginn vafri tiltækur til að opna greiðslusíðu</string>
     <string name="market_checkout_pwyw_label">Þitt verð (lágmark %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Upphæð verður að vera að minnsta kosti %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d skrá(r) viðhengdar</string>
+    <string name="market_dispute_dialog_attach_count">%1$s skrá(r) viðhengdar</string>
     <string name="market_dispute_dialog_evidence_section_title">Innsend gögn</string>
     <string name="market_dispute_dialog_evidence_submitter_line">sent inn af %1$s</string>
     <string name="market_editor_appeal">Áfrýja ákvörðun</string>
@@ -573,7 +573,7 @@
     <string name="market_messages_inbox_empty_title">Engin samtöl enn</string>
     <string name="market_messages_load_failed">Tókst ekki að hlaða samtali</string>
     <string name="market_messages_send_failed">Tókst ekki að senda skilaboð</string>
-    <string name="market_messages_unread_badge">%1$d ólesin</string>
+    <string name="market_messages_unread_badge">%1$s ólesin</string>
     <string name="market_price_high_bid">Hæsta boð: %1$s</string>
     <string name="market_price_instant_buy">kaupa strax: %1$s</string>
     <string name="market_price_starting_bid">Upphafsboð: %1$s</string>
@@ -581,10 +581,10 @@
     <string name="market_profile_member_since">Meðlimur síðan %1$s</string>
     <string name="market_profile_joined">Skráði sig %1$s</string>
     <string name="market_profile_rating_breakdown">Sundurliðun einkunna</string>
-    <string name="market_profile_stars_value">%1$d stjörnur</string>
+    <string name="market_profile_stars_value">%1$s stjörnur</string>
     <string name="market_purchase_dispute_chargeback">Endurkrafa %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankinn þinn lagði fram endurkröfu á þessari pöntun. Stripe sér um deiluna við seljandann; niðurstaðan birtist hér þegar ákvörðun liggur fyrir.</string>
-    <string name="market_purchase_download_many">Sæktu %1$d skrárnar þínar hér að neðan.</string>
+    <string name="market_purchase_download_many">Sæktu %1$s skrárnar þínar hér að neðan.</string>
     <string name="market_purchase_download_one">Sæktu skrána þína hér að neðan.</string>
     <string name="market_purchase_review_from">Umsögn frá %1$s</string>
     <string name="market_purchases_auction_label">Uppboð #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Þetta mun hætta við uppboðið. Skráningin verður falin fyrir kaupendum; þú getur skráð hana aftur síðar sem nýja drög.</string>
     <string name="market_listings_remove_title">Fjarlægja þessa auglýsingu?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Þetta hættir við uppboðið og lætur %1$d virkan bjóðanda vita. Auglýsingin verður falin fyrir kaupendum; þú getur birt hana aftur síðar sem nýtt drög.</item>
-        <item quantity="other">Þetta hættir við uppboðið og lætur %1$d virka bjóðendur vita. Auglýsingin verður falin fyrir kaupendum; þú getur birt hana aftur síðar sem nýtt drög.</item>
+        <item quantity="one">Þetta hættir við uppboðið og lætur %1$s virkan bjóðanda vita. Auglýsingin verður falin fyrir kaupendum; þú getur birt hana aftur síðar sem nýtt drög.</item>
+        <item quantity="other">Þetta hættir við uppboðið og lætur %1$s virka bjóðendur vita. Auglýsingin verður falin fyrir kaupendum; þú getur birt hana aftur síðar sem nýtt drög.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Þetta segir upp %1$d virkri áskrift í lok núverandi reikningstímabils. Áskrifendur fá tilkynningu. Auglýsingin verður falin fyrir kaupendum.</item>
-        <item quantity="other">Þetta segir upp %1$d virkum áskriftum í lok núverandi reikningstímabils. Áskrifendur fá tilkynningu. Auglýsingin verður falin fyrir kaupendum.</item>
+        <item quantity="one">Þetta segir upp %1$s virkri áskrift í lok núverandi reikningstímabils. Áskrifendur fá tilkynningu. Auglýsingin verður falin fyrir kaupendum.</item>
+        <item quantity="other">Þetta segir upp %1$s virkum áskriftum í lok núverandi reikningstímabils. Áskrifendur fá tilkynningu. Auglýsingin verður falin fyrir kaupendum.</item>
     </plurals>
 </resources>

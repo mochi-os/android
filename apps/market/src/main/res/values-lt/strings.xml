@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Siunčiama…</string>
     <string name="market_checkout_subscribing">Prenumeruojama…</string>
     <string name="market_filter_remove">Pašalinti filtrą</string>
-    <string name="market_listing_detail_sales_count">%1$d pardavimų</string>
-    <string name="market_profile_sales_count">%1$d pardavimų</string>
+    <string name="market_listing_detail_sales_count">%1$s pardavimų</string>
+    <string name="market_profile_sales_count">%1$s pardavimų</string>
     <string name="market_purchase_dispute_response">Pardavėjo atsakymas</string>
     <string name="market_purchases_order_label">Užsakymas Nr. %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Papasakokite pirkėjams apie save…</string>
     <string name="market_account_load_failed">Nepavyko įkelti paskyros</string>
     <string name="market_account_save_failed">Nepavyko išsaugoti pakeitimų</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Dabartinis: %1$s</string>
     <string name="market_bids_ends_in">Baigiasi po %1$s</string>
     <string name="market_bids_your_bid">Jūsų pasiūlymas: %1$s</string>
-    <string name="market_carousel_main">Nuotrauka %1$d iš %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatiūra %1$d</string>
+    <string name="market_carousel_main">Nuotrauka %1$s iš %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatiūra %1$s</string>
     <string name="market_checkout_browser_unavailable">Nėra naršyklės mokėjimo puslapiui atidaryti</string>
     <string name="market_checkout_pay_button">Mokėti per Stripe</string>
     <string name="market_checkout_processing">Apdorojama…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Pridėti įrodymų</string>
-    <string name="market_dispute_dialog_attach_count">Pridėta failų: %1$d</string>
+    <string name="market_dispute_dialog_attach_count">Pridėta failų: %1$s</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi darbuotojai</string>
     <string name="market_dispute_dialog_evidence_section_title">Pateikti įrodymai</string>
     <string name="market_dispute_dialog_evidence_submitter_line">pateikė %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Nuorodos URL</string>
     <string name="market_editor_assets_empty">Dar nėra turto</string>
     <string name="market_editor_category_none">Pasirinkite kategoriją</string>
-    <string name="market_editor_days">%1$d d.</string>
+    <string name="market_editor_days">%1$s d.</string>
     <string name="market_editor_delete">Ištrinti skelbimą</string>
     <string name="market_editor_delete_confirm_message">Skelbimas bus visam laikui ištrintas.</string>
     <string name="market_editor_delete_confirm_title">Ištrinti skelbimą?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">Nepavyko įkelti pokalbio</string>
     <string name="market_messages_send_failed">Nepavyko išsiųsti žinutės</string>
     <string name="market_messages_thread_title">Pokalbis</string>
-    <string name="market_messages_unread_badge">%1$d neskaityta</string>
+    <string name="market_messages_unread_badge">%1$s neskaityta</string>
     <string name="market_price_from">Nuo %1$s</string>
     <string name="market_price_high_bid">Aukščiausias pasiūlymas: %1$s</string>
     <string name="market_price_instant_buy">iškart pirkti: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Prisijungė %1$s</string>
     <string name="market_profile_no_reviews">Atsiliepimų dar nėra.</string>
     <string name="market_profile_rating_breakdown">Įvertinimų suvestinė</string>
-    <string name="market_profile_stars_value">%1$d žvaigždutės</string>
+    <string name="market_profile_stars_value">%1$s žvaigždutės</string>
     <string name="market_purchase_dispute_chargeback">Atšaukimas %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Jūsų bankas pateikė šio užsakymo atšaukimą. Stripe sprendžia ginčą su pardavėju; rezultatas bus rodomas čia, kai bus priimtas sprendimas.</string>
-    <string name="market_purchase_download_many">Atsisiųskite %1$d failų žemiau.</string>
+    <string name="market_purchase_download_many">Atsisiųskite %1$s failų žemiau.</string>
     <string name="market_purchase_download_one">Atsisiųskite failą žemiau.</string>
     <string name="market_purchase_review_from">Atsiliepimas nuo %1$s</string>
     <string name="market_purchases_auction_label">Aukcionas Nr. %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s grąžinta</string>
     <string name="market_purchases_won_for">Laimėta už %1$s</string>
-    <string name="market_rating_reviews">(%1$d atsiliepimų)</string>
+    <string name="market_rating_reviews">(%1$s atsiliepimų)</string>
     <string name="market_refund_amount_label">Suma</string>
     <string name="market_refund_dialog_amount_help">Palikite tuščią, kad grąžintumėte visą užsakymo sumą.</string>
     <string name="market_refund_dialog_amount_label">Suma</string>
@@ -785,13 +785,13 @@
     <string name="market_listings_remove_message_auction">Tai atšauks aukcioną. Pasiūlymas bus paslėptas nuo pirkėjų; vėliau galite jį iš naujo paskelbti kaip naują juodraštį.</string>
     <string name="market_listings_remove_title">Šalinti šį skelbimą?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Tai atšauks aukcioną ir praneš %1$d aktyviam dalyviui. Skelbimas bus paslėptas nuo pirkėjų; vėliau galėsite jį iš naujo paskelbti kaip naują juodraštį.</item>
-        <item quantity="few">Tai atšauks aukcioną ir praneš %1$d aktyviems dalyviams. Skelbimas bus paslėptas nuo pirkėjų; vėliau galėsite jį iš naujo paskelbti kaip naują juodraštį.</item>
-        <item quantity="other">Tai atšauks aukcioną ir praneš %1$d aktyvių dalyvių. Skelbimas bus paslėptas nuo pirkėjų; vėliau galėsite jį iš naujo paskelbti kaip naują juodraštį.</item>
+        <item quantity="one">Tai atšauks aukcioną ir praneš %1$s aktyviam dalyviui. Skelbimas bus paslėptas nuo pirkėjų; vėliau galėsite jį iš naujo paskelbti kaip naują juodraštį.</item>
+        <item quantity="few">Tai atšauks aukcioną ir praneš %1$s aktyviems dalyviams. Skelbimas bus paslėptas nuo pirkėjų; vėliau galėsite jį iš naujo paskelbti kaip naują juodraštį.</item>
+        <item quantity="other">Tai atšauks aukcioną ir praneš %1$s aktyvių dalyvių. Skelbimas bus paslėptas nuo pirkėjų; vėliau galėsite jį iš naujo paskelbti kaip naują juodraštį.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Tai atšauks %1$d aktyvią prenumeratą dabartinio atsiskaitymo laikotarpio pabaigoje. Prenumeratoriai bus informuoti. Skelbimas bus paslėptas nuo pirkėjų.</item>
-        <item quantity="few">Tai atšauks %1$d aktyvias prenumeratas dabartinio atsiskaitymo laikotarpio pabaigoje. Prenumeratoriai bus informuoti. Skelbimas bus paslėptas nuo pirkėjų.</item>
-        <item quantity="other">Tai atšauks %1$d aktyvių prenumeratų dabartinio atsiskaitymo laikotarpio pabaigoje. Prenumeratoriai bus informuoti. Skelbimas bus paslėptas nuo pirkėjų.</item>
+        <item quantity="one">Tai atšauks %1$s aktyvią prenumeratą dabartinio atsiskaitymo laikotarpio pabaigoje. Prenumeratoriai bus informuoti. Skelbimas bus paslėptas nuo pirkėjų.</item>
+        <item quantity="few">Tai atšauks %1$s aktyvias prenumeratas dabartinio atsiskaitymo laikotarpio pabaigoje. Prenumeratoriai bus informuoti. Skelbimas bus paslėptas nuo pirkėjų.</item>
+        <item quantity="other">Tai atšauks %1$s aktyvių prenumeratų dabartinio atsiskaitymo laikotarpio pabaigoje. Prenumeratoriai bus informuoti. Skelbimas bus paslėptas nuo pirkėjų.</item>
     </plurals>
 </resources>

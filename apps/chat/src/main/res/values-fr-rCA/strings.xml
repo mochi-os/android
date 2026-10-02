@@ -50,7 +50,7 @@
     <string name="chat_delete_confirm_title">Supprimer le message?</string>
     <string name="chat_delete_confirm_body">Cette action supprime le message pour tout le monde et est irréversible.</string>
     <string name="chat_delete_own_only">Vous ne pouvez supprimer que vos propres messages</string>
-    <string name="chat_selection_title">%1$d sélectionné(s)</string>
+    <string name="chat_selection_title">%1$s sélectionné(s)</string>
 
     <string name="chat_forward_chats">Clavardages</string>
     <string name="chat_forward_friends">Amis</string>

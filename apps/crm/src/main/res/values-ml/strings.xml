@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">ഒബ്ജക്റ്റുകൾ ഇല്ല</string>
     <string name="crm_board_no_columns">ഈ കാഴ്ചയ്ക്കായി കോളങ്ങൾ ക്രമീകരിച്ചിട്ടില്ല</string>
     <string name="crm_board_no_options">കോളം ഫീൽഡിന് ഓപ്ഷനുകളൊന്നും കോൺഫിഗർ ചെയ്തിട്ടില്ല</string>
-    <string name="crm_board_nested_count">+%1$d നെസ്റ്റഡ്</string>
+    <string name="crm_board_nested_count">+%1$s നെസ്റ്റഡ്</string>
     <string name="crm_move_to_column">കോളത്തിലേക്ക് നീക്കുക</string>
     <string name="crm_move_to_row">വരിയിലേക്ക് നീക്കുക</string>
     <string name="crm_move_after">%1$s-ന് ശേഷം</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM ഡാറ്റ സംരക്ഷിച്ചു</string>
     <string name="crm_create_upload_json">.zip അല്ലെങ്കിൽ .json ഫയൽ അപ്‌ലോഡ് ചെയ്യുക</string>
     <string name="crm_create_blocked_no_options">സൃഷ്ടിക്കാനാകില്ല: %1$s ആവശ്യമാണ്, പക്ഷേ തിരഞ്ഞെടുക്കാൻ ഓപ്ഷനുകളില്ല. ഡിസൈനിൽ ഓപ്ഷനുകൾ ചേർക്കുക.</string>
-    <string name="crm_design_sample">സാമ്പിൾ %1$d</string>
+    <string name="crm_design_sample">സാമ്പിൾ %1$s</string>
     <string name="crm_option_delete_title">ഓപ്ഷൻ ഇല്ലാതാക്കുക</string>
     <string name="crm_option_delete_message">\"%1$s\" എന്ന ഓപ്ഷൻ ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
 </resources>

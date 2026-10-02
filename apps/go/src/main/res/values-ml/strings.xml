@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">ഇല്ലാതാക്കുക</string>
     <string name="go_delete_message">ഈ ഗെയിം നിങ്ങളുടെ ലിസ്റ്റിൽ നിന്നും നീക്കം ചെയ്യും. ഇത് പിന്നോട്ടാക്കാൻ സാധിക്കില്ല.</string>
     <string name="go_delete_title">ഗെയിം ഇല്ലാതാക്കണോ?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">സ്വീകരിക്കുക</string>
     <string name="go_draw_decline">നിരസിക്കുക</string>
     <string name="go_draw_offered_received">%1$s സമനില വാഗ്ദാനം ചെയ്തു</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">പിന്മാറി</string>
     <string name="go_new_game_title">പുതിയ Go ഗെയിം</string>
     <string name="go_new_game_no_friends">ഗെയിം ആരംഭിക്കുന്നതിന് മുമ്പ് ഒരു സുഹൃത്തിനെ ചേർക്കണം.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">കറുപ്പ് ആദ്യം കളിക്കുന്നതിന് നഷ്ടപരിഹാരമായി വെളുപ്പിന്റെ സ്കോറിൽ ചേർക്കുന്ന പോയിന്റുകൾ</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go ബോർഡ്</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d ഗോ ബോർഡ്, കറുത്ത കല്ല് വയ്ക്കാൻ നിങ്ങളുടെ ഊഴം</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d ഗോ ബോർഡ്, വെളുത്ത കല്ല് വയ്ക്കാൻ നിങ്ങളുടെ ഊഴം</string>
+    <string name="go_board_a11y">%1$s×%1$s Go ബോർഡ്</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s ഗോ ബോർഡ്, കറുത്ത കല്ല് വയ്ക്കാൻ നിങ്ങളുടെ ഊഴം</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s ഗോ ബോർഡ്, വെളുത്ത കല്ല് വയ്ക്കാൻ നിങ്ങളുടെ ഊഴം</string>
     <string name="go_status_scoring">എണ്ണൽ — സ്കോർ അംഗീകരിക്കുക അല്ലെങ്കിൽ കളി തുടരുക</string>
     <string name="go_score_proposed">നിർദ്ദേശിച്ച സ്കോർ: കറുപ്പ് %1$s, വെള്ള %2$s</string>
     <string name="go_score_opponent_accepted">നിങ്ങളുടെ എതിരാളി ഈ സ്കോർ അംഗീകരിക്കുന്നു: കറുപ്പ് %1$s, വെള്ള %2$s</string>

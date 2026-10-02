@@ -180,8 +180,8 @@
     <string name="people_books_create">Мекенжай кітабын жасау</string>
     <string name="people_books_delete">Мекенжай кітабын жою</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s және ондағы %2$d контакт жойылсын ба?</item>
-        <item quantity="other">%1$s және ондағы %2$d контакт жойылсын ба?</item>
+        <item quantity="one">%1$s және ондағы %2$s контакт жойылсын ба?</item>
+        <item quantity="other">%1$s және ондағы %2$s контакт жойылсын ба?</item>
     </plurals>
     <string name="people_welcome_body">Mochi ішінен достар тауып, байланысыңыз. Шақыру жіберу үшін Контакт қосу түймесін түртіңіз.</string>
     <string name="people_person_state_contact">Контактілерде</string>

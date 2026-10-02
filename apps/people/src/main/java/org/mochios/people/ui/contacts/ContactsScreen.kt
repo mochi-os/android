@@ -96,6 +96,8 @@ import org.mochios.people.ui.router.PeopleSection
 import org.mochios.people.ui.router.RememberPeopleSection
 import org.mochios.people.ui.sync.ContactsSyncRows
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.people.model.Book
 
 /**
  * Contacts list, the People app's entry point. Shows one address book when the
@@ -438,12 +440,7 @@ fun ContactsScreen(
         MochiAlertDialog(
             onDismissRequest = { viewModel.cancelDeleteBook() },
             title = stringResource(R.string.people_books_delete),
-            text = pluralStringResource(
-                R.plurals.people_books_delete_confirm,
-                deletingBook.count,
-                deletingBook.name,
-                deletingBook.count,
-            ),
+            text = deleteBookMessage(deletingBook),
             confirmText = stringResource(R.string.people_books_delete),
             onConfirm = { viewModel.confirmDeleteBook() },
             confirmLoading = uiState.isMutating,
@@ -456,6 +453,16 @@ fun ContactsScreen(
         AboutDialog(onDismiss = { showAbout = false })
     }
 }
+
+/** Asks before a book goes, with how many contacts go with it, as the user writes numbers. */
+@Composable
+internal fun deleteBookMessage(book: Book): String =
+    pluralStringResource(
+        R.plurals.people_books_delete_confirm,
+        book.count,
+        book.name,
+        LocalFormat.current.formatNumber(book.count),
+    )
 
 @Composable
 private fun WelcomeBanner(onDismiss: () -> Unit) {

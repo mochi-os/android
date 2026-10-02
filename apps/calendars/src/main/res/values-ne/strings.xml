@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">सधैंभरि</string>
     <string name="calendars_reminder_time">कार्यक्रमको समयमा</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d मिनेट अघि</item>
-        <item quantity="other">%1$d मिनेट अघि</item>
+        <item quantity="one">%1$s मिनेट अघि</item>
+        <item quantity="other">%1$s मिनेट अघि</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d घण्टा अघि</item>
-        <item quantity="other">%1$d घण्टा अघि</item>
+        <item quantity="one">%1$s घण्टा अघि</item>
+        <item quantity="other">%1$s घण्टा अघि</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d दिन अघि</item>
-        <item quantity="other">%1$d दिन अघि</item>
+        <item quantity="one">%1$s दिन अघि</item>
+        <item quantity="other">%1$s दिन अघि</item>
     </plurals>
     <string name="calendars_reminder_add">सम्झना थप्नुहोस्</string>
     <string name="calendars_reminder_remove">सम्झना हटाउनुहोस्</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">क्यालेन्डर धेरै ठूलो छ</string>
     <string name="calendars_poll_invalid">ठेगानाले क्यालेन्डर फिर्ता गरेन</string>
     <string name="calendars_poll_unreachable">ठेगानामा पुग्न सकिएन</string>
-    <string name="calendars_poll_status">ठेगानाले %1$d जवाफ दियो</string>
+    <string name="calendars_poll_status">ठेगानाले %1$s जवाफ दियो</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d मिनेट</item>
-        <item quantity="other">%1$d मिनेट</item>
+        <item quantity="one">%1$s मिनेट</item>
+        <item quantity="other">%1$s मिनेट</item>
     </plurals>
     <string name="calendars_preferences_zones">कार्यक्रमहरू तिनीहरूको आफ्नै समय क्षेत्रमा देखाउनुहोस्</string>
     <string name="calendars_event_backwards">सुरु हुनुअघि नै सकिन्छ</string>

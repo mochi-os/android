@@ -60,7 +60,7 @@
     <string name="chat_delete_confirm_title">¿Willakuyta wischunki?</string>
     <string name="chat_delete_confirm_body">Kayqa willakuyta llapanpaq wischun, manataq kutichiy atikunchu.</string>
     <string name="chat_delete_own_only">Kikiykipa willakuyniykikunallata wischuyta atinki</string>
-    <string name="chat_selection_title">%1$d akllasqa</string>
+    <string name="chat_selection_title">%1$s akllasqa</string>
     <string name="chat_forward_subtitle">Akllasqa willakuykunata apachinaykipaq huk rimanakuyta utaq masita akllay</string>
     <string name="chat_forward_chats">Rimanakuykuna</string>
     <string name="chat_forward_friends">Masikuna</string>

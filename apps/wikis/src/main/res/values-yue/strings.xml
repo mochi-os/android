@@ -45,7 +45,7 @@
     <string name="wikis_pageview_toc">本頁目錄</string>
     <string name="wikis_pageview_toc_expand">顯示目錄</string>
     <string name="wikis_pageview_toc_collapse">隱藏目錄</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">已更新 %1$s</string>
     <string name="wikis_pageview_not_found_title">搵唔到頁面</string>
     <string name="wikis_pageview_not_found_description">頁面「%1$s」仲未存在。</string>
@@ -139,11 +139,11 @@
     <string name="wikis_delete_page_success">頁面已刪除</string>
     <string name="wikis_delete_page_failed">無法刪除頁面</string>
     <string name="wikis_revert_page_title">還原頁面</string>
-    <string name="wikis_revert_page_message">你準備將 %1$s 還原到版本 %2$d。咁樣會用版本 %2$d 嘅內容建立新嘅修訂。</string>
+    <string name="wikis_revert_page_message">你準備將 %1$s 還原到版本 %2$s。咁樣會用版本 %2$s 嘅內容建立新嘅修訂。</string>
     <string name="wikis_revert_page_comment_label">還原備註</string>
-    <string name="wikis_revert_page_default_comment">已還原到版本 %1$d</string>
+    <string name="wikis_revert_page_default_comment">已還原到版本 %1$s</string>
     <string name="wikis_revert_page_confirm">還原</string>
-    <string name="wikis_revert_page_success">已還原到版本 %1$d</string>
+    <string name="wikis_revert_page_success">已還原到版本 %1$s</string>
     <string name="wikis_revert_page_failed">無法還原頁面</string>
     <string name="wikis_rename_page_title">重新命名頁面</string>
     <string name="wikis_rename_page_label">新網址</string>
@@ -155,10 +155,10 @@
     <string name="wikis_rename_page_success">頁面已重新命名</string>
     <string name="wikis_rename_page_failed">無法重新命名頁面</string>
     <string name="wikis_history_title">歷史</string>
-    <string name="wikis_history_viewing">查看緊 %1$s 嘅歷史記錄,目前版本 %2$d</string>
+    <string name="wikis_history_viewing">查看緊 %1$s 嘅歷史記錄,目前版本 %2$s</string>
     <string name="wikis_history_empty">搵唔到任何修訂</string>
     <string name="wikis_history_revert_action">還原到呢個版本</string>
-    <string name="wikis_revision_version_badge">版本 %1$d</string>
+    <string name="wikis_revision_version_badge">版本 %1$s</string>
     <string name="wikis_revision_current_badge">目前</string>
     <string name="wikis_revision_revert_to_this">還原到呢個版本</string>
     <string name="wikis_changes_title">最近變更</string>
@@ -287,30 +287,30 @@
     <string name="wikis_access_subject_authenticated">已驗證用戶</string>
 
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d 條留言</item>
+        <item quantity="other">%s 條留言</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="other">+%d 條回覆</item>
+        <item quantity="other">+%s 條回覆</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="other">%d 個頁面</item>
+        <item quantity="other">%s 個頁面</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="other">%d 個檔案</item>
+        <item quantity="other">%s 個檔案</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="other">%d 張圖</item>
+        <item quantity="other">%s 張圖</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="other">%d 份文件</item>
+        <item quantity="other">%s 份文件</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="other">%d 個頁面有呢個標籤</item>
+        <item quantity="other">%s 個頁面有呢個標籤</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">搵到 %1$d 個結果，關鍵字「%2$s」</item>
+        <item quantity="other">搵到 %1$s 個結果，關鍵字「%2$s」</item>
     </plurals>
-    <string name="wikis_revision_changes_from">由版本 %1$d → %2$d 嘅變更</string>
+    <string name="wikis_revision_changes_from">由版本 %1$s → %2$s 嘅變更</string>
     <string name="wikis_revision_compare">比較變更</string>
     <string name="wikis_revision_author">按 %1$s</string>
     <string name="wikis_revision_compare_failed">載入唔到上一個版本嚟比較。</string>
@@ -320,7 +320,7 @@
     <string name="wikis_attachments_upload_limits">大型上傳可能受伺服器或代理設定的限制。</string>
     <string name="wikis_rss_replace">取代</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">顯示緊頭 %1$d 個留言。</item>
+        <item quantity="other">顯示緊頭 %1$s 個留言。</item>
     </plurals>
     <string name="wikis_rss_copied_new">已複製新嘅 RSS URL 去剪貼簿</string>
     <string name="wikis_rss_exists">呢個訂閱 URL 已經發放咗，無法再顯示。</string>

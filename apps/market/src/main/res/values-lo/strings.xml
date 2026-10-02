@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ຕະຫຼາດ</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ຊີວະປະຫວັດ</string>
     <string name="market_account_biography_placeholder">ບອກຜູ້ຊື້ກ່ຽວກັບຕົວທ່ານ…</string>
     <string name="market_account_load_failed">ບໍ່ສາມາດໂຫຼດບັນຊີໄດ້</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">ຖືກປະມູນເກີນ</string>
     <string name="market_bids_tab_won">ຊະນະແລ້ວ</string>
     <string name="market_bids_title">ການປະມູນ</string>
-    <string name="market_carousel_main">ຮູບ %1$d / %2$d</string>
+    <string name="market_carousel_main">ຮູບ %1$s / %2$s</string>
     <string name="market_channel_name">ຕະຫຼາດ</string>
     <string name="market_chargeback_reason_bank_cannot_process">ທະນາຄານບໍ່ສາມາດດຳເນີນການໄດ້</string>
     <string name="market_chargeback_reason_check_returned">ສົ່ງຄືນເຊັກ</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">ປັບປຸງໃໝ່</string>
     <string name="market_editor_condition_used">ໃຊ້ແລ້ວ</string>
     <string name="market_editor_currency">ສະກຸນເງິນ</string>
-    <string name="market_editor_days">%1$d ມື້</string>
+    <string name="market_editor_days">%1$s ມື້</string>
     <string name="market_editor_delete">ລົບລາຍການ</string>
     <string name="market_editor_description">ລາຍລະອຽດ</string>
     <string name="market_editor_interval_monthly">ລາຍເດືອນ</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">ການຊື້</string>
     <string name="market_rating_label">ການໃຫ້ຄະແນນ</string>
     <string name="market_rating_no_reviews">ຍັງບໍ່ມີຄຳວິຈານ</string>
-    <string name="market_rating_reviews">(%1$d ຄຳວິຈານ)</string>
+    <string name="market_rating_reviews">(%1$s ຄຳວິຈານ)</string>
     <string name="market_refund_amount_label">ຈຳນວນ</string>
     <string name="market_refund_body">ໃຫ້ເຫດຜົນສຳລັບການຮ້ອງຂໍຄືນເງິນຂອງທ່ານ.</string>
     <string name="market_refund_details_label">ລາຍລະອຽດ</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">ປັດຈຸບັນ: %1$s</string>
     <string name="market_bids_ends_in">ສິ້ນສຸດໃນ %1$s</string>
     <string name="market_bids_your_bid">ການປະມູນຂອງທ່ານ: %1$s</string>
-    <string name="market_carousel_thumbnail">ຮູບຫຍໍ້ %1$d</string>
+    <string name="market_carousel_thumbnail">ຮູບຫຍໍ້ %1$s</string>
     <string name="market_checkout_browser_unavailable">ບໍ່ມີຕົວທ່ອງເວັບສຳລັບເປີດໜ້າຊຳລະເງິນ</string>
     <string name="market_checkout_pwyw_label">ລາຄາຂອງທ່ານ (ຕ່ຳສຸດ %1$s)</string>
     <string name="market_checkout_pwyw_min_error">ຈຳນວນຕ້ອງເປັນຢ່າງໜ້ອຍ %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ໄຟລ໌ທີ່ແນບມາ</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ໄຟລ໌ທີ່ແນບມາ</string>
     <string name="market_dispute_dialog_evidence_section_title">ຫຼັກຖານທີ່ສົ່ງມາ</string>
     <string name="market_dispute_dialog_evidence_submitter_line">ສົ່ງໂດຍ %1$s</string>
     <string name="market_editor_appeal">ອຸທອນການກວດສອບ</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">ກຳລັງໂຫຼດລາຍການຂາຍ</string>
     <string name="market_listing_detail_relist_failed">ບໍ່ສາມາດລົງປະກາດຄືນໄດ້</string>
     <string name="market_listing_detail_relist_in_progress">ກຳລັງລົງປະກາດຄືນ</string>
-    <string name="market_listing_detail_sales_count">%1$d ການຂາຍ</string>
+    <string name="market_listing_detail_sales_count">%1$s ການຂາຍ</string>
     <string name="market_listing_detail_seller_banned_banner">ຜູ້ຂາຍຄົນນີ້ຖືກຫ້າມ. ບໍ່ສາມາດສັ່ງຊື້ໃໝ່ໄດ້.</string>
     <string name="market_listing_detail_seller_suspended_banner">ຜູ້ຂາຍຄົນນີ້ຖືກໂຈະ. ການສັ່ງຊື້ໃໝ່ຖືກຢຸດໄວ້ຈົນກວ່າບັນຊີຈະຖືກຟື້ນຟູ.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">ການຊື້ຖືກປິດໃຊ້ງານໃນຂະນະທີ່ບັນຊີຂອງຜູ້ຂາຍຖືກຈຳກັດ.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">ຍັງບໍ່ມີການສົນທະນາ</string>
     <string name="market_messages_load_failed">ບໍ່ສາມາດໂຫຼດການສົນທະນາໄດ້</string>
     <string name="market_messages_send_failed">ບໍ່ສາມາດສົ່ງຂໍ້ຄວາມໄດ້</string>
-    <string name="market_messages_unread_badge">%1$d ຍັງບໍ່ໄດ້ອ່ານ</string>
+    <string name="market_messages_unread_badge">%1$s ຍັງບໍ່ໄດ້ອ່ານ</string>
     <string name="market_price_high_bid">ການປະມູນສູງສຸດ: %1$s</string>
     <string name="market_price_instant_buy">ຊື້ທັນທີ: %1$s</string>
     <string name="market_price_starting_bid">ການປະມູນເລີ່ມຕົ້ນ: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">ສະມາຊິກຕັ້ງແຕ່ %1$s</string>
     <string name="market_profile_joined">ເຂົ້າຮ່ວມ %1$s</string>
     <string name="market_profile_rating_breakdown">ລາຍລະອຽດການຈັດອັນດັບ</string>
-    <string name="market_profile_sales_count">%1$d ການຂາຍ</string>
-    <string name="market_profile_stars_value">%1$d ດາວ</string>
+    <string name="market_profile_sales_count">%1$s ການຂາຍ</string>
+    <string name="market_profile_stars_value">%1$s ດາວ</string>
     <string name="market_purchase_dispute_chargeback">ການຮຽກເງິນຄືນ %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ທະນາຄານຂອງທ່ານໄດ້ຍື່ນການຮຽກເງິນຄືນສຳລັບການສັ່ງຊື້ນີ້. Stripe ກຳລັງຈັດການຂໍ້ຂັດແຍ່ງກັບຜູ້ຂາຍ; ຜົນຮັບຈະປາກົດຢູ່ນີ້ເມື່ອມີການຕັດສິນ.</string>
     <string name="market_purchase_dispute_response">ການຕອບກັບຂອງຜູ້ຂາຍ</string>
-    <string name="market_purchase_download_many">ດາວໂຫຼດໄຟລ໌ %1$d ໄຟລ໌ຂອງທ່ານຢູ່ດ້ານລຸ່ມ.</string>
+    <string name="market_purchase_download_many">ດາວໂຫຼດໄຟລ໌ %1$s ໄຟລ໌ຂອງທ່ານຢູ່ດ້ານລຸ່ມ.</string>
     <string name="market_purchase_download_one">ດາວໂຫຼດໄຟລ໌ຂອງທ່ານຢູ່ດ້ານລຸ່ມ.</string>
     <string name="market_purchase_review_from">ການວິຈານຈາກ %1$s</string>
     <string name="market_purchases_auction_label">ການປະມູນ #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">ນີ້ຈະຍົກເລີກການປະມູນ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້; ທ່ານສາມາດລະບຸໃໝ່ພາຍຫຼັງເປັນສະບັບຮ່າງໃໝ່.</string>
     <string name="market_listings_remove_title">ລຶບລາຍການຂາຍນີ້?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">ນີ້ຈະຍົກເລີກການປະມູນ ແລະ ແຈ້ງຜູ້ປະມູນທີ່ເຄື່ອນໄຫວ %1$d ຄົນ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້; ທ່ານສາມາດລົງລາຍການຄືນໃໝ່ພາຍຫຼັງເປັນຮ່າງໃໝ່.</item>
-        <item quantity="other">ນີ້ຈະຍົກເລີກການປະມູນ ແລະ ແຈ້ງຜູ້ປະມູນທີ່ເຄື່ອນໄຫວ %1$d ຄົນ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້; ທ່ານສາມາດລົງລາຍການຄືນໃໝ່ພາຍຫຼັງເປັນຮ່າງໃໝ່.</item>
+        <item quantity="one">ນີ້ຈະຍົກເລີກການປະມູນ ແລະ ແຈ້ງຜູ້ປະມູນທີ່ເຄື່ອນໄຫວ %1$s ຄົນ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້; ທ່ານສາມາດລົງລາຍການຄືນໃໝ່ພາຍຫຼັງເປັນຮ່າງໃໝ່.</item>
+        <item quantity="other">ນີ້ຈະຍົກເລີກການປະມູນ ແລະ ແຈ້ງຜູ້ປະມູນທີ່ເຄື່ອນໄຫວ %1$s ຄົນ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້; ທ່ານສາມາດລົງລາຍການຄືນໃໝ່ພາຍຫຼັງເປັນຮ່າງໃໝ່.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">ນີ້ຈະຍົກເລີກການສະໝັກສະມາຊິກທີ່ເຄື່ອນໄຫວ %1$d ລາຍການໃນທ້າຍໄລຍະການເອີ້ນເກັບເງິນປັດຈຸບັນ. ຜູ້ສະໝັກຈະໄດ້ຮັບແຈ້ງ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້.</item>
-        <item quantity="other">ນີ້ຈະຍົກເລີກການສະໝັກສະມາຊິກທີ່ເຄື່ອນໄຫວ %1$d ລາຍການໃນທ້າຍໄລຍະການເອີ້ນເກັບເງິນປັດຈຸບັນ. ຜູ້ສະໝັກຈະໄດ້ຮັບແຈ້ງ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້.</item>
+        <item quantity="one">ນີ້ຈະຍົກເລີກການສະໝັກສະມາຊິກທີ່ເຄື່ອນໄຫວ %1$s ລາຍການໃນທ້າຍໄລຍະການເອີ້ນເກັບເງິນປັດຈຸບັນ. ຜູ້ສະໝັກຈະໄດ້ຮັບແຈ້ງ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້.</item>
+        <item quantity="other">ນີ້ຈະຍົກເລີກການສະໝັກສະມາຊິກທີ່ເຄື່ອນໄຫວ %1$s ລາຍການໃນທ້າຍໄລຍະການເອີ້ນເກັບເງິນປັດຈຸບັນ. ຜູ້ສະໝັກຈະໄດ້ຮັບແຈ້ງ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້.</item>
     </plurals>
 </resources>

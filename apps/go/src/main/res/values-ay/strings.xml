@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Chhaqtayaña</string>
     <string name="go_delete_message">Aka anatax listamat apsutäniwa. Janiw kutt\'ayañjamäkiti.</string>
     <string name="go_delete_title">¿Anata chhaqtayañati?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Iyawsaña</string>
     <string name="go_draw_decline">Jan katuqaña</string>
     <string name="go_draw_offered_received">%1$s kikipa anatañ amuyt\'awayi</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Jaytawayi</string>
     <string name="go_new_game_title">Machaq Go anata</string>
     <string name="go_new_game_no_friends">Mä anata qalltañat nayraqat mä masi yapxatañaw wakisi.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Ch\'iyar nayraqata anati ukat janq\'u chanipar yapt\'ata puntunaka</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go tablero</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go tablero, ch\'iyara qala uchañamawa</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go tablero, janq\'u qala uchañamawa</string>
+    <string name="go_board_a11y">%1$s×%1$s Go tablero</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go tablero, ch\'iyara qala uchañamawa</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go tablero, janq\'u qala uchañamawa</string>
     <string name="go_status_scoring">Jakhuña — jakhu tuqit amtasipxam jan ukax anatasipkakim</string>
     <string name="go_score_proposed">Uñtat puntaje: ch\'iyara %1$s, janq\'u %2$s</string>
     <string name="go_score_opponent_accepted">Awqasirimax aka puntaje iyawsi: ch\'iyara %1$s, janq\'u %2$s</string>

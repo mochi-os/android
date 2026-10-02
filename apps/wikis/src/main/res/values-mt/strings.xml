@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Notifiki dwar editjar ta’ paġni wiki, kummenti u stediniet.</string>
     <string name="wikis_pageview_toc_expand">Uri l-werrej</string>
     <string name="wikis_pageview_toc_collapse">Aħbi l-werrej</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Aġġornat %1$s</string>
     <string name="wikis_pageview_not_found_description">Il-paġna “%1$s” għadha ma teżistix.</string>
     <string name="wikis_pageview_share_chooser">Ħolqa tal-wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Int wasal biex tħassar il-paġna “%1$s” (%2$s). Din l-azzjoni tista’ titreġġa’ lura billi tirristawra mill-istorja.</string>
     <string name="wikis_delete_page_success">Paġna mħassra</string>
     <string name="wikis_revert_page_title">Reġġa\' lura l-paġna</string>
-    <string name="wikis_revert_page_message">Int wasal biex tirriverti %1$s għall-verżjoni %2$d. Dan se joħloq reviżjoni ġdida bil-kontenut mill-verżjoni %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Reġa’ lura għall-verżjoni %1$d</string>
-    <string name="wikis_revert_page_success">Reġa’ lura għall-verżjoni %1$d</string>
+    <string name="wikis_revert_page_message">Int wasal biex tirriverti %1$s għall-verżjoni %2$s. Dan se joħloq reviżjoni ġdida bil-kontenut mill-verżjoni %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Reġa’ lura għall-verżjoni %1$s</string>
+    <string name="wikis_revert_page_success">Reġa’ lura għall-verżjoni %1$s</string>
     <string name="wikis_rename_page_renaming">Qed jinbidel l-isem…</string>
     <string name="wikis_rename_page_success">Paġna msemmija mill-ġdid</string>
-    <string name="wikis_history_viewing">Qed tara l-istorja ta’ %1$s, verżjoni attwali %2$d</string>
-    <string name="wikis_revision_version_badge">Verżjoni %1$d</string>
+    <string name="wikis_history_viewing">Qed tara l-istorja ta’ %1$s, verżjoni attwali %2$s</string>
+    <string name="wikis_revision_version_badge">Verżjoni %1$s</string>
     <string name="wikis_search_pages_placeholder">Fittex paġni skont it-titlu jew il-kontenut…</string>
     <string name="wikis_search_no_results">Ma nstabet l-ebda paġna għal “%1$s”. Ipprova termini ta’ tfittxija oħra.</string>
     <string name="wikis_search_updated">Aġġornat %1$s</string>
@@ -289,62 +289,62 @@
     <string name="wikis_revision_author">minn %1$s</string>
     <string name="wikis_revision_show_page">Uri l-paġna</string>
     <string name="wikis_revision_compare_failed">Ma setgħetx tittella\' l-verżjoni preċedenti għall-paragun.</string>
-    <string name="wikis_revision_changes_from">Bidliet mill-verżjoni %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Bidliet mill-verżjoni %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d kumment</item>
-        <item quantity="two">%d kummenti</item>
-        <item quantity="few">%d kummenti</item>
-        <item quantity="many">%d kumment</item>
-        <item quantity="other">%d kumment</item>
+        <item quantity="one">%s kumment</item>
+        <item quantity="two">%s kummenti</item>
+        <item quantity="few">%s kummenti</item>
+        <item quantity="many">%s kumment</item>
+        <item quantity="other">%s kumment</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d tweġiba</item>
-        <item quantity="two">+%d tweġibiet aktar</item>
-        <item quantity="few">+%d tweġibiet aktar</item>
-        <item quantity="many">+%d tweġiba aktar</item>
-        <item quantity="other">+%d tweġiba aktar</item>
+        <item quantity="one">%s tweġiba</item>
+        <item quantity="two">+%s tweġibiet aktar</item>
+        <item quantity="few">+%s tweġibiet aktar</item>
+        <item quantity="many">+%s tweġiba aktar</item>
+        <item quantity="other">+%s tweġiba aktar</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d paġna</item>
-        <item quantity="two">%d paġni</item>
-        <item quantity="few">%d paġni</item>
-        <item quantity="many">%d paġna</item>
-        <item quantity="other">%d paġna</item>
+        <item quantity="one">%s paġna</item>
+        <item quantity="two">%s paġni</item>
+        <item quantity="few">%s paġni</item>
+        <item quantity="many">%s paġna</item>
+        <item quantity="other">%s paġna</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fajl</item>
-        <item quantity="two">%d fajls</item>
-        <item quantity="few">%d fajls</item>
-        <item quantity="many">%d fajl</item>
-        <item quantity="other">%d fajl</item>
+        <item quantity="one">%s fajl</item>
+        <item quantity="two">%s fajls</item>
+        <item quantity="few">%s fajls</item>
+        <item quantity="many">%s fajl</item>
+        <item quantity="other">%s fajl</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d stampa</item>
-        <item quantity="two">%d stampi</item>
-        <item quantity="few">%d stampi</item>
-        <item quantity="many">%d stampa</item>
-        <item quantity="other">%d stampa</item>
+        <item quantity="one">%s stampa</item>
+        <item quantity="two">%s stampi</item>
+        <item quantity="few">%s stampi</item>
+        <item quantity="many">%s stampa</item>
+        <item quantity="other">%s stampa</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="two">%d dokumenti</item>
-        <item quantity="few">%d dokumenti</item>
-        <item quantity="many">%d dokument</item>
-        <item quantity="other">%d dokument</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="two">%s dokumenti</item>
+        <item quantity="few">%s dokumenti</item>
+        <item quantity="many">%s dokument</item>
+        <item quantity="other">%s dokument</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d paġna b\'dan it-tag</item>
-        <item quantity="two">%d paġni b\'dan it-tag</item>
-        <item quantity="few">%d paġni b\'dan it-tag</item>
-        <item quantity="many">%d paġna b\'dan it-tag</item>
-        <item quantity="other">%d paġna b\'dan it-tag</item>
+        <item quantity="one">%s paġna b\'dan it-tag</item>
+        <item quantity="two">%s paġni b\'dan it-tag</item>
+        <item quantity="few">%s paġni b\'dan it-tag</item>
+        <item quantity="many">%s paġna b\'dan it-tag</item>
+        <item quantity="other">%s paġna b\'dan it-tag</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Instab %1$d riżultat għal \"%2$s\"</item>
-        <item quantity="two">Instabu %1$d riżultati għal \"%2$s\"</item>
-        <item quantity="few">Instabu %1$d riżultati għal \"%2$s\"</item>
-        <item quantity="many">Instabu %1$d riżultat għal \"%2$s\"</item>
-        <item quantity="other">Instabu %1$d riżultat għal \"%2$s\"</item>
+        <item quantity="one">Instab %1$s riżultat għal \"%2$s\"</item>
+        <item quantity="two">Instabu %1$s riżultati għal \"%2$s\"</item>
+        <item quantity="few">Instabu %1$s riżultati għal \"%2$s\"</item>
+        <item quantity="many">Instabu %1$s riżultat għal \"%2$s\"</item>
+        <item quantity="other">Instabu %1$s riżultat għal \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Id-didaskalija ma setgħetx tiġi salvata</string>
     <string name="wikis_attachments_upload_types">Fajls appoġġjati: stampi, PDF, DOC, DOCX, TXT, u MD.</string>
@@ -353,10 +353,10 @@
     <string name="wikis_rss_copied_new">URL ġdid ta\' RSS ikkupjat fil-clipboard</string>
     <string name="wikis_rss_exists">Dan l-URL tal-feed diġà nħareġ u ma jistax jintwera mill-ġdid.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Qed jintwera l-ewwel %1$d kumment.</item>
-        <item quantity="two">Qed jintwerew l-ewwel %1$d kummenti.</item>
-        <item quantity="few">Qed jintwerew l-ewwel %1$d kummenti.</item>
-        <item quantity="many">Qed jintwerew l-ewwel %1$d kumment.</item>
-        <item quantity="other">Qed jintwerew l-ewwel %1$d kumment.</item>
+        <item quantity="one">Qed jintwera l-ewwel %1$s kumment.</item>
+        <item quantity="two">Qed jintwerew l-ewwel %1$s kummenti.</item>
+        <item quantity="few">Qed jintwerew l-ewwel %1$s kummenti.</item>
+        <item quantity="many">Qed jintwerew l-ewwel %1$s kumment.</item>
+        <item quantity="other">Qed jintwerew l-ewwel %1$s kumment.</item>
     </plurals>
 </resources>

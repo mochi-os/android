@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Lähetetään…</string>
     <string name="market_checkout_subscribing">Tilataan…</string>
     <string name="market_filter_remove">Poista suodatin</string>
-    <string name="market_listing_detail_sales_count">%1$d myyntiä</string>
-    <string name="market_profile_sales_count">%1$d myyntiä</string>
+    <string name="market_listing_detail_sales_count">%1$s myyntiä</string>
+    <string name="market_profile_sales_count">%1$s myyntiä</string>
     <string name="market_purchase_dispute_response">Myyjän vastaus</string>
     <string name="market_purchases_order_label">Tilaus #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Kerro ostajille itsestäsi…</string>
     <string name="market_account_load_failed">Tilin lataaminen epäonnistui</string>
     <string name="market_account_save_failed">Muutosten tallentaminen epäonnistui</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Nykyinen: %1$s</string>
     <string name="market_bids_ends_in">Päättyy %1$s kuluttua</string>
     <string name="market_bids_your_bid">Tarjouksesi: %1$s</string>
-    <string name="market_carousel_main">Kuva %1$d / %2$d</string>
-    <string name="market_carousel_thumbnail">Pikkukuva %1$d</string>
+    <string name="market_carousel_main">Kuva %1$s / %2$s</string>
+    <string name="market_carousel_thumbnail">Pikkukuva %1$s</string>
     <string name="market_checkout_browser_unavailable">Maksusivun avaamiseen ei ole saatavilla selainta</string>
     <string name="market_checkout_pay_button">Maksa Stripellä</string>
     <string name="market_checkout_processing">Käsitellään…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Liitä todisteet</string>
-    <string name="market_dispute_dialog_attach_count">%1$d tiedostoa liitetty</string>
+    <string name="market_dispute_dialog_attach_count">%1$s tiedostoa liitetty</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi-henkilökunta</string>
     <string name="market_dispute_dialog_evidence_section_title">Toimitetut todisteet</string>
     <string name="market_dispute_dialog_evidence_submitter_line">lähettäjä: %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Viite-URL</string>
     <string name="market_editor_assets_empty">Ei vielä resursseja</string>
     <string name="market_editor_category_none">Valitse luokka</string>
-    <string name="market_editor_days">%1$d päivää</string>
+    <string name="market_editor_days">%1$s päivää</string>
     <string name="market_editor_delete">Poista ilmoitus</string>
     <string name="market_editor_delete_confirm_message">Tämä poistaa ilmoituksen pysyvästi.</string>
     <string name="market_editor_delete_confirm_title">Poistetaanko ilmoitus?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">Keskustelua ei voitu ladata</string>
     <string name="market_messages_send_failed">Viestiä ei voitu lähettää</string>
     <string name="market_messages_thread_title">Keskustelu</string>
-    <string name="market_messages_unread_badge">%1$d lukematonta</string>
+    <string name="market_messages_unread_badge">%1$s lukematonta</string>
     <string name="market_price_from">Alkaen %1$s</string>
     <string name="market_price_high_bid">Korkein tarjous: %1$s</string>
     <string name="market_price_instant_buy">osta heti: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Liittyi %1$s</string>
     <string name="market_profile_no_reviews">Ei vielä arvosteluja.</string>
     <string name="market_profile_rating_breakdown">Arvioiden erittely</string>
-    <string name="market_profile_stars_value">%1$d tähteä</string>
+    <string name="market_profile_stars_value">%1$s tähteä</string>
     <string name="market_purchase_dispute_chargeback">Maksunpalautus %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Pankkisi teki tästä tilauksesta maksunpalautusvaatimuksen. Stripe hoitaa riitaa myyjän kanssa; lopputulos näkyy täällä, kun se on ratkaistu.</string>
-    <string name="market_purchase_download_many">Lataa %1$d tiedostoasi alta.</string>
+    <string name="market_purchase_download_many">Lataa %1$s tiedostoasi alta.</string>
     <string name="market_purchase_download_one">Lataa tiedostosi alta.</string>
     <string name="market_purchase_review_from">Arvostelu käyttäjältä %1$s</string>
     <string name="market_purchases_auction_label">Huutokauppa #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s palautettu</string>
     <string name="market_purchases_won_for">Voitettu hintaan %1$s</string>
-    <string name="market_rating_reviews">(%1$d arvostelua)</string>
+    <string name="market_rating_reviews">(%1$s arvostelua)</string>
     <string name="market_refund_amount_label">Summa</string>
     <string name="market_refund_dialog_amount_help">Jätä tyhjäksi palauttaaksesi koko tilauksen.</string>
     <string name="market_refund_dialog_amount_label">Summa</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Tämä peruuttaa huutokaupan. Ilmoitus piilotetaan ostajilta; voit listata sen myöhemmin uutena luonnoksena.</string>
     <string name="market_listings_remove_title">Poista tämä ilmoitus?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Tämä peruu huutokaupan ja ilmoittaa %1$d aktiiviselle tarjoajalle. Ilmoitus piilotetaan ostajilta; voit julkaista sen myöhemmin uudelleen uutena luonnoksena.</item>
-        <item quantity="other">Tämä peruu huutokaupan ja ilmoittaa %1$d aktiiviselle tarjoajalle. Ilmoitus piilotetaan ostajilta; voit julkaista sen myöhemmin uudelleen uutena luonnoksena.</item>
+        <item quantity="one">Tämä peruu huutokaupan ja ilmoittaa %1$s aktiiviselle tarjoajalle. Ilmoitus piilotetaan ostajilta; voit julkaista sen myöhemmin uudelleen uutena luonnoksena.</item>
+        <item quantity="other">Tämä peruu huutokaupan ja ilmoittaa %1$s aktiiviselle tarjoajalle. Ilmoitus piilotetaan ostajilta; voit julkaista sen myöhemmin uudelleen uutena luonnoksena.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Tämä peruu %1$d aktiivisen tilauksen nykyisen laskutuskauden lopussa. Tilaajille ilmoitetaan. Ilmoitus piilotetaan ostajilta.</item>
-        <item quantity="other">Tämä peruu %1$d aktiivista tilausta nykyisen laskutuskauden lopussa. Tilaajille ilmoitetaan. Ilmoitus piilotetaan ostajilta.</item>
+        <item quantity="one">Tämä peruu %1$s aktiivisen tilauksen nykyisen laskutuskauden lopussa. Tilaajille ilmoitetaan. Ilmoitus piilotetaan ostajilta.</item>
+        <item quantity="other">Tämä peruu %1$s aktiivista tilausta nykyisen laskutuskauden lopussa. Tilaajille ilmoitetaan. Ilmoitus piilotetaan ostajilta.</item>
     </plurals>
 </resources>

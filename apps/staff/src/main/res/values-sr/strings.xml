@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Белешке</string>
     <string name="staff_accounts_reason_label">Разлог</string>
     <string name="staff_accounts_reason_optional_label">Разлог (опционо)</string>
-    <string name="staff_accounts_sales">%1$d продаја</string>
+    <string name="staff_accounts_sales">%1$s продаја</string>
     <string name="staff_accounts_search_clear">Очисти претрагу</string>
     <string name="staff_accounts_search_placeholder">Претражи</string>
     <string name="staff_accounts_seller_buyers">Само купци</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Без имена</string>
     <string name="staff_accounts_unsuspend">Уклони суспензију</string>
     <string name="staff_accounts_unsuspended_toast">Налогу укинута суспензија</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Откажи</string>
     <string name="staff_appeals_decide">Одлучи</string>
     <string name="staff_appeals_decision_denied">Задржи оглас одбијеним</string>

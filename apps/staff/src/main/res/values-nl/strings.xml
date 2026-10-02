@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Notities</string>
     <string name="staff_accounts_reason_label">Reden</string>
     <string name="staff_accounts_reason_optional_label">Reden (optioneel)</string>
-    <string name="staff_accounts_sales">%1$d verkopen</string>
+    <string name="staff_accounts_sales">%1$s verkopen</string>
     <string name="staff_accounts_search_clear">Zoekopdracht wissen</string>
     <string name="staff_accounts_search_placeholder">Zoeken</string>
     <string name="staff_accounts_seller_buyers">Alleen kopers</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Naamloos</string>
     <string name="staff_accounts_unsuspend">Schorsing opheffen</string>
     <string name="staff_accounts_unsuspended_toast">Account hervat</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Annuleren</string>
     <string name="staff_appeals_decide">Beslissen</string>
     <string name="staff_appeals_decision_denied">Advertentie afgewezen houden</string>

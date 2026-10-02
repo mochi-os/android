@@ -69,7 +69,7 @@
     <string name="staff_accounts_history_title">Historique du compte</string>
     <string name="staff_accounts_notes_label">Notes</string>
     <string name="staff_accounts_reason_optional_label">Motif (facultatif)</string>
-    <string name="staff_accounts_sales">%1$d ventes</string>
+    <string name="staff_accounts_sales">%1$s ventes</string>
     <string name="staff_accounts_search_clear">Effacer la recherche</string>
     <string name="staff_accounts_seller_buyers">Acheteurs seulement</string>
     <string name="staff_accounts_seller_chip">Vendeur</string>
@@ -84,7 +84,7 @@
     <string name="staff_accounts_unnamed">Sans nom</string>
     <string name="staff_accounts_unsuspend">Lever la suspension</string>
     <string name="staff_accounts_unsuspended_toast">Suspension levée</string>
-    <string name="staff_accounts_verification_level">N%1$d</string>
+    <string name="staff_accounts_verification_level">N%1$s</string>
     <string name="staff_appeals_decide">Décider</string>
     <string name="staff_appeals_decision_denied">Maintenir le rejet de l\'annonce</string>
     <string name="staff_appeals_decision_label">Décision</string>

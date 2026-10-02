@@ -18,7 +18,7 @@
     <string name="wikis_pageview_toc">On this page</string>
     <string name="wikis_pageview_toc_expand">Show table of contents</string>
     <string name="wikis_pageview_toc_collapse">Hide table of contents</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Updated %1$s</string>
     <string name="wikis_pageview_not_found_title">Page not found</string>
     <string name="wikis_pageview_not_found_description">The page “%1$s” does not exist yet.</string>
@@ -45,8 +45,8 @@
     <string name="wikis_page_action_unsubscribe">Unsubscribe</string>
 
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d comment</item>
-        <item quantity="other">%d comments</item>
+        <item quantity="one">%s comment</item>
+        <item quantity="other">%s comments</item>
     </plurals>
 
     <!-- Wikis list screen (landing) -->
@@ -133,8 +133,8 @@
     <string name="wikis_comment_attachment_size">(%1$s)</string>
 
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">+%d more replies</item>
+        <item quantity="one">%s reply</item>
+        <item quantity="other">+%s more replies</item>
     </plurals>
 
     <!-- Page editor — top bar and action row -->
@@ -182,11 +182,11 @@
 
     <!-- Revert page screen -->
     <string name="wikis_revert_page_title">Revert page</string>
-    <string name="wikis_revert_page_message">You are about to revert %1$s to version %2$d. This will create a new revision with the content from version %2$d.</string>
+    <string name="wikis_revert_page_message">You are about to revert %1$s to version %2$s. This will create a new revision with the content from version %2$s.</string>
     <string name="wikis_revert_page_comment_label">Revert comment</string>
-    <string name="wikis_revert_page_default_comment">Reverted to version %1$d</string>
+    <string name="wikis_revert_page_default_comment">Reverted to version %1$s</string>
     <string name="wikis_revert_page_confirm">Revert</string>
-    <string name="wikis_revert_page_success">Reverted to version %1$d</string>
+    <string name="wikis_revert_page_success">Reverted to version %1$s</string>
     <string name="wikis_revert_page_failed">Failed to revert page</string>
 
     <!-- Rename page dialog -->
@@ -204,19 +204,19 @@
 
     <!-- Page history screen -->
     <string name="wikis_history_title">History</string>
-    <string name="wikis_history_viewing">Viewing history for %1$s, current version %2$d</string>
+    <string name="wikis_history_viewing">Viewing history for %1$s, current version %2$s</string>
     <string name="wikis_history_empty">No revisions found</string>
     <string name="wikis_history_view_action">View</string>
     <string name="wikis_history_revert_action">Revert to this version</string>
 
     <!-- Revision view screen -->
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_revision_version_badge">Version %1$s</string>
     <string name="wikis_revision_current_badge">Current</string>
     <string name="wikis_revision_revert_to_this">Revert to this version</string>
     <string name="wikis_revision_compare">Compare changes</string>
     <string name="wikis_revision_author">by %1$s</string>
     <string name="wikis_revision_show_page">Show page</string>
-    <string name="wikis_revision_changes_from">Changes from version %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Changes from version %1$s → %2$s</string>
     <string name="wikis_revision_compare_failed">Could not load previous version for comparison.</string>
 
     <!-- Recent changes screen -->
@@ -251,8 +251,8 @@
     <string name="wikis_redirect_delete_confirm_message">This will remove the redirect from \"%1$s\" to \"%2$s\". Users visiting the source URL will no longer be redirected.</string>
 
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Found %1$d result for \"%2$s\"</item>
-        <item quantity="other">Found %1$d results for \"%2$s\"</item>
+        <item quantity="one">Found %1$s result for \"%2$s\"</item>
+        <item quantity="other">Found %1$s results for \"%2$s\"</item>
     </plurals>
 
     <!-- All-tags index screen -->
@@ -262,8 +262,8 @@
     <string name="wikis_tags_empty_description">Add tags to group pages in your wiki.</string>
 
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d page</item>
-        <item quantity="other">%d pages</item>
+        <item quantity="one">%s page</item>
+        <item quantity="other">%s pages</item>
     </plurals>
 
     <!-- Pages-for-tag screen -->
@@ -273,8 +273,8 @@
     <string name="wikis_tag_pages_all_tags_action">All tags</string>
 
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d page with this tag</item>
-        <item quantity="other">%d pages with this tag</item>
+        <item quantity="one">%s page with this tag</item>
+        <item quantity="other">%s pages with this tag</item>
     </plurals>
 
     <!-- Tag manager (inline on page footer) -->
@@ -334,16 +334,16 @@
     <string name="wikis_attachments_no_results_description">Try a different search term or filter.</string>
 
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d file</item>
-        <item quantity="other">%d files</item>
+        <item quantity="one">%s file</item>
+        <item quantity="other">%s files</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d image</item>
-        <item quantity="other">%d images</item>
+        <item quantity="one">%s image</item>
+        <item quantity="other">%s images</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d document</item>
-        <item quantity="other">%d documents</item>
+        <item quantity="one">%s document</item>
+        <item quantity="other">%s documents</item>
     </plurals>
 
     <!-- Wiki settings screen -->
@@ -422,7 +422,7 @@
     <string name="wikis_replicas_removed_success">Replica removed</string>
     <string name="wikis_replicas_remove_failed">Failed to remove replica</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Showing the first %1$d comment.</item>
-        <item quantity="other">Showing the first %1$d comments.</item>
+        <item quantity="one">Showing the first %1$s comment.</item>
+        <item quantity="other">Showing the first %1$s comments.</item>
     </plurals>
 </resources>

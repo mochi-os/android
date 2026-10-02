@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Dileu</string>
     <string name="go_delete_message">Bydd y gêm hon yn cael ei thynnu o\'ch rhestr. Ni ellir dadwneud hyn.</string>
     <string name="go_delete_title">Dileu\'r gêm?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Derbyn</string>
     <string name="go_draw_decline">Gwrthod</string>
     <string name="go_draw_offered_received">Cynigiodd %1$s gêm gyfartal</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Wedi ildio</string>
     <string name="go_new_game_title">Gêm Go newydd</string>
     <string name="go_new_game_no_friends">Mae angen i chi ychwanegu ffrind cyn i chi allu dechrau gêm.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Pwyntiau a ychwanegwyd at sgôr Gwyn i wneud iawn am fod Du yn mynd gyntaf</string>
 
-    <string name="go_board_a11y">Bwrdd Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Bwrdd Go %1$d×%1$d, eich tro i osod carreg ddu</string>
-    <string name="go_board_a11y_turn_white">Bwrdd Go %1$d×%1$d, eich tro i osod carreg wen</string>
+    <string name="go_board_a11y">Bwrdd Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Bwrdd Go %1$s×%1$s, eich tro i osod carreg ddu</string>
+    <string name="go_board_a11y_turn_white">Bwrdd Go %1$s×%1$s, eich tro i osod carreg wen</string>
     <string name="go_status_scoring">Cyfrif — cytunwch ar y sgôr neu daliwch ati i chwarae</string>
     <string name="go_score_proposed">Sgôr arfaethedig: du %1$s, gwyn %2$s</string>
     <string name="go_score_opponent_accepted">Mae eich gwrthwynebydd yn derbyn y sgôr hwn: du %1$s, gwyn %2$s</string>

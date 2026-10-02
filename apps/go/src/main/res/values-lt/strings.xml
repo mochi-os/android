@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Ištrinti</string>
     <string name="go_delete_message">Šis žaidimas bus pašalintas iš jūsų sąrašo. To negalima atšaukti.</string>
     <string name="go_delete_title">Ištrinti žaidimą?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Priimti</string>
     <string name="go_draw_decline">Atmesti</string>
     <string name="go_draw_offered_received">%1$s pasiūlė lygiąsias</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Pasidavė</string>
     <string name="go_new_game_title">Nauja Go partija</string>
     <string name="go_new_game_no_friends">Turite pridėti draugą, kad galėtumėte pradėti partiją.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Taškai pridėti Baltų taškams kompensuoti tai, kad Juodi eina pirmieji</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go lenta</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go lenta, jūsų eilė dėti juodą akmenį</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go lenta, jūsų eilė dėti baltą akmenį</string>
+    <string name="go_board_a11y">%1$s×%1$s Go lenta</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go lenta, jūsų eilė dėti juodą akmenį</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go lenta, jūsų eilė dėti baltą akmenį</string>
     <string name="go_status_scoring">Skaičiavimas — susitarkite dėl rezultato arba žaiskite toliau</string>
     <string name="go_score_proposed">Siūlomas rezultatas: juodieji %1$s, baltieji %2$s</string>
     <string name="go_score_opponent_accepted">Jūsų varžovas priima šį rezultatą: juodieji %1$s, baltieji %2$s</string>

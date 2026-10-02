@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">ಬದಲಾವಣೆ ಮಾಡಿದರು</string>
     <string name="projects_attachment_empty">ಯಾವುದೇ ಲಗತ್ತುಗಳಿಲ್ಲ</string>
     <string name="projects_attachment_default_name">ಲಗತ್ತು</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">ಹೊಸ ವಿಲೀನ ವಿನಂತಿ</string>
     <string name="projects_request_status_closed">ಮುಚ್ಚಲಾಗಿದೆ</string>
     <string name="projects_request_back_to_list">ಪಟ್ಟಿಗೆ ಹಿಂತಿರುಗಿ</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">ವಿಲೀನ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="projects_request_can_merge">ವಿಲೀನಗೊಳಿಸಬಹುದು</string>
     <string name="projects_request_cannot_merge">ವಿಲೀನಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ</string>
-    <string name="projects_request_ahead_behind">%1$d ಮುಂದೆ, %2$d ಹಿಂದೆ</string>
+    <string name="projects_request_ahead_behind">%1$s ಮುಂದೆ, %2$s ಹಿಂದೆ</string>
     <string name="projects_request_draft_notice">ಇದು ಡ್ರಾಫ್ಟ್. ವಿಲೀನಗೊಳಿಸುವ ಮೊದಲು ಸಿದ್ಧ ಎಂದು ಗುರುತಿಸಿ.</string>
     <string name="projects_request_view_diff">ಡಿಫ್ ವೀಕ್ಷಿಸಿ</string>
     <string name="projects_request_mark_ready">ಸಿದ್ಧ ಎಂದು ಗುರುತಿಸಿ</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">ಈ ವೀಕ್ಷಣೆಗಾಗಿ ಯಾವುದೇ ಕಾಲಮ್‌ಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
     <string name="projects_board_no_options">ಕಾಲಮ್ ಕ್ಷೇತ್ರಕ್ಕೆ ಯಾವುದೇ ಆಯ್ಕೆಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
     <string name="projects_board_column_options">ಕಾಲಮ್ ಆಯ್ಕೆಗಳು</string>
-    <string name="projects_board_nested_count">+%1$d ಒಳಗೊಂಡಿದೆ</string>
+    <string name="projects_board_nested_count">+%1$s ಒಳಗೊಂಡಿದೆ</string>
     <string name="projects_move_to_column">ಕಾಲಮ್‌ಗೆ ಸರಿಸಿ</string>
     <string name="projects_move_to_row">ಸಾಲಿಗೆ ಸರಿಸಿ</string>
     <string name="projects_move_after">%1$s ನಂತರ</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">ವಿಂಗಡಿಸಿ ಮತ್ತು ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="projects_create_prefix_hint">%1$s-1, %1$s-2 ನಂತಹ ಓದಬಹುದಾದ ID ಗಳಿಗೆ ಬಳಸಲಾಗುತ್ತದೆ</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d ಸಂಘರ್ಷದ ಫೈಲ್</item>
-        <item quantity="other">%1$d ಸಂಘರ್ಷದ ಫೈಲ್‌ಗಳು</item>
+        <item quantity="one">%1$s ಸಂಘರ್ಷದ ಫೈಲ್</item>
+        <item quantity="other">%1$s ಸಂಘರ್ಷದ ಫೈಲ್‌ಗಳು</item>
     </plurals>
     <string name="projects_design_export_saved">ವಿನ್ಯಾಸ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="projects_design_import_failed">ಆ ಫೈಲ್ ಓದಲಾಗಲಿಲ್ಲ</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">ಯೋಜನೆಯ ಡೇಟಾ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="projects_exporting">ರಫ್ತು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="projects_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>
-    <string name="projects_design_sample">ಮಾದರಿ %1$d</string>
+    <string name="projects_design_sample">ಮಾದರಿ %1$s</string>
     <string name="projects_option_delete_title">ಆಯ್ಕೆ ಅಳಿಸಿ</string>
     <string name="projects_option_delete_message">ನೀವು \"%1$s\" ಆಯ್ಕೆಯನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿರುವಿರಾ?</string>
     <string name="projects_create_object_no_types">ಇನ್ನೂ ಯಾವುದೇ ಐಟಂ ಪ್ರಕಾರಗಳನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮೊದಲು ಅಗತ್ಯವಿರುವ ಪೋಷಕ ಐಟಂಗಳನ್ನು ರಚಿಸಿ.</string>

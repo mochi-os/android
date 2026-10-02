@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Ħassar</string>
     <string name="go_delete_message">Din il-logħba se titneħħa mil-lista tiegħek. Dan ma jistax jiġi annullat.</string>
     <string name="go_delete_title">Ħassar il-logħba?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Aċċetta</string>
     <string name="go_draw_decline">Irrifjuta</string>
     <string name="go_draw_offered_received">%1$s offra draw</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Irriżenja</string>
     <string name="go_new_game_title">Logħba Go ġdida</string>
     <string name="go_new_game_no_friends">Trid iżżid ħabib qabel ma tkun tista’ tibda logħba.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Punti miżjuda mal-punteġġ ta’ l-Abjad biex jikkumpensaw li l-Iswed jibda l-ewwel</string>
 
-    <string name="go_board_a11y">Bord Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Bord tal-Go %1$d×%1$d, imissek tqiegħed ġebla sewda</string>
-    <string name="go_board_a11y_turn_white">Bord tal-Go %1$d×%1$d, imissek tqiegħed ġebla bajda</string>
+    <string name="go_board_a11y">Bord Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Bord tal-Go %1$s×%1$s, imissek tqiegħed ġebla sewda</string>
+    <string name="go_board_a11y_turn_white">Bord tal-Go %1$s×%1$s, imissek tqiegħed ġebla bajda</string>
     <string name="go_status_scoring">Għadd — aqblu dwar il-punteġġ jew kompli lagħbu</string>
     <string name="go_score_proposed">Score propost: iswed %1$s, abjad %2$s</string>
     <string name="go_score_opponent_accepted">L-avversarju tiegħek jaċċetta dan l-iscore: iswed %1$s, abjad %2$s</string>

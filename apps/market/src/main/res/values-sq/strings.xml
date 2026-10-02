@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tregu</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografia</string>
     <string name="market_account_biography_placeholder">Tregojuni blerësve për veten…</string>
     <string name="market_account_load_failed">Llogaria nuk u ngarkua</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">I tejkaluar</string>
     <string name="market_bids_tab_won">Fituar</string>
     <string name="market_bids_title">Ofertat</string>
-    <string name="market_carousel_main">Foto %1$d nga %2$d</string>
+    <string name="market_carousel_main">Foto %1$s nga %2$s</string>
     <string name="market_channel_name">Tregu</string>
     <string name="market_chargeback_reason_bank_cannot_process">Banka nuk mundi të procesojë</string>
     <string name="market_chargeback_reason_check_returned">Çeku u kthye</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">E rinovuar</string>
     <string name="market_editor_condition_used">E përdorur</string>
     <string name="market_editor_currency">Monedha</string>
-    <string name="market_editor_days">%1$d ditë</string>
+    <string name="market_editor_days">%1$s ditë</string>
     <string name="market_editor_delete">Fshi listimin</string>
     <string name="market_editor_description">Përshkrimi</string>
     <string name="market_editor_interval_monthly">Mujore</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">Blerjet</string>
     <string name="market_rating_label">Vlerësimi</string>
     <string name="market_rating_no_reviews">Ende pa vlerësime</string>
-    <string name="market_rating_reviews">(%1$d vlerësim)</string>
+    <string name="market_rating_reviews">(%1$s vlerësim)</string>
     <string name="market_refund_amount_label">Shuma</string>
     <string name="market_refund_body">Jepni një arsye për kërkesën tuaj për rimbursim.</string>
     <string name="market_refund_details_label">Detajet</string>
@@ -473,10 +473,10 @@
     <string name="market_sale_review_response_submitting">Po dërgohet…</string>
     <string name="market_checkout_subscribing">Duke u pajtuar…</string>
     <string name="market_filter_remove">Hiq filtrin</string>
-    <string name="market_listing_detail_sales_count">%1$d shitje</string>
+    <string name="market_listing_detail_sales_count">%1$s shitje</string>
     <string name="market_listings_action_appeal">Ankesa për heqjen</string>
     <string name="market_listings_share_chooser">Ndaj listimin</string>
-    <string name="market_profile_sales_count">%1$d shitje</string>
+    <string name="market_profile_sales_count">%1$s shitje</string>
     <string name="market_purchase_dispute_response">Përgjigja e shitësit</string>
     <string name="market_refund_dialog_amount_label">Shuma</string>
 
@@ -498,11 +498,11 @@
     <string name="market_bids_current_bid">Aktuale: %1$s</string>
     <string name="market_bids_ends_in">Përfundon për %1$s</string>
     <string name="market_bids_your_bid">Oferta juaj: %1$s</string>
-    <string name="market_carousel_thumbnail">Miniaturë %1$d</string>
+    <string name="market_carousel_thumbnail">Miniaturë %1$s</string>
     <string name="market_checkout_browser_unavailable">Nuk ka shfletues të disponueshëm për të hapur faqen e pagesës</string>
     <string name="market_checkout_pwyw_label">Çmimi juaj (minimumi %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Shuma duhet të jetë të paktën %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d skedar(ë) të bashkëngjitur</string>
+    <string name="market_dispute_dialog_attach_count">%1$s skedar(ë) të bashkëngjitur</string>
     <string name="market_dispute_dialog_evidence_section_title">Prova të paraqitura</string>
     <string name="market_dispute_dialog_evidence_submitter_line">paraqitur nga %1$s</string>
     <string name="market_editor_appeal">Apelo moderimin</string>
@@ -573,7 +573,7 @@
     <string name="market_messages_inbox_empty_title">Ende asnjë bisedë</string>
     <string name="market_messages_load_failed">Biseda nuk u ngarkua dot</string>
     <string name="market_messages_send_failed">Mesazhi nuk u dërgua dot</string>
-    <string name="market_messages_unread_badge">%1$d të palexuara</string>
+    <string name="market_messages_unread_badge">%1$s të palexuara</string>
     <string name="market_price_high_bid">Oferta më e lartë: %1$s</string>
     <string name="market_price_instant_buy">blerje e menjëhershme: %1$s</string>
     <string name="market_price_starting_bid">Oferta fillestare: %1$s</string>
@@ -581,10 +581,10 @@
     <string name="market_profile_member_since">Anëtar që nga %1$s</string>
     <string name="market_profile_joined">U anëtarësua më %1$s</string>
     <string name="market_profile_rating_breakdown">Shpërndarja e vlerësimeve</string>
-    <string name="market_profile_stars_value">%1$d yje</string>
+    <string name="market_profile_stars_value">%1$s yje</string>
     <string name="market_purchase_dispute_chargeback">Kthim pagese %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Banka juaj paraqiti një kthim pagese për këtë porosi. Stripe po e trajton mosmarrëveshjen me shitësin; rezultati do të shfaqet këtu kur të vendoset.</string>
-    <string name="market_purchase_download_many">Shkarkoni %1$d skedarët tuaj më poshtë.</string>
+    <string name="market_purchase_download_many">Shkarkoni %1$s skedarët tuaj më poshtë.</string>
     <string name="market_purchase_download_one">Shkarkoni skedarin tuaj më poshtë.</string>
     <string name="market_purchase_review_from">Vlerësim nga %1$s</string>
     <string name="market_purchases_auction_label">Ankand #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Kjo do të anulojë ankandin. Shpallja do të fshihet nga blerësit; mund ta rilistosh më vonë si një draft të ri.</string>
     <string name="market_listings_remove_title">Të hiqet ky listim?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Kjo do të anulojë ankandin dhe do të njoftojë %1$d ofertues aktiv. Shpallja do të fshihet nga blerësit; mund ta ripublikoni më vonë si draft të ri.</item>
-        <item quantity="other">Kjo do të anulojë ankandin dhe do të njoftojë %1$d ofertues aktivë. Shpallja do të fshihet nga blerësit; mund ta ripublikoni më vonë si draft të ri.</item>
+        <item quantity="one">Kjo do të anulojë ankandin dhe do të njoftojë %1$s ofertues aktiv. Shpallja do të fshihet nga blerësit; mund ta ripublikoni më vonë si draft të ri.</item>
+        <item quantity="other">Kjo do të anulojë ankandin dhe do të njoftojë %1$s ofertues aktivë. Shpallja do të fshihet nga blerësit; mund ta ripublikoni më vonë si draft të ri.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Kjo do të anulojë %1$d abonim aktiv në fund të periudhës aktuale të faturimit. Abonentët do të njoftohen. Shpallja do të fshihet nga blerësit.</item>
-        <item quantity="other">Kjo do të anulojë %1$d abonime aktive në fund të periudhës aktuale të faturimit. Abonentët do të njoftohen. Shpallja do të fshihet nga blerësit.</item>
+        <item quantity="one">Kjo do të anulojë %1$s abonim aktiv në fund të periudhës aktuale të faturimit. Abonentët do të njoftohen. Shpallja do të fshihet nga blerësit.</item>
+        <item quantity="other">Kjo do të anulojë %1$s abonime aktive në fund të periudhës aktuale të faturimit. Abonentët do të njoftohen. Shpallja do të fshihet nga blerësit.</item>
     </plurals>
 </resources>

@@ -255,7 +255,7 @@ private fun AccountsBody(
 }
 
 @Composable
-private fun AccountRow(
+internal fun AccountRow(
     account: Account,
     onHistory: () -> Unit,
     onAction: (AccountActionType) -> Unit,
@@ -321,7 +321,7 @@ private fun AccountRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 Text(
-                    text = stringResource(R.string.staff_accounts_sales, account.sales),
+                    text = stringResource(R.string.staff_accounts_sales, format.formatNumber(account.sales)),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -396,7 +396,7 @@ private fun accountActions(
 @Composable
 private fun VerifiedChip(level: Int) {
     if (level <= 0) return
-    val label = stringResource(R.string.staff_accounts_verification_level, level)
+    val label = stringResource(R.string.staff_accounts_verification_level, level.toString())
     val (bg, fg) = if (level >= 2) {
         MaterialTheme.colorScheme.primaryContainer to MaterialTheme.colorScheme.onPrimaryContainer
     } else {

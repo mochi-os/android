@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">ఎప్పటికీ</string>
     <string name="calendars_reminder_time">సమయానికి</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d నిమిషం ముందు</item>
-        <item quantity="other">%1$d నిమిషాల ముందు</item>
+        <item quantity="one">%1$s నిమిషం ముందు</item>
+        <item quantity="other">%1$s నిమిషాల ముందు</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d గంట ముందు</item>
-        <item quantity="other">%1$d గంటల ముందు</item>
+        <item quantity="one">%1$s గంట ముందు</item>
+        <item quantity="other">%1$s గంటల ముందు</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d రోజు ముందు</item>
-        <item quantity="other">%1$d రోజుల ముందు</item>
+        <item quantity="one">%1$s రోజు ముందు</item>
+        <item quantity="other">%1$s రోజుల ముందు</item>
     </plurals>
     <string name="calendars_reminder_add">రిమైండర్‌ను జోడించండి</string>
     <string name="calendars_reminder_remove">రిమైండర్‌ను తొలగించండి</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">క్యాలెండర్ చాలా పెద్దది</string>
     <string name="calendars_poll_invalid">చిరునామా క్యాలెండర్‌ను అందించలేదు</string>
     <string name="calendars_poll_unreachable">చిరునామాను చేరుకోలేకపోయాం</string>
-    <string name="calendars_poll_status">చిరునామా %1$d అని బదులిచ్చింది</string>
+    <string name="calendars_poll_status">చిరునామా %1$s అని బదులిచ్చింది</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d నిమిషం</item>
-        <item quantity="other">%1$d నిమిషాలు</item>
+        <item quantity="one">%1$s నిమిషం</item>
+        <item quantity="other">%1$s నిమిషాలు</item>
     </plurals>
     <string name="calendars_preferences_zones">ఈవెంట్‌లను వాటి స్వంత టైమ్ జోన్‌లో చూపించు</string>
     <string name="calendars_event_backwards">ప్రారంభానికి ముందే ముగుస్తుంది</string>

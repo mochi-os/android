@@ -180,7 +180,7 @@
     <string name="people_books_create">สร้างสมุดที่อยู่</string>
     <string name="people_books_delete">ลบสมุดที่อยู่</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">ลบ %1$s และรายชื่อติดต่อ %2$d รายการในนั้นหรือไม่</item>
+        <item quantity="other">ลบ %1$s และรายชื่อติดต่อ %2$s รายการในนั้นหรือไม่</item>
     </plurals>
     <string name="people_welcome_body">ค้นหาเพื่อนทั่ว Mochi และเชื่อมต่อกัน แตะ เพิ่มรายชื่อติดต่อ เพื่อส่งคำเชิญ</string>
     <string name="people_person_state_contact">อยู่ในผู้ติดต่อแล้ว</string>

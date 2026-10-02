@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Catatan</string>
     <string name="staff_accounts_reason_label">Alasan</string>
     <string name="staff_accounts_reason_optional_label">Alasan (opsional)</string>
-    <string name="staff_accounts_sales">%1$d penjualan</string>
+    <string name="staff_accounts_sales">%1$s penjualan</string>
     <string name="staff_accounts_search_clear">Bersihkan pencarian</string>
     <string name="staff_accounts_search_placeholder">Cari</string>
     <string name="staff_accounts_seller_buyers">Khusus pembeli</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Tanpa nama</string>
     <string name="staff_accounts_unsuspend">Cabut penangguhan</string>
     <string name="staff_accounts_unsuspended_toast">Penangguhan akun dibuka</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Batal</string>
     <string name="staff_appeals_decide">Putuskan</string>
     <string name="staff_appeals_decision_denied">Tetap tolak daftar</string>

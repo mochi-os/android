@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">تل</string>
     <string name="calendars_reminder_time">په همغه وخت</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d دقیقه مخکې</item>
-        <item quantity="other">%1$d دقیقې مخکې</item>
+        <item quantity="one">%1$s دقیقه مخکې</item>
+        <item quantity="other">%1$s دقیقې مخکې</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d ساعت مخکې</item>
-        <item quantity="other">%1$d ساعته مخکې</item>
+        <item quantity="one">%1$s ساعت مخکې</item>
+        <item quantity="other">%1$s ساعته مخکې</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ورځ مخکې</item>
-        <item quantity="other">%1$d ورځې مخکې</item>
+        <item quantity="one">%1$s ورځ مخکې</item>
+        <item quantity="other">%1$s ورځې مخکې</item>
     </plurals>
     <string name="calendars_reminder_add">یادونه اضافه کړئ</string>
     <string name="calendars_reminder_remove">یادونه لرې کړئ</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">کليز ډېر لوی دی</string>
     <string name="calendars_poll_invalid">له پتې څخه کليز لاسته نه راغی</string>
     <string name="calendars_poll_unreachable">پتې ته لاسرسی ونشو</string>
-    <string name="calendars_poll_status">پتې %1$d ځواب ورکړ</string>
+    <string name="calendars_poll_status">پتې %1$s ځواب ورکړ</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d دقیقه</item>
-        <item quantity="other">%1$d دقیقې</item>
+        <item quantity="one">%1$s دقیقه</item>
+        <item quantity="other">%1$s دقیقې</item>
     </plurals>
     <string name="calendars_preferences_zones">پېښې د خپلې وخت سیمې له مخې وښایاست</string>
     <string name="calendars_event_backwards">له پیل مخکې پای ته رسېږي</string>

@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Mengirim…</string>
     <string name="market_checkout_subscribing">Berlangganan…</string>
     <string name="market_filter_remove">Hapus filter</string>
-    <string name="market_listing_detail_sales_count">%1$d penjualan</string>
-    <string name="market_profile_sales_count">%1$d penjualan</string>
+    <string name="market_listing_detail_sales_count">%1$s penjualan</string>
+    <string name="market_profile_sales_count">%1$s penjualan</string>
     <string name="market_purchase_dispute_response">Tanggapan penjual</string>
     <string name="market_purchases_order_label">Pesanan #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Ceritakan tentang diri Anda kepada pembeli…</string>
     <string name="market_account_load_failed">Tidak dapat memuat akun</string>
     <string name="market_account_save_failed">Tidak dapat menyimpan perubahan</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Saat ini: %1$s</string>
     <string name="market_bids_ends_in">Berakhir dalam %1$s</string>
     <string name="market_bids_your_bid">Tawaran Anda: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d dari %2$d</string>
-    <string name="market_carousel_thumbnail">Gambar mini %1$d</string>
+    <string name="market_carousel_main">Foto %1$s dari %2$s</string>
+    <string name="market_carousel_thumbnail">Gambar mini %1$s</string>
     <string name="market_checkout_browser_unavailable">Tidak ada peramban yang tersedia untuk membuka halaman pembayaran</string>
     <string name="market_checkout_pay_button">Bayar dengan Stripe</string>
     <string name="market_checkout_processing">Memproses…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Lampirkan bukti</string>
-    <string name="market_dispute_dialog_attach_count">%1$d berkas dilampirkan</string>
+    <string name="market_dispute_dialog_attach_count">%1$s berkas dilampirkan</string>
     <string name="market_dispute_dialog_evidence_role_staff">Staf Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Bukti yang dikirim</string>
     <string name="market_dispute_dialog_evidence_submitter_line">dikirim oleh %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL referensi</string>
     <string name="market_editor_assets_empty">Belum ada aset</string>
     <string name="market_editor_category_none">Pilih kategori</string>
-    <string name="market_editor_days">%1$d hari</string>
+    <string name="market_editor_days">%1$s hari</string>
     <string name="market_editor_delete">Hapus daftar</string>
     <string name="market_editor_delete_confirm_message">Tindakan ini akan menghapus daftar secara permanen.</string>
     <string name="market_editor_delete_confirm_title">Hapus daftar?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">Tidak dapat memuat utas</string>
     <string name="market_messages_send_failed">Tidak dapat mengirim pesan</string>
     <string name="market_messages_thread_title">Percakapan</string>
-    <string name="market_messages_unread_badge">%1$d belum dibaca</string>
+    <string name="market_messages_unread_badge">%1$s belum dibaca</string>
     <string name="market_price_from">Dari %1$s</string>
     <string name="market_price_high_bid">Tawaran tertinggi: %1$s</string>
     <string name="market_price_instant_buy">beli langsung: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Bergabung %1$s</string>
     <string name="market_profile_no_reviews">Belum ada ulasan.</string>
     <string name="market_profile_rating_breakdown">Rincian peringkat</string>
-    <string name="market_profile_stars_value">%1$d bintang</string>
+    <string name="market_profile_stars_value">%1$s bintang</string>
     <string name="market_purchase_dispute_chargeback">Tolak bayar %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bank Anda mengajukan chargeback untuk pesanan ini. Stripe sedang menangani sengketa dengan penjual; hasilnya akan muncul di sini setelah diputuskan.</string>
-    <string name="market_purchase_download_many">Unduh %1$d file Anda di bawah.</string>
+    <string name="market_purchase_download_many">Unduh %1$s file Anda di bawah.</string>
     <string name="market_purchase_download_one">Unduh file Anda di bawah.</string>
     <string name="market_purchase_review_from">Ulasan dari %1$s</string>
     <string name="market_purchases_auction_label">Lelang #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s dikembalikan</string>
     <string name="market_purchases_won_for">Dimenangkan seharga %1$s</string>
-    <string name="market_rating_reviews">(%1$d ulasan)</string>
+    <string name="market_rating_reviews">(%1$s ulasan)</string>
     <string name="market_refund_amount_label">Jumlah</string>
     <string name="market_refund_dialog_amount_help">Kosongkan untuk mengembalikan seluruh pesanan.</string>
     <string name="market_refund_dialog_amount_label">Jumlah</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Ini akan membatalkan lelang. Daftar akan disembunyikan dari pembeli; Anda dapat mendaftarkannya kembali nanti sebagai draf baru.</string>
     <string name="market_listings_remove_title">Hapus daftar ini?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Ini akan membatalkan lelang dan memberi tahu %1$d penawar aktif. Iklan akan disembunyikan dari pembeli; Anda dapat memasangnya lagi nanti sebagai draf baru.</item>
-        <item quantity="other">Ini akan membatalkan lelang dan memberi tahu %1$d penawar aktif. Iklan akan disembunyikan dari pembeli; Anda dapat memasangnya lagi nanti sebagai draf baru.</item>
+        <item quantity="one">Ini akan membatalkan lelang dan memberi tahu %1$s penawar aktif. Iklan akan disembunyikan dari pembeli; Anda dapat memasangnya lagi nanti sebagai draf baru.</item>
+        <item quantity="other">Ini akan membatalkan lelang dan memberi tahu %1$s penawar aktif. Iklan akan disembunyikan dari pembeli; Anda dapat memasangnya lagi nanti sebagai draf baru.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Ini akan membatalkan %1$d langganan aktif pada akhir periode penagihan saat ini. Pelanggan akan diberi tahu. Iklan akan disembunyikan dari pembeli.</item>
-        <item quantity="other">Ini akan membatalkan %1$d langganan aktif pada akhir periode penagihan saat ini. Pelanggan akan diberi tahu. Iklan akan disembunyikan dari pembeli.</item>
+        <item quantity="one">Ini akan membatalkan %1$s langganan aktif pada akhir periode penagihan saat ini. Pelanggan akan diberi tahu. Iklan akan disembunyikan dari pembeli.</item>
+        <item quantity="other">Ini akan membatalkan %1$s langganan aktif pada akhir periode penagihan saat ini. Pelanggan akan diberi tahu. Iklan akan disembunyikan dari pembeli.</item>
     </plurals>
 </resources>

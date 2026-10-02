@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">Caballo</string>
     <string name="chess_piece_pawn">Peón</string>
     <string name="chess_move_played">%1$s jugó %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">Notificaciones sobre movimientos de ajedrez, ofertas de tablas y resultados.</string>
     <string name="chess_channel_name">Notificaciones de ajedrez</string>
     <string name="chess_delete_message">Elimina la partida de tu lista.</string>

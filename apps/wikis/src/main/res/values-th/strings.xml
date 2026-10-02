@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">การแจ้งเตือนเกี่ยวกับการแก้ไขหน้า ความคิดเห็น และคำเชิญ</string>
     <string name="wikis_pageview_toc_expand">แสดงสารบัญ</string>
     <string name="wikis_pageview_toc_collapse">ซ่อนสารบัญ</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">อัปเดต %1$s</string>
     <string name="wikis_pageview_not_found_description">หน้า \"%1$s\" ยังไม่มี</string>
     <string name="wikis_pageview_share_chooser">ลิงก์วิกิ</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">คุณกำลังจะลบหน้า \"%1$s\" (%2$s) การกระทำนี้สามารถยกเลิกได้โดยการคืนค่าจากประวัติ</string>
     <string name="wikis_delete_page_success">ลบหน้าแล้ว</string>
     <string name="wikis_revert_page_title">ย้อนกลับหน้า</string>
-    <string name="wikis_revert_page_message">คุณกำลังจะย้อนกลับ %1$s ไปเป็นเวอร์ชัน %2$d ซึ่งจะสร้างการแก้ไขใหม่ด้วยเนื้อหาของเวอร์ชัน %2$d</string>
-    <string name="wikis_revert_page_default_comment">ย้อนกลับไปเป็นเวอร์ชัน %1$d</string>
-    <string name="wikis_revert_page_success">ย้อนกลับไปเป็นเวอร์ชัน %1$d</string>
+    <string name="wikis_revert_page_message">คุณกำลังจะย้อนกลับ %1$s ไปเป็นเวอร์ชัน %2$s ซึ่งจะสร้างการแก้ไขใหม่ด้วยเนื้อหาของเวอร์ชัน %2$s</string>
+    <string name="wikis_revert_page_default_comment">ย้อนกลับไปเป็นเวอร์ชัน %1$s</string>
+    <string name="wikis_revert_page_success">ย้อนกลับไปเป็นเวอร์ชัน %1$s</string>
     <string name="wikis_rename_page_renaming">กำลังเปลี่ยนชื่อ…</string>
     <string name="wikis_rename_page_success">เปลี่ยนชื่อหน้าแล้ว</string>
-    <string name="wikis_history_viewing">กำลังดูประวัติของ %1$s, เวอร์ชันปัจจุบัน %2$d</string>
-    <string name="wikis_revision_version_badge">เวอร์ชัน %1$d</string>
+    <string name="wikis_history_viewing">กำลังดูประวัติของ %1$s, เวอร์ชันปัจจุบัน %2$s</string>
+    <string name="wikis_revision_version_badge">เวอร์ชัน %1$s</string>
     <string name="wikis_search_pages_placeholder">ค้นหาหน้าตามชื่อหรือเนื้อหา…</string>
     <string name="wikis_search_no_results">ไม่พบหน้าสำหรับ \"%1$s\" ลองคำค้นหาอื่น</string>
     <string name="wikis_search_updated">อัปเดต %1$s</string>
@@ -289,37 +289,37 @@
     <string name="wikis_revision_author">โดย %1$s</string>
     <string name="wikis_revision_show_page">แสดงหน้า</string>
     <string name="wikis_revision_compare_failed">ไม่สามารถโหลดเวอร์ชันก่อนหน้าเพื่อเปรียบเทียบได้</string>
-    <string name="wikis_revision_changes_from">การเปลี่ยนแปลงจากเวอร์ชัน %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">การเปลี่ยนแปลงจากเวอร์ชัน %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d ความคิดเห็น</item>
+        <item quantity="other">%s ความคิดเห็น</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d การตอบกลับ</item>
-        <item quantity="other">+%d การตอบกลับเพิ่มเติม</item>
+        <item quantity="one">%s การตอบกลับ</item>
+        <item quantity="other">+%s การตอบกลับเพิ่มเติม</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d หน้า</item>
-        <item quantity="other">%d หน้า</item>
+        <item quantity="one">%s หน้า</item>
+        <item quantity="other">%s หน้า</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d ไฟล์</item>
-        <item quantity="other">%d ไฟล์</item>
+        <item quantity="one">%s ไฟล์</item>
+        <item quantity="other">%s ไฟล์</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d รูปภาพ</item>
-        <item quantity="other">%d รูปภาพ</item>
+        <item quantity="one">%s รูปภาพ</item>
+        <item quantity="other">%s รูปภาพ</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d เอกสาร</item>
-        <item quantity="other">%d เอกสาร</item>
+        <item quantity="one">%s เอกสาร</item>
+        <item quantity="other">%s เอกสาร</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d หน้า ที่มีแท็กนี้</item>
-        <item quantity="other">%d หน้า ที่มีแท็กนี้</item>
+        <item quantity="one">%s หน้า ที่มีแท็กนี้</item>
+        <item quantity="other">%s หน้า ที่มีแท็กนี้</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">พบ %1$d ผลลัพธ์ สำหรับ «%2$s»</item>
-        <item quantity="other">พบ %1$d ผลลัพธ์ สำหรับ «%2$s»</item>
+        <item quantity="one">พบ %1$s ผลลัพธ์ สำหรับ «%2$s»</item>
+        <item quantity="other">พบ %1$s ผลลัพธ์ สำหรับ «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">ไม่สามารถบันทึกคำบรรยายภาพได้</string>
     <string name="wikis_attachments_upload_types">ไฟล์ที่รองรับ: รูปภาพ, PDF, DOC, DOCX, TXT และ MD</string>
@@ -328,6 +328,6 @@
     <string name="wikis_rss_copied_new">คัดลอก URL RSS ใหม่ ไปยังคลิปบอร์ดแล้ว</string>
     <string name="wikis_rss_exists">URL ฟีดนี้ออกให้แล้ว และไม่สามารถแสดงอีกครั้งได้</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">กำลังแสดงความคิดเห็น %1$d รายการแรก</item>
+        <item quantity="other">กำลังแสดงความคิดเห็น %1$s รายการแรก</item>
     </plurals>
 </resources>

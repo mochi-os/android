@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">വിപണി</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ജീവചരിത്രം</string>
     <string name="market_account_biography_placeholder">വാങ്ങുന്നവരോട് നിങ്ങളെക്കുറിച്ച് പറയൂ…</string>
     <string name="market_account_load_failed">അക്കൗണ്ട് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">ബിഡ് മറികടന്നു</string>
     <string name="market_bids_tab_won">ജയിച്ചു</string>
     <string name="market_bids_title">ബിഡുകൾ</string>
-    <string name="market_carousel_main">ഫോട്ടോ %1$d / %2$d</string>
+    <string name="market_carousel_main">ഫോട്ടോ %1$s / %2$s</string>
     <string name="market_channel_name">വിപണി</string>
     <string name="market_chargeback_reason_bank_cannot_process">ബാങ്കിന് പ്രോസസ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_chargeback_reason_check_returned">ചെക്ക് മടങ്ങി</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">പുതുക്കിയത്</string>
     <string name="market_editor_condition_used">ഉപയോഗിച്ചത്</string>
     <string name="market_editor_currency">കറൻസി</string>
-    <string name="market_editor_days">%1$d ദിവസം</string>
+    <string name="market_editor_days">%1$s ദിവസം</string>
     <string name="market_editor_delete">ലിസ്റ്റിംഗ് ഇല്ലാതാക്കുക</string>
     <string name="market_editor_description">വിവരണം</string>
     <string name="market_editor_interval_monthly">പ്രതിമാസ</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">വാങ്ങലുകൾ</string>
     <string name="market_rating_label">റേറ്റിംഗ്</string>
     <string name="market_rating_no_reviews">അവലോകനങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
-    <string name="market_rating_reviews">(%1$d അവലോകനം)</string>
+    <string name="market_rating_reviews">(%1$s അവലോകനം)</string>
     <string name="market_refund_amount_label">തുക</string>
     <string name="market_refund_body">നിങ്ങളുടെ റീഫണ്ട് അഭ്യർത്ഥനയ്ക്ക് ഒരു കാരണം നൽകുക.</string>
     <string name="market_refund_details_label">വിശദാംശങ്ങൾ</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">നിലവിലെ: %1$s</string>
     <string name="market_bids_ends_in">%1$s-ൽ അവസാനിക്കുന്നു</string>
     <string name="market_bids_your_bid">നിങ്ങളുടെ ബിഡ്: %1$s</string>
-    <string name="market_carousel_thumbnail">തംബ്നെയിൽ %1$d</string>
+    <string name="market_carousel_thumbnail">തംബ്നെയിൽ %1$s</string>
     <string name="market_checkout_browser_unavailable">പേയ്മെന്റ് പേജ് തുറക്കാൻ ബ്രൗസർ ലഭ്യമല്ല</string>
     <string name="market_checkout_pwyw_label">നിങ്ങളുടെ വില (ചുരുങ്ങിയത് %1$s)</string>
     <string name="market_checkout_pwyw_min_error">തുക കുറഞ്ഞത് %1$s ആയിരിക്കണം</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ഫയൽ(കൾ) അറ്റാച്ച് ചെയ്തു</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ഫയൽ(കൾ) അറ്റാച്ച് ചെയ്തു</string>
     <string name="market_dispute_dialog_evidence_section_title">സമർപ്പിച്ച തെളിവ്</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s സമർപ്പിച്ചത്</string>
     <string name="market_editor_appeal">മോഡറേഷൻ അപ്പീൽ</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">ലിസ്റ്റിംഗ് ലോഡ് ചെയ്യുന്നു</string>
     <string name="market_listing_detail_relist_failed">വീണ്ടും ലിസ്റ്റ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_listing_detail_relist_in_progress">വീണ്ടും ലിസ്റ്റ് ചെയ്യുന്നു</string>
-    <string name="market_listing_detail_sales_count">%1$d വിൽപ്പനകൾ</string>
+    <string name="market_listing_detail_sales_count">%1$s വിൽപ്പനകൾ</string>
     <string name="market_listing_detail_seller_banned_banner">ഈ വിൽപ്പനക്കാരനെ വിലക്കിയിരിക്കുന്നു. പുതിയ ഓർഡറുകൾ നൽകാൻ കഴിയില്ല.</string>
     <string name="market_listing_detail_seller_suspended_banner">ഈ വിൽപ്പനക്കാരനെ സസ്പെൻഡ് ചെയ്തിരിക്കുന്നു. അക്കൗണ്ട് പുനഃസ്ഥാപിക്കുന്നതുവരെ പുതിയ ഓർഡറുകൾ താൽക്കാലികമായി നിർത്തിയിരിക്കുന്നു.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">വിൽപ്പനക്കാരന്റെ അക്കൗണ്ട് നിയന്ത്രിച്ചിരിക്കുമ്പോൾ വാങ്ങൽ പ്രവർത്തനരഹിതമാണ്.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">ഇതുവരെ സംഭാഷണങ്ങളൊന്നുമില്ല</string>
     <string name="market_messages_load_failed">ത്രെഡ് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_messages_send_failed">സന്ദേശം അയയ്ക്കാൻ കഴിഞ്ഞില്ല</string>
-    <string name="market_messages_unread_badge">%1$d വായിക്കാത്തവ</string>
+    <string name="market_messages_unread_badge">%1$s വായിക്കാത്തവ</string>
     <string name="market_price_high_bid">ഉയർന്ന ബിഡ്: %1$s</string>
     <string name="market_price_instant_buy">തൽക്ഷണ വാങ്ങൽ: %1$s</string>
     <string name="market_price_starting_bid">ആരംഭ ബിഡ്: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">%1$s മുതൽ അംഗം</string>
     <string name="market_profile_joined">%1$s-ന് ചേർന്നു</string>
     <string name="market_profile_rating_breakdown">റേറ്റിംഗ് വിശദാംശം</string>
-    <string name="market_profile_sales_count">%1$d വിൽപ്പനകൾ</string>
-    <string name="market_profile_stars_value">%1$d നക്ഷത്രങ്ങൾ</string>
+    <string name="market_profile_sales_count">%1$s വിൽപ്പനകൾ</string>
+    <string name="market_profile_stars_value">%1$s നക്ഷത്രങ്ങൾ</string>
     <string name="market_purchase_dispute_chargeback">ചാർജ്ബാക്ക് %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">നിങ്ങളുടെ ബാങ്ക് ഈ ഓർഡറിൽ ഒരു ചാർജ്ബാക്ക് ഫയൽ ചെയ്തു. Stripe വിൽപ്പനക്കാരനുമായി തർക്കം കൈകാര്യം ചെയ്യുന്നു; തീരുമാനമെടുക്കുമ്പോൾ ഫലം ഇവിടെ ദൃശ്യമാകും.</string>
     <string name="market_purchase_dispute_response">വിൽപ്പനക്കാരന്റെ പ്രതികരണം</string>
-    <string name="market_purchase_download_many">നിങ്ങളുടെ %1$d ഫയലുകൾ താഴെ ഡൗൺലോഡ് ചെയ്യുക.</string>
+    <string name="market_purchase_download_many">നിങ്ങളുടെ %1$s ഫയലുകൾ താഴെ ഡൗൺലോഡ് ചെയ്യുക.</string>
     <string name="market_purchase_download_one">നിങ്ങളുടെ ഫയൽ താഴെ ഡൗൺലോഡ് ചെയ്യുക.</string>
     <string name="market_purchase_review_from">%1$s ൽ നിന്നുള്ള അവലോകനം</string>
     <string name="market_purchases_auction_label">ലേലം #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">ഇത് ലേലം റദ്ദാക്കും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും; നിങ്ങൾക്ക് ഇത് പിന്നീട് ഒരു പുതിയ ഡ്രാഫ്റ്റായി വീണ്ടും ലിസ്റ്റ് ചെയ്യാം.</string>
     <string name="market_listings_remove_title">ഈ ലിസ്റ്റിംഗ് നീക്കം ചെയ്യണോ?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">ഇത് ലേലം റദ്ദാക്കുകയും സജീവമായ %1$d ലേലക്കാരെ അറിയിക്കുകയും ചെയ്യും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും; പിന്നീട് ഇത് പുതിയ ഡ്രാഫ്റ്റായി വീണ്ടും ലിസ്റ്റ് ചെയ്യാം.</item>
-        <item quantity="other">ഇത് ലേലം റദ്ദാക്കുകയും സജീവമായ %1$d ലേലക്കാരെ അറിയിക്കുകയും ചെയ്യും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും; പിന്നീട് ഇത് പുതിയ ഡ്രാഫ്റ്റായി വീണ്ടും ലിസ്റ്റ് ചെയ്യാം.</item>
+        <item quantity="one">ഇത് ലേലം റദ്ദാക്കുകയും സജീവമായ %1$s ലേലക്കാരെ അറിയിക്കുകയും ചെയ്യും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും; പിന്നീട് ഇത് പുതിയ ഡ്രാഫ്റ്റായി വീണ്ടും ലിസ്റ്റ് ചെയ്യാം.</item>
+        <item quantity="other">ഇത് ലേലം റദ്ദാക്കുകയും സജീവമായ %1$s ലേലക്കാരെ അറിയിക്കുകയും ചെയ്യും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും; പിന്നീട് ഇത് പുതിയ ഡ്രാഫ്റ്റായി വീണ്ടും ലിസ്റ്റ് ചെയ്യാം.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">ഇത് നിലവിലെ ബില്ലിംഗ് കാലയളവിന്റെ അവസാനം സജീവമായ %1$d സബ്‌സ്‌ക്രിപ്ഷനുകൾ റദ്ദാക്കും. സബ്‌സ്‌ക്രൈബർമാരെ അറിയിക്കും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും.</item>
-        <item quantity="other">ഇത് നിലവിലെ ബില്ലിംഗ് കാലയളവിന്റെ അവസാനം സജീവമായ %1$d സബ്‌സ്‌ക്രിപ്ഷനുകൾ റദ്ദാക്കും. സബ്‌സ്‌ക്രൈബർമാരെ അറിയിക്കും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും.</item>
+        <item quantity="one">ഇത് നിലവിലെ ബില്ലിംഗ് കാലയളവിന്റെ അവസാനം സജീവമായ %1$s സബ്‌സ്‌ക്രിപ്ഷനുകൾ റദ്ദാക്കും. സബ്‌സ്‌ക്രൈബർമാരെ അറിയിക്കും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും.</item>
+        <item quantity="other">ഇത് നിലവിലെ ബില്ലിംഗ് കാലയളവിന്റെ അവസാനം സജീവമായ %1$s സബ്‌സ്‌ക്രിപ്ഷനുകൾ റദ്ദാക്കും. സബ്‌സ്‌ക്രൈബർമാരെ അറിയിക്കും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും.</item>
     </plurals>
 </resources>

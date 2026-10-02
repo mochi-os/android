@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Շուկա</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Կենսագրություն</string>
     <string name="market_account_biography_placeholder">Պատմեք գնորդներին ձեր մասին…</string>
     <string name="market_account_load_failed">Չհաջողվեց բեռնել հաշիվը</string>
@@ -55,7 +55,7 @@
     <string name="market_bids_tab_outbid">Գերազանցված հայտ</string>
     <string name="market_bids_tab_won">Շահել</string>
     <string name="market_bids_title">Հայտեր</string>
-    <string name="market_carousel_main">Լուսանկար %1$d / %2$d</string>
+    <string name="market_carousel_main">Լուսանկար %1$s / %2$s</string>
     <string name="market_channel_name">Շուկա</string>
     <string name="market_chargeback_reason_bank_cannot_process">Բանկը չկարողացավ մշակել</string>
     <string name="market_chargeback_reason_check_returned">Չեկը վերադարձվել է</string>
@@ -134,7 +134,7 @@
     <string name="market_editor_condition_refurbished">Վերանորոգված</string>
     <string name="market_editor_condition_used">Օգտագործված</string>
     <string name="market_editor_currency">Արժույթ</string>
-    <string name="market_editor_days">%1$d օր</string>
+    <string name="market_editor_days">%1$s օր</string>
     <string name="market_editor_delete">Ջնջել ցուցակը</string>
     <string name="market_editor_description">Նկարագրություն</string>
     <string name="market_editor_interval_monthly">Ամսական</string>
@@ -325,7 +325,7 @@
     <string name="market_purchases_title">Գնումներ</string>
     <string name="market_rating_label">Գնահատական</string>
     <string name="market_rating_no_reviews">Դեռ կարծիքներ չկան</string>
-    <string name="market_rating_reviews">(%1$d ակնարկ)</string>
+    <string name="market_rating_reviews">(%1$s ակնարկ)</string>
     <string name="market_refund_amount_label">Գումար</string>
     <string name="market_refund_body">Տրամադրեք պատճառ ձեր վերադարձի հարցման համար։</string>
     <string name="market_refund_details_label">Մանրամասներ</string>
@@ -475,10 +475,10 @@
     <string name="market_sale_review_response_submitting">Ուղարկվում է…</string>
     <string name="market_checkout_subscribing">Բաժանորդագրվում է…</string>
     <string name="market_filter_remove">Հեռացնել զտիչը</string>
-    <string name="market_listing_detail_sales_count">%1$d վաճառք</string>
+    <string name="market_listing_detail_sales_count">%1$s վաճառք</string>
     <string name="market_listings_action_appeal">Հեռացման բողոք</string>
     <string name="market_listings_share_chooser">Կիսվել ցուցակով</string>
-    <string name="market_profile_sales_count">%1$d վաճառք</string>
+    <string name="market_profile_sales_count">%1$s վաճառք</string>
     <string name="market_purchase_dispute_response">Վաճառողի պատասխանը</string>
     <string name="market_refund_dialog_amount_label">Գումար</string>
 
@@ -498,11 +498,11 @@
     <string name="market_bids_current_bid">Ընթացիկ՝ %1$s</string>
     <string name="market_bids_ends_in">Ավարտվում է %1$s-ից</string>
     <string name="market_bids_your_bid">Ձեր հայտը՝ %1$s</string>
-    <string name="market_carousel_thumbnail">Մանրապատկեր %1$d</string>
+    <string name="market_carousel_thumbnail">Մանրապատկեր %1$s</string>
     <string name="market_checkout_browser_unavailable">Վճարման էջը բացելու համար բրաուզեր հասանելի չէ</string>
     <string name="market_checkout_pwyw_label">Ձեր գինը (նվազագույնը՝ %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Գումարը պետք է լինի առնվազն %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ֆայլ կցված է</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ֆայլ կցված է</string>
     <string name="market_dispute_dialog_evidence_section_title">Ներկայացված ապացույցներ</string>
     <string name="market_dispute_dialog_evidence_submitter_line">ներկայացրել է %1$s-ը</string>
     <string name="market_editor_appeal">Բողոքարկել մոդերացիան</string>
@@ -573,7 +573,7 @@
     <string name="market_messages_inbox_empty_title">Դեռ զրույցներ չկան</string>
     <string name="market_messages_load_failed">Չհաջողվեց բեռնել զրույցը</string>
     <string name="market_messages_send_failed">Չհաջողվեց ուղարկել հաղորդագրությունը</string>
-    <string name="market_messages_unread_badge">%1$d չկարդացված</string>
+    <string name="market_messages_unread_badge">%1$s չկարդացված</string>
     <string name="market_price_high_bid">Բարձր հայտ՝ %1$s</string>
     <string name="market_price_instant_buy">ակնթարթային գնում՝ %1$s</string>
     <string name="market_price_starting_bid">Մեկնարկային հայտ՝ %1$s</string>
@@ -581,10 +581,10 @@
     <string name="market_profile_member_since">Անդամ է %1$s-ից</string>
     <string name="market_profile_joined">Միացել է %1$s</string>
     <string name="market_profile_rating_breakdown">Վարկանիշի մանրամասներ</string>
-    <string name="market_profile_stars_value">%1$d աստղ</string>
+    <string name="market_profile_stars_value">%1$s աստղ</string>
     <string name="market_purchase_dispute_chargeback">Հետգանձում %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ձեր բանկը հետգանձում է ներկայացրել այս պատվերի վրա: Stripe-ը վարում է վեճը վաճառողի հետ; արդյունքը կհայտնվի այստեղ, երբ որոշվի:</string>
-    <string name="market_purchase_download_many">Ներբեռնեք ձեր %1$d ֆայլերը ստորև։</string>
+    <string name="market_purchase_download_many">Ներբեռնեք ձեր %1$s ֆայլերը ստորև։</string>
     <string name="market_purchase_download_one">Ներբեռնեք ձեր ֆայլը ստորև։</string>
     <string name="market_purchase_review_from">Կարծիք %1$s-ից</string>
     <string name="market_purchases_auction_label">Աճուրդ #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Սա կչեղարկի աճուրդը: Ցանկը կթաքցվի գնորդներից, կարող եք այն հետագայում նորից տեղադրել որպես նոր սևագիր:</string>
     <string name="market_listings_remove_title">Հեռացնե՞լ այս հայտարարությունը։</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Սա կչեղարկի աճուրդը և կծանուցի %1$d ակտիվ մասնակցի: Հայտարարությունը կթաքցվի գնորդներից. ավելի ուշ կարող եք այն նորից տեղադրել որպես նոր սևագիր:</item>
-        <item quantity="other">Սա կչեղարկի աճուրդը և կծանուցի %1$d ակտիվ մասնակցի: Հայտարարությունը կթաքցվի գնորդներից. ավելի ուշ կարող եք այն նորից տեղադրել որպես նոր սևագիր:</item>
+        <item quantity="one">Սա կչեղարկի աճուրդը և կծանուցի %1$s ակտիվ մասնակցի: Հայտարարությունը կթաքցվի գնորդներից. ավելի ուշ կարող եք այն նորից տեղադրել որպես նոր սևագիր:</item>
+        <item quantity="other">Սա կչեղարկի աճուրդը և կծանուցի %1$s ակտիվ մասնակցի: Հայտարարությունը կթաքցվի գնորդներից. ավելի ուշ կարող եք այն նորից տեղադրել որպես նոր սևագիր:</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Սա կչեղարկի %1$d ակտիվ բաժանորդագրություն ընթացիկ վճարման ժամանակաշրջանի վերջում: Բաժանորդները կծանուցվեն: Հայտարարությունը կթաքցվի գնորդներից:</item>
-        <item quantity="other">Սա կչեղարկի %1$d ակտիվ բաժանորդագրություն ընթացիկ վճարման ժամանակաշրջանի վերջում: Բաժանորդները կծանուցվեն: Հայտարարությունը կթաքցվի գնորդներից:</item>
+        <item quantity="one">Սա կչեղարկի %1$s ակտիվ բաժանորդագրություն ընթացիկ վճարման ժամանակաշրջանի վերջում: Բաժանորդները կծանուցվեն: Հայտարարությունը կթաքցվի գնորդներից:</item>
+        <item quantity="other">Սա կչեղարկի %1$s ակտիվ բաժանորդագրություն ընթացիկ վճարման ժամանակաշրջանի վերջում: Բաժանորդները կծանուցվեն: Հայտարարությունը կթաքցվի գնորդներից:</item>
     </plurals>
 </resources>

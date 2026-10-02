@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki പേജ് എഡിറ്റുകൾ, അഭിപ്രായങ്ങൾ, ക്ഷണങ്ങൾ എന്നിവയെക്കുറിച്ചുള്ള അറിയിപ്പുകൾ.</string>
     <string name="wikis_pageview_toc_expand">ഉള്ളടക്ക പട്ടിക കാണിക്കുക</string>
     <string name="wikis_pageview_toc_collapse">ഉള്ളടക്ക പട്ടിക മറയ്ക്കുക</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">%1$s അപ്ഡേറ്റ് ചെയ്തു</string>
     <string name="wikis_pageview_not_found_description">“%1$s” എന്ന പേജ് ഇതുവരെ നിലവിലില്ല.</string>
     <string name="wikis_pageview_share_chooser">വിക്കി ലിങ്ക്</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">നിങ്ങൾ “%1$s” (%2$s) പേജ് ഇല്ലാതാക്കാൻ പോകുന്നു. ചരിത്രത്തിൽ നിന്ന് പുനഃസ്ഥാപിച്ച് ഈ പ്രവർത്തനം പഴയപടിയാക്കാം.</string>
     <string name="wikis_delete_page_success">പേജ് ഇല്ലാതാക്കി</string>
     <string name="wikis_revert_page_title">പേജ് പഴയപടിയാക്കുക</string>
-    <string name="wikis_revert_page_message">നിങ്ങൾ %1$s നെ പതിപ്പ് %2$d ലേക്ക് പുനഃസ്ഥാപിക്കാൻ പോകുന്നു. ഇത് പതിപ്പ് %2$d ന്റെ ഉള്ളടക്കത്തോടെ പുതിയ പുനരവലോകനം സൃഷ്ടിക്കും.</string>
-    <string name="wikis_revert_page_default_comment">പതിപ്പ് %1$d ലേക്ക് പുനഃസ്ഥാപിച്ചു</string>
-    <string name="wikis_revert_page_success">പതിപ്പ് %1$d ലേക്ക് പുനഃസ്ഥാപിച്ചു</string>
+    <string name="wikis_revert_page_message">നിങ്ങൾ %1$s നെ പതിപ്പ് %2$s ലേക്ക് പുനഃസ്ഥാപിക്കാൻ പോകുന്നു. ഇത് പതിപ്പ് %2$s ന്റെ ഉള്ളടക്കത്തോടെ പുതിയ പുനരവലോകനം സൃഷ്ടിക്കും.</string>
+    <string name="wikis_revert_page_default_comment">പതിപ്പ് %1$s ലേക്ക് പുനഃസ്ഥാപിച്ചു</string>
+    <string name="wikis_revert_page_success">പതിപ്പ് %1$s ലേക്ക് പുനഃസ്ഥാപിച്ചു</string>
     <string name="wikis_rename_page_renaming">പുനർനാമകരണം ചെയ്യുന്നു…</string>
     <string name="wikis_rename_page_success">പേജ് പുനർനാമകരണം ചെയ്തു</string>
-    <string name="wikis_history_viewing">%1$s-ന്റെ ചരിത്രം കാണുന്നു, നിലവിലെ പതിപ്പ് %2$d</string>
-    <string name="wikis_revision_version_badge">പതിപ്പ് %1$d</string>
+    <string name="wikis_history_viewing">%1$s-ന്റെ ചരിത്രം കാണുന്നു, നിലവിലെ പതിപ്പ് %2$s</string>
+    <string name="wikis_revision_version_badge">പതിപ്പ് %1$s</string>
     <string name="wikis_search_pages_placeholder">തലക്കെട്ട് അല്ലെങ്കിൽ ഉള്ളടക്കം അനുസരിച്ച് പേജുകൾ തിരയുക…</string>
     <string name="wikis_search_no_results">“%1$s” എന്നതിന് പേജുകളൊന്നും കണ്ടെത്തിയില്ല. മറ്റ് തിരയൽ പദങ്ങൾ ശ്രമിക്കുക.</string>
     <string name="wikis_search_updated">%1$s അപ്ഡേറ്റ് ചെയ്തു</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s പ്രകാരം</string>
     <string name="wikis_revision_show_page">പേജ് കാണിക്കുക</string>
     <string name="wikis_revision_compare_failed">താരതമ്യത്തിനായി മുൻ പതിപ്പ് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.</string>
-    <string name="wikis_revision_changes_from">പതിപ്പ് %1$d → %2$d മുതലുള്ള മാറ്റങ്ങൾ</string>
+    <string name="wikis_revision_changes_from">പതിപ്പ് %1$s → %2$s മുതലുള്ള മാറ്റങ്ങൾ</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d കമന്റ്</item>
-        <item quantity="other">%d കമന്റുകൾ</item>
+        <item quantity="one">%s കമന്റ്</item>
+        <item quantity="other">%s കമന്റുകൾ</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d മറുപടി</item>
-        <item quantity="other">+%d കൂടുതൽ മറുപടികൾ</item>
+        <item quantity="one">%s മറുപടി</item>
+        <item quantity="other">+%s കൂടുതൽ മറുപടികൾ</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d പേജ്</item>
-        <item quantity="other">%d പേജുകൾ</item>
+        <item quantity="one">%s പേജ്</item>
+        <item quantity="other">%s പേജുകൾ</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d ഫയൽ</item>
-        <item quantity="other">%d ഫയലുകൾ</item>
+        <item quantity="one">%s ഫയൽ</item>
+        <item quantity="other">%s ഫയലുകൾ</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d ചിത്രം</item>
-        <item quantity="other">%d ചിത്രങ്ങൾ</item>
+        <item quantity="one">%s ചിത്രം</item>
+        <item quantity="other">%s ചിത്രങ്ങൾ</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d രേഖ</item>
-        <item quantity="other">%d രേഖകൾ</item>
+        <item quantity="one">%s രേഖ</item>
+        <item quantity="other">%s രേഖകൾ</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">ഈ ടാഗുള്ള %d പേജ്</item>
-        <item quantity="other">ഈ ടാഗുള്ള %d പേജുകൾ</item>
+        <item quantity="one">ഈ ടാഗുള്ള %s പേജ്</item>
+        <item quantity="other">ഈ ടാഗുള്ള %s പേജുകൾ</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">«%2$s» എന്നതിന് %1$d ഫലം കണ്ടെത്തി</item>
-        <item quantity="other">«%2$s» എന്നതിന് %1$d ഫലങ്ങൾ കണ്ടെത്തി</item>
+        <item quantity="one">«%2$s» എന്നതിന് %1$s ഫലം കണ്ടെത്തി</item>
+        <item quantity="other">«%2$s» എന്നതിന് %1$s ഫലങ്ങൾ കണ്ടെത്തി</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">അടിക്കുറിപ്പ് സംരക്ഷിക്കാനായില്ല</string>
     <string name="wikis_attachments_upload_types">പിന്തുണയ്ക്കുന്ന ഫയലുകൾ: ചിത്രങ്ങൾ, PDF, DOC, DOCX, TXT, എന്നിവയും MD യും.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">പുതിയ RSS URL ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി</string>
     <string name="wikis_rss_exists">ഈ ഫീഡ് URL ഇതിനകം നൽകിയിട്ടുണ്ട്, വീണ്ടും കാണിക്കാൻ കഴിയില്ല.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">ആദ്യത്തെ %1$d അഭിപ്രായം കാണിക്കുന്നു.</item>
-        <item quantity="other">ആദ്യത്തെ %1$d അഭിപ്രായങ്ങൾ കാണിക്കുന്നു.</item>
+        <item quantity="one">ആദ്യത്തെ %1$s അഭിപ്രായം കാണിക്കുന്നു.</item>
+        <item quantity="other">ആദ്യത്തെ %1$s അഭിപ്രായങ്ങൾ കാണിക്കുന്നു.</item>
     </plurals>
 </resources>

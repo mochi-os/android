@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki பக்கத் திருத்தங்கள், கருத்துகள் மற்றும் அழைப்புகள் குறித்த அறிவிப்புகள்.</string>
     <string name="wikis_pageview_toc_expand">பொருளடக்கத்தைக் காட்டு</string>
     <string name="wikis_pageview_toc_collapse">பொருளடக்கத்தை மறை</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">புதுப்பிக்கப்பட்டது %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” பக்கம் இதுவரை இல்லை.</string>
     <string name="wikis_pageview_share_chooser">விக்கி இணைப்பு</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">நீங்கள் “%1$s” (%2$s) பக்கத்தை நீக்கப் போகிறீர்கள். வரலாற்றிலிருந்து மீட்டெடுப்பதன் மூலம் இச்செயலைச் செயல்தவிர்க்கலாம்.</string>
     <string name="wikis_delete_page_success">பக்கம் நீக்கப்பட்டது</string>
     <string name="wikis_revert_page_title">பக்கத்தை மீட்டமை</string>
-    <string name="wikis_revert_page_message">நீங்கள் %1$s ஐ பதிப்பு %2$d க்கு மீட்டமைக்கப் போகிறீர்கள். இது பதிப்பு %2$d இன் உள்ளடக்கத்துடன் புதிய திருத்தத்தை உருவாக்கும்.</string>
-    <string name="wikis_revert_page_default_comment">பதிப்பு %1$d க்கு மீட்டமைக்கப்பட்டது</string>
-    <string name="wikis_revert_page_success">பதிப்பு %1$d க்கு மீட்டமைக்கப்பட்டது</string>
+    <string name="wikis_revert_page_message">நீங்கள் %1$s ஐ பதிப்பு %2$s க்கு மீட்டமைக்கப் போகிறீர்கள். இது பதிப்பு %2$s இன் உள்ளடக்கத்துடன் புதிய திருத்தத்தை உருவாக்கும்.</string>
+    <string name="wikis_revert_page_default_comment">பதிப்பு %1$s க்கு மீட்டமைக்கப்பட்டது</string>
+    <string name="wikis_revert_page_success">பதிப்பு %1$s க்கு மீட்டமைக்கப்பட்டது</string>
     <string name="wikis_rename_page_renaming">மறுபெயரிடுகிறது…</string>
     <string name="wikis_rename_page_success">பக்கம் மறுபெயரிடப்பட்டது</string>
-    <string name="wikis_history_viewing">%1$s இன் வரலாற்றைப் பார்க்கிறீர்கள், தற்போதைய பதிப்பு %2$d</string>
-    <string name="wikis_revision_version_badge">பதிப்பு %1$d</string>
+    <string name="wikis_history_viewing">%1$s இன் வரலாற்றைப் பார்க்கிறீர்கள், தற்போதைய பதிப்பு %2$s</string>
+    <string name="wikis_revision_version_badge">பதிப்பு %1$s</string>
     <string name="wikis_search_pages_placeholder">தலைப்பு அல்லது உள்ளடக்கத்தால் பக்கங்களைத் தேடு…</string>
     <string name="wikis_search_no_results">“%1$s” க்கு பக்கங்கள் எதுவும் கிடைக்கவில்லை. வேறு தேடல் சொற்களை முயற்சிக்கவும்.</string>
     <string name="wikis_search_updated">புதுப்பிக்கப்பட்டது %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s மூலம்</string>
     <string name="wikis_revision_show_page">பக்கத்தைக் காட்டு</string>
     <string name="wikis_revision_compare_failed">ஒப்பிடுவதற்கு முந்தைய பதிப்பை ஏற்ற முடியவில்லை.</string>
-    <string name="wikis_revision_changes_from">%1$d → %2$d பதிப்பிலிருந்து மாற்றங்கள்</string>
+    <string name="wikis_revision_changes_from">%1$s → %2$s பதிப்பிலிருந்து மாற்றங்கள்</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d கருத்து</item>
-        <item quantity="other">%d கருத்துகள்</item>
+        <item quantity="one">%s கருத்து</item>
+        <item quantity="other">%s கருத்துகள்</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d பதில்</item>
-        <item quantity="other">+%d கூடுதல் பதில்கள்</item>
+        <item quantity="one">%s பதில்</item>
+        <item quantity="other">+%s கூடுதல் பதில்கள்</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d பக்கம்</item>
-        <item quantity="other">%d பக்கங்கள்</item>
+        <item quantity="one">%s பக்கம்</item>
+        <item quantity="other">%s பக்கங்கள்</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d கோப்பு</item>
-        <item quantity="other">%d கோப்புகள்</item>
+        <item quantity="one">%s கோப்பு</item>
+        <item quantity="other">%s கோப்புகள்</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d படம்</item>
-        <item quantity="other">%d படங்கள்</item>
+        <item quantity="one">%s படம்</item>
+        <item quantity="other">%s படங்கள்</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d ஆவணம்</item>
-        <item quantity="other">%d ஆவணங்கள்</item>
+        <item quantity="one">%s ஆவணம்</item>
+        <item quantity="other">%s ஆவணங்கள்</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">இந்த குறிச்சொல்லுடன் %d பக்கம்</item>
-        <item quantity="other">இந்த குறிச்சொல்லுடன் %d பக்கங்கள்</item>
+        <item quantity="one">இந்த குறிச்சொல்லுடன் %s பக்கம்</item>
+        <item quantity="other">இந்த குறிச்சொல்லுடன் %s பக்கங்கள்</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">«%2$s»-க்கு %1$d முடிவு கண்டுபிடிக்கப்பட்டது</item>
-        <item quantity="other">«%2$s»-க்கு %1$d முடிவுகள் கண்டுபிடிக்கப்பட்டது</item>
+        <item quantity="one">«%2$s»-க்கு %1$s முடிவு கண்டுபிடிக்கப்பட்டது</item>
+        <item quantity="other">«%2$s»-க்கு %1$s முடிவுகள் கண்டுபிடிக்கப்பட்டது</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">படக்குறிப்பைச் சேமிக்க முடியவில்லை</string>
     <string name="wikis_attachments_upload_types">ஆதரிக்கப்படும் கோப்புகள்: படங்கள், PDF, DOC, DOCX, TXT, மற்றும் MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">புதிய RSS URL கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது</string>
     <string name="wikis_rss_exists">இந்த ஊட்ட URL ஏற்கனவே வழங்கப்பட்டது, மீண்டும் காட்ட முடியாது.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">முதல் %1$d கருத்து காட்டப்படுகிறது.</item>
-        <item quantity="other">முதல் %1$d கருத்துகள் காட்டப்படுகின்றன.</item>
+        <item quantity="one">முதல் %1$s கருத்து காட்டப்படுகிறது.</item>
+        <item quantity="other">முதல் %1$s கருத்துகள் காட்டப்படுகின்றன.</item>
     </plurals>
 </resources>

@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">veica izmaiņas</string>
     <string name="projects_attachment_empty">Nav pielikumu</string>
     <string name="projects_attachment_default_name">pielikums</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Jauns sapludināšanas pieprasījums</string>
     <string name="projects_request_status_closed">Slēgts</string>
     <string name="projects_request_back_to_list">Atpakaļ uz sarakstu</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Pārbauda sapludināšanas statusu…</string>
     <string name="projects_request_can_merge">Var sapludināt</string>
     <string name="projects_request_cannot_merge">Nevar sapludināt</string>
-    <string name="projects_request_ahead_behind">%1$d priekšā, %2$d iepakaļ</string>
+    <string name="projects_request_ahead_behind">%1$s priekšā, %2$s iepakaļ</string>
     <string name="projects_request_draft_notice">Šis ir melnraksts. Atzīmējiet kā gatavu pirms sapludināšanas.</string>
     <string name="projects_request_view_diff">Skatīt atšķirības</string>
     <string name="projects_request_mark_ready">Atzīmēt kā gatavu</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Šim skatam nav konfigurētu kolonnu</string>
     <string name="projects_board_no_options">Kolonnas laukam nav konfigurētu opciju</string>
     <string name="projects_board_column_options">Kolonnas opcijas</string>
-    <string name="projects_board_nested_count">+%1$d ligzdoti</string>
+    <string name="projects_board_nested_count">+%1$s ligzdoti</string>
     <string name="projects_move_to_column">Pārvietot uz kolonnu</string>
     <string name="projects_move_to_row">Pārvietot uz rindu</string>
     <string name="projects_move_after">Pēc %1$s</string>
@@ -365,9 +365,9 @@
     <string name="projects_sort_filter_title">Kārtot un filtrēt</string>
     <string name="projects_create_prefix_hint">Izmanto lasāmiem ID, piemēram, %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="zero">%1$d konfliktējošu failu</item>
-        <item quantity="one">%1$d konfliktējošs fails</item>
-        <item quantity="other">%1$d konfliktējoši faili</item>
+        <item quantity="zero">%1$s konfliktējošu failu</item>
+        <item quantity="one">%1$s konfliktējošs fails</item>
+        <item quantity="other">%1$s konfliktējoši faili</item>
     </plurals>
     <string name="projects_design_export_saved">Dizains saglabāts</string>
     <string name="projects_design_import_failed">Neizdevās nolasīt šo failu</string>
@@ -377,7 +377,7 @@
     <string name="projects_export_saved">Projekta dati saglabāti</string>
     <string name="projects_exporting">Sagatavo eksportu…</string>
     <string name="projects_board_add_column">Pievienot kolonnu</string>
-    <string name="projects_design_sample">Paraugs %1$d</string>
+    <string name="projects_design_sample">Paraugs %1$s</string>
     <string name="projects_option_delete_title">Dzēst opciju</string>
     <string name="projects_option_delete_message">Vai tiešām vēlaties dzēst opciju \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Vēl nevar izveidot vienumu tipus. Vispirms izveidojiet nepieciešamos vecākvienumus.</string>

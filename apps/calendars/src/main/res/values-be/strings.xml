@@ -99,22 +99,22 @@
     <string name="calendars_repeat_forever">Заўсёды</string>
     <string name="calendars_reminder_time">У час падзеі</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">за %1$d хвіліну</item>
-        <item quantity="few">за %1$d хвіліны</item>
-        <item quantity="many">за %1$d хвілін</item>
-        <item quantity="other">за %1$d хвіліны</item>
+        <item quantity="one">за %1$s хвіліну</item>
+        <item quantity="few">за %1$s хвіліны</item>
+        <item quantity="many">за %1$s хвілін</item>
+        <item quantity="other">за %1$s хвіліны</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">за %1$d гадзіну</item>
-        <item quantity="few">за %1$d гадзіны</item>
-        <item quantity="many">за %1$d гадзін</item>
-        <item quantity="other">за %1$d гадзіны</item>
+        <item quantity="one">за %1$s гадзіну</item>
+        <item quantity="few">за %1$s гадзіны</item>
+        <item quantity="many">за %1$s гадзін</item>
+        <item quantity="other">за %1$s гадзіны</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">за %1$d дзень</item>
-        <item quantity="few">за %1$d дні</item>
-        <item quantity="many">за %1$d дзён</item>
-        <item quantity="other">за %1$d дня</item>
+        <item quantity="one">за %1$s дзень</item>
+        <item quantity="few">за %1$s дні</item>
+        <item quantity="many">за %1$s дзён</item>
+        <item quantity="other">за %1$s дня</item>
     </plurals>
     <string name="calendars_reminder_add">Дадаць напамін</string>
     <string name="calendars_reminder_remove">Выдаліць напамін</string>
@@ -148,12 +148,12 @@
     <string name="calendars_poll_large">Каляндар занадта вялікі</string>
     <string name="calendars_poll_invalid">Адрас не вярнуў каляндар</string>
     <string name="calendars_poll_unreachable">Не ўдалося звязацца з адрасам</string>
-    <string name="calendars_poll_status">Адрас адказаў %1$d</string>
+    <string name="calendars_poll_status">Адрас адказаў %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d хвіліна</item>
-        <item quantity="few">%1$d хвіліны</item>
-        <item quantity="many">%1$d хвілін</item>
-        <item quantity="other">%1$d хвіліны</item>
+        <item quantity="one">%1$s хвіліна</item>
+        <item quantity="few">%1$s хвіліны</item>
+        <item quantity="many">%1$s хвілін</item>
+        <item quantity="other">%1$s хвіліны</item>
     </plurals>
     <string name="calendars_preferences_zones">Паказваць падзеі ў іх уласным часавым поясе</string>
     <string name="calendars_event_backwards">Заканчваецца раней, чым пачынаецца</string>

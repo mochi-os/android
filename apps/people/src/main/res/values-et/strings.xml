@@ -180,8 +180,8 @@
     <string name="people_books_create">Loo aadressiraamat</string>
     <string name="people_books_delete">Kustuta aadressiraamat</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Kas kustutada %1$s ja selle %2$d kontakt?</item>
-        <item quantity="other">Kas kustutada %1$s ja selle %2$d kontakti?</item>
+        <item quantity="one">Kas kustutada %1$s ja selle %2$s kontakt?</item>
+        <item quantity="other">Kas kustutada %1$s ja selle %2$s kontakti?</item>
     </plurals>
     <string name="people_welcome_body">Leia sõpru kogu Mochis ja võta ühendust. Kutse saatmiseks puuduta Lisa kontakt.</string>
     <string name="people_person_state_contact">Kontaktides</string>

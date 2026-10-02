@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Șterge</string>
     <string name="go_delete_message">Acest joc va fi eliminat din lista dvs. Această acțiune nu poate fi anulată.</string>
     <string name="go_delete_title">Ștergi jocul?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Acceptă</string>
     <string name="go_draw_decline">Respinge</string>
     <string name="go_draw_offered_received">%1$s a oferit egalitate</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Abandonată</string>
     <string name="go_new_game_title">Partidă nouă de Go</string>
     <string name="go_new_game_no_friends">Trebuie să adăugați un prieten înainte de a începe o partidă.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Puncte adăugate scorului Albului pentru a compensa că Negrul mută primul</string>
 
-    <string name="go_board_a11y">Tablă Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Tablă de Go %1$d×%1$d, este rândul tău să pui o piatră neagră</string>
-    <string name="go_board_a11y_turn_white">Tablă de Go %1$d×%1$d, este rândul tău să pui o piatră albă</string>
+    <string name="go_board_a11y">Tablă Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Tablă de Go %1$s×%1$s, este rândul tău să pui o piatră neagră</string>
+    <string name="go_board_a11y_turn_white">Tablă de Go %1$s×%1$s, este rândul tău să pui o piatră albă</string>
     <string name="go_status_scoring">Numărare — puneți-vă de acord asupra scorului sau continuați partida</string>
     <string name="go_score_proposed">Scor propus: negru %1$s, alb %2$s</string>
     <string name="go_score_opponent_accepted">Adversarul tău acceptă acest scor: negru %1$s, alb %2$s</string>

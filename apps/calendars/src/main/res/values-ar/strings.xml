@@ -99,28 +99,28 @@
     <string name="calendars_repeat_forever">إلى الأبد</string>
     <string name="calendars_reminder_time">في الموعد</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="zero">قبل %1$d دقائق</item>
+        <item quantity="zero">قبل %1$s دقائق</item>
         <item quantity="one">قبل دقيقة واحدة</item>
         <item quantity="two">قبل دقيقتين</item>
-        <item quantity="few">قبل %1$d دقائق</item>
-        <item quantity="many">قبل %1$d دقيقة</item>
-        <item quantity="other">قبل %1$d دقيقة</item>
+        <item quantity="few">قبل %1$s دقائق</item>
+        <item quantity="many">قبل %1$s دقيقة</item>
+        <item quantity="other">قبل %1$s دقيقة</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="zero">قبل %1$d ساعات</item>
+        <item quantity="zero">قبل %1$s ساعات</item>
         <item quantity="one">قبل ساعة واحدة</item>
         <item quantity="two">قبل ساعتين</item>
-        <item quantity="few">قبل %1$d ساعات</item>
-        <item quantity="many">قبل %1$d ساعة</item>
-        <item quantity="other">قبل %1$d ساعة</item>
+        <item quantity="few">قبل %1$s ساعات</item>
+        <item quantity="many">قبل %1$s ساعة</item>
+        <item quantity="other">قبل %1$s ساعة</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="zero">قبل %1$d أيام</item>
+        <item quantity="zero">قبل %1$s أيام</item>
         <item quantity="one">قبل يوم واحد</item>
         <item quantity="two">قبل يومين</item>
-        <item quantity="few">قبل %1$d أيام</item>
-        <item quantity="many">قبل %1$d يومًا</item>
-        <item quantity="other">قبل %1$d يوم</item>
+        <item quantity="few">قبل %1$s أيام</item>
+        <item quantity="many">قبل %1$s يومًا</item>
+        <item quantity="other">قبل %1$s يوم</item>
     </plurals>
     <string name="calendars_reminder_add">إضافة تذكير</string>
     <string name="calendars_reminder_remove">إزالة التذكير</string>
@@ -154,14 +154,14 @@
     <string name="calendars_poll_large">التقويم كبير جدًا</string>
     <string name="calendars_poll_invalid">لم يُرجع العنوان تقويمًا</string>
     <string name="calendars_poll_unreachable">تعذر الوصول إلى العنوان</string>
-    <string name="calendars_poll_status">ردّ العنوان بالرمز %1$d</string>
+    <string name="calendars_poll_status">ردّ العنوان بالرمز %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="zero">%1$d دقيقة</item>
-        <item quantity="one">%1$d دقيقة</item>
-        <item quantity="two">%1$d دقيقتان</item>
-        <item quantity="few">%1$d دقائق</item>
-        <item quantity="many">%1$d دقيقة</item>
-        <item quantity="other">%1$d دقيقة</item>
+        <item quantity="zero">%1$s دقيقة</item>
+        <item quantity="one">%1$s دقيقة</item>
+        <item quantity="two">%1$s دقيقتان</item>
+        <item quantity="few">%1$s دقائق</item>
+        <item quantity="many">%1$s دقيقة</item>
+        <item quantity="other">%1$s دقيقة</item>
     </plurals>
     <string name="calendars_preferences_zones">إظهار الأحداث بمنطقتها الزمنية</string>
     <string name="calendars_event_backwards">ينتهي قبل أن يبدأ</string>

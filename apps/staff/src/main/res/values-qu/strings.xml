@@ -32,7 +32,7 @@
     <string name="staff_accounts_unnamed">Mana sutiyuq</string>
     <string name="staff_accounts_unsuspend">Sayachiyta qichuy</string>
     <string name="staff_accounts_unsuspended_toast">Cuenta mana sayachisqa</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Mana ruway</string>
     <string name="staff_appeals_decide">Decidiy</string>
     <string name="staff_appeals_decision_denied">Listadota rechazasqata hap\'iy</string>
@@ -398,7 +398,7 @@
     <string name="staff_accounts_action_unban_title">Hark\'ayta qichuy</string>
     <string name="staff_accounts_action_unsuspend_title">Sayachiyta qichuy</string>
     <string name="staff_accounts_reason_optional_label">Imarayku (munaspa)</string>
-    <string name="staff_accounts_sales">%1$d rantikuykuna</string>
+    <string name="staff_accounts_sales">%1$s rantikuykuna</string>
     <string name="staff_appeals_reason_label">Qhatuqpa apelación raykun</string>
     <string name="staff_audit_action_staff_team_role_changed">Llamk\'aqpa rolnin tikrasqa</string>
     <string name="staff_categories_delete_desc">¿\"%1$s\"-ta wischunki? Kayqa mana kutichiy atikunchu.</string>

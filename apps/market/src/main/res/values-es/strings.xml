@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Enviando…</string>
     <string name="market_checkout_subscribing">Suscribiendo…</string>
     <string name="market_filter_remove">Eliminar filtro</string>
-    <string name="market_listing_detail_sales_count">%1$d ventas</string>
-    <string name="market_profile_sales_count">%1$d ventas</string>
+    <string name="market_listing_detail_sales_count">%1$s ventas</string>
+    <string name="market_profile_sales_count">%1$s ventas</string>
     <string name="market_purchase_dispute_response">Respuesta del vendedor</string>
     <string name="market_purchases_order_label">Pedido n.º %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Cuéntales a los compradores sobre ti…</string>
     <string name="market_account_load_failed">No se pudo cargar la cuenta</string>
     <string name="market_account_save_failed">No se pudieron guardar los cambios</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Actual: %1$s</string>
     <string name="market_bids_ends_in">Termina en %1$s</string>
     <string name="market_bids_your_bid">Tu puja: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d de %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatura %1$d</string>
+    <string name="market_carousel_main">Foto %1$s de %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatura %1$s</string>
     <string name="market_checkout_browser_unavailable">No hay ningún navegador disponible para abrir la página de pago</string>
     <string name="market_checkout_pay_button">Pagar con Stripe</string>
     <string name="market_checkout_processing">Procesando…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Adjuntar pruebas</string>
-    <string name="market_dispute_dialog_attach_count">%1$d archivo(s) adjunto(s)</string>
+    <string name="market_dispute_dialog_attach_count">%1$s archivo(s) adjunto(s)</string>
     <string name="market_dispute_dialog_evidence_role_staff">Personal de Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Pruebas enviadas</string>
     <string name="market_dispute_dialog_evidence_submitter_line">enviado por %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL de referencia</string>
     <string name="market_editor_assets_empty">Aún no hay recursos</string>
     <string name="market_editor_category_none">Selecciona una categoría</string>
-    <string name="market_editor_days">%1$d días</string>
+    <string name="market_editor_days">%1$s días</string>
     <string name="market_editor_delete">Eliminar anuncio</string>
     <string name="market_editor_delete_confirm_message">Esto eliminará el anuncio de forma permanente.</string>
     <string name="market_editor_delete_confirm_title">¿Eliminar anuncio?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">No se pudo cargar la conversación</string>
     <string name="market_messages_send_failed">No se pudo enviar el mensaje</string>
     <string name="market_messages_thread_title">Conversación</string>
-    <string name="market_messages_unread_badge">%1$d sin leer</string>
+    <string name="market_messages_unread_badge">%1$s sin leer</string>
     <string name="market_price_from">Desde %1$s</string>
     <string name="market_price_high_bid">Puja más alta: %1$s</string>
     <string name="market_price_instant_buy">compra inmediata: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Se unió el %1$s</string>
     <string name="market_profile_no_reviews">Aún no hay reseñas.</string>
     <string name="market_profile_rating_breakdown">Desglose de la valoración</string>
-    <string name="market_profile_stars_value">%1$d estrellas</string>
+    <string name="market_profile_stars_value">%1$s estrellas</string>
     <string name="market_purchase_dispute_chargeback">Contracargo %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Tu banco ha presentado un contracargo en este pedido. Stripe está gestionando la disputa con el vendedor; el resultado aparecerá aquí cuando se resuelva.</string>
-    <string name="market_purchase_download_many">Descarga tus %1$d archivos a continuación.</string>
+    <string name="market_purchase_download_many">Descarga tus %1$s archivos a continuación.</string>
     <string name="market_purchase_download_one">Descarga tu archivo a continuación.</string>
     <string name="market_purchase_review_from">Reseña de %1$s</string>
     <string name="market_purchases_auction_label">Subasta n.º %1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s reembolsados</string>
     <string name="market_purchases_won_for">Ganado por %1$s</string>
-    <string name="market_rating_reviews">(%1$d reseñas)</string>
+    <string name="market_rating_reviews">(%1$s reseñas)</string>
     <string name="market_refund_amount_label">Importe</string>
     <string name="market_refund_dialog_amount_help">Deje en blanco para reembolsar el pedido completo.</string>
     <string name="market_refund_dialog_amount_label">Importe</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Esto cancelará la subasta. El anuncio se ocultará de los compradores; puedes volver a publicarlo más tarde como un nuevo borrador.</string>
     <string name="market_listings_remove_title">¿Retirar este anuncio?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Esto cancelará la subasta y avisará a %1$d postor activo. El anuncio se ocultará a los compradores; más adelante podrás volver a publicarlo como un borrador nuevo.</item>
-        <item quantity="other">Esto cancelará la subasta y avisará a %1$d postores activos. El anuncio se ocultará a los compradores; más adelante podrás volver a publicarlo como un borrador nuevo.</item>
+        <item quantity="one">Esto cancelará la subasta y avisará a %1$s postor activo. El anuncio se ocultará a los compradores; más adelante podrás volver a publicarlo como un borrador nuevo.</item>
+        <item quantity="other">Esto cancelará la subasta y avisará a %1$s postores activos. El anuncio se ocultará a los compradores; más adelante podrás volver a publicarlo como un borrador nuevo.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Esto cancelará %1$d suscripción activa al final del período de facturación actual. Se avisará a los suscriptores. El anuncio se ocultará a los compradores.</item>
-        <item quantity="other">Esto cancelará %1$d suscripciones activas al final del período de facturación actual. Se avisará a los suscriptores. El anuncio se ocultará a los compradores.</item>
+        <item quantity="one">Esto cancelará %1$s suscripción activa al final del período de facturación actual. Se avisará a los suscriptores. El anuncio se ocultará a los compradores.</item>
+        <item quantity="other">Esto cancelará %1$s suscripciones activas al final del período de facturación actual. Se avisará a los suscriptores. El anuncio se ocultará a los compradores.</item>
     </plurals>
 </resources>

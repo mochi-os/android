@@ -180,8 +180,8 @@
     <string name="people_books_create">Lag adressebok</string>
     <string name="people_books_delete">Slett adressebok</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Vil du slette %1$s og den %2$d kontakten i ho?</item>
-        <item quantity="other">Vil du slette %1$s og dei %2$d kontaktane i ho?</item>
+        <item quantity="one">Vil du slette %1$s og den %2$s kontakten i ho?</item>
+        <item quantity="other">Vil du slette %1$s og dei %2$s kontaktane i ho?</item>
     </plurals>
     <string name="people_welcome_body">Finn vener på tvers av Mochi og ta kontakt. Trykk på Legg til kontakt for å sende ein invitasjon.</string>
     <string name="people_person_state_contact">I kontaktar</string>

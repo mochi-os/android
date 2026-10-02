@@ -34,6 +34,7 @@ import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.flattenComments
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * The comment thread for one image, in the lightbox's comments panel: the
@@ -105,7 +106,7 @@ internal fun AttachmentComments(
                     ) {
                         Text(
                             if (showAll) stringResource(MochiR.string.lightbox_comments_only)
-                            else pluralStringResource(MochiR.plurals.lightbox_comments_others, others, others)
+                            else pluralStringResource(MochiR.plurals.lightbox_comments_others, others, LocalFormat.current.formatNumber(others))
                         )
                     }
                 }

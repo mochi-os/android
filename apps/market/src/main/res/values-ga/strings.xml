@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Margadh</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Beathaisnéis</string>
     <string name="market_account_biography_placeholder">Inis do cheannaitheoirí fút féin…</string>
     <string name="market_account_load_failed">Níorbh fhéidir an cuntas a luchtú</string>
@@ -57,7 +57,7 @@
     <string name="market_bids_tab_outbid">Sáraithe ag tairiscint</string>
     <string name="market_bids_tab_won">Buaite</string>
     <string name="market_bids_title">Tairiscintí</string>
-    <string name="market_carousel_main">Grianghraf %1$d as %2$d</string>
+    <string name="market_carousel_main">Grianghraf %1$s as %2$s</string>
     <string name="market_channel_name">Margadh</string>
     <string name="market_chargeback_reason_bank_cannot_process">Níorbh fhéidir leis an mbanc é a phróiseáil</string>
     <string name="market_chargeback_reason_check_returned">Seic ar ais</string>
@@ -136,7 +136,7 @@
     <string name="market_editor_condition_refurbished">Athchóirithe</string>
     <string name="market_editor_condition_used">Úsáidte</string>
     <string name="market_editor_currency">Airgeadra</string>
-    <string name="market_editor_days">%1$d lá</string>
+    <string name="market_editor_days">%1$s lá</string>
     <string name="market_editor_delete">Scrios an liosta</string>
     <string name="market_editor_description">Cur síos</string>
     <string name="market_editor_interval_monthly">Míosúil</string>
@@ -327,7 +327,7 @@
     <string name="market_purchases_title">Ceannacháin</string>
     <string name="market_rating_label">Rátáil</string>
     <string name="market_rating_no_reviews">Níl aon athbhreithniú fós</string>
-    <string name="market_rating_reviews">(%1$d léirmheas)</string>
+    <string name="market_rating_reviews">(%1$s léirmheas)</string>
     <string name="market_refund_amount_label">Méid</string>
     <string name="market_refund_body">Tabhair cúis le d\'iarratas aisíocaíochta.</string>
     <string name="market_refund_details_label">Sonraí</string>
@@ -477,10 +477,10 @@
     <string name="market_sale_review_response_submitting">Á sheoladh…</string>
     <string name="market_checkout_subscribing">Ag liostáil…</string>
     <string name="market_filter_remove">Bain scagaire</string>
-    <string name="market_listing_detail_sales_count">%1$d díolacháin</string>
+    <string name="market_listing_detail_sales_count">%1$s díolacháin</string>
     <string name="market_listings_action_appeal">Achomharc bainte</string>
     <string name="market_listings_share_chooser">Roinn liosta</string>
-    <string name="market_profile_sales_count">%1$d díolacháin</string>
+    <string name="market_profile_sales_count">%1$s díolacháin</string>
     <string name="market_purchase_dispute_response">Freagra an díoltóra</string>
     <string name="market_refund_dialog_amount_label">Méid</string>
 
@@ -498,11 +498,11 @@
     <string name="market_bids_current_bid">Reatha: %1$s</string>
     <string name="market_bids_ends_in">Críochnaíonn i gceann %1$s</string>
     <string name="market_bids_your_bid">Do thairiscint: %1$s</string>
-    <string name="market_carousel_thumbnail">Mionsamhail %1$d</string>
+    <string name="market_carousel_thumbnail">Mionsamhail %1$s</string>
     <string name="market_checkout_browser_unavailable">Níl brabhsálaí ar fáil chun an leathanach íocaíochta a oscailt</string>
     <string name="market_checkout_pwyw_label">Do phraghas (íosmhéid %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Caithfidh an méid a bheith %1$s ar a laghad</string>
-    <string name="market_dispute_dialog_attach_count">%1$d comhad/comhaid ceangailte</string>
+    <string name="market_dispute_dialog_attach_count">%1$s comhad/comhaid ceangailte</string>
     <string name="market_dispute_dialog_evidence_section_title">Fianaise curtha isteach</string>
     <string name="market_dispute_dialog_evidence_submitter_line">curtha isteach ag %1$s</string>
     <string name="market_editor_appeal">Achomharc a dhéanamh ar mhodhnóireacht</string>
@@ -573,7 +573,7 @@
     <string name="market_messages_inbox_empty_title">Níl aon chomhráite ann go fóill</string>
     <string name="market_messages_load_failed">Níorbh fhéidir an snáithe a luchtú</string>
     <string name="market_messages_send_failed">Níorbh fhéidir an teachtaireacht a sheoladh</string>
-    <string name="market_messages_unread_badge">%1$d gan léamh</string>
+    <string name="market_messages_unread_badge">%1$s gan léamh</string>
     <string name="market_price_high_bid">Tairiscint is airde: %1$s</string>
     <string name="market_price_instant_buy">ceannach láithreach: %1$s</string>
     <string name="market_price_starting_bid">Tairiscint tosaigh: %1$s</string>
@@ -581,10 +581,10 @@
     <string name="market_profile_member_since">Ina bhall ó %1$s</string>
     <string name="market_profile_joined">Cláraithe %1$s</string>
     <string name="market_profile_rating_breakdown">Miondealú rátála</string>
-    <string name="market_profile_stars_value">%1$d réalta</string>
+    <string name="market_profile_stars_value">%1$s réalta</string>
     <string name="market_purchase_dispute_chargeback">Aisíocaíocht chárta %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Chuir do bhanc aisíocaíocht chárta i bhfeidhm ar an ordú seo. Tá Stripe ag plé leis an aighneas leis an díoltóir; taispeánfar an toradh anseo nuair a chinnfear é.</string>
-    <string name="market_purchase_download_many">Íoslódáil do %1$d chomhad thíos.</string>
+    <string name="market_purchase_download_many">Íoslódáil do %1$s chomhad thíos.</string>
     <string name="market_purchase_download_one">Íoslódáil do chomhad thíos.</string>
     <string name="market_purchase_review_from">Léirmheas ó %1$s</string>
     <string name="market_purchases_auction_label">Ceant #%1$s</string>
@@ -785,17 +785,17 @@
     <string name="market_listings_remove_message_auction">Cuirfidh sé seo an ceant ar ceal. Beidh an liosta i bhfolach ó cheannaitheoirí; is féidir leat é a athliostú níos déanaí mar dhréacht nua.</string>
     <string name="market_listings_remove_title">Bain an liostáil seo?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$d tairgeoir gníomhach ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
-        <item quantity="two">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$d thairgeoir ghníomhacha ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
-        <item quantity="few">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$d thairgeoir ghníomhacha ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
-        <item quantity="many">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$d dtairgeoir ghníomhacha ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
-        <item quantity="other">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$d tairgeoir gníomhach ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
+        <item quantity="one">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$s tairgeoir gníomhach ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
+        <item quantity="two">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$s thairgeoir ghníomhacha ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
+        <item quantity="few">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$s thairgeoir ghníomhacha ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
+        <item quantity="many">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$s dtairgeoir ghníomhacha ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
+        <item quantity="other">Cuirfidh sé seo an ceant ar ceal agus cuirfidh sé %1$s tairgeoir gníomhach ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí; is féidir leat é a liostú arís níos déanaí mar dhréacht nua.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Cuirfidh sé seo %1$d síntiús gníomhach ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
-        <item quantity="two">Cuirfidh sé seo %1$d shíntiús ghníomhacha ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
-        <item quantity="few">Cuirfidh sé seo %1$d shíntiús ghníomhacha ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
-        <item quantity="many">Cuirfidh sé seo %1$d síntiús gníomhach ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
-        <item quantity="other">Cuirfidh sé seo %1$d síntiús gníomhach ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
+        <item quantity="one">Cuirfidh sé seo %1$s síntiús gníomhach ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
+        <item quantity="two">Cuirfidh sé seo %1$s shíntiús ghníomhacha ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
+        <item quantity="few">Cuirfidh sé seo %1$s shíntiús ghníomhacha ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
+        <item quantity="many">Cuirfidh sé seo %1$s síntiús gníomhach ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
+        <item quantity="other">Cuirfidh sé seo %1$s síntiús gníomhach ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
     </plurals>
 </resources>

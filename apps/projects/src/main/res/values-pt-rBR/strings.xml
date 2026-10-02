@@ -217,10 +217,10 @@
     <string name="projects_activity_made_change">fez uma alteração</string>
     <string name="projects_attachment_empty">Nenhum anexo</string>
     <string name="projects_attachment_default_name">anexo</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nova solicitação de mesclagem</string>
     <string name="projects_request_status_closed">Fechada</string>
     <string name="projects_request_back_to_list">Voltar à lista</string>
@@ -230,7 +230,7 @@
     <string name="projects_request_checking_merge">Verificando status da mesclagem…</string>
     <string name="projects_request_can_merge">Pode ser mesclada</string>
     <string name="projects_request_cannot_merge">Não é possível mesclar</string>
-    <string name="projects_request_ahead_behind">%1$d à frente, %2$d atrás</string>
+    <string name="projects_request_ahead_behind">%1$s à frente, %2$s atrás</string>
     <string name="projects_request_draft_notice">Este é um rascunho. Marque como pronto antes de mesclar.</string>
     <string name="projects_request_view_diff">Ver diferenças</string>
     <string name="projects_request_mark_ready">Marcar como pronto</string>
@@ -250,7 +250,7 @@
     <string name="projects_board_no_columns">Nenhuma coluna configurada para esta visualização</string>
     <string name="projects_board_no_options">Nenhuma opção configurada para o campo da coluna</string>
     <string name="projects_board_column_options">Opções da coluna</string>
-    <string name="projects_board_nested_count">+%1$d aninhados</string>
+    <string name="projects_board_nested_count">+%1$s aninhados</string>
     <string name="projects_move_to_column">Mover para coluna</string>
     <string name="projects_move_to_row">Mover para linha</string>
     <string name="projects_move_after">Após %1$s</string>

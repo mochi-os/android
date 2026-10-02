@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">हटवा</string>
     <string name="go_delete_message">हा खेळ आपल्या यादीतून काढून टाकला जाईल. हे पूर्ववत करता येणार नाही.</string>
     <string name="go_delete_title">गेम हटवायचा?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">स्वीकारा</string>
     <string name="go_draw_decline">नाकारा</string>
     <string name="go_draw_offered_received">%1$s ने बरोबरीचा प्रस्ताव दिला</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">हार मानली</string>
     <string name="go_new_game_title">नवीन Go खेळ</string>
     <string name="go_new_game_no_friends">खेळ सुरू करण्यापूर्वी तुम्हाला मित्र जोडावा लागेल.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">काळा प्रथम खेळतो याची भरपाई म्हणून पांढऱ्याच्या गुणांमध्ये जोडलेले गुण</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go बोर्ड</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d गो बोर्ड, काळा दगड ठेवण्याची तुमची पाळी</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d गो बोर्ड, पांढरा दगड ठेवण्याची तुमची पाळी</string>
+    <string name="go_board_a11y">%1$s×%1$s Go बोर्ड</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s गो बोर्ड, काळा दगड ठेवण्याची तुमची पाळी</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s गो बोर्ड, पांढरा दगड ठेवण्याची तुमची पाळी</string>
     <string name="go_status_scoring">मोजणी — गुणांवर सहमत व्हा किंवा खेळत राहा</string>
     <string name="go_score_proposed">प्रस्तावित स्कोअर: काळा %1$s, पांढरा %2$s</string>
     <string name="go_score_opponent_accepted">तुमचा प्रतिस्पर्धी हा स्कोअर स्वीकारतो: काळा %1$s, पांढरा %2$s</string>

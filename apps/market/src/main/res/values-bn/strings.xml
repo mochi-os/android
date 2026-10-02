@@ -445,7 +445,7 @@
     <string name="market_listing_detail_loading">লিস্টিং লোড হচ্ছে</string>
     <string name="market_listing_detail_relist_failed">পুনরায় তালিকাভুক্ত করা যায়নি</string>
     <string name="market_listing_detail_relist_in_progress">পুনরায় তালিকাভুক্ত করা হচ্ছে</string>
-    <string name="market_listing_detail_sales_count">%1$d বিক্রয়</string>
+    <string name="market_listing_detail_sales_count">%1$s বিক্রয়</string>
     <string name="market_listing_detail_seller_banned_banner">এই বিক্রেতা নিষিদ্ধ। নতুন অর্ডার দেওয়া যাবে না।</string>
     <string name="market_listing_detail_seller_suspended_banner">এই বিক্রেতা স্থগিত করা হয়েছে। অ্যাকাউন্ট পুনর্বহাল না হওয়া পর্যন্ত নতুন অর্ডার বিরতি দেওয়া হয়েছে।</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">বিক্রেতার অ্যাকাউন্ট সীমাবদ্ধ থাকা অবস্থায় কেনাকাটা নিষ্ক্রিয়।</string>
@@ -470,7 +470,7 @@
     <string name="market_messages_load_failed">থ্রেড লোড করা যায়নি</string>
     <string name="market_messages_send_failed">বার্তা পাঠানো যায়নি</string>
     <string name="market_messages_thread_title">কথোপকথন</string>
-    <string name="market_messages_unread_badge">%1$d অপঠিত</string>
+    <string name="market_messages_unread_badge">%1$s অপঠিত</string>
     <string name="market_price_from">%1$s থেকে</string>
     <string name="market_price_high_bid">উচ্চ বিড: %1$s</string>
     <string name="market_price_instant_buy">তাৎক্ষণিক ক্রয়: %1$s</string>
@@ -483,19 +483,19 @@
     <string name="market_profile_joined">%1$s-এ যোগ দিয়েছেন</string>
     <string name="market_profile_no_reviews">এখনও কোনো রিভিউ নেই।</string>
     <string name="market_profile_rating_breakdown">রেটিং বিশ্লেষণ</string>
-    <string name="market_profile_sales_count">%1$d বিক্রয়</string>
-    <string name="market_profile_stars_value">%1$d তারকা</string>
+    <string name="market_profile_sales_count">%1$s বিক্রয়</string>
+    <string name="market_profile_stars_value">%1$s তারকা</string>
     <string name="market_purchase_dispute_chargeback">চার্জব্যাক %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">আপনার ব্যাঙ্ক এই অর্ডারে একটি চার্জব্যাক দাখিল করেছে। Stripe বিক্রেতার সঙ্গে বিরোধটি পরিচালনা করছে; সিদ্ধান্ত নেওয়া হলে ফলাফল এখানে প্রদর্শিত হবে।</string>
     <string name="market_purchase_dispute_response">বিক্রেতার প্রতিক্রিয়া</string>
-    <string name="market_purchase_download_many">নিচে আপনার %1$d টি ফাইল ডাউনলোড করুন।</string>
+    <string name="market_purchase_download_many">নিচে আপনার %1$s টি ফাইল ডাউনলোড করুন।</string>
     <string name="market_purchase_download_one">নিচে আপনার ফাইল ডাউনলোড করুন।</string>
     <string name="market_purchase_review_from">%1$s-এর পর্যালোচনা</string>
     <string name="market_purchases_auction_label">নিলাম #%1$s</string>
     <string name="market_purchases_order_label">অর্ডার #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s ফেরত দেওয়া হয়েছে</string>
     <string name="market_purchases_won_for">%1$s-এ জেতা হয়েছে</string>
-    <string name="market_rating_reviews">(%1$d টি পর্যালোচনা)</string>
+    <string name="market_rating_reviews">(%1$s টি পর্যালোচনা)</string>
     <string name="market_refund_amount_label">পরিমাণ</string>
     <string name="market_refund_dialog_amount_help">সম্পূর্ণ অর্ডার ফেরত দিতে খালি রাখুন।</string>
     <string name="market_refund_dialog_amount_label">পরিমাণ</string>
@@ -563,7 +563,7 @@
 
     <string name="market_appeal_dialog_submitting">জমা দেওয়া হচ্ছে…</string>
     <string name="market_dispute_dialog_submitting">জমা দেওয়া হচ্ছে…</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_appeal_dialog_title">অপসারণের বিরুদ্ধে আপিল</string>
     <string name="market_checkout_subscribing">সাবস্ক্রাইব হচ্ছে…</string>
     <string name="market_editor_delete_confirm_title">লিস্টিং মুছবেন?</string>
@@ -594,8 +594,8 @@
     <string name="market_bids_current_bid">বর্তমান: %1$s</string>
     <string name="market_bids_ends_in">শেষ হবে %1$s-এ</string>
     <string name="market_bids_your_bid">আপনার বিড: %1$s</string>
-    <string name="market_carousel_main">%2$d টির মধ্যে %1$d নম্বর ফটো</string>
-    <string name="market_carousel_thumbnail">থাম্বনেইল %1$d</string>
+    <string name="market_carousel_main">%2$s টির মধ্যে %1$s নম্বর ফটো</string>
+    <string name="market_carousel_thumbnail">থাম্বনেইল %1$s</string>
     <string name="market_checkout_browser_unavailable">পেমেন্ট পৃষ্ঠা খোলার জন্য কোনো ব্রাউজার উপলব্ধ নেই</string>
     <string name="market_checkout_pay_button">Stripe দিয়ে পরিশোধ করুন</string>
     <string name="market_checkout_processing">প্রক্রিয়াকরণ চলছে…</string>
@@ -604,7 +604,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">প্রমাণ সংযুক্ত করুন</string>
-    <string name="market_dispute_dialog_attach_count">%1$d টি ফাইল সংযুক্ত</string>
+    <string name="market_dispute_dialog_attach_count">%1$s টি ফাইল সংযুক্ত</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi কর্মী</string>
     <string name="market_dispute_dialog_evidence_section_title">জমা দেওয়া প্রমাণ</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s দ্বারা জমা দেওয়া হয়েছে</string>
@@ -618,7 +618,7 @@
     <string name="market_editor_asset_external_url">রেফারেন্স URL</string>
     <string name="market_editor_assets_empty">এখনও কোনো সম্পদ নেই</string>
     <string name="market_editor_category_none">একটি বিভাগ নির্বাচন করুন</string>
-    <string name="market_editor_days">%1$d দিন</string>
+    <string name="market_editor_days">%1$s দিন</string>
     <string name="market_editor_delete">তালিকা মুছুন</string>
     <string name="market_editor_delete_confirm_message">এটি স্থায়ীভাবে তালিকাটি মুছে ফেলবে।</string>
     <string name="market_editor_download">সরাসরি ডাউনলোড</string>
@@ -787,11 +787,11 @@
     <string name="market_listings_remove_message_auction">এটি নিলাম বাতিল করবে। তালিকাটি ক্রেতাদের কাছ থেকে লুকানো হবে; আপনি পরে এটিকে নতুন খসড়া হিসাবে পুনরায় তালিকাভুক্ত করতে পারেন।</string>
     <string name="market_listings_remove_title">এই তালিকা সরাবেন?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">এটি নিলাম বাতিল করবে এবং %1$d জন সক্রিয় দরদাতাকে জানাবে। লিস্টিংটি ক্রেতাদের থেকে লুকানো হবে; পরে আপনি এটিকে নতুন খসড়া হিসেবে আবার তালিকাভুক্ত করতে পারবেন।</item>
-        <item quantity="other">এটি নিলাম বাতিল করবে এবং %1$d জন সক্রিয় দরদাতাকে জানাবে। লিস্টিংটি ক্রেতাদের থেকে লুকানো হবে; পরে আপনি এটিকে নতুন খসড়া হিসেবে আবার তালিকাভুক্ত করতে পারবেন।</item>
+        <item quantity="one">এটি নিলাম বাতিল করবে এবং %1$s জন সক্রিয় দরদাতাকে জানাবে। লিস্টিংটি ক্রেতাদের থেকে লুকানো হবে; পরে আপনি এটিকে নতুন খসড়া হিসেবে আবার তালিকাভুক্ত করতে পারবেন।</item>
+        <item quantity="other">এটি নিলাম বাতিল করবে এবং %1$s জন সক্রিয় দরদাতাকে জানাবে। লিস্টিংটি ক্রেতাদের থেকে লুকানো হবে; পরে আপনি এটিকে নতুন খসড়া হিসেবে আবার তালিকাভুক্ত করতে পারবেন।</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">এটি বর্তমান বিলিং সময়কালের শেষে %1$dটি সক্রিয় সাবস্ক্রিপশন বাতিল করবে। সাবস্ক্রাইবারদের জানানো হবে। লিস্টিংটি ক্রেতাদের থেকে লুকানো হবে।</item>
-        <item quantity="other">এটি বর্তমান বিলিং সময়কালের শেষে %1$dটি সক্রিয় সাবস্ক্রিপশন বাতিল করবে। সাবস্ক্রাইবারদের জানানো হবে। লিস্টিংটি ক্রেতাদের থেকে লুকানো হবে।</item>
+        <item quantity="one">এটি বর্তমান বিলিং সময়কালের শেষে %1$sটি সক্রিয় সাবস্ক্রিপশন বাতিল করবে। সাবস্ক্রাইবারদের জানানো হবে। লিস্টিংটি ক্রেতাদের থেকে লুকানো হবে।</item>
+        <item quantity="other">এটি বর্তমান বিলিং সময়কালের শেষে %1$sটি সক্রিয় সাবস্ক্রিপশন বাতিল করবে। সাবস্ক্রাইবারদের জানানো হবে। লিস্টিংটি ক্রেতাদের থেকে লুকানো হবে।</item>
     </plurals>
 </resources>

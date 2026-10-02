@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Oznámení o úpravách stránek, komentářích a pozvánkách.</string>
     <string name="wikis_pageview_toc_expand">Zobrazit obsah</string>
     <string name="wikis_pageview_toc_collapse">Skrýt obsah</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Aktualizováno %1$s</string>
     <string name="wikis_pageview_not_found_description">Stránka „%1$s\" zatím neexistuje.</string>
     <string name="wikis_pageview_share_chooser">Odkaz na wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Chystáte se smazat stránku „%1$s\" (%2$s). Tuto akci lze vrátit obnovou z historie.</string>
     <string name="wikis_delete_page_success">Stránka smazána</string>
     <string name="wikis_revert_page_title">Vrátit stránku</string>
-    <string name="wikis_revert_page_message">Chystáte se vrátit %1$s na verzi %2$d. Tím vznikne nová revize s obsahem verze %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Vráceno na verzi %1$d</string>
-    <string name="wikis_revert_page_success">Vráceno na verzi %1$d</string>
+    <string name="wikis_revert_page_message">Chystáte se vrátit %1$s na verzi %2$s. Tím vznikne nová revize s obsahem verze %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Vráceno na verzi %1$s</string>
+    <string name="wikis_revert_page_success">Vráceno na verzi %1$s</string>
     <string name="wikis_rename_page_renaming">Přejmenování…</string>
     <string name="wikis_rename_page_success">Stránka přejmenována</string>
-    <string name="wikis_history_viewing">Prohlížení historie %1$s, aktuální verze %2$d</string>
-    <string name="wikis_revision_version_badge">Verze %1$d</string>
+    <string name="wikis_history_viewing">Prohlížení historie %1$s, aktuální verze %2$s</string>
+    <string name="wikis_revision_version_badge">Verze %1$s</string>
     <string name="wikis_search_pages_placeholder">Hledat stránky podle názvu nebo obsahu…</string>
     <string name="wikis_search_no_results">Pro „%1$s\" nenalezeny žádné stránky. Zkuste jiné výrazy.</string>
     <string name="wikis_search_updated">Aktualizováno %1$s</string>
@@ -289,47 +289,47 @@
     <string name="wikis_revision_author">podle %1$s</string>
     <string name="wikis_revision_show_page">Zobrazit stránku</string>
     <string name="wikis_revision_compare_failed">Nepodařilo se načíst předchozí verzi pro porovnání.</string>
-    <string name="wikis_revision_changes_from">Změny z verze %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Změny z verze %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d komentář</item>
-        <item quantity="few">%d komentáře</item>
-        <item quantity="many">%d komentáře</item>
-        <item quantity="other">%d komentářů</item>
+        <item quantity="one">%s komentář</item>
+        <item quantity="few">%s komentáře</item>
+        <item quantity="many">%s komentáře</item>
+        <item quantity="other">%s komentářů</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d odpověď</item>
-        <item quantity="few">+%d další odpovědi</item>
-        <item quantity="other">+%d dalších odpovědí</item>
+        <item quantity="one">%s odpověď</item>
+        <item quantity="few">+%s další odpovědi</item>
+        <item quantity="other">+%s dalších odpovědí</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d stránka</item>
-        <item quantity="few">%d stránky</item>
-        <item quantity="other">%d stránek</item>
+        <item quantity="one">%s stránka</item>
+        <item quantity="few">%s stránky</item>
+        <item quantity="other">%s stránek</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d soubor</item>
-        <item quantity="few">%d soubory</item>
-        <item quantity="other">%d souborů</item>
+        <item quantity="one">%s soubor</item>
+        <item quantity="few">%s soubory</item>
+        <item quantity="other">%s souborů</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d obrázek</item>
-        <item quantity="few">%d obrázky</item>
-        <item quantity="other">%d obrázků</item>
+        <item quantity="one">%s obrázek</item>
+        <item quantity="few">%s obrázky</item>
+        <item quantity="other">%s obrázků</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="few">%d dokumenty</item>
-        <item quantity="other">%d dokumentů</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="few">%s dokumenty</item>
+        <item quantity="other">%s dokumentů</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d stránka s tímto tagem</item>
-        <item quantity="few">%d stránky s tímto tagem</item>
-        <item quantity="other">%d stránek s tímto tagem</item>
+        <item quantity="one">%s stránka s tímto tagem</item>
+        <item quantity="few">%s stránky s tímto tagem</item>
+        <item quantity="other">%s stránek s tímto tagem</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Nalezen %1$d výsledek pro „%2$s“</item>
-        <item quantity="few">Nalezeny %1$d výsledky pro „%2$s“</item>
-        <item quantity="other">Nalezeno %1$d výsledků pro „%2$s“</item>
+        <item quantity="one">Nalezen %1$s výsledek pro „%2$s“</item>
+        <item quantity="few">Nalezeny %1$s výsledky pro „%2$s“</item>
+        <item quantity="other">Nalezeno %1$s výsledků pro „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Popisek se nepodařilo uložit</string>
     <string name="wikis_attachments_upload_types">Podporované soubory: obrázky, PDF, DOC, DOCX, TXT a MD.</string>
@@ -338,9 +338,9 @@
     <string name="wikis_rss_copied_new">Nová URL RSS zkopírována do schránky</string>
     <string name="wikis_rss_exists">Tato URL kanálu již byla vydána a nelze ji znovu zobrazit.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Zobrazuje se první %1$d komentář.</item>
-        <item quantity="few">Zobrazují se první %1$d komentáře.</item>
-        <item quantity="many">Zobrazuje se prvních %1$d komentářů.</item>
-        <item quantity="other">Zobrazuje se prvních %1$d komentářů.</item>
+        <item quantity="one">Zobrazuje se první %1$s komentář.</item>
+        <item quantity="few">Zobrazují se první %1$s komentáře.</item>
+        <item quantity="many">Zobrazuje se prvních %1$s komentářů.</item>
+        <item quantity="other">Zobrazuje se prvních %1$s komentářů.</item>
     </plurals>
 </resources>

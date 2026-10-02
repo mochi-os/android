@@ -405,7 +405,7 @@
     <string name="market_type_physical">مادي</string>
     <string name="market_messages_send">إرسال</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">عرّف المشترين بنفسك…</string>
     <string name="market_account_load_failed">تعذر تحميل الحساب</string>
     <string name="market_account_save_failed">تعذر حفظ التغييرات</string>
@@ -432,8 +432,8 @@
     <string name="market_bids_current_bid">الحالية: %1$s</string>
     <string name="market_bids_ends_in">تنتهي خلال %1$s</string>
     <string name="market_bids_your_bid">مزايدتك: %1$s</string>
-    <string name="market_carousel_main">الصورة %1$d من %2$d</string>
-    <string name="market_carousel_thumbnail">صورة مصغرة %1$d</string>
+    <string name="market_carousel_main">الصورة %1$s من %2$s</string>
+    <string name="market_carousel_thumbnail">صورة مصغرة %1$s</string>
     <string name="market_checkout_browser_unavailable">لا يوجد متصفح متاح لفتح صفحة الدفع</string>
     <string name="market_checkout_pay_button">ادفع عبر Stripe</string>
     <string name="market_checkout_processing">جارٍ المعالجة…</string>
@@ -443,7 +443,7 @@
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_checkout_subscribing">جارٍ الاشتراك…</string>
     <string name="market_dispute_dialog_attach">إرفاق دليل</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ملف مرفق</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ملف مرفق</string>
     <string name="market_dispute_dialog_evidence_role_staff">فريق Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">الأدلة المقدمة</string>
     <string name="market_dispute_dialog_evidence_submitter_line">قُدم من %1$s</string>
@@ -458,7 +458,7 @@
     <string name="market_editor_asset_external_url">عنوان URL المرجعي</string>
     <string name="market_editor_assets_empty">لا توجد أصول بعد</string>
     <string name="market_editor_category_none">اختر فئة</string>
-    <string name="market_editor_days">%1$d يوم</string>
+    <string name="market_editor_days">%1$s يوم</string>
     <string name="market_editor_delete">حذف القائمة</string>
     <string name="market_editor_delete_confirm_message">سيؤدي هذا إلى حذف القائمة نهائيًا.</string>
     <string name="market_editor_delete_confirm_title">حذف الإعلان؟</string>
@@ -527,7 +527,7 @@
     <string name="market_listing_detail_loading">جارٍ تحميل الإعلان</string>
     <string name="market_listing_detail_relist_failed">تعذرت إعادة الإدراج</string>
     <string name="market_listing_detail_relist_in_progress">جارٍ إعادة الإدراج</string>
-    <string name="market_listing_detail_sales_count">%1$d مبيعات</string>
+    <string name="market_listing_detail_sales_count">%1$s مبيعات</string>
     <string name="market_listing_detail_seller_banned_banner">تم حظر هذا البائع. لا يمكن تقديم طلبات جديدة.</string>
     <string name="market_listing_detail_seller_suspended_banner">تم تعليق هذا البائع. الطلبات الجديدة متوقفة حتى استعادة الحساب.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">الشراء معطل بينما حساب البائع مقيد.</string>
@@ -552,7 +552,7 @@
     <string name="market_messages_load_failed">تعذر تحميل المحادثة</string>
     <string name="market_messages_send_failed">تعذر إرسال الرسالة</string>
     <string name="market_messages_thread_title">محادثة</string>
-    <string name="market_messages_unread_badge">%1$d غير مقروءة</string>
+    <string name="market_messages_unread_badge">%1$s غير مقروءة</string>
     <string name="market_price_from">من %1$s</string>
     <string name="market_price_high_bid">أعلى مزايدة: %1$s</string>
     <string name="market_price_instant_buy">شراء فوري: %1$s</string>
@@ -565,19 +565,19 @@
     <string name="market_profile_joined">انضم في %1$s</string>
     <string name="market_profile_no_reviews">لا توجد تقييمات بعد.</string>
     <string name="market_profile_rating_breakdown">تفاصيل التقييم</string>
-    <string name="market_profile_sales_count">%1$d مبيعات</string>
-    <string name="market_profile_stars_value">%1$d نجوم</string>
+    <string name="market_profile_sales_count">%1$s مبيعات</string>
+    <string name="market_profile_stars_value">%1$s نجوم</string>
     <string name="market_purchase_dispute_chargeback">ردّ مبلغ %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">قدّم مصرفك طلب ردّ مبلغ على هذا الطلب. تتولى Stripe معالجة النزاع مع البائع؛ وستظهر النتيجة هنا عند البتّ فيها.</string>
     <string name="market_purchase_dispute_response">ردّ البائع</string>
-    <string name="market_purchase_download_many">نزّل ملفاتك البالغ عددها %1$d أدناه.</string>
+    <string name="market_purchase_download_many">نزّل ملفاتك البالغ عددها %1$s أدناه.</string>
     <string name="market_purchase_download_one">نزّل ملفك أدناه.</string>
     <string name="market_purchase_review_from">تقييم من %1$s</string>
     <string name="market_purchases_auction_label">مزاد رقم %1$s</string>
     <string name="market_purchases_order_label">طلب رقم %1$s</string>
     <string name="market_purchases_refunded_partial">تم ردّ %1$s−</string>
     <string name="market_purchases_won_for">فاز بسعر %1$s</string>
-    <string name="market_rating_reviews">(%1$d تقييمًا)</string>
+    <string name="market_rating_reviews">(%1$s تقييمًا)</string>
     <string name="market_refund_amount_label">المبلغ</string>
     <string name="market_refund_dialog_amount_help">اتركه فارغًا لردّ كامل قيمة الطلب.</string>
     <string name="market_refund_dialog_amount_label">المبلغ</string>
@@ -785,19 +785,19 @@
     <string name="market_listings_remove_message_auction">سيؤدي هذا إلى إلغاء المزاد. سيتم إخفاء الإعلان من المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</string>
     <string name="market_listings_remove_title">هل تزيل هذه القائمة؟</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="zero">سيؤدي هذا إلى إلغاء المزاد وإشعار %1$d من المزايدين النشطين. سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
-        <item quantity="one">سيؤدي هذا إلى إلغاء المزاد وإشعار مزايد نشط واحد (%1$d). سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
-        <item quantity="two">سيؤدي هذا إلى إلغاء المزاد وإشعار مزايدَين نشطَين (%1$d). سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
-        <item quantity="few">سيؤدي هذا إلى إلغاء المزاد وإشعار %1$d مزايدين نشطين. سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
-        <item quantity="many">سيؤدي هذا إلى إلغاء المزاد وإشعار %1$d مزايدًا نشطًا. سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
-        <item quantity="other">سيؤدي هذا إلى إلغاء المزاد وإشعار %1$d من المزايدين النشطين. سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
+        <item quantity="zero">سيؤدي هذا إلى إلغاء المزاد وإشعار %1$s من المزايدين النشطين. سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
+        <item quantity="one">سيؤدي هذا إلى إلغاء المزاد وإشعار مزايد نشط واحد (%1$s). سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
+        <item quantity="two">سيؤدي هذا إلى إلغاء المزاد وإشعار مزايدَين نشطَين (%1$s). سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
+        <item quantity="few">سيؤدي هذا إلى إلغاء المزاد وإشعار %1$s مزايدين نشطين. سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
+        <item quantity="many">سيؤدي هذا إلى إلغاء المزاد وإشعار %1$s مزايدًا نشطًا. سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
+        <item quantity="other">سيؤدي هذا إلى إلغاء المزاد وإشعار %1$s من المزايدين النشطين. سيتم إخفاء الإعلان عن المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="zero">سيؤدي هذا إلى إلغاء %1$d من الاشتراكات النشطة في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
-        <item quantity="one">سيؤدي هذا إلى إلغاء اشتراك نشط واحد (%1$d) في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
-        <item quantity="two">سيؤدي هذا إلى إلغاء اشتراكَين نشطَين (%1$d) في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
-        <item quantity="few">سيؤدي هذا إلى إلغاء %1$d اشتراكات نشطة في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
-        <item quantity="many">سيؤدي هذا إلى إلغاء %1$d اشتراكًا نشطًا في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
-        <item quantity="other">سيؤدي هذا إلى إلغاء %1$d من الاشتراكات النشطة في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
+        <item quantity="zero">سيؤدي هذا إلى إلغاء %1$s من الاشتراكات النشطة في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
+        <item quantity="one">سيؤدي هذا إلى إلغاء اشتراك نشط واحد (%1$s) في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
+        <item quantity="two">سيؤدي هذا إلى إلغاء اشتراكَين نشطَين (%1$s) في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
+        <item quantity="few">سيؤدي هذا إلى إلغاء %1$s اشتراكات نشطة في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
+        <item quantity="many">سيؤدي هذا إلى إلغاء %1$s اشتراكًا نشطًا في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
+        <item quantity="other">سيؤدي هذا إلى إلغاء %1$s من الاشتراكات النشطة في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
     </plurals>
 </resources>

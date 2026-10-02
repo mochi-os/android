@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">vykonal zmenu</string>
     <string name="projects_attachment_empty">Žiadne prílohy</string>
     <string name="projects_attachment_default_name">príloha</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d kB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s kB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nová žiadosť o zlúčenie</string>
     <string name="projects_request_status_closed">Zatvorené</string>
     <string name="projects_request_back_to_list">Späť na zoznam</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Kontroluje sa stav zlúčenia…</string>
     <string name="projects_request_can_merge">Možno zlúčiť</string>
     <string name="projects_request_cannot_merge">Nemožno zlúčiť</string>
-    <string name="projects_request_ahead_behind">%1$d pred, %2$d za</string>
+    <string name="projects_request_ahead_behind">%1$s pred, %2$s za</string>
     <string name="projects_request_draft_notice">Toto je koncept. Pred zlúčením označte ako pripravené.</string>
     <string name="projects_request_view_diff">Zobraziť rozdiel</string>
     <string name="projects_request_mark_ready">Označiť ako pripravené</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Pre toto zobrazenie nie sú nakonfigurované žiadne stĺpce</string>
     <string name="projects_board_no_options">Pre pole stĺpca nie sú nakonfigurované žiadne možnosti</string>
     <string name="projects_board_column_options">Možnosti stĺpca</string>
-    <string name="projects_board_nested_count">+%1$d vnorených</string>
+    <string name="projects_board_nested_count">+%1$s vnorených</string>
     <string name="projects_move_to_column">Presunúť do stĺpca</string>
     <string name="projects_move_to_row">Presunúť do riadka</string>
     <string name="projects_move_after">Za %1$s</string>
@@ -365,10 +365,10 @@
     <string name="projects_sort_filter_title">Zoradenie a filter</string>
     <string name="projects_create_prefix_hint">Používa sa pre čitateľné ID ako %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d konfliktný súbor</item>
-        <item quantity="few">%1$d konfliktné súbory</item>
-        <item quantity="many">%1$d konfliktných súborov</item>
-        <item quantity="other">%1$d konfliktného súboru</item>
+        <item quantity="one">%1$s konfliktný súbor</item>
+        <item quantity="few">%1$s konfliktné súbory</item>
+        <item quantity="many">%1$s konfliktných súborov</item>
+        <item quantity="other">%1$s konfliktného súboru</item>
     </plurals>
     <string name="projects_design_export_saved">Návrh uložený</string>
     <string name="projects_design_import_failed">Súbor sa nepodarilo prečítať</string>
@@ -378,7 +378,7 @@
     <string name="projects_export_saved">Dáta projektu uložené</string>
     <string name="projects_exporting">Pripravuje sa export…</string>
     <string name="projects_board_add_column">Pridať stĺpec</string>
-    <string name="projects_design_sample">Ukážka %1$d</string>
+    <string name="projects_design_sample">Ukážka %1$s</string>
     <string name="projects_option_delete_title">Odstrániť možnosť</string>
     <string name="projects_option_delete_message">Naozaj chcete odstrániť možnosť \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Zatiaľ sa nedajú vytvoriť žiadne typy položiek. Najprv vytvorte požadované nadradené položky.</string>

@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Að eilífu</string>
     <string name="calendars_reminder_time">Á tímanum</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d mínútu áður</item>
-        <item quantity="other">%1$d mínútum áður</item>
+        <item quantity="one">%1$s mínútu áður</item>
+        <item quantity="other">%1$s mínútum áður</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d klukkustund áður</item>
-        <item quantity="other">%1$d klukkustundum áður</item>
+        <item quantity="one">%1$s klukkustund áður</item>
+        <item quantity="other">%1$s klukkustundum áður</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d degi áður</item>
-        <item quantity="other">%1$d dögum áður</item>
+        <item quantity="one">%1$s degi áður</item>
+        <item quantity="other">%1$s dögum áður</item>
     </plurals>
     <string name="calendars_reminder_add">Bæta við áminningu</string>
     <string name="calendars_reminder_remove">Fjarlægja áminningu</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Dagatalið er of stórt</string>
     <string name="calendars_poll_invalid">Vistfangið skilaði ekki dagatali</string>
     <string name="calendars_poll_unreachable">Náðist ekki í vistfangið</string>
-    <string name="calendars_poll_status">Vistfangið svaraði %1$d</string>
+    <string name="calendars_poll_status">Vistfangið svaraði %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d mínúta</item>
-        <item quantity="other">%1$d mínútur</item>
+        <item quantity="one">%1$s mínúta</item>
+        <item quantity="other">%1$s mínútur</item>
     </plurals>
     <string name="calendars_preferences_zones">Sýna viðburði á þeirra eigin tímabelti</string>
     <string name="calendars_event_backwards">Lýkur áður en hann hefst</string>

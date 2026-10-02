@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">حذف</string>
     <string name="go_delete_message">این بازی از فهرست شما حذف خواهد شد. این عمل قابل بازگشت نیست.</string>
     <string name="go_delete_title">بازی حذف شود؟</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">پذیرش</string>
     <string name="go_draw_decline">رد</string>
     <string name="go_draw_offered_received">%1$s پیشنهاد مساوی داد</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">تسلیم شده</string>
     <string name="go_new_game_title">بازی Go جدید</string>
     <string name="go_new_game_no_friends">قبل از شروع بازی باید یک دوست اضافه کنید.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">امتیازاتی که به امتیاز سفید اضافه می‌شود تا اولین حرکت سیاه را جبران کند</string>
 
-    <string name="go_board_a11y">تخته Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">تخته گو %1$d×%1$d، نوبت شماست که سنگ سیاه بگذارید</string>
-    <string name="go_board_a11y_turn_white">تخته گو %1$d×%1$d، نوبت شماست که سنگ سفید بگذارید</string>
+    <string name="go_board_a11y">تخته Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">تخته گو %1$s×%1$s، نوبت شماست که سنگ سیاه بگذارید</string>
+    <string name="go_board_a11y_turn_white">تخته گو %1$s×%1$s، نوبت شماست که سنگ سفید بگذارید</string>
     <string name="go_status_scoring">شمارش — بر سر امتیاز توافق کنید یا به بازی ادامه دهید</string>
     <string name="go_score_proposed">امتیاز پیشنهادی: سیاه %1$s، سفید %2$s</string>
     <string name="go_score_opponent_accepted">حریف شما این امتیاز را می‌پذیرد: سیاه %1$s، سفید %2$s</string>

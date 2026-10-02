@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">메모</string>
     <string name="staff_accounts_reason_label">사유</string>
     <string name="staff_accounts_reason_optional_label">사유(선택)</string>
-    <string name="staff_accounts_sales">%1$d건의 판매</string>
+    <string name="staff_accounts_sales">%1$s건의 판매</string>
     <string name="staff_accounts_search_clear">검색 지우기</string>
     <string name="staff_accounts_search_placeholder">검색</string>
     <string name="staff_accounts_seller_buyers">구매자 전용</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">이름 없음</string>
     <string name="staff_accounts_unsuspend">정지 해제</string>
     <string name="staff_accounts_unsuspended_toast">계정 정지가 해제되었어요</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">취소</string>
     <string name="staff_appeals_decide">결정</string>
     <string name="staff_appeals_decision_denied">상품 거절 상태 유지</string>

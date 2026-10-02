@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Pastabos</string>
     <string name="staff_accounts_reason_label">Priežastis</string>
     <string name="staff_accounts_reason_optional_label">Priežastis (neprivaloma)</string>
-    <string name="staff_accounts_sales">%1$d pardavimų</string>
+    <string name="staff_accounts_sales">%1$s pardavimų</string>
     <string name="staff_accounts_search_clear">Išvalyti paiešką</string>
     <string name="staff_accounts_search_placeholder">Ieškoti</string>
     <string name="staff_accounts_seller_buyers">Tik pirkėjai</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Be pavadinimo</string>
     <string name="staff_accounts_unsuspend">Panaikinti sustabdymą</string>
     <string name="staff_accounts_unsuspended_toast">Paskyros sustabdymas atšauktas</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Atšaukti</string>
     <string name="staff_appeals_decide">Spręsti</string>
     <string name="staff_appeals_decision_denied">Skelbimas atmestas, palikta</string>

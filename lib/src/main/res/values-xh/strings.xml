@@ -122,7 +122,7 @@
     <string name="common_not_saved">Akugcinwanga</string>
     <string name="auth_server_url">I-URL yeseva</string>
     <string name="auth_link_rules">Imithetho</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="lightbox_position">%1$s / %2$s</string>
     <string name="about_label">Malunga</string>
     <string name="game_chat_move_played">%1$s udlale %2$s</string>
 
@@ -130,7 +130,7 @@
     <string name="error_network">Akukwazeki ukunxibelelana. Khangela uqhagamshelwano lwakho lwe-intanethi uze uzame kwakhona.</string>
     <string name="error_authentication_required">Kufuneka uqinisekiso</string>
     <string name="error_not_found">Ayifumanekanga</string>
-    <string name="error_server">Impazamo yeseva (%1$d). Nceda uzame kwakhona kamva.</string>
+    <string name="error_server">Impazamo yeseva (%1$s). Nceda uzame kwakhona kamva.</string>
     <string name="error_unexpected">Kwenzeke impazamo engalindelekanga</string>
     <string name="error_enter_server_url">Nceda ufake i-URL yeseva</string>
     <string name="error_enter_email">Nceda ufake i-imeyile yakho</string>
@@ -180,19 +180,19 @@
     <string name="access_level_react">Sabela</string>
     <string name="notifications_clear">Cima izaziso</string>
     <string name="entity_avatar_alt">I-avatar ka-%1$s</string>
-    <string name="media_grid_more_count">+%1$d</string>
+    <string name="media_grid_more_count">+%1$s</string>
     <string name="format_time_just_now">Kwangoku</string>
-    <string name="format_time_minutes_ago">kwimizuzu engu-%1$d eyadlulayo</string>
-    <string name="format_time_hours_ago">kwiiyure ezingu-%1$d ezadlulayo</string>
-    <string name="format_time_days_ago">kwiintsuku ezingu-%1$d ezadlulayo</string>
-    <string name="format_time_weeks_ago">kwiiveki ezingu-%1$d ezadlulayo</string>
-    <string name="format_time_months_ago">kwiinyanga ezingu-%1$d ezadlulayo</string>
-    <string name="format_time_years_ago">kwiminyaka engu-%1$d eyadlulayo</string>
-    <string name="format_time_minutes_short">imizuzu %1$d</string>
-    <string name="format_time_hours_short">iiyure %1$d</string>
-    <string name="format_time_days_short">iintsuku %1$d</string>
-    <string name="format_time_weeks_short">iiveki %1$d</string>
-    <string name="format_time_months_short">iinyanga %1$d</string>
+    <string name="format_time_minutes_ago">kwimizuzu engu-%1$s eyadlulayo</string>
+    <string name="format_time_hours_ago">kwiiyure ezingu-%1$s ezadlulayo</string>
+    <string name="format_time_days_ago">kwiintsuku ezingu-%1$s ezadlulayo</string>
+    <string name="format_time_weeks_ago">kwiiveki ezingu-%1$s ezadlulayo</string>
+    <string name="format_time_months_ago">kwiinyanga ezingu-%1$s ezadlulayo</string>
+    <string name="format_time_years_ago">kwiminyaka engu-%1$s eyadlulayo</string>
+    <string name="format_time_minutes_short">imizuzu %1$s</string>
+    <string name="format_time_hours_short">iiyure %1$s</string>
+    <string name="format_time_days_short">iintsuku %1$s</string>
+    <string name="format_time_weeks_short">iiveki %1$s</string>
+    <string name="format_time_months_short">iinyanga %1$s</string>
     <string name="reaction_add">Yongeza uvakalelo</string>
     <string name="push_service_channel">Izaziso ze-Mochi</string>
     <string name="push_service_channel_description">Igcina i-Mochi inxibelelene ukuze ifumane izaziso</string>
@@ -285,8 +285,8 @@
     <string name="comment_anchor_open">Jonga umfanekiso olu luvo luthetha ngawo</string>
     <string name="comment_anchor_default">Kulo mfanekiso</string>
     <plurals name="lightbox_comments_others">
-        <item quantity="one">Bonisa olunye uluvo %1$d kwesi sithuba</item>
-        <item quantity="other">Bonisa ezinye izimvo %1$d kwesi sithuba</item>
+        <item quantity="one">Bonisa olunye uluvo %1$s kwesi sithuba</item>
+        <item quantity="other">Bonisa ezinye izimvo %1$s kwesi sithuba</item>
     </plurals>
     <string name="lightbox_comments">Izimvo</string>
     <string name="common_attachment_unavailable">Isincamathiselo asifumaneki okwethutyana</string>

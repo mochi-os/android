@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">بازار</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ژوندلیک</string>
     <string name="market_account_biography_placeholder">پیرودونکو ته د ځان په اړه ووایاست…</string>
     <string name="market_account_load_failed">حساب نه شو پورته کیدلی</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">لوړ وړاندیز شوی</string>
     <string name="market_bids_tab_won">وګټل</string>
     <string name="market_bids_title">بولۍ</string>
-    <string name="market_carousel_main">عکس %1$d له %2$d څخه</string>
+    <string name="market_carousel_main">عکس %1$s له %2$s څخه</string>
     <string name="market_channel_name">بازار</string>
     <string name="market_chargeback_reason_bank_cannot_process">بانک یې پروسس نه شو کولی</string>
     <string name="market_chargeback_reason_check_returned">چک بیرته راستون شو</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">بیا جوړ شوی</string>
     <string name="market_editor_condition_used">کارول شوی</string>
     <string name="market_editor_currency">اسعار</string>
-    <string name="market_editor_days">%1$d ورځې</string>
+    <string name="market_editor_days">%1$s ورځې</string>
     <string name="market_editor_delete">اعلان حذف کړئ</string>
     <string name="market_editor_description">تفصیل</string>
     <string name="market_editor_interval_monthly">میاشتني</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">پیرودنې</string>
     <string name="market_rating_label">درجه بندي</string>
     <string name="market_rating_no_reviews">تر اوسه هیڅ بیاکتنې نشته</string>
-    <string name="market_rating_reviews">(%1$d کتنه)</string>
+    <string name="market_rating_reviews">(%1$s کتنه)</string>
     <string name="market_refund_amount_label">اندازه</string>
     <string name="market_refund_body">د خپل د پیسو بیرته ورکړې لپاره دلیل وړاندې کړئ.</string>
     <string name="market_refund_details_label">تفصیلات</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">اوسنی: %1$s</string>
     <string name="market_bids_ends_in">په %1$s کې پای ته رسیږي</string>
     <string name="market_bids_your_bid">ستاسو وړاندیز: %1$s</string>
-    <string name="market_carousel_thumbnail">کوچنی انځور %1$d</string>
+    <string name="market_carousel_thumbnail">کوچنی انځور %1$s</string>
     <string name="market_checkout_browser_unavailable">د تادیې پاڼې د خلاصولو لپاره کوم براوزر نشته</string>
     <string name="market_checkout_pwyw_label">ستاسو بیه (لږ تر لږه %1$s)</string>
     <string name="market_checkout_pwyw_min_error">اندازه باید لږ تر لږه %1$s وي</string>
-    <string name="market_dispute_dialog_attach_count">%1$d فایل(ونه) ضمیمه شوي</string>
+    <string name="market_dispute_dialog_attach_count">%1$s فایل(ونه) ضمیمه شوي</string>
     <string name="market_dispute_dialog_evidence_section_title">وړاندې شوي شواهد</string>
     <string name="market_dispute_dialog_evidence_submitter_line">د %1$s لخوا وړاندې شوي</string>
     <string name="market_editor_appeal">د څار غوښتنه</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">د لیست بارول</string>
     <string name="market_listing_detail_relist_failed">بیا لیست کول ونه شول</string>
     <string name="market_listing_detail_relist_in_progress">بیا لیست کول</string>
-    <string name="market_listing_detail_sales_count">%1$d پلورنې</string>
+    <string name="market_listing_detail_sales_count">%1$s پلورنې</string>
     <string name="market_listing_detail_seller_banned_banner">دا پلورونکی بند شوی دی. نوي امرونه نشي ورکول کېدای.</string>
     <string name="market_listing_detail_seller_suspended_banner">دا پلورونکی ځنډول شوی دی. نوي امرونه تر هغو ځنډېدلي چې حساب بیا فعال شي.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">د پلورونکي د حساب د محدودیت په وخت کې پېرل غیر فعال دي.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">تر اوسه هیڅ خبرې اترې نشته</string>
     <string name="market_messages_load_failed">موضوع نشي پورته کېدای</string>
     <string name="market_messages_send_failed">پیغام نشي لېږل کېدای</string>
-    <string name="market_messages_unread_badge">%1$d ناویل شوي</string>
+    <string name="market_messages_unread_badge">%1$s ناویل شوي</string>
     <string name="market_price_high_bid">لوړ وړاندیز: %1$s</string>
     <string name="market_price_instant_buy">سملاسي پېر: %1$s</string>
     <string name="market_price_starting_bid">د پیل وړاندیز: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">غړی له %1$s راهیسې</string>
     <string name="market_profile_joined">په %1$s کې یوځای شو</string>
     <string name="market_profile_rating_breakdown">د درجه بندۍ تفصیل</string>
-    <string name="market_profile_sales_count">%1$d پلورنې</string>
-    <string name="market_profile_stars_value">%1$d ستوري</string>
+    <string name="market_profile_sales_count">%1$s پلورنې</string>
+    <string name="market_profile_stars_value">%1$s ستوري</string>
     <string name="market_purchase_dispute_chargeback">د پیسو بیرته اخیستنه %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ستاسو بانک پر دې امر د پیسو د بیرته اخیستنې غوښتنه وکړه. Stripe د پلورونکي سره د شخړې حلول کوي؛ پایله به دلته راښکاره شي کله چې فیصله وشي.</string>
     <string name="market_purchase_dispute_response">د پلورونکي ځواب</string>
-    <string name="market_purchase_download_many">خپل %1$d دوتنې لاندې ډاونلوډ کړئ.</string>
+    <string name="market_purchase_download_many">خپل %1$s دوتنې لاندې ډاونلوډ کړئ.</string>
     <string name="market_purchase_download_one">خپله دوتنه لاندې ډاونلوډ کړئ.</string>
     <string name="market_purchase_review_from">بیاکتنه له %1$s څخه</string>
     <string name="market_purchases_auction_label">لیلام #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">دا به نیلام لغوه کړي. لیست به د پیرودونکو څخه پټ شي؛ تاسو یې وروسته د نوې مسودې په توګه بیا لیست کولی شئ.</string>
     <string name="market_listings_remove_title">دا لیست لرې کړو؟</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">دا به لیلام لغوه کړي او %1$d فعال بولي کوونکو ته به خبر ورکړي. اعلان به له پېرودونکو څخه پټ شي؛ وروسته یې د نوې مسودې په توګه بیا لیست کولی شئ.</item>
-        <item quantity="other">دا به لیلام لغوه کړي او %1$d فعال بولي کوونکو ته به خبر ورکړي. اعلان به له پېرودونکو څخه پټ شي؛ وروسته یې د نوې مسودې په توګه بیا لیست کولی شئ.</item>
+        <item quantity="one">دا به لیلام لغوه کړي او %1$s فعال بولي کوونکو ته به خبر ورکړي. اعلان به له پېرودونکو څخه پټ شي؛ وروسته یې د نوې مسودې په توګه بیا لیست کولی شئ.</item>
+        <item quantity="other">دا به لیلام لغوه کړي او %1$s فعال بولي کوونکو ته به خبر ورکړي. اعلان به له پېرودونکو څخه پټ شي؛ وروسته یې د نوې مسودې په توګه بیا لیست کولی شئ.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">دا به د اوسنۍ بل ورکولو دورې په پای کې %1$d فعال ګډونونه لغوه کړي. ګډون کوونکو ته به خبر ورکړل شي. اعلان به له پېرودونکو څخه پټ شي.</item>
-        <item quantity="other">دا به د اوسنۍ بل ورکولو دورې په پای کې %1$d فعال ګډونونه لغوه کړي. ګډون کوونکو ته به خبر ورکړل شي. اعلان به له پېرودونکو څخه پټ شي.</item>
+        <item quantity="one">دا به د اوسنۍ بل ورکولو دورې په پای کې %1$s فعال ګډونونه لغوه کړي. ګډون کوونکو ته به خبر ورکړل شي. اعلان به له پېرودونکو څخه پټ شي.</item>
+        <item quantity="other">دا به د اوسنۍ بل ورکولو دورې په پای کې %1$s فعال ګډونونه لغوه کړي. ګډون کوونکو ته به خبر ورکړل شي. اعلان به له پېرودونکو څخه پټ شي.</item>
     </plurals>
 </resources>

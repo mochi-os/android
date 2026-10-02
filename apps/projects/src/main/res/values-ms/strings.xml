@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">membuat perubahan</string>
     <string name="projects_attachment_empty">Tiada lampiran</string>
     <string name="projects_attachment_default_name">lampiran</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Permintaan gabungan baharu</string>
     <string name="projects_request_status_closed">Ditutup</string>
     <string name="projects_request_back_to_list">Kembali ke senarai</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Menyemak status gabungan…</string>
     <string name="projects_request_can_merge">Boleh digabungkan</string>
     <string name="projects_request_cannot_merge">Tidak boleh digabungkan</string>
-    <string name="projects_request_ahead_behind">%1$d ke hadapan, %2$d ke belakang</string>
+    <string name="projects_request_ahead_behind">%1$s ke hadapan, %2$s ke belakang</string>
     <string name="projects_request_draft_notice">Ini adalah draf. Tandakan sebagai sedia sebelum menggabungkan.</string>
     <string name="projects_request_view_diff">Lihat beza</string>
     <string name="projects_request_mark_ready">Tandakan sebagai sedia</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Tiada lajur dikonfigurasikan untuk paparan ini</string>
     <string name="projects_board_no_options">Tiada pilihan dikonfigurasikan untuk medan lajur</string>
     <string name="projects_board_column_options">Pilihan lajur</string>
-    <string name="projects_board_nested_count">+%1$d bersarang</string>
+    <string name="projects_board_nested_count">+%1$s bersarang</string>
     <string name="projects_move_to_column">Alih ke lajur</string>
     <string name="projects_move_to_row">Alih ke baris</string>
     <string name="projects_move_after">Selepas %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Isih &amp; tapis</string>
     <string name="projects_create_prefix_hint">Digunakan untuk ID boleh baca seperti %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d fail bercanggah</item>
-        <item quantity="other">%1$d fail bercanggah</item>
+        <item quantity="one">%1$s fail bercanggah</item>
+        <item quantity="other">%1$s fail bercanggah</item>
     </plurals>
     <string name="projects_design_export_saved">Reka bentuk disimpan</string>
     <string name="projects_design_import_failed">Fail itu tidak dapat dibaca</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Data projek disimpan</string>
     <string name="projects_exporting">Menyediakan eksport…</string>
     <string name="projects_board_add_column">Tambah lajur</string>
-    <string name="projects_design_sample">Contoh %1$d</string>
+    <string name="projects_design_sample">Contoh %1$s</string>
     <string name="projects_option_delete_title">Padam pilihan</string>
     <string name="projects_option_delete_message">Adakah anda pasti mahu memadam pilihan \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Tiada jenis item boleh dicipta lagi. Cipta item induk yang diperlukan dahulu.</string>

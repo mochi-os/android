@@ -99,22 +99,22 @@
     <string name="calendars_repeat_forever">לתמיד</string>
     <string name="calendars_reminder_time">בזמן האירוע</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d דקה לפני</item>
-        <item quantity="two">%1$d דקות לפני</item>
-        <item quantity="many">%1$d דקות לפני</item>
-        <item quantity="other">%1$d דקות לפני</item>
+        <item quantity="one">%1$s דקה לפני</item>
+        <item quantity="two">%1$s דקות לפני</item>
+        <item quantity="many">%1$s דקות לפני</item>
+        <item quantity="other">%1$s דקות לפני</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d שעה לפני</item>
-        <item quantity="two">%1$d שעות לפני</item>
-        <item quantity="many">%1$d שעות לפני</item>
-        <item quantity="other">%1$d שעות לפני</item>
+        <item quantity="one">%1$s שעה לפני</item>
+        <item quantity="two">%1$s שעות לפני</item>
+        <item quantity="many">%1$s שעות לפני</item>
+        <item quantity="other">%1$s שעות לפני</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d יום לפני</item>
-        <item quantity="two">%1$d ימים לפני</item>
-        <item quantity="many">%1$d ימים לפני</item>
-        <item quantity="other">%1$d ימים לפני</item>
+        <item quantity="one">%1$s יום לפני</item>
+        <item quantity="two">%1$s ימים לפני</item>
+        <item quantity="many">%1$s ימים לפני</item>
+        <item quantity="other">%1$s ימים לפני</item>
     </plurals>
     <string name="calendars_reminder_add">הוספת תזכורת</string>
     <string name="calendars_reminder_remove">הסרת תזכורת</string>
@@ -148,11 +148,11 @@
     <string name="calendars_poll_large">היומן גדול מדי</string>
     <string name="calendars_poll_invalid">הכתובת לא החזירה יומן</string>
     <string name="calendars_poll_unreachable">לא ניתן היה להגיע לכתובת</string>
-    <string name="calendars_poll_status">הכתובת השיבה %1$d</string>
+    <string name="calendars_poll_status">הכתובת השיבה %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d דקה</item>
-        <item quantity="two">%1$d דקות</item>
-        <item quantity="other">%1$d דקות</item>
+        <item quantity="one">%1$s דקה</item>
+        <item quantity="two">%1$s דקות</item>
+        <item quantity="other">%1$s דקות</item>
     </plurals>
     <string name="calendars_preferences_zones">הצג אירועים באזור הזמן שלהם</string>
     <string name="calendars_event_backwards">מסתיים לפני שהתחיל</string>

@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">یو بدلون یې وکړ</string>
     <string name="projects_attachment_empty">هیڅ ضمیمې نشته</string>
     <string name="projects_attachment_default_name">ضمیمه</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">د یوځای کولو نوې غوښتنه</string>
     <string name="projects_request_status_closed">بند شوی</string>
     <string name="projects_request_back_to_list">لیست ته بیرته</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">د یوځای کولو حالت چک کیږي…</string>
     <string name="projects_request_can_merge">یوځای کیدلی شي</string>
     <string name="projects_request_cannot_merge">یوځای کیدلی نه شي</string>
-    <string name="projects_request_ahead_behind">%1$d مخکې، %2$d وروسته</string>
+    <string name="projects_request_ahead_behind">%1$s مخکې، %2$s وروسته</string>
     <string name="projects_request_draft_notice">دا یو مسوده ده. د یوځای کولو نه مخکې یې د چمتو په توګه ونښه کړئ.</string>
     <string name="projects_request_view_diff">توپیر وګورئ</string>
     <string name="projects_request_mark_ready">د چمتو په توګه ونښه کړئ</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">د دې کتنې لپاره هیڅ کالمونه نه دي ترتیب شوي</string>
     <string name="projects_board_no_options">د کالم ساحې لپاره هیڅ اختیارونه ترتیب شوي نه دي</string>
     <string name="projects_board_column_options">د کالم اختیارونه</string>
-    <string name="projects_board_nested_count">+%1$d ځړول شوي</string>
+    <string name="projects_board_nested_count">+%1$s ځړول شوي</string>
     <string name="projects_move_to_column">کالم ته یې انتقال کړئ</string>
     <string name="projects_move_to_row">کتار ته یې انتقال کړئ</string>
     <string name="projects_move_after">د %1$s وروسته</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">ترتیب او فلټر</string>
     <string name="projects_create_prefix_hint">د لوستلو وړ پېژندونو لپاره کارول کېږي لکه %1$s-1، %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d متناقضه دوتنه</item>
-        <item quantity="other">%1$d متناقضې دوتنې</item>
+        <item quantity="one">%1$s متناقضه دوتنه</item>
+        <item quantity="other">%1$s متناقضې دوتنې</item>
     </plurals>
     <string name="projects_design_export_saved">ډیزاین خوندي شو</string>
     <string name="projects_design_import_failed">هغه فایل نه شو لوستل</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">د پروژې ډاټا خوندي شوه</string>
     <string name="projects_exporting">صادرول چمتو کیږي…</string>
     <string name="projects_board_add_column">کالم اضافه کړئ</string>
-    <string name="projects_design_sample">نمونه %1$d</string>
+    <string name="projects_design_sample">نمونه %1$s</string>
     <string name="projects_option_delete_title">اختیار ړنګ کړئ</string>
     <string name="projects_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>
     <string name="projects_create_object_no_types">تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ.</string>

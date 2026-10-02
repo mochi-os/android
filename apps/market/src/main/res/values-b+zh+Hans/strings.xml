@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">提交中…</string>
     <string name="market_checkout_subscribing">正在订阅…</string>
     <string name="market_filter_remove">移除筛选</string>
-    <string name="market_listing_detail_sales_count">%1$d 笔销售</string>
-    <string name="market_profile_sales_count">%1$d 笔销售</string>
+    <string name="market_listing_detail_sales_count">%1$s 笔销售</string>
+    <string name="market_profile_sales_count">%1$s 笔销售</string>
     <string name="market_purchase_dispute_response">卖家回应</string>
     <string name="market_purchases_order_label">订单 #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">向买家介绍一下你自己…</string>
     <string name="market_account_load_failed">无法加载账户</string>
     <string name="market_account_save_failed">无法保存更改</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">当前:%1$s</string>
     <string name="market_bids_ends_in">%1$s后结束</string>
     <string name="market_bids_your_bid">您的出价:%1$s</string>
-    <string name="market_carousel_main">第 %1$d 张照片,共 %2$d 张</string>
-    <string name="market_carousel_thumbnail">缩略图 %1$d</string>
+    <string name="market_carousel_main">第 %1$s 张照片,共 %2$s 张</string>
+    <string name="market_carousel_thumbnail">缩略图 %1$s</string>
     <string name="market_checkout_browser_unavailable">没有可用的浏览器打开支付页面</string>
     <string name="market_checkout_pay_button">使用 Stripe 支付</string>
     <string name="market_checkout_processing">处理中…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s(%3$s)</string>
     <string name="market_dispute_dialog_attach">附加证据</string>
-    <string name="market_dispute_dialog_attach_count">已附加 %1$d 个文件</string>
+    <string name="market_dispute_dialog_attach_count">已附加 %1$s 个文件</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi 工作人员</string>
     <string name="market_dispute_dialog_evidence_section_title">已提交的证据</string>
     <string name="market_dispute_dialog_evidence_submitter_line">由 %1$s 提交</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">参考链接</string>
     <string name="market_editor_assets_empty">暂无资产</string>
     <string name="market_editor_category_none">选择类别</string>
-    <string name="market_editor_days">%1$d 天</string>
+    <string name="market_editor_days">%1$s 天</string>
     <string name="market_editor_delete">删除商品</string>
     <string name="market_editor_delete_confirm_message">此操作将永久删除该商品。</string>
     <string name="market_editor_delete_confirm_title">删除商品?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">无法加载会话</string>
     <string name="market_messages_send_failed">无法发送消息</string>
     <string name="market_messages_thread_title">会话</string>
-    <string name="market_messages_unread_badge">%1$d 条未读</string>
+    <string name="market_messages_unread_badge">%1$s 条未读</string>
     <string name="market_price_from">起价 %1$s</string>
     <string name="market_price_high_bid">最高出价:%1$s</string>
     <string name="market_price_instant_buy">一口价:%1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">加入于 %1$s</string>
     <string name="market_profile_no_reviews">暂无评价。</string>
     <string name="market_profile_rating_breakdown">评分明细</string>
-    <string name="market_profile_stars_value">%1$d 星</string>
+    <string name="market_profile_stars_value">%1$s 星</string>
     <string name="market_purchase_dispute_chargeback">拒付 %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">您的银行对此订单发起了拒付。Stripe 正在与卖家处理该争议;结果裁定后将显示在此处。</string>
-    <string name="market_purchase_download_many">请在下方下载您的 %1$d 个文件。</string>
+    <string name="market_purchase_download_many">请在下方下载您的 %1$s 个文件。</string>
     <string name="market_purchase_download_one">请在下方下载您的文件。</string>
     <string name="market_purchase_review_from">来自 %1$s 的评价</string>
     <string name="market_purchases_auction_label">拍卖 #%1$s</string>
     <string name="market_purchases_refunded_partial">已退款 −%1$s</string>
     <string name="market_purchases_won_for">以 %1$s 中标</string>
-    <string name="market_rating_reviews">(%1$d 条评价)</string>
+    <string name="market_rating_reviews">(%1$s 条评价)</string>
     <string name="market_refund_amount_label">金额</string>
     <string name="market_refund_dialog_amount_help">留空以全额退款。</string>
     <string name="market_refund_dialog_amount_label">金额</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">这将取消拍卖。商品将对买家隐藏;您可以稍后将其作为新的草稿重新发布。</string>
     <string name="market_listings_remove_title">移除此商品?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">这将取消拍卖，并通知 %1$d 位活跃出价者。商品将对买家隐藏；您可以稍后将其作为新的草稿重新发布。</item>
-        <item quantity="other">这将取消拍卖，并通知 %1$d 位活跃出价者。商品将对买家隐藏；您可以稍后将其作为新的草稿重新发布。</item>
+        <item quantity="one">这将取消拍卖，并通知 %1$s 位活跃出价者。商品将对买家隐藏；您可以稍后将其作为新的草稿重新发布。</item>
+        <item quantity="other">这将取消拍卖，并通知 %1$s 位活跃出价者。商品将对买家隐藏；您可以稍后将其作为新的草稿重新发布。</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">这将在当前计费周期结束时取消 %1$d 个有效订阅。订阅者将收到通知。商品将对买家隐藏。</item>
-        <item quantity="other">这将在当前计费周期结束时取消 %1$d 个有效订阅。订阅者将收到通知。商品将对买家隐藏。</item>
+        <item quantity="one">这将在当前计费周期结束时取消 %1$s 个有效订阅。订阅者将收到通知。商品将对买家隐藏。</item>
+        <item quantity="other">这将在当前计费周期结束时取消 %1$s 个有效订阅。订阅者将收到通知。商品将对买家隐藏。</item>
     </plurals>
 </resources>

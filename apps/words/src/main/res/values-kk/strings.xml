@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Әзірге ойындар жоқ.</string>
     <string name="words_new_game_choose_opponents">Қарсыластарды таңдаңыз</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d ойыншы</string>
+    <string name="words_new_game_player_count">%1$s ойыншы</string>
     <string name="words_new_game_no_friends_subtitle">Ойнауды бастау үшін Адамдар қолданбасында достар қосыңыз.</string>
     <string name="words_detail_title">Ойын</string>
     <string name="words_detail_status_opponent_move">%1$s жүрісі</string>
     <string name="words_detail_status_winner_wins">%1$s жеңеді</string>
-    <string name="words_detail_player_fallback">Ойыншы %1$d</string>
-    <string name="words_detail_player_count">%1$d ойыншы</string>
-    <string name="words_detail_label_tiles_left">%1$d тас қалды</string>
+    <string name="words_detail_player_fallback">Ойыншы %1$s</string>
+    <string name="words_detail_player_count">%1$s ойыншы</string>
+    <string name="words_detail_label_tiles_left">%1$s тас қалды</string>
     <string name="words_detail_action_open_chat">Чатты ашу</string>
     <string name="words_detail_action_more">Ойын әрекеттері</string>
-    <string name="words_detail_exchange_count">Айырбас (%1$d)</string>
+    <string name="words_detail_exchange_count">Айырбас (%1$s)</string>
     <string name="words_detail_chat_you_played">Сіз %1$s ойнадыңыз</string>
     <string name="words_detail_chat_player_played">%1$s %2$s ойнады</string>
 

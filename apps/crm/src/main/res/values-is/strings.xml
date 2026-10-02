@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Engir hlutir</string>
     <string name="crm_board_no_columns">Engir dálkar stilltir fyrir þessa sýn</string>
     <string name="crm_board_no_options">Engir valkostir stilltir fyrir dálkareit</string>
-    <string name="crm_board_nested_count">+%1$d hreiðruð</string>
+    <string name="crm_board_nested_count">+%1$s hreiðruð</string>
     <string name="crm_move_to_column">Færa í dálk</string>
     <string name="crm_move_to_row">Færa í röð</string>
     <string name="crm_move_after">Eftir %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM-gögn vistuð</string>
     <string name="crm_create_upload_json">Hlaðið upp .zip- eða .json-skrá</string>
     <string name="crm_create_blocked_no_options">Ekki hægt að búa til: %1$s er nauðsynlegt en hefur enga valkosti. Bættu við valkostum í Hönnun.</string>
-    <string name="crm_design_sample">Sýnishorn %1$d</string>
+    <string name="crm_design_sample">Sýnishorn %1$s</string>
     <string name="crm_option_delete_title">Eyða valkosti</string>
     <string name="crm_option_delete_message">Ertu viss um að þú viljir eyða valkostinum \"%1$s\"?</string>
 </resources>

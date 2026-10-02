@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">บันทึก</string>
     <string name="staff_accounts_reason_label">เหตุผล</string>
     <string name="staff_accounts_reason_optional_label">เหตุผล (ไม่บังคับ)</string>
-    <string name="staff_accounts_sales">%1$d รายการขาย</string>
+    <string name="staff_accounts_sales">%1$s รายการขาย</string>
     <string name="staff_accounts_search_clear">ล้างการค้นหา</string>
     <string name="staff_accounts_search_placeholder">ค้นหา</string>
     <string name="staff_accounts_seller_buyers">ผู้ซื้อเท่านั้น</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">ไม่มีชื่อ</string>
     <string name="staff_accounts_unsuspend">ปลดการระงับ</string>
     <string name="staff_accounts_unsuspended_toast">ปลดการระงับบัญชีแล้ว</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">ยกเลิก</string>
     <string name="staff_appeals_decide">ตัดสินใจ</string>
     <string name="staff_appeals_decision_denied">เก็บประกาศที่ถูกปฏิเสธไว้</string>

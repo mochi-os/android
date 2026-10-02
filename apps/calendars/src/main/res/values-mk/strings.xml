@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Засекогаш</string>
     <string name="calendars_reminder_time">Во времето на настанот</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d минута претходно</item>
-        <item quantity="other">%1$d минути претходно</item>
+        <item quantity="one">%1$s минута претходно</item>
+        <item quantity="other">%1$s минути претходно</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d час претходно</item>
-        <item quantity="other">%1$d часа претходно</item>
+        <item quantity="one">%1$s час претходно</item>
+        <item quantity="other">%1$s часа претходно</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ден претходно</item>
-        <item quantity="other">%1$d дена претходно</item>
+        <item quantity="one">%1$s ден претходно</item>
+        <item quantity="other">%1$s дена претходно</item>
     </plurals>
     <string name="calendars_reminder_add">Додај потсетник</string>
     <string name="calendars_reminder_remove">Отстрани потсетник</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Календарот е преголем</string>
     <string name="calendars_poll_invalid">Адресата не врати календар</string>
     <string name="calendars_poll_unreachable">Адресата не е достапна</string>
-    <string name="calendars_poll_status">Адресата одговори %1$d</string>
+    <string name="calendars_poll_status">Адресата одговори %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d минута</item>
-        <item quantity="other">%1$d минути</item>
+        <item quantity="one">%1$s минута</item>
+        <item quantity="other">%1$s минути</item>
     </plurals>
     <string name="calendars_preferences_zones">Прикажувај ги настаните во нивната сопствена временска зона</string>
     <string name="calendars_event_backwards">Завршува пред да започне</string>

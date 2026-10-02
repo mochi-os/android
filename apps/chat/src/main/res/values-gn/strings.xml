@@ -60,7 +60,7 @@
     <string name="chat_delete_confirm_title">¿Emboguete ñe\'ẽmondo?</string>
     <string name="chat_delete_confirm_body">Kóva omboguete ñe\'ẽmondo opavavépe g̃uarã ha ndaikatumo\'ãi ojejevy.</string>
     <string name="chat_delete_own_only">Ikatu rembogue ne ñe\'ẽmondo tee añoite</string>
-    <string name="chat_selection_title">%1$d ojeporavo</string>
+    <string name="chat_selection_title">%1$s ojeporavo</string>
     <string name="chat_forward_subtitle">Eiporavo peteĩ ñomongeta térã angirũ remondo hag̃ua umi ñe\'ẽmondo eiporavóva</string>
     <string name="chat_forward_chats">Ñomongetakuéra</string>
     <string name="chat_forward_friends">Angirũnguéra</string>

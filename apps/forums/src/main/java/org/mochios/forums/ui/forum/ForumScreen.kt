@@ -719,7 +719,7 @@ private fun ForumContent(
                             NewItemsPill(
                                 count = newPostsCount,
                                 label = pluralStringResource(
-                                    R.plurals.forums_new_posts, newPostsCount, newPostsCount
+                                    R.plurals.forums_new_posts, newPostsCount, LocalFormat.current.formatNumber(newPostsCount)
                                 ),
                                 onClick = {
                                     viewModel.showNewPosts()

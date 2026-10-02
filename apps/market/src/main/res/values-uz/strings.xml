@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Bozor</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Tarjimai hol</string>
     <string name="market_account_biography_placeholder">Xaridorlarga oʻzingiz haqida gapiring…</string>
     <string name="market_account_load_failed">Hisobni yuklab boʻlmadi</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">Yuqori narx taklif qilindi</string>
     <string name="market_bids_tab_won">Gʻalaba</string>
     <string name="market_bids_title">Takliflar</string>
-    <string name="market_carousel_main">Foto %1$d / %2$d</string>
+    <string name="market_carousel_main">Foto %1$s / %2$s</string>
     <string name="market_channel_name">Bozor</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank qayta ishlay olmadi</string>
     <string name="market_chargeback_reason_check_returned">Tekshiruv qaytdi</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">Qayta tiklangan</string>
     <string name="market_editor_condition_used">Foydalanilgan</string>
     <string name="market_editor_currency">Valyuta</string>
-    <string name="market_editor_days">%1$d kun</string>
+    <string name="market_editor_days">%1$s kun</string>
     <string name="market_editor_delete">Eʼlonni oʻchirish</string>
     <string name="market_editor_description">Tavsif</string>
     <string name="market_editor_interval_monthly">Oylik</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">Xaridlar</string>
     <string name="market_rating_label">Baholash</string>
     <string name="market_rating_no_reviews">Hozircha sharhlar yoʻq</string>
-    <string name="market_rating_reviews">(%1$d sharh)</string>
+    <string name="market_rating_reviews">(%1$s sharh)</string>
     <string name="market_refund_amount_label">Miqdor</string>
     <string name="market_refund_body">Pulni qaytarish soʻrovingiz uchun sabab keltiring.</string>
     <string name="market_refund_details_label">Tafsilotlar</string>
@@ -473,10 +473,10 @@
     <string name="market_sale_review_response_submitting">Yuborilmoqda…</string>
     <string name="market_checkout_subscribing">Obuna boʻlinmoqda…</string>
     <string name="market_filter_remove">Filtrni olib tashlash</string>
-    <string name="market_listing_detail_sales_count">%1$d sotuv</string>
+    <string name="market_listing_detail_sales_count">%1$s sotuv</string>
     <string name="market_listings_action_appeal">Olib tashlash apellyatsiyasi</string>
     <string name="market_listings_share_chooser">Eʼlonni ulashish</string>
-    <string name="market_profile_sales_count">%1$d sotuv</string>
+    <string name="market_profile_sales_count">%1$s sotuv</string>
     <string name="market_refund_dialog_amount_label">Miqdor</string>
 
     <string name="market_account_save_failed">O\'zgarishlarni saqlab bo\'lmadi</string>
@@ -497,11 +497,11 @@
     <string name="market_bids_current_bid">Joriy: %1$s</string>
     <string name="market_bids_ends_in">%1$s dan keyin tugaydi</string>
     <string name="market_bids_your_bid">Sizning taklifingiz: %1$s</string>
-    <string name="market_carousel_thumbnail">Eskiz %1$d</string>
+    <string name="market_carousel_thumbnail">Eskiz %1$s</string>
     <string name="market_checkout_browser_unavailable">To\'lov sahifasini ochish uchun brauzer mavjud emas</string>
     <string name="market_checkout_pwyw_label">Sizning narxingiz (eng kami %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Miqdor kamida %1$s bo\'lishi kerak</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ta fayl biriktirilgan</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ta fayl biriktirilgan</string>
     <string name="market_dispute_dialog_evidence_section_title">Taqdim etilgan dalillar</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s tomonidan taqdim etilgan</string>
     <string name="market_editor_appeal">Moderatsiyaga e\'tiroz bildirish</string>
@@ -572,7 +572,7 @@
     <string name="market_messages_inbox_empty_title">Hozircha suhbatlar yo\'q</string>
     <string name="market_messages_load_failed">Suhbatni yuklab bo\'lmadi</string>
     <string name="market_messages_send_failed">Xabarni yuborib bo\'lmadi</string>
-    <string name="market_messages_unread_badge">%1$d o\'qilmagan</string>
+    <string name="market_messages_unread_badge">%1$s o\'qilmagan</string>
     <string name="market_price_high_bid">Eng yuqori taklif: %1$s</string>
     <string name="market_price_instant_buy">darhol xarid: %1$s</string>
     <string name="market_price_starting_bid">Boshlang\'ich taklif: %1$s</string>
@@ -580,11 +580,11 @@
     <string name="market_profile_member_since">A\'zo bo\'lgan sana: %1$s</string>
     <string name="market_profile_joined">%1$s da qoʻshildi</string>
     <string name="market_profile_rating_breakdown">Reyting taqsimoti</string>
-    <string name="market_profile_stars_value">%1$d yulduz</string>
+    <string name="market_profile_stars_value">%1$s yulduz</string>
     <string name="market_purchase_dispute_chargeback">To\'lov qaytarish %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankingiz bu buyurtma bo\'yicha to\'lovni qaytarish so\'rovini berdi. Stripe sotuvchi bilan nizoni hal qilmoqda; natija aniqlanganda shu yerda ko\'rinadi.</string>
     <string name="market_purchase_dispute_response">Sotuvchining javobi</string>
-    <string name="market_purchase_download_many">Quyida %1$d ta faylingizni yuklab oling.</string>
+    <string name="market_purchase_download_many">Quyida %1$s ta faylingizni yuklab oling.</string>
     <string name="market_purchase_download_one">Quyida faylingizni yuklab oling.</string>
     <string name="market_purchase_review_from">%1$s sharhi</string>
     <string name="market_purchases_auction_label">Auksion #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Bu auksionni bekor qiladi. Eʼlon xaridorlardan yashiriladi; uni keyinroq yangi qoralama sifatida qayta eʼlon qilishingiz mumkin.</string>
     <string name="market_listings_remove_title">Bu eʼlonni olib tashlasinmi?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Bu auksionni bekor qiladi va %1$d faol ishtirokchiga xabar beradi. Eʼlon xaridorlardan yashiriladi; keyinroq uni yangi qoralama sifatida qayta joylashtirishingiz mumkin.</item>
-        <item quantity="other">Bu auksionni bekor qiladi va %1$d faol ishtirokchiga xabar beradi. Eʼlon xaridorlardan yashiriladi; keyinroq uni yangi qoralama sifatida qayta joylashtirishingiz mumkin.</item>
+        <item quantity="one">Bu auksionni bekor qiladi va %1$s faol ishtirokchiga xabar beradi. Eʼlon xaridorlardan yashiriladi; keyinroq uni yangi qoralama sifatida qayta joylashtirishingiz mumkin.</item>
+        <item quantity="other">Bu auksionni bekor qiladi va %1$s faol ishtirokchiga xabar beradi. Eʼlon xaridorlardan yashiriladi; keyinroq uni yangi qoralama sifatida qayta joylashtirishingiz mumkin.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Bu joriy toʻlov davri oxirida %1$d faol obunani bekor qiladi. Obunachilarga xabar beriladi. Eʼlon xaridorlardan yashiriladi.</item>
-        <item quantity="other">Bu joriy toʻlov davri oxirida %1$d faol obunani bekor qiladi. Obunachilarga xabar beriladi. Eʼlon xaridorlardan yashiriladi.</item>
+        <item quantity="one">Bu joriy toʻlov davri oxirida %1$s faol obunani bekor qiladi. Obunachilarga xabar beriladi. Eʼlon xaridorlardan yashiriladi.</item>
+        <item quantity="other">Bu joriy toʻlov davri oxirida %1$s faol obunani bekor qiladi. Obunachilarga xabar beriladi. Eʼlon xaridorlardan yashiriladi.</item>
     </plurals>
 </resources>

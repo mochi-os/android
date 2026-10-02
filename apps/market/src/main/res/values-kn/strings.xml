@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ಮಾರುಕಟ್ಟೆ</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ಜೀವನಚರಿತ್ರೆ</string>
     <string name="market_account_biography_placeholder">ಖರೀದಿದಾರರಿಗೆ ನಿಮ್ಮ ಬಗ್ಗೆ ತಿಳಿಸಿ…</string>
     <string name="market_account_load_failed">ಖಾತೆಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಲಿಲ್ಲ</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">ಬಿಡ್ ಮೀರಿತು</string>
     <string name="market_bids_tab_won">ಗೆದ್ದಿತು</string>
     <string name="market_bids_title">ಬಿಡ್‌ಗಳು</string>
-    <string name="market_carousel_main">ಫೋಟೋ %1$d / %2$d</string>
+    <string name="market_carousel_main">ಫೋಟೋ %1$s / %2$s</string>
     <string name="market_channel_name">ಮಾರುಕಟ್ಟೆ</string>
     <string name="market_chargeback_reason_bank_cannot_process">ಬ್ಯಾಂಕ್ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="market_chargeback_reason_check_returned">ಚೆಕ್ ಹಿಂದಿರುಗಿಸಲಾಗಿದೆ</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">ನವೀಕರಿಸಿದ</string>
     <string name="market_editor_condition_used">ಬಳಸಿದ</string>
     <string name="market_editor_currency">ಕರೆನ್ಸಿ</string>
-    <string name="market_editor_days">%1$d ದಿನಗಳು</string>
+    <string name="market_editor_days">%1$s ದಿನಗಳು</string>
     <string name="market_editor_delete">ಪಟ್ಟಿ ಅಳಿಸಿ</string>
     <string name="market_editor_description">ವಿವರಣೆ</string>
     <string name="market_editor_interval_monthly">ಮಾಸಿಕ</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">ಖರೀದಿಗಳು</string>
     <string name="market_rating_label">ರೇಟಿಂಗ್</string>
     <string name="market_rating_no_reviews">ಇನ್ನೂ ಯಾವುದೇ ರಿವ್ಯೂಗಳಿಲ್ಲ</string>
-    <string name="market_rating_reviews">(%1$d ವಿಮರ್ಶೆ)</string>
+    <string name="market_rating_reviews">(%1$s ವಿಮರ್ಶೆ)</string>
     <string name="market_refund_amount_label">ಮೊತ್ತ</string>
     <string name="market_refund_body">ನಿಮ್ಮ ರಿಫಂಡ್ ರಿಕ್ವೆಸ್ಟ್‌ಗೆ ಕಾರಣವನ್ನು ಒದಗಿಸಿ.</string>
     <string name="market_refund_details_label">ವಿವರಗಳು</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">ಪ್ರಸ್ತುತ: %1$s</string>
     <string name="market_bids_ends_in">%1$s ನಲ್ಲಿ ಮುಗಿಯುತ್ತದೆ</string>
     <string name="market_bids_your_bid">ನಿಮ್ಮ ಬಿಡ್: %1$s</string>
-    <string name="market_carousel_thumbnail">ಥಂಬ್‌ನೈಲ್ %1$d</string>
+    <string name="market_carousel_thumbnail">ಥಂಬ್‌ನೈಲ್ %1$s</string>
     <string name="market_checkout_browser_unavailable">ಪಾವತಿ ಪುಟವನ್ನು ತೆರೆಯಲು ಯಾವುದೇ ಬ್ರೌಸರ್ ಲಭ್ಯವಿಲ್ಲ</string>
     <string name="market_checkout_pwyw_label">ನಿಮ್ಮ ಬೆಲೆ (ಕನಿಷ್ಠ %1$s)</string>
     <string name="market_checkout_pwyw_min_error">ಮೊತ್ತವು ಕನಿಷ್ಠ %1$s ಆಗಿರಬೇಕು</string>
-    <string name="market_dispute_dialog_attach_count">%1$d ಫೈಲ್(ಗಳು) ಲಗತ್ತಿಸಲಾಗಿದೆ</string>
+    <string name="market_dispute_dialog_attach_count">%1$s ಫೈಲ್(ಗಳು) ಲಗತ್ತಿಸಲಾಗಿದೆ</string>
     <string name="market_dispute_dialog_evidence_section_title">ಸಲ್ಲಿಸಲಾದ ಸಾಕ್ಷ್ಯ</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s ರಿಂದ ಸಲ್ಲಿಸಲಾಗಿದೆ</string>
     <string name="market_editor_appeal">ಮಾಡರೇಶನ್ ವಿರುದ್ಧ ಮನವಿ</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">ಪಟ್ಟಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
     <string name="market_listing_detail_relist_failed">ಮರು-ಪಟ್ಟಿ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="market_listing_detail_relist_in_progress">ಮರು-ಪಟ್ಟಿ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
-    <string name="market_listing_detail_sales_count">%1$d ಮಾರಾಟಗಳು</string>
+    <string name="market_listing_detail_sales_count">%1$s ಮಾರಾಟಗಳು</string>
     <string name="market_listing_detail_seller_banned_banner">ಈ ಮಾರಾಟಗಾರರನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ. ಹೊಸ ಆದೇಶಗಳನ್ನು ಇಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="market_listing_detail_seller_suspended_banner">ಈ ಮಾರಾಟಗಾರರನ್ನು ಅಮಾನತುಗೊಳಿಸಲಾಗಿದೆ. ಖಾತೆಯನ್ನು ಮರುಸ್ಥಾಪಿಸುವವರೆಗೆ ಹೊಸ ಆದೇಶಗಳನ್ನು ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">ಮಾರಾಟಗಾರರ ಖಾತೆಯನ್ನು ನಿರ್ಬಂಧಿಸಿರುವಾಗ ಖರೀದಿಸುವುದನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">ಇನ್ನೂ ಯಾವುದೇ ಸಂಭಾಷಣೆಗಳಿಲ್ಲ</string>
     <string name="market_messages_load_failed">ಸಂಭಾಷಣೆಯನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="market_messages_send_failed">ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
-    <string name="market_messages_unread_badge">%1$d ಓದದವು</string>
+    <string name="market_messages_unread_badge">%1$s ಓದದವು</string>
     <string name="market_price_high_bid">ಗರಿಷ್ಠ ಬಿಡ್: %1$s</string>
     <string name="market_price_instant_buy">ತಕ್ಷಣ ಖರೀದಿ: %1$s</string>
     <string name="market_price_starting_bid">ಪ್ರಾರಂಭಿಕ ಬಿಡ್: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">%1$s ರಿಂದ ಸದಸ್ಯ</string>
     <string name="market_profile_joined">%1$s ರಂದು ಸೇರಿದರು</string>
     <string name="market_profile_rating_breakdown">ರೇಟಿಂಗ್ ವಿವರಣೆ</string>
-    <string name="market_profile_sales_count">%1$d ಮಾರಾಟಗಳು</string>
-    <string name="market_profile_stars_value">%1$d ನಕ್ಷತ್ರಗಳು</string>
+    <string name="market_profile_sales_count">%1$s ಮಾರಾಟಗಳು</string>
+    <string name="market_profile_stars_value">%1$s ನಕ್ಷತ್ರಗಳು</string>
     <string name="market_purchase_dispute_chargeback">ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ನಿಮ್ಮ ಬ್ಯಾಂಕ್ ಈ ಆದೇಶದ ಮೇಲೆ ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ ಸಲ್ಲಿಸಿದೆ. Stripe ಮಾರಾಟಗಾರರೊಂದಿಗೆ ವಿವಾದವನ್ನು ನಿರ್ವಹಿಸುತ್ತಿದೆ; ನಿರ್ಧಾರವಾದಾಗ ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತದೆ.</string>
     <string name="market_purchase_dispute_response">ಮಾರಾಟಗಾರರ ಪ್ರತಿಕ್ರಿಯೆ</string>
-    <string name="market_purchase_download_many">ನಿಮ್ಮ %1$d ಫೈಲ್‌ಗಳನ್ನು ಕೆಳಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
+    <string name="market_purchase_download_many">ನಿಮ್ಮ %1$s ಫೈಲ್‌ಗಳನ್ನು ಕೆಳಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="market_purchase_download_one">ನಿಮ್ಮ ಫೈಲ್ ಅನ್ನು ಕೆಳಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="market_purchase_review_from">%1$s ರಿಂದ ವಿಮರ್ಶೆ</string>
     <string name="market_purchases_auction_label">ಹರಾಜು #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">ಇದು ಹರಾಜನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ; ನೀವು ಇದನ್ನು ನಂತರ ಹೊಸ ಡ್ರಾಫ್ಟ್‌ ಆಗಿ ಮರು-ಪಟ್ಟಿ ಮಾಡಬಹುದು.</string>
     <string name="market_listings_remove_title">ಈ ಪಟ್ಟಿ ತೆಗೆದುಹಾಕುವುದೇ?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">ಇದು ಹರಾಜನ್ನು ರದ್ದುಗೊಳಿಸಿ %1$d ಸಕ್ರಿಯ ಬಿಡ್‌ದಾರರಿಗೆ ತಿಳಿಸುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ; ನೀವು ಅದನ್ನು ನಂತರ ಹೊಸ ಕರಡಾಗಿ ಮರುಪಟ್ಟಿ ಮಾಡಬಹುದು.</item>
-        <item quantity="other">ಇದು ಹರಾಜನ್ನು ರದ್ದುಗೊಳಿಸಿ %1$d ಸಕ್ರಿಯ ಬಿಡ್‌ದಾರರಿಗೆ ತಿಳಿಸುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ; ನೀವು ಅದನ್ನು ನಂತರ ಹೊಸ ಕರಡಾಗಿ ಮರುಪಟ್ಟಿ ಮಾಡಬಹುದು.</item>
+        <item quantity="one">ಇದು ಹರಾಜನ್ನು ರದ್ದುಗೊಳಿಸಿ %1$s ಸಕ್ರಿಯ ಬಿಡ್‌ದಾರರಿಗೆ ತಿಳಿಸುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ; ನೀವು ಅದನ್ನು ನಂತರ ಹೊಸ ಕರಡಾಗಿ ಮರುಪಟ್ಟಿ ಮಾಡಬಹುದು.</item>
+        <item quantity="other">ಇದು ಹರಾಜನ್ನು ರದ್ದುಗೊಳಿಸಿ %1$s ಸಕ್ರಿಯ ಬಿಡ್‌ದಾರರಿಗೆ ತಿಳಿಸುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ; ನೀವು ಅದನ್ನು ನಂತರ ಹೊಸ ಕರಡಾಗಿ ಮರುಪಟ್ಟಿ ಮಾಡಬಹುದು.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">ಇದು ಪ್ರಸ್ತುತ ಬಿಲ್ಲಿಂಗ್ ಅವಧಿಯ ಕೊನೆಯಲ್ಲಿ %1$d ಸಕ್ರಿಯ ಚಂದಾದಾರಿಕೆಗಳನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಚಂದಾದಾರರಿಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ.</item>
-        <item quantity="other">ಇದು ಪ್ರಸ್ತುತ ಬಿಲ್ಲಿಂಗ್ ಅವಧಿಯ ಕೊನೆಯಲ್ಲಿ %1$d ಸಕ್ರಿಯ ಚಂದಾದಾರಿಕೆಗಳನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಚಂದಾದಾರರಿಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ.</item>
+        <item quantity="one">ಇದು ಪ್ರಸ್ತುತ ಬಿಲ್ಲಿಂಗ್ ಅವಧಿಯ ಕೊನೆಯಲ್ಲಿ %1$s ಸಕ್ರಿಯ ಚಂದಾದಾರಿಕೆಗಳನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಚಂದಾದಾರರಿಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ.</item>
+        <item quantity="other">ಇದು ಪ್ರಸ್ತುತ ಬಿಲ್ಲಿಂಗ್ ಅವಧಿಯ ಕೊನೆಯಲ್ಲಿ %1$s ಸಕ್ರಿಯ ಚಂದಾದಾರಿಕೆಗಳನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಚಂದಾದಾರರಿಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ.</item>
     </plurals>
 </resources>

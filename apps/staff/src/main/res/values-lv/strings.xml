@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Piezīmes</string>
     <string name="staff_accounts_reason_label">Iemesls</string>
     <string name="staff_accounts_reason_optional_label">Iemesls (nav obligāts)</string>
-    <string name="staff_accounts_sales">%1$d pārdošanas</string>
+    <string name="staff_accounts_sales">%1$s pārdošanas</string>
     <string name="staff_accounts_search_clear">Notīrīt meklēšanu</string>
     <string name="staff_accounts_search_placeholder">Meklēt</string>
     <string name="staff_accounts_seller_buyers">Tikai pircēji</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Bez nosaukuma</string>
     <string name="staff_accounts_unsuspend">Atjaunot</string>
     <string name="staff_accounts_unsuspended_toast">Konta darbība atjaunota</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Atcelt</string>
     <string name="staff_appeals_decide">Izlemt</string>
     <string name="staff_appeals_decision_denied">Saglabāt sludinājumu noraidītu</string>

@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">मेटाईं</string>
     <string name="go_delete_message">ई खेल तोहार सूची से हटा दिहल जाई। एकरा वापस ना कइल जा सके।</string>
     <string name="go_delete_title">खेल मेटाईं?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">स्वीकार करीं</string>
     <string name="go_draw_decline">अस्वीकार करीं</string>
     <string name="go_draw_offered_received">%1$s ड्रॉ के प्रस्ताव दिहले</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">हार मान लिहलें</string>
     <string name="go_new_game_title">नया Go खेल</string>
     <string name="go_new_game_no_friends">खेल शुरू करे से पहिले रउआ के एगो दोस्त जोड़े के पड़ी।</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">करिया पहिले चले के भरपाई खातिर उज्जर के स्कोर में जोड़ल अंक</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go बोर्ड</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d गो बोर्ड, करिया गोटी रखे के बारी रउआ के बा</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d गो बोर्ड, उजरा गोटी रखे के बारी रउआ के बा</string>
+    <string name="go_board_a11y">%1$s×%1$s Go बोर्ड</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s गो बोर्ड, करिया गोटी रखे के बारी रउआ के बा</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s गो बोर्ड, उजरा गोटी रखे के बारी रउआ के बा</string>
     <string name="go_status_scoring">गिनती — स्कोर पर सहमत होईं भा खेलल जारी राखीं</string>
     <string name="go_score_proposed">प्रस्तावित स्कोर: करिया %1$s, सफेद %2$s</string>
     <string name="go_score_opponent_accepted">रउआ के विरोधी ई स्कोर मानत बाड़न: करिया %1$s, सफेद %2$s</string>

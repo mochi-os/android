@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Δεν υπάρχουν αντικείμενα</string>
     <string name="crm_board_no_columns">Δεν έχουν διαμορφωθεί στήλες για αυτή την προβολή</string>
     <string name="crm_board_no_options">Δεν έχουν διαμορφωθεί επιλογές για το πεδίο στήλης</string>
-    <string name="crm_board_nested_count">+%1$d ένθετα</string>
+    <string name="crm_board_nested_count">+%1$s ένθετα</string>
     <string name="crm_move_to_column">Μετακίνηση σε στήλη</string>
     <string name="crm_move_to_row">Μετακίνηση σε γραμμή</string>
     <string name="crm_move_after">Μετά από %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Τα δεδομένα CRM αποθηκεύτηκαν</string>
     <string name="crm_create_upload_json">Ανεβάστε αρχείο .zip ή .json</string>
     <string name="crm_create_blocked_no_options">Δεν είναι δυνατή η δημιουργία: το %1$s απαιτείται αλλά δεν έχει επιλογές. Προσθέστε επιλογές στη Σχεδίαση.</string>
-    <string name="crm_design_sample">Δείγμα %1$d</string>
+    <string name="crm_design_sample">Δείγμα %1$s</string>
     <string name="crm_option_delete_title">Διαγραφή επιλογής</string>
     <string name="crm_option_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε την επιλογή \"%1$s\";</string>
 </resources>

@@ -19,7 +19,7 @@
     <string name="staff_accounts_notes_label">Notes</string>
     <string name="staff_accounts_reason_label">Reason</string>
     <string name="staff_accounts_reason_optional_label">Reason (optional)</string>
-    <string name="staff_accounts_sales">%1$d sales</string>
+    <string name="staff_accounts_sales">%1$s sales</string>
     <string name="staff_accounts_search_clear">Clear search</string>
     <string name="staff_accounts_search_placeholder">Search</string>
     <string name="staff_accounts_seller_buyers">Buyers only</string>
@@ -36,7 +36,7 @@
     <string name="staff_accounts_unnamed">Unnamed</string>
     <string name="staff_accounts_unsuspend">Unsuspend</string>
     <string name="staff_accounts_unsuspended_toast">Account unsuspended</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Cancel</string>
     <string name="staff_appeals_decide">Decide</string>
     <string name="staff_appeals_decision_denied">Keep listing rejected</string>

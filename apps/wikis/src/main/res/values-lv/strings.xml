@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Paziņojumi par lapu rediģēšanu, komentāriem un ielūgumiem.</string>
     <string name="wikis_pageview_toc_expand">Rādīt satura rādītāju</string>
     <string name="wikis_pageview_toc_collapse">Slēpt satura rādītāju</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Atjaunināts %1$s</string>
     <string name="wikis_pageview_not_found_description">Lapa „%1$s\" vēl neeksistē.</string>
     <string name="wikis_pageview_share_chooser">Wiki saite</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Jūs gatavojaties dzēst lapu „%1$s\" (%2$s). Šo darbību var atsaukt, atjaunojot no vēstures.</string>
     <string name="wikis_delete_page_success">Lapa dzēsta</string>
     <string name="wikis_revert_page_title">Atsaukt lapu</string>
-    <string name="wikis_revert_page_message">Jūs gatavojaties atjaunot %1$s uz versiju %2$d. Tas izveidos jaunu redakciju ar versijas %2$d saturu.</string>
-    <string name="wikis_revert_page_default_comment">Atjaunots uz versiju %1$d</string>
-    <string name="wikis_revert_page_success">Atjaunots uz versiju %1$d</string>
+    <string name="wikis_revert_page_message">Jūs gatavojaties atjaunot %1$s uz versiju %2$s. Tas izveidos jaunu redakciju ar versijas %2$s saturu.</string>
+    <string name="wikis_revert_page_default_comment">Atjaunots uz versiju %1$s</string>
+    <string name="wikis_revert_page_success">Atjaunots uz versiju %1$s</string>
     <string name="wikis_rename_page_renaming">Pārdēvē…</string>
     <string name="wikis_rename_page_success">Lapa pārdēvēta</string>
-    <string name="wikis_history_viewing">Skata %1$s vēsturi, pašreizējā versija %2$d</string>
-    <string name="wikis_revision_version_badge">Versija %1$d</string>
+    <string name="wikis_history_viewing">Skata %1$s vēsturi, pašreizējā versija %2$s</string>
+    <string name="wikis_revision_version_badge">Versija %1$s</string>
     <string name="wikis_search_pages_placeholder">Meklēt lapas pēc nosaukuma vai satura…</string>
     <string name="wikis_search_no_results">Nav atrastas lapas „%1$s\". Pamēģiniet citus meklēšanas vārdus.</string>
     <string name="wikis_search_updated">Atjaunināts %1$s</string>
@@ -289,46 +289,46 @@
     <string name="wikis_revision_author">pēc %1$s</string>
     <string name="wikis_revision_show_page">Rādīt lapu</string>
     <string name="wikis_revision_compare_failed">Neizdevās ielādēt iepriekšējo versiju salīdzināšanai.</string>
-    <string name="wikis_revision_changes_from">Izmaiņas no versijas %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Izmaiņas no versijas %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="zero">%d komentāru</item>
-        <item quantity="one">%d komentārs</item>
-        <item quantity="other">%d komentāri</item>
+        <item quantity="zero">%s komentāru</item>
+        <item quantity="one">%s komentārs</item>
+        <item quantity="other">%s komentāri</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="zero">%d atbilžu</item>
-        <item quantity="one">%d atbilde</item>
-        <item quantity="other">+%d vēl atbildes</item>
+        <item quantity="zero">%s atbilžu</item>
+        <item quantity="one">%s atbilde</item>
+        <item quantity="other">+%s vēl atbildes</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="zero">%d lapu</item>
-        <item quantity="one">%d lapa</item>
-        <item quantity="other">%d lapas</item>
+        <item quantity="zero">%s lapu</item>
+        <item quantity="one">%s lapa</item>
+        <item quantity="other">%s lapas</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="zero">%d failu</item>
-        <item quantity="one">%d fails</item>
-        <item quantity="other">%d faili</item>
+        <item quantity="zero">%s failu</item>
+        <item quantity="one">%s fails</item>
+        <item quantity="other">%s faili</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="zero">%d attēlu</item>
-        <item quantity="one">%d attēls</item>
-        <item quantity="other">%d attēli</item>
+        <item quantity="zero">%s attēlu</item>
+        <item quantity="one">%s attēls</item>
+        <item quantity="other">%s attēli</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="zero">%d dokumentu</item>
-        <item quantity="one">%d dokuments</item>
-        <item quantity="other">%d dokumenti</item>
+        <item quantity="zero">%s dokumentu</item>
+        <item quantity="one">%s dokuments</item>
+        <item quantity="other">%s dokumenti</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="zero">%d lapu ar šo tagu</item>
-        <item quantity="one">%d lapa ar šo tagu</item>
-        <item quantity="other">%d lapas ar šo tagu</item>
+        <item quantity="zero">%s lapu ar šo tagu</item>
+        <item quantity="one">%s lapa ar šo tagu</item>
+        <item quantity="other">%s lapas ar šo tagu</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="zero">Atrasti %1$d rezultātu priekš \"%2$s\"</item>
-        <item quantity="one">Atrasti %1$d rezultāts priekš \"%2$s\"</item>
-        <item quantity="other">Atrasti %1$d rezultāti priekš \"%2$s\"</item>
+        <item quantity="zero">Atrasti %1$s rezultātu priekš \"%2$s\"</item>
+        <item quantity="one">Atrasti %1$s rezultāts priekš \"%2$s\"</item>
+        <item quantity="other">Atrasti %1$s rezultāti priekš \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Neizdevās saglabāt parakstu</string>
     <string name="wikis_attachments_upload_types">Atbalstītie faili: attēli, PDF, DOC, DOCX, TXT un MD.</string>
@@ -337,8 +337,8 @@
     <string name="wikis_rss_copied_new">Jaunais RSS URL nokopēts starpliktuvē</string>
     <string name="wikis_rss_exists">Šis plūsmas URL jau ir izsniegts, un to nevar parādīt vēlreiz.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="zero">Tiek rādīti pirmie %1$d komentāri.</item>
-        <item quantity="one">Tiek rādīts pirmais %1$d komentārs.</item>
-        <item quantity="other">Tiek rādīti pirmie %1$d komentāri.</item>
+        <item quantity="zero">Tiek rādīti pirmie %1$s komentāri.</item>
+        <item quantity="one">Tiek rādīts pirmais %1$s komentārs.</item>
+        <item quantity="other">Tiek rādīti pirmie %1$s komentāri.</item>
     </plurals>
 </resources>

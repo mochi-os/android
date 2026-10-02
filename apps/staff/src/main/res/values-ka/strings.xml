@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">შენიშვნები</string>
     <string name="staff_accounts_reason_label">მიზეზი</string>
     <string name="staff_accounts_reason_optional_label">მიზეზი (არასავალდებულო)</string>
-    <string name="staff_accounts_sales">%1$d გაყიდვა</string>
+    <string name="staff_accounts_sales">%1$s გაყიდვა</string>
     <string name="staff_accounts_search_clear">ძიების გასუფთავება</string>
     <string name="staff_accounts_search_placeholder">ძიება</string>
     <string name="staff_accounts_seller_buyers">მხოლოდ მყიდველები</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">უსახელო</string>
     <string name="staff_accounts_unsuspend">შეჩერების მოხსნა</string>
     <string name="staff_accounts_unsuspended_toast">ანგარიში აღდგენილია</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">გაუქმება</string>
     <string name="staff_appeals_decide">გადაწყვეტა</string>
     <string name="staff_appeals_decision_denied">ჩამონათვალის უარყოფის შენარჩუნება</string>

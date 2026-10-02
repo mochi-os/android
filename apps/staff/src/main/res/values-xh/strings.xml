@@ -33,7 +33,7 @@
     <string name="staff_accounts_unnamed">Engenagama</string>
     <string name="staff_accounts_unsuspend">Susa ukumiswa</string>
     <string name="staff_accounts_unsuspended_toast">I-akhawunti ibuyiselwe</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Rhoxisa</string>
     <string name="staff_appeals_decide">Gqiba</string>
     <string name="staff_appeals_decision_denied">Gcina uluhlu lwaliwe</string>
@@ -399,7 +399,7 @@
 
     <string name="staff_accounts_action_unsuspend_title">Susa ukunqunyanyiswa</string>
     <string name="staff_accounts_reason_optional_label">Isizathu (asinyanzelekanga)</string>
-    <string name="staff_accounts_sales">%1$d kwentengiso</string>
+    <string name="staff_accounts_sales">%1$s kwentengiso</string>
     <string name="staff_appeals_reason_label">Isizathu sesibheno somthengisi</string>
     <string name="staff_audit_action_staff_team_role_changed">Indima yabasebenzi itshintshiwe</string>
     <string name="staff_categories_delete_desc">Cima “%1$s”? Oku akunakubuyiselwa.</string>

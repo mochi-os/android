@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Gabaa</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Seenaa jireenyaa</string>
     <string name="market_account_biography_placeholder">Bittootaaf waa\'ee kee himi…</string>
     <string name="market_account_load_failed">Akkaawuntiin fe\'amuu hin dandeenye</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">Caalbaasiin caalame</string>
     <string name="market_bids_tab_won">Mo\'ate</string>
     <string name="market_bids_title">Iyyannoolee</string>
-    <string name="market_carousel_main">Suuraa %1$d / %2$d</string>
+    <string name="market_carousel_main">Suuraa %1$s / %2$s</string>
     <string name="market_channel_name">Gabaa</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bankiin gurmuu fayyadamuu hin dandeenye</string>
     <string name="market_chargeback_reason_check_returned">Cheekkin deebi\'e</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">Haaromfame</string>
     <string name="market_editor_condition_used">Fayyadame</string>
     <string name="market_editor_currency">Maallaqa</string>
-    <string name="market_editor_days">%1$d guyyaa</string>
+    <string name="market_editor_days">%1$s guyyaa</string>
     <string name="market_editor_delete">Tarree haqi</string>
     <string name="market_editor_description">Ibsa</string>
     <string name="market_editor_interval_monthly">Ji\'aan</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">Bittaa</string>
     <string name="market_rating_label">Sadarkeessuu</string>
     <string name="market_rating_no_reviews">Hanga ammaatti gamaaggamni hin jiru</string>
-    <string name="market_rating_reviews">(%1$d yaadannoo)</string>
+    <string name="market_rating_reviews">(%1$s yaadannoo)</string>
     <string name="market_refund_amount_label">Hammama</string>
     <string name="market_refund_body">Iyyannoo deebii kaffaltii keetiif sababa kenni.</string>
     <string name="market_refund_details_label">Bal\'inaan</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">Ammaa: %1$s</string>
     <string name="market_bids_ends_in">Keessatti dhuma %1$s</string>
     <string name="market_bids_your_bid">Caalbaasii kee: %1$s</string>
-    <string name="market_carousel_thumbnail">Suuraa xiqqaa %1$d</string>
+    <string name="market_carousel_thumbnail">Suuraa xiqqaa %1$s</string>
     <string name="market_checkout_browser_unavailable">Fuula kaffaltii banuuf brawuzariin hin jiru</string>
     <string name="market_checkout_pwyw_label">Gatii kee (xiqqaatti %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Hamminni xiqqaatti %1$s ta\'uu qaba</string>
-    <string name="market_dispute_dialog_attach_count">Faayiloota %1$d maxxanfameera</string>
+    <string name="market_dispute_dialog_attach_count">Faayiloota %1$s maxxanfameera</string>
     <string name="market_dispute_dialog_evidence_section_title">Ragaa dhiyaate</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s\'n dhiyaate</string>
     <string name="market_editor_appeal">Murtii irratti iyyadhu</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">Tarreeffama fe\'aa jira</string>
     <string name="market_listing_detail_relist_failed">Deebisanii tarreessuu hin dandeenye</string>
     <string name="market_listing_detail_relist_in_progress">Deebisanii tarreessaa jira</string>
-    <string name="market_listing_detail_sales_count">Gurgurtaa %1$d</string>
+    <string name="market_listing_detail_sales_count">Gurgurtaa %1$s</string>
     <string name="market_listing_detail_seller_banned_banner">Gurgurtaan kun dhorkameera. Ajajawwan haaraa kennuun hin danda\'amu.</string>
     <string name="market_listing_detail_seller_suspended_banner">Gurgurtaan kun yeroof dhorkameera. Hanga herregni isaa deebi\'ee banamutti ajajawwan haaraa dhaabbataniiru.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Herregni gurgurtaa daangeffamuun bituun hin danda\'amu.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">Hanga ammaatti mariin hin jiru</string>
     <string name="market_messages_load_failed">Marii fe\'uun hin danda\'amne</string>
     <string name="market_messages_send_failed">Ergaa erguun hin danda\'amne</string>
-    <string name="market_messages_unread_badge">%1$d hin dubbifamne</string>
+    <string name="market_messages_unread_badge">%1$s hin dubbifamne</string>
     <string name="market_price_high_bid">Caalbaasii ol\'aanaa: %1$s</string>
     <string name="market_price_instant_buy">bittaa yeroo hatattamaa: %1$s</string>
     <string name="market_price_starting_bid">Caalbaasii jalqabaa: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">Miseensa kan ta\'e %1$s irraa eegalee</string>
     <string name="market_profile_joined">Kan makame %1$s</string>
     <string name="market_profile_rating_breakdown">Bal\'ina madaallii</string>
-    <string name="market_profile_sales_count">Gurgurtaa %1$d</string>
-    <string name="market_profile_stars_value">Urjii %1$d</string>
+    <string name="market_profile_sales_count">Gurgurtaa %1$s</string>
+    <string name="market_profile_stars_value">Urjii %1$s</string>
     <string name="market_purchase_dispute_chargeback">Chaargii deebi\'e %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Baankiin kee ajaja kana irratti chaargii deebi\'e galmeesseera. Stripe falmii kana gurgurtaa waliin qabateera; bu\'aan isaa yeroo murtaa\'u asitti mul\'ata.</string>
     <string name="market_purchase_dispute_response">Deebii gurgurtaa</string>
-    <string name="market_purchase_download_many">Faayiloota kee %1$d gadi buusi.</string>
+    <string name="market_purchase_download_many">Faayiloota kee %1$s gadi buusi.</string>
     <string name="market_purchase_download_one">Faayilii kee gadi buusi.</string>
     <string name="market_purchase_review_from">Madaallii %1$s irraa</string>
     <string name="market_purchases_auction_label">Caalbaasii #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Kun caalbaasii dhaabsisa. Tarreeffamni bittootarraa dhokfama; ati boodaa irra deebitee akka qabxii haaraatti tarreessuu dandeessa.</string>
     <string name="market_listings_remove_title">Tarreeffama kana haquuf?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Kun caalbaasii haqee caalbaasistoota sochii qaban %1$d beeksisa. Tarreeffamni bitattoota irraa dhokfama; booda akka wixinee haaraatti deebistee tarreessuu dandeessa.</item>
-        <item quantity="other">Kun caalbaasii haqee caalbaasistoota sochii qaban %1$d beeksisa. Tarreeffamni bitattoota irraa dhokfama; booda akka wixinee haaraatti deebistee tarreessuu dandeessa.</item>
+        <item quantity="one">Kun caalbaasii haqee caalbaasistoota sochii qaban %1$s beeksisa. Tarreeffamni bitattoota irraa dhokfama; booda akka wixinee haaraatti deebistee tarreessuu dandeessa.</item>
+        <item quantity="other">Kun caalbaasii haqee caalbaasistoota sochii qaban %1$s beeksisa. Tarreeffamni bitattoota irraa dhokfama; booda akka wixinee haaraatti deebistee tarreessuu dandeessa.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Kun galmee sochii qaban %1$d dhuma yeroo kaffaltii ammaa irratti haqa. Galmaaʼonni ni beeksifamu. Tarreeffamni bitattoota irraa dhokfama.</item>
-        <item quantity="other">Kun galmee sochii qaban %1$d dhuma yeroo kaffaltii ammaa irratti haqa. Galmaaʼonni ni beeksifamu. Tarreeffamni bitattoota irraa dhokfama.</item>
+        <item quantity="one">Kun galmee sochii qaban %1$s dhuma yeroo kaffaltii ammaa irratti haqa. Galmaaʼonni ni beeksifamu. Tarreeffamni bitattoota irraa dhokfama.</item>
+        <item quantity="other">Kun galmee sochii qaban %1$s dhuma yeroo kaffaltii ammaa irratti haqa. Galmaaʼonni ni beeksifamu. Tarreeffamni bitattoota irraa dhokfama.</item>
     </plurals>
 </resources>

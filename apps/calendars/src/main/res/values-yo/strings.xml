@@ -99,13 +99,13 @@
     <string name="calendars_repeat_forever">Títí láé</string>
     <string name="calendars_reminder_time">Ní àkókò náà</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">ìṣẹ́jú %1$d ṣáájú</item>
+        <item quantity="other">ìṣẹ́jú %1$s ṣáájú</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">wákàtí %1$d ṣáájú</item>
+        <item quantity="other">wákàtí %1$s ṣáájú</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">ọjọ́ %1$d ṣáájú</item>
+        <item quantity="other">ọjọ́ %1$s ṣáájú</item>
     </plurals>
     <string name="calendars_reminder_add">Fi ìránnilétí kún</string>
     <string name="calendars_reminder_remove">Yọ ìránnilétí kúrò</string>
@@ -139,9 +139,9 @@
     <string name="calendars_poll_large">Kàlẹ́ńdà náà tóbi jù</string>
     <string name="calendars_poll_invalid">Àdírẹ́sì náà kò dá kàlẹ́ńdà padà</string>
     <string name="calendars_poll_unreachable">Kò lè dé sí àdírẹ́sì náà</string>
-    <string name="calendars_poll_status">Àdírẹ́sì náà dáhùn %1$d</string>
+    <string name="calendars_poll_status">Àdírẹ́sì náà dáhùn %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="other">Ìṣẹ́jú %1$d</item>
+        <item quantity="other">Ìṣẹ́jú %1$s</item>
     </plurals>
     <string name="calendars_preferences_zones">Fi àwọn ìṣẹ̀lẹ̀ hàn ní agbègbè àkókò tiwọn</string>
     <string name="calendars_event_backwards">Ó parí kí ó tó bẹ̀rẹ̀</string>

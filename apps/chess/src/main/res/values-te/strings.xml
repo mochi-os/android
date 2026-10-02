@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">మళ్లీ కనెక్ట్ అవుతోంది…</string>
     <string name="chess_ws_failed">కనెక్షన్ విఫలమైంది</string>
     <string name="chess_move_capture">%1$s %2$s తీసుకున్నారు</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">తెలుపు %1$s</string>
     <string name="chess_piece_black">నలుపు %1$s</string>

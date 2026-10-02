@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Obyektlar yo\'q</string>
     <string name="crm_board_no_columns">Bu ko\'rinish uchun ustunlar sozlanmagan</string>
     <string name="crm_board_no_options">Ustun maydoni uchun variantlar sozlanmagan</string>
-    <string name="crm_board_nested_count">+%1$d ichki</string>
+    <string name="crm_board_nested_count">+%1$s ichki</string>
     <string name="crm_move_to_column">Ustunga ko\'chirish</string>
     <string name="crm_move_to_row">Qatorga ko\'chirish</string>
     <string name="crm_move_after">%1$s dan keyin</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM ma\'lumotlari saqlandi</string>
     <string name="crm_create_upload_json">.zip yoki .json fayl yuklang</string>
     <string name="crm_create_blocked_no_options">Yaratib bo\'lmaydi: %1$s talab qilinadi, lekin tanlash uchun variantlari yo\'q. Dizaynda variantlar qo\'shing.</string>
-    <string name="crm_design_sample">Namuna %1$d</string>
+    <string name="crm_design_sample">Namuna %1$s</string>
     <string name="crm_option_delete_title">Variantni oʻchirish</string>
     <string name="crm_option_delete_message">\"%1$s\" variantini oʻchirishga ishonchingiz komilmi?</string>
 </resources>

@@ -65,6 +65,7 @@ import org.mochios.android.ui.components.PlacePicker
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.navigation.MarketApp
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * Seller account settings; mirrors web's `features/account/AccountSettings`.
@@ -351,7 +352,7 @@ private fun ProfileCard(
 }
 
 @Composable
-private fun BiographyField(
+internal fun BiographyField(
     value: String,
     onChange: (String) -> Unit,
 ) {
@@ -376,8 +377,8 @@ private fun BiographyField(
         Text(
             text = stringResource(
                 R.string.market_account_biography_counter,
-                value.length,
-                AccountSettingsViewModel.BIOGRAPHY_LIMIT,
+                LocalFormat.current.formatNumber(value.length),
+                LocalFormat.current.formatNumber(AccountSettingsViewModel.BIOGRAPHY_LIMIT),
             ),
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,

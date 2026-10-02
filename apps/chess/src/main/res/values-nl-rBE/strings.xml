@@ -55,7 +55,7 @@
     <string name="chess_piece_pawn">Pion</string>
     <string name="chess_move_played">%1$s speelde %2$s</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">Witte %1$s</string>
     <string name="chess_piece_black">Zwarte %1$s</string>

@@ -138,7 +138,7 @@
     <string name="market_filter_type_digital">Digital</string>
     <string name="market_filter_type_physical">Physisch</string>
     <string name="market_listing_detail_already_reported">Gemeldet</string>
-    <string name="market_listing_detail_sales_count">%1$d Verkäufe</string>
+    <string name="market_listing_detail_sales_count">%1$s Verkäufe</string>
     <string name="market_listing_detail_tags_heading">Tags</string>
     <string name="market_listing_detail_verified">Verifiziert</string>
     <string name="market_listings_filter_expired">Abgelaufen</string>
@@ -146,7 +146,7 @@
     <string name="market_listings_filter_sold">Verkauft</string>
     <string name="market_messages_inbox_title">Nachrichten</string>
     <string name="market_profile_reviews_section">Bewertungen</string>
-    <string name="market_profile_sales_count">%1$d Verkäufe</string>
+    <string name="market_profile_sales_count">%1$s Verkäufe</string>
     <string name="market_profile_status_banned">Gesperrt</string>
     <string name="market_profile_status_suspended">Gesperrt</string>
     <string name="market_profile_verified">Verifiziert</string>
@@ -205,7 +205,7 @@
     <string name="market_condition_refurbished">Generalüberholt</string>
     <string name="market_condition_used">Gebraucht</string>
     <string name="market_dispute_dialog_attach">Nachweis anhängen</string>
-    <string name="market_dispute_dialog_attach_count">%1$d Datei(en) angehängt</string>
+    <string name="market_dispute_dialog_attach_count">%1$s Datei(en) angehängt</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi-Personal</string>
     <string name="market_dispute_dialog_evidence_section_title">Eingereichte Nachweise</string>
     <string name="market_dispute_dialog_evidence_submitter_line">eingereicht von %1$s</string>
@@ -229,7 +229,7 @@
     <string name="market_editor_condition_refurbished">Generalüberholt</string>
     <string name="market_editor_condition_used">Gebraucht</string>
     <string name="market_editor_currency">Währung</string>
-    <string name="market_editor_days">%1$d Tage</string>
+    <string name="market_editor_days">%1$s Tage</string>
     <string name="market_editor_delete">Inserat löschen</string>
     <string name="market_editor_delete_confirm_message">Dadurch wird das Inserat dauerhaft gelöscht.</string>
     <string name="market_editor_delete_confirm_title">Inserat löschen?</string>
@@ -370,7 +370,7 @@
     <string name="market_messages_load_failed">Unterhaltung konnte nicht geladen werden</string>
     <string name="market_messages_send_failed">Nachricht konnte nicht gesendet werden</string>
     <string name="market_messages_thread_title">Unterhaltung</string>
-    <string name="market_messages_unread_badge">%1$d ungelesen</string>
+    <string name="market_messages_unread_badge">%1$s ungelesen</string>
     <string name="market_open_sidebar">Menü öffnen</string>
     <string name="market_price_high_bid">Höchstgebot: %1$s</string>
     <string name="market_price_instant_buy">Sofortkauf: %1$s</string>
@@ -383,7 +383,7 @@
     <string name="market_profile_joined">Beigetreten %1$s</string>
     <string name="market_profile_no_reviews">Noch keine Bewertungen.</string>
     <string name="market_profile_rating_breakdown">Bewertungsübersicht</string>
-    <string name="market_profile_stars_value">%1$d Sterne</string>
+    <string name="market_profile_stars_value">%1$s Sterne</string>
     <string name="market_purchase_confirm_delivery">Erhalt bestätigen</string>
     <string name="market_purchase_confirm_done">Erhalt bestätigt</string>
     <string name="market_purchase_confirm_failed">Bestätigung fehlgeschlagen</string>
@@ -394,7 +394,7 @@
     <string name="market_purchase_dispute_resolution">Entscheid des Personals</string>
     <string name="market_purchase_dispute_title">Rückerstattungsantrag</string>
     <string name="market_purchase_download_failed">Herunterladen fehlgeschlagen</string>
-    <string name="market_purchase_download_many">Laden Sie unten Ihre %1$d Dateien herunter.</string>
+    <string name="market_purchase_download_many">Laden Sie unten Ihre %1$s Dateien herunter.</string>
     <string name="market_purchase_download_one">Laden Sie unten Ihre Datei herunter.</string>
     <string name="market_purchase_download_section">Ihr Kauf ist bereit</string>
     <string name="market_purchase_item">Artikel</string>
@@ -420,7 +420,7 @@
     <string name="market_purchases_title">Käufe</string>
     <string name="market_purchases_won_for">Ersteigert für %1$s</string>
     <string name="market_rating_no_reviews">Noch keine Bewertungen</string>
-    <string name="market_rating_reviews">(%1$d Bewertungen)</string>
+    <string name="market_rating_reviews">(%1$s Bewertungen)</string>
     <string name="market_refund_amount_label">Betrag</string>
     <string name="market_refund_body">Bitte geben Sie einen Grund für Ihren Rückerstattungsantrag an.</string>
     <string name="market_refund_dialog_amount_help">Leer lassen, um die gesamte Bestellung zurückzuerstatten.</string>
@@ -553,7 +553,7 @@
     <string name="market_warnings_title">Warnungen</string>
 
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografie</string>
     <string name="market_account_biography_placeholder">Erzähle Käufern von dir…</string>
     <string name="market_account_load_failed">Konto konnte nicht geladen werden</string>
@@ -591,8 +591,8 @@
     <string name="market_bids_tab_won">Gewonnen</string>
     <string name="market_bids_title">Gebote</string>
     <string name="market_bids_your_bid">Ihr Gebot: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d von %2$d</string>
-    <string name="market_carousel_thumbnail">Vorschaubild %1$d</string>
+    <string name="market_carousel_main">Foto %1$s von %2$s</string>
+    <string name="market_carousel_thumbnail">Vorschaubild %1$s</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank konnte nicht verarbeiten</string>
     <string name="market_chargeback_reason_check_returned">Scheck zurückgewiesen</string>
     <string name="market_chargeback_reason_credit_not_processed">Gutschrift nicht verarbeitet</string>

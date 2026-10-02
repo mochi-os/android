@@ -180,8 +180,8 @@
     <string name="people_books_create">Direccionanak libro luraña</string>
     <string name="people_books_delete">Direccionanak libro chhaqtayaña</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">¿%1$s ukat %2$d contactopa chhaqtayañati?</item>
-        <item quantity="other">¿%1$s ukat %2$d contactonakapa chhaqtayañati?</item>
+        <item quantity="one">¿%1$s ukat %2$s contactopa chhaqtayañati?</item>
+        <item quantity="other">¿%1$s ukat %2$s contactonakapa chhaqtayañati?</item>
     </plurals>
     <string name="people_welcome_body">Mochin masinak thaqham ukat chikacht\'asim. Mä jawsäwi apayañatakix Contacto yapxataña limt\'am.</string>
     <string name="people_person_state_contact">Contactonakankiwa</string>

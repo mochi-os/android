@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">S tem se bo ustavil uvoz vsebine iz \"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">Izbriši tudi objave, uvožene iz tega vira</string>
     <string name="feeds_suggested_credibility_title">Predlagana verodostojnost</string>
-    <string name="feeds_suggested_credibility_body">Mochi predlaga verodostojnost %1$d. Sprejmete?</string>
+    <string name="feeds_suggested_credibility_body">Mochi predlaga verodostojnost %1$s. Sprejmete?</string>
     <string name="feeds_suggested_credibility_keep">Obdrži trenutno</string>
     <string name="feeds_ai_processing_mode">Način obdelave UI</string>
     <string name="feeds_ai_account">Račun UI</string>
@@ -140,10 +140,10 @@
     <string name="feeds_saved_empty_subtitle">Tapnite zaznamek pri kateri koli objavi, da jo shranite sem za pozneje.</string>
     <string name="feeds_saved_error_clear">Shranjenih objav ni bilo mogoče počistiti</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d nova objava</item>
-        <item quantity="two">%d novi objavi</item>
-        <item quantity="few">%d nove objave</item>
-        <item quantity="other">%d novih objav</item>
+        <item quantity="one">%s nova objava</item>
+        <item quantity="two">%s novi objavi</item>
+        <item quantity="few">%s nove objave</item>
+        <item quantity="other">%s novih objav</item>
     </plurals>
     <string name="feeds_caught_up">Vse ste si ogledali</string>
     <string name="feeds_all_caught_up">Vse prebrano</string>
@@ -194,16 +194,16 @@
     <string name="feeds_source_url_hint_feed">ID entitete ali prstni odtis kanala</string>
     <string name="feeds_source_credibility_label">Verodostojnost</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d ura</item>
-        <item quantity="two">%1$d uri</item>
-        <item quantity="few">%1$d ure</item>
-        <item quantity="other">%1$d ur</item>
+        <item quantity="one">%1$s ura</item>
+        <item quantity="two">%1$s uri</item>
+        <item quantity="few">%1$s ure</item>
+        <item quantity="other">%1$s ur</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="two">%1$d minuti</item>
-        <item quantity="few">%1$d minute</item>
-        <item quantity="other">%1$d minut</item>
+        <item quantity="one">%1$s minuta</item>
+        <item quantity="two">%1$s minuti</item>
+        <item quantity="few">%1$s minute</item>
+        <item quantity="other">%1$s minut</item>
     </plurals>
     <string name="feeds_source_polling_interval">Preverjanje vsakih %1$s</string>
     <string name="feeds_access_level_react_full">React in pogled</string>
@@ -220,28 +220,28 @@
     <string name="feeds_link">Povezava</string>
     <string name="feeds_share_link_title">Povezava kanala</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d komentar</item>
-        <item quantity="two">%1$d komentarja</item>
-        <item quantity="few">%1$d komentarji</item>
-        <item quantity="other">%1$d komentarjev</item>
+        <item quantity="one">%1$s komentar</item>
+        <item quantity="two">%1$s komentarja</item>
+        <item quantity="few">%1$s komentarji</item>
+        <item quantity="other">%1$s komentarjev</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d priponka</item>
-        <item quantity="two">%1$d priponki</item>
-        <item quantity="few">%1$d priponke</item>
-        <item quantity="other">%1$d priponk</item>
+        <item quantity="one">%1$s priponka</item>
+        <item quantity="two">%1$s priponki</item>
+        <item quantity="few">%1$s priponke</item>
+        <item quantity="other">%1$s priponk</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Pokaži še %1$d komentar</item>
-        <item quantity="two">Pokaži še %1$d komentarja</item>
-        <item quantity="few">Pokaži še %1$d komentarje</item>
-        <item quantity="other">Pokaži še %1$d komentarjev</item>
+        <item quantity="one">Pokaži še %1$s komentar</item>
+        <item quantity="two">Pokaži še %1$s komentarja</item>
+        <item quantity="few">Pokaži še %1$s komentarje</item>
+        <item quantity="other">Pokaži še %1$s komentarjev</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">pred %1$d letom danes</item>
-        <item quantity="two">pred %1$d letoma danes</item>
-        <item quantity="few">pred %1$d leti danes</item>
-        <item quantity="other">pred %1$d leti danes</item>
+        <item quantity="one">pred %1$s letom danes</item>
+        <item quantity="two">pred %1$s letoma danes</item>
+        <item quantity="few">pred %1$s leti danes</item>
+        <item quantity="other">pred %1$s leti danes</item>
     </plurals>
     <string name="feeds_block">Blokiraj</string>
     <string name="feeds_removed_from_feed">Odstranjeni ste bili iz tega kanala</string>

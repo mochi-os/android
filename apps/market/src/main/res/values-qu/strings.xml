@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Qhatu</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Kawsay willariy</string>
     <string name="market_account_biography_placeholder">Rantiqkunaman qammanta willay…</string>
     <string name="market_account_load_failed">Cuentata mana cargayta atikurqanchu</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">Atipasqa puja</string>
     <string name="market_bids_tab_won">Llallirqan</string>
     <string name="market_bids_title">Pujakuna</string>
-    <string name="market_carousel_main">Foto %1$d / %2$d</string>
+    <string name="market_carousel_main">Foto %1$s / %2$s</string>
     <string name="market_channel_name">Qhatu</string>
     <string name="market_chargeback_reason_bank_cannot_process">Banco mana atirqachu</string>
     <string name="market_chargeback_reason_check_returned">Cheque kutichisqa</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">Reacondicionado</string>
     <string name="market_editor_condition_used">Llamk\'achisqa</string>
     <string name="market_editor_currency">Qullqi</string>
-    <string name="market_editor_days">%1$d p\'unchaw</string>
+    <string name="market_editor_days">%1$s p\'unchaw</string>
     <string name="market_editor_delete">Listadota wischuy</string>
     <string name="market_editor_description">Willariy</string>
     <string name="market_editor_interval_monthly">Killantin</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">Rantiykuna</string>
     <string name="market_rating_label">Puntaje</string>
     <string name="market_rating_no_reviews">Manaraq reseñakuna kanchu</string>
-    <string name="market_rating_reviews">(%1$d reseñakuna)</string>
+    <string name="market_rating_reviews">(%1$s reseñakuna)</string>
     <string name="market_refund_amount_label">Chanin</string>
     <string name="market_refund_body">Qullqi kutichiy mañakuyniykipaq huk raykuta qoy.</string>
     <string name="market_refund_details_label">Detallekuna</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">Kunan: %1$s</string>
     <string name="market_bids_ends_in">%1$s-pi tukunqa</string>
     <string name="market_bids_your_bid">Pujayki: %1$s</string>
-    <string name="market_carousel_thumbnail">Huch\'uy imagen %1$d</string>
+    <string name="market_carousel_thumbnail">Huch\'uy imagen %1$s</string>
     <string name="market_checkout_browser_unavailable">Pago página kichanapaq manam ima navegadorpas kanchu</string>
     <string name="market_checkout_pwyw_label">Chaniyki (mínimo %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Chaninqa pisimanta %1$s kanan</string>
-    <string name="market_dispute_dialog_attach_count">%1$d archivu(kuna) k\'askachisqa</string>
+    <string name="market_dispute_dialog_attach_count">%1$s archivu(kuna) k\'askachisqa</string>
     <string name="market_dispute_dialog_evidence_section_title">Apachisqa pruebakuna</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s-pa apachisqan</string>
     <string name="market_editor_appeal">Moderacionta apelay</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">Listadota cargachkan</string>
     <string name="market_listing_detail_relist_failed">Yapamanta listapi churayta mana atikurqanchu</string>
     <string name="market_listing_detail_relist_in_progress">Yapamanta listapi churachkan</string>
-    <string name="market_listing_detail_sales_count">%1$d rantikuykuna</string>
+    <string name="market_listing_detail_sales_count">%1$s rantikuykuna</string>
     <string name="market_listing_detail_seller_banned_banner">Kay qhatuqqa hark\'asqam. Musuq pedidokunata mana churay atikunchu.</string>
     <string name="market_listing_detail_seller_suspended_banner">Kay qhatuqqa sayachisqam. Musuq pedidokunaqa sayachisqam cuentan kutichipusqa kanankama.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Rantiyqa hark\'asqam qhatuqpa cuentan hark\'asqa kachkaptin.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">Manaraqmi rimanakuykunachu kanchu</string>
     <string name="market_messages_load_failed">Hilota mana cargayta atikurqanchu</string>
     <string name="market_messages_send_failed">Willakuyta mana apachiyta atikurqanchu</string>
-    <string name="market_messages_unread_badge">%1$d mana ñawinchasqa</string>
+    <string name="market_messages_unread_badge">%1$s mana ñawinchasqa</string>
     <string name="market_price_high_bid">Aswan hatun puja: %1$s</string>
     <string name="market_price_instant_buy">kunallan rantiy: %1$s</string>
     <string name="market_price_starting_bid">Qallariy puja: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">Miembro %1$s-manta</string>
     <string name="market_profile_joined">Yaykurqan %1$s</string>
     <string name="market_profile_rating_breakdown">Puntaje rakiynin</string>
-    <string name="market_profile_sales_count">%1$d rantikuykuna</string>
-    <string name="market_profile_stars_value">%1$d quyllurkuna</string>
+    <string name="market_profile_sales_count">%1$s rantikuykuna</string>
+    <string name="market_profile_stars_value">%1$s quyllurkuna</string>
     <string name="market_purchase_dispute_chargeback">Contracargo %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bancoyki kay pedidopi contracargota churarqan. Stripeqa qhatuqwan disputata kamachichkan; resultadoqa decidisqa kaptin kaypi rikurinqa.</string>
     <string name="market_purchase_dispute_response">Qhatuqpa kutichiynin</string>
-    <string name="market_purchase_download_many">%1$d archivoykikunata uraypi uraykachiy.</string>
+    <string name="market_purchase_download_many">%1$s archivoykikunata uraypi uraykachiy.</string>
     <string name="market_purchase_download_one">Archivoykita uraypi uraykachiy.</string>
     <string name="market_purchase_review_from">%1$s-pa reseñan</string>
     <string name="market_purchases_auction_label">Subasta #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Kayqa subastata chinkachinqa. Listadoqa rantiqkunamanta pakasqa kanqa; qhipaman musuq borrador hina yapamanta listapi churayta atinki.</string>
     <string name="market_listings_remove_title">¿Kay listadota qichunkichu?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Kayqa subastata chinkachinqa hinaspa %1$d kawsachkan pujaqman willanqa. Listadoqa rantiqkunamanta pakasqa kanqa; qhipaman musuq borrador hina yapamanta listapi churayta atinki.</item>
-        <item quantity="other">Kayqa subastata chinkachinqa hinaspa %1$d kawsachkan pujaqkunaman willanqa. Listadoqa rantiqkunamanta pakasqa kanqa; qhipaman musuq borrador hina yapamanta listapi churayta atinki.</item>
+        <item quantity="one">Kayqa subastata chinkachinqa hinaspa %1$s kawsachkan pujaqman willanqa. Listadoqa rantiqkunamanta pakasqa kanqa; qhipaman musuq borrador hina yapamanta listapi churayta atinki.</item>
+        <item quantity="other">Kayqa subastata chinkachinqa hinaspa %1$s kawsachkan pujaqkunaman willanqa. Listadoqa rantiqkunamanta pakasqa kanqa; qhipaman musuq borrador hina yapamanta listapi churayta atinki.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Kayqa %1$d kawsachkan suscripciónta kunan facturación período tukukuypi chinkachinqa. Suscriptorkunaman willasqa kanqa. Listadoqa rantiqkunamanta pakasqa kanqa.</item>
-        <item quantity="other">Kayqa %1$d kawsachkan suscripcionkunata kunan facturación período tukukuypi chinkachinqa. Suscriptorkunaman willasqa kanqa. Listadoqa rantiqkunamanta pakasqa kanqa.</item>
+        <item quantity="one">Kayqa %1$s kawsachkan suscripciónta kunan facturación período tukukuypi chinkachinqa. Suscriptorkunaman willasqa kanqa. Listadoqa rantiqkunamanta pakasqa kanqa.</item>
+        <item quantity="other">Kayqa %1$s kawsachkan suscripcionkunata kunan facturación período tukukuypi chinkachinqa. Suscriptorkunaman willasqa kanqa. Listadoqa rantiqkunamanta pakasqa kanqa.</item>
     </plurals>
 </resources>

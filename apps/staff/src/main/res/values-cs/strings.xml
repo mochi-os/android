@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Poznámky</string>
     <string name="staff_accounts_reason_label">Důvod</string>
     <string name="staff_accounts_reason_optional_label">Důvod (volitelné)</string>
-    <string name="staff_accounts_sales">%1$d prodejů</string>
+    <string name="staff_accounts_sales">%1$s prodejů</string>
     <string name="staff_accounts_search_clear">Vymazat hledání</string>
     <string name="staff_accounts_search_placeholder">Hledat</string>
     <string name="staff_accounts_seller_buyers">Pouze kupující</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Beze jména</string>
     <string name="staff_accounts_unsuspend">Ukončit pozastavení</string>
     <string name="staff_accounts_unsuspended_toast">Pozastavení účtu ukončeno</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Zrušit</string>
     <string name="staff_appeals_decide">Rozhodnout</string>
     <string name="staff_appeals_decision_denied">Ponechat nabídku zamítnutou</string>

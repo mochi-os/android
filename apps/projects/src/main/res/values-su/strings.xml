@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">ngalakukeun parobahan</string>
     <string name="projects_attachment_empty">Euweuh lampiran</string>
     <string name="projects_attachment_default_name">lampiran</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Pamundut ngahijikeun anyar</string>
     <string name="projects_request_status_closed">Ditutup</string>
     <string name="projects_request_back_to_list">Balik ka daptar</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Mariksa status ngahijikeun…</string>
     <string name="projects_request_can_merge">Tiasa dihijikeun</string>
     <string name="projects_request_cannot_merge">Teu tiasa dihijikeun</string>
-    <string name="projects_request_ahead_behind">%1$d payun, %2$d pengker</string>
+    <string name="projects_request_ahead_behind">%1$s payun, %2$s pengker</string>
     <string name="projects_request_draft_notice">Ieu draf. Tandaan siap saméméh ngahijikeun.</string>
     <string name="projects_request_view_diff">Témbongkeun bébédaan</string>
     <string name="projects_request_mark_ready">Tandaan siap</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Taya kolom diatur pikeun tampilan ieu</string>
     <string name="projects_board_no_options">Teu aya pilihan anu disetel pikeun médan kolom</string>
     <string name="projects_board_column_options">Pilihan kolom</string>
-    <string name="projects_board_nested_count">+%1$d nyarang</string>
+    <string name="projects_board_nested_count">+%1$s nyarang</string>
     <string name="projects_move_to_column">Pindahkeun ka kolom</string>
     <string name="projects_move_to_row">Pindahkeun ka baris</string>
     <string name="projects_move_after">Sanggeus %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Susun jeung saring</string>
     <string name="projects_create_prefix_hint">Dipaké pikeun ID nu gampang dibaca saperti %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d koropak konflik</item>
-        <item quantity="other">%1$d koropak konflik</item>
+        <item quantity="one">%1$s koropak konflik</item>
+        <item quantity="other">%1$s koropak konflik</item>
     </plurals>
     <string name="projects_design_export_saved">Desain disimpen</string>
     <string name="projects_design_import_failed">Éta berkas teu kabaca</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Data proyék disimpen</string>
     <string name="projects_exporting">Nyiapkeun ékspor…</string>
     <string name="projects_board_add_column">Tambah kolom</string>
-    <string name="projects_design_sample">Conto %1$d</string>
+    <string name="projects_design_sample">Conto %1$s</string>
     <string name="projects_option_delete_title">Hapus pilihan</string>
     <string name="projects_option_delete_message">Yakin hayang mupus pilihan \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Teu aya jenis item nu bisa dijieun. Jieun heula item kolot nu diperlukeun.</string>

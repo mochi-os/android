@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Notes</string>
     <string name="staff_accounts_reason_label">Motiu</string>
     <string name="staff_accounts_reason_optional_label">Motiu (opcional)</string>
-    <string name="staff_accounts_sales">%1$d vendes</string>
+    <string name="staff_accounts_sales">%1$s vendes</string>
     <string name="staff_accounts_search_clear">Esborra la cerca</string>
     <string name="staff_accounts_search_placeholder">Cerca</string>
     <string name="staff_accounts_seller_buyers">Només compradors</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Sense nom</string>
     <string name="staff_accounts_unsuspend">Reactiva</string>
     <string name="staff_accounts_unsuspended_toast">Compte no suspès</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Cancel·la</string>
     <string name="staff_appeals_decide">Decideix</string>
     <string name="staff_appeals_decision_denied">Mantén l\'anunci rebutjat</string>

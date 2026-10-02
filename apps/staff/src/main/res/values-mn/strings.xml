@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Тэмдэглэл</string>
     <string name="staff_accounts_reason_label">Шалтгаан</string>
     <string name="staff_accounts_reason_optional_label">Шалтгаан (заавал биш)</string>
-    <string name="staff_accounts_sales">%1$d борлуулалт</string>
+    <string name="staff_accounts_sales">%1$s борлуулалт</string>
     <string name="staff_accounts_search_clear">Хайлтыг цэвэрлэх</string>
     <string name="staff_accounts_search_placeholder">Хайх</string>
     <string name="staff_accounts_seller_buyers">Худалдан авагчид зөвхөн</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Нэргүй</string>
     <string name="staff_accounts_unsuspend">Түр зогсоолтыг арилгах</string>
     <string name="staff_accounts_unsuspended_toast">Бүртгэлийн түр зогсоолтыг арилгалаа</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Цуцлах</string>
     <string name="staff_appeals_decide">Шийдэх</string>
     <string name="staff_appeals_decision_denied">Зар татгалзсан хэвээр</string>

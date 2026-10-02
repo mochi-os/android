@@ -220,7 +220,7 @@
     <string name="wikis_channel_description">Varsel om sideredigeringar, kommentarar og invitasjonar.</string>
     <string name="wikis_pageview_toc_expand">Vis innhaldsliste</string>
     <string name="wikis_pageview_toc_collapse">Skjul innhaldsliste</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Oppdatert %1$s</string>
     <string name="wikis_pageview_not_found_description">Sida „%1$s\" finst ikkje enno.</string>
     <string name="wikis_pageview_share_chooser">Wiki-lenkje</string>
@@ -245,13 +245,13 @@
     <string name="wikis_delete_page_message">Du er i ferd med å slette sida „%1$s\" (%2$s). Denne handlinga kan angrast ved å gjenopprette frå historikken.</string>
     <string name="wikis_delete_page_success">Side sletta</string>
     <string name="wikis_revert_page_title">Tilbakestill sida</string>
-    <string name="wikis_revert_page_message">Du er i ferd med å tilbakestille %1$s til versjon %2$d. Dette opprettar ein ny revisjon med innhaldet frå versjon %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Tilbakestilt til versjon %1$d</string>
-    <string name="wikis_revert_page_success">Tilbakestilt til versjon %1$d</string>
+    <string name="wikis_revert_page_message">Du er i ferd med å tilbakestille %1$s til versjon %2$s. Dette opprettar ein ny revisjon med innhaldet frå versjon %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Tilbakestilt til versjon %1$s</string>
+    <string name="wikis_revert_page_success">Tilbakestilt til versjon %1$s</string>
     <string name="wikis_rename_page_renaming">Endrar namn…</string>
     <string name="wikis_rename_page_success">Sida fekk nytt namn</string>
-    <string name="wikis_history_viewing">Viser historikk for %1$s, gjeldande versjon %2$d</string>
-    <string name="wikis_revision_version_badge">Versjon %1$d</string>
+    <string name="wikis_history_viewing">Viser historikk for %1$s, gjeldande versjon %2$s</string>
+    <string name="wikis_revision_version_badge">Versjon %1$s</string>
     <string name="wikis_search_pages_placeholder">Søk sider etter tittel eller innhald…</string>
     <string name="wikis_search_no_results">Ingen sider funne for „%1$s\". Prøv andre søkjeord.</string>
     <string name="wikis_search_updated">Oppdatert %1$s</string>
@@ -283,42 +283,42 @@
     <string name="wikis_access_subject_anyone">Alle</string>
     <string name="wikis_access_subject_authenticated">Autentiserte brukarar</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d kommentar</item>
-        <item quantity="other">%d kommentarar</item>
+        <item quantity="one">%s kommentar</item>
+        <item quantity="other">%s kommentarar</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d svar</item>
-        <item quantity="other">+%d fleire svar</item>
+        <item quantity="one">%s svar</item>
+        <item quantity="other">+%s fleire svar</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d side</item>
-        <item quantity="other">%d sider</item>
+        <item quantity="one">%s side</item>
+        <item quantity="other">%s sider</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fil</item>
-        <item quantity="other">%d filer</item>
+        <item quantity="one">%s fil</item>
+        <item quantity="other">%s filer</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d bilete</item>
-        <item quantity="other">%d bilete</item>
+        <item quantity="one">%s bilete</item>
+        <item quantity="other">%s bilete</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="other">%d dokument</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="other">%s dokument</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d side med denne etiketten</item>
-        <item quantity="other">%d sider med denne etiketten</item>
+        <item quantity="one">%s side med denne etiketten</item>
+        <item quantity="other">%s sider med denne etiketten</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Fann %1$d resultat for \"%2$s\"</item>
-        <item quantity="other">Fann %1$d resultat for \"%2$s\"</item>
+        <item quantity="one">Fann %1$s resultat for \"%2$s\"</item>
+        <item quantity="other">Fann %1$s resultat for \"%2$s\"</item>
     </plurals>
     <string name="wikis_revision_compare">Samanlikn endringar</string>
     <string name="wikis_revision_author">etter %1$s</string>
     <string name="wikis_revision_compare_failed">Klarte ikkje å laste førre versjon for samanlikning.</string>
     <string name="wikis_revision_show_page">Vis sida</string>
-    <string name="wikis_revision_changes_from">Endringar frå versjon %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Endringar frå versjon %1$s → %2$s</string>
     <string name="wikis_attachments_caption_save_failed">Klarte ikkje lagre bileteksten</string>
     <string name="wikis_attachments_upload_types">Støtta filer: bilete, PDF, DOC, DOCX, TXT og MD.</string>
     <string name="wikis_attachments_upload_limits">Store opplastingar kan vere avgrensa av tenaren din eller proxy-oppsettet.</string>
@@ -326,7 +326,7 @@
     <string name="wikis_rss_copied_new">Ny RSS-URL kopiert til utklippstavla</string>
     <string name="wikis_rss_exists">Denne straum-URL-en er allereie utferda og kan ikkje visast igjen.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Viser den første %1$d kommentaren.</item>
-        <item quantity="other">Viser dei første %1$d kommentarane.</item>
+        <item quantity="one">Viser den første %1$s kommentaren.</item>
+        <item quantity="other">Viser dei første %1$s kommentarane.</item>
     </plurals>
 </resources>

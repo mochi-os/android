@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Pasar</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografi</string>
     <string name="market_account_biography_placeholder">Critakna babagan sliramu marang tuku…</string>
     <string name="market_account_load_failed">Ora bisa mbukak akun</string>
@@ -57,7 +57,7 @@
     <string name="market_bids_tab_outbid">Diungguli tawaran</string>
     <string name="market_bids_tab_won">Menang</string>
     <string name="market_bids_title">Penawaran</string>
-    <string name="market_carousel_main">Foto %1$d saka %2$d</string>
+    <string name="market_carousel_main">Foto %1$s saka %2$s</string>
     <string name="market_channel_name">Pasar</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank ora bisa ngolah</string>
     <string name="market_chargeback_reason_check_returned">Cek dibalèkaké</string>
@@ -136,7 +136,7 @@
     <string name="market_editor_condition_refurbished">Rekondisi</string>
     <string name="market_editor_condition_used">Wis kanggo</string>
     <string name="market_editor_currency">Mata uang</string>
-    <string name="market_editor_days">%1$d dina</string>
+    <string name="market_editor_days">%1$s dina</string>
     <string name="market_editor_delete">Busak iklan</string>
     <string name="market_editor_description">Katrangan</string>
     <string name="market_editor_interval_monthly">Saben sasi</string>
@@ -327,7 +327,7 @@
     <string name="market_purchases_title">Tuku</string>
     <string name="market_rating_label">Penilaian</string>
     <string name="market_rating_no_reviews">Durung ana review</string>
-    <string name="market_rating_reviews">(%1$d review)</string>
+    <string name="market_rating_reviews">(%1$s review)</string>
     <string name="market_refund_amount_label">Jumlah</string>
     <string name="market_refund_body">Wènèhi alesan kanggo panyuwunan refund-mu.</string>
     <string name="market_refund_details_label">Rincian</string>
@@ -477,10 +477,10 @@
     <string name="market_sale_review_response_submitting">Ngirim…</string>
     <string name="market_checkout_subscribing">Lagi langganan…</string>
     <string name="market_filter_remove">Busak saringan</string>
-    <string name="market_listing_detail_sales_count">%1$d dol</string>
+    <string name="market_listing_detail_sales_count">%1$s dol</string>
     <string name="market_listings_action_appeal">Banding pambusakan</string>
     <string name="market_listings_share_chooser">Bagi iklan</string>
-    <string name="market_profile_sales_count">%1$d dol</string>
+    <string name="market_profile_sales_count">%1$s dol</string>
     <string name="market_refund_dialog_amount_label">Jumlah</string>
 
     <string name="market_account_status_restrictions">Sawetara tumindak, kalebu nggawe listing anyar lan ngrampungake pesenan, diwatesi nalika akun panjenengan ana ing kahanan iki.</string>
@@ -497,11 +497,11 @@
     <string name="market_bids_current_bid">Saiki: %1$s</string>
     <string name="market_bids_ends_in">Rampung ing %1$s</string>
     <string name="market_bids_your_bid">Tawaran panjenengan: %1$s</string>
-    <string name="market_carousel_thumbnail">Gambar cilik %1$d</string>
+    <string name="market_carousel_thumbnail">Gambar cilik %1$s</string>
     <string name="market_checkout_browser_unavailable">Ora ana browser sing kasedhiya kanggo mbukak kaca pambayaran</string>
     <string name="market_checkout_pwyw_label">Rega panjenengan (paling sithik %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Jumlahe kudu paling sithik %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d file dilampirake</string>
+    <string name="market_dispute_dialog_attach_count">%1$s file dilampirake</string>
     <string name="market_dispute_dialog_evidence_section_title">Bukti sing dikirim</string>
     <string name="market_dispute_dialog_evidence_submitter_line">dikirim dening %1$s</string>
     <string name="market_editor_appeal">Banding moderasi</string>
@@ -572,7 +572,7 @@
     <string name="market_messages_inbox_empty_title">Durung ana obrolan</string>
     <string name="market_messages_load_failed">Ora bisa ngemot obrolan</string>
     <string name="market_messages_send_failed">Ora bisa ngirim pesen</string>
-    <string name="market_messages_unread_badge">%1$d durung diwaca</string>
+    <string name="market_messages_unread_badge">%1$s durung diwaca</string>
     <string name="market_price_high_bid">Tawaran paling dhuwur: %1$s</string>
     <string name="market_price_instant_buy">tuku cepet: %1$s</string>
     <string name="market_price_starting_bid">Tawaran wiwitan: %1$s</string>
@@ -580,11 +580,11 @@
     <string name="market_profile_member_since">Anggota wiwit %1$s</string>
     <string name="market_profile_joined">Gabung %1$s</string>
     <string name="market_profile_rating_breakdown">Rincian rating</string>
-    <string name="market_profile_stars_value">%1$d lintang</string>
+    <string name="market_profile_stars_value">%1$s lintang</string>
     <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bank panjenengan ngajokake chargeback kanggo pesenan iki. Stripe ngurus regejegan karo penjual; asilé bakal katon ing kene yen wis diputusake.</string>
     <string name="market_purchase_dispute_response">Wangsulan saka penjual</string>
-    <string name="market_purchase_download_many">Undhuh %1$d berkas panjenengan ing ngisor iki.</string>
+    <string name="market_purchase_download_many">Undhuh %1$s berkas panjenengan ing ngisor iki.</string>
     <string name="market_purchase_download_one">Undhuh berkas panjenengan ing ngisor iki.</string>
     <string name="market_purchase_review_from">Ulasan saka %1$s</string>
     <string name="market_purchases_auction_label">Lelang #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Iki bakal mbatalaké lelang. Listing bakal didhelikaké saka sing tuku; sampéyan bisa nge-list manèh mengko dadi konsep anyar.</string>
     <string name="market_listings_remove_title">Cabut listing iki?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Iki bakal mbatalake lelang lan menehi kabar %1$d penawar aktif. Iklan bakal didhelikake saka sing tuku; sampeyan bisa masang maneh mengko minangka draf anyar.</item>
-        <item quantity="other">Iki bakal mbatalake lelang lan menehi kabar %1$d penawar aktif. Iklan bakal didhelikake saka sing tuku; sampeyan bisa masang maneh mengko minangka draf anyar.</item>
+        <item quantity="one">Iki bakal mbatalake lelang lan menehi kabar %1$s penawar aktif. Iklan bakal didhelikake saka sing tuku; sampeyan bisa masang maneh mengko minangka draf anyar.</item>
+        <item quantity="other">Iki bakal mbatalake lelang lan menehi kabar %1$s penawar aktif. Iklan bakal didhelikake saka sing tuku; sampeyan bisa masang maneh mengko minangka draf anyar.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Iki bakal mbatalake %1$d langganan aktif ing pungkasan periode tagihan saiki. Pelanggan bakal diwenehi kabar. Iklan bakal didhelikake saka sing tuku.</item>
-        <item quantity="other">Iki bakal mbatalake %1$d langganan aktif ing pungkasan periode tagihan saiki. Pelanggan bakal diwenehi kabar. Iklan bakal didhelikake saka sing tuku.</item>
+        <item quantity="one">Iki bakal mbatalake %1$s langganan aktif ing pungkasan periode tagihan saiki. Pelanggan bakal diwenehi kabar. Iklan bakal didhelikake saka sing tuku.</item>
+        <item quantity="other">Iki bakal mbatalake %1$s langganan aktif ing pungkasan periode tagihan saiki. Pelanggan bakal diwenehi kabar. Iklan bakal didhelikake saka sing tuku.</item>
     </plurals>
 </resources>

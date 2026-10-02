@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Amma taphni hin jiru.</string>
     <string name="words_new_game_choose_opponents">Mormitoota filadhu</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d taphattoota</string>
+    <string name="words_new_game_player_count">%1$s taphattoota</string>
     <string name="words_new_game_no_friends_subtitle">Taphachuu jalqabuuf appii Namoota keessatti hiriyoota dabali.</string>
     <string name="words_detail_title">Tapha</string>
     <string name="words_detail_status_opponent_move">Tarkaanfii %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s mo\'ata</string>
-    <string name="words_detail_player_fallback">Taphataa %1$d</string>
-    <string name="words_detail_player_count">%1$d taphattoota</string>
-    <string name="words_detail_label_tiles_left">Raakiwwan %1$d hafan</string>
+    <string name="words_detail_player_fallback">Taphataa %1$s</string>
+    <string name="words_detail_player_count">%1$s taphattoota</string>
+    <string name="words_detail_label_tiles_left">Raakiwwan %1$s hafan</string>
     <string name="words_detail_action_open_chat">Chaattii bani</string>
     <string name="words_detail_action_more">Gochaalee taphaa</string>
-    <string name="words_detail_exchange_count">Jijjiirraa (%1$d)</string>
+    <string name="words_detail_exchange_count">Jijjiirraa (%1$s)</string>
     <string name="words_detail_chat_you_played">Ati %1$s taphatte</string>
     <string name="words_detail_chat_player_played">%1$s %2$s taphate</string>
 

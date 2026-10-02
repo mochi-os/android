@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Inawasilisha…</string>
     <string name="market_checkout_subscribing">Inajiandikisha…</string>
     <string name="market_filter_remove">Ondoa kichujio</string>
-    <string name="market_listing_detail_sales_count">Mauzo %1$d</string>
-    <string name="market_profile_sales_count">Mauzo %1$d</string>
+    <string name="market_listing_detail_sales_count">Mauzo %1$s</string>
+    <string name="market_profile_sales_count">Mauzo %1$s</string>
     <string name="market_purchase_dispute_response">Jibu la muuzaji</string>
     <string name="market_purchases_order_label">Agizo #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Waeleze wanunuzi kukuhusu…</string>
     <string name="market_account_load_failed">Imeshindwa kupakia akaunti</string>
     <string name="market_account_save_failed">Imeshindwa kuhifadhi mabadiliko</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Sasa: %1$s</string>
     <string name="market_bids_ends_in">Inaisha baada ya %1$s</string>
     <string name="market_bids_your_bid">Zabuni yako: %1$s</string>
-    <string name="market_carousel_main">Picha %1$d kati ya %2$d</string>
-    <string name="market_carousel_thumbnail">Kijipicha %1$d</string>
+    <string name="market_carousel_main">Picha %1$s kati ya %2$s</string>
+    <string name="market_carousel_thumbnail">Kijipicha %1$s</string>
     <string name="market_checkout_browser_unavailable">Hakuna kivinjari kinachopatikana cha kufungua ukurasa wa malipo</string>
     <string name="market_checkout_pay_button">Lipa kwa Stripe</string>
     <string name="market_checkout_processing">Inachakata…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Ambatisha ushahidi</string>
-    <string name="market_dispute_dialog_attach_count">Faili %1$d zimeambatishwa</string>
+    <string name="market_dispute_dialog_attach_count">Faili %1$s zimeambatishwa</string>
     <string name="market_dispute_dialog_evidence_role_staff">Wafanyakazi wa Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Ushahidi uliowasilishwa</string>
     <string name="market_dispute_dialog_evidence_submitter_line">imewasilishwa na %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL ya rejea</string>
     <string name="market_editor_assets_empty">Hakuna vipengele bado</string>
     <string name="market_editor_category_none">Chagua kategoria</string>
-    <string name="market_editor_days">Siku %1$d</string>
+    <string name="market_editor_days">Siku %1$s</string>
     <string name="market_editor_delete">Futa tangazo</string>
     <string name="market_editor_delete_confirm_message">Hii itafuta tangazo kabisa.</string>
     <string name="market_editor_delete_confirm_title">Futa orodha?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">Imeshindwa kupakia mazungumzo</string>
     <string name="market_messages_send_failed">Imeshindwa kutuma ujumbe</string>
     <string name="market_messages_thread_title">Mazungumzo</string>
-    <string name="market_messages_unread_badge">%1$d hazijasomwa</string>
+    <string name="market_messages_unread_badge">%1$s hazijasomwa</string>
     <string name="market_price_from">Kuanzia %1$s</string>
     <string name="market_price_high_bid">Zabuni ya juu: %1$s</string>
     <string name="market_price_instant_buy">ununuzi wa papo hapo: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Alijiunga %1$s</string>
     <string name="market_profile_no_reviews">Hakuna ukaguzi bado.</string>
     <string name="market_profile_rating_breakdown">Mchanganuo wa ukadiriaji</string>
-    <string name="market_profile_stars_value">nyota %1$d</string>
+    <string name="market_profile_stars_value">nyota %1$s</string>
     <string name="market_purchase_dispute_chargeback">Urejesho wa malipo %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Benki yako iliwasilisha urejesho wa malipo kwa agizo hili. Stripe inashughulikia mzozo na muuzaji; matokeo yataonekana hapa yatakapoamuliwa.</string>
-    <string name="market_purchase_download_many">Pakua faili zako %1$d hapa chini.</string>
+    <string name="market_purchase_download_many">Pakua faili zako %1$s hapa chini.</string>
     <string name="market_purchase_download_one">Pakua faili yako hapa chini.</string>
     <string name="market_purchase_review_from">Ukaguzi kutoka kwa %1$s</string>
     <string name="market_purchases_auction_label">Mnada #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s imerejeshwa</string>
     <string name="market_purchases_won_for">Imeshindwa kwa %1$s</string>
-    <string name="market_rating_reviews">(hakiki %1$d)</string>
+    <string name="market_rating_reviews">(hakiki %1$s)</string>
     <string name="market_refund_amount_label">Kiasi</string>
     <string name="market_refund_dialog_amount_help">Acha wazi ili kurejesha agizo zima.</string>
     <string name="market_refund_dialog_amount_label">Kiasi</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Hii itaghairi mnada. Orodha itafichwa kutoka kwa wanunuzi; unaweza kuiorodhesha tena baadaye kama rasimu mpya.</string>
     <string name="market_listings_remove_title">Ondoa orodha hii?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Hii itaghairi mnada na kumjulisha mzabuni %1$d anayeshiriki. Tangazo litafichwa kwa wanunuzi; unaweza kulitangaza tena baadaye kama rasimu mpya.</item>
-        <item quantity="other">Hii itaghairi mnada na kuwajulisha wazabuni %1$d wanaoshiriki. Tangazo litafichwa kwa wanunuzi; unaweza kulitangaza tena baadaye kama rasimu mpya.</item>
+        <item quantity="one">Hii itaghairi mnada na kumjulisha mzabuni %1$s anayeshiriki. Tangazo litafichwa kwa wanunuzi; unaweza kulitangaza tena baadaye kama rasimu mpya.</item>
+        <item quantity="other">Hii itaghairi mnada na kuwajulisha wazabuni %1$s wanaoshiriki. Tangazo litafichwa kwa wanunuzi; unaweza kulitangaza tena baadaye kama rasimu mpya.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Hii itaghairi usajili %1$d unaoendelea mwishoni mwa kipindi cha sasa cha malipo. Wasajili watajulishwa. Tangazo litafichwa kwa wanunuzi.</item>
-        <item quantity="other">Hii itaghairi usajili %1$d unaoendelea mwishoni mwa kipindi cha sasa cha malipo. Wasajili watajulishwa. Tangazo litafichwa kwa wanunuzi.</item>
+        <item quantity="one">Hii itaghairi usajili %1$s unaoendelea mwishoni mwa kipindi cha sasa cha malipo. Wasajili watajulishwa. Tangazo litafichwa kwa wanunuzi.</item>
+        <item quantity="other">Hii itaghairi usajili %1$s unaoendelea mwishoni mwa kipindi cha sasa cha malipo. Wasajili watajulishwa. Tangazo litafichwa kwa wanunuzi.</item>
     </plurals>
 </resources>

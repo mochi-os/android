@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Không có đối tượng</string>
     <string name="crm_board_no_columns">Chưa có cột nào được cấu hình cho chế độ xem này</string>
     <string name="crm_board_no_options">Chưa cấu hình tùy chọn cho trường cột</string>
-    <string name="crm_board_nested_count">+%1$d lồng nhau</string>
+    <string name="crm_board_nested_count">+%1$s lồng nhau</string>
     <string name="crm_move_to_column">Chuyển đến cột</string>
     <string name="crm_move_to_row">Chuyển đến hàng</string>
     <string name="crm_move_after">Sau %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Đã lưu dữ liệu CRM</string>
     <string name="crm_create_upload_json">Tải lên tệp .zip hoặc .json</string>
     <string name="crm_create_blocked_no_options">Không thể tạo: %1$s là bắt buộc nhưng không có tùy chọn nào để chọn. Thêm tùy chọn trong Thiết kế.</string>
-    <string name="crm_design_sample">Mẫu %1$d</string>
+    <string name="crm_design_sample">Mẫu %1$s</string>
     <string name="crm_option_delete_title">Xóa tùy chọn</string>
     <string name="crm_option_delete_message">Bạn có chắc chắn muốn xóa tùy chọn \"%1$s\" không?</string>
 </resources>

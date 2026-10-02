@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">bëri një ndryshim</string>
     <string name="projects_attachment_empty">Asnjë bashkëngjitje</string>
     <string name="projects_attachment_default_name">bashkëngjitje</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Kërkesë e re bashkimi</string>
     <string name="projects_request_status_closed">Mbyllur</string>
     <string name="projects_request_back_to_list">Kthehu te lista</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Po kontrollohet statusi i bashkimit…</string>
     <string name="projects_request_can_merge">Mund të bashkohet</string>
     <string name="projects_request_cannot_merge">Nuk mund të bashkohet</string>
-    <string name="projects_request_ahead_behind">%1$d përpara, %2$d prapa</string>
+    <string name="projects_request_ahead_behind">%1$s përpara, %2$s prapa</string>
     <string name="projects_request_draft_notice">Ky është një draft. Shënoje si gati përpara bashkimit.</string>
     <string name="projects_request_view_diff">Shfaq diff</string>
     <string name="projects_request_mark_ready">Shënoje si gati</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Asnjë kolonë e konfiguruar për këtë pamje</string>
     <string name="projects_board_no_options">Asnjë opsion i konfiguruar për fushën e kolonës</string>
     <string name="projects_board_column_options">Opsionet e kolonës</string>
-    <string name="projects_board_nested_count">+%1$d të ndërlidhura</string>
+    <string name="projects_board_nested_count">+%1$s të ndërlidhura</string>
     <string name="projects_move_to_column">Zhvendos te kolona</string>
     <string name="projects_move_to_row">Zhvendos te rreshti</string>
     <string name="projects_move_after">Pas %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Rendit dhe filtro</string>
     <string name="projects_create_prefix_hint">Përdoret për ID të lexueshme si %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d skedar në konflikt</item>
-        <item quantity="other">%1$d skedarë në konflikt</item>
+        <item quantity="one">%1$s skedar në konflikt</item>
+        <item quantity="other">%1$s skedarë në konflikt</item>
     </plurals>
     <string name="projects_design_export_saved">Dizajni u ruajt</string>
     <string name="projects_design_import_failed">Skedari nuk u lexua dot</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Të dhënat e projektit u ruajtën</string>
     <string name="projects_exporting">Po përgatitet eksporti…</string>
     <string name="projects_board_add_column">Shto kolonë</string>
-    <string name="projects_design_sample">Shembull %1$d</string>
+    <string name="projects_design_sample">Shembull %1$s</string>
     <string name="projects_option_delete_title">Fshi opsionin</string>
     <string name="projects_option_delete_message">Jeni i sigurt që dëshironi të fshini opsionin \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Asnjë lloj artikulli nuk mund të krijohet ende. Krijoni fillimisht artikujt prind të kërkuar.</string>

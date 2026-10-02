@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">Kayqa \"%1$s\"-manta contenido apamuyta sayachinqa.</string>
     <string name="feeds_remove_also_delete_posts">Kay fuentemanta apamusqa qillqasqakunatapas pichay</string>
     <string name="feeds_suggested_credibility_title">Yuyaychasqa credibilidad</string>
-    <string name="feeds_suggested_credibility_body">Mochi %1$d credibilidadta yuyaychan. ¿Chaskinkichu?</string>
+    <string name="feeds_suggested_credibility_body">Mochi %1$s credibilidadta yuyaychan. ¿Chaskinkichu?</string>
     <string name="feeds_suggested_credibility_keep">Kunan kaqta hap\'iy</string>
     <string name="feeds_ai_processing_mode">AI llamk\'ay modo</string>
     <string name="feeds_ai_account">AI cuenta</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Mayqin qillqapipas marcadorta ñit\'iy kaypi qhipapaq waqaychanaykipaq.</string>
     <string name="feeds_saved_error_clear">Waqaychasqa qillqakunata mana pichayta atikurqanchu</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d musuq willakuy</item>
-        <item quantity="other">%d musuq willakuykuna</item>
+        <item quantity="one">%s musuq willakuy</item>
+        <item quantity="other">%s musuq willakuykuna</item>
     </plurals>
     <string name="feeds_caught_up">Tukuyta rikurqankiña</string>
     <string name="feeds_all_caught_up">Llapanta rikurqankiña</string>
@@ -192,10 +192,10 @@
     <string name="feeds_source_url_hint_feed">Feed entidad ID utaq fingerprint</string>
     <string name="feeds_source_credibility_label">Credibilidad</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d horakuna</item>
+        <item quantity="other">%1$s horakuna</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d minutokuna</item>
+        <item quantity="other">%1$s minutokuna</item>
     </plurals>
     <string name="feeds_source_polling_interval">Sapa %1$s consultan</string>
     <string name="feeds_access_level_react_full">Reaccionay hinaspa qhaway</string>
@@ -212,20 +212,20 @@
     <string name="feeds_link">T\'inki</string>
     <string name="feeds_share_link_title">Feed t\'inki</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d comentario</item>
-        <item quantity="other">%1$d comentariokuna</item>
+        <item quantity="one">%1$s comentario</item>
+        <item quantity="other">%1$s comentariokuna</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d adjunto</item>
-        <item quantity="other">%1$d adjuntokuna</item>
+        <item quantity="one">%1$s adjunto</item>
+        <item quantity="other">%1$s adjuntokuna</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d aswan comentariota qhaway</item>
-        <item quantity="other">%1$d aswan comentariokunata qhaway</item>
+        <item quantity="one">%1$s aswan comentariota qhaway</item>
+        <item quantity="other">%1$s aswan comentariokunata qhaway</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">%1$d wata ñawpaq kunan p\'unchaw</item>
-        <item quantity="other">%1$d wata ñawpaq kunan p\'unchaw</item>
+        <item quantity="one">%1$s wata ñawpaq kunan p\'unchaw</item>
+        <item quantity="other">%1$s wata ñawpaq kunan p\'unchaw</item>
     </plurals>
     <string name="feeds_block">Hark\'ay</string>
     <string name="feeds_removed_from_feed">Kay feedmanta qichusqa karqanki</string>

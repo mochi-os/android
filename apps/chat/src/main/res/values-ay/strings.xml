@@ -60,7 +60,7 @@
     <string name="chat_delete_confirm_title">¿Mensaje chhaqtayañ?</string>
     <string name="chat_delete_confirm_body">Akax mensaje taqinitaki chhaqtayi, ukax janiw kutt\'ayañjamäkiti.</string>
     <string name="chat_delete_own_only">Juma pachpan mensajenakamakiw chhaqtayasma</string>
-    <string name="chat_selection_title">%1$d ajllita</string>
+    <string name="chat_selection_title">%1$s ajllita</string>
     <string name="chat_forward_subtitle">Ajllit mensajenak apayañatakix mä chat jan ukax mä masi ajllim</string>
     <string name="chat_forward_chats">Chatanaka</string>
     <string name="chat_forward_friends">Masinaka</string>

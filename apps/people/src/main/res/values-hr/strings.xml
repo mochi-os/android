@@ -180,9 +180,9 @@
     <string name="people_books_create">Stvori adresar</string>
     <string name="people_books_delete">Izbriši adresar</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Izbrisati %1$s i njegov %2$d kontakt?</item>
-        <item quantity="few">Izbrisati %1$s i njegova %2$d kontakta?</item>
-        <item quantity="other">Izbrisati %1$s i njegovih %2$d kontakata?</item>
+        <item quantity="one">Izbrisati %1$s i njegov %2$s kontakt?</item>
+        <item quantity="few">Izbrisati %1$s i njegova %2$s kontakta?</item>
+        <item quantity="other">Izbrisati %1$s i njegovih %2$s kontakata?</item>
     </plurals>
     <string name="people_welcome_body">Pronađite prijatelje diljem Mochija i povežite se. Dodirnite Dodaj kontakt da pošaljete pozivnicu.</string>
     <string name="people_person_state_contact">U kontaktima</string>

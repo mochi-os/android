@@ -89,7 +89,7 @@ fun DesignPreview(
 
     val resources = LocalResources.current
     val sampleObjects = remember(view, candidateClasses, project.options, project.fields, resources) {
-        buildSampleObjects(project, candidateClasses, view) { index -> resources.getString(R.string.projects_design_sample, index) }
+        buildSampleObjects(project, candidateClasses, view) { index -> resources.getString(R.string.projects_design_sample, index.toString()) }
     }
 
     Column(modifier = modifier.fillMaxWidth()) {

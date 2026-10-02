@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Imakethe</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Umlandowempilo</string>
     <string name="market_account_biography_placeholder">Tshela abathengi ngawe…</string>
     <string name="market_account_load_failed">Akukwazanga ukulayisha i-akhawunti</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">Idluliwe</string>
     <string name="market_bids_tab_won">Inqobile</string>
     <string name="market_bids_title">Ukuncintisana</string>
-    <string name="market_carousel_main">Isithombe %1$d kwesi %2$d</string>
+    <string name="market_carousel_main">Isithombe %1$s kwesi %2$s</string>
     <string name="market_channel_name">Imakethe</string>
     <string name="market_chargeback_reason_bank_cannot_process">Ibhange alikwazanga ukucubungula</string>
     <string name="market_chargeback_reason_check_returned">Isheke libuyisiwe</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">Okuvuselelwe</string>
     <string name="market_editor_condition_used">Okusetshenzisiwe</string>
     <string name="market_editor_currency">Imali</string>
-    <string name="market_editor_days">%1$d izinsuku</string>
+    <string name="market_editor_days">%1$s izinsuku</string>
     <string name="market_editor_delete">Susa uhlu</string>
     <string name="market_editor_description">Incazelo</string>
     <string name="market_editor_interval_monthly">Ngenyanga</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">Ukuthenga</string>
     <string name="market_rating_label">Isilinganiso</string>
     <string name="market_rating_no_reviews">Akukho ukubuyekezwa okwamanje</string>
-    <string name="market_rating_reviews">(%1$d ukubuyekezwa)</string>
+    <string name="market_rating_reviews">(%1$s ukubuyekezwa)</string>
     <string name="market_refund_amount_label">Inani</string>
     <string name="market_refund_body">Nikeza isizathu sesicelo sakho sokubuyiselwa imali.</string>
     <string name="market_refund_details_label">Imininingwane</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">Okwamanje: %1$s</string>
     <string name="market_bids_ends_in">Iphela ngo-%1$s</string>
     <string name="market_bids_your_bid">Inani lakho: %1$s</string>
-    <string name="market_carousel_thumbnail">Isithombe esincane %1$d</string>
+    <string name="market_carousel_thumbnail">Isithombe esincane %1$s</string>
     <string name="market_checkout_browser_unavailable">Asikho isiphequluli esitholakalayo sokuvula ikhasi lokukhokha</string>
     <string name="market_checkout_pwyw_label">Intengo yakho (okuncane %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Inani kufanele libe okungenani %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d amafayela anamathiselwe</string>
+    <string name="market_dispute_dialog_attach_count">%1$s amafayela anamathiselwe</string>
     <string name="market_dispute_dialog_evidence_section_title">Ubufakazi obufakiwe</string>
     <string name="market_dispute_dialog_evidence_submitter_line">kufakwe ngu-%1$s</string>
     <string name="market_editor_appeal">Phikisa ukulawulwa</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">Kulayishwa uhlu</string>
     <string name="market_listing_detail_relist_failed">Ayikwazanga ukufaka kabusha</string>
     <string name="market_listing_detail_relist_in_progress">Kufakwa kabusha</string>
-    <string name="market_listing_detail_sales_count">%1$d ukuthengiswa</string>
+    <string name="market_listing_detail_sales_count">%1$s ukuthengiswa</string>
     <string name="market_listing_detail_seller_banned_banner">Lo mthengisi uvinjelwe. Ama-oda amasha ngeke afakwe.</string>
     <string name="market_listing_detail_seller_suspended_banner">Lo mthengisi umisiwe okwesikhashana. Ama-oda amasha amisiwe kuze kube i-akhawunti ibuyiselwa.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Ukuthenga kukhutshaziwe ngenkathi i-akhawunti yomthengisi ikhawulelwe.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">Azikho izingxoxo okwamanje</string>
     <string name="market_messages_load_failed">Ayikwazanga ukulayisha ingxoxo</string>
     <string name="market_messages_send_failed">Ayikwazanga ukuthumela umyalezo</string>
-    <string name="market_messages_unread_badge">%1$d engafundiwe</string>
+    <string name="market_messages_unread_badge">%1$s engafundiwe</string>
     <string name="market_price_high_bid">Inani eliphezulu: %1$s</string>
     <string name="market_price_instant_buy">thenga manje: %1$s</string>
     <string name="market_price_starting_bid">Inani lokuqala: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">Ilungu kusukela %1$s</string>
     <string name="market_profile_joined">Wajoyina ngo-%1$s</string>
     <string name="market_profile_rating_breakdown">Ukuhlukaniswa kwesilinganiso</string>
-    <string name="market_profile_sales_count">%1$d ukuthengiswa</string>
-    <string name="market_profile_stars_value">%1$d izinkanyezi</string>
+    <string name="market_profile_sales_count">%1$s ukuthengiswa</string>
+    <string name="market_profile_stars_value">%1$s izinkanyezi</string>
     <string name="market_purchase_dispute_chargeback">Ukubuyiselwa kwemali %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ibhange lakho lifake isicelo sokubuyiselwa kwemali ku-oda. I-Stripe iphethe impikiswano nomthengisi; umphumela uzovela lapha lapho usunqunyiwe.</string>
     <string name="market_purchase_dispute_response">Impendulo yomthengisi</string>
-    <string name="market_purchase_download_many">Landa amafayela akho angu-%1$d ngezansi.</string>
+    <string name="market_purchase_download_many">Landa amafayela akho angu-%1$s ngezansi.</string>
     <string name="market_purchase_download_one">Landa ifayela lakho ngezansi.</string>
     <string name="market_purchase_review_from">Ukubuyekezwa okuvela ku-%1$s</string>
     <string name="market_purchases_auction_label">Indali #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Lokhu kuzokhansela indali. Uhlu luzofihlwa kubathengi; ungaluphinda ulufake kamuva njengohlaka olusha.</string>
     <string name="market_listings_remove_title">Susa lolu hlu?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Lokhu kuzokhansela indali futhi kwazise ababhidi abasebenzayo abangu-%1$d. Uhlu luzofihlwa kubathengi; ungaphinda ululethe kamuva njengohlaka olusha.</item>
-        <item quantity="other">Lokhu kuzokhansela indali futhi kwazise ababhidi abasebenzayo abangu-%1$d. Uhlu luzofihlwa kubathengi; ungaphinda ululethe kamuva njengohlaka olusha.</item>
+        <item quantity="one">Lokhu kuzokhansela indali futhi kwazise ababhidi abasebenzayo abangu-%1$s. Uhlu luzofihlwa kubathengi; ungaphinda ululethe kamuva njengohlaka olusha.</item>
+        <item quantity="other">Lokhu kuzokhansela indali futhi kwazise ababhidi abasebenzayo abangu-%1$s. Uhlu luzofihlwa kubathengi; ungaphinda ululethe kamuva njengohlaka olusha.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Lokhu kuzokhansela ukubhalisa okusebenzayo okungu-%1$d ekupheleni kwesikhathi samanje sokukhokha. Ababhalisile bazokwaziswa. Uhlu luzofihlwa kubathengi.</item>
-        <item quantity="other">Lokhu kuzokhansela ukubhalisa okusebenzayo okungu-%1$d ekupheleni kwesikhathi samanje sokukhokha. Ababhalisile bazokwaziswa. Uhlu luzofihlwa kubathengi.</item>
+        <item quantity="one">Lokhu kuzokhansela ukubhalisa okusebenzayo okungu-%1$s ekupheleni kwesikhathi samanje sokukhokha. Ababhalisile bazokwaziswa. Uhlu luzofihlwa kubathengi.</item>
+        <item quantity="other">Lokhu kuzokhansela ukubhalisa okusebenzayo okungu-%1$s ekupheleni kwesikhathi samanje sokukhokha. Ababhalisile bazokwaziswa. Uhlu luzofihlwa kubathengi.</item>
     </plurals>
 </resources>

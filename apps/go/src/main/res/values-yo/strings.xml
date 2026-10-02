@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Pa rẹ́</string>
     <string name="go_delete_message">Ere yii yoo yọ kuro lori atokọ rẹ. Eyi ko le pada.</string>
     <string name="go_delete_title">Pa eré náà rẹ́?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Gbà</string>
     <string name="go_draw_decline">Kọ̀</string>
     <string name="go_draw_offered_received">%1$s fún ní ìdábọ̀</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Ti jọ̀wọ́</string>
     <string name="go_new_game_title">Eré Go tuntun</string>
     <string name="go_new_game_no_friends">O gbọ́dọ̀ fi ọ̀rẹ́ kún kí o tó lè bẹ̀rẹ̀ eré.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Àwọn àmì tí a fi kún àmì Funfun láti san ẹ̀san fún Dúdú tí ó ń lọ ní àkọ́kọ́</string>
 
-    <string name="go_board_a11y">Pátákó Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Pátákó Go %1$d×%1$d, àkókò rẹ láti fi òkúta dúdú sí</string>
-    <string name="go_board_a11y_turn_white">Pátákó Go %1$d×%1$d, àkókò rẹ láti fi òkúta funfun sí</string>
+    <string name="go_board_a11y">Pátákó Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Pátákó Go %1$s×%1$s, àkókò rẹ láti fi òkúta dúdú sí</string>
+    <string name="go_board_a11y_turn_white">Pátákó Go %1$s×%1$s, àkókò rẹ láti fi òkúta funfun sí</string>
     <string name="go_status_scoring">Kíka — ẹ fohùn ṣọ̀kan lórí àmì tàbí ẹ máa bá eré lọ</string>
     <string name="go_score_proposed">Àmì tí a dábàá: dúdú %1$s, funfun %2$s</string>
     <string name="go_score_opponent_accepted">Alátakò rẹ gba àmì yìí: dúdú %1$s, funfun %2$s</string>

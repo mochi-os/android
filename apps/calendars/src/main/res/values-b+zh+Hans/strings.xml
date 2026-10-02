@@ -99,13 +99,13 @@
     <string name="calendars_repeat_forever">永久</string>
     <string name="calendars_reminder_time">准时</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">%1$d 分钟前</item>
+        <item quantity="other">%1$s 分钟前</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">%1$d 小时前</item>
+        <item quantity="other">%1$s 小时前</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">%1$d 天前</item>
+        <item quantity="other">%1$s 天前</item>
     </plurals>
     <string name="calendars_reminder_add">添加提醒</string>
     <string name="calendars_reminder_remove">移除提醒</string>
@@ -139,9 +139,9 @@
     <string name="calendars_poll_large">日历过大</string>
     <string name="calendars_poll_invalid">该地址未返回日历</string>
     <string name="calendars_poll_unreachable">无法访问该地址</string>
-    <string name="calendars_poll_status">该地址返回 %1$d</string>
+    <string name="calendars_poll_status">该地址返回 %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="other">%1$d 分钟</item>
+        <item quantity="other">%1$s 分钟</item>
     </plurals>
     <string name="calendars_preferences_zones">按事件自身的时区显示</string>
     <string name="calendars_event_backwards">结束早于开始</string>

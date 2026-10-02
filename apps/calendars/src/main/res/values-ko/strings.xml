@@ -99,13 +99,13 @@
     <string name="calendars_repeat_forever">무기한</string>
     <string name="calendars_reminder_time">일정 시작 시각</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">%1$d분 전</item>
+        <item quantity="other">%1$s분 전</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">%1$d시간 전</item>
+        <item quantity="other">%1$s시간 전</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">%1$d일 전</item>
+        <item quantity="other">%1$s일 전</item>
     </plurals>
     <string name="calendars_reminder_add">알림 추가</string>
     <string name="calendars_reminder_remove">알림 제거</string>
@@ -139,9 +139,9 @@
     <string name="calendars_poll_large">캘린더가 너무 커요</string>
     <string name="calendars_poll_invalid">주소에서 캘린더를 받지 못했어요</string>
     <string name="calendars_poll_unreachable">주소에 연결할 수 없어요</string>
-    <string name="calendars_poll_status">주소가 %1$d 응답을 보냈어요</string>
+    <string name="calendars_poll_status">주소가 %1$s 응답을 보냈어요</string>
     <plurals name="calendars_minutes">
-        <item quantity="other">%1$d분</item>
+        <item quantity="other">%1$s분</item>
     </plurals>
     <string name="calendars_preferences_zones">일정을 각자의 시간대로 표시</string>
     <string name="calendars_event_backwards">시작하기 전에 종료됨</string>

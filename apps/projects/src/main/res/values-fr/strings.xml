@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">a effectué une modification</string>
     <string name="projects_attachment_empty">Aucune pièce jointe</string>
     <string name="projects_attachment_default_name">pièce jointe</string>
-    <string name="projects_attachment_size_bytes">%1$d o</string>
-    <string name="projects_attachment_size_kb">%1$d Ko</string>
-    <string name="projects_attachment_size_mb">%1$d Mo</string>
-    <string name="projects_attachment_size_gb">%1$d Go</string>
+    <string name="projects_attachment_size_bytes">%1$s o</string>
+    <string name="projects_attachment_size_kb">%1$s Ko</string>
+    <string name="projects_attachment_size_mb">%1$s Mo</string>
+    <string name="projects_attachment_size_gb">%1$s Go</string>
     <string name="projects_request_new">Nouvelle demande de fusion</string>
     <string name="projects_request_status_closed">Fermée</string>
     <string name="projects_request_back_to_list">Retour à la liste</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Vérification du statut de fusion…</string>
     <string name="projects_request_can_merge">Peut être fusionnée</string>
     <string name="projects_request_cannot_merge">Fusion impossible</string>
-    <string name="projects_request_ahead_behind">%1$d en avance, %2$d en retard</string>
+    <string name="projects_request_ahead_behind">%1$s en avance, %2$s en retard</string>
     <string name="projects_request_draft_notice">Ceci est un brouillon. Marquer comme prêt avant de fusionner.</string>
     <string name="projects_request_view_diff">Voir les différences</string>
     <string name="projects_request_mark_ready">Marquer comme prêt</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Aucune colonne configurée pour cette vue</string>
     <string name="projects_board_no_options">Aucune option configurée pour le champ de colonne</string>
     <string name="projects_board_column_options">Options de colonne</string>
-    <string name="projects_board_nested_count">+%1$d imbriqués</string>
+    <string name="projects_board_nested_count">+%1$s imbriqués</string>
     <string name="projects_move_to_column">Déplacer vers la colonne</string>
     <string name="projects_move_to_row">Déplacer vers la ligne</string>
     <string name="projects_move_after">Après %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Trier et filtrer</string>
     <string name="projects_create_prefix_hint">Utilisé pour des identifiants lisibles comme %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d fichier en conflit</item>
-        <item quantity="other">%1$d fichiers en conflit</item>
+        <item quantity="one">%1$s fichier en conflit</item>
+        <item quantity="other">%1$s fichiers en conflit</item>
     </plurals>
     <string name="projects_design_export_saved">Conception enregistrée</string>
     <string name="projects_design_import_failed">Impossible de lire ce fichier</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Données du projet enregistrées</string>
     <string name="projects_exporting">Préparation de l\'export…</string>
     <string name="projects_board_add_column">Ajouter une colonne</string>
-    <string name="projects_design_sample">Exemple %1$d</string>
+    <string name="projects_design_sample">Exemple %1$s</string>
     <string name="projects_option_delete_title">Supprimer l\'option</string>
     <string name="projects_option_delete_message">Êtes-vous sûr de vouloir supprimer l\'option \"%1$s\" ?</string>
     <string name="projects_create_object_no_types">Aucun type d\'élément ne peut encore être créé. Créez d\'abord les éléments parents requis.</string>

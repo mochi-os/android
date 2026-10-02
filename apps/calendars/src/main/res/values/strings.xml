@@ -22,7 +22,7 @@
     <string name="calendars_poll_large">The calendar is too large</string>
     <string name="calendars_poll_invalid">The address did not return a calendar</string>
     <string name="calendars_poll_unreachable">The address could not be reached</string>
-    <string name="calendars_poll_status">The address answered %1$d</string>
+    <string name="calendars_poll_status">The address answered %1$s</string>
     <string name="calendars_poll_unauthorised">The calendar\'s server refused the account\'s credentials</string>
     <string name="calendars_poll_conflict">An event changed on both sides</string>
     <string name="calendars_poll_missing">The calendar is gone from its server</string>
@@ -51,8 +51,8 @@
     <string name="calendars_list_empty">No events</string>
     <string name="calendars_list_search">Search</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minute</item>
-        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$s minute</item>
+        <item quantity="other">%1$s minutes</item>
     </plurals>
 
     <!-- Events -->
@@ -109,16 +109,16 @@
     <string name="calendars_reminder_none">None</string>
     <string name="calendars_reminder_time">At the time</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minute before</item>
-        <item quantity="other">%1$d minutes before</item>
+        <item quantity="one">%1$s minute before</item>
+        <item quantity="other">%1$s minutes before</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d hour before</item>
-        <item quantity="other">%1$d hours before</item>
+        <item quantity="one">%1$s hour before</item>
+        <item quantity="other">%1$s hours before</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d day before</item>
-        <item quantity="other">%1$d days before</item>
+        <item quantity="one">%1$s day before</item>
+        <item quantity="other">%1$s days before</item>
     </plurals>
     <string name="calendars_reminder_add">Add reminder</string>
     <string name="calendars_reminder_remove">Remove reminder</string>

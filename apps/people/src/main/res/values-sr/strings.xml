@@ -180,9 +180,9 @@
     <string name="people_books_create">Направи именик</string>
     <string name="people_books_delete">Обриши именик</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Обрисати %1$s и његов %2$d контакт?</item>
-        <item quantity="few">Обрисати %1$s и његова %2$d контакта?</item>
-        <item quantity="other">Обрисати %1$s и његових %2$d контаката?</item>
+        <item quantity="one">Обрисати %1$s и његов %2$s контакт?</item>
+        <item quantity="few">Обрисати %1$s и његова %2$s контакта?</item>
+        <item quantity="other">Обрисати %1$s и његових %2$s контаката?</item>
     </plurals>
     <string name="people_welcome_body">Пронађите пријатеље широм Mochi-ја и повежите се. Додирните Додај контакт да пошаљете позивницу.</string>
     <string name="people_person_state_contact">У контактима</string>

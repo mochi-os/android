@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">מעלדונגען וועגן wiki־בלאַט־רעדאַקציעס, קאָמענטאַרן און פֿאַרבעטונגען.</string>
     <string name="wikis_pageview_toc_expand">ווײַז אינהאַלט־טאַבעלע</string>
     <string name="wikis_pageview_toc_collapse">באַהאַלט אינהאַלט־טאַבעלע</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">באַנײַט %1$s</string>
     <string name="wikis_pageview_not_found_description">דער בלאַט „%1$s“ עקזיסטירט נאָך נישט.</string>
     <string name="wikis_pageview_share_chooser">וויקי לינק</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">איר גייט אויסמעקן דעם בלאַט „%1$s“ (%2$s). מען קען דאָס צוריקדרייען דורך ווידער־אויפֿשטעלן פֿון דער געשיכטע.</string>
     <string name="wikis_delete_page_success">זײַטל אויסגעמעקט</string>
     <string name="wikis_revert_page_title">אומקערן זײַטל</string>
-    <string name="wikis_revert_page_message">איר גייט צוריקקערן %1$s צו ווערסיע %2$d. דאָס וועט שאַפֿן אַ נײַע רעוויזיע מיטן אינהאַלט פֿון ווערסיע %2$d.</string>
-    <string name="wikis_revert_page_default_comment">צוריקגעקערט צו ווערסיע %1$d</string>
-    <string name="wikis_revert_page_success">צוריקגעקערט צו ווערסיע %1$d</string>
+    <string name="wikis_revert_page_message">איר גייט צוריקקערן %1$s צו ווערסיע %2$s. דאָס וועט שאַפֿן אַ נײַע רעוויזיע מיטן אינהאַלט פֿון ווערסיע %2$s.</string>
+    <string name="wikis_revert_page_default_comment">צוריקגעקערט צו ווערסיע %1$s</string>
+    <string name="wikis_revert_page_success">צוריקגעקערט צו ווערסיע %1$s</string>
     <string name="wikis_rename_page_renaming">טויפֿט איבער…</string>
     <string name="wikis_rename_page_success">זײַטל איבערגעטויפֿט</string>
-    <string name="wikis_history_viewing">קוקן געשיכטע פֿאַר %1$s, איצטיקע ווערסיע %2$d</string>
-    <string name="wikis_revision_version_badge">ווערסיע %1$d</string>
+    <string name="wikis_history_viewing">קוקן געשיכטע פֿאַר %1$s, איצטיקע ווערסיע %2$s</string>
+    <string name="wikis_revision_version_badge">ווערסיע %1$s</string>
     <string name="wikis_search_pages_placeholder">זוכט בלעטער לויט טיטל אָדער אינהאַלט…</string>
     <string name="wikis_search_no_results">קיין בלעטער נישט געפֿונען פֿאַר „%1$s“. פּרוּווט אַנדערע זוך־ווערטער.</string>
     <string name="wikis_search_updated">באַנײַט %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">לױט %1$s</string>
     <string name="wikis_revision_show_page">ווײַז בלאַט</string>
     <string name="wikis_revision_compare_failed">מע האָט נישט געקענט לאָדן די פֿריִערדיקע ווערסיע פֿאַר פֿאַרגלײַך.</string>
-    <string name="wikis_revision_changes_from">ענדערונגען פֿון ווערסיע %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">ענדערונגען פֿון ווערסיע %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d קאָמענטאַר</item>
-        <item quantity="other">%d קאָמענטאַרן</item>
+        <item quantity="one">%s קאָמענטאַר</item>
+        <item quantity="other">%s קאָמענטאַרן</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d ענטפֿער</item>
-        <item quantity="other">+%d מער ענטפֿערס</item>
+        <item quantity="one">%s ענטפֿער</item>
+        <item quantity="other">+%s מער ענטפֿערס</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d זײַטל</item>
-        <item quantity="other">%d זײַטלעך</item>
+        <item quantity="one">%s זײַטל</item>
+        <item quantity="other">%s זײַטלעך</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d טעקע</item>
-        <item quantity="other">%d טעקעס</item>
+        <item quantity="one">%s טעקע</item>
+        <item quantity="other">%s טעקעס</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d בילד</item>
-        <item quantity="other">%d בילדער</item>
+        <item quantity="one">%s בילד</item>
+        <item quantity="other">%s בילדער</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d דאָקומענט</item>
-        <item quantity="other">%d דאָקומענטן</item>
+        <item quantity="one">%s דאָקומענט</item>
+        <item quantity="other">%s דאָקומענטן</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d זײַטל מיט דעם טאַג</item>
-        <item quantity="other">%d זײַטלעך מיט דעם טאַג</item>
+        <item quantity="one">%s זײַטל מיט דעם טאַג</item>
+        <item quantity="other">%s זײַטלעך מיט דעם טאַג</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">געפֿונען %1$d רעזולטאַט פֿאַר „%2$s“</item>
-        <item quantity="other">געפֿונען %1$d רעזולטאַטן פֿאַר „%2$s“</item>
+        <item quantity="one">געפֿונען %1$s רעזולטאַט פֿאַר „%2$s“</item>
+        <item quantity="other">געפֿונען %1$s רעזולטאַטן פֿאַר „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">מען האָט נישט געקענט אָפּהיטן די אונטערשריפֿט</string>
     <string name="wikis_attachments_upload_types">געשטיצטע טעקעס: בילדער, PDF, DOC, DOCX, TXT, און MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">נײַער RSS URL קאָפּירט צו קלעמברעט</string>
     <string name="wikis_rss_exists">דער דאָזיקער פֿיד URL איז שוין אַרויסגעגעבן געוואָרן און מען קען עס נישט ווײַזן נאָך אַ מאָל.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">ווײַזט דעם ערשטן %1$d קאָמענטאַר.</item>
-        <item quantity="other">ווײַזט די ערשטע %1$d קאָמענטאַרן.</item>
+        <item quantity="one">ווײַזט דעם ערשטן %1$s קאָמענטאַר.</item>
+        <item quantity="other">ווײַזט די ערשטע %1$s קאָמענטאַרן.</item>
     </plurals>
 </resources>

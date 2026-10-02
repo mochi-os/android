@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Notifikasyon sou modifikasyon paj wiki, kòmantè ak envitasyon.</string>
     <string name="wikis_pageview_toc_expand">Montre tab kontni</string>
     <string name="wikis_pageview_toc_collapse">Kache tab kontni</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Mete ajou %1$s</string>
     <string name="wikis_pageview_not_found_description">Paj “%1$s” la poko egziste.</string>
     <string name="wikis_pageview_share_chooser">Lyen wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Ou sou pwen efase paj “%1$s” (%2$s). Ou ka defèt aksyon sa a lè ou restore soti nan istwa a.</string>
     <string name="wikis_delete_page_success">Paj efase</string>
     <string name="wikis_revert_page_title">Retounen paj la</string>
-    <string name="wikis_revert_page_message">Ou sou pwen retounen %1$s nan vèsyon %2$d. Sa a ap kreye yon nouvo revizyon ak kontni vèsyon %2$d la.</string>
-    <string name="wikis_revert_page_default_comment">Retounen nan vèsyon %1$d</string>
-    <string name="wikis_revert_page_success">Retounen nan vèsyon %1$d</string>
+    <string name="wikis_revert_page_message">Ou sou pwen retounen %1$s nan vèsyon %2$s. Sa a ap kreye yon nouvo revizyon ak kontni vèsyon %2$s la.</string>
+    <string name="wikis_revert_page_default_comment">Retounen nan vèsyon %1$s</string>
+    <string name="wikis_revert_page_success">Retounen nan vèsyon %1$s</string>
     <string name="wikis_rename_page_renaming">Ap rebatize…</string>
     <string name="wikis_rename_page_success">Paj la rebatize</string>
-    <string name="wikis_history_viewing">Ap gade istwa pou %1$s, vèsyon aktyèl %2$d</string>
-    <string name="wikis_revision_version_badge">Vèsyon %1$d</string>
+    <string name="wikis_history_viewing">Ap gade istwa pou %1$s, vèsyon aktyèl %2$s</string>
+    <string name="wikis_revision_version_badge">Vèsyon %1$s</string>
     <string name="wikis_search_pages_placeholder">Chèche paj yo pa tit oswa kontni…</string>
     <string name="wikis_search_no_results">Nou pa jwenn paj pou “%1$s”. Eseye lòt tèm rechèch.</string>
     <string name="wikis_search_updated">Mete ajou %1$s</string>
@@ -289,30 +289,30 @@
     <string name="wikis_revision_author">pa %1$s</string>
     <string name="wikis_revision_show_page">Montre paj la</string>
     <string name="wikis_revision_compare_failed">Pa t kapab chaje vèsyon anvan an pou konparezon.</string>
-    <string name="wikis_revision_changes_from">Chanjman depi vèsyon %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Chanjman depi vèsyon %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d kòmantè</item>
+        <item quantity="other">%s kòmantè</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="other">+%d plis repons</item>
+        <item quantity="other">+%s plis repons</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="other">%d paj</item>
+        <item quantity="other">%s paj</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="other">%d fichye</item>
+        <item quantity="other">%s fichye</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="other">%d imaj</item>
+        <item quantity="other">%s imaj</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="other">%d dokiman</item>
+        <item quantity="other">%s dokiman</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="other">%d paj ak tag sa</item>
+        <item quantity="other">%s paj ak tag sa</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">Jwenn %1$d rezilta pou \"%2$s\"</item>
+        <item quantity="other">Jwenn %1$s rezilta pou \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Nou pa t ka anrejistre lejand lan</string>
     <string name="wikis_attachments_upload_types">Fichye ki sipòte: imaj, PDF, DOC, DOCX, TXT, ak MD.</string>
@@ -321,6 +321,6 @@
     <string name="wikis_rss_copied_new">Nouvo URL RSS kopye nan clipboard</string>
     <string name="wikis_rss_exists">URL fil sa a te deja bay e li pa ka montre ankò.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">Nap montre premye %1$d kòmantè yo.</item>
+        <item quantity="other">Nap montre premye %1$s kòmantè yo.</item>
     </plurals>
 </resources>

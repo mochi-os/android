@@ -181,7 +181,7 @@
     <string name="crm_tree_empty">ምንም ነገሮች የሉም</string>
     <string name="crm_board_no_columns">ለዚህ እይታ ምንም ዓምዶች አልተዋቀሩም</string>
     <string name="crm_board_no_options">ለዓምድ መስክ ምንም አማራጮች አልተዋቀሩም</string>
-    <string name="crm_board_nested_count">+%1$d ጎጆ</string>
+    <string name="crm_board_nested_count">+%1$s ጎጆ</string>
     <string name="crm_move_to_column">ወደ ዓምድ አንቀሳቅስ</string>
     <string name="crm_move_to_row">ወደ ረድፍ አንቀሳቅስ</string>
     <string name="crm_move_after">ከ%1$s በኋላ</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">የCRM ውሂብ ተቀምጧል</string>
     <string name="crm_create_upload_json">.zip ወይም .json ፋይል ይጫኑ</string>
     <string name="crm_create_blocked_no_options">መፍጠር አልተቻለም፦ %1$s ያስፈልጋል ግን የሚመረጡ አማራጮች የሉትም። በንድፍ ውስጥ አማራጮችን ያክሉ።</string>
-    <string name="crm_design_sample">ናሙና %1$d</string>
+    <string name="crm_design_sample">ናሙና %1$s</string>
     <string name="crm_option_delete_title">አማራጭ ሰርዝ</string>
     <string name="crm_option_delete_message">አማራጩን \"%1$s\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት?</string>
 </resources>

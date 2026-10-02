@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">Bu \"%1$s\" manbasidan kontent importini toʻxtatadi.</string>
     <string name="feeds_remove_also_delete_posts">Ushbu manbadan import qilingan postlar ham oʻchirilsin</string>
     <string name="feeds_suggested_credibility_title">Tavsiya etilgan ishonchlilik</string>
-    <string name="feeds_suggested_credibility_body">Mochi %1$d ishonchlilikni tavsiya qiladi. Qabul qilasizmi?</string>
+    <string name="feeds_suggested_credibility_body">Mochi %1$s ishonchlilikni tavsiya qiladi. Qabul qilasizmi?</string>
     <string name="feeds_suggested_credibility_keep">Joriyni saqlab qolish</string>
     <string name="feeds_ai_processing_mode">AI ishlov berish rejimi</string>
     <string name="feeds_ai_account">AI hisobi</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Istalgan postni shu yerda keyinroq uchun saqlash uchun uning xatcho\'piga teging.</string>
     <string name="feeds_saved_error_clear">Saqlangan postlarni tozalab bo\'lmadi</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d yangi post</item>
-        <item quantity="other">%d yangi post</item>
+        <item quantity="one">%s yangi post</item>
+        <item quantity="other">%s yangi post</item>
     </plurals>
     <string name="feeds_caught_up">Hammasini ko‘rdingiz</string>
     <string name="feeds_all_caught_up">Hammasi koʻrildi</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Tasma obyekt ID yoki barmoq izi</string>
     <string name="feeds_source_credibility_label">Ishonchlilik</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d soat</item>
-        <item quantity="other">%1$d soat</item>
+        <item quantity="one">%1$s soat</item>
+        <item quantity="other">%1$s soat</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d daqiqa</item>
-        <item quantity="other">%1$d daqiqa</item>
+        <item quantity="one">%1$s daqiqa</item>
+        <item quantity="other">%1$s daqiqa</item>
     </plurals>
     <string name="feeds_source_polling_interval">Har %1$s da so\'rov yuboriladi</string>
     <string name="feeds_access_level_react_full">Reaksiya berish va koʻrish</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Havola</string>
     <string name="feeds_share_link_title">Tasma havolasi</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d izoh</item>
-        <item quantity="other">%1$d izoh</item>
+        <item quantity="one">%1$s izoh</item>
+        <item quantity="other">%1$s izoh</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d ilova</item>
-        <item quantity="other">%1$d ilova</item>
+        <item quantity="one">%1$s ilova</item>
+        <item quantity="other">%1$s ilova</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d qoʻshimcha izohni koʻrish</item>
-        <item quantity="other">%1$d qoʻshimcha izohni koʻrish</item>
+        <item quantity="one">%1$s qoʻshimcha izohni koʻrish</item>
+        <item quantity="other">%1$s qoʻshimcha izohni koʻrish</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">bugun %1$d yil oldin</item>
-        <item quantity="other">bugun %1$d yil oldin</item>
+        <item quantity="one">bugun %1$s yil oldin</item>
+        <item quantity="other">bugun %1$s yil oldin</item>
     </plurals>
     <string name="feeds_block">Bloklash</string>
     <string name="feeds_removed_from_feed">Siz bu tasmadan chiqarildingiz</string>

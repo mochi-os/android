@@ -33,7 +33,7 @@
     <string name="staff_accounts_unnamed">بي نام</string>
     <string name="staff_accounts_unsuspend">معطلي ھٽايو</string>
     <string name="staff_accounts_unsuspended_toast">اڪائونٽ بحال ڪيو ويو</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">منسوخ ڪريو</string>
     <string name="staff_appeals_decide">فيصلو ڪريو</string>
     <string name="staff_appeals_decision_denied">لسٽنگ کي رد رکيو</string>
@@ -399,7 +399,7 @@
 
     <string name="staff_accounts_action_unsuspend_title">معطلي ختم ڪريو</string>
     <string name="staff_accounts_reason_optional_label">سبب (اختياري)</string>
-    <string name="staff_accounts_sales">%1$d وڪرا</string>
+    <string name="staff_accounts_sales">%1$s وڪرا</string>
     <string name="staff_appeals_reason_label">وڪرو ڪندڙ جي اپيل جو سبب</string>
     <string name="staff_audit_action_staff_team_role_changed">اسٽاف جو ڪردار تبديل ٿيو</string>
     <string name="staff_categories_delete_desc">”%1$s“ ڊاهيو؟ اهو واپس نه ٿو ٿي سگهي.</string>

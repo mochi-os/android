@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">هميشه</string>
     <string name="calendars_reminder_time">وقت تي</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d منٽ اڳ</item>
-        <item quantity="other">%1$d منٽ اڳ</item>
+        <item quantity="one">%1$s منٽ اڳ</item>
+        <item quantity="other">%1$s منٽ اڳ</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d ڪلاڪ اڳ</item>
-        <item quantity="other">%1$d ڪلاڪ اڳ</item>
+        <item quantity="one">%1$s ڪلاڪ اڳ</item>
+        <item quantity="other">%1$s ڪلاڪ اڳ</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ڏينهن اڳ</item>
-        <item quantity="other">%1$d ڏينهن اڳ</item>
+        <item quantity="one">%1$s ڏينهن اڳ</item>
+        <item quantity="other">%1$s ڏينهن اڳ</item>
     </plurals>
     <string name="calendars_reminder_add">ياددهاني شامل ڪريو</string>
     <string name="calendars_reminder_remove">ياددهاني هٽايو</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">ڪئلينڊر تمام وڏو آهي</string>
     <string name="calendars_poll_invalid">پتي مان ڪوبه ڪئلينڊر نه مليو</string>
     <string name="calendars_poll_unreachable">پتي تائين پھچي نه سگهيو</string>
-    <string name="calendars_poll_status">پتي %1$d جواب ڏنو</string>
+    <string name="calendars_poll_status">پتي %1$s جواب ڏنو</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d منٽ</item>
-        <item quantity="other">%1$d منٽ</item>
+        <item quantity="one">%1$s منٽ</item>
+        <item quantity="other">%1$s منٽ</item>
     </plurals>
     <string name="calendars_preferences_zones">واقعن کي انهن جي پنهنجي ٽائيم زون ۾ ڏيکاريو</string>
     <string name="calendars_event_backwards">شروع ٿيڻ کان اڳ ختم ٿئي ٿو</string>

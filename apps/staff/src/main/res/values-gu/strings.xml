@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">નામ વગરનું</string>
     <string name="staff_accounts_unsuspend">સસ્પેન્શન દૂર કરો</string>
     <string name="staff_accounts_unsuspended_toast">ખાતું પુનઃચાલુ કર્યું</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">રદ કરો</string>
     <string name="staff_appeals_decide">નિર્ણય કરો</string>
     <string name="staff_appeals_decision_denied">સૂચિ નકારી રાખો</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">ઓર્ડર #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">કારણ (વૈકલ્પિક)</string>
-    <string name="staff_accounts_sales">%1$d વેચાણ</string>
+    <string name="staff_accounts_sales">%1$s વેચાણ</string>
     <string name="staff_appeals_reason_label">વિક્રેતાનું અપીલ કારણ</string>
     <string name="staff_audit_action_staff_team_role_changed">સ્ટાફની ભૂમિકા બદલાઈ</string>
     <string name="staff_categories_delete_desc">“%1$s” કાઢી નાખીએ? આ પૂર્વવત્ કરી શકાશે નહીં.</string>

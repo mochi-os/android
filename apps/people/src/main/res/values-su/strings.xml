@@ -180,7 +180,7 @@
     <string name="people_books_create">Jieun buku alamat</string>
     <string name="people_books_delete">Pupus buku alamat</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">Pupus %1$s jeung %2$d kontak di jerona?</item>
+        <item quantity="other">Pupus %1$s jeung %2$s kontak di jerona?</item>
     </plurals>
     <string name="people_welcome_body">Panggihan babaturan di sakuliah Mochi sarta nyambung. Ketok Tambih kontak pikeun ngirim ondangan.</string>
     <string name="people_person_state_contact">Aya dina kontak</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ბაზარი</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ბიოგრაფია</string>
     <string name="market_account_biography_placeholder">უამბეთ მყიდველებს თქვენ შესახებ…</string>
     <string name="market_account_load_failed">ანგარიშის ჩატვირთვა ვერ მოხერხდა</string>
@@ -55,7 +55,7 @@
     <string name="market_bids_tab_outbid">გადაჭარბებული ფსონი</string>
     <string name="market_bids_tab_won">მოგებული</string>
     <string name="market_bids_title">ფსონები</string>
-    <string name="market_carousel_main">ფოტო %1$d / %2$d</string>
+    <string name="market_carousel_main">ფოტო %1$s / %2$s</string>
     <string name="market_channel_name">ბაზარი</string>
     <string name="market_chargeback_reason_bank_cannot_process">ბანკმა ვერ დაამუშავა</string>
     <string name="market_chargeback_reason_check_returned">ჩეკი დაბრუნდა</string>
@@ -134,7 +134,7 @@
     <string name="market_editor_condition_refurbished">აღდგენილი</string>
     <string name="market_editor_condition_used">მეორადი</string>
     <string name="market_editor_currency">ვალუტა</string>
-    <string name="market_editor_days">%1$d დღე</string>
+    <string name="market_editor_days">%1$s დღე</string>
     <string name="market_editor_delete">განცხადების წაშლა</string>
     <string name="market_editor_description">აღწერა</string>
     <string name="market_editor_interval_monthly">ყოველთვიური</string>
@@ -325,7 +325,7 @@
     <string name="market_purchases_title">შესყიდვები</string>
     <string name="market_rating_label">შეფასება</string>
     <string name="market_rating_no_reviews">მიმოხილვები ჯერ არ არის</string>
-    <string name="market_rating_reviews">(%1$d მიმოხილვა)</string>
+    <string name="market_rating_reviews">(%1$s მიმოხილვა)</string>
     <string name="market_refund_amount_label">თანხა</string>
     <string name="market_refund_body">მიუთითეთ თქვენი დაბრუნების მოთხოვნის მიზეზი.</string>
     <string name="market_refund_details_label">დეტალები</string>
@@ -475,10 +475,10 @@
     <string name="market_sale_review_response_submitting">იგზავნება…</string>
     <string name="market_checkout_subscribing">გამოწერა მიმდინარეობს…</string>
     <string name="market_filter_remove">ფილტრის წაშლა</string>
-    <string name="market_listing_detail_sales_count">%1$d გაყიდვა</string>
+    <string name="market_listing_detail_sales_count">%1$s გაყიდვა</string>
     <string name="market_listings_action_appeal">მოცილების გასაჩივრება</string>
     <string name="market_listings_share_chooser">გაზიარება</string>
-    <string name="market_profile_sales_count">%1$d გაყიდვა</string>
+    <string name="market_profile_sales_count">%1$s გაყიდვა</string>
     <string name="market_refund_dialog_amount_label">თანხა</string>
 
     <string name="market_account_status_restrictions">ანგარიშის ამ მდგომარეობაში ზოგიერთი მოქმედება, მათ შორის ახალი განცხადებების შექმნა და შეკვეთების დასრულება, შეზღუდულია.</string>
@@ -497,11 +497,11 @@
     <string name="market_bids_current_bid">მიმდინარე: %1$s</string>
     <string name="market_bids_ends_in">სრულდება: %1$s</string>
     <string name="market_bids_your_bid">თქვენი ფსონი: %1$s</string>
-    <string name="market_carousel_thumbnail">მინიატურა %1$d</string>
+    <string name="market_carousel_thumbnail">მინიატურა %1$s</string>
     <string name="market_checkout_browser_unavailable">გადახდის გვერდის გასახსნელად ბრაუზერი მიუწვდომელია</string>
     <string name="market_checkout_pwyw_label">თქვენი ფასი (მინიმუმ %1$s)</string>
     <string name="market_checkout_pwyw_min_error">თანხა უნდა იყოს მინიმუმ %1$s</string>
-    <string name="market_dispute_dialog_attach_count">მიმაგრებულია %1$d ფაილი</string>
+    <string name="market_dispute_dialog_attach_count">მიმაგრებულია %1$s ფაილი</string>
     <string name="market_dispute_dialog_evidence_section_title">წარდგენილი მტკიცებულება</string>
     <string name="market_dispute_dialog_evidence_submitter_line">წარადგინა %1$s-მ</string>
     <string name="market_editor_appeal">მოდერაციის გასაჩივრება</string>
@@ -572,7 +572,7 @@
     <string name="market_messages_inbox_empty_title">ჯერ არცერთი მიმოწერა</string>
     <string name="market_messages_load_failed">მიმოწერის ჩატვირთვა ვერ მოხერხდა</string>
     <string name="market_messages_send_failed">შეტყობინების გაგზავნა ვერ მოხერხდა</string>
-    <string name="market_messages_unread_badge">%1$d წაუკითხავი</string>
+    <string name="market_messages_unread_badge">%1$s წაუკითხავი</string>
     <string name="market_price_high_bid">მაღალი განაცხადი: %1$s</string>
     <string name="market_price_instant_buy">მყისიერი ყიდვა: %1$s</string>
     <string name="market_price_starting_bid">საწყისი განაცხადი: %1$s</string>
@@ -580,11 +580,11 @@
     <string name="market_profile_member_since">წევრი %1$s-დან</string>
     <string name="market_profile_joined">შემოუერთდა %1$s</string>
     <string name="market_profile_rating_breakdown">შეფასებების დეტალები</string>
-    <string name="market_profile_stars_value">%1$d ვარსკვლავი</string>
+    <string name="market_profile_stars_value">%1$s ვარსკვლავი</string>
     <string name="market_purchase_dispute_chargeback">გადახდის გასაჩივრება %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">თქვენმა ბანკმა ამ შეკვეთაზე გადახდის გასაჩივრება წარადგინა. Stripe განიხილავს დავას გამყიდველთან; შედეგი აქ გამოჩნდება გადაწყვეტილების მიღების შემდეგ.</string>
     <string name="market_purchase_dispute_response">გამყიდველის პასუხი</string>
-    <string name="market_purchase_download_many">ჩამოტვირთეთ თქვენი %1$d ფაილი ქვემოთ.</string>
+    <string name="market_purchase_download_many">ჩამოტვირთეთ თქვენი %1$s ფაილი ქვემოთ.</string>
     <string name="market_purchase_download_one">ჩამოტვირთეთ თქვენი ფაილი ქვემოთ.</string>
     <string name="market_purchase_review_from">მიმოხილვა %1$s-სგან</string>
     <string name="market_purchases_auction_label">აუქციონი #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">ეს გააუქმებს აუქციონს. ლისტინგი დაიმალება მყიდველებისგან; შეგიძლიათ მოგვიანებით ხელახლა ჩამოთვალოთ ახალ დრაფტად.</string>
     <string name="market_listings_remove_title">წავშალოთ ეს განცხადება?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">ეს გააუქმებს აუქციონს და შეატყობინებს %1$d აქტიურ მონაწილეს. განცხადება დაიმალება მყიდველებისგან; მოგვიანებით შეგიძლიათ ხელახლა განათავსოთ ახალ მონახაზად.</item>
-        <item quantity="other">ეს გააუქმებს აუქციონს და შეატყობინებს %1$d აქტიურ მონაწილეს. განცხადება დაიმალება მყიდველებისგან; მოგვიანებით შეგიძლიათ ხელახლა განათავსოთ ახალ მონახაზად.</item>
+        <item quantity="one">ეს გააუქმებს აუქციონს და შეატყობინებს %1$s აქტიურ მონაწილეს. განცხადება დაიმალება მყიდველებისგან; მოგვიანებით შეგიძლიათ ხელახლა განათავსოთ ახალ მონახაზად.</item>
+        <item quantity="other">ეს გააუქმებს აუქციონს და შეატყობინებს %1$s აქტიურ მონაწილეს. განცხადება დაიმალება მყიდველებისგან; მოგვიანებით შეგიძლიათ ხელახლა განათავსოთ ახალ მონახაზად.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">ეს გააუქმებს %1$d აქტიურ გამოწერას მიმდინარე ბილინგის პერიოდის ბოლოს. გამომწერებს ეცნობებათ. განცხადება დაიმალება მყიდველებისგან.</item>
-        <item quantity="other">ეს გააუქმებს %1$d აქტიურ გამოწერას მიმდინარე ბილინგის პერიოდის ბოლოს. გამომწერებს ეცნობებათ. განცხადება დაიმალება მყიდველებისგან.</item>
+        <item quantity="one">ეს გააუქმებს %1$s აქტიურ გამოწერას მიმდინარე ბილინგის პერიოდის ბოლოს. გამომწერებს ეცნობებათ. განცხადება დაიმალება მყიდველებისგან.</item>
+        <item quantity="other">ეს გააუქმებს %1$s აქტიურ გამოწერას მიმდინარე ბილინგის პერიოდის ბოლოს. გამომწერებს ეცნობებათ. განცხადება დაიმალება მყიდველებისგან.</item>
     </plurals>
 </resources>

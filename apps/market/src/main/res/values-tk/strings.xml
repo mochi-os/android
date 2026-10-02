@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Bazar</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografiýa</string>
     <string name="market_account_biography_placeholder">Alyjylara özüň hakda gürrüň ber…</string>
     <string name="market_account_load_failed">Hasaby ýüklemek başartmady</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">Has ýokary teklip edildi</string>
     <string name="market_bids_tab_won">Ýeňildi</string>
     <string name="market_bids_title">Tekliplar</string>
-    <string name="market_carousel_main">Surat %1$d / %2$d</string>
+    <string name="market_carousel_main">Surat %1$s / %2$s</string>
     <string name="market_channel_name">Bazar</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank işläp bilmedi</string>
     <string name="market_chargeback_reason_check_returned">Çek yzyna gaýtaryldy</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">Täzelenen</string>
     <string name="market_editor_condition_used">Ulanylan</string>
     <string name="market_editor_currency">Walýuta</string>
-    <string name="market_editor_days">%1$d gün</string>
+    <string name="market_editor_days">%1$s gün</string>
     <string name="market_editor_delete">Bildirişi pozmak</string>
     <string name="market_editor_description">Düşündiriş</string>
     <string name="market_editor_interval_monthly">Aýlyk</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">Satyn alyşlar</string>
     <string name="market_rating_label">Baha</string>
     <string name="market_rating_no_reviews">Heniz synlar ýok</string>
-    <string name="market_rating_reviews">(%1$d syn)</string>
+    <string name="market_rating_reviews">(%1$s syn)</string>
     <string name="market_refund_amount_label">Mukdar</string>
     <string name="market_refund_body">Yzyna gaýtarmak haýyşy üçin sebäp beriň.</string>
     <string name="market_refund_details_label">Jikme-jiklikler</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">Şu wagt: %1$s</string>
     <string name="market_bids_ends_in">Tamamlanmagyna %1$s</string>
     <string name="market_bids_your_bid">Siziň tekibiňiz: %1$s</string>
-    <string name="market_carousel_thumbnail">Kiçi surat %1$d</string>
+    <string name="market_carousel_thumbnail">Kiçi surat %1$s</string>
     <string name="market_checkout_browser_unavailable">Töleg sahypasyny açmaga brauzer ýok</string>
     <string name="market_checkout_pwyw_label">Siziň bahaňyz (iň azy %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Mukdar iň azyndan %1$s bolmaly</string>
-    <string name="market_dispute_dialog_attach_count">%1$d faýl goşuldy</string>
+    <string name="market_dispute_dialog_attach_count">%1$s faýl goşuldy</string>
     <string name="market_dispute_dialog_evidence_section_title">Berlen subutnamalar</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s tarapyndan berildi</string>
     <string name="market_editor_appeal">Moderasiýa şikaýat etmek</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">Sanaw ýüklenýär</string>
     <string name="market_listing_detail_relist_failed">Gaýtadan sanawa goşup bolmady</string>
     <string name="market_listing_detail_relist_in_progress">Gaýtadan sanawa goşulýar</string>
-    <string name="market_listing_detail_sales_count">%1$d satuw</string>
+    <string name="market_listing_detail_sales_count">%1$s satuw</string>
     <string name="market_listing_detail_seller_banned_banner">Bu satyjy gadagan edildi. Täze sargytlar berlip bilinmez.</string>
     <string name="market_listing_detail_seller_suspended_banner">Bu satyjy wagtlaýyn togtadyldy. Hasap dikeldilýänçä täze sargytlar saklanýar.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Satyjynyň hasaby çäklendirilen wagty satyn almak öçürilýär.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">Heniz söhbet ýok</string>
     <string name="market_messages_load_failed">Söhbeti ýükläp bolmady</string>
     <string name="market_messages_send_failed">Habary iberip bolmady</string>
-    <string name="market_messages_unread_badge">%1$d okalmadyk</string>
+    <string name="market_messages_unread_badge">%1$s okalmadyk</string>
     <string name="market_price_high_bid">Iň ýokary teklip: %1$s</string>
     <string name="market_price_instant_buy">dessine satyn al: %1$s</string>
     <string name="market_price_starting_bid">Başlangyç teklip: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">%1$s senesinden bäri agza</string>
     <string name="market_profile_joined">%1$s goşuldy</string>
     <string name="market_profile_rating_breakdown">Baha bölegi</string>
-    <string name="market_profile_sales_count">%1$d satuw</string>
-    <string name="market_profile_stars_value">%1$d ýyldyz</string>
+    <string name="market_profile_sales_count">%1$s satuw</string>
+    <string name="market_profile_stars_value">%1$s ýyldyz</string>
     <string name="market_purchase_dispute_chargeback">Tölegiň yzyna alynmagy %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankyňyz bu sargyt boýunça tölegiň yzyna alynmagyny talap etdi. Stripe satyjy bilen jedeli çözýär; netije çykarylanda bu ýerde görkeziler.</string>
     <string name="market_purchase_dispute_response">Satyjynyň jogaby</string>
-    <string name="market_purchase_download_many">%1$d faýlyňyzy aşakdan ýükläp alyň.</string>
+    <string name="market_purchase_download_many">%1$s faýlyňyzy aşakdan ýükläp alyň.</string>
     <string name="market_purchase_download_one">Faýlyňyzy aşakdan ýükläp alyň.</string>
     <string name="market_purchase_review_from">%1$s tarapyndan synag</string>
     <string name="market_purchases_auction_label">Auksion #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Bu auksiýony ýatyrar. Sanaw alyjylardan gizleniler; soň ony täze çernowik hökmünde täzeden sanawlap bolar.</string>
     <string name="market_listings_remove_title">Bu sanawy aýyrmak?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Bu auksiony ýatyrar we %1$d işjeň teklipçä habar berer. Bildiriş alyjylardan gizlener; soňra ony täze taslama hökmünde gaýtadan ýerleşdirip bilersiňiz.</item>
-        <item quantity="other">Bu auksiony ýatyrar we %1$d işjeň teklipçä habar berer. Bildiriş alyjylardan gizlener; soňra ony täze taslama hökmünde gaýtadan ýerleşdirip bilersiňiz.</item>
+        <item quantity="one">Bu auksiony ýatyrar we %1$s işjeň teklipçä habar berer. Bildiriş alyjylardan gizlener; soňra ony täze taslama hökmünde gaýtadan ýerleşdirip bilersiňiz.</item>
+        <item quantity="other">Bu auksiony ýatyrar we %1$s işjeň teklipçä habar berer. Bildiriş alyjylardan gizlener; soňra ony täze taslama hökmünde gaýtadan ýerleşdirip bilersiňiz.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Bu häzirki töleg döwrüniň ahyrynda %1$d işjeň abunalygy ýatyrar. Abunaçylara habar berler. Bildiriş alyjylardan gizlener.</item>
-        <item quantity="other">Bu häzirki töleg döwrüniň ahyrynda %1$d işjeň abunalygy ýatyrar. Abunaçylara habar berler. Bildiriş alyjylardan gizlener.</item>
+        <item quantity="one">Bu häzirki töleg döwrüniň ahyrynda %1$s işjeň abunalygy ýatyrar. Abunaçylara habar berler. Bildiriş alyjylardan gizlener.</item>
+        <item quantity="other">Bu häzirki töleg döwrüniň ahyrynda %1$s işjeň abunalygy ýatyrar. Abunaçylara habar berler. Bildiriş alyjylardan gizlener.</item>
     </plurals>
 </resources>

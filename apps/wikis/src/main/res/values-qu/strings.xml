@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Wiki página hukchaykunamanta, comentariokunamanta hinaspa waqyaykunamanta willaykuna.</string>
     <string name="wikis_pageview_toc_expand">Índiceta rikuchiy</string>
     <string name="wikis_pageview_toc_collapse">Índiceta pakay</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Musuqchasqa %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” páginaqa manaraqmi kanchu.</string>
     <string name="wikis_pageview_share_chooser">Wiki t\'inki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">\"%1$s\" (%2$s) páginata wischuyta munachkanki. Kay ruwayqa historiamanta kutichipuspa kutichiy atikun.</string>
     <string name="wikis_delete_page_success">Página wischusqa</string>
     <string name="wikis_revert_page_title">Páginata kutichipuy</string>
-    <string name="wikis_revert_page_message">%1$s-ta %2$d versionman kutichipuyta munachkanki. Kayqa %2$d versionpa contenidonwan musuq revisionta kamarinqa.</string>
-    <string name="wikis_revert_page_default_comment">%1$d versionman kutichipusqa</string>
-    <string name="wikis_revert_page_success">%1$d versionman kutichipusqa</string>
+    <string name="wikis_revert_page_message">%1$s-ta %2$s versionman kutichipuyta munachkanki. Kayqa %2$s versionpa contenidonwan musuq revisionta kamarinqa.</string>
+    <string name="wikis_revert_page_default_comment">%1$s versionman kutichipusqa</string>
+    <string name="wikis_revert_page_success">%1$s versionman kutichipusqa</string>
     <string name="wikis_rename_page_renaming">Sutinta hukchachkan…</string>
     <string name="wikis_rename_page_success">Páginapa sutin hukchasqa</string>
-    <string name="wikis_history_viewing">%1$s-pa historianta qhawachkanki, kunan versión %2$d</string>
-    <string name="wikis_revision_version_badge">Versión %1$d</string>
+    <string name="wikis_history_viewing">%1$s-pa historianta qhawachkanki, kunan versión %2$s</string>
+    <string name="wikis_revision_version_badge">Versión %1$s</string>
     <string name="wikis_search_pages_placeholder">Sutinchaywan utaq contenidowan páginakunata maskay…</string>
     <string name="wikis_search_no_results">“%1$s”-paq mana páginakuna tarisqachu. Huk maskana simikunawan kutimanta ruway.</string>
     <string name="wikis_search_updated">Musuqchasqa %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s-pa</string>
     <string name="wikis_revision_show_page">Páginata rikuchiy</string>
     <string name="wikis_revision_compare_failed">Tupachinapaq ñawpaq versión mana chaskichikurqachu.</string>
-    <string name="wikis_revision_changes_from">%1$d → %2$d versiónmanta hukchasqakuna</string>
+    <string name="wikis_revision_changes_from">%1$s → %2$s versiónmanta hukchasqakuna</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d comentario</item>
-        <item quantity="other">%d comentariokuna</item>
+        <item quantity="one">%s comentario</item>
+        <item quantity="other">%s comentariokuna</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d kutichiy</item>
-        <item quantity="other">+%d aswan kutichiykuna</item>
+        <item quantity="one">%s kutichiy</item>
+        <item quantity="other">+%s aswan kutichiykuna</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d página</item>
-        <item quantity="other">%d páginakuna</item>
+        <item quantity="one">%s página</item>
+        <item quantity="other">%s páginakuna</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d archivo</item>
-        <item quantity="other">%d archivokuna</item>
+        <item quantity="one">%s archivo</item>
+        <item quantity="other">%s archivokuna</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d imagen</item>
-        <item quantity="other">%d imagenkuna</item>
+        <item quantity="one">%s imagen</item>
+        <item quantity="other">%s imagenkuna</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d documento</item>
-        <item quantity="other">%d documentokuna</item>
+        <item quantity="one">%s documento</item>
+        <item quantity="other">%s documentokuna</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Kay unanchayuq %d página</item>
-        <item quantity="other">Kay unanchayuq %d páginakuna</item>
+        <item quantity="one">Kay unanchayuq %s página</item>
+        <item quantity="other">Kay unanchayuq %s páginakuna</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d resultado \"%2$s\"-paq tarisqa</item>
-        <item quantity="other">%1$d resultadokuna \"%2$s\"-paq tarisqa</item>
+        <item quantity="one">%1$s resultado \"%2$s\"-paq tarisqa</item>
+        <item quantity="other">%1$s resultadokuna \"%2$s\"-paq tarisqa</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Sut\'inchayta waqaychayta mana atikunchu</string>
     <string name="wikis_attachments_upload_types">Atikuq archivokuna: imagenkuna, PDF, DOC, DOCX, TXT hinaspa MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Musuq RSS URL clipboardman copiasqa</string>
     <string name="wikis_rss_exists">Kay feed URL ñam qusqa karqan, manam kutimanta rikuchiyta atinchu.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Ñawpaq %1$d comentario rikuchisqa.</item>
-        <item quantity="other">Ñawpaq %1$d comentariokuna rikuchisqa.</item>
+        <item quantity="one">Ñawpaq %1$s comentario rikuchisqa.</item>
+        <item quantity="other">Ñawpaq %1$s comentariokuna rikuchisqa.</item>
     </plurals>
 </resources>

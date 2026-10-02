@@ -180,8 +180,8 @@
     <string name="people_books_create">שאַפֿן אַדרעס־בוך</string>
     <string name="people_books_delete">אויסמעקן אַדרעס־בוך</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">אויסמעקן %1$s און זײַן %2$d קאָנטאַקט?</item>
-        <item quantity="other">אויסמעקן %1$s און זײַנע %2$d קאָנטאַקטן?</item>
+        <item quantity="one">אויסמעקן %1$s און זײַן %2$s קאָנטאַקט?</item>
+        <item quantity="other">אויסמעקן %1$s און זײַנע %2$s קאָנטאַקטן?</item>
     </plurals>
     <string name="people_welcome_body">געפֿינט פֿרײַנד איבער Mochi און פֿאַרבינדט זיך. דריקט צולייגן קאָנטאַקט צו שיקן אַן אײַנלאַדונג.</string>
     <string name="people_person_state_contact">אין די קאָנטאַקטן</string>

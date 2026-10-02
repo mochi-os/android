@@ -151,7 +151,7 @@ private fun TagPagesBody(
             text = pluralStringResource(
                 R.plurals.wikis_tag_pages_count,
                 pages.size,
-                pages.size,
+                LocalFormat.current.formatNumber(pages.size),
             ),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,

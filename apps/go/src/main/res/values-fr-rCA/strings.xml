@@ -16,7 +16,7 @@
     <string name="go_empty_active">Aucune partie en cours.</string>
     <string name="go_status_draw">Partie nulle</string>
     <string name="go_status_resigned">Abandon</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_color_black">Noir</string>
     <string name="go_color_white">Blanc</string>
     <string name="go_status_your_move">À votre tour</string>
@@ -66,7 +66,7 @@
     <string name="go_new_game_no_friends">Vous devez ajouter un ami avant de pouvoir commencer une partie.</string>
     <string name="go_new_game_add_friends">Ajouter des amis</string>
     <string name="go_new_game_board_size_label">Taille du goban</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_label">Komi</string>
     <string name="go_new_game_komi_field_label">Komi</string>
     <string name="go_new_game_komi_range_error">Doit être entre 0 et 10</string>

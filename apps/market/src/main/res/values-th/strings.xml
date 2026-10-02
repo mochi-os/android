@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">กำลังส่ง…</string>
     <string name="market_checkout_subscribing">กำลังสมัครสมาชิก…</string>
     <string name="market_filter_remove">ลบตัวกรอง</string>
-    <string name="market_listing_detail_sales_count">%1$d รายการขาย</string>
-    <string name="market_profile_sales_count">%1$d รายการขาย</string>
+    <string name="market_listing_detail_sales_count">%1$s รายการขาย</string>
+    <string name="market_profile_sales_count">%1$s รายการขาย</string>
     <string name="market_purchase_dispute_response">การตอบของผู้ขาย</string>
     <string name="market_purchases_order_label">คำสั่งซื้อ #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">บอกผู้ซื้อเกี่ยวกับตัวคุณ…</string>
     <string name="market_account_load_failed">ไม่สามารถโหลดบัญชีได้</string>
     <string name="market_account_save_failed">ไม่สามารถบันทึกการเปลี่ยนแปลงได้</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">ปัจจุบัน: %1$s</string>
     <string name="market_bids_ends_in">สิ้นสุดใน %1$s</string>
     <string name="market_bids_your_bid">การประมูลของคุณ: %1$s</string>
-    <string name="market_carousel_main">รูปภาพ %1$d จาก %2$d</string>
-    <string name="market_carousel_thumbnail">ภาพย่อ %1$d</string>
+    <string name="market_carousel_main">รูปภาพ %1$s จาก %2$s</string>
+    <string name="market_carousel_thumbnail">ภาพย่อ %1$s</string>
     <string name="market_checkout_browser_unavailable">ไม่มีเบราว์เซอร์ที่จะเปิดหน้าชำระเงิน</string>
     <string name="market_checkout_pay_button">ชำระเงินด้วย Stripe</string>
     <string name="market_checkout_processing">กำลังประมวลผล…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">แนบหลักฐาน</string>
-    <string name="market_dispute_dialog_attach_count">แนบไฟล์แล้ว %1$d ไฟล์</string>
+    <string name="market_dispute_dialog_attach_count">แนบไฟล์แล้ว %1$s ไฟล์</string>
     <string name="market_dispute_dialog_evidence_role_staff">ทีมงาน Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">หลักฐานที่ส่ง</string>
     <string name="market_dispute_dialog_evidence_submitter_line">ส่งโดย %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL อ้างอิง</string>
     <string name="market_editor_assets_empty">ยังไม่มีสินทรัพย์</string>
     <string name="market_editor_category_none">เลือกหมวดหมู่</string>
-    <string name="market_editor_days">%1$d วัน</string>
+    <string name="market_editor_days">%1$s วัน</string>
     <string name="market_editor_delete">ลบรายการประกาศ</string>
     <string name="market_editor_delete_confirm_message">การดำเนินการนี้จะลบรายการประกาศอย่างถาวร</string>
     <string name="market_editor_delete_confirm_title">ลบประกาศ?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">ไม่สามารถโหลดการสนทนาได้</string>
     <string name="market_messages_send_failed">ส่งข้อความไม่สำเร็จ</string>
     <string name="market_messages_thread_title">การสนทนา</string>
-    <string name="market_messages_unread_badge">ยังไม่ได้อ่าน %1$d รายการ</string>
+    <string name="market_messages_unread_badge">ยังไม่ได้อ่าน %1$s รายการ</string>
     <string name="market_price_from">เริ่มต้น %1$s</string>
     <string name="market_price_high_bid">ราคาประมูลสูงสุด: %1$s</string>
     <string name="market_price_instant_buy">ซื้อทันที: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">เข้าร่วมเมื่อ %1$s</string>
     <string name="market_profile_no_reviews">ยังไม่มีรีวิว</string>
     <string name="market_profile_rating_breakdown">รายละเอียดคะแนน</string>
-    <string name="market_profile_stars_value">%1$d ดาว</string>
+    <string name="market_profile_stars_value">%1$s ดาว</string>
     <string name="market_purchase_dispute_chargeback">การปฏิเสธการชำระเงิน %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ธนาคารของคุณได้ยื่นการปฏิเสธการชำระเงินสำหรับคำสั่งซื้อนี้ Stripe กำลังจัดการข้อพิพาทกับผู้ขาย ผลลัพธ์จะปรากฏที่นี่เมื่อมีการตัดสิน</string>
-    <string name="market_purchase_download_many">ดาวน์โหลดไฟล์ของคุณ %1$d ไฟล์ด้านล่าง</string>
+    <string name="market_purchase_download_many">ดาวน์โหลดไฟล์ของคุณ %1$s ไฟล์ด้านล่าง</string>
     <string name="market_purchase_download_one">ดาวน์โหลดไฟล์ของคุณด้านล่าง</string>
     <string name="market_purchase_review_from">รีวิวจาก %1$s</string>
     <string name="market_purchases_auction_label">การประมูล #%1$s</string>
     <string name="market_purchases_refunded_partial">คืนเงิน −%1$s</string>
     <string name="market_purchases_won_for">ชนะที่ %1$s</string>
-    <string name="market_rating_reviews">(%1$d รีวิว)</string>
+    <string name="market_rating_reviews">(%1$s รีวิว)</string>
     <string name="market_refund_amount_label">จำนวนเงิน</string>
     <string name="market_refund_dialog_amount_help">เว้นว่างไว้เพื่อคืนเงินเต็มจำนวนของคำสั่งซื้อ</string>
     <string name="market_refund_dialog_amount_label">จำนวนเงิน</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">การดำเนินการนี้จะยกเลิกการประมูล รายการจะถูกซ่อนจากผู้ซื้อ; คุณสามารถลงรายการใหม่ในภายหลังเป็นแบบร่างใหม่ได้</string>
     <string name="market_listings_remove_title">ลบรายการนี้?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">การดำเนินการนี้จะยกเลิกการประมูลและแจ้งผู้ประมูลที่ใช้งานอยู่ %1$d ราย ประกาศจะถูกซ่อนจากผู้ซื้อ คุณสามารถลงประกาศใหม่ในภายหลังเป็นฉบับร่างใหม่ได้</item>
-        <item quantity="other">การดำเนินการนี้จะยกเลิกการประมูลและแจ้งผู้ประมูลที่ใช้งานอยู่ %1$d ราย ประกาศจะถูกซ่อนจากผู้ซื้อ คุณสามารถลงประกาศใหม่ในภายหลังเป็นฉบับร่างใหม่ได้</item>
+        <item quantity="one">การดำเนินการนี้จะยกเลิกการประมูลและแจ้งผู้ประมูลที่ใช้งานอยู่ %1$s ราย ประกาศจะถูกซ่อนจากผู้ซื้อ คุณสามารถลงประกาศใหม่ในภายหลังเป็นฉบับร่างใหม่ได้</item>
+        <item quantity="other">การดำเนินการนี้จะยกเลิกการประมูลและแจ้งผู้ประมูลที่ใช้งานอยู่ %1$s ราย ประกาศจะถูกซ่อนจากผู้ซื้อ คุณสามารถลงประกาศใหม่ในภายหลังเป็นฉบับร่างใหม่ได้</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">การดำเนินการนี้จะยกเลิกการสมัครสมาชิกที่ใช้งานอยู่ %1$d รายการเมื่อสิ้นสุดรอบการเรียกเก็บเงินปัจจุบัน สมาชิกจะได้รับแจ้ง ประกาศจะถูกซ่อนจากผู้ซื้อ</item>
-        <item quantity="other">การดำเนินการนี้จะยกเลิกการสมัครสมาชิกที่ใช้งานอยู่ %1$d รายการเมื่อสิ้นสุดรอบการเรียกเก็บเงินปัจจุบัน สมาชิกจะได้รับแจ้ง ประกาศจะถูกซ่อนจากผู้ซื้อ</item>
+        <item quantity="one">การดำเนินการนี้จะยกเลิกการสมัครสมาชิกที่ใช้งานอยู่ %1$s รายการเมื่อสิ้นสุดรอบการเรียกเก็บเงินปัจจุบัน สมาชิกจะได้รับแจ้ง ประกาศจะถูกซ่อนจากผู้ซื้อ</item>
+        <item quantity="other">การดำเนินการนี้จะยกเลิกการสมัครสมาชิกที่ใช้งานอยู่ %1$s รายการเมื่อสิ้นสุดรอบการเรียกเก็บเงินปัจจุบัน สมาชิกจะได้รับแจ้ง ประกาศจะถูกซ่อนจากผู้ซื้อ</item>
     </plurals>
 </resources>

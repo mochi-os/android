@@ -180,7 +180,7 @@
     <string name="crm_tree_empty">Nenhum objeto</string>
     <string name="crm_board_no_columns">Nenhuma coluna configurada para esta visualização</string>
     <string name="crm_board_no_options">Nenhuma opção configurada para o campo da coluna</string>
-    <string name="crm_board_nested_count">+%1$d aninhados</string>
+    <string name="crm_board_nested_count">+%1$s aninhados</string>
     <string name="crm_move_to_column">Mover para coluna</string>
     <string name="crm_move_to_row">Mover para linha</string>
     <string name="crm_move_after">Depois de %1$s</string>

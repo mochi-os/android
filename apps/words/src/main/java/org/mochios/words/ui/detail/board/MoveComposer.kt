@@ -40,6 +40,7 @@ import org.mochios.words.R
 import org.mochios.words.engine.MoveDraft
 import org.mochios.words.engine.MoveError
 import org.mochios.words.ui.detail.ValidState
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * What the pending tiles add up to, shown between the board and the rack: the
@@ -241,7 +242,7 @@ private fun RowScope.ExchangeButtons(
             Spacer(modifier = Modifier.size(6.dp))
         }
         val label = if (exchangeSelected > 0) {
-            stringResource(R.string.words_detail_exchange_count, exchangeSelected)
+            stringResource(R.string.words_detail_exchange_count, LocalFormat.current.formatNumber(exchangeSelected))
         } else {
             stringResource(R.string.words_detail_exchange)
         }

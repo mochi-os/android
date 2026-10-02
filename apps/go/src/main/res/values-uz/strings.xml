@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Oʻchirish</string>
     <string name="go_delete_message">Ushbu o\'yin ro\'yxatingizdan olib tashlanadi. Buni qaytarib bo\'lmaydi.</string>
     <string name="go_delete_title">Oʻyin oʻchirilsinmi?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Qabul qilish</string>
     <string name="go_draw_decline">Rad etish</string>
     <string name="go_draw_offered_received">%1$s durang taklif qildi</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Taslim boʻldi</string>
     <string name="go_new_game_title">Yangi Go o‘yini</string>
     <string name="go_new_game_no_friends">O‘yinni boshlashdan oldin do‘st qo‘shishingiz kerak.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Qora birinchi yurishini qoplash uchun Oqning hisobiga qo‘shiladigan ochkolar</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go doskasi</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go taxtasi, qora tosh qo\'yish navbatingiz</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go taxtasi, oq tosh qo\'yish navbatingiz</string>
+    <string name="go_board_a11y">%1$s×%1$s Go doskasi</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go taxtasi, qora tosh qo\'yish navbatingiz</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go taxtasi, oq tosh qo\'yish navbatingiz</string>
     <string name="go_status_scoring">Sanoq — hisob bo\'yicha kelishing yoki o\'ynashda davom eting</string>
     <string name="go_score_proposed">Taklif qilingan hisob: qora %1$s, oq %2$s</string>
     <string name="go_score_opponent_accepted">Raqibingiz bu hisobni qabul qiladi: qora %1$s, oq %2$s</string>

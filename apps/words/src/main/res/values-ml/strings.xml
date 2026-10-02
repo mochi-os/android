@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">ഇതുവരെ ഗെയിമുകളില്ല.</string>
     <string name="words_new_game_choose_opponents">എതിരാളികളെ തിരഞ്ഞെടുക്കുക</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d കളിക്കാർ</string>
+    <string name="words_new_game_player_count">%1$s കളിക്കാർ</string>
     <string name="words_new_game_no_friends_subtitle">കളിക്കാൻ തുടങ്ങാൻ “ആളുകൾ” ആപ്പിൽ സുഹൃത്തുക്കളെ ചേർക്കുക.</string>
     <string name="words_detail_title">ഗെയിം</string>
     <string name="words_detail_status_opponent_move">%1$s-ന്റെ നീക്കം</string>
     <string name="words_detail_status_winner_wins">%1$s വിജയിച്ചു</string>
-    <string name="words_detail_player_fallback">പ്ലെയർ %1$d</string>
-    <string name="words_detail_player_count">%1$d കളിക്കാർ</string>
-    <string name="words_detail_label_tiles_left">%1$d ടൈലുകൾ ബാക്കി</string>
+    <string name="words_detail_player_fallback">പ്ലെയർ %1$s</string>
+    <string name="words_detail_player_count">%1$s കളിക്കാർ</string>
+    <string name="words_detail_label_tiles_left">%1$s ടൈലുകൾ ബാക്കി</string>
     <string name="words_detail_action_open_chat">ചാറ്റ് തുറക്കുക</string>
     <string name="words_detail_action_more">ഗെയിം പ്രവർത്തനങ്ങൾ</string>
-    <string name="words_detail_exchange_count">മാറ്റുക (%1$d)</string>
+    <string name="words_detail_exchange_count">മാറ്റുക (%1$s)</string>
     <string name="words_detail_chat_you_played">നിങ്ങൾ %1$s കളിച്ചു</string>
     <string name="words_detail_chat_player_played">%1$s %2$s കളിച്ചു</string>
 

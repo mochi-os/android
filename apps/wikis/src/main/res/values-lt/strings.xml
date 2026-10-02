@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Pranešimai apie puslapių redagavimus, komentarus ir kvietimus.</string>
     <string name="wikis_pageview_toc_expand">Rodyti turinį</string>
     <string name="wikis_pageview_toc_collapse">Slėpti turinį</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Atnaujinta %1$s</string>
     <string name="wikis_pageview_not_found_description">Puslapis „%1$s\" dar neegzistuoja.</string>
     <string name="wikis_pageview_share_chooser">Wiki nuoroda</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Ketinate ištrinti puslapį „%1$s\" (%2$s). Šis veiksmas gali būti atšauktas atkuriant iš istorijos.</string>
     <string name="wikis_delete_page_success">Puslapis ištrintas</string>
     <string name="wikis_revert_page_title">Atkurti puslapį</string>
-    <string name="wikis_revert_page_message">Ketinate atkurti %1$s į versiją %2$d. Tai sukurs naują redakciją su versijos %2$d turiniu.</string>
-    <string name="wikis_revert_page_default_comment">Atkurta į versiją %1$d</string>
-    <string name="wikis_revert_page_success">Atkurta į versiją %1$d</string>
+    <string name="wikis_revert_page_message">Ketinate atkurti %1$s į versiją %2$s. Tai sukurs naują redakciją su versijos %2$s turiniu.</string>
+    <string name="wikis_revert_page_default_comment">Atkurta į versiją %1$s</string>
+    <string name="wikis_revert_page_success">Atkurta į versiją %1$s</string>
     <string name="wikis_rename_page_renaming">Pervadinama…</string>
     <string name="wikis_rename_page_success">Puslapis pervadintas</string>
-    <string name="wikis_history_viewing">Peržiūrima %1$s istorija, dabartinė versija %2$d</string>
-    <string name="wikis_revision_version_badge">Versija %1$d</string>
+    <string name="wikis_history_viewing">Peržiūrima %1$s istorija, dabartinė versija %2$s</string>
+    <string name="wikis_revision_version_badge">Versija %1$s</string>
     <string name="wikis_search_pages_placeholder">Ieškoti puslapių pagal pavadinimą arba turinį…</string>
     <string name="wikis_search_no_results">Nerasta puslapių „%1$s\". Pabandykite kitus paieškos terminus.</string>
     <string name="wikis_search_updated">Atnaujinta %1$s</string>
@@ -289,54 +289,54 @@
     <string name="wikis_revision_author">pagal %1$s</string>
     <string name="wikis_revision_show_page">Rodyti puslapį</string>
     <string name="wikis_revision_compare_failed">Nepavyko įkelti ankstesnės versijos palyginimui.</string>
-    <string name="wikis_revision_changes_from">Pakeitimai nuo versijos %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Pakeitimai nuo versijos %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d komentaras</item>
-        <item quantity="few">%d komentarai</item>
-        <item quantity="many">%d komentarų</item>
-        <item quantity="other">%d komentarų</item>
+        <item quantity="one">%s komentaras</item>
+        <item quantity="few">%s komentarai</item>
+        <item quantity="many">%s komentarų</item>
+        <item quantity="other">%s komentarų</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d atsakymas</item>
-        <item quantity="few">dar +%d atsakymai</item>
-        <item quantity="many">dar +%d atsakymo</item>
-        <item quantity="other">dar +%d atsakymų</item>
+        <item quantity="one">%s atsakymas</item>
+        <item quantity="few">dar +%s atsakymai</item>
+        <item quantity="many">dar +%s atsakymo</item>
+        <item quantity="other">dar +%s atsakymų</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d puslapis</item>
-        <item quantity="few">%d puslapiai</item>
-        <item quantity="many">%d puslapių</item>
-        <item quantity="other">%d puslapių</item>
+        <item quantity="one">%s puslapis</item>
+        <item quantity="few">%s puslapiai</item>
+        <item quantity="many">%s puslapių</item>
+        <item quantity="other">%s puslapių</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d failas</item>
-        <item quantity="few">%d failai</item>
-        <item quantity="many">%d failų</item>
-        <item quantity="other">%d failų</item>
+        <item quantity="one">%s failas</item>
+        <item quantity="few">%s failai</item>
+        <item quantity="many">%s failų</item>
+        <item quantity="other">%s failų</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d vaizdas</item>
-        <item quantity="few">%d vaizdai</item>
-        <item quantity="many">%d vaizdų</item>
-        <item quantity="other">%d vaizdų</item>
+        <item quantity="one">%s vaizdas</item>
+        <item quantity="few">%s vaizdai</item>
+        <item quantity="many">%s vaizdų</item>
+        <item quantity="other">%s vaizdų</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokumentas</item>
-        <item quantity="few">%d dokumentai</item>
-        <item quantity="many">%d dokumentų</item>
-        <item quantity="other">%d dokumentų</item>
+        <item quantity="one">%s dokumentas</item>
+        <item quantity="few">%s dokumentai</item>
+        <item quantity="many">%s dokumentų</item>
+        <item quantity="other">%s dokumentų</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d puslapis su šia žyma</item>
-        <item quantity="few">%d puslapiai su šia žyma</item>
-        <item quantity="many">%d puslapių su šia žyma</item>
-        <item quantity="other">%d puslapių su šia žyma</item>
+        <item quantity="one">%s puslapis su šia žyma</item>
+        <item quantity="few">%s puslapiai su šia žyma</item>
+        <item quantity="many">%s puslapių su šia žyma</item>
+        <item quantity="other">%s puslapių su šia žyma</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Rasta %1$d rezultatas užklausai „%2$s“</item>
-        <item quantity="few">Rasta %1$d rezultatai užklausai „%2$s“</item>
-        <item quantity="many">Rasta %1$d rezultatų užklausai „%2$s“</item>
-        <item quantity="other">Rasta %1$d rezultatų užklausai „%2$s“</item>
+        <item quantity="one">Rasta %1$s rezultatas užklausai „%2$s“</item>
+        <item quantity="few">Rasta %1$s rezultatai užklausai „%2$s“</item>
+        <item quantity="many">Rasta %1$s rezultatų užklausai „%2$s“</item>
+        <item quantity="other">Rasta %1$s rezultatų užklausai „%2$s“</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Nepavyko išsaugoti antraštės</string>
     <string name="wikis_attachments_upload_types">Palaikomi failai: vaizdai, PDF, DOC, DOCX, TXT ir MD.</string>
@@ -345,9 +345,9 @@
     <string name="wikis_rss_copied_new">Naujas RSS URL nukopijuotas į iškarpinę</string>
     <string name="wikis_rss_exists">Šis srauto URL jau išduotas ir negali būti parodytas dar kartą.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Rodomas pirmas %1$d komentaras.</item>
-        <item quantity="few">Rodomi pirmi %1$d komentarai.</item>
-        <item quantity="many">Rodomi pirmi %1$d komentarai.</item>
-        <item quantity="other">Rodomi pirmi %1$d komentarų.</item>
+        <item quantity="one">Rodomas pirmas %1$s komentaras.</item>
+        <item quantity="few">Rodomi pirmi %1$s komentarai.</item>
+        <item quantity="many">Rodomi pirmi %1$s komentarai.</item>
+        <item quantity="other">Rodomi pirmi %1$s komentarų.</item>
     </plurals>
 </resources>

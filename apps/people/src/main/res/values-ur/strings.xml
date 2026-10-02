@@ -180,8 +180,8 @@
     <string name="people_books_create">ایڈریس بک بنائیں</string>
     <string name="people_books_delete">ایڈریس بک حذف کریں</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s اور اس کا %2$d رابطہ حذف کریں؟</item>
-        <item quantity="other">%1$s اور اس کے %2$d رابطے حذف کریں؟</item>
+        <item quantity="one">%1$s اور اس کا %2$s رابطہ حذف کریں؟</item>
+        <item quantity="other">%1$s اور اس کے %2$s رابطے حذف کریں؟</item>
     </plurals>
     <string name="people_welcome_body">Mochi میں دوست تلاش کریں اور رابطہ کریں۔ دعوت بھیجنے کے لیے رابطہ شامل کریں پر ٹیپ کریں۔</string>
     <string name="people_person_state_contact">رابطوں میں</string>

@@ -180,8 +180,8 @@
     <string name="people_books_create">Δημιουργία ευρετηρίου</string>
     <string name="people_books_delete">Διαγραφή ευρετηρίου</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Διαγραφή του %1$s και της %2$d επαφής του;</item>
-        <item quantity="other">Διαγραφή του %1$s και των %2$d επαφών του;</item>
+        <item quantity="one">Διαγραφή του %1$s και της %2$s επαφής του;</item>
+        <item quantity="other">Διαγραφή του %1$s και των %2$s επαφών του;</item>
     </plurals>
     <string name="people_welcome_body">Βρείτε φίλους σε όλο το Mochi και συνδεθείτε. Πατήστε Προσθήκη επαφής για να στείλετε πρόσκληση.</string>
     <string name="people_person_state_contact">Στις επαφές</string>

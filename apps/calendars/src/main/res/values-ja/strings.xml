@@ -99,13 +99,13 @@
     <string name="calendars_repeat_forever">無期限</string>
     <string name="calendars_reminder_time">予定の開始時刻</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">%1$d 分前</item>
+        <item quantity="other">%1$s 分前</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">%1$d 時間前</item>
+        <item quantity="other">%1$s 時間前</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">%1$d 日前</item>
+        <item quantity="other">%1$s 日前</item>
     </plurals>
     <string name="calendars_reminder_add">リマインダーを追加</string>
     <string name="calendars_reminder_remove">リマインダーを削除</string>
@@ -139,9 +139,9 @@
     <string name="calendars_poll_large">カレンダーが大きすぎます</string>
     <string name="calendars_poll_invalid">アドレスからカレンダーが返されませんでした</string>
     <string name="calendars_poll_unreachable">アドレスに接続できませんでした</string>
-    <string name="calendars_poll_status">アドレスの応答は %1$d でした</string>
+    <string name="calendars_poll_status">アドレスの応答は %1$s でした</string>
     <plurals name="calendars_minutes">
-        <item quantity="other">%1$d 分</item>
+        <item quantity="other">%1$s 分</item>
     </plurals>
     <string name="calendars_preferences_zones">予定をそれぞれのタイムゾーンで表示</string>
     <string name="calendars_event_backwards">開始より前に終了</string>

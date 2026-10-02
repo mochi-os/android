@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Ọjà</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Ìtàn ìgbésí ayé</string>
     <string name="market_account_biography_placeholder">Sọ fún àwọn olùrà nípa ara rẹ…</string>
     <string name="market_account_load_failed">Kò lè gbé àkàǹtì wọlé</string>
@@ -59,7 +59,7 @@
     <string name="market_bids_tab_outbid">A bori bẹ́ẹ̀dì</string>
     <string name="market_bids_tab_won">Borí</string>
     <string name="market_bids_title">Àwọn bid</string>
-    <string name="market_carousel_main">Fọ́tò %1$d nínú %2$d</string>
+    <string name="market_carousel_main">Fọ́tò %1$s nínú %2$s</string>
     <string name="market_channel_name">Ọjà</string>
     <string name="market_chargeback_reason_bank_cannot_process">Báńkì kò lè ṣe é</string>
     <string name="market_chargeback_reason_check_returned">Check ti padà</string>
@@ -138,7 +138,7 @@
     <string name="market_editor_condition_refurbished">A tún ṣe</string>
     <string name="market_editor_condition_used">Àlòkù</string>
     <string name="market_editor_currency">Owó</string>
-    <string name="market_editor_days">%1$d ọjọ́</string>
+    <string name="market_editor_days">%1$s ọjọ́</string>
     <string name="market_editor_delete">Pa ìkéde kúrò</string>
     <string name="market_editor_description">Àpèjúwe</string>
     <string name="market_editor_interval_monthly">Oṣooṣù</string>
@@ -331,7 +331,7 @@
     <string name="market_purchases_title">Àwọn rírà</string>
     <string name="market_rating_label">Ìpele</string>
     <string name="market_rating_no_reviews">Kò sí àyẹ̀wò síbẹ̀</string>
-    <string name="market_rating_reviews">(%1$d àyẹ̀wò)</string>
+    <string name="market_rating_reviews">(%1$s àyẹ̀wò)</string>
     <string name="market_refund_amount_label">Iye</string>
     <string name="market_refund_body">Pèsè ìdí fún ìbéèrè ìpadàbọ̀ owó rẹ.</string>
     <string name="market_refund_details_label">Àwọn ẹ̀kúnrẹ́rẹ́</string>
@@ -497,11 +497,11 @@
     <string name="market_bids_current_bid">Lọ́wọ́lọ́wọ́: %1$s</string>
     <string name="market_bids_ends_in">Yóò parí ní %1$s</string>
     <string name="market_bids_your_bid">Ìdíje rẹ: %1$s</string>
-    <string name="market_carousel_thumbnail">Àwòrán kékeré %1$d</string>
+    <string name="market_carousel_thumbnail">Àwòrán kékeré %1$s</string>
     <string name="market_checkout_browser_unavailable">Kò sí ẹ̀rọ ìwákiri láti ṣí ojú-ìwé ìsanwó</string>
     <string name="market_checkout_pwyw_label">Iye owó rẹ (ó kéré jùlọ %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Iye gbọ́dọ̀ jẹ́ ó kéré tán %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fáìlì tí a so mọ́</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fáìlì tí a so mọ́</string>
     <string name="market_dispute_dialog_evidence_section_title">Ẹ̀rí tí a fi sílẹ̀</string>
     <string name="market_dispute_dialog_evidence_submitter_line">fi sílẹ̀ láti ọwọ́ %1$s</string>
     <string name="market_editor_appeal">Pe ẹjọ́ ìmúdájú</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">Ń gbé àkọsílẹ̀ wọlé</string>
     <string name="market_listing_detail_relist_failed">Kò lè tún fi sílẹ̀</string>
     <string name="market_listing_detail_relist_in_progress">Ń tún fi sílẹ̀</string>
-    <string name="market_listing_detail_sales_count">%1$d ọjà tí a tà</string>
+    <string name="market_listing_detail_sales_count">%1$s ọjà tí a tà</string>
     <string name="market_listing_detail_seller_banned_banner">A ti gbésẹ̀ olùtà yìí. Kò ṣee ṣe láti gbé àṣẹ-ọjà tuntun.</string>
     <string name="market_listing_detail_seller_suspended_banner">A ti dá olùtà yìí dúró. Àwọn àṣẹ-ọjà tuntun ti dúró títí àkọ́ọ̀lù yóò fi padà.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">A ti dá rírà dúró nígbà tí àkọ́ọ̀lù olùtà náà bá wà ní ìdíwọ̀.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">Kò sí ìjíròrò kankan síbẹ̀</string>
     <string name="market_messages_load_failed">Kò lè ṣàmúwá ìjíròrò</string>
     <string name="market_messages_send_failed">Kò lè rán ìránṣẹ́</string>
-    <string name="market_messages_unread_badge">%1$d tí a kò tíì kà</string>
+    <string name="market_messages_unread_badge">%1$s tí a kò tíì kà</string>
     <string name="market_price_high_bid">Ìdíje gíga: %1$s</string>
     <string name="market_price_instant_buy">ìrà kíákíá: %1$s</string>
     <string name="market_price_starting_bid">Ìdíje ìbẹ̀rẹ̀: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">Ọmọ ẹgbẹ́ láti %1$s</string>
     <string name="market_profile_joined">Dara pọ̀ ní %1$s</string>
     <string name="market_profile_rating_breakdown">Àpèjúwe ìdíwọ̀n</string>
-    <string name="market_profile_sales_count">%1$d títà</string>
-    <string name="market_profile_stars_value">%1$d ìràwọ̀</string>
+    <string name="market_profile_sales_count">%1$s títà</string>
+    <string name="market_profile_stars_value">%1$s ìràwọ̀</string>
     <string name="market_purchase_dispute_chargeback">Ìfagílé owó %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Báńkì rẹ fi ẹ̀sùn ìfagílé owó lélẹ̀ lórí àṣẹ yìí. Stripe ń bójú tó àríyànjiyàn náà pẹ̀lú olùtà; ìpinnu yóò farahàn níhìn-ín nígbà tí a bá ṣe é.</string>
     <string name="market_purchase_dispute_response">Ìdáhùn olùtà</string>
-    <string name="market_purchase_download_many">Gba àwọn fáìlì %1$d rẹ wálẹ̀ ní ìsàlẹ̀.</string>
+    <string name="market_purchase_download_many">Gba àwọn fáìlì %1$s rẹ wálẹ̀ ní ìsàlẹ̀.</string>
     <string name="market_purchase_download_one">Gba fáìlì rẹ wálẹ̀ ní ìsàlẹ̀.</string>
     <string name="market_purchase_review_from">Àyẹ̀wò láti ọ̀dọ̀ %1$s</string>
     <string name="market_purchases_auction_label">Ìdíje #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Eyi yoo fagilee titaja naa. Atokọ naa yoo farapamọ kuro lọdọ awọn olura; o le tun ṣe atokọ rẹ nigbamii bi akọsilẹ tuntun.</string>
     <string name="market_listings_remove_title">Yọ àkójọ yìí kuro?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Èyí yóò fagilé títà ọjà ní ìdíje yóò sì sọ fún olùdíje %1$d tí ó ń ṣiṣẹ́. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà; o lè tún un tò lẹ́yìn náà gẹ́gẹ́ bí àkọsílẹ̀ tuntun.</item>
-        <item quantity="other">Èyí yóò fagilé títà ọjà ní ìdíje yóò sì sọ fún olùdíje %1$d tí ó ń ṣiṣẹ́. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà; o lè tún un tò lẹ́yìn náà gẹ́gẹ́ bí àkọsílẹ̀ tuntun.</item>
+        <item quantity="one">Èyí yóò fagilé títà ọjà ní ìdíje yóò sì sọ fún olùdíje %1$s tí ó ń ṣiṣẹ́. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà; o lè tún un tò lẹ́yìn náà gẹ́gẹ́ bí àkọsílẹ̀ tuntun.</item>
+        <item quantity="other">Èyí yóò fagilé títà ọjà ní ìdíje yóò sì sọ fún olùdíje %1$s tí ó ń ṣiṣẹ́. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà; o lè tún un tò lẹ́yìn náà gẹ́gẹ́ bí àkọsílẹ̀ tuntun.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Èyí yóò fagilé ìforúkọsílẹ̀ %1$d tí ó ń ṣiṣẹ́ ní òpin àkókò ìdíyelé lọ́wọ́lọ́wọ́. A óò sọ fún àwọn olùforúkọsílẹ̀. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà.</item>
-        <item quantity="other">Èyí yóò fagilé ìforúkọsílẹ̀ %1$d tí ó ń ṣiṣẹ́ ní òpin àkókò ìdíyelé lọ́wọ́lọ́wọ́. A óò sọ fún àwọn olùforúkọsílẹ̀. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà.</item>
+        <item quantity="one">Èyí yóò fagilé ìforúkọsílẹ̀ %1$s tí ó ń ṣiṣẹ́ ní òpin àkókò ìdíyelé lọ́wọ́lọ́wọ́. A óò sọ fún àwọn olùforúkọsílẹ̀. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà.</item>
+        <item quantity="other">Èyí yóò fagilé ìforúkọsílẹ̀ %1$s tí ó ń ṣiṣẹ́ ní òpin àkókò ìdíyelé lọ́wọ́lọ́wọ́. A óò sọ fún àwọn olùforúkọsílẹ̀. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà.</item>
     </plurals>
 </resources>

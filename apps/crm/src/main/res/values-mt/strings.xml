@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">L-ebda oġġett</string>
     <string name="crm_board_no_columns">L-ebda kolonna kkonfigurata għal din il-veduta</string>
     <string name="crm_board_no_options">Ma hemm l-ebda għażla kkonfigurata għall-kamp tal-kolonna</string>
-    <string name="crm_board_nested_count">+%1$d innestjati</string>
+    <string name="crm_board_nested_count">+%1$s innestjati</string>
     <string name="crm_move_to_column">Mexxi għall-kolonna</string>
     <string name="crm_move_to_row">Mexxi għar-ringiela</string>
     <string name="crm_move_after">Wara %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Id-data tas-CRM ġiet salvata</string>
     <string name="crm_create_upload_json">Tella\' fajl .zip jew .json</string>
     <string name="crm_create_blocked_no_options">Ma jistax jinħoloq: %1$s huwa meħtieġ imma m\'għandu ebda għażla. Żid għażliet fid-Disinn.</string>
-    <string name="crm_design_sample">Kampjun %1$d</string>
+    <string name="crm_design_sample">Kampjun %1$s</string>
     <string name="crm_option_delete_title">Ħassar għażla</string>
     <string name="crm_option_delete_message">Żgur li trid tħassar l-għażla \"%1$s\"?</string>
 </resources>

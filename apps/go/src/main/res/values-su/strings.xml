@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Hapus</string>
     <string name="go_delete_message">Pertandingan ieu bakal dipupus tina daptar anjeun. Henteu tiasa dibatalkeun.</string>
     <string name="go_delete_title">Hapus kaulinan?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Tarima</string>
     <string name="go_draw_decline">Tolak</string>
     <string name="go_draw_offered_received">%1$s nawarkeun séri</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Nyerah</string>
     <string name="go_new_game_title">Kaulinan Go anyar</string>
     <string name="go_new_game_no_friends">Anjeun kudu nambahan babaturan saméméh bisa ngamimitian kaulinan.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Poin anu ditambahkeun kana skor Bodas pikeun ngimbangan Hideung anu maju heula</string>
 
-    <string name="go_board_a11y">Papan Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Papan Go %1$d×%1$d, giliran anjeun nunda batu hideung</string>
-    <string name="go_board_a11y_turn_white">Papan Go %1$d×%1$d, giliran anjeun nunda batu bodas</string>
+    <string name="go_board_a11y">Papan Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Papan Go %1$s×%1$s, giliran anjeun nunda batu hideung</string>
+    <string name="go_board_a11y_turn_white">Papan Go %1$s×%1$s, giliran anjeun nunda batu bodas</string>
     <string name="go_status_scoring">Ngitung — sapuk kana peunteun atawa terus maén</string>
     <string name="go_score_proposed">Skor nu diusulkeun: hideung %1$s, bodas %2$s</string>
     <string name="go_score_opponent_accepted">Lawan anjeun narima skor ieu: hideung %1$s, bodas %2$s</string>

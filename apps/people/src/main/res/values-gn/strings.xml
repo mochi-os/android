@@ -180,8 +180,8 @@
     <string name="people_books_create">Emoheñói ogarenda kuatia</string>
     <string name="people_books_delete">Ehundi ogarenda kuatia</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">¿Emboguetéta %1$s ha %2$d icontacto?</item>
-        <item quantity="other">¿Emboguetéta %1$s ha %2$d icontactokuéra?</item>
+        <item quantity="one">¿Emboguetéta %1$s ha %2$s icontacto?</item>
+        <item quantity="other">¿Emboguetéta %1$s ha %2$s icontactokuéra?</item>
     </plurals>
     <string name="people_welcome_body">Ejuhu angirũnguéra Mochi-pe ha ejoaju hendivekuéra. Eikutu Embojuaju contacto remondo hag̃ua ñehenói.</string>
     <string name="people_person_state_contact">Contactokuérape</string>

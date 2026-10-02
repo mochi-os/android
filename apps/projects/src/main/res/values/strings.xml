@@ -226,10 +226,10 @@
     <string name="projects_attachment_default_name">attachment</string>
     <string name="projects_attachment_delete_confirm_title">Delete attachment?</string>
     <string name="projects_attachment_delete_confirm_message">This attachment will be permanently deleted.</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
 
     <!-- Requests -->
     <string name="projects_request_empty">No merge requests</string>
@@ -246,10 +246,10 @@
     <string name="projects_request_checking_merge">Checking merge status…</string>
     <string name="projects_request_can_merge">Can be merged</string>
     <string name="projects_request_cannot_merge">Cannot merge</string>
-    <string name="projects_request_ahead_behind">%1$d ahead, %2$d behind</string>
+    <string name="projects_request_ahead_behind">%1$s ahead, %2$s behind</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d conflicting file</item>
-        <item quantity="other">%1$d conflicting files</item>
+        <item quantity="one">%1$s conflicting file</item>
+        <item quantity="other">%1$s conflicting files</item>
     </plurals>
     <string name="projects_request_draft_notice">This is a draft. Mark as ready before merging.</string>
     <string name="projects_request_view_diff">View diff</string>
@@ -295,7 +295,7 @@
     <string name="projects_board_column_options">Column options</string>
     <string name="projects_board_rename">Rename</string>
     <string name="projects_board_rename_column">Rename column</string>
-    <string name="projects_board_nested_count">+%1$d nested</string>
+    <string name="projects_board_nested_count">+%1$s nested</string>
 
     <!-- Move sheet -->
     <string name="projects_move_to_column">Move to column</string>
@@ -440,5 +440,5 @@
     <string name="projects_design_preview_no_options">No options on the columns field</string>
     <string name="projects_design_preview_empty">Nothing to show</string>
     <string name="projects_project_not_found">Project not found</string>
-    <string name="projects_design_sample">Sample %1$d</string>
+    <string name="projects_design_sample">Sample %1$s</string>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Bazar</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Bioqrafiya</string>
     <string name="market_account_biography_placeholder">Alıcılara özünüz haqqında danışın…</string>
     <string name="market_account_load_failed">Hesab yüklənə bilmədi</string>
@@ -72,8 +72,8 @@
     <string name="market_bids_tab_won">Qazanılan</string>
     <string name="market_bids_title">Təkliflər</string>
     <string name="market_bids_your_bid">Sizin təklifiniz: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d / %2$d</string>
-    <string name="market_carousel_thumbnail">Eskiz %1$d</string>
+    <string name="market_carousel_main">Foto %1$s / %2$s</string>
+    <string name="market_carousel_thumbnail">Eskiz %1$s</string>
     <string name="market_channel_name">Bazar</string>
     <string name="market_chargeback_reason_bank_cannot_process">Bank emal edə bilmədi</string>
     <string name="market_chargeback_reason_check_returned">Çek qaytarıldı</string>
@@ -135,7 +135,7 @@
     <string name="market_condition_refurbished">Yenilənmiş</string>
     <string name="market_condition_used">İşlənmiş</string>
     <string name="market_dispute_dialog_attach">Sübut əlavə et</string>
-    <string name="market_dispute_dialog_attach_count">%1$d fayl əlavə edildi</string>
+    <string name="market_dispute_dialog_attach_count">%1$s fayl əlavə edildi</string>
     <string name="market_dispute_dialog_cancel">Ləğv et</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Alıcı</string>
     <string name="market_dispute_dialog_evidence_role_seller">Satıcı</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_condition_refurbished">Yenilənmiş</string>
     <string name="market_editor_condition_used">İşlənmiş</string>
     <string name="market_editor_currency">Valyuta</string>
-    <string name="market_editor_days">%1$d gün</string>
+    <string name="market_editor_days">%1$s gün</string>
     <string name="market_editor_delete">Elanı sil</string>
     <string name="market_editor_delete_confirm_message">Bu elanı qalıcı olaraq siləcək.</string>
     <string name="market_editor_delete_confirm_title">Elan silinsin?</string>
@@ -312,7 +312,7 @@
     <string name="market_listing_detail_relist_failed">Yenidən siyahıya alına bilmədi</string>
     <string name="market_listing_detail_relist_in_progress">Yenidən siyahıya alınır</string>
     <string name="market_listing_detail_report">Elanı şikayət et</string>
-    <string name="market_listing_detail_sales_count">%1$d satış</string>
+    <string name="market_listing_detail_sales_count">%1$s satış</string>
     <string name="market_listing_detail_save">Saxla</string>
     <string name="market_listing_detail_seller_banned_banner">Bu satıcı qadağan edilib. Yeni sifariş vermək olmur.</string>
     <string name="market_listing_detail_seller_heading">Satıcı</string>
@@ -364,7 +364,7 @@
     <string name="market_messages_send_failed">Mesaj göndərilmədi</string>
     <string name="market_messages_thread_listing_chip">Elan</string>
     <string name="market_messages_thread_title">Söhbət</string>
-    <string name="market_messages_unread_badge">%1$d oxunmamış</string>
+    <string name="market_messages_unread_badge">%1$s oxunmamış</string>
     <string name="market_onboarding_activate">Aktivləşdir</string>
     <string name="market_onboarding_activating">Aktivləşdirilir…</string>
     <string name="market_onboarding_body">Almağa və satmağa başlamaq üçün hesabınızı aktivləşdirin.</string>
@@ -384,8 +384,8 @@
     <string name="market_profile_no_reviews">Hələ rəy yoxdur.</string>
     <string name="market_profile_rating_breakdown">Reytinq bölgüsü</string>
     <string name="market_profile_reviews_section">Rəylər</string>
-    <string name="market_profile_sales_count">%1$d satış</string>
-    <string name="market_profile_stars_value">%1$d ulduz</string>
+    <string name="market_profile_sales_count">%1$s satış</string>
+    <string name="market_profile_stars_value">%1$s ulduz</string>
     <string name="market_profile_status_banned">Bloklandı</string>
     <string name="market_profile_status_suspended">Dayandırıldı</string>
     <string name="market_profile_verified">Təsdiqlənib</string>
@@ -403,7 +403,7 @@
     <string name="market_purchase_dispute_response">Satıcının cavabı</string>
     <string name="market_purchase_dispute_title">Geri qaytarma sorğusu</string>
     <string name="market_purchase_download_failed">Yükləmək alınmadı</string>
-    <string name="market_purchase_download_many">%1$d faylınızı aşağıda yükləyin.</string>
+    <string name="market_purchase_download_many">%1$s faylınızı aşağıda yükləyin.</string>
     <string name="market_purchase_download_one">Faylınızı aşağıda yükləyin.</string>
     <string name="market_purchase_download_section">Alışınız hazırdır</string>
     <string name="market_purchase_item">Element</string>
@@ -441,7 +441,7 @@
     <string name="market_purchases_won_for">%1$s-ə qazanıldı</string>
     <string name="market_rating_label">Reytinq</string>
     <string name="market_rating_no_reviews">Hələ rəy yoxdur</string>
-    <string name="market_rating_reviews">(%1$d rəy)</string>
+    <string name="market_rating_reviews">(%1$s rəy)</string>
     <string name="market_refund_amount_label">Məbləğ</string>
     <string name="market_refund_body">Geri ödəmə sorğunuzun səbəbini göstərin.</string>
     <string name="market_refund_details_label">Təfərrüatlar</string>
@@ -784,11 +784,11 @@
     <string name="market_listings_remove_message_auction">Bu, hərracı ləğv edəcək. Elan alıcılardan gizlədiləcək; onu sonra yeni qaralama kimi yenidən yerləşdirə bilərsiniz.</string>
     <string name="market_listings_remove_title">Bu elanı silək?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Bu, hərracı ləğv edəcək və %1$d aktiv təklifçini xəbərdar edəcək. Elan alıcılardan gizlədiləcək; sonra onu yeni qaralama kimi yenidən yerləşdirə bilərsiniz.</item>
-        <item quantity="other">Bu, hərracı ləğv edəcək və %1$d aktiv təklifçini xəbərdar edəcək. Elan alıcılardan gizlədiləcək; sonra onu yeni qaralama kimi yenidən yerləşdirə bilərsiniz.</item>
+        <item quantity="one">Bu, hərracı ləğv edəcək və %1$s aktiv təklifçini xəbərdar edəcək. Elan alıcılardan gizlədiləcək; sonra onu yeni qaralama kimi yenidən yerləşdirə bilərsiniz.</item>
+        <item quantity="other">Bu, hərracı ləğv edəcək və %1$s aktiv təklifçini xəbərdar edəcək. Elan alıcılardan gizlədiləcək; sonra onu yeni qaralama kimi yenidən yerləşdirə bilərsiniz.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Bu, cari ödəniş dövrünün sonunda %1$d aktiv abunəliyi ləğv edəcək. Abunəçilər xəbərdar ediləcək. Elan alıcılardan gizlədiləcək.</item>
-        <item quantity="other">Bu, cari ödəniş dövrünün sonunda %1$d aktiv abunəliyi ləğv edəcək. Abunəçilər xəbərdar ediləcək. Elan alıcılardan gizlədiləcək.</item>
+        <item quantity="one">Bu, cari ödəniş dövrünün sonunda %1$s aktiv abunəliyi ləğv edəcək. Abunəçilər xəbərdar ediləcək. Elan alıcılardan gizlədiləcək.</item>
+        <item quantity="other">Bu, cari ödəniş dövrünün sonunda %1$s aktiv abunəliyi ləğv edəcək. Abunəçilər xəbərdar ediləcək. Elan alıcılardan gizlədiləcək.</item>
     </plurals>
 </resources>

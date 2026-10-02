@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki စာမျက်နှာ တည်းဖြတ်မှုများ၊ မှတ်ချက်များနှင့် ဖိတ်ကြားချက်များအကြောင်း အသိပေးချက်များ။</string>
     <string name="wikis_pageview_toc_expand">မာတိကာ ပြရန်</string>
     <string name="wikis_pageview_toc_collapse">မာတိကာ ဖျောက်ရန်</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">%1$s တွင် အပ်ဒိတ်လုပ်ပြီး</string>
     <string name="wikis_pageview_not_found_description">“%1$s” စာမျက်နှာ မရှိသေးပါ။</string>
     <string name="wikis_pageview_share_chooser">ဝီကီလင့်ခ်</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">သင်သည် “%1$s” (%2$s) စာမျက်နှာကို ဖျက်တော့မည်။ ဤလုပ်ဆောင်ချက်ကို မှတ်တမ်းမှ ပြန်လည်ရယူခြင်းဖြင့် ပြန်ပြင်နိုင်သည်။</string>
     <string name="wikis_delete_page_success">စာမျက်နှာ ဖျက်ပြီးပါပြီ</string>
     <string name="wikis_revert_page_title">စာမျက်နှာ ပြန်ပြင်</string>
-    <string name="wikis_revert_page_message">သင်သည် %1$s ကို ဗားရှင်း %2$d သို့ ပြန်ပြောင်းတော့မည်။ ၎င်းသည် ဗားရှင်း %2$d ၏ အကြောင်းအရာဖြင့် ပြင်ဆင်မှုအသစ် ဖန်တီးပါမည်။</string>
-    <string name="wikis_revert_page_default_comment">ဗားရှင်း %1$d သို့ ပြန်ပြောင်းပြီး</string>
-    <string name="wikis_revert_page_success">ဗားရှင်း %1$d သို့ ပြန်ပြောင်းပြီး</string>
+    <string name="wikis_revert_page_message">သင်သည် %1$s ကို ဗားရှင်း %2$s သို့ ပြန်ပြောင်းတော့မည်။ ၎င်းသည် ဗားရှင်း %2$s ၏ အကြောင်းအရာဖြင့် ပြင်ဆင်မှုအသစ် ဖန်တီးပါမည်။</string>
+    <string name="wikis_revert_page_default_comment">ဗားရှင်း %1$s သို့ ပြန်ပြောင်းပြီး</string>
+    <string name="wikis_revert_page_success">ဗားရှင်း %1$s သို့ ပြန်ပြောင်းပြီး</string>
     <string name="wikis_rename_page_renaming">အမည်ပြောင်းနေသည်…</string>
     <string name="wikis_rename_page_success">စာမျက်နှာ အမည်ပြောင်းပြီးပါပြီ</string>
-    <string name="wikis_history_viewing">%1$s ၏ မှတ်တမ်းကို ကြည့်နေသည်၊ လက်ရှိဗားရှင်း %2$d</string>
-    <string name="wikis_revision_version_badge">ဗားရှင်း %1$d</string>
+    <string name="wikis_history_viewing">%1$s ၏ မှတ်တမ်းကို ကြည့်နေသည်၊ လက်ရှိဗားရှင်း %2$s</string>
+    <string name="wikis_revision_version_badge">ဗားရှင်း %1$s</string>
     <string name="wikis_search_pages_placeholder">ခေါင်းစဉ် သို့မဟုတ် အကြောင်းအရာဖြင့် စာမျက်နှာများ ရှာရန်…</string>
     <string name="wikis_search_no_results">“%1$s” အတွက် စာမျက်နှာ မတွေ့ပါ။ အခြားရှာဖွေမှုစကားလုံးများ စမ်းကြည့်ပါ။</string>
     <string name="wikis_search_updated">%1$s တွင် အပ်ဒိတ်လုပ်ပြီး</string>
@@ -289,30 +289,30 @@
     <string name="wikis_revision_author">%1$s ဖြင့်</string>
     <string name="wikis_revision_show_page">စာမျက်နှာ ပြပါ</string>
     <string name="wikis_revision_compare_failed">နှိုင်းယှဉ်ရန် ယခင်ဗားရှင်းကို ဖွင့်၍မရပါ။</string>
-    <string name="wikis_revision_changes_from">ဗားရှင်း %1$d → %2$d မှ ပြောင်းလဲမှုများ</string>
+    <string name="wikis_revision_changes_from">ဗားရှင်း %1$s → %2$s မှ ပြောင်းလဲမှုများ</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">မှတ်ချက် %d</item>
+        <item quantity="other">မှတ်ချက် %s</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="other">+ ပြန်ဖြေချက် %d ခု ပိုနေသေးသည်</item>
+        <item quantity="other">+ ပြန်ဖြေချက် %s ခု ပိုနေသေးသည်</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="other">စာမျက်နှာ %d</item>
+        <item quantity="other">စာမျက်နှာ %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="other">ဖိုင် %d</item>
+        <item quantity="other">ဖိုင် %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="other">ပုံ %d</item>
+        <item quantity="other">ပုံ %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="other">စာရွက်စာတမ်း %d</item>
+        <item quantity="other">စာရွက်စာတမ်း %s</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="other">ဤ tag ပါသော စာမျက်နှာ %d</item>
+        <item quantity="other">ဤ tag ပါသော စာမျက်နှာ %s</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">\"%2$s\" အတွက် ရလဒ် %1$d ခု တွေ့ရသည်</item>
+        <item quantity="other">\"%2$s\" အတွက် ရလဒ် %1$s ခု တွေ့ရသည်</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">စာတန်းကို သိမ်းဆည်း၍မရပါ</string>
     <string name="wikis_attachments_upload_types">ပံ့ပိုးထားသော ဖိုင်များ - ပုံများ၊ PDF၊ DOC၊ DOCX၊ TXT နှင့် MD။</string>
@@ -321,6 +321,6 @@
     <string name="wikis_rss_copied_new">RSS URL အသစ်ကို ကလစ်ဘုတ် သို့ ကူးယူပြီးပါပြီ</string>
     <string name="wikis_rss_exists">ဤ ဖိဒ် URL ကို ထုတ်ပေးပြီးဖြစ်၍ ထပ်မံပြသ၍ မရပါ။</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">ပထမ %1$d မှတ်ချက်ကို ပြသနေသည်။</item>
+        <item quantity="other">ပထမ %1$s မှတ်ချက်ကို ပြသနေသည်။</item>
     </plurals>
 </resources>

@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">ਕੋਈ ਆਬਜੈਕਟ ਨਹੀਂ</string>
     <string name="crm_board_no_columns">ਇਸ ਦ੍ਰਿਸ਼ ਲਈ ਕੋਈ ਕਾਲਮ ਸੰਰਚਿਤ ਨਹੀਂ ਹੈ</string>
     <string name="crm_board_no_options">ਕਾਲਮ ਫੀਲਡ ਲਈ ਕੋਈ ਵਿਕਲਪ ਸੰਰਚਿਤ ਨਹੀਂ ਹਨ</string>
-    <string name="crm_board_nested_count">+%1$d ਨੈਸਟਡ</string>
+    <string name="crm_board_nested_count">+%1$s ਨੈਸਟਡ</string>
     <string name="crm_move_to_column">ਕਾਲਮ ਵਿੱਚ ਲੈ ਜਾਓ</string>
     <string name="crm_move_to_row">ਕਤਾਰ ਵਿੱਚ ਲੈ ਜਾਓ</string>
     <string name="crm_move_after">%1$s ਤੋਂ ਬਾਅਦ</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM ਡਾਟਾ ਸੰਭਾਲਿਆ</string>
     <string name="crm_create_upload_json">.zip ਜਾਂ .json ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ</string>
     <string name="crm_create_blocked_no_options">ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ: %1$s ਲੋੜੀਂਦਾ ਹੈ ਪਰ ਚੁਣਨ ਲਈ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਹੈ। ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਵਿਕਲਪ ਸ਼ਾਮਲ ਕਰੋ।</string>
-    <string name="crm_design_sample">ਨਮੂਨਾ %1$d</string>
+    <string name="crm_design_sample">ਨਮੂਨਾ %1$s</string>
     <string name="crm_option_delete_title">ਵਿਕਲਪ ਮਿਟਾਓ</string>
     <string name="crm_option_delete_message">ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਵਿਕਲਪ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
 </resources>

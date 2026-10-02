@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mercado</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografía</string>
     <string name="market_account_biography_placeholder">Cuéntales a los compradores sobre ti…</string>
     <string name="market_account_load_failed">No se pudo cargar la cuenta</string>
@@ -58,7 +58,7 @@
     <string name="market_bids_tab_outbid">Superada</string>
     <string name="market_bids_tab_won">Ganada</string>
     <string name="market_bids_title">Pujas</string>
-    <string name="market_carousel_main">Foto %1$d de %2$d</string>
+    <string name="market_carousel_main">Foto %1$s de %2$s</string>
     <string name="market_channel_name">Mercado</string>
     <string name="market_chargeback_reason_bank_cannot_process">El banco no pudo procesar</string>
     <string name="market_chargeback_reason_check_returned">Cheque devuelto</string>
@@ -135,7 +135,7 @@
     <string name="market_editor_condition_refurbished">Reacondicionado</string>
     <string name="market_editor_condition_used">Usado</string>
     <string name="market_editor_currency">Moneda</string>
-    <string name="market_editor_days">%1$d días</string>
+    <string name="market_editor_days">%1$s días</string>
     <string name="market_editor_delete">Eliminar anuncio</string>
     <string name="market_editor_description">Descripción</string>
     <string name="market_editor_interval_monthly">Mensual</string>
@@ -325,7 +325,7 @@
     <string name="market_purchases_title">Compras</string>
     <string name="market_rating_label">Valoración</string>
     <string name="market_rating_no_reviews">Aún no hay reseñas</string>
-    <string name="market_rating_reviews">(%1$d reseña)</string>
+    <string name="market_rating_reviews">(%1$s reseña)</string>
     <string name="market_refund_amount_label">Importe</string>
     <string name="market_refund_body">Indica el motivo de tu solicitud de reembolso.</string>
     <string name="market_refund_details_label">Detalles</string>
@@ -474,10 +474,10 @@
     <string name="market_sale_review_response_submitting">Enviando…</string>
     <string name="market_checkout_subscribing">Subscribing…</string>
     <string name="market_filter_remove">Quitar filtro</string>
-    <string name="market_listing_detail_sales_count">%1$d ventas</string>
+    <string name="market_listing_detail_sales_count">%1$s ventas</string>
     <string name="market_listings_action_appeal">Apelar eliminación</string>
     <string name="market_listings_share_chooser">Compartir anuncio</string>
-    <string name="market_profile_sales_count">%1$d ventas</string>
+    <string name="market_profile_sales_count">%1$s ventas</string>
     <string name="market_purchase_dispute_response">Respuesta del vendedor</string>
     <string name="market_refund_dialog_amount_label">Importe</string>
 
@@ -493,11 +493,11 @@
     <string name="market_bids_current_bid">Actual: %1$s</string>
     <string name="market_bids_ends_in">Finaliza en %1$s</string>
     <string name="market_bids_your_bid">Tu oferta: %1$s</string>
-    <string name="market_carousel_thumbnail">Miniatura %1$d</string>
+    <string name="market_carousel_thumbnail">Miniatura %1$s</string>
     <string name="market_checkout_browser_unavailable">No hay navegador disponible para abrir la página de pago</string>
     <string name="market_checkout_pwyw_label">Tu precio (mínimo %1$s)</string>
     <string name="market_checkout_pwyw_min_error">El monto debe ser al menos %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d archivo(s) adjunto(s)</string>
+    <string name="market_dispute_dialog_attach_count">%1$s archivo(s) adjunto(s)</string>
     <string name="market_dispute_dialog_evidence_section_title">Pruebas enviadas</string>
     <string name="market_dispute_dialog_evidence_submitter_line">enviado por %1$s</string>
     <string name="market_editor_appeal">Apelar la moderación</string>
@@ -568,7 +568,7 @@
     <string name="market_messages_inbox_empty_title">Aún no hay conversaciones</string>
     <string name="market_messages_load_failed">No se pudo cargar la conversación</string>
     <string name="market_messages_send_failed">No se pudo enviar el mensaje</string>
-    <string name="market_messages_unread_badge">%1$d sin leer</string>
+    <string name="market_messages_unread_badge">%1$s sin leer</string>
     <string name="market_price_high_bid">Oferta más alta: %1$s</string>
     <string name="market_price_instant_buy">compra inmediata: %1$s</string>
     <string name="market_price_starting_bid">Oferta inicial: %1$s</string>
@@ -576,10 +576,10 @@
     <string name="market_profile_member_since">Miembro desde %1$s</string>
     <string name="market_profile_joined">Se unió el %1$s</string>
     <string name="market_profile_rating_breakdown">Desglose de calificaciones</string>
-    <string name="market_profile_stars_value">%1$d estrellas</string>
+    <string name="market_profile_stars_value">%1$s estrellas</string>
     <string name="market_purchase_dispute_chargeback">Contracargo %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Tu banco presentó un contracargo en este pedido. Stripe está gestionando la disputa con el vendedor; el resultado aparecerá aquí cuando se decida.</string>
-    <string name="market_purchase_download_many">Descarga tus %1$d archivos abajo.</string>
+    <string name="market_purchase_download_many">Descarga tus %1$s archivos abajo.</string>
     <string name="market_purchase_download_one">Descarga tu archivo abajo.</string>
     <string name="market_purchase_review_from">Reseña de %1$s</string>
     <string name="market_purchases_auction_label">Subasta n.º %1$s</string>

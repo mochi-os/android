@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ផ្សារ</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ជីវប្រវត្តិ</string>
     <string name="market_account_biography_placeholder">ប្រាប់អ្នកទិញអំពីខ្លួនអ្នក…</string>
     <string name="market_account_load_failed">មិនអាចផ្ទុកគណនីបានទេ</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">ដេញថ្លៃលើស</string>
     <string name="market_bids_tab_won">បានឈ្នះ</string>
     <string name="market_bids_title">ការដេញថ្លៃ</string>
-    <string name="market_carousel_main">រូបថត %1$d ក្នុង %2$d</string>
+    <string name="market_carousel_main">រូបថត %1$s ក្នុង %2$s</string>
     <string name="market_channel_name">ផ្សារ</string>
     <string name="market_chargeback_reason_bank_cannot_process">ធនាគារមិនអាចដំណើរការបាន</string>
     <string name="market_chargeback_reason_check_returned">មូលប្បទានប័ត្របានប្រគល់ត្រឡប់</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">បានកែលម្អ</string>
     <string name="market_editor_condition_used">បានប្រើ</string>
     <string name="market_editor_currency">រូបិយប័ណ្ណ</string>
-    <string name="market_editor_days">%1$d ថ្ងៃ</string>
+    <string name="market_editor_days">%1$s ថ្ងៃ</string>
     <string name="market_editor_delete">លុបការផ្សាយ</string>
     <string name="market_editor_description">ការពិពណ៌នា</string>
     <string name="market_editor_interval_monthly">ប្រចាំខែ</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">ការទិញ</string>
     <string name="market_rating_label">ការវាយតម្លៃ</string>
     <string name="market_rating_no_reviews">មិនទាន់មានការវាយតម្លៃ</string>
-    <string name="market_rating_reviews">(%1$d ការវាយតម្លៃ)</string>
+    <string name="market_rating_reviews">(%1$s ការវាយតម្លៃ)</string>
     <string name="market_refund_amount_label">ចំនួន</string>
     <string name="market_refund_body">ផ្តល់មូលហេតុសម្រាប់សំណើសងវិញរបស់អ្នក។</string>
     <string name="market_refund_details_label">ព័ត៌មានលម្អិត</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">បច្ចុប្បន្ន៖ %1$s</string>
     <string name="market_bids_ends_in">បញ្ចប់ក្នុង %1$s</string>
     <string name="market_bids_your_bid">ការដេញថ្លៃរបស់អ្នក៖ %1$s</string>
-    <string name="market_carousel_thumbnail">រូបភាពតូច %1$d</string>
+    <string name="market_carousel_thumbnail">រូបភាពតូច %1$s</string>
     <string name="market_checkout_browser_unavailable">មិនមានកម្មវិធីរុករកដើម្បីបើកទំព័រទូទាត់ប្រាក់ទេ</string>
     <string name="market_checkout_pwyw_label">តម្លៃរបស់អ្នក (អប្បបរមា %1$s)</string>
     <string name="market_checkout_pwyw_min_error">ចំនួនទឹកប្រាក់ត្រូវតែយ៉ាងតិច %1$s</string>
-    <string name="market_dispute_dialog_attach_count">បានភ្ជាប់ឯកសារ %1$d</string>
+    <string name="market_dispute_dialog_attach_count">បានភ្ជាប់ឯកសារ %1$s</string>
     <string name="market_dispute_dialog_evidence_section_title">ភស្តុតាងដែលបានដាក់ស្នើ</string>
     <string name="market_dispute_dialog_evidence_submitter_line">ដាក់ស្នើដោយ %1$s</string>
     <string name="market_editor_appeal">ប្តឹងឧទ្ធរណ៍ការសម្រេច</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">កំពុងផ្ទុកបញ្ជី</string>
     <string name="market_listing_detail_relist_failed">មិនអាចចុះបញ្ជីឡើងវិញបានទេ</string>
     <string name="market_listing_detail_relist_in_progress">កំពុងចុះបញ្ជីឡើងវិញ</string>
-    <string name="market_listing_detail_sales_count">ការលក់ %1$d</string>
+    <string name="market_listing_detail_sales_count">ការលក់ %1$s</string>
     <string name="market_listing_detail_seller_banned_banner">អ្នកលក់នេះត្រូវបានហាមឃាត់។ មិនអាចដាក់ការបញ្ជាទិញថ្មីបានទេ។</string>
     <string name="market_listing_detail_seller_suspended_banner">អ្នកលក់នេះត្រូវបានព្យួរ។ ការបញ្ជាទិញថ្មីត្រូវបានផ្អាករហូតដល់គណនីត្រូវបានស្ដារឡើងវិញ។</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">ការទិញត្រូវបានបិទនៅពេលគណនីរបស់អ្នកលក់ត្រូវបានដាក់កម្រិត។</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">មិនទាន់មានការសន្ទនា</string>
     <string name="market_messages_load_failed">មិនអាចផ្ទុកការសន្ទនាបានទេ</string>
     <string name="market_messages_send_failed">មិនអាចផ្ញើសារបានទេ</string>
-    <string name="market_messages_unread_badge">មិនបានអាន %1$d</string>
+    <string name="market_messages_unread_badge">មិនបានអាន %1$s</string>
     <string name="market_price_high_bid">ដេញខ្ពស់បំផុត៖ %1$s</string>
     <string name="market_price_instant_buy">ទិញភ្លាមៗ៖ %1$s</string>
     <string name="market_price_starting_bid">ដេញចាប់ផ្ដើម៖ %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">ជាសមាជិកតាំងពី %1$s</string>
     <string name="market_profile_joined">បានចូលរួម %1$s</string>
     <string name="market_profile_rating_breakdown">ការវាយតម្លៃលម្អិត</string>
-    <string name="market_profile_sales_count">ការលក់ %1$d</string>
-    <string name="market_profile_stars_value">%1$d ផ្កាយ</string>
+    <string name="market_profile_sales_count">ការលក់ %1$s</string>
+    <string name="market_profile_stars_value">%1$s ផ្កាយ</string>
     <string name="market_purchase_dispute_chargeback">ការទាមទារប្រាក់វិញ %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ធនាគាររបស់អ្នកបានដាក់ការទាមទារប្រាក់វិញលើការបញ្ជាទិញនេះ។ Stripe កំពុងដោះស្រាយវិវាទជាមួយអ្នកលក់; លទ្ធផលនឹងបង្ហាញនៅទីនេះនៅពេលត្រូវបានសម្រេច។</string>
     <string name="market_purchase_dispute_response">ការឆ្លើយតបរបស់អ្នកលក់</string>
-    <string name="market_purchase_download_many">ទាញយកឯកសារ %1$d របស់អ្នកខាងក្រោម។</string>
+    <string name="market_purchase_download_many">ទាញយកឯកសារ %1$s របស់អ្នកខាងក្រោម។</string>
     <string name="market_purchase_download_one">ទាញយកឯកសាររបស់អ្នកខាងក្រោម។</string>
     <string name="market_purchase_review_from">ការវាយតម្លៃពី %1$s</string>
     <string name="market_purchases_auction_label">ការដេញថ្លៃ #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">នេះនឹងបោះបង់ការដេញថ្លៃ។ បញ្ជីនឹងត្រូវលាក់ពីអ្នកទិញ; អ្នកអាចចុះបញ្ជីវាម្តងទៀតក្រោយជាសេចក្តីព្រាងថ្មី។</string>
     <string name="market_listings_remove_title">យកបញ្ជីលក់នេះចេញ?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">វានឹងបោះបង់ការដេញថ្លៃ និងជូនដំណឹងដល់អ្នកដេញថ្លៃសកម្ម %1$d នាក់។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ; អ្នកអាចផ្សាយវាម្តងទៀតនៅពេលក្រោយជាសេចក្តីព្រាងថ្មី។</item>
-        <item quantity="other">វានឹងបោះបង់ការដេញថ្លៃ និងជូនដំណឹងដល់អ្នកដេញថ្លៃសកម្ម %1$d នាក់។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ; អ្នកអាចផ្សាយវាម្តងទៀតនៅពេលក្រោយជាសេចក្តីព្រាងថ្មី។</item>
+        <item quantity="one">វានឹងបោះបង់ការដេញថ្លៃ និងជូនដំណឹងដល់អ្នកដេញថ្លៃសកម្ម %1$s នាក់។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ; អ្នកអាចផ្សាយវាម្តងទៀតនៅពេលក្រោយជាសេចក្តីព្រាងថ្មី។</item>
+        <item quantity="other">វានឹងបោះបង់ការដេញថ្លៃ និងជូនដំណឹងដល់អ្នកដេញថ្លៃសកម្ម %1$s នាក់។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ; អ្នកអាចផ្សាយវាម្តងទៀតនៅពេលក្រោយជាសេចក្តីព្រាងថ្មី។</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">វានឹងបោះបង់ការជាវសកម្ម %1$d នៅចុងបញ្ចប់នៃរយៈពេលចេញវិក្កយបត្របច្ចុប្បន្ន។ អ្នកជាវនឹងទទួលបានការជូនដំណឹង។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ។</item>
-        <item quantity="other">វានឹងបោះបង់ការជាវសកម្ម %1$d នៅចុងបញ្ចប់នៃរយៈពេលចេញវិក្កយបត្របច្ចុប្បន្ន។ អ្នកជាវនឹងទទួលបានការជូនដំណឹង។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ។</item>
+        <item quantity="one">វានឹងបោះបង់ការជាវសកម្ម %1$s នៅចុងបញ្ចប់នៃរយៈពេលចេញវិក្កយបត្របច្ចុប្បន្ន។ អ្នកជាវនឹងទទួលបានការជូនដំណឹង។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ។</item>
+        <item quantity="other">វានឹងបោះបង់ការជាវសកម្ម %1$s នៅចុងបញ្ចប់នៃរយៈពេលចេញវិក្កយបត្របច្ចុប្បន្ន។ អ្នកជាវនឹងទទួលបានការជូនដំណឹង។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ។</item>
     </plurals>
 </resources>

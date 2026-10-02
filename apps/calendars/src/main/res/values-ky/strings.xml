@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Түбөлүккө</string>
     <string name="calendars_reminder_time">Иш-чаранын убагында</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d мүнөт мурун</item>
-        <item quantity="other">%1$d мүнөт мурун</item>
+        <item quantity="one">%1$s мүнөт мурун</item>
+        <item quantity="other">%1$s мүнөт мурун</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d саат мурун</item>
-        <item quantity="other">%1$d саат мурун</item>
+        <item quantity="one">%1$s саат мурун</item>
+        <item quantity="other">%1$s саат мурун</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d күн мурун</item>
-        <item quantity="other">%1$d күн мурун</item>
+        <item quantity="one">%1$s күн мурун</item>
+        <item quantity="other">%1$s күн мурун</item>
     </plurals>
     <string name="calendars_reminder_add">Эскертме кошуу</string>
     <string name="calendars_reminder_remove">Эскертмени алып салуу</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Календарь өтө чоң</string>
     <string name="calendars_poll_invalid">Дарек календарь кайтарган жок</string>
     <string name="calendars_poll_unreachable">Дарекке жетүү мүмкүн болбоду</string>
-    <string name="calendars_poll_status">Дарек %1$d деп жооп берди</string>
+    <string name="calendars_poll_status">Дарек %1$s деп жооп берди</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d мүнөт</item>
-        <item quantity="other">%1$d мүнөт</item>
+        <item quantity="one">%1$s мүнөт</item>
+        <item quantity="other">%1$s мүнөт</item>
     </plurals>
     <string name="calendars_preferences_zones">Иш-чараларды өз убакыт алкагында көрсөтүү</string>
     <string name="calendars_event_backwards">Башталганга чейин аяктайт</string>

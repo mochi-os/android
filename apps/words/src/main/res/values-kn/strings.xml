@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">ಇನ್ನೂ ಆಟಗಳಿಲ್ಲ.</string>
     <string name="words_new_game_choose_opponents">ಎದುರಾಳಿಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d ಆಟಗಾರರು</string>
+    <string name="words_new_game_player_count">%1$s ಆಟಗಾರರು</string>
     <string name="words_new_game_no_friends_subtitle">ಆಡಲು ಪ್ರಾರಂಭಿಸಲು “ಜನರು” ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಸ್ನೇಹಿತರನ್ನು ಸೇರಿಸಿ.</string>
     <string name="words_detail_title">ಆಟ</string>
     <string name="words_detail_status_opponent_move">%1$s ರ ಚಲನೆ</string>
     <string name="words_detail_status_winner_wins">%1$s ಗೆದ್ದರು</string>
-    <string name="words_detail_player_fallback">ಆಟಗಾರ %1$d</string>
-    <string name="words_detail_player_count">%1$d ಆಟಗಾರರು</string>
-    <string name="words_detail_label_tiles_left">%1$d ಟೈಲ್‌ಗಳು ಉಳಿದಿವೆ</string>
+    <string name="words_detail_player_fallback">ಆಟಗಾರ %1$s</string>
+    <string name="words_detail_player_count">%1$s ಆಟಗಾರರು</string>
+    <string name="words_detail_label_tiles_left">%1$s ಟೈಲ್‌ಗಳು ಉಳಿದಿವೆ</string>
     <string name="words_detail_action_open_chat">ಚಾಟ್ ತೆರೆಯಿರಿ</string>
     <string name="words_detail_action_more">ಆಟದ ಕ್ರಿಯೆಗಳು</string>
-    <string name="words_detail_exchange_count">ಬದಲಾಯಿಸಿ (%1$d)</string>
+    <string name="words_detail_exchange_count">ಬದಲಾಯಿಸಿ (%1$s)</string>
     <string name="words_detail_chat_you_played">ನೀವು %1$s ಆಡಿದಿರಿ</string>
     <string name="words_detail_chat_player_played">%1$s %2$s ಆಡಿದರು</string>
 

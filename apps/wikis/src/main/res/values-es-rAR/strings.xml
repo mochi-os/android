@@ -51,7 +51,7 @@
 
     <string name="launcher_wikis">Mochi Wikis</string>
     <string name="wikis_sidebar_header">Wikis</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_page_action_section_wiki">Wiki</string>
     <string name="wikis_title">Wikis</string>
     <string name="wikis_join_id_hint">abc123…</string>

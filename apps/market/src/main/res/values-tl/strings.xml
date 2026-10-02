@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Market</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Talambuhay</string>
     <string name="market_account_biography_placeholder">Sabihin sa mga bumibili ang tungkol sa iyo…</string>
     <string name="market_account_load_failed">Hindi makapagload ng account</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">Nadaig</string>
     <string name="market_bids_tab_won">Nanalo</string>
     <string name="market_bids_title">Mga bid</string>
-    <string name="market_carousel_main">Larawan %1$d ng %2$d</string>
+    <string name="market_carousel_main">Larawan %1$s ng %2$s</string>
     <string name="market_channel_name">Market</string>
     <string name="market_chargeback_reason_bank_cannot_process">Hindi naproseso ng bangko</string>
     <string name="market_chargeback_reason_check_returned">Naibalik ang tseke</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">Naayos</string>
     <string name="market_editor_condition_used">Gamit na</string>
     <string name="market_editor_currency">Pera</string>
-    <string name="market_editor_days">%1$d araw</string>
+    <string name="market_editor_days">%1$s araw</string>
     <string name="market_editor_delete">Burahin ang listahan</string>
     <string name="market_editor_description">Paglalarawan</string>
     <string name="market_editor_interval_monthly">Buwanang</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">Mga Pagbili</string>
     <string name="market_rating_label">Rating</string>
     <string name="market_rating_no_reviews">Wala pang review</string>
-    <string name="market_rating_reviews">(%1$d review)</string>
+    <string name="market_rating_reviews">(%1$s review)</string>
     <string name="market_refund_amount_label">Halaga</string>
     <string name="market_refund_body">Magbigay ng dahilan para sa iyong refund request.</string>
     <string name="market_refund_details_label">Mga detalye</string>
@@ -473,10 +473,10 @@
     <string name="market_sale_review_response_submitting">Ipinapadala…</string>
     <string name="market_checkout_subscribing">Nagsu-subscribe…</string>
     <string name="market_filter_remove">Tanggalin ang filter</string>
-    <string name="market_listing_detail_sales_count">%1$d benta</string>
+    <string name="market_listing_detail_sales_count">%1$s benta</string>
     <string name="market_listings_action_appeal">Apela sa pagtanggal</string>
     <string name="market_listings_share_chooser">Ibahagi ang listahan</string>
-    <string name="market_profile_sales_count">%1$d benta</string>
+    <string name="market_profile_sales_count">%1$s benta</string>
     <string name="market_purchase_dispute_response">Sagot ng nagbebenta</string>
     <string name="market_refund_dialog_amount_label">Halaga</string>
 
@@ -498,11 +498,11 @@
     <string name="market_bids_current_bid">Kasalukuyan: %1$s</string>
     <string name="market_bids_ends_in">Magtatapos sa %1$s</string>
     <string name="market_bids_your_bid">Iyong bid: %1$s</string>
-    <string name="market_carousel_thumbnail">Thumbnail %1$d</string>
+    <string name="market_carousel_thumbnail">Thumbnail %1$s</string>
     <string name="market_checkout_browser_unavailable">Walang available na browser para buksan ang pahina ng bayad</string>
     <string name="market_checkout_pwyw_label">Iyong presyo (minimum %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Ang halaga ay dapat hindi bababa sa %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d (na) file ang nakalakip</string>
+    <string name="market_dispute_dialog_attach_count">%1$s (na) file ang nakalakip</string>
     <string name="market_dispute_dialog_evidence_section_title">Naisumiteng ebidensya</string>
     <string name="market_dispute_dialog_evidence_submitter_line">isinumite ni %1$s</string>
     <string name="market_editor_appeal">Iapela ang moderasyon</string>
@@ -573,7 +573,7 @@
     <string name="market_messages_inbox_empty_title">Wala pang mga pag-uusap</string>
     <string name="market_messages_load_failed">Hindi na-load ang thread</string>
     <string name="market_messages_send_failed">Hindi naipadala ang mensahe</string>
-    <string name="market_messages_unread_badge">%1$d hindi pa nababasa</string>
+    <string name="market_messages_unread_badge">%1$s hindi pa nababasa</string>
     <string name="market_price_high_bid">Pinakamataas na bid: %1$s</string>
     <string name="market_price_instant_buy">agarang bili: %1$s</string>
     <string name="market_price_starting_bid">Panimulang bid: %1$s</string>
@@ -581,10 +581,10 @@
     <string name="market_profile_member_since">Miyembro mula %1$s</string>
     <string name="market_profile_joined">Sumali noong %1$s</string>
     <string name="market_profile_rating_breakdown">Detalye ng rating</string>
-    <string name="market_profile_stars_value">%1$d bituin</string>
+    <string name="market_profile_stars_value">%1$s bituin</string>
     <string name="market_purchase_dispute_chargeback">Chargeback %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Naghain ang iyong bangko ng chargeback sa order na ito. Hinaharap ng Stripe ang dispute kasama ang nagbebenta; lalabas dito ang resulta kapag napagpasyahan na.</string>
-    <string name="market_purchase_download_many">I-download ang iyong %1$d file sa ibaba.</string>
+    <string name="market_purchase_download_many">I-download ang iyong %1$s file sa ibaba.</string>
     <string name="market_purchase_download_one">I-download ang iyong file sa ibaba.</string>
     <string name="market_purchase_review_from">Review mula kay %1$s</string>
     <string name="market_purchases_auction_label">Subasta #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Kakanselahin nito ang auction. Ang listahan ay itatago mula sa mga mamimili; maaari mo itong i-relist mamaya bilang bagong draft.</string>
     <string name="market_listings_remove_title">Alisin ang listahang ito?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Kakanselahin nito ang auction at aabisuhan ang %1$d aktibong bidder. Itatago ang listing sa mga mamimili; maaari mo itong muling ilista sa ibang pagkakataon bilang bagong draft.</item>
-        <item quantity="other">Kakanselahin nito ang auction at aabisuhan ang %1$d aktibong bidder. Itatago ang listing sa mga mamimili; maaari mo itong muling ilista sa ibang pagkakataon bilang bagong draft.</item>
+        <item quantity="one">Kakanselahin nito ang auction at aabisuhan ang %1$s aktibong bidder. Itatago ang listing sa mga mamimili; maaari mo itong muling ilista sa ibang pagkakataon bilang bagong draft.</item>
+        <item quantity="other">Kakanselahin nito ang auction at aabisuhan ang %1$s aktibong bidder. Itatago ang listing sa mga mamimili; maaari mo itong muling ilista sa ibang pagkakataon bilang bagong draft.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Kakanselahin nito ang %1$d aktibong subscription sa pagtatapos ng kasalukuyang panahon ng pagsingil. Aabisuhan ang mga subscriber. Itatago ang listing sa mga mamimili.</item>
-        <item quantity="other">Kakanselahin nito ang %1$d aktibong subscription sa pagtatapos ng kasalukuyang panahon ng pagsingil. Aabisuhan ang mga subscriber. Itatago ang listing sa mga mamimili.</item>
+        <item quantity="one">Kakanselahin nito ang %1$s aktibong subscription sa pagtatapos ng kasalukuyang panahon ng pagsingil. Aabisuhan ang mga subscriber. Itatago ang listing sa mga mamimili.</item>
+        <item quantity="other">Kakanselahin nito ang %1$s aktibong subscription sa pagtatapos ng kasalukuyang panahon ng pagsingil. Aabisuhan ang mga subscriber. Itatago ang listing sa mga mamimili.</item>
     </plurals>
 </resources>

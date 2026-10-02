@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">għamel bidla</string>
     <string name="projects_attachment_empty">L-ebda mehmuż</string>
     <string name="projects_attachment_default_name">mehmuż</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Talba ġdida ta\' merge</string>
     <string name="projects_request_status_closed">Magħluqa</string>
     <string name="projects_request_back_to_list">Lura għal-lista</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Qiegħed jiġi vverifikat l-istat tal-merge…</string>
     <string name="projects_request_can_merge">Jista\' jsir merge</string>
     <string name="projects_request_cannot_merge">Ma jistax isir merge</string>
-    <string name="projects_request_ahead_behind">%1$d quddiem, %2$d wara</string>
+    <string name="projects_request_ahead_behind">%1$s quddiem, %2$s wara</string>
     <string name="projects_request_draft_notice">Din hija abbozz. Immarka bħala lesta qabel issir il-merge.</string>
     <string name="projects_request_view_diff">Ara d-diff</string>
     <string name="projects_request_mark_ready">Immarka bħala lesta</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">L-ebda kolonna mhi kkonfigurata għal din il-vista</string>
     <string name="projects_board_no_options">L-ebda għażla kkonfigurata għall-kamp tal-kolonna</string>
     <string name="projects_board_column_options">Għażliet tal-kolonna</string>
-    <string name="projects_board_nested_count">+%1$d innestjati</string>
+    <string name="projects_board_nested_count">+%1$s innestjati</string>
     <string name="projects_move_to_column">Mexxi għal kolonna</string>
     <string name="projects_move_to_row">Mexxi għal ringiela</string>
     <string name="projects_move_after">Wara %1$s</string>
@@ -365,11 +365,11 @@
     <string name="projects_sort_filter_title">Irranġa u ffiltra</string>
     <string name="projects_create_prefix_hint">Jintuża għal IDs li jinqraw bħal %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d fajl f\'kunflitt</item>
-        <item quantity="two">%1$d fajls f\'kunflitt</item>
-        <item quantity="few">%1$d fajls f\'kunflitt</item>
-        <item quantity="many">%1$d fajl f\'kunflitt</item>
-        <item quantity="other">%1$d fajl f\'kunflitt</item>
+        <item quantity="one">%1$s fajl f\'kunflitt</item>
+        <item quantity="two">%1$s fajls f\'kunflitt</item>
+        <item quantity="few">%1$s fajls f\'kunflitt</item>
+        <item quantity="many">%1$s fajl f\'kunflitt</item>
+        <item quantity="other">%1$s fajl f\'kunflitt</item>
     </plurals>
     <string name="projects_design_export_saved">Id-disinn ġie salvat</string>
     <string name="projects_design_import_failed">Ma setax jinqara dak il-fajl</string>
@@ -379,7 +379,7 @@
     <string name="projects_export_saved">Id-data tal-proġett ġiet salvata</string>
     <string name="projects_exporting">Qed titħejja l-esportazzjoni…</string>
     <string name="projects_board_add_column">Żid kolonna</string>
-    <string name="projects_design_sample">Kampjun %1$d</string>
+    <string name="projects_design_sample">Kampjun %1$s</string>
     <string name="projects_option_delete_title">Ħassar għażla</string>
     <string name="projects_option_delete_message">Żgur li trid tħassar l-għażla \"%1$s\"?</string>
     <string name="projects_create_object_no_types">L-ebda tipi ta\' oġġetti jistgħu jinħolqu għadhom. Oħloq l-oġġetti tal-ġenitur meħtieġa l-ewwel.</string>

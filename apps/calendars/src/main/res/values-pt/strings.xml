@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Para sempre</string>
     <string name="calendars_reminder_time">À hora do evento</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minuto antes</item>
-        <item quantity="other">%1$d minutos antes</item>
+        <item quantity="one">%1$s minuto antes</item>
+        <item quantity="other">%1$s minutos antes</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d hora antes</item>
-        <item quantity="other">%1$d horas antes</item>
+        <item quantity="one">%1$s hora antes</item>
+        <item quantity="other">%1$s horas antes</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d dia antes</item>
-        <item quantity="other">%1$d dias antes</item>
+        <item quantity="one">%1$s dia antes</item>
+        <item quantity="other">%1$s dias antes</item>
     </plurals>
     <string name="calendars_reminder_add">Adicionar lembrete</string>
     <string name="calendars_reminder_remove">Remover lembrete</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">O calendário é demasiado grande</string>
     <string name="calendars_poll_invalid">O endereço não devolveu um calendário</string>
     <string name="calendars_poll_unreachable">Não foi possível contactar o endereço</string>
-    <string name="calendars_poll_status">O endereço respondeu %1$d</string>
+    <string name="calendars_poll_status">O endereço respondeu %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minutos</item>
-        <item quantity="other">%1$d minutos</item>
+        <item quantity="one">%1$s minutos</item>
+        <item quantity="other">%1$s minutos</item>
     </plurals>
     <string name="calendars_preferences_zones">Mostrar os eventos no seu próprio fuso horário</string>
     <string name="calendars_event_backwards">Termina antes de começar</string>

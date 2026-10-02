@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Отправка…</string>
     <string name="market_checkout_subscribing">Подписка…</string>
     <string name="market_filter_remove">Убрать фильтр</string>
-    <string name="market_listing_detail_sales_count">Продаж: %1$d</string>
-    <string name="market_profile_sales_count">Продаж: %1$d</string>
+    <string name="market_listing_detail_sales_count">Продаж: %1$s</string>
+    <string name="market_profile_sales_count">Продаж: %1$s</string>
     <string name="market_purchase_dispute_response">Ответ продавца</string>
     <string name="market_purchases_order_label">Заказ № %1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Расскажите покупателям о себе…</string>
     <string name="market_account_load_failed">Не удалось загрузить аккаунт</string>
     <string name="market_account_save_failed">Не удалось сохранить изменения</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Текущая: %1$s</string>
     <string name="market_bids_ends_in">Завершится через %1$s</string>
     <string name="market_bids_your_bid">Ваша ставка: %1$s</string>
-    <string name="market_carousel_main">Фото %1$d из %2$d</string>
-    <string name="market_carousel_thumbnail">Миниатюра %1$d</string>
+    <string name="market_carousel_main">Фото %1$s из %2$s</string>
+    <string name="market_carousel_thumbnail">Миниатюра %1$s</string>
     <string name="market_checkout_browser_unavailable">Нет доступного браузера для открытия страницы оплаты</string>
     <string name="market_checkout_pay_button">Оплатить через Stripe</string>
     <string name="market_checkout_processing">Обработка…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Прикрепить доказательства</string>
-    <string name="market_dispute_dialog_attach_count">Прикреплено файлов: %1$d</string>
+    <string name="market_dispute_dialog_attach_count">Прикреплено файлов: %1$s</string>
     <string name="market_dispute_dialog_evidence_role_staff">Сотрудник Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Представленные доказательства</string>
     <string name="market_dispute_dialog_evidence_submitter_line">отправлено пользователем %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">URL ссылки</string>
     <string name="market_editor_assets_empty">Ресурсов пока нет</string>
     <string name="market_editor_category_none">Выберите категорию</string>
-    <string name="market_editor_days">%1$d дн.</string>
+    <string name="market_editor_days">%1$s дн.</string>
     <string name="market_editor_delete">Удалить объявление</string>
     <string name="market_editor_delete_confirm_message">Объявление будет удалено без возможности восстановления.</string>
     <string name="market_editor_delete_confirm_title">Удалить объявление?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">Не удалось загрузить переписку</string>
     <string name="market_messages_send_failed">Не удалось отправить сообщение</string>
     <string name="market_messages_thread_title">Переписка</string>
-    <string name="market_messages_unread_badge">Непрочитанных: %1$d</string>
+    <string name="market_messages_unread_badge">Непрочитанных: %1$s</string>
     <string name="market_price_from">От %1$s</string>
     <string name="market_price_high_bid">Высшая ставка: %1$s</string>
     <string name="market_price_instant_buy">купить сейчас: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">Присоединился %1$s</string>
     <string name="market_profile_no_reviews">Отзывов пока нет.</string>
     <string name="market_profile_rating_breakdown">Распределение оценок</string>
-    <string name="market_profile_stars_value">Звёзд: %1$d</string>
+    <string name="market_profile_stars_value">Звёзд: %1$s</string>
     <string name="market_purchase_dispute_chargeback">Возврат платежа %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ваш банк инициировал возврат платежа по этому заказу. Stripe ведёт спор с продавцом; результат появится здесь, когда решение будет принято.</string>
-    <string name="market_purchase_download_many">Скачайте свои файлы (%1$d) ниже.</string>
+    <string name="market_purchase_download_many">Скачайте свои файлы (%1$s) ниже.</string>
     <string name="market_purchase_download_one">Скачайте свой файл ниже.</string>
     <string name="market_purchase_review_from">Отзыв от %1$s</string>
     <string name="market_purchases_auction_label">Аукцион №%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s возвращено</string>
     <string name="market_purchases_won_for">Выиграно за %1$s</string>
-    <string name="market_rating_reviews">(%1$d отзывов)</string>
+    <string name="market_rating_reviews">(%1$s отзывов)</string>
     <string name="market_refund_amount_label">Сумма</string>
     <string name="market_refund_dialog_amount_help">Оставьте пустым, чтобы вернуть всю сумму заказа.</string>
     <string name="market_refund_dialog_amount_label">Сумма</string>
@@ -785,15 +785,15 @@
     <string name="market_listings_remove_message_auction">Это отменит аукцион. Объявление будет скрыто от покупателей; вы сможете опубликовать его позже как новый черновик.</string>
     <string name="market_listings_remove_title">Удалить это объявление?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Это отменит аукцион и уведомит %1$d активного участника. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>
-        <item quantity="few">Это отменит аукцион и уведомит %1$d активных участников. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>
-        <item quantity="many">Это отменит аукцион и уведомит %1$d активных участников. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>
-        <item quantity="other">Это отменит аукцион и уведомит %1$d активных участников. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>
+        <item quantity="one">Это отменит аукцион и уведомит %1$s активного участника. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>
+        <item quantity="few">Это отменит аукцион и уведомит %1$s активных участников. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>
+        <item quantity="many">Это отменит аукцион и уведомит %1$s активных участников. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>
+        <item quantity="other">Это отменит аукцион и уведомит %1$s активных участников. Объявление будет скрыто от покупателей; позже вы сможете разместить его снова как новый черновик.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Это отменит %1$d активную подписку в конце текущего платёжного периода. Подписчики будут уведомлены. Объявление будет скрыто от покупателей.</item>
-        <item quantity="few">Это отменит %1$d активные подписки в конце текущего платёжного периода. Подписчики будут уведомлены. Объявление будет скрыто от покупателей.</item>
-        <item quantity="many">Это отменит %1$d активных подписок в конце текущего платёжного периода. Подписчики будут уведомлены. Объявление будет скрыто от покупателей.</item>
-        <item quantity="other">Это отменит %1$d активных подписок в конце текущего платёжного периода. Подписчики будут уведомлены. Объявление будет скрыто от покупателей.</item>
+        <item quantity="one">Это отменит %1$s активную подписку в конце текущего платёжного периода. Подписчики будут уведомлены. Объявление будет скрыто от покупателей.</item>
+        <item quantity="few">Это отменит %1$s активные подписки в конце текущего платёжного периода. Подписчики будут уведомлены. Объявление будет скрыто от покупателей.</item>
+        <item quantity="many">Это отменит %1$s активных подписок в конце текущего платёжного периода. Подписчики будут уведомлены. Объявление будет скрыто от покупателей.</item>
+        <item quantity="other">Это отменит %1$s активных подписок в конце текущего платёжного периода. Подписчики будут уведомлены. Объявление будет скрыто от покупателей.</item>
     </plurals>
 </resources>

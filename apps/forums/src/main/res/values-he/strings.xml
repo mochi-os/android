@@ -203,9 +203,9 @@
     <string name="forums_saved_error_clear">ניקוי הפוסטים השמורים נכשל</string>
     <plurals name="forums_new_posts">
         <item quantity="one">פוסט חדש אחד</item>
-        <item quantity="two">%d פוסטים חדשים</item>
-        <item quantity="many">%d פוסטים חדשים</item>
-        <item quantity="other">%d פוסטים חדשים</item>
+        <item quantity="two">%s פוסטים חדשים</item>
+        <item quantity="many">%s פוסטים חדשים</item>
+        <item quantity="other">%s פוסטים חדשים</item>
     </plurals>
     <string name="forums_rss_feed">פיד RSS</string>
     <string name="forums_rss_mode_posts">פוסטים</string>
@@ -298,8 +298,8 @@
     <string name="forums_settings_unsubscribe_section">בטל מנוי לפורום</string>
     <string name="forums_share_link_title">קישור לפורום</string>
     <string name="forums_find_found_by_url">נמצא לפי כתובת URL</string>
-    <string name="forums_moderation_pending_posts">פוסטים ממתינים (%1$d)</string>
-    <string name="forums_moderation_pending_comments">תגובות ממתינות (%1$d)</string>
+    <string name="forums_moderation_pending_posts">פוסטים ממתינים (%1$s)</string>
+    <string name="forums_moderation_pending_comments">תגובות ממתינות (%1$s)</string>
     <string name="forums_moderation_on_image">על התמונה: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">אין לך הרשאה לפרסם בפורום זה</string>

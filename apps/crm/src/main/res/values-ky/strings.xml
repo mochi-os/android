@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Объекттер жок</string>
     <string name="crm_board_no_columns">Бул көрүнүш үчүн мамычалар жөндөлгөн эмес</string>
     <string name="crm_board_no_options">Тилкенин талаасы үчүн жөндөлгөн варианттар жок</string>
-    <string name="crm_board_nested_count">+%1$d ичинде</string>
+    <string name="crm_board_nested_count">+%1$s ичинде</string>
     <string name="crm_move_to_column">Тилкеге жылдыруу</string>
     <string name="crm_move_to_row">Сапка жылдыруу</string>
     <string name="crm_move_after">%1$s андан кийин</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM маалыматы сакталды</string>
     <string name="crm_create_upload_json">.zip же .json файлын жүктөңүз</string>
     <string name="crm_create_blocked_no_options">Түзүү мүмкүн эмес: %1$s милдеттүү, бирок тандоо варианттары жок. Дизайнда варианттарды кошуңуз.</string>
-    <string name="crm_design_sample">Үлгү %1$d</string>
+    <string name="crm_design_sample">Үлгү %1$s</string>
     <string name="crm_option_delete_title">Тандоону жок кылуу</string>
     <string name="crm_option_delete_message">\"%1$s\" тандоосун чындап өчүргүңүз келеби?</string>
 </resources>

@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Igavesti</string>
     <string name="calendars_reminder_time">Sündmuse ajal</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minut varem</item>
-        <item quantity="other">%1$d minutit varem</item>
+        <item quantity="one">%1$s minut varem</item>
+        <item quantity="other">%1$s minutit varem</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d tund varem</item>
-        <item quantity="other">%1$d tundi varem</item>
+        <item quantity="one">%1$s tund varem</item>
+        <item quantity="other">%1$s tundi varem</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d päev varem</item>
-        <item quantity="other">%1$d päeva varem</item>
+        <item quantity="one">%1$s päev varem</item>
+        <item quantity="other">%1$s päeva varem</item>
     </plurals>
     <string name="calendars_reminder_add">Lisa meeldetuletus</string>
     <string name="calendars_reminder_remove">Eemalda meeldetuletus</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Kalender on liiga suur</string>
     <string name="calendars_poll_invalid">Aadress ei tagastanud kalendrit</string>
     <string name="calendars_poll_unreachable">Aadressile ei õnnestunud ligi pääseda</string>
-    <string name="calendars_poll_status">Aadress vastas %1$d</string>
+    <string name="calendars_poll_status">Aadress vastas %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minutit</item>
+        <item quantity="one">%1$s minut</item>
+        <item quantity="other">%1$s minutit</item>
     </plurals>
     <string name="calendars_preferences_zones">Näita sündmusi nende endi ajavööndis</string>
     <string name="calendars_event_backwards">Lõpeb enne algust</string>

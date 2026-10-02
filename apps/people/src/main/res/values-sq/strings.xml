@@ -180,8 +180,8 @@
     <string name="people_books_create">Krijo libër adresash</string>
     <string name="people_books_delete">Fshi librin e adresave</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Të fshihet %1$s dhe %2$d kontakti i tij?</item>
-        <item quantity="other">Të fshihet %1$s dhe %2$d kontaktet e tij?</item>
+        <item quantity="one">Të fshihet %1$s dhe %2$s kontakti i tij?</item>
+        <item quantity="other">Të fshihet %1$s dhe %2$s kontaktet e tij?</item>
     </plurals>
     <string name="people_welcome_body">Gjeni miq në të gjithë Mochi dhe lidhuni. Prekni Shto kontakt për të dërguar një ftesë.</string>
     <string name="people_person_state_contact">Në kontakte</string>

@@ -180,10 +180,10 @@
     <string name="people_books_create">Utwórz książkę adresową</string>
     <string name="people_books_delete">Usuń książkę adresową</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Usunąć %1$s i %2$d kontakt w niej?</item>
-        <item quantity="few">Usunąć %1$s i %2$d kontakty w niej?</item>
-        <item quantity="many">Usunąć %1$s i %2$d kontaktów w niej?</item>
-        <item quantity="other">Usunąć %1$s i %2$d kontaktu w niej?</item>
+        <item quantity="one">Usunąć %1$s i %2$s kontakt w niej?</item>
+        <item quantity="few">Usunąć %1$s i %2$s kontakty w niej?</item>
+        <item quantity="many">Usunąć %1$s i %2$s kontaktów w niej?</item>
+        <item quantity="other">Usunąć %1$s i %2$s kontaktu w niej?</item>
     </plurals>
     <string name="people_welcome_body">Znajdź znajomych w całym Mochi i nawiąż kontakt. Dotknij Dodaj kontakt, aby wysłać zaproszenie.</string>
     <string name="people_person_state_contact">W kontaktach</string>

@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">Mã</string>
     <string name="chess_piece_pawn">Tốt</string>
     <string name="chess_move_played">%1$s đã đi %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">Thông báo về nước đi cờ vua, đề nghị hòa và kết quả ván đấu.</string>
     <string name="chess_channel_name">Thông báo cờ vua</string>
     <string name="chess_delete_message">Xoá ván cờ khỏi danh sách của bạn.</string>

@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Brathan mu dheasachaidhean duilleagan wiki, beachdan agus cuiridhean.</string>
     <string name="wikis_pageview_toc_expand">Seall clàr-innse</string>
     <string name="wikis_pageview_toc_collapse">Falaich clàr-innse</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Air ùrachadh %1$s</string>
     <string name="wikis_pageview_not_found_description">Chan eil an duilleag “%1$s” ann fhathast.</string>
     <string name="wikis_pageview_share_chooser">Ceangal na h-uicipeid</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Tha thu gu bhith a’ sguabadh às na duilleige “%1$s” (%2$s). Gabhaidh an gnìomh seo a neo-dhèanamh le bhith ag ath-nochdadh on eachdraidh.</string>
     <string name="wikis_delete_page_success">Chaidh an duilleag a sguabadh às</string>
     <string name="wikis_revert_page_title">Aisig an duilleag</string>
-    <string name="wikis_revert_page_message">Tha thu gu bhith a’ tilleadh %1$s gu tionndadh %2$d. Cruthaichidh seo lèirmheas ùr leis an t-susbaint bho thionndadh %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Air a thilleadh gu tionndadh %1$d</string>
-    <string name="wikis_revert_page_success">Air a thilleadh gu tionndadh %1$d</string>
+    <string name="wikis_revert_page_message">Tha thu gu bhith a’ tilleadh %1$s gu tionndadh %2$s. Cruthaichidh seo lèirmheas ùr leis an t-susbaint bho thionndadh %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Air a thilleadh gu tionndadh %1$s</string>
+    <string name="wikis_revert_page_success">Air a thilleadh gu tionndadh %1$s</string>
     <string name="wikis_rename_page_renaming">A\' cur ainm ùr air…</string>
     <string name="wikis_rename_page_success">Chaidh ainm ùr a chur air an duilleag</string>
-    <string name="wikis_history_viewing">A’ sealltainn eachdraidh %1$s, tionndadh làithreach %2$d</string>
-    <string name="wikis_revision_version_badge">Tionndadh %1$d</string>
+    <string name="wikis_history_viewing">A’ sealltainn eachdraidh %1$s, tionndadh làithreach %2$s</string>
+    <string name="wikis_revision_version_badge">Tionndadh %1$s</string>
     <string name="wikis_search_pages_placeholder">Lorg duilleagan a rèir tiotail no susbaint…</string>
     <string name="wikis_search_no_results">Cha do lorgadh duilleagan airson “%1$s”. Feuch briathran-luirg eile.</string>
     <string name="wikis_search_updated">Air ùrachadh %1$s</string>
@@ -289,54 +289,54 @@
     <string name="wikis_revision_author">le %1$s</string>
     <string name="wikis_revision_show_page">Seall an duilleag</string>
     <string name="wikis_revision_compare_failed">Cha b\' urrainn an tionndadh roimhe a luchdadh airson coimeas.</string>
-    <string name="wikis_revision_changes_from">Atharraichidhean bho thionndadh %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Atharraichidhean bho thionndadh %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d bheachd</item>
-        <item quantity="two">%d bheachd</item>
-        <item quantity="few">%d beachdan</item>
-        <item quantity="other">%d beachd</item>
+        <item quantity="one">%s bheachd</item>
+        <item quantity="two">%s bheachd</item>
+        <item quantity="few">%s beachdan</item>
+        <item quantity="other">%s beachd</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d fhreagairt</item>
-        <item quantity="two">+%d barrachd freagairtean</item>
-        <item quantity="few">+%d barrachd freagairtean</item>
-        <item quantity="other">+%d barrachd freagairtean</item>
+        <item quantity="one">%s fhreagairt</item>
+        <item quantity="two">+%s barrachd freagairtean</item>
+        <item quantity="few">+%s barrachd freagairtean</item>
+        <item quantity="other">+%s barrachd freagairtean</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d duilleag</item>
-        <item quantity="two">%d dhuilleag</item>
-        <item quantity="few">%d duilleagan</item>
-        <item quantity="other">%d duilleag</item>
+        <item quantity="one">%s duilleag</item>
+        <item quantity="two">%s dhuilleag</item>
+        <item quantity="few">%s duilleagan</item>
+        <item quantity="other">%s duilleag</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d faidhle</item>
-        <item quantity="two">%d fhaidhle</item>
-        <item quantity="few">%d faidhlichean</item>
-        <item quantity="other">%d faidhle</item>
+        <item quantity="one">%s faidhle</item>
+        <item quantity="two">%s fhaidhle</item>
+        <item quantity="few">%s faidhlichean</item>
+        <item quantity="other">%s faidhle</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d dealbh</item>
-        <item quantity="two">%d dhealbh</item>
-        <item quantity="few">%d dealbhan</item>
-        <item quantity="other">%d dealbh</item>
+        <item quantity="one">%s dealbh</item>
+        <item quantity="two">%s dhealbh</item>
+        <item quantity="few">%s dealbhan</item>
+        <item quantity="other">%s dealbh</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d sgrìobhainn</item>
-        <item quantity="two">%d sgrìobhainn</item>
-        <item quantity="few">%d sgrìobhainnean</item>
-        <item quantity="other">%d sgrìobhainn</item>
+        <item quantity="one">%s sgrìobhainn</item>
+        <item quantity="two">%s sgrìobhainn</item>
+        <item quantity="few">%s sgrìobhainnean</item>
+        <item quantity="other">%s sgrìobhainn</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d duilleag leis an taga seo</item>
-        <item quantity="two">%d dhuilleag leis an taga seo</item>
-        <item quantity="few">%d duilleagan leis an taga seo</item>
-        <item quantity="other">%d duilleag leis an taga seo</item>
+        <item quantity="one">%s duilleag leis an taga seo</item>
+        <item quantity="two">%s dhuilleag leis an taga seo</item>
+        <item quantity="few">%s duilleagan leis an taga seo</item>
+        <item quantity="other">%s duilleag leis an taga seo</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Fhuaras %1$d toradh airson \"%2$s\"</item>
-        <item quantity="two">Fhuaras %1$d thoradh airson \"%2$s\"</item>
-        <item quantity="few">Fhuaras %1$d toraidhean airson \"%2$s\"</item>
-        <item quantity="other">Fhuaras %1$d toradh airson \"%2$s\"</item>
+        <item quantity="one">Fhuaras %1$s toradh airson \"%2$s\"</item>
+        <item quantity="two">Fhuaras %1$s thoradh airson \"%2$s\"</item>
+        <item quantity="few">Fhuaras %1$s toraidhean airson \"%2$s\"</item>
+        <item quantity="other">Fhuaras %1$s toradh airson \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Cha b\' urrainn dhuinn an caipsean a shàbhaladh</string>
     <string name="wikis_attachments_upload_types">Faidhlichean ris an cuirear taic: dealbhan, PDF, DOC, DOCX, TXT, agus MD.</string>
@@ -345,9 +345,9 @@
     <string name="wikis_rss_copied_new">Chaidh URL RSS ùr a lethbhreacadh dhan stòr-bhòrd</string>
     <string name="wikis_rss_exists">Chaidh an URL inbhir seo a chur a-mach mu thràth agus chan urrainnear a shealltainn a-rithist.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">A\' sealltainn a\' chiad %1$d bheachd.</item>
-        <item quantity="two">A\' sealltainn a\' chiad %1$d beachdan.</item>
-        <item quantity="few">A\' sealltainn a\' chiad %1$d beachdan.</item>
-        <item quantity="other">A\' sealltainn a\' chiad %1$d beachd.</item>
+        <item quantity="one">A\' sealltainn a\' chiad %1$s bheachd.</item>
+        <item quantity="two">A\' sealltainn a\' chiad %1$s beachdan.</item>
+        <item quantity="few">A\' sealltainn a\' chiad %1$s beachdan.</item>
+        <item quantity="other">A\' sealltainn a\' chiad %1$s beachd.</item>
     </plurals>
 </resources>

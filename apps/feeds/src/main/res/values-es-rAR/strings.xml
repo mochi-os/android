@@ -95,7 +95,7 @@
     <string name="feeds_source_type_feed_posts">Feed de Mochi</string>
     <string name="feeds_source_type_feed_memories">Recuerdos</string>
     <string name="feeds_suggested_credibility_title">Credibilidad sugerida</string>
-    <string name="feeds_suggested_credibility_body">Mochi sugiere una credibilidad de %1$d. ¿Aceptar?</string>
+    <string name="feeds_suggested_credibility_body">Mochi sugiere una credibilidad de %1$s. ¿Aceptar?</string>
     <string name="feeds_suggested_credibility_keep">Mantener la actual</string>
     <string name="feeds_ai_processing_mode">Modo de procesamiento con IA</string>
     <string name="feeds_ai_mode_tag_deduplicate">Etiquetar + eliminar duplicados</string>
@@ -160,12 +160,12 @@
     <string name="feeds_source_url_hint_feed">ID de entidad del feed o huella digital</string>
     <string name="feeds_source_credibility_label">Credibilidad</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d hora</item>
-        <item quantity="other">%1$d horas</item>
+        <item quantity="one">%1$s hora</item>
+        <item quantity="other">%1$s horas</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d minutos</item>
+        <item quantity="one">%1$s minuto</item>
+        <item quantity="other">%1$s minutos</item>
     </plurals>
     <string name="feeds_source_polling_interval">Consultando cada %1$s</string>
     <string name="feeds_access_level_react_full">Reaccionar y ver</string>

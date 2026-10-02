@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">削除</string>
     <string name="go_delete_message">このゲームはリストから削除されます。元に戻すことはできません。</string>
     <string name="go_delete_title">ゲームを削除しますか？</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">承認</string>
     <string name="go_draw_decline">拒否</string>
     <string name="go_draw_offered_received">%1$sが引き分けを提案しました</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">投了</string>
     <string name="go_new_game_title">新しい囲碁ゲーム</string>
     <string name="go_new_game_no_friends">ゲームを始めるには、まず友達を追加する必要があります。</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">黒が先手であることを補うために白のスコアに加えるポイント</string>
 
-    <string name="go_board_a11y">%1$d×%1$d囲碁盤</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d の碁盤、黒石を打つ番です</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d の碁盤、白石を打つ番です</string>
+    <string name="go_board_a11y">%1$s×%1$s囲碁盤</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s の碁盤、黒石を打つ番です</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s の碁盤、白石を打つ番です</string>
     <string name="go_status_scoring">計算中 — 整地に合意するか対局を続けてください</string>
     <string name="go_score_proposed">提案されたスコア: 黒 %1$s、白 %2$s</string>
     <string name="go_score_opponent_accepted">対戦相手はこのスコアに同意しています: 黒 %1$s、白 %2$s</string>

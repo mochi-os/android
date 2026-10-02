@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">fixo un cambio</string>
     <string name="projects_attachment_empty">Sen anexos</string>
     <string name="projects_attachment_default_name">anexo</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nova solicitude de fusión</string>
     <string name="projects_request_status_closed">Pechada</string>
     <string name="projects_request_back_to_list">Volver á lista</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Comprobando o estado da fusión…</string>
     <string name="projects_request_can_merge">Pódese fusionar</string>
     <string name="projects_request_cannot_merge">Non se pode fusionar</string>
-    <string name="projects_request_ahead_behind">%1$d por diante, %2$d por detrás</string>
+    <string name="projects_request_ahead_behind">%1$s por diante, %2$s por detrás</string>
     <string name="projects_request_draft_notice">Isto é un borrador. Márcao como listo antes de fusionar.</string>
     <string name="projects_request_view_diff">Ver diferenzas</string>
     <string name="projects_request_mark_ready">Marcar como listo</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Non hai columnas configuradas para esta vista</string>
     <string name="projects_board_no_options">Non hai opcións configuradas para o campo da columna</string>
     <string name="projects_board_column_options">Opcións da columna</string>
-    <string name="projects_board_nested_count">+%1$d aniñados</string>
+    <string name="projects_board_nested_count">+%1$s aniñados</string>
     <string name="projects_move_to_column">Mover á columna</string>
     <string name="projects_move_to_row">Mover á fila</string>
     <string name="projects_move_after">Despois de %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Ordenar e filtrar</string>
     <string name="projects_create_prefix_hint">Úsase para identificadores lexibles como %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d ficheiro en conflito</item>
-        <item quantity="other">%1$d ficheiros en conflito</item>
+        <item quantity="one">%1$s ficheiro en conflito</item>
+        <item quantity="other">%1$s ficheiros en conflito</item>
     </plurals>
     <string name="projects_design_export_saved">Deseño gardado</string>
     <string name="projects_design_import_failed">Non se puido ler ese ficheiro</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Datos do proxecto gardados</string>
     <string name="projects_exporting">Preparando a exportación…</string>
     <string name="projects_board_add_column">Engadir columna</string>
-    <string name="projects_design_sample">Exemplo %1$d</string>
+    <string name="projects_design_sample">Exemplo %1$s</string>
     <string name="projects_option_delete_title">Eliminar opción</string>
     <string name="projects_option_delete_message">Tes a certeza de que queres eliminar a opción \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Aínda non se poden crear tipos de elementos. Crea primeiro os elementos pai requiridos.</string>

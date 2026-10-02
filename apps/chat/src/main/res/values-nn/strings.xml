@@ -52,7 +52,7 @@
     <string name="chat_delete_confirm_title">Slette meldinga?</string>
     <string name="chat_delete_confirm_body">Dette slettar meldinga for alle og kan ikkje angrast.</string>
     <string name="chat_delete_own_only">Du kan berre slette dine eigne meldingar</string>
-    <string name="chat_selection_title">%1$d valde</string>
+    <string name="chat_selection_title">%1$s valde</string>
 
     <string name="chat_forward_chats">Prat</string>
     <string name="chat_forward_friends">Vener</string>

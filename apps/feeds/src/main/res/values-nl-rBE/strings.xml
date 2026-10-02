@@ -104,7 +104,7 @@
     <string name="feeds_source_poll">Pollen</string>
     <string name="feeds_source_transform">AI-transformatie</string>
     <string name="feeds_suggested_credibility_title">Voorgestelde geloofwaardigheid</string>
-    <string name="feeds_suggested_credibility_body">Mochi stelt een geloofwaardigheid van %1$d voor. Accepteren?</string>
+    <string name="feeds_suggested_credibility_body">Mochi stelt een geloofwaardigheid van %1$s voor. Accepteren?</string>
     <string name="feeds_suggested_credibility_keep">Huidige behouden</string>
     <string name="feeds_ai_processing_mode">AI-verwerkingsmodus</string>
     <string name="feeds_ai_account">AI-account</string>
@@ -137,8 +137,8 @@
     <string name="feeds_saved_empty_subtitle">Tik op de bladwijzer van een bericht om het hier voor later te bewaren.</string>
     <string name="feeds_saved_error_clear">Bewaarde berichten wissen mislukt</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d nieuw bericht</item>
-        <item quantity="other">%d nieuwe berichten</item>
+        <item quantity="one">%s nieuw bericht</item>
+        <item quantity="other">%s nieuwe berichten</item>
     </plurals>
     <string name="feeds_caught_up">Je bent helemaal bij</string>
     <string name="feeds_all_caught_up">Alles bijgewerkt</string>
@@ -186,12 +186,12 @@
     <string name="feeds_source_url_hint_feed">Feed-entiteit-ID of vingerafdruk</string>
     <string name="feeds_source_credibility_label">Geloofwaardigheid</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d uur</item>
-        <item quantity="other">%1$d uur</item>
+        <item quantity="one">%1$s uur</item>
+        <item quantity="other">%1$s uur</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuut</item>
-        <item quantity="other">%1$d minuten</item>
+        <item quantity="one">%1$s minuut</item>
+        <item quantity="other">%1$s minuten</item>
     </plurals>
     <string name="feeds_source_polling_interval">Elke %1$s opgehaald</string>
     <string name="feeds_access_level_react_full">React geven en bekijken</string>

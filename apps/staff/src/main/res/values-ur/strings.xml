@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">نوٹس</string>
     <string name="staff_accounts_reason_label">وجہ</string>
     <string name="staff_accounts_reason_optional_label">وجہ (اختیاری)</string>
-    <string name="staff_accounts_sales">%1$d فروخت</string>
+    <string name="staff_accounts_sales">%1$s فروخت</string>
     <string name="staff_accounts_search_clear">تلاش صاف کریں</string>
     <string name="staff_accounts_search_placeholder">تلاش کریں</string>
     <string name="staff_accounts_seller_buyers">صرف خریدار</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">بے نام</string>
     <string name="staff_accounts_unsuspend">معطلی ختم کریں</string>
     <string name="staff_accounts_unsuspended_toast">اکاؤنٹ کی معطلی ختم</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">منسوخ کریں</string>
     <string name="staff_appeals_decide">فیصلہ کریں</string>
     <string name="staff_appeals_decision_denied">فہرست کو مسترد رکھیں</string>

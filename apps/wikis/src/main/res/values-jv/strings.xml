@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Notifikasi babagan suntingan kaca wiki, komentar, lan undangan.</string>
     <string name="wikis_pageview_toc_expand">Tampilake daftar isi</string>
     <string name="wikis_pageview_toc_collapse">Delikake daftar isi</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Dianyari %1$s</string>
     <string name="wikis_pageview_not_found_description">Kaca “%1$s” durung ana.</string>
     <string name="wikis_pageview_share_chooser">Tautan wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Sampeyan arep mbusak kaca “%1$s” (%2$s). Tumindak iki bisa dibalèkake kanthi mulihake saka riwayat.</string>
     <string name="wikis_delete_page_success">Kaca dibusak</string>
     <string name="wikis_revert_page_title">Balèkaké kaca</string>
-    <string name="wikis_revert_page_message">Sampeyan arep mbalèkake %1$s menyang versi %2$d. Iki bakal nggawe revisi anyar kanthi isi saka versi %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Dibalèkake menyang versi %1$d</string>
-    <string name="wikis_revert_page_success">Dibalèkake menyang versi %1$d</string>
+    <string name="wikis_revert_page_message">Sampeyan arep mbalèkake %1$s menyang versi %2$s. Iki bakal nggawe revisi anyar kanthi isi saka versi %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Dibalèkake menyang versi %1$s</string>
+    <string name="wikis_revert_page_success">Dibalèkake menyang versi %1$s</string>
     <string name="wikis_rename_page_renaming">Ngowahi jeneng…</string>
     <string name="wikis_rename_page_success">Jeneng kaca diowahi</string>
-    <string name="wikis_history_viewing">Ndeleng riwayat kanggo %1$s, versi saiki %2$d</string>
-    <string name="wikis_revision_version_badge">Versi %1$d</string>
+    <string name="wikis_history_viewing">Ndeleng riwayat kanggo %1$s, versi saiki %2$s</string>
+    <string name="wikis_revision_version_badge">Versi %1$s</string>
     <string name="wikis_search_pages_placeholder">Golek kaca miturut judhul utawa isi…</string>
     <string name="wikis_search_no_results">Ora ana kaca kanggo “%1$s”. Coba tembung panggolekan liya.</string>
     <string name="wikis_search_updated">Dianyari %1$s</string>
@@ -289,30 +289,30 @@
     <string name="wikis_revision_author">miturut %1$s</string>
     <string name="wikis_revision_show_page">Tampilake kaca</string>
     <string name="wikis_revision_compare_failed">Ora bisa ngemot versi sadurunge kanggo dibandhingake.</string>
-    <string name="wikis_revision_changes_from">Owahan saka versi %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Owahan saka versi %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="other">%d komentar</item>
+        <item quantity="other">%s komentar</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="other">+%d balesan liyané</item>
+        <item quantity="other">+%s balesan liyané</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="other">%d halaman</item>
+        <item quantity="other">%s halaman</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="other">%d file</item>
+        <item quantity="other">%s file</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="other">%d gambar</item>
+        <item quantity="other">%s gambar</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="other">%d dokumen</item>
+        <item quantity="other">%s dokumen</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="other">%d halaman kanthi tag iki</item>
+        <item quantity="other">%s halaman kanthi tag iki</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="other">Ditemokaké %1$d asil kanggo \"%2$s\"</item>
+        <item quantity="other">Ditemokaké %1$s asil kanggo \"%2$s\"</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ora bisa nyimpen katrangan</string>
     <string name="wikis_attachments_upload_types">File sing didhukung: gambar, PDF, DOC, DOCX, TXT, lan MD.</string>
@@ -321,6 +321,6 @@
     <string name="wikis_rss_copied_new">URL RSS anyar disalin menyang clipboard</string>
     <string name="wikis_rss_exists">URL feed iki wis diterbitake lan ora bisa ditampilake maneh.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="other">Nampilake %1$d komentar kapisan.</item>
+        <item quantity="other">Nampilake %1$s komentar kapisan.</item>
     </plurals>
 </resources>

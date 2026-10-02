@@ -116,7 +116,7 @@
     <string name="feeds_remove_source_confirm">Αυτό θα σταματήσει την εισαγωγή περιεχομένου από \"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">Διαγραφή και των αναρτήσεων που εισήχθησαν από αυτή την πηγή</string>
     <string name="feeds_suggested_credibility_title">Προτεινόμενη αξιοπιστία</string>
-    <string name="feeds_suggested_credibility_body">Το Mochi προτείνει αξιοπιστία %1$d. Αποδοχή;</string>
+    <string name="feeds_suggested_credibility_body">Το Mochi προτείνει αξιοπιστία %1$s. Αποδοχή;</string>
     <string name="feeds_suggested_credibility_keep">Διατήρηση τρέχουσας</string>
     <string name="feeds_ai_processing_mode">Λειτουργία επεξεργασίας AI</string>
     <string name="feeds_ai_prompt_new">Ετικέτες σε νέες αναρτήσεις</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Πατήστε τον σελιδοδείκτη σε οποιαδήποτε δημοσίευση για να την αποθηκεύσετε εδώ για αργότερα.</string>
     <string name="feeds_saved_error_clear">Η εκκαθάριση των αποθηκευμένων δημοσιεύσεων απέτυχε</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d νέα δημοσίευση</item>
-        <item quantity="other">%d νέες δημοσιεύσεις</item>
+        <item quantity="one">%s νέα δημοσίευση</item>
+        <item quantity="other">%s νέες δημοσιεύσεις</item>
     </plurals>
     <string name="feeds_caught_up">Είστε ενημερωμένοι</string>
     <string name="feeds_all_caught_up">Όλα ενημερωμένα</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Αναγνωριστικό οντότητας ροής ή αποτύπωμα</string>
     <string name="feeds_source_credibility_label">Αξιοπιστία</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d ώρα</item>
-        <item quantity="other">%1$d ώρες</item>
+        <item quantity="one">%1$s ώρα</item>
+        <item quantity="other">%1$s ώρες</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d λεπτό</item>
-        <item quantity="other">%1$d λεπτά</item>
+        <item quantity="one">%1$s λεπτό</item>
+        <item quantity="other">%1$s λεπτά</item>
     </plurals>
     <string name="feeds_source_polling_interval">Έλεγχος κάθε %1$s</string>
     <string name="feeds_access_level_react_full">Αντίδραση και προβολή</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Σύνδεσμος</string>
     <string name="feeds_share_link_title">Σύνδεσμος ροής</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d σχόλιο</item>
-        <item quantity="other">%1$d σχόλια</item>
+        <item quantity="one">%1$s σχόλιο</item>
+        <item quantity="other">%1$s σχόλια</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d συνημμένο</item>
-        <item quantity="other">%1$d συνημμένα</item>
+        <item quantity="one">%1$s συνημμένο</item>
+        <item quantity="other">%1$s συνημμένα</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Δείτε %1$d ακόμη σχόλιο</item>
-        <item quantity="other">Δείτε %1$d ακόμη σχόλια</item>
+        <item quantity="one">Δείτε %1$s ακόμη σχόλιο</item>
+        <item quantity="other">Δείτε %1$s ακόμη σχόλια</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">πριν από %1$d χρόνο σήμερα</item>
-        <item quantity="other">πριν από %1$d χρόνια σήμερα</item>
+        <item quantity="one">πριν από %1$s χρόνο σήμερα</item>
+        <item quantity="other">πριν από %1$s χρόνια σήμερα</item>
     </plurals>
     <string name="feeds_block">Αποκλεισμός</string>
     <string name="feeds_removed_from_feed">Αφαιρεθήκατε από αυτή τη ροή</string>

@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Qeydlər</string>
     <string name="staff_accounts_reason_label">Səbəb</string>
     <string name="staff_accounts_reason_optional_label">Səbəb (seçimli)</string>
-    <string name="staff_accounts_sales">%1$d satış</string>
+    <string name="staff_accounts_sales">%1$s satış</string>
     <string name="staff_accounts_search_clear">Axtarışı təmizlə</string>
     <string name="staff_accounts_search_placeholder">Axtar</string>
     <string name="staff_accounts_seller_buyers">Yalnız alıcılar</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Adsız</string>
     <string name="staff_accounts_unsuspend">Dayandırmanı götür</string>
     <string name="staff_accounts_unsuspended_toast">Hesab dayandırılmadan çıxarıldı</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Ləğv et</string>
     <string name="staff_appeals_decide">Qərar ver</string>
     <string name="staff_appeals_decision_denied">Elanı rədd edilmiş saxla</string>

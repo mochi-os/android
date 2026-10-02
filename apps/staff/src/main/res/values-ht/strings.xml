@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Nòt</string>
     <string name="staff_accounts_reason_label">Rezon</string>
     <string name="staff_accounts_reason_optional_label">Rezon (opsyonèl)</string>
-    <string name="staff_accounts_sales">%1$d vant</string>
+    <string name="staff_accounts_sales">%1$s vant</string>
     <string name="staff_accounts_search_clear">Efase rechèch</string>
     <string name="staff_accounts_search_placeholder">Chèche</string>
     <string name="staff_accounts_seller_buyers">Achtè sèlman</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">San non</string>
     <string name="staff_accounts_unsuspend">Leve sispansyon</string>
     <string name="staff_accounts_unsuspended_toast">Sispansyon kont lan leve</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Anile</string>
     <string name="staff_appeals_decide">Deside</string>
     <string name="staff_appeals_decision_denied">Kenbe lis rejte</string>

@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Tapiaite</string>
     <string name="calendars_reminder_time">Upe aravópe</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d aravo\'i mboyve</item>
-        <item quantity="other">%1$d aravo\'i mboyve</item>
+        <item quantity="one">%1$s aravo\'i mboyve</item>
+        <item quantity="other">%1$s aravo\'i mboyve</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d aravo mboyve</item>
-        <item quantity="other">%1$d aravo mboyve</item>
+        <item quantity="one">%1$s aravo mboyve</item>
+        <item quantity="other">%1$s aravo mboyve</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ára mboyve</item>
-        <item quantity="other">%1$d ára mboyve</item>
+        <item quantity="one">%1$s ára mboyve</item>
+        <item quantity="other">%1$s ára mboyve</item>
     </plurals>
     <string name="calendars_reminder_add">Embojuaju mandu\'ara</string>
     <string name="calendars_reminder_remove">Embogue mandu\'arã</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Arapapaha tuichaiterei</string>
     <string name="calendars_poll_invalid">Dirección ndoguerúi arapapaha</string>
     <string name="calendars_poll_unreachable">Ndaikatúi og̃uahẽ dirección-pe</string>
-    <string name="calendars_poll_status">Dirección ombohovái %1$d</string>
+    <string name="calendars_poll_status">Dirección ombohovái %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d aravo\'i</item>
-        <item quantity="other">%1$d aravo\'i</item>
+        <item quantity="one">%1$s aravo\'i</item>
+        <item quantity="other">%1$s aravo\'i</item>
     </plurals>
     <string name="calendars_preferences_zones">Ehechauka evento-kuéra iñaravo zona teépe</string>
     <string name="calendars_event_backwards">Opa oñepyrũ mboyve</string>

@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Aviseringar om sidredigeringar, kommentarer och inbjudningar.</string>
     <string name="wikis_pageview_toc_expand">Visa innehållsförteckning</string>
     <string name="wikis_pageview_toc_collapse">Dölj innehållsförteckning</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Uppdaterad %1$s</string>
     <string name="wikis_pageview_not_found_description">Sidan \"%1$s\" finns inte än.</string>
     <string name="wikis_pageview_share_chooser">Wiki-länk</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Du är på väg att radera sidan \"%1$s\" (%2$s). Denna åtgärd kan ångras genom att återställa från historiken.</string>
     <string name="wikis_delete_page_success">Sida raderad</string>
     <string name="wikis_revert_page_title">Återställ sida</string>
-    <string name="wikis_revert_page_message">Du är på väg att återställa %1$s till version %2$d. Detta skapar en ny revision med innehållet från version %2$d.</string>
-    <string name="wikis_revert_page_default_comment">Återställd till version %1$d</string>
-    <string name="wikis_revert_page_success">Återställd till version %1$d</string>
+    <string name="wikis_revert_page_message">Du är på väg att återställa %1$s till version %2$s. Detta skapar en ny revision med innehållet från version %2$s.</string>
+    <string name="wikis_revert_page_default_comment">Återställd till version %1$s</string>
+    <string name="wikis_revert_page_success">Återställd till version %1$s</string>
     <string name="wikis_rename_page_renaming">Byter namn…</string>
     <string name="wikis_rename_page_success">Sida har bytt namn</string>
-    <string name="wikis_history_viewing">Visar historik för %1$s, aktuell version %2$d</string>
-    <string name="wikis_revision_version_badge">Version %1$d</string>
+    <string name="wikis_history_viewing">Visar historik för %1$s, aktuell version %2$s</string>
+    <string name="wikis_revision_version_badge">Version %1$s</string>
     <string name="wikis_search_pages_placeholder">Sök sidor efter titel eller innehåll…</string>
     <string name="wikis_search_no_results">Inga sidor hittades för \"%1$s\". Försök med andra söktermer.</string>
     <string name="wikis_search_updated">Uppdaterad %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">av %1$s</string>
     <string name="wikis_revision_show_page">Visa sida</string>
     <string name="wikis_revision_compare_failed">Det gick inte att läsa in den tidigare versionen för jämförelse.</string>
-    <string name="wikis_revision_changes_from">Ändringar från version %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">Ändringar från version %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d kommentar</item>
-        <item quantity="other">%d kommentarer</item>
+        <item quantity="one">%s kommentar</item>
+        <item quantity="other">%s kommentarer</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d svar</item>
-        <item quantity="other">+%d fler svar</item>
+        <item quantity="one">%s svar</item>
+        <item quantity="other">+%s fler svar</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d sida</item>
-        <item quantity="other">%d sidor</item>
+        <item quantity="one">%s sida</item>
+        <item quantity="other">%s sidor</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fil</item>
-        <item quantity="other">%d filer</item>
+        <item quantity="one">%s fil</item>
+        <item quantity="other">%s filer</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d bild</item>
-        <item quantity="other">%d bilder</item>
+        <item quantity="one">%s bild</item>
+        <item quantity="other">%s bilder</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d dokument</item>
-        <item quantity="other">%d dokument</item>
+        <item quantity="one">%s dokument</item>
+        <item quantity="other">%s dokument</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d sida med denna tagg</item>
-        <item quantity="other">%d sidor med denna tagg</item>
+        <item quantity="one">%s sida med denna tagg</item>
+        <item quantity="other">%s sidor med denna tagg</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Hittade %1$d resultat för ”%2$s”</item>
-        <item quantity="other">Hittade %1$d resultat för ”%2$s”</item>
+        <item quantity="one">Hittade %1$s resultat för ”%2$s”</item>
+        <item quantity="other">Hittade %1$s resultat för ”%2$s”</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Det gick inte att spara bildtexten</string>
     <string name="wikis_attachments_upload_types">Filer som stöds: bilder, PDF, DOC, DOCX, TXT och MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Ny RSS-URL kopierad till urklipp</string>
     <string name="wikis_rss_exists">Denna flödes-URL har redan utfärdats och kan inte visas igen.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Visar den första %1$d kommentaren.</item>
-        <item quantity="other">Visar de första %1$d kommentarerna.</item>
+        <item quantity="one">Visar den första %1$s kommentaren.</item>
+        <item quantity="other">Visar de första %1$s kommentarerna.</item>
     </plurals>
 </resources>

@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">بۆ پاشەکەوتکردنی هەر پۆستێک بۆ دواتر لێرە، دەست بنێ بە نیشانەکەی.</string>
     <string name="forums_saved_error_clear">سڕینەوەی پۆستە پاشەکەوتکراوەکان سەرکەوتوو نەبوو</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d پۆستی نوێ</item>
-        <item quantity="other">%d پۆستی نوێ</item>
+        <item quantity="one">%s پۆستی نوێ</item>
+        <item quantity="other">%s پۆستی نوێ</item>
     </plurals>
     <string name="forums_rss_feed">فیدی RSS</string>
     <string name="forums_rss_mode_posts">پۆستەکان</string>
@@ -296,8 +296,8 @@
     <string name="forums_settings_unsubscribe_section">لابردنی بەشداری لە فۆڕەم</string>
     <string name="forums_share_link_title">بەستەری فۆڕەم</string>
     <string name="forums_find_found_by_url">بە URL دۆزرایەوە</string>
-    <string name="forums_moderation_pending_posts">بابەتە چاوەڕوانەکان (%1$d)</string>
-    <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان (%1$d)</string>
+    <string name="forums_moderation_pending_posts">بابەتە چاوەڕوانەکان (%1$s)</string>
+    <string name="forums_moderation_pending_comments">لێدوانە چاوەڕوانەکان (%1$s)</string>
     <string name="forums_moderation_on_image">لەسەر وێنە: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">تۆ مۆڵەتی بڵاوکردنەوەت لەم فۆڕەمە نییە</string>

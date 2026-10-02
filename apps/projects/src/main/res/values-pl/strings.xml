@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">wprowadził zmianę</string>
     <string name="projects_attachment_empty">Brak załączników</string>
     <string name="projects_attachment_default_name">załącznik</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nowa prośba o scalenie</string>
     <string name="projects_request_status_closed">Zamknięta</string>
     <string name="projects_request_back_to_list">Powrót do listy</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Sprawdzanie statusu scalenia…</string>
     <string name="projects_request_can_merge">Można scalić</string>
     <string name="projects_request_cannot_merge">Nie można scalić</string>
-    <string name="projects_request_ahead_behind">%1$d do przodu, %2$d do tyłu</string>
+    <string name="projects_request_ahead_behind">%1$s do przodu, %2$s do tyłu</string>
     <string name="projects_request_draft_notice">To jest wersja robocza. Oznacz jako gotową przed scaleniem.</string>
     <string name="projects_request_view_diff">Pokaż różnice</string>
     <string name="projects_request_mark_ready">Oznacz jako gotową</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Brak skonfigurowanych kolumn dla tego widoku</string>
     <string name="projects_board_no_options">Brak opcji skonfigurowanych dla pola kolumny</string>
     <string name="projects_board_column_options">Opcje kolumny</string>
-    <string name="projects_board_nested_count">+%1$d zagnieżdżonych</string>
+    <string name="projects_board_nested_count">+%1$s zagnieżdżonych</string>
     <string name="projects_move_to_column">Przenieś do kolumny</string>
     <string name="projects_move_to_row">Przenieś do wiersza</string>
     <string name="projects_move_after">Po %1$s</string>
@@ -365,10 +365,10 @@
     <string name="projects_sort_filter_title">Sortowanie i filtr</string>
     <string name="projects_create_prefix_hint">Używane do czytelnych identyfikatorów, np. %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d plik z konfliktem</item>
-        <item quantity="few">%1$d pliki z konfliktami</item>
-        <item quantity="many">%1$d plików z konfliktami</item>
-        <item quantity="other">%1$d pliku z konfliktem</item>
+        <item quantity="one">%1$s plik z konfliktem</item>
+        <item quantity="few">%1$s pliki z konfliktami</item>
+        <item quantity="many">%1$s plików z konfliktami</item>
+        <item quantity="other">%1$s pliku z konfliktem</item>
     </plurals>
     <string name="projects_design_export_saved">Projekt zapisany</string>
     <string name="projects_design_import_failed">Nie udało się odczytać pliku</string>
@@ -378,7 +378,7 @@
     <string name="projects_export_saved">Dane projektu zapisane</string>
     <string name="projects_exporting">Przygotowywanie eksportu…</string>
     <string name="projects_board_add_column">Dodaj kolumnę</string>
-    <string name="projects_design_sample">Przykład %1$d</string>
+    <string name="projects_design_sample">Przykład %1$s</string>
     <string name="projects_option_delete_title">Usuń opcję</string>
     <string name="projects_option_delete_message">Czy na pewno chcesz usunąć opcję \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Nie można jeszcze utworzyć żadnych typów elementów. Najpierw utwórz wymagane elementy nadrzędne.</string>

@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki sahifa tahrirlari, izohlar va takliflar haqidagi bildirishnomalar.</string>
     <string name="wikis_pageview_toc_expand">Mundarijani ko‘rsatish</string>
     <string name="wikis_pageview_toc_collapse">Mundarijani yashirish</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Yangilangan: %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” sahifasi hali mavjud emas.</string>
     <string name="wikis_pageview_share_chooser">Wiki havolasi</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Siz “%1$s” (%2$s) sahifasini o‘chirmoqchisiz. Bu amalni tarixdan tiklash orqali qaytarish mumkin.</string>
     <string name="wikis_delete_page_success">Sahifa oʻchirildi</string>
     <string name="wikis_revert_page_title">Sahifani qaytarish</string>
-    <string name="wikis_revert_page_message">Siz %1$s ni %2$d versiyasiga qaytarmoqchisiz. Bu %2$d versiyasi mazmuni bilan yangi tahrir yaratadi.</string>
-    <string name="wikis_revert_page_default_comment">%1$d versiyasiga qaytarildi</string>
-    <string name="wikis_revert_page_success">%1$d versiyasiga qaytarildi</string>
+    <string name="wikis_revert_page_message">Siz %1$s ni %2$s versiyasiga qaytarmoqchisiz. Bu %2$s versiyasi mazmuni bilan yangi tahrir yaratadi.</string>
+    <string name="wikis_revert_page_default_comment">%1$s versiyasiga qaytarildi</string>
+    <string name="wikis_revert_page_success">%1$s versiyasiga qaytarildi</string>
     <string name="wikis_rename_page_renaming">Nomi oʻzgartirilmoqda…</string>
     <string name="wikis_rename_page_success">Sahifa nomi oʻzgartirildi</string>
-    <string name="wikis_history_viewing">%1$s tarixi ko‘rilmoqda, joriy versiya %2$d</string>
-    <string name="wikis_revision_version_badge">Versiya %1$d</string>
+    <string name="wikis_history_viewing">%1$s tarixi ko‘rilmoqda, joriy versiya %2$s</string>
+    <string name="wikis_revision_version_badge">Versiya %1$s</string>
     <string name="wikis_search_pages_placeholder">Sahifalarni sarlavha yoki mazmun bo‘yicha qidirish…</string>
     <string name="wikis_search_no_results">“%1$s” uchun sahifa topilmadi. Boshqa qidiruv so‘zlarini sinab ko‘ring.</string>
     <string name="wikis_search_updated">Yangilangan: %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s bo\'yicha</string>
     <string name="wikis_revision_show_page">Sahifani ko‘rsatish</string>
     <string name="wikis_revision_compare_failed">Solishtirish uchun oldingi versiyani yuklab bo‘lmadi.</string>
-    <string name="wikis_revision_changes_from">%1$d → %2$d versiyadagi o‘zgarishlar</string>
+    <string name="wikis_revision_changes_from">%1$s → %2$s versiyadagi o‘zgarishlar</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d izoh</item>
-        <item quantity="other">%d izoh</item>
+        <item quantity="one">%s izoh</item>
+        <item quantity="other">%s izoh</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d javob</item>
-        <item quantity="other">+%d koʻproq javoblar</item>
+        <item quantity="one">%s javob</item>
+        <item quantity="other">+%s koʻproq javoblar</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d sahifa</item>
-        <item quantity="other">%d sahifalar</item>
+        <item quantity="one">%s sahifa</item>
+        <item quantity="other">%s sahifalar</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d fayl</item>
-        <item quantity="other">%d fayllar</item>
+        <item quantity="one">%s fayl</item>
+        <item quantity="other">%s fayllar</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d rasm</item>
-        <item quantity="other">%d rasmlar</item>
+        <item quantity="one">%s rasm</item>
+        <item quantity="other">%s rasmlar</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d hujjat</item>
-        <item quantity="other">%d hujjatlar</item>
+        <item quantity="one">%s hujjat</item>
+        <item quantity="other">%s hujjatlar</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Ushbu teg bilan %d sahifa</item>
-        <item quantity="other">Ushbu teg bilan %d sahifalar</item>
+        <item quantity="one">Ushbu teg bilan %s sahifa</item>
+        <item quantity="other">Ushbu teg bilan %s sahifalar</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">\"%2$s\" uchun %1$d natija topildi</item>
-        <item quantity="other">\"%2$s\" uchun %1$d natijalar topildi</item>
+        <item quantity="one">\"%2$s\" uchun %1$s natija topildi</item>
+        <item quantity="other">\"%2$s\" uchun %1$s natijalar topildi</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Izohni saqlab boʻlmadi</string>
     <string name="wikis_attachments_upload_types">Qo‘llab-quvvatlanadigan fayllar: tasvirlar, PDF, DOC, DOCX, TXT va MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Yangi RSS URL klipboardga nusxalandi</string>
     <string name="wikis_rss_exists">Bu tasma URL manzili allaqachon berilgan va qayta ko‘rsatilmaydi.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Birinchi %1$d izoh ko\'rsatilmoqda.</item>
-        <item quantity="other">Birinchi %1$d izoh ko\'rsatilmoqda.</item>
+        <item quantity="one">Birinchi %1$s izoh ko\'rsatilmoqda.</item>
+        <item quantity="other">Birinchi %1$s izoh ko\'rsatilmoqda.</item>
     </plurals>
 </resources>

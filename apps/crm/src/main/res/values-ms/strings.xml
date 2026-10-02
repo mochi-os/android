@@ -143,7 +143,7 @@
     <string name="crm_links_search_placeholder">Cari objek</string>
 
     <string name="crm_board_no_options">Tiada pilihan dikonfigurasi untuk medan lajur</string>
-    <string name="crm_board_nested_count">+%1$d bersarang</string>
+    <string name="crm_board_nested_count">+%1$s bersarang</string>
     <string name="crm_move_to_column">Alih ke lajur</string>
     <string name="crm_move_to_row">Alih ke baris</string>
     <string name="crm_move_after">Selepas %1$s</string>
@@ -289,7 +289,7 @@
     <string name="crm_export_saved">Data CRM disimpan</string>
     <string name="crm_create_upload_json">Muat naik fail .zip atau .json</string>
     <string name="crm_create_blocked_no_options">Tidak boleh dicipta: %1$s diperlukan tetapi tiada pilihan. Tambah pilihan dalam Reka bentuk.</string>
-    <string name="crm_design_sample">Contoh %1$d</string>
+    <string name="crm_design_sample">Contoh %1$s</string>
     <string name="crm_option_delete_title">Padam pilihan</string>
     <string name="crm_option_delete_message">Adakah anda pasti mahu memadam pilihan \"%1$s\"?</string>
 </resources>

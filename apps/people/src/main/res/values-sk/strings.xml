@@ -180,9 +180,9 @@
     <string name="people_books_create">Vytvoriť adresár</string>
     <string name="people_books_delete">Odstrániť adresár</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Odstrániť %1$s a jeho %2$d kontakt?</item>
-        <item quantity="few">Odstrániť %1$s a jeho %2$d kontakty?</item>
-        <item quantity="other">Odstrániť %1$s a jeho %2$d kontaktov?</item>
+        <item quantity="one">Odstrániť %1$s a jeho %2$s kontakt?</item>
+        <item quantity="few">Odstrániť %1$s a jeho %2$s kontakty?</item>
+        <item quantity="other">Odstrániť %1$s a jeho %2$s kontaktov?</item>
     </plurals>
     <string name="people_welcome_body">Nájdite priateľov naprieč Mochi a spojte sa. Ťuknutím na Pridať kontakt odošlete pozvánku.</string>
     <string name="people_person_state_contact">V kontaktoch</string>

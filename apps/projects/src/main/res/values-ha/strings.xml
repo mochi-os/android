@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">ya yi canji</string>
     <string name="projects_attachment_empty">Babu abubuwan da aka haɗa</string>
     <string name="projects_attachment_default_name">abin da aka haɗa</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Sabuwar buƙatar haɗewa</string>
     <string name="projects_request_status_closed">An rufe</string>
     <string name="projects_request_back_to_list">Komawa jeri</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Ana duba matsayin haɗewa…</string>
     <string name="projects_request_can_merge">Ana iya haɗewa</string>
     <string name="projects_request_cannot_merge">Ba a iya haɗewa</string>
-    <string name="projects_request_ahead_behind">%1$d gaba, %2$d baya</string>
+    <string name="projects_request_ahead_behind">%1$s gaba, %2$s baya</string>
     <string name="projects_request_draft_notice">Wannan daftari ne. Yi alama a matsayin shiri kafin haɗewa.</string>
     <string name="projects_request_view_diff">Duba bambanci</string>
     <string name="projects_request_mark_ready">Yi alama a matsayin shiri</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Babu ginshiƙai da aka saita don wannan kallon</string>
     <string name="projects_board_no_options">Babu zaɓuɓɓuka da aka saita don filin ginshiƙi</string>
     <string name="projects_board_column_options">Zaɓuɓɓukan ginshiƙi</string>
-    <string name="projects_board_nested_count">+%1$d a ciki</string>
+    <string name="projects_board_nested_count">+%1$s a ciki</string>
     <string name="projects_move_to_column">Matsa zuwa ginshiƙi</string>
     <string name="projects_move_to_row">Matsa zuwa layi</string>
     <string name="projects_move_after">Bayan %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Jera da tacewa</string>
     <string name="projects_create_prefix_hint">Ana amfani da shi don ID masu iya karantawa kamar %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">fayil %1$d mai karo</item>
-        <item quantity="other">fayiloli %1$d masu karo</item>
+        <item quantity="one">fayil %1$s mai karo</item>
+        <item quantity="other">fayiloli %1$s masu karo</item>
     </plurals>
     <string name="projects_design_export_saved">An adana ƙira</string>
     <string name="projects_design_import_failed">An kasa karanta wannan fayil ɗin</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">An adana bayanan aikin</string>
     <string name="projects_exporting">Ana shirya fitarwa…</string>
     <string name="projects_board_add_column">Ƙara column</string>
-    <string name="projects_design_sample">Samfuri %1$d</string>
+    <string name="projects_design_sample">Samfuri %1$s</string>
     <string name="projects_option_delete_title">Goge zaɓi</string>
     <string name="projects_option_delete_message">Kana da tabbacin kana son goge zaɓin \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ba a iya ƙirƙirar nau\'o\'in abubuwa tukuna. Fara ƙirƙirar parent items da ake buƙata.</string>

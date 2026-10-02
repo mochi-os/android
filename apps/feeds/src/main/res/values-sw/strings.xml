@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">Hii itasimamisha kuleta maudhui kutoka \"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">Pia futa machapisho yaliyoletwa kutoka chanzo hiki</string>
     <string name="feeds_suggested_credibility_title">Uaminifu uliopendekezwa</string>
-    <string name="feeds_suggested_credibility_body">Mochi inapendekeza uaminifu wa %1$d. Kubali?</string>
+    <string name="feeds_suggested_credibility_body">Mochi inapendekeza uaminifu wa %1$s. Kubali?</string>
     <string name="feeds_suggested_credibility_keep">Weka wa sasa</string>
     <string name="feeds_ai_processing_mode">Hali ya uchakataji wa AI</string>
     <string name="feeds_ai_account">Akaunti ya AI</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Gusa alamisho kwenye chapisho lolote ili kulihifadhi hapa kwa baadaye.</string>
     <string name="feeds_saved_error_clear">Imeshindwa kufuta machapisho yaliyohifadhiwa</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d chapisho jipya</item>
-        <item quantity="other">%d machapisho mapya</item>
+        <item quantity="one">%s chapisho jipya</item>
+        <item quantity="other">%s machapisho mapya</item>
     </plurals>
     <string name="feeds_caught_up">Umeona kila kitu</string>
     <string name="feeds_all_caught_up">Umemaliza yote</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Kitambulisho cha Entiti ya Mlisho au Alama ya Kidole</string>
     <string name="feeds_source_credibility_label">Uaminifu</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">Saa %1$d</item>
-        <item quantity="other">Saa %1$d</item>
+        <item quantity="one">Saa %1$s</item>
+        <item quantity="other">Saa %1$s</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">Dakika %1$d</item>
-        <item quantity="other">Dakika %1$d</item>
+        <item quantity="one">Dakika %1$s</item>
+        <item quantity="other">Dakika %1$s</item>
     </plurals>
     <string name="feeds_source_polling_interval">Inakagua kila %1$s</string>
     <string name="feeds_access_level_react_full">Jibu na uone</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Kiungo</string>
     <string name="feeds_share_link_title">Kiungo cha mlisho</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">maoni %1$d</item>
-        <item quantity="other">maoni %1$d</item>
+        <item quantity="one">maoni %1$s</item>
+        <item quantity="other">maoni %1$s</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">kiambatisho %1$d</item>
-        <item quantity="other">viambatisho %1$d</item>
+        <item quantity="one">kiambatisho %1$s</item>
+        <item quantity="other">viambatisho %1$s</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Tazama maoni %1$d zaidi</item>
-        <item quantity="other">Tazama maoni %1$d zaidi</item>
+        <item quantity="one">Tazama maoni %1$s zaidi</item>
+        <item quantity="other">Tazama maoni %1$s zaidi</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">mwaka %1$d uliopita leo</item>
-        <item quantity="other">miaka %1$d iliyopita leo</item>
+        <item quantity="one">mwaka %1$s uliopita leo</item>
+        <item quantity="other">miaka %1$s iliyopita leo</item>
     </plurals>
     <string name="feeds_block">Zuia</string>
     <string name="feeds_removed_from_feed">Umeondolewa kwenye mlisho huu</string>

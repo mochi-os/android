@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">ملاحظات</string>
     <string name="staff_accounts_reason_label">السبب</string>
     <string name="staff_accounts_reason_optional_label">السبب (اختياري)</string>
-    <string name="staff_accounts_sales">%1$d مبيعات</string>
+    <string name="staff_accounts_sales">%1$s مبيعات</string>
     <string name="staff_accounts_search_clear">مسح البحث</string>
     <string name="staff_accounts_search_placeholder">بحث</string>
     <string name="staff_accounts_seller_buyers">المشترون فقط</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">بدون اسم</string>
     <string name="staff_accounts_unsuspend">رفع التعليق</string>
     <string name="staff_accounts_unsuspended_toast">تم رفع تعليق الحساب</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">إلغاء</string>
     <string name="staff_appeals_decide">اتخاذ قرار</string>
     <string name="staff_appeals_decision_denied">الإبقاء على رفض الإدراج</string>

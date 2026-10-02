@@ -16,8 +16,10 @@ completeness (a quantity the language needs, which Android silently serves from
 `other`); locale coverage (an empty locale directory, and keys the source has
 dropped); bare double quotes (the resource compiler takes an unescaped " as
 quoting and drops it, so "%1$s" shows without its quotes and „%2$s" loses its
-closing one). Every check reads every xml file in a values directory, because
-Android merges them all.
+closing one); decimal conversions (%d writes a number in the locale's own
+digits with no grouping, where every count passes Format.formatNumber through
+%s, and a %d meeting that String throws). Every check reads every xml file in a
+values directory, because Android merges them all.
 
 Usage:
     check-locales.py --discover <dir> [--strict]
@@ -361,6 +363,25 @@ def check_quotes(module_dir: Path) -> list[str]:
     return findings
 
 
+# %d, %1$d, %,d and the like; a %% before it is a literal percent sign.
+DECIMAL_RE = re.compile(r"%(?:\d+\$)?[-#+ 0,(]*\d*d")
+
+
+def check_decimals(module_dir: Path) -> list[str]:
+    """Return values, in any catalogue the source included, formatting with %d."""
+    res = module_dir / "src" / "main" / "res"
+    if not res.is_dir():
+        return []
+    findings = []
+    for vd in sorted(res.iterdir()):
+        if not vd.is_dir() or not (vd.name == "values" or vd.name.startswith("values-")):
+            continue
+        for match in TEXT_RE.finditer(COMMENT_RE.sub("", read_catalogues(vd))):
+            if DECIMAL_RE.search(match.group(2).replace("%%", "")):
+                findings.append(f"{vd.name}: {match.group(2).strip()[:48]}")
+    return findings
+
+
 def check_overlays(module_dir: Path) -> list[str]:
     """Return findings for English regional overlays, which OVERLAY_RE otherwise skips.
 
@@ -459,7 +480,8 @@ def main():
         plurals = check_plurals(module)
         silent, stale = check_coverage(module)
         quotes = check_quotes(module)
-        if not any((problems, arguments, placeholders, overlays, plurals, silent, stale, quotes)):
+        decimals = check_decimals(module)
+        if not any((problems, arguments, placeholders, overlays, plurals, silent, stale, quotes, decimals)):
             print(f"{module}: ok")
             continue
         any_problems = True
@@ -495,6 +517,10 @@ def main():
         if quotes:
             print(f"{module}: {len(quotes)} value(s) hold a bare \" the compiler drops; write \\\"", file=sys.stderr)
             for finding in quotes[:10]:
+                print(f"  {finding}", file=sys.stderr)
+        if decimals:
+            print(f"{module}: {len(decimals)} value(s) format a number with %d; pass Format.formatNumber() through %s", file=sys.stderr)
+            for finding in decimals[:10]:
                 print(f"  {finding}", file=sys.stderr)
 
     if any_problems and args.strict:

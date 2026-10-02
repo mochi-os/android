@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Anteckningar</string>
     <string name="staff_accounts_reason_label">Anledning</string>
     <string name="staff_accounts_reason_optional_label">Skäl (valfritt)</string>
-    <string name="staff_accounts_sales">%1$d försäljningar</string>
+    <string name="staff_accounts_sales">%1$s försäljningar</string>
     <string name="staff_accounts_search_clear">Rensa sökning</string>
     <string name="staff_accounts_search_placeholder">Sök</string>
     <string name="staff_accounts_seller_buyers">Endast köpare</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Namnlös</string>
     <string name="staff_accounts_unsuspend">Häv avstängning</string>
     <string name="staff_accounts_unsuspended_toast">Konto återupptaget</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Avbryt</string>
     <string name="staff_appeals_decide">Avgör</string>
     <string name="staff_appeals_decision_denied">Behåll annons avvisad</string>

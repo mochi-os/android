@@ -150,7 +150,7 @@
     <string name="crm_board_no_columns">呢個檢視未設定欄</string>
     <string name="crm_board_no_options">欄位未設定選項</string>
     <string name="crm_board_rename_column">重新命名欄</string>
-    <string name="crm_board_nested_count">+%1$d 個巢狀</string>
+    <string name="crm_board_nested_count">+%1$s 個巢狀</string>
     <string name="crm_move_to_column">移到欄</string>
     <string name="crm_move_to_row">移到列</string>
     <string name="crm_move_after">喺 %1$s 之後</string>
@@ -291,5 +291,5 @@
     <string name="crm_no_crms_found">搵唔到 CRM</string>
     <string name="crm_create_blocked_no_parents">而家仲未可以建立任何項目類型。請先建立所需嘅上層項目。</string>
     <string name="crm_export_csv">匯出 CSV</string>
-    <string name="crm_design_sample">範例 %1$d</string>
+    <string name="crm_design_sample">範例 %1$s</string>
 </resources>

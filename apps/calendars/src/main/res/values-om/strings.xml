@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Bara baraan</string>
     <string name="calendars_reminder_time">Yeroo taateen jalqabu</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">daqiiqaa %1$d dura</item>
-        <item quantity="other">daqiiqaa %1$d dura</item>
+        <item quantity="one">daqiiqaa %1$s dura</item>
+        <item quantity="other">daqiiqaa %1$s dura</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">sa\'aatii %1$d dura</item>
-        <item quantity="other">sa\'aatii %1$d dura</item>
+        <item quantity="one">sa\'aatii %1$s dura</item>
+        <item quantity="other">sa\'aatii %1$s dura</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">guyyaa %1$d dura</item>
-        <item quantity="other">guyyoota %1$d dura</item>
+        <item quantity="one">guyyaa %1$s dura</item>
+        <item quantity="other">guyyoota %1$s dura</item>
     </plurals>
     <string name="calendars_reminder_add">Yaadachiisa dabali</string>
     <string name="calendars_reminder_remove">Yaadachiisa haqi</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Kaalaandariin baay\'ee guddaadha</string>
     <string name="calendars_poll_invalid">Teessoon kaalaandarii hin deebifne</string>
     <string name="calendars_poll_unreachable">Teessoo bira gahuu hin dandeenye</string>
-    <string name="calendars_poll_status">Teessoon %1$d deebise</string>
+    <string name="calendars_poll_status">Teessoon %1$s deebise</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d daqiiqaa</item>
-        <item quantity="other">%1$d daqiiqaa</item>
+        <item quantity="one">%1$s daqiiqaa</item>
+        <item quantity="other">%1$s daqiiqaa</item>
     </plurals>
     <string name="calendars_preferences_zones">Taateewwan naannoo yeroo isaanii keessatti agarsiisi</string>
     <string name="calendars_event_backwards">Osoo hin jalqabin xumurama</string>

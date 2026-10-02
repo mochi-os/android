@@ -95,7 +95,7 @@
     <string name="feeds_source_type_feed_posts">Mochi-Feed</string>
     <string name="feeds_source_type_feed_memories">Erinnerungen</string>
     <string name="feeds_suggested_credibility_title">Vorgeschlagene Glaubwürdigkeit</string>
-    <string name="feeds_suggested_credibility_body">Mochi schlägt eine Glaubwürdigkeit von %1$d vor. Übernehmen?</string>
+    <string name="feeds_suggested_credibility_body">Mochi schlägt eine Glaubwürdigkeit von %1$s vor. Übernehmen?</string>
     <string name="feeds_suggested_credibility_keep">Aktuellen Wert behalten</string>
     <string name="feeds_ai_processing_mode">KI-Verarbeitungsmodus</string>
     <string name="feeds_ai_mode_tag_deduplicate">Markieren + Duplikate entfernen</string>
@@ -162,12 +162,12 @@
     <string name="feeds_source_url_hint_feed">Feed-Entitäts-ID oder Fingerabdruck</string>
     <string name="feeds_source_credibility_label">Glaubwürdigkeit</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d Stunde</item>
-        <item quantity="other">%1$d Stunden</item>
+        <item quantity="one">%1$s Stunde</item>
+        <item quantity="other">%1$s Stunden</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d Minute</item>
-        <item quantity="other">%1$d Minuten</item>
+        <item quantity="one">%1$s Minute</item>
+        <item quantity="other">%1$s Minuten</item>
     </plurals>
     <string name="feeds_source_polling_interval">Abruf alle %1$s</string>
     <string name="feeds_access_level_react_full">Reagieren und ansehen</string>

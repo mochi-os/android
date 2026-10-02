@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">Isto deixará de importar contido de \"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">Eliminar tamén as publicacións importadas desta fonte</string>
     <string name="feeds_suggested_credibility_title">Credibilidade suxerida</string>
-    <string name="feeds_suggested_credibility_body">Mochi suxire unha credibilidade de %1$d. Aceptar?</string>
+    <string name="feeds_suggested_credibility_body">Mochi suxire unha credibilidade de %1$s. Aceptar?</string>
     <string name="feeds_suggested_credibility_keep">Manter a actual</string>
     <string name="feeds_ai_processing_mode">Modo de procesamento con IA</string>
     <string name="feeds_ai_account">Conta de IA</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Toca o marcador de calquera publicación para gardala aquí para máis tarde.</string>
     <string name="feeds_saved_error_clear">Non se puideron borrar as publicacións gardadas</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d publicación nova</item>
-        <item quantity="other">%d publicacións novas</item>
+        <item quantity="one">%s publicación nova</item>
+        <item quantity="other">%s publicacións novas</item>
     </plurals>
     <string name="feeds_caught_up">Estás ao día</string>
     <string name="feeds_all_caught_up">Todo ao día</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">ID de entidade ou pegada do fío</string>
     <string name="feeds_source_credibility_label">Credibilidade</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d hora</item>
-        <item quantity="other">%1$d horas</item>
+        <item quantity="one">%1$s hora</item>
+        <item quantity="other">%1$s horas</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d minutos</item>
+        <item quantity="one">%1$s minuto</item>
+        <item quantity="other">%1$s minutos</item>
     </plurals>
     <string name="feeds_source_polling_interval">Consultando cada %1$s</string>
     <string name="feeds_access_level_react_full">Reaccionar e ver</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Ligazón</string>
     <string name="feeds_share_link_title">Ligazón do fío</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d comentario</item>
-        <item quantity="other">%1$d comentarios</item>
+        <item quantity="one">%1$s comentario</item>
+        <item quantity="other">%1$s comentarios</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d anexo</item>
-        <item quantity="other">%1$d anexos</item>
+        <item quantity="one">%1$s anexo</item>
+        <item quantity="other">%1$s anexos</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Ver %1$d comentario máis</item>
-        <item quantity="other">Ver %1$d comentarios máis</item>
+        <item quantity="one">Ver %1$s comentario máis</item>
+        <item quantity="other">Ver %1$s comentarios máis</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">hai %1$d ano, hoxe</item>
-        <item quantity="other">hai %1$d anos, hoxe</item>
+        <item quantity="one">hai %1$s ano, hoxe</item>
+        <item quantity="other">hai %1$s anos, hoxe</item>
     </plurals>
     <string name="feeds_block">Bloquear</string>
     <string name="feeds_removed_from_feed">Elimináronte deste fío</string>

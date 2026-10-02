@@ -180,8 +180,8 @@
     <string name="people_books_create">Сохтани китоби суроға</string>
     <string name="people_books_delete">Нест кардани китоби суроға</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s ва %2$d тамоси он нест карда шавад?</item>
-        <item quantity="other">%1$s ва %2$d тамоси он нест карда шавад?</item>
+        <item quantity="one">%1$s ва %2$s тамоси он нест карда шавад?</item>
+        <item quantity="other">%1$s ва %2$s тамоси он нест карда шавад?</item>
     </plurals>
     <string name="people_welcome_body">Дар тамоми Mochi дӯстонро ёбед ва муошират кунед. Барои фиристодани даъватнома Илова кардани тамос -ро зер кунед.</string>
     <string name="people_person_state_contact">Дар тамосҳо</string>

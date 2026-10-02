@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Momarandu wiki kuatiarogue ñembosako\'i, comentario ha ñe\'ẽrenói rehegua.</string>
     <string name="wikis_pageview_toc_expand">Ehechauka índice</string>
     <string name="wikis_pageview_toc_collapse">Emokañy contenido índice</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Oñembohekopyahu %1$s</string>
     <string name="wikis_pageview_not_found_description">Kuatiarogue “%1$s” ndaipóri gueteri.</string>
     <string name="wikis_pageview_share_chooser">Wiki juajuha</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Remboguetaite kuatiarogue \"%1$s\" (%2$s). Ko tembiapo ikatu oñembojevy remoĩ jeývo tembiasakuégui.</string>
     <string name="wikis_delete_page_success">Kuatiarogue oñembogue</string>
     <string name="wikis_revert_page_title">Embojevy kuatiarogue</string>
-    <string name="wikis_revert_page_message">Rembojevytaite %1$s versión %2$d-pe. Kóva omoheñóita peteĩ revisión pyahu versión %2$d contenido reheve.</string>
-    <string name="wikis_revert_page_default_comment">Oñembojevy versión %1$d-pe</string>
-    <string name="wikis_revert_page_success">Oñembojevy versión %1$d-pe</string>
+    <string name="wikis_revert_page_message">Rembojevytaite %1$s versión %2$s-pe. Kóva omoheñóita peteĩ revisión pyahu versión %2$s contenido reheve.</string>
+    <string name="wikis_revert_page_default_comment">Oñembojevy versión %1$s-pe</string>
+    <string name="wikis_revert_page_success">Oñembojevy versión %1$s-pe</string>
     <string name="wikis_rename_page_renaming">Oñembohera jeyhína…</string>
     <string name="wikis_rename_page_success">Kuatiarogue oñembohera jey</string>
-    <string name="wikis_history_viewing">Ojehecha %1$s rembiasakue, versión ko\'ág̃agua %2$d</string>
-    <string name="wikis_revision_version_badge">Versión %1$d</string>
+    <string name="wikis_history_viewing">Ojehecha %1$s rembiasakue, versión ko\'ág̃agua %2$s</string>
+    <string name="wikis_revision_version_badge">Versión %1$s</string>
     <string name="wikis_search_pages_placeholder">Eheka kuatiarogue teratee térã contenido rupive…</string>
     <string name="wikis_search_no_results">Ndojejuhúi kuatiarogue “%1$s” peg̃uarã. Eha\'ã ambue ñe\'ẽ jeheka.</string>
     <string name="wikis_search_updated">Oñembohekopyahu %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s rupive</string>
     <string name="wikis_revision_show_page">Ehechauka kuatiarogue</string>
     <string name="wikis_revision_compare_failed">Ndaikatúi oñemyanyhẽ pe versión ymaguare ojojoja hag̃ua.</string>
-    <string name="wikis_revision_changes_from">Ñemoambue versión %1$d → %2$d guive</string>
+    <string name="wikis_revision_changes_from">Ñemoambue versión %1$s → %2$s guive</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d comentario</item>
-        <item quantity="other">%d comentariokuéra</item>
+        <item quantity="one">%s comentario</item>
+        <item quantity="other">%s comentariokuéra</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d ñembohovái</item>
-        <item quantity="other">+%d ñembohovái ambue</item>
+        <item quantity="one">%s ñembohovái</item>
+        <item quantity="other">+%s ñembohovái ambue</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d kuatiarogue</item>
-        <item quantity="other">%d kuatiarogue</item>
+        <item quantity="one">%s kuatiarogue</item>
+        <item quantity="other">%s kuatiarogue</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d archivo</item>
-        <item quantity="other">%d archivokuéra</item>
+        <item quantity="one">%s archivo</item>
+        <item quantity="other">%s archivokuéra</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d ta\'ãnga</item>
-        <item quantity="other">%d ta\'ãnga</item>
+        <item quantity="one">%s ta\'ãnga</item>
+        <item quantity="other">%s ta\'ãnga</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d kuatia</item>
-        <item quantity="other">%d kuatia</item>
+        <item quantity="one">%s kuatia</item>
+        <item quantity="other">%s kuatia</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d kuatiarogue ko teramoĩ reheve</item>
-        <item quantity="other">%d kuatiarogue ko teramoĩ reheve</item>
+        <item quantity="one">%s kuatiarogue ko teramoĩ reheve</item>
+        <item quantity="other">%s kuatiarogue ko teramoĩ reheve</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">Oñetopa %1$d ojejuhu \"%2$s\" peguarã</item>
-        <item quantity="other">Oñetopa %1$d ojejuhu \"%2$s\" peguarã</item>
+        <item quantity="one">Oñetopa %1$s ojejuhu \"%2$s\" peguarã</item>
+        <item quantity="other">Oñetopa %1$s ojejuhu \"%2$s\" peguarã</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ndaikatúi oñeñongatu ñemyesakã</string>
     <string name="wikis_attachments_upload_types">Archivo ojeguerohorýva: ta\'anga, PDF, DOC, DOCX, TXT ha MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">RSS URL pyahu oñekopia clipboard-pe</string>
     <string name="wikis_rss_exists">Ko feed URL oñeme\'ẽma ha ndaikatúi ojehechauka jey.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Ojehechauka %1$d comentario peteĩha.</item>
-        <item quantity="other">Ojehechauka %1$d comentario peteĩha.</item>
+        <item quantity="one">Ojehechauka %1$s comentario peteĩha.</item>
+        <item quantity="other">Ojehechauka %1$s comentario peteĩha.</item>
     </plurals>
 </resources>

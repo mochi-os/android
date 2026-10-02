@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">Time će se zaustaviti uvoz sadržaja iz \"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">Također izbriši objave uvezene iz ovog izvora</string>
     <string name="feeds_suggested_credibility_title">Predložena vjerodostojnost</string>
-    <string name="feeds_suggested_credibility_body">Mochi predlaže vjerodostojnost %1$d. Prihvaćate?</string>
+    <string name="feeds_suggested_credibility_body">Mochi predlaže vjerodostojnost %1$s. Prihvaćate?</string>
     <string name="feeds_suggested_credibility_keep">Zadrži trenutno</string>
     <string name="feeds_ai_processing_mode">Način AI obrade</string>
     <string name="feeds_ai_account">AI račun</string>
@@ -140,9 +140,9 @@
     <string name="feeds_saved_empty_subtitle">Dodirnite oznaku na bilo kojoj objavi da je spremite ovdje za poslije.</string>
     <string name="feeds_saved_error_clear">Spremljene objave nije moguće obrisati</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d nova objava</item>
-        <item quantity="few">%d nove objave</item>
-        <item quantity="other">%d novih objava</item>
+        <item quantity="one">%s nova objava</item>
+        <item quantity="few">%s nove objave</item>
+        <item quantity="other">%s novih objava</item>
     </plurals>
     <string name="feeds_caught_up">Sve ste pregledali</string>
     <string name="feeds_all_caught_up">Sve riješeno</string>
@@ -193,14 +193,14 @@
     <string name="feeds_source_url_hint_feed">ID entiteta feeda ili otisak</string>
     <string name="feeds_source_credibility_label">Vjerodostojnost</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d sat</item>
-        <item quantity="few">%1$d sata</item>
-        <item quantity="other">%1$d sati</item>
+        <item quantity="one">%1$s sat</item>
+        <item quantity="few">%1$s sata</item>
+        <item quantity="other">%1$s sati</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minuta</item>
-        <item quantity="few">%1$d minute</item>
-        <item quantity="other">%1$d minuta</item>
+        <item quantity="one">%1$s minuta</item>
+        <item quantity="few">%1$s minute</item>
+        <item quantity="other">%1$s minuta</item>
     </plurals>
     <string name="feeds_source_polling_interval">Provjera svakih %1$s</string>
     <string name="feeds_access_level_react_full">Reagiraj i pregledavaj</string>
@@ -217,24 +217,24 @@
     <string name="feeds_link">Poveznica</string>
     <string name="feeds_share_link_title">Poveznica feeda</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d komentar</item>
-        <item quantity="few">%1$d komentara</item>
-        <item quantity="other">%1$d komentara</item>
+        <item quantity="one">%1$s komentar</item>
+        <item quantity="few">%1$s komentara</item>
+        <item quantity="other">%1$s komentara</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d prilog</item>
-        <item quantity="few">%1$d priloga</item>
-        <item quantity="other">%1$d priloga</item>
+        <item quantity="one">%1$s prilog</item>
+        <item quantity="few">%1$s priloga</item>
+        <item quantity="other">%1$s priloga</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Prikaži još %1$d komentar</item>
-        <item quantity="few">Prikaži još %1$d komentara</item>
-        <item quantity="other">Prikaži još %1$d komentara</item>
+        <item quantity="one">Prikaži još %1$s komentar</item>
+        <item quantity="few">Prikaži još %1$s komentara</item>
+        <item quantity="other">Prikaži još %1$s komentara</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">prije %1$d godine danas</item>
-        <item quantity="few">prije %1$d godine danas</item>
-        <item quantity="other">prije %1$d godina danas</item>
+        <item quantity="one">prije %1$s godine danas</item>
+        <item quantity="few">prije %1$s godine danas</item>
+        <item quantity="other">prije %1$s godina danas</item>
     </plurals>
     <string name="feeds_block">Blokiraj</string>
     <string name="feeds_removed_from_feed">Uklonjeni ste iz ovog feeda</string>

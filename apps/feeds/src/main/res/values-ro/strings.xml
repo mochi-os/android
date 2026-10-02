@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">Aceasta va opri importul de conținut din \"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">Șterge și postările importate din această sursă</string>
     <string name="feeds_suggested_credibility_title">Credibilitate sugerată</string>
-    <string name="feeds_suggested_credibility_body">Mochi sugerează o credibilitate de %1$d. Acceptați?</string>
+    <string name="feeds_suggested_credibility_body">Mochi sugerează o credibilitate de %1$s. Acceptați?</string>
     <string name="feeds_suggested_credibility_keep">Păstrați actuala</string>
     <string name="feeds_ai_processing_mode">Mod de procesare AI</string>
     <string name="feeds_ai_account">Cont AI</string>
@@ -140,9 +140,9 @@
     <string name="feeds_saved_empty_subtitle">Atinge marcajul oricărei postări pentru a o salva aici pentru mai târziu.</string>
     <string name="feeds_saved_error_clear">Ștergerea postărilor salvate a eșuat</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d postare nouă</item>
-        <item quantity="few">%d postări noi</item>
-        <item quantity="other">%d de postări noi</item>
+        <item quantity="one">%s postare nouă</item>
+        <item quantity="few">%s postări noi</item>
+        <item quantity="other">%s de postări noi</item>
     </plurals>
     <string name="feeds_caught_up">Ești la zi</string>
     <string name="feeds_all_caught_up">Ești la zi</string>
@@ -193,14 +193,14 @@
     <string name="feeds_source_url_hint_feed">ID-ul entității fluxului sau amprenta</string>
     <string name="feeds_source_credibility_label">Credibilitate</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d oră</item>
-        <item quantity="few">%1$d ore</item>
-        <item quantity="other">%1$d de ore</item>
+        <item quantity="one">%1$s oră</item>
+        <item quantity="few">%1$s ore</item>
+        <item quantity="other">%1$s de ore</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="few">%1$d minute</item>
-        <item quantity="other">%1$d de minute</item>
+        <item quantity="one">%1$s minut</item>
+        <item quantity="few">%1$s minute</item>
+        <item quantity="other">%1$s de minute</item>
     </plurals>
     <string name="feeds_source_polling_interval">Interogare la fiecare %1$s</string>
     <string name="feeds_access_level_react_full">Reacționează și vizualizează</string>
@@ -217,24 +217,24 @@
     <string name="feeds_link">Link</string>
     <string name="feeds_share_link_title">Link către flux</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d comentariu</item>
-        <item quantity="few">%1$d comentarii</item>
-        <item quantity="other">%1$d de comentarii</item>
+        <item quantity="one">%1$s comentariu</item>
+        <item quantity="few">%1$s comentarii</item>
+        <item quantity="other">%1$s de comentarii</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d atașament</item>
-        <item quantity="few">%1$d atașamente</item>
-        <item quantity="other">%1$d de atașamente</item>
+        <item quantity="one">%1$s atașament</item>
+        <item quantity="few">%1$s atașamente</item>
+        <item quantity="other">%1$s de atașamente</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Vezi %1$d comentariu în plus</item>
-        <item quantity="few">Vezi %1$d comentarii în plus</item>
-        <item quantity="other">Vezi %1$d de comentarii în plus</item>
+        <item quantity="one">Vezi %1$s comentariu în plus</item>
+        <item quantity="few">Vezi %1$s comentarii în plus</item>
+        <item quantity="other">Vezi %1$s de comentarii în plus</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">acum %1$d an, astăzi</item>
-        <item quantity="few">acum %1$d ani, astăzi</item>
-        <item quantity="other">acum %1$d de ani, astăzi</item>
+        <item quantity="one">acum %1$s an, astăzi</item>
+        <item quantity="few">acum %1$s ani, astăzi</item>
+        <item quantity="other">acum %1$s de ani, astăzi</item>
     </plurals>
     <string name="feeds_block">Blochează</string>
     <string name="feeds_removed_from_feed">Ai fost eliminat din acest flux</string>

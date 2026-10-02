@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">වෙළඳපොළ</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">චරිතාපදානය</string>
     <string name="market_account_biography_placeholder">ගැනුම්කරුවන්ට ඔබ ගැන කියන්න…</string>
     <string name="market_account_load_failed">ගිණුම පූරණය කළ නොහැකි විය</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">ලංසුව ඉක්මවා</string>
     <string name="market_bids_tab_won">ජයග්‍රහණය</string>
     <string name="market_bids_title">ලංසු</string>
-    <string name="market_carousel_main">ඡායාරූපය %1$d / %2$d</string>
+    <string name="market_carousel_main">ඡායාරූපය %1$s / %2$s</string>
     <string name="market_channel_name">වෙළඳපොළ</string>
     <string name="market_chargeback_reason_bank_cannot_process">බැංකුවට සැකසීමට නොහැකි විය</string>
     <string name="market_chargeback_reason_check_returned">චෙක්පත ආපසු එවන ලදී</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">අලුත් කරන ලද</string>
     <string name="market_editor_condition_used">භාවිතා කළ</string>
     <string name="market_editor_currency">මුදල් වර්ගය</string>
-    <string name="market_editor_days">%1$d දින</string>
+    <string name="market_editor_days">%1$s දින</string>
     <string name="market_editor_delete">ලැයිස්තුව මකන්න</string>
     <string name="market_editor_description">විස්තරය</string>
     <string name="market_editor_interval_monthly">මාසික</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">මිලදී ගැනීම්</string>
     <string name="market_rating_label">ශ්‍රේණිගත කිරීම</string>
     <string name="market_rating_no_reviews">තවම සමාලෝචන නැත</string>
-    <string name="market_rating_reviews">(%1$d සමාලෝචනය)</string>
+    <string name="market_rating_reviews">(%1$s සමාලෝචනය)</string>
     <string name="market_refund_amount_label">මුදල</string>
     <string name="market_refund_body">ඔබේ මුදල් ආපසු ගෙවීමේ ඉල්ලීම සඳහා හේතුවක් සපයන්න.</string>
     <string name="market_refund_details_label">විස්තර</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">වර්තමාන: %1$s</string>
     <string name="market_bids_ends_in">අවසන් වන්නේ %1$s කින්</string>
     <string name="market_bids_your_bid">ඔබේ ලංසුව: %1$s</string>
-    <string name="market_carousel_thumbnail">සිඟිති රූපය %1$d</string>
+    <string name="market_carousel_thumbnail">සිඟිති රූපය %1$s</string>
     <string name="market_checkout_browser_unavailable">ගෙවීම් පිටුව විවෘත කිරීමට බ්‍රවුසරයක් නොමැත</string>
     <string name="market_checkout_pwyw_label">ඔබේ මිල (අවම %1$s)</string>
     <string name="market_checkout_pwyw_min_error">මුදල අවම වශයෙන් %1$s විය යුතුය</string>
-    <string name="market_dispute_dialog_attach_count">ගොනු %1$d ක් අමුණා ඇත</string>
+    <string name="market_dispute_dialog_attach_count">ගොනු %1$s ක් අමුණා ඇත</string>
     <string name="market_dispute_dialog_evidence_section_title">ඉදිරිපත් කළ සාක්ෂි</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s විසින් ඉදිරිපත් කරන ලදී</string>
     <string name="market_editor_appeal">මධ්‍යස්ථකරණයට අභියාචනා කරන්න</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">ලැයිස්තුව පූරණය වෙමින්</string>
     <string name="market_listing_detail_relist_failed">නැවත ලැයිස්තුගත කිරීමට නොහැකි විය</string>
     <string name="market_listing_detail_relist_in_progress">නැවත ලැයිස්තුගත කරමින්</string>
-    <string name="market_listing_detail_sales_count">විකුණුම් %1$d ක්</string>
+    <string name="market_listing_detail_sales_count">විකුණුම් %1$s ක්</string>
     <string name="market_listing_detail_seller_banned_banner">මෙම විකුණුම්කරු තහනම් කර ඇත. නව ඇණවුම් කළ නොහැක.</string>
     <string name="market_listing_detail_seller_suspended_banner">මෙම විකුණුම්කරු අත්හිටුවා ඇත. ගිණුම නැවත සක්‍රිය කරන තුරු නව ඇණවුම් විරාම කර ඇත.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">විකුණුම්කරුගේ ගිණුම සීමා කර ඇති විට මිලදී ගැනීම අක්‍රිය කර ඇත.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">තවම කතාබහ නැත</string>
     <string name="market_messages_load_failed">කතාබහ පූරණය කළ නොහැකි විය</string>
     <string name="market_messages_send_failed">පණිවිඩය යැවීමට නොහැකි විය</string>
-    <string name="market_messages_unread_badge">%1$d කියවා නැත</string>
+    <string name="market_messages_unread_badge">%1$s කියවා නැත</string>
     <string name="market_price_high_bid">ඉහළම ලංසුව: %1$s</string>
     <string name="market_price_instant_buy">ක්ෂණික මිලදී ගැනීම: %1$s</string>
     <string name="market_price_starting_bid">ආරම්භක ලංසුව: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">%1$s සිට සාමාජිකයෙකි</string>
     <string name="market_profile_joined">%1$s දී එක් විය</string>
     <string name="market_profile_rating_breakdown">ශ්‍රේණිගත කිරීමේ බෙදුම</string>
-    <string name="market_profile_sales_count">විකුණුම් %1$d</string>
-    <string name="market_profile_stars_value">තරු %1$d</string>
+    <string name="market_profile_sales_count">විකුණුම් %1$s</string>
+    <string name="market_profile_stars_value">තරු %1$s</string>
     <string name="market_purchase_dispute_chargeback">ආපසු අයකිරීම %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ඔබේ බැංකුව මෙම ඇණවුම මත ආපසු අයකිරීමක් ගොනු කළේය. Stripe විකුණුම්කරු සමඟ ආරවුල හසුරුවමින් සිටී; තීරණය වූ විට ප්‍රතිඵලය මෙහි දිස් වනු ඇත.</string>
     <string name="market_purchase_dispute_response">විකුණුම්කරුගේ ප්‍රතිචාරය</string>
-    <string name="market_purchase_download_many">පහත ඔබේ ගොනු %1$d බාගත කරන්න.</string>
+    <string name="market_purchase_download_many">පහත ඔබේ ගොනු %1$s බාගත කරන්න.</string>
     <string name="market_purchase_download_one">පහත ඔබේ ගොනුව බාගත කරන්න.</string>
     <string name="market_purchase_review_from">%1$s ගෙන් සමාලෝචනය</string>
     <string name="market_purchases_auction_label">වෙන්දේසිය #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">මෙය වෙන්දේසිය අවලංගු කරයි. ලැයිස්තුව ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ; ඔබට පසුව එය නව කෙටුම්පතක් ලෙස නැවත ලැයිස්තුගත කළ හැකිය.</string>
     <string name="market_listings_remove_title">මෙම ලැයිස්තුව ඉවත් කරන්නද?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">මෙය වෙන්දේසිය අවලංගු කර ක්‍රියාකාරී ලංසුකරුවන් %1$d දෙනෙකුට දැනුම් දෙයි. ලැයිස්තුගත කිරීම ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ; ඔබට එය පසුව නව කෙටුම්පතක් ලෙස නැවත ලැයිස්තුගත කළ හැක.</item>
-        <item quantity="other">මෙය වෙන්දේසිය අවලංගු කර ක්‍රියාකාරී ලංසුකරුවන් %1$d දෙනෙකුට දැනුම් දෙයි. ලැයිස්තුගත කිරීම ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ; ඔබට එය පසුව නව කෙටුම්පතක් ලෙස නැවත ලැයිස්තුගත කළ හැක.</item>
+        <item quantity="one">මෙය වෙන්දේසිය අවලංගු කර ක්‍රියාකාරී ලංසුකරුවන් %1$s දෙනෙකුට දැනුම් දෙයි. ලැයිස්තුගත කිරීම ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ; ඔබට එය පසුව නව කෙටුම්පතක් ලෙස නැවත ලැයිස්තුගත කළ හැක.</item>
+        <item quantity="other">මෙය වෙන්දේසිය අවලංගු කර ක්‍රියාකාරී ලංසුකරුවන් %1$s දෙනෙකුට දැනුම් දෙයි. ලැයිස්තුගත කිරීම ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ; ඔබට එය පසුව නව කෙටුම්පතක් ලෙස නැවත ලැයිස්තුගත කළ හැක.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">මෙය වත්මන් බිල්කරණ කාලය අවසානයේ ක්‍රියාකාරී දායකත්ව %1$d ක් අවලංගු කරයි. දායකයින්ට දැනුම් දෙනු ලැබේ. ලැයිස්තුගත කිරීම ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ.</item>
-        <item quantity="other">මෙය වත්මන් බිල්කරණ කාලය අවසානයේ ක්‍රියාකාරී දායකත්ව %1$d ක් අවලංගු කරයි. දායකයින්ට දැනුම් දෙනු ලැබේ. ලැයිස්තුගත කිරීම ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ.</item>
+        <item quantity="one">මෙය වත්මන් බිල්කරණ කාලය අවසානයේ ක්‍රියාකාරී දායකත්ව %1$s ක් අවලංගු කරයි. දායකයින්ට දැනුම් දෙනු ලැබේ. ලැයිස්තුගත කිරීම ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ.</item>
+        <item quantity="other">මෙය වත්මන් බිල්කරණ කාලය අවසානයේ ක්‍රියාකාරී දායකත්ව %1$s ක් අවලංගු කරයි. දායකයින්ට දැනුම් දෙනු ලැබේ. ලැයිස්තුගත කිරීම ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ.</item>
     </plurals>
 </resources>

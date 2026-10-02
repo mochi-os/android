@@ -180,8 +180,8 @@
     <string name="people_books_create">Kreye kanè adrès</string>
     <string name="people_books_delete">Efase kanè adrès</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Efase %1$s ak %2$d kontak li genyen an?</item>
-        <item quantity="other">Efase %1$s ak %2$d kontak li genyen yo?</item>
+        <item quantity="one">Efase %1$s ak %2$s kontak li genyen an?</item>
+        <item quantity="other">Efase %1$s ak %2$s kontak li genyen yo?</item>
     </plurals>
     <string name="people_welcome_body">Jwenn zanmi toupatou nan Mochi epi konekte. Peze Ajoute kontak pou voye yon envitasyon.</string>
     <string name="people_person_state_contact">Nan kontak</string>

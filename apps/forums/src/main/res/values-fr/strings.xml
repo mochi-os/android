@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">Touchez le marque-page d\'une publication pour l\'enregistrer ici pour plus tard.</string>
     <string name="forums_saved_error_clear">Échec de l\'effacement des publications enregistrées</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d nouvelle publication</item>
-        <item quantity="other">%d nouvelles publications</item>
+        <item quantity="one">%s nouvelle publication</item>
+        <item quantity="other">%s nouvelles publications</item>
     </plurals>
     <string name="forums_rss_feed">Flux RSS</string>
     <string name="forums_rss_mode_posts">Publications</string>
@@ -296,8 +296,8 @@
     <string name="forums_settings_unsubscribe_section">Se désabonner du forum</string>
     <string name="forums_share_link_title">Lien du forum</string>
     <string name="forums_find_found_by_url">Trouvé par URL</string>
-    <string name="forums_moderation_pending_posts">Publications en attente (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Commentaires en attente (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Publications en attente (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Commentaires en attente (%1$s)</string>
     <string name="forums_moderation_on_image">Sur l\'image : %1$s</string>
     <string name="forums_sort_ai">IA</string>
     <string name="forums_reject_post_access">Vous n\'avez pas la permission de publier dans ce forum</string>

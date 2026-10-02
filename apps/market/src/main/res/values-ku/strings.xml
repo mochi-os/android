@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Bazar</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Jiyaname</string>
     <string name="market_account_biography_placeholder">Behsa xwe ji kirryaran re bike…</string>
     <string name="market_account_load_failed">Hesab nehat barkirin</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">Pêşniyar zêdetir</string>
     <string name="market_bids_tab_won">Bi serket</string>
     <string name="market_bids_title">Pêşkêş</string>
-    <string name="market_carousel_main">Wêne %1$d / %2$d</string>
+    <string name="market_carousel_main">Wêne %1$s / %2$s</string>
     <string name="market_channel_name">Bazar</string>
     <string name="market_chargeback_reason_bank_cannot_process">Banke nikarîbû pêvajo bike</string>
     <string name="market_chargeback_reason_check_returned">Çek hat vegerandin</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">Nûjenkirî</string>
     <string name="market_editor_condition_used">Bikarhanî</string>
     <string name="market_editor_currency">Diraf</string>
-    <string name="market_editor_days">%1$d roj</string>
+    <string name="market_editor_days">%1$s roj</string>
     <string name="market_editor_delete">Lîsteyê jê bibe</string>
     <string name="market_editor_description">Şirove</string>
     <string name="market_editor_interval_monthly">Mehane</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">Kirîn</string>
     <string name="market_rating_label">Nirxandin</string>
     <string name="market_rating_no_reviews">Hêj tu nirxandin tune</string>
-    <string name="market_rating_reviews">(%1$d nirxandin)</string>
+    <string name="market_rating_reviews">(%1$s nirxandin)</string>
     <string name="market_refund_amount_label">Mîqdar</string>
     <string name="market_refund_body">Sedemekê ji bo daxwaza vegerandina te bide.</string>
     <string name="market_refund_details_label">Hûragahî</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">Heyî: %1$s</string>
     <string name="market_bids_ends_in">Bi dawî dibe di %1$s de</string>
     <string name="market_bids_your_bid">Pêşniyara te: %1$s</string>
-    <string name="market_carousel_thumbnail">Wêneya biçûk %1$d</string>
+    <string name="market_carousel_thumbnail">Wêneya biçûk %1$s</string>
     <string name="market_checkout_browser_unavailable">Tu geroka pêre ji bo vekirina rûpela dayînê tune</string>
     <string name="market_checkout_pwyw_label">Bihayê we (kêmtirîn %1$s)</string>
     <string name="market_checkout_pwyw_min_error">Mîqdar divê herî kêm %1$s be</string>
-    <string name="market_dispute_dialog_attach_count">%1$d pelge hatine pêvekirin</string>
+    <string name="market_dispute_dialog_attach_count">%1$s pelge hatine pêvekirin</string>
     <string name="market_dispute_dialog_evidence_section_title">Delîlên pêşkêşkirî</string>
     <string name="market_dispute_dialog_evidence_submitter_line">ji aliyê %1$s ve hatiye pêşkêşkirin</string>
     <string name="market_editor_appeal">Îtîraza moderasyonê</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">Lîste tê barkirin</string>
     <string name="market_listing_detail_relist_failed">Nekarî ji nû ve were lîstekirin</string>
     <string name="market_listing_detail_relist_in_progress">Ji nû ve tê lîstekirin</string>
-    <string name="market_listing_detail_sales_count">%1$d firotin</string>
+    <string name="market_listing_detail_sales_count">%1$s firotin</string>
     <string name="market_listing_detail_seller_banned_banner">Ev firoşkar hatiye qedexekirin. Fermanên nû nayên dayîn.</string>
     <string name="market_listing_detail_seller_suspended_banner">Ev firoşkar hatiye rawestandin. Fermanên nû heta ku hesab were vegerandin sekinandî ne.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">Kirîn neçalak e dema ku hesabê firoşkar sînorkirî ye.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">Hîn gotûbêj tune ne</string>
     <string name="market_messages_load_failed">Gotûbêj nehat barkirin</string>
     <string name="market_messages_send_failed">Peyam nehat şandin</string>
-    <string name="market_messages_unread_badge">%1$d nexwendî</string>
+    <string name="market_messages_unread_badge">%1$s nexwendî</string>
     <string name="market_price_high_bid">Pêşkêşa herî bilind: %1$s</string>
     <string name="market_price_instant_buy">Kirîna tavilê: %1$s</string>
     <string name="market_price_starting_bid">Pêşkêşa destpêkê: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">Endam ji %1$s ve</string>
     <string name="market_profile_joined">Tevlî bû %1$s</string>
     <string name="market_profile_rating_breakdown">Veqetandina nirxandinê</string>
-    <string name="market_profile_sales_count">%1$d firotin</string>
-    <string name="market_profile_stars_value">%1$d stêrk</string>
+    <string name="market_profile_sales_count">%1$s firotin</string>
+    <string name="market_profile_stars_value">%1$s stêrk</string>
     <string name="market_purchase_dispute_chargeback">Vegerandina dravê %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Banka te vegerandina dravê li ser vê fermanê tomar kir. Stripe nakokiyê bi firoşkar re birêve dibe; encam wê li vir xuya bibe dema biryar were dayîn.</string>
     <string name="market_purchase_dispute_response">Bersiva firoşkar</string>
-    <string name="market_purchase_download_many">Pelên xwe yên %1$d li jêr daxe.</string>
+    <string name="market_purchase_download_many">Pelên xwe yên %1$s li jêr daxe.</string>
     <string name="market_purchase_download_one">Pela xwe li jêr daxe.</string>
     <string name="market_purchase_review_from">Nirxandin ji %1$s</string>
     <string name="market_purchases_auction_label">Mezad #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Ev dê mezadê betal bike. Lîste dê ji kirroxan veşartî bibe; tu dikarî wê paşê wek pêşnîvîseke nû ji nû ve lîste bikî.</string>
     <string name="market_listings_remove_title">Vê lîsteyê rake?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Ev ê mezadê betal bike û %1$d pêşniyarkerên çalak agahdar bike. Reklam dê ji kirrûdaran were veşartin; tu dikarî paşê wê wekî reşnivîseke nû dîsa biweşînî.</item>
-        <item quantity="other">Ev ê mezadê betal bike û %1$d pêşniyarkerên çalak agahdar bike. Reklam dê ji kirrûdaran were veşartin; tu dikarî paşê wê wekî reşnivîseke nû dîsa biweşînî.</item>
+        <item quantity="one">Ev ê mezadê betal bike û %1$s pêşniyarkerên çalak agahdar bike. Reklam dê ji kirrûdaran were veşartin; tu dikarî paşê wê wekî reşnivîseke nû dîsa biweşînî.</item>
+        <item quantity="other">Ev ê mezadê betal bike û %1$s pêşniyarkerên çalak agahdar bike. Reklam dê ji kirrûdaran were veşartin; tu dikarî paşê wê wekî reşnivîseke nû dîsa biweşînî.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Ev ê di dawiya heyama fatûreyê ya niha de %1$d abonetiyên çalak betal bike. Abone dê bên agahdarkirin. Reklam dê ji kirrûdaran were veşartin.</item>
-        <item quantity="other">Ev ê di dawiya heyama fatûreyê ya niha de %1$d abonetiyên çalak betal bike. Abone dê bên agahdarkirin. Reklam dê ji kirrûdaran were veşartin.</item>
+        <item quantity="one">Ev ê di dawiya heyama fatûreyê ya niha de %1$s abonetiyên çalak betal bike. Abone dê bên agahdarkirin. Reklam dê ji kirrûdaran were veşartin.</item>
+        <item quantity="other">Ev ê di dawiya heyama fatûreyê ya niha de %1$s abonetiyên çalak betal bike. Abone dê bên agahdarkirin. Reklam dê ji kirrûdaran were veşartin.</item>
     </plurals>
 </resources>

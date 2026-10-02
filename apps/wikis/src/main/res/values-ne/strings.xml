@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki पृष्ठ सम्पादन, टिप्पणी र निमन्त्रणाबारे सूचनाहरू।</string>
     <string name="wikis_pageview_toc_expand">विषयसूची देखाउनुहोस्</string>
     <string name="wikis_pageview_toc_collapse">विषयसूची लुकाउनुहोस्</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">अद्यावधिक गरियो %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” पृष्ठ अहिलेसम्म अवस्थित छैन।</string>
     <string name="wikis_pageview_share_chooser">विकी लिङ्क</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">तपाईं “%1$s” (%2$s) पृष्ठ मेट्न लाग्नुभएको छ। इतिहासबाट पुनर्स्थापना गरेर यो कार्य फिर्ता गर्न सकिन्छ।</string>
     <string name="wikis_delete_page_success">पृष्ठ मेटाइयो</string>
     <string name="wikis_revert_page_title">पृष्ठ फिर्ता गर्नुहोस्</string>
-    <string name="wikis_revert_page_message">तपाईं %1$s लाई संस्करण %2$d मा फर्काउन लाग्नुभएको छ। यसले संस्करण %2$d को सामग्रीसहित नयाँ संशोधन सिर्जना गर्नेछ।</string>
-    <string name="wikis_revert_page_default_comment">संस्करण %1$d मा फर्काइयो</string>
-    <string name="wikis_revert_page_success">संस्करण %1$d मा फर्काइयो</string>
+    <string name="wikis_revert_page_message">तपाईं %1$s लाई संस्करण %2$s मा फर्काउन लाग्नुभएको छ। यसले संस्करण %2$s को सामग्रीसहित नयाँ संशोधन सिर्जना गर्नेछ।</string>
+    <string name="wikis_revert_page_default_comment">संस्करण %1$s मा फर्काइयो</string>
+    <string name="wikis_revert_page_success">संस्करण %1$s मा फर्काइयो</string>
     <string name="wikis_rename_page_renaming">नाम परिवर्तन गर्दै…</string>
     <string name="wikis_rename_page_success">पृष्ठको नाम परिवर्तन गरियो</string>
-    <string name="wikis_history_viewing">%1$s को इतिहास हेर्दै, हालको संस्करण %2$d</string>
-    <string name="wikis_revision_version_badge">संस्करण %1$d</string>
+    <string name="wikis_history_viewing">%1$s को इतिहास हेर्दै, हालको संस्करण %2$s</string>
+    <string name="wikis_revision_version_badge">संस्करण %1$s</string>
     <string name="wikis_search_pages_placeholder">शीर्षक वा सामग्रीअनुसार पृष्ठहरू खोज्नुहोस्…</string>
     <string name="wikis_search_no_results">“%1$s” का लागि कुनै पृष्ठ फेला परेन। फरक खोज शब्दहरू प्रयास गर्नुहोस्।</string>
     <string name="wikis_search_updated">अद्यावधिक गरियो %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s द्वारा</string>
     <string name="wikis_revision_show_page">पृष्ठ देखाउनुहोस्</string>
     <string name="wikis_revision_compare_failed">तुलनाका लागि अघिल्लो संस्करण लोड गर्न सकिएन।</string>
-    <string name="wikis_revision_changes_from">संस्करण %1$d → %2$d बाटका परिवर्तनहरू</string>
+    <string name="wikis_revision_changes_from">संस्करण %1$s → %2$s बाटका परिवर्तनहरू</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d टिप्पणी</item>
-        <item quantity="other">%d टिप्पणीहरू</item>
+        <item quantity="one">%s टिप्पणी</item>
+        <item quantity="other">%s टिप्पणीहरू</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d जवाफ</item>
-        <item quantity="other">+%d थप जवाफहरू</item>
+        <item quantity="one">%s जवाफ</item>
+        <item quantity="other">+%s थप जवाफहरू</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d पृष्ठ</item>
-        <item quantity="other">%d पृष्ठहरू</item>
+        <item quantity="one">%s पृष्ठ</item>
+        <item quantity="other">%s पृष्ठहरू</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d फाइल</item>
-        <item quantity="other">%d फाइलहरू</item>
+        <item quantity="one">%s फाइल</item>
+        <item quantity="other">%s फाइलहरू</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d तस्बिर</item>
-        <item quantity="other">%d तस्बिरहरू</item>
+        <item quantity="one">%s तस्बिर</item>
+        <item quantity="other">%s तस्बिरहरू</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d कागजात</item>
-        <item quantity="other">%d कागजातहरू</item>
+        <item quantity="one">%s कागजात</item>
+        <item quantity="other">%s कागजातहरू</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">यो ट्यागको साथ %d पृष्ठ</item>
-        <item quantity="other">यो ट्यागको साथ %d पृष्ठहरू</item>
+        <item quantity="one">यो ट्यागको साथ %s पृष्ठ</item>
+        <item quantity="other">यो ट्यागको साथ %s पृष्ठहरू</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">«%2$s» का लागि %1$d परिणाम फेला पर्‍यो</item>
-        <item quantity="other">«%2$s» का लागि %1$d परिणामहरू फेला पर्‍यो</item>
+        <item quantity="one">«%2$s» का लागि %1$s परिणाम फेला पर्‍यो</item>
+        <item quantity="other">«%2$s» का लागि %1$s परिणामहरू फेला पर्‍यो</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">क्याप्शन बचत गर्न सकिएन</string>
     <string name="wikis_attachments_upload_types">समर्थित फाइलहरू: छविहरू, PDF, DOC, DOCX, TXT, र MD।</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">नयाँ RSS URL क्लिपबोर्डमा प्रतिलिपि गरियो</string>
     <string name="wikis_rss_exists">यो फिड URL पहिले नै जारी गरिएको छ र फेरि देखाउन सकिँदैन।</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">पहिलो %1$d टिप्पणी देखाइँदै छ।</item>
-        <item quantity="other">पहिलो %1$d टिप्पणीहरू देखाइँदै छन्।</item>
+        <item quantity="one">पहिलो %1$s टिप्पणी देखाइँदै छ।</item>
+        <item quantity="other">पहिलो %1$s टिप्पणीहरू देखाइँदै छन्।</item>
     </plurals>
 </resources>

@@ -33,7 +33,7 @@
     <string name="staff_accounts_unnamed">بې نومه</string>
     <string name="staff_accounts_unsuspend">د ودرولو لرې کول</string>
     <string name="staff_accounts_unsuspended_toast">حساب بیا فعال شو</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">لغوه کول</string>
     <string name="staff_appeals_decide">پرېکړه وکړئ</string>
     <string name="staff_appeals_decision_denied">لیسټینګ رد ساتل</string>
@@ -399,7 +399,7 @@
 
     <string name="staff_accounts_action_unsuspend_title">د بندیز پورته کول</string>
     <string name="staff_accounts_reason_optional_label">دلیل (اختیاري)</string>
-    <string name="staff_accounts_sales">%1$d پلورنې</string>
+    <string name="staff_accounts_sales">%1$s پلورنې</string>
     <string name="staff_appeals_reason_label">د پلورونکي د استیناف دلیل</string>
     <string name="staff_audit_action_staff_team_role_changed">د کارکوونکي رول بدل شو</string>
     <string name="staff_categories_delete_desc">آیا „%1$s“ ړنګ کړئ؟ دا بیرته نه شي راګرځیدلی.</string>

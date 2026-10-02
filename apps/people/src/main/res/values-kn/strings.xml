@@ -180,8 +180,8 @@
     <string name="people_books_create">ವಿಳಾಸ ಪುಸ್ತಕ ರಚಿಸಿ</string>
     <string name="people_books_delete">ವಿಳಾಸ ಪುಸ್ತಕ ಅಳಿಸಿ</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s ಮತ್ತು ಅದರ %2$d ಸಂಪರ್ಕವನ್ನು ಅಳಿಸಬೇಕೆ?</item>
-        <item quantity="other">%1$s ಮತ್ತು ಅದರ %2$d ಸಂಪರ್ಕಗಳನ್ನು ಅಳಿಸಬೇಕೆ?</item>
+        <item quantity="one">%1$s ಮತ್ತು ಅದರ %2$s ಸಂಪರ್ಕವನ್ನು ಅಳಿಸಬೇಕೆ?</item>
+        <item quantity="other">%1$s ಮತ್ತು ಅದರ %2$s ಸಂಪರ್ಕಗಳನ್ನು ಅಳಿಸಬೇಕೆ?</item>
     </plurals>
     <string name="people_welcome_body">Mochi ಉದ್ದಕ್ಕೂ ಸ್ನೇಹಿತರನ್ನು ಹುಡುಕಿ ಮತ್ತು ಸಂಪರ್ಕಿಸಿ. ಆಹ್ವಾನ ಕಳುಹಿಸಲು ಸಂಪರ್ಕ ಸೇರಿಸಿ ಒತ್ತಿ.</string>
     <string name="people_person_state_contact">ಸಂಪರ್ಕಗಳಲ್ಲಿ</string>

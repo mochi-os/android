@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">بھیجا جا رہا ہے…</string>
     <string name="market_checkout_subscribing">سبسکرائب کر رہے ہیں…</string>
     <string name="market_filter_remove">فلٹر ہٹائیں</string>
-    <string name="market_listing_detail_sales_count">%1$d فروخت</string>
-    <string name="market_profile_sales_count">%1$d فروخت</string>
+    <string name="market_listing_detail_sales_count">%1$s فروخت</string>
+    <string name="market_profile_sales_count">%1$s فروخت</string>
     <string name="market_purchase_dispute_response">فروخت کنندہ کا جواب</string>
     <string name="market_purchases_order_label">آرڈر #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">خریداروں کو اپنے بارے میں بتائیں…</string>
     <string name="market_account_load_failed">اکاؤنٹ لوڈ نہیں ہو سکا</string>
     <string name="market_account_save_failed">تبدیلیاں محفوظ نہیں ہو سکیں</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">موجودہ: %1$s</string>
     <string name="market_bids_ends_in">%1$s میں ختم ہوگی</string>
     <string name="market_bids_your_bid">آپ کی بولی: %1$s</string>
-    <string name="market_carousel_main">تصویر %1$d از %2$d</string>
-    <string name="market_carousel_thumbnail">تھمب نیل %1$d</string>
+    <string name="market_carousel_main">تصویر %1$s از %2$s</string>
+    <string name="market_carousel_thumbnail">تھمب نیل %1$s</string>
     <string name="market_checkout_browser_unavailable">ادائیگی کا صفحہ کھولنے کے لیے کوئی براؤزر دستیاب نہیں</string>
     <string name="market_checkout_pay_button">Stripe سے ادائیگی کریں</string>
     <string name="market_checkout_processing">پروسیس ہو رہا ہے…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">ثبوت منسلک کریں</string>
-    <string name="market_dispute_dialog_attach_count">%1$d فائلیں منسلک</string>
+    <string name="market_dispute_dialog_attach_count">%1$s فائلیں منسلک</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi عملہ</string>
     <string name="market_dispute_dialog_evidence_section_title">جمع کرائے گئے ثبوت</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s کی جانب سے جمع کرایا گیا</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">حوالہ URL</string>
     <string name="market_editor_assets_empty">ابھی کوئی اثاثے نہیں</string>
     <string name="market_editor_category_none">ایک زمرہ منتخب کریں</string>
-    <string name="market_editor_days">%1$d دن</string>
+    <string name="market_editor_days">%1$s دن</string>
     <string name="market_editor_delete">فہرست حذف کریں</string>
     <string name="market_editor_delete_confirm_message">اس سے فہرست مستقل طور پر حذف ہو جائے گی۔</string>
     <string name="market_editor_delete_confirm_title">لسٹنگ حذف کریں؟</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">گفتگو لوڈ نہیں ہو سکی</string>
     <string name="market_messages_send_failed">پیغام نہیں بھیجا جا سکا</string>
     <string name="market_messages_thread_title">گفتگو</string>
-    <string name="market_messages_unread_badge">%1$d غیر پڑھے ہوئے</string>
+    <string name="market_messages_unread_badge">%1$s غیر پڑھے ہوئے</string>
     <string name="market_price_from">%1$s سے</string>
     <string name="market_price_high_bid">اعلیٰ ترین بولی: %1$s</string>
     <string name="market_price_instant_buy">فوری خریداری: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">شامل ہوئے %1$s</string>
     <string name="market_profile_no_reviews">ابھی کوئی جائزے نہیں۔</string>
     <string name="market_profile_rating_breakdown">ریٹنگ کی تفصیل</string>
-    <string name="market_profile_stars_value">%1$d ستارے</string>
+    <string name="market_profile_stars_value">%1$s ستارے</string>
     <string name="market_purchase_dispute_chargeback">چارج بیک %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">آپ کے بینک نے اس آرڈر پر چارج بیک دائر کیا ہے۔ Stripe بیچنے والے کے ساتھ تنازعہ سنبھال رہا ہے؛ فیصلہ ہونے پر نتیجہ یہاں ظاہر ہوگا۔</string>
-    <string name="market_purchase_download_many">ذیل میں اپنی %1$d فائلیں ڈاؤن لوڈ کریں۔</string>
+    <string name="market_purchase_download_many">ذیل میں اپنی %1$s فائلیں ڈاؤن لوڈ کریں۔</string>
     <string name="market_purchase_download_one">ذیل میں اپنی فائل ڈاؤن لوڈ کریں۔</string>
     <string name="market_purchase_review_from">%1$s کی طرف سے جائزہ</string>
     <string name="market_purchases_auction_label">نیلامی #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s واپس کیا گیا</string>
     <string name="market_purchases_won_for">%1$s میں جیتا</string>
-    <string name="market_rating_reviews">(%1$d جائزے)</string>
+    <string name="market_rating_reviews">(%1$s جائزے)</string>
     <string name="market_refund_amount_label">رقم</string>
     <string name="market_refund_dialog_amount_help">مکمل آرڈر کی رقم واپس کرنے کے لیے خالی چھوڑیں۔</string>
     <string name="market_refund_dialog_amount_label">رقم</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">اس سے نیلامی منسوخ ہو جائے گی۔ فہرست خریداروں سے چھپا دی جائے گی؛ آپ بعد میں اسے نئے مسودے کے طور پر دوبارہ درج کر سکتے ہیں۔</string>
     <string name="market_listings_remove_title">یہ فہرست ہٹائیں؟</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">اس سے نیلامی منسوخ ہو جائے گی اور %1$d فعال بولی دہندگان کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی؛ آپ اسے بعد میں نئے مسودے کے طور پر دوبارہ لسٹ کر سکتے ہیں۔</item>
-        <item quantity="other">اس سے نیلامی منسوخ ہو جائے گی اور %1$d فعال بولی دہندگان کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی؛ آپ اسے بعد میں نئے مسودے کے طور پر دوبارہ لسٹ کر سکتے ہیں۔</item>
+        <item quantity="one">اس سے نیلامی منسوخ ہو جائے گی اور %1$s فعال بولی دہندگان کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی؛ آپ اسے بعد میں نئے مسودے کے طور پر دوبارہ لسٹ کر سکتے ہیں۔</item>
+        <item quantity="other">اس سے نیلامی منسوخ ہو جائے گی اور %1$s فعال بولی دہندگان کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی؛ آپ اسے بعد میں نئے مسودے کے طور پر دوبارہ لسٹ کر سکتے ہیں۔</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">اس سے موجودہ بلنگ مدت کے اختتام پر %1$d فعال سبسکرپشنز منسوخ ہو جائیں گی۔ سبسکرائبرز کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی۔</item>
-        <item quantity="other">اس سے موجودہ بلنگ مدت کے اختتام پر %1$d فعال سبسکرپشنز منسوخ ہو جائیں گی۔ سبسکرائبرز کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی۔</item>
+        <item quantity="one">اس سے موجودہ بلنگ مدت کے اختتام پر %1$s فعال سبسکرپشنز منسوخ ہو جائیں گی۔ سبسکرائبرز کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی۔</item>
+        <item quantity="other">اس سے موجودہ بلنگ مدت کے اختتام پر %1$s فعال سبسکرپشنز منسوخ ہو جائیں گی۔ سبسکرائبرز کو مطلع کیا جائے گا۔ لسٹنگ خریداروں سے چھپا دی جائے گی۔</item>
     </plurals>
 </resources>

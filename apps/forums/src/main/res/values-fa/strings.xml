@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">برای ذخیره هر پست در اینجا برای بعد، روی نشانک آن ضربه بزنید.</string>
     <string name="forums_saved_error_clear">پاک‌کردن پست‌های ذخیره‌شده ناموفق بود</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d پست جدید</item>
-        <item quantity="other">%d پست جدید</item>
+        <item quantity="one">%s پست جدید</item>
+        <item quantity="other">%s پست جدید</item>
     </plurals>
     <string name="forums_rss_feed">فید RSS</string>
     <string name="forums_rss_mode_posts">پست‌ها</string>
@@ -296,8 +296,8 @@
     <string name="forums_settings_unsubscribe_section">قطع اشتراک از انجمن</string>
     <string name="forums_share_link_title">پیوند انجمن</string>
     <string name="forums_find_found_by_url">یافت‌شده با نشانی اینترنتی</string>
-    <string name="forums_moderation_pending_posts">فرسته‌های در انتظار (%1$d)</string>
-    <string name="forums_moderation_pending_comments">نظرات در انتظار (%1$d)</string>
+    <string name="forums_moderation_pending_posts">فرسته‌های در انتظار (%1$s)</string>
+    <string name="forums_moderation_pending_comments">نظرات در انتظار (%1$s)</string>
     <string name="forums_moderation_on_image">دربارهٔ تصویر: %1$s</string>
     <string name="forums_sort_ai">هوش مصنوعی</string>
     <string name="forums_reject_post_access">شما اجازه ارسال در این انجمن را ندارید</string>

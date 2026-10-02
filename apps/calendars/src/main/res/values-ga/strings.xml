@@ -99,25 +99,25 @@
     <string name="calendars_repeat_forever">Go deo</string>
     <string name="calendars_reminder_time">Ag an am</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d nóiméad roimhe</item>
-        <item quantity="two">%1$d nóiméad roimhe</item>
-        <item quantity="few">%1$d nóiméad roimhe</item>
-        <item quantity="many">%1$d nóiméad roimhe</item>
-        <item quantity="other">%1$d nóiméad roimhe</item>
+        <item quantity="one">%1$s nóiméad roimhe</item>
+        <item quantity="two">%1$s nóiméad roimhe</item>
+        <item quantity="few">%1$s nóiméad roimhe</item>
+        <item quantity="many">%1$s nóiméad roimhe</item>
+        <item quantity="other">%1$s nóiméad roimhe</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d uair roimhe</item>
-        <item quantity="two">%1$d uair roimhe</item>
-        <item quantity="few">%1$d huaire roimhe</item>
-        <item quantity="many">%1$d n-uaire roimhe</item>
-        <item quantity="other">%1$d uair roimhe</item>
+        <item quantity="one">%1$s uair roimhe</item>
+        <item quantity="two">%1$s uair roimhe</item>
+        <item quantity="few">%1$s huaire roimhe</item>
+        <item quantity="many">%1$s n-uaire roimhe</item>
+        <item quantity="other">%1$s uair roimhe</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d lá roimhe</item>
-        <item quantity="two">%1$d lá roimhe</item>
-        <item quantity="few">%1$d lá roimhe</item>
-        <item quantity="many">%1$d lá roimhe</item>
-        <item quantity="other">%1$d lá roimhe</item>
+        <item quantity="one">%1$s lá roimhe</item>
+        <item quantity="two">%1$s lá roimhe</item>
+        <item quantity="few">%1$s lá roimhe</item>
+        <item quantity="many">%1$s lá roimhe</item>
+        <item quantity="other">%1$s lá roimhe</item>
     </plurals>
     <string name="calendars_reminder_add">Cuir meabhrúchán leis</string>
     <string name="calendars_reminder_remove">Bain meabhrúchán</string>
@@ -151,13 +151,13 @@
     <string name="calendars_poll_large">Tá an féilire rómhór</string>
     <string name="calendars_poll_invalid">Níor sheol an seoladh féilire ar ais</string>
     <string name="calendars_poll_unreachable">Níorbh fhéidir teagmháil a dhéanamh leis an seoladh</string>
-    <string name="calendars_poll_status">D\'fhreagair an seoladh %1$d</string>
+    <string name="calendars_poll_status">D\'fhreagair an seoladh %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d nóiméad</item>
-        <item quantity="two">%1$d nóiméad</item>
-        <item quantity="few">%1$d nóiméad</item>
-        <item quantity="many">%1$d nóiméad</item>
-        <item quantity="other">%1$d nóiméad</item>
+        <item quantity="one">%1$s nóiméad</item>
+        <item quantity="two">%1$s nóiméad</item>
+        <item quantity="few">%1$s nóiméad</item>
+        <item quantity="many">%1$s nóiméad</item>
+        <item quantity="other">%1$s nóiméad</item>
     </plurals>
     <string name="calendars_preferences_zones">Taispeáin imeachtaí ina gcrios ama féin</string>
     <string name="calendars_event_backwards">Críochnaíonn sé sula dtosaíonn sé</string>

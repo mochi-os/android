@@ -123,7 +123,7 @@
     <string name="feeds_remove_source_confirm">ئەمە هاوردەکردنی ناوەڕۆک لە \"%1$s\" ڕادەگرێت.</string>
     <string name="feeds_remove_also_delete_posts">هەروەها ئەو بابەتانەش بسڕەوە کە لەم سەرچاوەیەوە هاوردە کراون</string>
     <string name="feeds_suggested_credibility_title">متمانەی پێشنیارکراو</string>
-    <string name="feeds_suggested_credibility_body">موچی متمانەی %1$d پێشنیار دەکات. وەردەگیرێت؟</string>
+    <string name="feeds_suggested_credibility_body">موچی متمانەی %1$s پێشنیار دەکات. وەردەگیرێت؟</string>
     <string name="feeds_suggested_credibility_keep">هەمانە بهێڵەرەوە</string>
 
     <string name="feeds_refresh">نوێکردنەوە</string>
@@ -142,8 +142,8 @@
     <string name="feeds_saved_empty_subtitle">بۆ پاشەکەوتکردنی هەر پۆستێک بۆ دواتر لێرە، دەست بنێ بە نیشانەکەی.</string>
     <string name="feeds_saved_error_clear">سڕینەوەی پۆستە پاشەکەوتکراوەکان سەرکەوتوو نەبوو</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d پۆستی نوێ</item>
-        <item quantity="other">%d پۆستی نوێ</item>
+        <item quantity="one">%s پۆستی نوێ</item>
+        <item quantity="other">%s پۆستی نوێ</item>
     </plurals>
     <string name="feeds_caught_up">هەمووت بینی</string>
     <string name="feeds_all_caught_up">هەموویان خوێنرایەوە</string>
@@ -194,12 +194,12 @@
     <string name="feeds_source_url_hint_feed">ناسنامەی ئەنتیتی یان فینگەرپرینتی فید</string>
     <string name="feeds_source_credibility_label">متمانە</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d کاتژمێر</item>
-        <item quantity="other">%1$d کاتژمێر</item>
+        <item quantity="one">%1$s کاتژمێر</item>
+        <item quantity="other">%1$s کاتژمێر</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d خولەک</item>
-        <item quantity="other">%1$d خولەک</item>
+        <item quantity="one">%1$s خولەک</item>
+        <item quantity="other">%1$s خولەک</item>
     </plurals>
     <string name="feeds_source_polling_interval">پشکنین هەر %1$s</string>
     <string name="feeds_access_level_react_full">کاردانەوە و بینین</string>
@@ -216,20 +216,20 @@
     <string name="feeds_link">بەستەر</string>
     <string name="feeds_share_link_title">بەستەری فید</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d لێدوان</item>
-        <item quantity="other">%1$d لێدوان</item>
+        <item quantity="one">%1$s لێدوان</item>
+        <item quantity="other">%1$s لێدوان</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d هاوپێچ</item>
-        <item quantity="other">%1$d هاوپێچ</item>
+        <item quantity="one">%1$s هاوپێچ</item>
+        <item quantity="other">%1$s هاوپێچ</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d لێدوانی زیاتر ببینە</item>
-        <item quantity="other">%1$d لێدوانی زیاتر ببینە</item>
+        <item quantity="one">%1$s لێدوانی زیاتر ببینە</item>
+        <item quantity="other">%1$s لێدوانی زیاتر ببینە</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">ئەمڕۆ %1$d ساڵ پێش ئێستا</item>
-        <item quantity="other">ئەمڕۆ %1$d ساڵ پێش ئێستا</item>
+        <item quantity="one">ئەمڕۆ %1$s ساڵ پێش ئێستا</item>
+        <item quantity="other">ئەمڕۆ %1$s ساڵ پێش ئێستا</item>
     </plurals>
     <string name="feeds_block">بلۆککردن</string>
     <string name="feeds_removed_from_feed">تۆ لەم فیدە لابردرایت</string>

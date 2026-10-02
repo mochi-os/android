@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Кірмаш</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Біяграфія</string>
     <string name="market_account_biography_placeholder">Раскажыце пакупнікам пра сябе…</string>
     <string name="market_account_load_failed">Не ўдалося загрузіць уліковы запіс</string>
@@ -72,8 +72,8 @@
     <string name="market_bids_tab_won">Выйграна</string>
     <string name="market_bids_title">Стаўкі</string>
     <string name="market_bids_your_bid">Ваша стаўка: %1$s</string>
-    <string name="market_carousel_main">Фота %1$d з %2$d</string>
-    <string name="market_carousel_thumbnail">Мініяцюра %1$d</string>
+    <string name="market_carousel_main">Фота %1$s з %2$s</string>
+    <string name="market_carousel_thumbnail">Мініяцюра %1$s</string>
     <string name="market_channel_name">Кірмаш</string>
     <string name="market_chargeback_reason_bank_cannot_process">Банк не змог апрацаваць</string>
     <string name="market_chargeback_reason_check_returned">Чэк вернуты</string>
@@ -135,7 +135,7 @@
     <string name="market_condition_refurbished">Адноўлены</string>
     <string name="market_condition_used">Ужываны</string>
     <string name="market_dispute_dialog_attach">Прымацаваць доказы</string>
-    <string name="market_dispute_dialog_attach_count">Прымацавана файлаў: %1$d</string>
+    <string name="market_dispute_dialog_attach_count">Прымацавана файлаў: %1$s</string>
     <string name="market_dispute_dialog_cancel">Адмена</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Пакупнік</string>
     <string name="market_dispute_dialog_evidence_role_seller">Прадавец</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_condition_refurbished">Адноўлены</string>
     <string name="market_editor_condition_used">Ужываны</string>
     <string name="market_editor_currency">Валюта</string>
-    <string name="market_editor_days">%1$d дзён</string>
+    <string name="market_editor_days">%1$s дзён</string>
     <string name="market_editor_delete">Выдаліць аб’яву</string>
     <string name="market_editor_delete_confirm_message">Гэта незваротна выдаліць аб’яву.</string>
     <string name="market_editor_delete_confirm_title">Выдаліць аб’яву?</string>
@@ -312,7 +312,7 @@
     <string name="market_listing_detail_relist_failed">Не ўдалося паўторна апублікаваць</string>
     <string name="market_listing_detail_relist_in_progress">Паўторная публікацыя</string>
     <string name="market_listing_detail_report">Паскардзіцца на аб\'яву</string>
-    <string name="market_listing_detail_sales_count">Продажаў: %1$d</string>
+    <string name="market_listing_detail_sales_count">Продажаў: %1$s</string>
     <string name="market_listing_detail_save">Захаваць</string>
     <string name="market_listing_detail_seller_banned_banner">Гэты прадавец заблакаваны. Новыя заказы прыняць немагчыма.</string>
     <string name="market_listing_detail_seller_heading">Прадавец</string>
@@ -364,7 +364,7 @@
     <string name="market_messages_send_failed">Не ўдалося адправіць паведамленне</string>
     <string name="market_messages_thread_listing_chip">Аб\'ява</string>
     <string name="market_messages_thread_title">Размова</string>
-    <string name="market_messages_unread_badge">Непрачытаных: %1$d</string>
+    <string name="market_messages_unread_badge">Непрачытаных: %1$s</string>
     <string name="market_onboarding_activate">Актываваць</string>
     <string name="market_onboarding_activating">Актывацыя…</string>
     <string name="market_onboarding_body">Актывуйце ўліковы запіс, каб пачаць купляць і прадаваць.</string>
@@ -384,8 +384,8 @@
     <string name="market_profile_no_reviews">Пакуль няма водгукаў.</string>
     <string name="market_profile_rating_breakdown">Размеркаванне рэйтынгаў</string>
     <string name="market_profile_reviews_section">Водгукі</string>
-    <string name="market_profile_sales_count">Продажаў: %1$d</string>
-    <string name="market_profile_stars_value">Зорак: %1$d</string>
+    <string name="market_profile_sales_count">Продажаў: %1$s</string>
+    <string name="market_profile_stars_value">Зорак: %1$s</string>
     <string name="market_profile_status_banned">Заблакаваны</string>
     <string name="market_profile_status_suspended">Прыпынена</string>
     <string name="market_profile_verified">Пацверджана</string>
@@ -403,7 +403,7 @@
     <string name="market_purchase_dispute_response">Адказ прадаўца</string>
     <string name="market_purchase_dispute_title">Запыт на вяртанне</string>
     <string name="market_purchase_download_failed">Не ўдалося спампаваць</string>
-    <string name="market_purchase_download_many">Спампуйце %1$d файлаў ніжэй.</string>
+    <string name="market_purchase_download_many">Спампуйце %1$s файлаў ніжэй.</string>
     <string name="market_purchase_download_one">Спампуйце ваш файл ніжэй.</string>
     <string name="market_purchase_download_section">Ваша пакупка гатова</string>
     <string name="market_purchase_item">Элемент</string>
@@ -441,7 +441,7 @@
     <string name="market_purchases_won_for">Выйграна за %1$s</string>
     <string name="market_rating_label">Рэйтынг</string>
     <string name="market_rating_no_reviews">Пакуль няма водгукаў</string>
-    <string name="market_rating_reviews">(водгукаў: %1$d)</string>
+    <string name="market_rating_reviews">(водгукаў: %1$s)</string>
     <string name="market_refund_amount_label">Сума</string>
     <string name="market_refund_body">Пакажыце прычыну вашага запыту на вяртанне сродкаў.</string>
     <string name="market_refund_details_label">Дэталі</string>
@@ -784,15 +784,15 @@
     <string name="market_listings_remove_message_auction">Гэта адменіць аўкцыён. Аб\'ява будзе схавана ад пакупнікоў; вы можаце пазней апублікаваць яе зноў як новы чарнавік.</string>
     <string name="market_listings_remove_title">Выдаліць гэту аб\'яву?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Гэта адменіць аўкцыён і паведаміць %1$d актыўнаму ўдзельніку. Аб\'ява будзе схавана ад пакупнікоў; пазней вы можаце размясціць яе зноў як новы чарнавік.</item>
-        <item quantity="few">Гэта адменіць аўкцыён і паведаміць %1$d актыўным удзельнікам. Аб\'ява будзе схавана ад пакупнікоў; пазней вы можаце размясціць яе зноў як новы чарнавік.</item>
-        <item quantity="many">Гэта адменіць аўкцыён і паведаміць %1$d актыўным удзельнікам. Аб\'ява будзе схавана ад пакупнікоў; пазней вы можаце размясціць яе зноў як новы чарнавік.</item>
-        <item quantity="other">Гэта адменіць аўкцыён і паведаміць %1$d актыўным удзельнікам. Аб\'ява будзе схавана ад пакупнікоў; пазней вы можаце размясціць яе зноў як новы чарнавік.</item>
+        <item quantity="one">Гэта адменіць аўкцыён і паведаміць %1$s актыўнаму ўдзельніку. Аб\'ява будзе схавана ад пакупнікоў; пазней вы можаце размясціць яе зноў як новы чарнавік.</item>
+        <item quantity="few">Гэта адменіць аўкцыён і паведаміць %1$s актыўным удзельнікам. Аб\'ява будзе схавана ад пакупнікоў; пазней вы можаце размясціць яе зноў як новы чарнавік.</item>
+        <item quantity="many">Гэта адменіць аўкцыён і паведаміць %1$s актыўным удзельнікам. Аб\'ява будзе схавана ад пакупнікоў; пазней вы можаце размясціць яе зноў як новы чарнавік.</item>
+        <item quantity="other">Гэта адменіць аўкцыён і паведаміць %1$s актыўным удзельнікам. Аб\'ява будзе схавана ад пакупнікоў; пазней вы можаце размясціць яе зноў як новы чарнавік.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Гэта адменіць %1$d актыўную падпіску у канцы бягучага плацежнага перыяду. Падпісчыкі будуць апавешчаны. Аб\'ява будзе схавана ад пакупнікоў.</item>
-        <item quantity="few">Гэта адменіць %1$d актыўныя падпіскі у канцы бягучага плацежнага перыяду. Падпісчыкі будуць апавешчаны. Аб\'ява будзе схавана ад пакупнікоў.</item>
-        <item quantity="many">Гэта адменіць %1$d актыўных падпісак у канцы бягучага плацежнага перыяду. Падпісчыкі будуць апавешчаны. Аб\'ява будзе схавана ад пакупнікоў.</item>
-        <item quantity="other">Гэта адменіць %1$d актыўных падпісак у канцы бягучага плацежнага перыяду. Падпісчыкі будуць апавешчаны. Аб\'ява будзе схавана ад пакупнікоў.</item>
+        <item quantity="one">Гэта адменіць %1$s актыўную падпіску у канцы бягучага плацежнага перыяду. Падпісчыкі будуць апавешчаны. Аб\'ява будзе схавана ад пакупнікоў.</item>
+        <item quantity="few">Гэта адменіць %1$s актыўныя падпіскі у канцы бягучага плацежнага перыяду. Падпісчыкі будуць апавешчаны. Аб\'ява будзе схавана ад пакупнікоў.</item>
+        <item quantity="many">Гэта адменіць %1$s актыўных падпісак у канцы бягучага плацежнага перыяду. Падпісчыкі будуць апавешчаны. Аб\'ява будзе схавана ад пакупнікоў.</item>
+        <item quantity="other">Гэта адменіць %1$s актыўных падпісак у канцы бягучага плацежнага перыяду. Падпісчыкі будуць апавешчаны. Аб\'ява будзе схавана ад пакупнікоў.</item>
     </plurals>
 </resources>

@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Poista</string>
     <string name="go_delete_message">Tämä peli poistetaan luettelostasi. Tätä ei voi kumota.</string>
     <string name="go_delete_title">Poistetaanko peli?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Hyväksy</string>
     <string name="go_draw_decline">Hylkää</string>
     <string name="go_draw_offered_received">%1$s tarjosi tasapeliä</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Luovutettu</string>
     <string name="go_new_game_title">Uusi Go-peli</string>
     <string name="go_new_game_no_friends">Sinun on lisättävä ystävä, ennen kuin voit aloittaa pelin.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Valkoisen pistemäärään lisättävät pisteet kompensoimaan Mustan ensimmäistä siirtoa</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go-lauta</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go-lauta, vuorosi asettaa musta kivi</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go-lauta, vuorosi asettaa valkoinen kivi</string>
+    <string name="go_board_a11y">%1$s×%1$s Go-lauta</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go-lauta, vuorosi asettaa musta kivi</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go-lauta, vuorosi asettaa valkoinen kivi</string>
     <string name="go_status_scoring">Laskenta — sopikaa pisteistä tai jatkakaa peliä</string>
     <string name="go_score_proposed">Ehdotetut pisteet: musta %1$s, valkoinen %2$s</string>
     <string name="go_score_opponent_accepted">Vastustajasi hyväksyy nämä pisteet: musta %1$s, valkoinen %2$s</string>

@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Օբյեկտներ չկան</string>
     <string name="crm_board_no_columns">Այս տեսքի համար սյունակներ կազմաձևված չեն</string>
     <string name="crm_board_no_options">Սյունակի դաշտի համար տարբերակներ կազմաձևված չեն</string>
-    <string name="crm_board_nested_count">+%1$d ներդրված</string>
+    <string name="crm_board_nested_count">+%1$s ներդրված</string>
     <string name="crm_move_to_column">Տեղափոխել սյունակ</string>
     <string name="crm_move_to_row">Տեղափոխել տող</string>
     <string name="crm_move_after">%1$s-ից հետո</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM-ի տվյալները պահպանվեցին</string>
     <string name="crm_create_upload_json">Վերբեռնեք .zip կամ .json ֆայլ</string>
     <string name="crm_create_blocked_no_options">Հնարավոր չէ ստեղծել՝ %1$s-ը պարտադիր է, բայց ընտրելու տարբերակներ չունի. Ավելացրեք տարբերակներ Դիզայնում։</string>
-    <string name="crm_design_sample">Նմուշ %1$d</string>
+    <string name="crm_design_sample">Նմուշ %1$s</string>
     <string name="crm_option_delete_title">Ջնջել տարբերակը</string>
     <string name="crm_option_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" տարբերակը։</string>
 </resources>

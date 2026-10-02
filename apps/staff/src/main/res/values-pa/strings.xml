@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">ਬਿਨਾਂ ਨਾਮ</string>
     <string name="staff_accounts_unsuspend">ਮੁਅੱਤਲੀ ਹਟਾਓ</string>
     <string name="staff_accounts_unsuspended_toast">ਖਾਤਾ ਬਹਾਲ ਕੀਤਾ ਗਿਆ</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="staff_appeals_decide">ਫੈਸਲਾ ਕਰੋ</string>
     <string name="staff_appeals_decision_denied">ਸੂਚੀ ਰੱਦ ਰੱਖੋ</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">ਆਰਡਰ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">ਕਾਰਨ (ਚੋਣਵਾਂ)</string>
-    <string name="staff_accounts_sales">%1$d ਵਿਕਰੀਆਂ</string>
+    <string name="staff_accounts_sales">%1$s ਵਿਕਰੀਆਂ</string>
     <string name="staff_appeals_reason_label">ਵਿਕਰੇਤਾ ਦੀ ਅਪੀਲ ਦਾ ਕਾਰਨ</string>
     <string name="staff_audit_action_staff_team_role_changed">ਸਟਾਫ਼ ਭੂਮਿਕਾ ਬਦਲੀ ਗਈ</string>
     <string name="staff_categories_delete_desc">“%1$s” ਨੂੰ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>

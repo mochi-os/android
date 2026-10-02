@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Asnjë objekt</string>
     <string name="crm_board_no_columns">Asnjë kolonë e konfiguruar për këtë pamje</string>
     <string name="crm_board_no_options">Nuk ka opsione të konfiguruara për fushën e kolonës</string>
-    <string name="crm_board_nested_count">+%1$d të ngulitura</string>
+    <string name="crm_board_nested_count">+%1$s të ngulitura</string>
     <string name="crm_move_to_column">Zhvendos te kolona</string>
     <string name="crm_move_to_row">Zhvendos te rreshti</string>
     <string name="crm_move_after">Pas %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Të dhënat e CRM u ruajtën</string>
     <string name="crm_create_upload_json">Ngarko një skedar .zip ose .json</string>
     <string name="crm_create_blocked_no_options">Nuk mund të krijohet: %1$s kërkohet por nuk ka opsione për të zgjedhur. Shto opsione te Dizajni.</string>
-    <string name="crm_design_sample">Shembull %1$d</string>
+    <string name="crm_design_sample">Shembull %1$s</string>
     <string name="crm_option_delete_title">Fshi opsionin</string>
     <string name="crm_option_delete_message">Jeni i sigurt që dëshironi të fshini opsionin \"%1$s\"?</string>
 </resources>

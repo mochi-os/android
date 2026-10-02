@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Mana objetokuna kanchu</string>
     <string name="crm_board_no_columns">Kay vistapaq mana columnakuna wakichisqachu</string>
     <string name="crm_board_no_options">Columna campopaq mana akllanakuna wakichisqachu</string>
-    <string name="crm_board_nested_count">+%1$d ukhupi</string>
+    <string name="crm_board_nested_count">+%1$s ukhupi</string>
     <string name="crm_move_to_column">Columnaman astay</string>
     <string name="crm_move_to_row">Filaman astay</string>
     <string name="crm_move_after">%1$s qhipaman</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM datokuna waqaychasqa</string>
     <string name="crm_create_upload_json">.zip utaq .json archivota wichachiy</string>
     <string name="crm_create_blocked_no_options">Manam kamariyta atinchu: %1$s necesitakun ichaqa manam akllanan kanchu. Diseño nisqapi akllanakunata yapay.</string>
-    <string name="crm_design_sample">Rikch\'ana %1$d</string>
+    <string name="crm_design_sample">Rikch\'ana %1$s</string>
     <string name="crm_option_delete_title">Akllana wischuy</string>
     <string name="crm_option_delete_message">¿Cheqaqchu \"%1$s\" akllanata wischuyta munanki?</string>
 </resources>

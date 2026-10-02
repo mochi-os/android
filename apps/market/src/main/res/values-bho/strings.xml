@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">बाजार</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">जीवनी</string>
     <string name="market_account_biography_placeholder">खरीददारन के अपना बारे में बताईं…</string>
     <string name="market_account_load_failed">खाता लोड ना भइल</string>
@@ -54,7 +54,7 @@
     <string name="market_bids_tab_outbid">अधिक बोली लागल</string>
     <string name="market_bids_tab_won">जीतल</string>
     <string name="market_bids_title">बोली</string>
-    <string name="market_carousel_main">फोटो %1$d / %2$d</string>
+    <string name="market_carousel_main">फोटो %1$s / %2$s</string>
     <string name="market_channel_name">बाजार</string>
     <string name="market_chargeback_reason_bank_cannot_process">बैंक प्रक्रिया ना कर सकल</string>
     <string name="market_chargeback_reason_check_returned">चेक वापस आइल</string>
@@ -133,7 +133,7 @@
     <string name="market_editor_condition_refurbished">नवीनीकृत</string>
     <string name="market_editor_condition_used">उपयोग कइल गइल</string>
     <string name="market_editor_currency">मुद्रा</string>
-    <string name="market_editor_days">%1$d दिन</string>
+    <string name="market_editor_days">%1$s दिन</string>
     <string name="market_editor_delete">विज्ञापन हटाईं</string>
     <string name="market_editor_description">विवरण</string>
     <string name="market_editor_interval_monthly">मासिक</string>
@@ -324,7 +324,7 @@
     <string name="market_purchases_title">खरीदारी</string>
     <string name="market_rating_label">रेटिंग</string>
     <string name="market_rating_no_reviews">अबहीं तक कौनो समीक्षा नइखे</string>
-    <string name="market_rating_reviews">(%1$d समीक्षा)</string>
+    <string name="market_rating_reviews">(%1$s समीक्षा)</string>
     <string name="market_refund_amount_label">राशि</string>
     <string name="market_refund_body">रउआ रिफंड अनुरोध खातिर कारण दीहीं।</string>
     <string name="market_refund_details_label">विवरण</string>
@@ -472,7 +472,7 @@
     <string name="market_type_physical">भौतिक</string>
     <string name="market_warnings_title">चेतावनी</string>
 
-    <string name="market_listing_detail_sales_count">%1$d बिक्री</string>
+    <string name="market_listing_detail_sales_count">%1$s बिक्री</string>
     <string name="market_listing_detail_seller_banned_banner">ई बिक्रेता पर रोक लगावल गइल बा। नया ऑर्डर नइखे दिहल जा सकत।</string>
     <string name="market_listing_detail_seller_suspended_banner">ई बिक्रेता निलंबित बा। खाता बहाल होखे ले नया ऑर्डर रुकल बा।</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">बिक्रेता के खाता पर रोक रहले खरीदारी बंद बा।</string>
@@ -490,7 +490,7 @@
     <string name="market_messages_inbox_empty_title">अबहीं ले कवनो बातचीत नइखे</string>
     <string name="market_messages_load_failed">बातचीत लोड ना हो सकल</string>
     <string name="market_messages_send_failed">संदेश ना भेजल जा सकल</string>
-    <string name="market_messages_unread_badge">%1$d अनपढ़ल</string>
+    <string name="market_messages_unread_badge">%1$s अनपढ़ल</string>
     <string name="market_price_high_bid">ऊँच बोली: %1$s</string>
     <string name="market_price_instant_buy">तुरंत खरीद: %1$s</string>
     <string name="market_price_starting_bid">शुरुआती बोली: %1$s</string>
@@ -498,12 +498,12 @@
     <string name="market_profile_member_since">%1$s से सदस्य</string>
     <string name="market_profile_joined">%1$s के जुड़ल</string>
     <string name="market_profile_rating_breakdown">रेटिंग के विवरण</string>
-    <string name="market_profile_sales_count">%1$d बिक्री</string>
-    <string name="market_profile_stars_value">%1$d सितारा</string>
+    <string name="market_profile_sales_count">%1$s बिक्री</string>
+    <string name="market_profile_stars_value">%1$s सितारा</string>
     <string name="market_purchase_dispute_chargeback">चार्जबैक %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">रउरा बैंक एह ऑर्डर पर चार्जबैक दर्ज कइले बा। Stripe बिक्रेता के साथे विवाद सम्हार रहल बा; फैसला होखे पर नतीजा इहाँ देखाई।</string>
     <string name="market_purchase_dispute_response">बिक्रेता के जवाब</string>
-    <string name="market_purchase_download_many">नीचे आपन %1$d फाइल डाउनलोड करीं।</string>
+    <string name="market_purchase_download_many">नीचे आपन %1$s फाइल डाउनलोड करीं।</string>
     <string name="market_purchase_download_one">नीचे आपन फाइल डाउनलोड करीं।</string>
     <string name="market_purchase_review_from">%1$s के समीक्षा</string>
     <string name="market_purchases_auction_label">नीलामी #%1$s</string>
@@ -586,11 +586,11 @@
     <string name="market_bids_current_bid">अभिन: %1$s</string>
     <string name="market_bids_ends_in">%1$s में खतम होई</string>
     <string name="market_bids_your_bid">रउआ बोली: %1$s</string>
-    <string name="market_carousel_thumbnail">थंबनेल %1$d</string>
+    <string name="market_carousel_thumbnail">थंबनेल %1$s</string>
     <string name="market_checkout_browser_unavailable">पेमेंट पन्ना खोलला खातिर कवनो ब्राउज़र उपलब्ध नइखे</string>
     <string name="market_checkout_pwyw_label">रउआ दाम (कम से कम %1$s)</string>
     <string name="market_checkout_pwyw_min_error">रकम कम से कम %1$s होखे के चाहीं</string>
-    <string name="market_dispute_dialog_attach_count">%1$d फाइल जोड़ल गइल</string>
+    <string name="market_dispute_dialog_attach_count">%1$s फाइल जोड़ल गइल</string>
     <string name="market_dispute_dialog_evidence_section_title">जमा कइल साक्ष्य</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s के जमा कइल</string>
     <string name="market_editor_appeal">मॉडरेशन के अपील करीं</string>
@@ -787,11 +787,11 @@
     <string name="market_listings_remove_message_auction">ई नीलामी रद्द कर दी। लिस्टिंग खरीददारन से छिप जाई; आप एकरा के बाद में नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकेनीं।</string>
     <string name="market_listings_remove_title">ए लिस्टिंग के हटाईं?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">एह से नीलामी रद्द हो जाई आ %1$d सक्रिय बोली लगावे वाला के सूचना मिली। लिस्टिंग खरीदार लोग से छिपा दिहल जाई; बाद में रउआ एकरा के नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकीलें।</item>
-        <item quantity="other">एह से नीलामी रद्द हो जाई आ %1$d सक्रिय बोली लगावे वाला लोग के सूचना मिली। लिस्टिंग खरीदार लोग से छिपा दिहल जाई; बाद में रउआ एकरा के नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकीलें।</item>
+        <item quantity="one">एह से नीलामी रद्द हो जाई आ %1$s सक्रिय बोली लगावे वाला के सूचना मिली। लिस्टिंग खरीदार लोग से छिपा दिहल जाई; बाद में रउआ एकरा के नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकीलें।</item>
+        <item quantity="other">एह से नीलामी रद्द हो जाई आ %1$s सक्रिय बोली लगावे वाला लोग के सूचना मिली। लिस्टिंग खरीदार लोग से छिपा दिहल जाई; बाद में रउआ एकरा के नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकीलें।</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">एह से मौजूदा बिलिंग अवधि के अंत में %1$d सक्रिय सब्सक्रिप्शन रद्द हो जाई। सब्सक्राइबर लोग के सूचना दिहल जाई। लिस्टिंग खरीदार लोग से छिपा दिहल जाई।</item>
-        <item quantity="other">एह से मौजूदा बिलिंग अवधि के अंत में %1$d सक्रिय सब्सक्रिप्शन रद्द हो जाई। सब्सक्राइबर लोग के सूचना दिहल जाई। लिस्टिंग खरीदार लोग से छिपा दिहल जाई।</item>
+        <item quantity="one">एह से मौजूदा बिलिंग अवधि के अंत में %1$s सक्रिय सब्सक्रिप्शन रद्द हो जाई। सब्सक्राइबर लोग के सूचना दिहल जाई। लिस्टिंग खरीदार लोग से छिपा दिहल जाई।</item>
+        <item quantity="other">एह से मौजूदा बिलिंग अवधि के अंत में %1$s सक्रिय सब्सक्रिप्शन रद्द हो जाई। सब्सक्राइबर लोग के सूचना दिहल जाई। लिस्टिंग खरीदार लोग से छिपा दिहल जाई।</item>
     </plurals>
 </resources>

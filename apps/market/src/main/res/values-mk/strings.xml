@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Маркет</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Биографија</string>
     <string name="market_account_biography_placeholder">Кажете им на купувачите за себе…</string>
     <string name="market_account_load_failed">Не може да се вчита сметката</string>
@@ -72,8 +72,8 @@
     <string name="market_bids_tab_won">Освоено</string>
     <string name="market_bids_title">Понуди</string>
     <string name="market_bids_your_bid">Вашата понуда: %1$s</string>
-    <string name="market_carousel_main">Фотографија %1$d од %2$d</string>
-    <string name="market_carousel_thumbnail">Сликичка %1$d</string>
+    <string name="market_carousel_main">Фотографија %1$s од %2$s</string>
+    <string name="market_carousel_thumbnail">Сликичка %1$s</string>
     <string name="market_channel_name">Маркет</string>
     <string name="market_chargeback_reason_bank_cannot_process">Банката не можеше да обработи</string>
     <string name="market_chargeback_reason_check_returned">Чекот е вратен</string>
@@ -135,7 +135,7 @@
     <string name="market_condition_refurbished">Реновирано</string>
     <string name="market_condition_used">Користено</string>
     <string name="market_dispute_dialog_attach">Прикачи доказ</string>
-    <string name="market_dispute_dialog_attach_count">%1$d датотека/и прикачени</string>
+    <string name="market_dispute_dialog_attach_count">%1$s датотека/и прикачени</string>
     <string name="market_dispute_dialog_cancel">Откажи</string>
     <string name="market_dispute_dialog_evidence_role_buyer">Купувач</string>
     <string name="market_dispute_dialog_evidence_role_seller">Продавач</string>
@@ -166,7 +166,7 @@
     <string name="market_editor_condition_refurbished">Реновирано</string>
     <string name="market_editor_condition_used">Користено</string>
     <string name="market_editor_currency">Валута</string>
-    <string name="market_editor_days">%1$d денови</string>
+    <string name="market_editor_days">%1$s денови</string>
     <string name="market_editor_delete">Избриши оглас</string>
     <string name="market_editor_delete_confirm_message">Ова трајно ќе го избрише огласот.</string>
     <string name="market_editor_delete_confirm_title">Да се избрише огласот?</string>
@@ -312,7 +312,7 @@
     <string name="market_listing_detail_relist_failed">Не може повторно да се објави</string>
     <string name="market_listing_detail_relist_in_progress">Повторно објавување</string>
     <string name="market_listing_detail_report">Пријави оглас</string>
-    <string name="market_listing_detail_sales_count">%1$d продажби</string>
+    <string name="market_listing_detail_sales_count">%1$s продажби</string>
     <string name="market_listing_detail_save">Зачувај</string>
     <string name="market_listing_detail_seller_banned_banner">Овој продавач е забранет. Нови нарачки не можат да се поднесат.</string>
     <string name="market_listing_detail_seller_heading">Продавач</string>
@@ -364,7 +364,7 @@
     <string name="market_messages_send_failed">Не може да се испрати пораката</string>
     <string name="market_messages_thread_listing_chip">Оглас</string>
     <string name="market_messages_thread_title">Разговор</string>
-    <string name="market_messages_unread_badge">%1$d непрочитани</string>
+    <string name="market_messages_unread_badge">%1$s непрочитани</string>
     <string name="market_onboarding_activate">Активирај</string>
     <string name="market_onboarding_activating">Се активира…</string>
     <string name="market_onboarding_body">Активирајте ја вашата сметка за да започнете да купувате и продавате.</string>
@@ -384,8 +384,8 @@
     <string name="market_profile_no_reviews">Сè уште нема критики.</string>
     <string name="market_profile_rating_breakdown">Распределба на оцени</string>
     <string name="market_profile_reviews_section">Прегледи</string>
-    <string name="market_profile_sales_count">%1$d продажби</string>
-    <string name="market_profile_stars_value">%1$d ѕвезди</string>
+    <string name="market_profile_sales_count">%1$s продажби</string>
+    <string name="market_profile_stars_value">%1$s ѕвезди</string>
     <string name="market_profile_status_banned">Блокиран</string>
     <string name="market_profile_status_suspended">Суспендирано</string>
     <string name="market_profile_verified">Потврдено</string>
@@ -403,7 +403,7 @@
     <string name="market_purchase_dispute_response">Одговор на продавачот</string>
     <string name="market_purchase_dispute_title">Барање за поврат</string>
     <string name="market_purchase_download_failed">Неуспешно преземање</string>
-    <string name="market_purchase_download_many">Преземете ги вашите %1$d датотеки подолу.</string>
+    <string name="market_purchase_download_many">Преземете ги вашите %1$s датотеки подолу.</string>
     <string name="market_purchase_download_one">Преземете ја вашата датотека подолу.</string>
     <string name="market_purchase_download_section">Вашето купување е подготвено</string>
     <string name="market_purchase_item">Ставка</string>
@@ -441,7 +441,7 @@
     <string name="market_purchases_won_for">Освоено за %1$s</string>
     <string name="market_rating_label">Оценка</string>
     <string name="market_rating_no_reviews">Сè уште нема прегледи</string>
-    <string name="market_rating_reviews">(%1$d критики)</string>
+    <string name="market_rating_reviews">(%1$s критики)</string>
     <string name="market_refund_amount_label">Износ</string>
     <string name="market_refund_body">Дајте причина за вашето барање за поврат.</string>
     <string name="market_refund_details_label">Детали</string>
@@ -784,11 +784,11 @@
     <string name="market_listings_remove_message_auction">Ова ќе ја откаже аукцијата. Огласот ќе биде скриен од купувачите; можете повторно да го наведете подоцна како нова скица.</string>
     <string name="market_listings_remove_title">Да го отстраниме овој оглас?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Ова ќе ја откаже аукцијата и ќе извести %1$d активен понудувач. Огласот ќе биде скриен од купувачите; подоцна можете повторно да го објавите како нов нацрт.</item>
-        <item quantity="other">Ова ќе ја откаже аукцијата и ќе извести %1$d активни понудувачи. Огласот ќе биде скриен од купувачите; подоцна можете повторно да го објавите како нов нацрт.</item>
+        <item quantity="one">Ова ќе ја откаже аукцијата и ќе извести %1$s активен понудувач. Огласот ќе биде скриен од купувачите; подоцна можете повторно да го објавите како нов нацрт.</item>
+        <item quantity="other">Ова ќе ја откаже аукцијата и ќе извести %1$s активни понудувачи. Огласот ќе биде скриен од купувачите; подоцна можете повторно да го објавите како нов нацрт.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Ова ќе откаже %1$d активна претплата на крајот од тековниот период на наплата. Претплатниците ќе бидат известени. Огласот ќе биде скриен од купувачите.</item>
-        <item quantity="other">Ова ќе откаже %1$d активни претплати на крајот од тековниот период на наплата. Претплатниците ќе бидат известени. Огласот ќе биде скриен од купувачите.</item>
+        <item quantity="one">Ова ќе откаже %1$s активна претплата на крајот од тековниот период на наплата. Претплатниците ќе бидат известени. Огласот ќе биде скриен од купувачите.</item>
+        <item quantity="other">Ова ќе откаже %1$s активни претплати на крајот од тековниот период на наплата. Претплатниците ќе бидат известени. Огласот ќе биде скриен од купувачите.</item>
     </plurals>
 </resources>

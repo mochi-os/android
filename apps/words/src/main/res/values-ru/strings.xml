@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">Пока нет партий.</string>
     <string name="words_new_game_choose_opponents">Выбрать соперников</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d игроков</string>
+    <string name="words_new_game_player_count">%1$s игроков</string>
     <string name="words_new_game_no_friends_subtitle">Добавьте друзей в приложении Люди, чтобы начать играть.</string>
     <string name="words_detail_title">Партия</string>
     <string name="words_detail_status_opponent_move">Ход %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s выиграл</string>
-    <string name="words_detail_player_fallback">Игрок %1$d</string>
-    <string name="words_detail_player_count">%1$d игроков</string>
-    <string name="words_detail_label_tiles_left">%1$d фишек осталось</string>
+    <string name="words_detail_player_fallback">Игрок %1$s</string>
+    <string name="words_detail_player_count">%1$s игроков</string>
+    <string name="words_detail_label_tiles_left">%1$s фишек осталось</string>
     <string name="words_detail_action_open_chat">Открыть чат</string>
     <string name="words_detail_action_more">Действия партии</string>
-    <string name="words_detail_exchange_count">Обменять (%1$d)</string>
+    <string name="words_detail_exchange_count">Обменять (%1$s)</string>
     <string name="words_detail_chat_you_played">Вы сыграли %1$s</string>
     <string name="words_detail_chat_player_played">%1$s сыграл %2$s</string>
 

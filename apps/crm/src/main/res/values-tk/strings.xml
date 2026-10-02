@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Obýekt ýok</string>
     <string name="crm_board_no_columns">Bu görnüş üçin sütünler düzülmedik</string>
     <string name="crm_board_no_options">Sütün meýdany üçin opsiýalar düzülmedik</string>
-    <string name="crm_board_nested_count">+%1$d içki</string>
+    <string name="crm_board_nested_count">+%1$s içki</string>
     <string name="crm_move_to_column">Sütüne geçir</string>
     <string name="crm_move_to_row">Setire geçir</string>
     <string name="crm_move_after">%1$s soňundan</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM maglumaty saklandy</string>
     <string name="crm_create_upload_json">.zip ýa-da .json faýly ýükläň</string>
     <string name="crm_create_blocked_no_options">Döredip bolmady: %1$s hökmany, ýöne saýlamak üçin warianty ýok. Dizaýnda wariant goşuň.</string>
-    <string name="crm_design_sample">Nusga %1$d</string>
+    <string name="crm_design_sample">Nusga %1$s</string>
     <string name="crm_option_delete_title">Wariant pozmak</string>
     <string name="crm_option_delete_message">\"%1$s\" wariantyny pozmak isleýändigiňize ynanýarsyňyzmy?</string>
 </resources>

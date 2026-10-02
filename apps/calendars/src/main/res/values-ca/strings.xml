@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Per sempre</string>
     <string name="calendars_reminder_time">A l\'hora</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minut abans</item>
-        <item quantity="other">%1$d minuts abans</item>
+        <item quantity="one">%1$s minut abans</item>
+        <item quantity="other">%1$s minuts abans</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d hora abans</item>
-        <item quantity="other">%1$d hores abans</item>
+        <item quantity="one">%1$s hora abans</item>
+        <item quantity="other">%1$s hores abans</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d dia abans</item>
-        <item quantity="other">%1$d dies abans</item>
+        <item quantity="one">%1$s dia abans</item>
+        <item quantity="other">%1$s dies abans</item>
     </plurals>
     <string name="calendars_reminder_add">Afegeix un recordatori</string>
     <string name="calendars_reminder_remove">Elimina el recordatori</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">El calendari és massa gran</string>
     <string name="calendars_poll_invalid">L\'adreça no ha retornat cap calendari</string>
     <string name="calendars_poll_unreachable">No s\'ha pogut accedir a l\'adreça</string>
-    <string name="calendars_poll_status">L\'adreça ha respost %1$d</string>
+    <string name="calendars_poll_status">L\'adreça ha respost %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minuts</item>
+        <item quantity="one">%1$s minut</item>
+        <item quantity="other">%1$s minuts</item>
     </plurals>
     <string name="calendars_preferences_zones">Mostra els esdeveniments en la seva pròpia zona horària</string>
     <string name="calendars_event_backwards">Acaba abans de començar</string>

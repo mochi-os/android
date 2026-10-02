@@ -155,14 +155,14 @@
     <string name="market_filter_type_digital">Digital</string>
     <string name="market_filter_type_physical">Físico</string>
     <string name="market_listing_detail_already_reported">Denunciado</string>
-    <string name="market_listing_detail_sales_count">%1$d ventas</string>
+    <string name="market_listing_detail_sales_count">%1$s ventas</string>
     <string name="market_listing_detail_verified">Verificado</string>
     <string name="market_listings_filter_expired">Vencida</string>
     <string name="market_listings_filter_rejected">Rechazada</string>
     <string name="market_listings_filter_sold">Vendida</string>
     <string name="market_messages_inbox_title">Mensajes</string>
     <string name="market_profile_reviews_section">Reseñas</string>
-    <string name="market_profile_sales_count">%1$d ventas</string>
+    <string name="market_profile_sales_count">%1$s ventas</string>
     <string name="market_profile_status_banned">Baneada</string>
     <string name="market_profile_status_suspended">Suspendido</string>
     <string name="market_profile_verified">Verificado</string>
@@ -216,7 +216,7 @@
     <string name="market_purchase_delivery">Entrega</string>
     <string name="market_shipping_days">Entrega</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografía</string>
     <string name="market_account_biography_placeholder">Cuéntales a los compradores sobre ti…</string>
     <string name="market_account_load_failed">No se pudo cargar la cuenta</string>
@@ -252,8 +252,8 @@
     <string name="market_bids_tab_won">Ganadas</string>
     <string name="market_bids_title">Ofertas</string>
     <string name="market_bids_your_bid">Su oferta: %1$s</string>
-    <string name="market_carousel_main">Foto %1$d de %2$d</string>
-    <string name="market_carousel_thumbnail">Miniatura %1$d</string>
+    <string name="market_carousel_main">Foto %1$s de %2$s</string>
+    <string name="market_carousel_thumbnail">Miniatura %1$s</string>
     <string name="market_chargeback_reason_bank_cannot_process">El banco no pudo procesar</string>
     <string name="market_chargeback_reason_check_returned">Cheque devuelto</string>
     <string name="market_chargeback_reason_credit_not_processed">Crédito no procesado</string>
@@ -295,7 +295,7 @@
     <string name="market_condition_refurbished">Reacondicionado</string>
     <string name="market_condition_used">Usado</string>
     <string name="market_dispute_dialog_attach">Adjuntar evidencia</string>
-    <string name="market_dispute_dialog_attach_count">%1$d archivo(s) adjuntado(s)</string>
+    <string name="market_dispute_dialog_attach_count">%1$s archivo(s) adjuntado(s)</string>
     <string name="market_dispute_dialog_evidence_role_staff">Personal de Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Pruebas presentadas</string>
     <string name="market_dispute_dialog_evidence_submitter_line">presentadas por %1$s</string>
@@ -318,7 +318,7 @@
     <string name="market_editor_condition_refurbished">Reacondicionado</string>
     <string name="market_editor_condition_used">Usado</string>
     <string name="market_editor_currency">Moneda</string>
-    <string name="market_editor_days">%1$d días</string>
+    <string name="market_editor_days">%1$s días</string>
     <string name="market_editor_delete">Eliminar publicación</string>
     <string name="market_editor_delete_confirm_message">Esto eliminará la publicación de forma permanente.</string>
     <string name="market_editor_delete_confirm_title">¿Eliminar publicación?</string>
@@ -453,7 +453,7 @@
     <string name="market_messages_load_failed">No se pudo cargar la conversación</string>
     <string name="market_messages_send_failed">No se pudo enviar el mensaje</string>
     <string name="market_messages_thread_title">Conversación</string>
-    <string name="market_messages_unread_badge">%1$d sin leer</string>
+    <string name="market_messages_unread_badge">%1$s sin leer</string>
     <string name="market_price_high_bid">Oferta más alta: %1$s</string>
     <string name="market_price_instant_buy">compra inmediata: %1$s</string>
     <string name="market_price_per_month">%1$s / mes</string>
@@ -465,7 +465,7 @@
     <string name="market_profile_joined">Se unió el %1$s</string>
     <string name="market_profile_no_reviews">Aún no hay reseñas.</string>
     <string name="market_profile_rating_breakdown">Detalle de la calificación</string>
-    <string name="market_profile_stars_value">%1$d estrellas</string>
+    <string name="market_profile_stars_value">%1$s estrellas</string>
     <string name="market_purchase_confirm_done">Recepción confirmada</string>
     <string name="market_purchase_confirm_failed">No se pudo confirmar</string>
     <string name="market_purchase_dispute_chargeback">Contracargo %1$s</string>
@@ -474,7 +474,7 @@
     <string name="market_purchase_dispute_resolution">Resolución del personal</string>
     <string name="market_purchase_dispute_title">Solicitud de reembolso</string>
     <string name="market_purchase_download_failed">No se pudo descargar</string>
-    <string name="market_purchase_download_many">Descargá tus %1$d archivos a continuación.</string>
+    <string name="market_purchase_download_many">Descargá tus %1$s archivos a continuación.</string>
     <string name="market_purchase_download_one">Descargá tu archivo a continuación.</string>
     <string name="market_purchase_item">Artículo</string>
     <string name="market_purchase_message_seller">Mensaje al vendedor</string>
@@ -498,7 +498,7 @@
     <string name="market_purchases_title">Compras</string>
     <string name="market_purchases_won_for">Ganada por %1$s</string>
     <string name="market_rating_no_reviews">Aún no hay reseñas</string>
-    <string name="market_rating_reviews">(%1$d reseñas)</string>
+    <string name="market_rating_reviews">(%1$s reseñas)</string>
     <string name="market_refund_amount_label">Monto</string>
     <string name="market_refund_body">Indicá un motivo para tu solicitud de reembolso.</string>
     <string name="market_refund_dialog_amount_help">Dejá en blanco para reembolsar el pedido completo.</string>

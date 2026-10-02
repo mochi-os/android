@@ -41,17 +41,17 @@
     <string name="words_sidebar_empty">لا توجد مباريات بعد.</string>
     <string name="words_new_game_choose_opponents">اختر الخصوم</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$d لاعبون</string>
+    <string name="words_new_game_player_count">%1$s لاعبون</string>
     <string name="words_new_game_no_friends_subtitle">أضف أصدقاء في تطبيق الأشخاص لبدء اللعب.</string>
     <string name="words_detail_title">مباراة</string>
     <string name="words_detail_status_opponent_move">دور %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s يفوز</string>
-    <string name="words_detail_player_fallback">لاعب %1$d</string>
-    <string name="words_detail_player_count">%1$d لاعبون</string>
-    <string name="words_detail_label_tiles_left">%1$d قطعة متبقية</string>
+    <string name="words_detail_player_fallback">لاعب %1$s</string>
+    <string name="words_detail_player_count">%1$s لاعبون</string>
+    <string name="words_detail_label_tiles_left">%1$s قطعة متبقية</string>
     <string name="words_detail_action_open_chat">فتح الدردشة</string>
     <string name="words_detail_action_more">إجراءات المباراة</string>
-    <string name="words_detail_exchange_count">تبديل (%1$d)</string>
+    <string name="words_detail_exchange_count">تبديل (%1$s)</string>
     <string name="words_detail_chat_you_played">لعبت %1$s</string>
     <string name="words_detail_chat_player_played">%1$s لعب %2$s</string>
 

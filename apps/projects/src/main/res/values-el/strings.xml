@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">έκανε μια αλλαγή</string>
     <string name="projects_attachment_empty">Δεν υπάρχουν συνημμένα</string>
     <string name="projects_attachment_default_name">συνημμένο</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Νέο αίτημα συγχώνευσης</string>
     <string name="projects_request_status_closed">Κλειστό</string>
     <string name="projects_request_back_to_list">Πίσω στη λίστα</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Έλεγχος κατάστασης συγχώνευσης…</string>
     <string name="projects_request_can_merge">Μπορεί να συγχωνευτεί</string>
     <string name="projects_request_cannot_merge">Δεν είναι δυνατή η συγχώνευση</string>
-    <string name="projects_request_ahead_behind">%1$d μπροστά, %2$d πίσω</string>
+    <string name="projects_request_ahead_behind">%1$s μπροστά, %2$s πίσω</string>
     <string name="projects_request_draft_notice">Αυτό είναι πρόχειρο. Σημειώστε ως έτοιμο πριν τη συγχώνευση.</string>
     <string name="projects_request_view_diff">Προβολή διαφορών</string>
     <string name="projects_request_mark_ready">Σημείωση ως έτοιμο</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Δεν έχουν ρυθμιστεί στήλες για αυτή την προβολή</string>
     <string name="projects_board_no_options">Δεν έχουν ρυθμιστεί επιλογές για το πεδίο στήλης</string>
     <string name="projects_board_column_options">Επιλογές στήλης</string>
-    <string name="projects_board_nested_count">+%1$d ένθετα</string>
+    <string name="projects_board_nested_count">+%1$s ένθετα</string>
     <string name="projects_move_to_column">Μετακίνηση σε στήλη</string>
     <string name="projects_move_to_row">Μετακίνηση σε γραμμή</string>
     <string name="projects_move_after">Μετά από %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Ταξινόμηση και φίλτρο</string>
     <string name="projects_create_prefix_hint">Χρησιμοποιείται για ευανάγνωστα αναγνωριστικά όπως %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d αρχείο σε διένεξη</item>
-        <item quantity="other">%1$d αρχεία σε διένεξη</item>
+        <item quantity="one">%1$s αρχείο σε διένεξη</item>
+        <item quantity="other">%1$s αρχεία σε διένεξη</item>
     </plurals>
     <string name="projects_design_export_saved">Η σχεδίαση αποθηκεύτηκε</string>
     <string name="projects_design_import_failed">Δεν ήταν δυνατή η ανάγνωση του αρχείου</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Τα δεδομένα του έργου αποθηκεύτηκαν</string>
     <string name="projects_exporting">Προετοιμασία εξαγωγής…</string>
     <string name="projects_board_add_column">Προσθήκη στήλης</string>
-    <string name="projects_design_sample">Δείγμα %1$d</string>
+    <string name="projects_design_sample">Δείγμα %1$s</string>
     <string name="projects_option_delete_title">Διαγραφή επιλογής</string>
     <string name="projects_option_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε την επιλογή \"%1$s\";</string>
     <string name="projects_create_object_no_types">Δεν μπορούν να δημιουργηθούν ακόμη τύποι στοιχείων. Δημιουργήστε πρώτα τα απαιτούμενα γονικά στοιχεία.</string>

@@ -202,10 +202,10 @@
     <string name="forums_saved_empty_subtitle">Коснитесь закладки на любой публикации, чтобы сохранить её здесь на потом.</string>
     <string name="forums_saved_error_clear">Не удалось очистить сохранённые публикации</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d новая публикация</item>
-        <item quantity="few">%d новые публикации</item>
-        <item quantity="many">%d новых публикаций</item>
-        <item quantity="other">%d новой публикации</item>
+        <item quantity="one">%s новая публикация</item>
+        <item quantity="few">%s новые публикации</item>
+        <item quantity="many">%s новых публикаций</item>
+        <item quantity="other">%s новой публикации</item>
     </plurals>
     <string name="forums_rss_feed">RSS-лента</string>
     <string name="forums_rss_mode_posts">Публикации</string>
@@ -298,8 +298,8 @@
     <string name="forums_settings_unsubscribe_section">Отписаться от форума</string>
     <string name="forums_share_link_title">Ссылка на форум</string>
     <string name="forums_find_found_by_url">Найдено по URL</string>
-    <string name="forums_moderation_pending_posts">Ожидающие публикации (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Ожидающие комментарии (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Ожидающие публикации (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Ожидающие комментарии (%1$s)</string>
     <string name="forums_moderation_on_image">К изображению: %1$s</string>
     <string name="forums_sort_ai">ИИ</string>
     <string name="forums_reject_post_access">У вас нет разрешения публиковать на этом форуме</string>

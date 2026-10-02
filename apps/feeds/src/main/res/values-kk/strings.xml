@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">Бұл \"%1$s\" дереккөзінен мазмұн импорттауды тоқтатады.</string>
     <string name="feeds_remove_also_delete_posts">Осы дереккөзден импортталған жазбаларды да жою</string>
     <string name="feeds_suggested_credibility_title">Ұсынылған сенімділік</string>
-    <string name="feeds_suggested_credibility_body">Mochi %1$d сенімділігін ұсынады. Қабылдайсыз ба?</string>
+    <string name="feeds_suggested_credibility_body">Mochi %1$s сенімділігін ұсынады. Қабылдайсыз ба?</string>
     <string name="feeds_suggested_credibility_keep">Ағымдағыны сақтау</string>
     <string name="feeds_ai_processing_mode">AI өңдеу режимі</string>
     <string name="feeds_ai_account">AI тіркелгісі</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Кез келген жазбаны осында кейінге сақтау үшін оның бетбелгісін түртіңіз.</string>
     <string name="feeds_saved_error_clear">Сақталған жазбаларды тазалау сәтсіз аяқталды</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d жаңа жазба</item>
-        <item quantity="other">%d жаңа жазба</item>
+        <item quantity="one">%s жаңа жазба</item>
+        <item quantity="other">%s жаңа жазба</item>
     </plurals>
     <string name="feeds_caught_up">Барлығын көрдіңіз</string>
     <string name="feeds_all_caught_up">Барлығы оқылды</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Таспа нысаны идентификаторы немесе қысқа идентификаторы</string>
     <string name="feeds_source_credibility_label">Сенімділік</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d сағат</item>
-        <item quantity="other">%1$d сағат</item>
+        <item quantity="one">%1$s сағат</item>
+        <item quantity="other">%1$s сағат</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d минут</item>
-        <item quantity="other">%1$d минут</item>
+        <item quantity="one">%1$s минут</item>
+        <item quantity="other">%1$s минут</item>
     </plurals>
     <string name="feeds_source_polling_interval">Әр %1$s сайын тексеріледі</string>
     <string name="feeds_access_level_react_full">Реакция беру және қарау</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Сілтеме</string>
     <string name="feeds_share_link_title">Арна сілтемесі</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d пікір</item>
-        <item quantity="other">%1$d пікір</item>
+        <item quantity="one">%1$s пікір</item>
+        <item quantity="other">%1$s пікір</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d тіркеме</item>
-        <item quantity="other">%1$d тіркеме</item>
+        <item quantity="one">%1$s тіркеме</item>
+        <item quantity="other">%1$s тіркеме</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d қосымша пікірді көру</item>
-        <item quantity="other">%1$d қосымша пікірді көру</item>
+        <item quantity="one">%1$s қосымша пікірді көру</item>
+        <item quantity="other">%1$s қосымша пікірді көру</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">бүгін %1$d жыл бұрын</item>
-        <item quantity="other">бүгін %1$d жыл бұрын</item>
+        <item quantity="one">бүгін %1$s жыл бұрын</item>
+        <item quantity="other">бүгін %1$s жыл бұрын</item>
     </plurals>
     <string name="feeds_block">Бұғаттау</string>
     <string name="feeds_removed_from_feed">Сіз бұл таспадан шығарылдыңыз</string>

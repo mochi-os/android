@@ -180,8 +180,8 @@
     <string name="people_books_create">Kitaaba teessoo uumi</string>
     <string name="people_books_delete">Kitaaba teessoo haqi</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s fi quunnamtii %2$d isa keessa jiru haquu?</item>
-        <item quantity="other">%1$s fi quunnamtiiwwan %2$d isa keessa jiran haquu?</item>
+        <item quantity="one">%1$s fi quunnamtii %2$s isa keessa jiru haquu?</item>
+        <item quantity="other">%1$s fi quunnamtiiwwan %2$s isa keessa jiran haquu?</item>
     </plurals>
     <string name="people_welcome_body">Mochi guutuu keessatti hiriyoota barbaadi walqunnami. Afeerraa erguuf Quunnamtii dabali tuqi.</string>
     <string name="people_person_state_contact">Quunnamtiiwwan keessa</string>

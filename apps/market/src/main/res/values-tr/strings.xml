@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">Gönderiliyor…</string>
     <string name="market_checkout_subscribing">Abone olunuyor…</string>
     <string name="market_filter_remove">Filtreyi kaldır</string>
-    <string name="market_listing_detail_sales_count">%1$d satış</string>
-    <string name="market_profile_sales_count">%1$d satış</string>
+    <string name="market_listing_detail_sales_count">%1$s satış</string>
+    <string name="market_profile_sales_count">%1$s satış</string>
     <string name="market_purchase_dispute_response">Satıcının yanıtı</string>
     <string name="market_purchases_order_label">Sipariş #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Alıcılara kendinizden bahsedin…</string>
     <string name="market_account_load_failed">Hesap yüklenemedi</string>
     <string name="market_account_save_failed">Değişiklikler kaydedilemedi</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">Mevcut: %1$s</string>
     <string name="market_bids_ends_in">Bitişe %1$s</string>
     <string name="market_bids_your_bid">Teklifiniz: %1$s</string>
-    <string name="market_carousel_main">Fotoğraf %1$d / %2$d</string>
-    <string name="market_carousel_thumbnail">Küçük resim %1$d</string>
+    <string name="market_carousel_main">Fotoğraf %1$s / %2$s</string>
+    <string name="market_carousel_thumbnail">Küçük resim %1$s</string>
     <string name="market_checkout_browser_unavailable">Ödeme sayfasını açacak tarayıcı yok</string>
     <string name="market_checkout_pay_button">Stripe ile öde</string>
     <string name="market_checkout_processing">İşleniyor…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Kanıt ekle</string>
-    <string name="market_dispute_dialog_attach_count">%1$d dosya eklendi</string>
+    <string name="market_dispute_dialog_attach_count">%1$s dosya eklendi</string>
     <string name="market_dispute_dialog_evidence_role_staff">Mochi ekibi</string>
     <string name="market_dispute_dialog_evidence_section_title">Gönderilen kanıtlar</string>
     <string name="market_dispute_dialog_evidence_submitter_line">%1$s tarafından gönderildi</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">Referans URL\'si</string>
     <string name="market_editor_assets_empty">Henüz varlık yok</string>
     <string name="market_editor_category_none">Bir kategori seçin</string>
-    <string name="market_editor_days">%1$d gün</string>
+    <string name="market_editor_days">%1$s gün</string>
     <string name="market_editor_delete">İlanı sil</string>
     <string name="market_editor_delete_confirm_message">Bu, ilanı kalıcı olarak silecektir.</string>
     <string name="market_editor_delete_confirm_title">İlan silinsin mi?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">Yazışma yüklenemedi</string>
     <string name="market_messages_send_failed">Mesaj gönderilemedi</string>
     <string name="market_messages_thread_title">Yazışma</string>
-    <string name="market_messages_unread_badge">%1$d okunmamış</string>
+    <string name="market_messages_unread_badge">%1$s okunmamış</string>
     <string name="market_price_from">%1$s\'den itibaren</string>
     <string name="market_price_high_bid">En yüksek teklif: %1$s</string>
     <string name="market_price_instant_buy">hemen al: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">%1$s tarihinde katıldı</string>
     <string name="market_profile_no_reviews">Henüz değerlendirme yok.</string>
     <string name="market_profile_rating_breakdown">Puan dağılımı</string>
-    <string name="market_profile_stars_value">%1$d yıldız</string>
+    <string name="market_profile_stars_value">%1$s yıldız</string>
     <string name="market_purchase_dispute_chargeback">Ters ibraz %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bankanız bu sipariş için bir ters ibraz başlattı. Stripe, satıcıyla anlaşmazlığı yönetiyor; sonuç karara bağlandığında burada görünecek.</string>
-    <string name="market_purchase_download_many">%1$d dosyanızı aşağıdan indirin.</string>
+    <string name="market_purchase_download_many">%1$s dosyanızı aşağıdan indirin.</string>
     <string name="market_purchase_download_one">Dosyanızı aşağıdan indirin.</string>
     <string name="market_purchase_review_from">%1$s tarafından değerlendirme</string>
     <string name="market_purchases_auction_label">Açık artırma #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s iade edildi</string>
     <string name="market_purchases_won_for">%1$s ile kazanıldı</string>
-    <string name="market_rating_reviews">(%1$d değerlendirme)</string>
+    <string name="market_rating_reviews">(%1$s değerlendirme)</string>
     <string name="market_refund_amount_label">Tutar</string>
     <string name="market_refund_dialog_amount_help">Siparişin tamamını iade etmek için boş bırakın.</string>
     <string name="market_refund_dialog_amount_label">Tutar</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Bu işlem açık artırmayı iptal edecek. İlan alıcılardan gizlenecek; daha sonra yeni bir taslak olarak yeniden listeleyebilirsin.</string>
     <string name="market_listings_remove_title">Bu ilan kaldırılsın mı?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Bu, açık artırmayı iptal eder ve %1$d etkin teklif vereni bilgilendirir. İlan alıcılardan gizlenir; daha sonra yeni bir taslak olarak yeniden yayınlayabilirsiniz.</item>
-        <item quantity="other">Bu, açık artırmayı iptal eder ve %1$d etkin teklif vereni bilgilendirir. İlan alıcılardan gizlenir; daha sonra yeni bir taslak olarak yeniden yayınlayabilirsiniz.</item>
+        <item quantity="one">Bu, açık artırmayı iptal eder ve %1$s etkin teklif vereni bilgilendirir. İlan alıcılardan gizlenir; daha sonra yeni bir taslak olarak yeniden yayınlayabilirsiniz.</item>
+        <item quantity="other">Bu, açık artırmayı iptal eder ve %1$s etkin teklif vereni bilgilendirir. İlan alıcılardan gizlenir; daha sonra yeni bir taslak olarak yeniden yayınlayabilirsiniz.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Bu, geçerli fatura döneminin sonunda %1$d etkin aboneliği iptal eder. Aboneler bilgilendirilir. İlan alıcılardan gizlenir.</item>
-        <item quantity="other">Bu, geçerli fatura döneminin sonunda %1$d etkin aboneliği iptal eder. Aboneler bilgilendirilir. İlan alıcılardan gizlenir.</item>
+        <item quantity="one">Bu, geçerli fatura döneminin sonunda %1$s etkin aboneliği iptal eder. Aboneler bilgilendirilir. İlan alıcılardan gizlenir.</item>
+        <item quantity="other">Bu, geçerli fatura döneminin sonunda %1$s etkin aboneliği iptal eder. Aboneler bilgilendirilir. İlan alıcılardan gizlenir.</item>
     </plurals>
 </resources>

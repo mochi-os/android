@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">මකන්න</string>
     <string name="go_delete_message">මෙම ක්‍රීඩාව ඔබේ ලැයිස්තුවෙන් ඉවත් කරනු ලැබේ. මෙය ආපසු හැරවිය නොහැක.</string>
     <string name="go_delete_title">ක්‍රීඩාව මකන්නද?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">පිළිගන්න</string>
     <string name="go_draw_decline">ප්‍රතික්ෂේප කරන්න</string>
     <string name="go_draw_offered_received">%1$s ජය පරාජය ඉදිරිපත් කළා</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">පරාජය භාර ගත්තා</string>
     <string name="go_new_game_title">නව Go ක්‍රීඩාව</string>
     <string name="go_new_game_no_friends">ක්‍රීඩාවක් ආරම්භ කිරීමට පෙර ඔබට මිතුරෙකු එක් කළ යුතුය.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">කළු පළමුව යාම වන්දි කිරීමට සුදුගේ ලකුණුවලට එකතු කරන ලකුණු</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go පුවරුව</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d ගෝ පුවරුව, කළු ගලක් තැබීමට ඔබේ වාරයයි</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d ගෝ පුවරුව, සුදු ගලක් තැබීමට ඔබේ වාරයයි</string>
+    <string name="go_board_a11y">%1$s×%1$s Go පුවරුව</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s ගෝ පුවරුව, කළු ගලක් තැබීමට ඔබේ වාරයයි</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s ගෝ පුවරුව, සුදු ගලක් තැබීමට ඔබේ වාරයයි</string>
     <string name="go_status_scoring">ගණන් කිරීම — ලකුණු ගැන එකඟ වන්න හෝ දිගටම ක්‍රීඩා කරන්න</string>
     <string name="go_score_proposed">යෝජිත ලකුණු: කළු %1$s, සුදු %2$s</string>
     <string name="go_score_opponent_accepted">ඔබේ ප්‍රතිවාදියා මෙම ලකුණු පිළිගනී: කළු %1$s, සුදු %2$s</string>

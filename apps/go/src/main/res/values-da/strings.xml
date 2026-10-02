@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Slet</string>
     <string name="go_delete_message">Dette spil fjernes fra din liste. Dette kan ikke fortrydes.</string>
     <string name="go_delete_title">Slet spillet?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Accepter</string>
     <string name="go_draw_decline">Afvis</string>
     <string name="go_draw_offered_received">%1$s tilbød remis</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Opgivet</string>
     <string name="go_new_game_title">Nyt Go-parti</string>
     <string name="go_new_game_no_friends">Du skal tilføje en ven, før du kan starte et parti.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Point tilføjet Hvids score for at kompensere for, at Sort starter</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go-bræt</string>
-    <string name="go_board_a11y_turn_black">Go-bræt %1$d×%1$d, din tur til at placere en sort sten</string>
-    <string name="go_board_a11y_turn_white">Go-bræt %1$d×%1$d, din tur til at placere en hvid sten</string>
+    <string name="go_board_a11y">%1$s×%1$s Go-bræt</string>
+    <string name="go_board_a11y_turn_black">Go-bræt %1$s×%1$s, din tur til at placere en sort sten</string>
+    <string name="go_board_a11y_turn_white">Go-bræt %1$s×%1$s, din tur til at placere en hvid sten</string>
     <string name="go_status_scoring">Optælling — bliv enige om stillingen eller spil videre</string>
     <string name="go_score_proposed">Foreslået score: sort %1$s, hvid %2$s</string>
     <string name="go_score_opponent_accepted">Din modstander accepterer denne score: sort %1$s, hvid %2$s</string>

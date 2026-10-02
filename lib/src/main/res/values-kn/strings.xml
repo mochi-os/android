@@ -122,7 +122,7 @@
     <string name="common_not_saved">ಉಳಿಸಲಾಗಿಲ್ಲ</string>
     <string name="auth_server_url">ಸರ್ವರ್ URL</string>
     <string name="auth_link_rules">ನಿಯಮಗಳು</string>
-    <string name="lightbox_position">%1$d / %2$d</string>
+    <string name="lightbox_position">%1$s / %2$s</string>
     <string name="about_label">ಬಗ್ಗೆ</string>
     <string name="game_chat_move_played">%1$s %2$s ಆಡಿದರು</string>
 
@@ -130,7 +130,7 @@
     <string name="error_network">ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="error_authentication_required">ದೃಢೀಕರಣ ಅಗತ್ಯ</string>
     <string name="error_not_found">ಕಂಡುಬಂದಿಲ್ಲ</string>
-    <string name="error_server">ಸರ್ವರ್ ದೋಷ (%1$d). ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="error_server">ಸರ್ವರ್ ದೋಷ (%1$s). ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="error_unexpected">ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ</string>
     <string name="error_enter_server_url">ದಯವಿಟ್ಟು ಸರ್ವರ್ URL ಅನ್ನು ನಮೂದಿಸಿ</string>
     <string name="error_enter_email">ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಮೇಲ್ ಅನ್ನು ನಮೂದಿಸಿ</string>
@@ -180,19 +180,19 @@
     <string name="access_level_react">ಪ್ರತಿಕ್ರಿಯಿಸಿ</string>
     <string name="notifications_clear">ಅಧಿಸೂಚನೆಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
     <string name="entity_avatar_alt">%1$s ಗಾಗಿ ಅವತಾರ್</string>
-    <string name="media_grid_more_count">+%1$d</string>
+    <string name="media_grid_more_count">+%1$s</string>
     <string name="format_time_just_now">ಈಗಷ್ಟೇ</string>
-    <string name="format_time_minutes_ago">%1$dನಿ ಹಿಂದೆ</string>
-    <string name="format_time_hours_ago">%1$dಗಂ ಹಿಂದೆ</string>
-    <string name="format_time_days_ago">%1$dದಿ ಹಿಂದೆ</string>
-    <string name="format_time_weeks_ago">%1$dವಾ ಹಿಂದೆ</string>
-    <string name="format_time_months_ago">%1$dತಿಂ ಹಿಂದೆ</string>
-    <string name="format_time_years_ago">%1$dವ ಹಿಂದೆ</string>
-    <string name="format_time_minutes_short">%1$dನಿ</string>
-    <string name="format_time_hours_short">%1$dಗಂ</string>
-    <string name="format_time_days_short">%1$dದಿ</string>
-    <string name="format_time_weeks_short">%1$dವಾ</string>
-    <string name="format_time_months_short">%1$dತಿಂ</string>
+    <string name="format_time_minutes_ago">%1$sನಿ ಹಿಂದೆ</string>
+    <string name="format_time_hours_ago">%1$sಗಂ ಹಿಂದೆ</string>
+    <string name="format_time_days_ago">%1$sದಿ ಹಿಂದೆ</string>
+    <string name="format_time_weeks_ago">%1$sವಾ ಹಿಂದೆ</string>
+    <string name="format_time_months_ago">%1$sತಿಂ ಹಿಂದೆ</string>
+    <string name="format_time_years_ago">%1$sವ ಹಿಂದೆ</string>
+    <string name="format_time_minutes_short">%1$sನಿ</string>
+    <string name="format_time_hours_short">%1$sಗಂ</string>
+    <string name="format_time_days_short">%1$sದಿ</string>
+    <string name="format_time_weeks_short">%1$sವಾ</string>
+    <string name="format_time_months_short">%1$sತಿಂ</string>
     <string name="reaction_add">ಪ್ರತಿಕ್ರಿಯೆ ಸೇರಿಸಿ</string>
     <string name="push_service_channel">Mochi ಪುಶ್</string>
     <string name="push_service_channel_description">ಅಧಿಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಲು Mochi ಅನ್ನು ಸಂಪರ್ಕಿಸಿ ಇಡುತ್ತದೆ</string>
@@ -285,8 +285,8 @@
     <string name="comment_anchor_open">ಈ ಕಾಮೆಂಟ್ ಯಾವ ಚಿತ್ರದ ಬಗ್ಗೆ ಇದೆಯೋ ಅದನ್ನು ನೋಡಿ</string>
     <string name="comment_anchor_default">ಈ ಚಿತ್ರದ ಮೇಲೆ</string>
     <plurals name="lightbox_comments_others">
-        <item quantity="one">ಈ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಇನ್ನೂ %1$d ಕಾಮೆಂಟ್ ತೋರಿಸಿ</item>
-        <item quantity="other">ಈ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಇನ್ನೂ %1$d ಕಾಮೆಂಟ್‌ಗಳನ್ನು ತೋರಿಸಿ</item>
+        <item quantity="one">ಈ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಇನ್ನೂ %1$s ಕಾಮೆಂಟ್ ತೋರಿಸಿ</item>
+        <item quantity="other">ಈ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಇನ್ನೂ %1$s ಕಾಮೆಂಟ್‌ಗಳನ್ನು ತೋರಿಸಿ</item>
     </plurals>
     <string name="lightbox_comments">ಕಾಮೆಂಟ್‌ಗಳು</string>
     <string name="common_attachment_unavailable">ಲಗತ್ತು ತಾತ್ಕಾಲಿಕವಾಗಿ ಲಭ್ಯವಿಲ್ಲ</string>

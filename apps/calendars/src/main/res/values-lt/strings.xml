@@ -99,22 +99,22 @@
     <string name="calendars_repeat_forever">Visam laikui</string>
     <string name="calendars_reminder_time">Įvykio metu</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">prieš %1$d minutę</item>
-        <item quantity="few">prieš %1$d minutes</item>
-        <item quantity="many">prieš %1$d minutės</item>
-        <item quantity="other">prieš %1$d minučių</item>
+        <item quantity="one">prieš %1$s minutę</item>
+        <item quantity="few">prieš %1$s minutes</item>
+        <item quantity="many">prieš %1$s minutės</item>
+        <item quantity="other">prieš %1$s minučių</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">prieš %1$d valandą</item>
-        <item quantity="few">prieš %1$d valandas</item>
-        <item quantity="many">prieš %1$d valandos</item>
-        <item quantity="other">prieš %1$d valandų</item>
+        <item quantity="one">prieš %1$s valandą</item>
+        <item quantity="few">prieš %1$s valandas</item>
+        <item quantity="many">prieš %1$s valandos</item>
+        <item quantity="other">prieš %1$s valandų</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">prieš %1$d dieną</item>
-        <item quantity="few">prieš %1$d dienas</item>
-        <item quantity="many">prieš %1$d dienos</item>
-        <item quantity="other">prieš %1$d dienų</item>
+        <item quantity="one">prieš %1$s dieną</item>
+        <item quantity="few">prieš %1$s dienas</item>
+        <item quantity="many">prieš %1$s dienos</item>
+        <item quantity="other">prieš %1$s dienų</item>
     </plurals>
     <string name="calendars_reminder_add">Pridėti priminimą</string>
     <string name="calendars_reminder_remove">Šalinti priminimą</string>
@@ -148,11 +148,11 @@
     <string name="calendars_poll_large">Kalendorius per didelis</string>
     <string name="calendars_poll_invalid">Adresas negrąžino kalendoriaus</string>
     <string name="calendars_poll_unreachable">Nepavyko pasiekti adreso</string>
-    <string name="calendars_poll_status">Adresas atsakė %1$d</string>
+    <string name="calendars_poll_status">Adresas atsakė %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minutė</item>
-        <item quantity="few">%1$d minutės</item>
-        <item quantity="other">%1$d minučių</item>
+        <item quantity="one">%1$s minutė</item>
+        <item quantity="few">%1$s minutės</item>
+        <item quantity="other">%1$s minučių</item>
     </plurals>
     <string name="calendars_preferences_zones">Rodyti įvykius jų pačių laiko juostoje</string>
     <string name="calendars_event_backwards">Baigiasi anksčiau nei prasideda</string>

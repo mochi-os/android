@@ -293,12 +293,12 @@ fun Format.formatTimestamp(epochSeconds: Long): String {
     return when {
         diff < 0 -> stringResource(R.string.format_time_just_now)
         diff < 60 -> stringResource(R.string.format_time_just_now)
-        diff < 3_600 -> stringResource(R.string.format_time_minutes_ago, (diff / 60).toInt())
-        diff < 86_400 -> stringResource(R.string.format_time_hours_ago, (diff / 3_600).toInt())
-        diff < 604_800 -> stringResource(R.string.format_time_days_ago, (diff / 86_400).toInt())
-        diff < 2_592_000 -> stringResource(R.string.format_time_weeks_ago, (diff / 604_800).toInt())
-        diff < 31_536_000 -> stringResource(R.string.format_time_months_ago, (diff / 2_592_000).toInt())
-        else -> stringResource(R.string.format_time_years_ago, (diff / 31_536_000).toInt())
+        diff < 3_600 -> stringResource(R.string.format_time_minutes_ago, formatNumber(diff / 60))
+        diff < 86_400 -> stringResource(R.string.format_time_hours_ago, formatNumber(diff / 3_600))
+        diff < 604_800 -> stringResource(R.string.format_time_days_ago, formatNumber(diff / 86_400))
+        diff < 2_592_000 -> stringResource(R.string.format_time_weeks_ago, formatNumber(diff / 604_800))
+        diff < 31_536_000 -> stringResource(R.string.format_time_months_ago, formatNumber(diff / 2_592_000))
+        else -> stringResource(R.string.format_time_years_ago, formatNumber(diff / 31_536_000))
     }
 }
 
@@ -318,11 +318,11 @@ fun Format.formatRelativeTime(epochSeconds: Long): String {
     return when {
         diff < 0 -> stringResource(R.string.format_time_just_now)
         diff < 60 -> stringResource(R.string.format_time_just_now)
-        diff < 3_600 -> stringResource(R.string.format_time_minutes_short, (diff / 60).toInt())
-        diff < 86_400 -> stringResource(R.string.format_time_hours_short, (diff / 3_600).toInt())
-        diff < 604_800 -> stringResource(R.string.format_time_days_short, (diff / 86_400).toInt())
-        diff < 2_592_000 -> stringResource(R.string.format_time_weeks_short, (diff / 604_800).toInt())
-        diff < 31_536_000 -> stringResource(R.string.format_time_months_short, (diff / 2_592_000).toInt())
+        diff < 3_600 -> stringResource(R.string.format_time_minutes_short, formatNumber(diff / 60))
+        diff < 86_400 -> stringResource(R.string.format_time_hours_short, formatNumber(diff / 3_600))
+        diff < 604_800 -> stringResource(R.string.format_time_days_short, formatNumber(diff / 86_400))
+        diff < 2_592_000 -> stringResource(R.string.format_time_weeks_short, formatNumber(diff / 604_800))
+        diff < 31_536_000 -> stringResource(R.string.format_time_months_short, formatNumber(diff / 2_592_000))
         else -> formatDate(epochSeconds)
     }
 }

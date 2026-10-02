@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Nav objektu</string>
     <string name="crm_board_no_columns">Šim skatam nav konfigurētu kolonnu</string>
     <string name="crm_board_no_options">Kolonnas laukam nav konfigurētu opciju</string>
-    <string name="crm_board_nested_count">+%1$d ligzdoti</string>
+    <string name="crm_board_nested_count">+%1$s ligzdoti</string>
     <string name="crm_move_to_column">Pārvietot uz kolonnu</string>
     <string name="crm_move_to_row">Pārvietot uz rindu</string>
     <string name="crm_move_after">Pēc %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM dati saglabāti</string>
     <string name="crm_create_upload_json">Augšupielādējiet .zip vai .json failu</string>
     <string name="crm_create_blocked_no_options">Nevar izveidot: %1$s ir obligāts, taču tam nav izvēles iespēju. Pievienojiet opcijas Dizainā.</string>
-    <string name="crm_design_sample">Paraugs %1$d</string>
+    <string name="crm_design_sample">Paraugs %1$s</string>
     <string name="crm_option_delete_title">Dzēst opciju</string>
     <string name="crm_option_delete_message">Vai tiešām vēlaties dzēst opciju \"%1$s\"?</string>
 </resources>

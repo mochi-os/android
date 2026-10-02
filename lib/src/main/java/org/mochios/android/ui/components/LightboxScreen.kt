@@ -60,6 +60,7 @@ import androidx.compose.ui.window.DialogProperties
 import coil3.compose.AsyncImage
 import coil3.compose.AsyncImagePainter
 import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * Fullscreen image lightbox: swipe between images, pinch-zoom, swipe down to
@@ -184,8 +185,8 @@ fun LightboxScreen(
                             Text(
                                 text = stringResource(
                                     R.string.lightbox_position,
-                                    pagerState.currentPage + 1,
-                                    images.size
+                                    LocalFormat.current.formatNumber(pagerState.currentPage + 1),
+                                    LocalFormat.current.formatNumber(images.size)
                                 ),
                                 color = Color.White,
                                 style = MaterialTheme.typography.bodyMedium

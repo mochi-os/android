@@ -180,8 +180,8 @@
     <string name="people_books_create">მისამართების წიგნაკის შექმნა</string>
     <string name="people_books_delete">მისამართების წიგნაკის წაშლა</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">წაიშალოს %1$s და მისი %2$d კონტაქტი?</item>
-        <item quantity="other">წაიშალოს %1$s და მისი %2$d კონტაქტი?</item>
+        <item quantity="one">წაიშალოს %1$s და მისი %2$s კონტაქტი?</item>
+        <item quantity="other">წაიშალოს %1$s და მისი %2$s კონტაქტი?</item>
     </plurals>
     <string name="people_welcome_body">იპოვეთ მეგობრები Mochi-ს მასშტაბით და დაუკავშირდით. მოსაწვევის გასაგზავნად შეეხეთ კონტაქტის დამატებას.</string>
     <string name="people_person_state_contact">კონტაქტებშია</string>

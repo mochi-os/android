@@ -99,13 +99,13 @@
     <string name="calendars_repeat_forever">Salawasé</string>
     <string name="calendars_reminder_time">Pas wektuné</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">%1$d menit sadurungé</item>
+        <item quantity="other">%1$s menit sadurungé</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">%1$d jam sadurungé</item>
+        <item quantity="other">%1$s jam sadurungé</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">%1$d dina sadurungé</item>
+        <item quantity="other">%1$s dina sadurungé</item>
     </plurals>
     <string name="calendars_reminder_add">Tambah pangeling-eling</string>
     <string name="calendars_reminder_remove">Cabut pangeling-eling</string>
@@ -139,9 +139,9 @@
     <string name="calendars_poll_large">Kalendere kegedhen</string>
     <string name="calendars_poll_invalid">Alamat ora mbalèkaké kalender</string>
     <string name="calendars_poll_unreachable">Ora bisa nggayuh alamat</string>
-    <string name="calendars_poll_status">Alamat mangsuli %1$d</string>
+    <string name="calendars_poll_status">Alamat mangsuli %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="other">%1$d menit</item>
+        <item quantity="other">%1$s menit</item>
     </plurals>
     <string name="calendars_preferences_zones">Tampilake acara ing zona wektune dhewe</string>
     <string name="calendars_event_backwards">Rampung sadurunge diwiwiti</string>

@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">fez uma alteração</string>
     <string name="projects_attachment_empty">Sem anexos</string>
     <string name="projects_attachment_default_name">anexo</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Novo pedido de mesclagem</string>
     <string name="projects_request_status_closed">Fechado</string>
     <string name="projects_request_back_to_list">Voltar à lista</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Verificando status da mesclagem…</string>
     <string name="projects_request_can_merge">Pode ser mesclado</string>
     <string name="projects_request_cannot_merge">Não é possível mesclar</string>
-    <string name="projects_request_ahead_behind">%1$d à frente, %2$d atrás</string>
+    <string name="projects_request_ahead_behind">%1$s à frente, %2$s atrás</string>
     <string name="projects_request_draft_notice">Este é um rascunho. Marque como pronto antes de mesclar.</string>
     <string name="projects_request_view_diff">Ver diff</string>
     <string name="projects_request_mark_ready">Marcar como pronto</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Nenhuma coluna configurada para esta visualização</string>
     <string name="projects_board_no_options">Nenhuma opção configurada para o campo de coluna</string>
     <string name="projects_board_column_options">Opções de coluna</string>
-    <string name="projects_board_nested_count">+%1$d aninhados</string>
+    <string name="projects_board_nested_count">+%1$s aninhados</string>
     <string name="projects_move_to_column">Mover para coluna</string>
     <string name="projects_move_to_row">Mover para linha</string>
     <string name="projects_move_after">Depois de %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Ordenar e filtrar</string>
     <string name="projects_create_prefix_hint">Usado para IDs legíveis como %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d ficheiro em conflito</item>
-        <item quantity="other">%1$d ficheiros em conflito</item>
+        <item quantity="one">%1$s ficheiro em conflito</item>
+        <item quantity="other">%1$s ficheiros em conflito</item>
     </plurals>
     <string name="projects_design_export_saved">Design guardado</string>
     <string name="projects_design_import_failed">Não foi possível ler esse ficheiro</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Dados do projeto guardados</string>
     <string name="projects_exporting">A preparar a exportação…</string>
     <string name="projects_board_add_column">Adicionar coluna</string>
-    <string name="projects_design_sample">Exemplo %1$d</string>
+    <string name="projects_design_sample">Exemplo %1$s</string>
     <string name="projects_option_delete_title">Eliminar opção</string>
     <string name="projects_option_delete_message">Tem a certeza de que pretende eliminar a opção \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ainda não é possível criar tipos de item. Crie primeiro os itens pai necessários.</string>

@@ -214,10 +214,10 @@
     <string name="projects_activity_made_change">wedi gwneud newid</string>
     <string name="projects_attachment_empty">Dim atodiadau</string>
     <string name="projects_attachment_default_name">atodiad</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Cais cyfuno newydd</string>
     <string name="projects_request_status_closed">Ar gau</string>
     <string name="projects_request_back_to_list">Yn ôl i\'r rhestr</string>
@@ -227,7 +227,7 @@
     <string name="projects_request_checking_merge">Yn gwirio statws cyfuno…</string>
     <string name="projects_request_can_merge">Gellir ei gyfuno</string>
     <string name="projects_request_cannot_merge">Methu cyfuno</string>
-    <string name="projects_request_ahead_behind">%1$d o flaen, %2$d ar ôl</string>
+    <string name="projects_request_ahead_behind">%1$s o flaen, %2$s ar ôl</string>
     <string name="projects_request_draft_notice">Drafft yw hwn. Marciwch fel parod cyn cyfuno.</string>
     <string name="projects_request_view_diff">Gweld y gwahaniaeth</string>
     <string name="projects_request_mark_ready">Marcio fel parod</string>
@@ -247,7 +247,7 @@
     <string name="projects_board_no_columns">Dim colofnau wedi\'u ffurfweddu ar gyfer y golwg hwn</string>
     <string name="projects_board_no_options">Dim opsiynau wedi\'u ffurfweddu ar gyfer maes y golofn</string>
     <string name="projects_board_column_options">Opsiynau colofn</string>
-    <string name="projects_board_nested_count">+%1$d nythu</string>
+    <string name="projects_board_nested_count">+%1$s nythu</string>
     <string name="projects_move_to_column">Symud i golofn</string>
     <string name="projects_move_to_row">Symud i res</string>
     <string name="projects_move_after">Ar ôl %1$s</string>
@@ -365,12 +365,12 @@
     <string name="projects_sort_filter_title">Trefnu a hidlo</string>
     <string name="projects_create_prefix_hint">Defnyddir ar gyfer IDau darllenadwy fel %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="zero">%1$d ffeil yn gwrthdaro</item>
-        <item quantity="one">%1$d ffeil yn gwrthdaro</item>
-        <item quantity="two">%1$d ffeil yn gwrthdaro</item>
-        <item quantity="few">%1$d ffeil yn gwrthdaro</item>
-        <item quantity="many">%1$d ffeil yn gwrthdaro</item>
-        <item quantity="other">%1$d ffeil yn gwrthdaro</item>
+        <item quantity="zero">%1$s ffeil yn gwrthdaro</item>
+        <item quantity="one">%1$s ffeil yn gwrthdaro</item>
+        <item quantity="two">%1$s ffeil yn gwrthdaro</item>
+        <item quantity="few">%1$s ffeil yn gwrthdaro</item>
+        <item quantity="many">%1$s ffeil yn gwrthdaro</item>
+        <item quantity="other">%1$s ffeil yn gwrthdaro</item>
     </plurals>
     <string name="projects_design_export_saved">Cadwyd y cynllun</string>
     <string name="projects_design_import_failed">Methwyd darllen y ffeil honno</string>
@@ -380,7 +380,7 @@
     <string name="projects_export_saved">Cadwyd data\'r prosiect</string>
     <string name="projects_exporting">Yn paratoi\'r allforio…</string>
     <string name="projects_board_add_column">Ychwanegu colofn</string>
-    <string name="projects_design_sample">Sampl %1$d</string>
+    <string name="projects_design_sample">Sampl %1$s</string>
     <string name="projects_option_delete_title">Dileu opsiwn</string>
     <string name="projects_option_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r opsiwn \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Ni ellir creu unrhyw fathau o eitemau eto. Crëwch yr eitemau rhiant gofynnol yn gyntaf.</string>

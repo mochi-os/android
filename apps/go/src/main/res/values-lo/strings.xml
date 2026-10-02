@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">ລົບ</string>
     <string name="go_delete_message">ເກມນີ້ຈະຖືກລຶບອອກຈາກບັນຊີຂອງທ່ານ. ບໍ່ສາມາດກັບຄືນຄືນໄດ້.</string>
     <string name="go_delete_title">ລົບເກມ?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">ຍອມຮັບ</string>
     <string name="go_draw_decline">ປະຕິເສດ</string>
     <string name="go_draw_offered_received">%1$s ສະເໜີສະເໝີ</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">ຍອມແພ້ແລ້ວ</string>
     <string name="go_new_game_title">ເກມ Go ໃໝ່</string>
     <string name="go_new_game_no_friends">ທ່ານຕ້ອງເພີ່ມໝູ່ກ່ອນຈຶ່ງຈະເລີ່ມເກມໄດ້.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">ຄະແນນທີ່ເພີ່ມໃສ່ຄະແນນຂອງຝ່າຍຂາວເພື່ອຊົດເຊີຍທີ່ຝ່າຍດຳເດີນກ່ອນ</string>
 
-    <string name="go_board_a11y">ກະດານ Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">ກະດານ Go %1$d×%1$d, ຮອດເວນທ່ານວາງກ້ອນຫີນສີດຳ</string>
-    <string name="go_board_a11y_turn_white">ກະດານ Go %1$d×%1$d, ຮອດເວນທ່ານວາງກ້ອນຫີນສີຂາວ</string>
+    <string name="go_board_a11y">ກະດານ Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">ກະດານ Go %1$s×%1$s, ຮອດເວນທ່ານວາງກ້ອນຫີນສີດຳ</string>
+    <string name="go_board_a11y_turn_white">ກະດານ Go %1$s×%1$s, ຮອດເວນທ່ານວາງກ້ອນຫີນສີຂາວ</string>
     <string name="go_status_scoring">ນັບຄະແນນ — ຕົກລົງກັນເລື່ອງຄະແນນ ຫຼື ຫຼິ້ນຕໍ່</string>
     <string name="go_score_proposed">ຄະແນນທີ່ສະເໜີ: ດຳ %1$s, ຂາວ %2$s</string>
     <string name="go_score_opponent_accepted">ຄູ່ແຂ່ງຂອງທ່ານຮັບເອົາຄະແນນນີ້: ດຳ %1$s, ຂາວ %2$s</string>

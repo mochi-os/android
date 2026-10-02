@@ -99,19 +99,19 @@
     <string name="calendars_repeat_forever">Mūžīgi</string>
     <string name="calendars_reminder_time">Notikuma laikā</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="zero">%1$d minūšu iepriekš</item>
-        <item quantity="one">%1$d minūti iepriekš</item>
-        <item quantity="other">%1$d minūtes iepriekš</item>
+        <item quantity="zero">%1$s minūšu iepriekš</item>
+        <item quantity="one">%1$s minūti iepriekš</item>
+        <item quantity="other">%1$s minūtes iepriekš</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="zero">%1$d stundu iepriekš</item>
-        <item quantity="one">%1$d stundu iepriekš</item>
-        <item quantity="other">%1$d stundas iepriekš</item>
+        <item quantity="zero">%1$s stundu iepriekš</item>
+        <item quantity="one">%1$s stundu iepriekš</item>
+        <item quantity="other">%1$s stundas iepriekš</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="zero">%1$d dienu iepriekš</item>
-        <item quantity="one">%1$d dienu iepriekš</item>
-        <item quantity="other">%1$d dienas iepriekš</item>
+        <item quantity="zero">%1$s dienu iepriekš</item>
+        <item quantity="one">%1$s dienu iepriekš</item>
+        <item quantity="other">%1$s dienas iepriekš</item>
     </plurals>
     <string name="calendars_reminder_add">Pievienot atgādinājumu</string>
     <string name="calendars_reminder_remove">Noņemt atgādinājumu</string>
@@ -145,11 +145,11 @@
     <string name="calendars_poll_large">Kalendārs ir pārāk liels</string>
     <string name="calendars_poll_invalid">Adrese neatgrieza kalendāru</string>
     <string name="calendars_poll_unreachable">Neizdevās sasniegt adresi</string>
-    <string name="calendars_poll_status">Adrese atbildēja %1$d</string>
+    <string name="calendars_poll_status">Adrese atbildēja %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="zero">%1$d minūšu</item>
-        <item quantity="one">%1$d minūte</item>
-        <item quantity="other">%1$d minūtes</item>
+        <item quantity="zero">%1$s minūšu</item>
+        <item quantity="one">%1$s minūte</item>
+        <item quantity="other">%1$s minūtes</item>
     </plurals>
     <string name="calendars_preferences_zones">Rādīt notikumus to pašu laika joslā</string>
     <string name="calendars_event_backwards">Beidzas, pirms sākas</string>

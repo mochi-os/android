@@ -180,8 +180,8 @@
     <string name="people_books_create">ලිපින පොතක් සාදන්න</string>
     <string name="people_books_delete">ලිපින පොත මකන්න</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s සහ එහි සම්බන්ධතා %2$d මකන්නද?</item>
-        <item quantity="other">%1$s සහ එහි සම්බන්ධතා %2$d මකන්නද?</item>
+        <item quantity="one">%1$s සහ එහි සම්බන්ධතා %2$s මකන්නද?</item>
+        <item quantity="other">%1$s සහ එහි සම්බන්ධතා %2$s මකන්නද?</item>
     </plurals>
     <string name="people_welcome_body">Mochi පුරා මිතුරන් සොයාගෙන සම්බන්ධ වන්න. ආරාධනයක් යැවීමට සම්බන්ධතාවය එක් කරන්න තට්ටු කරන්න.</string>
     <string name="people_person_state_contact">සම්බන්ධතාවල</string>

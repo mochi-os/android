@@ -180,8 +180,8 @@
     <string name="people_books_create">చిరునామా పుస్తకాన్ని సృష్టించు</string>
     <string name="people_books_delete">చిరునామా పుస్తకాన్ని తొలగించు</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s మరియు దానిలోని %2$d పరిచయాన్ని తొలగించాలా?</item>
-        <item quantity="other">%1$s మరియు దానిలోని %2$d పరిచయాలను తొలగించాలా?</item>
+        <item quantity="one">%1$s మరియు దానిలోని %2$s పరిచయాన్ని తొలగించాలా?</item>
+        <item quantity="other">%1$s మరియు దానిలోని %2$s పరిచయాలను తొలగించాలా?</item>
     </plurals>
     <string name="people_welcome_body">Mochi అంతటా స్నేహితులను కనుగొని కలవండి. ఆహ్వానం పంపడానికి పరిచయాన్ని జోడించు నొక్కండి.</string>
     <string name="people_person_state_contact">పరిచయాలలో</string>

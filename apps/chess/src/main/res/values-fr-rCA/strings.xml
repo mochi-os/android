@@ -61,7 +61,7 @@
     <string name="chess_ws_failed">Échec de la connexion</string>
     <string name="chess_move_capture">%1$s a pris %2$s</string>
     <string name="chess_promotion_title">Promouvoir en :</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_piece_king">Roi</string>
     <string name="chess_piece_queen">Dame</string>
     <string name="chess_piece_rook">Tour</string>

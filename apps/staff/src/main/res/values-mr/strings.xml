@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">नावाशिवाय</string>
     <string name="staff_accounts_unsuspend">निलंबन मागे घ्या</string>
     <string name="staff_accounts_unsuspended_toast">खात्याचे निलंबन मागे घेतले</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">रद्द करा</string>
     <string name="staff_appeals_decide">निर्णय घ्या</string>
     <string name="staff_appeals_decision_denied">सूची नाकारलेली ठेवा</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">ऑर्डर #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">कारण (पर्यायी)</string>
-    <string name="staff_accounts_sales">%1$d विक्री</string>
+    <string name="staff_accounts_sales">%1$s विक्री</string>
     <string name="staff_appeals_reason_label">विक्रेत्याचे अपील कारण</string>
     <string name="staff_audit_action_staff_team_role_changed">कर्मचारी भूमिका बदलली</string>
     <string name="staff_categories_delete_desc">“%1$s” हटवायचे? हे पूर्ववत करता येणार नाही.</string>

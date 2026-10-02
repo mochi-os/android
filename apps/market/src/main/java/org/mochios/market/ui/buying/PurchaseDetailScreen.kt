@@ -336,7 +336,7 @@ private fun DigitalAssetsCard(assets: List<Asset>, onDownload: (String) -> Unit)
             )
             Text(
                 if (assets.size == 1) stringResource(R.string.market_purchase_download_one)
-                else stringResource(R.string.market_purchase_download_many, assets.size),
+                else stringResource(R.string.market_purchase_download_many, LocalFormat.current.formatNumber(assets.size)),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Ҳамеша</string>
     <string name="calendars_reminder_time">Дар вақти рӯйдод</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d дақиқа пештар</item>
-        <item quantity="other">%1$d дақиқа пештар</item>
+        <item quantity="one">%1$s дақиқа пештар</item>
+        <item quantity="other">%1$s дақиқа пештар</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d соат пештар</item>
-        <item quantity="other">%1$d соат пештар</item>
+        <item quantity="one">%1$s соат пештар</item>
+        <item quantity="other">%1$s соат пештар</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d рӯз пештар</item>
-        <item quantity="other">%1$d рӯз пештар</item>
+        <item quantity="one">%1$s рӯз пештар</item>
+        <item quantity="other">%1$s рӯз пештар</item>
     </plurals>
     <string name="calendars_reminder_add">Илова кардани ёдоварӣ</string>
     <string name="calendars_reminder_remove">Хориҷ кардани ёдоварӣ</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Тақвим хеле калон аст</string>
     <string name="calendars_poll_invalid">Суроға тақвим барнагардонд</string>
     <string name="calendars_poll_unreachable">Ба суроға пайваст шуда нашуд</string>
-    <string name="calendars_poll_status">Суроға %1$d ҷавоб дод</string>
+    <string name="calendars_poll_status">Суроға %1$s ҷавоб дод</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d дақиқа</item>
-        <item quantity="other">%1$d дақиқа</item>
+        <item quantity="one">%1$s дақиқа</item>
+        <item quantity="other">%1$s дақиқа</item>
     </plurals>
     <string name="calendars_preferences_zones">Рӯйдодҳоро дар минтақаи вақти худашон нишон додан</string>
     <string name="calendars_event_backwards">Пеш аз оғоз ба анҷом мерасад</string>

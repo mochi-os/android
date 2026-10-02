@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Hemişe</string>
     <string name="calendars_reminder_time">Wagty gelende</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minut öň</item>
-        <item quantity="other">%1$d minut öň</item>
+        <item quantity="one">%1$s minut öň</item>
+        <item quantity="other">%1$s minut öň</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d sagat öň</item>
-        <item quantity="other">%1$d sagat öň</item>
+        <item quantity="one">%1$s sagat öň</item>
+        <item quantity="other">%1$s sagat öň</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d gün öň</item>
-        <item quantity="other">%1$d gün öň</item>
+        <item quantity="one">%1$s gün öň</item>
+        <item quantity="other">%1$s gün öň</item>
     </plurals>
     <string name="calendars_reminder_add">Ýatladyş goş</string>
     <string name="calendars_reminder_remove">Ýatladyşy aýyr</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Kalendar örän uly</string>
     <string name="calendars_poll_invalid">Salgy kalendar gaýtarmady</string>
     <string name="calendars_poll_unreachable">Salga ýetip bolmady</string>
-    <string name="calendars_poll_status">Salgy %1$d jogap berdi</string>
+    <string name="calendars_poll_status">Salgy %1$s jogap berdi</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minut</item>
-        <item quantity="other">%1$d minut</item>
+        <item quantity="one">%1$s minut</item>
+        <item quantity="other">%1$s minut</item>
     </plurals>
     <string name="calendars_preferences_zones">Wakalary öz wagt zolagynda görkez</string>
     <string name="calendars_event_backwards">Başlamanka tamamlanýar</string>

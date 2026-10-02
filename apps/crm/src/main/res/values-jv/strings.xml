@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Ora ana objek</string>
     <string name="crm_board_no_columns">Ora ana kolom sing disetel kanggo tampilan iki</string>
     <string name="crm_board_no_options">Ora ana pilihan kang dikonfigurasi kanggo kolom</string>
-    <string name="crm_board_nested_count">+%1$d sarang</string>
+    <string name="crm_board_nested_count">+%1$s sarang</string>
     <string name="crm_move_to_column">Pindhah menyang kolom</string>
     <string name="crm_move_to_row">Pindhah menyang larik</string>
     <string name="crm_move_after">Sawise %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Data CRM kasimpen</string>
     <string name="crm_create_upload_json">Unggah berkas .zip utawa .json</string>
     <string name="crm_create_blocked_no_options">Ora bisa nggawe: %1$s wajib nanging ora duwe pilihan. Tambahake pilihan ing Desain.</string>
-    <string name="crm_design_sample">Conto %1$d</string>
+    <string name="crm_design_sample">Conto %1$s</string>
     <string name="crm_option_delete_title">Busak pilihan</string>
     <string name="crm_option_delete_message">Apa sampeyan yakin arep mbusak pilihan \"%1$s\"?</string>
 </resources>

@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">Qayta ulanmoqda…</string>
     <string name="chess_ws_failed">Ulanish muvaffaqiyatsiz</string>
     <string name="chess_move_capture">%1$s %2$s ni oldi</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">Oq %1$s</string>
     <string name="chess_piece_black">Qora %1$s</string>

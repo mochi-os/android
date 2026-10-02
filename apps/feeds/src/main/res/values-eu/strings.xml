@@ -116,7 +116,7 @@
     <string name="feeds_remove_source_confirm">Honek \"%1$s\" iturritik edukia inportatzeari utziko dio.</string>
     <string name="feeds_remove_also_delete_posts">Ezabatu iturri honetatik inportatutako argitalpenak ere</string>
     <string name="feeds_suggested_credibility_title">Iradokitako sinesgarritasuna</string>
-    <string name="feeds_suggested_credibility_body">Mochik %1$d(e)ko sinesgarritasuna iradokitzen du. Onartu?</string>
+    <string name="feeds_suggested_credibility_body">Mochik %1$s(e)ko sinesgarritasuna iradokitzen du. Onartu?</string>
     <string name="feeds_suggested_credibility_keep">Mantendu unekoa</string>
     <string name="feeds_ai_processing_mode">AAren prozesatze modua</string>
     <string name="feeds_ai_prompt_new">Etiketatu argitalpen berriak</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">Sakatu edozein argitalpenetako laster-marka hemen geroko gordetzeko.</string>
     <string name="feeds_saved_error_clear">Ezin izan dira gordetako argitalpenak garbitu</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d argitalpen berri</item>
-        <item quantity="other">%d argitalpen berri</item>
+        <item quantity="one">%s argitalpen berri</item>
+        <item quantity="other">%s argitalpen berri</item>
     </plurals>
     <string name="feeds_caught_up">Dena ikusi duzu</string>
     <string name="feeds_all_caught_up">Dena eguneratuta</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">Jarioaren entitate IDa edo hatz-marka</string>
     <string name="feeds_source_credibility_label">Sinesgarritasuna</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">Ordu %1$d</item>
-        <item quantity="other">%1$d ordu</item>
+        <item quantity="one">Ordu %1$s</item>
+        <item quantity="other">%1$s ordu</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">Minutu %1$d</item>
-        <item quantity="other">%1$d minutu</item>
+        <item quantity="one">Minutu %1$s</item>
+        <item quantity="other">%1$s minutu</item>
     </plurals>
     <string name="feeds_source_polling_interval">Kontsulta %1$s bakoitzeko</string>
     <string name="feeds_access_level_react_full">Erreakzionatu eta ikusi</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">Esteka</string>
     <string name="feeds_share_link_title">Jarioaren esteka</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d iruzkin</item>
-        <item quantity="other">%1$d iruzkin</item>
+        <item quantity="one">%1$s iruzkin</item>
+        <item quantity="other">%1$s iruzkin</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">eranskin %1$d</item>
-        <item quantity="other">%1$d eranskin</item>
+        <item quantity="one">eranskin %1$s</item>
+        <item quantity="other">%1$s eranskin</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">Ikusi beste iruzkin %1$d</item>
-        <item quantity="other">Ikusi beste %1$d iruzkin</item>
+        <item quantity="one">Ikusi beste iruzkin %1$s</item>
+        <item quantity="other">Ikusi beste %1$s iruzkin</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">gaur dela urte %1$d</item>
-        <item quantity="other">gaur dela %1$d urte</item>
+        <item quantity="one">gaur dela urte %1$s</item>
+        <item quantity="other">gaur dela %1$s urte</item>
     </plurals>
     <string name="feeds_block">Blokeatu</string>
     <string name="feeds_removed_from_feed">Jario honetatik kendu zaituzte</string>

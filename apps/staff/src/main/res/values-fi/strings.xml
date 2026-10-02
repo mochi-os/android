@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Muistiinpanot</string>
     <string name="staff_accounts_reason_label">Syy</string>
     <string name="staff_accounts_reason_optional_label">Syy (valinnainen)</string>
-    <string name="staff_accounts_sales">%1$d myyntiä</string>
+    <string name="staff_accounts_sales">%1$s myyntiä</string>
     <string name="staff_accounts_search_clear">Tyhjennä haku</string>
     <string name="staff_accounts_search_placeholder">Haku</string>
     <string name="staff_accounts_seller_buyers">Vain ostajat</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Nimetön</string>
     <string name="staff_accounts_unsuspend">Poista keskeytys</string>
     <string name="staff_accounts_unsuspended_toast">Tilin jäädytys poistettu</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Peruuta</string>
     <string name="staff_appeals_decide">Päätä</string>
     <string name="staff_appeals_decision_denied">Pidä ilmoitus hylättynä</string>

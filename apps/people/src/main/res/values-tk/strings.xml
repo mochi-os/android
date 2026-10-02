@@ -180,8 +180,8 @@
     <string name="people_books_create">Salgy kitabyny döret</string>
     <string name="people_books_delete">Salgy kitabyny poz</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s we ondaky %2$d kontakt pozulsynmy?</item>
-        <item quantity="other">%1$s we ondaky %2$d kontakt pozulsynmy?</item>
+        <item quantity="one">%1$s we ondaky %2$s kontakt pozulsynmy?</item>
+        <item quantity="other">%1$s we ondaky %2$s kontakt pozulsynmy?</item>
     </plurals>
     <string name="people_welcome_body">Mochi boýunça dostlary tapyň we aragatnaşyk guruň. Çakylyk ibermek üçin Kontakt goş düwmesine basyň.</string>
     <string name="people_person_state_contact">Kontaktlarda</string>

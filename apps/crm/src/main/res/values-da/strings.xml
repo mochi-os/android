@@ -181,7 +181,7 @@
     <string name="crm_tree_empty">Ingen objekter</string>
     <string name="crm_board_no_columns">Ingen kolonner konfigureret for denne visning</string>
     <string name="crm_board_no_options">Ingen indstillinger konfigureret for kolonnefelt</string>
-    <string name="crm_board_nested_count">+%1$d indlejret</string>
+    <string name="crm_board_nested_count">+%1$s indlejret</string>
     <string name="crm_move_to_column">Flyt til kolonne</string>
     <string name="crm_move_to_row">Flyt til række</string>
     <string name="crm_move_after">Efter %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM-data gemt</string>
     <string name="crm_create_upload_json">Upload en .zip- eller .json-fil</string>
     <string name="crm_create_blocked_no_options">Kan ikke oprette: %1$s er påkrævet, men har ingen valgmuligheder. Tilføj valgmuligheder i Design.</string>
-    <string name="crm_design_sample">Eksempel %1$d</string>
+    <string name="crm_design_sample">Eksempel %1$s</string>
     <string name="crm_option_delete_title">Slet valgmulighed</string>
     <string name="crm_option_delete_message">Er du sikker på, at du vil slette valgmuligheden \"%1$s\"?</string>
 </resources>

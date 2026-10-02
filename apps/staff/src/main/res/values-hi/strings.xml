@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">नोट्स</string>
     <string name="staff_accounts_reason_label">कारण</string>
     <string name="staff_accounts_reason_optional_label">कारण (वैकल्पिक)</string>
-    <string name="staff_accounts_sales">%1$d बिक्री</string>
+    <string name="staff_accounts_sales">%1$s बिक्री</string>
     <string name="staff_accounts_search_clear">खोज साफ़ करें</string>
     <string name="staff_accounts_search_placeholder">खोजें</string>
     <string name="staff_accounts_seller_buyers">केवल खरीदार</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">अनाम</string>
     <string name="staff_accounts_unsuspend">अनसस्पेंड करें</string>
     <string name="staff_accounts_unsuspended_toast">अकाउंट का निलंबन हटाया गया</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">रद्द करें</string>
     <string name="staff_appeals_decide">निर्णय करें</string>
     <string name="staff_appeals_decision_denied">लिस्टिंग अस्वीकृत रखें</string>

@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">වස්තූන් නැත</string>
     <string name="crm_board_no_columns">මෙම දැක්ම සඳහා තීරු වින්‍යාස කර නැත</string>
     <string name="crm_board_no_options">තීරු ක්ෂේත්‍රය සඳහා විකල්ප වින්‍යාස කර නැත</string>
-    <string name="crm_board_nested_count">+%1$d කැදැලි</string>
+    <string name="crm_board_nested_count">+%1$s කැදැලි</string>
     <string name="crm_move_to_column">තීරුවට ගෙන යන්න</string>
     <string name="crm_move_to_row">පේළියට ගෙන යන්න</string>
     <string name="crm_move_after">%1$s ට පසුව</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM දත්ත සුරකින ලදී</string>
     <string name="crm_create_upload_json">.zip හෝ .json ගොනුවක් උඩුගත කරන්න</string>
     <string name="crm_create_blocked_no_options">සෑදිය නොහැක: %1$s අවශ්‍ය නමුත් තෝරා ගැනීමට විකල්ප නොමැත. නිර්මාණයේ විකල්ප එක් කරන්න.</string>
-    <string name="crm_design_sample">නියැදිය %1$d</string>
+    <string name="crm_design_sample">නියැදිය %1$s</string>
     <string name="crm_option_delete_title">විකල්පය මකන්න</string>
     <string name="crm_option_delete_message">ඔබට \"%1$s\" විකල්පය මැකීමට අවශ්‍ය බව සැබෑද?</string>
 </resources>

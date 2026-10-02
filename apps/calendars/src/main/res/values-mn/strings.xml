@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Үүрд</string>
     <string name="calendars_reminder_time">Үйл явдлын үед</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d минутын өмнө</item>
-        <item quantity="other">%1$d минутын өмнө</item>
+        <item quantity="one">%1$s минутын өмнө</item>
+        <item quantity="other">%1$s минутын өмнө</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d цагийн өмнө</item>
-        <item quantity="other">%1$d цагийн өмнө</item>
+        <item quantity="one">%1$s цагийн өмнө</item>
+        <item quantity="other">%1$s цагийн өмнө</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d өдрийн өмнө</item>
-        <item quantity="other">%1$d өдрийн өмнө</item>
+        <item quantity="one">%1$s өдрийн өмнө</item>
+        <item quantity="other">%1$s өдрийн өмнө</item>
     </plurals>
     <string name="calendars_reminder_add">Сануулга нэмэх</string>
     <string name="calendars_reminder_remove">Сануулга хасах</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Хуанли хэт том байна</string>
     <string name="calendars_poll_invalid">Хаяг хуанли буцаасангүй</string>
     <string name="calendars_poll_unreachable">Хаягт холбогдож чадсангүй</string>
-    <string name="calendars_poll_status">Хаяг %1$d гэж хариулсан</string>
+    <string name="calendars_poll_status">Хаяг %1$s гэж хариулсан</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d минут</item>
-        <item quantity="other">%1$d минут</item>
+        <item quantity="one">%1$s минут</item>
+        <item quantity="other">%1$s минут</item>
     </plurals>
     <string name="calendars_preferences_zones">Үйл явдлыг өөрийнх нь цагийн бүсээр харуулах</string>
     <string name="calendars_event_backwards">Эхлэхээс өмнө дуусна</string>

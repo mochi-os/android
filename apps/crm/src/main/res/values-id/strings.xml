@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Tidak ada objek</string>
     <string name="crm_board_no_columns">Tidak ada kolom yang dikonfigurasi untuk tampilan ini</string>
     <string name="crm_board_no_options">Tidak ada opsi yang dikonfigurasi untuk kolom bidang</string>
-    <string name="crm_board_nested_count">+%1$d bersarang</string>
+    <string name="crm_board_nested_count">+%1$s bersarang</string>
     <string name="crm_move_to_column">Pindahkan ke kolom</string>
     <string name="crm_move_to_row">Pindahkan ke baris</string>
     <string name="crm_move_after">Setelah %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Data CRM disimpan</string>
     <string name="crm_create_upload_json">Unggah berkas .zip atau .json</string>
     <string name="crm_create_blocked_no_options">Tidak dapat membuat: %1$s wajib diisi tetapi tidak memiliki pilihan. Tambahkan pilihan di Desain.</string>
-    <string name="crm_design_sample">Contoh %1$d</string>
+    <string name="crm_design_sample">Contoh %1$s</string>
     <string name="crm_option_delete_title">Hapus opsi</string>
     <string name="crm_option_delete_message">Apakah Anda yakin ingin menghapus opsi \"%1$s\"?</string>
 </resources>

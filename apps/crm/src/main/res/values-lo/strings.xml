@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">ບໍ່ມີວັດຖຸ</string>
     <string name="crm_board_no_columns">ບໍ່ມີຖັນຖືກຕັ້ງຄ່າສຳລັບມຸມມອງນີ້</string>
     <string name="crm_board_no_options">ບໍ່ມີຕົວເລືອກສຳລັບຊ່ອງຖັນ</string>
-    <string name="crm_board_nested_count">+%1$d ຊ້ອນກັນ</string>
+    <string name="crm_board_nested_count">+%1$s ຊ້ອນກັນ</string>
     <string name="crm_move_to_column">ຍ້າຍໄປຖັນ</string>
     <string name="crm_move_to_row">ຍ້າຍໄປແຖວ</string>
     <string name="crm_move_after">ຫຼັງ %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">ບັນທຶກຂໍ້ມູນ CRM ແລ້ວ</string>
     <string name="crm_create_upload_json">ອັບໂຫຼດໄຟລ໌ .zip ຫຼື .json</string>
     <string name="crm_create_blocked_no_options">ສ້າງບໍ່ໄດ້: %1$s ຈຳເປັນ ແຕ່ບໍ່ມີຕົວເລືອກໃຫ້ເລືອກ. ເພີ່ມຕົວເລືອກໃນການອອກແບບ.</string>
-    <string name="crm_design_sample">ຕົວຢ່າງ %1$d</string>
+    <string name="crm_design_sample">ຕົວຢ່າງ %1$s</string>
     <string name="crm_option_delete_title">ລົບຕົວເລືອກ</string>
     <string name="crm_option_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບຕົວເລືອກ \"%1$s\"?</string>
 </resources>

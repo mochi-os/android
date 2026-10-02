@@ -409,10 +409,10 @@
     <string name="market_sale_review_response_submitting">Фиристода мешавад…</string>
     <string name="market_checkout_subscribing">Обуна шуда истодааст…</string>
     <string name="market_filter_remove">Филтрро тоза кардан</string>
-    <string name="market_listing_detail_sales_count">%1$d фурӯш</string>
-    <string name="market_profile_sales_count">%1$d фурӯш</string>
+    <string name="market_listing_detail_sales_count">%1$s фурӯш</string>
+    <string name="market_profile_sales_count">%1$s фурӯш</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">Ба харидорон дар бораи худ нақл кунед…</string>
     <string name="market_account_load_failed">Ҳисобро бор кардан натавонист</string>
     <string name="market_account_save_failed">Тағйиротро захира кардан натавонист</string>
@@ -438,8 +438,8 @@
     <string name="market_bids_current_bid">Ҷорӣ: %1$s</string>
     <string name="market_bids_ends_in">Дар %1$s ба охир мерасад</string>
     <string name="market_bids_your_bid">Пешниҳоди шумо: %1$s</string>
-    <string name="market_carousel_main">Сурати %1$d аз %2$d</string>
-    <string name="market_carousel_thumbnail">Эскизи %1$d</string>
+    <string name="market_carousel_main">Сурати %1$s аз %2$s</string>
+    <string name="market_carousel_thumbnail">Эскизи %1$s</string>
     <string name="market_checkout_browser_unavailable">Браузере барои кушодани саҳифаи пардохт дастрас нест</string>
     <string name="market_checkout_pay_button">Пардохт тавассути Stripe</string>
     <string name="market_checkout_processing">Коркард шуда истодааст…</string>
@@ -448,7 +448,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">Замима кардани далелҳо</string>
-    <string name="market_dispute_dialog_attach_count">%1$d файл замима шуд</string>
+    <string name="market_dispute_dialog_attach_count">%1$s файл замима шуд</string>
     <string name="market_dispute_dialog_evidence_role_staff">Кормандони Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">Далелҳои пешниҳодшуда</string>
     <string name="market_dispute_dialog_evidence_submitter_line">пешниҳод аз ҷониби %1$s</string>
@@ -462,7 +462,7 @@
     <string name="market_editor_asset_external_url">URL-и истинод</string>
     <string name="market_editor_assets_empty">Ҳанӯз сармояе нест</string>
     <string name="market_editor_category_none">Категорияро интихоб кунед</string>
-    <string name="market_editor_days">%1$d рӯз</string>
+    <string name="market_editor_days">%1$s рӯз</string>
     <string name="market_editor_delete">Нест кардани рӯйхат</string>
     <string name="market_editor_delete_confirm_message">Ин рӯйхатро ба таври доимӣ нест мекунад.</string>
     <string name="market_editor_delete_confirm_title">Эълонро ҳазф кунем?</string>
@@ -554,7 +554,7 @@
     <string name="market_messages_load_failed">Сӯҳбатро бор кардан имкон надошт</string>
     <string name="market_messages_send_failed">Фиристодани паём имкон надошт</string>
     <string name="market_messages_thread_title">Сӯҳбат</string>
-    <string name="market_messages_unread_badge">%1$d хонданашуда</string>
+    <string name="market_messages_unread_badge">%1$s хонданашуда</string>
     <string name="market_price_from">Аз %1$s</string>
     <string name="market_price_high_bid">Пешниҳоди баланд: %1$s</string>
     <string name="market_price_instant_buy">хариди фаврӣ: %1$s</string>
@@ -567,18 +567,18 @@
     <string name="market_profile_joined">Ҳамроҳ шуд %1$s</string>
     <string name="market_profile_no_reviews">Ҳанӯз баррасиҳо нестанд.</string>
     <string name="market_profile_rating_breakdown">Тақсимоти рейтинг</string>
-    <string name="market_profile_stars_value">%1$d ситора</string>
+    <string name="market_profile_stars_value">%1$s ситора</string>
     <string name="market_purchase_dispute_chargeback">Бозгашти пардохт %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Бонки шумо барои ин фармоиш бозгашти пардохтро пешниҳод кардааст. Stripe баҳсро бо фурӯшанда ҳал мекунад; натиҷа пас аз қабули қарор дар ин ҷо пайдо мешавад.</string>
     <string name="market_purchase_dispute_response">Ҷавоби фурӯшанда</string>
-    <string name="market_purchase_download_many">%1$d файли худро дар поён зеркашӣ кунед.</string>
+    <string name="market_purchase_download_many">%1$s файли худро дар поён зеркашӣ кунед.</string>
     <string name="market_purchase_download_one">Файли худро дар поён зеркашӣ кунед.</string>
     <string name="market_purchase_review_from">Баррасӣ аз %1$s</string>
     <string name="market_purchases_auction_label">Музояда #%1$s</string>
     <string name="market_purchases_order_label">Фармоиш #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s баргардонда шуд</string>
     <string name="market_purchases_won_for">Бо нархи %1$s бурд карда шуд</string>
-    <string name="market_rating_reviews">(%1$d баррасӣ)</string>
+    <string name="market_rating_reviews">(%1$s баррасӣ)</string>
     <string name="market_refund_amount_label">Маблағ</string>
     <string name="market_refund_dialog_amount_help">Барои баргардонидани фармоиши пурра холӣ гузоред.</string>
     <string name="market_refund_dialog_amount_label">Маблағ</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">Ин аукционро бекор мекунад. Рӯйхат аз харидорон пинҳон карда мешавад; шумо метавонед баъдтар онро ҳамчун сиёҳнависи нав дубора рӯйхат кунед.</string>
     <string name="market_listings_remove_title">Ин эълонро хориҷ кардан?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">Ин музоядаро бекор мекунад ва ба %1$d иштирокчии фаъол хабар медиҳад. Эълон аз харидорон пинҳон карда мешавад; баъдтар шумо метавонед онро ҳамчун лоиҳаи нав аз нав ҷойгир кунед.</item>
-        <item quantity="other">Ин музоядаро бекор мекунад ва ба %1$d иштирокчии фаъол хабар медиҳад. Эълон аз харидорон пинҳон карда мешавад; баъдтар шумо метавонед онро ҳамчун лоиҳаи нав аз нав ҷойгир кунед.</item>
+        <item quantity="one">Ин музоядаро бекор мекунад ва ба %1$s иштирокчии фаъол хабар медиҳад. Эълон аз харидорон пинҳон карда мешавад; баъдтар шумо метавонед онро ҳамчун лоиҳаи нав аз нав ҷойгир кунед.</item>
+        <item quantity="other">Ин музоядаро бекор мекунад ва ба %1$s иштирокчии фаъол хабар медиҳад. Эълон аз харидорон пинҳон карда мешавад; баъдтар шумо метавонед онро ҳамчун лоиҳаи нав аз нав ҷойгир кунед.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">Ин дар охири давраи пардохти ҷорӣ %1$d обунаи фаъолро бекор мекунад. Ба обуначиён хабар дода мешавад. Эълон аз харидорон пинҳон карда мешавад.</item>
-        <item quantity="other">Ин дар охири давраи пардохти ҷорӣ %1$d обунаи фаъолро бекор мекунад. Ба обуначиён хабар дода мешавад. Эълон аз харидорон пинҳон карда мешавад.</item>
+        <item quantity="one">Ин дар охири давраи пардохти ҷорӣ %1$s обунаи фаъолро бекор мекунад. Ба обуначиён хабар дода мешавад. Эълон аз харидорон пинҳон карда мешавад.</item>
+        <item quantity="other">Ин дар охири давраи пардохти ҷорӣ %1$s обунаи фаъолро бекор мекунад. Ба обуначиён хабар дода мешавад. Эълон аз харидорон пинҳон карда мешавад.</item>
     </plurals>
 </resources>

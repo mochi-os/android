@@ -202,8 +202,8 @@
     <string name="forums_saved_empty_subtitle">ਕਿਸੇ ਵੀ ਪੋਸਟ ਨੂੰ ਇੱਥੇ ਬਾਅਦ ਲਈ ਸੰਭਾਲਣ ਲਈ ਉਸ ਦੇ ਬੁੱਕਮਾਰਕ \'ਤੇ ਟੈਪ ਕਰੋ।</string>
     <string name="forums_saved_error_clear">ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ ਸਾਫ਼ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d ਨਵੀਂ ਪੋਸਟ</item>
-        <item quantity="other">%d ਨਵੀਆਂ ਪੋਸਟਾਂ</item>
+        <item quantity="one">%s ਨਵੀਂ ਪੋਸਟ</item>
+        <item quantity="other">%s ਨਵੀਆਂ ਪੋਸਟਾਂ</item>
     </plurals>
     <string name="forums_rss_feed">RSS ਫੀਡ</string>
     <string name="forums_rss_mode_posts">ਪੋਸਟਾਂ</string>
@@ -296,8 +296,8 @@
     <string name="forums_settings_unsubscribe_section">ਫੋਰਮ ਤੋਂ ਗਾਹਕੀ ਖਤਮ ਕਰੋ</string>
     <string name="forums_share_link_title">ਫੋਰਮ ਲਿੰਕ</string>
     <string name="forums_find_found_by_url">URL ਰਾਹੀਂ ਮਿਲਿਆ</string>
-    <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ (%1$d)</string>
-    <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ (%1$d)</string>
+    <string name="forums_moderation_pending_posts">ਬਕਾਇਆ ਪੋਸਟਾਂ (%1$s)</string>
+    <string name="forums_moderation_pending_comments">ਬਕਾਇਆ ਟਿੱਪਣੀਆਂ (%1$s)</string>
     <string name="forums_moderation_on_image">ਤਸਵੀਰ \'ਤੇ: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">ਇਸ ਫੋਰਮ ਵਿੱਚ ਪੋਸਟ ਕਰਨ ਦੀ ਤੁਹਾਨੂੰ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ</string>

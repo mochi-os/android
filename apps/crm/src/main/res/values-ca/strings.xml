@@ -133,7 +133,7 @@
     <string name="crm_tree_empty">Cap objecte</string>
     <string name="crm_board_no_columns">No hi ha columnes configurades per a aquesta vista</string>
     <string name="crm_board_no_options">No hi ha opcions configurades per al camp de columna</string>
-    <string name="crm_board_nested_count">+%1$d imbricats</string>
+    <string name="crm_board_nested_count">+%1$s imbricats</string>
     <string name="crm_move_to_column">Mou a la columna</string>
     <string name="crm_move_to_row">Mou a la fila</string>
     <string name="crm_move_after">Després de %1$s</string>
@@ -289,7 +289,7 @@
     <string name="crm_export_saved">Dades del CRM desades</string>
     <string name="crm_create_upload_json">Carrega un fitxer .zip o .json</string>
     <string name="crm_create_blocked_no_options">No es pot crear: %1$s és obligatori però no té opcions per triar. Afegeix opcions a Disseny.</string>
-    <string name="crm_design_sample">Mostra %1$d</string>
+    <string name="crm_design_sample">Mostra %1$s</string>
     <string name="crm_option_delete_title">Suprimeix l\'opció</string>
     <string name="crm_option_delete_message">Esteu segur que voleu eliminar l\'opció \"%1$s\"?</string>
 </resources>

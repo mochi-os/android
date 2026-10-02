@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">ಶಾಶ್ವತವಾಗಿ</string>
     <string name="calendars_reminder_time">ಈವೆಂಟ್‌ನ ಸಮಯದಲ್ಲಿ</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d ನಿಮಿಷ ಮೊದಲು</item>
-        <item quantity="other">%1$d ನಿಮಿಷಗಳ ಮೊದಲು</item>
+        <item quantity="one">%1$s ನಿಮಿಷ ಮೊದಲು</item>
+        <item quantity="other">%1$s ನಿಮಿಷಗಳ ಮೊದಲು</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d ಗಂಟೆ ಮೊದಲು</item>
-        <item quantity="other">%1$d ಗಂಟೆಗಳ ಮೊದಲು</item>
+        <item quantity="one">%1$s ಗಂಟೆ ಮೊದಲು</item>
+        <item quantity="other">%1$s ಗಂಟೆಗಳ ಮೊದಲು</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d ದಿನ ಮೊದಲು</item>
-        <item quantity="other">%1$d ದಿನಗಳ ಮೊದಲು</item>
+        <item quantity="one">%1$s ದಿನ ಮೊದಲು</item>
+        <item quantity="other">%1$s ದಿನಗಳ ಮೊದಲು</item>
     </plurals>
     <string name="calendars_reminder_add">ಜ್ಞಾಪನೆ ಸೇರಿಸಿ</string>
     <string name="calendars_reminder_remove">ಜ್ಞಾಪನೆ ತೆಗೆದುಹಾಕಿ</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">ಕ್ಯಾಲೆಂಡರ್ ತುಂಬಾ ದೊಡ್ಡದಾಗಿದೆ</string>
     <string name="calendars_poll_invalid">ವಿಳಾಸವು ಕ್ಯಾಲೆಂಡರ್ ಅನ್ನು ಹಿಂತಿರುಗಿಸಲಿಲ್ಲ</string>
     <string name="calendars_poll_unreachable">ವಿಳಾಸವನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
-    <string name="calendars_poll_status">ವಿಳಾಸವು %1$d ಎಂದು ಉತ್ತರಿಸಿತು</string>
+    <string name="calendars_poll_status">ವಿಳಾಸವು %1$s ಎಂದು ಉತ್ತರಿಸಿತು</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d ನಿಮಿಷ</item>
-        <item quantity="other">%1$d ನಿಮಿಷಗಳು</item>
+        <item quantity="one">%1$s ನಿಮಿಷ</item>
+        <item quantity="other">%1$s ನಿಮಿಷಗಳು</item>
     </plurals>
     <string name="calendars_preferences_zones">ಈವೆಂಟ್‌ಗಳನ್ನು ಅವುಗಳ ಸ್ವಂತ ಸಮಯ ವಲಯದಲ್ಲಿ ತೋರಿಸಿ</string>
     <string name="calendars_event_backwards">ಆರಂಭವಾಗುವ ಮೊದಲೇ ಕೊನೆಗೊಳ್ಳುತ್ತದೆ</string>

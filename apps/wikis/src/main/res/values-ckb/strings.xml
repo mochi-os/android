@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">ئاگادارکردنەوە دەربارەی دەستکاری لاپەڕەی wiki، لێدوان و بانگهێشتنامەکان.</string>
     <string name="wikis_pageview_toc_expand">پێڕستی ناوەڕۆک پیشان بدە</string>
     <string name="wikis_pageview_toc_collapse">پێڕستی ناوەڕۆک بشارەوە</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">نوێکرایەوە %1$s</string>
     <string name="wikis_pageview_not_found_description">لاپەڕەی “%1$s” هێشتا بوونی نییە.</string>
     <string name="wikis_pageview_share_chooser">بەستەری ویکی</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">خەریکی سڕینەوەی لاپەڕەی “%1$s” (%2$s) یت. ئەم کردارە دەکرێت لە ڕێگەی گەڕاندنەوە لە مێژوو هەڵبوەشێنرێتەوە.</string>
     <string name="wikis_delete_page_success">پەڕە سڕایەوە</string>
     <string name="wikis_revert_page_title">گەڕاندنەوەی پەڕە</string>
-    <string name="wikis_revert_page_message">خەریکی گەڕاندنەوەی %1$s بۆ وەشانی %2$d یت. ئەمە پێداچوونەوەیەکی نوێ بە ناوەڕۆکی وەشانی %2$d دروست دەکات.</string>
-    <string name="wikis_revert_page_default_comment">گەڕایەوە بۆ وەشانی %1$d</string>
-    <string name="wikis_revert_page_success">گەڕایەوە بۆ وەشانی %1$d</string>
+    <string name="wikis_revert_page_message">خەریکی گەڕاندنەوەی %1$s بۆ وەشانی %2$s یت. ئەمە پێداچوونەوەیەکی نوێ بە ناوەڕۆکی وەشانی %2$s دروست دەکات.</string>
+    <string name="wikis_revert_page_default_comment">گەڕایەوە بۆ وەشانی %1$s</string>
+    <string name="wikis_revert_page_success">گەڕایەوە بۆ وەشانی %1$s</string>
     <string name="wikis_rename_page_renaming">ناو دەگۆڕدرێت…</string>
     <string name="wikis_rename_page_success">ناوی پەڕە گۆڕدرا</string>
-    <string name="wikis_history_viewing">بینینی مێژووی %1$s، وەشانی ئێستا %2$d</string>
-    <string name="wikis_revision_version_badge">وەشانی %1$d</string>
+    <string name="wikis_history_viewing">بینینی مێژووی %1$s، وەشانی ئێستا %2$s</string>
+    <string name="wikis_revision_version_badge">وەشانی %1$s</string>
     <string name="wikis_search_pages_placeholder">گەڕان بەدوای لاپەڕەکاندا بە ناونیشان یان ناوەڕۆک…</string>
     <string name="wikis_search_no_results">هیچ لاپەڕەیەک بۆ “%1$s” نەدۆزرایەوە. وشەی گەڕانی جیاواز تاقی بکەرەوە.</string>
     <string name="wikis_search_updated">نوێکرایەوە %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">بەپێی %1$s</string>
     <string name="wikis_revision_show_page">پیشاندانی لاپەڕە</string>
     <string name="wikis_revision_compare_failed">نەتوانرا وەشانی پێشوو بۆ بەراوردکردن بار بکرێت.</string>
-    <string name="wikis_revision_changes_from">گۆڕانکارییەکان لە وەشانی %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">گۆڕانکارییەکان لە وەشانی %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d لێدوان</item>
-        <item quantity="other">%d لێدوان</item>
+        <item quantity="one">%s لێدوان</item>
+        <item quantity="other">%s لێدوان</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d وەڵام</item>
-        <item quantity="other">+%d وەڵامی زیاتر</item>
+        <item quantity="one">%s وەڵام</item>
+        <item quantity="other">+%s وەڵامی زیاتر</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d لاپەڕە</item>
-        <item quantity="other">%d لاپەڕە</item>
+        <item quantity="one">%s لاپەڕە</item>
+        <item quantity="other">%s لاپەڕە</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d فایل</item>
-        <item quantity="other">%d فایل</item>
+        <item quantity="one">%s فایل</item>
+        <item quantity="other">%s فایل</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d وێنە</item>
-        <item quantity="other">%d وێنە</item>
+        <item quantity="one">%s وێنە</item>
+        <item quantity="other">%s وێنە</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d بەڵگە</item>
-        <item quantity="other">%d بەڵگە</item>
+        <item quantity="one">%s بەڵگە</item>
+        <item quantity="other">%s بەڵگە</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d لاپەڕە بەم تاگە</item>
-        <item quantity="other">%d لاپەڕە بەم تاگە</item>
+        <item quantity="one">%s لاپەڕە بەم تاگە</item>
+        <item quantity="other">%s لاپەڕە بەم تاگە</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">%1$d ئەنجام بۆ \"%2$s\" دۆزرایەوە</item>
-        <item quantity="other">%1$d ئەنجام بۆ \"%2$s\" دۆزرایەوە</item>
+        <item quantity="one">%1$s ئەنجام بۆ \"%2$s\" دۆزرایەوە</item>
+        <item quantity="other">%1$s ئەنجام بۆ \"%2$s\" دۆزرایەوە</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">پاشەکەوتکردنی ژێرنووس سەرکەوتوو نەبوو</string>
     <string name="wikis_attachments_upload_types">فایلە پشتگیریکراوەکان: وێنە، PDF، DOC، DOCX، TXT، و MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">URLی نوێی RSS لەبەر کرایەوە بۆ کلیپ بۆرد</string>
     <string name="wikis_rss_exists">ئەم URLـەی هەواڵنامە پێشتر دەرکراوە و ناتوانرێت دووبارە پیشان بدرێت.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">پیشاندانی یەکەم %1$d لێدوان.</item>
-        <item quantity="other">پیشاندانی یەکەم %1$d لێدوان.</item>
+        <item quantity="one">پیشاندانی یەکەم %1$s لێدوان.</item>
+        <item quantity="other">پیشاندانی یەکەم %1$s لێدوان.</item>
     </plurals>
 </resources>

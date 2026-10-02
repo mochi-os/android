@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">gjorde en ändring</string>
     <string name="projects_attachment_empty">Inga bilagor</string>
     <string name="projects_attachment_default_name">bilaga</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Ny sammanslagningsbegäran</string>
     <string name="projects_request_status_closed">Stängd</string>
     <string name="projects_request_back_to_list">Tillbaka till listan</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">Kontrollerar sammanslagningsstatus…</string>
     <string name="projects_request_can_merge">Kan slås samman</string>
     <string name="projects_request_cannot_merge">Kan inte slås samman</string>
-    <string name="projects_request_ahead_behind">%1$d före, %2$d efter</string>
+    <string name="projects_request_ahead_behind">%1$s före, %2$s efter</string>
     <string name="projects_request_draft_notice">Detta är ett utkast. Markera som klar innan sammanslagning.</string>
     <string name="projects_request_view_diff">Visa diff</string>
     <string name="projects_request_mark_ready">Markera som klar</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">Inga kolumner konfigurerade för den här vyn</string>
     <string name="projects_board_no_options">Inga alternativ konfigurerade för kolumnfältet</string>
     <string name="projects_board_column_options">Kolumnalternativ</string>
-    <string name="projects_board_nested_count">+%1$d nästlade</string>
+    <string name="projects_board_nested_count">+%1$s nästlade</string>
     <string name="projects_move_to_column">Flytta till kolumn</string>
     <string name="projects_move_to_row">Flytta till rad</string>
     <string name="projects_move_after">Efter %1$s</string>
@@ -365,8 +365,8 @@
     <string name="projects_sort_filter_title">Sortera och filtrera</string>
     <string name="projects_create_prefix_hint">Används för läsbara ID:n som %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="one">%1$d fil med konflikt</item>
-        <item quantity="other">%1$d filer med konflikter</item>
+        <item quantity="one">%1$s fil med konflikt</item>
+        <item quantity="other">%1$s filer med konflikter</item>
     </plurals>
     <string name="projects_design_export_saved">Design sparad</string>
     <string name="projects_design_import_failed">Filen kunde inte läsas</string>
@@ -376,7 +376,7 @@
     <string name="projects_export_saved">Projektdata sparad</string>
     <string name="projects_exporting">Förbereder export…</string>
     <string name="projects_board_add_column">Lägg till kolumn</string>
-    <string name="projects_design_sample">Exempel %1$d</string>
+    <string name="projects_design_sample">Exempel %1$s</string>
     <string name="projects_option_delete_title">Ta bort alternativ</string>
     <string name="projects_option_delete_message">Är du säker på att du vill radera alternativet \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Inga objekttyper kan skapas ännu. Skapa de obligatoriska överordnade objekten först.</string>

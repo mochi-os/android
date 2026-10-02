@@ -280,6 +280,6 @@
     <string name="forums_saved_empty_title">Noch nichts gespeichert</string>
     <string name="forums_saved_error_clear">Gespeicherte Beiträge konnten nicht gelöscht werden</string>
     <string name="forums_saved_save">Für später speichern</string>
-    <string name="forums_moderation_pending_posts">Ausstehende Beiträge (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Ausstehende Kommentare (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Ausstehende Beiträge (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Ausstehende Kommentare (%1$s)</string>
 </resources>

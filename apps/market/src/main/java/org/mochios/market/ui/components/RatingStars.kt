@@ -24,6 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.mochios.market.R
+import org.mochios.android.i18n.LocalFormat
 
 /** Gold fill for rating stars, shared across listing cards and review lists. */
 internal val RatingStarGold = Color(0xFFFBBF24)
@@ -76,7 +77,7 @@ fun RatingStars(
         if (showCount && count > 0) {
             Spacer(modifier = Modifier.width(4.dp))
             Text(
-                text = stringResource(R.string.market_rating_reviews, count),
+                text = stringResource(R.string.market_rating_reviews, LocalFormat.current.formatNumber(count)),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

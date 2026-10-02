@@ -118,7 +118,7 @@ fun DisputeResponseDialog(
                         Text(
                             text = stringResource(
                                 R.string.market_dispute_dialog_attach_count,
-                                evidence.size,
+                                LocalFormat.current.formatNumber(evidence.size),
                             ),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,

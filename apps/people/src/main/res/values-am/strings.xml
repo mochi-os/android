@@ -180,8 +180,8 @@
     <string name="people_books_create">የአድራሻ ደብተር ፍጠር</string>
     <string name="people_books_delete">የአድራሻ ደብተር ሰርዝ</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s እና %2$d እውቂያው ይሰረዙ?</item>
-        <item quantity="other">%1$s እና %2$d እውቂያዎቹ ይሰረዙ?</item>
+        <item quantity="one">%1$s እና %2$s እውቂያው ይሰረዙ?</item>
+        <item quantity="other">%1$s እና %2$s እውቂያዎቹ ይሰረዙ?</item>
     </plurals>
     <string name="people_welcome_body">በMochi ላይ ጓደኞችን ያግኙ እና ይገናኙ። ግብዣ ለመላክ እውቂያ አክል የሚለውን ይንኩ።</string>
     <string name="people_person_state_contact">በእውቂያዎች ውስጥ</string>

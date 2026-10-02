@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">I-delete</string>
     <string name="go_delete_message">Tatanggalin ang larong ito sa iyong listahan. Hindi ito mababawi.</string>
     <string name="go_delete_title">I-delete ang laro?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Tanggapin</string>
     <string name="go_draw_decline">Tanggihan</string>
     <string name="go_draw_offered_received">Nag-alok ng draw si %1$s</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Sumuko</string>
     <string name="go_new_game_title">Bagong laro ng Go</string>
     <string name="go_new_game_no_friends">Kailangan mong magdagdag ng kaibigan bago ka makapagsimula ng laro.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Mga puntos na idinaragdag sa iskor ng Puti upang mabayaran ang pag-una ng Itim</string>
 
-    <string name="go_board_a11y">%1$d×%1$d na Go board</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d na Go board, iyong turno na maglagay ng itim na bato</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d na Go board, iyong turno na maglagay ng puting bato</string>
+    <string name="go_board_a11y">%1$s×%1$s na Go board</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s na Go board, iyong turno na maglagay ng itim na bato</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s na Go board, iyong turno na maglagay ng puting bato</string>
     <string name="go_status_scoring">Pagbibilang — magkasundo sa iskor o magpatuloy sa paglalaro</string>
     <string name="go_score_proposed">Iminungkahing score: itim %1$s, puti %2$s</string>
     <string name="go_score_opponent_accepted">Tinatanggap ng kalaban mo ang score na ito: itim %1$s, puti %2$s</string>

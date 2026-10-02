@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">بازاڕ</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ژیاننامە</string>
     <string name="market_account_biography_placeholder">باسی خۆت بۆ کڕیاران بکە…</string>
     <string name="market_account_load_failed">نەتوانرا ئەکاونتەکە بار بکرێت</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">نرخی زیاتر</string>
     <string name="market_bids_tab_won">براوە</string>
     <string name="market_bids_title">نرخەکان</string>
-    <string name="market_carousel_main">وێنە %1$d لە %2$d</string>
+    <string name="market_carousel_main">وێنە %1$s لە %2$s</string>
     <string name="market_channel_name">بازاڕ</string>
     <string name="market_chargeback_reason_bank_cannot_process">بانک نەیتوانی پرۆسێس بکات</string>
     <string name="market_chargeback_reason_check_returned">چێک گەڕاوەتەوە</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">نوێکراوە</string>
     <string name="market_editor_condition_used">بەکارهاتوو</string>
     <string name="market_editor_currency">دراو</string>
-    <string name="market_editor_days">%1$d ڕۆژ</string>
+    <string name="market_editor_days">%1$s ڕۆژ</string>
     <string name="market_editor_delete">لیست بسڕەوە</string>
     <string name="market_editor_description">وەسف</string>
     <string name="market_editor_interval_monthly">مانگانە</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">کڕینەکان</string>
     <string name="market_rating_label">هەڵسەنگاندن</string>
     <string name="market_rating_no_reviews">هێشتا هیچ هەڵسەنگاندنێک نییە</string>
-    <string name="market_rating_reviews">(%1$d پێداچوونەوە)</string>
+    <string name="market_rating_reviews">(%1$s پێداچوونەوە)</string>
     <string name="market_refund_amount_label">بڕ</string>
     <string name="market_refund_body">هۆکارێک بدۆزەرەوە بۆ داواکاری گەڕاندنەوەی پارەکەت.</string>
     <string name="market_refund_details_label">وردەکارییەکان</string>
@@ -489,12 +489,12 @@
     <string name="market_bids_current_bid">ئێستا: %1$s</string>
     <string name="market_bids_ends_in">کۆتایی دێت لە %1$s</string>
     <string name="market_bids_your_bid">نرخی تۆ: %1$s</string>
-    <string name="market_carousel_thumbnail">وێنۆچکە %1$d</string>
+    <string name="market_carousel_thumbnail">وێنۆچکە %1$s</string>
     <string name="market_checkout_browser_unavailable">هیچ وێبگەڕێک بەردەست نییە بۆ کردنەوەی پەڕەی پارەدان</string>
     <string name="market_checkout_pwyw_label">نرخی تۆ (کەمترین %1$s)</string>
     <string name="market_checkout_pwyw_min_error">بڕەکە دەبێت بەلایەنی کەمەوە %1$s بێت</string>
     <string name="market_checkout_subscribing">بەشداربوون…</string>
-    <string name="market_dispute_dialog_attach_count">%1$d فایل هاوپێچکراوە</string>
+    <string name="market_dispute_dialog_attach_count">%1$s فایل هاوپێچکراوە</string>
     <string name="market_dispute_dialog_evidence_section_title">بەڵگەی پێشکەشکراو</string>
     <string name="market_dispute_dialog_evidence_submitter_line">پێشکەشکراو لەلایەن %1$s</string>
     <string name="market_editor_appeal">پێداچوونەوەی چاودێری</string>
@@ -551,7 +551,7 @@
     <string name="market_listing_detail_loading">بارکردنی لیستکردن</string>
     <string name="market_listing_detail_relist_failed">نەتوانرا دووبارە لیست بکرێت</string>
     <string name="market_listing_detail_relist_in_progress">دانانەوە</string>
-    <string name="market_listing_detail_sales_count">%1$d فرۆشتن</string>
+    <string name="market_listing_detail_sales_count">%1$s فرۆشتن</string>
     <string name="market_listing_detail_seller_banned_banner">ئەم فرۆشیارە قەدەغەکراوە. ناتوانرێت داواکاری نوێ تۆمار بکرێت.</string>
     <string name="market_listing_detail_seller_suspended_banner">ئەم فرۆشیارە ڕاگیراوە. داواکاری نوێ ڕاگیراون هەتا هەژمارەکە دەگەڕێتەوە.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">کڕین لەکارخراوە لەکاتێکدا هەژماری فرۆشیار سنووردارکراوە.</string>
@@ -569,7 +569,7 @@
     <string name="market_messages_inbox_empty_title">هیچ گفتوگۆیەک نییە هێشتا</string>
     <string name="market_messages_load_failed">نەتوانرا گفتوگۆکە بار بکرێت</string>
     <string name="market_messages_send_failed">نەتوانرا نامەکە بنێردرێت</string>
-    <string name="market_messages_unread_badge">%1$d نەخوێندراو</string>
+    <string name="market_messages_unread_badge">%1$s نەخوێندراو</string>
     <string name="market_price_high_bid">بەرزترین داوا: %1$s</string>
     <string name="market_price_instant_buy">کڕینی دەستبەجێ: %1$s</string>
     <string name="market_price_starting_bid">داوای دەستپێک: %1$s</string>
@@ -577,12 +577,12 @@
     <string name="market_profile_member_since">ئەندام لە %1$s</string>
     <string name="market_profile_joined">بەشداری کرد لە %1$s</string>
     <string name="market_profile_rating_breakdown">وردەکاری هەڵسەنگاندن</string>
-    <string name="market_profile_sales_count">%1$d فرۆشتن</string>
-    <string name="market_profile_stars_value">%1$d ئەستێرە</string>
+    <string name="market_profile_sales_count">%1$s فرۆشتن</string>
+    <string name="market_profile_stars_value">%1$s ئەستێرە</string>
     <string name="market_purchase_dispute_chargeback">گەڕاندنەوەی پارە %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">بانکەکەت داوای گەڕاندنەوەی پارەی ئەم داواکارییەی تۆمار کردووە. Stripe خەریکی چارەسەرکردنی کێشەکەیە لەگەڵ فرۆشیار؛ ئەنجامەکە لێرە دەردەکەوێت کاتێک بڕیاری لێدرا.</string>
     <string name="market_purchase_dispute_response">وەڵامی فرۆشیار</string>
-    <string name="market_purchase_download_many">%1$d فایلەکانت لە خوارەوە داگرە.</string>
+    <string name="market_purchase_download_many">%1$s فایلەکانت لە خوارەوە داگرە.</string>
     <string name="market_purchase_download_one">فایلەکەت لە خوارەوە داگرە.</string>
     <string name="market_purchase_review_from">پێداچوونەوە لە %1$s</string>
     <string name="market_purchases_auction_label">مزایەدە #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">ئەمە مەزاد هەڵدەوەشێنێتەوە. لیست لە کڕیاران شاراوە دەبێت؛ دەتوانیت دواتر وەک ڕەشنووسێکی نوێ دیسان لیستی بکەیتەوە.</string>
     <string name="market_listings_remove_title">ئەم لیستە لاببەیت؟</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">ئەمە مەزادەکە هەڵدەوەشێنێتەوە و %1$d نرخدانەری چالاک ئاگادار دەکاتەوە. ڕیزبەندییەکە لە کڕیاران دەشاردرێتەوە؛ دواتر دەتوانیت وەک ڕەشنووسێکی نوێ دووبارە دایبنێیتەوە.</item>
-        <item quantity="other">ئەمە مەزادەکە هەڵدەوەشێنێتەوە و %1$d نرخدانەری چالاک ئاگادار دەکاتەوە. ڕیزبەندییەکە لە کڕیاران دەشاردرێتەوە؛ دواتر دەتوانیت وەک ڕەشنووسێکی نوێ دووبارە دایبنێیتەوە.</item>
+        <item quantity="one">ئەمە مەزادەکە هەڵدەوەشێنێتەوە و %1$s نرخدانەری چالاک ئاگادار دەکاتەوە. ڕیزبەندییەکە لە کڕیاران دەشاردرێتەوە؛ دواتر دەتوانیت وەک ڕەشنووسێکی نوێ دووبارە دایبنێیتەوە.</item>
+        <item quantity="other">ئەمە مەزادەکە هەڵدەوەشێنێتەوە و %1$s نرخدانەری چالاک ئاگادار دەکاتەوە. ڕیزبەندییەکە لە کڕیاران دەشاردرێتەوە؛ دواتر دەتوانیت وەک ڕەشنووسێکی نوێ دووبارە دایبنێیتەوە.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">ئەمە %1$d بەشداریکردنی چالاک لە کۆتایی ماوەی پارەدانی ئێستادا هەڵدەوەشێنێتەوە. بەشداربووان ئاگادار دەکرێنەوە. ڕیزبەندییەکە لە کڕیاران دەشاردرێتەوە.</item>
-        <item quantity="other">ئەمە %1$d بەشداریکردنی چالاک لە کۆتایی ماوەی پارەدانی ئێستادا هەڵدەوەشێنێتەوە. بەشداربووان ئاگادار دەکرێنەوە. ڕیزبەندییەکە لە کڕیاران دەشاردرێتەوە.</item>
+        <item quantity="one">ئەمە %1$s بەشداریکردنی چالاک لە کۆتایی ماوەی پارەدانی ئێستادا هەڵدەوەشێنێتەوە. بەشداربووان ئاگادار دەکرێنەوە. ڕیزبەندییەکە لە کڕیاران دەشاردرێتەوە.</item>
+        <item quantity="other">ئەمە %1$s بەشداریکردنی چالاک لە کۆتایی ماوەی پارەدانی ئێستادا هەڵدەوەشێنێتەوە. بەشداربووان ئاگادار دەکرێنەوە. ڕیزبەندییەکە لە کڕیاران دەشاردرێتەوە.</item>
     </plurals>
 </resources>

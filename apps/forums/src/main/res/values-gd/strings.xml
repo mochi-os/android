@@ -202,10 +202,10 @@
     <string name="forums_saved_empty_subtitle">Thoir gnogag air a\' chomharra-lìn air post sam bith gus a shàbhaladh an seo airson às dèidh seo.</string>
     <string name="forums_saved_error_clear">Cha b\' urrainn na postaichean sàbhailte fhalamhachadh</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d phost ùr</item>
-        <item quantity="two">%d phost ùr</item>
-        <item quantity="few">%d postaichean ùra</item>
-        <item quantity="other">%d post ùr</item>
+        <item quantity="one">%s phost ùr</item>
+        <item quantity="two">%s phost ùr</item>
+        <item quantity="few">%s postaichean ùra</item>
+        <item quantity="other">%s post ùr</item>
     </plurals>
     <string name="forums_rss_feed">Sruth RSS</string>
     <string name="forums_rss_mode_posts">Postaichean</string>
@@ -298,8 +298,8 @@
     <string name="forums_settings_unsubscribe_section">Dì-chlàraich bhon fhòram</string>
     <string name="forums_share_link_title">Ceangal an fhòraim</string>
     <string name="forums_find_found_by_url">Air a lorg le URL</string>
-    <string name="forums_moderation_pending_posts">Puist rin dèiligeadh (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Beachdan rin dèiligeadh (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Puist rin dèiligeadh (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Beachdan rin dèiligeadh (%1$s)</string>
     <string name="forums_moderation_on_image">Air dealbh: %1$s</string>
     <string name="forums_sort_ai">AI</string>
     <string name="forums_reject_post_access">Chan eil cead agad postadh anns an fhòram seo</string>

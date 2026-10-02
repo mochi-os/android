@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">מתחבר מחדש…</string>
     <string name="chess_ws_failed">ההתחברות נכשלה</string>
     <string name="chess_move_capture">%1$s לקח %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">%1$s לבן</string>
     <string name="chess_piece_black">%1$s שחור</string>

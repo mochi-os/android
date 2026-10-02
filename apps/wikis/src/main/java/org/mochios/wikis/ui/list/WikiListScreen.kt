@@ -393,7 +393,7 @@ private fun WikiCard(
     // claiming an edit at the epoch. Both strings are borrowed from the tags
     // and search screens: their wording is exactly this, and a new key would
     // have to be translated into 103 catalogues before `make locales` passed.
-    val pagesLabel = pluralStringResource(R.plurals.wikis_tags_count, wiki.pages, wiki.pages)
+    val pagesLabel = pluralStringResource(R.plurals.wikis_tags_count, wiki.pages, LocalFormat.current.formatNumber(wiki.pages))
     val subtitle = if (wiki.updated > 0) {
         val whenLabel = LocalFormat.current.formatTimestamp(wiki.updated)
         "$pagesLabel · " + stringResource(R.string.wikis_search_updated, whenLabel)

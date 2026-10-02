@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Supprimer</string>
     <string name="go_delete_message">Cette partie sera retirée de votre liste. Cette action est irréversible.</string>
     <string name="go_delete_title">Supprimer la partie ?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Accepter</string>
     <string name="go_draw_decline">Refuser</string>
     <string name="go_draw_offered_received">%1$s a proposé la nulle</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Abandonnée</string>
     <string name="go_new_game_title">Nouvelle partie de Go</string>
     <string name="go_new_game_no_friends">Vous devez ajouter un ami avant de pouvoir commencer une partie.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Points ajoutés au score de Blanc pour compenser le fait que Noir joue en premier</string>
 
-    <string name="go_board_a11y">Plateau de Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">Plateau de Go %1$d×%1$d, à vous de poser une pierre noire</string>
-    <string name="go_board_a11y_turn_white">Plateau de Go %1$d×%1$d, à vous de poser une pierre blanche</string>
+    <string name="go_board_a11y">Plateau de Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">Plateau de Go %1$s×%1$s, à vous de poser une pierre noire</string>
+    <string name="go_board_a11y_turn_white">Plateau de Go %1$s×%1$s, à vous de poser une pierre blanche</string>
     <string name="go_status_scoring">Comptage — mettez-vous d\'accord sur le score ou continuez la partie</string>
     <string name="go_score_proposed">Score proposé : noir %1$s, blanc %2$s</string>
     <string name="go_score_opponent_accepted">Votre adversaire accepte ce score : noir %1$s, blanc %2$s</string>

@@ -409,12 +409,12 @@
     <string name="market_sale_review_response_submitting">שולח…</string>
     <string name="market_checkout_subscribing">נרשם…</string>
     <string name="market_filter_remove">הסרת מסנן</string>
-    <string name="market_listing_detail_sales_count">%1$d מכירות</string>
-    <string name="market_profile_sales_count">%1$d מכירות</string>
+    <string name="market_listing_detail_sales_count">%1$s מכירות</string>
+    <string name="market_profile_sales_count">%1$s מכירות</string>
     <string name="market_purchase_dispute_response">תגובת המוכר</string>
     <string name="market_purchases_order_label">הזמנה #%1$s</string>
 
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_placeholder">ספרו לקונים על עצמכם…</string>
     <string name="market_account_load_failed">טעינת החשבון נכשלה</string>
     <string name="market_account_save_failed">שמירת השינויים נכשלה</string>
@@ -440,8 +440,8 @@
     <string name="market_bids_current_bid">נוכחי: %1$s</string>
     <string name="market_bids_ends_in">מסתיים בעוד %1$s</string>
     <string name="market_bids_your_bid">ההצעה שלך: %1$s</string>
-    <string name="market_carousel_main">תמונה %1$d מתוך %2$d</string>
-    <string name="market_carousel_thumbnail">תמונה ממוזערת %1$d</string>
+    <string name="market_carousel_main">תמונה %1$s מתוך %2$s</string>
+    <string name="market_carousel_thumbnail">תמונה ממוזערת %1$s</string>
     <string name="market_checkout_browser_unavailable">אין דפדפן זמין לפתיחת דף התשלום</string>
     <string name="market_checkout_pay_button">לתשלום עם Stripe</string>
     <string name="market_checkout_processing">מעבד…</string>
@@ -450,7 +450,7 @@
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
     <string name="market_dispute_dialog_attach">צרף ראיות</string>
-    <string name="market_dispute_dialog_attach_count">%1$d קבצים מצורפים</string>
+    <string name="market_dispute_dialog_attach_count">%1$s קבצים מצורפים</string>
     <string name="market_dispute_dialog_evidence_role_staff">צוות Mochi</string>
     <string name="market_dispute_dialog_evidence_section_title">ראיות שהוגשו</string>
     <string name="market_dispute_dialog_evidence_submitter_line">הוגש על ידי %1$s</string>
@@ -464,7 +464,7 @@
     <string name="market_editor_asset_external_url">כתובת URL לעיון</string>
     <string name="market_editor_assets_empty">אין נכסים עדיין</string>
     <string name="market_editor_category_none">בחר קטגוריה</string>
-    <string name="market_editor_days">%1$d ימים</string>
+    <string name="market_editor_days">%1$s ימים</string>
     <string name="market_editor_delete">מחק מודעה</string>
     <string name="market_editor_delete_confirm_message">פעולה זו תמחק את המודעה לצמיתות.</string>
     <string name="market_editor_delete_confirm_title">למחוק את המודעה?</string>
@@ -556,7 +556,7 @@
     <string name="market_messages_load_failed">לא ניתן היה לטעון את השרשור</string>
     <string name="market_messages_send_failed">לא ניתן היה לשלוח את ההודעה</string>
     <string name="market_messages_thread_title">שיחה</string>
-    <string name="market_messages_unread_badge">%1$d לא נקראו</string>
+    <string name="market_messages_unread_badge">%1$s לא נקראו</string>
     <string name="market_price_from">החל מ-%1$s</string>
     <string name="market_price_high_bid">הצעה גבוהה: %1$s</string>
     <string name="market_price_instant_buy">קנייה מיידית: %1$s</string>
@@ -569,16 +569,16 @@
     <string name="market_profile_joined">הצטרף ב-%1$s</string>
     <string name="market_profile_no_reviews">אין ביקורות עדיין.</string>
     <string name="market_profile_rating_breakdown">פירוט דירוג</string>
-    <string name="market_profile_stars_value">%1$d כוכבים</string>
+    <string name="market_profile_stars_value">%1$s כוכבים</string>
     <string name="market_purchase_dispute_chargeback">ביטול חיוב %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">הבנק שלכם הגיש ביטול חיוב על הזמנה זו. Stripe מטפלת בסכסוך מול המוכר; התוצאה תופיע כאן כשהיא תוכרע.</string>
-    <string name="market_purchase_download_many">הורידו את %1$d הקבצים שלכם להלן.</string>
+    <string name="market_purchase_download_many">הורידו את %1$s הקבצים שלכם להלן.</string>
     <string name="market_purchase_download_one">הורידו את הקובץ שלכם להלן.</string>
     <string name="market_purchase_review_from">ביקורת מאת %1$s</string>
     <string name="market_purchases_auction_label">מכירה פומבית #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s זוכה</string>
     <string name="market_purchases_won_for">נרכש ב-%1$s</string>
-    <string name="market_rating_reviews">(%1$d ביקורות)</string>
+    <string name="market_rating_reviews">(%1$s ביקורות)</string>
     <string name="market_refund_amount_label">סכום</string>
     <string name="market_refund_dialog_amount_help">השאר ריק כדי להחזיר את מלוא ההזמנה.</string>
     <string name="market_refund_dialog_amount_label">סכום</string>
@@ -785,13 +785,13 @@
     <string name="market_listings_remove_message_auction">פעולה זו תבטל את המכירה הפומבית. הרישום יוסתר מקונים; תוכל לרשום אותו שוב מאוחר יותר כטיוטה חדשה.</string>
     <string name="market_listings_remove_title">להסיר רישום זה?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">פעולה זו תבטל את המכירה הפומבית ותודיע ל%1$d מציע פעיל. המודעה תוסתר מקונים; אפשר לפרסם אותה מחדש מאוחר יותר כטיוטה חדשה.</item>
-        <item quantity="two">פעולה זו תבטל את המכירה הפומבית ותודיע ל%1$d מציעים פעילים. המודעה תוסתר מקונים; אפשר לפרסם אותה מחדש מאוחר יותר כטיוטה חדשה.</item>
-        <item quantity="other">פעולה זו תבטל את המכירה הפומבית ותודיע ל%1$d מציעים פעילים. המודעה תוסתר מקונים; אפשר לפרסם אותה מחדש מאוחר יותר כטיוטה חדשה.</item>
+        <item quantity="one">פעולה זו תבטל את המכירה הפומבית ותודיע ל%1$s מציע פעיל. המודעה תוסתר מקונים; אפשר לפרסם אותה מחדש מאוחר יותר כטיוטה חדשה.</item>
+        <item quantity="two">פעולה זו תבטל את המכירה הפומבית ותודיע ל%1$s מציעים פעילים. המודעה תוסתר מקונים; אפשר לפרסם אותה מחדש מאוחר יותר כטיוטה חדשה.</item>
+        <item quantity="other">פעולה זו תבטל את המכירה הפומבית ותודיע ל%1$s מציעים פעילים. המודעה תוסתר מקונים; אפשר לפרסם אותה מחדש מאוחר יותר כטיוטה חדשה.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">פעולה זו תבטל %1$d מינוי פעיל בסוף תקופת החיוב הנוכחית. המנויים יקבלו הודעה. המודעה תוסתר מקונים.</item>
-        <item quantity="two">פעולה זו תבטל %1$d מינויים פעילים בסוף תקופת החיוב הנוכחית. המנויים יקבלו הודעה. המודעה תוסתר מקונים.</item>
-        <item quantity="other">פעולה זו תבטל %1$d מינויים פעילים בסוף תקופת החיוב הנוכחית. המנויים יקבלו הודעה. המודעה תוסתר מקונים.</item>
+        <item quantity="one">פעולה זו תבטל %1$s מינוי פעיל בסוף תקופת החיוב הנוכחית. המנויים יקבלו הודעה. המודעה תוסתר מקונים.</item>
+        <item quantity="two">פעולה זו תבטל %1$s מינויים פעילים בסוף תקופת החיוב הנוכחית. המנויים יקבלו הודעה. המודעה תוסתר מקונים.</item>
+        <item quantity="other">פעולה זו תבטל %1$s מינויים פעילים בסוף תקופת החיוב הנוכחית. המנויים יקבלו הודעה. המודעה תוסתר מקונים.</item>
     </plurals>
 </resources>

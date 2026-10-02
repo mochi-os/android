@@ -54,7 +54,7 @@
     <string name="chess_piece_knight">Kuda</string>
     <string name="chess_piece_pawn">Pion</string>
     <string name="chess_move_played">%1$s memainkan %2$s</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_channel_description">Notifikasi tentang langkah catur, tawaran remis, dan hasil pertandingan.</string>
     <string name="chess_channel_name">Notifikasi catur</string>
     <string name="chess_delete_message">Menghapus permainan dari daftar Anda.</string>

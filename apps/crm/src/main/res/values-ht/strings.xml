@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Pa gen objè</string>
     <string name="crm_board_no_columns">Pa gen kolòn konfigire pou vi sa a</string>
     <string name="crm_board_no_options">Pa gen opsyon konfigire pou chan kolòn</string>
-    <string name="crm_board_nested_count">+%1$d nich</string>
+    <string name="crm_board_nested_count">+%1$s nich</string>
     <string name="crm_move_to_column">Deplase nan kolòn</string>
     <string name="crm_move_to_row">Deplase nan ranje</string>
     <string name="crm_move_after">Apre %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Done CRM anrejistre</string>
     <string name="crm_create_upload_json">Telechaje yon fichye .zip oswa .json</string>
     <string name="crm_create_blocked_no_options">Pa ka kreye: %1$s obligatwa men li pa gen opsyon pou chwazi. Ajoute opsyon nan Konsèp.</string>
-    <string name="crm_design_sample">Echantiyon %1$d</string>
+    <string name="crm_design_sample">Echantiyon %1$s</string>
     <string name="crm_option_delete_title">Efase opsyon</string>
     <string name="crm_option_delete_message">Èske ou sèten ou vle efase opsyon \"%1$s\"?</string>
 </resources>

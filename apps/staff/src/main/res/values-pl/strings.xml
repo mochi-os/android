@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Notatki</string>
     <string name="staff_accounts_reason_label">Powód</string>
     <string name="staff_accounts_reason_optional_label">Powód (opcjonalnie)</string>
-    <string name="staff_accounts_sales">%1$d sprzedaży</string>
+    <string name="staff_accounts_sales">%1$s sprzedaży</string>
     <string name="staff_accounts_search_clear">Wyczyść wyszukiwanie</string>
     <string name="staff_accounts_search_placeholder">Szukaj</string>
     <string name="staff_accounts_seller_buyers">Tylko kupujący</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Bez nazwy</string>
     <string name="staff_accounts_unsuspend">Cofnij zawieszenie</string>
     <string name="staff_accounts_unsuspended_toast">Konto odwieszone</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Anuluj</string>
     <string name="staff_appeals_decide">Zdecyduj</string>
     <string name="staff_appeals_decision_denied">Pozostaw ogłoszenie odrzucone</string>

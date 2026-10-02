@@ -180,8 +180,8 @@
     <string name="people_books_create">Ünvan kitabçası yarat</string>
     <string name="people_books_delete">Ünvan kitabçasını sil</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s və onun %2$d kontaktı silinsin?</item>
-        <item quantity="other">%1$s və onun %2$d kontaktı silinsin?</item>
+        <item quantity="one">%1$s və onun %2$s kontaktı silinsin?</item>
+        <item quantity="other">%1$s və onun %2$s kontaktı silinsin?</item>
     </plurals>
     <string name="people_welcome_body">Mochi boyunca dostlar tapın və əlaqə qurun. Dəvət göndərmək üçün Kontakt əlavə et düyməsinə toxunun.</string>
     <string name="people_person_state_contact">Kontaktlarda</string>

@@ -181,7 +181,7 @@
     <string name="crm_tree_empty">Obyekt yoxdur</string>
     <string name="crm_board_no_columns">Bu görünüş üçün sütun konfiqurasiya edilməyib</string>
     <string name="crm_board_no_options">Sütun sahəsi üçün seçim konfiqurasiya edilməyib</string>
-    <string name="crm_board_nested_count">+%1$d daxili</string>
+    <string name="crm_board_nested_count">+%1$s daxili</string>
     <string name="crm_move_to_column">Sütuna köçür</string>
     <string name="crm_move_to_row">Sətrə köçür</string>
     <string name="crm_move_after">%1$s sonra</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM məlumatı saxlanıldı</string>
     <string name="crm_create_upload_json">.zip və ya .json faylı yükləyin</string>
     <string name="crm_create_blocked_no_options">Yaradıla bilmir: %1$s tələb olunur, lakin seçim üçün variantı yoxdur. Dizayn bölməsində variant əlavə edin.</string>
-    <string name="crm_design_sample">Nümunə %1$d</string>
+    <string name="crm_design_sample">Nümunə %1$s</string>
     <string name="crm_option_delete_title">Variantı sil</string>
     <string name="crm_option_delete_message">\"%1$s\" variantını silmək istədiyinizə əminsiniz?</string>
 </resources>

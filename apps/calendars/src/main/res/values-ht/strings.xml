@@ -99,13 +99,13 @@
     <string name="calendars_repeat_forever">Pou tout tan</string>
     <string name="calendars_reminder_time">Nan lè evènman an</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">%1$d minit anvan</item>
+        <item quantity="other">%1$s minit anvan</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">%1$d èdtan anvan</item>
+        <item quantity="other">%1$s èdtan anvan</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">%1$d jou anvan</item>
+        <item quantity="other">%1$s jou anvan</item>
     </plurals>
     <string name="calendars_reminder_add">Ajoute yon rapèl</string>
     <string name="calendars_reminder_remove">Retire rapèl la</string>
@@ -139,10 +139,10 @@
     <string name="calendars_poll_large">Kalandriye a twò gwo</string>
     <string name="calendars_poll_invalid">Adrès la pa bay okenn kalandriye</string>
     <string name="calendars_poll_unreachable">Pa t kapab jwenn adrès la</string>
-    <string name="calendars_poll_status">Adrès la reponn %1$d</string>
+    <string name="calendars_poll_status">Adrès la reponn %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minit</item>
-        <item quantity="other">%1$d minit</item>
+        <item quantity="one">%1$s minit</item>
+        <item quantity="other">%1$s minit</item>
     </plurals>
     <string name="calendars_preferences_zones">Montre evènman yo nan pwòp zòn lè yo</string>
     <string name="calendars_event_backwards">Li fini anvan li kòmanse</string>

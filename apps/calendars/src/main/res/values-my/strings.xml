@@ -99,13 +99,13 @@
     <string name="calendars_repeat_forever">အမြဲတမ်း</string>
     <string name="calendars_reminder_time">အစီအစဉ် စတင်ချိန်တွင်</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="other">%1$d မိနစ် အလို</item>
+        <item quantity="other">%1$s မိနစ် အလို</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="other">%1$d နာရီ အလို</item>
+        <item quantity="other">%1$s နာရီ အလို</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="other">%1$d ရက် အလို</item>
+        <item quantity="other">%1$s ရက် အလို</item>
     </plurals>
     <string name="calendars_reminder_add">သတိပေးချက် ထည့်မည်</string>
     <string name="calendars_reminder_remove">သတိပေးချက် ဖယ်ရှားမည်</string>
@@ -139,9 +139,9 @@
     <string name="calendars_poll_large">ပြက္ခဒိန် အရွယ်အစား ကြီးလွန်းသည်</string>
     <string name="calendars_poll_invalid">လိပ်စာမှ ပြက္ခဒိန် မရရှိပါ</string>
     <string name="calendars_poll_unreachable">လိပ်စာသို့ ဆက်သွယ်၍မရပါ</string>
-    <string name="calendars_poll_status">လိပ်စာမှ %1$d ဟု ပြန်ကြားသည်</string>
+    <string name="calendars_poll_status">လိပ်စာမှ %1$s ဟု ပြန်ကြားသည်</string>
     <plurals name="calendars_minutes">
-        <item quantity="other">%1$d မိနစ်</item>
+        <item quantity="other">%1$s မိနစ်</item>
     </plurals>
     <string name="calendars_preferences_zones">ပွဲများကို ၎င်းတို့၏ကိုယ်ပိုင်အချိန်ဇုန်ဖြင့် ပြရန်</string>
     <string name="calendars_event_backwards">မစတင်မီ ပြီးဆုံးသည်</string>

@@ -129,7 +129,7 @@ fun WikiCommentThread(
                         text = pluralStringResource(
                             R.plurals.wikis_comment_collapsed_replies,
                             totalDescendants,
-                            totalDescendants,
+                            LocalFormat.current.formatNumber(totalDescendants),
                         ),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.primary,

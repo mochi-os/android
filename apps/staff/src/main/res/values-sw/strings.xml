@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Maelezo</string>
     <string name="staff_accounts_reason_label">Sababu</string>
     <string name="staff_accounts_reason_optional_label">Sababu (hiari)</string>
-    <string name="staff_accounts_sales">Mauzo %1$d</string>
+    <string name="staff_accounts_sales">Mauzo %1$s</string>
     <string name="staff_accounts_search_clear">Futa utafutaji</string>
     <string name="staff_accounts_search_placeholder">Tafuta</string>
     <string name="staff_accounts_seller_buyers">Wanunuzi pekee</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Bila jina</string>
     <string name="staff_accounts_unsuspend">Ondoa kusimamishwa</string>
     <string name="staff_accounts_unsuspended_toast">Akaunti imerudishwa</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Ghairi</string>
     <string name="staff_appeals_decide">Amua</string>
     <string name="staff_appeals_decision_denied">Hifadhi orodha imekataliwa</string>

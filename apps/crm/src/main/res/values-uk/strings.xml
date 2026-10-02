@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Немає об\'єктів</string>
     <string name="crm_board_no_columns">Для цього подання не налаштовано стовпців</string>
     <string name="crm_board_no_options">Для поля стовпця не налаштовано параметрів</string>
-    <string name="crm_board_nested_count">+%1$d вкладених</string>
+    <string name="crm_board_nested_count">+%1$s вкладених</string>
     <string name="crm_move_to_column">Перемістити до стовпця</string>
     <string name="crm_move_to_row">Перемістити до рядка</string>
     <string name="crm_move_after">Після %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">Дані CRM збережено</string>
     <string name="crm_create_upload_json">Завантажте файл .zip або .json</string>
     <string name="crm_create_blocked_no_options">Не вдалося створити: %1$s обов\'язковий, але не має варіантів вибору. Додайте варіанти в Дизайні.</string>
-    <string name="crm_design_sample">Зразок %1$d</string>
+    <string name="crm_design_sample">Зразок %1$s</string>
     <string name="crm_option_delete_title">Видалити варіант</string>
     <string name="crm_option_delete_message">Ви впевнені, що хочете видалити варіант \"%1$s\"?</string>
 </resources>

@@ -220,10 +220,10 @@
     <string name="projects_activity_made_change">ໄດ້ປ່ຽນແປງ</string>
     <string name="projects_attachment_empty">ບໍ່ມີໄຟລ໌ແນບ</string>
     <string name="projects_attachment_default_name">ໄຟລ໌ແນບ</string>
-    <string name="projects_attachment_size_bytes">%1$d B</string>
-    <string name="projects_attachment_size_kb">%1$d KB</string>
-    <string name="projects_attachment_size_mb">%1$d MB</string>
-    <string name="projects_attachment_size_gb">%1$d GB</string>
+    <string name="projects_attachment_size_bytes">%1$s B</string>
+    <string name="projects_attachment_size_kb">%1$s KB</string>
+    <string name="projects_attachment_size_mb">%1$s MB</string>
+    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">ຄຳຂໍລວມໃໝ່</string>
     <string name="projects_request_status_closed">ປິດແລ້ວ</string>
     <string name="projects_request_back_to_list">ກັບໄປບັນຊີລາຍຊື່</string>
@@ -233,7 +233,7 @@
     <string name="projects_request_checking_merge">ກຳລັງກວດສອບສະຖານະການລວມ…</string>
     <string name="projects_request_can_merge">ສາມາດລວມໄດ້</string>
     <string name="projects_request_cannot_merge">ບໍ່ສາມາດລວມໄດ້</string>
-    <string name="projects_request_ahead_behind">ນຳໜ້າ %1$d, ຕາມຫຼັງ %2$d</string>
+    <string name="projects_request_ahead_behind">ນຳໜ້າ %1$s, ຕາມຫຼັງ %2$s</string>
     <string name="projects_request_draft_notice">ນີ້ແມ່ນສະບັບຮ່າງ. ໝາຍວ່າພ້ອມກ່ອນຈະລວມ.</string>
     <string name="projects_request_view_diff">ເບິ່ງຄວາມແຕກຕ່າງ</string>
     <string name="projects_request_mark_ready">ໝາຍວ່າພ້ອມ</string>
@@ -253,7 +253,7 @@
     <string name="projects_board_no_columns">ບໍ່ມີຖັນທີ່ຕັ້ງຄ່າສຳລັບມຸມມອງນີ້</string>
     <string name="projects_board_no_options">ບໍ່ມີຕົວເລືອກທີ່ຕັ້ງຄ່າສຳລັບຊ່ອງຖັນ</string>
     <string name="projects_board_column_options">ຕົວເລືອກຖັນ</string>
-    <string name="projects_board_nested_count">+%1$d ຊ້ອນ</string>
+    <string name="projects_board_nested_count">+%1$s ຊ້ອນ</string>
     <string name="projects_move_to_column">ຍ້າຍໄປຖັນ</string>
     <string name="projects_move_to_row">ຍ້າຍໄປແຖວ</string>
     <string name="projects_move_after">ຫຼັງ %1$s</string>
@@ -365,7 +365,7 @@
     <string name="projects_sort_filter_title">ຈັດຮຽງ ແລະ ກັ່ນຕອງ</string>
     <string name="projects_create_prefix_hint">ໃຊ້ສຳລັບ ID ທີ່ອ່ານໄດ້ ເຊັ່ນ %1$s-1, %1$s-2</string>
     <plurals name="projects_request_conflicts">
-        <item quantity="other">%1$d ໄຟລ໌ທີ່ຂັດແຍ້ງ</item>
+        <item quantity="other">%1$s ໄຟລ໌ທີ່ຂັດແຍ້ງ</item>
     </plurals>
     <string name="projects_design_export_saved">ບັນທຶກການອອກແບບແລ້ວ</string>
     <string name="projects_design_import_failed">ບໍ່ສາມາດອ່ານໄຟລ໌ນັ້ນໄດ້</string>
@@ -375,7 +375,7 @@
     <string name="projects_export_saved">ບັນທຶກຂໍ້ມູນໂຄງການແລ້ວ</string>
     <string name="projects_exporting">ກຳລັງກຽມການສົ່ງອອກ…</string>
     <string name="projects_board_add_column">ເພີ່ມຖັນ</string>
-    <string name="projects_design_sample">ຕົວຢ່າງ %1$d</string>
+    <string name="projects_design_sample">ຕົວຢ່າງ %1$s</string>
     <string name="projects_option_delete_title">ລົບຕົວເລືອກ</string>
     <string name="projects_option_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບຕົວເລືອກ \"%1$s\"?</string>
     <string name="projects_create_object_no_types">ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ.</string>

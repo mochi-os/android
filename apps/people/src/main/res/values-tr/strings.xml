@@ -180,8 +180,8 @@
     <string name="people_books_create">Adres defteri oluştur</string>
     <string name="people_books_delete">Adres defterini sil</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s ve içindeki %2$d kişi silinsin mi?</item>
-        <item quantity="other">%1$s ve içindeki %2$d kişi silinsin mi?</item>
+        <item quantity="one">%1$s ve içindeki %2$s kişi silinsin mi?</item>
+        <item quantity="other">%1$s ve içindeki %2$s kişi silinsin mi?</item>
     </plurals>
     <string name="people_welcome_body">Mochi genelinde arkadaşlar bulun ve bağlantı kurun. Davet göndermek için Kişi ekle öğesine dokunun.</string>
     <string name="people_person_state_contact">Kişilerde</string>

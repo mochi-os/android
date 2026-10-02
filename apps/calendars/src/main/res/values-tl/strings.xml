@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Habambuhay</string>
     <string name="calendars_reminder_time">Sa mismong oras</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minuto bago</item>
-        <item quantity="other">%1$d na minuto bago</item>
+        <item quantity="one">%1$s minuto bago</item>
+        <item quantity="other">%1$s na minuto bago</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d oras bago</item>
-        <item quantity="other">%1$d na oras bago</item>
+        <item quantity="one">%1$s oras bago</item>
+        <item quantity="other">%1$s na oras bago</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d araw bago</item>
-        <item quantity="other">%1$d na araw bago</item>
+        <item quantity="one">%1$s araw bago</item>
+        <item quantity="other">%1$s na araw bago</item>
     </plurals>
     <string name="calendars_reminder_add">Magdagdag ng paalala</string>
     <string name="calendars_reminder_remove">Alisin ang paalala</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Masyadong malaki ang kalendaryo</string>
     <string name="calendars_poll_invalid">Walang kalendaryong ibinalik ang adres</string>
     <string name="calendars_poll_unreachable">Hindi maabot ang adres</string>
-    <string name="calendars_poll_status">Sumagot ang adres ng %1$d</string>
+    <string name="calendars_poll_status">Sumagot ang adres ng %1$s</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d minuto</item>
+        <item quantity="one">%1$s minuto</item>
+        <item quantity="other">%1$s minuto</item>
     </plurals>
     <string name="calendars_preferences_zones">Ipakita ang mga kaganapan sa sarili nilang time zone</string>
     <string name="calendars_event_backwards">Nagtatapos bago magsimula</string>

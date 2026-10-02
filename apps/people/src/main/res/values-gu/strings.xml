@@ -180,8 +180,8 @@
     <string name="people_books_create">સરનામાં પુસ્તિકા બનાવો</string>
     <string name="people_books_delete">સરનામાં પુસ્તિકા કાઢી નાખો</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s અને તેના %2$d સંપર્કને કાઢી નાખવા છે?</item>
-        <item quantity="other">%1$s અને તેના %2$d સંપર્કોને કાઢી નાખવા છે?</item>
+        <item quantity="one">%1$s અને તેના %2$s સંપર્કને કાઢી નાખવા છે?</item>
+        <item quantity="other">%1$s અને તેના %2$s સંપર્કોને કાઢી નાખવા છે?</item>
     </plurals>
     <string name="people_welcome_body">Mochi પર મિત્રો શોધો અને જોડાઓ. આમંત્રણ મોકલવા માટે સંપર્ક ઉમેરો પર ટૅપ કરો.</string>
     <string name="people_person_state_contact">સંપર્કોમાં</string>

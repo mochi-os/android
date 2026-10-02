@@ -34,7 +34,7 @@
     <string name="staff_accounts_unnamed">பெயரிடப்படாதது</string>
     <string name="staff_accounts_unsuspend">இடைநிறுத்தத்தை நீக்கு</string>
     <string name="staff_accounts_unsuspended_toast">கணக்கு இடைநிறுத்தம் நீக்கப்பட்டது</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">ரத்துசெய்</string>
     <string name="staff_appeals_decide">முடிவெடு</string>
     <string name="staff_appeals_decision_denied">பட்டியல் நிராகரிக்கப்பட்டதாக வைத்திரு</string>
@@ -400,7 +400,7 @@
     <string name="staff_dashboard_order_fallback">ஆர்டர் #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">காரணம் (விரும்பினால்)</string>
-    <string name="staff_accounts_sales">%1$d விற்பனைகள்</string>
+    <string name="staff_accounts_sales">%1$s விற்பனைகள்</string>
     <string name="staff_appeals_reason_label">விற்பனையாளரின் மேல்முறையீட்டு காரணம்</string>
     <string name="staff_audit_action_staff_team_role_changed">பணியாளர் பங்கு மாற்றப்பட்டது</string>
     <string name="staff_categories_delete_desc">“%1$s” ஐ நீக்கவா? இதை மீட்க முடியாது.</string>

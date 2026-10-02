@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">চিরকাল</string>
     <string name="calendars_reminder_time">ঠিক সময়ে</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d মিনিট আগে</item>
-        <item quantity="other">%1$d মিনিট আগে</item>
+        <item quantity="one">%1$s মিনিট আগে</item>
+        <item quantity="other">%1$s মিনিট আগে</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d ঘণ্টা আগে</item>
-        <item quantity="other">%1$d ঘণ্টা আগে</item>
+        <item quantity="one">%1$s ঘণ্টা আগে</item>
+        <item quantity="other">%1$s ঘণ্টা আগে</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d দিন আগে</item>
-        <item quantity="other">%1$d দিন আগে</item>
+        <item quantity="one">%1$s দিন আগে</item>
+        <item quantity="other">%1$s দিন আগে</item>
     </plurals>
     <string name="calendars_reminder_add">অনুস্মারক যোগ করুন</string>
     <string name="calendars_reminder_remove">অনুস্মারক সরান</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">ক্যালেন্ডারটি খুব বড়</string>
     <string name="calendars_poll_invalid">ঠিকানাটি কোনো ক্যালেন্ডার ফেরত দেয়নি</string>
     <string name="calendars_poll_unreachable">ঠিকানায় পৌঁছানো যায়নি</string>
-    <string name="calendars_poll_status">ঠিকানা %1$d ফেরত দিয়েছে</string>
+    <string name="calendars_poll_status">ঠিকানা %1$s ফেরত দিয়েছে</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d মিনিট</item>
-        <item quantity="other">%1$d মিনিট</item>
+        <item quantity="one">%1$s মিনিট</item>
+        <item quantity="other">%1$s মিনিট</item>
     </plurals>
     <string name="calendars_preferences_zones">ইভেন্টগুলি তাদের নিজস্ব সময় অঞ্চলে দেখান</string>
     <string name="calendars_event_backwards">শুরুর আগেই শেষ হয়</string>

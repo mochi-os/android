@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">إشعارات حول تعديلات الصفحات والتعليقات والدعوات.</string>
     <string name="wikis_pageview_toc_expand">إظهار جدول المحتويات</string>
     <string name="wikis_pageview_toc_collapse">إخفاء جدول المحتويات</string>
-    <string name="wikis_pageview_version">إ%1$d</string>
+    <string name="wikis_pageview_version">إ%1$s</string>
     <string name="wikis_pageview_updated">تم التحديث %1$s</string>
     <string name="wikis_pageview_not_found_description">الصفحة «%1$s» غير موجودة بعد.</string>
     <string name="wikis_pageview_share_chooser">رابط الويكي</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">أنت على وشك حذف الصفحة «%1$s» (%2$s). يمكن التراجع عن هذا الإجراء بالاستعادة من السجل.</string>
     <string name="wikis_delete_page_success">تم حذف الصفحة</string>
     <string name="wikis_revert_page_title">إرجاع الصفحة</string>
-    <string name="wikis_revert_page_message">أنت على وشك استرجاع %1$s إلى الإصدار %2$d. سيؤدي ذلك إلى إنشاء مراجعة جديدة بمحتوى الإصدار %2$d.</string>
-    <string name="wikis_revert_page_default_comment">تم الاسترجاع إلى الإصدار %1$d</string>
-    <string name="wikis_revert_page_success">تم الاسترجاع إلى الإصدار %1$d</string>
+    <string name="wikis_revert_page_message">أنت على وشك استرجاع %1$s إلى الإصدار %2$s. سيؤدي ذلك إلى إنشاء مراجعة جديدة بمحتوى الإصدار %2$s.</string>
+    <string name="wikis_revert_page_default_comment">تم الاسترجاع إلى الإصدار %1$s</string>
+    <string name="wikis_revert_page_success">تم الاسترجاع إلى الإصدار %1$s</string>
     <string name="wikis_rename_page_renaming">إعادة التسمية…</string>
     <string name="wikis_rename_page_success">تمت إعادة تسمية الصفحة</string>
-    <string name="wikis_history_viewing">عرض سجل %1$s، الإصدار الحالي %2$d</string>
-    <string name="wikis_revision_version_badge">الإصدار %1$d</string>
+    <string name="wikis_history_viewing">عرض سجل %1$s، الإصدار الحالي %2$s</string>
+    <string name="wikis_revision_version_badge">الإصدار %1$s</string>
     <string name="wikis_search_pages_placeholder">البحث في الصفحات بالعنوان أو المحتوى…</string>
     <string name="wikis_search_no_results">لم يتم العثور على صفحات لـ «%1$s». جرب مصطلحات بحث مختلفة.</string>
     <string name="wikis_search_updated">تم التحديث %1$s</string>
@@ -289,70 +289,70 @@
     <string name="wikis_revision_author">حسب %1$s</string>
     <string name="wikis_revision_show_page">عرض الصفحة</string>
     <string name="wikis_revision_compare_failed">تعذّر تحميل الإصدار السابق للمقارنة.</string>
-    <string name="wikis_revision_changes_from">التغييرات من الإصدار %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">التغييرات من الإصدار %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="zero">%d تعليق</item>
+        <item quantity="zero">%s تعليق</item>
         <item quantity="one">تعليق واحد</item>
         <item quantity="two">تعليقان</item>
-        <item quantity="few">%d تعليقات</item>
-        <item quantity="many">%d تعليقًا</item>
-        <item quantity="other">%d تعليق</item>
+        <item quantity="few">%s تعليقات</item>
+        <item quantity="many">%s تعليقًا</item>
+        <item quantity="other">%s تعليق</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="zero">+%d رد إضافي</item>
+        <item quantity="zero">+%s رد إضافي</item>
         <item quantity="one">رد واحد</item>
-        <item quantity="two">+%d ردان إضافيان</item>
-        <item quantity="few">+%d ردود إضافية</item>
-        <item quantity="many">+%d ردًا إضافيًا</item>
-        <item quantity="other">+%d رد إضافي</item>
+        <item quantity="two">+%s ردان إضافيان</item>
+        <item quantity="few">+%s ردود إضافية</item>
+        <item quantity="many">+%s ردًا إضافيًا</item>
+        <item quantity="other">+%s رد إضافي</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="zero">%d صفحة</item>
+        <item quantity="zero">%s صفحة</item>
         <item quantity="one">صفحة واحدة</item>
         <item quantity="two">صفحتان</item>
-        <item quantity="few">%d صفحات</item>
-        <item quantity="many">%d صفحة</item>
-        <item quantity="other">%d صفحة</item>
+        <item quantity="few">%s صفحات</item>
+        <item quantity="many">%s صفحة</item>
+        <item quantity="other">%s صفحة</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="zero">%d ملف</item>
+        <item quantity="zero">%s ملف</item>
         <item quantity="one">ملف واحد</item>
         <item quantity="two">ملفان</item>
-        <item quantity="few">%d ملفات</item>
-        <item quantity="many">%d ملفًا</item>
-        <item quantity="other">%d ملف</item>
+        <item quantity="few">%s ملفات</item>
+        <item quantity="many">%s ملفًا</item>
+        <item quantity="other">%s ملف</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="zero">%d صورة</item>
+        <item quantity="zero">%s صورة</item>
         <item quantity="one">صورة واحدة</item>
         <item quantity="two">صورتان</item>
-        <item quantity="few">%d صور</item>
-        <item quantity="many">%d صورة</item>
-        <item quantity="other">%d صورة</item>
+        <item quantity="few">%s صور</item>
+        <item quantity="many">%s صورة</item>
+        <item quantity="other">%s صورة</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="zero">%d مستند</item>
+        <item quantity="zero">%s مستند</item>
         <item quantity="one">مستند واحد</item>
         <item quantity="two">مستندان</item>
-        <item quantity="few">%d مستندات</item>
-        <item quantity="many">%d مستندًا</item>
-        <item quantity="other">%d مستند</item>
+        <item quantity="few">%s مستندات</item>
+        <item quantity="many">%s مستندًا</item>
+        <item quantity="other">%s مستند</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
         <item quantity="zero">لا توجد صفحات بهذا الوسم</item>
         <item quantity="one">صفحة واحدة بهذا الوسم</item>
         <item quantity="two">صفحتان بهذا الوسم</item>
-        <item quantity="few">%d صفحات بهذا الوسم</item>
-        <item quantity="many">%d صفحة بهذا الوسم</item>
-        <item quantity="other">%d صفحة بهذا الوسم</item>
+        <item quantity="few">%s صفحات بهذا الوسم</item>
+        <item quantity="many">%s صفحة بهذا الوسم</item>
+        <item quantity="other">%s صفحة بهذا الوسم</item>
     </plurals>
     <plurals name="wikis_search_results_count">
         <item quantity="zero">لم يتم العثور على نتائج لـ «%2$s»</item>
         <item quantity="one">تم العثور على نتيجة واحدة لـ «%2$s»</item>
         <item quantity="two">تم العثور على نتيجتين لـ «%2$s»</item>
-        <item quantity="few">تم العثور على %1$d نتائج لـ «%2$s»</item>
-        <item quantity="many">تم العثور على %1$d نتيجة لـ «%2$s»</item>
-        <item quantity="other">تم العثور على %1$d نتيجة لـ «%2$s»</item>
+        <item quantity="few">تم العثور على %1$s نتائج لـ «%2$s»</item>
+        <item quantity="many">تم العثور على %1$s نتيجة لـ «%2$s»</item>
+        <item quantity="other">تم العثور على %1$s نتيجة لـ «%2$s»</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">تعذّر حفظ التسمية التوضيحية</string>
     <string name="wikis_attachments_upload_types">الملفات المدعومة: الصور، PDF، DOC، DOCX، TXT، وMD.</string>
@@ -361,11 +361,11 @@
     <string name="wikis_rss_copied_new">تم نسخ URL RSS الجديد إلى الحافظة</string>
     <string name="wikis_rss_exists">تم إصدار عنوان التغذية هذا مسبقاً ولا يمكن عرضه مرة أخرى.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="zero">عرض أول %1$d تعليق.</item>
-        <item quantity="one">عرض أول %1$d تعليق.</item>
+        <item quantity="zero">عرض أول %1$s تعليق.</item>
+        <item quantity="one">عرض أول %1$s تعليق.</item>
         <item quantity="two">عرض أول تعليقين.</item>
-        <item quantity="few">عرض أول %1$d تعليقات.</item>
-        <item quantity="many">عرض أول %1$d تعليقًا.</item>
-        <item quantity="other">عرض أول %1$d تعليق.</item>
+        <item quantity="few">عرض أول %1$s تعليقات.</item>
+        <item quantity="many">عرض أول %1$s تعليقًا.</item>
+        <item quantity="other">عرض أول %1$s تعليق.</item>
     </plurals>
 </resources>

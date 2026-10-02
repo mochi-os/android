@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">מאַרק</string>
-    <string name="market_account_biography_counter">%1$d / %2$d</string>
+    <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ביאָגראַפֿיע</string>
     <string name="market_account_biography_placeholder">דערציילט קויפֿערס וועגן זיך…</string>
     <string name="market_account_load_failed">קען ניט לאדן דעם חשבון</string>
@@ -53,7 +53,7 @@
     <string name="market_bids_tab_outbid">איבערגעבאָטן</string>
     <string name="market_bids_tab_won">געוווּנען</string>
     <string name="market_bids_title">אָפֿערטן</string>
-    <string name="market_carousel_main">בילד %1$d פון %2$d</string>
+    <string name="market_carousel_main">בילד %1$s פון %2$s</string>
     <string name="market_channel_name">מאַרק</string>
     <string name="market_chargeback_reason_bank_cannot_process">באַנק האָט נישט געקאָנט פּראָצעסירן</string>
     <string name="market_chargeback_reason_check_returned">אַרײַנקומען אומגעקערט</string>
@@ -132,7 +132,7 @@
     <string name="market_editor_condition_refurbished">באַנײַט</string>
     <string name="market_editor_condition_used">געניצט</string>
     <string name="market_editor_currency">וואַליוטע</string>
-    <string name="market_editor_days">%1$d טעג</string>
+    <string name="market_editor_days">%1$s טעג</string>
     <string name="market_editor_delete">מעק רעקלאמע</string>
     <string name="market_editor_description">באַשרײַבונג</string>
     <string name="market_editor_interval_monthly">חודשלעך</string>
@@ -323,7 +323,7 @@
     <string name="market_purchases_title">אײַנקויפֿן</string>
     <string name="market_rating_label">באַוואַרטונג</string>
     <string name="market_rating_no_reviews">נאָך קיין רעצענזיעס</string>
-    <string name="market_rating_reviews">(%1$d רעצענזיע)</string>
+    <string name="market_rating_reviews">(%1$s רעצענזיע)</string>
     <string name="market_refund_amount_label">באטראג</string>
     <string name="market_refund_body">גיב אַ סיבה פֿאַר אײַער אומקער פֿאָדערונג.</string>
     <string name="market_refund_details_label">פּרטים</string>
@@ -495,11 +495,11 @@
     <string name="market_bids_current_bid">איצטיק: %1$s</string>
     <string name="market_bids_ends_in">ענדיקט זיך אין %1$s</string>
     <string name="market_bids_your_bid">אײַער אָפֿערט: %1$s</string>
-    <string name="market_carousel_thumbnail">מיניאַטור %1$d</string>
+    <string name="market_carousel_thumbnail">מיניאַטור %1$s</string>
     <string name="market_checkout_browser_unavailable">קיין בלעטערער איז נישט פֿאַראַן צו עפֿענען די באַצאָלונג זײַט</string>
     <string name="market_checkout_pwyw_label">אײַער פּרײַז (מינימום %1$s)</string>
     <string name="market_checkout_pwyw_min_error">די סומע מוז זײַן כאָטש %1$s</string>
-    <string name="market_dispute_dialog_attach_count">%1$d טעקע(ס) צוגעלייגט</string>
+    <string name="market_dispute_dialog_attach_count">%1$s טעקע(ס) צוגעלייגט</string>
     <string name="market_dispute_dialog_evidence_section_title">אַרײַנגעגעבענע ראיות</string>
     <string name="market_dispute_dialog_evidence_submitter_line">אַרײַנגעגעבן דורך %1$s</string>
     <string name="market_editor_appeal">אַפּעלירן מאָדערירונג</string>
@@ -555,7 +555,7 @@
     <string name="market_listing_detail_loading">לאָדן רשימה</string>
     <string name="market_listing_detail_relist_failed">מע האָט נישט געקענט איבער-רשימהן</string>
     <string name="market_listing_detail_relist_in_progress">איבער-רשימהן</string>
-    <string name="market_listing_detail_sales_count">%1$d פֿאַרקויפֿן</string>
+    <string name="market_listing_detail_sales_count">%1$s פֿאַרקויפֿן</string>
     <string name="market_listing_detail_seller_banned_banner">דער פֿאַרקויפֿער איז פֿאַרווערט. נײַע באַשטעלונגען קענען נישט געלייגט ווערן.</string>
     <string name="market_listing_detail_seller_suspended_banner">דער פֿאַרקויפֿער איז סוספּענדירט. נײַע באַשטעלונגען זענען פּויזירט ביז דאָס קאָנטע ווערט צוריקגעשטעלט.</string>
     <string name="market_listing_detail_seller_suspended_cta_hint">קויפֿן איז דיסייבלד בעת דעם פֿאַרקויפֿערס קאָנטע איז באַגרענעצט.</string>
@@ -571,7 +571,7 @@
     <string name="market_messages_inbox_empty_title">נאָך קיין שמועסן</string>
     <string name="market_messages_load_failed">ניט געלונגען אַרויפֿצולאָדן די שמועס</string>
     <string name="market_messages_send_failed">ניט געלונגען צו שיקן די מעלדונג</string>
-    <string name="market_messages_unread_badge">%1$d ניט־געלייענט</string>
+    <string name="market_messages_unread_badge">%1$s ניט־געלייענט</string>
     <string name="market_price_high_bid">העכסטער אָנבאָט: %1$s</string>
     <string name="market_price_instant_buy">תּיכּפֿדיקער קויף: %1$s</string>
     <string name="market_price_starting_bid">אָנהייב־אָנבאָט: %1$s</string>
@@ -579,12 +579,12 @@
     <string name="market_profile_member_since">מיטגליד זינט %1$s</string>
     <string name="market_profile_joined">אַרײַנגעטראָטן %1$s</string>
     <string name="market_profile_rating_breakdown">אָפּשאַצונג־צעטיילונג</string>
-    <string name="market_profile_sales_count">%1$d פֿאַרקויפֿן</string>
-    <string name="market_profile_stars_value">%1$d שטערן</string>
+    <string name="market_profile_sales_count">%1$s פֿאַרקויפֿן</string>
+    <string name="market_profile_stars_value">%1$s שטערן</string>
     <string name="market_purchase_dispute_chargeback">צוריקצאָלונג %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">אײַער באַנק האָט אַרײַנגעגעבן אַ צוריקצאָלונג אויף דער באַשטעלונג. Stripe באַהאַנדלט די מחלוקה מיטן פֿאַרקויפֿער; דער רעזולטאַט וועט דאָ דערשײַנען ווען ער ווערט באַשלאָסן.</string>
     <string name="market_purchase_dispute_response">פֿאַרקויפֿערס ענטפֿער</string>
-    <string name="market_purchase_download_many">אַראָפּלאָדן אײַערע %1$d פֿײַלן אונטן.</string>
+    <string name="market_purchase_download_many">אַראָפּלאָדן אײַערע %1$s פֿײַלן אונטן.</string>
     <string name="market_purchase_download_one">אַראָפּלאָדן אײַער פֿײַל אונטן.</string>
     <string name="market_purchase_review_from">רעצענזיע פֿון %1$s</string>
     <string name="market_purchases_auction_label">ליציטאַציע #%1$s</string>
@@ -785,11 +785,11 @@
     <string name="market_listings_remove_message_auction">דאָס וועט אַנולירן די אַויקציע. דער אַנאָנס וועט ווערן באַהאַלטן פֿון קויפֿערס; איר קאָנט אים שפּעטער ווידער אַרויסשטעלן ווי אַ נײַע דראַפֿט.</string>
     <string name="market_listings_remove_title">אַראָפּנעמען די ליסטיגקײַט?</string>
     <plurals name="market_listings_remove_message_bidders">
-        <item quantity="one">דאָס וועט אָפּזאָגן די אויקציע און מעלדן %1$d אַקטיוון ביטער. די רשימה וועט זײַן באַהאַלטן פֿון קונים; איר קענט זי שפּעטער ווידער אַרויסשטעלן ווי אַ נײַעם קאָנצעפּט.</item>
-        <item quantity="other">דאָס וועט אָפּזאָגן די אויקציע און מעלדן %1$d אַקטיווע ביטערס. די רשימה וועט זײַן באַהאַלטן פֿון קונים; איר קענט זי שפּעטער ווידער אַרויסשטעלן ווי אַ נײַעם קאָנצעפּט.</item>
+        <item quantity="one">דאָס וועט אָפּזאָגן די אויקציע און מעלדן %1$s אַקטיוון ביטער. די רשימה וועט זײַן באַהאַלטן פֿון קונים; איר קענט זי שפּעטער ווידער אַרויסשטעלן ווי אַ נײַעם קאָנצעפּט.</item>
+        <item quantity="other">דאָס וועט אָפּזאָגן די אויקציע און מעלדן %1$s אַקטיווע ביטערס. די רשימה וועט זײַן באַהאַלטן פֿון קונים; איר קענט זי שפּעטער ווידער אַרויסשטעלן ווי אַ נײַעם קאָנצעפּט.</item>
     </plurals>
     <plurals name="market_listings_remove_message_subscribers">
-        <item quantity="one">דאָס וועט אָפּזאָגן %1$d אַקטיוון אַבאָנעמענט בײַם סוף פֿון דער איצטיקער צאָלונג־תּקופֿה. די אַבאָנענטן וועלן ווערן געמאָלדן. די רשימה וועט זײַן באַהאַלטן פֿון קונים.</item>
-        <item quantity="other">דאָס וועט אָפּזאָגן %1$d אַקטיווע אַבאָנעמענטן בײַם סוף פֿון דער איצטיקער צאָלונג־תּקופֿה. די אַבאָנענטן וועלן ווערן געמאָלדן. די רשימה וועט זײַן באַהאַלטן פֿון קונים.</item>
+        <item quantity="one">דאָס וועט אָפּזאָגן %1$s אַקטיוון אַבאָנעמענט בײַם סוף פֿון דער איצטיקער צאָלונג־תּקופֿה. די אַבאָנענטן וועלן ווערן געמאָלדן. די רשימה וועט זײַן באַהאַלטן פֿון קונים.</item>
+        <item quantity="other">דאָס וועט אָפּזאָגן %1$s אַקטיווע אַבאָנעמענטן בײַם סוף פֿון דער איצטיקער צאָלונג־תּקופֿה. די אַבאָנענטן וועלן ווערן געמאָלדן. די רשימה וועט זײַן באַהאַלטן פֿון קונים.</item>
     </plurals>
 </resources>

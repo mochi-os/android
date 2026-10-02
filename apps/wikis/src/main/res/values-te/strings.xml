@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">wiki పేజీ సవరణలు, వ్యాఖ్యలు మరియు ఆహ్వానాల గురించి నోటిఫికేషన్‌లు.</string>
     <string name="wikis_pageview_toc_expand">విషయ సూచికను చూపు</string>
     <string name="wikis_pageview_toc_collapse">విషయ సూచికను దాచు</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">నవీకరించబడింది %1$s</string>
     <string name="wikis_pageview_not_found_description">“%1$s” పేజీ ఇంకా లేదు.</string>
     <string name="wikis_pageview_share_chooser">వికీ లింక్</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">మీరు “%1$s” (%2$s) పేజీని తొలగించబోతున్నారు. చరిత్ర నుండి పునరుద్ధరించడం ద్వారా ఈ చర్యను రద్దు చేయవచ్చు.</string>
     <string name="wikis_delete_page_success">పేజీ తొలగించబడింది</string>
     <string name="wikis_revert_page_title">పేజీని వెనక్కి తీసుకురండి</string>
-    <string name="wikis_revert_page_message">మీరు %1$s ను వెర్షన్ %2$d కు తిరిగి మార్చబోతున్నారు. ఇది వెర్షన్ %2$d కంటెంట్‌తో కొత్త సవరణను సృష్టిస్తుంది.</string>
-    <string name="wikis_revert_page_default_comment">వెర్షన్ %1$d కు తిరిగి మార్చబడింది</string>
-    <string name="wikis_revert_page_success">వెర్షన్ %1$d కు తిరిగి మార్చబడింది</string>
+    <string name="wikis_revert_page_message">మీరు %1$s ను వెర్షన్ %2$s కు తిరిగి మార్చబోతున్నారు. ఇది వెర్షన్ %2$s కంటెంట్‌తో కొత్త సవరణను సృష్టిస్తుంది.</string>
+    <string name="wikis_revert_page_default_comment">వెర్షన్ %1$s కు తిరిగి మార్చబడింది</string>
+    <string name="wikis_revert_page_success">వెర్షన్ %1$s కు తిరిగి మార్చబడింది</string>
     <string name="wikis_rename_page_renaming">పేరు మారుస్తోంది…</string>
     <string name="wikis_rename_page_success">పేజీ పేరు మార్చబడింది</string>
-    <string name="wikis_history_viewing">%1$s కోసం చరిత్రను చూస్తున్నారు, ప్రస్తుత వెర్షన్ %2$d</string>
-    <string name="wikis_revision_version_badge">వెర్షన్ %1$d</string>
+    <string name="wikis_history_viewing">%1$s కోసం చరిత్రను చూస్తున్నారు, ప్రస్తుత వెర్షన్ %2$s</string>
+    <string name="wikis_revision_version_badge">వెర్షన్ %1$s</string>
     <string name="wikis_search_pages_placeholder">శీర్షిక లేదా కంటెంట్ ద్వారా పేజీలను వెతకండి…</string>
     <string name="wikis_search_no_results">“%1$s” కోసం పేజీలు కనుగొనబడలేదు. వేరే శోధన పదాలను ప్రయత్నించండి.</string>
     <string name="wikis_search_updated">నవీకరించబడింది %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s ద్వారా</string>
     <string name="wikis_revision_show_page">పేజీని చూపించు</string>
     <string name="wikis_revision_compare_failed">పోలిక కోసం మునుపటి వెర్షన్‌ను లోడ్ చేయడం సాధ్యం కాలేదు.</string>
-    <string name="wikis_revision_changes_from">%1$d → %2$d వెర్షన్ నుండి మార్పులు</string>
+    <string name="wikis_revision_changes_from">%1$s → %2$s వెర్షన్ నుండి మార్పులు</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d వ్యాఖ్య</item>
-        <item quantity="other">%d వ్యాఖ్యలు</item>
+        <item quantity="one">%s వ్యాఖ్య</item>
+        <item quantity="other">%s వ్యాఖ్యలు</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d జవాబు</item>
-        <item quantity="other">+%d అదనపు జవాబులు</item>
+        <item quantity="one">%s జవాబు</item>
+        <item quantity="other">+%s అదనపు జవాబులు</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d పేజీ</item>
-        <item quantity="other">%d పేజీలు</item>
+        <item quantity="one">%s పేజీ</item>
+        <item quantity="other">%s పేజీలు</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d ఫైల్</item>
-        <item quantity="other">%d ఫైళ్లు</item>
+        <item quantity="one">%s ఫైల్</item>
+        <item quantity="other">%s ఫైళ్లు</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d చిత్రం</item>
-        <item quantity="other">%d చిత్రాలు</item>
+        <item quantity="one">%s చిత్రం</item>
+        <item quantity="other">%s చిత్రాలు</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d పత్రం</item>
-        <item quantity="other">%d పత్రాలు</item>
+        <item quantity="one">%s పత్రం</item>
+        <item quantity="other">%s పత్రాలు</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">ఈ ట్యాగ్‌తో %d పేజీ</item>
-        <item quantity="other">ఈ ట్యాగ్‌తో %d పేజీలు</item>
+        <item quantity="one">ఈ ట్యాగ్‌తో %s పేజీ</item>
+        <item quantity="other">ఈ ట్యాగ్‌తో %s పేజీలు</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">«%2$s» కోసం %1$d ఫలితం కనుగొనబడింది</item>
-        <item quantity="other">«%2$s» కోసం %1$d ఫలితాలు కనుగొనబడింది</item>
+        <item quantity="one">«%2$s» కోసం %1$s ఫలితం కనుగొనబడింది</item>
+        <item quantity="other">«%2$s» కోసం %1$s ఫలితాలు కనుగొనబడింది</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">క్యాప్షన్ సేవ్ చేయడం సాధ్యపడలేదు</string>
     <string name="wikis_attachments_upload_types">మద్దతు ఉన్న ఫైల్‌లు: చిత్రాలు, PDF, DOC, DOCX, TXT, మరియు MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">కొత్త RSS URL క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది</string>
     <string name="wikis_rss_exists">ఈ ఫీడ్ URL ఇప్పటికే జారీ చేయబడింది, మళ్లీ చూపించలేము.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">మొదటి %1$d వ్యాఖ్య చూపబడుతోంది.</item>
-        <item quantity="other">మొదటి %1$d వ్యాఖ్యలు చూపబడుతున్నాయి.</item>
+        <item quantity="one">మొదటి %1$s వ్యాఖ్య చూపబడుతోంది.</item>
+        <item quantity="other">మొదటి %1$s వ్యాఖ్యలు చూపబడుతున్నాయి.</item>
     </plurals>
 </resources>

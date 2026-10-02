@@ -302,7 +302,7 @@ private fun CredibilityBadge(value: Int) {
 }
 
 @Composable
-private fun SourceCard(
+internal fun SourceCard(
     source: Source,
     onEdit: () -> Unit,
     onRemove: () -> Unit,
@@ -339,10 +339,10 @@ private fun SourceCard(
     val pollingText = source.interval.takeIf { interval -> interval > 0 }?.let { seconds ->
         val duration = if (seconds < 3_600) {
             val minutes = (seconds / 60).coerceAtLeast(1)
-            pluralStringResource(R.plurals.feeds_source_interval_minutes, minutes, minutes)
+            pluralStringResource(R.plurals.feeds_source_interval_minutes, minutes, LocalFormat.current.formatNumber(minutes))
         } else {
             val hours = seconds / 3_600
-            pluralStringResource(R.plurals.feeds_source_interval_hours, hours, hours)
+            pluralStringResource(R.plurals.feeds_source_interval_hours, hours, LocalFormat.current.formatNumber(hours))
         }
         stringResource(R.string.feeds_source_polling_interval, duration)
     }
@@ -640,7 +640,7 @@ private fun EditSourceDialog(
 }
 
 @Composable
-private fun SuggestedCredibilityDialog(
+internal fun SuggestedCredibilityDialog(
     suggested: Int,
     busy: Boolean,
     onAccept: () -> Unit,
@@ -649,7 +649,7 @@ private fun SuggestedCredibilityDialog(
     MochiAlertDialog(
         onDismissRequest = { if (!busy) onDismiss() },
         title = stringResource(R.string.feeds_suggested_credibility_title),
-        text = stringResource(R.string.feeds_suggested_credibility_body, suggested),
+        text = stringResource(R.string.feeds_suggested_credibility_body, LocalFormat.current.formatNumber(suggested)),
         confirmText = stringResource(R.string.feeds_suggested_credibility_accept),
         onConfirm = onAccept,
         confirmLoading = busy,

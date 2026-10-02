@@ -202,12 +202,12 @@
     <string name="forums_saved_empty_subtitle">انقر على علامة الإشارة في أي منشور لحفظه هنا لوقت لاحق.</string>
     <string name="forums_saved_error_clear">تعذّر مسح المنشورات المحفوظة</string>
     <plurals name="forums_new_posts">
-        <item quantity="zero">%d منشور جديد</item>
-        <item quantity="one">%d منشور جديد</item>
-        <item quantity="two">%d منشوران جديدان</item>
-        <item quantity="few">%d منشورات جديدة</item>
-        <item quantity="many">%d منشورًا جديدًا</item>
-        <item quantity="other">%d منشور جديد</item>
+        <item quantity="zero">%s منشور جديد</item>
+        <item quantity="one">%s منشور جديد</item>
+        <item quantity="two">%s منشوران جديدان</item>
+        <item quantity="few">%s منشورات جديدة</item>
+        <item quantity="many">%s منشورًا جديدًا</item>
+        <item quantity="other">%s منشور جديد</item>
     </plurals>
     <string name="forums_rss_feed">موجز RSS</string>
     <string name="forums_rss_mode_posts">المنشورات</string>
@@ -300,8 +300,8 @@
     <string name="forums_settings_unsubscribe_section">إنهاء الاشتراك في المنتدى</string>
     <string name="forums_share_link_title">رابط المنتدى</string>
     <string name="forums_find_found_by_url">تم العثور عليه عبر الرابط</string>
-    <string name="forums_moderation_pending_posts">منشورات معلقة (%1$d)</string>
-    <string name="forums_moderation_pending_comments">تعليقات معلقة (%1$d)</string>
+    <string name="forums_moderation_pending_posts">منشورات معلقة (%1$s)</string>
+    <string name="forums_moderation_pending_comments">تعليقات معلقة (%1$s)</string>
     <string name="forums_moderation_on_image">على الصورة: %1$s</string>
     <string name="forums_sort_ai">الذكاء الاصطناعي</string>
     <string name="forums_reject_post_access">ليس لديك إذن للنشر في هذا المنتدى</string>

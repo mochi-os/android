@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Beeksisa waa\'ee gulaallii fuula wiki, yaada fi afeerraa.</string>
     <string name="wikis_pageview_toc_expand">Baafata agarsiisi</string>
     <string name="wikis_pageview_toc_collapse">Baafata dhoksi</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">Haaromfame %1$s</string>
     <string name="wikis_pageview_not_found_description">Fuulli “%1$s” amma hin jiru.</string>
     <string name="wikis_pageview_share_chooser">Hidhaa wiki</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">Fuula “%1$s” (%2$s) haquuf jirta. Gochi kun seenaa irraa deebisuun deebi\'uu danda\'a.</string>
     <string name="wikis_delete_page_success">Fuulli haqameera</string>
     <string name="wikis_revert_page_title">Fuula deebisi</string>
-    <string name="wikis_revert_page_message">%1$s gara vershinii %2$d deebisuuf jirta. Kun qabiyyee vershinii %2$d irraa waliin sirreeffama haaraa uuma.</string>
-    <string name="wikis_revert_page_default_comment">Gara vershinii %1$d deebi\'e</string>
-    <string name="wikis_revert_page_success">Gara vershinii %1$d deebi\'e</string>
+    <string name="wikis_revert_page_message">%1$s gara vershinii %2$s deebisuuf jirta. Kun qabiyyee vershinii %2$s irraa waliin sirreeffama haaraa uuma.</string>
+    <string name="wikis_revert_page_default_comment">Gara vershinii %1$s deebi\'e</string>
+    <string name="wikis_revert_page_success">Gara vershinii %1$s deebi\'e</string>
     <string name="wikis_rename_page_renaming">Maqaa jijjiiraa jira…</string>
     <string name="wikis_rename_page_success">Maqaan fuulaa jijjiirameera</string>
-    <string name="wikis_history_viewing">Seenaa %1$s ilaalaa jirta, vershinii ammaa %2$d</string>
-    <string name="wikis_revision_version_badge">Vershinii %1$d</string>
+    <string name="wikis_history_viewing">Seenaa %1$s ilaalaa jirta, vershinii ammaa %2$s</string>
+    <string name="wikis_revision_version_badge">Vershinii %1$s</string>
     <string name="wikis_search_pages_placeholder">Fuulawwan mata duree yookaan qabiyyeedhaan barbaadi…</string>
     <string name="wikis_search_no_results">“%1$s”f fuulli hin argamne. Jechoota barbaacha biraa yaali.</string>
     <string name="wikis_search_updated">Haaromfame %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s tiin</string>
     <string name="wikis_revision_show_page">Fuula agarsiisi</string>
     <string name="wikis_revision_compare_failed">Vershinii duraanii wal bira qabuuf fe\'uu hin dandeenye.</string>
-    <string name="wikis_revision_changes_from">Jijjiirama vershinii %1$d → %2$d irraa</string>
+    <string name="wikis_revision_changes_from">Jijjiirama vershinii %1$s → %2$s irraa</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">yaada %d</item>
-        <item quantity="other">yaadota %d</item>
+        <item quantity="one">yaada %s</item>
+        <item quantity="other">yaadota %s</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">deebii %d</item>
-        <item quantity="other">deebii %d dabalataa</item>
+        <item quantity="one">deebii %s</item>
+        <item quantity="other">deebii %s dabalataa</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">fuula %d</item>
-        <item quantity="other">fuulota %d</item>
+        <item quantity="one">fuula %s</item>
+        <item quantity="other">fuulota %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">faayilii %d</item>
-        <item quantity="other">faayilolee %d</item>
+        <item quantity="one">faayilii %s</item>
+        <item quantity="other">faayilolee %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">suuraa %d</item>
-        <item quantity="other">suuraalee %d</item>
+        <item quantity="one">suuraa %s</item>
+        <item quantity="other">suuraalee %s</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">sanada %d</item>
-        <item quantity="other">sanadoota %d</item>
+        <item quantity="one">sanada %s</item>
+        <item quantity="other">sanadoota %s</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">fuula %d tag kanaan</item>
-        <item quantity="other">fuulota %d tag kanaan</item>
+        <item quantity="one">fuula %s tag kanaan</item>
+        <item quantity="other">fuulota %s tag kanaan</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">bu\'aa %1$d \"%2$s\" argi</item>
-        <item quantity="other">bu\'aalee %1$d \"%2$s\" argi</item>
+        <item quantity="one">bu\'aa %1$s \"%2$s\" argi</item>
+        <item quantity="other">bu\'aalee %1$s \"%2$s\" argi</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Ibsa olkaa\'uun hin milkoofne</string>
     <string name="wikis_attachments_upload_types">Faayiloota deeggaraman: suuraawwan, PDF, DOC, DOCX, TXT, fi MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">URL RSS haaraa kilipboordiitti garagalfame</string>
     <string name="wikis_rss_exists">URL feed kun duraan kennameera, ammas agarsiisuu hin danda\'amu.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">Yaada %1$d jalqabaa agarsiisaa jira.</item>
-        <item quantity="other">Yaadota %1$d jalqabaa agarsiisaa jira.</item>
+        <item quantity="one">Yaada %1$s jalqabaa agarsiisaa jira.</item>
+        <item quantity="other">Yaadota %1$s jalqabaa agarsiisaa jira.</item>
     </plurals>
 </resources>

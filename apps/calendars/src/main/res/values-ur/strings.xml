@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">ہمیشہ</string>
     <string name="calendars_reminder_time">عین وقت پر</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d منٹ پہلے</item>
-        <item quantity="other">%1$d منٹ پہلے</item>
+        <item quantity="one">%1$s منٹ پہلے</item>
+        <item quantity="other">%1$s منٹ پہلے</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d گھنٹہ پہلے</item>
-        <item quantity="other">%1$d گھنٹے پہلے</item>
+        <item quantity="one">%1$s گھنٹہ پہلے</item>
+        <item quantity="other">%1$s گھنٹے پہلے</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d دن پہلے</item>
-        <item quantity="other">%1$d دن پہلے</item>
+        <item quantity="one">%1$s دن پہلے</item>
+        <item quantity="other">%1$s دن پہلے</item>
     </plurals>
     <string name="calendars_reminder_add">یاد دہانی شامل کریں</string>
     <string name="calendars_reminder_remove">یاد دہانی ہٹائیں</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">کیلنڈر بہت بڑا ہے</string>
     <string name="calendars_poll_invalid">پتے سے کوئی کیلنڈر نہیں ملا</string>
     <string name="calendars_poll_unreachable">پتے تک رسائی نہیں ہو سکی</string>
-    <string name="calendars_poll_status">پتے نے %1$d جواب دیا</string>
+    <string name="calendars_poll_status">پتے نے %1$s جواب دیا</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d منٹ</item>
-        <item quantity="other">%1$d منٹ</item>
+        <item quantity="one">%1$s منٹ</item>
+        <item quantity="other">%1$s منٹ</item>
     </plurals>
     <string name="calendars_preferences_zones">ایونٹس کو ان کے اپنے ٹائم زون میں دکھائیں</string>
     <string name="calendars_event_backwards">شروع ہونے سے پہلے ختم ہو جاتا ہے</string>

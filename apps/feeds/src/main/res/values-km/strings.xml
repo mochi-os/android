@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">វានឹងបញ្ឈប់ការនាំចូលមាតិកាពី \"%1$s\"។</string>
     <string name="feeds_remove_also_delete_posts">លុបការបង្ហោះដែលបាននាំចូលពីប្រភពនេះផងដែរ</string>
     <string name="feeds_suggested_credibility_title">ភាពអាចទុកចិត្តបានដែលបានណែនាំ</string>
-    <string name="feeds_suggested_credibility_body">Mochi ណែនាំភាពអាចទុកចិត្តបាន %1$d។ ទទួលយកឬទេ?</string>
+    <string name="feeds_suggested_credibility_body">Mochi ណែនាំភាពអាចទុកចិត្តបាន %1$s។ ទទួលយកឬទេ?</string>
     <string name="feeds_suggested_credibility_keep">រក្សាបច្ចុប្បន្ន</string>
     <string name="feeds_ai_processing_mode">របៀបដំណើរការ AI</string>
     <string name="feeds_ai_account">គណនី AI</string>
@@ -140,7 +140,7 @@
     <string name="feeds_saved_empty_subtitle">ប៉ះសញ្ញាចំណាំនៅលើការបង្ហោះណាមួយ ដើម្បីរក្សាទុកវានៅទីនេះសម្រាប់ពេលក្រោយ។</string>
     <string name="feeds_saved_error_clear">បរាជ័យក្នុងការសម្អាតការបង្ហោះដែលបានរក្សាទុក</string>
     <plurals name="feeds_new_posts">
-        <item quantity="other">ការបង្ហោះថ្មី %d </item>
+        <item quantity="other">ការបង្ហោះថ្មី %s </item>
     </plurals>
     <string name="feeds_caught_up">អ្នកបានឃើញទាំងអស់ហើយ</string>
     <string name="feeds_all_caught_up">ទាំងអស់ហើយ</string>
@@ -191,10 +191,10 @@
     <string name="feeds_source_url_hint_feed">លេខសម្គាល់អង្គភាព ឬស្នាមម្រាមដៃព័ត៌មានបង្ហាញ</string>
     <string name="feeds_source_credibility_label">ភាពគួរឱ្យជឿទុកចិត្ត</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="other">%1$d ម៉ោង</item>
+        <item quantity="other">%1$s ម៉ោង</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="other">%1$d នាទី</item>
+        <item quantity="other">%1$s នាទី</item>
     </plurals>
     <string name="feeds_source_polling_interval">ពិនិត្យរៀងរាល់ %1$s</string>
     <string name="feeds_access_level_react_full">ប្រតិកម្ម និងមើល</string>
@@ -211,16 +211,16 @@
     <string name="feeds_link">តំណ</string>
     <string name="feeds_share_link_title">តំណព័ត៌មាន</string>
     <plurals name="feeds_comment_count">
-        <item quantity="other">%1$d មតិយោបល់</item>
+        <item quantity="other">%1$s មតិយោបល់</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="other">ឯកសារភ្ជាប់ %1$d</item>
+        <item quantity="other">ឯកសារភ្ជាប់ %1$s</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="other">មើលមតិ %1$d ទៀត</item>
+        <item quantity="other">មើលមតិ %1$s ទៀត</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="other">%1$d ឆ្នាំមុន ថ្ងៃនេះ</item>
+        <item quantity="other">%1$s ឆ្នាំមុន ថ្ងៃនេះ</item>
     </plurals>
     <string name="feeds_block">រារាំង</string>
     <string name="feeds_removed_from_feed">អ្នកត្រូវបានដកចេញពីព័ត៌មានបង្ហាញនេះ</string>

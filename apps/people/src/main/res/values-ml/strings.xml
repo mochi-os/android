@@ -180,8 +180,8 @@
     <string name="people_books_create">വിലാസപുസ്തകം സൃഷ്ടിക്കുക</string>
     <string name="people_books_delete">വിലാസപുസ്തകം ഇല്ലാതാക്കുക</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s ഉം അതിലെ %2$d കോൺടാക്റ്റും ഇല്ലാതാക്കണോ?</item>
-        <item quantity="other">%1$s ഉം അതിലെ %2$d കോൺടാക്റ്റുകളും ഇല്ലാതാക്കണോ?</item>
+        <item quantity="one">%1$s ഉം അതിലെ %2$s കോൺടാക്റ്റും ഇല്ലാതാക്കണോ?</item>
+        <item quantity="other">%1$s ഉം അതിലെ %2$s കോൺടാക്റ്റുകളും ഇല്ലാതാക്കണോ?</item>
     </plurals>
     <string name="people_welcome_body">Mochi യിലുടനീളം സുഹൃത്തുക്കളെ കണ്ടെത്തി ബന്ധപ്പെടുക. ക്ഷണം അയയ്ക്കാൻ കോൺടാക്റ്റ് ചേർക്കുക അമർത്തുക.</string>
     <string name="people_person_state_contact">കോൺടാക്റ്റുകളിൽ</string>

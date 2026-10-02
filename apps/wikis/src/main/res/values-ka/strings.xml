@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">შეტყობინებები wiki გვერდის რედაქტირების, კომენტარებისა და მოწვევების შესახებ.</string>
     <string name="wikis_pageview_toc_expand">სარჩევის ჩვენება</string>
     <string name="wikis_pageview_toc_collapse">სარჩევის დამალვა</string>
-    <string name="wikis_pageview_version">v%1$d</string>
+    <string name="wikis_pageview_version">v%1$s</string>
     <string name="wikis_pageview_updated">განახლდა %1$s</string>
     <string name="wikis_pageview_not_found_description">გვერდი „%1$s“ ჯერ არ არსებობს.</string>
     <string name="wikis_pageview_share_chooser">ვიკის ბმული</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">თქვენ აპირებთ გვერდის „%1$s“ (%2$s) წაშლას. ეს ქმედება შეიძლება გაუქმდეს ისტორიიდან აღდგენით.</string>
     <string name="wikis_delete_page_success">გვერდი წაიშალა</string>
     <string name="wikis_revert_page_title">გვერდის დაბრუნება</string>
-    <string name="wikis_revert_page_message">თქვენ აპირებთ %1$s-ის დაბრუნებას ვერსიაზე %2$d. ეს შექმნის ახალ რევიზიას ვერსია %2$d-ის შიგთავსით.</string>
-    <string name="wikis_revert_page_default_comment">დაბრუნდა ვერსიაზე %1$d</string>
-    <string name="wikis_revert_page_success">დაბრუნდა ვერსიაზე %1$d</string>
+    <string name="wikis_revert_page_message">თქვენ აპირებთ %1$s-ის დაბრუნებას ვერსიაზე %2$s. ეს შექმნის ახალ რევიზიას ვერსია %2$s-ის შიგთავსით.</string>
+    <string name="wikis_revert_page_default_comment">დაბრუნდა ვერსიაზე %1$s</string>
+    <string name="wikis_revert_page_success">დაბრუნდა ვერსიაზე %1$s</string>
     <string name="wikis_rename_page_renaming">სახელი იცვლება…</string>
     <string name="wikis_rename_page_success">გვერდი გადაერქვა</string>
-    <string name="wikis_history_viewing">%1$s-ის ისტორიის ნახვა, მიმდინარე ვერსია %2$d</string>
-    <string name="wikis_revision_version_badge">ვერსია %1$d</string>
+    <string name="wikis_history_viewing">%1$s-ის ისტორიის ნახვა, მიმდინარე ვერსია %2$s</string>
+    <string name="wikis_revision_version_badge">ვერსია %1$s</string>
     <string name="wikis_search_pages_placeholder">გვერდების ძებნა სათაურით ან შიგთავსით…</string>
     <string name="wikis_search_no_results">„%1$s“-ისთვის გვერდები ვერ მოიძებნა. სცადეთ სხვა საძიებო სიტყვები.</string>
     <string name="wikis_search_updated">განახლდა %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s-ის მიხედვით</string>
     <string name="wikis_revision_show_page">გვერდის ჩვენება</string>
     <string name="wikis_revision_compare_failed">შესადარებლად წინა ვერსიის ჩატვირთვა ვერ მოხერხდა.</string>
-    <string name="wikis_revision_changes_from">ცვლილებები ვერსიიდან %1$d → %2$d</string>
+    <string name="wikis_revision_changes_from">ცვლილებები ვერსიიდან %1$s → %2$s</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d კომენტარი</item>
-        <item quantity="other">%d კომენტარი</item>
+        <item quantity="one">%s კომენტარი</item>
+        <item quantity="other">%s კომენტარი</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d პასუხი</item>
-        <item quantity="other">%d პასუხი</item>
+        <item quantity="one">%s პასუხი</item>
+        <item quantity="other">%s პასუხი</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d გვერდი</item>
-        <item quantity="other">%d გვერდი</item>
+        <item quantity="one">%s გვერდი</item>
+        <item quantity="other">%s გვერდი</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d ფაილი</item>
-        <item quantity="other">%d ფაილი</item>
+        <item quantity="one">%s ფაილი</item>
+        <item quantity="other">%s ფაილი</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d სურათი</item>
-        <item quantity="other">%d სურათი</item>
+        <item quantity="one">%s სურათი</item>
+        <item quantity="other">%s სურათი</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d დოკუმენტი</item>
-        <item quantity="other">%d დოკუმენტი</item>
+        <item quantity="one">%s დოკუმენტი</item>
+        <item quantity="other">%s დოკუმენტი</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">%d გვერდი ამ ტეგით</item>
-        <item quantity="other">%d გვერდი ამ ტეგით</item>
+        <item quantity="one">%s გვერდი ამ ტეგით</item>
+        <item quantity="other">%s გვერდი ამ ტეგით</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">ნაპოვნია %1$d შედეგი \"%2$s\"-ისთვის</item>
-        <item quantity="other">ნაპოვნია %1$d შედეგი \"%2$s\"-ისთვის</item>
+        <item quantity="one">ნაპოვნია %1$s შედეგი \"%2$s\"-ისთვის</item>
+        <item quantity="other">ნაპოვნია %1$s შედეგი \"%2$s\"-ისთვის</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">წარწერის შენახვა ვერ მოხერხდა</string>
     <string name="wikis_attachments_upload_types">მხარდაჭერილი ფაილები: სურათები, PDF, DOC, DOCX, TXT და MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">ახალი RSS URL დაკოპირდა</string>
     <string name="wikis_rss_exists">ეს არხის URL უკვე გაცემულია და ხელახლა ვერ გამოჩნდება.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">ნაჩვენებია პირველი %1$d კომენტარი.</item>
-        <item quantity="other">ნაჩვენებია პირველი %1$d კომენტარი.</item>
+        <item quantity="one">ნაჩვენებია პირველი %1$s კომენტარი.</item>
+        <item quantity="other">ნაჩვენებია პირველი %1$s კომენტარი.</item>
     </plurals>
 </resources>

@@ -33,7 +33,7 @@
     <string name="staff_accounts_unnamed">Bê nav</string>
     <string name="staff_accounts_unsuspend">Sekinandin rake</string>
     <string name="staff_accounts_unsuspended_toast">Sekinandina hesabê hat rakirin</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Betal bike</string>
     <string name="staff_appeals_decide">Biryar bide</string>
     <string name="staff_appeals_decision_denied">Lîsteya redkirî bihêle</string>
@@ -399,7 +399,7 @@
 
     <string name="staff_accounts_action_unsuspend_title">Rakirina sekinandinê</string>
     <string name="staff_accounts_reason_optional_label">Sedem (bijarte)</string>
-    <string name="staff_accounts_sales">%1$d firotin</string>
+    <string name="staff_accounts_sales">%1$s firotin</string>
     <string name="staff_appeals_reason_label">Sedema îtiraza firoşkar</string>
     <string name="staff_audit_action_staff_team_role_changed">Rola karmend hat guhertin</string>
     <string name="staff_categories_delete_desc">“%1$s” jê bibe? Ev nayê vegerandin.</string>

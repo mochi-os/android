@@ -180,7 +180,7 @@
     <string name="people_books_create">建立通訊錄</string>
     <string name="people_books_delete">刪除通訊錄</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="other">要刪除 %1$s 及其中的 %2$d 位聯絡人嗎？</item>
+        <item quantity="other">要刪除 %1$s 及其中的 %2$s 位聯絡人嗎？</item>
     </plurals>
     <string name="people_welcome_body">在 Mochi 中尋找好友並建立聯繫。點按「新增聯絡人」即可傳送邀請。</string>
     <string name="people_person_state_contact">已在聯絡人中</string>

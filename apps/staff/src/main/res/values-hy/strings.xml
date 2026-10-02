@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Նշումներ</string>
     <string name="staff_accounts_reason_label">Պատճառ</string>
     <string name="staff_accounts_reason_optional_label">Պատճառ (ոչ պարտադիր)</string>
-    <string name="staff_accounts_sales">%1$d վաճառք</string>
+    <string name="staff_accounts_sales">%1$s վաճառք</string>
     <string name="staff_accounts_search_clear">Մաքրել որոնումը</string>
     <string name="staff_accounts_search_placeholder">Որոնել</string>
     <string name="staff_accounts_seller_buyers">Միայն գնորդներ</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Անանուն</string>
     <string name="staff_accounts_unsuspend">Վերացնել կասեցումը</string>
     <string name="staff_accounts_unsuspended_toast">Հաշվի կասեցումը վերացվել է</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Չեղարկել</string>
     <string name="staff_appeals_decide">Որոշել</string>
     <string name="staff_appeals_decision_denied">Պահել հայտարարությունը՝ մերժված</string>

@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">ಇದು \"%1$s\" ನಿಂದ ವಿಷಯವನ್ನು ಆಮದು ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುತ್ತದೆ.</string>
     <string name="feeds_remove_also_delete_posts">ಈ ಮೂಲದಿಂದ ಆಮದು ಮಾಡಿದ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಸಹ ಅಳಿಸಿ</string>
     <string name="feeds_suggested_credibility_title">ಸೂಚಿಸಲಾದ ವಿಶ್ವಾಸಾರ್ಹತೆ</string>
-    <string name="feeds_suggested_credibility_body">Mochi %1$d ವಿಶ್ವಾಸಾರ್ಹತೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ. ಒಪ್ಪಿಕೊಳ್ಳಬೇಕೆ?</string>
+    <string name="feeds_suggested_credibility_body">Mochi %1$s ವಿಶ್ವಾಸಾರ್ಹತೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ. ಒಪ್ಪಿಕೊಳ್ಳಬೇಕೆ?</string>
     <string name="feeds_suggested_credibility_keep">ಪ್ರಸ್ತುತದನ್ನು ಉಳಿಸಿಕೊಳ್ಳಿ</string>
     <string name="feeds_ai_processing_mode">AI ಸಂಸ್ಕರಣಾ ಮೋಡ್</string>
     <string name="feeds_ai_account">AI ಖಾತೆ</string>
@@ -140,8 +140,8 @@
     <string name="feeds_saved_empty_subtitle">ಯಾವುದೇ ಪೋಸ್ಟ್ ಅನ್ನು ಇಲ್ಲಿ ನಂತರಕ್ಕಾಗಿ ಉಳಿಸಲು ಅದರ ಬುಕ್‌ಮಾರ್ಕ್ ಅನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="feeds_saved_error_clear">ಉಳಿಸಿದ ಪೋಸ್ಟ್‌ಗಳನ್ನು ತೆರವುಗೊಳಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
     <plurals name="feeds_new_posts">
-        <item quantity="one">%d ಹೊಸ ಪೋಸ್ಟ್</item>
-        <item quantity="other">%d ಹೊಸ ಪೋಸ್ಟ್‌ಗಳು</item>
+        <item quantity="one">%s ಹೊಸ ಪೋಸ್ಟ್</item>
+        <item quantity="other">%s ಹೊಸ ಪೋಸ್ಟ್‌ಗಳು</item>
     </plurals>
     <string name="feeds_caught_up">ನೀವು ಎಲ್ಲವನ್ನೂ ನೋಡಿದ್ದೀರಿ</string>
     <string name="feeds_all_caught_up">ಎಲ್ಲಾ ನವೀಕೃತವಾಗಿದೆ</string>
@@ -192,12 +192,12 @@
     <string name="feeds_source_url_hint_feed">ಫೀಡ್ ಎಂಟಿಟಿ ID ಅಥವಾ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್</string>
     <string name="feeds_source_credibility_label">ವಿಶ್ವಾಸಾರ್ಹತೆ</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="one">%1$d ಗಂಟೆ</item>
-        <item quantity="other">%1$d ಗಂಟೆಗಳು</item>
+        <item quantity="one">%1$s ಗಂಟೆ</item>
+        <item quantity="other">%1$s ಗಂಟೆಗಳು</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="one">%1$d ನಿಮಿಷ</item>
-        <item quantity="other">%1$d ನಿಮಿಷಗಳು</item>
+        <item quantity="one">%1$s ನಿಮಿಷ</item>
+        <item quantity="other">%1$s ನಿಮಿಷಗಳು</item>
     </plurals>
     <string name="feeds_source_polling_interval">ಪ್ರತಿ %1$s ಗೊಮ್ಮೆ ಪರಿಶೀಲನೆ</string>
     <string name="feeds_access_level_react_full">ಪ್ರತಿಕ್ರಿಯಿಸಿ ಮತ್ತು ವೀಕ್ಷಿಸಿ</string>
@@ -214,20 +214,20 @@
     <string name="feeds_link">ಲಿಂಕ್</string>
     <string name="feeds_share_link_title">ಫೀಡ್ ಲಿಂಕ್</string>
     <plurals name="feeds_comment_count">
-        <item quantity="one">%1$d ಕಾಮೆಂಟ್</item>
-        <item quantity="other">%1$d ಕಾಮೆಂಟ್‌ಗಳು</item>
+        <item quantity="one">%1$s ಕಾಮೆಂಟ್</item>
+        <item quantity="other">%1$s ಕಾಮೆಂಟ್‌ಗಳು</item>
     </plurals>
     <plurals name="feeds_attachment_count">
-        <item quantity="one">%1$d ಲಗತ್ತು</item>
-        <item quantity="other">%1$d ಲಗತ್ತುಗಳು</item>
+        <item quantity="one">%1$s ಲಗತ್ತು</item>
+        <item quantity="other">%1$s ಲಗತ್ತುಗಳು</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
-        <item quantity="one">%1$d ಹೆಚ್ಚಿನ ಕಾಮೆಂಟ್ ನೋಡಿ</item>
-        <item quantity="other">%1$d ಹೆಚ್ಚಿನ ಕಾಮೆಂಟ್‌ಗಳನ್ನು ನೋಡಿ</item>
+        <item quantity="one">%1$s ಹೆಚ್ಚಿನ ಕಾಮೆಂಟ್ ನೋಡಿ</item>
+        <item quantity="other">%1$s ಹೆಚ್ಚಿನ ಕಾಮೆಂಟ್‌ಗಳನ್ನು ನೋಡಿ</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
-        <item quantity="one">ಇಂದು %1$d ವರ್ಷದ ಹಿಂದೆ</item>
-        <item quantity="other">ಇಂದು %1$d ವರ್ಷಗಳ ಹಿಂದೆ</item>
+        <item quantity="one">ಇಂದು %1$s ವರ್ಷದ ಹಿಂದೆ</item>
+        <item quantity="other">ಇಂದು %1$s ವರ್ಷಗಳ ಹಿಂದೆ</item>
     </plurals>
     <string name="feeds_block">ನಿರ್ಬಂಧಿಸಿ</string>
     <string name="feeds_removed_from_feed">ನಿಮ್ಮನ್ನು ಈ ಫೀಡ್‌ನಿಂದ ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>

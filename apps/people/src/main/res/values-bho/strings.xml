@@ -180,8 +180,8 @@
     <string name="people_books_create">पता किताब बनाईं</string>
     <string name="people_books_delete">पता किताब मिटाईं</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s आ ओकर %2$d संपर्क मिटा दीं?</item>
-        <item quantity="other">%1$s आ ओकर %2$d संपर्क मिटा दीं?</item>
+        <item quantity="one">%1$s आ ओकर %2$s संपर्क मिटा दीं?</item>
+        <item quantity="other">%1$s आ ओकर %2$s संपर्क मिटा दीं?</item>
     </plurals>
     <string name="people_welcome_body">Mochi पर दोस्त खोजीं आ जुड़ीं। नेवता भेजे खातिर संपर्क जोड़ीं पर टैप करीं।</string>
     <string name="people_person_state_contact">संपर्क में बा</string>

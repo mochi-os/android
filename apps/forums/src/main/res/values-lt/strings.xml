@@ -202,10 +202,10 @@
     <string name="forums_saved_empty_subtitle">Bakstelėkite bet kurio įrašo žymę, kad išsaugotumėte jį čia vėlesniam laikui.</string>
     <string name="forums_saved_error_clear">Nepavyko išvalyti išsaugotų įrašų</string>
     <plurals name="forums_new_posts">
-        <item quantity="one">%d naujas įrašas</item>
-        <item quantity="few">%d nauji įrašai</item>
-        <item quantity="many">%d naujo įrašo</item>
-        <item quantity="other">%d naujų įrašų</item>
+        <item quantity="one">%s naujas įrašas</item>
+        <item quantity="few">%s nauji įrašai</item>
+        <item quantity="many">%s naujo įrašo</item>
+        <item quantity="other">%s naujų įrašų</item>
     </plurals>
     <string name="forums_rss_feed">RSS srautas</string>
     <string name="forums_rss_mode_posts">Įrašai</string>
@@ -298,8 +298,8 @@
     <string name="forums_settings_unsubscribe_section">Atsisakyti forumo prenumeratos</string>
     <string name="forums_share_link_title">Forumo nuoroda</string>
     <string name="forums_find_found_by_url">Rasta pagal URL</string>
-    <string name="forums_moderation_pending_posts">Laukiantys įrašai (%1$d)</string>
-    <string name="forums_moderation_pending_comments">Laukiantys komentarai (%1$d)</string>
+    <string name="forums_moderation_pending_posts">Laukiantys įrašai (%1$s)</string>
+    <string name="forums_moderation_pending_comments">Laukiantys komentarai (%1$s)</string>
     <string name="forums_moderation_on_image">Prie vaizdo: %1$s</string>
     <string name="forums_sort_ai">DI</string>
     <string name="forums_reject_post_access">Neturite leidimo skelbti šiame forume</string>

@@ -20,7 +20,7 @@
     <string name="staff_accounts_notes_label">Eslatmalar</string>
     <string name="staff_accounts_reason_label">Sabab</string>
     <string name="staff_accounts_reason_optional_label">Sabab (ixtiyoriy)</string>
-    <string name="staff_accounts_sales">%1$d sotuv</string>
+    <string name="staff_accounts_sales">%1$s sotuv</string>
     <string name="staff_accounts_search_clear">Qidiruvni tozalash</string>
     <string name="staff_accounts_search_placeholder">Qidirish</string>
     <string name="staff_accounts_seller_buyers">Faqat xaridorlar</string>
@@ -37,7 +37,7 @@
     <string name="staff_accounts_unnamed">Nomsiz</string>
     <string name="staff_accounts_unsuspend">Toʻxtatib qoʻyishni olib tashlash</string>
     <string name="staff_accounts_unsuspended_toast">Hisobni toʻxtatib qoʻyish olib tashlandi</string>
-    <string name="staff_accounts_verification_level">L%1$d</string>
+    <string name="staff_accounts_verification_level">L%1$s</string>
     <string name="staff_appeals_cancel">Bekor qilish</string>
     <string name="staff_appeals_decide">Hal qilish</string>
     <string name="staff_appeals_decision_denied">Eʼlonni qoldirib, rad etish</string>

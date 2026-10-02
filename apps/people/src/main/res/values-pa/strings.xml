@@ -180,8 +180,8 @@
     <string name="people_books_create">ਪਤਾ ਕਿਤਾਬ ਬਣਾਓ</string>
     <string name="people_books_delete">ਪਤਾ ਕਿਤਾਬ ਮਿਟਾਓ</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">%1$s ਅਤੇ ਇਸਦਾ %2$d ਸੰਪਰਕ ਮਿਟਾਉਣਾ ਹੈ?</item>
-        <item quantity="other">%1$s ਅਤੇ ਇਸਦੇ %2$d ਸੰਪਰਕ ਮਿਟਾਉਣੇ ਹਨ?</item>
+        <item quantity="one">%1$s ਅਤੇ ਇਸਦਾ %2$s ਸੰਪਰਕ ਮਿਟਾਉਣਾ ਹੈ?</item>
+        <item quantity="other">%1$s ਅਤੇ ਇਸਦੇ %2$s ਸੰਪਰਕ ਮਿਟਾਉਣੇ ਹਨ?</item>
     </plurals>
     <string name="people_welcome_body">Mochi ਵਿੱਚ ਦੋਸਤ ਲੱਭੋ ਅਤੇ ਜੁੜੋ। ਸੱਦਾ ਭੇਜਣ ਲਈ ਸੰਪਰਕ ਸ਼ਾਮਲ ਕਰੋ ਦਬਾਓ।</string>
     <string name="people_person_state_contact">ਸੰਪਰਕਾਂ ਵਿੱਚ</string>

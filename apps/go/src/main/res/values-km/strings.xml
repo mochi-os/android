@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">លុប</string>
     <string name="go_delete_message">ហ្គេមនេះនឹងត្រូវដកចេញពីបញ្ជីរបស់អ្នក។ មិនអាចត្រឡប់វិញបានទេ។</string>
     <string name="go_delete_title">លុបហ្គេម?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">ទទួលយក</string>
     <string name="go_draw_decline">បដិសេធ</string>
     <string name="go_draw_offered_received">%1$s បានស្នើស្មើ</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">បានចុះចាញ់</string>
     <string name="go_new_game_title">ហ្គេម Go ថ្មី</string>
     <string name="go_new_game_no_friends">អ្នកត្រូវបន្ថែមមិត្តភក្តិមុនពេលអាចចាប់ផ្តើមហ្គេម។</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">ពិន្ទុដែលបន្ថែមទៅពិន្ទុរបស់ស ដើម្បីទូទាត់ការដែលខ្មៅដើរមុន</string>
 
-    <string name="go_board_a11y">ក្តារ Go %1$d×%1$d</string>
-    <string name="go_board_a11y_turn_black">ក្តារ Go %1$d×%1$d វេនរបស់អ្នកដាក់ត្បូងខ្មៅ</string>
-    <string name="go_board_a11y_turn_white">ក្តារ Go %1$d×%1$d វេនរបស់អ្នកដាក់ត្បូងស</string>
+    <string name="go_board_a11y">ក្តារ Go %1$s×%1$s</string>
+    <string name="go_board_a11y_turn_black">ក្តារ Go %1$s×%1$s វេនរបស់អ្នកដាក់ត្បូងខ្មៅ</string>
+    <string name="go_board_a11y_turn_white">ក្តារ Go %1$s×%1$s វេនរបស់អ្នកដាក់ត្បូងស</string>
     <string name="go_status_scoring">កំពុងរាប់ — ព្រមព្រៀងលើពិន្ទុ ឬលេងបន្ត</string>
     <string name="go_score_proposed">ពិន្ទុដែលបានស្នើ៖ ខ្មៅ %1$s ស %2$s</string>
     <string name="go_score_opponent_accepted">គូប្រកួតរបស់អ្នកទទួលយកពិន្ទុនេះ៖ ខ្មៅ %1$s ស %2$s</string>

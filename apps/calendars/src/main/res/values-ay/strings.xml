@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Wiñayataki</string>
     <string name="calendars_reminder_time">Uka pachana</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minuto nayra</item>
-        <item quantity="other">%1$d minuto nayra</item>
+        <item quantity="one">%1$s minuto nayra</item>
+        <item quantity="other">%1$s minuto nayra</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d ura nayra</item>
-        <item quantity="other">%1$d ura nayra</item>
+        <item quantity="one">%1$s ura nayra</item>
+        <item quantity="other">%1$s ura nayra</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d uru nayra</item>
-        <item quantity="other">%1$d uru nayra</item>
+        <item quantity="one">%1$s uru nayra</item>
+        <item quantity="other">%1$s uru nayra</item>
     </plurals>
     <string name="calendars_reminder_add">Amtayiri yapxataña</string>
     <string name="calendars_reminder_remove">Amtayiri aparaña</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Calendariox wali jach\'awa</string>
     <string name="calendars_poll_invalid">Dirección janiw calendario churkiti</string>
     <string name="calendars_poll_unreachable">Direcciónar janiw puriñjamäkiti</string>
-    <string name="calendars_poll_status">Dirección %1$d jaysi</string>
+    <string name="calendars_poll_status">Dirección %1$s jaysi</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minuto</item>
-        <item quantity="other">%1$d minuto</item>
+        <item quantity="one">%1$s minuto</item>
+        <item quantity="other">%1$s minuto</item>
     </plurals>
     <string name="calendars_preferences_zones">Luräwinak jupanakan ura zonapan uñacht\'ayaña</string>
     <string name="calendars_event_backwards">Janïr qalltkipan tukusi</string>

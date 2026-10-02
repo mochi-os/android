@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Nincsenek objektumok</string>
     <string name="crm_board_no_columns">Ehhez a nézethez nincs oszlop beállítva</string>
     <string name="crm_board_no_options">Az oszlopmezőhöz nincsenek beállítva opciók</string>
-    <string name="crm_board_nested_count">+%1$d beágyazott</string>
+    <string name="crm_board_nested_count">+%1$s beágyazott</string>
     <string name="crm_move_to_column">Áthelyezés oszlopba</string>
     <string name="crm_move_to_row">Áthelyezés sorba</string>
     <string name="crm_move_after">%1$s után</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">A CRM adatai mentve</string>
     <string name="crm_create_upload_json">Töltsön fel .zip vagy .json fájlt</string>
     <string name="crm_create_blocked_no_options">Nem hozható létre: a(z) %1$s kötelező, de nincsenek választható lehetőségei. Adjon hozzá lehetőségeket a Tervben.</string>
-    <string name="crm_design_sample">Minta %1$d</string>
+    <string name="crm_design_sample">Minta %1$s</string>
     <string name="crm_option_delete_title">Beállítás törlése</string>
     <string name="crm_option_delete_message">Biztosan törli a(z) \"%1$s\" beállítást?</string>
 </resources>

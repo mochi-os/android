@@ -99,16 +99,16 @@
     <string name="calendars_repeat_forever">Betiko</string>
     <string name="calendars_reminder_time">Unean bertan</string>
     <plurals name="calendars_reminder_minutes">
-        <item quantity="one">%1$d minutu lehenago</item>
-        <item quantity="other">%1$d minutu lehenago</item>
+        <item quantity="one">%1$s minutu lehenago</item>
+        <item quantity="other">%1$s minutu lehenago</item>
     </plurals>
     <plurals name="calendars_reminder_hours">
-        <item quantity="one">%1$d ordu lehenago</item>
-        <item quantity="other">%1$d ordu lehenago</item>
+        <item quantity="one">%1$s ordu lehenago</item>
+        <item quantity="other">%1$s ordu lehenago</item>
     </plurals>
     <plurals name="calendars_reminder_days">
-        <item quantity="one">%1$d egun lehenago</item>
-        <item quantity="other">%1$d egun lehenago</item>
+        <item quantity="one">%1$s egun lehenago</item>
+        <item quantity="other">%1$s egun lehenago</item>
     </plurals>
     <string name="calendars_reminder_add">Gehitu oroigarria</string>
     <string name="calendars_reminder_remove">Kendu oroigarria</string>
@@ -142,10 +142,10 @@
     <string name="calendars_poll_large">Egutegia handiegia da</string>
     <string name="calendars_poll_invalid">Helbideak ez du egutegirik itzuli</string>
     <string name="calendars_poll_unreachable">Ezin izan da helbidera iritsi</string>
-    <string name="calendars_poll_status">Helbideak %1$d erantzun du</string>
+    <string name="calendars_poll_status">Helbideak %1$s erantzun du</string>
     <plurals name="calendars_minutes">
-        <item quantity="one">%1$d minutu</item>
-        <item quantity="other">%1$d minutu</item>
+        <item quantity="one">%1$s minutu</item>
+        <item quantity="other">%1$s minutu</item>
     </plurals>
     <string name="calendars_preferences_zones">Erakutsi gertaerak beren ordu-zonan</string>
     <string name="calendars_event_backwards">Hasi baino lehen amaitzen da</string>

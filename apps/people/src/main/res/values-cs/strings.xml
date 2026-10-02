@@ -180,9 +180,9 @@
     <string name="people_books_create">Vytvořit adresář</string>
     <string name="people_books_delete">Smazat adresář</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Smazat %1$s a jeho %2$d kontakt?</item>
-        <item quantity="few">Smazat %1$s a jeho %2$d kontakty?</item>
-        <item quantity="other">Smazat %1$s a jeho %2$d kontaktů?</item>
+        <item quantity="one">Smazat %1$s a jeho %2$s kontakt?</item>
+        <item quantity="few">Smazat %1$s a jeho %2$s kontakty?</item>
+        <item quantity="other">Smazat %1$s a jeho %2$s kontaktů?</item>
     </plurals>
     <string name="people_welcome_body">Najděte přátele napříč Mochi a spojte se s nimi. Klepnutím na Přidat kontakt odešlete pozvánku.</string>
     <string name="people_person_state_contact">V kontaktech</string>

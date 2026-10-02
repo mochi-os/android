@@ -187,7 +187,7 @@
     <string name="crm_tree_empty">Geen objecten</string>
     <string name="crm_board_no_columns">Geen kolommen geconfigureerd voor deze weergave</string>
     <string name="crm_board_no_options">Geen opties ingesteld voor kolomveld</string>
-    <string name="crm_board_nested_count">+%1$d genest</string>
+    <string name="crm_board_nested_count">+%1$s genest</string>
     <string name="crm_move_to_column">Verplaatsen naar kolom</string>
     <string name="crm_move_to_row">Verplaatsen naar rij</string>
     <string name="crm_move_after">Na %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM-gegevens opgeslagen</string>
     <string name="crm_create_upload_json">Upload een .zip- of .json-bestand</string>
     <string name="crm_create_blocked_no_options">Kan niet maken: %1$s is vereist maar heeft geen opties om uit te kiezen. Voeg opties toe in Ontwerp.</string>
-    <string name="crm_design_sample">Voorbeeld %1$d</string>
+    <string name="crm_design_sample">Voorbeeld %1$s</string>
     <string name="crm_option_delete_title">Optie verwijderen</string>
     <string name="crm_option_delete_message">Weet je zeker dat je de optie \"%1$s\" wilt verwijderen?</string>
 </resources>

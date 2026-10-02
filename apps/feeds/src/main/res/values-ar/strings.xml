@@ -115,7 +115,7 @@
     <string name="feeds_remove_source_confirm">سيؤدي هذا إلى إيقاف استيراد المحتوى من \"%1$s\".</string>
     <string name="feeds_remove_also_delete_posts">حذف المنشورات المستوردة من هذا المصدر أيضًا</string>
     <string name="feeds_suggested_credibility_title">المصداقية المقترحة</string>
-    <string name="feeds_suggested_credibility_body">تقترح Mochi مصداقية %1$d. هل تقبل؟</string>
+    <string name="feeds_suggested_credibility_body">تقترح Mochi مصداقية %1$s. هل تقبل؟</string>
     <string name="feeds_suggested_credibility_keep">الإبقاء على الحالية</string>
     <string name="feeds_ai_processing_mode">وضع معالجة الذكاء الاصطناعي</string>
     <string name="feeds_ai_account">حساب الذكاء الاصطناعي</string>
@@ -140,12 +140,12 @@
     <string name="feeds_saved_empty_subtitle">انقر على علامة الإشارة في أي منشور لحفظه هنا لوقت لاحق.</string>
     <string name="feeds_saved_error_clear">تعذّر مسح المنشورات المحفوظة</string>
     <plurals name="feeds_new_posts">
-        <item quantity="zero">%d منشور جديد</item>
-        <item quantity="one">%d منشور جديد</item>
-        <item quantity="two">%d منشوران جديدان</item>
-        <item quantity="few">%d منشورات جديدة</item>
-        <item quantity="many">%d منشورًا جديدًا</item>
-        <item quantity="other">%d منشور جديد</item>
+        <item quantity="zero">%s منشور جديد</item>
+        <item quantity="one">%s منشور جديد</item>
+        <item quantity="two">%s منشوران جديدان</item>
+        <item quantity="few">%s منشورات جديدة</item>
+        <item quantity="many">%s منشورًا جديدًا</item>
+        <item quantity="other">%s منشور جديد</item>
     </plurals>
     <string name="feeds_caught_up">شاهدت كل المنشورات</string>
     <string name="feeds_all_caught_up">لا جديد</string>
@@ -196,20 +196,20 @@
     <string name="feeds_source_url_hint_feed">معرف كيان التغذية أو البصمة</string>
     <string name="feeds_source_credibility_label">المصداقية</string>
     <plurals name="feeds_source_interval_hours">
-        <item quantity="zero">%1$d ساعة</item>
-        <item quantity="one">%1$d ساعة</item>
-        <item quantity="two">%1$d ساعتان</item>
-        <item quantity="few">%1$d ساعات</item>
-        <item quantity="many">%1$d ساعة</item>
-        <item quantity="other">%1$d ساعة</item>
+        <item quantity="zero">%1$s ساعة</item>
+        <item quantity="one">%1$s ساعة</item>
+        <item quantity="two">%1$s ساعتان</item>
+        <item quantity="few">%1$s ساعات</item>
+        <item quantity="many">%1$s ساعة</item>
+        <item quantity="other">%1$s ساعة</item>
     </plurals>
     <plurals name="feeds_source_interval_minutes">
-        <item quantity="zero">%1$d دقيقة</item>
-        <item quantity="one">%1$d دقيقة</item>
-        <item quantity="two">%1$d دقيقتان</item>
-        <item quantity="few">%1$d دقائق</item>
-        <item quantity="many">%1$d دقيقة</item>
-        <item quantity="other">%1$d دقيقة</item>
+        <item quantity="zero">%1$s دقيقة</item>
+        <item quantity="one">%1$s دقيقة</item>
+        <item quantity="two">%1$s دقيقتان</item>
+        <item quantity="few">%1$s دقائق</item>
+        <item quantity="many">%1$s دقيقة</item>
+        <item quantity="other">%1$s دقيقة</item>
     </plurals>
     <string name="feeds_source_polling_interval">الاستطلاع كل %1$s</string>
     <string name="feeds_access_level_react_full">التفاعل والعرض</string>
@@ -226,36 +226,36 @@
     <string name="feeds_link">رابط</string>
     <string name="feeds_share_link_title">رابط الموجز</string>
     <plurals name="feeds_comment_count">
-        <item quantity="zero">%1$d تعليق</item>
+        <item quantity="zero">%1$s تعليق</item>
         <item quantity="one">تعليق واحد</item>
         <item quantity="two">تعليقان</item>
-        <item quantity="few">%1$d تعليقات</item>
-        <item quantity="many">%1$d تعليقًا</item>
-        <item quantity="other">%1$d تعليق</item>
+        <item quantity="few">%1$s تعليقات</item>
+        <item quantity="many">%1$s تعليقًا</item>
+        <item quantity="other">%1$s تعليق</item>
     </plurals>
     <plurals name="feeds_attachment_count">
         <item quantity="zero">لا مرفقات</item>
         <item quantity="one">مرفق واحد</item>
         <item quantity="two">مرفقان</item>
-        <item quantity="few">%1$d مرفقات</item>
-        <item quantity="many">%1$d مرفقًا</item>
-        <item quantity="other">%1$d مرفق</item>
+        <item quantity="few">%1$s مرفقات</item>
+        <item quantity="many">%1$s مرفقًا</item>
+        <item quantity="other">%1$s مرفق</item>
     </plurals>
     <plurals name="feeds_view_more_comments">
         <item quantity="zero">لا تعليقات أخرى</item>
         <item quantity="one">عرض تعليق واحد آخر</item>
         <item quantity="two">عرض تعليقين آخرين</item>
-        <item quantity="few">عرض %1$d تعليقات أخرى</item>
-        <item quantity="many">عرض %1$d تعليقًا آخر</item>
-        <item quantity="other">عرض %1$d تعليق آخر</item>
+        <item quantity="few">عرض %1$s تعليقات أخرى</item>
+        <item quantity="many">عرض %1$s تعليقًا آخر</item>
+        <item quantity="other">عرض %1$s تعليق آخر</item>
     </plurals>
     <plurals name="feeds_memory_years_ago_today">
         <item quantity="zero">اليوم</item>
         <item quantity="one">قبل عام واحد في هذا اليوم</item>
         <item quantity="two">قبل عامين في هذا اليوم</item>
-        <item quantity="few">قبل %1$d أعوام في هذا اليوم</item>
-        <item quantity="many">قبل %1$d عامًا في هذا اليوم</item>
-        <item quantity="other">قبل %1$d عام في هذا اليوم</item>
+        <item quantity="few">قبل %1$s أعوام في هذا اليوم</item>
+        <item quantity="many">قبل %1$s عامًا في هذا اليوم</item>
+        <item quantity="other">قبل %1$s عام في هذا اليوم</item>
     </plurals>
     <string name="feeds_block">حظر</string>
     <string name="feeds_removed_from_feed">تمت إزالتك من هذه التغذية</string>

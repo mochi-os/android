@@ -67,7 +67,7 @@
     <string name="chess_ws_reconnecting">ٻيهر ڳنڍجي رهيو آهي…</string>
     <string name="chess_ws_failed">ڪنيڪشن ناڪام ٿيو</string>
     <string name="chess_move_capture">%1$s %2$s کنيو</string>
-    <string name="chess_captured_multiplier">×%1$d</string>
+    <string name="chess_captured_multiplier">×%1$s</string>
 
     <string name="chess_piece_white">اڇو %1$s</string>
     <string name="chess_piece_black">ڪارو %1$s</string>

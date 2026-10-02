@@ -180,8 +180,8 @@
     <string name="people_books_create">Luo osoitekirja</string>
     <string name="people_books_delete">Poista osoitekirja</string>
     <plurals name="people_books_delete_confirm">
-        <item quantity="one">Poistetaanko %1$s ja sen %2$d yhteystieto?</item>
-        <item quantity="other">Poistetaanko %1$s ja sen %2$d yhteystietoa?</item>
+        <item quantity="one">Poistetaanko %1$s ja sen %2$s yhteystieto?</item>
+        <item quantity="other">Poistetaanko %1$s ja sen %2$s yhteystietoa?</item>
     </plurals>
     <string name="people_welcome_body">Löydä kavereita kaikkialta Mochista ja ota yhteyttä. Lähetä kutsu napauttamalla Lisää yhteystieto.</string>
     <string name="people_person_state_contact">Yhteystiedoissa</string>

@@ -222,7 +222,7 @@
     <string name="wikis_channel_description">Sayfa düzenlemeleri, yorumlar ve davetler hakkında bildirimler.</string>
     <string name="wikis_pageview_toc_expand">İçindekiler tablosunu göster</string>
     <string name="wikis_pageview_toc_collapse">İçindekiler tablosunu gizle</string>
-    <string name="wikis_pageview_version">s%1$d</string>
+    <string name="wikis_pageview_version">s%1$s</string>
     <string name="wikis_pageview_updated">Güncellendi %1$s</string>
     <string name="wikis_pageview_not_found_description">\"%1$s\" sayfası henüz mevcut değil.</string>
     <string name="wikis_pageview_share_chooser">Wiki bağlantısı</string>
@@ -247,13 +247,13 @@
     <string name="wikis_delete_page_message">\"%1$s\" sayfasını (%2$s) silmek üzeresiniz. Bu işlem geçmişten geri yüklenerek geri alınabilir.</string>
     <string name="wikis_delete_page_success">Sayfa silindi</string>
     <string name="wikis_revert_page_title">Sayfayı geri al</string>
-    <string name="wikis_revert_page_message">%1$s\'i sürüm %2$d\'e geri almak üzeresiniz. Bu, sürüm %2$d içeriğiyle yeni bir revizyon oluşturacak.</string>
-    <string name="wikis_revert_page_default_comment">Sürüm %1$d\'e geri alındı</string>
-    <string name="wikis_revert_page_success">Sürüm %1$d\'e geri alındı</string>
+    <string name="wikis_revert_page_message">%1$s\'i sürüm %2$s\'e geri almak üzeresiniz. Bu, sürüm %2$s içeriğiyle yeni bir revizyon oluşturacak.</string>
+    <string name="wikis_revert_page_default_comment">Sürüm %1$s\'e geri alındı</string>
+    <string name="wikis_revert_page_success">Sürüm %1$s\'e geri alındı</string>
     <string name="wikis_rename_page_renaming">Yeniden adlandırılıyor…</string>
     <string name="wikis_rename_page_success">Sayfa yeniden adlandırıldı</string>
-    <string name="wikis_history_viewing">%1$s geçmişi görüntüleniyor, mevcut sürüm %2$d</string>
-    <string name="wikis_revision_version_badge">Sürüm %1$d</string>
+    <string name="wikis_history_viewing">%1$s geçmişi görüntüleniyor, mevcut sürüm %2$s</string>
+    <string name="wikis_revision_version_badge">Sürüm %1$s</string>
     <string name="wikis_search_pages_placeholder">Başlık veya içeriğe göre sayfa ara…</string>
     <string name="wikis_search_no_results">\"%1$s\" için sayfa bulunamadı. Farklı arama terimleri deneyin.</string>
     <string name="wikis_search_updated">Güncellendi %1$s</string>
@@ -289,38 +289,38 @@
     <string name="wikis_revision_author">%1$s ile</string>
     <string name="wikis_revision_show_page">Sayfayı göster</string>
     <string name="wikis_revision_compare_failed">Karşılaştırma için önceki sürüm yüklenemedi.</string>
-    <string name="wikis_revision_changes_from">%1$d → %2$d sürümünden değişiklikler</string>
+    <string name="wikis_revision_changes_from">%1$s → %2$s sürümünden değişiklikler</string>
     <plurals name="wikis_page_action_comments">
-        <item quantity="one">%d yorum</item>
-        <item quantity="other">%d yorum</item>
+        <item quantity="one">%s yorum</item>
+        <item quantity="other">%s yorum</item>
     </plurals>
     <plurals name="wikis_comment_collapsed_replies">
-        <item quantity="one">%d yanıt</item>
-        <item quantity="other">+%d yanıt daha</item>
+        <item quantity="one">%s yanıt</item>
+        <item quantity="other">+%s yanıt daha</item>
     </plurals>
     <plurals name="wikis_tags_count">
-        <item quantity="one">%d sayfa</item>
-        <item quantity="other">%d sayfa</item>
+        <item quantity="one">%s sayfa</item>
+        <item quantity="other">%s sayfa</item>
     </plurals>
     <plurals name="wikis_attachments_total_files">
-        <item quantity="one">%d dosya</item>
-        <item quantity="other">%d dosya</item>
+        <item quantity="one">%s dosya</item>
+        <item quantity="other">%s dosya</item>
     </plurals>
     <plurals name="wikis_attachments_total_images">
-        <item quantity="one">%d görsel</item>
-        <item quantity="other">%d görsel</item>
+        <item quantity="one">%s görsel</item>
+        <item quantity="other">%s görsel</item>
     </plurals>
     <plurals name="wikis_attachments_total_documents">
-        <item quantity="one">%d belge</item>
-        <item quantity="other">%d belge</item>
+        <item quantity="one">%s belge</item>
+        <item quantity="other">%s belge</item>
     </plurals>
     <plurals name="wikis_tag_pages_count">
-        <item quantity="one">Bu etiketle %d sayfa</item>
-        <item quantity="other">Bu etiketle %d sayfa</item>
+        <item quantity="one">Bu etiketle %s sayfa</item>
+        <item quantity="other">Bu etiketle %s sayfa</item>
     </plurals>
     <plurals name="wikis_search_results_count">
-        <item quantity="one">\"%2$s\" için %1$d sonuç bulundu</item>
-        <item quantity="other">\"%2$s\" için %1$d sonuç bulundu</item>
+        <item quantity="one">\"%2$s\" için %1$s sonuç bulundu</item>
+        <item quantity="other">\"%2$s\" için %1$s sonuç bulundu</item>
     </plurals>
     <string name="wikis_attachments_caption_save_failed">Resim yazısı kaydedilemedi</string>
     <string name="wikis_attachments_upload_types">Desteklenen dosyalar: görseller, PDF, DOC, DOCX, TXT ve MD.</string>
@@ -329,7 +329,7 @@
     <string name="wikis_rss_copied_new">Yeni RSS URL\'si panoya kopyalandı</string>
     <string name="wikis_rss_exists">Bu akış URL\'si zaten verildi ve tekrar gösterilemez.</string>
     <plurals name="wikis_comments_truncated">
-        <item quantity="one">İlk %1$d yorum gösteriliyor.</item>
-        <item quantity="other">İlk %1$d yorum gösteriliyor.</item>
+        <item quantity="one">İlk %1$s yorum gösteriliyor.</item>
+        <item quantity="other">İlk %1$s yorum gösteriliyor.</item>
     </plurals>
 </resources>

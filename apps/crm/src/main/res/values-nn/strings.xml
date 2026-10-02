@@ -186,7 +186,7 @@
     <string name="crm_tree_empty">Ingen objekt</string>
     <string name="crm_board_no_columns">Ingen kolonnar er sette opp for denne visinga</string>
     <string name="crm_board_no_options">Ingen alternativ er sette opp for kolonnefeltet</string>
-    <string name="crm_board_nested_count">+%1$d nøsta</string>
+    <string name="crm_board_nested_count">+%1$s nøsta</string>
     <string name="crm_move_to_column">Flytt til kolonne</string>
     <string name="crm_move_to_row">Flytt til rad</string>
     <string name="crm_move_after">Etter %1$s</string>
@@ -287,7 +287,7 @@
     <string name="crm_export_saved">CRM-data lagra</string>
     <string name="crm_create_upload_json">Last opp ei .zip- eller .json-fil</string>
     <string name="crm_create_blocked_no_options">Kan ikkje opprette: %1$s er påkravd, men har ingen alternativ å velje mellom. Legg til alternativ i Design.</string>
-    <string name="crm_design_sample">Døme %1$d</string>
+    <string name="crm_design_sample">Døme %1$s</string>
     <string name="crm_option_delete_title">Slett val</string>
     <string name="crm_option_delete_message">Er du sikker på at du vil slette valet \"%1$s\"?</string>
 </resources>

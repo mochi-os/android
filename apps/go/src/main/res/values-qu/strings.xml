@@ -17,7 +17,7 @@
     <string name="go_delete_confirm">Wischuy</string>
     <string name="go_delete_message">Kay pukllayqa listaykimanta qichusqa kanqa. Kayqa mana kutichiy atikunchu.</string>
     <string name="go_delete_title">¿Pukllayta wischunki?</string>
-    <string name="go_detail_title_with_size">%1$s (%2$d×%2$d)</string>
+    <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_draw_accept">Chaskiy</string>
     <string name="go_draw_decline">Mana chaskiy</string>
     <string name="go_draw_offered_received">%1$s empateta qorqan</string>
@@ -69,12 +69,12 @@
     <string name="go_status_resigned">Saqirakapurqan</string>
     <string name="go_new_game_title">Musuq Go pukllay</string>
     <string name="go_new_game_no_friends">Pukllayta qallarinaykipaq ñawpaqta huk masita yapananki.</string>
-    <string name="go_new_game_board_size_value">%1$d×%2$d</string>
+    <string name="go_new_game_board_size_value">%1$s×%2$s</string>
     <string name="go_new_game_komi_hint">Yana ñawpaqta puriptin, Yuraqpa yupaynin yapasqa puntukuna</string>
 
-    <string name="go_board_a11y">%1$d×%1$d Go tablero</string>
-    <string name="go_board_a11y_turn_black">%1$d×%1$d Go tablero, qampa turnoyki yana rumita churanaykipaq</string>
-    <string name="go_board_a11y_turn_white">%1$d×%1$d Go tablero, qampa turnoyki yuraq rumita churanaykipaq</string>
+    <string name="go_board_a11y">%1$s×%1$s Go tablero</string>
+    <string name="go_board_a11y_turn_black">%1$s×%1$s Go tablero, qampa turnoyki yana rumita churanaykipaq</string>
+    <string name="go_board_a11y_turn_white">%1$s×%1$s Go tablero, qampa turnoyki yuraq rumita churanaykipaq</string>
     <string name="go_status_scoring">Yupay — puntajepi arí niychik utaq pukllaychik</string>
     <string name="go_score_proposed">Haywasqa puntaje: yana %1$s, yuraq %2$s</string>
     <string name="go_score_opponent_accepted">Awqaykiqa kay puntajeta chaskin: yana %1$s, yuraq %2$s</string>
