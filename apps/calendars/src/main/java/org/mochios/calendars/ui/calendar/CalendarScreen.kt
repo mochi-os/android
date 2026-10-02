@@ -295,11 +295,8 @@ fun CalendarScreen(
                                     viewModel,
                                     selected = selected,
                                     onOpen = { instance ->
-                                        if (instance.editable) {
-                                            onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
-                                        } else {
-                                            selected = instance
-                                        }
+                                        selected = instance
+                                        viewModel.details(instance)
                                     },
                                     onNewEvent = onNewEvent,
                                     onMove = { instance, start, finish ->
@@ -373,6 +370,9 @@ fun CalendarScreen(
             instance = instance,
             calendar = uiState.calendars.firstOrNull { it.id == instance.calendar },
             zones = uiState.preferences.zones,
+            details = uiState.details?.takeIf { details ->
+                details.event == instance.event && details.occurrence == instance.occurrence
+            },
             onDismiss = { selected = null },
             onCopy = {
                 selected = null
@@ -381,6 +381,14 @@ fun CalendarScreen(
                     instance.recurring -> copying = instance
                     else -> onCopyEvent(instance.event, 0, Scope.ALL)
                 }
+            },
+            onEdit = if (instance.editable) {
+                {
+                    selected = null
+                    onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
+                }
+            } else {
+                null
             },
         )
     }
