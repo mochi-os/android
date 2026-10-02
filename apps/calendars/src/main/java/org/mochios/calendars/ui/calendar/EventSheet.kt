@@ -97,11 +97,10 @@ class Wording(
     /** Two ends, each a date and a time: "… 22:00 to … 06:00". */
     val range: (String, String) -> String,
     /**
-     * A timed span whose ends read at one offset from UTC, written whole,
-     * from its start, its finish and the start's zone; null leaves it to
-     * [day] and [range].
+     * A timed span written whole, from its start, its finish and the zones
+     * each is read in; null leaves it to [day] and [range].
      */
-    val times: ((Long, Long, String?) -> String)? = null,
+    val times: ((Long, Long, String?, String?) -> String)? = null,
 )
 
 /**
@@ -143,10 +142,8 @@ fun summary(
     // The span read in a pair of zones, the user's own when none is given.
     fun describe(start: String?, finish: String?, cities: Boolean): String {
         val whole = wording.times
-        val begins = zoneOf(start, home).rules.getOffset(Instant.ofEpochSecond(instance.start))
-        val ends = zoneOf(finish, home).rules.getOffset(Instant.ofEpochSecond(instance.finish))
-        if (whole != null && !cities && begins == ends) {
-            return whole(instance.start, instance.finish, start)
+        if (whole != null && !cities) {
+            return whole(instance.start, instance.finish, start, finish)
         }
         fun label(zone: String?) = if (cities) " " + zoneCity(zone ?: user) else ""
         val first = Instant.ofEpochSecond(instance.start).atZone(zoneOf(start, home)).toLocalDate()
@@ -227,7 +224,9 @@ fun EventSheet(
             allday = { allday + " · " + it },
             day = { date, from, to -> String.format(day, date, from, to) },
             range = { from, to -> String.format(range, from, to) },
-            times = { start, finish, zone -> format.formatTimeRange(start, finish, zone) },
+            times = { start, finish, opens, closes ->
+                format.formatTimeRange(start, finish, opens, closes)
+            },
         ),
         cities = false,
     )

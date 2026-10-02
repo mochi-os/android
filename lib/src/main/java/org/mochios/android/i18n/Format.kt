@@ -139,14 +139,17 @@ class Format(val preferences: UserPreferences, private val clock: Clock = Platfo
      * day is written once and the times after it, sharing their AM or PM:
      * "Sunday, Oct 5 · 8:30 – 9:30 PM". Across days each end has its own day
      * and its own line: "Sunday, Oct 5 · 10:00 PM –" over "Monday, Oct 6 ·
-     * 6:00 AM". The year shows only
-     * when an end falls outside the year of [now]. A span ending at midnight
-     * ends on the day it started. [zone] reads it in another IANA zone than
-     * the user's; blank or unknown means the user's.
+     * 6:00 AM". The year shows only when an end falls outside the year of
+     * [now]. A span ending at midnight ends on the day it started. Each end is
+     * read in its own zone, [zone] and [finishZone], so a flight reads
+     * "4:00 PM – 2:00 PM" on one day; a shared AM or PM is written once only
+     * when both ends read at one offset. Blank or unknown zones mean the
+     * user's.
      *
      * @param start The first moment, epoch seconds.
      * @param finish The last moment, epoch seconds.
-     * @param zone The IANA zone to read both ends in.
+     * @param zone The IANA zone to read the start in.
+     * @param finishZone The IANA zone to read the finish in.
      * @param now The moment whose year needs no writing, epoch seconds.
      * @return The span, or "" when [start] is not a moment.
      */
@@ -154,32 +157,36 @@ class Format(val preferences: UserPreferences, private val clock: Clock = Platfo
         start: Long,
         finish: Long,
         zone: String? = null,
+        finishZone: String? = zone,
         now: Long = System.currentTimeMillis() / 1000,
     ): String {
         if (start <= 0) return ""
-        val tz = zoneOf(zone)
+        val opens = zoneOf(zone)
+        val closes = zoneOf(finishZone)
         val end = maxOf(start, finish)
-        val calendar = { seconds: Long ->
+        val calendar = { seconds: Long, tz: TimeZone ->
             Calendar.getInstance(tz).apply { timeInMillis = epochToMillis(seconds) }
         }
-        val from = calendar(start)
-        val last = calendar(maxOf(start, end - 1))
-        val year = calendar(now).get(Calendar.YEAR)
+        val from = calendar(start, opens)
+        val last = calendar(maxOf(start, end - 1), closes)
+        val year = calendar(now, timeZone).get(Calendar.YEAR)
         val other = from.get(Calendar.YEAR) != year || last.get(Calendar.YEAR) != year
-        val dated = "EEEEMMMd" + if (other) "y" else ""
+        val dated = clock.pattern("EEEEMMMd" + if (other) "y" else "")
         val timed = twelve("hm", "Hm")
         val sameDay = from.get(Calendar.YEAR) == last.get(Calendar.YEAR) &&
             from.get(Calendar.DAY_OF_YEAR) == last.get(Calendar.DAY_OF_YEAR)
-        if (sameDay) {
-            val day = clock.write(clock.pattern(dated), epochToMillis(start), tz)
-            return day + " · " + clock.span(timed, epochToMillis(start), epochToMillis(end), tz)
+        val shared = opens.getOffset(epochToMillis(start)) == closes.getOffset(epochToMillis(end))
+        val day = clock.write(dated, epochToMillis(start), opens)
+        if (sameDay && shared) {
+            return day + " · " + clock.span(timed, epochToMillis(start), epochToMillis(end), opens)
         }
         val pattern = clock.pattern(timed)
-        val first = clock.write(clock.pattern(dated), epochToMillis(start), tz) + " · " +
-            clock.write(pattern, epochToMillis(start), tz)
-        val second = clock.write(clock.pattern(dated), epochToMillis(end), tz) + " · " +
-            clock.write(pattern, epochToMillis(end), tz)
-        return "$first –\n$second"
+        val begins = clock.write(pattern, epochToMillis(start), opens)
+        val ends = clock.write(pattern, epochToMillis(end), closes)
+        if (sameDay) {
+            return "$day · $begins – $ends"
+        }
+        return "$day · $begins –\n" + clock.write(dated, epochToMillis(end), closes) + " · " + ends
     }
 
     /**
