@@ -339,9 +339,13 @@ class CalendarsRepository @Inject constructor(
      * start joins the master's `EXDATE`, which is how an occurrence is taken
      * out of a series. [occurrence] is the occurrence's own start, epoch
      * seconds. A 412 means the server moved on, so the event is read again
-     * and the exclusion applied to that copy.
+     * and the exclusion applied to that copy. Given the event as the caller
+     * [stored] it, the exclusion is written over that copy alone, and a 412
+     * is the caller's to answer: the editor refuses rather than delete from
+     * an event that changed under it.
      */
-    suspend fun excludeOccurrence(event: String, occurrence: Long): Event {
+    suspend fun excludeOccurrence(event: String, occurrence: Long, stored: Event? = null): Event {
+        if (stored != null) return updateEvent(event, stored.etag, null, excluded(stored.components, occurrence))
         val current = getEvent(event)
         return try {
             updateEvent(event, current.etag, null, excluded(current.components, occurrence))
@@ -357,9 +361,10 @@ class CalendarsRepository @Inject constructor(
      * override of it is matched by. The series' first occurrence has nothing
      * before it, so removing from there deletes the event. A 412 means the
      * server moved on, so the event is read again and the cut applied to
-     * that copy.
+     * that copy; given the event as the caller [stored] it, the cut is
+     * written over that copy alone and a 412 is the caller's to answer.
      */
-    suspend fun truncateEvent(event: String, occurrence: Long): Event? {
+    suspend fun truncateEvent(event: String, occurrence: Long, stored: Event? = null): Event? {
         suspend fun cut(current: Event): Event? {
             val components = truncated(current.components, occurrence)
             if (components == null) {
@@ -368,6 +373,7 @@ class CalendarsRepository @Inject constructor(
             }
             return updateEvent(event, current.etag, null, components)
         }
+        if (stored != null) return cut(stored)
         return try {
             cut(getEvent(event))
         } catch (_: EventChangedException) {

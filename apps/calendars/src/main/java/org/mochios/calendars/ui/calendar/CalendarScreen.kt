@@ -78,6 +78,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
+import org.mochios.calendars.navigation.CalendarsApp
 import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.components.CalendarDrawer
 import org.mochios.calendars.ui.dialogs.ColourCalendarDialog
@@ -104,7 +105,9 @@ import java.time.LocalDate
  * subscription's or a birthday. [copied] says a copy was just saved, which
  * the screen reports once and [onCopiedShown] clears; [deleted] that the
  * editor deleted something, reported once with Undo and cleared by
- * [onDeletedShown].
+ * [onDeletedShown]; [saved] that the editor saved an event,
+ * [CalendarsApp.CREATED] or [CalendarsApp.CHANGED], reported once and
+ * cleared by [onSavedShown].
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -120,6 +123,8 @@ fun CalendarScreen(
     onCopiedShown: () -> Unit = {},
     deleted: Boolean = false,
     onDeletedShown: () -> Unit = {},
+    saved: String = "",
+    onSavedShown: () -> Unit = {},
     onLogout: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
@@ -194,6 +199,14 @@ fun CalendarScreen(
         if (copied) {
             onCopiedShown()
             scope.launch { snackbar.showSnackbar(resources.getString(R.string.calendars_event_copied)) }
+        }
+    }
+
+    LaunchedEffect(saved) {
+        if (saved.isNotEmpty()) {
+            onSavedShown()
+            val message = if (saved == CalendarsApp.CREATED) R.string.calendars_event_created else R.string.calendars_event_saved
+            scope.launch { snackbar.showSnackbar(resources.getString(message)) }
         }
     }
 
@@ -329,7 +342,7 @@ fun CalendarScreen(
 
     moving?.let { move ->
         ScopeDialog(
-            deleting = false,
+            title = stringResource(R.string.calendars_scope_move),
             onDismiss = { moving = null },
             onOne = {
                 moving = null
@@ -351,8 +364,7 @@ fun CalendarScreen(
     // to load, is a single event and opens at once.
     copying?.let { instance ->
         ScopeDialog(
-            deleting = false,
-            copying = true,
+            title = stringResource(R.string.calendars_scope_copy),
             following = false,
             onDismiss = { copying = null },
             onOne = {

@@ -446,30 +446,28 @@ fun reminderLabel(minutes: Int): String {
 
 /**
  * "This event", "This and following" or "All events" for a recurring
- * occurrence. An override changes or removes the one occurrence; the series
- * cut at it changes or removes it and every one after it; the whole series
- * changes or removes every one of them. A copy, [copying], is of the one
- * occurrence or of the whole series, and asks without the middle choice,
- * which [following] leaves out.
+ * occurrence, under a [title] that says what is done: "Save this event",
+ * "Move this event", "Delete this event", "Copy this event", as the web
+ * asks. An override changes or removes the one occurrence; the series cut at
+ * it changes or removes it and every one after it; the whole series changes
+ * or removes every one of them. A copy is of the one occurrence or of the
+ * whole series, and asks without the middle choice, which [following] leaves
+ * out. A delete's choices are [destructive].
  */
 @Composable
 fun ScopeDialog(
-    deleting: Boolean,
-    copying: Boolean = false,
+    title: String,
+    destructive: Boolean = false,
     following: Boolean = true,
     onDismiss: () -> Unit,
     onOne: () -> Unit,
     onFollowing: () -> Unit = {},
     onAll: () -> Unit,
 ) {
-    val tone = if (deleting) MochiButtonTone.Destructive else MochiButtonTone.Primary
+    val tone = if (destructive) MochiButtonTone.Destructive else MochiButtonTone.Primary
     MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = when {
-            deleting -> stringResource(R.string.calendars_scope_delete)
-            copying -> stringResource(R.string.calendars_scope_copy)
-            else -> stringResource(R.string.calendars_scope_edit)
-        },
+        title = title,
         dismissText = stringResource(MochiR.string.common_cancel),
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -519,15 +517,13 @@ fun DeleteCalendarDialog(
 /** Confirms deleting an event. */
 @Composable
 fun DeleteEventDialog(
-    summary: String,
     deleting: Boolean,
     onDismiss: () -> Unit,
     onConfirm: () -> Unit,
 ) {
     MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = stringResource(R.string.calendars_event_delete_title, summary),
-        text = stringResource(R.string.calendars_event_delete_message),
+        title = stringResource(R.string.calendars_scope_delete),
         confirmText = stringResource(R.string.calendars_delete),
         onConfirm = onConfirm,
         confirmLoading = deleting,

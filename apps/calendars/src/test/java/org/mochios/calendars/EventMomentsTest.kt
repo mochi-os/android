@@ -8,6 +8,9 @@ package org.mochios.calendars
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.width
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithContentDescription
@@ -45,16 +48,27 @@ class EventMomentsTest {
     private val starts = context.getString(R.string.calendars_event_zone_start)
     private val ends = context.getString(R.string.calendars_event_zone_finish)
 
+    /** The same day as an all-day form holds it: its UTC midnight, and the next. */
+    private val day = 1_790_035_200L
+    private val next = day + 86_400
+
+    private var allday by mutableStateOf(false)
+    private var ordered by mutableStateOf(true)
+    private var finished by mutableStateOf<Long?>(null)
+
     private fun show(zone: Zone, allday: Boolean = false) {
+        this@EventMomentsTest.allday = allday
         rule.setContent {
             Box(Modifier.width(352.dp)) {
                 Column {
+                    val whole = this@EventMomentsTest.allday
                     EventMoments(
-                        start = start,
-                        finish = finish,
-                        allday = allday,
+                        start = if (whole) day else start,
+                        finish = this@EventMomentsTest.finished ?: if (whole) next else finish,
+                        allday = whole,
                         zone = zone,
                         own = "Europe/London",
+                        ordered = this@EventMomentsTest.ordered,
                         onStart = {},
                         onFinish = {},
                         onZone = {},
@@ -97,6 +111,43 @@ class EventMomentsTest {
         show(Zone("Europe/London", "Europe/London"), allday = true)
         assertEquals(false, shown(starts))
         assertEquals(false, shown(ends))
+    }
+
+    @Test
+    fun `a one-day all-day event ends on the day it starts, not the day after`() {
+        show(Zone("Europe/London", "Europe/London"), allday = true)
+        // The form holds the day after its last; both fields show the one day.
+        assertEquals(2, rule.onAllNodesWithText(format.formatDate(day, "UTC")).fetchSemanticsNodes().size)
+        assertEquals(0, rule.onAllNodesWithText(format.formatDate(next, "UTC")).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `an end before the start says so beneath End`() {
+        val backwards = context.getString(R.string.calendars_event_backwards)
+        show(Zone("UTC", "UTC"))
+        assertEquals(0, rule.onAllNodesWithText(backwards).fetchSemanticsNodes().size)
+        finished = start - 3_600
+        ordered = false
+        rule.waitForIdle()
+        val said = rule.onAllNodesWithText(backwards).fetchSemanticsNodes().single().boundsInRoot
+        val end = bounds(format.formatTime(start - 3_600, "UTC")).single()
+        assertTrue("beneath End", said.top >= end.bottom)
+    }
+
+    @Test
+    fun `turning all day on hides the times without widening the dates`() {
+        show(Zone("UTC", "UTC"))
+        val timed = bounds(format.formatDate(start, "UTC"))
+        allday = true
+        rule.waitForIdle()
+        // All day reads the dates in UTC too, so they keep their text.
+        val whole = bounds(format.formatDate(start, "UTC"))
+        assertEquals(0, rule.onAllNodesWithText(format.formatTime(start, "UTC")).fetchSemanticsNodes().size)
+        assertEquals(2, whole.size)
+        for (index in 0..1) {
+            assertEquals(timed[index].left, whole[index].left)
+            assertEquals(timed[index].width, whole[index].width)
+        }
     }
 
     @Test

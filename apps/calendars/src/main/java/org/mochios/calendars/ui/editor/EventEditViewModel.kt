@@ -60,6 +60,8 @@ data class EditorUiState(
     val title: String = "",
     /** A save was tried without a title, which the title field says until one is typed. */
     val untitled: Boolean = false,
+    /** How many saves were tried without a title; each takes the user to the title. */
+    val asked: Int = 0,
     val allday: Boolean = false,
     val start: Long = 0,
     val finish: Long = 0,
@@ -72,7 +74,15 @@ data class EditorUiState(
     /** The description as the event holds it, which [description] shows as text. */
     val original: String = "",
     val recurrence: Recurrence = Recurrence(),
+    /** The repeat's custom settings are open, as the web editor's Custom choice opens them. */
+    val custom: Boolean = false,
     val reminders: List<Int> = emptyList(),
+    /**
+     * The times of day the ends had, minutes past midnight, while All day is
+     * on: turning it off again puts them back. Null for an event that opened
+     * all day, which comes back from midnight to the last minute of its day.
+     */
+    val clock: Pair<Int, Int>? = null,
     val etag: String = "",
     val recurring: Boolean = false,
     /**
@@ -88,6 +98,10 @@ data class EditorUiState(
     val isDeleting: Boolean = false,
     val confirming: Boolean = false,
     val error: MochiError? = null,
+    /** The event, or what the form needs, failed to load: no form is shown, only this and Retry. */
+    val failure: MochiError? = null,
+    /** A save or delete was refused because the event changed elsewhere; Reload reads it again. */
+    val changed: Boolean = false,
     /**
      * The form and calendar as the editor opened them, which an edit is
      * measured against: leaving with anything different asks first.
@@ -97,6 +111,13 @@ data class EditorUiState(
     val deleted: Boolean = false,
 ) {
     val writable: Boolean get() = calendars.firstOrNull { it.id == calendar }?.readonly != true
+
+    /**
+     * Whether the end follows the start as instants, which Save waits for.
+     * A timed event may end as it starts; an all-day one holds the day after
+     * its last, so its last day may be its first but no earlier.
+     */
+    val ordered: Boolean get() = if (allday) finish > start else finish >= start
 }
 
 /** Which question the screen is asking: "This event or all events?", and why. */
@@ -125,6 +146,9 @@ class EventEditViewModel @Inject constructor(
         get() = runCatching { ZoneId.of(preferencesManager.preferences.value.timezone).id }
             .getOrDefault(ZoneId.systemDefault().id)
 
+    /** How the editor was opened, which Retry does again after a failure to load. */
+    private var opening: () -> Unit = {}
+
     init {
         val event = handle.get<String>("event")?.takeIf { it.isNotBlank() && it != "new" }
         val occurrence = handle.get<String>("occurrence")?.toLongOrNull() ?: 0
@@ -136,34 +160,53 @@ class EventEditViewModel @Inject constructor(
             "0" -> false
             else -> null
         }
-        when (handle.get<String>("source")) {
-            "event" -> copy(
-                handle.get<String>("copy").orEmpty(),
-                occurrence,
-                Scope.entries.firstOrNull { it.name.equals(handle.get<String>("scope"), ignoreCase = true) } ?: Scope.ALL,
-            )
-            "occurrence" -> {
-                val zones = handle.get<String>("zones").orEmpty().split(",")
-                copy(
-                    Instance(
-                        summary = handle.get<String>("summary").orEmpty(),
-                        location = handle.get<String>("location").orEmpty(),
-                        description = handle.get<String>("description").orEmpty(),
-                        start = start,
-                        finish = handle.get<String>("finish")?.toLongOrNull() ?: 0,
-                        allday = handle.get<String>("allday") == "1",
-                        date = handle.get<String>("date")?.takeIf { it.isNotBlank() },
-                        zone = Zone(zones.getOrElse(0) { "" }, zones.getOrElse(1) { "" }),
-                    ),
-                )
+        val source = handle.get<String>("source")
+        val copied = handle.get<String>("copy").orEmpty()
+        val scope = Scope.entries.firstOrNull { it.name.equals(handle.get<String>("scope"), ignoreCase = true) } ?: Scope.ALL
+        val zones = handle.get<String>("zones").orEmpty().split(",")
+        val instance = Instance(
+            summary = handle.get<String>("summary").orEmpty(),
+            location = handle.get<String>("location").orEmpty(),
+            description = handle.get<String>("description").orEmpty(),
+            start = start,
+            finish = handle.get<String>("finish")?.toLongOrNull() ?: 0,
+            allday = handle.get<String>("allday") == "1",
+            date = handle.get<String>("date")?.takeIf { it.isNotBlank() },
+            zone = Zone(zones.getOrElse(0) { "" }, zones.getOrElse(1) { "" }),
+        )
+        opening = {
+            when (source) {
+                "event" -> copy(copied, occurrence, scope)
+                "occurrence" -> copy(instance)
+                else -> load(event, occurrence, start, allday)
             }
-            else -> load(event, occurrence, start, allday)
+        }
+        opening()
+    }
+
+    /** Opens the editor again after it failed to load. */
+    fun retry() = opening()
+
+    /**
+     * Reads the open event again after a save or delete was refused because
+     * it changed elsewhere, replacing the form with what the server now holds.
+     */
+    fun reload() {
+        val state = _uiState.value
+        val event = state.event ?: return
+        viewModelScope.launch {
+            _uiState.value = state.copy(changed = false, error = null)
+            try {
+                fill(repository.getEvent(event), state.moment, state.calendars)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
         }
     }
 
     private fun load(event: String?, occurrence: Long, start: Long, allday: Boolean?) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null, failure = null)
             val calendars = calendars() ?: return@launch
             if (event == null) {
                 val preferences = runCatching { repository.getPreferences() }.getOrNull()
@@ -193,7 +236,7 @@ class EventEditViewModel @Inject constructor(
             try {
                 fill(repository.getEvent(event), occurrence, calendars)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(isLoading = false, failure = e.toMochiError())
             }
         }
     }
@@ -206,7 +249,7 @@ class EventEditViewModel @Inject constructor(
      */
     private fun copy(event: String, occurrence: Long, scope: Scope) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null, failure = null)
             val calendars = calendars() ?: return@launch
             try {
                 val loaded = repository.getEvent(event)
@@ -214,7 +257,7 @@ class EventEditViewModel @Inject constructor(
                 val preference = runCatching { repository.getPreferences().calendar }.getOrNull().orEmpty()
                 open(form, calendars, calendars.firstOrNull { it.id == loaded.calendar }?.id ?: preferred(calendars, preference))
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(isLoading = false, failure = e.toMochiError())
             }
         }
     }
@@ -226,7 +269,7 @@ class EventEditViewModel @Inject constructor(
      */
     private fun copy(instance: Instance) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null, failure = null)
             val calendars = calendars() ?: return@launch
             val preferences = runCatching { repository.getPreferences() }.getOrNull()
             open(copied(instance, zone, preferences?.reminder ?: 15), calendars, preferred(calendars, preferences?.calendar.orEmpty()))
@@ -259,6 +302,7 @@ class EventEditViewModel @Inject constructor(
             description = form.description,
             original = form.original,
             recurrence = form.recurrence,
+            custom = !form.recurrence.plain,
             reminders = form.reminders,
             isLoading = false,
         )
@@ -272,7 +316,7 @@ class EventEditViewModel @Inject constructor(
             .filterNot { it.readonly }
             .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
     } catch (e: Exception) {
-        _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+        _uiState.value = _uiState.value.copy(isLoading = false, failure = e.toMochiError())
         null
     }
 
@@ -318,6 +362,7 @@ class EventEditViewModel @Inject constructor(
         // An override replaces its occurrence whole: its reminders are its own,
         // and one with none has none.
         val alarms = alarms(shown)
+        val repeat = recurrence(master?.value("RRULE"), master?.let { written(it, zone).start } ?: zone)
         _uiState.value = EditorUiState(
             event = loaded.id,
             occurrence = occurrence,
@@ -334,7 +379,8 @@ class EventEditViewModel @Inject constructor(
             url = shown.value("URL"),
             description = descriptionText(shown.value("DESCRIPTION")),
             original = shown.value("DESCRIPTION"),
-            recurrence = recurrence(master?.value("RRULE")),
+            recurrence = repeat,
+            custom = !repeat.plain,
             reminders = alarms.mapNotNull(::alarmMinutes).distinct(),
             etag = loaded.etag,
             recurring = master?.property("RRULE") != null || master?.property("RDATE") != null,
@@ -366,24 +412,24 @@ class EventEditViewModel @Inject constructor(
 
     fun removeReminder(index: Int) = edit { copy(reminders = reminders.filterIndexed { at, _ -> at != index }) }
 
-    fun recurrence(value: Recurrence) = edit { copy(recurrence = recurrence.revised(value)) }
+    fun repeat(frequency: Frequency) = edit { repeated(this, frequency) }
 
-    fun allday(value: Boolean) = edit {
-        // An all-day event runs to the end of its last day; a timed one keeps
-        // the length it had, so switching back does not collapse it.
-        if (value) {
-            copy(allday = true, finish = maxOf(finish, start + 86_400))
-        } else {
-            copy(allday = false, finish = if (finish - start >= 86_400) start + 3_600 else finish)
-        }
-    }
+    fun custom() = edit { customised(this) }
+
+    fun recurrence(value: Recurrence) = edit { recurred(this, value, this@EventEditViewModel.zone) }
+
+    fun allday(value: Boolean) = edit { toggled(this, value, this@EventEditViewModel.zone) }
 
     fun start(value: Long) = edit {
-        val length = (finish - start).coerceAtLeast(0)
+        val length = finish - start
         copy(start = value, finish = value + length)
     }
 
-    fun finish(value: Long) = edit { copy(finish = maxOf(value, start)) }
+    /**
+     * The end as picked, even before the start: the End field then says so
+     * and Save waits, as the web editor does, rather than moving it.
+     */
+    fun finish(value: Long) = edit { copy(finish = value) }
 
     /**
      * The zones the ends read in. A time typed is in its own zone, so an end
@@ -421,9 +467,10 @@ class EventEditViewModel @Inject constructor(
         val state = _uiState.value
         if (state.isSaving) return
         if (state.title.isBlank()) {
-            _uiState.value = state.copy(untitled = true)
+            _uiState.value = state.copy(untitled = true, asked = state.asked + 1)
             return
         }
+        if (!state.ordered) return
         if (state.recurring && state.event != null && state.occurrence > 0) {
             _uiState.value = state.copy(prompt = Prompt.SAVE)
             return
@@ -444,6 +491,11 @@ class EventEditViewModel @Inject constructor(
 
     fun dismiss() {
         _uiState.value = _uiState.value.copy(prompt = null, confirming = false)
+    }
+
+    /** The conflict has been said. */
+    fun told() {
+        _uiState.value = _uiState.value.copy(changed = false)
     }
 
     /**
@@ -513,17 +565,10 @@ class EventEditViewModel @Inject constructor(
                 remember(state)
                 _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
             } catch (_: EventChangedException) {
-                // The server's copy moved on: reload it, fold this edit onto
-                // it and send it again, which is what the user asked for.
-                try {
-                    val fresh = repository.getEvent(state.event.orEmpty())
-                    carried = fresh
-                    val saved = write(state.copy(etag = fresh.etag), scope, fresh.etag)
-                    VisibilityStore.reveal(context, saved.calendar)
-                    _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
-                } catch (e: Exception) {
-                    _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
-                }
+                // The server's copy moved on since it was read: writing the
+                // form over it would undo that change, so the save is refused
+                // and Reload reads it again, as the web editor does.
+                _uiState.value = _uiState.value.copy(isSaving = false, changed = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
             }
@@ -572,26 +617,20 @@ class EventEditViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = state.copy(isDeleting = true, error = null)
             try {
+                // Every path writes over the event as it was read, so one
+                // that changed elsewhere since is refused rather than deleted.
                 val back: suspend () -> Unit = when (scope) {
                     Scope.ALL -> {
                         repository.deleteEvent(event, state.etag)
                         whole
                     }
-                    Scope.FOLLOWING -> repository.truncateEvent(event, state.occurrence)?.let { series(it) } ?: whole
-                    Scope.ONE -> series(repository.excludeOccurrence(event, state.occurrence))
+                    Scope.FOLLOWING -> repository.truncateEvent(event, state.occurrence, stored)?.let { series(it) } ?: whole
+                    Scope.ONE -> series(repository.excludeOccurrence(event, state.occurrence, stored))
                 }
                 if (stored != null) repository.deleted(back)
                 _uiState.value = _uiState.value.copy(isDeleting = false, deleted = true)
             } catch (_: EventChangedException) {
-                try {
-                    // Only an "all events" delete can be stale here; the other
-                    // paths read the event themselves and retry.
-                    repository.deleteEvent(event, repository.getEvent(event).etag)
-                    if (stored != null) repository.deleted(whole)
-                    _uiState.value = _uiState.value.copy(isDeleting = false, deleted = true)
-                } catch (e: Exception) {
-                    _uiState.value = _uiState.value.copy(isDeleting = false, error = e.toMochiError())
-                }
+                _uiState.value = _uiState.value.copy(isDeleting = false, changed = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isDeleting = false, error = e.toMochiError())
             }
@@ -678,3 +717,70 @@ internal fun form(state: EditorUiState, user: String) = EventForm(
  */
 internal fun dirty(state: EditorUiState, user: String): Boolean =
     state.opened != null && (form(state, user) to state.calendar) != state.opened
+
+/**
+ * One of the plain repeat choices, which says everything: nothing of a custom
+ * rule stays behind it, as the web editor resets to an empty repeat.
+ */
+internal fun repeated(state: EditorUiState, frequency: Frequency): EditorUiState =
+    state.copy(custom = false, recurrence = Recurrence(frequency))
+
+/**
+ * The Custom choice: the settings open on the rule as it is, a weekly one for
+ * an event that did not repeat, and a rule they could not express is replaced
+ * by what they show.
+ */
+internal fun customised(state: EditorUiState): EditorUiState {
+    val recurrence = state.recurrence
+    val frequency = if (recurrence.frequency == Frequency.NEVER) Frequency.WEEKLY else recurrence.frequency
+    return state.copy(custom = true, recurrence = recurrence.copy(frequency = frequency, rule = null, expressible = true))
+}
+
+/**
+ * A change in the custom settings, which then say the rule. An end on a day
+ * starts four weeks after the event does, on the day it starts in its own
+ * zone, a blank one the [user]'s.
+ */
+internal fun recurred(state: EditorUiState, value: Recurrence, user: String): EditorUiState {
+    val until = if (value.ending == Ending.UNTIL && value.until == null) {
+        Instant.ofEpochSecond(state.start)
+            .atZone(shownIn(state.allday, state.zone.start.ifBlank { user }))
+            .toLocalDate()
+            .plusDays(28)
+    } else {
+        value.until
+    }
+    return state.copy(recurrence = value.copy(until = until, rule = null, expressible = true))
+}
+
+/**
+ * All day on holds each end's day, the last day included, and keeps the times
+ * aside; off puts the times back on whatever days the ends now have, as the
+ * web editor keeps its dates and times apart. An event that opened all day
+ * comes back from midnight to the last minute of its day, as the web's does.
+ * A blank zone is the [user]'s.
+ */
+internal fun toggled(state: EditorUiState, value: Boolean, user: String): EditorUiState {
+    if (value == state.allday) return state
+    val begins = shownIn(false, state.zone.start.ifBlank { user })
+    val ends = shownIn(false, state.zone.finish.ifBlank { state.zone.start.ifBlank { user } })
+    if (value) {
+        val first = Instant.ofEpochSecond(state.start).atZone(begins)
+        val last = Instant.ofEpochSecond(state.finish).atZone(ends)
+        return state.copy(
+            allday = true,
+            start = first.toLocalDate().atStartOfDay(ZoneOffset.UTC).toEpochSecond(),
+            finish = last.toLocalDate().plusDays(1).atStartOfDay(ZoneOffset.UTC).toEpochSecond(),
+            clock = (first.hour * 60 + first.minute) to (last.hour * 60 + last.minute),
+        )
+    }
+    val (from, to) = state.clock ?: (0 to 1_439)
+    val first = Instant.ofEpochSecond(state.start).atZone(ZoneOffset.UTC).toLocalDate()
+    val last = Instant.ofEpochSecond(state.finish).atZone(ZoneOffset.UTC).toLocalDate().minusDays(1)
+    return state.copy(
+        allday = false,
+        start = first.atTime(from / 60, from % 60).atZone(begins).toEpochSecond(),
+        finish = last.atTime(to / 60, to % 60).atZone(ends).toEpochSecond(),
+        clock = null,
+    )
+}

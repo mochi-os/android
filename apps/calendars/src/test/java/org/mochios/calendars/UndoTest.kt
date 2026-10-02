@@ -12,6 +12,7 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -19,6 +20,7 @@ import org.mochios.android.files.FileStore
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.MenuApi
 import org.mochios.calendars.repository.CalendarsRepository
+import org.mochios.calendars.repository.EventChangedException
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
@@ -91,6 +93,25 @@ class UndoTest {
         val changed = repository.truncateEvent("e1", 1_790_676_000)
         assertNotNull(changed)
         assertEquals("c", changed!!.etag)
+    }
+
+    @Test
+    fun `a delete over the event as the editor read it is refused when it changed since`() = runBlocking {
+        // The stored copy is all the editor sends: no read first, and a 412 is
+        // the editor's to answer with Reload rather than a write over the change.
+        server.enqueue(series("a"))
+        val stored = repository.getEvent("e1")
+        server.enqueue(MockResponse().setResponseCode(412).setBody("""{"error": "changed"}"""))
+        val one = runCatching { repository.excludeOccurrence("e1", 1_790_676_000, stored) }
+        assertTrue(one.exceptionOrNull() is EventChangedException)
+        server.enqueue(MockResponse().setResponseCode(412).setBody("""{"error": "changed"}"""))
+        val following = runCatching { repository.truncateEvent("e1", 1_790_676_000, stored) }
+        assertTrue(following.exceptionOrNull() is EventChangedException)
+        // One read, then the two refused writes: nothing read again behind the editor's back.
+        assertEquals(3, server.requestCount)
+        server.takeRequest()
+        val written = server.takeRequest().body.readUtf8()
+        assertTrue(written, written.contains("\"etag\":\"a\""))
     }
 
     @Test

@@ -208,18 +208,19 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
     val length = component.property("DTEND")?.let { CalendarsMapping.moment(it) / 1000 - start }
         ?: component.value("DURATION").takeIf { it.isNotBlank() }?.let { CalendarsMapping.seconds(it) }
         ?: if (allday) 86_400L else 0L
+    val zone = written(component, user)
     val form = EventForm(
         title = component.value("SUMMARY"),
         start = start,
         finish = start + length,
         allday = allday,
-        zone = written(component, user),
+        zone = zone,
         location = component.value("LOCATION"),
         colour = component.value("COLOR"),
         url = component.value("URL"),
         description = descriptionText(component.value("DESCRIPTION")),
         original = component.value("DESCRIPTION"),
-        recurrence = recurrence(component.value("RRULE")),
+        recurrence = recurrence(component.value("RRULE"), zone.start),
         reminders = alarms(component).mapNotNull(::alarmMinutes).distinct(),
     )
     return if (occurrence > 0 && start != 0L) shifted(form, occurrence - start) else form
@@ -580,7 +581,7 @@ private fun component(
     val description = if (form.description == descriptionText(form.original)) form.original else form.description.trim()
     if (description.isNotBlank()) properties.add(property("DESCRIPTION", description))
     if (recurrence) {
-        val rule = form.recurrence.rule()
+        val rule = form.recurrence.rule(zone, form.allday)
         if (rule != null) {
             properties.add(property("RRULE", rule))
             // An RRULE the editor dropped takes its exclusions with it.

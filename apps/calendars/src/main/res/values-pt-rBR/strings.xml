@@ -36,4 +36,16 @@
     <string name="calendars_link_replace_title">Substituir o endereço do calendário?</string>
     <string name="calendars_list_unmatched">Nenhuma correspondência</string>
     <string name="calendars_list_search_events">Pesquisar eventos</string>
+    <string name="calendars_event_saved">Evento salvo</string>
+    <string name="calendars_scope_save">Salvar este evento</string>
+    <string name="calendars_scope_delete">Excluir este evento</string>
+    <string name="calendars_reminder_time">Na hora do evento</string>
+    <string name="calendars_repeat_until">Em uma data</string>
+    <string name="calendars_rule_on">dias da semana: %1$s</string>
+    <string name="calendars_rule_first">%1$s da primeira semana</string>
+    <string name="calendars_rule_second">%1$s da segunda semana</string>
+    <string name="calendars_rule_third">%1$s da terceira semana</string>
+    <string name="calendars_rule_fourth">%1$s da quarta semana</string>
+    <string name="calendars_rule_fifth">%1$s da quinta semana</string>
+    <string name="calendars_rule_last">%1$s da última semana</string>
 </resources>

@@ -6,7 +6,12 @@
 package org.mochios.calendars.ui.editor
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -42,11 +47,14 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
 import androidx.compose.material3.TimePicker
 import androidx.compose.material3.TopAppBar
@@ -65,7 +73,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -79,6 +90,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ColorPicker
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FieldLabel
 import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.LabeledSwitchRow
@@ -102,6 +114,8 @@ import org.mochios.calendars.ui.dialogs.reminderChoices
 import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalTime
+import java.time.ZoneOffset
+import java.time.format.TextStyle
 import org.mochios.android.R as MochiR
 
 /**
@@ -110,13 +124,14 @@ import org.mochios.android.R as MochiR
  * event asks whether a save, a delete or a copy is for the one occurrence or
  * the whole series. [onCopy] opens the editor on a copy of the open event,
  * with the occurrence and the scope the user chose; [onCopied] is a saved
- * copy, which [onSaved] is not told of.
+ * copy, which [onSaved] is not told of. [onSaved] is told whether the save
+ * created the event, so the calendar can say "Event created" or "Event saved".
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EventEditScreen(
     onBack: () -> Unit,
-    onSaved: () -> Unit,
+    onSaved: (Boolean) -> Unit,
     onCopied: () -> Unit,
     onDeleted: () -> Unit,
     onCopy: (String, Long, Scope) -> Unit,
@@ -139,7 +154,7 @@ fun EventEditScreen(
 
     LaunchedEffect(uiState.saved) {
         if (uiState.saved) {
-            if (uiState.copying) onCopied() else onSaved()
+            if (uiState.copying) onCopied() else onSaved(uiState.event == null)
         }
     }
     LaunchedEffect(uiState.deleted) { if (uiState.deleted) onDeleted() }
@@ -152,6 +167,20 @@ fun EventEditScreen(
     LaunchedEffect(uiState.error) {
         uiState.error?.let { snackbar.showSnackbar(it.userMessage()) }
     }
+    // A save or delete refused because the event changed elsewhere says so,
+    // and Reload reads it again, as the web editor's toast does.
+    val changed = stringResource(R.string.calendars_event_changed)
+    val reload = stringResource(R.string.calendars_reload)
+    LaunchedEffect(uiState.changed) {
+        if (uiState.changed) {
+            viewModel.told()
+            val chosen = snackbar.showSnackbar(changed, actionLabel = reload, duration = SnackbarDuration.Long)
+            if (chosen == SnackbarResult.ActionPerformed) viewModel.reload()
+        }
+    }
+    // Nothing more can be asked of the event while it saves or deletes, or
+    // when it never loaded.
+    val busy = uiState.isLoading || uiState.isSaving || uiState.isDeleting || uiState.failure != null
 
     Scaffold(
         topBar = {
@@ -174,14 +203,14 @@ fun EventEditScreen(
                     }
                 },
                 actions = {
-                    if (uiState.event != null) {
-                        MochiIconButton(onClick = viewModel::copy, enabled = !uiState.isLoading) {
+                    if (uiState.event != null && uiState.failure == null) {
+                        MochiIconButton(onClick = viewModel::copy, enabled = !busy) {
                             Icon(
                                 Icons.Outlined.ContentCopy,
                                 contentDescription = stringResource(R.string.calendars_event_copy),
                             )
                         }
-                        MochiIconButton(onClick = viewModel::confirm, enabled = uiState.writable) {
+                        MochiIconButton(onClick = viewModel::confirm, enabled = !busy && uiState.writable) {
                             Icon(
                                 Icons.Outlined.Delete,
                                 contentDescription = stringResource(R.string.calendars_delete),
@@ -196,6 +225,14 @@ fun EventEditScreen(
         if (uiState.isLoading) {
             Box(modifier = Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
+            }
+            return@Scaffold
+        }
+        // An event that did not load shows why and offers Retry, never an
+        // empty form whose Save would create something new.
+        uiState.failure?.let { failure ->
+            Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+                ErrorState(error = failure, onRetry = viewModel::retry)
             }
             return@Scaffold
         }
@@ -218,6 +255,7 @@ fun EventEditScreen(
                 location = uiState.location,
                 url = uiState.url,
                 untitled = uiState.untitled,
+                asked = uiState.asked,
                 enabled = !uiState.isSaving,
                 onTitle = viewModel::title,
                 onDescription = viewModel::description,
@@ -240,12 +278,19 @@ fun EventEditScreen(
                 allday = uiState.allday,
                 zone = uiState.zone,
                 own = viewModel.zone,
+                ordered = uiState.ordered,
                 onStart = viewModel::start,
                 onFinish = viewModel::finish,
                 onZone = viewModel::zone,
             )
             RepeatField(
                 recurrence = uiState.recurrence,
+                custom = uiState.custom,
+                start = uiState.start,
+                allday = uiState.allday,
+                zone = uiState.zone.start.ifBlank { viewModel.zone },
+                onRepeat = viewModel::repeat,
+                onCustom = viewModel::custom,
                 onChange = viewModel::recurrence,
             )
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -300,8 +345,14 @@ fun EventEditScreen(
         // A copy is of the one occurrence or of the whole series; there is
         // no series to cut.
         ScopeDialog(
-            deleting = uiState.prompt == Prompt.DELETE,
-            copying = uiState.prompt == Prompt.COPY,
+            title = stringResource(
+                when (uiState.prompt) {
+                    Prompt.DELETE -> R.string.calendars_scope_delete
+                    Prompt.COPY -> R.string.calendars_scope_copy
+                    else -> R.string.calendars_scope_save
+                },
+            ),
+            destructive = uiState.prompt == Prompt.DELETE,
             following = uiState.prompt != Prompt.COPY,
             onDismiss = viewModel::dismiss,
             onOne = { viewModel.scope(Scope.ONE) },
@@ -311,7 +362,6 @@ fun EventEditScreen(
     }
     if (uiState.confirming) {
         DeleteEventDialog(
-            summary = uiState.title,
             deleting = uiState.isDeleting,
             onDismiss = viewModel::dismiss,
             onConfirm = viewModel::delete,
@@ -371,7 +421,8 @@ private val HEX = Regex("^#[0-9a-fA-F]{6}$")
  * straight below it - two lines to start, growing with what is typed - then
  * the location and the link. The keyboard's action in the title is [onSave].
  * With [select], as on a copy, the title takes the focus with its text
- * selected, ready to be typed over.
+ * selected, ready to be typed over. Each save tried without a title, counted
+ * by [asked], brings the title into view and puts the cursor in it.
  */
 @Composable
 internal fun EventText(
@@ -387,8 +438,16 @@ internal fun EventText(
     onUrl: (String) -> Unit,
     onSave: () -> Unit,
     select: Boolean = false,
+    asked: Int = 0,
 ) {
     val focus = remember { FocusRequester() }
+    val view = remember { BringIntoViewRequester() }
+    LaunchedEffect(asked) {
+        if (asked > 0) {
+            focus.requestFocus()
+            view.bringIntoView()
+        }
+    }
     var field by remember { mutableStateOf(TextFieldValue(title)) }
     // A title set from outside the field - loaded, or a copy opened - replaces it.
     if (field.text != title) field = TextFieldValue(title, TextRange(title.length))
@@ -416,7 +475,7 @@ internal fun EventText(
             } else {
                 null
             },
-            modifier = Modifier.fillMaxWidth().focusRequester(focus),
+            modifier = Modifier.fillMaxWidth().bringIntoViewRequester(view).focusRequester(focus),
         )
         MochiTextField(
             value = description,
@@ -480,8 +539,12 @@ private fun MomentField(
                 )
                 Box(modifier = Modifier.matchParentSize().clickable { picking = true })
             }
-            if (!allday) {
-                Box(modifier = Modifier.width(140.dp)) {
+            if (allday) {
+                // The time's room stays, so turning All day on hides the time
+                // without widening the date.
+                Spacer(Modifier.width(TIME))
+            } else {
+                Box(modifier = Modifier.width(TIME)) {
                     MochiTextField(
                         value = format.formatTime(moment, id.id),
                         onValueChange = {},
@@ -495,39 +558,14 @@ private fun MomentField(
     }
 
     if (picking) {
-        // Material's date picker takes no first-day-of-week, so the locale it
-        // reads is swapped for one whose week starts where the user's does.
-        val weekStart = LocalFormat.current.preferences.weekStartsOn
-        val configuration = LocalConfiguration.current
-        val localised = remember(configuration, weekStart) {
-            android.content.res.Configuration(configuration).apply { setLocale(localeForWeekStart(weekStart)) }
-        }
-        CompositionLocalProvider(LocalConfiguration provides localised) {
-            val state = rememberDatePickerState(
-                initialSelectedDateMillis = local.toLocalDate().toEpochDay() * 86_400_000L,
-            )
-            DatePickerDialog(
-                onDismissRequest = { picking = false },
-                confirmButton = {
-                    MochiTextButton(onClick = {
-                        state.selectedDateMillis?.let { millis ->
-                            val date = LocalDate.ofEpochDay(millis / 86_400_000L)
-                            onChange(date.atTime(local.toLocalTime()).atZone(id).toEpochSecond())
-                        }
-                        picking = false
-                    }) {
-                        Text(stringResource(MochiR.string.common_save))
-                    }
-                },
-                dismissButton = {
-                    MochiTextButton(onClick = { picking = false }) {
-                        Text(stringResource(MochiR.string.common_cancel))
-                    }
-                },
-            ) {
-                DatePicker(state = state)
-            }
-        }
+        DateDialog(
+            day = local.toLocalDate(),
+            onDismiss = { picking = false },
+            onPick = { date ->
+                onChange(date.atTime(local.toLocalTime()).atZone(id).toEpochSecond())
+                picking = false
+            },
+        )
     }
 
     if (timing) {
@@ -560,7 +598,9 @@ private fun MomentField(
  * The Start and End rows, each with the zone its end is typed in beneath it,
  * always, as the web shows it beside the time; a phone has no room beside.
  * A blank zone is the user's [own]. An all-day event has no clock, so its
- * dates stay in the user's own zone and show none.
+ * dates stay in the user's own zone and show none, and its End shows its
+ * last day, where the form holds the day after it. An end before the start,
+ * not [ordered], says so beneath End.
  */
 @Composable
 internal fun EventMoments(
@@ -569,6 +609,7 @@ internal fun EventMoments(
     allday: Boolean,
     zone: Zone,
     own: String,
+    ordered: Boolean = true,
     onStart: (Long) -> Unit,
     onFinish: (Long) -> Unit,
     onZone: (Zone) -> Unit,
@@ -594,11 +635,18 @@ internal fun EventMoments(
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         MomentField(
             label = stringResource(R.string.calendars_event_finish),
-            moment = finish,
+            moment = if (allday) finish - DAY else finish,
             allday = allday,
             zone = if (allday) own else ends,
-            onChange = onFinish,
+            onChange = { onFinish(if (allday) it + DAY else it) },
         )
+        if (!ordered) {
+            Text(
+                text = stringResource(R.string.calendars_event_backwards),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.error,
+            )
+        }
         if (!allday) {
             ZoneField(
                 label = stringResource(R.string.calendars_event_zone_finish),
@@ -657,6 +705,48 @@ internal fun CalendarField(
     }
 }
 
+/** The width of an end's time beside its date. */
+private val TIME = 140.dp
+
+/** A day, in seconds: an all-day form's end is the day after its last. */
+private const val DAY = 86_400L
+
+/**
+ * The date picker, opened on [day]. Material's picker takes no first day of
+ * the week, so the locale it reads is swapped for one whose week starts
+ * where the user's does.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun DateDialog(day: LocalDate, onDismiss: () -> Unit, onPick: (LocalDate) -> Unit) {
+    val weekStart = LocalFormat.current.preferences.weekStartsOn
+    val configuration = LocalConfiguration.current
+    val localised = remember(configuration, weekStart) {
+        android.content.res.Configuration(configuration).apply { setLocale(localeForWeekStart(weekStart)) }
+    }
+    CompositionLocalProvider(LocalConfiguration provides localised) {
+        val state = rememberDatePickerState(initialSelectedDateMillis = day.toEpochDay() * 86_400_000L)
+        DatePickerDialog(
+            onDismissRequest = onDismiss,
+            confirmButton = {
+                MochiTextButton(onClick = {
+                    state.selectedDateMillis?.let { millis -> onPick(LocalDate.ofEpochDay(millis / 86_400_000L)) }
+                        ?: onDismiss()
+                }) {
+                    Text(stringResource(MochiR.string.common_save))
+                }
+            },
+            dismissButton = {
+                MochiTextButton(onClick = onDismiss) {
+                    Text(stringResource(MochiR.string.common_cancel))
+                }
+            },
+        ) {
+            DatePicker(state = state)
+        }
+    }
+}
+
 /**
  * The zone one end is typed in, as its city beside a globe; a tap opens the
  * list of zones to choose another.
@@ -696,89 +786,219 @@ private fun ZoneField(label: String, zone: String, onChange: (String) -> Unit) {
 }
 
 /**
- * The Repeat field: the plain choices, and beneath them the weekday picks,
- * the interval and the end when the rule is a custom one.
+ * The Repeat field, as the web editor has it: the plain choices and Custom.
+ * A plain choice says everything and leaves nothing of a custom rule behind;
+ * Custom opens the settings - their own frequency, every how many, the
+ * weekdays of a weekly rule in the user's week order, and how the series
+ * ends. A rule the settings cannot express is kept as written, shows as
+ * Custom and is said in words; choosing a repeat replaces it. An end on a
+ * date counts from the event's [start], in [zone], or on its own day when
+ * the event is [allday].
  */
 @Composable
-private fun RepeatField(recurrence: Recurrence, onChange: (Recurrence) -> Unit) {
+internal fun RepeatField(
+    recurrence: Recurrence,
+    custom: Boolean,
+    start: Long,
+    allday: Boolean,
+    zone: String,
+    onRepeat: (Frequency) -> Unit,
+    onCustom: () -> Unit,
+    onChange: (Recurrence) -> Unit,
+) {
+    val kept = !recurrence.expressible
+    val selected = if (custom || kept) CUSTOM else recurrence.frequency.name
     val options = listOf(
-        Frequency.NEVER to R.string.calendars_repeat_never,
-        Frequency.DAILY to R.string.calendars_repeat_daily,
-        Frequency.WEEKLY to R.string.calendars_repeat_weekly,
-        Frequency.MONTHLY to R.string.calendars_repeat_monthly,
-        Frequency.YEARLY to R.string.calendars_repeat_yearly,
-        Frequency.CUSTOM to R.string.calendars_repeat_custom,
+        Frequency.NEVER.name to stringResource(R.string.calendars_repeat_never),
+        Frequency.DAILY.name to stringResource(R.string.calendars_repeat_daily),
+        Frequency.WEEKLY.name to stringResource(R.string.calendars_repeat_weekly),
+        Frequency.MONTHLY.name to stringResource(R.string.calendars_repeat_monthly),
+        Frequency.YEARLY.name to stringResource(R.string.calendars_repeat_yearly),
+        CUSTOM to stringResource(R.string.calendars_repeat_custom),
     )
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         LabeledSelectField(
             label = stringResource(R.string.calendars_event_repeat),
             icon = Icons.Outlined.Repeat,
             placeholder = "",
-            options = options.map { it.first.name to stringResource(it.second) },
-            selected = recurrence.frequency.name,
+            options = options,
+            selected = selected,
             onSelect = { chosen ->
-                val frequency = Frequency.entries.firstOrNull { it.name == chosen } ?: Frequency.NEVER
-                onChange(recurrence.copy(frequency = frequency))
+                when {
+                    chosen == selected -> Unit
+                    chosen == CUSTOM -> onCustom()
+                    else -> onRepeat(Frequency.valueOf(chosen))
+                }
             },
         )
-        if (recurrence.frequency == Frequency.CUSTOM && !recurrence.expressible) {
-            // A rule the settings cannot express is kept as written; choosing
-            // a repeat replaces it.
-            Text(
-                text = recurrence.rule.orEmpty(),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        } else if (recurrence.frequency == Frequency.CUSTOM) {
-            LabeledSelectField(
-                label = stringResource(R.string.calendars_repeat_interval),
-                placeholder = "",
-                options = (1..12).map { it.toString() to it.toString() },
-                selected = recurrence.interval.toString(),
-                onSelect = { onChange(recurrence.copy(interval = it.toIntOrNull() ?: 1)) },
-            )
-            Text(
-                text = stringResource(R.string.calendars_repeat_days),
-                style = MaterialTheme.typography.labelMedium,
-            )
-            Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                for (index in 0..6) {
-                    val on = index in recurrence.days
-                    MochiTextButton(
-                        onClick = {
-                            val days = if (on) recurrence.days - index else recurrence.days + index
-                            onChange(recurrence.copy(days = days))
-                        },
-                    ) {
-                        Text(
-                            text = weekdayInitial(index),
-                            color = if (on) {
-                                MaterialTheme.colorScheme.primary
-                            } else {
-                                MaterialTheme.colorScheme.onSurfaceVariant
-                            },
-                        )
-                    }
-                }
+        if (kept) {
+            val format = LocalFormat.current
+            val resources = LocalContext.current.resources
+            val locale = LocalConfiguration.current.locales[0]
+            val summary = remember(recurrence.rule, format, locale) {
+                ruleSummary(recurrence.rule.orEmpty(), resources, format, locale)
             }
-            LabeledSelectField(
-                label = stringResource(R.string.calendars_repeat_count),
-                placeholder = stringResource(R.string.calendars_repeat_forever),
-                options = listOf("" to stringResource(R.string.calendars_repeat_forever)) +
-                    listOf(2, 3, 5, 10, 20, 50, 100).map { it.toString() to it.toString() },
-                selected = recurrence.count?.toString().orEmpty(),
-                onSelect = { onChange(recurrence.copy(count = it.toIntOrNull(), until = null)) },
-            )
+            if (summary != null) {
+                Text(
+                    text = summary,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.testTag("kept-rule"),
+                )
+            }
+        } else if (custom) {
+            CustomRepeat(recurrence = recurrence, start = start, allday = allday, zone = zone, onChange = onChange)
         }
     }
 }
 
-/** The weekday's one-letter label, in the user's own language. */
+/** The Repeat field's value for the Custom choice. */
+private const val CUSTOM = "CUSTOM"
+
+/** The custom repeat settings, in a frame beneath the Repeat field. */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun weekdayInitial(index: Int): String {
-    // The preference indexes Sunday 0; java.time indexes Monday 1.
-    val day = java.time.DayOfWeek.of(if (index == 0) 7 else index)
-    return day.getDisplayName(java.time.format.TextStyle.NARROW, LocalConfiguration.current.locales[0])
+private fun CustomRepeat(
+    recurrence: Recurrence,
+    start: Long,
+    allday: Boolean,
+    zone: String,
+    onChange: (Recurrence) -> Unit,
+) {
+    val format = LocalFormat.current
+    val locale = LocalConfiguration.current.locales[0]
+    var picking by remember { mutableStateOf(false) }
+    Column(
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, MaterialTheme.shapes.medium)
+            .padding(12.dp),
+    ) {
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Box(Modifier.weight(1f)) {
+                LabeledSelectField(
+                    label = stringResource(R.string.calendars_repeat_frequency),
+                    placeholder = "",
+                    options = listOf(
+                        Frequency.DAILY.name to stringResource(R.string.calendars_repeat_daily),
+                        Frequency.WEEKLY.name to stringResource(R.string.calendars_repeat_weekly),
+                        Frequency.MONTHLY.name to stringResource(R.string.calendars_repeat_monthly),
+                        Frequency.YEARLY.name to stringResource(R.string.calendars_repeat_yearly),
+                    ),
+                    selected = recurrence.frequency.name,
+                    onSelect = { onChange(recurrence.copy(frequency = Frequency.valueOf(it))) },
+                )
+            }
+            Box(Modifier.weight(1f)) {
+                CountField(
+                    label = stringResource(R.string.calendars_repeat_interval),
+                    value = recurrence.interval,
+                    maximum = 366,
+                    onChange = { onChange(recurrence.copy(interval = it)) },
+                )
+            }
+        }
+        if (recurrence.frequency == Frequency.WEEKLY) {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                val first = format.preferences.weekStartsOn
+                for (offset in 0..6) {
+                    val day = (first + offset) % 7
+                    val on = day in recurrence.days
+                    FilterChip(
+                        selected = on,
+                        onClick = {
+                            onChange(recurrence.copy(days = if (on) recurrence.days - day else recurrence.days + day))
+                        },
+                        // The rule indexes Sunday 0; java.time indexes Monday 1.
+                        label = {
+                            Text(java.time.DayOfWeek.of(if (day == 0) 7 else day).getDisplayName(TextStyle.SHORT, locale))
+                        },
+                    )
+                }
+            }
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Box(Modifier.weight(1f)) {
+                LabeledSelectField(
+                    label = stringResource(R.string.calendars_repeat_ends),
+                    placeholder = "",
+                    options = listOf(
+                        Ending.NEVER.name to stringResource(R.string.calendars_repeat_end_never),
+                        Ending.UNTIL.name to stringResource(R.string.calendars_repeat_until),
+                        Ending.COUNT.name to stringResource(R.string.calendars_repeat_after),
+                    ),
+                    selected = recurrence.ending.name,
+                    onSelect = { onChange(recurrence.copy(ending = Ending.valueOf(it))) },
+                )
+            }
+            Box(Modifier.weight(1f)) {
+                when (recurrence.ending) {
+                    Ending.UNTIL -> Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        val label = stringResource(R.string.calendars_repeat_last)
+                        FieldLabel(text = label)
+                        val day = recurrence.until
+                            ?: Instant.ofEpochSecond(start).atZone(shownIn(allday, zone)).toLocalDate()
+                        Box {
+                            MochiTextField(
+                                value = format.formatDate(day.atTime(12, 0).toEpochSecond(ZoneOffset.UTC), "UTC"),
+                                onValueChange = {},
+                                readOnly = true,
+                                singleLine = true,
+                                modifier = Modifier.fillMaxWidth().semantics { contentDescription = label },
+                            )
+                            Box(modifier = Modifier.matchParentSize().clickable { picking = true })
+                        }
+                        if (picking) {
+                            DateDialog(
+                                day = day,
+                                onDismiss = { picking = false },
+                                onPick = {
+                                    onChange(recurrence.copy(until = it))
+                                    picking = false
+                                },
+                            )
+                        }
+                    }
+                    Ending.COUNT -> CountField(
+                        label = stringResource(R.string.calendars_repeat_count),
+                        value = recurrence.count,
+                        maximum = 999,
+                        onChange = { onChange(recurrence.copy(count = it)) },
+                    )
+                    Ending.NEVER -> Unit
+                }
+            }
+        }
+    }
+}
+
+/**
+ * A whole number from 1 to [maximum], typed. What is typed may be cleared to
+ * type another; a number in range is taken as it is typed, one past
+ * [maximum] as [maximum], and the field shows the value again once it loses
+ * the focus.
+ */
+@Composable
+private fun CountField(label: String, value: Int, maximum: Int, onChange: (Int) -> Unit) {
+    var text by remember { mutableStateOf<String?>(null) }
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        FieldLabel(text = label)
+        MochiTextField(
+            value = text ?: value.toString(),
+            onValueChange = { typed ->
+                text = typed
+                val number = typed.trim().toIntOrNull()
+                if (number != null && number >= 1) onChange(minOf(maximum, number))
+            },
+            singleLine = true,
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            modifier = Modifier
+                .fillMaxWidth()
+                .semantics { contentDescription = label }
+                .onFocusChanged { if (!it.isFocused) text = null },
+        )
+    }
 }
 
 /** A locale whose week starts where the user's does, for the date picker. */

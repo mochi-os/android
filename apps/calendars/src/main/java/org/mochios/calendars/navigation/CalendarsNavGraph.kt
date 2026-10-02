@@ -48,6 +48,20 @@ object CalendarsApp {
     /** The flag it carries once the editor deleted something, which it offers to undo. */
     const val DELETED = "deleted"
 
+    /** What it carries once the editor saved an event: [CREATED] or [CHANGED]. */
+    const val SAVED = "saved"
+    const val CREATED = "created"
+    const val CHANGED = "changed"
+
+    /**
+     * Tells the calendar beneath the editor, when there is one, that an event
+     * was saved, which it says. An editor opened from a reminder has none.
+     */
+    fun saved(navController: NavController, created: Boolean) {
+        runCatching { navController.getBackStackEntry(HOME) }.getOrNull()
+            ?.savedStateHandle?.set(SAVED, if (created) CREATED else CHANGED)
+    }
+
     /**
      * A new event, optionally starting at a moment the user picked out of a
      * grid. [allday] is what the tap chose, timed or all day, and null when
@@ -124,6 +138,7 @@ fun NavGraphBuilder.calendarsNavGraph(
         // screen says so once.
         val copied by entry.savedStateHandle.getStateFlow(CalendarsApp.COPIED, false).collectAsState()
         val deleted by entry.savedStateHandle.getStateFlow(CalendarsApp.DELETED, false).collectAsState()
+        val saved by entry.savedStateHandle.getStateFlow(CalendarsApp.SAVED, "").collectAsState()
         CalendarScreen(
             onCreateCalendar = { navController.navigate(CalendarsApp.CREATE) },
             onSubscribe = { navController.navigate(CalendarsApp.SUBSCRIBE) },
@@ -138,6 +153,8 @@ fun NavGraphBuilder.calendarsNavGraph(
             onCopiedShown = { entry.savedStateHandle[CalendarsApp.COPIED] = false },
             deleted = deleted,
             onDeletedShown = { entry.savedStateHandle[CalendarsApp.DELETED] = false },
+            saved = saved,
+            onSavedShown = { entry.savedStateHandle[CalendarsApp.SAVED] = "" },
             onLogout = onLogout,
         )
     }
@@ -179,7 +196,10 @@ fun NavGraphBuilder.calendarsNavGraph(
     ) {
         EventEditScreen(
             onBack = { navController.popBackStack() },
-            onSaved = { navController.popBackStack() },
+            onSaved = { created ->
+                CalendarsApp.saved(navController, created)
+                navController.popBackStack()
+            },
             onCopied = {
                 // A copy may have been opened from the original's editor;
                 // the calendar is where a saved copy shows.
@@ -205,7 +225,10 @@ fun NavGraphBuilder.calendarsNavGraph(
     ) {
         EventEditScreen(
             onBack = { navController.popBackStack() },
-            onSaved = { navController.popBackStack() },
+            onSaved = { created ->
+                CalendarsApp.saved(navController, created)
+                navController.popBackStack()
+            },
             onCopied = { navController.popBackStack() },
             onDeleted = {
                 // The calendar says so with its Undo; an editor opened from a

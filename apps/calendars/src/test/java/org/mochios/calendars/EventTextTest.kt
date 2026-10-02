@@ -13,6 +13,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.test.assertIsFocused
+import androidx.compose.ui.test.assertIsNotFocused
+import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.performImeAction
@@ -38,6 +40,7 @@ class EventTextTest {
     val rule = createComposeRule()
 
     private var description by mutableStateOf("")
+    private var asked by mutableStateOf(0)
     private var saves = 0
 
     private fun show(select: Boolean = false) {
@@ -56,6 +59,7 @@ class EventTextTest {
                     onUrl = {},
                     onSave = { saves++ },
                     select = select,
+                    asked = asked,
                 )
             }
         }
@@ -91,6 +95,23 @@ class EventTextTest {
             TextRange(0, "Standup".length),
             title.fetchSemanticsNode().config[SemanticsProperties.TextSelectionRange],
         )
+    }
+
+    @Test
+    fun `a save tried without a title takes the cursor to the title, each time`() {
+        show()
+        val title = rule.onAllNodes(hasSetTextAction())[0]
+        title.assertIsNotFocused()
+        asked = 1
+        rule.waitForIdle()
+        title.assertIsFocused()
+        // Moved away and tried again: back to the title.
+        rule.onAllNodes(hasSetTextAction())[1].performClick()
+        rule.waitForIdle()
+        title.assertIsNotFocused()
+        asked = 2
+        rule.waitForIdle()
+        title.assertIsFocused()
     }
 
     @Test

@@ -86,19 +86,14 @@
     <string name="calendars_event_repeat">Pag-ulit</string>
     <string name="calendars_event_reminder">Paalala</string>
     <string name="calendars_event_recurring">Paulit-ulit</string>
-    <string name="calendars_event_delete_title">Tanggalin ang %1$s?</string>
-    <string name="calendars_event_delete_message">Hindi ito maibabalik.</string>
-    <string name="calendars_scope_edit">Babaguhin ang event na ito o lahat ng event?</string>
-    <string name="calendars_scope_delete">Tatanggalin ang event na ito o lahat ng event?</string>
+    <string name="calendars_scope_delete">I-delete ang kaganapang ito</string>
     <string name="calendars_scope_one">Ang kaganapang ito</string>
     <string name="calendars_scope_all">Lahat ng kaganapan</string>
     <string name="calendars_repeat_daily">Araw-araw</string>
     <string name="calendars_repeat_weekly">Lingguhan</string>
     <string name="calendars_repeat_interval">Tuwing</string>
-    <string name="calendars_repeat_days">Mga araw</string>
     <string name="calendars_repeat_count">Bilang ng pag-ulit</string>
-    <string name="calendars_repeat_forever">Habambuhay</string>
-    <string name="calendars_reminder_time">Sa mismong oras</string>
+    <string name="calendars_reminder_time">Sa oras ng kaganapan</string>
     <plurals name="calendars_reminder_minutes">
         <item quantity="one">%1$s minuto bago</item>
         <item quantity="other">%1$s na minuto bago</item>
@@ -216,4 +211,56 @@
     <string name="calendars_link_replace_title">Palitan ang address ng kalendaryo?</string>
     <string name="calendars_list_unmatched">Walang tugma</string>
     <string name="calendars_list_search_events">Maghanap ng mga kaganapan</string>
+    <string name="calendars_reload">I-reload</string>
+    <string name="calendars_event_created">Nagawa ang kaganapan</string>
+    <string name="calendars_event_saved">Na-save ang kaganapan</string>
+    <string name="calendars_scope_save">I-save ang kaganapang ito</string>
+    <string name="calendars_scope_move">Ilipat ang kaganapang ito</string>
+    <string name="calendars_repeat_frequency">Dalas</string>
+    <string name="calendars_repeat_ends">Nagtatapos</string>
+    <string name="calendars_repeat_end_never">Hindi kailanman</string>
+    <string name="calendars_repeat_until">Sa isang petsa</string>
+    <string name="calendars_repeat_after">Pagkatapos ng isang bilang</string>
+    <string name="calendars_repeat_last">Huling araw</string>
+    <string name="calendars_rule_day">Araw-araw</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">Tuwing %1$s araw</item>
+        <item quantity="other">Tuwing %1$s araw</item>
+    </plurals>
+    <string name="calendars_rule_week">Lingguhan</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">Tuwing %1$s linggo</item>
+        <item quantity="other">Tuwing %1$s linggo</item>
+    </plurals>
+    <string name="calendars_rule_month">Bawat buwan</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">Tuwing %1$s buwan</item>
+        <item quantity="other">Tuwing %1$s buwan</item>
+    </plurals>
+    <string name="calendars_rule_year">Bawat taon</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">Tuwing %1$s taon</item>
+        <item quantity="other">Tuwing %1$s taon</item>
+    </plurals>
+    <string name="calendars_rule_on">tuwing %1$s</string>
+    <string name="calendars_rule_first">sa unang %1$s</string>
+    <string name="calendars_rule_second">sa ikalawang %1$s</string>
+    <string name="calendars_rule_third">sa ikatlong %1$s</string>
+    <string name="calendars_rule_fourth">sa ikaapat na %1$s</string>
+    <string name="calendars_rule_fifth">sa ikalimang %1$s</string>
+    <string name="calendars_rule_last">sa huling %1$s</string>
+    <string name="calendars_rule_end">sa huling araw ng buwan</string>
+    <string name="calendars_rule_monthday">sa araw %1$s ng buwan</string>
+    <plurals name="calendars_rule_monthdays">
+        <item quantity="one">sa mga araw %1$s ng buwan</item>
+        <item quantity="other">sa mga araw %1$s ng buwan</item>
+    </plurals>
+    <string name="calendars_rule_in">sa %1$s</string>
+    <string name="calendars_rule_once">isang beses</string>
+    <plurals name="calendars_rule_times">
+        <item quantity="one">%1$s beses</item>
+        <item quantity="other">%1$s beses</item>
+    </plurals>
+    <string name="calendars_rule_until">hanggang %1$s</string>
+    <string name="calendars_rule_join">%1$s, %2$s</string>
 </resources>
