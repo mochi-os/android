@@ -156,7 +156,6 @@
     <string name="calendars_event_backwards">Se termină înainte să înceapă</string>
     <string name="calendars_event_zone_start">Fusul orar al începutului</string>
     <string name="calendars_event_zone_finish">Fusul orar al sfârșitului</string>
-    <string name="calendars_event_timezone">Fus orar</string>
     <string name="calendars_scope_following">Acesta și următoarele</string>
     <string name="calendars_event_moved">Eveniment mutat</string>
     <string name="calendars_event_changed">Acest eveniment a fost modificat în altă parte.</string>

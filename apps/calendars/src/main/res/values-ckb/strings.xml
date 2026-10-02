@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">پێش دەستپێکردن کۆتایی دێت</string>
     <string name="calendars_event_zone_start">ناوچەی کاتی دەستپێک</string>
     <string name="calendars_event_zone_finish">ناوچەی کاتی کۆتایی</string>
-    <string name="calendars_event_timezone">هەرێمی کات</string>
     <string name="calendars_scope_following">ئەمە و داهاتووەکان</string>
     <string name="calendars_event_moved">ڕووداو گوازرایەوە</string>
     <string name="calendars_event_changed">ئەم ڕووداوە لە شوێنێکی تردا گۆڕدراوە.</string>

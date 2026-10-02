@@ -72,7 +72,6 @@
     <string name="calendars_event_allday">All day</string>
     <string name="calendars_event_start">Start</string>
     <string name="calendars_event_finish">End</string>
-    <string name="calendars_event_timezone">Time zone</string>
     <string name="calendars_event_zone_start">Start time zone</string>
     <string name="calendars_event_zone_finish">End time zone</string>
     <string name="calendars_event_backwards">Ends before it starts</string>

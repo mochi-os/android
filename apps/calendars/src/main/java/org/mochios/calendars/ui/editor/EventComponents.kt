@@ -81,14 +81,6 @@ fun written(component: EventComponent, user: String): Zone {
 }
 
 /**
- * Whether either end reads in another zone than the [user]'s own, under any
- * of its names, which is when the editor shows the zones without being
- * asked. A blank end reads in the user's zone.
- */
-fun foreign(zone: Zone, user: String, registry: Zones.Registry = Zones.Platform): Boolean =
-    !Zones.same(zone.start.ifBlank { user }, user, registry) || !Zones.same(zone.finish.ifBlank { user }, user, registry)
-
-/**
  * The zone a moment of the form is shown and picked in. An all-day day is
  * held as its UTC midnight and is a date, not a moment, so it reads in UTC
  * whatever the user's zone; read in a zone west of UTC it would show the

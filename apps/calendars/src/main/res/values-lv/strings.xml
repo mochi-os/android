@@ -156,7 +156,6 @@
     <string name="calendars_event_backwards">Beidzas, pirms sākas</string>
     <string name="calendars_event_zone_start">Sākuma laika josla</string>
     <string name="calendars_event_zone_finish">Beigu laika josla</string>
-    <string name="calendars_event_timezone">Laika josla</string>
     <string name="calendars_scope_following">Šis un nākamie</string>
     <string name="calendars_event_moved">Notikums pārvietots</string>
     <string name="calendars_event_changed">Šis notikums ir mainīts citur.</string>

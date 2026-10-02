@@ -160,7 +160,6 @@
     <string name="calendars_event_backwards">Заканчивается раньше, чем начинается</string>
     <string name="calendars_event_zone_start">Часовой пояс начала</string>
     <string name="calendars_event_zone_finish">Часовой пояс окончания</string>
-    <string name="calendars_event_timezone">Часовой пояс</string>
     <string name="calendars_scope_following">Это и последующие</string>
     <string name="calendars_event_moved">Событие перемещено</string>
     <string name="calendars_event_changed">Это событие было изменено в другом месте.</string>

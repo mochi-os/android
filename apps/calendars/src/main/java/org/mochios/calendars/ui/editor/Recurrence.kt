@@ -160,6 +160,10 @@ fun reminderLeads(current: Int): List<Int> =
 /** The reminders a new event opens with, from the default reminder preference; -1 is none. */
 fun defaultReminders(preference: Int): List<Int> = if (preference >= 0) listOf(preference) else emptyList()
 
-/** The reminder "Add reminder" adds: the first offered the event lacks. */
+/**
+ * The reminder "Add reminder" adds: at the time of the event first, then each
+ * one longer, the shortest offered the event lacks. With every one taken, the
+ * longest again.
+ */
 fun nextReminder(reminders: List<Int>): Int =
-    (listOf(15) + REMINDER_LEADS).firstOrNull { it !in reminders } ?: 15
+    REMINDER_LEADS.firstOrNull { it !in reminders } ?: REMINDER_LEADS.last()

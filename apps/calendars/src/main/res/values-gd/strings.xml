@@ -160,7 +160,6 @@
     <string name="calendars_event_backwards">Thig e gu crìch mus tòisich e</string>
     <string name="calendars_event_zone_start">Roinn-tìde toisich</string>
     <string name="calendars_event_zone_finish">Roinn-tìde crìche</string>
-    <string name="calendars_event_timezone">Roinn-tìde</string>
     <string name="calendars_scope_following">Am fear seo agus an fheadhainn às a dhèidh</string>
     <string name="calendars_event_moved">Chaidh an tachartas a ghluasad</string>
     <string name="calendars_event_changed">Dh\'atharraich an tachartas seo àiteigin eile.</string>

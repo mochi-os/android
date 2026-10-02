@@ -159,7 +159,6 @@
     <string name="calendars_event_backwards">Baigiasi anksčiau nei prasideda</string>
     <string name="calendars_event_zone_start">Pradžios laiko juosta</string>
     <string name="calendars_event_zone_finish">Pabaigos laiko juosta</string>
-    <string name="calendars_event_timezone">Laiko juosta</string>
     <string name="calendars_scope_following">Šis ir vėlesni</string>
     <string name="calendars_event_moved">Įvykis perkeltas</string>
     <string name="calendars_event_changed">Šis įvykis buvo pakeistas kitur.</string>

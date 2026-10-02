@@ -196,10 +196,22 @@ class RecurrenceTest {
     }
 
     @Test
-    fun `adding a reminder adds the first offered the event lacks`() {
-        assertEquals(15, nextReminder(emptyList()))
+    fun `reminders added by hand start at the time of the event and each is longer`() {
+        val added = mutableListOf<Int>()
+        repeat(6) { added += nextReminder(added) }
+        assertEquals(listOf(0, 5, 15, 30, 60, 1440), added)
+    }
+
+    @Test
+    fun `beside a default reminder, the one added is the shortest the event lacks`() {
         assertEquals(0, nextReminder(listOf(15)))
+        assertEquals(5, nextReminder(listOf(15, 0)))
         assertEquals(30, nextReminder(listOf(15, 0, 5)))
+    }
+
+    @Test
+    fun `with every reminder taken, the longest is offered again`() {
+        assertEquals(1440, nextReminder(listOf(0, 5, 15, 30, 60, 1440)))
     }
 
     @Test

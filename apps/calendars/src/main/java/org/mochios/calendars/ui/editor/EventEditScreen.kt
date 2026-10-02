@@ -32,10 +32,8 @@ import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Event
-import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Palette
-import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material.icons.outlined.Repeat
 import androidx.compose.material.icons.outlined.Schedule
@@ -46,7 +44,6 @@ import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.minimumInteractiveComponentSize
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -97,6 +94,7 @@ import org.mochios.android.ui.components.ZonePicker
 import org.mochios.android.util.Zones
 import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
+import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.ui.dialogs.DeleteEventDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
@@ -209,13 +207,10 @@ fun EventEditScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            LabeledSelectField(
-                label = stringResource(R.string.calendars_event_calendar),
-                placeholder = "",
-                options = uiState.calendars.map { it.id to it.name },
+            CalendarField(
+                calendars = uiState.calendars,
                 selected = uiState.calendar,
                 onSelect = viewModel::calendar,
-                icon = Icons.Outlined.CalendarMonth,
             )
             EventText(
                 title = uiState.title,
@@ -245,12 +240,9 @@ fun EventEditScreen(
                 allday = uiState.allday,
                 zone = uiState.zone,
                 own = viewModel.zone,
-                revealed = uiState.revealed,
-                enabled = !uiState.isSaving,
                 onStart = viewModel::start,
                 onFinish = viewModel::finish,
                 onZone = viewModel::zone,
-                onReveal = viewModel::reveal,
             )
             RepeatField(
                 recurrence = uiState.recurrence,
@@ -438,7 +430,6 @@ internal fun EventText(
             value = location,
             onValueChange = onLocation,
             label = { Text(stringResource(R.string.calendars_event_location)) },
-            leadingIcon = { Icon(Icons.Outlined.Place, contentDescription = null) },
             singleLine = true,
             enabled = enabled,
             modifier = Modifier.fillMaxWidth(),
@@ -447,7 +438,6 @@ internal fun EventText(
             value = url,
             onValueChange = onUrl,
             label = { Text(stringResource(R.string.calendars_event_url)) },
-            leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
             singleLine = true,
             enabled = enabled,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
@@ -458,7 +448,7 @@ internal fun EventText(
 
 /**
  * A date, and a time beside it unless the event is all day, both read in
- * [zone], with [trailing] at the end of the row. Tapping either field opens
+ * [zone]. Tapping either field opens
  * the matching picker; the date picker's first day of the week follows the
  * user's own preference.
  */
@@ -470,7 +460,6 @@ private fun MomentField(
     allday: Boolean,
     zone: String,
     onChange: (Long) -> Unit,
-    trailing: (@Composable () -> Unit)? = null,
 ) {
     val format = LocalFormat.current
     var picking by remember { mutableStateOf(false) }
@@ -502,7 +491,6 @@ private fun MomentField(
                     Box(modifier = Modifier.matchParentSize().clickable { timing = true })
                 }
             }
-            trailing?.invoke()
         }
     }
 
@@ -569,11 +557,10 @@ private fun MomentField(
 }
 
 /**
- * The Start and End rows. Each end is typed in its own zone, named beneath it
- * when an end reads in another zone than the user's [own] or they asked to see
- * the zones; otherwise a globe beside the End row reveals them, and the Start
- * row keeps the globe's room so the two rows line up. An all-day event has no
- * clock, so its dates stay in the user's own zone.
+ * The Start and End rows, each with the zone its end is typed in beneath it,
+ * always, as the web shows it beside the time; a phone has no room beside.
+ * A blank zone is the user's [own]. An all-day event has no clock, so its
+ * dates stay in the user's own zone and show none.
  */
 @Composable
 internal fun EventMoments(
@@ -582,32 +569,24 @@ internal fun EventMoments(
     allday: Boolean,
     zone: Zone,
     own: String,
-    revealed: Boolean,
-    enabled: Boolean,
     onStart: (Long) -> Unit,
     onFinish: (Long) -> Unit,
     onZone: (Zone) -> Unit,
-    onReveal: () -> Unit,
 ) {
-    val zoned = !allday && (revealed || foreign(zone, own))
-    val globe = !allday && !zoned
+    val begins = zone.start.ifBlank { own }
+    val ends = zone.finish.ifBlank { begins }
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         MomentField(
             label = stringResource(R.string.calendars_event_start),
             moment = start,
             allday = allday,
-            zone = if (allday) own else zone.start,
+            zone = if (allday) own else begins,
             onChange = onStart,
-            trailing = if (globe) {
-                { Spacer(Modifier.minimumInteractiveComponentSize().size(GLOBE)) }
-            } else {
-                null
-            },
         )
-        if (zoned) {
+        if (!allday) {
             ZoneField(
                 label = stringResource(R.string.calendars_event_zone_start),
-                zone = zone.start,
+                zone = begins,
                 onChange = { onZone(follow(zone, it)) },
             )
         }
@@ -617,33 +596,66 @@ internal fun EventMoments(
             label = stringResource(R.string.calendars_event_finish),
             moment = finish,
             allday = allday,
-            zone = if (allday) own else zone.finish,
+            zone = if (allday) own else ends,
             onChange = onFinish,
-            trailing = if (globe) {
-                {
-                    MochiIconButton(onClick = onReveal, enabled = enabled) {
-                        Icon(
-                            Icons.Outlined.Public,
-                            contentDescription = stringResource(R.string.calendars_event_timezone),
-                        )
-                    }
-                }
-            } else {
-                null
-            },
         )
-        if (zoned) {
+        if (!allday) {
             ZoneField(
                 label = stringResource(R.string.calendars_event_zone_finish),
-                zone = zone.finish,
+                zone = ends,
                 onChange = { onZone(zone.copy(finish = it)) },
             )
         }
     }
 }
 
-/** An icon button's own size, which the Start row keeps free for the globe. */
-private val GLOBE = 40.dp
+/**
+ * The calendar an event is in, with no label of its own: the calendar icon
+ * beside the chosen calendar's name, and beside each calendar in the list.
+ * The field's name is read out from [R.string.calendars_event_calendar].
+ */
+@Composable
+internal fun CalendarField(
+    calendars: List<Calendar>,
+    selected: String,
+    onSelect: (String) -> Unit,
+) {
+    var expanded by rememberSaveable { mutableStateOf(false) }
+    val name = stringResource(R.string.calendars_event_calendar)
+    Box {
+        MochiOutlinedButton(
+            onClick = { expanded = true },
+            modifier = Modifier.fillMaxWidth().semantics { contentDescription = name },
+        ) {
+            Icon(
+                Icons.Outlined.CalendarMonth,
+                contentDescription = null,
+                modifier = Modifier.size(ButtonDefaults.IconSize),
+            )
+            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+            Text(
+                text = calendars.firstOrNull { it.id == selected }?.name.orEmpty(),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f),
+            )
+            Icon(Icons.Default.ArrowDropDown, contentDescription = null)
+        }
+        MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            calendars.forEach { calendar ->
+                MochiDropdownMenuItem(
+                    text = { Text(calendar.name) },
+                    onClick = {
+                        expanded = false
+                        onSelect(calendar.id)
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.CalendarMonth, contentDescription = null) },
+                    selected = calendar.id == selected,
+                )
+            }
+        }
+    }
+}
 
 /**
  * The zone one end is typed in, as its city beside a globe; a tap opens the

@@ -159,7 +159,6 @@
     <string name="calendars_event_backwards">מסתיים לפני שהתחיל</string>
     <string name="calendars_event_zone_start">אזור זמן של ההתחלה</string>
     <string name="calendars_event_zone_finish">אזור זמן של הסיום</string>
-    <string name="calendars_event_timezone">אזור זמן</string>
     <string name="calendars_scope_following">זה והבאים אחריו</string>
     <string name="calendars_event_moved">האירוע הועבר</string>
     <string name="calendars_event_changed">אירוע זה שונה במקום אחר.</string>

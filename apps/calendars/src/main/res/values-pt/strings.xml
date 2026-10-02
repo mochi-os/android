@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">Termina antes de começar</string>
     <string name="calendars_event_zone_start">Fuso horário de início</string>
     <string name="calendars_event_zone_finish">Fuso horário de fim</string>
-    <string name="calendars_event_timezone">Fuso horário</string>
     <string name="calendars_scope_following">Este e os seguintes</string>
     <string name="calendars_event_moved">Evento movido</string>
     <string name="calendars_event_changed">Este evento foi alterado noutro local.</string>

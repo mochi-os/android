@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">Пеш аз оғоз ба анҷом мерасад</string>
     <string name="calendars_event_zone_start">Минтақаи вақти оғоз</string>
     <string name="calendars_event_zone_finish">Минтақаи вақти анҷом</string>
-    <string name="calendars_event_timezone">Минтақаи вақт</string>
     <string name="calendars_scope_following">Ин ва баъдӣ</string>
     <string name="calendars_event_moved">Рӯйдод интиқол дода шуд</string>
     <string name="calendars_event_changed">Ин рӯйдод дар ҷойи дигар тағйир дода шуд.</string>

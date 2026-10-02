@@ -47,9 +47,7 @@ import javax.inject.Inject
  * [moment] is the same occurrence's start as the server listed it, which a
  * series cut there is told. Both are 0 for a new event or one that does not
  * repeat. [zone] is the zone each end is typed and written in, the user's
- * own for a new event; [revealed] says the user asked to see the zones in
- * this edit, which otherwise show only when an end reads in another zone
- * than their own. [copy] is a copy the user asked for, with how far it
+ * own for a new event. [copy] is a copy the user asked for, with how far it
  * reaches, which the screen opens the editor on.
  */
 data class EditorUiState(
@@ -66,7 +64,6 @@ data class EditorUiState(
     val start: Long = 0,
     val finish: Long = 0,
     val zone: Zone = Zone(),
-    val revealed: Boolean = false,
     val location: String = "",
     /** The event's own colour, blank for its calendar's. */
     val colour: String = "",
@@ -398,11 +395,6 @@ class EventEditViewModel @Inject constructor(
         val begins = moved(start, zone.start, value.start)
         val ends = moved(finish, zone.finish, value.finish)
         copy(zone = value, start = begins, finish = following(begins, ends))
-    }
-
-    /** Shows the zones for the rest of this edit; not an edit in itself. */
-    fun reveal() {
-        _uiState.value = _uiState.value.copy(revealed = true)
     }
 
     private inline fun edit(change: EditorUiState.() -> EditorUiState) {

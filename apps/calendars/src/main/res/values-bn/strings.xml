@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">শুরুর আগেই শেষ হয়</string>
     <string name="calendars_event_zone_start">শুরুর সময় অঞ্চল</string>
     <string name="calendars_event_zone_finish">শেষের সময় অঞ্চল</string>
-    <string name="calendars_event_timezone">সময় অঞ্চল</string>
     <string name="calendars_scope_following">এটি এবং পরবর্তীগুলি</string>
     <string name="calendars_event_moved">ইভেন্ট সরানো হয়েছে</string>
     <string name="calendars_event_changed">এই ইভেন্টটি অন্য কোথাও পরিবর্তিত হয়েছে।</string>

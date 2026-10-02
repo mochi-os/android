@@ -10,15 +10,17 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onAllNodesWithText
-import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.unit.dp
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.UserPreferences
+import org.mochios.android.util.zoneCity
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.ui.editor.EventMoments
 import org.robolectric.RobolectricTestRunner
@@ -26,7 +28,7 @@ import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 
-/** The Start and End rows line up, whether or not the End row carries the zone globe. */
+/** The Start and End rows always show the zone each end is typed in, and line up. */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "w400dp-h800dp")
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
@@ -39,24 +41,23 @@ class EventMomentsTest {
     private val start = 1_790_071_200L
     private val finish = start + 3_600
     private val format = Format(UserPreferences())
-    private val globe = RuntimeEnvironment.getApplication().getString(R.string.calendars_event_timezone)
+    private val context = RuntimeEnvironment.getApplication()
+    private val starts = context.getString(R.string.calendars_event_zone_start)
+    private val ends = context.getString(R.string.calendars_event_zone_finish)
 
-    private fun show(revealed: Boolean) {
+    private fun show(zone: Zone, allday: Boolean = false) {
         rule.setContent {
             Box(Modifier.width(352.dp)) {
                 Column {
                     EventMoments(
                         start = start,
                         finish = finish,
-                        allday = false,
-                        zone = Zone("UTC", "UTC"),
-                        own = "UTC",
-                        revealed = revealed,
-                        enabled = true,
+                        allday = allday,
+                        zone = zone,
+                        own = "Europe/London",
                         onStart = {},
                         onFinish = {},
                         onZone = {},
-                        onReveal = {},
                     )
                 }
             }
@@ -67,26 +68,46 @@ class EventMomentsTest {
     private fun bounds(text: String) =
         rule.onAllNodesWithText(text).fetchSemanticsNodes().map { it.boundsInRoot }
 
+    private fun shown(description: String) =
+        rule.onAllNodesWithContentDescription(description).fetchSemanticsNodes().isNotEmpty()
+
     @Test
-    fun `the start row keeps the globe's room, so its date and time line up with the end's`() {
-        show(revealed = false)
-        rule.onNodeWithContentDescription(globe).assertExists()
+    fun `both ends show their zone even in the user's own, with no button to reveal them`() {
+        show(Zone("Europe/London", "Europe/London"))
+        assertTrue(shown(starts))
+        assertTrue(shown(ends))
+        assertEquals(2, rule.onAllNodesWithText(zoneCity("Europe/London")).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `an end written with no zone shows the user's own`() {
+        show(Zone("", ""))
+        assertEquals(2, rule.onAllNodesWithText(zoneCity("Europe/London")).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `each end names its own zone`() {
+        show(Zone("Europe/London", "America/New_York"))
+        assertEquals(1, rule.onAllNodesWithText(zoneCity("Europe/London")).fetchSemanticsNodes().size)
+        assertEquals(1, rule.onAllNodesWithText(zoneCity("America/New_York")).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `an all-day event has no times and shows no zones`() {
+        show(Zone("Europe/London", "Europe/London"), allday = true)
+        assertEquals(false, shown(starts))
+        assertEquals(false, shown(ends))
+    }
+
+    @Test
+    fun `the start and end dates and times line up`() {
+        show(Zone("UTC", "UTC"))
         val dates = bounds(format.formatDate(start, "UTC"))
         assertEquals(2, dates.size)
         assertEquals(dates[0].left, dates[1].left)
         assertEquals(dates[0].width, dates[1].width)
         val begins = bounds(format.formatTime(start, "UTC")).single()
-        val ends = bounds(format.formatTime(finish, "UTC")).single()
-        assertEquals(begins.left, ends.left)
-        assertEquals(begins.width, ends.width)
-    }
-
-    @Test
-    fun `with the zones shown there is no globe, and the rows still line up`() {
-        show(revealed = true)
-        rule.onNodeWithContentDescription(globe).assertDoesNotExist()
-        val dates = bounds(format.formatDate(start, "UTC"))
-        assertEquals(2, dates.size)
-        assertEquals(dates[0].width, dates[1].width)
+        val finishes = bounds(format.formatTime(finish, "UTC")).single()
+        assertEquals(begins.left, finishes.left)
     }
 }

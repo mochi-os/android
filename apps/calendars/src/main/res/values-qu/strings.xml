@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">Manaraq qallarichkaptin tukun</string>
     <string name="calendars_event_zone_start">Qallariy pacha suyu</string>
     <string name="calendars_event_zone_finish">Tukukuy pacha suyu</string>
-    <string name="calendars_event_timezone">Pacha suyu</string>
     <string name="calendars_scope_following">Kay hinaspa qatiqkuna</string>
     <string name="calendars_event_moved">Evento kuyuchisqa</string>
     <string name="calendars_event_changed">Kay evento huk lawpi hukchasqa karqan.</string>

@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">Slutter før den begynder</string>
     <string name="calendars_event_zone_start">Starttidszone</string>
     <string name="calendars_event_zone_finish">Sluttidszone</string>
-    <string name="calendars_event_timezone">Tidszone</string>
     <string name="calendars_scope_following">Denne og følgende</string>
     <string name="calendars_event_moved">Begivenhed flyttet</string>
     <string name="calendars_event_changed">Denne begivenhed er blevet ændret et andet sted.</string>

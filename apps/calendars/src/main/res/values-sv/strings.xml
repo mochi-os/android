@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">Slutar innan den börjar</string>
     <string name="calendars_event_zone_start">Tidszon för start</string>
     <string name="calendars_event_zone_finish">Tidszon för slut</string>
-    <string name="calendars_event_timezone">Tidszon</string>
     <string name="calendars_scope_following">Denna och följande</string>
     <string name="calendars_event_moved">Händelse flyttad</string>
     <string name="calendars_event_changed">Den här händelsen ändrades någon annanstans.</string>

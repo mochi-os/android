@@ -26,7 +26,6 @@ import org.mochios.calendars.ui.editor.draft
 import org.mochios.calendars.ui.editor.duplicate
 import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.follow
-import org.mochios.calendars.ui.editor.foreign
 import org.mochios.calendars.ui.editor.moved
 import org.mochios.calendars.ui.editor.moveOccurrence
 import org.mochios.calendars.ui.editor.single
@@ -531,34 +530,12 @@ class EventComponentsTest {
         assertEquals(Zone("Asia/Tokyo", NEW_YORK), follow(Zone(LONDON, NEW_YORK), "Asia/Tokyo"))
     }
 
-    @Test
-    fun `both ends in the user's zone need no zones shown`() {
-        assertFalse(foreign(Zone(LONDON, LONDON), LONDON))
-        // An end with no zone reads in the user's.
-        assertFalse(foreign(Zone("", ""), LONDON))
-        assertFalse(foreign(Zone(LONDON, ""), LONDON))
-    }
-
-    @Test
-    fun `either end in another zone shows the zones`() {
-        assertTrue(foreign(Zone(NEW_YORK, LONDON), LONDON))
-        assertTrue(foreign(Zone(LONDON, NEW_YORK), LONDON))
-        assertTrue(foreign(Zone(NEW_YORK, NEW_YORK), LONDON))
-    }
-
     /** A platform that resolves zones as ICU does, where Asia/Kolkata's own name is Asia/Calcutta. */
     private val icu = object : Zones.Registry {
         override fun canonical(zone: String): String? =
             mapOf("Asia/Kolkata" to "Asia/Calcutta", "Asia/Calcutta" to "Asia/Calcutta")[zone]
 
         override fun places(): Collection<String> = emptyList()
-    }
-
-    @Test
-    fun `an end under another name of the user's own zone needs no zones shown`() {
-        assertFalse(foreign(Zone("Asia/Calcutta", "Asia/Calcutta"), "Asia/Kolkata", icu))
-        assertFalse(foreign(Zone("Asia/Kolkata", ""), "Asia/Calcutta", icu))
-        assertTrue(foreign(Zone("Asia/Calcutta", NEW_YORK), "Asia/Kolkata", icu))
     }
 
     @Test

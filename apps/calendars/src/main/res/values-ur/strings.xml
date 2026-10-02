@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">شروع ہونے سے پہلے ختم ہو جاتا ہے</string>
     <string name="calendars_event_zone_start">آغاز کا ٹائم زون</string>
     <string name="calendars_event_zone_finish">اختتام کا ٹائم زون</string>
-    <string name="calendars_event_timezone">ٹائم زون</string>
     <string name="calendars_scope_following">یہ اور اگلے</string>
     <string name="calendars_event_moved">ایونٹ منتقل ہو گیا</string>
     <string name="calendars_event_changed">یہ ایونٹ کہیں اور تبدیل ہو گیا ہے۔</string>

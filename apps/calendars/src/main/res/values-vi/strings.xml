@@ -148,7 +148,6 @@
     <string name="calendars_event_backwards">Kết thúc trước khi bắt đầu</string>
     <string name="calendars_event_zone_start">Múi giờ bắt đầu</string>
     <string name="calendars_event_zone_finish">Múi giờ kết thúc</string>
-    <string name="calendars_event_timezone">Múi giờ</string>
     <string name="calendars_scope_following">Sự kiện này và các sự kiện sau</string>
     <string name="calendars_event_moved">Đã di chuyển sự kiện</string>
     <string name="calendars_event_changed">Sự kiện này đã thay đổi ở nơi khác.</string>

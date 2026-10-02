@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">له پیل مخکې پای ته رسېږي</string>
     <string name="calendars_event_zone_start">د پیل وخت سیمه</string>
     <string name="calendars_event_zone_finish">د پای وخت سیمه</string>
-    <string name="calendars_event_timezone">د وخت زون</string>
     <string name="calendars_scope_following">دا او راتلونکې</string>
     <string name="calendars_event_moved">پېښه ولېږدول شوه</string>
     <string name="calendars_event_changed">دا پېښه په بل ځای کې بدله شوه.</string>

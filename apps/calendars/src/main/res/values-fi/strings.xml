@@ -152,7 +152,6 @@
     <string name="calendars_event_backwards">Päättyy ennen alkamistaan</string>
     <string name="calendars_event_zone_start">Alkamisajan aikavyöhyke</string>
     <string name="calendars_event_zone_finish">Päättymisajan aikavyöhyke</string>
-    <string name="calendars_event_timezone">Aikavyöhyke</string>
     <string name="calendars_scope_following">Tämä ja seuraavat</string>
     <string name="calendars_event_moved">Tapahtuma siirretty</string>
     <string name="calendars_event_changed">Tämä tapahtuma muuttui muualla.</string>
