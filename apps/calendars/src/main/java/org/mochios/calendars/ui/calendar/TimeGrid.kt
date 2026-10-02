@@ -835,8 +835,11 @@ fun Block(
  * it reads over the entries it passes. On one line it reads dot,
  * title, marks and [time] when given; [stacked], as a timed occurrence within
  * a day is drawn in a month or multiweek cell, puts the time and marks on a
- * second line beneath the title. [lift] comes after the tap in the chain,
- * so a long press that lifts the chip takes its events before the tap can.
+ * second line beneath the title. [filled], as the month and multiweek
+ * views draw it, it is instead a card in the occurrence's colour, as the
+ * week view's blocks are, with its title alone in white on one line. [lift]
+ * comes after the tap in the chain, so a long press that lifts the chip takes
+ * its events before the tap can.
  */
 @Composable
 fun Chip(
@@ -846,10 +849,31 @@ fun Chip(
     time: String? = null,
     chosen: Boolean = false,
     raised: Boolean = false,
+    filled: Boolean = false,
     lift: Modifier = Modifier,
     onClick: () -> Unit,
 ) {
-    val shape = corners()
+    val shape = if (filled) corners(SNUG) else corners()
+    if (filled) {
+        val colour = instance.colour.toColour(MaterialTheme.colorScheme.primary)
+        val ink = if (instance.tentative) {
+            Ink(MaterialTheme.colorScheme.onSurface, MaterialTheme.colorScheme.onSurfaceVariant)
+        } else {
+            Ink(Color.White, Color.White.copy(alpha = 0.85f))
+        }
+        Box(
+            modifier = modifier
+                .filled(shape, colour, instance.tentative, chosen)
+                .clickable(onClick = onClick)
+                .then(lift),
+            contentAlignment = Alignment.CenterStart,
+        ) {
+            CompositionLocalProvider(LocalInk provides ink) {
+                Fitted(instance, MaterialTheme.typography.labelSmall, 1, Modifier.padding(horizontal = 4.dp))
+            }
+        }
+        return
+    }
     val tint = MaterialTheme.colorScheme.primary.copy(alpha = TINT)
     Box(
         modifier = modifier
@@ -1111,11 +1135,16 @@ fun TextStyle.packed(): TextStyle = if (fontSize.isSp) copy(lineHeight = fontSiz
 
 /**
  * The corner every block and bar takes: the user's own radius, but no
- * rounder than [CORNER], which keeps a short block or a one-line bar from
- * turning into a pill.
+ * rounder than [most], [CORNER] by default, which keeps a short block or a
+ * one-line bar from turning into a pill. A filled one-line chip in a month
+ * or multiweek cell takes [SNUG], so at its height it rounds as a tall
+ * block's corner does at [CORNER].
  */
 @Composable
-fun corners(): Shape = RoundedCornerShape(minOf(LocalEntityRadius.current, CORNER))
+fun corners(most: Dp = CORNER): Shape = RoundedCornerShape(minOf(LocalEntityRadius.current, most))
+
+/** The corner of a filled chip in a month or multiweek cell. */
+internal val SNUG = 3.dp
 
 /**
  * The colours an entry's words take on a card filled with its own colour:

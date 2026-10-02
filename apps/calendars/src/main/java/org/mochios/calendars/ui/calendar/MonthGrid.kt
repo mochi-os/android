@@ -219,14 +219,9 @@ fun MonthGrid(
             ) {
                 Chip(
                     lifted.instance,
-                    Modifier.fillMaxWidth().shadow(6.dp, corners()),
-                    stacked = !look.bar,
+                    Modifier.fillMaxWidth().shadow(6.dp, corners(SNUG)),
                     raised = true,
-                    time = if (look.time) {
-                        format.formatTime(lifted.instance.start, clockZone(lifted.instance.zone?.start, viewModel.zones()))
-                    } else {
-                        null
-                    },
+                    filled = true,
                 ) {}
             }
         }
@@ -300,10 +295,9 @@ private fun Cell(
         // is held so that one entry of the lower stays in view.
         val entries = instances.map { it to look(it, viewModel.day(it), viewModel.finish(it), day) }
         val line = leading(MaterialTheme.typography.labelSmall)
-        val pair = leading(MaterialTheme.typography.labelSmall.packed()) * 2
         val groups = stack(
             Group(entries.filter { it.second.bar }, line),
-            Group(entries.filterNot { it.second.bar }, pair),
+            Group(entries.filterNot { it.second.bar }, line),
             allday,
         ).filter { it.entries.isNotEmpty() }
 
@@ -323,8 +317,7 @@ private fun Cell(
                     .fillMaxWidth()
                     .bringIntoViewRequester(requester)
                     .alpha(opacity(carried = same(instance, lifted), over = viewModel.past(instance), cancelled = instance.cancelled)),
-                stacked = !look.bar,
-                time = if (look.time) format.formatTime(instance.start, clockZone(instance.zone?.start, zones)) else null,
+                filled = true,
                 chosen = same(instance, selected),
                 lift = Modifier.lift(instance, onLift, onDrag, onDrop, onCancel),
             ) { onOpen(instance) }
