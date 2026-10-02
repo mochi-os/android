@@ -127,11 +127,44 @@ class Format(val preferences: UserPreferences, private val clock: Clock = Platfo
     /**
      * A run of days as the user's language writes one: "14 – 20 September
      * 2026", "28 September – 2 October 2026". The days are dates, read in no
-     * zone.
+     * zone. [skeleton] picks the fields, such as "dMMM" for a short "Oct 4 –
+     * 10" with no year.
      */
-    fun formatDayRange(first: LocalDate, last: LocalDate): String {
+    fun formatDayRange(first: LocalDate, last: LocalDate, skeleton: String = "dMMMMy"): String {
         val noon = { day: LocalDate -> day.atTime(12, 0).toInstant(ZoneOffset.UTC).toEpochMilli() }
-        return clock.span("dMMMMy", noon(first), noon(last), TimeZone.getTimeZone("UTC"))
+        return clock.span(skeleton, noon(first), noon(last), TimeZone.getTimeZone("UTC"))
+    }
+
+    /**
+     * The clock times of a span within one day, as the user's language writes
+     * them and on the clock the user chose: "7:30 – 8:30 PM", the shared AM or
+     * PM once. Each end is read in its own zone, [zone] and [finishZone]; ends
+     * at different offsets from UTC keep their own AM or PM, "4:00 PM – 2:00
+     * PM". Blank or unknown zones mean the user's.
+     *
+     * @param start The first moment, epoch seconds.
+     * @param finish The last moment, epoch seconds.
+     * @param zone The IANA zone to read the start in.
+     * @param finishZone The IANA zone to read the finish in.
+     * @return The two times, or "" when [start] is not a moment.
+     */
+    fun formatClockRange(
+        start: Long,
+        finish: Long,
+        zone: String? = null,
+        finishZone: String? = zone,
+    ): String {
+        if (start <= 0) return ""
+        val opens = zoneOf(zone)
+        val closes = zoneOf(finishZone)
+        val end = maxOf(start, finish)
+        val timed = twelve("hm", "Hm")
+        if (opens.getOffset(epochToMillis(start)) == closes.getOffset(epochToMillis(end))) {
+            return clock.span(timed, epochToMillis(start), epochToMillis(end), opens)
+        }
+        val pattern = clock.pattern(timed)
+        return clock.write(pattern, epochToMillis(start), opens) + " – " +
+            clock.write(pattern, epochToMillis(end), closes)
     }
 
     /**

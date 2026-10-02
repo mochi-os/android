@@ -980,7 +980,7 @@ fun marks(instance: Instance, backwards: Boolean = false, stacked: Boolean = fal
 
 /** A mark's glyph, muted, read out by its label. */
 @Composable
-private fun Glyph(mark: Mark, size: Dp) {
+internal fun Glyph(mark: Mark, size: Dp) {
     Icon(
         imageVector = mark.icon(),
         contentDescription = stringResource(mark.label),
@@ -1079,7 +1079,12 @@ fun Name(instance: Instance, style: TextStyle, modifier: Modifier = Modifier) {
  * last. Its line height is [LINE] times its size, as the block sizes it by.
  */
 @Composable
-private fun Fitted(instance: Instance, style: TextStyle, lines: Int, modifier: Modifier = Modifier) {
+internal fun Fitted(
+    instance: Instance,
+    style: TextStyle,
+    lines: Int,
+    modifier: Modifier = Modifier,
+) {
     val ink = LocalInk.current
     val colour = if (instance.untitled) {
         ink?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant
@@ -1186,7 +1191,12 @@ private const val WHITE_ON = 1.05f / 4.5f - 0.05f
  * in the text colour instead.
  */
 @Composable
-private fun Modifier.filled(shape: Shape, colour: Color, tentative: Boolean, chosen: Boolean): Modifier {
+internal fun Modifier.filled(
+    shape: Shape,
+    colour: Color,
+    tentative: Boolean,
+    chosen: Boolean,
+): Modifier {
     val base = this
         .clip(shape)
         .background(MaterialTheme.colorScheme.surfaceContainer)

@@ -5,6 +5,7 @@
 
 package org.mochios.calendars.ui.calendar
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
@@ -23,13 +24,17 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.ArrowDropUp
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.CalendarToday
 import androidx.compose.material.icons.outlined.CalendarViewMonth
@@ -64,8 +69,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalResources
@@ -80,6 +88,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import java.time.LocalDate
 import kotlin.math.abs
 import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
@@ -88,7 +97,6 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiTextField
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
@@ -138,6 +146,14 @@ fun CalendarScreen(
 
     var selected by remember { mutableStateOf<Instance?>(null) }
     var picking by remember { mutableStateOf(false) }
+    var searching by remember { mutableStateOf(false) }
+    var listed by remember { mutableStateOf<LocalDate?>(null) }
+    LaunchedEffect(uiState.view) {
+        if (uiState.view != CalendarsSection.LIST && searching) {
+            searching = false
+            viewModel.search("")
+        }
+    }
     var copying by remember { mutableStateOf<Instance?>(null) }
     var moving by remember { mutableStateOf<Move?>(null) }
     var renaming by remember { mutableStateOf<Calendar?>(null) }
@@ -223,13 +239,26 @@ fun CalendarScreen(
             topBar = {
                 Toolbar(
                     state = uiState,
-                    title = monthTitle(if (picking) uiState.focus else viewModel.first(uiState)),
+                    title = monthTitle(
+                        when {
+                            picking -> uiState.focus
+                            uiState.view == CalendarsSection.LIST -> listed ?: uiState.anchor
+                            else -> viewModel.first(uiState)
+                        },
+                    ),
                     picking = picking,
                     onMenu = { scope.launch { drawerState.open() } },
                     onTitle = { picking = !picking },
                     onToday = viewModel::today,
                     onView = viewModel::view,
                     onWorkweek = { viewModel.workweek(!uiState.workweek) },
+                    searching = searching,
+                    onSearch = { searching = true },
+                    onSearchChange = viewModel::search,
+                    onSearchClose = {
+                        searching = false
+                        viewModel.search("")
+                    },
                 )
             },
             snackbarHost = { SnackbarHost(snackbar) },
@@ -305,6 +334,7 @@ fun CalendarScreen(
                                     onMoveDay = { instance, day ->
                                         request(instance) { scope -> viewModel.move(instance, day, scope) }
                                     },
+                                    onListed = { day -> listed = day },
                                 )
                             }
                         }
@@ -481,10 +511,11 @@ private class Move(val instance: Instance, val run: (Scope) -> Unit)
  * a pager, so a swipe brings the period either side in under the finger, as
  * Google Calendar does, and settling on it moves the anchor there. The today
  * button slides the pager the same way. The list view scrolls on its own and
- * is drawn as it is. The occurrence whose summary is open, [selected], is
- * tinted in each. The pager's page is not saved across a trip to the editor:
- * its pages count from the anchor it opened with, and a restored page counted
- * from a newer anchor would move the view.
+ * is drawn as it is, telling [onListed] the day atop it as it scrolls. The
+ * occurrence whose summary is open, [selected], is tinted in each. The
+ * pager's page is not saved across a trip to the editor: its pages count
+ * from the anchor it opened with, and a restored page counted from a newer
+ * anchor would move the view.
  */
 @Composable
 private fun View(
@@ -495,10 +526,21 @@ private fun View(
     onNewEvent: (Long, Boolean?) -> Unit,
     onMove: (Instance, Long, Long) -> Unit,
     onMoveDay: (Instance, LocalDate) -> Unit,
+    onListed: (LocalDate) -> Unit = {},
 ) {
     val scroll = rememberHourScroll(state.preferences.hours.start)
     if (state.view == CalendarsSection.LIST) {
-        Page(state, viewModel, selected, scroll, onOpen, onNewEvent, onMove, onMoveDay)
+        Page(
+            state,
+            viewModel,
+            selected,
+            scroll,
+            onOpen,
+            onNewEvent,
+            onMove,
+            onMoveDay,
+            onListed = onListed,
+        )
         return
     }
     key(state.view) {
@@ -584,7 +626,8 @@ private const val SWIPE_CENTRE = SWIPE_PAGES / 2
  * with [selected] tinted. [scroll] is the time grid's vertical position. [onMove] is a block dragged
  * or resized in a time grid, with the occurrence's new ends; [onMoveDay] a
  * chip dropped on a day in a month grid, with the occurrence's new first day.
- * [onTop] is how far down a time grid's hours start, for the hour gutter.
+ * [onTop] is how far down a time grid's hours start, for the hour gutter;
+ * [onListed] is the day atop the list view as it scrolls, for the toolbar.
  */
 @Composable
 private fun Page(
@@ -596,6 +639,7 @@ private fun Page(
     onNewEvent: (Long, Boolean?) -> Unit,
     onMove: (Instance, Long, Long) -> Unit,
     onMoveDay: (Instance, LocalDate) -> Unit,
+    onListed: (LocalDate) -> Unit = {},
     onTop: (Dp) -> Unit = {},
 ) {
     // A tap on a cell names a day and, in a time grid, an hour; the editor
@@ -657,25 +701,17 @@ private fun Page(
             selected = selected,
         )
         // The list view opens on the anchor day and pages on as the reader
-        // scrolls, so it has no range to pick — only something to search.
-        else -> Column(modifier = Modifier.fillMaxSize()) {
-            MochiTextField(
-                value = state.search,
-                onValueChange = viewModel::search,
-                label = { Text(stringResource(R.string.calendars_list_search)) },
-                singleLine = true,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp),
-            )
-            AgendaList(state, viewModel, onOpen, selected)
-        }
+        // scrolls, so it has no range to pick; its search is in the toolbar.
+        else -> AgendaList(state, viewModel, onOpen, selected, onTop = onListed, onCreate = dated)
     }
 }
 
 /**
  * The title, which opens and closes the date panel under it, today, and the
- * view switcher. The title is the month and year of the view's first day, or
+ * view switcher, with a search button before them in the list view. While
+ * [searching], the bar is a search field instead, with back to close it,
+ * which also clears it, and a button to clear what was typed. The title is
+ * the month and year of the view's first day, or
  * of the picked day while the panel is open. There are no previous and next arrows:
  * the views page with a swipe, and the panel jumps anywhere further.
  */
@@ -690,8 +726,16 @@ private fun Toolbar(
     onToday: () -> Unit,
     onView: (String) -> Unit,
     onWorkweek: () -> Unit,
+    searching: Boolean = false,
+    onSearch: () -> Unit = {},
+    onSearchChange: (String) -> Unit = {},
+    onSearchClose: () -> Unit = {},
 ) {
     var views by remember { mutableStateOf(false) }
+    if (searching) {
+        SearchBar(state.search, onSearchChange, onSearchClose)
+        return
+    }
     TopAppBar(
         title = {
             Row(
@@ -714,6 +758,14 @@ private fun Toolbar(
             }
         },
         actions = {
+            if (state.view == CalendarsSection.LIST) {
+                MochiIconButton(onClick = onSearch) {
+                    Icon(
+                        Icons.Default.Search,
+                        contentDescription = stringResource(R.string.calendars_list_search),
+                    )
+                }
+            }
             MochiIconButton(onClick = onToday) {
                 Icon(Icons.Outlined.Today, contentDescription = stringResource(R.string.calendars_today))
             }
@@ -743,6 +795,65 @@ private fun Toolbar(
                             },
                         )
                     }
+                }
+            }
+        },
+    )
+}
+
+/**
+ * The toolbar while the list view is searched: back, which closes the search
+ * and clears it, a field that takes the keyboard as it opens, and a button
+ * that clears what was typed.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SearchBar(value: String, onChange: (String) -> Unit, onClose: () -> Unit) {
+    val focus = remember { FocusRequester() }
+    LaunchedEffect(Unit) {
+        focus.requestFocus()
+    }
+    BackHandler(onBack = onClose)
+    TopAppBar(
+        title = {
+            BasicTextField(
+                value = value,
+                onValueChange = onChange,
+                singleLine = true,
+                textStyle = MaterialTheme.typography.titleMedium.copy(
+                    color = MaterialTheme.colorScheme.onSurface,
+                ),
+                cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
+                modifier = Modifier.fillMaxWidth().focusRequester(focus),
+                decorationBox = { field ->
+                    Box(contentAlignment = Alignment.CenterStart) {
+                        if (value.isEmpty()) {
+                            Text(
+                                text = stringResource(R.string.calendars_list_search),
+                                style = MaterialTheme.typography.titleMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                        field()
+                    }
+                },
+            )
+        },
+        navigationIcon = {
+            MochiIconButton(onClick = onClose) {
+                Icon(
+                    Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = stringResource(MochiR.string.common_back),
+                )
+            }
+        },
+        actions = {
+            if (value.isNotEmpty()) {
+                MochiIconButton(onClick = { onChange("") }) {
+                    Icon(
+                        Icons.Default.Close,
+                        contentDescription = stringResource(MochiR.string.common_close),
+                    )
                 }
             }
         },

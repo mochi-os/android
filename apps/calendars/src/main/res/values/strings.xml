@@ -47,6 +47,7 @@
     <string name="calendars_span_day">%1$s, %2$s to %3$s</string>
     <string name="calendars_truncated">Some events in this range are not shown.</string>
     <string name="calendars_list_empty">No events</string>
+    <string name="calendars_list_nothing">Nothing planned. Tap to create.</string>
     <string name="calendars_list_search">Search</string>
     <plurals name="calendars_minutes">
         <item quantity="one">%1$s minute</item>

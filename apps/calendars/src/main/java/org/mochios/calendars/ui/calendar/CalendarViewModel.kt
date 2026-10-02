@@ -11,6 +11,9 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -87,6 +90,12 @@ data class CalendarUiState(
     val error: MochiError? = null,
     /** What the open occurrence's page shows beyond the range's listing, once loaded. */
     val details: EventDetails? = null,
+    /**
+     * The anchor the list view's pages were last read around, null until
+     * they have been, and while another view's range is held; while it
+     * differs from [anchor] the list holds the range before.
+     */
+    val fetched: LocalDate? = null,
 ) {
     /** How many pages the list view is holding. */
     val pages: Int get() = latest - earliest + 1
@@ -245,6 +254,7 @@ class CalendarViewModel @Inject constructor(
                         paging = false,
                         isLoading = false,
                         isRefreshing = false,
+                        fetched = null,
                     )
                 }
             } catch (e: kotlinx.coroutines.CancellationException) {
@@ -256,22 +266,28 @@ class CalendarViewModel @Inject constructor(
     }
 
     /**
-     * The list view's pages: how far the shown calendars reach, and then each
-     * page held. A page is a quarter, so even the whole cap's worth is read a
+     * The list view's pages: how far the shown calendars reach, and each page
+     * held, all asked for at once rather than one after another, so a new
+     * day waits on one round trip. A page is a quarter, so even the whole cap's worth is read a
      * page at a time — the server lists at most a year in one call.
      */
-    private suspend fun pages(state: CalendarUiState, reset: Boolean) {
+    private suspend fun pages(state: CalendarUiState, reset: Boolean) = coroutineScope {
         val first = if (reset) 0 else state.earliest
         val last = if (reset) 0 else state.latest
-        val bounds = runCatching { repository.eventBounds(shown()) }.getOrDefault(Bounds())
-        val gathered = mutableListOf<Instance>()
-        var truncated = false
-        for (index in first..last) {
-            val span = page(state.anchor, index, zone)
-            val (instances, cut) = repository.listEvents(span.start, span.finish, emptyList(), zone.id)
-            gathered.addAll(instances)
-            truncated = truncated || cut
+        val shown = shown()
+        val bounding = async {
+            runCatching { repository.eventBounds(shown) }.getOrDefault(Bounds())
         }
+        val reads = (first..last).map { index ->
+            async {
+                val span = page(state.anchor, index, zone)
+                repository.listEvents(span.start, span.finish, emptyList(), zone.id)
+            }
+        }
+        val listed = reads.awaitAll()
+        val bounds = bounding.await()
+        val gathered = listed.flatMap { (instances, _) -> instances }
+        val truncated = listed.any { (_, cut) -> cut }
         _uiState.value = _uiState.value.copy(
             instances = ordered(gathered.distinctBy { it.event to it.start }),
             truncated = truncated,
@@ -281,6 +297,7 @@ class CalendarViewModel @Inject constructor(
             paging = false,
             isLoading = false,
             isRefreshing = false,
+            fetched = state.anchor,
         )
     }
 
@@ -296,6 +313,18 @@ class CalendarViewModel @Inject constructor(
      * view. A calendar that recurs without end pages on to the cap.
      */
     fun later() = paginate(forward = true)
+
+    /**
+     * Whether the list view already holds [day]: the pages read around the
+     * anchor they were [CalendarUiState.fetched] for reach it, so what they
+     * say of it, even that it is empty, stands while a new read is on its way.
+     */
+    fun holds(day: LocalDate, state: CalendarUiState = _uiState.value): Boolean {
+        val around = state.fetched ?: return false
+        val moment = day.atStartOfDay(zone).toEpochSecond()
+        return moment >= page(around, state.earliest, zone).start &&
+            moment < page(around, state.latest, zone).finish
+    }
 
     /** Whether the list view has a page to load in either direction. */
     fun hasEarlier(state: CalendarUiState = _uiState.value): Boolean =
