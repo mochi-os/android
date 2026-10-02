@@ -208,7 +208,7 @@ fun EventEditScreen(
             )
             // Each end is typed in its own zone, named beneath it when an end
             // reads in another zone than the user's or they asked to see the
-            // zones; otherwise a globe beside the End row reveals them. An
+            // zones; otherwise a "Time zone" row beneath End reveals them. An
             // all-day event has no clock, so its dates stay in the user's own.
             val zoned = !uiState.allday && (uiState.revealed || foreign(uiState.zone, viewModel.zone))
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -234,18 +234,6 @@ fun EventEditScreen(
                     allday = uiState.allday,
                     zone = if (uiState.allday) viewModel.zone else uiState.zone.finish,
                     onChange = viewModel::finish,
-                    trailing = if (uiState.allday || zoned) {
-                        null
-                    } else {
-                        {
-                            MochiIconButton(onClick = viewModel::reveal, enabled = !uiState.isSaving) {
-                                Icon(
-                                    Icons.Outlined.Public,
-                                    contentDescription = stringResource(R.string.calendars_event_timezone),
-                                )
-                            }
-                        }
-                    },
                 )
                 if (zoned) {
                     ZoneField(
@@ -253,6 +241,8 @@ fun EventEditScreen(
                         zone = uiState.zone.finish,
                         onChange = { viewModel.zone(uiState.zone.copy(finish = it)) },
                     )
+                } else if (!uiState.allday) {
+                    ZoneReveal(enabled = !uiState.isSaving, onClick = viewModel::reveal)
                 }
             }
             MochiTextField(
@@ -342,7 +332,7 @@ fun EventEditScreen(
 
 /**
  * A date, and a time beside it unless the event is all day, both read in
- * [zone], with [trailing] at the end of the row. Tapping either field opens
+ * [zone]. Tapping either field opens
  * the matching picker; the date picker's first day of the week follows the
  * user's own preference.
  */
@@ -354,7 +344,6 @@ private fun MomentField(
     allday: Boolean,
     zone: String,
     onChange: (Long) -> Unit,
-    trailing: (@Composable () -> Unit)? = null,
 ) {
     val format = LocalFormat.current
     var picking by remember { mutableStateOf(false) }
@@ -386,7 +375,6 @@ private fun MomentField(
                     Box(modifier = Modifier.matchParentSize().clickable { timing = true })
                 }
             }
-            trailing?.invoke()
         }
     }
 
@@ -448,6 +436,34 @@ private fun MomentField(
             },
             dismissText = stringResource(MochiR.string.common_cancel),
             onDismiss = { timing = false },
+        )
+    }
+}
+
+/**
+ * "Time zone" beside a globe, under the End row while the zones are hidden,
+ * in the zone rows' own look; a tap shows them. It has a row of its own so
+ * the Start and End rows keep one width.
+ */
+@Composable
+private fun ZoneReveal(enabled: Boolean, onClick: () -> Unit) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .clickable(enabled = enabled, onClick = onClick)
+            .padding(vertical = 2.dp),
+    ) {
+        Icon(
+            Icons.Outlined.Public,
+            contentDescription = null,
+            modifier = Modifier.size(16.dp),
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Spacer(Modifier.width(6.dp))
+        Text(
+            text = stringResource(R.string.calendars_event_timezone),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.primary,
         )
     }
 }
