@@ -345,6 +345,30 @@ class EventComponentsTest {
         assertNull(tree[0].property("DESCRIPTION"))
     }
 
+    // ---- a rich copy of the description another client keeps ----
+
+    private fun enriched() = master().let {
+        it.copy(
+            properties = it.properties + property("DESCRIPTION", "Gate 12") +
+                property(CalendarsMapping.ALTERNATIVE, "<p>Gate <b>12</b></p>", "FMTTYPE", "text/html"),
+        )
+    }
+
+    @Test
+    fun `another client's rich copy of the description stays while the description is unchanged`() {
+        val carried = enriched()
+        val tree = components(draft(carried, LONDON).copy(title = "Renamed"), listOf(carried), Scope.ALL)
+        assertEquals("<p>Gate <b>12</b></p>", tree[0].value(CalendarsMapping.ALTERNATIVE))
+    }
+
+    @Test
+    fun `another client's rich copy goes once the description is edited, so it cannot show the old text`() {
+        val carried = enriched()
+        val tree = components(draft(carried, LONDON).copy(description = "Gate 14"), listOf(carried), Scope.ALL)
+        assertEquals("Gate 14", tree[0].value("DESCRIPTION"))
+        assertNull(tree[0].property(CalendarsMapping.ALTERNATIVE))
+    }
+
     @Test
     fun `alarms the reminder setting cannot say are kept`() {
         fun alarm(trigger: String, parameter: String? = null, argument: String? = null) =

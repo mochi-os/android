@@ -201,6 +201,30 @@ class CalendarsMappingTest {
         assertEquals("Class: Business", back.value("DESCRIPTION"))
     }
 
+    private fun enriched() = timed(
+        description = "Gate 12",
+        extra = listOf(property(CalendarsMapping.ALTERNATIVE, "<p>Gate <b>12</b></p>", "FMTTYPE", "text/html")),
+    )
+
+    @Test
+    fun `another client's rich copy of the description stays while the phone leaves the description alone`() {
+        val carried = enriched()
+        val row = CalendarsMapping.rows(event(carried), 7).single()
+        val moved = EventRow(row.values + (Events.DTSTART to NEXT), row.reminders)
+        val back = CalendarsMapping.components(listOf(moved), listOf(carried)).single()
+        assertEquals("<p>Gate <b>12</b></p>", back.value(CalendarsMapping.ALTERNATIVE))
+    }
+
+    @Test
+    fun `another client's rich copy goes once the description is edited on the phone`() {
+        val carried = enriched()
+        val row = CalendarsMapping.rows(event(carried), 7).single()
+        val edited = EventRow(row.values + (Events.DESCRIPTION to "Gate 14"), row.reminders)
+        val back = CalendarsMapping.components(listOf(edited), listOf(carried)).single()
+        assertEquals("Gate 14", back.value("DESCRIPTION"))
+        assertNull(back.property(CalendarsMapping.ALTERNATIVE))
+    }
+
     @Test
     fun `properties the phone has no column for survive an upload`() {
         val carried = timed(extra = listOf(property("ORGANIZER", "mailto:a@b.c"), property("CLASS", "PRIVATE")))

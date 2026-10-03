@@ -78,6 +78,12 @@ object CalendarsMapping {
     /** What the provider means by "no timezone", and what an all-day row carries. */
     const val UTC = "UTC"
 
+    /**
+     * The property another client keeps a rich copy of the description in,
+     * which Thunderbird and Outlook show in preference to `DESCRIPTION`.
+     */
+    const val ALTERNATIVE = "X-ALT-DESC"
+
     // ---- components -> provider ----
 
     /**
@@ -244,12 +250,19 @@ object CalendarsMapping {
         val zone = (values[Events.EVENT_TIMEZONE] as? String)?.takeIf { it.isNotBlank() } ?: UTC
         val began = number(values[Events.DTSTART])
 
+        // A description edited on the phone leaves behind the rich copy
+        // another client kept beside it, which would go on showing the old
+        // text there.
+        val described = text(values[Events.DESCRIPTION])
+        val edited = described.orEmpty() != descriptionText(carried?.value("DESCRIPTION").orEmpty())
         val properties = mutableListOf<EventProperty>()
-        carried?.properties?.filterNot { it.name.uppercase() in MANAGED }?.let(properties::addAll)
+        carried?.properties?.filterNot {
+            it.name.uppercase() in MANAGED || (edited && it.name.equals(ALTERNATIVE, ignoreCase = true))
+        }?.let(properties::addAll)
 
         text(values[Events.TITLE])?.let { properties.add(property("SUMMARY", it)) }
         text(values[Events.EVENT_LOCATION])?.let { properties.add(property("LOCATION", it)) }
-        text(values[Events.DESCRIPTION])?.let { properties.add(description(it, carried)) }
+        described?.let { properties.add(description(it, carried)) }
         label(values[Events.STATUS])?.let { properties.add(property("STATUS", it)) }
         if (number(values[Events.AVAILABILITY]) == Events.AVAILABILITY_FREE.toLong()) {
             properties.add(property("TRANSP", "TRANSPARENT"))
