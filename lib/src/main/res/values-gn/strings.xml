@@ -182,6 +182,8 @@
     <string name="notifications_clear">Embogue momarandukuéra</string>
     <string name="entity_avatar_alt">Ta\'anga %1$s peguarã</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Ko\'ág̃aite</string>
     <string name="format_time_minutes_ago">%1$sm ohasa</string>
     <string name="format_time_hours_ago">%1$sh ohasa</string>

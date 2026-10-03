@@ -180,6 +180,8 @@
     <string name="entity_avatar_alt">%1$s의 아바타</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
+    <string name="format_range">%1$s ~ %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">방금</string>
     <string name="format_time_minutes_ago">%1$s분 전</string>
     <string name="format_time_hours_ago">%1$s시간 전</string>

@@ -181,6 +181,8 @@
     <string name="notifications_clear">నోటిఫికేషన్‌లను క్లియర్ చేయండి</string>
     <string name="entity_avatar_alt">%1$s కోసం అవతార్</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">ఇప్పుడే</string>
     <string name="format_time_minutes_ago">%1$sని క్రితం</string>
     <string name="format_time_hours_ago">%1$sగం క్రితం</string>

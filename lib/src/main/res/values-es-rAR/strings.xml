@@ -121,6 +121,8 @@
     <string name="entity_avatar_alt">Avatar de %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
+    <string name="format_range">%1$s a el %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Recién</string>
     <string name="format_time_minutes_ago">hace %1$smin</string>
     <string name="format_time_hours_ago">hace %1$sh</string>

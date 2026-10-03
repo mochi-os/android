@@ -182,6 +182,8 @@
     <string name="notifications_clear">Share sanarwa</string>
     <string name="entity_avatar_alt">Hoton bayanin martaba na %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Yanzu</string>
     <string name="format_time_minutes_ago">Min %1$s da suka wuce</string>
     <string name="format_time_hours_ago">Awa %1$s da suka wuce</string>

@@ -179,6 +179,8 @@
     <string name="entity_avatar_alt">ለ%1$s አምሳያ</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">አሁን</string>
     <string name="format_time_minutes_ago">%1$sደ በፊት</string>
     <string name="format_time_hours_ago">%1$sሰ በፊት</string>

@@ -181,6 +181,8 @@
     <string name="notifications_clear">सूचना साफ करा</string>
     <string name="entity_avatar_alt">%1$s साठी अवतार</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">आत्ताच</string>
     <string name="format_time_minutes_ago">%1$sमि पूर्वी</string>
     <string name="format_time_hours_ago">%1$sता पूर्वी</string>

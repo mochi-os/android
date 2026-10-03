@@ -181,6 +181,8 @@
     <string name="notifications_clear">Хабарландыруларды тазалау</string>
     <string name="entity_avatar_alt">%1$s аватары</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s - %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Дәл қазір</string>
     <string name="format_time_minutes_ago">%1$s мин бұрын</string>
     <string name="format_time_hours_ago">%1$s сағ бұрын</string>

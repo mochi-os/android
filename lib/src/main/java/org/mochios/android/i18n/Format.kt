@@ -14,7 +14,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.R
 import android.icu.text.DateIntervalFormat
-import android.icu.text.DateIntervalInfo
 import android.icu.text.DateTimePatternGenerator
 import android.icu.util.DateInterval
 import android.icu.util.ULocale
@@ -42,12 +41,6 @@ interface Clock {
 
     /** The days from [from] to [to], as the language writes a span of them by [skeleton]. */
     fun span(skeleton: String, from: Long, to: Long, zone: TimeZone): String
-
-    /**
-     * How the language joins two ends written apart, as "{0} – {1}" or
-     * Japanese "{0}～{1}": the start in place of {0}, the end of {1}.
-     */
-    fun interval(): String = "{0} – {1}"
 }
 
 /**
@@ -77,13 +70,6 @@ object PlatformClock : Clock {
         format.timeZone = android.icu.util.TimeZone.getTimeZone(zone.id)
         return format.format(DateInterval(from, to), StringBuffer(), java.text.FieldPosition(0)).toString()
     }
-
-    override fun interval(): String {
-        val locale = Locale.getDefault()
-        return patterns.getOrPut("${locale.toLanguageTag()} interval") {
-            DateIntervalInfo(ULocale.forLocale(locale)).fallbackIntervalPattern
-        }
-    }
 }
 
 /**
@@ -92,7 +78,12 @@ object PlatformClock : Clock {
  * relative strings come from `stringResource`. Times are written the way the
  * user's language writes them, through [clock], on the clock the user chose.
  */
-class Format(val preferences: UserPreferences, private val clock: Clock = PlatformClock) {
+class Format(
+    val preferences: UserPreferences,
+    private val clock: Clock = PlatformClock,
+    private val range: String = RANGE,
+    private val dayTime: String = DAY_TIME,
+) {
 
     /**
      * Epoch seconds → user-format date (no time). [zone] is an IANA zone to
@@ -184,18 +175,17 @@ class Format(val preferences: UserPreferences, private val clock: Clock = Platfo
     }
 
     /**
-     * [from] and [to] joined as the language joins two ends written apart.
-     * [broken] puts the end on a line of its own, the join staying with the
-     * start: "10:00 PM –" over "6:00 AM".
+     * [from] and [to] joined by the [range] string, as the language joins two
+     * ends written apart. [broken] puts the end on a line of its own, the join
+     * staying with the start: "10:00 PM –" over "6:00 AM".
      */
     private fun apart(from: String, to: String, broken: Boolean = false): String {
-        val pattern = clock.interval()
-        val split = pattern.indexOf("{1}")
+        val split = range.indexOf("%2\$s")
         if (split < 0) {
-            return "$from – $to"
+            return range.format(from, to)
         }
-        val head = pattern.substring(0, split).replace("{0}", from)
-        val tail = pattern.substring(split + 3).replace("{0}", from)
+        val head = range.substring(0, split).replace("%1\$s", from)
+        val tail = range.substring(split + 4).replace("%1\$s", from)
         return if (broken) {
             head.trimEnd() + "\n" + to + tail
         } else {
@@ -247,16 +237,16 @@ class Format(val preferences: UserPreferences, private val clock: Clock = Platfo
         val shared = opens.getOffset(epochToMillis(start)) == closes.getOffset(epochToMillis(end))
         val day = clock.write(dated, epochToMillis(start), opens)
         if (sameDay && shared) {
-            return day + " · " + clock.span(timed, epochToMillis(start), epochToMillis(end), opens)
+            return dayTime.format(day, clock.span(timed, epochToMillis(start), epochToMillis(end), opens))
         }
         val pattern = clock.pattern(timed)
         val begins = clock.write(pattern, epochToMillis(start), opens)
         val ends = clock.write(pattern, epochToMillis(end), closes)
         if (sameDay) {
-            return "$day · " + apart(begins, ends)
+            return dayTime.format(day, apart(begins, ends))
         }
-        val closing = clock.write(dated, epochToMillis(end), closes) + " · " + ends
-        return apart("$day · $begins", closing, broken = true)
+        val closing = dayTime.format(clock.write(dated, epochToMillis(end), closes), ends)
+        return apart(dayTime.format(day, begins), closing, broken = true)
     }
 
     /**
@@ -465,8 +455,16 @@ fun FormatProvider(
     content: @Composable () -> Unit
 ) {
     val prefs by manager.preferences.collectAsState()
-    val format = remember(prefs) { Format(prefs) }
+    val range = stringResource(R.string.format_range)
+    val dayTime = stringResource(R.string.format_day_time)
+    val format = remember(prefs, range, dayTime) { Format(prefs, range = range, dayTime = dayTime) }
     CompositionLocalProvider(LocalFormat provides format) {
         content()
     }
 }
+
+/** Two ends joined, as English writes a range; strings.xml has each language's. */
+private const val RANGE = "%1${'$'}s – %2${'$'}s"
+
+/** A day and its times, as English writes them; strings.xml has each language's. */
+private const val DAY_TIME = "%1${'$'}s · %2${'$'}s"

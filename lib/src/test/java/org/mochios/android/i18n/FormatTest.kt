@@ -25,13 +25,11 @@ class FormatTest {
     /**
      * A platform that speaks [language]: its patterns are the ones given for
      * each skeleton, and it writes them as the JDK does. It notes each
-     * skeleton asked for and each zone written in. [joins] is how it joins two
-     * ends written apart.
+     * skeleton asked for and each zone written in.
      */
     private class Platform(
         private val language: Locale,
         private val patterns: Map<String, String>,
-        private val joins: String = "{0} – {1}",
     ) : Clock {
         val skeletons = mutableListOf<String>()
         val zones = mutableListOf<String>()
@@ -53,8 +51,6 @@ class FormatTest {
             spans += Triple(skeleton, from, to)
             return "span"
         }
-
-        override fun interval(): String = joins
     }
 
     // As ICU gives them: Japanese puts the half of the day first, Danish
@@ -64,8 +60,15 @@ class FormatTest {
 
     private val afternoon = ZonedDateTime.of(2026, 9, 28, 15, 4, 0, 0, ZoneId.of("UTC")).toEpochSecond()
 
-    private fun format(clock: TimeFormat, platform: Platform, zone: String = "UTC") =
-        Format(UserPreferences(timeFormat = clock, timezone = zone), platform)
+    private fun format(
+        clock: TimeFormat,
+        platform: Platform,
+        zone: String = "UTC",
+        range: String = "%1${'$'}s – %2${'$'}s",
+    ) = Format(UserPreferences(timeFormat = clock, timezone = zone), platform, range = range)
+
+    // Japanese joins two ends with a wave dash, as its strings.xml has it.
+    private val wave = "%1${'$'}s～%2${'$'}s"
 
     @Test
     fun `a time is written in the language's own shape for the clock the user reads`() {
@@ -115,8 +118,8 @@ class FormatTest {
 
     @Test
     fun `ends at different offsets are joined as the language joins two ends`() {
-        val japan = Platform(Locale.JAPANESE, japanese, joins = "{0}～{1}")
-        val range = format(TimeFormat.H24, japan)
+        val japan = Platform(Locale.JAPANESE, japanese)
+        val range = format(TimeFormat.H24, japan, range = wave)
             .formatClockRange(afternoon, afternoon + 3_600, "UTC", "Asia/Tokyo")
         assertEquals("15:04～1:04", range)
     }
@@ -127,16 +130,15 @@ class FormatTest {
         val range = format(TimeFormat.H24, england)
             .formatTimeRange(afternoon, afternoon + 12 * 3_600, now = afternoon)
         assertEquals("Monday, Sep 28 · 15:04 –\nTuesday, Sep 29 · 03:04", range)
-        val japan = Platform(Locale.ENGLISH, english, joins = "{0}～{1}")
-        val joined = format(TimeFormat.H24, japan)
+        val joined = format(TimeFormat.H24, england, range = wave)
             .formatTimeRange(afternoon, afternoon + 12 * 3_600, now = afternoon)
         assertEquals("Monday, Sep 28 · 15:04～\nTuesday, Sep 29 · 03:04", joined)
     }
 
     @Test
     fun `a day whose ends are in different zones joins its times as the language does`() {
-        val japan = Platform(Locale.ENGLISH, english, joins = "{0}～{1}")
-        val range = format(TimeFormat.H24, japan)
+        val england = Platform(Locale.ENGLISH, english)
+        val range = format(TimeFormat.H24, england, range = wave)
             .formatTimeRange(afternoon, afternoon + 3_600, "UTC", "Europe/London", now = afternoon)
         assertEquals("Monday, Sep 28 · 15:04～17:04", range)
     }

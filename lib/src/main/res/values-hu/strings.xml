@@ -181,6 +181,8 @@
     <string name="entity_avatar_alt">%1$s profilképe</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Épp most</string>
     <string name="format_time_minutes_ago">%1$s perce</string>
     <string name="format_time_hours_ago">%1$s órája</string>

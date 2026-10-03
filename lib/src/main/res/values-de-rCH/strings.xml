@@ -118,6 +118,8 @@
     <string name="entity_avatar_alt">Avatar von %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Gerade eben</string>
     <string name="format_time_minutes_ago">vor %1$s Min.</string>
     <string name="format_time_hours_ago">vor %1$s Std.</string>

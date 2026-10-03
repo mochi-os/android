@@ -179,6 +179,8 @@
     <string name="entity_avatar_alt">وێنۆچکە بۆ %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">هەر ئێستا</string>
     <string name="format_time_minutes_ago">%1$sخ پێش</string>
     <string name="format_time_hours_ago">%1$sک پێش</string>

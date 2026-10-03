@@ -14,6 +14,7 @@ import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.auth.ShellApi
 import org.mochios.android.auth.shellRequest
+import org.mochios.android.R
 import java.time.DayOfWeek
 import java.time.temporal.WeekFields
 import java.util.Locale
@@ -65,7 +66,12 @@ class PreferencesManager @Inject internal constructor(
     fun defaultTheme(): String? = defaultThemeId
 
     /** Latest snapshot, for non-Composable callers (e.g. ViewModels). */
-    val format: Format get() = Format(_preferences.value)
+    val format: Format
+        get() = Format(
+            _preferences.value,
+            range = context.getString(R.string.format_range),
+            dayTime = context.getString(R.string.format_day_time),
+        )
 
     /**
      * Persist one preference and refresh [preferences]. The server skips an

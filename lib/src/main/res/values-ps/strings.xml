@@ -181,6 +181,8 @@
     <string name="notifications_clear">خبرتیاوې پاکې کړئ</string>
     <string name="entity_avatar_alt">د %1$s انځورک</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">همدا اوس</string>
     <string name="format_time_minutes_ago">%1$sm مخکې</string>
     <string name="format_time_hours_ago">%1$sh مخکې</string>
