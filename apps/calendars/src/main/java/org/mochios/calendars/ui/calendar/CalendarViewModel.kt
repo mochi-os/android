@@ -258,26 +258,7 @@ class CalendarViewModel @Inject constructor(
                 if (state.view == CalendarsSection.LIST) {
                     pages(state, reset)
                 } else {
-                    // The periods either side are read too, so a swipe
-                    // brings its neighbour in already drawn.
-                    val (start, _) = range(state.copy(anchor = step(state.view, state.anchor, -1)))
-                    val (_, finish) = range(state.copy(anchor = step(state.view, state.anchor, 1)))
-                    // With events shown in their own zones, a day's
-                    // occurrences can begin or end up to a day away by the
-                    // user's clock, so the range reaches a day each side.
-                    val margin = if (state.preferences.zones) 86_400L else 0L
-                    val (instances, truncated) = repository.listEvents(start - margin, finish + margin, emptyList(), zone.id)
-                    _uiState.value = _uiState.value.copy(
-                        instances = ordered(instances),
-                        truncated = truncated,
-                        bounds = Bounds(),
-                        earliest = 0,
-                        latest = 0,
-                        paging = false,
-                        isLoading = false,
-                        isRefreshing = false,
-                        fetched = null,
-                    )
+                    periods(state)
                 }
             } catch (e: kotlinx.coroutines.CancellationException) {
                 throw e
@@ -286,6 +267,69 @@ class CalendarViewModel @Inject constructor(
             }
         }
     }
+
+    /**
+     * The occurrences a calendar view shows, and the periods either side of
+     * it, so a swipe brings its neighbour in already drawn. Each period is its
+     * own request, so the server's cap and its "not all shown" flag are the
+     * shown period's alone, as on the web. The shown period is drawn as soon
+     * as it is read, keeping what was held either side of it until the
+     * neighbours arrive; a neighbour that fails to load is read again when it
+     * is paged to, and never turns the view into an error.
+     */
+    private suspend fun periods(state: CalendarUiState) {
+        // With events shown in their own zones, a day's occurrences can
+        // begin or end up to a day away by the user's clock, so each range
+        // reaches a day each side.
+        val margin = if (state.preferences.zones) 86_400L else 0L
+        val (start, finish) = range(state)
+        val (shown, truncated) =
+            repository.listEvents(start - margin, finish + margin, emptyList(), zone.id)
+        val kept = _uiState.value.instances.filter { instance ->
+            instance.finish <= start - margin || instance.start >= finish + margin
+        }
+        _uiState.value = _uiState.value.copy(
+            instances = ordered(distinct(shown + kept)),
+            truncated = truncated,
+            bounds = Bounds(),
+            earliest = 0,
+            latest = 0,
+            paging = false,
+            isLoading = false,
+            isRefreshing = false,
+            fetched = null,
+        )
+        val around = coroutineScope {
+            listOf(-1, 1).map { direction ->
+                async {
+                    val anchor = step(state.view, state.anchor, direction)
+                    val (from, to) = range(state.copy(anchor = anchor))
+                    try {
+                        repository
+                            .listEvents(from - margin, to + margin, emptyList(), zone.id)
+                            .first
+                    } catch (e: kotlinx.coroutines.CancellationException) {
+                        throw e
+                    } catch (_: Exception) {
+                        null
+                    }
+                }
+            }.awaitAll()
+        }
+        // Both read: they replace what was kept. One failed: what was kept
+        // stays, with whichever did arrive added.
+        val read = around.filterNotNull().flatten()
+        val instances = if (around.all { neighbour -> neighbour != null }) {
+            shown + read
+        } else {
+            shown + kept + read
+        }
+        _uiState.value = _uiState.value.copy(instances = ordered(distinct(instances)))
+    }
+
+    /** [instances] with each occurrence once, as overlapping reads list it in each. */
+    private fun distinct(instances: List<Instance>) =
+        instances.distinctBy { instance -> instance.event to instance.start }
 
     /**
      * The list view's pages: how far the shown calendars reach, and each page
