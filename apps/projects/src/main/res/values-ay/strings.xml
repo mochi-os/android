@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Dueño</string>
     <string name="projects_object_watch">Uñch\'ukiña</string>
     <string name="projects_object_tab_properties">Propiedadanaka</string>
-    <string name="projects_object_tab_comments">Comentarionaka</string>
+    <string name="projects_object_tab_comments">Comentarionaka (%1$s)</string>
     <string name="projects_object_tab_activity">Lurawi</string>
-    <string name="projects_object_tab_requests">Mayisiwinaka</string>
+    <string name="projects_object_tab_requests">Mayachthapiñ mayiwinaka (%1$s)</string>
     <string name="projects_object_tab_attachments">Adjuntonaka</string>
     <string name="projects_object_tab_links">Enlacenaka</string>
     <string name="projects_watchers_watch">Uñch\'ukiña</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Sahibi</string>
     <string name="projects_object_watch">İzlə</string>
     <string name="projects_object_tab_properties">Xüsusiyyətlər</string>
-    <string name="projects_object_tab_comments">Şərhlər</string>
+    <string name="projects_object_tab_comments">Şərhlər (%1$s)</string>
     <string name="projects_object_tab_activity">Fəaliyyət</string>
-    <string name="projects_object_tab_requests">Sorğular</string>
+    <string name="projects_object_tab_requests">Birləşdirmə sorğuları (%1$s)</string>
     <string name="projects_object_tab_attachments">Qoşmalar</string>
     <string name="projects_object_tab_links">Linklər</string>
     <string name="projects_watchers_watch">İzlə</string>

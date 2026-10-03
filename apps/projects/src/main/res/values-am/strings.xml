@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">ባለቤት</string>
     <string name="projects_object_watch">ተከታተል</string>
     <string name="projects_object_tab_properties">ባህሪያት</string>
-    <string name="projects_object_tab_comments">አስተያየቶች</string>
+    <string name="projects_object_tab_comments">አስተያየቶች (%1$s)</string>
     <string name="projects_object_tab_activity">እንቅስቃሴ</string>
-    <string name="projects_object_tab_requests">ጥያቄዎች</string>
+    <string name="projects_object_tab_requests">የውሕደት ጥያቄዎች (%1$s)</string>
     <string name="projects_object_tab_attachments">አባሪዎች</string>
     <string name="projects_object_tab_links">አገናኞች</string>
     <string name="projects_watchers_watch">ተከታተል</string>

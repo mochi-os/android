@@ -40,6 +40,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.model.Comment
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -196,29 +198,40 @@ fun ObjectDetailSheet(
                         status = uiState.saveStatus,
                         modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp),
                     )
-                    // Tabs match the web layout: Properties / Comments /
-                    // Activity / Requests. Attachments + links fold into
-                    // Properties as inline sections; watch/unwatch is the
-                    // Eye icon in the header above.
-                    val tabs = listOf(
-                        stringResource(R.string.projects_object_tab_properties),
-                        stringResource(R.string.projects_object_tab_comments),
-                        stringResource(R.string.projects_object_tab_activity),
-                        stringResource(R.string.projects_object_tab_requests),
-                    )
+                    // The web's tabs, in its order and with its counts.
+                    // Attachments and links fold into Properties as inline
+                    // sections; watching is the eye icon in the header above.
+                    val order = sheetTabs(merge = objClass?.requests.orEmpty().contains("merge"))
+                    val format = LocalFormat.current
+                    val labels = order.map { tab ->
+                        when (tab) {
+                            TAB_PROPERTIES -> stringResource(R.string.projects_object_tab_properties)
+                            TAB_COMMENTS -> stringResource(
+                                R.string.projects_object_tab_comments,
+                                format.formatNumber(commentCount(uiState.comments)),
+                            )
+                            TAB_REQUESTS -> stringResource(
+                                R.string.projects_object_tab_requests,
+                                format.formatNumber(uiState.requests.size),
+                            )
+                            else -> stringResource(R.string.projects_object_tab_activity)
+                        }
+                    }
+                    // A class that takes no merge requests has no such tab to stay on.
+                    val shown = uiState.selectedTab.takeIf { tab -> tab in order } ?: TAB_PROPERTIES
                     MochiTabRow(
-                        tabs = tabs.map { title -> MochiTab(title) },
-                        selectedIndex = uiState.selectedTab,
-                        onSelect = { index -> viewModel.selectTab(index) },
+                        tabs = labels.map { title -> MochiTab(title) },
+                        selectedIndex = order.indexOf(shown),
+                        onSelect = { index -> viewModel.selectTab(order[index]) },
                         containerColor = Color.Transparent,
+                        scrollable = true,
                     )
-
 
                     Spacer(modifier = Modifier.height(8.dp))
 
                     // Tab content
-                    when (uiState.selectedTab) {
-                        0 -> PropertiesTab(
+                    when (shown) {
+                        TAB_PROPERTIES -> PropertiesTab(
                             obj = obj,
                             projectDetails = projectDetails,
                             viewModel = viewModel,
@@ -226,7 +239,7 @@ fun ObjectDetailSheet(
                             onNavigateToObject = onNavigateToObject,
                             projectId = projectId,
                         )
-                        1 -> CommentsTab(
+                        TAB_COMMENTS -> CommentsTab(
                             comments = uiState.comments,
                             projectId = projectId,
                             drafts = viewModel.drafts,
@@ -246,14 +259,14 @@ fun ObjectDetailSheet(
                                 "/projects/$projectId/-/comment/${comment.id}/asset/avatar"
                             }
                         )
-                        2 -> ActivityTab(
+                        TAB_ACTIVITY -> ActivityTab(
                             activity = uiState.activity,
                             projectDetails = projectDetails,
                             avatarUrlBuilder = { entry ->
                                 "/projects/$projectId/-/activity/${entry.id}/asset/avatar"
                             }
                         )
-                        3 -> RequestsTab(
+                        TAB_REQUESTS -> RequestsTab(
                             requests = uiState.requests,
                             projectId = projectId,
                             viewModel = viewModel,
@@ -280,3 +293,24 @@ fun ObjectDetailSheet(
         )
     }
 }
+
+/** The sheet's tabs, by the view model's numbers for them. */
+internal const val TAB_PROPERTIES = 0
+internal const val TAB_COMMENTS = 1
+internal const val TAB_ACTIVITY = 2
+internal const val TAB_REQUESTS = 3
+
+/**
+ * The sheet's tabs in the web's order: properties, comments, the merge
+ * requests of a class that takes them ([merge]), and activity last.
+ */
+internal fun sheetTabs(merge: Boolean): List<Int> = buildList {
+    add(TAB_PROPERTIES)
+    add(TAB_COMMENTS)
+    if (merge) add(TAB_REQUESTS)
+    add(TAB_ACTIVITY)
+}
+
+/** Every comment in a thread, replies included, as the web's count has it. */
+internal fun commentCount(comments: List<Comment>): Int =
+    comments.sumOf { comment -> 1 + commentCount(comment.children) }

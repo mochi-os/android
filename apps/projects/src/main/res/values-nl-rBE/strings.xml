@@ -46,9 +46,9 @@
     <string name="projects_access_level_owner">Eigenaar</string>
     <string name="projects_object_watch">Volgen</string>
     <string name="projects_object_tab_properties">Eigenschappen</string>
-    <string name="projects_object_tab_comments">Reacties</string>
+    <string name="projects_object_tab_comments">Reacties (%1$s)</string>
     <string name="projects_object_tab_activity">Activiteit</string>
-    <string name="projects_object_tab_requests">Verzoeken</string>
+    <string name="projects_object_tab_requests">Merge-aanvragen (%1$s)</string>
     <string name="projects_object_tab_attachments">Bijlagen</string>
     <string name="projects_object_tab_links">Links</string>
     <string name="projects_watchers_watch">Volgen</string>

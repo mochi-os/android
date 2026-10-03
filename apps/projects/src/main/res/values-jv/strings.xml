@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Sing duwé</string>
     <string name="projects_object_watch">Tonton</string>
     <string name="projects_object_tab_properties">Properti</string>
-    <string name="projects_object_tab_comments">Komentar</string>
+    <string name="projects_object_tab_comments">Komentar (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivitas</string>
-    <string name="projects_object_tab_requests">Panyuwunan</string>
+    <string name="projects_object_tab_requests">Pamundhut merge (%1$s)</string>
     <string name="projects_object_tab_attachments">Lampiran</string>
     <string name="projects_object_tab_links">Tautan</string>
     <string name="projects_watchers_watch">Tonton</string>

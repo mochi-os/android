@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Úinéir</string>
     <string name="projects_object_watch">Faire</string>
     <string name="projects_object_tab_properties">Airíonna</string>
-    <string name="projects_object_tab_comments">Nótaí tráchta</string>
+    <string name="projects_object_tab_comments">Nótaí tráchta (%1$s)</string>
     <string name="projects_object_tab_activity">Gníomhaíocht</string>
-    <string name="projects_object_tab_requests">Iarratais</string>
+    <string name="projects_object_tab_requests">Iarratais ar chumasc (%1$s)</string>
     <string name="projects_object_tab_attachments">Ceangaltáin</string>
     <string name="projects_object_tab_links">Naisc</string>
     <string name="projects_watchers_watch">Faire</string>

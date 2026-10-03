@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">مالڪ</string>
     <string name="projects_object_watch">ڏسو</string>
     <string name="projects_object_tab_properties">خاصيتون</string>
-    <string name="projects_object_tab_comments">تبصرا</string>
+    <string name="projects_object_tab_comments">تبصرا (%1$s)</string>
     <string name="projects_object_tab_activity">سرگرمي</string>
-    <string name="projects_object_tab_requests">درخواستون</string>
+    <string name="projects_object_tab_requests">مرج درخواستون (%1$s)</string>
     <string name="projects_object_tab_attachments">ڳنڍيل فائلون</string>
     <string name="projects_object_tab_links">لنڪس</string>
     <string name="projects_watchers_watch">ڏسو</string>

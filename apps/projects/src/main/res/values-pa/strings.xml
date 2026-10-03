@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">ਮਾਲਕ</string>
     <string name="projects_object_watch">ਦੇਖੋ</string>
     <string name="projects_object_tab_properties">ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ</string>
-    <string name="projects_object_tab_comments">ਟਿੱਪਣੀਆਂ</string>
+    <string name="projects_object_tab_comments">ਟਿੱਪਣੀਆਂ (%1$s)</string>
     <string name="projects_object_tab_activity">ਗਤੀਵਿਧੀ</string>
-    <string name="projects_object_tab_requests">ਬੇਨਤੀਆਂ</string>
+    <string name="projects_object_tab_requests">ਮਰਜ ਬੇਨਤੀਆਂ (%1$s)</string>
     <string name="projects_object_tab_attachments">ਅਟੈਚਮੈਂਟਾਂ</string>
     <string name="projects_object_tab_links">ਲਿੰਕ</string>
     <string name="projects_watchers_watch">ਦੇਖੋ</string>

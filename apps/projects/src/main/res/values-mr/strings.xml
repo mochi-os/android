@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">मालक</string>
     <string name="projects_object_watch">पहा</string>
     <string name="projects_object_tab_properties">गुणधर्म</string>
-    <string name="projects_object_tab_comments">टिप्पण्या</string>
+    <string name="projects_object_tab_comments">टिप्पण्या (%1$s)</string>
     <string name="projects_object_tab_activity">क्रियाकलाप</string>
-    <string name="projects_object_tab_requests">विनंत्या</string>
+    <string name="projects_object_tab_requests">मर्ज विनंत्या (%1$s)</string>
     <string name="projects_object_tab_attachments">संलग्नके</string>
     <string name="projects_object_tab_links">लिंक्स</string>
     <string name="projects_watchers_watch">पहा</string>

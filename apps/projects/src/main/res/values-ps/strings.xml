@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">مالک</string>
     <string name="projects_object_watch">وګورئ</string>
     <string name="projects_object_tab_properties">ځانګړتیاوې</string>
-    <string name="projects_object_tab_comments">تبصرې</string>
+    <string name="projects_object_tab_comments">تبصرې (%1$s)</string>
     <string name="projects_object_tab_activity">فعالیت</string>
-    <string name="projects_object_tab_requests">غوښتنې</string>
+    <string name="projects_object_tab_requests">د یوځای کولو غوښتنې (%1$s)</string>
     <string name="projects_object_tab_attachments">ضمیمې</string>
     <string name="projects_object_tab_links">لینکونه</string>
     <string name="projects_watchers_watch">وګورئ</string>

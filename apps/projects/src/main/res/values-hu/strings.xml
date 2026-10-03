@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Tulajdonos</string>
     <string name="projects_object_watch">Figyelés</string>
     <string name="projects_object_tab_properties">Tulajdonságok</string>
-    <string name="projects_object_tab_comments">Megjegyzések</string>
+    <string name="projects_object_tab_comments">Megjegyzések (%1$s)</string>
     <string name="projects_object_tab_activity">Tevékenység</string>
-    <string name="projects_object_tab_requests">Kérések</string>
+    <string name="projects_object_tab_requests">Egyesítési kérések (%1$s)</string>
     <string name="projects_object_tab_attachments">Mellékletek</string>
     <string name="projects_object_tab_links">Hivatkozások</string>
     <string name="projects_watchers_watch">Figyelés</string>

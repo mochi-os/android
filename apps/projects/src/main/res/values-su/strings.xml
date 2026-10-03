@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Nu boga</string>
     <string name="projects_object_watch">Awas</string>
     <string name="projects_object_tab_properties">Sipat</string>
-    <string name="projects_object_tab_comments">Koméntar</string>
+    <string name="projects_object_tab_comments">Koméntar (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivitas</string>
-    <string name="projects_object_tab_requests">Pamundut</string>
+    <string name="projects_object_tab_requests">Pamenta merge (%1$s)</string>
     <string name="projects_object_tab_attachments">Lampiran</string>
     <string name="projects_object_tab_links">Tautan</string>
     <string name="projects_watchers_watch">Awas</string>

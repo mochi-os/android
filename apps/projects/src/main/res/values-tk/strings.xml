@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Eýesi</string>
     <string name="projects_object_watch">Synla</string>
     <string name="projects_object_tab_properties">Häsiýetler</string>
-    <string name="projects_object_tab_comments">Teswirler</string>
+    <string name="projects_object_tab_comments">Teswirler (%1$s)</string>
     <string name="projects_object_tab_activity">Hereketlilik</string>
-    <string name="projects_object_tab_requests">Haýyşlar</string>
+    <string name="projects_object_tab_requests">Birleşdirme haýyşlary (%1$s)</string>
     <string name="projects_object_tab_attachments">Goşundylar</string>
     <string name="projects_object_tab_links">Baglanyşyklar</string>
     <string name="projects_watchers_watch">Synla</string>

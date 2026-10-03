@@ -147,9 +147,9 @@
     <string name="projects_object_unwatch">Unwatch</string>
     <string name="projects_object_watch">Watch</string>
     <string name="projects_object_tab_properties">Properties</string>
-    <string name="projects_object_tab_comments">Comments</string>
+    <string name="projects_object_tab_comments">Comments (%1$s)</string>
     <string name="projects_object_tab_activity">Activity</string>
-    <string name="projects_object_tab_requests">Requests</string>
+    <string name="projects_object_tab_requests">Merge requests (%1$s)</string>
     <string name="projects_object_tab_attachments">Attachments</string>
     <string name="projects_object_tab_links">Links</string>
     <string name="projects_object_tab_watchers">Watchers</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Proprietar</string>
     <string name="projects_object_watch">Urmărește</string>
     <string name="projects_object_tab_properties">Proprietăți</string>
-    <string name="projects_object_tab_comments">Comentarii</string>
+    <string name="projects_object_tab_comments">Comentarii (%1$s)</string>
     <string name="projects_object_tab_activity">Activitate</string>
-    <string name="projects_object_tab_requests">Cereri</string>
+    <string name="projects_object_tab_requests">Cereri de îmbinare (%1$s)</string>
     <string name="projects_object_tab_attachments">Atașamente</string>
     <string name="projects_object_tab_links">Linkuri</string>
     <string name="projects_watchers_watch">Urmărește</string>

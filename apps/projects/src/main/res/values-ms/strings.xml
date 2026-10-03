@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Pemilik</string>
     <string name="projects_object_watch">Perhati</string>
     <string name="projects_object_tab_properties">Sifat</string>
-    <string name="projects_object_tab_comments">Komen</string>
+    <string name="projects_object_tab_comments">Komen (%1$s)</string>
     <string name="projects_object_tab_activity">Aktiviti</string>
-    <string name="projects_object_tab_requests">Permintaan</string>
+    <string name="projects_object_tab_requests">Permintaan gabungan (%1$s)</string>
     <string name="projects_object_tab_attachments">Lampiran</string>
     <string name="projects_object_tab_links">Pautan</string>
     <string name="projects_watchers_watch">Perhati</string>

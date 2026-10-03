@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">مالک</string>
     <string name="projects_object_watch">تماشا</string>
     <string name="projects_object_tab_properties">ویژگی‌ها</string>
-    <string name="projects_object_tab_comments">نظرها</string>
+    <string name="projects_object_tab_comments">نظرها (%1$s)</string>
     <string name="projects_object_tab_activity">فعالیت</string>
-    <string name="projects_object_tab_requests">درخواست‌ها</string>
+    <string name="projects_object_tab_requests">درخواست‌های ادغام (%1$s)</string>
     <string name="projects_object_tab_attachments">پیوست‌ها</string>
     <string name="projects_object_tab_links">لینک‌ها</string>
     <string name="projects_watchers_watch">تماشا</string>

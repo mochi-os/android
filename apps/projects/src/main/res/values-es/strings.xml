@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Propietario</string>
     <string name="projects_object_watch">Seguir</string>
     <string name="projects_object_tab_properties">Propiedades</string>
-    <string name="projects_object_tab_comments">Comentarios</string>
+    <string name="projects_object_tab_comments">Comentarios (%1$s)</string>
     <string name="projects_object_tab_activity">Actividad</string>
-    <string name="projects_object_tab_requests">Solicitudes</string>
+    <string name="projects_object_tab_requests">Solicitudes de fusión (%1$s)</string>
     <string name="projects_object_tab_attachments">Adjuntos</string>
     <string name="projects_object_tab_links">Enlaces</string>
     <string name="projects_watchers_watch">Seguir</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Mai shi</string>
     <string name="projects_object_watch">Kalle</string>
     <string name="projects_object_tab_properties">Halaye</string>
-    <string name="projects_object_tab_comments">Sharhi</string>
+    <string name="projects_object_tab_comments">Sharhi (%1$s)</string>
     <string name="projects_object_tab_activity">Aiki</string>
-    <string name="projects_object_tab_requests">Buƙatu</string>
+    <string name="projects_object_tab_requests">Bukatun haɗawa (%1$s)</string>
     <string name="projects_object_tab_attachments">Haɗawa</string>
     <string name="projects_object_tab_links">Hanyoyin haɗi</string>
     <string name="projects_watchers_watch">Kalle</string>

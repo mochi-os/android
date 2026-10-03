@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">स्वामी</string>
     <string name="projects_object_watch">देखें</string>
     <string name="projects_object_tab_properties">गुण</string>
-    <string name="projects_object_tab_comments">टिप्पणियाँ</string>
+    <string name="projects_object_tab_comments">टिप्पणियाँ (%1$s)</string>
     <string name="projects_object_tab_activity">गतिविधि</string>
-    <string name="projects_object_tab_requests">अनुरोध</string>
+    <string name="projects_object_tab_requests">मर्ज अनुरोध (%1$s)</string>
     <string name="projects_object_tab_attachments">अटैचमेंट्स</string>
     <string name="projects_object_tab_links">लिंक</string>
     <string name="projects_watchers_watch">देखें</string>

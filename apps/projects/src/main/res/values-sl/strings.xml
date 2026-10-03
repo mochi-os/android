@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Lastnik</string>
     <string name="projects_object_watch">Spremljaj</string>
     <string name="projects_object_tab_properties">Lastnosti</string>
-    <string name="projects_object_tab_comments">Komentarji</string>
+    <string name="projects_object_tab_comments">Komentarji (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivnost</string>
-    <string name="projects_object_tab_requests">Zahteve</string>
+    <string name="projects_object_tab_requests">Zahteve za združitev (%1$s)</string>
     <string name="projects_object_tab_attachments">Priloge</string>
     <string name="projects_object_tab_links">Povezave</string>
     <string name="projects_watchers_watch">Spremljaj</string>

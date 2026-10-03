@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">אייגנטימער</string>
     <string name="projects_object_watch">נאָכקוק</string>
     <string name="projects_object_tab_properties">אייגנשאַפֿטן</string>
-    <string name="projects_object_tab_comments">קאָמענטאַרן</string>
+    <string name="projects_object_tab_comments">קאָמענטאַרן (%1$s)</string>
     <string name="projects_object_tab_activity">אַקטיוויטעט</string>
-    <string name="projects_object_tab_requests">פֿאָדערונגען</string>
+    <string name="projects_object_tab_requests">צונויפֿגיס־פֿאָדערונגען (%1$s)</string>
     <string name="projects_object_tab_attachments">בײַלאַגעס</string>
     <string name="projects_object_tab_links">לינקס</string>
     <string name="projects_watchers_watch">נאָכקוק</string>

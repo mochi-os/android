@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Eigar</string>
     <string name="projects_object_watch">Følg</string>
     <string name="projects_object_tab_properties">Eigenskapar</string>
-    <string name="projects_object_tab_comments">Kommentarar</string>
+    <string name="projects_object_tab_comments">Kommentarar (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivitet</string>
-    <string name="projects_object_tab_requests">Førespurnader</string>
+    <string name="projects_object_tab_requests">Samanslåingsforespurnader (%1$s)</string>
     <string name="projects_object_tab_attachments">Vedlegg</string>
     <string name="projects_object_tab_links">Lenker</string>
     <string name="projects_watchers_watch">Følg</string>

@@ -54,7 +54,7 @@
     <string name="projects_field_position_body">內容</string>
     <string name="projects_sort_field">排序方式</string>
     <string name="projects_settings_tab_access">存取權</string>
-    <string name="projects_object_tab_comments">留言</string>
+    <string name="projects_object_tab_comments">留言 (%1$s)</string>
     <string name="projects_object_tab_attachments">附件</string>
     <string name="projects_comment_empty">重未有留言</string>
     <string name="projects_comment_attach">附加檔案</string>
@@ -135,7 +135,7 @@
     <string name="projects_settings_unsubscribe_message">你確定要退訂呢個項目？</string>
     <string name="projects_object_unwatch">取消關注</string>
     <string name="projects_object_tab_properties">屬性</string>
-    <string name="projects_object_tab_requests">請求</string>
+    <string name="projects_object_tab_requests">合併請求 (%1$s)</string>
     <string name="projects_object_tab_watchers">關注者</string>
     <string name="projects_watchers_empty">暫時冇關注者</string>
     <string name="projects_watchers_unwatch">停止關注</string>

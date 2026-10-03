@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">May-ari</string>
     <string name="projects_object_watch">Manood</string>
     <string name="projects_object_tab_properties">Mga katangian</string>
-    <string name="projects_object_tab_comments">Mga komento</string>
+    <string name="projects_object_tab_comments">Mga komento (%1$s)</string>
     <string name="projects_object_tab_activity">Aktibidad</string>
-    <string name="projects_object_tab_requests">Mga Kahilingan</string>
+    <string name="projects_object_tab_requests">Mga kahilingan sa pagsasama (%1$s)</string>
     <string name="projects_object_tab_attachments">Mga attachment</string>
     <string name="projects_object_tab_links">Mga link</string>
     <string name="projects_watchers_watch">Manood</string>

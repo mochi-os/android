@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Jabea</string>
     <string name="projects_object_watch">Ikusi</string>
     <string name="projects_object_tab_properties">Propietateak</string>
-    <string name="projects_object_tab_comments">Iruzkinak</string>
+    <string name="projects_object_tab_comments">Iruzkinak (%1$s)</string>
     <string name="projects_object_tab_activity">Jarduera</string>
-    <string name="projects_object_tab_requests">Eskaerak</string>
+    <string name="projects_object_tab_requests">Bateratze-eskaerak (%1$s)</string>
     <string name="projects_object_tab_attachments">Eranskinak</string>
     <string name="projects_object_tab_links">Estekak</string>
     <string name="projects_watchers_watch">Ikusi</string>

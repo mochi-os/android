@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Pronari</string>
     <string name="projects_object_watch">Shiko</string>
     <string name="projects_object_tab_properties">Vetitë</string>
-    <string name="projects_object_tab_comments">Komentet</string>
+    <string name="projects_object_tab_comments">Komentet (%1$s)</string>
     <string name="projects_object_tab_activity">Aktiviteti</string>
-    <string name="projects_object_tab_requests">Kërkesat</string>
+    <string name="projects_object_tab_requests">Kërkesat për bashkim (%1$s)</string>
     <string name="projects_object_tab_attachments">Bashkëngjitjet</string>
     <string name="projects_object_tab_links">Lidhjet</string>
     <string name="projects_watchers_watch">Shiko</string>

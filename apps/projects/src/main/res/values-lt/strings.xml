@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Savininkas</string>
     <string name="projects_object_watch">Stebėti</string>
     <string name="projects_object_tab_properties">Savybės</string>
-    <string name="projects_object_tab_comments">Komentarai</string>
+    <string name="projects_object_tab_comments">Komentarai (%1$s)</string>
     <string name="projects_object_tab_activity">Veikla</string>
-    <string name="projects_object_tab_requests">Užklausos</string>
+    <string name="projects_object_tab_requests">Sujungimo užklausos (%1$s)</string>
     <string name="projects_object_tab_attachments">Priedai</string>
     <string name="projects_object_tab_links">Nuorodos</string>
     <string name="projects_watchers_watch">Stebėti</string>

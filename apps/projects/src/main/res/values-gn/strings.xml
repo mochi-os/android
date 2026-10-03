@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Jára</string>
     <string name="projects_object_watch">Ema\'ẽ</string>
     <string name="projects_object_tab_properties">Propiedadkuéra</string>
-    <string name="projects_object_tab_comments">Comentariokuéra</string>
+    <string name="projects_object_tab_comments">Comentariokuéra (%1$s)</string>
     <string name="projects_object_tab_activity">Tembiapo</string>
-    <string name="projects_object_tab_requests">Jerurekuéra</string>
+    <string name="projects_object_tab_requests">Ñembojuaju jerure (%1$s)</string>
     <string name="projects_object_tab_attachments">Adjuntokuéra</string>
     <string name="projects_object_tab_links">Juajuhakuéra</string>
     <string name="projects_watchers_watch">Ema\'ẽ</string>

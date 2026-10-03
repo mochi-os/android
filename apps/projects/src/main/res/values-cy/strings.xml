@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Perchennog</string>
     <string name="projects_object_watch">Gwylio</string>
     <string name="projects_object_tab_properties">Priodweddau</string>
-    <string name="projects_object_tab_comments">Sylwadau</string>
+    <string name="projects_object_tab_comments">Sylwadau (%1$s)</string>
     <string name="projects_object_tab_activity">Gweithgaredd</string>
-    <string name="projects_object_tab_requests">Ceisiadau</string>
+    <string name="projects_object_tab_requests">Ceisiadau cyfuno (%1$s)</string>
     <string name="projects_object_tab_attachments">Atodiadau</string>
     <string name="projects_object_tab_links">Dolenni</string>
     <string name="projects_watchers_watch">Gwylio</string>

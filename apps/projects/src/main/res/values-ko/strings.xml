@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">소유자</string>
     <string name="projects_object_watch">관찰</string>
     <string name="projects_object_tab_properties">속성</string>
-    <string name="projects_object_tab_comments">댓글</string>
+    <string name="projects_object_tab_comments">댓글 (%1$s)</string>
     <string name="projects_object_tab_activity">활동</string>
-    <string name="projects_object_tab_requests">요청</string>
+    <string name="projects_object_tab_requests">병합 요청 (%1$s)</string>
     <string name="projects_object_tab_attachments">첨부 파일</string>
     <string name="projects_object_tab_links">링크</string>
     <string name="projects_watchers_watch">관찰</string>

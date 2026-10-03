@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">オーナー</string>
     <string name="projects_object_watch">ウォッチ</string>
     <string name="projects_object_tab_properties">プロパティ</string>
-    <string name="projects_object_tab_comments">コメント</string>
+    <string name="projects_object_tab_comments">コメント (%1$s)</string>
     <string name="projects_object_tab_activity">アクティビティ</string>
-    <string name="projects_object_tab_requests">リクエスト</string>
+    <string name="projects_object_tab_requests">マージリクエスト (%1$s)</string>
     <string name="projects_object_tab_attachments">添付ファイル</string>
     <string name="projects_object_tab_links">リンク</string>
     <string name="projects_watchers_watch">ウォッチ</string>

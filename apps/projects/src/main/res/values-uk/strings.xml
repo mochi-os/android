@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Власник</string>
     <string name="projects_object_watch">Стежити</string>
     <string name="projects_object_tab_properties">Властивості</string>
-    <string name="projects_object_tab_comments">Коментарі</string>
+    <string name="projects_object_tab_comments">Коментарі (%1$s)</string>
     <string name="projects_object_tab_activity">Активність</string>
-    <string name="projects_object_tab_requests">Запити</string>
+    <string name="projects_object_tab_requests">Запити об\'єднання (%1$s)</string>
     <string name="projects_object_tab_attachments">Вкладення</string>
     <string name="projects_object_tab_links">Посилання</string>
     <string name="projects_watchers_watch">Стежити</string>

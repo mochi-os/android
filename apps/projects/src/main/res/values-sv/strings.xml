@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Ägare</string>
     <string name="projects_object_watch">Bevaka</string>
     <string name="projects_object_tab_properties">Egenskaper</string>
-    <string name="projects_object_tab_comments">Kommentarer</string>
+    <string name="projects_object_tab_comments">Kommentarer (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivitet</string>
-    <string name="projects_object_tab_requests">Förfrågningar</string>
+    <string name="projects_object_tab_requests">Sammanslagningsförfrågningar (%1$s)</string>
     <string name="projects_object_tab_attachments">Bilagor</string>
     <string name="projects_object_tab_links">Länkar</string>
     <string name="projects_watchers_watch">Bevaka</string>

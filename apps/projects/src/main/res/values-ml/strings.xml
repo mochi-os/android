@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">ഉടമ</string>
     <string name="projects_object_watch">നിരീക്ഷിക്കുക</string>
     <string name="projects_object_tab_properties">സവിശേഷതകൾ</string>
-    <string name="projects_object_tab_comments">അഭിപ്രായങ്ങൾ</string>
+    <string name="projects_object_tab_comments">കമന്റുകൾ (%1$s)</string>
     <string name="projects_object_tab_activity">പ്രവർത്തനം</string>
-    <string name="projects_object_tab_requests">അഭ്യർത്ഥനകൾ</string>
+    <string name="projects_object_tab_requests">ലയന അഭ്യർത്ഥനകൾ (%1$s)</string>
     <string name="projects_object_tab_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="projects_object_tab_links">ലിങ്കുകൾ</string>
     <string name="projects_watchers_watch">നിരീക്ഷിക്കുക</string>

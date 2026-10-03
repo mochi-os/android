@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Сопственик</string>
     <string name="projects_object_watch">Следи</string>
     <string name="projects_object_tab_properties">Својства</string>
-    <string name="projects_object_tab_comments">Коментари</string>
+    <string name="projects_object_tab_comments">Коментари (%1$s)</string>
     <string name="projects_object_tab_activity">Активност</string>
-    <string name="projects_object_tab_requests">Барања</string>
+    <string name="projects_object_tab_requests">Барања за спојување (%1$s)</string>
     <string name="projects_object_tab_attachments">Прилози</string>
     <string name="projects_object_tab_links">Врски</string>
     <string name="projects_watchers_watch">Следи</string>

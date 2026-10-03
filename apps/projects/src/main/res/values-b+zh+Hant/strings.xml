@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">擁有者</string>
     <string name="projects_object_watch">關注</string>
     <string name="projects_object_tab_properties">屬性</string>
-    <string name="projects_object_tab_comments">留言</string>
+    <string name="projects_object_tab_comments">留言 (%1$s)</string>
     <string name="projects_object_tab_activity">動態</string>
-    <string name="projects_object_tab_requests">請求</string>
+    <string name="projects_object_tab_requests">合併請求 (%1$s)</string>
     <string name="projects_object_tab_attachments">附件</string>
     <string name="projects_object_tab_links">連結</string>
     <string name="projects_watchers_watch">關注</string>

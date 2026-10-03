@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Umnini</string>
     <string name="projects_object_watch">Bukela</string>
     <string name="projects_object_tab_properties">Iimpawu</string>
-    <string name="projects_object_tab_comments">Izimvo</string>
+    <string name="projects_object_tab_comments">Izimvo (%1$s)</string>
     <string name="projects_object_tab_activity">Umsebenzi</string>
-    <string name="projects_object_tab_requests">Izicelo</string>
+    <string name="projects_object_tab_requests">Izicelo zokudibanisa (%1$s)</string>
     <string name="projects_object_tab_attachments">Iziqhotyoshelwa</string>
     <string name="projects_object_tab_links">Amakhonkco</string>
     <string name="projects_watchers_watch">Bukela</string>

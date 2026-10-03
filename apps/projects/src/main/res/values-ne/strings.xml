@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">मालिक</string>
     <string name="projects_object_watch">हेर्नुहोस्</string>
     <string name="projects_object_tab_properties">गुणहरू</string>
-    <string name="projects_object_tab_comments">टिप्पणीहरू</string>
+    <string name="projects_object_tab_comments">टिप्पणीहरू (%1$s)</string>
     <string name="projects_object_tab_activity">गतिविधि</string>
-    <string name="projects_object_tab_requests">अनुरोधहरू</string>
+    <string name="projects_object_tab_requests">मर्ज अनुरोधहरू (%1$s)</string>
     <string name="projects_object_tab_attachments">एट्याचमेन्टहरू</string>
     <string name="projects_object_tab_links">लिङ्कहरू</string>
     <string name="projects_watchers_watch">हेर्नुहोस्</string>

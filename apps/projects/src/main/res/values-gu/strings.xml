@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">માલિક</string>
     <string name="projects_object_watch">જુઓ</string>
     <string name="projects_object_tab_properties">ગુણધર્મો</string>
-    <string name="projects_object_tab_comments">ટિપ્પણીઓ</string>
+    <string name="projects_object_tab_comments">ટિપ્પણીઓ (%1$s)</string>
     <string name="projects_object_tab_activity">પ્રવૃત્તિ</string>
-    <string name="projects_object_tab_requests">વિનંતીઓ</string>
+    <string name="projects_object_tab_requests">મર્જ વિનંતીઓ (%1$s)</string>
     <string name="projects_object_tab_attachments">જોડાણો</string>
     <string name="projects_object_tab_links">લિંક્સ</string>
     <string name="projects_watchers_watch">જુઓ</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Sealbhadair</string>
     <string name="projects_object_watch">Cum sùil</string>
     <string name="projects_object_tab_properties">Feartan</string>
-    <string name="projects_object_tab_comments">Beachdan</string>
+    <string name="projects_object_tab_comments">Beachdan (%1$s)</string>
     <string name="projects_object_tab_activity">Gnìomhachd</string>
-    <string name="projects_object_tab_requests">Iarrtasan</string>
+    <string name="projects_object_tab_requests">Iarrtasan aonachaidh (%1$s)</string>
     <string name="projects_object_tab_attachments">Ceanglachain</string>
     <string name="projects_object_tab_links">Ceanglaichean</string>
     <string name="projects_watchers_watch">Cum sùil</string>

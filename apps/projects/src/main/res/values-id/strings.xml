@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Pemilik</string>
     <string name="projects_object_watch">Pantau</string>
     <string name="projects_object_tab_properties">Properti</string>
-    <string name="projects_object_tab_comments">Komentar</string>
+    <string name="projects_object_tab_comments">Komentar (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivitas</string>
-    <string name="projects_object_tab_requests">Permintaan</string>
+    <string name="projects_object_tab_requests">Permintaan penggabungan (%1$s)</string>
     <string name="projects_object_tab_attachments">Lampiran</string>
     <string name="projects_object_tab_links">Tautan</string>
     <string name="projects_watchers_watch">Pantau</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Apuq</string>
     <string name="projects_object_watch">Qatipay</string>
     <string name="projects_object_tab_properties">Kayninkuna</string>
-    <string name="projects_object_tab_comments">Comentariokuna</string>
+    <string name="projects_object_tab_comments">Comentariokuna (%1$s)</string>
     <string name="projects_object_tab_activity">Kuyuriy</string>
-    <string name="projects_object_tab_requests">Mañakuykuna</string>
+    <string name="projects_object_tab_requests">Hukllachana mañakuykuna (%1$s)</string>
     <string name="projects_object_tab_attachments">Adjuntokuna</string>
     <string name="projects_object_tab_links">T\'inkikuna</string>
     <string name="projects_watchers_watch">Qatipay</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Սեփականատեր</string>
     <string name="projects_object_watch">Հետևել</string>
     <string name="projects_object_tab_properties">Հատկություններ</string>
-    <string name="projects_object_tab_comments">Մեկնաբանություններ</string>
+    <string name="projects_object_tab_comments">Մեկնաբանություններ (%1$s)</string>
     <string name="projects_object_tab_activity">Ակտիվություն</string>
-    <string name="projects_object_tab_requests">Հարցումներ</string>
+    <string name="projects_object_tab_requests">Միաձուլման հարցումներ (%1$s)</string>
     <string name="projects_object_tab_attachments">Կցորդներ</string>
     <string name="projects_object_tab_links">Հղումներ</string>
     <string name="projects_watchers_watch">Հետևել</string>

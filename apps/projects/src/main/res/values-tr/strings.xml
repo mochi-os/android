@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Sahip</string>
     <string name="projects_object_watch">İzle</string>
     <string name="projects_object_tab_properties">Özellikler</string>
-    <string name="projects_object_tab_comments">Yorumlar</string>
+    <string name="projects_object_tab_comments">Yorumlar (%1$s)</string>
     <string name="projects_object_tab_activity">Etkinlik</string>
-    <string name="projects_object_tab_requests">İstekler</string>
+    <string name="projects_object_tab_requests">Birleştirme istekleri (%1$s)</string>
     <string name="projects_object_tab_attachments">Ekler</string>
     <string name="projects_object_tab_links">Bağlantılar</string>
     <string name="projects_watchers_watch">İzle</string>

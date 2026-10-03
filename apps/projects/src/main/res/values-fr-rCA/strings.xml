@@ -66,7 +66,6 @@
     <string name="projects_settings_tab_access">Accès</string>
     <string name="projects_views_move_up">Déplacer vers le haut</string>
     <string name="projects_views_move_down">Déplacer vers le bas</string>
-    <string name="projects_object_tab_comments">Commentaires</string>
     <string name="projects_object_tab_attachments">Pièces jointes</string>
     <string name="projects_field_yes">Oui</string>
     <string name="projects_field_no">Non</string>
@@ -136,7 +135,6 @@
     <string name="projects_settings_unsubscribe_message">Voulez-vous vraiment vous désabonner de ce projet?</string>
     <string name="projects_object_unwatch">Ne plus suivre</string>
     <string name="projects_object_tab_properties">Propriétés</string>
-    <string name="projects_object_tab_requests">Demandes</string>
     <string name="projects_object_tab_watchers">Observateurs</string>
     <string name="projects_watchers_empty">Aucun observateur pour l\'instant</string>
     <string name="projects_watchers_unwatch">Arrêter de suivre</string>

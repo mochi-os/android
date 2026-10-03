@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Vlastník</string>
     <string name="projects_object_watch">Sledovat</string>
     <string name="projects_object_tab_properties">Vlastnosti</string>
-    <string name="projects_object_tab_comments">Komentáře</string>
+    <string name="projects_object_tab_comments">Komentáře (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivita</string>
-    <string name="projects_object_tab_requests">Žádosti</string>
+    <string name="projects_object_tab_requests">Žádosti o sloučení (%1$s)</string>
     <string name="projects_object_tab_attachments">Přílohy</string>
     <string name="projects_object_tab_links">Odkazy</string>
     <string name="projects_watchers_watch">Sledovat</string>

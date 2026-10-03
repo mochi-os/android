@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">المالك</string>
     <string name="projects_object_watch">متابعة</string>
     <string name="projects_object_tab_properties">الخصائص</string>
-    <string name="projects_object_tab_comments">التعليقات</string>
+    <string name="projects_object_tab_comments">التعليقات (%1$s)</string>
     <string name="projects_object_tab_activity">النشاط</string>
-    <string name="projects_object_tab_requests">الطلبات</string>
+    <string name="projects_object_tab_requests">طلبات الدمج (%1$s)</string>
     <string name="projects_object_tab_attachments">المرفقات</string>
     <string name="projects_object_tab_links">الروابط</string>
     <string name="projects_watchers_watch">متابعة</string>

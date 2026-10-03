@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">ម្ចាស់</string>
     <string name="projects_object_watch">មើល</string>
     <string name="projects_object_tab_properties">លក្ខណៈសម្បត្តិ</string>
-    <string name="projects_object_tab_comments">មតិយោបល់</string>
+    <string name="projects_object_tab_comments">មតិយោបល់ (%1$s)</string>
     <string name="projects_object_tab_activity">សកម្មភាព</string>
-    <string name="projects_object_tab_requests">សំណើ</string>
+    <string name="projects_object_tab_requests">សំណើបញ្ចូល (%1$s)</string>
     <string name="projects_object_tab_attachments">ឯកសារភ្ជាប់</string>
     <string name="projects_object_tab_links">តំណ</string>
     <string name="projects_watchers_watch">មើល</string>

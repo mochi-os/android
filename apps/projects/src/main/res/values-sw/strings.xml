@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Mmiliki</string>
     <string name="projects_object_watch">Fuatilia</string>
     <string name="projects_object_tab_properties">Sifa</string>
-    <string name="projects_object_tab_comments">Maoni</string>
+    <string name="projects_object_tab_comments">Maoni (%1$s)</string>
     <string name="projects_object_tab_activity">Shughuli</string>
-    <string name="projects_object_tab_requests">Maombi</string>
+    <string name="projects_object_tab_requests">Maombi ya muunganiko (%1$s)</string>
     <string name="projects_object_tab_attachments">Viambatisho</string>
     <string name="projects_object_tab_links">Viungo</string>
     <string name="projects_watchers_watch">Fuatilia</string>

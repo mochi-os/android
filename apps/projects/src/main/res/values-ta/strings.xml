@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">உரிமையாளர்</string>
     <string name="projects_object_watch">பார்</string>
     <string name="projects_object_tab_properties">பண்புகள்</string>
-    <string name="projects_object_tab_comments">கருத்துகள்</string>
+    <string name="projects_object_tab_comments">கருத்துகள் (%1$s)</string>
     <string name="projects_object_tab_activity">செயல்பாடு</string>
-    <string name="projects_object_tab_requests">கோரிக்கைகள்</string>
+    <string name="projects_object_tab_requests">மெர்ஜ் கோரிக்கைகள் (%1$s)</string>
     <string name="projects_object_tab_attachments">இணைப்புகள்</string>
     <string name="projects_object_tab_links">இணைப்புகள்</string>
     <string name="projects_watchers_watch">பார்</string>

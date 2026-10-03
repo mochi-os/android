@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Īpašnieks</string>
     <string name="projects_object_watch">Skatīties</string>
     <string name="projects_object_tab_properties">Īpašības</string>
-    <string name="projects_object_tab_comments">Komentāri</string>
+    <string name="projects_object_tab_comments">Komentāri (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivitāte</string>
-    <string name="projects_object_tab_requests">Pieprasījumi</string>
+    <string name="projects_object_tab_requests">Apvienošanas pieprasījumi (%1$s)</string>
     <string name="projects_object_tab_attachments">Pielikumi</string>
     <string name="projects_object_tab_links">Saites</string>
     <string name="projects_watchers_watch">Skatīties</string>

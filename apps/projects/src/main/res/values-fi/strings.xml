@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Omistaja</string>
     <string name="projects_object_watch">Seuraa</string>
     <string name="projects_object_tab_properties">Ominaisuudet</string>
-    <string name="projects_object_tab_comments">Kommentit</string>
+    <string name="projects_object_tab_comments">Kommentit (%1$s)</string>
     <string name="projects_object_tab_activity">Toiminta</string>
-    <string name="projects_object_tab_requests">Pyynnöt</string>
+    <string name="projects_object_tab_requests">Yhdistämispyynnöt (%1$s)</string>
     <string name="projects_object_tab_attachments">Liitteet</string>
     <string name="projects_object_tab_links">Linkit</string>
     <string name="projects_watchers_watch">Seuraa</string>

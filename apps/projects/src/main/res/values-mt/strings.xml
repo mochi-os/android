@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Sid</string>
     <string name="projects_object_watch">Segwi</string>
     <string name="projects_object_tab_properties">Proprjetajiet</string>
-    <string name="projects_object_tab_comments">Kummenti</string>
+    <string name="projects_object_tab_comments">Kummenti (%1$s)</string>
     <string name="projects_object_tab_activity">Attività</string>
-    <string name="projects_object_tab_requests">Talbiet</string>
+    <string name="projects_object_tab_requests">Talbiet ta\' merge (%1$s)</string>
     <string name="projects_object_tab_attachments">Mehmużin</string>
     <string name="projects_object_tab_links">Ħoloq</string>
     <string name="projects_watchers_watch">Segwi</string>

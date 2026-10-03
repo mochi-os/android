@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Уладальнік</string>
     <string name="projects_object_watch">Сачыць</string>
     <string name="projects_object_tab_properties">Уласцівасці</string>
-    <string name="projects_object_tab_comments">Каментарыі</string>
+    <string name="projects_object_tab_comments">Каментарыі (%1$s)</string>
     <string name="projects_object_tab_activity">Актыўнасць</string>
-    <string name="projects_object_tab_requests">Запыты</string>
+    <string name="projects_object_tab_requests">Запыты на зліццё (%1$s)</string>
     <string name="projects_object_tab_attachments">Укладанні</string>
     <string name="projects_object_tab_links">Спасылкі</string>
     <string name="projects_watchers_watch">Сачыць</string>

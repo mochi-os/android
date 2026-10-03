@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Иесі</string>
     <string name="projects_object_watch">Бақылау</string>
     <string name="projects_object_tab_properties">Қасиеттер</string>
-    <string name="projects_object_tab_comments">Пікірлер</string>
+    <string name="projects_object_tab_comments">Пікірлер (%1$s)</string>
     <string name="projects_object_tab_activity">Әрекет</string>
-    <string name="projects_object_tab_requests">Сұраулар</string>
+    <string name="projects_object_tab_requests">Біріктіру сұраныстары (%1$s)</string>
     <string name="projects_object_tab_attachments">Тіркемелер</string>
     <string name="projects_object_tab_links">Сілтемелер</string>
     <string name="projects_watchers_watch">Бақылау</string>

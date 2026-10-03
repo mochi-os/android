@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Ιδιοκτήτης</string>
     <string name="projects_object_watch">Παρακολούθηση</string>
     <string name="projects_object_tab_properties">Ιδιότητες</string>
-    <string name="projects_object_tab_comments">Σχόλια</string>
+    <string name="projects_object_tab_comments">Σχόλια (%1$s)</string>
     <string name="projects_object_tab_activity">Δραστηριότητα</string>
-    <string name="projects_object_tab_requests">Αιτήματα</string>
+    <string name="projects_object_tab_requests">Αιτήματα συγχώνευσης (%1$s)</string>
     <string name="projects_object_tab_attachments">Συνημμένα</string>
     <string name="projects_object_tab_links">Σύνδεσμοι</string>
     <string name="projects_watchers_watch">Παρακολούθηση</string>

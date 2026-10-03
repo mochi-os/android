@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Abbaa qabeenyaa</string>
     <string name="projects_object_watch">Daawwadhu</string>
     <string name="projects_object_tab_properties">Qabeenyaalee</string>
-    <string name="projects_object_tab_comments">Yaadawwan</string>
+    <string name="projects_object_tab_comments">Yaadawwan (%1$s)</string>
     <string name="projects_object_tab_activity">Sochii</string>
-    <string name="projects_object_tab_requests">Iyyannoolee</string>
+    <string name="projects_object_tab_requests">Gaaffii makaa (%1$s)</string>
     <string name="projects_object_tab_attachments">Maxxansaalee</string>
     <string name="projects_object_tab_links">Hidhaalee</string>
     <string name="projects_watchers_watch">Daawwadhu</string>

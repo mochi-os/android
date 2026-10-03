@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Propietari</string>
     <string name="projects_object_watch">Segueix</string>
     <string name="projects_object_tab_properties">Propietats</string>
-    <string name="projects_object_tab_comments">Comentaris</string>
+    <string name="projects_object_tab_comments">Comentaris (%1$s)</string>
     <string name="projects_object_tab_activity">Activitat</string>
-    <string name="projects_object_tab_requests">Sol·licituds</string>
+    <string name="projects_object_tab_requests">Sol·licituds de fusió (%1$s)</string>
     <string name="projects_object_tab_attachments">Fitxers adjunts</string>
     <string name="projects_object_tab_links">Enllaços</string>
     <string name="projects_watchers_watch">Segueix</string>

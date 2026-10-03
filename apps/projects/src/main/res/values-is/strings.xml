@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Eigandi</string>
     <string name="projects_object_watch">Fylgjast með</string>
     <string name="projects_object_tab_properties">Eiginleikar</string>
-    <string name="projects_object_tab_comments">Athugasemdir</string>
+    <string name="projects_object_tab_comments">Athugasemdir (%1$s)</string>
     <string name="projects_object_tab_activity">Virkni</string>
-    <string name="projects_object_tab_requests">Beiðnir</string>
+    <string name="projects_object_tab_requests">Sameiningarbeiðnir (%1$s)</string>
     <string name="projects_object_tab_attachments">Viðhengi</string>
     <string name="projects_object_tab_links">Tenglar</string>
     <string name="projects_watchers_watch">Fylgjast með</string>

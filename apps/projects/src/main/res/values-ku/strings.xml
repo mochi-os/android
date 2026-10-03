@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Xwedî</string>
     <string name="projects_object_watch">Temaşe bike</string>
     <string name="projects_object_tab_properties">Taybetmendî</string>
-    <string name="projects_object_tab_comments">Şîrove</string>
+    <string name="projects_object_tab_comments">Şîrove (%1$s)</string>
     <string name="projects_object_tab_activity">Çalakî</string>
-    <string name="projects_object_tab_requests">Daxwaz</string>
+    <string name="projects_object_tab_requests">Daxwazên tevlîkirinê (%1$s)</string>
     <string name="projects_object_tab_attachments">Pêvek</string>
     <string name="projects_object_tab_links">Girêdan</string>
     <string name="projects_watchers_watch">Temaşe bike</string>

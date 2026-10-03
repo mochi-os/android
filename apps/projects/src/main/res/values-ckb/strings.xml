@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">خاوەن</string>
     <string name="projects_object_watch">چاودێری</string>
     <string name="projects_object_tab_properties">تایبەتمەندییەکان</string>
-    <string name="projects_object_tab_comments">لێدوانەکان</string>
+    <string name="projects_object_tab_comments">لێدوانەکان (%1$s)</string>
     <string name="projects_object_tab_activity">چالاکی</string>
-    <string name="projects_object_tab_requests">داواکارییەکان</string>
+    <string name="projects_object_tab_requests">داواکارییەکانی تێکەڵکردن (%1$s)</string>
     <string name="projects_object_tab_attachments">هاوپێچەکان</string>
     <string name="projects_object_tab_links">بەستەرەکان</string>
     <string name="projects_watchers_watch">چاودێری</string>

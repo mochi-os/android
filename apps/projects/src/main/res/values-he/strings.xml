@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">בעלים</string>
     <string name="projects_object_watch">עקוב</string>
     <string name="projects_object_tab_properties">מאפיינים</string>
-    <string name="projects_object_tab_comments">תגובות</string>
+    <string name="projects_object_tab_comments">תגובות (%1$s)</string>
     <string name="projects_object_tab_activity">פעילות</string>
-    <string name="projects_object_tab_requests">בקשות</string>
+    <string name="projects_object_tab_requests">בקשות מיזוג (%1$s)</string>
     <string name="projects_object_tab_attachments">קבצים מצורפים</string>
     <string name="projects_object_tab_links">קישורים</string>
     <string name="projects_watchers_watch">עקוב</string>

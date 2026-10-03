@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">හිමිකරු</string>
     <string name="projects_object_watch">නරඹන්න</string>
     <string name="projects_object_tab_properties">ගුණාංග</string>
-    <string name="projects_object_tab_comments">අදහස්</string>
+    <string name="projects_object_tab_comments">අදහස් (%1$s)</string>
     <string name="projects_object_tab_activity">ක්‍රියාකාරකම</string>
-    <string name="projects_object_tab_requests">ඉල්ලීම්</string>
+    <string name="projects_object_tab_requests">ඒකාබද්ධ කිරීමේ ඉල්ලීම් (%1$s)</string>
     <string name="projects_object_tab_attachments">ඇමුණුම්</string>
     <string name="projects_object_tab_links">සබැඳි</string>
     <string name="projects_watchers_watch">නරඹන්න</string>

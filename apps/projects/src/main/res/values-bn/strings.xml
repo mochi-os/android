@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">মালিক</string>
     <string name="projects_object_watch">দেখুন</string>
     <string name="projects_object_tab_properties">বৈশিষ্ট্য</string>
-    <string name="projects_object_tab_comments">মন্তব্য</string>
+    <string name="projects_object_tab_comments">মন্তব্য (%1$s)</string>
     <string name="projects_object_tab_activity">কার্যকলাপ</string>
-    <string name="projects_object_tab_requests">অনুরোধ</string>
+    <string name="projects_object_tab_requests">মার্জ অনুরোধ (%1$s)</string>
     <string name="projects_object_tab_attachments">অ্যাটাচমেন্ট</string>
     <string name="projects_object_tab_links">লিঙ্কসমূহ</string>
     <string name="projects_watchers_watch">দেখুন</string>

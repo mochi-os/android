@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Chủ sở hữu</string>
     <string name="projects_object_watch">Theo dõi</string>
     <string name="projects_object_tab_properties">Thuộc tính</string>
-    <string name="projects_object_tab_comments">Bình luận</string>
+    <string name="projects_object_tab_comments">Bình luận (%1$s)</string>
     <string name="projects_object_tab_activity">Hoạt động</string>
-    <string name="projects_object_tab_requests">Yêu cầu</string>
+    <string name="projects_object_tab_requests">Yêu cầu hợp nhất (%1$s)</string>
     <string name="projects_object_tab_attachments">Tệp đính kèm</string>
     <string name="projects_object_tab_links">Liên kết</string>
     <string name="projects_watchers_watch">Theo dõi</string>

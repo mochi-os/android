@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Umnikazi</string>
     <string name="projects_object_watch">Buka</string>
     <string name="projects_object_tab_properties">Izici</string>
-    <string name="projects_object_tab_comments">Imibono</string>
+    <string name="projects_object_tab_comments">Amazwana (%1$s)</string>
     <string name="projects_object_tab_activity">Umsebenzi</string>
-    <string name="projects_object_tab_requests">Izicelo</string>
+    <string name="projects_object_tab_requests">Izicelo zokuhlanganisa (%1$s)</string>
     <string name="projects_object_tab_attachments">Okunamathiselwe</string>
     <string name="projects_object_tab_links">Izixhumanisi</string>
     <string name="projects_watchers_watch">Buka</string>
