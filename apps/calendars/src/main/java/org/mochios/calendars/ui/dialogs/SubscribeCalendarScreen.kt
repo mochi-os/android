@@ -29,6 +29,7 @@ import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.Dns
 import androidx.compose.material.icons.outlined.RssFeed
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -84,8 +85,8 @@ import org.mochios.calendars.repository.PermissionRequiredException
 import org.mochios.calendars.ui.calendar.toColour
 import javax.inject.Inject
 
-/** The colour a new subscription starts on. */
-private const val SUBSCRIPTION_COLOUR = "#a78bfa"
+/** The colour a new subscription starts on, as the web's. */
+private const val SUBSCRIPTION_COLOUR = "#2dd4bf"
 
 /** The colour a linked calendar starts on when its server names none. */
 private const val LINKED_COLOUR = "#60a5fa"
@@ -124,11 +125,18 @@ fun previous(stage: SubscribeStage): SubscribeStage? = when (stage) {
     SubscribeStage.CALENDAR -> SubscribeStage.CREDENTIAL
 }
 
-/** The connected accounts of [kind], in the order the server listed them. */
+/** The connected accounts of [kind], by the names they are shown under. */
 fun matching(accounts: List<CalendarAccount>, kind: SubscribeKind): List<CalendarAccount> {
     val type = accountType(kind)
-    return if (type.isEmpty()) emptyList() else accounts.filter { it.type == type }
+    return if (type.isEmpty()) {
+        emptyList()
+    } else {
+        accounts.filter { it.type == type }.sortedWith(compareBy(NaturalCompare) { it.label.ifBlank { it.identifier } })
+    }
 }
+
+/** The calendars an account's server offers, by name. */
+fun sorted(calendars: List<RemoteCalendar>): List<RemoteCalendar> = calendars.sortedWith(compareBy(NaturalCompare) { it.name })
 
 /**
  * A consent the server asked for before it will fetch from the URL's host;
@@ -163,22 +171,25 @@ data class SubscribeUiState(
     val error: MochiError? = null,
     val permission: PendingPermission? = null,
     val finished: String? = null,
+    /** Whether what finished was a linked calendar rather than a subscription. */
+    val linked: Boolean = false,
     /** A consent to open in the system browser, once. */
     val launch: String? = null,
 )
 
-/** What the Google step shows. */
-enum class GoogleStep { MISSING, CONNECT, LIST }
+/** What the Google step offers below the Google accounts already connected. */
+enum class GoogleOffer { NONE, CONNECT, ENABLE }
 
 /**
- * The Google step: the user's Google accounts when there are any; else an
- * offer to connect one, which the consent does; else, when the server holds
- * no Google client so no consent can be asked for, where the client goes.
+ * The Google step's offer: Google's consent for another account whenever the
+ * server can ask for one; else, to an administrator with no Google account,
+ * the system settings where the server's Google client is entered; else
+ * nothing beyond the accounts.
  */
-fun googleStep(accounts: List<CalendarAccount>, providers: List<String>): GoogleStep = when {
-    accounts.isNotEmpty() -> GoogleStep.LIST
-    providers.isEmpty() -> GoogleStep.MISSING
-    else -> GoogleStep.CONNECT
+fun googleOffer(accounts: List<CalendarAccount>, providers: List<String>, administrator: Boolean): GoogleOffer = when {
+    CalendarAccount.TYPE_GOOGLE in providers -> GoogleOffer.CONNECT
+    accounts.isEmpty() && administrator -> GoogleOffer.ENABLE
+    else -> GoogleOffer.NONE
 }
 
 @HiltViewModel
@@ -320,7 +331,7 @@ class SubscribeCalendarViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val calendars = repository.remoteCalendars(account)
-                _uiState.value = _uiState.value.copy(isLoading = false, remote = calendars)
+                _uiState.value = _uiState.value.copy(isLoading = false, remote = sorted(calendars))
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -453,7 +464,7 @@ class SubscribeCalendarViewModel @Inject constructor(
                     state.name.trim(),
                     state.colour.trim().lowercase(),
                 )
-                _uiState.value = _uiState.value.copy(isBusy = false, finished = calendar.id)
+                _uiState.value = _uiState.value.copy(isBusy = false, finished = calendar.id, linked = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isBusy = false, error = e.toMochiError())
             }
@@ -518,13 +529,14 @@ class SubscribeCalendarViewModel @Inject constructor(
 @Composable
 fun SubscribeCalendarScreen(
     onBack: () -> Unit,
-    onSubscribed: () -> Unit,
+    onSubscribed: (Boolean) -> Unit,
+    onEnableGoogle: () -> Unit,
     viewModel: SubscribeCalendarViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
     LaunchedEffect(uiState.finished) {
-        if (uiState.finished != null) onSubscribed()
+        if (uiState.finished != null) onSubscribed(uiState.linked)
     }
 
     // The phone's own back gesture steps back through the wizard, as the top
@@ -552,7 +564,7 @@ fun SubscribeCalendarScreen(
         MochiScaffold(title = title, onBack = back) { padding ->
             when (uiState.stage) {
                 SubscribeStage.KIND -> KindList(uiState, padding, viewModel::choose)
-                SubscribeStage.CREDENTIAL -> Credential(uiState, padding, viewModel)
+                SubscribeStage.CREDENTIAL -> Credential(uiState, padding, viewModel, onEnableGoogle)
                 SubscribeStage.CALENDAR -> if (uiState.chosen == null) {
                     RemoteList(uiState, padding, viewModel::pick, viewModel::reload)
                 } else {
@@ -658,24 +670,27 @@ private fun Credential(
     uiState: SubscribeUiState,
     padding: PaddingValues,
     viewModel: SubscribeCalendarViewModel,
+    onEnableGoogle: () -> Unit,
 ) {
     when (uiState.kind) {
-        SubscribeKind.GOOGLE -> GoogleAccounts(uiState, padding, viewModel)
+        SubscribeKind.GOOGLE -> GoogleAccounts(uiState, padding, viewModel, onEnableGoogle)
         SubscribeKind.APPLE, SubscribeKind.SERVER -> AccountForm(uiState, padding, viewModel)
         else -> Unit
     }
 }
 
 /**
- * The Google accounts already connected. One without calendar access, and a
- * user with no Google account at all, are offered Google's consent, which
- * opens in the system browser and comes back on the app's deep link.
+ * The Google accounts already connected, then another to connect. One
+ * without calendar access is offered Google's consent, as is another
+ * account; the consent opens in the system browser and comes back on the
+ * app's deep link.
  */
 @Composable
 private fun GoogleAccounts(
     uiState: SubscribeUiState,
     padding: PaddingValues,
     viewModel: SubscribeCalendarViewModel,
+    onEnableGoogle: () -> Unit,
 ) {
     val accounts = matching(uiState.accounts, SubscribeKind.GOOGLE)
     val error = uiState.error
@@ -705,34 +720,63 @@ private fun GoogleAccounts(
             error != null && uiState.accounts.isEmpty() -> item("error") {
                 InlineErrorState(error = error, onRetry = viewModel::accounts)
             }
-            else -> when (googleStep(accounts, uiState.providers)) {
-                // No Google client is entered on this server, so no consent
-                // can be asked for. Only an administrator reaches this.
-                GoogleStep.MISSING -> item("missing") {
-                    Note(stringResource(R.string.calendars_subscribe_google_enable))
-                }
-                // The server can grant one; the consent connects the account
-                // the user picks at Google.
-                GoogleStep.CONNECT -> item("empty") {
-                    Column {
-                        Note(stringResource(R.string.calendars_subscribe_google_connect))
-                        Spacer(Modifier.height(12.dp))
-                        MochiButton(
-                            onClick = { viewModel.grant(null) },
-                            enabled = !uiState.isBusy,
-                            modifier = Modifier.fillMaxWidth(),
-                        ) {
-                            Text(stringResource(R.string.calendars_subscribe_google_connect_action))
-                        }
-                    }
-                }
-                GoogleStep.LIST -> items(accounts, key = { it.id }) { account ->
+            else -> {
+                items(accounts, key = { it.id }) { account ->
                     AccountRow(
                         account = account,
                         onOpen = { viewModel.open(account) },
                         onGrant = { viewModel.grant(account) },
                         busy = uiState.isBusy,
                     )
+                }
+                when (googleOffer(accounts, uiState.providers, uiState.administrator)) {
+                    // The server can grant one: the consent connects whichever
+                    // account the user picks at Google.
+                    GoogleOffer.CONNECT -> item("connect") {
+                        Column {
+                            if (accounts.isEmpty()) {
+                                Note(stringResource(R.string.calendars_subscribe_google_connect))
+                                Spacer(Modifier.height(12.dp))
+                            }
+                            MochiButton(
+                                onClick = { viewModel.grant(null) },
+                                enabled = !uiState.isBusy,
+                                modifier = Modifier.fillMaxWidth(),
+                            ) {
+                                Text(stringResource(R.string.calendars_subscribe_google_connect_action))
+                            }
+                        }
+                    }
+                    // No Google client is entered on this server, so no
+                    // consent can be asked for; the administrator is taken to
+                    // where it is entered.
+                    GoogleOffer.ENABLE -> item("enable") {
+                        Column {
+                            Note(stringResource(R.string.calendars_subscribe_google_enable))
+                            Spacer(Modifier.height(12.dp))
+                            MochiButton(onClick = onEnableGoogle, modifier = Modifier.fillMaxWidth()) {
+                                Icon(
+                                    Icons.Outlined.Settings,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(ButtonDefaults.IconSize),
+                                )
+                                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                                Text(stringResource(R.string.calendars_subscribe_google_enable_action))
+                            }
+                        }
+                    }
+                    GoogleOffer.NONE -> Unit
+                }
+                // A consent that could not be asked for or did not land, once
+                // the list is up: the web says so in a toast.
+                if (error != null) {
+                    item("failure") {
+                        Text(
+                            text = error.userMessage(),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.error,
+                        )
+                    }
                 }
             }
         }
@@ -853,8 +897,9 @@ private fun AccountForm(
 }
 
 /**
- * One connected account: what the user called it over the address it signs in
- * as. An account without calendar access yet is shown but cannot be opened.
+ * One connected account: what the user called it, or the address it signs in
+ * as, over its provider. An account without calendar access yet is shown but
+ * cannot be opened.
  */
 @Composable
 private fun AccountRow(
@@ -881,15 +926,13 @@ private fun AccountRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
-            if (account.label.isNotBlank() && account.identifier.isNotBlank()) {
-                Text(
-                    text = account.identifier,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
+            Text(
+                text = providerLabel(account.type),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
             if (!allowed && onGrant != null) {
                 Spacer(Modifier.height(8.dp))
                 MochiButton(onClick = onGrant, enabled = !busy) {
@@ -898,6 +941,19 @@ private fun AccountRow(
             }
         }
     }
+}
+
+/**
+ * What an account's provider is called, as the web's provider labels name
+ * it: the two services by their brands, which do not translate, and any
+ * other CalDAV server by what it is.
+ */
+@Composable
+private fun providerLabel(type: String): String = when (type) {
+    CalendarAccount.TYPE_GOOGLE -> "Google"
+    CalendarAccount.TYPE_APPLE -> "Apple"
+    CalendarAccount.TYPE_CALDAV -> stringResource(R.string.calendars_provider_caldav)
+    else -> type
 }
 
 /** Stage three: the calendars the account's server offers. */

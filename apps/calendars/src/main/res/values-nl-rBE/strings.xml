@@ -50,4 +50,5 @@
         <item quantity="other">op dagen %1$s</item>
     </plurals>
     <string name="calendars_rule_until">tot %1$s</string>
+    <string name="calendars_truncated">Te veel afspraken om ze allemaal te tonen. Kies een korter bereik.</string>
 </resources>

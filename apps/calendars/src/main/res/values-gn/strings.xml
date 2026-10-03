@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Peteĩteĩ ary</string>
     <string name="calendars_repeat_custom">Ñemomba\'e</string>
     <string name="calendars_reminder_none">Mba\'eve</string>
-    <string name="calendars_day_sunday">Arapokõi</string>
-    <string name="calendars_day_monday">Arateĩ</string>
-    <string name="calendars_day_tuesday">Arakõi</string>
-    <string name="calendars_day_wednesday">Araapy</string>
-    <string name="calendars_day_thursday">Ararundy</string>
-    <string name="calendars_day_friday">Arapo</string>
-    <string name="calendars_day_saturday">Arapoteĩ</string>
     <string name="calendars_link_replace">Embyekovia</string>
     <string name="calendars_link_revoke">Embogue</string>
     <string name="calendars_permission_allow">Emoneĩ</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Jasy</string>
     <string name="calendars_workweek">Mba\'apo arapokõindy</string>
     <string name="calendars_range">%1$s guive %2$s peve</string>
-    <string name="calendars_truncated">Oĩ evento ko aravópe ndojehechaukáiva.</string>
+    <string name="calendars_truncated">Heterei evento ndaikatúi ojehechauka opa. Eiporavo aravo mbykyve.</string>
     <string name="calendars_list_empty">Ndaipóri evento</string>
     <string name="calendars_untitled">(Teratee\'ỹre)</string>
     <string name="calendars_status_cancelled">Oñehéja</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Embogue mandu\'arã</string>
     <string name="calendars_hours_start">Mba\'apo aravo ñepyrũ</string>
     <string name="calendars_hours_finish">Mba\'apo aravo paha</string>
-    <string name="calendars_hours_invalid">Mba\'apo aravo opa va\'erã oñepyrũ rire.</string>
     <string name="calendars_work_days">Mba\'apo ára</string>
     <string name="calendars_multiweek_weeks">Arapokõindy ojehechaukáva</string>
     <string name="calendars_multiweek_previous">Arapokõindy ohasava\'ekue</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Evento ára pukukue</string>
     <string name="calendars_allday_first">Peteĩha</string>
     <string name="calendars_allday_last">Paha</string>
-    <string name="calendars_link_title">Arapapaha juajuha</string>
-    <string name="calendars_link_copy">Ekopia juajuha</string>
+    <string name="calendars_link_title">Arapapaha dirección</string>
+    <string name="calendars_link_copy">Ekopia arapapaha dirección</string>
     <string name="calendars_link_once">Ekopia ko\'ág̃a: ndaikatumo\'ãi ojehechauka jey.</string>
-    <string name="calendars_link_exists">Oĩma peteĩ juajuha ko arapapaha peg̃uarã.</string>
+    <string name="calendars_link_exists">Ko arapapaha dirección oñeme\'ẽma, ndaikatumo\'ãvéima ojehechauka jey.</string>
     <string name="calendars_permission_title">Emoneĩta jeike?</string>
     <string name="calendars_permission_message">%1$s ojerure:</string>
     <string name="calendars_sync_authorization">Eike jey resincroniza meme hag̃ua</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Ndaipóri mba\'e\'oka oñembojoajúva</string>
     <string name="calendars_device_used">iporu paha %1$s</string>
     <string name="calendars_device_never">araka\'eve</string>
-    <string name="calendars_device_deleted">Mba\'e\'oka oñenohẽma</string>
-    <string name="calendars_device_delete_title">¿Embogue ko mba\'e\'oka?</string>
-    <string name="calendars_device_delete_message">Tekotevẽta oñemboheko jey osincroniza hag̃ua.</string>
+    <string name="calendars_device_deleted">Mba\'e\'oka oñehundíma</string>
+    <string name="calendars_device_delete_title">Ehundíta mba\'e\'oka?</string>
+    <string name="calendars_device_delete_message">Mba\'e\'oka ndaikatuvéima ombojoja contacto térã arapapaha.</string>
     <string name="calendars_sync_choose">Arapapaha osincroniza hag̃ua</string>
     <string name="calendars_poll_large">Arapapaha tuichaiterei</string>
     <string name="calendars_poll_invalid">Dirección ndoguerúi arapapaha</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Arapapaha</string>
-    <string name="calendars_subscribe_google_enable">Google mba\'etekuéra ndoñemyendýi ko mohendahápe. Emyendy Ñemboheko, Sistema ñemboheko-pe.</string>
+    <string name="calendars_subscribe_google_enable">Google mba\'etekuéra ndoñemyendýi ko mohendahápe.</string>
     <string name="calendars_subscribe_google_connect">Nderembojoajúi gueteri peteĩ Google mba\'ete.</string>
     <string name="calendars_subscribe_google_connect_action">Embojoaju Google</string>
     <string name="calendars_grant_failed">Ndoje\'ẽi jeike arapapahápe</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s peve</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Evento ohasava\'ekue</string>
+    <string name="calendars_created">Arapapaha oñemoheñói</string>
+    <string name="calendars_renamed">Arapapaha oñembohera jey</string>
+    <string name="calendars_colour_saved">Sa\'y oñeñongatu</string>
+    <string name="calendars_deleted">Arapapaha oñembogue</string>
+    <string name="calendars_removed">Arapapaha oñembogue</string>
+    <string name="calendars_preferences_saved">Jeporavo oñeñongatu</string>
+    <string name="calendars_link_revoked">Arapapaha dirección oñemboguéma</string>
+    <string name="calendars_link_none">Ko arapapaha ndorekói dirección oñembogue hag̃ua</string>
+    <string name="calendars_linked">Arapapaha ojejuaju</string>
+    <string name="calendars_subscribed">Oñesuscribíma</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s aravo</item>
+        <item quantity="other">%1$s aravo</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Emyendy Google mba\'etekuéra</string>
+    <string name="calendars_provider_caldav">Arapapaha mohendaha</string>
 </resources>

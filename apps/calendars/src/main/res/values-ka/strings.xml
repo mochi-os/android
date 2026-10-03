@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">ყოველწლიური</string>
     <string name="calendars_repeat_custom">მორგებული</string>
     <string name="calendars_reminder_none">არცერთი</string>
-    <string name="calendars_day_sunday">კვირა</string>
-    <string name="calendars_day_monday">ორშაბათი</string>
-    <string name="calendars_day_tuesday">სამშაბათი</string>
-    <string name="calendars_day_wednesday">ოთხშაბათი</string>
-    <string name="calendars_day_thursday">ხუთშაბათი</string>
-    <string name="calendars_day_friday">პარასკევი</string>
-    <string name="calendars_day_saturday">შაბათი</string>
     <string name="calendars_link_replace">ჩანაცვლება</string>
     <string name="calendars_link_revoke">გაწვევა</string>
     <string name="calendars_permission_allow">დაშვება</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">თვე</string>
     <string name="calendars_workweek">სამუშაო კვირა</string>
     <string name="calendars_range">%1$s-დან %2$s-მდე</string>
-    <string name="calendars_truncated">ამ დიაპაზონის ზოგიერთი ღონისძიება ნაჩვენები არ არის.</string>
+    <string name="calendars_truncated">ღონისძიებები ძალიან ბევრია ყველას საჩვენებლად. აირჩიეთ უფრო მოკლე დიაპაზონი.</string>
     <string name="calendars_list_empty">ღონისძიებები არ არის</string>
     <string name="calendars_untitled">(სათაურის გარეშე)</string>
     <string name="calendars_status_cancelled">გაუქმებულია</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">შეხსენების წაშლა</string>
     <string name="calendars_hours_start">სამუშაო საათების დასაწყისი</string>
     <string name="calendars_hours_finish">სამუშაო საათების დასასრული</string>
-    <string name="calendars_hours_invalid">სამუშაო საათები დაწყების შემდეგ უნდა დასრულდეს.</string>
     <string name="calendars_work_days">სამუშაო დღეები</string>
     <string name="calendars_multiweek_weeks">ნაჩვენები კვირები</string>
     <string name="calendars_multiweek_previous">წინა კვირები</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">მთელი დღის ღონისძიებები</string>
     <string name="calendars_allday_first">დასაწყისში</string>
     <string name="calendars_allday_last">ბოლოს</string>
-    <string name="calendars_link_title">კალენდრის ბმული</string>
-    <string name="calendars_link_copy">ბმულის კოპირება</string>
+    <string name="calendars_link_title">კალენდრის მისამართი</string>
+    <string name="calendars_link_copy">კალენდრის მისამართის კოპირება</string>
     <string name="calendars_link_once">დააკოპირეთ ახლავე: მისი ხელახლა ჩვენება შეუძლებელია.</string>
-    <string name="calendars_link_exists">ამ კალენდრისთვის ბმული უკვე არსებობს.</string>
+    <string name="calendars_link_exists">კალენდრის ეს მისამართი უკვე გაცემულია და ხელახლა ვერ გამოჩნდება.</string>
     <string name="calendars_permission_title">დაიშვას წვდომა?</string>
     <string name="calendars_permission_message">%1$s ითხოვს:</string>
     <string name="calendars_sync_authorization">სინქრონიზაციის გასაგრძელებლად ხელახლა შედით</string>
@@ -132,8 +124,8 @@
     <string name="calendars_device_used">ბოლოს გამოყენებული %1$s</string>
     <string name="calendars_device_never">არასოდეს</string>
     <string name="calendars_device_deleted">მოწყობილობა წაიშალა</string>
-    <string name="calendars_device_delete_title">წაიშალოს ეს მოწყობილობა?</string>
-    <string name="calendars_device_delete_message">სინქრონიზაციისთვის მისი ხელახლა დაყენება დაგჭირდებათ.</string>
+    <string name="calendars_device_delete_title">წაიშალოს მოწყობილობა?</string>
+    <string name="calendars_device_delete_message">მოწყობილობა ვეღარ შეძლებს კონტაქტების ან კალენდრების სინქრონიზაციას.</string>
     <string name="calendars_sync_choose">სინქრონიზებადი კალენდრები</string>
     <string name="calendars_poll_large">კალენდარი ძალიან დიდია</string>
     <string name="calendars_poll_invalid">მისამართმა კალენდარი არ დააბრუნა</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google კალენდარი</string>
-    <string name="calendars_subscribe_google_enable">Google-ის ანგარიშები ამ სერვერზე ჩართული არ არის. ჩართეთ ისინი პარამეტრები, სისტემის პარამეტრები განყოფილებაში.</string>
+    <string name="calendars_subscribe_google_enable">Google-ის ანგარიშები ამ სერვერზე ჩართული არ არის.</string>
     <string name="calendars_subscribe_google_connect">თქვენ არ დაგიკავშირებიათ Google-ის ანგარიში.</string>
     <string name="calendars_subscribe_google_connect_action">Google-თან დაკავშირება</string>
     <string name="calendars_grant_failed">კალენდართან წვდომა არ გაიცა</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s-მდე</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">ადრინდელი ღონისძიებები</string>
+    <string name="calendars_created">კალენდარი შეიქმნა</string>
+    <string name="calendars_renamed">კალენდარს სახელი შეეცვალა</string>
+    <string name="calendars_colour_saved">ფერი შეინახა</string>
+    <string name="calendars_deleted">კალენდარი წაიშალა</string>
+    <string name="calendars_removed">კალენდარი წაიშალა</string>
+    <string name="calendars_preferences_saved">პარამეტრები შეინახა</string>
+    <string name="calendars_link_revoked">კალენდრის მისამართი გაწვეულია</string>
+    <string name="calendars_link_none">ამ კალენდარს გასაწვევი მისამართი არ აქვს</string>
+    <string name="calendars_linked">კალენდარი დაკავშირდა</string>
+    <string name="calendars_subscribed">გამოწერილი</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s საათი</item>
+        <item quantity="other">%1$s საათი</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google-ის ანგარიშების ჩართვა</string>
+    <string name="calendars_provider_caldav">კალენდრის სერვერი</string>
 </resources>

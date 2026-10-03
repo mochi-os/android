@@ -60,7 +60,6 @@ class SummaryTest {
     }
 
     private val wording = Wording(
-        allday = { "All day · $it" },
         day = { date, from, to -> "$date, $from to $to" },
         range = { from, to -> "$from to $to" },
     )
@@ -96,9 +95,9 @@ class SummaryTest {
     @Test
     fun `an all-day occurrence reads as its day or its run of days`() {
         val day = Instance(event = "e", allday = true, date = "2026-09-28", start = at(28, 0), finish = at(29, 0))
-        assertEquals("All day · Monday 28 September 2026" to null, summary(day, format(), false, wording, icu))
+        assertEquals("Monday 28 September 2026" to null, summary(day, format(), false, wording, icu))
         val trip = day.copy(finish = at(28, 0) + 3 * 86_400)
-        assertEquals("All day · 28 September 2026 – 30 September 2026" to null, summary(trip, format(), false, wording, icu))
+        assertEquals("28 September 2026 – 30 September 2026" to null, summary(trip, format(), false, wording, icu))
     }
 
     @Test
@@ -108,7 +107,7 @@ class SummaryTest {
             event = "e", allday = true, date = "2026-09-28",
             start = at(27, 15), finish = at(28, 15),
         )
-        assertEquals("All day · Monday 28 September 2026", summary(day, format(), false, wording, icu).first)
+        assertEquals("Monday 28 September 2026", summary(day, format(), false, wording, icu).first)
     }
 
     @Test

@@ -55,6 +55,9 @@ data class BoundsResponse(
 /** The body of an action that answers nothing but success. */
 data class EmptyResponse(val ok: Boolean = true)
 
+/** What revoking a calendar's address did: false when it had none to revoke. */
+data class RevokeResponse(val revoked: Boolean = false)
+
 /** Body of `-/events/batch`: up to 500 event ids. */
 data class EventsBatchRequest(val events: List<String>)
 
@@ -300,7 +303,7 @@ interface CalendarsApi {
     @POST("-/link/revoke")
     suspend fun revokeLink(
         @Field("calendar") calendar: String,
-    ): Response<ApiResponse<EmptyResponse>>
+    ): Response<ApiResponse<RevokeResponse>>
 
     @GET("-/preferences/get")
     suspend fun getPreferences(): Response<ApiResponse<PreferencesResponse>>

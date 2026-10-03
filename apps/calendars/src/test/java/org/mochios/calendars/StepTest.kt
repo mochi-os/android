@@ -20,8 +20,9 @@ class StepTest {
     fun `each view steps by its own unit`() {
         assertEquals(LocalDate.of(2026, 9, 17), step(CalendarsSection.DAY, ANCHOR, 1))
         assertEquals(LocalDate.of(2026, 9, 9), step(CalendarsSection.WEEK, ANCHOR, -1))
-        assertEquals(LocalDate.of(2026, 10, 16), step(CalendarsSection.MONTH, ANCHOR, 1))
-        assertEquals(LocalDate.of(2026, 10, 16), step(CalendarsSection.LIST, ANCHOR, 1))
+        // A month's step lands on its 1st, as the web's does.
+        assertEquals(LocalDate.of(2026, 10, 1), step(CalendarsSection.MONTH, ANCHOR, 1))
+        assertEquals(LocalDate.of(2026, 10, 1), step(CalendarsSection.LIST, ANCHOR, 1))
     }
 
     @Test

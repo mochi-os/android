@@ -6,6 +6,7 @@
 package org.mochios.calendars.ui.calendar
 
 import android.content.Context
+import androidx.annotation.StringRes
 import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -19,16 +20,17 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
-import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.files.PendingExport
+import org.mochios.calendars.R
+import org.mochios.calendars.di.Viewer
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Preferences
@@ -74,6 +76,8 @@ data class CalendarUiState(
     val preferences: Preferences = Preferences(),
     val workweek: Boolean = false,
     val search: String = "",
+    /** How many times search was asked for from the toolbar; each puts the cursor in the list's box. */
+    val seeking: Int = 0,
     /** Where the visible calendars' events begin and end, for the list view. */
     val bounds: Bounds = Bounds(),
     /** The pages the list view holds, as offsets from the anchor day. */
@@ -84,12 +88,19 @@ data class CalendarUiState(
     val isLoading: Boolean = true,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
+    /** A refresh failed with events already on screen, which stay; said once with Retry. */
+    val stale: MochiError? = null,
+    /** A list page failed to load; the list stops paging on its own and offers Retry. */
+    val stalled: Stalled? = null,
 ) {
     /** How many pages the list view is holding. */
     val pages: Int get() = latest - earliest + 1
     /** The occurrences the views draw. */
     val visible: List<Instance> get() = instances.filterNot { it.calendar in hidden }
 }
+
+/** A list page that failed: why, and whether it was the next page or the one before. */
+data class Stalled(val error: MochiError, val forward: Boolean)
 
 /**
  * The calendar's ICS address while its dialog is open. [url] is set once,
@@ -122,14 +133,19 @@ sealed class CalendarEvent {
 
     /** An export was written where the user chose, or [saved] says it was not. */
     data class Exported(val saved: Boolean) : CalendarEvent()
+
+    /** A reminder's occurrence has loaded: open it as a tap on it would. */
+    data class Open(val instance: Instance) : CalendarEvent()
+
+    /** A calendar action succeeded, which [message] says, as the web's toast does. */
+    data class Done(@param:StringRes val message: Int) : CalendarEvent()
 }
 
 @HiltViewModel
 class CalendarViewModel @Inject constructor(
     @param:ApplicationContext private val context: Context,
     private val repository: CalendarsRepository,
-    private val preferencesManager: PreferencesManager,
-    private val sessionManager: SessionManager,
+    private val viewer: Viewer,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(
@@ -144,11 +160,10 @@ class CalendarViewModel @Inject constructor(
 
     /** The zone every range is measured in: the user's, not the device's. */
     private val zone: ZoneId
-        get() = runCatching { ZoneId.of(preferencesManager.preferences.value.timezone) }
-            .getOrDefault(ZoneId.systemDefault())
+        get() = runCatching { ZoneId.of(viewer.zone()) }.getOrDefault(ZoneId.systemDefault())
 
     /** The first day of a week for this user: 0 Sunday, 1 Monday, 6 Saturday. */
-    private val weekStart: Int get() = preferencesManager.preferences.value.weekStartsOn
+    private val weekStart: Int get() = viewer.week()
 
     /** Whether the views show each event at its own wall-clock time, in its own zones. */
     private val zones: Boolean get() = _uiState.value.preferences.zones
@@ -215,17 +230,34 @@ class CalendarViewModel @Inject constructor(
                 isRefreshing = refreshing,
                 isLoading = state.isLoading && state.instances.isEmpty(),
                 error = null,
+                stalled = null,
             )
             try {
-                if (state.view == CalendarsSection.LIST) {
-                    pages(state, reset)
+                val shown = shown()
+                if (shown.isEmpty()) {
+                    // With every calendar hidden there is nothing to fetch,
+                    // and nothing can be too many.
+                    _uiState.value = _uiState.value.copy(
+                        instances = emptyList(),
+                        truncated = false,
+                        bounds = Bounds(),
+                        earliest = 0,
+                        latest = 0,
+                        paging = false,
+                        isLoading = false,
+                        isRefreshing = false,
+                    )
+                } else if (state.view == CalendarsSection.LIST) {
+                    pages(state, reset, shown)
                 } else {
                     val (start, finish) = range(state)
                     // With events shown in their own zones, a day's
                     // occurrences can begin or end up to a day away by the
                     // user's clock, so the range reaches a day each side.
                     val margin = if (state.preferences.zones) 86_400L else 0L
-                    val (instances, truncated) = repository.listEvents(start - margin, finish + margin, emptyList(), zone.id)
+                    // Only the calendars shown, so hidden ones never take a
+                    // share of the most the server will list.
+                    val (instances, truncated) = repository.listEvents(start - margin, finish + margin, shown, zone.id)
                     _uiState.value = _uiState.value.copy(
                         instances = ordered(instances),
                         truncated = truncated,
@@ -237,12 +269,80 @@ class CalendarViewModel @Inject constructor(
                         isRefreshing = false,
                     )
                 }
+                answer()
             } catch (e: kotlinx.coroutines.CancellationException) {
                 throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, isRefreshing = false, error = e.toMochiError())
+                // Events already on screen stay, and the failure is said with
+                // Retry; with none, the error takes the view's place.
+                val current = _uiState.value
+                _uiState.value = if (current.instances.isEmpty()) {
+                    current.copy(isLoading = false, isRefreshing = false, error = e.toMochiError())
+                } else {
+                    current.copy(isLoading = false, isRefreshing = false, stale = e.toMochiError())
+                }
             }
         }
+    }
+
+    /** A reminder's link waiting for its occurrence to load: its event and its start. */
+    private var pending: Pair<String, Long>? = null
+
+    /** The pending reminder's calendar has already been shown once for it. */
+    private var revealed = false
+
+    /**
+     * Opens a reminder's link as the web does: the day view on the day it
+     * falls on, then, once the occurrence has loaded, the occurrence as a tap
+     * on it would open it. A link from before the day was written keeps the
+     * day the screen is on.
+     */
+    fun remind(event: String, occurrence: Long, date: LocalDate?) {
+        pending = event to occurrence
+        revealed = false
+        // The link chose the view, so the one the web saved does not replace it.
+        untouched = false
+        _uiState.value = _uiState.value.copy(
+            view = CalendarsSection.DAY,
+            anchor = date ?: _uiState.value.anchor,
+            search = "",
+        )
+        if (_uiState.value.calendars.isNotEmpty()) load()
+    }
+
+    /**
+     * Settles a waiting reminder once a range has loaded. Its occurrence
+     * there opens. Not there, its calendar may be hidden, since only shown
+     * calendars are fetched: that calendar is shown once, which loads again.
+     * Its calendar already shown, the occurrence has gone and the link is
+     * dropped.
+     */
+    private fun answer() {
+        val (event, occurrence) = pending ?: return
+        val found = _uiState.value.instances.firstOrNull { it.event == event && it.start == occurrence }
+        if (found != null) {
+            pending = null
+            _events.tryEmit(CalendarEvent.Open(found))
+            return
+        }
+        if (revealed) {
+            pending = null
+            return
+        }
+        viewModelScope.launch {
+            val stored = runCatching { repository.getEvent(event) }.getOrNull()
+            if (stored == null || stored.calendar !in _uiState.value.hidden) {
+                pending = null
+                return@launch
+            }
+            revealed = true
+            VisibilityStore.reveal(context, stored.calendar)
+        }
+    }
+
+    /** The stale refresh has been said. */
+    fun told() {
+        _uiState.value = _uiState.value.copy(stale = null)
     }
 
     /**
@@ -250,15 +350,15 @@ class CalendarViewModel @Inject constructor(
      * page held. A page is a quarter, so even the whole cap's worth is read a
      * page at a time — the server lists at most a year in one call.
      */
-    private suspend fun pages(state: CalendarUiState, reset: Boolean) {
+    private suspend fun pages(state: CalendarUiState, reset: Boolean, shown: List<String>) {
         val first = if (reset) 0 else state.earliest
         val last = if (reset) 0 else state.latest
-        val bounds = runCatching { repository.eventBounds(shown()) }.getOrDefault(Bounds())
+        val bounds = runCatching { repository.eventBounds(shown) }.getOrDefault(Bounds())
         val gathered = mutableListOf<Instance>()
         var truncated = false
         for (index in first..last) {
             val span = page(state.anchor, index, zone)
-            val (instances, cut) = repository.listEvents(span.start, span.finish, emptyList(), zone.id)
+            val (instances, cut) = repository.listEvents(span.start, span.finish, shown, zone.id)
             gathered.addAll(instances)
             truncated = truncated || cut
         }
@@ -289,36 +389,52 @@ class CalendarViewModel @Inject constructor(
 
     /** Whether the list view has a page to load in either direction. */
     fun hasEarlier(state: CalendarUiState = _uiState.value): Boolean =
-        earlier(state.anchor, state.earliest, state.bounds, zone, state.pages)
+        earlier(state.anchor, state.earliest, state.bounds, zone)
 
     fun hasLater(state: CalendarUiState = _uiState.value): Boolean =
-        later(state.anchor, state.latest, state.bounds, zone, state.pages)
+        later(state.anchor, state.latest, state.bounds, zone)
 
+    /**
+     * Loads the next page, or the one before. An earlier page with nothing
+     * new on it would leave nothing to see, so the search carries on back
+     * until something lands or the first event is reached, as the web's list
+     * does. A page that fails stops the list paging on its own until Retry.
+     */
     private fun paginate(forward: Boolean) {
         val state = _uiState.value
-        if (state.paging || state.isLoading) return
+        if (state.paging || state.isLoading || state.stalled != null) return
         if (if (forward) !hasLater(state) else !hasEarlier(state)) return
-        val index = if (forward) state.latest + 1 else state.earliest - 1
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(paging = true)
             try {
-                val span = page(state.anchor, index, zone)
-                val (instances, truncated) = repository.listEvents(span.start, span.finish, emptyList(), zone.id)
-                val current = _uiState.value
-                _uiState.value = current.copy(
+                do {
+                    val current = _uiState.value
+                    val index = if (forward) current.latest + 1 else current.earliest - 1
+                    val span = page(current.anchor, index, zone)
+                    val (instances, truncated) = repository.listEvents(span.start, span.finish, shown(), zone.id)
                     // Merged rather than appended: a multi-day occurrence
                     // reaches into both pages and the server lists it in each.
-                    instances = ordered((current.instances + instances).distinctBy { it.event to it.start }),
-                    truncated = current.truncated || truncated,
-                    earliest = if (forward) current.earliest else index,
-                    latest = if (forward) index else current.latest,
-                    paging = false,
-                )
-            } catch (e: Exception) {
+                    val merged = ordered((current.instances + instances).distinctBy { it.event to it.start })
+                    val grew = merged.size > current.instances.size
+                    _uiState.value = current.copy(
+                        instances = merged,
+                        truncated = current.truncated || truncated,
+                        earliest = if (forward) current.earliest else index,
+                        latest = if (forward) index else current.latest,
+                    )
+                } while (!forward && !grew && hasEarlier(_uiState.value))
                 _uiState.value = _uiState.value.copy(paging = false)
-                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(paging = false, stalled = Stalled(e.toMochiError(), forward))
             }
         }
+    }
+
+    /** Tries the list page that failed again. */
+    fun resume() {
+        val stalled = _uiState.value.stalled ?: return
+        _uiState.value = _uiState.value.copy(stalled = null)
+        paginate(stalled.forward)
     }
 
     /**
@@ -337,10 +453,20 @@ class CalendarViewModel @Inject constructor(
 
     fun view(value: String) {
         if (value == _uiState.value.view) return
-        _uiState.value = _uiState.value.copy(view = value)
+        // A search belongs to the list; leaving it lets it go, as the web does.
+        _uiState.value = _uiState.value.copy(
+            view = value,
+            search = if (value == CalendarsSection.LIST) _uiState.value.search else "",
+        )
         remember(value)
         share(value)
         load()
+    }
+
+    /** Search from the toolbar: the list, where results are, with the cursor in its box. */
+    fun seek() {
+        view(CalendarsSection.LIST)
+        _uiState.value = _uiState.value.copy(seeking = _uiState.value.seeking + 1)
     }
 
     /**
@@ -398,20 +524,18 @@ class CalendarViewModel @Inject constructor(
 
     override fun onCleared() {
         unwatch()
+        retained?.delete()
     }
 
     /**
-     * Redraws for the calendars now shown. The views filter what is already
-     * loaded, so nothing is fetched again — except the list view's bounds,
-     * which say how far it may page and are about the shown calendars alone.
+     * Redraws for the calendars now shown. Only shown calendars are fetched,
+     * so a calendar shown again is fetched now, where the list keeps the
+     * pages already scrolled to; what is loaded is filtered meanwhile, so a
+     * hidden calendar leaves at once.
      */
     private fun shade() {
         _uiState.value = _uiState.value.copy(hidden = VisibilityStore.hidden(context))
-        if (_uiState.value.view != CalendarsSection.LIST) return
-        viewModelScope.launch {
-            val bounds = runCatching { repository.eventBounds(shown()) }.getOrNull() ?: return@launch
-            _uiState.value = _uiState.value.copy(bounds = bounds)
-        }
+        load(refreshing = true, reset = false)
     }
 
     /** The calendars the views are drawing, for the actions that take a list. */
@@ -420,12 +544,6 @@ class CalendarViewModel @Inject constructor(
         return state.calendars.map { it.id }.filterNot { it in state.hidden }
     }
 
-    /**
-     * Fetches a subscription now. A fetch that fails is still a successful
-     * poll — the server records why on the calendar rather than refusing the
-     * call — so the drawer's line under the calendar is only right once the
-     * list has been read again, which the repository's own announcement does.
-     */
     /** Another server's changes, pulled in as the screen comes into view. */
     fun refresh() {
         viewModelScope.launch {
@@ -437,6 +555,12 @@ class CalendarViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Fetches a subscription now. A fetch that fails is still a successful
+     * poll — the server records why on the calendar rather than refusing the
+     * call — so the drawer's line under the calendar is only right once the
+     * list has been read again, which the repository's own announcement does.
+     */
     fun poll(calendar: String) {
         viewModelScope.launch {
             try {
@@ -447,19 +571,24 @@ class CalendarViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Deletes the occurrence the summary sheet is showing. A recurring one is
-     * taken out of its series by an exclusion; anything else goes outright.
-     * The etag comes from the server rather than the occurrence, which does
-     * not carry one.
-     */
-    fun rename(calendar: String, name: String) = act { repository.renameCalendar(calendar, name) }
+    /** Renames a calendar; [done] runs once it is renamed, which closes its dialog. */
+    fun rename(calendar: String, name: String, done: () -> Unit = {}) = act(done) {
+        repository.renameCalendar(calendar, name)
+        R.string.calendars_renamed
+    }
 
-    fun recolour(calendar: String, colour: String) = act { repository.recolourCalendar(calendar, colour) }
+    fun recolour(calendar: String, colour: String, done: () -> Unit = {}) = act(done) {
+        repository.recolourCalendar(calendar, colour)
+        R.string.calendars_colour_saved
+    }
 
-    fun remove(calendar: String) = act { repository.deleteCalendar(calendar) }
+    /** Deletes a calendar, or removes a subscription or linked one, whose events stay at their source. */
+    fun remove(calendar: Calendar, done: () -> Unit = {}) = act(done) {
+        repository.deleteCalendar(calendar.id)
+        if (calendar.linked || calendar.subscription) R.string.calendars_removed else R.string.calendars_deleted
+    }
 
-    fun preferences(value: Preferences) = act {
+    fun preferences(value: Preferences, done: () -> Unit = {}) = act(done) {
         val saved = repository.setPreferences(
             org.mochios.calendars.api.PreferencesRequest(
                 hours = value.hours,
@@ -475,12 +604,21 @@ class CalendarViewModel @Inject constructor(
         )
         _uiState.value = _uiState.value.copy(preferences = saved)
         load(refreshing = true)
+        R.string.calendars_preferences_saved
     }
 
     // ---- moving an occurrence ----
 
     /** How to put the last move back, until another move replaces it. */
     private var undo: (suspend () -> Unit)? = null
+
+    /**
+     * Moves, and their undoing, one at a time: each reads the event and writes
+     * it back, so a second started while the first is saving would read the
+     * copy the first is replacing and be refused as changed elsewhere. The
+     * web queues them the same way.
+     */
+    private val writing = Mutex()
 
     /**
      * A block dragged or resized in the day and week views: the occurrence
@@ -503,6 +641,30 @@ class CalendarViewModel @Inject constructor(
     }
 
     /**
+     * Where a drag in the day and week views put an occurrence: a block to a
+     * new time, a bar to another day, a block into the all-day band, where
+     * it becomes all day over as many days as it covered, or a bar into the
+     * grid, where it becomes timed and as long as a new event.
+     */
+    fun move(instance: Instance, moved: Moved, scope: Scope) {
+        val first = day(instance)
+        when (moved) {
+            is Moved.Time -> move(instance, moved.start, moved.finish, scope)
+            is Moved.Days -> move(instance, moved.first, scope)
+            is Moved.Whole -> rewrite(instance, scope) { form ->
+                // The form's first day read in the zone the views put the
+                // occurrence on its days in, so the shift lands where it was dropped.
+                val zone = if (zones) zoneOf(form.zone.start, this.zone) else this.zone
+                whole(form, ChronoUnit.DAYS.between(first, moved.first), ChronoUnit.DAYS.between(first, finish(instance)) + 1, zone)
+            }
+            is Moved.Timed -> rewrite(instance, scope) { form ->
+                val length = 60L * maxOf(15, _uiState.value.preferences.duration)
+                clocked(form, ChronoUnit.DAYS.between(first, moved.day), moved.hours, length, zone)
+            }
+        }
+    }
+
+    /**
      * Rewrites the stored event for a drag. The event is read first: a move
      * rewrites the same component the editor would, so a series keeps its
      * rule and an override keeps being an override. The draft a [change]
@@ -513,55 +675,59 @@ class CalendarViewModel @Inject constructor(
      */
     private fun rewrite(instance: Instance, scope: Scope, change: (EventForm) -> EventForm) {
         viewModelScope.launch {
-            try {
-                val event = repository.getEvent(instance.event)
-                val master = event.master() ?: return@launch
-                val user = zone.id
-                val key = instance.occurrence
-                val restore: suspend (String) -> Unit = { etag ->
-                    repository.updateEvent(event.id, etag, null, event.components)
-                }
+            writing.withLock { rewriting(instance, scope, change) }
+        }
+    }
 
-                // This occurrence and the ones after it: the series is cut
-                // there. The first occurrence has nothing before it, so that
-                // is the whole series.
-                var chosen = scope
-                if (chosen == Scope.FOLLOWING && event.recurring) {
-                    val halves = split(event.components, change(draft(master, user, key)), key, user)
-                    if (halves != null) {
-                        val (kept, following) = repository.splitEvent(
-                            event.id,
-                            event.etag,
-                            instance.start,
-                            halves.first,
-                            halves.second,
-                        )
-                        undo = {
-                            repository.deleteEvent(following.id, following.etag)
-                            restore(kept.etag)
-                        }
-                        _events.tryEmit(CalendarEvent.Moved)
-                        return@launch
-                    }
-                    chosen = Scope.ALL
-                }
-
-                val override = event.overrides().firstOrNull { matches(it, key) }
-                val base = when {
-                    chosen == Scope.ALL || !event.recurring -> draft(master, user)
-                    override != null -> draft(override, user)
-                    else -> draft(master, user, key)
-                }
-                val form = change(base).copy(occurrence = if (chosen == Scope.ONE) key else 0)
-                val components = components(form, event.components, if (event.recurring) chosen else Scope.ALL, user)
-                val written = repository.updateEvent(event.id, event.etag, null, components)
-                undo = { restore(written.etag) }
-                _events.tryEmit(CalendarEvent.Moved)
-            } catch (_: EventChangedException) {
-                _events.tryEmit(CalendarEvent.Changed)
-            } catch (e: Exception) {
-                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+    private suspend fun rewriting(instance: Instance, scope: Scope, change: (EventForm) -> EventForm) {
+        try {
+            val event = repository.getEvent(instance.event)
+            val master = event.master() ?: return
+            val user = zone.id
+            val key = instance.occurrence
+            val restore: suspend (String) -> Unit = { etag ->
+                repository.updateEvent(event.id, etag, null, event.components)
             }
+
+            // This occurrence and the ones after it: the series is cut
+            // there. The first occurrence has nothing before it, so that
+            // is the whole series.
+            var chosen = scope
+            if (chosen == Scope.FOLLOWING && event.recurring) {
+                val halves = split(event.components, change(draft(master, user, key)), key, user)
+                if (halves != null) {
+                    val (kept, following) = repository.splitEvent(
+                        event.id,
+                        event.etag,
+                        instance.start,
+                        halves.first,
+                        halves.second,
+                    )
+                    undo = {
+                        repository.deleteEvent(following.id, following.etag)
+                        restore(kept.etag)
+                    }
+                    _events.tryEmit(CalendarEvent.Moved)
+                    return
+                }
+                chosen = Scope.ALL
+            }
+
+            val override = event.overrides().firstOrNull { matches(it, key) }
+            val base = when {
+                chosen == Scope.ALL || !event.recurring -> draft(master, user)
+                override != null -> draft(override, user)
+                else -> draft(master, user, key)
+            }
+            val form = change(base).copy(occurrence = if (chosen == Scope.ONE) key else 0)
+            val components = components(form, event.components, if (event.recurring) chosen else Scope.ALL, user)
+            val written = repository.updateEvent(event.id, event.etag, null, components)
+            undo = { restore(written.etag) }
+            _events.tryEmit(CalendarEvent.Moved)
+        } catch (_: EventChangedException) {
+            _events.tryEmit(CalendarEvent.Changed)
+        } catch (e: Exception) {
+            _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
         }
     }
 
@@ -571,7 +737,7 @@ class CalendarViewModel @Inject constructor(
         undo = null
         viewModelScope.launch {
             try {
-                restore()
+                writing.withLock { restore() }
             } catch (_: EventChangedException) {
                 _events.tryEmit(CalendarEvent.Changed)
             } catch (e: Exception) {
@@ -595,12 +761,27 @@ class CalendarViewModel @Inject constructor(
     }
 
     /** One call whose only outcome that matters is whether it failed. */
-    private inline fun act(crossinline request: suspend () -> Unit) {
+    private val _working = MutableStateFlow(false)
+
+    /** Whether the calendar action a dialog waits on is under way; the dialog stays open until it succeeds. */
+    val working: StateFlow<Boolean> = _working.asStateFlow()
+
+    /**
+     * Runs a calendar action, saying what it did when it succeeds, which
+     * [request] answers with, and then [done]; a failure says why and leaves
+     * the dialog open to try again.
+     */
+    private fun act(done: () -> Unit, request: suspend () -> Int) {
+        if (_working.value) return
         viewModelScope.launch {
+            _working.value = true
             try {
-                request()
+                _events.tryEmit(CalendarEvent.Done(request()))
+                done()
             } catch (e: Exception) {
                 _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            } finally {
+                _working.value = false
             }
         }
     }
@@ -645,63 +826,92 @@ class CalendarViewModel @Inject constructor(
         _link.value = LinkState()
     }
 
-    fun revokeLink(calendar: String) {
-        closeLink()
-        act { repository.revokeLink(calendar) }
+    /** Revokes a calendar's address, saying whether there was one to revoke. */
+    fun revokeLink(calendar: String, done: () -> Unit = {}) = act(done) {
+        if (repository.revokeLink(calendar)) R.string.calendars_link_revoked else R.string.calendars_link_none
     }
 
     /** The server the link's address is built on, as the session holds it. */
-    private suspend fun server(): String = sessionManager.serverUrl.first().trimEnd('/')
+    private suspend fun server(): String = viewer.server().trimEnd('/')
 
     // ---- importing and exporting ----
 
     private val _importing = MutableStateFlow<Tally?>(null)
 
-    /** The import under way, or just finished, while its dialog is open. */
+    /** The import under way, just finished, or failed, while its dialog is open. */
     val importing: StateFlow<Tally?> = _importing.asStateFlow()
+
+    /** The staged copy of a file whose import failed, kept while its dialog offers to try again. */
+    private var retained: File? = null
 
     /**
      * Imports the iCalendar file at [uri] into [calendar], round by round,
      * the dialog following each. The file is copied into the cache first, so
      * the first round uploads from a copy the picker's grant cannot take
-     * away. A failure closes the dialog and says why; the events any round
-     * wrote are shown whether the import finished or not.
+     * away. A failure keeps the dialog open on what went wrong, as the web's
+     * does, with the copy kept to [retryImport]; the events any round wrote
+     * are shown whether the import finished or not.
      */
     fun import(calendar: Calendar, uri: Uri) {
         if (_importing.value != null) return
-        val start = Tally(calendar = calendar.id, name = calendar.name)
-        _importing.value = start
+        _importing.value = Tally(calendar = calendar.id, name = calendar.name)
         viewModelScope.launch {
-            var file: File? = null
-            try {
-                // The name it is staged under when its provider gives none.
-                file = runCatching { repository.stageFile(uri, "calendar.ics") }.getOrNull()
-                if (file == null) {
-                    _importing.value = null
-                    _events.tryEmit(CalendarEvent.Unreadable)
-                    return@launch
-                }
-                rounds(
-                    file,
-                    start,
-                    round = { part, staged, offset -> repository.importRound(calendar.id, part, staged, offset) },
-                    progress = { _importing.value = it },
-                )
-            } catch (e: kotlinx.coroutines.CancellationException) {
-                throw e
-            } catch (e: Exception) {
+            // The name it is staged under when its provider gives none.
+            val file = runCatching { repository.stageFile(uri, "calendar.ics") }.getOrNull()
+            if (file == null) {
                 _importing.value = null
-                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
-            } finally {
-                file?.let { withContext(NonCancellable) { repository.discardStaged(listOf(it)) } }
+                _events.tryEmit(CalendarEvent.Unreadable)
+                return@launch
             }
-            load(refreshing = true, reset = false)
+            transfer(file)
         }
     }
 
-    /** Closes a finished import's dialog. */
+    /**
+     * Imports a failed file again from its start. What the failed try wrote
+     * is in the calendar already, so it counts as skipped rather than twice.
+     */
+    fun retryImport() {
+        val failed = _importing.value ?: return
+        val file = retained ?: return
+        if (failed.error == null) return
+        retained = null
+        _importing.value = Tally(calendar = failed.calendar, name = failed.name)
+        viewModelScope.launch { transfer(file) }
+    }
+
+    /** Runs the import the dialog shows, from [file], then redraws. */
+    private suspend fun transfer(file: File) {
+        val start = _importing.value ?: return
+        var kept = false
+        try {
+            rounds(
+                file,
+                start,
+                round = { part, staged, offset -> repository.importRound(start.calendar, part, staged, offset) },
+                progress = { _importing.value = it },
+            )
+        } catch (e: kotlinx.coroutines.CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            retained = file
+            kept = true
+            _importing.value = (_importing.value ?: start).copy(error = e.toMochiError())
+        } finally {
+            if (!kept) withContext(NonCancellable) { repository.discardStaged(listOf(file)) }
+        }
+        load(refreshing = true, reset = false)
+    }
+
+    /** Closes a finished or failed import's dialog, letting go of a failed file's copy. */
     fun closeImport() {
-        if (_importing.value?.finished == true) _importing.value = null
+        val tally = _importing.value ?: return
+        if (!tally.finished && tally.error == null) return
+        _importing.value = null
+        retained?.let { file ->
+            retained = null
+            viewModelScope.launch { withContext(NonCancellable) { repository.discardStaged(listOf(file)) } }
+        }
     }
 
     /** The export fetched and waiting for the user to say where it goes. */
@@ -746,6 +956,9 @@ class CalendarViewModel @Inject constructor(
         val now = ZonedDateTime.now(zone)
         val today = now.toLocalDate()
         val chosen = day ?: run {
+            // The list's page reaches months ahead, so it is the day it is on
+            // that counts there, as the web's list does.
+            if (state.view == CalendarsSection.LIST) return@run creationDay(today, state.anchor, state.anchor, 1)
             val (first, last) = range(state)
             val from = Instant.ofEpochSecond(first).atZone(zone).toLocalDate()
             val until = Instant.ofEpochSecond(last).atZone(zone).toLocalDate()
@@ -848,8 +1061,9 @@ class CalendarViewModel @Inject constructor(
 
     /** Opens the day view on a date, from a column heading or a month cell. */
     fun open(date: LocalDate) {
-        _uiState.value = _uiState.value.copy(anchor = date, view = CalendarsSection.DAY)
+        _uiState.value = _uiState.value.copy(anchor = date, view = CalendarsSection.DAY, search = "")
         remember(CalendarsSection.DAY)
+        share(CalendarsSection.DAY)
         load()
     }
 
@@ -867,12 +1081,14 @@ class CalendarViewModel @Inject constructor(
  * The anchor one step forward (1) or back (-1) by the view's own unit. The
  * multiweek view steps a week at a time, so its span slides a row rather than
  * jumping its length; the list view pages as the reader scrolls, so its arrows
- * move a month at a time rather than by a range it no longer has.
+ * move a month at a time rather than by a range it no longer has. A month's
+ * step lands on its 1st, as the web's does, so the list opens on the month's
+ * first day rather than a day carried over from the last one.
  */
 fun step(view: String, anchor: LocalDate, direction: Int): LocalDate = when (view) {
     CalendarsSection.DAY -> anchor.plusDays(direction.toLong())
     CalendarsSection.WEEK, CalendarsSection.MULTIWEEK -> anchor.plusWeeks(direction.toLong())
-    else -> anchor.plusMonths(direction.toLong())
+    else -> anchor.withDayOfMonth(1).plusMonths(direction.toLong())
 }
 
 /**

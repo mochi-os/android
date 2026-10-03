@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">年額</string>
     <string name="calendars_repeat_custom">カスタム</string>
     <string name="calendars_reminder_none">なし</string>
-    <string name="calendars_day_sunday">日曜日</string>
-    <string name="calendars_day_monday">月曜日</string>
-    <string name="calendars_day_tuesday">火曜日</string>
-    <string name="calendars_day_wednesday">水曜日</string>
-    <string name="calendars_day_thursday">木曜日</string>
-    <string name="calendars_day_friday">金曜日</string>
-    <string name="calendars_day_saturday">土曜日</string>
     <string name="calendars_link_replace">置き換える</string>
     <string name="calendars_link_revoke">取り消し</string>
     <string name="calendars_permission_allow">許可</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">月</string>
     <string name="calendars_workweek">平日</string>
     <string name="calendars_range">%1$s ～ %2$s</string>
-    <string name="calendars_truncated">この期間の一部の予定は表示されていません。</string>
+    <string name="calendars_truncated">予定が多すぎてすべて表示できません。期間を短くしてください。</string>
     <string name="calendars_list_empty">予定はありません</string>
     <string name="calendars_untitled">（タイトルなし）</string>
     <string name="calendars_status_cancelled">キャンセル済み</string>
@@ -107,7 +100,6 @@
     <string name="calendars_reminder_remove">リマインダーを削除</string>
     <string name="calendars_hours_start">勤務時間の開始</string>
     <string name="calendars_hours_finish">勤務時間の終了</string>
-    <string name="calendars_hours_invalid">勤務時間の終了は開始より後にしてください。</string>
     <string name="calendars_work_days">稼働日</string>
     <string name="calendars_multiweek_weeks">表示する週数</string>
     <string name="calendars_multiweek_previous">前の週数</string>
@@ -117,10 +109,10 @@
     <string name="calendars_preferences_allday">終日の予定</string>
     <string name="calendars_allday_first">先頭</string>
     <string name="calendars_allday_last">末尾</string>
-    <string name="calendars_link_title">カレンダーのリンク</string>
-    <string name="calendars_link_copy">リンクをコピー</string>
+    <string name="calendars_link_title">カレンダーのアドレス</string>
+    <string name="calendars_link_copy">カレンダーのアドレスをコピー</string>
     <string name="calendars_link_once">今すぐコピーしてください。再表示することはできません。</string>
-    <string name="calendars_link_exists">このカレンダーにはすでにリンクがあります。</string>
+    <string name="calendars_link_exists">このカレンダーのアドレスはすでに発行済みのため、再表示できません。</string>
     <string name="calendars_permission_title">アクセスを許可しますか？</string>
     <string name="calendars_permission_message">%1$s が次を要求しています:</string>
     <string name="calendars_sync_authorization">同期を続けるには再度サインインしてください</string>
@@ -129,8 +121,8 @@
     <string name="calendars_device_used">最終使用 %1$s</string>
     <string name="calendars_device_never">なし</string>
     <string name="calendars_device_deleted">デバイスを削除しました</string>
-    <string name="calendars_device_delete_title">このデバイスを削除しますか？</string>
-    <string name="calendars_device_delete_message">同期するには再度設定が必要になります。</string>
+    <string name="calendars_device_delete_title">デバイスを削除しますか？</string>
+    <string name="calendars_device_delete_message">このデバイスは連絡先やカレンダーを同期できなくなります。</string>
     <string name="calendars_sync_choose">同期するカレンダー</string>
     <string name="calendars_poll_large">カレンダーが大きすぎます</string>
     <string name="calendars_poll_invalid">アドレスからカレンダーが返されませんでした</string>
@@ -172,7 +164,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google カレンダー</string>
-    <string name="calendars_subscribe_google_enable">このサーバーでは Google アカウントが有効になっていません。設定、システム設定 で有効にしてください。</string>
+    <string name="calendars_subscribe_google_enable">このサーバーでは Google アカウントが有効になっていません。</string>
     <string name="calendars_subscribe_google_connect">Google アカウントが接続されていません。</string>
     <string name="calendars_subscribe_google_connect_action">Google に接続</string>
     <string name="calendars_grant_failed">カレンダーへのアクセスが許可されませんでした</string>
@@ -255,4 +247,20 @@
     </plurals>
     <string name="calendars_rule_until">%1$sまで</string>
     <string name="calendars_rule_join">%1$s、%2$s</string>
+    <string name="calendars_list_earlier">以前の予定</string>
+    <string name="calendars_created">カレンダーを作成しました</string>
+    <string name="calendars_renamed">カレンダーの名前を変更しました</string>
+    <string name="calendars_colour_saved">色を保存しました</string>
+    <string name="calendars_deleted">カレンダーを削除しました</string>
+    <string name="calendars_removed">カレンダーを削除しました</string>
+    <string name="calendars_preferences_saved">設定を保存しました</string>
+    <string name="calendars_link_revoked">カレンダーのアドレスを無効にしました</string>
+    <string name="calendars_link_none">このカレンダーには無効にするアドレスがありません</string>
+    <string name="calendars_linked">カレンダーをリンクしました</string>
+    <string name="calendars_subscribed">購読中</string>
+    <plurals name="calendars_hours">
+        <item quantity="other">%1$s 時間</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google アカウントを有効にする</string>
+    <string name="calendars_provider_caldav">カレンダーサーバー</string>
 </resources>

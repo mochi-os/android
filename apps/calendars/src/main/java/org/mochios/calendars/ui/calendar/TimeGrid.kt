@@ -6,10 +6,13 @@
 package org.mochios.calendars.ui.calendar
 
 import androidx.annotation.StringRes
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -39,10 +42,12 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
@@ -63,6 +68,11 @@ import androidx.compose.ui.graphics.addOutline
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.input.pointer.AwaitPointerEventScope
+import androidx.compose.ui.input.pointer.PointerEventPass
+import androidx.compose.ui.input.pointer.PointerInputChange
+import androidx.compose.ui.input.pointer.changedToDownIgnoreConsumed
+import androidx.compose.ui.input.pointer.changedToUpIgnoreConsumed
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -70,7 +80,9 @@ import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -79,17 +91,20 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import kotlinx.coroutines.delay
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.theme.LocalEntityRadius
+import org.mochios.android.util.Zones
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
 import java.time.Instant
 import java.time.LocalDate
-import java.time.LocalTime
 import java.time.ZoneId
+import java.time.temporal.ChronoUnit
 
 /** The height of one hour row; the whole day is twenty-four of these. */
 private val HOUR = 56.dp
@@ -143,39 +158,90 @@ private val HANDLE = 12.dp
 private val EDGE = 56.dp
 private val SPEED = 6.dp
 
-/**
- * A block lifted by a long press: which occurrence, the day and the block it
- * was lifted from, how far down the block the finger took it in pixels, and
- * whether the end handle was taken, which resizes rather than moves.
- */
-private data class Lift(
-    val instance: Instance,
-    val day: LocalDate,
-    val cut: Cut,
-    val grab: Float,
-    val resize: Boolean,
-)
+/** How close to the columns' side a drag turns to the previous or next range. */
+private val SIDE = 28.dp
 
-/**
- * Where a lifted block would land: the day, the block on it, and the
- * occurrence's ends there, epoch seconds.
- */
-private data class Drop(val day: LocalDate, val cut: Cut, val start: Long, val finish: Long)
+/** One row of the all-day band: a bar and the gap beneath it. */
+private val ROW = BAND + 2.dp
+
+/** How many rows of the band show before it scrolls. */
+private const val ROWS = 4.5f
+
+/** The shortest a new event made by a drag across empty grid can be, in hours. */
+private const val LEAST = SNAP
+
+/** What a long press on the grid took hold of. */
+private sealed interface Drag {
+    /** Empty grid on [day], from [anchor] hours past midnight to wherever the finger now is. */
+    data class Create(val day: LocalDate, val anchor: Float) : Drag
+
+    /**
+     * An occurrence, taken by its piece on [day]: a block lifted from that
+     * day's column at [cut], [grab] hours below the block's top, or by its end
+     * handle when [resize]; or, with [band], a bar in the all-day band.
+     */
+    data class Lift(
+        val instance: Instance,
+        val day: LocalDate,
+        val cut: Cut,
+        val grab: Float,
+        val resize: Boolean,
+        val band: Boolean,
+    ) : Drag
+}
+
+/** Where a lifted occurrence would land. */
+private sealed interface Landing {
+    /** A block on [day] at [cut], the occurrence running from [start] to [finish], epoch seconds. */
+    data class Timed(val day: LocalDate, val cut: Cut, val start: Long, val finish: Long) : Landing
+
+    /** A bar in the band from [first], [length] days long. */
+    data class Whole(val first: LocalDate, val length: Long) : Landing
+}
+
+/** Where a drag in the day and week views put an occurrence, for [CalendarViewModel.move]. */
+sealed interface Moved {
+    /** Still timed, now from [start] to [finish], epoch seconds. */
+    data class Time(val start: Long, val finish: Long) : Moved
+
+    /** An all-day bar moved within the band, its first day now [first]. */
+    data class Days(val first: LocalDate) : Moved
+
+    /** A block dropped in the band: all day from [first], over as many days as it covered. */
+    data class Whole(val first: LocalDate) : Moved
+
+    /** A bar dropped in the grid: timed on [day] from [hours] past midnight, as long as a new event. */
+    data class Timed(val day: LocalDate, val hours: Float) : Moved
+}
+
+/** The key the landing bar is laid out under among the band's own. */
+private const val LANDING = "landing"
 
 /**
  * The day and week views: an all-day band above a scrolling time grid of
  * [days] columns. Non-working hours are shaded, today carries the
- * current-time line, and occurrences that overlap share the column's width.
- * A single column draws each block on one line; the week's narrow columns
- * stack the time and marks beneath the title.
+ * current-time line, which moves on with the clock, and occurrences that
+ * overlap share the column's width. A single column draws each block on one
+ * line and needs no heading, the toolbar naming its day; the week's narrow
+ * columns stack the time and marks beneath the title. The band is always
+ * there, labelled, with the zone the hours read in above its label when
+ * events show in their own zones; an all-day occurrence is one bar across
+ * every day it covers, and the band scrolls once it holds more rows than it
+ * shows.
  *
  * A tap on an occurrence opens its summary; a tap on empty grid starts an
- * event at that hour on that day. A long press lifts a block, which then
- * follows the finger to the quarter hour, on any of the days shown, and a
- * long press on the strip along its bottom edge drags its end instead; the
- * grid scrolls while the finger rests near its top or bottom. Letting go
- * somewhere else asks [onMove] to move the occurrence there. The occurrence
- * whose summary is open, [selected], is drawn in the primary colour's tint.
+ * event at that quarter hour, as long as a new event is. A long press on
+ * empty grid and a drag marks out a new event's span. A long press lifts a
+ * block, which then follows the finger to the quarter hour on any of the
+ * days shown, or into the band to make it all day; a long press on the strip
+ * along its bottom edge drags its end instead. A bar lifted from the band
+ * moves by days, or drops into the grid as a timed event. The grid scrolls
+ * while the finger rests near its top or bottom, and turns to the previous
+ * or next range, by [onStep], while a lifted occurrence rests at its side.
+ * Letting go asks [onMove] to move the occurrence there, or [onCreate] to
+ * start an event over the span, with no finish for a tap or a press that
+ * marked nothing out. The occurrence whose summary is open, [selected], is
+ * drawn in the primary colour's tint. [clock] is the time now, epoch seconds.
  */
 @Composable
 fun TimeGrid(
@@ -183,18 +249,37 @@ fun TimeGrid(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
     onOpen: (Instance) -> Unit,
-    onCreate: (LocalDate, Int) -> Unit,
-    onMove: (Instance, Long, Long) -> Unit,
+    onCreate: (Long, Long?) -> Unit,
+    onMove: (Instance, Moved) -> Unit,
+    onStep: (Int) -> Unit,
     selected: Instance? = null,
+    clock: () -> Long = { Instant.now().epochSecond },
 ) {
     val format = LocalFormat.current
     val scroll = rememberScrollState()
-    val today = LocalDate.now(viewModel.timezone())
+    val band = rememberScrollState()
+    val user = viewModel.timezone()
+    val zones = viewModel.zones()
+    val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
+    // The current-time line, and which occurrences are over, only have to be
+    // right to the minute.
+    val now by produceState(clock()) {
+        while (true) {
+            delay(30_000)
+            value = clock()
+        }
+    }
+    val today = Instant.ofEpochSecond(now).atZone(user).toLocalDate()
     val columns = LocalConfiguration.current.screenWidthDp.dp - GUTTER
     val width = columns / days.size.coerceAtLeast(1)
+    val length = maxOf(15, state.preferences.duration)
 
     val byDay = remember(state.instances, state.hidden, days, state.preferences.zones) {
-        days.associateWith { day -> state.visible.filter { viewModel.covers(it, day) } }
+        days.associateWith { day -> state.visible.filter { !it.allday && viewModel.covers(it, day) } }
+    }
+    val layouts = remember(byDay) { byDay.mapValues { (day, instances) -> lay(instances, viewModel, day) } }
+    val wholes = remember(state.instances, state.hidden, days, state.preferences.zones) {
+        state.visible.filter { it.allday && days.any { day -> viewModel.covers(it, day) } }
     }
 
     // Opens on the working day rather than at midnight, as Thunderbird does.
@@ -206,76 +291,251 @@ fun TimeGrid(
         scroll.scrollTo(with(density) { (HOUR * hours).roundToPx() })
     }
 
-    // The lifted block, the finger and the grid's geometry, all in the
+    // What a long press took, the finger and the grid's geometry, all in the
     // root's coordinates: the finger stays put while the grid scrolls under
-    // it, so where the block would land is read from the finger and the
-    // scroll rather than from where the finger last moved.
-    var lift by remember { mutableStateOf<Lift?>(null) }
+    // it, so where a drag would land is read from the finger and the scroll
+    // rather than from where the finger last moved. The places are the
+    // containers, which stay where they are when the page turns; a day's
+    // column and an occurrence under the finger are worked out from them.
+    var drag by remember { mutableStateOf<Drag?>(null) }
     var finger by remember { mutableStateOf(Offset.Zero) }
+    var area by remember { mutableStateOf<Rect?>(null) }
     var viewport by remember { mutableStateOf<Rect?>(null) }
-    val bounds = remember { mutableStateMapOf<LocalDate, Rect>() }
+    var window by remember { mutableStateOf<Rect?>(null) }
+    var strip by remember { mutableStateOf<Rect?>(null) }
     val hourPx = with(density) { HOUR.toPx() }
-    val user = viewModel.timezone()
-    val zones = viewModel.zones()
+    val rowPx = with(density) { ROW.toPx() }
+    val handlePx = with(density) { HANDLE.toPx() }
+    val leastPx = with(density) { 18.dp.toPx() }
 
-    fun landing(lifted: Lift): Drop? {
-        val window = viewport ?: return null
-        val day = if (lifted.resize) {
-            lifted.day
-        } else {
-            days.minByOrNull { day ->
-                val column = bounds[day] ?: return@minByOrNull Float.MAX_VALUE
-                when {
-                    finger.x < column.left -> column.left - finger.x
-                    finger.x >= column.right -> finger.x - column.right
-                    else -> 0f
-                }
-            } ?: lifted.day
-        }
-        val content = (finger.y - window.top + scroll.value) / hourPx
-        val cut = if (lifted.resize) {
-            resized(lifted.cut, content)
-        } else {
-            moved(lifted.cut, content - lifted.grab / hourPx - lifted.cut.from)
-        }
-        val startZone = if (zones) zoneOf(lifted.instance.zone?.start, user) else user
-        val finishZone = if (zones) zoneOf(lifted.instance.zone?.finish, user) else user
-        val (start, finish) = dropped(lifted.instance, lifted.day, lifted.cut, day, cut, startZone, finishZone, lifted.resize)
-        return Drop(day, cut, start, finish)
+    /** The column under [x], by its place among the days, or null off the columns. */
+    fun column(x: Float): Int? {
+        val row = strip ?: return null
+        val across = if (rtl) row.right - x else x - row.left
+        if (across < 0 || across >= row.width) return null
+        return (across / (row.width / days.size)).toInt().coerceIn(0, days.size - 1)
     }
-    val drop = lift?.let { landing(it) }
+
+    /** The column nearest [x], the first or last when the finger is off to a side. */
+    fun nearest(x: Float): LocalDate {
+        val row = strip ?: return days.first()
+        val across = if (rtl) row.right - x else x - row.left
+        return days[(across / (row.width / days.size)).toInt().coerceIn(0, days.size - 1)]
+    }
+
+    /** Hours past midnight at a height [y] in the root, through the scroll. */
+    fun hours(y: Float): Float = (y - (viewport?.top ?: 0f) + scroll.value) / hourPx
+
+    fun landing(lift: Drag.Lift): Landing? {
+        val grid = viewport ?: return null
+        val day = if (lift.resize) lift.day else nearest(finger.x)
+        if (!lift.resize && finger.y < grid.top) {
+            val first = viewModel.day(lift.instance)
+            val moved = first.plusDays(ChronoUnit.DAYS.between(lift.day, day))
+            // A bar that has not left its day goes nowhere.
+            if (lift.band && moved == first) return null
+            return Landing.Whole(moved, ChronoUnit.DAYS.between(first, viewModel.finish(lift.instance)) + 1)
+        }
+        if (lift.band) {
+            val cut = moved(Cut(0f, length / 60f), hours(finger.y))
+            val start = at(day, cut.from, user)
+            return Landing.Timed(day, cut, start, start + length * 60L)
+        }
+        val content = hours(finger.y)
+        val cut = if (lift.resize) resized(lift.cut, content) else moved(lift.cut, content - lift.grab - lift.cut.from)
+        val startZone = if (zones) zoneOf(lift.instance.zone?.start, user) else user
+        val finishZone = if (zones) zoneOf(lift.instance.zone?.finish, user) else user
+        val (start, finish) = dropped(lift.instance, lift.day, lift.cut, day, cut, startZone, finishZone, lift.resize)
+        return Landing.Timed(day, cut, start, finish)
+    }
+
+    /** A new event's span while it is marked out, hours past midnight, never shorter than a quarter hour. */
+    fun span(create: Drag.Create): Cut {
+        val to = snap(hours(finger.y)).coerceIn(0f, 24f)
+        val from = minOf(create.anchor, to)
+        return Cut(from, maxOf(create.anchor, to).coerceAtLeast(from + LEAST).coerceAtMost(24f))
+    }
+
+    val lifted = drag as? Drag.Lift
+    val target = lifted?.let { landing(it) }
+    val bars = remember(wholes, days, target, lifted) {
+        val spans = wholes.map { Span<Instance?>(it, viewModel.day(it), viewModel.finish(it)) } +
+            listOfNotNull((target as? Landing.Whole)?.let { Span<Instance?>(null, it.first, it.first.plusDays(it.length - 1)) })
+        rows(days, spans)
+    }
+
+    /**
+     * What a long press at [at] takes: a bar in the band, a block or its end
+     * handle in a column, or empty grid in a column. Nothing for the
+     * headings, the gutter, an empty stretch of band, or an occurrence that
+     * cannot be moved.
+     */
+    fun take(at: Offset): Drag? {
+        val grid = viewport ?: return null
+        window?.takeIf { it.contains(at) }?.let { shown ->
+            val index = column(at.x) ?: return null
+            val row = ((at.y - shown.top + band.value) / rowPx).toInt()
+            val bar = bars.firstOrNull { it.row == row && index >= it.column && index < it.column + it.span }
+            val instance = bar?.item?.takeIf { it.editable } ?: return null
+            return Drag.Lift(instance, days[index], Cut(0f, 0f), 0f, resize = false, band = true)
+        }
+        if (!grid.contains(at)) return null
+        val index = column(at.x) ?: return null
+        val day = days[index]
+        val content = hours(at.y)
+        val row = strip ?: return null
+        val slice = row.width / days.size
+        val across = ((if (rtl) row.right - at.x else at.x - row.left) - slice * index) / slice
+        val placed = layouts[day].orEmpty().firstOrNull { placed ->
+            val tall = maxOf(placed.height, leastPx / hourPx)
+            across >= placed.column.toFloat() / placed.columns && across < (placed.column + 1f) / placed.columns &&
+                content >= placed.top && content < placed.top + tall
+        }
+        if (placed != null) {
+            if (!placed.instance.editable) return null
+            val bottom = (placed.top + maxOf(placed.height, leastPx / hourPx)) * hourPx
+            val resize = !placed.backwards && content * hourPx >= bottom - handlePx
+            val cut = Cut(placed.top, placed.top + placed.height, placed.backwards)
+            return Drag.Lift(placed.instance, day, cut, content - placed.top, resize, band = false)
+        }
+        return Drag.Create(day, snap(content).coerceIn(0f, 24f - LEAST))
+    }
+
+    fun drop() {
+        val taken = drag
+        drag = null
+        when (taken) {
+            is Drag.Create -> {
+                val cut = span(taken)
+                val start = at(taken.day, cut.from, user)
+                // A press that marked nothing out is a tap: the default length.
+                val marked = snap(hours(finger.y)).coerceIn(0f, 24f) != taken.anchor
+                onCreate(start, if (marked) at(taken.day, cut.to, user) else null)
+            }
+            is Drag.Lift -> when (val landed = landing(taken)) {
+                is Landing.Whole -> onMove(
+                    taken.instance,
+                    if (taken.band) Moved.Days(landed.first) else Moved.Whole(landed.first),
+                )
+                is Landing.Timed -> when {
+                    taken.band -> onMove(taken.instance, Moved.Timed(landed.day, landed.cut.from))
+                    landed.start != taken.instance.start || landed.finish != taken.instance.finish ->
+                        onMove(taken.instance, Moved.Time(landed.start, landed.finish))
+                }
+                null -> {}
+            }
+            null -> {}
+        }
+    }
+
+    // The gesture outlives a composition, so it reaches what this one built
+    // through a holder set afresh after each. Not through remembered state:
+    // a reference to a local function equals the last composition's, so the
+    // state would keep the first and its days long after the page turned.
+    val hands = remember { Hands() }
+    SideEffect {
+        hands.take = ::take
+        hands.drop = ::drop
+        hands.step = onStep
+    }
+    val haptic = LocalHapticFeedback.current
 
     // The grid scrolls while the finger rests near its top or bottom edge,
-    // faster the nearer it is.
-    LaunchedEffect(lift != null) {
-        if (lift == null) return@LaunchedEffect
-        val edge = with(density) { EDGE.toPx() }
+    // faster the nearer it is, and turns the page while a lifted occurrence
+    // rests at the columns' side, once and then again each hold.
+    LaunchedEffect(drag != null) {
+        if (drag == null) return@LaunchedEffect
+        val near = with(density) { EDGE.toPx() }
         val speed = with(density) { SPEED.toPx() }
+        val page = with(density) { SIDE.toPx() }
+        val dwell = Dwell()
         while (true) {
-            withFrameMillis { }
-            val window = viewport ?: continue
-            val fromTop = finger.y - window.top
-            val fromBottom = window.bottom - finger.y
+            val time = withFrameMillis { it }
+            val grid = viewport ?: continue
+            val current = drag ?: break
+            val fromTop = finger.y - grid.top
+            val fromBottom = grid.bottom - finger.y
+            // Above the grid is the band, which a lifted block is dropped
+            // into rather than scrolled towards.
+            val banded = current is Drag.Lift && !current.resize
             when {
-                fromTop < edge -> scroll.scrollBy(-speed * ((edge - fromTop) / edge).coerceIn(0f, 1f))
-                fromBottom < edge -> scroll.scrollBy(speed * ((edge - fromBottom) / edge).coerceIn(0f, 1f))
+                fromTop < near && (fromTop >= 0 || !banded) ->
+                    scroll.scrollBy(-speed * ((near - fromTop) / near).coerceIn(0f, 1f))
+                fromBottom < near -> scroll.scrollBy(speed * ((near - fromBottom) / near).coerceIn(0f, 1f))
             }
+            val row = strip
+            val over = area?.contains(finger) == true
+            val direction = if (banded && over && row != null) {
+                edge(finger.x, if (rtl) row.right else row.left, if (rtl) row.left else row.right, page)
+            } else {
+                0
+            }
+            val turn = dwell.step(direction, time)
+            if (turn != 0) hands.step(turn)
         }
     }
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        Row(modifier = Modifier.fillMaxWidth()) {
-            Spacer(Modifier.width(GUTTER))
-            for (day in days) {
-                DayHeading(day, today, width, Modifier.clickable { viewModel.open(day) })
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .testTag("grid")
+            .onGloballyPositioned { area = it.rectInRoot() }
+            .pointerInput(Unit) {
+                awaitEachGesture {
+                    val down = awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Initial)
+                    if (!held(down)) return@awaitEachGesture
+                    val origin = area?.topLeft ?: Offset.Zero
+                    val at = origin + down.position
+                    val taken = hands.take(at) ?: return@awaitEachGesture
+                    haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                    finger = at
+                    drag = taken
+                    try {
+                        // Everything the finger does now is the drag's, so
+                        // neither the scroll nor a tap beneath it acts.
+                        while (true) {
+                            val event = awaitPointerEvent(PointerEventPass.Initial)
+                            val change = event.changes.firstOrNull { it.id == down.id } ?: break
+                            finger = origin + change.position
+                            change.consume()
+                            if (change.changedToUpIgnoreConsumed()) {
+                                hands.drop()
+                                break
+                            }
+                        }
+                    } finally {
+                        drag = null
+                    }
+                }
+            },
+    ) {
+        if (days.size > 1) {
+            Row(modifier = Modifier.fillMaxWidth()) {
+                Spacer(Modifier.width(GUTTER))
+                for (day in days) {
+                    DayHeading(day, today, width, Modifier.clickable { viewModel.open(day) })
+                }
             }
         }
-        AllDayBand(days, byDay, width, viewModel, selected, onOpen)
+        AllDayBand(
+            days = days,
+            bars = bars,
+            width = width,
+            scroll = band,
+            label = if (zones) Zones.offset(user.id) else null,
+            lifted = lifted,
+            landing = target as? Landing.Whole,
+            selected = selected,
+            over = { past(it, viewModel.finish(it), now, today) },
+            onOpen = onOpen,
+            onPlaced = { window = it },
+        )
         HorizontalDivider()
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)
+                .testTag("hours")
                 .onGloballyPositioned { viewport = it.rectInRoot() }
                 .verticalScroll(scroll),
         ) {
@@ -283,50 +543,70 @@ fun TimeGrid(
                 Column(modifier = Modifier.width(GUTTER)) {
                     for (hour in 0 until 24) {
                         Box(modifier = Modifier.height(HOUR).fillMaxWidth(), contentAlignment = Alignment.TopEnd) {
-                            Text(
-                                text = format.formatHour(hour),
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(end = 6.dp),
-                            )
+                            // Midnight goes unlabelled: the top of the day says it.
+                            if (hour > 0) {
+                                Text(
+                                    text = format.formatHour(hour),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.padding(end = 6.dp),
+                                )
+                            }
                         }
                     }
                 }
-                for (day in days) {
-                    DayColumn(
-                        day = day,
-                        today = today,
-                        width = width,
-                        stacked = days.size > 1,
-                        instances = byDay[day].orEmpty().filterNot { it.allday },
-                        state = state,
-                        viewModel = viewModel,
-                        lifted = lift?.instance,
-                        selected = selected,
-                        drop = drop?.takeIf { it.day == day },
-                        onOpen = onOpen,
-                        onCreate = onCreate,
-                        onPlaced = { bounds[day] = it },
-                        onLift = { placed, grab, resize ->
-                            lift = Lift(placed.instance, day, Cut(placed.top, placed.top + placed.height, placed.backwards), grab, resize)
-                        },
-                        onDrag = { finger = it },
-                        onDrop = {
-                            val lifted = lift
-                            lift = null
-                            val target = lifted?.let { landing(it) }
-                            if (lifted != null && target != null &&
-                                (target.start != lifted.instance.start || target.finish != lifted.instance.finish)
-                            ) {
-                                onMove(lifted.instance, target.start, target.finish)
-                            }
-                        },
-                        onCancel = { lift = null },
-                    )
+                Row(modifier = Modifier.width(width * days.size).onGloballyPositioned { strip = it.rectInRoot() }) {
+                    for (day in days) {
+                        DayColumn(
+                            day = day,
+                            today = today,
+                            now = now,
+                            width = width,
+                            stacked = days.size > 1,
+                            layout = layouts[day].orEmpty(),
+                            state = state,
+                            viewModel = viewModel,
+                            lifted = lifted?.instance,
+                            selected = selected,
+                            drop = (target as? Landing.Timed)?.takeIf { it.day == day },
+                            creating = (drag as? Drag.Create)?.takeIf { it.day == day }?.let { span(it) },
+                            onOpen = onOpen,
+                            onTap = { hours -> onCreate(at(day, hours, user), null) },
+                        )
+                    }
                 }
             }
         }
     }
+}
+
+/** What the grid's gesture calls on, from the latest composition. */
+private class Hands {
+    var take: (Offset) -> Drag? = { null }
+    var drop: () -> Unit = {}
+    var step: (Int) -> Unit = {}
+}
+
+/**
+ * Waits out a long press: true once the finger has rested, within the touch
+ * slop and with nothing beneath taking its moves, for the long-press time;
+ * false when it lifts, moves off or a scroll takes it first.
+ */
+private suspend fun AwaitPointerEventScope.held(down: PointerInputChange): Boolean {
+    val slop = viewConfiguration.touchSlop
+    val ended = withTimeoutOrNull(viewConfiguration.longPressTimeoutMillis) {
+        while (true) {
+            val event = awaitPointerEvent(PointerEventPass.Final)
+            val change = event.changes.firstOrNull { it.id == down.id } ?: return@withTimeoutOrNull true
+            // The press itself, which a tap target beneath has taken.
+            if (change.changedToDownIgnoreConsumed()) continue
+            if (change.changedToUpIgnoreConsumed() || change.isConsumed) return@withTimeoutOrNull true
+            if ((change.position - down.position).getDistance() > slop) return@withTimeoutOrNull true
+        }
+        @Suppress("UNREACHABLE_CODE")
+        true
+    }
+    return ended == null
 }
 
 /** A layout's bounds in the root's coordinates, unclipped by its parents. */
@@ -366,36 +646,80 @@ fun heading(day: LocalDate, pattern: String, locale: java.util.Locale): String =
     java.time.format.DateTimeFormatter.ofPattern(pattern, locale).format(day)
 
 /**
- * The band above the grid, holding the all-day occurrences as bars; a timed
- * one that crosses midnight is a block on each day it covers instead.
+ * The band above the grid: "All day" in the gutter, under the zone the
+ * hours read in when given as [label], and the all-day occurrences laid out
+ * as [bars], each one bar across the days it covers. A bar laid out with no
+ * occurrence is where the [lifted] one would land, drawn raised; the bar it
+ * was lifted from fades once it is going somewhere. The band holds at least
+ * one row and shows up to [ROWS] before it scrolls by [scroll].
  */
 @Composable
 private fun AllDayBand(
     days: List<LocalDate>,
-    byDay: Map<LocalDate, List<Instance>>,
+    bars: List<Laid<Instance?>>,
     width: Dp,
-    viewModel: CalendarViewModel,
+    scroll: ScrollState,
+    label: String?,
+    lifted: Drag.Lift?,
+    landing: Landing.Whole?,
     selected: Instance?,
+    over: (Instance) -> Boolean,
     onOpen: (Instance) -> Unit,
+    onPlaced: (Rect) -> Unit,
 ) {
-    val rows = days.maxOfOrNull { byDay[it].orEmpty().count { instance -> instance.allday } } ?: 0
-    if (rows == 0) return
-    Row(modifier = Modifier.fillMaxWidth().heightIn(max = BAND * 4)) {
-        Spacer(Modifier.width(GUTTER))
-        for (day in days) {
-            Column(
-                modifier = Modifier.width(width).padding(horizontal = 1.dp),
-                verticalArrangement = Arrangement.spacedBy(2.dp),
-            ) {
-                for (instance in byDay[day].orEmpty().filter { it.allday }.take(4)) {
-                    Chip(
-                        instance,
-                        Modifier
-                            .height(BAND)
-                            .fillMaxWidth()
-                            .alpha(opacity(carried = false, over = viewModel.past(instance), cancelled = instance.cancelled)),
-                        chosen = same(instance, selected),
-                    ) { onOpen(instance) }
+    val rows = (bars.maxOfOrNull { it.row } ?: -1) + 1
+    Row(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.width(GUTTER).padding(horizontal = 4.dp, vertical = 4.dp)) {
+            if (label != null) {
+                Text(
+                    text = label,
+                    style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.testTag("gutter-zone"),
+                )
+            }
+            Text(
+                text = stringResource(R.string.calendars_event_allday),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        Box(
+            modifier = Modifier
+                .width(width * days.size)
+                .heightIn(max = ROW * ROWS + 4.dp)
+                .testTag("band")
+                .onGloballyPositioned { onPlaced(it.rectInRoot()) }
+                .verticalScroll(scroll),
+        ) {
+            Box(modifier = Modifier.fillMaxWidth().height(ROW * maxOf(1, rows) + 4.dp)) {
+                for (bar in bars) {
+                    val instance = bar.item ?: lifted?.instance ?: continue
+                    val raised = bar.item == null
+                    key(instance.event, instance.start, raised) {
+                        Box(
+                            modifier = Modifier
+                                .offset(x = width * bar.column, y = ROW * bar.row + 2.dp)
+                                .width(width * bar.span - 2.dp)
+                                .height(BAND)
+                                .zIndex(if (raised) 1f else 0f),
+                        ) {
+                            if (raised) {
+                                Chip(instance, Modifier.fillMaxSize().shadow(6.dp, corners()), raised = true) {}
+                            } else {
+                                val carried = landing != null && lifted != null && same(instance, lifted.instance)
+                                Chip(
+                                    instance,
+                                    Modifier
+                                        .fillMaxSize()
+                                        .alpha(opacity(carried = carried, over = over(instance), cancelled = instance.cancelled)),
+                                    chosen = same(instance, selected),
+                                ) { onOpen(instance) }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -406,34 +730,36 @@ private fun AllDayBand(
 private fun DayColumn(
     day: LocalDate,
     today: LocalDate,
+    now: Long,
     width: Dp,
     stacked: Boolean,
-    instances: List<Instance>,
+    layout: List<Placed>,
     state: CalendarUiState,
     viewModel: CalendarViewModel,
     lifted: Instance?,
     selected: Instance?,
-    drop: Drop?,
+    drop: Landing.Timed?,
+    creating: Cut?,
     onOpen: (Instance) -> Unit,
-    onCreate: (LocalDate, Int) -> Unit,
-    onPlaced: (Rect) -> Unit,
-    onLift: (Placed, Float, Boolean) -> Unit,
-    onDrag: (Offset) -> Unit,
-    onDrop: () -> Unit,
-    onCancel: () -> Unit,
+    onTap: (Float) -> Unit,
 ) {
     val format = LocalFormat.current
     val shading = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
     val line = MaterialTheme.colorScheme.error
     val working = state.preferences.days.contains(day.dayOfWeek.value % 7)
-    val layout = remember(instances, day, state.preferences.zones) { lay(instances, viewModel, day) }
     val zones = viewModel.zones()
+    val hourPx = with(LocalDensity.current) { HOUR.toPx() }
+    val tap by rememberUpdatedState(onTap)
 
     Box(
         modifier = Modifier
             .width(width)
             .height(HOUR * 24)
-            .onGloballyPositioned { onPlaced(it.rectInRoot()) },
+            .pointerInput(Unit) {
+                // A tap on empty grid starts an event at that quarter hour;
+                // a tap on a block is the block's own.
+                detectTapGestures(onTap = { at -> tap(snap(at.y / hourPx).coerceIn(0f, 24f - SNAP)) })
+            },
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
             for (hour in 0 until 24) {
@@ -442,8 +768,7 @@ private fun DayColumn(
                     modifier = Modifier
                         .height(HOUR)
                         .fillMaxWidth()
-                        .background(if (shaded) shading else Color.Transparent)
-                        .clickable { onCreate(day, hour) },
+                        .background(if (shaded) shading else Color.Transparent),
                 ) {
                     HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
                 }
@@ -458,7 +783,13 @@ private fun DayColumn(
                     .width(columnWidth)
                     .height((HOUR * placed.height).coerceAtLeast(18.dp))
                     .padding(end = 2.dp)
-                    .alpha(opacity(carried = own, over = viewModel.past(placed.instance), cancelled = placed.instance.cancelled)),
+                    .alpha(
+                        opacity(
+                            carried = own,
+                            over = past(placed.instance, viewModel.finish(placed.instance), now, today),
+                            cancelled = placed.instance.cancelled,
+                        ),
+                    ),
             ) {
                 Block(
                     instance = placed.instance,
@@ -467,7 +798,7 @@ private fun DayColumn(
                     handle = placed.instance.editable && !placed.backwards,
                     stacked = stacked,
                     chosen = same(placed.instance, selected),
-                    modifier = Modifier.lift(placed, onLift, onDrag, onDrop, onCancel) { onOpen(placed.instance) },
+                    modifier = Modifier.clickable { onOpen(placed.instance) },
                 )
             }
         }
@@ -480,73 +811,56 @@ private fun DayColumn(
                     .padding(end = 2.dp)
                     .zIndex(1f),
             ) {
+                // A bar dropped into the grid reads in the user's own clock,
+                // having no zones of its own.
+                val moved = lifted.copy(start = drop.start, finish = drop.finish, allday = false, date = null)
                 Block(
                     instance = lifted,
                     zones = zones,
-                    span = interval(lifted.copy(start = drop.start, finish = drop.finish), zones, format::formatTime, ranged()),
+                    span = interval(moved, zones && !lifted.allday, format::formatTime, ranged()),
                     stacked = stacked,
                     modifier = Modifier.shadow(6.dp, corners()),
                 )
             }
         }
+        if (creating != null) {
+            Box(
+                modifier = Modifier
+                    .offset(y = HOUR * creating.from)
+                    .fillMaxWidth()
+                    .height(HOUR * (creating.to - creating.from))
+                    .padding(horizontal = 4.dp)
+                    .clip(corners())
+                    .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.15f))
+                    .border(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.6f), corners())
+                    .zIndex(1f)
+                    .testTag("creating"),
+            )
+        }
         if (day == today) {
-            val now = LocalTime.now(viewModel.timezone())
-            val fraction = (now.hour + now.minute / 60f)
+            val time = Instant.ofEpochSecond(now).atZone(viewModel.timezone())
+            val fraction = time.hour + time.minute / 60f
             Box(
                 modifier = Modifier
                     .offset(y = HOUR * fraction)
                     .fillMaxWidth()
                     .height(2.dp)
-                    .background(line),
+                    .background(line)
+                    .zIndex(2f)
+                    .testTag("now"),
+            )
+            // The dot at the line's start, half over the column's edge.
+            Box(
+                modifier = Modifier
+                    .offset(x = (-4).dp, y = HOUR * fraction - 3.dp)
+                    .size(8.dp)
+                    .clip(CircleShape)
+                    .background(line)
+                    .zIndex(2f)
+                    .testTag("now-dot"),
             )
         }
     }
-}
-
-/**
- * A tap opens the block; a long press lifts it, with the finger's distance
- * down the block, or takes its end handle when the press is on the strip
- * along the bottom. The finger is reported in the root's coordinates, which
- * the block's own keep up with as the grid scrolls under it. The lift and
- * the drag consume their events, so the tap and the scroll do not also run.
- * A read-only occurrence, and a birthday, cannot be lifted.
- */
-@Composable
-private fun Modifier.lift(
-    placed: Placed,
-    onLift: (Placed, Float, Boolean) -> Unit,
-    onDrag: (Offset) -> Unit,
-    onDrop: () -> Unit,
-    onCancel: () -> Unit,
-    onClick: () -> Unit,
-): Modifier {
-    val haptic = LocalHapticFeedback.current
-    val handle = with(LocalDensity.current) { HANDLE.toPx() }
-    var coordinates by remember { mutableStateOf<LayoutCoordinates?>(null) }
-    val lift by rememberUpdatedState(onLift)
-    val drag by rememberUpdatedState(onDrag)
-    val drop by rememberUpdatedState(onDrop)
-    val cancel by rememberUpdatedState(onCancel)
-    val clicked = this.clickable(onClick = onClick)
-    if (!placed.instance.editable) return clicked
-    return clicked
-        .onGloballyPositioned { coordinates = it }
-        .pointerInput(placed.instance.event, placed.instance.start, placed.backwards) {
-            detectDragGesturesAfterLongPress(
-                onDragStart = { position ->
-                    haptic.performHapticFeedback(HapticFeedbackType.LongPress)
-                    val resize = !placed.backwards && position.y >= size.height - handle
-                    lift(placed, position.y, resize)
-                    drag(coordinates?.localToRoot(position) ?: position)
-                },
-                onDrag = { change, _ ->
-                    change.consume()
-                    drag(coordinates?.localToRoot(change.position) ?: change.position)
-                },
-                onDragEnd = { drop() },
-                onDragCancel = { cancel() },
-            )
-        }
 }
 
 /** One occurrence placed in a day column. */

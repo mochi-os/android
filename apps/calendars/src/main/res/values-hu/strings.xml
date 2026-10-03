@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Évi</string>
     <string name="calendars_repeat_custom">Egyéni</string>
     <string name="calendars_reminder_none">Nincs</string>
-    <string name="calendars_day_sunday">Vasárnap</string>
-    <string name="calendars_day_monday">Hétfő</string>
-    <string name="calendars_day_tuesday">Kedd</string>
-    <string name="calendars_day_wednesday">Szerda</string>
-    <string name="calendars_day_thursday">Csütörtök</string>
-    <string name="calendars_day_friday">Péntek</string>
-    <string name="calendars_day_saturday">Szombat</string>
     <string name="calendars_link_replace">Csere</string>
     <string name="calendars_link_revoke">Visszavonás</string>
     <string name="calendars_permission_allow">Engedélyezés</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Hónap</string>
     <string name="calendars_workweek">Munkahét</string>
     <string name="calendars_range">%1$s – %2$s</string>
-    <string name="calendars_truncated">Ebben a tartományban néhány esemény nem jelenik meg.</string>
+    <string name="calendars_truncated">Túl sok esemény van ahhoz, hogy mindet megjelenítsük. Válasszon rövidebb tartományt.</string>
     <string name="calendars_list_empty">Nincsenek események</string>
     <string name="calendars_untitled">(Nincs cím)</string>
     <string name="calendars_status_cancelled">Lemondva</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Emlékeztető eltávolítása</string>
     <string name="calendars_hours_start">Munkaidő kezdete</string>
     <string name="calendars_hours_finish">Munkaidő vége</string>
-    <string name="calendars_hours_invalid">A munkaidőnek a kezdése után kell véget érnie.</string>
     <string name="calendars_work_days">Munkanapok</string>
     <string name="calendars_multiweek_weeks">Megjelenített hetek</string>
     <string name="calendars_multiweek_previous">Megelőző hetek</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Egész napos események</string>
     <string name="calendars_allday_first">Az elején</string>
     <string name="calendars_allday_last">A végén</string>
-    <string name="calendars_link_title">Naptárhivatkozás</string>
-    <string name="calendars_link_copy">Hivatkozás másolása</string>
+    <string name="calendars_link_title">Naptár címe</string>
+    <string name="calendars_link_copy">Naptár címének másolása</string>
     <string name="calendars_link_once">Másolja ki most: később nem jeleníthető meg újra.</string>
-    <string name="calendars_link_exists">Ehhez a naptárhoz már tartozik hivatkozás.</string>
+    <string name="calendars_link_exists">Ezt a naptárcímet már kiadták, és nem jeleníthető meg újra.</string>
     <string name="calendars_permission_title">Engedélyezi a hozzáférést?</string>
     <string name="calendars_permission_message">A(z) %1$s a következőt kéri:</string>
     <string name="calendars_sync_authorization">Jelentkezzen be újra a szinkronizálás folytatásához</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Nincs csatlakoztatott eszköz</string>
     <string name="calendars_device_used">Utoljára használva %1$s</string>
     <string name="calendars_device_never">soha</string>
-    <string name="calendars_device_deleted">Eszköz eltávolítva</string>
-    <string name="calendars_device_delete_title">Eltávolítja ezt az eszközt?</string>
-    <string name="calendars_device_delete_message">A szinkronizáláshoz újra be kell majd állítani.</string>
+    <string name="calendars_device_deleted">Eszköz törölve</string>
+    <string name="calendars_device_delete_title">Törli az eszközt?</string>
+    <string name="calendars_device_delete_message">Az eszköz többé nem tudja szinkronizálni a névjegyeket és a naptárakat.</string>
     <string name="calendars_sync_choose">Szinkronizálandó naptárak</string>
     <string name="calendars_poll_large">A naptár túl nagy</string>
     <string name="calendars_poll_invalid">A cím nem naptárat adott vissza</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Naptár</string>
-    <string name="calendars_subscribe_google_enable">A Google-fiókok nincsenek engedélyezve ezen a kiszolgálón. Engedélyezd őket a Beállítások, Rendszerbeállítások alatt.</string>
+    <string name="calendars_subscribe_google_enable">A Google-fiókok nincsenek engedélyezve ezen a kiszolgálón.</string>
     <string name="calendars_subscribe_google_connect">Nem csatlakoztattál Google-fiókot.</string>
     <string name="calendars_subscribe_google_connect_action">Google csatlakoztatása</string>
     <string name="calendars_grant_failed">A naptár-hozzáférést nem adták meg</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s napig</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Korábbi események</string>
+    <string name="calendars_created">Naptár létrehozva</string>
+    <string name="calendars_renamed">Naptár átnevezve</string>
+    <string name="calendars_colour_saved">Szín mentve</string>
+    <string name="calendars_deleted">Naptár törölve</string>
+    <string name="calendars_removed">Naptár eltávolítva</string>
+    <string name="calendars_preferences_saved">Preferenciák mentve</string>
+    <string name="calendars_link_revoked">Naptár címe visszavonva</string>
+    <string name="calendars_link_none">Ennek a naptárnak nincs visszavonható címe</string>
+    <string name="calendars_linked">Naptár összekapcsolva</string>
+    <string name="calendars_subscribed">Feliratkozva</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s óra</item>
+        <item quantity="other">%1$s óra</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google-fiókok engedélyezése</string>
+    <string name="calendars_provider_caldav">Naptárkiszolgáló</string>
 </resources>

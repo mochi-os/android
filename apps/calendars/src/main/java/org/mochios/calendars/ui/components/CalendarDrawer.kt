@@ -264,7 +264,10 @@ internal fun CalendarRow(
                         onAction(CalendarAction.ONLY)
                     },
                 )
-                if (!calendar.readonly) {
+                // A subscription or a linked calendar is named here even when
+                // its events cannot be written; only the birthdays calendar
+                // keeps its own name.
+                if (!calendar.birthdays) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.calendars_rename)) },
                         leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
@@ -280,14 +283,6 @@ internal fun CalendarRow(
                     onClick = {
                         expanded = false
                         onAction(CalendarAction.COLOUR)
-                    },
-                )
-                MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.calendars_link_copy)) },
-                    leadingIcon = { Icon(Icons.Outlined.ContentCopy, contentDescription = null) },
-                    onClick = {
-                        expanded = false
-                        onAction(CalendarAction.LINK)
                     },
                 )
                 if (calendar.subscription || calendar.linked) {
@@ -315,6 +310,14 @@ internal fun CalendarRow(
                         },
                     )
                 }
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.calendars_link_copy)) },
+                    leadingIcon = { Icon(Icons.Outlined.ContentCopy, contentDescription = null) },
+                    onClick = {
+                        expanded = false
+                        onAction(CalendarAction.LINK)
+                    },
+                )
                 if (!calendar.readonly) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.calendars_import)) },

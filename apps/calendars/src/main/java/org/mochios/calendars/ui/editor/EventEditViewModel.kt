@@ -17,7 +17,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.util.NaturalCompare
@@ -27,6 +26,7 @@ import org.mochios.calendars.model.Event
 import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
+import org.mochios.calendars.di.Viewer
 import org.mochios.calendars.model.defaultCalendar
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
@@ -131,7 +131,7 @@ enum class Prompt {
 class EventEditViewModel @Inject constructor(
     @param:ApplicationContext private val context: Context,
     private val repository: CalendarsRepository,
-    private val preferencesManager: PreferencesManager,
+    private val viewer: Viewer,
     handle: SavedStateHandle,
 ) : ViewModel() {
 
@@ -143,8 +143,7 @@ class EventEditViewModel @Inject constructor(
 
     /** The zone the editor writes in when the event names none. */
     val zone: String
-        get() = runCatching { ZoneId.of(preferencesManager.preferences.value.timezone).id }
-            .getOrDefault(ZoneId.systemDefault().id)
+        get() = viewer.zone()
 
     /** How the editor was opened, which Retry does again after a failure to load. */
     private var opening: () -> Unit = {}
@@ -178,7 +177,7 @@ class EventEditViewModel @Inject constructor(
             when (source) {
                 "event" -> copy(copied, occurrence, scope)
                 "occurrence" -> copy(instance)
-                else -> load(event, occurrence, start, allday)
+                else -> load(event, occurrence, start, allday, instance.finish)
             }
         }
         opening()
@@ -204,7 +203,12 @@ class EventEditViewModel @Inject constructor(
         }
     }
 
-    private fun load(event: String?, occurrence: Long, start: Long, allday: Boolean?) {
+    /**
+     * Opens the stored [event], or a new one at [start] when it names none:
+     * over [finish] when a span was marked out on the grid, and for the
+     * default length otherwise.
+     */
+    private fun load(event: String?, occurrence: Long, start: Long, allday: Boolean?, finish: Long) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null, failure = null)
             val calendars = calendars() ?: return@launch
@@ -219,7 +223,11 @@ class EventEditViewModel @Inject constructor(
                     start > 0 -> start
                     else -> opening(preferences?.hours ?: Hours())
                 }
-                val length = if (memory.allday) 86_400L else 60L * (preferences?.duration ?: 60)
+                val length = when {
+                    memory.allday -> 86_400L
+                    start > 0 && finish > start -> finish - start
+                    else -> 60L * (preferences?.duration ?: 60)
+                }
                 _uiState.value = EditorUiState(
                     calendars = calendars,
                     calendar = preferred(calendars, preferences?.calendar.orEmpty()),

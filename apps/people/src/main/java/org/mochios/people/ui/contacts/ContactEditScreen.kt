@@ -61,6 +61,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.weekLocale
 import org.mochios.android.ui.components.CompactTextField
 import org.mochios.android.ui.components.CreateEntityForm
 import org.mochios.android.ui.components.CreateEntityScaffold
@@ -711,7 +712,7 @@ private fun BirthdayField(value: String, onValueChange: (String) -> Unit) {
         val weekStartsOn = format.preferences.weekStartsOn
         val baseConfiguration = LocalConfiguration.current
         val localised = remember(baseConfiguration, weekStartsOn) {
-            Configuration(baseConfiguration).apply { setLocale(localeForWeekStart(weekStartsOn)) }
+            Configuration(baseConfiguration).apply { setLocale(weekLocale(weekStartsOn, baseConfiguration.locales[0])) }
         }
         CompositionLocalProvider(LocalConfiguration provides localised) {
             val pickerState = rememberDatePickerState(
@@ -749,18 +750,6 @@ private fun birthdaySeconds(value: String): Long? = try {
     java.time.LocalDate.parse(value).toEpochDay() * 86_400L
 } catch (_: Exception) {
     null
-}
-
-/**
- * Map weekStartsOn (0=Sun … 6=Sat) to a representative Locale that gives the
- * DatePicker the right firstDayOfWeek. Beyond Sun/Mon/Sat there's no widely
- * used locale with the required day, so we fall back to the device default.
- */
-private fun localeForWeekStart(weekStartsOn: Int): java.util.Locale = when (weekStartsOn) {
-    0 -> java.util.Locale.US               // Sunday
-    1 -> java.util.Locale("en", "GB")      // Monday
-    6 -> java.util.Locale("ar", "SA")      // Saturday
-    else -> java.util.Locale.getDefault()
 }
 
 private fun typeLabel(type: String): Int = when (type) {

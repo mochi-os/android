@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">વાર્ષિક</string>
     <string name="calendars_repeat_custom">કસ્ટમ</string>
     <string name="calendars_reminder_none">કોઈ નહીં</string>
-    <string name="calendars_day_sunday">રવિવાર</string>
-    <string name="calendars_day_monday">સોમવાર</string>
-    <string name="calendars_day_tuesday">મંગળવાર</string>
-    <string name="calendars_day_wednesday">બુધવાર</string>
-    <string name="calendars_day_thursday">ગુરુવાર</string>
-    <string name="calendars_day_friday">શુક્રવાર</string>
-    <string name="calendars_day_saturday">શનિવાર</string>
     <string name="calendars_link_replace">બદલો</string>
     <string name="calendars_link_revoke">પાછું ખેંચો</string>
     <string name="calendars_permission_allow">મંજૂરી આપો</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">મહિનો</string>
     <string name="calendars_workweek">કાર્ય અઠવાડિયું</string>
     <string name="calendars_range">%1$s થી %2$s</string>
-    <string name="calendars_truncated">આ શ્રેણીના કેટલાક ઇવેન્ટ્સ બતાવાયા નથી.</string>
+    <string name="calendars_truncated">બધા બતાવવા માટે ઘણા બધા ઇવેન્ટ્સ છે. ટૂંકી શ્રેણી પસંદ કરો.</string>
     <string name="calendars_list_empty">કોઈ ઇવેન્ટ્સ નથી</string>
     <string name="calendars_untitled">(શીર્ષક નથી)</string>
     <string name="calendars_status_cancelled">રદ</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">રિમાઇન્ડર દૂર કરો</string>
     <string name="calendars_hours_start">કામના કલાકોની શરૂઆત</string>
     <string name="calendars_hours_finish">કામના કલાકોનો અંત</string>
-    <string name="calendars_hours_invalid">કામના કલાકો શરૂ થયા પછી પૂરા થવા જોઈએ.</string>
     <string name="calendars_work_days">કામના દિવસો</string>
     <string name="calendars_multiweek_weeks">બતાવેલાં અઠવાડિયાં</string>
     <string name="calendars_multiweek_previous">પહેલાંનાં અઠવાડિયાં</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">આખા દિવસના ઇવેન્ટ્સ</string>
     <string name="calendars_allday_first">શરૂઆતમાં</string>
     <string name="calendars_allday_last">અંતમાં</string>
-    <string name="calendars_link_title">કૅલેન્ડર લિંક</string>
-    <string name="calendars_link_copy">લિંક કૉપિ કરો</string>
+    <string name="calendars_link_title">કૅલેન્ડરનું સરનામું</string>
+    <string name="calendars_link_copy">કૅલેન્ડરનું સરનામું કૉપિ કરો</string>
     <string name="calendars_link_once">હમણાં જ કૉપિ કરો: તે ફરીથી બતાવી શકાશે નહીં.</string>
-    <string name="calendars_link_exists">આ કૅલેન્ડર માટે પહેલેથી જ એક લિંક છે.</string>
+    <string name="calendars_link_exists">આ કૅલેન્ડર સરનામું પહેલેથી જ જારી કરવામાં આવ્યું છે અને ફરીથી બતાવી શકાશે નહીં.</string>
     <string name="calendars_permission_title">ઍક્સેસની મંજૂરી આપવી?</string>
     <string name="calendars_permission_message">%1$s આ માગે છે:</string>
     <string name="calendars_sync_authorization">સિંક ચાલુ રાખવા માટે ફરીથી સાઇન ઇન કરો</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">કોઈ ઉપકરણ જોડાયેલું નથી</string>
     <string name="calendars_device_used">છેલ્લે ઉપયોગ કર્યો %1$s</string>
     <string name="calendars_device_never">ક્યારેય નહીં</string>
-    <string name="calendars_device_deleted">ઉપકરણ દૂર કર્યું</string>
-    <string name="calendars_device_delete_title">આ ઉપકરણ દૂર કરવું?</string>
-    <string name="calendars_device_delete_message">સિંક કરવા માટે તેને ફરીથી સેટ કરવું પડશે.</string>
+    <string name="calendars_device_deleted">ઉપકરણ કાઢી નાખ્યું</string>
+    <string name="calendars_device_delete_title">ઉપકરણ કાઢી નાખવું?</string>
+    <string name="calendars_device_delete_message">ઉપકરણ હવે સંપર્કો કે કૅલેન્ડર સિંક કરી શકશે નહીં.</string>
     <string name="calendars_sync_choose">સિંક કરવાનાં કૅલેન્ડર</string>
     <string name="calendars_poll_large">કૅલેન્ડર ખૂબ મોટું છે</string>
     <string name="calendars_poll_invalid">સરનામાએ કોઈ કૅલેન્ડર પરત કર્યું નથી</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google કૅલેન્ડર</string>
-    <string name="calendars_subscribe_google_enable">આ સર્વર પર Google ખાતાં સક્ષમ કરવામાં આવ્યાં નથી. તેમને સેટિંગ્સ, સિસ્ટમ સેટિંગ્સ માં સક્ષમ કરો.</string>
+    <string name="calendars_subscribe_google_enable">આ સર્વર પર Google ખાતાં સક્ષમ કરવામાં આવ્યાં નથી.</string>
     <string name="calendars_subscribe_google_connect">તમે કોઈ Google ખાતું જોડ્યું નથી.</string>
     <string name="calendars_subscribe_google_connect_action">Google સાથે જોડાઓ</string>
     <string name="calendars_grant_failed">કૅલેન્ડર ઍક્સેસ આપવામાં આવી નથી</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s સુધી</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">અગાઉના ઇવેન્ટ્સ</string>
+    <string name="calendars_created">કૅલેન્ડર બનાવ્યું</string>
+    <string name="calendars_renamed">કૅલેન્ડરનું નામ બદલ્યું</string>
+    <string name="calendars_colour_saved">રંગ સાચવ્યો</string>
+    <string name="calendars_deleted">કૅલેન્ડર કાઢી નાખ્યું</string>
+    <string name="calendars_removed">કૅલેન્ડર દૂર કર્યું</string>
+    <string name="calendars_preferences_saved">પ્રેફરન્સ સાચવ્યા</string>
+    <string name="calendars_link_revoked">કૅલેન્ડરનું સરનામું પાછું ખેંચ્યું</string>
+    <string name="calendars_link_none">આ કૅલેન્ડર પાસે પાછું ખેંચવા માટે કોઈ સરનામું નથી</string>
+    <string name="calendars_linked">કૅલેન્ડર લિંક થયું</string>
+    <string name="calendars_subscribed">સબ્સ્ક્રાઇબ કર્યું</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s કલાક</item>
+        <item quantity="other">%1$s કલાક</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google ખાતાં સક્ષમ કરો</string>
+    <string name="calendars_provider_caldav">કૅલેન્ડર સર્વર</string>
 </resources>

@@ -6,6 +6,11 @@
 package org.mochios.calendars.ui.dialogs
 
 import androidx.compose.foundation.layout.Arrangement
+import java.time.format.TextStyle
+import java.time.DayOfWeek
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.material3.FilterChip
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -27,6 +32,7 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
+import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.DataChip
@@ -105,23 +111,38 @@ fun ColourCalendarDialog(
 /**
  * An import into a calendar: how far through the file it is while the rounds
  * run, then what came of it. Until it finishes it has no button and ignores
- * back and a tap outside, since closing it would not stop the import.
+ * back and a tap outside, since closing it would not stop the import. One
+ * that fails stays open on what went wrong, as the web's does, and offers to
+ * try the same file again.
  */
 @Composable
 fun ImportDialog(
     tally: Tally,
     onClose: () -> Unit,
+    onRetry: () -> Unit,
 ) {
+    val error = tally.error
+    val settled = tally.finished || error != null
     MochiAlertDialog(
-        onDismissRequest = { if (tally.finished) onClose() },
+        onDismissRequest = { if (settled) onClose() },
         title = stringResource(R.string.calendars_import),
         subtitle = tally.name,
-        confirmText = if (tally.finished) stringResource(MochiR.string.common_close) else null,
-        onConfirm = onClose,
-        properties = DialogProperties(dismissOnBackPress = tally.finished, dismissOnClickOutside = tally.finished),
+        confirmText = when {
+            error != null -> stringResource(MochiR.string.common_retry)
+            tally.finished -> stringResource(MochiR.string.common_close)
+            else -> null
+        },
+        onConfirm = if (error != null) onRetry else onClose,
+        dismissText = if (error != null) stringResource(MochiR.string.common_cancel) else null,
+        onDismiss = onClose,
+        properties = DialogProperties(dismissOnBackPress = settled, dismissOnClickOutside = settled),
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 when {
+                    error != null -> Text(
+                        text = error.userMessage(),
+                        color = MaterialTheme.colorScheme.error,
+                    )
                     tally.finished -> importCounts(tally).forEach { Text(it) }
                     // The first round's answer brings the file's size; until
                     // then there is nothing to measure against.
@@ -244,9 +265,14 @@ fun ReplaceLinkDialog(
     )
 }
 
-/** Confirms revoking a calendar's ICS link, which stops every subscriber's copy updating. */
+/**
+ * Confirms revoking a calendar's ICS address, which stops every subscriber's
+ * copy updating. It stays open while the address is revoked, and after a
+ * failure, so the revoke can be tried again.
+ */
 @Composable
 fun RevokeLinkDialog(
+    busy: Boolean,
     onDismiss: () -> Unit,
     onConfirm: () -> Unit,
 ) {
@@ -256,6 +282,7 @@ fun RevokeLinkDialog(
         text = stringResource(R.string.calendars_link_revoke_message),
         confirmText = stringResource(R.string.calendars_link_revoke),
         onConfirm = onConfirm,
+        confirmLoading = busy,
         destructive = true,
         dismissText = stringResource(MochiR.string.common_cancel),
     )
@@ -289,38 +316,35 @@ fun PreferencesDialog(
         .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
     var calendar by rememberSaveable { mutableStateOf(defaultCalendar(writable, preferences.calendar)) }
 
-    val hours = (0..23).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
-    val ends = (1..24).map { it.toString() to it.toString().padStart(2, '0') + ":00" }
-    val weekdays = listOf(
-        0 to R.string.calendars_day_sunday,
-        1 to R.string.calendars_day_monday,
-        2 to R.string.calendars_day_tuesday,
-        3 to R.string.calendars_day_wednesday,
-        4 to R.string.calendars_day_thursday,
-        5 to R.string.calendars_day_friday,
-        6 to R.string.calendars_day_saturday,
+    val format = LocalFormat.current
+    val locale = LocalConfiguration.current.locales[0]
+    // Hours as the user's clock names them; the last hour of the day is the
+    // start of the next, which is what it is.
+    val hours = (0..23).map { it.toString() to format.formatHour(it) }
+    val ends = (start + 1..24).map { it.toString() to format.formatHour(it) }
+    val edited = Preferences(
+        hours = Hours(start, finish),
+        days = days.sorted(),
+        multiweek = Multiweek(weeks, previous),
+        duration = duration,
+        reminder = reminder,
+        view = preferences.view,
+        zones = zones,
+        calendar = calendar,
+        allday = allday,
     )
+    // As it opened, with the calendar the picker shows in place of one
+    // since deleted or made read-only, so opening changes nothing.
+    val opened = remember(preferences, writable) {
+        preferences.copy(days = preferences.days.sorted(), calendar = defaultCalendar(writable, preferences.calendar))
+    }
 
     MochiAlertDialog(
         onDismissRequest = onDismiss,
         title = stringResource(R.string.calendars_preferences),
         confirmText = stringResource(MochiR.string.common_save),
-        onConfirm = {
-            onConfirm(
-                Preferences(
-                    hours = Hours(start, finish),
-                    days = days.sorted(),
-                    multiweek = Multiweek(weeks, previous),
-                    duration = duration,
-                    reminder = reminder,
-                    view = preferences.view,
-                    zones = zones,
-                    calendar = calendar,
-                    allday = allday,
-                ),
-            )
-        },
-        confirmEnabled = finish > start,
+        onConfirm = { onConfirm(edited) },
+        confirmEnabled = finish > start && edited != opened,
         confirmLoading = saving,
         dismissText = stringResource(MochiR.string.common_cancel),
         content = {
@@ -333,7 +357,11 @@ fun PreferencesDialog(
                     placeholder = "",
                     options = hours,
                     selected = start.toString(),
-                    onSelect = { start = it.toIntOrNull() ?: start },
+                    onSelect = { chosen ->
+                        start = chosen.toIntOrNull() ?: start
+                        // The end follows a start moved past it, as on the web.
+                        finish = maxOf(finish, start + 1)
+                    },
                 )
                 LabeledSelectField(
                     label = stringResource(R.string.calendars_hours_finish),
@@ -342,38 +370,36 @@ fun PreferencesDialog(
                     selected = finish.toString(),
                     onSelect = { finish = it.toIntOrNull() ?: finish },
                 )
-                if (finish <= start) {
-                    Text(
-                        text = stringResource(R.string.calendars_hours_invalid),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                }
                 Text(
                     text = stringResource(R.string.calendars_work_days),
                     style = MaterialTheme.typography.labelMedium,
                     modifier = Modifier.padding(top = 4.dp),
                 )
-                for ((index, label) in weekdays) {
-                    LabeledSwitchRow(
-                        label = stringResource(label),
-                        checked = index in days,
-                        onCheckedChange = { on ->
-                            days = if (on) days + index else days - index
-                        },
-                    )
+                // In the order the user's own week runs, as toggles.
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    val first = format.preferences.weekStartsOn
+                    for (offset in 0..6) {
+                        val day = (first + offset) % 7
+                        val on = day in days
+                        FilterChip(
+                            selected = on,
+                            onClick = { days = if (on) days - day else days + day },
+                            // The preference indexes Sunday 0; java.time indexes Monday 1.
+                            label = { Text(DayOfWeek.of(if (day == 0) 7 else day).getDisplayName(TextStyle.SHORT, locale)) },
+                        )
+                    }
                 }
                 LabeledSelectField(
                     label = stringResource(R.string.calendars_multiweek_weeks),
                     placeholder = "",
-                    options = (2..8).map { it.toString() to it.toString() },
+                    options = (2..8).map { it.toString() to format.formatNumber(it) },
                     selected = weeks.toString(),
                     onSelect = { weeks = it.toIntOrNull() ?: weeks },
                 )
                 LabeledSelectField(
                     label = stringResource(R.string.calendars_multiweek_previous),
                     placeholder = "",
-                    options = (0..2).map { it.toString() to it.toString() },
+                    options = (0..2).map { it.toString() to format.formatNumber(it) },
                     selected = previous.toString(),
                     onSelect = { previous = it.toIntOrNull() ?: previous },
                 )
@@ -391,8 +417,12 @@ fun PreferencesDialog(
                     label = stringResource(R.string.calendars_default_duration),
                     placeholder = "",
                     // Zero is a real choice: an event that ends when it starts.
-                    options = listOf(0, 15, 30, 45, 60, 90, 120).map {
-                        it.toString() to pluralStringResource(R.plurals.calendars_minutes, it, LocalFormat.current.formatNumber(it))
+                    options = DURATIONS.map { minutes ->
+                        minutes.toString() to if (minutes > 0 && minutes % 60 == 0) {
+                            pluralStringResource(R.plurals.calendars_hours, minutes / 60, format.formatNumber(minutes / 60))
+                        } else {
+                            pluralStringResource(R.plurals.calendars_minutes, minutes, format.formatNumber(minutes))
+                        }
                     },
                     selected = duration.toString(),
                     onSelect = { duration = it.toIntOrNull() ?: duration },
@@ -420,6 +450,9 @@ fun PreferencesDialog(
         },
     )
 }
+
+/** The default event lengths offered, in minutes; zero ends an event when it starts. The web offers the same. */
+val DURATIONS = listOf(0, 15, 30, 45, 60, 90, 120, 180, 240)
 
 /** The default reminder's choices, none among them, as value-to-label pairs for a select. */
 @Composable

@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Årlig</string>
     <string name="calendars_repeat_custom">Tilpasset</string>
     <string name="calendars_reminder_none">Ingen</string>
-    <string name="calendars_day_sunday">Søndag</string>
-    <string name="calendars_day_monday">Mandag</string>
-    <string name="calendars_day_tuesday">Tirsdag</string>
-    <string name="calendars_day_wednesday">Onsdag</string>
-    <string name="calendars_day_thursday">Torsdag</string>
-    <string name="calendars_day_friday">Fredag</string>
-    <string name="calendars_day_saturday">Lørdag</string>
     <string name="calendars_link_replace">Erstatt</string>
     <string name="calendars_link_revoke">Tilbakekall</string>
     <string name="calendars_permission_allow">Tillat</string>
@@ -72,7 +65,7 @@
     <string name="calendars_view_month">Måned</string>
     <string name="calendars_workweek">Arbeidsuke</string>
     <string name="calendars_range">%1$s til %2$s</string>
-    <string name="calendars_truncated">Noen hendelser i denne perioden vises ikke.</string>
+    <string name="calendars_truncated">For mange hendelser til å vise alle. Velg en kortere periode.</string>
     <string name="calendars_list_empty">Ingen hendelser</string>
     <string name="calendars_untitled">(Ingen tittel)</string>
     <string name="calendars_status_cancelled">Avlyst</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Fjern påminnelse</string>
     <string name="calendars_hours_start">Arbeidstid starter</string>
     <string name="calendars_hours_finish">Arbeidstid slutter</string>
-    <string name="calendars_hours_invalid">Arbeidstiden må slutte etter at den begynner.</string>
     <string name="calendars_work_days">Arbeidsdager</string>
     <string name="calendars_multiweek_weeks">Uker som vises</string>
     <string name="calendars_multiweek_previous">Uker før</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Heldagshendelser</string>
     <string name="calendars_allday_first">Først</string>
     <string name="calendars_allday_last">Sist</string>
-    <string name="calendars_link_title">Kalenderlenke</string>
-    <string name="calendars_link_copy">Kopier lenke</string>
+    <string name="calendars_link_title">Kalenderadresse</string>
+    <string name="calendars_link_copy">Kopier kalenderadressen</string>
     <string name="calendars_link_once">Kopier den nå: den kan ikke vises igjen.</string>
-    <string name="calendars_link_exists">Det finnes allerede en lenke for denne kalenderen.</string>
+    <string name="calendars_link_exists">Denne kalenderadressen er allerede utstedt og kan ikke vises igjen.</string>
     <string name="calendars_permission_title">Tillate tilgang?</string>
     <string name="calendars_permission_message">%1$s ber om:</string>
     <string name="calendars_sync_authorization">Logg inn igjen for å fortsette synkroniseringen</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Ingen enheter tilkoblet</string>
     <string name="calendars_device_used">Sist brukt %1$s</string>
     <string name="calendars_device_never">aldri</string>
-    <string name="calendars_device_deleted">Enhet fjernet</string>
-    <string name="calendars_device_delete_title">Fjerne denne enheten?</string>
-    <string name="calendars_device_delete_message">Den må settes opp på nytt for å synkronisere.</string>
+    <string name="calendars_device_deleted">Enhet slettet</string>
+    <string name="calendars_device_delete_title">Slette enhet?</string>
+    <string name="calendars_device_delete_message">Enheten vil ikke lenger kunne synkronisere kontakter eller kalendere.</string>
     <string name="calendars_sync_choose">Kalendere som skal synkroniseres</string>
     <string name="calendars_poll_large">Kalenderen er for stor</string>
     <string name="calendars_poll_invalid">Adressen ga ingen kalender</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple-ID</string>
     <string name="calendars_subscribe_google">Google Kalender</string>
-    <string name="calendars_subscribe_google_enable">Google-kontoer er ikke aktivert på denne serveren. Aktiver dem under Innstillinger, Systeminnstillinger.</string>
+    <string name="calendars_subscribe_google_enable">Google-kontoer er ikke aktivert på denne serveren.</string>
     <string name="calendars_subscribe_google_connect">Du har ikke koblet til en Google-konto.</string>
     <string name="calendars_subscribe_google_connect_action">Koble til Google</string>
     <string name="calendars_grant_failed">Kalendertilgang ble ikke gitt</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">til %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Tidligere hendelser</string>
+    <string name="calendars_created">Kalender opprettet</string>
+    <string name="calendars_renamed">Kalenderen fikk nytt navn</string>
+    <string name="calendars_colour_saved">Farge lagret</string>
+    <string name="calendars_deleted">Kalender slettet</string>
+    <string name="calendars_removed">Kalender fjernet</string>
+    <string name="calendars_preferences_saved">Preferanser lagret</string>
+    <string name="calendars_link_revoked">Kalenderadressen tilbakekalt</string>
+    <string name="calendars_link_none">Denne kalenderen har ingen adresse å tilbakekalle</string>
+    <string name="calendars_linked">Kalender koblet</string>
+    <string name="calendars_subscribed">Abonnert</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s time</item>
+        <item quantity="other">%1$s timer</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Aktiver Google-kontoer</string>
+    <string name="calendars_provider_caldav">Kalenderserver</string>
 </resources>

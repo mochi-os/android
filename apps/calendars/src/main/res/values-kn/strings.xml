@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">ವಾರ್ಷಿಕ</string>
     <string name="calendars_repeat_custom">ಕಸ್ಟಮ್</string>
     <string name="calendars_reminder_none">ಯಾವುದೂ ಇಲ್ಲ</string>
-    <string name="calendars_day_sunday">ಭಾನುವಾರ</string>
-    <string name="calendars_day_monday">ಸೋಮವಾರ</string>
-    <string name="calendars_day_tuesday">ಮಂಗಳವಾರ</string>
-    <string name="calendars_day_wednesday">ಬುಧವಾರ</string>
-    <string name="calendars_day_thursday">ಗುರುವಾರ</string>
-    <string name="calendars_day_friday">ಶುಕ್ರವಾರ</string>
-    <string name="calendars_day_saturday">ಶನಿವಾರ</string>
     <string name="calendars_link_replace">ಬದಲಾಯಿಸಿ</string>
     <string name="calendars_link_revoke">ಹಿಂಪಡೆಯಿರಿ</string>
     <string name="calendars_permission_allow">ಅನುಮತಿಸಿ</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">ತಿಂಗಳು</string>
     <string name="calendars_workweek">ಕೆಲಸದ ವಾರ</string>
     <string name="calendars_range">%1$s ರಿಂದ %2$s ವರೆಗೆ</string>
-    <string name="calendars_truncated">ಈ ವ್ಯಾಪ್ತಿಯ ಕೆಲವು ಈವೆಂಟ್‌ಗಳನ್ನು ತೋರಿಸಲಾಗಿಲ್ಲ.</string>
+    <string name="calendars_truncated">ಎಲ್ಲವನ್ನೂ ತೋರಿಸಲು ತುಂಬಾ ಹೆಚ್ಚು ಈವೆಂಟ್‌ಗಳಿವೆ. ಚಿಕ್ಕ ವ್ಯಾಪ್ತಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ.</string>
     <string name="calendars_list_empty">ಯಾವುದೇ ಈವೆಂಟ್‌ಗಳಿಲ್ಲ</string>
     <string name="calendars_untitled">(ಶೀರ್ಷಿಕೆ ಇಲ್ಲ)</string>
     <string name="calendars_status_cancelled">ರದ್ದಾಗಿದೆ</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">ಜ್ಞಾಪನೆ ತೆಗೆದುಹಾಕಿ</string>
     <string name="calendars_hours_start">ಕೆಲಸದ ಸಮಯದ ಪ್ರಾರಂಭ</string>
     <string name="calendars_hours_finish">ಕೆಲಸದ ಸಮಯದ ಅಂತ್ಯ</string>
-    <string name="calendars_hours_invalid">ಕೆಲಸದ ಸಮಯವು ಪ್ರಾರಂಭದ ನಂತರ ಕೊನೆಗೊಳ್ಳಬೇಕು.</string>
     <string name="calendars_work_days">ಕೆಲಸದ ದಿನಗಳು</string>
     <string name="calendars_multiweek_weeks">ತೋರಿಸಲಾದ ವಾರಗಳು</string>
     <string name="calendars_multiweek_previous">ಹಿಂದಿನ ವಾರಗಳು</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">ಇಡೀ ದಿನದ ಈವೆಂಟ್‌ಗಳು</string>
     <string name="calendars_allday_first">ಆರಂಭದಲ್ಲಿ</string>
     <string name="calendars_allday_last">ಕೊನೆಯಲ್ಲಿ</string>
-    <string name="calendars_link_title">ಕ್ಯಾಲೆಂಡರ್ ಲಿಂಕ್</string>
-    <string name="calendars_link_copy">ಲಿಂಕ್ ನಕಲಿಸಿ</string>
+    <string name="calendars_link_title">ಕ್ಯಾಲೆಂಡರ್ ವಿಳಾಸ</string>
+    <string name="calendars_link_copy">ಕ್ಯಾಲೆಂಡರ್ ವಿಳಾಸವನ್ನು ನಕಲಿಸಿ</string>
     <string name="calendars_link_once">ಇದನ್ನು ಈಗಲೇ ನಕಲಿಸಿ: ಇದನ್ನು ಮತ್ತೆ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ.</string>
-    <string name="calendars_link_exists">ಈ ಕ್ಯಾಲೆಂಡರ್‌ಗೆ ಈಗಾಗಲೇ ಲಿಂಕ್ ಇದೆ.</string>
+    <string name="calendars_link_exists">ಈ ಕ್ಯಾಲೆಂಡರ್ ವಿಳಾಸವನ್ನು ಈಗಾಗಲೇ ನೀಡಲಾಗಿದೆ ಮತ್ತು ಮತ್ತೆ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ.</string>
     <string name="calendars_permission_title">ಪ್ರವೇಶಕ್ಕೆ ಅನುಮತಿಸಬೇಕೇ?</string>
     <string name="calendars_permission_message">%1$s ಇದನ್ನು ಕೇಳುತ್ತಿದೆ:</string>
     <string name="calendars_sync_authorization">ಸಿಂಕ್ ಮುಂದುವರಿಸಲು ಮತ್ತೆ ಸೈನ್ ಇನ್ ಮಾಡಿ</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">ಯಾವುದೇ ಸಾಧನಗಳು ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ</string>
     <string name="calendars_device_used">ಕೊನೆಯದಾಗಿ ಬಳಸಲಾಗಿದೆ %1$s</string>
     <string name="calendars_device_never">ಎಂದಿಗೂ ಇಲ್ಲ</string>
-    <string name="calendars_device_deleted">ಸಾಧನವನ್ನು ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
-    <string name="calendars_device_delete_title">ಈ ಸಾಧನವನ್ನು ತೆಗೆದುಹಾಕಬೇಕೇ?</string>
-    <string name="calendars_device_delete_message">ಸಿಂಕ್ ಮಾಡಲು ಅದನ್ನು ಮತ್ತೆ ಹೊಂದಿಸಬೇಕಾಗುತ್ತದೆ.</string>
+    <string name="calendars_device_deleted">ಸಾಧನವನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
+    <string name="calendars_device_delete_title">ಸಾಧನವನ್ನು ಅಳಿಸುವುದೇ?</string>
+    <string name="calendars_device_delete_message">ಸಾಧನವು ಇನ್ನು ಮುಂದೆ ಸಂಪರ್ಕಗಳನ್ನು ಅಥವಾ ಕ್ಯಾಲೆಂಡರ್‌ಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="calendars_sync_choose">ಸಿಂಕ್ ಮಾಡಬೇಕಾದ ಕ್ಯಾಲೆಂಡರ್‌ಗಳು</string>
     <string name="calendars_poll_large">ಕ್ಯಾಲೆಂಡರ್ ತುಂಬಾ ದೊಡ್ಡದಾಗಿದೆ</string>
     <string name="calendars_poll_invalid">ವಿಳಾಸವು ಕ್ಯಾಲೆಂಡರ್ ಅನ್ನು ಹಿಂತಿರುಗಿಸಲಿಲ್ಲ</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ಕ್ಯಾಲೆಂಡರ್</string>
-    <string name="calendars_subscribe_google_enable">ಈ ಸರ್ವರ್‌ನಲ್ಲಿ Google ಖಾತೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿಲ್ಲ. ಅವುಗಳನ್ನು ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಸಿಸ್ಟಮ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ನಲ್ಲಿ ಸಕ್ರಿಯಗೊಳಿಸಿ.</string>
+    <string name="calendars_subscribe_google_enable">ಈ ಸರ್ವರ್‌ನಲ್ಲಿ Google ಖಾತೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿಲ್ಲ.</string>
     <string name="calendars_subscribe_google_connect">ನೀವು Google ಖಾತೆಯನ್ನು ಸಂಪರ್ಕಿಸಿಲ್ಲ.</string>
     <string name="calendars_subscribe_google_connect_action">Google ಸಂಪರ್ಕಿಸಿ</string>
     <string name="calendars_grant_failed">ಕ್ಯಾಲೆಂಡರ್ ಪ್ರವೇಶ ನೀಡಲಾಗಿಲ್ಲ</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s ರವರೆಗೆ</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">ಹಿಂದಿನ ಈವೆಂಟ್‌ಗಳು</string>
+    <string name="calendars_created">ಕ್ಯಾಲೆಂಡರ್ ಅನ್ನು ರಚಿಸಲಾಗಿದೆ</string>
+    <string name="calendars_renamed">ಕ್ಯಾಲೆಂಡರ್ ಅನ್ನು ಮರುಹೆಸರಿಸಲಾಗಿದೆ</string>
+    <string name="calendars_colour_saved">ಬಣ್ಣವನ್ನು ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="calendars_deleted">ಕ್ಯಾಲೆಂಡರ್ ಅನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
+    <string name="calendars_removed">ಕ್ಯಾಲೆಂಡರ್ ಅನ್ನು ತೆಗೆದುಹಾಕಲಾಗಿದೆ</string>
+    <string name="calendars_preferences_saved">ಆದ್ಯತೆಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ</string>
+    <string name="calendars_link_revoked">ಕ್ಯಾಲೆಂಡರ್ ವಿಳಾಸವನ್ನು ಹಿಂಪಡೆಯಲಾಗಿದೆ</string>
+    <string name="calendars_link_none">ಈ ಕ್ಯಾಲೆಂಡರ್‌ಗೆ ಹಿಂಪಡೆಯಲು ಯಾವುದೇ ವಿಳಾಸವಿಲ್ಲ</string>
+    <string name="calendars_linked">ಕ್ಯಾಲೆಂಡರ್ ಲಿಂಕ್ ಆಗಿದೆ</string>
+    <string name="calendars_subscribed">ಚಂದಾದಾರರಾಗಿದ್ದೀರಿ</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s ಗಂಟೆ</item>
+        <item quantity="other">%1$s ಗಂಟೆಗಳು</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google ಖಾತೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ</string>
+    <string name="calendars_provider_caldav">ಕ್ಯಾಲೆಂಡರ್ ಸರ್ವರ್</string>
 </resources>

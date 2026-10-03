@@ -256,6 +256,7 @@ open class MainActivity : ComponentActivity() {
                                 navController,
                                 onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                         }
 
@@ -898,12 +899,21 @@ open class MainActivity : ComponentActivity() {
             "staff" -> {
                 navController.openAppHome(StaffApp.HOME)
             }
+            "settings" -> {
+                // The system settings another app sends an administrator to,
+                // such as Calendars for enabling Google accounts, open over
+                // the screen that sent them, so Back returns there.
+                if (path == SettingsApp.SYSTEM_SETTINGS) {
+                    if (!navController.isAt(path)) navController.navigate(path) { launchSingleTop = true }
+                } else {
+                    navController.openAppHome(SettingsApp.HOME)
+                }
+            }
             "calendars" -> {
                 navController.openAppHome(CalendarsApp.HOME)
-                // A reminder names the event it is for and its occurrence.
-                CalendarsApp.linked(path, query)?.let { route ->
-                    navController.navigate(route) { launchSingleTop = true }
-                }
+                // A reminder opens the calendar at its event's day, as the
+                // web's does, rather than going straight to an editor.
+                CalendarsApp.linked(path, query)?.let { CalendarsApp.remind(navController, it) }
             }
         }
     }

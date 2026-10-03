@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Ročně</string>
     <string name="calendars_repeat_custom">Vlastní</string>
     <string name="calendars_reminder_none">Žádné</string>
-    <string name="calendars_day_sunday">Neděle</string>
-    <string name="calendars_day_monday">Pondělí</string>
-    <string name="calendars_day_tuesday">Úterý</string>
-    <string name="calendars_day_wednesday">Středa</string>
-    <string name="calendars_day_thursday">Čtvrtek</string>
-    <string name="calendars_day_friday">Pátek</string>
-    <string name="calendars_day_saturday">Sobota</string>
     <string name="calendars_link_replace">Nahradit</string>
     <string name="calendars_link_revoke">Odvolat</string>
     <string name="calendars_permission_allow">Povolit</string>
@@ -72,7 +65,7 @@
     <string name="calendars_view_month">Měsíc</string>
     <string name="calendars_workweek">Pracovní týden</string>
     <string name="calendars_range">%1$s až %2$s</string>
-    <string name="calendars_truncated">Některé události v tomto rozsahu nejsou zobrazeny.</string>
+    <string name="calendars_truncated">Příliš mnoho událostí, nelze zobrazit všechny. Zvolte kratší rozsah.</string>
     <string name="calendars_list_empty">Žádné události</string>
     <string name="calendars_untitled">(Bez názvu)</string>
     <string name="calendars_status_cancelled">Zrušeno</string>
@@ -113,7 +106,6 @@
     <string name="calendars_reminder_remove">Odebrat připomenutí</string>
     <string name="calendars_hours_start">Začátek pracovní doby</string>
     <string name="calendars_hours_finish">Konec pracovní doby</string>
-    <string name="calendars_hours_invalid">Pracovní doba musí skončit až po svém začátku.</string>
     <string name="calendars_work_days">Pracovní dny</string>
     <string name="calendars_multiweek_weeks">Zobrazené týdny</string>
     <string name="calendars_multiweek_previous">Týdnů zpět</string>
@@ -123,10 +115,10 @@
     <string name="calendars_preferences_allday">Celodenní události</string>
     <string name="calendars_allday_first">Na začátku</string>
     <string name="calendars_allday_last">Na konci</string>
-    <string name="calendars_link_title">Odkaz na kalendář</string>
-    <string name="calendars_link_copy">Kopírovat odkaz</string>
+    <string name="calendars_link_title">Adresa kalendáře</string>
+    <string name="calendars_link_copy">Kopírovat adresu kalendáře</string>
     <string name="calendars_link_once">Zkopírujte jej nyní: znovu jej nelze zobrazit.</string>
-    <string name="calendars_link_exists">Pro tento kalendář už odkaz existuje.</string>
+    <string name="calendars_link_exists">Tato adresa kalendáře již byla vydána a nelze ji znovu zobrazit.</string>
     <string name="calendars_permission_title">Povolit přístup?</string>
     <string name="calendars_permission_message">%1$s žádá o:</string>
     <string name="calendars_sync_authorization">Pro pokračování synchronizace se znovu přihlaste</string>
@@ -134,9 +126,9 @@
     <string name="calendars_device_empty">Žádná připojená zařízení</string>
     <string name="calendars_device_used">naposledy použito %1$s</string>
     <string name="calendars_device_never">nikdy</string>
-    <string name="calendars_device_deleted">Zařízení odebráno</string>
-    <string name="calendars_device_delete_title">Odebrat toto zařízení?</string>
-    <string name="calendars_device_delete_message">Pro synchronizaci bude nutné ho znovu nastavit.</string>
+    <string name="calendars_device_deleted">Zařízení bylo smazáno</string>
+    <string name="calendars_device_delete_title">Smazat zařízení?</string>
+    <string name="calendars_device_delete_message">Zařízení už nebude moci synchronizovat kontakty ani kalendáře.</string>
     <string name="calendars_sync_choose">Kalendáře k synchronizaci</string>
     <string name="calendars_poll_large">Kalendář je příliš velký</string>
     <string name="calendars_poll_invalid">Adresa nevrátila žádný kalendář</string>
@@ -180,7 +172,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalendář Google</string>
-    <string name="calendars_subscribe_google_enable">Účty Google nejsou na tomto serveru povoleny. Povolte je v Nastavení, Systémová nastavení.</string>
+    <string name="calendars_subscribe_google_enable">Účty Google nejsou na tomto serveru povoleny.</string>
     <string name="calendars_subscribe_google_connect">Nepřipojili jste žádný účet Google.</string>
     <string name="calendars_subscribe_google_connect_action">Připojit Google</string>
     <string name="calendars_grant_failed">Přístup ke kalendáři nebyl udělen</string>
@@ -282,4 +274,22 @@
     </plurals>
     <string name="calendars_rule_until">do %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Dřívější události</string>
+    <string name="calendars_created">Kalendář vytvořen</string>
+    <string name="calendars_renamed">Kalendář přejmenován</string>
+    <string name="calendars_colour_saved">Barva uložena</string>
+    <string name="calendars_deleted">Kalendář smazán</string>
+    <string name="calendars_removed">Kalendář odebrán</string>
+    <string name="calendars_preferences_saved">Předvolby uloženy</string>
+    <string name="calendars_link_revoked">Adresa kalendáře zneplatněna</string>
+    <string name="calendars_link_none">Tento kalendář nemá žádnou adresu ke zneplatnění</string>
+    <string name="calendars_linked">Kalendář propojen</string>
+    <string name="calendars_subscribed">Odebíráno</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s hodina</item>
+        <item quantity="few">%1$s hodiny</item>
+        <item quantity="other">%1$s hodin</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Povolit účty Google</string>
+    <string name="calendars_provider_caldav">Kalendářový server</string>
 </resources>

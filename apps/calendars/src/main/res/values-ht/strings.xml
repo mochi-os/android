@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Anyèl</string>
     <string name="calendars_repeat_custom">Pèsonalize</string>
     <string name="calendars_reminder_none">Okenn</string>
-    <string name="calendars_day_sunday">Dimanch</string>
-    <string name="calendars_day_monday">Lendi</string>
-    <string name="calendars_day_tuesday">Madi</string>
-    <string name="calendars_day_wednesday">Mèkredi</string>
-    <string name="calendars_day_thursday">Jedi</string>
-    <string name="calendars_day_friday">Vandredi</string>
-    <string name="calendars_day_saturday">Samdi</string>
     <string name="calendars_link_replace">Ranplase</string>
     <string name="calendars_link_revoke">Retire</string>
     <string name="calendars_permission_allow">Pèmèt</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Mwa</string>
     <string name="calendars_workweek">Semèn travay</string>
     <string name="calendars_range">%1$s a %2$s</string>
-    <string name="calendars_truncated">Kèk evènman nan peryòd sa a pa parèt.</string>
+    <string name="calendars_truncated">Gen twòp evènman pou montre yo tout. Chwazi yon peryòd pi kout.</string>
     <string name="calendars_list_empty">Pa gen evènman</string>
     <string name="calendars_untitled">(San tit)</string>
     <string name="calendars_status_cancelled">Anile</string>
@@ -107,7 +100,6 @@
     <string name="calendars_reminder_remove">Retire rapèl la</string>
     <string name="calendars_hours_start">Kòmansman lè travay</string>
     <string name="calendars_hours_finish">Fen lè travay</string>
-    <string name="calendars_hours_invalid">Lè travay yo dwe fini apre yo kòmanse.</string>
     <string name="calendars_work_days">Jou travay</string>
     <string name="calendars_multiweek_weeks">Semèn ki montre</string>
     <string name="calendars_multiweek_previous">Semèn anvan yo</string>
@@ -117,10 +109,10 @@
     <string name="calendars_preferences_allday">Evènman tout jounen</string>
     <string name="calendars_allday_first">Anvan</string>
     <string name="calendars_allday_last">Apre</string>
-    <string name="calendars_link_title">Lyen kalandriye</string>
-    <string name="calendars_link_copy">Kopye lyen</string>
+    <string name="calendars_link_title">Adrès kalandriye a</string>
+    <string name="calendars_link_copy">Kopye adrès kalandriye a</string>
     <string name="calendars_link_once">Kopye li kounye a: li pa ka parèt ankò.</string>
-    <string name="calendars_link_exists">Gen deja yon lyen pou kalandriye sa a.</string>
+    <string name="calendars_link_exists">Adrès kalandriye sa a te deja bay epi li pa ka parèt ankò.</string>
     <string name="calendars_permission_title">Pèmèt aksè?</string>
     <string name="calendars_permission_message">%1$s ap mande:</string>
     <string name="calendars_sync_authorization">Konekte ankò pou kontinye sinkronize</string>
@@ -128,9 +120,9 @@
     <string name="calendars_device_empty">Pa gen okenn aparèy konekte</string>
     <string name="calendars_device_used">Dènye itilizasyon %1$s</string>
     <string name="calendars_device_never">janmen</string>
-    <string name="calendars_device_deleted">Aparèy retire</string>
-    <string name="calendars_device_delete_title">Retire aparèy sa a?</string>
-    <string name="calendars_device_delete_message">W ap oblije konfigire li ankò pou sinkronizasyon.</string>
+    <string name="calendars_device_deleted">Aparèy la efase</string>
+    <string name="calendars_device_delete_title">Efase aparèy la?</string>
+    <string name="calendars_device_delete_message">Aparèy la p ap ka senkronize kontak oswa kalandriye ankò.</string>
     <string name="calendars_sync_choose">Kalandriye pou sinkronize</string>
     <string name="calendars_poll_large">Kalandriye a twò gwo</string>
     <string name="calendars_poll_invalid">Adrès la pa bay okenn kalandriye</string>
@@ -173,7 +165,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Kalandriye</string>
-    <string name="calendars_subscribe_google_enable">Kont Google yo pa aktive sou sèvè sa a. Aktive yo anba Paramèt, Paramèt sistèm.</string>
+    <string name="calendars_subscribe_google_enable">Kont Google yo pa aktive sou sèvè sa a.</string>
     <string name="calendars_subscribe_google_connect">Ou pa konekte okenn kont Google.</string>
     <string name="calendars_subscribe_google_connect_action">Konekte Google</string>
     <string name="calendars_grant_failed">Yo pa bay aksè kalandriye</string>
@@ -260,4 +252,20 @@
     </plurals>
     <string name="calendars_rule_until">jiska %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Evènman anvan yo</string>
+    <string name="calendars_created">Kalandriye kreye</string>
+    <string name="calendars_renamed">Kalandriye rebatize</string>
+    <string name="calendars_colour_saved">Koulè sove</string>
+    <string name="calendars_deleted">Kalandriye efase</string>
+    <string name="calendars_removed">Kalandriye retire</string>
+    <string name="calendars_preferences_saved">Preferans sove</string>
+    <string name="calendars_link_revoked">Adrès kalandriye a retire</string>
+    <string name="calendars_link_none">Kalandriye sa a pa gen okenn adrès pou retire</string>
+    <string name="calendars_linked">Kalandriye lye</string>
+    <string name="calendars_subscribed">Abone</string>
+    <plurals name="calendars_hours">
+        <item quantity="other">%1$s èdtan</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Aktive kont Google yo</string>
+    <string name="calendars_provider_caldav">Sèvè kalandriye</string>
 </resources>

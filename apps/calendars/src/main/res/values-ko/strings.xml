@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">연간</string>
     <string name="calendars_repeat_custom">사용자 지정</string>
     <string name="calendars_reminder_none">없음</string>
-    <string name="calendars_day_sunday">일요일</string>
-    <string name="calendars_day_monday">월요일</string>
-    <string name="calendars_day_tuesday">화요일</string>
-    <string name="calendars_day_wednesday">수요일</string>
-    <string name="calendars_day_thursday">목요일</string>
-    <string name="calendars_day_friday">금요일</string>
-    <string name="calendars_day_saturday">토요일</string>
     <string name="calendars_link_replace">교체</string>
     <string name="calendars_link_revoke">철회</string>
     <string name="calendars_permission_allow">허용</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">월</string>
     <string name="calendars_workweek">주중</string>
     <string name="calendars_range">%1$s ~ %2$s</string>
-    <string name="calendars_truncated">이 기간의 일부 일정은 표시되지 않았어요.</string>
+    <string name="calendars_truncated">일정이 너무 많아 모두 표시할 수 없어요. 더 짧은 기간을 선택하세요.</string>
     <string name="calendars_list_empty">일정이 없어요</string>
     <string name="calendars_untitled">(제목 없음)</string>
     <string name="calendars_status_cancelled">취소됨</string>
@@ -107,7 +100,6 @@
     <string name="calendars_reminder_remove">알림 제거</string>
     <string name="calendars_hours_start">근무 시간 시작</string>
     <string name="calendars_hours_finish">근무 시간 종료</string>
-    <string name="calendars_hours_invalid">근무 시간은 시작 시각보다 늦게 끝나야 해요.</string>
     <string name="calendars_work_days">근무일</string>
     <string name="calendars_multiweek_weeks">표시할 주 수</string>
     <string name="calendars_multiweek_previous">이전 주 수</string>
@@ -117,10 +109,10 @@
     <string name="calendars_preferences_allday">종일 일정</string>
     <string name="calendars_allday_first">맨 앞</string>
     <string name="calendars_allday_last">맨 뒤</string>
-    <string name="calendars_link_title">캘린더 링크</string>
-    <string name="calendars_link_copy">링크 복사</string>
+    <string name="calendars_link_title">캘린더 주소</string>
+    <string name="calendars_link_copy">캘린더 주소 복사</string>
     <string name="calendars_link_once">지금 복사하세요. 다시 표시할 수 없어요.</string>
-    <string name="calendars_link_exists">이 캘린더에는 이미 링크가 있어요.</string>
+    <string name="calendars_link_exists">이 캘린더 주소는 이미 발급되어 다시 표시할 수 없어요.</string>
     <string name="calendars_permission_title">접근을 허용할까요?</string>
     <string name="calendars_permission_message">%1$s이(가) 다음을 요청해요:</string>
     <string name="calendars_sync_authorization">동기화를 계속하려면 다시 로그인하세요</string>
@@ -129,8 +121,8 @@
     <string name="calendars_device_used">마지막 사용 %1$s</string>
     <string name="calendars_device_never">안 함</string>
     <string name="calendars_device_deleted">기기가 삭제되었어요</string>
-    <string name="calendars_device_delete_title">이 기기를 삭제할까요?</string>
-    <string name="calendars_device_delete_message">동기화하려면 다시 설정해야 해요.</string>
+    <string name="calendars_device_delete_title">기기를 삭제할까요?</string>
+    <string name="calendars_device_delete_message">이 기기는 더 이상 연락처나 캘린더를 동기화할 수 없어요.</string>
     <string name="calendars_sync_choose">동기화할 캘린더</string>
     <string name="calendars_poll_large">캘린더가 너무 커요</string>
     <string name="calendars_poll_invalid">주소에서 캘린더를 받지 못했어요</string>
@@ -172,7 +164,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google 캘린더</string>
-    <string name="calendars_subscribe_google_enable">이 서버에서는 Google 계정이 활성화되어 있지 않아요. 설정, 시스템 설정에서 활성화하세요.</string>
+    <string name="calendars_subscribe_google_enable">이 서버에서는 Google 계정이 활성화되어 있지 않아요.</string>
     <string name="calendars_subscribe_google_connect">Google 계정을 연결하지 않았어요.</string>
     <string name="calendars_subscribe_google_connect_action">Google 연결</string>
     <string name="calendars_grant_failed">캘린더 액세스가 허용되지 않았어요</string>
@@ -255,4 +247,20 @@
     </plurals>
     <string name="calendars_rule_until">%1$s까지</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">이전 일정</string>
+    <string name="calendars_created">캘린더가 생성되었어요</string>
+    <string name="calendars_renamed">캘린더 이름이 변경되었어요</string>
+    <string name="calendars_colour_saved">색상이 저장되었어요</string>
+    <string name="calendars_deleted">캘린더가 삭제되었어요</string>
+    <string name="calendars_removed">캘린더가 제거되었어요</string>
+    <string name="calendars_preferences_saved">환경설정이 저장되었어요</string>
+    <string name="calendars_link_revoked">캘린더 주소를 철회했어요</string>
+    <string name="calendars_link_none">이 캘린더에는 철회할 주소가 없어요</string>
+    <string name="calendars_linked">캘린더를 연결했어요</string>
+    <string name="calendars_subscribed">구독됨</string>
+    <plurals name="calendars_hours">
+        <item quantity="other">%1$s시간</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google 계정 활성화</string>
+    <string name="calendars_provider_caldav">캘린더 서버</string>
 </resources>

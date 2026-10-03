@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Waggaa</string>
     <string name="calendars_repeat_custom">Mataa keetiin</string>
     <string name="calendars_reminder_none">Tokko illee</string>
-    <string name="calendars_day_sunday">Dilbata</string>
-    <string name="calendars_day_monday">Wiixata</string>
-    <string name="calendars_day_tuesday">Kibxata</string>
-    <string name="calendars_day_wednesday">Roobii</string>
-    <string name="calendars_day_thursday">Kamisa</string>
-    <string name="calendars_day_friday">Jimaata</string>
-    <string name="calendars_day_saturday">Sanbata</string>
     <string name="calendars_link_replace">Bakka buusi</string>
     <string name="calendars_link_revoke">Deebifadhu</string>
     <string name="calendars_permission_allow">Hayyami</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Ji\'a</string>
     <string name="calendars_workweek">Torbee hojii</string>
     <string name="calendars_range">%1$s hanga %2$s</string>
-    <string name="calendars_truncated">Taateewwan yeroo kana keessaa tokko tokko hin agarsiifamne.</string>
+    <string name="calendars_truncated">Taateewwan hunda agarsiisuuf baay\'eedha. Yeroo gabaabaa filadhu.</string>
     <string name="calendars_list_empty">Taateewwan hin jiran</string>
     <string name="calendars_untitled">(Mata duree hin qabu)</string>
     <string name="calendars_status_cancelled">Haqame</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Yaadachiisa haqi</string>
     <string name="calendars_hours_start">Jalqaba sa\'aatii hojii</string>
     <string name="calendars_hours_finish">Xumura sa\'aatii hojii</string>
-    <string name="calendars_hours_invalid">Sa\'aatiin hojii erga jalqabee booda xumuramuu qaba.</string>
     <string name="calendars_work_days">Guyyoota hojii</string>
     <string name="calendars_multiweek_weeks">Torbeewwan agarsiifaman</string>
     <string name="calendars_multiweek_previous">Torbeewwan duraa</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Taateewwan guyyaa guutuu</string>
     <string name="calendars_allday_first">Jalqaba irratti</string>
     <string name="calendars_allday_last">Dhuma irratti</string>
-    <string name="calendars_link_title">Hidhaa kaalaandarii</string>
-    <string name="calendars_link_copy">Hidhaa garagalchi</string>
+    <string name="calendars_link_title">Teessoo kaalaandarii</string>
+    <string name="calendars_link_copy">Teessoo kaalaandarii garagalchi</string>
     <string name="calendars_link_once">Amma garagalchi: lammata mul\'achuu hin danda\'u.</string>
-    <string name="calendars_link_exists">Kaalaandarii kanaaf hidhaan duraan jira.</string>
+    <string name="calendars_link_exists">Teessoon kaalaandarii kun duraan kennameera, ammas agarsiifamuu hin danda\'u.</string>
     <string name="calendars_permission_title">Qaqqabummaa eeyyamuu?</string>
     <string name="calendars_permission_message">%1$s kana gaafata:</string>
     <string name="calendars_sync_authorization">Wal simsiisuu itti fufuuf irra deebi\'ii seeni</string>
@@ -132,8 +124,8 @@
     <string name="calendars_device_used">Yeroo dhumaa fayyadamame %1$s</string>
     <string name="calendars_device_never">gonkumaa</string>
     <string name="calendars_device_deleted">Meeshaan haqameera</string>
-    <string name="calendars_device_delete_title">Meeshaa kana haquu?</string>
-    <string name="calendars_device_delete_message">Wal simsiisuuf irra deebi\'amee qindaa\'uu qaba.</string>
+    <string name="calendars_device_delete_title">Meeshaa haquu?</string>
+    <string name="calendars_device_delete_message">Meeshaan kun kana booda qunnamtiiwwan ykn kaalaandaroota walsimsiisuu hin danda\'u.</string>
     <string name="calendars_sync_choose">Kaalaandaroota wal simsiifaman</string>
     <string name="calendars_poll_large">Kaalaandariin baay\'ee guddaadha</string>
     <string name="calendars_poll_invalid">Teessoon kaalaandarii hin deebifne</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kaalandarii Google</string>
-    <string name="calendars_subscribe_google_enable">Akkaawuntiiwwan Google sarvarii kana irratti hin dandeessifamne. Qindaa\'inoota, Qindaa\'inoota sirnaa keessatti isaan dandeessisi.</string>
+    <string name="calendars_subscribe_google_enable">Akkaawuntiiwwan Google sarvarii kana irratti hin dandeessifamne.</string>
     <string name="calendars_subscribe_google_connect">Akkaawuntii Google hin walqabsiifne.</string>
     <string name="calendars_subscribe_google_connect_action">Google wal qunnamsiisi</string>
     <string name="calendars_grant_failed">Seensi kaalaandarii hin kennamne</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">hanga %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Taateewwan duraanii</string>
+    <string name="calendars_created">Kaalaandariin uumame</string>
+    <string name="calendars_renamed">Kaalaandariin moggaafame</string>
+    <string name="calendars_colour_saved">Halluun olkaa\'ame</string>
+    <string name="calendars_deleted">Kaalaandariin haqame</string>
+    <string name="calendars_removed">Kaalaandariin haqame</string>
+    <string name="calendars_preferences_saved">Filannoowwan olkaa\'aman</string>
+    <string name="calendars_link_revoked">Teessoon kaalaandarii deebifatame</string>
+    <string name="calendars_link_none">Kaalaandariin kun teessoo deebifatamu hin qabu</string>
+    <string name="calendars_linked">Kaalaandariin walitti hidhame</string>
+    <string name="calendars_subscribed">Galaa\'eera</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">sa\'aatii %1$s</item>
+        <item quantity="other">sa\'aatii %1$s</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Akkaawuntiiwwan Google dandeessisi</string>
+    <string name="calendars_provider_caldav">Sarvarii kaalaandarii</string>
 </resources>

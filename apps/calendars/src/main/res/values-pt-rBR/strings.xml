@@ -18,7 +18,7 @@
     <string name="calendars_title_required">O título é obrigatório</string>
     <string name="calendars_subscribe_password">Senha</string>
     <string name="calendars_subscribe_connect">Conectar</string>
-    <string name="calendars_subscribe_google_enable">As contas do Google não estão ativadas neste servidor. Ative-as em Configurações, Configurações do sistema.</string>
+    <string name="calendars_subscribe_google_enable">As contas do Google não estão ativadas neste servidor.</string>
     <string name="calendars_subscribe_google_connect">Você não conectou nenhuma conta do Google.</string>
     <string name="calendars_link_grant">Permitir o acesso ao calendário</string>
     <string name="calendars_subscribe_google_connect_action">Conectar o Google</string>
@@ -48,4 +48,16 @@
     <string name="calendars_rule_fourth">%1$s da quarta semana</string>
     <string name="calendars_rule_fifth">%1$s da quinta semana</string>
     <string name="calendars_rule_last">%1$s da última semana</string>
+    <string name="calendars_truncated">Eventos demais para mostrar todos. Escolha um intervalo menor.</string>
+    <string name="calendars_colour_saved">Cor salva</string>
+    <string name="calendars_deleted">Calendário excluído</string>
+    <string name="calendars_preferences_saved">Preferências salvas</string>
+    <string name="calendars_link_none">Este calendário não tem endereço para revogar</string>
+    <string name="calendars_linked">Calendário vinculado</string>
+    <string name="calendars_subscribed">Inscrito</string>
+    <string name="calendars_link_exists">Este endereço do calendário já foi emitido e não pode ser exibido novamente.</string>
+    <string name="calendars_device_delete_title">Excluir o dispositivo?</string>
+    <string name="calendars_device_delete_message">O dispositivo não poderá mais sincronizar contatos nem calendários.</string>
+    <string name="calendars_device_deleted">Dispositivo excluído</string>
+    <string name="calendars_subscribe_google_enable_action">Ativar contas do Google</string>
 </resources>

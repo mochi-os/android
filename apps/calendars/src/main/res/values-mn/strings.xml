@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Жилийн</string>
     <string name="calendars_repeat_custom">Захиалгат</string>
     <string name="calendars_reminder_none">Алга</string>
-    <string name="calendars_day_sunday">Ням гараг</string>
-    <string name="calendars_day_monday">Даваа</string>
-    <string name="calendars_day_tuesday">Мягмар гараг</string>
-    <string name="calendars_day_wednesday">Лхагва гараг</string>
-    <string name="calendars_day_thursday">Пүрэв гараг</string>
-    <string name="calendars_day_friday">Баасан</string>
-    <string name="calendars_day_saturday">Бямба</string>
     <string name="calendars_link_replace">Солих</string>
     <string name="calendars_link_revoke">Хүчингүй болгох</string>
     <string name="calendars_permission_allow">Зөвшөөрөх</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Сар</string>
     <string name="calendars_workweek">Ажлын долоо хоног</string>
     <string name="calendars_range">%1$s - %2$s</string>
-    <string name="calendars_truncated">Энэ мужийн зарим үйл явдлыг харуулаагүй байна.</string>
+    <string name="calendars_truncated">Бүгдийг харуулахад үйл явдал хэт олон байна. Богино муж сонгоно уу.</string>
     <string name="calendars_list_empty">Үйл явдал алга</string>
     <string name="calendars_untitled">(Гарчиггүй)</string>
     <string name="calendars_status_cancelled">Цуцалсан</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Сануулга хасах</string>
     <string name="calendars_hours_start">Ажлын цагийн эхлэл</string>
     <string name="calendars_hours_finish">Ажлын цагийн төгсгөл</string>
-    <string name="calendars_hours_invalid">Ажлын цаг эхэлснээс хойш дуусах ёстой.</string>
     <string name="calendars_work_days">Ажлын өдрүүд</string>
     <string name="calendars_multiweek_weeks">Харуулах долоо хоног</string>
     <string name="calendars_multiweek_previous">Өмнөх долоо хоног</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Өдөржингийн үйл явдал</string>
     <string name="calendars_allday_first">Эхэнд</string>
     <string name="calendars_allday_last">Төгсгөлд</string>
-    <string name="calendars_link_title">Хуанлийн холбоос</string>
-    <string name="calendars_link_copy">Холбоосыг хуулах</string>
+    <string name="calendars_link_title">Хуанлийн хаяг</string>
+    <string name="calendars_link_copy">Хуанлийн хаягийг хуулах</string>
     <string name="calendars_link_once">Одоо хуулж авна уу: дахин харуулах боломжгүй.</string>
-    <string name="calendars_link_exists">Энэ хуанлийн хувьд холбоос аль хэдийн байна.</string>
+    <string name="calendars_link_exists">Энэ хуанлийн хаяг аль хэдийн олгогдсон бөгөөд дахин харуулах боломжгүй.</string>
     <string name="calendars_permission_title">Хандахыг зөвшөөрөх үү?</string>
     <string name="calendars_permission_message">%1$s дараахыг хүсэж байна:</string>
     <string name="calendars_sync_authorization">Синк үргэлжлүүлэхийн тулд дахин нэвтэрнэ үү</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Холбогдсон төхөөрөмж байхгүй</string>
     <string name="calendars_device_used">Сүүлд ашигласан %1$s</string>
     <string name="calendars_device_never">Хэзээ ч</string>
-    <string name="calendars_device_deleted">Төхөөрөмжийг хаслаа</string>
-    <string name="calendars_device_delete_title">Энэ төхөөрөмжийг хасах уу?</string>
-    <string name="calendars_device_delete_message">Синк хийхийн тулд дахин тохируулах шаардлагатай болно.</string>
+    <string name="calendars_device_deleted">Төхөөрөмж устлаа</string>
+    <string name="calendars_device_delete_title">Төхөөрөмжийг устгах уу?</string>
+    <string name="calendars_device_delete_message">Төхөөрөмж цаашид харилцагчид эсвэл хуанлиудыг синк хийх боломжгүй болно.</string>
     <string name="calendars_sync_choose">Синк хийх хуанлиуд</string>
     <string name="calendars_poll_large">Хуанли хэт том байна</string>
     <string name="calendars_poll_invalid">Хаяг хуанли буцаасангүй</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календарь</string>
-    <string name="calendars_subscribe_google_enable">Энэ сервер дээр Google бүртгэлүүд идэвхжээгүй байна. Тэдгээрийг Тохиргоо, Системийн тохиргоо хэсэгт идэвхжүүлнэ үү.</string>
+    <string name="calendars_subscribe_google_enable">Энэ сервер дээр Google бүртгэлүүд идэвхжээгүй байна.</string>
     <string name="calendars_subscribe_google_connect">Та Google бүртгэл холбоогүй байна.</string>
     <string name="calendars_subscribe_google_connect_action">Google-т холбогдох</string>
     <string name="calendars_grant_failed">Хуанлийн хандалт олгогдсонгүй</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s хүртэл</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Өмнөх үйл явдлууд</string>
+    <string name="calendars_created">Хуанли үүслээ</string>
+    <string name="calendars_renamed">Хуанлийн нэр өөрчлөгдлөө</string>
+    <string name="calendars_colour_saved">Өнгө хадгалагдлаа</string>
+    <string name="calendars_deleted">Хуанли устлаа</string>
+    <string name="calendars_removed">Хуанли хасагдлаа</string>
+    <string name="calendars_preferences_saved">Тохиргоо хадгалагдлаа</string>
+    <string name="calendars_link_revoked">Хуанлийн хаягийг хүчингүй болголоо</string>
+    <string name="calendars_link_none">Энэ хуанлид хүчингүй болгох хаяг байхгүй</string>
+    <string name="calendars_linked">Хуанли холбогдлоо</string>
+    <string name="calendars_subscribed">Захиалсан</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s цаг</item>
+        <item quantity="other">%1$s цаг</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google бүртгэлүүдийг идэвхжүүлэх</string>
+    <string name="calendars_provider_caldav">Хуанлийн сервер</string>
 </resources>

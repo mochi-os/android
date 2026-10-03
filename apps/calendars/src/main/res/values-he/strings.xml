@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">שנתי</string>
     <string name="calendars_repeat_custom">מותאם אישית</string>
     <string name="calendars_reminder_none">ללא</string>
-    <string name="calendars_day_sunday">יום ראשון</string>
-    <string name="calendars_day_monday">יום שני</string>
-    <string name="calendars_day_tuesday">יום שלישי</string>
-    <string name="calendars_day_wednesday">יום רביעי</string>
-    <string name="calendars_day_thursday">יום חמישי</string>
-    <string name="calendars_day_friday">שישי</string>
-    <string name="calendars_day_saturday">שבת</string>
     <string name="calendars_link_replace">החלף</string>
     <string name="calendars_link_revoke">שלול</string>
     <string name="calendars_permission_allow">אפשר</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">חודש</string>
     <string name="calendars_workweek">שבוע עבודה</string>
     <string name="calendars_range">%1$s עד %2$s</string>
-    <string name="calendars_truncated">חלק מהאירועים בטווח הזה אינם מוצגים.</string>
+    <string name="calendars_truncated">יותר מדי אירועים מכדי להציג את כולם. בחר טווח קצר יותר.</string>
     <string name="calendars_list_empty">אין אירועים</string>
     <string name="calendars_untitled">(ללא כותרת)</string>
     <string name="calendars_status_cancelled">בוטל</string>
@@ -116,7 +109,6 @@
     <string name="calendars_reminder_remove">הסרת תזכורת</string>
     <string name="calendars_hours_start">תחילת שעות העבודה</string>
     <string name="calendars_hours_finish">סיום שעות העבודה</string>
-    <string name="calendars_hours_invalid">שעות העבודה חייבות להסתיים לאחר תחילתן.</string>
     <string name="calendars_work_days">ימי עבודה</string>
     <string name="calendars_multiweek_weeks">שבועות מוצגים</string>
     <string name="calendars_multiweek_previous">שבועות קודמים</string>
@@ -126,10 +118,10 @@
     <string name="calendars_preferences_allday">אירועים של יום שלם</string>
     <string name="calendars_allday_first">בהתחלה</string>
     <string name="calendars_allday_last">בסוף</string>
-    <string name="calendars_link_title">קישור ליומן</string>
-    <string name="calendars_link_copy">העתק קישור</string>
+    <string name="calendars_link_title">כתובת היומן</string>
+    <string name="calendars_link_copy">העתק את כתובת היומן</string>
     <string name="calendars_link_once">העתיקו אותו עכשיו: לא ניתן יהיה להציג אותו שוב.</string>
-    <string name="calendars_link_exists">כבר קיים קישור ליומן הזה.</string>
+    <string name="calendars_link_exists">כתובת יומן זו כבר הונפקה ולא ניתן להציג אותה שוב.</string>
     <string name="calendars_permission_title">לאפשר גישה?</string>
     <string name="calendars_permission_message">%1$s מבקש:</string>
     <string name="calendars_sync_authorization">התחברו שוב כדי להמשיך בסנכרון</string>
@@ -137,9 +129,9 @@
     <string name="calendars_device_empty">אין מכשירים מחוברים</string>
     <string name="calendars_device_used">שימוש אחרון %1$s</string>
     <string name="calendars_device_never">אף פעם</string>
-    <string name="calendars_device_deleted">המכשיר הוסר</string>
-    <string name="calendars_device_delete_title">להסיר את המכשיר הזה?</string>
-    <string name="calendars_device_delete_message">יהיה צורך להגדיר אותו מחדש כדי לסנכרן.</string>
+    <string name="calendars_device_deleted">המכשיר נמחק</string>
+    <string name="calendars_device_delete_title">למחוק את המכשיר?</string>
+    <string name="calendars_device_delete_message">המכשיר לא יוכל עוד לסנכרן אנשי קשר או יומנים.</string>
     <string name="calendars_sync_choose">יומנים לסנכרון</string>
     <string name="calendars_poll_large">היומן גדול מדי</string>
     <string name="calendars_poll_invalid">הכתובת לא החזירה יומן</string>
@@ -183,7 +175,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">יומן Google</string>
-    <string name="calendars_subscribe_google_enable">חשבונות Google לא הופעלו בשרת הזה. הפעל אותם תחת הגדרות, הגדרות מערכת.</string>
+    <string name="calendars_subscribe_google_enable">חשבונות Google לא הופעלו בשרת הזה.</string>
     <string name="calendars_subscribe_google_connect">לא חיברת חשבון Google.</string>
     <string name="calendars_subscribe_google_connect_action">התחבר ל-Google</string>
     <string name="calendars_grant_failed">הגישה ליומן לא ניתנה</string>
@@ -285,4 +277,23 @@
     </plurals>
     <string name="calendars_rule_until">עד %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">אירועים קודמים</string>
+    <string name="calendars_created">היומן נוצר</string>
+    <string name="calendars_renamed">שם היומן שונה</string>
+    <string name="calendars_colour_saved">הצבע נשמר</string>
+    <string name="calendars_deleted">היומן נמחק</string>
+    <string name="calendars_removed">היומן הוסר</string>
+    <string name="calendars_preferences_saved">ההעדפות נשמרו</string>
+    <string name="calendars_link_revoked">כתובת היומן נשללה</string>
+    <string name="calendars_link_none">ליומן זה אין כתובת לשלילה</string>
+    <string name="calendars_linked">היומן קושר</string>
+    <string name="calendars_subscribed">רשום</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s שעה</item>
+        <item quantity="two">%1$s שעות</item>
+        <item quantity="many">%1$s שעות</item>
+        <item quantity="other">%1$s שעות</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">הפעל חשבונות Google</string>
+    <string name="calendars_provider_caldav">שרת יומנים</string>
 </resources>

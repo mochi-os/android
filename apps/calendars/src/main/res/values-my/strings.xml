@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">နှစ်စဉ်</string>
     <string name="calendars_repeat_custom">စိတ်ကြိုက်</string>
     <string name="calendars_reminder_none">မရှိ</string>
-    <string name="calendars_day_sunday">တနင်္ဂနွေ</string>
-    <string name="calendars_day_monday">တနင်္လာ</string>
-    <string name="calendars_day_tuesday">အင်္ဂါ</string>
-    <string name="calendars_day_wednesday">ဗုဒ္ဓဟူး</string>
-    <string name="calendars_day_thursday">ကြာသပတေး</string>
-    <string name="calendars_day_friday">သောကြာ</string>
-    <string name="calendars_day_saturday">စနေနေ့</string>
     <string name="calendars_link_replace">အစားထိုးပါ</string>
     <string name="calendars_link_revoke">ရုပ်သိမ်း</string>
     <string name="calendars_permission_allow">ခွင့်ပြုရန်</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">လ</string>
     <string name="calendars_workweek">အလုပ်ပတ်</string>
     <string name="calendars_range">%1$s မှ %2$s</string>
-    <string name="calendars_truncated">ဤကာလအတွင်း အစီအစဉ် အချို့ကို မပြထားပါ။</string>
+    <string name="calendars_truncated">အစီအစဉ် များလွန်းသဖြင့် အားလုံး ပြ၍ မရပါ။ ပိုတိုသော ကာလကို ရွေးပါ။</string>
     <string name="calendars_list_empty">အစီအစဉ်များ မရှိပါ</string>
     <string name="calendars_untitled">(ခေါင်းစဉ်မရှိ)</string>
     <string name="calendars_status_cancelled">ဖျက်သိမ်းပြီး</string>
@@ -107,7 +100,6 @@
     <string name="calendars_reminder_remove">သတိပေးချက် ဖယ်ရှားမည်</string>
     <string name="calendars_hours_start">အလုပ်ချိန် စတင်ချိန်</string>
     <string name="calendars_hours_finish">အလုပ်ချိန် ပြီးဆုံးချိန်</string>
-    <string name="calendars_hours_invalid">အလုပ်ချိန်သည် စတင်ချိန်ပြီးနောက် ပြီးဆုံးရပါမည်။</string>
     <string name="calendars_work_days">အလုပ်ရက်များ</string>
     <string name="calendars_multiweek_weeks">ပြသမည့် အပတ်များ</string>
     <string name="calendars_multiweek_previous">ယခင် အပတ်များ</string>
@@ -117,10 +109,10 @@
     <string name="calendars_preferences_allday">တစ်နေကုန် အစီအစဉ်များ</string>
     <string name="calendars_allday_first">အစတွင်</string>
     <string name="calendars_allday_last">အဆုံးတွင်</string>
-    <string name="calendars_link_title">ပြက္ခဒိန် လင့်ခ်</string>
-    <string name="calendars_link_copy">လင့်ခ် ကူးမည်</string>
+    <string name="calendars_link_title">ပြက္ခဒိန် လိပ်စာ</string>
+    <string name="calendars_link_copy">ပြက္ခဒိန် လိပ်စာ ကူးမည်</string>
     <string name="calendars_link_once">ယခု ကူးယူပါ။ ထပ်မံ ပြသ၍ မရပါ။</string>
-    <string name="calendars_link_exists">ဤပြက္ခဒိန်အတွက် လင့်ခ် ရှိပြီးသား ဖြစ်သည်။</string>
+    <string name="calendars_link_exists">ဤပြက္ခဒိန် လိပ်စာကို ထုတ်ပေးပြီးဖြစ်၍ ထပ်မံ ပြသ၍ မရပါ။</string>
     <string name="calendars_permission_title">အသုံးပြုခွင့် ပေးမလား?</string>
     <string name="calendars_permission_message">%1$s မှ တောင်းဆိုနေသည်မှာ:</string>
     <string name="calendars_sync_authorization">ချိန်ကိုက်မှု ဆက်လုပ်ရန် ပြန်လည် ဝင်ရောက်ပါ</string>
@@ -128,9 +120,9 @@
     <string name="calendars_device_empty">ချိတ်ဆက်ထားသော ကိရိယာ မရှိပါ</string>
     <string name="calendars_device_used">နောက်ဆုံး အသုံးပြုခဲ့သည် %1$s</string>
     <string name="calendars_device_never">ဘယ်တော့မှ မဟုတ်</string>
-    <string name="calendars_device_deleted">ကိရိယာ ဖယ်ရှားပြီးပါပြီ</string>
-    <string name="calendars_device_delete_title">ဤကိရိယာကို ဖယ်ရှားမလား?</string>
-    <string name="calendars_device_delete_message">ချိန်ကိုက်ရန် ၎င်းကို ပြန်လည် ပြင်ဆင်သတ်မှတ်ရပါမည်။</string>
+    <string name="calendars_device_deleted">ကိရိယာ ဖျက်ပြီးပါပြီ</string>
+    <string name="calendars_device_delete_title">ကိရိယာကို ဖျက်မလား?</string>
+    <string name="calendars_device_delete_message">ကိရိယာသည် အဆက်အသွယ်များ သို့မဟုတ် ပြက္ခဒိန်များကို ထပ်မံ ချိန်ကိုက်နိုင်တော့မည် မဟုတ်ပါ။</string>
     <string name="calendars_sync_choose">ချိန်ကိုက်မည့် ပြက္ခဒိန်များ</string>
     <string name="calendars_poll_large">ပြက္ခဒိန် အရွယ်အစား ကြီးလွန်းသည်</string>
     <string name="calendars_poll_invalid">လိပ်စာမှ ပြက္ခဒိန် မရရှိပါ</string>
@@ -172,7 +164,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ပြက္ခဒိန်</string>
-    <string name="calendars_subscribe_google_enable">ဤဆာဗာတွင် Google အကောင့်များကို ဖွင့်ထားခြင်း မရှိပါ။ ၎င်းတို့ကို ဆက်တင်များ၊ စနစ် ဆက်တင်များ တွင် ဖွင့်ပါ။</string>
+    <string name="calendars_subscribe_google_enable">ဤဆာဗာတွင် Google အကောင့်များကို ဖွင့်ထားခြင်း မရှိပါ။</string>
     <string name="calendars_subscribe_google_connect">သင် Google အကောင့် ချိတ်ဆက်ထားခြင်း မရှိပါ။</string>
     <string name="calendars_subscribe_google_connect_action">Google ချိတ်ဆက်မည်</string>
     <string name="calendars_grant_failed">ပြက္ခဒိန် ဝင်ရောက်ခွင့် မရရှိပါ</string>
@@ -255,4 +247,20 @@
     </plurals>
     <string name="calendars_rule_until">%1$s အထိ</string>
     <string name="calendars_rule_join">%1$s၊ %2$s</string>
+    <string name="calendars_list_earlier">ယခင် အစီအစဉ်များ</string>
+    <string name="calendars_created">ပြက္ခဒိန် ဖန်တီးပြီးပါပြီ</string>
+    <string name="calendars_renamed">ပြက္ခဒိန် အမည်ပြောင်းပြီးပါပြီ</string>
+    <string name="calendars_colour_saved">အရောင် သိမ်းပြီးပါပြီ</string>
+    <string name="calendars_deleted">ပြက္ခဒိန် ဖျက်ပြီးပါပြီ</string>
+    <string name="calendars_removed">ပြက္ခဒိန် ဖယ်ရှားပြီးပါပြီ</string>
+    <string name="calendars_preferences_saved">ဦးစားပေးချက်များ သိမ်းပြီးပါပြီ</string>
+    <string name="calendars_link_revoked">ပြက္ခဒိန် လိပ်စာကို ရုပ်သိမ်းပြီး</string>
+    <string name="calendars_link_none">ဤပြက္ခဒိန်တွင် ရုပ်သိမ်းရန် လိပ်စာ မရှိပါ</string>
+    <string name="calendars_linked">ပြက္ခဒိန် ချိတ်ဆက်ပြီးပါပြီ</string>
+    <string name="calendars_subscribed">Subscribe လုပ်ပြီး</string>
+    <plurals name="calendars_hours">
+        <item quantity="other">%1$s နာရီ</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google အကောင့်များ ဖွင့်မည်</string>
+    <string name="calendars_provider_caldav">ပြက္ခဒိန် ဆာဗာ</string>
 </resources>

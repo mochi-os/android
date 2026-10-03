@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Aastas</string>
     <string name="calendars_repeat_custom">Kohandatud</string>
     <string name="calendars_reminder_none">Puudub</string>
-    <string name="calendars_day_sunday">Pühapäev</string>
-    <string name="calendars_day_monday">Esmaspäev</string>
-    <string name="calendars_day_tuesday">Teisipäev</string>
-    <string name="calendars_day_wednesday">Kolmapäev</string>
-    <string name="calendars_day_thursday">Neljapäev</string>
-    <string name="calendars_day_friday">Reede</string>
-    <string name="calendars_day_saturday">Laupäev</string>
     <string name="calendars_link_replace">Asenda</string>
     <string name="calendars_link_revoke">Võta ära</string>
     <string name="calendars_permission_allow">Luba</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Kuu</string>
     <string name="calendars_workweek">Töönädal</string>
     <string name="calendars_range">%1$s kuni %2$s</string>
-    <string name="calendars_truncated">Mõni selle vahemiku sündmus pole kuvatud.</string>
+    <string name="calendars_truncated">Sündmusi on kõigi kuvamiseks liiga palju. Vali lühem vahemik.</string>
     <string name="calendars_list_empty">Sündmusi pole</string>
     <string name="calendars_untitled">(Pealkirjata)</string>
     <string name="calendars_status_cancelled">Tühistatud</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Eemalda meeldetuletus</string>
     <string name="calendars_hours_start">Tööaja algus</string>
     <string name="calendars_hours_finish">Tööaja lõpp</string>
-    <string name="calendars_hours_invalid">Tööaeg peab lõppema pärast selle algust.</string>
     <string name="calendars_work_days">Tööpäevad</string>
     <string name="calendars_multiweek_weeks">Kuvatavad nädalad</string>
     <string name="calendars_multiweek_previous">Eelnevad nädalad</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Kogu päeva sündmused</string>
     <string name="calendars_allday_first">Alguses</string>
     <string name="calendars_allday_last">Lõpus</string>
-    <string name="calendars_link_title">Kalendri link</string>
-    <string name="calendars_link_copy">Kopeeri link</string>
+    <string name="calendars_link_title">Kalendri aadress</string>
+    <string name="calendars_link_copy">Kopeeri kalendri aadress</string>
     <string name="calendars_link_once">Kopeeri see kohe: seda ei saa uuesti kuvada.</string>
-    <string name="calendars_link_exists">Sellele kalendrile on juba link olemas.</string>
+    <string name="calendars_link_exists">See kalendri aadress on juba väljastatud ja seda ei saa uuesti kuvada.</string>
     <string name="calendars_permission_title">Kas lubada juurdepääs?</string>
     <string name="calendars_permission_message">%1$s küsib:</string>
     <string name="calendars_sync_authorization">Sünkroonimise jätkamiseks logi uuesti sisse</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Ühtegi seadet pole ühendatud</string>
     <string name="calendars_device_used">viimati kasutatud %1$s</string>
     <string name="calendars_device_never">mitte kunagi</string>
-    <string name="calendars_device_deleted">Seade eemaldatud</string>
-    <string name="calendars_device_delete_title">Kas eemaldada see seade?</string>
-    <string name="calendars_device_delete_message">Sünkroonimiseks tuleb see uuesti seadistada.</string>
+    <string name="calendars_device_deleted">Seade kustutatud</string>
+    <string name="calendars_device_delete_title">Kas kustutada seade?</string>
+    <string name="calendars_device_delete_message">Seade ei saa enam kontakte ega kalendreid sünkroonida.</string>
     <string name="calendars_sync_choose">Sünkroonitavad kalendrid</string>
     <string name="calendars_poll_large">Kalender on liiga suur</string>
     <string name="calendars_poll_invalid">Aadress ei tagastanud kalendrit</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google\'i kalender</string>
-    <string name="calendars_subscribe_google_enable">Google\'i kontod ei ole selles serveris lubatud. Luba need menüüs Seaded, Süsteemi seaded.</string>
+    <string name="calendars_subscribe_google_enable">Google\'i kontod ei ole selles serveris lubatud.</string>
     <string name="calendars_subscribe_google_connect">Sa ei ole Google\'i kontot ühendanud.</string>
     <string name="calendars_subscribe_google_connect_action">Ühenda Google</string>
     <string name="calendars_grant_failed">Juurdepääsu kalendrile ei antud</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">kuni %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Varasemad sündmused</string>
+    <string name="calendars_created">Kalender loodud</string>
+    <string name="calendars_renamed">Kalender ümber nimetatud</string>
+    <string name="calendars_colour_saved">Värv salvestatud</string>
+    <string name="calendars_deleted">Kalender kustutatud</string>
+    <string name="calendars_removed">Kalender eemaldatud</string>
+    <string name="calendars_preferences_saved">Eelistused salvestatud</string>
+    <string name="calendars_link_revoked">Kalendri aadress võeti ära</string>
+    <string name="calendars_link_none">Sellel kalendril pole aadressi, mida ära võtta</string>
+    <string name="calendars_linked">Kalender seotud</string>
+    <string name="calendars_subscribed">Tellitud</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s tund</item>
+        <item quantity="other">%1$s tundi</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Luba Google\'i kontod</string>
+    <string name="calendars_provider_caldav">Kalendriserver</string>
 </resources>

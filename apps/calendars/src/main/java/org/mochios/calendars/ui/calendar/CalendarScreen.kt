@@ -7,6 +7,7 @@ package org.mochios.calendars.ui.calendar
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -52,9 +53,11 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
@@ -66,6 +69,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileSaveLauncher
+import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
@@ -79,8 +83,10 @@ import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.navigation.CalendarsApp
+import org.mochios.calendars.navigation.Reminder
 import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.components.CalendarDrawer
+import org.mochios.calendars.ui.components.DateDialog
 import org.mochios.calendars.ui.dialogs.ColourCalendarDialog
 import org.mochios.calendars.ui.dialogs.DeleteCalendarDialog
 import org.mochios.calendars.ui.dialogs.ImportDialog
@@ -93,7 +99,9 @@ import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.android.R as MochiR
+import java.time.Instant
 import java.time.LocalDate
+import java.time.ZoneOffset
 
 /**
  * The calendars app's one screen: the drawer of calendars, the toolbar that
@@ -115,7 +123,7 @@ fun CalendarScreen(
     onCreateCalendar: () -> Unit,
     onSubscribe: () -> Unit,
     onConnectDevice: () -> Unit,
-    onNewEvent: (Long, Boolean?) -> Unit,
+    onNewEvent: (Long, Boolean?, Long?) -> Unit,
     onEditEvent: (String, Long) -> Unit,
     onCopyEvent: (String, Long, Scope) -> Unit,
     onCopyOccurrence: (Instance) -> Unit,
@@ -125,6 +133,8 @@ fun CalendarScreen(
     onDeletedShown: () -> Unit = {},
     saved: String = "",
     onSavedShown: () -> Unit = {},
+    reminder: Reminder? = null,
+    onReminderShown: () -> Unit = {},
     onLogout: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
@@ -188,6 +198,8 @@ fun CalendarScreen(
                     is CalendarEvent.Exported -> snackbar.showSnackbar(
                         resources.getString(if (event.saved) R.string.calendars_exported else R.string.calendars_export_failed),
                     )
+                    is CalendarEvent.Open -> open(event.instance, onEditEvent) { selected = it }
+                    is CalendarEvent.Done -> snackbar.showSnackbar(resources.getString(event.message))
                 }
             }
         }
@@ -202,11 +214,30 @@ fun CalendarScreen(
         }
     }
 
+    LaunchedEffect(reminder) {
+        val link = reminder ?: return@LaunchedEffect
+        onReminderShown()
+        viewModel.remind(link.event, link.occurrence, link.date)
+    }
+
     LaunchedEffect(saved) {
-        if (saved.isNotEmpty()) {
-            onSavedShown()
-            val message = if (saved == CalendarsApp.CREATED) R.string.calendars_event_created else R.string.calendars_event_saved
-            scope.launch { snackbar.showSnackbar(resources.getString(message)) }
+        val message = CalendarsApp.said(saved) ?: return@LaunchedEffect
+        onSavedShown()
+        scope.launch { snackbar.showSnackbar(resources.getString(message)) }
+    }
+
+    // A refresh that failed with events on screen keeps them and says so,
+    // with Retry; the error takes the view's place only when there are none.
+    LaunchedEffect(uiState.stale) {
+        val stale = uiState.stale ?: return@LaunchedEffect
+        viewModel.told()
+        scope.launch {
+            val chosen = snackbar.showSnackbar(
+                message = stale.userMessage(),
+                actionLabel = resources.getString(MochiR.string.common_retry),
+                duration = SnackbarDuration.Long,
+            )
+            if (chosen == SnackbarResult.ActionPerformed) viewModel.reload(refreshing = true)
         }
     }
 
@@ -269,13 +300,15 @@ fun CalendarScreen(
                     onToday = viewModel::today,
                     onPrevious = viewModel::previous,
                     onNext = viewModel::next,
+                    onDate = viewModel::anchor,
+                    onSearch = viewModel::seek,
                     onView = viewModel::view,
                     onWorkweek = { viewModel.workweek(!uiState.workweek) },
                 )
             },
             snackbarHost = { SnackbarHost(snackbar) },
             floatingActionButton = {
-                MochiFab(onClick = { onNewEvent(viewModel.creation(), null) }) {
+                MochiFab(onClick = { onNewEvent(viewModel.creation(), null, null) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
                 }
             },
@@ -318,16 +351,10 @@ fun CalendarScreen(
                                 uiState,
                                 viewModel,
                                 selected = selected,
-                                onOpen = { instance ->
-                                    if (instance.editable) {
-                                        onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
-                                    } else {
-                                        selected = instance
-                                    }
-                                },
+                                onOpen = { instance -> open(instance, onEditEvent) { selected = it } },
                                 onNewEvent = onNewEvent,
-                                onMove = { instance, start, finish ->
-                                    request(instance) { scope -> viewModel.move(instance, start, finish, scope) }
+                                onMove = { instance, moved ->
+                                    request(instance) { scope -> viewModel.move(instance, moved, scope) }
                                 },
                                 onMoveDay = { instance, day ->
                                     request(instance) { scope -> viewModel.move(instance, day, scope) }
@@ -395,37 +422,31 @@ fun CalendarScreen(
         )
     }
 
+    // Each dialog stays open while its change is saved, and after a failure,
+    // so what was entered can be tried again; it closes once the change lands.
+    val working by viewModel.working.collectAsState()
     renaming?.let { calendar ->
         RenameCalendarDialog(
             calendar = calendar,
-            saving = false,
+            saving = working,
             onDismiss = { renaming = null },
-            onConfirm = { name ->
-                renaming = null
-                viewModel.rename(calendar.id, name)
-            },
+            onConfirm = { name -> viewModel.rename(calendar.id, name) { renaming = null } },
         )
     }
     colouring?.let { calendar ->
         ColourCalendarDialog(
             calendar = calendar,
-            saving = false,
+            saving = working,
             onDismiss = { colouring = null },
-            onConfirm = { colour ->
-                colouring = null
-                viewModel.recolour(calendar.id, colour)
-            },
+            onConfirm = { colour -> viewModel.recolour(calendar.id, colour) { colouring = null } },
         )
     }
     deleting?.let { calendar ->
         DeleteCalendarDialog(
             calendar = calendar,
-            deleting = false,
+            deleting = working,
             onDismiss = { deleting = null },
-            onConfirm = {
-                deleting = null
-                viewModel.remove(calendar.id)
-            },
+            onConfirm = { viewModel.remove(calendar) { deleting = null } },
         )
     }
     linking?.let { calendar ->
@@ -448,11 +469,9 @@ fun CalendarScreen(
     }
     revoking?.let { calendar ->
         RevokeLinkDialog(
+            busy = working,
             onDismiss = { revoking = null },
-            onConfirm = {
-                revoking = null
-                viewModel.revokeLink(calendar.id)
-            },
+            onConfirm = { viewModel.revokeLink(calendar.id) { revoking = null } },
         )
     }
     if (about) {
@@ -460,19 +479,29 @@ fun CalendarScreen(
     }
 
     val tally by viewModel.importing.collectAsState()
-    tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport) }
+    tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport, onRetry = viewModel::retryImport) }
 
     if (preferences) {
         PreferencesDialog(
             preferences = uiState.preferences,
             calendars = uiState.calendars,
-            saving = false,
+            saving = working,
             onDismiss = { preferences = false },
-            onConfirm = {
-                preferences = false
-                viewModel.preferences(it)
-            },
+            onConfirm = { viewModel.preferences(it) { preferences = false } },
         )
+    }
+}
+
+/**
+ * Opens an occurrence as a tap on it does: the editor for one the user can
+ * change, else its summary, [show]n in a sheet, as a subscription's or a
+ * birthday is.
+ */
+internal fun open(instance: Instance, onEditEvent: (String, Long) -> Unit, show: (Instance) -> Unit) {
+    if (instance.editable) {
+        onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
+    } else {
+        show(instance)
     }
 }
 
@@ -492,25 +521,23 @@ private fun View(
     viewModel: CalendarViewModel,
     selected: Instance?,
     onOpen: (Instance) -> Unit,
-    onNewEvent: (Long, Boolean?) -> Unit,
-    onMove: (Instance, Long, Long) -> Unit,
+    onNewEvent: (Long, Boolean?, Long?) -> Unit,
+    onMove: (Instance, Moved) -> Unit,
     onMoveDay: (Instance, LocalDate) -> Unit,
 ) {
-    // A tap on a cell names a day and, in a time grid, an hour; the editor
-    // wants the moment, measured in the user's own zone rather than the
-    // device's. A cell is a timed event, and says so, which the editor's
-    // memory of the last new event does not override.
-    val moment = { day: LocalDate, hour: Int ->
-        day.atStartOfDay(viewModel.timezone()).plusHours(hour.toLong()).toEpochSecond()
-    }
+    // A tap or a drag on empty grid is a timed event, and says so, which the
+    // editor's memory of the last new event does not override.
+    val create = { start: Long, finish: Long? -> onNewEvent(start, false, finish) }
+    val step = { direction: Int -> if (direction < 0) viewModel.previous() else viewModel.next() }
     when (state.view) {
         CalendarsSection.DAY -> TimeGrid(
             days = listOf(state.anchor),
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
+            onCreate = create,
             onMove = onMove,
+            onStep = step,
             selected = selected,
         )
         CalendarsSection.WEEK -> {
@@ -522,8 +549,9 @@ private fun View(
                 state = state,
                 viewModel = viewModel,
                 onOpen = onOpen,
-                onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
+                onCreate = create,
                 onMove = onMove,
+                onStep = step,
                 selected = selected,
             )
         }
@@ -533,8 +561,9 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(viewModel.creation(day), null) },
+            onCreate = { day -> onNewEvent(viewModel.creation(day), null, null) },
             onMove = onMoveDay,
+            onStep = step,
             selected = selected,
         )
         CalendarsSection.MONTH -> MonthGrid(
@@ -543,14 +572,17 @@ private fun View(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day -> onNewEvent(viewModel.creation(day), null) },
+            onCreate = { day -> onNewEvent(viewModel.creation(day), null, null) },
             onMove = onMoveDay,
+            onStep = step,
             selected = selected,
         )
         // The list view opens on the anchor day and pages on as the reader
         // scrolls, so it has no range to pick — only something to search.
         else -> Column(modifier = Modifier.fillMaxSize()) {
             val searching = stringResource(R.string.calendars_list_search)
+            val focus = remember { FocusRequester() }
+            LaunchedEffect(state.seeking) { if (state.seeking > 0) focus.requestFocus() }
             MochiTextField(
                 value = state.search,
                 onValueChange = viewModel::search,
@@ -560,6 +592,7 @@ private fun View(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 8.dp)
+                    .focusRequester(focus)
                     .semantics { contentDescription = searching },
             )
             AgendaList(state, viewModel, onOpen, selected)
@@ -567,23 +600,35 @@ private fun View(
     }
 }
 
-/** Previous, today, next, the range's title, and the view switcher. */
+/**
+ * Previous, today, next, the range's title, search and the view switcher.
+ * The title opens a date picker to jump to any day, as the web's opens its
+ * mini month; search takes the reader to the list, where results are.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun Toolbar(
+internal fun Toolbar(
     state: CalendarUiState,
     title: String,
     onMenu: () -> Unit,
     onToday: () -> Unit,
     onPrevious: () -> Unit,
     onNext: () -> Unit,
+    onDate: (LocalDate) -> Unit,
+    onSearch: () -> Unit,
     onView: (String) -> Unit,
     onWorkweek: () -> Unit,
 ) {
     var views by remember { mutableStateOf(false) }
+    var picking by remember { mutableStateOf(false) }
     TopAppBar(
         title = {
-            Text(text = title, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(
+                text = title,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.clickable(role = Role.Button) { picking = true },
+            )
         },
         navigationIcon = {
             MochiIconButton(onClick = onMenu) {
@@ -602,6 +647,12 @@ private fun Toolbar(
             }
             MochiIconButton(onClick = onNext) {
                 Icon(Icons.Default.ChevronRight, contentDescription = stringResource(R.string.calendars_next))
+            }
+            // The list carries its own box; elsewhere this takes the reader there.
+            if (state.view != CalendarsSection.LIST) {
+                MochiIconButton(onClick = onSearch) {
+                    Icon(Icons.Outlined.Search, contentDescription = stringResource(R.string.calendars_list_search_events))
+                }
             }
             Box {
                 MochiIconButton(onClick = { views = true }) {
@@ -633,6 +684,16 @@ private fun Toolbar(
             }
         },
     )
+    if (picking) {
+        DateDialog(
+            day = state.anchor,
+            onDismiss = { picking = false },
+            onPick = {
+                picking = false
+                onDate(it)
+            },
+        )
+    }
 }
 
 /** The switcher's entries: the token the state holds, its label and its glyph. */
@@ -649,18 +710,27 @@ private val VIEWS = listOf(
 private fun rangeTitle(state: CalendarUiState, viewModel: CalendarViewModel): String {
     val format = LocalFormat.current
     val (start, finish) = viewModel.range(state)
-    return when (state.view) {
-        CalendarsSection.DAY -> format.formatDate(start)
-        CalendarsSection.MONTH -> state.anchor.month
-            .getDisplayName(java.time.format.TextStyle.FULL, LocalConfiguration.current.locales[0]) +
-            " " + state.anchor.year
-        else -> stringResource(
-            R.string.calendars_range,
-            format.formatDate(start),
-            format.formatDate(finish - 86_400),
-        )
-    }
+    val zone = viewModel.timezone()
+    return title(
+        state.view,
+        state.anchor,
+        Instant.ofEpochSecond(start).atZone(zone).toLocalDate(),
+        Instant.ofEpochSecond(finish).atZone(zone).toLocalDate().minusDays(1),
+        format,
+    )
 }
+
+/**
+ * The toolbar's title for a view, as the web's: a day's long date, a month
+ * and its year for the month and the list, which pages on from its month,
+ * and the span of days otherwise, each as the user's language writes it.
+ */
+internal fun title(view: String, anchor: LocalDate, first: LocalDate, last: LocalDate, format: Format): String =
+    when (view) {
+        CalendarsSection.DAY -> format.formatLongDate(anchor.atTime(12, 0).toEpochSecond(ZoneOffset.UTC), "UTC")
+        CalendarsSection.MONTH, CalendarsSection.LIST -> format.formatMonthYear(anchor)
+        else -> format.formatDayRange(first, last)
+    }
 
 /** Reloads the range whenever the screen comes back to the foreground. */
 @Composable

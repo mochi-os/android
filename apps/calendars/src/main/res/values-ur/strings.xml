@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">سالانہ</string>
     <string name="calendars_repeat_custom">اپنی مرضی کا</string>
     <string name="calendars_reminder_none">کوئی نہیں</string>
-    <string name="calendars_day_sunday">اتوار</string>
-    <string name="calendars_day_monday">پیر</string>
-    <string name="calendars_day_tuesday">منگل</string>
-    <string name="calendars_day_wednesday">بدھ</string>
-    <string name="calendars_day_thursday">جمعرات</string>
-    <string name="calendars_day_friday">جمعہ</string>
-    <string name="calendars_day_saturday">ہفتہ</string>
     <string name="calendars_link_replace">بدلیں</string>
     <string name="calendars_link_revoke">واپس لیں</string>
     <string name="calendars_permission_allow">اجازت دیں</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">مہینہ</string>
     <string name="calendars_workweek">کام کا ہفتہ</string>
     <string name="calendars_range">%1$s سے %2$s تک</string>
-    <string name="calendars_truncated">اس حد میں کچھ ایونٹس نہیں دکھائے گئے۔</string>
+    <string name="calendars_truncated">سب دکھانے کے لیے ایونٹس بہت زیادہ ہیں۔ چھوٹی حد منتخب کریں۔</string>
     <string name="calendars_list_empty">کوئی ایونٹ نہیں</string>
     <string name="calendars_untitled">(کوئی عنوان نہیں)</string>
     <string name="calendars_status_cancelled">منسوخ</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">یاد دہانی ہٹائیں</string>
     <string name="calendars_hours_start">کام کے اوقات کا آغاز</string>
     <string name="calendars_hours_finish">کام کے اوقات کا اختتام</string>
-    <string name="calendars_hours_invalid">کام کے اوقات آغاز کے بعد ختم ہونے چاہییں۔</string>
     <string name="calendars_work_days">کام کے دن</string>
     <string name="calendars_multiweek_weeks">دکھائے گئے ہفتے</string>
     <string name="calendars_multiweek_previous">پچھلے ہفتے</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">پورے دن کے ایونٹس</string>
     <string name="calendars_allday_first">شروع میں</string>
     <string name="calendars_allday_last">آخر میں</string>
-    <string name="calendars_link_title">کیلنڈر لنک</string>
-    <string name="calendars_link_copy">لنک کاپی کریں</string>
+    <string name="calendars_link_title">کیلنڈر کا پتہ</string>
+    <string name="calendars_link_copy">کیلنڈر کا پتہ کاپی کریں</string>
     <string name="calendars_link_once">اسے ابھی کاپی کریں: یہ دوبارہ نہیں دکھایا جائے گا۔</string>
-    <string name="calendars_link_exists">اس کیلنڈر کے لیے پہلے سے ایک لنک موجود ہے۔</string>
+    <string name="calendars_link_exists">یہ کیلنڈر پتہ پہلے ہی جاری کیا جا چکا ہے اور دوبارہ نہیں دکھایا جا سکتا۔</string>
     <string name="calendars_permission_title">رسائی کی اجازت دیں؟</string>
     <string name="calendars_permission_message">%1$s یہ مانگ رہا ہے:</string>
     <string name="calendars_sync_authorization">سنک جاری رکھنے کے لیے دوبارہ سائن ان کریں</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">کوئی آلہ منسلک نہیں</string>
     <string name="calendars_device_used">آخری استعمال %1$s</string>
     <string name="calendars_device_never">کبھی نہیں</string>
-    <string name="calendars_device_deleted">آلہ ہٹا دیا گیا</string>
-    <string name="calendars_device_delete_title">یہ آلہ ہٹائیں؟</string>
-    <string name="calendars_device_delete_message">سنک کرنے کے لیے اسے دوبارہ سیٹ اپ کرنا ہوگا۔</string>
+    <string name="calendars_device_deleted">ڈیوائس حذف ہو گئی</string>
+    <string name="calendars_device_delete_title">ڈیوائس حذف کریں؟</string>
+    <string name="calendars_device_delete_message">ڈیوائس اب رابطے یا کیلنڈرز سنک نہیں کر سکے گی۔</string>
     <string name="calendars_sync_choose">سنک کرنے کے لیے کیلنڈرز</string>
     <string name="calendars_poll_large">کیلنڈر بہت بڑا ہے</string>
     <string name="calendars_poll_invalid">پتے سے کوئی کیلنڈر نہیں ملا</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google کیلنڈر</string>
-    <string name="calendars_subscribe_google_enable">اس سرور پر Google اکاؤنٹس فعال نہیں کیے گئے۔ انہیں سیٹنگز، سسٹم سیٹنگز میں فعال کریں۔</string>
+    <string name="calendars_subscribe_google_enable">اس سرور پر Google اکاؤنٹس فعال نہیں کیے گئے۔</string>
     <string name="calendars_subscribe_google_connect">آپ نے کوئی Google اکاؤنٹ کنیکٹ نہیں کیا۔</string>
     <string name="calendars_subscribe_google_connect_action">Google سے جڑیں</string>
     <string name="calendars_grant_failed">کیلنڈر تک رسائی نہیں دی گئی</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s تک</string>
     <string name="calendars_rule_join">%1$s، %2$s</string>
+    <string name="calendars_list_earlier">پچھلے ایونٹس</string>
+    <string name="calendars_created">کیلنڈر بن گیا</string>
+    <string name="calendars_renamed">کیلنڈر کا نام تبدیل ہو گیا</string>
+    <string name="calendars_colour_saved">رنگ محفوظ ہو گیا</string>
+    <string name="calendars_deleted">کیلنڈر حذف ہو گیا</string>
+    <string name="calendars_removed">کیلنڈر ہٹا دیا گیا</string>
+    <string name="calendars_preferences_saved">ترجیحات محفوظ ہو گئیں</string>
+    <string name="calendars_link_revoked">کیلنڈر کا پتہ واپس لے لیا گیا</string>
+    <string name="calendars_link_none">اس کیلنڈر کا کوئی پتہ نہیں جسے واپس لیا جائے</string>
+    <string name="calendars_linked">کیلنڈر منسلک ہو گیا</string>
+    <string name="calendars_subscribed">سبسکرائب ہو گیا</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s گھنٹہ</item>
+        <item quantity="other">%1$s گھنٹے</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google اکاؤنٹس فعال کریں</string>
+    <string name="calendars_provider_caldav">کیلنڈر سرور</string>
 </resources>

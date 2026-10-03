@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">ዓመታዊ</string>
     <string name="calendars_repeat_custom">ብጁ</string>
     <string name="calendars_reminder_none">ምንም</string>
-    <string name="calendars_day_sunday">እሁድ</string>
-    <string name="calendars_day_monday">ሰኞ</string>
-    <string name="calendars_day_tuesday">ማክሰኞ</string>
-    <string name="calendars_day_wednesday">ረቡዕ</string>
-    <string name="calendars_day_thursday">ሐሙስ</string>
-    <string name="calendars_day_friday">ዓርብ</string>
-    <string name="calendars_day_saturday">ቅዳሜ</string>
     <string name="calendars_link_replace">ተካ</string>
     <string name="calendars_link_revoke">ይሻሩ</string>
     <string name="calendars_permission_allow">ፍቀድ</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">ወር</string>
     <string name="calendars_workweek">የሥራ ሳምንት</string>
     <string name="calendars_range">ከ%1$s እስከ %2$s</string>
-    <string name="calendars_truncated">በዚህ ክልል ውስጥ ያሉ አንዳንድ ክስተቶች አይታዩም።</string>
+    <string name="calendars_truncated">ሁሉንም ለማሳየት ክስተቶቹ በጣም ብዙ ናቸው። አጭር ክልል ይምረጡ።</string>
     <string name="calendars_list_empty">ምንም ክስተቶች የሉም</string>
     <string name="calendars_untitled">(ርዕስ የለም)</string>
     <string name="calendars_status_cancelled">ተሰርዟል</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">አስታዋሽ አስወግድ</string>
     <string name="calendars_hours_start">የሥራ ሰዓት መጀመሪያ</string>
     <string name="calendars_hours_finish">የሥራ ሰዓት መጨረሻ</string>
-    <string name="calendars_hours_invalid">የሥራ ሰዓት ከተጀመረ በኋላ መጠናቀቅ አለበት።</string>
     <string name="calendars_work_days">የሥራ ቀናት</string>
     <string name="calendars_multiweek_weeks">የሚታዩ ሳምንታት</string>
     <string name="calendars_multiweek_previous">ቀደም ያሉ ሳምንታት</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">የሙሉ ቀን ክስተቶች</string>
     <string name="calendars_allday_first">መጀመሪያ ላይ</string>
     <string name="calendars_allday_last">መጨረሻ ላይ</string>
-    <string name="calendars_link_title">የቀን መቁጠሪያ አገናኝ</string>
-    <string name="calendars_link_copy">አገናኝ ቅዳ</string>
+    <string name="calendars_link_title">የቀን መቁጠሪያ አድራሻ</string>
+    <string name="calendars_link_copy">የቀን መቁጠሪያ አድራሻ ቅዳ</string>
     <string name="calendars_link_once">አሁን ቅዳው፦ እንደገና ሊታይ አይችልም።</string>
-    <string name="calendars_link_exists">ለዚህ የቀን መቁጠሪያ አገናኝ አስቀድሞ አለ።</string>
+    <string name="calendars_link_exists">ይህ የቀን መቁጠሪያ አድራሻ ቀደም ብሎ ተሰጥቷል እና እንደገና ሊታይ አይችልም።</string>
     <string name="calendars_permission_title">መዳረሻ ይፈቀድ?</string>
     <string name="calendars_permission_message">%1$s የሚከተለውን ይጠይቃል፦</string>
     <string name="calendars_sync_authorization">ማመሳሰልን ለመቀጠል እንደገና ይግቡ</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">ምንም መሳሪያ አልተገናኘም</string>
     <string name="calendars_device_used">መጨረሻ የተጠቀመው %1$s</string>
     <string name="calendars_device_never">በፍፁም</string>
-    <string name="calendars_device_deleted">መሳሪያው ተወግዷል</string>
-    <string name="calendars_device_delete_title">ይህ መሳሪያ ይወገድ?</string>
-    <string name="calendars_device_delete_message">ለማመሳሰል እንደገና መዋቀር ይኖርበታል።</string>
+    <string name="calendars_device_deleted">መሳሪያው ተሰርዟል</string>
+    <string name="calendars_device_delete_title">መሳሪያውን ይሰረዝ?</string>
+    <string name="calendars_device_delete_message">መሳሪያው ከእንግዲህ እውቂያዎችን ወይም የቀን መቁጠሪያዎችን ማመሳሰል አይችልም።</string>
     <string name="calendars_sync_choose">የሚመሳሰሉ የቀን መቁጠሪያዎች</string>
     <string name="calendars_poll_large">የቀን መቁጠሪያው በጣም ትልቅ ነው</string>
     <string name="calendars_poll_invalid">አድራሻው የቀን መቁጠሪያ አልመለሰም</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google ቀን መቁጠሪያ</string>
-    <string name="calendars_subscribe_google_enable">የGoogle መለያዎች በዚህ ሰርቨር ላይ አልተነቁም። በቅንብሮች፣ የስርዓት ቅንብሮች ውስጥ ያንቁዋቸው።</string>
+    <string name="calendars_subscribe_google_enable">የGoogle መለያዎች በዚህ ሰርቨር ላይ አልተነቁም።</string>
     <string name="calendars_subscribe_google_connect">የGoogle መለያ አላገናኙም።</string>
     <string name="calendars_subscribe_google_connect_action">Google አገናኝ</string>
     <string name="calendars_grant_failed">የቀን መቁጠሪያ መዳረሻ አልተፈቀደም</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">እስከ %1$s</string>
     <string name="calendars_rule_join">%1$s፣ %2$s</string>
+    <string name="calendars_list_earlier">ቀደም ያሉ ክስተቶች</string>
+    <string name="calendars_created">የቀን መቁጠሪያ ተፈጥሯል</string>
+    <string name="calendars_renamed">የቀን መቁጠሪያ ስም ተቀይሯል</string>
+    <string name="calendars_colour_saved">ቀለም ተቀምጧል</string>
+    <string name="calendars_deleted">የቀን መቁጠሪያ ተሰርዟል</string>
+    <string name="calendars_removed">የቀን መቁጠሪያ ተወግዷል</string>
+    <string name="calendars_preferences_saved">ምርጫዎች ተቀምጠዋል</string>
+    <string name="calendars_link_revoked">የቀን መቁጠሪያ አድራሻ ተሽሯል</string>
+    <string name="calendars_link_none">ይህ የቀን መቁጠሪያ የሚሻር አድራሻ የለውም</string>
+    <string name="calendars_linked">የቀን መቁጠሪያ ተገናኝቷል</string>
+    <string name="calendars_subscribed">ተመዝግቧል</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s ሰዓት</item>
+        <item quantity="other">%1$s ሰዓታት</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">የGoogle መለያዎችን አንቃ</string>
+    <string name="calendars_provider_caldav">የቀን መቁጠሪያ አገልጋይ</string>
 </resources>

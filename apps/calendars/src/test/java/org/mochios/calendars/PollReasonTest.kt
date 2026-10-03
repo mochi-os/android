@@ -56,6 +56,15 @@ class PollReasonTest {
     }
 
     @Test
+    fun `any reason reads the same with the other server's status after it`() {
+        assertEquals(PollReason.Conflict, pollReason("conflict:409"))
+        assertEquals(PollReason.Missing, pollReason("missing:404"))
+        assertEquals(PollReason.Large, pollReason("too_large:413"))
+        assertEquals(PollReason.Unreachable, pollReason("transport:0"))
+        assertEquals(PollReason.Invalid, pollReason("invalid:200"))
+    }
+
+    @Test
     fun `a status carries its code`() {
         assertEquals(PollReason.Status(404), pollReason("status:404"))
         assertEquals(PollReason.Status(502), pollReason("status:502"))

@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Щорічно</string>
     <string name="calendars_repeat_custom">Користувацький</string>
     <string name="calendars_reminder_none">Немає</string>
-    <string name="calendars_day_sunday">Неділя</string>
-    <string name="calendars_day_monday">Понеділок</string>
-    <string name="calendars_day_tuesday">Вівторок</string>
-    <string name="calendars_day_wednesday">Середа</string>
-    <string name="calendars_day_thursday">Четвер</string>
-    <string name="calendars_day_friday">П\'ятниця</string>
-    <string name="calendars_day_saturday">Субота</string>
     <string name="calendars_link_replace">Замінити</string>
     <string name="calendars_link_revoke">Відкликати</string>
     <string name="calendars_permission_allow">Дозволити</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Місяць</string>
     <string name="calendars_workweek">Робочий тиждень</string>
     <string name="calendars_range">Від %1$s до %2$s</string>
-    <string name="calendars_truncated">Деякі події в цьому діапазоні не показано.</string>
+    <string name="calendars_truncated">Забагато подій, щоб показати їх усі. Виберіть коротший діапазон.</string>
     <string name="calendars_list_empty">Немає подій</string>
     <string name="calendars_untitled">(Без назви)</string>
     <string name="calendars_status_cancelled">Скасовано</string>
@@ -116,7 +109,6 @@
     <string name="calendars_reminder_remove">Видалити нагадування</string>
     <string name="calendars_hours_start">Початок робочого часу</string>
     <string name="calendars_hours_finish">Кінець робочого часу</string>
-    <string name="calendars_hours_invalid">Робочий час має закінчуватися після його початку.</string>
     <string name="calendars_work_days">Робочі дні</string>
     <string name="calendars_multiweek_weeks">Показані тижні</string>
     <string name="calendars_multiweek_previous">Попередні тижні</string>
@@ -126,10 +118,10 @@
     <string name="calendars_preferences_allday">Події на весь день</string>
     <string name="calendars_allday_first">На початку</string>
     <string name="calendars_allday_last">У кінці</string>
-    <string name="calendars_link_title">Посилання на календар</string>
-    <string name="calendars_link_copy">Копіювати посилання</string>
+    <string name="calendars_link_title">Адреса календаря</string>
+    <string name="calendars_link_copy">Копіювати адресу календаря</string>
     <string name="calendars_link_once">Скопіюйте його зараз: воно більше не відображатиметься.</string>
-    <string name="calendars_link_exists">Для цього календаря вже є посилання.</string>
+    <string name="calendars_link_exists">Цю адресу календаря вже видано, і її не можна показати знову.</string>
     <string name="calendars_permission_title">Дозволити доступ?</string>
     <string name="calendars_permission_message">%1$s запитує:</string>
     <string name="calendars_sync_authorization">Увійдіть знову, щоб продовжити синхронізацію</string>
@@ -137,9 +129,9 @@
     <string name="calendars_device_empty">Немає підключених пристроїв</string>
     <string name="calendars_device_used">востаннє використано %1$s</string>
     <string name="calendars_device_never">ніколи</string>
-    <string name="calendars_device_deleted">Пристрій вилучено</string>
-    <string name="calendars_device_delete_title">Вилучити цей пристрій?</string>
-    <string name="calendars_device_delete_message">Для синхронізації його доведеться налаштувати знову.</string>
+    <string name="calendars_device_deleted">Пристрій видалено</string>
+    <string name="calendars_device_delete_title">Видалити пристрій?</string>
+    <string name="calendars_device_delete_message">Пристрій більше не зможе синхронізувати контакти або календарі.</string>
     <string name="calendars_sync_choose">Календарі для синхронізації</string>
     <string name="calendars_poll_large">Календар завеликий</string>
     <string name="calendars_poll_invalid">За адресою не знайдено календаря</string>
@@ -184,7 +176,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календар</string>
-    <string name="calendars_subscribe_google_enable">Облікові записи Google не ввімкнено на цьому сервері. Увімкніть їх у розділі Налаштування, Системні налаштування.</string>
+    <string name="calendars_subscribe_google_enable">Облікові записи Google не ввімкнено на цьому сервері.</string>
     <string name="calendars_subscribe_google_connect">Ви не підключили обліковий запис Google.</string>
     <string name="calendars_subscribe_google_connect_action">Підключити Google</string>
     <string name="calendars_grant_failed">Доступ до календаря не надано</string>
@@ -289,4 +281,23 @@
     </plurals>
     <string name="calendars_rule_until">до %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Попередні події</string>
+    <string name="calendars_created">Календар створено</string>
+    <string name="calendars_renamed">Календар перейменовано</string>
+    <string name="calendars_colour_saved">Колір збережено</string>
+    <string name="calendars_deleted">Календар видалено</string>
+    <string name="calendars_removed">Календар видалено</string>
+    <string name="calendars_preferences_saved">Параметри збережено</string>
+    <string name="calendars_link_revoked">Адресу календаря відкликано</string>
+    <string name="calendars_link_none">Цей календар не має адреси, яку можна відкликати</string>
+    <string name="calendars_linked">Календар пов\'язано</string>
+    <string name="calendars_subscribed">Підписано</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s година</item>
+        <item quantity="few">%1$s години</item>
+        <item quantity="many">%1$s годин</item>
+        <item quantity="other">%1$s години</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Увімкнути облікові записи Google</string>
+    <string name="calendars_provider_caldav">Сервер календарів</string>
 </resources>

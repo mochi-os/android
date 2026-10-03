@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Annuale</string>
     <string name="calendars_repeat_custom">Personalizzato</string>
     <string name="calendars_reminder_none">Nessuno</string>
-    <string name="calendars_day_sunday">Domenica</string>
-    <string name="calendars_day_monday">Lunedì</string>
-    <string name="calendars_day_tuesday">Martedì</string>
-    <string name="calendars_day_wednesday">Mercoledì</string>
-    <string name="calendars_day_thursday">Giovedì</string>
-    <string name="calendars_day_friday">Venerdì</string>
-    <string name="calendars_day_saturday">Sabato</string>
     <string name="calendars_link_replace">Sostituisci</string>
     <string name="calendars_link_revoke">Revoca</string>
     <string name="calendars_permission_allow">Consenti</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Mese</string>
     <string name="calendars_workweek">Settimana lavorativa</string>
     <string name="calendars_range">da %1$s a %2$s</string>
-    <string name="calendars_truncated">Alcuni eventi in questo intervallo non sono mostrati.</string>
+    <string name="calendars_truncated">Troppi eventi per mostrarli tutti. Scegli un intervallo più breve.</string>
     <string name="calendars_list_empty">Nessun evento</string>
     <string name="calendars_untitled">(Senza titolo)</string>
     <string name="calendars_status_cancelled">Annullato</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Rimuovi promemoria</string>
     <string name="calendars_hours_start">Inizio dell\'orario di lavoro</string>
     <string name="calendars_hours_finish">Fine dell\'orario di lavoro</string>
-    <string name="calendars_hours_invalid">L\'orario di lavoro deve terminare dopo il suo inizio.</string>
     <string name="calendars_work_days">Giorni lavorativi</string>
     <string name="calendars_multiweek_weeks">Settimane mostrate</string>
     <string name="calendars_multiweek_previous">Settimane precedenti</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Eventi di tutto il giorno</string>
     <string name="calendars_allday_first">All\'inizio</string>
     <string name="calendars_allday_last">Alla fine</string>
-    <string name="calendars_link_title">Link del calendario</string>
-    <string name="calendars_link_copy">Copia link</string>
+    <string name="calendars_link_title">Indirizzo del calendario</string>
+    <string name="calendars_link_copy">Copia l\'indirizzo del calendario</string>
     <string name="calendars_link_once">Copialo adesso: non potrà essere mostrato di nuovo.</string>
-    <string name="calendars_link_exists">Esiste già un link per questo calendario.</string>
+    <string name="calendars_link_exists">Questo indirizzo del calendario è già stato emesso e non può essere mostrato di nuovo.</string>
     <string name="calendars_permission_title">Consentire l\'accesso?</string>
     <string name="calendars_permission_message">%1$s richiede:</string>
     <string name="calendars_sync_authorization">Accedi di nuovo per continuare la sincronizzazione</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Nessun dispositivo collegato</string>
     <string name="calendars_device_used">Ultimo uso %1$s</string>
     <string name="calendars_device_never">mai</string>
-    <string name="calendars_device_deleted">Dispositivo rimosso</string>
-    <string name="calendars_device_delete_title">Rimuovere questo dispositivo?</string>
-    <string name="calendars_device_delete_message">Dovrà essere configurato di nuovo per sincronizzare.</string>
+    <string name="calendars_device_deleted">Dispositivo eliminato</string>
+    <string name="calendars_device_delete_title">Eliminare il dispositivo?</string>
+    <string name="calendars_device_delete_message">Il dispositivo non potrà più sincronizzare i contatti né i calendari.</string>
     <string name="calendars_sync_choose">Calendari da sincronizzare</string>
     <string name="calendars_poll_large">Il calendario è troppo grande</string>
     <string name="calendars_poll_invalid">L\'indirizzo non ha restituito un calendario</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">ID Apple</string>
     <string name="calendars_subscribe_google">Google Calendar</string>
-    <string name="calendars_subscribe_google_enable">Gli account Google non sono abilitati su questo server. Abilitali in Impostazioni, Impostazioni di sistema.</string>
+    <string name="calendars_subscribe_google_enable">Gli account Google non sono abilitati su questo server.</string>
     <string name="calendars_subscribe_google_connect">Non hai connesso alcun account Google.</string>
     <string name="calendars_subscribe_google_connect_action">Connetti Google</string>
     <string name="calendars_grant_failed">L\'accesso al calendario non è stato concesso</string>
@@ -269,4 +261,21 @@
     </plurals>
     <string name="calendars_rule_until">fino al %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Eventi precedenti</string>
+    <string name="calendars_created">Calendario creato</string>
+    <string name="calendars_renamed">Calendario rinominato</string>
+    <string name="calendars_colour_saved">Colore salvato</string>
+    <string name="calendars_deleted">Calendario eliminato</string>
+    <string name="calendars_removed">Calendario rimosso</string>
+    <string name="calendars_preferences_saved">Preferenze salvate</string>
+    <string name="calendars_link_revoked">Indirizzo del calendario revocato</string>
+    <string name="calendars_link_none">Questo calendario non ha alcun indirizzo da revocare</string>
+    <string name="calendars_linked">Calendario collegato</string>
+    <string name="calendars_subscribed">Iscritto</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s ora</item>
+        <item quantity="other">%1$s ore</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Abilita gli account Google</string>
+    <string name="calendars_provider_caldav">Server di calendario</string>
 </resources>

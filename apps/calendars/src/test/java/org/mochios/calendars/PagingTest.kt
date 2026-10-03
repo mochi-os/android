@@ -69,27 +69,45 @@ class PagingTest {
         )
     }
 
+    @Test
+    fun `a page reaching back past 1970 stops there, where listing does`() {
+        val early = page(LocalDate.of(1970, 2, 1), -1, ZoneId.of("UTC"))
+        assertEquals(0L, early.start)
+        assertEquals(LocalDate.of(1970, 2, 1).atStartOfDay(ZoneId.of("UTC")).toEpochSecond(), early.finish)
+    }
+
     // ---- reaching back ----
 
     @Test
     fun `nothing reaches back past the first event there is`() {
         // The first event is inside page 0, so there is nothing before it.
         val bounds = Bounds(first = moment(ANCHOR.plusDays(3)), last = moment(ANCHOR.plusDays(9)))
-        assertFalse(earlier(ANCHOR, 0, bounds, LONDON, pages = 1))
+        assertFalse(earlier(ANCHOR, 0, bounds, LONDON))
     }
 
     @Test
     fun `an event before the anchor leaves a page to reach back to`() {
         val bounds = Bounds(first = moment(ANCHOR.minusDays(10)), last = moment(ANCHOR))
-        assertTrue(earlier(ANCHOR, 0, bounds, LONDON, pages = 1))
+        assertTrue(earlier(ANCHOR, 0, bounds, LONDON))
         // One page back already covers it, so that is as far as it goes.
-        assertFalse(earlier(ANCHOR, -1, bounds, LONDON, pages = 2))
+        assertFalse(earlier(ANCHOR, -1, bounds, LONDON))
+    }
+
+    @Test
+    fun `a first event before 1970 leaves pages to reach back to, as far as 1970`() {
+        // A contact's birthday in 1965 bounds below zero.
+        val bounds = Bounds(first = moment(LocalDate.of(1965, 5, 1)), last = moment(ANCHOR))
+        assertTrue(earlier(ANCHOR, 0, bounds, LONDON))
+        assertTrue(earlier(ANCHOR, -200, bounds, LONDON))
+        val anchor = LocalDate.of(1970, 2, 1)
+        assertTrue(earlier(anchor, 0, bounds, LONDON))
+        assertFalse(earlier(anchor, -1, bounds, LONDON))
     }
 
     @Test
     fun `an empty calendar reaches back nowhere`() {
-        assertFalse(earlier(ANCHOR, 0, Bounds(), LONDON, pages = 1))
-        assertFalse(earlier(ANCHOR, 0, Bounds(endless = true), LONDON, pages = 1))
+        assertFalse(earlier(ANCHOR, 0, Bounds(), LONDON))
+        assertFalse(earlier(ANCHOR, 0, Bounds(endless = true), LONDON))
     }
 
     // ---- reaching forward ----
@@ -97,52 +115,50 @@ class PagingTest {
     @Test
     fun `an event past the page leaves a page to reach forward to`() {
         val bounds = Bounds(first = moment(ANCHOR), last = moment(ANCHOR.plusDays(200)))
-        assertTrue(later(ANCHOR, 0, bounds, LONDON, pages = 1))
-        assertTrue(later(ANCHOR, 1, bounds, LONDON, pages = 2))
+        assertTrue(later(ANCHOR, 0, bounds, LONDON))
+        assertTrue(later(ANCHOR, 1, bounds, LONDON))
         // Page 2 ends past the last event, so it is the last page.
-        assertFalse(later(ANCHOR, 2, bounds, LONDON, pages = 3))
+        assertFalse(later(ANCHOR, 2, bounds, LONDON))
     }
 
     @Test
     fun `nothing reaches forward when the last event is inside the page`() {
         val bounds = Bounds(first = moment(ANCHOR), last = moment(ANCHOR.plusDays(9)))
-        assertFalse(later(ANCHOR, 0, bounds, LONDON, pages = 1))
+        assertFalse(later(ANCHOR, 0, bounds, LONDON))
     }
 
     @Test
     fun `an empty calendar reaches forward nowhere`() {
-        assertFalse(later(ANCHOR, 0, Bounds(), LONDON, pages = 1))
+        assertFalse(later(ANCHOR, 0, Bounds(), LONDON))
     }
 
     /**
      * A rule without an end, or the birthdays calendar, has no last event to
-     * stop at, so the only thing that stops it is the cap.
+     * stop at, so the only thing that stops it is the cap on pages forward.
      */
     @Test
     fun `an endless calendar always has another page, up to the cap`() {
         val bounds = Bounds(first = moment(ANCHOR), last = 0, endless = true)
-        assertTrue(later(ANCHOR, 0, bounds, LONDON, pages = 1))
-        assertTrue(later(ANCHOR, 100, bounds, LONDON, pages = PAGES - 1))
-        assertFalse(later(ANCHOR, 100, bounds, LONDON, pages = PAGES))
+        assertTrue(later(ANCHOR, 0, bounds, LONDON))
+        assertTrue(later(ANCHOR, PAGES - 2, bounds, LONDON))
+        assertFalse(later(ANCHOR, PAGES - 1, bounds, LONDON))
     }
 
     @Test
-    fun `the cap stops both directions`() {
+    fun `a calendar that ends pages on to its last event, past the cap, and pages back without one`() {
         val wide = Bounds(
             first = moment(ANCHOR.minusDays(10_000)),
             last = moment(ANCHOR.plusDays(10_000)),
         )
-        assertTrue(earlier(ANCHOR, 0, wide, LONDON, pages = PAGES - 1))
-        assertFalse(earlier(ANCHOR, 0, wide, LONDON, pages = PAGES))
-        assertTrue(later(ANCHOR, 0, wide, LONDON, pages = PAGES - 1))
-        assertFalse(later(ANCHOR, 0, wide, LONDON, pages = PAGES))
+        assertTrue(later(ANCHOR, PAGES + 10, wide, LONDON))
+        assertTrue(earlier(ANCHOR, -(PAGES + 10), wide, LONDON))
     }
 
     /** The bound the server answers for a calendar of its own, end to end. */
     @Test
     fun `a calendar that both starts and ends inside one page needs no other`() {
         val bounds = Bounds(first = moment(ANCHOR.plusDays(1)), last = moment(ANCHOR.plusDays(2)))
-        assertFalse(earlier(ANCHOR, 0, bounds, LONDON, pages = 1))
-        assertFalse(later(ANCHOR, 0, bounds, LONDON, pages = 1))
+        assertFalse(earlier(ANCHOR, 0, bounds, LONDON))
+        assertFalse(later(ANCHOR, 0, bounds, LONDON))
     }
 }

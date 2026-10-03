@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Годишње</string>
     <string name="calendars_repeat_custom">Прилагођено</string>
     <string name="calendars_reminder_none">Ништа</string>
-    <string name="calendars_day_sunday">Недеља</string>
-    <string name="calendars_day_monday">Понедељак</string>
-    <string name="calendars_day_tuesday">Уторак</string>
-    <string name="calendars_day_wednesday">Среда</string>
-    <string name="calendars_day_thursday">Четвртак</string>
-    <string name="calendars_day_friday">Петак</string>
-    <string name="calendars_day_saturday">Субота</string>
     <string name="calendars_link_replace">Замени</string>
     <string name="calendars_link_revoke">Опозови</string>
     <string name="calendars_permission_allow">Дозволи</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Месец</string>
     <string name="calendars_workweek">Радна седмица</string>
     <string name="calendars_range">Од %1$s до %2$s</string>
-    <string name="calendars_truncated">Неки догађаји у овом опсегу нису приказани.</string>
+    <string name="calendars_truncated">Превише догађаја да би се сви приказали. Изаберите краћи опсег.</string>
     <string name="calendars_list_empty">Нема догађаја</string>
     <string name="calendars_untitled">(Без наслова)</string>
     <string name="calendars_status_cancelled">Отказано</string>
@@ -113,7 +106,6 @@
     <string name="calendars_reminder_remove">Уклони подсетник</string>
     <string name="calendars_hours_start">Почетак радног времена</string>
     <string name="calendars_hours_finish">Крај радног времена</string>
-    <string name="calendars_hours_invalid">Радно време мора да се заврши након свог почетка.</string>
     <string name="calendars_work_days">Радни дани</string>
     <string name="calendars_multiweek_weeks">Приказаних седмица</string>
     <string name="calendars_multiweek_previous">Седмица пре</string>
@@ -123,10 +115,10 @@
     <string name="calendars_preferences_allday">Целодневни догађаји</string>
     <string name="calendars_allday_first">На почетку</string>
     <string name="calendars_allday_last">На крају</string>
-    <string name="calendars_link_title">Веза ка календару</string>
-    <string name="calendars_link_copy">Копирај везу</string>
+    <string name="calendars_link_title">Адреса календара</string>
+    <string name="calendars_link_copy">Копирај адресу календара</string>
     <string name="calendars_link_once">Копирајте је одмах: неће поново бити приказана.</string>
-    <string name="calendars_link_exists">За овај календар већ постоји веза.</string>
+    <string name="calendars_link_exists">Ова адреса календара је већ издата и не може се поново приказати.</string>
     <string name="calendars_permission_title">Дозволити приступ?</string>
     <string name="calendars_permission_message">%1$s тражи:</string>
     <string name="calendars_sync_authorization">Пријавите се поново да бисте наставили синхронизацију</string>
@@ -134,9 +126,9 @@
     <string name="calendars_device_empty">Нема повезаних уређаја</string>
     <string name="calendars_device_used">последњи пут коришћен %1$s</string>
     <string name="calendars_device_never">никада</string>
-    <string name="calendars_device_deleted">Уређај је уклоњен</string>
-    <string name="calendars_device_delete_title">Уклонити овај уређај?</string>
-    <string name="calendars_device_delete_message">Мораће поново да се подеси за синхронизацију.</string>
+    <string name="calendars_device_deleted">Уређај је обрисан</string>
+    <string name="calendars_device_delete_title">Обрисати уређај?</string>
+    <string name="calendars_device_delete_message">Уређај више неће моћи да синхронизује контакте ни календаре.</string>
     <string name="calendars_sync_choose">Календари за синхронизацију</string>
     <string name="calendars_poll_large">Календар је превелик</string>
     <string name="calendars_poll_invalid">Адреса није вратила календар</string>
@@ -180,7 +172,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календар</string>
-    <string name="calendars_subscribe_google_enable">Google налози нису омогућени на овом серверу. Омогућите их у Поставке, Системске поставке.</string>
+    <string name="calendars_subscribe_google_enable">Google налози нису омогућени на овом серверу.</string>
     <string name="calendars_subscribe_google_connect">Нисте повезали Google налог.</string>
     <string name="calendars_subscribe_google_connect_action">Повежи Google</string>
     <string name="calendars_grant_failed">Приступ календару није одобрен</string>
@@ -276,4 +268,22 @@
     </plurals>
     <string name="calendars_rule_until">до %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Ранији догађаји</string>
+    <string name="calendars_created">Календар је креиран</string>
+    <string name="calendars_renamed">Календар је преименован</string>
+    <string name="calendars_colour_saved">Боја је сачувана</string>
+    <string name="calendars_deleted">Календар је обрисан</string>
+    <string name="calendars_removed">Календар је уклоњен</string>
+    <string name="calendars_preferences_saved">Поставке су сачуване</string>
+    <string name="calendars_link_revoked">Адреса календара опозвана</string>
+    <string name="calendars_link_none">Овај календар нема адресу за опозив</string>
+    <string name="calendars_linked">Календар повезан</string>
+    <string name="calendars_subscribed">Претплаћен</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s сат</item>
+        <item quantity="few">%1$s сата</item>
+        <item quantity="other">%1$s сати</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Омогући Google налоге</string>
+    <string name="calendars_provider_caldav">Сервер календара</string>
 </resources>

@@ -408,9 +408,8 @@ class CalendarsRepository @Inject constructor(
         api.link(calendar, if (regenerate) "1" else "").unwrap()
     }
 
-    suspend fun revokeLink(calendar: String) {
-        call { api.revokeLink(calendar).unwrap() }
-    }
+    /** Revokes a calendar's address; false when it had none to revoke. */
+    suspend fun revokeLink(calendar: String): Boolean = call { api.revokeLink(calendar).unwrap() }.revoked
 
     suspend fun createToken(name: String): TokenResponse = call { api.createToken(name).unwrap() }
 

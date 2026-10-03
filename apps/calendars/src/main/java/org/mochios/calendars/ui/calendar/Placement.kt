@@ -115,3 +115,36 @@ fun cut(instance: Instance, day: LocalDate, user: ZoneId, zones: Boolean): Cut? 
     }
     return Cut(from, maxOf(to, from + MINIMUM))
 }
+
+/** An all-day occurrence's [first] and [last] days, which the band lays out as a bar. */
+data class Span<T>(val item: T, val first: LocalDate, val last: LocalDate)
+
+/** A bar laid in the band: the [column] it starts in among the days shown, how many it [span]s, and its [row]. */
+data class Laid<T>(val item: T, val column: Int, val span: Int, val row: Int)
+
+/**
+ * Stacks [bars] into the band's rows over [days], longest first and then by
+ * where they start, each in the first row where every column it covers is
+ * free. A bar runs from the first day shown on or after its first day to the
+ * last shown on or before its last, so a day left out, as a work week leaves
+ * its weekend, takes no column; a bar covering no day shown is left out.
+ */
+fun <T> rows(days: List<LocalDate>, bars: List<Span<T>>): List<Laid<T>> {
+    val placed = bars.mapNotNull { bar ->
+        val column = days.indexOfFirst { !it.isBefore(bar.first) }
+        val end = days.indexOfLast { !it.isAfter(bar.last) }
+        if (column < 0 || end < column) null else Laid(bar.item, column, end - column + 1, 0)
+    }.sortedWith(compareByDescending<Laid<T>> { it.span }.thenBy { it.column })
+    val taken = mutableListOf<BooleanArray>()
+    return placed.map { bar ->
+        var row = 0
+        while (true) {
+            if (row == taken.size) taken.add(BooleanArray(days.size))
+            val free = taken[row]
+            if ((bar.column until bar.column + bar.span).none { free[it] }) break
+            row++
+        }
+        for (column in bar.column until bar.column + bar.span) taken[row][column] = true
+        bar.copy(row = row)
+    }
+}

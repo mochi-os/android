@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Çdo vit</string>
     <string name="calendars_repeat_custom">Personalizuar</string>
     <string name="calendars_reminder_none">Asnjë</string>
-    <string name="calendars_day_sunday">E diel</string>
-    <string name="calendars_day_monday">E hënë</string>
-    <string name="calendars_day_tuesday">E martë</string>
-    <string name="calendars_day_wednesday">E mërkurë</string>
-    <string name="calendars_day_thursday">E enjte</string>
-    <string name="calendars_day_friday">E premte</string>
-    <string name="calendars_day_saturday">E shtunë</string>
     <string name="calendars_link_replace">Zëvendëso</string>
     <string name="calendars_link_revoke">Revoko</string>
     <string name="calendars_permission_allow">Lejo</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Muaji</string>
     <string name="calendars_workweek">Java e punës</string>
     <string name="calendars_range">%1$s deri më %2$s</string>
-    <string name="calendars_truncated">Disa ngjarje në këtë interval nuk shfaqen.</string>
+    <string name="calendars_truncated">Ka shumë ngjarje për t\'i shfaqur të gjitha. Zgjidhni një interval më të shkurtër.</string>
     <string name="calendars_list_empty">Asnjë ngjarje</string>
     <string name="calendars_untitled">(Pa titull)</string>
     <string name="calendars_status_cancelled">Anuluar</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Hiq kujtesën</string>
     <string name="calendars_hours_start">Fillimi i orarit të punës</string>
     <string name="calendars_hours_finish">Mbarimi i orarit të punës</string>
-    <string name="calendars_hours_invalid">Orari i punës duhet të mbarojë pas fillimit.</string>
     <string name="calendars_work_days">Ditët e punës</string>
     <string name="calendars_multiweek_weeks">Javët e shfaqura</string>
     <string name="calendars_multiweek_previous">Javët e mëparshme</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Ngjarjet gjithë ditën</string>
     <string name="calendars_allday_first">Në fillim</string>
     <string name="calendars_allday_last">Në fund</string>
-    <string name="calendars_link_title">Lidhja e kalendarit</string>
-    <string name="calendars_link_copy">Kopjo lidhjen</string>
+    <string name="calendars_link_title">Adresa e kalendarit</string>
+    <string name="calendars_link_copy">Kopjo adresën e kalendarit</string>
     <string name="calendars_link_once">Kopjojeni tani: nuk mund të shfaqet sërish.</string>
-    <string name="calendars_link_exists">Për këtë kalendar ekziston tashmë një lidhje.</string>
+    <string name="calendars_link_exists">Kjo adresë kalendari është lëshuar tashmë dhe nuk mund të shfaqet më.</string>
     <string name="calendars_permission_title">Të lejohet qasja?</string>
     <string name="calendars_permission_message">%1$s po kërkon:</string>
     <string name="calendars_sync_authorization">Hyni sërish për të vazhduar sinkronizimin</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Asnjë pajisje e lidhur</string>
     <string name="calendars_device_used">përdorur së fundi %1$s</string>
     <string name="calendars_device_never">asnjëherë</string>
-    <string name="calendars_device_deleted">Pajisja u hoq</string>
-    <string name="calendars_device_delete_title">Të hiqet kjo pajisje?</string>
-    <string name="calendars_device_delete_message">Do të duhet të konfigurohet sërish për sinkronizim.</string>
+    <string name="calendars_device_deleted">Pajisja u fshi</string>
+    <string name="calendars_device_delete_title">Të fshihet pajisja?</string>
+    <string name="calendars_device_delete_message">Pajisja nuk do të mund të sinkronizojë më kontaktet ose kalendarët.</string>
     <string name="calendars_sync_choose">Kalendarët për sinkronizim</string>
     <string name="calendars_poll_large">Kalendari është shumë i madh</string>
     <string name="calendars_poll_invalid">Adresa nuk ktheu një kalendar</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalendari Google</string>
-    <string name="calendars_subscribe_google_enable">Llogaritë Google nuk janë aktivizuar në këtë server. Aktivizoji te Cilësimet, Cilësimet e sistemit.</string>
+    <string name="calendars_subscribe_google_enable">Llogaritë Google nuk janë aktivizuar në këtë server.</string>
     <string name="calendars_subscribe_google_connect">Nuk ke lidhur asnjë llogari Google.</string>
     <string name="calendars_subscribe_google_connect_action">Lidh Google</string>
     <string name="calendars_grant_failed">Qasja në kalendar nuk u dha</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">deri më %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Ngjarje të mëparshme</string>
+    <string name="calendars_created">Kalendari u krijua</string>
+    <string name="calendars_renamed">Kalendari u riemërtua</string>
+    <string name="calendars_colour_saved">Ngjyra u ruajt</string>
+    <string name="calendars_deleted">Kalendari u fshi</string>
+    <string name="calendars_removed">Kalendari u hoq</string>
+    <string name="calendars_preferences_saved">Preferencat u ruajtën</string>
+    <string name="calendars_link_revoked">Adresa e kalendarit u revokua</string>
+    <string name="calendars_link_none">Ky kalendar nuk ka asnjë adresë për t\'u revokuar</string>
+    <string name="calendars_linked">Kalendari u lidh</string>
+    <string name="calendars_subscribed">I abonuar</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s orë</item>
+        <item quantity="other">%1$s orë</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Aktivizo llogaritë Google</string>
+    <string name="calendars_provider_caldav">Server kalendari</string>
 </resources>

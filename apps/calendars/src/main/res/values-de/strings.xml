@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Jährlich</string>
     <string name="calendars_repeat_custom">Benutzerdefiniert</string>
     <string name="calendars_reminder_none">Keine</string>
-    <string name="calendars_day_sunday">Sonntag</string>
-    <string name="calendars_day_monday">Montag</string>
-    <string name="calendars_day_tuesday">Dienstag</string>
-    <string name="calendars_day_wednesday">Mittwoch</string>
-    <string name="calendars_day_thursday">Donnerstag</string>
-    <string name="calendars_day_friday">Freitag</string>
-    <string name="calendars_day_saturday">Samstag</string>
     <string name="calendars_link_replace">Ersetzen</string>
     <string name="calendars_link_revoke">Widerrufen</string>
     <string name="calendars_permission_allow">Erlauben</string>
@@ -72,7 +65,7 @@
     <string name="calendars_view_month">Monat</string>
     <string name="calendars_workweek">Arbeitswoche</string>
     <string name="calendars_range">%1$s bis %2$s</string>
-    <string name="calendars_truncated">Einige Termine in diesem Zeitraum werden nicht angezeigt.</string>
+    <string name="calendars_truncated">Zu viele Termine, um alle anzuzeigen. Wähle einen kürzeren Zeitraum.</string>
     <string name="calendars_list_empty">Keine Termine</string>
     <string name="calendars_untitled">(Kein Titel)</string>
     <string name="calendars_status_cancelled">Abgesagt</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Erinnerung entfernen</string>
     <string name="calendars_hours_start">Beginn der Arbeitszeit</string>
     <string name="calendars_hours_finish">Ende der Arbeitszeit</string>
-    <string name="calendars_hours_invalid">Die Arbeitszeit muss nach ihrem Beginn enden.</string>
     <string name="calendars_work_days">Arbeitstage</string>
     <string name="calendars_multiweek_weeks">Angezeigte Wochen</string>
     <string name="calendars_multiweek_previous">Wochen davor</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Ganztägige Termine</string>
     <string name="calendars_allday_first">Zuerst</string>
     <string name="calendars_allday_last">Zuletzt</string>
-    <string name="calendars_link_title">Kalenderlink</string>
-    <string name="calendars_link_copy">Link kopieren</string>
+    <string name="calendars_link_title">Kalenderadresse</string>
+    <string name="calendars_link_copy">Kalenderadresse kopieren</string>
     <string name="calendars_link_once">Kopiere ihn jetzt: er kann nicht erneut angezeigt werden.</string>
-    <string name="calendars_link_exists">Für diesen Kalender gibt es bereits einen Link.</string>
+    <string name="calendars_link_exists">Diese Kalenderadresse wurde bereits ausgestellt und kann nicht erneut angezeigt werden.</string>
     <string name="calendars_permission_title">Zugriff zulassen?</string>
     <string name="calendars_permission_message">%1$s fragt nach:</string>
     <string name="calendars_sync_authorization">Melde dich erneut an, um weiter zu synchronisieren</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Keine Geräte verbunden</string>
     <string name="calendars_device_used">zuletzt verwendet %1$s</string>
     <string name="calendars_device_never">nie</string>
-    <string name="calendars_device_deleted">Gerät entfernt</string>
-    <string name="calendars_device_delete_title">Dieses Gerät entfernen?</string>
-    <string name="calendars_device_delete_message">Es muss für die Synchronisierung neu eingerichtet werden.</string>
+    <string name="calendars_device_deleted">Gerät gelöscht</string>
+    <string name="calendars_device_delete_title">Gerät löschen?</string>
+    <string name="calendars_device_delete_message">Das Gerät kann dann keine Kontakte oder Kalender mehr synchronisieren.</string>
     <string name="calendars_sync_choose">Zu synchronisierende Kalender</string>
     <string name="calendars_poll_large">Der Kalender ist zu groß</string>
     <string name="calendars_poll_invalid">Die Adresse hat keinen Kalender geliefert</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple-ID</string>
     <string name="calendars_subscribe_google">Google Kalender</string>
-    <string name="calendars_subscribe_google_enable">Google-Konten sind auf diesem Server nicht aktiviert. Aktivieren Sie sie unter Einstellungen, Systemeinstellungen.</string>
+    <string name="calendars_subscribe_google_enable">Google-Konten sind auf diesem Server nicht aktiviert.</string>
     <string name="calendars_subscribe_google_connect">Sie haben kein Google-Konto verbunden.</string>
     <string name="calendars_subscribe_google_connect_action">Google verbinden</string>
     <string name="calendars_grant_failed">Kalenderzugriff wurde nicht erteilt</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">bis %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Frühere Termine</string>
+    <string name="calendars_created">Kalender erstellt</string>
+    <string name="calendars_renamed">Kalender umbenannt</string>
+    <string name="calendars_colour_saved">Farbe gespeichert</string>
+    <string name="calendars_deleted">Kalender gelöscht</string>
+    <string name="calendars_removed">Kalender entfernt</string>
+    <string name="calendars_preferences_saved">Präferenzen gespeichert</string>
+    <string name="calendars_link_revoked">Kalenderadresse widerrufen</string>
+    <string name="calendars_link_none">Dieser Kalender hat keine Adresse zum Widerrufen</string>
+    <string name="calendars_linked">Kalender verknüpft</string>
+    <string name="calendars_subscribed">Abonniert</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s Stunde</item>
+        <item quantity="other">%1$s Stunden</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google-Konten aktivieren</string>
+    <string name="calendars_provider_caldav">Kalenderserver</string>
 </resources>

@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Bliantúil</string>
     <string name="calendars_repeat_custom">Saincheaptha</string>
     <string name="calendars_reminder_none">Faic</string>
-    <string name="calendars_day_sunday">Domhnach</string>
-    <string name="calendars_day_monday">Dé Luain</string>
-    <string name="calendars_day_tuesday">Máirt</string>
-    <string name="calendars_day_wednesday">Céadaoin</string>
-    <string name="calendars_day_thursday">Déardaoin</string>
-    <string name="calendars_day_friday">Dé hAoine</string>
-    <string name="calendars_day_saturday">Dé Sathairn</string>
     <string name="calendars_link_replace">Athchuir</string>
     <string name="calendars_link_revoke">Cúlghair</string>
     <string name="calendars_permission_allow">Ceadaigh</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Mí</string>
     <string name="calendars_workweek">Seachtain oibre</string>
     <string name="calendars_range">%1$s go %2$s</string>
-    <string name="calendars_truncated">Níl roinnt imeachtaí sa raon seo á dtaispeáint.</string>
+    <string name="calendars_truncated">An iomarca imeachtaí le taispeáint go léir. Roghnaigh raon níos giorra.</string>
     <string name="calendars_list_empty">Níl aon imeacht</string>
     <string name="calendars_untitled">(Gan teideal)</string>
     <string name="calendars_status_cancelled">Curtha ar ceal</string>
@@ -119,7 +112,6 @@
     <string name="calendars_reminder_remove">Bain meabhrúchán</string>
     <string name="calendars_hours_start">Tús na n-uaireanta oibre</string>
     <string name="calendars_hours_finish">Deireadh na n-uaireanta oibre</string>
-    <string name="calendars_hours_invalid">Caithfidh na huaireanta oibre críochnú tar éis dóibh tosú.</string>
     <string name="calendars_work_days">Laethanta oibre</string>
     <string name="calendars_multiweek_weeks">Seachtainí taispeánta</string>
     <string name="calendars_multiweek_previous">Seachtainí roimhe</string>
@@ -129,10 +121,10 @@
     <string name="calendars_preferences_allday">Imeachtaí lae iomláin</string>
     <string name="calendars_allday_first">Ar dtús</string>
     <string name="calendars_allday_last">Ar deireadh</string>
-    <string name="calendars_link_title">Nasc an fhéilire</string>
-    <string name="calendars_link_copy">Cóipeáil an nasc</string>
+    <string name="calendars_link_title">Seoladh an fhéilire</string>
+    <string name="calendars_link_copy">Cóipeáil seoladh an fhéilire</string>
     <string name="calendars_link_once">Cóipeáil anois é: ní féidir é a thaispeáint arís.</string>
-    <string name="calendars_link_exists">Tá nasc ann cheana don fhéilire seo.</string>
+    <string name="calendars_link_exists">Eisíodh seoladh an fhéilire seo cheana féin agus ní féidir é a thaispeáint arís.</string>
     <string name="calendars_permission_title">Ceadaigh rochtain?</string>
     <string name="calendars_permission_message">Tá %1$s ag iarraidh:</string>
     <string name="calendars_sync_authorization">Sínigh isteach arís chun leanúint ag sioncronú</string>
@@ -140,9 +132,9 @@
     <string name="calendars_device_empty">Níl aon ghléas ceangailte</string>
     <string name="calendars_device_used">úsáidte go deireanach %1$s</string>
     <string name="calendars_device_never">riamh</string>
-    <string name="calendars_device_deleted">Baineadh an gléas</string>
-    <string name="calendars_device_delete_title">Bain an gléas seo?</string>
-    <string name="calendars_device_delete_message">Beidh air a bheith socraithe arís chun sioncronú.</string>
+    <string name="calendars_device_deleted">Gléas scriosta</string>
+    <string name="calendars_device_delete_title">Scrios an gléas?</string>
+    <string name="calendars_device_delete_message">Ní bheidh an gléas in ann teagmhálaithe ná féilirí a shioncrónú a thuilleadh.</string>
     <string name="calendars_sync_choose">Féilirí le sioncronú</string>
     <string name="calendars_poll_large">Tá an féilire rómhór</string>
     <string name="calendars_poll_invalid">Níor sheol an seoladh féilire ar ais</string>
@@ -188,7 +180,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Féilire</string>
-    <string name="calendars_subscribe_google_enable">Níl cuntais Google cumasaithe ar an bhfreastalaí seo. Cumasaigh iad faoi Socruithe, Socruithe an chórais.</string>
+    <string name="calendars_subscribe_google_enable">Níl cuntais Google cumasaithe ar an bhfreastalaí seo.</string>
     <string name="calendars_subscribe_google_connect">Níl cuntas Google ceangailte agat.</string>
     <string name="calendars_subscribe_google_connect_action">Ceangail Google</string>
     <string name="calendars_grant_failed">Níor tugadh rochtain ar an bhféilire</string>
@@ -302,4 +294,24 @@
     </plurals>
     <string name="calendars_rule_until">go dtí %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Imeachtaí níos luaithe</string>
+    <string name="calendars_created">Féilire cruthaithe</string>
+    <string name="calendars_renamed">Féilire athainmnithe</string>
+    <string name="calendars_colour_saved">Dath sábháilte</string>
+    <string name="calendars_deleted">Féilire scriosta</string>
+    <string name="calendars_removed">Féilire bainte</string>
+    <string name="calendars_preferences_saved">Sainroghanna sábháilte</string>
+    <string name="calendars_link_revoked">Seoladh an fhéilire cúlghairthe</string>
+    <string name="calendars_link_none">Níl aon seoladh ag an bhféilire seo le cúlghairm</string>
+    <string name="calendars_linked">Féilire nasctha</string>
+    <string name="calendars_subscribed">Liostáilte</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s uair</item>
+        <item quantity="two">%1$s uair</item>
+        <item quantity="few">%1$s huaire</item>
+        <item quantity="many">%1$s n-uaire</item>
+        <item quantity="other">%1$s uair</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Cumasaigh cuntais Google</string>
+    <string name="calendars_provider_caldav">Freastalaí féilire</string>
 </resources>

@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Shekara-shekara</string>
     <string name="calendars_repeat_custom">Na musamman</string>
     <string name="calendars_reminder_none">Babu</string>
-    <string name="calendars_day_sunday">Lahadi</string>
-    <string name="calendars_day_monday">Litinin</string>
-    <string name="calendars_day_tuesday">Talata</string>
-    <string name="calendars_day_wednesday">Laraba</string>
-    <string name="calendars_day_thursday">Alhamis</string>
-    <string name="calendars_day_friday">Jumma\'a</string>
-    <string name="calendars_day_saturday">Asabar</string>
     <string name="calendars_link_replace">Maye gurbi</string>
     <string name="calendars_link_revoke">Janyewa</string>
     <string name="calendars_permission_allow">Bayar da izini</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Wata</string>
     <string name="calendars_workweek">Makon aiki</string>
     <string name="calendars_range">%1$s zuwa %2$s</string>
-    <string name="calendars_truncated">Ba a nuna wasu tarurruka a wannan zangon ba.</string>
+    <string name="calendars_truncated">Tarurruka sun yi yawa da ba za a iya nuna duka ba. Zaɓi ƙaramin zango.</string>
     <string name="calendars_list_empty">Babu tarurruka</string>
     <string name="calendars_untitled">(Babu take)</string>
     <string name="calendars_status_cancelled">An soke</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Cire tunatarwa</string>
     <string name="calendars_hours_start">Farkon lokacin aiki</string>
     <string name="calendars_hours_finish">Ƙarshen lokacin aiki</string>
-    <string name="calendars_hours_invalid">Lokacin aiki dole ya ƙare bayan ya fara.</string>
     <string name="calendars_work_days">Kwanakin aiki</string>
     <string name="calendars_multiweek_weeks">Makonnin da ake nunawa</string>
     <string name="calendars_multiweek_previous">Makonnin da suka gabata</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Tarurrukan duk rana</string>
     <string name="calendars_allday_first">Da farko</string>
     <string name="calendars_allday_last">A ƙarshe</string>
-    <string name="calendars_link_title">Hanyar kalanda</string>
-    <string name="calendars_link_copy">Kwafi hanyar</string>
+    <string name="calendars_link_title">Adireshin kalanda</string>
+    <string name="calendars_link_copy">Kwafi adireshin kalanda</string>
     <string name="calendars_link_once">Kwafe shi yanzu: ba za a sake nuna shi ba.</string>
-    <string name="calendars_link_exists">Akwai hanya riga don wannan kalanda.</string>
+    <string name="calendars_link_exists">An riga an fitar da wannan adireshin kalanda kuma ba za a iya nuna shi kuma ba.</string>
     <string name="calendars_permission_title">A ba da izinin shiga?</string>
     <string name="calendars_permission_message">%1$s na neman:</string>
     <string name="calendars_sync_authorization">Sake shiga don ci gaba da daidaitawa</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Babu na\'urar da aka haɗa</string>
     <string name="calendars_device_used">amfani na ƙarshe %1$s</string>
     <string name="calendars_device_never">babu lokaci</string>
-    <string name="calendars_device_deleted">An cire na\'urar</string>
-    <string name="calendars_device_delete_title">A cire wannan na\'urar?</string>
-    <string name="calendars_device_delete_message">Za a buƙaci a sake saita ta don daidaitawa.</string>
+    <string name="calendars_device_deleted">An goge na\'urar</string>
+    <string name="calendars_device_delete_title">Goge na\'urar?</string>
+    <string name="calendars_device_delete_message">Na\'urar ba za ta ƙara iya daidaita lambobin sadarwa ko kalandoci ba.</string>
     <string name="calendars_sync_choose">Kalandocin da za a daidaita</string>
     <string name="calendars_poll_large">Kalanda ya yi girma sosai</string>
     <string name="calendars_poll_invalid">Adireshin bai mayar da kalanda ba</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Kalandar Google</string>
-    <string name="calendars_subscribe_google_enable">Ba a kunna asusun Google a wannan sabar ba. Kunna su a Saitunan, Saitunan system.</string>
+    <string name="calendars_subscribe_google_enable">Ba a kunna asusun Google a wannan sabar ba.</string>
     <string name="calendars_subscribe_google_connect">Ba ka haɗa asusun Google ba.</string>
     <string name="calendars_subscribe_google_connect_action">Haɗa Google</string>
     <string name="calendars_grant_failed">Ba a ba da damar shiga kalanda ba</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">har zuwa %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Tarurrukan baya</string>
+    <string name="calendars_created">An ƙirƙiri kalanda</string>
+    <string name="calendars_renamed">An sake sunan kalanda</string>
+    <string name="calendars_colour_saved">An adana launi</string>
+    <string name="calendars_deleted">An share kalanda</string>
+    <string name="calendars_removed">An cire kalanda</string>
+    <string name="calendars_preferences_saved">An adana abubuwan da kake so</string>
+    <string name="calendars_link_revoked">An janye adireshin kalanda</string>
+    <string name="calendars_link_none">Wannan kalanda ba shi da adireshin da za a janye</string>
+    <string name="calendars_linked">An haɗa kalanda</string>
+    <string name="calendars_subscribed">An yi subscribe</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">sa\'a %1$s</item>
+        <item quantity="other">sa\'o\'i %1$s</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Kunna asusun Google</string>
+    <string name="calendars_provider_caldav">Sabar kalanda</string>
 </resources>

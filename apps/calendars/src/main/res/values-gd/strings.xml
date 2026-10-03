@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">Bliadhnail</string>
     <string name="calendars_repeat_custom">Gnàthaichte</string>
     <string name="calendars_reminder_none">Chan eil gin</string>
-    <string name="calendars_day_sunday">Didòmhnaich</string>
-    <string name="calendars_day_monday">DiLuain</string>
-    <string name="calendars_day_tuesday">Dimàirt</string>
-    <string name="calendars_day_wednesday">Diciadain</string>
-    <string name="calendars_day_thursday">Diardaoin</string>
-    <string name="calendars_day_friday">DihAoine</string>
-    <string name="calendars_day_saturday">Disathairne</string>
     <string name="calendars_link_replace">Cuir \'na àite</string>
     <string name="calendars_link_revoke">Cùl-ghairm</string>
     <string name="calendars_permission_allow">Ceadaich</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Mìos</string>
     <string name="calendars_workweek">Seachdain obrach</string>
     <string name="calendars_range">%1$s gu %2$s</string>
-    <string name="calendars_truncated">Chan eil cuid de na tachartasan san rainse seo gan sealltainn.</string>
+    <string name="calendars_truncated">Tha cus thachartasan ann gus an sealltainn uile. Tagh rainse nas giorra.</string>
     <string name="calendars_list_empty">Gun tachartasan</string>
     <string name="calendars_untitled">(Gun tiotal)</string>
     <string name="calendars_status_cancelled">Air a chur dheth</string>
@@ -116,7 +109,6 @@
     <string name="calendars_reminder_remove">Thoir air falbh an cuimhneachan</string>
     <string name="calendars_hours_start">Toiseach uairean obrach</string>
     <string name="calendars_hours_finish">Deireadh uairean obrach</string>
-    <string name="calendars_hours_invalid">Feumaidh na h-uairean obrach crìochnachadh às dèidh dhaibh tòiseachadh.</string>
     <string name="calendars_work_days">Làithean obrach</string>
     <string name="calendars_multiweek_weeks">Seachdainean ri an sealltainn</string>
     <string name="calendars_multiweek_previous">Seachdainean roimhe</string>
@@ -126,10 +118,10 @@
     <string name="calendars_preferences_allday">Tachartasan fad an latha</string>
     <string name="calendars_allday_first">An toiseach</string>
     <string name="calendars_allday_last">Aig an deireadh</string>
-    <string name="calendars_link_title">Ceangal a\' mhìosachain</string>
-    <string name="calendars_link_copy">Dèan lethbhreac dhen cheangal</string>
+    <string name="calendars_link_title">Seòladh a\' mhìosachain</string>
+    <string name="calendars_link_copy">Dèan lethbhreac de sheòladh a\' mhìosachain</string>
     <string name="calendars_link_once">Dèan lethbhreac dheth an-dràsta: chan urrainn dhuinn a shealltainn a-rithist.</string>
-    <string name="calendars_link_exists">Tha ceangal ann mu thràth airson a\' mhìosachain seo.</string>
+    <string name="calendars_link_exists">Chaidh seòladh a\' mhìosachain seo a thoirt seachad mar-thà agus chan urrainn dhuinn a shealltainn a-rithist.</string>
     <string name="calendars_permission_title">A bheil thu airson inntrigeadh a cheadachadh?</string>
     <string name="calendars_permission_message">Tha %1$s ag iarraidh:</string>
     <string name="calendars_sync_authorization">Clàraich a-steach a-rithist gus cumail a\' sioncronachadh</string>
@@ -137,9 +129,9 @@
     <string name="calendars_device_empty">Chan eil inneal sam bith ceangailte</string>
     <string name="calendars_device_used">chleachdte mu dheireadh %1$s</string>
     <string name="calendars_device_never">chaoidh</string>
-    <string name="calendars_device_deleted">Chaidh an t-inneal a thoirt air falbh</string>
-    <string name="calendars_device_delete_title">A bheil thu airson an t-inneal seo a thoirt air falbh?</string>
-    <string name="calendars_device_delete_message">Feumaidh tu a shuidheachadh a-rithist gus sioncronachadh.</string>
+    <string name="calendars_device_deleted">Chaidh an t-inneal a sguabadh às</string>
+    <string name="calendars_device_delete_title">A bheil thu airson an t-inneal a sguabadh às?</string>
+    <string name="calendars_device_delete_message">Chan urrainn dhan inneal luchd-aithne no mìosachain a shioncronachadh tuilleadh.</string>
     <string name="calendars_sync_choose">Mìosachain ri an sioncronachadh</string>
     <string name="calendars_poll_large">Tha am mìosachan ro mhòr</string>
     <string name="calendars_poll_invalid">Cha do thill an seòladh mìosachan</string>
@@ -184,7 +176,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Mìosachan Google</string>
-    <string name="calendars_subscribe_google_enable">Chan eil cunntasan Google air an cur an comas air an fhrithealaiche seo. Cuir an comas iad fo Roghainnean, Roghainnean an t-siostaim.</string>
+    <string name="calendars_subscribe_google_enable">Chan eil cunntasan Google air an cur an comas air an fhrithealaiche seo.</string>
     <string name="calendars_subscribe_google_connect">Cha do cheangail thu cunntas Google.</string>
     <string name="calendars_subscribe_google_connect_action">Ceangail Google</string>
     <string name="calendars_grant_failed">Cha deach inntrigeadh mìosachain a cheadachadh</string>
@@ -289,4 +281,23 @@
     </plurals>
     <string name="calendars_rule_until">gu ruige %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Tachartasan nas tràithe</string>
+    <string name="calendars_created">Chaidh am mìosachan a chruthachadh</string>
+    <string name="calendars_renamed">Chaidh ainm ùr a chur air a\' mhìosachan</string>
+    <string name="calendars_colour_saved">Chaidh an dath a shàbhaladh</string>
+    <string name="calendars_deleted">Chaidh am mìosachan a sguabadh às</string>
+    <string name="calendars_removed">Chaidh am mìosachan a thoirt air falbh</string>
+    <string name="calendars_preferences_saved">Chaidh na roghainnean a shàbhaladh</string>
+    <string name="calendars_link_revoked">Chaidh seòladh a\' mhìosachain a chùl-ghairm</string>
+    <string name="calendars_link_none">Chan eil seòladh aig a\' mhìosachan seo ri chùl-ghairm</string>
+    <string name="calendars_linked">Mìosachan ceangailte</string>
+    <string name="calendars_subscribed">Fo-sgrìobhte</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s uair</item>
+        <item quantity="two">%1$s uair</item>
+        <item quantity="few">%1$s uairean</item>
+        <item quantity="other">%1$s uair</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Cuir cunntasan Google an comas</string>
+    <string name="calendars_provider_caldav">Frithealaiche mhìosachan</string>
 </resources>

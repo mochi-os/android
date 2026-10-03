@@ -22,13 +22,6 @@
     <string name="calendars_repeat_yearly">سالانه</string>
     <string name="calendars_repeat_custom">سفارشی</string>
     <string name="calendars_reminder_none">هیچ‌کدام</string>
-    <string name="calendars_day_sunday">یکشنبه</string>
-    <string name="calendars_day_monday">دوشنبه</string>
-    <string name="calendars_day_tuesday">سه‌شنبه</string>
-    <string name="calendars_day_wednesday">چهارشنبه</string>
-    <string name="calendars_day_thursday">پنجشنبه</string>
-    <string name="calendars_day_friday">جمعه</string>
-    <string name="calendars_day_saturday">شنبه</string>
     <string name="calendars_link_replace">جایگزینی</string>
     <string name="calendars_link_revoke">ابطال</string>
     <string name="calendars_permission_allow">اجازه</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">ماه</string>
     <string name="calendars_workweek">هفته کاری</string>
     <string name="calendars_range">%1$s تا %2$s</string>
-    <string name="calendars_truncated">برخی از رویدادهای این بازه نمایش داده نمی‌شوند.</string>
+    <string name="calendars_truncated">رویدادها بیش از آن است که همه نمایش داده شوند. بازه کوتاه‌تری انتخاب کنید.</string>
     <string name="calendars_list_empty">هیچ رویدادی وجود ندارد</string>
     <string name="calendars_untitled">(بدون عنوان)</string>
     <string name="calendars_status_cancelled">لغوشده</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">حذف یادآور</string>
     <string name="calendars_hours_start">شروع ساعات کاری</string>
     <string name="calendars_hours_finish">پایان ساعات کاری</string>
-    <string name="calendars_hours_invalid">ساعات کاری باید پس از شروع به پایان برسد.</string>
     <string name="calendars_work_days">روزهای کاری</string>
     <string name="calendars_multiweek_weeks">هفته‌های نمایش‌داده‌شده</string>
     <string name="calendars_multiweek_previous">هفته‌های پیشین</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">رویدادهای تمام‌روز</string>
     <string name="calendars_allday_first">در ابتدا</string>
     <string name="calendars_allday_last">در انتها</string>
-    <string name="calendars_link_title">پیوند تقویم</string>
-    <string name="calendars_link_copy">کپی پیوند</string>
+    <string name="calendars_link_title">نشانی تقویم</string>
+    <string name="calendars_link_copy">کپی نشانی تقویم</string>
     <string name="calendars_link_once">همین حالا آن را کپی کنید: دیگر نمایش داده نخواهد شد.</string>
-    <string name="calendars_link_exists">برای این تقویم پیوندی از قبل وجود دارد.</string>
+    <string name="calendars_link_exists">این نشانی تقویم قبلاً صادر شده است و نمی‌توان آن را دوباره نمایش داد.</string>
     <string name="calendars_permission_title">دسترسی مجاز باشد؟</string>
     <string name="calendars_permission_message">%1$s درخواست می‌کند:</string>
     <string name="calendars_sync_authorization">برای ادامه همگام‌سازی دوباره وارد شوید</string>
@@ -132,8 +124,8 @@
     <string name="calendars_device_used">آخرین استفاده %1$s</string>
     <string name="calendars_device_never">هرگز</string>
     <string name="calendars_device_deleted">دستگاه حذف شد</string>
-    <string name="calendars_device_delete_title">این دستگاه حذف شود؟</string>
-    <string name="calendars_device_delete_message">برای همگام‌سازی باید دوباره راه‌اندازی شود.</string>
+    <string name="calendars_device_delete_title">دستگاه حذف شود؟</string>
+    <string name="calendars_device_delete_message">این دستگاه دیگر نمی‌تواند مخاطبان یا تقویم‌ها را همگام‌سازی کند.</string>
     <string name="calendars_sync_choose">تقویم‌های قابل همگام‌سازی</string>
     <string name="calendars_poll_large">تقویم بیش از حد بزرگ است</string>
     <string name="calendars_poll_invalid">آدرس هیچ تقویمی برنگرداند</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">تقویم Google</string>
-    <string name="calendars_subscribe_google_enable">حساب‌های Google در این سرور فعال نشده‌اند. آن‌ها را در تنظیمات، تنظیمات سیستم فعال کنید.</string>
+    <string name="calendars_subscribe_google_enable">حساب‌های Google در این سرور فعال نشده‌اند.</string>
     <string name="calendars_subscribe_google_connect">هیچ حساب Google متصل نکرده‌اید.</string>
     <string name="calendars_subscribe_google_connect_action">اتصال به Google</string>
     <string name="calendars_grant_failed">دسترسی به تقویم داده نشد</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">تا %1$s</string>
     <string name="calendars_rule_join">%1$s، %2$s</string>
+    <string name="calendars_list_earlier">رویدادهای پیشین</string>
+    <string name="calendars_created">تقویم ایجاد شد</string>
+    <string name="calendars_renamed">نام تقویم تغییر کرد</string>
+    <string name="calendars_colour_saved">رنگ ذخیره شد</string>
+    <string name="calendars_deleted">تقویم حذف شد</string>
+    <string name="calendars_removed">تقویم حذف شد</string>
+    <string name="calendars_preferences_saved">ترجیحات ذخیره شد</string>
+    <string name="calendars_link_revoked">نشانی تقویم باطل شد</string>
+    <string name="calendars_link_none">این تقویم نشانی‌ای برای ابطال ندارد</string>
+    <string name="calendars_linked">تقویم پیوند داده شد</string>
+    <string name="calendars_subscribed">مشترک شد</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s ساعت</item>
+        <item quantity="other">%1$s ساعت</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">فعال‌سازی حساب‌های Google</string>
+    <string name="calendars_provider_caldav">سرور تقویم</string>
 </resources>
