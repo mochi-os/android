@@ -42,9 +42,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import java.time.DayOfWeek
 import java.time.LocalDate
+import java.time.Month
 import java.time.YearMonth
 import java.time.format.TextStyle
 import java.time.temporal.ChronoUnit
+import java.util.Locale
 import kotlin.math.abs
 
 /** How many pages the month pager holds; it opens in the middle, so either way is endless. */
@@ -166,7 +168,7 @@ fun DatePanel(
                         onClick = { onPick(month.atDay(1)) },
                         label = {
                             Text(
-                                text = month.month.getDisplayName(TextStyle.SHORT, locale),
+                                text = shortMonth(month.month, locale),
                                 fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
                             )
                         },
@@ -268,4 +270,18 @@ private fun Day(day: LocalDate, focus: LocalDate, today: LocalDate, onPick: (Loc
 private fun weekday(weekStart: Int, column: Int): DayOfWeek {
     val index = (weekStart + column) % 7
     return DayOfWeek.of(if (index == 0) 7 else index)
+}
+
+/**
+ * [month]'s short name standing on its own, as a chip shows it: Catalan
+ * "oct.", not the "d’oct." of a date. A platform with no standalone names
+ * for the language answers a number, and then the plain form is used.
+ */
+private fun shortMonth(month: Month, locale: Locale): String {
+    val standalone = month.getDisplayName(TextStyle.SHORT_STANDALONE, locale)
+    return if (standalone.any { letter -> letter.isLetter() }) {
+        standalone
+    } else {
+        month.getDisplayName(TextStyle.SHORT, locale)
+    }
 }

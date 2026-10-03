@@ -14,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.R
 import android.icu.text.DateIntervalFormat
+import android.icu.text.DateIntervalInfo
 import android.icu.text.DateTimePatternGenerator
 import android.icu.util.DateInterval
 import android.icu.util.ULocale
@@ -41,6 +42,12 @@ interface Clock {
 
     /** The days from [from] to [to], as the language writes a span of them by [skeleton]. */
     fun span(skeleton: String, from: Long, to: Long, zone: TimeZone): String
+
+    /**
+     * How the language joins two ends written apart, as "{0} – {1}" or
+     * Japanese "{0}～{1}": the start in place of {0}, the end of {1}.
+     */
+    fun interval(): String = "{0} – {1}"
 }
 
 /**
@@ -69,6 +76,13 @@ object PlatformClock : Clock {
         val format = DateIntervalFormat.getInstance(skeleton, locale())
         format.timeZone = android.icu.util.TimeZone.getTimeZone(zone.id)
         return format.format(DateInterval(from, to), StringBuffer(), java.text.FieldPosition(0)).toString()
+    }
+
+    override fun interval(): String {
+        val locale = Locale.getDefault()
+        return patterns.getOrPut("${locale.toLanguageTag()} interval") {
+            DateIntervalInfo(ULocale.forLocale(locale)).fallbackIntervalPattern
+        }
     }
 }
 
@@ -163,8 +177,30 @@ class Format(val preferences: UserPreferences, private val clock: Clock = Platfo
             return clock.span(timed, epochToMillis(start), epochToMillis(end), opens)
         }
         val pattern = clock.pattern(timed)
-        return clock.write(pattern, epochToMillis(start), opens) + " – " +
-            clock.write(pattern, epochToMillis(end), closes)
+        return apart(
+            clock.write(pattern, epochToMillis(start), opens),
+            clock.write(pattern, epochToMillis(end), closes),
+        )
+    }
+
+    /**
+     * [from] and [to] joined as the language joins two ends written apart.
+     * [broken] puts the end on a line of its own, the join staying with the
+     * start: "10:00 PM –" over "6:00 AM".
+     */
+    private fun apart(from: String, to: String, broken: Boolean = false): String {
+        val pattern = clock.interval()
+        val split = pattern.indexOf("{1}")
+        if (split < 0) {
+            return "$from – $to"
+        }
+        val head = pattern.substring(0, split).replace("{0}", from)
+        val tail = pattern.substring(split + 3).replace("{0}", from)
+        return if (broken) {
+            head.trimEnd() + "\n" + to + tail
+        } else {
+            head + to + tail
+        }
     }
 
     /**
@@ -217,9 +253,10 @@ class Format(val preferences: UserPreferences, private val clock: Clock = Platfo
         val begins = clock.write(pattern, epochToMillis(start), opens)
         val ends = clock.write(pattern, epochToMillis(end), closes)
         if (sameDay) {
-            return "$day · $begins – $ends"
+            return "$day · " + apart(begins, ends)
         }
-        return "$day · $begins –\n" + clock.write(dated, epochToMillis(end), closes) + " · " + ends
+        val closing = clock.write(dated, epochToMillis(end), closes) + " · " + ends
+        return apart("$day · $begins", closing, broken = true)
     }
 
     /**
