@@ -6,6 +6,7 @@
 package org.mochios.android.sync
 
 import android.provider.CalendarContract.Events
+import org.mochios.android.util.descriptionText
 import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -111,7 +112,9 @@ object CalendarsMapping {
         values[Events.DIRTY] = 0
         values[Events.TITLE] = component.value("SUMMARY")
         values[Events.EVENT_LOCATION] = component.value("LOCATION")
-        values[Events.DESCRIPTION] = component.value("DESCRIPTION")
+        // The phone's calendar app shows a description as plain text, so one
+        // written as HTML, as a Google calendar writes it, goes in as its text.
+        values[Events.DESCRIPTION] = descriptionText(component.value("DESCRIPTION"))
         values[Events.STATUS] = status(component.value("STATUS"))
         values[Events.AVAILABILITY] =
             if (component.value("TRANSP").equals("TRANSPARENT", ignoreCase = true)) {
@@ -246,7 +249,7 @@ object CalendarsMapping {
 
         text(values[Events.TITLE])?.let { properties.add(property("SUMMARY", it)) }
         text(values[Events.EVENT_LOCATION])?.let { properties.add(property("LOCATION", it)) }
-        text(values[Events.DESCRIPTION])?.let { properties.add(property("DESCRIPTION", it)) }
+        text(values[Events.DESCRIPTION])?.let { properties.add(description(it, carried)) }
         label(values[Events.STATUS])?.let { properties.add(property("STATUS", it)) }
         if (number(values[Events.AVAILABILITY]) == Events.AVAILABILITY_FREE.toLong()) {
             properties.add(property("TRANSP", "TRANSPARENT"))
@@ -278,6 +281,17 @@ object CalendarsMapping {
         val nested = carried?.components?.filterNot { it.name.equals("VALARM", ignoreCase = true) }.orEmpty()
         val alarms = row.reminders.map { alarm(it, text(values[Events.TITLE]).orEmpty()) }
         return EventComponent("VEVENT", properties, nested + alarms)
+    }
+
+    /**
+     * The description an upload writes for the phone's [text]. A description
+     * the server holds as HTML reaches the phone as its text, so while that
+     * text is unchanged the event keeps its HTML, and an edit to its time or
+     * title on the phone does not strip the markup from the event.
+     */
+    private fun description(text: String, carried: EventComponent?): EventProperty {
+        val original = carried?.property("DESCRIPTION")
+        return if (original != null && descriptionText(original.value) == text) original else property("DESCRIPTION", text)
     }
 
     /** A `VALARM` that fires [minutes] before the start, as the editor builds one. */

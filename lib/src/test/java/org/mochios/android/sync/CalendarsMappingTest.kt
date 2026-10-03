@@ -37,13 +37,14 @@ class CalendarsMappingTest {
         rrule: String? = null,
         alarm: Int? = null,
         extra: List<EventProperty> = emptyList(),
+        description: String = "Every Tuesday",
     ) = EventComponent(
         name = "VEVENT",
         properties = listOfNotNull(
             property("UID", "uid-1@mochi"),
             property("SUMMARY", "Stand-up"),
             property("LOCATION", "The kitchen"),
-            property("DESCRIPTION", "Every Tuesday"),
+            property("DESCRIPTION", description),
             property("DTSTART", "20260922T100000", "TZID", LONDON),
             property("DTEND", "20260922T110000", "TZID", LONDON),
             rrule?.let { property("RRULE", it) },
@@ -170,6 +171,34 @@ class CalendarsMappingTest {
         assertTrue(CalendarsMapping.date(start))
         assertEquals("20260925", start.value)
         assertEquals("20260927", back.property("DTEND")!!.value)
+    }
+
+    /** A flight booking's description as a Google calendar writes it. */
+    private val BOOKING = "Class: Economy<br>PNR: <span class=\"locator\">IQSZXC</span>"
+
+    @Test
+    fun `a description written as HTML reaches the phone as its text`() {
+        val row = CalendarsMapping.rows(event(timed(description = BOOKING)), 7).single()
+        assertEquals("Class: Economy\nPNR: IQSZXC", row.values[Events.DESCRIPTION])
+    }
+
+    @Test
+    fun `an HTML description the phone left alone goes back as the HTML`() {
+        val carried = timed(description = BOOKING)
+        val row = CalendarsMapping.rows(event(carried), 7).single()
+        // The phone moved the event an hour and kept the description.
+        val moved = EventRow(row.values + (Events.DTSTART to NEXT), row.reminders)
+        val back = CalendarsMapping.components(listOf(moved), listOf(carried)).single()
+        assertEquals(BOOKING, back.value("DESCRIPTION"))
+    }
+
+    @Test
+    fun `a description edited on the phone goes back as the text typed`() {
+        val carried = timed(description = BOOKING)
+        val row = CalendarsMapping.rows(event(carried), 7).single()
+        val edited = EventRow(row.values + (Events.DESCRIPTION to "Class: Business"), row.reminders)
+        val back = CalendarsMapping.components(listOf(edited), listOf(carried)).single()
+        assertEquals("Class: Business", back.value("DESCRIPTION"))
     }
 
     @Test
