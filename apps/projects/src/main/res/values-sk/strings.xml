@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Vlastník</string>
     <string name="projects_object_watch">Sledovať</string>
     <string name="projects_object_tab_properties">Vlastnosti</string>
-    <string name="projects_object_tab_comments">Komentáre</string>
+    <string name="projects_object_tab_comments">Komentáre (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivita</string>
-    <string name="projects_object_tab_requests">Žiadosti</string>
+    <string name="projects_object_tab_requests">Žiadosti o zlúčenie (%1$s)</string>
     <string name="projects_object_tab_attachments">Prílohy</string>
     <string name="projects_object_tab_links">Odkazy</string>
     <string name="projects_watchers_watch">Sledovať</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Zjednotené</string>
     <string name="projects_diff_split">Rozdeliť</string>
     <string name="projects_diff_empty">Diff nie je k dispozícii</string>
-    <string name="projects_board_unassigned">Nepriradené</string>
+    <string name="projects_board_unset">[nenastavené]</string>
     <string name="projects_board_new">Nový</string>
     <string name="projects_board_rename">Premenovať</string>
     <string name="projects_board_rename_column">Premenovať stĺpec</string>

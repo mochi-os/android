@@ -68,7 +68,6 @@
     <string name="projects_option_icon">Symbol</string>
     <string name="projects_views_move_up">Nach oben verschieben</string>
     <string name="projects_views_move_down">Nach unten verschieben</string>
-    <string name="projects_object_tab_comments">Kommentare</string>
     <string name="projects_parent_label">Übergeordnet</string>
     <string name="projects_field_yes">Ja</string>
     <string name="projects_field_no">Nein</string>
@@ -77,7 +76,6 @@
     <string name="projects_comment_empty">Noch keine Kommentare</string>
     <string name="projects_comment_attach">Dateien anhängen</string>
     <string name="projects_comment_remove_attachment">Anhang entfernen</string>
-    <string name="projects_board_unassigned">Nicht zugewiesen</string>
     <string name="projects_board_rename">Umbenennen</string>
     <string name="projects_move_position">Position</string>
     <string name="projects_class_move_up">Nach oben verschieben</string>
@@ -130,7 +128,6 @@
     <string name="projects_settings_unsubscribe_message">Möchten Sie dieses Projekt wirklich nicht mehr abonnieren?</string>
     <string name="projects_object_unwatch">Nicht mehr beobachten</string>
     <string name="projects_object_tab_properties">Eigenschaften</string>
-    <string name="projects_object_tab_requests">Anfragen</string>
     <string name="projects_object_tab_watchers">Beobachter</string>
     <string name="projects_watchers_empty">Noch keine Beobachter</string>
     <string name="projects_watchers_unwatch">Beobachtung beenden</string>

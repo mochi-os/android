@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Tulajdonos</string>
     <string name="projects_object_watch">Figyelés</string>
     <string name="projects_object_tab_properties">Tulajdonságok</string>
-    <string name="projects_object_tab_comments">Megjegyzések</string>
+    <string name="projects_object_tab_comments">Megjegyzések (%1$s)</string>
     <string name="projects_object_tab_activity">Tevékenység</string>
-    <string name="projects_object_tab_requests">Kérések</string>
+    <string name="projects_object_tab_requests">Egyesítési kérések (%1$s)</string>
     <string name="projects_object_tab_attachments">Mellékletek</string>
     <string name="projects_object_tab_links">Hivatkozások</string>
     <string name="projects_watchers_watch">Figyelés</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Egységes</string>
     <string name="projects_diff_split">Osztott</string>
     <string name="projects_diff_empty">Nincs elérhető diff</string>
-    <string name="projects_board_unassigned">Hozzárendelés nélküli</string>
+    <string name="projects_board_unset">[nincs beállítva]</string>
     <string name="projects_board_new">Új</string>
     <string name="projects_board_rename">Átnevezés</string>
     <string name="projects_board_rename_column">Oszlop átnevezése</string>

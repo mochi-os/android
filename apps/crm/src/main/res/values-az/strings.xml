@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Sil</string>
     <string name="crm_attachments">Qoşmalar</string>
     <string name="crm_attachment_add">Qoşma əlavə et</string>
-    <string name="crm_board_unassigned">Təyin edilməyib</string>
+    <string name="crm_board_unset">[təyin edilməyib]</string>
     <string name="crm_board_new">Yeni</string>
     <string name="crm_board_rename">Adı dəyiş</string>
     <string name="crm_board_rename_column">Sütun adını dəyiş</string>

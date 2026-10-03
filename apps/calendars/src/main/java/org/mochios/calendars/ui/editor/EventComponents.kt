@@ -56,6 +56,10 @@ data class EventForm(
     val allday: Boolean = false,
     val zone: Zone = Zone(),
     val location: String = "",
+    /** The event's own colour, its `COLOR`; blank draws it in its calendar's. */
+    val colour: String = "",
+    /** A web address the event carries, its `URL`. */
+    val url: String = "",
     val description: String = "",
     val original: String = "",
     val recurrence: Recurrence = Recurrence(),
@@ -75,14 +79,6 @@ fun written(component: EventComponent, user: String): Zone {
     val finish = component.property("DTEND")?.parameter("TZID")?.takeIf { it.isNotBlank() } ?: start
     return Zone(start, finish)
 }
-
-/**
- * Whether either end reads in another zone than the [user]'s own, under any
- * of its names, which is when the editor shows the zones without being
- * asked. A blank end reads in the user's zone.
- */
-fun foreign(zone: Zone, user: String, registry: Zones.Registry = Zones.Platform): Boolean =
-    !Zones.same(zone.start.ifBlank { user }, user, registry) || !Zones.same(zone.finish.ifBlank { user }, user, registry)
 
 /**
  * The zone a moment of the form is shown and picked in. An all-day day is
@@ -146,7 +142,7 @@ private fun zoneOf(name: String): ZoneId =
 
 /** The properties the editor owns; every other one is carried through. */
 private val MANAGED = setOf(
-    "SUMMARY", "LOCATION", "DESCRIPTION", "DTSTART", "DTEND", "DURATION",
+    "SUMMARY", "LOCATION", "COLOR", "URL", "DESCRIPTION", "DTSTART", "DTEND", "DURATION",
     "RRULE", "RDATE", "EXDATE", "RECURRENCE-ID",
 )
 
@@ -212,16 +208,19 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
     val length = component.property("DTEND")?.let { CalendarsMapping.moment(it) / 1000 - start }
         ?: component.value("DURATION").takeIf { it.isNotBlank() }?.let { CalendarsMapping.seconds(it) }
         ?: if (allday) 86_400L else 0L
+    val zone = written(component, user)
     val form = EventForm(
         title = component.value("SUMMARY"),
         start = start,
         finish = start + length,
         allday = allday,
-        zone = written(component, user),
+        zone = zone,
         location = component.value("LOCATION"),
+        colour = component.value("COLOR"),
+        url = component.value("URL"),
         description = descriptionText(component.value("DESCRIPTION")),
         original = component.value("DESCRIPTION"),
-        recurrence = recurrence(component.value("RRULE")),
+        recurrence = recurrence(component.value("RRULE"), zone.start),
         reminders = alarms(component).mapNotNull(::alarmMinutes).distinct(),
     )
     return if (occurrence > 0 && start != 0L) shifted(form, occurrence - start) else form
@@ -269,6 +268,22 @@ fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: 
     val override = events.firstOrNull { it.exception() && matches(it, occurrence) }
     val own = if (override != null) draft(override, user) else draft(master, user, occurrence)
     return own.copy(recurrence = Recurrence())
+}
+
+/**
+ * The form a copy opens on when the form it is copied from holds edits, as
+ * the web editor builds it: [Scope.ONE] is the form as it stands without its
+ * repeat, the whole series is the form moved back onto the series' own start,
+ * as saving it to the series would. Either is a new event, of no occurrence.
+ */
+fun duplicate(form: EventForm, scope: Scope): EventForm {
+    val moved = if (scope != Scope.ONE && form.occurrence > 0 && form.series > 0) {
+        shifted(form, form.series - form.occurrence)
+    } else {
+        form
+    }
+    val recurrence = if (scope == Scope.ONE) Recurrence() else form.recurrence
+    return moved.copy(recurrence = recurrence, occurrence = 0, series = 0)
 }
 
 /**
@@ -561,10 +576,12 @@ private fun component(
     properties.add(CalendarsMapping.stamp("DTSTART", start * 1000, zone, form.allday))
     properties.add(CalendarsMapping.stamp("DTEND", finish * 1000, ends, form.allday))
     if (form.location.isNotBlank()) properties.add(property("LOCATION", form.location.trim()))
+    if (form.colour.isNotBlank()) properties.add(property("COLOR", form.colour.trim()))
+    if (form.url.isNotBlank()) properties.add(property("URL", form.url.trim()))
     val description = if (form.description == descriptionText(form.original)) form.original else form.description.trim()
     if (description.isNotBlank()) properties.add(property("DESCRIPTION", description))
     if (recurrence) {
-        val rule = form.recurrence.rule()
+        val rule = form.recurrence.rule(zone, form.allday)
         if (rule != null) {
             properties.add(property("RRULE", rule))
             // An RRULE the editor dropped takes its exclusions with it.

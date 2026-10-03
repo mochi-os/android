@@ -320,4 +320,6 @@
     <string name="access_remove">Kendu</string>
     <string name="access_remove_title">Sarbidea kendu?</string>
     <string name="access_remove_message">«%1$s» sarbide-araua kendu?</string>
+    <string name="color_picker_custom">Pertsonalizatua</string>
+    <string name="color_picker_clear">Garbitu</string>
 </resources>

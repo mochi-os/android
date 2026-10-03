@@ -58,7 +58,7 @@
     <string name="crm_property_remove">Remover</string>
     <string name="crm_attachments">Anexos</string>
     <string name="crm_attachment_add">Adicionar anexo</string>
-    <string name="crm_board_unassigned">Não atribuído</string>
+    <string name="crm_board_unset">[não definido]</string>
     <string name="crm_board_new">Novo</string>
     <string name="crm_board_rename">Renomear</string>
     <string name="crm_board_rename_column">Renomear coluna</string>

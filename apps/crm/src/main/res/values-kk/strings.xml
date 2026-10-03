@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Жою</string>
     <string name="crm_attachments">Тіркемелер</string>
     <string name="crm_attachment_add">Тіркеме қосу</string>
-    <string name="crm_board_unassigned">Тағайындалмаған</string>
+    <string name="crm_board_unset">[орнатылмаған]</string>
     <string name="crm_board_new">Жаңа</string>
     <string name="crm_board_rename">Атын өзгерту</string>
     <string name="crm_board_rename_column">Бағанның атын өзгерту</string>

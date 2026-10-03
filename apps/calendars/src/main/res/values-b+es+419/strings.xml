@@ -19,4 +19,43 @@
     <string name="calendars_polled_synced">Calendario sincronizado</string>
     <string name="calendars_link_revoke_title">¿Revocar la dirección del calendario?</string>
     <string name="calendars_link_revoke_message">Los calendarios suscritos a esta dirección dejarán de actualizarse.</string>
+    <string name="calendars_event_colour_value">Valor del color</string>
+    <string name="calendars_discard_title">¿Descartar el borrador?</string>
+    <string name="calendars_discard_message">Se perderán los cambios.</string>
+    <string name="calendars_discard">Descartar</string>
+    <string name="calendars_event_deleted">Evento eliminado</string>
+    <string name="calendars_link_replace_title">¿Reemplazar la dirección del calendario?</string>
+    <string name="calendars_list_unmatched">Sin coincidencias</string>
+    <string name="calendars_list_search_events">Buscar eventos</string>
+    <string name="calendars_rule_day">Todos los días</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">Todos los días</item>
+        <item quantity="many">Cada %1$s de días</item>
+        <item quantity="other">Cada %1$s días</item>
+    </plurals>
+    <string name="calendars_rule_week">Todas las semanas</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">Todas las semanas</item>
+        <item quantity="many">Cada %1$s de semanas</item>
+        <item quantity="other">Cada %1$s semanas</item>
+    </plurals>
+    <string name="calendars_rule_month">Todos los meses</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">Todos los meses</item>
+        <item quantity="many">Cada %1$s de meses</item>
+        <item quantity="other">Cada %1$s meses</item>
+    </plurals>
+    <string name="calendars_rule_year">Todos los años</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">Todos los años</item>
+        <item quantity="many">Cada %1$s de años</item>
+        <item quantity="other">Cada %1$s años</item>
+    </plurals>
+    <string name="calendars_rule_on">el %1$s</string>
+    <string name="calendars_rule_once">una vez</string>
+    <plurals name="calendars_rule_times">
+        <item quantity="one">una vez</item>
+        <item quantity="many">%1$s de veces</item>
+        <item quantity="other">%1$s veces</item>
+    </plurals>
 </resources>

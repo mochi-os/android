@@ -62,7 +62,7 @@
     <string name="crm_property_remove">لرې کول</string>
     <string name="crm_attachments">ضمیمې</string>
     <string name="crm_attachment_add">ضمیمه اضافه کړئ</string>
-    <string name="crm_board_unassigned">نه ګمارل شوی</string>
+    <string name="crm_board_unset">[نه دی ټاکل شوی]</string>
     <string name="crm_board_new">نوی</string>
     <string name="crm_board_rename">بیا نومول</string>
     <string name="crm_board_rename_column">د کالم نوم بدل کړئ</string>

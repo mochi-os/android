@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Эзэмшигч</string>
     <string name="projects_object_watch">Үзэх</string>
     <string name="projects_object_tab_properties">Шинж чанарууд</string>
-    <string name="projects_object_tab_comments">Сэтгэгдэлүүд</string>
+    <string name="projects_object_tab_comments">Сэтгэгдэлүүд (%1$s)</string>
     <string name="projects_object_tab_activity">Үйл ажиллагаа</string>
-    <string name="projects_object_tab_requests">Хүсэлтүүд</string>
+    <string name="projects_object_tab_requests">Нэгтгэх хүсэлт (%1$s)</string>
     <string name="projects_object_tab_attachments">Хавсралтууд</string>
     <string name="projects_object_tab_links">Холбоосууд</string>
     <string name="projects_watchers_watch">Үзэх</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Нэгдсэн</string>
     <string name="projects_diff_split">Хуваах</string>
     <string name="projects_diff_empty">Зөрүү байхгүй</string>
-    <string name="projects_board_unassigned">Хариуцсан хүн оноогоогүй</string>
+    <string name="projects_board_unset">[тогтоогоогүй]</string>
     <string name="projects_board_new">Шинэ</string>
     <string name="projects_board_rename">Нэр өөрчлөх</string>
     <string name="projects_board_rename_column">Багана нэр өөрчлөх</string>

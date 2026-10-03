@@ -320,4 +320,6 @@
     <string name="access_remove">ತೆಗೆದುಹಾಕಿ</string>
     <string name="access_remove_title">ಪ್ರವೇಶ ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
     <string name="access_remove_message">\"%1$s\" ಗಾಗಿ ಪ್ರವೇಶ ನಿಯಮವನ್ನು ತೆಗೆದುಹಾಕುವುದೇ?</string>
+    <string name="color_picker_custom">ಕಸ್ಟಮ್</string>
+    <string name="color_picker_clear">ತೆರವುಗೊಳಿಸಿ</string>
 </resources>

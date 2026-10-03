@@ -320,4 +320,6 @@
     <string name="access_remove">हटाएँ</string>
     <string name="access_remove_title">एक्सेस हटाएँ?</string>
     <string name="access_remove_message">\"%1$s\" के लिए पहुँच नियम हटाएँ?</string>
+    <string name="color_picker_custom">कस्टम</string>
+    <string name="color_picker_clear">साफ़ करें</string>
 </resources>

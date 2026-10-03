@@ -324,4 +324,6 @@
     <string name="access_remove">إزالة</string>
     <string name="access_remove_title">إزالة الوصول؟</string>
     <string name="access_remove_message">إزالة قاعدة الوصول لـ \"%1$s\"؟</string>
+    <string name="color_picker_custom">مخصص</string>
+    <string name="color_picker_clear">مسح</string>
 </resources>

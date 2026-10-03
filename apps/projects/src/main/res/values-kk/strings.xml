@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Иесі</string>
     <string name="projects_object_watch">Бақылау</string>
     <string name="projects_object_tab_properties">Қасиеттер</string>
-    <string name="projects_object_tab_comments">Пікірлер</string>
+    <string name="projects_object_tab_comments">Пікірлер (%1$s)</string>
     <string name="projects_object_tab_activity">Әрекет</string>
-    <string name="projects_object_tab_requests">Сұраулар</string>
+    <string name="projects_object_tab_requests">Біріктіру сұраныстары (%1$s)</string>
     <string name="projects_object_tab_attachments">Тіркемелер</string>
     <string name="projects_object_tab_links">Сілтемелер</string>
     <string name="projects_watchers_watch">Бақылау</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Біріктірілген</string>
     <string name="projects_diff_split">Бөлу</string>
     <string name="projects_diff_empty">Айырма қолжетімсіз</string>
-    <string name="projects_board_unassigned">Тағайындалмаған</string>
+    <string name="projects_board_unset">[орнатылмаған]</string>
     <string name="projects_board_new">Жаңа</string>
     <string name="projects_board_rename">Атын өзгерту</string>
     <string name="projects_board_rename_column">Бағанның атын өзгерту</string>

@@ -320,4 +320,6 @@
     <string name="access_remove">ဖယ်ရှား</string>
     <string name="access_remove_title">ဝင်ရောက်ခွင့် ဖယ်ရှားမလား?</string>
     <string name="access_remove_message">\"%1$s\" အတွက် ဝင်ရောက်ခွင့်စည်းမျဉ်းကို ဖယ်ရှားမလား။</string>
+    <string name="color_picker_custom">စိတ်ကြိုက်</string>
+    <string name="color_picker_clear">ရှင်းမည်</string>
 </resources>

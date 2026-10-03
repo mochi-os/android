@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">ባለቤት</string>
     <string name="projects_object_watch">ተከታተል</string>
     <string name="projects_object_tab_properties">ባህሪያት</string>
-    <string name="projects_object_tab_comments">አስተያየቶች</string>
+    <string name="projects_object_tab_comments">አስተያየቶች (%1$s)</string>
     <string name="projects_object_tab_activity">እንቅስቃሴ</string>
-    <string name="projects_object_tab_requests">ጥያቄዎች</string>
+    <string name="projects_object_tab_requests">የውሕደት ጥያቄዎች (%1$s)</string>
     <string name="projects_object_tab_attachments">አባሪዎች</string>
     <string name="projects_object_tab_links">አገናኞች</string>
     <string name="projects_watchers_watch">ተከታተል</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">የተዋሃደ</string>
     <string name="projects_diff_split">ይከፋፍሉ</string>
     <string name="projects_diff_empty">ምንም ልዩነት የለም</string>
-    <string name="projects_board_unassigned">ያልተመደበ</string>
+    <string name="projects_board_unset">[አልተዘጋጀም]</string>
     <string name="projects_board_new">አዲስ</string>
     <string name="projects_board_rename">ስም ቀይር</string>
     <string name="projects_board_rename_column">የአምድ ስም ቀይር</string>

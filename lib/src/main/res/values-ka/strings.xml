@@ -320,4 +320,6 @@
     <string name="access_remove">წაშლა</string>
     <string name="access_remove_title">წვდომის წაშლა?</string>
     <string name="access_remove_message">წავშალოთ წვდომის წესი „%1$s“-ისთვის?</string>
+    <string name="color_picker_custom">მორგებული</string>
+    <string name="color_picker_clear">გასუფთავება</string>
 </resources>

@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Haqi</string>
     <string name="crm_attachments">Maxxansaalee</string>
     <string name="crm_attachment_add">Maxxansa dabali</string>
-    <string name="crm_board_unassigned">Hin ramadamne</string>
+    <string name="crm_board_unset">[hin qindoofne]</string>
     <string name="crm_board_new">Haaraa</string>
     <string name="crm_board_rename">Maqaa jijjiiri</string>
     <string name="crm_board_rename_column">Maqaa tarjaa jijjiiri</string>

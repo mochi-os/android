@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Алуу</string>
     <string name="crm_attachments">Тиркемелер</string>
     <string name="crm_attachment_add">Тиркеме кошуу</string>
-    <string name="crm_board_unassigned">Дайындалган эмес</string>
+    <string name="crm_board_unset">[орнотулган эмес]</string>
     <string name="crm_board_new">Жаңы</string>
     <string name="crm_board_rename">Атын өзгөртүү</string>
     <string name="crm_board_rename_column">Тилкенин атын өзгөртүү</string>

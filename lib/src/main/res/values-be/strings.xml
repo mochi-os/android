@@ -322,4 +322,6 @@
     <string name="access_remove">Выдаліць</string>
     <string name="access_remove_title">Выдаліць доступ?</string>
     <string name="access_remove_message">Выдаліць правіла доступу для \"%1$s\"?</string>
+    <string name="color_picker_custom">Карыстальніцкі</string>
+    <string name="color_picker_clear">Ачысціць</string>
 </resources>

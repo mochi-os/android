@@ -13,6 +13,7 @@
     <string name="calendars_list_search">Tìm kiếm</string>
     <string name="calendars_event_title">Tiêu đề</string>
     <string name="calendars_event_location">Vị trí</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Mô tả</string>
     <string name="calendars_repeat_never">Không bao giờ</string>
     <string name="calendars_repeat_monthly">Hàng tháng</string>
@@ -83,19 +84,14 @@
     <string name="calendars_event_repeat">Lặp lại</string>
     <string name="calendars_event_reminder">Lời nhắc</string>
     <string name="calendars_event_recurring">Được lặp lại</string>
-    <string name="calendars_event_delete_title">Xóa %1$s?</string>
-    <string name="calendars_event_delete_message">Không thể hoàn tác.</string>
-    <string name="calendars_scope_edit">Thay đổi sự kiện này hay tất cả sự kiện?</string>
-    <string name="calendars_scope_delete">Xóa sự kiện này hay tất cả sự kiện?</string>
+    <string name="calendars_scope_delete">Xóa sự kiện này</string>
     <string name="calendars_scope_one">Chỉ sự kiện này</string>
     <string name="calendars_scope_all">Tất cả sự kiện</string>
     <string name="calendars_repeat_daily">Hàng ngày</string>
     <string name="calendars_repeat_weekly">Hàng tuần</string>
     <string name="calendars_repeat_interval">Mỗi</string>
-    <string name="calendars_repeat_days">Ngày</string>
     <string name="calendars_repeat_count">Số lần lặp</string>
-    <string name="calendars_repeat_forever">Mãi mãi</string>
-    <string name="calendars_reminder_time">Đúng giờ diễn ra</string>
+    <string name="calendars_reminder_time">Vào lúc diễn ra sự kiện</string>
     <plurals name="calendars_reminder_minutes">
         <item quantity="other">%1$s phút trước</item>
     </plurals>
@@ -145,7 +141,6 @@
     <string name="calendars_event_backwards">Kết thúc trước khi bắt đầu</string>
     <string name="calendars_event_zone_start">Múi giờ bắt đầu</string>
     <string name="calendars_event_zone_finish">Múi giờ kết thúc</string>
-    <string name="calendars_event_timezone">Múi giờ</string>
     <string name="calendars_scope_following">Sự kiện này và các sự kiện sau</string>
     <string name="calendars_event_moved">Đã di chuyển sự kiện</string>
     <string name="calendars_event_changed">Sự kiện này đã thay đổi ở nơi khác.</string>
@@ -185,4 +180,78 @@
     <string name="calendars_polled_synced">Đã đồng bộ lịch</string>
     <string name="calendars_link_revoke_title">Thu hồi địa chỉ lịch?</string>
     <string name="calendars_link_revoke_message">Các lịch đã đăng ký địa chỉ này sẽ ngừng cập nhật.</string>
+    <string name="calendars_export_failed">Không thể lưu bản xuất</string>
+    <string name="calendars_import_progress">%1$s trên %2$s</string>
+    <string name="calendars_import">Nhập</string>
+    <string name="calendars_export">Xuất</string>
+    <string name="calendars_exported">Đã xuất lịch</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">Đã nhập %1$s sự kiện</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s sự kiện đã có trong lịch</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">Không thể nhập %1$s sự kiện</item>
+    </plurals>
+    <string name="calendars_event_colour_value">Giá trị màu</string>
+    <string name="calendars_discard_title">Loại bỏ bản nháp?</string>
+    <string name="calendars_discard_message">Các thay đổi của bạn sẽ bị mất.</string>
+    <string name="calendars_discard">Loại bỏ</string>
+    <string name="calendars_event_deleted">Đã xóa sự kiện</string>
+    <string name="calendars_link_replace_title">Thay thế địa chỉ lịch?</string>
+    <string name="calendars_list_unmatched">Không có kết quả khớp</string>
+    <string name="calendars_list_search_events">Tìm kiếm sự kiện</string>
+    <string name="calendars_reload">Tải lại</string>
+    <string name="calendars_event_created">Đã tạo sự kiện</string>
+    <string name="calendars_event_saved">Đã lưu sự kiện</string>
+    <string name="calendars_scope_save">Lưu sự kiện này</string>
+    <string name="calendars_scope_move">Di chuyển sự kiện này</string>
+    <string name="calendars_repeat_frequency">Tần suất</string>
+    <string name="calendars_repeat_ends">Kết thúc vào</string>
+    <string name="calendars_repeat_end_never">Không bao giờ</string>
+    <string name="calendars_repeat_until">Vào một ngày</string>
+    <string name="calendars_repeat_after">Sau một số lần</string>
+    <string name="calendars_repeat_last">Ngày cuối</string>
+    <string name="calendars_rule_day">Mỗi ngày</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">Mỗi ngày</item>
+        <item quantity="other">Mỗi %1$s ngày</item>
+    </plurals>
+    <string name="calendars_rule_week">Mỗi tuần</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">Mỗi tuần</item>
+        <item quantity="other">Mỗi %1$s tuần</item>
+    </plurals>
+    <string name="calendars_rule_month">Mỗi tháng</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">Mỗi tháng</item>
+        <item quantity="other">Mỗi %1$s tháng</item>
+    </plurals>
+    <string name="calendars_rule_year">Mỗi năm</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">Mỗi năm</item>
+        <item quantity="other">Mỗi %1$s năm</item>
+    </plurals>
+    <string name="calendars_rule_on">vào %1$s</string>
+    <string name="calendars_rule_first">vào %1$s đầu tiên</string>
+    <string name="calendars_rule_second">vào %1$s thứ 2</string>
+    <string name="calendars_rule_third">vào %1$s thứ 3</string>
+    <string name="calendars_rule_fourth">vào %1$s thứ 4</string>
+    <string name="calendars_rule_fifth">vào %1$s thứ 5</string>
+    <string name="calendars_rule_last">vào %1$s cuối cùng</string>
+    <string name="calendars_rule_end">vào ngày cuối cùng của tháng</string>
+    <string name="calendars_rule_monthday">vào ngày %1$s</string>
+    <plurals name="calendars_rule_monthdays">
+        <item quantity="one">vào ngày %1$s</item>
+        <item quantity="other">vào các ngày %1$s</item>
+    </plurals>
+    <string name="calendars_rule_in">trong %1$s</string>
+    <string name="calendars_rule_once">một lần</string>
+    <plurals name="calendars_rule_times">
+        <item quantity="one">một lần</item>
+        <item quantity="other">%1$s lần</item>
+    </plurals>
+    <string name="calendars_rule_until">đến %1$s</string>
+    <string name="calendars_rule_join">%1$s, %2$s</string>
 </resources>

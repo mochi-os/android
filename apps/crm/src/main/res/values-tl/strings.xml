@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Alisin</string>
     <string name="crm_attachments">Mga attachment</string>
     <string name="crm_attachment_add">Magdagdag ng attachment</string>
-    <string name="crm_board_unassigned">Walang nakatalaga</string>
+    <string name="crm_board_unset">[hindi naitakda]</string>
     <string name="crm_board_new">Bago</string>
     <string name="crm_board_rename">Palitan ang pangalan</string>
     <string name="crm_board_rename_column">Palitan ang pangalan ng column</string>

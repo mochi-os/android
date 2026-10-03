@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Mai shi</string>
     <string name="projects_object_watch">Kalle</string>
     <string name="projects_object_tab_properties">Halaye</string>
-    <string name="projects_object_tab_comments">Sharhi</string>
+    <string name="projects_object_tab_comments">Sharhi (%1$s)</string>
     <string name="projects_object_tab_activity">Aiki</string>
-    <string name="projects_object_tab_requests">Buƙatu</string>
+    <string name="projects_object_tab_requests">Bukatun haɗawa (%1$s)</string>
     <string name="projects_object_tab_attachments">Haɗawa</string>
     <string name="projects_object_tab_links">Hanyoyin haɗi</string>
     <string name="projects_watchers_watch">Kalle</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Haɗe</string>
     <string name="projects_diff_split">Raba</string>
     <string name="projects_diff_empty">Babu diff</string>
-    <string name="projects_board_unassigned">Ba a sanya wa kowa</string>
+    <string name="projects_board_unset">[ba a saita ba]</string>
     <string name="projects_board_new">Sabon</string>
     <string name="projects_board_rename">Sake suna</string>
     <string name="projects_board_rename_column">Sake suna column</string>

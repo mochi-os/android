@@ -320,4 +320,6 @@
     <string name="access_remove">Entfernen</string>
     <string name="access_remove_title">Zugriff entfernen?</string>
     <string name="access_remove_message">Zugriffsregel für „%1$s“ entfernen?</string>
+    <string name="color_picker_custom">Benutzerdefiniert</string>
+    <string name="color_picker_clear">Leeren</string>
 </resources>

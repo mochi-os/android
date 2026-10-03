@@ -320,4 +320,6 @@
     <string name="access_remove">لابردن</string>
     <string name="access_remove_title">دەستڕاگەیشتن لاببەیت؟</string>
     <string name="access_remove_message">یاسای دەستپێگەیشتن بۆ \"%1$s\" لابردرێت؟</string>
+    <string name="color_picker_custom">تایبەت</string>
+    <string name="color_picker_clear">پاککردنەوە</string>
 </resources>

@@ -13,6 +13,7 @@
     <string name="calendars_list_search">Barbaadi</string>
     <string name="calendars_event_title">Mata duree</string>
     <string name="calendars_event_location">Iddoo</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Ibsa</string>
     <string name="calendars_repeat_never">Gonkumaa</string>
     <string name="calendars_repeat_monthly">Ji\'aan</string>
@@ -83,18 +84,13 @@
     <string name="calendars_event_repeat">Irra deebi\'uu</string>
     <string name="calendars_event_reminder">Yaadachiisa</string>
     <string name="calendars_event_recurring">Ni irra deebi\'a</string>
-    <string name="calendars_event_delete_title">%1$s haquu?</string>
-    <string name="calendars_event_delete_message">Tarkaanfiin kun deebi\'uu hin danda\'u.</string>
-    <string name="calendars_scope_edit">Taatee kana jijjiiruu moo taateewwan hunda?</string>
-    <string name="calendars_scope_delete">Taatee kana haquu moo taateewwan hunda?</string>
+    <string name="calendars_scope_delete">Taatee kana haqi</string>
     <string name="calendars_scope_one">Taatee kana</string>
     <string name="calendars_scope_all">Taateewwan hunda</string>
     <string name="calendars_repeat_daily">Guyyaan</string>
     <string name="calendars_repeat_weekly">Torbaan</string>
     <string name="calendars_repeat_interval">Hunda</string>
-    <string name="calendars_repeat_days">Guyyoota</string>
     <string name="calendars_repeat_count">Baay\'ina irra deebi\'uu</string>
-    <string name="calendars_repeat_forever">Bara baraan</string>
     <string name="calendars_reminder_time">Yeroo taateen jalqabu</string>
     <plurals name="calendars_reminder_minutes">
         <item quantity="one">daqiiqaa %1$s dura</item>
@@ -149,7 +145,6 @@
     <string name="calendars_event_backwards">Osoo hin jalqabin xumurama</string>
     <string name="calendars_event_zone_start">Naannoo yeroo jalqabaa</string>
     <string name="calendars_event_zone_finish">Naannoo yeroo xumuraa</string>
-    <string name="calendars_event_timezone">Naannoo yeroo</string>
     <string name="calendars_scope_following">Kana fi kanneen itti aanan</string>
     <string name="calendars_event_moved">Taateen sochoofame</string>
     <string name="calendars_event_changed">Taateen kun bakka biraatti jijjiirame.</string>
@@ -189,4 +184,81 @@
     <string name="calendars_polled_synced">Kaalaandariin walsimsiifame</string>
     <string name="calendars_link_revoke_title">Teessoo kaalaandarii deebifachuu barbaaddaa?</string>
     <string name="calendars_link_revoke_message">Kaalandariileen teessoo kana irratti galmaa\'an kana booda hin haaromfaman.</string>
+    <string name="calendars_export_failed">Alergiinsi olkaa\'amuu hin dandeenye</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">Alaa galchuu</string>
+    <string name="calendars_export">Alaa erguu</string>
+    <string name="calendars_exported">Kaalaandariin alaa ergame</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Taateen %1$s alaa galfame</item>
+        <item quantity="other">Taateewwan %1$s alaa galfaman</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">Taateen %1$s duraanuu kaalaandarii keessa jira</item>
+        <item quantity="other">Taateewwan %1$s duraanuu kaalaandarii keessa jiru</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Taateen %1$s alaa galchuu hin dandeenye</item>
+        <item quantity="other">Taateewwan %1$s alaa galchuu hin dandeenye</item>
+    </plurals>
+    <string name="calendars_event_colour_value">Gatii halluu</string>
+    <string name="calendars_discard_title">Wixinee gatuu?</string>
+    <string name="calendars_discard_message">Jijjiiramni kee ni bada.</string>
+    <string name="calendars_discard">Gati</string>
+    <string name="calendars_event_deleted">Taateen haqame</string>
+    <string name="calendars_link_replace_title">Teessoo kaalaandarii bakka buusuu barbaaddaa?</string>
+    <string name="calendars_list_unmatched">Wanti walsimu hin jiru</string>
+    <string name="calendars_list_search_events">Taateewwan barbaadi</string>
+    <string name="calendars_reload">Irra deebi\'ii fe\'i</string>
+    <string name="calendars_event_created">Taateen uumame</string>
+    <string name="calendars_event_saved">Taateen olkaa\'ame</string>
+    <string name="calendars_scope_save">Taatee kana olkaa\'i</string>
+    <string name="calendars_scope_move">Taatee kana sochoosi</string>
+    <string name="calendars_repeat_frequency">Irra deddeebi\'ummaa</string>
+    <string name="calendars_repeat_ends">Ni xumurama</string>
+    <string name="calendars_repeat_end_never">Gonkumaa</string>
+    <string name="calendars_repeat_until">Guyyaa tokko irratti</string>
+    <string name="calendars_repeat_after">Baay\'ina booda</string>
+    <string name="calendars_repeat_last">Guyyaa dhumaa</string>
+    <string name="calendars_rule_day">Guyyaa hunda</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">Guyyaa hunda</item>
+        <item quantity="other">Guyyaa %1$s keessatti al tokko</item>
+    </plurals>
+    <string name="calendars_rule_week">Torbee hunda</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">Torbee hunda</item>
+        <item quantity="other">Torbee %1$s keessatti al tokko</item>
+    </plurals>
+    <string name="calendars_rule_month">Ji\'a hunda</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">Ji\'a hunda</item>
+        <item quantity="other">Ji\'a %1$s keessatti al tokko</item>
+    </plurals>
+    <string name="calendars_rule_year">Waggaa hunda</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">Waggaa hunda</item>
+        <item quantity="other">Waggaa %1$s keessatti al tokko</item>
+    </plurals>
+    <string name="calendars_rule_on">guyyoota: %1$s</string>
+    <string name="calendars_rule_first">%1$s jalqabaa</string>
+    <string name="calendars_rule_second">%1$s lammaffaa</string>
+    <string name="calendars_rule_third">%1$s sadaffaa</string>
+    <string name="calendars_rule_fourth">%1$s afraffaa</string>
+    <string name="calendars_rule_fifth">%1$s shanaffaa</string>
+    <string name="calendars_rule_last">%1$s dhumaa</string>
+    <string name="calendars_rule_end">guyyaa dhumaa ji\'aa</string>
+    <string name="calendars_rule_monthday">guyyaa %1$s</string>
+    <plurals name="calendars_rule_monthdays">
+        <item quantity="one">guyyaa %1$s</item>
+        <item quantity="other">guyyoota %1$s</item>
+    </plurals>
+    <string name="calendars_rule_in">%1$s keessa</string>
+    <string name="calendars_rule_once">al tokko</string>
+    <plurals name="calendars_rule_times">
+        <item quantity="one">al tokko</item>
+        <item quantity="other">al %1$s</item>
+    </plurals>
+    <string name="calendars_rule_until">hanga %1$s</string>
+    <string name="calendars_rule_join">%1$s, %2$s</string>
 </resources>

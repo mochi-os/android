@@ -320,4 +320,6 @@
     <string name="access_remove">Хориҷ кардан</string>
     <string name="access_remove_title">Дастрасиро хориҷ кардан?</string>
     <string name="access_remove_message">Қоидаи дастрасӣ барои «%1$s» нест карда шавад?</string>
+    <string name="color_picker_custom">Танзимшаванда</string>
+    <string name="color_picker_clear">Тоза кардан</string>
 </resources>

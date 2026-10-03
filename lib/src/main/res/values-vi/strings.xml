@@ -321,4 +321,6 @@
     <string name="access_remove">Xoá</string>
     <string name="access_remove_title">Xoá quyền truy cập?</string>
     <string name="access_remove_message">Xóa quy tắc truy cập cho \"%1$s\"?</string>
+    <string name="color_picker_custom">Tùy chỉnh</string>
+    <string name="color_picker_clear">Xóa</string>
 </resources>

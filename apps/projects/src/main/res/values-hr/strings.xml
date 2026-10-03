@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Vlasnik</string>
     <string name="projects_object_watch">Prati</string>
     <string name="projects_object_tab_properties">Svojstva</string>
-    <string name="projects_object_tab_comments">Komentari</string>
+    <string name="projects_object_tab_comments">Komentari (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivnost</string>
-    <string name="projects_object_tab_requests">Zahtjevi</string>
+    <string name="projects_object_tab_requests">Zahtjevi za spajanje (%1$s)</string>
     <string name="projects_object_tab_attachments">Privitci</string>
     <string name="projects_object_tab_links">Veze</string>
     <string name="projects_watchers_watch">Prati</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Objedinjeno</string>
     <string name="projects_diff_split">Podijeli</string>
     <string name="projects_diff_empty">Diff nije dostupan</string>
-    <string name="projects_board_unassigned">Nedodijeljeno</string>
+    <string name="projects_board_unset">[nije postavljeno]</string>
     <string name="projects_board_new">Novo</string>
     <string name="projects_board_rename">Preimenuj</string>
     <string name="projects_board_rename_column">Preimenuj stupac</string>

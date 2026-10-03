@@ -320,4 +320,6 @@
     <string name="access_remove">દૂર કરો</string>
     <string name="access_remove_title">ઍક્સેસ દૂર કરો?</string>
     <string name="access_remove_message">\"%1$s\" માટે ઍક્સેસ નિયમ દૂર કરીએ?</string>
+    <string name="color_picker_custom">કસ્ટમ</string>
+    <string name="color_picker_clear">સાફ કરો</string>
 </resources>

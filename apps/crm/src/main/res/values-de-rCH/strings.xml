@@ -52,7 +52,6 @@
     <string name="crm_comment_empty">Noch keine Kommentare</string>
     <string name="crm_comment_attach">Dateien anhängen</string>
     <string name="crm_comment_remove_attachment">Anhang entfernen</string>
-    <string name="crm_board_unassigned">Nicht zugewiesen</string>
     <string name="crm_board_rename">Umbenennen</string>
     <string name="crm_move_position">Position</string>
     <string name="crm_class_move_up">Nach oben verschieben</string>

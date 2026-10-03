@@ -8,14 +8,17 @@ package org.mochios.android.ui.components
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SecondaryScrollableTabRow
 import androidx.compose.material3.SecondaryTabRow
 import androidx.compose.material3.Tab
+import androidx.compose.material3.TabIndicatorScope
 import androidx.compose.material3.TabRowDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.unit.dp
 
 /**
  * One tab in a [MochiTabRow].
@@ -32,8 +35,10 @@ data class MochiTab(
  * The tab row every app uses: labels in neutral colours, the primary colour
  * spent on the selected tab's divider alone, one line per label.
  *
- * Fixed rather than scrollable, so the tabs divide the width evenly. A label
- * too long for its share is truncated, not wrapped.
+ * Fixed by default, so the tabs divide the width evenly and a label too long
+ * for its share is truncated, not wrapped. A [scrollable] row sizes each tab
+ * to its label and scrolls sideways when they do not all fit, as the web's
+ * tab bars do: for labels that are long, or carry a count.
  *
  * @param tabs The tabs, in the order they are shown.
  * @param selectedIndex Index into [tabs] of the active tab.
@@ -42,6 +47,7 @@ data class MochiTab(
  * @param modifier Modifier for the row.
  * @param containerColor The row's background. Transparent inside a sheet that
  *   paints its own.
+ * @param scrollable Whether tabs take their labels' widths and the row scrolls.
  */
 @Composable
 fun MochiTabRow(
@@ -50,6 +56,7 @@ fun MochiTabRow(
     onSelect: (Int) -> Unit,
     modifier: Modifier = Modifier,
     containerColor: Color = MaterialTheme.colorScheme.surface,
+    scrollable: Boolean = false,
 ) {
     if (tabs.isEmpty()) {
         return
@@ -58,34 +65,53 @@ fun MochiTabRow(
     // row, so it is clamped rather than left to throw.
     val active = selectedIndex.coerceIn(0, tabs.lastIndex)
 
-    SecondaryTabRow(
-        selectedTabIndex = active,
-        modifier = modifier.fillMaxWidth(),
-        containerColor = containerColor,
-        indicator = {
-            TabRowDefaults.SecondaryIndicator(
-                modifier = Modifier.tabIndicatorOffset(active, matchContentSize = false),
-                color = MaterialTheme.colorScheme.primary,
-            )
-        },
-    ) {
-        tabs.forEachIndexed { index, tab ->
-            Tab(
-                selected = index == active,
-                onClick = { onSelect(index) },
-                selectedContentColor = MaterialTheme.colorScheme.onSurface,
-                unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                icon = tab.icon?.let { icon ->
-                    { Icon(icon, contentDescription = null) }
-                },
-                text = {
-                    Text(
-                        text = tab.label,
-                        style = MaterialTheme.typography.labelMedium,
-                        maxLines = 1,
-                    )
-                },
-            )
+    val indicator: @Composable TabIndicatorScope.() -> Unit = {
+        TabRowDefaults.SecondaryIndicator(
+            modifier = Modifier.tabIndicatorOffset(active, matchContentSize = false),
+            color = MaterialTheme.colorScheme.primary,
+        )
+    }
+    if (scrollable) {
+        SecondaryScrollableTabRow(
+            selectedTabIndex = active,
+            modifier = modifier.fillMaxWidth(),
+            containerColor = containerColor,
+            edgePadding = 0.dp,
+            indicator = indicator,
+        ) {
+            MochiTabs(tabs, active, onSelect)
         }
+    } else {
+        SecondaryTabRow(
+            selectedTabIndex = active,
+            modifier = modifier.fillMaxWidth(),
+            containerColor = containerColor,
+            indicator = indicator,
+        ) {
+            MochiTabs(tabs, active, onSelect)
+        }
+    }
+}
+
+/** The tabs of a [MochiTabRow], fixed or scrollable alike. */
+@Composable
+private fun MochiTabs(tabs: List<MochiTab>, active: Int, onSelect: (Int) -> Unit) {
+    tabs.forEachIndexed { index, tab ->
+        Tab(
+            selected = index == active,
+            onClick = { onSelect(index) },
+            selectedContentColor = MaterialTheme.colorScheme.onSurface,
+            unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            icon = tab.icon?.let { icon ->
+                { Icon(icon, contentDescription = null) }
+            },
+            text = {
+                Text(
+                    text = tab.label,
+                    style = MaterialTheme.typography.labelMedium,
+                    maxLines = 1,
+                )
+            },
+        )
     }
 }

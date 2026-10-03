@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Собственик</string>
     <string name="projects_object_watch">Наблюдавай</string>
     <string name="projects_object_tab_properties">Свойства</string>
-    <string name="projects_object_tab_comments">Коментари</string>
+    <string name="projects_object_tab_comments">Коментари (%1$s)</string>
     <string name="projects_object_tab_activity">Активност</string>
-    <string name="projects_object_tab_requests">Заявки</string>
+    <string name="projects_object_tab_requests">Заявки за сливане (%1$s)</string>
     <string name="projects_object_tab_attachments">Прикачени файлове</string>
     <string name="projects_object_tab_links">Връзки</string>
     <string name="projects_watchers_watch">Наблюдавай</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Унифицирано</string>
     <string name="projects_diff_split">Раздели</string>
     <string name="projects_diff_empty">Няма налична разлика</string>
-    <string name="projects_board_unassigned">Неприсвоено</string>
+    <string name="projects_board_unset">[не е зададено]</string>
     <string name="projects_board_new">Ново</string>
     <string name="projects_board_rename">Преименувай</string>
     <string name="projects_board_rename_column">Преименувай колона</string>

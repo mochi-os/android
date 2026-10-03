@@ -322,4 +322,6 @@
     <string name="access_remove">Usuń</string>
     <string name="access_remove_title">Usunąć dostęp?</string>
     <string name="access_remove_message">Usunąć regułę dostępu dla „%1$s”?</string>
+    <string name="color_picker_custom">Niestandardowy</string>
+    <string name="color_picker_clear">Wyczyść</string>
 </resources>

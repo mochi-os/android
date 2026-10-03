@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Egasi</string>
     <string name="projects_object_watch">Kuzatish</string>
     <string name="projects_object_tab_properties">Xususiyatlar</string>
-    <string name="projects_object_tab_comments">Izohlar</string>
+    <string name="projects_object_tab_comments">Izohlar (%1$s)</string>
     <string name="projects_object_tab_activity">Faollik</string>
-    <string name="projects_object_tab_requests">Soʻrovlar</string>
+    <string name="projects_object_tab_requests">Birlashtirish soʻrovlari (%1$s)</string>
     <string name="projects_object_tab_attachments">Biriktirmalar</string>
     <string name="projects_object_tab_links">Havolalar</string>
     <string name="projects_watchers_watch">Kuzatish</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Birlashgan</string>
     <string name="projects_diff_split">Boʻlish</string>
     <string name="projects_diff_empty">Diff mavjud emas</string>
-    <string name="projects_board_unassigned">Tayinlanmagan</string>
+    <string name="projects_board_unset">[oʻrnatilmagan]</string>
     <string name="projects_board_new">Yangi</string>
     <string name="projects_board_rename">Nomini oʻzgartirish</string>
     <string name="projects_board_rename_column">Ustun nomini oʻzgartirish</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">المالك</string>
     <string name="projects_object_watch">متابعة</string>
     <string name="projects_object_tab_properties">الخصائص</string>
-    <string name="projects_object_tab_comments">التعليقات</string>
+    <string name="projects_object_tab_comments">التعليقات (%1$s)</string>
     <string name="projects_object_tab_activity">النشاط</string>
-    <string name="projects_object_tab_requests">الطلبات</string>
+    <string name="projects_object_tab_requests">طلبات الدمج (%1$s)</string>
     <string name="projects_object_tab_attachments">المرفقات</string>
     <string name="projects_object_tab_links">الروابط</string>
     <string name="projects_watchers_watch">متابعة</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">موحد</string>
     <string name="projects_diff_split">تقسيم</string>
     <string name="projects_diff_empty">لا يوجد فرق متاح</string>
-    <string name="projects_board_unassigned">غير معين</string>
+    <string name="projects_board_unset">[غير محدد]</string>
     <string name="projects_board_new">جديد</string>
     <string name="projects_board_rename">إعادة تسمية</string>
     <string name="projects_board_rename_column">إعادة تسمية العمود</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">مالک</string>
     <string name="projects_object_watch">دیکھیں</string>
     <string name="projects_object_tab_properties">خصوصیات</string>
-    <string name="projects_object_tab_comments">تبصرے</string>
+    <string name="projects_object_tab_comments">تبصرے (%1$s)</string>
     <string name="projects_object_tab_activity">سرگرمی</string>
-    <string name="projects_object_tab_requests">درخواستیں</string>
+    <string name="projects_object_tab_requests">ضم کرنے کی درخواستیں (%1$s)</string>
     <string name="projects_object_tab_attachments">اٹیچمنٹس</string>
     <string name="projects_object_tab_links">لنکس</string>
     <string name="projects_watchers_watch">دیکھیں</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">متحد</string>
     <string name="projects_diff_split">تقسیم کریں</string>
     <string name="projects_diff_empty">کوئی فرق دستیاب نہیں</string>
-    <string name="projects_board_unassigned">غیر تفویض شدہ</string>
+    <string name="projects_board_unset">[سیٹ نہیں]</string>
     <string name="projects_board_new">نیا</string>
     <string name="projects_board_rename">نام تبدیل کریں</string>
     <string name="projects_board_rename_column">کالم کا نام تبدیل کریں</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">مالک</string>
     <string name="projects_object_watch">تماشا</string>
     <string name="projects_object_tab_properties">ویژگی‌ها</string>
-    <string name="projects_object_tab_comments">نظرها</string>
+    <string name="projects_object_tab_comments">نظرها (%1$s)</string>
     <string name="projects_object_tab_activity">فعالیت</string>
-    <string name="projects_object_tab_requests">درخواست‌ها</string>
+    <string name="projects_object_tab_requests">درخواست‌های ادغام (%1$s)</string>
     <string name="projects_object_tab_attachments">پیوست‌ها</string>
     <string name="projects_object_tab_links">لینک‌ها</string>
     <string name="projects_watchers_watch">تماشا</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">یکپارچه</string>
     <string name="projects_diff_split">تقسیم</string>
     <string name="projects_diff_empty">هیچ تفاوتی در دسترس نیست</string>
-    <string name="projects_board_unassigned">بدون اختصاص</string>
+    <string name="projects_board_unset">[تنظیم نشده]</string>
     <string name="projects_board_new">جدید</string>
     <string name="projects_board_rename">تغییر نام</string>
     <string name="projects_board_rename_column">تغییر نام ستون</string>

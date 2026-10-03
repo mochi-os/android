@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Entfernen</string>
     <string name="crm_attachments">Anhänge</string>
     <string name="crm_attachment_add">Anhang hinzufügen</string>
-    <string name="crm_board_unassigned">Nicht zugewiesen</string>
+    <string name="crm_board_unset">[nicht gesetzt]</string>
     <string name="crm_board_new">Neu</string>
     <string name="crm_board_rename">Umbenennen</string>
     <string name="crm_board_rename_column">Spalte umbenennen</string>

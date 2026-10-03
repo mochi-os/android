@@ -6,11 +6,13 @@
 package org.mochios.calendars.ui.calendar
 
 import android.content.Context
+import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
@@ -22,12 +24,14 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.files.PendingExport
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Preferences
@@ -52,6 +56,7 @@ import org.mochios.calendars.ui.router.CALENDARS_FEATURE
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.calendars.ui.router.calendarsView
 import org.mochios.calendars.ui.router.sharedView
+import java.io.File
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
@@ -138,6 +143,15 @@ sealed class CalendarEvent {
 
     /** The event changed elsewhere since it was read, so nothing was written. */
     data object Changed : CalendarEvent()
+
+    /** The file picked to import could not be read. */
+    data object Unreadable : CalendarEvent()
+
+    /** A calendar's export is fetched: ask where to save it, offering [name]. */
+    data class Save(val name: String) : CalendarEvent()
+
+    /** An export was written where the user chose, or [saved] says it was not. */
+    data class Exported(val saved: Boolean) : CalendarEvent()
 }
 
 @HiltViewModel
@@ -148,7 +162,9 @@ class CalendarViewModel @Inject constructor(
     private val sessionManager: SessionManager,
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(CalendarUiState(hidden = VisibilityStore.hidden(context)))
+    private val _uiState = MutableStateFlow(
+        CalendarUiState(hidden = VisibilityStore.hidden(context), workweek = VisibilityStore.workweek(context)),
+    )
     val uiState: StateFlow<CalendarUiState> = _uiState.asStateFlow()
 
     private val _events = MutableSharedFlow<CalendarEvent>(extraBufferCapacity = 4)
@@ -460,6 +476,7 @@ class CalendarViewModel @Inject constructor(
     }
 
     fun workweek(value: Boolean) {
+        VisibilityStore.workweek(context, value)
         _uiState.value = _uiState.value.copy(workweek = value)
     }
 
@@ -661,6 +678,20 @@ class CalendarViewModel @Inject constructor(
         }
     }
 
+    /** Puts back what the editor last deleted, as its Undo asks. */
+    fun restore() {
+        val back = repository.restoring() ?: return
+        viewModelScope.launch {
+            try {
+                back()
+            } catch (_: EventChangedException) {
+                _events.tryEmit(CalendarEvent.Changed)
+            } catch (e: Exception) {
+                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            }
+        }
+    }
+
     /** One call whose only outcome that matters is whether it failed. */
     private inline fun act(crossinline request: suspend () -> Unit) {
         viewModelScope.launch {
@@ -687,8 +718,11 @@ class CalendarViewModel @Inject constructor(
     fun openLink(calendar: String, regenerate: Boolean = false) {
         if (_link.value.busy) return
         if (!regenerate && _link.value.calendar == calendar) return
+        // A replace keeps the "already issued" state it started from, so a
+        // failed one leaves the address, and its Replace, as they were.
+        val issued = _link.value.calendar == calendar && _link.value.exists
         viewModelScope.launch {
-            _link.value = LinkState(calendar = calendar, busy = true)
+            _link.value = LinkState(calendar = calendar, busy = true, exists = issued)
             try {
                 val answer = repository.link(calendar, regenerate)
                 val base = server()
@@ -699,7 +733,7 @@ class CalendarViewModel @Inject constructor(
                     exists = answer.exists || answer.token.isNotBlank(),
                 )
             } catch (e: Exception) {
-                _link.value = LinkState(calendar = calendar)
+                _link.value = LinkState(calendar = calendar, exists = issued)
                 _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
             }
         }
@@ -716,6 +750,88 @@ class CalendarViewModel @Inject constructor(
 
     /** The server the link's address is built on, as the session holds it. */
     private suspend fun server(): String = sessionManager.serverUrl.first().trimEnd('/')
+
+    // ---- importing and exporting ----
+
+    private val _importing = MutableStateFlow<Tally?>(null)
+
+    /** The import under way, or just finished, while its dialog is open. */
+    val importing: StateFlow<Tally?> = _importing.asStateFlow()
+
+    /**
+     * Imports the iCalendar file at [uri] into [calendar], round by round,
+     * the dialog following each. The file is copied into the cache first, so
+     * the first round uploads from a copy the picker's grant cannot take
+     * away. A failure closes the dialog and says why; the events any round
+     * wrote are shown whether the import finished or not.
+     */
+    fun import(calendar: Calendar, uri: Uri) {
+        if (_importing.value != null) return
+        val start = Tally(calendar = calendar.id, name = calendar.name)
+        _importing.value = start
+        viewModelScope.launch {
+            var file: File? = null
+            try {
+                // The name it is staged under when its provider gives none.
+                file = runCatching { repository.stageFile(uri, "calendar.ics") }.getOrNull()
+                if (file == null) {
+                    _importing.value = null
+                    _events.tryEmit(CalendarEvent.Unreadable)
+                    return@launch
+                }
+                rounds(
+                    file,
+                    start,
+                    round = { part, staged, offset -> repository.importRound(calendar.id, part, staged, offset) },
+                    progress = { _importing.value = it },
+                )
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _importing.value = null
+                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            } finally {
+                file?.let { withContext(NonCancellable) { repository.discardStaged(listOf(it)) } }
+            }
+            load(refreshing = true, reset = false)
+        }
+    }
+
+    /** Closes a finished import's dialog. */
+    fun closeImport() {
+        if (_importing.value?.finished == true) _importing.value = null
+    }
+
+    /** The export fetched and waiting for the user to say where it goes. */
+    private var exported: PendingExport? = null
+
+    /**
+     * Fetches [calendar] as an iCalendar file, then asks where to save it,
+     * offering the calendar's name. Fetched first, so a refusal is said
+     * before the user has chosen a place for a file that will not come.
+     */
+    fun export(calendar: Calendar) {
+        viewModelScope.launch {
+            try {
+                val text = repository.exportCalendar(calendar.id)
+                val pending = PendingExport(repository.exportDisplayName(calendar.name, "ics"), Icalendar.TYPE, text)
+                exported = pending
+                _events.tryEmit(CalendarEvent.Save(pending.suggestedName))
+            } catch (e: Exception) {
+                _events.tryEmit(CalendarEvent.Failed(e.toMochiError()))
+            }
+        }
+    }
+
+    /** Writes the waiting export to [uri], or drops it when the user chose nowhere. */
+    fun save(uri: Uri?) {
+        val pending = exported ?: return
+        exported = null
+        if (uri == null) return
+        viewModelScope.launch {
+            _events.tryEmit(CalendarEvent.Exported(repository.saveTextFile(uri, pending.content.orEmpty())))
+        }
+    }
 
     // ---- new events ----
 

@@ -15,6 +15,7 @@ import org.mochios.calendars.model.ChangesResponse
 import org.mochios.calendars.model.EventResponse
 import org.mochios.calendars.model.EventsResponse
 import org.mochios.calendars.model.Hours
+import org.mochios.calendars.model.ImportResponse
 import org.mochios.calendars.model.InstancesResponse
 import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Multiweek
@@ -27,12 +28,17 @@ import org.mochios.calendars.model.SplitResponse
 import org.mochios.calendars.model.TokenDeleteResponse
 import org.mochios.calendars.model.TokenResponse
 import org.mochios.calendars.model.TokensResponse
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Multipart
 import retrofit2.http.POST
+import retrofit2.http.Part
 import retrofit2.http.Query
 
 /**
@@ -207,6 +213,26 @@ interface CalendarsApi {
         // contract-ok: the handler reads colour through colour_input.
         @Field("colour") colour: String,
     ): Response<ApiResponse<CalendarResponse>>
+
+    /**
+     * One round of an iCalendar import: the first sends the [file] and no
+     * [staged]; each one after sends the [staged] id the first answered and
+     * the [offset] the last reached, and no file.
+     */
+    @Multipart
+    @POST("-/calendars/import")
+    suspend fun importCalendar(
+        @Part("calendar") calendar: RequestBody,
+        @Part("offset") offset: RequestBody,
+        @Part("import") staged: RequestBody?,
+        @Part file: MultipartBody.Part?,
+    ): Response<ApiResponse<ImportResponse>>
+
+    /** The whole calendar as an iCalendar file: `text/calendar`, not the usual JSON. */
+    @GET("-/calendars/export")
+    suspend fun exportCalendar(
+        @Query("calendar") calendar: String,
+    ): Response<ResponseBody>
 
     @POST("-/calendars/refresh")
     suspend fun refreshCalendars(): Response<ApiResponse<RefreshResponse>>

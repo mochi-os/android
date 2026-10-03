@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Sahibi</string>
     <string name="projects_object_watch">İzlə</string>
     <string name="projects_object_tab_properties">Xüsusiyyətlər</string>
-    <string name="projects_object_tab_comments">Şərhlər</string>
+    <string name="projects_object_tab_comments">Şərhlər (%1$s)</string>
     <string name="projects_object_tab_activity">Fəaliyyət</string>
-    <string name="projects_object_tab_requests">Sorğular</string>
+    <string name="projects_object_tab_requests">Birləşdirmə sorğuları (%1$s)</string>
     <string name="projects_object_tab_attachments">Qoşmalar</string>
     <string name="projects_object_tab_links">Linklər</string>
     <string name="projects_watchers_watch">İzlə</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Birləşdirilmiş</string>
     <string name="projects_diff_split">Böl</string>
     <string name="projects_diff_empty">Diff mövcud deyil</string>
-    <string name="projects_board_unassigned">Təyin edilməyib</string>
+    <string name="projects_board_unset">[təyin edilməyib]</string>
     <string name="projects_board_new">Yeni</string>
     <string name="projects_board_rename">Adı dəyiş</string>
     <string name="projects_board_rename_column">Sütun adını dəyiş</string>

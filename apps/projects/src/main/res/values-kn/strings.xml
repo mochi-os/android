@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">ಮಾಲೀಕ</string>
     <string name="projects_object_watch">ವೀಕ್ಷಿಸಿ</string>
     <string name="projects_object_tab_properties">ಗುಣಲಕ್ಷಣಗಳು</string>
-    <string name="projects_object_tab_comments">ಕಾಮೆಂಟ್‌ಗಳು</string>
+    <string name="projects_object_tab_comments">ಕಾಮೆಂಟ್‌ಗಳು (%1$s)</string>
     <string name="projects_object_tab_activity">ಚಟುವಟಿಕೆ</string>
-    <string name="projects_object_tab_requests">ರಿಕ್ವೆಸ್ಟ್‌ಗಳು</string>
+    <string name="projects_object_tab_requests">ವಿಲೀನ ವಿನಂತಿಗಳು (%1$s)</string>
     <string name="projects_object_tab_attachments">ಲಗತ್ತುಗಳು</string>
     <string name="projects_object_tab_links">ಲಿಂಕ್‌ಗಳು</string>
     <string name="projects_watchers_watch">ವೀಕ್ಷಿಸಿ</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ಏಕೀಕೃತ</string>
     <string name="projects_diff_split">ವಿಭಜಿಸಿ</string>
     <string name="projects_diff_empty">ಯಾವುದೇ ಡಿಫ್ ಲಭ್ಯವಿಲ್ಲ</string>
-    <string name="projects_board_unassigned">ನಿಯೋಜಿಸದ</string>
+    <string name="projects_board_unset">[ಸಜ್ಜುಗೊಳಿಸಿಲ್ಲ]</string>
     <string name="projects_board_new">ಹೊಸ</string>
     <string name="projects_board_rename">ಮರುಹೆಸರಿಸಿ</string>
     <string name="projects_board_rename_column">ಕಾಲಮ್ ಮರುಹೆಸರಿಸಿ</string>

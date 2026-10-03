@@ -13,6 +13,7 @@
     <string name="calendars_list_search">Барај</string>
     <string name="calendars_event_title">Наслов</string>
     <string name="calendars_event_location">Локација</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Опис</string>
     <string name="calendars_repeat_never">Никогаш</string>
     <string name="calendars_repeat_monthly">Месечно</string>
@@ -83,18 +84,13 @@
     <string name="calendars_event_repeat">Повторување</string>
     <string name="calendars_event_reminder">Потсетник</string>
     <string name="calendars_event_recurring">Се повторува</string>
-    <string name="calendars_event_delete_title">Да се избрише %1$s?</string>
-    <string name="calendars_event_delete_message">Ова не може да се врати.</string>
-    <string name="calendars_scope_edit">Да се промени овој настан или сите настани?</string>
-    <string name="calendars_scope_delete">Да се избрише овој настан или сите настани?</string>
+    <string name="calendars_scope_delete">Избриши го овој настан</string>
     <string name="calendars_scope_one">Овој настан</string>
     <string name="calendars_scope_all">Сите настани</string>
     <string name="calendars_repeat_daily">Дневно</string>
     <string name="calendars_repeat_weekly">Неделно</string>
     <string name="calendars_repeat_interval">На секои</string>
-    <string name="calendars_repeat_days">Денови</string>
     <string name="calendars_repeat_count">Повторувања</string>
-    <string name="calendars_repeat_forever">Засекогаш</string>
     <string name="calendars_reminder_time">Во времето на настанот</string>
     <plurals name="calendars_reminder_minutes">
         <item quantity="one">%1$s минута претходно</item>
@@ -149,7 +145,6 @@
     <string name="calendars_event_backwards">Завршува пред да започне</string>
     <string name="calendars_event_zone_start">Временска зона на почетокот</string>
     <string name="calendars_event_zone_finish">Временска зона на крајот</string>
-    <string name="calendars_event_timezone">Временска зона</string>
     <string name="calendars_scope_following">Овој и следните</string>
     <string name="calendars_event_moved">Настанот е преместен</string>
     <string name="calendars_event_changed">Овој настан е променет на друго место.</string>
@@ -189,4 +184,81 @@
     <string name="calendars_polled_synced">Календарот е синхронизиран</string>
     <string name="calendars_link_revoke_title">Да се отповика адресата на календарот?</string>
     <string name="calendars_link_revoke_message">Календарите претплатени на оваа адреса ќе престанат да се ажурираат.</string>
+    <string name="calendars_export_failed">Извозот не можеше да се зачува</string>
+    <string name="calendars_import_progress">%1$s од %2$s</string>
+    <string name="calendars_import">Увези</string>
+    <string name="calendars_export">Извези</string>
+    <string name="calendars_exported">Календарот е извезен</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Увезен е %1$s настан</item>
+        <item quantity="other">Увезени се %1$s настани</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s настан веќе е во календарот</item>
+        <item quantity="other">%1$s настани веќе се во календарот</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s настан не можеше да се увезе</item>
+        <item quantity="other">%1$s настани не можеа да се увезат</item>
+    </plurals>
+    <string name="calendars_event_colour_value">Вредност на бојата</string>
+    <string name="calendars_discard_title">Да се отфрли нацртот?</string>
+    <string name="calendars_discard_message">Твоите промени ќе бидат изгубени.</string>
+    <string name="calendars_discard">Отфрли</string>
+    <string name="calendars_event_deleted">Настанот е избришан</string>
+    <string name="calendars_link_replace_title">Да се замени адресата на календарот?</string>
+    <string name="calendars_list_unmatched">Нема совпаѓања</string>
+    <string name="calendars_list_search_events">Пребарај настани</string>
+    <string name="calendars_reload">Вчитај повторно</string>
+    <string name="calendars_event_created">Настанот е создаден</string>
+    <string name="calendars_event_saved">Настанот е зачуван</string>
+    <string name="calendars_scope_save">Зачувај го овој настан</string>
+    <string name="calendars_scope_move">Премести го овој настан</string>
+    <string name="calendars_repeat_frequency">Честота</string>
+    <string name="calendars_repeat_ends">Завршува</string>
+    <string name="calendars_repeat_end_never">Никогаш</string>
+    <string name="calendars_repeat_until">На датум</string>
+    <string name="calendars_repeat_after">По број</string>
+    <string name="calendars_repeat_last">Последен ден</string>
+    <string name="calendars_rule_day">Секој ден</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">На секои %1$s ден</item>
+        <item quantity="other">На секои %1$s дена</item>
+    </plurals>
+    <string name="calendars_rule_week">Секоја недела</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">На секои %1$s недела</item>
+        <item quantity="other">На секои %1$s недели</item>
+    </plurals>
+    <string name="calendars_rule_month">Секој месец</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">На секои %1$s месец</item>
+        <item quantity="other">На секои %1$s месеци</item>
+    </plurals>
+    <string name="calendars_rule_year">Секоја година</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">На секои %1$s година</item>
+        <item quantity="other">На секои %1$s години</item>
+    </plurals>
+    <string name="calendars_rule_on">во %1$s</string>
+    <string name="calendars_rule_first">во првата недела од месецот: %1$s</string>
+    <string name="calendars_rule_second">во втората недела од месецот: %1$s</string>
+    <string name="calendars_rule_third">во третата недела од месецот: %1$s</string>
+    <string name="calendars_rule_fourth">во четвртата недела од месецот: %1$s</string>
+    <string name="calendars_rule_fifth">во петтата недела од месецот: %1$s</string>
+    <string name="calendars_rule_last">во последната недела од месецот: %1$s</string>
+    <string name="calendars_rule_end">на последниот ден од месецот</string>
+    <string name="calendars_rule_monthday">на %1$s во месецот</string>
+    <plurals name="calendars_rule_monthdays">
+        <item quantity="one">на %1$s во месецот</item>
+        <item quantity="other">на %1$s во месецот</item>
+    </plurals>
+    <string name="calendars_rule_in">во %1$s</string>
+    <string name="calendars_rule_once">еднаш</string>
+    <plurals name="calendars_rule_times">
+        <item quantity="one">%1$s пат</item>
+        <item quantity="other">%1$s пати</item>
+    </plurals>
+    <string name="calendars_rule_until">до %1$s</string>
+    <string name="calendars_rule_join">%1$s, %2$s</string>
 </resources>

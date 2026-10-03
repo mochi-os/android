@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">உரிமையாளர்</string>
     <string name="projects_object_watch">பார்</string>
     <string name="projects_object_tab_properties">பண்புகள்</string>
-    <string name="projects_object_tab_comments">கருத்துகள்</string>
+    <string name="projects_object_tab_comments">கருத்துகள் (%1$s)</string>
     <string name="projects_object_tab_activity">செயல்பாடு</string>
-    <string name="projects_object_tab_requests">கோரிக்கைகள்</string>
+    <string name="projects_object_tab_requests">மெர்ஜ் கோரிக்கைகள் (%1$s)</string>
     <string name="projects_object_tab_attachments">இணைப்புகள்</string>
     <string name="projects_object_tab_links">இணைப்புகள்</string>
     <string name="projects_watchers_watch">பார்</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ஒருங்கிணைந்த</string>
     <string name="projects_diff_split">பிரி</string>
     <string name="projects_diff_empty">வேறுபாடு கிடைக்கவில்லை</string>
-    <string name="projects_board_unassigned">ஒதுக்கப்படாதது</string>
+    <string name="projects_board_unset">[அமைக்கப்படவில்லை]</string>
     <string name="projects_board_new">புதியது</string>
     <string name="projects_board_rename">பெயர் மாற்று</string>
     <string name="projects_board_rename_column">நெடுவரிசையின் பெயரை மாற்று</string>

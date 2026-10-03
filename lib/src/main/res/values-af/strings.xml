@@ -322,4 +322,6 @@
     <string name="access_remove">Verwyder</string>
     <string name="access_remove_title">Verwyder toegang?</string>
     <string name="access_remove_message">Verwyder toegangsreël vir \"%1$s\"?</string>
+    <string name="color_picker_custom">Pasgemaak</string>
+    <string name="color_picker_clear">Maak skoon</string>
 </resources>

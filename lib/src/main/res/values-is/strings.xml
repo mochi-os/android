@@ -320,4 +320,6 @@
     <string name="access_remove">Fjarlægja</string>
     <string name="access_remove_title">Fjarlægja aðgang?</string>
     <string name="access_remove_message">Fjarlægja aðgangsreglu fyrir „%1$s“?</string>
+    <string name="color_picker_custom">Sérsniðið</string>
+    <string name="color_picker_clear">Hreinsa</string>
 </resources>

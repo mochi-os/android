@@ -320,4 +320,6 @@
     <string name="access_remove">ہٹائیں</string>
     <string name="access_remove_title">رسائی ہٹائیں؟</string>
     <string name="access_remove_message">\"%1$s\" کے لیے رسائی کا اصول ہٹائیں؟</string>
+    <string name="color_picker_custom">اپنی مرضی کا</string>
+    <string name="color_picker_clear">صاف کریں</string>
 </resources>

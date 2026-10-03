@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Sahip</string>
     <string name="projects_object_watch">İzle</string>
     <string name="projects_object_tab_properties">Özellikler</string>
-    <string name="projects_object_tab_comments">Yorumlar</string>
+    <string name="projects_object_tab_comments">Yorumlar (%1$s)</string>
     <string name="projects_object_tab_activity">Etkinlik</string>
-    <string name="projects_object_tab_requests">İstekler</string>
+    <string name="projects_object_tab_requests">Birleştirme istekleri (%1$s)</string>
     <string name="projects_object_tab_attachments">Ekler</string>
     <string name="projects_object_tab_links">Bağlantılar</string>
     <string name="projects_watchers_watch">İzle</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Birleşik</string>
     <string name="projects_diff_split">Böl</string>
     <string name="projects_diff_empty">Diff mevcut değil</string>
-    <string name="projects_board_unassigned">Atanmamış</string>
+    <string name="projects_board_unset">[ayarlanmamış]</string>
     <string name="projects_board_new">Yeni</string>
     <string name="projects_board_rename">Yeniden adlandır</string>
     <string name="projects_board_rename_column">Sütunu yeniden adlandır</string>

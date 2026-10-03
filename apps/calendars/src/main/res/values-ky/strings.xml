@@ -13,6 +13,7 @@
     <string name="calendars_list_search">Издөө</string>
     <string name="calendars_event_title">Аталышы</string>
     <string name="calendars_event_location">Жайгашкан жери</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Сүрөттөмө</string>
     <string name="calendars_repeat_never">Эч качан</string>
     <string name="calendars_repeat_monthly">Айлык</string>
@@ -83,18 +84,13 @@
     <string name="calendars_event_repeat">Кайталоо</string>
     <string name="calendars_event_reminder">Эскертме</string>
     <string name="calendars_event_recurring">Кайталанат</string>
-    <string name="calendars_event_delete_title">%1$s өчүрүлсүнбү?</string>
-    <string name="calendars_event_delete_message">Бул аракетти артка кайтаруу мүмкүн эмес.</string>
-    <string name="calendars_scope_edit">Бул иш-чара өзгөртүлсүнбү же бардык иш-чараларбы?</string>
-    <string name="calendars_scope_delete">Бул иш-чара өчүрүлсүнбү же бардык иш-чараларбы?</string>
+    <string name="calendars_scope_delete">Бул иш-чараны өчүрүү</string>
     <string name="calendars_scope_one">Бул иш-чара</string>
     <string name="calendars_scope_all">Бардык иш-чаралар</string>
     <string name="calendars_repeat_daily">Күн сайын</string>
     <string name="calendars_repeat_weekly">Жума сайын</string>
     <string name="calendars_repeat_interval">Ар</string>
-    <string name="calendars_repeat_days">Күндөр</string>
     <string name="calendars_repeat_count">Кайталануулардын саны</string>
-    <string name="calendars_repeat_forever">Түбөлүккө</string>
     <string name="calendars_reminder_time">Иш-чаранын убагында</string>
     <plurals name="calendars_reminder_minutes">
         <item quantity="one">%1$s мүнөт мурун</item>
@@ -149,7 +145,6 @@
     <string name="calendars_event_backwards">Башталганга чейин аяктайт</string>
     <string name="calendars_event_zone_start">Башталуу убакыт алкагы</string>
     <string name="calendars_event_zone_finish">Аяктоо убакыт алкагы</string>
-    <string name="calendars_event_timezone">Убакыт алкагы</string>
     <string name="calendars_scope_following">Бул жана кийинкилер</string>
     <string name="calendars_event_moved">Иш-чара жылдырылды</string>
     <string name="calendars_event_changed">Бул иш-чара башка жерде өзгөртүлдү.</string>
@@ -189,4 +184,81 @@
     <string name="calendars_polled_synced">Календарь синхрондоштурулду</string>
     <string name="calendars_link_revoke_title">Календардын дарегин кайтарып алуу керекпи?</string>
     <string name="calendars_link_revoke_message">Бул дарекке жазылган календарлар мындан ары жаңыланбай калат.</string>
+    <string name="calendars_export_failed">Экспортту сактоо мүмкүн болгон жок</string>
+    <string name="calendars_import_progress">%2$s ичинен %1$s</string>
+    <string name="calendars_import">Импорттоо</string>
+    <string name="calendars_export">Экспорттоо</string>
+    <string name="calendars_exported">Календарь экспорттолду</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s иш-чара импорттолду</item>
+        <item quantity="other">%1$s иш-чара импорттолду</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s иш-чара календарда мурунтан эле бар</item>
+        <item quantity="other">%1$s иш-чара календарда мурунтан эле бар</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">%1$s иш-чараны импорттоо мүмкүн болбоду</item>
+        <item quantity="other">%1$s иш-чараны импорттоо мүмкүн болбоду</item>
+    </plurals>
+    <string name="calendars_event_colour_value">Түстүн мааниси</string>
+    <string name="calendars_discard_title">Долбоорду таштайсызбы?</string>
+    <string name="calendars_discard_message">Өзгөртүүлөрүңүз жоголот.</string>
+    <string name="calendars_discard">Таштоо</string>
+    <string name="calendars_event_deleted">Иш-чара өчүрүлдү</string>
+    <string name="calendars_link_replace_title">Календардын дарегин алмаштыруу керекпи?</string>
+    <string name="calendars_list_unmatched">Дал келүүлөр жок</string>
+    <string name="calendars_list_search_events">Иш-чараларды издөө</string>
+    <string name="calendars_reload">Кайра жүктөө</string>
+    <string name="calendars_event_created">Иш-чара түзүлдү</string>
+    <string name="calendars_event_saved">Иш-чара сакталды</string>
+    <string name="calendars_scope_save">Бул иш-чараны сактоо</string>
+    <string name="calendars_scope_move">Бул иш-чараны жылдыруу</string>
+    <string name="calendars_repeat_frequency">Кайталоо жыштыгы</string>
+    <string name="calendars_repeat_ends">Аяктайт</string>
+    <string name="calendars_repeat_end_never">Эч качан</string>
+    <string name="calendars_repeat_until">Белгилүү күнү</string>
+    <string name="calendars_repeat_after">Белгилүү сандан кийин</string>
+    <string name="calendars_repeat_last">Акыркы күн</string>
+    <string name="calendars_rule_day">Күн сайын</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">Күн сайын</item>
+        <item quantity="other">Ар %1$s күндө</item>
+    </plurals>
+    <string name="calendars_rule_week">Апта сайын</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">Апта сайын</item>
+        <item quantity="other">Ар %1$s аптада</item>
+    </plurals>
+    <string name="calendars_rule_month">Ай сайын</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">Ай сайын</item>
+        <item quantity="other">Ар %1$s айда</item>
+    </plurals>
+    <string name="calendars_rule_year">Жыл сайын</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">Жыл сайын</item>
+        <item quantity="other">Ар %1$s жылда</item>
+    </plurals>
+    <string name="calendars_rule_on">%1$s күндөрү</string>
+    <string name="calendars_rule_first">биринчи %1$s күнү</string>
+    <string name="calendars_rule_second">экинчи %1$s күнү</string>
+    <string name="calendars_rule_third">үчүнчү %1$s күнү</string>
+    <string name="calendars_rule_fourth">төртүнчү %1$s күнү</string>
+    <string name="calendars_rule_fifth">бешинчи %1$s күнү</string>
+    <string name="calendars_rule_last">акыркы %1$s күнү</string>
+    <string name="calendars_rule_end">айдын акыркы күнү</string>
+    <string name="calendars_rule_monthday">айдын %1$s күнү</string>
+    <plurals name="calendars_rule_monthdays">
+        <item quantity="one">айдын %1$s күнү</item>
+        <item quantity="other">айдын %1$s күндөрү</item>
+    </plurals>
+    <string name="calendars_rule_in">%1$s айында</string>
+    <string name="calendars_rule_once">бир жолу</string>
+    <plurals name="calendars_rule_times">
+        <item quantity="one">бир жолу</item>
+        <item quantity="other">%1$s жолу</item>
+    </plurals>
+    <string name="calendars_rule_until">%1$s чейин</string>
+    <string name="calendars_rule_join">%1$s, %2$s</string>
 </resources>

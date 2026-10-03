@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Apuq</string>
     <string name="projects_object_watch">Qatipay</string>
     <string name="projects_object_tab_properties">Kayninkuna</string>
-    <string name="projects_object_tab_comments">Comentariokuna</string>
+    <string name="projects_object_tab_comments">Comentariokuna (%1$s)</string>
     <string name="projects_object_tab_activity">Kuyuriy</string>
-    <string name="projects_object_tab_requests">Mañakuykuna</string>
+    <string name="projects_object_tab_requests">Hukllachana mañakuykuna (%1$s)</string>
     <string name="projects_object_tab_attachments">Adjuntokuna</string>
     <string name="projects_object_tab_links">T\'inkikuna</string>
     <string name="projects_watchers_watch">Qatipay</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Unificado</string>
     <string name="projects_diff_split">T\'aqasqa</string>
     <string name="projects_diff_empty">Mana diff kanchu</string>
-    <string name="projects_board_unassigned">Mana asignasqa</string>
+    <string name="projects_board_unset">[mana churasqa]</string>
     <string name="projects_board_new">Musuq</string>
     <string name="projects_board_rename">Sutinta hukchay</string>
     <string name="projects_board_rename_column">Columnapa sutinta hukchay</string>

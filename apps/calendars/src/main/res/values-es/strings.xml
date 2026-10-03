@@ -13,6 +13,7 @@
     <string name="calendars_list_search">Buscar</string>
     <string name="calendars_event_title">Título</string>
     <string name="calendars_event_location">Ubicación</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Descripción</string>
     <string name="calendars_repeat_never">Nunca</string>
     <string name="calendars_repeat_monthly">Mensual</string>
@@ -83,19 +84,14 @@
     <string name="calendars_event_repeat">Repetición</string>
     <string name="calendars_event_reminder">Recordatorio</string>
     <string name="calendars_event_recurring">Se repite</string>
-    <string name="calendars_event_delete_title">¿Eliminar %1$s?</string>
-    <string name="calendars_event_delete_message">Esto no se puede deshacer.</string>
-    <string name="calendars_scope_edit">¿Cambiar este evento o todos los eventos?</string>
-    <string name="calendars_scope_delete">¿Eliminar este evento o todos los eventos?</string>
+    <string name="calendars_scope_delete">Eliminar este evento</string>
     <string name="calendars_scope_one">Este evento</string>
     <string name="calendars_scope_all">Todos los eventos</string>
     <string name="calendars_repeat_daily">Diario</string>
     <string name="calendars_repeat_weekly">Semanal</string>
     <string name="calendars_repeat_interval">Cada</string>
-    <string name="calendars_repeat_days">Días</string>
     <string name="calendars_repeat_count">Repeticiones</string>
-    <string name="calendars_repeat_forever">Para siempre</string>
-    <string name="calendars_reminder_time">A la hora</string>
+    <string name="calendars_reminder_time">A la hora del evento</string>
     <plurals name="calendars_reminder_minutes">
         <item quantity="one">%1$s minuto antes</item>
         <item quantity="other">%1$s minutos antes</item>
@@ -149,7 +145,6 @@
     <string name="calendars_event_backwards">Termina antes de empezar</string>
     <string name="calendars_event_zone_start">Zona horaria de inicio</string>
     <string name="calendars_event_zone_finish">Zona horaria de fin</string>
-    <string name="calendars_event_timezone">Zona horaria</string>
     <string name="calendars_scope_following">Este y los siguientes</string>
     <string name="calendars_event_moved">Evento movido</string>
     <string name="calendars_event_changed">Este evento cambió en otro sitio.</string>
@@ -189,4 +184,87 @@
     <string name="calendars_polled_synced">Calendario sincronizado</string>
     <string name="calendars_link_revoke_title">¿Revocar la dirección del calendario?</string>
     <string name="calendars_link_revoke_message">Los calendarios suscritos a esta dirección dejarán de actualizarse.</string>
+    <string name="calendars_export_failed">No se pudo guardar la exportación</string>
+    <string name="calendars_import_progress">%1$s de %2$s</string>
+    <string name="calendars_import">Importar</string>
+    <string name="calendars_export">Exportar</string>
+    <string name="calendars_exported">Calendario exportado</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">%1$s evento importado</item>
+        <item quantity="other">%1$s eventos importados</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">%1$s evento ya está en el calendario</item>
+        <item quantity="other">%1$s eventos ya están en el calendario</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">No se pudo importar %1$s evento</item>
+        <item quantity="other">No se pudieron importar %1$s eventos</item>
+    </plurals>
+    <string name="calendars_event_colour_value">Valor del color</string>
+    <string name="calendars_discard_title">¿Descartar borrador?</string>
+    <string name="calendars_discard_message">Se perderán los cambios.</string>
+    <string name="calendars_discard">Descartar</string>
+    <string name="calendars_event_deleted">Evento eliminado</string>
+    <string name="calendars_link_replace_title">¿Reemplazar la dirección del calendario?</string>
+    <string name="calendars_list_unmatched">Sin coincidencias</string>
+    <string name="calendars_list_search_events">Buscar eventos</string>
+    <string name="calendars_reload">Recargar</string>
+    <string name="calendars_event_created">Evento creado</string>
+    <string name="calendars_event_saved">Evento guardado</string>
+    <string name="calendars_scope_save">Guardar este evento</string>
+    <string name="calendars_scope_move">Mover este evento</string>
+    <string name="calendars_repeat_frequency">Frecuencia</string>
+    <string name="calendars_repeat_ends">Termina</string>
+    <string name="calendars_repeat_end_never">Nunca</string>
+    <string name="calendars_repeat_until">En una fecha</string>
+    <string name="calendars_repeat_after">Después de un número</string>
+    <string name="calendars_repeat_last">Último día</string>
+    <string name="calendars_rule_day">Todos los días</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">Todos los días</item>
+        <item quantity="many">Cada %1$s días</item>
+        <item quantity="other">Cada %1$s días</item>
+    </plurals>
+    <string name="calendars_rule_week">Todas las semanas</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">Todas las semanas</item>
+        <item quantity="many">Cada %1$s semanas</item>
+        <item quantity="other">Cada %1$s semanas</item>
+    </plurals>
+    <string name="calendars_rule_month">Todos los meses</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">Todos los meses</item>
+        <item quantity="many">Cada %1$s meses</item>
+        <item quantity="other">Cada %1$s meses</item>
+    </plurals>
+    <string name="calendars_rule_year">Todos los años</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">Todos los años</item>
+        <item quantity="many">Cada %1$s años</item>
+        <item quantity="other">Cada %1$s años</item>
+    </plurals>
+    <string name="calendars_rule_on">los días %1$s</string>
+    <string name="calendars_rule_first">el primer %1$s</string>
+    <string name="calendars_rule_second">el segundo %1$s</string>
+    <string name="calendars_rule_third">el tercer %1$s</string>
+    <string name="calendars_rule_fourth">el cuarto %1$s</string>
+    <string name="calendars_rule_fifth">el quinto %1$s</string>
+    <string name="calendars_rule_last">el último %1$s</string>
+    <string name="calendars_rule_end">el último día del mes</string>
+    <string name="calendars_rule_monthday">el día %1$s</string>
+    <plurals name="calendars_rule_monthdays">
+        <item quantity="one">el día %1$s</item>
+        <item quantity="many">los días %1$s</item>
+        <item quantity="other">los días %1$s</item>
+    </plurals>
+    <string name="calendars_rule_in">en %1$s</string>
+    <string name="calendars_rule_once">una vez</string>
+    <plurals name="calendars_rule_times">
+        <item quantity="one">una vez</item>
+        <item quantity="many">%1$s veces</item>
+        <item quantity="other">%1$s veces</item>
+    </plurals>
+    <string name="calendars_rule_until">hasta el %1$s</string>
+    <string name="calendars_rule_join">%1$s, %2$s</string>
 </resources>

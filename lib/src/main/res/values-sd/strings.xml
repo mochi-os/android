@@ -320,4 +320,6 @@
     <string name="access_remove">هٽايو</string>
     <string name="access_remove_title">رسائي هٽائجي؟</string>
     <string name="access_remove_message">\"%1$s\" لاءِ رسائي جو قاعدو هٽايو؟</string>
+    <string name="color_picker_custom">ڪسٽم</string>
+    <string name="color_picker_clear">صاف ڪريو</string>
 </resources>

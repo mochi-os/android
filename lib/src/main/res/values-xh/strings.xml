@@ -320,4 +320,6 @@
     <string name="access_remove">Susa</string>
     <string name="access_remove_title">Susa ufikelelo?</string>
     <string name="access_remove_message">Susa umthetho wofikelelo we-\"%1$s\"?</string>
+    <string name="color_picker_custom">Yezifiso</string>
+    <string name="color_picker_clear">Cima</string>
 </resources>

@@ -121,7 +121,6 @@
     <string name="projects_settings_unsubscribe_message">你確定要退訂此專案嗎?</string>
     <string name="projects_object_unwatch">取消關注</string>
     <string name="projects_object_tab_properties">屬性</string>
-    <string name="projects_object_tab_requests">請求</string>
     <string name="projects_object_tab_watchers">關注者</string>
     <string name="projects_watchers_empty">尚未有關注者</string>
     <string name="projects_watchers_unwatch">停止關注</string>
@@ -202,7 +201,6 @@
     <string name="projects_tree_empty">沒有物件</string>
     <string name="projects_board_no_columns">此檢視未設定欄位</string>
     <string name="projects_board_no_options">欄位未設定選項</string>
-    <string name="projects_board_unassigned">未指派</string>
     <string name="projects_board_column_options">欄位選項</string>
     <string name="projects_board_rename_column">重新命名欄位</string>
     <string name="projects_board_nested_count">+%1$s 個巢狀項目</string>

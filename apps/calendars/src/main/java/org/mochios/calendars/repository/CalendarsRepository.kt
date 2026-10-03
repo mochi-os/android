@@ -17,6 +17,9 @@ import org.mochios.android.api.ApiException
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapRaw
+import org.mochios.android.files.FileRepository
+import org.mochios.android.files.FileStore
 import org.mochios.android.sync.EventComponent
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.EventCreateRequest
@@ -35,11 +38,16 @@ import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.LinkResponse
 import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.model.GrantResponse
+import org.mochios.calendars.model.ImportResponse
 import org.mochios.calendars.model.PollResponse
 import org.mochios.calendars.model.RemoteCalendar
 import org.mochios.calendars.ui.calendar.Bounds
+import org.mochios.calendars.ui.calendar.Icalendar
 import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.truncated
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
+import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -73,7 +81,8 @@ class EventChangedException : Exception("event changed on the server")
 class CalendarsRepository @Inject constructor(
     private val api: CalendarsApi,
     private val menuApi: MenuApi,
-) {
+    fileStore: FileStore,
+) : FileRepository(fileStore) {
 
     private val _calendars = MutableStateFlow<List<Calendar>>(emptyList())
 
@@ -221,6 +230,26 @@ class CalendarsRepository @Inject constructor(
         api.pollCalendar(calendar).unwrap()
     }.also { announce() }
 
+    /**
+     * One round of an iCalendar import into [calendar]. The first round
+     * uploads [file], which the server stages; each round after it sends no
+     * file, only the [staged] id the first answered and the [offset] the last
+     * round reached.
+     */
+    suspend fun importRound(calendar: String, file: File?, staged: String?, offset: Int): ImportResponse = call {
+        api.importCalendar(
+            calendar = calendar.toRequestBody(TEXT),
+            offset = offset.toString().toRequestBody(TEXT),
+            staged = staged?.toRequestBody(TEXT),
+            file = file?.let { fileStore.filePart("file", it, Icalendar.TYPE) },
+        ).unwrap()
+    }
+
+    /** The whole of [calendar] as iCalendar text: any calendar the user has. */
+    suspend fun exportCalendar(calendar: String): String = call {
+        api.exportCalendar(calendar).unwrapRaw().string()
+    }
+
     /** Resolve a permission key to its human label. */
     suspend fun permissionName(permission: String): String = call {
         menuApi.permissionName(permission).unwrap().name
@@ -310,11 +339,15 @@ class CalendarsRepository @Inject constructor(
      * start joins the master's `EXDATE`, which is how an occurrence is taken
      * out of a series. [occurrence] is the occurrence's own start, epoch
      * seconds. A 412 means the server moved on, so the event is read again
-     * and the exclusion applied to that copy.
+     * and the exclusion applied to that copy. Given the event as the caller
+     * [stored] it, the exclusion is written over that copy alone, and a 412
+     * is the caller's to answer: the editor refuses rather than delete from
+     * an event that changed under it.
      */
-    suspend fun excludeOccurrence(event: String, occurrence: Long) {
+    suspend fun excludeOccurrence(event: String, occurrence: Long, stored: Event? = null): Event {
+        if (stored != null) return updateEvent(event, stored.etag, null, excluded(stored.components, occurrence))
         val current = getEvent(event)
-        try {
+        return try {
             updateEvent(event, current.etag, null, excluded(current.components, occurrence))
         } catch (_: EventChangedException) {
             val fresh = getEvent(event)
@@ -328,23 +361,39 @@ class CalendarsRepository @Inject constructor(
      * override of it is matched by. The series' first occurrence has nothing
      * before it, so removing from there deletes the event. A 412 means the
      * server moved on, so the event is read again and the cut applied to
-     * that copy.
+     * that copy; given the event as the caller [stored] it, the cut is
+     * written over that copy alone and a 412 is the caller's to answer.
      */
-    suspend fun truncateEvent(event: String, occurrence: Long) {
-        suspend fun cut(current: Event) {
+    suspend fun truncateEvent(event: String, occurrence: Long, stored: Event? = null): Event? {
+        suspend fun cut(current: Event): Event? {
             val components = truncated(current.components, occurrence)
             if (components == null) {
                 deleteEvent(event, current.etag)
-            } else {
-                updateEvent(event, current.etag, null, components)
+                return null
             }
+            return updateEvent(event, current.etag, null, components)
         }
-        try {
+        if (stored != null) return cut(stored)
+        return try {
             cut(getEvent(event))
         } catch (_: EventChangedException) {
             cut(getEvent(event))
         }
     }
+
+    /**
+     * How to put back what the editor last deleted, held until the calendar
+     * offers it with Undo: a whole event comes back as a new one, a deleted
+     * occurrence by writing its series back as it was.
+     */
+    @Volatile private var restore: (suspend () -> Unit)? = null
+
+    fun deleted(restore: suspend () -> Unit) {
+        this.restore = restore
+    }
+
+    /** The way back from the last delete, taken once. */
+    fun restoring(): (suspend () -> Unit)? = restore.also { restore = null }
 
     // ---- preferences, links and devices ----
 
@@ -386,5 +435,9 @@ class CalendarsRepository @Inject constructor(
         if (e.code == 412) throw EventChangedException() else throw e.toMochiError()
     } catch (e: Exception) {
         throw e.toMochiError()
+    }
+
+    private companion object {
+        val TEXT = "text/plain".toMediaType()
     }
 }

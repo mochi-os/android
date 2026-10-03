@@ -320,4 +320,6 @@
     <string name="access_remove">Alisin</string>
     <string name="access_remove_title">Alisin ang access?</string>
     <string name="access_remove_message">Alisin ang panuntunan sa access para sa \"%1$s\"?</string>
+    <string name="color_picker_custom">Pasadya</string>
+    <string name="color_picker_clear">Burahin</string>
 </resources>

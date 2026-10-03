@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Соҳиб</string>
     <string name="projects_object_watch">Назорат</string>
     <string name="projects_object_tab_properties">Хусусиятҳо</string>
-    <string name="projects_object_tab_comments">Шарҳҳо</string>
+    <string name="projects_object_tab_comments">Шарҳҳо (%1$s)</string>
     <string name="projects_object_tab_activity">Фаъолият</string>
-    <string name="projects_object_tab_requests">Дархостҳо</string>
+    <string name="projects_object_tab_requests">Дархостҳои муттаҳидсозӣ (%1$s)</string>
     <string name="projects_object_tab_attachments">Замимаҳо</string>
     <string name="projects_object_tab_links">Пайвандҳо</string>
     <string name="projects_watchers_watch">Назорат</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Муттаҳид</string>
     <string name="projects_diff_split">Тақсим</string>
     <string name="projects_diff_empty">Фарқият дастрас нест</string>
-    <string name="projects_board_unassigned">Таъин нашудааст</string>
+    <string name="projects_board_unset">[таъин нашудааст]</string>
     <string name="projects_board_new">Нав</string>
     <string name="projects_board_rename">Тағйири ном</string>
     <string name="projects_board_rename_column">Тағйири номи сутун</string>

@@ -321,4 +321,6 @@
     <string name="access_remove">Noņemt</string>
     <string name="access_remove_title">Noņemt piekļuvi?</string>
     <string name="access_remove_message">Vai noņemt piekļuves noteikumu “%1$s”?</string>
+    <string name="color_picker_custom">Pielāgots</string>
+    <string name="color_picker_clear">Notīrīt</string>
 </resources>

@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Susa</string>
     <string name="crm_attachments">Iziqhotyoshelwa</string>
     <string name="crm_attachment_add">Yongeza isiqhotyoshelwa</string>
-    <string name="crm_board_unassigned">Akwabelwanga</string>
+    <string name="crm_board_unset">[ayisetwanga]</string>
     <string name="crm_board_new">Entsha</string>
     <string name="crm_board_rename">Guqula igama</string>
     <string name="crm_board_rename_column">Guqula igama lekholamu</string>

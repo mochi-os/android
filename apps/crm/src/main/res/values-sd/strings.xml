@@ -62,7 +62,7 @@
     <string name="crm_property_remove">هٽايو</string>
     <string name="crm_attachments">ڳنڍيل فائلون</string>
     <string name="crm_attachment_add">ڳنڍيل فائل شامل ڪريو</string>
-    <string name="crm_board_unassigned">غير تفويض ٿيل</string>
+    <string name="crm_board_unset">[نه مقرر]</string>
     <string name="crm_board_new">نئون</string>
     <string name="crm_board_rename">نالو تبديل ڪريو</string>
     <string name="crm_board_rename_column">ڪالم جو نالو تبديل ڪريو</string>

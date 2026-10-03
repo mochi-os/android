@@ -320,4 +320,6 @@
     <string name="access_remove">Алуу</string>
     <string name="access_remove_title">Кирүүнү аласызбы?</string>
     <string name="access_remove_message">\"%1$s\" үчүн жетүү эрежеси өчүрүлсүнбү?</string>
+    <string name="color_picker_custom">Ыңгайлаштырылган</string>
+    <string name="color_picker_clear">Тазалоо</string>
 </resources>

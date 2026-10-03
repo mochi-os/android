@@ -320,4 +320,6 @@
     <string name="access_remove">لرې کول</string>
     <string name="access_remove_title">لاسرسی لرې کړو؟</string>
     <string name="access_remove_message">د \"%1$s\" لپاره د لاسرسي قاعده لرې شي؟</string>
+    <string name="color_picker_custom">دودیز</string>
+    <string name="color_picker_clear">پاک کړئ</string>
 </resources>

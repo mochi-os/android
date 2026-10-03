@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">მფლობელი</string>
     <string name="projects_object_watch">თვალყურის დევნება</string>
     <string name="projects_object_tab_properties">თვისებები</string>
-    <string name="projects_object_tab_comments">კომენტარები</string>
+    <string name="projects_object_tab_comments">კომენტარები (%1$s)</string>
     <string name="projects_object_tab_activity">აქტივობა</string>
-    <string name="projects_object_tab_requests">მოთხოვნები</string>
+    <string name="projects_object_tab_requests">შერწყმის მოთხოვნები (%1$s)</string>
     <string name="projects_object_tab_attachments">დანართები</string>
     <string name="projects_object_tab_links">ბმულები</string>
     <string name="projects_watchers_watch">თვალყურის დევნება</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">გაერთიანებული</string>
     <string name="projects_diff_split">გაყოფა</string>
     <string name="projects_diff_empty">სხვაობა მიუწვდომელია</string>
-    <string name="projects_board_unassigned">მიუნიჭებელი</string>
+    <string name="projects_board_unset">[არ არის მითითებული]</string>
     <string name="projects_board_new">ახალი</string>
     <string name="projects_board_rename">სახელის შეცვლა</string>
     <string name="projects_board_rename_column">სვეტის სახელის შეცვლა</string>

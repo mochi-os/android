@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Ιδιοκτήτης</string>
     <string name="projects_object_watch">Παρακολούθηση</string>
     <string name="projects_object_tab_properties">Ιδιότητες</string>
-    <string name="projects_object_tab_comments">Σχόλια</string>
+    <string name="projects_object_tab_comments">Σχόλια (%1$s)</string>
     <string name="projects_object_tab_activity">Δραστηριότητα</string>
-    <string name="projects_object_tab_requests">Αιτήματα</string>
+    <string name="projects_object_tab_requests">Αιτήματα συγχώνευσης (%1$s)</string>
     <string name="projects_object_tab_attachments">Συνημμένα</string>
     <string name="projects_object_tab_links">Σύνδεσμοι</string>
     <string name="projects_watchers_watch">Παρακολούθηση</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Ενοποιημένο</string>
     <string name="projects_diff_split">Διαχωρισμός</string>
     <string name="projects_diff_empty">Δεν υπάρχουν διαθέσιμες διαφορές</string>
-    <string name="projects_board_unassigned">Χωρίς ανάθεση</string>
+    <string name="projects_board_unset">[χωρίς ορισμό]</string>
     <string name="projects_board_new">Νέο</string>
     <string name="projects_board_rename">Μετονομασία</string>
     <string name="projects_board_rename_column">Μετονομασία στήλης</string>

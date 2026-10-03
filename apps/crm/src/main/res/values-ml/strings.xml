@@ -62,7 +62,7 @@
     <string name="crm_property_remove">നീക്കം ചെയ്യുക</string>
     <string name="crm_attachments">അറ്റാച്ച്മെന്റുകൾ</string>
     <string name="crm_attachment_add">അറ്റാച്ച്മെന്റ് ചേർക്കുക</string>
-    <string name="crm_board_unassigned">നിയോഗിച്ചിട്ടില്ല</string>
+    <string name="crm_board_unset">[സജ്ജമാക്കിയിട്ടില്ല]</string>
     <string name="crm_board_new">പുതിയത്</string>
     <string name="crm_board_rename">പുനർനാമകരണം ചെയ്യുക</string>
     <string name="crm_board_rename_column">കോളം പുനർനാമകരണം ചെയ്യുക</string>

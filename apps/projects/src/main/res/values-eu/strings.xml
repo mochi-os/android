@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Jabea</string>
     <string name="projects_object_watch">Ikusi</string>
     <string name="projects_object_tab_properties">Propietateak</string>
-    <string name="projects_object_tab_comments">Iruzkinak</string>
+    <string name="projects_object_tab_comments">Iruzkinak (%1$s)</string>
     <string name="projects_object_tab_activity">Jarduera</string>
-    <string name="projects_object_tab_requests">Eskaerak</string>
+    <string name="projects_object_tab_requests">Bateratze-eskaerak (%1$s)</string>
     <string name="projects_object_tab_attachments">Eranskinak</string>
     <string name="projects_object_tab_links">Estekak</string>
     <string name="projects_watchers_watch">Ikusi</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Bateratua</string>
     <string name="projects_diff_split">Banatu</string>
     <string name="projects_diff_empty">Ez dago diff erabilgarririk</string>
-    <string name="projects_board_unassigned">Esleitu gabe</string>
+    <string name="projects_board_unset">[ezarri gabe]</string>
     <string name="projects_board_new">Berria</string>
     <string name="projects_board_rename">Aldatu izena</string>
     <string name="projects_board_rename_column">Aldatu zutabearen izena</string>

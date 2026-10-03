@@ -6,6 +6,8 @@
 package org.mochios.calendars.ui.calendar
 
 import androidx.activity.compose.BackHandler
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
@@ -39,6 +41,7 @@ import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.CalendarToday
 import androidx.compose.material.icons.outlined.CalendarViewMonth
 import androidx.compose.material.icons.outlined.CalendarViewWeek
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Today
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -63,6 +66,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
@@ -90,6 +94,7 @@ import kotlin.math.abs
 import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LabeledSelectField
@@ -100,13 +105,16 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
+import org.mochios.calendars.navigation.CalendarsApp
 import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.components.CalendarDrawer
 import org.mochios.calendars.ui.dialogs.ColourCalendarDialog
 import org.mochios.calendars.ui.dialogs.DeleteCalendarDialog
+import org.mochios.calendars.ui.dialogs.ImportDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
 import org.mochios.calendars.ui.dialogs.PreferencesDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
+import org.mochios.calendars.ui.dialogs.ReplaceLinkDialog
 import org.mochios.calendars.ui.dialogs.RevokeLinkDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.editor.Scope
@@ -120,7 +128,11 @@ import org.mochios.calendars.ui.router.CalendarsSection
  * editor on a copy of a stored event's occurrence, with how far the copy
  * reaches; [onCopyOccurrence] on a copy of one the editor cannot load, a
  * subscription's or a birthday. [copied] says a copy was just saved, which
- * the screen reports once and [onCopiedShown] clears.
+ * the screen reports once and [onCopiedShown] clears; [deleted] that the
+ * editor deleted something, reported once with Undo and cleared by
+ * [onDeletedShown]; [saved] that the editor saved an event,
+ * [CalendarsApp.CREATED] or [CalendarsApp.CHANGED], reported once and
+ * cleared by [onSavedShown].
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -134,6 +146,10 @@ fun CalendarScreen(
     onCopyOccurrence: (Instance) -> Unit,
     copied: Boolean = false,
     onCopiedShown: () -> Unit = {},
+    deleted: Boolean = false,
+    onDeletedShown: () -> Unit = {},
+    saved: String = "",
+    onSavedShown: () -> Unit = {},
     onLogout: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
@@ -163,6 +179,17 @@ fun CalendarScreen(
     var revoking by remember { mutableStateOf<Calendar?>(null) }
     var preferences by remember { mutableStateOf(false) }
     var about by remember { mutableStateOf(false) }
+    // The calendar a file is being picked for, kept by id so it outlasts the
+    // activity being recreated behind the picker.
+    var importing by rememberSaveable { mutableStateOf<String?>(null) }
+
+    val picker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        val calendar = uiState.calendars.firstOrNull { it.id == importing }
+        importing = null
+        if (uri != null && calendar != null) viewModel.import(calendar, uri)
+    }
+    // The picker only says where the export goes; the ViewModel writes it.
+    val saver = rememberFileSaveLauncher(Icalendar.TYPE) { uri -> viewModel.save(uri) }
 
     DisposableRefresh(lifecycle) {
         viewModel.load(reset = false)
@@ -190,6 +217,11 @@ fun CalendarScreen(
                         if (chosen == SnackbarResult.ActionPerformed) viewModel.undo()
                     }
                     CalendarEvent.Changed -> snackbar.showSnackbar(resources.getString(R.string.calendars_event_changed))
+                    CalendarEvent.Unreadable -> snackbar.showSnackbar(resources.getString(MochiR.string.common_file_open_failed))
+                    is CalendarEvent.Save -> saver.launch(event.name)
+                    is CalendarEvent.Exported -> snackbar.showSnackbar(
+                        resources.getString(if (event.saved) R.string.calendars_exported else R.string.calendars_export_failed),
+                    )
                 }
             }
         }
@@ -201,6 +233,28 @@ fun CalendarScreen(
         if (copied) {
             onCopiedShown()
             scope.launch { snackbar.showSnackbar(resources.getString(R.string.calendars_event_copied)) }
+        }
+    }
+
+    LaunchedEffect(saved) {
+        if (saved.isNotEmpty()) {
+            onSavedShown()
+            val message = if (saved == CalendarsApp.CREATED) R.string.calendars_event_created else R.string.calendars_event_saved
+            scope.launch { snackbar.showSnackbar(resources.getString(message)) }
+        }
+    }
+
+    LaunchedEffect(deleted) {
+        if (deleted) {
+            onDeletedShown()
+            scope.launch {
+                val chosen = snackbar.showSnackbar(
+                    message = resources.getString(R.string.calendars_event_deleted),
+                    actionLabel = resources.getString(R.string.calendars_undo),
+                    duration = SnackbarDuration.Long,
+                )
+                if (chosen == SnackbarResult.ActionPerformed) viewModel.restore()
+            }
         }
     }
 
@@ -225,6 +279,11 @@ fun CalendarScreen(
                 CalendarAction.COLOUR -> colouring = calendar
                 CalendarAction.LINK -> linking = calendar
                 CalendarAction.POLL -> viewModel.poll(calendar.id)
+                CalendarAction.IMPORT -> {
+                    importing = calendar.id
+                    picker.launch(Icalendar.ACCEPTED)
+                }
+                CalendarAction.EXPORT -> viewModel.export(calendar)
                 CalendarAction.DELETE -> deleting = calendar
             }
         },
@@ -358,7 +417,7 @@ fun CalendarScreen(
 
     moving?.let { move ->
         ScopeDialog(
-            deleting = false,
+            title = stringResource(R.string.calendars_scope_move),
             onDismiss = { moving = null },
             onOne = {
                 moving = null
@@ -380,8 +439,7 @@ fun CalendarScreen(
     // to load, is a single event and opens at once.
     copying?.let { instance ->
         ScopeDialog(
-            deleting = false,
-            copying = true,
+            title = stringResource(R.string.calendars_scope_copy),
             following = false,
             onDismiss = { copying = null },
             onOne = {
@@ -459,16 +517,14 @@ fun CalendarScreen(
     linking?.let { calendar ->
         val link by viewModel.link.collectAsState()
         LaunchedEffect(calendar.id) { viewModel.openLink(calendar.id) }
-        LinkDialog(
+        AddressDialogs(
             calendar = calendar,
-            url = link.url,
-            exists = link.exists,
-            busy = link.busy,
-            onDismiss = {
+            link = link,
+            onReplace = { viewModel.openLink(calendar.id, regenerate = true) },
+            onClose = {
                 linking = null
                 viewModel.closeLink()
             },
-            onReplace = { viewModel.openLink(calendar.id, regenerate = true) },
             onRevoke = {
                 linking = null
                 viewModel.closeLink()
@@ -488,6 +544,9 @@ fun CalendarScreen(
     if (about) {
         AboutDialog(onDismiss = { about = false })
     }
+
+    val tally by viewModel.importing.collectAsState()
+    tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport) }
 
     if (preferences) {
         PreferencesDialog(
@@ -829,7 +888,7 @@ private fun SearchBar(value: String, onChange: (String) -> Unit, onClose: () -> 
                     Box(contentAlignment = Alignment.CenterStart) {
                         if (value.isEmpty()) {
                             Text(
-                                text = stringResource(R.string.calendars_list_search),
+                                text = stringResource(R.string.calendars_list_search_events),
                                 style = MaterialTheme.typography.titleMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -888,5 +947,40 @@ private fun DisposableRefresh(owner: androidx.lifecycle.LifecycleOwner, onResume
         }
         owner.lifecycle.addObserver(observer)
         onDispose { owner.lifecycle.removeObserver(observer) }
+    }
+}
+
+/**
+ * A calendar's address: the address dialog, and in its place, once Replace
+ * is tapped, the question whether to break the address everyone subscribed
+ * has. The question stays while the new address is minted and after a
+ * failure, so it can be tried again; the new address shows once it is out.
+ */
+@Composable
+internal fun AddressDialogs(
+    calendar: Calendar,
+    link: LinkState,
+    onReplace: () -> Unit,
+    onClose: () -> Unit,
+    onRevoke: () -> Unit,
+) {
+    var replacing by remember(calendar.id) { mutableStateOf(false) }
+    LaunchedEffect(link.url) { if (link.url != null) replacing = false }
+    if (replacing) {
+        ReplaceLinkDialog(
+            busy = link.busy,
+            onDismiss = { replacing = false },
+            onConfirm = onReplace,
+        )
+    } else {
+        LinkDialog(
+            calendar = calendar,
+            url = link.url,
+            exists = link.exists,
+            busy = link.busy,
+            onDismiss = onClose,
+            onReplace = { replacing = true },
+            onRevoke = onRevoke,
+        )
     }
 }

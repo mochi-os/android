@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">ఓనర్</string>
     <string name="projects_object_watch">చూడండి</string>
     <string name="projects_object_tab_properties">లక్షణాలు</string>
-    <string name="projects_object_tab_comments">వ్యాఖ్యలు</string>
+    <string name="projects_object_tab_comments">వ్యాఖ్యలు (%1$s)</string>
     <string name="projects_object_tab_activity">కార్యకలాపం</string>
-    <string name="projects_object_tab_requests">రిక్వెస్ట్‌లు</string>
+    <string name="projects_object_tab_requests">విలీన అభ్యర్థనలు (%1$s)</string>
     <string name="projects_object_tab_attachments">అటాచ్‌మెంట్‌లు</string>
     <string name="projects_object_tab_links">లింక్‌లు</string>
     <string name="projects_watchers_watch">చూడండి</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ఏకీకృత</string>
     <string name="projects_diff_split">విభజించండి</string>
     <string name="projects_diff_empty">డిఫ్ అందుబాటులో లేదు</string>
-    <string name="projects_board_unassigned">కేటాయించబడలేదు</string>
+    <string name="projects_board_unset">[సెట్ చేయలేదు]</string>
     <string name="projects_board_new">కొత్తది</string>
     <string name="projects_board_rename">పేరు మార్చండి</string>
     <string name="projects_board_rename_column">కాలమ్ పేరును మార్చండి</string>

@@ -209,7 +209,7 @@
     <!-- Board -->
     <string name="crm_board_no_columns">No columns configured for this view</string>
     <string name="crm_board_no_options">No options configured for column field</string>
-    <string name="crm_board_unassigned">Unassigned</string>
+    <string name="crm_board_unset">[not set]</string>
     <string name="crm_board_new">New</string>
     <string name="crm_board_add_column">Add column</string>
     <string name="crm_board_rename">Rename</string>

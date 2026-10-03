@@ -320,4 +320,6 @@
     <string name="access_remove">Αφαίρεση</string>
     <string name="access_remove_title">Αφαίρεση πρόσβασης;</string>
     <string name="access_remove_message">Κατάργηση κανόνα πρόσβασης για «%1$s»;</string>
+    <string name="color_picker_custom">Προσαρμοσμένο</string>
+    <string name="color_picker_clear">Εκκαθάριση</string>
 </resources>

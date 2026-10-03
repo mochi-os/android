@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.DialogProperties
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.DataChip
@@ -42,6 +44,7 @@ import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.model.defaultCalendar
+import org.mochios.calendars.ui.calendar.Tally
 import org.mochios.calendars.ui.editor.REMINDER_LEADS
 import org.mochios.calendars.ui.editor.reminderLeads
 import org.mochios.android.R as MochiR
@@ -100,6 +103,72 @@ fun ColourCalendarDialog(
 }
 
 /**
+ * An import into a calendar: how far through the file it is while the rounds
+ * run, then what came of it. Until it finishes it has no button and ignores
+ * back and a tap outside, since closing it would not stop the import.
+ */
+@Composable
+fun ImportDialog(
+    tally: Tally,
+    onClose: () -> Unit,
+) {
+    MochiAlertDialog(
+        onDismissRequest = { if (tally.finished) onClose() },
+        title = stringResource(R.string.calendars_import),
+        subtitle = tally.name,
+        confirmText = if (tally.finished) stringResource(MochiR.string.common_close) else null,
+        onConfirm = onClose,
+        properties = DialogProperties(dismissOnBackPress = tally.finished, dismissOnClickOutside = tally.finished),
+        content = {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                when {
+                    tally.finished -> importCounts(tally).forEach { Text(it) }
+                    // The first round's answer brings the file's size; until
+                    // then there is nothing to measure against.
+                    tally.total == 0 -> LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                    else -> {
+                        LinearProgressIndicator(
+                            progress = { tally.done.toFloat() / tally.total },
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                        Text(importProgress(tally))
+                    }
+                }
+            }
+        },
+    )
+}
+
+/** How far an import has read: so many of the file's objects. */
+@Composable
+fun importProgress(tally: Tally): String {
+    val format = LocalFormat.current
+    return stringResource(R.string.calendars_import_progress, format.formatNumber(tally.done), format.formatNumber(tally.total))
+}
+
+/**
+ * What an import came to: the objects written, and those already in the
+ * calendar and those that could not be read, when there were any.
+ */
+@Composable
+fun importCounts(tally: Tally): List<String> {
+    val format = LocalFormat.current
+    return listOfNotNull(
+        pluralStringResource(R.plurals.calendars_import_imported, tally.imported, format.formatNumber(tally.imported)),
+        if (tally.skipped > 0) {
+            pluralStringResource(R.plurals.calendars_import_skipped, tally.skipped, format.formatNumber(tally.skipped))
+        } else {
+            null
+        },
+        if (tally.failed > 0) {
+            pluralStringResource(R.plurals.calendars_import_failed, tally.failed, format.formatNumber(tally.failed))
+        } else {
+            null
+        },
+    )
+}
+
+/**
  * The calendar's ICS link, which anyone can subscribe to. The address is
  * shown once, when it is first minted; afterwards the dialog offers to
  * replace it — which stops the old one working — or to revoke it outright.
@@ -149,6 +218,29 @@ fun LinkDialog(
                 }
             }
         },
+    )
+}
+
+/**
+ * Confirms replacing a calendar's ICS link, which stops every subscriber's
+ * copy updating. It stays open while the new one is minted, and after a
+ * failure, so the replace can be tried again.
+ */
+@Composable
+fun ReplaceLinkDialog(
+    busy: Boolean,
+    onDismiss: () -> Unit,
+    onConfirm: () -> Unit,
+) {
+    MochiAlertDialog(
+        onDismissRequest = onDismiss,
+        title = stringResource(R.string.calendars_link_replace_title),
+        text = stringResource(R.string.calendars_link_revoke_message),
+        confirmText = stringResource(R.string.calendars_link_replace),
+        onConfirm = onConfirm,
+        confirmLoading = busy,
+        destructive = true,
+        dismissText = stringResource(MochiR.string.common_cancel),
     )
 }
 
@@ -354,30 +446,28 @@ fun reminderLabel(minutes: Int): String {
 
 /**
  * "This event", "This and following" or "All events" for a recurring
- * occurrence. An override changes or removes the one occurrence; the series
- * cut at it changes or removes it and every one after it; the whole series
- * changes or removes every one of them. A copy, [copying], is of the one
- * occurrence or of the whole series, and asks without the middle choice,
- * which [following] leaves out.
+ * occurrence, under a [title] that says what is done: "Save this event",
+ * "Move this event", "Delete this event", "Copy this event", as the web
+ * asks. An override changes or removes the one occurrence; the series cut at
+ * it changes or removes it and every one after it; the whole series changes
+ * or removes every one of them. A copy is of the one occurrence or of the
+ * whole series, and asks without the middle choice, which [following] leaves
+ * out. A delete's choices are [destructive].
  */
 @Composable
 fun ScopeDialog(
-    deleting: Boolean,
-    copying: Boolean = false,
+    title: String,
+    destructive: Boolean = false,
     following: Boolean = true,
     onDismiss: () -> Unit,
     onOne: () -> Unit,
     onFollowing: () -> Unit = {},
     onAll: () -> Unit,
 ) {
-    val tone = if (deleting) MochiButtonTone.Destructive else MochiButtonTone.Primary
+    val tone = if (destructive) MochiButtonTone.Destructive else MochiButtonTone.Primary
     MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = when {
-            deleting -> stringResource(R.string.calendars_scope_delete)
-            copying -> stringResource(R.string.calendars_scope_copy)
-            else -> stringResource(R.string.calendars_scope_edit)
-        },
+        title = title,
         dismissText = stringResource(MochiR.string.common_cancel),
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -427,15 +517,13 @@ fun DeleteCalendarDialog(
 /** Confirms deleting an event. */
 @Composable
 fun DeleteEventDialog(
-    summary: String,
     deleting: Boolean,
     onDismiss: () -> Unit,
     onConfirm: () -> Unit,
 ) {
     MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = stringResource(R.string.calendars_event_delete_title, summary),
-        text = stringResource(R.string.calendars_event_delete_message),
+        title = stringResource(R.string.calendars_scope_delete),
         confirmText = stringResource(R.string.calendars_delete),
         onConfirm = onConfirm,
         confirmLoading = deleting,

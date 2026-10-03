@@ -322,4 +322,6 @@
     <string name="access_remove">Thoir air falbh</string>
     <string name="access_remove_title">Thoir an cothrom air falbh?</string>
     <string name="access_remove_message">A bheil thu airson riaghailt inntrigidh \"%1$s\" a thoirt air falbh?</string>
+    <string name="color_picker_custom">Gnàthaichte</string>
+    <string name="color_picker_clear">Falamhaich</string>
 </resources>

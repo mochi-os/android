@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Hiq</string>
     <string name="crm_attachments">Bashkëngjitjet</string>
     <string name="crm_attachment_add">Shto bashkëngjitje</string>
-    <string name="crm_board_unassigned">I pacaktuar</string>
+    <string name="crm_board_unset">[i pavendosur]</string>
     <string name="crm_board_new">I ri</string>
     <string name="crm_board_rename">Riemërto</string>
     <string name="crm_board_rename_column">Riemërto kolonën</string>

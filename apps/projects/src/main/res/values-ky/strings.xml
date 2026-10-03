@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Ээси</string>
     <string name="projects_object_watch">Көрүү</string>
     <string name="projects_object_tab_properties">Касиеттер</string>
-    <string name="projects_object_tab_comments">Комментарийлер</string>
+    <string name="projects_object_tab_comments">Комментарийлер (%1$s)</string>
     <string name="projects_object_tab_activity">Активдүүлүк</string>
-    <string name="projects_object_tab_requests">Сурамдар</string>
+    <string name="projects_object_tab_requests">Бириктирүү сурамдары (%1$s)</string>
     <string name="projects_object_tab_attachments">Тиркемелер</string>
     <string name="projects_object_tab_links">Шилтемелер</string>
     <string name="projects_watchers_watch">Көрүү</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Бирдиктештирилген</string>
     <string name="projects_diff_split">Бөлүү</string>
     <string name="projects_diff_empty">Айырмачылык жеткиликсиз</string>
-    <string name="projects_board_unassigned">Дайындалган эмес</string>
+    <string name="projects_board_unset">[орнотулган эмес]</string>
     <string name="projects_board_new">Жаңы</string>
     <string name="projects_board_rename">Атын өзгөртүү</string>
     <string name="projects_board_rename_column">Тилкенин атын өзгөртүү</string>

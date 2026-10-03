@@ -5,16 +5,26 @@
 
 package org.mochios.android.ui.components
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.semantics.contentDescription
@@ -68,12 +78,14 @@ fun <F> formRows(
 
 /**
  * Whether a field of this type holds a value brief enough to share a row: a
- * choice, a person, a date, a number or a tick. Text does not, however few
- * rows it asks for.
+ * choice, a date, a number or a tick. Text does not, however few rows it asks
+ * for, and nor does a person: a name beside an avatar and a clear button is
+ * cut short in half the form, and the picker's search opens as wide as its
+ * field.
  */
 fun shortField(type: String): Boolean = type in SHORT_TYPES
 
-private val SHORT_TYPES = setOf("enumerated", "user", "date", "number", "checkbox")
+private val SHORT_TYPES = setOf("enumerated", "date", "number", "checkbox")
 
 /**
  * Whether a form [width] wide has room for two fields a row at this
@@ -84,6 +96,42 @@ fun formPairs(width: Dp, fontScale: Float): Boolean = width >= PAIR_WIDTH * 2 * 
 
 /** The least width a field sharing a row needs, at the default text size. */
 private val PAIR_WIDTH = 150.dp
+
+/**
+ * Whether a choice field [cell] wide shows a name on one line: [text] is the
+ * name's width on a single line, and [swatch] whether its colour dot sits
+ * before it. A choice field sharing its row has about half the form's width,
+ * and a name too long for that wraps, so such a field takes a row to itself.
+ */
+fun choiceFits(text: Dp, swatch: Boolean, cell: Dp): Boolean =
+    text + CHOICE_FRAME + (if (swatch) CHOICE_SWATCH + CHOICE_SWATCH_GAP + CHOICE_PREFIX else 0.dp) <= cell
+
+/** What a choice field spends beside its text: the padding before it and the arrow's slot after. */
+private val CHOICE_FRAME = 68.dp
+
+/** The colour dot before a choice's name, the space after it, and the padding the field adds to a prefix. */
+private val CHOICE_SWATCH = 16.dp
+private val CHOICE_SWATCH_GAP = 8.dp
+private val CHOICE_PREFIX = 2.dp
+
+/**
+ * A choice's colour dot, for a text field's prefix. It sits in the text's own
+ * line, not in the leading icon's slot: that slot is 48dp wide whatever it
+ * holds, which in a field sharing its row is the difference between a name
+ * fitting and wrapping.
+ */
+@Composable
+fun ChoicePrefix(colour: Color) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Box(
+            modifier = Modifier
+                .size(CHOICE_SWATCH)
+                .clip(CircleShape)
+                .background(colour)
+        )
+        Spacer(modifier = Modifier.width(CHOICE_SWATCH_GAP))
+    }
+}
 
 /**
  * An object's title as the heading of its form: all of it, wrapping over as

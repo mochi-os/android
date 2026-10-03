@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">ပိုင်ရှင်</string>
     <string name="projects_object_watch">ကြည့်ရှုမည်</string>
     <string name="projects_object_tab_properties">ဂုဏ်သတ္တိများ</string>
-    <string name="projects_object_tab_comments">မှတ်ချက်များ</string>
+    <string name="projects_object_tab_comments">မှတ်ချက်များ (%1$s)</string>
     <string name="projects_object_tab_activity">လှုပ်ရှားမှု</string>
-    <string name="projects_object_tab_requests">တောင်းခံချက်များ</string>
+    <string name="projects_object_tab_requests">ပေါင်းစည်း တောင်းဆိုမှုများ (%1$s)</string>
     <string name="projects_object_tab_attachments">ပူးတွဲဖိုင်များ</string>
     <string name="projects_object_tab_links">လင့်များ</string>
     <string name="projects_watchers_watch">ကြည့်ရှုမည်</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ပေါင်းစပ်ထား</string>
     <string name="projects_diff_split">ခွဲခြားမည်</string>
     <string name="projects_diff_empty">ကွဲပြားချက် မရရှိနိုင်ပါ</string>
-    <string name="projects_board_unassigned">မသတ်မှတ်ထား</string>
+    <string name="projects_board_unset">[မသတ်မှတ်ရသေး]</string>
     <string name="projects_board_new">အသစ်</string>
     <string name="projects_board_rename">အမည်ပြောင်း</string>
     <string name="projects_board_rename_column">ကော်လံ အမည်ပြောင်း</string>

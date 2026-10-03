@@ -92,7 +92,6 @@
     <string name="projects_option_icon">Ícono</string>
     <string name="projects_views_move_up">Mover hacia arriba</string>
     <string name="projects_views_move_down">Mover hacia abajo</string>
-    <string name="projects_object_tab_comments">Comentarios</string>
     <string name="projects_parent_label">Categoría superior</string>
     <string name="projects_field_yes">Sí</string>
     <string name="projects_field_no">No</string>
@@ -102,7 +101,6 @@
     <string name="projects_comment_attach">Adjuntar archivos</string>
     <string name="projects_comment_remove_attachment">Quitar adjunto</string>
     <string name="projects_request_method">Método</string>
-    <string name="projects_board_unassigned">Sin asignar</string>
     <string name="projects_move_position">Posición</string>
     <string name="projects_move_position_top">Mejores</string>
     <string name="projects_class_move_up">Mover hacia arriba</string>
@@ -152,7 +150,6 @@
     <string name="projects_settings_delete_confirm_message">¿Está seguro de que desea eliminar este proyecto? Todos los objetos, comentarios y configuraciones se eliminarán de forma permanente.</string>
     <string name="projects_object_unwatch">Dejar de seguir</string>
     <string name="projects_object_tab_properties">Propiedades</string>
-    <string name="projects_object_tab_requests">Solicitudes</string>
     <string name="projects_object_tab_watchers">Seguidores</string>
     <string name="projects_watchers_empty">Aún no hay seguidores</string>
     <string name="projects_watchers_unwatch">Dejar de seguir</string>

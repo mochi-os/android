@@ -296,4 +296,6 @@
     <string name="access_remove">Verwijderen</string>
     <string name="access_remove_title">Toegang verwijderen?</string>
     <string name="access_remove_message">Toegangsregel voor \"%1$s\" verwijderen?</string>
+    <string name="color_picker_custom">Aangepast</string>
+    <string name="color_picker_clear">Wissen</string>
 </resources>

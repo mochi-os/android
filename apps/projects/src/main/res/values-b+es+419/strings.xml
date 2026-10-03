@@ -44,9 +44,9 @@
     <string name="projects_access_level_owner">Propietario</string>
     <string name="projects_object_watch">Seguir</string>
     <string name="projects_object_tab_properties">Propiedades</string>
-    <string name="projects_object_tab_comments">Comentarios</string>
+    <string name="projects_object_tab_comments">Comentarios (%1$s)</string>
     <string name="projects_object_tab_activity">Actividad</string>
-    <string name="projects_object_tab_requests">Solicitudes</string>
+    <string name="projects_object_tab_requests">Solicitudes de combinación (%1$s)</string>
     <string name="projects_object_tab_attachments">Adjuntos</string>
     <string name="projects_object_tab_links">Enlaces</string>
     <string name="projects_watchers_watch">Seguir</string>
@@ -90,7 +90,7 @@
     <string name="projects_diff_unified">Unificado</string>
     <string name="projects_diff_split">Dividido</string>
     <string name="projects_diff_empty">No hay diff disponible</string>
-    <string name="projects_board_unassigned">Sin asignar</string>
+    <string name="projects_board_unset">[sin definir]</string>
     <string name="projects_board_new">Nuevo</string>
     <string name="projects_board_rename">Renombrar</string>
     <string name="projects_board_rename_column">Renombrar columna</string>

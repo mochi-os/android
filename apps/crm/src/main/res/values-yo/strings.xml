@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Yọ kúrò</string>
     <string name="crm_attachments">Àwọn ìsomọ́</string>
     <string name="crm_attachment_add">Fi ìsomọ́ kún</string>
-    <string name="crm_board_unassigned">Aláìyàn</string>
+    <string name="crm_board_unset">[kò sí]</string>
     <string name="crm_board_new">Tuntun</string>
     <string name="crm_board_rename">Tún sọ orúkọ</string>
     <string name="crm_board_rename_column">Tún ọ̀wọ́n sọ orúkọ</string>

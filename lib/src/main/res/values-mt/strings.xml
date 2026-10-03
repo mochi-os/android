@@ -324,4 +324,6 @@
     <string name="access_remove">Neħħi</string>
     <string name="access_remove_title">Tneħħi l-aċċess?</string>
     <string name="access_remove_message">Tneħħi r-regola ta\' aċċess għal \"%1$s\"?</string>
+    <string name="color_picker_custom">Personalizzat</string>
+    <string name="color_picker_clear">Naddaf</string>
 </resources>

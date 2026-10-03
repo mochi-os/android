@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">मालिक</string>
     <string name="projects_object_watch">देखीं</string>
     <string name="projects_object_tab_properties">गुण</string>
-    <string name="projects_object_tab_comments">टिप्पणी</string>
+    <string name="projects_object_tab_comments">टिप्पणी (%1$s)</string>
     <string name="projects_object_tab_activity">गतिविधि</string>
-    <string name="projects_object_tab_requests">अनुरोध</string>
+    <string name="projects_object_tab_requests">मर्ज अनुरोध (%1$s)</string>
     <string name="projects_object_tab_attachments">संलग्नक</string>
     <string name="projects_object_tab_links">लिंक</string>
     <string name="projects_watchers_watch">देखीं</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">एकीकृत</string>
     <string name="projects_diff_split">विभाजित करीं</string>
     <string name="projects_diff_empty">कौनो अंतर उपलब्ध नइखे</string>
-    <string name="projects_board_unassigned">अनसौंपल</string>
+    <string name="projects_board_unset">[सेट नइखे]</string>
     <string name="projects_board_new">नया</string>
     <string name="projects_board_rename">नाम बदलीं</string>
     <string name="projects_board_rename_column">कॉलम के नाम बदलीं</string>

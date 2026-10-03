@@ -320,4 +320,6 @@
     <string name="access_remove">移除</string>
     <string name="access_remove_title">移除存取權?</string>
     <string name="access_remove_message">移除「%1$s」的存取規則？</string>
+    <string name="color_picker_custom">自訂</string>
+    <string name="color_picker_clear">清除</string>
 </resources>

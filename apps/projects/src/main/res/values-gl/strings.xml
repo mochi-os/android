@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Propietario</string>
     <string name="projects_object_watch">Vixiar</string>
     <string name="projects_object_tab_properties">Propiedades</string>
-    <string name="projects_object_tab_comments">Comentarios</string>
+    <string name="projects_object_tab_comments">Comentarios (%1$s)</string>
     <string name="projects_object_tab_activity">Actividade</string>
-    <string name="projects_object_tab_requests">Solicitudes</string>
+    <string name="projects_object_tab_requests">Solicitudes de fusión (%1$s)</string>
     <string name="projects_object_tab_attachments">Anexos</string>
     <string name="projects_object_tab_links">Ligazóns</string>
     <string name="projects_watchers_watch">Vixiar</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Unificado</string>
     <string name="projects_diff_split">Dividir</string>
     <string name="projects_diff_empty">Non hai diff dispoñible</string>
-    <string name="projects_board_unassigned">Sen asignar</string>
+    <string name="projects_board_unset">[non establecido]</string>
     <string name="projects_board_new">Novo</string>
     <string name="projects_board_rename">Renomear</string>
     <string name="projects_board_rename_column">Renomear columna</string>

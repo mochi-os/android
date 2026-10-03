@@ -62,7 +62,7 @@
     <string name="crm_property_remove">הסר</string>
     <string name="crm_attachments">קבצים מצורפים</string>
     <string name="crm_attachment_add">הוסף קובץ מצורף</string>
-    <string name="crm_board_unassigned">לא משויך</string>
+    <string name="crm_board_unset">[לא מוגדר]</string>
     <string name="crm_board_new">חדש</string>
     <string name="crm_board_rename">שנה שם</string>
     <string name="crm_board_rename_column">שנה שם עמודה</string>

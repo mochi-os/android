@@ -320,4 +320,6 @@
     <string name="access_remove">Eemalda</string>
     <string name="access_remove_title">Kas eemaldada juurdepääs?</string>
     <string name="access_remove_message">Kas eemaldada juurdepääsureegel „%1$s“ jaoks?</string>
+    <string name="color_picker_custom">Kohandatud</string>
+    <string name="color_picker_clear">Tühjenda</string>
 </resources>

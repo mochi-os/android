@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Onílé</string>
     <string name="projects_object_watch">Wo</string>
     <string name="projects_object_tab_properties">Àwọn àmì</string>
-    <string name="projects_object_tab_comments">Àwọn àlàyé</string>
+    <string name="projects_object_tab_comments">Àwọn ọ̀rọ̀ (%1$s)</string>
     <string name="projects_object_tab_activity">Ìgbòkègbodò</string>
-    <string name="projects_object_tab_requests">Àwọn ìbéèrè</string>
+    <string name="projects_object_tab_requests">Ìbéèrè àdàpọ̀ (%1$s)</string>
     <string name="projects_object_tab_attachments">Àwọn ìsomọ́</string>
     <string name="projects_object_tab_links">Àwọn ìjápọ̀</string>
     <string name="projects_watchers_watch">Wo</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Iṣọkan</string>
     <string name="projects_diff_split">Pínyà</string>
     <string name="projects_diff_empty">Kò sí diff tó wà</string>
-    <string name="projects_board_unassigned">Aláìyàn</string>
+    <string name="projects_board_unset">[kò sí]</string>
     <string name="projects_board_new">Tuntun</string>
     <string name="projects_board_rename">Tún sọ orúkọ</string>
     <string name="projects_board_rename_column">Tún ọ̀wọ́n sọ orúkọ</string>

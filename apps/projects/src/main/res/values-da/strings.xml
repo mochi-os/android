@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Ejer</string>
     <string name="projects_object_watch">Overvåg</string>
     <string name="projects_object_tab_properties">Egenskaber</string>
-    <string name="projects_object_tab_comments">Kommentarer</string>
+    <string name="projects_object_tab_comments">Kommentarer (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivitet</string>
-    <string name="projects_object_tab_requests">Anmodninger</string>
+    <string name="projects_object_tab_requests">Fletteanmodninger (%1$s)</string>
     <string name="projects_object_tab_attachments">Vedhæftninger</string>
     <string name="projects_object_tab_links">Links</string>
     <string name="projects_watchers_watch">Overvåg</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Samlet</string>
     <string name="projects_diff_split">Opdel</string>
     <string name="projects_diff_empty">Ingen diff tilgængelig</string>
-    <string name="projects_board_unassigned">Ikke tildelt</string>
+    <string name="projects_board_unset">[ikke angivet]</string>
     <string name="projects_board_new">Ny</string>
     <string name="projects_board_rename">Omdøb</string>
     <string name="projects_board_rename_column">Omdøb kolonne</string>

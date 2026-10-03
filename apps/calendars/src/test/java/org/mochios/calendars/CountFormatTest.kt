@@ -16,7 +16,10 @@ import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.NumberFormat
 import org.mochios.android.i18n.UserPreferences
+import org.mochios.calendars.ui.calendar.Tally
 import org.mochios.calendars.ui.components.pollFailure
+import org.mochios.calendars.ui.dialogs.importCounts
+import org.mochios.calendars.ui.dialogs.importProgress
 import org.mochios.calendars.ui.dialogs.reminderLabel
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
@@ -54,6 +57,16 @@ class CountFormatTest {
         assertWritten(texts[0], "1.501")
         assertWritten(texts[1], "3")
         assertWritten(texts[2], "1.000")
+    }
+
+    @Test
+    fun `an import's progress and what came of it`() {
+        val tally = Tally(done = 1501, total = 2000, imported = 1200, skipped = 1001, failed = 1000, finished = true)
+        val texts = texts { listOf(importProgress(tally)) + importCounts(tally) }
+        assertWritten(texts[0], "1.501", "2.000")
+        assertWritten(texts[1], "1.200")
+        assertWritten(texts[2], "1.001")
+        assertWritten(texts[3], "1.000")
     }
 
     /** A status code is an identifier: plain digits, never grouped. */

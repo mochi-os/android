@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Perchennog</string>
     <string name="projects_object_watch">Gwylio</string>
     <string name="projects_object_tab_properties">Priodweddau</string>
-    <string name="projects_object_tab_comments">Sylwadau</string>
+    <string name="projects_object_tab_comments">Sylwadau (%1$s)</string>
     <string name="projects_object_tab_activity">Gweithgaredd</string>
-    <string name="projects_object_tab_requests">Ceisiadau</string>
+    <string name="projects_object_tab_requests">Ceisiadau cyfuno (%1$s)</string>
     <string name="projects_object_tab_attachments">Atodiadau</string>
     <string name="projects_object_tab_links">Dolenni</string>
     <string name="projects_watchers_watch">Gwylio</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Unedig</string>
     <string name="projects_diff_split">Hollti</string>
     <string name="projects_diff_empty">Dim diff ar gael</string>
-    <string name="projects_board_unassigned">Heb ei neilltuo</string>
+    <string name="projects_board_unset">[heb ei osod]</string>
     <string name="projects_board_new">Newydd</string>
     <string name="projects_board_rename">Ailenwi</string>
     <string name="projects_board_rename_column">Ailenwi colofn</string>

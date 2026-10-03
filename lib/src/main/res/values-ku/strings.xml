@@ -320,4 +320,6 @@
     <string name="access_remove">Rake</string>
     <string name="access_remove_title">Destpêkirinê rake?</string>
     <string name="access_remove_message">Rêbaza gihîştinê ya \"%1$s\" were rakirin?</string>
+    <string name="color_picker_custom">Taybet</string>
+    <string name="color_picker_clear">Paqij bike</string>
 </resources>

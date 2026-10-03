@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Eienaar</string>
     <string name="projects_object_watch">Kyk</string>
     <string name="projects_object_tab_properties">Eienskappe</string>
-    <string name="projects_object_tab_comments">Kommentare</string>
+    <string name="projects_object_tab_comments">Kommentaar (%1$s)</string>
     <string name="projects_object_tab_activity">Aktiwiteit</string>
-    <string name="projects_object_tab_requests">Versoeke</string>
+    <string name="projects_object_tab_requests">Samevoegingsversoeke (%1$s)</string>
     <string name="projects_object_tab_attachments">Aanhangsels</string>
     <string name="projects_object_tab_links">Skakels</string>
     <string name="projects_watchers_watch">Kyk</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Verenig</string>
     <string name="projects_diff_split">Verdeel</string>
     <string name="projects_diff_empty">Geen diff beskikbaar nie</string>
-    <string name="projects_board_unassigned">Nie toegewys nie</string>
+    <string name="projects_board_unset">[nie gestel nie]</string>
     <string name="projects_board_new">Nuut</string>
     <string name="projects_board_rename">Hernoem</string>
     <string name="projects_board_rename_column">Hernoem kolom</string>

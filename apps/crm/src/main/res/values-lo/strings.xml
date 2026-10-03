@@ -62,7 +62,7 @@
     <string name="crm_property_remove">ລຶບອອກ</string>
     <string name="crm_attachments">ໄຟລ໌ແນບ</string>
     <string name="crm_attachment_add">ເພີ່ມໄຟລ໌ແນບ</string>
-    <string name="crm_board_unassigned">ບໍ່ໄດ້ມອບໝາຍ</string>
+    <string name="crm_board_unset">[ບໍ່ໄດ້ຕັ້ງຄ່າ]</string>
     <string name="crm_board_new">ໃໝ່</string>
     <string name="crm_board_rename">ປ່ຽນຊື່</string>
     <string name="crm_board_rename_column">ປ່ຽນຊື່ຄໍລຳ</string>

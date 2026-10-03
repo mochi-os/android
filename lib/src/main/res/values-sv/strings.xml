@@ -320,4 +320,6 @@
     <string name="access_remove">Ta bort</string>
     <string name="access_remove_title">Ta bort åtkomst?</string>
     <string name="access_remove_message">Ta bort åtkomstregeln för ”%1$s”?</string>
+    <string name="color_picker_custom">Anpassad</string>
+    <string name="color_picker_clear">Rensa</string>
 </resources>

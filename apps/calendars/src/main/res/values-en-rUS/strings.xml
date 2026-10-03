@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="calendars_colour">Color</string>
+    <string name="calendars_event_colour_value">Color value</string>
     <string name="calendars_status_cancelled">Canceled</string>
 </resources>

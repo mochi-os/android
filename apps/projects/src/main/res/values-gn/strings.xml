@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Jára</string>
     <string name="projects_object_watch">Ema\'ẽ</string>
     <string name="projects_object_tab_properties">Propiedadkuéra</string>
-    <string name="projects_object_tab_comments">Comentariokuéra</string>
+    <string name="projects_object_tab_comments">Comentariokuéra (%1$s)</string>
     <string name="projects_object_tab_activity">Tembiapo</string>
-    <string name="projects_object_tab_requests">Jerurekuéra</string>
+    <string name="projects_object_tab_requests">Ñembojuaju jerure (%1$s)</string>
     <string name="projects_object_tab_attachments">Adjuntokuéra</string>
     <string name="projects_object_tab_links">Juajuhakuéra</string>
     <string name="projects_watchers_watch">Ema\'ẽ</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Unificado</string>
     <string name="projects_diff_split">Dividido</string>
     <string name="projects_diff_empty">Ndaipóri diff oĩva</string>
-    <string name="projects_board_unassigned">Avave\'ỹre</string>
+    <string name="projects_board_unset">[noñemoĩva]</string>
     <string name="projects_board_new">Pyahu</string>
     <string name="projects_board_rename">Embohera jey</string>
     <string name="projects_board_rename_column">Embohera jey columna</string>

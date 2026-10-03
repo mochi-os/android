@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">所有者</string>
     <string name="projects_object_watch">关注</string>
     <string name="projects_object_tab_properties">属性</string>
-    <string name="projects_object_tab_comments">评论</string>
+    <string name="projects_object_tab_comments">评论 (%1$s)</string>
     <string name="projects_object_tab_activity">动态</string>
-    <string name="projects_object_tab_requests">请求</string>
+    <string name="projects_object_tab_requests">合并请求 (%1$s)</string>
     <string name="projects_object_tab_attachments">附件</string>
     <string name="projects_object_tab_links">链接</string>
     <string name="projects_watchers_watch">关注</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">统一</string>
     <string name="projects_diff_split">分割</string>
     <string name="projects_diff_empty">无差异可显示</string>
-    <string name="projects_board_unassigned">未分配</string>
+    <string name="projects_board_unset">[未设置]</string>
     <string name="projects_board_new">新建</string>
     <string name="projects_board_rename">重命名</string>
     <string name="projects_board_rename_column">重命名列</string>

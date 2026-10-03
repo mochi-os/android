@@ -322,4 +322,6 @@
     <string name="access_remove">הסר</string>
     <string name="access_remove_title">להסיר גישה?</string>
     <string name="access_remove_message">להסיר את כלל הגישה עבור \"%1$s\"?</string>
+    <string name="color_picker_custom">מותאם אישית</string>
+    <string name="color_picker_clear">נקה</string>
 </resources>

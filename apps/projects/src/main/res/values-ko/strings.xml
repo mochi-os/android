@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">소유자</string>
     <string name="projects_object_watch">관찰</string>
     <string name="projects_object_tab_properties">속성</string>
-    <string name="projects_object_tab_comments">댓글</string>
+    <string name="projects_object_tab_comments">댓글 (%1$s)</string>
     <string name="projects_object_tab_activity">활동</string>
-    <string name="projects_object_tab_requests">요청</string>
+    <string name="projects_object_tab_requests">병합 요청 (%1$s)</string>
     <string name="projects_object_tab_attachments">첨부 파일</string>
     <string name="projects_object_tab_links">링크</string>
     <string name="projects_watchers_watch">관찰</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">통합됨</string>
     <string name="projects_diff_split">분할</string>
     <string name="projects_diff_empty">이용 가능한 차이가 없어요</string>
-    <string name="projects_board_unassigned">할당되지 않음</string>
+    <string name="projects_board_unset">[설정 안 됨]</string>
     <string name="projects_board_new">새로 만들기</string>
     <string name="projects_board_rename">이름 변경</string>
     <string name="projects_board_rename_column">열 이름 변경</string>

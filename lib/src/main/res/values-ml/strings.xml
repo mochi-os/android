@@ -320,4 +320,6 @@
     <string name="access_remove">നീക്കം ചെയ്യുക</string>
     <string name="access_remove_title">ആക്സസ് നീക്കം ചെയ്യണോ?</string>
     <string name="access_remove_message">\"%1$s\" എന്നതിനുള്ള ആക്‌സസ് നിയമം നീക്കംചെയ്യണോ?</string>
+    <string name="color_picker_custom">ഇഷ്ടാനുസൃതം</string>
+    <string name="color_picker_clear">മായ്ക്കുക</string>
 </resources>

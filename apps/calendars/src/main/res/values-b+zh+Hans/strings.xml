@@ -13,6 +13,7 @@
     <string name="calendars_list_search">搜索</string>
     <string name="calendars_event_title">标题</string>
     <string name="calendars_event_location">位置</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">描述</string>
     <string name="calendars_repeat_never">从不</string>
     <string name="calendars_repeat_monthly">每月</string>
@@ -83,19 +84,14 @@
     <string name="calendars_event_repeat">重复</string>
     <string name="calendars_event_reminder">提醒</string>
     <string name="calendars_event_recurring">重复进行</string>
-    <string name="calendars_event_delete_title">删除%1$s？</string>
-    <string name="calendars_event_delete_message">此操作无法撤销。</string>
-    <string name="calendars_scope_edit">更改此活动还是所有活动？</string>
-    <string name="calendars_scope_delete">删除此活动还是所有活动？</string>
+    <string name="calendars_scope_delete">删除此活动</string>
     <string name="calendars_scope_one">仅此活动</string>
     <string name="calendars_scope_all">所有活动</string>
     <string name="calendars_repeat_daily">每天</string>
     <string name="calendars_repeat_weekly">每周</string>
     <string name="calendars_repeat_interval">每</string>
-    <string name="calendars_repeat_days">星期</string>
     <string name="calendars_repeat_count">重复次数</string>
-    <string name="calendars_repeat_forever">永久</string>
-    <string name="calendars_reminder_time">准时</string>
+    <string name="calendars_reminder_time">活动开始时</string>
     <plurals name="calendars_reminder_minutes">
         <item quantity="other">%1$s 分钟前</item>
     </plurals>
@@ -145,7 +141,6 @@
     <string name="calendars_event_backwards">结束早于开始</string>
     <string name="calendars_event_zone_start">开始时区</string>
     <string name="calendars_event_zone_finish">结束时区</string>
-    <string name="calendars_event_timezone">时区</string>
     <string name="calendars_scope_following">此活动及后续活动</string>
     <string name="calendars_event_moved">活动已移动</string>
     <string name="calendars_event_changed">此活动已在别处被更改。</string>
@@ -185,4 +180,77 @@
     <string name="calendars_polled_synced">日历已同步</string>
     <string name="calendars_link_revoke_title">撤销日历地址？</string>
     <string name="calendars_link_revoke_message">订阅此地址的日历将停止更新。</string>
+    <string name="calendars_export_failed">无法保存导出内容</string>
+    <string name="calendars_import_progress">%1$s / %2$s</string>
+    <string name="calendars_import">导入</string>
+    <string name="calendars_export">导出</string>
+    <string name="calendars_exported">日历已导出</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="other">已导入 %1$s 个活动</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="other">%1$s 个活动已在日历中</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="other">%1$s 个活动无法导入</item>
+    </plurals>
+    <string name="calendars_event_colour_value">颜色值</string>
+    <string name="calendars_discard_title">放弃草稿?</string>
+    <string name="calendars_discard_message">你的更改将会丢失。</string>
+    <string name="calendars_discard">放弃</string>
+    <string name="calendars_event_deleted">活动已删除</string>
+    <string name="calendars_link_replace_title">替换日历地址？</string>
+    <string name="calendars_list_unmatched">无匹配项</string>
+    <string name="calendars_list_search_events">搜索活动</string>
+    <string name="calendars_reload">重新加载</string>
+    <string name="calendars_event_created">活动已创建</string>
+    <string name="calendars_event_saved">活动已保存</string>
+    <string name="calendars_scope_save">保存此活动</string>
+    <string name="calendars_scope_move">移动此活动</string>
+    <string name="calendars_repeat_frequency">频率</string>
+    <string name="calendars_repeat_ends">结束于</string>
+    <string name="calendars_repeat_end_never">永不</string>
+    <string name="calendars_repeat_until">在指定日期</string>
+    <string name="calendars_repeat_after">在指定次数后</string>
+    <string name="calendars_repeat_last">最后一天</string>
+    <string name="calendars_rule_day">每天</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">每天</item>
+        <item quantity="other">每 %1$s 天</item>
+    </plurals>
+    <string name="calendars_rule_week">每周</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">每周</item>
+        <item quantity="other">每 %1$s 周</item>
+    </plurals>
+    <string name="calendars_rule_month">每月</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">每月</item>
+        <item quantity="other">每 %1$s 个月</item>
+    </plurals>
+    <string name="calendars_rule_year">每年</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">每年</item>
+        <item quantity="other">每 %1$s 年</item>
+    </plurals>
+    <string name="calendars_rule_on">在%1$s</string>
+    <string name="calendars_rule_first">在第一个%1$s</string>
+    <string name="calendars_rule_second">在第二个%1$s</string>
+    <string name="calendars_rule_third">在第三个%1$s</string>
+    <string name="calendars_rule_fourth">在第四个%1$s</string>
+    <string name="calendars_rule_fifth">在第五个%1$s</string>
+    <string name="calendars_rule_last">在最后一个%1$s</string>
+    <string name="calendars_rule_end">在每月最后一天</string>
+    <string name="calendars_rule_monthday">在%1$s日</string>
+    <plurals name="calendars_rule_monthdays">
+        <item quantity="other">在%1$s日</item>
+    </plurals>
+    <string name="calendars_rule_in">在%1$s</string>
+    <string name="calendars_rule_once">一次</string>
+    <plurals name="calendars_rule_times">
+        <item quantity="one">一次</item>
+        <item quantity="other">共 %1$s 次</item>
+    </plurals>
+    <string name="calendars_rule_until">直到 %1$s</string>
+    <string name="calendars_rule_join">%1$s，%2$s</string>
 </resources>

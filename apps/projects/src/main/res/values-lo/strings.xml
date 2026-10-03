@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">ເຈົ້າຂອງ</string>
     <string name="projects_object_watch">ເບິ່ງ</string>
     <string name="projects_object_tab_properties">ຄຸນສົມບັດ</string>
-    <string name="projects_object_tab_comments">ຄຳເຫັນ</string>
+    <string name="projects_object_tab_comments">ຄຳເຫັນ (%1$s)</string>
     <string name="projects_object_tab_activity">ກິດຈະກຳ</string>
-    <string name="projects_object_tab_requests">ຄຳຮ້ອງຂໍ</string>
+    <string name="projects_object_tab_requests">ຄຳຮ້ອງຂໍລວມ (%1$s)</string>
     <string name="projects_object_tab_attachments">ໄຟລ໌ແນບ</string>
     <string name="projects_object_tab_links">ລິ້ງ</string>
     <string name="projects_watchers_watch">ເບິ່ງ</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">ລວມເປັນໜຶ່ງ</string>
     <string name="projects_diff_split">ແຍກ</string>
     <string name="projects_diff_empty">ບໍ່ມີຄວາມແຕກຕ່າງ</string>
-    <string name="projects_board_unassigned">ບໍ່ໄດ້ມອບໝາຍ</string>
+    <string name="projects_board_unset">[ບໍ່ໄດ້ຕັ້ງຄ່າ]</string>
     <string name="projects_board_new">ໃໝ່</string>
     <string name="projects_board_rename">ປ່ຽນຊື່</string>
     <string name="projects_board_rename_column">ປ່ຽນຊື່ຄໍລຳ</string>

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Omanik</string>
     <string name="projects_object_watch">Jälgi</string>
     <string name="projects_object_tab_properties">Atribuudid</string>
-    <string name="projects_object_tab_comments">Kommentaarid</string>
+    <string name="projects_object_tab_comments">Kommentaarid (%1$s)</string>
     <string name="projects_object_tab_activity">Tegevus</string>
-    <string name="projects_object_tab_requests">Taotlused</string>
+    <string name="projects_object_tab_requests">Liitmistaotlused (%1$s)</string>
     <string name="projects_object_tab_attachments">Manused</string>
     <string name="projects_object_tab_links">Lingid</string>
     <string name="projects_watchers_watch">Jälgi</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Ühendatud</string>
     <string name="projects_diff_split">Jaga</string>
     <string name="projects_diff_empty">Erinevus pole saadaval</string>
-    <string name="projects_board_unassigned">Määramata</string>
+    <string name="projects_board_unset">[määramata]</string>
     <string name="projects_board_new">Uus</string>
     <string name="projects_board_rename">Nimeta ümber</string>
     <string name="projects_board_rename_column">Nimeta veerg ümber</string>

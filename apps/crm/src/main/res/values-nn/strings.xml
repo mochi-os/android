@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Fjern</string>
     <string name="crm_attachments">Vedlegg</string>
     <string name="crm_attachment_add">Legg til vedlegg</string>
-    <string name="crm_board_unassigned">Ikkje tildelt</string>
+    <string name="crm_board_unset">[ikkje sett]</string>
     <string name="crm_board_new">Ny</string>
     <string name="crm_board_rename">Døyp om</string>
     <string name="crm_board_rename_column">Døyp om kolonne</string>

@@ -6,11 +6,14 @@
 package org.mochios.calendars
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.android.sync.property
+import org.mochios.calendars.ui.editor.Ending
 import org.mochios.calendars.ui.editor.Frequency
 import org.mochios.calendars.ui.editor.Recurrence
 import org.mochios.calendars.ui.editor.alarmMinutes
@@ -19,6 +22,7 @@ import org.mochios.calendars.ui.editor.nextReminder
 import org.mochios.calendars.ui.editor.reminderLeads
 import org.mochios.calendars.ui.editor.minutes
 import org.mochios.calendars.ui.editor.recurrence
+import java.time.LocalDate
 
 /**
  * The editor's Repeat and Reminder fields: the `RRULE` a choice builds, the
@@ -44,17 +48,7 @@ class RecurrenceTest {
         assertEquals(false, recurrence("FREQ=MONTHLY;BYMONTHDAY=15").expressible)
         assertEquals(false, recurrence("FREQ=MONTHLY;BYDAY=TU").expressible)
         assertEquals(false, recurrence("FREQ=HOURLY").expressible)
-    }
-
-    @Test
-    fun `a change to the settings drops the kept rule, and no change keeps it`() {
-        val read = recurrence("FREQ=MONTHLY;BYDAY=2TU")
-        val same = read.revised(read.copy())
-        assertEquals("FREQ=MONTHLY;BYDAY=2TU", same.rule())
-        val changed = read.revised(read.copy(frequency = Frequency.WEEKLY))
-        assertNull(changed.rule)
-        assertEquals("FREQ=WEEKLY;BYDAY=TU", changed.rule())
-        assertEquals(true, changed.expressible)
+        assertEquals(false, recurrence("FREQ=DAILY;COUNT=3;UNTIL=20261001").expressible)
     }
 
     // ---- the rule a choice builds ----
@@ -80,7 +74,7 @@ class RecurrenceTest {
 
     @Test
     fun `picked weekdays come out in week order, whatever order they were picked in`() {
-        val rule = Recurrence(Frequency.CUSTOM, interval = 2, days = setOf(4, 1, 2)).rule()
+        val rule = Recurrence(Frequency.WEEKLY, interval = 2, days = setOf(4, 1, 2)).rule()
         assertEquals("FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,TU,TH", rule)
     }
 
@@ -90,20 +84,37 @@ class RecurrenceTest {
     }
 
     @Test
-    fun `a count ends the series, and wins over an until that should not be there`() {
-        assertEquals("FREQ=WEEKLY;COUNT=5", Recurrence(Frequency.WEEKLY, count = 5).rule())
+    fun `a count ends the series only when the end is a count`() {
+        assertEquals("FREQ=WEEKLY;COUNT=5", Recurrence(Frequency.WEEKLY, ending = Ending.COUNT, count = 5).rule())
+        // The count field keeps its number while another end is chosen.
+        assertEquals("FREQ=WEEKLY", Recurrence(Frequency.WEEKLY, count = 5).rule())
+        val day = LocalDate.of(2026, 9, 22)
         assertEquals(
             "FREQ=WEEKLY;COUNT=5",
-            Recurrence(Frequency.WEEKLY, count = 5, until = 1_790_067_600).rule(),
+            Recurrence(Frequency.WEEKLY, ending = Ending.COUNT, count = 5, until = day).rule(),
         )
     }
 
     @Test
-    fun `an until is written in UTC, as an RRULE wants it`() {
-        // 2026-09-22 09:00:00 UTC.
+    fun `an end on a date takes in the whole of its day, in UTC, as an RRULE wants it`() {
+        val day = LocalDate.of(2026, 9, 22)
+        // The last second of 22 September in London, an hour ahead of UTC.
         assertEquals(
-            "FREQ=DAILY;UNTIL=20260922T090000Z",
-            Recurrence(Frequency.DAILY, until = 1_790_067_600).rule(),
+            "FREQ=DAILY;UNTIL=20260922T225959Z",
+            Recurrence(Frequency.DAILY, ending = Ending.UNTIL, until = day).rule("Europe/London"),
+        )
+        assertEquals(
+            "FREQ=DAILY;UNTIL=20260922T235959Z",
+            Recurrence(Frequency.DAILY, ending = Ending.UNTIL, until = day).rule(),
+        )
+    }
+
+    @Test
+    fun `an all-day series ends on a date, as its start is one`() {
+        val day = LocalDate.of(2026, 9, 22)
+        assertEquals(
+            "FREQ=DAILY;UNTIL=20260922",
+            Recurrence(Frequency.DAILY, ending = Ending.UNTIL, until = day).rule("Europe/London", allday = true),
         )
     }
 
@@ -119,21 +130,27 @@ class RecurrenceTest {
     fun `a plain rule reads back as the choice that built it`() {
         for (frequency in listOf(Frequency.DAILY, Frequency.WEEKLY, Frequency.MONTHLY, Frequency.YEARLY)) {
             val rule = Recurrence(frequency).rule()
-            assertEquals(rule, frequency, recurrence(rule).frequency)
+            val read = recurrence(rule)
+            assertEquals(rule, frequency, read.frequency)
+            assertTrue(rule, read.plain)
         }
     }
 
     @Test
-    fun `a rule with an interval or several weekdays is a custom one`() {
-        assertEquals(Frequency.CUSTOM, recurrence("FREQ=WEEKLY;INTERVAL=2").frequency)
-        assertEquals(Frequency.CUSTOM, recurrence("FREQ=WEEKLY;BYDAY=MO,WE,FR").frequency)
+    fun `a rule with an interval, weekdays or an end needs the custom settings`() {
+        // Every one of these would hide part of itself behind a plain choice.
+        for (rule in listOf(
+            "FREQ=DAILY;INTERVAL=2",
+            "FREQ=WEEKLY;BYDAY=TU",
+            "FREQ=WEEKLY;BYDAY=MO,WE,FR",
+            "FREQ=MONTHLY;COUNT=10",
+            "FREQ=YEARLY;UNTIL=20301231",
+        )) {
+            assertFalse(rule, recurrence(rule).plain)
+        }
         assertEquals(setOf(1, 3, 5), recurrence("FREQ=WEEKLY;BYDAY=MO,WE,FR").days)
-    }
-
-    @Test
-    fun `a rule the editor cannot express stays custom rather than being simplified`() {
-        val read = recurrence("FREQ=MONTHLY;BYSETPOS=-1;BYDAY=FR")
-        assertEquals(Frequency.CUSTOM, read.frequency)
+        assertEquals(Frequency.DAILY, recurrence("FREQ=DAILY;INTERVAL=2").frequency)
+        assertEquals(Frequency.MONTHLY, recurrence("FREQ=MONTHLY;COUNT=10").frequency)
     }
 
     @Test
@@ -142,10 +159,16 @@ class RecurrenceTest {
     }
 
     @Test
-    fun `a count and an until read back as themselves`() {
-        assertEquals(5, recurrence("FREQ=WEEKLY;COUNT=5").count)
-        assertEquals(1_790_067_600L, recurrence("FREQ=DAILY;UNTIL=20260922T090000Z").until)
-        assertNull(recurrence("FREQ=DAILY").count)
+    fun `a count and an until read back as themselves, the until as its day in the start's zone`() {
+        val counted = recurrence("FREQ=WEEKLY;COUNT=5")
+        assertEquals(Ending.COUNT, counted.ending)
+        assertEquals(5, counted.count)
+        // 01:30 UTC on the 23rd is still the 22nd in New York.
+        val until = recurrence("FREQ=DAILY;UNTIL=20260923T013000Z", "America/New_York")
+        assertEquals(Ending.UNTIL, until.ending)
+        assertEquals(LocalDate.of(2026, 9, 22), until.until)
+        assertEquals(LocalDate.of(2026, 9, 22), recurrence("FREQ=DAILY;UNTIL=20260922").until)
+        assertEquals(Ending.NEVER, recurrence("FREQ=DAILY").ending)
         assertNull(recurrence("FREQ=DAILY").until)
     }
 
@@ -153,6 +176,8 @@ class RecurrenceTest {
     fun `a custom rule survives a round trip`() {
         val rule = "FREQ=WEEKLY;INTERVAL=3;BYDAY=MO,TH;COUNT=8"
         assertEquals(rule, recurrence(rule).rule())
+        val read = recurrence(rule).copy(rule = null)
+        assertEquals(rule, read.rule())
     }
 
     // ---- reminders ----
@@ -196,10 +221,22 @@ class RecurrenceTest {
     }
 
     @Test
-    fun `adding a reminder adds the first offered the event lacks`() {
-        assertEquals(15, nextReminder(emptyList()))
+    fun `reminders added by hand start at the time of the event and each is longer`() {
+        val added = mutableListOf<Int>()
+        repeat(6) { added += nextReminder(added) }
+        assertEquals(listOf(0, 5, 15, 30, 60, 1440), added)
+    }
+
+    @Test
+    fun `beside a default reminder, the one added is the shortest the event lacks`() {
         assertEquals(0, nextReminder(listOf(15)))
+        assertEquals(5, nextReminder(listOf(15, 0)))
         assertEquals(30, nextReminder(listOf(15, 0, 5)))
+    }
+
+    @Test
+    fun `with every reminder taken, the longest is offered again`() {
+        assertEquals(1440, nextReminder(listOf(0, 5, 15, 30, 60, 1440)))
     }
 
     @Test

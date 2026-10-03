@@ -46,9 +46,9 @@
     <string name="projects_access_level_owner">Eigenaar</string>
     <string name="projects_object_watch">Volgen</string>
     <string name="projects_object_tab_properties">Eigenschappen</string>
-    <string name="projects_object_tab_comments">Reacties</string>
+    <string name="projects_object_tab_comments">Reacties (%1$s)</string>
     <string name="projects_object_tab_activity">Activiteit</string>
-    <string name="projects_object_tab_requests">Verzoeken</string>
+    <string name="projects_object_tab_requests">Merge-aanvragen (%1$s)</string>
     <string name="projects_object_tab_attachments">Bijlagen</string>
     <string name="projects_object_tab_links">Links</string>
     <string name="projects_watchers_watch">Volgen</string>
@@ -88,7 +88,7 @@
     <string name="projects_diff_unified">Gecombineerd</string>
     <string name="projects_diff_split">Splitsen</string>
     <string name="projects_diff_empty">Geen diff beschikbaar</string>
-    <string name="projects_board_unassigned">Niet toegewezen</string>
+    <string name="projects_board_unset">[niet ingesteld]</string>
     <string name="projects_board_new">Nieuw</string>
     <string name="projects_board_rename">Hernoemen</string>
     <string name="projects_board_rename_column">Kolom hernoemen</string>

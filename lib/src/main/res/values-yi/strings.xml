@@ -320,4 +320,6 @@
     <string name="access_remove">אַראָפּנעמען</string>
     <string name="access_remove_title">אַראָפּנעמען צוטריט?</string>
     <string name="access_remove_message">אַראָפּנעמען די צוטריט־כּלל פֿאַר \"%1$s\"?</string>
+    <string name="color_picker_custom">אָנגעפּאַסט</string>
+    <string name="color_picker_clear">רייניקן</string>
 </resources>

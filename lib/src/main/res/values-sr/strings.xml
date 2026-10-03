@@ -321,4 +321,6 @@
     <string name="access_remove">Уклони</string>
     <string name="access_remove_title">Уклонити приступ?</string>
     <string name="access_remove_message">Уклонити правило приступа за „%1$s“?</string>
+    <string name="color_picker_custom">Прилагођено</string>
+    <string name="color_picker_clear">Очисти</string>
 </resources>

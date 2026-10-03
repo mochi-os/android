@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Αφαίρεση</string>
     <string name="crm_attachments">Συνημμένα</string>
     <string name="crm_attachment_add">Προσθήκη συνημμένου</string>
-    <string name="crm_board_unassigned">Χωρίς ανάθεση</string>
+    <string name="crm_board_unset">[χωρίς ορισμό]</string>
     <string name="crm_board_new">Νέο</string>
     <string name="crm_board_rename">Μετονομασία</string>
     <string name="crm_board_rename_column">Μετονομασία στήλης</string>

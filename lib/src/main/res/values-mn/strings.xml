@@ -320,4 +320,6 @@
     <string name="access_remove">Хасах</string>
     <string name="access_remove_title">Хандалтыг хасах уу?</string>
     <string name="access_remove_message">\"%1$s\"-ийн хандалтын дүрмийг устгах уу?</string>
+    <string name="color_picker_custom">Захиалгат</string>
+    <string name="color_picker_clear">Цэвэрлэх</string>
 </resources>

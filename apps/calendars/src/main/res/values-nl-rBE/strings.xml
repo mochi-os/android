@@ -14,4 +14,40 @@
     <string name="calendars_polled_synced">Agenda gesynchroniseerd</string>
     <string name="calendars_link_revoke_title">Agenda-adres intrekken?</string>
     <string name="calendars_link_revoke_message">Agenda\'s die op dit adres geabonneerd zijn, worden niet meer bijgewerkt.</string>
+    <string name="calendars_event_colour_value">Kleurwaarde</string>
+    <string name="calendars_discard_title">Klad verwerpen?</string>
+    <string name="calendars_discard_message">Uw wijzigingen gaan verloren.</string>
+    <string name="calendars_discard">Verwerpen</string>
+    <string name="calendars_event_deleted">Afspraak verwijderd</string>
+    <string name="calendars_link_replace_title">Agenda-adres vervangen?</string>
+    <string name="calendars_list_unmatched">Geen overeenkomsten</string>
+    <string name="calendars_list_search_events">Afspraken zoeken</string>
+    <string name="calendars_reload">Opnieuw laden</string>
+    <string name="calendars_reminder_time">Op het moment van de afspraak</string>
+    <string name="calendars_rule_day">Elke dag</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">Elke dag</item>
+        <item quantity="other">Om de %1$s dagen</item>
+    </plurals>
+    <string name="calendars_rule_week">Elke week</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">Elke week</item>
+        <item quantity="other">Om de %1$s weken</item>
+    </plurals>
+    <string name="calendars_rule_month">Elke maand</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">Elke maand</item>
+        <item quantity="other">Om de %1$s maanden</item>
+    </plurals>
+    <string name="calendars_rule_year">Elk jaar</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">Elk jaar</item>
+        <item quantity="other">Om de %1$s jaar</item>
+    </plurals>
+    <string name="calendars_rule_monthday">op dag %1$s</string>
+    <plurals name="calendars_rule_monthdays">
+        <item quantity="one">op dag %1$s</item>
+        <item quantity="other">op dagen %1$s</item>
+    </plurals>
+    <string name="calendars_rule_until">tot %1$s</string>
 </resources>

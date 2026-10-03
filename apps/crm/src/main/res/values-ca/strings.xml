@@ -62,7 +62,7 @@
     <string name="crm_property_remove">Elimina</string>
     <string name="crm_attachments">Fitxers adjunts</string>
     <string name="crm_attachment_add">Afegeix un fitxer adjunt</string>
-    <string name="crm_board_unassigned">Sense assignar</string>
+    <string name="crm_board_unset">[no definit]</string>
     <string name="crm_board_new">Nou</string>
     <string name="crm_board_rename">Canvia el nom</string>
     <string name="crm_board_rename_column">Canvia el nom de la columna</string>

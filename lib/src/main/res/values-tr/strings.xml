@@ -320,4 +320,6 @@
     <string name="access_remove">Kaldır</string>
     <string name="access_remove_title">Erişim kaldırılsın mı?</string>
     <string name="access_remove_message">\"%1$s\" için erişim kuralı kaldırılsın mı?</string>
+    <string name="color_picker_custom">Özel</string>
+    <string name="color_picker_clear">Temizle</string>
 </resources>

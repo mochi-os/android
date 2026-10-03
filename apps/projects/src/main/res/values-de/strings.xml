@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Eigentümer</string>
     <string name="projects_object_watch">Beobachten</string>
     <string name="projects_object_tab_properties">Eigenschaften</string>
-    <string name="projects_object_tab_comments">Kommentare</string>
+    <string name="projects_object_tab_comments">Kommentare (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivität</string>
-    <string name="projects_object_tab_requests">Anfragen</string>
+    <string name="projects_object_tab_requests">Merge-Anfragen (%1$s)</string>
     <string name="projects_object_tab_attachments">Anhänge</string>
     <string name="projects_object_tab_links">Verknüpfungen</string>
     <string name="projects_watchers_watch">Beobachten</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Vereinheitlicht</string>
     <string name="projects_diff_split">Teilen</string>
     <string name="projects_diff_empty">Kein Diff verfügbar</string>
-    <string name="projects_board_unassigned">Nicht zugewiesen</string>
+    <string name="projects_board_unset">[nicht gesetzt]</string>
     <string name="projects_board_new">Neu</string>
     <string name="projects_board_rename">Umbenennen</string>
     <string name="projects_board_rename_column">Spalte umbenennen</string>

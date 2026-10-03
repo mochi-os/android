@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Владелец</string>
     <string name="projects_object_watch">Отслеживать</string>
     <string name="projects_object_tab_properties">Свойства</string>
-    <string name="projects_object_tab_comments">Комментарии</string>
+    <string name="projects_object_tab_comments">Комментарии (%1$s)</string>
     <string name="projects_object_tab_activity">Активность</string>
-    <string name="projects_object_tab_requests">Запросы</string>
+    <string name="projects_object_tab_requests">Запросы на слияние (%1$s)</string>
     <string name="projects_object_tab_attachments">Вложения</string>
     <string name="projects_object_tab_links">Ссылки</string>
     <string name="projects_watchers_watch">Отслеживать</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Объединённый</string>
     <string name="projects_diff_split">Разделить</string>
     <string name="projects_diff_empty">Различия недоступны</string>
-    <string name="projects_board_unassigned">Не назначено</string>
+    <string name="projects_board_unset">[не задано]</string>
     <string name="projects_board_new">Новый</string>
     <string name="projects_board_rename">Переименовать</string>
     <string name="projects_board_rename_column">Переименовать столбец</string>

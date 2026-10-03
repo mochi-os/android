@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">เจ้าของ</string>
     <string name="projects_object_watch">ติดตาม</string>
     <string name="projects_object_tab_properties">คุณสมบัติ</string>
-    <string name="projects_object_tab_comments">ความคิดเห็น</string>
+    <string name="projects_object_tab_comments">ความคิดเห็น (%1$s)</string>
     <string name="projects_object_tab_activity">กิจกรรม</string>
-    <string name="projects_object_tab_requests">คำขอ</string>
+    <string name="projects_object_tab_requests">คำขอรวม (%1$s)</string>
     <string name="projects_object_tab_attachments">ไฟล์แนบ</string>
     <string name="projects_object_tab_links">ลิงก์</string>
     <string name="projects_watchers_watch">ติดตาม</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">รวม</string>
     <string name="projects_diff_split">แยก</string>
     <string name="projects_diff_empty">ไม่มีความแตกต่างให้แสดง</string>
-    <string name="projects_board_unassigned">ยังไม่กำหนด</string>
+    <string name="projects_board_unset">[ไม่ได้ตั้ง]</string>
     <string name="projects_board_new">ใหม่</string>
     <string name="projects_board_rename">เปลี่ยนชื่อ</string>
     <string name="projects_board_rename_column">เปลี่ยนชื่อคอลัมน์</string>

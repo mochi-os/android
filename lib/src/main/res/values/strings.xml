@@ -386,4 +386,6 @@
     <string name="device_name_fallback">Mobile device</string>
     <string name="zone_sea">At sea</string>
     <string name="zone_attribution" translatable="false">© OpenStreetMap contributors</string>
+    <string name="color_picker_custom">Custom</string>
+    <string name="color_picker_clear">Clear</string>
 </resources>

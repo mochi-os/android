@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Pwopriyetè</string>
     <string name="projects_object_watch">Gade</string>
     <string name="projects_object_tab_properties">Pwopriyete</string>
-    <string name="projects_object_tab_comments">Kòmantè</string>
+    <string name="projects_object_tab_comments">Kòmantè (%1$s)</string>
     <string name="projects_object_tab_activity">Aktivite</string>
-    <string name="projects_object_tab_requests">Demand</string>
+    <string name="projects_object_tab_requests">Demand Merge (%1$s)</string>
     <string name="projects_object_tab_attachments">Atachman yo</string>
     <string name="projects_object_tab_links">Lyen</string>
     <string name="projects_watchers_watch">Gade</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Inifye</string>
     <string name="projects_diff_split">Divize</string>
     <string name="projects_diff_empty">Pa gen diff disponib</string>
-    <string name="projects_board_unassigned">Pa asiyen</string>
+    <string name="projects_board_unset">[pa mete]</string>
     <string name="projects_board_new">Nouvo</string>
     <string name="projects_board_rename">Rebatize</string>
     <string name="projects_board_rename_column">Rebatize kolòn</string>

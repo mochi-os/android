@@ -322,4 +322,6 @@
     <string name="access_remove">Odebrat</string>
     <string name="access_remove_title">Odebrat přístup?</string>
     <string name="access_remove_message">Odebrat pravidlo přístupu pro „%1$s“?</string>
+    <string name="color_picker_custom">Vlastní</string>
+    <string name="color_picker_clear">Vymazat</string>
 </resources>

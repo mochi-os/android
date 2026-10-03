@@ -13,6 +13,7 @@
     <string name="calendars_list_search">Lorg</string>
     <string name="calendars_event_title">Tiotal</string>
     <string name="calendars_event_location">Àite</string>
+    <string name="calendars_event_url">URL</string>
     <string name="calendars_event_description">Tuairisgeul</string>
     <string name="calendars_repeat_never">Chaoidh</string>
     <string name="calendars_repeat_monthly">Mìosail</string>
@@ -83,19 +84,14 @@
     <string name="calendars_event_repeat">Ath-aithris</string>
     <string name="calendars_event_reminder">Cuimhneachan</string>
     <string name="calendars_event_recurring">Ag ath-aithris</string>
-    <string name="calendars_event_delete_title">A bheil thu airson %1$s a sguabadh às?</string>
-    <string name="calendars_event_delete_message">Cha ghabh seo a neo-dhèanamh.</string>
-    <string name="calendars_scope_edit">An tachartas seo no a h-uile tachartas atharrachadh?</string>
-    <string name="calendars_scope_delete">An tachartas seo no a h-uile tachartas a sguabadh às?</string>
+    <string name="calendars_scope_delete">Sguab às an tachartas seo</string>
     <string name="calendars_scope_one">An tachartas seo</string>
     <string name="calendars_scope_all">A h-uile tachartas</string>
     <string name="calendars_repeat_daily">Làitheil</string>
     <string name="calendars_repeat_weekly">Seachdaineil</string>
     <string name="calendars_repeat_interval">Gach</string>
-    <string name="calendars_repeat_days">Làithean</string>
     <string name="calendars_repeat_count">Tursan</string>
-    <string name="calendars_repeat_forever">Gu bràth</string>
-    <string name="calendars_reminder_time">Aig an àm</string>
+    <string name="calendars_reminder_time">Aig àm an tachartais</string>
     <plurals name="calendars_reminder_minutes">
         <item quantity="one">%1$s mhionaid roimhe</item>
         <item quantity="two">%1$s mhionaid roimhe</item>
@@ -157,7 +153,6 @@
     <string name="calendars_event_backwards">Thig e gu crìch mus tòisich e</string>
     <string name="calendars_event_zone_start">Roinn-tìde toisich</string>
     <string name="calendars_event_zone_finish">Roinn-tìde crìche</string>
-    <string name="calendars_event_timezone">Roinn-tìde</string>
     <string name="calendars_scope_following">Am fear seo agus an fheadhainn às a dhèidh</string>
     <string name="calendars_event_moved">Chaidh an tachartas a ghluasad</string>
     <string name="calendars_event_changed">Dh\'atharraich an tachartas seo àiteigin eile.</string>
@@ -197,4 +192,99 @@
     <string name="calendars_polled_synced">Mìosachan sioncronaichte</string>
     <string name="calendars_link_revoke_title">A bheil thu airson seòladh a\' mhìosachain a chùl-ghairm?</string>
     <string name="calendars_link_revoke_message">Cha tèid na mìosachain a tha fo-sgrìobhte ris an t-seòladh seo ùrachadh tuilleadh.</string>
+    <string name="calendars_export_failed">Cha b\' urrainn an t-às-phortadh a shàbhaladh</string>
+    <string name="calendars_import_progress">%1$s à %2$s</string>
+    <string name="calendars_import">Ion-phortaich</string>
+    <string name="calendars_export">Às-phortaich</string>
+    <string name="calendars_exported">Chaidh am mìosachan às-phortadh</string>
+    <plurals name="calendars_import_imported">
+        <item quantity="one">Chaidh %1$s tachartas ion-phortadh</item>
+        <item quantity="two">Chaidh %1$s thachartas ion-phortadh</item>
+        <item quantity="few">Chaidh %1$s tachartasan ion-phortadh</item>
+        <item quantity="other">Chaidh %1$s tachartas ion-phortadh</item>
+    </plurals>
+    <plurals name="calendars_import_skipped">
+        <item quantity="one">Tha %1$s tachartas sa mhìosachan mu thràth</item>
+        <item quantity="two">Tha %1$s thachartas sa mhìosachan mu thràth</item>
+        <item quantity="few">Tha %1$s tachartasan sa mhìosachan mu thràth</item>
+        <item quantity="other">Tha %1$s tachartas sa mhìosachan mu thràth</item>
+    </plurals>
+    <plurals name="calendars_import_failed">
+        <item quantity="one">Cha b\' urrainn dhuinn %1$s tachartas ion-phortadh</item>
+        <item quantity="two">Cha b\' urrainn dhuinn %1$s thachartas ion-phortadh</item>
+        <item quantity="few">Cha b\' urrainn dhuinn %1$s tachartasan ion-phortadh</item>
+        <item quantity="other">Cha b\' urrainn dhuinn %1$s tachartas ion-phortadh</item>
+    </plurals>
+    <string name="calendars_event_colour_value">Luach an dath</string>
+    <string name="calendars_discard_title">A bheil thu airson an dreachd a thilgeil air falbh?</string>
+    <string name="calendars_discard_message">Thèid na h-atharraichean agad air chall.</string>
+    <string name="calendars_discard">Tilg air falbh</string>
+    <string name="calendars_event_deleted">Chaidh an tachartas a sguabadh às</string>
+    <string name="calendars_link_replace_title">A bheil thu airson seòladh a\' mhìosachain a chur \'na àite?</string>
+    <string name="calendars_list_unmatched">Gun mhaidseadh</string>
+    <string name="calendars_list_search_events">Lorg tachartasan</string>
+    <string name="calendars_reload">Ath-luchdaich</string>
+    <string name="calendars_event_created">Chaidh an tachartas a chruthachadh</string>
+    <string name="calendars_event_saved">Chaidh an tachartas a shàbhaladh</string>
+    <string name="calendars_scope_save">Sàbhail an tachartas seo</string>
+    <string name="calendars_scope_move">Gluais an tachartas seo</string>
+    <string name="calendars_repeat_frequency">Tricead</string>
+    <string name="calendars_repeat_ends">Thig gu crìch</string>
+    <string name="calendars_repeat_end_never">Gun chrìoch</string>
+    <string name="calendars_repeat_until">Air ceann-là</string>
+    <string name="calendars_repeat_after">Às dèidh àireamh</string>
+    <string name="calendars_repeat_last">An latha mu dheireadh</string>
+    <string name="calendars_rule_day">Gach latha</string>
+    <plurals name="calendars_rule_days">
+        <item quantity="one">Gach %1$s latha</item>
+        <item quantity="two">Gach %1$s latha</item>
+        <item quantity="few">Gach %1$s làithean</item>
+        <item quantity="other">Gach %1$s latha</item>
+    </plurals>
+    <string name="calendars_rule_week">Gach seachdain</string>
+    <plurals name="calendars_rule_weeks">
+        <item quantity="one">Gach %1$s seachdain</item>
+        <item quantity="two">Gach %1$s sheachdain</item>
+        <item quantity="few">Gach %1$s seachdainean</item>
+        <item quantity="other">Gach %1$s seachdain</item>
+    </plurals>
+    <string name="calendars_rule_month">Gach mìos</string>
+    <plurals name="calendars_rule_months">
+        <item quantity="one">Gach %1$s mìos</item>
+        <item quantity="two">Gach %1$s mhìos</item>
+        <item quantity="few">Gach %1$s mìosan</item>
+        <item quantity="other">Gach %1$s mìos</item>
+    </plurals>
+    <string name="calendars_rule_year">Gach bliadhna</string>
+    <plurals name="calendars_rule_years">
+        <item quantity="one">Gach %1$s bliadhna</item>
+        <item quantity="two">Gach %1$s bhliadhna</item>
+        <item quantity="few">Gach %1$s bliadhnaichean</item>
+        <item quantity="other">Gach %1$s bliadhna</item>
+    </plurals>
+    <string name="calendars_rule_on">air %1$s</string>
+    <string name="calendars_rule_first">air a\' chiad %1$s</string>
+    <string name="calendars_rule_second">air an dàrna %1$s</string>
+    <string name="calendars_rule_third">air an treas %1$s</string>
+    <string name="calendars_rule_fourth">air a\' cheathramh %1$s</string>
+    <string name="calendars_rule_fifth">air a\' chòigeamh %1$s</string>
+    <string name="calendars_rule_last">air an %1$s mu dheireadh</string>
+    <string name="calendars_rule_end">air an latha mu dheireadh den mhìos</string>
+    <string name="calendars_rule_monthday">air latha %1$s</string>
+    <plurals name="calendars_rule_monthdays">
+        <item quantity="one">air làithean %1$s</item>
+        <item quantity="two">air làithean %1$s</item>
+        <item quantity="few">air làithean %1$s</item>
+        <item quantity="other">air làithean %1$s</item>
+    </plurals>
+    <string name="calendars_rule_in">mìosan: %1$s</string>
+    <string name="calendars_rule_once">aon turas</string>
+    <plurals name="calendars_rule_times">
+        <item quantity="one">%1$s turas</item>
+        <item quantity="two">%1$s thuras</item>
+        <item quantity="few">%1$s tursan</item>
+        <item quantity="other">%1$s turas</item>
+    </plurals>
+    <string name="calendars_rule_until">gu ruige %1$s</string>
+    <string name="calendars_rule_join">%1$s, %2$s</string>
 </resources>

@@ -77,7 +77,6 @@
     <string name="crm_comment_empty">Aún no hay comentarios</string>
     <string name="crm_comment_attach">Adjuntar archivos</string>
     <string name="crm_comment_remove_attachment">Quitar adjunto</string>
-    <string name="crm_board_unassigned">Sin asignar</string>
     <string name="crm_move_position">Posición</string>
     <string name="crm_move_position_top">Mejores</string>
     <string name="crm_class_move_up">Mover hacia arriba</string>

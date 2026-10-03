@@ -32,7 +32,8 @@ class FormRowsTest {
                 FormRow.Heading(title),
                 FormRow.Wide(description),
                 FormRow.Paired(status, category),
-                FormRow.Paired(owner, due),
+                FormRow.Wide(owner),
+                FormRow.Wide(due),
             ),
             rows(listOf(title, description, status, category, owner, due)),
         )
@@ -41,8 +42,8 @@ class FormRowsTest {
     @Test
     fun `the title leads as the heading wherever the class ranks it`() {
         assertEquals(
-            listOf(FormRow.Heading(title), FormRow.Paired(status, owner)),
-            rows(listOf(status, title, owner)),
+            listOf(FormRow.Heading(title), FormRow.Paired(status, category)),
+            rows(listOf(status, title, category)),
         )
     }
 
@@ -76,11 +77,11 @@ class FormRowsTest {
     }
 
     @Test
-    fun `choices, people, dates, numbers and ticks are short and text is not`() {
-        for (type in listOf("enumerated", "user", "date", "number", "checkbox")) {
+    fun `choices, dates, numbers and ticks are short and text and people are not`() {
+        for (type in listOf("enumerated", "date", "number", "checkbox")) {
             assertTrue(type, shortField(type))
         }
-        for (type in listOf("text", "checklist", "")) {
+        for (type in listOf("text", "user", "checklist", "")) {
             assertFalse(type, shortField(type))
         }
     }
@@ -97,5 +98,30 @@ class FormRowsTest {
     fun `a line break in a one-line value becomes a space`() {
         assertEquals("one two three four", oneLine("one\ntwo\r\nthree\rfour"))
         assertEquals("untouched", oneLine("untouched"))
+    }
+
+    @Test
+    fun `a choice fits a field that has room for its name beside the arrow`() {
+        // "In progress" is 70dp wide; half a 384dp phone's form is 170dp.
+        assertTrue(choiceFits(text = 70.dp, swatch = false, cell = 170.dp))
+        assertTrue(choiceFits(text = 70.dp, swatch = false, cell = 138.dp))
+        assertFalse(choiceFits(text = 70.dp, swatch = false, cell = 136.dp))
+    }
+
+    @Test
+    fun `a choice's colour dot takes room its name then has to do without`() {
+        assertTrue(choiceFits(text = 70.dp, swatch = true, cell = 170.dp))
+        assertTrue(choiceFits(text = 70.dp, swatch = true, cell = 164.dp))
+        assertFalse(choiceFits(text = 70.dp, swatch = true, cell = 162.dp))
+        // The same cell holds the name without the dot.
+        assertTrue(choiceFits(text = 70.dp, swatch = false, cell = 162.dp))
+    }
+
+    @Test
+    fun `a person takes a row to itself, even between two short fields`() {
+        assertEquals(
+            listOf(FormRow.Wide(due), FormRow.Wide(owner), FormRow.Paired(status, category)),
+            rows(listOf(due, owner, status, category)),
+        )
     }
 }

@@ -48,9 +48,9 @@
     <string name="projects_access_level_owner">Xwedî</string>
     <string name="projects_object_watch">Temaşe bike</string>
     <string name="projects_object_tab_properties">Taybetmendî</string>
-    <string name="projects_object_tab_comments">Şîrove</string>
+    <string name="projects_object_tab_comments">Şîrove (%1$s)</string>
     <string name="projects_object_tab_activity">Çalakî</string>
-    <string name="projects_object_tab_requests">Daxwaz</string>
+    <string name="projects_object_tab_requests">Daxwazên tevlîkirinê (%1$s)</string>
     <string name="projects_object_tab_attachments">Pêvek</string>
     <string name="projects_object_tab_links">Girêdan</string>
     <string name="projects_watchers_watch">Temaşe bike</string>
@@ -94,7 +94,7 @@
     <string name="projects_diff_unified">Yekkirî</string>
     <string name="projects_diff_split">Parçe bike</string>
     <string name="projects_diff_empty">Tu diff peyda nabe</string>
-    <string name="projects_board_unassigned">Nehatiye diyarkirin</string>
+    <string name="projects_board_unset">[neyî sazkirin]</string>
     <string name="projects_board_new">Nû</string>
     <string name="projects_board_rename">Navê biguhere</string>
     <string name="projects_board_rename_column">Navê stûnê biguhere</string>
