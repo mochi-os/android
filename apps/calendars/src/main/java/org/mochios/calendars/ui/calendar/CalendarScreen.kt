@@ -27,7 +27,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.List
@@ -74,11 +73,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.input.key.Key
 import androidx.compose.ui.input.key.KeyEventType
 import androidx.compose.ui.input.key.key
@@ -111,6 +107,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
@@ -835,7 +832,13 @@ private fun Toolbar(
 ) {
     var views by remember { mutableStateOf(false) }
     if (searching) {
-        SearchBar(state.search, onSearchChange, onSearchClose)
+        BackHandler(onBack = onSearchClose)
+        MochiSearchTopBar(
+            query = state.search,
+            placeholder = stringResource(R.string.calendars_list_search_events),
+            onQueryChange = onSearchChange,
+            onClose = onSearchClose,
+        )
         return
     }
     TopAppBar(
@@ -897,65 +900,6 @@ private fun Toolbar(
                             },
                         )
                     }
-                }
-            }
-        },
-    )
-}
-
-/**
- * The toolbar while the list view is searched: back, which closes the search
- * and clears it, a field that takes the keyboard as it opens, and a button
- * that clears what was typed.
- */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun SearchBar(value: String, onChange: (String) -> Unit, onClose: () -> Unit) {
-    val focus = remember { FocusRequester() }
-    LaunchedEffect(Unit) {
-        focus.requestFocus()
-    }
-    BackHandler(onBack = onClose)
-    TopAppBar(
-        title = {
-            BasicTextField(
-                value = value,
-                onValueChange = onChange,
-                singleLine = true,
-                textStyle = MaterialTheme.typography.titleMedium.copy(
-                    color = MaterialTheme.colorScheme.onSurface,
-                ),
-                cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
-                modifier = Modifier.fillMaxWidth().focusRequester(focus),
-                decorationBox = { field ->
-                    Box(contentAlignment = Alignment.CenterStart) {
-                        if (value.isEmpty()) {
-                            Text(
-                                text = stringResource(R.string.calendars_list_search_events),
-                                style = MaterialTheme.typography.titleMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
-                        field()
-                    }
-                },
-            )
-        },
-        navigationIcon = {
-            MochiIconButton(onClick = onClose) {
-                Icon(
-                    Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = stringResource(MochiR.string.common_back),
-                )
-            }
-        },
-        actions = {
-            if (value.isNotEmpty()) {
-                MochiIconButton(onClick = { onChange("") }) {
-                    Icon(
-                        Icons.Default.Close,
-                        contentDescription = stringResource(MochiR.string.common_close),
-                    )
                 }
             }
         },
