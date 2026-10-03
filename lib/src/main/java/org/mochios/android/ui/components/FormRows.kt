@@ -78,12 +78,14 @@ fun <F> formRows(
 
 /**
  * Whether a field of this type holds a value brief enough to share a row: a
- * choice, a person, a date, a number or a tick. Text does not, however few
- * rows it asks for.
+ * choice, a date, a number or a tick. Text does not, however few rows it asks
+ * for, and nor does a person: a name beside an avatar and a clear button is
+ * cut short in half the form, and the picker's search opens as wide as its
+ * field.
  */
 fun shortField(type: String): Boolean = type in SHORT_TYPES
 
-private val SHORT_TYPES = setOf("enumerated", "user", "date", "number", "checkbox")
+private val SHORT_TYPES = setOf("enumerated", "date", "number", "checkbox")
 
 /**
  * Whether a form [width] wide has room for two fields a row at this
