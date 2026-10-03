@@ -428,6 +428,12 @@ class CalendarViewModel @Inject constructor(
         anchor(LocalDate.now(zone))
     }
 
+    /** Moves the view back one period: a day, week, multiweek or month. */
+    fun previous() = anchor(step(_uiState.value.view, _uiState.value.anchor, -1))
+
+    /** Moves the view on one period. */
+    fun next() = anchor(step(_uiState.value.view, _uiState.value.anchor, 1))
+
     fun anchor(date: LocalDate) {
         if (date == _uiState.value.anchor) {
             focus(date)

@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Pupus %1$s tina Mochi?</string>
     <string name="calendars_remove_message">Acarana tetep aya dina kalénder aslina.</string>
     <string name="calendars_today">Poé ieu</string>
+    <string name="calendars_previous">Saméméhna</string>
+    <string name="calendars_next">Salajengna</string>
     <string name="calendars_view_week">Minggu</string>
     <string name="calendars_view_multiweek">Sababaraha minggu</string>
     <string name="calendars_view_month">Bulan</string>

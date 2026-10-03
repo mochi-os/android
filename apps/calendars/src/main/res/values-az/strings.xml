@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s Mochi-dən silinsin?</string>
     <string name="calendars_remove_message">Onun tədbirləri orijinal təqvimdə qalır.</string>
     <string name="calendars_today">Bu gün</string>
+    <string name="calendars_previous">Əvvəlki</string>
+    <string name="calendars_next">Növbəti</string>
     <string name="calendars_view_week">Həftə</string>
     <string name="calendars_view_multiweek">Çoxhəftəlik</string>
     <string name="calendars_view_month">Ay</string>

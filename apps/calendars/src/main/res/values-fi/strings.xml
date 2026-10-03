@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Poistetaanko %1$s Mochista?</string>
     <string name="calendars_remove_message">Sen tapahtumat säilyvät alkuperäisessä kalenterissa.</string>
     <string name="calendars_today">Tänään</string>
+    <string name="calendars_previous">Edellinen</string>
+    <string name="calendars_next">Seuraava</string>
     <string name="calendars_view_week">Viikko</string>
     <string name="calendars_view_multiweek">Monta viikkoa</string>
     <string name="calendars_view_month">Kuukausi</string>

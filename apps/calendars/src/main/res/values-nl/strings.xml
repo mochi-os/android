@@ -65,6 +65,8 @@
     <string name="calendars_remove_title">%1$s uit Mochi verwijderen?</string>
     <string name="calendars_remove_message">De afspraken blijven in de oorspronkelijke agenda staan.</string>
     <string name="calendars_today">Vandaag</string>
+    <string name="calendars_previous">Vorige</string>
+    <string name="calendars_next">Volgende</string>
     <string name="calendars_view_week">Week</string>
     <string name="calendars_view_multiweek">Meerdere weken</string>
     <string name="calendars_view_month">Maand</string>

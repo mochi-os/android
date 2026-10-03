@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">A cire %1$s daga Mochi?</string>
     <string name="calendars_remove_message">Tarurrukansa za su ci gaba da kasancewa a cikin kalandar asali.</string>
     <string name="calendars_today">Yau</string>
+    <string name="calendars_previous">Na baya</string>
+    <string name="calendars_next">Na gaba</string>
     <string name="calendars_view_week">Mako</string>
     <string name="calendars_view_multiweek">Makonni da yawa</string>
     <string name="calendars_view_month">Wata</string>

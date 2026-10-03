@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s-г Mochi-оос хасах уу?</string>
     <string name="calendars_remove_message">Түүн дэх үйл явдлууд эх хуанлидаа хэвээр үлдэнэ.</string>
     <string name="calendars_today">Өнөөдөр</string>
+    <string name="calendars_previous">Өмнөх</string>
+    <string name="calendars_next">Дараах</string>
     <string name="calendars_view_week">Долоо хоног</string>
     <string name="calendars_view_multiweek">Хэд хэдэн долоо хоног</string>
     <string name="calendars_view_month">Сар</string>

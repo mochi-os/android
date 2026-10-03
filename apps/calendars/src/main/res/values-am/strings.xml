@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s ከMochi ይወገድ?</string>
     <string name="calendars_remove_message">ክስተቶቹ በመጀመሪያው የቀን መቁጠሪያ ውስጥ ይቆያሉ።</string>
     <string name="calendars_today">ዛሬ</string>
+    <string name="calendars_previous">ቀዳሚ</string>
+    <string name="calendars_next">ቀጣይ</string>
     <string name="calendars_view_week">ሳምንት</string>
     <string name="calendars_view_multiweek">ብዙ ሳምንታት</string>
     <string name="calendars_view_month">ወር</string>

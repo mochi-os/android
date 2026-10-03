@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s Mochi\'den kaldırılsın mı?</string>
     <string name="calendars_remove_message">Etkinlikleri orijinal takvimde kalır.</string>
     <string name="calendars_today">Bugün</string>
+    <string name="calendars_previous">Önceki</string>
+    <string name="calendars_next">İleri</string>
     <string name="calendars_view_week">Hafta</string>
     <string name="calendars_view_multiweek">Çoklu hafta</string>
     <string name="calendars_view_month">Ay</string>

@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">យក %1$s ចេញពី Mochi ឬ?</string>
     <string name="calendars_remove_message">ព្រឹត្តិការណ៍របស់វានៅតែមាននៅក្នុងប្រតិទិនដើម។</string>
     <string name="calendars_today">ថ្ងៃនេះ</string>
+    <string name="calendars_previous">មុន</string>
+    <string name="calendars_next">បន្ទាប់</string>
     <string name="calendars_view_week">សប្តាហ៍</string>
     <string name="calendars_view_multiweek">ច្រើនសប្តាហ៍</string>
     <string name="calendars_view_month">ខែ</string>

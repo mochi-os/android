@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Tneħħi %1$s minn Mochi?</string>
     <string name="calendars_remove_message">L-avvenimenti tiegħu jibqgħu fil-kalendarju oriġinali.</string>
     <string name="calendars_today">Illum</string>
+    <string name="calendars_previous">Preċedenti</string>
+    <string name="calendars_next">Li jmiss</string>
     <string name="calendars_view_week">Ġimgħa</string>
     <string name="calendars_view_multiweek">Diversi ġimgħat</string>
     <string name="calendars_view_month">Xahar</string>

@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s Mochi-ден алып салынсынбы?</string>
     <string name="calendars_remove_message">Анын иш-чаралары баштапкы календарда калат.</string>
     <string name="calendars_today">Бүгүн</string>
+    <string name="calendars_previous">Мурунку</string>
+    <string name="calendars_next">Кийинки</string>
     <string name="calendars_view_week">Жума</string>
     <string name="calendars_view_multiweek">Бир нече жума</string>
     <string name="calendars_view_month">Ай</string>

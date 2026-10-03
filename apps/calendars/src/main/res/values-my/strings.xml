@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s ကို Mochi မှ ဖယ်ရှားမလား?</string>
     <string name="calendars_remove_message">၎င်း၏ အစီအစဉ်များသည် မူလ ပြက္ခဒိန်တွင် ဆက်ရှိနေပါမည်။</string>
     <string name="calendars_today">ယနေ့</string>
+    <string name="calendars_previous">နောက်သို့</string>
+    <string name="calendars_next">ရှေ့သို့</string>
     <string name="calendars_view_week">အပတ်</string>
     <string name="calendars_view_multiweek">အပတ်များစွာ</string>
     <string name="calendars_view_month">လ</string>

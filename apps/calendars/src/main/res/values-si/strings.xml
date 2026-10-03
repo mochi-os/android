@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s Mochi වෙතින් ඉවත් කරන්නද?</string>
     <string name="calendars_remove_message">එහි සිදුවීම් මුල් දින දර්ශනයේම පවතී.</string>
     <string name="calendars_today">අද</string>
+    <string name="calendars_previous">පෙර</string>
+    <string name="calendars_next">ඊළඟ</string>
     <string name="calendars_view_week">සතිය</string>
     <string name="calendars_view_multiweek">සති කිහිපයක්</string>
     <string name="calendars_view_month">මාසය</string>

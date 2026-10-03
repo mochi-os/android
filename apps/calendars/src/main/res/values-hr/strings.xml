@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Ukloniti %1$s iz Mochija?</string>
     <string name="calendars_remove_message">Njegovi događaji ostaju u izvornom kalendaru.</string>
     <string name="calendars_today">Danas</string>
+    <string name="calendars_previous">Prethodno</string>
+    <string name="calendars_next">Sljedeće</string>
     <string name="calendars_view_week">Tjedan</string>
     <string name="calendars_view_multiweek">Više tjedana</string>
     <string name="calendars_view_month">Mjesec</string>

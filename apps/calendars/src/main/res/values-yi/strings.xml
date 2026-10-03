@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">אַראָפּנעמען %1$s פֿון Mochi?</string>
     <string name="calendars_remove_message">זײַנע געשעענישן בלײַבן אין דעם אָריגינעלן קאַלענדאַר.</string>
     <string name="calendars_today">הײַנט</string>
+    <string name="calendars_previous">פֿריִער</string>
+    <string name="calendars_next">ווײַטער</string>
     <string name="calendars_view_week">וואָך</string>
     <string name="calendars_view_multiweek">עטלעכע וואָכן</string>
     <string name="calendars_view_month">חודש</string>

@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Ta bort %1$s från Mochi?</string>
     <string name="calendars_remove_message">Dess händelser finns kvar i den ursprungliga kalendern.</string>
     <string name="calendars_today">Idag</string>
+    <string name="calendars_previous">Föregående</string>
+    <string name="calendars_next">Nästa</string>
     <string name="calendars_view_week">Vecka</string>
     <string name="calendars_view_multiweek">Flera veckor</string>
     <string name="calendars_view_month">Månad</string>

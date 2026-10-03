@@ -65,6 +65,8 @@
     <string name="calendars_remove_title">Fjern %1$s fra Mochi?</string>
     <string name="calendars_remove_message">Dens begivenheder forbliver i den oprindelige kalender.</string>
     <string name="calendars_today">I dag</string>
+    <string name="calendars_previous">Forrige</string>
+    <string name="calendars_next">Næste</string>
     <string name="calendars_view_week">Uge</string>
     <string name="calendars_view_multiweek">Flere uger</string>
     <string name="calendars_view_month">Måned</string>

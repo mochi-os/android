@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Të hiqet %1$s nga Mochi?</string>
     <string name="calendars_remove_message">Ngjarjet e tij mbeten në kalendarin origjinal.</string>
     <string name="calendars_today">Sot</string>
+    <string name="calendars_previous">I mëparshmi</string>
+    <string name="calendars_next">Tjetri</string>
     <string name="calendars_view_week">Java</string>
     <string name="calendars_view_multiweek">Disa javë</string>
     <string name="calendars_view_month">Muaji</string>

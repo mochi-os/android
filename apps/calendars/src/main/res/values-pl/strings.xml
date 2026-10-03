@@ -65,6 +65,8 @@
     <string name="calendars_remove_title">Usunąć %1$s z Mochi?</string>
     <string name="calendars_remove_message">Jego wydarzenia pozostaną w oryginalnym kalendarzu.</string>
     <string name="calendars_today">Dzisiaj</string>
+    <string name="calendars_previous">Poprzedni</string>
+    <string name="calendars_next">Dalej</string>
     <string name="calendars_view_week">Tydzień</string>
     <string name="calendars_view_multiweek">Kilka tygodni</string>
     <string name="calendars_view_month">Miesiąc</string>

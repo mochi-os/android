@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Retire %1$s nan Mochi?</string>
     <string name="calendars_remove_message">Evènman li yo rete nan kalandriye orijinal la.</string>
     <string name="calendars_today">Jodi a</string>
+    <string name="calendars_previous">Anvan</string>
+    <string name="calendars_next">Pwochen</string>
     <string name="calendars_view_week">Semèn</string>
     <string name="calendars_view_multiweek">Plizyè semèn</string>
     <string name="calendars_view_month">Mwa</string>

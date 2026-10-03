@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Kas eemaldada %1$s Mochist?</string>
     <string name="calendars_remove_message">Selle sündmused jäävad algsesse kalendrisse.</string>
     <string name="calendars_today">Täna</string>
+    <string name="calendars_previous">Eelmine</string>
+    <string name="calendars_next">Edasi</string>
     <string name="calendars_view_week">Nädal</string>
     <string name="calendars_view_multiweek">Mitu nädalat</string>
     <string name="calendars_view_month">Kuu</string>

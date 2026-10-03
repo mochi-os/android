@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">从 Mochi 移除 %1$s?</string>
     <string name="calendars_remove_message">其中的活动会保留在原日历中。</string>
     <string name="calendars_today">今天</string>
+    <string name="calendars_previous">上一步</string>
+    <string name="calendars_next">下一步</string>
     <string name="calendars_view_week">周</string>
     <string name="calendars_view_multiweek">多周</string>
     <string name="calendars_view_month">月</string>

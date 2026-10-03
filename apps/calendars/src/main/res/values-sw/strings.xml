@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Uondoe %1$s kutoka Mochi?</string>
     <string name="calendars_remove_message">Matukio yake yanabaki kwenye kalenda ya asili.</string>
     <string name="calendars_today">Leo</string>
+    <string name="calendars_previous">Iliyotangulia</string>
+    <string name="calendars_next">Inayofuata</string>
     <string name="calendars_view_week">Wiki</string>
     <string name="calendars_view_multiweek">Wiki kadhaa</string>
     <string name="calendars_view_month">Mwezi</string>

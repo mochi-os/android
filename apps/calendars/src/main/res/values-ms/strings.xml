@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Alih keluar %1$s daripada Mochi?</string>
     <string name="calendars_remove_message">Acaranya kekal dalam kalendar asal.</string>
     <string name="calendars_today">Hari ini</string>
+    <string name="calendars_previous">Sebelumnya</string>
+    <string name="calendars_next">Seterusnya</string>
     <string name="calendars_view_week">Minggu</string>
     <string name="calendars_view_multiweek">Berbilang minggu</string>
     <string name="calendars_view_month">Bulan</string>

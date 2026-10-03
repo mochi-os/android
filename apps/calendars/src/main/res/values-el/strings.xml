@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Αφαίρεση του %1$s από το Mochi;</string>
     <string name="calendars_remove_message">Τα συμβάντα του παραμένουν στο αρχικό ημερολόγιο.</string>
     <string name="calendars_today">Σήμερα</string>
+    <string name="calendars_previous">Προηγούμενο</string>
+    <string name="calendars_next">Επόμενο</string>
     <string name="calendars_view_week">Εβδομάδα</string>
     <string name="calendars_view_multiweek">Πολλές εβδομάδες</string>
     <string name="calendars_view_month">Μήνας</string>

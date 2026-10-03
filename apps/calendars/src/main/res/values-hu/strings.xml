@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Eltávolítja a Mochiból a következőt: %1$s?</string>
     <string name="calendars_remove_message">Az eseményei az eredeti naptárban maradnak.</string>
     <string name="calendars_today">Ma</string>
+    <string name="calendars_previous">Előző</string>
+    <string name="calendars_next">Következő</string>
     <string name="calendars_view_week">Hét</string>
     <string name="calendars_view_multiweek">Több hét</string>
     <string name="calendars_view_month">Hónap</string>

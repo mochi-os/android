@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Mochi থেকে %1$s সরাবেন?</string>
     <string name="calendars_remove_message">এর ইভেন্টগুলো মূল ক্যালেন্ডারে থেকে যাবে।</string>
     <string name="calendars_today">আজ</string>
+    <string name="calendars_previous">পূর্ববর্তী</string>
+    <string name="calendars_next">পরবর্তী</string>
     <string name="calendars_view_week">সপ্তাহ</string>
     <string name="calendars_view_multiweek">একাধিক সপ্তাহ</string>
     <string name="calendars_view_month">মাস</string>

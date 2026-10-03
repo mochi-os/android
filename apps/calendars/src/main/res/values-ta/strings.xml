@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s-ஐ Mochi-இலிருந்து அகற்றவா?</string>
     <string name="calendars_remove_message">அதன் நிகழ்வுகள் அசல் நாட்காட்டியிலேயே இருக்கும்.</string>
     <string name="calendars_today">இன்று</string>
+    <string name="calendars_previous">முந்தையது</string>
+    <string name="calendars_next">அடுத்து</string>
     <string name="calendars_view_week">வாரம்</string>
     <string name="calendars_view_multiweek">பல வாரங்கள்</string>
     <string name="calendars_view_month">மாதம்</string>

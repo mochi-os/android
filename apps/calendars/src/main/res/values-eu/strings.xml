@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s Mochitik kendu?</string>
     <string name="calendars_remove_message">Haren gertaerak jatorrizko egutegian geratzen dira.</string>
     <string name="calendars_today">Gaur</string>
+    <string name="calendars_previous">Aurrekoa</string>
+    <string name="calendars_next">Hurrengoa</string>
     <string name="calendars_view_week">Astea</string>
     <string name="calendars_view_multiweek">Aste anitz</string>
     <string name="calendars_view_month">Hilabetea</string>

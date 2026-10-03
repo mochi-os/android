@@ -65,6 +65,8 @@
     <string name="calendars_remove_title">Fjerne %1$s frå Mochi?</string>
     <string name="calendars_remove_message">Hendingane i han blir verande i den opphavlege kalenderen.</string>
     <string name="calendars_today">I dag</string>
+    <string name="calendars_previous">Førre</string>
+    <string name="calendars_next">Neste</string>
     <string name="calendars_view_week">Veke</string>
     <string name="calendars_view_multiweek">Fleire veker</string>
     <string name="calendars_view_month">Månad</string>

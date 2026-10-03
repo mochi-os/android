@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s аз Mochi хориҷ карда шавад?</string>
     <string name="calendars_remove_message">Рӯйдодҳои он дар тақвими аслӣ боқӣ мемонанд.</string>
     <string name="calendars_today">Имрӯз</string>
+    <string name="calendars_previous">Қаблӣ</string>
+    <string name="calendars_next">Баъдӣ</string>
     <string name="calendars_view_week">Ҳафта</string>
     <string name="calendars_view_multiweek">Якчанд ҳафта</string>
     <string name="calendars_view_month">Моҳ</string>

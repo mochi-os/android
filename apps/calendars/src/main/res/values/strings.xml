@@ -36,6 +36,8 @@
 
     <!-- Toolbar and views -->
     <string name="calendars_today">Today</string>
+    <string name="calendars_previous">Previous</string>
+    <string name="calendars_next">Next</string>
     <string name="calendars_view">View</string>
     <string name="calendars_view_day">Day</string>
     <string name="calendars_view_week">Week</string>

@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">¿%1$s-ta Mochi-manta qichunkichu?</string>
     <string name="calendars_remove_message">Eventokunanqa ñawpaq calendariopim qhipanku.</string>
     <string name="calendars_today">Kunan p\'unchaw</string>
+    <string name="calendars_previous">Ñawpaqnin</string>
+    <string name="calendars_next">Qatiqnin</string>
     <string name="calendars_view_week">Semana</string>
     <string name="calendars_view_multiweek">Achka semanakuna</string>
     <string name="calendars_view_month">Killa</string>

@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s を Mochi から削除しますか?</string>
     <string name="calendars_remove_message">予定は元のカレンダーに残ります。</string>
     <string name="calendars_today">今日</string>
+    <string name="calendars_previous">前へ</string>
+    <string name="calendars_next">次へ</string>
     <string name="calendars_view_week">週</string>
     <string name="calendars_view_multiweek">複数週</string>
     <string name="calendars_view_month">月</string>

@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Tynnu %1$s o Mochi?</string>
     <string name="calendars_remove_message">Mae ei ddigwyddiadau\'n aros yn y calendr gwreiddiol.</string>
     <string name="calendars_today">Heddiw</string>
+    <string name="calendars_previous">Blaenorol</string>
+    <string name="calendars_next">Nesaf</string>
     <string name="calendars_view_week">Wythnos</string>
     <string name="calendars_view_multiweek">Aml-wythnos</string>
     <string name="calendars_view_month">Mis</string>

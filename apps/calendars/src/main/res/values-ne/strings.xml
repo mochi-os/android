@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s लाई Mochi बाट हटाउने?</string>
     <string name="calendars_remove_message">यसका कार्यक्रमहरू मूल क्यालेन्डरमै रहन्छन्।</string>
     <string name="calendars_today">आज</string>
+    <string name="calendars_previous">अघिल्लो</string>
+    <string name="calendars_next">अर्को</string>
     <string name="calendars_view_week">हप्ता</string>
     <string name="calendars_view_multiweek">धेरै हप्ता</string>
     <string name="calendars_view_month">महिना</string>

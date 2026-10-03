@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Bain %1$s de Mochi?</string>
     <string name="calendars_remove_message">Fanann a imeachtaí san fhéilire bunaidh.</string>
     <string name="calendars_today">Inniu</string>
+    <string name="calendars_previous">Roimhe seo</string>
+    <string name="calendars_next">Ar aghaidh</string>
     <string name="calendars_view_week">Seachtain</string>
     <string name="calendars_view_multiweek">Ilseachtain</string>
     <string name="calendars_view_month">Mí</string>

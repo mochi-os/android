@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s Mochi मधून काढायचे?</string>
     <string name="calendars_remove_message">त्याचे कार्यक्रम मूळ कॅलेंडरमध्येच राहतील.</string>
     <string name="calendars_today">आज</string>
+    <string name="calendars_previous">मागील</string>
+    <string name="calendars_next">पुढे</string>
     <string name="calendars_view_week">आठवडा</string>
     <string name="calendars_view_multiweek">अनेक आठवडे</string>
     <string name="calendars_view_month">महिना</string>

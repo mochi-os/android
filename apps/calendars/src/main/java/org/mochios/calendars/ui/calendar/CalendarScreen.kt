@@ -13,6 +13,7 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.focusable
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.layout.Arrangement
@@ -78,10 +79,18 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.input.key.KeyEventType
+import androidx.compose.ui.input.key.key
+import androidx.compose.ui.input.key.onPreviewKeyEvent
+import androidx.compose.ui.input.key.type
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.CustomAccessibilityAction
+import androidx.compose.ui.semantics.customActions
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -629,14 +638,48 @@ private fun View(
         var top by remember { mutableStateOf(0.dp) }
         val seamed = state.view == CalendarsSection.MONTH || state.view == CalendarsSection.MULTIWEEK
         val seam = MaterialTheme.colorScheme.outlineVariant
+        val previous = stringResource(R.string.calendars_previous)
+        val next = stringResource(R.string.calendars_next)
         Row(modifier = Modifier.fillMaxSize()) {
             if (timed) {
                 HourGutter(top, scroll)
             }
+            // With no arrows on screen, TalkBack offers Previous and Next as
+            // actions on the pager and a keyboard pages it with the arrow and
+            // page keys, each moving the view one period as a swipe does.
             HorizontalPager(
                 state = pager,
                 pageSpacing = if (seamed) SEAM else 0.dp,
-                modifier = Modifier.weight(1f).fillMaxHeight(),
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxHeight()
+                    .semantics {
+                        customActions = listOf(
+                            CustomAccessibilityAction(previous) {
+                                viewModel.previous()
+                                true
+                            },
+                            CustomAccessibilityAction(next) {
+                                viewModel.next()
+                                true
+                            },
+                        )
+                    }
+                    .onPreviewKeyEvent { event ->
+                        when {
+                            event.type != KeyEventType.KeyDown -> false
+                            event.key == Key.DirectionLeft || event.key == Key.PageUp -> {
+                                viewModel.previous()
+                                true
+                            }
+                            event.key == Key.DirectionRight || event.key == Key.PageDown -> {
+                                viewModel.next()
+                                true
+                            }
+                            else -> false
+                        }
+                    }
+                    .focusable(),
             ) { page ->
                 val shown = if (page == target) {
                     state

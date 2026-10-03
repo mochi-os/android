@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s ಅನ್ನು Mochi ನಿಂದ ತೆಗೆದುಹಾಕಬೇಕೇ?</string>
     <string name="calendars_remove_message">ಅದರ ಈವೆಂಟ್‌ಗಳು ಮೂಲ ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಉಳಿಯುತ್ತವೆ.</string>
     <string name="calendars_today">ಇಂದು</string>
+    <string name="calendars_previous">ಹಿಂದಿನ</string>
+    <string name="calendars_next">ಮುಂದೆ</string>
     <string name="calendars_view_week">ವಾರ</string>
     <string name="calendars_view_multiweek">ಹಲವು ವಾರಗಳು</string>
     <string name="calendars_view_month">ತಿಂಗಳು</string>

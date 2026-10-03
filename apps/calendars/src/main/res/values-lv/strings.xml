@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Noņemt %1$s no Mochi?</string>
     <string name="calendars_remove_message">Tā notikumi paliek sākotnējā kalendārā.</string>
     <string name="calendars_today">Šodien</string>
+    <string name="calendars_previous">Iepriekšējais</string>
+    <string name="calendars_next">Tālāk</string>
     <string name="calendars_view_week">Nedēļa</string>
     <string name="calendars_view_multiweek">Vairākas nedēļas</string>
     <string name="calendars_view_month">Mēnesis</string>

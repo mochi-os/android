@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s को Mochi से हटाएँ?</string>
     <string name="calendars_remove_message">इसके इवेंट मूल कैलेंडर में बने रहेंगे।</string>
     <string name="calendars_today">आज</string>
+    <string name="calendars_previous">पिछला</string>
+    <string name="calendars_next">अगला</string>
     <string name="calendars_view_week">सप्ताह</string>
     <string name="calendars_view_multiweek">कई सप्ताह</string>
     <string name="calendars_view_month">महीना</string>

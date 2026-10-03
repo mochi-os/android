@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Xoá %1$s khỏi Mochi?</string>
     <string name="calendars_remove_message">Các sự kiện của lịch vẫn được giữ nguyên trong lịch gốc.</string>
     <string name="calendars_today">Hôm nay</string>
+    <string name="calendars_previous">Trước</string>
+    <string name="calendars_next">Tiếp</string>
     <string name="calendars_view_week">Tuần</string>
     <string name="calendars_view_multiweek">Nhiều tuần</string>
     <string name="calendars_view_month">Tháng</string>

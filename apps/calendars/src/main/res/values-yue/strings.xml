@@ -73,6 +73,8 @@
     <string name="calendars_polled_current">日曆已經係最新</string>
     <string name="calendars_polled_synced">日曆已經同步</string>
     <string name="calendars_today">今日</string>
+    <string name="calendars_previous">上一頁</string>
+    <string name="calendars_next">下一步</string>
     <string name="calendars_view_day">日</string>
     <string name="calendars_view_week">週</string>
     <string name="calendars_view_multiweek">多週</string>

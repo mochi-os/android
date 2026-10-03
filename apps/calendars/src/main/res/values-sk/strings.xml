@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Odstrániť %1$s z Mochi?</string>
     <string name="calendars_remove_message">Jeho udalosti zostanú v pôvodnom kalendári.</string>
     <string name="calendars_today">Dnes</string>
+    <string name="calendars_previous">Predchádzajúci</string>
+    <string name="calendars_next">Ďalej</string>
     <string name="calendars_view_week">Týždeň</string>
     <string name="calendars_view_multiweek">Viac týždňov</string>
     <string name="calendars_view_month">Mesiac</string>

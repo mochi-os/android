@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">%1$s Mochi-യിൽ നിന്ന് നീക്കം ചെയ്യണോ?</string>
     <string name="calendars_remove_message">ഇതിന്റെ ഇവന്റുകൾ യഥാർത്ഥ കലണ്ടറിൽ തന്നെ തുടരും.</string>
     <string name="calendars_today">ഇന്ന്</string>
+    <string name="calendars_previous">മുമ്പത്തേത്</string>
+    <string name="calendars_next">അടുത്തത്</string>
     <string name="calendars_view_week">ആഴ്ച</string>
     <string name="calendars_view_multiweek">ഒന്നിലധികം ആഴ്ചകൾ</string>
     <string name="calendars_view_month">മാസം</string>

@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Fjarlægja %1$s úr Mochi?</string>
     <string name="calendars_remove_message">Viðburðir þess verða áfram í upprunalega dagatalinu.</string>
     <string name="calendars_today">Í dag</string>
+    <string name="calendars_previous">Fyrri</string>
+    <string name="calendars_next">Áfram</string>
     <string name="calendars_view_week">Vika</string>
     <string name="calendars_view_multiweek">Margar vikur</string>
     <string name="calendars_view_month">Mánuður</string>

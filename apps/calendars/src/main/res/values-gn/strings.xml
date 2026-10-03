@@ -66,6 +66,8 @@
     <string name="calendars_remove_title">Embogue %1$s Mochi-gui?</string>
     <string name="calendars_remove_message">Umi evento opyta arapapaha ypykuépe.</string>
     <string name="calendars_today">Ko ára</string>
+    <string name="calendars_previous">Tenondete</string>
+    <string name="calendars_next">Tenondeve</string>
     <string name="calendars_view_week">Arapokõindy</string>
     <string name="calendars_view_multiweek">Heta arapokõindy</string>
     <string name="calendars_view_month">Jasy</string>
