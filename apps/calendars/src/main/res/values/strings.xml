@@ -33,6 +33,16 @@
     <string name="calendars_remove_message">Its events stay in the original calendar.</string>
     <string name="calendars_polled_current">Calendar up to date</string>
     <string name="calendars_polled_synced">Calendar synced</string>
+    <string name="calendars_created">Calendar created</string>
+    <string name="calendars_renamed">Calendar renamed</string>
+    <string name="calendars_colour_saved">Colour saved</string>
+    <string name="calendars_deleted">Calendar deleted</string>
+    <string name="calendars_removed">Calendar removed</string>
+    <string name="calendars_preferences_saved">Preferences saved</string>
+    <string name="calendars_link_revoked">Calendar address revoked</string>
+    <string name="calendars_link_none">This calendar has no address to revoke</string>
+    <string name="calendars_linked">Calendar linked</string>
+    <string name="calendars_subscribed">Subscribed</string>
 
     <!-- Toolbar and views -->
     <string name="calendars_today">Today</string>
@@ -47,15 +57,20 @@
     <string name="calendars_workweek">Work week</string>
     <string name="calendars_range">%1$s to %2$s</string>
     <string name="calendars_span_day">%1$s, %2$s to %3$s</string>
-    <string name="calendars_truncated">Some events in this range are not shown.</string>
+    <string name="calendars_truncated">Too many events to show them all. Choose a shorter range.</string>
     <string name="calendars_list_empty">No events</string>
     <string name="calendars_list_nothing">Nothing planned. Tap to create.</string>
     <string name="calendars_list_unmatched">No matches</string>
+    <string name="calendars_list_earlier">Earlier events</string>
     <string name="calendars_list_search_events">Search events</string>
     <string name="calendars_list_search">Search</string>
     <plurals name="calendars_minutes">
         <item quantity="one">%1$s minute</item>
         <item quantity="other">%1$s minutes</item>
+    </plurals>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s hour</item>
+        <item quantity="other">%1$s hours</item>
     </plurals>
 
     <!-- Events -->
@@ -183,15 +198,7 @@
     <!-- Preferences -->
     <string name="calendars_hours_start">Working hours start</string>
     <string name="calendars_hours_finish">Working hours end</string>
-    <string name="calendars_hours_invalid">Working hours must end after they start.</string>
     <string name="calendars_work_days">Work days</string>
-    <string name="calendars_day_sunday">Sunday</string>
-    <string name="calendars_day_monday">Monday</string>
-    <string name="calendars_day_tuesday">Tuesday</string>
-    <string name="calendars_day_wednesday">Wednesday</string>
-    <string name="calendars_day_thursday">Thursday</string>
-    <string name="calendars_day_friday">Friday</string>
-    <string name="calendars_day_saturday">Saturday</string>
     <string name="calendars_multiweek_weeks">Weeks shown</string>
     <string name="calendars_multiweek_previous">Weeks before</string>
     <string name="calendars_default_duration">Default event length</string>
@@ -203,10 +210,10 @@
     <string name="calendars_preferences_zones">Show events in their own time zone</string>
 
     <!-- ICS link -->
-    <string name="calendars_link_title">Calendar link</string>
-    <string name="calendars_link_copy">Copy link</string>
+    <string name="calendars_link_title">Calendar address</string>
+    <string name="calendars_link_copy">Copy calendar address</string>
     <string name="calendars_link_once">Copy it now: it cannot be shown again.</string>
-    <string name="calendars_link_exists">A link already exists for this calendar.</string>
+    <string name="calendars_link_exists">This calendar address was already issued and cannot be shown again.</string>
     <string name="calendars_link_replace">Replace</string>
     <string name="calendars_link_revoke">Revoke</string>
     <string name="calendars_link_replace_title">Replace the calendar address?</string>
@@ -243,7 +250,9 @@
     <string name="calendars_subscribe_username">Username</string>
     <string name="calendars_subscribe_password">Password</string>
     <string name="calendars_subscribe_connect">Connect</string>
-    <string name="calendars_subscribe_google_enable">Google accounts have not been enabled on this server. Enable them under Settings, System settings.</string>
+    <string name="calendars_subscribe_google_enable">Google accounts have not been enabled on this server.</string>
+    <string name="calendars_subscribe_google_enable_action">Enable Google accounts</string>
+    <string name="calendars_provider_caldav">Calendar server</string>
     <string name="calendars_subscribe_google_connect">You haven\'t connected a Google account.</string>
     <string name="calendars_subscribe_google_connect_action">Connect Google</string>
 
@@ -289,7 +298,7 @@
     <string name="calendars_device_used">last used %1$s</string>
     <string name="calendars_device_never">never</string>
     <string name="calendars_device_delete">Delete</string>
-    <string name="calendars_device_deleted">Device removed</string>
-    <string name="calendars_device_delete_title">Remove this device?</string>
-    <string name="calendars_device_delete_message">It will have to be set up again to sync.</string>
+    <string name="calendars_device_deleted">Device deleted</string>
+    <string name="calendars_device_delete_title">Delete device?</string>
+    <string name="calendars_device_delete_message">The device will no longer be able to sync contacts or calendars.</string>
 </resources>

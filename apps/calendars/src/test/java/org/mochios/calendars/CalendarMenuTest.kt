@@ -10,6 +10,7 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -72,5 +73,38 @@ class CalendarMenuTest {
         open(Calendar(id = "birthdays", name = "Birthdays", kind = Calendar.KIND_BIRTHDAYS, readonly = true))
         rule.onNodeWithText(import).assertDoesNotExist()
         rule.onNodeWithText(export).assertExists()
+    }
+
+    @Test
+    fun `a subscription can be renamed, as on the web, and the birthdays calendar cannot`() {
+        val rename = context.getString(R.string.calendars_rename)
+        val chosen = open(Calendar(id = "subscribed", name = "Holidays", kind = Calendar.KIND_SUBSCRIPTION, readonly = true))
+        rule.onNodeWithText(rename).performClick()
+        assertEquals(listOf(CalendarAction.RENAME), chosen)
+    }
+
+    @Test
+    fun `the birthdays calendar keeps its own name`() {
+        open(Calendar(id = "birthdays", name = "Birthdays", kind = Calendar.KIND_BIRTHDAYS, readonly = true))
+        rule.onNodeWithText(context.getString(R.string.calendars_rename)).assertDoesNotExist()
+    }
+
+    @Test
+    fun `Poll now comes before the calendar address, as on the web`() {
+        open(Calendar(id = "subscribed", name = "Holidays", kind = Calendar.KIND_SUBSCRIPTION, readonly = true))
+        val poll = rule.onNodeWithText(context.getString(R.string.calendars_poll)).fetchSemanticsNode().boundsInRoot
+        val copy = rule.onNodeWithText(context.getString(R.string.calendars_link_copy)).fetchSemanticsNode().boundsInRoot
+        assertTrue(poll.top < copy.top)
+    }
+
+    @Test
+    fun `the address and device questions use the web's words`() {
+        assertEquals("Calendar address", context.getString(R.string.calendars_link_title))
+        assertEquals("Copy calendar address", context.getString(R.string.calendars_link_copy))
+        assertEquals("Delete device?", context.getString(R.string.calendars_device_delete_title))
+        assertEquals(
+            "The device will no longer be able to sync contacts or calendars.",
+            context.getString(R.string.calendars_device_delete_message),
+        )
     }
 }

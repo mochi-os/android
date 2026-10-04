@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Yn flynyddol</string>
     <string name="calendars_repeat_custom">Wedi\'i addasu</string>
     <string name="calendars_reminder_none">Dim</string>
-    <string name="calendars_day_sunday">Dydd Sul</string>
-    <string name="calendars_day_monday">Dydd Llun</string>
-    <string name="calendars_day_tuesday">Dydd Mawrth</string>
-    <string name="calendars_day_wednesday">Dydd Mercher</string>
-    <string name="calendars_day_thursday">Dydd Iau</string>
-    <string name="calendars_day_friday">Dydd Gwener</string>
-    <string name="calendars_day_saturday">Dydd Sadwrn</string>
     <string name="calendars_link_replace">Newid</string>
     <string name="calendars_link_revoke">Dirymu</string>
     <string name="calendars_permission_allow">Caniatáu</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Mis</string>
     <string name="calendars_workweek">Wythnos waith</string>
     <string name="calendars_range">%1$s i %2$s</string>
-    <string name="calendars_truncated">Nid yw rhai digwyddiadau yn yr ystod hon yn cael eu dangos.</string>
+    <string name="calendars_truncated">Gormod o ddigwyddiadau i\'w dangos i gyd. Dewiswch ystod fyrrach.</string>
     <string name="calendars_list_empty">Dim digwyddiadau</string>
     <string name="calendars_untitled">(Dim teitl)</string>
     <string name="calendars_status_cancelled">Wedi\'i ganslo</string>
@@ -122,7 +115,6 @@
     <string name="calendars_reminder_remove">Tynnu nodyn atgoffa</string>
     <string name="calendars_hours_start">Dechrau oriau gwaith</string>
     <string name="calendars_hours_finish">Diwedd oriau gwaith</string>
-    <string name="calendars_hours_invalid">Rhaid i oriau gwaith ddod i ben ar ôl iddynt ddechrau.</string>
     <string name="calendars_work_days">Dyddiau gwaith</string>
     <string name="calendars_multiweek_weeks">Wythnosau i\'w dangos</string>
     <string name="calendars_multiweek_previous">Wythnosau blaenorol</string>
@@ -132,10 +124,10 @@
     <string name="calendars_preferences_allday">Digwyddiadau trwy\'r dydd</string>
     <string name="calendars_allday_first">Yn gyntaf</string>
     <string name="calendars_allday_last">Yn olaf</string>
-    <string name="calendars_link_title">Dolen y calendr</string>
-    <string name="calendars_link_copy">Copïo\'r ddolen</string>
+    <string name="calendars_link_title">Cyfeiriad y calendr</string>
+    <string name="calendars_link_copy">Copïo cyfeiriad y calendr</string>
     <string name="calendars_link_once">Copïwch hi nawr: ni ellir ei dangos eto.</string>
-    <string name="calendars_link_exists">Mae dolen eisoes yn bodoli ar gyfer y calendr hwn.</string>
+    <string name="calendars_link_exists">Cafodd cyfeiriad y calendr hwn ei gyhoeddi eisoes ac ni ellir ei ddangos eto.</string>
     <string name="calendars_permission_title">Caniatáu mynediad?</string>
     <string name="calendars_permission_message">Mae %1$s yn gofyn am:</string>
     <string name="calendars_sync_authorization">Mewngofnodwch eto i barhau i gydweddu</string>
@@ -143,9 +135,9 @@
     <string name="calendars_device_empty">Dim dyfeisiau wedi\'u cysylltu</string>
     <string name="calendars_device_used">defnyddiwyd ddiwethaf %1$s</string>
     <string name="calendars_device_never">byth</string>
-    <string name="calendars_device_deleted">Tynnwyd y ddyfais</string>
-    <string name="calendars_device_delete_title">Tynnu\'r ddyfais hon?</string>
-    <string name="calendars_device_delete_message">Bydd angen ei sefydlu eto er mwyn cydweddu.</string>
+    <string name="calendars_device_deleted">Dyfais wedi\'i dileu</string>
+    <string name="calendars_device_delete_title">Dileu\'r ddyfais?</string>
+    <string name="calendars_device_delete_message">Ni fydd y ddyfais yn gallu cysoni cysylltiadau na chalendrau mwyach.</string>
     <string name="calendars_sync_choose">Calendrau i\'w cydweddu</string>
     <string name="calendars_poll_large">Mae\'r calendr yn rhy fawr</string>
     <string name="calendars_poll_invalid">Ni ddychwelodd y cyfeiriad galendr</string>
@@ -192,7 +184,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Calendr Google</string>
-    <string name="calendars_subscribe_google_enable">Nid yw cyfrifon Google wedi\'u galluogi ar y gweinydd hwn. Galluogwch nhw o dan Gosodiadau, Gosodiadau system.</string>
+    <string name="calendars_subscribe_google_enable">Nid yw cyfrifon Google wedi\'u galluogi ar y gweinydd hwn.</string>
     <string name="calendars_subscribe_google_connect">Nid ydych wedi cysylltu cyfrif Google.</string>
     <string name="calendars_subscribe_google_connect_action">Cysylltu Google</string>
     <string name="calendars_grant_failed">Ni roddwyd mynediad i\'r calendr</string>
@@ -315,4 +307,25 @@
     </plurals>
     <string name="calendars_rule_until">tan %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Digwyddiadau cynharach</string>
+    <string name="calendars_created">Calendr wedi\'i greu</string>
+    <string name="calendars_renamed">Calendr wedi\'i ailenwi</string>
+    <string name="calendars_colour_saved">Lliw wedi\'i gadw</string>
+    <string name="calendars_deleted">Calendr wedi\'i ddileu</string>
+    <string name="calendars_removed">Calendr wedi\'i dynnu</string>
+    <string name="calendars_preferences_saved">Dewisiadau wedi\'u cadw</string>
+    <string name="calendars_link_revoked">Cyfeiriad y calendr wedi\'i ddirymu</string>
+    <string name="calendars_link_none">Nid oes gan y calendr hwn gyfeiriad i\'w ddirymu</string>
+    <string name="calendars_linked">Cysylltwyd y calendr</string>
+    <string name="calendars_subscribed">Wedi tanysgrifio</string>
+    <plurals name="calendars_hours">
+        <item quantity="zero">%1$s awr</item>
+        <item quantity="one">%1$s awr</item>
+        <item quantity="two">%1$s awr</item>
+        <item quantity="few">%1$s awr</item>
+        <item quantity="many">%1$s awr</item>
+        <item quantity="other">%1$s awr</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Galluogi cyfrifon Google</string>
+    <string name="calendars_provider_caldav">Gweinydd calendr</string>
 </resources>

@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Штогод</string>
     <string name="calendars_repeat_custom">Карыстальніцкі</string>
     <string name="calendars_reminder_none">Няма</string>
-    <string name="calendars_day_sunday">Нядзеля</string>
-    <string name="calendars_day_monday">Панядзелак</string>
-    <string name="calendars_day_tuesday">Аўторак</string>
-    <string name="calendars_day_wednesday">Серада</string>
-    <string name="calendars_day_thursday">Чацвер</string>
-    <string name="calendars_day_friday">Пятніца</string>
-    <string name="calendars_day_saturday">Субота</string>
     <string name="calendars_link_replace">Замяніць</string>
     <string name="calendars_link_revoke">Адклікаць</string>
     <string name="calendars_permission_allow">Дазволіць</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Месяц</string>
     <string name="calendars_workweek">Працоўны тыдзень</string>
     <string name="calendars_range">з %1$s па %2$s</string>
-    <string name="calendars_truncated">Некаторыя падзеі ў гэтым дыяпазоне не паказаны.</string>
+    <string name="calendars_truncated">Занадта шмат падзей, каб паказаць усе. Выберыце карацейшы дыяпазон.</string>
     <string name="calendars_list_empty">Няма падзей</string>
     <string name="calendars_untitled">(Без назвы)</string>
     <string name="calendars_status_cancelled">Адменена</string>
@@ -116,7 +109,6 @@
     <string name="calendars_reminder_remove">Выдаліць напамін</string>
     <string name="calendars_hours_start">Пачатак працоўнага дня</string>
     <string name="calendars_hours_finish">Канец працоўнага дня</string>
-    <string name="calendars_hours_invalid">Працоўны дзень павінен заканчвацца пасля пачатку.</string>
     <string name="calendars_work_days">Працоўныя дні</string>
     <string name="calendars_multiweek_weeks">Паказваць тыдняў</string>
     <string name="calendars_multiweek_previous">Тыдняў раней</string>
@@ -126,10 +118,10 @@
     <string name="calendars_preferences_allday">Падзеі на ўвесь дзень</string>
     <string name="calendars_allday_first">У пачатку</string>
     <string name="calendars_allday_last">У канцы</string>
-    <string name="calendars_link_title">Спасылка на каляндар</string>
-    <string name="calendars_link_copy">Капіяваць спасылку</string>
+    <string name="calendars_link_title">Адрас календара</string>
+    <string name="calendars_link_copy">Скапіраваць адрас календара</string>
     <string name="calendars_link_once">Скапіюйце яе зараз: паказаць зноў немагчыма.</string>
-    <string name="calendars_link_exists">Для гэтага календара спасылка ўжо існуе.</string>
+    <string name="calendars_link_exists">Гэты адрас календара ўжо выдадзены і не можа быць паказаны зноў.</string>
     <string name="calendars_permission_title">Дазволіць доступ?</string>
     <string name="calendars_permission_message">%1$s запытвае:</string>
     <string name="calendars_sync_authorization">Увайдзіце зноў, каб працягнуць сінхранізацыю</string>
@@ -138,8 +130,8 @@
     <string name="calendars_device_used">апошняе выкарыстанне %1$s</string>
     <string name="calendars_device_never">ніколі</string>
     <string name="calendars_device_deleted">Прылада выдалена</string>
-    <string name="calendars_device_delete_title">Выдаліць гэтую прыладу?</string>
-    <string name="calendars_device_delete_message">Яе давядзецца наладзіць нанова для сінхранізацыі.</string>
+    <string name="calendars_device_delete_title">Выдаліць прыладу?</string>
+    <string name="calendars_device_delete_message">Прылада больш не зможа сінхранізаваць кантакты або календары.</string>
     <string name="calendars_sync_choose">Календары для сінхранізацыі</string>
     <string name="calendars_poll_large">Каляндар занадта вялікі</string>
     <string name="calendars_poll_invalid">Адрас не вярнуў каляндар</string>
@@ -184,7 +176,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Каляндар</string>
-    <string name="calendars_subscribe_google_enable">Уліковыя запісы Google не ўключаны на гэтым серверы. Уключыце іх у Налады, Сістэмныя налады.</string>
+    <string name="calendars_subscribe_google_enable">Уліковыя запісы Google не ўключаны на гэтым серверы.</string>
     <string name="calendars_subscribe_google_connect">Вы не падключылі ўліковы запіс Google.</string>
     <string name="calendars_subscribe_google_connect_action">Злучыць Google</string>
     <string name="calendars_grant_failed">Доступ да календара не быў нададзены</string>
@@ -289,4 +281,23 @@
     </plurals>
     <string name="calendars_rule_until">да %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Ранейшыя падзеі</string>
+    <string name="calendars_created">Каляндар створаны</string>
+    <string name="calendars_renamed">Каляндар перайменаваны</string>
+    <string name="calendars_colour_saved">Колер захаваны</string>
+    <string name="calendars_deleted">Каляндар выдалены</string>
+    <string name="calendars_removed">Каляндар выдалены</string>
+    <string name="calendars_preferences_saved">Налады захаваны</string>
+    <string name="calendars_link_revoked">Адрас календара адкліканы</string>
+    <string name="calendars_link_none">У гэтага календара няма адраса для адклікання</string>
+    <string name="calendars_linked">Каляндар звязаны</string>
+    <string name="calendars_subscribed">Падпісана</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s гадзіна</item>
+        <item quantity="few">%1$s гадзіны</item>
+        <item quantity="many">%1$s гадзін</item>
+        <item quantity="other">%1$s гадзіны</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Уключыць уліковыя запісы Google</string>
+    <string name="calendars_provider_caldav">Сервер календароў</string>
 </resources>

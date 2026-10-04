@@ -45,25 +45,25 @@ sealed interface PollReason {
 fun pollReason(failure: String): PollReason? {
     val token = failure.trim()
     if (token.isEmpty()) return null
-    if (token == "too_large" || token == "large") return PollReason.Large
-    if (token == "invalid") return PollReason.Invalid
-    // A linked calendar's credential failure carries the status the other
-    // server answered with, which the words below do not need.
-    if (token == UNAUTHORISED || token.startsWith("$UNAUTHORISED:")) return PollReason.Unauthorised
-    if (token == "conflict") return PollReason.Conflict
-    if (token == "missing") return PollReason.Missing
-    if (token == "transport") return PollReason.Unreachable
     if (token.startsWith(STATUS)) {
         val code = token.removePrefix(STATUS).toIntOrNull()
         // The server writes a status of 0 when nothing answered at all.
         if (code == 0) return PollReason.Unreachable
         if (code != null) return PollReason.Status(code)
     }
-    return PollReason.Other(token)
+    // Any reason may carry the status the other server answered with after
+    // a colon, conflict:409 or unauthorised:401, which the words do not need.
+    return when (token.substringBefore(':')) {
+        "too_large", "large" -> PollReason.Large
+        "invalid" -> PollReason.Invalid
+        "unauthorised" -> PollReason.Unauthorised
+        "conflict" -> PollReason.Conflict
+        "missing" -> PollReason.Missing
+        "transport" -> PollReason.Unreachable
+        else -> PollReason.Other(token)
+    }
 }
 
 /** How the server prefixes a failure it has only an HTTP status for. */
 private const val STATUS = "status:"
 
-/** The token a refused credential carries, alone or with the status after it. */
-private const val UNAUTHORISED = "unauthorised"

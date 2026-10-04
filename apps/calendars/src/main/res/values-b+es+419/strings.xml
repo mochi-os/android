@@ -58,4 +58,7 @@
         <item quantity="many">%1$s de veces</item>
         <item quantity="other">%1$s veces</item>
     </plurals>
+    <string name="calendars_truncated">Hay demasiados eventos para mostrarlos todos. Elige un rango más corto.</string>
+    <string name="calendars_link_none">Este calendario no tiene ninguna dirección para revocar</string>
+    <string name="calendars_link_exists">Esta dirección del calendario ya fue emitida y no se puede mostrar de nuevo.</string>
 </resources>

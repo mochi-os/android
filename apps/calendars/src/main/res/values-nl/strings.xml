@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Jaarlijks</string>
     <string name="calendars_repeat_custom">Aangepast</string>
     <string name="calendars_reminder_none">Geen</string>
-    <string name="calendars_day_sunday">Zondag</string>
-    <string name="calendars_day_monday">Maandag</string>
-    <string name="calendars_day_tuesday">Dinsdag</string>
-    <string name="calendars_day_wednesday">Woensdag</string>
-    <string name="calendars_day_thursday">Donderdag</string>
-    <string name="calendars_day_friday">Vrijdag</string>
-    <string name="calendars_day_saturday">Zaterdag</string>
     <string name="calendars_link_replace">Vervangen</string>
     <string name="calendars_link_revoke">Intrekken</string>
     <string name="calendars_permission_allow">Toestaan</string>
@@ -72,7 +65,7 @@
     <string name="calendars_view_month">Maand</string>
     <string name="calendars_workweek">Werkweek</string>
     <string name="calendars_range">%1$s tot %2$s</string>
-    <string name="calendars_truncated">Sommige afspraken in deze periode worden niet getoond.</string>
+    <string name="calendars_truncated">Te veel afspraken om ze allemaal te tonen. Kies een kortere periode.</string>
     <string name="calendars_list_empty">Geen afspraken</string>
     <string name="calendars_untitled">(Geen titel)</string>
     <string name="calendars_status_cancelled">Geannuleerd</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Herinnering verwijderen</string>
     <string name="calendars_hours_start">Begin werktijd</string>
     <string name="calendars_hours_finish">Einde werktijd</string>
-    <string name="calendars_hours_invalid">Werkuren moeten eindigen na de starttijd.</string>
     <string name="calendars_work_days">Werkdagen</string>
     <string name="calendars_multiweek_weeks">Getoonde weken</string>
     <string name="calendars_multiweek_previous">Weken ervoor</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Afspraken voor de hele dag</string>
     <string name="calendars_allday_first">Eerst</string>
     <string name="calendars_allday_last">Als laatste</string>
-    <string name="calendars_link_title">Agendalink</string>
-    <string name="calendars_link_copy">Link kopiëren</string>
+    <string name="calendars_link_title">Agenda-adres</string>
+    <string name="calendars_link_copy">Agenda-adres kopiëren</string>
     <string name="calendars_link_once">Kopieer hem nu: hij kan niet opnieuw worden getoond.</string>
-    <string name="calendars_link_exists">Er bestaat al een link voor deze agenda.</string>
+    <string name="calendars_link_exists">Dit agenda-adres is al uitgegeven en kan niet opnieuw worden getoond.</string>
     <string name="calendars_permission_title">Toegang toestaan?</string>
     <string name="calendars_permission_message">%1$s vraagt om:</string>
     <string name="calendars_sync_authorization">Log opnieuw in om te blijven synchroniseren</string>
@@ -132,8 +124,8 @@
     <string name="calendars_device_used">Laatst gebruikt %1$s</string>
     <string name="calendars_device_never">nooit</string>
     <string name="calendars_device_deleted">Apparaat verwijderd</string>
-    <string name="calendars_device_delete_title">Dit apparaat verwijderen?</string>
-    <string name="calendars_device_delete_message">Het moet opnieuw worden ingesteld om te synchroniseren.</string>
+    <string name="calendars_device_delete_title">Apparaat verwijderen?</string>
+    <string name="calendars_device_delete_message">Het apparaat kan dan geen contacten of agenda\'s meer synchroniseren.</string>
     <string name="calendars_sync_choose">Agenda\'s om te synchroniseren</string>
     <string name="calendars_poll_large">De agenda is te groot</string>
     <string name="calendars_poll_invalid">Het adres gaf geen agenda terug</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Agenda</string>
-    <string name="calendars_subscribe_google_enable">Google-accounts zijn niet ingeschakeld op deze server. Schakel ze in onder Instellingen, Systeeminstellingen.</string>
+    <string name="calendars_subscribe_google_enable">Google-accounts zijn niet ingeschakeld op deze server.</string>
     <string name="calendars_subscribe_google_connect">Je hebt geen Google-account verbonden.</string>
     <string name="calendars_subscribe_google_connect_action">Google verbinden</string>
     <string name="calendars_grant_failed">Agendatoegang is niet verleend</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">tot en met %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Eerdere afspraken</string>
+    <string name="calendars_created">Agenda aangemaakt</string>
+    <string name="calendars_renamed">Agenda hernoemd</string>
+    <string name="calendars_colour_saved">Kleur opgeslagen</string>
+    <string name="calendars_deleted">Agenda verwijderd</string>
+    <string name="calendars_removed">Agenda verwijderd</string>
+    <string name="calendars_preferences_saved">Voorkeuren opgeslagen</string>
+    <string name="calendars_link_revoked">Agenda-adres ingetrokken</string>
+    <string name="calendars_link_none">Deze agenda heeft geen adres om in te trekken</string>
+    <string name="calendars_linked">Agenda gekoppeld</string>
+    <string name="calendars_subscribed">Geabonneerd</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s uur</item>
+        <item quantity="other">%1$s uur</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google-accounts inschakelen</string>
+    <string name="calendars_provider_caldav">Agendaserver</string>
 </resources>

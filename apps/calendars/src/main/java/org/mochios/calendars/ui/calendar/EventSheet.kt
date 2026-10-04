@@ -22,7 +22,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -33,6 +32,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Notes
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.CalendarToday
+import androidx.compose.material.icons.outlined.Block
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Flight
@@ -58,7 +58,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import java.net.URLEncoder
 import java.time.DayOfWeek
@@ -90,8 +92,6 @@ import org.mochios.android.R as MochiR
 
 /** How a summary puts its parts together, in the user's language. */
 class Wording(
-    /** An all-day occurrence's day or run of days. */
-    val allday: (String) -> String,
     /** A day and the two times on it: "Monday 28 September 2026, 10:00 to 11:00". */
     val day: (String, String, String) -> String,
     /** Two ends, each a date and a time: "… 22:00 to … 06:00". */
@@ -107,7 +107,7 @@ class Wording(
  * An occurrence's span as its summary reads it, and beneath it, when it was
  * written in another zone than the user's and the views keep the user's, the
  * span read in its own zones. An all-day one reads as its day or its run of
- * days; a timed one as its long date and its times without seconds, the date
+ * days, with nothing before them; a timed one as its long date and its times without seconds, the date
  * once when both ends fall on one day. With cities, each end names the city
  * of its zone: "10:00 London to 13:00 New York". The web's summary reads the
  * same. Without [cities], the span read in its own zones leaves the cities
@@ -132,7 +132,7 @@ fun summary(
         } else {
             format.formatDayRange(first, last)
         }
-        return wording.allday(days) to null
+        return days to null
     }
     val startZone = instance.zone?.start?.takeIf { it.isNotBlank() }
     val finishZone = instance.zone?.finish?.takeIf { it.isNotBlank() }
@@ -213,7 +213,6 @@ fun EventSheet(
     onEdit: (() -> Unit)? = null,
 ) {
     val format = LocalFormat.current
-    val allday = stringResource(R.string.calendars_event_allday)
     val day = stringResource(R.string.calendars_span_day)
     val range = stringResource(R.string.calendars_range)
     val (span, own) = summary(
@@ -221,7 +220,6 @@ fun EventSheet(
         format,
         zones,
         Wording(
-            allday = { allday + " · " + it },
             day = { date, from, to -> String.format(day, date, from, to) },
             range = { from, to -> String.format(range, from, to) },
             times = { start, finish, opens, closes ->
@@ -241,12 +239,15 @@ fun EventSheet(
             MochiSheetHeader(
                 title = if (instance.untitled) stringResource(R.string.calendars_untitled) else instance.summary,
                 titleColor = if (instance.untitled) MaterialTheme.colorScheme.onSurfaceVariant else Color.Unspecified,
+                titleDecoration = if (instance.cancelled) TextDecoration.LineThrough else null,
+                titleModifier = Modifier.testTag("sheet-title"),
                 leading = {
                     Box(
                         modifier = Modifier
                             .size(18.dp)
                             .clip(RoundedCornerShape(4.dp))
-                            .background(instance.colour.toColour(MaterialTheme.colorScheme.primary)),
+                            .background(instance.colour.toColour(MaterialTheme.colorScheme.primary))
+                            .testTag("sheet-dot"),
                     )
                 },
             ) {
@@ -290,11 +291,28 @@ fun EventSheet(
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     }
-                    status(instance)?.let { label ->
+                }
+                // A cancelled occurrence's status leads with a ban, a
+                // tentative one's with a dashed ring, as the web's has them.
+                status(instance)?.let { label ->
+                    Detail(
+                        lead = {
+                            if (instance.cancelled) {
+                                Icon(
+                                    Icons.Outlined.Block,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
+                            } else {
+                                Dashed(MaterialTheme.colorScheme.onSurfaceVariant)
+                            }
+                        },
+                    ) {
                         Text(
                             text = stringResource(label),
                             style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.testTag("sheet-status"),
                         )
                     }
                 }
@@ -365,6 +383,22 @@ fun EventSheet(
                 }
             }
         }
+    }
+}
+
+/** A tentative occurrence's status glyph: a dashed ring, as the web's has it. */
+@Composable
+private fun Dashed(colour: Color) {
+    androidx.compose.foundation.Canvas(modifier = Modifier.size(20.dp).testTag("sheet-dashed")) {
+        val stroke = 1.5.dp.toPx()
+        drawCircle(
+            color = colour,
+            radius = size.minDimension / 2 - stroke,
+            style = androidx.compose.ui.graphics.drawscope.Stroke(
+                width = stroke,
+                pathEffect = androidx.compose.ui.graphics.PathEffect.dashPathEffect(floatArrayOf(3.dp.toPx(), 2.dp.toPx())),
+            ),
+        )
     }
 }
 

@@ -5,6 +5,7 @@
 
 package org.mochios.calendars.ui.calendar
 
+import org.mochios.android.api.MochiError
 import org.mochios.calendars.model.ImportResponse
 import java.io.File
 
@@ -35,6 +36,8 @@ data class Tally(
     val skipped: Int = 0,
     val failed: Int = 0,
     val finished: Boolean = false,
+    /** Why the import stopped short, when it did. */
+    val error: MochiError? = null,
 )
 
 /**

@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Árlega</string>
     <string name="calendars_repeat_custom">Sérsniðið</string>
     <string name="calendars_reminder_none">Ekkert</string>
-    <string name="calendars_day_sunday">Sunnudagur</string>
-    <string name="calendars_day_monday">Mánudagur</string>
-    <string name="calendars_day_tuesday">Þriðjudagur</string>
-    <string name="calendars_day_wednesday">Miðvikudagur</string>
-    <string name="calendars_day_thursday">Fimmtudagur</string>
-    <string name="calendars_day_friday">Föstudagur</string>
-    <string name="calendars_day_saturday">Laugardagur</string>
     <string name="calendars_link_replace">Skipta út</string>
     <string name="calendars_link_revoke">Afturkalla</string>
     <string name="calendars_permission_allow">Leyfa</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Mánuður</string>
     <string name="calendars_workweek">Vinnuvika</string>
     <string name="calendars_range">%1$s til %2$s</string>
-    <string name="calendars_truncated">Sumir viðburðir á þessu tímabili eru ekki sýndir.</string>
+    <string name="calendars_truncated">Of margir viðburðir til að sýna þá alla. Veldu styttra tímabil.</string>
     <string name="calendars_list_empty">Engir viðburðir</string>
     <string name="calendars_untitled">(Enginn titill)</string>
     <string name="calendars_status_cancelled">Aflýst</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Fjarlægja áminningu</string>
     <string name="calendars_hours_start">Upphaf vinnutíma</string>
     <string name="calendars_hours_finish">Lok vinnutíma</string>
-    <string name="calendars_hours_invalid">Vinnutíma verður að ljúka eftir að hann hefst.</string>
     <string name="calendars_work_days">Vinnudagar</string>
     <string name="calendars_multiweek_weeks">Vikur sem birtast</string>
     <string name="calendars_multiweek_previous">Vikur á undan</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Viðburðir allan daginn</string>
     <string name="calendars_allday_first">Fyrst</string>
     <string name="calendars_allday_last">Síðast</string>
-    <string name="calendars_link_title">Dagatalstengill</string>
-    <string name="calendars_link_copy">Afrita tengil</string>
+    <string name="calendars_link_title">Vistfang dagatals</string>
+    <string name="calendars_link_copy">Afrita vistfang dagatals</string>
     <string name="calendars_link_once">Afritaðu hann núna: ekki er hægt að birta hann aftur.</string>
-    <string name="calendars_link_exists">Tengill er þegar til fyrir þetta dagatal.</string>
+    <string name="calendars_link_exists">Þetta vistfang dagatals hefur þegar verið gefið út og ekki er hægt að birta það aftur.</string>
     <string name="calendars_permission_title">Leyfa aðgang?</string>
     <string name="calendars_permission_message">%1$s biður um:</string>
     <string name="calendars_sync_authorization">Skráðu þig inn aftur til að halda samstillingu áfram</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Engin tæki tengd</string>
     <string name="calendars_device_used">Síðast notað %1$s</string>
     <string name="calendars_device_never">aldrei</string>
-    <string name="calendars_device_deleted">Tæki fjarlægt</string>
-    <string name="calendars_device_delete_title">Fjarlægja þetta tæki?</string>
-    <string name="calendars_device_delete_message">Setja þarf það upp aftur til að samstilla.</string>
+    <string name="calendars_device_deleted">Tæki eytt</string>
+    <string name="calendars_device_delete_title">Eyða tæki?</string>
+    <string name="calendars_device_delete_message">Tækið mun ekki lengur geta samstillt tengiliði eða dagatöl.</string>
     <string name="calendars_sync_choose">Dagatöl til að samstilla</string>
     <string name="calendars_poll_large">Dagatalið er of stórt</string>
     <string name="calendars_poll_invalid">Vistfangið skilaði ekki dagatali</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google dagatal</string>
-    <string name="calendars_subscribe_google_enable">Google-reikningar hafa ekki verið virkjaðir á þessum þjóni. Virkjaðu þá undir Stillingar, Kerfisstillingar.</string>
+    <string name="calendars_subscribe_google_enable">Google-reikningar hafa ekki verið virkjaðir á þessum þjóni.</string>
     <string name="calendars_subscribe_google_connect">Þú hefur ekki tengt Google-reikning.</string>
     <string name="calendars_subscribe_google_connect_action">Tengja Google</string>
     <string name="calendars_grant_failed">Dagatalsaðgangur var ekki veittur</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">til %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Fyrri viðburðir</string>
+    <string name="calendars_created">Dagatal búið til</string>
+    <string name="calendars_renamed">Dagatal endurnefnt</string>
+    <string name="calendars_colour_saved">Litur vistaður</string>
+    <string name="calendars_deleted">Dagatali eytt</string>
+    <string name="calendars_removed">Dagatal fjarlægt</string>
+    <string name="calendars_preferences_saved">Kjörstillingar vistaðar</string>
+    <string name="calendars_link_revoked">Vistfang dagatals afturkallað</string>
+    <string name="calendars_link_none">Þetta dagatal hefur ekkert vistfang til að afturkalla</string>
+    <string name="calendars_linked">Dagatal tengt</string>
+    <string name="calendars_subscribed">Áskrift virk</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s klukkustund</item>
+        <item quantity="other">%1$s klukkustundir</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Virkja Google-reikninga</string>
+    <string name="calendars_provider_caldav">Dagatalsþjónn</string>
 </resources>

@@ -6,10 +6,17 @@
 package org.mochios.calendars
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.ui.calendar.Cut
+import org.mochios.calendars.ui.calendar.Dwell
+import org.mochios.calendars.ui.calendar.PAGE_HOLD
+import org.mochios.calendars.ui.calendar.clocked
+import org.mochios.calendars.ui.calendar.edge
+import org.mochios.calendars.ui.calendar.whole
+import org.mochios.calendars.ui.editor.EventForm
 import org.mochios.calendars.ui.calendar.at
 import org.mochios.calendars.ui.calendar.dropped
 import org.mochios.calendars.ui.calendar.moved
@@ -17,6 +24,7 @@ import org.mochios.calendars.ui.calendar.resized
 import org.mochios.calendars.ui.calendar.snap
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.ZoneOffset
 import java.time.ZonedDateTime
 
 /**
@@ -118,5 +126,74 @@ class DragTest {
         )
         val (start, _) = dropped(abroad, MONDAY, Cut(10f, 11f), MONDAY, Cut(11f, 12f), NEW_YORK, NEW_YORK, resize = false)
         assertEquals(clock(NEW_YORK, 2026, 9, 21, 11), start)
+    }
+
+    // ---- turning the page at the side ----
+
+    @Test
+    fun `a page turns once the finger has rested at the side for the hold, then again each hold`() {
+        val dwell = Dwell()
+        assertEquals(0, dwell.step(1, 1_000))
+        assertEquals(0, dwell.step(1, 1_000 + PAGE_HOLD - 1))
+        assertEquals(1, dwell.step(1, 1_000 + PAGE_HOLD))
+        assertEquals(0, dwell.step(1, 1_000 + PAGE_HOLD + 10))
+        assertEquals(1, dwell.step(1, 1_000 + 2 * PAGE_HOLD))
+    }
+
+    @Test
+    fun `leaving the side or crossing to the other starts the count again`() {
+        val dwell = Dwell()
+        dwell.step(1, 0)
+        assertEquals(0, dwell.step(0, 300))
+        assertEquals(0, dwell.step(1, 400))
+        assertEquals(0, dwell.step(1, 400 + PAGE_HOLD - 1))
+        assertEquals(0, dwell.step(-1, 400 + PAGE_HOLD))
+        assertEquals(-1, dwell.step(-1, 400 + 2 * PAGE_HOLD))
+    }
+
+    @Test
+    fun `the first day's side pages back, the last day's forward, and the gutter counts as the first side`() {
+        // Left to right: days run from 52 to 400.
+        assertEquals(-1, edge(60f, 52f, 400f, 28f))
+        assertEquals(-1, edge(20f, 52f, 400f, 28f))
+        assertEquals(0, edge(200f, 52f, 400f, 28f))
+        assertEquals(1, edge(390f, 52f, 400f, 28f))
+        // Right to left: the first day is on the right.
+        assertEquals(-1, edge(390f, 348f, 0f, 28f))
+        assertEquals(1, edge(10f, 348f, 0f, 28f))
+    }
+
+    // ---- into and out of the band ----
+
+    @Test
+    fun `a block dropped in the band becomes all day from the day it landed on, over as many days`() {
+        val form = EventForm(start = clock(LONDON, 2026, 9, 21, 23), finish = clock(LONDON, 2026, 9, 22, 1), zone = Zone("Europe/London", "Europe/London"))
+        val day = whole(form, 2, 2, LONDON)
+        assertTrue(day.allday)
+        assertEquals(LocalDate.of(2026, 9, 23).atStartOfDay(ZoneOffset.UTC).toEpochSecond(), day.start)
+        assertEquals(LocalDate.of(2026, 9, 25).atStartOfDay(ZoneOffset.UTC).toEpochSecond(), day.finish)
+    }
+
+    @Test
+    fun `a block read on its days in the user's zone lands on the day dropped, whatever zone it was written in`() {
+        // 23:30 Monday in London is already Tuesday in Berlin, where the
+        // views put it; dropped on Wednesday it is all day on Wednesday.
+        val berlin = ZoneId.of("Europe/Berlin")
+        val form = EventForm(start = clock(LONDON, 2026, 9, 21, 23, 30), finish = clock(LONDON, 2026, 9, 22, 0, 30), zone = Zone("Europe/London", "Europe/London"))
+        val day = whole(form, 1, 1, berlin)
+        assertEquals(LocalDate.of(2026, 9, 23).atStartOfDay(ZoneOffset.UTC).toEpochSecond(), day.start)
+    }
+
+    @Test
+    fun `a bar dropped in the grid becomes timed on the day it landed on, at the user's clock`() {
+        val form = EventForm(
+            start = LocalDate.of(2026, 9, 21).atStartOfDay(ZoneOffset.UTC).toEpochSecond(),
+            finish = LocalDate.of(2026, 9, 22).atStartOfDay(ZoneOffset.UTC).toEpochSecond(),
+            allday = true,
+        )
+        val timed = clocked(form, 1, 11.25f, 3_600, NEW_YORK)
+        assertEquals(false, timed.allday)
+        assertEquals(clock(NEW_YORK, 2026, 9, 22, 11, 15), timed.start)
+        assertEquals(clock(NEW_YORK, 2026, 9, 22, 12, 15), timed.finish)
     }
 }

@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Ежегодно</string>
     <string name="calendars_repeat_custom">Пользовательский</string>
     <string name="calendars_reminder_none">Нет</string>
-    <string name="calendars_day_sunday">Воскресенье</string>
-    <string name="calendars_day_monday">Понедельник</string>
-    <string name="calendars_day_tuesday">Вторник</string>
-    <string name="calendars_day_wednesday">Среда</string>
-    <string name="calendars_day_thursday">Четверг</string>
-    <string name="calendars_day_friday">Пятница</string>
-    <string name="calendars_day_saturday">Суббота</string>
     <string name="calendars_link_replace">Заменить</string>
     <string name="calendars_link_revoke">Отозвать</string>
     <string name="calendars_permission_allow">Разрешить</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Месяц</string>
     <string name="calendars_workweek">Рабочая неделя</string>
     <string name="calendars_range">с %1$s по %2$s</string>
-    <string name="calendars_truncated">Некоторые события в этом диапазоне не показаны.</string>
+    <string name="calendars_truncated">Слишком много событий, чтобы показать все. Выберите более короткий диапазон.</string>
     <string name="calendars_list_empty">Нет событий</string>
     <string name="calendars_untitled">(Без названия)</string>
     <string name="calendars_status_cancelled">Отменено</string>
@@ -116,7 +109,6 @@
     <string name="calendars_reminder_remove">Удалить напоминание</string>
     <string name="calendars_hours_start">Начало рабочего времени</string>
     <string name="calendars_hours_finish">Конец рабочего времени</string>
-    <string name="calendars_hours_invalid">Рабочее время должно заканчиваться после его начала.</string>
     <string name="calendars_work_days">Рабочие дни</string>
     <string name="calendars_multiweek_weeks">Показывать недель</string>
     <string name="calendars_multiweek_previous">Недель до текущей</string>
@@ -126,10 +118,10 @@
     <string name="calendars_preferences_allday">События на весь день</string>
     <string name="calendars_allday_first">В начале</string>
     <string name="calendars_allday_last">В конце</string>
-    <string name="calendars_link_title">Ссылка на календарь</string>
-    <string name="calendars_link_copy">Копировать ссылку</string>
+    <string name="calendars_link_title">Адрес календаря</string>
+    <string name="calendars_link_copy">Копировать адрес календаря</string>
     <string name="calendars_link_once">Скопируйте её сейчас: она больше не будет показана.</string>
-    <string name="calendars_link_exists">Для этого календаря уже есть ссылка.</string>
+    <string name="calendars_link_exists">Этот адрес календаря уже выдан и не может быть показан снова.</string>
     <string name="calendars_permission_title">Разрешить доступ?</string>
     <string name="calendars_permission_message">%1$s запрашивает:</string>
     <string name="calendars_sync_authorization">Войдите снова, чтобы продолжить синхронизацию</string>
@@ -138,8 +130,8 @@
     <string name="calendars_device_used">последнее использование %1$s</string>
     <string name="calendars_device_never">никогда</string>
     <string name="calendars_device_deleted">Устройство удалено</string>
-    <string name="calendars_device_delete_title">Удалить это устройство?</string>
-    <string name="calendars_device_delete_message">Для синхронизации его нужно будет настроить заново.</string>
+    <string name="calendars_device_delete_title">Удалить устройство?</string>
+    <string name="calendars_device_delete_message">Устройство больше не сможет синхронизировать контакты или календари.</string>
     <string name="calendars_sync_choose">Календари для синхронизации</string>
     <string name="calendars_poll_large">Календарь слишком большой</string>
     <string name="calendars_poll_invalid">По адресу не найден календарь</string>
@@ -184,7 +176,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календарь</string>
-    <string name="calendars_subscribe_google_enable">Аккаунты Google не включены на этом сервере. Включите их в разделе Настройки, Системные настройки.</string>
+    <string name="calendars_subscribe_google_enable">Аккаунты Google не включены на этом сервере.</string>
     <string name="calendars_subscribe_google_connect">Вы не подключили аккаунт Google.</string>
     <string name="calendars_subscribe_google_connect_action">Подключить Google</string>
     <string name="calendars_grant_failed">Доступ к календарю не предоставлен</string>
@@ -289,4 +281,23 @@
     </plurals>
     <string name="calendars_rule_until">до %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Более ранние события</string>
+    <string name="calendars_created">Календарь создан</string>
+    <string name="calendars_renamed">Календарь переименован</string>
+    <string name="calendars_colour_saved">Цвет сохранён</string>
+    <string name="calendars_deleted">Календарь удалён</string>
+    <string name="calendars_removed">Календарь удалён</string>
+    <string name="calendars_preferences_saved">Предпочтения сохранены</string>
+    <string name="calendars_link_revoked">Адрес календаря отозван</string>
+    <string name="calendars_link_none">У этого календаря нет адреса для отзыва</string>
+    <string name="calendars_linked">Календарь связан</string>
+    <string name="calendars_subscribed">Подписан</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s час</item>
+        <item quantity="few">%1$s часа</item>
+        <item quantity="many">%1$s часов</item>
+        <item quantity="other">%1$s часа</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Включить аккаунты Google</string>
+    <string name="calendars_provider_caldav">Сервер календарей</string>
 </resources>

@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Տարեկան</string>
     <string name="calendars_repeat_custom">Հատուկ</string>
     <string name="calendars_reminder_none">Ոչ մեկը</string>
-    <string name="calendars_day_sunday">Կիրակի</string>
-    <string name="calendars_day_monday">Երկուշաբթի</string>
-    <string name="calendars_day_tuesday">Երեքշաբթի</string>
-    <string name="calendars_day_wednesday">Չորեքշաբթի</string>
-    <string name="calendars_day_thursday">Հինգշաբթի</string>
-    <string name="calendars_day_friday">Ուրբաթ</string>
-    <string name="calendars_day_saturday">Շաբաթ</string>
     <string name="calendars_link_replace">Փոխարինել</string>
     <string name="calendars_link_revoke">Հետ վերցնել</string>
     <string name="calendars_permission_allow">Թույլատրել</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Ամիս</string>
     <string name="calendars_workweek">Աշխատանքային շաբաթ</string>
     <string name="calendars_range">%1$s-ից մինչև %2$s</string>
-    <string name="calendars_truncated">Այս միջակայքի որոշ միջոցառումներ ցուցադրված չեն։</string>
+    <string name="calendars_truncated">Չափազանց շատ միջոցառումներ են՝ բոլորը ցուցադրելու համար։ Ընտրեք ավելի կարճ միջակայք։</string>
     <string name="calendars_list_empty">Միջոցառումներ չկան</string>
     <string name="calendars_untitled">(Առանց վերնագրի)</string>
     <string name="calendars_status_cancelled">Չեղարկված</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Հեռացնել հիշեցումը</string>
     <string name="calendars_hours_start">Աշխատանքային ժամերի սկիզբ</string>
     <string name="calendars_hours_finish">Աշխատանքային ժամերի ավարտ</string>
-    <string name="calendars_hours_invalid">Աշխատանքային ժամերը պետք է ավարտվեն սկսվելուց հետո։</string>
     <string name="calendars_work_days">Աշխատանքային օրեր</string>
     <string name="calendars_multiweek_weeks">Ցուցադրվող շաբաթներ</string>
     <string name="calendars_multiweek_previous">Նախորդող շաբաթներ</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Ամբողջ օրվա միջոցառումներ</string>
     <string name="calendars_allday_first">Սկզբում</string>
     <string name="calendars_allday_last">Վերջում</string>
-    <string name="calendars_link_title">Օրացույցի հղում</string>
-    <string name="calendars_link_copy">Պատճենել հղումը</string>
+    <string name="calendars_link_title">Օրացույցի հասցե</string>
+    <string name="calendars_link_copy">Պատճենել օրացույցի հասցեն</string>
     <string name="calendars_link_once">Պատճենեք այն հիմա։ Այն այլևս հնարավոր չի լինի ցուցադրել։</string>
-    <string name="calendars_link_exists">Այս օրացույցի համար հղում արդեն կա։</string>
+    <string name="calendars_link_exists">Օրացույցի այս հասցեն արդեն տրվել է և չի կարող կրկին ցուցադրվել։</string>
     <string name="calendars_permission_title">Թույլատրե՞լ մուտքը։</string>
     <string name="calendars_permission_message">%1$s-ը խնդրում է՝</string>
     <string name="calendars_sync_authorization">Համաժամացումը շարունակելու համար նորից մուտք գործեք</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Միացված սարքեր չկան</string>
     <string name="calendars_device_used">Վերջին օգտագործումը %1$s</string>
     <string name="calendars_device_never">Երբեք</string>
-    <string name="calendars_device_deleted">Սարքը հեռացվեց</string>
-    <string name="calendars_device_delete_title">Հեռացնե՞լ այս սարքը։</string>
-    <string name="calendars_device_delete_message">Համաժամացման համար այն պետք է նորից կարգավորվի։</string>
+    <string name="calendars_device_deleted">Սարքը ջնջվեց</string>
+    <string name="calendars_device_delete_title">Ջնջե՞լ սարքը</string>
+    <string name="calendars_device_delete_message">Սարքն այլևս չի կարողանա համաժամացնել կոնտակտները կամ օրացույցները։</string>
     <string name="calendars_sync_choose">Համաժամացվող օրացույցներ</string>
     <string name="calendars_poll_large">Օրացույցը չափազանց մեծ է</string>
     <string name="calendars_poll_invalid">Հասցեն օրացույց չվերադարձրեց</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Օրացույց</string>
-    <string name="calendars_subscribe_google_enable">Google հաշիվներն այս սերվերում միացված չեն։ Միացրեք դրանք Կարգավորումներ, Համակարգի կարգավորումներ բաժնում։</string>
+    <string name="calendars_subscribe_google_enable">Google հաշիվներն այս սերվերում միացված չեն։</string>
     <string name="calendars_subscribe_google_connect">Դուք Google հաշիվ չեք միացրել։</string>
     <string name="calendars_subscribe_google_connect_action">Միացնել Google-ը</string>
     <string name="calendars_grant_failed">Օրացույցի մուտքը չի տրամադրվել</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">մինչև %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Ավելի վաղ միջոցառումներ</string>
+    <string name="calendars_created">Օրացույցը ստեղծվեց</string>
+    <string name="calendars_renamed">Օրացույցը վերանվանվեց</string>
+    <string name="calendars_colour_saved">Գույնը պահպանվեց</string>
+    <string name="calendars_deleted">Օրացույցը ջնջվեց</string>
+    <string name="calendars_removed">Օրացույցը հեռացվեց</string>
+    <string name="calendars_preferences_saved">Նախընտրությունները պահպանվեցին</string>
+    <string name="calendars_link_revoked">Օրացույցի հասցեն հետ է վերցվել</string>
+    <string name="calendars_link_none">Այս օրացույցը հետ վերցնելու հասցե չունի</string>
+    <string name="calendars_linked">Օրացույցը կապված է</string>
+    <string name="calendars_subscribed">Բաժանորդագրված</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s ժամ</item>
+        <item quantity="other">%1$s ժամ</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Միացնել Google հաշիվները</string>
+    <string name="calendars_provider_caldav">Օրացույցի սերվեր</string>
 </resources>

@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">ساڵانە</string>
     <string name="calendars_repeat_custom">تایبەت</string>
     <string name="calendars_reminder_none">هیچ</string>
-    <string name="calendars_day_sunday">یەکشەممە</string>
-    <string name="calendars_day_monday">دووشەممە</string>
-    <string name="calendars_day_tuesday">سێشەممە</string>
-    <string name="calendars_day_wednesday">چوارشەممە</string>
-    <string name="calendars_day_thursday">پێنجشەممە</string>
-    <string name="calendars_day_friday">هەینی</string>
-    <string name="calendars_day_saturday">شەممە</string>
     <string name="calendars_link_replace">بیگۆڕە</string>
     <string name="calendars_link_revoke">ڕاگرتن</string>
     <string name="calendars_permission_allow">ڕێگەپێدان</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">مانگ</string>
     <string name="calendars_workweek">هەفتەی کار</string>
     <string name="calendars_range">لە %1$s بۆ %2$s</string>
-    <string name="calendars_truncated">هەندێک ڕووداو لەم مەودایەدا پیشان نادرێن.</string>
+    <string name="calendars_truncated">ڕووداوەکان زۆرن بۆ پیشاندانی هەمووی. مەودایەکی کورتتر هەڵبژێرە.</string>
     <string name="calendars_list_empty">هیچ ڕووداوێک نییە</string>
     <string name="calendars_untitled">(بێ ناونیشان)</string>
     <string name="calendars_status_cancelled">هەڵوەشێنراوە</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">لابردنی بیرخەرەوە</string>
     <string name="calendars_hours_start">دەستپێکی کاتژمێرەکانی کار</string>
     <string name="calendars_hours_finish">کۆتایی کاتژمێرەکانی کار</string>
-    <string name="calendars_hours_invalid">کاتژمێرەکانی کار دەبێت دوای دەستپێکردن کۆتایی بێن.</string>
     <string name="calendars_work_days">ڕۆژانی کار</string>
     <string name="calendars_multiweek_weeks">هەفتە پیشاندراوەکان</string>
     <string name="calendars_multiweek_previous">هەفتەکانی پێشوو</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">ڕووداوەکانی هەموو ڕۆژ</string>
     <string name="calendars_allday_first">لە سەرەتادا</string>
     <string name="calendars_allday_last">لە کۆتاییدا</string>
-    <string name="calendars_link_title">بەستەری ڕۆژژمێر</string>
-    <string name="calendars_link_copy">کۆپیکردنی بەستەر</string>
+    <string name="calendars_link_title">ناونیشانی ڕۆژژمێر</string>
+    <string name="calendars_link_copy">کۆپیکردنی ناونیشانی ڕۆژژمێر</string>
     <string name="calendars_link_once">ئێستا کۆپی بکە: دووبارە پیشان نادرێتەوە.</string>
-    <string name="calendars_link_exists">پێشتر بەستەرێک بۆ ئەم ڕۆژژمێرە هەیە.</string>
+    <string name="calendars_link_exists">ئەم ناونیشانەی ڕۆژژمێر پێشتر دەرکراوە و ناتوانرێت دووبارە پیشان بدرێت.</string>
     <string name="calendars_permission_title">ڕێگە بە دەستڕاگەیشتن بدرێت؟</string>
     <string name="calendars_permission_message">%1$s داوای ئەمانە دەکات:</string>
     <string name="calendars_sync_authorization">بۆ بەردەوامبوونی هاوکاتکردن دیسان بچۆ ژوورەوە</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">هیچ ئامێرێک پەیوەست نەکراوە</string>
     <string name="calendars_device_used">کۆتا بەکارھێنان %1$s</string>
     <string name="calendars_device_never">هەرگیز</string>
-    <string name="calendars_device_deleted">ئامێرەکە لابرا</string>
-    <string name="calendars_device_delete_title">ئەم ئامێرە لابدرێت؟</string>
-    <string name="calendars_device_delete_message">پێویستە دووبارە ڕێکبخرێتەوە بۆ هاوکاتکردن.</string>
+    <string name="calendars_device_deleted">ئامێرەکە سڕایەوە</string>
+    <string name="calendars_device_delete_title">ئامێرەکە بسڕدرێتەوە؟</string>
+    <string name="calendars_device_delete_message">ئامێرەکە چیتر ناتوانێت پەیوەندییەکان یان ڕۆژژمێرەکان هاوکات بکات.</string>
     <string name="calendars_sync_choose">ڕۆژژمێرەکان بۆ هاوکاتکردن</string>
     <string name="calendars_poll_large">ڕۆژژمێرەکە زۆر گەورەیە</string>
     <string name="calendars_poll_invalid">ناونیشانەکە هیچ ڕۆژژمێرێکی نەگەڕاندەوە</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">ڕۆژژمێری Google</string>
-    <string name="calendars_subscribe_google_enable">هەژمارەکانی Google لەم ڕاژەکارەدا چالاک نەکراون. لە ڕێکخستنەکان، ڕێکخستنەکانی سیستەم چالاکیان بکە.</string>
+    <string name="calendars_subscribe_google_enable">هەژمارەکانی Google لەم ڕاژەکارەدا چالاک نەکراون.</string>
     <string name="calendars_subscribe_google_connect">تۆ هیچ هەژمارێکی Google پەیوەست نەکردووە.</string>
     <string name="calendars_subscribe_google_connect_action">پەیوەندی بە Google</string>
     <string name="calendars_grant_failed">دەستڕاگەیشتنی ڕۆژژمێر نەدرا</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">تا %1$s</string>
     <string name="calendars_rule_join">%1$s، %2$s</string>
+    <string name="calendars_list_earlier">ڕووداوە پێشووەکان</string>
+    <string name="calendars_created">ڕۆژژمێر دروستکرا</string>
+    <string name="calendars_renamed">ناوی ڕۆژژمێر گۆڕدرا</string>
+    <string name="calendars_colour_saved">ڕەنگ پاشەکەوتکرا</string>
+    <string name="calendars_deleted">ڕۆژژمێر سڕایەوە</string>
+    <string name="calendars_removed">ڕۆژژمێر لابرا</string>
+    <string name="calendars_preferences_saved">پەسەندییەکان پاشەکەوتکران</string>
+    <string name="calendars_link_revoked">ناونیشانی ڕۆژژمێر ڕەتکرایەوە</string>
+    <string name="calendars_link_none">ئەم ڕۆژژمێرە هیچ ناونیشانێکی نییە بۆ ڕەتکردنەوە</string>
+    <string name="calendars_linked">ڕۆژژمێر بەستراوە</string>
+    <string name="calendars_subscribed">بەشداربوو</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s کاتژمێر</item>
+        <item quantity="other">%1$s کاتژمێر</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">چالاککردنی هەژمارەکانی Google</string>
+    <string name="calendars_provider_caldav">ڕاژەکاری ڕۆژژمێر</string>
 </resources>

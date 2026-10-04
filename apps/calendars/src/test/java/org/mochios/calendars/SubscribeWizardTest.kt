@@ -10,15 +10,17 @@ import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.calendars.model.CalendarAccount
-import org.mochios.calendars.ui.dialogs.GoogleStep
+import org.mochios.calendars.model.RemoteCalendar
+import org.mochios.calendars.ui.dialogs.GoogleOffer
 import org.mochios.calendars.ui.dialogs.SubscribeKind
 import org.mochios.calendars.ui.dialogs.SubscribeStage
 import org.mochios.calendars.ui.dialogs.accountType
-import org.mochios.calendars.ui.dialogs.googleStep
+import org.mochios.calendars.ui.dialogs.googleOffer
 import org.mochios.calendars.ui.dialogs.kindsOffered
 import org.mochios.calendars.ui.dialogs.kindsSorted
 import org.mochios.calendars.ui.dialogs.matching
 import org.mochios.calendars.ui.dialogs.previous
+import org.mochios.calendars.ui.dialogs.sorted
 
 /**
  * The subscribe wizard's three stages: what each kind is reached through,
@@ -84,13 +86,40 @@ class SubscribeWizardTest {
         val accounts = listOf(
             CalendarAccount(id = "g", type = CalendarAccount.TYPE_GOOGLE),
             CalendarAccount(id = "a", type = CalendarAccount.TYPE_APPLE),
-            CalendarAccount(id = "c", type = CalendarAccount.TYPE_CALDAV),
-            CalendarAccount(id = "d", type = CalendarAccount.TYPE_CALDAV),
+            CalendarAccount(id = "c", type = CalendarAccount.TYPE_CALDAV, label = "Club"),
+            CalendarAccount(id = "d", type = CalendarAccount.TYPE_CALDAV, label = "Box"),
         )
         assertEquals(listOf("g"), matching(accounts, SubscribeKind.GOOGLE).map { it.id })
         assertEquals(listOf("a"), matching(accounts, SubscribeKind.APPLE).map { it.id })
-        assertEquals(listOf("c", "d"), matching(accounts, SubscribeKind.SERVER).map { it.id })
+        assertEquals(listOf("d", "c"), matching(accounts, SubscribeKind.SERVER).map { it.id })
         assertTrue(matching(accounts, SubscribeKind.ADDRESS).isEmpty())
+    }
+
+    /**
+     * Accounts read by the name they are shown under, what the user called
+     * them or else the address they sign in as, whatever order the server
+     * listed them in, as the web's do.
+     */
+    @Test
+    fun `a kind's accounts are listed by the names they show`() {
+        val accounts = listOf(
+            CalendarAccount(id = "w", type = CalendarAccount.TYPE_GOOGLE, label = "Work"),
+            CalendarAccount(id = "p", type = CalendarAccount.TYPE_GOOGLE, identifier = "pat@example.com"),
+            CalendarAccount(id = "h", type = CalendarAccount.TYPE_GOOGLE, label = "home"),
+            CalendarAccount(id = "a", type = CalendarAccount.TYPE_GOOGLE, label = "Ádám"),
+        )
+        assertEquals(listOf("a", "h", "p", "w"), matching(accounts, SubscribeKind.GOOGLE).map { it.id })
+    }
+
+    /** A server's calendars read by name, as the web's do. */
+    @Test
+    fun `the remote calendars are listed by name`() {
+        val calendars = listOf(
+            RemoteCalendar(href = "/3", name = "Team 10"),
+            RemoteCalendar(href = "/1", name = "birthdays"),
+            RemoteCalendar(href = "/2", name = "Team 2"),
+        )
+        assertEquals(listOf("/1", "/2", "/3"), sorted(calendars).map { it.href })
     }
 
     /** Back steps one stage, and the first stage has nowhere left to go. */
@@ -101,14 +130,21 @@ class SubscribeWizardTest {
         assertNull(previous(SubscribeStage.KIND))
     }
 
-    /** The Google step offers the consent wherever one can come of it. */
+    /**
+     * Below the accounts, the Google step offers the consent for another
+     * whenever the server can ask for one, accounts or none; else the
+     * administrator with none is offered the settings that enable Google.
+     */
     @Test
-    fun `the google step lists accounts, else offers the consent, else names the missing client`() {
+    fun `the google step offers another account wherever the consent can be asked for`() {
         val granted = CalendarAccount(id = "g1", type = "google", granted = listOf("login", "calendar"))
-        assertEquals(GoogleStep.LIST, googleStep(listOf(granted), listOf("google")))
-        // An account held from elsewhere lists even when this server cannot grant one.
-        assertEquals(GoogleStep.LIST, googleStep(listOf(granted), emptyList()))
-        assertEquals(GoogleStep.CONNECT, googleStep(emptyList(), listOf("google")))
-        assertEquals(GoogleStep.MISSING, googleStep(emptyList(), emptyList()))
+        assertEquals(GoogleOffer.CONNECT, googleOffer(listOf(granted), listOf("google"), administrator = false))
+        assertEquals(GoogleOffer.CONNECT, googleOffer(emptyList(), listOf("google"), administrator = true))
+        // An account held from elsewhere lists alone when this server cannot grant one.
+        assertEquals(GoogleOffer.NONE, googleOffer(listOf(granted), emptyList(), administrator = true))
+        assertEquals(GoogleOffer.ENABLE, googleOffer(emptyList(), emptyList(), administrator = true))
+        assertEquals(GoogleOffer.NONE, googleOffer(emptyList(), emptyList(), administrator = false))
+        // Another provider the server can grant is not Google's.
+        assertEquals(GoogleOffer.ENABLE, googleOffer(emptyList(), listOf("github"), administrator = true))
     }
 }

@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Anual</string>
     <string name="calendars_repeat_custom">Personalitzat</string>
     <string name="calendars_reminder_none">Cap</string>
-    <string name="calendars_day_sunday">Diumenge</string>
-    <string name="calendars_day_monday">Dilluns</string>
-    <string name="calendars_day_tuesday">Dimarts</string>
-    <string name="calendars_day_wednesday">Dimecres</string>
-    <string name="calendars_day_thursday">Dijous</string>
-    <string name="calendars_day_friday">Divendres</string>
-    <string name="calendars_day_saturday">Dissabte</string>
     <string name="calendars_link_replace">Substitueix</string>
     <string name="calendars_link_revoke">Revoca</string>
     <string name="calendars_permission_allow">Permet</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Mes</string>
     <string name="calendars_workweek">Setmana laboral</string>
     <string name="calendars_range">%1$s a %2$s</string>
-    <string name="calendars_truncated">Alguns esdeveniments d\'aquest interval no es mostren.</string>
+    <string name="calendars_truncated">Hi ha massa esdeveniments per mostrar-los tots. Trieu un interval més curt.</string>
     <string name="calendars_list_empty">Sense esdeveniments</string>
     <string name="calendars_untitled">(Sense títol)</string>
     <string name="calendars_status_cancelled">Cancel·lat</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Elimina el recordatori</string>
     <string name="calendars_hours_start">Inici de la jornada laboral</string>
     <string name="calendars_hours_finish">Fi de la jornada laboral</string>
-    <string name="calendars_hours_invalid">La jornada laboral ha d\'acabar després de començar.</string>
     <string name="calendars_work_days">Dies laborables</string>
     <string name="calendars_multiweek_weeks">Setmanes mostrades</string>
     <string name="calendars_multiweek_previous">Setmanes anteriors</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Esdeveniments de tot el dia</string>
     <string name="calendars_allday_first">Al principi</string>
     <string name="calendars_allday_last">Al final</string>
-    <string name="calendars_link_title">Enllaç del calendari</string>
-    <string name="calendars_link_copy">Copia l\'enllaç</string>
+    <string name="calendars_link_title">Adreça del calendari</string>
+    <string name="calendars_link_copy">Copia l\'adreça del calendari</string>
     <string name="calendars_link_once">Copieu-lo ara: no es podrà tornar a mostrar.</string>
-    <string name="calendars_link_exists">Ja hi ha un enllaç per a aquest calendari.</string>
+    <string name="calendars_link_exists">Aquesta adreça del calendari ja s\'ha emès i no es pot tornar a mostrar.</string>
     <string name="calendars_permission_title">Voleu permetre l\'accés?</string>
     <string name="calendars_permission_message">%1$s demana:</string>
     <string name="calendars_sync_authorization">Torneu a iniciar la sessió per continuar la sincronització</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">No hi ha cap dispositiu connectat</string>
     <string name="calendars_device_used">darrer ús %1$s</string>
     <string name="calendars_device_never">mai</string>
-    <string name="calendars_device_deleted">Dispositiu eliminat</string>
-    <string name="calendars_device_delete_title">Voleu eliminar aquest dispositiu?</string>
-    <string name="calendars_device_delete_message">Caldrà tornar-lo a configurar per sincronitzar.</string>
+    <string name="calendars_device_deleted">S\'ha suprimit el dispositiu</string>
+    <string name="calendars_device_delete_title">Voleu suprimir el dispositiu?</string>
+    <string name="calendars_device_delete_message">El dispositiu ja no podrà sincronitzar els contactes ni els calendaris.</string>
     <string name="calendars_sync_choose">Calendaris per sincronitzar</string>
     <string name="calendars_poll_large">El calendari és massa gran</string>
     <string name="calendars_poll_invalid">L\'adreça no ha retornat cap calendari</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">ID d\'Apple</string>
     <string name="calendars_subscribe_google">Google Calendar</string>
-    <string name="calendars_subscribe_google_enable">Els comptes de Google no estan activats en aquest servidor. Activa\'ls a Configuració, Configuració del sistema.</string>
+    <string name="calendars_subscribe_google_enable">Els comptes de Google no estan activats en aquest servidor.</string>
     <string name="calendars_subscribe_google_connect">No has connectat cap compte de Google.</string>
     <string name="calendars_subscribe_google_connect_action">Connecta Google</string>
     <string name="calendars_grant_failed">No s\'ha concedit l\'accés al calendari</string>
@@ -269,4 +261,21 @@
     </plurals>
     <string name="calendars_rule_until">fins al %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Esdeveniments anteriors</string>
+    <string name="calendars_created">S\'ha creat el calendari</string>
+    <string name="calendars_renamed">S\'ha canviat el nom del calendari</string>
+    <string name="calendars_colour_saved">S\'ha desat el color</string>
+    <string name="calendars_deleted">S\'ha suprimit el calendari</string>
+    <string name="calendars_removed">S\'ha eliminat el calendari</string>
+    <string name="calendars_preferences_saved">S\'han desat les preferències</string>
+    <string name="calendars_link_revoked">Adreça del calendari revocada</string>
+    <string name="calendars_link_none">Aquest calendari no té cap adreça per revocar</string>
+    <string name="calendars_linked">Calendari vinculat</string>
+    <string name="calendars_subscribed">Subscrit</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s hora</item>
+        <item quantity="other">%1$s hores</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Activa els comptes de Google</string>
+    <string name="calendars_provider_caldav">Servidor de calendari</string>
 </resources>

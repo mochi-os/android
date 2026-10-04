@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Taunan</string>
     <string name="calendars_repeat_custom">Kustom</string>
     <string name="calendars_reminder_none">Euweuh</string>
-    <string name="calendars_day_sunday">Minggu</string>
-    <string name="calendars_day_monday">Senén</string>
-    <string name="calendars_day_tuesday">Salasa</string>
-    <string name="calendars_day_wednesday">Rebo</string>
-    <string name="calendars_day_thursday">Kemis</string>
-    <string name="calendars_day_friday">Jumaah</string>
-    <string name="calendars_day_saturday">Saptu</string>
     <string name="calendars_link_replace">Ganti</string>
     <string name="calendars_link_revoke">Cabut</string>
     <string name="calendars_permission_allow">Idinan</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Bulan</string>
     <string name="calendars_workweek">Minggu gawé</string>
     <string name="calendars_range">%1$s dugi ka %2$s</string>
-    <string name="calendars_truncated">Sawatara acara dina rentang ieu henteu dipidangkeun.</string>
+    <string name="calendars_truncated">Acara loba teuing pikeun ditémbongkeun kabéh. Pilih rentang nu leuwih pondok.</string>
     <string name="calendars_list_empty">Teu aya acara</string>
     <string name="calendars_untitled">(Tanpa judul)</string>
     <string name="calendars_status_cancelled">Dibatalkeun</string>
@@ -107,7 +100,6 @@
     <string name="calendars_reminder_remove">Pupus panginget</string>
     <string name="calendars_hours_start">Awal jam damel</string>
     <string name="calendars_hours_finish">Ahir jam damel</string>
-    <string name="calendars_hours_invalid">Jam damel kedah réngsé saatos dimimitian.</string>
     <string name="calendars_work_days">Poé gawé</string>
     <string name="calendars_multiweek_weeks">Minggu nu ditémbongkeun</string>
     <string name="calendars_multiweek_previous">Minggu saméméhna</string>
@@ -117,10 +109,10 @@
     <string name="calendars_preferences_allday">Acara sapoé pinuh</string>
     <string name="calendars_allday_first">Di awal</string>
     <string name="calendars_allday_last">Di tungtung</string>
-    <string name="calendars_link_title">Tumbu kalénder</string>
-    <string name="calendars_link_copy">Salin tumbu</string>
+    <string name="calendars_link_title">Alamat kalénder</string>
+    <string name="calendars_link_copy">Salin alamat kalénder</string>
     <string name="calendars_link_once">Salin ayeuna: moal dipidangkeun deui.</string>
-    <string name="calendars_link_exists">Tumbu pikeun kalénder ieu parantos aya.</string>
+    <string name="calendars_link_exists">Alamat kalénder ieu geus dikaluarkeun sarta teu bisa ditémbongkeun deui.</string>
     <string name="calendars_permission_title">Idinan aksés?</string>
     <string name="calendars_permission_message">%1$s nyuhunkeun:</string>
     <string name="calendars_sync_authorization">Lebet deui supados sinkronisasi tetep jalan</string>
@@ -128,9 +120,9 @@
     <string name="calendars_device_empty">Teu aya alat nu nyambung</string>
     <string name="calendars_device_used">panungtung dipaké %1$s</string>
     <string name="calendars_device_never">teu kantos</string>
-    <string name="calendars_device_deleted">Alat dipiceun</string>
-    <string name="calendars_device_delete_title">Piceun alat ieu?</string>
-    <string name="calendars_device_delete_message">Kedah disetél deui supados tiasa sinkron.</string>
+    <string name="calendars_device_deleted">Pakakas geus dihapus</string>
+    <string name="calendars_device_delete_title">Hapus pakakas?</string>
+    <string name="calendars_device_delete_message">Pakakas moal bisa nyingkronkeun kontak atawa kalénder deui.</string>
     <string name="calendars_sync_choose">Kalénder nu rék disinkronkeun</string>
     <string name="calendars_poll_large">Kalénderna kagedéan</string>
     <string name="calendars_poll_invalid">Alamat teu ngabalikeun kalénder</string>
@@ -172,7 +164,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Kalénder</string>
-    <string name="calendars_subscribe_google_enable">Akun Google tacan diaktipkeun dina server ieu. Aktipkeun dina Setélan, Setélan sistem.</string>
+    <string name="calendars_subscribe_google_enable">Akun Google tacan diaktipkeun dina server ieu.</string>
     <string name="calendars_subscribe_google_connect">Anjeun tacan nyambungkeun akun Google.</string>
     <string name="calendars_subscribe_google_connect_action">Sambungkeun Google</string>
     <string name="calendars_grant_failed">Aksés kalénder henteu dipasihkeun</string>
@@ -255,4 +247,20 @@
     </plurals>
     <string name="calendars_rule_until">nepi ka %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Acara saméméhna</string>
+    <string name="calendars_created">Kalénder dijieun</string>
+    <string name="calendars_renamed">Ngaran kalénder diganti</string>
+    <string name="calendars_colour_saved">Warna disimpen</string>
+    <string name="calendars_deleted">Kalénder dihapus</string>
+    <string name="calendars_removed">Kalénder dipupus</string>
+    <string name="calendars_preferences_saved">Préferénsi disimpen</string>
+    <string name="calendars_link_revoked">Alamat kalénder dicabut</string>
+    <string name="calendars_link_none">Kalénder ieu teu boga alamat pikeun dicabut</string>
+    <string name="calendars_linked">Kalénder geus dihubungkeun</string>
+    <string name="calendars_subscribed">Dilanggan</string>
+    <plurals name="calendars_hours">
+        <item quantity="other">%1$s jam</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Aktipkeun akun Google</string>
+    <string name="calendars_provider_caldav">Server kalénder</string>
 </resources>

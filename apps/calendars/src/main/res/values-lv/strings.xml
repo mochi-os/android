@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Reizi gadā</string>
     <string name="calendars_repeat_custom">Pielāgots</string>
     <string name="calendars_reminder_none">Nav</string>
-    <string name="calendars_day_sunday">Svētdiena</string>
-    <string name="calendars_day_monday">Pirmdiena</string>
-    <string name="calendars_day_tuesday">Otrdiena</string>
-    <string name="calendars_day_wednesday">Trešdiena</string>
-    <string name="calendars_day_thursday">Ceturtdiena</string>
-    <string name="calendars_day_friday">Piektdiena</string>
-    <string name="calendars_day_saturday">Sestdiena</string>
     <string name="calendars_link_replace">Aizstāt</string>
     <string name="calendars_link_revoke">Atsaukt</string>
     <string name="calendars_permission_allow">Atļaut</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Mēnesis</string>
     <string name="calendars_workweek">Darba nedēļa</string>
     <string name="calendars_range">no %1$s līdz %2$s</string>
-    <string name="calendars_truncated">Daži šī diapazona notikumi netiek rādīti.</string>
+    <string name="calendars_truncated">Pārāk daudz notikumu, lai parādītu visus. Izvēlies īsāku diapazonu.</string>
     <string name="calendars_list_empty">Nav notikumu</string>
     <string name="calendars_untitled">(Bez nosaukuma)</string>
     <string name="calendars_status_cancelled">Atcelts</string>
@@ -113,7 +106,6 @@
     <string name="calendars_reminder_remove">Noņemt atgādinājumu</string>
     <string name="calendars_hours_start">Darba laika sākums</string>
     <string name="calendars_hours_finish">Darba laika beigas</string>
-    <string name="calendars_hours_invalid">Darba laikam jābeidzas pēc tā sākuma.</string>
     <string name="calendars_work_days">Darba dienas</string>
     <string name="calendars_multiweek_weeks">Rādītās nedēļas</string>
     <string name="calendars_multiweek_previous">Nedēļas pirms</string>
@@ -123,10 +115,10 @@
     <string name="calendars_preferences_allday">Visas dienas notikumi</string>
     <string name="calendars_allday_first">Sākumā</string>
     <string name="calendars_allday_last">Beigās</string>
-    <string name="calendars_link_title">Kalendāra saite</string>
-    <string name="calendars_link_copy">Kopēt saiti</string>
+    <string name="calendars_link_title">Kalendāra adrese</string>
+    <string name="calendars_link_copy">Kopēt kalendāra adresi</string>
     <string name="calendars_link_once">Nokopējiet to tagad: to vairs nevarēs parādīt.</string>
-    <string name="calendars_link_exists">Šim kalendāram saite jau pastāv.</string>
+    <string name="calendars_link_exists">Šī kalendāra adrese jau ir izsniegta, un to nevar parādīt vēlreiz.</string>
     <string name="calendars_permission_title">Atļaut piekļuvi?</string>
     <string name="calendars_permission_message">%1$s pieprasa:</string>
     <string name="calendars_sync_authorization">Piesakieties vēlreiz, lai turpinātu sinhronizāciju</string>
@@ -134,9 +126,9 @@
     <string name="calendars_device_empty">Nav pievienotu ierīču</string>
     <string name="calendars_device_used">Pēdējoreiz lietots %1$s</string>
     <string name="calendars_device_never">nekad</string>
-    <string name="calendars_device_deleted">Ierīce noņemta</string>
-    <string name="calendars_device_delete_title">Noņemt šo ierīci?</string>
-    <string name="calendars_device_delete_message">Lai sinhronizētu, tā būs jāiestata no jauna.</string>
+    <string name="calendars_device_deleted">Ierīce dzēsta</string>
+    <string name="calendars_device_delete_title">Dzēst ierīci?</string>
+    <string name="calendars_device_delete_message">Ierīce vairs nevarēs sinhronizēt kontaktus vai kalendārus.</string>
     <string name="calendars_sync_choose">Sinhronizējamie kalendāri</string>
     <string name="calendars_poll_large">Kalendārs ir pārāk liels</string>
     <string name="calendars_poll_invalid">Adrese neatgrieza kalendāru</string>
@@ -180,7 +172,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google kalendārs</string>
-    <string name="calendars_subscribe_google_enable">Google konti šajā serverī nav iespējoti. Iespējo tos sadaļā Iestatījumi, Sistēmas iestatījumi.</string>
+    <string name="calendars_subscribe_google_enable">Google konti šajā serverī nav iespējoti.</string>
     <string name="calendars_subscribe_google_connect">Tu neesi savienojis Google kontu.</string>
     <string name="calendars_subscribe_google_connect_action">Savienot Google</string>
     <string name="calendars_grant_failed">Piekļuve kalendāram netika piešķirta</string>
@@ -276,4 +268,22 @@
     </plurals>
     <string name="calendars_rule_until">līdz %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Iepriekšējie notikumi</string>
+    <string name="calendars_created">Kalendārs izveidots</string>
+    <string name="calendars_renamed">Kalendārs pārdēvēts</string>
+    <string name="calendars_colour_saved">Krāsa saglabāta</string>
+    <string name="calendars_deleted">Kalendārs dzēsts</string>
+    <string name="calendars_removed">Kalendārs noņemts</string>
+    <string name="calendars_preferences_saved">Preferences saglabātas</string>
+    <string name="calendars_link_revoked">Kalendāra adrese atsaukta</string>
+    <string name="calendars_link_none">Šim kalendāram nav adreses, ko atsaukt</string>
+    <string name="calendars_linked">Kalendārs saistīts</string>
+    <string name="calendars_subscribed">Abonēts</string>
+    <plurals name="calendars_hours">
+        <item quantity="zero">%1$s stundu</item>
+        <item quantity="one">%1$s stunda</item>
+        <item quantity="other">%1$s stundas</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Iespējot Google kontus</string>
+    <string name="calendars_provider_caldav">Kalendāra serveris</string>
 </resources>

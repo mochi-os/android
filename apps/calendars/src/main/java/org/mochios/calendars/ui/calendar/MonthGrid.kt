@@ -5,8 +5,11 @@
 
 package org.mochios.calendars.ui.calendar
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -14,6 +17,8 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -30,7 +35,9 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.KeyboardArrowUp
 import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -40,15 +47,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
+import androidx.compose.runtime.withFrameMillis
 import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -62,6 +70,8 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.input.pointer.PointerEventPass
+import androidx.compose.ui.input.pointer.changedToUpIgnoreConsumed
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -69,15 +79,20 @@ import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.InlineErrorState
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.util.NaturalCompare
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
@@ -101,22 +116,24 @@ private val SPACE = 10.dp
 private data class Hold(val instance: Instance, val day: LocalDate, val grab: Offset, val width: Float)
 
 /**
- * The month and multiweek views: [weeks] rows of seven days, each cell
- * holding every one of its occurrences from its own top: one-line bars for
- * the all-day and multi-day ones, and two lines on the cell for each of the
- * rest, the title above the time and marks. The bars come first unless the
- * user put all-day events last; each group scrolls within the cell when it
- * holds more than the cell has room for. In the month view days outside
- * [month] are dimmed but drawn; in the multiweek view [month] is null and
- * every day reads the same.
+ * The month and multiweek views: [weeks] rows of seven days, each led by its
+ * ISO week number and each cell holding every one of its occurrences from
+ * its own top: one-line bars for the all-day and multi-day ones, and two
+ * lines on the cell for each of the rest, the title above the time and
+ * marks. The bars come first unless the user put all-day events last; each
+ * group scrolls within the cell when it holds more than the cell has room
+ * for. In the month view days outside [month] are shaded and their numbers
+ * muted, but drawn; in the multiweek view [month] is null and every day
+ * reads the same.
  *
  * A tap on a chip opens its summary, a tap on empty cell space starts an
  * event on that day, and the day number opens the day view. A long press
- * lifts a chip, which then follows the finger from cell to cell; letting go
- * on another day asks [onMove] to move the occurrence so that its first day
- * moves by as many days, and that day's cell scrolls to show it once it
- * lands there. The occurrence whose summary is open, [selected], is drawn in
- * the primary colour's tint.
+ * lifts a chip, which then follows the finger from cell to cell; resting it
+ * at the top or bottom of the weeks turns to the previous or next range by
+ * [onStep], and letting go on another day asks [onMove] to move the
+ * occurrence so that its first day moves by as many days, and that day's
+ * cell scrolls to show it once it lands there. The occurrence whose summary
+ * is open, [selected], is drawn in the primary colour's tint.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -128,32 +145,112 @@ fun MonthGrid(
     onOpen: (Instance) -> Unit,
     onCreate: (LocalDate) -> Unit,
     onMove: (Instance, LocalDate) -> Unit,
+    onStep: (Int) -> Unit = {},
     selected: Instance? = null,
 ) {
     val today = LocalDate.now(viewModel.timezone())
     val format = LocalFormat.current
+    val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
     val byDay = remember(state.instances, state.hidden, weeks, state.preferences.zones) {
         weeks.flatMap { week -> (0 until 7).map { week.plusDays(it.toLong()) } }
             .associateWith { day -> state.visible.filter { viewModel.covers(it, day) } }
     }
 
-    // The lifted chip, the finger and every cell's bounds, all in the root's
+    // The lifted chip, the finger and the weeks' bounds, all in the root's
     // coordinates; the grid's own origin turns the finger into where the
-    // carried chip is drawn.
+    // carried chip is drawn. The chip that was pressed lifts itself, and the
+    // grid then follows the finger, so the drag outlives the chip when a
+    // page turns under it.
     var lift by remember { mutableStateOf<Hold?>(null) }
     var finger by remember { mutableStateOf(Offset.Zero) }
     var origin by remember { mutableStateOf(Offset.Zero) }
-    val cells = remember { mutableStateMapOf<LocalDate, Rect>() }
+    var body by remember { mutableStateOf<Rect?>(null) }
     // The day a chip was last dropped on and its event, which that day's
     // cell scrolls into view when the moved occurrence arrives there.
     var landed by remember(weeks) { mutableStateOf<Pair<LocalDate, String>?>(null) }
-    fun under(): LocalDate? = cells.entries.firstOrNull { it.value.contains(finger) }?.key
-    val target = if (lift != null) under() else null
     val density = LocalDensity.current
+    val numbers = with(density) { NUMBERS.toPx() }
 
-    Box(modifier = Modifier.fillMaxSize().onGloballyPositioned { origin = it.positionInRoot() }) {
+    /** The day under the finger, from the weeks' bounds: rows of equal height, seven equal columns. */
+    fun under(): LocalDate? {
+        val box = body ?: return null
+        if (!box.contains(finger) || weeks.isEmpty()) return null
+        val row = ((finger.y - box.top) / (box.height / weeks.size)).toInt().coerceIn(0, weeks.size - 1)
+        // The week numbers lead each row, on the right in a right-to-left layout.
+        val days = box.width - numbers
+        val across = if (rtl) box.right - numbers - finger.x else finger.x - box.left - numbers
+        if (across < 0) return null
+        val column = (across / (days / 7)).toInt().coerceIn(0, 6)
+        return weeks[row].plusDays(column.toLong())
+    }
+
+    fun drop() {
+        val lifted = lift
+        lift = null
+        val dropped = under()
+        if (lifted != null && dropped != null && dropped != lifted.day) {
+            landed = dropped to lifted.instance.event
+            val shift = ChronoUnit.DAYS.between(lifted.day, dropped)
+            onMove(lifted.instance, viewModel.day(lifted.instance).plusDays(shift))
+        }
+    }
+
+    // The gesture outlives a composition, so it reaches this one's drop
+    // through a holder set afresh after each, as the time grid's does.
+    val hands = remember { Grip() }
+    SideEffect {
+        hands.drop = ::drop
+        hands.step = onStep
+    }
+    val target = if (lift != null) under() else null
+
+    // A chip resting at the top or bottom of the weeks turns the page, once
+    // and then again each hold.
+    LaunchedEffect(lift != null) {
+        if (lift == null) return@LaunchedEffect
+        val near = with(density) { SIDE.toPx() }
+        val dwell = Dwell()
+        while (lift != null) {
+            val time = withFrameMillis { it }
+            val box = body ?: continue
+            val inside = finger.x >= box.left && finger.x <= box.right
+            val direction = when {
+                !inside -> 0
+                finger.y >= box.top - near && finger.y < box.top + near -> -1
+                finger.y > box.bottom - near && finger.y <= box.bottom + near -> 1
+                else -> 0
+            }
+            val turn = dwell.step(direction, time)
+            if (turn != 0) hands.step(turn)
+        }
+    }
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .onGloballyPositioned { origin = it.positionInRoot() }
+            .pointerInput(Unit) {
+                awaitEachGesture {
+                    val down = awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Initial)
+                    while (true) {
+                        val event = awaitPointerEvent(PointerEventPass.Initial)
+                        val change = event.changes.firstOrNull { it.id == down.id } ?: break
+                        val up = change.changedToUpIgnoreConsumed()
+                        if (lift != null) {
+                            // Once a chip is lifted the finger is the drag's,
+                            // so no cell's scroll or tap beneath it acts.
+                            finger = origin + change.position
+                            change.consume()
+                            if (up) hands.drop()
+                        }
+                        if (up) break
+                    }
+                }
+            },
+    ) {
         Column(modifier = Modifier.fillMaxSize()) {
             Row(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
+                Spacer(Modifier.width(NUMBERS))
                 for (offset in 0 until 7) {
                     Text(
                         text = weekdayLabel(weeks.first().plusDays(offset.toLong())),
@@ -165,52 +262,59 @@ fun MonthGrid(
                 }
             }
             HorizontalDivider()
-            for (week in weeks) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(1f)
-                        .columnLines(7, MaterialTheme.colorScheme.outlineVariant),
-                ) {
-                    for (offset in 0 until 7) {
-                        val day = week.plusDays(offset.toLong())
-                        val occurrences = byDay[day].orEmpty()
-                        Cell(
-                            day = day,
-                            today = today,
-                            allday = state.preferences.allday,
-                            outside = month != null && day.monthValue != month,
-                            instances = occurrences,
-                            viewModel = viewModel,
-                            lifted = lift?.instance,
-                            selected = selected,
-                            targeted = target == day && lift?.day != day,
-                            modifier = Modifier.weight(1f),
-                            onDay = { viewModel.open(day) },
-                            onCreate = { onCreate(day) },
-                            onOpen = onOpen,
-                            landing = landed?.takeIf { it.first == day }?.second,
-                            onPlaced = { cells[day] = it },
-                            onLift = { instance, grab, width ->
-                                landed = null
-                                lift = Hold(instance, day, grab, width)
-                            },
-                            onDrag = { finger = it },
-                            onDrop = {
-                                val lifted = lift
-                                lift = null
-                                val dropped = under()
-                                if (lifted != null && dropped != null && dropped != lifted.day) {
-                                    landed = dropped to lifted.instance.event
-                                    val shift = ChronoUnit.DAYS.between(lifted.day, dropped)
-                                    onMove(lifted.instance, viewModel.day(lifted.instance).plusDays(shift))
-                                }
-                            },
-                            onCancel = { lift = null },
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f)
+                    .testTag("weeks")
+                    .onGloballyPositioned { body = it.rectInRoot() },
+            ) {
+                for (week in weeks) {
+                    Row(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                        Text(
+                            text = number(week).toString(),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                            modifier = Modifier.width(NUMBERS).padding(top = 4.dp).testTag("week-number"),
                         )
+                        // The lines between days are drawn over the days
+                        // alone, so the week numbers' column has none.
+                        Row(
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxHeight()
+                                .columnLines(7, MaterialTheme.colorScheme.outlineVariant),
+                        ) {
+                            for (offset in 0 until 7) {
+                                val day = week.plusDays(offset.toLong())
+                                val occurrences = byDay[day].orEmpty()
+                                Cell(
+                                    day = day,
+                                    today = today,
+                                    allday = state.preferences.allday,
+                                    outside = month != null && day.monthValue != month,
+                                    instances = occurrences,
+                                    viewModel = viewModel,
+                                    lifted = lift?.instance,
+                                    selected = selected,
+                                    targeted = target == day && lift?.day != day,
+                                    modifier = Modifier.weight(1f),
+                                    onDay = { viewModel.open(day) },
+                                    onCreate = { onCreate(day) },
+                                    onOpen = onOpen,
+                                    landing = landed?.takeIf { it.first == day }?.second,
+                                    onLift = { instance, at, grab, width ->
+                                        landed = null
+                                        finger = at
+                                        lift = Hold(instance, day, grab, width)
+                                    },
+                                )
+                            }
+                        }
                     }
+                    HorizontalDivider()
                 }
-                HorizontalDivider()
             }
         }
         // The carried chip always sits on the neutral surface, which its
@@ -240,6 +344,31 @@ fun MonthGrid(
     }
 }
 
+/** What the month grid's gesture calls on, from the latest composition. */
+private class Grip {
+    var drop: () -> Unit = {}
+    var step: (Int) -> Unit = {}
+}
+
+/** The width of the column the week numbers sit in. */
+private val NUMBERS = 22.dp
+
+/** How close to the weeks' top or bottom a carried chip turns the page. */
+private val SIDE = 28.dp
+
+/**
+ * The ISO week number a row of seven days is labelled with: that of its
+ * middle day, so a row starting on Sunday or Saturday takes the number of
+ * the week most of its days are in.
+ */
+fun number(first: LocalDate): Int = first.plusDays(3).get(java.time.temporal.IsoFields.WEEK_OF_WEEK_BASED_YEAR)
+
+/** A layout's bounds in the root's coordinates, unclipped by its parents. */
+private fun LayoutCoordinates.rectInRoot(): Rect {
+    val at = positionInRoot()
+    return Rect(at.x, at.y, at.x + size.width, at.y + size.height)
+}
+
 @Composable
 private fun Cell(
     day: LocalDate,
@@ -256,11 +385,7 @@ private fun Cell(
     onCreate: () -> Unit,
     onOpen: (Instance) -> Unit,
     landing: String?,
-    onPlaced: (Rect) -> Unit,
-    onLift: (Instance, Offset, Float) -> Unit,
-    onDrag: (Offset) -> Unit,
-    onDrop: () -> Unit,
-    onCancel: () -> Unit,
+    onLift: (Instance, Offset, Offset, Float) -> Unit,
 ) {
     val current = day == today
     val format = LocalFormat.current
@@ -269,11 +394,14 @@ private fun Cell(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .onGloballyPositioned {
-                val at = it.positionInRoot()
-                onPlaced(Rect(at.x, at.y, at.x + it.size.width, at.y + it.size.height))
-            }
-            .then(if (targeted) Modifier.background(tint) else Modifier)
+            .then(
+                when {
+                    targeted -> Modifier.background(tint)
+                    outside -> Modifier.background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
+                    else -> Modifier
+                },
+            )
+            .testTag(if (outside) "outside" else "inside")
             .clickable(onClick = onCreate),
     ) {
         // Today's number sits inside a band in the primary colour across the
@@ -296,7 +424,7 @@ private fun Cell(
                     fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
                     color = when {
                         current -> MaterialTheme.colorScheme.onPrimary
-                        outside -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
+                        outside -> MaterialTheme.colorScheme.onSurfaceVariant
                         else -> MaterialTheme.colorScheme.onSurface
                     },
                 )
@@ -331,7 +459,7 @@ private fun Cell(
                     .alpha(opacity(carried = same(instance, lifted), over = viewModel.past(instance), cancelled = instance.cancelled)),
                 filled = true,
                 chosen = same(instance, selected),
-                lift = Modifier.lift(instance, onLift, onDrag, onDrop, onCancel),
+                lift = Modifier.lift(instance, onLift),
             ) { onOpen(instance) }
         }
 
@@ -430,41 +558,30 @@ fun band(count: Int, line: Float, gap: Float, room: Float, entry: Float, below: 
 }
 
 /**
- * A long press lifts the chip, with where in it the finger is and its
- * width; the finger is then reported in the root's coordinates. The lift
- * and the drag consume their events, so the chip's tap and the cell's do
- * not also run. A read-only occurrence, and a birthday, cannot be lifted.
+ * A long press lifts the chip: [onLift] has the occurrence, the finger in
+ * the root's coordinates, where in the chip the finger is and the chip's
+ * width. The grid follows the finger from there, so the chip's own drag
+ * ends, unheeded, at the first move. A read-only occurrence, and a
+ * birthday, cannot be lifted.
  */
 @Composable
 private fun Modifier.lift(
     instance: Instance,
-    onLift: (Instance, Offset, Float) -> Unit,
-    onDrag: (Offset) -> Unit,
-    onDrop: () -> Unit,
-    onCancel: () -> Unit,
+    onLift: (Instance, Offset, Offset, Float) -> Unit,
 ): Modifier {
     if (!instance.editable) return this
     val haptic = LocalHapticFeedback.current
     var coordinates by remember { mutableStateOf<LayoutCoordinates?>(null) }
     val lift by rememberUpdatedState(onLift)
-    val drag by rememberUpdatedState(onDrag)
-    val drop by rememberUpdatedState(onDrop)
-    val cancel by rememberUpdatedState(onCancel)
     return this
         .onGloballyPositioned { coordinates = it }
         .pointerInput(instance.event, instance.start) {
             detectDragGesturesAfterLongPress(
                 onDragStart = { position ->
                     haptic.performHapticFeedback(HapticFeedbackType.LongPress)
-                    lift(instance, position, size.width.toFloat())
-                    drag(coordinates?.localToRoot(position) ?: position)
+                    lift(instance, coordinates?.localToRoot(position) ?: position, position, size.width.toFloat())
                 },
-                onDrag = { change, _ ->
-                    change.consume()
-                    drag(coordinates?.localToRoot(change.position) ?: change.position)
-                },
-                onDragEnd = { drop() },
-                onDragCancel = { cancel() },
+                onDrag = { _, _ -> },
             )
         }
 }
@@ -484,13 +601,18 @@ private fun Modifier.lift(
  * shows a spinner in place of the old range until it has been read, so
  * nothing is drawn and then pushed aside. A page read in before the earliest, from a pull
  * at the top, brings the list to its new first day rather than holding it
- * where it was.
+ * where it was. On a wide screen each card also names its calendar, as the
+ * web's list does.
  *
- * It opens on the anchor day and pages on as the reader scrolls — a further
- * page when the foot comes into view, an earlier one on a pull or a scroll
- * that reaches the top — stopping at the calendars' own bounds. The search
- * box filters what has been loaded rather than asking the server again.
+ * It opens on the anchor day and pages on as the reader scrolls: further
+ * pages while the foot is in view, so a first page with nothing on it still
+ * reaches the events after it, and earlier ones from "Earlier events", a
+ * pull, or a scroll that reaches the top, stopping at the calendars' own
+ * bounds. A page that fails stops the paging and says so with Retry. The
+ * search box filters what has been loaded rather than asking the server
+ * again.
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun AgendaList(
     state: CalendarUiState,
@@ -503,6 +625,8 @@ fun AgendaList(
     val today = LocalDate.now(viewModel.timezone())
     val listState = rememberLazyListState()
     val search = state.search.trim()
+    val wide = LocalConfiguration.current.screenWidthDp >= WIDE
+    val names = remember(state.calendars) { state.calendars.associate { it.id to it.name } }
     val matched = remember(state.instances, state.hidden, search) {
         state.visible.filter { instance ->
             search.isEmpty() ||
@@ -519,11 +643,14 @@ fun AgendaList(
             )
         }
     }
+    val earlier = viewModel.hasEarlier(state)
+    val later = viewModel.hasLater(state)
 
-    // The foot coming into view asks for the next page; reaching the top
-    // under the reader's own finger asks for the one before. The gesture is
-    // part of the second condition on purpose: without it a prepend that
-    // leaves the list at the top would immediately ask for another.
+    // The foot in view asks for the next page, so a short or empty list keeps
+    // loading until it fills the screen; reaching the top under the reader's
+    // own finger asks for the one before. The gesture is part of the second
+    // condition on purpose: without it a prepend that leaves the list at the
+    // top would immediately ask for another.
     val atFoot by remember {
         derivedStateOf {
             val info = listState.layoutInfo
@@ -538,18 +665,17 @@ fun AgendaList(
                 listState.firstVisibleItemScrollOffset == 0
         }
     }
-    LaunchedEffect(atFoot, state.paging, state.latest, state.bounds) {
+    LaunchedEffect(atFoot, state.paging, state.latest, state.bounds, state.stalled) {
         if (atFoot && !state.paging) viewModel.later()
     }
     LaunchedEffect(atHead, state.paging, state.earliest, state.bounds) {
         if (atHead && !state.paging) viewModel.earlier()
     }
     // A search that has matched nothing so far keeps loading later pages, as
-    // the web's list does, until something matches or there is none left;
-    // nothing to scroll means nothing else would ask for them.
-    val searched = searched(search, matched.size, state.paging, viewModel.hasLater(state))
+    // the web's list does, until something matches or there is none left.
+    val searched = searched(search, matched.size, state.paging, later)
     LaunchedEffect(searched, state.paging, state.latest, state.bounds) {
-        if (searched == Searched.LOADING && !state.paging && viewModel.hasLater(state)) viewModel.later()
+        if (searched == Searched.LOADING && !state.paging && later) viewModel.later()
     }
 
     val known = state.fetched == state.anchor || viewModel.holds(state.anchor, state)
@@ -559,11 +685,13 @@ fun AgendaList(
         }
         return
     }
-    if (searched == Searched.LOADING) {
+    // A failed page leaves a search with nothing to wait on, so it falls
+    // through to the list, which offers Retry.
+    if (searched == Searched.LOADING && state.stalled == null) {
         Paging()
         return
     }
-    if (searched == Searched.NONE) {
+    if (searched == Searched.NONE && state.stalled == null) {
         // Matched nothing in everything there is to load, which is not the
         // same as a calendar with nothing on it.
         Column(
@@ -597,8 +725,8 @@ fun AgendaList(
     val landing = rows.indexOfFirst { row -> row.day >= state.anchor }
     LaunchedEffect(state.anchor, rows.getOrNull(landing)?.key) {
         if (landing >= 0) {
-            val spinner = if (state.paging && viewModel.hasEarlier(state)) 1 else 0
-            listState.scrollToItem(landing + spinner)
+            // Past the "Earlier events" button, which leads the list.
+            listState.scrollToItem(landing + if (earlier) 1 else 0)
         }
     }
     val days = remember(rows) { rows.associate { row -> row.key to row.day } }
@@ -615,8 +743,20 @@ fun AgendaList(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(bottom = 88.dp),
     ) {
-        if (state.paging && viewModel.hasEarlier(state)) {
-            item(key = "earlier") { Paging() }
+        if (earlier) {
+            item(key = "earlier") {
+                Box(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), contentAlignment = Alignment.Center) {
+                    MochiOutlinedButton(onClick = { viewModel.earlier() }, enabled = !state.paging) {
+                        if (state.paging) {
+                            CircularProgressIndicator(Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                        } else {
+                            Icon(Icons.Outlined.KeyboardArrowUp, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                        }
+                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                        Text(stringResource(R.string.calendars_list_earlier))
+                    }
+                }
+            }
         }
         items(rows, key = { row -> row.key }) { row ->
             when (row) {
@@ -631,12 +771,20 @@ fun AgendaList(
                     day = if (row.first) row.day else null,
                     today = today,
                     chosen = same(row.instance, selected),
+                    calendar = if (wide) names[row.instance.calendar].orEmpty() else null,
                 ) { onOpen(row.instance) }
             }
         }
-        if (state.paging) {
-            item(key = "later") { Paging() }
+        state.stalled?.let { stalled ->
+            item(key = "stalled") {
+                InlineErrorState(error = stalled.error, onRetry = { viewModel.resume() })
+            }
         }
+        if (state.paging) {
+            item(key = "paging") { Paging() }
+        }
+        // Always last, so a list too short to scroll still has its foot in view.
+        item(key = "foot") { Spacer(Modifier.height(1.dp)) }
     }
 }
 
@@ -705,6 +853,9 @@ private fun rows(
     }
 }
 
+/** From this screen width, in dp, a list row names its calendar, as the web's does from a tablet's width. */
+private const val WIDE = 600
+
 /** What the list shows for a search. */
 internal enum class Searched { MATCHES, LOADING, NONE }
 
@@ -742,7 +893,7 @@ private val GUTTER = 56.dp
  * two ends across days, each read in its own zone when the views show
  * events in theirs; where it is goes on a third. A past or cancelled
  * occurrence is faded, and the card is ringed while its summary is open,
- * [chosen].
+ * [chosen]. The [calendar]'s name, when given, goes last.
  */
 @Composable
 fun AgendaRow(
@@ -751,6 +902,7 @@ fun AgendaRow(
     day: LocalDate?,
     today: LocalDate,
     chosen: Boolean = false,
+    calendar: String? = null,
     onClick: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -816,6 +968,15 @@ fun AgendaRow(
                 if (instance.location.isNotBlank()) {
                     Text(
                         text = instance.location,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = ink.muted,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+                if (calendar != null) {
+                    Text(
+                        text = calendar,
                         style = MaterialTheme.typography.bodySmall,
                         color = ink.muted,
                         maxLines = 1,

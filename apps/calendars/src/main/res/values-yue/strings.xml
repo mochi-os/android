@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">每年</string>
     <string name="calendars_repeat_custom">自訂</string>
     <string name="calendars_reminder_none">無</string>
-    <string name="calendars_day_sunday">星期日</string>
-    <string name="calendars_day_monday">星期一</string>
-    <string name="calendars_day_tuesday">星期二</string>
-    <string name="calendars_day_wednesday">星期三</string>
-    <string name="calendars_day_thursday">星期四</string>
-    <string name="calendars_day_friday">星期五</string>
-    <string name="calendars_day_saturday">星期六</string>
     <string name="calendars_link_replace">取代</string>
     <string name="calendars_link_revoke">撤銷</string>
     <string name="calendars_link_replace_title">要取代日曆地址嗎？</string>
@@ -82,9 +75,10 @@
     <string name="calendars_workweek">工作週</string>
     <string name="calendars_range">%1$s 至 %2$s</string>
     <string name="calendars_span_day">%1$s %2$s 至 %3$s</string>
-    <string name="calendars_truncated">呢個範圍有部分活動未顯示。</string>
+    <string name="calendars_truncated">活動太多，冇辦法全部顯示。請揀短啲嘅時段。</string>
     <string name="calendars_list_empty">冇活動</string>
     <string name="calendars_list_unmatched">冇符合嘅結果</string>
+    <string name="calendars_list_earlier">更早嘅活動</string>
     <string name="calendars_list_search_events">搜尋活動</string>
     <string name="calendars_untitled">（冇標題）</string>
     <string name="calendars_status_cancelled">已取消</string>
@@ -120,7 +114,6 @@
     <string name="calendars_reminder_remove">移除提醒</string>
     <string name="calendars_hours_start">上班時間開始</string>
     <string name="calendars_hours_finish">上班時間結束</string>
-    <string name="calendars_hours_invalid">上班時間必須喺開始之後先結束。</string>
     <string name="calendars_work_days">工作日</string>
     <string name="calendars_multiweek_weeks">顯示週數</string>
     <string name="calendars_multiweek_previous">之前週數</string>
@@ -130,10 +123,10 @@
     <string name="calendars_preferences_allday">全日活動</string>
     <string name="calendars_allday_first">排喺前面</string>
     <string name="calendars_allday_last">排喺後面</string>
-    <string name="calendars_link_title">日曆連結</string>
-    <string name="calendars_link_copy">複製連結</string>
+    <string name="calendars_link_title">日曆地址</string>
+    <string name="calendars_link_copy">複製日曆地址</string>
     <string name="calendars_link_once">即刻複製：唔會再顯示。</string>
-    <string name="calendars_link_exists">呢個日曆已經有連結。</string>
+    <string name="calendars_link_exists">呢個日曆地址已經發出咗，冇得再顯示。</string>
     <string name="calendars_permission_title">允許存取？</string>
     <string name="calendars_permission_message">%1$s 要求：</string>
     <string name="calendars_sync_authorization">重新登入先可以繼續同步</string>
@@ -141,9 +134,9 @@
     <string name="calendars_device_empty">未有裝置連接</string>
     <string name="calendars_device_used">最後使用 %1$s</string>
     <string name="calendars_device_never">從未</string>
-    <string name="calendars_device_deleted">裝置已移除</string>
-    <string name="calendars_device_delete_title">移除呢個裝置？</string>
-    <string name="calendars_device_delete_message">要重新設定先可以同步。</string>
+    <string name="calendars_device_deleted">已刪除裝置</string>
+    <string name="calendars_device_delete_title">刪除裝置？</string>
+    <string name="calendars_device_delete_message">個裝置之後唔可以再同步聯絡人或者日曆。</string>
     <string name="calendars_sync_choose">要同步嘅日曆</string>
     <string name="calendars_poll_large">日曆太大</string>
     <string name="calendars_poll_invalid">呢個地址冇傳回日曆</string>
@@ -151,6 +144,9 @@
     <string name="calendars_poll_status">地址回應 %1$s</string>
     <plurals name="calendars_minutes">
         <item quantity="other">%1$s 分鐘</item>
+    </plurals>
+    <plurals name="calendars_hours">
+        <item quantity="other">%1$s 小時</item>
     </plurals>
     <string name="calendars_event_zone_start">開始時區</string>
     <string name="calendars_event_zone_finish">結束時區</string>
@@ -187,7 +183,9 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google 日曆</string>
-    <string name="calendars_subscribe_google_enable">呢個伺服器仲未啟用 Google 帳戶。請喺 設定、系統設定 度啟用。</string>
+    <string name="calendars_subscribe_google_enable">呢個伺服器仲未啟用 Google 帳戶。</string>
+    <string name="calendars_subscribe_google_enable_action">啟用 Google 帳戶</string>
+    <string name="calendars_provider_caldav">日曆伺服器</string>
     <string name="calendars_subscribe_google_connect">你仲未連接 Google 帳戶。</string>
     <string name="calendars_subscribe_google_connect_action">連接 Google</string>
     <string name="calendars_export_failed">無法儲存匯出內容</string>
@@ -250,4 +248,14 @@
     </plurals>
     <string name="calendars_rule_until">直到%1$s</string>
     <string name="calendars_rule_join">%1$s，%2$s</string>
+    <string name="calendars_created">已建立日曆</string>
+    <string name="calendars_renamed">已重新命名日曆</string>
+    <string name="calendars_colour_saved">已儲存顏色</string>
+    <string name="calendars_deleted">已刪除日曆</string>
+    <string name="calendars_removed">已移除日曆</string>
+    <string name="calendars_preferences_saved">已儲存偏好設定</string>
+    <string name="calendars_link_revoked">已撤銷日曆地址</string>
+    <string name="calendars_link_none">呢個日曆冇地址可以撤銷</string>
+    <string name="calendars_linked">已連結日曆</string>
+    <string name="calendars_subscribed">已訂閱</string>
 </resources>

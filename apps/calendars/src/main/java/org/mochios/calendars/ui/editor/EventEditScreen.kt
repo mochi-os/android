@@ -69,6 +69,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -89,6 +90,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ColorPicker
@@ -110,6 +112,7 @@ import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Zone
+import org.mochios.calendars.ui.components.DateDialog
 import org.mochios.calendars.ui.dialogs.DeleteEventDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.dialogs.reminderChoices
@@ -170,14 +173,19 @@ fun EventEditScreen(
         uiState.error?.let { snackbar.showSnackbar(it.userMessage()) }
     }
     // A save or delete refused because the event changed elsewhere says so,
-    // and Reload reads it again, as the web editor's toast does.
+    // and Reload reads it again, as the web editor's toast does. Said from
+    // the screen's own scope: the flag clears at once, which restarts this
+    // effect, and the message has to outlive it.
     val changed = stringResource(R.string.calendars_event_changed)
     val reload = stringResource(R.string.calendars_reload)
+    val scope = rememberCoroutineScope()
     LaunchedEffect(uiState.changed) {
         if (uiState.changed) {
             viewModel.told()
-            val chosen = snackbar.showSnackbar(changed, actionLabel = reload, duration = SnackbarDuration.Long)
-            if (chosen == SnackbarResult.ActionPerformed) viewModel.reload()
+            scope.launch {
+                val chosen = snackbar.showSnackbar(changed, actionLabel = reload, duration = SnackbarDuration.Long)
+                if (chosen == SnackbarResult.ActionPerformed) viewModel.reload()
+            }
         }
     }
     // Nothing more can be asked of the event while it saves or deletes, or
@@ -715,41 +723,6 @@ private val TIME = 140.dp
 /** A day, in seconds: an all-day form's end is the day after its last. */
 private const val DAY = 86_400L
 
-/**
- * The date picker, opened on [day]. Material's picker takes no first day of
- * the week, so the locale it reads is swapped for one whose week starts
- * where the user's does.
- */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun DateDialog(day: LocalDate, onDismiss: () -> Unit, onPick: (LocalDate) -> Unit) {
-    val weekStart = LocalFormat.current.preferences.weekStartsOn
-    val configuration = LocalConfiguration.current
-    val localised = remember(configuration, weekStart) {
-        android.content.res.Configuration(configuration).apply { setLocale(localeForWeekStart(weekStart)) }
-    }
-    CompositionLocalProvider(LocalConfiguration provides localised) {
-        val state = rememberDatePickerState(initialSelectedDateMillis = day.toEpochDay() * 86_400_000L)
-        DatePickerDialog(
-            onDismissRequest = onDismiss,
-            confirmButton = {
-                MochiTextButton(onClick = {
-                    state.selectedDateMillis?.let { millis -> onPick(LocalDate.ofEpochDay(millis / 86_400_000L)) }
-                        ?: onDismiss()
-                }) {
-                    Text(stringResource(MochiR.string.common_save))
-                }
-            },
-            dismissButton = {
-                MochiTextButton(onClick = onDismiss) {
-                    Text(stringResource(MochiR.string.common_cancel))
-                }
-            },
-        ) {
-            DatePicker(state = state)
-        }
-    }
-}
 
 /**
  * The zone one end is typed in, as its city beside a globe; a tap opens the
@@ -1005,13 +978,6 @@ private fun CountField(label: String, value: Int, maximum: Int, onChange: (Int) 
     }
 }
 
-/** A locale whose week starts where the user's does, for the date picker. */
-private fun localeForWeekStart(weekStartsOn: Int): java.util.Locale = when (weekStartsOn) {
-    0 -> java.util.Locale.US
-    1 -> java.util.Locale.UK
-    6 -> java.util.Locale.forLanguageTag("ar-SA")
-    else -> java.util.Locale.getDefault()
-}
 
 /** One of an event's reminders: its choice, and a button that removes it. */
 @Composable

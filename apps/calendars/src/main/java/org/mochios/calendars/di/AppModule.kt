@@ -13,10 +13,13 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.i18n.PreferencesManager
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.MenuApi
 import retrofit2.Retrofit
+import kotlinx.coroutines.flow.first
 import retrofit2.converter.gson.GsonConverterFactory
+import java.time.ZoneId
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
@@ -102,4 +105,28 @@ object AppModule {
     @Singleton
     fun provideMenuApi(@MenuRetrofit retrofit: Retrofit): MenuApi =
         retrofit.create(MenuApi::class.java)
+
+    @Provides
+    fun provideViewer(preferences: PreferencesManager, session: SessionManager): Viewer = object : Viewer {
+        override fun zone(): String =
+            runCatching { ZoneId.of(preferences.preferences.value.timezone).id }.getOrDefault(ZoneId.systemDefault().id)
+
+        override fun week(): Int = preferences.preferences.value.weekStartsOn
+
+        override suspend fun server(): String = session.serverUrl.first()
+    }
+}
+
+/**
+ * The person looking at the calendar, as the screens need them: the zone
+ * every range and new event is measured in, their own where their
+ * preferences name one the platform knows; the first day of their week, 0
+ * Sunday to 6 Saturday; and the server they are signed in to.
+ */
+interface Viewer {
+    fun zone(): String
+
+    fun week(): Int
+
+    suspend fun server(): String
 }

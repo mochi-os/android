@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Urtekoa</string>
     <string name="calendars_repeat_custom">Pertsonalizatua</string>
     <string name="calendars_reminder_none">Bat ere ez</string>
-    <string name="calendars_day_sunday">Igandea</string>
-    <string name="calendars_day_monday">Astelehena</string>
-    <string name="calendars_day_tuesday">Asteartea</string>
-    <string name="calendars_day_wednesday">Asteazkena</string>
-    <string name="calendars_day_thursday">Osteguna</string>
-    <string name="calendars_day_friday">Ostirala</string>
-    <string name="calendars_day_saturday">Larunbata</string>
     <string name="calendars_link_replace">Ordeztu</string>
     <string name="calendars_link_revoke">Indargabetu</string>
     <string name="calendars_permission_allow">Baimendu</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Hilabetea</string>
     <string name="calendars_workweek">Lan-astea</string>
     <string name="calendars_range">%1$s eta %2$s artean</string>
-    <string name="calendars_truncated">Bitarte honetako gertaera batzuk ez dira erakusten.</string>
+    <string name="calendars_truncated">Gertaera gehiegi daude guztiak erakusteko. Aukeratu bitarte laburragoa.</string>
     <string name="calendars_list_empty">Gertaerarik ez</string>
     <string name="calendars_untitled">(Izenbururik gabe)</string>
     <string name="calendars_status_cancelled">Bertan behera</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Kendu oroigarria</string>
     <string name="calendars_hours_start">Lanaldiaren hasiera</string>
     <string name="calendars_hours_finish">Lanaldiaren amaiera</string>
-    <string name="calendars_hours_invalid">Lanaldiak hasi ondoren amaitu behar du.</string>
     <string name="calendars_work_days">Lanegunak</string>
     <string name="calendars_multiweek_weeks">Erakutsitako asteak</string>
     <string name="calendars_multiweek_previous">Aurreko asteak</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Egun osoko gertaerak</string>
     <string name="calendars_allday_first">Hasieran</string>
     <string name="calendars_allday_last">Amaieran</string>
-    <string name="calendars_link_title">Egutegiaren esteka</string>
-    <string name="calendars_link_copy">Kopiatu esteka</string>
+    <string name="calendars_link_title">Egutegiaren helbidea</string>
+    <string name="calendars_link_copy">Kopiatu egutegiaren helbidea</string>
     <string name="calendars_link_once">Kopiatu orain: ezin izango da berriro erakutsi.</string>
-    <string name="calendars_link_exists">Egutegi honek badu esteka bat jada.</string>
+    <string name="calendars_link_exists">Egutegiaren helbide hau dagoeneko eman da eta ezin da berriro erakutsi.</string>
     <string name="calendars_permission_title">Sarbidea baimendu?</string>
     <string name="calendars_permission_message">%1$s hau eskatzen ari da:</string>
     <string name="calendars_sync_authorization">Hasi saioa berriro sinkronizatzen jarraitzeko</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Ez dago gailurik konektatuta</string>
     <string name="calendars_device_used">azken erabilera %1$s</string>
     <string name="calendars_device_never">inoiz ez</string>
-    <string name="calendars_device_deleted">Gailua kendu da</string>
-    <string name="calendars_device_delete_title">Gailu hau kendu?</string>
-    <string name="calendars_device_delete_message">Sinkronizatzeko berriro konfiguratu beharko da.</string>
+    <string name="calendars_device_deleted">Gailua ezabatu da</string>
+    <string name="calendars_device_delete_title">Gailua ezabatu?</string>
+    <string name="calendars_device_delete_message">Gailuak ezin izango ditu kontaktuak edo egutegiak sinkronizatu aurrerantzean.</string>
     <string name="calendars_sync_choose">Sinkronizatzeko egutegiak</string>
     <string name="calendars_poll_large">Egutegia handiegia da</string>
     <string name="calendars_poll_invalid">Helbideak ez du egutegirik itzuli</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Egutegia</string>
-    <string name="calendars_subscribe_google_enable">Google kontuak ez daude gaituta zerbitzari honetan. Gaitu itzazu Ezarpenak, Sistemako ezarpenak atalean.</string>
+    <string name="calendars_subscribe_google_enable">Google kontuak ez daude gaituta zerbitzari honetan.</string>
     <string name="calendars_subscribe_google_connect">Ez duzu Google konturik konektatu.</string>
     <string name="calendars_subscribe_google_connect_action">Konektatu Google</string>
     <string name="calendars_grant_failed">Ez da egutegirako sarbidea eman</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s arte</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Aurreko gertaerak</string>
+    <string name="calendars_created">Egutegia sortu da</string>
+    <string name="calendars_renamed">Egutegiaren izena aldatu da</string>
+    <string name="calendars_colour_saved">Kolorea gorde da</string>
+    <string name="calendars_deleted">Egutegia ezabatu da</string>
+    <string name="calendars_removed">Egutegia kendu da</string>
+    <string name="calendars_preferences_saved">Hobespenak gorde dira</string>
+    <string name="calendars_link_revoked">Egutegiaren helbidea indargabetuta</string>
+    <string name="calendars_link_none">Egutegi honek ez du indargabetzeko helbiderik</string>
+    <string name="calendars_linked">Egutegia estekatuta</string>
+    <string name="calendars_subscribed">Harpidetuta</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s ordu</item>
+        <item quantity="other">%1$s ordu</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Gaitu Google kontuak</string>
+    <string name="calendars_provider_caldav">Egutegi-zerbitzaria</string>
 </resources>

@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">වාර්ෂික</string>
     <string name="calendars_repeat_custom">අභිරුචි</string>
     <string name="calendars_reminder_none">කිසිවක් නැත</string>
-    <string name="calendars_day_sunday">ඉරිදා</string>
-    <string name="calendars_day_monday">සඳුදා</string>
-    <string name="calendars_day_tuesday">අඟහරුවාදා</string>
-    <string name="calendars_day_wednesday">බදාදා</string>
-    <string name="calendars_day_thursday">බ්‍රහස්පතින්දා</string>
-    <string name="calendars_day_friday">සිකුරාදා</string>
-    <string name="calendars_day_saturday">සෙනසුරාදා</string>
     <string name="calendars_link_replace">ප්‍රතිස්ථාපනය</string>
     <string name="calendars_link_revoke">අහෝසි කරන්න</string>
     <string name="calendars_permission_allow">ඉඩ දෙන්න</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">මාසය</string>
     <string name="calendars_workweek">වැඩ සතිය</string>
     <string name="calendars_range">%1$s සිට %2$s දක්වා</string>
-    <string name="calendars_truncated">මෙම පරාසයේ සමහර සිදුවීම් පෙන්වා නැත.</string>
+    <string name="calendars_truncated">සියල්ල පෙන්වීමට සිදුවීම් ඉතා වැඩියි. කෙටි පරාසයක් තෝරන්න.</string>
     <string name="calendars_list_empty">සිදුවීම් නැත</string>
     <string name="calendars_untitled">(මාතෘකාවක් නැත)</string>
     <string name="calendars_status_cancelled">අවලංගු කරන ලදී</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">මතක් කිරීම ඉවත් කරන්න</string>
     <string name="calendars_hours_start">වැඩ කරන වේලාව ආරම්භය</string>
     <string name="calendars_hours_finish">වැඩ කරන වේලාව අවසානය</string>
-    <string name="calendars_hours_invalid">වැඩ කරන වේලාව ආරම්භයෙන් පසු අවසන් විය යුතුය.</string>
     <string name="calendars_work_days">වැඩ කරන දින</string>
     <string name="calendars_multiweek_weeks">පෙන්වන සති</string>
     <string name="calendars_multiweek_previous">පෙර සති</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">මුළු දින සිදුවීම්</string>
     <string name="calendars_allday_first">මුලින්</string>
     <string name="calendars_allday_last">අවසානයේ</string>
-    <string name="calendars_link_title">දින දර්ශන සබැඳිය</string>
-    <string name="calendars_link_copy">සබැඳිය පිටපත් කරන්න</string>
+    <string name="calendars_link_title">දින දර්ශනයේ ලිපිනය</string>
+    <string name="calendars_link_copy">දින දර්ශනයේ ලිපිනය පිටපත් කරන්න</string>
     <string name="calendars_link_once">දැන් එය පිටපත් කරන්න: එය නැවත පෙන්විය නොහැක.</string>
-    <string name="calendars_link_exists">මෙම දින දර්ශනය සඳහා සබැඳියක් දැනටමත් තිබේ.</string>
+    <string name="calendars_link_exists">මෙම දින දර්ශන ලිපිනය දැනටමත් නිකුත් කර ඇති අතර එය නැවත පෙන්විය නොහැක.</string>
     <string name="calendars_permission_title">ප්‍රවේශය ලබා දෙන්නද?</string>
     <string name="calendars_permission_message">%1$s ඉල්ලා සිටින්නේ:</string>
     <string name="calendars_sync_authorization">සමමුහූර්ත කිරීම දිගටම කරගෙන යාමට නැවත පුරන්න</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">උපාංග කිසිවක් සම්බන්ධ කර නැත</string>
     <string name="calendars_device_used">අවසන් වරට භාවිත කළේ %1$s</string>
     <string name="calendars_device_never">කවදාවත් නැත</string>
-    <string name="calendars_device_deleted">උපාංගය ඉවත් කරන ලදී</string>
-    <string name="calendars_device_delete_title">මෙම උපාංගය ඉවත් කරන්නද?</string>
-    <string name="calendars_device_delete_message">සමමුහූර්ත කිරීමට එය නැවත සකස් කළ යුතුය.</string>
+    <string name="calendars_device_deleted">උපාංගය මකා දමන ලදී</string>
+    <string name="calendars_device_delete_title">උපාංගය මකන්නද?</string>
+    <string name="calendars_device_delete_message">උපාංගයට තවදුරටත් සම්බන්ධතා හෝ දින දර්ශන සමමුහුර්ත කළ නොහැක.</string>
     <string name="calendars_sync_choose">සමමුහූර්ත කිරීමට දින දර්ශන</string>
     <string name="calendars_poll_large">දින දර්ශනය ඉතා විශාලයි</string>
     <string name="calendars_poll_invalid">ලිපිනයෙන් දින දර්ශනයක් ලැබුණේ නැත</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google දින දර්ශනය</string>
-    <string name="calendars_subscribe_google_enable">මෙම සේවාදායකයේ Google ගිණුම් සක්‍රිය කර නැත. ඒවා සැකසුම්, පද්ධති සැකසුම් තුළ සක්‍රිය කරන්න.</string>
+    <string name="calendars_subscribe_google_enable">මෙම සේවාදායකයේ Google ගිණුම් සක්‍රිය කර නැත.</string>
     <string name="calendars_subscribe_google_connect">ඔබ Google ගිණුමක් සම්බන්ධ කර නැත.</string>
     <string name="calendars_subscribe_google_connect_action">Google සම්බන්ධ කරන්න</string>
     <string name="calendars_grant_failed">දින දර්ශන ප්‍රවේශය ලබා දී නැත</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s දක්වා</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">පෙර සිදුවීම්</string>
+    <string name="calendars_created">දින දර්ශනය සාදන ලදී</string>
+    <string name="calendars_renamed">දින දර්ශනය නැවත නම් කරන ලදී</string>
+    <string name="calendars_colour_saved">වර්ණය සුරකින ලදී</string>
+    <string name="calendars_deleted">දින දර්ශනය මකා දමන ලදී</string>
+    <string name="calendars_removed">දින දර්ශනය ඉවත් කරන ලදී</string>
+    <string name="calendars_preferences_saved">අභිරුචියන් සුරකින ලදී</string>
+    <string name="calendars_link_revoked">දින දර්ශනයේ ලිපිනය අහෝසි කරන ලදී</string>
+    <string name="calendars_link_none">මෙම දින දර්ශනයට අහෝසි කිරීමට ලිපිනයක් නැත</string>
+    <string name="calendars_linked">දින දර්ශනය සම්බන්ධ කළා</string>
+    <string name="calendars_subscribed">දායක වී ඇත</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">පැය %1$sක්</item>
+        <item quantity="other">පැය %1$sක්</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google ගිණුම් සක්‍රිය කරන්න</string>
+    <string name="calendars_provider_caldav">දින දර්ශන සේවාදායකය</string>
 </resources>

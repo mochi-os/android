@@ -77,6 +77,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PersonPicker
 import org.mochios.crm.R
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.weekLocale
 import org.mochios.crm.model.ChecklistItem
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmDetails
@@ -557,7 +558,7 @@ internal fun FieldEditor(
                         val baseConfig = androidx.compose.ui.platform.LocalConfiguration.current
                         val localizedConfig = remember(baseConfig, weekStartsOn) {
                             android.content.res.Configuration(baseConfig).apply {
-                                setLocale(localeForWeekStart(weekStartsOn))
+                                setLocale(weekLocale(weekStartsOn, baseConfig.locales[0]))
                             }
                         }
                         androidx.compose.runtime.CompositionLocalProvider(
@@ -815,12 +816,3 @@ private fun ChecklistEditor(
     }
 }
 
-/** Map weekStartsOn (0=Sun … 6=Sat) to a representative Locale that gives the
- *  DatePicker the right firstDayOfWeek. Beyond Sun/Mon/Sat there's no widely
- *  used locale with the required day, so we fall back to the device default. */
-private fun localeForWeekStart(weekStartsOn: Int): java.util.Locale = when (weekStartsOn) {
-    0 -> java.util.Locale.US  // Sunday
-    1 -> java.util.Locale.UK  // Monday
-    6 -> java.util.Locale.forLanguageTag("ar-SA")  // Saturday
-    else -> java.util.Locale.getDefault()
-}

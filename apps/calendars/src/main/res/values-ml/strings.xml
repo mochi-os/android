@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">വാർഷിക</string>
     <string name="calendars_repeat_custom">ഇഷ്ടാനുസൃതം</string>
     <string name="calendars_reminder_none">ഒന്നുമില്ല</string>
-    <string name="calendars_day_sunday">ഞായറാഴ്ച</string>
-    <string name="calendars_day_monday">തിങ്കളാഴ്ച</string>
-    <string name="calendars_day_tuesday">ചൊവ്വാഴ്ച</string>
-    <string name="calendars_day_wednesday">ബുധനാഴ്ച</string>
-    <string name="calendars_day_thursday">വ്യാഴാഴ്ച</string>
-    <string name="calendars_day_friday">വെള്ളിയാഴ്ച</string>
-    <string name="calendars_day_saturday">ശനിയാഴ്ച</string>
     <string name="calendars_link_replace">മാറ്റിസ്ഥാപിക്കുക</string>
     <string name="calendars_link_revoke">പിൻവലിക്കുക</string>
     <string name="calendars_permission_allow">അനുവദിക്കുക</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">മാസം</string>
     <string name="calendars_workweek">പ്രവൃത്തി ആഴ്ച</string>
     <string name="calendars_range">%1$s മുതൽ %2$s വരെ</string>
-    <string name="calendars_truncated">ഈ ശ്രേണിയിലെ ചില ഇവന്റുകൾ കാണിച്ചിട്ടില്ല.</string>
+    <string name="calendars_truncated">എല്ലാം കാണിക്കാൻ കഴിയാത്തത്ര ഇവന്റുകളുണ്ട്. ചെറിയ ശ്രേണി തിരഞ്ഞെടുക്കുക.</string>
     <string name="calendars_list_empty">ഇവന്റുകളൊന്നുമില്ല</string>
     <string name="calendars_untitled">(തലക്കെട്ടില്ല)</string>
     <string name="calendars_status_cancelled">റദ്ദാക്കി</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">ഓർമ്മപ്പെടുത്തൽ നീക്കം ചെയ്യുക</string>
     <string name="calendars_hours_start">ജോലി സമയത്തിന്റെ തുടക്കം</string>
     <string name="calendars_hours_finish">ജോലി സമയത്തിന്റെ അവസാനം</string>
-    <string name="calendars_hours_invalid">ജോലി സമയം അത് ആരംഭിച്ചതിന് ശേഷം അവസാനിക്കണം.</string>
     <string name="calendars_work_days">പ്രവൃത്തി ദിവസങ്ങൾ</string>
     <string name="calendars_multiweek_weeks">കാണിക്കുന്ന ആഴ്ചകൾ</string>
     <string name="calendars_multiweek_previous">മുമ്പുള്ള ആഴ്ചകൾ</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">ദിവസം മുഴുവനുമുള്ള ഇവന്റുകൾ</string>
     <string name="calendars_allday_first">തുടക്കത്തിൽ</string>
     <string name="calendars_allday_last">അവസാനം</string>
-    <string name="calendars_link_title">കലണ്ടർ ലിങ്ക്</string>
-    <string name="calendars_link_copy">ലിങ്ക് പകർത്തുക</string>
+    <string name="calendars_link_title">കലണ്ടറിന്റെ വിലാസം</string>
+    <string name="calendars_link_copy">കലണ്ടറിന്റെ വിലാസം പകർത്തുക</string>
     <string name="calendars_link_once">ഇത് ഇപ്പോൾ പകർത്തുക: ഇത് വീണ്ടും കാണിക്കാനാകില്ല.</string>
-    <string name="calendars_link_exists">ഈ കലണ്ടറിന് ഇതിനകം ഒരു ലിങ്ക് ഉണ്ട്.</string>
+    <string name="calendars_link_exists">ഈ കലണ്ടർ വിലാസം നേരത്തെ നൽകിയിട്ടുണ്ട്, അത് വീണ്ടും കാണിക്കാനാകില്ല.</string>
     <string name="calendars_permission_title">ആക്‌സസ് അനുവദിക്കണോ?</string>
     <string name="calendars_permission_message">%1$s ഇത് ആവശ്യപ്പെടുന്നു:</string>
     <string name="calendars_sync_authorization">സമന്വയം തുടരാൻ വീണ്ടും സൈൻ ഇൻ ചെയ്യുക</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">ഡിവൈസുകളൊന്നും ബന്ധിപ്പിച്ചിട്ടില്ല</string>
     <string name="calendars_device_used">അവസാനം ഉപയോഗിച്ചത് %1$s</string>
     <string name="calendars_device_never">ഒരിക്കലുമില്ല</string>
-    <string name="calendars_device_deleted">ഡിവൈസ് നീക്കം ചെയ്തു</string>
-    <string name="calendars_device_delete_title">ഈ ഡിവൈസ് നീക്കം ചെയ്യണോ?</string>
-    <string name="calendars_device_delete_message">സമന്വയിപ്പിക്കാൻ ഇത് വീണ്ടും സജ്ജീകരിക്കേണ്ടി വരും.</string>
+    <string name="calendars_device_deleted">ഡിവൈസ് ഇല്ലാതാക്കി</string>
+    <string name="calendars_device_delete_title">ഡിവൈസ് ഇല്ലാതാക്കണോ?</string>
+    <string name="calendars_device_delete_message">ഡിവൈസിന് ഇനി കോൺടാക്റ്റുകളോ കലണ്ടറുകളോ സമന്വയിപ്പിക്കാനാകില്ല.</string>
     <string name="calendars_sync_choose">സമന്വയിപ്പിക്കേണ്ട കലണ്ടറുകൾ</string>
     <string name="calendars_poll_large">കലണ്ടർ വളരെ വലുതാണ്</string>
     <string name="calendars_poll_invalid">വിലാസം കലണ്ടർ നൽകിയില്ല</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google കലണ്ടർ</string>
-    <string name="calendars_subscribe_google_enable">ഈ സെർവറിൽ Google അക്കൗണ്ടുകൾ പ്രവർത്തനക്ഷമമാക്കിയിട്ടില്ല. ക്രമീകരണങ്ങൾ, സിസ്റ്റം ക്രമീകരണങ്ങൾ എന്നതിൽ അവ പ്രവർത്തനക്ഷമമാക്കുക.</string>
+    <string name="calendars_subscribe_google_enable">ഈ സെർവറിൽ Google അക്കൗണ്ടുകൾ പ്രവർത്തനക്ഷമമാക്കിയിട്ടില്ല.</string>
     <string name="calendars_subscribe_google_connect">നിങ്ങൾ Google അക്കൗണ്ട് കണക്റ്റ് ചെയ്തിട്ടില്ല.</string>
     <string name="calendars_subscribe_google_connect_action">Google കണക്റ്റ് ചെയ്യുക</string>
     <string name="calendars_grant_failed">കലണ്ടർ ആക്സസ് നൽകിയിട്ടില്ല</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s വരെ</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">മുമ്പത്തെ ഇവന്റുകൾ</string>
+    <string name="calendars_created">കലണ്ടർ സൃഷ്ടിച്ചു</string>
+    <string name="calendars_renamed">കലണ്ടറിന്റെ പേര് മാറ്റി</string>
+    <string name="calendars_colour_saved">നിറം സേവ് ചെയ്തു</string>
+    <string name="calendars_deleted">കലണ്ടർ ഇല്ലാതാക്കി</string>
+    <string name="calendars_removed">കലണ്ടർ നീക്കം ചെയ്തു</string>
+    <string name="calendars_preferences_saved">മുൻഗണനകൾ സേവ് ചെയ്തു</string>
+    <string name="calendars_link_revoked">കലണ്ടറിന്റെ വിലാസം പിൻവലിച്ചു</string>
+    <string name="calendars_link_none">ഈ കലണ്ടറിന് പിൻവലിക്കാൻ വിലാസമൊന്നുമില്ല</string>
+    <string name="calendars_linked">കലണ്ടർ ലിങ്ക് ചെയ്തു</string>
+    <string name="calendars_subscribed">സബ്സ്ക്രൈബ് ചെയ്തു</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s മണിക്കൂർ</item>
+        <item quantity="other">%1$s മണിക്കൂറുകൾ</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google അക്കൗണ്ടുകൾ പ്രവർത്തനക്ഷമമാക്കുക</string>
+    <string name="calendars_provider_caldav">കലണ്ടർ സെർവർ</string>
 </resources>

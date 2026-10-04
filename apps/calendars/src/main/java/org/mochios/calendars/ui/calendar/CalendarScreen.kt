@@ -16,7 +16,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -28,12 +27,10 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.ArrowDropUp
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
@@ -85,6 +82,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.CustomAccessibilityAction
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
@@ -94,6 +92,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import java.time.Instant
 import java.time.LocalDate
 import kotlin.math.abs
 import kotlinx.coroutines.launch
@@ -102,16 +101,17 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiSearchTopBar
+import org.mochios.android.util.Zones
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.navigation.CalendarsApp
+import org.mochios.calendars.navigation.Reminder
 import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.components.CalendarDrawer
 import org.mochios.calendars.ui.dialogs.ColourCalendarDialog
@@ -146,7 +146,7 @@ fun CalendarScreen(
     onCreateCalendar: () -> Unit,
     onSubscribe: () -> Unit,
     onConnectDevice: () -> Unit,
-    onNewEvent: (Long, Boolean?) -> Unit,
+    onNewEvent: (Long, Boolean?, Long?) -> Unit,
     onEditEvent: (String, Long) -> Unit,
     onCopyEvent: (String, Long, Scope) -> Unit,
     onCopyOccurrence: (Instance) -> Unit,
@@ -156,6 +156,8 @@ fun CalendarScreen(
     onDeletedShown: () -> Unit = {},
     saved: String = "",
     onSavedShown: () -> Unit = {},
+    reminder: Reminder? = null,
+    onReminderShown: () -> Unit = {},
     onLogout: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
@@ -228,6 +230,11 @@ fun CalendarScreen(
                     is CalendarEvent.Exported -> snackbar.showSnackbar(
                         resources.getString(if (event.saved) R.string.calendars_exported else R.string.calendars_export_failed),
                     )
+                    is CalendarEvent.Open -> {
+                        selected = event.instance
+                        viewModel.details(event.instance)
+                    }
+                    is CalendarEvent.Done -> snackbar.showSnackbar(resources.getString(event.message))
                 }
             }
         }
@@ -242,11 +249,30 @@ fun CalendarScreen(
         }
     }
 
+    LaunchedEffect(reminder) {
+        val link = reminder ?: return@LaunchedEffect
+        onReminderShown()
+        viewModel.remind(link.event, link.occurrence, link.date)
+    }
+
     LaunchedEffect(saved) {
-        if (saved.isNotEmpty()) {
-            onSavedShown()
-            val message = if (saved == CalendarsApp.CREATED) R.string.calendars_event_created else R.string.calendars_event_saved
-            scope.launch { snackbar.showSnackbar(resources.getString(message)) }
+        val message = CalendarsApp.said(saved) ?: return@LaunchedEffect
+        onSavedShown()
+        scope.launch { snackbar.showSnackbar(resources.getString(message)) }
+    }
+
+    // A refresh that failed with events on screen keeps them and says so,
+    // with Retry; the error takes the view's place only when there are none.
+    LaunchedEffect(uiState.stale) {
+        val stale = uiState.stale ?: return@LaunchedEffect
+        viewModel.told()
+        scope.launch {
+            val chosen = snackbar.showSnackbar(
+                message = stale.userMessage(),
+                actionLabel = resources.getString(MochiR.string.common_retry),
+                duration = SnackbarDuration.Long,
+            )
+            if (chosen == SnackbarResult.ActionPerformed) viewModel.reload(refreshing = true)
         }
     }
 
@@ -328,7 +354,7 @@ fun CalendarScreen(
             },
             snackbarHost = { SnackbarHost(snackbar) },
             floatingActionButton = {
-                MochiFab(onClick = { onNewEvent(viewModel.creation(), null) }) {
+                MochiFab(onClick = { onNewEvent(viewModel.creation(), null, null) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
                 }
             },
@@ -393,8 +419,8 @@ fun CalendarScreen(
                                         viewModel.details(instance)
                                     },
                                     onNewEvent = onNewEvent,
-                                    onMove = { instance, start, finish ->
-                                        request(instance) { scope -> viewModel.move(instance, start, finish, scope) }
+                                    onMove = { instance, moved ->
+                                        request(instance) { scope -> viewModel.move(instance, moved, scope) }
                                     },
                                     onMoveDay = { instance, day ->
                                         request(instance) { scope -> viewModel.move(instance, day, scope) }
@@ -487,37 +513,31 @@ fun CalendarScreen(
         )
     }
 
+    // Each dialog stays open while its change is saved, and after a failure,
+    // so what was entered can be tried again; it closes once the change lands.
+    val working by viewModel.working.collectAsState()
     renaming?.let { calendar ->
         RenameCalendarDialog(
             calendar = calendar,
-            saving = false,
+            saving = working,
             onDismiss = { renaming = null },
-            onConfirm = { name ->
-                renaming = null
-                viewModel.rename(calendar.id, name)
-            },
+            onConfirm = { name -> viewModel.rename(calendar.id, name) { renaming = null } },
         )
     }
     colouring?.let { calendar ->
         ColourCalendarDialog(
             calendar = calendar,
-            saving = false,
+            saving = working,
             onDismiss = { colouring = null },
-            onConfirm = { colour ->
-                colouring = null
-                viewModel.recolour(calendar.id, colour)
-            },
+            onConfirm = { colour -> viewModel.recolour(calendar.id, colour) { colouring = null } },
         )
     }
     deleting?.let { calendar ->
         DeleteCalendarDialog(
             calendar = calendar,
-            deleting = false,
+            deleting = working,
             onDismiss = { deleting = null },
-            onConfirm = {
-                deleting = null
-                viewModel.remove(calendar.id)
-            },
+            onConfirm = { viewModel.remove(calendar) { deleting = null } },
         )
     }
     linking?.let { calendar ->
@@ -540,11 +560,9 @@ fun CalendarScreen(
     }
     revoking?.let { calendar ->
         RevokeLinkDialog(
+            busy = working,
             onDismiss = { revoking = null },
-            onConfirm = {
-                revoking = null
-                viewModel.revokeLink(calendar.id)
-            },
+            onConfirm = { viewModel.revokeLink(calendar.id) { revoking = null } },
         )
     }
     if (about) {
@@ -552,19 +570,29 @@ fun CalendarScreen(
     }
 
     val tally by viewModel.importing.collectAsState()
-    tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport) }
+    tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport, onRetry = viewModel::retryImport) }
 
     if (preferences) {
         PreferencesDialog(
             preferences = uiState.preferences,
             calendars = uiState.calendars,
-            saving = false,
+            saving = working,
             onDismiss = { preferences = false },
-            onConfirm = {
-                preferences = false
-                viewModel.preferences(it)
-            },
+            onConfirm = { viewModel.preferences(it) { preferences = false } },
         )
+    }
+}
+
+/**
+ * Opens an occurrence as a tap on it does: the editor for one the user can
+ * change, else its summary, [show]n in a sheet, as a subscription's or a
+ * birthday is.
+ */
+internal fun open(instance: Instance, onEditEvent: (String, Long) -> Unit, show: (Instance) -> Unit) {
+    if (instance.editable) {
+        onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
+    } else {
+        show(instance)
     }
 }
 
@@ -588,8 +616,8 @@ private fun View(
     viewModel: CalendarViewModel,
     selected: Instance?,
     onOpen: (Instance) -> Unit,
-    onNewEvent: (Long, Boolean?) -> Unit,
-    onMove: (Instance, Long, Long) -> Unit,
+    onNewEvent: (Long, Boolean?, Long?) -> Unit,
+    onMove: (Instance, Moved) -> Unit,
     onMoveDay: (Instance, LocalDate) -> Unit,
     onListed: (LocalDate) -> Unit = {},
 ) {
@@ -639,7 +667,7 @@ private fun View(
         val next = stringResource(R.string.calendars_next)
         Row(modifier = Modifier.fillMaxSize()) {
             if (timed) {
-                HourGutter(top, scroll)
+                HourGutter(top, scroll, zone = if (viewModel.zones()) Zones.offset(viewModel.timezone().id) else null)
             }
             // With no arrows on screen, TalkBack offers Previous and Next as
             // actions on the pager and a keyboard pages it with the arrow and
@@ -722,8 +750,8 @@ private const val SWIPE_CENTRE = SWIPE_PAGES / 2
 
 /**
  * One page of the view the state names, drawn from the same occurrence list,
- * with [selected] tinted. [scroll] is the time grid's vertical position. [onMove] is a block dragged
- * or resized in a time grid, with the occurrence's new ends; [onMoveDay] a
+ * with [selected] tinted. [scroll] is the time grid's vertical position. [onMove] is an
+ * occurrence dragged in a time grid, with where it went; [onMoveDay] a
  * chip dropped on a day in a month grid, with the occurrence's new first day.
  * [onTop] is how far down a time grid's hours start, for the hour gutter;
  * [onListed] is the day atop the list view as it scrolls, for the toolbar.
@@ -735,23 +763,22 @@ private fun Page(
     selected: Instance?,
     scroll: ScrollState,
     onOpen: (Instance) -> Unit,
-    onNewEvent: (Long, Boolean?) -> Unit,
-    onMove: (Instance, Long, Long) -> Unit,
+    onNewEvent: (Long, Boolean?, Long?) -> Unit,
+    onMove: (Instance, Moved) -> Unit,
     onMoveDay: (Instance, LocalDate) -> Unit,
     onListed: (LocalDate) -> Unit = {},
     onTop: (Dp) -> Unit = {},
 ) {
-    // A tap on a cell names a day and, in a time grid, an hour; the editor
-    // wants the moment, measured in the user's own zone rather than the
-    // device's. A cell is a timed event, and says so, which the editor's
-    // memory of the last new event does not override.
-    val moment = { day: LocalDate, hour: Int ->
-        viewModel.focus(day)
-        day.atStartOfDay(viewModel.timezone()).plusHours(hour.toLong()).toEpochSecond()
+    // A tap or a drag on empty grid is a timed event, and says so, which the
+    // editor's memory of the last new event does not override. Either makes
+    // its day the chosen one, as a tap on a day cell does.
+    val create = { start: Long, finish: Long? ->
+        viewModel.focus(Instant.ofEpochSecond(start).atZone(viewModel.timezone()).toLocalDate())
+        onNewEvent(start, false, finish)
     }
     val dated = { day: LocalDate ->
         viewModel.focus(day)
-        onNewEvent(viewModel.creation(day), null)
+        onNewEvent(viewModel.creation(day), null, null)
     }
     when (state.view) {
         CalendarsSection.DAY -> TimeGrid(
@@ -759,7 +786,7 @@ private fun Page(
             state = state,
             viewModel = viewModel,
             onOpen = onOpen,
-            onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
+            onCreate = create,
             onMove = onMove,
             scroll = scroll,
             selected = selected,
@@ -771,7 +798,7 @@ private fun Page(
                 state = state,
                 viewModel = viewModel,
                 onOpen = onOpen,
-                onCreate = { day, hour -> onNewEvent(moment(day, hour), false) },
+                onCreate = create,
                 onMove = onMove,
                 scroll = scroll,
                 stacked = true,
@@ -816,7 +843,7 @@ private fun Page(
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun Toolbar(
+internal fun Toolbar(
     state: CalendarUiState,
     title: String,
     picking: Boolean,

@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Ýyllyk</string>
     <string name="calendars_repeat_custom">Hususy</string>
     <string name="calendars_reminder_none">Hiç biri</string>
-    <string name="calendars_day_sunday">Ýekşenbe</string>
-    <string name="calendars_day_monday">Duşenbe</string>
-    <string name="calendars_day_tuesday">Sişenbe</string>
-    <string name="calendars_day_wednesday">Çarşenbe</string>
-    <string name="calendars_day_thursday">Penşenbe</string>
-    <string name="calendars_day_friday">Anna</string>
-    <string name="calendars_day_saturday">Şenbe</string>
     <string name="calendars_link_replace">Çalşyr</string>
     <string name="calendars_link_revoke">Yzyna al</string>
     <string name="calendars_permission_allow">Rugsat ber</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Aý</string>
     <string name="calendars_workweek">Iş hepdesi</string>
     <string name="calendars_range">%1$s – %2$s</string>
-    <string name="calendars_truncated">Şu aralykdaky käbir wakalar görkezilmedi.</string>
+    <string name="calendars_truncated">Hemmesini görkezmek üçin çäreler gaty köp. Has gysga aralyk saýla.</string>
     <string name="calendars_list_empty">Çäreler ýok</string>
     <string name="calendars_untitled">(Atsyz)</string>
     <string name="calendars_status_cancelled">Ýatyryldy</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Ýatladyşy aýyr</string>
     <string name="calendars_hours_start">Iş wagtynyň başlangyjy</string>
     <string name="calendars_hours_finish">Iş wagtynyň soňy</string>
-    <string name="calendars_hours_invalid">Iş wagty başlanyndan soň gutarmaly.</string>
     <string name="calendars_work_days">Iş günleri</string>
     <string name="calendars_multiweek_weeks">Görkezilýän hepdeler</string>
     <string name="calendars_multiweek_previous">Öňki hepdeler</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Bütin günlük çäreler</string>
     <string name="calendars_allday_first">Başda</string>
     <string name="calendars_allday_last">Ahyrda</string>
-    <string name="calendars_link_title">Kalendar salgylanmasy</string>
-    <string name="calendars_link_copy">Salgylanmany göçür</string>
+    <string name="calendars_link_title">Senenamanyň salgysy</string>
+    <string name="calendars_link_copy">Senenamanyň salgysyny nusgala</string>
     <string name="calendars_link_once">Ony häzir göçüriň: gaýtadan görkezilmez.</string>
-    <string name="calendars_link_exists">Bu kalendar üçin salgylanma eýýäm bar.</string>
+    <string name="calendars_link_exists">Bu senenama salgysy eýýäm berildi we ony gaýtadan görkezip bolmaz.</string>
     <string name="calendars_permission_title">Rugsat berilsinmi?</string>
     <string name="calendars_permission_message">%1$s şuny soraýar:</string>
     <string name="calendars_sync_authorization">Sinhronlamany dowam etdirmek üçin gaýtadan giriň</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Birikdirilen enjam ýok</string>
     <string name="calendars_device_used">iň soňky ulanylan %1$s</string>
     <string name="calendars_device_never">hiç haçan</string>
-    <string name="calendars_device_deleted">Enjam aýryldy</string>
-    <string name="calendars_device_delete_title">Bu enjam aýrylsynmy?</string>
-    <string name="calendars_device_delete_message">Sinhronlamak üçin ony gaýtadan sazlamaly bolar.</string>
+    <string name="calendars_device_deleted">Enjam pozuldy</string>
+    <string name="calendars_device_delete_title">Enjam pozulsynmy?</string>
+    <string name="calendars_device_delete_message">Enjam indi kontaktlary ýa-da senenamalary sinhronlap bilmez.</string>
     <string name="calendars_sync_choose">Sinhronlanjak kalendarlar</string>
     <string name="calendars_poll_large">Kalendar örän uly</string>
     <string name="calendars_poll_invalid">Salgy kalendar gaýtarmady</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Kalendar</string>
-    <string name="calendars_subscribe_google_enable">Google hasaplary bu serwerde işjeňleşdirilmedi. Olary Sazlamalar, Ulgam sazlamalary bölüminde işjeňleşdiriň.</string>
+    <string name="calendars_subscribe_google_enable">Google hasaplary bu serwerde işjeňleşdirilmedi.</string>
     <string name="calendars_subscribe_google_connect">Google hasaby baglanyşdyrmadyňyz.</string>
     <string name="calendars_subscribe_google_connect_action">Google birikdir</string>
     <string name="calendars_grant_failed">Senenama elýeterliligi berilmedi</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s senesine çenli</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Öňki çäreler</string>
+    <string name="calendars_created">Senenama döredildi</string>
+    <string name="calendars_renamed">Senenamanyň ady üýtgedildi</string>
+    <string name="calendars_colour_saved">Reňk saklandy</string>
+    <string name="calendars_deleted">Senenama pozuldy</string>
+    <string name="calendars_removed">Senenama aýryldy</string>
+    <string name="calendars_preferences_saved">Saýlamalar saklandy</string>
+    <string name="calendars_link_revoked">Senenamanyň salgysy yzyna alyndy</string>
+    <string name="calendars_link_none">Bu senenamanyň yzyna alynjak salgysy ýok</string>
+    <string name="calendars_linked">Senenama baglanyşdyryldy</string>
+    <string name="calendars_subscribed">Abuna ýazyldy</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s sagat</item>
+        <item quantity="other">%1$s sagat</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google hasaplaryny işjeňleşdir</string>
+    <string name="calendars_provider_caldav">Senenama serweri</string>
 </resources>

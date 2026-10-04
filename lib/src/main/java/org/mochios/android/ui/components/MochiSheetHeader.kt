@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 
@@ -36,6 +37,8 @@ import androidx.compose.ui.unit.dp
  * @param subtitle A line of context under the title, such as a record's class.
  * @param titleColor The title's colour, for a title that stands in for a
  * placeholder, such as an untitled event.
+ * @param titleDecoration Drawn over the title, such as a cancelled event's strike.
+ * @param titleModifier Applied to the title alone.
  * @param leading Drawn before the title, such as an event's colour.
  * @param actions The sheet's own icon buttons, before the close button.
  */
@@ -45,6 +48,8 @@ fun MochiSheetHeader(
     modifier: Modifier = Modifier,
     subtitle: String? = null,
     titleColor: Color = Color.Unspecified,
+    titleDecoration: TextDecoration? = null,
+    titleModifier: Modifier = Modifier,
     leading: (@Composable () -> Unit)? = null,
     actions: @Composable RowScope.() -> Unit = {},
 ) {
@@ -65,8 +70,10 @@ fun MochiSheetHeader(
                     text = title,
                     style = MaterialTheme.typography.titleLarge,
                     color = titleColor,
+                    textDecoration = titleDecoration,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
+                    modifier = titleModifier,
                 )
                 if (subtitle != null) {
                     Text(

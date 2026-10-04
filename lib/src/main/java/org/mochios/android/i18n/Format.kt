@@ -130,6 +130,17 @@ class Format(
     }
 
     /**
+     * A month and its year as the user's language writes them together:
+     * "October 2026", "октябрь 2026 г.", "2026年10月", "2026. október", the
+     * month in the form the language gives it beside the year, never put
+     * together by hand.
+     */
+    fun formatMonthYear(month: LocalDate): String {
+        val noon = month.withDayOfMonth(15).atTime(12, 0).toInstant(ZoneOffset.UTC).toEpochMilli()
+        return clock.write(clock.pattern("MMMMy"), noon, TimeZone.getTimeZone("UTC"))
+    }
+
+    /**
      * A run of days as the user's language writes one: "14 – 20 September
      * 2026", "28 September – 2 October 2026". The days are dates, read in no
      * zone. [skeleton] picks the fields, such as "dMMM" for a short "Oct 4 –

@@ -13,11 +13,14 @@ import org.junit.Test
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.ui.calendar.Cut
+import org.mochios.calendars.ui.calendar.Laid
+import org.mochios.calendars.ui.calendar.Span
 import org.mochios.calendars.ui.calendar.MINIMUM
 import org.mochios.calendars.ui.calendar.clockZone
 import org.mochios.calendars.ui.calendar.cut
 import org.mochios.calendars.ui.calendar.days
 import org.mochios.calendars.ui.calendar.ends
+import org.mochios.calendars.ui.calendar.rows
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.ZonedDateTime
@@ -157,5 +160,54 @@ class PlacementTest {
         assertNull(clockZone("America/New_York", zones = false))
         assertNull(clockZone("", zones = true))
         assertNull(clockZone(null, zones = true))
+    }
+
+    // ---- the all-day band ----
+
+    @Test
+    fun `bars stack longest first, each in the first row with its columns free`() {
+        val week = (0L until 7L).map { LocalDate.of(2026, 10, 5).plusDays(it) }
+        val laid = rows(
+            week,
+            listOf(
+                Span("party", week[2], week[2]),
+                Span("trip", week[1], week[3]),
+                Span("dinner", week[5], week[5]),
+            ),
+        ).associateBy { it.item }
+        assertEquals(Laid("trip", 1, 3, 0), laid["trip"])
+        assertEquals(Laid("party", 2, 1, 1), laid["party"])
+        assertEquals(Laid("dinner", 5, 1, 0), laid["dinner"])
+    }
+
+    @Test
+    fun `a bar past either end of the days shown is cut to them, and one outside them is left out`() {
+        val week = (0L until 7L).map { LocalDate.of(2026, 10, 5).plusDays(it) }
+        val laid = rows(
+            week,
+            listOf(
+                Span("long", week[0].minusDays(3), week[6].plusDays(3)),
+                Span("before", week[0].minusDays(3), week[0].minusDays(1)),
+            ),
+        )
+        assertEquals(listOf(Laid("long", 0, 7, 0)), laid)
+    }
+
+    @Test
+    fun `days left out, as a work week leaves days, take no column`() {
+        // Monday, Tuesday, Thursday and Friday: Wednesday is not shown.
+        val monday = LocalDate.of(2026, 10, 5)
+        val days = listOf(monday, monday.plusDays(1), monday.plusDays(3), monday.plusDays(4))
+        val laid = rows(
+            days,
+            listOf(
+                Span("thursday", monday.plusDays(3), monday.plusDays(3)),
+                Span("midweek", monday.plusDays(1), monday.plusDays(3)),
+                Span("wednesday", monday.plusDays(2), monday.plusDays(2)),
+            ),
+        ).associateBy { it.item }
+        assertEquals(2, laid["thursday"]?.column)
+        assertEquals(Laid("midweek", 1, 2, 0), laid["midweek"])
+        assertNull(laid["wednesday"])
     }
 }

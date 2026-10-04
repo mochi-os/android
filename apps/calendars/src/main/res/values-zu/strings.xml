@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Ngonyaka</string>
     <string name="calendars_repeat_custom">Okuzenzelwe</string>
     <string name="calendars_reminder_none">Lutho</string>
-    <string name="calendars_day_sunday">ISonto</string>
-    <string name="calendars_day_monday">UMsombuluko</string>
-    <string name="calendars_day_tuesday">ULwesibili</string>
-    <string name="calendars_day_wednesday">ULwesithathu</string>
-    <string name="calendars_day_thursday">ULwesine</string>
-    <string name="calendars_day_friday">ULwesihlanu</string>
-    <string name="calendars_day_saturday">UMgqibelo</string>
     <string name="calendars_link_replace">Buyisela</string>
     <string name="calendars_link_revoke">Hoxisa</string>
     <string name="calendars_permission_allow">Vumela</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Inyanga</string>
     <string name="calendars_workweek">Iviki lomsebenzi</string>
     <string name="calendars_range">%1$s kuya ku-%2$s</string>
-    <string name="calendars_truncated">Eminye imicimbi kulesi sikhathi ayiboniswa.</string>
+    <string name="calendars_truncated">Kunemicimbi eminingi kakhulu ukuyibonisa yonke. Khetha ibanga elifushane.</string>
     <string name="calendars_list_empty">Ayikho imicimbi</string>
     <string name="calendars_untitled">(Asikho isihloko)</string>
     <string name="calendars_status_cancelled">Kukhanselwe</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Khipha isikhumbuzi</string>
     <string name="calendars_hours_start">Ukuqala kwamahora omsebenzi</string>
     <string name="calendars_hours_finish">Ukuphela kwamahora omsebenzi</string>
-    <string name="calendars_hours_invalid">Amahora omsebenzi kumele aphele ngemva kokuqala kwawo.</string>
     <string name="calendars_work_days">Izinsuku zomsebenzi</string>
     <string name="calendars_multiweek_weeks">Amaviki aboniswayo</string>
     <string name="calendars_multiweek_previous">Amaviki angaphambili</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Imicimbi yosuku lonke</string>
     <string name="calendars_allday_first">Ekuqaleni</string>
     <string name="calendars_allday_last">Ekugcineni</string>
-    <string name="calendars_link_title">Isixhumanisi sekhalenda</string>
-    <string name="calendars_link_copy">Kopisha isixhumanisi</string>
+    <string name="calendars_link_title">Ikheli lekhalenda</string>
+    <string name="calendars_link_copy">Kopisha ikheli lekhalenda</string>
     <string name="calendars_link_once">Sikopishe manje: ngeke siphinde siboniswe.</string>
-    <string name="calendars_link_exists">Sekukhona isixhumanisi saleli khalenda.</string>
+    <string name="calendars_link_exists">Leli kheli lekhalenda selikhishiwe futhi alikwazi ukuboniswa futhi.</string>
     <string name="calendars_permission_title">Vumela ukufinyelela?</string>
     <string name="calendars_permission_message">I-%1$s icela:</string>
     <string name="calendars_sync_authorization">Ngena futhi ukuze uqhubeke nokuvumelanisa</string>
@@ -132,8 +124,8 @@
     <string name="calendars_device_used">igcine ukusetshenziswa %1$s</string>
     <string name="calendars_device_never">asikaze</string>
     <string name="calendars_device_deleted">Idivayisi isusiwe</string>
-    <string name="calendars_device_delete_title">Susa le divayisi?</string>
-    <string name="calendars_device_delete_message">Kuzodingeka isethwe kabusha ukuze ivumelanise.</string>
+    <string name="calendars_device_delete_title">Susa idivayisi?</string>
+    <string name="calendars_device_delete_message">Idivayisi ngeke isakwazi ukuvumelanisa oxhumana nabo noma amakhalenda.</string>
     <string name="calendars_sync_choose">Amakhalenda okuvumelanisa</string>
     <string name="calendars_poll_large">Ikhalenda likhulu kakhulu</string>
     <string name="calendars_poll_invalid">Ikheli alibuyiselanga khalenda</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Khalenda</string>
-    <string name="calendars_subscribe_google_enable">Ama-akhawunti e-Google awavuliwe kule seva. Wavule ku-Izilungiselelo, Izilungiselelo zesistimu.</string>
+    <string name="calendars_subscribe_google_enable">Ama-akhawunti e-Google awavuliwe kule seva.</string>
     <string name="calendars_subscribe_google_connect">Awukaxhumi i-akhawunti ye-Google.</string>
     <string name="calendars_subscribe_google_connect_action">Xhuma i-Google</string>
     <string name="calendars_grant_failed">Ukufinyelela kwekhalenda akunikeziwe</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">kuze kube ngu-%1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Imicimbi edlule</string>
+    <string name="calendars_created">Ikhalenda idaliwe</string>
+    <string name="calendars_renamed">Ikhalenda iqanjwe kabusha</string>
+    <string name="calendars_colour_saved">Umbala ulondoloziwe</string>
+    <string name="calendars_deleted">Ikhalenda isusiwe</string>
+    <string name="calendars_removed">Ikhalenda ikhishiwe</string>
+    <string name="calendars_preferences_saved">Okuthandayo kulondoloziwe</string>
+    <string name="calendars_link_revoked">Ikheli lekhalenda libuyiselwe</string>
+    <string name="calendars_link_none">Leli khalenda alinalo ikheli lokubuyisela</string>
+    <string name="calendars_linked">Ikhalenda ixhunyiwe</string>
+    <string name="calendars_subscribed">Kubhalisiwe</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">ihora elingu-%1$s</item>
+        <item quantity="other">amahora angu-%1$s</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Vula ama-akhawunti e-Google</string>
+    <string name="calendars_provider_caldav">Iseva yekhalenda</string>
 </resources>

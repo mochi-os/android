@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Sapa wata</string>
     <string name="calendars_repeat_custom">Sapankuq</string>
     <string name="calendars_reminder_none">Mana imapas</string>
-    <string name="calendars_day_sunday">Intichaw</string>
-    <string name="calendars_day_monday">Killachaw</string>
-    <string name="calendars_day_tuesday">Atichaw</string>
-    <string name="calendars_day_wednesday">Quyllurchaw</string>
-    <string name="calendars_day_thursday">Illapachaw</string>
-    <string name="calendars_day_friday">Ch\'askachaw</string>
-    <string name="calendars_day_saturday">K\'uychichaw</string>
     <string name="calendars_link_replace">Tikray</string>
     <string name="calendars_link_revoke">Qichuy</string>
     <string name="calendars_permission_allow">Saqiy</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Killa</string>
     <string name="calendars_workweek">Llamk\'ana semana</string>
     <string name="calendars_range">%1$s manta %2$s kama</string>
-    <string name="calendars_truncated">Kay rangopi wakin eventokuna mana rikuchikunchu.</string>
+    <string name="calendars_truncated">Nishu achka eventokuna llapanta rikuchinapaq. Aswan pisi rangota akllay.</string>
     <string name="calendars_list_empty">Mana eventokuna kanchu</string>
     <string name="calendars_untitled">(Mana sutinchayniyuq)</string>
     <string name="calendars_status_cancelled">Chinkachisqa</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Yuyarichiq qichuy</string>
     <string name="calendars_hours_start">Llamk\'ana pacha qallariy</string>
     <string name="calendars_hours_finish">Llamk\'ana pacha tukukuy</string>
-    <string name="calendars_hours_invalid">Llamk\'ana pachaqa qallarisqan qhipatam tukunan.</string>
     <string name="calendars_work_days">Llamk\'ana p\'unchawkuna</string>
     <string name="calendars_multiweek_weeks">Rikuchisqa semanakuna</string>
     <string name="calendars_multiweek_previous">Ñawpaq semanakuna</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Tukuy p\'unchaw eventokuna</string>
     <string name="calendars_allday_first">Ñawpaqkaq</string>
     <string name="calendars_allday_last">Qhipakaq</string>
-    <string name="calendars_link_title">Calendario t\'inki</string>
-    <string name="calendars_link_copy">T\'inkita copiay</string>
+    <string name="calendars_link_title">Calendario dirección</string>
+    <string name="calendars_link_copy">Calendario dirección copiay</string>
     <string name="calendars_link_once">Kunan copiay: manaña rikuchikunqachu.</string>
-    <string name="calendars_link_exists">Kay calendariopaqqa t\'inkiña kapun.</string>
+    <string name="calendars_link_exists">Kay calendario dirección ñawpaqtaña qusqa karqan, manaña wakmanta rikuchiyta atinchu.</string>
     <string name="calendars_permission_title">¿Yaykuyta saqiy?</string>
     <string name="calendars_permission_message">%1$s mañakushan:</string>
     <string name="calendars_sync_authorization">Sincronizayta qatinaykipaq yapamanta yaykuy</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Mana dispositivokuna t\'inkisqachu</string>
     <string name="calendars_device_used">qhipa llamk\'achisqa %1$s</string>
     <string name="calendars_device_never">mana hayk\'aqpas</string>
-    <string name="calendars_device_deleted">Dispositivo qichusqa</string>
-    <string name="calendars_device_delete_title">¿Kay dispositivota qichunkichu?</string>
-    <string name="calendars_device_delete_message">Sincronizanapaqqa yapamanta wakichina kanqa.</string>
+    <string name="calendars_device_deleted">Dispositivo wischusqa</string>
+    <string name="calendars_device_delete_title">¿Dispositivota wischunki?</string>
+    <string name="calendars_device_delete_message">Kay dispositivo manaña contactokunata nitaq calendariokunata sincronizayta atinqachu.</string>
     <string name="calendars_sync_choose">Sincronizanapaq calendariokuna</string>
     <string name="calendars_poll_large">Calendarioqa nishu hatunmi</string>
     <string name="calendars_poll_invalid">Direcciónmanta mana calendario chayamunchu</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Calendar</string>
-    <string name="calendars_subscribe_google_enable">Google cuentakunaqa manam kay servidorpi activasqachu. Wakichiykuna, Sistema wakichiykuna ukhupi activay.</string>
+    <string name="calendars_subscribe_google_enable">Google cuentakunaqa manam kay servidorpi activasqachu.</string>
     <string name="calendars_subscribe_google_connect">Manam ima Google cuentatapas t\'inkichirqankichu.</string>
     <string name="calendars_subscribe_google_connect_action">Google t\'inkiy</string>
     <string name="calendars_grant_failed">Calendarioman yaykuy mana qusqachu</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">%1$s p\'unchawkama</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Ñawpaq eventokuna</string>
+    <string name="calendars_created">Calendario kamarisqa</string>
+    <string name="calendars_renamed">Calendariopa sutin hukchasqa</string>
+    <string name="calendars_colour_saved">Llimp\'i waqaychasqa</string>
+    <string name="calendars_deleted">Calendario wischusqa</string>
+    <string name="calendars_removed">Calendario qichusqa</string>
+    <string name="calendars_preferences_saved">Preferenciakuna waqaychasqa</string>
+    <string name="calendars_link_revoked">Calendario dirección chinkachisqa</string>
+    <string name="calendars_link_none">Kay calendarioqa manam qichunapaq direccionniyuqchu</string>
+    <string name="calendars_linked">Calendario t\'inkichisqa</string>
+    <string name="calendars_subscribed">Suscribisqa</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s hora</item>
+        <item quantity="other">%1$s hora</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Google cuentakunata activay</string>
+    <string name="calendars_provider_caldav">Calendario servidor</string>
 </resources>

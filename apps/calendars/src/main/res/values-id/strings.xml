@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Tahunan</string>
     <string name="calendars_repeat_custom">Kustom</string>
     <string name="calendars_reminder_none">Tidak ada</string>
-    <string name="calendars_day_sunday">Minggu</string>
-    <string name="calendars_day_monday">Senin</string>
-    <string name="calendars_day_tuesday">Selasa</string>
-    <string name="calendars_day_wednesday">Rabu</string>
-    <string name="calendars_day_thursday">Kamis</string>
-    <string name="calendars_day_friday">Jumat</string>
-    <string name="calendars_day_saturday">Sabtu</string>
     <string name="calendars_link_replace">Ganti</string>
     <string name="calendars_link_revoke">Cabut</string>
     <string name="calendars_permission_allow">Izinkan</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Bulan</string>
     <string name="calendars_workweek">Minggu kerja</string>
     <string name="calendars_range">%1$s sampai %2$s</string>
-    <string name="calendars_truncated">Beberapa acara dalam rentang ini tidak ditampilkan.</string>
+    <string name="calendars_truncated">Terlalu banyak acara untuk ditampilkan semua. Pilih rentang yang lebih pendek.</string>
     <string name="calendars_list_empty">Tidak ada acara</string>
     <string name="calendars_untitled">(Tanpa judul)</string>
     <string name="calendars_status_cancelled">Dibatalkan</string>
@@ -107,7 +100,6 @@
     <string name="calendars_reminder_remove">Hapus pengingat</string>
     <string name="calendars_hours_start">Awal jam kerja</string>
     <string name="calendars_hours_finish">Akhir jam kerja</string>
-    <string name="calendars_hours_invalid">Jam kerja harus berakhir setelah waktu mulainya.</string>
     <string name="calendars_work_days">Hari kerja</string>
     <string name="calendars_multiweek_weeks">Minggu yang ditampilkan</string>
     <string name="calendars_multiweek_previous">Minggu sebelumnya</string>
@@ -117,10 +109,10 @@
     <string name="calendars_preferences_allday">Acara sepanjang hari</string>
     <string name="calendars_allday_first">Di awal</string>
     <string name="calendars_allday_last">Di akhir</string>
-    <string name="calendars_link_title">Tautan kalender</string>
-    <string name="calendars_link_copy">Salin tautan</string>
+    <string name="calendars_link_title">Alamat kalender</string>
+    <string name="calendars_link_copy">Salin alamat kalender</string>
     <string name="calendars_link_once">Salin sekarang: tautan tidak dapat ditampilkan lagi.</string>
-    <string name="calendars_link_exists">Tautan untuk kalender ini sudah ada.</string>
+    <string name="calendars_link_exists">Alamat kalender ini sudah pernah diterbitkan dan tidak dapat ditampilkan lagi.</string>
     <string name="calendars_permission_title">Izinkan akses?</string>
     <string name="calendars_permission_message">%1$s meminta:</string>
     <string name="calendars_sync_authorization">Masuk lagi untuk melanjutkan sinkronisasi</string>
@@ -129,8 +121,8 @@
     <string name="calendars_device_used">Terakhir digunakan %1$s</string>
     <string name="calendars_device_never">tidak pernah</string>
     <string name="calendars_device_deleted">Perangkat dihapus</string>
-    <string name="calendars_device_delete_title">Hapus perangkat ini?</string>
-    <string name="calendars_device_delete_message">Perangkat harus disiapkan lagi untuk sinkronisasi.</string>
+    <string name="calendars_device_delete_title">Hapus perangkat?</string>
+    <string name="calendars_device_delete_message">Perangkat tidak akan bisa lagi menyinkronkan kontak atau kalender.</string>
     <string name="calendars_sync_choose">Kalender untuk disinkronkan</string>
     <string name="calendars_poll_large">Kalender terlalu besar</string>
     <string name="calendars_poll_invalid">Alamat tidak mengembalikan kalender</string>
@@ -172,7 +164,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Kalender</string>
-    <string name="calendars_subscribe_google_enable">Akun Google belum diaktifkan di server ini. Aktifkan di Pengaturan, Pengaturan sistem.</string>
+    <string name="calendars_subscribe_google_enable">Akun Google belum diaktifkan di server ini.</string>
     <string name="calendars_subscribe_google_connect">Anda belum menghubungkan akun Google.</string>
     <string name="calendars_subscribe_google_connect_action">Sambungkan Google</string>
     <string name="calendars_grant_failed">Akses kalender tidak diberikan</string>
@@ -255,4 +247,20 @@
     </plurals>
     <string name="calendars_rule_until">hingga %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Acara sebelumnya</string>
+    <string name="calendars_created">Kalender dibuat</string>
+    <string name="calendars_renamed">Nama kalender diubah</string>
+    <string name="calendars_colour_saved">Warna disimpan</string>
+    <string name="calendars_deleted">Kalender dihapus</string>
+    <string name="calendars_removed">Kalender dihapus</string>
+    <string name="calendars_preferences_saved">Preferensi disimpan</string>
+    <string name="calendars_link_revoked">Alamat kalender dicabut</string>
+    <string name="calendars_link_none">Kalender ini tidak memiliki alamat untuk dicabut</string>
+    <string name="calendars_linked">Kalender tertaut</string>
+    <string name="calendars_subscribed">Berlangganan</string>
+    <plurals name="calendars_hours">
+        <item quantity="other">%1$s jam</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Aktifkan akun Google</string>
+    <string name="calendars_provider_caldav">Server kalender</string>
 </resources>

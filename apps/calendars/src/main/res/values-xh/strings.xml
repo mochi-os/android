@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Ngonyaka</string>
     <string name="calendars_repeat_custom">Yezifiso</string>
     <string name="calendars_reminder_none">Akukho nanye</string>
-    <string name="calendars_day_sunday">Icawa</string>
-    <string name="calendars_day_monday">Umvulo</string>
-    <string name="calendars_day_tuesday">Ulwesibini</string>
-    <string name="calendars_day_wednesday">Ulwesithathu</string>
-    <string name="calendars_day_thursday">Ulwesine</string>
-    <string name="calendars_day_friday">ULwesihlanu</string>
-    <string name="calendars_day_saturday">Umgqibelo</string>
     <string name="calendars_link_replace">Ngenisa endaweni</string>
     <string name="calendars_link_revoke">Susa</string>
     <string name="calendars_permission_allow">Vumela</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Inyanga</string>
     <string name="calendars_workweek">Iveki yokusebenza</string>
     <string name="calendars_range">%1$s ukuya ku-%2$s</string>
-    <string name="calendars_truncated">Ezinye iziganeko kwesi sithuba azibonakaliswanga.</string>
+    <string name="calendars_truncated">Mininzi kakhulu imisitho ukuba ibonakaliswe yonke. Khetha ixesha elifutshane.</string>
     <string name="calendars_list_empty">Akukho misitho</string>
     <string name="calendars_untitled">(Akukho sihloko)</string>
     <string name="calendars_status_cancelled">Kurhoxisiwe</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Susa isikhumbuzo</string>
     <string name="calendars_hours_start">Ukuqala kweeyure zomsebenzi</string>
     <string name="calendars_hours_finish">Ukuphela kweeyure zomsebenzi</string>
-    <string name="calendars_hours_invalid">Iiyure zomsebenzi kufuneka ziphele emva kokuba ziqalile.</string>
     <string name="calendars_work_days">Iintsuku zokusebenza</string>
     <string name="calendars_multiweek_weeks">Iiveki eziboniswayo</string>
     <string name="calendars_multiweek_previous">Iiveki ezingaphambili</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Imisitho yemini yonke</string>
     <string name="calendars_allday_first">Ekuqaleni</string>
     <string name="calendars_allday_last">Ekugqibeleni</string>
-    <string name="calendars_link_title">Ikhonkco lekhalenda</string>
-    <string name="calendars_link_copy">Khuphela ikhonkco</string>
+    <string name="calendars_link_title">Idilesi yekhalenda</string>
+    <string name="calendars_link_copy">Kotshela idilesi yekhalenda</string>
     <string name="calendars_link_once">Likhuphele ngoku: alinakuboniswa kwakhona.</string>
-    <string name="calendars_link_exists">Sele likho ikhonkco lale khalenda.</string>
+    <string name="calendars_link_exists">Le dilesi yekhalenda sele ikhutshiwe kwaye ayinakuboniswa kwakhona.</string>
     <string name="calendars_permission_title">Vumela ufikelelo?</string>
     <string name="calendars_permission_message">I-%1$s icela:</string>
     <string name="calendars_sync_authorization">Ngena kwakhona ukuze uqhubeke ukungqamanisa</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Akukho zixhobo zidibeneyo</string>
     <string name="calendars_device_used">yasetyenziswa okokugqibela %1$s</string>
     <string name="calendars_device_never">akukho</string>
-    <string name="calendars_device_deleted">Isixhobo sisusiwe</string>
-    <string name="calendars_device_delete_title">Susa esi sixhobo?</string>
-    <string name="calendars_device_delete_message">Kuya kufuneka simiselwe kwakhona ukuze singqamanise.</string>
+    <string name="calendars_device_deleted">Isixhobo sicinyiwe</string>
+    <string name="calendars_device_delete_title">Cima isixhobo?</string>
+    <string name="calendars_device_delete_message">Isixhobo asisayi kukwazi ukungqamanisa abaqhagamshelwa okanye iikhalenda.</string>
     <string name="calendars_sync_choose">Iikhalenda ezizakungqanyaniswa</string>
     <string name="calendars_poll_large">Ikhalenda inkulu kakhulu</string>
     <string name="calendars_poll_invalid">Idilesi ayibuyisanga khalenda</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Ikhalenda yeGoogle</string>
-    <string name="calendars_subscribe_google_enable">Ii-akhawunti ze-Google azivulwanga kule seva. Zivule ku-Iisetingi, Iisetingi zenkqubo.</string>
+    <string name="calendars_subscribe_google_enable">Ii-akhawunti ze-Google azivulwanga kule seva.</string>
     <string name="calendars_subscribe_google_connect">Awukadibanisi i-akhawunti ye-Google.</string>
     <string name="calendars_subscribe_google_connect_action">Qhagamshela i-Google</string>
     <string name="calendars_grant_failed">Ufikelelo lwekhalenda alunikwanga</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">de kube ngu-%1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Imisitho edlulileyo</string>
+    <string name="calendars_created">Ikhalenda yenziwe</string>
+    <string name="calendars_renamed">Igama lekhalenda liguqulwe</string>
+    <string name="calendars_colour_saved">Umbala ugciniwe</string>
+    <string name="calendars_deleted">Ikhalenda icinyiwe</string>
+    <string name="calendars_removed">Ikhalenda isusiwe</string>
+    <string name="calendars_preferences_saved">Izinto ozithandayo zigciniwe</string>
+    <string name="calendars_link_revoked">Idilesi yekhalenda isusiwe</string>
+    <string name="calendars_link_none">Le khalenda ayinayo idilesi yokususwa</string>
+    <string name="calendars_linked">Ikhalenda idibanisiwe</string>
+    <string name="calendars_subscribed">Kurhunyiwe</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">iyure e-%1$s</item>
+        <item quantity="other">iiyure ezi-%1$s</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Vula ii-akhawunti ze-Google</string>
+    <string name="calendars_provider_caldav">Iseva yekhalenda</string>
 </resources>

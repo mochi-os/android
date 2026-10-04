@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">سنويًا</string>
     <string name="calendars_repeat_custom">مخصص</string>
     <string name="calendars_reminder_none">لا شيء</string>
-    <string name="calendars_day_sunday">الأحد</string>
-    <string name="calendars_day_monday">الاثنين</string>
-    <string name="calendars_day_tuesday">الثلاثاء</string>
-    <string name="calendars_day_wednesday">الأربعاء</string>
-    <string name="calendars_day_thursday">الخميس</string>
-    <string name="calendars_day_friday">الجمعة</string>
-    <string name="calendars_day_saturday">السبت</string>
     <string name="calendars_link_replace">استبدال</string>
     <string name="calendars_link_revoke">إبطال</string>
     <string name="calendars_permission_allow">السماح</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">شهر</string>
     <string name="calendars_workweek">أسبوع العمل</string>
     <string name="calendars_range">%1$s إلى %2$s</string>
-    <string name="calendars_truncated">بعض الأحداث في هذا النطاق غير معروضة.</string>
+    <string name="calendars_truncated">عدد الأحداث كبير جدًا لعرضها كلها. اختر نطاقًا أقصر.</string>
     <string name="calendars_list_empty">لا توجد أحداث</string>
     <string name="calendars_untitled">(بلا عنوان)</string>
     <string name="calendars_status_cancelled">ملغى</string>
@@ -122,7 +115,6 @@
     <string name="calendars_reminder_remove">إزالة التذكير</string>
     <string name="calendars_hours_start">بداية ساعات العمل</string>
     <string name="calendars_hours_finish">نهاية ساعات العمل</string>
-    <string name="calendars_hours_invalid">يجب أن تنتهي ساعات العمل بعد بدايتها.</string>
     <string name="calendars_work_days">أيام العمل</string>
     <string name="calendars_multiweek_weeks">الأسابيع المعروضة</string>
     <string name="calendars_multiweek_previous">الأسابيع السابقة</string>
@@ -132,10 +124,10 @@
     <string name="calendars_preferences_allday">أحداث طوال اليوم</string>
     <string name="calendars_allday_first">في البداية</string>
     <string name="calendars_allday_last">في النهاية</string>
-    <string name="calendars_link_title">رابط التقويم</string>
-    <string name="calendars_link_copy">نسخ الرابط</string>
+    <string name="calendars_link_title">عنوان التقويم</string>
+    <string name="calendars_link_copy">نسخ عنوان التقويم</string>
     <string name="calendars_link_once">انسخه الآن: لا يمكن عرضه مرة أخرى.</string>
-    <string name="calendars_link_exists">يوجد رابط بالفعل لهذا التقويم.</string>
+    <string name="calendars_link_exists">تم إصدار عنوان التقويم هذا مسبقاً ولا يمكن عرضه مرة أخرى.</string>
     <string name="calendars_permission_title">السماح بالوصول؟</string>
     <string name="calendars_permission_message">%1$s يطلب:</string>
     <string name="calendars_sync_authorization">سجّل الدخول مرة أخرى لمتابعة المزامنة</string>
@@ -143,9 +135,9 @@
     <string name="calendars_device_empty">لا توجد أجهزة متصلة</string>
     <string name="calendars_device_used">آخر استخدام %1$s</string>
     <string name="calendars_device_never">أبداً</string>
-    <string name="calendars_device_deleted">تمت إزالة الجهاز</string>
-    <string name="calendars_device_delete_title">إزالة هذا الجهاز؟</string>
-    <string name="calendars_device_delete_message">سيلزم إعداده من جديد للمزامنة.</string>
+    <string name="calendars_device_deleted">تم حذف الجهاز</string>
+    <string name="calendars_device_delete_title">حذف الجهاز؟</string>
+    <string name="calendars_device_delete_message">لن يتمكن الجهاز من مزامنة جهات الاتصال أو التقويمات بعد الآن.</string>
     <string name="calendars_sync_choose">التقويمات المراد مزامنتها</string>
     <string name="calendars_poll_large">التقويم كبير جدًا</string>
     <string name="calendars_poll_invalid">لم يُرجع العنوان تقويمًا</string>
@@ -192,7 +184,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">معرّف Apple</string>
     <string name="calendars_subscribe_google">تقويم Google</string>
-    <string name="calendars_subscribe_google_enable">لم يتم تفعيل حسابات Google على هذا الخادم. فعّلها من الإعدادات، إعدادات النظام.</string>
+    <string name="calendars_subscribe_google_enable">لم يتم تفعيل حسابات Google على هذا الخادم.</string>
     <string name="calendars_subscribe_google_connect">لم تربط أي حساب Google.</string>
     <string name="calendars_subscribe_google_connect_action">ربط Google</string>
     <string name="calendars_grant_failed">لم يُمنح الوصول إلى التقويم</string>
@@ -315,4 +307,25 @@
     </plurals>
     <string name="calendars_rule_until">حتى %1$s</string>
     <string name="calendars_rule_join">%1$s، %2$s</string>
+    <string name="calendars_list_earlier">أحداث سابقة</string>
+    <string name="calendars_created">تم إنشاء التقويم</string>
+    <string name="calendars_renamed">تمت إعادة تسمية التقويم</string>
+    <string name="calendars_colour_saved">تم حفظ اللون</string>
+    <string name="calendars_deleted">تم حذف التقويم</string>
+    <string name="calendars_removed">تمت إزالة التقويم</string>
+    <string name="calendars_preferences_saved">تم حفظ التفضيلات</string>
+    <string name="calendars_link_revoked">تم إبطال عنوان التقويم</string>
+    <string name="calendars_link_none">لا يوجد لهذا التقويم عنوان لإبطاله</string>
+    <string name="calendars_linked">تم ربط التقويم</string>
+    <string name="calendars_subscribed">مشترك</string>
+    <plurals name="calendars_hours">
+        <item quantity="zero">%1$s ساعات</item>
+        <item quantity="one">ساعة واحدة</item>
+        <item quantity="two">ساعتان</item>
+        <item quantity="few">%1$s ساعات</item>
+        <item quantity="many">%1$s ساعة</item>
+        <item quantity="other">%1$s ساعة</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">تفعيل حسابات Google</string>
+    <string name="calendars_provider_caldav">خادم تقويم</string>
 </resources>

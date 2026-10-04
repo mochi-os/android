@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Salane</string>
     <string name="calendars_repeat_custom">Taybet</string>
     <string name="calendars_reminder_none">Tu</string>
-    <string name="calendars_day_sunday">Yekşem</string>
-    <string name="calendars_day_monday">Duşem</string>
-    <string name="calendars_day_tuesday">Sêşem</string>
-    <string name="calendars_day_wednesday">Çarşem</string>
-    <string name="calendars_day_thursday">Pêncşem</string>
-    <string name="calendars_day_friday">Înî</string>
-    <string name="calendars_day_saturday">Şemî</string>
     <string name="calendars_link_replace">Biguhêre</string>
     <string name="calendars_link_revoke">Vekişîne</string>
     <string name="calendars_permission_allow">Destûr bide</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Meh</string>
     <string name="calendars_workweek">Hefteya kar</string>
     <string name="calendars_range">ji %1$s heta %2$s</string>
-    <string name="calendars_truncated">Hin bûyerên vê navberê nayên nîşandan.</string>
+    <string name="calendars_truncated">Ji bo nîşandana hemûyan pir bûyer hene. Navbereke kurttir hilbijêre.</string>
     <string name="calendars_list_empty">Tu bûyer tune</string>
     <string name="calendars_untitled">(Bê sernav)</string>
     <string name="calendars_status_cancelled">Hat betalkirin</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Bîranînê rake</string>
     <string name="calendars_hours_start">Destpêka saetên kar</string>
     <string name="calendars_hours_finish">Dawiya saetên kar</string>
-    <string name="calendars_hours_invalid">Divê saetên xebatê piştî destpêka wan biqedin.</string>
     <string name="calendars_work_days">Rojên kar</string>
     <string name="calendars_multiweek_weeks">Hefteyên tên nîşandan</string>
     <string name="calendars_multiweek_previous">Hefteyên berê</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Bûyerên tevahiya rojê</string>
     <string name="calendars_allday_first">Di destpêkê de</string>
     <string name="calendars_allday_last">Di dawiyê de</string>
-    <string name="calendars_link_title">Girêdana salnameyê</string>
-    <string name="calendars_link_copy">Girêdanê kopî bike</string>
+    <string name="calendars_link_title">Navnîşana salnameyê</string>
+    <string name="calendars_link_copy">Navnîşana salnameyê kopî bike</string>
     <string name="calendars_link_once">Niha kopî bike: careke din nayê nîşandan.</string>
-    <string name="calendars_link_exists">Ji bo vê salnameyê jixwe girêdanek heye.</string>
+    <string name="calendars_link_exists">Ev navnîşana salnameyê berê hatiye dayîn û careke din nayê nîşandan.</string>
     <string name="calendars_permission_title">Destûra gihîştinê bê dayîn?</string>
     <string name="calendars_permission_message">%1$s vê dixwaze:</string>
     <string name="calendars_sync_authorization">Ji bo berdewamkirina hevdemkirinê dîsa têkeve</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Tu cîhaz ne girêdayî ye</string>
     <string name="calendars_device_used">Bikaranîna dawî %1$s</string>
     <string name="calendars_device_never">tu car</string>
-    <string name="calendars_device_deleted">Cîhaz hate rakirin</string>
-    <string name="calendars_device_delete_title">Ev cîhaz were rakirin?</string>
-    <string name="calendars_device_delete_message">Ji bo hevdemkirinê divê ew ji nû ve were sazkirin.</string>
+    <string name="calendars_device_deleted">Cîhaz hate jêbirin</string>
+    <string name="calendars_device_delete_title">Cîhaz were jêbirin?</string>
+    <string name="calendars_device_delete_message">Cîhaz êdî nikare kontakt an salnameyan hevdem bike.</string>
     <string name="calendars_sync_choose">Salnameyên ku werin hevdemkirin</string>
     <string name="calendars_poll_large">Salname pir mezin e</string>
     <string name="calendars_poll_invalid">Navnîşanê salname venegerand</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Salnameya Google</string>
-    <string name="calendars_subscribe_google_enable">Hesabên Google li ser vê serverê nehatine çalakkirin. Wan di Mîheng, Mîhengên pergalê de çalak bike.</string>
+    <string name="calendars_subscribe_google_enable">Hesabên Google li ser vê serverê nehatine çalakkirin.</string>
     <string name="calendars_subscribe_google_connect">Te tu hesabê Google girênedaye.</string>
     <string name="calendars_subscribe_google_connect_action">Google girêde</string>
     <string name="calendars_grant_failed">Gihîştina salnameyê nehat dayîn</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">heta %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Bûyerên berê</string>
+    <string name="calendars_created">Salname hate çêkirin</string>
+    <string name="calendars_renamed">Navê salnameyê hate guhertin</string>
+    <string name="calendars_colour_saved">Reng hate tomarkirin</string>
+    <string name="calendars_deleted">Salname hate jêbirin</string>
+    <string name="calendars_removed">Salname hate rakirin</string>
+    <string name="calendars_preferences_saved">Tercîh hatin tomarkirin</string>
+    <string name="calendars_link_revoked">Navnîşana salnameyê hate vekişandin</string>
+    <string name="calendars_link_none">Vê salnameyê navnîşanek ji bo vekişandinê tune ye</string>
+    <string name="calendars_linked">Salname hat girêdan</string>
+    <string name="calendars_subscribed">Abone</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s saet</item>
+        <item quantity="other">%1$s saet</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Hesabên Google çalak bike</string>
+    <string name="calendars_provider_caldav">Servera salnameyê</string>
 </resources>

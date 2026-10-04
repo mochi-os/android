@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Hàng năm</string>
     <string name="calendars_repeat_custom">Tùy chỉnh</string>
     <string name="calendars_reminder_none">Không có</string>
-    <string name="calendars_day_sunday">Chủ nhật</string>
-    <string name="calendars_day_monday">Thứ Hai</string>
-    <string name="calendars_day_tuesday">Thứ ba</string>
-    <string name="calendars_day_wednesday">Thứ tư</string>
-    <string name="calendars_day_thursday">Thứ năm</string>
-    <string name="calendars_day_friday">Thứ Sáu</string>
-    <string name="calendars_day_saturday">Thứ bảy</string>
     <string name="calendars_link_replace">Thay thế</string>
     <string name="calendars_link_revoke">Thu hồi</string>
     <string name="calendars_permission_allow">Cho phép</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Tháng</string>
     <string name="calendars_workweek">Tuần làm việc</string>
     <string name="calendars_range">%1$s đến %2$s</string>
-    <string name="calendars_truncated">Một số sự kiện trong khoảng này không được hiển thị.</string>
+    <string name="calendars_truncated">Có quá nhiều sự kiện để hiển thị tất cả. Hãy chọn khoảng ngắn hơn.</string>
     <string name="calendars_list_empty">Không có sự kiện</string>
     <string name="calendars_untitled">(Không có tiêu đề)</string>
     <string name="calendars_status_cancelled">Đã hủy</string>
@@ -107,7 +100,6 @@
     <string name="calendars_reminder_remove">Xoá lời nhắc</string>
     <string name="calendars_hours_start">Giờ làm việc bắt đầu</string>
     <string name="calendars_hours_finish">Giờ làm việc kết thúc</string>
-    <string name="calendars_hours_invalid">Giờ làm việc phải kết thúc sau khi bắt đầu.</string>
     <string name="calendars_work_days">Ngày làm việc</string>
     <string name="calendars_multiweek_weeks">Số tuần hiển thị</string>
     <string name="calendars_multiweek_previous">Số tuần trước đó</string>
@@ -117,10 +109,10 @@
     <string name="calendars_preferences_allday">Sự kiện cả ngày</string>
     <string name="calendars_allday_first">Ở đầu</string>
     <string name="calendars_allday_last">Ở cuối</string>
-    <string name="calendars_link_title">Liên kết lịch</string>
-    <string name="calendars_link_copy">Sao chép liên kết</string>
+    <string name="calendars_link_title">Địa chỉ lịch</string>
+    <string name="calendars_link_copy">Sao chép địa chỉ lịch</string>
     <string name="calendars_link_once">Hãy sao chép ngay: liên kết sẽ không hiện lại.</string>
-    <string name="calendars_link_exists">Lịch này đã có một liên kết.</string>
+    <string name="calendars_link_exists">Địa chỉ lịch này đã được cấp và không thể hiển thị lại.</string>
     <string name="calendars_permission_title">Cho phép truy cập?</string>
     <string name="calendars_permission_message">%1$s đang yêu cầu:</string>
     <string name="calendars_sync_authorization">Đăng nhập lại để tiếp tục đồng bộ</string>
@@ -128,9 +120,9 @@
     <string name="calendars_device_empty">Chưa có thiết bị nào kết nối</string>
     <string name="calendars_device_used">dùng lần cuối %1$s</string>
     <string name="calendars_device_never">chưa bao giờ</string>
-    <string name="calendars_device_deleted">Đã gỡ thiết bị</string>
-    <string name="calendars_device_delete_title">Gỡ thiết bị này?</string>
-    <string name="calendars_device_delete_message">Sẽ phải thiết lập lại để đồng bộ.</string>
+    <string name="calendars_device_deleted">Đã xóa thiết bị</string>
+    <string name="calendars_device_delete_title">Xóa thiết bị?</string>
+    <string name="calendars_device_delete_message">Thiết bị sẽ không thể đồng bộ danh bạ hoặc lịch nữa.</string>
     <string name="calendars_sync_choose">Lịch cần đồng bộ</string>
     <string name="calendars_poll_large">Lịch quá lớn</string>
     <string name="calendars_poll_invalid">Địa chỉ không trả về lịch nào</string>
@@ -172,7 +164,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Lịch Google</string>
-    <string name="calendars_subscribe_google_enable">Tài khoản Google chưa được bật trên máy chủ này. Hãy bật trong Cài đặt, Cài đặt hệ thống.</string>
+    <string name="calendars_subscribe_google_enable">Tài khoản Google chưa được bật trên máy chủ này.</string>
     <string name="calendars_subscribe_google_connect">Bạn chưa kết nối tài khoản Google nào.</string>
     <string name="calendars_subscribe_google_connect_action">Kết nối Google</string>
     <string name="calendars_grant_failed">Quyền truy cập lịch chưa được cấp</string>
@@ -256,4 +248,20 @@
     </plurals>
     <string name="calendars_rule_until">đến %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">Sự kiện trước</string>
+    <string name="calendars_created">Đã tạo lịch</string>
+    <string name="calendars_renamed">Đã đổi tên lịch</string>
+    <string name="calendars_colour_saved">Đã lưu màu</string>
+    <string name="calendars_deleted">Đã xóa lịch</string>
+    <string name="calendars_removed">Đã xoá lịch</string>
+    <string name="calendars_preferences_saved">Đã lưu tuỳ chọn</string>
+    <string name="calendars_link_revoked">Đã thu hồi địa chỉ lịch</string>
+    <string name="calendars_link_none">Lịch này không có địa chỉ nào để thu hồi</string>
+    <string name="calendars_linked">Đã liên kết lịch</string>
+    <string name="calendars_subscribed">Đã đăng ký</string>
+    <plurals name="calendars_hours">
+        <item quantity="other">%1$s giờ</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Bật tài khoản Google</string>
+    <string name="calendars_provider_caldav">Máy chủ lịch</string>
 </resources>

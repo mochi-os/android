@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">Годишно</string>
     <string name="calendars_repeat_custom">Персонализирано</string>
     <string name="calendars_reminder_none">Няма</string>
-    <string name="calendars_day_sunday">Неделя</string>
-    <string name="calendars_day_monday">Понеделник</string>
-    <string name="calendars_day_tuesday">Вторник</string>
-    <string name="calendars_day_wednesday">Сряда</string>
-    <string name="calendars_day_thursday">Четвъртък</string>
-    <string name="calendars_day_friday">Петък</string>
-    <string name="calendars_day_saturday">Събота</string>
     <string name="calendars_link_replace">Замени</string>
     <string name="calendars_link_revoke">Оттегли</string>
     <string name="calendars_permission_allow">Разрешаване</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">Месец</string>
     <string name="calendars_workweek">Работна седмица</string>
     <string name="calendars_range">от %1$s до %2$s</string>
-    <string name="calendars_truncated">Някои събития в този период не са показани.</string>
+    <string name="calendars_truncated">Твърде много събития, за да се покажат всички. Изберете по-кратък период.</string>
     <string name="calendars_list_empty">Няма събития</string>
     <string name="calendars_untitled">(Без заглавие)</string>
     <string name="calendars_status_cancelled">Отменено</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">Премахни напомнянето</string>
     <string name="calendars_hours_start">Начало на работното време</string>
     <string name="calendars_hours_finish">Край на работното време</string>
-    <string name="calendars_hours_invalid">Работното време трябва да свършва след като започне.</string>
     <string name="calendars_work_days">Работни дни</string>
     <string name="calendars_multiweek_weeks">Показани седмици</string>
     <string name="calendars_multiweek_previous">Седмици преди</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">Целодневни събития</string>
     <string name="calendars_allday_first">В началото</string>
     <string name="calendars_allday_last">В края</string>
-    <string name="calendars_link_title">Връзка към календара</string>
-    <string name="calendars_link_copy">Копирай връзката</string>
+    <string name="calendars_link_title">Адрес на календара</string>
+    <string name="calendars_link_copy">Копирай адреса на календара</string>
     <string name="calendars_link_once">Копирайте я сега: не може да бъде показана отново.</string>
-    <string name="calendars_link_exists">За този календар вече има връзка.</string>
+    <string name="calendars_link_exists">Този адрес на календара вече е издаден и не може да бъде показан отново.</string>
     <string name="calendars_permission_title">Да се разреши ли достъп?</string>
     <string name="calendars_permission_message">%1$s иска:</string>
     <string name="calendars_sync_authorization">Влезте отново, за да продължи синхронизирането</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">Няма свързани устройства</string>
     <string name="calendars_device_used">последно използвано %1$s</string>
     <string name="calendars_device_never">никога</string>
-    <string name="calendars_device_deleted">Устройството е премахнато</string>
-    <string name="calendars_device_delete_title">Да се премахне ли това устройство?</string>
-    <string name="calendars_device_delete_message">Ще трябва да бъде настроено отново, за да синхронизира.</string>
+    <string name="calendars_device_deleted">Устройството е изтрито</string>
+    <string name="calendars_device_delete_title">Да се изтрие ли устройството?</string>
+    <string name="calendars_device_delete_message">Устройството повече няма да може да синхронизира контакти или календари.</string>
     <string name="calendars_sync_choose">Календари за синхронизиране</string>
     <string name="calendars_poll_large">Календарът е твърде голям</string>
     <string name="calendars_poll_invalid">Адресът не върна календар</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google Календар</string>
-    <string name="calendars_subscribe_google_enable">Акаунтите в Google не са активирани на този сървър. Активирайте ги от Настройки, Системни настройки.</string>
+    <string name="calendars_subscribe_google_enable">Акаунтите в Google не са активирани на този сървър.</string>
     <string name="calendars_subscribe_google_connect">Не сте свързали акаунт в Google.</string>
     <string name="calendars_subscribe_google_connect_action">Свързване с Google</string>
     <string name="calendars_grant_failed">Достъпът до календара не беше разрешен</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">до %1$s</string>
     <string name="calendars_rule_join">%1$s, %2$s</string>
+    <string name="calendars_list_earlier">По-ранни събития</string>
+    <string name="calendars_created">Календарът е създаден</string>
+    <string name="calendars_renamed">Календарът е преименуван</string>
+    <string name="calendars_colour_saved">Цветът е запазен</string>
+    <string name="calendars_deleted">Календарът е изтрит</string>
+    <string name="calendars_removed">Календарът е премахнат</string>
+    <string name="calendars_preferences_saved">Предпочитанията са запазени</string>
+    <string name="calendars_link_revoked">Адресът на календара е отменен</string>
+    <string name="calendars_link_none">Този календар няма адрес за отмяна</string>
+    <string name="calendars_linked">Календарът е свързан</string>
+    <string name="calendars_subscribed">Абониран</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s час</item>
+        <item quantity="other">%1$s часа</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">Активиране на акаунти в Google</string>
+    <string name="calendars_provider_caldav">Сървър за календари</string>
 </resources>

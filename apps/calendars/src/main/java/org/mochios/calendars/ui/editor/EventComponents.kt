@@ -570,15 +570,20 @@ private fun component(
     val zone = form.zone.start.ifBlank { CalendarsMapping.UTC }
     val ends = form.zone.finish.ifBlank { zone }
     val finish = start + (form.finish - form.start)
+    // A description edited here leaves behind the rich copy another client
+    // kept beside it, which would go on showing the old text there.
+    val edited = form.description != descriptionText(form.original)
     val properties = mutableListOf<EventProperty>()
-    carried?.properties?.filterNot { it.name.uppercase() in MANAGED }?.let(properties::addAll)
+    carried?.properties?.filterNot {
+        it.name.uppercase() in MANAGED || (edited && it.name.equals(CalendarsMapping.ALTERNATIVE, ignoreCase = true))
+    }?.let(properties::addAll)
     properties.add(property("SUMMARY", form.title.trim()))
     properties.add(CalendarsMapping.stamp("DTSTART", start * 1000, zone, form.allday))
     properties.add(CalendarsMapping.stamp("DTEND", finish * 1000, ends, form.allday))
     if (form.location.isNotBlank()) properties.add(property("LOCATION", form.location.trim()))
     if (form.colour.isNotBlank()) properties.add(property("COLOR", form.colour.trim()))
     if (form.url.isNotBlank()) properties.add(property("URL", form.url.trim()))
-    val description = if (form.description == descriptionText(form.original)) form.original else form.description.trim()
+    val description = if (edited) form.description.trim() else form.original
     if (description.isNotBlank()) properties.add(property("DESCRIPTION", description))
     if (recurrence) {
         val rule = form.recurrence.rule(zone, form.allday)

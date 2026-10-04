@@ -20,13 +20,6 @@
     <string name="calendars_repeat_yearly">کلنی</string>
     <string name="calendars_repeat_custom">دودیز</string>
     <string name="calendars_reminder_none">هیڅوک</string>
-    <string name="calendars_day_sunday">یکشنبه</string>
-    <string name="calendars_day_monday">دوشنبه</string>
-    <string name="calendars_day_tuesday">سه‌شنبه</string>
-    <string name="calendars_day_wednesday">چهارشنبه</string>
-    <string name="calendars_day_thursday">پنجشنبه</string>
-    <string name="calendars_day_friday">جمعه</string>
-    <string name="calendars_day_saturday">شنبه</string>
     <string name="calendars_link_replace">بدلول</string>
     <string name="calendars_link_revoke">بیرته اخیستل</string>
     <string name="calendars_permission_allow">اجازه ورکړئ</string>
@@ -73,7 +66,7 @@
     <string name="calendars_view_month">میاشت</string>
     <string name="calendars_workweek">د کار اونۍ</string>
     <string name="calendars_range">له %1$s څخه تر %2$s</string>
-    <string name="calendars_truncated">په دې سلسله کې ځینې پېښې نه ښودل کېږي.</string>
+    <string name="calendars_truncated">پېښې دومره ډېرې دي چې ټولې نه ښودل کیږي. لنډه سلسله وټاکئ.</string>
     <string name="calendars_list_empty">هیڅ پېښې نشته</string>
     <string name="calendars_untitled">(بې سرلیکه)</string>
     <string name="calendars_status_cancelled">لغوه شوی</string>
@@ -110,7 +103,6 @@
     <string name="calendars_reminder_remove">یادونه لرې کړئ</string>
     <string name="calendars_hours_start">د کاري ساعتونو پیل</string>
     <string name="calendars_hours_finish">د کاري ساعتونو پای</string>
-    <string name="calendars_hours_invalid">کاري ساعتونه باید له پیل وروسته پای ته ورسېږي.</string>
     <string name="calendars_work_days">د کار ورځې</string>
     <string name="calendars_multiweek_weeks">ښودل شوې اونۍ</string>
     <string name="calendars_multiweek_previous">تېرې اونۍ</string>
@@ -120,10 +112,10 @@
     <string name="calendars_preferences_allday">د ټولې ورځې پېښې</string>
     <string name="calendars_allday_first">په پیل کې</string>
     <string name="calendars_allday_last">په پای کې</string>
-    <string name="calendars_link_title">د کليز لینک</string>
-    <string name="calendars_link_copy">لینک کاپي کړئ</string>
+    <string name="calendars_link_title">د کليز پته</string>
+    <string name="calendars_link_copy">د کليز پته کاپي کړئ</string>
     <string name="calendars_link_once">اوس یې کاپي کړئ: بیا به ونه ښودل شي.</string>
-    <string name="calendars_link_exists">د دې کليز لپاره لا دمخه لینک شته.</string>
+    <string name="calendars_link_exists">دا د کليز پته دمخه صادره شوې او بیا نه ښودل کیږي.</string>
     <string name="calendars_permission_title">لاسرسی ورکړئ؟</string>
     <string name="calendars_permission_message">%1$s غوښتنه کوي:</string>
     <string name="calendars_sync_authorization">د همغږۍ د دوام لپاره بیا ننوځئ</string>
@@ -131,9 +123,9 @@
     <string name="calendars_device_empty">هېڅ وسیله نه ده نښلول شوې</string>
     <string name="calendars_device_used">وروستی کارول %1$s</string>
     <string name="calendars_device_never">هېڅکله</string>
-    <string name="calendars_device_deleted">وسیله لرې شوه</string>
-    <string name="calendars_device_delete_title">دا وسیله لرې کړئ؟</string>
-    <string name="calendars_device_delete_message">د همغږۍ لپاره به یې بیا جوړول اړین وي.</string>
+    <string name="calendars_device_deleted">وسیله ړنګه شوه</string>
+    <string name="calendars_device_delete_title">وسیله ړنګه شي؟</string>
+    <string name="calendars_device_delete_message">وسیله به نور ونشي کولای اړیکې یا کليزونه همغږي کړي.</string>
     <string name="calendars_sync_choose">د همغږۍ لپاره کليزونه</string>
     <string name="calendars_poll_large">کليز ډېر لوی دی</string>
     <string name="calendars_poll_invalid">له پتې څخه کليز لاسته نه راغی</string>
@@ -176,7 +168,7 @@
     <string name="calendars_subscribe_apple">Apple iCloud</string>
     <string name="calendars_subscribe_apple_id">Apple ID</string>
     <string name="calendars_subscribe_google">Google کليز</string>
-    <string name="calendars_subscribe_google_enable">د Google حسابونه پدې سرور کې نه دي فعال شوي. دوی په ترتیبات، د سیسټم ترتیبات کې فعال کړئ.</string>
+    <string name="calendars_subscribe_google_enable">د Google حسابونه پدې سرور کې نه دي فعال شوي.</string>
     <string name="calendars_subscribe_google_connect">تاسو د Google حساب نه دی وصل کړی.</string>
     <string name="calendars_subscribe_google_connect_action">Google ونښلوئ</string>
     <string name="calendars_grant_failed">د کليز لاسرسی ور نه کړل شو</string>
@@ -263,4 +255,21 @@
     </plurals>
     <string name="calendars_rule_until">تر %1$s پورې</string>
     <string name="calendars_rule_join">%1$s، %2$s</string>
+    <string name="calendars_list_earlier">پخوانۍ پېښې</string>
+    <string name="calendars_created">کليز جوړ شو</string>
+    <string name="calendars_renamed">د کليز نوم بدل شو</string>
+    <string name="calendars_colour_saved">رنګ خوندي شو</string>
+    <string name="calendars_deleted">کليز ړنګ شو</string>
+    <string name="calendars_removed">کليز لرې شو</string>
+    <string name="calendars_preferences_saved">غوره توبونه خوندي شول</string>
+    <string name="calendars_link_revoked">د کليز پته بیرته واخیستل شوه</string>
+    <string name="calendars_link_none">دا کليز د بیرته اخیستلو لپاره پته نه لري</string>
+    <string name="calendars_linked">کليز ونښلول شو</string>
+    <string name="calendars_subscribed">ګډون شوی</string>
+    <plurals name="calendars_hours">
+        <item quantity="one">%1$s ساعت</item>
+        <item quantity="other">%1$s ساعته</item>
+    </plurals>
+    <string name="calendars_subscribe_google_enable_action">د Google حسابونه فعال کړئ</string>
+    <string name="calendars_provider_caldav">د کليز سرور</string>
 </resources>
