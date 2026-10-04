@@ -210,6 +210,31 @@ class EditorFlowTest {
     }
 
     @Test
+    fun `a series cut by this and following opens in the editor ending before the cut`() {
+        // 11:00 London daily from the 2nd, cut at the 5th's occurrence a second before it.
+        respond(
+            "-/events/get",
+            ok(
+                """{"event": {"id": "e1", "calendar": "c1", "etag": "a", "recurring": true, "components": [
+                    {"name": "VEVENT", "properties": [
+                        {"name": "UID", "params": {}, "value": "uid-1"},
+                        {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
+                        {"name": "DTSTART", "params": {}, "value": "20261002T100000Z"},
+                        {"name": "DTEND", "params": {}, "value": "20261002T110000Z"},
+                        {"name": "RRULE", "params": {}, "value": "FREQ=DAILY;UNTIL=20261005T095959Z"}
+                    ], "components": []}
+                ]}}""",
+            ),
+        )
+        val model = EventEditViewModel(context, repository, London, SavedStateHandle(mapOf("event" to "e1")))
+        rule.setContent {
+            EventEditScreen(onBack = {}, onSaved = {}, onCopied = {}, onDeleted = {}, onCopy = { _, _, _ -> }, viewModel = model)
+        }
+        waitFor("Stand-up")
+        assertEquals(java.time.LocalDate.of(2026, 10, 4), model.uiState.value.recurrence.until)
+    }
+
+    @Test
     fun `saving a stored event says it saved rather than created`() {
         respond("-/events/get", event("a", "Stand-up"))
         respond("-/events/update", event("b", "Stand-up"))

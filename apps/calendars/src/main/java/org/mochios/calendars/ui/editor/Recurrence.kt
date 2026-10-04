@@ -6,6 +6,7 @@
 package org.mochios.calendars.ui.editor
 
 import org.mochios.android.sync.CalendarsMapping
+import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneId
@@ -108,12 +109,15 @@ data class Recurrence(
 
 /**
  * The Repeat field for an `RRULE`, its end day read in [zone], the zone the
- * event starts in. A rule the settings cannot express - one with a
+ * event starts in. [start] is a timed series' own start, epoch seconds: an
+ * end earlier in its day than the series starts lets in no occurrence that
+ * day, so the last day is the one before, as a series cut just before an
+ * occurrence ends a second before it. A rule the settings cannot express - one with a
  * `BYMONTHDAY`, a `BYSETPOS`, an ordinal weekday - keeps [Recurrence.rule]
  * and is marked not [Recurrence.expressible], so saving the event again does
  * not quietly simplify it.
  */
-fun recurrence(rule: String?, zone: String = CalendarsMapping.UTC): Recurrence {
+fun recurrence(rule: String?, zone: String = CalendarsMapping.UTC, start: Long = 0): Recurrence {
     if (rule.isNullOrBlank()) return Recurrence()
     val parts = rule.split(";")
         .mapNotNull { part ->
@@ -126,7 +130,7 @@ fun recurrence(rule: String?, zone: String = CalendarsMapping.UTC): Recurrence {
     val interval = parts["INTERVAL"]?.toIntOrNull()?.takeIf { it > 0 } ?: 1
     val tokens = parts["BYDAY"].orEmpty().split(",").map { it.trim().uppercase() }.filter { it.isNotEmpty() }
     val days = tokens.mapNotNull { token -> WEEKDAYS.indexOf(token.takeLast(2)).takeIf { it >= 0 } }.toSet()
-    val until = parts["UNTIL"]?.let { day(it, zone) }
+    val until = parts["UNTIL"]?.let { day(it, zone, start) }
     val count = parts["COUNT"]?.toIntOrNull()?.takeIf { it > 0 }
     val ending = when {
         until != null -> Ending.UNTIL
@@ -146,23 +150,36 @@ fun recurrence(rule: String?, zone: String = CalendarsMapping.UTC): Recurrence {
 private val PLAIN = setOf("FREQ", "INTERVAL", "BYDAY", "COUNT", "UNTIL")
 
 /**
- * An `UNTIL` value as the day it falls on in [zone]: a date as written, a
- * UTC or floating time read in that zone. Null when it will not parse.
+ * An `UNTIL` value as the last day it lets in, read in [zone]: a date as
+ * written; a UTC or floating time on the day it falls on in that zone, or the
+ * day before when its clock reads earlier than the series' [start] does.
+ * Null when it will not parse.
  */
-private fun day(value: String, zone: String): LocalDate? {
+private fun day(value: String, zone: String, start: Long): LocalDate? {
     val text = value.trim()
-    return try {
-        when {
-            text.length == 8 -> LocalDate.parse(text, DATE)
-            text.endsWith("Z") -> LocalDateTime.parse(text.dropLast(1), PLAIN_STAMP)
+    if (text.length == 8) {
+        return try {
+            LocalDate.parse(text, DATE)
+        } catch (_: DateTimeParseException) {
+            null
+        }
+    }
+    val id = runCatching { ZoneId.of(zone) }.getOrDefault(ZoneOffset.UTC)
+    val ends = try {
+        if (text.endsWith("Z")) {
+            LocalDateTime.parse(text.dropLast(1), PLAIN_STAMP)
                 .atZone(ZoneOffset.UTC)
-                .withZoneSameInstant(runCatching { ZoneId.of(zone) }.getOrDefault(ZoneOffset.UTC))
-                .toLocalDate()
-            else -> LocalDateTime.parse(text, PLAIN_STAMP).toLocalDate()
+                .withZoneSameInstant(id)
+                .toLocalDateTime()
+        } else {
+            LocalDateTime.parse(text, PLAIN_STAMP)
         }
     } catch (_: DateTimeParseException) {
-        null
+        return null
     }
+    if (start <= 0L) return ends.toLocalDate()
+    val opens = Instant.ofEpochSecond(start).atZone(id).toLocalTime()
+    return if (ends.toLocalTime() < opens) ends.toLocalDate().minusDays(1) else ends.toLocalDate()
 }
 
 private val DATE: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd")

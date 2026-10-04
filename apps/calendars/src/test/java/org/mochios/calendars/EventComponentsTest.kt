@@ -27,6 +27,7 @@ import org.mochios.calendars.ui.editor.duplicate
 import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.follow
 import org.mochios.calendars.ui.editor.moved
+import org.mochios.calendars.ui.editor.truncated
 import org.mochios.calendars.ui.editor.moveOccurrence
 import org.mochios.calendars.ui.editor.single
 import org.mochios.calendars.ui.editor.written
@@ -301,6 +302,14 @@ class EventComponentsTest {
     }
 
     // ---- a description written as HTML ----
+
+    @Test
+    fun `a series cut by this and following opens ending before the cut`() {
+        // A daily 10:00 London series cut at the 29th's occurrence ends a second before it.
+        val cut = truncated(listOf(master("FREQ=DAILY")), NEXT)!!.first()
+        assertEquals("FREQ=DAILY;UNTIL=20260929T085959Z", cut.value("RRULE"))
+        assertEquals(java.time.LocalDate.of(2026, 9, 28), draft(cut, LONDON).recurrence.until)
+    }
 
     private val HTML = "PNR: 2YHEIJ<br>Class: <b>Business</b> &amp; lounge"
     private val TEXT = "PNR: 2YHEIJ\nClass: Business & lounge"

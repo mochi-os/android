@@ -220,7 +220,7 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
         url = component.value("URL"),
         description = descriptionText(component.value("DESCRIPTION")),
         original = component.value("DESCRIPTION"),
-        recurrence = recurrence(component.value("RRULE"), zone.start),
+        recurrence = recurrence(component.value("RRULE"), zone.start, if (allday) 0L else start),
         reminders = alarms(component).mapNotNull(::alarmMinutes).distinct(),
     )
     return if (occurrence > 0 && start != 0L) shifted(form, occurrence - start) else form

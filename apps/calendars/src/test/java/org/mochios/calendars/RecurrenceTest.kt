@@ -119,6 +119,22 @@ class RecurrenceTest {
     }
 
     @Test
+    fun `a cut series reads as ending the day before the cut, so touching its repeat brings nothing back`() {
+        val london = "Europe/London"
+        // 09:00 London on 1 September, an hour ahead of UTC.
+        val start = java.time.ZonedDateTime.of(2026, 9, 1, 9, 0, 0, 0, java.time.ZoneId.of(london)).toEpochSecond()
+        // Cut at the 18th's occurrence: it ends a second before it.
+        val cut = recurrence("FREQ=DAILY;UNTIL=20260918T075959Z", london, start)
+        assertEquals(LocalDate.of(2026, 9, 17), cut.until)
+        assertEquals("FREQ=DAILY;UNTIL=20260917T225959Z", cut.copy(rule = null).rule(london))
+        // The editor's end, the day's last second, and one on the last
+        // occurrence's own start, as Apple writes it, read as their own day.
+        assertEquals(LocalDate.of(2026, 9, 17), recurrence("FREQ=DAILY;UNTIL=20260917T225959Z", london, start).until)
+        assertEquals(LocalDate.of(2026, 9, 17), recurrence("FREQ=DAILY;UNTIL=20260917T080000Z", london, start).until)
+        assertEquals(LocalDate.of(2026, 9, 17), recurrence("FREQ=DAILY;UNTIL=20260917", london, start).until)
+    }
+
+    @Test
     fun `a kept rule takes the end form its start takes when the series turns all day or back`() {
         val london = "Europe/London"
         val timed = recurrence("FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930T225959Z", london)

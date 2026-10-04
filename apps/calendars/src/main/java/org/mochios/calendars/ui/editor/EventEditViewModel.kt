@@ -371,7 +371,11 @@ class EventEditViewModel @Inject constructor(
         // An override replaces its occurrence whole: its reminders are its own,
         // and one with none has none.
         val alarms = alarms(shown)
-        val repeat = recurrence(master?.value("RRULE"), master?.let { written(it, zone).start } ?: zone)
+        // A timed series' own start, which says the last day its end lets in.
+        val first = master?.property("DTSTART")
+            ?.takeIf { !CalendarsMapping.date(it) }
+            ?.let { CalendarsMapping.moment(it) / 1000 } ?: 0L
+        val repeat = recurrence(master?.value("RRULE"), master?.let { written(it, zone).start } ?: zone, first)
         _uiState.value = EditorUiState(
             event = loaded.id,
             occurrence = occurrence,
