@@ -8,8 +8,6 @@
     <string name="calendars_name">Ainm</string>
     <string name="calendars_rename">Cuir ainm ùr air</string>
     <string name="calendars_delete">Sguab às</string>
-    <string name="calendars_previous">Air ais</string>
-    <string name="calendars_next">Air adhart</string>
     <string name="calendars_view">Sealladh</string>
     <string name="calendars_view_list">Liosta</string>
     <string name="calendars_list_search">Lorg</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">A bheil thu airson %1$s a thoirt air falbh à Mochi?</string>
     <string name="calendars_remove_message">Fanaidh na tachartasan aige sa mhìosachan thùsail.</string>
     <string name="calendars_today">An-diugh</string>
+    <string name="calendars_previous">Air ais</string>
+    <string name="calendars_next">Air adhart</string>
     <string name="calendars_view_week">Seachdain</string>
     <string name="calendars_view_multiweek">Iomadh seachdain</string>
     <string name="calendars_view_month">Mìos</string>

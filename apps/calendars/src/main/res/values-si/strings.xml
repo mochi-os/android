@@ -8,8 +8,6 @@
     <string name="calendars_name">නම</string>
     <string name="calendars_rename">නැවත නම් කරන්න</string>
     <string name="calendars_delete">මකන්න</string>
-    <string name="calendars_previous">පෙර</string>
-    <string name="calendars_next">ඊළඟ</string>
     <string name="calendars_view">දසුන</string>
     <string name="calendars_view_list">ලැයිස්තුව</string>
     <string name="calendars_list_search">සොයන්න</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s Mochi වෙතින් ඉවත් කරන්නද?</string>
     <string name="calendars_remove_message">එහි සිදුවීම් මුල් දින දර්ශනයේම පවතී.</string>
     <string name="calendars_today">අද</string>
+    <string name="calendars_previous">පෙර</string>
+    <string name="calendars_next">ඊළඟ</string>
     <string name="calendars_view_week">සතිය</string>
     <string name="calendars_view_multiweek">සති කිහිපයක්</string>
     <string name="calendars_view_month">මාසය</string>

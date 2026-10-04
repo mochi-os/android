@@ -8,8 +8,6 @@
     <string name="calendars_name">Maqaa</string>
     <string name="calendars_rename">Maqaa jijjiiri</string>
     <string name="calendars_delete">Haqi</string>
-    <string name="calendars_previous">Duraa</string>
-    <string name="calendars_next">Itti aanu</string>
     <string name="calendars_view">Mul\'ata</string>
     <string name="calendars_view_list">Tarree</string>
     <string name="calendars_list_search">Barbaadi</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s Mochi irraa haquu?</string>
     <string name="calendars_remove_message">Taateewwan isaa kaalaandarii jalqabaa keessatti hafu.</string>
     <string name="calendars_today">Har\'a</string>
+    <string name="calendars_previous">Duraa</string>
+    <string name="calendars_next">Itti aanu</string>
     <string name="calendars_view_week">Torbee</string>
     <string name="calendars_view_multiweek">Torbeewwan hedduu</string>
     <string name="calendars_view_month">Ji\'a</string>

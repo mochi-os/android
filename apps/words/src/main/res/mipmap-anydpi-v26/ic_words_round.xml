@@ -6,6 +6,6 @@
     <foreground>
         <inset
             android:drawable="@mipmap/ic_words_foreground"
-            android:inset="15dp" />
+            android:inset="10.4%" />
     </foreground>
 </adaptive-icon>

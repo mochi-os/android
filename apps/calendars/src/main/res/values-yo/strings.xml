@@ -8,8 +8,6 @@
     <string name="calendars_name">Orúkọ</string>
     <string name="calendars_rename">Tún sọ orúkọ</string>
     <string name="calendars_delete">Pa rẹ́</string>
-    <string name="calendars_previous">Tó kọjá</string>
-    <string name="calendars_next">Tó kàn</string>
     <string name="calendars_view">Ìwòye</string>
     <string name="calendars_view_list">Àkójọ</string>
     <string name="calendars_list_search">Wá</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Yọ %1$s kúrò nínú Mochi?</string>
     <string name="calendars_remove_message">Àwọn ìṣẹ̀lẹ̀ rẹ̀ ṣì wà nínú kàlẹ́ńdà àtilẹ̀wá.</string>
     <string name="calendars_today">Lónìí</string>
+    <string name="calendars_previous">Tó kọjá</string>
+    <string name="calendars_next">Tó kàn</string>
     <string name="calendars_view_week">Ọ̀sẹ̀</string>
     <string name="calendars_view_multiweek">Ọ̀sẹ̀ púpọ̀</string>
     <string name="calendars_view_month">Oṣù</string>

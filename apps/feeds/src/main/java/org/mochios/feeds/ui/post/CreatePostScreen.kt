@@ -76,7 +76,6 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.PlaceData
@@ -96,11 +95,14 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiSheetHeader
+import org.mochios.android.ui.components.MochiSheetPadding
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.TravellingPicker
 import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.feeds.R
+import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -729,29 +731,16 @@ private fun CheckinBottomSheet(
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     MochiBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+        MochiSheetHeader(
+            title = stringResource(R.string.feeds_check_in),
+            leading = { Icon(Icons.Default.LocationOn, contentDescription = null) }
+        )
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp)
-                .padding(bottom = 24.dp)
+                .padding(MochiSheetPadding)
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.LocationOn, contentDescription = null)
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = stringResource(R.string.feeds_check_in),
-                    style = MaterialTheme.typography.titleLarge,
-                    modifier = Modifier.weight(1f)
-                )
-                MochiIconButton(onClick = onDismiss) {
-                    Icon(
-                        Icons.Default.Close,
-                        contentDescription = stringResource(MochiR.string.common_close)
-                    )
-                }
-            }
-            Spacer(modifier = Modifier.height(8.dp))
             PlacePicker(
                 place = draft,
                 onPlaceSelected = { place -> draft = place },
@@ -783,29 +772,16 @@ private fun TravellingBottomSheet(
     var destination by remember { mutableStateOf(initialDestination) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     MochiBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+        MochiSheetHeader(
+            title = stringResource(R.string.feeds_travelling),
+            leading = { Icon(Icons.Default.Flight, contentDescription = null) }
+        )
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp)
-                .padding(bottom = 24.dp)
+                .padding(MochiSheetPadding)
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.Flight, contentDescription = null)
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = stringResource(R.string.feeds_travelling),
-                    style = MaterialTheme.typography.titleLarge,
-                    modifier = Modifier.weight(1f)
-                )
-                MochiIconButton(onClick = onDismiss) {
-                    Icon(
-                        Icons.Default.Close,
-                        contentDescription = stringResource(MochiR.string.common_close)
-                    )
-                }
-            }
-            Spacer(modifier = Modifier.height(8.dp))
             TravellingPicker(
                 origin = origin,
                 destination = destination,

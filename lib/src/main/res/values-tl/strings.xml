@@ -181,6 +181,8 @@
     <string name="notifications_clear">I-clear ang mga abiso</string>
     <string name="entity_avatar_alt">Avatar para kay %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Ngayon lang</string>
     <string name="format_time_minutes_ago">%1$sm ang nakalipas</string>
     <string name="format_time_hours_ago">%1$sh ang nakalipas</string>

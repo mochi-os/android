@@ -8,8 +8,6 @@
     <string name="calendars_name">Назва</string>
     <string name="calendars_rename">Перейменувати</string>
     <string name="calendars_delete">Видалити</string>
-    <string name="calendars_previous">Попередній</string>
-    <string name="calendars_next">Далі</string>
     <string name="calendars_view">Вигляд</string>
     <string name="calendars_view_list">Список</string>
     <string name="calendars_list_search">Пошук</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Видалити %1$s з Mochi?</string>
     <string name="calendars_remove_message">Його події залишаться в початковому календарі.</string>
     <string name="calendars_today">Сьогодні</string>
+    <string name="calendars_previous">Попередній</string>
+    <string name="calendars_next">Далі</string>
     <string name="calendars_view_week">Тиждень</string>
     <string name="calendars_view_multiweek">Кілька тижнів</string>
     <string name="calendars_view_month">Місяць</string>

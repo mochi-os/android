@@ -8,8 +8,6 @@
     <string name="calendars_name">Naam</string>
     <string name="calendars_rename">Hernoem</string>
     <string name="calendars_delete">Verwyder</string>
-    <string name="calendars_previous">Vorige</string>
-    <string name="calendars_next">Volgende</string>
     <string name="calendars_view">Aansig</string>
     <string name="calendars_view_list">Lys</string>
     <string name="calendars_list_search">Soek</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Verwyder %1$s uit Mochi?</string>
     <string name="calendars_remove_message">Sy gebeurtenisse bly in die oorspronklike kalender.</string>
     <string name="calendars_today">Vandag</string>
+    <string name="calendars_previous">Vorige</string>
+    <string name="calendars_next">Volgende</string>
     <string name="calendars_view_week">Week</string>
     <string name="calendars_view_multiweek">Meerdere weke</string>
     <string name="calendars_view_month">Maand</string>

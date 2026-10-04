@@ -8,8 +8,6 @@
     <string name="calendars_name">Nimi</string>
     <string name="calendars_rename">Nimeta ümber</string>
     <string name="calendars_delete">Kustuta</string>
-    <string name="calendars_previous">Eelmine</string>
-    <string name="calendars_next">Edasi</string>
     <string name="calendars_view">Vaade</string>
     <string name="calendars_view_list">Loend</string>
     <string name="calendars_list_search">Otsi</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Kas eemaldada %1$s Mochist?</string>
     <string name="calendars_remove_message">Selle sündmused jäävad algsesse kalendrisse.</string>
     <string name="calendars_today">Täna</string>
+    <string name="calendars_previous">Eelmine</string>
+    <string name="calendars_next">Edasi</string>
     <string name="calendars_view_week">Nädal</string>
     <string name="calendars_view_multiweek">Mitu nädalat</string>
     <string name="calendars_view_month">Kuu</string>

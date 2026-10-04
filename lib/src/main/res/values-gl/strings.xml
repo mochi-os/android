@@ -182,6 +182,8 @@
     <string name="notifications_clear">Borrar notificacións</string>
     <string name="entity_avatar_alt">Avatar de %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Agora mesmo</string>
     <string name="format_time_minutes_ago">hai %1$sm</string>
     <string name="format_time_hours_ago">hai %1$sh</string>

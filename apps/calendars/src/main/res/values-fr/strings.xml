@@ -8,8 +8,6 @@
     <string name="calendars_name">Nom</string>
     <string name="calendars_rename">Renommer</string>
     <string name="calendars_delete">Supprimer</string>
-    <string name="calendars_previous">Précédent</string>
-    <string name="calendars_next">Suivant</string>
     <string name="calendars_view">Vue</string>
     <string name="calendars_view_list">Liste</string>
     <string name="calendars_list_search">Rechercher</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Retirer %1$s de Mochi ?</string>
     <string name="calendars_remove_message">Ses événements restent dans le calendrier d\'origine.</string>
     <string name="calendars_today">Aujourd\'hui</string>
+    <string name="calendars_previous">Précédent</string>
+    <string name="calendars_next">Suivant</string>
     <string name="calendars_view_week">Semaine</string>
     <string name="calendars_view_multiweek">Plusieurs semaines</string>
     <string name="calendars_view_month">Mois</string>

@@ -7,14 +7,10 @@ package org.mochios.calendars
 
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.test.isDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
-import androidx.compose.ui.test.performTouchInput
-import androidx.compose.ui.test.swipeUp
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -199,19 +195,16 @@ class ListViewTest {
     }
 
     @Test
-    fun `a day's heading is its long date, and stays at the top while its events scroll`() {
-        // Thirty events on one day, each its own title.
-        events = (1..30).map { anchor to "Item $it" }
+    fun `a day's date leads its first event in the date column, once`() {
+        events = (1..3).map { anchor to "Item $it" }
         first = noon(anchor)
         last = noon(anchor)
         show()
         waitFor("Item 1")
-        val heading = Format(UserPreferences()).formatLongDate(noon(anchor), "Europe/London")
-        rule.onNodeWithText(heading).assertExists()
-        rule.onRoot().performTouchInput { swipeUp() }
-        rule.waitForIdle()
-        assertTrue(rule.onNodeWithText(heading).isDisplayed())
-        assertTrue(!rule.onNodeWithText("Item 1").isDisplayed())
+        val number = Format(UserPreferences()).formatNumber(anchor.dayOfMonth)
+        assertEquals(1, rule.onAllNodesWithText(number).fetchSemanticsNodes().size)
+        val weekday = anchor.dayOfWeek.getDisplayName(java.time.format.TextStyle.SHORT, java.util.Locale.getDefault())
+        assertEquals(1, rule.onAllNodesWithText(weekday).fetchSemanticsNodes().size)
     }
 
     @Test

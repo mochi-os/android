@@ -8,8 +8,6 @@
     <string name="calendars_name">Ime</string>
     <string name="calendars_rename">Preimenuj</string>
     <string name="calendars_delete">Izbriši</string>
-    <string name="calendars_previous">Prejšnje</string>
-    <string name="calendars_next">Naprej</string>
     <string name="calendars_view">Pogled</string>
     <string name="calendars_view_list">Seznam</string>
     <string name="calendars_list_search">Iskanje</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Želite odstraniti %1$s iz Mochija?</string>
     <string name="calendars_remove_message">Njegovi dogodki ostanejo v izvirnem koledarju.</string>
     <string name="calendars_today">Danes</string>
+    <string name="calendars_previous">Prejšnje</string>
+    <string name="calendars_next">Naprej</string>
     <string name="calendars_view_week">Teden</string>
     <string name="calendars_view_multiweek">Več tednov</string>
     <string name="calendars_view_month">Mesec</string>

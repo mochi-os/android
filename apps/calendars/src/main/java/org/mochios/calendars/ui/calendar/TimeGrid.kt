@@ -19,7 +19,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -37,11 +37,13 @@ import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Repeat
 import androidx.compose.material.icons.outlined.RepeatOne
+import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -51,11 +53,13 @@ import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.withFrameMillis
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
@@ -66,6 +70,8 @@ import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.addOutline
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.AwaitPointerEventScope
@@ -76,6 +82,8 @@ import androidx.compose.ui.input.pointer.changedToUpIgnoreConsumed
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
@@ -93,18 +101,18 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import kotlinx.coroutines.delay
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.ui.theme.LocalEntityRadius
-import org.mochios.android.util.Zones
-import org.mochios.calendars.R
-import org.mochios.calendars.model.Instance
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.temporal.ChronoUnit
+import kotlinx.coroutines.delay
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalEntityRadius
+import org.mochios.calendars.R
+import org.mochios.calendars.model.Instance
 
 /** The height of one hour row; the whole day is twenty-four of these. */
 private val HOUR = 56.dp
@@ -222,10 +230,8 @@ private const val LANDING = "landing"
  * [days] columns. Non-working hours are shaded, today carries the
  * current-time line, which moves on with the clock, and occurrences that
  * overlap share the column's width. A single column draws each block on one
- * line and needs no heading, the toolbar naming its day; the week's narrow
- * columns stack the time and marks beneath the title. The band is always
- * there, labelled, with the zone the hours read in above its label when
- * events show in their own zones; an all-day occurrence is one bar across
+ * line; the week's narrow columns stack the time and marks beneath the
+ * title. The band is always there; an all-day occurrence is one bar across
  * every day it covers, and the band scrolls once it holds more rows than it
  * shows.
  *
@@ -237,11 +243,24 @@ private const val LANDING = "landing"
  * along its bottom edge drags its end instead. A bar lifted from the band
  * moves by days, or drops into the grid as a timed event. The grid scrolls
  * while the finger rests near its top or bottom, and turns to the previous
- * or next range, by [onStep], while a lifted occurrence rests at its side.
+ * or next range, by [onStep], while a lifted occurrence rests at its side;
+ * [onLifted] hears when a drag starts and when it ends, so a pager can hold
+ * the page under it while it turns.
  * Letting go asks [onMove] to move the occurrence there, or [onCreate] to
  * start an event over the span, with no finish for a tap or a press that
  * marked nothing out. The occurrence whose summary is open, [selected], is
  * drawn in the primary colour's tint. [clock] is the time now, epoch seconds.
+ *
+ * [scroll] is the grid's vertical position, shared by the pages either side
+ * so a swipe keeps the same hours in view.
+ *
+ * With [stacked], each column header puts the weekday above the day number,
+ * as the week view does; otherwise it reads on one line, as in the day view.
+ *
+ * The hour labels are not part of the grid: [HourGutter] draws them beside
+ * the pager, so a swipe moves the days and leaves the hours where they are.
+ * [onTop] is told how far down the grid its hours start, below the headings
+ * and the all-day band, for the gutter to line up with.
  */
 @Composable
 fun TimeGrid(
@@ -251,12 +270,14 @@ fun TimeGrid(
     onOpen: (Instance) -> Unit,
     onCreate: (Long, Long?) -> Unit,
     onMove: (Instance, Moved) -> Unit,
-    onStep: (Int) -> Unit,
+    scroll: ScrollState,
+    stacked: Boolean = false,
+    onStep: (Int) -> Unit = {},
+    onLifted: (Boolean) -> Unit = {},
     selected: Instance? = null,
+    onTop: (Dp) -> Unit = {},
     clock: () -> Long = { Instant.now().epochSecond },
 ) {
-    val format = LocalFormat.current
-    val scroll = rememberScrollState()
     val band = rememberScrollState()
     val user = viewModel.timezone()
     val zones = viewModel.zones()
@@ -282,14 +303,7 @@ fun TimeGrid(
         state.visible.filter { it.allday && days.any { day -> viewModel.covers(it, day) } }
     }
 
-    // Opens on the working day rather than at midnight, as Thunderbird does.
-    // The scroll is in pixels, so the hour rows are measured through the
-    // density rather than taken as their own dp number.
     val density = LocalDensity.current
-    LaunchedEffect(state.preferences.hours.start, days.firstOrNull()) {
-        val hours = state.preferences.hours.start.coerceIn(0, 23)
-        scroll.scrollTo(with(density) { (HOUR * hours).roundToPx() })
-    }
 
     // What a long press took, the finger and the grid's geometry, all in the
     // root's coordinates: the finger stays put while the grid scrolls under
@@ -439,6 +453,10 @@ fun TimeGrid(
         hands.step = onStep
     }
     val haptic = LocalHapticFeedback.current
+    val hearing by rememberUpdatedState(onLifted)
+    LaunchedEffect(drag != null) {
+        hearing(drag != null)
+    }
 
     // The grid scrolls while the finger rests near its top or bottom edge,
     // faster the nearer it is, and turns the page while a lifted occurrence
@@ -509,12 +527,11 @@ fun TimeGrid(
                 }
             },
     ) {
-        if (days.size > 1) {
-            Row(modifier = Modifier.fillMaxWidth()) {
-                Spacer(Modifier.width(GUTTER))
-                for (day in days) {
-                    DayHeading(day, today, width, Modifier.clickable { viewModel.open(day) })
-                }
+        // Every view heads its columns, the day view too: the toolbar names
+        // only the month.
+        Row(modifier = Modifier.fillMaxWidth()) {
+            for (day in days) {
+                DayHeading(day, today, width, stacked, Modifier.clickable { viewModel.open(day) })
             }
         }
         AllDayBand(
@@ -522,7 +539,6 @@ fun TimeGrid(
             bars = bars,
             width = width,
             scroll = band,
-            label = if (zones) Zones.offset(user.id) else null,
             lifted = lifted,
             landing = target as? Landing.Whole,
             selected = selected,
@@ -536,47 +552,118 @@ fun TimeGrid(
                 .fillMaxWidth()
                 .weight(1f)
                 .testTag("hours")
-                .onGloballyPositioned { viewport = it.rectInRoot() }
+                .onGloballyPositioned { coordinates ->
+                    viewport = coordinates.rectInRoot()
+                    onTop(with(density) { coordinates.positionInParent().y.toDp() })
+                }
                 .verticalScroll(scroll),
         ) {
-            Row(modifier = Modifier.fillMaxWidth()) {
-                Column(modifier = Modifier.width(GUTTER)) {
-                    for (hour in 0 until 24) {
-                        Box(modifier = Modifier.height(HOUR).fillMaxWidth(), contentAlignment = Alignment.TopEnd) {
-                            // Midnight goes unlabelled: the top of the day says it.
-                            if (hour > 0) {
-                                Text(
-                                    text = format.formatHour(hour),
-                                    style = MaterialTheme.typography.labelSmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    modifier = Modifier.padding(end = 6.dp),
-                                )
-                            }
-                        }
-                    }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .columnLines(days.size, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
+                    .onGloballyPositioned { strip = it.rectInRoot() },
+            ) {
+                for (day in days) {
+                    DayColumn(
+                        day = day,
+                        today = today,
+                        now = now,
+                        width = width,
+                        stacked = days.size > 1,
+                        layout = layouts[day].orEmpty(),
+                        state = state,
+                        viewModel = viewModel,
+                        lifted = lifted?.instance,
+                        selected = selected,
+                        drop = (target as? Landing.Timed)?.takeIf { it.day == day },
+                        creating = (drag as? Drag.Create)?.takeIf { it.day == day }?.let { span(it) },
+                        onOpen = onOpen,
+                        onTap = { hours -> onCreate(at(day, hours, user), null) },
+                    )
                 }
-                Row(modifier = Modifier.width(width * days.size).onGloballyPositioned { strip = it.rectInRoot() }) {
-                    for (day in days) {
-                        DayColumn(
-                            day = day,
-                            today = today,
-                            now = now,
-                            width = width,
-                            stacked = days.size > 1,
-                            layout = layouts[day].orEmpty(),
-                            state = state,
-                            viewModel = viewModel,
-                            lifted = lifted?.instance,
-                            selected = selected,
-                            drop = (target as? Landing.Timed)?.takeIf { it.day == day },
-                            creating = (drag as? Drag.Create)?.takeIf { it.day == day }?.let { span(it) },
-                            onOpen = onOpen,
-                            onTap = { hours -> onCreate(at(day, hours, user), null) },
+            }
+        }
+    }
+}
+
+/**
+ * The hour labels down the left of the day and week views, which stay put
+ * while the pager beside them swipes. [top] is how far down the grid's hours
+ * start, and [scroll] is the grid's own vertical position, so the labels move
+ * with the hours they name. Above them, beside the all-day band, "All day",
+ * under [zone], the zone the hours read in, when events show in their own
+ * zones. Midnight goes unlabelled: the top of the day says it.
+ */
+@Composable
+fun HourGutter(top: Dp, scroll: ScrollState, modifier: Modifier = Modifier, zone: String? = null) {
+    val format = LocalFormat.current
+    Column(modifier = modifier.width(GUTTER).fillMaxHeight()) {
+        Box(
+            modifier = Modifier
+                .height((top - DividerDefaults.Thickness).coerceAtLeast(0.dp))
+                .fillMaxWidth(),
+            contentAlignment = Alignment.BottomStart,
+        ) {
+            Column(modifier = Modifier.padding(horizontal = 4.dp, vertical = 4.dp)) {
+                if (zone != null) {
+                    Text(
+                        text = zone,
+                        style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.testTag("gutter-zone"),
+                    )
+                }
+                Text(
+                    text = stringResource(R.string.calendars_event_allday),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+        HorizontalDivider()
+        Column(modifier = Modifier.weight(1f).verticalScroll(scroll)) {
+            for (hour in 0 until 24) {
+                Box(modifier = Modifier.height(HOUR).fillMaxWidth(), contentAlignment = Alignment.TopEnd) {
+                    if (hour > 0) {
+                        Text(
+                            text = format.formatHour(hour),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(end = 6.dp),
                         )
                     }
                 }
             }
         }
+    }
+}
+
+/**
+ * A time grid's vertical position, opened on the working day rather than at
+ * midnight, as Thunderbird does. The scroll is in pixels, so the hour rows are
+ * measured through the density rather than taken as their own dp number.
+ */
+@Composable
+fun rememberHourScroll(start: Int): ScrollState {
+    val scroll = rememberScrollState()
+    val density = LocalDensity.current
+    LaunchedEffect(start) {
+        scroll.scrollTo(with(density) { (HOUR * start.coerceIn(0, 23)).roundToPx() })
+    }
+    return scroll
+}
+
+/**
+ * A one-pixel line in [colour] between each of [count] equal columns, behind
+ * what they draw, so the days of a grid read apart.
+ */
+internal fun Modifier.columnLines(count: Int, colour: Color): Modifier = drawBehind {
+    for (column in 1 until count) {
+        val x = size.width * column / count
+        drawLine(colour, Offset(x, 0f), Offset(x, size.height), strokeWidth = 1f)
     }
 }
 
@@ -616,23 +703,50 @@ private fun LayoutCoordinates.rectInRoot(): Rect {
 }
 
 @Composable
-private fun DayHeading(day: LocalDate, today: LocalDate, width: Dp, modifier: Modifier) {
+private fun DayHeading(
+    day: LocalDate,
+    today: LocalDate,
+    width: Dp,
+    stacked: Boolean,
+    modifier: Modifier,
+) {
     val current = day == today
+    val colour = if (current) {
+        MaterialTheme.colorScheme.onPrimary
+    } else {
+        MaterialTheme.colorScheme.onSurface
+    }
+    val weight = if (current) FontWeight.Bold else FontWeight.Normal
     val locale = LocalConfiguration.current.locales[0]
     val pattern = remember(locale) { android.text.format.DateFormat.getBestDateTimePattern(locale, "EEEd") }
-    Box(
+    Column(
         modifier = modifier
             .width(width)
             .then(if (current) Modifier.background(MaterialTheme.colorScheme.primary) else Modifier)
             .padding(vertical = 4.dp),
-        contentAlignment = Alignment.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(
-            text = heading(day, pattern, locale),
-            style = MaterialTheme.typography.titleSmall,
-            fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
-            color = if (current) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
-        )
+        if (stacked) {
+            Text(
+                text = weekdayLabel(day),
+                style = MaterialTheme.typography.labelSmall,
+                fontWeight = weight,
+                color = colour,
+            )
+            Text(
+                text = day.dayOfMonth.toString(),
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = weight,
+                color = colour,
+            )
+        } else {
+            Text(
+                text = heading(day, pattern, locale),
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = weight,
+                color = colour,
+            )
+        }
     }
 }
 
@@ -646,9 +760,8 @@ fun heading(day: LocalDate, pattern: String, locale: java.util.Locale): String =
     java.time.format.DateTimeFormatter.ofPattern(pattern, locale).format(day)
 
 /**
- * The band above the grid: "All day" in the gutter, under the zone the
- * hours read in when given as [label], and the all-day occurrences laid out
- * as [bars], each one bar across the days it covers. A bar laid out with no
+ * The band above the grid, labelled by [HourGutter] beside the pager: the
+ * all-day occurrences laid out as [bars], each one bar across the days it covers. A bar laid out with no
  * occurrence is where the [lifted] one would land, drawn raised; the bar it
  * was lifted from fades once it is going somewhere. The band holds at least
  * one row and shows up to [ROWS] before it scrolls by [scroll].
@@ -659,7 +772,6 @@ private fun AllDayBand(
     bars: List<Laid<Instance?>>,
     width: Dp,
     scroll: ScrollState,
-    label: String?,
     lifted: Drag.Lift?,
     landing: Landing.Whole?,
     selected: Instance?,
@@ -669,23 +781,6 @@ private fun AllDayBand(
 ) {
     val rows = (bars.maxOfOrNull { it.row } ?: -1) + 1
     Row(modifier = Modifier.fillMaxWidth()) {
-        Column(modifier = Modifier.width(GUTTER).padding(horizontal = 4.dp, vertical = 4.dp)) {
-            if (label != null) {
-                Text(
-                    text = label,
-                    style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.testTag("gutter-zone"),
-                )
-            }
-            Text(
-                text = stringResource(R.string.calendars_event_allday),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
         Box(
             modifier = Modifier
                 .width(width * days.size)
@@ -794,7 +889,7 @@ private fun DayColumn(
                 Block(
                     instance = placed.instance,
                     backwards = placed.backwards,
-                    zones = zones,
+                    span = interval(placed.instance, zones, format::formatTime, ranged()),
                     handle = placed.instance.editable && !placed.backwards,
                     stacked = stacked,
                     chosen = same(placed.instance, selected),
@@ -816,7 +911,6 @@ private fun DayColumn(
                 val moved = lifted.copy(start = drop.start, finish = drop.finish, allday = false, date = null)
                 Block(
                     instance = lifted,
-                    zones = zones,
                     span = interval(moved, zones && !lifted.allday, format::formatTime, ranged()),
                     stacked = stacked,
                     modifier = Modifier.shadow(6.dp, corners()),
@@ -922,98 +1016,143 @@ private fun lay(instances: List<Instance>, viewModel: CalendarViewModel, day: Lo
 }
 
 /**
- * A timed occurrence's block: the neutral surface of the time grid,
- * its outline dashed for a tentative one and in the primary colour, over the
- * primary colour's tint, when [chosen]. Its time is its span, "09:00 to
- * 10:00", each end read in its own zone when [zones] is on, or [span] when
- * given, which a lifted block uses for where it would land. A [backwards] block stands in for an occurrence whose end reads
- * before its start, and says so with a mark. With [handle] on, a strip along
- * the bottom edge marks where a long press takes the end.
+ * A timed occurrence's block: a card filled with its colour, its words in
+ * white, or a light wash of it in a dashed outline for a tentative one, and
+ * ringed when [chosen]. It writes its exact time, [span], "09:00 to
+ * 10:00", so a few minutes either side of the hour are not lost to the
+ * grid; a lifted block's [span] is where it would land. A
+ * [backwards] block stands in for an occurrence whose end reads before its
+ * start, and in the day view says so with a mark. With [handle] on, a strip
+ * along the bottom edge, where a long press takes the end, is named for
+ * screen readers, and in the day view a short bar marks it when the block's
+ * words leave the strip clear; a short block, and the week view's narrow
+ * ones, draw no bar, so it never sits on the title.
  *
- * On one line, as the day view draws it, the block reads dot, title, marks
- * and the time at the far end, with the location beneath when the block is
- * tall enough. [stacked], as the week view's narrow columns draw it, puts
- * the dot and title on the first line, the time and marks on a second in a
- * smaller type, and the location on a third, each only when the block is
- * tall enough to hold it.
+ * As the day view draws it, the block reads its title in a larger type with
+ * its marks at the far end, the reminder bell and the repeat glyph, its time
+ * beneath, and the location under that when the block is tall enough. A
+ * block too short for the title and the time on lines of their own puts the
+ * time at the far end of the title's line instead, after the marks. The
+ * title's size goes by the block's height alone: at full size it wraps onto
+ * as many lines as the block holds, up to three, one fewer when the location
+ * takes the last; a block too short for one full line shrinks it to fit. A
+ * block with room to spare keeps a little more of it at its start and top.
+ *
+ * [stacked], as the week view's narrow columns draw it, the block reads its
+ * title in a small type, wrapping onto as many lines as it holds, with its
+ * time and marks on the line beneath.
  */
 @Composable
 fun Block(
     instance: Instance,
     backwards: Boolean = false,
-    zones: Boolean = false,
     span: String? = null,
     handle: Boolean = false,
     stacked: Boolean = false,
     chosen: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
-    val format = LocalFormat.current
-    val time = span ?: interval(instance, zones, format::formatTime, ranged())
-    BoxWithConstraints(modifier = modifier.fillMaxSize().panel(corners(), dashed = instance.tentative, chosen = chosen)) {
-        val height = maxHeight
-        if (stacked) {
-            val first = MaterialTheme.typography.labelMedium.packed()
-            val second = MaterialTheme.typography.labelSmall.packed()
-            val two = leading(first) + leading(second) + 1.dp
-            val three = two + leading(second)
-            Column(modifier = Modifier.fillMaxWidth().padding(start = 4.dp, end = 4.dp, top = 1.dp)) {
-                Title(instance, first)
-                if (height >= two) {
-                    Detail(instance, time, second, backwards = backwards)
+    val colour = instance.colour.toColour(MaterialTheme.colorScheme.primary)
+    val ink = if (instance.tentative) {
+        Ink(MaterialTheme.colorScheme.onSurface, MaterialTheme.colorScheme.onSurfaceVariant)
+    } else {
+        Ink(Color.White, Color.White.copy(alpha = 0.85f))
+    }
+    val card = modifier.fillMaxSize().filled(corners(), colour, instance.tentative, chosen)
+    CompositionLocalProvider(LocalInk provides ink) {
+        BoxWithConstraints(modifier = card) {
+            val height = maxHeight
+            val density = LocalDensity.current
+            var filled by remember { mutableStateOf<Dp?>(null) }
+            if (stacked) {
+                val small = MaterialTheme.typography.labelSmall
+                val size = if (small.fontSize.isSp) small.fontSize else 11.sp
+                val line = with(density) { (size * LINE).toDp() }
+                val lines = ((height - 3.dp) / line).toInt() - if (span != null) 1 else 0
+                Column(modifier = Modifier.fillMaxWidth().padding(start = 4.dp, end = 4.dp, top = 1.dp)) {
+                    Fitted(instance, small, lines.coerceAtLeast(1))
+                    if (span != null) {
+                        Detail(instance, span, small.packed(), backwards = backwards)
+                    }
                 }
-                if (height >= three && instance.location.isNotBlank()) {
-                    Text(
-                        text = instance.location,
-                        style = second,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.padding(start = DOT + GAP),
-                    )
+            } else {
+                val first = MaterialTheme.typography.titleMedium
+                val second = MaterialTheme.typography.labelSmall
+                val largest = if (first.fontSize.isSp) first.fontSize else 16.sp
+                val line = with(LocalDensity.current) { (largest * LINE).toDp() }
+                val roomy = height >= line + ROOMY + 2.dp
+                val wide = maxWidth >= WIDE
+                val top = if (roomy) ROOMY else 2.dp
+                val room = height - top - 2.dp
+                val smallest = if (second.fontSize.isSp) second.fontSize else 11.sp
+                val clock = with(LocalDensity.current) { (smallest * LINE).toDp() }
+                val below = span != null && room >= line + clock
+                val lines = ((if (below) room - clock else room) / line).toInt()
+                val located = instance.location.isNotBlank() && lines >= 2
+                val titled = (if (located) lines - 1 else lines).coerceIn(1, LINES)
+                val size = if (lines >= 1) {
+                    largest
+                } else {
+                    with(LocalDensity.current) { maxOf((room / LINE).toSp().value, SMALLEST.value).sp }
+                }
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .onSizeChanged { size -> filled = with(density) { size.height.toDp() } }
+                        .padding(
+                            start = if (wide) START else 4.dp,
+                            end = 4.dp,
+                            top = top,
+                            bottom = 2.dp,
+                        ),
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.Top,
+                        horizontalArrangement = Arrangement.spacedBy(GAP),
+                    ) {
+                        Fitted(instance, first.copy(fontSize = size), titled, Modifier.weight(1f))
+                        for (mark in marks(instance, backwards)) {
+                            Glyph(mark, 16.dp)
+                        }
+                        if (span != null && !below) {
+                            Landing(span, second, Modifier.padding(top = 2.dp))
+                        }
+                    }
+                    if (span != null && below) {
+                        Landing(span, second)
+                    }
+                    if (located) {
+                        Text(
+                            text = instance.location,
+                            style = second,
+                            color = ink.muted,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
                 }
             }
-        } else {
-            val first = MaterialTheme.typography.labelMedium
-            val second = MaterialTheme.typography.labelSmall
-            val two = leading(first) + leading(second) + 4.dp
-            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 2.dp)) {
-                Line(
-                    instance = instance,
-                    time = time,
-                    style = first,
-                    clock = second,
-                    backwards = backwards,
-                )
-                if (height >= two && instance.location.isNotBlank()) {
-                    Text(
-                        text = instance.location,
-                        style = second,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.padding(start = DOT + GAP),
-                    )
-                }
-            }
-        }
-        if (handle) {
-            val description = stringResource(R.string.calendars_event_resize)
-            Box(
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .fillMaxWidth()
-                    .height(HANDLE)
-                    .semantics { contentDescription = description },
-                contentAlignment = Alignment.Center,
-            ) {
+            if (handle) {
+                val description = stringResource(R.string.calendars_event_resize)
                 Box(
                     modifier = Modifier
-                        .width(16.dp)
-                        .height(2.dp)
-                        .clip(RoundedCornerShape(1.dp))
-                        .background(MaterialTheme.colorScheme.outline),
-                )
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .height(HANDLE)
+                        .semantics { contentDescription = description },
+                    contentAlignment = Alignment.Center,
+                ) {
+                    val used = filled
+                    if (!stacked && used != null && height - used >= HANDLE) {
+                        Box(
+                            modifier = Modifier
+                                .width(16.dp)
+                                .height(2.dp)
+                                .clip(RoundedCornerShape(1.dp))
+                                .background(ink.muted),
+                        )
+                    }
+                }
             }
         }
     }
@@ -1027,8 +1166,11 @@ fun Block(
  * it reads over the entries it passes. On one line it reads dot,
  * title, marks and [time] when given; [stacked], as a timed occurrence within
  * a day is drawn in a month or multiweek cell, puts the time and marks on a
- * second line beneath the title. [lift] comes after the tap in the chain,
- * so a long press that lifts the chip takes its events before the tap can.
+ * second line beneath the title. [filled], as the month and multiweek
+ * views draw it, it is instead a card in the occurrence's colour, as the
+ * week view's blocks are, with its title alone in white on one line. [lift]
+ * comes after the tap in the chain, so a long press that lifts the chip takes
+ * its events before the tap can.
  */
 @Composable
 fun Chip(
@@ -1038,10 +1180,31 @@ fun Chip(
     time: String? = null,
     chosen: Boolean = false,
     raised: Boolean = false,
+    filled: Boolean = false,
     lift: Modifier = Modifier,
     onClick: () -> Unit,
 ) {
-    val shape = corners()
+    val shape = if (filled) corners(SNUG) else corners()
+    if (filled) {
+        val colour = instance.colour.toColour(MaterialTheme.colorScheme.primary)
+        val ink = if (instance.tentative) {
+            Ink(MaterialTheme.colorScheme.onSurface, MaterialTheme.colorScheme.onSurfaceVariant)
+        } else {
+            Ink(Color.White, Color.White.copy(alpha = 0.85f))
+        }
+        Box(
+            modifier = modifier
+                .filled(shape, colour, instance.tentative, chosen)
+                .clickable(onClick = onClick)
+                .then(lift),
+            contentAlignment = Alignment.CenterStart,
+        ) {
+            CompositionLocalProvider(LocalInk provides ink) {
+                Fitted(instance, MaterialTheme.typography.labelSmall, 1, Modifier.padding(horizontal = 4.dp))
+            }
+        }
+        return
+    }
     val tint = MaterialTheme.colorScheme.primary.copy(alpha = TINT)
     Box(
         modifier = modifier
@@ -1095,7 +1258,9 @@ fun Line(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(gap),
     ) {
-        Dot(instance)
+        if (LocalInk.current == null) {
+            Dot(instance)
+        }
         Name(instance, style, Modifier.weight(1f))
         for (mark in marks(instance, backwards)) {
             Glyph(mark, glyph)
@@ -1104,7 +1269,7 @@ fun Line(
             Text(
                 text = time,
                 style = clock,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = LocalInk.current?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
                 softWrap = false,
             )
@@ -1146,12 +1311,12 @@ fun marks(instance: Instance, backwards: Boolean = false, stacked: Boolean = fal
 
 /** A mark's glyph, muted, read out by its label. */
 @Composable
-private fun Glyph(mark: Mark, size: Dp) {
+internal fun Glyph(mark: Mark, size: Dp) {
     Icon(
         imageVector = mark.icon(),
         contentDescription = stringResource(mark.label),
         modifier = Modifier.size(size),
-        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        tint = LocalInk.current?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant,
     )
 }
 
@@ -1163,7 +1328,9 @@ fun Title(instance: Instance, style: TextStyle, modifier: Modifier = Modifier) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GAP),
     ) {
-        Dot(instance)
+        if (LocalInk.current == null) {
+            Dot(instance)
+        }
         Name(instance, style, Modifier.weight(1f))
     }
 }
@@ -1175,8 +1342,9 @@ fun Title(instance: Instance, style: TextStyle, modifier: Modifier = Modifier) {
  */
 @Composable
 fun Detail(instance: Instance, time: String?, style: TextStyle, modifier: Modifier = Modifier, backwards: Boolean = false) {
+    val ink = LocalInk.current
     Row(
-        modifier = modifier.padding(start = DOT + GAP),
+        modifier = modifier.padding(start = if (ink == null) DOT + GAP else 0.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GAP),
     ) {
@@ -1184,7 +1352,7 @@ fun Detail(instance: Instance, time: String?, style: TextStyle, modifier: Modifi
             Text(
                 text = time,
                 style = style,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = ink?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
                 softWrap = false,
             )
@@ -1227,13 +1395,74 @@ fun Name(instance: Instance, style: TextStyle, modifier: Modifier = Modifier) {
     Text(
         text = if (instance.untitled) stringResource(R.string.calendars_untitled) else instance.summary,
         style = style,
-        color = if (instance.untitled) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface,
+        color = LocalInk.current?.let { ink -> if (instance.untitled) ink.muted else ink.text }
+            ?: if (instance.untitled) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface,
         textDecoration = if (instance.cancelled) TextDecoration.LineThrough else null,
         maxLines = 1,
         overflow = TextOverflow.Ellipsis,
         modifier = modifier,
     )
 }
+
+/**
+ * An occurrence's title as [Name] writes it, wrapping onto as many as
+ * [lines] lines at [style]'s size and cut short with an ellipsis after the
+ * last. Its line height is [LINE] times its size, as the block sizes it by.
+ */
+@Composable
+internal fun Fitted(
+    instance: Instance,
+    style: TextStyle,
+    lines: Int,
+    modifier: Modifier = Modifier,
+) {
+    val ink = LocalInk.current
+    val colour = if (instance.untitled) {
+        ink?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant
+    } else {
+        ink?.text ?: MaterialTheme.colorScheme.onSurface
+    }
+    Text(
+        text = if (instance.untitled) stringResource(R.string.calendars_untitled) else instance.summary,
+        style = style.copy(lineHeight = LINE.em),
+        color = colour,
+        textDecoration = if (instance.cancelled) TextDecoration.LineThrough else null,
+        maxLines = lines,
+        overflow = TextOverflow.Ellipsis,
+        modifier = modifier,
+    )
+}
+
+/** A block's time, "10:00 to 11:00", or where a lifted one would land, never cut. */
+@Composable
+private fun Landing(span: String, style: TextStyle, modifier: Modifier = Modifier) {
+    Text(
+        text = span,
+        style = style,
+        color = LocalInk.current?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant,
+        maxLines = 1,
+        softWrap = false,
+        modifier = modifier,
+    )
+}
+
+/** A day card title's line height, as a multiple of its size. */
+private const val LINE = 1.2f
+
+/** The most lines a day card's title wraps onto. */
+private const val LINES = 3
+
+/** The smallest a day card's title shrinks to on a block too short for one full line. */
+private val SMALLEST = 8.sp
+
+/** The room a day card keeps at its top when it has the space. */
+private val ROOMY = 6.dp
+
+/** The room a day card keeps at its start when it has the space. */
+private val START = 8.dp
+
+/** How wide a day card must be to keep [START] at its start. */
+private val WIDE = 96.dp
 
 /**
  * [style] with its lines packed closer than its own line height, so a short
@@ -1243,11 +1472,74 @@ fun TextStyle.packed(): TextStyle = if (fontSize.isSp) copy(lineHeight = fontSiz
 
 /**
  * The corner every block and bar takes: the user's own radius, but no
- * rounder than [CORNER], which keeps a short block or a one-line bar from
- * turning into a pill.
+ * rounder than [most], [CORNER] by default, which keeps a short block or a
+ * one-line bar from turning into a pill. A filled one-line chip in a month
+ * or multiweek cell takes [SNUG], so at its height it rounds as a tall
+ * block's corner does at [CORNER].
  */
 @Composable
-fun corners(): Shape = RoundedCornerShape(minOf(LocalEntityRadius.current, CORNER))
+fun corners(most: Dp = CORNER): Shape = RoundedCornerShape(minOf(LocalEntityRadius.current, most))
+
+/** The corner of a filled chip in a month or multiweek cell. */
+internal val SNUG = 3.dp
+
+/**
+ * The colours an entry's words take on a card filled with its own colour:
+ * [text] for its title, [muted] for its time, location and marks.
+ */
+internal class Ink(val text: Color, val muted: Color)
+
+/**
+ * The [Ink] of the card an entry is drawn on, null where it stands on the
+ * grid itself and opens with its [Dot] instead.
+ */
+internal val LocalInk = staticCompositionLocalOf<Ink?> { null }
+
+/**
+ * [colour] darkened toward black, keeping its hue, just far enough for white
+ * text on it to reach a contrast of 4.5 to 1, the WCAG minimum for body text;
+ * a colour dark enough already comes back as it is. A card's words are
+ * always white, as Google Calendar's are, so a pale colour is what gives.
+ */
+internal fun deepened(colour: Color): Color {
+    var shade = colour
+    var step = 0
+    while (shade.luminance() > WHITE_ON && step < 20) {
+        step++
+        shade = lerp(colour, Color.Black, step * 0.05f)
+    }
+    return shade
+}
+
+/** The most luminance a fill may have for white on it to read at 4.5 to 1. */
+private const val WHITE_ON = 1.05f / 4.5f - 0.05f
+
+/**
+ * The card a timed block is drawn on, filled with the occurrence's
+ * [colour], [deepened] for its white words, as Google Calendar draws one. A
+ * [tentative] occurrence is a light wash of the colour in a dashed outline
+ * of it instead, with dark words. A thin edge in
+ * the page's colour keeps back-to-back cards apart; [chosen] rings the card
+ * in the text colour instead.
+ */
+@Composable
+internal fun Modifier.filled(
+    shape: Shape,
+    colour: Color,
+    tentative: Boolean,
+    chosen: Boolean,
+): Modifier {
+    val base = this
+        .clip(shape)
+        .background(MaterialTheme.colorScheme.surfaceContainer)
+        .background(if (tentative) colour.copy(alpha = 0.25f) else deepened(colour))
+        .then(if (tentative) Modifier.dashed(colour, shape) else Modifier)
+    return if (chosen) {
+        base.border(2.dp, MaterialTheme.colorScheme.onSurface, shape)
+    } else {
+        base.border(1.dp, MaterialTheme.colorScheme.surface, shape)
+    }
+}
 
 /**
  * The neutral surface a timed block or a carried chip sits on: the cards'

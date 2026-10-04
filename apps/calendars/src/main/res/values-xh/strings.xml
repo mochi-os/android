@@ -8,8 +8,6 @@
     <string name="calendars_name">Igama</string>
     <string name="calendars_rename">Guqula igama</string>
     <string name="calendars_delete">Cima</string>
-    <string name="calendars_previous">Engaphambili</string>
-    <string name="calendars_next">Okulandelayo</string>
     <string name="calendars_view">Imbonakalo</string>
     <string name="calendars_view_list">Uluhlu</string>
     <string name="calendars_list_search">Khangela</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Susa u-%1$s ku-Mochi?</string>
     <string name="calendars_remove_message">Imisitho yayo ihlala kwikhalenda yantlandlolo.</string>
     <string name="calendars_today">Namhlanje</string>
+    <string name="calendars_previous">Engaphambili</string>
+    <string name="calendars_next">Okulandelayo</string>
     <string name="calendars_view_week">Iveki</string>
     <string name="calendars_view_multiweek">Iiveki ezininzi</string>
     <string name="calendars_view_month">Inyanga</string>

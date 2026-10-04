@@ -179,6 +179,8 @@
     <string name="entity_avatar_alt">Avatar for %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
+    <string name="format_range">%1$s-%2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Lige nu</string>
     <string name="format_time_minutes_ago">%1$sm siden</string>
     <string name="format_time_hours_ago">%1$st siden</string>

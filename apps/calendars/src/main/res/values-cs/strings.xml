@@ -8,8 +8,6 @@
     <string name="calendars_name">Název</string>
     <string name="calendars_rename">Přejmenovat</string>
     <string name="calendars_delete">Smazat</string>
-    <string name="calendars_previous">Předchozí</string>
-    <string name="calendars_next">Další</string>
     <string name="calendars_view">Zobrazení</string>
     <string name="calendars_view_list">Seznam</string>
     <string name="calendars_list_search">Hledat</string>
@@ -60,6 +58,8 @@
     <string name="calendars_remove_title">Odebrat %1$s z Mochi?</string>
     <string name="calendars_remove_message">Jeho události zůstanou v původním kalendáři.</string>
     <string name="calendars_today">Dnes</string>
+    <string name="calendars_previous">Předchozí</string>
+    <string name="calendars_next">Další</string>
     <string name="calendars_view_week">Týden</string>
     <string name="calendars_view_multiweek">Více týdnů</string>
     <string name="calendars_view_month">Měsíc</string>

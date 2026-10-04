@@ -8,8 +8,6 @@
     <string name="calendars_name">Nav</string>
     <string name="calendars_rename">Navê biguhere</string>
     <string name="calendars_delete">Jê bibe</string>
-    <string name="calendars_previous">Pêştir</string>
-    <string name="calendars_next">Pêştir</string>
     <string name="calendars_view">Dîmen</string>
     <string name="calendars_view_list">Lîste</string>
     <string name="calendars_list_search">Lêger</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s ji Mochi were rakirin?</string>
     <string name="calendars_remove_message">Bûyerên wê di salnameya eslî de dimînin.</string>
     <string name="calendars_today">Îro</string>
+    <string name="calendars_previous">Pêştir</string>
+    <string name="calendars_next">Pêştir</string>
     <string name="calendars_view_week">Hefte</string>
     <string name="calendars_view_multiweek">Çend hefte</string>
     <string name="calendars_view_month">Meh</string>

@@ -215,12 +215,13 @@ class EventEditViewModel @Inject constructor(
             if (event == null) {
                 val preferences = runCatching { repository.getPreferences() }.getOrNull()
                 val memory = remembered(MemoryStore.memory(context), zone, start, allday)
-                // A tap keeps its instant, read in whatever zone is
-                // remembered; an all-day form holds the UTC midnight of its
-                // day, as a loaded one does, and runs to the end of it.
+                // A tap keeps the clock time it was made at in the user's
+                // zone, read in whatever zone is remembered; an all-day form
+                // holds the UTC midnight of its day, as a loaded one does,
+                // and runs to the end of it.
                 val begins = when {
                     memory.allday -> day(if (start > 0) start else Instant.now().epochSecond)
-                    start > 0 -> start
+                    start > 0 -> moved(start, zone, memory.zone.start)
                     else -> opening(preferences?.hours ?: Hours())
                 }
                 val length = when {

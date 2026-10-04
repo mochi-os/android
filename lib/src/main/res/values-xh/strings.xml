@@ -181,6 +181,8 @@
     <string name="notifications_clear">Cima izaziso</string>
     <string name="entity_avatar_alt">I-avatar ka-%1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Kwangoku</string>
     <string name="format_time_minutes_ago">kwimizuzu engu-%1$s eyadlulayo</string>
     <string name="format_time_hours_ago">kwiiyure ezingu-%1$s ezadlulayo</string>

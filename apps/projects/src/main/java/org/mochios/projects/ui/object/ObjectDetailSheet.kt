@@ -8,13 +8,11 @@ package org.mochios.projects.ui.`object`
 import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Visibility
@@ -23,7 +21,6 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -49,6 +46,7 @@ import org.mochios.android.ui.components.MochiEditorSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.SaveStatusIndicator
@@ -141,58 +139,56 @@ fun ObjectDetailSheet(
                 val objClass = projectDetails.classes.find { it.id == obj.objectClass }
 
                 Column(modifier = Modifier.fillMaxSize()) {
-                    // Header
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 16.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.weight(1f)
-                        ) {
-                            Text(
-                                text = if (prefix.isNotBlank()) "$prefix-${obj.number}" else "#${obj.number}",
-                                style = MaterialTheme.typography.labelLarge,
-                                color = MaterialTheme.colorScheme.primary
-                            )
-                            if (objClass != null) {
-                                Spacer(modifier = Modifier.width(8.dp))
-                                Text(
-                                    text = objClass.name,
-                                    style = MaterialTheme.typography.labelMedium,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            }
-                        }
-
-                        MochiIconButton(onClick = { viewModel.toggleWatch() }) {
-                            Icon(
-                                imageVector = if (uiState.isWatching) Icons.Default.Visibility else Icons.Default.VisibilityOff,
-                                contentDescription = if (uiState.isWatching) stringResource(R.string.projects_object_unwatch) else stringResource(R.string.projects_object_watch)
-                            )
-                        }
-
-                        Box {
-                            MochiIconButton(onClick = { showOverflow = true }) {
-                                Icon(Icons.Default.MoreVert, contentDescription = stringResource(MochiR.string.common_more_options))
-                            }
-                            MochiDropdownMenu(
-                                expanded = showOverflow,
-                                onDismissRequest = { showOverflow = false }
-                            ) {
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(MochiR.string.common_delete)) },
-                                    onClick = {
-                                        showOverflow = false
-                                        showDeleteConfirm = true
+                    MochiSheetHeader(
+                        title = if (prefix.isNotBlank()) {
+                            "$prefix-${obj.number}"
+                        } else {
+                            "#${obj.number}"
+                        },
+                        subtitle = objClass?.name,
+                        actions = {
+                            MochiIconButton(onClick = { viewModel.toggleWatch() }) {
+                                Icon(
+                                    imageVector = if (uiState.isWatching) {
+                                        Icons.Default.Visibility
+                                    } else {
+                                        Icons.Default.VisibilityOff
                                     },
-                                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                                    contentDescription = if (uiState.isWatching) {
+                                        stringResource(R.string.projects_object_unwatch)
+                                    } else {
+                                        stringResource(R.string.projects_object_watch)
+                                    }
                                 )
                             }
+
+                            Box {
+                                MochiIconButton(onClick = { showOverflow = true }) {
+                                    Icon(
+                                        Icons.Default.MoreVert,
+                                        contentDescription = stringResource(
+                                            MochiR.string.common_more_options
+                                        )
+                                    )
+                                }
+                                MochiDropdownMenu(
+                                    expanded = showOverflow,
+                                    onDismissRequest = { showOverflow = false }
+                                ) {
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(MochiR.string.common_delete)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            showDeleteConfirm = true
+                                        },
+                                        leadingIcon = {
+                                            Icon(Icons.Outlined.Delete, contentDescription = null)
+                                        },
+                                    )
+                                }
+                            }
                         }
-                    }
+                    )
 
                     SaveStatusIndicator(
                         status = uiState.saveStatus,

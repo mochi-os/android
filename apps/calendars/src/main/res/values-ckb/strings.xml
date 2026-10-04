@@ -8,8 +8,6 @@
     <string name="calendars_name">ناو</string>
     <string name="calendars_rename">ناوگۆڕکردن</string>
     <string name="calendars_delete">سڕینەوە</string>
-    <string name="calendars_previous">پێشوو</string>
-    <string name="calendars_next">دواتر</string>
     <string name="calendars_view">بینین</string>
     <string name="calendars_view_list">لیست</string>
     <string name="calendars_list_search">گەڕان</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s لە Mochi لاببرێت؟</string>
     <string name="calendars_remove_message">ڕووداوەکانی لە ڕۆژژمێرە ڕەسەنەکەدا دەمێننەوە.</string>
     <string name="calendars_today">ئەمڕۆ</string>
+    <string name="calendars_previous">پێشوو</string>
+    <string name="calendars_next">دواتر</string>
     <string name="calendars_view_week">هەفتە</string>
     <string name="calendars_view_multiweek">چەند هەفتە</string>
     <string name="calendars_view_month">مانگ</string>

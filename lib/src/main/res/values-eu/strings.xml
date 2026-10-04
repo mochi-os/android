@@ -182,6 +182,8 @@
     <string name="access_level_react">Erreakzionatu</string>
     <string name="entity_avatar_alt">%1$s(r)en abatarra</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Oraintxe</string>
     <string name="format_time_minutes_ago">Duela %1$sm</string>
     <string name="format_time_hours_ago">Duela %1$so</string>

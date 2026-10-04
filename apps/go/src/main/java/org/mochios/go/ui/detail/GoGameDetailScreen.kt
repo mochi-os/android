@@ -85,6 +85,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.websocket.rememberStreamWebSocket
@@ -533,7 +534,9 @@ fun GoGameDetailScreen(
                         sheetState = sheetState,
                     ) {
                         Column(modifier = Modifier.fillMaxHeight(0.85f)) {
-                            ChatHeader()
+                            MochiSheetHeader(
+                                title = stringResource(R.string.go_chat_title),
+                            )
                             ChatBody(
                                 state = state,
                                 onLoadMore = { viewModel.loadMoreMessages() },

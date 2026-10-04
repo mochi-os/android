@@ -8,8 +8,6 @@
     <string name="calendars_name">പേര്</string>
     <string name="calendars_rename">പുനർനാമകരണം ചെയ്യുക</string>
     <string name="calendars_delete">ഇല്ലാതാക്കുക</string>
-    <string name="calendars_previous">മുമ്പത്തേത്</string>
-    <string name="calendars_next">അടുത്തത്</string>
     <string name="calendars_view">കാഴ്ച</string>
     <string name="calendars_view_list">ലിസ്റ്റ്</string>
     <string name="calendars_list_search">തിരയുക</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s Mochi-യിൽ നിന്ന് നീക്കം ചെയ്യണോ?</string>
     <string name="calendars_remove_message">ഇതിന്റെ ഇവന്റുകൾ യഥാർത്ഥ കലണ്ടറിൽ തന്നെ തുടരും.</string>
     <string name="calendars_today">ഇന്ന്</string>
+    <string name="calendars_previous">മുമ്പത്തേത്</string>
+    <string name="calendars_next">അടുത്തത്</string>
     <string name="calendars_view_week">ആഴ്ച</string>
     <string name="calendars_view_multiweek">ഒന്നിലധികം ആഴ്ചകൾ</string>
     <string name="calendars_view_month">മാസം</string>

@@ -14,6 +14,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.NonCancellable
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -39,14 +42,17 @@ import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.VisibilityStore
 import org.mochios.calendars.ui.editor.EventForm
+import org.mochios.calendars.ui.editor.Recurrence
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.editor.advanced
+import org.mochios.calendars.ui.editor.alarmMinutes
+import org.mochios.calendars.ui.editor.alarms
 import org.mochios.calendars.ui.editor.components
-import org.mochios.calendars.ui.editor.creationDay
 import org.mochios.calendars.ui.editor.defaultStart
 import org.mochios.calendars.ui.editor.draft
 import org.mochios.calendars.ui.editor.instant
 import org.mochios.calendars.ui.editor.matches
+import org.mochios.calendars.ui.editor.recurrence
 import org.mochios.calendars.ui.editor.split
 import org.mochios.calendars.ui.router.CALENDARS_FEATURE
 import org.mochios.calendars.ui.router.CalendarsSection
@@ -61,14 +67,17 @@ import java.time.temporal.ChronoUnit
 import javax.inject.Inject
 
 /**
- * The calendar screen. [anchor] is the date the view is built around and
- * [hidden] the calendars this device does not show, which is a viewing choice
- * and never leaves the phone. [instances] is everything the server returned
- * for the range, unfiltered, so flipping a checkbox redraws without a fetch.
+ * The calendar screen. [anchor] is the date the view is built around,
+ * [focus] the day the user last chose, which the date panel circles and a new
+ * event lands on, and [hidden] the calendars this device does not show,
+ * which is a viewing choice and never leaves the phone. [instances] is
+ * everything the server returned for the range, unfiltered, so flipping a
+ * checkbox redraws without a fetch.
  */
 data class CalendarUiState(
     val view: String = CalendarsSection.MONTH,
     val anchor: LocalDate = LocalDate.now(),
+    val focus: LocalDate = LocalDate.now(),
     val calendars: List<Calendar> = emptyList(),
     val hidden: Set<String> = emptySet(),
     val instances: List<Instance> = emptyList(),
@@ -88,6 +97,14 @@ data class CalendarUiState(
     val isLoading: Boolean = true,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
+    /** What the open occurrence's page shows beyond the range's listing, once loaded. */
+    val details: EventDetails? = null,
+    /**
+     * The anchor the list view's pages were last read around, null until
+     * they have been, and while another view's range is held; while it
+     * differs from [anchor] the list holds the range before.
+     */
+    val fetched: LocalDate? = null,
     /** A refresh failed with events already on screen, which stay; said once with Retry. */
     val stale: MochiError? = null,
     /** A list page failed to load; the list stops paging on its own and offers Retry. */
@@ -101,6 +118,19 @@ data class CalendarUiState(
 
 /** A list page that failed: why, and whether it was the next page or the one before. */
 data class Stalled(val error: MochiError, val forward: Boolean)
+
+/**
+ * What an occurrence's page shows that the range's listing does not carry,
+ * read from its whole event: its [reminders], in minutes before the start, and
+ * the [recurrence] of its series. [event] and [occurrence] say which
+ * occurrence it is for.
+ */
+data class EventDetails(
+    val event: String = "",
+    val occurrence: Long = 0,
+    val reminders: List<Int> = emptyList(),
+    val recurrence: Recurrence = Recurrence(),
+)
 
 /**
  * The calendar's ICS address while its dialog is open. [url] is set once,
@@ -158,6 +188,8 @@ class CalendarViewModel @Inject constructor(
 
     private var loading: Job? = null
 
+    private var detailing: Job? = null
+
     /** The zone every range is measured in: the user's, not the device's. */
     private val zone: ZoneId
         get() = runCatching { ZoneId.of(viewer.zone()) }.getOrDefault(ZoneId.systemDefault())
@@ -179,20 +211,26 @@ class CalendarViewModel @Inject constructor(
         val view = calendarsView(LastViewedStore.get(context, CALENDARS_FEATURE).orEmpty())
         _uiState.value = _uiState.value.copy(view = view)
         viewModelScope.launch {
-            repository.calendarsChanged.collect { reload(refreshing = true) }
+            repository.calendarsChanged.collect { reload() }
         }
         viewModelScope.launch {
             // An edit must not throw the reader back to the anchor day.
-            repository.eventsChanged.collect { load(refreshing = true, reset = false) }
+            repository.eventsChanged.collect { load(reset = false) }
         }
         reload()
     }
 
-    /** The calendars, the preferences and the range, from cold. */
+    /**
+     * The calendars, the preferences and the range, from cold. [refreshing]
+     * only for the reader's own pull, which shows the pull's spinner; every
+     * other reload is silent, and shows the full loader only the first time,
+     * before any calendar is known.
+     */
     fun reload(refreshing: Boolean = false) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(
-                isLoading = !refreshing && _uiState.value.instances.isEmpty(),
+            val state = _uiState.value
+            _uiState.value = state.copy(
+                isLoading = !refreshing && state.instances.isEmpty() && state.calendars.isEmpty(),
                 isRefreshing = refreshing,
                 error = null,
             )
@@ -246,28 +284,12 @@ class CalendarViewModel @Inject constructor(
                         paging = false,
                         isLoading = false,
                         isRefreshing = false,
+                        fetched = null,
                     )
                 } else if (state.view == CalendarsSection.LIST) {
                     pages(state, reset, shown)
                 } else {
-                    val (start, finish) = range(state)
-                    // With events shown in their own zones, a day's
-                    // occurrences can begin or end up to a day away by the
-                    // user's clock, so the range reaches a day each side.
-                    val margin = if (state.preferences.zones) 86_400L else 0L
-                    // Only the calendars shown, so hidden ones never take a
-                    // share of the most the server will list.
-                    val (instances, truncated) = repository.listEvents(start - margin, finish + margin, shown, zone.id)
-                    _uiState.value = _uiState.value.copy(
-                        instances = ordered(instances),
-                        truncated = truncated,
-                        bounds = Bounds(),
-                        earliest = 0,
-                        latest = 0,
-                        paging = false,
-                        isLoading = false,
-                        isRefreshing = false,
-                    )
+                    periods(state, shown)
                 }
                 answer()
             } catch (e: kotlinx.coroutines.CancellationException) {
@@ -305,6 +327,7 @@ class CalendarViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(
             view = CalendarsSection.DAY,
             anchor = date ?: _uiState.value.anchor,
+            focus = date ?: _uiState.value.focus,
             search = "",
         )
         if (_uiState.value.calendars.isNotEmpty()) load()
@@ -346,22 +369,96 @@ class CalendarViewModel @Inject constructor(
     }
 
     /**
-     * The list view's pages: how far the shown calendars reach, and then each
-     * page held. A page is a quarter, so even the whole cap's worth is read a
+     * The occurrences a calendar view shows, and the periods either side of
+     * it, so a swipe brings its neighbour in already drawn. Each period is its
+     * own request, so the server's cap and its "not all shown" flag are the
+     * shown period's alone, as on the web. The shown period is drawn as soon
+     * as it is read, keeping what was held either side of it until the
+     * neighbours arrive; a neighbour that fails to load is read again when it
+     * is paged to, and never turns the view into an error. Only [calendars],
+     * the ones shown, are read, so hidden ones never take a share of the most
+     * the server will list.
+     */
+    private suspend fun periods(state: CalendarUiState, calendars: List<String>) {
+        // With events shown in their own zones, a day's occurrences can
+        // begin or end up to a day away by the user's clock, so each range
+        // reaches a day each side.
+        val margin = if (state.preferences.zones) 86_400L else 0L
+        val (start, finish) = range(state)
+        val (shown, truncated) =
+            repository.listEvents(start - margin, finish + margin, calendars, zone.id)
+        val kept = _uiState.value.instances.filter { instance ->
+            instance.finish <= start - margin || instance.start >= finish + margin
+        }
+        _uiState.value = _uiState.value.copy(
+            instances = ordered(distinct(shown + kept)),
+            truncated = truncated,
+            bounds = Bounds(),
+            earliest = 0,
+            latest = 0,
+            paging = false,
+            isLoading = false,
+            isRefreshing = false,
+            fetched = null,
+        )
+        val around = coroutineScope {
+            listOf(-1, 1).map { direction ->
+                async {
+                    val anchor = step(state.view, state.anchor, direction)
+                    val (from, to) = range(state.copy(anchor = anchor))
+                    try {
+                        repository
+                            .listEvents(from - margin, to + margin, calendars, zone.id)
+                            .first
+                    } catch (e: kotlinx.coroutines.CancellationException) {
+                        throw e
+                    } catch (_: Exception) {
+                        null
+                    }
+                }
+            }.awaitAll()
+        }
+        // Both read: they replace what was kept. One failed: what was kept
+        // stays, with whichever did arrive added.
+        val read = around.filterNotNull().flatten()
+        val instances = if (around.all { neighbour -> neighbour != null }) {
+            shown + read
+        } else {
+            shown + kept + read
+        }
+        _uiState.value = _uiState.value.copy(instances = ordered(distinct(instances)))
+    }
+
+    /** [instances] with each occurrence once, as overlapping reads list it in each. */
+    private fun distinct(instances: List<Instance>) =
+        instances.distinctBy { instance -> instance.event to instance.start }
+
+    /**
+     * The list view's pages: how far the shown calendars reach, and each page
+     * held, all asked for at once rather than one after another, so a new
+     * day waits on one round trip. A page is a quarter, so even the whole cap's worth is read a
      * page at a time — the server lists at most a year in one call.
      */
-    private suspend fun pages(state: CalendarUiState, reset: Boolean, shown: List<String>) {
+    private suspend fun pages(
+        state: CalendarUiState,
+        reset: Boolean,
+        shown: List<String>,
+    ) = coroutineScope {
         val first = if (reset) 0 else state.earliest
         val last = if (reset) 0 else state.latest
-        val bounds = runCatching { repository.eventBounds(shown) }.getOrDefault(Bounds())
-        val gathered = mutableListOf<Instance>()
-        var truncated = false
-        for (index in first..last) {
-            val span = page(state.anchor, index, zone)
-            val (instances, cut) = repository.listEvents(span.start, span.finish, shown, zone.id)
-            gathered.addAll(instances)
-            truncated = truncated || cut
+        val bounding = async {
+            runCatching { repository.eventBounds(shown) }.getOrDefault(Bounds())
         }
+        val reads = (first..last).map { index ->
+            async {
+                val span = page(state.anchor, index, zone)
+                repository.listEvents(span.start, span.finish, shown, zone.id)
+            }
+        }
+        val listed = reads.awaitAll()
+        val bounds = bounding.await()
+        val gathered = listed.flatMap { (instances, _) -> instances }
+        val truncated = listed.any { (_, cut) -> cut }
         _uiState.value = _uiState.value.copy(
             instances = ordered(gathered.distinctBy { it.event to it.start }),
             truncated = truncated,
@@ -371,6 +468,7 @@ class CalendarViewModel @Inject constructor(
             paging = false,
             isLoading = false,
             isRefreshing = false,
+            fetched = state.anchor,
         )
     }
 
@@ -386,6 +484,18 @@ class CalendarViewModel @Inject constructor(
      * view. A calendar that recurs without end pages on to the cap.
      */
     fun later() = paginate(forward = true)
+
+    /**
+     * Whether the list view already holds [day]: the pages read around the
+     * anchor they were [CalendarUiState.fetched] for reach it, so what they
+     * say of it, even that it is empty, stands while a new read is on its way.
+     */
+    fun holds(day: LocalDate, state: CalendarUiState = _uiState.value): Boolean {
+        val around = state.fetched ?: return false
+        val moment = day.atStartOfDay(zone).toEpochSecond()
+        return moment >= page(around, state.earliest, zone).start &&
+            moment < page(around, state.latest, zone).finish
+    }
 
     /** Whether the list view has a page to load in either direction. */
     fun hasEarlier(state: CalendarUiState = _uiState.value): Boolean =
@@ -493,15 +603,58 @@ class CalendarViewModel @Inject constructor(
         anchor(LocalDate.now(zone))
     }
 
+    /** Moves the view back one period: a day, week, multiweek or month. */
+    fun previous() = anchor(step(_uiState.value.view, _uiState.value.anchor, -1))
+
+    /** Moves the view on one period. */
+    fun next() = anchor(step(_uiState.value.view, _uiState.value.anchor, 1))
+
     fun anchor(date: LocalDate) {
-        if (date == _uiState.value.anchor) return
-        _uiState.value = _uiState.value.copy(anchor = date)
+        if (date == _uiState.value.anchor) {
+            focus(date)
+            return
+        }
+        _uiState.value = _uiState.value.copy(anchor = date, focus = date)
         load()
     }
 
-    fun previous() = anchor(step(_uiState.value.view, _uiState.value.anchor, -1))
+    /**
+     * Reads [instance]'s whole event for its page: the reminders of the
+     * occurrence, an override's own when it has one, and the series' repeat
+     * rule. A read-only occurrence has no event to read, and one that fails
+     * to load leaves the page with what the listing says.
+     */
+    fun details(instance: Instance) {
+        detailing?.cancel()
+        _uiState.value = _uiState.value.copy(details = null)
+        if (!instance.editable) return
+        detailing = viewModelScope.launch {
+            val loaded = try {
+                repository.getEvent(instance.event)
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                return@launch
+            }
+            val master = loaded.master()
+            val shown = loaded.overrides().firstOrNull { override -> matches(override, instance.occurrence) }
+                ?: master
+                ?: return@launch
+            val details = EventDetails(
+                event = instance.event,
+                occurrence = instance.occurrence,
+                reminders = alarms(shown).mapNotNull(::alarmMinutes).distinct().sorted(),
+                recurrence = recurrence(master?.value("RRULE")),
+            )
+            _uiState.value = _uiState.value.copy(details = details)
+        }
+    }
 
-    fun next() = anchor(step(_uiState.value.view, _uiState.value.anchor, 1))
+    /** Chooses a day the view already shows, without moving the view. */
+    fun focus(date: LocalDate) {
+        if (date == _uiState.value.focus) return
+        _uiState.value = _uiState.value.copy(focus = date)
+    }
 
     fun workweek(value: Boolean) {
         VisibilityStore.workweek(context, value)
@@ -535,7 +688,7 @@ class CalendarViewModel @Inject constructor(
      */
     private fun shade() {
         _uiState.value = _uiState.value.copy(hidden = VisibilityStore.hidden(context))
-        load(refreshing = true, reset = false)
+        load(reset = false)
     }
 
     /** The calendars the views are drawing, for the actions that take a list. */
@@ -603,7 +756,7 @@ class CalendarViewModel @Inject constructor(
             ),
         )
         _uiState.value = _uiState.value.copy(preferences = saved)
-        load(refreshing = true)
+        load()
         R.string.calendars_preferences_saved
     }
 
@@ -949,21 +1102,13 @@ class CalendarViewModel @Inject constructor(
 
     /**
      * Where a new event with no time of its own starts, in epoch seconds: on
-     * [day] when a day cell was tapped, and otherwise on the day "New event"
-     * lands on, today when today is on screen and else the day the view is on.
+     * [day] when a day cell was tapped, and otherwise on the day the user last
+     * chose, which is today until they pick, tap or page to another.
      */
     fun creation(day: LocalDate? = null, state: CalendarUiState = _uiState.value): Long {
         val now = ZonedDateTime.now(zone)
         val today = now.toLocalDate()
-        val chosen = day ?: run {
-            // The list's page reaches months ahead, so it is the day it is on
-            // that counts there, as the web's list does.
-            if (state.view == CalendarsSection.LIST) return@run creationDay(today, state.anchor, state.anchor, 1)
-            val (first, last) = range(state)
-            val from = Instant.ofEpochSecond(first).atZone(zone).toLocalDate()
-            val until = Instant.ofEpochSecond(last).atZone(zone).toLocalDate()
-            creationDay(today, state.anchor, from, ChronoUnit.DAYS.between(from, until))
-        }
+        val chosen = day ?: state.focus
         return defaultStart(chosen, today, now.toLocalTime(), state.preferences.hours).atZone(zone).toEpochSecond()
     }
 
@@ -1014,6 +1159,28 @@ class CalendarViewModel @Inject constructor(
         return date.minusDays(back.toLong())
     }
 
+    /** The days the week view draws: the anchor's week, less the days off in a work week. */
+    fun days(state: CalendarUiState = _uiState.value): List<LocalDate> {
+        val start = week(state.anchor)
+        return (0 until 7).map { offset -> start.plusDays(offset.toLong()) }
+            .filter { day ->
+                !state.workweek || state.preferences.days.contains(day.dayOfWeek.value % 7)
+            }
+            .ifEmpty { listOf(state.anchor) }
+    }
+
+    /**
+     * The first day the view shows, whose month the toolbar names while the
+     * date panel is closed. The month view names its own month rather than
+     * the previous month's days that lead its grid.
+     */
+    fun first(state: CalendarUiState = _uiState.value): LocalDate = when (state.view) {
+        CalendarsSection.WEEK -> days(state).first()
+        CalendarsSection.MULTIWEEK -> weeks(state).first()
+        CalendarsSection.MONTH -> state.anchor.withDayOfMonth(1)
+        else -> state.anchor
+    }
+
     /** The first day of each week the view draws, in order. */
     fun weeks(state: CalendarUiState = _uiState.value): List<LocalDate> = when (state.view) {
         CalendarsSection.WEEK -> listOf(week(state.anchor))
@@ -1061,7 +1228,12 @@ class CalendarViewModel @Inject constructor(
 
     /** Opens the day view on a date, from a column heading or a month cell. */
     fun open(date: LocalDate) {
-        _uiState.value = _uiState.value.copy(anchor = date, view = CalendarsSection.DAY, search = "")
+        _uiState.value = _uiState.value.copy(
+            anchor = date,
+            focus = date,
+            view = CalendarsSection.DAY,
+            search = "",
+        )
         remember(CalendarsSection.DAY)
         share(CalendarsSection.DAY)
         load()
@@ -1078,18 +1250,36 @@ class CalendarViewModel @Inject constructor(
 }
 
 /**
- * The anchor one step forward (1) or back (-1) by the view's own unit. The
- * multiweek view steps a week at a time, so its span slides a row rather than
- * jumping its length; the list view pages as the reader scrolls, so its arrows
- * move a month at a time rather than by a range it no longer has. A month's
- * step lands on its 1st, as the web's does, so the list opens on the month's
- * first day rather than a day carried over from the last one.
+ * The anchor [direction] steps forward (positive) or back (negative) by the
+ * view's own unit, as a swipe pages it. The multiweek view steps a week at a
+ * time, so its span slides a row rather than jumping its length; the list
+ * view, which pages as the reader scrolls, counts in months. A month's step
+ * lands on its 1st, as the web's does, so the list opens on the month's first
+ * day rather than a day carried over from the last one.
  */
 fun step(view: String, anchor: LocalDate, direction: Int): LocalDate = when (view) {
     CalendarsSection.DAY -> anchor.plusDays(direction.toLong())
     CalendarsSection.WEEK, CalendarsSection.MULTIWEEK -> anchor.plusWeeks(direction.toLong())
     else -> anchor.withDayOfMonth(1).plusMonths(direction.toLong())
 }
+
+/**
+ * How many of the view's own steps [to] lies from [from], the inverse of
+ * [step]: days in the day view, weeks in the week and multiweek views, and
+ * months otherwise. [week] gives the first day of a date's week, so two days
+ * of the same week are no steps apart.
+ */
+fun steps(
+    view: String,
+    from: LocalDate,
+    to: LocalDate,
+    week: (LocalDate) -> LocalDate,
+): Int = when (view) {
+    CalendarsSection.DAY -> ChronoUnit.DAYS.between(from, to)
+    CalendarsSection.WEEK, CalendarsSection.MULTIWEEK ->
+        ChronoUnit.WEEKS.between(week(from), week(to))
+    else -> ChronoUnit.MONTHS.between(from.withDayOfMonth(1), to.withDayOfMonth(1))
+}.toInt()
 
 /**
  * The last day an all-day occurrence covers: its date plus its whole days less

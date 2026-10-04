@@ -181,6 +181,8 @@
     <string name="notifications_clear">Resiki notifikasi</string>
     <string name="entity_avatar_alt">Avatar kanggo %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Lagi wae</string>
     <string name="format_time_minutes_ago">%1$sm kepungkur</string>
     <string name="format_time_hours_ago">%1$sj kepungkur</string>

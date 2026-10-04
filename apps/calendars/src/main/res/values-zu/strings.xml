@@ -8,8 +8,6 @@
     <string name="calendars_name">Igama</string>
     <string name="calendars_rename">Qamba kabusha</string>
     <string name="calendars_delete">Susa</string>
-    <string name="calendars_previous">Okwedlule</string>
-    <string name="calendars_next">Okulandelayo</string>
     <string name="calendars_view">Umbukiso</string>
     <string name="calendars_view_list">Uhla</string>
     <string name="calendars_list_search">Sesha</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Khipha u-%1$s ku-Mochi?</string>
     <string name="calendars_remove_message">Imicimbi yayo ihlala ekhalendeni yokuqala.</string>
     <string name="calendars_today">Namuhla</string>
+    <string name="calendars_previous">Okwedlule</string>
+    <string name="calendars_next">Okulandelayo</string>
     <string name="calendars_view_week">Iviki</string>
     <string name="calendars_view_multiweek">Amaviki amaningi</string>
     <string name="calendars_view_month">Inyanga</string>

@@ -165,6 +165,8 @@
     <string name="access_level_manage">Gestiona</string>
     <string name="notifications_clear">Esborra les notificacions</string>
     <string name="lightbox_position">%1$s / %2$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Ara mateix</string>
     <string name="format_time_minutes_ago">fa %1$sm</string>
     <string name="format_time_hours_ago">fa %1$sh</string>

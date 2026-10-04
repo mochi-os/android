@@ -8,8 +8,6 @@
     <string name="calendars_name">Jeneng</string>
     <string name="calendars_rename">Owahi jeneng</string>
     <string name="calendars_delete">Busak</string>
-    <string name="calendars_previous">Sadurungé</string>
-    <string name="calendars_next">Sabanjure</string>
     <string name="calendars_view">Tampilan</string>
     <string name="calendars_view_list">Daftar</string>
     <string name="calendars_list_search">Goleki</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Cabut %1$s saka Mochi?</string>
     <string name="calendars_remove_message">Acarané tetep ana ing kalender asliné.</string>
     <string name="calendars_today">Dina iki</string>
+    <string name="calendars_previous">Sadurungé</string>
+    <string name="calendars_next">Sabanjure</string>
     <string name="calendars_view_week">Minggu</string>
     <string name="calendars_view_multiweek">Pirang-pirang minggu</string>
     <string name="calendars_view_month">Sasi</string>

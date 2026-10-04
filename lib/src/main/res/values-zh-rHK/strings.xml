@@ -115,6 +115,8 @@
     <string name="notifications_clear">清除通知</string>
     <string name="entity_avatar_alt">%1$s 的頭像</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">剛剛</string>
     <string name="format_time_minutes_ago">%1$s 分鐘前</string>
     <string name="format_time_hours_ago">%1$s 小時前</string>

@@ -8,8 +8,6 @@
     <string name="calendars_name">Ном</string>
     <string name="calendars_rename">Тағйири ном</string>
     <string name="calendars_delete">Нест кардан</string>
-    <string name="calendars_previous">Қаблӣ</string>
-    <string name="calendars_next">Баъдӣ</string>
     <string name="calendars_view">Намоиш</string>
     <string name="calendars_view_list">Рӯйхат</string>
     <string name="calendars_list_search">Ҷустуҷӯ</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s аз Mochi хориҷ карда шавад?</string>
     <string name="calendars_remove_message">Рӯйдодҳои он дар тақвими аслӣ боқӣ мемонанд.</string>
     <string name="calendars_today">Имрӯз</string>
+    <string name="calendars_previous">Қаблӣ</string>
+    <string name="calendars_next">Баъдӣ</string>
     <string name="calendars_view_week">Ҳафта</string>
     <string name="calendars_view_multiweek">Якчанд ҳафта</string>
     <string name="calendars_view_month">Моҳ</string>

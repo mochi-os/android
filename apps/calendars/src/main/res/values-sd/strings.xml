@@ -8,8 +8,6 @@
     <string name="calendars_name">نالو</string>
     <string name="calendars_rename">نالو تبديل ڪريو</string>
     <string name="calendars_delete">ختم ڪريو</string>
-    <string name="calendars_previous">پوئيون</string>
-    <string name="calendars_next">اڳيون</string>
     <string name="calendars_view">منظر</string>
     <string name="calendars_view_list">لسٽ</string>
     <string name="calendars_list_search">ڳوليو</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s کي Mochi مان هٽائجي؟</string>
     <string name="calendars_remove_message">ان جا واقعا اصل ڪئلينڊر ۾ رهندا.</string>
     <string name="calendars_today">اڄ</string>
+    <string name="calendars_previous">پوئيون</string>
+    <string name="calendars_next">اڳيون</string>
     <string name="calendars_view_week">هفتو</string>
     <string name="calendars_view_multiweek">ڪيترائي هفتا</string>
     <string name="calendars_view_month">مهينو</string>

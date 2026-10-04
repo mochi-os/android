@@ -181,6 +181,8 @@
     <string name="notifications_clear">Pa àwọn ìfitónilétí rẹ́</string>
     <string name="entity_avatar_alt">Àwòrán fún %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Ní báyìí</string>
     <string name="format_time_minutes_ago">%1$sm sẹ́yìn</string>
     <string name="format_time_hours_ago">%1$sh sẹ́yìn</string>

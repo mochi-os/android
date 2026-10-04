@@ -8,8 +8,6 @@
     <string name="calendars_name">Suti</string>
     <string name="calendars_rename">Suti mayjt\'ayaña</string>
     <string name="calendars_delete">Chhaqtayaña</string>
-    <string name="calendars_previous">Nayrïri</string>
-    <string name="calendars_next">Arkiri</string>
     <string name="calendars_view">Uñjäwi</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Thaqhama</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s Mochi-ta aparañati?</string>
     <string name="calendars_remove_message">Luräwinakapax nayrïr calendarionwa qhiparaki.</string>
     <string name="calendars_today">Jichhüru</string>
+    <string name="calendars_previous">Nayrïri</string>
+    <string name="calendars_next">Arkiri</string>
     <string name="calendars_view_week">Semana</string>
     <string name="calendars_view_multiweek">Walja semananaka</string>
     <string name="calendars_view_month">Phaxsi</string>

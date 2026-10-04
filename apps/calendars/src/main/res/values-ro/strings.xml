@@ -8,8 +8,6 @@
     <string name="calendars_name">Nume</string>
     <string name="calendars_rename">Redenumește</string>
     <string name="calendars_delete">Șterge</string>
-    <string name="calendars_previous">Anterior</string>
-    <string name="calendars_next">Următor</string>
     <string name="calendars_view">Vizualizare</string>
     <string name="calendars_view_list">Listă</string>
     <string name="calendars_list_search">Caută</string>
@@ -60,6 +58,8 @@
     <string name="calendars_remove_title">Elimini %1$s din Mochi?</string>
     <string name="calendars_remove_message">Evenimentele sale rămân în calendarul original.</string>
     <string name="calendars_today">Astăzi</string>
+    <string name="calendars_previous">Anterior</string>
+    <string name="calendars_next">Următor</string>
     <string name="calendars_view_week">Săptămână</string>
     <string name="calendars_view_multiweek">Mai multe săptămâni</string>
     <string name="calendars_view_month">Lună</string>

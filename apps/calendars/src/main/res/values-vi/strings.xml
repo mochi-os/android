@@ -8,8 +8,6 @@
     <string name="calendars_name">Tên</string>
     <string name="calendars_rename">Đổi tên</string>
     <string name="calendars_delete">Xóa</string>
-    <string name="calendars_previous">Trước</string>
-    <string name="calendars_next">Tiếp</string>
     <string name="calendars_view">Chế độ xem</string>
     <string name="calendars_view_list">Danh sách</string>
     <string name="calendars_list_search">Tìm kiếm</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Xoá %1$s khỏi Mochi?</string>
     <string name="calendars_remove_message">Các sự kiện của lịch vẫn được giữ nguyên trong lịch gốc.</string>
     <string name="calendars_today">Hôm nay</string>
+    <string name="calendars_previous">Trước</string>
+    <string name="calendars_next">Tiếp</string>
     <string name="calendars_view_week">Tuần</string>
     <string name="calendars_view_multiweek">Nhiều tuần</string>
     <string name="calendars_view_month">Tháng</string>

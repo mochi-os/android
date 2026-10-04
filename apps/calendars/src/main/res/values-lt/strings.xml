@@ -8,8 +8,6 @@
     <string name="calendars_name">Pavadinimas</string>
     <string name="calendars_rename">Pervadinti</string>
     <string name="calendars_delete">Ištrinti</string>
-    <string name="calendars_previous">Ankstesnis</string>
-    <string name="calendars_next">Toliau</string>
     <string name="calendars_view">Rodinys</string>
     <string name="calendars_view_list">Sąrašas</string>
     <string name="calendars_list_search">Ieškoti</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Šalinti %1$s iš Mochi?</string>
     <string name="calendars_remove_message">Jo įvykiai lieka pradiniame kalendoriuje.</string>
     <string name="calendars_today">Šiandien</string>
+    <string name="calendars_previous">Ankstesnis</string>
+    <string name="calendars_next">Toliau</string>
     <string name="calendars_view_week">Savaitė</string>
     <string name="calendars_view_multiweek">Kelios savaitės</string>
     <string name="calendars_view_month">Mėnuo</string>

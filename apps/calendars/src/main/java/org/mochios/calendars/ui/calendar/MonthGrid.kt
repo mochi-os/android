@@ -15,8 +15,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -43,6 +45,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.derivedStateOf
@@ -52,6 +55,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.runtime.withFrameMillis
 import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
@@ -61,6 +65,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
@@ -78,6 +83,7 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.LayoutDirection
@@ -87,9 +93,12 @@ import androidx.compose.ui.zIndex
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.util.NaturalCompare
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
 import java.time.LocalDate
+import java.time.LocalTime
+import java.time.format.TextStyle
 import java.time.temporal.ChronoUnit
 import kotlin.math.roundToInt
 
@@ -121,7 +130,9 @@ private data class Hold(val instance: Instance, val day: LocalDate, val grab: Of
  * event on that day, and the day number opens the day view. A long press
  * lifts a chip, which then follows the finger from cell to cell; resting it
  * at the top or bottom of the weeks turns to the previous or next range by
- * [onStep], and letting go on another day asks [onMove] to move the
+ * [onStep], with [onLifted] hearing when a drag starts and when it ends so
+ * a pager can hold the page under it, and letting go on another day asks
+ * [onMove] to move the
  * occurrence so that its first day moves by as many days, and that day's
  * cell scrolls to show it once it lands there. The occurrence whose summary
  * is open, [selected], is drawn in the primary colour's tint.
@@ -136,7 +147,8 @@ fun MonthGrid(
     onOpen: (Instance) -> Unit,
     onCreate: (LocalDate) -> Unit,
     onMove: (Instance, LocalDate) -> Unit,
-    onStep: (Int) -> Unit,
+    onStep: (Int) -> Unit = {},
+    onLifted: (Boolean) -> Unit = {},
     selected: Instance? = null,
 ) {
     val today = LocalDate.now(viewModel.timezone())
@@ -194,6 +206,10 @@ fun MonthGrid(
         hands.step = onStep
     }
     val target = if (lift != null) under() else null
+    val hearing by rememberUpdatedState(onLifted)
+    LaunchedEffect(lift != null) {
+        hearing(lift != null)
+    }
 
     // A chip resting at the top or bottom of the weeks turns the page, once
     // and then again each hold.
@@ -269,30 +285,39 @@ fun MonthGrid(
                             textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                             modifier = Modifier.width(NUMBERS).padding(top = 4.dp).testTag("week-number"),
                         )
-                        for (offset in 0 until 7) {
-                            val day = week.plusDays(offset.toLong())
-                            val occurrences = byDay[day].orEmpty()
-                            Cell(
-                                day = day,
-                                today = today,
-                                allday = state.preferences.allday,
-                                outside = month != null && day.monthValue != month,
-                                instances = occurrences,
-                                viewModel = viewModel,
-                                lifted = lift?.instance,
-                                selected = selected,
-                                targeted = target == day && lift?.day != day,
-                                modifier = Modifier.weight(1f),
-                                onDay = { viewModel.open(day) },
-                                onCreate = { onCreate(day) },
-                                onOpen = onOpen,
-                                landing = landed?.takeIf { it.first == day }?.second,
-                                onLift = { instance, at, grab, width ->
-                                    landed = null
-                                    finger = at
-                                    lift = Hold(instance, day, grab, width)
-                                },
-                            )
+                        // The lines between days are drawn over the days
+                        // alone, so the week numbers' column has none.
+                        Row(
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxHeight()
+                                .columnLines(7, MaterialTheme.colorScheme.outlineVariant),
+                        ) {
+                            for (offset in 0 until 7) {
+                                val day = week.plusDays(offset.toLong())
+                                val occurrences = byDay[day].orEmpty()
+                                Cell(
+                                    day = day,
+                                    today = today,
+                                    allday = state.preferences.allday,
+                                    outside = month != null && day.monthValue != month,
+                                    instances = occurrences,
+                                    viewModel = viewModel,
+                                    lifted = lift?.instance,
+                                    selected = selected,
+                                    targeted = target == day && lift?.day != day,
+                                    modifier = Modifier.weight(1f),
+                                    onDay = { viewModel.open(day) },
+                                    onCreate = { onCreate(day) },
+                                    onOpen = onOpen,
+                                    landing = landed?.takeIf { it.first == day }?.second,
+                                    onLift = { instance, at, grab, width ->
+                                        landed = null
+                                        finger = at
+                                        lift = Hold(instance, day, grab, width)
+                                    },
+                                )
+                            }
                         }
                     }
                     HorizontalDivider()
@@ -317,14 +342,9 @@ fun MonthGrid(
             ) {
                 Chip(
                     lifted.instance,
-                    Modifier.fillMaxWidth().shadow(6.dp, corners()),
-                    stacked = !look.bar,
+                    Modifier.fillMaxWidth().shadow(6.dp, corners(SNUG)),
                     raised = true,
-                    time = if (look.time) {
-                        format.formatTime(lifted.instance.start, clockZone(lifted.instance.zone?.start, viewModel.zones()))
-                    } else {
-                        null
-                    },
+                    filled = true,
                 ) {}
             }
         }
@@ -422,10 +442,9 @@ private fun Cell(
         // is held so that one entry of the lower stays in view.
         val entries = instances.map { it to look(it, viewModel.day(it), viewModel.finish(it), day) }
         val line = leading(MaterialTheme.typography.labelSmall)
-        val pair = leading(MaterialTheme.typography.labelSmall.packed()) * 2
         val groups = stack(
             Group(entries.filter { it.second.bar }, line),
-            Group(entries.filterNot { it.second.bar }, pair),
+            Group(entries.filterNot { it.second.bar }, line),
             allday,
         ).filter { it.entries.isNotEmpty() }
 
@@ -445,8 +464,7 @@ private fun Cell(
                     .fillMaxWidth()
                     .bringIntoViewRequester(requester)
                     .alpha(opacity(carried = same(instance, lifted), over = viewModel.past(instance), cancelled = instance.cancelled)),
-                stacked = !look.bar,
-                time = if (look.time) format.formatTime(instance.start, clockZone(instance.zone?.start, zones)) else null,
+                filled = true,
                 chosen = same(instance, selected),
                 lift = Modifier.lift(instance, onLift),
             ) { onOpen(instance) }
@@ -576,10 +594,22 @@ private fun Modifier.lift(
 }
 
 /**
- * The list view: occurrences under a heading per day, each row showing its
- * calendar's dot, its title, its marks, its start time and where it is, and
- * on a wide screen its calendar. A day's heading is its long date and stays
- * at the top while its occurrences scroll under it.
+ * The list view, laid out as Google Calendar's schedule is: each day's
+ * occurrences as cards in their colours beside the day in a date column, a
+ * label such as "Oct 4 – 10" where a new week starts, and a line across
+ * today at the present moment. A day's occurrences go in the order of the
+ * clock times they show, all day ones first, as the day view stacks them,
+ * and the line falls before the first one still to end by that clock.
+ * [onTop] is told the day of the topmost row in view as the list scrolls,
+ * whose month the toolbar names. The day it opens on, the anchor, leads it
+ * even when empty, with a row that [onCreate] answers with a new event that
+ * day, and the list scrolls back to it whenever the anchor moves. A new
+ * anchor the pages already held reach is shown at once; one beyond them
+ * shows a spinner in place of the old range until it has been read, so
+ * nothing is drawn and then pushed aside. A page read in before the earliest, from a pull
+ * at the top, brings the list to its new first day rather than holding it
+ * where it was. On a wide screen each card also names its calendar, as the
+ * web's list does.
  *
  * It opens on the anchor day and pages on as the reader scrolls: further
  * pages while the foot is in view, so a first page with nothing on it still
@@ -596,10 +626,10 @@ fun AgendaList(
     viewModel: CalendarViewModel,
     onOpen: (Instance) -> Unit,
     selected: Instance? = null,
+    onTop: (LocalDate) -> Unit = {},
+    onCreate: (LocalDate) -> Unit = {},
 ) {
-    val format = LocalFormat.current
-    val zone = viewModel.timezone()
-    val today = LocalDate.now(zone)
+    val today = LocalDate.now(viewModel.timezone())
     val listState = rememberLazyListState()
     val search = state.search.trim()
     val wide = LocalConfiguration.current.screenWidthDp >= WIDE
@@ -612,7 +642,13 @@ fun AgendaList(
         }
     }
     val grouped = remember(matched, state.preferences.zones) {
-        matched.groupBy { viewModel.day(it) }.toSortedMap()
+        matched.groupBy { viewModel.day(it) }.toSortedMap().mapValues { (day, occurrences) ->
+            occurrences.sortedWith(
+                compareBy<Instance> { instance ->
+                    if (instance.allday) -1f else viewModel.cut(instance, day)?.from ?: 0f
+                }.thenBy(NaturalCompare) { instance -> instance.summary },
+            )
+        }
     }
     val earlier = viewModel.hasEarlier(state)
     val later = viewModel.hasLater(state)
@@ -648,9 +684,72 @@ fun AgendaList(
     LaunchedEffect(searched, state.paging, state.latest, state.bounds) {
         if (searched == Searched.LOADING && !state.paging && later) viewModel.later()
     }
-    val nothing = grouped.isEmpty() && !state.paging && state.stalled == null && !earlier && !later
 
-    LazyColumn(state = listState, modifier = Modifier.fillMaxSize()) {
+    val known = state.fetched == state.anchor || viewModel.holds(state.anchor, state)
+    if (!known) {
+        Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
+            Paging()
+        }
+        return
+    }
+    // A failed page leaves a search with nothing to wait on, so it falls
+    // through to the list, which offers Retry.
+    if (searched == Searched.LOADING && state.stalled == null) {
+        Paging()
+        return
+    }
+    if (searched == Searched.NONE && state.stalled == null) {
+        // Matched nothing in everything there is to load, which is not the
+        // same as a calendar with nothing on it.
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Icon(
+                Icons.Outlined.Search,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Text(
+                text = stringResource(R.string.calendars_list_unmatched),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        return
+    }
+    val clock = LocalTime.now(viewModel.timezone()).let { time -> time.hour + time.minute / 60f }
+    val opened = state.anchor.takeIf { search.isEmpty() }
+    val rows = remember(grouped, today, opened) { rows(grouped, today, clock, opened, viewModel) }
+    var head by remember { mutableStateOf(state.earliest) }
+    LaunchedEffect(state.earliest) {
+        if (state.earliest < head) {
+            listState.scrollToItem(0)
+        }
+        head = state.earliest
+    }
+    val landing = rows.indexOfFirst { row -> row.day >= state.anchor }
+    LaunchedEffect(state.anchor, rows.getOrNull(landing)?.key) {
+        if (landing >= 0) {
+            // Past the "Earlier events" button, which leads the list.
+            listState.scrollToItem(landing + if (earlier) 1 else 0)
+        }
+    }
+    val days = remember(rows) { rows.associate { row -> row.key to row.day } }
+    val top by rememberUpdatedState(onTop)
+    LaunchedEffect(listState, days) {
+        snapshotFlow {
+            listState.layoutInfo.visibleItemsInfo.firstOrNull { info -> info.key in days }?.key
+        }.collect { key ->
+            days[key]?.let { day -> top(day) }
+        }
+    }
+    LazyColumn(
+        state = listState,
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(bottom = 88.dp),
+    ) {
         if (earlier) {
             item(key = "earlier") {
                 Box(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), contentAlignment = Alignment.Center) {
@@ -666,61 +765,21 @@ fun AgendaList(
                 }
             }
         }
-        when {
-            search.isEmpty() && nothing -> item(key = "empty") {
-                Box(modifier = Modifier.fillParentMaxSize(), contentAlignment = Alignment.Center) {
-                    Text(
-                        text = stringResource(R.string.calendars_list_empty),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
+        items(rows, key = { row -> row.key }) { row ->
+            when (row) {
+                is Listed.Week -> WeekDivider(row.day)
+                is Listed.Now -> NowLine(first = row.first)
+                is Listed.Empty -> EmptyDay(row.day, current = row.day == today) {
+                    onCreate(row.day)
                 }
-            }
-            // Matched nothing in everything there is to load, which is not
-            // the same as a calendar with nothing on it.
-            searched == Searched.NONE && state.stalled == null -> item(key = "unmatched") {
-                Column(
-                    modifier = Modifier.fillParentMaxSize(),
-                    verticalArrangement = Arrangement.Center,
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    Icon(Icons.Outlined.Search, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant)
-                    Text(
-                        text = stringResource(R.string.calendars_list_unmatched),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-            else -> for ((day, occurrences) in grouped) {
-                stickyHeader(key = "day:$day") {
-                    // Today's heading is a band in the primary colour, as
-                    // every grid marks today; the other days' sit on a muted
-                    // band, which also keeps the rows from showing through.
-                    val current = day == today
-                    Text(
-                        text = format.formatLongDate(day.atTime(12, 0).atZone(zone).toEpochSecond(), zone.id),
-                        style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.SemiBold,
-                        color = if (current) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .background(MaterialTheme.colorScheme.surface)
-                            .background(
-                                if (current) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f),
-                            )
-                            .padding(horizontal = 16.dp, vertical = 6.dp)
-                            .testTag("heading"),
-                    )
-                }
-                items(occurrences, key = { "${day}-${it.event}-${it.start}" }) { instance ->
-                    AgendaRow(
-                        instance,
-                        viewModel,
-                        chosen = same(instance, selected),
-                        calendar = if (wide) names[instance.calendar].orEmpty() else null,
-                    ) { onOpen(instance) }
-                }
+                is Listed.Event -> AgendaRow(
+                    instance = row.instance,
+                    viewModel = viewModel,
+                    day = if (row.first) row.day else null,
+                    today = today,
+                    chosen = same(row.instance, selected),
+                    calendar = if (wide) names[row.instance.calendar].orEmpty() else null,
+                ) { onOpen(row.instance) }
             }
         }
         state.stalled?.let { stalled ->
@@ -733,6 +792,71 @@ fun AgendaList(
         }
         // Always last, so a list too short to scroll still has its foot in view.
         item(key = "foot") { Spacer(Modifier.height(1.dp)) }
+    }
+}
+
+/**
+ * One row of the list view, each knowing the [day] it belongs to, which the
+ * toolbar names the month of while it is the topmost row in view.
+ */
+private sealed class Listed(val key: String, val day: LocalDate) {
+    /** The label opening the week that starts on [day]. */
+    class Week(day: LocalDate) : Listed("week:$day", day)
+
+    /** [day], the day the list opened on, which has nothing on it. */
+    class Empty(day: LocalDate) : Listed("empty:$day", day)
+
+    /** The line across today at the present moment; [first] when it leads the day. */
+    class Now(day: LocalDate, val first: Boolean) : Listed("now:$day", day)
+
+    /** An occurrence on [day]; [first] when it opens the day and carries the date. */
+    class Event(day: LocalDate, val instance: Instance, val first: Boolean) :
+        Listed("$day-${instance.event}-${instance.start}", day)
+}
+
+/**
+ * The list view's rows in order: each day's occurrences, a week's label
+ * where a new week starts, and on [today] the line at [clock], in hours,
+ * before the first occurrence still to end by it. [opened], the day the list
+ * opened on, has a row of its own saying it is empty when nothing is on it,
+ * as Google Calendar's schedule does; null while the list is searched.
+ */
+private fun rows(
+    grouped: Map<LocalDate, List<Instance>>,
+    today: LocalDate,
+    clock: Float,
+    opened: LocalDate?,
+    viewModel: CalendarViewModel,
+): List<Listed> = buildList {
+    var week: LocalDate? = null
+    val days = (grouped.keys + listOfNotNull(opened)).toSortedSet()
+    for (day in days) {
+        val start = viewModel.week(day)
+        if (week != null && start != week) {
+            add(Listed.Week(start))
+        }
+        week = start
+        val occurrences = grouped[day]
+        if (occurrences == null) {
+            add(Listed.Empty(day))
+            continue
+        }
+        val cut = if (day == today) {
+            occurrences.indexOfFirst { instance ->
+                !instance.allday && (viewModel.cut(instance, day)?.to ?: 0f) > clock
+            }.let { index -> if (index < 0) occurrences.size else index }
+        } else {
+            -1
+        }
+        occurrences.forEachIndexed { index, instance ->
+            if (index == cut) {
+                add(Listed.Now(day, first = index == 0))
+            }
+            add(Listed.Event(day, instance, first = index == 0))
+        }
+        if (cut == occurrences.size) {
+            add(Listed.Now(day, first = false))
+        }
     }
 }
 
@@ -764,62 +888,201 @@ private fun Paging() {
     }
 }
 
+/** The width of the list view's date column. */
+private val GUTTER = 56.dp
+
 /**
- * One agenda row: the calendar's dot, the title, its marks and, for a timed
- * occurrence, its start's clock at the far end, read in the start's own zone
- * when the views show events in theirs, then the [calendar]'s name when
- * given; where it is goes beneath. A past or
- * cancelled occurrence is faded, and the row is tinted in the primary colour
- * while its summary is open, [chosen].
+ * One agenda row, as Google Calendar's schedule lays one out: [day] in the
+ * date column when this is the day's first occurrence, its weekday over its
+ * number, today's in a filled circle, and beside it a card in the
+ * occurrence's colour with its title and marks on the first line and its
+ * time on the second, all day, a span of clock times within its day, or its
+ * two ends across days, each read in its own zone when the views show
+ * events in theirs; where it is goes on a third. A past or cancelled
+ * occurrence is faded, and the card is ringed while its summary is open,
+ * [chosen]. The [calendar]'s name, when given, goes last.
  */
 @Composable
 fun AgendaRow(
     instance: Instance,
     viewModel: CalendarViewModel,
+    day: LocalDate?,
+    today: LocalDate,
     chosen: Boolean = false,
     calendar: String? = null,
     onClick: () -> Unit,
 ) {
     val format = LocalFormat.current
     val zones = viewModel.zones()
-    Column(
+    val opens = clockZone(instance.zone?.start, zones)
+    val closes = clockZone(instance.zone?.finish, zones)
+    val time = when {
+        instance.allday -> stringResource(R.string.calendars_event_allday)
+        viewModel.day(instance) == viewModel.finish(instance) ->
+            format.formatClockRange(instance.start, instance.finish, opens, closes)
+        else -> format.formatTimeRange(instance.start, instance.finish, opens, closes)
+    }
+    val colour = instance.colour.toColour(MaterialTheme.colorScheme.primary)
+    val ink = if (instance.tentative) {
+        Ink(MaterialTheme.colorScheme.onSurface, MaterialTheme.colorScheme.onSurfaceVariant)
+    } else {
+        Ink(Color.White, Color.White.copy(alpha = 0.85f))
+    }
+    Row(
         modifier = Modifier
             .fillMaxWidth()
-            .then(if (chosen) Modifier.background(MaterialTheme.colorScheme.primary.copy(alpha = TINT)) else Modifier)
-            .clickable(onClick = onClick)
-            .padding(horizontal = 16.dp, vertical = 8.dp)
-            .alpha(opacity(carried = false, over = viewModel.past(instance), cancelled = instance.cancelled)),
+            .padding(
+                start = 4.dp,
+                end = 16.dp,
+                top = if (day != null) 12.dp else 4.dp,
+                bottom = 4.dp,
+            ),
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Line(
-                instance = instance,
-                time = if (instance.allday) null else format.formatTime(instance.start, clockZone(instance.zone?.start, zones)),
-                style = MaterialTheme.typography.bodyLarge,
-                clock = MaterialTheme.typography.bodyMedium,
-                gap = SPACE,
-                glyph = 16.dp,
-                modifier = Modifier.weight(1f),
-            )
-            if (calendar != null) {
-                Text(
-                    text = calendar,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
-                    modifier = Modifier.padding(start = SPACE).width(160.dp),
-                )
+        Box(modifier = Modifier.width(GUTTER), contentAlignment = Alignment.TopCenter) {
+            if (day != null) {
+                DateMark(day, current = day == today)
             }
         }
-        if (instance.location.isNotBlank()) {
+        CompositionLocalProvider(LocalInk provides ink) {
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .alpha(
+                        opacity(
+                            carried = false,
+                            over = viewModel.past(instance),
+                            cancelled = instance.cancelled,
+                        ),
+                    )
+                    .filled(corners(), colour, instance.tentative, chosen)
+                    .clickable(onClick = onClick)
+                    .padding(horizontal = 12.dp, vertical = 8.dp),
+            ) {
+                Row(
+                    verticalAlignment = Alignment.Top,
+                    horizontalArrangement = Arrangement.spacedBy(SPACE),
+                ) {
+                    Fitted(instance, MaterialTheme.typography.titleMedium, 1, Modifier.weight(1f))
+                    for (mark in marks(instance)) {
+                        Glyph(mark, 16.dp)
+                    }
+                }
+                Text(
+                    text = time,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = ink.muted,
+                )
+                if (instance.location.isNotBlank()) {
+                    Text(
+                        text = instance.location,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = ink.muted,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+                if (calendar != null) {
+                    Text(
+                        text = calendar,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = ink.muted,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+            }
+        }
+    }
+}
+
+/**
+ * A day in the list view's date column: its short weekday over its number,
+ * today's weekday in the primary colour and its number in a filled circle.
+ */
+@Composable
+private fun DateMark(day: LocalDate, current: Boolean) {
+    val format = LocalFormat.current
+    val locale = LocalConfiguration.current.locales[0]
+    val colours = MaterialTheme.colorScheme
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(
+            text = day.dayOfWeek.getDisplayName(TextStyle.SHORT, locale),
+            style = MaterialTheme.typography.labelMedium,
+            color = if (current) colours.primary else colours.onSurfaceVariant,
+        )
+        Box(
+            modifier = Modifier
+                .size(36.dp)
+                .clip(CircleShape)
+                .then(if (current) Modifier.background(colours.primary) else Modifier),
+            contentAlignment = Alignment.Center,
+        ) {
             Text(
-                text = instance.location,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
-                modifier = Modifier.padding(start = DOT + SPACE),
+                text = format.formatNumber(day.dayOfMonth),
+                style = MaterialTheme.typography.titleLarge,
+                color = if (current) colours.onPrimary else colours.onSurface,
             )
         }
+    }
+}
+
+/**
+ * A day in the list view with nothing on it: its date in the date column and
+ * "Nothing planned. Tap to create." beside it, which [onCreate] answers with a
+ * new event that day.
+ */
+@Composable
+private fun EmptyDay(day: LocalDate, current: Boolean, onCreate: () -> Unit) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 4.dp, end = 16.dp, top = 12.dp, bottom = 4.dp),
+    ) {
+        Box(modifier = Modifier.width(GUTTER), contentAlignment = Alignment.TopCenter) {
+            DateMark(day, current)
+        }
+        Text(
+            text = stringResource(R.string.calendars_list_nothing),
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier
+                .weight(1f)
+                .clip(corners())
+                .clickable(onClick = onCreate)
+                .padding(horizontal = 12.dp, vertical = 16.dp),
+        )
+    }
+}
+
+/** The label that opens a new week in the list view: "Oct 4 – 10". */
+@Composable
+private fun WeekDivider(start: LocalDate) {
+    val format = LocalFormat.current
+    Text(
+        text = format.formatDayRange(start, start.plusDays(6), "dMMM"),
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.padding(start = 4.dp + GUTTER, top = 20.dp, bottom = 4.dp),
+    )
+}
+
+/**
+ * The line across today in the list view at the present moment, between
+ * the occurrences that have ended and those still to come, a dot at its
+ * start as the time grids draw it. [first] when nothing today has ended yet,
+ * so it sits a little lower to clear the date column's weekday.
+ */
+@Composable
+private fun NowLine(first: Boolean) {
+    val colour = MaterialTheme.colorScheme.error
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = GUTTER, end = 16.dp, top = if (first) 12.dp else 4.dp, bottom = 2.dp),
+    ) {
+        Box(modifier = Modifier.size(8.dp).clip(CircleShape).background(colour))
+        Box(modifier = Modifier.weight(1f).height(2.dp).background(colour))
     }
 }

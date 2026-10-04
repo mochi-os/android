@@ -8,8 +8,6 @@
     <string name="calendars_name">Име</string>
     <string name="calendars_rename">Преименувај</string>
     <string name="calendars_delete">Избриши</string>
-    <string name="calendars_previous">Претходно</string>
-    <string name="calendars_next">Следно</string>
     <string name="calendars_view">Приказ</string>
     <string name="calendars_view_list">Листа</string>
     <string name="calendars_list_search">Барај</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Да се отстрани %1$s од Mochi?</string>
     <string name="calendars_remove_message">Неговите настани остануваат во оригиналниот календар.</string>
     <string name="calendars_today">Денес</string>
+    <string name="calendars_previous">Претходно</string>
+    <string name="calendars_next">Следно</string>
     <string name="calendars_view_week">Недела</string>
     <string name="calendars_view_multiweek">Повеќе недели</string>
     <string name="calendars_view_month">Месец</string>

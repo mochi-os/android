@@ -2,7 +2,6 @@
 <resources>
     <string name="calendars_subscribe_submit">Inscrever-se</string>
     <string name="calendars_delete">Excluir</string>
-    <string name="calendars_next">Próximo</string>
     <string name="calendars_view">Visualização</string>
     <string name="calendars_device_password">Senha</string>
     <string name="calendars_device_done">Pronto</string>

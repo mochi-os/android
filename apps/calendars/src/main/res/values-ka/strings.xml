@@ -8,8 +8,6 @@
     <string name="calendars_name">სახელი</string>
     <string name="calendars_rename">სახელის შეცვლა</string>
     <string name="calendars_delete">წაშლა</string>
-    <string name="calendars_previous">წინა</string>
-    <string name="calendars_next">შემდეგი</string>
     <string name="calendars_view">ხედი</string>
     <string name="calendars_view_list">სია</string>
     <string name="calendars_list_search">ძიება</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">წაიშალოს %1$s Mochi-დან?</string>
     <string name="calendars_remove_message">მისი ღონისძიებები თავდაპირველ კალენდარში რჩება.</string>
     <string name="calendars_today">დღეს</string>
+    <string name="calendars_previous">წინა</string>
+    <string name="calendars_next">შემდეგი</string>
     <string name="calendars_view_week">კვირა</string>
     <string name="calendars_view_multiweek">რამდენიმე კვირა</string>
     <string name="calendars_view_month">თვე</string>

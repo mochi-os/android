@@ -6,6 +6,6 @@
     <foreground>
         <inset
             android:drawable="@mipmap/ic_chess_foreground"
-            android:inset="14dp" />
+            android:inset="9.8%" />
     </foreground>
 </adaptive-icon>

@@ -8,8 +8,6 @@
     <string name="calendars_name">At</string>
     <string name="calendars_rename">Adyny üýtget</string>
     <string name="calendars_delete">Pozmak</string>
-    <string name="calendars_previous">Öňki</string>
-    <string name="calendars_next">Indiki</string>
     <string name="calendars_view">Görnüş</string>
     <string name="calendars_view_list">Sanaw</string>
     <string name="calendars_list_search">Gözle</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s Mochi-den aýrylsynmy?</string>
     <string name="calendars_remove_message">Onuň çäreleri asyl senenamada galýar.</string>
     <string name="calendars_today">Şu gün</string>
+    <string name="calendars_previous">Öňki</string>
+    <string name="calendars_next">Indiki</string>
     <string name="calendars_view_week">Hepde</string>
     <string name="calendars_view_multiweek">Birnäçe hepde</string>
     <string name="calendars_view_month">Aý</string>

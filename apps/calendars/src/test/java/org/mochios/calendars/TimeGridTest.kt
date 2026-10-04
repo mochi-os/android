@@ -6,7 +6,13 @@
 package org.mochios.calendars
 
 import android.os.Looper
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -41,8 +47,10 @@ import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.storage.VisibilityStore
 import org.mochios.calendars.ui.calendar.CalendarUiState
 import org.mochios.calendars.ui.calendar.CalendarViewModel
+import org.mochios.calendars.ui.calendar.HourGutter
 import org.mochios.calendars.ui.calendar.Moved
 import org.mochios.calendars.ui.calendar.TimeGrid
+import org.mochios.calendars.ui.calendar.rememberHourScroll
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
@@ -88,7 +96,6 @@ class TimeGridTest {
     private val moved = mutableListOf<Pair<Instance, Moved>>()
     private val steps = mutableListOf<Int>()
 
-    private val GUTTER = 52.dp
     private val HOUR = 56.dp
     private val ROW = 24.dp
 
@@ -170,20 +177,29 @@ class TimeGridTest {
             preferences = Preferences(zones = zoning),
             isLoading = false,
         )
+        // As the screen lays them out: the hour gutter, then the grid.
         rule.setContent {
-            TimeGrid(
-                days = shown.value,
-                state = state,
-                viewModel = model,
-                onOpen = {},
-                onCreate = { start, finish -> created += start to finish },
-                onMove = { instance, move -> moved += instance to move },
-                onStep = { direction ->
-                    steps += direction
-                    shown.value = shown.value.map { it.plusDays(7L * direction) }
-                },
-                clock = { now },
-            )
+            val scroll = rememberHourScroll(state.preferences.hours.start)
+            var top by remember { mutableStateOf(0.dp) }
+            Row(modifier = Modifier.fillMaxSize()) {
+                HourGutter(top, scroll, zone = if (zoning) Zones.offset(london.id) else null)
+                TimeGrid(
+                    days = shown.value,
+                    state = state,
+                    viewModel = model,
+                    onOpen = {},
+                    onCreate = { start, finish -> created += start to finish },
+                    onMove = { instance, move -> moved += instance to move },
+                    scroll = scroll,
+                    stacked = shown.value.size > 1,
+                    onStep = { direction ->
+                        steps += direction
+                        shown.value = shown.value.map { it.plusDays(7L * direction) }
+                    },
+                    onTop = { offset -> top = offset },
+                    clock = { now },
+                )
+            }
         }
         rule.mainClock.autoAdvance = false
         rule.mainClock.advanceTimeBy(100)
@@ -196,8 +212,8 @@ class TimeGridTest {
     /** The point in the root over [day]'s column, [hours] past midnight, through the grid's scroll. */
     private fun grid(day: LocalDate, hours: Float, days: List<LocalDate> = week): Offset {
         val hoursBox = bounds("hours")
-        val column = (hoursBox.width - px(GUTTER)) / days.size
-        val x = hoursBox.left + px(GUTTER) + column * (days.indexOf(day) + 0.5f)
+        val column = hoursBox.width / days.size
+        val x = hoursBox.left + column * (days.indexOf(day) + 0.5f)
         // The grid opens scrolled to the first working hour, 08:00.
         val y = hoursBox.top + (hours - 8f) * px(HOUR)
         return Offset(x, y)
@@ -263,7 +279,7 @@ class TimeGridTest {
     // ---- headings and gutter ----
 
     @Test
-    fun `a single day has no heading, and midnight has no hour label`() {
+    fun `a single day is headed on one line, and midnight has no hour label`() {
         val format = Format(UserPreferences())
         show(emptyList(), days = listOf(monday))
         assertEquals(0, rule.onAllNodesWithText(format.formatHour(0)).fetchSemanticsNodes().size)
@@ -271,16 +287,23 @@ class TimeGridTest {
         val locale = context.resources.configuration.locales[0]
         val pattern = android.text.format.DateFormat.getBestDateTimePattern(locale, "EEEd")
         val heading = org.mochios.calendars.ui.calendar.heading(monday, pattern, locale)
-        assertEquals(0, rule.onAllNodesWithText(heading).fetchSemanticsNodes().size)
+        assertEquals(1, rule.onAllNodesWithText(heading).fetchSemanticsNodes().size)
     }
 
     @Test
-    fun `a week heads each column with its day`() {
+    fun `a week heads each column with its weekday above its day`() {
         show(emptyList())
         val locale = context.resources.configuration.locales[0]
         val pattern = android.text.format.DateFormat.getBestDateTimePattern(locale, "EEEd")
         val heading = org.mochios.calendars.ui.calendar.heading(monday, pattern, locale)
-        assertEquals(1, rule.onAllNodesWithText(heading).fetchSemanticsNodes().size)
+        assertEquals(0, rule.onAllNodesWithText(heading).fetchSemanticsNodes().size)
+        // The heading is clickable, which merges its two lines into one node.
+        val number = rule.onAllNodesWithText(monday.dayOfMonth.toString(), useUnmergedTree = true)
+            .fetchSemanticsNodes()
+        val short = monday.dayOfWeek.getDisplayName(java.time.format.TextStyle.SHORT, locale)
+        val weekday = rule.onAllNodesWithText(short, useUnmergedTree = true).fetchSemanticsNodes()
+        assertTrue(number.isNotEmpty() && weekday.isNotEmpty())
+        assertTrue(weekday.first().boundsInRoot.bottom <= number.first().boundsInRoot.top + 1f)
     }
 
     // ---- now ----

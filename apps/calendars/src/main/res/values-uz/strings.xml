@@ -8,8 +8,6 @@
     <string name="calendars_name">Nomi</string>
     <string name="calendars_rename">Nomini oʻzgartirish</string>
     <string name="calendars_delete">Oʻchirish</string>
-    <string name="calendars_previous">Oldingisi</string>
-    <string name="calendars_next">Keyingi</string>
     <string name="calendars_view">Koʻrinish</string>
     <string name="calendars_view_list">Roʻyxat</string>
     <string name="calendars_list_search">Qidirish</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s Mochi’dan olib tashlansinmi?</string>
     <string name="calendars_remove_message">Uning tadbirlari asl kalendarda qoladi.</string>
     <string name="calendars_today">Bugun</string>
+    <string name="calendars_previous">Oldingisi</string>
+    <string name="calendars_next">Keyingi</string>
     <string name="calendars_view_week">Hafta</string>
     <string name="calendars_view_multiweek">Bir necha hafta</string>
     <string name="calendars_view_month">Oy</string>

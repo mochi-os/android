@@ -36,6 +36,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiBottomSheet
+import org.mochios.android.ui.components.MochiSheetHeader
+import org.mochios.android.ui.components.MochiSheetPadding
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectObject
 import org.mochios.projects.ui.project.ProjectViewModel
@@ -71,15 +73,11 @@ fun MoveObjectSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState
     ) {
-        Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+        MochiSheetHeader(
+            title = stringResource(R.string.projects_move_to_column),
+        )
+        Column(modifier = Modifier.padding(MochiSheetPadding)) {
             // Column selection
-            Text(
-                text = stringResource(R.string.projects_move_to_column),
-                style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
-            HorizontalDivider()
-            Spacer(modifier = Modifier.height(8.dp))
 
             LazyColumn {
                 items(columnOptions, key = { it.id }) { option ->

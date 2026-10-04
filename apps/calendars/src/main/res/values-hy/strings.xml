@@ -8,8 +8,6 @@
     <string name="calendars_name">Անուն</string>
     <string name="calendars_rename">Վերանվանել</string>
     <string name="calendars_delete">Ջնջել</string>
-    <string name="calendars_previous">Նախորդ</string>
-    <string name="calendars_next">Հաջորդ</string>
     <string name="calendars_view">Տեսք</string>
     <string name="calendars_view_list">Ցանկ</string>
     <string name="calendars_list_search">Որոնել</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Հեռացնե՞լ %1$s-ը Mochi-ից։</string>
     <string name="calendars_remove_message">Դրա միջոցառումները մնում են սկզբնական օրացույցում։</string>
     <string name="calendars_today">Այսօր</string>
+    <string name="calendars_previous">Նախորդ</string>
+    <string name="calendars_next">Հաջորդ</string>
     <string name="calendars_view_week">Շաբաթ</string>
     <string name="calendars_view_multiweek">Մի քանի շաբաթ</string>
     <string name="calendars_view_month">Ամիս</string>

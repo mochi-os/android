@@ -8,8 +8,6 @@
     <string name="calendars_name">Атау</string>
     <string name="calendars_rename">Атын өзгерту</string>
     <string name="calendars_delete">Жою</string>
-    <string name="calendars_previous">Алдыңғы</string>
-    <string name="calendars_next">Келесі</string>
     <string name="calendars_view">Көрініс</string>
     <string name="calendars_view_list">Тізім</string>
     <string name="calendars_list_search">Іздеу</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">%1$s Mochi-ден жойылсын ба?</string>
     <string name="calendars_remove_message">Оның іс-шаралары бастапқы күнтізбеде қалады.</string>
     <string name="calendars_today">Бүгін</string>
+    <string name="calendars_previous">Алдыңғы</string>
+    <string name="calendars_next">Келесі</string>
     <string name="calendars_view_week">Апта</string>
     <string name="calendars_view_multiweek">Бірнеше апта</string>
     <string name="calendars_view_month">Ай</string>

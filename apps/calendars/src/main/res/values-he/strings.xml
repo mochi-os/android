@@ -8,8 +8,6 @@
     <string name="calendars_name">שם</string>
     <string name="calendars_rename">שנה שם</string>
     <string name="calendars_delete">מחק</string>
-    <string name="calendars_previous">הקודם</string>
-    <string name="calendars_next">הבא</string>
     <string name="calendars_view">תצוגה</string>
     <string name="calendars_view_list">רשימה</string>
     <string name="calendars_list_search">חיפוש</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">להסיר את %1$s מ-Mochi?</string>
     <string name="calendars_remove_message">האירועים שלו נשארים ביומן המקורי.</string>
     <string name="calendars_today">היום</string>
+    <string name="calendars_previous">הקודם</string>
+    <string name="calendars_next">הבא</string>
     <string name="calendars_view_week">שבוע</string>
     <string name="calendars_view_multiweek">מספר שבועות</string>
     <string name="calendars_view_month">חודש</string>

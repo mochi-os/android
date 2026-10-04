@@ -20,6 +20,7 @@ import android.icu.util.ULocale
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.ZoneOffset
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
@@ -77,7 +78,12 @@ object PlatformClock : Clock {
  * relative strings come from `stringResource`. Times are written the way the
  * user's language writes them, through [clock], on the clock the user chose.
  */
-class Format(val preferences: UserPreferences, private val clock: Clock = PlatformClock) {
+class Format(
+    val preferences: UserPreferences,
+    private val clock: Clock = PlatformClock,
+    private val range: String = RANGE,
+    private val dayTime: String = DAY_TIME,
+) {
 
     /**
      * Epoch seconds → user-format date (no time). [zone] is an IANA zone to
@@ -137,11 +143,121 @@ class Format(val preferences: UserPreferences, private val clock: Clock = Platfo
     /**
      * A run of days as the user's language writes one: "14 – 20 September
      * 2026", "28 September – 2 October 2026". The days are dates, read in no
-     * zone.
+     * zone. [skeleton] picks the fields, such as "dMMM" for a short "Oct 4 –
+     * 10" with no year.
      */
-    fun formatDayRange(first: LocalDate, last: LocalDate): String {
+    fun formatDayRange(first: LocalDate, last: LocalDate, skeleton: String = "dMMMMy"): String {
         val noon = { day: LocalDate -> day.atTime(12, 0).toInstant(ZoneOffset.UTC).toEpochMilli() }
-        return clock.span("dMMMMy", noon(first), noon(last), TimeZone.getTimeZone("UTC"))
+        return clock.span(skeleton, noon(first), noon(last), TimeZone.getTimeZone("UTC"))
+    }
+
+    /**
+     * The clock times of a span within one day, as the user's language writes
+     * them and on the clock the user chose: "7:30 – 8:30 PM", the shared AM or
+     * PM once. Each end is read in its own zone, [zone] and [finishZone]; ends
+     * at different offsets from UTC keep their own AM or PM, "4:00 PM – 2:00
+     * PM". Blank or unknown zones mean the user's.
+     *
+     * @param start The first moment, epoch seconds.
+     * @param finish The last moment, epoch seconds.
+     * @param zone The IANA zone to read the start in.
+     * @param finishZone The IANA zone to read the finish in.
+     * @return The two times, or "" when [start] is not a moment.
+     */
+    fun formatClockRange(
+        start: Long,
+        finish: Long,
+        zone: String? = null,
+        finishZone: String? = zone,
+    ): String {
+        if (start <= 0) return ""
+        val opens = zoneOf(zone)
+        val closes = zoneOf(finishZone)
+        val end = maxOf(start, finish)
+        val timed = twelve("hm", "Hm")
+        if (opens.getOffset(epochToMillis(start)) == closes.getOffset(epochToMillis(end))) {
+            return clock.span(timed, epochToMillis(start), epochToMillis(end), opens)
+        }
+        val pattern = clock.pattern(timed)
+        return apart(
+            clock.write(pattern, epochToMillis(start), opens),
+            clock.write(pattern, epochToMillis(end), closes),
+        )
+    }
+
+    /**
+     * [from] and [to] joined by the [range] string, as the language joins two
+     * ends written apart. [broken] puts the end on a line of its own, the join
+     * staying with the start: "10:00 PM –" over "6:00 AM".
+     */
+    private fun apart(from: String, to: String, broken: Boolean = false): String {
+        val split = range.indexOf("%2\$s")
+        if (split < 0) {
+            return range.format(from, to)
+        }
+        val head = range.substring(0, split).replace("%1\$s", from)
+        val tail = range.substring(split + 4).replace("%1\$s", from)
+        return if (broken) {
+            head.trimEnd() + "\n" + to + tail
+        } else {
+            head + to + tail
+        }
+    }
+
+    /**
+     * A timed span, short, as the user's language writes one. Within a day the
+     * day is written once and the times after it, sharing their AM or PM:
+     * "Sunday, Oct 5 · 8:30 – 9:30 PM". Across days each end has its own day
+     * and its own line: "Sunday, Oct 5 · 10:00 PM –" over "Monday, Oct 6 ·
+     * 6:00 AM". The year shows only when an end falls outside the year of
+     * [now]. A span ending at midnight ends on the day it started. Each end is
+     * read in its own zone, [zone] and [finishZone], so a flight reads
+     * "4:00 PM – 2:00 PM" on one day; a shared AM or PM is written once only
+     * when both ends read at one offset. Blank or unknown zones mean the
+     * user's.
+     *
+     * @param start The first moment, epoch seconds.
+     * @param finish The last moment, epoch seconds.
+     * @param zone The IANA zone to read the start in.
+     * @param finishZone The IANA zone to read the finish in.
+     * @param now The moment whose year needs no writing, epoch seconds.
+     * @return The span, or "" when [start] is not a moment.
+     */
+    fun formatTimeRange(
+        start: Long,
+        finish: Long,
+        zone: String? = null,
+        finishZone: String? = zone,
+        now: Long = System.currentTimeMillis() / 1000,
+    ): String {
+        if (start <= 0) return ""
+        val opens = zoneOf(zone)
+        val closes = zoneOf(finishZone)
+        val end = maxOf(start, finish)
+        val calendar = { seconds: Long, tz: TimeZone ->
+            Calendar.getInstance(tz).apply { timeInMillis = epochToMillis(seconds) }
+        }
+        val from = calendar(start, opens)
+        val last = calendar(maxOf(start, end - 1), closes)
+        val year = calendar(now, timeZone).get(Calendar.YEAR)
+        val other = from.get(Calendar.YEAR) != year || last.get(Calendar.YEAR) != year
+        val dated = clock.pattern("EEEEMMMd" + if (other) "y" else "")
+        val timed = twelve("hm", "Hm")
+        val sameDay = from.get(Calendar.YEAR) == last.get(Calendar.YEAR) &&
+            from.get(Calendar.DAY_OF_YEAR) == last.get(Calendar.DAY_OF_YEAR)
+        val shared = opens.getOffset(epochToMillis(start)) == closes.getOffset(epochToMillis(end))
+        val day = clock.write(dated, epochToMillis(start), opens)
+        if (sameDay && shared) {
+            return dayTime.format(day, clock.span(timed, epochToMillis(start), epochToMillis(end), opens))
+        }
+        val pattern = clock.pattern(timed)
+        val begins = clock.write(pattern, epochToMillis(start), opens)
+        val ends = clock.write(pattern, epochToMillis(end), closes)
+        if (sameDay) {
+            return dayTime.format(day, apart(begins, ends))
+        }
+        val closing = dayTime.format(clock.write(dated, epochToMillis(end), closes), ends)
+        return apart(dayTime.format(day, begins), closing, broken = true)
     }
 
     /**
@@ -350,8 +466,16 @@ fun FormatProvider(
     content: @Composable () -> Unit
 ) {
     val prefs by manager.preferences.collectAsState()
-    val format = remember(prefs) { Format(prefs) }
+    val range = stringResource(R.string.format_range)
+    val dayTime = stringResource(R.string.format_day_time)
+    val format = remember(prefs, range, dayTime) { Format(prefs, range = range, dayTime = dayTime) }
     CompositionLocalProvider(LocalFormat provides format) {
         content()
     }
 }
+
+/** Two ends joined, as English writes a range; strings.xml has each language's. */
+private const val RANGE = "%1${'$'}s – %2${'$'}s"
+
+/** A day and its times, as English writes them; strings.xml has each language's. */
+private const val DAY_TIME = "%1${'$'}s · %2${'$'}s"

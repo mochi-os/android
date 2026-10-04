@@ -8,8 +8,6 @@
     <string name="calendars_name">Namn</string>
     <string name="calendars_rename">Byt namn</string>
     <string name="calendars_delete">Ta bort</string>
-    <string name="calendars_previous">Föregående</string>
-    <string name="calendars_next">Nästa</string>
     <string name="calendars_view">Vy</string>
     <string name="calendars_view_list">Lista</string>
     <string name="calendars_list_search">Sök</string>
@@ -61,6 +59,8 @@
     <string name="calendars_remove_title">Ta bort %1$s från Mochi?</string>
     <string name="calendars_remove_message">Dess händelser finns kvar i den ursprungliga kalendern.</string>
     <string name="calendars_today">Idag</string>
+    <string name="calendars_previous">Föregående</string>
+    <string name="calendars_next">Nästa</string>
     <string name="calendars_view_week">Vecka</string>
     <string name="calendars_view_multiweek">Flera veckor</string>
     <string name="calendars_view_month">Månad</string>

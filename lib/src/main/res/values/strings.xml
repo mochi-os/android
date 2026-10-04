@@ -180,6 +180,8 @@
     <string name="attachment_caption_edit">Edit caption</string>
 
     <!-- Format: relative timestamps (used by org.mochi.android.i18n.Format) -->
+    <string name="format_range">%1$s – %2$s</string>
+    <string name="format_day_time">%1$s · %2$s</string>
     <string name="format_time_just_now">Just now</string>
     <string name="format_time_minutes_ago">%1$sm ago</string>
     <string name="format_time_hours_ago">%1$sh ago</string>

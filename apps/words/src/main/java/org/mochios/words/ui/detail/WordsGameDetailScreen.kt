@@ -20,7 +20,6 @@ import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -98,6 +97,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.words.R
@@ -741,11 +741,14 @@ private fun GameDetailContent(
                 onDismissRequest = onDismissMobileChat,
                 sheetState = sheetState,
             ) {
-                Box(
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(480.dp),
+                        .fillMaxHeight(0.85f),
                 ) {
+                    MochiSheetHeader(
+                        title = stringResource(R.string.words_detail_chat_title),
+                    )
                     GameChatColumn(
                         messages = state.messages,
                         myIdentity = myIdentity,
@@ -756,6 +759,7 @@ private fun GameDetailContent(
                         onLoadMore = { viewModel.loadMoreMessages() },
                         onRetry = { viewModel.loadMessages() },
                         onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
+                        showTitle = false,
                     )
                 }
             }
@@ -896,6 +900,7 @@ private fun GameChatColumn(
     // keyboard. The default suits the phone's sheet, which lifts its own
     // content; the tablet's side panel sits in the screen body and has to ask.
     composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
+    showTitle: Boolean = true,
 ) {
     val chatMessages = remember(messages) {
         messages.map { msg ->
@@ -919,18 +924,20 @@ private fun GameChatColumn(
             .fillMaxHeight()
             .fillMaxWidth(),
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 12.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Text(
-                text = stringResource(R.string.words_detail_chat_title),
-                style = MaterialTheme.typography.titleSmall.copy(
-                    fontWeight = FontWeight.SemiBold,
-                ),
-            )
+        if (showTitle) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 12.dp, vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = stringResource(R.string.words_detail_chat_title),
+                    style = MaterialTheme.typography.titleSmall.copy(
+                        fontWeight = FontWeight.SemiBold,
+                    ),
+                )
+            }
         }
         Box(
             modifier = Modifier
