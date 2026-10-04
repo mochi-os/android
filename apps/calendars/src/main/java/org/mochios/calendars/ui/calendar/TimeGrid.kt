@@ -882,6 +882,7 @@ private fun DayColumn(
                 Block(
                     instance = placed.instance,
                     backwards = placed.backwards,
+                    span = interval(placed.instance, zones, format::formatTime, ranged()),
                     handle = placed.instance.editable && !placed.backwards,
                     stacked = stacked,
                     chosen = same(placed.instance, selected),
@@ -1010,8 +1011,9 @@ private fun lay(instances: List<Instance>, viewModel: CalendarViewModel, day: Lo
 /**
  * A timed occurrence's block: a card filled with its colour, its words in
  * white, or a light wash of it in a dashed outline for a tentative one, and
- * ringed when [chosen]. Its time is read off the hours beside it, so it
- * writes none, but a lifted block writes [span], where it would land. A
+ * ringed when [chosen]. It writes its exact time, [span], "09:00 to
+ * 10:00", so a few minutes either side of the hour are not lost to the
+ * grid; a lifted block's [span] is where it would land. A
  * [backwards] block stands in for an occurrence whose end reads before its
  * start, and in the day view says so with a mark. With [handle] on, a strip
  * along the bottom edge, where a long press takes the end, is named for
@@ -1020,15 +1022,18 @@ private fun lay(instances: List<Instance>, viewModel: CalendarViewModel, day: Lo
  * ones, draw no bar, so it never sits on the title.
  *
  * As the day view draws it, the block reads its title in a larger type with
- * its marks at the far end, the reminder bell and the repeat glyph, and the
- * location beneath when the block is tall enough. The title's size goes by
- * the block's height alone: at full size it wraps onto as many lines as the
- * block holds, up to three, one fewer when the location takes the last; a
- * block too short for one full line shrinks it to fit. A block with room to
- * spare keeps a little more of it at its start and top.
+ * its marks at the far end, the reminder bell and the repeat glyph, its time
+ * beneath, and the location under that when the block is tall enough. A
+ * block too short for the title and the time on lines of their own puts the
+ * time at the far end of the title's line instead, after the marks. The
+ * title's size goes by the block's height alone: at full size it wraps onto
+ * as many lines as the block holds, up to three, one fewer when the location
+ * takes the last; a block too short for one full line shrinks it to fit. A
+ * block with room to spare keeps a little more of it at its start and top.
  *
  * [stacked], as the week view's narrow columns draw it, the block reads its
- * title alone in a small type, wrapping onto as many lines as it holds.
+ * title in a small type, wrapping onto as many lines as it holds, with its
+ * time and marks on the line beneath.
  */
 @Composable
 fun Block(
@@ -1060,7 +1065,7 @@ fun Block(
                 Column(modifier = Modifier.fillMaxWidth().padding(start = 4.dp, end = 4.dp, top = 1.dp)) {
                     Fitted(instance, small, lines.coerceAtLeast(1))
                     if (span != null) {
-                        Landing(span, small)
+                        Detail(instance, span, small.packed(), backwards = backwards)
                     }
                 }
             } else {
@@ -1072,7 +1077,10 @@ fun Block(
                 val wide = maxWidth >= WIDE
                 val top = if (roomy) ROOMY else 2.dp
                 val room = height - top - 2.dp
-                val lines = (room / line).toInt()
+                val smallest = if (second.fontSize.isSp) second.fontSize else 11.sp
+                val clock = with(LocalDensity.current) { (smallest * LINE).toDp() }
+                val below = span != null && room >= line + clock
+                val lines = ((if (below) room - clock else room) / line).toInt()
                 val located = instance.location.isNotBlank() && lines >= 2
                 val titled = (if (located) lines - 1 else lines).coerceIn(1, LINES)
                 val size = if (lines >= 1) {
@@ -1099,8 +1107,11 @@ fun Block(
                         for (mark in marks(instance, backwards)) {
                             Glyph(mark, 16.dp)
                         }
+                        if (span != null && !below) {
+                            Landing(span, second, Modifier.padding(top = 2.dp))
+                        }
                     }
-                    if (span != null) {
+                    if (span != null && below) {
                         Landing(span, second)
                     }
                     if (located) {
@@ -1415,15 +1426,16 @@ internal fun Fitted(
     )
 }
 
-/** Where a lifted block would land, "10:00 to 11:00", under its title. */
+/** A block's time, "10:00 to 11:00", or where a lifted one would land, never cut. */
 @Composable
-private fun Landing(span: String, style: TextStyle) {
+private fun Landing(span: String, style: TextStyle, modifier: Modifier = Modifier) {
     Text(
         text = span,
         style = style,
         color = LocalInk.current?.muted ?: MaterialTheme.colorScheme.onSurfaceVariant,
         maxLines = 1,
         softWrap = false,
+        modifier = modifier,
     )
 }
 
