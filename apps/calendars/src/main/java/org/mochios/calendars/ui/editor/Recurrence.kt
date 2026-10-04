@@ -62,10 +62,13 @@ data class Recurrence(
      * `INTERVAL` left out when it is 1, which is its default, so a plain
      * weekly rule reads as one. An end on a day takes in the whole of it: the
      * day itself for an [allday] series, whose `UNTIL` is a date as its start
-     * is, else the last second of the day in [zone], in UTC.
+     * is, else the last second of the day in [zone], in UTC. A rule kept as
+     * read has its `UNTIL` rewritten in the other form when the series has
+     * turned all day or back, so a date never ends a timed series nor a time
+     * a whole-day one.
      */
     fun rule(zone: String = CalendarsMapping.UTC, allday: Boolean = false): String? {
-        if (!rule.isNullOrBlank()) return rule
+        if (!rule.isNullOrBlank()) return kept(rule, zone, allday)
         if (frequency == Frequency.NEVER) return null
         val parts = mutableListOf("FREQ=" + frequency.name)
         if (interval > 1) parts.add("INTERVAL=$interval")
@@ -78,6 +81,17 @@ data class Recurrence(
             Ending.NEVER -> Unit
         }
         return parts.joinToString(";")
+    }
+
+    /** [rule] with its `UNTIL` in the form the series' start takes. */
+    private fun kept(rule: String, zone: String, allday: Boolean): String {
+        val day = until ?: return rule
+        val parts = rule.split(";")
+        val index = parts.indexOfFirst { it.substringBefore('=').trim().equals("UNTIL", ignoreCase = true) }
+        if (index < 0) return rule
+        val dated = parts[index].substringAfter('=').trim().length == 8
+        if (dated == allday) return rule
+        return parts.toMutableList().apply { this[index] = "UNTIL=" + last(day, zone, allday) }.joinToString(";")
     }
 
     private companion object {

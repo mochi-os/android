@@ -118,6 +118,18 @@ class RecurrenceTest {
         )
     }
 
+    @Test
+    fun `a kept rule takes the end form its start takes when the series turns all day or back`() {
+        val london = "Europe/London"
+        val timed = recurrence("FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930T225959Z", london)
+        assertEquals("FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930", timed.rule(london, allday = true))
+        val whole = recurrence("FREQ=MONTHLY;BYDAY=2TU;UNTIL=20261110", london)
+        assertEquals("FREQ=MONTHLY;BYDAY=2TU;UNTIL=20261110T235959Z", whole.rule(london))
+        // A rule already in the right form goes back as it came.
+        assertEquals("FREQ=WEEKLY;BYDAY=MO;UNTIL=20260930T225959Z", timed.rule(london))
+        assertEquals("FREQ=MONTHLY;BYDAY=2TU;UNTIL=20261110", whole.rule(london, allday = true))
+    }
+
     // ---- the choice a rule reads back as ----
 
     @Test
