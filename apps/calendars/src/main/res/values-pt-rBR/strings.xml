@@ -59,4 +59,5 @@
     <string name="calendars_device_delete_message">O dispositivo não poderá mais sincronizar contatos nem calendários.</string>
     <string name="calendars_device_deleted">Dispositivo excluído</string>
     <string name="calendars_subscribe_google_enable_action">Ativar contas do Google</string>
+    <string name="calendars_list_nothing">Nada planejado. Toque para criar um evento.</string>
 </resources>

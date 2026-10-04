@@ -68,6 +68,7 @@
     <string name="calendars_range">%1$s-ից մինչև %2$s</string>
     <string name="calendars_truncated">Չափազանց շատ միջոցառումներ են՝ բոլորը ցուցադրելու համար։ Ընտրեք ավելի կարճ միջակայք։</string>
     <string name="calendars_list_empty">Միջոցառումներ չկան</string>
+    <string name="calendars_list_nothing">Ոչինչ նախատեսված չէ։ Հպեք՝ իրադարձություն ստեղծելու համար։</string>
     <string name="calendars_untitled">(Առանց վերնագրի)</string>
     <string name="calendars_status_cancelled">Չեղարկված</string>
     <string name="calendars_status_tentative">Նախնական</string>

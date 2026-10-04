@@ -68,6 +68,7 @@
     <string name="calendars_range">ከ%1$s እስከ %2$s</string>
     <string name="calendars_truncated">ሁሉንም ለማሳየት ክስተቶቹ በጣም ብዙ ናቸው። አጭር ክልል ይምረጡ።</string>
     <string name="calendars_list_empty">ምንም ክስተቶች የሉም</string>
+    <string name="calendars_list_nothing">ምንም የታቀደ ነገር የለም። ክስተት ለመፍጠር ይንኩ።</string>
     <string name="calendars_untitled">(ርዕስ የለም)</string>
     <string name="calendars_status_cancelled">ተሰርዟል</string>
     <string name="calendars_status_tentative">ያልተረጋገጠ</string>

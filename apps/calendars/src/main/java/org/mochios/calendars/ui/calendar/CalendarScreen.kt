@@ -230,9 +230,9 @@ fun CalendarScreen(
                     is CalendarEvent.Exported -> snackbar.showSnackbar(
                         resources.getString(if (event.saved) R.string.calendars_exported else R.string.calendars_export_failed),
                     )
-                    is CalendarEvent.Open -> {
-                        selected = event.instance
-                        viewModel.details(event.instance)
+                    is CalendarEvent.Open -> open(event.instance, onEditEvent) { instance ->
+                        selected = instance
+                        viewModel.details(instance)
                     }
                     is CalendarEvent.Done -> snackbar.showSnackbar(resources.getString(event.message))
                 }
@@ -344,7 +344,12 @@ fun CalendarScreen(
                     onView = viewModel::view,
                     onWorkweek = { viewModel.workweek(!uiState.workweek) },
                     searching = searching,
-                    onSearch = { searching = true },
+                    onSearch = {
+                        // Results are listed, so a search from another view
+                        // goes to the list, as the web's box does.
+                        if (uiState.view != CalendarsSection.LIST) viewModel.seek()
+                        searching = true
+                    },
                     onSearchChange = viewModel::search,
                     onSearchClose = {
                         searching = false
@@ -415,8 +420,10 @@ fun CalendarScreen(
                                     viewModel,
                                     selected = selected,
                                     onOpen = { instance ->
-                                        selected = instance
-                                        viewModel.details(instance)
+                                        open(instance, onEditEvent) { shown ->
+                                            selected = shown
+                                            viewModel.details(shown)
+                                        }
                                     },
                                     onNewEvent = onNewEvent,
                                     onMove = { instance, moved ->
@@ -880,7 +887,8 @@ private fun Page(
 
 /**
  * The title, which opens and closes the date panel under it, today, and the
- * view switcher, with a search button before them in the list view. While
+ * view switcher, with a search button before them in every view, which
+ * searches in the list view as the web's box does. While
  * [searching], the bar is a search field instead, with back to close it,
  * which also clears it, and a button to clear what was typed. The title is
  * the month and year of the view's first day, or
@@ -936,13 +944,11 @@ internal fun Toolbar(
             }
         },
         actions = {
-            if (state.view == CalendarsSection.LIST) {
-                MochiIconButton(onClick = onSearch) {
-                    Icon(
-                        Icons.Default.Search,
-                        contentDescription = stringResource(R.string.calendars_list_search),
-                    )
-                }
+            MochiIconButton(onClick = onSearch) {
+                Icon(
+                    Icons.Default.Search,
+                    contentDescription = stringResource(R.string.calendars_list_search),
+                )
             }
             MochiIconButton(onClick = onToday) {
                 Icon(Icons.Outlined.Today, contentDescription = stringResource(R.string.calendars_today))

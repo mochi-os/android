@@ -68,6 +68,7 @@
     <string name="calendars_range">Od %1$s do %2$s</string>
     <string name="calendars_truncated">Preveč dogodkov za prikaz vseh. Izberite krajše obdobje.</string>
     <string name="calendars_list_empty">Brez dogodkov</string>
+    <string name="calendars_list_nothing">Nič ni načrtovano. Tapnite, da ustvarite dogodek.</string>
     <string name="calendars_untitled">(Brez naslova)</string>
     <string name="calendars_status_cancelled">Odpovedano</string>
     <string name="calendars_status_tentative">Začasno</string>

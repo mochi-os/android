@@ -68,6 +68,7 @@
     <string name="calendars_range">Від %1$s до %2$s</string>
     <string name="calendars_truncated">Забагато подій, щоб показати їх усі. Виберіть коротший діапазон.</string>
     <string name="calendars_list_empty">Немає подій</string>
+    <string name="calendars_list_nothing">Нічого не заплановано. Торкніться, щоб створити подію.</string>
     <string name="calendars_untitled">(Без назви)</string>
     <string name="calendars_status_cancelled">Скасовано</string>
     <string name="calendars_status_tentative">Під питанням</string>

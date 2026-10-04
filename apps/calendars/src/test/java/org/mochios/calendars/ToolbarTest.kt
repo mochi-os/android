@@ -26,8 +26,8 @@ import java.time.LocalDate
 
 /**
  * The calendar's toolbar: a month title that opens the date panel, today, the
- * view switcher, and search in the list view, with no arrows, the views
- * paging by a swipe.
+ * view switcher, and search from every view, as the web's box is, with no
+ * arrows, the views paging by a swipe.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "en-rGB-w400dp-h800dp")
@@ -83,10 +83,10 @@ class ToolbarTest {
     }
 
     @Test
-    fun `the other views offer no search`() {
+    fun `the other views offer search too`() {
         show(CalendarsSection.MONTH)
-        val search = rule.onAllNodesWithContentDescription(context.getString(R.string.calendars_list_search))
-        assertEquals(0, search.fetchSemanticsNodes().size)
+        rule.onNodeWithContentDescription(context.getString(R.string.calendars_list_search)).performClick()
+        assertEquals(1, searched)
     }
 
     @Test

@@ -68,6 +68,7 @@
     <string name="calendars_range">%1$s ～ %2$s</string>
     <string name="calendars_truncated">予定が多すぎてすべて表示できません。期間を短くしてください。</string>
     <string name="calendars_list_empty">予定はありません</string>
+    <string name="calendars_list_nothing">予定はありません。タップして予定を作成します。</string>
     <string name="calendars_untitled">（タイトルなし）</string>
     <string name="calendars_status_cancelled">キャンセル済み</string>
     <string name="calendars_status_tentative">未確定</string>

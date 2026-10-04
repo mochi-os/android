@@ -68,6 +68,7 @@
     <string name="calendars_range">%1$s से %2$s तक</string>
     <string name="calendars_truncated">सब देखावे खातिर बहुत जादे कार्यक्रम बा। छोट दायरा चुनीं।</string>
     <string name="calendars_list_empty">कवनो कार्यक्रम नइखे</string>
+    <string name="calendars_list_nothing">कुछो योजना नइखे। कार्यक्रम बनावे खातिर दबाईं।</string>
     <string name="calendars_untitled">(बिना शीर्षक)</string>
     <string name="calendars_status_cancelled">रद्द</string>
     <string name="calendars_status_tentative">अस्थायी</string>

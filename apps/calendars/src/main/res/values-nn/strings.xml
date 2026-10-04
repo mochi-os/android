@@ -67,6 +67,7 @@
     <string name="calendars_range">%1$s til %2$s</string>
     <string name="calendars_truncated">For mange hendingar til å visa alle. Vel eit kortare tidsrom.</string>
     <string name="calendars_list_empty">Ingen hendingar</string>
+    <string name="calendars_list_nothing">Ingenting planlagt. Trykk for å opprette ei hending.</string>
     <string name="calendars_untitled">(Ingen tittel)</string>
     <string name="calendars_status_cancelled">Avlyst</string>
     <string name="calendars_status_tentative">Førebels</string>

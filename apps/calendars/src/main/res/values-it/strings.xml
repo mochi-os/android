@@ -68,6 +68,7 @@
     <string name="calendars_range">da %1$s a %2$s</string>
     <string name="calendars_truncated">Troppi eventi per mostrarli tutti. Scegli un intervallo più breve.</string>
     <string name="calendars_list_empty">Nessun evento</string>
+    <string name="calendars_list_nothing">Niente in programma. Tocca per creare un evento.</string>
     <string name="calendars_untitled">(Senza titolo)</string>
     <string name="calendars_status_cancelled">Annullato</string>
     <string name="calendars_status_tentative">Provvisorio</string>

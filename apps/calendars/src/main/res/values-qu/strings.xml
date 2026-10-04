@@ -68,6 +68,7 @@
     <string name="calendars_range">%1$s manta %2$s kama</string>
     <string name="calendars_truncated">Nishu achka eventokuna llapanta rikuchinapaq. Aswan pisi rangota akllay.</string>
     <string name="calendars_list_empty">Mana eventokuna kanchu</string>
+    <string name="calendars_list_nothing">Mana imapas yuyaykusqachu. Musuq evento kamarinaykipaq ñit\'iy.</string>
     <string name="calendars_untitled">(Mana sutinchayniyuq)</string>
     <string name="calendars_status_cancelled">Chinkachisqa</string>
     <string name="calendars_status_tentative">Manaraq takyachisqa</string>

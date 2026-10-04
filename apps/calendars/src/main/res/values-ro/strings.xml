@@ -67,6 +67,7 @@
     <string name="calendars_range">%1$s până la %2$s</string>
     <string name="calendars_truncated">Prea multe evenimente pentru a le afișa pe toate. Alege un interval mai scurt.</string>
     <string name="calendars_list_empty">Niciun eveniment</string>
+    <string name="calendars_list_nothing">Nimic planificat. Atinge pentru a crea un eveniment.</string>
     <string name="calendars_untitled">(Fără titlu)</string>
     <string name="calendars_status_cancelled">Anulat</string>
     <string name="calendars_status_tentative">Provizoriu</string>

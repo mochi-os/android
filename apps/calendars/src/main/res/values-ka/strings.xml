@@ -68,6 +68,7 @@
     <string name="calendars_range">%1$s-დან %2$s-მდე</string>
     <string name="calendars_truncated">ღონისძიებები ძალიან ბევრია ყველას საჩვენებლად. აირჩიეთ უფრო მოკლე დიაპაზონი.</string>
     <string name="calendars_list_empty">ღონისძიებები არ არის</string>
+    <string name="calendars_list_nothing">არაფერია დაგეგმილი. შეეხეთ მოვლენის შესაქმნელად.</string>
     <string name="calendars_untitled">(სათაურის გარეშე)</string>
     <string name="calendars_status_cancelled">გაუქმებულია</string>
     <string name="calendars_status_tentative">წინასწარი</string>

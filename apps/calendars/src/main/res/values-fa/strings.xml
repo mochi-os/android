@@ -68,6 +68,7 @@
     <string name="calendars_range">%1$s تا %2$s</string>
     <string name="calendars_truncated">رویدادها بیش از آن است که همه نمایش داده شوند. بازه کوتاه‌تری انتخاب کنید.</string>
     <string name="calendars_list_empty">هیچ رویدادی وجود ندارد</string>
+    <string name="calendars_list_nothing">برنامه‌ای وجود ندارد. برای ایجاد رویداد ضربه بزنید.</string>
     <string name="calendars_untitled">(بدون عنوان)</string>
     <string name="calendars_status_cancelled">لغوشده</string>
     <string name="calendars_status_tentative">قطعی نشده</string>

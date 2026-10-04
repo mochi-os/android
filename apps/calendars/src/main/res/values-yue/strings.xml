@@ -77,6 +77,7 @@
     <string name="calendars_span_day">%1$s %2$s 至 %3$s</string>
     <string name="calendars_truncated">活動太多，冇辦法全部顯示。請揀短啲嘅時段。</string>
     <string name="calendars_list_empty">冇活動</string>
+    <string name="calendars_list_nothing">冇安排。點按就可以建立活動。</string>
     <string name="calendars_list_unmatched">冇符合嘅結果</string>
     <string name="calendars_list_earlier">更早嘅活動</string>
     <string name="calendars_list_search_events">搜尋活動</string>

@@ -68,6 +68,7 @@
     <string name="calendars_range">с %1$s по %2$s</string>
     <string name="calendars_truncated">Слишком много событий, чтобы показать все. Выберите более короткий диапазон.</string>
     <string name="calendars_list_empty">Нет событий</string>
+    <string name="calendars_list_nothing">Ничего не запланировано. Коснитесь, чтобы создать событие.</string>
     <string name="calendars_untitled">(Без названия)</string>
     <string name="calendars_status_cancelled">Отменено</string>
     <string name="calendars_status_tentative">Под вопросом</string>
