@@ -243,7 +243,9 @@ private const val LANDING = "landing"
  * along its bottom edge drags its end instead. A bar lifted from the band
  * moves by days, or drops into the grid as a timed event. The grid scrolls
  * while the finger rests near its top or bottom, and turns to the previous
- * or next range, by [onStep], while a lifted occurrence rests at its side.
+ * or next range, by [onStep], while a lifted occurrence rests at its side;
+ * [onLifted] hears when a drag starts and when it ends, so a pager can hold
+ * the page under it while it turns.
  * Letting go asks [onMove] to move the occurrence there, or [onCreate] to
  * start an event over the span, with no finish for a tap or a press that
  * marked nothing out. The occurrence whose summary is open, [selected], is
@@ -271,6 +273,7 @@ fun TimeGrid(
     scroll: ScrollState,
     stacked: Boolean = false,
     onStep: (Int) -> Unit = {},
+    onLifted: (Boolean) -> Unit = {},
     selected: Instance? = null,
     onTop: (Dp) -> Unit = {},
     clock: () -> Long = { Instant.now().epochSecond },
@@ -450,6 +453,10 @@ fun TimeGrid(
         hands.step = onStep
     }
     val haptic = LocalHapticFeedback.current
+    val hearing by rememberUpdatedState(onLifted)
+    LaunchedEffect(drag != null) {
+        hearing(drag != null)
+    }
 
     // The grid scrolls while the finger rests near its top or bottom edge,
     // faster the nearer it is, and turns the page while a lifted occurrence

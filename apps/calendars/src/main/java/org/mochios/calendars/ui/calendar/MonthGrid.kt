@@ -130,7 +130,9 @@ private data class Hold(val instance: Instance, val day: LocalDate, val grab: Of
  * event on that day, and the day number opens the day view. A long press
  * lifts a chip, which then follows the finger from cell to cell; resting it
  * at the top or bottom of the weeks turns to the previous or next range by
- * [onStep], and letting go on another day asks [onMove] to move the
+ * [onStep], with [onLifted] hearing when a drag starts and when it ends so
+ * a pager can hold the page under it, and letting go on another day asks
+ * [onMove] to move the
  * occurrence so that its first day moves by as many days, and that day's
  * cell scrolls to show it once it lands there. The occurrence whose summary
  * is open, [selected], is drawn in the primary colour's tint.
@@ -146,6 +148,7 @@ fun MonthGrid(
     onCreate: (LocalDate) -> Unit,
     onMove: (Instance, LocalDate) -> Unit,
     onStep: (Int) -> Unit = {},
+    onLifted: (Boolean) -> Unit = {},
     selected: Instance? = null,
 ) {
     val today = LocalDate.now(viewModel.timezone())
@@ -203,6 +206,10 @@ fun MonthGrid(
         hands.step = onStep
     }
     val target = if (lift != null) under() else null
+    val hearing by rememberUpdatedState(onLifted)
+    LaunchedEffect(lift != null) {
+        hearing(lift != null)
+    }
 
     // A chip resting at the top or bottom of the weeks turns the page, once
     // and then again each hold.

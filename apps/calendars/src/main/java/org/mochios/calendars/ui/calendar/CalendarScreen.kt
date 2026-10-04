@@ -641,8 +641,31 @@ private fun View(
         val pager = remember { PagerState(currentPage = SWIPE_CENTRE) { SWIPE_PAGES } }
         val target = SWIPE_CENTRE + steps(state.view, base, state.anchor, viewModel::week)
         val anchor by rememberUpdatedState(state.anchor)
+        // A drag resting at a grid's side turns the range under it: the page
+        // holding the drag stays on screen and shows the new range, so the
+        // gesture carries on, and the pager catches up without a slide once
+        // the drag is let go.
+        var dragging by remember { mutableStateOf(false) }
+        var held by remember { mutableStateOf<Int?>(null) }
+        val turn = { direction: Int ->
+            if (held == null) {
+                held = pager.currentPage
+            }
+            if (direction < 0) {
+                viewModel.previous()
+            } else {
+                viewModel.next()
+            }
+        }
 
-        LaunchedEffect(target) {
+        LaunchedEffect(target, dragging) {
+            if (held != null) {
+                if (!dragging) {
+                    pager.scrollToPage(target)
+                    held = null
+                }
+                return@LaunchedEffect
+            }
             if (pager.currentPage != target) {
                 if (abs(pager.currentPage - target) == 1) {
                     pager.animateScrollToPage(target)
@@ -706,7 +729,7 @@ private fun View(
                     }
                     .focusable(),
             ) { page ->
-                val shown = if (page == target) {
+                val shown = if (page == target || page == held) {
                     state
                 } else {
                     state.copy(anchor = step(state.view, base, page - SWIPE_CENTRE))
@@ -724,7 +747,18 @@ private fun View(
                             },
                         ),
                 ) {
-                    Page(shown, viewModel, selected, scroll, onOpen, onNewEvent, onMove, onMoveDay) { offset ->
+                    Page(
+                        shown,
+                        viewModel,
+                        selected,
+                        scroll,
+                        onOpen,
+                        onNewEvent,
+                        onMove,
+                        onMoveDay,
+                        onStep = turn,
+                        onLifted = { lifted -> dragging = lifted },
+                    ) { offset ->
                         if (page == pager.currentPage) {
                             top = offset
                         }
@@ -753,6 +787,8 @@ private const val SWIPE_CENTRE = SWIPE_PAGES / 2
  * with [selected] tinted. [scroll] is the time grid's vertical position. [onMove] is an
  * occurrence dragged in a time grid, with where it went; [onMoveDay] a
  * chip dropped on a day in a month grid, with the occurrence's new first day.
+ * [onStep] turns the range while a drag rests at a grid's side, and
+ * [onLifted] hears when a drag starts and ends.
  * [onTop] is how far down a time grid's hours start, for the hour gutter;
  * [onListed] is the day atop the list view as it scrolls, for the toolbar.
  */
@@ -766,6 +802,8 @@ private fun Page(
     onNewEvent: (Long, Boolean?, Long?) -> Unit,
     onMove: (Instance, Moved) -> Unit,
     onMoveDay: (Instance, LocalDate) -> Unit,
+    onStep: (Int) -> Unit = {},
+    onLifted: (Boolean) -> Unit = {},
     onListed: (LocalDate) -> Unit = {},
     onTop: (Dp) -> Unit = {},
 ) {
@@ -789,6 +827,8 @@ private fun Page(
             onCreate = create,
             onMove = onMove,
             scroll = scroll,
+            onStep = onStep,
+            onLifted = onLifted,
             selected = selected,
             onTop = onTop,
         )
@@ -802,6 +842,8 @@ private fun Page(
                 onMove = onMove,
                 scroll = scroll,
                 stacked = true,
+                onStep = onStep,
+                onLifted = onLifted,
                 selected = selected,
                 onTop = onTop,
             )
@@ -814,6 +856,8 @@ private fun Page(
             onOpen = onOpen,
             onCreate = dated,
             onMove = onMoveDay,
+            onStep = onStep,
+            onLifted = onLifted,
             selected = selected,
         )
         CalendarsSection.MONTH -> MonthGrid(
@@ -824,6 +868,8 @@ private fun Page(
             onOpen = onOpen,
             onCreate = dated,
             onMove = onMoveDay,
+            onStep = onStep,
+            onLifted = onLifted,
             selected = selected,
         )
         // The list view opens on the anchor day and pages on as the reader
