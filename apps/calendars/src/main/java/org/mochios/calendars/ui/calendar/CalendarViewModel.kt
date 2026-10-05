@@ -209,7 +209,10 @@ class CalendarViewModel @Inject constructor(
 
     init {
         val view = calendarsView(LastViewedStore.get(context, CALENDARS_FEATURE).orEmpty())
-        _uiState.value = _uiState.value.copy(view = view)
+        // Today where the user is, as every view measures it, not where the
+        // phone's clock is set.
+        val today = LocalDate.now(zone)
+        _uiState.value = _uiState.value.copy(view = view, anchor = today, focus = today)
         viewModelScope.launch {
             repository.calendarsChanged.collect { reload() }
         }

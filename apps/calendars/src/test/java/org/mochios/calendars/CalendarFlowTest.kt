@@ -445,6 +445,30 @@ class CalendarFlowTest {
         assertFalse("c2" in VisibilityStore.hidden(context))
     }
 
+    // ---- the day it opens on ----
+
+    @Test
+    fun `it opens on today where the user is, not where the phone's clock is`() {
+        // Twenty-six hours apart, so the two are never on the same date.
+        val east = ZoneId.of("Etc/GMT-14")
+        val default = java.util.TimeZone.getDefault()
+        java.util.TimeZone.setDefault(java.util.TimeZone.getTimeZone("Etc/GMT+12"))
+        try {
+            val viewer = object : org.mochios.calendars.di.Viewer {
+                override fun zone(): String = east.id
+                override fun week(): Int = 1
+                override suspend fun server(): String = "https://example.org"
+            }
+            val before = LocalDate.now(east)
+            val model = CalendarViewModel(context, repository, viewer)
+            val after = LocalDate.now(east)
+            assertTrue(model.uiState.value.anchor == before || model.uiState.value.anchor == after)
+            assertEquals(model.uiState.value.anchor, model.uiState.value.focus)
+        } finally {
+            java.util.TimeZone.setDefault(default)
+        }
+    }
+
     // ---- a reply that lands after the state has moved on ----
 
     @Test
