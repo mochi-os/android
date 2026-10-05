@@ -186,7 +186,11 @@ class ContactsViewModel @Inject constructor(
 
     private suspend fun loadBooks() {
         try {
-            _uiState.value = _uiState.value.copy(books = repository.listBooks())
+            // Fetched before the state is read: a copy() argument's receiver
+            // is captured before the suspend, so writing it back would undo
+            // whatever changed while the books were on their way.
+            val books = repository.listBooks()
+            _uiState.value = _uiState.value.copy(books = books)
         } catch (_: Exception) {
             // The books are the drawer's contents, not the screen's: a failed
             // fetch leaves the drawer with "All contacts" alone.

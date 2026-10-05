@@ -197,9 +197,10 @@ class ModerationViewModel @Inject constructor(
                 // rather than standing on a value the server refused.
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
                 try {
-                    _uiState.value = _uiState.value.copy(
-                        settings = repository.moderationSettings(forumId),
-                    )
+                    // Awaited first, as loadTab does: the error shown above may
+                    // be cleared while this read is on its way.
+                    val held = repository.moderationSettings(forumId)
+                    _uiState.value = _uiState.value.copy(settings = held)
                 } catch (_: Exception) {
                 }
             }
