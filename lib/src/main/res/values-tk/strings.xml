@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\" üçin giriş düzgüni aýrylsynmy?</string>
     <string name="color_picker_custom">Hususy</string>
     <string name="color_picker_clear">Arassalamak</string>
+    <string name="common_refresh">Täzele</string>
 </resources>

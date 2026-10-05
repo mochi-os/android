@@ -84,6 +84,7 @@
     <string name="common_delete">Delete</string>
     <string name="common_add">Add</string>
     <string name="common_retry">Retry</string>
+    <string name="common_refresh">Refresh</string>
     <string name="common_more_options">More options</string>
     <string name="common_notifications">Notifications</string>
     <string name="common_logout">Log out</string>

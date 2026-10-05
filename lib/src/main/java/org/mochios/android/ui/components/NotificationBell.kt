@@ -23,6 +23,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -63,21 +64,38 @@ fun NotificationBell(onClick: () -> Unit) {
                 contentDescription = stringResource(R.string.notifications_open),
             )
         }
-        if (count > 0) {
-            Box(
-                modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .offset(x = (-4).dp, y = 4.dp)
-                    .clip(CircleShape)
-                    .background(MaterialTheme.colorScheme.error)
-                    .padding(horizontal = 5.dp, vertical = 1.dp),
-            ) {
-                Text(
-                    text = if (count > 99) "99+" else count.toString(),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onError,
-                )
-            }
-        }
+        CountBadge(
+            count = count,
+            container = MaterialTheme.colorScheme.error,
+            content = MaterialTheme.colorScheme.onError,
+            modifier = Modifier.align(Alignment.TopEnd),
+        )
+    }
+}
+
+/**
+ * A count on the corner of a top bar icon: "99+" past two digits, and nothing
+ * at zero. Align it [Alignment.TopEnd] in a box around the icon's button.
+ */
+@Composable
+internal fun CountBadge(
+    count: Int,
+    container: Color,
+    content: Color,
+    modifier: Modifier = Modifier,
+) {
+    if (count <= 0) return
+    Box(
+        modifier = modifier
+            .offset(x = (-4).dp, y = 4.dp)
+            .clip(CircleShape)
+            .background(container)
+            .padding(horizontal = 5.dp, vertical = 1.dp),
+    ) {
+        Text(
+            text = if (count > 99) "99+" else count.toString(),
+            style = MaterialTheme.typography.labelSmall,
+            color = content,
+        )
     }
 }

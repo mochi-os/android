@@ -324,4 +324,5 @@
     <string name="access_remove_message">Fjarlægja aðgangsreglu fyrir „%1$s“?</string>
     <string name="color_picker_custom">Sérsniðið</string>
     <string name="color_picker_clear">Hreinsa</string>
+    <string name="common_refresh">Endurnýja</string>
 </resources>

@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.update
 import java.util.concurrent.ConcurrentHashMap
 
 /**
- * The count behind the "new posts" pill. Websocket frames arrive on the
+ * The count on the refresh button's badge. Websocket frames arrive on the
  * socket's own thread, so both the seen set and the counter have to be safe
  * to touch from there.
  */
@@ -27,7 +27,7 @@ internal class NewPosts {
      * it always counts. Otherwise count the post once, and only when it is not
      * already on screen — RSS ingestion inserts the row immediately but defers
      * the frame until tagging finishes, so a load in between sees the post
-     * before its frame and counting it would raise a phantom pill.
+     * before its frame and counting it would raise a phantom count.
      */
     fun record(post: String?, loaded: (String) -> Boolean) {
         if (post.isNullOrEmpty()) {

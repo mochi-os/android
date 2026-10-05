@@ -325,4 +325,5 @@
     <string name="access_remove_message">Уклонити правило приступа за „%1$s“?</string>
     <string name="color_picker_custom">Прилагођено</string>
     <string name="color_picker_clear">Очисти</string>
+    <string name="common_refresh">Освежи</string>
 </resources>

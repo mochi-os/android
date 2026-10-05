@@ -124,7 +124,6 @@
     <string name="feeds_ai_prompt_rank">Դասակարգում / գնահատում</string>
     <string name="feeds_ai_prompt_credibility">Արժանահավատության գնահատում</string>
 
-    <string name="feeds_refresh">Թարմացնել</string>
     <string name="feeds_interest_boosted">Հետաքրքրությունը բարձրացվեց</string>
     <string name="feeds_interest_reduced">Հետաքրքրությունը նվազեցվեց</string>
     <string name="feeds_interest_removed">Հետաքրքրությունը հեռացվեց</string>

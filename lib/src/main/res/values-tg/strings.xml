@@ -324,4 +324,5 @@
     <string name="access_remove_message">Қоидаи дастрасӣ барои «%1$s» нест карда шавад?</string>
     <string name="color_picker_custom">Танзимшаванда</string>
     <string name="color_picker_clear">Тоза кардан</string>
+    <string name="common_refresh">Нав кардан</string>
 </resources>

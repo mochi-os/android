@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\" لاءِ رسائي جو قاعدو هٽايو؟</string>
     <string name="color_picker_custom">ڪسٽم</string>
     <string name="color_picker_clear">صاف ڪريو</string>
+    <string name="common_refresh">ريفريش</string>
 </resources>

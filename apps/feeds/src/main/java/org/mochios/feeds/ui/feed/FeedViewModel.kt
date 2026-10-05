@@ -26,6 +26,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.MentionSuggestion
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.model.WebSocketEvent
@@ -102,8 +103,8 @@ class FeedViewModel @Inject constructor(
      *  each post card can show its bookmark filled/empty without awaiting. */
     val savedIds: StateFlow<Set<String>> = savedRepository.savedIds
 
-    /** Count of real-time new posts queued behind the "new posts" pill rather
-     *  than injected into the pager while the user is reading. */
+    /** Count of real-time new posts queued behind the refresh button's badge
+     *  rather than injected into the pager while the user is reading. */
     private val newPosts = NewPosts()
     val newPostsCount: StateFlow<Int> = newPosts.count
 
@@ -204,6 +205,13 @@ class FeedViewModel @Inject constructor(
     private val subscriptions = mutableListOf<String>()
     private var markReadJob: Job? = null
     private val pendingReads = PendingReads()
+
+    /** The furthest post the reader has landed on in the list as it stands;
+     *  a reload they did not ask for leaves the list alone up to it. */
+    private var reached: String? = null
+
+    /** The pending re-fetch of each post a frame has touched; see [patch]. */
+    private val patches = mutableMapOf<String, Job>()
 
     // Upgraded hero image URLs per post id, resolved lazily as pages come
     // into view. "" = resolved, nothing better than the stored thumbnail.
@@ -508,8 +516,10 @@ class FeedViewModel @Inject constructor(
                     nextCursor = result.nextCursor
 
                 }
-                // The fresh list incorporates any queued posts — a pill left
-                // up would just re-show posts the user now has.
+                // The reader asked for the list as it now is, from the top.
+                reached = null
+                // The fresh list incorporates any queued posts — a count left
+                // up would just promise posts the user now has.
                 newPosts.clear()
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
@@ -804,7 +814,11 @@ class FeedViewModel @Inject constructor(
      * threshold; ids batch so a fast scroll is one request.
      */
     fun onPostBottomViewed(postId: String) {
-        if (_posts.value.find { it.id == postId }?.read != 0L) return
+        val posts = _posts.value
+        if (posts.indexOfFirst { it.id == postId } > posts.indexOfFirst { it.id == reached }) {
+            reached = postId
+        }
+        if (posts.find { it.id == postId }?.read != 0L) return
         pendingReads.add(postId)
         if (markReadJob?.isActive == true) return
         markReadJob = viewModelScope.launch {
@@ -830,7 +844,7 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deletePost(feedId, postId)
-                _posts.value = _posts.value.filterNot { it.id == postId }
+                drop(postId)
             } catch (_: Exception) {
                 refresh()
             }
@@ -921,6 +935,7 @@ class FeedViewModel @Inject constructor(
                     _hasMore.value = result.hasMore
                     nextCursor = result.nextCursor
                 }
+                reached = null
             } catch (_: Exception) {
                 // Keep existing data
             } finally {
@@ -936,7 +951,7 @@ class FeedViewModel @Inject constructor(
         if (isAllFeeds) {
             // The aggregate has no entity of its own, so it subscribes to
             // every subscribed feed's channel — the same fan-out web's
-            // feeds-list page does. Without this the pill never appears and
+            // feeds-list page does. Without this the count never appears and
             // the timeline only moves on a manual refresh.
             viewModelScope.launch {
                 val feeds = try {
@@ -973,31 +988,71 @@ class FeedViewModel @Inject constructor(
             "post/create" -> newPosts.record(event.post) { id ->
                 _posts.value.any { it.id == id }
             }
-            "post/edit", "post/delete",
+            "post/delete" -> {
+                val post = event.post
+                viewModelScope.launch { if (post.isNullOrEmpty()) refreshSilently() else drop(post) }
+            }
+            "post/edit",
             "comment/create", "comment/edit", "comment/delete",
             "react/post", "react/comment", "tag/add", "tag/remove" -> {
-                viewModelScope.launch { refreshSilently() }
+                val post = event.post
+                viewModelScope.launch { if (post.isNullOrEmpty()) refreshSilently() else patch(post) }
             }
         }
     }
 
+    /**
+     * Re-fetch [postId] in place, for a frame saying something about it has
+     * changed: reloading the list instead would reorder it under the reader.
+     * Waits [REFRESH_DEBOUNCE] first, so a burst of frames about one post - a
+     * frame per tag as it is tagged - makes one fetch. A post that is not in
+     * the list has nothing to patch.
+     */
+    private fun patch(postId: String) {
+        patches.remove(postId)?.cancel()
+        patches[postId] = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            patches.remove(postId)
+            val post = _posts.value.find { it.id == postId } ?: return@launch
+            try {
+                refreshPostQuietly(post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { feedId }, postId)
+            } catch (_: Exception) {
+                // The post keeps what it showed.
+            }
+        }
+    }
+
+    /**
+     * Take [postId] out of the list. The post that moves onto its page, if the
+     * reader was on it, is where they now are.
+     */
+    private fun drop(postId: String) {
+        val posts = _posts.value
+        val index = posts.indexOfFirst { it.id == postId }
+        if (index < 0) return
+        if (reached == postId) {
+            reached = (posts.getOrNull(index + 1) ?: posts.getOrNull(index - 1))?.id
+        }
+        _posts.value = posts.filterNot { it.id == postId }
+    }
+
+    /**
+     * Reload the list without the reader having asked: on returning to the
+     * app, or behind a cached list. What they have reached stays as it is -
+     * see [mergeReload].
+     */
     private suspend fun refreshSilently() {
         try {
             val result = fetchPosts(forceRefresh = true)
-            _posts.value = result.posts
+            val merged = mergeReload(_posts.value, result.posts, reached) ?: return
+            _posts.value = merged
             _hasMore.value = result.hasMore
             nextCursor = result.nextCursor
-            // The fresh list incorporates any queued posts — clear the pill.
+            // The fresh list incorporates any queued posts — clear the count.
             newPosts.clear()
         } catch (_: Exception) {
             // Silent failure
         }
-    }
-
-    /** Reveal the queued new posts: refresh the list and clear the pill. The
-     *  screen also scrolls the pager to the top when this is invoked. */
-    fun showNewPosts() {
-        viewModelScope.launch { refreshSilently() }
     }
 
     /**
@@ -1029,10 +1084,7 @@ class FeedViewModel @Inject constructor(
         }
         viewModelScope.launch {
             if (isAllFeeds) {
-                try {
-                    loadAllFeeds()
-                } catch (_: Exception) {
-                }
+                refreshSilently()
             } else if (feedId.isNotBlank()) {
                 refreshFeedInfo()
                 refreshSilently()

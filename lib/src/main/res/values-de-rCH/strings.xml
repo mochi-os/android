@@ -266,4 +266,5 @@
     <string name="common_preview">Vorschau</string>
     <string name="rss_revoke_confirm">Widerrufen</string>
     <string name="access_remove">Entfernen</string>
+    <string name="common_refresh">Neu laden</string>
 </resources>

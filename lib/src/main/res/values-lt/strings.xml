@@ -326,4 +326,5 @@
     <string name="access_remove_message">Pašalinti prieigos taisyklę „%1$s“?</string>
     <string name="color_picker_custom">Pasirinktinis</string>
     <string name="color_picker_clear">Išvalyti</string>
+    <string name="common_refresh">Atnaujinti</string>
 </resources>

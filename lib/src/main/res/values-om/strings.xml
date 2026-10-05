@@ -324,4 +324,5 @@
     <string name="access_remove_message">Seera argannoo \"%1$s\" haquu?</string>
     <string name="color_picker_custom">Mataa keetiin</string>
     <string name="color_picker_clear">Cilliisi</string>
+    <string name="common_refresh">Haaromsi</string>
 </resources>

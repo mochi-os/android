@@ -12,6 +12,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -112,8 +113,8 @@ class ForumViewModel @Inject constructor(
      *  each post card can show its bookmark filled/empty without awaiting. */
     val savedIds: StateFlow<Set<String>> = savedRepository.savedIds
 
-    /** Count of real-time new posts queued behind the "new posts" pill rather
-     *  than injected into the list while the user is reading. */
+    /** Count of real-time new posts queued behind the refresh button's badge
+     *  rather than injected into the list while the user is reading. */
     private val _newPostsCount = MutableStateFlow(0)
     val newPostsCount: StateFlow<Int> = _newPostsCount.asStateFlow()
 
@@ -214,10 +215,10 @@ class ForumViewModel @Inject constructor(
                 )
                 return@subscribe
             }
-            // New posts queue behind the pill so the list doesn't shift;
+            // New posts queue behind the count so the list doesn't shift;
             // everything else mutates visible items, so refresh silently.
             if (event.type == "post/create") {
-                // The user's own post shouldn't hide behind a pill they'd have to
+                // The user's own post shouldn't hide behind a count they'd have to
                 // tap. It arrives here when the create response beat the list
                 // query — pull it in rather than counting it.
                 if (awaitingOwnPost) {
@@ -260,8 +261,9 @@ class ForumViewModel @Inject constructor(
         null
     }
 
-    /** Pull the latest list silently (no spinner) and clear the new-posts pill,
-     *  since the fresh list already incorporates any queued posts. */
+    /** Pull the latest list silently (no spinner) and clear the new-posts count,
+     *  since the fresh list already incorporates any queued posts. It may have
+     *  replaced a [refresh] under way, whose spinner is then this one's to end. */
     private suspend fun refreshSilently() {
         try {
             val previousCount = _uiState.value.posts.size
@@ -277,21 +279,17 @@ class ForumViewModel @Inject constructor(
                 canModerate = r.can_moderate,
                 hasMore = r.hasMore,
                 nextCursor = r.nextCursor,
+                isRefreshing = false,
             )
             // The awaited post has landed once the list grows; anything arriving
-            // after this belongs to somebody else and gets the pill.
+            // after this belongs to somebody else and gets counted.
             if (r.posts.size > previousCount) awaitingOwnPost = false
             _newPostsCount.value = 0
             loadTags()
-        } catch (_: Exception) {}
-    }
-
-    /** Reveal the queued new posts: refresh the list and clear the pill. The
-     *  screen also scrolls to the top when this is invoked. */
-    fun showNewPosts() {
-        refreshJob?.cancel()
-        refreshJob = viewModelScope.launch {
-            refreshSilently()
+        } catch (_: Exception) {
+            // Cancelled, a newer refresh has the state now.
+            currentCoroutineContext().ensureActive()
+            _uiState.value = _uiState.value.copy(isRefreshing = false)
         }
     }
 
@@ -375,6 +373,9 @@ class ForumViewModel @Inject constructor(
                     isRefreshing = false,
                     error = null
                 )
+                // The fresh list incorporates any queued posts — a count left
+                // up would just promise posts the user now has.
+                _newPostsCount.value = 0
             } catch (e: Exception) {
                 ensureActive()
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())

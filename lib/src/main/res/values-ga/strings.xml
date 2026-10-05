@@ -327,4 +327,5 @@
     <string name="access_remove_message">An bhfuil fonn ort riail rochtana \"%1$s\" a bhaint?</string>
     <string name="color_picker_custom">Saincheaptha</string>
     <string name="color_picker_clear">Glan</string>
+    <string name="common_refresh">Athnuaigh</string>
 </resources>

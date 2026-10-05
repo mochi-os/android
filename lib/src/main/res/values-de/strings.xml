@@ -324,4 +324,5 @@
     <string name="access_remove_message">Zugriffsregel für „%1$s“ entfernen?</string>
     <string name="color_picker_custom">Benutzerdefiniert</string>
     <string name="color_picker_clear">Leeren</string>
+    <string name="common_refresh">Aktualisieren</string>
 </resources>

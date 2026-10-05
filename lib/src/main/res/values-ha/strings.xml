@@ -324,4 +324,5 @@
     <string name="access_remove_message">A cire ka\'idar shiga don \"%1$s\"?</string>
     <string name="color_picker_custom">Na musamman</string>
     <string name="color_picker_clear">Share</string>
+    <string name="common_refresh">Sabuntawa</string>
 </resources>

@@ -124,7 +124,6 @@
     <string name="feeds_ai_prompt_rank">Rango / puntaje</string>
     <string name="feeds_ai_prompt_credibility">Credibilidad chaninchay</string>
 
-    <string name="feeds_refresh">Musuqchay</string>
     <string name="feeds_interest_boosted">Munay wichachisqa</string>
     <string name="feeds_interest_reduced">Munay pisiyachisqa</string>
     <string name="feeds_interest_removed">Munay qichusqa</string>

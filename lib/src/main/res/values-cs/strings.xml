@@ -326,4 +326,5 @@
     <string name="access_remove_message">Odebrat pravidlo přístupu pro „%1$s“?</string>
     <string name="color_picker_custom">Vlastní</string>
     <string name="color_picker_clear">Vymazat</string>
+    <string name="common_refresh">Obnovit</string>
 </resources>

@@ -326,4 +326,5 @@
     <string name="access_remove_message">Ali želite odstraniti pravilo dostopa za »%1$s«?</string>
     <string name="color_picker_custom">Po meri</string>
     <string name="color_picker_clear">Počisti</string>
+    <string name="common_refresh">Osveži</string>
 </resources>

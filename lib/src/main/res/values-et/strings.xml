@@ -324,4 +324,5 @@
     <string name="access_remove_message">Kas eemaldada juurdepääsureegel „%1$s“ jaoks?</string>
     <string name="color_picker_custom">Kohandatud</string>
     <string name="color_picker_clear">Tühjenda</string>
+    <string name="common_refresh">Värskenda</string>
 </resources>

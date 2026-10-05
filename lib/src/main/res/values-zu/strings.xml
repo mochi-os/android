@@ -324,4 +324,5 @@
     <string name="access_remove_message">Susa umthetho wokufinyelela we-\"%1$s\"?</string>
     <string name="color_picker_custom">Okuzenzelwe</string>
     <string name="color_picker_clear">Sula</string>
+    <string name="common_refresh">Vuselela</string>
 </resources>

@@ -324,4 +324,5 @@
     <string name="access_remove_message">የ\"%1$s\" የመዳረሻ ደንብ ይወገድ?</string>
     <string name="color_picker_custom">ብጁ</string>
     <string name="color_picker_clear">አጽዳ</string>
+    <string name="common_refresh">አድስ</string>
 </resources>

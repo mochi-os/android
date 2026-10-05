@@ -325,4 +325,5 @@
     <string name="access_remove_message">Rimuovere la regola di accesso per «%1$s»?</string>
     <string name="color_picker_custom">Personalizzato</string>
     <string name="color_picker_clear">Cancella</string>
+    <string name="common_refresh">Aggiorna</string>
 </resources>

@@ -324,4 +324,5 @@
     <string name="access_remove_message">Susa umthetho wofikelelo we-\"%1$s\"?</string>
     <string name="color_picker_custom">Yezifiso</string>
     <string name="color_picker_clear">Cima</string>
+    <string name="common_refresh">Vuselela</string>
 </resources>

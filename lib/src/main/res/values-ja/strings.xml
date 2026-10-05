@@ -324,4 +324,5 @@
     <string name="access_remove_message">「%1$s」のアクセスルールを削除しますか？</string>
     <string name="color_picker_custom">カスタム</string>
     <string name="color_picker_clear">クリア</string>
+    <string name="common_refresh">更新</string>
 </resources>

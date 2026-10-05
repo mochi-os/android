@@ -324,4 +324,5 @@
     <string name="access_remove_message">Հեռացնե՞լ «%1$s»-ի մուտքի կանոնը։</string>
     <string name="color_picker_custom">Հատուկ</string>
     <string name="color_picker_clear">Մաքրել</string>
+    <string name="common_refresh">Թարմացնել</string>
 </resources>

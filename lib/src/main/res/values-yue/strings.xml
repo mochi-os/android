@@ -324,4 +324,5 @@
     <string name="access_remove_message">要移除「%1$s」嘅存取規則？</string>
     <string name="color_picker_custom">自訂</string>
     <string name="color_picker_clear">清除</string>
+    <string name="common_refresh">重新整理</string>
 </resources>

@@ -324,4 +324,5 @@
     <string name="access_remove_message">Alisin ang panuntunan sa access para sa \"%1$s\"?</string>
     <string name="color_picker_custom">Pasadya</string>
     <string name="color_picker_clear">Burahin</string>
+    <string name="common_refresh">I-refresh</string>
 </resources>

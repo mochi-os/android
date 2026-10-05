@@ -325,4 +325,5 @@
     <string name="access_remove_message">\"%1$s\" үшін қатынау ережесі жойылсын ба?</string>
     <string name="color_picker_custom">Реттелетін</string>
     <string name="color_picker_clear">Тазалау</string>
+    <string name="common_refresh">Жаңарту</string>
 </resources>

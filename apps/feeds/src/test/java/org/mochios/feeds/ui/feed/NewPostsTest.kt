@@ -9,14 +9,14 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
- * `post/create` frames arrive on the websocket's own thread, so the pill's
+ * `post/create` frames arrive on the websocket's own thread, so the badge's
  * counter is incremented off the main thread and has to survive that.
  */
 class NewPostsTest {
     private val nothingLoaded: (String) -> Boolean = { false }
 
     @Test
-    fun `every frame counts once, and a reload clears the pill`() {
+    fun `every frame counts once, and a reload clears the count`() {
         val posts = NewPosts()
         posts.record("p1", nothingLoaded)
         posts.record("p1", nothingLoaded)
@@ -29,7 +29,7 @@ class NewPostsTest {
     }
 
     @Test
-    fun `a post already on screen raises no pill`() {
+    fun `a post already on screen raises no count`() {
         val posts = NewPosts()
         posts.record("p1") { it == "p1" }
         assertEquals(0, posts.count.value)

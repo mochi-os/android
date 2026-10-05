@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\" üçün giriş qaydası silinsin?</string>
     <string name="color_picker_custom">Xüsusi</string>
     <string name="color_picker_clear">Təmizlə</string>
+    <string name="common_refresh">Yenilə</string>
 </resources>

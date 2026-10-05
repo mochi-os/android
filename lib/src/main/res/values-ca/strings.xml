@@ -326,4 +326,5 @@
     <string name="access_remove_message">Voleu eliminar la regla d\'accés per a «%1$s»?</string>
     <string name="color_picker_custom">Personalitzat</string>
     <string name="color_picker_clear">Esborra</string>
+    <string name="common_refresh">Actualitza</string>
 </resources>

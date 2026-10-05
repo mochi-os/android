@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\" का लागि पहुँच नियम हटाउने?</string>
     <string name="color_picker_custom">अनुकूलन</string>
     <string name="color_picker_clear">खाली गर्नुहोस्</string>
+    <string name="common_refresh">रिफ्रेस गर्नुहोस्</string>
 </resources>
