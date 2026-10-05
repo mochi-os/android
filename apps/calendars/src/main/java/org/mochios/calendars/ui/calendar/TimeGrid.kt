@@ -1219,12 +1219,10 @@ fun Block(
  * the cards' own tone in an outline, dashed for a tentative occurrence, so
  * it reads over the entries it passes. On one line it reads dot,
  * title, marks and [time] when given; [stacked], as a timed occurrence within
- * a day is drawn in a month or multiweek cell, puts the time and marks on a
- * second line beneath the title. [filled], as the month and multiweek
- * views draw it, it is instead a card in the occurrence's colour, as the
- * week view's blocks are, with its title alone in white on one line. [lift]
- * comes after the tap in the chain, so a long press that lifts the chip takes
- * its events before the tap can.
+ * a day is drawn in a month or multiweek cell, puts the dot, the time and the
+ * marks on a line of their own and the title beneath them, with the line's
+ * whole width. [lift] comes after the tap in the chain, so a long press that
+ * lifts the chip takes its events before the tap can.
  */
 @Composable
 fun Chip(
@@ -1234,31 +1232,10 @@ fun Chip(
     time: String? = null,
     chosen: Boolean = false,
     raised: Boolean = false,
-    filled: Boolean = false,
     lift: Modifier = Modifier,
     onClick: () -> Unit,
 ) {
-    val shape = if (filled) corners(SNUG) else corners()
-    if (filled) {
-        val colour = instance.colour.toColour(MaterialTheme.colorScheme.primary)
-        val ink = if (instance.tentative) {
-            Ink(MaterialTheme.colorScheme.onSurface, MaterialTheme.colorScheme.onSurfaceVariant)
-        } else {
-            Ink(Color.White, Color.White.copy(alpha = 0.85f))
-        }
-        Box(
-            modifier = modifier
-                .filled(shape, colour, instance.tentative, chosen)
-                .clickable(onClick = onClick)
-                .then(lift),
-            contentAlignment = Alignment.CenterStart,
-        ) {
-            CompositionLocalProvider(LocalInk provides ink) {
-                Fitted(instance, MaterialTheme.typography.labelSmall, 1, Modifier.padding(horizontal = 4.dp))
-            }
-        }
-        return
-    }
+    val shape = corners()
     val tint = MaterialTheme.colorScheme.primary.copy(alpha = TINT)
     Box(
         modifier = modifier
@@ -1276,8 +1253,8 @@ fun Chip(
         if (stacked) {
             val style = MaterialTheme.typography.labelSmall.packed()
             Column(modifier = Modifier.padding(horizontal = 4.dp)) {
-                Title(instance, style)
                 Detail(instance, time, style)
+                Name(instance, style, Modifier.fillMaxWidth())
             }
         } else {
             Line(
@@ -1374,34 +1351,23 @@ internal fun Glyph(mark: Mark, size: Dp) {
     )
 }
 
-/** The first of a stacked entry's lines: its [Dot] and its [Name], cut short with an ellipsis. */
-@Composable
-fun Title(instance: Instance, style: TextStyle, modifier: Modifier = Modifier) {
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(GAP),
-    ) {
-        if (LocalInk.current == null) {
-            Dot(instance)
-        }
-        Name(instance, style, Modifier.weight(1f))
-    }
-}
-
 /**
- * The second of a stacked entry's lines, muted and starting under the title
- * rather than the dot: [time] when there is one, then the marks, all from
- * the start of the line.
+ * The line of a two-line entry that is not its title, muted: its [Dot] when
+ * the entry stands on the grid itself, [time] when there is one, then the
+ * marks, all from the start of the line, the dot as far from the time as a
+ * one-line entry's is from its title.
  */
 @Composable
 fun Detail(instance: Instance, time: String?, style: TextStyle, modifier: Modifier = Modifier, backwards: Boolean = false) {
     val ink = LocalInk.current
     Row(
-        modifier = modifier.padding(start = if (ink == null) DOT + GAP else 0.dp),
+        modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GAP),
     ) {
+        if (ink == null) {
+            Dot(instance)
+        }
         if (time != null) {
             Text(
                 text = time,
@@ -1527,15 +1493,10 @@ fun TextStyle.packed(): TextStyle = if (fontSize.isSp) copy(lineHeight = fontSiz
 /**
  * The corner every block and bar takes: the user's own radius, but no
  * rounder than [most], [CORNER] by default, which keeps a short block or a
- * one-line bar from turning into a pill. A filled one-line chip in a month
- * or multiweek cell takes [SNUG], so at its height it rounds as a tall
- * block's corner does at [CORNER].
+ * one-line bar from turning into a pill.
  */
 @Composable
 fun corners(most: Dp = CORNER): Shape = RoundedCornerShape(minOf(LocalEntityRadius.current, most))
-
-/** The corner of a filled chip in a month or multiweek cell. */
-internal val SNUG = 3.dp
 
 /**
  * The colours an entry's words take on a card filled with its own colour:

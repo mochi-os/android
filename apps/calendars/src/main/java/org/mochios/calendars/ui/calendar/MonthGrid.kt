@@ -384,9 +384,10 @@ fun MonthGrid(
             ) {
                 Chip(
                     lifted.instance,
-                    Modifier.fillMaxWidth().shadow(6.dp, corners(SNUG)),
+                    Modifier.fillMaxWidth().shadow(6.dp, corners()),
+                    stacked = !look.bar,
+                    time = if (look.time) clock(lifted.instance, viewModel) else null,
                     raised = true,
-                    filled = true,
                 ) {}
             }
         }
@@ -503,10 +504,13 @@ private fun Cell(
         // order the user chose, each group scrolling on its own. The upper one
         // is held so that one entry of the lower stays in view.
         val entries = instances.map { it to look(it, viewModel.day(it), viewModel.finish(it), day) }
+        // A bar is one line; a timed entry is two, its dot, time and marks
+        // above its title.
         val line = leading(MaterialTheme.typography.labelSmall)
+        val pair = leading(MaterialTheme.typography.labelSmall.packed()) * 2
         val groups = stack(
             Group(entries.filter { it.second.bar }, line),
-            Group(entries.filterNot { it.second.bar }, line),
+            Group(entries.filterNot { it.second.bar }, pair),
             allday,
         ).filter { it.entries.isNotEmpty() }
 
@@ -526,7 +530,8 @@ private fun Cell(
                     .fillMaxWidth()
                     .bringIntoViewRequester(requester)
                     .alpha(opacity(carried = same(instance, lifted), over = viewModel.past(instance), cancelled = instance.cancelled)),
-                filled = true,
+                stacked = !look.bar,
+                time = if (look.time) clock(instance, viewModel) else null,
                 chosen = same(instance, selected),
                 lift = Modifier.lift(instance, onLift, onHold),
             ) { onOpen(instance) }
@@ -569,6 +574,14 @@ private fun Cell(
         }
     }
 }
+
+/**
+ * An occurrence's start as a month or multiweek cell writes it, in its own
+ * zone when the views read events in theirs.
+ */
+@Composable
+private fun clock(instance: Instance, viewModel: CalendarViewModel): String =
+    LocalFormat.current.formatTime(instance.start, clockZone(instance.zone?.start, viewModel.zones()))
 
 /** One of a cell's two groups: its entries, and how tall each one is. */
 private data class Group(val entries: List<Pair<Instance, Look>>, val height: Dp)

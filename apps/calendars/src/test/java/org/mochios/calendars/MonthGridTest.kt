@@ -10,6 +10,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.toPixelMap
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.getOrNull
+import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.click
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -19,6 +22,8 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -163,6 +168,8 @@ class MonthGridTest {
         finish = day.atTime(11, 0).atZone(london).toEpochSecond(),
     )
 
+    private fun px(dp: Dp): Float = with(rule.density) { dp.toPx() }
+
     private fun bounds(tag: String): Rect = rule.onNodeWithTag(tag).fetchSemanticsNode().boundsInRoot
 
     /**
@@ -228,6 +235,69 @@ class MonthGridTest {
         assertEquals(41, number(LocalDate.of(2026, 10, 4)))
         assertEquals(41, number(LocalDate.of(2026, 10, 3)))
         assertEquals(41, number(LocalDate.of(2026, 10, 5)))
+    }
+
+    // ---- how an entry reads ----
+
+    /** An entry's own bounds, the clickable node that holds its words. */
+    private fun entry(title: String): Rect = rule.onNodeWithText(title).fetchSemanticsNode().boundsInRoot
+
+    /** The bounds of an entry's title text alone. */
+    private fun words(title: String): Rect =
+        rule.onAllNodesWithText(title, useUnmergedTree = true).fetchSemanticsNodes().last().boundsInRoot
+
+    /** The bounds of the first text that reads as a clock, such as "10:00 AM". */
+    private fun clock(): Rect = rule.onAllNodes(
+        SemanticsMatcher("a clock reading") { node ->
+            node.config.getOrNull(SemanticsProperties.Text).orEmpty().any { Regex("^\\d{1,2}[:.]\\d{2}").containsMatchIn(it.text) }
+        },
+        useUnmergedTree = true,
+    ).fetchSemanticsNodes().first().boundsInRoot
+
+    @Test
+    fun `a timed entry puts its dot and time on the first line and its title alone on the second`() {
+        show(listOf(meeting(LocalDate.of(2026, 10, 14))))
+        val chip = entry("Stand-up")
+        val title = words("Stand-up")
+        val time = clock()
+        assertTrue(time.bottom <= title.top + 1f)
+        // The title starts at the entry's padding, with no dot before it;
+        // the dot and its gap come before the time instead.
+        assertEquals(px(4.dp), title.left - chip.left, 1.5f)
+        assertEquals(px(4.dp + 8.dp + 4.dp), time.left - chip.left, 1.5f)
+    }
+
+    @Test
+    fun `the dot sits on the time's line, before the time`() {
+        show(listOf(meeting(LocalDate.of(2026, 10, 14))))
+        val chip = entry("Stand-up")
+        val row = (clock().center.y - chip.top).toInt()
+        val pixels = rule.onNodeWithText("Stand-up").captureToImage().toPixelMap()
+        // Where the dot is, against the empty end of the same line.
+        assertNotEquals(pixels[pixels.width - 2, row], pixels[px(8.dp).toInt(), row])
+    }
+
+    @Test
+    fun `a timed entry beneath a full band of bars keeps both its lines in view`() {
+        val alone = LocalDate.of(2026, 10, 14)
+        val crowded = LocalDate.of(2026, 10, 21)
+        val midnight = crowded.atStartOfDay(london).toEpochSecond()
+        val bars = (1..6).map { index ->
+            Instance(event = "b$index", calendar = "c1", summary = "Bar $index", allday = true, date = crowded.toString(), start = midnight, finish = midnight + 86400)
+        }
+        show(bars + meeting(alone) + meeting(crowded).copy(event = "e2", summary = "Crowded"))
+        assertEquals(entry("Stand-up").height, entry("Crowded").height, 1f)
+    }
+
+    @Test
+    fun `an all-day entry stays one line, its dot before its title`() {
+        val day = LocalDate.of(2026, 10, 14)
+        val midnight = day.atStartOfDay(london).toEpochSecond()
+        show(listOf(Instance(event = "a1", calendar = "c1", summary = "Holiday", allday = true, date = day.toString(), start = midnight, finish = midnight + 86400)))
+        val chip = entry("Holiday")
+        val title = words("Holiday")
+        assertEquals(px(4.dp + 8.dp + 4.dp), title.left - chip.left, 1.5f)
+        assertTrue(chip.height < px(24.dp))
     }
 
     // ---- days outside the month ----
