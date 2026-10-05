@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Төхөөрөмжийн нэр</string>
     <string name="calendars_device_create">Үүсгэх</string>
     <string name="calendars_device_add">Төхөөрөмж нэмэх</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Хаяг</string>
     <string name="calendars_device_username">Хэрэглэгчийн нэр</string>
     <string name="calendars_device_password">Нууц үг</string>

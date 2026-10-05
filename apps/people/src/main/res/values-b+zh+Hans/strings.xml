@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">已在联系人中</string>
     <string name="people_device_create">创建</string>
     <string name="people_device_add">添加设备</string>
-    <string name="people_device_server">服务器</string>
     <string name="people_device_username">用户名</string>
     <string name="people_device_done">完成</string>
     <string name="people_device_used">最近使用 %1$s</string>

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Seadme nimi</string>
     <string name="calendars_device_create">Loo</string>
     <string name="calendars_device_add">Lisa seade</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Aadress</string>
     <string name="calendars_device_username">Kasutajanimi</string>
     <string name="calendars_device_password">Parool</string>

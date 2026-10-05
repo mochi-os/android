@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Dans les contacts</string>
     <string name="people_device_create">Créer</string>
     <string name="people_device_add">Ajouter un appareil</string>
-    <string name="people_device_server">Serveur</string>
     <string name="people_device_username">Nom d\'utilisateur</string>
     <string name="people_device_done">Terminé</string>
     <string name="people_device_used">Dernière utilisation %1$s</string>

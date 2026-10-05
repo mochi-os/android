@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Nome do dispositivo</string>
     <string name="calendars_device_create">Criar</string>
     <string name="calendars_device_add">Adicionar um dispositivo</string>
-    <string name="calendars_device_server">Servidor</string>
     <string name="calendars_device_address">Endereço</string>
     <string name="calendars_device_username">Nome de utilizador</string>
     <string name="calendars_device_password">Palavra-passe</string>

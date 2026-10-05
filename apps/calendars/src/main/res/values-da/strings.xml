@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Enhedsnavn</string>
     <string name="calendars_device_create">Opret</string>
     <string name="calendars_device_add">Tilføj en enhed</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adresse</string>
     <string name="calendars_device_username">Brugernavn</string>
     <string name="calendars_device_password">Adgangskode</string>

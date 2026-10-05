@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Emri i pajisjes</string>
     <string name="calendars_device_create">Krijo</string>
     <string name="calendars_device_add">Shto një pajisje</string>
-    <string name="calendars_device_server">Serveri</string>
     <string name="calendars_device_address">Adresa</string>
     <string name="calendars_device_username">Emri i përdoruesit</string>
     <string name="calendars_device_password">Fjalëkalimi</string>

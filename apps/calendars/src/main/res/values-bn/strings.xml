@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ডিভাইসের নাম</string>
     <string name="calendars_device_create">তৈরি করুন</string>
     <string name="calendars_device_add">ডিভাইস যোগ করুন</string>
-    <string name="calendars_device_server">সার্ভার</string>
     <string name="calendars_device_address">ঠিকানা</string>
     <string name="calendars_device_username">ব্যবহারকারীর নাম</string>
     <string name="calendars_device_password">পাসওয়ার্ড</string>

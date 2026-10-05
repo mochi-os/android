@@ -37,7 +37,6 @@
     <string name="calendars_device_name">裝置名稱</string>
     <string name="calendars_device_create">建立</string>
     <string name="calendars_device_add">加入裝置</string>
-    <string name="calendars_device_server">伺服器</string>
     <string name="calendars_device_address">地址</string>
     <string name="calendars_device_username">使用者名稱</string>
     <string name="calendars_device_password">密碼</string>

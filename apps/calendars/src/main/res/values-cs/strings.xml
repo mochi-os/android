@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Název zařízení</string>
     <string name="calendars_device_create">Vytvořit</string>
     <string name="calendars_device_add">Přidat zařízení</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adresa</string>
     <string name="calendars_device_username">Uživatelské jméno</string>
     <string name="calendars_device_password">Heslo</string>

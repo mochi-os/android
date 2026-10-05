@@ -34,7 +34,6 @@
     <string name="calendars_device_name">设备名称</string>
     <string name="calendars_device_create">创建</string>
     <string name="calendars_device_add">添加设备</string>
-    <string name="calendars_device_server">服务器</string>
     <string name="calendars_device_address">地址</string>
     <string name="calendars_device_username">用户名</string>
     <string name="calendars_device_password">密码</string>

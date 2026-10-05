@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Название устройства</string>
     <string name="calendars_device_create">Создать</string>
     <string name="calendars_device_add">Добавить устройство</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Адрес</string>
     <string name="calendars_device_username">Имя пользователя</string>
     <string name="calendars_device_password">Пароль</string>

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Qurilma nomi</string>
     <string name="calendars_device_create">Yaratish</string>
     <string name="calendars_device_add">Qurilma qoʻshish</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Manzil</string>
     <string name="calendars_device_username">Foydalanuvchi nomi</string>
     <string name="calendars_device_password">Parol</string>

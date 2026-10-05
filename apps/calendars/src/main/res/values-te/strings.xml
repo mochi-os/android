@@ -34,7 +34,6 @@
     <string name="calendars_device_name">పరికరం పేరు</string>
     <string name="calendars_device_create">సృష్టించండి</string>
     <string name="calendars_device_add">పరికరాన్ని జోడించండి</string>
-    <string name="calendars_device_server">సర్వర్</string>
     <string name="calendars_device_address">చిరునామా</string>
     <string name="calendars_device_username">వినియోగదారు పేరు</string>
     <string name="calendars_device_password">పాస్‌వర్డ్</string>

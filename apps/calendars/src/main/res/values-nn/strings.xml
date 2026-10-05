@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Einingsnamn</string>
     <string name="calendars_device_create">Opprett</string>
     <string name="calendars_device_add">Legg til ei eining</string>
-    <string name="calendars_device_server">Tenar</string>
     <string name="calendars_device_address">Adresse</string>
     <string name="calendars_device_username">Brukarnamn</string>
     <string name="calendars_device_password">Passord</string>

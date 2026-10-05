@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ຊື່ອຸປະກອນ</string>
     <string name="calendars_device_create">ສ້າງ</string>
     <string name="calendars_device_add">ເພີ່ມອຸປະກອນ</string>
-    <string name="calendars_device_server">ເຊີບເວີ</string>
     <string name="calendars_device_address">ທີ່ຢູ່</string>
     <string name="calendars_device_username">ຊື່ຜູ້ໃຊ້</string>
     <string name="calendars_device_password">ລະຫັດຜ່ານ</string>

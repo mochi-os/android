@@ -188,7 +188,6 @@
     <string name="people_person_state_contact">V kontaktech</string>
     <string name="people_device_create">Vytvořit</string>
     <string name="people_device_add">Přidat zařízení</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Uživatelské jméno</string>
     <string name="people_device_done">Hotovo</string>
     <string name="people_device_used">Naposledy použito %1$s</string>

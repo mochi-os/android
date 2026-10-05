@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">I kontakter</string>
     <string name="people_device_create">Skapa</string>
     <string name="people_device_add">Lägg till en enhet</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Användarnamn</string>
     <string name="people_device_done">Klar</string>
     <string name="people_device_used">Senast använd %1$s</string>

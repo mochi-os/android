@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ڈیوائس کا نام</string>
     <string name="calendars_device_create">بنائیں</string>
     <string name="calendars_device_add">ڈیوائس شامل کریں</string>
-    <string name="calendars_device_server">سرور</string>
     <string name="calendars_device_address">پتہ</string>
     <string name="calendars_device_username">صارف نام</string>
     <string name="calendars_device_password">پاس ورڈ</string>

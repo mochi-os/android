@@ -34,7 +34,6 @@
     <string name="calendars_device_name">اسم الجهاز</string>
     <string name="calendars_device_create">إنشاء</string>
     <string name="calendars_device_add">إضافة جهاز</string>
-    <string name="calendars_device_server">الخادم</string>
     <string name="calendars_device_address">العنوان</string>
     <string name="calendars_device_username">اسم المستخدم</string>
     <string name="calendars_device_password">كلمة المرور</string>

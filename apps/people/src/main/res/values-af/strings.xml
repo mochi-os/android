@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">In kontakte</string>
     <string name="people_device_create">Skep</string>
     <string name="people_device_add">Voeg \'n toestel by</string>
-    <string name="people_device_server">Bediener</string>
     <string name="people_device_username">Gebruikersnaam</string>
     <string name="people_device_done">Klaar</string>
     <string name="people_device_used">Laaste gebruik %1$s</string>

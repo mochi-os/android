@@ -64,7 +64,7 @@ import org.mochios.calendars.model.DeviceToken
 import org.mochios.android.R as MochiR
 
 /**
- * The connected devices: the server, address and username every device's
+ * The connected devices: the address and username every device's
  * calendar account takes, then each device with when it was created and last
  * used, each deletable alone. Add device names a new one and shows its
  * password, once.
@@ -127,7 +127,6 @@ fun ConnectDeviceScreen(
             if (uiState.token == null) {
                 item(key = "details") {
                     DetailsSection(
-                        server = uiState.server,
                         address = uiState.address,
                         username = uiState.username,
                     )
@@ -136,7 +135,6 @@ fun ConnectDeviceScreen(
             uiState.token?.let { token ->
                 item(key = "credentials") {
                     CredentialsSection(
-                        server = uiState.server,
                         address = uiState.address,
                         username = uiState.username,
                         token = token,
@@ -230,17 +228,16 @@ private fun AddDeviceDialog(
 }
 
 /**
- * What every device's account asks for besides its password: the server, the
- * address and the username.
+ * What every device's account asks for besides its password: the address,
+ * which serves where a client asks for a server as well, and the username.
  */
 @Composable
-private fun DetailsSection(server: String, address: String, username: String) {
+private fun DetailsSection(address: String, username: String) {
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            CredentialRow(stringResource(R.string.calendars_device_server), server)
             CredentialRow(stringResource(R.string.calendars_device_address), address)
             if (username.isNotEmpty()) {
                 CredentialRow(stringResource(R.string.calendars_device_username), username)
@@ -255,7 +252,6 @@ private fun DetailsSection(server: String, address: String, username: String) {
  */
 @Composable
 private fun CredentialsSection(
-    server: String,
     address: String,
     username: String,
     token: String,
@@ -267,7 +263,6 @@ private fun CredentialsSection(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            CredentialRow(stringResource(R.string.calendars_device_server), server)
             CredentialRow(stringResource(R.string.calendars_device_address), address)
             CredentialRow(stringResource(R.string.calendars_device_username), username)
             CredentialRow(stringResource(R.string.calendars_device_password), token, sensitive = true)

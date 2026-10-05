@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Nasa mga contact</string>
     <string name="people_device_create">Gumawa</string>
     <string name="people_device_add">Magdagdag ng device</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Username</string>
     <string name="people_device_done">Tapos na</string>
     <string name="people_device_used">Huling ginamit %1$s</string>

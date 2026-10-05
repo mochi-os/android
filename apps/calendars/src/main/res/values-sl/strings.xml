@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Ime naprave</string>
     <string name="calendars_device_create">Ustvari</string>
     <string name="calendars_device_add">Dodaj napravo</string>
-    <string name="calendars_device_server">Strežnik</string>
     <string name="calendars_device_address">Naslov</string>
     <string name="calendars_device_username">Uporabniško ime</string>
     <string name="calendars_device_password">Geslo</string>

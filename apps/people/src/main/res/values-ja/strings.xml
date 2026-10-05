@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">連絡先に登録済み</string>
     <string name="people_device_create">作成</string>
     <string name="people_device_add">デバイスを追加</string>
-    <string name="people_device_server">サーバー</string>
     <string name="people_device_username">ユーザー名</string>
     <string name="people_device_done">完了</string>
     <string name="people_device_used">最終使用 %1$s</string>

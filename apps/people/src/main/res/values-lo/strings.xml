@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">ຢູ່ໃນຜູ້ຕິດຕໍ່</string>
     <string name="people_device_create">ສ້າງ</string>
     <string name="people_device_add">ເພີ່ມອຸປະກອນ</string>
-    <string name="people_device_server">ເຊີບເວີ</string>
     <string name="people_device_username">ຊື່ຜູ້ໃຊ້</string>
     <string name="people_device_done">ສຳເລັດແລ້ວ</string>
     <string name="people_device_used">ໃຊ້ຄັ້ງສຸດທ້າຍ %1$s</string>

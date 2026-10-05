@@ -145,7 +145,6 @@
     <string name="people_contact_title">Functie</string>
     <string name="people_contacts_title">Contacten</string>
     <string name="people_device_create">Aanmaken</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Gebruikersnaam</string>
     <string name="people_device_done">Klaar</string>
     <string name="people_device_used">Laatst gebruikt %1$s</string>

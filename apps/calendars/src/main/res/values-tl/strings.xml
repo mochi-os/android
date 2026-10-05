@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Pangalan ng device</string>
     <string name="calendars_device_create">Gumawa</string>
     <string name="calendars_device_add">Magdagdag ng device</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adres</string>
     <string name="calendars_device_username">Username</string>
     <string name="calendars_device_password">Password</string>

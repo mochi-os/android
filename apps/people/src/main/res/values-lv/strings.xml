@@ -188,7 +188,6 @@
     <string name="people_person_state_contact">Kontaktos</string>
     <string name="people_device_create">Izveidot</string>
     <string name="people_device_add">Pievienot jaunu ierīci</string>
-    <string name="people_device_server">Serveris</string>
     <string name="people_device_username">Lietotājvārds</string>
     <string name="people_device_done">Pabeigts</string>
     <string name="people_device_used">Pēdējoreiz lietots %1$s</string>

@@ -190,7 +190,6 @@
     <string name="people_person_state_contact">Sna teagmhálaithe</string>
     <string name="people_device_create">Cruthaigh</string>
     <string name="people_device_add">Cuir gléas leis</string>
-    <string name="people_device_server">Freastalaí</string>
     <string name="people_device_username">Ainm úsáideora</string>
     <string name="people_device_done">Críochnaithe</string>
     <string name="people_device_used">Úsáidte go deireanach %1$s</string>

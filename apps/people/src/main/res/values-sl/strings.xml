@@ -189,7 +189,6 @@
     <string name="people_person_state_contact">Med stiki</string>
     <string name="people_device_create">Ustvari</string>
     <string name="people_device_add">Dodaj napravo</string>
-    <string name="people_device_server">Strežnik</string>
     <string name="people_device_username">Uporabniško ime</string>
     <string name="people_device_done">Končano</string>
     <string name="people_device_used">Nazadnje uporabljeno %1$s</string>

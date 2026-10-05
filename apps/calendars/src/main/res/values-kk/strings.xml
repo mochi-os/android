@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Құрылғы атауы</string>
     <string name="calendars_device_create">Құру</string>
     <string name="calendars_device_add">Құрылғы қосу</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Мекенжай</string>
     <string name="calendars_device_username">Пайдаланушы аты</string>
     <string name="calendars_device_password">Құпия сөз</string>

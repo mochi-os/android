@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Apparaatnaam</string>
     <string name="calendars_device_create">Aanmaken</string>
     <string name="calendars_device_add">Apparaat toevoegen</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adres</string>
     <string name="calendars_device_username">Gebruikersnaam</string>
     <string name="calendars_device_password">Wachtwoord</string>

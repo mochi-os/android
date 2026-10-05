@@ -34,7 +34,6 @@
     <string name="calendars_device_name">डिव्हाइसचे नाव</string>
     <string name="calendars_device_create">तयार करा</string>
     <string name="calendars_device_add">डिव्हाइस जोडा</string>
-    <string name="calendars_device_server">सर्व्हर</string>
     <string name="calendars_device_address">पत्ता</string>
     <string name="calendars_device_username">वापरकर्तानाव</string>
     <string name="calendars_device_password">पासवर्ड</string>

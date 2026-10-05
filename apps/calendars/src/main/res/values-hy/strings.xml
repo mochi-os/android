@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Սարքի անունը</string>
     <string name="calendars_device_create">Ստեղծել</string>
     <string name="calendars_device_add">Ավելացնել սարք</string>
-    <string name="calendars_device_server">Սերվեր</string>
     <string name="calendars_device_address">Հասցե</string>
     <string name="calendars_device_username">Օգտանուն</string>
     <string name="calendars_device_password">Գաղտնաբառ</string>

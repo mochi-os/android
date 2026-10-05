@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Toestelnaam</string>
     <string name="calendars_device_create">Skep</string>
     <string name="calendars_device_add">Voeg \'n toestel by</string>
-    <string name="calendars_device_server">Bediener</string>
     <string name="calendars_device_address">Adres</string>
     <string name="calendars_device_username">Gebruikersnaam</string>
     <string name="calendars_device_password">Wagwoord</string>

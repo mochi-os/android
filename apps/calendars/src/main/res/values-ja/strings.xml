@@ -34,7 +34,6 @@
     <string name="calendars_device_name">デバイス名</string>
     <string name="calendars_device_create">作成</string>
     <string name="calendars_device_add">デバイスを追加</string>
-    <string name="calendars_device_server">サーバー</string>
     <string name="calendars_device_address">アドレス</string>
     <string name="calendars_device_username">ユーザー名</string>
     <string name="calendars_device_password">パスワード</string>

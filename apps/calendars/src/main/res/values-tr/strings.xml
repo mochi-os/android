@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Cihaz adı</string>
     <string name="calendars_device_create">Oluştur</string>
     <string name="calendars_device_add">Cihaz ekle</string>
-    <string name="calendars_device_server">Sunucu</string>
     <string name="calendars_device_address">Adres</string>
     <string name="calendars_device_username">Kullanıcı adı</string>
     <string name="calendars_device_password">Parola</string>

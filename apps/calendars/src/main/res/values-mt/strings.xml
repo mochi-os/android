@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Isem l-apparat</string>
     <string name="calendars_device_create">Oħloq</string>
     <string name="calendars_device_add">Żid apparat</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Indirizz</string>
     <string name="calendars_device_username">Isem tal-utent</string>
     <string name="calendars_device_password">Password</string>

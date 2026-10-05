@@ -31,10 +31,10 @@ const val DEVICE_NAME_MAXIMUM = 100
 /**
  * The connected-devices screen. [token] is the new device's password, held
  * only here and dropped when the screen goes: the server never shows it
- * again. [server] and [address] are what a CardDAV client is given.
+ * again. [address] is what a CardDAV client is given, where it asks for a
+ * server as well.
  */
 data class ConnectDeviceUiState(
-    val server: String = "",
     val address: String = "",
     val tokens: List<DeviceToken> = emptyList(),
     val isLoading: Boolean = true,
@@ -70,7 +70,7 @@ class ConnectDeviceViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             val server = sessionManager.serverUrl.first().trimEnd('/')
-            _uiState.value = _uiState.value.copy(server = server, address = "$server/people/carddav/")
+            _uiState.value = _uiState.value.copy(address = "$server/people/carddav/")
         }
         load()
     }

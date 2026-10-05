@@ -286,7 +286,6 @@
     <string name="calendars_device_name">Device name</string>
     <string name="calendars_device_create">Create</string>
     <string name="calendars_device_add">Add device</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Address</string>
     <string name="calendars_device_username">Username</string>
     <string name="calendars_device_password">Password</string>

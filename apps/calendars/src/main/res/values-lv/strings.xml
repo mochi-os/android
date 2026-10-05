@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Ierīces nosaukums</string>
     <string name="calendars_device_create">Izveidot</string>
     <string name="calendars_device_add">Pievienot jaunu ierīci</string>
-    <string name="calendars_device_server">Serveris</string>
     <string name="calendars_device_address">Adrese</string>
     <string name="calendars_device_username">Lietotājvārds</string>
     <string name="calendars_device_password">Parole</string>

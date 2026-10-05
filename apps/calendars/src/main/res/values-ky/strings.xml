@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Түзмөктүн аты</string>
     <string name="calendars_device_create">Түзүү</string>
     <string name="calendars_device_add">Түзмөк кошуу</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Дарек</string>
     <string name="calendars_device_username">Колдонуучунун аты</string>
     <string name="calendars_device_password">Сырсөз</string>

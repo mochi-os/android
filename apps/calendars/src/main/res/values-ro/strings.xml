@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Numele dispozitivului</string>
     <string name="calendars_device_create">Creează</string>
     <string name="calendars_device_add">Adaugă un dispozitiv</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adresă</string>
     <string name="calendars_device_username">Nume de utilizator</string>
     <string name="calendars_device_password">Parolă</string>

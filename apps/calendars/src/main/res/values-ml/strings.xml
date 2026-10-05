@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ഡിവൈസിന്റെ പേര്</string>
     <string name="calendars_device_create">സൃഷ്ടിക്കുക</string>
     <string name="calendars_device_add">ഒരു ഡിവൈസ് ചേർക്കുക</string>
-    <string name="calendars_device_server">സെർവർ</string>
     <string name="calendars_device_address">വിലാസം</string>
     <string name="calendars_device_username">ഉപയോക്തൃനാമം</string>
     <string name="calendars_device_password">പാസ്‌വേഡ്</string>

@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">در مخاطبین</string>
     <string name="people_device_create">ساختن</string>
     <string name="people_device_add">افزودن دستگاه</string>
-    <string name="people_device_server">سرور</string>
     <string name="people_device_username">نام کاربری</string>
     <string name="people_device_done">انجام شد</string>
     <string name="people_device_used">آخرین استفاده %1$s</string>

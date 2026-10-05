@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Харилцагчдад байна</string>
     <string name="people_device_create">Үүсгэх</string>
     <string name="people_device_add">Төхөөрөмж нэмэх</string>
-    <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Хэрэглэгчийн нэр</string>
     <string name="people_device_done">Дууссан</string>
     <string name="people_device_used">Сүүлд ашигласан %1$s</string>

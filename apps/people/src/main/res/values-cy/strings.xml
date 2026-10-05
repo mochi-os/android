@@ -191,7 +191,6 @@
     <string name="people_person_state_contact">Yn y cysylltiadau</string>
     <string name="people_device_create">Creu</string>
     <string name="people_device_add">Ychwanegu dyfais</string>
-    <string name="people_device_server">Gweinydd</string>
     <string name="people_device_username">Enw defnyddiwr</string>
     <string name="people_device_done">Wedi gorffen</string>
     <string name="people_device_used">Defnyddiwyd ddiwethaf %1$s</string>

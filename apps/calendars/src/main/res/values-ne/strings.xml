@@ -34,7 +34,6 @@
     <string name="calendars_device_name">उपकरणको नाम</string>
     <string name="calendars_device_create">सिर्जना गर्नुहोस्</string>
     <string name="calendars_device_add">उपकरण थप्नुहोस्</string>
-    <string name="calendars_device_server">सर्भर</string>
     <string name="calendars_device_address">ठेगाना</string>
     <string name="calendars_device_username">प्रयोगकर्ता नाम</string>
     <string name="calendars_device_password">पासवर्ड</string>

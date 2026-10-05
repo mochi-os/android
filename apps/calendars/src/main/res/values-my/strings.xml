@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ကိရိယာအမည်</string>
     <string name="calendars_device_create">ဖန်တီးမည်</string>
     <string name="calendars_device_add">ကိရိယာ ထည့်မည်</string>
-    <string name="calendars_device_server">ဆာဗာ</string>
     <string name="calendars_device_address">လိပ်စာ</string>
     <string name="calendars_device_username">သုံးစွဲသူအမည်</string>
     <string name="calendars_device_password">စကားဝှက်</string>

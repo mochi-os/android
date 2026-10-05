@@ -189,7 +189,6 @@
     <string name="people_person_state_contact">San luchd-aithne</string>
     <string name="people_device_create">Cruthaich</string>
     <string name="people_device_add">Cuir inneal ris</string>
-    <string name="people_device_server">Frithealaiche</string>
     <string name="people_device_username">Ainm-cleachdaiche</string>
     <string name="people_device_done">Deiseil</string>
     <string name="people_device_used">Chleachdte mu dheireadh %1$s</string>

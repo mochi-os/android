@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Gailuaren izena</string>
     <string name="calendars_device_create">Sortu</string>
     <string name="calendars_device_add">Gehitu gailu bat</string>
-    <string name="calendars_device_server">Zerbitzaria</string>
     <string name="calendars_device_address">Helbidea</string>
     <string name="calendars_device_username">Erabiltzaile-izena</string>
     <string name="calendars_device_password">Pasahitza</string>

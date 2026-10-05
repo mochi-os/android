@@ -34,7 +34,6 @@
     <string name="calendars_device_name">نام دستگاه</string>
     <string name="calendars_device_create">ساختن</string>
     <string name="calendars_device_add">افزودن دستگاه</string>
-    <string name="calendars_device_server">سرور</string>
     <string name="calendars_device_address">آدرس</string>
     <string name="calendars_device_username">نام کاربری</string>
     <string name="calendars_device_password">گذرواژه</string>

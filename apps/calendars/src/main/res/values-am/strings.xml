@@ -34,7 +34,6 @@
     <string name="calendars_device_name">የመሳሪያ ስም</string>
     <string name="calendars_device_create">ፍጠር</string>
     <string name="calendars_device_add">መሳሪያ ያክሉ</string>
-    <string name="calendars_device_server">ሰርቨር</string>
     <string name="calendars_device_address">አድራሻ</string>
     <string name="calendars_device_username">የተጠቃሚ ስም</string>
     <string name="calendars_device_password">የይለፍ ቃል</string>

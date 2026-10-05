@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">အဆက်အသွယ်များတွင်</string>
     <string name="people_device_create">ဖန်တီးမည်</string>
     <string name="people_device_add">ကိရိယာ ထည့်မည်</string>
-    <string name="people_device_server">ဆာဗာ</string>
     <string name="people_device_username">သုံးစွဲသူအမည်</string>
     <string name="people_device_done">ပြီးပါပြီ</string>
     <string name="people_device_used">နောက်ဆုံး အသုံးပြုခဲ့သည် %1$s</string>

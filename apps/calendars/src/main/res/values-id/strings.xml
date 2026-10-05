@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Nama perangkat</string>
     <string name="calendars_device_create">Buat</string>
     <string name="calendars_device_add">Tambah perangkat</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Alamat</string>
     <string name="calendars_device_username">Nama pengguna</string>
     <string name="calendars_device_password">Kata sandi</string>

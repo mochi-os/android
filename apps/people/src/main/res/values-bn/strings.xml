@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">পরিচিতিতে আছে</string>
     <string name="people_device_create">তৈরি করুন</string>
     <string name="people_device_add">ডিভাইস যোগ করুন</string>
-    <string name="people_device_server">সার্ভার</string>
     <string name="people_device_username">ব্যবহারকারীর নাম</string>
     <string name="people_device_done">সম্পন্ন</string>
     <string name="people_device_used">শেষ ব্যবহার %1$s</string>

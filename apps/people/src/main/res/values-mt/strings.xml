@@ -190,7 +190,6 @@
     <string name="people_person_state_contact">Fil-kuntatti</string>
     <string name="people_device_create">Oħloq</string>
     <string name="people_device_add">Żid apparat</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Isem tal-utent</string>
     <string name="people_device_done">Lest</string>
     <string name="people_device_used">L-aħħar uża %1$s</string>

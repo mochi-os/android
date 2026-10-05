@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">పరిచయాలలో</string>
     <string name="people_device_create">సృష్టించండి</string>
     <string name="people_device_add">పరికరాన్ని జోడించండి</string>
-    <string name="people_device_server">సర్వర్</string>
     <string name="people_device_username">వినియోగదారు పేరు</string>
     <string name="people_device_done">పూర్తయింది</string>
     <string name="people_device_used">చివరిగా ఉపయోగించబడింది %1$s</string>

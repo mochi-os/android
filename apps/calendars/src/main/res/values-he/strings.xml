@@ -34,7 +34,6 @@
     <string name="calendars_device_name">שם המכשיר</string>
     <string name="calendars_device_create">צור</string>
     <string name="calendars_device_add">הוספת מכשיר</string>
-    <string name="calendars_device_server">שרת</string>
     <string name="calendars_device_address">כתובת</string>
     <string name="calendars_device_username">שם משתמש</string>
     <string name="calendars_device_password">סיסמה</string>

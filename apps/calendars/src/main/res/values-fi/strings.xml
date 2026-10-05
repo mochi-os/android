@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Laitteen nimi</string>
     <string name="calendars_device_create">Luo</string>
     <string name="calendars_device_add">Lisää laite</string>
-    <string name="calendars_device_server">Palvelin</string>
     <string name="calendars_device_address">Osoite</string>
     <string name="calendars_device_username">Käyttäjätunnus</string>
     <string name="calendars_device_password">Salasana</string>

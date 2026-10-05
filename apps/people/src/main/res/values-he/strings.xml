@@ -188,7 +188,6 @@
     <string name="people_person_state_contact">באנשי הקשר</string>
     <string name="people_device_create">צור</string>
     <string name="people_device_add">הוספת מכשיר</string>
-    <string name="people_device_server">שרת</string>
     <string name="people_device_username">שם משתמש</string>
     <string name="people_device_done">בוצע</string>
     <string name="people_device_used">שימוש אחרון %1$s</string>

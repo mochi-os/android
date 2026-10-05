@@ -34,7 +34,6 @@
     <string name="calendars_device_name">მოწყობილობის სახელი</string>
     <string name="calendars_device_create">შექმნა</string>
     <string name="calendars_device_add">მოწყობილობის დამატება</string>
-    <string name="calendars_device_server">სერვერი</string>
     <string name="calendars_device_address">მისამართი</string>
     <string name="calendars_device_username">მომხმარებლის სახელი</string>
     <string name="calendars_device_password">პაროლი</string>

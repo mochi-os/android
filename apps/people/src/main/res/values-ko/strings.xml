@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">연락처에 있음</string>
     <string name="people_device_create">생성</string>
     <string name="people_device_add">기기 추가</string>
-    <string name="people_device_server">서버</string>
     <string name="people_device_username">사용자 이름</string>
     <string name="people_device_done">완료</string>
     <string name="people_device_used">마지막 사용 %1$s</string>

@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Kişilerde</string>
     <string name="people_device_create">Oluştur</string>
     <string name="people_device_add">Cihaz ekle</string>
-    <string name="people_device_server">Sunucu</string>
     <string name="people_device_username">Kullanıcı adı</string>
     <string name="people_device_done">Tamamlandı</string>
     <string name="people_device_used">Son kullanım %1$s</string>

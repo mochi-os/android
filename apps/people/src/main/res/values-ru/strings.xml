@@ -189,7 +189,6 @@
     <string name="people_person_state_contact">В контактах</string>
     <string name="people_device_create">Создать</string>
     <string name="people_device_add">Добавить устройство</string>
-    <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Имя пользователя</string>
     <string name="people_device_done">Готово</string>
     <string name="people_device_used">Последнее использование %1$s</string>

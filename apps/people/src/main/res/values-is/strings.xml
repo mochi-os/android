@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Í tengiliðum</string>
     <string name="people_device_create">Búa til</string>
     <string name="people_device_add">Bæta við tæki</string>
-    <string name="people_device_server">Þjónn</string>
     <string name="people_device_username">Notandanafn</string>
     <string name="people_device_done">Lokið</string>
     <string name="people_device_used">Síðast notað %1$s</string>

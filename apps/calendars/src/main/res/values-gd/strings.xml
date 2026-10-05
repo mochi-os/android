@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Ainm an inneil</string>
     <string name="calendars_device_create">Cruthaich</string>
     <string name="calendars_device_add">Cuir inneal ris</string>
-    <string name="calendars_device_server">Frithealaiche</string>
     <string name="calendars_device_address">Seòladh</string>
     <string name="calendars_device_username">Ainm-cleachdaiche</string>
     <string name="calendars_device_password">Facal-faire</string>

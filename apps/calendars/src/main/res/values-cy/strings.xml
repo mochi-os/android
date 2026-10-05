@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Enw\'r ddyfais</string>
     <string name="calendars_device_create">Creu</string>
     <string name="calendars_device_add">Ychwanegu dyfais</string>
-    <string name="calendars_device_server">Gweinydd</string>
     <string name="calendars_device_address">Cyfeiriad</string>
     <string name="calendars_device_username">Enw defnyddiwr</string>
     <string name="calendars_device_password">Cyfrinair</string>

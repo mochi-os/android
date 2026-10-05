@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Име на уредот</string>
     <string name="calendars_device_create">Создај</string>
     <string name="calendars_device_add">Додај уред</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Адреса</string>
     <string name="calendars_device_username">Корисничко име</string>
     <string name="calendars_device_password">Лозинка</string>

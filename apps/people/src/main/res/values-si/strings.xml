@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">සම්බන්ධතාවල</string>
     <string name="people_device_create">නිර්මාණය කරන්න</string>
     <string name="people_device_add">උපාංගයක් එක් කරන්න</string>
-    <string name="people_device_server">සේවාදායකය</string>
     <string name="people_device_username">පරිශීලක නාමය</string>
     <string name="people_device_done">නිමයි</string>
     <string name="people_device_used">අවසන් භාවිතය %1$s</string>

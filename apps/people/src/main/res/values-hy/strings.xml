@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Կոնտակտներում</string>
     <string name="people_device_create">Ստեղծել</string>
     <string name="people_device_add">Ավելացնել սարք</string>
-    <string name="people_device_server">Սերվեր</string>
     <string name="people_device_username">Օգտանուն</string>
     <string name="people_device_done">Կատարված է</string>
     <string name="people_device_used">Վերջին օգտագործումը %1$s</string>

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Įrenginio pavadinimas</string>
     <string name="calendars_device_create">Sukurti</string>
     <string name="calendars_device_add">Pridėti įrenginį</string>
-    <string name="calendars_device_server">Serveris</string>
     <string name="calendars_device_address">Adresas</string>
     <string name="calendars_device_username">Vartotojo vardas</string>
     <string name="calendars_device_password">Slaptažodis</string>

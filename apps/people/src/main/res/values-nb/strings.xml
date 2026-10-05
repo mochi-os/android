@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">I kontakter</string>
     <string name="people_device_create">Opprett</string>
     <string name="people_device_add">Legg til en enhet</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Brukernavn</string>
     <string name="people_device_done">Ferdig</string>
     <string name="people_device_used">Sist brukt %1$s</string>

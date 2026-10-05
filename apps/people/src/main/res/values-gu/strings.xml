@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">સંપર્કોમાં</string>
     <string name="people_device_create">બનાવો</string>
     <string name="people_device_add">ઉપકરણ ઉમેરો</string>
-    <string name="people_device_server">સર્વર</string>
     <string name="people_device_username">વપરાશકર્તા નામ</string>
     <string name="people_device_done">થઈ ગયું</string>
     <string name="people_device_used">છેલ્લે ઉપયોગ કર્યો %1$s</string>

@@ -188,7 +188,6 @@
     <string name="people_person_state_contact">În contacte</string>
     <string name="people_device_create">Creează</string>
     <string name="people_device_add">Adaugă un dispozitiv</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Nume de utilizator</string>
     <string name="people_device_done">Terminat</string>
     <string name="people_device_used">Ultima utilizare %1$s</string>

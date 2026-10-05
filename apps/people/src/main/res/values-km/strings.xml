@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">មានក្នុងទំនាក់ទំនង</string>
     <string name="people_device_create">បង្កើត</string>
     <string name="people_device_add">បន្ថែមឧបករណ៍</string>
-    <string name="people_device_server">ម៉ាស៊ីនមេ</string>
     <string name="people_device_username">ឈ្មោះអ្នកប្រើប្រាស់</string>
     <string name="people_device_done">រួចរាល់</string>
     <string name="people_device_used">ប្រើចុងក្រោយ %1$s</string>

@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">በእውቂያዎች ውስጥ</string>
     <string name="people_device_create">ፍጠር</string>
     <string name="people_device_add">መሳሪያ ያክሉ</string>
-    <string name="people_device_server">ሰርቨር</string>
     <string name="people_device_username">የተጠቃሚ ስም</string>
     <string name="people_device_done">ተጠናቅቋል</string>
     <string name="people_device_used">መጨረሻ የተጠቀመው %1$s</string>

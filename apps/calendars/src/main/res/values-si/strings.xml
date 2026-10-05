@@ -34,7 +34,6 @@
     <string name="calendars_device_name">උපාංගයේ නම</string>
     <string name="calendars_device_create">නිර්මාණය කරන්න</string>
     <string name="calendars_device_add">උපාංගයක් එක් කරන්න</string>
-    <string name="calendars_device_server">සේවාදායකය</string>
     <string name="calendars_device_address">ලිපිනය</string>
     <string name="calendars_device_username">පරිශීලක නාමය</string>
     <string name="calendars_device_password">මුරපදය</string>

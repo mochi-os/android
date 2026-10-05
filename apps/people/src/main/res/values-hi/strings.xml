@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">संपर्कों में</string>
     <string name="people_device_create">बनाएँ</string>
     <string name="people_device_add">डिवाइस जोड़ें</string>
-    <string name="people_device_server">सर्वर</string>
     <string name="people_device_username">उपयोगकर्ता नाम</string>
     <string name="people_device_done">पूर्ण</string>
     <string name="people_device_used">अंतिम बार उपयोग %1$s</string>

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ชื่ออุปกรณ์</string>
     <string name="calendars_device_create">สร้าง</string>
     <string name="calendars_device_add">เพิ่มอุปกรณ์</string>
-    <string name="calendars_device_server">เซิร์ฟเวอร์</string>
     <string name="calendars_device_address">ที่อยู่</string>
     <string name="calendars_device_username">ชื่อผู้ใช้</string>
     <string name="calendars_device_password">รหัสผ่าน</string>

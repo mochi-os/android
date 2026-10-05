@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Heiti tækis</string>
     <string name="calendars_device_create">Búa til</string>
     <string name="calendars_device_add">Bæta við tæki</string>
-    <string name="calendars_device_server">Þjónn</string>
     <string name="calendars_device_address">Vistfang</string>
     <string name="calendars_device_username">Notandanafn</string>
     <string name="calendars_device_password">Lykilorð</string>

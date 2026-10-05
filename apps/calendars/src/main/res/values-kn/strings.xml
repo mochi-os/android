@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ಸಾಧನದ ಹೆಸರು</string>
     <string name="calendars_device_create">ರಚಿಸಿ</string>
     <string name="calendars_device_add">ಸಾಧನವನ್ನು ಸೇರಿಸಿ</string>
-    <string name="calendars_device_server">ಸರ್ವರ್</string>
     <string name="calendars_device_address">ವಿಳಾಸ</string>
     <string name="calendars_device_username">ಬಳಕೆದಾರಹೆಸರು</string>
     <string name="calendars_device_password">ಪಾಸ್‌ವರ್ಡ್</string>

@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">رابطن ۾</string>
     <string name="people_device_create">ٺاهيو</string>
     <string name="people_device_add">ڊوائيس شامل ڪريو</string>
-    <string name="people_device_server">سرور</string>
     <string name="people_device_username">صارف نالو</string>
     <string name="people_device_done">مڪمل</string>
     <string name="people_device_used">آخري استعمال %1$s</string>

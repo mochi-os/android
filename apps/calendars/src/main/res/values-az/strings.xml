@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Cihaz adı</string>
     <string name="calendars_device_create">Yarat</string>
     <string name="calendars_device_add">Cihaz əlavə et</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Ünvan</string>
     <string name="calendars_device_username">İstifadəçi adı</string>
     <string name="calendars_device_password">Şifrə</string>

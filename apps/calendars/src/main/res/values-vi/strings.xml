@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Tên thiết bị</string>
     <string name="calendars_device_create">Tạo</string>
     <string name="calendars_device_add">Thêm thiết bị</string>
-    <string name="calendars_device_server">Máy chủ</string>
     <string name="calendars_device_address">Địa chỉ</string>
     <string name="calendars_device_username">Tên người dùng</string>
     <string name="calendars_device_password">Mật khẩu</string>

@@ -188,7 +188,6 @@
     <string name="people_person_state_contact">У контактима</string>
     <string name="people_device_create">Креирај</string>
     <string name="people_device_add">Додај уређај</string>
-    <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Корисничко име</string>
     <string name="people_device_done">Готово</string>
     <string name="people_device_used">Последње коришћено %1$s</string>

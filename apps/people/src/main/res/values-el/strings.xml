@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Στις επαφές</string>
     <string name="people_device_create">Δημιουργία</string>
     <string name="people_device_add">Προσθήκη συσκευής</string>
-    <string name="people_device_server">Διακομιστής</string>
     <string name="people_device_username">Όνομα χρήστη</string>
     <string name="people_device_done">Ολοκληρώθηκε</string>
     <string name="people_device_used">Τελευταία χρήση %1$s</string>
