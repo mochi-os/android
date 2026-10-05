@@ -11,6 +11,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.test.captureToImage
+import androidx.compose.ui.test.click
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
@@ -73,6 +74,10 @@ class MonthGridTest {
 
     private val moved = mutableListOf<Pair<Instance, LocalDate>>()
     private val steps = mutableListOf<Int>()
+    private val created = mutableListOf<LocalDate>()
+    private val ranged = mutableListOf<Pair<LocalDate, LocalDate>>()
+    private val opened = mutableListOf<Instance>()
+    private val holding = mutableListOf<Boolean>()
 
     /** October 2026's grid: six Monday-first weeks from 28 September. */
     private fun grid(month: LocalDate): List<LocalDate> {
@@ -138,9 +143,11 @@ class MonthGridTest {
                 month = shown.value.monthValue,
                 state = state,
                 viewModel = model,
-                onOpen = {},
-                onCreate = {},
+                onOpen = { opened += it },
+                onCreate = { created += it },
                 onMove = { instance, day -> moved += instance to day },
+                onCreateRange = { first, last -> ranged += first to last },
+                onLifted = { holding += it },
                 onStep = { direction ->
                     steps += direction
                     shown.value = shown.value.plusMonths(direction.toLong())
@@ -235,6 +242,8 @@ class MonthGridTest {
         move(cell(thursday.plusDays(7)))
         release()
         assertEquals(thursday.plusDays(7), moved.single().second)
+        // The chip's long press is the lift's: it picks no days.
+        assertTrue(ranged.isEmpty() && created.isEmpty())
     }
 
     @Test
@@ -251,5 +260,92 @@ class MonthGridTest {
         // November's grid ends on the week of 30 November; its Thursday is 3 December.
         assertEquals(LocalDate.of(2026, 12, 3), moved.single().second)
         assertTrue(rule.onAllNodesWithText("Stand-up").fetchSemanticsNodes().isEmpty())
+    }
+
+    // ---- picking days ----
+
+    @Test
+    fun `a long press on a day and a drag across others picks a run of days, holding the page meanwhile`() {
+        show(emptyList())
+        val tuesday = LocalDate.of(2026, 10, 13)
+        press(cell(tuesday))
+        move(cell(tuesday.plusDays(2)))
+        move(cell(tuesday.plusDays(8)))
+        assertEquals(listOf(false, true), holding)
+        release()
+        assertEquals(listOf(tuesday to tuesday.plusDays(8)), ranged)
+        assertTrue(created.isEmpty())
+        assertEquals(listOf(false, true, false), holding)
+    }
+
+    @Test
+    fun `a run picked backwards runs from its earlier day`() {
+        show(emptyList())
+        val wednesday = LocalDate.of(2026, 10, 21)
+        press(cell(wednesday))
+        move(cell(wednesday.minusDays(3)))
+        move(cell(wednesday.minusDays(9)))
+        release()
+        assertEquals(listOf(wednesday.minusDays(9) to wednesday), ranged)
+    }
+
+    @Test
+    fun `a long press let go on its own day creates once on that day`() {
+        show(emptyList())
+        val tuesday = LocalDate.of(2026, 10, 13)
+        press(cell(tuesday))
+        release()
+        assertEquals(listOf(tuesday), created)
+        assertTrue(ranged.isEmpty())
+    }
+
+    @Test
+    fun `the days being picked are tinted`() {
+        show(emptyList())
+        // The October cells in order: day n is the nth inside the month.
+        fun shade(day: Int) = rule.onAllNodesWithTag("inside")[day - 1].captureToImage().toPixelMap().let { it[it.width / 2, it.height - 3] }
+        val plain = shade(14)
+        press(cell(LocalDate.of(2026, 10, 13)))
+        move(cell(LocalDate.of(2026, 10, 15)))
+        assertNotEquals(plain, shade(14))
+        assertEquals(plain, shade(16))
+        release()
+    }
+
+    @Test
+    fun `a pick the system takes the finger from makes nothing, and the next tap creates on its own day`() {
+        show(emptyList())
+        val tuesday = LocalDate.of(2026, 10, 13)
+        press(cell(tuesday))
+        move(cell(tuesday.plusDays(2)))
+        rule.onRoot().performTouchInput { cancel() }
+        rule.mainClock.advanceTimeBy(100)
+        assertTrue(ranged.isEmpty() && created.isEmpty())
+        rule.onRoot().performTouchInput { click(cell(tuesday.plusDays(7))) }
+        rule.mainClock.advanceTimeBy(500)
+        assertEquals(listOf(tuesday.plusDays(7)), created)
+        assertTrue(ranged.isEmpty())
+    }
+
+    @Test
+    fun `a carried chip the system takes the finger from stays where it was`() {
+        val thursday = LocalDate.of(2026, 10, 15)
+        show(listOf(meeting(thursday)))
+        press(rule.onNodeWithText("Stand-up").fetchSemanticsNode().boundsInRoot.center)
+        move(cell(thursday.plusDays(7)))
+        rule.onRoot().performTouchInput { cancel() }
+        rule.mainClock.advanceTimeBy(100)
+        assertTrue(moved.isEmpty())
+    }
+
+    @Test
+    fun `a long press on a chip that cannot be lifted picks no days, and letting go opens it`() {
+        val thursday = LocalDate.of(2026, 10, 15)
+        show(listOf(meeting(thursday).copy(readonly = true)))
+        press(rule.onNodeWithText("Stand-up").fetchSemanticsNode().boundsInRoot.center)
+        release()
+        assertTrue(ranged.isEmpty())
+        assertTrue(created.isEmpty())
+        assertEquals(listOf("e1"), opened.map { it.event })
     }
 }

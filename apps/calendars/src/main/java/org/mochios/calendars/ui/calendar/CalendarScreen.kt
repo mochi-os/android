@@ -124,6 +124,7 @@ import org.mochios.calendars.ui.dialogs.ReplaceLinkDialog
 import org.mochios.calendars.ui.dialogs.RevokeLinkDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.editor.Scope
+import org.mochios.calendars.ui.editor.picked
 import org.mochios.calendars.ui.router.CalendarsSection
 
 /**
@@ -800,7 +801,7 @@ private const val SWIPE_CENTRE = SWIPE_PAGES / 2
  * [onListed] is the day atop the list view as it scrolls, for the toolbar.
  */
 @Composable
-private fun Page(
+internal fun Page(
     state: CalendarUiState,
     viewModel: CalendarViewModel,
     selected: Instance?,
@@ -825,6 +826,13 @@ private fun Page(
         viewModel.focus(day)
         onNewEvent(viewModel.creation(day), null, null)
     }
+    // A run of days picked across the month grid or along the all-day band
+    // is an all-day event over them, with the times it opens at beneath.
+    val ranged = { first: LocalDate, last: LocalDate ->
+        viewModel.focus(first)
+        val (start, finish) = picked(first, last, state.preferences.hours, state.preferences.duration, viewModel.timezone())
+        onNewEvent(start, true, finish)
+    }
     when (state.view) {
         CalendarsSection.DAY -> TimeGrid(
             days = listOf(state.anchor),
@@ -832,6 +840,7 @@ private fun Page(
             viewModel = viewModel,
             onOpen = onOpen,
             onCreate = create,
+            onCreateRange = ranged,
             onMove = onMove,
             scroll = scroll,
             onStep = onStep,
@@ -846,6 +855,7 @@ private fun Page(
                 viewModel = viewModel,
                 onOpen = onOpen,
                 onCreate = create,
+                onCreateRange = ranged,
                 onMove = onMove,
                 scroll = scroll,
                 stacked = true,
@@ -862,6 +872,7 @@ private fun Page(
             viewModel = viewModel,
             onOpen = onOpen,
             onCreate = dated,
+            onCreateRange = ranged,
             onMove = onMoveDay,
             onStep = onStep,
             onLifted = onLifted,
@@ -874,6 +885,7 @@ private fun Page(
             viewModel = viewModel,
             onOpen = onOpen,
             onCreate = dated,
+            onCreateRange = ranged,
             onMove = onMoveDay,
             onStep = onStep,
             onLifted = onLifted,

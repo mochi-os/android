@@ -183,6 +183,9 @@ private sealed interface Drag {
     /** Empty grid on [day], from [anchor] hours past midnight to wherever the finger now is. */
     data class Create(val day: LocalDate, val anchor: Float) : Drag
 
+    /** An empty stretch of the band, a run of days from [anchor] to the column the finger is over. */
+    data class Pick(val anchor: LocalDate) : Drag
+
     /**
      * An occurrence, taken by its piece on [day]: a block lifted from that
      * day's column at [cut], [grab] hours below the block's top, or by its end
@@ -237,7 +240,10 @@ private const val LANDING = "landing"
  *
  * A tap on an occurrence opens its summary; a tap on empty grid starts an
  * event at that quarter hour, as long as a new event is. A long press on
- * empty grid and a drag marks out a new event's span. A long press lifts a
+ * empty grid and a drag marks out a new event's span. A tap on an empty
+ * stretch of the band asks [onCreateRange] for an all-day event on that
+ * day, and a long press there and a drag along the band for one over the
+ * run of days it takes in. A long press lifts a
  * block, which then follows the finger to the quarter hour on any of the
  * days shown, or into the band to make it all day; a long press on the strip
  * along its bottom edge drags its end instead. A bar lifted from the band
@@ -271,6 +277,7 @@ fun TimeGrid(
     onCreate: (Long, Long?) -> Unit,
     onMove: (Instance, Moved) -> Unit,
     scroll: ScrollState,
+    onCreateRange: (LocalDate, LocalDate) -> Unit = { _, _ -> },
     stacked: Boolean = false,
     onStep: (Int) -> Unit = {},
     onLifted: (Boolean) -> Unit = {},
@@ -379,9 +386,9 @@ fun TimeGrid(
     }
 
     /**
-     * What a long press at [at] takes: a bar in the band, a block or its end
-     * handle in a column, or empty grid in a column. Nothing for the
-     * headings, the gutter, an empty stretch of band, or an occurrence that
+     * What a long press at [at] takes: a bar in the band, an empty stretch of
+     * the band, a block or its end handle in a column, or empty grid in a
+     * column. Nothing for the headings, the gutter, or an occurrence that
      * cannot be moved.
      */
     fun take(at: Offset): Drag? {
@@ -390,7 +397,8 @@ fun TimeGrid(
             val index = column(at.x) ?: return null
             val row = ((at.y - shown.top + band.value) / rowPx).toInt()
             val bar = bars.firstOrNull { it.row == row && index >= it.column && index < it.column + it.span }
-            val instance = bar?.item?.takeIf { it.editable } ?: return null
+                ?: return Drag.Pick(days[index])
+            val instance = bar.item?.takeIf { it.editable } ?: return null
             return Drag.Lift(instance, days[index], Cut(0f, 0f), 0f, resize = false, band = true)
         }
         if (!grid.contains(at)) return null
@@ -425,6 +433,10 @@ fun TimeGrid(
                 // A press that marked nothing out is a tap: the default length.
                 val marked = snap(hours(finger.y)).coerceIn(0f, 24f) != taken.anchor
                 onCreate(start, if (marked) at(taken.day, cut.to, user) else null)
+            }
+            is Drag.Pick -> {
+                val (first, last) = ends(taken.anchor, nearest(finger.x))
+                onCreateRange(first, last)
             }
             is Drag.Lift -> when (val landed = landing(taken)) {
                 is Landing.Whole -> onMove(
@@ -471,6 +483,9 @@ fun TimeGrid(
             val time = withFrameMillis { it }
             val grid = viewport ?: continue
             val current = drag ?: break
+            // A run of days is picked along the band alone, which neither
+            // scrolls the hours nor turns the page.
+            if (current is Drag.Pick) continue
             val fromTop = finger.y - grid.top
             val fromBottom = grid.bottom - finger.y
             // Above the grid is the band, which a lifted block is dropped
@@ -514,10 +529,14 @@ fun TimeGrid(
                         while (true) {
                             val event = awaitPointerEvent(PointerEventPass.Initial)
                             val change = event.changes.firstOrNull { it.id == down.id } ?: break
+                            // The system taking the finger away ends the
+                            // gesture with an up that arrives already
+                            // consumed, which lands and makes nothing.
+                            val cancelled = change.isConsumed
                             finger = origin + change.position
                             change.consume()
                             if (change.changedToUpIgnoreConsumed()) {
-                                hands.drop()
+                                if (!cancelled) hands.drop()
                                 break
                             }
                         }
@@ -541,9 +560,11 @@ fun TimeGrid(
             scroll = band,
             lifted = lifted,
             landing = target as? Landing.Whole,
+            picked = (drag as? Drag.Pick)?.let { ends(it.anchor, nearest(finger.x)) },
             selected = selected,
             over = { past(it, viewModel.finish(it), now, today) },
             onOpen = onOpen,
+            onDay = { day -> onCreateRange(day, day) },
             onPlaced = { window = it },
         )
         HorizontalDivider()
@@ -763,8 +784,10 @@ fun heading(day: LocalDate, pattern: String, locale: java.util.Locale): String =
  * The band above the grid, labelled by [HourGutter] beside the pager: the
  * all-day occurrences laid out as [bars], each one bar across the days it covers. A bar laid out with no
  * occurrence is where the [lifted] one would land, drawn raised; the bar it
- * was lifted from fades once it is going somewhere. The band holds at least
- * one row and shows up to [ROWS] before it scrolls by [scroll].
+ * was lifted from fades once it is going somewhere. The run of days being
+ * [picked] is tinted across the band, and a tap on an empty stretch of it
+ * is [onDay]'s, for the day under it. The band holds at least one row and
+ * shows up to [ROWS] before it scrolls by [scroll].
  */
 @Composable
 private fun AllDayBand(
@@ -774,12 +797,16 @@ private fun AllDayBand(
     scroll: ScrollState,
     lifted: Drag.Lift?,
     landing: Landing.Whole?,
+    picked: Pair<LocalDate, LocalDate>?,
     selected: Instance?,
     over: (Instance) -> Boolean,
     onOpen: (Instance) -> Unit,
+    onDay: (LocalDate) -> Unit,
     onPlaced: (Rect) -> Unit,
 ) {
     val rows = (bars.maxOfOrNull { it.row } ?: -1) + 1
+    val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
+    val tapped by rememberUpdatedState(onDay)
     Row(modifier = Modifier.fillMaxWidth()) {
         Box(
             modifier = Modifier
@@ -789,7 +816,34 @@ private fun AllDayBand(
                 .onGloballyPositioned { onPlaced(it.rectInRoot()) }
                 .verticalScroll(scroll),
         ) {
-            Box(modifier = Modifier.fillMaxWidth().height(ROW * maxOf(1, rows) + 4.dp)) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(ROW * maxOf(1, rows) + 4.dp)
+                    .pointerInput(days, rtl) {
+                        // A bar's own tap takes the press, so this hears
+                        // only taps on the band between them.
+                        detectTapGestures { at ->
+                            val across = if (rtl) size.width - at.x else at.x
+                            val index = (across / (size.width.toFloat() / days.size)).toInt().coerceIn(0, days.size - 1)
+                            tapped(days[index])
+                        }
+                    },
+            ) {
+                picked?.let { (first, last) ->
+                    val from = days.indexOf(first)
+                    val to = days.indexOf(last)
+                    if (from >= 0 && to >= from) {
+                        Box(
+                            modifier = Modifier
+                                .offset(x = width * from)
+                                .width(width * (to - from + 1))
+                                .fillMaxHeight()
+                                .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f))
+                                .testTag("picked"),
+                        )
+                    }
+                }
                 for (bar in bars) {
                     val instance = bar.item ?: lifted?.instance ?: continue
                     val raised = bar.item == null

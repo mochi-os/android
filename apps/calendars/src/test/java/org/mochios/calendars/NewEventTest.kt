@@ -9,6 +9,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mochios.calendars.model.Hours
 import org.mochios.calendars.ui.editor.defaultStart
+import org.mochios.calendars.ui.editor.picked
 import java.time.LocalDate
 import java.time.LocalTime
 
@@ -34,5 +35,22 @@ class NewEventTest {
     @Test
     fun `once today has no whole hour left it starts at tomorrow's working hours`() {
         assertEquals(TODAY.plusDays(1).atTime(8, 0), defaultStart(TODAY, TODAY, LocalTime.of(23, 10), HOURS))
+    }
+
+    @Test
+    fun `a run of days picked on the grid spans the working hours' start on its first day to the default length on its last`() {
+        val london = java.time.ZoneId.of("Europe/London")
+        val tuesday = LocalDate.of(2026, 10, 6)
+        val (start, finish) = picked(tuesday, tuesday.plusDays(2), HOURS, 90, london)
+        assertEquals(tuesday.atTime(8, 0).atZone(london).toEpochSecond(), start)
+        assertEquals(tuesday.plusDays(2).atTime(9, 30).atZone(london).toEpochSecond(), finish)
+    }
+
+    @Test
+    fun `a picked run's last day ends no later than its last minute`() {
+        val london = java.time.ZoneId.of("Europe/London")
+        val tuesday = LocalDate.of(2026, 10, 6)
+        val (_, finish) = picked(tuesday, tuesday, Hours(start = 23, finish = 23), 120, london)
+        assertEquals(tuesday.atTime(23, 59).atZone(london).toEpochSecond(), finish)
     }
 }

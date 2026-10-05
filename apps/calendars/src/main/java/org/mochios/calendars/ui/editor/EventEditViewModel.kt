@@ -80,7 +80,8 @@ data class EditorUiState(
     /**
      * The times of day the ends had, minutes past midnight, while All day is
      * on: turning it off again puts them back. Null for an event that opened
-     * all day, which comes back from midnight to the last minute of its day.
+     * all day with no times of its own, which comes back from midnight to the
+     * last minute of its day.
      */
     val clock: Pair<Int, Int>? = null,
     val etag: String = "",
@@ -205,8 +206,9 @@ class EventEditViewModel @Inject constructor(
 
     /**
      * Opens the stored [event], or a new one at [start] when it names none:
-     * over [finish] when a span was marked out on the grid, and for the
-     * default length otherwise.
+     * over [finish] when a span was marked out on the grid, all day across
+     * the days from [start] to [finish] when a run of days was picked, and
+     * for the default length otherwise.
      */
     private fun load(event: String?, occurrence: Long, start: Long, allday: Boolean?, finish: Long) {
         viewModelScope.launch {
@@ -229,7 +231,7 @@ class EventEditViewModel @Inject constructor(
                     start > 0 && finish > start -> finish - start
                     else -> 60L * (preferences?.duration ?: 60)
                 }
-                _uiState.value = EditorUiState(
+                val opened = EditorUiState(
                     calendars = calendars,
                     calendar = preferred(calendars, preferences?.calendar.orEmpty()),
                     allday = memory.allday,
@@ -239,6 +241,20 @@ class EventEditViewModel @Inject constructor(
                     reminders = defaultReminders(preferences?.reminder ?: 15),
                     isLoading = false,
                 )
+                // A run of days picked on the grid comes all day with a span:
+                // it opens over the days the span falls on, and keeps the
+                // span's times beneath for turning all day off, as switching
+                // a timed event to all day does.
+                _uiState.value = if (allday == true && start > 0 && finish > start) {
+                    val timed = opened.copy(
+                        allday = false,
+                        start = moved(start, zone, memory.zone.start),
+                        finish = moved(finish, zone, memory.zone.finish),
+                    )
+                    toggled(timed, true, zone)
+                } else {
+                    opened
+                }
                 settled()
                 return@launch
             }
