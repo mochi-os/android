@@ -522,15 +522,24 @@ class CalendarViewModel @Inject constructor(
                     val index = if (forward) current.latest + 1 else current.earliest - 1
                     val span = page(current.anchor, index, zone)
                     val (instances, truncated) = repository.listEvents(span.start, span.finish, shown(), zone.id)
+                    // The page lands in the state as it is now, so whatever
+                    // changed while it was read stands; pages read again
+                    // meanwhile for another day or range leave it no place.
+                    val now = _uiState.value
+                    if (now.anchor != current.anchor || now.fetched != current.fetched ||
+                        now.earliest != current.earliest || now.latest != current.latest
+                    ) {
+                        break
+                    }
                     // Merged rather than appended: a multi-day occurrence
                     // reaches into both pages and the server lists it in each.
-                    val merged = ordered((current.instances + instances).distinctBy { it.event to it.start })
-                    val grew = merged.size > current.instances.size
-                    _uiState.value = current.copy(
+                    val merged = ordered((now.instances + instances).distinctBy { it.event to it.start })
+                    val grew = merged.size > now.instances.size
+                    _uiState.value = now.copy(
                         instances = merged,
-                        truncated = current.truncated || truncated,
-                        earliest = if (forward) current.earliest else index,
-                        latest = if (forward) index else current.latest,
+                        truncated = now.truncated || truncated,
+                        earliest = if (forward) now.earliest else index,
+                        latest = if (forward) index else now.latest,
                     )
                 } while (!forward && !grew && hasEarlier(_uiState.value))
                 _uiState.value = _uiState.value.copy(paging = false)
@@ -587,7 +596,10 @@ class CalendarViewModel @Inject constructor(
         val request = sharedView(view, _uiState.value.preferences.view) ?: return
         viewModelScope.launch {
             try {
-                _uiState.value = _uiState.value.copy(preferences = repository.setPreferences(request))
+                // Read before the state is: a copy taken first would write
+                // back whatever was on screen when the request went out.
+                val saved = repository.setPreferences(request)
+                _uiState.value = _uiState.value.copy(preferences = saved)
             } catch (_: Exception) {
             }
         }

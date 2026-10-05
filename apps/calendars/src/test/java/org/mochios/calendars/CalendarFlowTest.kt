@@ -44,6 +44,8 @@ import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
 import java.util.concurrent.ConcurrentLinkedQueue
+import java.util.concurrent.CountDownLatch
+import java.util.concurrent.TimeUnit
 
 /**
  * The calendar screen's state against a server, as the web's: only the
@@ -79,6 +81,16 @@ class CalendarFlowTest {
     @Volatile private var whole = false
     @Volatile private var written = ""
 
+    /**
+     * Held until released: the preferences write, and a listing that starts
+     * at or after [held], which answers with a concert at its start. [last]
+     * is the last event the bounds report.
+     */
+    @Volatile private var saving: CountDownLatch? = null
+    @Volatile private var paging: CountDownLatch? = null
+    @Volatile private var held = Long.MAX_VALUE
+    @Volatile private var last = 0L
+
     @Before
     fun begin() {
         VisibilityStore.hidden(context, emptySet())
@@ -92,8 +104,12 @@ class CalendarFlowTest {
                     "-/calendars" -> ok(
                         """{"calendars": [{"id": "c1", "name": "Home", "default": true}, {"id": "c2", "name": "Work"}]}""",
                     )
-                    "-/preferences/get", "-/preferences/set" -> ok("""{"preferences": {}}""")
-                    "-/events/bounds" -> ok("""{"first": 0, "last": 0, "endless": false}""")
+                    "-/preferences/get" -> ok("""{"preferences": {}}""")
+                    "-/preferences/set" -> {
+                        saving?.await(10, TimeUnit.SECONDS)
+                        ok("""{"preferences": {"view": "list"}}""")
+                    }
+                    "-/events/bounds" -> ok("""{"first": 0, "last": $last, "endless": false}""")
                     "-/events/get" -> ok(stored())
                     "-/calendars/rename", "-/calendars/colour", "-/calendars/delete" ->
                         if (refusing) MockResponse().setResponseCode(500).setBody("""{"error": "down"}""") else ok("{}")
@@ -109,6 +125,14 @@ class CalendarFlowTest {
                         }
                     }
                     "-/events" -> when {
+                        (request.requestUrl?.queryParameter("start")?.toLongOrNull() ?: 0) >= held -> {
+                            paging?.await(10, TimeUnit.SECONDS)
+                            val from = request.requestUrl?.queryParameter("start")?.toLongOrNull() ?: 0
+                            ok(
+                                """{"instances": [{"event": "e2", "calendar": "c1", "summary": "Concert",
+                                    "start": $from, "finish": ${from + 3_600}}], "truncated": false}""",
+                            )
+                        }
                         failing -> MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
                         holding in query.split(",") -> ok(
                             """{"instances": [{"event": "e1", "calendar": "$holding", "summary": "Stand-up",
@@ -157,6 +181,15 @@ class CalendarFlowTest {
         while (!done()) {
             shadowOf(Looper.getMainLooper()).idle()
             check(System.currentTimeMillis() < deadline) { "timed out" }
+            Thread.sleep(10)
+        }
+    }
+
+    /** Runs the main thread for [millis], for a reply that leaves nothing changed to wait on. */
+    private fun settle(millis: Long = 500) {
+        val deadline = System.currentTimeMillis() + millis
+        while (System.currentTimeMillis() < deadline) {
+            shadowOf(Looper.getMainLooper()).idle()
             Thread.sleep(10)
         }
     }
@@ -411,4 +444,71 @@ class CalendarFlowTest {
         assertNotNull(seen.single().instance)
         assertFalse("c2" in VisibilityStore.hidden(context))
     }
+
+    // ---- a reply that lands after the state has moved on ----
+
+    @Test
+    fun `saving the view keeps what changed while it was saved`() {
+        val model = model()
+        val saved = CountDownLatch(1)
+        saving = saved
+        model.view(CalendarsSection.LIST)
+        until { asked.any { it.path.orEmpty().endsWith("-/preferences/set") } }
+        val day = LocalDate.of(2026, 10, 5)
+        model.anchor(day)
+        until { model.uiState.value.fetched == day && model.uiState.value.instances.isNotEmpty() }
+        saved.countDown()
+        until { model.uiState.value.preferences.view == "list" }
+        assertEquals(day, model.uiState.value.anchor)
+        assertEquals(day, model.uiState.value.fetched)
+        assertEquals(listOf("e1"), model.uiState.value.instances.map { it.event })
+    }
+
+    @Test
+    fun `a later page keeps what changed while it was read`() {
+        val day = LocalDate.of(2026, 10, 5)
+        last = day.plusDays(200).atStartOfDay(london).toEpochSecond()
+        val model = model()
+        model.view(CalendarsSection.LIST)
+        until { model.uiState.value.preferences.view == "list" }
+        model.anchor(day)
+        until { model.uiState.value.fetched == day && !model.uiState.value.isLoading }
+        val read = CountDownLatch(1)
+        paging = read
+        held = day.plusDays(1).atStartOfDay(london).toEpochSecond()
+        model.later()
+        until { listings().any { (it.requestUrl?.queryParameter("start")?.toLongOrNull() ?: 0) >= held } }
+        model.search("stand")
+        read.countDown()
+        until { model.uiState.value.latest == 1 && !model.uiState.value.paging }
+        assertEquals("stand", model.uiState.value.search)
+        assertEquals(listOf("e1", "e2"), model.uiState.value.instances.map { it.event })
+    }
+
+    @Test
+    fun `a later page read for another day is dropped`() {
+        val day = LocalDate.of(2026, 10, 5)
+        last = day.plusDays(200).atStartOfDay(london).toEpochSecond()
+        val model = model()
+        model.view(CalendarsSection.LIST)
+        until { model.uiState.value.preferences.view == "list" }
+        model.anchor(day)
+        until { model.uiState.value.fetched == day && !model.uiState.value.isLoading }
+        val read = CountDownLatch(1)
+        paging = read
+        held = day.plusDays(1).atStartOfDay(london).toEpochSecond()
+        model.later()
+        until { listings().any { (it.requestUrl?.queryParameter("start")?.toLongOrNull() ?: 0) >= held } }
+        // A day well before the held page: its own first page comes back at once.
+        val earlier = day.minusYears(2)
+        model.anchor(earlier)
+        until { model.uiState.value.fetched == earlier && !model.uiState.value.isLoading }
+        read.countDown()
+        // Nothing changes when the page is dropped, so there is nothing to wait on.
+        settle()
+        assertEquals(earlier, model.uiState.value.anchor)
+        assertEquals(0, model.uiState.value.latest)
+        assertFalse(model.uiState.value.instances.any { it.event == "e2" })
+    }
+
 }
