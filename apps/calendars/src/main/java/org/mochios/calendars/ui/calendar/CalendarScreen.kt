@@ -9,6 +9,7 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.ScrollState
@@ -22,6 +23,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
@@ -59,6 +62,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -78,7 +82,9 @@ import androidx.compose.ui.input.key.key
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.CustomAccessibilityAction
@@ -164,6 +170,11 @@ fun CalendarScreen(
     val uiState by viewModel.uiState.collectAsState()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val snackbar = remember { SnackbarHostState() }
+    var snackbarHeight by remember { mutableIntStateOf(0) }
+    val fabLift by animateDpAsState(
+        targetValue = with(LocalDensity.current) { snackbarHeight.toDp() },
+        label = "fabLift",
+    )
     val scope = rememberCoroutineScope()
     val lifecycle = LocalLifecycleOwner.current
     val resources = LocalResources.current
@@ -326,131 +337,142 @@ fun CalendarScreen(
         onLogout = onLogout,
         onAbout = { about = true },
     ) {
-        Scaffold(
-            topBar = {
-                Toolbar(
-                    state = uiState,
-                    title = monthTitle(
-                        when {
-                            picking -> uiState.focus
-                            uiState.view == CalendarsSection.LIST -> listed ?: uiState.anchor
-                            else -> viewModel.first(uiState)
-                        },
-                    ),
-                    picking = picking,
-                    onMenu = { scope.launch { drawerState.open() } },
-                    onTitle = { picking = !picking },
-                    onToday = viewModel::today,
-                    onView = viewModel::view,
-                    onWorkweek = { viewModel.workweek(!uiState.workweek) },
-                    searching = searching,
-                    onSearch = {
-                        // Results are listed, so a search from another view
-                        // goes to the list, as the web's box does.
-                        if (uiState.view != CalendarsSection.LIST) viewModel.seek()
-                        searching = true
-                    },
-                    onSearchChange = viewModel::search,
-                    onSearchClose = {
-                        searching = false
-                        viewModel.search("")
-                    },
-                )
-            },
-            snackbarHost = { SnackbarHost(snackbar) },
-            floatingActionButton = {
-                MochiFab(onClick = { onNewEvent(viewModel.creation(), null, null) }) {
-                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
-                }
-            },
-        ) { padding ->
-            Column(modifier = Modifier.fillMaxSize().padding(padding)) {
-                AnimatedVisibility(
-                    visible = picking,
-                    enter = expandVertically(),
-                    exit = shrinkVertically(),
-                ) {
-                    val days = uiState.view != CalendarsSection.MONTH
-                    key(days) {
-                        DatePanel(
-                            focus = uiState.focus,
-                            today = LocalDate.now(viewModel.timezone()),
-                            weekStart = viewModel.start(),
-                            onPick = viewModel::anchor,
-                            days = days,
-                        )
-                    }
-                }
-                Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
-                    val error = uiState.error
-                    when {
-                        uiState.isLoading -> Box(
-                            modifier = Modifier.fillMaxSize(),
-                            contentAlignment = Alignment.Center,
-                        ) { CircularProgressIndicator() }
-
-                        error != null && uiState.instances.isEmpty() ->
-                            ErrorState(error = error, onRetry = { viewModel.reload() })
-
-                        // A pull on the list view reaches further back rather
-                        // than starting the range again, which is what the reader
-                        // is asking for at the top of an agenda.
-                        else -> PullToRefreshBox(
-                            isRefreshing = uiState.isRefreshing,
-                            onRefresh = {
-                                if (uiState.view == CalendarsSection.LIST) {
-                                    viewModel.earlier()
-                                } else {
-                                    viewModel.reload(refreshing = true)
-                                }
+        Box(modifier = Modifier.fillMaxSize()) {
+            Scaffold(
+                topBar = {
+                    Toolbar(
+                        state = uiState,
+                        title = monthTitle(
+                            when {
+                                picking -> uiState.focus
+                                uiState.view == CalendarsSection.LIST -> listed ?: uiState.anchor
+                                else -> viewModel.first(uiState)
                             },
-                            modifier = Modifier.fillMaxSize(),
-                        ) {
-                            Column(modifier = Modifier.fillMaxSize()) {
-                                if (uiState.truncated) {
-                                    Text(
-                                        text = stringResource(R.string.calendars_truncated),
-                                        style = MaterialTheme.typography.bodySmall,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
-                                    )
-                                }
-                                View(
-                                    uiState,
-                                    viewModel,
-                                    selected = selected,
-                                    onOpen = { instance ->
-                                        open(instance, onEditEvent) { shown ->
-                                            selected = shown
-                                            viewModel.details(shown)
-                                        }
-                                    },
-                                    onNewEvent = onNewEvent,
-                                    onMove = { instance, moved ->
-                                        request(instance) { scope -> viewModel.move(instance, moved, scope) }
-                                    },
-                                    onMoveDay = { instance, day ->
-                                        request(instance) { scope -> viewModel.move(instance, day, scope) }
-                                    },
-                                    onListed = { day -> listed = day },
-                                )
-                            }
+                        ),
+                        picking = picking,
+                        onMenu = { scope.launch { drawerState.open() } },
+                        onTitle = { picking = !picking },
+                        onToday = viewModel::today,
+                        onView = viewModel::view,
+                        onWorkweek = { viewModel.workweek(!uiState.workweek) },
+                        searching = searching,
+                        onSearch = {
+                            // Results are listed, so a search from another view
+                            // goes to the list, as the web's box does.
+                            if (uiState.view != CalendarsSection.LIST) viewModel.seek()
+                            searching = true
+                        },
+                        onSearchChange = viewModel::search,
+                        onSearchClose = {
+                            searching = false
+                            viewModel.search("")
+                        },
+                    )
+                },
+                floatingActionButton = {
+                    MochiFab(
+                        onClick = { onNewEvent(viewModel.creation(), null, null) },
+                        modifier = Modifier.offset(y = -fabLift),
+                    ) {
+                        Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
+                    }
+                },
+            ) { padding ->
+                Column(modifier = Modifier.fillMaxSize().padding(padding)) {
+                    AnimatedVisibility(
+                        visible = picking,
+                        enter = expandVertically(),
+                        exit = shrinkVertically(),
+                    ) {
+                        val days = uiState.view != CalendarsSection.MONTH
+                        key(days) {
+                            DatePanel(
+                                focus = uiState.focus,
+                                today = LocalDate.now(viewModel.timezone()),
+                                weekStart = viewModel.start(),
+                                onPick = viewModel::anchor,
+                                days = days,
+                            )
                         }
                     }
-                    if (picking) {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .pointerInput(Unit) {
-                                    awaitEachGesture {
-                                        awaitFirstDown().consume()
-                                        picking = false
+                    Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                        val error = uiState.error
+                        when {
+                            uiState.isLoading -> Box(
+                                modifier = Modifier.fillMaxSize(),
+                                contentAlignment = Alignment.Center,
+                            ) { CircularProgressIndicator() }
+
+                            error != null && uiState.instances.isEmpty() ->
+                                ErrorState(error = error, onRetry = { viewModel.reload() })
+
+                            // A pull on the list view reaches further back rather
+                            // than starting the range again, which is what the reader
+                            // is asking for at the top of an agenda.
+                            else -> PullToRefreshBox(
+                                isRefreshing = uiState.isRefreshing,
+                                onRefresh = {
+                                    if (uiState.view == CalendarsSection.LIST) {
+                                        viewModel.earlier()
+                                    } else {
+                                        viewModel.reload(refreshing = true)
                                     }
                                 },
-                        )
+                                modifier = Modifier.fillMaxSize(),
+                            ) {
+                                Column(modifier = Modifier.fillMaxSize()) {
+                                    if (uiState.truncated) {
+                                        Text(
+                                            text = stringResource(R.string.calendars_truncated),
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
+                                        )
+                                    }
+                                    View(
+                                        uiState,
+                                        viewModel,
+                                        selected = selected,
+                                        onOpen = { instance ->
+                                            open(instance, onEditEvent) { shown ->
+                                                selected = shown
+                                                viewModel.details(shown)
+                                            }
+                                        },
+                                        onNewEvent = onNewEvent,
+                                        onMove = { instance, moved ->
+                                            request(instance) { scope -> viewModel.move(instance, moved, scope) }
+                                        },
+                                        onMoveDay = { instance, day ->
+                                            request(instance) { scope -> viewModel.move(instance, day, scope) }
+                                        },
+                                        onListed = { day -> listed = day },
+                                    )
+                                }
+                            }
+                        }
+                        if (picking) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .pointerInput(Unit) {
+                                        awaitEachGesture {
+                                            awaitFirstDown().consume()
+                                            picking = false
+                                        }
+                                    },
+                            )
+                        }
                     }
                 }
             }
+            SnackbarHost(
+                snackbar,
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .navigationBarsPadding()
+                    .onSizeChanged { size -> snackbarHeight = size.height },
+            )
         }
     }
 
