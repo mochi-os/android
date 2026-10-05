@@ -19,8 +19,6 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performTouchInput
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -87,8 +85,6 @@ class MonthGridTest {
     }
 
     private val shown = mutableStateOf(LocalDate.of(2026, 10, 1))
-
-    private val NUMBERS = 22.dp
 
     @Before
     fun begin() {
@@ -167,19 +163,20 @@ class MonthGridTest {
         finish = day.atTime(11, 0).atZone(london).toEpochSecond(),
     )
 
-    private fun px(dp: Dp): Float = with(rule.density) { dp.toPx() }
-
     private fun bounds(tag: String): Rect = rule.onNodeWithTag(tag).fetchSemanticsNode().boundsInRoot
 
-    /** A point well inside the cell for [day] on the grid of [month], towards its far side. */
-    private fun cell(day: LocalDate, month: LocalDate = shown.value): Offset {
+    /**
+     * A point inside the cell for [day] on the grid of [month], [side] of
+     * the way across it: towards its far side unless asked otherwise.
+     */
+    private fun cell(day: LocalDate, month: LocalDate = shown.value, side: Float = 0.8f): Offset {
         val weeks = grid(month)
         val box = bounds("weeks")
         val row = weeks.indexOfLast { !it.isAfter(day) }
         val column = ((day.dayOfWeek.value + 6) % 7)
-        val width = (box.width - px(NUMBERS)) / 7
+        val width = box.width / 7
         val height = box.height / weeks.size
-        return Offset(box.left + px(NUMBERS) + width * (column + 0.8f), box.top + height * (row + 0.7f))
+        return Offset(box.left + width * (column + side), box.top + height * (row + 0.7f))
     }
 
     private fun press(at: Offset) {
@@ -200,12 +197,29 @@ class MonthGridTest {
     // ---- week numbers ----
 
     @Test
-    fun `each row is led by its ISO week number`() {
+    fun `each row is labelled with its ISO week number`() {
         show(emptyList())
-        val numbers = rule.onAllNodesWithTag("week-number").fetchSemanticsNodes().map {
+        val numbers = rule.onAllNodesWithTag("week-number", useUnmergedTree = true).fetchSemanticsNodes().map {
             it.config[androidx.compose.ui.semantics.SemanticsProperties.Text].joinToString { text -> text.text }
         }
         assertEquals(listOf("40", "41", "42", "43", "44", "45"), numbers)
+    }
+
+    @Test
+    fun `a week number sits in its row's first day, opposite the date, and the days start at the grid's edge`() {
+        show(emptyList())
+        val box = bounds("weeks")
+        val cells = listOf("inside", "outside").flatMap { tag ->
+            rule.onAllNodesWithTag(tag, useUnmergedTree = true).fetchSemanticsNodes().map { it.boundsInRoot }
+        }
+        val numbers = rule.onAllNodesWithTag("week-number", useUnmergedTree = true).fetchSemanticsNodes()
+        assertEquals(6, numbers.size)
+        for (number in numbers.map { it.boundsInRoot }) {
+            val cell = cells.single { it.contains(number.center) }
+            assertEquals(box.left, cell.left, 1f)
+            // The date is at the cell's start, so the number takes its end.
+            assertTrue(number.center.x > cell.center.x)
+        }
     }
 
     @Test
@@ -276,6 +290,16 @@ class MonthGridTest {
         assertEquals(listOf(tuesday to tuesday.plusDays(8)), ranged)
         assertTrue(created.isEmpty())
         assertEquals(listOf(false, true, false), holding)
+    }
+
+    @Test
+    fun `a run reaches the day whose near edge the finger is on`() {
+        show(emptyList())
+        val tuesday = LocalDate.of(2026, 10, 13)
+        press(cell(tuesday))
+        move(cell(tuesday.plusDays(2), side = 0.15f))
+        release()
+        assertEquals(listOf(tuesday to tuesday.plusDays(2)), ranged)
     }
 
     @Test

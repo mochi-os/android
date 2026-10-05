@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -191,18 +190,15 @@ fun MonthGrid(
     var pick by remember { mutableStateOf<Pick?>(null) }
     var claimed by remember { mutableStateOf(false) }
     val density = LocalDensity.current
-    val numbers = with(density) { NUMBERS.toPx() }
 
     /** The day under the finger, from the weeks' bounds: rows of equal height, seven equal columns. */
     fun under(): LocalDate? {
         val box = body ?: return null
         if (!box.contains(finger) || weeks.isEmpty()) return null
         val row = ((finger.y - box.top) / (box.height / weeks.size)).toInt().coerceIn(0, weeks.size - 1)
-        // The week numbers lead each row, on the right in a right-to-left layout.
-        val days = box.width - numbers
-        val across = if (rtl) box.right - numbers - finger.x else finger.x - box.left - numbers
-        if (across < 0) return null
-        val column = (across / (days / 7)).toInt().coerceIn(0, 6)
+        // The first day is on the right in a right-to-left layout.
+        val across = if (rtl) box.right - finger.x else finger.x - box.left
+        val column = (across / (box.width / 7)).toInt().coerceIn(0, 6)
         return weeks[row].plusDays(column.toLong())
     }
 
@@ -305,7 +301,6 @@ fun MonthGrid(
     ) {
         Column(modifier = Modifier.fillMaxSize()) {
             Row(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
-                Spacer(Modifier.width(NUMBERS))
                 for (offset in 0 until 7) {
                     Text(
                         text = weekdayLabel(weeks.first().plusDays(offset.toLong())),
@@ -325,56 +320,46 @@ fun MonthGrid(
                     .onGloballyPositioned { body = it.rectInRoot() },
             ) {
                 for (week in weeks) {
-                    Row(modifier = Modifier.fillMaxWidth().weight(1f)) {
-                        Text(
-                            text = number(week).toString(),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                            modifier = Modifier.width(NUMBERS).padding(top = 4.dp).testTag("week-number"),
-                        )
-                        // The lines between days are drawn over the days
-                        // alone, so the week numbers' column has none.
-                        Row(
-                            modifier = Modifier
-                                .weight(1f)
-                                .fillMaxHeight()
-                                .columnLines(7, MaterialTheme.colorScheme.outlineVariant),
-                        ) {
-                            for (offset in 0 until 7) {
-                                val day = week.plusDays(offset.toLong())
-                                val occurrences = byDay[day].orEmpty()
-                                Cell(
-                                    day = day,
-                                    today = today,
-                                    allday = state.preferences.allday,
-                                    outside = month != null && day.monthValue != month,
-                                    instances = occurrences,
-                                    viewModel = viewModel,
-                                    lifted = lift?.instance,
-                                    selected = selected,
-                                    targeted = target == day && lift?.day != day ||
-                                        run != null && !day.isBefore(run.first) && !day.isAfter(run.second),
-                                    modifier = Modifier.weight(1f),
-                                    onDay = { viewModel.open(day) },
-                                    onCreate = { onCreate(day) },
-                                    onOpen = onOpen,
-                                    landing = landed?.takeIf { it.first == day }?.second,
-                                    onLift = { instance, at, grab, width ->
-                                        claimed = true
-                                        landed = null
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .weight(1f)
+                            .columnLines(7, MaterialTheme.colorScheme.outlineVariant),
+                    ) {
+                        for (offset in 0 until 7) {
+                            val day = week.plusDays(offset.toLong())
+                            val occurrences = byDay[day].orEmpty()
+                            Cell(
+                                day = day,
+                                week = if (offset == 0) number(week) else null,
+                                today = today,
+                                allday = state.preferences.allday,
+                                outside = month != null && day.monthValue != month,
+                                instances = occurrences,
+                                viewModel = viewModel,
+                                lifted = lift?.instance,
+                                selected = selected,
+                                targeted = target == day && lift?.day != day ||
+                                    run != null && !day.isBefore(run.first) && !day.isAfter(run.second),
+                                modifier = Modifier.weight(1f),
+                                onDay = { viewModel.open(day) },
+                                onCreate = { onCreate(day) },
+                                onOpen = onOpen,
+                                landing = landed?.takeIf { it.first == day }?.second,
+                                onLift = { instance, at, grab, width ->
+                                    claimed = true
+                                    landed = null
+                                    finger = at
+                                    lift = Hold(instance, day, grab, width)
+                                },
+                                onHold = { claimed = true },
+                                onPick = { at ->
+                                    if (!claimed) {
                                         finger = at
-                                        lift = Hold(instance, day, grab, width)
-                                    },
-                                    onHold = { claimed = true },
-                                    onPick = { at ->
-                                        if (!claimed) {
-                                            finger = at
-                                            pick = Pick(day, day)
-                                        }
-                                    },
-                                )
-                            }
+                                        pick = Pick(day, day)
+                                    }
+                                },
+                            )
                         }
                     }
                     HorizontalDivider()
@@ -416,9 +401,6 @@ private class Grip {
     var step: (Int) -> Unit = {}
 }
 
-/** The width of the column the week numbers sit in. */
-private val NUMBERS = 22.dp
-
 /** How close to the weeks' top or bottom a carried chip turns the page. */
 private val SIDE = 28.dp
 
@@ -438,6 +420,7 @@ private fun LayoutCoordinates.rectInRoot(): Rect {
 @Composable
 private fun Cell(
     day: LocalDate,
+    week: Int?,
     today: LocalDate,
     allday: String,
     outside: Boolean,
@@ -496,6 +479,23 @@ private fun Cell(
                         outside -> MaterialTheme.colorScheme.onSurfaceVariant
                         else -> MaterialTheme.colorScheme.onSurface
                     },
+                )
+            }
+            // The row's week number sits in its first day's corner, opposite
+            // the date, taking no width of its own.
+            if (week != null) {
+                Text(
+                    text = week.toString(),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = if (current) {
+                        MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.8f)
+                    } else {
+                        MaterialTheme.colorScheme.onSurfaceVariant
+                    },
+                    modifier = Modifier
+                        .align(Alignment.CenterEnd)
+                        .padding(end = 3.dp)
+                        .testTag("week-number"),
                 )
             }
         }
