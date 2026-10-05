@@ -244,6 +244,8 @@
     <string name="people_sync_time">Last synced %1$s</string>
     <string name="people_sync_never">Not synced yet</string>
     <string name="people_sync_permission">Contacts permission needed</string>
+    <string name="people_sync_permission_reason">Syncing copies your friends into this phone\'s Contacts app, so it needs access to your contacts.</string>
+    <string name="people_sync_permission_blocked">Contacts access is turned off for this app. You can turn it on under Permissions in the app\'s settings.</string>
     <string name="people_sync_authorization">Log in again to sync</string>
     <string name="people_sync_transport">Could not reach the server</string>
     <string name="people_sync_refused">Could not sync a contact: %1$s</string>

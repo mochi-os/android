@@ -280,6 +280,8 @@
     <string name="calendars_sync_time">Last synced %1$s</string>
     <string name="calendars_sync_authorization">Sign in again to keep syncing</string>
     <string name="calendars_sync_transport">Could not reach the server</string>
+    <string name="calendars_sync_permission_reason">Syncing copies your events into this phone\'s calendar app, so it needs access to your calendars.</string>
+    <string name="calendars_sync_permission_blocked">Calendar access is turned off for this app. You can turn it on under Permissions in the app\'s settings.</string>
 
     <!-- Connect device -->
     <string name="calendars_device_title">Connected devices</string>

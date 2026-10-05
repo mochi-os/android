@@ -5,6 +5,10 @@
 
 package org.mochios.calendars.ui.sync
 
+import android.content.Intent
+import android.net.Uri
+import android.provider.Settings
+import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
@@ -24,7 +28,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.core.app.ActivityCompat
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.sync.CalendarsSync
@@ -42,6 +49,10 @@ import org.mochios.android.R as MochiR
  * status line, and while it is on, "Sync now" and the per-calendar toggles
  * saying which calendars reach the phone's own calendar app. Turning the
  * switch on asks for the calendar permission; nothing asks for it earlier.
+ * After one refusal it explains why before asking again. When a request is
+ * refused and Android will not show it again, a dialog offers the app's
+ * system settings, and sync turns on when the reader comes back with the
+ * permission granted.
  *
  * A calendar's toggle is separate from the checkbox that shows it in this
  * app's own views: one is what the phone holds, the other what is drawn.
@@ -50,13 +61,35 @@ import org.mochios.android.R as MochiR
 fun CalendarsSyncRows(viewModel: CalendarsSyncViewModel = hiltViewModel()) {
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
+    val activity = LocalActivity.current
     var choosing by rememberSaveable { mutableStateOf(false) }
+    var explaining by rememberSaveable { mutableStateOf(false) }
+    var blocked by rememberSaveable { mutableStateOf(false) }
+    var settings by rememberSaveable { mutableStateOf(false) }
+
+    fun rationale() = activity != null && CalendarsSync.PERMISSIONS.any { permission ->
+        ActivityCompat.shouldShowRequestPermissionRationale(activity, permission)
+    }
 
     val launcher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions(),
     ) { results ->
         viewModel.refresh()
-        if (CalendarsSync.PERMISSIONS.all { results[it] == true }) viewModel.enable()
+        if (CalendarsSync.PERMISSIONS.all { permission -> results[permission] == true }) {
+            viewModel.enable()
+        } else if (!rationale()) {
+            blocked = true
+        }
+    }
+
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+        viewModel.refresh()
+        if (settings) {
+            settings = false
+            if (CalendarsSync.permitted(context)) {
+                viewModel.enable()
+            }
+        }
     }
 
     val on = state.enabled && state.permitted
@@ -68,6 +101,7 @@ fun CalendarsSyncRows(viewModel: CalendarsSyncViewModel = hiltViewModel()) {
             when {
                 !checked -> viewModel.disable()
                 CalendarsSync.permitted(context) -> viewModel.enable()
+                rationale() -> explaining = true
                 else -> launcher.launch(CalendarsSync.PERMISSIONS)
             }
         },
@@ -86,6 +120,40 @@ fun CalendarsSyncRows(viewModel: CalendarsSyncViewModel = hiltViewModel()) {
             title = stringResource(R.string.calendars_sync_choose),
             icon = Icons.Outlined.PhoneAndroid,
             onClick = { choosing = true },
+        )
+    }
+
+    if (explaining) {
+        MochiAlertDialog(
+            onDismissRequest = { explaining = false },
+            title = stringResource(R.string.calendars_sync_title),
+            text = stringResource(R.string.calendars_sync_permission_reason),
+            confirmText = stringResource(MochiR.string.common_continue),
+            onConfirm = {
+                explaining = false
+                launcher.launch(CalendarsSync.PERMISSIONS)
+            },
+            dismissText = stringResource(MochiR.string.common_cancel),
+        )
+    }
+
+    if (blocked) {
+        MochiAlertDialog(
+            onDismissRequest = { blocked = false },
+            title = stringResource(R.string.calendars_sync_title),
+            text = stringResource(R.string.calendars_sync_permission_blocked),
+            confirmText = stringResource(MochiR.string.common_open_settings),
+            onConfirm = {
+                blocked = false
+                settings = true
+                context.startActivity(
+                    Intent(
+                        Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                        Uri.fromParts("package", context.packageName, null),
+                    ),
+                )
+            },
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 

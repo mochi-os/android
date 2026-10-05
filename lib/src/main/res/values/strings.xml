@@ -72,6 +72,8 @@
     <string name="common_back">Back</string>
     <string name="common_close">Close</string>
     <string name="common_cancel">Cancel</string>
+    <string name="common_continue">Continue</string>
+    <string name="common_open_settings">Open settings</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
     <string name="common_filter_remove">Remove filter</string>
@@ -152,6 +154,8 @@
 
     <!-- Notifications -->
     <string name="notifications_clear">Clear notifications</string>
+    <string name="notifications_permission_reason">Mochi needs permission to show notifications, so you hear about new messages, replies and reminders.</string>
+    <string name="notifications_permission_blocked">Notifications are turned off for Mochi. You can turn them on in the app\'s notification settings.</string>
 
     <!-- Banner editor -->
 
