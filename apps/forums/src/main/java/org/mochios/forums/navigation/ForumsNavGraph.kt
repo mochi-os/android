@@ -48,7 +48,7 @@ object ForumsApp {
         if (postId.isNullOrEmpty()) "forums/forum/$forumId/new"
         else "forums/forum/$forumId/new?postId=$postId"
     fun findForums(link: String? = null) =
-        if (link.isNullOrEmpty()) "forums/discover" else "forums/discover?link=${URLEncoder.encode(link, Charsets.UTF_8)}"
+        if (link.isNullOrEmpty()) "forums/discover" else "forums/discover?link=${URLEncoder.encode(link, Charsets.UTF_8.name())}"
 
     /**
      * The screen a `/forums/<forum>[/<post>][?server=<peer>]` link opens: a
