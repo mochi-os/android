@@ -77,6 +77,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -91,6 +96,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
+import kotlin.math.cos
+import kotlin.math.sin
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ColorPicker
@@ -277,13 +284,26 @@ fun EventEditScreen(
                 onSave = { if (uiState.writable) viewModel.save() },
                 select = uiState.copying,
             )
-            LabeledSwitchRow(
-                icon = Icons.Outlined.Schedule,
-                label = stringResource(R.string.calendars_event_allday),
-                checked = uiState.allday,
-                onCheckedChange = viewModel::allday,
-                enabled = !uiState.isSaving,
-            )
+            Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                Box(modifier = Modifier.weight(1f)) {
+                    LabeledSwitchRow(
+                        icon = Icons.Outlined.Schedule,
+                        label = stringResource(R.string.calendars_event_allday),
+                        checked = uiState.allday,
+                        onCheckedChange = viewModel::allday,
+                        enabled = !uiState.isSaving,
+                    )
+                }
+                Box(modifier = Modifier.weight(1f)) {
+                    LabeledSwitchRow(
+                        icon = Dashed,
+                        label = stringResource(R.string.calendars_status_tentative),
+                        checked = uiState.tentative,
+                        onCheckedChange = viewModel::tentative,
+                        enabled = !uiState.isSaving,
+                    )
+                }
+            }
             EventMoments(
                 start = uiState.start,
                 finish = uiState.finish,
@@ -1012,4 +1032,23 @@ private fun ReminderRow(minutes: Int, onSelect: (Int) -> Unit, onRemove: () -> U
             Icon(Icons.Outlined.Close, contentDescription = stringResource(R.string.calendars_reminder_remove))
         }
     }
+}
+
+/**
+ * A tentative event's glyph: a ring of eight dashes, as the event sheet
+ * draws it and the web's editor and popover show it.
+ */
+private val Dashed: ImageVector by lazy {
+    ImageVector.Builder("Dashed", 24.dp, 24.dp, 24f, 24f).path(
+        stroke = SolidColor(Color.Black),
+        strokeLineWidth = 2f,
+        strokeLineCap = StrokeCap.Round,
+    ) {
+        for (dash in 0 until 8) {
+            val from = Math.toRadians(dash * 45.0 - 11.25)
+            val to = Math.toRadians(dash * 45.0 + 11.25)
+            moveTo(12f + 10f * cos(from).toFloat(), 12f + 10f * sin(from).toFloat())
+            arcTo(10f, 10f, 0f, false, true, 12f + 10f * cos(to).toFloat(), 12f + 10f * sin(to).toFloat())
+        }
+    }.build()
 }

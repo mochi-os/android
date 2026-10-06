@@ -264,6 +264,35 @@ class EventComponentsTest {
         assertNull(tree[0].property("URL"))
     }
 
+    // ---- tentative ----
+
+    private fun status(value: String) = master().let { it.copy(properties = it.properties + property("STATUS", value)) }
+
+    private fun statuses(component: EventComponent) =
+        component.properties.filter { it.name == "STATUS" }.map { it.value }
+
+    @Test
+    fun `an event opens as tentative only when its status says so`() {
+        assertTrue(draft(status("TENTATIVE"), LONDON).tentative)
+        assertFalse(draft(status("CONFIRMED"), LONDON).tentative)
+        assertFalse(draft(master(), LONDON).tentative)
+    }
+
+    @Test
+    fun `tentative set in the editor is saved once, in place of any other status`() {
+        val on = form().copy(tentative = true)
+        assertEquals(listOf("TENTATIVE"), statuses(components(on, listOf(master()), Scope.ALL)[0]))
+        assertEquals(listOf("TENTATIVE"), statuses(components(on, listOf(status("CONFIRMED")), Scope.ALL)[0]))
+        assertEquals(listOf("TENTATIVE"), statuses(components(on, listOf(status("TENTATIVE")), Scope.ALL)[0]))
+    }
+
+    @Test
+    fun `tentative turned off clears it, leaving a confirmed or cancelled status alone`() {
+        assertEquals(emptyList<String>(), statuses(components(form(), listOf(status("TENTATIVE")), Scope.ALL)[0]))
+        assertEquals(listOf("CANCELLED"), statuses(components(form(), listOf(status("CANCELLED")), Scope.ALL)[0]))
+        assertEquals(listOf("CONFIRMED"), statuses(components(form(), listOf(status("CONFIRMED")), Scope.ALL)[0]))
+    }
+
     @Test
     fun `exclusions survive while the rule does, and go with it`() {
         val excluded = master().let {

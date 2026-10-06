@@ -60,6 +60,8 @@ data class EventForm(
     val colour: String = "",
     /** A web address the event carries, its `URL`. */
     val url: String = "",
+    /** Whether the event is only tentative, its `STATUS`. */
+    val tentative: Boolean = false,
     val description: String = "",
     val original: String = "",
     val recurrence: Recurrence = Recurrence(),
@@ -218,6 +220,7 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
         location = component.value("LOCATION"),
         colour = component.value("COLOR"),
         url = component.value("URL"),
+        tentative = tentative(component),
         description = descriptionText(component.value("DESCRIPTION")),
         original = component.value("DESCRIPTION"),
         recurrence = recurrence(component.value("RRULE"), zone.start, if (allday) 0L else start),
@@ -225,6 +228,10 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
     )
     return if (occurrence > 0 && start != 0L) shifted(form, occurrence - start) else form
 }
+
+/** Whether a `VEVENT` is only tentative. */
+fun tentative(component: EventComponent): Boolean =
+    component.value("STATUS").equals("TENTATIVE", ignoreCase = true)
 
 /** The form with both ends moved by [seconds], its length and zones kept. */
 fun shifted(form: EventForm, seconds: Long): EventForm =
@@ -574,8 +581,12 @@ private fun component(
     // kept beside it, which would go on showing the old text there.
     val edited = form.description != descriptionText(form.original)
     val properties = mutableListOf<EventProperty>()
+    // Tentative is the one status the editor sets. Turned off, it goes, and
+    // a confirmed or cancelled event keeps its status.
     carried?.properties?.filterNot {
-        it.name.uppercase() in MANAGED || (edited && it.name.equals(CalendarsMapping.ALTERNATIVE, ignoreCase = true))
+        it.name.uppercase() in MANAGED ||
+            (edited && it.name.equals(CalendarsMapping.ALTERNATIVE, ignoreCase = true)) ||
+            (it.name.equals("STATUS", ignoreCase = true) && (form.tentative || it.value.equals("TENTATIVE", ignoreCase = true)))
     }?.let(properties::addAll)
     properties.add(property("SUMMARY", form.title.trim()))
     properties.add(CalendarsMapping.stamp("DTSTART", start * 1000, zone, form.allday))
@@ -583,6 +594,7 @@ private fun component(
     if (form.location.isNotBlank()) properties.add(property("LOCATION", form.location.trim()))
     if (form.colour.isNotBlank()) properties.add(property("COLOR", form.colour.trim()))
     if (form.url.isNotBlank()) properties.add(property("URL", form.url.trim()))
+    if (form.tentative) properties.add(property("STATUS", "TENTATIVE"))
     val description = if (edited) form.description.trim() else form.original
     if (description.isNotBlank()) properties.add(property("DESCRIPTION", description))
     if (recurrence) {

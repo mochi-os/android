@@ -5,12 +5,16 @@
 
 package org.mochios.calendars
 
+import androidx.compose.ui.test.SemanticsNodeInteraction
 import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.assertIsNotEnabled
+import androidx.compose.ui.test.assertIsOff
+import androidx.compose.ui.test.assertIsOn
 import androidx.compose.ui.test.hasClickAction
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.isRoot
+import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -26,6 +30,7 @@ import okhttp3.mockwebserver.RecordedRequest
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -71,6 +76,8 @@ class EditorFlowTest {
     /** Answers by path, in order, the last one repeating. */
     private val answers = ConcurrentHashMap<String, ConcurrentLinkedQueue<MockResponse>>()
     private val asked = ConcurrentLinkedQueue<String>()
+    /** The last body sent to each path. */
+    private val bodies = ConcurrentHashMap<String, String>()
 
     private var saved: Boolean? = null
     private var deleted = false
@@ -83,6 +90,7 @@ class EditorFlowTest {
             override fun dispatch(request: RecordedRequest): MockResponse {
                 val path = request.path.orEmpty().substringAfter("/calendars/").substringBefore("?")
                 asked.add(path)
+                bodies[path] = request.body.readUtf8()
                 val queue = answers[path] ?: return MockResponse().setResponseCode(404)
                 return if (queue.size > 1) queue.poll()!! else queue.peek()!!
             }
@@ -110,16 +118,19 @@ class EditorFlowTest {
 
     private fun ok(data: String) = MockResponse().setBody("""{"data": $data}""")
 
-    private fun event(etag: String, title: String) = ok(
-        """{"event": {"id": "e1", "calendar": "c1", "etag": "$etag", "recurring": false, "components": [
-            {"name": "VEVENT", "properties": [
-                {"name": "UID", "params": {}, "value": "uid-1"},
-                {"name": "SUMMARY", "params": {}, "value": "$title"},
-                {"name": "DTSTART", "params": {}, "value": "20261002T100000Z"},
-                {"name": "DTEND", "params": {}, "value": "20261002T110000Z"}
-            ], "components": []}
-        ]}}""",
-    )
+    private fun event(etag: String, title: String, status: String? = null): MockResponse {
+        val marked = status?.let { """{"name": "STATUS", "params": {}, "value": "$it"},""" }.orEmpty()
+        return ok(
+            """{"event": {"id": "e1", "calendar": "c1", "etag": "$etag", "recurring": false, "components": [
+                {"name": "VEVENT", "properties": [
+                    {"name": "UID", "params": {}, "value": "uid-1"},
+                    {"name": "SUMMARY", "params": {}, "value": "$title"},$marked
+                    {"name": "DTSTART", "params": {}, "value": "20261002T100000Z"},
+                    {"name": "DTEND", "params": {}, "value": "20261002T110000Z"}
+                ], "components": []}
+            ]}}""",
+        )
+    }
 
     private val changed = MockResponse().setResponseCode(412).setBody("""{"error": "changed"}""")
 
@@ -232,6 +243,78 @@ class EditorFlowTest {
         }
         waitFor("Stand-up")
         assertEquals(java.time.LocalDate.of(2026, 10, 4), model.uiState.value.recurrence.until)
+    }
+
+    /** The switch after the "Tentative" label, on the row it shares with All day. */
+    private fun tentative(): SemanticsNodeInteraction {
+        val label = rule.onNodeWithText(string(R.string.calendars_status_tentative)).performScrollTo()
+        val bounds = label.fetchSemanticsNode().boundsInRoot
+        val switches = rule.onAllNodes(isToggleable())
+        val index = switches.fetchSemanticsNodes().indexOfFirst {
+            bounds.center.y in it.boundsInRoot.top..it.boundsInRoot.bottom && it.boundsInRoot.left >= bounds.right
+        }
+        return switches[index].performScrollTo()
+    }
+
+    @Test
+    fun `tentative shares the all-day row, after all day`() {
+        respond("-/events/get", event("a", "Stand-up"))
+        show("event" to "e1")
+        waitFor("Stand-up")
+        val allday = rule.onNodeWithText(string(R.string.calendars_event_allday)).performScrollTo()
+            .fetchSemanticsNode().boundsInRoot
+        val tentative = rule.onNodeWithText(string(R.string.calendars_status_tentative))
+            .fetchSemanticsNode().boundsInRoot
+        assertTrue("$allday $tentative", tentative.center.y in allday.top..allday.bottom)
+        assertTrue("$allday $tentative", tentative.left > allday.right)
+    }
+
+    /** Every STATUS in the tree the last update sent. */
+    private fun statuses(): List<String> {
+        val body = com.google.gson.JsonParser.parseString(bodies["-/events/update"]).asJsonObject
+        return body.getAsJsonArray("components").flatMap { component ->
+            component.asJsonObject.getAsJsonArray("properties")
+                .map { it.asJsonObject }
+                .filter { it.get("name").asString == "STATUS" }
+                .map { it.get("value").asString }
+        }
+    }
+
+    @Test
+    fun `the tentative switch marks an event tentative`() {
+        respond("-/events/get", event("a", "Stand-up"))
+        respond("-/events/update", event("b", "Stand-up"))
+        show("event" to "e1")
+        waitFor("Stand-up")
+        tentative().assertIsOff().performClick()
+        rule.onNodeWithText(string(MochiR.string.common_save)).performScrollTo().performClick()
+        answered { saved != null }
+        assertEquals(listOf("TENTATIVE"), statuses())
+    }
+
+    @Test
+    fun `a tentative event opens with its switch on, and turning it off saves no status`() {
+        respond("-/events/get", event("a", "Stand-up", status = "TENTATIVE"))
+        respond("-/events/update", event("b", "Stand-up"))
+        show("event" to "e1")
+        waitFor("Stand-up")
+        tentative().assertIsOn().performClick()
+        rule.onNodeWithText(string(MochiR.string.common_save)).performScrollTo().performClick()
+        answered { saved != null }
+        assertTrue(bodies.containsKey("-/events/update"))
+        assertEquals(emptyList<String>(), statuses())
+    }
+
+    @Test
+    fun `a copy of a tentative event opens tentative`() {
+        respond("-/events/get", event("a", "Stand-up", status = "TENTATIVE"))
+        val model = EventEditViewModel(context, repository, London, SavedStateHandle(mapOf("source" to "event", "copy" to "e1")))
+        rule.setContent {
+            EventEditScreen(onBack = {}, onSaved = {}, onCopied = {}, onDeleted = {}, onCopy = { _, _, _ -> }, viewModel = model)
+        }
+        waitFor("Stand-up")
+        assertTrue(model.uiState.value.copying)
+        assertTrue(model.uiState.value.tentative)
     }
 
     @Test

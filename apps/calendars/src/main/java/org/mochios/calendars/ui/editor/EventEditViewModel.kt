@@ -70,6 +70,8 @@ data class EditorUiState(
     /** The event's own colour, blank for its calendar's. */
     val colour: String = "",
     val url: String = "",
+    /** The event is only tentative, its `STATUS`. */
+    val tentative: Boolean = false,
     val description: String = "",
     /** The description as the event holds it, which [description] shows as text. */
     val original: String = "",
@@ -324,6 +326,7 @@ class EventEditViewModel @Inject constructor(
             location = form.location,
             colour = form.colour,
             url = form.url,
+            tentative = form.tentative,
             description = form.description,
             original = form.original,
             recurrence = form.recurrence,
@@ -406,6 +409,7 @@ class EventEditViewModel @Inject constructor(
             location = shown.value("LOCATION"),
             colour = shown.value("COLOR"),
             url = shown.value("URL"),
+            tentative = tentative(shown),
             description = descriptionText(shown.value("DESCRIPTION")),
             original = shown.value("DESCRIPTION"),
             recurrence = repeat,
@@ -430,6 +434,8 @@ class EventEditViewModel @Inject constructor(
     fun colour(value: String) = edit { copy(colour = value) }
 
     fun url(value: String) = edit { copy(url = value) }
+
+    fun tentative(value: Boolean) = edit { copy(tentative = value) }
 
     fun description(value: String) = edit { copy(description = value) }
 
@@ -732,6 +738,7 @@ internal fun form(state: EditorUiState, user: String) = EventForm(
     location = state.location,
     colour = state.colour,
     url = state.url,
+    tentative = state.tentative,
     description = state.description,
     original = state.original,
     recurrence = state.recurrence,
