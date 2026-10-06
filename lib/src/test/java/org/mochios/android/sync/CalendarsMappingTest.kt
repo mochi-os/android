@@ -294,6 +294,20 @@ class CalendarsMappingTest {
     }
 
     @Test
+    fun `a row with no status goes up with none, and a status the phone set goes up as itself`() {
+        val row = CalendarsMapping.rows(event(timed()), 7).single()
+        fun up(status: Long?) = CalendarsMapping.components(
+            listOf(EventRow(row.values + (Events.STATUS to status))),
+        ).single().property("STATUS")?.value
+        // A phone app that sets no status leaves the column empty, which is
+        // not STATUS_TENTATIVE, though it would read as 0.
+        assertNull(up(null))
+        assertEquals("TENTATIVE", up(Events.STATUS_TENTATIVE.toLong()))
+        assertEquals("CONFIRMED", up(Events.STATUS_CONFIRMED.toLong()))
+        assertEquals("CANCELLED", up(Events.STATUS_CANCELED.toLong()))
+    }
+
+    @Test
     fun `a duration reads as the seconds it names`() {
         assertEquals(3_600L, CalendarsMapping.seconds("PT1H"))
         assertEquals(900L, CalendarsMapping.seconds("PT15M"))

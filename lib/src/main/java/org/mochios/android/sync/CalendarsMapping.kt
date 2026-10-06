@@ -493,7 +493,10 @@ object CalendarsMapping {
         else -> null
     }
 
-    private fun label(value: Any?): String? = when (number(value)) {
+    // A row with no status writes none. Read as a number it would be 0,
+    // which is STATUS_TENTATIVE, and every event a phone app made without a
+    // status would go up as tentative.
+    private fun label(value: Any?): String? = if (value == null) null else when (number(value)) {
         Events.STATUS_TENTATIVE.toLong() -> "TENTATIVE"
         Events.STATUS_CONFIRMED.toLong() -> "CONFIRMED"
         Events.STATUS_CANCELED.toLong() -> "CANCELLED"
