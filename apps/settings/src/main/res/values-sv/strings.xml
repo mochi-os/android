@@ -33,7 +33,7 @@
     <string name="account_disable">Inaktivera</string>
     <string name="account_copy">Kopiera</string>
     <string name="account_copy_all">Kopiera allt</string>
-    <string name="sessions_current">(nuvarande)</string>
+    <string name="sessions_current">nuvarande</string>
     <string name="settings_home_section_system">System</string>
     <string name="route_section">Rutter</string>
     <string name="route_add">Lägg till rutt</string>

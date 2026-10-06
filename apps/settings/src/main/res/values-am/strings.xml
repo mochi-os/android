@@ -33,7 +33,7 @@
     <string name="account_disable">አሰናክል</string>
     <string name="account_copy">ቅዳ</string>
     <string name="account_copy_all">ሁሉንም ቅዳ</string>
-    <string name="sessions_current">(አሁን)</string>
+    <string name="sessions_current">አሁን</string>
     <string name="settings_home_section_system">ስርዓት</string>
     <string name="route_section">መንገዶች</string>
     <string name="route_add">መንገድ ጨምር</string>

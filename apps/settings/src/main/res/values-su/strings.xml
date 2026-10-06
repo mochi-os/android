@@ -33,7 +33,7 @@
     <string name="account_disable">Pareuman</string>
     <string name="account_copy">Salin</string>
     <string name="account_copy_all">Salin sadaya</string>
-    <string name="sessions_current">(ayeuna)</string>
+    <string name="sessions_current">ayeuna</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="route_section">Rute</string>
     <string name="route_add">Tambah ruté</string>

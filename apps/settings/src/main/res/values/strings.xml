@@ -100,7 +100,7 @@
     <string name="sessions_title">Sessions</string>
     <string name="sessions_empty">No active sessions.</string>
     <string name="sessions_unknown_agent">Unknown device</string>
-    <string name="sessions_current">(current)</string>
+    <string name="sessions_current">current</string>
     <string name="sessions_revoke_title">Revoke session?</string>
     <string name="sessions_revoke_message">The device using this session will be signed out.</string>
     <string name="sessions_revoke">Revoke</string>

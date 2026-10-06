@@ -33,7 +33,7 @@
     <string name="account_disable">Cufi</string>
     <string name="account_copy">Garagalchi</string>
     <string name="account_copy_all">Hunda garagalchi</string>
-    <string name="sessions_current">(amma jiru)</string>
+    <string name="sessions_current">amma jiru</string>
     <string name="settings_home_section_system">Sirna</string>
     <string name="route_section">Daandiwwan</string>
     <string name="route_add">Karaa dabali</string>

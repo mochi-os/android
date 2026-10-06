@@ -33,7 +33,7 @@
     <string name="account_disable">無効化</string>
     <string name="account_copy">コピー</string>
     <string name="account_copy_all">すべてコピー</string>
-    <string name="sessions_current">（現在）</string>
+    <string name="sessions_current">現在</string>
     <string name="settings_home_section_system">システム</string>
     <string name="route_section">ルート</string>
     <string name="route_add">ルートを追加</string>

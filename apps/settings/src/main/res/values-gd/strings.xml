@@ -33,7 +33,7 @@
     <string name="account_disable">Cuir à comas</string>
     <string name="account_copy">Dèan lethbhreac</string>
     <string name="account_copy_all">Dèan lethbhreac den a h-uile</string>
-    <string name="sessions_current">(làithreach)</string>
+    <string name="sessions_current">làithreach</string>
     <string name="settings_home_section_system">Siostam</string>
     <string name="route_section">Slighean</string>
     <string name="route_add">Cuir slighe ris</string>

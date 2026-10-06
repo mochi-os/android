@@ -33,7 +33,7 @@
     <string name="account_disable">ປິດໃຊ້ງານ</string>
     <string name="account_copy">ສຳເນົາ</string>
     <string name="account_copy_all">ສຳເນົາທັງໝົດ</string>
-    <string name="sessions_current">(ປັດຈຸບັນ)</string>
+    <string name="sessions_current">ປັດຈຸບັນ</string>
     <string name="settings_home_section_system">ລະບົບ</string>
     <string name="route_section">ເສັ້ນທາງ</string>
     <string name="route_add">ເພີ່ມເສັ້ນທາງ</string>

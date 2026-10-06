@@ -33,7 +33,7 @@
     <string name="account_disable">Söndür</string>
     <string name="account_copy">Kopyala</string>
     <string name="account_copy_all">Hamısını kopyala</string>
-    <string name="sessions_current">(cari)</string>
+    <string name="sessions_current">cari</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="route_section">Marşrutlar</string>
     <string name="route_add">Marşrut əlavə et</string>

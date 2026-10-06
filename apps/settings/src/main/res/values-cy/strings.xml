@@ -33,7 +33,7 @@
     <string name="account_disable">Analluogi</string>
     <string name="account_copy">Copïo</string>
     <string name="account_copy_all">Copïo\'r cyfan</string>
-    <string name="sessions_current">(cyfredol)</string>
+    <string name="sessions_current">cyfredol</string>
     <string name="settings_home_section_system">System</string>
     <string name="route_section">Llwybrau</string>
     <string name="route_add">Ychwanegu llwybr</string>

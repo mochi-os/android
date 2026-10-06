@@ -33,7 +33,7 @@
     <string name="account_disable">ناچالاککردن</string>
     <string name="account_copy">کۆپیکردن</string>
     <string name="account_copy_all">کۆپیکردنی هەموو</string>
-    <string name="sessions_current">(ئێستا)</string>
+    <string name="sessions_current">ئێستا</string>
     <string name="settings_home_section_system">سیستەم</string>
     <string name="route_section">ڕێگاکان</string>
     <string name="route_add">زیادکردنی ڕێچکە</string>

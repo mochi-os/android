@@ -29,7 +29,7 @@
     <string name="account_disable">Uitschakelen</string>
     <string name="account_copy">Kopiëren</string>
     <string name="account_copy_all">Alles kopiëren</string>
-    <string name="sessions_current">(huidige)</string>
+    <string name="sessions_current">huidige</string>
     <string name="settings_home_section_system">Systeem</string>
     <string name="route_section">Routes</string>
     <string name="route_add">Route toevoegen</string>

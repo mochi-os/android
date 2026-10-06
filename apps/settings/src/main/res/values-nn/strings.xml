@@ -31,7 +31,7 @@
     <string name="account_disable">Deaktiver</string>
     <string name="account_copy">Kopier</string>
     <string name="account_copy_all">Kopier alle</string>
-    <string name="sessions_current">(noverande)</string>
+    <string name="sessions_current">noverande</string>
     <string name="settings_home_section_system">System</string>
     <string name="route_section">Ruter</string>
     <string name="route_add">Legg til rute</string>

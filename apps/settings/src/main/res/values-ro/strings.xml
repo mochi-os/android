@@ -33,7 +33,7 @@
     <string name="account_disable">Dezactivează</string>
     <string name="account_copy">Copiază</string>
     <string name="account_copy_all">Copiază tot</string>
-    <string name="sessions_current">(curent)</string>
+    <string name="sessions_current">curent</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="route_section">Rute</string>
     <string name="route_add">Adaugă rută</string>

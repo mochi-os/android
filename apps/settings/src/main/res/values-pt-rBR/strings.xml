@@ -30,7 +30,7 @@
     <string name="account_disable">Desativar</string>
     <string name="account_copy">Copiar</string>
     <string name="account_copy_all">Copiar tudo</string>
-    <string name="sessions_current">(atual)</string>
+    <string name="sessions_current">atual</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="route_section">Rotas</string>
     <string name="route_add">Adicionar rota</string>

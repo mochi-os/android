@@ -33,7 +33,7 @@
     <string name="account_disable">Desactivay</string>
     <string name="account_copy">Copiay</string>
     <string name="account_copy_all">Llapan copiay</string>
-    <string name="sessions_current">(kunan)</string>
+    <string name="sessions_current">kunan</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="route_section">Ñankuna</string>
     <string name="route_add">Ñan yapay</string>

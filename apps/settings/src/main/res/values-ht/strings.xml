@@ -33,7 +33,7 @@
     <string name="account_disable">Dezaktive</string>
     <string name="account_copy">Kopye</string>
     <string name="account_copy_all">Kopye tout</string>
-    <string name="sessions_current">(aktyèl)</string>
+    <string name="sessions_current">aktyèl</string>
     <string name="settings_home_section_system">Sistèm</string>
     <string name="route_section">Wout</string>
     <string name="route_add">Ajoute wout</string>

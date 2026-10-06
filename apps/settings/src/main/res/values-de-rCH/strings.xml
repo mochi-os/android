@@ -72,7 +72,7 @@
     <string name="account_copy">Kopieren</string>
     <string name="account_copy_all">Alle kopieren</string>
     <string name="account_last_used">Zuletzt verwendet %1$s</string>
-    <string name="sessions_current">(aktuell)</string>
+    <string name="sessions_current">aktuell</string>
     <string name="settings_home_section_system">System</string>
     <string name="route_section">Routä</string>
     <string name="route_add">Routä hinzuefüegä</string>

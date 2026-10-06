@@ -33,7 +33,7 @@
     <string name="account_disable">Отключить</string>
     <string name="account_copy">Копировать</string>
     <string name="account_copy_all">Копировать всё</string>
-    <string name="sessions_current">(текущая)</string>
+    <string name="sessions_current">текущая</string>
     <string name="settings_home_section_system">Система</string>
     <string name="route_section">Маршруты</string>
     <string name="route_add">Добавить маршрут</string>

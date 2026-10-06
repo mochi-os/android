@@ -33,7 +33,7 @@
     <string name="account_disable">تعطيل</string>
     <string name="account_copy">نسخ</string>
     <string name="account_copy_all">نسخ الكل</string>
-    <string name="sessions_current">(الحالية)</string>
+    <string name="sessions_current">الحالية</string>
     <string name="settings_home_section_system">النظام</string>
     <string name="route_section">المسارات</string>
     <string name="route_add">إضافة مسار</string>

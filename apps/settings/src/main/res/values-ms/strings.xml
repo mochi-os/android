@@ -33,7 +33,7 @@
     <string name="account_disable">Lumpuhkan</string>
     <string name="account_copy">Salin</string>
     <string name="account_copy_all">Salin semua</string>
-    <string name="sessions_current">(semasa)</string>
+    <string name="sessions_current">semasa</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="route_section">Laluan</string>
     <string name="route_add">Tambah laluan</string>

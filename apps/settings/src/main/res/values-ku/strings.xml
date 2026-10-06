@@ -33,7 +33,7 @@
     <string name="account_disable">Neçalak bike</string>
     <string name="account_copy">Kopî bike</string>
     <string name="account_copy_all">Hemûyan kopî bike</string>
-    <string name="sessions_current">(niha)</string>
+    <string name="sessions_current">niha</string>
     <string name="settings_home_section_system">Pergal</string>
     <string name="route_section">Rê</string>
     <string name="route_add">Rêgez zêde bike</string>

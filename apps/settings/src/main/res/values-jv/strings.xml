@@ -33,7 +33,7 @@
     <string name="account_disable">Pateni</string>
     <string name="account_copy">Salin</string>
     <string name="account_copy_all">Salin kabèh</string>
-    <string name="sessions_current">(saiki)</string>
+    <string name="sessions_current">saiki</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="route_section">Rute</string>
     <string name="route_add">Tambah rute</string>

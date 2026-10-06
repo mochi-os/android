@@ -33,7 +33,7 @@
     <string name="account_disable">Идэвхгүй болгох</string>
     <string name="account_copy">Хуулах</string>
     <string name="account_copy_all">Бүгдийг хуулах</string>
-    <string name="sessions_current">(одоогийн)</string>
+    <string name="sessions_current">одоогийн</string>
     <string name="settings_home_section_system">Систем</string>
     <string name="route_section">Маршрутууд</string>
     <string name="route_add">Зам нэмэх</string>

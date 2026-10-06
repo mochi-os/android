@@ -33,7 +33,7 @@
     <string name="account_disable">निष्क्रिय गर्नुहोस्</string>
     <string name="account_copy">प्रतिलिपि</string>
     <string name="account_copy_all">सबै प्रतिलिपि गर्नुहोस्</string>
-    <string name="sessions_current">(हालको)</string>
+    <string name="sessions_current">हालको</string>
     <string name="settings_home_section_system">प्रणाली</string>
     <string name="route_section">रुटहरू</string>
     <string name="route_add">रुट थप्नुहोस्</string>

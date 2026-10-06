@@ -33,7 +33,7 @@
     <string name="account_disable">Çaktivizo</string>
     <string name="account_copy">Kopjo</string>
     <string name="account_copy_all">Kopjo të gjitha</string>
-    <string name="sessions_current">(aktual)</string>
+    <string name="sessions_current">aktual</string>
     <string name="settings_home_section_system">Sistemi</string>
     <string name="route_section">Rrugët</string>
     <string name="route_add">Shto rrugë</string>

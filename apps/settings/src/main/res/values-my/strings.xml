@@ -33,7 +33,7 @@
     <string name="account_disable">ပိတ်မည်</string>
     <string name="account_copy">ကူးမည်</string>
     <string name="account_copy_all">အားလုံး ကူးမည်</string>
-    <string name="sessions_current">(လက်ရှိ)</string>
+    <string name="sessions_current">လက်ရှိ</string>
     <string name="settings_home_section_system">စနစ်</string>
     <string name="route_section">လမ်းကြောင်းများ</string>
     <string name="route_add">လမ်းကြောင်း ထည့်မည်</string>

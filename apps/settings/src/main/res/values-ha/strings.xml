@@ -33,7 +33,7 @@
     <string name="account_disable">Kashe</string>
     <string name="account_copy">Kwafi</string>
     <string name="account_copy_all">Kwafi duka</string>
-    <string name="sessions_current">(na yanzu)</string>
+    <string name="sessions_current">na yanzu</string>
     <string name="settings_home_section_system">Tsari</string>
     <string name="route_section">Hanyoyi</string>
     <string name="route_add">Ƙara hanya</string>

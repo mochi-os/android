@@ -33,7 +33,7 @@
     <string name="account_disable">Išjungti</string>
     <string name="account_copy">Kopijuoti</string>
     <string name="account_copy_all">Kopijuoti viską</string>
-    <string name="sessions_current">(dabartinis)</string>
+    <string name="sessions_current">dabartinis</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="route_section">Maršrutai</string>
     <string name="route_add">Pridėti maršrutą</string>

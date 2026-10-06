@@ -33,7 +33,7 @@
     <string name="account_disable">Devre dışı bırak</string>
     <string name="account_copy">Kopyala</string>
     <string name="account_copy_all">Tümünü kopyala</string>
-    <string name="sessions_current">(mevcut)</string>
+    <string name="sessions_current">mevcut</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="route_section">Rotalar</string>
     <string name="route_add">Rota ekle</string>

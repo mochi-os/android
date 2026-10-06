@@ -33,7 +33,7 @@
     <string name="account_disable">Անջատել</string>
     <string name="account_copy">Պատճենել</string>
     <string name="account_copy_all">Պատճենել ամենը</string>
-    <string name="sessions_current">(ընթացիկ)</string>
+    <string name="sessions_current">ընթացիկ</string>
     <string name="settings_home_section_system">Համակարգ</string>
     <string name="route_section">Ուղիներ</string>
     <string name="route_add">Ավելացնել երթուղի</string>

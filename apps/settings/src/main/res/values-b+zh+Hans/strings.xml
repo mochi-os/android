@@ -33,7 +33,7 @@
     <string name="account_disable">禁用</string>
     <string name="account_copy">复制</string>
     <string name="account_copy_all">全部复制</string>
-    <string name="sessions_current">（当前）</string>
+    <string name="sessions_current">当前</string>
     <string name="settings_home_section_system">系统</string>
     <string name="route_section">路由</string>
     <string name="route_add">添加路由</string>

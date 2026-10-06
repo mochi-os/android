@@ -33,7 +33,7 @@
     <string name="account_disable">გათიშვა</string>
     <string name="account_copy">კოპირება</string>
     <string name="account_copy_all">ყველაფრის კოპირება</string>
-    <string name="sessions_current">(მიმდინარე)</string>
+    <string name="sessions_current">მიმდინარე</string>
     <string name="settings_home_section_system">სისტემა</string>
     <string name="route_section">მარშრუტები</string>
     <string name="route_add">მარშრუტის დამატება</string>

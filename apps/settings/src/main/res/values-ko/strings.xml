@@ -33,7 +33,7 @@
     <string name="account_disable">비활성화</string>
     <string name="account_copy">복사</string>
     <string name="account_copy_all">모두 복사</string>
-    <string name="sessions_current">(현재)</string>
+    <string name="sessions_current">현재</string>
     <string name="settings_home_section_system">시스템</string>
     <string name="route_section">라우트</string>
     <string name="route_add">경로 추가</string>

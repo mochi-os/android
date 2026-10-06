@@ -33,7 +33,7 @@
     <string name="account_disable">បិទ</string>
     <string name="account_copy">ចម្លង</string>
     <string name="account_copy_all">ចម្លងទាំងអស់</string>
-    <string name="sessions_current">(បច្ចុប្បន្ន)</string>
+    <string name="sessions_current">បច្ចុប្បន្ន</string>
     <string name="settings_home_section_system">ប្រព័ន្ធ</string>
     <string name="route_section">ផ្លូវ</string>
     <string name="route_add">បន្ថែមផ្លូវ</string>

@@ -33,7 +33,7 @@
     <string name="account_disable">Zakázat</string>
     <string name="account_copy">Kopírovat</string>
     <string name="account_copy_all">Kopírovat vše</string>
-    <string name="sessions_current">(aktuální)</string>
+    <string name="sessions_current">aktuální</string>
     <string name="settings_home_section_system">Systém</string>
     <string name="route_section">Trasy</string>
     <string name="route_add">Přidat trasu</string>

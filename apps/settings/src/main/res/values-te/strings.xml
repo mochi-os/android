@@ -33,7 +33,7 @@
     <string name="account_disable">నిలిపివేయండి</string>
     <string name="account_copy">కాపీ చేయండి</string>
     <string name="account_copy_all">అన్నీ కాపీ చేయండి</string>
-    <string name="sessions_current">(ప్రస్తుత)</string>
+    <string name="sessions_current">ప్రస్తుత</string>
     <string name="settings_home_section_system">సిస్టమ్</string>
     <string name="route_section">రూట్‌లు</string>
     <string name="route_add">మార్గాన్ని జోడించండి</string>

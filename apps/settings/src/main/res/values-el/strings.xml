@@ -33,7 +33,7 @@
     <string name="account_disable">Απενεργοποίηση</string>
     <string name="account_copy">Αντιγραφή</string>
     <string name="account_copy_all">Αντιγραφή όλων</string>
-    <string name="sessions_current">(τρέχουσα)</string>
+    <string name="sessions_current">τρέχουσα</string>
     <string name="settings_home_section_system">Σύστημα</string>
     <string name="route_section">Διαδρομές</string>
     <string name="route_add">Προσθήκη διαδρομής</string>

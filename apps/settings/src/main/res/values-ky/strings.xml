@@ -33,7 +33,7 @@
     <string name="account_disable">Өчүрүү</string>
     <string name="account_copy">Көчүрүү</string>
     <string name="account_copy_all">Баарын көчүрүү</string>
-    <string name="sessions_current">(учурдагы)</string>
+    <string name="sessions_current">учурдагы</string>
     <string name="settings_home_section_system">Система</string>
     <string name="route_section">Маршруттар</string>
     <string name="route_add">Маршрут кошуу</string>

@@ -33,7 +33,7 @@
     <string name="account_disable">Letiltás</string>
     <string name="account_copy">Másolás</string>
     <string name="account_copy_all">Összes másolása</string>
-    <string name="sessions_current">(jelenlegi)</string>
+    <string name="sessions_current">jelenlegi</string>
     <string name="settings_home_section_system">Rendszer</string>
     <string name="route_section">Útvonalak</string>
     <string name="route_add">Útvonal hozzáadása</string>

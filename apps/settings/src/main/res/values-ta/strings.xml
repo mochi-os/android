@@ -33,7 +33,7 @@
     <string name="account_disable">முடக்கு</string>
     <string name="account_copy">நகலெடு</string>
     <string name="account_copy_all">அனைத்தையும் நகலெடு</string>
-    <string name="sessions_current">(தற்போதைய)</string>
+    <string name="sessions_current">தற்போதைய</string>
     <string name="settings_home_section_system">சிஸ்டம்</string>
     <string name="route_section">வழித்தடங்கள்</string>
     <string name="route_add">வழித்தடம் சேர்</string>

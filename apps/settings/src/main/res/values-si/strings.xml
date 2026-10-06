@@ -33,7 +33,7 @@
     <string name="account_disable">අක්‍රිය කරන්න</string>
     <string name="account_copy">පිටපත් කරන්න</string>
     <string name="account_copy_all">සියල්ල පිටපත් කරන්න</string>
-    <string name="sessions_current">(වර්තමාන)</string>
+    <string name="sessions_current">වර්තමාන</string>
     <string name="settings_home_section_system">පද්ධතිය</string>
     <string name="route_section">මාර්ග</string>
     <string name="route_add">මාර්ගයක් එක් කරන්න</string>

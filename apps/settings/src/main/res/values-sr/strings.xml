@@ -33,7 +33,7 @@
     <string name="account_disable">Онемогући</string>
     <string name="account_copy">Копирај</string>
     <string name="account_copy_all">Копирај све</string>
-    <string name="sessions_current">(тренутно)</string>
+    <string name="sessions_current">тренутно</string>
     <string name="settings_home_section_system">Систем</string>
     <string name="route_section">Руте</string>
     <string name="route_add">Додај руту</string>

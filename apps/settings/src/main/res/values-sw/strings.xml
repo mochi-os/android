@@ -33,7 +33,7 @@
     <string name="account_disable">Zima</string>
     <string name="account_copy">Nakili</string>
     <string name="account_copy_all">Nakili vyote</string>
-    <string name="sessions_current">(ya sasa)</string>
+    <string name="sessions_current">ya sasa</string>
     <string name="settings_home_section_system">Mfumo</string>
     <string name="route_section">Njia</string>
     <string name="route_add">Ongeza njia</string>

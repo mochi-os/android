@@ -33,7 +33,7 @@
     <string name="account_disable">I-disable</string>
     <string name="account_copy">Kopyahin</string>
     <string name="account_copy_all">Kopyahin lahat</string>
-    <string name="sessions_current">(kasalukuyan)</string>
+    <string name="sessions_current">kasalukuyan</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="route_section">Mga route</string>
     <string name="route_add">Magdagdag ng route</string>

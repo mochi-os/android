@@ -33,7 +33,7 @@
     <string name="account_disable">غیرفعال کردن</string>
     <string name="account_copy">کپی</string>
     <string name="account_copy_all">کپی همه</string>
-    <string name="sessions_current">(فعلی)</string>
+    <string name="sessions_current">فعلی</string>
     <string name="settings_home_section_system">سیستم</string>
     <string name="route_section">مسیرها</string>
     <string name="route_add">افزودن مسیر</string>

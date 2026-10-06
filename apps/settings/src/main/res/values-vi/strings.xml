@@ -33,7 +33,7 @@
     <string name="account_disable">Tắt</string>
     <string name="account_copy">Sao chép</string>
     <string name="account_copy_all">Sao chép tất cả</string>
-    <string name="sessions_current">(hiện tại)</string>
+    <string name="sessions_current">hiện tại</string>
     <string name="settings_home_section_system">Hệ thống</string>
     <string name="route_section">Các tuyến</string>
     <string name="route_add">Thêm tuyến</string>

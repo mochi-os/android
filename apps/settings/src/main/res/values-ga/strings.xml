@@ -33,7 +33,7 @@
     <string name="account_disable">Díchumasaigh</string>
     <string name="account_copy">Cóipeáil</string>
     <string name="account_copy_all">Cóipeáil an t-iomlán</string>
-    <string name="sessions_current">(reatha)</string>
+    <string name="sessions_current">reatha</string>
     <string name="settings_home_section_system">Córas</string>
     <string name="route_section">Bealaí</string>
     <string name="route_add">Cuir bealach leis</string>

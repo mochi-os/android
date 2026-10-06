@@ -33,7 +33,7 @@
     <string name="account_disable">Vypnúť</string>
     <string name="account_copy">Kopírovať</string>
     <string name="account_copy_all">Kopírovať všetko</string>
-    <string name="sessions_current">(aktuálne)</string>
+    <string name="sessions_current">aktuálne</string>
     <string name="settings_home_section_system">Systém</string>
     <string name="route_section">Trasy</string>
     <string name="route_add">Pridať cestu</string>

@@ -33,7 +33,7 @@
     <string name="account_disable">Onemogoči</string>
     <string name="account_copy">Kopiraj</string>
     <string name="account_copy_all">Kopiraj vse</string>
-    <string name="sessions_current">(trenutno)</string>
+    <string name="sessions_current">trenutno</string>
     <string name="settings_home_section_system">Sistem</string>
     <string name="route_section">Poti</string>
     <string name="route_add">Dodaj pot</string>

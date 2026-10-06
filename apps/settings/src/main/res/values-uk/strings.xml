@@ -33,7 +33,7 @@
     <string name="account_disable">Вимкнути</string>
     <string name="account_copy">Копіювати</string>
     <string name="account_copy_all">Копіювати все</string>
-    <string name="sessions_current">(поточна)</string>
+    <string name="sessions_current">поточна</string>
     <string name="settings_home_section_system">Система</string>
     <string name="route_section">Маршрути</string>
     <string name="route_add">Додати маршрут</string>

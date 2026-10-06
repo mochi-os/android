@@ -33,7 +33,7 @@
     <string name="account_disable">Oʻchirish</string>
     <string name="account_copy">Nusxalash</string>
     <string name="account_copy_all">Hammasini nusxalash</string>
-    <string name="sessions_current">(joriy)</string>
+    <string name="sessions_current">joriy</string>
     <string name="settings_home_section_system">Tizim</string>
     <string name="route_section">Marshrutlar</string>
     <string name="route_add">Marshrut qoʻshish</string>

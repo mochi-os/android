@@ -33,7 +33,7 @@
     <string name="account_disable">Atspējot</string>
     <string name="account_copy">Kopēt</string>
     <string name="account_copy_all">Kopēt visu</string>
-    <string name="sessions_current">(pašreizējais)</string>
+    <string name="sessions_current">pašreizējais</string>
     <string name="settings_home_section_system">Sistēma</string>
     <string name="route_section">Maršruti</string>
     <string name="route_add">Pievienot maršrutu</string>

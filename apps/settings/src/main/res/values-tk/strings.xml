@@ -33,7 +33,7 @@
     <string name="account_disable">Öçürmek</string>
     <string name="account_copy">Nusgalamak</string>
     <string name="account_copy_all">Hemmesini nusgalamak</string>
-    <string name="sessions_current">(häzirki)</string>
+    <string name="sessions_current">häzirki</string>
     <string name="settings_home_section_system">Ulgam</string>
     <string name="route_section">Marşrutlar</string>
     <string name="route_add">Ýol goşmak</string>

@@ -33,7 +33,7 @@
     <string name="account_disable">Slökkva</string>
     <string name="account_copy">Afrita</string>
     <string name="account_copy_all">Afrita allt</string>
-    <string name="sessions_current">(núverandi)</string>
+    <string name="sessions_current">núverandi</string>
     <string name="settings_home_section_system">Kerfi</string>
     <string name="route_section">Leiðir</string>
     <string name="route_add">Bæta við slóð</string>

@@ -102,7 +102,7 @@
     <string name="account_done">Listo</string>
     <string name="account_copy">Copiar</string>
     <string name="account_last_used">Último uso %1$s</string>
-    <string name="sessions_current">(actual)</string>
+    <string name="sessions_current">actual</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="route_section">Rutas</string>
     <string name="route_delete_message">Esto quitará la ruta para la ruta \"%1$s\".</string>

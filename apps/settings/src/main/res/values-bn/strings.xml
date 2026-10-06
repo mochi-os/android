@@ -33,7 +33,7 @@
     <string name="account_disable">নিষ্ক্রিয় করুন</string>
     <string name="account_copy">কপি করুন</string>
     <string name="account_copy_all">সব কপি করুন</string>
-    <string name="sessions_current">(বর্তমান)</string>
+    <string name="sessions_current">বর্তমান</string>
     <string name="settings_home_section_system">সিস্টেম</string>
     <string name="route_section">রুট</string>
     <string name="route_add">রুট যোগ করুন</string>

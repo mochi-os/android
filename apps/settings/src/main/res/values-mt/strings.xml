@@ -33,7 +33,7 @@
     <string name="account_disable">Iddiżabbilta</string>
     <string name="account_copy">Ikkupja</string>
     <string name="account_copy_all">Ikkupja kollox</string>
-    <string name="sessions_current">(attwali)</string>
+    <string name="sessions_current">attwali</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="route_section">Rotot</string>
     <string name="route_add">Żid rotta</string>

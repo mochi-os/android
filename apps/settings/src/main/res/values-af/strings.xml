@@ -33,7 +33,7 @@
     <string name="account_disable">Deaktiveer</string>
     <string name="account_copy">Kopieer</string>
     <string name="account_copy_all">Kopieer alles</string>
-    <string name="sessions_current">(huidige)</string>
+    <string name="sessions_current">huidige</string>
     <string name="settings_home_section_system">Stelsel</string>
     <string name="route_section">Roetes</string>
     <string name="route_add">Voeg roete by</string>

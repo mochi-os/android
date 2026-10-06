@@ -33,7 +33,7 @@
     <string name="account_disable">השבת</string>
     <string name="account_copy">העתק</string>
     <string name="account_copy_all">העתק הכול</string>
-    <string name="sessions_current">(נוכחי)</string>
+    <string name="sessions_current">נוכחי</string>
     <string name="settings_home_section_system">מערכת</string>
     <string name="route_section">מסלולים</string>
     <string name="route_add">הוסף נתיב</string>

@@ -33,7 +33,7 @@
     <string name="account_disable">പ്രവർത്തനരഹിതമാക്കുക</string>
     <string name="account_copy">പകർത്തുക</string>
     <string name="account_copy_all">എല്ലാം പകർത്തുക</string>
-    <string name="sessions_current">(നിലവിലെ)</string>
+    <string name="sessions_current">നിലവിലെ</string>
     <string name="settings_home_section_system">സിസ്റ്റം</string>
     <string name="route_section">റൂട്ടുകൾ</string>
     <string name="route_add">റൂട്ട് ചേർക്കുക</string>

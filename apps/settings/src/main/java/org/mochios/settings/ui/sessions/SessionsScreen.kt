@@ -5,6 +5,7 @@
 
 package org.mochios.settings.ui.sessions
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -49,6 +50,8 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.StatusBadge
+import org.mochios.android.ui.components.StatusTone
 import org.mochios.settings.R
 import org.mochios.settings.api.Session
 import org.mochios.android.R as MochiR
@@ -129,28 +132,43 @@ private fun SessionRow(
 ) {
     val format = LocalFormat.current
     var confirm by remember(session.id) { mutableStateOf(false) }
-    MochiCard(modifier = Modifier.fillMaxWidth()) {
+    MochiCard(
+        modifier = Modifier.fillMaxWidth(),
+        border = if (isCurrent) {
+            BorderStroke(1.dp, MaterialTheme.colorScheme.primary)
+        } else {
+            null
+        },
+    ) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    session.agent.ifBlank { stringResource(R.string.sessions_unknown_agent) },
+                    fontWeight = FontWeight.SemiBold,
+                )
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        session.agent.ifBlank { stringResource(R.string.sessions_unknown_agent) },
-                        fontWeight = FontWeight.SemiBold,
+                        stringResource(
+                            R.string.account_last_used,
+                            format.formatRelativeTime(session.accessed),
+                        ),
+                        modifier = Modifier.weight(1f, fill = false),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     if (isCurrent) {
-                        Spacer(Modifier.width(6.dp))
-                        Text(
-                            stringResource(R.string.sessions_current),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.primary,
+                        Spacer(Modifier.width(8.dp))
+                        StatusBadge(
+                            label = stringResource(R.string.sessions_current),
+                            tone = StatusTone(
+                                background = MaterialTheme.colorScheme.primaryContainer,
+                                foreground = MaterialTheme.colorScheme.onPrimaryContainer,
+                                darkBackground = MaterialTheme.colorScheme.primaryContainer,
+                                darkForeground = MaterialTheme.colorScheme.onPrimaryContainer,
+                            ),
                         )
                     }
                 }
-                Text(
-                    stringResource(R.string.account_last_used, format.formatRelativeTime(session.accessed)),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
                 if (session.address.isNotBlank()) {
                     Text(
                         session.address,

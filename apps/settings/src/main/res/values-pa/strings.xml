@@ -33,7 +33,7 @@
     <string name="account_disable">ਬੰਦ ਕਰੋ</string>
     <string name="account_copy">ਕਾਪੀ ਕਰੋ</string>
     <string name="account_copy_all">ਸਭ ਕਾਪੀ ਕਰੋ</string>
-    <string name="sessions_current">(ਮੌਜੂਦਾ)</string>
+    <string name="sessions_current">ਮੌਜੂਦਾ</string>
     <string name="settings_home_section_system">ਸਿਸਟਮ</string>
     <string name="route_section">ਰੂਟ</string>
     <string name="route_add">ਰੂਟ ਜੋੜੋ</string>

@@ -33,7 +33,7 @@
     <string name="account_disable">Desactiva</string>
     <string name="account_copy">Copia</string>
     <string name="account_copy_all">Copia-ho tot</string>
-    <string name="sessions_current">(actual)</string>
+    <string name="sessions_current">actual</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="route_section">Rutes</string>
     <string name="route_add">Afegeix una ruta</string>

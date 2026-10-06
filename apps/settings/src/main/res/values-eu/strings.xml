@@ -33,7 +33,7 @@
     <string name="account_disable">Desgaitu</string>
     <string name="account_copy">Kopiatu</string>
     <string name="account_copy_all">Kopiatu dena</string>
-    <string name="sessions_current">(unekoa)</string>
+    <string name="sessions_current">unekoa</string>
     <string name="settings_home_section_system">Sistema</string>
     <string name="route_section">Ibilbideak</string>
     <string name="route_add">Gehitu bidea</string>
