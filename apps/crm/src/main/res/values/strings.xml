@@ -212,6 +212,8 @@
     <string name="crm_board_unset">[not set]</string>
     <string name="crm_board_new">New</string>
     <string name="crm_board_add_column">Add column</string>
+    <string name="crm_board_reorder_columns">Re-order columns</string>
+    <string name="crm_board_reorder_columns_hint">Long-press a column\'s name, then drag it</string>
     <string name="crm_board_rename">Rename</string>
     <string name="crm_board_rename_column">Rename column</string>
     <string name="crm_board_nested_count">+%1$s nested</string>

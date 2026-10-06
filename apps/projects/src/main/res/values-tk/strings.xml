@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Taslamanyň maglumaty saklandy</string>
     <string name="projects_exporting">Eksport taýýarlanýar…</string>
     <string name="projects_board_add_column">Sütün goşmak</string>
+    <string name="projects_board_reorder_columns">Sütünleri täzeden tertiplemek</string>
+    <string name="projects_board_reorder_columns_hint">Sütüniň adyny uzyn basyň, soňra ony süýräň</string>
     <string name="projects_design_sample">Nusga %1$s</string>
     <string name="projects_option_delete_title">Wariant pozmak</string>
     <string name="projects_option_delete_message">\"%1$s\" wariantyny pozmak isleýändigiňize ynanýarsyňyzmy?</string>

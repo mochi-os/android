@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Grupos</string>
     <string name="crm_attachment_remove">Eliminar anexo</string>
     <string name="crm_board_add_column">Engadir columna</string>
+    <string name="crm_board_reorder_columns">Reordenar columnas</string>
+    <string name="crm_board_reorder_columns_hint">Mantén premido o nome dunha columna e despois arrástraa</string>
     <string name="crm_settings_entity_id">ID de entidade</string>
     <string name="crm_settings_fingerprint">Pegada</string>
     <string name="crm_settings_server">Servidor</string>

@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Ƙungiyoyi</string>
     <string name="crm_attachment_remove">Cire haɗe</string>
     <string name="crm_board_add_column">Ƙara column</string>
+    <string name="crm_board_reorder_columns">Sake tsara columns</string>
+    <string name="crm_board_reorder_columns_hint">Danna kuma riƙe sunan shafi, sannan ja shi</string>
     <string name="crm_settings_entity_id">ID ɗin mahaɗi</string>
     <string name="crm_settings_fingerprint">Sawun yatsa</string>
     <string name="crm_settings_server">Sabar</string>

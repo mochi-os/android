@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Grupet</string>
     <string name="crm_attachment_remove">Hiq bashkëngjitjen</string>
     <string name="crm_board_add_column">Shto kolonë</string>
+    <string name="crm_board_reorder_columns">Rirendit kolonat</string>
+    <string name="crm_board_reorder_columns_hint">Mbaj të shtypur emrin e një kolone, pastaj tërhiqe</string>
     <string name="crm_settings_entity_id">ID e entitetit</string>
     <string name="crm_settings_fingerprint">Gjurma</string>
     <string name="crm_settings_server">Serveri</string>

@@ -380,6 +380,8 @@
     <string name="projects_export_saved">تم حفظ بيانات المشروع</string>
     <string name="projects_exporting">جارٍ تحضير التصدير…</string>
     <string name="projects_board_add_column">إضافة عمود</string>
+    <string name="projects_board_reorder_columns">إعادة ترتيب الأعمدة</string>
+    <string name="projects_board_reorder_columns_hint">اضغط مطولاً على اسم العمود، ثم اسحبه</string>
     <string name="projects_design_sample">عينة %1$s</string>
     <string name="projects_option_delete_title">حذف الخيار</string>
     <string name="projects_option_delete_message">هل أنت متأكد أنك تريد حذف الخيار \"%1$s\"؟</string>

@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Групи</string>
     <string name="crm_attachment_remove">Видалити вкладення</string>
     <string name="crm_board_add_column">Додати стовпець</string>
+    <string name="crm_board_reorder_columns">Змінити порядок стовпців</string>
+    <string name="crm_board_reorder_columns_hint">Натисніть і утримуйте назву стовпця, потім перетягніть його</string>
     <string name="crm_settings_entity_id">ID сутності</string>
     <string name="crm_settings_fingerprint">Відбиток</string>
     <string name="crm_settings_server">Сервер</string>

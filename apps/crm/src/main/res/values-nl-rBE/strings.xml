@@ -236,6 +236,8 @@
     <string name="crm_access_tab_users">Gebruikers</string>
     <string name="crm_access_tab_groups">Groepen</string>
     <string name="crm_board_add_column">Kolom toevoegen</string>
+    <string name="crm_board_reorder_columns">Kolommen herschikken</string>
+    <string name="crm_board_reorder_columns_hint">Druk lang op de naam van een kolom en sleep hem dan</string>
     <string name="crm_settings_entity_id">Entiteit-ID</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Naamloos</string>

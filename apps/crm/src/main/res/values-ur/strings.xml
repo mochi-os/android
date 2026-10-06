@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">گروپس</string>
     <string name="crm_attachment_remove">اٹیچمنٹ ہٹائیں</string>
     <string name="crm_board_add_column">کالم شامل کریں</string>
+    <string name="crm_board_reorder_columns">کالمز کی ترتیب تبدیل کریں</string>
+    <string name="crm_board_reorder_columns_hint">کالم کے نام کو دیر تک دبائیں، پھر اسے گھسیٹیں</string>
     <string name="crm_settings_entity_id">اینٹٹی ID</string>
     <string name="crm_settings_fingerprint">فنگر پرنٹ</string>
     <string name="crm_settings_server">سرور</string>

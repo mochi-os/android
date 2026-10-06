@@ -376,6 +376,8 @@
     <string name="projects_export_saved">פּראָיעקט־דאַטן געשפּיכלערט</string>
     <string name="projects_exporting">גרייטן דעם עקספּאָרט…</string>
     <string name="projects_board_add_column">צולייגן זײַל</string>
+    <string name="projects_board_reorder_columns">איבער-סדר זײַלן</string>
+    <string name="projects_board_reorder_columns_hint">לאַנג-דריקט דעם נאָמען פֿון אַ זײַל, דערנאָך שלעפּט זי</string>
     <string name="projects_design_sample">מוסטער %1$s</string>
     <string name="projects_option_delete_title">אויסמעקן אָפּציע</string>
     <string name="projects_option_delete_message">זײַט איר זיכער איר ווילט אױסמעקן די אָפּציע \"%1$s\"?</string>

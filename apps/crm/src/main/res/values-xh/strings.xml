@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Amaqela</string>
     <string name="crm_attachment_remove">Susa isiqhotyoshelwa</string>
     <string name="crm_board_add_column">Yongeza ikholamu</string>
+    <string name="crm_board_reorder_columns">Hlela kwakhona iikholamu</string>
+    <string name="crm_board_reorder_columns_hint">Cofa igama lekholamu ixesha elide, uze uyitsale</string>
     <string name="crm_settings_entity_id">I-ID yequmrhu</string>
     <string name="crm_settings_fingerprint">Uphawu lomnwe</string>
     <string name="crm_settings_server">Iseva</string>

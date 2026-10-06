@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Prosjektdata lagra</string>
     <string name="projects_exporting">Førebur eksport…</string>
     <string name="projects_board_add_column">Legg til kolonne</string>
+    <string name="projects_board_reorder_columns">Endra rekkjefølgje på kolonner</string>
+    <string name="projects_board_reorder_columns_hint">Hald inne namnet på ein kolonne, og dra han deretter</string>
     <string name="projects_design_sample">Døme %1$s</string>
     <string name="projects_option_delete_title">Slett val</string>
     <string name="projects_option_delete_message">Er du sikker på at du vil slette valet \"%1$s\"?</string>

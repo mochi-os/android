@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Grup</string>
     <string name="crm_attachment_remove">Cabut lampiran</string>
     <string name="crm_board_add_column">Tambah kolom</string>
+    <string name="crm_board_reorder_columns">Atur ulang kolom</string>
+    <string name="crm_board_reorder_columns_hint">Pencet suwe jeneng kolom, banjur seret</string>
     <string name="crm_settings_entity_id">ID Entitas</string>
     <string name="crm_settings_fingerprint">Sidik jari</string>
     <string name="crm_settings_server">Server</string>

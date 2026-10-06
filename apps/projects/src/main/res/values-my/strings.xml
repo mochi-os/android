@@ -375,6 +375,8 @@
     <string name="projects_export_saved">ပရောဂျက်ဒေတာ သိမ်းဆည်းပြီး</string>
     <string name="projects_exporting">တင်ပို့မှု ပြင်ဆင်နေသည်…</string>
     <string name="projects_board_add_column">ကော်လံ ထည့်မည်</string>
+    <string name="projects_board_reorder_columns">ကော်လံများ ပြန်စီ</string>
+    <string name="projects_board_reorder_columns_hint">ကော်လံအမည်ကို ကြာကြာဖိပြီး ဆွဲပါ</string>
     <string name="projects_design_sample">နမူနာ %1$s</string>
     <string name="projects_option_delete_title">ရွေးချယ်စရာ ဖျက်မည်</string>
     <string name="projects_option_delete_message">ရွေးချယ်စရာ \"%1$s\" ကို ဖျက်လိုသည်မှာ သေချာပါသလား။</string>

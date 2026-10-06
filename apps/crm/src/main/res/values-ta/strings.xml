@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">குழுக்கள்</string>
     <string name="crm_attachment_remove">இணைப்பை அகற்று</string>
     <string name="crm_board_add_column">நெடுவரிசை சேர்</string>
+    <string name="crm_board_reorder_columns">நெடுவரிசைகளை மறுவரிசைப்படுத்தவும்</string>
+    <string name="crm_board_reorder_columns_hint">நெடுவரிசையின் பெயரை நீண்ட நேரம் அழுத்தி, பின்னர் இழுக்கவும்</string>
     <string name="crm_settings_entity_id">எண்ட்டிட்டி ID</string>
     <string name="crm_settings_fingerprint">கைரேகை</string>
     <string name="crm_settings_server">சர்வர்</string>

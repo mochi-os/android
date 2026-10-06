@@ -376,6 +376,8 @@
     <string name="projects_export_saved">ಯೋಜನೆಯ ಡೇಟಾ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="projects_exporting">ರಫ್ತು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="projects_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>
+    <string name="projects_board_reorder_columns">ಕಾಲಮ್‌ಗಳನ್ನು ಮರು-ಆದೇಶಿಸಿ</string>
+    <string name="projects_board_reorder_columns_hint">ಕಾಲಮ್‌ನ ಹೆಸರನ್ನು ಒತ್ತಿ ಹಿಡಿದು, ನಂತರ ಅದನ್ನು ಎಳೆಯಿರಿ</string>
     <string name="projects_design_sample">ಮಾದರಿ %1$s</string>
     <string name="projects_option_delete_title">ಆಯ್ಕೆ ಅಳಿಸಿ</string>
     <string name="projects_option_delete_message">ನೀವು \"%1$s\" ಆಯ್ಕೆಯನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿರುವಿರಾ?</string>

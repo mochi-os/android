@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Data proyek disimpan</string>
     <string name="projects_exporting">Menyiapkan ekspor…</string>
     <string name="projects_board_add_column">Tambah kolom</string>
+    <string name="projects_board_reorder_columns">Susun ulang kolom</string>
+    <string name="projects_board_reorder_columns_hint">Tekan lama nama kolom, lalu seret</string>
     <string name="projects_design_sample">Contoh %1$s</string>
     <string name="projects_option_delete_title">Hapus opsi</string>
     <string name="projects_option_delete_message">Apakah Anda yakin ingin menghapus opsi \"%1$s\"?</string>

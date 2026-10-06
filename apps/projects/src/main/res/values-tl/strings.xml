@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Na-save ang data ng proyekto</string>
     <string name="projects_exporting">Inihahanda ang export…</string>
     <string name="projects_board_add_column">Magdagdag ng column</string>
+    <string name="projects_board_reorder_columns">Muling ayusin ang mga column</string>
+    <string name="projects_board_reorder_columns_hint">Pindutin nang matagal ang pangalan ng column, pagkatapos ay i-drag ito</string>
     <string name="projects_design_sample">Halimbawa %1$s</string>
     <string name="projects_option_delete_title">I-delete ang option</string>
     <string name="projects_option_delete_message">Sigurado ka bang gusto mong tanggalin ang option na \"%1$s\"?</string>

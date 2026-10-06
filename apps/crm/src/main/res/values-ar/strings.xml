@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">المجموعات</string>
     <string name="crm_attachment_remove">إزالة المرفق</string>
     <string name="crm_board_add_column">إضافة عمود</string>
+    <string name="crm_board_reorder_columns">إعادة ترتيب الأعمدة</string>
+    <string name="crm_board_reorder_columns_hint">اضغط مطولاً على اسم العمود، ثم اسحبه</string>
     <string name="crm_settings_entity_id">معرّف الكيان</string>
     <string name="crm_settings_fingerprint">البصمة</string>
     <string name="crm_settings_server">الخادم</string>

@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Idatha yeprojekthi igciniwe</string>
     <string name="projects_exporting">Ilungiselela ukuthunyelwa…</string>
     <string name="projects_board_add_column">Yongeza ikholamu</string>
+    <string name="projects_board_reorder_columns">Hlela kwakhona iikholamu</string>
+    <string name="projects_board_reorder_columns_hint">Cofa igama lekholamu ixesha elide, uze uyitsale</string>
     <string name="projects_design_sample">Isampulu %1$s</string>
     <string name="projects_option_delete_title">Cima ukhetho</string>
     <string name="projects_option_delete_message">Uqinisekile ukuba ufuna ukucima ukhetho \"%1$s\"?</string>

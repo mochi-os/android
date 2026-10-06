@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">ກຸ່ມ</string>
     <string name="crm_attachment_remove">ລຶບໄຟລ໌ແນບ</string>
     <string name="crm_board_add_column">ເພີ່ມຖັນ</string>
+    <string name="crm_board_reorder_columns">ຈັດລຽງຄໍລຳໃໝ່</string>
+    <string name="crm_board_reorder_columns_hint">ກົດຊື່ຖັນຄ້າງໄວ້ ແລ້ວລາກ</string>
     <string name="crm_settings_entity_id">ID ຂອງເອັນຕິຕີ້</string>
     <string name="crm_settings_fingerprint">ລາຍນິ້ວມື</string>
     <string name="crm_settings_server">ເຊີບເວີ</string>

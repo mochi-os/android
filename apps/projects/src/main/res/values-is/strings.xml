@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Verkefnagögn vistuð</string>
     <string name="projects_exporting">Undirbý útflutning…</string>
     <string name="projects_board_add_column">Bæta við dálki</string>
+    <string name="projects_board_reorder_columns">Endurraða dálkum</string>
+    <string name="projects_board_reorder_columns_hint">Ýttu lengi á heiti dálks og dragðu hann svo</string>
     <string name="projects_design_sample">Sýnishorn %1$s</string>
     <string name="projects_option_delete_title">Eyða valkosti</string>
     <string name="projects_option_delete_message">Ertu viss um að þú viljir eyða valkostinum \"%1$s\"?</string>

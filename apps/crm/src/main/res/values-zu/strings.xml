@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Amaqembu</string>
     <string name="crm_attachment_remove">Khipha okunamathiselwe</string>
     <string name="crm_board_add_column">Engeza ikholomu</string>
+    <string name="crm_board_reorder_columns">Hlela kabusha amakholomu</string>
+    <string name="crm_board_reorder_columns_hint">Cindezela igama lekholomu isikhathi eside, bese uyihudula</string>
     <string name="crm_settings_entity_id">I-ID yohlaka</string>
     <string name="crm_settings_fingerprint">Isigxivizo somunwe</string>
     <string name="crm_settings_server">Iseva</string>

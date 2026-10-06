@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Данните за проекта са запазени</string>
     <string name="projects_exporting">Подготвяне на експорта…</string>
     <string name="projects_board_add_column">Добави колона</string>
+    <string name="projects_board_reorder_columns">Пренареди колоните</string>
+    <string name="projects_board_reorder_columns_hint">Задръжте натиснато името на колона, след това я плъзнете</string>
     <string name="projects_design_sample">Пример %1$s</string>
     <string name="projects_option_delete_title">Изтрий опцията</string>
     <string name="projects_option_delete_message">Сигурни ли сте, че искате да изтриете опцията \"%1$s\"?</string>

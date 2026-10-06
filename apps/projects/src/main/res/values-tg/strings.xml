@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Маълумоти лоиҳа нигоҳ дошта шуд</string>
     <string name="projects_exporting">Содирот омода мешавад…</string>
     <string name="projects_board_add_column">Иловаи сутун</string>
+    <string name="projects_board_reorder_columns">Тартиби сутунҳоро тағйир диҳед</string>
+    <string name="projects_board_reorder_columns_hint">Номи сутунро дароз пахш кунед, сипас онро кашед</string>
     <string name="projects_design_sample">Намуна %1$s</string>
     <string name="projects_option_delete_title">Нест кардани имкон</string>
     <string name="projects_option_delete_message">Шумо мутмаин ҳастед, ки мехоҳед имкони \"%1$s\"-ро нест кунед?</string>

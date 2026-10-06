@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Grupės</string>
     <string name="crm_attachment_remove">Pašalinti priedą</string>
     <string name="crm_board_add_column">Pridėti stulpelį</string>
+    <string name="crm_board_reorder_columns">Pertvarkyti stulpelius</string>
+    <string name="crm_board_reorder_columns_hint">Palaikykite stulpelio pavadinimą, tada jį tempkite</string>
     <string name="crm_settings_entity_id">Subjekto ID</string>
     <string name="crm_settings_fingerprint">Pirštų atspaudas</string>
     <string name="crm_settings_server">Serveris</string>

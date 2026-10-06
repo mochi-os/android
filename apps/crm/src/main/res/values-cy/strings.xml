@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Grwpiau</string>
     <string name="crm_attachment_remove">Tynnu atodiad</string>
     <string name="crm_board_add_column">Ychwanegu colofn</string>
+    <string name="crm_board_reorder_columns">Aildrefnu colofnau</string>
+    <string name="crm_board_reorder_columns_hint">Pwyswch yn hir ar enw colofn, yna llusgwch hi</string>
     <string name="crm_settings_entity_id">ID endid</string>
     <string name="crm_settings_fingerprint">Olion bysedd</string>
     <string name="crm_settings_server">Gweinydd</string>

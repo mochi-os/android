@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Группы</string>
     <string name="crm_attachment_remove">Удалить вложение</string>
     <string name="crm_board_add_column">Добавить колонку</string>
+    <string name="crm_board_reorder_columns">Изменить порядок столбцов</string>
+    <string name="crm_board_reorder_columns_hint">Нажмите и удерживайте название столбца, затем перетащите его</string>
     <string name="crm_settings_entity_id">Идентификатор сущности</string>
     <string name="crm_settings_fingerprint">Отпечаток</string>
     <string name="crm_settings_server">Сервер</string>

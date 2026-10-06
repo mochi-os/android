@@ -378,6 +378,8 @@
     <string name="projects_export_saved">נתוני הפרויקט נשמרו</string>
     <string name="projects_exporting">מכין את הייצוא…</string>
     <string name="projects_board_add_column">הוסף עמודה</string>
+    <string name="projects_board_reorder_columns">סדר מחדש עמודות</string>
+    <string name="projects_board_reorder_columns_hint">לחץ ארוכות על שם עמודה ואז גרור אותה</string>
     <string name="projects_design_sample">דוגמה %1$s</string>
     <string name="projects_option_delete_title">מחק אפשרות</string>
     <string name="projects_option_delete_message">האם אתה בטוח שברצונך למחוק את האפשרות \"%1$s\"?</string>

@@ -376,6 +376,8 @@
     <string name="projects_export_saved">પ્રોજેક્ટ ડેટા સાચવ્યો</string>
     <string name="projects_exporting">નિકાસ તૈયાર કરી રહ્યાં છીએ…</string>
     <string name="projects_board_add_column">કૉલમ ઉમેરો</string>
+    <string name="projects_board_reorder_columns">કૉલમ્સ ફરીથી ગોઠવો</string>
+    <string name="projects_board_reorder_columns_hint">કૉલમના નામને લાંબું દબાવો, પછી તેને ખેંચો</string>
     <string name="projects_design_sample">નમૂનો %1$s</string>
     <string name="projects_option_delete_title">વિકલ્પ કાઢી નાખો</string>
     <string name="projects_option_delete_message">શું તમે ખરેખર \"%1$s\" વિકલ્પને કાઢી નાખવા માગો છો?</string>

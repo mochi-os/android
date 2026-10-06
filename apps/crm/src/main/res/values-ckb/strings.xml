@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">گرووپەکان</string>
     <string name="crm_attachment_remove">لابردنی هاوپێچ</string>
     <string name="crm_board_add_column">زیادکردنی ستوون</string>
+    <string name="crm_board_reorder_columns">ڕیزکردنەوەی ستوونەکان</string>
+    <string name="crm_board_reorder_columns_hint">دوورودرێژ ناوی ستوونێک پێبدە، پاشان ڕایبکێشە</string>
     <string name="crm_settings_entity_id">ناسنامەی ئەنتیتی</string>
     <string name="crm_settings_fingerprint">پەنجەمۆر</string>
     <string name="crm_settings_server">ڕاژەکار</string>

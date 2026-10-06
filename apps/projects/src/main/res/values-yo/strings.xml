@@ -376,6 +376,8 @@
     <string name="projects_export_saved">A ti fi dátà iṣẹ́ pamọ́</string>
     <string name="projects_exporting">Ń múra ìkójáde sílẹ̀…</string>
     <string name="projects_board_add_column">Fi ọ̀wọ́n kún</string>
+    <string name="projects_board_reorder_columns">Tún àwọn ọ̀wọ́n tò</string>
+    <string name="projects_board_reorder_columns_hint">Tẹ̀ orúkọ ọwọ̀n kan pẹ́, lẹ́yìn náà fà á</string>
     <string name="projects_design_sample">Àpẹẹrẹ %1$s</string>
     <string name="projects_option_delete_title">Pa àṣàyàn rẹ́</string>
     <string name="projects_option_delete_message">Ṣé o dájú pé o fẹ́ pa àṣàyàn \"%1$s\" rẹ́?</string>

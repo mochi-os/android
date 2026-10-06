@@ -376,6 +376,8 @@
     <string name="projects_export_saved">プロジェクトデータを保存しました</string>
     <string name="projects_exporting">エクスポートを準備中…</string>
     <string name="projects_board_add_column">列を追加</string>
+    <string name="projects_board_reorder_columns">列を並べ替え</string>
+    <string name="projects_board_reorder_columns_hint">列の名前を長押ししてからドラッグします</string>
     <string name="projects_design_sample">サンプル %1$s</string>
     <string name="projects_option_delete_title">オプションを削除</string>
     <string name="projects_option_delete_message">オプション \"%1$s\" を削除してもよろしいですか?</string>

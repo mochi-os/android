@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">ګروپونه</string>
     <string name="crm_attachment_remove">ضمیمه لرې کړئ</string>
     <string name="crm_board_add_column">کالم اضافه کړئ</string>
+    <string name="crm_board_reorder_columns">کالمونه بیا تنظیم کړئ</string>
+    <string name="crm_board_reorder_columns_hint">د یوه کالم پر نوم اوږد فشار ورکړئ، بیا یې کش کړئ</string>
     <string name="crm_settings_entity_id">د موجودیت ID</string>
     <string name="crm_settings_fingerprint">د ګوتو نښه</string>
     <string name="crm_settings_server">سرور</string>

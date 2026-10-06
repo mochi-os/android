@@ -376,6 +376,8 @@
     <string name="projects_export_saved">د پروژې ډاټا خوندي شوه</string>
     <string name="projects_exporting">صادرول چمتو کیږي…</string>
     <string name="projects_board_add_column">کالم اضافه کړئ</string>
+    <string name="projects_board_reorder_columns">کالمونه بیا تنظیم کړئ</string>
+    <string name="projects_board_reorder_columns_hint">د یوه کالم پر نوم اوږد فشار ورکړئ، بیا یې کش کړئ</string>
     <string name="projects_design_sample">نمونه %1$s</string>
     <string name="projects_option_delete_title">اختیار ړنګ کړئ</string>
     <string name="projects_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>

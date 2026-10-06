@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">गट</string>
     <string name="crm_attachment_remove">संलग्नक काढा</string>
     <string name="crm_board_add_column">कॉलम जोडा</string>
+    <string name="crm_board_reorder_columns">कॉलम पुन्हा क्रमवारी लावा</string>
+    <string name="crm_board_reorder_columns_hint">स्तंभाच्या नावावर लाँग-प्रेस करा, नंतर तो ड्रॅग करा</string>
     <string name="crm_settings_entity_id">एंटिटी आयडी</string>
     <string name="crm_settings_fingerprint">बोटाचा ठसा</string>
     <string name="crm_settings_server">सर्व्हर</string>

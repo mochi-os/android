@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Grupper</string>
     <string name="crm_attachment_remove">Fjern vedlegg</string>
     <string name="crm_board_add_column">Legg til kolonne</string>
+    <string name="crm_board_reorder_columns">Endra rekkjefølgje på kolonner</string>
+    <string name="crm_board_reorder_columns_hint">Hald inne namnet på ein kolonne, og dra han deretter</string>
     <string name="crm_settings_entity_id">Entitets-ID</string>
     <string name="crm_settings_fingerprint">Fingeravtrykk</string>
     <string name="crm_settings_server">Tenar</string>

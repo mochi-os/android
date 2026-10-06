@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">ഗ്രൂപ്പുകൾ</string>
     <string name="crm_attachment_remove">അറ്റാച്ച്മെന്റ് നീക്കം ചെയ്യുക</string>
     <string name="crm_board_add_column">കോളം ചേർക്കുക</string>
+    <string name="crm_board_reorder_columns">കോളങ്ങൾ പുനഃക്രമീകരിക്കുക</string>
+    <string name="crm_board_reorder_columns_hint">ഒരു കോളത്തിന്റെ പേരിൽ ലോംഗ്-പ്രസ് ചെയ്ത്, തുടർന്ന് വലിച്ചിടുക</string>
     <string name="crm_settings_entity_id">എന്റിറ്റി ID</string>
     <string name="crm_settings_fingerprint">വിരലടയാളം</string>
     <string name="crm_settings_server">സെർവർ</string>

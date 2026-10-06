@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">گروپ</string>
     <string name="crm_attachment_remove">اٽيچمينٽ هٽايو</string>
     <string name="crm_board_add_column">ڪالم شامل ڪريو</string>
+    <string name="crm_board_reorder_columns">ڪالم ٻيهر ترتيب ڏيو</string>
+    <string name="crm_board_reorder_columns_hint">ڪالم جي نالي کي ڊگھو دٻايو، پوءِ ان کي ڇڪيو</string>
     <string name="crm_settings_entity_id">اينٽٽي ID</string>
     <string name="crm_settings_fingerprint">فنگر پرنٽ</string>
     <string name="crm_settings_server">سرور</string>

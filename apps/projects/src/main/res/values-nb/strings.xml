@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Prosjektdata lagret</string>
     <string name="projects_exporting">Forbereder eksport…</string>
     <string name="projects_board_add_column">Legg til kolonne</string>
+    <string name="projects_board_reorder_columns">Endre rekkefølge på kolonner</string>
+    <string name="projects_board_reorder_columns_hint">Trykk og hold på navnet til en kolonne, og dra den deretter</string>
     <string name="projects_design_sample">Eksempel %1$s</string>
     <string name="projects_option_delete_title">Slett alternativ</string>
     <string name="projects_option_delete_message">Er du sikker på at du vil slette alternativet \"%1$s\"?</string>

@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Projekdata gestoor</string>
     <string name="projects_exporting">Berei uitvoer voor…</string>
     <string name="projects_board_add_column">Voeg kolom by</string>
+    <string name="projects_board_reorder_columns">Herrangskik kolomme</string>
+    <string name="projects_board_reorder_columns_hint">Hou \'n kolom se naam lank in en sleep dit dan</string>
     <string name="projects_design_sample">Voorbeeld %1$s</string>
     <string name="projects_option_delete_title">Verwyder opsie</string>
     <string name="projects_option_delete_message">Is jy seker jy wil die opsie \"%1$s\" uitvee?</string>

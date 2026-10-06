@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">කණ්ඩායම්</string>
     <string name="crm_attachment_remove">ඇමුණුම ඉවත් කරන්න</string>
     <string name="crm_board_add_column">තීරුවක් එක් කරන්න</string>
+    <string name="crm_board_reorder_columns">තීරු නැවත අනුපිළිවෙළට සැකසීම</string>
+    <string name="crm_board_reorder_columns_hint">තීරුවක නමට දිගු වේලාවක් ඔබා, පසුව එය අදින්න</string>
     <string name="crm_settings_entity_id">ආයතන හැඳුනුම</string>
     <string name="crm_settings_fingerprint">ඇඟිලි සලකුණ</string>
     <string name="crm_settings_server">සේවාදායකය</string>

@@ -349,6 +349,7 @@
     <string name="projects_settings_updated">Proyecto actualizado</string>
     <string name="projects_class_save_name">Guardá el nombre</string>
     <string name="projects_board_add_column">Agregá una columna</string>
+    <string name="projects_board_reorder_columns_hint">Mantené presionado el nombre de una columna y después arrastrala</string>
     <string name="projects_option_delete_title">Eliminá la opción</string>
     <string name="projects_option_delete_message">¿Estás seguro de que querés eliminar la opción \"%1$s\"?</string>
     <string name="projects_attachment_remove">Quitar adjunto</string>

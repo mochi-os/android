@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">גרופּעס</string>
     <string name="crm_attachment_remove">אַראָפּנעמען בײַלאַגע</string>
     <string name="crm_board_add_column">צולייגן זײַל</string>
+    <string name="crm_board_reorder_columns">איבער-סדר זײַלן</string>
+    <string name="crm_board_reorder_columns_hint">לאַנג-דריקט דעם נאָמען פֿון אַ זײַל, דערנאָך שלעפּט זי</string>
     <string name="crm_settings_entity_id">ענטיטעט־ID</string>
     <string name="crm_settings_fingerprint">פֿינגער־אָפּדרוק</string>
     <string name="crm_settings_server">סערווער</string>

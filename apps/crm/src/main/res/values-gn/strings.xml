@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Atypykuéra</string>
     <string name="crm_attachment_remove">Embogue adjunto</string>
     <string name="crm_board_add_column">Embojuaju columna</string>
+    <string name="crm_board_reorder_columns">Emoĩporã jey columnakuéra</string>
+    <string name="crm_board_reorder_columns_hint">Eipyhy puku columna réra, upéi embosyryry</string>
     <string name="crm_settings_entity_id">Entidad ID</string>
     <string name="crm_settings_fingerprint">Kuãhũ</string>
     <string name="crm_settings_server">Mohendaha</string>

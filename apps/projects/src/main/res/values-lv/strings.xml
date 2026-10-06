@@ -377,6 +377,8 @@
     <string name="projects_export_saved">Projekta dati saglabāti</string>
     <string name="projects_exporting">Sagatavo eksportu…</string>
     <string name="projects_board_add_column">Pievienot kolonnu</string>
+    <string name="projects_board_reorder_columns">Pārkārtot kolonnas</string>
+    <string name="projects_board_reorder_columns_hint">Nospiediet un turiet kolonnas nosaukumu, tad velciet to</string>
     <string name="projects_design_sample">Paraugs %1$s</string>
     <string name="projects_option_delete_title">Dzēst opciju</string>
     <string name="projects_option_delete_message">Vai tiešām vēlaties dzēst opciju \"%1$s\"?</string>

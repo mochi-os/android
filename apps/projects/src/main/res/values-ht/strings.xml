@@ -375,6 +375,8 @@
     <string name="projects_export_saved">Done pwojè a anrejistre</string>
     <string name="projects_exporting">Prepare ekspòtasyon an…</string>
     <string name="projects_board_add_column">Ajoute kolòn</string>
+    <string name="projects_board_reorder_columns">Reòganize kolòn yo</string>
+    <string name="projects_board_reorder_columns_hint">Peze lontan sou non yon kolòn, epi trennen l</string>
     <string name="projects_design_sample">Echantiyon %1$s</string>
     <string name="projects_option_delete_title">Efase opsyon</string>
     <string name="projects_option_delete_message">Èske ou sèten ou vle efase opsyon \"%1$s\"?</string>

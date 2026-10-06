@@ -376,6 +376,8 @@
     <string name="projects_export_saved">प्रकल्प डेटा जतन केला</string>
     <string name="projects_exporting">निर्यात तयार करत आहे…</string>
     <string name="projects_board_add_column">कॉलम जोडा</string>
+    <string name="projects_board_reorder_columns">कॉलम पुन्हा क्रमवारी लावा</string>
+    <string name="projects_board_reorder_columns_hint">स्तंभाच्या नावावर लाँग-प्रेस करा, नंतर तो ड्रॅग करा</string>
     <string name="projects_design_sample">नमुना %1$s</string>
     <string name="projects_option_delete_title">पर्याय हटवा</string>
     <string name="projects_option_delete_message">तुम्हाला \"%1$s\" हा पर्याय हटवायचा आहे का?</string>

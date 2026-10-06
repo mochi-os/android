@@ -376,6 +376,8 @@
     <string name="projects_export_saved">የፕሮጀክት ውሂብ ተቀምጧል</string>
     <string name="projects_exporting">ወደ ውጪ መላክ በመዘጋጀት ላይ…</string>
     <string name="projects_board_add_column">ዓምድ ጨምር</string>
+    <string name="projects_board_reorder_columns">አምዶችን እንደገና አደራጅ</string>
+    <string name="projects_board_reorder_columns_hint">የዓምድ ስም ረዥም-ተጭነው ከዚያ ይጎትቱት</string>
     <string name="projects_design_sample">ናሙና %1$s</string>
     <string name="projects_option_delete_title">አማራጭ ሰርዝ</string>
     <string name="projects_option_delete_message">አማራጩን \"%1$s\" መሰረዝ እንደሚፈልጉ እርግጠኛ ኖት?</string>

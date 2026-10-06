@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Τα δεδομένα του έργου αποθηκεύτηκαν</string>
     <string name="projects_exporting">Προετοιμασία εξαγωγής…</string>
     <string name="projects_board_add_column">Προσθήκη στήλης</string>
+    <string name="projects_board_reorder_columns">Αναδιάταξη στηλών</string>
+    <string name="projects_board_reorder_columns_hint">Πατήστε παρατεταμένα το όνομα μιας στήλης και μετά σύρετέ τη</string>
     <string name="projects_design_sample">Δείγμα %1$s</string>
     <string name="projects_option_delete_title">Διαγραφή επιλογής</string>
     <string name="projects_option_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε την επιλογή \"%1$s\";</string>

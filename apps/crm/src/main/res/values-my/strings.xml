@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">အုပ်စုများ</string>
     <string name="crm_attachment_remove">ပူးတွဲဖိုင် ဖယ်ရှားရန်</string>
     <string name="crm_board_add_column">ကော်လံ ထည့်မည်</string>
+    <string name="crm_board_reorder_columns">ကော်လံများ ပြန်စီ</string>
+    <string name="crm_board_reorder_columns_hint">ကော်လံအမည်ကို ကြာကြာဖိပြီး ဆွဲပါ</string>
     <string name="crm_settings_entity_id">အရာ ID</string>
     <string name="crm_settings_fingerprint">လက်ဗွေ</string>
     <string name="crm_settings_server">ဆာဗာ</string>

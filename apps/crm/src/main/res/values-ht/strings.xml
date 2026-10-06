@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Gwoup</string>
     <string name="crm_attachment_remove">Retire pyès jwenti</string>
     <string name="crm_board_add_column">Ajoute kolòn</string>
+    <string name="crm_board_reorder_columns">Reòganize kolòn yo</string>
+    <string name="crm_board_reorder_columns_hint">Peze lontan sou non yon kolòn, epi trennen l</string>
     <string name="crm_settings_entity_id">ID Antite</string>
     <string name="crm_settings_fingerprint">Anprent dijital</string>
     <string name="crm_settings_server">Sèvè</string>

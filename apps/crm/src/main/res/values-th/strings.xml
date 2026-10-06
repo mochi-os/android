@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">กลุ่ม</string>
     <string name="crm_attachment_remove">ลบไฟล์แนบ</string>
     <string name="crm_board_add_column">เพิ่มคอลัมน์</string>
+    <string name="crm_board_reorder_columns">จัดลำดับคอลัมน์ใหม่</string>
+    <string name="crm_board_reorder_columns_hint">กดชื่อคอลัมน์ค้างไว้ แล้วลาก</string>
     <string name="crm_settings_entity_id">รหัสเอนทิตี</string>
     <string name="crm_settings_fingerprint">ลายนิ้วมือ</string>
     <string name="crm_settings_server">เซิร์ฟเวอร์</string>

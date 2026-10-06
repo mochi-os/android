@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">ਗਰੁੱਪ</string>
     <string name="crm_attachment_remove">ਅਟੈਚਮੈਂਟ ਹਟਾਓ</string>
     <string name="crm_board_add_column">ਕਾਲਮ ਜੋੜੋ</string>
+    <string name="crm_board_reorder_columns">ਕਾਲਮ ਮੁੜ-ਆਰਡਰ ਕਰੋ</string>
+    <string name="crm_board_reorder_columns_hint">ਕਾਲਮ ਦੇ ਨਾਮ ਨੂੰ ਲੰਮੇ ਸਮੇਂ ਤੱਕ ਦਬਾਓ, ਫਿਰ ਇਸਨੂੰ ਖਿੱਚੋ</string>
     <string name="crm_settings_entity_id">ਇਕਾਈ ID</string>
     <string name="crm_settings_fingerprint">ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
     <string name="crm_settings_server">ਸਰਵਰ</string>

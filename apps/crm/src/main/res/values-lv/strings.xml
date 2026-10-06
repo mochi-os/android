@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Grupas</string>
     <string name="crm_attachment_remove">Noņemt pielikumu</string>
     <string name="crm_board_add_column">Pievienot kolonnu</string>
+    <string name="crm_board_reorder_columns">Pārkārtot kolonnas</string>
+    <string name="crm_board_reorder_columns_hint">Nospiediet un turiet kolonnas nosaukumu, tad velciet to</string>
     <string name="crm_settings_entity_id">Entītijas ID</string>
     <string name="crm_settings_fingerprint">Pirkstu nospiedums</string>
     <string name="crm_settings_server">Serveris</string>

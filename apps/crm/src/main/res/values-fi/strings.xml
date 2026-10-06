@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Ryhmät</string>
     <string name="crm_attachment_remove">Poista liite</string>
     <string name="crm_board_add_column">Lisää sarake</string>
+    <string name="crm_board_reorder_columns">Järjestä sarakkeet uudelleen</string>
+    <string name="crm_board_reorder_columns_hint">Paina sarakkeen nimeä pitkään ja vedä sitten</string>
     <string name="crm_settings_entity_id">Entiteetin tunnus</string>
     <string name="crm_settings_fingerprint">Sormenjälki</string>
     <string name="crm_settings_server">Palvelin</string>

@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Долбоор маалыматы сакталды</string>
     <string name="projects_exporting">Экспорт даярдалууда…</string>
     <string name="projects_board_add_column">Тилке кошуу</string>
+    <string name="projects_board_reorder_columns">Тилкелерди кайра иргөө</string>
+    <string name="projects_board_reorder_columns_hint">Тилкенин атын узак басып, анан сүйрөңүз</string>
     <string name="projects_design_sample">Үлгү %1$s</string>
     <string name="projects_option_delete_title">Тандоону жок кылуу</string>
     <string name="projects_option_delete_message">\"%1$s\" тандоосун чындап өчүргүңүз келеби?</string>

@@ -379,6 +379,8 @@
     <string name="projects_export_saved">Sábháladh sonraí an tionscadail</string>
     <string name="projects_exporting">Easpórtáil á hullmhú…</string>
     <string name="projects_board_add_column">Cuir colún leis</string>
+    <string name="projects_board_reorder_columns">Athordaigh colúin</string>
+    <string name="projects_board_reorder_columns_hint">Brúigh agus coinnigh ainm colúin, ansin tarraing é</string>
     <string name="projects_design_sample">Sampla %1$s</string>
     <string name="projects_option_delete_title">Scrios rogha</string>
     <string name="projects_option_delete_message">An bhfuil tú cinnte gur mhaith leat an rogha \"%1$s\" a scriosadh?</string>

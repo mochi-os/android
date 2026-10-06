@@ -380,6 +380,8 @@
     <string name="projects_export_saved">Cadwyd data\'r prosiect</string>
     <string name="projects_exporting">Yn paratoi\'r allforio…</string>
     <string name="projects_board_add_column">Ychwanegu colofn</string>
+    <string name="projects_board_reorder_columns">Aildrefnu colofnau</string>
+    <string name="projects_board_reorder_columns_hint">Pwyswch yn hir ar enw colofn, yna llusgwch hi</string>
     <string name="projects_design_sample">Sampl %1$s</string>
     <string name="projects_option_delete_title">Dileu opsiwn</string>
     <string name="projects_option_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r opsiwn \"%1$s\"?</string>

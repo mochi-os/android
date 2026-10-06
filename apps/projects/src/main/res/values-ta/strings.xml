@@ -376,6 +376,8 @@
     <string name="projects_export_saved">திட்டத் தரவு சேமிக்கப்பட்டது</string>
     <string name="projects_exporting">ஏற்றுமதி தயாராகிறது…</string>
     <string name="projects_board_add_column">நெடுவரிசை சேர்</string>
+    <string name="projects_board_reorder_columns">நெடுவரிசைகளை மறுவரிசைப்படுத்தவும்</string>
+    <string name="projects_board_reorder_columns_hint">நெடுவரிசையின் பெயரை நீண்ட நேரம் அழுத்தி, பின்னர் இழுக்கவும்</string>
     <string name="projects_design_sample">மாதிரி %1$s</string>
     <string name="projects_option_delete_title">விருப்பத்தை நீக்கு</string>
     <string name="projects_option_delete_message">\"%1$s\" விருப்பத்தை நீக்க விரும்புகிறீர்களா?</string>

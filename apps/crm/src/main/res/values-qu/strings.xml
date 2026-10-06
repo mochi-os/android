@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Huñukuna</string>
     <string name="crm_attachment_remove">Adjuntota qichuy</string>
     <string name="crm_board_add_column">Columna yapay</string>
+    <string name="crm_board_reorder_columns">Columnakunata yapamanta ordenay</string>
+    <string name="crm_board_reorder_columns_hint">Columnaq sutinta unayta ñit\'iy, chaymanta aysay</string>
     <string name="crm_settings_entity_id">Entidad ID</string>
     <string name="crm_settings_fingerprint">Ruk\'ana unancha</string>
     <string name="crm_settings_server">Servidor</string>

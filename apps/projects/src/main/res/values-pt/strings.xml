@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Dados do projeto guardados</string>
     <string name="projects_exporting">A preparar a exportação…</string>
     <string name="projects_board_add_column">Adicionar coluna</string>
+    <string name="projects_board_reorder_columns">Reordenar colunas</string>
+    <string name="projects_board_reorder_columns_hint">Mantenha pressionado o nome de uma coluna e depois arraste-a</string>
     <string name="projects_design_sample">Exemplo %1$s</string>
     <string name="projects_option_delete_title">Eliminar opção</string>
     <string name="projects_option_delete_message">Tem a certeza de que pretende eliminar a opção \"%1$s\"?</string>

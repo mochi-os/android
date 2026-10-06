@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Layihə məlumatı saxlanıldı</string>
     <string name="projects_exporting">İxrac hazırlanır…</string>
     <string name="projects_board_add_column">Sütun əlavə et</string>
+    <string name="projects_board_reorder_columns">Sütunları yenidən sıralayın</string>
+    <string name="projects_board_reorder_columns_hint">Sütunun adını uzun basın, sonra onu sürüşdürün</string>
     <string name="projects_design_sample">Nümunə %1$s</string>
     <string name="projects_option_delete_title">Variantı sil</string>
     <string name="projects_option_delete_message">\"%1$s\" variantını silmək istədiyinizə əminsiniz?</string>

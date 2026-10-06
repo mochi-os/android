@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Skupine</string>
     <string name="crm_attachment_remove">Odstrani prilogo</string>
     <string name="crm_board_add_column">Dodaj stolpec</string>
+    <string name="crm_board_reorder_columns">Prerazporedi stolpce</string>
+    <string name="crm_board_reorder_columns_hint">Pridržite ime stolpca in ga nato povlecite</string>
     <string name="crm_settings_entity_id">ID entitete</string>
     <string name="crm_settings_fingerprint">Prstni odtis</string>
     <string name="crm_settings_server">Strežnik</string>

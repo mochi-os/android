@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Qruplar</string>
     <string name="crm_attachment_remove">Qoşmanı sil</string>
     <string name="crm_board_add_column">Sütun əlavə et</string>
+    <string name="crm_board_reorder_columns">Sütunları yenidən sıralayın</string>
+    <string name="crm_board_reorder_columns_hint">Sütunun adını uzun basın, sonra onu sürüşdürün</string>
     <string name="crm_settings_entity_id">Qurum ID</string>
     <string name="crm_settings_fingerprint">Barmaq izi</string>
     <string name="crm_settings_server">Server</string>

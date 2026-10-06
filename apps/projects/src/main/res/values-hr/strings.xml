@@ -377,6 +377,8 @@
     <string name="projects_export_saved">Podaci projekta spremljeni</string>
     <string name="projects_exporting">Priprema izvoza…</string>
     <string name="projects_board_add_column">Dodaj stupac</string>
+    <string name="projects_board_reorder_columns">Promijeni redoslijed stupaca</string>
+    <string name="projects_board_reorder_columns_hint">Dugo pritisni naziv stupca, a zatim ga povuci</string>
     <string name="projects_design_sample">Primjer %1$s</string>
     <string name="projects_option_delete_title">Obriši opciju</string>
     <string name="projects_option_delete_message">Jeste li sigurni da želite izbrisati opciju \"%1$s\"?</string>
