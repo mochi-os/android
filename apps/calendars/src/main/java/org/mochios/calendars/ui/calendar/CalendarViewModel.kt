@@ -756,25 +756,6 @@ class CalendarViewModel @Inject constructor(
         if (calendar.linked || calendar.subscription) R.string.calendars_removed else R.string.calendars_deleted
     }
 
-    fun preferences(value: Preferences, done: () -> Unit = {}) = act(done) {
-        val saved = repository.setPreferences(
-            org.mochios.calendars.api.PreferencesRequest(
-                hours = value.hours,
-                days = value.days,
-                multiweek = value.multiweek,
-                duration = value.duration,
-                reminder = value.reminder,
-                zones = value.zones,
-                // Blank only when no calendar could be offered, which is no choice.
-                calendar = value.calendar.ifEmpty { null },
-                allday = value.allday,
-            ),
-        )
-        _uiState.value = _uiState.value.copy(preferences = saved)
-        load()
-        R.string.calendars_preferences_saved
-    }
-
     // ---- moving an occurrence ----
 
     /** How to put the last move back, until another move replaces it. */

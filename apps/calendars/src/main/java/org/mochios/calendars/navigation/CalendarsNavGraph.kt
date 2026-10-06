@@ -21,6 +21,7 @@ import org.mochios.calendars.ui.dialogs.CreateCalendarScreen
 import org.mochios.calendars.ui.dialogs.SubscribeCalendarScreen
 import org.mochios.calendars.ui.editor.EventEditScreen
 import org.mochios.calendars.ui.editor.Scope
+import org.mochios.calendars.ui.preferences.PreferencesScreen
 import java.net.URLDecoder
 import java.time.LocalDate
 import java.net.URLEncoder
@@ -57,6 +58,7 @@ object CalendarsApp {
     const val SYSTEM_SETTINGS = "settings/system/settings"
     const val SUBSCRIBE = "calendars/subscribe"
     const val DEVICES = "calendars/devices"
+    const val PREFERENCES = "calendars/preferences"
     // The two editor routes sit on separate paths rather than one path with
     // "new" as an id: a single pattern would match both and the nav graph
     // would have to pick between them.
@@ -106,6 +108,7 @@ object CalendarsApp {
         CALENDAR -> R.string.calendars_created
         SUBSCRIBED -> R.string.calendars_subscribed
         LINKED -> R.string.calendars_linked
+        PREFERENCES -> R.string.calendars_preferences_saved
         else -> null
     }
 
@@ -210,6 +213,7 @@ fun NavGraphBuilder.calendarsNavGraph(
             onCreateCalendar = { navController.navigate(CalendarsApp.CREATE) },
             onSubscribe = { navController.navigate(CalendarsApp.SUBSCRIBE) },
             onConnectDevice = { navController.navigate(CalendarsApp.DEVICES) },
+            onPreferences = { navController.navigate(CalendarsApp.PREFERENCES) },
             onNewEvent = { start, allday, finish -> navController.navigate(CalendarsApp.newEvent(start, allday, finish)) },
             onEditEvent = { event, occurrence -> navController.navigate(CalendarsApp.event(event, occurrence)) },
             onCopyEvent = { event, occurrence, scope ->
@@ -253,6 +257,16 @@ fun NavGraphBuilder.calendarsNavGraph(
 
     composable(CalendarsApp.DEVICES) {
         ConnectDeviceScreen(onBack = { navController.popBackStack() })
+    }
+
+    composable(CalendarsApp.PREFERENCES) {
+        PreferencesScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = {
+                CalendarsApp.told(navController, CalendarsApp.PREFERENCES)
+                navController.popBackStack()
+            },
+        )
     }
 
     composable(

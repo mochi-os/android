@@ -6,25 +6,15 @@
 package org.mochios.calendars.ui.dialogs
 
 import androidx.compose.foundation.layout.Arrangement
-import java.time.format.TextStyle
-import java.time.DayOfWeek
-import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.material3.FilterChip
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -36,20 +26,13 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.DataChip
-import org.mochios.android.ui.components.LabeledSelectField
-import org.mochios.android.ui.components.LabeledSwitchRow
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.characters
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
-import org.mochios.calendars.model.Hours
-import org.mochios.calendars.model.Multiweek
-import org.mochios.calendars.model.Preferences
-import org.mochios.calendars.model.defaultCalendar
 import org.mochios.calendars.ui.calendar.Tally
 import org.mochios.calendars.ui.editor.REMINDER_LEADS
 import org.mochios.calendars.ui.editor.reminderLeads
@@ -285,169 +268,6 @@ fun RevokeLinkDialog(
         confirmLoading = busy,
         destructive = true,
         dismissText = stringResource(MochiR.string.common_cancel),
-    )
-}
-
-/**
- * The preferences the views read: the working hours they shade, the work
- * days, how many weeks a multiweek view shows, the default event length, the
- * default reminder and the calendar a new event goes in, chosen from
- * [calendars]. Shared with the web, so a change here shows there.
- */
-@Composable
-fun PreferencesDialog(
-    preferences: Preferences,
-    calendars: List<Calendar>,
-    saving: Boolean,
-    onDismiss: () -> Unit,
-    onConfirm: (Preferences) -> Unit,
-) {
-    var start by rememberSaveable { mutableIntStateOf(preferences.hours.start) }
-    var finish by rememberSaveable { mutableIntStateOf(preferences.hours.finish) }
-    var days by remember { mutableStateOf(preferences.days.toSet()) }
-    var weeks by rememberSaveable { mutableIntStateOf(preferences.multiweek.weeks) }
-    var previous by rememberSaveable { mutableIntStateOf(preferences.multiweek.previous) }
-    var duration by rememberSaveable { mutableIntStateOf(preferences.duration) }
-    var reminder by rememberSaveable { mutableIntStateOf(preferences.reminder) }
-    var zones by rememberSaveable { mutableStateOf(preferences.zones) }
-    var allday by rememberSaveable { mutableStateOf(preferences.allday) }
-    // The calendars a new event can go in, the built-in default first.
-    val writable = calendars.filterNot { it.readonly }
-        .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
-    var calendar by rememberSaveable { mutableStateOf(defaultCalendar(writable, preferences.calendar)) }
-
-    val format = LocalFormat.current
-    val locale = LocalConfiguration.current.locales[0]
-    // Hours as the user's clock names them; the last hour of the day is the
-    // start of the next, which is what it is.
-    val hours = (0..23).map { it.toString() to format.formatHour(it) }
-    val ends = (start + 1..24).map { it.toString() to format.formatHour(it) }
-    val edited = Preferences(
-        hours = Hours(start, finish),
-        days = days.sorted(),
-        multiweek = Multiweek(weeks, previous),
-        duration = duration,
-        reminder = reminder,
-        view = preferences.view,
-        zones = zones,
-        calendar = calendar,
-        allday = allday,
-    )
-    // As it opened, with the calendar the picker shows in place of one
-    // since deleted or made read-only, so opening changes nothing.
-    val opened = remember(preferences, writable) {
-        preferences.copy(days = preferences.days.sorted(), calendar = defaultCalendar(writable, preferences.calendar))
-    }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(R.string.calendars_preferences),
-        confirmText = stringResource(MochiR.string.common_save),
-        onConfirm = { onConfirm(edited) },
-        confirmEnabled = finish > start && edited != opened,
-        confirmLoading = saving,
-        dismissText = stringResource(MochiR.string.common_cancel),
-        content = {
-            Column(
-                modifier = Modifier.verticalScroll(rememberScrollState()),
-                verticalArrangement = Arrangement.spacedBy(12.dp),
-            ) {
-                LabeledSelectField(
-                    label = stringResource(R.string.calendars_hours_start),
-                    placeholder = "",
-                    options = hours,
-                    selected = start.toString(),
-                    onSelect = { chosen ->
-                        start = chosen.toIntOrNull() ?: start
-                        // The end follows a start moved past it, as on the web.
-                        finish = maxOf(finish, start + 1)
-                    },
-                )
-                LabeledSelectField(
-                    label = stringResource(R.string.calendars_hours_finish),
-                    placeholder = "",
-                    options = ends,
-                    selected = finish.toString(),
-                    onSelect = { finish = it.toIntOrNull() ?: finish },
-                )
-                Text(
-                    text = stringResource(R.string.calendars_work_days),
-                    style = MaterialTheme.typography.labelMedium,
-                    modifier = Modifier.padding(top = 4.dp),
-                )
-                // In the order the user's own week runs, as toggles.
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                    val first = format.preferences.weekStartsOn
-                    for (offset in 0..6) {
-                        val day = (first + offset) % 7
-                        val on = day in days
-                        FilterChip(
-                            selected = on,
-                            onClick = { days = if (on) days - day else days + day },
-                            // The preference indexes Sunday 0; java.time indexes Monday 1.
-                            label = { Text(DayOfWeek.of(if (day == 0) 7 else day).getDisplayName(TextStyle.SHORT, locale)) },
-                        )
-                    }
-                }
-                LabeledSelectField(
-                    label = stringResource(R.string.calendars_multiweek_weeks),
-                    placeholder = "",
-                    options = (2..8).map { it.toString() to format.formatNumber(it) },
-                    selected = weeks.toString(),
-                    onSelect = { weeks = it.toIntOrNull() ?: weeks },
-                )
-                LabeledSelectField(
-                    label = stringResource(R.string.calendars_multiweek_previous),
-                    placeholder = "",
-                    options = (0..2).map { it.toString() to format.formatNumber(it) },
-                    selected = previous.toString(),
-                    onSelect = { previous = it.toIntOrNull() ?: previous },
-                )
-                LabeledSelectField(
-                    label = stringResource(R.string.calendars_preferences_allday),
-                    placeholder = "",
-                    options = listOf(
-                        "first" to stringResource(R.string.calendars_allday_first),
-                        "last" to stringResource(R.string.calendars_allday_last),
-                    ),
-                    selected = allday,
-                    onSelect = { allday = it },
-                )
-                LabeledSelectField(
-                    label = stringResource(R.string.calendars_default_duration),
-                    placeholder = "",
-                    // Zero is a real choice: an event that ends when it starts.
-                    options = DURATIONS.map { minutes ->
-                        minutes.toString() to if (minutes > 0 && minutes % 60 == 0) {
-                            pluralStringResource(R.plurals.calendars_hours, minutes / 60, format.formatNumber(minutes / 60))
-                        } else {
-                            pluralStringResource(R.plurals.calendars_minutes, minutes, format.formatNumber(minutes))
-                        }
-                    },
-                    selected = duration.toString(),
-                    onSelect = { duration = it.toIntOrNull() ?: duration },
-                )
-                LabeledSelectField(
-                    label = stringResource(R.string.calendars_default_reminder),
-                    placeholder = "",
-                    options = reminderOptions(),
-                    selected = reminder.toString(),
-                    onSelect = { reminder = it.toIntOrNull() ?: reminder },
-                )
-                LabeledSelectField(
-                    label = stringResource(R.string.calendars_default_calendar),
-                    placeholder = "",
-                    options = writable.map { it.id to it.name },
-                    selected = calendar,
-                    onSelect = { calendar = it },
-                )
-                LabeledSwitchRow(
-                    label = stringResource(R.string.calendars_preferences_zones),
-                    checked = zones,
-                    onCheckedChange = { zones = it },
-                )
-            }
-        },
     )
 }
 

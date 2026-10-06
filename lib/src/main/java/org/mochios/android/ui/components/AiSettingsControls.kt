@@ -109,7 +109,7 @@ fun OptionDropdownField(
 
 /**
  * An [AiSettingRow] whose control chooses one of [options] by its stored value,
- * as the AI mode and account rows do.
+ * as the AI mode and account rows and the calendar preferences do.
  *
  * @param label Name of the setting.
  * @param options Choices as stored-value-to-label pairs.
@@ -118,7 +118,7 @@ fun OptionDropdownField(
  * @param onSelect Called with the stored value of the chosen option.
  */
 @Composable
-fun AiChoiceRow(
+fun ChoiceRow(
     label: String,
     options: List<Pair<String, String>>,
     selected: String,
@@ -143,7 +143,7 @@ fun AiChoiceRow(
  *
  * @param defaultLabel Label of the entry that leaves the account unset.
  * @param accounts Accounts the viewer can pick.
- * @return Stored-value-to-label pairs for [AiChoiceRow].
+ * @return Stored-value-to-label pairs for [ChoiceRow].
  */
 fun aiAccountOptions(defaultLabel: String, accounts: List<Account>): List<Pair<String, String>> =
     listOf("" to defaultLabel) + accounts.map { account -> account.id to account.displayLabel }

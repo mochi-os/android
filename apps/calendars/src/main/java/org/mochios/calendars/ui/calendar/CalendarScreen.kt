@@ -124,7 +124,6 @@ import org.mochios.calendars.ui.dialogs.ColourCalendarDialog
 import org.mochios.calendars.ui.dialogs.DeleteCalendarDialog
 import org.mochios.calendars.ui.dialogs.ImportDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
-import org.mochios.calendars.ui.dialogs.PreferencesDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
 import org.mochios.calendars.ui.dialogs.ReplaceLinkDialog
 import org.mochios.calendars.ui.dialogs.RevokeLinkDialog
@@ -153,6 +152,7 @@ fun CalendarScreen(
     onCreateCalendar: () -> Unit,
     onSubscribe: () -> Unit,
     onConnectDevice: () -> Unit,
+    onPreferences: () -> Unit,
     onNewEvent: (Long, Boolean?, Long?) -> Unit,
     onEditEvent: (String, Long) -> Unit,
     onCopyEvent: (String, Long, Scope) -> Unit,
@@ -197,7 +197,6 @@ fun CalendarScreen(
     var deleting by remember { mutableStateOf<Calendar?>(null) }
     var linking by remember { mutableStateOf<Calendar?>(null) }
     var revoking by remember { mutableStateOf<Calendar?>(null) }
-    var preferences by remember { mutableStateOf(false) }
     var about by remember { mutableStateOf(false) }
     // The calendar a file is being picked for, kept by id so it outlasts the
     // activity being recreated behind the picker.
@@ -270,6 +269,9 @@ fun CalendarScreen(
     LaunchedEffect(saved) {
         val message = CalendarsApp.said(saved) ?: return@LaunchedEffect
         onSavedShown()
+        if (saved == CalendarsApp.PREFERENCES) {
+            viewModel.reload()
+        }
         scope.launch { snackbar.showSnackbar(resources.getString(message)) }
     }
 
@@ -333,7 +335,7 @@ fun CalendarScreen(
         },
         onCreate = onCreateCalendar,
         onSubscribe = onSubscribe,
-        onPreferences = { preferences = true },
+        onPreferences = onPreferences,
         onConnectDevice = onConnectDevice,
         onLogout = onLogout,
         onAbout = { about = true },
@@ -602,15 +604,6 @@ fun CalendarScreen(
     val tally by viewModel.importing.collectAsState()
     tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport, onRetry = viewModel::retryImport) }
 
-    if (preferences) {
-        PreferencesDialog(
-            preferences = uiState.preferences,
-            calendars = uiState.calendars,
-            saving = working,
-            onDismiss = { preferences = false },
-            onConfirm = { viewModel.preferences(it) { preferences = false } },
-        )
-    }
 }
 
 /**

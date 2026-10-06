@@ -20,8 +20,8 @@ import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.model.Account
-import org.mochios.android.ui.components.AiChoiceRow
 import org.mochios.android.ui.components.AiPromptField
+import org.mochios.android.ui.components.ChoiceRow
 import org.mochios.android.ui.components.aiAccountOptions
 import org.mochios.forums.R
 import org.mochios.forums.model.AiPrompts
@@ -82,7 +82,7 @@ private fun AiSettingsContent(
     val promptCustom = stringResource(R.string.forums_ai_prompt_custom)
 
     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        AiChoiceRow(
+        ChoiceRow(
             label = stringResource(R.string.forums_ai_actions_label),
             options = modes,
             selected = mode,
@@ -92,7 +92,7 @@ private fun AiSettingsContent(
 
         // The account and prompt rows only appear once AI is switched on (not off).
         if (mode.isNotEmpty()) {
-            AiChoiceRow(
+            ChoiceRow(
                 label = stringResource(R.string.forums_ai_account_label),
                 options = aiAccountOptions(defaultAccount, aiAccounts),
                 selected = account,

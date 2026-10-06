@@ -19,8 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import org.mochios.android.ui.components.AiChoiceRow
 import org.mochios.android.ui.components.AiPromptField
+import org.mochios.android.ui.components.ChoiceRow
 import org.mochios.android.ui.components.aiAccountOptions
 import org.mochios.feeds.R
 
@@ -60,7 +60,7 @@ fun AiTab(viewModel: FeedSettingsViewModel) {
             .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 48.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        AiChoiceRow(
+        ChoiceRow(
             label = stringResource(R.string.feeds_ai_processing_mode),
             options = modes,
             selected = aiMode,
@@ -70,7 +70,7 @@ fun AiTab(viewModel: FeedSettingsViewModel) {
 
         // Account and prompt rows only appear once AI is switched on (not off).
         if (aiMode.isNotEmpty()) {
-            AiChoiceRow(
+            ChoiceRow(
                 label = stringResource(R.string.feeds_ai_account),
                 options = aiAccountOptions(defaultAccount, aiAccounts),
                 selected = aiAccount,
