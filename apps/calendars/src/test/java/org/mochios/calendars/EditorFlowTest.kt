@@ -265,6 +265,34 @@ class EditorFlowTest {
     }
 
     @Test
+    fun `a run of days picked on the grid opens all day across them, with its times beneath`() {
+        val london = java.time.ZoneId.of("Europe/London")
+        val tuesday = java.time.LocalDate.of(2026, 10, 6)
+        val start = tuesday.atTime(8, 0).atZone(london).toEpochSecond()
+        val finish = tuesday.plusDays(2).atTime(9, 0).atZone(london).toEpochSecond()
+        val model = EventEditViewModel(
+            context,
+            repository,
+            London,
+            SavedStateHandle(mapOf("start" to "$start", "finish" to "$finish", "allday" to "1")),
+        )
+        val deadline = System.currentTimeMillis() + 5_000
+        while (model.uiState.value.isLoading) {
+            org.robolectric.Shadows.shadowOf(android.os.Looper.getMainLooper()).idle()
+            check(System.currentTimeMillis() < deadline) { "timed out" }
+            Thread.sleep(10)
+        }
+        val opened = model.uiState.value
+        assertEquals(true, opened.allday)
+        // An all-day form holds its first day's UTC midnight, and the day after its last.
+        assertEquals(tuesday.atStartOfDay(java.time.ZoneOffset.UTC).toEpochSecond(), opened.start)
+        assertEquals(tuesday.plusDays(3).atStartOfDay(java.time.ZoneOffset.UTC).toEpochSecond(), opened.finish)
+        model.allday(false)
+        assertEquals(start, model.uiState.value.start)
+        assertEquals(finish, model.uiState.value.finish)
+    }
+
+    @Test
     fun `copy and delete wait while a save runs`() {
         respond("-/events/get", event("a", "Stand-up"))
         respond("-/events/update", event("b", "Stand-up").setBodyDelay(3, TimeUnit.SECONDS))

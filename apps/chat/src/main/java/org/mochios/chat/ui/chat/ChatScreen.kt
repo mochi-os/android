@@ -134,6 +134,7 @@ import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
+import org.mochios.chat.model.heading
 import org.mochios.chat.model.personAvatarUrl
 import org.mochios.chat.ui.chatlist.ChatListViewModel
 import org.mochios.chat.ui.chatlist.unreadBadge
@@ -366,12 +367,7 @@ private fun ChatContent(
             val peerAvatarUrl = peer?.let { personAvatarUrl(it.id) }
             val youLabel = stringResource(R.string.chat_members_you)
             val membersSubtitle = remember(members, uiState.identity, youLabel) {
-                if (!isGroup) "" else {
-                    val ordered = mutableListOf<String>()
-                    members.firstOrNull { it.id == uiState.identity }?.let { ordered += youLabel }
-                    members.filter { it.id != uiState.identity }.forEach { ordered += it.name }
-                    ordered.joinToString(", ")
-                }
+                members.heading(uiState.identity, youLabel)
             }
             if (uiState.searchOpen) {
                 val matchPosition = if (searchMatchIds.isEmpty()) 0 else searchMatchIndex + 1

@@ -21,6 +21,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
@@ -220,14 +221,14 @@ fun NavGraphBuilder.staffNavGraph(
             )
         }
     }
-    composable(StaffApp.CATEGORY_NEW) {
-        CategoryFormRoute(navController)
+    composable(StaffApp.CATEGORY_NEW) { entry ->
+        CategoryFormRoute(navController, entry)
     }
     composable(
         route = StaffApp.CATEGORY_EDIT,
         arguments = listOf(navArgument("id") { type = NavType.StringType }),
-    ) {
-        CategoryFormRoute(navController)
+    ) { entry ->
+        CategoryFormRoute(navController, entry)
     }
     // Admin gate at route level (web's `beforeLoad` redirect): non-admins are
     // sent to the dashboard. Stays inside StaffLayout because `LocalStaffMe` is
@@ -302,12 +303,15 @@ fun NavGraphBuilder.staffNavGraph(
 }
 
 @Composable
-private fun CategoryFormRoute(navController: NavController) {
-    val listEntry = remember(navController) {
+private fun CategoryFormRoute(navController: NavController, entry: NavBackStackEntry) {
+    // The list screen's entry, looked up again whenever this route's entry
+    // changes, and its categories collected, so a list that arrives after
+    // the form opens still reaches it.
+    val listEntry = remember(entry) {
         runCatching { navController.getBackStackEntry(StaffApp.CATEGORIES) }.getOrNull()
     }
     val knownCategories = listEntry
-        ?.let { entry -> hiltViewModel<CategoriesViewModel>(entry).state.value.categories }
+        ?.let { list -> hiltViewModel<CategoriesViewModel>(list).state.collectAsState().value.categories }
         .orEmpty()
     CategoryFormScreen(
         knownCategories = knownCategories,

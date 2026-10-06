@@ -51,12 +51,14 @@ object Zones {
         override fun canonical(zone: String): String? =
             runCatching { android.icu.util.TimeZone.getCanonicalID(zone) }.getOrNull()?.takeIf { it.isNotBlank() }
 
+        // The canonical zones that belong to a place, as ICU's
+        // CANONICAL_LOCATION lists them, built from calls Android has had
+        // since API 24: that list type itself needs API 28.
         override fun places(): Collection<String> =
-            android.icu.util.TimeZone.getAvailableIDs(
-                android.icu.util.TimeZone.SystemTimeZoneType.CANONICAL_LOCATION,
-                null,
-                null,
-            )
+            android.icu.util.TimeZone.getAvailableIDs().filter { zone ->
+                android.icu.util.TimeZone.getCanonicalID(zone) == zone &&
+                    android.icu.util.TimeZone.getRegion(zone) != "001"
+            }
     }
 
     @Volatile

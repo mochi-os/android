@@ -217,22 +217,22 @@
     <string name="calendars_repeat_last">आख़िरी दिन</string>
     <string name="calendars_rule_day">हर दिन</string>
     <plurals name="calendars_rule_days">
-        <item quantity="one">हर दिन</item>
+        <item quantity="one">हर %1$s दिन में</item>
         <item quantity="other">हर %1$s दिन में</item>
     </plurals>
     <string name="calendars_rule_week">हर सप्ताह</string>
     <plurals name="calendars_rule_weeks">
-        <item quantity="one">हर सप्ताह</item>
+        <item quantity="one">हर %1$s सप्ताह में</item>
         <item quantity="other">हर %1$s सप्ताह में</item>
     </plurals>
     <string name="calendars_rule_month">हर महीने</string>
     <plurals name="calendars_rule_months">
-        <item quantity="one">हर महीने</item>
+        <item quantity="one">हर %1$s महीने में</item>
         <item quantity="other">हर %1$s महीने में</item>
     </plurals>
     <string name="calendars_rule_year">हर वर्ष</string>
     <plurals name="calendars_rule_years">
-        <item quantity="one">हर वर्ष</item>
+        <item quantity="one">हर %1$s वर्ष में</item>
         <item quantity="other">हर %1$s वर्ष में</item>
     </plurals>
     <string name="calendars_rule_on">%1$s को</string>
@@ -251,7 +251,7 @@
     <string name="calendars_rule_in">%1$s में</string>
     <string name="calendars_rule_once">एक बार</string>
     <plurals name="calendars_rule_times">
-        <item quantity="one">एक बार</item>
+        <item quantity="one">%1$s बार</item>
         <item quantity="other">%1$s बार</item>
     </plurals>
     <string name="calendars_rule_until">%1$s तक</string>

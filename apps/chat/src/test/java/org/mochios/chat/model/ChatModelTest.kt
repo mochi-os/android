@@ -48,4 +48,26 @@ class ChatModelTest {
         // lives on another server.
         assertFalse(url.startsWith("/people/"))
     }
+
+    /** The settings list and the chat's heading order members as the web does. */
+    @Test
+    fun `members put the viewer first, then the rest by name, numbers by value, a nameless one by its id`() {
+        val members = listOf(
+            ChatMember("c", "Carol"),
+            ChatMember("me", "Zed"),
+            ChatMember("zzz", ""),
+            ChatMember("s10", "Sprint 10"),
+            ChatMember("b", "bob"),
+            ChatMember("s2", "Sprint 2"),
+        )
+        assertEquals(listOf("me", "b", "c", "s2", "s10", "zzz"), members.ordered("me").map { it.id })
+    }
+
+    /** The heading under a group chat's name reads the members in that order, the viewer as "You". */
+    @Test
+    fun `a group chat's heading names you first and the rest by name, and a chat of two has none`() {
+        val members = listOf(ChatMember("c", "Carol"), ChatMember("me", "Zed"), ChatMember("b", "bob"))
+        assertEquals("You, bob, Carol", members.heading("me", "You"))
+        assertEquals("", members.take(2).heading("me", "You"))
+    }
 }

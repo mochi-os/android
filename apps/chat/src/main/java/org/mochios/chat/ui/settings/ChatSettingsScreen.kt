@@ -72,6 +72,7 @@ import org.mochios.android.ui.components.Truncate
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMember
 import org.mochios.chat.model.ChatStatus
+import org.mochios.chat.model.ordered
 import org.mochios.chat.model.personAvatarUrl
 import org.mochios.android.R as MochiR
 
@@ -282,7 +283,7 @@ fun ChatSettingsScreen(
                                 )
                             } else {
                                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                    uiState.chat.members.forEach { member ->
+                                    uiState.chat.members.ordered(uiState.identity).forEach { member ->
                                         MemberRow(
                                             member = member,
                                             isMe = member.id == uiState.identity,

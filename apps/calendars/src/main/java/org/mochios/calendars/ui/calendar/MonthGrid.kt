@@ -10,6 +10,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.awaitLongPressOrCancellation
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -115,6 +116,13 @@ private val SPACE = 10.dp
  */
 private data class Hold(val instance: Instance, val day: LocalDate, val grab: Offset, val width: Float)
 
+/** A run of days being picked for a new all-day event, from the [anchor] pressed to the [day] last under the finger. */
+private data class Pick(val anchor: LocalDate, val day: LocalDate)
+
+/** The first and last days of a run picked from [anchor] to [day], whichever way it went. */
+internal fun ends(anchor: LocalDate, day: LocalDate): Pair<LocalDate, LocalDate> =
+    if (day.isBefore(anchor)) day to anchor else anchor to day
+
 /**
  * The month and multiweek views: [weeks] rows of seven days, each led by its
  * ISO week number and each cell holding every one of its occurrences from
@@ -134,8 +142,13 @@ private data class Hold(val instance: Instance, val day: LocalDate, val grab: Of
  * a pager can hold the page under it, and letting go on another day asks
  * [onMove] to move the
  * occurrence so that its first day moves by as many days, and that day's
- * cell scrolls to show it once it lands there. The occurrence whose summary
- * is open, [selected], is drawn in the primary colour's tint.
+ * cell scrolls to show it once it lands there. A long press anywhere else in
+ * a cell picks a run of days instead, tinted as the finger takes it on to
+ * other days; letting go asks [onCreateRange] for an all-day event over
+ * them, or [onCreate] when the run is the one day. A chip that cannot be
+ * lifted keeps its long press too, as the web's chips are buttons a pick
+ * never starts on. The occurrence whose summary is open, [selected], is
+ * drawn in the primary colour's tint.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -147,6 +160,7 @@ fun MonthGrid(
     onOpen: (Instance) -> Unit,
     onCreate: (LocalDate) -> Unit,
     onMove: (Instance, LocalDate) -> Unit,
+    onCreateRange: (LocalDate, LocalDate) -> Unit = { _, _ -> },
     onStep: (Int) -> Unit = {},
     onLifted: (Boolean) -> Unit = {},
     selected: Instance? = null,
@@ -171,6 +185,11 @@ fun MonthGrid(
     // The day a chip was last dropped on and its event, which that day's
     // cell scrolls into view when the moved occurrence arrives there.
     var landed by remember(weeks) { mutableStateOf<Pair<LocalDate, String>?>(null) }
+    // The run of days being picked, and whether a chip took the current
+    // press: a chip's long press and its cell's end together, the chip's
+    // heard first, as the press reaches the chip before the cell beneath.
+    var pick by remember { mutableStateOf<Pick?>(null) }
+    var claimed by remember { mutableStateOf(false) }
     val density = LocalDensity.current
     val numbers = with(density) { NUMBERS.toPx() }
 
@@ -187,7 +206,25 @@ fun MonthGrid(
         return weeks[row].plusDays(column.toLong())
     }
 
+    /** Takes a run being picked on to the day under the finger, keeping the last one while the finger is off the weeks. */
+    fun follow() {
+        val picking = pick ?: return
+        val day = under() ?: return
+        if (day != picking.day) pick = picking.copy(day = day)
+    }
+
+    fun cancel() {
+        lift = null
+        pick = null
+    }
+
     fun drop() {
+        pick?.let { picking ->
+            pick = null
+            val (first, last) = ends(picking.anchor, under() ?: picking.day)
+            if (first == last) onCreate(first) else onCreateRange(first, last)
+            return
+        }
         val lifted = lift
         lift = null
         val dropped = under()
@@ -203,12 +240,16 @@ fun MonthGrid(
     val hands = remember { Grip() }
     SideEffect {
         hands.drop = ::drop
+        hands.cancel = ::cancel
+        hands.follow = ::follow
         hands.step = onStep
     }
     val target = if (lift != null) under() else null
+    val run = pick?.let { ends(it.anchor, it.day) }
     val hearing by rememberUpdatedState(onLifted)
-    LaunchedEffect(lift != null) {
-        hearing(lift != null)
+    val holding = lift != null || pick != null
+    LaunchedEffect(holding) {
+        hearing(holding)
     }
 
     // A chip resting at the top or bottom of the weeks turns the page, once
@@ -239,16 +280,23 @@ fun MonthGrid(
             .pointerInput(Unit) {
                 awaitEachGesture {
                     val down = awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Initial)
+                    claimed = false
                     while (true) {
                         val event = awaitPointerEvent(PointerEventPass.Initial)
                         val change = event.changes.firstOrNull { it.id == down.id } ?: break
                         val up = change.changedToUpIgnoreConsumed()
-                        if (lift != null) {
-                            // Once a chip is lifted the finger is the drag's,
-                            // so no cell's scroll or tap beneath it acts.
+                        // The system taking the finger away ends the gesture
+                        // with an up that arrives already consumed, which
+                        // lands and makes nothing.
+                        val cancelled = up && change.isConsumed
+                        if (lift != null || pick != null) {
+                            // Once a chip is lifted or days are being picked
+                            // the finger is the gesture's, so no cell's scroll
+                            // or tap beneath it acts.
                             finger = origin + change.position
                             change.consume()
-                            if (up) hands.drop()
+                            hands.follow()
+                            if (cancelled) hands.cancel() else if (up) hands.drop()
                         }
                         if (up) break
                     }
@@ -305,16 +353,25 @@ fun MonthGrid(
                                     viewModel = viewModel,
                                     lifted = lift?.instance,
                                     selected = selected,
-                                    targeted = target == day && lift?.day != day,
+                                    targeted = target == day && lift?.day != day ||
+                                        run != null && !day.isBefore(run.first) && !day.isAfter(run.second),
                                     modifier = Modifier.weight(1f),
                                     onDay = { viewModel.open(day) },
                                     onCreate = { onCreate(day) },
                                     onOpen = onOpen,
                                     landing = landed?.takeIf { it.first == day }?.second,
                                     onLift = { instance, at, grab, width ->
+                                        claimed = true
                                         landed = null
                                         finger = at
                                         lift = Hold(instance, day, grab, width)
+                                    },
+                                    onHold = { claimed = true },
+                                    onPick = { at ->
+                                        if (!claimed) {
+                                            finger = at
+                                            pick = Pick(day, day)
+                                        }
                                     },
                                 )
                             }
@@ -354,6 +411,8 @@ fun MonthGrid(
 /** What the month grid's gesture calls on, from the latest composition. */
 private class Grip {
     var drop: () -> Unit = {}
+    var cancel: () -> Unit = {}
+    var follow: () -> Unit = {}
     var step: (Int) -> Unit = {}
 }
 
@@ -393,6 +452,8 @@ private fun Cell(
     onOpen: (Instance) -> Unit,
     landing: String?,
     onLift: (Instance, Offset, Offset, Float) -> Unit,
+    onHold: () -> Unit,
+    onPick: (Offset) -> Unit,
 ) {
     val current = day == today
     val format = LocalFormat.current
@@ -409,7 +470,8 @@ private fun Cell(
                 },
             )
             .testTag(if (outside) "outside" else "inside")
-            .clickable(onClick = onCreate),
+            .clickable(onClick = onCreate)
+            .pick(day, onPick),
     ) {
         // Today's number sits inside a band in the primary colour across the
         // top of its cell; every other day's number sits on the cell itself.
@@ -466,7 +528,7 @@ private fun Cell(
                     .alpha(opacity(carried = same(instance, lifted), over = viewModel.past(instance), cancelled = instance.cancelled)),
                 filled = true,
                 chosen = same(instance, selected),
-                lift = Modifier.lift(instance, onLift),
+                lift = Modifier.lift(instance, onLift, onHold),
             ) { onOpen(instance) }
         }
 
@@ -569,14 +631,25 @@ fun band(count: Int, line: Float, gap: Float, room: Float, entry: Float, below: 
  * the root's coordinates, where in the chip the finger is and the chip's
  * width. The grid follows the finger from there, so the chip's own drag
  * ends, unheeded, at the first move. A read-only occurrence, and a
- * birthday, cannot be lifted.
+ * birthday, cannot be lifted; its long press is [onHold]'s, so the cell
+ * beneath picks no days from it, and takes none of the press's events, so
+ * letting go still opens it.
  */
 @Composable
 private fun Modifier.lift(
     instance: Instance,
     onLift: (Instance, Offset, Offset, Float) -> Unit,
+    onHold: () -> Unit,
 ): Modifier {
-    if (!instance.editable) return this
+    if (!instance.editable) {
+        val hold by rememberUpdatedState(onHold)
+        return pointerInput(instance.event, instance.start) {
+            awaitEachGesture {
+                val down = awaitFirstDown(requireUnconsumed = false)
+                if (awaitLongPressOrCancellation(down.id) != null) hold()
+            }
+        }
+    }
     val haptic = LocalHapticFeedback.current
     var coordinates by remember { mutableStateOf<LayoutCoordinates?>(null) }
     val lift by rememberUpdatedState(onLift)
@@ -587,6 +660,30 @@ private fun Modifier.lift(
                 onDragStart = { position ->
                     haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                     lift(instance, coordinates?.localToRoot(position) ?: position, position, size.width.toFloat())
+                },
+                onDrag = { _, _ -> },
+            )
+        }
+}
+
+/**
+ * A long press on a cell starts picking a run of days from [day]: [onPick]
+ * has the finger in the root's coordinates, and the grid follows it from
+ * there, so this drag ends, unheeded, at the first move, as a lifted chip's
+ * does.
+ */
+@Composable
+private fun Modifier.pick(day: LocalDate, onPick: (Offset) -> Unit): Modifier {
+    val haptic = LocalHapticFeedback.current
+    var coordinates by remember { mutableStateOf<LayoutCoordinates?>(null) }
+    val picking by rememberUpdatedState(onPick)
+    return this
+        .onGloballyPositioned { coordinates = it }
+        .pointerInput(day) {
+            detectDragGesturesAfterLongPress(
+                onDragStart = { position ->
+                    haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                    picking(coordinates?.localToRoot(position) ?: position)
                 },
                 onDrag = { _, _ -> },
             )

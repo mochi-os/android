@@ -93,6 +93,9 @@ class TimeGridTest {
     private var now = at(monday, 10, 0)
 
     private val created = mutableListOf<Pair<Long, Long?>>()
+    private val ranged = mutableListOf<Pair<LocalDate, LocalDate>>()
+    private val opened = mutableListOf<Instance>()
+    private lateinit var hours: androidx.compose.foundation.ScrollState
     private val moved = mutableListOf<Pair<Instance, Moved>>()
     private val steps = mutableListOf<Int>()
 
@@ -180,6 +183,7 @@ class TimeGridTest {
         // As the screen lays them out: the hour gutter, then the grid.
         rule.setContent {
             val scroll = rememberHourScroll(state.preferences.hours.start)
+            hours = scroll
             var top by remember { mutableStateOf(0.dp) }
             Row(modifier = Modifier.fillMaxSize()) {
                 HourGutter(top, scroll, zone = if (zoning) Zones.offset(london.id) else null)
@@ -187,8 +191,9 @@ class TimeGridTest {
                     days = shown.value,
                     state = state,
                     viewModel = model,
-                    onOpen = {},
+                    onOpen = { opened += it },
                     onCreate = { start, finish -> created += start to finish },
+                    onCreateRange = { first, last -> ranged += first to last },
                     onMove = { instance, move -> moved += instance to move },
                     scroll = scroll,
                     stacked = shown.value.size > 1,
@@ -349,6 +354,86 @@ class TimeGridTest {
         press(grid(tuesday, 14f))
         release()
         assertEquals(listOf(at(tuesday, 14, 0) to null), created)
+    }
+
+    // ---- picking days in the band ----
+
+    @Test
+    fun `a tap on an empty stretch of the band makes an all-day event on that day`() {
+        show(emptyList())
+        val wednesday = monday.plusDays(2)
+        rule.onRoot().performTouchInput { click(band(wednesday)) }
+        rule.mainClock.advanceTimeBy(500)
+        assertEquals(listOf(wednesday to wednesday), ranged)
+        assertTrue(created.isEmpty())
+    }
+
+    @Test
+    fun `a tap on a bar in the band opens it and makes no event`() {
+        val wednesday = monday.plusDays(2)
+        show(listOf(whole("e2", "Party", wednesday)))
+        rule.onRoot().performTouchInput { click(band(wednesday)) }
+        rule.mainClock.advanceTimeBy(500)
+        assertEquals(listOf("e2"), opened.map { it.event })
+        assertTrue(ranged.isEmpty())
+    }
+
+    @Test
+    fun `a long press on the band and a drag along it picks a run of days`() {
+        show(emptyList())
+        val tuesday = monday.plusDays(1)
+        press(band(tuesday))
+        move(band(tuesday.plusDays(1)))
+        move(band(tuesday.plusDays(2)))
+        rule.onNodeWithTag("picked").assertExists()
+        release()
+        assertEquals(listOf(tuesday to tuesday.plusDays(2)), ranged)
+        assertTrue(created.isEmpty())
+    }
+
+    @Test
+    fun `a run picked backwards along the band runs from its earlier day`() {
+        show(emptyList())
+        val friday = monday.plusDays(4)
+        press(band(friday))
+        move(band(friday.minusDays(1)))
+        move(band(friday.minusDays(3)))
+        release()
+        assertEquals(listOf(monday.plusDays(1) to friday), ranged)
+    }
+
+    @Test
+    fun `a band pick the system takes the finger from makes nothing`() {
+        show(emptyList())
+        press(band(monday.plusDays(1)))
+        move(band(monday.plusDays(3)))
+        rule.onRoot().performTouchInput { cancel() }
+        rule.mainClock.advanceTimeBy(100)
+        assertTrue(ranged.isEmpty())
+        assertTrue(rule.onAllNodesWithTag("picked").fetchSemanticsNodes().isEmpty())
+    }
+
+    @Test
+    fun `a carried block the system takes the finger from stays where it was`() {
+        val tuesday = monday.plusDays(1)
+        show(listOf(timed("e1", "Standup", tuesday, 9)))
+        press(grid(tuesday, 9.5f))
+        move(grid(tuesday.plusDays(1), 11.5f))
+        rule.onRoot().performTouchInput { cancel() }
+        rule.mainClock.advanceTimeBy(100)
+        assertTrue(moved.isEmpty())
+    }
+
+    @Test
+    fun `picking days along the band leaves the hours where they are`() {
+        show(emptyList())
+        val before = hours.value
+        assertTrue(before > 0)
+        press(band(monday.plusDays(1)))
+        move(band(monday.plusDays(3)))
+        rule.mainClock.advanceTimeBy(1_500)
+        assertEquals(before, hours.value)
+        release()
     }
 
     // ---- the band and the grid ----

@@ -620,3 +620,18 @@ fun defaultStart(day: LocalDate, today: LocalDate, now: LocalTime, hours: Hours)
     if (next > 23) return today.plusDays(1).atTime(working, 0)
     return today.atTime(next, 0)
 }
+
+/**
+ * The span a run of days picked on the grid, [first] to [last], opens the
+ * editor with, epoch seconds in [zone]: from the start of the working
+ * [hours] on the first day to [duration] minutes later on the last, held to
+ * the last minute of that day. The editor shows it all day across the days;
+ * the times are what turning all day off gives. The web client picks a run
+ * of days the same way.
+ */
+fun picked(first: LocalDate, last: LocalDate, hours: Hours, duration: Int, zone: ZoneId): Pair<Long, Long> {
+    val from = hours.start.coerceIn(0, 23) * 60
+    val to = minOf(from + duration, 24 * 60 - 1)
+    return first.atTime(from / 60, from % 60).atZone(zone).toEpochSecond() to
+        last.atTime(to / 60, to % 60).atZone(zone).toEpochSecond()
+}

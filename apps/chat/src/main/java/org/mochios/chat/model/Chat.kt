@@ -7,6 +7,7 @@ package org.mochios.chat.model
 
 import com.google.gson.annotations.SerializedName
 import org.mochios.android.model.Attachment
+import org.mochios.android.util.NaturalCompare
 
 // Chat status values mirrored from the server (chats.status). 'active' = current
 // member; 'left'/'removed' = departed but kept read-only; 'deleted' = hidden
@@ -41,6 +42,22 @@ data class ChatMember(
     val id: String = "",
     val name: String = ""
 )
+
+/**
+ * The members in the order the web lists them: [identity], the viewer, first,
+ * then everyone else by name, a member with none by its id.
+ */
+fun List<ChatMember>.ordered(identity: String): List<ChatMember> {
+    val (you, others) = partition { it.id == identity }
+    return you + others.sortedWith(compareBy(NaturalCompare) { it.name.ifBlank { it.id } })
+}
+
+/**
+ * The line under a group chat's name: its members in [ordered] order, the
+ * viewer as [you]. Blank for a chat of two, whose heading is the other person.
+ */
+fun List<ChatMember>.heading(identity: String, you: String): String =
+    if (size <= 2) "" else ordered(identity).joinToString(", ") { if (it.id == identity) you else it.name }
 
 data class ChatDetail(
     val id: String = "",
