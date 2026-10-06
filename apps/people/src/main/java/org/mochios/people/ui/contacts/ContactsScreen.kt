@@ -23,7 +23,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Chat
 import androidx.compose.material.icons.automirrored.filled.Send
-import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
@@ -34,9 +33,7 @@ import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.PersonRemove
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.automirrored.filled.Sort
-import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Contacts
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
@@ -69,9 +66,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
-import org.mochios.android.ui.components.AboutDialog
-import org.mochios.android.ui.components.DrawerActionRow
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
@@ -81,20 +75,16 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.Contact
+import org.mochios.people.ui.components.PeopleDrawer
+import org.mochios.people.ui.components.PeopleDrawerNavigation
 import org.mochios.people.ui.components.PeopleSidebarSection
-import org.mochios.people.ui.components.peopleAllContactsItem
 import org.mochios.people.ui.components.peopleBookItemId
-import org.mochios.people.ui.components.peopleDrawerBook
-import org.mochios.people.ui.components.peopleDrawerItems
-import org.mochios.people.ui.components.peopleDrawerSection
 import org.mochios.people.ui.router.PeopleSection
 import org.mochios.people.ui.router.RememberPeopleSection
-import org.mochios.people.ui.sync.ContactsSyncRows
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.people.model.Book
@@ -109,12 +99,8 @@ import org.mochios.people.model.Book
 @Composable
 fun ContactsScreen(
     onOpenContact: (id: String) -> Unit,
-    onOpenBook: (id: String) -> Unit,
-    onOpenAllContacts: () -> Unit,
-    onCreateBook: () -> Unit,
-    onSwitchSection: (PeopleSidebarSection) -> Unit,
+    drawer: PeopleDrawerNavigation,
     onOpenNotifications: () -> Unit,
-    onLogout: () -> Unit,
     onMessage: (String) -> Unit = {},
     onAddContact: () -> Unit = {},
     onConnectDevice: () -> Unit = {},
@@ -123,7 +109,6 @@ fun ContactsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
-    var showAbout by remember { mutableStateOf(false) }
     var showMenu by remember { mutableStateOf(false) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
@@ -152,63 +137,19 @@ fun ContactsScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is ContactsEvent.MessagePerson -> onMessage(event.person)
-                ContactsEvent.BookDeleted -> onOpenAllContacts()
+                ContactsEvent.BookDeleted -> drawer.onOpenAllContacts()
             }
         }
     }
 
-    MochiListDrawer(
+    PeopleDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
-        allItem = peopleAllContactsItem(),
-        items = peopleDrawerItems(uiState.books),
         selectedId = if (viewModel.book.isBlank()) {
             PeopleSidebarSection.CONTACTS.name
         } else {
             peopleBookItemId(viewModel.book)
         },
-        onItemClick = { item ->
-            drawerScope.launch { drawerState.close() }
-            val bookId = peopleDrawerBook(item.id)
-            when {
-                bookId != null -> if (bookId != viewModel.book) onOpenBook(bookId)
-                else -> {
-                    val section = peopleDrawerSection(item.id)
-                    when {
-                        section == null -> Unit
-                        section != PeopleSidebarSection.CONTACTS -> onSwitchSection(section)
-                        viewModel.book.isNotBlank() -> onOpenAllContacts()
-                    }
-                }
-            }
-        },
-        actions = {
-            DrawerActionRow(
-                title = stringResource(R.string.people_books_create),
-                icon = Icons.Outlined.Add,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onCreateBook()
-                },
-            )
-            ContactsSyncRows()
-            DrawerActionRow(
-                title = stringResource(MochiR.string.common_logout),
-                icon = Icons.AutoMirrored.Outlined.Logout,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onLogout()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
-        },
+        navigation = drawer,
     ) {
         Scaffold(
             snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -447,10 +388,6 @@ fun ContactsScreen(
             destructive = true,
             dismissText = stringResource(R.string.people_common_cancel),
         )
-    }
-
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

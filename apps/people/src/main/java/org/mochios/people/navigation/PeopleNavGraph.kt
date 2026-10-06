@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import android.net.Uri
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.people.ui.components.PeopleDrawerNavigation
 import org.mochios.people.ui.components.PeopleSidebarSection
 import org.mochios.people.ui.contacts.AddContactScreen
 import org.mochios.people.ui.contacts.ContactEditScreen
@@ -100,6 +101,14 @@ fun NavGraphBuilder.peopleNavGraph(
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
+    val drawer = PeopleDrawerNavigation(
+        onOpenBook = { id -> navController.navigate(PeopleApp.book(id)) },
+        onOpenAllContacts = { navController.openContacts() },
+        onSwitchSection = { section -> navController.openPeopleSection(section) },
+        onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
+        onLogout = onLogout,
+    )
+
     composable(PeopleApp.ROUTER) {
         PeopleRouter(onResolve = { section ->
             val target = when (section) {
@@ -130,12 +139,8 @@ fun NavGraphBuilder.peopleNavGraph(
         val action = backStackEntry.arguments?.getString("action").orEmpty()
         ContactsScreen(
             onOpenContact = { id -> navController.navigate(PeopleApp.contactEdit(id)) },
-            onOpenBook = { id -> navController.navigate(PeopleApp.book(id)) },
-            onOpenAllContacts = { navController.openContacts() },
-            onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
-            onSwitchSection = { navController.openPeopleSection(it) },
+            drawer = drawer,
             onOpenNotifications = onOpenNotifications,
-            onLogout = onLogout,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
             onAddContact = { navController.navigate(PeopleApp.contactsAdd()) },
             onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
@@ -150,18 +155,16 @@ fun NavGraphBuilder.peopleNavGraph(
         val book = backStackEntry.arguments?.getString("id").orEmpty()
         ContactsScreen(
             onOpenContact = { id -> navController.navigate(PeopleApp.contactEdit(id)) },
-            onOpenBook = { id ->
-                // Swapping books from inside one replaces it rather than
-                // stacking on it, so Back still lands on the contacts list.
-                navController.navigate(PeopleApp.book(id)) {
-                    popUpTo(PeopleApp.BOOK) { inclusive = true }
-                }
-            },
-            onOpenAllContacts = { navController.openContacts() },
-            onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
-            onSwitchSection = { navController.openPeopleSection(it) },
+            drawer = drawer.copy(
+                onOpenBook = { id ->
+                    // Swapping books from inside one replaces it rather than
+                    // stacking on it, so Back still lands on the contacts list.
+                    navController.navigate(PeopleApp.book(id)) {
+                        popUpTo(PeopleApp.BOOK) { inclusive = true }
+                    }
+                },
+            ),
             onOpenNotifications = onOpenNotifications,
-            onLogout = onLogout,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
             onAddContact = { navController.navigate(PeopleApp.contactsAdd(book = book)) },
             onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
@@ -235,14 +238,13 @@ fun NavGraphBuilder.peopleNavGraph(
 
     composable(PeopleApp.INVITATIONS) {
         InvitationsScreen(
-            onSwitchSection = { navController.openPeopleSection(it) },
+            drawer = drawer,
         )
     }
 
     composable(PeopleApp.PROFILE) {
         ProfileScreen(
-            onSwitchSection = { navController.openPeopleSection(it) },
-            onLogout = onLogout,
+            drawer = drawer,
             onOpenNotifications = onOpenNotifications,
         )
     }
@@ -251,7 +253,7 @@ fun NavGraphBuilder.peopleNavGraph(
         GroupsScreen(
             onOpenGroup = { id -> navController.navigate(PeopleApp.groupDetail(id)) },
             onCreateGroup = { navController.navigate(PeopleApp.GROUP_CREATE) },
-            onSwitchSection = { navController.openPeopleSection(it) },
+            drawer = drawer,
             onOpenNotifications = onOpenNotifications,
         )
     }

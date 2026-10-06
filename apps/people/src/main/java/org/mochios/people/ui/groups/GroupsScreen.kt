@@ -43,19 +43,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.people.R
 import org.mochios.people.model.Group
+import org.mochios.people.ui.components.PeopleDrawer
+import org.mochios.people.ui.components.PeopleDrawerNavigation
 import org.mochios.people.ui.components.PeopleSidebarSection
-import org.mochios.people.ui.components.peopleAllContactsItem
-import org.mochios.people.ui.components.peopleDrawerItems
-import org.mochios.people.ui.components.peopleDrawerSection
 import org.mochios.people.ui.router.PeopleSection
 import org.mochios.people.ui.router.RememberPeopleSection
 
@@ -64,7 +61,7 @@ import org.mochios.people.ui.router.RememberPeopleSection
 fun GroupsScreen(
     onOpenGroup: (id: String) -> Unit,
     onCreateGroup: () -> Unit,
-    onSwitchSection: (PeopleSidebarSection) -> Unit,
+    drawer: PeopleDrawerNavigation,
     onOpenNotifications: () -> Unit,
     viewModel: GroupsViewModel = hiltViewModel(),
 ) {
@@ -82,17 +79,10 @@ fun GroupsScreen(
 
     RememberPeopleSection(PeopleSection.GROUPS)
 
-    MochiListDrawer(
+    PeopleDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
-        items = peopleDrawerItems(),
-        allItem = peopleAllContactsItem(),
         selectedId = PeopleSidebarSection.GROUPS.name,
-        onItemClick = { item ->
-            drawerScope.launch { drawerState.close() }
-            val section = peopleDrawerSection(item.id)
-            if (section != null && section != PeopleSidebarSection.GROUPS) onSwitchSection(section)
-        },
+        navigation = drawer,
     ) {
     Scaffold(
         topBar = {

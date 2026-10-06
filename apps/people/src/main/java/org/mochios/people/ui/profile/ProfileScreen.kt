@@ -85,12 +85,10 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.launch
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -98,18 +96,16 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.parseHexColour
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
+import org.mochios.people.ui.components.PeopleDrawer
+import org.mochios.people.ui.components.PeopleDrawerNavigation
 import org.mochios.people.ui.components.PeopleSidebarSection
-import org.mochios.people.ui.components.peopleAllContactsItem
-import org.mochios.people.ui.components.peopleDrawerItems
-import org.mochios.people.ui.components.peopleDrawerSection
 import org.mochios.people.ui.router.PeopleSection
 import org.mochios.people.ui.router.RememberPeopleSection
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreen(
-    onSwitchSection: (PeopleSidebarSection) -> Unit,
-    @Suppress("unused") onLogout: () -> Unit,
+    drawer: PeopleDrawerNavigation,
     @Suppress("unused") onOpenNotifications: () -> Unit,
     viewModel: ProfileViewModel = hiltViewModel(),
 ) {
@@ -135,17 +131,10 @@ fun ProfileScreen(
 
     RememberPeopleSection(PeopleSection.PROFILE)
 
-    MochiListDrawer(
+    PeopleDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
-        items = peopleDrawerItems(),
-        allItem = peopleAllContactsItem(),
         selectedId = PeopleSidebarSection.PROFILE.name,
-        onItemClick = { item ->
-            drawerScope.launch { drawerState.close() }
-            val section = peopleDrawerSection(item.id)
-            if (section != null && section != PeopleSidebarSection.PROFILE) onSwitchSection(section)
-        },
+        navigation = drawer,
     ) {
         Scaffold(
             topBar = {

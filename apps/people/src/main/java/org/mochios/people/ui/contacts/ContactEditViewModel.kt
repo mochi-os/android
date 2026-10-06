@@ -170,7 +170,7 @@ class ContactEditViewModel @Inject constructor(
 
     private suspend fun fetchBooks() {
         try {
-            val books = repository.listBooks()
+            val books = repository.loadBooks()
             val form = _uiState.value.form
             // A new contact lands in the book it was started from, else the
             // default one, unless the user picks another; the field shows where

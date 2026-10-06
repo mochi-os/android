@@ -62,12 +62,10 @@ import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -76,10 +74,9 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.FriendInvite
+import org.mochios.people.ui.components.PeopleDrawer
+import org.mochios.people.ui.components.PeopleDrawerNavigation
 import org.mochios.people.ui.components.PeopleSidebarSection
-import org.mochios.people.ui.components.peopleAllContactsItem
-import org.mochios.people.ui.components.peopleDrawerItems
-import org.mochios.people.ui.components.peopleDrawerSection
 import org.mochios.people.ui.router.PeopleSection
 import org.mochios.people.ui.router.RememberPeopleSection
 import org.mochios.android.R as MochiR
@@ -87,7 +84,7 @@ import org.mochios.android.R as MochiR
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun InvitationsScreen(
-    onSwitchSection: (PeopleSidebarSection) -> Unit,
+    drawer: PeopleDrawerNavigation,
     viewModel: InvitationsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -126,17 +123,10 @@ fun InvitationsScreen(
 
     RememberPeopleSection(PeopleSection.INVITATIONS)
 
-    MochiListDrawer(
+    PeopleDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
-        items = peopleDrawerItems(),
-        allItem = peopleAllContactsItem(),
         selectedId = PeopleSidebarSection.INVITATIONS.name,
-        onItemClick = { item ->
-            drawerScope.launch { drawerState.close() }
-            val section = peopleDrawerSection(item.id)
-            if (section != null && section != PeopleSidebarSection.INVITATIONS) onSwitchSection(section)
-        },
+        navigation = drawer,
     ) {
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },

@@ -6,8 +6,13 @@
 package org.mochios.people.repository
 
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import okhttp3.MultipartBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
@@ -54,6 +59,12 @@ class PeopleRepository @Inject constructor(
     private val _contactsChanged = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
     val contactsChanged: SharedFlow<Unit> = _contactsChanged.asSharedFlow()
 
+    /** Signals a change and marks the books stale, since their contact counts may have moved. */
+    private fun notifyChanged() {
+        booksStale = true
+        _contactsChanged.tryEmit(Unit)
+    }
+
     // ---- Contacts + invites ----
 
     /** [book] limits the list to one address book; null lists them all. */
@@ -69,7 +80,7 @@ class PeopleRepository @Inject constructor(
         book: String? = null,
     ): Contact {
         val contact = api.createContact(ContactRequest(properties, person, book)).unwrap().contact
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
         return contact
     }
 
@@ -86,14 +97,14 @@ class PeopleRepository @Inject constructor(
         val updated = api.updateContact(
             ContactUpdateRequest(contact, etag, properties, book),
         ).unwrap().contact
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
         return updated
     }
 
     /** Deleting a friend's contact also ends the friendship. */
     suspend fun deleteContact(contact: String) {
         api.deleteContact(contact).unwrap()
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
     }
 
     suspend fun searchDirectory(query: String): List<User> =
@@ -101,24 +112,54 @@ class PeopleRepository @Inject constructor(
 
     // ---- Address books ----
 
-    suspend fun listBooks(): List<Book> =
-        api.listBooks().unwrap().books
+    private val _books = MutableStateFlow<List<Book>>(emptyList())
+
+    /** The address books as last fetched, so every screen's drawer lists them at once. */
+    val books: StateFlow<List<Book>> = _books.asStateFlow()
+
+    private val booksLock = Mutex()
+
+    @Volatile
+    private var booksStale = true
+
+    /** Fetches the address books from the server, whatever is already held. */
+    suspend fun listBooks(): List<Book> = booksLock.withLock { fetchBooks() }
+
+    /**
+     * The address books, fetched only when none are held yet or a change has
+     * made them stale. Callers arriving together share the one request.
+     */
+    suspend fun loadBooks(): List<Book> = booksLock.withLock {
+        if (booksStale) fetchBooks() else _books.value
+    }
+
+    /** Marks the books stale, so the next [loadBooks] fetches them again. */
+    fun markBooksStale() {
+        booksStale = true
+    }
+
+    private suspend fun fetchBooks(): List<Book> {
+        val fetched = api.listBooks().unwrap().books
+        _books.value = fetched
+        booksStale = false
+        return fetched
+    }
 
     suspend fun createBook(name: String): Book {
         val book = api.createBook(name).unwrap().book
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
         return book
     }
 
     suspend fun renameBook(book: String, name: String) {
         api.renameBook(book, name).unwrap()
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
     }
 
     /** Deletes the book and every contact in it. The default book is refused. */
     suspend fun deleteBook(book: String) {
         api.deleteBook(book).unwrap()
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
     }
 
     // ---- Device tokens ----
@@ -143,23 +184,23 @@ class PeopleRepository @Inject constructor(
         book: String? = null,
     ) {
         api.inviteFriend(person, name, contact, book).unwrap()
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
     }
 
     suspend fun acceptInvite(person: String) {
         api.acceptInvite(person).unwrap()
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
     }
 
     suspend fun ignoreInvite(person: String) {
         api.ignoreInvite(person).unwrap()
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
     }
 
     /** Ends the friendship and keeps the contact. */
     suspend fun removeFriend(person: String) {
         api.removeFriend(person).unwrap()
-        _contactsChanged.tryEmit(Unit)
+        notifyChanged()
     }
 
     // ---- Welcome state ----
