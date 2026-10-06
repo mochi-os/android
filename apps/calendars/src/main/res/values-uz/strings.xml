@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Tadbirlar juda koʻp, hammasini koʻrsatib boʻlmaydi. Qisqaroq oraliq tanlang.</string>
     <string name="calendars_list_empty">Tadbirlar yoʻq</string>
     <string name="calendars_list_nothing">Hech narsa rejalashtirilmagan. Tadbir yaratish uchun teging.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Sarlavhasiz)</string>
     <string name="calendars_status_cancelled">Bekor qilindi</string>
     <string name="calendars_status_tentative">Taxminiy</string>

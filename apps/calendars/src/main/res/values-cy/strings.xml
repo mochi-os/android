@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Gormod o ddigwyddiadau i\'w dangos i gyd. Dewiswch ystod fyrrach.</string>
     <string name="calendars_list_empty">Dim digwyddiadau</string>
     <string name="calendars_list_nothing">Dim byd wedi\'i gynllunio. Tapiwch i greu digwyddiad.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Dim teitl)</string>
     <string name="calendars_status_cancelled">Wedi\'i ganslo</string>
     <string name="calendars_status_tentative">Dros dro</string>

@@ -68,6 +68,7 @@
     <string name="calendars_truncated">پېښې دومره ډېرې دي چې ټولې نه ښودل کیږي. لنډه سلسله وټاکئ.</string>
     <string name="calendars_list_empty">هیڅ پېښې نشته</string>
     <string name="calendars_list_nothing">هیڅ شی پلان شوی نه دی. د پېښې جوړولو لپاره ټک ووهئ.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(بې سرلیکه)</string>
     <string name="calendars_status_cancelled">لغوه شوی</string>
     <string name="calendars_status_tentative">لنډمهاله</string>

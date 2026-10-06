@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Hamısını göstərmək üçün tədbirlərin sayı çoxdur. Daha qısa aralıq seçin.</string>
     <string name="calendars_list_empty">Tədbir yoxdur</string>
     <string name="calendars_list_nothing">Heç nə planlaşdırılmayıb. Tədbir yaratmaq üçün toxunun.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(Başlıqsız)</string>
     <string name="calendars_status_cancelled">Ləğv edilib</string>
     <string name="calendars_status_tentative">Qəti deyil</string>

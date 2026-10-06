@@ -68,6 +68,7 @@
     <string name="calendars_truncated">عدد الأحداث كبير جدًا لعرضها كلها. اختر نطاقًا أقصر.</string>
     <string name="calendars_list_empty">لا توجد أحداث</string>
     <string name="calendars_list_nothing">لا شيء مخطط له. انقر لإنشاء حدث.</string>
+    <string name="calendars_list_heading">%1$s، %2$s</string>
     <string name="calendars_untitled">(بلا عنوان)</string>
     <string name="calendars_status_cancelled">ملغى</string>
     <string name="calendars_status_tentative">مبدئي</string>

@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Hai demasiados eventos para mostralos todos. Escolle un intervalo máis curto.</string>
     <string name="calendars_list_empty">Non hai eventos</string>
     <string name="calendars_list_nothing">Non hai nada previsto. Toca para crear un evento.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Sen título)</string>
     <string name="calendars_status_cancelled">Cancelado</string>
     <string name="calendars_status_tentative">Provisional</string>

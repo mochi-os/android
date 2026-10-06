@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Príliš veľa udalostí na zobrazenie všetkých. Vyberte kratší rozsah.</string>
     <string name="calendars_list_empty">Žiadne udalosti</string>
     <string name="calendars_list_nothing">Nič naplánované. Klepnutím vytvoríte udalosť.</string>
+    <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_untitled">(Bez názvu)</string>
     <string name="calendars_status_cancelled">Zrušené</string>
     <string name="calendars_status_tentative">Predbežné</string>

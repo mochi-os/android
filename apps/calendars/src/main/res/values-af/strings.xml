@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Te veel gebeurtenisse om almal te wys. Kies \'n korter tydperk.</string>
     <string name="calendars_list_empty">Geen gebeurtenisse nie</string>
     <string name="calendars_list_nothing">Niks beplan nie. Tik om \'n gebeurtenis te skep.</string>
+    <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_untitled">(Geen titel)</string>
     <string name="calendars_status_cancelled">Gekanselleer</string>
     <string name="calendars_status_tentative">Voorlopig</string>

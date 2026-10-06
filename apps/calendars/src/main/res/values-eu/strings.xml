@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Gertaera gehiegi daude guztiak erakusteko. Aukeratu bitarte laburragoa.</string>
     <string name="calendars_list_empty">Gertaerarik ez</string>
     <string name="calendars_list_nothing">Ez dago ezer aurreikusita. Sakatu gertaera bat sortzeko.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(Izenbururik gabe)</string>
     <string name="calendars_status_cancelled">Bertan behera</string>
     <string name="calendars_status_tentative">Behin-behinekoa</string>

@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Có quá nhiều sự kiện để hiển thị tất cả. Hãy chọn khoảng ngắn hơn.</string>
     <string name="calendars_list_empty">Không có sự kiện</string>
     <string name="calendars_list_nothing">Không có kế hoạch nào. Chạm để tạo sự kiện.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Không có tiêu đề)</string>
     <string name="calendars_status_cancelled">Đã hủy</string>
     <string name="calendars_status_tentative">Chưa chắc chắn</string>

@@ -68,6 +68,7 @@
     <string name="calendars_truncated">واقعا ايترا گهڻا آهن جو سڀ ڏيکاري نٿا سگهجن. ننڍو عرصو چونڊيو.</string>
     <string name="calendars_list_empty">ڪو واقعو نه آهي</string>
     <string name="calendars_list_nothing">ڪجهه به رٿيل ناهي. واقعو ٺاهڻ لاءِ ٽيپ ڪريو.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(بي عنوان)</string>
     <string name="calendars_status_cancelled">منسوخ ٿيل</string>
     <string name="calendars_status_tentative">عارضي</string>

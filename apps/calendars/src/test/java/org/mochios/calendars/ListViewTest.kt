@@ -5,12 +5,24 @@
 
 package org.mochios.calendars
 
+import androidx.compose.material3.lightColorScheme
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.graphics.toPixelMap
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollToNode
+import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.onRoot
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -24,7 +36,9 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.i18n.DateFormat
 import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.UserPreferences
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.MenuApi
@@ -41,14 +55,18 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.format.TextStyle
+import java.util.Locale
 import java.util.concurrent.ConcurrentLinkedQueue
 
 /**
  * The list view as the web's draws it: a first page with nothing on it
  * still reaches what comes after, a page that fails stops and offers Retry,
  * "Earlier events" reaches back past empty pages, as far as before 1970,
- * the day headings are long dates that stay at the top, and a wide screen
- * names each row's calendar.
+ * each day is headed across the width by its weekday and its date in the
+ * user's date format, the heading staying at the top, its rows open with
+ * their dots on no fill of their colour, and a wide screen names each row's
+ * calendar.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "w400dp-h800dp")
@@ -99,7 +117,7 @@ class ListViewTest {
                             return MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
                         }
                         val listed = events.filter { noon(it.first) in start until finish }.joinToString(",") { (day, title) ->
-                            """{"event": "e-$title", "calendar": "c1", "summary": "$title", "start": ${noon(day)}, "finish": ${noon(day) + 3_600}}"""
+                            """{"event": "e-$title", "calendar": "c1", "colour": "#ff0000", "summary": "$title", "start": ${noon(day)}, "finish": ${noon(day) + 3_600}}"""
                         }
                         ok("""{"instances": [$listed], "truncated": false}""")
                     }
@@ -117,7 +135,7 @@ class ListViewTest {
 
     private fun listings() = asked.filter { it.path.orEmpty().contains("/-/events?") }
 
-    private fun show(): CalendarViewModel {
+    private fun show(open: LocalDate = anchor, format: Format = Format(UserPreferences())): CalendarViewModel {
         val retrofit = Retrofit.Builder()
             .baseUrl(server.url("/calendars/"))
             .addConverterFactory(GsonConverterFactory.create())
@@ -129,10 +147,12 @@ class ListViewTest {
         )
         val model = CalendarViewModel(context, repository, London)
         model.view(CalendarsSection.LIST)
-        model.anchor(anchor)
+        model.anchor(open)
         rule.setContent {
             val state by model.uiState.collectAsState()
-            AgendaList(state, model, onOpen = {})
+            CompositionLocalProvider(LocalFormat provides format) {
+                AgendaList(state, model, onOpen = {})
+            }
         }
         return model
     }
@@ -194,17 +214,100 @@ class ListViewTest {
         rule.onNodeWithText(context.getString(R.string.calendars_list_earlier)).assertExists()
     }
 
+    /** [day]'s heading as the list writes it, its date read in [format]. */
+    private fun heading(day: LocalDate, format: Format): String = context.getString(
+        R.string.calendars_list_heading,
+        day.dayOfWeek.getDisplayName(TextStyle.SHORT, Locale.getDefault()),
+        format.formatDate(day.atTime(12, 0).toEpochSecond(java.time.ZoneOffset.UTC), "UTC"),
+    )
+
     @Test
-    fun `a day's date leads its first event in the date column, once`() {
+    fun `a day is headed by its weekday and its date in the user's date format, once, with no date column`() {
         events = (1..3).map { anchor to "Item $it" }
+        first = noon(anchor)
+        last = noon(anchor)
+        val format = Format(UserPreferences(dateFormat = DateFormat.DD_SLASH_MM_YYYY))
+        show(format = format)
+        waitFor("Item 1")
+        val text = heading(anchor, format)
+        assertTrue(text, text.contains("05/10/2026"))
+        assertEquals(1, rule.onAllNodesWithText(text).fetchSemanticsNodes().size)
+        // The date column wrote the day's number on its own beside the rows.
+        val number = Format(UserPreferences()).formatNumber(anchor.dayOfMonth)
+        assertEquals(0, rule.onAllNodesWithText(number).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `a day's heading stays at the top while its rows scroll beneath it`() {
+        events = (1..30).map { anchor to "Item $it" }
         first = noon(anchor)
         last = noon(anchor)
         show()
         waitFor("Item 1")
-        val number = Format(UserPreferences()).formatNumber(anchor.dayOfMonth)
-        assertEquals(1, rule.onAllNodesWithText(number).fetchSemanticsNodes().size)
-        val weekday = anchor.dayOfWeek.getDisplayName(java.time.format.TextStyle.SHORT, java.util.Locale.getDefault())
-        assertEquals(1, rule.onAllNodesWithText(weekday).fetchSemanticsNodes().size)
+        rule.onNode(androidx.compose.ui.test.hasScrollAction()).performScrollToNode(hasText("Item 30"))
+        rule.waitForIdle()
+        rule.onNodeWithText("Item 30").assertIsDisplayed()
+        rule.onNodeWithTag("heading").assertIsDisplayed()
+        val top = rule.onNodeWithTag("heading").fetchSemanticsNode().boundsInRoot.top
+        assertEquals(0f, top, 1f)
+    }
+
+    /** How many of [pixels] are the events' red. */
+    private fun reds(pixels: androidx.compose.ui.graphics.PixelMap): Int {
+        var count = 0
+        for (x in 0 until pixels.width) {
+            for (y in 0 until pixels.height) {
+                val colour = pixels[x, y]
+                if (colour.red > 0.85f && colour.green < 0.3f && colour.blue < 0.3f) count++
+            }
+        }
+        return count
+    }
+
+    @Test
+    fun `a row opens with its dot in its colour and stands on no fill of it`() {
+        // A day still to come, so the row is not faded as past.
+        val day = LocalDate.now(london).plusDays(2)
+        events = listOf(day to "Item 1")
+        first = noon(day)
+        last = noon(day)
+        show(open = day)
+        waitFor("Item 1")
+        val red = reds(rule.onNodeWithTag("row").captureToImage().toPixelMap())
+        // An eight-point dot is some dozens of pixels; a card filled with
+        // the colour would be thousands.
+        assertTrue("red pixels: $red", red in 20..200)
+    }
+
+    @Test
+    fun `rows of a day are parted by a hairline, and the day's last row has none`() {
+        val day = LocalDate.now(london).plusDays(2)
+        events = listOf(day to "Item 1", day to "Item 2")
+        first = noon(day)
+        last = noon(day)
+        show(open = day)
+        waitFor("Item 2")
+        val rows = rule.onAllNodesWithTag("row")
+        fun bottom(index: Int): Color = rows[index].captureToImage().toPixelMap().let { it[it.width / 2, it.height - 1] }
+        val background = rule.onRoot().captureToImage().toPixelMap().let { it[it.width - 2, it.height - 2] }
+        assertTrue("first row's bottom: ${bottom(0)}", bottom(0).toArgb() != background.toArgb())
+        assertEquals(background.toArgb(), bottom(1).toArgb())
+    }
+
+    @Test
+    fun `today's heading is a band in the primary colour, and another day's is not`() {
+        val today = LocalDate.now(london)
+        events = listOf(today to "Now", today.plusDays(1) to "Later")
+        first = noon(today)
+        last = noon(today.plusDays(1))
+        val format = Format(UserPreferences())
+        show(open = today, format = format)
+        waitFor("Later")
+        val primary = lightColorScheme().primary.toArgb()
+        fun band(day: LocalDate): Int =
+            rule.onNodeWithText(heading(day, format)).captureToImage().toPixelMap().let { it[it.width - 2, 2] }.toArgb()
+        assertEquals(primary, band(today))
+        assertTrue(band(today.plusDays(1)) != primary)
     }
 
     @Test

@@ -68,6 +68,7 @@
     <string name="calendars_truncated">အစီအစဉ် များလွန်းသဖြင့် အားလုံး ပြ၍ မရပါ။ ပိုတိုသော ကာလကို ရွေးပါ။</string>
     <string name="calendars_list_empty">အစီအစဉ်များ မရှိပါ</string>
     <string name="calendars_list_nothing">စီစဉ်ထားသည်များ မရှိပါ။ အစီအစဉ်တစ်ခု ဖန်တီးရန် တို့ပါ။</string>
+    <string name="calendars_list_heading">%2$s %1$s</string>
     <string name="calendars_untitled">(ခေါင်းစဉ်မရှိ)</string>
     <string name="calendars_status_cancelled">ဖျက်သိမ်းပြီး</string>
     <string name="calendars_status_tentative">ယာယီ</string>

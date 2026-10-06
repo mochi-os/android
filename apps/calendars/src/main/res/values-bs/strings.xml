@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Previše događaja za prikaz svih. Odaberite kraći raspon.</string>
     <string name="calendars_list_empty">Nema događaja</string>
     <string name="calendars_list_nothing">Ništa nije planirano. Dodirnite da kreirate događaj.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Bez naslova)</string>
     <string name="calendars_status_cancelled">Otkazano</string>
     <string name="calendars_status_tentative">Nepotvrđeno</string>

@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Of margir viðburðir til að sýna þá alla. Veldu styttra tímabil.</string>
     <string name="calendars_list_empty">Engir viðburðir</string>
     <string name="calendars_list_nothing">Ekkert á dagskrá. Pikkaðu til að búa til viðburð.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Enginn titill)</string>
     <string name="calendars_status_cancelled">Aflýst</string>
     <string name="calendars_status_tentative">Bráðabirgða</string>

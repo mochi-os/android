@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Занадта шмат падзей, каб паказаць усе. Выберыце карацейшы дыяпазон.</string>
     <string name="calendars_list_empty">Няма падзей</string>
     <string name="calendars_list_nothing">Нічога не запланавана. Націсніце, каб стварыць падзею.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Без назвы)</string>
     <string name="calendars_status_cancelled">Адменена</string>
     <string name="calendars_status_tentative">Пад пытаннем</string>

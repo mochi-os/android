@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Hepsini göstermek için çok fazla etkinlik var. Daha kısa bir aralık seçin.</string>
     <string name="calendars_list_empty">Etkinlik yok</string>
     <string name="calendars_list_nothing">Planlanmış bir şey yok. Etkinlik oluşturmak için dokunun.</string>
+    <string name="calendars_list_heading">%2$s %1$s</string>
     <string name="calendars_untitled">(Başlıksız)</string>
     <string name="calendars_status_cancelled">İptal edildi</string>
     <string name="calendars_status_tentative">Kesin değil</string>

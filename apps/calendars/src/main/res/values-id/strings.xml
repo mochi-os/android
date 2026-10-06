@@ -68,6 +68,7 @@
     <string name="calendars_truncated">Terlalu banyak acara untuk ditampilkan semua. Pilih rentang yang lebih pendek.</string>
     <string name="calendars_list_empty">Tidak ada acara</string>
     <string name="calendars_list_nothing">Tidak ada rencana. Ketuk untuk membuat acara.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Tanpa judul)</string>
     <string name="calendars_status_cancelled">Dibatalkan</string>
     <string name="calendars_status_tentative">Sementara</string>
