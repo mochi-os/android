@@ -464,7 +464,7 @@ private fun Cell(
             modifier = Modifier
                 .fillMaxWidth()
                 .then(if (current) Modifier.background(MaterialTheme.colorScheme.primary) else Modifier)
-                .padding(2.dp),
+                .padding(horizontal = 2.dp),
         ) {
             Box(
                 modifier = Modifier
@@ -542,7 +542,7 @@ private fun Cell(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth()
-                .padding(start = 2.dp, end = 2.dp, top = 1.dp, bottom = 2.dp),
+                .padding(start = 2.dp, end = 2.dp, top = 5.dp, bottom = 2.dp),
         ) {
             val upper = groups.getOrNull(0)
             val lower = groups.getOrNull(1)
