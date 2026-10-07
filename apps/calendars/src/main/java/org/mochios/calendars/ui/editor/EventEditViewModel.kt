@@ -176,6 +176,10 @@ class EventEditViewModel @Inject constructor(
             date = handle.get<String>("date")?.takeIf { it.isNotBlank() },
             zone = Zone(zones.getOrElse(0) { "" }, zones.getOrElse(1) { "" }),
         )
+        _uiState.value = EditorUiState(
+            event = event,
+            copying = source == "event" || source == "occurrence",
+        )
         opening = {
             when (source) {
                 "event" -> copy(copied, occurrence, scope)

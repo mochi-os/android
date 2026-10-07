@@ -350,7 +350,8 @@ fun EventEditScreen(
             )
             MochiButton(
                 onClick = viewModel::save,
-                enabled = !uiState.isSaving && uiState.writable,
+                enabled = !uiState.isSaving && uiState.writable &&
+                    (uiState.event == null || uiState.copying || dirty),
                 modifier = Modifier.fillMaxWidth(),
             ) {
                 if (uiState.isSaving) {
