@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">លុប %1$s ចេញពីទំនាក់ទំនងរបស់អ្នក? មិត្តភាពរបស់អ្នកក៏នឹងបញ្ចប់ដែរ។</string>
     <string name="people_contact_new_title">ទំនាក់ទំនងថ្មី</string>
     <string name="people_contact_copy_title">ចម្លងទំនាក់ទំនង</string>
+    <string name="people_contact_merge">បញ្ចូលគ្នា</string>
+    <string name="people_contact_merge_title">បញ្ចូលទំនាក់ទំនងគ្នា</string>
     <string name="people_contact_edit_title">កែសម្រួលទំនាក់ទំនង</string>
     <string name="people_contact_given">នាមខ្លួន</string>
     <string name="people_contact_family">នាមត្រកូល</string>

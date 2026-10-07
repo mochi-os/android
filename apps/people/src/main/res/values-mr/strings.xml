@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">%1$s यांना तुमच्या संपर्कांमधून हटवायचे? तुमची मैत्रीही संपेल.</string>
     <string name="people_contact_new_title">नवीन संपर्क</string>
     <string name="people_contact_copy_title">संपर्क कॉपी करा</string>
+    <string name="people_contact_merge">विलीन करा</string>
+    <string name="people_contact_merge_title">संपर्क विलीन करा</string>
     <string name="people_contact_edit_title">संपर्क संपादित करा</string>
     <string name="people_contact_given">नाव</string>
     <string name="people_contact_family">आडनाव</string>

@@ -38,6 +38,10 @@ import java.util.concurrent.TimeUnit
 
 private const val ADA = """{"id": "c1", "book": "b1", "name": "Ada", "etag": "e1", "card": [{"name": "FN", "params": {}, "value": "Ada"}]}"""
 
+// The card a merge of Ada into a contact linked to a Mochi person reads as:
+// that contact survives, holding both cards' details.
+private const val MERGED = """{"id": "c2", "book": "b1", "person": "p1", "name": "Ada Byron", "etag": "e2", "card": [{"name": "FN", "params": {}, "value": "Ada Byron"}, {"name": "EMAIL", "params": {}, "value": "byron@example.com"}]}"""
+
 /** The contact list against a server: a reply that lands late leaves what changed meanwhile alone. */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35])
@@ -51,15 +55,33 @@ class ContactsFlowTest {
     /** Holds the address books' reply until released. */
     @Volatile private var books: CountDownLatch? = null
 
+    /** Answers every update as changed elsewhere. */
+    @Volatile private var stale = false
+
     @Before
     fun begin() {
         server = MockWebServer()
         server.dispatcher = object : Dispatcher() {
             override fun dispatch(request: RecordedRequest): MockResponse {
                 asked.add(request)
+                val body = request.body.clone().readUtf8()
                 return when (request.path.orEmpty().substringAfter("/people/").substringBefore("?")) {
-                    "-/contacts" -> ok("""{"contacts": []}""")
-                    "-/contacts/get", "-/contacts/create", "-/contacts/update" -> ok("""{"contact": $ADA}""")
+                    "-/contacts" -> ok(
+                        """{"contacts": [{"id": "c3", "name": "Grace", "person": "p2"}, {"id": "c1", "name": "Ada"}, {"id": "c2", "name": "Ada Byron", "person": "p1"}]}""",
+                    )
+                    "-/contacts/get" -> when {
+                        body.contains("source=c2") -> ok("""{"contact": $MERGED, "source": $ADA}""")
+                        body.contains("source=c3") -> MockResponse().setResponseCode(409)
+                            .setBody("""{"error": "Both contacts are linked to Mochi people and cannot be merged"}""")
+                        else -> ok("""{"contact": $ADA}""")
+                    }
+                    "-/contacts/update" -> if (stale) {
+                        MockResponse().setResponseCode(412)
+                            .setBody("""{"error": "The contact was changed elsewhere. Reload and try again."}""")
+                    } else {
+                        ok("""{"contact": $ADA}""")
+                    }
+                    "-/contacts/create" -> ok("""{"contact": $ADA}""")
                     "-/books" -> {
                         books?.await(10, TimeUnit.SECONDS)
                         ok("""{"books": [{"id": "b1", "name": "Home"}]}""")
@@ -120,7 +142,7 @@ class ContactsFlowTest {
         rule.setContent {
             ContactEditScreen(onBack = {}, onSaved = {}, onDeleted = {}, viewModel = model)
         }
-        rule.waitUntil(5_000) { model.uiState.value.contact != null }
+        until { model.uiState.value.contact != null }
         rule.onNodeWithText("Edit contact").assertExists()
         rule.onNodeWithContentDescription("Contact actions").performClick()
         rule.onNodeWithText("Copy").performClick()
@@ -138,6 +160,89 @@ class ContactsFlowTest {
         shadowOf(Looper.getMainLooper()).idle()
         assertFalse(model.uiState.value.isDeleting)
         assertEquals(emptyList<String>(), asked.filter { it.path.orEmpty().endsWith("/-/contacts/delete") }.map { it.path })
+    }
+
+    @Test
+    fun `a merge reads the survivor holding both cards, and saving writes it and names the contact it absorbs`() {
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
+        until { model.uiState.value.contact != null && model.uiState.value.books.isNotEmpty() }
+        model.merge("c2")
+        until { model.uiState.value.merge != null }
+        val preview = sent("get").last()
+        assertTrue(preview, preview.contains("contact=c1") && preview.contains("source=c2"))
+        assertEquals("Ada Byron", model.uiState.value.form.name)
+        model.save()
+        until { model.uiState.value.saved }
+        val body = sent("update").single()
+        assertTrue(body, body.contains("\"contact\":\"c2\""))
+        assertTrue(body, body.contains("\"etag\":\"e2\""))
+        assertTrue(body, body.contains("\"source\":{\"id\":\"c1\",\"etag\":\"e1\"}"))
+        assertTrue(body, body.contains("byron@example.com"))
+        assertEquals(emptyList<String>(), sent("create"))
+    }
+
+    @Test
+    fun `the merge list offers every other contact, in name order`() {
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
+        until { model.uiState.value.contact != null }
+        model.openMerge()
+        until { model.uiState.value.mergeCandidates.isNotEmpty() }
+        assertEquals(listOf("c2", "c3"), model.uiState.value.mergeCandidates.map { it.id })
+    }
+
+    @Test
+    fun `a merge refused by the server stays in the list, saying why`() {
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
+        until { model.uiState.value.contact != null }
+        model.openMerge()
+        model.merge("c3")
+        until { model.uiState.value.mergeError != null }
+        val state = model.uiState.value
+        assertTrue(state.mergeOpen)
+        assertEquals(null, state.merge)
+        assertEquals("Ada", state.form.name)
+        assertEquals(null, state.mergePending)
+    }
+
+    @Test
+    fun `a merge cannot delete either contact`() {
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
+        until { model.uiState.value.contact != null }
+        model.merge("c2")
+        until { model.uiState.value.merge != null }
+        model.confirmDelete()
+        shadowOf(Looper.getMainLooper()).idle()
+        assertFalse(model.uiState.value.isDeleting)
+        assertEquals(emptyList<String>(), asked.filter { it.path.orEmpty().endsWith("/-/contacts/delete") }.map { it.path })
+    }
+
+    @Test
+    fun `a merge read from cards since changed is dropped and the contact read again`() {
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
+        until { model.uiState.value.contact != null }
+        model.merge("c2")
+        until { model.uiState.value.merge != null }
+        stale = true
+        model.save()
+        until { model.uiState.value.conflict != null }
+        assertEquals(null, model.uiState.value.merge)
+        until { model.uiState.value.form.name == "Ada" }
+    }
+
+    @Test
+    fun `the editor's menu offers Merge, whose list turns it into the merge with the contact picked`() {
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
+        rule.setContent {
+            ContactEditScreen(onBack = {}, onSaved = {}, onDeleted = {}, viewModel = model)
+        }
+        until { model.uiState.value.contact != null }
+        rule.onNodeWithContentDescription("Contact actions").performClick()
+        rule.onNodeWithText("Merge").performClick()
+        until { model.uiState.value.mergeCandidates.isNotEmpty() }
+        rule.onNodeWithText("Ada Byron").performClick()
+        until { model.uiState.value.merge != null }
+        rule.onNodeWithText("Merge contacts").assertExists()
+        rule.onNodeWithContentDescription("Contact actions").assertDoesNotExist()
     }
 
     @Test

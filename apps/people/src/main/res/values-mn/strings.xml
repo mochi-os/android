@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">%1$s-г таны харилцагчдаас устгах уу? Таны найзын харилцаа ч дуусна.</string>
     <string name="people_contact_new_title">Шинэ харилцагч</string>
     <string name="people_contact_copy_title">Харилцагчийг хуулах</string>
+    <string name="people_contact_merge">Нэгтгэх</string>
+    <string name="people_contact_merge_title">Харилцагчдыг нэгтгэх</string>
     <string name="people_contact_edit_title">Харилцагч засах</string>
     <string name="people_contact_given">Нэр</string>
     <string name="people_contact_family">Овог</string>

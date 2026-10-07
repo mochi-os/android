@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">%1$s ಅವರನ್ನು ನಿಮ್ಮ ಸಂಪರ್ಕಗಳಿಂದ ಅಳಿಸಬೇಕೆ? ನಿಮ್ಮ ಸ್ನೇಹವೂ ಕೊನೆಗೊಳ್ಳುತ್ತದೆ.</string>
     <string name="people_contact_new_title">ಹೊಸ ಸಂಪರ್ಕ</string>
     <string name="people_contact_copy_title">ಸಂಪರ್ಕ ನಕಲಿಸಿ</string>
+    <string name="people_contact_merge">ವಿಲೀನಗೊಳಿಸಿ</string>
+    <string name="people_contact_merge_title">ಸಂಪರ್ಕಗಳನ್ನು ವಿಲೀನಗೊಳಿಸಿ</string>
     <string name="people_contact_edit_title">ಸಂಪರ್ಕ ಸಂಪಾದಿಸಿ</string>
     <string name="people_contact_given">ಮೊದಲ ಹೆಸರು</string>
     <string name="people_contact_family">ಕುಟುಂಬದ ಹೆಸರು</string>

@@ -15,12 +15,14 @@ import org.mochios.android.files.FileStore
 import org.mochios.android.sync.ContactProperty
 import org.mochios.people.api.ContactRequest
 import org.mochios.people.api.ContactUpdateRequest
+import org.mochios.people.api.MergeSource
 import org.mochios.people.api.ContactsListResponse
 import org.mochios.people.api.PeopleApi
 import org.mochios.people.api.PreferenceResponse
 import org.mochios.people.api.WelcomeResponse
 import org.mochios.people.model.Book
 import org.mochios.people.model.Contact
+import org.mochios.people.model.ContactMerge
 import org.mochios.people.api.TokenResponse
 import org.mochios.people.api.TokensResponse
 import org.mochios.people.model.Group
@@ -63,6 +65,16 @@ class PeopleRepository @Inject constructor(
     suspend fun getContact(contact: String): Contact =
         api.getContact(contact).unwrap().contact
 
+    /**
+     * The merge of [contact] and [source] as the server would save it: the
+     * contact that survives, its card holding both cards' details, and the
+     * one it absorbs. The survivor is whichever is linked to a Mochi person.
+     */
+    suspend fun previewMerge(contact: String, source: String): ContactMerge {
+        val response = api.getContact(contact, source).unwrap()
+        return ContactMerge(response.contact, response.source ?: Contact())
+    }
+
     suspend fun createContact(
         properties: List<ContactProperty>,
         person: String? = null,
@@ -83,9 +95,10 @@ class PeopleRepository @Inject constructor(
         etag: String? = null,
         properties: List<ContactProperty>? = null,
         book: String? = null,
+        source: MergeSource? = null,
     ): Contact {
         val updated = api.updateContact(
-            ContactUpdateRequest(contact, etag, properties, book),
+            ContactUpdateRequest(contact, etag, properties, book, source),
         ).unwrap().contact
         _contactsChanged.tryEmit(Unit)
         return updated

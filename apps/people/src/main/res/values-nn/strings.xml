@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">Vil du slette %1$s frå kontaktane dine? Vennskapen dykkar tek òg slutt.</string>
     <string name="people_contact_new_title">Ny kontakt</string>
     <string name="people_contact_copy_title">Kopier kontakt</string>
+    <string name="people_contact_merge">Slå saman</string>
+    <string name="people_contact_merge_title">Slå saman kontaktar</string>
     <string name="people_contact_edit_title">Rediger kontakt</string>
     <string name="people_contact_given">Fornamn</string>
     <string name="people_contact_family">Etternamn</string>

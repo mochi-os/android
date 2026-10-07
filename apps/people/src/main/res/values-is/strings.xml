@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">Eyða %1$s úr tengiliðunum þínum? Vinátta ykkar endar líka.</string>
     <string name="people_contact_new_title">Nýr tengiliður</string>
     <string name="people_contact_copy_title">Afrita tengilið</string>
+    <string name="people_contact_merge">Sameina</string>
+    <string name="people_contact_merge_title">Sameina tengiliði</string>
     <string name="people_contact_edit_title">Breyta tengilið</string>
     <string name="people_contact_given">Eiginnafn</string>
     <string name="people_contact_family">Eftirnafn</string>

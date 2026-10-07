@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">A share %1$s daga lambobin sadarwarka? Abotarku ma za ta ƙare.</string>
     <string name="people_contact_new_title">Sabuwar lambar sadarwa</string>
     <string name="people_contact_copy_title">Kwafi lambar sadarwa</string>
+    <string name="people_contact_merge">Haɗa</string>
+    <string name="people_contact_merge_title">Haɗa lambobi</string>
     <string name="people_contact_edit_title">Gyara lambar sadarwa</string>
     <string name="people_contact_given">Sunan farko</string>
     <string name="people_contact_family">Sunan iyali</string>

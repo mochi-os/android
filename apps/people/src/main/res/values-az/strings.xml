@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">%1$s kontaktlarınızdan silinsin? Dostluğunuz da sona çatacaq.</string>
     <string name="people_contact_new_title">Yeni kontakt</string>
     <string name="people_contact_copy_title">Kontaktı kopyala</string>
+    <string name="people_contact_merge">Birləşdir</string>
+    <string name="people_contact_merge_title">Kontaktları birləşdir</string>
     <string name="people_contact_edit_title">Kontaktı redaktə et</string>
     <string name="people_contact_given">Ad</string>
     <string name="people_contact_family">Soyad</string>

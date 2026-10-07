@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.contacts
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -21,6 +22,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
@@ -64,6 +67,7 @@ import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
+import org.mochios.people.model.Contact
 import org.mochios.people.model.friendState
 import org.mochios.people.model.FriendState
 import org.mochios.android.R as MochiR
@@ -94,10 +98,14 @@ fun ContactEditScreen(
         if (uiState.deleted) onDeleted()
     }
 
-    if (viewModel.creating || uiState.copying) {
+    if (viewModel.creating || uiState.copying || uiState.merge != null) {
         CreateEntityScaffold(
             title = stringResource(
-                if (uiState.copying) R.string.people_contact_copy_title else R.string.people_contact_new_title,
+                when {
+                    uiState.merge != null -> R.string.people_contact_merge_title
+                    uiState.copying -> R.string.people_contact_copy_title
+                    else -> R.string.people_contact_new_title
+                },
             ),
             submitLabel = stringResource(R.string.people_common_save),
             submitEnabled = form.valid && !uiState.isSaving,
@@ -121,6 +129,7 @@ fun ContactEditScreen(
             onSave = { viewModel.save() },
             onRequestDelete = { viewModel.requestDelete() },
             onCopy = { viewModel.copy() },
+            onMerge = { viewModel.openMerge() },
             onChange = viewModel::updateForm,
             onFriendToggle = { on ->
                 val contact = uiState.contact ?: return@EditScaffold
@@ -179,6 +188,16 @@ fun ContactEditScreen(
         )
     }
 
+    if (uiState.mergeOpen) {
+        MergeDialog(
+            contacts = uiState.mergeCandidates,
+            pending = uiState.mergePending,
+            failure = uiState.mergeError?.userMessage(),
+            onPick = viewModel::merge,
+            onDismiss = { viewModel.closeMerge() },
+        )
+    }
+
     val conflict = uiState.conflict
     if (conflict != null) {
         MochiAlertDialog(
@@ -188,6 +207,84 @@ fun ContactEditScreen(
             confirmText = stringResource(MochiR.string.common_close),
             onConfirm = { viewModel.clearConflict() },
         )
+    }
+}
+
+/**
+ * The contacts to merge the one being edited with, filtered by name as typed.
+ * A refused merge stays here, saying why, so another can be picked.
+ */
+@Composable
+internal fun MergeDialog(
+    contacts: List<Contact>,
+    pending: String?,
+    failure: String?,
+    onPick: (String) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    var search by remember { mutableStateOf("") }
+    val query = search.trim()
+    val shown = if (query.isBlank()) {
+        contacts
+    } else {
+        contacts.filter {
+            it.name.contains(query, ignoreCase = true) || it.directory.contains(query, ignoreCase = true)
+        }
+    }
+    MochiAlertDialog(
+        onDismissRequest = onDismiss,
+        title = stringResource(R.string.people_contact_merge_title),
+        dismissText = stringResource(R.string.people_common_cancel),
+    ) {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            MochiTextField(
+                value = search,
+                onValueChange = { search = it },
+                modifier = Modifier.fillMaxWidth(),
+                placeholder = { Text(stringResource(R.string.people_contacts_search_placeholder)) },
+                singleLine = true,
+            )
+            failure?.let {
+                Text(
+                    text = it,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.error,
+                )
+            }
+            if (shown.isEmpty()) {
+                Text(
+                    text = stringResource(R.string.people_contacts_empty),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            } else {
+                LazyColumn(modifier = Modifier.heightIn(max = 360.dp)) {
+                    items(shown, key = { it.id }) { contact ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable(enabled = pending == null) { onPick(contact.id) }
+                                .padding(vertical = 10.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(contact.name, style = MaterialTheme.typography.bodyLarge)
+                                if (contact.directory.isNotBlank() && contact.directory != contact.name) {
+                                    Text(
+                                        text = contact.directory,
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    )
+                                }
+                            }
+                            if (pending == contact.id) {
+                                CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -234,6 +331,7 @@ private fun EditScaffold(
     onSave: () -> Unit,
     onRequestDelete: () -> Unit,
     onCopy: () -> Unit,
+    onMerge: () -> Unit,
     onChange: (ContactForm) -> Unit,
     onFriendToggle: (Boolean) -> Unit,
 ) {
@@ -275,6 +373,13 @@ private fun EditScaffold(
                         onClick = {
                             menuOpen = false
                             onCopy()
+                        },
+                    )
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.people_contact_merge)) },
+                        onClick = {
+                            menuOpen = false
+                            onMerge()
                         },
                     )
                     MochiDropdownMenuItem(

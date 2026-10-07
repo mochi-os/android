@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">%1$s നെ നിങ്ങളുടെ കോൺടാക്റ്റുകളിൽ നിന്ന് ഇല്ലാതാക്കണോ? നിങ്ങളുടെ സൗഹൃദവും അവസാനിക്കും.</string>
     <string name="people_contact_new_title">പുതിയ കോൺടാക്റ്റ്</string>
     <string name="people_contact_copy_title">കോൺടാക്റ്റ് പകർത്തുക</string>
+    <string name="people_contact_merge">ലയിപ്പിക്കുക</string>
+    <string name="people_contact_merge_title">കോൺടാക്റ്റുകൾ ലയിപ്പിക്കുക</string>
     <string name="people_contact_edit_title">കോൺടാക്റ്റ് എഡിറ്റ് ചെയ്യുക</string>
     <string name="people_contact_given">ആദ്യനാമം</string>
     <string name="people_contact_family">കുടുംബപ്പേര്</string>

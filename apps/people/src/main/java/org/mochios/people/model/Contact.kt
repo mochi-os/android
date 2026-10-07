@@ -42,3 +42,6 @@ fun Contact.friendState(sent: Set<String>): FriendState = when {
     person.isNotBlank() && person in sent -> FriendState.INVITED
     else -> FriendState.NONE
 }
+
+/** A merge read before saving: the contact that survives, holding both cards, and the one it absorbs. */
+data class ContactMerge(val contact: Contact, val source: Contact)

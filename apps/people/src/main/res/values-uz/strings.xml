@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">%1$s kontaktlaringizdan o\'chirilsinmi? Do\'stligingiz ham tugaydi.</string>
     <string name="people_contact_new_title">Yangi kontakt</string>
     <string name="people_contact_copy_title">Kontaktni nusxalash</string>
+    <string name="people_contact_merge">Birlashtirish</string>
+    <string name="people_contact_merge_title">Kontaktlarni birlashtirish</string>
     <string name="people_contact_edit_title">Kontaktni tahrirlash</string>
     <string name="people_contact_given">Ism</string>
     <string name="people_contact_family">Familiya</string>

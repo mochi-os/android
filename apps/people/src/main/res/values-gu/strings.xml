@@ -157,6 +157,8 @@
     <string name="people_contacts_delete_friend_confirm">%1$s ને તમારા સંપર્કોમાંથી કાઢી નાખવા છે? તમારી મિત્રતા પણ સમાપ્ત થશે.</string>
     <string name="people_contact_new_title">નવો સંપર્ક</string>
     <string name="people_contact_copy_title">સંપર્ક કૉપિ કરો</string>
+    <string name="people_contact_merge">મર્જ કરો</string>
+    <string name="people_contact_merge_title">સંપર્કો મર્જ કરો</string>
     <string name="people_contact_edit_title">સંપર્ક સંપાદિત કરો</string>
     <string name="people_contact_given">પ્રથમ નામ</string>
     <string name="people_contact_family">અટક</string>

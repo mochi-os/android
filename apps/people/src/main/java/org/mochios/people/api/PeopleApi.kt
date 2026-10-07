@@ -38,7 +38,11 @@ data class ContactsListResponse(
     val sent: List<FriendInvite> = emptyList(),
 )
 
-data class ContactResponse(val contact: Contact = Contact())
+/**
+ * [source] is set only on a merge preview: the contact absorbed into
+ * [contact], whose card then holds both cards' details.
+ */
+data class ContactResponse(val contact: Contact = Contact(), val source: Contact? = null)
 
 data class BooksResponse(val books: List<Book> = emptyList())
 
@@ -72,7 +76,12 @@ data class ContactUpdateRequest(
     val etag: String? = null,
     val properties: List<ContactProperty>? = null,
     val book: String? = null,
+    /** The contact merged into this one and deleted, as it was previewed. */
+    val source: MergeSource? = null,
 )
+
+/** The absorbed side of a merge; a stale [etag] is refused with 412. */
+data class MergeSource(val id: String, val etag: String? = null)
 
 /**
  * `-/contacts/changes`: [version] is the cursor to pass next time, [changed]
@@ -135,7 +144,10 @@ interface PeopleApi {
 
     @FormUrlEncoded
     @POST("-/contacts/get")
-    suspend fun getContact(@Field("contact") contact: String): Response<ApiResponse<ContactResponse>>
+    suspend fun getContact(
+        @Field("contact") contact: String,
+        @Field("source") source: String? = null,
+    ): Response<ApiResponse<ContactResponse>>
 
     @POST("-/contacts/create")
     suspend fun createContact(@Body request: ContactRequest): Response<ApiResponse<ContactResponse>>
