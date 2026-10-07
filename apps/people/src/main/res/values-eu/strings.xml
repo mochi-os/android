@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Etxea</string>
     <string name="people_contact_type_other">Bestelakoa</string>
     <string name="people_contact_remove">Kendu</string>
-    <string name="people_contact_pick_date_confirm">Ados</string>
     <string name="people_books_name">Izena</string>
     <string name="people_books_rename">Aldatu izena</string>
     <string name="people_contacts_sort_name">Izena</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Helbide-liburua</string>
     <string name="people_contact_type_work">Lana</string>
     <string name="people_contact_type_mobile">Mugikorra</string>
-    <string name="people_contact_pick_date">Aukeratu data</string>
     <string name="people_contact_conflict">Kontaktua aldatu da</string>
     <string name="people_add_contact_title">Gehitu kontaktua</string>
     <string name="people_add_contact_add">Gehitu kontaktuetara</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Ezin izan da zerbitzarira iritsi</string>
     <string name="people_sync_refused">Ezin izan da kontaktu bat sinkronizatu: %1$s</string>
     <string name="people_contact_friend">Mochi laguna</string>
+    <string name="people_contact_birthday_day">Eguna</string>
+    <string name="people_contact_birthday_month">Hilabetea</string>
+    <string name="people_contact_birthday_year">Urtea</string>
+    <string name="people_contact_birthday_clear">Garbitu</string>
 </resources>

@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Privat</string>
     <string name="people_contact_type_other">Andet</string>
     <string name="people_contact_remove">Fjern</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Navn</string>
     <string name="people_books_rename">Omdøb</string>
     <string name="people_contacts_sort_name">Navn</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Adressebog</string>
     <string name="people_contact_type_work">Arbejde</string>
     <string name="people_contact_type_mobile">Mobil</string>
-    <string name="people_contact_pick_date">Vælg en dato</string>
     <string name="people_contact_conflict">Kontakten er ændret</string>
     <string name="people_add_contact_title">Tilføj kontakt</string>
     <string name="people_add_contact_add">Tilføj til kontakter</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Kunne ikke nå serveren</string>
     <string name="people_sync_refused">Kunne ikke synkronisere en kontakt: %1$s</string>
     <string name="people_contact_friend">Mochi-ven</string>
+    <string name="people_contact_birthday_day">Dag</string>
+    <string name="people_contact_birthday_month">Måned</string>
+    <string name="people_contact_birthday_year">År</string>
+    <string name="people_contact_birthday_clear">Ryd</string>
 </resources>

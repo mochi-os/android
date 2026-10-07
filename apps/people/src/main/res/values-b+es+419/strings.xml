@@ -132,7 +132,6 @@
     <string name="people_contact_type">Tipo</string>
     <string name="people_contact_type_other">Otro</string>
     <string name="people_contact_remove">Eliminar</string>
-    <string name="people_contact_pick_date_confirm">Aceptar</string>
     <string name="people_books_name">Nombre</string>
     <string name="people_books_rename">Renombrar</string>
     <string name="people_contacts_sort_name">Nombre</string>
@@ -163,4 +162,8 @@
     <string name="people_device_delete_message">El dispositivo ya no podrá sincronizar contactos ni calendarios.</string>
     <string name="people_device_deleted">Dispositivo eliminado</string>
     <string name="people_contact_friend">Amigo de Mochi</string>
+    <string name="people_contact_birthday_day">Día</string>
+    <string name="people_contact_birthday_month">Mes</string>
+    <string name="people_contact_birthday_year">Año</string>
+    <string name="people_contact_birthday_clear">Borrar</string>
 </resources>

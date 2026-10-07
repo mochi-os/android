@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">گھر</string>
     <string name="people_contact_type_other">دیگر</string>
     <string name="people_contact_remove">ہٹائیں</string>
-    <string name="people_contact_pick_date_confirm">ٹھیک ہے</string>
     <string name="people_books_name">نام</string>
     <string name="people_books_rename">نام تبدیل کریں</string>
     <string name="people_contacts_sort_name">نام</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">ایڈریس بک</string>
     <string name="people_contact_type_work">کام</string>
     <string name="people_contact_type_mobile">موبائل</string>
-    <string name="people_contact_pick_date">تاریخ منتخب کریں</string>
     <string name="people_contact_conflict">رابطہ تبدیل ہو گیا</string>
     <string name="people_add_contact_title">رابطہ شامل کریں</string>
     <string name="people_add_contact_add">رابطوں میں شامل کریں</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">سرور تک پہنچنا ممکن نہ ہوا</string>
     <string name="people_sync_refused">ایک رابطہ سنک نہیں ہو سکا: %1$s</string>
     <string name="people_contact_friend">Mochi دوست</string>
+    <string name="people_contact_birthday_day">دن</string>
+    <string name="people_contact_birthday_month">مہینہ</string>
+    <string name="people_contact_birthday_year">سال</string>
+    <string name="people_contact_birthday_clear">صاف کریں</string>
 </resources>

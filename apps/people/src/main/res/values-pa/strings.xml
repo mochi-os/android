@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">ਘਰ</string>
     <string name="people_contact_type_other">ਹੋਰ</string>
     <string name="people_contact_remove">ਹਟਾਓ</string>
-    <string name="people_contact_pick_date_confirm">ਠੀਕ ਹੈ</string>
     <string name="people_books_name">ਨਾਮ</string>
     <string name="people_books_rename">ਨਾਮ ਬਦਲੋ</string>
     <string name="people_contacts_sort_name">ਨਾਮ</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">ਪਤਾ ਕਿਤਾਬ</string>
     <string name="people_contact_type_work">ਕੰਮ</string>
     <string name="people_contact_type_mobile">ਮੋਬਾਈਲ</string>
-    <string name="people_contact_pick_date">ਤਾਰੀਖ਼ ਚੁਣੋ</string>
     <string name="people_contact_conflict">ਸੰਪਰਕ ਬਦਲ ਗਿਆ</string>
     <string name="people_add_contact_title">ਸੰਪਰਕ ਜੋੜੋ</string>
     <string name="people_add_contact_add">ਸੰਪਰਕਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">ਸਰਵਰ ਤੱਕ ਨਹੀਂ ਪਹੁੰਚ ਸਕੇ</string>
     <string name="people_sync_refused">ਇੱਕ ਸੰਪਰਕ ਸਿੰਕ ਨਹੀਂ ਕਰ ਸਕੇ: %1$s</string>
     <string name="people_contact_friend">Mochi ਦੋਸਤ</string>
+    <string name="people_contact_birthday_day">ਦਿਨ</string>
+    <string name="people_contact_birthday_month">ਮਹੀਨਾ</string>
+    <string name="people_contact_birthday_year">ਸਾਲ</string>
+    <string name="people_contact_birthday_clear">ਸਾਫ਼ ਕਰੋ</string>
 </resources>

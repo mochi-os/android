@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">کور</string>
     <string name="people_contact_type_other">نور</string>
     <string name="people_contact_remove">لرې کول</string>
-    <string name="people_contact_pick_date_confirm">سمه ده</string>
     <string name="people_books_name">نوم</string>
     <string name="people_books_rename">بیا نومول</string>
     <string name="people_contacts_sort_name">نوم</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">د پتو کتابچه</string>
     <string name="people_contact_type_work">کار</string>
     <string name="people_contact_type_mobile">ګرځنده</string>
-    <string name="people_contact_pick_date">نېټه وټاکئ</string>
     <string name="people_contact_conflict">اړیکه بدله شوه</string>
     <string name="people_add_contact_title">اړیکه اضافه کړئ</string>
     <string name="people_add_contact_add">اړیکو ته ورزیات کړئ</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">سرور ته نه شو رسېدلی</string>
     <string name="people_sync_refused">یوه اړیکه همغږي نه شوه: %1$s</string>
     <string name="people_contact_friend">د Mochi ملګری</string>
+    <string name="people_contact_birthday_day">ورځ</string>
+    <string name="people_contact_birthday_month">میاشت</string>
+    <string name="people_contact_birthday_year">کال</string>
+    <string name="people_contact_birthday_clear">پاک کړئ</string>
 </resources>

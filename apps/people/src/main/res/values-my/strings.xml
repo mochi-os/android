@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">အိမ်</string>
     <string name="people_contact_type_other">အခြား</string>
     <string name="people_contact_remove">ဖယ်ရှား</string>
-    <string name="people_contact_pick_date_confirm">ကောင်းပြီ</string>
     <string name="people_books_name">အမည်</string>
     <string name="people_books_rename">အမည်ပြောင်း</string>
     <string name="people_contacts_sort_name">အမည်</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">လိပ်စာစာအုပ်</string>
     <string name="people_contact_type_work">အလုပ်</string>
     <string name="people_contact_type_mobile">မိုဘိုင်း</string>
-    <string name="people_contact_pick_date">ရက်စွဲ ရွေးပါ</string>
     <string name="people_contact_conflict">အဆက်အသွယ် ပြောင်းလဲသွားသည်</string>
     <string name="people_add_contact_title">အဆက်အသွယ် ထည့်မည်</string>
     <string name="people_add_contact_add">အဆက်အသွယ်များထဲ ထည့်ရန်</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">ဆာဗာသို့ ဆက်သွယ်၍မရပါ</string>
     <string name="people_sync_refused">အဆက်အသွယ်တစ်ခုကို ထပ်တူပြု၍မရပါ: %1$s</string>
     <string name="people_contact_friend">Mochi သူငယ်ချင်း</string>
+    <string name="people_contact_birthday_day">နေ့</string>
+    <string name="people_contact_birthday_month">လ</string>
+    <string name="people_contact_birthday_year">နှစ်</string>
+    <string name="people_contact_birthday_clear">ရှင်းမည်</string>
 </resources>

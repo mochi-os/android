@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">집</string>
     <string name="people_contact_type_other">기타</string>
     <string name="people_contact_remove">제거</string>
-    <string name="people_contact_pick_date_confirm">확인</string>
     <string name="people_books_name">이름</string>
     <string name="people_books_rename">이름 변경</string>
     <string name="people_contacts_sort_name">이름</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">주소록</string>
     <string name="people_contact_type_work">직장</string>
     <string name="people_contact_type_mobile">휴대전화</string>
-    <string name="people_contact_pick_date">날짜 선택</string>
     <string name="people_contact_conflict">연락처가 변경됨</string>
     <string name="people_add_contact_title">연락처 추가</string>
     <string name="people_add_contact_add">연락처에 추가</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">서버에 연결할 수 없습니다</string>
     <string name="people_sync_refused">연락처를 동기화할 수 없습니다: %1$s</string>
     <string name="people_contact_friend">Mochi 친구</string>
+    <string name="people_contact_birthday_day">일</string>
+    <string name="people_contact_birthday_month">월</string>
+    <string name="people_contact_birthday_year">연도</string>
+    <string name="people_contact_birthday_clear">지우기</string>
 </resources>

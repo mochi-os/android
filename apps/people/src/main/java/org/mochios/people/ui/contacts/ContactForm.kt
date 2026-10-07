@@ -73,13 +73,15 @@ data class AddressEntry(
 }
 
 /**
- * A single-valued property as the card held it: its parameters and group, and
- * its value as the form writes it back when left alone.
+ * A single-valued property as the card held it: its parameters and group, its
+ * value as the form writes it back when left alone, and the value as the card
+ * wrote it.
  */
 data class Original(
     val params: Map<String, List<String>> = emptyMap(),
     val group: String? = null,
     val value: String = "",
+    val raw: String = value,
 )
 
 /** The editable state of a contact. [name] is `FN` and is required. */
@@ -112,9 +114,11 @@ data class ContactForm(
      * SORT-AS on N, Apple's X-APPLE-OMIT-YEAR on a birthday without its year).
      */
     val originals: Map<String, Original> = emptyMap(),
+    /** Whether the birthday's fields hold something that is not a day of the year. */
+    val birthdayInvalid: Boolean = false,
 ) {
     val valid: Boolean
-        get() = name.isNotBlank()
+        get() = name.isNotBlank() && !birthdayInvalid
 }
 
 /** The properties the form shows one instance of. */
@@ -166,7 +170,7 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
                     )
                 )
             }
-            "BDAY" -> form = form.copy(birthday = property.value)
+            "BDAY" -> form = form.copy(birthday = birthday(property))
             "ORG" -> form = form.copy(organisation = property.value)
             "TITLE" -> form = form.copy(title = property.value)
             "URL" -> form = form.copy(url = TypedEntry(value = property.value))
@@ -179,9 +183,24 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
     for (property in card.orEmpty()) {
         val name = property.name.uppercase()
         if (name !in SINGLE || name in originals) continue
-        originals[name] = Original(property.params, property.group, written[name].orEmpty())
+        originals[name] = Original(property.params, property.group, written[name].orEmpty(), property.value)
     }
     return form.copy(originals = originals)
+}
+
+/**
+ * A birthday as the form holds it. Apple writes one without its year as a date
+ * in a placeholder year that X-APPLE-OMIT-YEAR names, which reads as --MMDD;
+ * any other value is kept as written.
+ */
+private fun birthday(property: ContactProperty): String {
+    val omitted = property.params.entries
+        .firstOrNull { it.key.equals("X-APPLE-OMIT-YEAR", ignoreCase = true) }?.value?.firstOrNull()
+    val match = Regex("""^(\d{4})-?(\d{2})-?(\d{2})$""").matchEntire(property.value)
+    if (match != null && omitted == match.groupValues[1]) {
+        return "--${match.groupValues[2]}${match.groupValues[3]}"
+    }
+    return property.value
 }
 
 /** The value each single-valued field writes, by property name. */
@@ -208,8 +227,10 @@ fun ContactForm.properties(): List<ContactProperty> {
     val out = mutableListOf<ContactProperty>()
     val written = singles()
     // A single field keeps the parameters and group its property came with. A
-    // changed value drops the two that described the old one: its sort key
-    // and its value type, which a date picked in the field no longer is.
+    // changed value drops the ones that described the old one: its sort key,
+    // its value type, which a date entered in the fields no longer is, and
+    // Apple's placeholder year. A birthday left alone is written as the card
+    // held it, so Apple's form keeps the year its parameter names.
     fun single(name: String) {
         val value = written[name].orEmpty()
         if (value.isBlank()) return
@@ -222,10 +243,13 @@ fun ContactForm.properties(): List<ContactProperty> {
             original.params
         } else {
             original.params.filterKeys {
-                !it.equals("SORT-AS", ignoreCase = true) && !it.equals("VALUE", ignoreCase = true)
+                !it.equals("SORT-AS", ignoreCase = true) &&
+                    !it.equals("VALUE", ignoreCase = true) &&
+                    !it.equals("X-APPLE-OMIT-YEAR", ignoreCase = true)
             }
         }
-        out.add(ContactProperty(name, params, value, original.group))
+        val kept = name == "BDAY" && value == original.value
+        out.add(ContactProperty(name, params, if (kept) original.raw else value, original.group))
     }
     single("FN")
     single("N")

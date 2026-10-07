@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">住家</string>
     <string name="people_contact_type_other">其他</string>
     <string name="people_contact_remove">移除</string>
-    <string name="people_contact_pick_date_confirm">確定</string>
     <string name="people_books_name">名稱</string>
     <string name="people_books_rename">重新命名</string>
     <string name="people_contacts_sort_name">姓名</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">通訊錄</string>
     <string name="people_contact_type_work">工作</string>
     <string name="people_contact_type_mobile">手機</string>
-    <string name="people_contact_pick_date">選擇日期</string>
     <string name="people_contact_conflict">聯絡人已變更</string>
     <string name="people_add_contact_title">新增聯絡人</string>
     <string name="people_add_contact_add">加入聯絡人</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">無法連線至伺服器</string>
     <string name="people_sync_refused">無法同步聯絡人：%1$s</string>
     <string name="people_contact_friend">Mochi 好友</string>
+    <string name="people_contact_birthday_day">日</string>
+    <string name="people_contact_birthday_month">月</string>
+    <string name="people_contact_birthday_year">年</string>
+    <string name="people_contact_birthday_clear">清除</string>
 </resources>

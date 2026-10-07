@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Dachaigh</string>
     <string name="people_contact_type_other">Eile</string>
     <string name="people_contact_remove">Thoir air falbh</string>
-    <string name="people_contact_pick_date_confirm">Ceart ma-thà</string>
     <string name="people_books_name">Ainm</string>
     <string name="people_books_rename">Cuir ainm ùr air</string>
     <string name="people_contacts_sort_name">Ainm</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Leabhar-sheòlaidhean</string>
     <string name="people_contact_type_work">Obair</string>
     <string name="people_contact_type_mobile">Fòn-làimhe</string>
-    <string name="people_contact_pick_date">Tagh ceann-latha</string>
     <string name="people_contact_conflict">Dh\'atharraich an neach-aithne</string>
     <string name="people_add_contact_title">Cuir neach-aithne ris</string>
     <string name="people_add_contact_add">Cuir ris an luchd-aithne</string>
@@ -217,4 +215,8 @@
     <string name="people_sync_transport">Cha b\' urrainn ruigsinn air an fhrithealaiche</string>
     <string name="people_sync_refused">Cha b\' urrainn dhuinn neach-aithne a shioncronachadh: %1$s</string>
     <string name="people_contact_friend">Caraid Mochi</string>
+    <string name="people_contact_birthday_day">Latha</string>
+    <string name="people_contact_birthday_month">Mìos</string>
+    <string name="people_contact_birthday_year">Bliadhna</string>
+    <string name="people_contact_birthday_clear">Falamhaich</string>
 </resources>

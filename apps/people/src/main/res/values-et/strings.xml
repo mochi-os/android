@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Kodu</string>
     <string name="people_contact_type_other">Muu</string>
     <string name="people_contact_remove">Eemalda</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nimi</string>
     <string name="people_books_rename">Nimeta ümber</string>
     <string name="people_contacts_sort_name">Nimi</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Aadressiraamat</string>
     <string name="people_contact_type_work">Töö</string>
     <string name="people_contact_type_mobile">Mobiil</string>
-    <string name="people_contact_pick_date">Vali kuupäev</string>
     <string name="people_contact_conflict">Kontakt on muutunud</string>
     <string name="people_add_contact_title">Lisa kontakt</string>
     <string name="people_add_contact_add">Lisa kontaktidesse</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Serveriga ei õnnestunud ühendust luua</string>
     <string name="people_sync_refused">Kontakti ei õnnestunud sünkroonida: %1$s</string>
     <string name="people_contact_friend">Mochi sõber</string>
+    <string name="people_contact_birthday_day">Päev</string>
+    <string name="people_contact_birthday_month">Kuu</string>
+    <string name="people_contact_birthday_year">Aasta</string>
+    <string name="people_contact_birthday_clear">Tühjenda</string>
 </resources>

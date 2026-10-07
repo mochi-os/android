@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Heim</string>
     <string name="people_contact_type_other">Anna</string>
     <string name="people_contact_remove">Fjern</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Namn</string>
     <string name="people_books_rename">Døyp om</string>
     <string name="people_contacts_sort_name">Namn</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Adressebok</string>
     <string name="people_contact_type_work">Jobb</string>
     <string name="people_contact_type_mobile">Mobil</string>
-    <string name="people_contact_pick_date">Vel ein dato</string>
     <string name="people_contact_conflict">Kontakten er endra</string>
     <string name="people_add_contact_title">Legg til kontakt</string>
     <string name="people_add_contact_add">Legg til i kontaktar</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Nådde ikkje tenaren</string>
     <string name="people_sync_refused">Kunne ikkje synkronisera ein kontakt: %1$s</string>
     <string name="people_contact_friend">Mochi-ven</string>
+    <string name="people_contact_birthday_day">Dag</string>
+    <string name="people_contact_birthday_month">Månad</string>
+    <string name="people_contact_birthday_year">År</string>
+    <string name="people_contact_birthday_clear">Tøm</string>
 </resources>

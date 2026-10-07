@@ -55,6 +55,10 @@
     <string name="people_contact_postcode">Postcode</string>
     <string name="people_contact_country">Country</string>
     <string name="people_contact_birthday">Birthday</string>
+    <string name="people_contact_birthday_day">Day</string>
+    <string name="people_contact_birthday_month">Month</string>
+    <string name="people_contact_birthday_year">Year</string>
+    <string name="people_contact_birthday_clear">Clear</string>
     <string name="people_contact_organisation">Organisation</string>
     <string name="people_contact_title">Job title</string>
     <string name="people_contact_url">Website</string>
@@ -66,8 +70,6 @@
     <string name="people_contact_type_mobile">Mobile</string>
     <string name="people_contact_type_other">Other</string>
     <string name="people_contact_remove">Remove</string>
-    <string name="people_contact_pick_date">Pick a date</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_contact_conflict">Contact changed</string>
 
     <!-- Add contact -->

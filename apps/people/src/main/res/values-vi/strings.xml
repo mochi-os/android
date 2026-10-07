@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Nhà riêng</string>
     <string name="people_contact_type_other">Khác</string>
     <string name="people_contact_remove">Xoá</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Tên</string>
     <string name="people_books_rename">Đổi tên</string>
     <string name="people_contacts_sort_name">Tên</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Sổ địa chỉ</string>
     <string name="people_contact_type_work">Cơ quan</string>
     <string name="people_contact_type_mobile">Di động</string>
-    <string name="people_contact_pick_date">Chọn ngày</string>
     <string name="people_contact_conflict">Liên hệ đã thay đổi</string>
     <string name="people_add_contact_title">Thêm liên hệ</string>
     <string name="people_add_contact_add">Thêm vào danh bạ</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">Không thể kết nối tới máy chủ</string>
     <string name="people_sync_refused">Không thể đồng bộ một liên hệ: %1$s</string>
     <string name="people_contact_friend">Bạn bè Mochi</string>
+    <string name="people_contact_birthday_day">Ngày</string>
+    <string name="people_contact_birthday_month">Tháng</string>
+    <string name="people_contact_birthday_year">Năm</string>
+    <string name="people_contact_birthday_clear">Xóa</string>
 </resources>

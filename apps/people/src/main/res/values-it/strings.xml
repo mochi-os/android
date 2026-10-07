@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Casa</string>
     <string name="people_contact_type_other">Altro</string>
     <string name="people_contact_remove">Rimuovi</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nome</string>
     <string name="people_books_rename">Rinomina</string>
     <string name="people_contacts_sort_name">Nome</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Rubrica</string>
     <string name="people_contact_type_work">Lavoro</string>
     <string name="people_contact_type_mobile">Cellulare</string>
-    <string name="people_contact_pick_date">Scegli una data</string>
     <string name="people_contact_conflict">Il contatto è cambiato</string>
     <string name="people_add_contact_title">Aggiungi contatto</string>
     <string name="people_add_contact_add">Aggiungi ai contatti</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Impossibile raggiungere il server</string>
     <string name="people_sync_refused">Impossibile sincronizzare un contatto: %1$s</string>
     <string name="people_contact_friend">Amico Mochi</string>
+    <string name="people_contact_birthday_day">Giorno</string>
+    <string name="people_contact_birthday_month">Mese</string>
+    <string name="people_contact_birthday_year">Anno</string>
+    <string name="people_contact_birthday_clear">Cancella</string>
 </resources>

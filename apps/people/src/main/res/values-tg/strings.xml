@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Хона</string>
     <string name="people_contact_type_other">Дигар</string>
     <string name="people_contact_remove">Хориҷ кардан</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Ном</string>
     <string name="people_books_rename">Тағйири ном</string>
     <string name="people_contacts_sort_name">Ном</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Дафтари суроғаҳо</string>
     <string name="people_contact_type_work">Кор</string>
     <string name="people_contact_type_mobile">Мобилӣ</string>
-    <string name="people_contact_pick_date">Санаро интихоб кунед</string>
     <string name="people_contact_conflict">Тамос тағйир ёфт</string>
     <string name="people_add_contact_title">Илова кардани тамос</string>
     <string name="people_add_contact_add">Ба тамосҳо илова кардан</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Ба сервер пайваст шуда нашуд</string>
     <string name="people_sync_refused">Тамосро ҳамоҳанг карда нашуд: %1$s</string>
     <string name="people_contact_friend">Дӯсти Mochi</string>
+    <string name="people_contact_birthday_day">Рӯз</string>
+    <string name="people_contact_birthday_month">Моҳ</string>
+    <string name="people_contact_birthday_year">Сол</string>
+    <string name="people_contact_birthday_clear">Тоза кардан</string>
 </resources>

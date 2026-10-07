@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">ಮನೆ</string>
     <string name="people_contact_type_other">ಇತರ</string>
     <string name="people_contact_remove">ತೆಗೆದುಹಾಕಿ</string>
-    <string name="people_contact_pick_date_confirm">ಸರಿ</string>
     <string name="people_books_name">ಹೆಸರು</string>
     <string name="people_books_rename">ಮರುಹೆಸರಿಸಿ</string>
     <string name="people_contacts_sort_name">ಹೆಸರು</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">ವಿಳಾಸ ಪುಸ್ತಕ</string>
     <string name="people_contact_type_work">ಕೆಲಸ</string>
     <string name="people_contact_type_mobile">ಮೊಬೈಲ್</string>
-    <string name="people_contact_pick_date">ದಿನಾಂಕ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="people_contact_conflict">ಸಂಪರ್ಕ ಬದಲಾಗಿದೆ</string>
     <string name="people_add_contact_title">ಸಂಪರ್ಕ ಸೇರಿಸಿ</string>
     <string name="people_add_contact_add">ಸಂಪರ್ಕಗಳಿಗೆ ಸೇರಿಸಿ</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">ಸರ್ವರ್ ಅನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="people_sync_refused">ಸಂಪರ್ಕವನ್ನು ಸಿಂಕ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %1$s</string>
     <string name="people_contact_friend">Mochi ಸ್ನೇಹಿತ</string>
+    <string name="people_contact_birthday_day">ದಿನ</string>
+    <string name="people_contact_birthday_month">ತಿಂಗಳು</string>
+    <string name="people_contact_birthday_year">ವರ್ಷ</string>
+    <string name="people_contact_birthday_clear">ತೆರವುಗೊಳಿಸಿ</string>
 </resources>

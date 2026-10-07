@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Mal</string>
     <string name="people_contact_type_other">Yên din</string>
     <string name="people_contact_remove">Rake</string>
-    <string name="people_contact_pick_date_confirm">Baş e</string>
     <string name="people_books_name">Nav</string>
     <string name="people_books_rename">Navê biguhere</string>
     <string name="people_contacts_sort_name">Nav</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Pirtûka navnîşanan</string>
     <string name="people_contact_type_work">Kar</string>
     <string name="people_contact_type_mobile">Mobîl</string>
-    <string name="people_contact_pick_date">Dîrokekê hilbijêre</string>
     <string name="people_contact_conflict">Têkilî guherî</string>
     <string name="people_add_contact_title">Têkilî zêde bike</string>
     <string name="people_add_contact_add">Li têkiliyan zêde bike</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Nekarî bigihîje serverê</string>
     <string name="people_sync_refused">Kontaktek nehat hevdemkirin: %1$s</string>
     <string name="people_contact_friend">Hevalê Mochi</string>
+    <string name="people_contact_birthday_day">Roj</string>
+    <string name="people_contact_birthday_month">Meh</string>
+    <string name="people_contact_birthday_year">Sal</string>
+    <string name="people_contact_birthday_clear">Paqij bike</string>
 </resources>

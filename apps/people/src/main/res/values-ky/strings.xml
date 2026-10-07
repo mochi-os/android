@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Үй</string>
     <string name="people_contact_type_other">Башка</string>
     <string name="people_contact_remove">Алуу</string>
-    <string name="people_contact_pick_date_confirm">ОК</string>
     <string name="people_books_name">Аты</string>
     <string name="people_books_rename">Атын өзгөртүү</string>
     <string name="people_contacts_sort_name">Аты</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Даректер китепчеси</string>
     <string name="people_contact_type_work">Жумуш</string>
     <string name="people_contact_type_mobile">Мобилдик</string>
-    <string name="people_contact_pick_date">Күндү тандаңыз</string>
     <string name="people_contact_conflict">Байланыш өзгөрдү</string>
     <string name="people_add_contact_title">Байланыш кошуу</string>
     <string name="people_add_contact_add">Байланыштарга кошуу</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Серверге жетүү мүмкүн болбоду</string>
     <string name="people_sync_refused">Байланышты синхрондоштуруу мүмкүн болбоду: %1$s</string>
     <string name="people_contact_friend">Mochi досу</string>
+    <string name="people_contact_birthday_day">Күн</string>
+    <string name="people_contact_birthday_month">Ай</string>
+    <string name="people_contact_birthday_year">Жыл</string>
+    <string name="people_contact_birthday_clear">Тазалоо</string>
 </resources>

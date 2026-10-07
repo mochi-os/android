@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">בית</string>
     <string name="people_contact_type_other">אחר</string>
     <string name="people_contact_remove">הסר</string>
-    <string name="people_contact_pick_date_confirm">אישור</string>
     <string name="people_books_name">שם</string>
     <string name="people_books_rename">שנה שם</string>
     <string name="people_contacts_sort_name">שם</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">פנקס כתובות</string>
     <string name="people_contact_type_work">עבודה</string>
     <string name="people_contact_type_mobile">נייד</string>
-    <string name="people_contact_pick_date">בחרו תאריך</string>
     <string name="people_contact_conflict">איש הקשר השתנה</string>
     <string name="people_add_contact_title">הוספת איש קשר</string>
     <string name="people_add_contact_add">הוספה לאנשי הקשר</string>
@@ -216,4 +214,8 @@
     <string name="people_sync_transport">לא ניתן היה להגיע לשרת</string>
     <string name="people_sync_refused">לא ניתן היה לסנכרן איש קשר: %1$s</string>
     <string name="people_contact_friend">חבר ב-Mochi</string>
+    <string name="people_contact_birthday_day">יום</string>
+    <string name="people_contact_birthday_month">חודש</string>
+    <string name="people_contact_birthday_year">שנה</string>
+    <string name="people_contact_birthday_clear">נקה</string>
 </resources>

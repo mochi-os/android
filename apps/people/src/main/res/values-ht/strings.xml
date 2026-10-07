@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Lakay</string>
     <string name="people_contact_type_other">Lòt</string>
     <string name="people_contact_remove">Retire</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Non</string>
     <string name="people_books_rename">Rebatize</string>
     <string name="people_contacts_sort_name">Non</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Kanè adrès</string>
     <string name="people_contact_type_work">Travay</string>
     <string name="people_contact_type_mobile">Mobil</string>
-    <string name="people_contact_pick_date">Chwazi yon dat</string>
     <string name="people_contact_conflict">Kontak la chanje</string>
     <string name="people_add_contact_title">Ajoute kontak</string>
     <string name="people_add_contact_add">Ajoute nan kontak</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Pa t kapab jwenn sèvè a</string>
     <string name="people_sync_refused">Pa t kapab senkronize yon kontak: %1$s</string>
     <string name="people_contact_friend">Zanmi Mochi</string>
+    <string name="people_contact_birthday_day">Jou</string>
+    <string name="people_contact_birthday_month">Mwa</string>
+    <string name="people_contact_birthday_year">Ane</string>
+    <string name="people_contact_birthday_clear">Efase</string>
 </resources>

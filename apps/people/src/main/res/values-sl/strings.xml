@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Doma</string>
     <string name="people_contact_type_other">Drugo</string>
     <string name="people_contact_remove">Odstrani</string>
-    <string name="people_contact_pick_date_confirm">V redu</string>
     <string name="people_books_name">Ime</string>
     <string name="people_books_rename">Preimenuj</string>
     <string name="people_contacts_sort_name">Ime</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Imenik</string>
     <string name="people_contact_type_work">Služba</string>
     <string name="people_contact_type_mobile">Mobilni</string>
-    <string name="people_contact_pick_date">Izberite datum</string>
     <string name="people_contact_conflict">Stik se je spremenil</string>
     <string name="people_add_contact_title">Dodaj stik</string>
     <string name="people_add_contact_add">Dodaj med stike</string>
@@ -217,4 +215,8 @@
     <string name="people_sync_transport">Strežnika ni bilo mogoče doseči</string>
     <string name="people_sync_refused">Stika ni bilo mogoče sinhronizirati: %1$s</string>
     <string name="people_contact_friend">Prijatelj v Mochi</string>
+    <string name="people_contact_birthday_day">Dan</string>
+    <string name="people_contact_birthday_month">Mesec</string>
+    <string name="people_contact_birthday_year">Leto</string>
+    <string name="people_contact_birthday_clear">Počisti</string>
 </resources>

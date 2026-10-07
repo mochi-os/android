@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Гэр</string>
     <string name="people_contact_type_other">Бусад</string>
     <string name="people_contact_remove">Хасах</string>
-    <string name="people_contact_pick_date_confirm">За</string>
     <string name="people_books_name">Нэр</string>
     <string name="people_books_rename">Нэр өөрчлөх</string>
     <string name="people_contacts_sort_name">Нэр</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Хаягийн дэвтэр</string>
     <string name="people_contact_type_work">Ажил</string>
     <string name="people_contact_type_mobile">Гар утас</string>
-    <string name="people_contact_pick_date">Огноо сонгоно уу</string>
     <string name="people_contact_conflict">Харилцагч өөрчлөгдсөн</string>
     <string name="people_add_contact_title">Харилцагч нэмэх</string>
     <string name="people_add_contact_add">Харилцагчид нэмэх</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Серверт холбогдож чадсангүй</string>
     <string name="people_sync_refused">Харилцагчийг синк хийж чадсангүй: %1$s</string>
     <string name="people_contact_friend">Mochi найз</string>
+    <string name="people_contact_birthday_day">Өдөр</string>
+    <string name="people_contact_birthday_month">Сар</string>
+    <string name="people_contact_birthday_year">Жил</string>
+    <string name="people_contact_birthday_clear">Цэвэрлэх</string>
 </resources>

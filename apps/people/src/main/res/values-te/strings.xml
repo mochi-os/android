@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">ఇల్లు</string>
     <string name="people_contact_type_other">ఇతర</string>
     <string name="people_contact_remove">తొలగించండి</string>
-    <string name="people_contact_pick_date_confirm">సరే</string>
     <string name="people_books_name">పేరు</string>
     <string name="people_books_rename">పేరు మార్చండి</string>
     <string name="people_contacts_sort_name">పేరు</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">చిరునామా పుస్తకం</string>
     <string name="people_contact_type_work">పని</string>
     <string name="people_contact_type_mobile">మొబైల్</string>
-    <string name="people_contact_pick_date">తేదీని ఎంచుకోండి</string>
     <string name="people_contact_conflict">పరిచయం మారింది</string>
     <string name="people_add_contact_title">పరిచయాన్ని జోడించండి</string>
     <string name="people_add_contact_add">పరిచయాలకు జోడించు</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">సర్వర్‌ను చేరుకోలేకపోయింది</string>
     <string name="people_sync_refused">ఒక కాంటాక్ట్‌ను సింక్ చేయలేకపోయింది: %1$s</string>
     <string name="people_contact_friend">Mochi స్నేహితుడు</string>
+    <string name="people_contact_birthday_day">రోజు</string>
+    <string name="people_contact_birthday_month">నెల</string>
+    <string name="people_contact_birthday_year">సంవత్సరం</string>
+    <string name="people_contact_birthday_clear">క్లియర్ చేయండి</string>
 </resources>

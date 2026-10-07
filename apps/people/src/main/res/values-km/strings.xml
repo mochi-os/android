@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">ផ្ទះ</string>
     <string name="people_contact_type_other">ផ្សេងទៀត</string>
     <string name="people_contact_remove">យកចេញ</string>
-    <string name="people_contact_pick_date_confirm">យល់ព្រម</string>
     <string name="people_books_name">ឈ្មោះ</string>
     <string name="people_books_rename">ប្តូរឈ្មោះ</string>
     <string name="people_contacts_sort_name">ឈ្មោះ</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">សៀវភៅអាសយដ្ឋាន</string>
     <string name="people_contact_type_work">កន្លែងធ្វើការ</string>
     <string name="people_contact_type_mobile">ទូរសព្ទដៃ</string>
-    <string name="people_contact_pick_date">ជ្រើសរើសកាលបរិច្ឆេទ</string>
     <string name="people_contact_conflict">ទំនាក់ទំនងបានផ្លាស់ប្តូរ</string>
     <string name="people_add_contact_title">បន្ថែមទំនាក់ទំនង</string>
     <string name="people_add_contact_add">បន្ថែមទៅទំនាក់ទំនង</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">មិនអាចភ្ជាប់ទៅម៉ាស៊ីនមេបានទេ</string>
     <string name="people_sync_refused">មិនអាចធ្វើសមកាលកម្មទំនាក់ទំនងមួយបានទេ៖ %1$s</string>
     <string name="people_contact_friend">មិត្ត Mochi</string>
+    <string name="people_contact_birthday_day">ថ្ងៃ</string>
+    <string name="people_contact_birthday_month">ខែ</string>
+    <string name="people_contact_birthday_year">ឆ្នាំ</string>
+    <string name="people_contact_birthday_clear">សម្អាត</string>
 </resources>

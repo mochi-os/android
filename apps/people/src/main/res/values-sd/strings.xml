@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">گھر</string>
     <string name="people_contact_type_other">ٻيو</string>
     <string name="people_contact_remove">هٽايو</string>
-    <string name="people_contact_pick_date_confirm">ٺيڪ</string>
     <string name="people_books_name">نالو</string>
     <string name="people_books_rename">نالو تبديل ڪريو</string>
     <string name="people_contacts_sort_name">نالو</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">ايڊريس بڪ</string>
     <string name="people_contact_type_work">ڪم</string>
     <string name="people_contact_type_mobile">موبائل</string>
-    <string name="people_contact_pick_date">تاريخ چونڊيو</string>
     <string name="people_contact_conflict">رابطو تبديل ٿي ويو</string>
     <string name="people_add_contact_title">رابطو شامل ڪريو</string>
     <string name="people_add_contact_add">رابطن ۾ شامل ڪريو</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">سرور تائين پھچي نه سگھيو</string>
     <string name="people_sync_refused">هڪ رابطو سنڪ نه ٿي سگهيو: %1$s</string>
     <string name="people_contact_friend">Mochi دوست</string>
+    <string name="people_contact_birthday_day">ڏينهن</string>
+    <string name="people_contact_birthday_month">مهينو</string>
+    <string name="people_contact_birthday_year">سال</string>
+    <string name="people_contact_birthday_clear">صاف ڪريو</string>
 </resources>

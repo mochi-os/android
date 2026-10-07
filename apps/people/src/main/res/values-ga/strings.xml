@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Baile</string>
     <string name="people_contact_type_other">Eile</string>
     <string name="people_contact_remove">Bain</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Ainm</string>
     <string name="people_books_rename">Athainmnigh</string>
     <string name="people_contacts_sort_name">Ainm</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Leabhar seoltaí</string>
     <string name="people_contact_type_work">Obair</string>
     <string name="people_contact_type_mobile">Fón póca</string>
-    <string name="people_contact_pick_date">Roghnaigh dáta</string>
     <string name="people_contact_conflict">Athraíodh an teagmhálaí</string>
     <string name="people_add_contact_title">Cuir teagmhálaí leis</string>
     <string name="people_add_contact_add">Cuir leis na teagmhálaithe</string>
@@ -218,4 +216,8 @@
     <string name="people_sync_transport">Níorbh fhéidir teagmháil a dhéanamh leis an bhfreastalaí</string>
     <string name="people_sync_refused">Níorbh fhéidir teagmháil a shioncrónú: %1$s</string>
     <string name="people_contact_friend">Cara Mochi</string>
+    <string name="people_contact_birthday_day">Lá</string>
+    <string name="people_contact_birthday_month">Mí</string>
+    <string name="people_contact_birthday_year">Bliain</string>
+    <string name="people_contact_birthday_clear">Glan</string>
 </resources>

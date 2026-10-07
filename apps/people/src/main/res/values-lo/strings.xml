@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">ບ້ານ</string>
     <string name="people_contact_type_other">ອື່ນໆ</string>
     <string name="people_contact_remove">ລຶບອອກ</string>
-    <string name="people_contact_pick_date_confirm">ຕົກລົງ</string>
     <string name="people_books_name">ຊື່</string>
     <string name="people_books_rename">ປ່ຽນຊື່</string>
     <string name="people_contacts_sort_name">ຊື່</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">ປຶ້ມທີ່ຢູ່</string>
     <string name="people_contact_type_work">ບ່ອນເຮັດວຽກ</string>
     <string name="people_contact_type_mobile">ມືຖື</string>
-    <string name="people_contact_pick_date">ເລືອກວັນທີ</string>
     <string name="people_contact_conflict">ຜູ້ຕິດຕໍ່ປ່ຽນແປງແລ້ວ</string>
     <string name="people_add_contact_title">ເພີ່ມຜູ້ຕິດຕໍ່</string>
     <string name="people_add_contact_add">ເພີ່ມໃສ່ຜູ້ຕິດຕໍ່</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີໄດ້</string>
     <string name="people_sync_refused">ບໍ່ສາມາດຊິງຄ໌ຜູ້ຕິດຕໍ່ໄດ້: %1$s</string>
     <string name="people_contact_friend">ໝູ່ Mochi</string>
+    <string name="people_contact_birthday_day">ມື້</string>
+    <string name="people_contact_birthday_month">ເດືອນ</string>
+    <string name="people_contact_birthday_year">ປີ</string>
+    <string name="people_contact_birthday_clear">ລ້າງ</string>
 </resources>

@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Wasi</string>
     <string name="people_contact_type_other">Huk</string>
     <string name="people_contact_remove">Qichuy</string>
-    <string name="people_contact_pick_date_confirm">Allinmi</string>
     <string name="people_books_name">Suti</string>
     <string name="people_books_rename">Sutinta hukchay</string>
     <string name="people_contacts_sort_name">Suti</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Direccion maytu</string>
     <string name="people_contact_type_work">Llamk\'ana</string>
     <string name="people_contact_type_mobile">Celular</string>
-    <string name="people_contact_pick_date">P\'unchawta akllay</string>
     <string name="people_contact_conflict">Contacto hukchasqa</string>
     <string name="people_add_contact_title">Contactota yapay</string>
     <string name="people_add_contact_add">Contactokunaman yapay</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Servidorman mana chayayta atikunchu</string>
     <string name="people_sync_refused">Huk contactota mana sincronizayta atikurqanchu: %1$s</string>
     <string name="people_contact_friend">Mochi masi</string>
+    <string name="people_contact_birthday_day">P\'unchaw</string>
+    <string name="people_contact_birthday_month">Killa</string>
+    <string name="people_contact_birthday_year">Wata</string>
+    <string name="people_contact_birthday_clear">Pichay</string>
 </resources>

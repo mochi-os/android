@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Տուն</string>
     <string name="people_contact_type_other">Այլ</string>
     <string name="people_contact_remove">Հեռացնել</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Անուն</string>
     <string name="people_books_rename">Վերանվանել</string>
     <string name="people_contacts_sort_name">Անուն</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Հասցեագիրք</string>
     <string name="people_contact_type_work">Աշխատանք</string>
     <string name="people_contact_type_mobile">Բջջային</string>
-    <string name="people_contact_pick_date">Ընտրեք ամսաթիվ</string>
     <string name="people_contact_conflict">Կոնտակտը փոխվել է</string>
     <string name="people_add_contact_title">Ավելացնել կոնտակտ</string>
     <string name="people_add_contact_add">Ավելացնել կոնտակտներում</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Չհաջողվեց կապվել սերվերի հետ</string>
     <string name="people_sync_refused">Չհաջողվեց համաժամացնել մի կոնտակտ՝ %1$s</string>
     <string name="people_contact_friend">Mochi ընկեր</string>
+    <string name="people_contact_birthday_day">Օր</string>
+    <string name="people_contact_birthday_month">Ամիս</string>
+    <string name="people_contact_birthday_year">Տարի</string>
+    <string name="people_contact_birthday_clear">Մաքրել</string>
 </resources>

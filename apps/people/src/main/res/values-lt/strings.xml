@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Namai</string>
     <string name="people_contact_type_other">Kita</string>
     <string name="people_contact_remove">Šalinti</string>
-    <string name="people_contact_pick_date_confirm">Gerai</string>
     <string name="people_books_name">Pavadinimas</string>
     <string name="people_books_rename">Pervadinti</string>
     <string name="people_contacts_sort_name">Vardas</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Adresų knyga</string>
     <string name="people_contact_type_work">Darbas</string>
     <string name="people_contact_type_mobile">Mobilusis</string>
-    <string name="people_contact_pick_date">Pasirinkite datą</string>
     <string name="people_contact_conflict">Kontaktas pasikeitė</string>
     <string name="people_add_contact_title">Pridėti kontaktą</string>
     <string name="people_add_contact_add">Pridėti prie kontaktų</string>
@@ -216,4 +214,8 @@
     <string name="people_sync_transport">Nepavyko pasiekti serverio</string>
     <string name="people_sync_refused">Nepavyko sinchronizuoti kontakto: %1$s</string>
     <string name="people_contact_friend">Mochi draugas</string>
+    <string name="people_contact_birthday_day">Diena</string>
+    <string name="people_contact_birthday_month">Mėnuo</string>
+    <string name="people_contact_birthday_year">Metai</string>
+    <string name="people_contact_birthday_clear">Išvalyti</string>
 </resources>

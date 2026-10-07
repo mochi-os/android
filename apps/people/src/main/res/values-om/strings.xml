@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Mana</string>
     <string name="people_contact_type_other">Biraa</string>
     <string name="people_contact_remove">Haqi</string>
-    <string name="people_contact_pick_date_confirm">Tole</string>
     <string name="people_books_name">Maqaa</string>
     <string name="people_books_rename">Maqaa jijjiiri</string>
     <string name="people_contacts_sort_name">Maqaa</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Kitaaba teessoo</string>
     <string name="people_contact_type_work">Hojii</string>
     <string name="people_contact_type_mobile">Mobaayilii</string>
-    <string name="people_contact_pick_date">Guyyaa filadhu</string>
     <string name="people_contact_conflict">Quunnamtiin jijjiirameera</string>
     <string name="people_add_contact_title">Quunnamtii dabali</string>
     <string name="people_add_contact_add">Gara quunnamtiiwwanitti dabali</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Sarvarii bira gahuu hin dandeenye</string>
     <string name="people_sync_refused">Quunnamtii tokko walsimsiisuu hin dandeenye: %1$s</string>
     <string name="people_contact_friend">Hiriyaa Mochi</string>
+    <string name="people_contact_birthday_day">Guyyaa</string>
+    <string name="people_contact_birthday_month">Ji\'a</string>
+    <string name="people_contact_birthday_year">Waggaa</string>
+    <string name="people_contact_birthday_clear">Cilliisi</string>
 </resources>

@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Дом</string>
     <string name="people_contact_type_other">Іншае</string>
     <string name="people_contact_remove">Выдаліць</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Назва</string>
     <string name="people_books_rename">Перайменаваць</string>
     <string name="people_contacts_sort_name">Імя</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Адрасная кніга</string>
     <string name="people_contact_type_work">Праца</string>
     <string name="people_contact_type_mobile">Мабільны</string>
-    <string name="people_contact_pick_date">Выберыце дату</string>
     <string name="people_contact_conflict">Кантакт зменены</string>
     <string name="people_add_contact_title">Дадаць кантакт</string>
     <string name="people_add_contact_add">Дадаць у кантакты</string>
@@ -217,4 +215,8 @@
     <string name="people_sync_transport">Не ўдалося звязацца з серверам</string>
     <string name="people_sync_refused">Не ўдалося сінхранізаваць кантакт: %1$s</string>
     <string name="people_contact_friend">Сябар у Mochi</string>
+    <string name="people_contact_birthday_day">Дзень</string>
+    <string name="people_contact_birthday_month">Месяц</string>
+    <string name="people_contact_birthday_year">Год</string>
+    <string name="people_contact_birthday_clear">Ачысціць</string>
 </resources>
