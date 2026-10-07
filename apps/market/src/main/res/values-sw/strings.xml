@@ -792,4 +792,5 @@
         <item quantity="one">Hii itaghairi usajili %1$s unaoendelea mwishoni mwa kipindi cha sasa cha malipo. Wasajili watajulishwa. Tangazo litafichwa kwa wanunuzi.</item>
         <item quantity="other">Hii itaghairi usajili %1$s unaoendelea mwishoni mwa kipindi cha sasa cha malipo. Wasajili watajulishwa. Tangazo litafichwa kwa wanunuzi.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Futa rasilimali?</string>
 </resources>

@@ -794,4 +794,5 @@
         <item quantity="few">Tai atšauks %1$s aktyvias prenumeratas dabartinio atsiskaitymo laikotarpio pabaigoje. Prenumeratoriai bus informuoti. Skelbimas bus paslėptas nuo pirkėjų.</item>
         <item quantity="other">Tai atšauks %1$s aktyvių prenumeratų dabartinio atsiskaitymo laikotarpio pabaigoje. Prenumeratoriai bus informuoti. Skelbimas bus paslėptas nuo pirkėjų.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Ištrinti išteklių?</string>
 </resources>

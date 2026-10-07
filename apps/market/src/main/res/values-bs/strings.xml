@@ -794,4 +794,5 @@
         <item quantity="few">Ovo će otkazati %1$s aktivne pretplate na kraju trenutnog obračunskog perioda. Pretplatnici će biti obaviješteni. Oglas će biti sakriven od kupaca.</item>
         <item quantity="other">Ovo će otkazati %1$s aktivnih pretplata na kraju trenutnog obračunskog perioda. Pretplatnici će biti obaviješteni. Oglas će biti sakriven od kupaca.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Obrisati resurs?</string>
 </resources>

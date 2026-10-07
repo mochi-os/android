@@ -792,4 +792,5 @@
         <item quantity="one">Oku kuya kurhoxisa imirhumo esebenzayo engu-%1$s ekupheleni kwexesha langoku lokuhlawula. Ababhalisileyo baya kwaziswa. Uluhlu luya kufihlwa kubathengi.</item>
         <item quantity="other">Oku kuya kurhoxisa imirhumo esebenzayo engu-%1$s ekupheleni kwexesha langoku lokuhlawula. Ababhalisileyo baya kwaziswa. Uluhlu luya kufihlwa kubathengi.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Cima impahla?</string>
 </resources>

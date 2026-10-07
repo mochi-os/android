@@ -792,4 +792,5 @@
         <item quantity="one">Kjo do të anulojë %1$s abonim aktiv në fund të periudhës aktuale të faturimit. Abonentët do të njoftohen. Shpallja do të fshihet nga blerësit.</item>
         <item quantity="other">Kjo do të anulojë %1$s abonime aktive në fund të periudhës aktuale të faturimit. Abonentët do të njoftohen. Shpallja do të fshihet nga blerësit.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Të fshihet pasuria?</string>
 </resources>

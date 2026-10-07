@@ -791,4 +791,5 @@
         <item quantity="one">Honek %1$s harpidetza aktibo bertan behera utziko du uneko fakturazio-aldiaren amaieran. Harpidedunei jakinaraziko zaie. Iragarkia erosleei ezkutatuko zaie.</item>
         <item quantity="other">Honek %1$s harpidetza aktibo bertan behera utziko ditu uneko fakturazio-aldiaren amaieran. Harpidedunei jakinaraziko zaie. Iragarkia erosleei ezkutatuko zaie.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Ezabatu baliabidea?</string>
 </resources>

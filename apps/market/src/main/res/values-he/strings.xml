@@ -794,4 +794,5 @@
         <item quantity="two">פעולה זו תבטל %1$s מינויים פעילים בסוף תקופת החיוב הנוכחית. המנויים יקבלו הודעה. המודעה תוסתר מקונים.</item>
         <item quantity="other">פעולה זו תבטל %1$s מינויים פעילים בסוף תקופת החיוב הנוכחית. המנויים יקבלו הודעה. המודעה תוסתר מקונים.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">למחוק נכס?</string>
 </resources>

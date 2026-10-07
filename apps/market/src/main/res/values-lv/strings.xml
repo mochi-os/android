@@ -794,4 +794,5 @@
         <item quantity="one">Tas pašreizējā norēķinu perioda beigās atcels %1$s aktīvu abonementu. Abonenti tiks informēti. Sludinājums tiks paslēpts no pircējiem.</item>
         <item quantity="other">Tas pašreizējā norēķinu perioda beigās atcels %1$s aktīvus abonementus. Abonenti tiks informēti. Sludinājums tiks paslēpts no pircējiem.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Dzēst resursu?</string>
 </resources>

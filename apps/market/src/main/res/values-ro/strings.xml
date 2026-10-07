@@ -794,4 +794,5 @@
         <item quantity="few">Aceasta va anula %1$s abonamente active la sfârșitul perioadei curente de facturare. Abonații vor fi notificați. Anunțul va fi ascuns cumpărătorilor.</item>
         <item quantity="other">Aceasta va anula %1$s de abonamente active la sfârșitul perioadei curente de facturare. Abonații vor fi notificați. Anunțul va fi ascuns cumpărătorilor.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Ștergi resursa?</string>
 </resources>

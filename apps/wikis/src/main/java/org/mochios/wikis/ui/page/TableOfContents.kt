@@ -51,7 +51,7 @@ fun TableOfContents(
     onHeadingTap: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    if (headings.isEmpty()) return
+    if (headings.size < 2) return
 
     var expanded by remember { mutableStateOf(false) }
     val rotation by animateFloatAsState(

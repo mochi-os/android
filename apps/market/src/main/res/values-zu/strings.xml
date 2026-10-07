@@ -792,4 +792,5 @@
         <item quantity="one">Lokhu kuzokhansela ukubhalisa okusebenzayo okungu-%1$s ekupheleni kwesikhathi samanje sokukhokha. Ababhalisile bazokwaziswa. Uhlu luzofihlwa kubathengi.</item>
         <item quantity="other">Lokhu kuzokhansela ukubhalisa okusebenzayo okungu-%1$s ekupheleni kwesikhathi samanje sokukhokha. Ababhalisile bazokwaziswa. Uhlu luzofihlwa kubathengi.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Susa impahla?</string>
 </resources>

@@ -796,4 +796,5 @@
         <item quantity="few">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$s aktivne naročnine. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
         <item quantity="other">To bo ob koncu trenutnega obračunskega obdobja preklicalo %1$s aktivnih naročnin. Naročniki bodo obveščeni. Oglas bo skrit pred kupci.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Izbriši sredstvo?</string>
 </resources>

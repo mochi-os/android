@@ -61,6 +61,7 @@ import androidx.navigation.NavController
 import com.google.gson.Gson
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.PlaceData
+import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -106,6 +107,7 @@ fun EditListingScreen(
     }
 
     var showDeleteConfirm by remember { mutableStateOf(false) }
+    var assetToDelete by remember { mutableStateOf<String?>(null) }
     var showAppealDialog by remember { mutableStateOf(false) }
 
     Scaffold(
@@ -267,7 +269,7 @@ fun EditListingScreen(
                         onUpload = { uris ->
                             viewModel.uploadAsset(uris)
                         },
-                        onDelete = viewModel::deleteAsset,
+                        onDelete = { assetToDelete = it },
                         onReorder = viewModel::reorderAssets,
                         onAddExternal = viewModel::addExternalAsset,
                         isUploading = state.isUploadingAsset,
@@ -408,6 +410,23 @@ fun EditListingScreen(
             destructive = true,
             dismissText = stringResource(R.string.market_editor_zone_cancel),
             dismissEnabled = !state.isDeleting,
+        )
+    }
+
+    // An asset is the file a buyer pays for and the server drops it at once,
+    // so its delete asks first. The confirmation stays up until the delete
+    // answers: success takes the asset off the list and the dialog with it.
+    val pendingAsset = assetToDelete?.let { id -> state.assets.find { it.id == id } }
+    if (pendingAsset != null) {
+        MochiAlertDialog(
+            onDismissRequest = { if (!state.isDeletingAsset) assetToDelete = null },
+            title = stringResource(R.string.market_editor_asset_delete_confirm_title),
+            confirmText = stringResource(MochiR.string.common_delete),
+            onConfirm = { viewModel.deleteAsset(pendingAsset.id) },
+            confirmLoading = state.isDeletingAsset,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+            dismissEnabled = !state.isDeletingAsset,
         )
     }
 

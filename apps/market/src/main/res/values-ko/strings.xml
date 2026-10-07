@@ -792,4 +792,5 @@
         <item quantity="one">현재 결제 기간이 끝나면 활성 구독 %1$s건이 취소됩니다. 구독자에게 알림이 전송됩니다. 상품은 구매자에게 숨겨집니다.</item>
         <item quantity="other">현재 결제 기간이 끝나면 활성 구독 %1$s건이 취소됩니다. 구독자에게 알림이 전송됩니다. 상품은 구매자에게 숨겨집니다.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">자산을 삭제할까요?</string>
 </resources>

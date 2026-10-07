@@ -796,4 +796,5 @@
         <item quantity="few">Sguirear de %1$s fo-sgrìobhaidhean gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
         <item quantity="other">Sguirear de %1$s fo-sgrìobhadh gnìomhach aig deireadh na h-ùine bileachaidh làithreach. Thèid fios a chur gun luchd-fo-sgrìobhaidh. Thèid an sanas fhalach o luchd-ceannach.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Sguab às goireas?</string>
 </resources>

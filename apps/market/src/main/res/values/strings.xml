@@ -230,6 +230,7 @@
     <string name="market_editor_appeal_submit">Submit appeal</string>
     <string name="market_editor_asset_add">Add file</string>
     <string name="market_editor_asset_delete">Remove asset</string>
+    <string name="market_editor_asset_delete_confirm_title">Delete asset?</string>
     <string name="market_editor_asset_external">External URL</string>
     <string name="market_editor_asset_external_add">Add external link</string>
     <string name="market_editor_asset_external_filename">Filename</string>

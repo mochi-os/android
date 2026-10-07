@@ -791,4 +791,5 @@
         <item quantity="one">ይህ %1$s ንቁ ምዝገባን በአሁኑ የክፍያ ጊዜ መጨረሻ ይሰርዛል። ተመዝጋቢዎች ይነገራቸዋል። ዝርዝሩ ከገዢዎች ይደበቃል።</item>
         <item quantity="other">ይህ %1$s ንቁ ምዝገባዎችን በአሁኑ የክፍያ ጊዜ መጨረሻ ይሰርዛል። ተመዝጋቢዎች ይነገራቸዋል። ዝርዝሩ ከገዢዎች ይደበቃል።</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">ንብረት ይሰረዝ?</string>
 </resources>

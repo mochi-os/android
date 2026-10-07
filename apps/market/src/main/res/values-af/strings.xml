@@ -791,4 +791,5 @@
         <item quantity="one">Dit sal %1$s aktiewe intekening aan die einde van die huidige faktureringstydperk kanselleer. Intekenare sal in kennis gestel word. Die advertensie sal vir kopers versteek word.</item>
         <item quantity="other">Dit sal %1$s aktiewe intekeninge aan die einde van die huidige faktureringstydperk kanselleer. Intekenare sal in kennis gestel word. Die advertensie sal vir kopers versteek word.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Skrap bate?</string>
 </resources>

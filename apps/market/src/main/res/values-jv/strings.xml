@@ -792,4 +792,5 @@
         <item quantity="one">Iki bakal mbatalake %1$s langganan aktif ing pungkasan periode tagihan saiki. Pelanggan bakal diwenehi kabar. Iklan bakal didhelikake saka sing tuku.</item>
         <item quantity="other">Iki bakal mbatalake %1$s langganan aktif ing pungkasan periode tagihan saiki. Pelanggan bakal diwenehi kabar. Iklan bakal didhelikake saka sing tuku.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Busak aset?</string>
 </resources>

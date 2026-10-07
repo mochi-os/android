@@ -792,4 +792,5 @@
         <item quantity="one">現在の請求期間の終了時に %1$s 件の有効なサブスクリプションをキャンセルします。購読者に通知されます。出品は購入者に表示されなくなります。</item>
         <item quantity="other">現在の請求期間の終了時に %1$s 件の有効なサブスクリプションをキャンセルします。購読者に通知されます。出品は購入者に表示されなくなります。</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">アセットを削除しますか?</string>
 </resources>
