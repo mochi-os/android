@@ -1,7 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  The Contacts app's description of a Mochi contact: no custom data kinds, so
-  the standard ones apply, all of them editable. Without this file some
-  Contacts apps treat an external account as read-only.
+  The Contacts app's description of a Mochi contact. Contacts apps built on
+  the platform's contacts code, Samsung's among them, treat an external
+  account without an EditSchema as read-only: no Edit on its contacts, and
+  no place among the storage locations to view or save in. The schema
+  lists the kinds the sync carries both ways (ContactsMapping), so nothing
+  the phone lets the user enter is lost on the way to the server, plus
+  photo, which the parser requires; a photo set on the phone stays on the
+  phone. The name kind must claim every name part or the parser rejects the
+  whole schema. Attribute names are the parser's own and take no namespace.
 -->
-<ContactsAccountType xmlns:android="http://schemas.android.com/apk/res/android" />
+<ContactsAccountType xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditSchema>
+        <DataKind
+            kind="name"
+            maxOccurs="1"
+            supportsDisplayName="true"
+            supportsPrefix="true"
+            supportsMiddleName="true"
+            supportsSuffix="true"
+            supportsPhoneticFamilyName="true"
+            supportsPhoneticMiddleName="true"
+            supportsPhoneticGivenName="true" />
+        <DataKind kind="photo" maxOccurs="1" />
+        <DataKind kind="phone">
+            <Type type="mobile" />
+            <Type type="home" />
+            <Type type="work" />
+            <Type type="work_mobile" />
+            <Type type="main" />
+            <Type type="fax_work" />
+            <Type type="fax_home" />
+            <Type type="other_fax" />
+            <Type type="pager" />
+            <Type type="work_pager" />
+            <Type type="car" />
+            <Type type="company_main" />
+            <Type type="isdn" />
+            <Type type="callback" />
+            <Type type="radio" />
+            <Type type="telex" />
+            <Type type="tty_tdd" />
+            <Type type="assistant" />
+            <Type type="mms" />
+            <Type type="other" />
+            <Type type="custom" />
+        </DataKind>
+        <DataKind kind="email">
+            <Type type="home" />
+            <Type type="work" />
+            <Type type="mobile" />
+            <Type type="other" />
+            <Type type="custom" />
+        </DataKind>
+        <DataKind kind="nickname" maxOccurs="1" />
+        <DataKind kind="postal" needsStructured="true">
+            <Type type="home" />
+            <Type type="work" />
+            <Type type="other" />
+            <Type type="custom" />
+        </DataKind>
+        <DataKind kind="organization" maxOccurs="1" />
+        <DataKind kind="website" />
+        <DataKind kind="event" dateWithTime="false">
+            <Type type="birthday" maxOccurs="1" yearOptional="true" />
+        </DataKind>
+        <DataKind kind="note" maxOccurs="1" />
+    </EditSchema>
+</ContactsAccountType>
