@@ -6,12 +6,17 @@
 package org.mochios.calendars
 
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.hasClickAction
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import org.junit.Assert.assertEquals
@@ -25,7 +30,8 @@ import org.mochios.android.i18n.TimeFormat
 import org.mochios.android.i18n.UserPreferences
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Preferences
-import org.mochios.calendars.ui.dialogs.PreferencesDialog
+import org.mochios.calendars.ui.preferences.PreferencesContent
+import org.mochios.calendars.ui.preferences.PreferencesUiState
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
@@ -35,14 +41,14 @@ import java.time.format.TextStyle
 import org.mochios.android.R as MochiR
 
 /**
- * The preferences dialog as the web's: hours named by the user's clock, work
+ * The preferences screen as the web's: hours named by the user's clock, work
  * days as toggles in the user's week order, lengths up to four hours, and
  * Save only once something changed.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "w400dp-h1600dp")
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-class PreferencesDialogTest {
+class PreferencesScreenTest {
 
     @get:Rule
     val rule = createComposeRule()
@@ -53,7 +59,25 @@ class PreferencesDialogTest {
     private fun show(preferences: Preferences, user: UserPreferences = UserPreferences()) {
         rule.setContent {
             CompositionLocalProvider(LocalFormat provides Format(user)) {
-                PreferencesDialog(preferences = preferences, calendars = calendars, saving = false, onDismiss = {}, onConfirm = {})
+                var state by remember {
+                    mutableStateOf(
+                        PreferencesUiState(
+                            opened = preferences,
+                            draft = preferences,
+                            calendars = calendars,
+                            isLoading = false,
+                        ),
+                    )
+                }
+                PreferencesContent(
+                    uiState = state,
+                    onBack = {},
+                    onSave = {},
+                    onRetry = {},
+                    onChange = { change ->
+                        state = state.copy(draft = state.draft?.let(change))
+                    },
+                )
             }
         }
         rule.waitForIdle()
@@ -74,11 +98,22 @@ class PreferencesDialogTest {
     fun `work days are toggles in the order the user's week runs`() {
         show(Preferences(), UserPreferences(weekStartsOn = 6))
         val locale = context.resources.configuration.locales[0]
-        val names = listOf(6, 7, 1, 2, 3, 4, 5).map { DayOfWeek.of(it).getDisplayName(TextStyle.SHORT, locale) }
-        val lefts = names.map { rule.onNodeWithText(it).fetchSemanticsNode().boundsInRoot }
+        val names = listOf(6, 7, 1, 2, 3, 4, 5).map { DayOfWeek.of(it).getDisplayName(TextStyle.FULL, locale) }
+        val lefts = names.map { rule.onNodeWithContentDescription(it).fetchSemanticsNode().boundsInRoot }
         for (index in 1 until lefts.size) {
             assertTrue(names[index], lefts[index].top > lefts[index - 1].top || lefts[index].left > lefts[index - 1].left)
         }
+    }
+
+    @Test
+    fun `work days sit on one line`() {
+        show(Preferences())
+        val locale = context.resources.configuration.locales[0]
+        val tops = DayOfWeek.entries.map { day ->
+            rule.onNodeWithContentDescription(day.getDisplayName(TextStyle.FULL, locale))
+                .fetchSemanticsNode().boundsInRoot.top
+        }
+        assertEquals(1, tops.distinct().size)
     }
 
     @Test
@@ -92,7 +127,7 @@ class PreferencesDialogTest {
         show(Preferences(days = listOf(1, 2, 3, 4, 5)))
         save().assertIsNotEnabled()
         val locale = context.resources.configuration.locales[0]
-        rule.onNodeWithText(DayOfWeek.SATURDAY.getDisplayName(TextStyle.SHORT, locale)).performClick()
+        rule.onNodeWithContentDescription(DayOfWeek.SATURDAY.getDisplayName(TextStyle.FULL, locale)).performClick()
         rule.waitForIdle()
         save().assertIsEnabled()
     }

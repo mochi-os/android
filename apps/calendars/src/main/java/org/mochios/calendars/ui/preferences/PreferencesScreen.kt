@@ -180,7 +180,6 @@ fun PreferencesScreen(
     viewModel: PreferencesViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val draft = uiState.draft
 
     LaunchedEffect(uiState.saved) {
         if (uiState.saved) {
@@ -188,6 +187,29 @@ fun PreferencesScreen(
         }
     }
 
+    PreferencesContent(
+        uiState = uiState,
+        onBack = onBack,
+        onSave = viewModel::save,
+        onRetry = viewModel::load,
+        onChange = viewModel::edit,
+    )
+}
+
+/**
+ * The preferences screen drawn from [uiState] alone: the form once the
+ * preferences are in, the load error, or a spinner. Save turns on once the
+ * draft differs from what was loaded and its hours run forwards.
+ */
+@Composable
+internal fun PreferencesContent(
+    uiState: PreferencesUiState,
+    onBack: () -> Unit,
+    onSave: () -> Unit,
+    onRetry: () -> Unit,
+    onChange: ((Preferences) -> Preferences) -> Unit,
+) {
+    val draft = uiState.draft
     CreateEntityScaffold(
         title = stringResource(R.string.calendars_preferences),
         submitLabel = stringResource(MochiR.string.common_save),
@@ -196,7 +218,7 @@ fun PreferencesScreen(
         isBusy = uiState.isBusy,
         error = uiState.error,
         onBack = onBack,
-        onSubmit = viewModel::save,
+        onSubmit = onSave,
     ) { padding ->
         val loadError = uiState.loadError
         when {
@@ -206,13 +228,13 @@ fun PreferencesScreen(
                         preferences = draft,
                         calendars = uiState.calendars,
                         enabled = !uiState.isBusy,
-                        onChange = viewModel::edit,
+                        onChange = onChange,
                     )
                 }
             }
 
             loadError != null -> Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-                ErrorState(error = loadError, onRetry = viewModel::load)
+                ErrorState(error = loadError, onRetry = onRetry)
             }
 
             else -> Box(
