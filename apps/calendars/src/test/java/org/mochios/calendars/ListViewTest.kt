@@ -10,6 +10,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.test.assertIsDisplayed
@@ -292,6 +293,24 @@ class ListViewTest {
         val background = rule.onRoot().captureToImage().toPixelMap().let { it[it.width - 2, it.height - 2] }
         assertTrue("first row's bottom: ${bottom(0)}", bottom(0).toArgb() != background.toArgb())
         assertEquals(background.toArgb(), bottom(1).toArgb())
+    }
+
+    @Test
+    fun `a day's heading has a rule along its top, darker than its band and the hairline between rows`() {
+        val day = LocalDate.now(london).plusDays(2)
+        events = listOf(day to "Item 1", day to "Item 2")
+        first = noon(day)
+        last = noon(day)
+        val format = Format(UserPreferences())
+        show(open = day, format = format)
+        waitFor("Item 2")
+        val heading = rule.onNodeWithText(heading(day, format)).captureToImage().toPixelMap()
+        val edge = heading[heading.width - 2, 0]
+        val band = heading[heading.width - 2, heading.height / 2]
+        val row = rule.onAllNodesWithTag("row")[0].captureToImage().toPixelMap()
+        val hairline = row[row.width / 2, row.height - 1]
+        assertTrue("rule $edge, band $band", edge.luminance() < band.luminance())
+        assertTrue("rule $edge, hairline $hairline", edge.luminance() < hairline.luminance())
     }
 
     @Test

@@ -61,6 +61,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
@@ -1108,13 +1109,16 @@ fun AgendaRow(
  * weekday and its date in the user's date format, put together the way the
  * user's language orders them. Today's is a band in the primary colour, as
  * every grid marks today; the other days' sit on a muted band, which also
- * keeps the rows from showing through while it stays at the top.
+ * keeps the rows from showing through while it stays at the top. A rule
+ * across its top edge, firmer than the inset lines between one day's
+ * events, marks where the day before ends.
  */
 @Composable
 private fun Heading(day: LocalDate, current: Boolean) {
     val format = LocalFormat.current
     val locale = LocalConfiguration.current.locales[0]
     val colours = MaterialTheme.colorScheme
+    val rule = colours.outline.copy(alpha = 0.5f)
     Text(
         text = stringResource(
             R.string.calendars_list_heading,
@@ -1129,7 +1133,11 @@ private fun Heading(day: LocalDate, current: Boolean) {
             .testTag("heading")
             .fillMaxWidth()
             .background(colours.surface)
-            .background(if (current) colours.primary else colours.surfaceVariant.copy(alpha = 0.6f))
+            .background(if (current) colours.primary else colours.surfaceVariant)
+            .drawBehind {
+                val width = 1.dp.toPx()
+                drawLine(rule, Offset(0f, width / 2), Offset(size.width, width / 2), strokeWidth = width)
+            }
             .padding(horizontal = PAD, vertical = 8.dp),
     )
 }
