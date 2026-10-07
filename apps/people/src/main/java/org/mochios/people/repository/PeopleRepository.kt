@@ -67,8 +67,9 @@ class PeopleRepository @Inject constructor(
         properties: List<ContactProperty>,
         person: String? = null,
         book: String? = null,
+        source: String? = null,
     ): Contact {
-        val contact = api.createContact(ContactRequest(properties, person, book)).unwrap().contact
+        val contact = api.createContact(ContactRequest(properties, person, book, source = source)).unwrap().contact
         _contactsChanged.tryEmit(Unit)
         return contact
     }

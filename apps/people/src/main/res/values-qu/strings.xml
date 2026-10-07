@@ -156,6 +156,7 @@
     <string name="people_contacts_delete_confirm">¿%1$s-ta contactoykikunamanta wischunki?</string>
     <string name="people_contacts_delete_friend_confirm">¿%1$s-ta contactoykikunamanta wischunki? Masi kayniykichikpas tukukunqa.</string>
     <string name="people_contact_new_title">Musuq contacto</string>
+    <string name="people_contact_copy_title">Contactota copiay</string>
     <string name="people_contact_edit_title">Contactota hukchay</string>
     <string name="people_contact_given">Suti</string>
     <string name="people_contact_family">Ayllu suti</string>

@@ -57,6 +57,8 @@ data class ContactRequest(
     val person: String? = null,
     val book: String? = null,
     val slug: String? = null,
+    /** The contact a copy is made from, whose card the copy starts from. */
+    val source: String? = null,
 )
 
 /**

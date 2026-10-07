@@ -156,6 +156,7 @@
     <string name="people_contacts_delete_confirm">%1$s を連絡先から削除しますか？</string>
     <string name="people_contacts_delete_friend_confirm">%1$s を連絡先から削除しますか？友達関係も終了します。</string>
     <string name="people_contact_new_title">新しい連絡先</string>
+    <string name="people_contact_copy_title">連絡先をコピー</string>
     <string name="people_contact_edit_title">連絡先を編集</string>
     <string name="people_contact_given">名</string>
     <string name="people_contact_family">姓</string>

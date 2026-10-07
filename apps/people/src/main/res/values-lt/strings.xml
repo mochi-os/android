@@ -156,6 +156,7 @@
     <string name="people_contacts_delete_confirm">Ištrinti %1$s iš jūsų kontaktų?</string>
     <string name="people_contacts_delete_friend_confirm">Ištrinti %1$s iš jūsų kontaktų? Jūsų draugystė taip pat baigsis.</string>
     <string name="people_contact_new_title">Naujas kontaktas</string>
+    <string name="people_contact_copy_title">Kopijuoti kontaktą</string>
     <string name="people_contact_edit_title">Redaguoti kontaktą</string>
     <string name="people_contact_given">Vardas</string>
     <string name="people_contact_family">Pavardė</string>

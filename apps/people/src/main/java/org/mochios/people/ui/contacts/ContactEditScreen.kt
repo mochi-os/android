@@ -94,9 +94,11 @@ fun ContactEditScreen(
         if (uiState.deleted) onDeleted()
     }
 
-    if (viewModel.creating) {
+    if (viewModel.creating || uiState.copying) {
         CreateEntityScaffold(
-            title = stringResource(R.string.people_contact_new_title),
+            title = stringResource(
+                if (uiState.copying) R.string.people_contact_copy_title else R.string.people_contact_new_title,
+            ),
             submitLabel = stringResource(R.string.people_common_save),
             submitEnabled = form.valid && !uiState.isSaving,
             isBusy = uiState.isSaving,
@@ -118,6 +120,7 @@ fun ContactEditScreen(
             onBack = onBack,
             onSave = { viewModel.save() },
             onRequestDelete = { viewModel.requestDelete() },
+            onCopy = { viewModel.copy() },
             onChange = viewModel::updateForm,
             onFriendToggle = { on ->
                 val contact = uiState.contact ?: return@EditScaffold
@@ -230,6 +233,7 @@ private fun EditScaffold(
     onBack: () -> Unit,
     onSave: () -> Unit,
     onRequestDelete: () -> Unit,
+    onCopy: () -> Unit,
     onChange: (ContactForm) -> Unit,
     onFriendToggle: (Boolean) -> Unit,
 ) {
@@ -266,6 +270,13 @@ private fun EditScaffold(
                     expanded = menuOpen,
                     onDismissRequest = { menuOpen = false },
                 ) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(MochiR.string.common_copy)) },
+                        onClick = {
+                            menuOpen = false
+                            onCopy()
+                        },
+                    )
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.people_contacts_delete)) },
                         onClick = {

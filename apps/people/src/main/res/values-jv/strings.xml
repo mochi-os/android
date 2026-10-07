@@ -156,6 +156,7 @@
     <string name="people_contacts_delete_confirm">Busak %1$s saka kontakmu?</string>
     <string name="people_contacts_delete_friend_confirm">Busak %1$s saka kontakmu? Kekancanmu uga bakal rampung.</string>
     <string name="people_contact_new_title">Kontak anyar</string>
+    <string name="people_contact_copy_title">Salin kontak</string>
     <string name="people_contact_edit_title">Owahi kontak</string>
     <string name="people_contact_given">Jeneng ngarep</string>
     <string name="people_contact_family">Jeneng kulawarga</string>

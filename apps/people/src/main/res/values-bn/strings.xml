@@ -156,6 +156,7 @@
     <string name="people_contacts_delete_confirm">%1$s কে আপনার পরিচিতি থেকে মুছবেন?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s কে আপনার পরিচিতি থেকে মুছবেন? আপনাদের বন্ধুত্বও শেষ হয়ে যাবে।</string>
     <string name="people_contact_new_title">নতুন পরিচিতি</string>
+    <string name="people_contact_copy_title">পরিচিতি কপি করুন</string>
     <string name="people_contact_edit_title">পরিচিতি সম্পাদনা</string>
     <string name="people_contact_given">নামের প্রথম অংশ</string>
     <string name="people_contact_family">পদবি</string>

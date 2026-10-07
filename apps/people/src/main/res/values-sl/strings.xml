@@ -156,6 +156,7 @@
     <string name="people_contacts_delete_confirm">Ali želite izbrisati %1$s iz svojih stikov?</string>
     <string name="people_contacts_delete_friend_confirm">Ali želite izbrisati %1$s iz svojih stikov? Tudi vaše prijateljstvo se konča.</string>
     <string name="people_contact_new_title">Nov stik</string>
+    <string name="people_contact_copy_title">Kopiraj stik</string>
     <string name="people_contact_edit_title">Uredi stik</string>
     <string name="people_contact_given">Ime</string>
     <string name="people_contact_family">Priimek</string>

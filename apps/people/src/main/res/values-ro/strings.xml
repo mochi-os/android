@@ -156,6 +156,7 @@
     <string name="people_contacts_delete_confirm">Ștergeți %1$s din contactele dvs.?</string>
     <string name="people_contacts_delete_friend_confirm">Ștergeți %1$s din contactele dvs.? Și prietenia se încheie.</string>
     <string name="people_contact_new_title">Contact nou</string>
+    <string name="people_contact_copy_title">Copiază contactul</string>
     <string name="people_contact_edit_title">Editează contactul</string>
     <string name="people_contact_given">Prenume</string>
     <string name="people_contact_family">Nume de familie</string>

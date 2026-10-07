@@ -45,6 +45,12 @@ data class ContactEditUiState(
     val unfriendRequested: Boolean = false,
     /** The friend switch is mid-handshake: inviting, cancelling or unfriending. */
     val isToggling: Boolean = false,
+
+    /**
+     * The editor has turned into one for a new contact filled from this one,
+     * the edits not yet saved included; saving creates it from this card.
+     */
+    val copying: Boolean = false,
 )
 
 /**
@@ -191,16 +197,23 @@ class ContactEditViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(conflict = null)
     }
 
+    /** Turns the editor into one for a copy of this contact, keeping what has been typed. */
+    fun copy() {
+        if (creating) return
+        _uiState.value = _uiState.value.copy(copying = true, error = null)
+    }
+
     fun save() {
         val state = _uiState.value
         if (!state.form.valid || state.isSaving) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSaving = true, error = null, conflict = null)
             try {
-                if (creating) {
+                if (creating || state.copying) {
                     repository.createContact(
                         properties = state.form.properties(),
                         book = state.form.book.ifBlank { null },
+                        source = contactId.takeIf { state.copying },
                     )
                     _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
                 } else {
@@ -248,7 +261,7 @@ class ContactEditViewModel @Inject constructor(
     }
 
     fun confirmDelete() {
-        if (creating) return
+        if (creating || _uiState.value.copying) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDeleting = true)
             try {

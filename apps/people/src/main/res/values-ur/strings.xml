@@ -156,6 +156,7 @@
     <string name="people_contacts_delete_confirm">%1$s کو آپ کے رابطوں سے حذف کریں؟</string>
     <string name="people_contacts_delete_friend_confirm">%1$s کو آپ کے رابطوں سے حذف کریں؟ آپ کی دوستی بھی ختم ہو جائے گی۔</string>
     <string name="people_contact_new_title">نیا رابطہ</string>
+    <string name="people_contact_copy_title">رابطہ کاپی کریں</string>
     <string name="people_contact_edit_title">رابطے میں ترمیم کریں</string>
     <string name="people_contact_given">پہلا نام</string>
     <string name="people_contact_family">خاندانی نام</string>

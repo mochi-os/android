@@ -156,6 +156,7 @@
     <string name="people_contacts_delete_confirm">Ufute %1$s kwenye anwani zako?</string>
     <string name="people_contacts_delete_friend_confirm">Ufute %1$s kwenye anwani zako? Urafiki wenu pia utaisha.</string>
     <string name="people_contact_new_title">Anwani mpya</string>
+    <string name="people_contact_copy_title">Nakili anwani</string>
     <string name="people_contact_edit_title">Hariri anwani</string>
     <string name="people_contact_given">Jina la kwanza</string>
     <string name="people_contact_family">Jina la ukoo</string>
