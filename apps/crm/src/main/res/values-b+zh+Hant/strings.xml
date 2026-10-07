@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">群組</string>
     <string name="crm_attachment_remove">移除附件</string>
     <string name="crm_board_add_column">新增欄位</string>
+    <string name="crm_board_reorder_columns">重新排序欄位</string>
+    <string name="crm_board_reorder_columns_hint">長按欄位名稱，然後拖曳</string>
     <string name="crm_settings_entity_id">實體 ID</string>
     <string name="crm_settings_fingerprint">指紋</string>
     <string name="crm_settings_server">伺服器</string>

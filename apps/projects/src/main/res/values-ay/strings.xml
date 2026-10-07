@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Proyecto yatiyawi imantata</string>
     <string name="projects_exporting">Apsuña wakichaskiwa…</string>
     <string name="projects_board_add_column">Columna yapxataña</string>
+    <string name="projects_board_reorder_columns">Columnanak wasitat siqichaña</string>
+    <string name="projects_board_reorder_columns_hint">Columna sutip jach\'a limt\'asa, ukatx qatatim</string>
     <string name="projects_design_sample">Uñacht\'äwi %1$s</string>
     <string name="projects_option_delete_title">Opción chhaqtayaña</string>
     <string name="projects_option_delete_message">¿\"%1$s\" opción chhaqtayañ muntati?</string>

@@ -324,4 +324,5 @@
     <string name="access_remove_message">¿\"%1$s\"-paq yaykuy kamachiyta qichunkichu?</string>
     <string name="color_picker_custom">Sapankuq</string>
     <string name="color_picker_clear">Pichay</string>
+    <string name="common_refresh">Musuqchay</string>
 </resources>

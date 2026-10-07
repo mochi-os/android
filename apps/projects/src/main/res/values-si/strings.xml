@@ -376,6 +376,8 @@
     <string name="projects_export_saved">ව්‍යාපෘති දත්ත සුරකින ලදී</string>
     <string name="projects_exporting">නිර්යාතය සූදානම් කරමින්…</string>
     <string name="projects_board_add_column">තීරුවක් එක් කරන්න</string>
+    <string name="projects_board_reorder_columns">තීරු නැවත අනුපිළිවෙළට සැකසීම</string>
+    <string name="projects_board_reorder_columns_hint">තීරුවක නමට දිගු වේලාවක් ඔබා, පසුව එය අදින්න</string>
     <string name="projects_design_sample">නියැදිය %1$s</string>
     <string name="projects_option_delete_title">විකල්පය මකන්න</string>
     <string name="projects_option_delete_message">ඔබට \"%1$s\" විකල්පය මැකීමට අවශ්‍ය බව සැබෑද?</string>

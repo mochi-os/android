@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ชื่ออุปกรณ์</string>
     <string name="calendars_device_create">สร้าง</string>
     <string name="calendars_device_add">เพิ่มอุปกรณ์</string>
-    <string name="calendars_device_server">เซิร์ฟเวอร์</string>
     <string name="calendars_device_address">ที่อยู่</string>
     <string name="calendars_device_username">ชื่อผู้ใช้</string>
     <string name="calendars_device_password">รหัสผ่าน</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">มีกิจกรรมมากเกินกว่าจะแสดงทั้งหมด เลือกช่วงที่สั้นลง</string>
     <string name="calendars_list_empty">ไม่มีกิจกรรม</string>
     <string name="calendars_list_nothing">ไม่มีกำหนดการ แตะเพื่อสร้างกิจกรรม</string>
+    <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_untitled">(ไม่มีชื่อ)</string>
     <string name="calendars_status_cancelled">ยกเลิกแล้ว</string>
     <string name="calendars_status_tentative">ยังไม่แน่นอน</string>

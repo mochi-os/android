@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Proyecto datokuna waqaychasqa</string>
     <string name="projects_exporting">Exportasqata wakichichkan…</string>
     <string name="projects_board_add_column">Columna yapay</string>
+    <string name="projects_board_reorder_columns">Columnakunata yapamanta ordenay</string>
+    <string name="projects_board_reorder_columns_hint">Columnaq sutinta unayta ñit\'iy, chaymanta aysay</string>
     <string name="projects_design_sample">Rikch\'ana %1$s</string>
     <string name="projects_option_delete_title">Akllana wischuy</string>
     <string name="projects_option_delete_message">¿Cheqaqchu \"%1$s\" akllanata wischuyta munanki?</string>

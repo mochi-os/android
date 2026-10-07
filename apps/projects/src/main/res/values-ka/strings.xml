@@ -376,6 +376,8 @@
     <string name="projects_export_saved">პროექტის მონაცემები შენახულია</string>
     <string name="projects_exporting">ექსპორტის მომზადება…</string>
     <string name="projects_board_add_column">სვეტის დამატება</string>
+    <string name="projects_board_reorder_columns">სვეტების გადაწყობა</string>
+    <string name="projects_board_reorder_columns_hint">ხანგრძლივად დააჭირეთ სვეტის სახელს, შემდეგ გადაათრიეთ</string>
     <string name="projects_design_sample">ნიმუში %1$s</string>
     <string name="projects_option_delete_title">ვარიანტის წაშლა</string>
     <string name="projects_option_delete_message">ნამდვილად გსურთ ვარიანტის \"%1$s\" წაშლა?</string>

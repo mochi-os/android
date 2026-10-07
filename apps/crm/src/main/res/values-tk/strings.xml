@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Toparlar</string>
     <string name="crm_attachment_remove">Goşundyny aýyr</string>
     <string name="crm_board_add_column">Sütün goşmak</string>
+    <string name="crm_board_reorder_columns">Sütünleri täzeden tertiplemek</string>
+    <string name="crm_board_reorder_columns_hint">Sütüniň adyny uzyn basyň, soňra ony süýräň</string>
     <string name="crm_settings_entity_id">Essas ID</string>
     <string name="crm_settings_fingerprint">Barmak yzy</string>
     <string name="crm_settings_server">Serwer</string>

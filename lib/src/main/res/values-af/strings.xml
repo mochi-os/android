@@ -326,4 +326,5 @@
     <string name="access_remove_message">Verwyder toegangsreël vir \"%1$s\"?</string>
     <string name="color_picker_custom">Pasgemaak</string>
     <string name="color_picker_clear">Maak skoon</string>
+    <string name="common_refresh">Verfris</string>
 </resources>

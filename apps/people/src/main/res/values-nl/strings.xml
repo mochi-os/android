@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">In contacten</string>
     <string name="people_device_create">Aanmaken</string>
     <string name="people_device_add">Apparaat toevoegen</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Gebruikersnaam</string>
     <string name="people_device_done">Klaar</string>
     <string name="people_device_used">Laatst gebruikt %1$s</string>

@@ -376,6 +376,8 @@
     <string name="projects_export_saved">An adana bayanan aikin</string>
     <string name="projects_exporting">Ana shirya fitarwa…</string>
     <string name="projects_board_add_column">Ƙara column</string>
+    <string name="projects_board_reorder_columns">Sake tsara columns</string>
+    <string name="projects_board_reorder_columns_hint">Danna kuma riƙe sunan shafi, sannan ja shi</string>
     <string name="projects_design_sample">Samfuri %1$s</string>
     <string name="projects_option_delete_title">Goge zaɓi</string>
     <string name="projects_option_delete_message">Kana da tabbacin kana son goge zaɓin \"%1$s\"?</string>

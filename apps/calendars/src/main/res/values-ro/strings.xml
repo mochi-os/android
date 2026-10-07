@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Numele dispozitivului</string>
     <string name="calendars_device_create">Creează</string>
     <string name="calendars_device_add">Adaugă un dispozitiv</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adresă</string>
     <string name="calendars_device_username">Nume de utilizator</string>
     <string name="calendars_device_password">Parolă</string>
@@ -68,6 +67,7 @@
     <string name="calendars_truncated">Prea multe evenimente pentru a le afișa pe toate. Alege un interval mai scurt.</string>
     <string name="calendars_list_empty">Niciun eveniment</string>
     <string name="calendars_list_nothing">Nimic planificat. Atinge pentru a crea un eveniment.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Fără titlu)</string>
     <string name="calendars_status_cancelled">Anulat</string>
     <string name="calendars_status_tentative">Provizoriu</string>

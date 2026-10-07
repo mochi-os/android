@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Название устройства</string>
     <string name="calendars_device_create">Создать</string>
     <string name="calendars_device_add">Добавить устройство</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Адрес</string>
     <string name="calendars_device_username">Имя пользователя</string>
     <string name="calendars_device_password">Пароль</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Слишком много событий, чтобы показать все. Выберите более короткий диапазон.</string>
     <string name="calendars_list_empty">Нет событий</string>
     <string name="calendars_list_nothing">Ничего не запланировано. Коснитесь, чтобы создать событие.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Без названия)</string>
     <string name="calendars_status_cancelled">Отменено</string>
     <string name="calendars_status_tentative">Под вопросом</string>

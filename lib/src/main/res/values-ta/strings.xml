@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\" க்கான அணுகல் விதியை அகற்றவா?</string>
     <string name="color_picker_custom">தனிப்பயன்</string>
     <string name="color_picker_clear">அழி</string>
+    <string name="common_refresh">புதுப்பி</string>
 </resources>

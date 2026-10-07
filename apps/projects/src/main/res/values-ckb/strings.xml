@@ -378,6 +378,8 @@
     <string name="projects_export_saved">داتای پڕۆژە پاشەکەوت کرا</string>
     <string name="projects_exporting">هەناردە ئامادە دەکرێت…</string>
     <string name="projects_board_add_column">زیادکردنی ستوون</string>
+    <string name="projects_board_reorder_columns">ڕیزکردنەوەی ستوونەکان</string>
+    <string name="projects_board_reorder_columns_hint">دوورودرێژ ناوی ستوونێک پێبدە، پاشان ڕایبکێشە</string>
     <string name="projects_design_sample">نموونە %1$s</string>
     <string name="projects_option_delete_title">سڕینەوەی هەڵبژاردە</string>
     <string name="projects_option_delete_message">دڵنیایت دەتەوێت هەڵبژاردەی \"%1$s\" بسڕیتەوە؟</string>

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Eszköz neve</string>
     <string name="calendars_device_create">Létrehozás</string>
     <string name="calendars_device_add">Eszköz hozzáadása</string>
-    <string name="calendars_device_server">Kiszolgáló</string>
     <string name="calendars_device_address">Cím</string>
     <string name="calendars_device_username">Felhasználónév</string>
     <string name="calendars_device_password">Jelszó</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Túl sok esemény van ahhoz, hogy mindet megjelenítsük. Válasszon rövidebb tartományt.</string>
     <string name="calendars_list_empty">Nincsenek események</string>
     <string name="calendars_list_nothing">Nincs semmi betervezve. Koppintson egy esemény létrehozásához.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(Nincs cím)</string>
     <string name="calendars_status_cancelled">Lemondva</string>
     <string name="calendars_status_tentative">Előzetes</string>

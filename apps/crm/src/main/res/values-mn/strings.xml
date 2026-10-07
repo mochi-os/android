@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Бүлгүүд</string>
     <string name="crm_attachment_remove">Хавсралт хасах</string>
     <string name="crm_board_add_column">Багана нэмэх</string>
+    <string name="crm_board_reorder_columns">Баганыг дахин эрэмбэлэх</string>
+    <string name="crm_board_reorder_columns_hint">Баганын нэрийг удаан дараад чирнэ үү</string>
     <string name="crm_settings_entity_id">Нэгжийн ID</string>
     <string name="crm_settings_fingerprint">Хурууны хээ</string>
     <string name="crm_settings_server">Сервер</string>

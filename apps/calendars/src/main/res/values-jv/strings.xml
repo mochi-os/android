@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Jeneng piranti</string>
     <string name="calendars_device_create">Gawé</string>
     <string name="calendars_device_add">Tambah piranti</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Alamat</string>
     <string name="calendars_device_username">Jeneng panganggo</string>
     <string name="calendars_device_password">Tembung sandhi</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Acarané kakèhan kanggo ditampilake kabèh. Pilih rentang sing luwih cendhak.</string>
     <string name="calendars_list_empty">Ora ana acara</string>
     <string name="calendars_list_nothing">Ora ana rencana. Tutul kanggo gawé acara.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Tanpa judul)</string>
     <string name="calendars_status_cancelled">Dibatalaké</string>
     <string name="calendars_status_tentative">Sementara</string>

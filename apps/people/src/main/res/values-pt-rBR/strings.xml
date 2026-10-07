@@ -145,7 +145,6 @@
     <string name="people_contact_title">Cargo</string>
     <string name="people_contacts_title">Contatos</string>
     <string name="people_device_create">Criar</string>
-    <string name="people_device_server">Servidor</string>
     <string name="people_device_username">Nome de usuário</string>
     <string name="people_device_done">Pronto</string>
     <string name="people_device_used">Último uso em %1$s</string>

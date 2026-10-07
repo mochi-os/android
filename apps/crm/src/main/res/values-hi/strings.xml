@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">ग्रुप</string>
     <string name="crm_attachment_remove">अनुलग्नक हटाएं</string>
     <string name="crm_board_add_column">कॉलम जोड़ें</string>
+    <string name="crm_board_reorder_columns">कॉलम्स फिर से ऑर्डर करें</string>
+    <string name="crm_board_reorder_columns_hint">कॉलम के नाम को देर तक दबाएँ, फिर उसे खींचें</string>
     <string name="crm_settings_entity_id">एंटिटी ID</string>
     <string name="crm_settings_fingerprint">फिंगरप्रिंट</string>
     <string name="crm_settings_server">सर्वर</string>

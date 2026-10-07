@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Emri i pajisjes</string>
     <string name="calendars_device_create">Krijo</string>
     <string name="calendars_device_add">Shto një pajisje</string>
-    <string name="calendars_device_server">Serveri</string>
     <string name="calendars_device_address">Adresa</string>
     <string name="calendars_device_username">Emri i përdoruesit</string>
     <string name="calendars_device_password">Fjalëkalimi</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Ka shumë ngjarje për t\'i shfaqur të gjitha. Zgjidhni një interval më të shkurtër.</string>
     <string name="calendars_list_empty">Asnjë ngjarje</string>
     <string name="calendars_list_nothing">Asgjë e planifikuar. Trokit për të krijuar një ngjarje.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Pa titull)</string>
     <string name="calendars_status_cancelled">Anuluar</string>
     <string name="calendars_status_tentative">Paraprak</string>

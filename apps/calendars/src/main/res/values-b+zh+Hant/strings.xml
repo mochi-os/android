@@ -34,7 +34,6 @@
     <string name="calendars_device_name">裝置名稱</string>
     <string name="calendars_device_create">建立</string>
     <string name="calendars_device_add">新增裝置</string>
-    <string name="calendars_device_server">伺服器</string>
     <string name="calendars_device_address">位址</string>
     <string name="calendars_device_username">使用者名稱</string>
     <string name="calendars_device_password">密碼</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">活動過多，無法全部顯示。請選擇較短的期間。</string>
     <string name="calendars_list_empty">無活動</string>
     <string name="calendars_list_nothing">沒有安排。點按即可建立活動。</string>
+    <string name="calendars_list_heading">%2$s（%1$s）</string>
     <string name="calendars_untitled">（無標題）</string>
     <string name="calendars_status_cancelled">已取消</string>
     <string name="calendars_status_tentative">暫定</string>

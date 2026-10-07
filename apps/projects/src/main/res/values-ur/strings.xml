@@ -376,6 +376,8 @@
     <string name="projects_export_saved">پروجیکٹ ڈیٹا محفوظ ہو گیا</string>
     <string name="projects_exporting">ایکسپورٹ تیار کیا جا رہا ہے…</string>
     <string name="projects_board_add_column">کالم شامل کریں</string>
+    <string name="projects_board_reorder_columns">کالمز کی ترتیب تبدیل کریں</string>
+    <string name="projects_board_reorder_columns_hint">کالم کے نام کو دیر تک دبائیں، پھر اسے گھسیٹیں</string>
     <string name="projects_design_sample">نمونہ %1$s</string>
     <string name="projects_option_delete_title">آپشن حذف کریں</string>
     <string name="projects_option_delete_message">کیا آپ واقعی آپشن \"%1$s\" کو حذف کرنا چاہتے ہیں؟</string>

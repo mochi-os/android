@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Apparaatnaam</string>
     <string name="calendars_device_create">Aanmaken</string>
     <string name="calendars_device_add">Apparaat toevoegen</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adres</string>
     <string name="calendars_device_username">Gebruikersnaam</string>
     <string name="calendars_device_password">Wachtwoord</string>
@@ -68,6 +67,7 @@
     <string name="calendars_truncated">Te veel afspraken om ze allemaal te tonen. Kies een kortere periode.</string>
     <string name="calendars_list_empty">Geen afspraken</string>
     <string name="calendars_list_nothing">Niets gepland. Tik om een afspraak te maken.</string>
+    <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_untitled">(Geen titel)</string>
     <string name="calendars_status_cancelled">Geannuleerd</string>
     <string name="calendars_status_tentative">Voorlopig</string>

@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Nhóm</string>
     <string name="crm_attachment_remove">Xóa tệp đính kèm</string>
     <string name="crm_board_add_column">Thêm cột</string>
+    <string name="crm_board_reorder_columns">Sắp xếp lại cột</string>
+    <string name="crm_board_reorder_columns_hint">Nhấn giữ tên cột, rồi kéo</string>
     <string name="crm_settings_entity_id">ID thực thể</string>
     <string name="crm_settings_fingerprint">Dấu vân tay</string>
     <string name="crm_settings_server">Máy chủ</string>

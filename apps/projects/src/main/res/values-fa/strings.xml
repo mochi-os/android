@@ -376,6 +376,8 @@
     <string name="projects_export_saved">داده‌های پروژه ذخیره شد</string>
     <string name="projects_exporting">در حال آماده‌سازی خروجی…</string>
     <string name="projects_board_add_column">افزودن ستون</string>
+    <string name="projects_board_reorder_columns">مرتب‌سازی مجدد ستون‌ها</string>
+    <string name="projects_board_reorder_columns_hint">نام یک ستون را لمس طولانی کنید، سپس آن را بکشید</string>
     <string name="projects_design_sample">نمونه %1$s</string>
     <string name="projects_option_delete_title">حذف گزینه</string>
     <string name="projects_option_delete_message">آیا مطمئن هستید که می‌خواهید گزینهٔ \"%1$s\" را حذف کنید؟</string>

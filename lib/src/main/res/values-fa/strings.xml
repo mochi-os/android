@@ -324,4 +324,5 @@
     <string name="access_remove_message">قانون دسترسی برای «%1$s» حذف شود؟</string>
     <string name="color_picker_custom">سفارشی</string>
     <string name="color_picker_clear">پاک کردن</string>
+    <string name="common_refresh">تازه‌سازی</string>
 </resources>

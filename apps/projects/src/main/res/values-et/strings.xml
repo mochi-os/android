@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Projekti andmed salvestatud</string>
     <string name="projects_exporting">Ekspordi ettevalmistamine…</string>
     <string name="projects_board_add_column">Lisa veerg</string>
+    <string name="projects_board_reorder_columns">Järjesta veerud ümber</string>
+    <string name="projects_board_reorder_columns_hint">Vajuta pikalt veeru nimele ja lohista seda</string>
     <string name="projects_design_sample">Näidis %1$s</string>
     <string name="projects_option_delete_title">Kustuta valik</string>
     <string name="projects_option_delete_message">Kas oled kindel, et soovid kustutada valiku \"%1$s\"?</string>

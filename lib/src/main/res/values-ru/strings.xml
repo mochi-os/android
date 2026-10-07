@@ -326,4 +326,5 @@
     <string name="access_remove_message">Удалить правило доступа для «%1$s»?</string>
     <string name="color_picker_custom">Пользовательский</string>
     <string name="color_picker_clear">Очистить</string>
+    <string name="common_refresh">Обновить</string>
 </resources>

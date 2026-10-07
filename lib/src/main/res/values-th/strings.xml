@@ -324,4 +324,5 @@
     <string name="access_remove_message">นำกฎการเข้าถึงสำหรับ \"%1$s\" ออกหรือไม่</string>
     <string name="color_picker_custom">กำหนดเอง</string>
     <string name="color_picker_clear">ล้าง</string>
+    <string name="common_refresh">รีเฟรช</string>
 </resources>

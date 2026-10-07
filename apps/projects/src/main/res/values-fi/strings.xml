@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Projektin tiedot tallennettu</string>
     <string name="projects_exporting">Valmistellaan vientiä…</string>
     <string name="projects_board_add_column">Lisää sarake</string>
+    <string name="projects_board_reorder_columns">Järjestä sarakkeet uudelleen</string>
+    <string name="projects_board_reorder_columns_hint">Paina sarakkeen nimeä pitkään ja vedä sitten</string>
     <string name="projects_design_sample">Esimerkki %1$s</string>
     <string name="projects_option_delete_title">Poista vaihtoehto</string>
     <string name="projects_option_delete_message">Haluatko varmasti poistaa vaihtoehdon \"%1$s\"?</string>

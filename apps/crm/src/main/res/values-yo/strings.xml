@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Àwọn àwùjọ</string>
     <string name="crm_attachment_remove">Yọ àsomọ́ kúrò</string>
     <string name="crm_board_add_column">Fi ọ̀wọ́n kún</string>
+    <string name="crm_board_reorder_columns">Tún àwọn ọ̀wọ́n tò</string>
+    <string name="crm_board_reorder_columns_hint">Tẹ̀ orúkọ ọwọ̀n kan pẹ́, lẹ́yìn náà fà á</string>
     <string name="crm_settings_entity_id">ID Ẹ̀ka</string>
     <string name="crm_settings_fingerprint">Àmì-ìka</string>
     <string name="crm_settings_server">Sáfà</string>

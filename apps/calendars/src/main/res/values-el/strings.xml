@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Όνομα συσκευής</string>
     <string name="calendars_device_create">Δημιουργία</string>
     <string name="calendars_device_add">Προσθήκη συσκευής</string>
-    <string name="calendars_device_server">Διακομιστής</string>
     <string name="calendars_device_address">Διεύθυνση</string>
     <string name="calendars_device_username">Όνομα χρήστη</string>
     <string name="calendars_device_password">Κωδικός πρόσβασης</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Υπάρχουν πάρα πολλά συμβάντα για να εμφανιστούν όλα. Επιλέξτε μικρότερο εύρος.</string>
     <string name="calendars_list_empty">Δεν υπάρχουν συμβάντα</string>
     <string name="calendars_list_nothing">Δεν υπάρχει τίποτα προγραμματισμένο. Πατήστε για να δημιουργήσετε ένα συμβάν.</string>
+    <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_untitled">(Χωρίς τίτλο)</string>
     <string name="calendars_status_cancelled">Ακυρώθηκε</string>
     <string name="calendars_status_tentative">Με επιφύλαξη</string>

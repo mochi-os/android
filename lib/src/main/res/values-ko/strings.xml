@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\"의 접근 규칙을 제거할까요?</string>
     <string name="color_picker_custom">사용자 지정</string>
     <string name="color_picker_clear">지우기</string>
+    <string name="common_refresh">새로고침</string>
 </resources>

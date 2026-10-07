@@ -378,6 +378,8 @@
     <string name="projects_export_saved">Chaidh dàta a\' phròiseict a shàbhaladh</string>
     <string name="projects_exporting">A\' deasachadh an às-phortaidh…</string>
     <string name="projects_board_add_column">Cuir colbh ris</string>
+    <string name="projects_board_reorder_columns">Ath-òrdaich colbhan</string>
+    <string name="projects_board_reorder_columns_hint">Brùth fada air ainm colbh, an uairsin slaod e</string>
     <string name="projects_design_sample">Sampall %1$s</string>
     <string name="projects_option_delete_title">Sguab às roghainn</string>
     <string name="projects_option_delete_message">A bheil thu cinnteach gu bheil thu airson an roghainn \"%1$s\" a sguabadh às?</string>

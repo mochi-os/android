@@ -33,6 +33,7 @@ import org.mochios.calendars.ui.calendar.CalendarEvent
 import org.mochios.calendars.ui.calendar.CalendarViewModel
 import org.mochios.calendars.ui.calendar.Moved
 import org.mochios.calendars.ui.calendar.step
+import org.mochios.calendars.ui.editor.defaultStart
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
@@ -42,6 +43,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.time.Instant
 import java.time.LocalDate
+import java.time.LocalTime
 import java.time.ZoneId
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.CountDownLatch
@@ -243,7 +245,10 @@ class CalendarFlowTest {
         model.anchor(today.minusDays(10))
         assertEquals(today.minusDays(10), Instant.ofEpochSecond(model.creation()).atZone(london).toLocalDate())
         model.anchor(today)
-        assertEquals(today, Instant.ofEpochSecond(model.creation()).atZone(london).toLocalDate())
+        // Today's starts at the next whole hour, which from 23:00 is the
+        // start of tomorrow's working hours, as the web's does.
+        val expected = defaultStart(today, today, LocalTime.now(london), model.uiState.value.preferences.hours).toLocalDate()
+        assertEquals(expected, Instant.ofEpochSecond(model.creation()).atZone(london).toLocalDate())
     }
 
     // ---- search, views and refreshing ----

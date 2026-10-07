@@ -324,4 +324,5 @@
     <string name="access_remove_message">د \"%1$s\" لپاره د لاسرسي قاعده لرې شي؟</string>
     <string name="color_picker_custom">دودیز</string>
     <string name="color_picker_clear">پاک کړئ</string>
+    <string name="common_refresh">تازه کول</string>
 </resources>

@@ -324,4 +324,5 @@
     <string name="access_remove_message">Да се отстрани правилото за пристап за „%1$s“?</string>
     <string name="color_picker_custom">Прилагодено</string>
     <string name="color_picker_clear">Исчисти</string>
+    <string name="common_refresh">Освежи</string>
 </resources>

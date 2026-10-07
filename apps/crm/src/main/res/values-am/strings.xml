@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">ቡድኖች</string>
     <string name="crm_attachment_remove">አባሪውን ያስወግዱ</string>
     <string name="crm_board_add_column">ዓምድ ጨምር</string>
+    <string name="crm_board_reorder_columns">አምዶችን እንደገና አደራጅ</string>
+    <string name="crm_board_reorder_columns_hint">የዓምድ ስም ረዥም-ተጭነው ከዚያ ይጎትቱት</string>
     <string name="crm_settings_entity_id">የአካል መለያ</string>
     <string name="crm_settings_fingerprint">ጣት አሻራ</string>
     <string name="crm_settings_server">ሰርቨር</string>

@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Garee</string>
     <string name="crm_attachment_remove">Maxxansaa haqi</string>
     <string name="crm_board_add_column">Tarjaa dabali</string>
+    <string name="crm_board_reorder_columns">Tarjaalee deebisanii tartiibessuu</string>
+    <string name="crm_board_reorder_columns_hint">Maqaa kolomii dheeraadhaan cuqaasiitii, achiis harkisi</string>
     <string name="crm_settings_entity_id">ID Qaamaa</string>
     <string name="crm_settings_fingerprint">Maxxansa quba</string>
     <string name="crm_settings_server">Sarvarii</string>

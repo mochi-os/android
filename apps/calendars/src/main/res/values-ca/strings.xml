@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Nom del dispositiu</string>
     <string name="calendars_device_create">Crea</string>
     <string name="calendars_device_add">Afegeix un dispositiu</string>
-    <string name="calendars_device_server">Servidor</string>
     <string name="calendars_device_address">Adreça</string>
     <string name="calendars_device_username">Nom d\'usuari</string>
     <string name="calendars_device_password">Contrasenya</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Hi ha massa esdeveniments per mostrar-los tots. Trieu un interval més curt.</string>
     <string name="calendars_list_empty">Sense esdeveniments</string>
     <string name="calendars_list_nothing">No hi ha res previst. Toqueu per crear un esdeveniment.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Sense títol)</string>
     <string name="calendars_status_cancelled">Cancel·lat</string>
     <string name="calendars_status_tentative">Provisional</string>

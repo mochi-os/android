@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">Aya dina kontak</string>
     <string name="people_device_create">Jieun</string>
     <string name="people_device_add">Tambah pakakas</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Ngaran pamaké</string>
     <string name="people_device_done">Beres</string>
     <string name="people_device_used">Pamungkas dipake %1$s</string>

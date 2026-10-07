@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Enhetsnavn</string>
     <string name="calendars_device_create">Opprett</string>
     <string name="calendars_device_add">Legg til en enhet</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adresse</string>
     <string name="calendars_device_username">Brukernavn</string>
     <string name="calendars_device_password">Passord</string>
@@ -68,6 +67,7 @@
     <string name="calendars_truncated">For mange hendelser til å vise alle. Velg en kortere periode.</string>
     <string name="calendars_list_empty">Ingen hendelser</string>
     <string name="calendars_list_nothing">Ingenting planlagt. Trykk for å opprette en hendelse.</string>
+    <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_untitled">(Ingen tittel)</string>
     <string name="calendars_status_cancelled">Avlyst</string>
     <string name="calendars_status_tentative">Foreløpig</string>

@@ -10,6 +10,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.toPixelMap
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.getOrNull
+import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.click
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -87,8 +90,6 @@ class MonthGridTest {
     }
 
     private val shown = mutableStateOf(LocalDate.of(2026, 10, 1))
-
-    private val NUMBERS = 22.dp
 
     @Before
     fun begin() {
@@ -171,15 +172,18 @@ class MonthGridTest {
 
     private fun bounds(tag: String): Rect = rule.onNodeWithTag(tag).fetchSemanticsNode().boundsInRoot
 
-    /** A point well inside the cell for [day] on the grid of [month], towards its far side. */
-    private fun cell(day: LocalDate, month: LocalDate = shown.value): Offset {
+    /**
+     * A point inside the cell for [day] on the grid of [month], [side] of
+     * the way across it: towards its far side unless asked otherwise.
+     */
+    private fun cell(day: LocalDate, month: LocalDate = shown.value, side: Float = 0.8f): Offset {
         val weeks = grid(month)
         val box = bounds("weeks")
         val row = weeks.indexOfLast { !it.isAfter(day) }
         val column = ((day.dayOfWeek.value + 6) % 7)
-        val width = (box.width - px(NUMBERS)) / 7
+        val width = box.width / 7
         val height = box.height / weeks.size
-        return Offset(box.left + px(NUMBERS) + width * (column + 0.8f), box.top + height * (row + 0.7f))
+        return Offset(box.left + width * (column + side), box.top + height * (row + 0.7f))
     }
 
     private fun press(at: Offset) {
@@ -200,12 +204,29 @@ class MonthGridTest {
     // ---- week numbers ----
 
     @Test
-    fun `each row is led by its ISO week number`() {
+    fun `each row is labelled with its ISO week number`() {
         show(emptyList())
-        val numbers = rule.onAllNodesWithTag("week-number").fetchSemanticsNodes().map {
+        val numbers = rule.onAllNodesWithTag("week-number", useUnmergedTree = true).fetchSemanticsNodes().map {
             it.config[androidx.compose.ui.semantics.SemanticsProperties.Text].joinToString { text -> text.text }
         }
         assertEquals(listOf("40", "41", "42", "43", "44", "45"), numbers)
+    }
+
+    @Test
+    fun `a week number sits in its row's first day, opposite the date, and the days start at the grid's edge`() {
+        show(emptyList())
+        val box = bounds("weeks")
+        val cells = listOf("inside", "outside").flatMap { tag ->
+            rule.onAllNodesWithTag(tag, useUnmergedTree = true).fetchSemanticsNodes().map { it.boundsInRoot }
+        }
+        val numbers = rule.onAllNodesWithTag("week-number", useUnmergedTree = true).fetchSemanticsNodes()
+        assertEquals(6, numbers.size)
+        for (number in numbers.map { it.boundsInRoot }) {
+            val cell = cells.single { it.contains(number.center) }
+            assertEquals(box.left, cell.left, 1f)
+            // The date is at the cell's start, so the number takes its end.
+            assertTrue(number.center.x > cell.center.x)
+        }
     }
 
     @Test
@@ -214,6 +235,69 @@ class MonthGridTest {
         assertEquals(41, number(LocalDate.of(2026, 10, 4)))
         assertEquals(41, number(LocalDate.of(2026, 10, 3)))
         assertEquals(41, number(LocalDate.of(2026, 10, 5)))
+    }
+
+    // ---- how an entry reads ----
+
+    /** An entry's own bounds, the clickable node that holds its words. */
+    private fun entry(title: String): Rect = rule.onNodeWithText(title).fetchSemanticsNode().boundsInRoot
+
+    /** The bounds of an entry's title text alone. */
+    private fun words(title: String): Rect =
+        rule.onAllNodesWithText(title, useUnmergedTree = true).fetchSemanticsNodes().last().boundsInRoot
+
+    /** The bounds of the first text that reads as a clock, such as "10:00 AM". */
+    private fun clock(): Rect = rule.onAllNodes(
+        SemanticsMatcher("a clock reading") { node ->
+            node.config.getOrNull(SemanticsProperties.Text).orEmpty().any { Regex("^\\d{1,2}[:.]\\d{2}").containsMatchIn(it.text) }
+        },
+        useUnmergedTree = true,
+    ).fetchSemanticsNodes().first().boundsInRoot
+
+    @Test
+    fun `a timed entry puts its dot and time on the first line and its title alone on the second`() {
+        show(listOf(meeting(LocalDate.of(2026, 10, 14))))
+        val chip = entry("Stand-up")
+        val title = words("Stand-up")
+        val time = clock()
+        assertTrue(time.bottom <= title.top + 1f)
+        // The title starts at the entry's padding, with no dot before it;
+        // the dot and its gap come before the time instead.
+        assertEquals(px(4.dp), title.left - chip.left, 1.5f)
+        assertEquals(px(4.dp + 8.dp + 4.dp), time.left - chip.left, 1.5f)
+    }
+
+    @Test
+    fun `the dot sits on the time's line, before the time`() {
+        show(listOf(meeting(LocalDate.of(2026, 10, 14))))
+        val chip = entry("Stand-up")
+        val row = (clock().center.y - chip.top).toInt()
+        val pixels = rule.onNodeWithText("Stand-up").captureToImage().toPixelMap()
+        // Where the dot is, against the empty end of the same line.
+        assertNotEquals(pixels[pixels.width - 2, row], pixels[px(8.dp).toInt(), row])
+    }
+
+    @Test
+    fun `a timed entry beneath a full band of bars keeps both its lines in view`() {
+        val alone = LocalDate.of(2026, 10, 14)
+        val crowded = LocalDate.of(2026, 10, 21)
+        val midnight = crowded.atStartOfDay(london).toEpochSecond()
+        val bars = (1..6).map { index ->
+            Instance(event = "b$index", calendar = "c1", summary = "Bar $index", allday = true, date = crowded.toString(), start = midnight, finish = midnight + 86400)
+        }
+        show(bars + meeting(alone) + meeting(crowded).copy(event = "e2", summary = "Crowded"))
+        assertEquals(entry("Stand-up").height, entry("Crowded").height, 1f)
+    }
+
+    @Test
+    fun `an all-day entry stays one line, its dot before its title`() {
+        val day = LocalDate.of(2026, 10, 14)
+        val midnight = day.atStartOfDay(london).toEpochSecond()
+        show(listOf(Instance(event = "a1", calendar = "c1", summary = "Holiday", allday = true, date = day.toString(), start = midnight, finish = midnight + 86400)))
+        val chip = entry("Holiday")
+        val title = words("Holiday")
+        assertEquals(px(4.dp + 8.dp + 4.dp), title.left - chip.left, 1.5f)
+        assertTrue(chip.height < px(24.dp))
     }
 
     // ---- days outside the month ----
@@ -276,6 +360,16 @@ class MonthGridTest {
         assertEquals(listOf(tuesday to tuesday.plusDays(8)), ranged)
         assertTrue(created.isEmpty())
         assertEquals(listOf(false, true, false), holding)
+    }
+
+    @Test
+    fun `a run reaches the day whose near edge the finger is on`() {
+        show(emptyList())
+        val tuesday = LocalDate.of(2026, 10, 13)
+        press(cell(tuesday))
+        move(cell(tuesday.plusDays(2), side = 0.15f))
+        release()
+        assertEquals(listOf(tuesday to tuesday.plusDays(2)), ranged)
     }
 
     @Test

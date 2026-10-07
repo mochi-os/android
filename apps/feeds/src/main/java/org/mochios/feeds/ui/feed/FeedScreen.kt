@@ -29,6 +29,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
@@ -50,7 +51,6 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PlayCircle
-import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.BookmarkBorder
@@ -78,6 +78,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
@@ -155,10 +156,10 @@ import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.MochiTextButton
-import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.ui.components.RefreshButton
 import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.VideoPlayer
 import org.mochios.android.ui.components.rememberServerUrl
@@ -342,37 +343,10 @@ fun FeedScreen(
         }
     }
 
-    // Refreshes replace and re-rank the posts list, so a pager index can point
-    // at a different post afterwards. Anchor by looking up the LIVE currentPage
-    // in the PREVIOUS list - a tracked id lags a swipe and yanks the reader
-    // back. suppressAnchorRestore opts a manual refresh out.
-    var previousPosts by remember { mutableStateOf(posts) }
-    var suppressAnchorRestore by remember { mutableStateOf(false) }
-    // Set by the "new posts" pill: jump to the top once the refreshed list lands.
-    // Uses requestScrollToPage so it survives the keyed pager's data-change scroll
-    // restoration (which would otherwise keep the reader on their current post).
-    var goToTopOnRefresh by remember { mutableStateOf(false) }
-    LaunchedEffect(posts) {
-        val oldPosts = previousPosts
-        previousPosts = posts
-        if (goToTopOnRefresh) {
-            goToTopOnRefresh = false
-            pagerState.requestScrollToPage(0)
-            return@LaunchedEffect
-        }
-        if (suppressAnchorRestore) {
-            suppressAnchorRestore = false
-            return@LaunchedEffect
-        }
-        // The post under the reader right now, taken from the list as it was at
-        // the page they've actually swiped to — so a stale anchor can't fight a
-        // swipe that the currentPage→id sync hasn't caught up with yet.
-        val viewingId = oldPosts.getOrNull(pagerState.currentPage)?.id ?: return@LaunchedEffect
-        val index = posts.indexOfFirst { post -> post.id == viewingId }
-        if (index >= 0 && index != pagerState.currentPage) {
-            pagerState.scrollToPage(index)
-        }
-    }
+    // Set by a refresh the reader asked for - the button or the pull - which
+    // lands on the first post, where the posts counted on the button are.
+    val refreshToTop = remember { mutableStateOf(false) }
+    TopEffect(pagerState, posts, isRefreshing, refreshToTop)
 
     // Freeze guard: a pager resting at a fractional offset (interrupted settle)
     // would leave the fold stuck mid-flip, so snap it to the nearest page.
@@ -515,21 +489,24 @@ fun FeedScreen(
                         }
                     },
                     actions = {
-                        MochiIconButton(onClick = {
-                            // A manual refresh intentionally returns to the top, so
-                            // don't let the anchor-restore effect pull the reader
-                            // back to the post they were on when the new list lands.
-                            suppressAnchorRestore = true
-                            viewModel.refresh()
-                            // Also jump back to the first post, so refresh both
-                            // reloads and returns the user to the top of the feed.
-                            drawerScope.launch { pagerState.animateScrollToPage(0) }
-                        }) {
-                            Icon(
-                                Icons.Default.Refresh,
-                                contentDescription = stringResource(R.string.feeds_refresh)
-                            )
-                        }
+                        RefreshButton(
+                            count = newPostsCount,
+                            label = pluralStringResource(
+                                R.plurals.feeds_new_posts,
+                                newPostsCount,
+                                LocalFormat.current.formatNumber(newPostsCount)
+                            ),
+                            onClick = {
+                                // A manual refresh intentionally returns to the top,
+                                // rather than to the post the reader was on when the
+                                // new list lands.
+                                refreshToTop.value = true
+                                viewModel.refresh()
+                                // Start back for the first post at once, so the
+                                // reader is not left waiting on the reload.
+                                drawerScope.launch { pagerState.animateScrollToPage(0) }
+                            },
+                        )
                         NotificationBell(onClick = onOpenNotifications)
                         if (permissions.manage) {
                             MochiIconButton(onClick = { onNavigateToCreatePost(viewModel.feedId) }) {
@@ -754,7 +731,7 @@ fun FeedScreen(
                     onRefresh = {
                         // Pull-to-refresh settles at the top rather than
                         // anchor-restoring to the current post.
-                        suppressAnchorRestore = true
+                        refreshToTop.value = true
                         viewModel.refresh()
                     },
                     modifier = Modifier
@@ -966,22 +943,6 @@ fun FeedScreen(
                                             pageCount = posts.size,
                                             page = renderPost,
                                         )
-                                        NewItemsPill(
-                                            count = newPostsCount,
-                                            label = pluralStringResource(
-                                                R.plurals.feeds_new_posts,
-                                                newPostsCount,
-                                                LocalFormat.current.formatNumber(newPostsCount)
-                                            ),
-                                            onClick = {
-                                                // Refresh and jump to the top: the
-                                                // anchor effect requests page 0 once
-                                                // the new list lands (goToTopOnRefresh).
-                                                goToTopOnRefresh = true
-                                                viewModel.showNewPosts()
-                                            },
-                                            modifier = Modifier.align(Alignment.TopCenter),
-                                        )
                                     }
                                 }
                             }
@@ -1069,6 +1030,30 @@ fun FeedScreen(
     }
     if (showAbout) {
         AboutDialog(onDismiss = { showAbout = false })
+    }
+}
+
+/**
+ * Lands the pager on its first post once a refresh the reader asked for ends,
+ * [top] having been set as it started. The keyed pager otherwise holds on to
+ * the post it was showing - which is what keeps the reader's place when the
+ * list changes under them - and leaves the new ones above it out of sight.
+ * [refreshing] is a key so that a refresh which changes nothing still spends
+ * the request, rather than leaving it for a later change the reader did not
+ * ask for.
+ */
+@Composable
+internal fun TopEffect(
+    pagerState: PagerState,
+    posts: List<Post>,
+    refreshing: Boolean,
+    top: MutableState<Boolean>,
+) {
+    LaunchedEffect(posts, refreshing) {
+        if (top.value && !refreshing) {
+            top.value = false
+            pagerState.requestScrollToPage(0)
+        }
     }
 }
 

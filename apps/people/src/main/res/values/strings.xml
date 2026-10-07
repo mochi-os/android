@@ -219,7 +219,6 @@
     <string name="people_device_name">Device name</string>
     <string name="people_device_create">Create</string>
     <string name="people_device_add">Add device</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_address">Address book URL</string>
     <string name="people_device_username">Username</string>
     <string name="people_device_password">Password</string>

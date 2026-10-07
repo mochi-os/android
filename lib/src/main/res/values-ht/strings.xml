@@ -324,4 +324,5 @@
     <string name="access_remove_message">Retire règ aksè pou \"%1$s\"?</string>
     <string name="color_picker_custom">Pèsonalize</string>
     <string name="color_picker_clear">Efase</string>
+    <string name="common_refresh">Rafrechi</string>
 </resources>

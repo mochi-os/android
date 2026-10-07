@@ -324,4 +324,5 @@
     <string name="access_remove_message">Alih keluar peraturan akses untuk \"%1$s\"?</string>
     <string name="color_picker_custom">Tersuai</string>
     <string name="color_picker_clear">Kosongkan</string>
+    <string name="common_refresh">Muat semula</string>
 </resources>

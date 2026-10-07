@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">رابطوں میں</string>
     <string name="people_device_create">بنائیں</string>
     <string name="people_device_add">ڈیوائس شامل کریں</string>
-    <string name="people_device_server">سرور</string>
     <string name="people_device_username">صارف نام</string>
     <string name="people_device_done">مکمل</string>
     <string name="people_device_used">آخری استعمال %1$s</string>

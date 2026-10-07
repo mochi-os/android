@@ -34,7 +34,6 @@
     <string name="calendars_device_name">डिव्हाइसचे नाव</string>
     <string name="calendars_device_create">तयार करा</string>
     <string name="calendars_device_add">डिव्हाइस जोडा</string>
-    <string name="calendars_device_server">सर्व्हर</string>
     <string name="calendars_device_address">पत्ता</string>
     <string name="calendars_device_username">वापरकर्तानाव</string>
     <string name="calendars_device_password">पासवर्ड</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">सर्व दाखवण्यासाठी खूप जास्त कार्यक्रम आहेत. कमी कालावधी निवडा.</string>
     <string name="calendars_list_empty">कार्यक्रम नाहीत</string>
     <string name="calendars_list_nothing">काहीही नियोजित नाही. इव्हेंट तयार करण्यासाठी टॅप करा.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(शीर्षक नाही)</string>
     <string name="calendars_status_cancelled">रद्द</string>
     <string name="calendars_status_tentative">तात्पुरते</string>

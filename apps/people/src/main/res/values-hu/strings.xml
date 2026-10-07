@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">A névjegyek között</string>
     <string name="people_device_create">Létrehozás</string>
     <string name="people_device_add">Eszköz hozzáadása</string>
-    <string name="people_device_server">Kiszolgáló</string>
     <string name="people_device_username">Felhasználónév</string>
     <string name="people_device_done">Kész</string>
     <string name="people_device_used">Utoljára használva %1$s</string>

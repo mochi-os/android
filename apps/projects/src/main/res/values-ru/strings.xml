@@ -378,6 +378,8 @@
     <string name="projects_export_saved">Данные проекта сохранены</string>
     <string name="projects_exporting">Подготовка экспорта…</string>
     <string name="projects_board_add_column">Добавить колонку</string>
+    <string name="projects_board_reorder_columns">Изменить порядок столбцов</string>
+    <string name="projects_board_reorder_columns_hint">Нажмите и удерживайте название столбца, затем перетащите его</string>
     <string name="projects_design_sample">Образец %1$s</string>
     <string name="projects_option_delete_title">Удалить вариант</string>
     <string name="projects_option_delete_message">Вы уверены, что хотите удалить вариант \"%1$s\"?</string>

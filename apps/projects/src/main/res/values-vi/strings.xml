@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Đã lưu dữ liệu dự án</string>
     <string name="projects_exporting">Đang chuẩn bị bản xuất…</string>
     <string name="projects_board_add_column">Thêm cột</string>
+    <string name="projects_board_reorder_columns">Sắp xếp lại cột</string>
+    <string name="projects_board_reorder_columns_hint">Nhấn giữ tên cột, rồi kéo</string>
     <string name="projects_design_sample">Mẫu %1$s</string>
     <string name="projects_option_delete_title">Xóa tùy chọn</string>
     <string name="projects_option_delete_message">Bạn có chắc chắn muốn xóa tùy chọn \"%1$s\" không?</string>

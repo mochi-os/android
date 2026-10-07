@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ناوی ئامێر</string>
     <string name="calendars_device_create">دروستکردن</string>
     <string name="calendars_device_add">زیادکردنی ئامێر</string>
-    <string name="calendars_device_server">ڕاژەکار</string>
     <string name="calendars_device_address">ناونیشان</string>
     <string name="calendars_device_username">ناوی بەکارهێنەر</string>
     <string name="calendars_device_password">وشەی نهێنی</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">ڕووداوەکان زۆرن بۆ پیشاندانی هەمووی. مەودایەکی کورتتر هەڵبژێرە.</string>
     <string name="calendars_list_empty">هیچ ڕووداوێک نییە</string>
     <string name="calendars_list_nothing">هیچ شتێک پلان نەکراوە. دەست بنێ بۆ دروستکردنی ڕووداوێک.</string>
+    <string name="calendars_list_heading">%1$s، %2$s</string>
     <string name="calendars_untitled">(بێ ناونیشان)</string>
     <string name="calendars_status_cancelled">هەڵوەشێنراوە</string>
     <string name="calendars_status_tentative">کاتی</string>

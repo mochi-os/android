@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Laitteen nimi</string>
     <string name="calendars_device_create">Luo</string>
     <string name="calendars_device_add">Lisää laite</string>
-    <string name="calendars_device_server">Palvelin</string>
     <string name="calendars_device_address">Osoite</string>
     <string name="calendars_device_username">Käyttäjätunnus</string>
     <string name="calendars_device_password">Salasana</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Tapahtumia on liikaa näytettäväksi kaikkia. Valitse lyhyempi aikaväli.</string>
     <string name="calendars_list_empty">Ei tapahtumia</string>
     <string name="calendars_list_nothing">Ei mitään suunniteltuna. Luo tapahtuma napauttamalla.</string>
+    <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_untitled">(Ei otsikkoa)</string>
     <string name="calendars_status_cancelled">Peruttu</string>
     <string name="calendars_status_tentative">Alustava</string>

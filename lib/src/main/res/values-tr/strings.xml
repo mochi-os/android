@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\" için erişim kuralı kaldırılsın mı?</string>
     <string name="color_picker_custom">Özel</string>
     <string name="color_picker_clear">Temizle</string>
+    <string name="common_refresh">Yenile</string>
 </resources>

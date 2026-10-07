@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Контактілерде</string>
     <string name="people_device_create">Құру</string>
     <string name="people_device_add">Құрылғы қосу</string>
-    <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Пайдаланушы аты</string>
     <string name="people_device_done">Дайын</string>
     <string name="people_device_used">Соңғы пайдаланылды %1$s</string>

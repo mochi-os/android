@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Isem l-apparat</string>
     <string name="calendars_device_create">Oħloq</string>
     <string name="calendars_device_add">Żid apparat</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Indirizz</string>
     <string name="calendars_device_username">Isem tal-utent</string>
     <string name="calendars_device_password">Password</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Wisq avvenimenti biex jintwerew kollha. Agħżel firxa iqsar.</string>
     <string name="calendars_list_empty">L-ebda avvenimenti</string>
     <string name="calendars_list_nothing">Xejn ippjanat. Agħfas biex toħloq avveniment.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(L-ebda titlu)</string>
     <string name="calendars_status_cancelled">Ikkanċellat</string>
     <string name="calendars_status_tentative">Provviżorju</string>

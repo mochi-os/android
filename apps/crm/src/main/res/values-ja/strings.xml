@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">グループ</string>
     <string name="crm_attachment_remove">添付を削除</string>
     <string name="crm_board_add_column">列を追加</string>
+    <string name="crm_board_reorder_columns">列を並べ替え</string>
+    <string name="crm_board_reorder_columns_hint">列の名前を長押ししてからドラッグします</string>
     <string name="crm_settings_entity_id">エンティティ ID</string>
     <string name="crm_settings_fingerprint">フィンガープリント</string>
     <string name="crm_settings_server">サーバー</string>

@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">ಗುಂಪುಗಳು</string>
     <string name="crm_attachment_remove">ಲಗತ್ತು ತೆಗೆದುಹಾಕಿ</string>
     <string name="crm_board_add_column">ಕಾಲಮ್ ಸೇರಿಸಿ</string>
+    <string name="crm_board_reorder_columns">ಕಾಲಮ್‌ಗಳನ್ನು ಮರು-ಆದೇಶಿಸಿ</string>
+    <string name="crm_board_reorder_columns_hint">ಕಾಲಮ್‌ನ ಹೆಸರನ್ನು ಒತ್ತಿ ಹಿಡಿದು, ನಂತರ ಅದನ್ನು ಎಳೆಯಿರಿ</string>
     <string name="crm_settings_entity_id">ಎಂಟಿಟಿ ID</string>
     <string name="crm_settings_fingerprint">ಬೆರಳಚ್ಚು</string>
     <string name="crm_settings_server">ಸರ್ವರ್</string>

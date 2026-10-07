@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Proje verileri kaydedildi</string>
     <string name="projects_exporting">Dışa aktarma hazırlanıyor…</string>
     <string name="projects_board_add_column">Sütun ekle</string>
+    <string name="projects_board_reorder_columns">Sütunları yeniden sırala</string>
+    <string name="projects_board_reorder_columns_hint">Bir sütunun adına uzun basın, ardından sürükleyin</string>
     <string name="projects_design_sample">Örnek %1$s</string>
     <string name="projects_option_delete_title">Seçeneği sil</string>
     <string name="projects_option_delete_message">\"%1$s\" seçeneğini silmek istediğinizden emin misiniz?</string>

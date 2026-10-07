@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Дар тамосҳо</string>
     <string name="people_device_create">Эҷод кардан</string>
     <string name="people_device_add">Иловаи дастгоҳ</string>
-    <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Номи корбар</string>
     <string name="people_device_done">Иҷро шуд</string>
     <string name="people_device_used">Истифодаи охирин %1$s</string>

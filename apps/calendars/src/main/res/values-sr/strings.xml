@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Назив уређаја</string>
     <string name="calendars_device_create">Креирај</string>
     <string name="calendars_device_add">Додај уређај</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Адреса</string>
     <string name="calendars_device_username">Корисничко име</string>
     <string name="calendars_device_password">Лозинка</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Превише догађаја да би се сви приказали. Изаберите краћи опсег.</string>
     <string name="calendars_list_empty">Нема догађаја</string>
     <string name="calendars_list_nothing">Ништа није планирано. Додирните да направите догађај.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Без наслова)</string>
     <string name="calendars_status_cancelled">Отказано</string>
     <string name="calendars_status_tentative">Непотврђено</string>

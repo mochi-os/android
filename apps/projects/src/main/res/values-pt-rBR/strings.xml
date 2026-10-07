@@ -361,6 +361,8 @@
     <string name="projects_sort_filter_title">Ordenar e filtrar</string>
     <string name="projects_create_prefix_hint">Usado para IDs legíveis como %1$s-1, %1$s-2</string>
     <string name="projects_board_add_column">Adicionar coluna</string>
+    <string name="projects_board_reorder_columns">Reordenar colunas</string>
+    <string name="projects_board_reorder_columns_hint">Pressione e segure o nome de uma coluna e depois arraste-a</string>
     <string name="projects_option_delete_title">Excluir opção</string>
     <string name="projects_option_delete_message">Tem certeza de que deseja excluir a opção \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Nenhum tipo de item pode ser criado ainda. Crie primeiro os itens pais obrigatórios.</string>

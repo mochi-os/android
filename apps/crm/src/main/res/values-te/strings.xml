@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">గ్రూపులు</string>
     <string name="crm_attachment_remove">జోడింపును తీసివేయండి</string>
     <string name="crm_board_add_column">కాలమ్‌ను జోడించండి</string>
+    <string name="crm_board_reorder_columns">కాలమ్‌లను రీ-ఆర్డర్ చేయండి</string>
+    <string name="crm_board_reorder_columns_hint">కాలమ్ పేరును నొక్కి పట్టుకుని, ఆపై దాన్ని లాగండి</string>
     <string name="crm_settings_entity_id">ఎంటిటీ ID</string>
     <string name="crm_settings_fingerprint">వేలిముద్ర</string>
     <string name="crm_settings_server">సర్వర్</string>

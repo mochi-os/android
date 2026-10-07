@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Grupper</string>
     <string name="crm_attachment_remove">Ta bort bilaga</string>
     <string name="crm_board_add_column">Lägg till kolumn</string>
+    <string name="crm_board_reorder_columns">Ordna om kolumner</string>
+    <string name="crm_board_reorder_columns_hint">Tryck länge på en kolumns namn och dra den sedan</string>
     <string name="crm_settings_entity_id">Entitets-ID</string>
     <string name="crm_settings_fingerprint">Fingeravtryck</string>
     <string name="crm_settings_server">Server</string>

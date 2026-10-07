@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Групи</string>
     <string name="crm_attachment_remove">Отстрани прилог</string>
     <string name="crm_board_add_column">Додај колона</string>
+    <string name="crm_board_reorder_columns">Преподреди колони</string>
+    <string name="crm_board_reorder_columns_hint">Долго притиснете на името на колона, па повлечете ја</string>
     <string name="crm_settings_entity_id">ID на ентитет</string>
     <string name="crm_settings_fingerprint">Отпечаток</string>
     <string name="crm_settings_server">Сервер</string>

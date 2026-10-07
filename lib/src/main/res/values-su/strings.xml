@@ -324,4 +324,5 @@
     <string name="access_remove_message">Piceun aturan aksés pikeun \"%1$s\"?</string>
     <string name="color_picker_custom">Kustom</string>
     <string name="color_picker_clear">Bersihkeun</string>
+    <string name="common_refresh">Seger</string>
 </resources>

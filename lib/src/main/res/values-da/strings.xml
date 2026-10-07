@@ -326,4 +326,5 @@
     <string name="access_remove_message">Fjern adgangsregel for \"%1$s\"?</string>
     <string name="color_picker_custom">Brugerdefineret</string>
     <string name="color_picker_clear">Ryd</string>
+    <string name="common_refresh">Opdater</string>
 </resources>

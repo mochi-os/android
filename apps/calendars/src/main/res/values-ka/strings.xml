@@ -34,7 +34,6 @@
     <string name="calendars_device_name">მოწყობილობის სახელი</string>
     <string name="calendars_device_create">შექმნა</string>
     <string name="calendars_device_add">მოწყობილობის დამატება</string>
-    <string name="calendars_device_server">სერვერი</string>
     <string name="calendars_device_address">მისამართი</string>
     <string name="calendars_device_username">მომხმარებლის სახელი</string>
     <string name="calendars_device_password">პაროლი</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">ღონისძიებები ძალიან ბევრია ყველას საჩვენებლად. აირჩიეთ უფრო მოკლე დიაპაზონი.</string>
     <string name="calendars_list_empty">ღონისძიებები არ არის</string>
     <string name="calendars_list_nothing">არაფერია დაგეგმილი. შეეხეთ მოვლენის შესაქმნელად.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(სათაურის გარეშე)</string>
     <string name="calendars_status_cancelled">გაუქმებულია</string>
     <string name="calendars_status_tentative">წინასწარი</string>

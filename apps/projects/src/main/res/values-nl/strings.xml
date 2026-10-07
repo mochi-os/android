@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Projectgegevens opgeslagen</string>
     <string name="projects_exporting">Export voorbereiden…</string>
     <string name="projects_board_add_column">Kolom toevoegen</string>
+    <string name="projects_board_reorder_columns">Kolommen opnieuw ordenen</string>
+    <string name="projects_board_reorder_columns_hint">Houd de naam van een kolom ingedrukt en sleep hem dan</string>
     <string name="projects_design_sample">Voorbeeld %1$s</string>
     <string name="projects_option_delete_title">Optie verwijderen</string>
     <string name="projects_option_delete_message">Weet je zeker dat je de optie \"%1$s\" wilt verwijderen?</string>

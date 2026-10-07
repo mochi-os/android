@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Daataan piroojektii olkaa\'ameera</string>
     <string name="projects_exporting">Alergiinsa qopheessaa jira…</string>
     <string name="projects_board_add_column">Tarjaa dabali</string>
+    <string name="projects_board_reorder_columns">Tarjaalee deebisanii tartiibessuu</string>
+    <string name="projects_board_reorder_columns_hint">Maqaa kolomii dheeraadhaan cuqaasiitii, achiis harkisi</string>
     <string name="projects_design_sample">Fakkeenya %1$s</string>
     <string name="projects_option_delete_title">Filannoo haqi</string>
     <string name="projects_option_delete_message">Dhugumatti filannoo \"%1$s\" haquu barbaaddaa?</string>

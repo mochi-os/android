@@ -328,4 +328,5 @@
     <string name="access_remove_message">Tneħħi r-regola ta\' aċċess għal \"%1$s\"?</string>
     <string name="color_picker_custom">Personalizzat</string>
     <string name="color_picker_clear">Naddaf</string>
+    <string name="common_refresh">Aġġorna</string>
 </resources>

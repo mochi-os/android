@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\" සඳහා ප්‍රවේශ නීතිය ඉවත් කරන්නද?</string>
     <string name="color_picker_custom">අභිරුචි</string>
     <string name="color_picker_clear">හිස් කරන්න</string>
+    <string name="common_refresh">අලුත් කරන්න</string>
 </resources>

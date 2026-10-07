@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Daneyên projeyê hatin tomarkirin</string>
     <string name="projects_exporting">Hinardekirin tê amadekirin…</string>
     <string name="projects_board_add_column">Stûn zêde bike</string>
+    <string name="projects_board_reorder_columns">Stûnan ji nû ve rêz bike</string>
+    <string name="projects_board_reorder_columns_hint">Navê stûnekê dirêj bitikîne, paşê wê bikişîne</string>
     <string name="projects_design_sample">Nimûne %1$s</string>
     <string name="projects_option_delete_title">Vebijêrkê jê bibe</string>
     <string name="projects_option_delete_message">Ma tu pê ewle yî ku dixwazî vebijêrka \"%1$s\" jê bibî?</string>

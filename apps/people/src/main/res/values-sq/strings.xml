@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Në kontakte</string>
     <string name="people_device_create">Krijo</string>
     <string name="people_device_add">Shto një pajisje</string>
-    <string name="people_device_server">Serveri</string>
     <string name="people_device_username">Emri i përdoruesit</string>
     <string name="people_device_done">Përfunduar</string>
     <string name="people_device_used">Përdorur së fundi %1$s</string>

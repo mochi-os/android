@@ -324,4 +324,5 @@
     <string name="access_remove_message">Hapus aturan akses untuk \"%1$s\"?</string>
     <string name="color_picker_custom">Kustom</string>
     <string name="color_picker_clear">Bersihkan</string>
+    <string name="common_refresh">Segarkan</string>
 </resources>

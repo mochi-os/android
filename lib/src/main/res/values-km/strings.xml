@@ -324,4 +324,5 @@
     <string name="access_remove_message">លុបច្បាប់ចូលប្រើសម្រាប់ \"%1$s\"?</string>
     <string name="color_picker_custom">ផ្ទាល់ខ្លួន</string>
     <string name="color_picker_clear">សម្អាត</string>
+    <string name="common_refresh">ផ្ទុកឡើងវិញ</string>
 </resources>

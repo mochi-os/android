@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Nom de l\'appareil</string>
     <string name="calendars_device_create">Créer</string>
     <string name="calendars_device_add">Ajouter un appareil</string>
-    <string name="calendars_device_server">Serveur</string>
     <string name="calendars_device_address">Adresse</string>
     <string name="calendars_device_username">Nom d\'utilisateur</string>
     <string name="calendars_device_password">Mot de passe</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Trop d\'événements pour tous les afficher. Choisissez une plage plus courte.</string>
     <string name="calendars_list_empty">Aucun événement</string>
     <string name="calendars_list_nothing">Rien de prévu. Touchez pour créer un événement.</string>
+    <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_untitled">(Sans titre)</string>
     <string name="calendars_status_cancelled">Annulé</string>
     <string name="calendars_status_tentative">Provisoire</string>

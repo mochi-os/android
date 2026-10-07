@@ -280,4 +280,5 @@
     <string name="settings_card_flat">平面</string>
     <string name="settings_card_raised">浮起</string>
     <string name="access_remove">移除</string>
+    <string name="common_refresh">重新整理</string>
 </resources>

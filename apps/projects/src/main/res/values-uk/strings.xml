@@ -378,6 +378,8 @@
     <string name="projects_export_saved">Дані проєкту збережено</string>
     <string name="projects_exporting">Підготовка експорту…</string>
     <string name="projects_board_add_column">Додати стовпець</string>
+    <string name="projects_board_reorder_columns">Змінити порядок стовпців</string>
+    <string name="projects_board_reorder_columns_hint">Натисніть і утримуйте назву стовпця, потім перетягніть його</string>
     <string name="projects_design_sample">Зразок %1$s</string>
     <string name="projects_option_delete_title">Видалити варіант</string>
     <string name="projects_option_delete_message">Ви впевнені, що хочете видалити варіант \"%1$s\"?</string>

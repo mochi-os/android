@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">კონტაქტებშია</string>
     <string name="people_device_create">შექმნა</string>
     <string name="people_device_add">მოწყობილობის დამატება</string>
-    <string name="people_device_server">სერვერი</string>
     <string name="people_device_username">მომხმარებლის სახელი</string>
     <string name="people_device_done">მზადაა</string>
     <string name="people_device_used">ბოლოს გამოყენებული %1$s</string>

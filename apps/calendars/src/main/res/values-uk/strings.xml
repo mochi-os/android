@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Назва пристрою</string>
     <string name="calendars_device_create">Створити</string>
     <string name="calendars_device_add">Додати пристрій</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Адреса</string>
     <string name="calendars_device_username">Ім\'я користувача</string>
     <string name="calendars_device_password">Пароль</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Забагато подій, щоб показати їх усі. Виберіть коротший діапазон.</string>
     <string name="calendars_list_empty">Немає подій</string>
     <string name="calendars_list_nothing">Нічого не заплановано. Торкніться, щоб створити подію.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Без назви)</string>
     <string name="calendars_status_cancelled">Скасовано</string>
     <string name="calendars_status_tentative">Під питанням</string>

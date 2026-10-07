@@ -272,4 +272,5 @@
     <string name="update_install">Instalá</string>
     <string name="access_remove">Quitá</string>
     <string name="access_remove_title">¿Quitás el acceso?</string>
+    <string name="common_refresh">Actualizá</string>
 </resources>

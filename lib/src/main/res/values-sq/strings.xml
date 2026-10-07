@@ -324,4 +324,5 @@
     <string name="access_remove_message">Të hiqet rregulli i qasjes për \"%1$s\"?</string>
     <string name="color_picker_custom">Personalizuar</string>
     <string name="color_picker_clear">Pastro</string>
+    <string name="common_refresh">Rifresko</string>
 </resources>

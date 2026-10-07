@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Төхөөрөмжийн нэр</string>
     <string name="calendars_device_create">Үүсгэх</string>
     <string name="calendars_device_add">Төхөөрөмж нэмэх</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Хаяг</string>
     <string name="calendars_device_username">Хэрэглэгчийн нэр</string>
     <string name="calendars_device_password">Нууц үг</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Бүгдийг харуулахад үйл явдал хэт олон байна. Богино муж сонгоно уу.</string>
     <string name="calendars_list_empty">Үйл явдал алга</string>
     <string name="calendars_list_nothing">Төлөвлөсөн зүйл алга. Үйл явдал үүсгэхийн тулд товшино уу.</string>
+    <string name="calendars_list_heading">%2$s %1$s</string>
     <string name="calendars_untitled">(Гарчиггүй)</string>
     <string name="calendars_status_cancelled">Цуцалсан</string>
     <string name="calendars_status_tentative">Урьдчилсан</string>

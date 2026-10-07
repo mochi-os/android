@@ -378,6 +378,8 @@
     <string name="projects_export_saved">പ്രോജക്റ്റ് ഡാറ്റ സംരക്ഷിച്ചു</string>
     <string name="projects_exporting">കയറ്റുമതി തയ്യാറാക്കുന്നു…</string>
     <string name="projects_board_add_column">കോളം ചേർക്കുക</string>
+    <string name="projects_board_reorder_columns">കോളങ്ങൾ പുനഃക്രമീകരിക്കുക</string>
+    <string name="projects_board_reorder_columns_hint">ഒരു കോളത്തിന്റെ പേരിൽ ലോംഗ്-പ്രസ് ചെയ്ത്, തുടർന്ന് വലിച്ചിടുക</string>
     <string name="projects_design_sample">സാമ്പിൾ %1$s</string>
     <string name="projects_option_delete_title">ഓപ്ഷൻ ഇല്ലാതാക്കുക</string>
     <string name="projects_option_delete_message">\"%1$s\" എന്ന ഓപ്ഷൻ ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>

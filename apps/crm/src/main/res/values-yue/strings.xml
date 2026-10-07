@@ -250,6 +250,8 @@
     <string name="crm_settings_fingerprint">指紋</string>
     <string name="crm_untitled">未命名</string>
     <string name="crm_board_add_column">新增欄位</string>
+    <string name="crm_board_reorder_columns">重新排序欄位</string>
+    <string name="crm_board_reorder_columns_hint">長按欄位名稱，再拖動佢</string>
     <string name="crm_settings_server">伺服器</string>
     <string name="crm_property_select">選擇 …</string>
     <string name="crm_filter">篩選</string>

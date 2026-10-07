@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Katika anwani</string>
     <string name="people_device_create">Unda</string>
     <string name="people_device_add">Ongeza kifaa</string>
-    <string name="people_device_server">Seva</string>
     <string name="people_device_username">Jina la mtumiaji</string>
     <string name="people_device_done">Imekamilika</string>
     <string name="people_device_used">Mara ya mwisho kutumika %1$s</string>

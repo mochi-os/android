@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Kontaktuetan</string>
     <string name="people_device_create">Sortu</string>
     <string name="people_device_add">Gehitu gailu bat</string>
-    <string name="people_device_server">Zerbitzaria</string>
     <string name="people_device_username">Erabiltzaile-izena</string>
     <string name="people_device_done">Eginda</string>
     <string name="people_device_used">Azken erabilera %1$s</string>

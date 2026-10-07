@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ઉપકરણનું નામ</string>
     <string name="calendars_device_create">બનાવો</string>
     <string name="calendars_device_add">ઉપકરણ ઉમેરો</string>
-    <string name="calendars_device_server">સર્વર</string>
     <string name="calendars_device_address">સરનામું</string>
     <string name="calendars_device_username">વપરાશકર્તા નામ</string>
     <string name="calendars_device_password">પાસવર્ડ</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">બધા બતાવવા માટે ઘણા બધા ઇવેન્ટ્સ છે. ટૂંકી શ્રેણી પસંદ કરો.</string>
     <string name="calendars_list_empty">કોઈ ઇવેન્ટ્સ નથી</string>
     <string name="calendars_list_nothing">કંઈ આયોજિત નથી. ઇવેન્ટ બનાવવા માટે ટૅપ કરો.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(શીર્ષક નથી)</string>
     <string name="calendars_status_cancelled">રદ</string>
     <string name="calendars_status_tentative">કામચલાઉ</string>

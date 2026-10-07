@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Non aparèy la</string>
     <string name="calendars_device_create">Kreye</string>
     <string name="calendars_device_add">Ajoute yon aparèy</string>
-    <string name="calendars_device_server">Sèvè</string>
     <string name="calendars_device_address">Adrès</string>
     <string name="calendars_device_username">Non itilizatè</string>
     <string name="calendars_device_password">Modpas</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Gen twòp evènman pou montre yo tout. Chwazi yon peryòd pi kout.</string>
     <string name="calendars_list_empty">Pa gen evènman</string>
     <string name="calendars_list_nothing">Pa gen anyen ki planifye. Tape pou kreye yon evènman.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(San tit)</string>
     <string name="calendars_status_cancelled">Anile</string>
     <string name="calendars_status_tentative">Pwovizwa</string>

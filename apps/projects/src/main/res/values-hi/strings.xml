@@ -376,6 +376,8 @@
     <string name="projects_export_saved">प्रोजेक्ट डेटा सहेजा गया</string>
     <string name="projects_exporting">निर्यात तैयार हो रहा है…</string>
     <string name="projects_board_add_column">कॉलम जोड़ें</string>
+    <string name="projects_board_reorder_columns">कॉलम्स फिर से ऑर्डर करें</string>
+    <string name="projects_board_reorder_columns_hint">कॉलम के नाम को देर तक दबाएँ, फिर उसे खींचें</string>
     <string name="projects_design_sample">नमूना %1$s</string>
     <string name="projects_option_delete_title">विकल्प हटाएँ</string>
     <string name="projects_option_delete_message">क्या आप वाकई विकल्प \"%1$s\" को हटाना चाहते हैं?</string>

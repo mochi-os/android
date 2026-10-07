@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Të dhënat e projektit u ruajtën</string>
     <string name="projects_exporting">Po përgatitet eksporti…</string>
     <string name="projects_board_add_column">Shto kolonë</string>
+    <string name="projects_board_reorder_columns">Rirendit kolonat</string>
+    <string name="projects_board_reorder_columns_hint">Mbaj të shtypur emrin e një kolone, pastaj tërhiqe</string>
     <string name="projects_design_sample">Shembull %1$s</string>
     <string name="projects_option_delete_title">Fshi opsionin</string>
     <string name="projects_option_delete_message">Jeni i sigurt që dëshironi të fshini opsionin \"%1$s\"?</string>

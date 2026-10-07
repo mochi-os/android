@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Ainm an inneil</string>
     <string name="calendars_device_create">Cruthaich</string>
     <string name="calendars_device_add">Cuir inneal ris</string>
-    <string name="calendars_device_server">Frithealaiche</string>
     <string name="calendars_device_address">Seòladh</string>
     <string name="calendars_device_username">Ainm-cleachdaiche</string>
     <string name="calendars_device_password">Facal-faire</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Tha cus thachartasan ann gus an sealltainn uile. Tagh rainse nas giorra.</string>
     <string name="calendars_list_empty">Gun tachartasan</string>
     <string name="calendars_list_nothing">Chan eil dad san amharc. Thoir gnogag gus tachartas a chruthachadh.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Gun tiotal)</string>
     <string name="calendars_status_cancelled">Air a chur dheth</string>
     <string name="calendars_status_tentative">Sealach</string>

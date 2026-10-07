@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">ಸಂಪರ್ಕಗಳಲ್ಲಿ</string>
     <string name="people_device_create">ರಚಿಸಿ</string>
     <string name="people_device_add">ಸಾಧನವನ್ನು ಸೇರಿಸಿ</string>
-    <string name="people_device_server">ಸರ್ವರ್</string>
     <string name="people_device_username">ಬಳಕೆದಾರಹೆಸರು</string>
     <string name="people_device_done">ಮುಗಿಯಿತು</string>
     <string name="people_device_used">ಕೊನೆಯದಾಗಿ ಬಳಸಲಾಗಿದೆ %1$s</string>

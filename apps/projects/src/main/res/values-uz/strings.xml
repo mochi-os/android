@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Loyiha ma\'lumotlari saqlandi</string>
     <string name="projects_exporting">Eksport tayyorlanmoqda…</string>
     <string name="projects_board_add_column">Ustun qoʻshish</string>
+    <string name="projects_board_reorder_columns">Ustunlarni qayta tartiblash</string>
+    <string name="projects_board_reorder_columns_hint">Ustun nomini uzoq bosing, soʻng uni sudrang</string>
     <string name="projects_design_sample">Namuna %1$s</string>
     <string name="projects_option_delete_title">Variantni oʻchirish</string>
     <string name="projects_option_delete_message">\"%1$s\" variantini oʻchirishga ishonchingiz komilmi?</string>

@@ -324,4 +324,5 @@
     <string name="access_remove_message">¿\"%1$s\" mantañataki kamachi apsuñati?</string>
     <string name="color_picker_custom">Personalizado</string>
     <string name="color_picker_clear">Q\'umachaña</string>
+    <string name="common_refresh">Machaqachama</string>
 </resources>

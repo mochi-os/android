@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Įrenginio pavadinimas</string>
     <string name="calendars_device_create">Sukurti</string>
     <string name="calendars_device_add">Pridėti įrenginį</string>
-    <string name="calendars_device_server">Serveris</string>
     <string name="calendars_device_address">Adresas</string>
     <string name="calendars_device_username">Vartotojo vardas</string>
     <string name="calendars_device_password">Slaptažodis</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Per daug įvykių, kad būtų galima parodyti visus. Pasirinkite trumpesnį intervalą.</string>
     <string name="calendars_list_empty">Įvykių nėra</string>
     <string name="calendars_list_nothing">Nieko nesuplanuota. Bakstelėkite, kad sukurtumėte įvykį.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(Be pavadinimo)</string>
     <string name="calendars_status_cancelled">Atšaukta</string>
     <string name="calendars_status_tentative">Nepatvirtinta</string>

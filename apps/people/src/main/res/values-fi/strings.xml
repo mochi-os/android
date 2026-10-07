@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Yhteystiedoissa</string>
     <string name="people_device_create">Luo</string>
     <string name="people_device_add">Lisää laite</string>
-    <string name="people_device_server">Palvelin</string>
     <string name="people_device_username">Käyttäjätunnus</string>
     <string name="people_device_done">Valmis</string>
     <string name="people_device_used">Viimeksi käytetty %1$s</string>

@@ -376,6 +376,8 @@
     <string name="projects_export_saved">项目数据已保存</string>
     <string name="projects_exporting">正在准备导出…</string>
     <string name="projects_board_add_column">添加列</string>
+    <string name="projects_board_reorder_columns">重新排序列</string>
+    <string name="projects_board_reorder_columns_hint">长按列名，然后拖动</string>
     <string name="projects_design_sample">示例 %1$s</string>
     <string name="projects_option_delete_title">删除选项</string>
     <string name="projects_option_delete_message">确定要删除选项 \"%1$s\" 吗?</string>

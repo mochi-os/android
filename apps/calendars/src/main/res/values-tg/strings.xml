@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Номи дастгоҳ</string>
     <string name="calendars_device_create">Эҷод кардан</string>
     <string name="calendars_device_add">Иловаи дастгоҳ</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Суроға</string>
     <string name="calendars_device_username">Номи корбар</string>
     <string name="calendars_device_password">Рамз</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Рӯйдодҳо барои нишон додани ҳамаашон аз ҳад зиёданд. Фосилаи кӯтоҳтарро интихоб кунед.</string>
     <string name="calendars_list_empty">Ягон рӯйдод нест</string>
     <string name="calendars_list_nothing">Ҳеҷ чиз ба нақша гирифта нашудааст. Барои эҷоди рӯйдод зер кунед.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Бе сарлавҳа)</string>
     <string name="calendars_status_cancelled">Бекор карда шуд</string>
     <string name="calendars_status_tentative">Пешакӣ</string>

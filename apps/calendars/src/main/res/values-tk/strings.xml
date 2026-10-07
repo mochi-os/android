@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Enjamyň ady</string>
     <string name="calendars_device_create">Döretmek</string>
     <string name="calendars_device_add">Enjam goş</string>
-    <string name="calendars_device_server">Serwer</string>
     <string name="calendars_device_address">Salgy</string>
     <string name="calendars_device_username">Ulanyjy ady</string>
     <string name="calendars_device_password">Parol</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Hemmesini görkezmek üçin çäreler gaty köp. Has gysga aralyk saýla.</string>
     <string name="calendars_list_empty">Çäreler ýok</string>
     <string name="calendars_list_nothing">Hiç zat meýilleşdirilmedi. Çäre döretmek üçin basyň.</string>
+    <string name="calendars_list_heading">%2$s %1$s</string>
     <string name="calendars_untitled">(Atsyz)</string>
     <string name="calendars_status_cancelled">Ýatyryldy</string>
     <string name="calendars_status_tentative">Deslapky</string>

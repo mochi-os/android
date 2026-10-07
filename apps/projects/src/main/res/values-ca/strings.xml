@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Dades del projecte desades</string>
     <string name="projects_exporting">S\'està preparant l\'exportació…</string>
     <string name="projects_board_add_column">Afegeix una columna</string>
+    <string name="projects_board_reorder_columns">Reordena les columnes</string>
+    <string name="projects_board_reorder_columns_hint">Mantén premut el nom d\'una columna i després arrossega-la</string>
     <string name="projects_design_sample">Mostra %1$s</string>
     <string name="projects_option_delete_title">Suprimeix l\'opció</string>
     <string name="projects_option_delete_message">Esteu segur que voleu eliminar l\'opció \"%1$s\"?</string>

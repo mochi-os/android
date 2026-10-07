@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">ગ્રુપ્સ</string>
     <string name="crm_attachment_remove">જોડાણ દૂર કરો</string>
     <string name="crm_board_add_column">કૉલમ ઉમેરો</string>
+    <string name="crm_board_reorder_columns">કૉલમ્સ ફરીથી ગોઠવો</string>
+    <string name="crm_board_reorder_columns_hint">કૉલમના નામને લાંબું દબાવો, પછી તેને ખેંચો</string>
     <string name="crm_settings_entity_id">એન્ટિટી ID</string>
     <string name="crm_settings_fingerprint">આંગળાની છાપ</string>
     <string name="crm_settings_server">સર્વર</string>

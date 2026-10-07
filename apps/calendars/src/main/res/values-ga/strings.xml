@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Ainm an ghléis</string>
     <string name="calendars_device_create">Cruthaigh</string>
     <string name="calendars_device_add">Cuir gléas leis</string>
-    <string name="calendars_device_server">Freastalaí</string>
     <string name="calendars_device_address">Seoladh</string>
     <string name="calendars_device_username">Ainm úsáideora</string>
     <string name="calendars_device_password">Pasfhocal</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">An iomarca imeachtaí le taispeáint go léir. Roghnaigh raon níos giorra.</string>
     <string name="calendars_list_empty">Níl aon imeacht</string>
     <string name="calendars_list_nothing">Níl aon rud pleanáilte. Tapáil chun imeacht a chruthú.</string>
+    <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_untitled">(Gan teideal)</string>
     <string name="calendars_status_cancelled">Curtha ar ceal</string>
     <string name="calendars_status_tentative">Sealadach</string>

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Түзмөктүн аты</string>
     <string name="calendars_device_create">Түзүү</string>
     <string name="calendars_device_add">Түзмөк кошуу</string>
-    <string name="calendars_device_server">Сервер</string>
     <string name="calendars_device_address">Дарек</string>
     <string name="calendars_device_username">Колдонуучунун аты</string>
     <string name="calendars_device_password">Сырсөз</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Баарын көрсөтүү үчүн иш-чаралар өтө көп. Кыскараак аралыкты тандаңыз.</string>
     <string name="calendars_list_empty">Иш-чаралар жок</string>
     <string name="calendars_list_nothing">Эч нерсе пландалган жок. Иш-чара түзүү үчүн басыңыз.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(Аталышы жок)</string>
     <string name="calendars_status_cancelled">Жокко чыгарылды</string>
     <string name="calendars_status_tentative">Алдын ала</string>

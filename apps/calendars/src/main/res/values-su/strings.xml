@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Ngaran pakakas</string>
     <string name="calendars_device_create">Jieun</string>
     <string name="calendars_device_add">Tambah pakakas</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Alamat</string>
     <string name="calendars_device_username">Ngaran pamaké</string>
     <string name="calendars_device_password">Kecap sandi</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Acara loba teuing pikeun ditémbongkeun kabéh. Pilih rentang nu leuwih pondok.</string>
     <string name="calendars_list_empty">Teu aya acara</string>
     <string name="calendars_list_nothing">Teu aya rencana. Toél pikeun nyieun acara.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Tanpa judul)</string>
     <string name="calendars_status_cancelled">Dibatalkeun</string>
     <string name="calendars_status_tentative">Samentawis</string>

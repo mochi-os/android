@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Kontaktlarda</string>
     <string name="people_device_create">Yaratish</string>
     <string name="people_device_add">Qurilma qoʻshish</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Foydalanuvchi nomi</string>
     <string name="people_device_done">Bajarildi</string>
     <string name="people_device_used">Oxirgi foydalanish %1$s</string>

@@ -376,6 +376,8 @@
     <string name="projects_export_saved">A projekt adatai mentve</string>
     <string name="projects_exporting">Exportálás előkészítése…</string>
     <string name="projects_board_add_column">Oszlop hozzáadása</string>
+    <string name="projects_board_reorder_columns">Oszlopok újrarendezése</string>
+    <string name="projects_board_reorder_columns_hint">Tartsa lenyomva egy oszlop nevét, majd húzza el</string>
     <string name="projects_design_sample">Minta %1$s</string>
     <string name="projects_option_delete_title">Beállítás törlése</string>
     <string name="projects_option_delete_message">Biztosan törli a(z) \"%1$s\" beállítást?</string>

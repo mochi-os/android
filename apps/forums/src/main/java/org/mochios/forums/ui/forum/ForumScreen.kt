@@ -24,6 +24,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -73,6 +74,7 @@ import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -121,9 +123,9 @@ import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.android.ui.components.MochiTextButton
-import org.mochios.android.ui.components.NewItemsPill
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.RefreshButton
 import org.mochios.forums.R
 import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.model.Post
@@ -323,6 +325,9 @@ private fun ForumContent(
     val uiState by viewModel.uiState.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
     val newPostsCount by viewModel.newPostsCount.collectAsState()
+    // Set by a refresh the reader asked for - the button or the pull - which
+    // lands on the first post, where the posts counted on the button are.
+    val refreshToTop = remember { mutableStateOf(false) }
     val isAll = viewModel.isAll
     var showOverflowMenu by remember { mutableStateOf(false) }
     var showRssSubmenu by remember { mutableStateOf(false) }
@@ -398,6 +403,16 @@ private fun ForumContent(
                     }
                 },
                 actions = {
+                    RefreshButton(
+                        count = newPostsCount,
+                        label = pluralStringResource(
+                            R.plurals.forums_new_posts, newPostsCount, LocalFormat.current.formatNumber(newPostsCount)
+                        ),
+                        onClick = {
+                            refreshToTop.value = true
+                            viewModel.refresh()
+                        },
+                    )
                     NotificationBell(onClick = onOpenNotifications)
                     // No forum to post to in the aggregate. Hidden, not
                     // disabled, matching feeds; a null `canPost` (response
@@ -575,7 +590,10 @@ private fun ForumContent(
     ) { padding ->
         PullToRefreshBox(
             isRefreshing = uiState.isRefreshing,
-            onRefresh = { viewModel.refresh() },
+            onRefresh = {
+                refreshToTop.value = true
+                viewModel.refresh()
+            },
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
@@ -673,60 +691,47 @@ private fun ForumContent(
 
                     else -> {
                         val listState = androidx.compose.foundation.lazy.rememberLazyListState()
-                        val pillScope = rememberCoroutineScope()
-                        Box(modifier = Modifier.fillMaxSize()) {
-                            LazyColumn(
-                                state = listState,
-                                modifier = Modifier.fillMaxSize(),
-                                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                                verticalArrangement = Arrangement.spacedBy(8.dp)
-                            ) {
-                                items(uiState.posts, key = { it.id }) { post ->
-                                    PostCard(
-                                        post = post,
-                                        // Aggregate rows each carry their own forum.
-                                        forumId = post.forum.ifBlank { forumIdForCallbacks },
-                                        isSaved = savedIds.contains(post.id),
-                                        showForumName = isAll,
-                                        onClick = {
-                                            // Aggregate posts each belong to their own forum.
-                                            val targetForum =
-                                                if (isAll) post.forum else forumIdForCallbacks
-                                            onPostClick(targetForum, post.id)
-                                        },
-                                        onToggleSave = { viewModel.toggleSave(post) },
-                                    )
-                                }
-                                if (uiState.hasMore) {
-                                    item {
-                                        Box(
-                                            Modifier
-                                                .fillMaxWidth()
-                                                .padding(8.dp),
-                                            contentAlignment = Alignment.Center
-                                        ) {
-                                            if (uiState.isLoadingMore) {
-                                                CircularProgressIndicator()
-                                            } else {
-                                                MochiTextButton(onClick = { viewModel.loadMore() }) {
-                                                    Text(stringResource(R.string.forums_load_more))
-                                                }
+                        TopEffect(listState, uiState.posts, uiState.isRefreshing, refreshToTop)
+                        LazyColumn(
+                            state = listState,
+                            modifier = Modifier.fillMaxSize(),
+                            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            items(uiState.posts, key = { it.id }) { post ->
+                                PostCard(
+                                    post = post,
+                                    // Aggregate rows each carry their own forum.
+                                    forumId = post.forum.ifBlank { forumIdForCallbacks },
+                                    isSaved = savedIds.contains(post.id),
+                                    showForumName = isAll,
+                                    onClick = {
+                                        // Aggregate posts each belong to their own forum.
+                                        val targetForum =
+                                            if (isAll) post.forum else forumIdForCallbacks
+                                        onPostClick(targetForum, post.id)
+                                    },
+                                    onToggleSave = { viewModel.toggleSave(post) },
+                                )
+                            }
+                            if (uiState.hasMore) {
+                                item {
+                                    Box(
+                                        Modifier
+                                            .fillMaxWidth()
+                                            .padding(8.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        if (uiState.isLoadingMore) {
+                                            CircularProgressIndicator()
+                                        } else {
+                                            MochiTextButton(onClick = { viewModel.loadMore() }) {
+                                                Text(stringResource(R.string.forums_load_more))
                                             }
                                         }
                                     }
                                 }
                             }
-                            NewItemsPill(
-                                count = newPostsCount,
-                                label = pluralStringResource(
-                                    R.plurals.forums_new_posts, newPostsCount, LocalFormat.current.formatNumber(newPostsCount)
-                                ),
-                                onClick = {
-                                    viewModel.showNewPosts()
-                                    pillScope.launch { listState.animateScrollToItem(0) }
-                                },
-                                modifier = Modifier.align(Alignment.TopCenter),
-                            )
                         }
                     }
                 }
@@ -757,6 +762,28 @@ private fun ForumContent(
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
         )
+    }
+}
+
+/**
+ * Lands the list on its first post once a refresh the reader asked for ends,
+ * [top] having been set as it started. The keyed list otherwise holds on to the
+ * post at its head and leaves the new ones above it out of sight. [refreshing]
+ * is a key so that a refresh which changes nothing still spends the request,
+ * rather than leaving it for a later change the reader did not ask for.
+ */
+@Composable
+internal fun TopEffect(
+    listState: LazyListState,
+    posts: List<Post>,
+    refreshing: Boolean,
+    top: MutableState<Boolean>,
+) {
+    LaunchedEffect(posts, refreshing) {
+        if (top.value && !refreshing) {
+            top.value = false
+            listState.requestScrollToItem(0)
+        }
     }
 }
 

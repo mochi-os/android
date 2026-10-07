@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">सम्पर्कहरूमा</string>
     <string name="people_device_create">सिर्जना गर्नुहोस्</string>
     <string name="people_device_add">उपकरण थप्नुहोस्</string>
-    <string name="people_device_server">सर्भर</string>
     <string name="people_device_username">प्रयोगकर्ता नाम</string>
     <string name="people_device_done">सम्पन्न</string>
     <string name="people_device_used">अन्तिम पटक प्रयोग गरियो %1$s</string>

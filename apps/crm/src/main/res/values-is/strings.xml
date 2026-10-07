@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Hópar</string>
     <string name="crm_attachment_remove">Fjarlægja viðhengi</string>
     <string name="crm_board_add_column">Bæta við dálki</string>
+    <string name="crm_board_reorder_columns">Endurraða dálkum</string>
+    <string name="crm_board_reorder_columns_hint">Ýttu lengi á heiti dálks og dragðu hann svo</string>
     <string name="crm_settings_entity_id">Auðkenni einingar</string>
     <string name="crm_settings_fingerprint">Fingrafar</string>
     <string name="crm_settings_server">Þjónn</string>

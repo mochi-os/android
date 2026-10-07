@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Kom</string>
     <string name="crm_attachment_remove">Pêvekê rake</string>
     <string name="crm_board_add_column">Stûn zêde bike</string>
+    <string name="crm_board_reorder_columns">Stûnan ji nû ve rêz bike</string>
+    <string name="crm_board_reorder_columns_hint">Navê stûnekê dirêj bitikîne, paşê wê bikişîne</string>
     <string name="crm_settings_entity_id">Nasnameya mîhengehê</string>
     <string name="crm_settings_fingerprint">Tilîya destan</string>
     <string name="crm_settings_server">Server</string>

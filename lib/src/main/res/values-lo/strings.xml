@@ -324,4 +324,5 @@
     <string name="access_remove_message">ລຶບກົດການເຂົ້າເຖິງສຳລັບ \"%1$s\" ບໍ?</string>
     <string name="color_picker_custom">ກຳນົດເອງ</string>
     <string name="color_picker_clear">ລ້າງ</string>
+    <string name="common_refresh">ໂຫຼດໃໝ່</string>
 </resources>

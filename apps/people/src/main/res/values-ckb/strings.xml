@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">لە پەیوەندییەکاندا</string>
     <string name="people_device_create">دروستکردن</string>
     <string name="people_device_add">زیادکردنی ئامێر</string>
-    <string name="people_device_server">ڕاژەکار</string>
     <string name="people_device_username">ناوی بەکارهێنەر</string>
     <string name="people_device_done">تەواوبوو</string>
     <string name="people_device_used">کۆتا بەکارھێنان %1$s</string>

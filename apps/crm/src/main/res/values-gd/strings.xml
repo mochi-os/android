@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Buidhnean</string>
     <string name="crm_attachment_remove">Thoir air falbh an ceanglachan</string>
     <string name="crm_board_add_column">Cuir colbh ris</string>
+    <string name="crm_board_reorder_columns">Ath-òrdaich colbhan</string>
+    <string name="crm_board_reorder_columns_hint">Brùth fada air ainm colbh, an uairsin slaod e</string>
     <string name="crm_settings_entity_id">ID an aonaid</string>
     <string name="crm_settings_fingerprint">Meur-lorg</string>
     <string name="crm_settings_server">Frithealaiche</string>

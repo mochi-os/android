@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Data ya mradi imehifadhiwa</string>
     <string name="projects_exporting">Inaandaa uhamishaji…</string>
     <string name="projects_board_add_column">Ongeza safu</string>
+    <string name="projects_board_reorder_columns">Panga upya safuwima</string>
+    <string name="projects_board_reorder_columns_hint">Bonyeza kwa muda mrefu jina la safuwima, kisha uiburute</string>
     <string name="projects_design_sample">Sampuli %1$s</string>
     <string name="projects_option_delete_title">Futa chaguo</string>
     <string name="projects_option_delete_message">Una uhakika unataka kufuta chaguo \"%1$s\"?</string>

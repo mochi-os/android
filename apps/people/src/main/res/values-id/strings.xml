@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">Ada di kontak</string>
     <string name="people_device_create">Buat</string>
     <string name="people_device_add">Tambah perangkat</string>
-    <string name="people_device_server">Server</string>
     <string name="people_device_username">Nama pengguna</string>
     <string name="people_device_done">Selesai</string>
     <string name="people_device_used">Terakhir digunakan %1$s</string>

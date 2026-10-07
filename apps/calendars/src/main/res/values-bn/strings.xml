@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ডিভাইসের নাম</string>
     <string name="calendars_device_create">তৈরি করুন</string>
     <string name="calendars_device_add">ডিভাইস যোগ করুন</string>
-    <string name="calendars_device_server">সার্ভার</string>
     <string name="calendars_device_address">ঠিকানা</string>
     <string name="calendars_device_username">ব্যবহারকারীর নাম</string>
     <string name="calendars_device_password">পাসওয়ার্ড</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">সব দেখানোর মতো ইভেন্ট অনেক বেশি। ছোট পরিসর বেছে নিন।</string>
     <string name="calendars_list_empty">কোনো ইভেন্ট নেই</string>
     <string name="calendars_list_nothing">কিছুই পরিকল্পনা করা নেই। ইভেন্ট তৈরি করতে ট্যাপ করুন।</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(শিরোনাম নেই)</string>
     <string name="calendars_status_cancelled">বাতিল</string>
     <string name="calendars_status_tentative">অনিশ্চিত</string>

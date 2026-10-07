@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\" के लिए पहुँच नियम हटाएँ?</string>
     <string name="color_picker_custom">कस्टम</string>
     <string name="color_picker_clear">साफ़ करें</string>
+    <string name="common_refresh">रिफ़्रेश</string>
 </resources>

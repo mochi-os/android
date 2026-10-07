@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">Dalam kenalan</string>
     <string name="people_device_create">Cipta</string>
     <string name="people_device_add">Tambah peranti</string>
-    <string name="people_device_server">Pelayan</string>
     <string name="people_device_username">Nama pengguna</string>
     <string name="people_device_done">Selesai</string>
     <string name="people_device_used">Terakhir digunakan %1$s</string>

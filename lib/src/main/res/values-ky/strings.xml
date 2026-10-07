@@ -324,4 +324,5 @@
     <string name="access_remove_message">\"%1$s\" үчүн жетүү эрежеси өчүрүлсүнбү?</string>
     <string name="color_picker_custom">Ыңгайлаштырылган</string>
     <string name="color_picker_clear">Тазалоо</string>
+    <string name="common_refresh">Жаңыртуу</string>
 </resources>

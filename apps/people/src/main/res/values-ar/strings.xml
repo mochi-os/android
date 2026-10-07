@@ -191,7 +191,6 @@
     <string name="people_person_state_contact">ضمن جهات الاتصال</string>
     <string name="people_device_create">إنشاء</string>
     <string name="people_device_add">إضافة جهاز</string>
-    <string name="people_device_server">الخادم</string>
     <string name="people_device_username">اسم المستخدم</string>
     <string name="people_device_done">منتهٍ</string>
     <string name="people_device_used">آخر استخدام %1$s</string>

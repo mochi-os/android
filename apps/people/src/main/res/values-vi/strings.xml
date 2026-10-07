@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">Có trong danh bạ</string>
     <string name="people_device_create">Tạo</string>
     <string name="people_device_add">Thêm thiết bị</string>
-    <string name="people_device_server">Máy chủ</string>
     <string name="people_device_username">Tên người dùng</string>
     <string name="people_device_done">Xong</string>
     <string name="people_device_used">Lần cuối sử dụng %1$s</string>

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">ഡിവൈസിന്റെ പേര്</string>
     <string name="calendars_device_create">സൃഷ്ടിക്കുക</string>
     <string name="calendars_device_add">ഒരു ഡിവൈസ് ചേർക്കുക</string>
-    <string name="calendars_device_server">സെർവർ</string>
     <string name="calendars_device_address">വിലാസം</string>
     <string name="calendars_device_username">ഉപയോക്തൃനാമം</string>
     <string name="calendars_device_password">പാസ്‌വേഡ്</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">എല്ലാം കാണിക്കാൻ കഴിയാത്തത്ര ഇവന്റുകളുണ്ട്. ചെറിയ ശ്രേണി തിരഞ്ഞെടുക്കുക.</string>
     <string name="calendars_list_empty">ഇവന്റുകളൊന്നുമില്ല</string>
     <string name="calendars_list_nothing">ഒന്നും ആസൂത്രണം ചെയ്തിട്ടില്ല. ഇവന്റ് സൃഷ്ടിക്കാൻ ടാപ്പ് ചെയ്യുക.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(തലക്കെട്ടില്ല)</string>
     <string name="calendars_status_cancelled">റദ്ദാക്കി</string>
     <string name="calendars_status_tentative">താൽക്കാലികം</string>

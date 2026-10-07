@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Navê cîhazê</string>
     <string name="calendars_device_create">Çêbike</string>
     <string name="calendars_device_add">Cîhazekê zêde bike</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Navnîşan</string>
     <string name="calendars_device_username">Navê bikarhêner</string>
     <string name="calendars_device_password">Şîfre</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Ji bo nîşandana hemûyan pir bûyer hene. Navbereke kurttir hilbijêre.</string>
     <string name="calendars_list_empty">Tu bûyer tune</string>
     <string name="calendars_list_nothing">Tiştek nehatiye plankirin. Ji bo çêkirina bûyerekê bitikîne.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(Bê sernav)</string>
     <string name="calendars_status_cancelled">Hat betalkirin</string>
     <string name="calendars_status_tentative">Demkî</string>

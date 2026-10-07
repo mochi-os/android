@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Enhetsnamn</string>
     <string name="calendars_device_create">Skapa</string>
     <string name="calendars_device_add">Lägg till en enhet</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Adress</string>
     <string name="calendars_device_username">Användarnamn</string>
     <string name="calendars_device_password">Lösenord</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">För många händelser för att visa alla. Välj en kortare period.</string>
     <string name="calendars_list_empty">Inga händelser</string>
     <string name="calendars_list_nothing">Inget planerat. Tryck för att skapa en händelse.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Ingen titel)</string>
     <string name="calendars_status_cancelled">Inställt</string>
     <string name="calendars_status_tentative">Preliminärt</string>

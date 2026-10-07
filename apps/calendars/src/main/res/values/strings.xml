@@ -60,6 +60,7 @@
     <string name="calendars_truncated">Too many events to show them all. Choose a shorter range.</string>
     <string name="calendars_list_empty">No events</string>
     <string name="calendars_list_nothing">Nothing planned. Tap to create.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_unmatched">No matches</string>
     <string name="calendars_list_earlier">Earlier events</string>
     <string name="calendars_list_search_events">Search events</string>
@@ -288,7 +289,6 @@
     <string name="calendars_device_name">Device name</string>
     <string name="calendars_device_create">Create</string>
     <string name="calendars_device_add">Add device</string>
-    <string name="calendars_device_server">Server</string>
     <string name="calendars_device_address">Address</string>
     <string name="calendars_device_username">Username</string>
     <string name="calendars_device_password">Password</string>

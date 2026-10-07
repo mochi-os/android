@@ -245,6 +245,8 @@
     <string name="crm_access_tab_groups">Grupos</string>
     <string name="crm_attachment_remove">Quitar adjunto</string>
     <string name="crm_board_add_column">Añadir columna</string>
+    <string name="crm_board_reorder_columns">Reordenar columnas</string>
+    <string name="crm_board_reorder_columns_hint">Mantén pulsado el nombre de una columna y luego arrástrala</string>
     <string name="crm_settings_entity_id">ID de entidad</string>
     <string name="crm_settings_fingerprint">Huella</string>
     <string name="crm_settings_server">Servidor</string>

@@ -42,6 +42,7 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.DragIndicator
 import androidx.compose.material.icons.outlined.FileDownload
 import androidx.compose.material.icons.outlined.FolderOpen
 import androidx.compose.material.icons.outlined.HomeMax
@@ -107,6 +108,7 @@ import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FilterChipRow
 import org.mochios.android.ui.components.FilterSheet
+import org.mochios.android.ui.components.HintBar
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -577,6 +579,9 @@ private fun ProjectContent(
 
     val details = uiState.projectDetails
     val activeView = viewModel.getActiveView()
+    // "Re-order columns" names a gesture nothing on the board shows, so it puts
+    // the instructions across the top of the board until closed.
+    var reordering by rememberSaveable(activeView?.id) { mutableStateOf(false) }
 
     // The overflow icon carries a dot whenever the sheet holds something other
     // than the view's own defaults, so a filtered list still says so from the
@@ -729,6 +734,14 @@ private fun ProjectContent(
                                         },
                                         leadingIcon = { Icon(Icons.Outlined.ViewColumn, contentDescription = null) },
                                     )
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.projects_board_reorder_columns)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            reordering = true
+                                        },
+                                        leadingIcon = { Icon(Icons.Outlined.DragIndicator, contentDescription = null) },
+                                    )
                                 }
                                 // Sharing a link is only offered on projects the
                                 // user owns; it's hidden on subscribed ones.
@@ -837,6 +850,12 @@ private fun ProjectContent(
                         val allObjects = uiState.objects
                         when (activeView?.viewtype) {
                             "board" -> {
+                                if (reordering) {
+                                    HintBar(
+                                        text = stringResource(R.string.projects_board_reorder_columns_hint),
+                                        onClose = { reordering = false },
+                                    )
+                                }
                                 BoardView(
                                     objects = allObjects,
                                     visibleIds = viewModel.getVisibleObjectIds(),

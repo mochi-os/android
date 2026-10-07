@@ -187,7 +187,6 @@
     <string name="people_person_state_contact">Байланыштарда</string>
     <string name="people_device_create">Түзүү</string>
     <string name="people_device_add">Түзмөк кошуу</string>
-    <string name="people_device_server">Сервер</string>
     <string name="people_device_username">Колдонуучунун аты</string>
     <string name="people_device_done">Бүттү</string>
     <string name="people_device_used">Акыркы колдонуу %1$s</string>

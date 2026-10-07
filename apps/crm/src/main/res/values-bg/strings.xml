@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Групи</string>
     <string name="crm_attachment_remove">Премахване на прикачения файл</string>
     <string name="crm_board_add_column">Добави колона</string>
+    <string name="crm_board_reorder_columns">Пренареди колоните</string>
+    <string name="crm_board_reorder_columns_hint">Задръжте натиснато името на колона, след това я плъзнете</string>
     <string name="crm_settings_entity_id">ID на обект</string>
     <string name="crm_settings_fingerprint">Отпечатък</string>
     <string name="crm_settings_server">Сървър</string>

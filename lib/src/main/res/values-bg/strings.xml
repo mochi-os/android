@@ -324,4 +324,5 @@
     <string name="access_remove_message">Да се премахне ли правилото за достъп за „%1$s“?</string>
     <string name="color_picker_custom">Персонализирано</string>
     <string name="color_picker_clear">Изчисти</string>
+    <string name="common_refresh">Опресни</string>
 </resources>

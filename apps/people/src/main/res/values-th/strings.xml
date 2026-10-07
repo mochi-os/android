@@ -186,7 +186,6 @@
     <string name="people_person_state_contact">อยู่ในผู้ติดต่อแล้ว</string>
     <string name="people_device_create">สร้าง</string>
     <string name="people_device_add">เพิ่มอุปกรณ์</string>
-    <string name="people_device_server">เซิร์ฟเวอร์</string>
     <string name="people_device_username">ชื่อผู้ใช้</string>
     <string name="people_device_done">เสร็จสิ้น</string>
     <string name="people_device_used">ใช้ล่าสุด %1$s</string>

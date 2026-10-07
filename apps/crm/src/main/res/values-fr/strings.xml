@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">Groupes</string>
     <string name="crm_attachment_remove">Supprimer la pièce jointe</string>
     <string name="crm_board_add_column">Ajouter une colonne</string>
+    <string name="crm_board_reorder_columns">Réorganiser les colonnes</string>
+    <string name="crm_board_reorder_columns_hint">Appuyez longuement sur le nom d\'une colonne, puis faites-la glisser</string>
     <string name="crm_settings_entity_id">ID d\'entité</string>
     <string name="crm_settings_fingerprint">Empreinte</string>
     <string name="crm_settings_server">Serveur</string>

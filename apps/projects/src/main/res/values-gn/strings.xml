@@ -376,6 +376,8 @@
     <string name="projects_export_saved">Proyecto datos oñeñongatúma</string>
     <string name="projects_exporting">Oñembosako\'ihína ñemosẽ…</string>
     <string name="projects_board_add_column">Embojuaju columna</string>
+    <string name="projects_board_reorder_columns">Emoĩporã jey columnakuéra</string>
+    <string name="projects_board_reorder_columns_hint">Eipyhy puku columna réra, upéi embosyryry</string>
     <string name="projects_design_sample">Techapyrã %1$s</string>
     <string name="projects_option_delete_title">Hundi opción</string>
     <string name="projects_option_delete_message">¿Añetehápe reipota embogue jeporavorã \"%1$s\"?</string>

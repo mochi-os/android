@@ -328,4 +328,5 @@
     <string name="access_remove_message">إزالة قاعدة الوصول لـ \"%1$s\"؟</string>
     <string name="color_picker_custom">مخصص</string>
     <string name="color_picker_clear">مسح</string>
+    <string name="common_refresh">تحديث</string>
 </resources>

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Igama ledivayisi</string>
     <string name="calendars_device_create">Dala</string>
     <string name="calendars_device_add">Engeza idivayisi</string>
-    <string name="calendars_device_server">Iseva</string>
     <string name="calendars_device_address">Ikheli</string>
     <string name="calendars_device_username">Igama lomsebenzisi</string>
     <string name="calendars_device_password">Iphasiwedi</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Kunemicimbi eminingi kakhulu ukuyibonisa yonke. Khetha ibanga elifushane.</string>
     <string name="calendars_list_empty">Ayikho imicimbi</string>
     <string name="calendars_list_nothing">Akukho okuhleliwe. Thepha ukuze udale umcimbi.</string>
+    <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_untitled">(Asikho isihloko)</string>
     <string name="calendars_status_cancelled">Kukhanselwe</string>
     <string name="calendars_status_tentative">Okwesikhashana</string>

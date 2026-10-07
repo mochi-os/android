@@ -243,6 +243,8 @@
     <string name="crm_access_tab_groups">گروه‌ها</string>
     <string name="crm_attachment_remove">حذف پیوست</string>
     <string name="crm_board_add_column">افزودن ستون</string>
+    <string name="crm_board_reorder_columns">مرتب‌سازی مجدد ستون‌ها</string>
+    <string name="crm_board_reorder_columns_hint">نام یک ستون را لمس طولانی کنید، سپس آن را بکشید</string>
     <string name="crm_settings_entity_id">شناسه موجودیت</string>
     <string name="crm_settings_fingerprint">اثر انگشت</string>
     <string name="crm_settings_server">سرور</string>

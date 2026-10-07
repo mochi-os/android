@@ -325,4 +325,5 @@
     <string name="access_remove_message">Eliminați regula de acces pentru „%1$s”?</string>
     <string name="color_picker_custom">Personalizat</string>
     <string name="color_picker_clear">Golește</string>
+    <string name="common_refresh">Reîmprospătează</string>
 </resources>

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">שם המכשיר</string>
     <string name="calendars_device_create">צור</string>
     <string name="calendars_device_add">הוספת מכשיר</string>
-    <string name="calendars_device_server">שרת</string>
     <string name="calendars_device_address">כתובת</string>
     <string name="calendars_device_username">שם משתמש</string>
     <string name="calendars_device_password">סיסמה</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">יותר מדי אירועים מכדי להציג את כולם. בחר טווח קצר יותר.</string>
     <string name="calendars_list_empty">אין אירועים</string>
     <string name="calendars_list_nothing">אין שום דבר מתוכנן. הקש כדי ליצור אירוע.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(ללא כותרת)</string>
     <string name="calendars_status_cancelled">בוטל</string>
     <string name="calendars_status_tentative">לא סופי</string>

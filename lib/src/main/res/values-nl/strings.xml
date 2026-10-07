@@ -324,4 +324,5 @@
     <string name="access_remove_message">Toegangsregel voor \"%1$s\" verwijderen?</string>
     <string name="color_picker_custom">Aangepast</string>
     <string name="color_picker_clear">Wissen</string>
+    <string name="common_refresh">Vernieuwen</string>
 </resources>

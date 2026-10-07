@@ -21,6 +21,9 @@ import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.click
 import androidx.compose.ui.test.onRoot
+import androidx.compose.ui.test.captureToImage
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -508,5 +511,88 @@ class TimeGridTest {
         rule.mainClock.advanceTimeBy(1_500)
         release()
         assertTrue(steps.isEmpty())
+    }
+
+    // ---- how a block looks ----
+
+    /** How many of the root's pixels are the blocks' red. */
+    private fun reds(): Int {
+        val pixels = rule.onRoot().captureToImage().toPixelMap()
+        var count = 0
+        for (x in 0 until pixels.width) {
+            for (y in 0 until pixels.height) {
+                val colour = pixels[x, y]
+                if (colour.red > 0.85f && colour.green < 0.3f && colour.blue < 0.3f) count++
+            }
+        }
+        return count
+    }
+
+    /** [title]'s block from 10:00 for [minutes] on Monday, in red. */
+    private fun red(title: String, minutes: Int) = Instance(
+        event = title,
+        calendar = "c1",
+        colour = "#ff0000",
+        summary = title,
+        start = at(monday, 10, 0),
+        finish = at(monday, 10, 0) + minutes * 60L,
+    )
+
+    /** The block's time as it writes it from [start] for [minutes], "09:00 to 11:00", in the user's zone. */
+    private fun span(start: Long, minutes: Int): String {
+        val format = org.mochios.android.i18n.Format(org.mochios.android.i18n.UserPreferences())
+        return context.getString(R.string.calendars_range, format.formatTime(start), format.formatTime(start + minutes * 60L))
+    }
+
+    @Test
+    fun `a block stands on the cards' own tone, its colour only in its dot`() {
+        // Today, with its red line, is another week; the block is still to come.
+        now = at(monday.minusDays(14), 10, 0)
+        show(listOf(red("Meeting", 120)), days = listOf(monday))
+        val red = reds()
+        // An eight-point dot is some dozens of pixels; a card filled with
+        // the colour would be thousands.
+        assertTrue("red pixels: $red", red in 20..200)
+    }
+
+    @Test
+    fun `a tall block opens with its dot and time, its title beneath`() {
+        now = at(monday.minusDays(14), 10, 0)
+        show(listOf(red("Meeting", 120)), days = listOf(monday))
+        val title = rule.onNodeWithText("Meeting", useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        val time = rule.onNodeWithText(span(at(monday, 10, 0), 120), useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        assertTrue("time $time, title $title", time.bottom <= title.top + 1f)
+    }
+
+    @Test
+    fun `a short block reads its dot, its title and its time on one line`() {
+        now = at(monday.minusDays(14), 10, 0)
+        show(listOf(red("Call", 15)), days = listOf(monday))
+        val title = rule.onNodeWithText("Call", useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        val time = rule.onNodeWithText(span(at(monday, 10, 0), 15), useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        assertTrue("time $time, title $title", time.left >= title.right - 1f && time.top < title.bottom)
+        val red = reds()
+        assertTrue("red pixels: $red", red in 20..200)
+    }
+
+    @Test
+    fun `a week's block puts its dot and time above its title`() {
+        now = at(monday.minusDays(14), 10, 0)
+        show(listOf(red("Meeting", 120)))
+        val title = rule.onNodeWithText("Meeting", useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        val time = rule.onNodeWithText(span(at(monday, 10, 0), 120), useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        assertTrue("time $time, title $title", time.bottom <= title.top + 1f)
+        val red = reds()
+        assertTrue("red pixels: $red", red in 20..200)
+    }
+
+    @Test
+    fun `a week's block too short for its time reads its dot beside its title`() {
+        now = at(monday.minusDays(14), 10, 0)
+        show(listOf(red("Call", 15)))
+        rule.onNodeWithText("Call", useUnmergedTree = true).fetchSemanticsNode()
+        assertEquals(0, rule.onAllNodesWithText(span(at(monday, 10, 0), 15), useUnmergedTree = true).fetchSemanticsNodes().size)
+        val red = reds()
+        assertTrue("red pixels: $red", red in 20..200)
     }
 }

@@ -34,7 +34,6 @@
     <string name="calendars_device_name">Ime naprave</string>
     <string name="calendars_device_create">Ustvari</string>
     <string name="calendars_device_add">Dodaj napravo</string>
-    <string name="calendars_device_server">Strežnik</string>
     <string name="calendars_device_address">Naslov</string>
     <string name="calendars_device_username">Uporabniško ime</string>
     <string name="calendars_device_password">Geslo</string>
@@ -69,6 +68,7 @@
     <string name="calendars_truncated">Preveč dogodkov za prikaz vseh. Izberite krajše obdobje.</string>
     <string name="calendars_list_empty">Brez dogodkov</string>
     <string name="calendars_list_nothing">Nič ni načrtovano. Tapnite, da ustvarite dogodek.</string>
+    <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_untitled">(Brez naslova)</string>
     <string name="calendars_status_cancelled">Odpovedano</string>
     <string name="calendars_status_tentative">Začasno</string>
