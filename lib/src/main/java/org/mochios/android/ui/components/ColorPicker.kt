@@ -32,7 +32,6 @@ import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LocalMinimumInteractiveComponentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -54,7 +53,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.takeOrElse
 import org.mochios.android.R
 import kotlin.math.roundToInt
 
@@ -88,9 +86,10 @@ private val HUE_THUMB_WIDTH = 10.dp
  * [onHexChange]. A hex the picker cannot parse stays in the text box without
  * moving the field and slider.
  *
- * [collapsible] is the web's compact form: the presets with a Custom toggle
- * beside their first line, Clear on a row below when [onClear] is given and a
- * colour is set, and the field, slider and hex box only once Custom is open.
+ * [collapsible] is the compact form: the presets across the full width, then
+ * a row with a Custom toggle and, when [onClear] is given, Clear - there even
+ * with no colour, disabled, so choosing or clearing one never moves what is
+ * below - and the field, slider and hex box only once Custom is open.
  * It opens by itself on a colour that is not a preset.
  */
 @OptIn(ExperimentalLayoutApi::class)
@@ -185,28 +184,15 @@ fun ColorPicker(
                 )
             }
         }
+        FlowRow(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            swatches()
+        }
         if (collapsible) {
-            // The swatches wrap among themselves, so the Custom toggle stays on
-            // their first line however narrow the row, as on the web. The first
-            // line is set down to sit level with the toggle's middle.
-            val toggle = maxOf(
-                ButtonDefaults.MinHeight,
-                LocalMinimumInteractiveComponentSize.current.takeOrElse { 0.dp },
-            )
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.Top,
-            ) {
-                FlowRow(
-                    modifier = Modifier
-                        .weight(1f, fill = false)
-                        .padding(top = (toggle - PRESET_SIZE) / 2),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    swatches()
-                }
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 MochiOutlinedButton(onClick = { open = !open }) {
                     parseHexColour(hex.trim())?.let { colour ->
                         Box(
@@ -214,7 +200,11 @@ fun ColorPicker(
                                 .size(ButtonDefaults.IconSize)
                                 .clip(CircleShape)
                                 .background(colour)
-                                .border(1.dp, MaterialTheme.colorScheme.outlineVariant, CircleShape),
+                                .border(
+                                    width = 1.dp,
+                                    color = MaterialTheme.colorScheme.outlineVariant,
+                                    shape = CircleShape,
+                                ),
                         )
                         Spacer(Modifier.width(ButtonDefaults.IconSpacing))
                     }
@@ -225,21 +215,10 @@ fun ColorPicker(
                         modifier = Modifier.size(ButtonDefaults.IconSize),
                     )
                 }
-            }
-        } else {
-            FlowRow(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                swatches()
-            }
-        }
-
-        if (collapsible && onClear != null && hex.isNotBlank()) {
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
-                MochiOutlinedButton(onClick = onClear) {
-                    Text(stringResource(R.string.color_picker_clear))
+                if (onClear != null) {
+                    MochiOutlinedButton(onClick = onClear, enabled = hex.isNotBlank()) {
+                        Text(stringResource(R.string.color_picker_clear))
+                    }
                 }
             }
         }
