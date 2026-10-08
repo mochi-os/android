@@ -91,6 +91,9 @@ class CalendarFlowTest {
     @Volatile private var saving: CountDownLatch? = null
     @Volatile private var paging: CountDownLatch? = null
     @Volatile private var held = Long.MAX_VALUE
+
+    /** Whether every events listing answers slowly, so a newer load overtakes it. */
+    @Volatile private var slow = false
     @Volatile private var last = 0L
 
     @Before
@@ -141,6 +144,10 @@ class CalendarFlowTest {
                                 "start": $start, "finish": ${start + 3_600}}], "truncated": false}""",
                         )
                         else -> ok("""{"instances": [], "truncated": false}""")
+                    }.apply {
+                        if (slow) {
+                            setBodyDelay(300, TimeUnit.MILLISECONDS)
+                        }
                     }
                     else -> MockResponse().setResponseCode(404)
                 }
@@ -287,6 +294,25 @@ class CalendarFlowTest {
         assertEquals(before, asked.size)
         assertEquals(CalendarsSection.DAY, model.uiState.value.view)
         assertEquals(day, model.uiState.value.anchor)
+    }
+
+    @Test
+    fun `days moved through faster than they load leave no error behind`() {
+        val model = model()
+        model.view(CalendarsSection.DAY)
+        until { !model.uiState.value.isRefreshing }
+        settle()
+        slow = true
+        val today = LocalDate.now(london)
+        val before = listings().size
+        for (ahead in 1L..3L) {
+            model.anchor(today.plusDays(ahead))
+            until { listings().size > before + ahead - 1 }
+        }
+        settle(1_500)
+        assertEquals(today.plusDays(3), model.uiState.value.anchor)
+        assertNull(model.uiState.value.stale)
+        assertNull(model.uiState.value.error)
     }
 
     @Test

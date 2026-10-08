@@ -6,6 +6,7 @@
 package org.mochios.calendars.repository
 
 import com.google.gson.Gson
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -426,10 +427,14 @@ class CalendarsRepository @Inject constructor(
     /**
      * One request, with a 412 raised as [EventChangedException] so the caller
      * can reload and retry rather than showing the user a raw precondition
-     * failure, and everything else as the standard error.
+     * failure, and everything else as the standard error. A cancelled request
+     * stays a cancellation, so a load overtaken by a newer one ends quietly
+     * instead of reporting an unexpected error.
      */
     private inline fun <T> call(request: () -> T): T = try {
         request()
+    } catch (e: CancellationException) {
+        throw e
     } catch (e: ApiException) {
         if (e.code == 412) throw EventChangedException() else throw e.toMochiError()
     } catch (e: Exception) {
