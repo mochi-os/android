@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI 処理モード</string>
     <string name="feeds_ai_account">AI アカウント</string>
     <string name="feeds_ai_prompt_new">新しい投稿にタグを付ける</string>
-    <string name="feeds_ai_prompt_batch">バッチ処理</string>
     <string name="feeds_ai_prompt_rank">ランキング / スコアリング</string>
     <string name="feeds_ai_prompt_credibility">信頼性評価</string>
 

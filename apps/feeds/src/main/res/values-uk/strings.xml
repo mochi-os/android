@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Режим обробки ШІ</string>
     <string name="feeds_ai_account">Обліковий запис ШІ</string>
     <string name="feeds_ai_prompt_new">Позначення нових публікацій</string>
-    <string name="feeds_ai_prompt_batch">Пакетна обробка</string>
     <string name="feeds_ai_prompt_rank">Ранжування / оцінювання</string>
     <string name="feeds_ai_prompt_credibility">Оцінка достовірності</string>
 

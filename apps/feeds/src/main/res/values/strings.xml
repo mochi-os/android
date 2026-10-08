@@ -227,7 +227,6 @@
     <string name="feeds_ai_mode_tag">Tag</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + deduplicate</string>
     <string name="feeds_ai_prompt_new">Tag new posts</string>
-    <string name="feeds_ai_prompt_batch">Batch processing</string>
     <string name="feeds_ai_prompt_rank">Ranking / scoring</string>
     <string name="feeds_ai_prompt_credibility">Credibility assessment</string>
     <string name="feeds_ai_prompt_default">Default</string>

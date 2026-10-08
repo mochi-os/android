@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI پروسيسنگ موڊ</string>
     <string name="feeds_ai_account">AI اڪائونٽ</string>
     <string name="feeds_ai_prompt_new">نين پوسٽن کي ٽيگ ڪريو</string>
-    <string name="feeds_ai_prompt_batch">بيچ پروسيسنگ</string>
     <string name="feeds_ai_prompt_rank">درجابندي / اسڪورنگ</string>
     <string name="feeds_ai_prompt_credibility">اعتبار جو جائزو</string>
 

@@ -120,7 +120,6 @@
     <string name="feeds_suggested_credibility_keep">Mantendu unekoa</string>
     <string name="feeds_ai_processing_mode">AAren prozesatze modua</string>
     <string name="feeds_ai_prompt_new">Etiketatu argitalpen berriak</string>
-    <string name="feeds_ai_prompt_batch">Sorta-prozesatzea</string>
     <string name="feeds_ai_prompt_rank">Sailkapena / puntuazioa</string>
     <string name="feeds_ai_prompt_credibility">Sinesgarritasunaren ebaluazioa</string>
 

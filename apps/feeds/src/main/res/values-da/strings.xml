@@ -120,7 +120,6 @@
     <string name="feeds_suggested_credibility_keep">Behold nuværende</string>
     <string name="feeds_ai_processing_mode">AI-behandlingstilstand</string>
     <string name="feeds_ai_prompt_new">Tag nye indlæg</string>
-    <string name="feeds_ai_prompt_batch">Batch-behandling</string>
     <string name="feeds_ai_prompt_rank">Rangering / scoring</string>
     <string name="feeds_ai_prompt_credibility">Troværdighedsvurdering</string>
 

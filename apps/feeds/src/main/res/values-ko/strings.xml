@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI 처리 모드</string>
     <string name="feeds_ai_account">AI 계정</string>
     <string name="feeds_ai_prompt_new">새 게시물 태그 지정</string>
-    <string name="feeds_ai_prompt_batch">일괄 처리</string>
     <string name="feeds_ai_prompt_rank">순위 / 점수</string>
     <string name="feeds_ai_prompt_credibility">신뢰도 평가</string>
 

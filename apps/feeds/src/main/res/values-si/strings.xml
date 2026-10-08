@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI සැකසුම් ආකාරය</string>
     <string name="feeds_ai_account">AI ගිණුම</string>
     <string name="feeds_ai_prompt_new">නව පළ කිරීම් ටැග් කරන්න</string>
-    <string name="feeds_ai_prompt_batch">කණ්ඩායම් සැකසුම</string>
     <string name="feeds_ai_prompt_rank">ශ්‍රේණිගත කිරීම / ලකුණු දීම</string>
     <string name="feeds_ai_prompt_credibility">විශ්වසනීයත්ව තක්සේරුව</string>
 

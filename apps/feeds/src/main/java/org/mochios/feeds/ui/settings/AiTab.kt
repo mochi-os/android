@@ -45,7 +45,6 @@ fun AiTab(viewModel: FeedSettingsViewModel) {
     )
     val promptTypes = listOf(
         "new" to stringResource(R.string.feeds_ai_prompt_new),
-        "batch" to stringResource(R.string.feeds_ai_prompt_batch),
         "rank" to stringResource(R.string.feeds_ai_prompt_rank),
         "credibility" to stringResource(R.string.feeds_ai_prompt_credibility),
     )

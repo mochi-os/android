@@ -122,7 +122,6 @@
     <string name="feeds_ai_processing_mode">AI-handsamingsmodus</string>
     <string name="feeds_ai_account">AI-konto</string>
     <string name="feeds_ai_prompt_new">Merk nye innlegg</string>
-    <string name="feeds_ai_prompt_batch">Satsvis handsaming</string>
     <string name="feeds_ai_prompt_rank">Rangering / poenggjeving</string>
     <string name="feeds_ai_prompt_credibility">Vurdering av truverde</string>
 

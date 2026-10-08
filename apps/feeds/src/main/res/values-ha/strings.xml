@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Yanayin sarrafa AI</string>
     <string name="feeds_ai_account">Asusun AI</string>
     <string name="feeds_ai_prompt_new">Yi wa sabbin posts tag</string>
-    <string name="feeds_ai_prompt_batch">Sarrafa rukuni</string>
     <string name="feeds_ai_prompt_rank">Matsayi / kimantawa</string>
     <string name="feeds_ai_prompt_credibility">Kimanta amincewa</string>
 

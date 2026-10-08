@@ -87,7 +87,6 @@
     <string name="feeds_ai_processing_mode">دۆخی پرۆسێسکردنی AI</string>
     <string name="feeds_ai_account">هەژماری AI</string>
     <string name="feeds_ai_prompt_new">تاگکردنی پۆستە نوێیەکان</string>
-    <string name="feeds_ai_prompt_batch">پرۆسێسکردنی کۆمەڵ</string>
     <string name="feeds_ai_prompt_rank">ڕیزبەندی / خاڵدان</string>
     <string name="feeds_ai_prompt_credibility">هەڵسەنگاندنی متمانەپێکراوی</string>
 

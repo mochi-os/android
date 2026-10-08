@@ -120,7 +120,6 @@
     <string name="feeds_suggested_credibility_keep">Διατήρηση τρέχουσας</string>
     <string name="feeds_ai_processing_mode">Λειτουργία επεξεργασίας AI</string>
     <string name="feeds_ai_prompt_new">Ετικέτες σε νέες αναρτήσεις</string>
-    <string name="feeds_ai_prompt_batch">Μαζική επεξεργασία</string>
     <string name="feeds_ai_prompt_rank">Κατάταξη / βαθμολόγηση</string>
     <string name="feeds_ai_prompt_credibility">Αξιολόγηση αξιοπιστίας</string>
 

@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI پروسیسنگ موڈ</string>
     <string name="feeds_ai_account">AI اکاؤنٹ</string>
     <string name="feeds_ai_prompt_new">نئی پوسٹس کو ٹیگ کریں</string>
-    <string name="feeds_ai_prompt_batch">بیچ پروسیسنگ</string>
     <string name="feeds_ai_prompt_rank">درجہ بندی / اسکورنگ</string>
     <string name="feeds_ai_prompt_credibility">ساکھ کا جائزہ</string>
 

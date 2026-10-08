@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">របៀបដំណើរការ AI</string>
     <string name="feeds_ai_account">គណនី AI</string>
     <string name="feeds_ai_prompt_new">ដាក់ស្លាកប្រកាសថ្មី</string>
-    <string name="feeds_ai_prompt_batch">ដំណើរការជាបាច់</string>
     <string name="feeds_ai_prompt_rank">ការដាក់ចំណាត់ថ្នាក់ / ការដាក់ពិន្ទុ</string>
     <string name="feeds_ai_prompt_credibility">ការវាយតម្លៃភាពអាចជឿទុកចិត្តបាន</string>
 

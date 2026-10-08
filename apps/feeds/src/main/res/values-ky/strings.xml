@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI иштетүү режими</string>
     <string name="feeds_ai_account">AI аккаунту</string>
     <string name="feeds_ai_prompt_new">Жаңы посттордун тегдери</string>
-    <string name="feeds_ai_prompt_batch">Топтоп иштетүү</string>
     <string name="feeds_ai_prompt_rank">Рейтинг / баа берүү</string>
     <string name="feeds_ai_prompt_credibility">Ишенимдүүлүктү баалоо</string>
 

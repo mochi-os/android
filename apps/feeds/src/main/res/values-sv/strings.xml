@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI-bearbetningsläge</string>
     <string name="feeds_ai_account">AI-konto</string>
     <string name="feeds_ai_prompt_new">Tagga nya inlägg</string>
-    <string name="feeds_ai_prompt_batch">Batchbearbetning</string>
     <string name="feeds_ai_prompt_rank">Rankning / poängsättning</string>
     <string name="feeds_ai_prompt_credibility">Trovärdighetsbedömning</string>
 

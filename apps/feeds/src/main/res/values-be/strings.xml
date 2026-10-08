@@ -87,7 +87,6 @@
     <string name="feeds_ai_processing_mode">Рэжым апрацоўкі ШІ</string>
     <string name="feeds_ai_account">Уліковы запіс AI</string>
     <string name="feeds_ai_prompt_new">Дадаць тэгі да новых допісаў</string>
-    <string name="feeds_ai_prompt_batch">Пакетная апрацоўка</string>
     <string name="feeds_ai_prompt_rank">Ранжыраванне / ацэньванне</string>
     <string name="feeds_ai_prompt_credibility">Ацэнка дакладнасці</string>
 

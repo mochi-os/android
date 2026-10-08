@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Režim spracovania AI</string>
     <string name="feeds_ai_account">Účet AI</string>
     <string name="feeds_ai_prompt_new">Označiť nové príspevky</string>
-    <string name="feeds_ai_prompt_batch">Dávkové spracovanie</string>
     <string name="feeds_ai_prompt_rank">Hodnotenie / skóre</string>
     <string name="feeds_ai_prompt_credibility">Posúdenie dôveryhodnosti</string>
 

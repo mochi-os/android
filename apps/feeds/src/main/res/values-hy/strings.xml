@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI մշակման ռեժիմ</string>
     <string name="feeds_ai_account">AI հաշիվ</string>
     <string name="feeds_ai_prompt_new">Պիտակել նոր գրառումները</string>
-    <string name="feeds_ai_prompt_batch">Փաթեթային մշակում</string>
     <string name="feeds_ai_prompt_rank">Դասակարգում / գնահատում</string>
     <string name="feeds_ai_prompt_credibility">Արժանահավատության գնահատում</string>
 

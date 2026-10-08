@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI 处理模式</string>
     <string name="feeds_ai_account">AI 账户</string>
     <string name="feeds_ai_prompt_new">为新帖子打标签</string>
-    <string name="feeds_ai_prompt_batch">批量处理</string>
     <string name="feeds_ai_prompt_rank">排名 / 评分</string>
     <string name="feeds_ai_prompt_credibility">可信度评估</string>
 

@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">מצב עיבוד AI</string>
     <string name="feeds_ai_account">חשבון AI</string>
     <string name="feeds_ai_prompt_new">תייג פוסטים חדשים</string>
-    <string name="feeds_ai_prompt_batch">עיבוד באצווה</string>
     <string name="feeds_ai_prompt_rank">דירוג / ניקוד</string>
     <string name="feeds_ai_prompt_credibility">הערכת אמינות</string>
 

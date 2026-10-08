@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Реҷаи коркарди AI</string>
     <string name="feeds_ai_account">Ҳисоби AI</string>
     <string name="feeds_ai_prompt_new">Гузоштани барчасп ба паёмҳои нав</string>
-    <string name="feeds_ai_prompt_batch">Коркарди дастаҷамъӣ</string>
     <string name="feeds_ai_prompt_rank">Рейтинг / арзёбӣ</string>
     <string name="feeds_ai_prompt_credibility">Арзёбии эътимоднокӣ</string>
 

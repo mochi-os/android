@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Tryb przetwarzania AI</string>
     <string name="feeds_ai_account">Konto AI</string>
     <string name="feeds_ai_prompt_new">Taguj nowe posty</string>
-    <string name="feeds_ai_prompt_batch">Przetwarzanie wsadowe</string>
     <string name="feeds_ai_prompt_rank">Ranking / ocenianie</string>
     <string name="feeds_ai_prompt_credibility">Ocena wiarygodności</string>
 

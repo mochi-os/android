@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Режим AI обраде</string>
     <string name="feeds_ai_account">AI налог</string>
     <string name="feeds_ai_prompt_new">Означи нове објаве</string>
-    <string name="feeds_ai_prompt_batch">Групна обрада</string>
     <string name="feeds_ai_prompt_rank">Рангирање / бодовање</string>
     <string name="feeds_ai_prompt_credibility">Процена кредибилитета</string>
 

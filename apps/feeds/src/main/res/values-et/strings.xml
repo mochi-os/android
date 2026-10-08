@@ -120,7 +120,6 @@
     <string name="feeds_suggested_credibility_keep">Säilita praegune</string>
     <string name="feeds_ai_processing_mode">Tehisintellekti töötlusrežiim</string>
     <string name="feeds_ai_prompt_new">Sildista uusi postitusi</string>
-    <string name="feeds_ai_prompt_batch">Partii töötlemine</string>
     <string name="feeds_ai_prompt_rank">Järjestamine / hindamine</string>
     <string name="feeds_ai_prompt_credibility">Usaldusväärsuse hindamine</string>
 
