@@ -153,6 +153,11 @@ class EditorFlowTest {
 
     private fun string(id: Int) = context.getString(id)
 
+    /** Changes the title, as Save stays off on a stored event until something changes. */
+    private fun retitle() {
+        rule.onAllNodes(hasSetTextAction())[0].performTextReplacement("Stand-up call")
+    }
+
     /**
      * Waits for [done], a flag rather than a node: reading the nodes is what
      * lets the main thread run the response the flag is waiting on.
@@ -179,6 +184,7 @@ class EditorFlowTest {
         respond("-/events/update", changed)
         show("event" to "e1")
         waitFor("Stand-up")
+        retitle()
         rule.onNodeWithText(string(MochiR.string.common_save)).performScrollTo().performClick()
         waitFor(string(R.string.calendars_event_changed))
         // One refused write and no second one over the change.
@@ -323,6 +329,7 @@ class EditorFlowTest {
         respond("-/events/update", event("b", "Stand-up"))
         show("event" to "e1")
         waitFor("Stand-up")
+        retitle()
         rule.onNodeWithText(string(MochiR.string.common_save)).performScrollTo().performClick()
         answered { saved != null }
         assertEquals(false, saved)
@@ -385,6 +392,7 @@ class EditorFlowTest {
         val delete = rule.onNodeWithContentDescription(string(R.string.calendars_delete))
         copy.assertIsEnabled()
         delete.assertIsEnabled()
+        retitle()
         rule.onNodeWithText(string(MochiR.string.common_save)).performScrollTo().performClick()
         rule.waitForIdle()
         copy.assertIsNotEnabled()
