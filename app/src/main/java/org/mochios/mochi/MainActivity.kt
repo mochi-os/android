@@ -41,6 +41,7 @@ import org.mochios.android.push.NonceStore
 import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
+import org.mochios.android.push.launcherClassFor
 import org.mochios.android.push.launcherComponentFor
 import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
@@ -379,8 +380,8 @@ open class MainActivity : ComponentActivity() {
      * (clear top, clear task) are kept, as they were meant for the app.
      */
     private fun forward(app: String) {
-        val component = launcherComponentFor(this, app)
-            ?: launcherComponentFor(this, DEFAULT_APP)
+        val component = launcherClassFor(this, app)
+            ?: launcherClassFor(this, DEFAULT_APP)
             ?: return
         val forwarded = Intent(intent ?: Intent(Intent.ACTION_MAIN)).setComponent(component)
         val dropped = Intent.FLAG_ACTIVITY_NO_HISTORY or

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Settings icon for the Rose theme: the same glyph and inset as
+     ic_settings, tinted. LauncherTint shows it through its manifest alias. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground>
+        <inset android:inset="23.7%">
+            <bitmap
+                android:src="@mipmap/ic_settings_foreground"
+                android:tint="#E569A9" />
+        </inset>
+    </foreground>
+</adaptive-icon>

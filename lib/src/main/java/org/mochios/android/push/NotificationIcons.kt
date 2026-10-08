@@ -9,6 +9,7 @@ import android.content.ComponentName
 import android.content.Context
 import androidx.annotation.DrawableRes
 import org.mochios.android.R
+import org.mochios.android.launcher.LauncherTint
 
 /**
  * Mochi-app slugs that create a notification channel at startup; each channel's
@@ -50,11 +51,23 @@ fun notificationIconFor(app: String?): Int = when (app?.lowercase()) {
 }
 
 /**
- * Launcher activity for a slug, so a notification's badge lands on that app's
+ * Launcher entry for a slug, so a notification's badge lands on that app's
  * launcher icon only; the implicit `mochi:` intent resolves to MainActivity and
- * badges every Mochi icon. Null for unknown apps.
+ * badges every Mochi icon. The answer is the colour alias on screen now,
+ * since each app's icon follows the theme. Null for unknown apps.
  */
 fun launcherComponentFor(context: Context, app: String?): ComponentName? {
+    val name = LAUNCHER_ACTIVITIES[app?.lowercase()] ?: return null
+    return LauncherTint.active(context, name)
+}
+
+/**
+ * The launcher class for a slug, the activity every one of its colour aliases
+ * opens. A launch handed to an app goes here rather than to an alias: an
+ * activity running under an alias is finished the moment the theme disables
+ * that alias. Null for unknown apps.
+ */
+fun launcherClassFor(context: Context, app: String?): ComponentName? {
     val name = LAUNCHER_ACTIVITIES[app?.lowercase()] ?: return null
     return ComponentName(context, "${context.packageName}.$name")
 }
