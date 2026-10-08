@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">ماڵ</string>
     <string name="people_contact_type_other">هیتر</string>
     <string name="people_contact_remove">لابردن</string>
-    <string name="people_contact_pick_date_confirm">باشە</string>
     <string name="people_books_name">ناو</string>
     <string name="people_books_rename">ناوگۆڕکردن</string>
     <string name="people_contacts_sort_name">ناو</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">دەفتەری ناونیشان</string>
     <string name="people_contact_type_work">کار</string>
     <string name="people_contact_type_mobile">مۆبایل</string>
-    <string name="people_contact_pick_date">ڕێککەوت هەڵبژێرە</string>
     <string name="people_contact_conflict">پەیوەندییەکە گۆڕا</string>
     <string name="people_add_contact_title">زیادکردنی پەیوەندی</string>
     <string name="people_add_contact_add">زیادکردن بۆ پەیوەندییەکان</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">نەتوانرا بگاتە سێرڤەر</string>
     <string name="people_sync_refused">نەتوانرا پەیوەندییەک هاوکات بکرێت: %1$s</string>
     <string name="people_contact_friend">هاوڕێی Mochi</string>
+    <string name="people_contact_birthday_day">ڕۆژ</string>
+    <string name="people_contact_birthday_month">مانگ</string>
+    <string name="people_contact_birthday_year">ساڵ</string>
+    <string name="people_contact_birthday_clear">پاککردنەوە</string>
 </resources>

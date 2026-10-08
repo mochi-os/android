@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">घर</string>
     <string name="people_contact_type_other">अन्य</string>
     <string name="people_contact_remove">हटाएँ</string>
-    <string name="people_contact_pick_date_confirm">ठीक है</string>
     <string name="people_books_name">नाम</string>
     <string name="people_books_rename">नाम बदलें</string>
     <string name="people_contacts_sort_name">नाम</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">एड्रेस बुक</string>
     <string name="people_contact_type_work">कार्य</string>
     <string name="people_contact_type_mobile">मोबाइल</string>
-    <string name="people_contact_pick_date">तारीख़ चुनें</string>
     <string name="people_contact_conflict">संपर्क बदल गया</string>
     <string name="people_add_contact_title">संपर्क जोड़ें</string>
     <string name="people_add_contact_add">संपर्कों में जोड़ें</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">सर्वर तक नहीं पहुँच सके</string>
     <string name="people_sync_refused">एक संपर्क सिंक नहीं हो सका: %1$s</string>
     <string name="people_contact_friend">Mochi मित्र</string>
+    <string name="people_contact_birthday_day">दिन</string>
+    <string name="people_contact_birthday_month">महीना</string>
+    <string name="people_contact_birthday_year">वर्ष</string>
+    <string name="people_contact_birthday_clear">साफ़ करें</string>
 </resources>

@@ -794,4 +794,5 @@
         <item quantity="one">Ez a jelenlegi számlázási időszak végén megszüntet %1$s aktív előfizetést. Az előfizetők értesítést kapnak. A hirdetés el lesz rejtve a vevők elől.</item>
         <item quantity="other">Ez a jelenlegi számlázási időszak végén megszüntet %1$s aktív előfizetést. Az előfizetők értesítést kapnak. A hirdetés el lesz rejtve a vevők elől.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Törli az erőforrást?</string>
 </resources>

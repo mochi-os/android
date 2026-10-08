@@ -794,4 +794,5 @@
         <item quantity="few">Tím se na konci aktuálního fakturačního období zruší %1$s aktivní předplatná. Odběratelé budou upozorněni. Inzerát bude před kupujícími skryt.</item>
         <item quantity="other">Tím se na konci aktuálního fakturačního období zruší %1$s aktivních předplatných. Odběratelé budou upozorněni. Inzerát bude před kupujícími skryt.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Smazat zdroj?</string>
 </resources>

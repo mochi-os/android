@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Οικία</string>
     <string name="people_contact_type_other">Άλλο</string>
     <string name="people_contact_remove">Αφαίρεση</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Όνομα</string>
     <string name="people_books_rename">Μετονομασία</string>
     <string name="people_contacts_sort_name">Όνομα</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Βιβλίο διευθύνσεων</string>
     <string name="people_contact_type_work">Εργασία</string>
     <string name="people_contact_type_mobile">Κινητό</string>
-    <string name="people_contact_pick_date">Επιλέξτε ημερομηνία</string>
     <string name="people_contact_conflict">Η επαφή άλλαξε</string>
     <string name="people_add_contact_title">Προσθήκη επαφής</string>
     <string name="people_add_contact_add">Προσθήκη στις επαφές</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Δεν ήταν δυνατή η σύνδεση με τον διακομιστή</string>
     <string name="people_sync_refused">Δεν ήταν δυνατός ο συγχρονισμός μιας επαφής: %1$s</string>
     <string name="people_contact_friend">Φίλος στο Mochi</string>
+    <string name="people_contact_birthday_day">Ημέρα</string>
+    <string name="people_contact_birthday_month">Μήνας</string>
+    <string name="people_contact_birthday_year">Έτος</string>
+    <string name="people_contact_birthday_clear">Εκκαθάριση</string>
 </resources>

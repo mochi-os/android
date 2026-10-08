@@ -799,4 +799,5 @@
         <item quantity="many">Bydd hyn yn canslo %1$s thanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
         <item quantity="other">Bydd hyn yn canslo %1$s tanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Dileu’r ased?</string>
 </resources>

@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Kuća</string>
     <string name="people_contact_type_other">Ostalo</string>
     <string name="people_contact_remove">Ukloni</string>
-    <string name="people_contact_pick_date_confirm">U redu</string>
     <string name="people_books_name">Naziv</string>
     <string name="people_books_rename">Preimenuj</string>
     <string name="people_contacts_sort_name">Ime</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Adresar</string>
     <string name="people_contact_type_work">Posao</string>
     <string name="people_contact_type_mobile">Mobitel</string>
-    <string name="people_contact_pick_date">Odaberite datum</string>
     <string name="people_contact_conflict">Kontakt je promijenjen</string>
     <string name="people_add_contact_title">Dodaj kontakt</string>
     <string name="people_add_contact_add">Dodaj u kontakte</string>
@@ -216,4 +214,8 @@
     <string name="people_sync_transport">Nije moguće doseći poslužitelj</string>
     <string name="people_sync_refused">Nije moguće sinkronizirati kontakt: %1$s</string>
     <string name="people_contact_friend">Mochi prijatelj</string>
+    <string name="people_contact_birthday_day">Dan</string>
+    <string name="people_contact_birthday_month">Mjesec</string>
+    <string name="people_contact_birthday_year">Godina</string>
+    <string name="people_contact_birthday_clear">Očisti</string>
 </resources>

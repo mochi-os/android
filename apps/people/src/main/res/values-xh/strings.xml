@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Ekhaya</string>
     <string name="people_contact_type_other">Okunye</string>
     <string name="people_contact_remove">Susa</string>
-    <string name="people_contact_pick_date_confirm">Kulungile</string>
     <string name="people_books_name">Igama</string>
     <string name="people_books_rename">Guqula igama</string>
     <string name="people_contacts_sort_name">Igama</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Incwadi yeedilesi</string>
     <string name="people_contact_type_work">Umsebenzi</string>
     <string name="people_contact_type_mobile">Iselula</string>
-    <string name="people_contact_pick_date">Khetha umhla</string>
     <string name="people_contact_conflict">Uqhagamshelwano lutshintshile</string>
     <string name="people_add_contact_title">Yongeza oqhagamshelwana naye</string>
     <string name="people_add_contact_add">Yongeza kwabo uqhagamshelana nabo</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Akukwazekanga ukufikelela kwiseva</string>
     <string name="people_sync_refused">Akukwazekanga ukungqamanisa oqhagamshelwa omnye: %1$s</string>
     <string name="people_contact_friend">Umhlobo we-Mochi</string>
+    <string name="people_contact_birthday_day">Usuku</string>
+    <string name="people_contact_birthday_month">Inyanga</string>
+    <string name="people_contact_birthday_year">Unyaka</string>
+    <string name="people_contact_birthday_clear">Cima</string>
 </resources>

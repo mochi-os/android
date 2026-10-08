@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">სახლი</string>
     <string name="people_contact_type_other">სხვა</string>
     <string name="people_contact_remove">წაშლა</string>
-    <string name="people_contact_pick_date_confirm">კარგი</string>
     <string name="people_books_name">სახელი</string>
     <string name="people_books_rename">სახელის შეცვლა</string>
     <string name="people_contacts_sort_name">სახელი</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">მისამართების წიგნი</string>
     <string name="people_contact_type_work">სამსახური</string>
     <string name="people_contact_type_mobile">მობილური</string>
-    <string name="people_contact_pick_date">აირჩიეთ თარიღი</string>
     <string name="people_contact_conflict">კონტაქტი შეიცვალა</string>
     <string name="people_add_contact_title">კონტაქტის დამატება</string>
     <string name="people_add_contact_add">კონტაქტებში დამატება</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">სერვერთან დაკავშირება ვერ მოხერხდა</string>
     <string name="people_sync_refused">კონტაქტის სინქრონიზება ვერ მოხერხდა: %1$s</string>
     <string name="people_contact_friend">Mochi მეგობარი</string>
+    <string name="people_contact_birthday_day">დღე</string>
+    <string name="people_contact_birthday_month">თვე</string>
+    <string name="people_contact_birthday_year">წელი</string>
+    <string name="people_contact_birthday_clear">გასუფთავება</string>
 </resources>

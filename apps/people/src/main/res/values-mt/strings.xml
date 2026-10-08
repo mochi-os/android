@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Dar</string>
     <string name="people_contact_type_other">Oħra</string>
     <string name="people_contact_remove">Neħħi</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Isem</string>
     <string name="people_books_rename">Irrinomina</string>
     <string name="people_contacts_sort_name">Isem</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Ktieb tal-indirizzi</string>
     <string name="people_contact_type_work">Xogħol</string>
     <string name="people_contact_type_mobile">Mowbajl</string>
-    <string name="people_contact_pick_date">Agħżel data</string>
     <string name="people_contact_conflict">Il-kuntatt inbidel</string>
     <string name="people_add_contact_title">Żid kuntatt</string>
     <string name="people_add_contact_add">Żid mal-kuntatti</string>
@@ -218,4 +216,8 @@
     <string name="people_sync_transport">Ma rnexxiex jilħaq is-server</string>
     <string name="people_sync_refused">Ma rnexxiex jissinkronizza kuntatt: %1$s</string>
     <string name="people_contact_friend">Ħabib ta\' Mochi</string>
+    <string name="people_contact_birthday_day">Jum</string>
+    <string name="people_contact_birthday_month">Xahar</string>
+    <string name="people_contact_birthday_year">Sena</string>
+    <string name="people_contact_birthday_clear">Naddaf</string>
 </resources>

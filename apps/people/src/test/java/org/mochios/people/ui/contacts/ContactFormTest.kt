@@ -283,6 +283,43 @@ class ContactFormTest {
     }
 
     @Test
+    fun `reads Apple's placeholder year as a birthday without its year`() {
+        val apple = contactForm(listOf(ContactProperty("BDAY", mapOf("X-APPLE-OMIT-YEAR" to listOf("1604")), "1604-04-12")))
+        assertEquals("--0412", apple.birthday)
+        // A real year is a year, whatever the parameter says.
+        val real = contactForm(listOf(ContactProperty("BDAY", mapOf("X-APPLE-OMIT-YEAR" to listOf("1604")), "1985-04-12")))
+        assertEquals("1985-04-12", real.birthday)
+    }
+
+    @Test
+    fun `a birthday left alone is written as the card held it`() {
+        val card = listOf(
+            ContactProperty("FN", emptyMap(), "Ada"),
+            ContactProperty("BDAY", mapOf("X-APPLE-OMIT-YEAR" to listOf("1604")), "1604-12-10"),
+        )
+        assertEquals(card[1], contactForm(card).written("BDAY"))
+        val basic = listOf(ContactProperty("FN", emptyMap(), "Ada"), ContactProperty("BDAY", emptyMap(), "18151210"))
+        assertEquals(basic[1], contactForm(basic).written("BDAY"))
+    }
+
+    @Test
+    fun `a changed birthday drops Apple's placeholder year`() {
+        val form = contactForm(
+            listOf(
+                ContactProperty("FN", emptyMap(), "Ada"),
+                ContactProperty("BDAY", mapOf("X-APPLE-OMIT-YEAR" to listOf("1604")), "1604-12-10"),
+            )
+        )
+        assertEquals(ContactProperty("BDAY", emptyMap(), "--0513"), form.copy(birthday = "--0513").written("BDAY"))
+    }
+
+    @Test
+    fun `a birthday that is not a day holds the save`() {
+        assertTrue(!ContactForm(name = "Ada", birthdayInvalid = true).valid)
+        assertTrue(ContactForm(name = "Ada", birthday = "--1002").valid)
+    }
+
+    @Test
     fun `each property keeps its group`() {
         val card = listOf(
             ContactProperty("FN", emptyMap(), "Ada", "item9"),

@@ -798,4 +798,5 @@
         <item quantity="many">Dan se jikkanċella %1$s abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
         <item quantity="other">Dan se jikkanċella %1$s abbonament attiv fi tmiem il-perjodu ta’ ħlas attwali. L-abbonati se jiġu nnotifikati. L-elenku se jinħeba mix-xerrejja.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Tħassar l-assi?</string>
 </resources>

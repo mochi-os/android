@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">வீடு</string>
     <string name="people_contact_type_other">மற்றவை</string>
     <string name="people_contact_remove">அகற்று</string>
-    <string name="people_contact_pick_date_confirm">சரி</string>
     <string name="people_books_name">பெயர்</string>
     <string name="people_books_rename">பெயர் மாற்று</string>
     <string name="people_contacts_sort_name">பெயர்</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">முகவரிப் புத்தகம்</string>
     <string name="people_contact_type_work">பணி</string>
     <string name="people_contact_type_mobile">கைபேசி</string>
-    <string name="people_contact_pick_date">தேதியைத் தேர்ந்தெடுக்கவும்</string>
     <string name="people_contact_conflict">தொடர்பு மாறியது</string>
     <string name="people_add_contact_title">தொடர்பைச் சேர்</string>
     <string name="people_add_contact_add">தொடர்புகளில் சேர்</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">சர்வரை அடைய முடியவில்லை</string>
     <string name="people_sync_refused">ஒரு தொடர்பை ஒத்திசைக்க முடியவில்லை: %1$s</string>
     <string name="people_contact_friend">Mochi நண்பர்</string>
+    <string name="people_contact_birthday_day">நாள்</string>
+    <string name="people_contact_birthday_month">மாதம்</string>
+    <string name="people_contact_birthday_year">ஆண்டு</string>
+    <string name="people_contact_birthday_clear">அழி</string>
 </resources>

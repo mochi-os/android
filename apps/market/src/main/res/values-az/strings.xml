@@ -791,4 +791,5 @@
         <item quantity="one">Bu, cari ödəniş dövrünün sonunda %1$s aktiv abunəliyi ləğv edəcək. Abunəçilər xəbərdar ediləcək. Elan alıcılardan gizlədiləcək.</item>
         <item quantity="other">Bu, cari ödəniş dövrünün sonunda %1$s aktiv abunəliyi ləğv edəcək. Abunəçilər xəbərdar ediləcək. Elan alıcılardan gizlədiləcək.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Aktiv silinsin?</string>
 </resources>

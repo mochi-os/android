@@ -774,4 +774,5 @@
     <string name="market_listings_remove_message">O anúncio será ocultado dos compradores. Isso não pode ser desfeito, mas você pode republicá-lo depois como um novo rascunho.</string>
     <string name="market_listings_remove_message_auction">Isso cancelará o leilão. O anúncio ficará oculto dos compradores; você pode publicá-lo novamente depois como um novo rascunho.</string>
     <string name="market_listings_remove_title">Remover este anúncio?</string>
+    <string name="market_editor_asset_delete_confirm_title">Excluir recurso?</string>
 </resources>

@@ -779,4 +779,5 @@
     <string name="market_listings_remove_message">El anuncio se ocultará a los compradores. Esto no se puede deshacer, pero puedes volver a publicarlo más tarde como un nuevo borrador.</string>
     <string name="market_listings_remove_message_auction">Esto cancelará la subasta. El anuncio se ocultará de los compradores; puedes volver a publicarlo más tarde como un nuevo borrador.</string>
     <string name="market_listings_remove_title">¿Retirar este anuncio?</string>
+    <string name="market_editor_asset_delete_confirm_title">¿Eliminar recurso?</string>
 </resources>

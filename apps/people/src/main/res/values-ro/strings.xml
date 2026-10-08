@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Domiciliu</string>
     <string name="people_contact_type_other">Altele</string>
     <string name="people_contact_remove">Elimină</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nume</string>
     <string name="people_books_rename">Redenumește</string>
     <string name="people_contacts_sort_name">Nume</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Agendă</string>
     <string name="people_contact_type_work">Serviciu</string>
     <string name="people_contact_type_mobile">Mobil</string>
-    <string name="people_contact_pick_date">Alegeți o dată</string>
     <string name="people_contact_conflict">Contactul s-a schimbat</string>
     <string name="people_add_contact_title">Adaugă contact</string>
     <string name="people_add_contact_add">Adaugă la contacte</string>
@@ -216,4 +214,8 @@
     <string name="people_sync_transport">Serverul nu a putut fi contactat</string>
     <string name="people_sync_refused">Un contact nu a putut fi sincronizat: %1$s</string>
     <string name="people_contact_friend">Prieten Mochi</string>
+    <string name="people_contact_birthday_day">Zi</string>
+    <string name="people_contact_birthday_month">Lună</string>
+    <string name="people_contact_birthday_year">An</string>
+    <string name="people_contact_birthday_clear">Golește</string>
 </resources>

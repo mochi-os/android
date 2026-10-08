@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Кућа</string>
     <string name="people_contact_type_other">Друго</string>
     <string name="people_contact_remove">Уклони</string>
-    <string name="people_contact_pick_date_confirm">У реду</string>
     <string name="people_books_name">Назив</string>
     <string name="people_books_rename">Преименуј</string>
     <string name="people_contacts_sort_name">Име</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Адресар</string>
     <string name="people_contact_type_work">Посао</string>
     <string name="people_contact_type_mobile">Мобилни</string>
-    <string name="people_contact_pick_date">Изаберите датум</string>
     <string name="people_contact_conflict">Контакт је промењен</string>
     <string name="people_add_contact_title">Додај контакт</string>
     <string name="people_add_contact_add">Додај у контакте</string>
@@ -216,4 +214,8 @@
     <string name="people_sync_transport">Није могуће доћи до сервера</string>
     <string name="people_sync_refused">Није могуће синхронизовати контакт: %1$s</string>
     <string name="people_contact_friend">Пријатељ на Mochi</string>
+    <string name="people_contact_birthday_day">Дан</string>
+    <string name="people_contact_birthday_month">Месец</string>
+    <string name="people_contact_birthday_year">Година</string>
+    <string name="people_contact_birthday_clear">Очисти</string>
 </resources>

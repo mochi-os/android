@@ -792,4 +792,5 @@
         <item quantity="one">Èyí yóò fagilé ìforúkọsílẹ̀ %1$s tí ó ń ṣiṣẹ́ ní òpin àkókò ìdíyelé lọ́wọ́lọ́wọ́. A óò sọ fún àwọn olùforúkọsílẹ̀. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà.</item>
         <item quantity="other">Èyí yóò fagilé ìforúkọsílẹ̀ %1$s tí ó ń ṣiṣẹ́ ní òpin àkókò ìdíyelé lọ́wọ́lọ́wọ́. A óò sọ fún àwọn olùforúkọsílẹ̀. A óò fi àtòjọ náà pamọ́ fún àwọn olùrà.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Pa ohun-ini rẹ́?</string>
 </resources>

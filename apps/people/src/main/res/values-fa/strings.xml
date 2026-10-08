@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">خانه</string>
     <string name="people_contact_type_other">سایر</string>
     <string name="people_contact_remove">حذف</string>
-    <string name="people_contact_pick_date_confirm">تأیید</string>
     <string name="people_books_name">نام</string>
     <string name="people_books_rename">تغییر نام</string>
     <string name="people_contacts_sort_name">نام</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">دفترچه نشانی</string>
     <string name="people_contact_type_work">کار</string>
     <string name="people_contact_type_mobile">همراه</string>
-    <string name="people_contact_pick_date">تاریخی انتخاب کنید</string>
     <string name="people_contact_conflict">مخاطب تغییر کرد</string>
     <string name="people_add_contact_title">افزودن مخاطب</string>
     <string name="people_add_contact_add">افزودن به مخاطبین</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">دسترسی به سرور ممکن نشد</string>
     <string name="people_sync_refused">همگام‌سازی یک مخاطب ممکن نشد: %1$s</string>
     <string name="people_contact_friend">دوست Mochi</string>
+    <string name="people_contact_birthday_day">روز</string>
+    <string name="people_contact_birthday_month">ماه</string>
+    <string name="people_contact_birthday_year">سال</string>
+    <string name="people_contact_birthday_clear">پاک کردن</string>
 </resources>

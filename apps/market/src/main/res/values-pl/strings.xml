@@ -796,4 +796,5 @@
         <item quantity="many">Spowoduje to anulowanie %1$s aktywnych subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
         <item quantity="other">Spowoduje to anulowanie %1$s aktywnych subskrypcji na koniec bieżącego okresu rozliczeniowego. Subskrybenci zostaną powiadomieni. Oferta zostanie ukryta przed kupującymi.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Usunąć zasób?</string>
 </resources>

@@ -798,4 +798,5 @@
         <item quantity="many">Cuirfidh sé seo %1$s síntiús gníomhach ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
         <item quantity="other">Cuirfidh sé seo %1$s síntiús gníomhach ar ceal ag deireadh na tréimhse billeála reatha. Cuirfear síntiúsóirí ar an eolas. Cuirfear an liostú i bhfolach ar cheannaitheoirí.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Scrios sócmhainn?</string>
 </resources>

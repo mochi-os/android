@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Ev</string>
     <string name="people_contact_type_other">Digər</string>
     <string name="people_contact_remove">Sil</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Ad</string>
     <string name="people_books_rename">Adı dəyiş</string>
     <string name="people_contacts_sort_name">Ad</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Ünvan kitabçası</string>
     <string name="people_contact_type_work">İş</string>
     <string name="people_contact_type_mobile">Mobil</string>
-    <string name="people_contact_pick_date">Tarix seçin</string>
     <string name="people_contact_conflict">Kontakt dəyişdi</string>
     <string name="people_add_contact_title">Kontakt əlavə et</string>
     <string name="people_add_contact_add">Kontaktlara əlavə et</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Serverə qoşulmaq mümkün olmadı</string>
     <string name="people_sync_refused">Kontakt sinxronlaşdırıla bilmədi: %1$s</string>
     <string name="people_contact_friend">Mochi dostu</string>
+    <string name="people_contact_birthday_day">Gün</string>
+    <string name="people_contact_birthday_month">Ay</string>
+    <string name="people_contact_birthday_year">İl</string>
+    <string name="people_contact_birthday_clear">Təmizlə</string>
 </resources>

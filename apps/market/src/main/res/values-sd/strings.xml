@@ -792,4 +792,5 @@
         <item quantity="one">اهو موجوده بلنگ مدت جي آخر ۾ %1$s سرگرم رڪنيتون منسوخ ڪندو. رڪنن کي اطلاع ڏنو ويندو. لسٽنگ خريدارن کان لڪائي ويندي.</item>
         <item quantity="other">اهو موجوده بلنگ مدت جي آخر ۾ %1$s سرگرم رڪنيتون منسوخ ڪندو. رڪنن کي اطلاع ڏنو ويندو. لسٽنگ خريدارن کان لڪائي ويندي.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">اثاثو ختم ڪجي؟</string>
 </resources>

@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Heima</string>
     <string name="people_contact_type_other">Annað</string>
     <string name="people_contact_remove">Fjarlægja</string>
-    <string name="people_contact_pick_date_confirm">Í lagi</string>
     <string name="people_books_name">Nafn</string>
     <string name="people_books_rename">Endurnefna</string>
     <string name="people_contacts_sort_name">Nafn</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Tengiliðaskrá</string>
     <string name="people_contact_type_work">Vinna</string>
     <string name="people_contact_type_mobile">Farsími</string>
-    <string name="people_contact_pick_date">Veldu dagsetningu</string>
     <string name="people_contact_conflict">Tengiliðurinn breyttist</string>
     <string name="people_add_contact_title">Bæta við tengilið</string>
     <string name="people_add_contact_add">Bæta við tengiliði</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Náðist ekki samband við þjóninn</string>
     <string name="people_sync_refused">Ekki tókst að samstilla tengilið: %1$s</string>
     <string name="people_contact_friend">Mochi-vinur</string>
+    <string name="people_contact_birthday_day">Dagur</string>
+    <string name="people_contact_birthday_month">Mánuður</string>
+    <string name="people_contact_birthday_year">Ár</string>
+    <string name="people_contact_birthday_clear">Hreinsa</string>
 </resources>

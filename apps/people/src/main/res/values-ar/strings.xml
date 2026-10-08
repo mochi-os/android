@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">المنزل</string>
     <string name="people_contact_type_other">أخرى</string>
     <string name="people_contact_remove">إزالة</string>
-    <string name="people_contact_pick_date_confirm">موافق</string>
     <string name="people_books_name">الاسم</string>
     <string name="people_books_rename">إعادة تسمية</string>
     <string name="people_contacts_sort_name">الاسم</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">دفتر العناوين</string>
     <string name="people_contact_type_work">العمل</string>
     <string name="people_contact_type_mobile">الجوال</string>
-    <string name="people_contact_pick_date">اختر تاريخًا</string>
     <string name="people_contact_conflict">تغيّرت جهة الاتصال</string>
     <string name="people_add_contact_title">إضافة جهة اتصال</string>
     <string name="people_add_contact_add">إضافة إلى جهات الاتصال</string>
@@ -219,4 +217,8 @@
     <string name="people_sync_transport">تعذر الوصول إلى الخادم</string>
     <string name="people_sync_refused">تعذرت مزامنة جهة اتصال: %1$s</string>
     <string name="people_contact_friend">صديق Mochi</string>
+    <string name="people_contact_birthday_day">يوم</string>
+    <string name="people_contact_birthday_month">شهر</string>
+    <string name="people_contact_birthday_year">السنة</string>
+    <string name="people_contact_birthday_clear">مسح</string>
 </resources>

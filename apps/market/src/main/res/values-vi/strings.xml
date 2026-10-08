@@ -794,4 +794,5 @@
         <item quantity="one">Thao tác này sẽ hủy %1$s gói đăng ký đang hoạt động vào cuối kỳ thanh toán hiện tại. Người đăng ký sẽ được thông báo. Tin đăng sẽ bị ẩn khỏi người mua.</item>
         <item quantity="other">Thao tác này sẽ hủy %1$s gói đăng ký đang hoạt động vào cuối kỳ thanh toán hiện tại. Người đăng ký sẽ được thông báo. Tin đăng sẽ bị ẩn khỏi người mua.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Xoá tài sản?</string>
 </resources>

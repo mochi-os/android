@@ -131,7 +131,6 @@
     <string name="people_contact_type">Type</string>
     <string name="people_contact_type_other">Andere</string>
     <string name="people_contact_remove">Verwijderen</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Naam</string>
     <string name="people_books_rename">Hernoemen</string>
     <string name="people_contacts_sort_name">Naam</string>
@@ -162,4 +161,8 @@
     <string name="people_device_delete_message">Het apparaat kan dan geen contacten of agenda\'s meer synchroniseren.</string>
     <string name="people_device_deleted">Apparaat verwijderd</string>
     <string name="people_contact_friend">Mochi-vriend</string>
+    <string name="people_contact_birthday_day">Dag</string>
+    <string name="people_contact_birthday_month">Maand</string>
+    <string name="people_contact_birthday_year">Jaar</string>
+    <string name="people_contact_birthday_clear">Wissen</string>
 </resources>

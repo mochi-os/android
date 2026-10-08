@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Óga</string>
     <string name="people_contact_type_other">Ambue</string>
     <string name="people_contact_remove">Embogue</string>
-    <string name="people_contact_pick_date_confirm">Iporã</string>
     <string name="people_books_name">Téra</string>
     <string name="people_books_rename">Embohera jey</string>
     <string name="people_contacts_sort_name">Téra</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Ogarenda kuatia</string>
     <string name="people_contact_type_work">Mba\'apo</string>
     <string name="people_contact_type_mobile">Pumbyry oku\'éva</string>
-    <string name="people_contact_pick_date">Eiporavo ára</string>
     <string name="people_contact_conflict">Contacto oñemoambue</string>
     <string name="people_add_contact_title">Embojuaju contacto</string>
     <string name="people_add_contact_add">Embojuaju contactokuérape</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Ndaikatúi og̃uahẽ mohendahápe</string>
     <string name="people_sync_refused">Ndaikatúi oñembojoja peteĩ contacto: %1$s</string>
     <string name="people_contact_friend">Mochi angirũ</string>
+    <string name="people_contact_birthday_day">Ára</string>
+    <string name="people_contact_birthday_month">Jasy</string>
+    <string name="people_contact_birthday_year">Ary</string>
+    <string name="people_contact_birthday_clear">Embopotĩ</string>
 </resources>

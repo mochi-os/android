@@ -5,8 +5,6 @@
 
 package org.mochios.people.ui.contacts
 
-import android.content.res.Configuration
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,7 +25,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CalendarToday
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MoreVert
@@ -35,16 +32,11 @@ import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Phone
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.DatePicker
-import androidx.compose.material3.DatePickerDialog
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.Switch
-import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -53,15 +45,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.weekLocale
 import org.mochios.android.ui.components.CompactTextField
 import org.mochios.android.ui.components.CreateEntityForm
 import org.mochios.android.ui.components.CreateEntityScaffold
@@ -329,7 +318,7 @@ private fun EditScaffold(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun ContactFields(
+internal fun ContactFields(
     form: ContactForm,
     books: List<org.mochios.people.model.Book>,
     onChange: (ContactForm) -> Unit,
@@ -462,7 +451,9 @@ private fun ContactFields(
         LabelledField(stringResource(R.string.people_contact_birthday)) {
             BirthdayField(
                 value = form.birthday,
-                onValueChange = { onChange(form.copy(birthday = it)) },
+                onValueChange = { value, invalid ->
+                    onChange(form.copy(birthday = value ?: form.birthday, birthdayInvalid = invalid))
+                },
             )
         }
         LabelledField(stringResource(R.string.people_contact_organisation)) {
@@ -673,85 +664,6 @@ private fun AddressRows(
  * locale that produces the user's own first day of the week — Material's
  * picker takes no first-day parameter of its own.
  */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun BirthdayField(value: String, onValueChange: (String) -> Unit) {
-    var showPicker by remember { mutableStateOf(false) }
-    val format = LocalFormat.current
-    val seconds = birthdaySeconds(value)
-    val display = when {
-        value.isBlank() -> ""
-        seconds != null -> format.formatDate(seconds)
-        else -> value
-    }
-
-    // A read-only text field swallows taps, so an overlay on top makes the
-    // whole box (not just the icon) open the picker.
-    Box(modifier = Modifier.fillMaxWidth()) {
-        MochiTextField(
-            value = display,
-            onValueChange = {},
-            readOnly = true,
-            trailingIcon = {
-                Icon(
-                    Icons.Default.CalendarToday,
-                    contentDescription = stringResource(R.string.people_contact_pick_date),
-                )
-            },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth(),
-        )
-        Box(
-            modifier = Modifier
-                .matchParentSize()
-                .clickable { showPicker = true }
-        )
-    }
-
-    if (showPicker) {
-        val weekStartsOn = format.preferences.weekStartsOn
-        val baseConfiguration = LocalConfiguration.current
-        val localised = remember(baseConfiguration, weekStartsOn) {
-            Configuration(baseConfiguration).apply { setLocale(weekLocale(weekStartsOn, baseConfiguration.locales[0])) }
-        }
-        CompositionLocalProvider(LocalConfiguration provides localised) {
-            val pickerState = rememberDatePickerState(
-                initialSelectedDateMillis = seconds?.times(1000),
-            )
-            DatePickerDialog(
-                onDismissRequest = { showPicker = false },
-                confirmButton = {
-                    MochiTextButton(onClick = {
-                        val selected = pickerState.selectedDateMillis
-                        if (selected != null) {
-                            onValueChange(
-                                java.time.LocalDate.ofEpochDay(selected / 86_400_000L).toString()
-                            )
-                        }
-                        showPicker = false
-                    }) {
-                        Text(stringResource(R.string.people_contact_pick_date_confirm))
-                    }
-                },
-                dismissButton = {
-                    MochiTextButton(onClick = { showPicker = false }) {
-                        Text(stringResource(R.string.people_common_cancel))
-                    }
-                },
-            ) {
-                DatePicker(state = pickerState)
-            }
-        }
-    }
-}
-
-/** Epoch seconds of an ISO `yyyy-MM-dd` birthday, null when it doesn't parse. */
-private fun birthdaySeconds(value: String): Long? = try {
-    java.time.LocalDate.parse(value).toEpochDay() * 86_400L
-} catch (_: Exception) {
-    null
-}
-
 private fun typeLabel(type: String): Int = when (type) {
     TYPE_WORK -> R.string.people_contact_type_work
     TYPE_MOBILE -> R.string.people_contact_type_mobile

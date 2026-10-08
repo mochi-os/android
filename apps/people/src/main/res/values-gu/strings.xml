@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">ઘર</string>
     <string name="people_contact_type_other">અન્ય</string>
     <string name="people_contact_remove">દૂર કરો</string>
-    <string name="people_contact_pick_date_confirm">ઓકે</string>
     <string name="people_books_name">નામ</string>
     <string name="people_books_rename">નામ બદલો</string>
     <string name="people_contacts_sort_name">નામ</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">સરનામાં પુસ્તિકા</string>
     <string name="people_contact_type_work">કામ</string>
     <string name="people_contact_type_mobile">મોબાઇલ</string>
-    <string name="people_contact_pick_date">તારીખ પસંદ કરો</string>
     <string name="people_contact_conflict">સંપર્ક બદલાયો</string>
     <string name="people_add_contact_title">સંપર્ક ઉમેરો</string>
     <string name="people_add_contact_add">સંપર્કોમાં ઉમેરો</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">સર્વર સુધી પહોંચી શકાયું નહીં</string>
     <string name="people_sync_refused">સંપર્ક સિંક કરી શકાયો નહીં: %1$s</string>
     <string name="people_contact_friend">Mochi મિત્ર</string>
+    <string name="people_contact_birthday_day">દિવસ</string>
+    <string name="people_contact_birthday_month">મહિનો</string>
+    <string name="people_contact_birthday_year">વર્ષ</string>
+    <string name="people_contact_birthday_clear">સાફ કરો</string>
 </resources>

@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">自宅</string>
     <string name="people_contact_type_other">その他</string>
     <string name="people_contact_remove">削除</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">名前</string>
     <string name="people_books_rename">名前を変更</string>
     <string name="people_contacts_sort_name">名前</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">アドレス帳</string>
     <string name="people_contact_type_work">勤務先</string>
     <string name="people_contact_type_mobile">携帯</string>
-    <string name="people_contact_pick_date">日付を選択</string>
     <string name="people_contact_conflict">連絡先が変更されました</string>
     <string name="people_add_contact_title">連絡先を追加</string>
     <string name="people_add_contact_add">連絡先に追加</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">サーバーに接続できませんでした</string>
     <string name="people_sync_refused">連絡先を同期できませんでした：%1$s</string>
     <string name="people_contact_friend">Mochi の友達</string>
+    <string name="people_contact_birthday_day">日</string>
+    <string name="people_contact_birthday_month">月</string>
+    <string name="people_contact_birthday_year">年</string>
+    <string name="people_contact_birthday_clear">クリア</string>
 </resources>

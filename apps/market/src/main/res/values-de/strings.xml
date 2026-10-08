@@ -794,4 +794,5 @@
         <item quantity="one">Dadurch wird %1$s aktives Abonnement zum Ende des aktuellen Abrechnungszeitraums gekündigt. Die Abonnenten werden benachrichtigt. Das Angebot wird vor Käufern verborgen.</item>
         <item quantity="other">Dadurch werden %1$s aktive Abonnements zum Ende des aktuellen Abrechnungszeitraums gekündigt. Die Abonnenten werden benachrichtigt. Das Angebot wird vor Käufern verborgen.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Asset löschen?</string>
 </resources>

@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Nyumbani</string>
     <string name="people_contact_type_other">Nyingine</string>
     <string name="people_contact_remove">Ondoa</string>
-    <string name="people_contact_pick_date_confirm">Sawa</string>
     <string name="people_books_name">Jina</string>
     <string name="people_books_rename">Badilisha jina</string>
     <string name="people_contacts_sort_name">Jina</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Kitabu cha anwani</string>
     <string name="people_contact_type_work">Kazi</string>
     <string name="people_contact_type_mobile">Simu ya mkononi</string>
-    <string name="people_contact_pick_date">Chagua tarehe</string>
     <string name="people_contact_conflict">Anwani imebadilika</string>
     <string name="people_add_contact_title">Ongeza anwani</string>
     <string name="people_add_contact_add">Ongeza kwenye anwani</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Haikuweza kufikia seva</string>
     <string name="people_sync_refused">Haikuweza kusawazisha anwani: %1$s</string>
     <string name="people_contact_friend">Rafiki wa Mochi</string>
+    <string name="people_contact_birthday_day">Siku</string>
+    <string name="people_contact_birthday_month">Mwezi</string>
+    <string name="people_contact_birthday_year">Mwaka</string>
+    <string name="people_contact_birthday_clear">Futa</string>
 </resources>

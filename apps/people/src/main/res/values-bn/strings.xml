@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">বাড়ি</string>
     <string name="people_contact_type_other">অন্যান্য</string>
     <string name="people_contact_remove">সরান</string>
-    <string name="people_contact_pick_date_confirm">ঠিক আছে</string>
     <string name="people_books_name">নাম</string>
     <string name="people_books_rename">পুনঃনামকরণ করুন</string>
     <string name="people_contacts_sort_name">নাম</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">ঠিকানা বই</string>
     <string name="people_contact_type_work">কর্মস্থল</string>
     <string name="people_contact_type_mobile">মোবাইল</string>
-    <string name="people_contact_pick_date">তারিখ বাছুন</string>
     <string name="people_contact_conflict">পরিচিতি বদলে গেছে</string>
     <string name="people_add_contact_title">পরিচিতি যোগ করুন</string>
     <string name="people_add_contact_add">পরিচিতিতে যোগ করুন</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">সার্ভারে পৌঁছানো যায়নি</string>
     <string name="people_sync_refused">একটি পরিচিতি সিঙ্ক করা যায়নি: %1$s</string>
     <string name="people_contact_friend">Mochi বন্ধু</string>
+    <string name="people_contact_birthday_day">দিন</string>
+    <string name="people_contact_birthday_month">মাস</string>
+    <string name="people_contact_birthday_year">বছর</string>
+    <string name="people_contact_birthday_clear">পরিষ্কার করুন</string>
 </resources>

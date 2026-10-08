@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Bahay</string>
     <string name="people_contact_type_other">Iba pa</string>
     <string name="people_contact_remove">Alisin</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Pangalan</string>
     <string name="people_books_rename">Palitan ang pangalan</string>
     <string name="people_contacts_sort_name">Pangalan</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Address book</string>
     <string name="people_contact_type_work">Trabaho</string>
     <string name="people_contact_type_mobile">Mobile</string>
-    <string name="people_contact_pick_date">Pumili ng petsa</string>
     <string name="people_contact_conflict">Nagbago ang contact</string>
     <string name="people_add_contact_title">Magdagdag ng contact</string>
     <string name="people_add_contact_add">Idagdag sa mga contact</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Hindi maabot ang server</string>
     <string name="people_sync_refused">Hindi ma-sync ang isang contact: %1$s</string>
     <string name="people_contact_friend">Kaibigan sa Mochi</string>
+    <string name="people_contact_birthday_day">Araw</string>
+    <string name="people_contact_birthday_month">Buwan</string>
+    <string name="people_contact_birthday_year">Taon</string>
+    <string name="people_contact_birthday_clear">Burahin</string>
 </resources>

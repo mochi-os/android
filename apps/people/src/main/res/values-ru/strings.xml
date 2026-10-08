@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Домашний</string>
     <string name="people_contact_type_other">Другое</string>
     <string name="people_contact_remove">Удалить</string>
-    <string name="people_contact_pick_date_confirm">ОК</string>
     <string name="people_books_name">Название</string>
     <string name="people_books_rename">Переименовать</string>
     <string name="people_contacts_sort_name">Имя</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Адресная книга</string>
     <string name="people_contact_type_work">Работа</string>
     <string name="people_contact_type_mobile">Мобильный</string>
-    <string name="people_contact_pick_date">Выберите дату</string>
     <string name="people_contact_conflict">Контакт изменился</string>
     <string name="people_add_contact_title">Добавить контакт</string>
     <string name="people_add_contact_add">Добавить в контакты</string>
@@ -217,4 +215,8 @@
     <string name="people_sync_transport">Не удалось связаться с сервером</string>
     <string name="people_sync_refused">Не удалось синхронизировать контакт: %1$s</string>
     <string name="people_contact_friend">Друг в Mochi</string>
+    <string name="people_contact_birthday_day">День</string>
+    <string name="people_contact_birthday_month">Месяц</string>
+    <string name="people_contact_birthday_year">Год</string>
+    <string name="people_contact_birthday_clear">Очистить</string>
 </resources>

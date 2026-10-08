@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Uy</string>
     <string name="people_contact_type_other">Boshqa</string>
     <string name="people_contact_remove">Olib tashlash</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nomi</string>
     <string name="people_books_rename">Nomini oʻzgartirish</string>
     <string name="people_contacts_sort_name">Ism</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Manzillar kitobi</string>
     <string name="people_contact_type_work">Ish</string>
     <string name="people_contact_type_mobile">Mobil</string>
-    <string name="people_contact_pick_date">Sanani tanlang</string>
     <string name="people_contact_conflict">Kontakt o\'zgardi</string>
     <string name="people_add_contact_title">Kontakt qoʻshish</string>
     <string name="people_add_contact_add">Kontaktlarga qo\'shish</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Serverga ulanib bo\'lmadi</string>
     <string name="people_sync_refused">Kontaktni sinxronlab bo\'lmadi: %1$s</string>
     <string name="people_contact_friend">Mochi doʻsti</string>
+    <string name="people_contact_birthday_day">Kun</string>
+    <string name="people_contact_birthday_month">Oy</string>
+    <string name="people_contact_birthday_year">Yil</string>
+    <string name="people_contact_birthday_clear">Tozalash</string>
 </resources>

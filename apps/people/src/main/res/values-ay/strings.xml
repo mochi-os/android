@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Uta</string>
     <string name="people_contact_type_other">Yaqha</string>
     <string name="people_contact_remove">Aparma</string>
-    <string name="people_contact_pick_date_confirm">Walikiwa</string>
     <string name="people_books_name">Suti</string>
     <string name="people_books_rename">Suti mayjt\'ayaña</string>
     <string name="people_contacts_sort_name">Suti</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Direccionanak libro</string>
     <string name="people_contact_type_work">Irnaqawi</string>
     <string name="people_contact_type_mobile">Celular</string>
-    <string name="people_contact_pick_date">Uru ajlliña</string>
     <string name="people_contact_conflict">Contactox mayjt\'ayatawa</string>
     <string name="people_add_contact_title">Contacto yapxataña</string>
     <string name="people_add_contact_add">Contactonakar yapxataña</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Servidorar janiw puriñ atipkiti</string>
     <string name="people_sync_refused">Mä contacto janiw sincronizañ atipkiti: %1$s</string>
     <string name="people_contact_friend">Mochi masi</string>
+    <string name="people_contact_birthday_day">Uru</string>
+    <string name="people_contact_birthday_month">Phaxsi</string>
+    <string name="people_contact_birthday_year">Mara</string>
+    <string name="people_contact_birthday_clear">Q\'umachaña</string>
 </resources>

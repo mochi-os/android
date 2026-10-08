@@ -792,4 +792,5 @@
         <item quantity="one">Sa pral anile %1$s abònman aktif nan fen peryòd faktirasyon aktyèl la. Abòne yo pral avèti. Anons lan pral kache pou achtè yo.</item>
         <item quantity="other">Sa pral anile %1$s abònman aktif nan fen peryòd faktirasyon aktyèl la. Abòne yo pral avèti. Anons lan pral kache pou achtè yo.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Efase byen?</string>
 </resources>

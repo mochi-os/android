@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Rumah</string>
     <string name="people_contact_type_other">Lainnya</string>
     <string name="people_contact_remove">Hapus</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nama</string>
     <string name="people_books_rename">Ubah nama</string>
     <string name="people_contacts_sort_name">Nama</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Buku alamat</string>
     <string name="people_contact_type_work">Kantor</string>
     <string name="people_contact_type_mobile">Seluler</string>
-    <string name="people_contact_pick_date">Pilih tanggal</string>
     <string name="people_contact_conflict">Kontak berubah</string>
     <string name="people_add_contact_title">Tambah kontak</string>
     <string name="people_add_contact_add">Tambahkan ke kontak</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">Tidak dapat menjangkau server</string>
     <string name="people_sync_refused">Tidak dapat menyinkronkan kontak: %1$s</string>
     <string name="people_contact_friend">Teman Mochi</string>
+    <string name="people_contact_birthday_day">Hari</string>
+    <string name="people_contact_birthday_month">Bulan</string>
+    <string name="people_contact_birthday_year">Tahun</string>
+    <string name="people_contact_birthday_clear">Bersihkan</string>
 </resources>

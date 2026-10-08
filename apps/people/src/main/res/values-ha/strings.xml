@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Gida</string>
     <string name="people_contact_type_other">Sauran</string>
     <string name="people_contact_remove">Cire</string>
-    <string name="people_contact_pick_date_confirm">To</string>
     <string name="people_books_name">Suna</string>
     <string name="people_books_rename">Sake suna</string>
     <string name="people_contacts_sort_name">Suna</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Littafin adireshi</string>
     <string name="people_contact_type_work">Aiki</string>
     <string name="people_contact_type_mobile">Wayar hannu</string>
-    <string name="people_contact_pick_date">Zaɓi kwanan wata</string>
     <string name="people_contact_conflict">Lambar ta canza</string>
     <string name="people_add_contact_title">Ƙara lambar sadarwa</string>
     <string name="people_add_contact_add">Ƙara cikin lambobin sadarwa</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">An kasa isa ga sabar</string>
     <string name="people_sync_refused">An kasa daidaita lambar sadarwa: %1$s</string>
     <string name="people_contact_friend">Abokin Mochi</string>
+    <string name="people_contact_birthday_day">Rana</string>
+    <string name="people_contact_birthday_month">Wata</string>
+    <string name="people_contact_birthday_year">Shekara</string>
+    <string name="people_contact_birthday_clear">Share</string>
 </resources>

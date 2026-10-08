@@ -769,4 +769,5 @@
     <string name="market_listings_remove_message">De advertentie wordt verborgen voor kopers. Dit kan niet ongedaan worden gemaakt, maar u kunt het later opnieuw als nieuw concept aanbieden.</string>
     <string name="market_listings_remove_message_auction">Hiermee wordt de veiling geannuleerd. De advertentie wordt verborgen voor kopers; je kunt deze later opnieuw plaatsen als een nieuw concept.</string>
     <string name="market_listings_remove_title">Deze advertentie verwijderen?</string>
+    <string name="market_editor_asset_delete_confirm_title">Asset verwijderen?</string>
 </resources>

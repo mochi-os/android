@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Shtëpi</string>
     <string name="people_contact_type_other">Tjetër</string>
     <string name="people_contact_remove">Hiq</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Emri</string>
     <string name="people_books_rename">Riemërto</string>
     <string name="people_contacts_sort_name">Emri</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Libri i adresave</string>
     <string name="people_contact_type_work">Puna</string>
     <string name="people_contact_type_mobile">Celular</string>
-    <string name="people_contact_pick_date">Zgjidhni një datë</string>
     <string name="people_contact_conflict">Kontakti ndryshoi</string>
     <string name="people_add_contact_title">Shto kontakt</string>
     <string name="people_add_contact_add">Shto te kontaktet</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Serveri nuk u arrit</string>
     <string name="people_sync_refused">Një kontakt nuk u sinkronizua: %1$s</string>
     <string name="people_contact_friend">Mik në Mochi</string>
+    <string name="people_contact_birthday_day">Ditë</string>
+    <string name="people_contact_birthday_month">Muaji</string>
+    <string name="people_contact_birthday_year">Viti</string>
+    <string name="people_contact_birthday_clear">Pastro</string>
 </resources>

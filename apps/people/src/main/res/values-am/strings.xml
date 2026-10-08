@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">ቤት</string>
     <string name="people_contact_type_other">ሌላ</string>
     <string name="people_contact_remove">አስወግድ</string>
-    <string name="people_contact_pick_date_confirm">እሺ</string>
     <string name="people_books_name">ስም</string>
     <string name="people_books_rename">ስም ቀይር</string>
     <string name="people_contacts_sort_name">ስም</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">የአድራሻ ደብተር</string>
     <string name="people_contact_type_work">ሥራ</string>
     <string name="people_contact_type_mobile">ተንቀሳቃሽ</string>
-    <string name="people_contact_pick_date">ቀን ይምረጡ</string>
     <string name="people_contact_conflict">እውቂያ ተቀይሯል</string>
     <string name="people_add_contact_title">እውቂያ ጨምር</string>
     <string name="people_add_contact_add">ወደ እውቂያዎች አክል</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">አገልጋዩ ላይ መድረስ አልተቻለም</string>
     <string name="people_sync_refused">እውቂያን ማመሳሰል አልተቻለም: %1$s</string>
     <string name="people_contact_friend">የMochi ጓደኛ</string>
+    <string name="people_contact_birthday_day">ቀን</string>
+    <string name="people_contact_birthday_month">ወር</string>
+    <string name="people_contact_birthday_year">ዓመት</string>
+    <string name="people_contact_birthday_clear">አጽዳ</string>
 </resources>

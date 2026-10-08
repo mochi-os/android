@@ -794,4 +794,5 @@
         <item quantity="one">Dette avsluttar %1$s aktivt abonnement ved slutten av gjeldande faktureringsperiode. Abonnentane vert varsla. Annonsen vert gøymd for kjøparar.</item>
         <item quantity="other">Dette avsluttar %1$s aktive abonnement ved slutten av gjeldande faktureringsperiode. Abonnentane vert varsla. Annonsen vert gøymd for kjøparar.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Slette ressurs?</string>
 </resources>

@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Ev</string>
     <string name="people_contact_type_other">Diğer</string>
     <string name="people_contact_remove">Kaldır</string>
-    <string name="people_contact_pick_date_confirm">Tamam</string>
     <string name="people_books_name">Ad</string>
     <string name="people_books_rename">Yeniden adlandır</string>
     <string name="people_contacts_sort_name">Ad</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Adres defteri</string>
     <string name="people_contact_type_work">İş</string>
     <string name="people_contact_type_mobile">Cep</string>
-    <string name="people_contact_pick_date">Bir tarih seçin</string>
     <string name="people_contact_conflict">Kişi değişti</string>
     <string name="people_add_contact_title">Kişi ekle</string>
     <string name="people_add_contact_add">Kişilere ekle</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Sunucuya ulaşılamadı</string>
     <string name="people_sync_refused">Bir kişi senkronize edilemedi: %1$s</string>
     <string name="people_contact_friend">Mochi arkadaşı</string>
+    <string name="people_contact_birthday_day">Gün</string>
+    <string name="people_contact_birthday_month">Ay</string>
+    <string name="people_contact_birthday_year">Yıl</string>
+    <string name="people_contact_birthday_clear">Temizle</string>
 </resources>

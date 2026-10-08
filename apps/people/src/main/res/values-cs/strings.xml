@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Domov</string>
     <string name="people_contact_type_other">Ostatní</string>
     <string name="people_contact_remove">Odebrat</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Název</string>
     <string name="people_books_rename">Přejmenovat</string>
     <string name="people_contacts_sort_name">Jméno</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Adresář</string>
     <string name="people_contact_type_work">Práce</string>
     <string name="people_contact_type_mobile">Mobil</string>
-    <string name="people_contact_pick_date">Vyberte datum</string>
     <string name="people_contact_conflict">Kontakt se změnil</string>
     <string name="people_add_contact_title">Přidat kontakt</string>
     <string name="people_add_contact_add">Přidat do kontaktů</string>
@@ -216,4 +214,8 @@
     <string name="people_sync_transport">Nelze se spojit se serverem</string>
     <string name="people_sync_refused">Kontakt nelze synchronizovat: %1$s</string>
     <string name="people_contact_friend">Přítel v Mochi</string>
+    <string name="people_contact_birthday_day">Den</string>
+    <string name="people_contact_birthday_month">Měsíc</string>
+    <string name="people_contact_birthday_year">Rok</string>
+    <string name="people_contact_birthday_clear">Vymazat</string>
 </resources>

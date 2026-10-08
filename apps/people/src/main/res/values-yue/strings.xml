@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">住宅</string>
     <string name="people_contact_type_other">其他</string>
     <string name="people_contact_remove">移除</string>
-    <string name="people_contact_pick_date_confirm">確定</string>
     <string name="people_books_name">名稱</string>
     <string name="people_books_rename">重新命名</string>
     <string name="people_contacts_unfriend">移除朋友</string>
@@ -167,7 +166,6 @@
     <string name="people_contact_book">通訊錄</string>
     <string name="people_contact_type_work">工作</string>
     <string name="people_contact_type_mobile">手機</string>
-    <string name="people_contact_pick_date">揀日期</string>
     <string name="people_contact_conflict">聯絡人已更改</string>
     <string name="people_add_contact_title">加聯絡人</string>
     <string name="people_add_contact_add">加入聯絡人</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_authorization">請重新登入嚟同步</string>
     <string name="people_sync_transport">連接唔到伺服器</string>
     <string name="people_sync_refused">同步唔到一個聯絡人：%1$s</string>
+    <string name="people_contact_birthday_day">日</string>
+    <string name="people_contact_birthday_month">月</string>
+    <string name="people_contact_birthday_year">年</string>
+    <string name="people_contact_birthday_clear">清除</string>
 </resources>

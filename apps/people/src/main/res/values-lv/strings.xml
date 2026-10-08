@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Mājas</string>
     <string name="people_contact_type_other">Cits</string>
     <string name="people_contact_remove">Noņemt</string>
-    <string name="people_contact_pick_date_confirm">Labi</string>
     <string name="people_books_name">Nosaukums</string>
     <string name="people_books_rename">Pārdēvēt</string>
     <string name="people_contacts_sort_name">Vārds</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Adrešu grāmata</string>
     <string name="people_contact_type_work">Darbs</string>
     <string name="people_contact_type_mobile">Mobilais</string>
-    <string name="people_contact_pick_date">Izvēlieties datumu</string>
     <string name="people_contact_conflict">Kontakts ir mainījies</string>
     <string name="people_add_contact_title">Pievienot kontaktu</string>
     <string name="people_add_contact_add">Pievienot kontaktiem</string>
@@ -216,4 +214,8 @@
     <string name="people_sync_transport">Neizdevās sasniegt serveri</string>
     <string name="people_sync_refused">Neizdevās sinhronizēt kontaktu: %1$s</string>
     <string name="people_contact_friend">Mochi draugs</string>
+    <string name="people_contact_birthday_day">Diena</string>
+    <string name="people_contact_birthday_month">Mēnesis</string>
+    <string name="people_contact_birthday_year">Gads</string>
+    <string name="people_contact_birthday_clear">Notīrīt</string>
 </resources>

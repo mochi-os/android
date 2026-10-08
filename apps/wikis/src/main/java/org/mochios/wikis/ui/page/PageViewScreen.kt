@@ -563,7 +563,8 @@ private fun PageBody(
             .verticalScroll(scrollState)
             .padding(horizontal = 16.dp, vertical = 12.dp),
     ) {
-        if (headings.value.isNotEmpty()) {
+        // One heading gives nothing to jump between, so the contents need two.
+        if (headings.value.size > 1) {
             TableOfContents(
                 headings = headings.value,
                 activeId = activeId,

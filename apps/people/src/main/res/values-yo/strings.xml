@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Ilé</string>
     <string name="people_contact_type_other">Mìíràn</string>
     <string name="people_contact_remove">Yọ kúrò</string>
-    <string name="people_contact_pick_date_confirm">Ó dára</string>
     <string name="people_books_name">Orúkọ</string>
     <string name="people_books_rename">Tún sọ orúkọ</string>
     <string name="people_contacts_sort_name">Orúkọ</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Ìwé àdírẹ́sì</string>
     <string name="people_contact_type_work">Iṣẹ́</string>
     <string name="people_contact_type_mobile">Alágbèéká</string>
-    <string name="people_contact_pick_date">Yan ọjọ́ kan</string>
     <string name="people_contact_conflict">Olùbásọ̀rọ̀ ti yípadà</string>
     <string name="people_add_contact_title">Fi olùbásọ̀rọ̀ kún</string>
     <string name="people_add_contact_add">Fi kún àwọn olùbásọ̀rọ̀</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">Kò lè dé sí olùpín</string>
     <string name="people_sync_refused">Kò lè ṣe àmúṣiṣẹ́pọ̀ olùbásọ̀rọ̀ kan: %1$s</string>
     <string name="people_contact_friend">Ọ̀rẹ́ Mochi</string>
+    <string name="people_contact_birthday_day">Ọjọ́</string>
+    <string name="people_contact_birthday_month">Oṣù</string>
+    <string name="people_contact_birthday_year">Ọdún</string>
+    <string name="people_contact_birthday_clear">Pa rẹ́</string>
 </resources>

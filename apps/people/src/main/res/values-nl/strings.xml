@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Thuis</string>
     <string name="people_contact_type_other">Overig</string>
     <string name="people_contact_remove">Verwijderen</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Naam</string>
     <string name="people_books_rename">Hernoemen</string>
     <string name="people_contacts_sort_name">Naam</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Adresboek</string>
     <string name="people_contact_type_work">Werk</string>
     <string name="people_contact_type_mobile">Mobiel</string>
-    <string name="people_contact_pick_date">Kies een datum</string>
     <string name="people_contact_conflict">Contact gewijzigd</string>
     <string name="people_add_contact_title">Contact toevoegen</string>
     <string name="people_add_contact_add">Aan contacten toevoegen</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Kan de server niet bereiken</string>
     <string name="people_sync_refused">Kan een contact niet synchroniseren: %1$s</string>
     <string name="people_contact_friend">Mochi-vriend</string>
+    <string name="people_contact_birthday_day">Dag</string>
+    <string name="people_contact_birthday_month">Maand</string>
+    <string name="people_contact_birthday_year">Jaar</string>
+    <string name="people_contact_birthday_clear">Wissen</string>
 </resources>

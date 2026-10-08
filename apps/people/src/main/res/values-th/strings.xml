@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">บ้าน</string>
     <string name="people_contact_type_other">อื่น ๆ</string>
     <string name="people_contact_remove">ลบ</string>
-    <string name="people_contact_pick_date_confirm">ตกลง</string>
     <string name="people_books_name">ชื่อ</string>
     <string name="people_books_rename">เปลี่ยนชื่อ</string>
     <string name="people_contacts_sort_name">ชื่อ</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">สมุดที่อยู่</string>
     <string name="people_contact_type_work">ที่ทำงาน</string>
     <string name="people_contact_type_mobile">มือถือ</string>
-    <string name="people_contact_pick_date">เลือกวันที่</string>
     <string name="people_contact_conflict">รายชื่อติดต่อเปลี่ยนแปลง</string>
     <string name="people_add_contact_title">เพิ่มผู้ติดต่อ</string>
     <string name="people_add_contact_add">เพิ่มในรายชื่อติดต่อ</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์ได้</string>
     <string name="people_sync_refused">ไม่สามารถซิงค์รายชื่อติดต่อหนึ่งรายการได้: %1$s</string>
     <string name="people_contact_friend">เพื่อน Mochi</string>
+    <string name="people_contact_birthday_day">วัน</string>
+    <string name="people_contact_birthday_month">เดือน</string>
+    <string name="people_contact_birthday_year">ปี</string>
+    <string name="people_contact_birthday_clear">ล้าง</string>
 </resources>

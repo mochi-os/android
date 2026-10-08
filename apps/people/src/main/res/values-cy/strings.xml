@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Cartref</string>
     <string name="people_contact_type_other">Arall</string>
     <string name="people_contact_remove">Tynnu</string>
-    <string name="people_contact_pick_date_confirm">Iawn</string>
     <string name="people_books_name">Enw</string>
     <string name="people_books_rename">Ailenwi</string>
     <string name="people_contacts_sort_name">Enw</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Llyfr cyfeiriadau</string>
     <string name="people_contact_type_work">Gwaith</string>
     <string name="people_contact_type_mobile">Symudol</string>
-    <string name="people_contact_pick_date">Dewiswch ddyddiad</string>
     <string name="people_contact_conflict">Mae\'r cysylltiad wedi newid</string>
     <string name="people_add_contact_title">Ychwanegu cyswllt</string>
     <string name="people_add_contact_add">Ychwanegu at gysylltiadau</string>
@@ -219,4 +217,8 @@
     <string name="people_sync_transport">Methu cyrraedd y gweinydd</string>
     <string name="people_sync_refused">Methu cysoni cyswllt: %1$s</string>
     <string name="people_contact_friend">Ffrind Mochi</string>
+    <string name="people_contact_birthday_day">Dydd</string>
+    <string name="people_contact_birthday_month">Mis</string>
+    <string name="people_contact_birthday_year">Blwyddyn</string>
+    <string name="people_contact_birthday_clear">Clirio</string>
 </resources>

@@ -285,6 +285,7 @@
     <string name="market_editor_appeal_submit">提交申訴</string>
     <string name="market_editor_asset_add">新增檔案</string>
     <string name="market_editor_asset_delete">移除資產</string>
+    <string name="market_editor_asset_delete_confirm_title">刪除資產？</string>
     <string name="market_editor_asset_external">外部 URL</string>
     <string name="market_editor_asset_external_add">新增外部連結</string>
     <string name="market_editor_asset_external_filename">檔案名稱</string>

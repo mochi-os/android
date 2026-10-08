@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Koti</string>
     <string name="people_contact_type_other">Muu</string>
     <string name="people_contact_remove">Poista</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nimi</string>
     <string name="people_books_rename">Nimeä uudelleen</string>
     <string name="people_contacts_sort_name">Nimi</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Osoitekirja</string>
     <string name="people_contact_type_work">Työ</string>
     <string name="people_contact_type_mobile">Matkapuhelin</string>
-    <string name="people_contact_pick_date">Valitse päivä</string>
     <string name="people_contact_conflict">Yhteystieto muuttui</string>
     <string name="people_add_contact_title">Lisää yhteystieto</string>
     <string name="people_add_contact_add">Lisää yhteystietoihin</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Palvelimeen ei saatu yhteyttä</string>
     <string name="people_sync_refused">Yhteystietoa ei voitu synkronoida: %1$s</string>
     <string name="people_contact_friend">Mochi-ystävä</string>
+    <string name="people_contact_birthday_day">Päivä</string>
+    <string name="people_contact_birthday_month">Kuukausi</string>
+    <string name="people_contact_birthday_year">Vuosi</string>
+    <string name="people_contact_birthday_clear">Tyhjennä</string>
 </resources>

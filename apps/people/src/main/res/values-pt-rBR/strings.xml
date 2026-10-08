@@ -131,7 +131,6 @@
     <string name="people_contact_type">Tipo</string>
     <string name="people_contact_type_other">Outro</string>
     <string name="people_contact_remove">Remover</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Nome</string>
     <string name="people_books_rename">Renomear</string>
     <string name="people_contacts_sort_name">Nome</string>
@@ -163,4 +162,8 @@
     <string name="people_device_deleted">Dispositivo excluído</string>
     <string name="people_sync_title">Sincronizar com este celular</string>
     <string name="people_contact_friend">Amigo no Mochi</string>
+    <string name="people_contact_birthday_day">Dia</string>
+    <string name="people_contact_birthday_month">Mês</string>
+    <string name="people_contact_birthday_year">Ano</string>
+    <string name="people_contact_birthday_clear">Limpar</string>
 </resources>

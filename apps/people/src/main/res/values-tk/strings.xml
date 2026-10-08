@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Öý</string>
     <string name="people_contact_type_other">Beýleki</string>
     <string name="people_contact_remove">Aýyr</string>
-    <string name="people_contact_pick_date_confirm">Bolýar</string>
     <string name="people_books_name">At</string>
     <string name="people_books_rename">Adyny üýtget</string>
     <string name="people_contacts_sort_name">At</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Salgy kitaby</string>
     <string name="people_contact_type_work">Iş</string>
     <string name="people_contact_type_mobile">Ykjam</string>
-    <string name="people_contact_pick_date">Senäni saýlaň</string>
     <string name="people_contact_conflict">Kontakt üýtgedi</string>
     <string name="people_add_contact_title">Kontakt goş</string>
     <string name="people_add_contact_add">Kontaktlara goş</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Servere ýetip bolmady</string>
     <string name="people_sync_refused">Kontakty sinhronlaşdyryp bolmady: %1$s</string>
     <string name="people_contact_friend">Mochi dosty</string>
+    <string name="people_contact_birthday_day">Gün</string>
+    <string name="people_contact_birthday_month">Aý</string>
+    <string name="people_contact_birthday_year">Ýyl</string>
+    <string name="people_contact_birthday_clear">Arassalamak</string>
 </resources>

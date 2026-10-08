@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Hem</string>
     <string name="people_contact_type_other">Övrigt</string>
     <string name="people_contact_remove">Ta bort</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Namn</string>
     <string name="people_books_rename">Byt namn</string>
     <string name="people_contacts_sort_name">Namn</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Adressbok</string>
     <string name="people_contact_type_work">Arbete</string>
     <string name="people_contact_type_mobile">Mobil</string>
-    <string name="people_contact_pick_date">Välj ett datum</string>
     <string name="people_contact_conflict">Kontakten har ändrats</string>
     <string name="people_add_contact_title">Lägg till kontakt</string>
     <string name="people_add_contact_add">Lägg till i kontakter</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">Kunde inte nå servern</string>
     <string name="people_sync_refused">Kunde inte synkronisera en kontakt: %1$s</string>
     <string name="people_contact_friend">Mochi-vän</string>
+    <string name="people_contact_birthday_day">Dag</string>
+    <string name="people_contact_birthday_month">Månad</string>
+    <string name="people_contact_birthday_year">År</string>
+    <string name="people_contact_birthday_clear">Rensa</string>
 </resources>

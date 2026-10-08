@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">היים</string>
     <string name="people_contact_type_other">אַנדער</string>
     <string name="people_contact_remove">אַראָפּנעמען</string>
-    <string name="people_contact_pick_date_confirm">גוט</string>
     <string name="people_books_name">נאָמען</string>
     <string name="people_books_rename">איבערטויפֿן</string>
     <string name="people_contacts_sort_name">נאָמען</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">אַדרעס־בוך</string>
     <string name="people_contact_type_work">אַרבעט</string>
     <string name="people_contact_type_mobile">מאָביל</string>
-    <string name="people_contact_pick_date">קלײַבט אויס אַ דאַטע</string>
     <string name="people_contact_conflict">דער קאָנטאַקט האָט זיך געענדערט</string>
     <string name="people_add_contact_title">צולייגן קאָנטאַקט</string>
     <string name="people_add_contact_add">צולייגן צו די קאָנטאַקטן</string>
@@ -215,4 +213,8 @@
     <string name="people_sync_transport">האָט ניט געקענט דערגרייכן דעם סערווער</string>
     <string name="people_sync_refused">האָט ניט געקענט סינכראָניזירן אַ קאָנטאַקט: %1$s</string>
     <string name="people_contact_friend">Mochi פֿרײַנד</string>
+    <string name="people_contact_birthday_day">טאָג</string>
+    <string name="people_contact_birthday_month">חודש</string>
+    <string name="people_contact_birthday_year">יאָר</string>
+    <string name="people_contact_birthday_clear">רייניקן</string>
 </resources>

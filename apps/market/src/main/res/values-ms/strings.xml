@@ -792,4 +792,5 @@
         <item quantity="one">Ini akan membatalkan %1$s langganan aktif pada akhir tempoh pengebilan semasa. Pelanggan akan dimaklumkan. Penyenaraian akan disembunyikan daripada pembeli.</item>
         <item quantity="other">Ini akan membatalkan %1$s langganan aktif pada akhir tempoh pengebilan semasa. Pelanggan akan dimaklumkan. Penyenaraian akan disembunyikan daripada pembeli.</item>
     </plurals>
+    <string name="market_editor_asset_delete_confirm_title">Padam aset?</string>
 </resources>

@@ -133,7 +133,6 @@
     <string name="people_contact_type_home">Omah</string>
     <string name="people_contact_type_other">Liyané</string>
     <string name="people_contact_remove">Cabut</string>
-    <string name="people_contact_pick_date_confirm">OK</string>
     <string name="people_books_name">Jeneng</string>
     <string name="people_books_rename">Owahi jeneng</string>
     <string name="people_contacts_sort_name">Jeneng</string>
@@ -172,7 +171,6 @@
     <string name="people_contact_book">Buku alamat</string>
     <string name="people_contact_type_work">Kantor</string>
     <string name="people_contact_type_mobile">Seluler</string>
-    <string name="people_contact_pick_date">Pilih tanggal</string>
     <string name="people_contact_conflict">Kontak owah</string>
     <string name="people_add_contact_title">Tambah kontak</string>
     <string name="people_add_contact_add">Tambahake menyang kontak</string>
@@ -214,4 +212,8 @@
     <string name="people_sync_transport">Ora bisa nyambung menyang server</string>
     <string name="people_sync_refused">Ora bisa nyinkronaké kontak: %1$s</string>
     <string name="people_contact_friend">Kanca Mochi</string>
+    <string name="people_contact_birthday_day">Dina</string>
+    <string name="people_contact_birthday_month">Sasi</string>
+    <string name="people_contact_birthday_year">Taun</string>
+    <string name="people_contact_birthday_clear">Resiki</string>
 </resources>
