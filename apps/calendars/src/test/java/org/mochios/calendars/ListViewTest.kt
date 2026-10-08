@@ -87,6 +87,7 @@ class ListViewTest {
 
     /** The events there are, by day and title, and the bounds the server reports. */
     @Volatile private var events = listOf<Pair<LocalDate, String>>()
+    @Volatile private var length = 3_600L
     @Volatile private var first = 0L
     @Volatile private var last = 0L
 
@@ -118,7 +119,7 @@ class ListViewTest {
                             return MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
                         }
                         val listed = events.filter { noon(it.first) in start until finish }.joinToString(",") { (day, title) ->
-                            """{"event": "e-$title", "calendar": "c1", "colour": "#ff0000", "summary": "$title", "start": ${noon(day)}, "finish": ${noon(day) + 3_600}}"""
+                            """{"event": "e-$title", "calendar": "c1", "colour": "#ff0000", "summary": "$title", "start": ${noon(day)}, "finish": ${noon(day) + length}}"""
                         }
                         ok("""{"instances": [$listed], "truncated": false}""")
                     }
@@ -236,6 +237,23 @@ class ListViewTest {
         // The date column wrote the day's number on its own beside the rows.
         val number = Format(UserPreferences()).formatNumber(anchor.dayOfMonth)
         assertEquals(0, rule.onAllNodesWithText(number).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `an event running into the next day writes each end's day as the headings write one, on lines of their own`() {
+        events = listOf(anchor to "Overnight")
+        length = 24 * 3_600L
+        first = noon(anchor)
+        last = noon(anchor)
+        val format = Format(UserPreferences(dateFormat = DateFormat.DD_SLASH_MM_YYYY))
+        show(format = format)
+        waitFor("Overnight")
+        val start = noon(anchor)
+        val finish = start + length
+        val time = "${heading(anchor, format)} ${format.formatTime(start)} –\n" +
+            "${heading(anchor.plusDays(1), format)} ${format.formatTime(finish)}"
+        assertTrue(time, time.contains("05/10/2026") && time.contains("06/10/2026"))
+        rule.onAllNodesWithText(time)[0].assertIsDisplayed()
     }
 
     @Test

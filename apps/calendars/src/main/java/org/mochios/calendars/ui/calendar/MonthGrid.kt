@@ -91,6 +91,7 @@ import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -101,6 +102,7 @@ import java.time.LocalDate
 import java.time.ZoneOffset
 import java.time.format.TextStyle
 import java.time.temporal.ChronoUnit
+import java.util.Locale
 import kotlin.math.roundToInt
 
 /** The space between a cell's entries. */
@@ -983,7 +985,8 @@ private val PAD = 16.dp
  * One agenda row, as the web's list lays one out: the occurrence's dot, a
  * ring for a tentative one, and its title with its marks on the first line;
  * its time on the second, all day, a span of clock times within its day, or
- * its two ends across days, each read in its own zone when the views show
+ * across days its two ends on lines of their own, each with its day written
+ * as the headings write one and read in its own zone when the views show
  * events in theirs; where it is on a third. A past or cancelled occurrence
  * is faded, and the row is tinted in the primary colour while its summary is
  * open, [chosen]. The [calendar]'s name, when given, goes last. A [divided]
@@ -1002,11 +1005,19 @@ fun AgendaRow(
     val zones = viewModel.zones()
     val opens = clockZone(instance.zone?.start, zones)
     val closes = clockZone(instance.zone?.finish, zones)
+    val pattern = stringResource(R.string.calendars_list_heading)
+    val locale = LocalConfiguration.current.locales[0]
     val time = when {
         instance.allday -> stringResource(R.string.calendars_event_allday)
         viewModel.day(instance) == viewModel.finish(instance) ->
             format.formatClockRange(instance.start, instance.finish, opens, closes)
-        else -> format.formatTimeRange(instance.start, instance.finish, opens, closes)
+        else -> {
+            val end = { seconds: Long, zone: String? ->
+                caption(pattern, viewModel.day(seconds, zone), format, locale) + " " +
+                    format.formatTime(seconds, zone)
+            }
+            format.formatRange(end(instance.start, opens), end(instance.finish, closes), broken = true)
+        }
     }
     val muted = MaterialTheme.colorScheme.onSurfaceVariant
     // The second and third lines start under the title, clear of the dot.
@@ -1080,6 +1091,18 @@ fun AgendaRow(
 }
 
 /**
+ * A day as the list writes one, in its headings and at each end of a span
+ * across days: its short weekday and its date in the user's date format, put
+ * together by [pattern], which orders them as the user's language does.
+ */
+fun caption(pattern: String, day: LocalDate, format: Format, locale: Locale): String = String.format(
+    pattern,
+    day.dayOfWeek.getDisplayName(TextStyle.SHORT, locale),
+    // A date, read at noon in no zone, so no offset can tip it.
+    format.formatDate(day.atTime(12, 0).toEpochSecond(ZoneOffset.UTC), "UTC"),
+)
+
+/**
  * A day's heading in the list view, across the whole width: its short
  * weekday and its date in the user's date format, put together the way the
  * user's language orders them. Today's is a band in the primary colour, as
@@ -1095,12 +1118,7 @@ private fun Heading(day: LocalDate, current: Boolean) {
     val colours = MaterialTheme.colorScheme
     val rule = colours.outline.copy(alpha = 0.5f)
     Text(
-        text = stringResource(
-            R.string.calendars_list_heading,
-            day.dayOfWeek.getDisplayName(TextStyle.SHORT, locale),
-            // A date, read at noon in no zone, so no offset can tip it.
-            format.formatDate(day.atTime(12, 0).toEpochSecond(ZoneOffset.UTC), "UTC"),
-        ),
+        text = caption(stringResource(R.string.calendars_list_heading), day, format, locale),
         style = MaterialTheme.typography.titleSmall,
         fontWeight = FontWeight.SemiBold,
         color = if (current) colours.onPrimary else colours.onSurface,

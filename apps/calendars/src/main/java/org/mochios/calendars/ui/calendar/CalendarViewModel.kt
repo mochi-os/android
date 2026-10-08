@@ -1221,6 +1221,13 @@ class CalendarViewModel @Inject constructor(
         else -> days(instance, zone, zones).first
     }
 
+    /**
+     * The day the moment [seconds] falls on, read in the zone [named] when it
+     * names one the platform knows, else in the user's.
+     */
+    fun day(seconds: Long, named: String?): LocalDate =
+        Instant.ofEpochSecond(seconds).atZone(zoneOf(named, zone)).toLocalDate()
+
     /** The last day an occurrence covers, for a chip stretched across days. */
     fun finish(instance: Instance): LocalDate {
         if (instance.date != null) return last(day(instance), instance.start, instance.finish)
