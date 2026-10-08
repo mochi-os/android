@@ -25,6 +25,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.files.FileStore
 import org.mochios.people.api.PeopleApi
+import org.mochios.people.model.Contact
 import org.mochios.people.repository.PeopleRepository
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
@@ -255,5 +256,22 @@ class ContactsFlowTest {
         held.countDown()
         until { model.uiState.value.books.isNotEmpty() }
         assertEquals("ann", model.uiState.value.searchQuery)
+    }
+
+    @Test
+    fun `a friend's row has no label beside the name, only the message button`() {
+        rule.setContent {
+            ContactRow(
+                contact = Contact(id = "c2", person = "p1", friend = true, name = "Ada Byron"),
+                onTap = {},
+                onMessage = {},
+                onInvite = {},
+                onUnfriend = {},
+                onDelete = {},
+            )
+        }
+        rule.onNodeWithText("Ada Byron").assertExists()
+        rule.onNodeWithText("Friend").assertDoesNotExist()
+        rule.onNodeWithContentDescription("Message").assertExists()
     }
 }
