@@ -153,6 +153,7 @@ fun CalendarScreen(
     onSubscribe: () -> Unit,
     onConnectDevice: () -> Unit,
     onPreferences: () -> Unit,
+    onCalendarSettings: (String) -> Unit,
     onNewEvent: (Long, Boolean?, Long?) -> Unit,
     onEditEvent: (String, Long) -> Unit,
     onCopyEvent: (String, Long, Scope) -> Unit,
@@ -321,6 +322,7 @@ fun CalendarScreen(
         onAction = { action, calendar ->
             when (action) {
                 CalendarAction.ONLY -> viewModel.only(calendar.id)
+                CalendarAction.SETTINGS -> onCalendarSettings(calendar.id)
                 CalendarAction.RENAME -> renaming = calendar
                 CalendarAction.COLOUR -> colouring = calendar
                 CalendarAction.LINK -> linking = calendar

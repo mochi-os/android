@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -59,6 +60,7 @@ import org.mochios.android.api.userMessage
  * @param error Last failure, shown above the button; null hides the line.
  * @param onBack Called by the top bar's back button.
  * @param onSubmit Called by the submit button.
+ * @param actions The top bar's trailing actions, such as an overflow menu.
  * @param content Screen body, given the scaffold's inner padding.
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -71,6 +73,7 @@ fun CreateEntityScaffold(
     error: MochiError?,
     onBack: () -> Unit,
     onSubmit: () -> Unit,
+    actions: @Composable RowScope.() -> Unit = {},
     content: @Composable (PaddingValues) -> Unit
 ) {
     Scaffold(
@@ -84,7 +87,8 @@ fun CreateEntityScaffold(
                             contentDescription = stringResource(R.string.common_back)
                         )
                     }
-                }
+                },
+                actions = actions
             )
         },
         bottomBar = {

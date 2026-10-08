@@ -14,6 +14,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.R as MochiR
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.components.CalendarRow
@@ -51,6 +52,28 @@ class CalendarMenuTest {
         rule.onNodeWithText(export).assertExists()
         rule.onNodeWithText(import).performClick()
         assertEquals(listOf(CalendarAction.IMPORT), chosen)
+    }
+
+    @Test
+    fun `a calendar of the user's own offers Settings`() {
+        val chosen = open(Calendar(id = "own", name = "Work"))
+        rule.onNodeWithText(context.getString(MochiR.string.settings_title)).performClick()
+        assertEquals(listOf(CalendarAction.SETTINGS), chosen)
+    }
+
+    @Test
+    fun `Settings sits just above Delete, after Export`() {
+        open(Calendar(id = "own", name = "Work"))
+        fun top(text: String) = rule.onNodeWithText(text).fetchSemanticsNode().boundsInRoot.top
+        val settings = top(context.getString(MochiR.string.settings_title))
+        assertTrue(top(export) < settings)
+        assertTrue(settings < top(context.getString(R.string.calendars_delete)))
+    }
+
+    @Test
+    fun `a subscription has no Settings, as it takes no import`() {
+        open(Calendar(id = "subscribed", name = "Holidays", kind = Calendar.KIND_SUBSCRIPTION, readonly = true))
+        rule.onNodeWithText(context.getString(MochiR.string.settings_title)).assertDoesNotExist()
     }
 
     @Test

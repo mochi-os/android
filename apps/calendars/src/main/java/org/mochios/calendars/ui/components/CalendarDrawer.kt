@@ -74,6 +74,7 @@ import org.mochios.calendars.ui.sync.CalendarsSyncRows
 /** What a calendar's overflow menu can ask for. */
 enum class CalendarAction {
     ONLY,
+    SETTINGS,
     RENAME,
     COLOUR,
     LINK,
@@ -336,6 +337,16 @@ internal fun CalendarRow(
                         onAction(CalendarAction.EXPORT)
                     },
                 )
+                if (!calendar.readonly) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(MochiR.string.settings_title)) },
+                        leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
+                        onClick = {
+                            expanded = false
+                            onAction(CalendarAction.SETTINGS)
+                        },
+                    )
+                }
                 if (!calendar.default && !calendar.birthdays) {
                     MochiDropdownMenuItem(
                         text = {

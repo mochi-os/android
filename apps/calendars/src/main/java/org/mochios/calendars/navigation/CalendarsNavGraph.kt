@@ -22,6 +22,7 @@ import org.mochios.calendars.ui.dialogs.SubscribeCalendarScreen
 import org.mochios.calendars.ui.editor.EventEditScreen
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.preferences.PreferencesScreen
+import org.mochios.calendars.ui.settings.CalendarSettingsScreen
 import java.net.URLDecoder
 import java.time.LocalDate
 import java.net.URLEncoder
@@ -59,6 +60,9 @@ object CalendarsApp {
     const val SUBSCRIBE = "calendars/subscribe"
     const val DEVICES = "calendars/devices"
     const val PREFERENCES = "calendars/preferences"
+
+    /** One calendar's settings: its name, its colour and its address. */
+    const val CALENDAR_SETTINGS = "calendars/calendar/{calendar}/settings"
     // The two editor routes sit on separate paths rather than one path with
     // "new" as an id: a single pattern would match both and the nav graph
     // would have to pick between them.
@@ -88,6 +92,8 @@ object CalendarsApp {
     const val CALENDAR = "calendar"
     const val SUBSCRIBED = "subscribed"
     const val LINKED = "linked"
+    const val RENAMED = "renamed"
+    const val RECOLOURED = "recoloured"
 
     /**
      * Tells the calendar beneath the editor, when there is one, that an event
@@ -108,9 +114,14 @@ object CalendarsApp {
         CALENDAR -> R.string.calendars_created
         SUBSCRIBED -> R.string.calendars_subscribed
         LINKED -> R.string.calendars_linked
+        RENAMED -> R.string.calendars_renamed
+        RECOLOURED -> R.string.calendars_colour_saved
         PREFERENCES -> R.string.calendars_preferences_saved
         else -> null
     }
+
+    /** The settings of [calendar]. */
+    fun settings(calendar: String): String = "calendars/calendar/$calendar/settings"
 
     /**
      * A new event, optionally starting at a moment the user picked out of a
@@ -214,6 +225,9 @@ fun NavGraphBuilder.calendarsNavGraph(
             onSubscribe = { navController.navigate(CalendarsApp.SUBSCRIBE) },
             onConnectDevice = { navController.navigate(CalendarsApp.DEVICES) },
             onPreferences = { navController.navigate(CalendarsApp.PREFERENCES) },
+            onCalendarSettings = { calendar ->
+                navController.navigate(CalendarsApp.settings(calendar))
+            },
             onNewEvent = { start, allday, finish -> navController.navigate(CalendarsApp.newEvent(start, allday, finish)) },
             onEditEvent = { event, occurrence -> navController.navigate(CalendarsApp.event(event, occurrence)) },
             onCopyEvent = { event, occurrence, scope ->
@@ -257,6 +271,20 @@ fun NavGraphBuilder.calendarsNavGraph(
 
     composable(CalendarsApp.DEVICES) {
         ConnectDeviceScreen(onBack = { navController.popBackStack() })
+    }
+
+    composable(
+        route = CalendarsApp.CALENDAR_SETTINGS,
+        arguments = listOf(navArgument("calendar") { type = NavType.StringType }),
+    ) {
+        CalendarSettingsScreen(
+            onBack = { navController.popBackStack() },
+            onSaved = { renamed ->
+                val flag = if (renamed) CalendarsApp.RENAMED else CalendarsApp.RECOLOURED
+                CalendarsApp.told(navController, flag)
+                navController.popBackStack()
+            },
+        )
     }
 
     composable(CalendarsApp.PREFERENCES) {
