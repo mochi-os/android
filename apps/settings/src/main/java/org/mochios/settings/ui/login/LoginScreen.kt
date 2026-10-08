@@ -25,7 +25,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Key
@@ -46,23 +45,21 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.CopyButton
+import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.webUri
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -74,7 +71,6 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.SecureWindow
 import org.mochios.android.ui.components.StepUpDialog
-import org.mochios.android.util.sensitiveClip
 import org.mochios.settings.R
 import org.mochios.settings.api.MethodInfo
 import org.mochios.settings.api.OAuthIdentity
@@ -106,8 +102,7 @@ fun LoginScreen(
     val launchUrl by viewModel.oauthLaunchUrl.collectAsState()
     val stepUpVisible by viewModel.stepUpVisible.collectAsState()
     val context = LocalContext.current
-    val clipboard = LocalClipboard.current
-    val clipboardScope = rememberCoroutineScope()
+    val copier = rememberCopier()
 
     LaunchedEffect(launchUrl) {
         val url = launchUrl ?: return@LaunchedEffect
@@ -211,24 +206,13 @@ fun LoginScreen(
             url = setup.url,
             onCancel = viewModel::cancelTotpSetup,
             onVerify = { code -> viewModel.verifyTotp(code) },
-            onCopySecret = {
-                clipboardScope.launch {
-                    clipboard.setClipEntry(
-                        sensitiveClip("totp", setup.secret).toClipEntry(),
-                    )
-                }
-            },
         )
     }
     recoveryCodes?.let { codes ->
         RecoveryCodesDialog(
             codes = codes,
             onCopyAll = {
-                clipboardScope.launch {
-                    clipboard.setClipEntry(
-                        sensitiveClip("recovery codes", codes.joinToString("\n")).toClipEntry(),
-                    )
-                }
+                copier.copy(codes.joinToString("\n"), label = "recovery codes", sensitive = true)
             },
             onDone = viewModel::acknowledgeRecoveryCodes,
         )
@@ -507,7 +491,6 @@ private fun TotpSetupDialog(
     url: String,
     onCancel: () -> Unit,
     onVerify: (String) -> Unit,
-    onCopySecret: () -> Unit,
 ) {
     var code by remember { mutableStateOf("") }
     MochiAlertDialog(
@@ -525,16 +508,11 @@ private fun TotpSetupDialog(
                         modifier = Modifier.weight(1f),
                         style = MaterialTheme.typography.bodyMedium,
                     )
-                    MochiIconButton(
-                        onClick = onCopySecret,
-                        modifier = Modifier.size(36.dp),
-                    ) {
-                        Icon(
-                            Icons.Default.ContentCopy,
-                            contentDescription = stringResource(R.string.account_copy),
-                            modifier = Modifier.size(18.dp),
-                        )
-                    }
+                    CopyButton(
+                        value = secret,
+                        contentDescription = stringResource(R.string.account_copy),
+                        sensitive = true,
+                    )
                 }
                 if (url.startsWith("otpauth:")) {
                     // The otpauth URL enrols the secret in one tap. Nothing

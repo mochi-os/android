@@ -5,7 +5,6 @@
 
 package org.mochios.settings.ui.systemstatus
 
-import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -26,7 +25,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.CircularProgressIndicator
@@ -39,20 +37,17 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import kotlinx.coroutines.launch
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.util.webUri
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
@@ -79,8 +74,6 @@ fun SystemStatusScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
-    val clipboard = LocalClipboard.current
-    val clipboardScope = rememberCoroutineScope()
     StepUpHost(viewModel.stepUp)
     Scaffold(
         topBar = {
@@ -209,13 +202,6 @@ fun SystemStatusScreen(
                             isInstalling = state.isInstalling,
                             installError = state.installError?.userMessage(),
                             onInstall = { viewModel.installUpdate() },
-                            onCopy = { command ->
-                                clipboardScope.launch {
-                                    clipboard.setClipEntry(
-                                        ClipData.newPlainText("command", command).toClipEntry(),
-                                    )
-                                }
-                            },
                             onOpen = { openUrl(context, it) },
                         )
                     }
@@ -365,7 +351,6 @@ private fun UpdateBlock(
     isInstalling: Boolean,
     installError: String?,
     onInstall: () -> Unit,
-    onCopy: (String) -> Unit,
     onOpen: (String) -> Unit,
 ) {
     Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.Top) {
@@ -395,7 +380,6 @@ private fun UpdateBlock(
                     info = info,
                     isInstalling = isInstalling,
                     onInstall = onInstall,
-                    onCopy = onCopy,
                     onOpen = onOpen,
                 )
                 if (installError != null) {
@@ -415,21 +399,17 @@ private fun UpdateAction(
     info: SystemUpdateInfo,
     isInstalling: Boolean,
     onInstall: () -> Unit,
-    onCopy: (String) -> Unit,
     onOpen: (String) -> Unit,
 ) {
     when (info.platform) {
         "linux-deb" -> CommandHint(
             command = "sudo apt update && sudo apt install mochi-server",
-            onCopy = onCopy,
         )
         "linux-rpm" -> CommandHint(
             command = "sudo dnf upgrade mochi-server",
-            onCopy = onCopy,
         )
         "docker" -> CommandHint(
             command = "docker compose pull && docker compose up -d",
-            onCopy = onCopy,
         )
         "windows" -> MochiButton(
             onClick = onInstall,
@@ -462,7 +442,7 @@ private fun UpdateAction(
 }
 
 @Composable
-private fun CommandHint(command: String, onCopy: (String) -> Unit) {
+private fun CommandHint(command: String) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
@@ -482,16 +462,10 @@ private fun CommandHint(command: String, onCopy: (String) -> Unit) {
                 fontFamily = FontFamily.Monospace,
             )
         }
-        MochiIconButton(
-            onClick = { onCopy(command) },
-            modifier = Modifier.size(36.dp),
-        ) {
-            Icon(
-                Icons.Default.ContentCopy,
-                contentDescription = stringResource(R.string.system_status_copy),
-                modifier = Modifier.size(18.dp),
-            )
-        }
+        CopyButton(
+            value = command,
+            contentDescription = stringResource(R.string.system_status_copy),
+        )
     }
 }
 

@@ -5,7 +5,6 @@
 
 package org.mochios.chat.ui.chat
 
-import android.content.ClipData
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -80,9 +79,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.AnnotatedString
@@ -131,6 +128,7 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.ReplyComposerBanner
+import org.mochios.android.ui.components.rememberCopier
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
@@ -286,10 +284,8 @@ private fun ChatContent(
     )
 
     val listState = rememberLazyListState()
-    val scope = rememberCoroutineScope()
     val context = LocalContext.current
-    val clipboard = LocalClipboard.current
-    val copiedMessage = stringResource(MochiR.string.common_copied)
+    val copier = rememberCopier()
     val deleteOwnOnlyMessage = stringResource(R.string.chat_delete_own_only)
     // Messages awaiting delete confirmation (single from the menu, or the whole
     // selection); null when no confirm dialog is open.
@@ -551,12 +547,7 @@ private fun ChatContent(
                             .filter { it.isNotBlank() }
                             .joinToString("\n")
                         if (text.isNotBlank()) {
-                            scope.launch {
-                                clipboard.setClipEntry(
-                                    ClipData.newPlainText("messages", text).toClipEntry(),
-                                )
-                            }
-                            Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
+                            copier.copy(text, label = "messages")
                         }
                         viewModel.exitSelection()
                     },

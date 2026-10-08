@@ -5,7 +5,6 @@
 
 package org.mochios.android.ui.components
 
-import android.content.ClipData
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
@@ -17,22 +16,14 @@ import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalClipboard
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
-import androidx.compose.ui.platform.toClipEntry
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import android.widget.Toast
-import kotlinx.coroutines.launch
-import org.mochios.android.R
 
 /**
  * How to truncate a value too long for the available width. [MIDDLE] keeps head
@@ -57,11 +48,8 @@ fun DataChip(
     copyable: Boolean = true,
     wrap: Boolean = false,
 ) {
-    val clipboard = LocalClipboard.current
-    val clipboardScope = rememberCoroutineScope()
-    val context = LocalContext.current
+    val copier = rememberCopier()
     val haptic = LocalHapticFeedback.current
-    val copiedMessage = stringResource(R.string.common_copied)
 
     val displayValue = when (truncate) {
         Truncate.MIDDLE -> middleTruncate(value)
@@ -71,12 +59,7 @@ fun DataChip(
     }
 
     val onCopy: () -> Unit = {
-        clipboardScope.launch {
-            clipboard.setClipEntry(
-                ClipData.newPlainText("value", value).toClipEntry(),
-            )
-        }
-        Toast.makeText(context, copiedMessage, Toast.LENGTH_SHORT).show()
+        copier.copy(value)
     }
 
     val interactionModifier = if (copyable) {

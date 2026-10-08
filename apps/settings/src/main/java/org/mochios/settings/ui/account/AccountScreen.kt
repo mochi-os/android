@@ -6,7 +6,6 @@
 package org.mochios.settings.ui.account
 
 import android.app.DownloadManager
-import android.content.ClipData
 import android.content.Context
 import android.net.Uri
 import androidx.compose.foundation.background
@@ -27,7 +26,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -43,11 +41,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.platform.LocalClipboard
-import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.util.destination
 import org.mochios.android.util.webUri
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -61,7 +57,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -291,8 +286,6 @@ private fun IdentitySection(
 ) {
     val id = state.identity
     val context = LocalContext.current
-    val clipboard = LocalClipboard.current
-    val clipboardScope = rememberCoroutineScope()
     var editingName by remember { mutableStateOf(false) }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -345,41 +338,19 @@ private fun IdentitySection(
                 monospace = true,
                 modifier = Modifier.weight(1f),
             )
-            MochiIconButton(
-                onClick = {
-                    clipboardScope.launch {
-                        clipboard.setClipEntry(
-                            ClipData.newPlainText("fingerprint", id.fingerprint).toClipEntry(),
-                        )
-                    }
-                },
-                enabled = id.fingerprint.isNotBlank(),
-                modifier = Modifier.size(36.dp),
-            ) {
-                Icon(
-                    Icons.Default.ContentCopy,
+            if (id.fingerprint.isNotBlank()) {
+                CopyButton(
+                    value = id.fingerprint,
                     contentDescription = stringResource(R.string.account_copy),
-                    modifier = Modifier.size(18.dp),
                 )
             }
         }
         IdentityFieldRow(label = stringResource(R.string.account_identity_identity)) {
             ValueChip(text = id.entity, monospace = true, modifier = Modifier.weight(1f))
-            MochiIconButton(
-                onClick = {
-                    clipboardScope.launch {
-                        clipboard.setClipEntry(
-                            ClipData.newPlainText("identity", id.entity).toClipEntry(),
-                        )
-                    }
-                },
-                enabled = id.entity.isNotBlank(),
-                modifier = Modifier.size(36.dp),
-            ) {
-                Icon(
-                    Icons.Default.ContentCopy,
+            if (id.entity.isNotBlank()) {
+                CopyButton(
+                    value = id.entity,
                     contentDescription = stringResource(R.string.account_copy),
-                    modifier = Modifier.size(18.dp),
                 )
             }
         }

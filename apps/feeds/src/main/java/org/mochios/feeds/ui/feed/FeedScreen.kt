@@ -5,7 +5,6 @@
 
 package org.mochios.feeds.ui.feed
 
-import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
@@ -99,10 +98,8 @@ import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -162,6 +159,7 @@ import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.RefreshButton
 import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.VideoPlayer
+import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.ui.components.rememberServerUrl
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
@@ -198,7 +196,7 @@ fun FeedScreen(
     feedListViewModel: FeedListViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
-    val clipboard = LocalClipboard.current
+    val copier = rememberCopier()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     val drawerFeeds by feedListViewModel.feeds.collectAsState()
@@ -224,10 +222,7 @@ fun FeedScreen(
         viewModel.actionEvents.collect { event ->
             when (event) {
                 is FeedActionEvent.RssUrlReady -> {
-                    clipboard.setClipEntry(
-                        ClipData.newPlainText(rssClipboardLabel, event.url).toClipEntry(),
-                    )
-                    Toast.makeText(context, rssCopiedMessage, Toast.LENGTH_SHORT).show()
+                    copier.copy(event.url, label = rssClipboardLabel, message = rssCopiedMessage)
                 }
 
                 is FeedActionEvent.ShareLinkReady -> {

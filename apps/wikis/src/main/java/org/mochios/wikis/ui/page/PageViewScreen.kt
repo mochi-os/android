@@ -5,7 +5,6 @@
 
 package org.mochios.wikis.ui.page
 
-import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
@@ -58,10 +57,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInParent
-import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalResources
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -81,6 +78,7 @@ import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.rememberCopier
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPage
@@ -109,9 +107,9 @@ fun PageViewScreen(
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     val resources = LocalResources.current
-    val clipboard = LocalClipboard.current
     val scope = rememberCoroutineScope()
     val snackbar = remember { SnackbarHostState() }
+    val copier = rememberCopier(snackbar)
     val clipboardLabelRss = stringResource(R.string.wikis_pageview_clipboard_label_rss)
     val rssCopiedMsg = stringResource(R.string.wikis_pageview_rss_copied)
     val rssCopiedNewMsg = stringResource(R.string.wikis_rss_copied_new)
@@ -144,10 +142,12 @@ fun PageViewScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is PageViewEvent.CopyRssUrl -> {
-                    clipboard.setClipEntry(
-                        ClipData.newPlainText(clipboardLabelRss, event.url).toClipEntry(),
+                    copier.copy(
+                        event.url,
+                        label = clipboardLabelRss,
+                        message = if (event.replaced) rssCopiedNewMsg else rssCopiedMsg,
+                        always = event.replaced,
                     )
-                    snackbar.showSnackbar(if (event.replaced) rssCopiedNewMsg else rssCopiedMsg)
                 }
                 is PageViewEvent.RssExists -> {
                     // Replacing retires the URL already handed out, so it takes

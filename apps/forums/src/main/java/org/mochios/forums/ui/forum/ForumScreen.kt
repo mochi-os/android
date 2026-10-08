@@ -5,7 +5,6 @@
 
 package org.mochios.forums.ui.forum
 
-import android.content.ClipData
 import android.content.Intent
 import android.content.Context
 import androidx.compose.foundation.clickable
@@ -85,10 +84,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalResources
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -126,6 +123,7 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.RefreshButton
+import org.mochios.android.ui.components.rememberCopier
 import org.mochios.forums.R
 import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.model.Post
@@ -321,7 +319,6 @@ private fun ForumContent(
     onUnsubscribed: () -> Unit,
     viewModel: ForumViewModel = hiltViewModel(),
 ) {
-    val clipboard = LocalClipboard.current
     val uiState by viewModel.uiState.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
     val newPostsCount by viewModel.newPostsCount.collectAsState()
@@ -338,6 +335,7 @@ private fun ForumContent(
     val forumIdForCallbacks = uiState.forum.fingerprint.ifEmpty { uiState.forum.id }
 
     val snackbar = remember { SnackbarHostState() }
+    val copier = rememberCopier(snackbar)
     val context = LocalContext.current
     val resources = LocalResources.current
     val rssClipboardLabel = stringResource(R.string.forums_rss_clipboard_label)
@@ -362,10 +360,7 @@ private fun ForumContent(
         viewModel.events.collect { event ->
             when (event) {
                 is ForumEvent.CopyRssUrl -> {
-                    clipboard.setClipEntry(
-                        ClipData.newPlainText(rssClipboardLabel, event.url).toClipEntry(),
-                    )
-                    snackbar.showSnackbar(rssCopiedMessage)
+                    copier.copy(event.url, label = rssClipboardLabel, message = rssCopiedMessage)
                 }
 
                 is ForumEvent.ShareLink -> shareLink(context, event.link, shareLinkTitle)

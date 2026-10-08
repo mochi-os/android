@@ -5,7 +5,6 @@
 
 package org.mochios.wikis.ui.list
 
-import android.content.ClipData
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
@@ -56,8 +55,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalClipboard
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -85,6 +82,7 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.rememberCopier
 import org.mochios.wikis.R
 import org.mochios.wikis.model.DirectoryEntry
 import org.mochios.wikis.model.Recommendation
@@ -104,7 +102,7 @@ fun WikiListScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
-    val clipboard = LocalClipboard.current
+    val copier = rememberCopier(snackbarHostState)
 
     var showOverflow by remember { mutableStateOf(false) }
     var rssSubmenuOpen by remember { mutableStateOf(false) }
@@ -204,15 +202,19 @@ fun WikiListScreen(
                                                         mode = mode,
                                                         regenerate = false,
                                                         makeUrl = viewModel::makeRssUrl,
-                                                        copy = { url ->
-                                                            clipboard.setClipEntry(
-                                                                ClipData.newPlainText(clipboardLabel, url)
-                                                                    .toClipEntry(),
+                                                        copy = { url, regenerated ->
+                                                            copier.copy(
+                                                                url,
+                                                                label = clipboardLabel,
+                                                                message = if (regenerated) {
+                                                                    rssCopiedNewMessage
+                                                                } else {
+                                                                    rssCopiedMessage
+                                                                },
+                                                                always = regenerated,
                                                             )
                                                         },
                                                         snackbar = snackbarHostState,
-                                                        copiedMessage = rssCopiedMessage,
-                                                        copiedNewMessage = rssCopiedNewMessage,
                                                         existsMessage = rssExistsMessage,
                                                         replaceLabel = rssReplaceLabel,
                                                         failedMessage = rssFailedMessage,
@@ -661,10 +663,8 @@ private suspend fun copyRss(
     mode: String,
     regenerate: Boolean,
     makeUrl: suspend (String, Boolean) -> Result<String?>,
-    copy: suspend (String) -> Unit,
+    copy: (String, Boolean) -> Unit,
     snackbar: SnackbarHostState,
-    copiedMessage: String,
-    copiedNewMessage: String,
     existsMessage: String,
     replaceLabel: String,
     failedMessage: String,
@@ -685,8 +685,6 @@ private suspend fun copyRss(
                         makeUrl = makeUrl,
                         copy = copy,
                         snackbar = snackbar,
-                        copiedMessage = copiedMessage,
-                        copiedNewMessage = copiedNewMessage,
                         existsMessage = existsMessage,
                         replaceLabel = replaceLabel,
                         failedMessage = failedMessage,
@@ -694,8 +692,7 @@ private suspend fun copyRss(
                 }
                 return
             }
-            copy(url)
-            snackbar.showSnackbar(if (regenerate) copiedNewMessage else copiedMessage)
+            copy(url, regenerate)
         },
         onFailure = {
             snackbar.showSnackbar(failedMessage)

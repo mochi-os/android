@@ -5,7 +5,6 @@
 
 package org.mochios.android.ui.components
 
-import android.content.ClipData
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
@@ -17,18 +16,13 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalClipboard
-import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import org.mochios.android.R
-import org.mochios.android.util.sensitiveClip
 
 /**
  * Small icon button that copies [value] and shows a brief check-mark. Pass
@@ -43,8 +37,7 @@ fun CopyButton(
     contentDescription: String? = null,
     sensitive: Boolean = false,
 ) {
-    val clipboard = LocalClipboard.current
-    val clipboardScope = rememberCoroutineScope()
+    val copier = rememberCopier()
     var copied by remember { mutableStateOf(false) }
 
     if (copied) {
@@ -60,14 +53,7 @@ fun CopyButton(
 
     MochiIconButton(
         onClick = {
-            val clip = if (sensitive) {
-                sensitiveClip(label, value)
-            } else {
-                ClipData.newPlainText("value", value)
-            }
-            clipboardScope.launch {
-                clipboard.setClipEntry(clip.toClipEntry())
-            }
+            copier.copy(value, label = label, sensitive = sensitive, quiet = true)
             copied = true
         },
         modifier = modifier.size(28.dp),
