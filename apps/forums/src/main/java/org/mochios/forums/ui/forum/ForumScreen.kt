@@ -335,7 +335,7 @@ private fun ForumContent(
     val forumIdForCallbacks = uiState.forum.fingerprint.ifEmpty { uiState.forum.id }
 
     val snackbar = remember { SnackbarHostState() }
-    val copier = rememberCopier(snackbar)
+    val copier = rememberCopier()
     val context = LocalContext.current
     val resources = LocalResources.current
     val rssClipboardLabel = stringResource(R.string.forums_rss_clipboard_label)

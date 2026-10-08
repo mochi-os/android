@@ -9,7 +9,6 @@ import android.content.ClipData
 import android.content.Context
 import android.os.Build
 import android.widget.Toast
-import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.remember
@@ -35,15 +34,15 @@ val systemConfirmsCopy: Boolean
 /**
  * Copies text to the clipboard the same way everywhere in the app: the text
  * goes to the clipboard, and on a version of Android that does not confirm a
- * copy itself a short message says so, in the screen's snackbar when it has
- * one and as a toast otherwise. Get one with [rememberCopier].
+ * copy itself a toast says so, as the system's own confirmation would. A
+ * toast also shows over a dialog, where a snackbar would be hidden. Get one
+ * with [rememberCopier].
  */
 @Stable
 class Copier internal constructor(
     private val clipboard: Clipboard,
     private val scope: CoroutineScope,
     private val context: Context,
-    private val snackbar: SnackbarHostState?,
     private val copied: String,
 ) {
 
@@ -75,28 +74,18 @@ class Copier internal constructor(
         if (quiet || (systemConfirmsCopy && !always)) {
             return
         }
-        val text = message ?: copied
-        if (snackbar != null) {
-            scope.launch {
-                snackbar.showSnackbar(text)
-            }
-        } else {
-            Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
-        }
+        Toast.makeText(context, message ?: copied, Toast.LENGTH_SHORT).show()
     }
 }
 
-/**
- * A [Copier] for this screen. Pass the screen's [snackbar] when it has one,
- * so a confirmation shows there rather than as a toast.
- */
+/** A [Copier] for this screen. */
 @Composable
-fun rememberCopier(snackbar: SnackbarHostState? = null): Copier {
+fun rememberCopier(): Copier {
     val clipboard = LocalClipboard.current
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
     val copied = stringResource(R.string.common_copied)
-    return remember(clipboard, scope, context, snackbar, copied) {
-        Copier(clipboard, scope, context, snackbar, copied)
+    return remember(clipboard, scope, context, copied) {
+        Copier(clipboard, scope, context, copied)
     }
 }

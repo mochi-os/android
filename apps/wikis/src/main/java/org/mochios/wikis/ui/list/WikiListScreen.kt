@@ -102,7 +102,7 @@ fun WikiListScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
-    val copier = rememberCopier(snackbarHostState)
+    val copier = rememberCopier()
 
     var showOverflow by remember { mutableStateOf(false) }
     var rssSubmenuOpen by remember { mutableStateOf(false) }

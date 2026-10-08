@@ -7,11 +7,7 @@ package org.mochios.android.ui.components
 
 import android.content.ClipboardManager
 import android.content.Context
-import androidx.compose.material3.SnackbarHost
-import androidx.compose.material3.SnackbarHostState
-import androidx.compose.runtime.remember
 import androidx.compose.ui.test.junit4.createComposeRule
-import androidx.compose.ui.test.onAllNodesWithText
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Rule
@@ -24,8 +20,7 @@ import org.robolectric.shadows.ShadowToast
 
 /**
  * The shared copy: the text always reaches the clipboard, and the app says so
- * only where Android does not confirm a copy itself, in the screen's snackbar
- * when it has one and as a toast otherwise.
+ * in a toast only where Android does not confirm a copy itself.
  */
 @RunWith(RobolectricTestRunner::class)
 class CopierTest {
@@ -40,12 +35,10 @@ class CopierTest {
         return manager.primaryClip?.getItemAt(0)?.text?.toString()
     }
 
-    private fun copier(snackbar: Boolean = false): Copier {
+    private fun copier(): Copier {
         lateinit var copier: Copier
         rule.setContent {
-            val host = remember { SnackbarHostState() }
-            copier = rememberCopier(if (snackbar) host else null)
-            SnackbarHost(host)
+            copier = rememberCopier()
         }
         rule.waitForIdle()
         return copier
@@ -63,13 +56,11 @@ class CopierTest {
 
     @Test
     @Config(sdk = [32])
-    fun `before Android 13 a screen with a snackbar says it there`() {
-        val copier = copier(snackbar = true)
+    fun `a copy with more to say says that instead`() {
+        val copier = copier()
         rule.runOnIdle { copier.copy("abc", message = "RSS URL copied") }
-        rule.waitUntil(5_000) {
-            rule.onAllNodesWithText("RSS URL copied").fetchSemanticsNodes().isNotEmpty()
-        }
-        assertNull(ShadowToast.getLatestToast())
+        rule.waitForIdle()
+        assertEquals("RSS URL copied", ShadowToast.getTextOfLatestToast())
     }
 
     @Test

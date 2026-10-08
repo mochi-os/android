@@ -109,7 +109,7 @@ fun PageViewScreen(
     val resources = LocalResources.current
     val scope = rememberCoroutineScope()
     val snackbar = remember { SnackbarHostState() }
-    val copier = rememberCopier(snackbar)
+    val copier = rememberCopier()
     val clipboardLabelRss = stringResource(R.string.wikis_pageview_clipboard_label_rss)
     val rssCopiedMsg = stringResource(R.string.wikis_pageview_rss_copied)
     val rssCopiedNewMsg = stringResource(R.string.wikis_rss_copied_new)
