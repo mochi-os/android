@@ -275,6 +275,21 @@ class CalendarFlowTest {
     }
 
     @Test
+    fun `opening the day the day view already shows reads nothing again`() {
+        val model = model()
+        val day = LocalDate.of(2026, 10, 7)
+        model.open(day)
+        until { !model.uiState.value.isRefreshing && listings().size >= 2 }
+        settle()
+        val before = asked.size
+        model.open(day)
+        settle()
+        assertEquals(before, asked.size)
+        assertEquals(CalendarsSection.DAY, model.uiState.value.view)
+        assertEquals(day, model.uiState.value.anchor)
+    }
+
+    @Test
     fun `a failed refresh keeps the events on screen and says so once`() {
         val model = model()
         model.anchor(LocalDate.of(2026, 10, 5))

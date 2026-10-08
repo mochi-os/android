@@ -546,7 +546,8 @@ fun TimeGrid(
         // only the month.
         Row(modifier = Modifier.fillMaxWidth()) {
             for (day in days) {
-                DayHeading(day, today, width, stacked, Modifier.clickable { viewModel.open(day) })
+                val opens = if (days.size > 1) Modifier.clickable { viewModel.open(day) } else Modifier
+                DayHeading(day, today, width, stacked, opens)
             }
         }
         AllDayBand(

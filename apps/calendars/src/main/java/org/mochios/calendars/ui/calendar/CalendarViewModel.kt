@@ -1222,8 +1222,15 @@ class CalendarViewModel @Inject constructor(
         return !day.isBefore(from) && !day.isAfter(until)
     }
 
-    /** Opens the day view on a date, from a column heading or a month cell. */
+    /**
+     * Opens the day view on a date, from a column heading or a month cell. A
+     * date the day view already shows is left as it is, unread again.
+     */
     fun open(date: LocalDate) {
+        val state = _uiState.value
+        if (state.view == CalendarsSection.DAY && state.anchor == date) {
+            return
+        }
         _uiState.value = _uiState.value.copy(
             anchor = date,
             focus = date,

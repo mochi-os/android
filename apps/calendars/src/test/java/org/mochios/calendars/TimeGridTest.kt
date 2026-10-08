@@ -15,7 +15,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.test.assertHasNoClickAction
+import androidx.compose.ui.test.hasClickAction
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithTag
@@ -296,6 +300,7 @@ class TimeGridTest {
         val pattern = android.text.format.DateFormat.getBestDateTimePattern(locale, "EEEd")
         val heading = org.mochios.calendars.ui.calendar.heading(monday, pattern, locale)
         assertEquals(1, rule.onAllNodesWithText(heading).fetchSemanticsNodes().size)
+        rule.onNodeWithText(heading).assertHasNoClickAction()
     }
 
     @Test
@@ -312,6 +317,7 @@ class TimeGridTest {
         val weekday = rule.onAllNodesWithText(short, useUnmergedTree = true).fetchSemanticsNodes()
         assertTrue(number.isNotEmpty() && weekday.isNotEmpty())
         assertTrue(weekday.first().boundsInRoot.bottom <= number.first().boundsInRoot.top + 1f)
+        rule.onAllNodes(hasClickAction() and hasText(short)).onFirst().assertExists()
     }
 
     // ---- now ----
