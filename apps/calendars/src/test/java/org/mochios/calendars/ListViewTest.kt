@@ -330,6 +330,25 @@ class ListViewTest {
     }
 
     @Test
+    fun `today carries no line at the present moment`() {
+        val today = LocalDate.now(london)
+        events = listOf(today to "Now", today.plusDays(1) to "Later")
+        first = noon(today)
+        last = noon(today.plusDays(1))
+        show(open = today)
+        waitFor("Later")
+        val error = lightColorScheme().error.toArgb()
+        val pixels = rule.onRoot().captureToImage().toPixelMap()
+        var found = 0
+        for (x in 0 until pixels.width) {
+            for (y in 0 until pixels.height) {
+                if (pixels[x, y].toArgb() == error) found++
+            }
+        }
+        assertEquals(0, found)
+    }
+
+    @Test
     fun `a narrow screen leaves out each row's calendar`() {
         events = listOf(anchor to "Today")
         first = noon(anchor)

@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">ลบ %1$s ออกจากรายชื่อติดต่อของคุณหรือไม่</string>
     <string name="people_contacts_delete_friend_confirm">ลบ %1$s ออกจากรายชื่อติดต่อของคุณหรือไม่ มิตรภาพของคุณจะสิ้นสุดด้วย</string>
     <string name="people_contact_new_title">ผู้ติดต่อใหม่</string>
-    <string name="people_contact_copy_title">คัดลอกผู้ติดต่อ</string>
     <string name="people_contact_merge">รวม</string>
     <string name="people_contact_merge_title">รวมผู้ติดต่อ</string>
     <string name="people_contact_edit_title">แก้ไขผู้ติดต่อ</string>
@@ -219,4 +218,5 @@
     <string name="people_contact_birthday_month">เดือน</string>
     <string name="people_contact_birthday_year">ปี</string>
     <string name="people_contact_birthday_clear">ล้าง</string>
+    <string name="people_contact_create">สร้าง</string>
 </resources>

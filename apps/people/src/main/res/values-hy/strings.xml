@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Ջնջե՞լ %1$s-ին ձեր կոնտակտներից։</string>
     <string name="people_contacts_delete_friend_confirm">Ջնջե՞լ %1$s-ին ձեր կոնտակտներից։ Ձեր ընկերությունը նույնպես կավարտվի։</string>
     <string name="people_contact_new_title">Նոր կոնտակտ</string>
-    <string name="people_contact_copy_title">Պատճենել կոնտակտը</string>
     <string name="people_contact_merge">Միավորել</string>
     <string name="people_contact_merge_title">Միավորել կոնտակտները</string>
     <string name="people_contact_edit_title">Խմբագրել կոնտակտը</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Ամիս</string>
     <string name="people_contact_birthday_year">Տարի</string>
     <string name="people_contact_birthday_clear">Մաքրել</string>
+    <string name="people_contact_create">Ստեղծել</string>
 </resources>

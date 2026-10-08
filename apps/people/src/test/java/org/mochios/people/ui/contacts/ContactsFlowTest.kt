@@ -10,6 +10,8 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performTextReplacement
+import androidx.compose.ui.test.hasSetTextAction
 import androidx.lifecycle.SavedStateHandle
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
@@ -33,11 +35,18 @@ import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.time.Duration
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
 private const val ADA = """{"id": "c1", "book": "b1", "name": "Ada", "etag": "e1", "card": [{"name": "FN", "params": {}, "value": "Ada"}]}"""
+
+// Ada as a save answers: the same contact under a new etag.
+private const val SAVED = """{"id": "c1", "book": "b1", "name": "Ada", "etag": "e5", "card": [{"name": "FN", "params": {}, "value": "Ada"}]}"""
+
+// A contact a create or a copy made.
+private const val MADE = """{"id": "c9", "book": "b1", "name": "Ada Lovelace", "etag": "e9", "card": [{"name": "FN", "params": {}, "value": "Ada Lovelace"}]}"""
 
 // The card a merge of Ada into a contact linked to a Mochi person reads as:
 // that contact survives, holding both cards' details.
@@ -79,10 +88,12 @@ class ContactsFlowTest {
                     "-/contacts/update" -> if (stale) {
                         MockResponse().setResponseCode(412)
                             .setBody("""{"error": "The contact was changed elsewhere. Reload and try again."}""")
+                    } else if (body.contains("\"source\"")) {
+                        ok("""{"contact": $MERGED}""")
                     } else {
-                        ok("""{"contact": $ADA}""")
+                        ok("""{"contact": $SAVED}""")
                     }
-                    "-/contacts/create" -> ok("""{"contact": $ADA}""")
+                    "-/contacts/create" -> ok("""{"contact": $MADE}""")
                     "-/books" -> {
                         books?.await(10, TimeUnit.SECONDS)
                         ok("""{"books": [{"id": "b1", "name": "Home"}]}""")
@@ -118,74 +129,147 @@ class ContactsFlowTest {
         }
     }
 
-    @Test
-    fun `a copy is created from the contact, with the edits typed before it, and the contact is left as it is`() {
+    /** An open contact's editor, read. */
+    private fun editor(): ContactEditViewModel {
         val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
         until { model.uiState.value.contact != null && model.uiState.value.books.isNotEmpty() }
+        return model
+    }
+
+    @Test
+    fun `a change saves once typing rests for a second, against the etag it read`() {
+        val model = editor()
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(900))
+        assertEquals(emptyList<String>(), sent("update"))
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(100))
+        until { sent("update").isNotEmpty() }
+        val body = sent("update").single()
+        assertTrue(body, body.contains("\"etag\":\"e1\""))
+        assertTrue(body, body.contains("Ada Lovelace"))
+    }
+
+    @Test
+    fun `leaving a field saves it at once, and the next save sends the etag the last came back with`() {
+        val model = editor()
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        model.save()
+        until { sent("update").size == 1 && !model.uiState.value.isSaving }
+        model.updateForm(model.uiState.value.form.copy(name = "Ada King"))
+        model.save()
+        until { sent("update").size == 2 }
+        assertTrue(sent("update")[1], sent("update")[1].contains("\"etag\":\"e5\""))
+    }
+
+    @Test
+    fun `nothing is saved when nothing changed, nor for a contact left with no name`() {
+        val model = editor()
+        model.save()
+        model.updateForm(model.uiState.value.form.copy(name = " "))
+        model.save()
+        // Saves go one at a time, so the one after them shows whether they sent.
+        model.updateForm(model.uiState.value.form.copy(name = "Ada King"))
+        model.save()
+        until { sent("update").isNotEmpty() && !model.uiState.value.isSaving }
+        val updates = sent("update")
+        assertEquals(1, updates.size)
+        assertTrue(updates.single(), updates.single().contains("Ada King"))
+    }
+
+    @Test
+    fun `leaving the screen saves what is pending, then lets it go`() {
+        val model = editor()
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        model.leave()
+        until { model.uiState.value.left }
+        assertEquals(1, sent("update").size)
+    }
+
+    @Test
+    fun `a save refused as changed elsewhere says so and reads the contact again`() {
+        val model = editor()
+        stale = true
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        model.save()
+        until { model.uiState.value.conflict != null }
+        until { model.uiState.value.form.name == "Ada" }
+    }
+
+    @Test
+    fun `a new contact is made by Create, and the editor goes on as it`() {
+        val model = ContactEditViewModel(SavedStateHandle(), repository)
+        until { model.uiState.value.books.isNotEmpty() }
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(1500))
+        assertEquals(emptyList<String>(), sent("create"))
+        model.create()
+        until { model.uiState.value.opened == "c9" }
+        val body = sent("create").single()
+        assertTrue(body, body.contains("Ada Lovelace"))
+        assertFalse(body, body.contains("\"source\""))
+    }
+
+    @Test
+    fun `a copy is made at once from the card as it stands, and opened`() {
+        val model = editor()
         model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
         model.copy()
-        assertTrue(model.uiState.value.copying)
-        model.save()
-        until { model.uiState.value.saved }
+        until { model.uiState.value.opened == "c9" }
         val body = sent("create").single()
         assertTrue(body, body.contains("\"source\":\"c1\""))
         assertTrue(body, body.contains("Ada Lovelace"))
-        assertTrue(body, body.contains("\"book\":\"b1\""))
-        assertEquals(emptyList<String>(), sent("update"))
     }
 
     @get:Rule
     val rule = createComposeRule()
 
     @Test
-    fun `the editor's menu offers Copy, which turns it into one for a copy`() {
-        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
+    fun `an open contact has no Save, and its menu's Copy opens the copy`() {
+        val model = editor()
+        val opened = mutableListOf<String>()
         rule.setContent {
-            ContactEditScreen(onBack = {}, onSaved = {}, onDeleted = {}, viewModel = model)
+            ContactEditScreen(onBack = {}, onOpen = { opened += it }, onDeleted = {}, viewModel = model)
         }
-        until { model.uiState.value.contact != null }
-        rule.onNodeWithText("Edit contact").assertExists()
+        // Titled with the contact's name rather than "Edit contact".
+        rule.onNodeWithText("Edit contact").assertDoesNotExist()
+        rule.onNodeWithContentDescription("Save").assertDoesNotExist()
         rule.onNodeWithContentDescription("Contact actions").performClick()
         rule.onNodeWithText("Copy").performClick()
-        rule.onNodeWithText("Copy contact").assertExists()
-        assertTrue(model.uiState.value.copying)
-        rule.onNodeWithContentDescription("Contact actions").assertDoesNotExist()
+        until { model.uiState.value.opened == "c9" }
+        rule.waitForIdle()
+        assertEquals(listOf("c9"), opened)
     }
 
     @Test
-    fun `a copy cannot delete the contact it was made from`() {
-        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
-        until { model.uiState.value.contact != null }
-        model.copy()
-        model.confirmDelete()
-        shadowOf(Looper.getMainLooper()).idle()
-        assertFalse(model.uiState.value.isDeleting)
-        assertEquals(emptyList<String>(), asked.filter { it.path.orEmpty().endsWith("/-/contacts/delete") }.map { it.path })
+    fun `moving from one field to another saves the one left`() {
+        val model = editor()
+        rule.setContent {
+            ContactEditScreen(onBack = {}, onOpen = {}, onDeleted = {}, viewModel = model)
+        }
+        val fields = rule.onAllNodes(hasSetTextAction())
+        fields[0].performClick()
+        fields[0].performTextReplacement("Ada Lovelace")
+        fields[1].performClick()
+        until { sent("update").isNotEmpty() }
+        assertTrue(sent("update").single().contains("Ada Lovelace"))
     }
 
     @Test
-    fun `a merge reads the survivor holding both cards, and saving writes it and names the contact it absorbs`() {
-        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
-        until { model.uiState.value.contact != null && model.uiState.value.books.isNotEmpty() }
+    fun `a merge is made as soon as the contact is picked, the server combining the cards, and the survivor opened`() {
+        val model = editor()
         model.merge("c2")
-        until { model.uiState.value.merge != null }
-        val preview = sent("get").last()
-        assertTrue(preview, preview.contains("contact=c1") && preview.contains("source=c2"))
-        assertEquals("Ada Byron", model.uiState.value.form.name)
-        model.save()
-        until { model.uiState.value.saved }
+        until { model.uiState.value.opened == "c2" }
+        assertTrue(sent("get").any { it.contains("contact=c1") && it.contains("source=c2") })
         val body = sent("update").single()
         assertTrue(body, body.contains("\"contact\":\"c2\""))
         assertTrue(body, body.contains("\"etag\":\"e2\""))
         assertTrue(body, body.contains("\"source\":{\"id\":\"c1\",\"etag\":\"e1\"}"))
-        assertTrue(body, body.contains("byron@example.com"))
-        assertEquals(emptyList<String>(), sent("create"))
+        assertFalse(body, body.contains("\"properties\""))
     }
 
     @Test
     fun `the merge list offers every other contact, in name order`() {
-        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
-        until { model.uiState.value.contact != null }
+        val model = editor()
         model.openMerge()
         until { model.uiState.value.mergeCandidates.isNotEmpty() }
         assertEquals(listOf("c2", "c3"), model.uiState.value.mergeCandidates.map { it.id })
@@ -193,57 +277,16 @@ class ContactsFlowTest {
 
     @Test
     fun `a merge refused by the server stays in the list, saying why`() {
-        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
-        until { model.uiState.value.contact != null }
+        val model = editor()
         model.openMerge()
         model.merge("c3")
         until { model.uiState.value.mergeError != null }
         val state = model.uiState.value
         assertTrue(state.mergeOpen)
-        assertEquals(null, state.merge)
+        assertEquals(null, state.opened)
         assertEquals("Ada", state.form.name)
         assertEquals(null, state.mergePending)
-    }
-
-    @Test
-    fun `a merge cannot delete either contact`() {
-        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
-        until { model.uiState.value.contact != null }
-        model.merge("c2")
-        until { model.uiState.value.merge != null }
-        model.confirmDelete()
-        shadowOf(Looper.getMainLooper()).idle()
-        assertFalse(model.uiState.value.isDeleting)
-        assertEquals(emptyList<String>(), asked.filter { it.path.orEmpty().endsWith("/-/contacts/delete") }.map { it.path })
-    }
-
-    @Test
-    fun `a merge read from cards since changed is dropped and the contact read again`() {
-        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
-        until { model.uiState.value.contact != null }
-        model.merge("c2")
-        until { model.uiState.value.merge != null }
-        stale = true
-        model.save()
-        until { model.uiState.value.conflict != null }
-        assertEquals(null, model.uiState.value.merge)
-        until { model.uiState.value.form.name == "Ada" }
-    }
-
-    @Test
-    fun `the editor's menu offers Merge, whose list turns it into the merge with the contact picked`() {
-        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
-        rule.setContent {
-            ContactEditScreen(onBack = {}, onSaved = {}, onDeleted = {}, viewModel = model)
-        }
-        until { model.uiState.value.contact != null }
-        rule.onNodeWithContentDescription("Contact actions").performClick()
-        rule.onNodeWithText("Merge").performClick()
-        until { model.uiState.value.mergeCandidates.isNotEmpty() }
-        rule.onNodeWithText("Ada Byron").performClick()
-        until { model.uiState.value.merge != null }
-        rule.onNodeWithText("Merge contacts").assertExists()
-        rule.onNodeWithContentDescription("Contact actions").assertDoesNotExist()
+        assertEquals(emptyList<String>(), sent("update"))
     }
 
     @Test

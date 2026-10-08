@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s ستاسو له اړیکو ړنګ شي؟</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ستاسو له اړیکو ړنګ شي؟ ستاسو ملګرتیا هم پای ته رسیږي.</string>
     <string name="people_contact_new_title">نوې اړیکه</string>
-    <string name="people_contact_copy_title">اړیکه کاپي کړئ</string>
     <string name="people_contact_merge">یوځای کول</string>
     <string name="people_contact_merge_title">اړیکې یوځای کړئ</string>
     <string name="people_contact_edit_title">اړیکه سمه کړئ</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">میاشت</string>
     <string name="people_contact_birthday_year">کال</string>
     <string name="people_contact_birthday_clear">پاک کړئ</string>
+    <string name="people_contact_create">جوړ کړئ</string>
 </resources>

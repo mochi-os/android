@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">¿Emboguetéta %1$s ne contactokuéragui?</string>
     <string name="people_contacts_delete_friend_confirm">¿Emboguetéta %1$s ne contactokuéragui? Pende angirũreko opáta avei.</string>
     <string name="people_contact_new_title">Contacto pyahu</string>
-    <string name="people_contact_copy_title">Ekopia contacto</string>
     <string name="people_contact_merge">Mbojoaju</string>
     <string name="people_contact_merge_title">Mbojoaju contacto</string>
     <string name="people_contact_edit_title">Embosako\'i contacto</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Jasy</string>
     <string name="people_contact_birthday_year">Ary</string>
     <string name="people_contact_birthday_clear">Embopotĩ</string>
+    <string name="people_contact_create">Emoheñói</string>
 </resources>

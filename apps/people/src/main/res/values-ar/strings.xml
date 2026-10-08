@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">هل تريد حذف %1$s من جهات اتصالك؟</string>
     <string name="people_contacts_delete_friend_confirm">هل تريد حذف %1$s من جهات اتصالك؟ ستنتهي صداقتكما أيضًا.</string>
     <string name="people_contact_new_title">جهة اتصال جديدة</string>
-    <string name="people_contact_copy_title">نسخ جهة الاتصال</string>
     <string name="people_contact_merge">دمج</string>
     <string name="people_contact_merge_title">دمج جهات الاتصال</string>
     <string name="people_contact_edit_title">تعديل جهة الاتصال</string>
@@ -224,4 +223,5 @@
     <string name="people_contact_birthday_month">شهر</string>
     <string name="people_contact_birthday_year">السنة</string>
     <string name="people_contact_birthday_clear">مسح</string>
+    <string name="people_contact_create">إنشاء</string>
 </resources>

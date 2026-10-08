@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Vil du slette %1$s fra dine kontakter?</string>
     <string name="people_contacts_delete_friend_confirm">Vil du slette %1$s fra dine kontakter? Jeres venskab ophører også.</string>
     <string name="people_contact_new_title">Ny kontakt</string>
-    <string name="people_contact_copy_title">Kopier kontakt</string>
     <string name="people_contact_merge">Flet</string>
     <string name="people_contact_merge_title">Flet kontakter</string>
     <string name="people_contact_edit_title">Redigér kontakt</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Måned</string>
     <string name="people_contact_birthday_year">År</string>
     <string name="people_contact_birthday_clear">Ryd</string>
+    <string name="people_contact_create">Opret</string>
 </resources>

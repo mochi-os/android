@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Hapus %1$s dari kontak Anda?</string>
     <string name="people_contacts_delete_friend_confirm">Hapus %1$s dari kontak Anda? Pertemanan Anda juga berakhir.</string>
     <string name="people_contact_new_title">Kontak baru</string>
-    <string name="people_contact_copy_title">Salin kontak</string>
     <string name="people_contact_merge">Gabungkan</string>
     <string name="people_contact_merge_title">Gabungkan kontak</string>
     <string name="people_contact_edit_title">Edit kontak</string>
@@ -219,4 +218,5 @@
     <string name="people_contact_birthday_month">Bulan</string>
     <string name="people_contact_birthday_year">Tahun</string>
     <string name="people_contact_birthday_clear">Bersihkan</string>
+    <string name="people_contact_create">Buat</string>
 </resources>

@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">წაიშალოს %1$s თქვენი კონტაქტებიდან?</string>
     <string name="people_contacts_delete_friend_confirm">წაიშალოს %1$s თქვენი კონტაქტებიდან? თქვენი მეგობრობაც სრულდება.</string>
     <string name="people_contact_new_title">ახალი კონტაქტი</string>
-    <string name="people_contact_copy_title">კონტაქტის კოპირება</string>
     <string name="people_contact_merge">გაერთიანება</string>
     <string name="people_contact_merge_title">კონტაქტების გაერთიანება</string>
     <string name="people_contact_edit_title">კონტაქტის რედაქტირება</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">თვე</string>
     <string name="people_contact_birthday_year">წელი</string>
     <string name="people_contact_birthday_clear">გასუფთავება</string>
+    <string name="people_contact_create">შექმნა</string>
 </resources>

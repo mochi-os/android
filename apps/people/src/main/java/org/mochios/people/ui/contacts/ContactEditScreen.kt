@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.contacts
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -28,7 +29,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Place
@@ -40,12 +40,16 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.Switch
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.compose.ui.composed
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -74,12 +78,14 @@ import org.mochios.android.R as MochiR
 
 /**
  * The contact editor, in create mode when the route names no contact and edit
- * mode when it does.
+ * mode when it does. An edit saves as it goes and has no Save; a new contact
+ * is saved by Create, after which the screen goes on as its editor.
  */
 @Composable
 fun ContactEditScreen(
     onBack: () -> Unit,
-    onSaved: () -> Unit,
+    /** Goes on as another contact: the one made, copied, or merged into. */
+    onOpen: (String) -> Unit,
     onDeleted: () -> Unit,
     /** Opens the directory search to link this card to the person it finds. */
     onFindPerson: (contact: String, name: String) -> Unit = { _, _ -> },
@@ -88,31 +94,27 @@ fun ContactEditScreen(
     val uiState by viewModel.uiState.collectAsState()
     val form = uiState.form
 
-    LaunchedEffect(uiState.saved) {
-        if (uiState.saved) {
-            viewModel.consumeSaved()
-            onSaved()
-        }
+    LaunchedEffect(uiState.opened) {
+        uiState.opened?.let(onOpen)
+    }
+    LaunchedEffect(uiState.left) {
+        if (uiState.left) onBack()
     }
     LaunchedEffect(uiState.deleted) {
         if (uiState.deleted) onDeleted()
     }
+    // Leaving an edit, by the back arrow or the system's back, saves first.
+    BackHandler(enabled = !viewModel.creating) { viewModel.leave() }
 
-    if (viewModel.creating || uiState.copying || uiState.merge != null) {
+    if (viewModel.creating) {
         CreateEntityScaffold(
-            title = stringResource(
-                when {
-                    uiState.merge != null -> R.string.people_contact_merge_title
-                    uiState.copying -> R.string.people_contact_copy_title
-                    else -> R.string.people_contact_new_title
-                },
-            ),
-            submitLabel = stringResource(R.string.people_common_save),
+            title = stringResource(R.string.people_contact_new_title),
+            submitLabel = stringResource(R.string.people_contact_create),
             submitEnabled = form.valid && !uiState.isSaving,
             isBusy = uiState.isSaving,
             error = uiState.error,
             onBack = onBack,
-            onSubmit = { viewModel.save() },
+            onSubmit = { viewModel.create() },
         ) { padding ->
             CreateEntityForm(padding) {
                 ContactFields(
@@ -125,8 +127,8 @@ fun ContactEditScreen(
     } else {
         EditScaffold(
             state = uiState,
-            onBack = onBack,
-            onSave = { viewModel.save() },
+            onBack = { viewModel.leave() },
+            onLeave = { viewModel.save() },
             onRequestDelete = { viewModel.requestDelete() },
             onCopy = { viewModel.copy() },
             onMerge = { viewModel.openMerge() },
@@ -328,7 +330,8 @@ private fun FriendSwitch(
 private fun EditScaffold(
     state: ContactEditUiState,
     onBack: () -> Unit,
-    onSave: () -> Unit,
+    /** A field was left: the editor saves it. */
+    onLeave: () -> Unit,
     onRequestDelete: () -> Unit,
     onCopy: () -> Unit,
     onMerge: () -> Unit,
@@ -338,25 +341,10 @@ private fun EditScaffold(
     var menuOpen by remember { mutableStateOf(false) }
 
     MochiScaffold(
-        title = stringResource(R.string.people_contact_edit_title),
+        title = state.contact?.name?.ifBlank { null }
+            ?: stringResource(R.string.people_contact_edit_title),
         onBack = onBack,
         actions = {
-            MochiIconButton(
-                onClick = onSave,
-                enabled = state.form.valid && !state.isSaving,
-            ) {
-                if (state.isSaving) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(18.dp),
-                        strokeWidth = 2.dp,
-                    )
-                } else {
-                    Icon(
-                        Icons.Default.Check,
-                        contentDescription = stringResource(R.string.people_common_save),
-                    )
-                }
-            }
             Box {
                 MochiIconButton(onClick = { menuOpen = true }) {
                     Icon(
@@ -413,22 +401,37 @@ private fun EditScaffold(
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                 }
-                ContactFields(
-                    form = state.form,
-                    books = state.books,
-                    onChange = onChange,
-                    action = state.contact?.let { contact ->
-                        @Composable {
-                            FriendSwitch(
-                                state = contact.friendState(state.sent),
-                                enabled = !state.isToggling,
-                                onToggle = onFriendToggle,
-                            )
-                        }
-                    },
-                )
+                CompositionLocalProvider(LocalFieldLeft provides onLeave) {
+                    ContactFields(
+                        form = state.form,
+                        books = state.books,
+                        onChange = onChange,
+                        action = state.contact?.let { contact ->
+                            @Composable {
+                                FriendSwitch(
+                                    state = contact.friendState(state.sent),
+                                    enabled = !state.isToggling,
+                                    onToggle = onFriendToggle,
+                                )
+                            }
+                        },
+                    )
+                }
             }
         }
+    }
+}
+
+/** What leaving a field does: in an edit, the editor saves it. */
+internal val LocalFieldLeft = staticCompositionLocalOf<() -> Unit> { {} }
+
+/** Calls [LocalFieldLeft] when this field loses the focus it had. */
+internal fun Modifier.leaving(): Modifier = composed {
+    val left = LocalFieldLeft.current
+    var focused by remember { mutableStateOf(false) }
+    onFocusChanged { state ->
+        if (focused && !state.isFocused) left()
+        focused = state.isFocused
     }
 }
 
@@ -453,28 +456,28 @@ internal fun ContactFields(
             CompactTextField(
                 value = form.name,
                 onValueChange = { onChange(form.copy(name = it)) },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().leaving(),
             )
         }
         LabelledField(stringResource(R.string.people_contact_given)) {
             CompactTextField(
                 value = form.given,
                 onValueChange = { onChange(form.copy(given = it)) },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().leaving(),
             )
         }
         LabelledField(stringResource(R.string.people_contact_family)) {
             CompactTextField(
                 value = form.family,
                 onValueChange = { onChange(form.copy(family = it)) },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().leaving(),
             )
         }
         LabelledField(stringResource(R.string.people_contact_nickname)) {
             CompactTextField(
                 value = form.nickname,
                 onValueChange = { onChange(form.copy(nickname = it)) },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().leaving(),
             )
         }
     }
@@ -576,14 +579,14 @@ internal fun ContactFields(
             CompactTextField(
                 value = form.organisation,
                 onValueChange = { onChange(form.copy(organisation = it)) },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().leaving(),
             )
         }
         LabelledField(stringResource(R.string.people_contact_title)) {
             CompactTextField(
                 value = form.title,
                 onValueChange = { onChange(form.copy(title = it)) },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().leaving(),
             )
         }
         LabelledField(stringResource(R.string.people_contact_url)) {
@@ -591,7 +594,7 @@ internal fun ContactFields(
                 value = form.url.value,
                 onValueChange = { onChange(form.copy(url = form.url.copy(value = it))) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().leaving(),
             )
         }
         LabelledField(stringResource(R.string.people_contact_note)) {
@@ -599,7 +602,7 @@ internal fun ContactFields(
                 value = form.note,
                 onValueChange = { onChange(form.copy(note = it)) },
                 minLines = 3,
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().leaving(),
             )
         }
     }
@@ -678,7 +681,7 @@ private fun TypedEntryRow(
                 onValueChange = { onChange(entry.copy(value = it)) },
                 placeholder = placeholder,
                 keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.weight(1f).leaving(),
             )
         }
         Spacer(modifier = Modifier.height(4.dp))
@@ -720,7 +723,7 @@ private fun AddressRows(
                 value = address.street,
                 onValueChange = { onChange(address.copy(street = it)) },
                 placeholder = stringResource(R.string.people_contact_street),
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.weight(1f).leaving(),
             )
         }
         Spacer(modifier = Modifier.height(4.dp))
@@ -749,28 +752,28 @@ private fun AddressRows(
             value = address.city,
             onValueChange = { onChange(address.copy(city = it)) },
             placeholder = stringResource(R.string.people_contact_city),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().leaving(),
         )
         Spacer(modifier = Modifier.height(4.dp))
         CompactTextField(
             value = address.region,
             onValueChange = { onChange(address.copy(region = it)) },
             placeholder = stringResource(R.string.people_contact_region),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().leaving(),
         )
         Spacer(modifier = Modifier.height(4.dp))
         CompactTextField(
             value = address.postcode,
             onValueChange = { onChange(address.copy(postcode = it)) },
             placeholder = stringResource(R.string.people_contact_postcode),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().leaving(),
         )
         Spacer(modifier = Modifier.height(4.dp))
         CompactTextField(
             value = address.country,
             onValueChange = { onChange(address.copy(country = it)) },
             placeholder = stringResource(R.string.people_contact_country),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().leaving(),
         )
     }
 }

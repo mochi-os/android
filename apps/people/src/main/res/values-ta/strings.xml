@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s ஐ உங்கள் தொடர்புகளிலிருந்து நீக்கவா?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ஐ உங்கள் தொடர்புகளிலிருந்து நீக்கவா? உங்கள் நட்பும் முடிவடையும்.</string>
     <string name="people_contact_new_title">புதிய தொடர்பு</string>
-    <string name="people_contact_copy_title">தொடர்பை நகலெடு</string>
     <string name="people_contact_merge">ஒன்றிணை</string>
     <string name="people_contact_merge_title">தொடர்புகளை ஒன்றிணை</string>
     <string name="people_contact_edit_title">தொடர்பைத் திருத்து</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">மாதம்</string>
     <string name="people_contact_birthday_year">ஆண்டு</string>
     <string name="people_contact_birthday_clear">அழி</string>
+    <string name="people_contact_create">உருவாக்கு</string>
 </resources>

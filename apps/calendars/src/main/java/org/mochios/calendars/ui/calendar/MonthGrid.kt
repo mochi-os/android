@@ -98,7 +98,6 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
 import java.time.LocalDate
-import java.time.LocalTime
 import java.time.ZoneOffset
 import java.time.format.TextStyle
 import java.time.temporal.ChronoUnit
@@ -708,11 +707,9 @@ private fun Modifier.pick(day: LocalDate, onPick: (Offset) -> Unit): Modifier {
 /**
  * The list view, as the web's draws it: each day under a heading across the
  * whole width that stays at the top while its day is in view, its
- * occurrences beneath as rows that each open with the occurrence's dot, and
- * a line across today at the present moment. A day's occurrences go in the
- * order of the clock times they show, all day ones first, as the day view
- * stacks them, and the line falls before the first one still to end by that
- * clock.
+ * occurrences beneath as rows that each open with the occurrence's dot. A
+ * day's occurrences go in the order of the clock times they show, all day
+ * ones first, as the day view stacks them.
  * [onTop] is told the day of the topmost row in view as the list scrolls,
  * whose month the toolbar names. The day it opens on, the anchor, leads it
  * even when empty, with a row that [onCreate] answers with a new event that
@@ -832,9 +829,8 @@ fun AgendaList(
         }
         return
     }
-    val clock = LocalTime.now(viewModel.timezone()).let { time -> time.hour + time.minute / 60f }
     val opened = state.anchor.takeIf { search.isEmpty() }
-    val rows = remember(grouped, today, opened) { rows(grouped, today, clock, opened, viewModel) }
+    val rows = remember(grouped, opened) { rows(grouped, opened) }
     var head by remember { mutableStateOf(state.earliest) }
     LaunchedEffect(state.earliest) {
         if (state.earliest < head) {
@@ -883,7 +879,6 @@ fun AgendaList(
                 is Listed.Day -> stickyHeader(key = row.key) {
                     Heading(row.day, current = row.day == today)
                 }
-                is Listed.Now -> item(key = row.key) { NowLine() }
                 is Listed.Empty -> item(key = row.key) {
                     EmptyDay { onCreate(row.day) }
                 }
@@ -922,26 +917,19 @@ private sealed class Listed(val key: String, val day: LocalDate) {
     /** [day], the day the list opened on, which has nothing on it. */
     class Empty(day: LocalDate) : Listed("empty:$day", day)
 
-    /** The line across today at the present moment. */
-    class Now(day: LocalDate) : Listed("now:$day", day)
-
     /** An occurrence on [day]; [last] when nothing of its day follows it. */
     class Event(day: LocalDate, val instance: Instance, val last: Boolean) :
         Listed("$day-${instance.event}-${instance.start}", day)
 }
 
 /**
- * The list view's rows in order: each day's heading and its occurrences, and
- * on [today] the line at [clock], in hours, before the first occurrence still
- * to end by it. [opened], the day the list opened on, has a row of its own
- * saying it is empty when nothing is on it; null while the list is searched.
+ * The list view's rows in order: each day's heading and its occurrences.
+ * [opened], the day the list opened on, has a row of its own saying it is
+ * empty when nothing is on it; null while the list is searched.
  */
 private fun rows(
     grouped: Map<LocalDate, List<Instance>>,
-    today: LocalDate,
-    clock: Float,
     opened: LocalDate?,
-    viewModel: CalendarViewModel,
 ): List<Listed> = buildList {
     val days = (grouped.keys + listOfNotNull(opened)).toSortedSet()
     for (day in days) {
@@ -951,21 +939,8 @@ private fun rows(
             add(Listed.Empty(day))
             continue
         }
-        val cut = if (day == today) {
-            occurrences.indexOfFirst { instance ->
-                !instance.allday && (viewModel.cut(instance, day)?.to ?: 0f) > clock
-            }.let { index -> if (index < 0) occurrences.size else index }
-        } else {
-            -1
-        }
         occurrences.forEachIndexed { index, instance ->
-            if (index == cut) {
-                add(Listed.Now(day))
-            }
             add(Listed.Event(day, instance, last = index == occurrences.lastIndex))
-        }
-        if (cut == occurrences.size) {
-            add(Listed.Now(day))
         }
     }
 }
@@ -1159,21 +1134,3 @@ private fun EmptyDay(onCreate: () -> Unit) {
     )
 }
 
-/**
- * The line across today in the list view at the present moment, between
- * the occurrences that have ended and those still to come, a dot at its
- * start as the time grids draw it.
- */
-@Composable
-private fun NowLine() {
-    val colour = MaterialTheme.colorScheme.error
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = PAD, vertical = 2.dp),
-    ) {
-        Box(modifier = Modifier.size(8.dp).clip(CircleShape).background(colour))
-        Box(modifier = Modifier.weight(1f).height(2.dp).background(colour))
-    }
-}

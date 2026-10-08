@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s zure kontaktuetatik ezabatu?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s zure kontaktuetatik ezabatu? Zuen laguntasuna ere amaituko da.</string>
     <string name="people_contact_new_title">Kontaktu berria</string>
-    <string name="people_contact_copy_title">Kopiatu kontaktua</string>
     <string name="people_contact_merge">Bateratu</string>
     <string name="people_contact_merge_title">Bateratu kontaktuak</string>
     <string name="people_contact_edit_title">Editatu kontaktua</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Hilabetea</string>
     <string name="people_contact_birthday_year">Urtea</string>
     <string name="people_contact_birthday_clear">Garbitu</string>
+    <string name="people_contact_create">Sortu</string>
 </resources>

@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Vee %1$s uit jou kontakte uit?</string>
     <string name="people_contacts_delete_friend_confirm">Vee %1$s uit jou kontakte uit? Julle vriendskap eindig ook.</string>
     <string name="people_contact_new_title">Nuwe kontak</string>
-    <string name="people_contact_copy_title">Kopieer kontak</string>
     <string name="people_contact_merge">Saamvoeg</string>
     <string name="people_contact_merge_title">Voeg kontakte saam</string>
     <string name="people_contact_edit_title">Wysig kontak</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Maand</string>
     <string name="people_contact_birthday_year">Jaar</string>
     <string name="people_contact_birthday_clear">Maak skoon</string>
+    <string name="people_contact_create">Skep</string>
 </resources>

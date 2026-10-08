@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">A bheil thu airson %1$s a sguabadh às an luchd-aithne agad?</string>
     <string name="people_contacts_delete_friend_confirm">A bheil thu airson %1$s a sguabadh às an luchd-aithne agad? Thig ur càirdeas gu crìch cuideachd.</string>
     <string name="people_contact_new_title">Neach-aithne ùr</string>
-    <string name="people_contact_copy_title">Dèan lethbhreac dhen neach-aithne</string>
     <string name="people_contact_merge">Co-aonaich</string>
     <string name="people_contact_merge_title">Co-aonaich luchd-aithne</string>
     <string name="people_contact_edit_title">Deasaich an neach-aithne</string>
@@ -222,4 +221,5 @@
     <string name="people_contact_birthday_month">Mìos</string>
     <string name="people_contact_birthday_year">Bliadhna</string>
     <string name="people_contact_birthday_clear">Falamhaich</string>
+    <string name="people_contact_create">Cruthaich</string>
 </resources>

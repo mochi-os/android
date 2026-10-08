@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s کي توهان جي رابطن مان ڊاهجي؟</string>
     <string name="people_contacts_delete_friend_confirm">%1$s کي توهان جي رابطن مان ڊاهجي؟ توهان جي دوستي به ختم ٿي ويندي.</string>
     <string name="people_contact_new_title">نئون رابطو</string>
-    <string name="people_contact_copy_title">رابطو ڪاپي ڪريو</string>
     <string name="people_contact_merge">ضم ڪريو</string>
     <string name="people_contact_merge_title">رابطا ضم ڪريو</string>
     <string name="people_contact_edit_title">رابطي ۾ ترميم ڪريو</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">مهينو</string>
     <string name="people_contact_birthday_year">سال</string>
     <string name="people_contact_birthday_clear">صاف ڪريو</string>
+    <string name="people_contact_create">ٺاهيو</string>
 </resources>
