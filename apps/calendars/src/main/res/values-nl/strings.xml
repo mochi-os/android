@@ -68,6 +68,7 @@
     <string name="calendars_list_empty">Geen afspraken</string>
     <string name="calendars_list_nothing">Niets gepland. Tik om een afspraak te maken.</string>
     <string name="calendars_list_heading">%1$s %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Geen titel)</string>
     <string name="calendars_status_cancelled">Geannuleerd</string>
     <string name="calendars_status_tentative">Voorlopig</string>

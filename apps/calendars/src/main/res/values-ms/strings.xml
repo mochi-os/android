@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Tiada acara</string>
     <string name="calendars_list_nothing">Tiada apa-apa dirancang. Ketik untuk mencipta acara.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Tiada tajuk)</string>
     <string name="calendars_status_cancelled">Dibatalkan</string>
     <string name="calendars_status_tentative">Sementara</string>

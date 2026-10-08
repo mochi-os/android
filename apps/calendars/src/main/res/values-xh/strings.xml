@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Akukho misitho</string>
     <string name="calendars_list_nothing">Akukho nto icwangcisiweyo. Cofa ukuze wenze umsitho.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Akukho sihloko)</string>
     <string name="calendars_status_cancelled">Kurhoxisiwe</string>
     <string name="calendars_status_tentative">Okwexeshana</string>

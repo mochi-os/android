@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Walang kaganapan</string>
     <string name="calendars_list_nothing">Walang nakaplano. I-tap para gumawa ng event.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Walang pamagat)</string>
     <string name="calendars_status_cancelled">Kinansela</string>
     <string name="calendars_status_tentative">Pansamantala</string>

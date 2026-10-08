@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Ayikho imicimbi</string>
     <string name="calendars_list_nothing">Akukho okuhleliwe. Thepha ukuze udale umcimbi.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Asikho isihloko)</string>
     <string name="calendars_status_cancelled">Kukhanselwe</string>
     <string name="calendars_status_tentative">Okwesikhashana</string>

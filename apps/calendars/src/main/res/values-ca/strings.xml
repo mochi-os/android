@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Sense esdeveniments</string>
     <string name="calendars_list_nothing">No hi ha res previst. Toqueu per crear un esdeveniment.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Sense títol)</string>
     <string name="calendars_status_cancelled">Cancel·lat</string>
     <string name="calendars_status_tentative">Provisional</string>

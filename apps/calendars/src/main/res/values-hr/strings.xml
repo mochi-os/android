@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Nema događaja</string>
     <string name="calendars_list_nothing">Ništa nije planirano. Dodirnite za izradu događaja.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Bez naslova)</string>
     <string name="calendars_status_cancelled">Otkazano</string>
     <string name="calendars_status_tentative">Nepotvrđeno</string>

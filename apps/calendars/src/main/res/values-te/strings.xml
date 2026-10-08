@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">ఈవెంట్‌లు లేవు</string>
     <string name="calendars_list_nothing">ఏమీ ప్లాన్ చేయలేదు. ఈవెంట్‌ను సృష్టించడానికి ట్యాప్ చేయండి.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(శీర్షిక లేదు)</string>
     <string name="calendars_status_cancelled">రద్దు చేయబడింది</string>
     <string name="calendars_status_tentative">తాత్కాలికం</string>

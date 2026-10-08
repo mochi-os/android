@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Çäreler ýok</string>
     <string name="calendars_list_nothing">Hiç zat meýilleşdirilmedi. Çäre döretmek üçin basyň.</string>
     <string name="calendars_list_heading">%2$s %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Atsyz)</string>
     <string name="calendars_status_cancelled">Ýatyryldy</string>
     <string name="calendars_status_tentative">Deslapky</string>

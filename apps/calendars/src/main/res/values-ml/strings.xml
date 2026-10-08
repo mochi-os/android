@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">ഇവന്റുകളൊന്നുമില്ല</string>
     <string name="calendars_list_nothing">ഒന്നും ആസൂത്രണം ചെയ്തിട്ടില്ല. ഇവന്റ് സൃഷ്ടിക്കാൻ ടാപ്പ് ചെയ്യുക.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(തലക്കെട്ടില്ല)</string>
     <string name="calendars_status_cancelled">റദ്ദാക്കി</string>
     <string name="calendars_status_tentative">താൽക്കാലികം</string>

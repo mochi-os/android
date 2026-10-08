@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Įvykių nėra</string>
     <string name="calendars_list_nothing">Nieko nesuplanuota. Bakstelėkite, kad sukurtumėte įvykį.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Be pavadinimo)</string>
     <string name="calendars_status_cancelled">Atšaukta</string>
     <string name="calendars_status_tentative">Nepatvirtinta</string>

@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">ບໍ່ມີເຫດການ</string>
     <string name="calendars_list_nothing">ບໍ່ມີຫຍັງວາງແຜນໄວ້. ແຕະເພື່ອສ້າງເຫດການ.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(ບໍ່ມີຊື່)</string>
     <string name="calendars_status_cancelled">ຍົກເລີກແລ້ວ</string>
     <string name="calendars_status_tentative">ຊົ່ວຄາວ</string>

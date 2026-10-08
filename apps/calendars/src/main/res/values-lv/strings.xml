@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Nav notikumu</string>
     <string name="calendars_list_nothing">Nekas nav ieplānots. Pieskarieties, lai izveidotu notikumu.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Bez nosaukuma)</string>
     <string name="calendars_status_cancelled">Atcelts</string>
     <string name="calendars_status_tentative">Provizorisks</string>

@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">සිදුවීම් නැත</string>
     <string name="calendars_list_nothing">කිසිවක් සැලසුම් කර නැත. සිදුවීමක් සෑදීමට තට්ටු කරන්න.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(මාතෘකාවක් නැත)</string>
     <string name="calendars_status_cancelled">අවලංගු කරන ලදී</string>
     <string name="calendars_status_tentative">තාවකාලික</string>

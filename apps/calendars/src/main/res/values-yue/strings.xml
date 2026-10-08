@@ -78,6 +78,7 @@
     <string name="calendars_list_empty">冇活動</string>
     <string name="calendars_list_nothing">冇安排。點按就可以建立活動。</string>
     <string name="calendars_list_heading">%2$s（%1$s）</string>
+    <string name="calendars_list_heading_iso">%2$s（%1$s）</string>
     <string name="calendars_list_unmatched">冇符合嘅結果</string>
     <string name="calendars_list_earlier">更早嘅活動</string>
     <string name="calendars_list_search_events">搜尋活動</string>

@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Kò sí ìṣẹ̀lẹ̀</string>
     <string name="calendars_list_nothing">Kò sí ohun tí a ṣètò. Tẹ̀ láti dá ìṣẹ̀lẹ̀ sílẹ̀.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Kò sí àkọlé)</string>
     <string name="calendars_status_cancelled">Tí a fagilé</string>
     <string name="calendars_status_tentative">Fún ìgbà díẹ̀</string>

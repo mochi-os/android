@@ -68,6 +68,7 @@
     <string name="calendars_list_empty">Niciun eveniment</string>
     <string name="calendars_list_nothing">Nimic planificat. Atinge pentru a crea un eveniment.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Fără titlu)</string>
     <string name="calendars_status_cancelled">Anulat</string>
     <string name="calendars_status_tentative">Provizoriu</string>

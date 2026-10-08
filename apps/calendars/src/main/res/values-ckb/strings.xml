@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">هیچ ڕووداوێک نییە</string>
     <string name="calendars_list_nothing">هیچ شتێک پلان نەکراوە. دەست بنێ بۆ دروستکردنی ڕووداوێک.</string>
     <string name="calendars_list_heading">%1$s، %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(بێ ناونیشان)</string>
     <string name="calendars_status_cancelled">هەڵوەشێنراوە</string>
     <string name="calendars_status_tentative">کاتی</string>

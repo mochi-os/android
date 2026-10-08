@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Nincsenek események</string>
     <string name="calendars_list_nothing">Nincs semmi betervezve. Koppintson egy esemény létrehozásához.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Nincs cím)</string>
     <string name="calendars_status_cancelled">Lemondva</string>
     <string name="calendars_status_tentative">Előzetes</string>

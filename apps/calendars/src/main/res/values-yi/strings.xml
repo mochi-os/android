@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">קיין געשעענישן</string>
     <string name="calendars_list_nothing">גאָרנישט נישט פּלאַנירט. טאַפּ צו באַשאַפֿן אַ געשעעניש.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(אָן קעפּל)</string>
     <string name="calendars_status_cancelled">אָפּגעזאָגט</string>
     <string name="calendars_status_tentative">פּראָוויזאָריש</string>

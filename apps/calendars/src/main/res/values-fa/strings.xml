@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">هیچ رویدادی وجود ندارد</string>
     <string name="calendars_list_nothing">برنامه‌ای وجود ندارد. برای ایجاد رویداد ضربه بزنید.</string>
     <string name="calendars_list_heading">%1$s %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(بدون عنوان)</string>
     <string name="calendars_status_cancelled">لغوشده</string>
     <string name="calendars_status_tentative">قطعی نشده</string>

@@ -91,6 +91,7 @@ import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import org.mochios.android.i18n.DateFormat
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.InlineErrorState
@@ -1005,7 +1006,7 @@ fun AgendaRow(
     val zones = viewModel.zones()
     val opens = clockZone(instance.zone?.start, zones)
     val closes = clockZone(instance.zone?.finish, zones)
-    val pattern = stringResource(R.string.calendars_list_heading)
+    val pattern = phrasing(format)
     val locale = LocalConfiguration.current.locales[0]
     val time = when {
         instance.allday -> stringResource(R.string.calendars_event_allday)
@@ -1091,9 +1092,24 @@ fun AgendaRow(
 }
 
 /**
+ * The pattern [caption] puts a day together by: a year-first date leads,
+ * with the weekday after it, in brackets in the languages that bracket one;
+ * any other date and the weekday go in the order the user's language puts
+ * them.
+ */
+@Composable
+fun phrasing(format: Format): String = stringResource(
+    if (format.preferences.dateFormat == DateFormat.YYYY_MM_DD) {
+        R.string.calendars_list_heading_iso
+    } else {
+        R.string.calendars_list_heading
+    },
+)
+
+/**
  * A day as the list writes one, in its headings and at each end of a span
  * across days: its short weekday and its date in the user's date format, put
- * together by [pattern], which orders them as the user's language does.
+ * together by [pattern], from [phrasing].
  */
 fun caption(pattern: String, day: LocalDate, format: Format, locale: Locale): String = String.format(
     pattern,
@@ -1118,7 +1134,7 @@ private fun Heading(day: LocalDate, current: Boolean) {
     val colours = MaterialTheme.colorScheme
     val rule = colours.outline.copy(alpha = 0.5f)
     Text(
-        text = caption(stringResource(R.string.calendars_list_heading), day, format, locale),
+        text = caption(phrasing(format), day, format, locale),
         style = MaterialTheme.typography.titleSmall,
         fontWeight = FontWeight.SemiBold,
         color = if (current) colours.onPrimary else colours.onSurface,

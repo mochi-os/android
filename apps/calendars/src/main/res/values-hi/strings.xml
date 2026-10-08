@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">कोई इवेंट नहीं</string>
     <string name="calendars_list_nothing">कुछ भी नियोजित नहीं है। कार्यक्रम बनाने के लिए टैप करें।</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(कोई शीर्षक नहीं)</string>
     <string name="calendars_status_cancelled">रद्द</string>
     <string name="calendars_status_tentative">अस्थायी</string>

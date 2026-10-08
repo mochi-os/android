@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">אין אירועים</string>
     <string name="calendars_list_nothing">אין שום דבר מתוכנן. הקש כדי ליצור אירוע.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(ללא כותרת)</string>
     <string name="calendars_status_cancelled">בוטל</string>
     <string name="calendars_status_tentative">לא סופי</string>

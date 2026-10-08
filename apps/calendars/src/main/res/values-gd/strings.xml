@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Gun tachartasan</string>
     <string name="calendars_list_nothing">Chan eil dad san amharc. Thoir gnogag gus tachartas a chruthachadh.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Gun tiotal)</string>
     <string name="calendars_status_cancelled">Air a chur dheth</string>
     <string name="calendars_status_tentative">Sealach</string>

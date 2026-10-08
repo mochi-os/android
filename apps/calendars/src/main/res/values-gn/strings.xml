@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Ndaipóri evento</string>
     <string name="calendars_list_nothing">Ndaipóri mba\'eve oñembosako\'íva. Epoko emoheñói hag̃ua evento.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Teratee\'ỹre)</string>
     <string name="calendars_status_cancelled">Oñehéja</string>
     <string name="calendars_status_tentative">Noñemoneĩri gueteri</string>

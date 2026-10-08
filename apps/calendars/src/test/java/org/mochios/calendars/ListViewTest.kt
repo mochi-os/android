@@ -218,10 +218,35 @@ class ListViewTest {
 
     /** [day]'s heading as the list writes it, its date read in [format]. */
     private fun heading(day: LocalDate, format: Format): String = context.getString(
-        R.string.calendars_list_heading,
+        if (format.preferences.dateFormat == DateFormat.YYYY_MM_DD) {
+            R.string.calendars_list_heading_iso
+        } else {
+            R.string.calendars_list_heading
+        },
         day.dayOfWeek.getDisplayName(TextStyle.SHORT, Locale.getDefault()),
         format.formatDate(day.atTime(12, 0).toEpochSecond(java.time.ZoneOffset.UTC), "UTC"),
     )
+
+    @Test
+    fun `a year-first date leads its heading, with the short weekday after it`() {
+        events = listOf(anchor to "Item")
+        first = noon(anchor)
+        last = noon(anchor)
+        show()
+        waitFor("Item")
+        waitFor("2026-10-05 Mon")
+    }
+
+    @Test
+    @Config(qualifiers = "+ja")
+    fun `a language that brackets the weekday keeps its brackets after a year-first date`() {
+        events = listOf(anchor to "Item")
+        first = noon(anchor)
+        last = noon(anchor)
+        show()
+        waitFor("Item")
+        waitFor("2026-10-05(月)")
+    }
 
     @Test
     fun `a day is headed by its weekday and its date in the user's date format, once, with no date column`() {

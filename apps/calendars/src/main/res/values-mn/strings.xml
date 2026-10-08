@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Үйл явдал алга</string>
     <string name="calendars_list_nothing">Төлөвлөсөн зүйл алга. Үйл явдал үүсгэхийн тулд товшино уу.</string>
     <string name="calendars_list_heading">%2$s %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Гарчиггүй)</string>
     <string name="calendars_status_cancelled">Цуцалсан</string>
     <string name="calendars_status_tentative">Урьдчилсан</string>

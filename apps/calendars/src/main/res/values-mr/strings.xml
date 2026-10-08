@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">कार्यक्रम नाहीत</string>
     <string name="calendars_list_nothing">काहीही नियोजित नाही. इव्हेंट तयार करण्यासाठी टॅप करा.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(शीर्षक नाही)</string>
     <string name="calendars_status_cancelled">रद्द</string>
     <string name="calendars_status_tentative">तात्पुरते</string>

@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">予定はありません</string>
     <string name="calendars_list_nothing">予定はありません。タップして予定を作成します。</string>
     <string name="calendars_list_heading">%2$s(%1$s)</string>
+    <string name="calendars_list_heading_iso">%2$s(%1$s)</string>
     <string name="calendars_untitled">（タイトルなし）</string>
     <string name="calendars_status_cancelled">キャンセル済み</string>
     <string name="calendars_status_tentative">未確定</string>

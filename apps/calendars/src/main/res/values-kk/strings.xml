@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Іс-шаралар жоқ</string>
     <string name="calendars_list_nothing">Ештеңе жоспарланбаған. Іс-шара құру үшін түртіңіз.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Атауы жоқ)</string>
     <string name="calendars_status_cancelled">Болдырылмады</string>
     <string name="calendars_status_tentative">Алдын ала</string>

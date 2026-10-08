@@ -69,6 +69,7 @@
     <string name="calendars_list_empty">Không có sự kiện</string>
     <string name="calendars_list_nothing">Không có kế hoạch nào. Chạm để tạo sự kiện.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Không có tiêu đề)</string>
     <string name="calendars_status_cancelled">Đã hủy</string>
     <string name="calendars_status_tentative">Chưa chắc chắn</string>

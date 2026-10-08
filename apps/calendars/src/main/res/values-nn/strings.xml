@@ -68,6 +68,7 @@
     <string name="calendars_list_empty">Ingen hendingar</string>
     <string name="calendars_list_nothing">Ingenting planlagt. Trykk for å opprette ei hending.</string>
     <string name="calendars_list_heading">%1$s %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Ingen tittel)</string>
     <string name="calendars_status_cancelled">Avlyst</string>
     <string name="calendars_status_tentative">Førebels</string>
