@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Hisobni ajratmoqchimisiz?</string>
     <string name="account_oauth_unlink_message">Siz endi %1$s bilan kira olmaysiz.</string>
     <string name="account_last_used">Oxirgi foydalanish %1$s</string>
+    <string name="account_created">%1$s yaratildi</string>
     <string name="route_delete_message">Bu yoʻl \"%1$s\" uchun marshrutni olib tashlaydi.</string>
     <string name="route_empty">Sozlangan marshrutlar yoʻq.</string>
     <string name="route_meta">Ustuvorlik %1$s · %2$s</string>

@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Эсепти ажыратууну каалайсызбы?</string>
     <string name="account_oauth_unlink_message">Сиз эми %1$s аркылуу кире албайсыз.</string>
     <string name="account_last_used">Акыркы колдонуу %1$s</string>
+    <string name="account_created">Түзүлдү %1$s</string>
     <string name="route_delete_message">Бул \"%1$s\" жолу үчүн маршрутту алып салат.</string>
     <string name="route_empty">Конфигурацияланган жолдор жок.</string>
     <string name="route_meta">Артыкчылык %1$s · %2$s</string>

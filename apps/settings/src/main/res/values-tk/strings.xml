@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Hasaby aýyrmalymy?</string>
     <string name="account_oauth_unlink_message">Indi %1$s bilen girip bilmersiňiz.</string>
     <string name="account_last_used">Iň soňky ulanyş %1$s</string>
+    <string name="account_created">Döredildi %1$s</string>
     <string name="route_delete_message">Bu \"%1$s\" ýolu üçin marşruty aýyrar.</string>
     <string name="route_empty">Sazlanan ýollar ýok.</string>
     <string name="route_meta">Ileri tutulma %1$s · %2$s</string>

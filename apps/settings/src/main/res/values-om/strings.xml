@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Akkounti hiikuu?</string>
     <string name="account_oauth_unlink_message">Siif hin danda\'amu %1$s fayyadamtee seenuu.</string>
     <string name="account_last_used">Yeroo dhumaa fayyadamame %1$s</string>
+    <string name="account_created">%1$s uumame</string>
     <string name="route_delete_message">Kunis karoora karoora \"%1$s\" haqa.</string>
     <string name="route_empty">Karoorawwan qaroomfaman hin jiran.</string>
     <string name="route_meta">Dursinsii %1$s · %2$s</string>

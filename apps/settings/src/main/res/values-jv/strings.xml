@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">Pisahake akun?</string>
     <string name="account_oauth_unlink_message">Sampeyan ora bisa mlebu nganggo %1$s menèh.</string>
     <string name="account_last_used">Pungkasan dianggo %1$s</string>
+    <string name="account_created">Digawé %1$s</string>
     <string name="route_delete_message">Iki bakal mbusak rute kanggo path \"%1$s\".</string>
     <string name="route_empty">Ora ana rute sing dikonfigurasi.</string>
     <string name="route_meta">Prioritas %1$s · %2$s</string>

@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">ანგარიშის გათიშვა?</string>
     <string name="account_oauth_unlink_message">ვეღარ შეძლებთ %1$s-ით შესვლას.</string>
     <string name="account_last_used">ბოლოს გამოყენებული %1$s</string>
+    <string name="account_created">შექმნილია %1$s</string>
     <string name="route_delete_message">ეს წაშლის მარშრუტს გზისთვის \"%1$s\".</string>
     <string name="route_empty">კონფიგურირებული მარშრუტი არ არის.</string>
     <string name="route_meta">პრიორიტეტი %1$s · %2$s</string>

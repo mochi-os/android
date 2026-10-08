@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Koble fra konto?</string>
     <string name="account_oauth_unlink_message">Du kan ikke lenger logge inn med %1$s.</string>
     <string name="account_last_used">Sist brukt %1$s</string>
+    <string name="account_created">Opprettet %1$s</string>
     <string name="route_delete_message">Dette fjerner ruten for stien «%1$s».</string>
     <string name="route_empty">Ingen ruter konfigurert.</string>
     <string name="route_meta">Prioritet %1$s · %2$s</string>

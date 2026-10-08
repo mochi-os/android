@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Koppla från konto?</string>
     <string name="account_oauth_unlink_message">Du kan inte längre logga in med %1$s.</string>
     <string name="account_last_used">Senast använd %1$s</string>
+    <string name="account_created">Skapad %1$s</string>
     <string name="route_delete_message">Detta tar bort rutten för sökvägen \"%1$s\".</string>
     <string name="route_empty">Inga rutter konfigurerade.</string>
     <string name="route_meta">Prioritet %1$s · %2$s</string>

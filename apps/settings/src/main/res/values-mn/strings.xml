@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Бүртгэлийг салгах уу?</string>
     <string name="account_oauth_unlink_message">Та цаашид %1$s-ээр нэвтэрч чадахгүй.</string>
     <string name="account_last_used">Сүүлд ашигласан %1$s</string>
+    <string name="account_created">%1$s үүссэн</string>
     <string name="route_delete_message">Энэ нь \"%1$s\" замын маршрутыг арилгана.</string>
     <string name="route_empty">Тохируулсан маршрут алга.</string>
     <string name="route_meta">Тэргүүлэх %1$s · %2$s</string>

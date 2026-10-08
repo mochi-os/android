@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Eemalda konto ühendus?</string>
     <string name="account_oauth_unlink_message">Sa ei saa enam %1$s-iga sisse logida.</string>
     <string name="account_last_used">Viimati kasutatud %1$s</string>
+    <string name="account_created">Loodud %1$s</string>
     <string name="route_delete_message">See eemaldab marsruudi tee \"%1$s\".</string>
     <string name="route_empty">Marsruute pole konfigureeritud.</string>
     <string name="route_meta">Prioriteet %1$s · %2$s</string>

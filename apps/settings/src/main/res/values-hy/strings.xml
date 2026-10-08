@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Անջատե՞լ հաշիվը։</string>
     <string name="account_oauth_unlink_message">Դուք այլևս չեք կարողանա մուտք գործել %1$s-ով։</string>
     <string name="account_last_used">Վերջին օգտագործումը %1$s</string>
+    <string name="account_created">Ստեղծվել է %1$s</string>
     <string name="route_delete_message">Սա կհեռացնի երթուղին \"%1$s\" ուղու համար:</string>
     <string name="route_empty">Կարգավորված ուղիներ չկան։</string>
     <string name="route_meta">Առաջնահերթություն %1$s · %2$s</string>

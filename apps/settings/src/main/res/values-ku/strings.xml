@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Hesab veqetîne?</string>
     <string name="account_oauth_unlink_message">Hûn êdî bi %1$s nikarin têkevin.</string>
     <string name="account_last_used">Bikaranîna dawî %1$s</string>
+    <string name="account_created">Hat çêkirin %1$s</string>
     <string name="route_delete_message">Ev dê riya rêya \"%1$s\" jêbibe.</string>
     <string name="route_empty">Tu rî mîhengkirî nin.</string>
     <string name="route_meta">Pêşîn %1$s · %2$s</string>

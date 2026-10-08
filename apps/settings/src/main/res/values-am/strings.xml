@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">ሂሳብ ይነቀል?</string>
     <string name="account_oauth_unlink_message">ከአሁን በኋላ በ%1$s መግባት አይችሉም።</string>
     <string name="account_last_used">መጨረሻ የተጠቀመው %1$s</string>
+    <string name="account_created">የተፈጠረ %1$s</string>
     <string name="route_delete_message">ይህ ለ \"%1$s\" መንገድ ሩትን ያስወግዳል።</string>
     <string name="route_empty">የተዋቀሩ መንገዶች የሉም።</string>
     <string name="route_meta">ቅድሚያ %1$s · %2$s</string>

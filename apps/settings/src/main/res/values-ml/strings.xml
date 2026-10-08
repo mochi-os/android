@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">അക്കൗണ്ട് അൺലിങ്ക് ചെയ്യണോ?</string>
     <string name="account_oauth_unlink_message">നിങ്ങൾക്ക് ഇനി %1$s ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യാൻ കഴിയില്ല.</string>
     <string name="account_last_used">അവസാനം ഉപയോഗിച്ചത് %1$s</string>
+    <string name="account_created">സൃഷ്ടിച്ചത് %1$s</string>
     <string name="route_delete_message">ഇത് പാത \"%1$s\" നായുള്ള റൂട്ട് നീക്കം ചെയ്യും.</string>
     <string name="route_empty">റൂട്ടുകൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല.</string>
     <string name="route_meta">മുൻഗണന %1$s · %2$s</string>

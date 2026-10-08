@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Ҳисобро ҷудо кунед?</string>
     <string name="account_oauth_unlink_message">Шумо дигар бо %1$s ворид шуда наметавонед.</string>
     <string name="account_last_used">Истифодаи охирин %1$s</string>
+    <string name="account_created">Эҷод шуд %1$s</string>
     <string name="route_delete_message">Ин роҳро барои масири \"%1$s\" нест мекунад.</string>
     <string name="route_empty">Роҳҳои танзимшуда нестанд.</string>
     <string name="route_meta">Афзалият %1$s · %2$s</string>

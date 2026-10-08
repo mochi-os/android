@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Scollegare l\'account?</string>
     <string name="account_oauth_unlink_message">Non potrai più accedere con %1$s.</string>
     <string name="account_last_used">Ultimo uso %1$s</string>
+    <string name="account_created">Creato %1$s</string>
     <string name="route_delete_message">Questo rimuoverà il percorso per il path «%1$s».</string>
     <string name="route_empty">Nessun percorso configurato.</string>
     <string name="route_meta">Priorità %1$s · %2$s</string>

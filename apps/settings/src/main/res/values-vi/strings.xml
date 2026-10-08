@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">Gỡ liên kết tài khoản?</string>
     <string name="account_oauth_unlink_message">Bạn sẽ không thể đăng nhập bằng %1$s.</string>
     <string name="account_last_used">Lần cuối sử dụng %1$s</string>
+    <string name="account_created">Đã tạo %1$s</string>
     <string name="route_delete_message">Việc này sẽ xóa tuyến cho đường dẫn \"%1$s\".</string>
     <string name="route_empty">Không có tuyến nào được cấu hình.</string>
     <string name="route_meta">Mức ưu tiên %1$s · %2$s</string>

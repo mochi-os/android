@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">ఖాతా అన్‌లింక్ చేయాలా?</string>
     <string name="account_oauth_unlink_message">మీరు ఇకపై %1$sతో సైన్ ఇన్ చేయలేరు.</string>
     <string name="account_last_used">చివరిగా ఉపయోగించబడింది %1$s</string>
+    <string name="account_created">సృష్టించబడింది %1$s</string>
     <string name="route_delete_message">ఇది మార్గం \"%1$s\" కోసం రూట్‌ను తొలగిస్తుంది.</string>
     <string name="route_empty">కాన్ఫిగర్ చేయబడిన మార్గాలు లేవు.</string>
     <string name="route_meta">ప్రాధాన్యత %1$s · %2$s</string>

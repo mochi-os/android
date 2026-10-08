@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">계정 연결을 해제하시겠어요?</string>
     <string name="account_oauth_unlink_message">%1$s(으)로 더 이상 로그인할 수 없습니다.</string>
     <string name="account_last_used">마지막 사용 %1$s</string>
+    <string name="account_created">생성 %1$s</string>
     <string name="route_delete_message">경로 \"%1$s\"에 대한 라우트가 제거됩니다.</string>
     <string name="route_empty">구성된 경로가 없습니다.</string>
     <string name="route_meta">우선순위 %1$s · %2$s</string>

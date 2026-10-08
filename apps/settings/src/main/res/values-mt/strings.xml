@@ -238,6 +238,7 @@
     <string name="account_oauth_unlink_title">Aqta\' l-kont?</string>
     <string name="account_oauth_unlink_message">M\'għadekx tista\' tidħol bi %1$s.</string>
     <string name="account_last_used">L-aħħar uża %1$s</string>
+    <string name="account_created">Maħluq %1$s</string>
     <string name="route_delete_message">Dan se jneħħi r-rotta għall-passaġġ \"%1$s\".</string>
     <string name="route_empty">L-ebda rotot konfigurati.</string>
     <string name="route_meta">Prijorità %1$s · %2$s</string>

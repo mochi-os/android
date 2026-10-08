@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Poistetaanko tilin yhdistys?</string>
     <string name="account_oauth_unlink_message">Et voi enää kirjautua sisään palvelulla %1$s.</string>
     <string name="account_last_used">Viimeksi käytetty %1$s</string>
+    <string name="account_created">Luotu %1$s</string>
     <string name="route_delete_message">Tämä poistaa reitin polulle \"%1$s\".</string>
     <string name="route_empty">Reittejä ei ole määritetty.</string>
     <string name="route_meta">Prioriteetti %1$s · %2$s</string>

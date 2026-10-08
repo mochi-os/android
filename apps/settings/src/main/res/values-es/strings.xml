@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">¿Desvincular cuenta?</string>
     <string name="account_oauth_unlink_message">No podrás iniciar sesión con %1$s.</string>
     <string name="account_last_used">Último uso %1$s</string>
+    <string name="account_created">Creado %1$s</string>
     <string name="route_delete_message">Esto eliminará la ruta para la ruta «%1$s».</string>
     <string name="route_empty">No hay rutas configuradas.</string>
     <string name="route_meta">Prioridad %1$s · %2$s</string>

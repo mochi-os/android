@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">Tú àkáǹtì kúrò?</string>
     <string name="account_oauth_unlink_message">O kò ní lè wọlé pẹ̀lú %1$s mọ́.</string>
     <string name="account_last_used">Lò gbẹyìn %1$s</string>
+    <string name="account_created">Ṣẹdá %1$s</string>
     <string name="route_delete_message">Èyí yóò mú ọ̀nà fún ọ̀nà \"%1$s\" kúrò.</string>
     <string name="route_empty">Kò sí àwọn ọ̀nà tí a tò.</string>
     <string name="route_meta">Ìpataki %1$s · %2$s</string>

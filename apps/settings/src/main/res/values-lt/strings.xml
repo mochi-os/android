@@ -236,6 +236,7 @@
     <string name="account_oauth_unlink_title">Atsieti paskyrą?</string>
     <string name="account_oauth_unlink_message">Nebegalėsite prisijungti naudodami %1$s.</string>
     <string name="account_last_used">Paskutinį kartą naudota %1$s</string>
+    <string name="account_created">Sukurta %1$s</string>
     <string name="route_delete_message">Tai pašalins maršrutą kelio \"%1$s\".</string>
     <string name="route_empty">Nesukonfigūruota maršrutų.</string>
     <string name="route_meta">Prioritetas %1$s · %2$s</string>

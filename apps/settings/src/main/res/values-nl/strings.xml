@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Account ontkoppelen?</string>
     <string name="account_oauth_unlink_message">Je kunt je dan niet meer aanmelden met %1$s.</string>
     <string name="account_last_used">Laatst gebruikt %1$s</string>
+    <string name="account_created">Aangemaakt %1$s</string>
     <string name="route_delete_message">Hiermee wordt de route voor pad «%1$s» verwijderd.</string>
     <string name="route_empty">Geen routes geconfigureerd.</string>
     <string name="route_meta">Prioriteit %1$s · %2$s</string>

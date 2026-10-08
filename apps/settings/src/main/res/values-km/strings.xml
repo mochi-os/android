@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">ផ្ដាច់គណនី?</string>
     <string name="account_oauth_unlink_message">អ្នកនឹងលែងអាចចូលជាមួយ %1$s ទេ។</string>
     <string name="account_last_used">ប្រើចុងក្រោយ %1$s</string>
+    <string name="account_created">បានបង្កើត %1$s</string>
     <string name="route_delete_message">វានឹងលុបផ្លូវសម្រាប់ផ្លូវ \"%1$s\"។</string>
     <string name="route_empty">គ្មានផ្លូវដែលបានកំណត់ទេ។</string>
     <string name="route_meta">អាទិភាព %1$s · %2$s</string>

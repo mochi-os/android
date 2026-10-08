@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Αποσύνδεση λογαριασμού;</string>
     <string name="account_oauth_unlink_message">Δεν θα μπορείτε πλέον να συνδέεστε με %1$s.</string>
     <string name="account_last_used">Τελευταία χρήση %1$s</string>
+    <string name="account_created">Δημιουργήθηκε %1$s</string>
     <string name="route_delete_message">Αυτό θα αφαιρέσει τη διαδρομή για το μονοπάτι \"%1$s\".</string>
     <string name="route_empty">Δεν έχουν διαμορφωθεί διαδρομές.</string>
     <string name="route_meta">Προτεραιότητα %1$s · %2$s</string>

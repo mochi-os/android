@@ -64,10 +64,15 @@ data class MethodsResponse(val methods: Map<String, MethodInfo> = emptyMap())
 
 // ---------- Passkeys ----------
 
+/**
+ * A passkey on the account. [transports] are the credential's WebAuthn
+ * transports as the server sends them, one comma-separated string such as
+ * `hybrid,internal`.
+ */
 data class Passkey(
     val id: String = "",
     val name: String = "",
-    val transports: List<String> = emptyList(),
+    val transports: String = "",
     val created: Long = 0,
     @SerializedName("last_used") val lastUsed: Long = 0,
 )

@@ -95,6 +95,7 @@
     <string name="account_copy">Copy</string>
     <string name="account_copy_all">Copy all</string>
     <string name="account_last_used">Last used %1$s</string>
+    <string name="account_created">Created %1$s</string>
 
     <!-- Sessions -->
     <string name="sessions_title">Sessions</string>

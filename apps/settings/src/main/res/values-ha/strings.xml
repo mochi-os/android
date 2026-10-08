@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Cire haɗin asusu?</string>
     <string name="account_oauth_unlink_message">Ba za ka iya shiga da %1$s ba.</string>
     <string name="account_last_used">Amfani na ƙarshe %1$s</string>
+    <string name="account_created">An ƙirƙira %1$s</string>
     <string name="route_delete_message">Wannan zai cire hanya don hanyar \"%1$s\".</string>
     <string name="route_empty">Babu hanyoyin da aka saita.</string>
     <string name="route_meta">Fifiko %1$s · %2$s</string>

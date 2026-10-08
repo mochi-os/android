@@ -236,6 +236,7 @@
     <string name="account_oauth_unlink_title">לבטל קישור חשבון?</string>
     <string name="account_oauth_unlink_message">לא תוכל יותר להתחבר עם %1$s.</string>
     <string name="account_last_used">שימוש אחרון %1$s</string>
+    <string name="account_created">נוצר %1$s</string>
     <string name="route_delete_message">פעולה זו תסיר את המסלול עבור הנתיב \"%1$s\".</string>
     <string name="route_empty">לא הוגדרו מסלולים.</string>
     <string name="route_meta">עדיפות %1$s · %2$s</string>

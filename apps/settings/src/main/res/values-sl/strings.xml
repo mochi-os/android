@@ -237,6 +237,7 @@
     <string name="account_oauth_unlink_title">Prekiniti povezavo z računom?</string>
     <string name="account_oauth_unlink_message">Ne boste se več mogli prijaviti z %1$s.</string>
     <string name="account_last_used">Nazadnje uporabljeno %1$s</string>
+    <string name="account_created">Ustvarjeno %1$s</string>
     <string name="route_delete_message">To bo odstranilo pot za pot „%1$s\".</string>
     <string name="route_empty">Ni konfiguriranih poti.</string>
     <string name="route_meta">Prioriteta %1$s · %2$s</string>

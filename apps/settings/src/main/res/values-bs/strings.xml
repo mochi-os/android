@@ -236,6 +236,7 @@
     <string name="account_oauth_unlink_title">Odvojiti račun?</string>
     <string name="account_oauth_unlink_message">Više se nećete moći prijaviti s %1$s.</string>
     <string name="account_last_used">Zadnji put korišteno %1$s</string>
+    <string name="account_created">Kreirano %1$s</string>
     <string name="route_delete_message">Ovo će ukloniti rutu za putanju \"%1$s\".</string>
     <string name="route_empty">Nema konfigurisanih ruta.</string>
     <string name="route_meta">Prioritet %1$s · %2$s</string>

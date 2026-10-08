@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">¿Edesvincula mba\'ete?</string>
     <string name="account_oauth_unlink_message">Ndaikatuvéima reike %1$s rupive.</string>
     <string name="account_last_used">Iporu paha %1$s</string>
+    <string name="account_created">Oñemoheñói %1$s</string>
     <string name="route_delete_message">Kóva ombogue tape \"%1$s\" rehegua.</string>
     <string name="route_empty">Ndaipóri tape oñembosako\'íva.</string>
     <string name="route_meta">Tenondegua %1$s · %2$s</string>

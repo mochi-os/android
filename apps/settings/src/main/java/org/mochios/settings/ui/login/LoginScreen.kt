@@ -58,6 +58,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.webUri
@@ -399,6 +400,7 @@ private fun PasskeyRow(
                     )
                 } else {
                     Text(text = passkey.name, fontWeight = FontWeight.SemiBold)
+                    UsageLines(created = passkey.created, used = passkey.lastUsed, never = true)
                 }
             }
             if (renaming) {
@@ -656,6 +658,7 @@ private fun OAuthSection(
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
                         }
+                        UsageLines(used = id.used)
                     }
                     MochiOutlinedButton(onClick = { confirm = true }) {
                         Text(stringResource(R.string.account_unlink))
@@ -711,6 +714,36 @@ private fun OAuthSection(
                 onConfirm = { showLink = false },
             )
         }
+    }
+}
+
+/**
+ * When a sign-in method was added and last used, in small muted lines under
+ * its name: the date it was [created], and how long ago it was [used]. A
+ * time the server leaves at 0 has no line, except a last use with [never],
+ * as a passkey has, which says it was never used.
+ */
+@Composable
+internal fun UsageLines(created: Long = 0, used: Long = 0, never: Boolean = false) {
+    val format = LocalFormat.current
+    if (created > 0) {
+        Text(
+            stringResource(R.string.account_created, format.formatDate(created)),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+    if (used > 0 || never) {
+        val ago = if (used > 0) {
+            format.formatRelativeTime(used)
+        } else {
+            stringResource(R.string.system_users_last_never)
+        }
+        Text(
+            stringResource(R.string.account_last_used, ago),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
     }
 }
 

@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">खाता अलग करीं?</string>
     <string name="account_oauth_unlink_message">रउआ अब %1$s से साइन इन ना कर सकेम।</string>
     <string name="account_last_used">आखिरी इस्तेमाल %1$s</string>
+    <string name="account_created">%1$s बनावल गइल</string>
     <string name="route_delete_message">ई \"%1$s\" रास्ता खातिर रूट मिटा दी।</string>
     <string name="route_empty">कौनो रास्ता कॉन्फिगर नइखे।</string>
     <string name="route_meta">प्राथमिकता %1$s · %2$s</string>

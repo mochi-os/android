@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">اڪائونٽ ان لنڪ ڪجي؟</string>
     <string name="account_oauth_unlink_message">اوهان وري %1$s سان سائن ان نه ڪري سگهندا.</string>
     <string name="account_last_used">آخري استعمال %1$s</string>
+    <string name="account_created">ٺاهيو ويو %1$s</string>
     <string name="route_delete_message">هي رستي \"%1$s\" لاء روٽ هٽائيندو.</string>
     <string name="route_empty">ڪي به رستا ترتيب ڏنل نه آهن.</string>
     <string name="route_meta">اوليت %1$s · %2$s</string>

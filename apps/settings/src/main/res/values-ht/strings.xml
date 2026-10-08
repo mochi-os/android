@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Dekonekte kont la?</string>
     <string name="account_oauth_unlink_message">Ou pap kapab konekte ak %1$s ankò.</string>
     <string name="account_last_used">Dènye itilizasyon %1$s</string>
+    <string name="account_created">Kreye %1$s</string>
     <string name="route_delete_message">Sa pral retire wout pou chemen \"%1$s\".</string>
     <string name="route_empty">Pa gen wout konfigire.</string>
     <string name="route_meta">Priyorite %1$s · %2$s</string>

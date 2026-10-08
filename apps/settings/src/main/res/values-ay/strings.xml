@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Cuenta desvinculañati?</string>
     <string name="account_oauth_unlink_message">Janiw %1$s ukamp mantxätati.</string>
     <string name="account_last_used">Qhipa apnaqata %1$s</string>
+    <string name="account_created">Lurata %1$s</string>
     <string name="route_delete_message">Akax \"%1$s\" thakhitak thakhi apsuni.</string>
     <string name="route_empty">Janiw thakhinakax wakichatäkiti.</string>
     <string name="route_meta">Prioridad %1$s · %2$s</string>

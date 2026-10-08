@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">¿Cuentata desvinculankichu?</string>
     <string name="account_oauth_unlink_message">Manaña %1$swan yaykuyta atinkichu.</string>
     <string name="account_last_used">Qhipa llamk\'achisqa %1$s</string>
+    <string name="account_created">%1$s kamarisqa</string>
     <string name="route_delete_message">Kayqa \"%1$s\" ñanta qichunqa.</string>
     <string name="route_empty">Mana ñankuna wakichisqachu.</string>
     <string name="route_meta">Prioridad %1$s · %2$s</string>

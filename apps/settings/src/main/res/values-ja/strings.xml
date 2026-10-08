@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">アカウントの連携を解除しますか？</string>
     <string name="account_oauth_unlink_message">%1$s でサインインできなくなります。</string>
     <string name="account_last_used">最終使用 %1$s</string>
+    <string name="account_created">作成 %1$s</string>
     <string name="route_delete_message">パス「%1$s」のルートが削除されます。</string>
     <string name="route_empty">ルートが設定されていません。</string>
     <string name="route_meta">優先度 %1$s · %2$s</string>

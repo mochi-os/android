@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Разкачане на акаунта?</string>
     <string name="account_oauth_unlink_message">Вече няма да можете да влизате с %1$s.</string>
     <string name="account_last_used">Последно използван %1$s</string>
+    <string name="account_created">Създадено %1$s</string>
     <string name="route_delete_message">Това ще премахне маршрута за пътя „%1$s\".</string>
     <string name="route_empty">Няма конфигурирани маршрути.</string>
     <string name="route_meta">Приоритет %1$s · %2$s</string>

@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">אַנפֿאַרבינדן חשבון?</string>
     <string name="account_oauth_unlink_message">איר וועט מער ניט קענען לאָגין מיט %1$s.</string>
     <string name="account_last_used">לעצטע מאָל גענוצט %1$s</string>
+    <string name="account_created">באַשאַפֿן %1$s</string>
     <string name="route_delete_message">דאָס וועט אַרױסנעמען די רוט פֿאַר וועג \"%1$s\".</string>
     <string name="route_empty">קײנע רעטעס פֿאַרקאָנפֿיגירט.</string>
     <string name="route_meta">פּריאָריטעט %1$s · %2$s</string>

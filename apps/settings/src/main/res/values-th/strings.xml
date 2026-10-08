@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">เลิกเชื่อมโยงบัญชี?</string>
     <string name="account_oauth_unlink_message">คุณจะไม่สามารถเข้าสู่ระบบด้วย %1$s ได้</string>
     <string name="account_last_used">ใช้ล่าสุด %1$s</string>
+    <string name="account_created">สร้าง %1$s</string>
     <string name="route_delete_message">การกระทำนี้จะลบเส้นทางสำหรับเส้นทาง \"%1$s\"</string>
     <string name="route_empty">ไม่มีเส้นทางที่กำหนดค่าไว้</string>
     <string name="route_meta">ความสำคัญ %1$s · %2$s</string>

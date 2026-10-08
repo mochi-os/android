@@ -238,6 +238,7 @@
     <string name="account_oauth_unlink_title">Dícheangail an cuntas?</string>
     <string name="account_oauth_unlink_message">Ní bheidh tú in ann síniú isteach le %1$s a thuilleadh.</string>
     <string name="account_last_used">Úsáidte go deireanach %1$s</string>
+    <string name="account_created">Cruthaithe %1$s</string>
     <string name="route_delete_message">Bainfidh sé seo an cosán don chonair \"%1$s\".</string>
     <string name="route_empty">Níl aon chonair cumraithe.</string>
     <string name="route_meta">Tosaíocht %1$s · %2$s</string>

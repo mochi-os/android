@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Lekapcsolja a fiókot?</string>
     <string name="account_oauth_unlink_message">Többé nem fog tudni bejelentkezni %1$s segítségével.</string>
     <string name="account_last_used">Utoljára használva %1$s</string>
+    <string name="account_created">Létrehozva: %1$s</string>
     <string name="route_delete_message">Ez eltávolítja az útvonalat a(z) „%1$s\" útvonalhoz.</string>
     <string name="route_empty">Nincsenek beállított útvonalak.</string>
     <string name="route_meta">Prioritás %1$s · %2$s</string>

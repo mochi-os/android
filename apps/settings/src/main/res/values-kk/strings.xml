@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Тіркелгіні ажырату керек пе?</string>
     <string name="account_oauth_unlink_message">Сіз енді %1$s арқылы кіре алмайсыз.</string>
     <string name="account_last_used">Соңғы пайдаланылды %1$s</string>
+    <string name="account_created">%1$s құрылды</string>
     <string name="route_delete_message">Бұл \"%1$s\" жолы үшін бағытты жояды.</string>
     <string name="route_empty">Конфигурацияланған бағыттар жоқ.</string>
     <string name="route_meta">Басымдылық %1$s · %2$s</string>

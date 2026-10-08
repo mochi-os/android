@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">ಖಾತೆಯನ್ನು ಅನ್‌ಲಿಂಕ್ ಮಾಡಬೇಕೇ?</string>
     <string name="account_oauth_unlink_message">ನೀವು ಇನ್ನು ಮುಂದೆ %1$s ಜೊತೆಗೆ ಸೈನ್ ಇನ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="account_last_used">ಕೊನೆಯದಾಗಿ ಬಳಸಲಾಗಿದೆ %1$s</string>
+    <string name="account_created">ರಚಿಸಲಾಗಿದೆ %1$s</string>
     <string name="route_delete_message">ಇದು ಮಾರ್ಗ \"%1$s\" ಗಾಗಿನ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>
     <string name="route_empty">ಯಾವುದೇ ಮಾರ್ಗಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ.</string>
     <string name="route_meta">ಆದ್ಯತೆ %1$s · %2$s</string>

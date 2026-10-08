@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">ખાતું જોડથી દૂર કરવું?</string>
     <string name="account_oauth_unlink_message">તમે હવે %1$s સાથે સાઇન ઇન કરી શકશો નહીં.</string>
     <string name="account_last_used">છેલ્લે ઉપયોગ કર્યો %1$s</string>
+    <string name="account_created">બનાવેલ %1$s</string>
     <string name="route_delete_message">આ માર્ગ \"%1$s\" માટેનો રૂટ દૂર કરશે.</string>
     <string name="route_empty">કોઈ માર્ગ રૂપરેખાંકિત નથી.</string>
     <string name="route_meta">પ્રાથમિકતા %1$s · %2$s</string>

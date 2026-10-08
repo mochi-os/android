@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">قطع اتصال حساب؟</string>
     <string name="account_oauth_unlink_message">دیگر نمی‌توانید با %1$s وارد شوید.</string>
     <string name="account_last_used">آخرین استفاده %1$s</string>
+    <string name="account_created">ساخته‌شده %1$s</string>
     <string name="route_delete_message">این مسیر برای مسیر «%1$s» را حذف می‌کند.</string>
     <string name="route_empty">هیچ مسیری پیکربندی نشده است.</string>
     <string name="route_meta">اولویت %1$s · %2$s</string>

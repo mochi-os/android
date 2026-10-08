@@ -236,6 +236,7 @@
     <string name="account_oauth_unlink_title">Odpojit účet?</string>
     <string name="account_oauth_unlink_message">Již se nebudete moci přihlásit pomocí %1$s.</string>
     <string name="account_last_used">Naposledy použito %1$s</string>
+    <string name="account_created">Vytvořeno %1$s</string>
     <string name="route_delete_message">Tímto se odstraní trasa pro cestu \"%1$s\".</string>
     <string name="route_empty">Nejsou nakonfigurovány žádné trasy.</string>
     <string name="route_meta">Priorita %1$s · %2$s</string>

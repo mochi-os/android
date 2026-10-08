@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Frakobl konto?</string>
     <string name="account_oauth_unlink_message">Du kan ikke længere logge ind med %1$s.</string>
     <string name="account_last_used">Sidst brugt %1$s</string>
+    <string name="account_created">Oprettet %1$s</string>
     <string name="route_delete_message">Dette fjerner ruten for stien \"%1$s\".</string>
     <string name="route_empty">Ingen ruter konfigureret.</string>
     <string name="route_meta">Prioritet %1$s · %2$s</string>

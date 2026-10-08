@@ -239,6 +239,7 @@
     <string name="account_oauth_unlink_title">Datgysylltu cyfrif?</string>
     <string name="account_oauth_unlink_message">Ni fyddwch yn gallu mewngofnodi mwyach gyda %1$s.</string>
     <string name="account_last_used">Defnyddiwyd ddiwethaf %1$s</string>
+    <string name="account_created">Wedi\'i greu %1$s</string>
     <string name="route_delete_message">Bydd hyn yn tynnu\'r llwybr ar gyfer y llwybr \"%1$s\".</string>
     <string name="route_empty">Dim llwybrau wedi\'u ffurfweddu.</string>
     <string name="route_meta">Blaenoriaeth %1$s · %2$s</string>

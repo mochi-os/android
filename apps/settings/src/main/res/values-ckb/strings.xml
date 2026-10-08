@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">پەیوەندی ھەژمار بپچڕێنە؟</string>
     <string name="account_oauth_unlink_message">چیتر ناتوانیت بە %1$s بێیتە ژوورەوە.</string>
     <string name="account_last_used">کۆتا بەکارھێنان %1$s</string>
+    <string name="account_created">دروستکرا %1$s</string>
     <string name="route_delete_message">ئەمە ڕێگای \"%1$s\" لادەبات.</string>
     <string name="route_empty">ڕێگایەک ڕێکخراو نییە.</string>
     <string name="route_meta">پێشینەیی %1$s · %2$s</string>

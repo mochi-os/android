@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Tenganisha akaunti?</string>
     <string name="account_oauth_unlink_message">Hutaweza tena kuingia kwa %1$s.</string>
     <string name="account_last_used">Mara ya mwisho kutumika %1$s</string>
+    <string name="account_created">Imeundwa %1$s</string>
     <string name="route_delete_message">Hii itaondoa njia ya njia \"%1$s\".</string>
     <string name="route_empty">Hakuna njia zilizowekwa.</string>
     <string name="route_meta">Kipaumbele %1$s · %2$s</string>

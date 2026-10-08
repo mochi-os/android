@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Mag-unlink ng account?</string>
     <string name="account_oauth_unlink_message">Hindi ka na makakapag-sign in gamit ang %1$s.</string>
     <string name="account_last_used">Huling ginamit %1$s</string>
+    <string name="account_created">Ginawa noong %1$s</string>
     <string name="route_delete_message">Aalisin nito ang ruta para sa path na \"%1$s\".</string>
     <string name="route_empty">Walang mga naka-configure na ruta.</string>
     <string name="route_meta">Prayoridad %1$s · %2$s</string>

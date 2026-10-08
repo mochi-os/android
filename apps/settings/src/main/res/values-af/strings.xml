@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Ontkoppel rekening?</string>
     <string name="account_oauth_unlink_message">Jy sal nie meer met %1$s kan aanteken nie.</string>
     <string name="account_last_used">Laaste gebruik %1$s</string>
+    <string name="account_created">Geskep %1$s</string>
     <string name="route_delete_message">Hierdie sal die roete vir die pad \"%1$s\" verwyder.</string>
     <string name="route_empty">Geen roetes gekonfigureer nie.</string>
     <string name="route_meta">Prioriteit %1$s · %2$s</string>

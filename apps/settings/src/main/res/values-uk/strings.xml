@@ -237,6 +237,7 @@
     <string name="account_oauth_unlink_title">Відключити обліковий запис?</string>
     <string name="account_oauth_unlink_message">Ви більше не зможете входити через %1$s.</string>
     <string name="account_last_used">Востаннє використано %1$s</string>
+    <string name="account_created">Створено %1$s</string>
     <string name="route_delete_message">Це видалить маршрут для шляху «%1$s».</string>
     <string name="route_empty">Маршрути не налаштовано.</string>
     <string name="route_meta">Пріоритет %1$s · %2$s</string>

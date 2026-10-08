@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">Putuskan akun?</string>
     <string name="account_oauth_unlink_message">Anda tidak akan dapat masuk lagi dengan %1$s.</string>
     <string name="account_last_used">Terakhir digunakan %1$s</string>
+    <string name="account_created">Dibuat %1$s</string>
     <string name="route_delete_message">Ini akan menghapus rute untuk jalur \"%1$s\".</string>
     <string name="route_empty">Tidak ada rute yang dikonfigurasi.</string>
     <string name="route_meta">Prioritas %1$s · %2$s</string>

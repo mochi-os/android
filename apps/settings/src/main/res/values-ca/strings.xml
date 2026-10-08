@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Desenllaçar compte?</string>
     <string name="account_oauth_unlink_message">Ja no podreu iniciar sessió amb %1$s.</string>
     <string name="account_last_used">Darrer ús %1$s</string>
+    <string name="account_created">Creat %1$s</string>
     <string name="route_delete_message">Això eliminarà la ruta per al camí «%1$s».</string>
     <string name="route_empty">No hi ha rutes configurades.</string>
     <string name="route_meta">Prioritat %1$s · %2$s</string>

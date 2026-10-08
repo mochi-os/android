@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Dissocier le compte ?</string>
     <string name="account_oauth_unlink_message">Vous ne pourrez plus vous connecter avec %1$s.</string>
     <string name="account_last_used">Dernière utilisation %1$s</string>
+    <string name="account_created">Créé le %1$s</string>
     <string name="route_delete_message">Cela supprimera la route pour le chemin « %1$s ».</string>
     <string name="route_empty">Aucune route configurée.</string>
     <string name="route_meta">Priorité %1$s · %2$s</string>

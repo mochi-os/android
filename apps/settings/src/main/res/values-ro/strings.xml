@@ -236,6 +236,7 @@
     <string name="account_oauth_unlink_title">Deconectați contul?</string>
     <string name="account_oauth_unlink_message">Nu vă veți mai putea conecta cu %1$s.</string>
     <string name="account_last_used">Ultima utilizare %1$s</string>
+    <string name="account_created">Creat %1$s</string>
     <string name="route_delete_message">Aceasta va elimina ruta pentru calea „%1$s\".</string>
     <string name="route_empty">Nicio rută configurată.</string>
     <string name="route_meta">Prioritate %1$s · %2$s</string>

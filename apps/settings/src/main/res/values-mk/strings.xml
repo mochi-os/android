@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Откачи ја сметката?</string>
     <string name="account_oauth_unlink_message">Повеќе нема да можете да се најавите со %1$s.</string>
     <string name="account_last_used">Последно користен %1$s</string>
+    <string name="account_created">Создадено %1$s</string>
     <string name="route_delete_message">Ова ќе ја отстрани патеката за патот „%1$s\".</string>
     <string name="route_empty">Нема конфигурирани патеки.</string>
     <string name="route_meta">Приоритет %1$s · %2$s</string>

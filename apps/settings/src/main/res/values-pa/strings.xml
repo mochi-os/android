@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">ਖਾਤਾ ਅਨਲਿੰਕ ਕਰਨਾ?</string>
     <string name="account_oauth_unlink_message">ਤੁਸੀਂ ਹੁਣ %1$s ਨਾਲ ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰ ਸਕੋਗੇ।</string>
     <string name="account_last_used">ਆਖਰੀ ਵਾਰ ਵਰਤਿਆ %1$s</string>
+    <string name="account_created">ਬਣਾਇਆ %1$s</string>
     <string name="route_delete_message">ਇਹ ਮਾਰਗ \"%1$s\" ਲਈ ਰੂਟ ਹਟਾ ਦੇਵੇਗਾ।</string>
     <string name="route_empty">ਕੋਈ ਰੂਟ ਕੌਨਫਿਗਰ ਨਹੀਂ ਹਨ।</string>
     <string name="route_meta">ਤਰਜੀਹ %1$s · %2$s</string>

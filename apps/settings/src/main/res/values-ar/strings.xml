@@ -239,6 +239,7 @@
     <string name="account_oauth_unlink_title">فك ربط الحساب؟</string>
     <string name="account_oauth_unlink_message">لن تتمكن من تسجيل الدخول باستخدام %1$s.</string>
     <string name="account_last_used">آخر استخدام %1$s</string>
+    <string name="account_created">تم الإنشاء %1$s</string>
     <string name="route_delete_message">سيؤدي هذا إلى إزالة المسار للمسار \"%1$s\".</string>
     <string name="route_empty">لا توجد مسارات مُهيأة.</string>
     <string name="route_meta">الأولوية %1$s · %2$s</string>

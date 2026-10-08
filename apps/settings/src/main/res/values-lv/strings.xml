@@ -236,6 +236,7 @@
     <string name="account_oauth_unlink_title">Atsaistīt kontu?</string>
     <string name="account_oauth_unlink_message">Jūs vairs nevarēsiet pierakstīties ar %1$s.</string>
     <string name="account_last_used">Pēdējoreiz lietots %1$s</string>
+    <string name="account_created">Izveidots %1$s</string>
     <string name="route_delete_message">Tas noņems maršrutu ceļam \"%1$s\".</string>
     <string name="route_empty">Nav konfigurētu maršrutu.</string>
     <string name="route_meta">Prioritāte %1$s · %2$s</string>

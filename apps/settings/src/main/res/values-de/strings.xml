@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Konto trennen?</string>
     <string name="account_oauth_unlink_message">Du kannst dich nicht mehr mit %1$s anmelden.</string>
     <string name="account_last_used">Zuletzt verwendet %1$s</string>
+    <string name="account_created">Erstellt %1$s</string>
     <string name="route_delete_message">Dies entfernt die Route für den Pfad „%1$s\".</string>
     <string name="route_empty">Keine Routen konfiguriert.</string>
     <string name="route_meta">Priorität %1$s · %2$s</string>

@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">အကောင့်ကို ဖြုတ်မလား?</string>
     <string name="account_oauth_unlink_message">%1$s ဖြင့် ထပ်မံ ဝင်နိုင်တော့မည် မဟုတ်ပါ။</string>
     <string name="account_last_used">နောက်ဆုံး အသုံးပြုခဲ့သည် %1$s</string>
+    <string name="account_created">%1$s ဖန်တီးပြီး</string>
     <string name="route_delete_message">ဤသည် လမ်းကြောင်း \"%1$s\" အတွက် လမ်းကြောင်းကို ဖယ်ရှားပါမည်။</string>
     <string name="route_empty">စီစဉ်ထားသော လမ်းကြောင်းများ မရှိပါ။</string>
     <string name="route_meta">ဦးစားပေး %1$s · %2$s</string>

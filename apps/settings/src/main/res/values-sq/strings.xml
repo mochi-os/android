@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Shkëputni llogarinë?</string>
     <string name="account_oauth_unlink_message">Nuk do të jeni më në gjendje të hyni me %1$s.</string>
     <string name="account_last_used">Përdorur së fundi %1$s</string>
+    <string name="account_created">U krijua %1$s</string>
     <string name="route_delete_message">Kjo do të heqë rrugën për shtegun \"%1$s\".</string>
     <string name="route_empty">Asnjë rrugë e konfiguruar.</string>
     <string name="route_meta">Prioriteti %1$s · %2$s</string>

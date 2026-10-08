@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Susa ukudibanisa kwe-akhawunti?</string>
     <string name="account_oauth_unlink_message">Akusayi kukwazi ukungena nge-%1$s.</string>
     <string name="account_last_used">Isetyenziswe kokokugqibela %1$s</string>
+    <string name="account_created">Yenziwe %1$s</string>
     <string name="route_delete_message">Oku kuya kususa indlela yendlela \"%1$s\".</string>
     <string name="route_empty">Akukho zindlela zicwangcisiweyo.</string>
     <string name="route_meta">Okubalulekileyo %1$s · %2$s</string>

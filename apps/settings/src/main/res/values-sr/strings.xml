@@ -236,6 +236,7 @@
     <string name="account_oauth_unlink_title">Прекинути везу налога?</string>
     <string name="account_oauth_unlink_message">Више нећете моћи да се пријавите помоћу %1$s.</string>
     <string name="account_last_used">Последње коришћено %1$s</string>
+    <string name="account_created">Креирано %1$s</string>
     <string name="route_delete_message">Ово ће уклонити руту за путању „%1$s\".</string>
     <string name="route_empty">Нема конфигурисаних рута.</string>
     <string name="route_meta">Приоритет %1$s · %2$s</string>

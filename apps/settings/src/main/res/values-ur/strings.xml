@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">اکاؤنٹ ان لنک کریں؟</string>
     <string name="account_oauth_unlink_message">آپ %1$s سے سائن ان نہیں کر سکیں گے۔</string>
     <string name="account_last_used">آخری استعمال %1$s</string>
+    <string name="account_created">بنایا گیا %1$s</string>
     <string name="route_delete_message">یہ راستے \"%1$s\" کا روٹ ہٹا دے گا۔</string>
     <string name="route_empty">کوئی روٹس کنفیگر نہیں ہیں۔</string>
     <string name="route_meta">ترجیح %1$s · %2$s</string>

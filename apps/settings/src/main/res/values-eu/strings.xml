@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Kontua deslotu?</string>
     <string name="account_oauth_unlink_message">Ezin izango duzu %1$s-rekin saiorik hasi.</string>
     <string name="account_last_used">Azken erabilera %1$s</string>
+    <string name="account_created">%1$s sortua</string>
     <string name="route_delete_message">Honek \"%1$s\" bidearen ibilbidea kenduko du.</string>
     <string name="route_empty">Ez dago konfiguratutako ibilbiderik.</string>
     <string name="route_meta">Lehentasuna %1$s · %2$s</string>

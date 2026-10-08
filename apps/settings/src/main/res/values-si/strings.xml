@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">ගිණුම විසන්ධි කරන්නද?</string>
     <string name="account_oauth_unlink_message">ඔබට තවදුරටත් %1$s සමඟ ඇතුළු විය නොහැක.</string>
     <string name="account_last_used">අවසන් භාවිතය %1$s</string>
+    <string name="account_created">සාදන ලදී %1$s</string>
     <string name="route_delete_message">මෙය \"%1$s\" මාර්ගය සඳහා රාවුට් එක ඉවත් කරයි.</string>
     <string name="route_empty">වින්‍යාසගත මාර්ග නැත.</string>
     <string name="route_meta">ප්‍රමුඛතාව %1$s · %2$s</string>

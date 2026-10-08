@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">खाता अनलिंक करें?</string>
     <string name="account_oauth_unlink_message">आप अब %1$s के साथ साइन इन नहीं कर पाएंगे।</string>
     <string name="account_last_used">अंतिम बार उपयोग %1$s</string>
+    <string name="account_created">बनाया गया %1$s</string>
     <string name="route_delete_message">यह पथ \"%1$s\" के लिए मार्ग हटा देगा।</string>
     <string name="route_empty">कोई मार्ग कॉन्फ़िगर नहीं किया गया।</string>
     <string name="route_meta">प्राथमिकता %1$s · %2$s</string>

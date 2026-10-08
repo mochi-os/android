@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">解除連結？</string>
     <string name="account_oauth_unlink_message">您將無法使用 %1$s 登入。</string>
     <string name="account_last_used">上次使用 %1$s</string>
+    <string name="account_created">建立於 %1$s</string>
     <string name="route_delete_message">這會移除路徑\"%1$s\"的路由。</string>
     <string name="route_empty">未設定任何路由。</string>
     <string name="route_meta">優先順序 %1$s · %2$s</string>

@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Hesabı ayır?</string>
     <string name="account_oauth_unlink_message">Artıq %1$s ilə daxil ola bilməyəcəksiniz.</string>
     <string name="account_last_used">Son istifadə %1$s</string>
+    <string name="account_created">%1$s yaradıldı</string>
     <string name="route_delete_message">Bu \"%1$s\" yolu üçün marşrutu çıxaracaq.</string>
     <string name="route_empty">Konfiqurasiya edilmiş marşrut yoxdur.</string>
     <string name="route_meta">Prioritet %1$s · %2$s</string>

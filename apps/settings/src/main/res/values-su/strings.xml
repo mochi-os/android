@@ -234,6 +234,7 @@
     <string name="account_oauth_unlink_title">Pegatkeun akun?</string>
     <string name="account_oauth_unlink_message">Anjeun moal tiasa asup ku %1$s deui.</string>
     <string name="account_last_used">Pamungkas dipake %1$s</string>
+    <string name="account_created">Dijieun %1$s</string>
     <string name="route_delete_message">Ieu bakal nyabut rute pikeun jalan \"%1$s\".</string>
     <string name="route_empty">Henteu aya rute nu dikonfigurasi.</string>
     <string name="route_meta">Prioritas %1$s · %2$s</string>

@@ -235,6 +235,7 @@
     <string name="account_oauth_unlink_title">Aftengja reikning?</string>
     <string name="account_oauth_unlink_message">Þú munt ekki lengur geta skráð þig inn með %1$s.</string>
     <string name="account_last_used">Síðast notað %1$s</string>
+    <string name="account_created">Búið til %1$s</string>
     <string name="route_delete_message">Þetta mun fjarlægja slóðina fyrir leiðina \"%1$s\".</string>
     <string name="route_empty">Engar slóðir stilltar.</string>
     <string name="route_meta">Forgangur %1$s · %2$s</string>
