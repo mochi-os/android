@@ -975,11 +975,6 @@ class CalendarViewModel @Inject constructor(
         _link.value = LinkState()
     }
 
-    /** Revokes a calendar's address, saying whether there was one to revoke. */
-    fun revokeLink(calendar: String, done: () -> Unit = {}) = act(done) {
-        if (repository.revokeLink(calendar)) R.string.calendars_link_revoked else R.string.calendars_link_none
-    }
-
     /** The server the link's address is built on, as the session holds it. */
     private suspend fun server(): String = viewer.server().trimEnd('/')
 

@@ -432,21 +432,6 @@ class CalendarFlowTest {
     }
 
     @Test
-    fun `revoking says whether there was an address to revoke`() {
-        val model = model()
-        val said = said(model)
-        model.revokeLink("c1")
-        until { said.size == 1 }
-        revocable = false
-        model.revokeLink("c1")
-        until { said.size == 2 }
-        assertEquals(
-            listOf(CalendarEvent.Done(R.string.calendars_link_revoked), CalendarEvent.Done(R.string.calendars_link_none)),
-            said,
-        )
-    }
-
-    @Test
     fun `a calendar made, subscribed to or linked is said on the calendar it returns to`() {
         assertEquals(R.string.calendars_created, CalendarsApp.said(CalendarsApp.CALENDAR))
         assertEquals(R.string.calendars_subscribed, CalendarsApp.said(CalendarsApp.SUBSCRIBED))

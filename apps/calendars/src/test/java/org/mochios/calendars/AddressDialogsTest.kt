@@ -5,6 +5,8 @@
 
 package org.mochios.calendars
 
+import android.content.ClipboardManager
+import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -16,6 +18,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.R as MochiR
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.ui.calendar.AddressDialogs
 import org.mochios.calendars.ui.calendar.LinkState
@@ -45,7 +48,6 @@ class AddressDialogsTest {
                 link = link,
                 onReplace = { replaced++ },
                 onClose = {},
-                onRevoke = {},
             )
         }
         rule.waitForIdle()
@@ -78,6 +80,31 @@ class AddressDialogsTest {
         rule.onNodeWithText(replace).performClick()
         rule.waitForIdle()
         assertEquals(2, replaced)
+    }
+
+    @Test
+    fun `an address already issued says so and offers Replace and Close, not Revoke`() {
+        show()
+        assertEquals(true, shown(context.getString(R.string.calendars_link_exists)))
+        assertEquals(true, shown(replace))
+        assertEquals(true, shown(context.getString(MochiR.string.common_close)))
+        assertEquals(false, shown(context.getString(R.string.calendars_link_revoke)))
+    }
+
+    @Test
+    fun `a new address offers Copy and Close, and Copy puts it on the clipboard`() {
+        val url = "https://example.org/calendars/abc/calendar.ics?token=t"
+        link = LinkState(calendar = "c1", url = url, exists = true)
+        show()
+        assertEquals(true, shown(context.getString(R.string.calendars_link_once)))
+        assertEquals(true, shown(context.getString(MochiR.string.common_close)))
+        assertEquals(false, shown(replace))
+        assertEquals(false, shown(context.getString(R.string.calendars_link_revoke)))
+        rule.onNodeWithText(context.getString(MochiR.string.common_copy)).performClick()
+        rule.waitForIdle()
+        val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        assertEquals(url, clipboard.primaryClip?.getItemAt(0)?.text?.toString())
+        assertEquals(true, shown(context.getString(R.string.calendars_link_title)))
     }
 
     @Test

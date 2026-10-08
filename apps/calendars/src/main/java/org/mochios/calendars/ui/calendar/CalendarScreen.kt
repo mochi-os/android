@@ -126,7 +126,6 @@ import org.mochios.calendars.ui.dialogs.ImportDialog
 import org.mochios.calendars.ui.dialogs.LinkDialog
 import org.mochios.calendars.ui.dialogs.RenameCalendarDialog
 import org.mochios.calendars.ui.dialogs.ReplaceLinkDialog
-import org.mochios.calendars.ui.dialogs.RevokeLinkDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.editor.picked
@@ -197,7 +196,6 @@ fun CalendarScreen(
     var colouring by remember { mutableStateOf<Calendar?>(null) }
     var deleting by remember { mutableStateOf<Calendar?>(null) }
     var linking by remember { mutableStateOf<Calendar?>(null) }
-    var revoking by remember { mutableStateOf<Calendar?>(null) }
     var about by remember { mutableStateOf(false) }
     // The calendar a file is being picked for, kept by id so it outlasts the
     // activity being recreated behind the picker.
@@ -585,18 +583,6 @@ fun CalendarScreen(
                 linking = null
                 viewModel.closeLink()
             },
-            onRevoke = {
-                linking = null
-                viewModel.closeLink()
-                revoking = calendar
-            },
-        )
-    }
-    revoking?.let { calendar ->
-        RevokeLinkDialog(
-            busy = working,
-            onDismiss = { revoking = null },
-            onConfirm = { viewModel.revokeLink(calendar.id) { revoking = null } },
         )
     }
     if (about) {
@@ -1057,7 +1043,6 @@ internal fun AddressDialogs(
     link: LinkState,
     onReplace: () -> Unit,
     onClose: () -> Unit,
-    onRevoke: () -> Unit,
 ) {
     var replacing by remember(calendar.id) { mutableStateOf(false) }
     LaunchedEffect(link.url) { if (link.url != null) replacing = false }
@@ -1075,7 +1060,6 @@ internal fun AddressDialogs(
             busy = link.busy,
             onDismiss = onClose,
             onReplace = { replacing = true },
-            onRevoke = onRevoke,
         )
     }
 }

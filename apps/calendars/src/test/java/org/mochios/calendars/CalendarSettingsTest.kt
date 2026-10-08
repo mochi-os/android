@@ -58,6 +58,9 @@ class CalendarSettingsTest {
     private val asked = ConcurrentLinkedQueue<RecordedRequest>()
     private var saved: Boolean? = null
 
+    /** Whether the calendar has an address to revoke. */
+    @Volatile private var revocable = true
+
     @Before
     fun begin() {
         AppContext.set(context)
@@ -74,7 +77,7 @@ class CalendarSettingsTest {
                     "-/calendars/rename", "-/calendars/colour" -> ok(
                         """{"calendar": {"id": "c1", "name": "Family", "colour": "#60a5fa"}}""",
                     )
-                    "-/link/revoke" -> ok("""{"revoked": true}""")
+                    "-/link/revoke" -> ok("""{"revoked": $revocable}""")
                     else -> MockResponse().setResponseCode(404)
                 }
             }
@@ -166,6 +169,20 @@ class CalendarSettingsTest {
         rule.onAllNodesWithText(revoke)[0].performClick()
         waitFor(context.getString(R.string.calendars_link_revoked))
         assertEquals(1, paths().count { path -> path.startsWith("-/link/revoke") })
+    }
+
+    @Test
+    fun `revoking a calendar with no address says there was none`() {
+        revocable = false
+        show()
+        waitFor("Home")
+        val revoke = context.getString(R.string.calendars_link_revoke)
+        rule.onNodeWithContentDescription(context.getString(MochiR.string.common_more_options))
+            .performClick()
+        rule.onNodeWithText(revoke).performClick()
+        waitFor(context.getString(R.string.calendars_link_revoke_title))
+        rule.onAllNodesWithText(revoke)[0].performClick()
+        waitFor(context.getString(R.string.calendars_link_none))
     }
 
     @Test

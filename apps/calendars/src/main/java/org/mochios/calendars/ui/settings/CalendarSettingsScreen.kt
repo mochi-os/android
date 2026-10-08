@@ -328,11 +328,6 @@ fun CalendarSettingsScreen(
                 linking = false
                 viewModel.closeLink()
             },
-            onRevoke = {
-                linking = false
-                viewModel.closeLink()
-                revoking = true
-            },
         )
     }
     if (revoking) {

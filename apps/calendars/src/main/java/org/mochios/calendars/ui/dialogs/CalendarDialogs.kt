@@ -7,7 +7,6 @@ package org.mochios.calendars.ui.dialogs
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -24,12 +23,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ColorPicker
-import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.characters
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
@@ -174,8 +173,10 @@ fun importCounts(tally: Tally): List<String> {
 
 /**
  * The calendar's ICS link, which anyone can subscribe to. The address is
- * shown once, when it is first minted; afterwards the dialog offers to
- * replace it — which stops the old one working — or to revoke it outright.
+ * shown once, when it is first minted, with Copy and Close; afterwards the
+ * dialog says it was already issued and offers to replace it, which stops
+ * the old one working. The dialog draws its content in place of its text,
+ * so the new address carries its own line saying it is shown once.
  */
 @Composable
 fun LinkDialog(
@@ -185,42 +186,41 @@ fun LinkDialog(
     busy: Boolean,
     onDismiss: () -> Unit,
     onReplace: () -> Unit,
-    onRevoke: () -> Unit,
 ) {
+    val copier = rememberCopier()
+    val label = stringResource(R.string.calendars_link_title)
     MochiAlertDialog(
         onDismissRequest = onDismiss,
-        title = stringResource(R.string.calendars_link_title),
-        text = when {
-            url != null -> stringResource(R.string.calendars_link_once)
-            exists -> stringResource(R.string.calendars_link_exists)
+        title = label,
+        text = if (exists && url == null) stringResource(R.string.calendars_link_exists) else null,
+        confirmText = when {
+            url != null -> stringResource(MochiR.string.common_copy)
+            exists -> stringResource(R.string.calendars_link_replace)
             else -> null
         },
-        confirmText = if (exists && url == null) {
-            stringResource(R.string.calendars_link_replace)
-        } else {
-            null
+        onConfirm = {
+            if (url != null) {
+                copier.copy(url, label = label, sensitive = true)
+            } else {
+                onReplace()
+            }
         },
-        onConfirm = onReplace,
         confirmLoading = busy,
         dismissText = stringResource(MochiR.string.common_close),
-        content = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                if (url != null) {
-                    Row(modifier = Modifier.fillMaxWidth()) {
-                        DataChip(value = url, copyable = false, wrap = true, modifier = Modifier.weight(1f))
-                        CopyButton(
-                            value = url,
-                            contentDescription = stringResource(R.string.calendars_link_copy),
-                            sensitive = true,
-                        )
-                    }
-                }
-                if (exists || url != null) {
-                    org.mochios.android.ui.components.MochiTextButton(onClick = onRevoke) {
-                        Text(stringResource(R.string.calendars_link_revoke))
-                    }
+        content = if (url != null) {
+            {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(stringResource(R.string.calendars_link_once))
+                    DataChip(
+                        value = url,
+                        copyable = false,
+                        wrap = true,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
                 }
             }
+        } else {
+            null
         },
     )
 }
