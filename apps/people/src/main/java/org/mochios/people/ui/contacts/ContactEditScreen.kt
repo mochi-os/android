@@ -24,11 +24,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Place
@@ -63,7 +60,6 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
@@ -337,26 +333,15 @@ private fun EditScaffold(
 ) {
     var menuOpen by remember { mutableStateOf(false) }
 
-    MochiScaffold(
+    CreateEntityScaffold(
         title = stringResource(R.string.people_contact_edit_title),
+        submitLabel = stringResource(R.string.people_common_save),
+        submitEnabled = state.form.valid && !state.isSaving,
+        isBusy = state.isSaving,
+        error = state.error,
         onBack = onBack,
+        onSubmit = onSave,
         actions = {
-            MochiIconButton(
-                onClick = onSave,
-                enabled = state.form.valid && !state.isSaving,
-            ) {
-                if (state.isSaving) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(18.dp),
-                        strokeWidth = 2.dp,
-                    )
-                } else {
-                    Icon(
-                        Icons.Default.Check,
-                        contentDescription = stringResource(R.string.people_common_save),
-                    )
-                }
-            }
             Box {
                 MochiIconButton(onClick = { menuOpen = true }) {
                     Icon(
@@ -398,21 +383,7 @@ private fun EditScaffold(
                 LoadingState()
             }
         } else {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding)
-                    .verticalScroll(rememberScrollState())
-                    .padding(horizontal = 16.dp, vertical = 16.dp),
-            ) {
-                state.error?.let { failure ->
-                    Text(
-                        text = failure.userMessage(),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.error,
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                }
+            CreateEntityForm(padding) {
                 ContactFields(
                     form = state.form,
                     books = state.books,
