@@ -103,7 +103,6 @@
     <string name="feeds_ai_processing_mode">Mode de traitement IA</string>
     <string name="feeds_ai_mode_tag_deduplicate">Étiqueter + dédupliquer</string>
     <string name="feeds_ai_prompt_new">Étiqueter les nouvelles publications</string>
-    <string name="feeds_ai_prompt_batch">Traitement par lots</string>
     <string name="feeds_ai_prompt_rank">Classement / notation</string>
     <string name="feeds_ai_prompt_credibility">Évaluation de la crédibilité</string>
     <string name="feeds_feed_not_found">Fil introuvable</string>

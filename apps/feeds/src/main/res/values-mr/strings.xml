@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI प्रक्रिया मोड</string>
     <string name="feeds_ai_account">AI खाते</string>
     <string name="feeds_ai_prompt_new">नवीन पोस्टला टॅग करा</string>
-    <string name="feeds_ai_prompt_batch">बॅच प्रक्रिया</string>
     <string name="feeds_ai_prompt_rank">क्रमवारी / गुणांकन</string>
     <string name="feeds_ai_prompt_credibility">विश्वासार्हता मूल्यांकन</string>
 

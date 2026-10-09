@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI প্রক্রিয়াকরণ মোড</string>
     <string name="feeds_ai_account">AI অ্যাকাউন্ট</string>
     <string name="feeds_ai_prompt_new">নতুন পোস্ট ট্যাগ করুন</string>
-    <string name="feeds_ai_prompt_batch">ব্যাচ প্রক্রিয়াকরণ</string>
     <string name="feeds_ai_prompt_rank">র‍্যাঙ্কিং / স্কোরিং</string>
     <string name="feeds_ai_prompt_credibility">বিশ্বাসযোগ্যতা মূল্যায়ন</string>
 

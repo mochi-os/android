@@ -89,7 +89,6 @@
     <string name="feeds_ai_account">AI 帳戶</string>
     <string name="feeds_ai_mode_tag_deduplicate">標籤 + 去除重複</string>
     <string name="feeds_ai_prompt_new">為新帖子加標籤</string>
-    <string name="feeds_ai_prompt_batch">批次處理</string>
     <string name="feeds_ai_prompt_rank">排名／評分</string>
     <string name="feeds_ai_prompt_credibility">可信度評估</string>
     <string name="feeds_post_not_found">找不到帖子</string>

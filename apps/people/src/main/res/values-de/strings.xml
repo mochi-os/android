@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">%1$s aus Ihren Kontakten löschen?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s aus Ihren Kontakten löschen? Ihre Freundschaft endet ebenfalls.</string>
     <string name="people_contact_new_title">Neuer Kontakt</string>
+    <string name="people_contact_copy_title">Kontakt kopieren</string>
+    <string name="people_contact_merge">Zusammenführen</string>
+    <string name="people_contact_merge_title">Kontakte zusammenführen</string>
     <string name="people_contact_edit_title">Kontakt bearbeiten</string>
     <string name="people_contact_given">Vorname</string>
     <string name="people_contact_family">Nachname</string>

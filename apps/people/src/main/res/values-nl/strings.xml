@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">%1$s uit je contacten verwijderen?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s uit je contacten verwijderen? Jullie vriendschap eindigt ook.</string>
     <string name="people_contact_new_title">Nieuw contact</string>
+    <string name="people_contact_copy_title">Contact kopiëren</string>
+    <string name="people_contact_merge">Samenvoegen</string>
+    <string name="people_contact_merge_title">Contacten samenvoegen</string>
     <string name="people_contact_edit_title">Contact bewerken</string>
     <string name="people_contact_given">Voornaam</string>
     <string name="people_contact_family">Achternaam</string>

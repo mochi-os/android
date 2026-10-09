@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Режим обработки ИИ</string>
     <string name="feeds_ai_account">Аккаунт ИИ</string>
     <string name="feeds_ai_prompt_new">Помечать новые публикации тегами</string>
-    <string name="feeds_ai_prompt_batch">Пакетная обработка</string>
     <string name="feeds_ai_prompt_rank">Ранжирование / оценка</string>
     <string name="feeds_ai_prompt_credibility">Оценка достоверности</string>
 

@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">DI apdorojimo režimas</string>
     <string name="feeds_ai_account">DI paskyra</string>
     <string name="feeds_ai_prompt_new">Žymėti naujus įrašus</string>
-    <string name="feeds_ai_prompt_batch">Paketinis apdorojimas</string>
     <string name="feeds_ai_prompt_rank">Reitingavimas / vertinimas</string>
     <string name="feeds_ai_prompt_credibility">Patikimumo vertinimas</string>
 

@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Način AI obrade</string>
     <string name="feeds_ai_account">AI račun</string>
     <string name="feeds_ai_prompt_new">Označi nove objave</string>
-    <string name="feeds_ai_prompt_batch">Grupna obrada</string>
     <string name="feeds_ai_prompt_rank">Rangiranje / ocjenjivanje</string>
     <string name="feeds_ai_prompt_credibility">Procjena vjerodostojnosti</string>
 

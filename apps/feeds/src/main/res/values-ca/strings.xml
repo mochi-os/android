@@ -122,7 +122,6 @@
 
     <string name="feeds_ai_processing_mode">Mode de processament d\'IA</string>
     <string name="feeds_ai_prompt_new">Etiqueta publicacions noves</string>
-    <string name="feeds_ai_prompt_batch">Processament per lots</string>
     <string name="feeds_ai_prompt_rank">Classificació / puntuació</string>
     <string name="feeds_ai_prompt_credibility">Avaluació de la credibilitat</string>
 

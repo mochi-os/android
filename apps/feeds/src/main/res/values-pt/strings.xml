@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Modo de processamento por IA</string>
     <string name="feeds_ai_account">Conta de IA</string>
     <string name="feeds_ai_prompt_new">Etiquetar novas publicações</string>
-    <string name="feeds_ai_prompt_batch">Processamento em lote</string>
     <string name="feeds_ai_prompt_rank">Classificação / pontuação</string>
     <string name="feeds_ai_prompt_credibility">Avaliação de credibilidade</string>
 

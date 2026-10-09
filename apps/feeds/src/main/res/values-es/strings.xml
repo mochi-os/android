@@ -120,7 +120,6 @@
     <string name="feeds_suggested_credibility_keep">Mantener actual</string>
     <string name="feeds_ai_processing_mode">Modo de procesamiento de IA</string>
     <string name="feeds_ai_prompt_new">Etiquetar publicaciones nuevas</string>
-    <string name="feeds_ai_prompt_batch">Procesamiento por lotes</string>
     <string name="feeds_ai_prompt_rank">Clasificación / puntuación</string>
     <string name="feeds_ai_prompt_credibility">Evaluación de credibilidad</string>
 

@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">د AI پروسس کولو حالت</string>
     <string name="feeds_ai_account">د AI حساب</string>
     <string name="feeds_ai_prompt_new">نوي پوسټونه ټګ کړئ</string>
-    <string name="feeds_ai_prompt_batch">ډله ییز پروسس</string>
     <string name="feeds_ai_prompt_rank">درجه بندي / ارزونه</string>
     <string name="feeds_ai_prompt_credibility">د اعتبار ارزونه</string>
 

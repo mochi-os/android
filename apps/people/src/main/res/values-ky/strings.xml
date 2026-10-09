@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">%1$s байланыштарыңыздан өчүрүлсүнбү?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s байланыштарыңыздан өчүрүлсүнбү? Достугуңуз да аяктайт.</string>
     <string name="people_contact_new_title">Жаңы байланыш</string>
+    <string name="people_contact_copy_title">Байланышты көчүрүү</string>
+    <string name="people_contact_merge">Бириктирүү</string>
+    <string name="people_contact_merge_title">Байланыштарды бириктирүү</string>
     <string name="people_contact_edit_title">Байланышты түзөтүү</string>
     <string name="people_contact_given">Аты</string>
     <string name="people_contact_family">Фамилиясы</string>

@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">אויסמעקן %1$s פֿון אײַערע קאָנטאַקטן?</string>
     <string name="people_contacts_delete_friend_confirm">אויסמעקן %1$s פֿון אײַערע קאָנטאַקטן? אײַער פֿרײַנדשאַפֿט ענדיקט זיך אויך.</string>
     <string name="people_contact_new_title">נײַער קאָנטאַקט</string>
+    <string name="people_contact_copy_title">קאָפּירן קאָנטאַקט</string>
+    <string name="people_contact_merge">פֿאַראייניקן</string>
+    <string name="people_contact_merge_title">פֿאַראייניקן קאָנטאַקטן</string>
     <string name="people_contact_edit_title">רעדאַקטירן קאָנטאַקט</string>
     <string name="people_contact_given">פֿאָרנאָמען</string>
     <string name="people_contact_family">פֿאַמיליע־נאָמען</string>

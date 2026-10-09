@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">Tħassar lil %1$s mill-kuntatti tiegħek?</string>
     <string name="people_contacts_delete_friend_confirm">Tħassar lil %1$s mill-kuntatti tiegħek? Il-ħbiberija tagħkom tintemm ukoll.</string>
     <string name="people_contact_new_title">Kuntatt ġdid</string>
+    <string name="people_contact_copy_title">Ikkupja l-kuntatt</string>
+    <string name="people_contact_merge">Għaqqad</string>
+    <string name="people_contact_merge_title">Għaqqad il-kuntatti</string>
     <string name="people_contact_edit_title">Editja l-kuntatt</string>
     <string name="people_contact_given">Isem</string>
     <string name="people_contact_family">Kunjom</string>

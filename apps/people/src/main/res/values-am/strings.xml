@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">%1$s ከእውቂያዎችዎ ይሰረዝ?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ከእውቂያዎችዎ ይሰረዝ? ጓደኝነታችሁም ያበቃል።</string>
     <string name="people_contact_new_title">አዲስ እውቂያ</string>
+    <string name="people_contact_copy_title">እውቂያ ቅዳ</string>
+    <string name="people_contact_merge">አዋህድ</string>
+    <string name="people_contact_merge_title">እውቂያዎችን አዋህድ</string>
     <string name="people_contact_edit_title">እውቂያ አስተካክል</string>
     <string name="people_contact_given">የመጠሪያ ስም</string>
     <string name="people_contact_family">የአባት ስም</string>

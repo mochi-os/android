@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">Удалить %1$s из ваших контактов?</string>
     <string name="people_contacts_delete_friend_confirm">Удалить %1$s из ваших контактов? Ваша дружба тоже закончится.</string>
     <string name="people_contact_new_title">Новый контакт</string>
+    <string name="people_contact_copy_title">Копировать контакт</string>
+    <string name="people_contact_merge">Объединить</string>
+    <string name="people_contact_merge_title">Объединить контакты</string>
     <string name="people_contact_edit_title">Изменить контакт</string>
     <string name="people_contact_given">Имя</string>
     <string name="people_contact_family">Фамилия</string>

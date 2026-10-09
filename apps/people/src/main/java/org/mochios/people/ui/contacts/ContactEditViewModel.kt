@@ -16,8 +16,11 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.ApiException
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.NaturalCompare
+import org.mochios.people.api.MergeSource
 import org.mochios.people.model.Book
 import org.mochios.people.model.Contact
+import org.mochios.people.model.ContactMerge
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
 
@@ -45,6 +48,26 @@ data class ContactEditUiState(
     val unfriendRequested: Boolean = false,
     /** The friend switch is mid-handshake: inviting, cancelling or unfriending. */
     val isToggling: Boolean = false,
+
+    /**
+     * The editor has turned into one for a new contact filled from this one,
+     * the edits not yet saved included; saving creates it from this card.
+     */
+    val copying: Boolean = false,
+
+    /**
+     * A merge read from the server: the editor then shows the contact that
+     * survives, holding both cards, and saving writes it and deletes the other.
+     */
+    val merge: ContactMerge? = null,
+    /** The list of contacts to merge with is open. */
+    val mergeOpen: Boolean = false,
+    /** The contacts that list offers, every one but this. */
+    val mergeCandidates: List<Contact> = emptyList(),
+    /** The contact whose merge is being read. */
+    val mergePending: String? = null,
+    /** Why the list or the merge could not be read, shown in the list. */
+    val mergeError: MochiError? = null,
 )
 
 /**
@@ -191,16 +214,76 @@ class ContactEditViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(conflict = null)
     }
 
+    /** Turns the editor into one for a copy of this contact, keeping what has been typed. */
+    fun copy() {
+        if (creating) return
+        _uiState.value = _uiState.value.copy(copying = true, error = null)
+    }
+
+    /** Opens the list of contacts to merge this one with. */
+    fun openMerge() {
+        if (creating) return
+        _uiState.value = _uiState.value.copy(mergeOpen = true, mergeError = null)
+        viewModelScope.launch {
+            try {
+                val contacts = repository.listContacts().contacts
+                    .filter { it.id != contactId }
+                    .sortedWith(compareBy(NaturalCompare) { it.name })
+                _uiState.value = _uiState.value.copy(mergeCandidates = contacts)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(mergeError = e.toMochiError())
+            }
+        }
+    }
+
+    fun closeMerge() {
+        _uiState.value = _uiState.value.copy(mergeOpen = false, mergePending = null, mergeError = null)
+    }
+
+    /**
+     * Reads the merge of this contact with [source]. The form then shows the
+     * contact that survives, which is whichever is linked to a Mochi person,
+     * filled with both cards' details; a refusal stays in the list, saying why.
+     */
+    fun merge(source: String) {
+        if (creating || _uiState.value.mergePending != null) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(mergePending = source, mergeError = null)
+            try {
+                val merge = repository.previewMerge(contactId, source)
+                _uiState.value = _uiState.value.copy(
+                    merge = merge,
+                    mergeOpen = false,
+                    mergePending = null,
+                    form = contactForm(merge.contact.card, merge.contact.book),
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(mergePending = null, mergeError = e.toMochiError())
+            }
+        }
+    }
+
     fun save() {
         val state = _uiState.value
         if (!state.form.valid || state.isSaving) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSaving = true, error = null, conflict = null)
             try {
-                if (creating) {
+                val merge = state.merge
+                if (merge != null) {
+                    repository.updateContact(
+                        contact = merge.contact.id,
+                        etag = merge.contact.etag,
+                        properties = state.form.properties(),
+                        book = state.form.book.ifBlank { null },
+                        source = MergeSource(merge.source.id, merge.source.etag),
+                    )
+                    _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
+                } else if (creating || state.copying) {
                     repository.createContact(
                         properties = state.form.properties(),
                         book = state.form.book.ifBlank { null },
+                        source = contactId.takeIf { state.copying },
                     )
                     _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
                 } else {
@@ -220,9 +303,10 @@ class ContactEditViewModel @Inject constructor(
             } catch (e: Exception) {
                 // 412 is the compare-and-swap losing to another device. The
                 // server's message says so; the card it now holds replaces the
-                // form, since saving over it is exactly what was refused.
+                // form, since saving over it is exactly what was refused. A
+                // merge read from cards since changed is dropped with it.
                 if (e is ApiException && e.code == 412) {
-                    _uiState.value = _uiState.value.copy(isSaving = false, conflict = e.message)
+                    _uiState.value = _uiState.value.copy(isSaving = false, conflict = e.message, merge = null)
                     load()
                 } else {
                     _uiState.value = _uiState.value.copy(
@@ -248,7 +332,7 @@ class ContactEditViewModel @Inject constructor(
     }
 
     fun confirmDelete() {
-        if (creating) return
+        if (creating || _uiState.value.copying || _uiState.value.merge != null) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isDeleting = true)
             try {

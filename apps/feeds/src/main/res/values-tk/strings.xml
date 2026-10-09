@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI işleýiş tertibi</string>
     <string name="feeds_ai_account">AI hasaby</string>
     <string name="feeds_ai_prompt_new">Täze postlary belgilemek</string>
-    <string name="feeds_ai_prompt_batch">Toplumlaýyn işlemek</string>
     <string name="feeds_ai_prompt_rank">Tertipleşdirmek / bahalandyrmak</string>
     <string name="feeds_ai_prompt_credibility">Ynamlylyk baholamasy</string>
 

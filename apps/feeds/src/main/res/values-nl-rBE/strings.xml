@@ -109,7 +109,6 @@
     <string name="feeds_ai_processing_mode">AI-verwerkingsmodus</string>
     <string name="feeds_ai_account">AI-account</string>
     <string name="feeds_ai_prompt_new">Nieuwe berichten taggen</string>
-    <string name="feeds_ai_prompt_batch">Batchverwerking</string>
     <string name="feeds_ai_prompt_rank">Rangschikking / scoring</string>
     <string name="feeds_ai_prompt_credibility">Beoordeling van geloofwaardigheid</string>
     <string name="feeds_post_select_feed">Selecteer een feed</string>

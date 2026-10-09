@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI llamk\'ay modo</string>
     <string name="feeds_ai_account">AI cuenta</string>
     <string name="feeds_ai_prompt_new">Musuq qillqakunaman unanchakunata churay</string>
-    <string name="feeds_ai_prompt_batch">Huñusqa llamkay</string>
     <string name="feeds_ai_prompt_rank">Rango / puntaje</string>
     <string name="feeds_ai_prompt_credibility">Credibilidad chaninchay</string>
 

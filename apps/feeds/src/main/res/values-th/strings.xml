@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">โหมดการประมวลผล AI</string>
     <string name="feeds_ai_account">บัญชี AI</string>
     <string name="feeds_ai_prompt_new">ติดแท็กโพสต์ใหม่</string>
-    <string name="feeds_ai_prompt_batch">การประมวลผลแบบกลุ่ม</string>
     <string name="feeds_ai_prompt_rank">การจัดอันดับ / การให้คะแนน</string>
     <string name="feeds_ai_prompt_credibility">การประเมินความน่าเชื่อถือ</string>
 

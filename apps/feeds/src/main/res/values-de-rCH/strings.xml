@@ -100,7 +100,6 @@
     <string name="feeds_ai_processing_mode">KI-Verarbeitungsmodus</string>
     <string name="feeds_ai_mode_tag_deduplicate">Markieren + Duplikate entfernen</string>
     <string name="feeds_ai_prompt_new">Neue Beiträge markieren</string>
-    <string name="feeds_ai_prompt_batch">Stapelverarbeitung</string>
     <string name="feeds_ai_prompt_rank">Reihung / Bewertung</string>
     <string name="feeds_ai_prompt_credibility">Glaubwürdigkeitsbewertung</string>
     <string name="feeds_feed_not_found">Feed nicht gefunden</string>

@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Mód próiseála IS</string>
     <string name="feeds_ai_account">Cuntas IS</string>
     <string name="feeds_ai_prompt_new">Clibeáil postálacha nua</string>
-    <string name="feeds_ai_prompt_batch">Próiseáil bhaisce</string>
     <string name="feeds_ai_prompt_rank">Rangú / scórú</string>
     <string name="feeds_ai_prompt_credibility">Measúnú inchreidteachta</string>
 

@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">Vill du ta bort %1$s från dina kontakter?</string>
     <string name="people_contacts_delete_friend_confirm">Vill du ta bort %1$s från dina kontakter? Er vänskap upphör också.</string>
     <string name="people_contact_new_title">Ny kontakt</string>
+    <string name="people_contact_copy_title">Kopiera kontakt</string>
+    <string name="people_contact_merge">Sammanfoga</string>
+    <string name="people_contact_merge_title">Sammanfoga kontakter</string>
     <string name="people_contact_edit_title">Redigera kontakt</string>
     <string name="people_contact_given">Förnamn</string>
     <string name="people_contact_family">Efternamn</string>

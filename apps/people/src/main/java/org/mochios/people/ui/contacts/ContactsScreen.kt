@@ -35,8 +35,6 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.automirrored.filled.Sort
 import androidx.compose.material.icons.outlined.Contacts
 import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material3.AssistChip
-import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -506,7 +504,7 @@ private fun EmptyContactsHint(searchQuery: String) {
 }
 
 @Composable
-private fun ContactRow(
+internal fun ContactRow(
     contact: Contact,
     onTap: () -> Unit,
     onMessage: () -> Unit,
@@ -527,14 +525,6 @@ private fun ContactRow(
         trailing = {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (contact.friend) {
-                    AssistChip(
-                        onClick = onTap,
-                        label = { Text(stringResource(R.string.people_contacts_friend)) },
-                        colors = AssistChipDefaults.assistChipColors(
-                            containerColor = MaterialTheme.colorScheme.secondaryContainer,
-                            labelColor = MaterialTheme.colorScheme.onSecondaryContainer,
-                        ),
-                    )
                     MochiIconButton(onClick = onMessage) {
                         Icon(
                             Icons.AutoMirrored.Filled.Chat,

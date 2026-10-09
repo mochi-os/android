@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">%1$s از مخاطبین شما حذف شود؟</string>
     <string name="people_contacts_delete_friend_confirm">%1$s از مخاطبین شما حذف شود؟ دوستی شما هم پایان می‌یابد.</string>
     <string name="people_contact_new_title">مخاطب جدید</string>
+    <string name="people_contact_copy_title">کپی مخاطب</string>
+    <string name="people_contact_merge">ادغام</string>
+    <string name="people_contact_merge_title">ادغام مخاطبان</string>
     <string name="people_contact_edit_title">ویرایش مخاطب</string>
     <string name="people_contact_given">نام</string>
     <string name="people_contact_family">نام خانوادگی</string>

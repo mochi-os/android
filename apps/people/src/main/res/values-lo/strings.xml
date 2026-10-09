@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">ລຶບ %1$s ອອກຈາກຜູ້ຕິດຕໍ່ຂອງທ່ານບໍ?</string>
     <string name="people_contacts_delete_friend_confirm">ລຶບ %1$s ອອກຈາກຜູ້ຕິດຕໍ່ຂອງທ່ານບໍ? ມິດຕະພາບຂອງທ່ານກໍຈະສິ້ນສຸດເຊັ່ນກັນ.</string>
     <string name="people_contact_new_title">ຜູ້ຕິດຕໍ່ໃໝ່</string>
+    <string name="people_contact_copy_title">ສຳເນົາຜູ້ຕິດຕໍ່</string>
+    <string name="people_contact_merge">ລວມ</string>
+    <string name="people_contact_merge_title">ລວມຜູ້ຕິດຕໍ່</string>
     <string name="people_contact_edit_title">ແກ້ໄຂຜູ້ຕິດຕໍ່</string>
     <string name="people_contact_given">ຊື່</string>
     <string name="people_contact_family">ນາມສະກຸນ</string>

@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">وضع معالجة الذكاء الاصطناعي</string>
     <string name="feeds_ai_account">حساب الذكاء الاصطناعي</string>
     <string name="feeds_ai_prompt_new">وسم المنشورات الجديدة</string>
-    <string name="feeds_ai_prompt_batch">المعالجة بالدفعات</string>
     <string name="feeds_ai_prompt_rank">الترتيب / التقييم</string>
     <string name="feeds_ai_prompt_credibility">تقييم المصداقية</string>
 

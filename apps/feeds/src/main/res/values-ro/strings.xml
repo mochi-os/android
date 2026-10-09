@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Mod de procesare AI</string>
     <string name="feeds_ai_account">Cont AI</string>
     <string name="feeds_ai_prompt_new">Etichetează postările noi</string>
-    <string name="feeds_ai_prompt_batch">Procesare în loturi</string>
     <string name="feeds_ai_prompt_rank">Clasificare / punctare</string>
     <string name="feeds_ai_prompt_credibility">Evaluarea credibilității</string>
 

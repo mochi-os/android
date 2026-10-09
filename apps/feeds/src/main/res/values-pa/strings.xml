@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI ਪ੍ਰੋਸੈਸਿੰਗ ਮੋਡ</string>
     <string name="feeds_ai_account">AI ਖਾਤਾ</string>
     <string name="feeds_ai_prompt_new">ਨਵੀਆਂ ਪੋਸਟਾਂ ਟੈਗ ਕਰੋ</string>
-    <string name="feeds_ai_prompt_batch">ਬੈਚ ਪ੍ਰੋਸੈਸਿੰਗ</string>
     <string name="feeds_ai_prompt_rank">ਰੈਂਕਿੰਗ / ਸਕੋਰਿੰਗ</string>
     <string name="feeds_ai_prompt_credibility">ਭਰੋਸੇਯੋਗਤਾ ਮੁਲਾਂਕਣ</string>
 

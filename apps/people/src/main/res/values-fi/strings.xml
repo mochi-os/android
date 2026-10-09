@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">Poistetaanko %1$s yhteystiedoistasi?</string>
     <string name="people_contacts_delete_friend_confirm">Poistetaanko %1$s yhteystiedoistasi? Myös kaveruutenne päättyy.</string>
     <string name="people_contact_new_title">Uusi yhteystieto</string>
+    <string name="people_contact_copy_title">Kopioi yhteystieto</string>
+    <string name="people_contact_merge">Yhdistä</string>
+    <string name="people_contact_merge_title">Yhdistä yhteystiedot</string>
     <string name="people_contact_edit_title">Muokkaa yhteystietoa</string>
     <string name="people_contact_given">Etunimi</string>
     <string name="people_contact_family">Sukunimi</string>

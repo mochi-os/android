@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">የAI ማስኬጃ ሁነታ</string>
     <string name="feeds_ai_account">የAI መለያ</string>
     <string name="feeds_ai_prompt_new">አዲስ ልጥፎችን ሰይም</string>
-    <string name="feeds_ai_prompt_batch">የቡድን ማስኬጃ</string>
     <string name="feeds_ai_prompt_rank">ደረጃ አሰጣጥ / ነጥብ አሰጣጥ</string>
     <string name="feeds_ai_prompt_credibility">የተአማኒነት ግምገማ</string>
 

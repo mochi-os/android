@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI ishlov berish rejimi</string>
     <string name="feeds_ai_account">AI hisobi</string>
     <string name="feeds_ai_prompt_new">Yangi postlarni teglash</string>
-    <string name="feeds_ai_prompt_batch">Paketli ishlov berish</string>
     <string name="feeds_ai_prompt_rank">Reyting / baholash</string>
     <string name="feeds_ai_prompt_credibility">Ishonchlilik baholash</string>
 

@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Modalità di elaborazione AI</string>
     <string name="feeds_ai_account">Account AI</string>
     <string name="feeds_ai_prompt_new">Etichetta nuovi post</string>
-    <string name="feeds_ai_prompt_batch">Elaborazione in batch</string>
     <string name="feeds_ai_prompt_rank">Classificazione / punteggio</string>
     <string name="feeds_ai_prompt_credibility">Valutazione della credibilità</string>
 

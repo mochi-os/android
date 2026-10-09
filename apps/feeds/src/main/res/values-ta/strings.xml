@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI செயலாக்க முறை</string>
     <string name="feeds_ai_account">AI கணக்கு</string>
     <string name="feeds_ai_prompt_new">புதிய இடுகைகளுக்கு குறிச்சொல் இடு</string>
-    <string name="feeds_ai_prompt_batch">தொகுப்பு செயலாக்கம்</string>
     <string name="feeds_ai_prompt_rank">தரவரிசை / மதிப்பெண்</string>
     <string name="feeds_ai_prompt_credibility">நம்பகத்தன்மை மதிப்பீடு</string>
 

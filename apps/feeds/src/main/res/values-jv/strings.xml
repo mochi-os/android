@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Mode pangolahan AI</string>
     <string name="feeds_ai_account">Akun AI</string>
     <string name="feeds_ai_prompt_new">Tag postingan anyar</string>
-    <string name="feeds_ai_prompt_batch">Pangolahan batch</string>
     <string name="feeds_ai_prompt_rank">Peringkat / skor</string>
     <string name="feeds_ai_prompt_credibility">Penilaian kredibilitas</string>
 

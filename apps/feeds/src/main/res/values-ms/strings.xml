@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Mod pemprosesan AI</string>
     <string name="feeds_ai_account">Akaun AI</string>
     <string name="feeds_ai_prompt_new">Tandai pos baharu</string>
-    <string name="feeds_ai_prompt_batch">Pemprosesan kelompok</string>
     <string name="feeds_ai_prompt_rank">Kedudukan / pemarkahan</string>
     <string name="feeds_ai_prompt_credibility">Penilaian kebolehpercayaan</string>
 

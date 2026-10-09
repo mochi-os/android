@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">¿Eliminar a %1$s de tus contactos?</string>
     <string name="people_contacts_delete_friend_confirm">¿Eliminar a %1$s de tus contactos? Tu amistad también termina.</string>
     <string name="people_contact_new_title">Nuevo contacto</string>
+    <string name="people_contact_copy_title">Copiar contacto</string>
+    <string name="people_contact_merge">Combinar</string>
+    <string name="people_contact_merge_title">Combinar contactos</string>
     <string name="people_contact_edit_title">Editar contacto</string>
     <string name="people_contact_given">Nombre</string>
     <string name="people_contact_family">Apellidos</string>

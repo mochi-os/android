@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">KI-behandlingsmodus</string>
     <string name="feeds_ai_account">KI-konto</string>
     <string name="feeds_ai_prompt_new">Merk nye innlegg</string>
-    <string name="feeds_ai_prompt_batch">Satsvis behandling</string>
     <string name="feeds_ai_prompt_rank">Rangering / poenggivning</string>
     <string name="feeds_ai_prompt_credibility">Troverdighetsvurdering</string>
 

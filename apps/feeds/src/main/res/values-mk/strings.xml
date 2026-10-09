@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">Режим на обработка со ВИ</string>
     <string name="feeds_ai_account">AI сметка</string>
     <string name="feeds_ai_prompt_new">Означи нови објави</string>
-    <string name="feeds_ai_prompt_batch">Сериска обработка</string>
     <string name="feeds_ai_prompt_rank">Рангирање / оценување</string>
     <string name="feeds_ai_prompt_credibility">Проценка на веродостојност</string>
 

@@ -120,7 +120,6 @@
     <string name="feeds_suggested_credibility_keep">Cadw\'r presennol</string>
     <string name="feeds_ai_processing_mode">Modd prosesu AI</string>
     <string name="feeds_ai_prompt_new">Tagio postiadau newydd</string>
-    <string name="feeds_ai_prompt_batch">Prosesu swp</string>
     <string name="feeds_ai_prompt_rank">Graddio / sgorio</string>
     <string name="feeds_ai_prompt_credibility">Asesu hygrededd</string>
 

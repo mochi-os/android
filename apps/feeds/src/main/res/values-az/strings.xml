@@ -122,7 +122,6 @@
 
     <string name="feeds_ai_processing_mode">AI emal rejimi</string>
     <string name="feeds_ai_prompt_new">Yeni yazıları etiketləyin</string>
-    <string name="feeds_ai_prompt_batch">Toplu emal</string>
     <string name="feeds_ai_prompt_rank">Sıralama / qiymətləndirmə</string>
     <string name="feeds_ai_prompt_credibility">Etibarlılıq qiymətləndirməsi</string>
 

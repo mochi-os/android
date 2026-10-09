@@ -156,6 +156,9 @@
     <string name="people_contacts_delete_confirm">Dileu %1$s o\'ch cysylltiadau?</string>
     <string name="people_contacts_delete_friend_confirm">Dileu %1$s o\'ch cysylltiadau? Bydd eich cyfeillgarwch yn dod i ben hefyd.</string>
     <string name="people_contact_new_title">Cyswllt newydd</string>
+    <string name="people_contact_copy_title">Copïo cyswllt</string>
+    <string name="people_contact_merge">Cyfuno</string>
+    <string name="people_contact_merge_title">Cyfuno cysylltiadau</string>
     <string name="people_contact_edit_title">Golygu cyswllt</string>
     <string name="people_contact_given">Enw cyntaf</string>
     <string name="people_contact_family">Cyfenw</string>

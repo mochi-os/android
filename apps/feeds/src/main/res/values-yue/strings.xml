@@ -105,7 +105,6 @@
     <string name="feeds_ai_account_default">預設帳戶</string>
     <string name="feeds_ai_mode_tag_deduplicate">標籤 + 去重</string>
     <string name="feeds_ai_prompt_new">為新貼文加標籤</string>
-    <string name="feeds_ai_prompt_batch">批次處理</string>
     <string name="feeds_ai_prompt_rank">排序／評分</string>
     <string name="feeds_ai_prompt_credibility">可信度評估</string>
     <string name="feeds_feed_not_found">搵唔到資訊串</string>

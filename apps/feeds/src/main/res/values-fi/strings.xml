@@ -120,7 +120,6 @@
     <string name="feeds_suggested_credibility_keep">Säilytä nykyinen</string>
     <string name="feeds_ai_processing_mode">Tekoälyn käsittelytila</string>
     <string name="feeds_ai_prompt_new">Merkitse uudet julkaisut</string>
-    <string name="feeds_ai_prompt_batch">Eräkäsittely</string>
     <string name="feeds_ai_prompt_rank">Järjestäminen / pisteytys</string>
     <string name="feeds_ai_prompt_credibility">Uskottavuuden arviointi</string>
 

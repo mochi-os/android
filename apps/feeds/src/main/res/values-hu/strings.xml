@@ -120,7 +120,6 @@
     <string name="feeds_ai_processing_mode">AI-feldolgozási mód</string>
     <string name="feeds_ai_account">MI-fiók</string>
     <string name="feeds_ai_prompt_new">Új bejegyzések címkézése</string>
-    <string name="feeds_ai_prompt_batch">Kötegelt feldolgozás</string>
     <string name="feeds_ai_prompt_rank">Rangsorolás / pontozás</string>
     <string name="feeds_ai_prompt_credibility">Hitelesség értékelése</string>
 
