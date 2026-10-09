@@ -21,7 +21,6 @@ import androidx.compose.ui.test.performClick
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotEquals
-import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -29,7 +28,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 
-/** The top bar's refresh button, and the count of waiting posts on its corner. */
+/** The top bar's refresh button, and the count of waiting posts written beside it. */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35])
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
@@ -47,7 +46,7 @@ class RefreshButtonTest {
     private var primary = Color.Unspecified
     private var error = Color.Unspecified
 
-    private val badge = SemanticsMatcher.keyIsDefined(SemanticsProperties.HideFromAccessibility)
+    private val number = SemanticsMatcher.keyIsDefined(SemanticsProperties.HideFromAccessibility)
     private val spoken = SemanticsProperties.StateDescription
 
     private fun show(count: Int) {
@@ -60,34 +59,34 @@ class RefreshButtonTest {
     }
 
     @Test
-    fun `with nothing waiting there is no badge and no count to speak`() {
+    fun `with nothing waiting there is no number and no count to speak`() {
         show(0)
-        rule.onAllNodes(badge, useUnmergedTree = true).assertCountEquals(0)
+        rule.onAllNodes(number, useUnmergedTree = true).assertCountEquals(0)
         rule.onNodeWithContentDescription("Refresh").assert(SemanticsMatcher.keyNotDefined(spoken))
     }
 
     @Test
-    fun `the badge shows the posts waiting, and the button speaks them`() {
+    fun `the count is written beside the icon, and the button speaks it`() {
         show(7)
         rule.onNodeWithText("7", useUnmergedTree = true).assertExists()
         rule.onNodeWithContentDescription("Refresh").assert(SemanticsMatcher.expectValue(spoken, "7 new posts"))
     }
 
     @Test
-    fun `past two digits the badge stops counting, though the button still gives the number`() {
+    fun `a count past two digits is written in full, not capped as a badge was`() {
         show(123)
-        rule.onNodeWithText("99+", useUnmergedTree = true).assertExists()
+        rule.onNodeWithText("123", useUnmergedTree = true).assertExists()
         rule.onNodeWithContentDescription("Refresh").assert(SemanticsMatcher.expectValue(spoken, "123 new posts"))
     }
 
     @Test
     fun `a screen reader hears the count from the button, not as a bare number beside it`() {
         show(7)
-        rule.onAllNodes(badge, useUnmergedTree = true).assertCountEquals(1)
+        rule.onAllNodes(number, useUnmergedTree = true).assertCountEquals(1)
     }
 
     @Test
-    fun `the badge is the primary colour, where the bell's is the error colour`() {
+    fun `the count is written in the bar's own colour, not a badge's primary or the bell's error`() {
         show(7)
         val pixels = rule.onRoot().captureToImage().toPixelMap()
         val drawn = HashSet<Color>()
@@ -97,16 +96,16 @@ class RefreshButtonTest {
             }
         }
         assertNotEquals(primary, error)
-        assertTrue("no primary among ${drawn.size} colours", primary in drawn)
+        assertFalse("primary among ${drawn.size} colours", primary in drawn)
         assertFalse(error in drawn)
     }
 
     @Test
-    fun `a tap refreshes, on the badge as on the icon`() {
+    fun `a tap refreshes, on the number as on the icon`() {
         show(7)
         rule.onNodeWithContentDescription("Refresh").performClick()
         assertEquals(1, taps)
-        rule.onNode(badge, useUnmergedTree = true).performClick()
+        rule.onNode(number, useUnmergedTree = true).performClick()
         assertEquals(2, taps)
     }
 }
