@@ -11,6 +11,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.forums.ui.find.FindForumsScreen
 import org.mochios.forums.ui.forum.ForumScreen
 import org.mochios.forums.ui.forumlist.CreateForumScreen
@@ -95,10 +96,7 @@ fun NavGraphBuilder.forumsNavGraph(
         ForumScreen(
             forumId = forumId,
             onSelectForum = { id ->
-                navController.navigate(ForumsApp.forum(id)) {
-                    popUpTo(ForumsApp.FORUM) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(ForumsApp.forum(id))
             },
             onPostClick = { fId, pId -> navController.navigate(ForumsApp.post(fId, pId)) },
             onNewPost = { fId -> navController.navigate(ForumsApp.newPost(fId)) },

@@ -40,6 +40,7 @@ import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.market.R
 import org.mochios.market.repository.MarketRepository
 import org.mochios.android.R as MochiR
@@ -97,10 +98,7 @@ fun MarketLayout(
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
             if (item.id != currentRoute) {
-                navController.navigate(item.id) {
-                    popUpTo(currentRoute) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(item.id)
             }
         },
         actions = {

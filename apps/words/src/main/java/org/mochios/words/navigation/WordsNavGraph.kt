@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.words.ui.list.WordsGameListScreen
 import org.mochios.words.ui.newgame.NewWordsGameScreen
 import org.mochios.words.ui.router.WordsRouter
@@ -69,10 +70,7 @@ fun NavGraphBuilder.wordsNavGraph(
         WordsGameListScreen(
             gameId = backStackEntry.arguments?.getString("gameId").orEmpty(),
             onGameClick = { gameId ->
-                navController.navigate(WordsApp.gameDetail(gameId)) {
-                    popUpTo(WordsApp.GAME) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(WordsApp.gameDetail(gameId))
             },
             onGameClosed = {
                 navController.navigate(WordsApp.gameDetail(LastViewedStore.ALL)) {

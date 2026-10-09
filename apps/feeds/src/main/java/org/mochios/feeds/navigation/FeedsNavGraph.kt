@@ -10,6 +10,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.feeds.ui.feed.FeedScreen
 import org.mochios.feeds.ui.feedlist.CreateFeedScreen
 import org.mochios.feeds.ui.find.FindFeedsScreen
@@ -128,10 +129,7 @@ fun NavGraphBuilder.feedsNavGraph(
                 // Swap the current feed in-place rather than stacking — back
                 // from a feed goes to the host (not a chain of every feed
                 // the user clicked in the drawer).
-                navController.navigate(FeedsApp.feed(feedId)) {
-                    popUpTo(FeedsApp.FEED) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(FeedsApp.feed(feedId))
             },
             onNavigateToFindFeeds = { navController.navigate(FeedsApp.findFeeds()) },
             onNavigateToCreateFeed = { navController.navigate(FeedsApp.CREATE_FEED) },

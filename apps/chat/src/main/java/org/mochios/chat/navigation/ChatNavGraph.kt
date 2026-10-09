@@ -11,6 +11,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.chat.ui.chat.ChatScreen
 import org.mochios.chat.ui.newchat.NewChatScreen
 import org.mochios.chat.ui.router.ChatRouter
@@ -64,10 +65,7 @@ fun NavGraphBuilder.chatNavGraph(
         ChatScreen(
             chatId = chatId,
             onSelectChat = { id ->
-                navController.navigate(ChatApp.chat(id)) {
-                    popUpTo(ChatApp.CHAT) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(ChatApp.chat(id))
             },
             onNewChat = { navController.navigate(ChatApp.newChat()) },
             onSettings = { id -> navController.navigate(ChatApp.chatSettings(id)) },

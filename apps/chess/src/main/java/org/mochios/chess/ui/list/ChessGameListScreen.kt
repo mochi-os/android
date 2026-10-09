@@ -59,6 +59,7 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.chess.R
 import org.mochios.chess.navigation.ChessApp
 import org.mochios.chess.ui.detail.ChessGameDetailScreen
@@ -119,10 +120,7 @@ fun ChessGameListScreen(
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
             if (item.id != selectedGameId) {
-                navController.navigate(ChessApp.gameDetail(item.id)) {
-                    popUpTo(ChessApp.GAME) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(ChessApp.gameDetail(item.id))
             }
         },
         emptyState = {

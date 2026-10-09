@@ -58,6 +58,7 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.go.R
 import org.mochios.go.navigation.GoApp
 import org.mochios.go.ui.detail.GoGameDetailScreen
@@ -128,10 +129,7 @@ fun GoGameListScreen(
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
             if (item.id != selectedGameId) {
-                navController.navigate(GoApp.gameDetail(item.id)) {
-                    popUpTo(GoApp.GAME) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(GoApp.gameDetail(item.id))
             }
         },
         emptyState = {

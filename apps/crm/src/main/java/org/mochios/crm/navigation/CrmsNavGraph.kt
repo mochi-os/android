@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.crm.ui.design.ClassDetailScreen
 import org.mochios.crm.ui.design.CreateClassScreen
 import org.mochios.crm.ui.design.CreateFieldScreen
@@ -111,16 +112,10 @@ fun NavGraphBuilder.crmsNavGraph(
         CrmScreen(
             crmId = crmId,
             onSelectCrm = { id ->
-                navController.navigate(CrmsApp.crm(id)) {
-                    popUpTo(CrmsApp.CRM) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(CrmsApp.crm(id))
             },
             onSelectAll = {
-                navController.navigate(CrmsApp.crm(LastViewedStore.ALL)) {
-                    popUpTo(CrmsApp.CRM) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(CrmsApp.crm(LastViewedStore.ALL))
             },
             onFindCrms = { navController.navigate(CrmsApp.FIND_CRMS) },
             onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },
@@ -151,16 +146,10 @@ fun NavGraphBuilder.crmsNavGraph(
         CrmScreen(
             crmId = crmId,
             onSelectCrm = { id ->
-                navController.navigate(CrmsApp.crm(id)) {
-                    popUpTo(CrmsApp.CRM) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(CrmsApp.crm(id))
             },
             onSelectAll = {
-                navController.navigate(CrmsApp.crm(LastViewedStore.ALL)) {
-                    popUpTo(CrmsApp.CRM) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(CrmsApp.crm(LastViewedStore.ALL))
             },
             onFindCrms = { navController.navigate(CrmsApp.FIND_CRMS) },
             onCreateCrm = { navController.navigate(CrmsApp.CREATE_CRM) },

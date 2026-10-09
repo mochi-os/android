@@ -12,6 +12,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.projects.ui.design.ClassDetailScreen
 import org.mochios.projects.ui.design.CreateClassScreen
 import org.mochios.projects.ui.design.CreateFieldScreen
@@ -137,16 +138,10 @@ fun NavGraphBuilder.projectsNavGraph(
         ProjectScreen(
             projectId = projectId,
             onSelectProject = { id ->
-                navController.navigate(ProjectsApp.project(id)) {
-                    popUpTo(ProjectsApp.PROJECT) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(ProjectsApp.project(id))
             },
             onSelectAll = {
-                navController.navigate(ProjectsApp.project(LastViewedStore.ALL)) {
-                    popUpTo(ProjectsApp.PROJECT) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(ProjectsApp.project(LastViewedStore.ALL))
             },
             onFindProjects = { navController.navigate(ProjectsApp.FIND_PROJECTS) },
             onCreateProject = { navController.navigate(ProjectsApp.CREATE_PROJECT) },
@@ -182,16 +177,10 @@ fun NavGraphBuilder.projectsNavGraph(
         ProjectScreen(
             projectId = projectId,
             onSelectProject = { id ->
-                navController.navigate(ProjectsApp.project(id)) {
-                    popUpTo(ProjectsApp.PROJECT) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(ProjectsApp.project(id))
             },
             onSelectAll = {
-                navController.navigate(ProjectsApp.project(LastViewedStore.ALL)) {
-                    popUpTo(ProjectsApp.PROJECT) { inclusive = true }
-                    launchSingleTop = true
-                }
+                navController.navigateFromDrawer(ProjectsApp.project(LastViewedStore.ALL))
             },
             onFindProjects = { navController.navigate(ProjectsApp.FIND_PROJECTS) },
             onCreateProject = { navController.navigate(ProjectsApp.CREATE_PROJECT) },

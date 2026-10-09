@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import android.net.Uri
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.util.navigateFromDrawer
 import org.mochios.people.ui.components.PeopleDrawerNavigation
 import org.mochios.people.ui.components.PeopleSidebarSection
 import org.mochios.people.ui.contacts.AddContactScreen
@@ -79,21 +80,7 @@ private fun NavController.openPeopleSection(section: PeopleSidebarSection) {
         PeopleSidebarSection.GROUPS -> PeopleApp.GROUPS
         PeopleSidebarSection.PROFILE -> PeopleApp.PROFILE
     }
-    openFromDrawer(target)
-}
-
-/**
- * Opens a drawer pick in place of the screen it was picked on, so drawer
- * screens never stack and Back leaves the app from any of them.
- */
-private fun NavController.openFromDrawer(route: String) {
-    val current = currentDestination?.id
-    navigate(route) {
-        if (current != null) {
-            popUpTo(current) { inclusive = true }
-        }
-        launchSingleTop = true
-    }
+    navigateFromDrawer(target)
 }
 
 /**
@@ -104,7 +91,7 @@ private fun NavController.openContacts() {
     while (previousBackStackEntry?.destination?.route?.startsWith(PEOPLE_ROUTE_PREFIX) == true) {
         popBackStack()
     }
-    openFromDrawer(PeopleApp.contacts())
+    navigateFromDrawer(PeopleApp.contacts())
 }
 
 private const val PEOPLE_ROUTE_PREFIX = "people/"
@@ -116,8 +103,8 @@ fun NavGraphBuilder.peopleNavGraph(
     onOpenLink: (String) -> Unit = {},
 ) {
     val drawer = PeopleDrawerNavigation(
-        onOpenBook = { id -> navController.openFromDrawer(PeopleApp.book(id)) },
-        onOpenAllContacts = { navController.openFromDrawer(PeopleApp.contacts()) },
+        onOpenBook = { id -> navController.navigateFromDrawer(PeopleApp.book(id)) },
+        onOpenAllContacts = { navController.navigateFromDrawer(PeopleApp.contacts()) },
         onSwitchSection = { section -> navController.openPeopleSection(section) },
         onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
         onLogout = onLogout,
