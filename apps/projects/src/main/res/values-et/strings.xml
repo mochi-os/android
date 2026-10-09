@@ -92,7 +92,7 @@
     <string name="projects_request_field_draft">Mustand</string>
     <string name="projects_request_create_action">Loo</string>
     <string name="projects_diff_unified">Ühendatud</string>
-    <string name="projects_diff_split">Jaga</string>
+    <string name="projects_diff_split">Kõrvuti</string>
     <string name="projects_diff_empty">Erinevus pole saadaval</string>
     <string name="projects_board_unset">[määramata]</string>
     <string name="projects_board_new">Uus</string>

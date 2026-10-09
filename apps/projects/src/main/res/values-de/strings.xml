@@ -92,7 +92,7 @@
     <string name="projects_request_field_draft">Entwurf</string>
     <string name="projects_request_create_action">Erstellen</string>
     <string name="projects_diff_unified">Vereinheitlicht</string>
-    <string name="projects_diff_split">Teilen</string>
+    <string name="projects_diff_split">Nebeneinander</string>
     <string name="projects_diff_empty">Kein Diff verfügbar</string>
     <string name="projects_board_unset">[nicht gesetzt]</string>
     <string name="projects_board_new">Neu</string>

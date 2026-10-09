@@ -92,7 +92,7 @@
     <string name="projects_request_field_draft">Utkast</string>
     <string name="projects_request_create_action">Opprett</string>
     <string name="projects_diff_unified">Sameint</string>
-    <string name="projects_diff_split">Del</string>
+    <string name="projects_diff_split">Side ved side</string>
     <string name="projects_diff_empty">Ingen diff tilgjengeleg</string>
     <string name="projects_board_unset">[ikkje sett]</string>
     <string name="projects_board_new">Ny</string>

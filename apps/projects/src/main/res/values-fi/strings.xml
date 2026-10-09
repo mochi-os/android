@@ -92,7 +92,7 @@
     <string name="projects_request_field_draft">Luonnos</string>
     <string name="projects_request_create_action">Luo</string>
     <string name="projects_diff_unified">Yhtenäinen</string>
-    <string name="projects_diff_split">Jaa</string>
+    <string name="projects_diff_split">Rinnakkain</string>
     <string name="projects_diff_empty">Ei saatavilla olevaa diffiä</string>
     <string name="projects_board_unset">[ei asetettu]</string>
     <string name="projects_board_new">Uusi</string>

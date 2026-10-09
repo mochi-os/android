@@ -91,7 +91,7 @@
     <string name="projects_request_field_description">Paglalarawan</string>
     <string name="projects_request_field_draft">Draft</string>
     <string name="projects_request_create_action">Gumawa</string>
-    <string name="projects_diff_unified">Unified</string>
+    <string name="projects_diff_unified">Pinag-isa</string>
     <string name="projects_diff_split">Hatiin</string>
     <string name="projects_diff_empty">Walang available na diff</string>
     <string name="projects_board_unset">[hindi naitakda]</string>
