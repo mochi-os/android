@@ -109,9 +109,6 @@ import kotlin.math.roundToInt
 /** The space between a cell's entries. */
 private val STEP = 2.dp
 
-/** The space between an agenda row's dot, title and time. */
-private val SPACE = 10.dp
-
 /**
  * A chip lifted by a long press: which occurrence, the day of the cell it
  * was lifted from, where in the chip the finger took it, and the chip's
@@ -983,15 +980,16 @@ private val TITLE = 18.sp
 private val PAD = 16.dp
 
 /**
- * One agenda row, as the web's list lays one out: the occurrence's dot, a
- * ring for a tentative one, and its title with its marks on the first line;
- * its time on the second, all day, a span of clock times within its day, or
- * across days its two ends on lines of their own, each with its day written
- * as the headings write one and read in its own zone when the views show
- * events in theirs; where it is on a third. A past or cancelled occurrence
- * is faded, and the row is tinted in the primary colour while its summary is
- * open, [chosen]. The [calendar]'s name, when given, goes last. A [divided]
- * row draws a hairline under itself, before the next row of its day.
+ * One agenda row, as the other views draw an occurrence on two lines: first
+ * the [Detail] line, the occurrence's dot, a ring for a tentative one, its
+ * time and its marks; its title beneath in a larger type; where it is under
+ * that. The time is all day, a span of clock times within its day, or across
+ * days its two ends on lines of their own, each with its day written as the
+ * headings write one and read in its own zone when the views show events in
+ * theirs. A past or cancelled occurrence is faded, and the row is tinted in
+ * the primary colour while its summary is open, [chosen]. The [calendar]'s
+ * name, when given, goes last. A [divided] row draws a hairline under
+ * itself, before the next row of its day.
  */
 @Composable
 fun AgendaRow(
@@ -1021,8 +1019,6 @@ fun AgendaRow(
         }
     }
     val muted = MaterialTheme.colorScheme.onSurfaceVariant
-    // The second and third lines start under the title, clear of the dot.
-    val under = Modifier.padding(start = DOT + SPACE)
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -1041,25 +1037,11 @@ fun AgendaRow(
                 )
                 .padding(horizontal = PAD, vertical = PAD),
         ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(SPACE),
-            ) {
-                Dot(instance)
-                Name(
-                    instance,
-                    MaterialTheme.typography.bodyLarge.copy(fontSize = TITLE, lineHeight = TITLE * 1.3f),
-                    Modifier.weight(1f),
-                )
-                for (mark in marks(instance)) {
-                    Glyph(mark, 16.dp)
-                }
-            }
-            Text(
-                text = time,
-                style = MaterialTheme.typography.bodyMedium,
-                color = muted,
-                modifier = under,
+            Detail(instance, time, MaterialTheme.typography.bodyMedium, wrapped = true)
+            Name(
+                instance,
+                MaterialTheme.typography.bodyLarge.copy(fontSize = TITLE, lineHeight = TITLE * 1.3f),
+                Modifier.fillMaxWidth(),
             )
             if (instance.location.isNotBlank()) {
                 Text(
@@ -1068,7 +1050,6 @@ fun AgendaRow(
                     color = muted,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    modifier = under,
                 )
             }
             if (calendar != null) {
@@ -1078,7 +1059,6 @@ fun AgendaRow(
                     color = muted,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    modifier = under,
                 )
             }
         }

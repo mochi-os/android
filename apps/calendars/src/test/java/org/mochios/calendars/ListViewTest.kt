@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.toPixelMap
+import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -24,6 +25,7 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.onRoot
+import androidx.compose.ui.text.TextLayoutResult
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -278,7 +280,28 @@ class ListViewTest {
         val time = "${heading(anchor, format)} ${format.formatTime(start)} –\n" +
             "${heading(anchor.plusDays(1), format)} ${format.formatTime(finish)}"
         assertTrue(time, time.contains("05/10/2026") && time.contains("06/10/2026"))
-        rule.onAllNodesWithText(time)[0].assertIsDisplayed()
+        val node = rule.onAllNodesWithText(time, useUnmergedTree = true)[0].assertIsDisplayed().fetchSemanticsNode()
+        // Both ends drawn, not the first line alone.
+        val layouts = mutableListOf<TextLayoutResult>()
+        node.config[SemanticsActions.GetTextLayoutResult].action?.invoke(layouts)
+        assertEquals(2, layouts.first().lineCount)
+    }
+
+    @Test
+    fun `a row opens with its dot, time and marks on a line of their own and its title beneath, as the other views draw one`() {
+        val day = LocalDate.now(london).plusDays(2)
+        events = listOf(day to "Item 1")
+        first = noon(day)
+        last = noon(day)
+        show(open = day)
+        waitFor("Item 1")
+        val time = Format(UserPreferences()).formatClockRange(noon(day), noon(day) + 3_600)
+        // The row merges its words for a screen reader; each is measured on its own.
+        val clock = rule.onNodeWithText(time, useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        val title = rule.onNodeWithText("Item 1", useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        assertTrue("time $clock, title $title", clock.bottom <= title.top)
+        // The title starts where the dot does, and the time after the dot.
+        assertTrue("time $clock, title $title", title.left < clock.left)
     }
 
     @Test

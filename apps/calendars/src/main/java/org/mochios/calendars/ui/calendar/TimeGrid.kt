@@ -1340,26 +1340,42 @@ internal fun Glyph(mark: Mark, size: Dp) {
  * The line of a two-line entry that is not its title, muted: its [Dot],
  * [time] when there is one, then the marks, all from the start of the line,
  * the dot as far from the time as a one-line entry's is from its title.
+ * [wrapped] lets the time run onto the lines it holds, as a span across days
+ * does in the list, with the dot and the marks level with its first.
  */
 @Composable
-fun Detail(instance: Instance, time: String?, style: TextStyle, modifier: Modifier = Modifier, backwards: Boolean = false) {
+fun Detail(
+    instance: Instance,
+    time: String?,
+    style: TextStyle,
+    modifier: Modifier = Modifier,
+    backwards: Boolean = false,
+    wrapped: Boolean = false,
+) {
+    val line = leading(style)
+    // Centred on the time's first line, when it may have more than one.
+    val level = { size: Dp -> if (wrapped) Modifier.padding(top = ((line - size) / 2).coerceAtLeast(0.dp)) else Modifier }
     Row(
         modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically,
+        verticalAlignment = if (wrapped) Alignment.Top else Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GAP),
     ) {
-        Dot(instance)
+        Box(modifier = level(DOT)) {
+            Dot(instance)
+        }
         if (time != null) {
             Text(
                 text = time,
                 style = style,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                softWrap = false,
+                maxLines = if (wrapped) Int.MAX_VALUE else 1,
+                softWrap = wrapped,
             )
         }
         for (mark in marks(instance, backwards, stacked = true)) {
-            Glyph(mark, GLYPH)
+            Box(modifier = level(GLYPH)) {
+                Glyph(mark, GLYPH)
+            }
         }
     }
 }
