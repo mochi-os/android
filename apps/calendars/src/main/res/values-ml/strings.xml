@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s മുതൽ %2$s വരെ</string>
     <string name="calendars_truncated">എല്ലാം കാണിക്കാൻ കഴിയാത്തത്ര ഇവന്റുകളുണ്ട്. ചെറിയ ശ്രേണി തിരഞ്ഞെടുക്കുക.</string>
     <string name="calendars_list_empty">ഇവന്റുകളൊന്നുമില്ല</string>
-    <string name="calendars_list_nothing">ഒന്നും ആസൂത്രണം ചെയ്തിട്ടില്ല. ഇവന്റ് സൃഷ്ടിക്കാൻ ടാപ്പ് ചെയ്യുക.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(തലക്കെട്ടില്ല)</string>

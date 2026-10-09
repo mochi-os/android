@@ -67,7 +67,6 @@
     <string name="calendars_range">minn %1$s sa %2$s</string>
     <string name="calendars_truncated">Wisq avvenimenti biex jintwerew kollha. Agħżel firxa iqsar.</string>
     <string name="calendars_list_empty">L-ebda avvenimenti</string>
-    <string name="calendars_list_nothing">Xejn ippjanat. Agħfas biex toħloq avveniment.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(L-ebda titlu)</string>

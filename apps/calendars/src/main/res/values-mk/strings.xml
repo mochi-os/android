@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s до %2$s</string>
     <string name="calendars_truncated">Премногу настани за да се прикажат сите. Изберете пократок период.</string>
     <string name="calendars_list_empty">Нема настани</string>
-    <string name="calendars_list_nothing">Ништо не е планирано. Допрете за да создадете настан.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Без наслов)</string>

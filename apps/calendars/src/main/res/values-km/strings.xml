@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s ដល់ %2$s</string>
     <string name="calendars_truncated">មានព្រឹត្តិការណ៍ច្រើនពេក មិនអាចបង្ហាញទាំងអស់បានទេ។ សូមជ្រើសរើសចន្លោះខ្លីជាងនេះ។</string>
     <string name="calendars_list_empty">មិនមានព្រឹត្តិការណ៍</string>
-    <string name="calendars_list_nothing">មិនមានអ្វីគ្រោងទុកទេ។ ប៉ះដើម្បីបង្កើតព្រឹត្តិការណ៍។</string>
     <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(គ្មានចំណងជើង)</string>

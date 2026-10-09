@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s till %2$s</string>
     <string name="calendars_truncated">För många händelser för att visa alla. Välj en kortare period.</string>
     <string name="calendars_list_empty">Inga händelser</string>
-    <string name="calendars_list_nothing">Inget planerat. Tryck för att skapa en händelse.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Ingen titel)</string>

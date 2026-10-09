@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s kuni %2$s</string>
     <string name="calendars_truncated">Sündmusi on kõigi kuvamiseks liiga palju. Vali lühem vahemik.</string>
     <string name="calendars_list_empty">Sündmusi pole</string>
-    <string name="calendars_list_nothing">Midagi pole planeeritud. Sündmuse loomiseks puudutage.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Pealkirjata)</string>

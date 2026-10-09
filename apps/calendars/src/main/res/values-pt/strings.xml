@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s a %2$s</string>
     <string name="calendars_truncated">Demasiados eventos para os mostrar todos. Escolha um intervalo mais curto.</string>
     <string name="calendars_list_empty">Sem eventos</string>
-    <string name="calendars_list_nothing">Nada planeado. Toque para criar um evento.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Sem título)</string>

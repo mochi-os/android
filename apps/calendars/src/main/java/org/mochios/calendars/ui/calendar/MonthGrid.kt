@@ -712,8 +712,8 @@ private fun Modifier.pick(day: LocalDate, onPick: (Offset) -> Unit): Modifier {
  * ones first, as the day view stacks them.
  * [onTop] is told the day of the topmost row in view as the list scrolls,
  * whose month the toolbar names. The day it opens on, the anchor, leads it
- * even when empty, with a row that [onCreate] answers with a new event that
- * day, and the list scrolls back to it whenever the anchor moves. A new
+ * even when empty, as its heading alone, and the list scrolls back to it
+ * whenever the anchor moves. A new
  * anchor the pages already held reach is shown at once; one beyond them
  * shows a spinner in place of the old range until it has been read, so
  * nothing is drawn and then pushed aside. A page read in before the earliest, from a pull
@@ -737,7 +737,6 @@ fun AgendaList(
     onOpen: (Instance) -> Unit,
     selected: Instance? = null,
     onTop: (LocalDate) -> Unit = {},
-    onCreate: (LocalDate) -> Unit = {},
 ) {
     val today = LocalDate.now(viewModel.timezone())
     val listState = rememberLazyListState()
@@ -879,9 +878,6 @@ fun AgendaList(
                 is Listed.Day -> stickyHeader(key = row.key) {
                     Heading(row.day, current = row.day == today)
                 }
-                is Listed.Empty -> item(key = row.key) {
-                    EmptyDay { onCreate(row.day) }
-                }
                 is Listed.Event -> item(key = row.key) {
                     AgendaRow(
                         instance = row.instance,
@@ -914,9 +910,6 @@ private sealed class Listed(val key: String, val day: LocalDate) {
     /** The heading [day]'s rows sit under. */
     class Day(day: LocalDate) : Listed("day:$day", day)
 
-    /** [day], the day the list opened on, which has nothing on it. */
-    class Empty(day: LocalDate) : Listed("empty:$day", day)
-
     /** An occurrence on [day]; [last] when nothing of its day follows it. */
     class Event(day: LocalDate, val instance: Instance, val last: Boolean) :
         Listed("$day-${instance.event}-${instance.start}", day)
@@ -924,8 +917,8 @@ private sealed class Listed(val key: String, val day: LocalDate) {
 
 /**
  * The list view's rows in order: each day's heading and its occurrences.
- * [opened], the day the list opened on, has a row of its own saying it is
- * empty when nothing is on it; null while the list is searched.
+ * [opened], the day the list opened on, has its heading even when nothing is
+ * on it; null while the list is searched.
  */
 private fun rows(
     grouped: Map<LocalDate, List<Instance>>,
@@ -934,11 +927,7 @@ private fun rows(
     val days = (grouped.keys + listOfNotNull(opened)).toSortedSet()
     for (day in days) {
         add(Listed.Day(day))
-        val occurrences = grouped[day]
-        if (occurrences == null) {
-            add(Listed.Empty(day))
-            continue
-        }
+        val occurrences = grouped[day] ?: continue
         occurrences.forEachIndexed { index, instance ->
             add(Listed.Event(day, instance, last = index == occurrences.lastIndex))
         }
@@ -1134,20 +1123,4 @@ private fun Heading(day: LocalDate, current: Boolean) {
     )
 }
 
-/**
- * The row under a day's heading when nothing is on it: "Nothing planned. Tap
- * to create.", which [onCreate] answers with a new event that day.
- */
-@Composable
-private fun EmptyDay(onCreate: () -> Unit) {
-    Text(
-        text = stringResource(R.string.calendars_list_nothing),
-        style = MaterialTheme.typography.bodyLarge,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onCreate)
-            .padding(horizontal = PAD, vertical = PAD),
-    )
-}
 

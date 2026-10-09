@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s hadi %2$s</string>
     <string name="calendars_truncated">Matukio ni mengi mno kuonyesha yote. Chagua kipindi kifupi zaidi.</string>
     <string name="calendars_list_empty">Hakuna matukio</string>
-    <string name="calendars_list_nothing">Hakuna kilichopangwa. Gusa ili kuunda tukio.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Bila kichwa)</string>

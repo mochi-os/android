@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s sampai %2$s</string>
     <string name="calendars_truncated">Terlalu banyak acara untuk ditampilkan semua. Pilih rentang yang lebih pendek.</string>
     <string name="calendars_list_empty">Tidak ada acara</string>
-    <string name="calendars_list_nothing">Tidak ada rencana. Ketuk untuk membuat acara.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Tanpa judul)</string>

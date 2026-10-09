@@ -892,7 +892,7 @@ internal fun Page(
         )
         // The list view opens on the anchor day and pages on as the reader
         // scrolls, so it has no range to pick; its search is in the toolbar.
-        else -> AgendaList(state, viewModel, onOpen, selected, onTop = onListed, onCreate = dated)
+        else -> AgendaList(state, viewModel, onOpen, selected, onTop = onListed)
     }
 }
 

@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s go %2$s</string>
     <string name="calendars_truncated">An iomarca imeachtaí le taispeáint go léir. Roghnaigh raon níos giorra.</string>
     <string name="calendars_list_empty">Níl aon imeacht</string>
-    <string name="calendars_list_nothing">Níl aon rud pleanáilte. Tapáil chun imeacht a chruthú.</string>
     <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Gan teideal)</string>

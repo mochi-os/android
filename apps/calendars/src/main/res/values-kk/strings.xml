@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s – %2$s</string>
     <string name="calendars_truncated">Іс-шаралар тым көп, барлығын көрсету мүмкін емес. Қысқарақ аралықты таңдаңыз.</string>
     <string name="calendars_list_empty">Іс-шаралар жоқ</string>
-    <string name="calendars_list_nothing">Ештеңе жоспарланбаған. Іс-шара құру үшін түртіңіз.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Атауы жоқ)</string>

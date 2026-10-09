@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s zuwa %2$s</string>
     <string name="calendars_truncated">Tarurruka sun yi yawa da ba za a iya nuna duka ba. Zaɓi ƙaramin zango.</string>
     <string name="calendars_list_empty">Babu tarurruka</string>
-    <string name="calendars_list_nothing">Babu abin da aka tsara. Danna don ƙirƙirar taro.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Babu take)</string>

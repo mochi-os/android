@@ -232,6 +232,19 @@ class ListViewTest {
     )
 
     @Test
+    fun `the day the list opens on is headed even when empty, with nothing beneath its heading`() {
+        events = listOf(anchor.plusDays(1) to "Later")
+        first = noon(anchor.plusDays(1))
+        last = noon(anchor.plusDays(1))
+        val format = Format(UserPreferences())
+        show(format = format)
+        waitFor("Later")
+        val opened = rule.onNodeWithText(heading(anchor, format)).fetchSemanticsNode().boundsInRoot
+        val next = rule.onNodeWithText(heading(anchor.plusDays(1), format)).fetchSemanticsNode().boundsInRoot
+        assertTrue("opened $opened, next $next", next.top - opened.bottom < 2f)
+    }
+
+    @Test
     fun `a year-first date leads its heading, with the short weekday after it`() {
         events = listOf(anchor to "Item")
         first = noon(anchor)

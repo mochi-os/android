@@ -67,7 +67,6 @@
     <string name="calendars_range">%1$s देखि %2$s सम्म</string>
     <string name="calendars_truncated">सबै देखाउन नसकिने गरी धेरै कार्यक्रम छन्। छोटो दायरा छान्नुहोस्।</string>
     <string name="calendars_list_empty">कुनै कार्यक्रम छैन</string>
-    <string name="calendars_list_nothing">केही योजना गरिएको छैन। कार्यक्रम बनाउन ट्याप गर्नुहोस्।</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(शीर्षक छैन)</string>

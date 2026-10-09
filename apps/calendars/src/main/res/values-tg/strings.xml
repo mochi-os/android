@@ -67,7 +67,6 @@
     <string name="calendars_range">Аз %1$s то %2$s</string>
     <string name="calendars_truncated">Рӯйдодҳо барои нишон додани ҳамаашон аз ҳад зиёданд. Фосилаи кӯтоҳтарро интихоб кунед.</string>
     <string name="calendars_list_empty">Ягон рӯйдод нест</string>
-    <string name="calendars_list_nothing">Ҳеҷ чиз ба нақша гирифта нашудааст. Барои эҷоди рӯйдод зер кунед.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Бе сарлавҳа)</string>

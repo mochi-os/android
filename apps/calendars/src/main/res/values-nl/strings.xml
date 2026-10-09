@@ -66,7 +66,6 @@
     <string name="calendars_range">%1$s tot %2$s</string>
     <string name="calendars_truncated">Te veel afspraken om ze allemaal te tonen. Kies een kortere periode.</string>
     <string name="calendars_list_empty">Geen afspraken</string>
-    <string name="calendars_list_nothing">Niets gepland. Tik om een afspraak te maken.</string>
     <string name="calendars_list_heading">%1$s %2$s</string>
     <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Geen titel)</string>
