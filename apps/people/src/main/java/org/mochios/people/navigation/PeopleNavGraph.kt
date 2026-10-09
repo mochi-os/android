@@ -79,21 +79,35 @@ private fun NavController.openPeopleSection(section: PeopleSidebarSection) {
         PeopleSidebarSection.GROUPS -> PeopleApp.GROUPS
         PeopleSidebarSection.PROFILE -> PeopleApp.PROFILE
     }
-    navigate(target) {
-        // Pop back to the router so the user always lands on a single
-        // section screen instead of accumulating siblings.
-        popUpTo(PeopleApp.ROUTER) { inclusive = false }
+    openFromDrawer(target)
+}
+
+/**
+ * Opens a drawer pick in place of the screen it was picked on, so drawer
+ * screens never stack and Back leaves the app from any of them.
+ */
+private fun NavController.openFromDrawer(route: String) {
+    val current = currentDestination?.id
+    navigate(route) {
+        if (current != null) {
+            popUpTo(current) { inclusive = true }
+        }
         launchSingleTop = true
     }
 }
 
-/** Back to a freshly loaded contacts list, dropping whatever led here. */
+/**
+ * Back to a freshly loaded contacts list, dropping every People screen that
+ * led here but leaving another app's screens below it in place.
+ */
 private fun NavController.openContacts() {
-    navigate(PeopleApp.contacts()) {
-        popUpTo(PeopleApp.ROUTER) { inclusive = false }
-        launchSingleTop = true
+    while (previousBackStackEntry?.destination?.route?.startsWith(PEOPLE_ROUTE_PREFIX) == true) {
+        popBackStack()
     }
+    openFromDrawer(PeopleApp.contacts())
 }
+
+private const val PEOPLE_ROUTE_PREFIX = "people/"
 
 fun NavGraphBuilder.peopleNavGraph(
     navController: NavController,
@@ -102,8 +116,8 @@ fun NavGraphBuilder.peopleNavGraph(
     onOpenLink: (String) -> Unit = {},
 ) {
     val drawer = PeopleDrawerNavigation(
-        onOpenBook = { id -> navController.navigate(PeopleApp.book(id)) },
-        onOpenAllContacts = { navController.openContacts() },
+        onOpenBook = { id -> navController.openFromDrawer(PeopleApp.book(id)) },
+        onOpenAllContacts = { navController.openFromDrawer(PeopleApp.contacts()) },
         onSwitchSection = { section -> navController.openPeopleSection(section) },
         onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
         onLogout = onLogout,
@@ -155,15 +169,7 @@ fun NavGraphBuilder.peopleNavGraph(
         val book = backStackEntry.arguments?.getString("id").orEmpty()
         ContactsScreen(
             onOpenContact = { id -> navController.navigate(PeopleApp.contactEdit(id)) },
-            drawer = drawer.copy(
-                onOpenBook = { id ->
-                    // Swapping books from inside one replaces it rather than
-                    // stacking on it, so Back still lands on the contacts list.
-                    navController.navigate(PeopleApp.book(id)) {
-                        popUpTo(PeopleApp.BOOK) { inclusive = true }
-                    }
-                },
-            ),
+            drawer = drawer,
             onOpenNotifications = onOpenNotifications,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
             onAddContact = { navController.navigate(PeopleApp.contactsAdd(book = book)) },
