@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -56,12 +55,10 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.InlineErrorState
@@ -69,6 +66,8 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.StatusBadge
+import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.User
@@ -288,7 +287,7 @@ private fun SearchBody(
                     LazyColumn(
                         modifier = Modifier.fillMaxSize(),
                         contentPadding = PaddingValues(vertical = 4.dp),
-                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
                     ) {
                         items(state.searchResults, key = { user -> user.id }) { user ->
                             AddContactRow(
@@ -314,42 +313,17 @@ private fun AddContactRow(
     onSelect: () -> Unit,
     onAct: () -> Unit,
 ) {
-    val avatarUrl = "/people/${user.id}/-/avatar"
-
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 4.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        EntityAvatar(
-            name = user.name,
-            src = avatarUrl,
-            seed = user.id,
-            size = 40.dp,
-        )
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = user.name,
-                style = MaterialTheme.typography.bodyLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            if (user.fingerprintHyphens.isNotBlank()) {
-                Text(
-                    text = user.fingerprintHyphens,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-        // One button per row — the row's own tap opens the profile, where both
-        // actions are offered side by side.
-        RowActionButton(state = state, busy = busy, onClick = onAct)
-    }
+    EntityListRow(
+        name = user.name,
+        seed = user.id,
+        icon = Icons.Outlined.PersonAddAlt,
+        onClick = onSelect,
+        subtitle = user.fingerprintHyphens,
+        avatarUrl = "/people/${user.id}/-/avatar",
+        trailing = {
+            RowActionButton(state = state, busy = busy, onClick = onAct)
+        },
+    )
 }
 
 @Composable
@@ -358,27 +332,42 @@ private fun RowActionButton(
     busy: Boolean,
     onClick: () -> Unit,
 ) {
+    val padding = ButtonDefaults.ButtonWithIconContentPadding
     when (state) {
-        AddContactState.SELF -> MochiOutlinedButton(onClick = {}, enabled = false) {
-            Text(stringResource(R.string.people_contacts_thats_you))
+        AddContactState.SELF, AddContactState.FRIEND, AddContactState.INVITED -> {
+            state.status()?.let { status ->
+                StatusBadge(
+                    label = stringResource(status.label),
+                    tone = status.tone,
+                    size = StatusBadgeSize.Compact,
+                )
+            }
         }
-        AddContactState.FRIEND -> MochiOutlinedButton(onClick = {}, enabled = false) {
-            Text(stringResource(R.string.people_contacts_friend))
-        }
-        AddContactState.INVITED -> MochiOutlinedButton(onClick = {}, enabled = false) {
-            Text(stringResource(R.string.people_contacts_invited))
-        }
-        AddContactState.PENDING -> MochiButton(onClick = onClick, enabled = !busy) {
+        AddContactState.PENDING -> MochiButton(
+            onClick = onClick,
+            enabled = !busy,
+            contentPadding = padding,
+        ) {
             ButtonContent(busy = busy, icon = Icons.Default.Check) {
                 Text(stringResource(R.string.people_contacts_accept))
             }
         }
-        AddContactState.IN_CONTACTS -> MochiOutlinedButton(onClick = onClick, enabled = !busy) {
-            Text(stringResource(R.string.people_contacts_invite))
+        AddContactState.IN_CONTACTS -> MochiOutlinedButton(
+            onClick = onClick,
+            enabled = !busy,
+            contentPadding = padding,
+        ) {
+            ButtonContent(busy = busy, icon = Icons.AutoMirrored.Filled.Send) {
+                Text(stringResource(R.string.people_contacts_invite))
+            }
         }
-        AddContactState.NONE -> MochiButton(onClick = onClick, enabled = !busy) {
+        AddContactState.NONE -> MochiButton(
+            onClick = onClick,
+            enabled = !busy,
+            contentPadding = padding,
+        ) {
             ButtonContent(busy = busy, icon = Icons.Default.PersonAdd) {
-                Text(stringResource(R.string.people_add_contact_add))
+                Text(stringResource(MochiR.string.common_add))
             }
         }
     }
