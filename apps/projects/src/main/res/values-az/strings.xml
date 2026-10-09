@@ -169,7 +169,6 @@
     <string name="projects_list_search_placeholder">Layihələrdə axtar</string>
     <string name="projects_list_no_matching">Uyğun layihə yoxdur</string>
     <string name="projects_list_empty">Hələ heç bir layihə yoxdur</string>
-    <string name="projects_list_add_to_home">Ana ekrana əlavə et</string>
     <string name="projects_find_search_placeholder">Layihə axtarın və ya URL yapışdırın</string>
     <string name="projects_find_search_hint">Abunə olmaq üçün layihələri axtarın</string>
     <string name="projects_search_objects_placeholder">Obyektləri axtar</string>

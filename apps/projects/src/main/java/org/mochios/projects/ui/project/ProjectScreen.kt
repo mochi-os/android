@@ -445,7 +445,7 @@ private fun ProjectRow(
                     onDismissRequest = { showMenu = false }
                 ) {
                     MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.projects_list_add_to_home)) },
+                        text = { Text(stringResource(MochiR.string.launcher_add_to_home)) },
                         onClick = {
                             showMenu = false
                             // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.

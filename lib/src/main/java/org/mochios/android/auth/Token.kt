@@ -18,6 +18,15 @@ object Token {
     /** How much life a cached token must have left to be handed out without a mint. */
     const val MARGIN: Long = 24L * 60 * 60 * 1000
 
+    /**
+     * The path the server serves each app at, where it differs from the name
+     * the client caches its token under. Home is served at the root.
+     */
+    private val paths = mapOf("home" to "")
+
+    /** The path to ask the server for [app]'s token by: its name, unless [paths] says otherwise. */
+    fun path(app: String): String = paths[app] ?: app
+
     private val expiryClaim = Regex("\"exp\"\\s*:\\s*(\\d+)")
 
     /** The `exp` claim as epoch milliseconds, or null when the token does not carry a readable one. */

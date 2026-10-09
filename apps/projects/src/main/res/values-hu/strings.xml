@@ -164,7 +164,6 @@
     <string name="projects_auth_mfa_unsupported">Az MFA még nem támogatott a mobilalkalmazásban</string>
     <string name="projects_auth_enter_code_sent">Adja meg a(z) %1$s címre küldött kódot</string>
     <string name="projects_auth_create_identity">Hozza létre identitását</string>
-    <string name="projects_list_add_to_home">Hozzáadás a kezdőképernyőhöz</string>
     <string name="projects_sort_field">Rendezés</string>
     <string name="projects_views_move_up">Mozgatás felfelé</string>
     <string name="projects_views_move_down">Mozgatás lefelé</string>

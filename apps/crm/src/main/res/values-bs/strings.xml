@@ -131,7 +131,6 @@
     <string name="crm_list_search_placeholder">Pretraži CRM</string>
     <string name="crm_list_no_matching">Nema odgovarajućeg CRM-a</string>
     <string name="crm_list_empty">Još nema CRM-a</string>
-    <string name="crm_list_add_to_home">Dodaj na početni ekran</string>
     <string name="crm_create_template">Predložak</string>
     <string name="crm_find_search_placeholder">Pretraži CRM ili zalijepi URL</string>
     <string name="crm_find_search_hint">Pretraži CRM na koji se želite pretplatiti</string>

@@ -164,7 +164,6 @@
     <string name="projects_auth_mfa_unsupported">MFA ez da oraindik onartzen aplikazio mugikorrean</string>
     <string name="projects_auth_enter_code_sent">Sartu %1$s helbidera bidalitako kodea</string>
     <string name="projects_auth_create_identity">Sortu zure identitatea</string>
-    <string name="projects_list_add_to_home">Gehitu hasierako pantailara</string>
     <string name="projects_sort_field">Ordenatu honen arabera</string>
     <string name="projects_views_move_up">Eraman gora</string>
     <string name="projects_views_move_down">Eraman behera</string>

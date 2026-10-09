@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Персонализирано</string>
     <string name="color_picker_clear">Изчисти</string>
     <string name="common_refresh">Опресни</string>
+    <string name="launcher_add_to_home">Добавяне към началния екран</string>
 </resources>

@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Benutzerdefiniert</string>
     <string name="color_picker_clear">Leeren</string>
     <string name="common_refresh">Aktualisieren</string>
+    <string name="launcher_add_to_home">Zum Startbildschirm hinzufügen</string>
 </resources>

@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Mukautettu</string>
     <string name="color_picker_clear">Tyhjennä</string>
     <string name="common_refresh">Päivitä</string>
+    <string name="launcher_add_to_home">Lisää aloitusnäytölle</string>
 </resources>

@@ -164,7 +164,6 @@
     <string name="projects_auth_mfa_unsupported">MFA wird in der mobilen App noch nicht unterstützt</string>
     <string name="projects_auth_enter_code_sent">Geben Sie den an %1$s gesendeten Code ein</string>
     <string name="projects_auth_create_identity">Identität erstellen</string>
-    <string name="projects_list_add_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="projects_search_objects_placeholder">Objekte suchen</string>
     <string name="projects_sort_field">Sortieren nach</string>
     <string name="projects_sort_direction_asc">Aufsteigend</string>

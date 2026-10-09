@@ -325,4 +325,5 @@
     <string name="color_picker_custom">අභිරුචි</string>
     <string name="color_picker_clear">හිස් කරන්න</string>
     <string name="common_refresh">අලුත් කරන්න</string>
+    <string name="launcher_add_to_home">මුල් තිරයට එක් කරන්න</string>
 </resources>

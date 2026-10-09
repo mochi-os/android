@@ -83,7 +83,6 @@
     <string name="projects_auth_enter_code_sent">Ingresá el código enviado a %1$s</string>
     <string name="projects_auth_create_identity">Creá tu identidad</string>
     <string name="projects_list_title">Proyectos</string>
-    <string name="projects_list_add_to_home">Agregar a la pantalla de inicio</string>
     <string name="projects_find_recommended">Recomendados</string>
     <string name="projects_sort_field">Ordenar por</string>
     <string name="projects_sort_rank">Manual</string>

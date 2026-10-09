@@ -59,7 +59,6 @@
     <string name="projects_auth_create_identity">Créez votre identité</string>
     <string name="projects_list_title">Projets</string>
     <string name="projects_list_close_search">Fermer la recherche</string>
-    <string name="projects_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="projects_find_recommended">Recommandés</string>
     <string name="projects_sort_field">Trier par</string>
     <string name="projects_sort_rank">Manuelle</string>

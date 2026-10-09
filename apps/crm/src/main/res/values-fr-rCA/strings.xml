@@ -34,7 +34,6 @@
     <string name="crm_settings_tab_general">Général</string>
     <string name="crm_field_save">Enregistrer les modifications</string>
     <string name="crm_field_position_body">Contenu</string>
-    <string name="crm_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="crm_find_recommended">Recommandés</string>
     <string name="crm_sort_field">Trier par</string>
     <string name="crm_sort_rank">Manuelle</string>

@@ -164,7 +164,6 @@
     <string name="projects_auth_mfa_unsupported">MFA-d ei toetata mobiilirakenduses veel</string>
     <string name="projects_auth_enter_code_sent">Sisesta kood, mis saadeti aadressile %1$s</string>
     <string name="projects_auth_create_identity">Loo oma identiteet</string>
-    <string name="projects_list_add_to_home">Lisa avakuvale</string>
     <string name="projects_sort_field">Sorteeri</string>
     <string name="projects_views_move_up">Liiguta üles</string>
     <string name="projects_views_move_down">Liiguta alla</string>

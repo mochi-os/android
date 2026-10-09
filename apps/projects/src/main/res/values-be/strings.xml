@@ -169,7 +169,6 @@
     <string name="projects_list_search_placeholder">Пошук праектаў</string>
     <string name="projects_list_no_matching">Адпаведных праектаў няма</string>
     <string name="projects_list_empty">Праектаў пакуль няма</string>
-    <string name="projects_list_add_to_home">Дадаць на галоўны экран</string>
     <string name="projects_find_search_placeholder">Шукайце праекты або ўстаўце URL</string>
     <string name="projects_find_search_hint">Шукайце праекты, на якія можна падпісацца</string>
     <string name="projects_search_objects_placeholder">Пошук аб\'ектаў</string>

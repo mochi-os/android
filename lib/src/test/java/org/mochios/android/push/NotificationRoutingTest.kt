@@ -8,6 +8,7 @@ package org.mochios.android.push
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.mochios.android.launcher.LAUNCHER_ACTIVITIES
 
 /**
  * Both transports resolve a channel through [notificationChannelFor]. These pin
@@ -71,9 +72,12 @@ class NotificationRoutingTest {
         }
     }
 
-    /** Settings has a launcher activity and no channel — it never posts notifications. */
+    /**
+     * Home and Settings have launcher activities and no channel: neither ever
+     * posts notifications.
+     */
     @Test
-    fun `launcher activities beyond the channel set are only settings`() {
-        assertEquals(setOf("settings"), LAUNCHER_ACTIVITIES.keys - NOTIFICATION_CHANNELS)
+    fun `launcher activities beyond the channel set are only home and settings`() {
+        assertEquals(setOf("home", "settings"), LAUNCHER_ACTIVITIES.keys - NOTIFICATION_CHANNELS)
     }
 }

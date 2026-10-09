@@ -138,7 +138,6 @@
     <string name="crm_views_direction_asc">Өсөхөөр</string>
     <string name="crm_sort_direction_desc">Буурахаар</string>
     <string name="crm_views_direction_desc">Буурахаар</string>
-    <string name="crm_list_add_to_home">Үндсэн дэлгэцэнд нэмэх</string>
     <string name="crm_search_objects_placeholder">Объект хайх</string>
     <string name="crm_links_search_placeholder">Объект хайх</string>
 

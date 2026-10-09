@@ -326,4 +326,5 @@
     <string name="color_picker_custom">Pielāgots</string>
     <string name="color_picker_clear">Notīrīt</string>
     <string name="common_refresh">Atsvaidzināt</string>
+    <string name="launcher_add_to_home">Pievienot sākuma ekrānam</string>
 </resources>

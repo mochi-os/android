@@ -15,6 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 // app's last frame. The class name is the launcher component other code
 // addresses: notification badges, the staff icon toggle, pinned shortcuts.
 
+@AndroidEntryPoint class MochiHomeLauncher : MainActivity()
 @AndroidEntryPoint class MochiFeedsLauncher : MainActivity()
 @AndroidEntryPoint class MochiChatLauncher : MainActivity()
 @AndroidEntryPoint class MochiForumsLauncher : MainActivity()

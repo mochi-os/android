@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Προσαρμοσμένο</string>
     <string name="color_picker_clear">Εκκαθάριση</string>
     <string name="common_refresh">Ανανέωση</string>
+    <string name="launcher_add_to_home">Προσθήκη στην αρχική οθόνη</string>
 </resources>

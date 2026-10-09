@@ -160,7 +160,6 @@
     <string name="projects_auth_mfa_unsupported">MFA aún no es compatible en la app móvil</string>
     <string name="projects_auth_enter_code_sent">Ingresa el código enviado a %1$s</string>
     <string name="projects_auth_create_identity">Crea tu identidad</string>
-    <string name="projects_list_add_to_home">Agregar a la pantalla de inicio</string>
     <string name="projects_sort_field">Ordenar por</string>
     <string name="projects_views_move_up">Mover arriba</string>
     <string name="projects_views_move_down">Mover abajo</string>

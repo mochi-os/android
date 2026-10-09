@@ -330,4 +330,5 @@
     <string name="color_picker_custom">Wedi\'i addasu</string>
     <string name="color_picker_clear">Clirio</string>
     <string name="common_refresh">Adnewyddu</string>
+    <string name="launcher_add_to_home">Ychwanegu at y sgrin gartref</string>
 </resources>

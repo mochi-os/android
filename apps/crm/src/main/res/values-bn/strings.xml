@@ -131,7 +131,6 @@
     <string name="crm_list_search_placeholder">CRM অনুসন্ধান করুন</string>
     <string name="crm_list_no_matching">কোনো মিলিত CRM নেই</string>
     <string name="crm_list_empty">এখনও কোনো CRM নেই</string>
-    <string name="crm_list_add_to_home">হোম স্ক্রিনে যোগ করুন</string>
     <string name="crm_create_template">টেমপ্লেট</string>
     <string name="crm_find_search_placeholder">CRM অনুসন্ধান করুন বা URL পেস্ট করুন</string>
     <string name="crm_find_search_hint">সাবস্ক্রাইব করার জন্য CRM অনুসন্ধান করুন</string>

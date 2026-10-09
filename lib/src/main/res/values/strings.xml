@@ -391,4 +391,5 @@
     <string name="zone_attribution" translatable="false">© OpenStreetMap contributors</string>
     <string name="color_picker_custom">Custom</string>
     <string name="color_picker_clear">Clear</string>
+    <string name="launcher_add_to_home">Add to home screen</string>
 </resources>

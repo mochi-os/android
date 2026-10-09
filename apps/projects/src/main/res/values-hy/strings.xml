@@ -164,7 +164,6 @@
     <string name="projects_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
     <string name="projects_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
     <string name="projects_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
-    <string name="projects_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
     <string name="projects_sort_field">Տեսակավորել ըստ</string>
     <string name="projects_views_move_up">Տեղափոխել վերև</string>
     <string name="projects_views_move_down">Տեղափոխել ներքև</string>

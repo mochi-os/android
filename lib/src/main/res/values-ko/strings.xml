@@ -325,4 +325,5 @@
     <string name="color_picker_custom">사용자 지정</string>
     <string name="color_picker_clear">지우기</string>
     <string name="common_refresh">새로고침</string>
+    <string name="launcher_add_to_home">홈 화면에 추가</string>
 </resources>

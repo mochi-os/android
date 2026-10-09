@@ -131,7 +131,6 @@
     <string name="crm_list_search_placeholder">Търсене в CRM</string>
     <string name="crm_list_no_matching">Няма съответстващ CRM</string>
     <string name="crm_list_empty">Все още няма CRM</string>
-    <string name="crm_list_add_to_home">Добави към началния екран</string>
     <string name="crm_create_template">Шаблон</string>
     <string name="crm_find_search_placeholder">Търсене на CRM или поставете URL</string>
     <string name="crm_find_search_hint">Търсене на CRM за абониране</string>

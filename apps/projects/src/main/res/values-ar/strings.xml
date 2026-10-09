@@ -169,7 +169,6 @@
     <string name="projects_list_search_placeholder">البحث في المشاريع</string>
     <string name="projects_list_no_matching">لا توجد مشاريع مطابقة</string>
     <string name="projects_list_empty">لا توجد مشاريع بعد</string>
-    <string name="projects_list_add_to_home">إضافة إلى الشاشة الرئيسية</string>
     <string name="projects_find_search_placeholder">ابحث عن مشاريع أو الصق رابطًا</string>
     <string name="projects_find_search_hint">ابحث عن مشاريع للاشتراك فيها</string>
     <string name="projects_search_objects_placeholder">البحث في العناصر</string>

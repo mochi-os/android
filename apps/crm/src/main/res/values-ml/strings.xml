@@ -138,7 +138,6 @@
     <string name="crm_views_direction_asc">ആരോഹണ ക്രമം</string>
     <string name="crm_sort_direction_desc">അവരോഹണ ക്രമം</string>
     <string name="crm_views_direction_desc">അവരോഹണ ക്രമം</string>
-    <string name="crm_list_add_to_home">ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക</string>
     <string name="crm_search_objects_placeholder">ഒബ്ജക്റ്റുകൾ തിരയുക</string>
     <string name="crm_links_search_placeholder">ഒബ്ജക്റ്റുകൾ തിരയുക</string>
 

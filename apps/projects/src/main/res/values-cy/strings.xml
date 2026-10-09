@@ -169,7 +169,6 @@
     <string name="projects_list_search_placeholder">Chwilio prosiectau</string>
     <string name="projects_list_no_matching">Dim prosiectau cyfatebol</string>
     <string name="projects_list_empty">Dim prosiectau eto</string>
-    <string name="projects_list_add_to_home">Ychwanegu at y sgrin gartref</string>
     <string name="projects_find_search_placeholder">Chwilio prosiectau neu gludo URL</string>
     <string name="projects_find_search_hint">Chwilio am brosiectau i danysgrifio iddynt</string>
     <string name="projects_search_objects_placeholder">Chwilio gwrthrychau</string>

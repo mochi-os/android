@@ -164,7 +164,6 @@
     <string name="projects_auth_mfa_unsupported">L\'authentification multifacteur n\'est pas encore prise en charge dans l\'application mobile</string>
     <string name="projects_auth_enter_code_sent">Saisissez le code envoyé à %1$s</string>
     <string name="projects_auth_create_identity">Créez votre identité</string>
-    <string name="projects_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="projects_sort_field">Trier par</string>
     <string name="projects_views_move_up">Déplacer vers le haut</string>
     <string name="projects_views_move_down">Déplacer vers le bas</string>

@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Vlastní</string>
     <string name="color_picker_clear">Vymazat</string>
     <string name="common_refresh">Obnovit</string>
+    <string name="launcher_add_to_home">Přidat na domovskou obrazovku</string>
 </resources>

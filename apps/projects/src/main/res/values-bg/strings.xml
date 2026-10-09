@@ -169,7 +169,6 @@
     <string name="projects_list_search_placeholder">Търсене на проекти</string>
     <string name="projects_list_no_matching">Няма съвпадащи проекти</string>
     <string name="projects_list_empty">Все още няма проекти</string>
-    <string name="projects_list_add_to_home">Добавяне към началния екран</string>
     <string name="projects_find_search_placeholder">Търсене на проекти или поставяне на URL</string>
     <string name="projects_find_search_hint">Търсете проекти, за които да се абонирате</string>
     <string name="projects_search_objects_placeholder">Търсене на обекти</string>

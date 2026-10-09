@@ -325,4 +325,5 @@
     <string name="color_picker_custom">કસ્ટમ</string>
     <string name="color_picker_clear">સાફ કરો</string>
     <string name="common_refresh">રિફ્રેશ કરો</string>
+    <string name="launcher_add_to_home">હોમ સ્ક્રીન પર ઉમેરો</string>
 </resources>

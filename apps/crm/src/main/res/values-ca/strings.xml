@@ -189,7 +189,6 @@
     <string name="crm_design_preview_no_options">No hi ha opcions al camp de columnes</string>
     <string name="crm_design_preview_empty">Res a mostrar</string>
 
-    <string name="crm_list_add_to_home">Afegeix a la pantalla d\'inici</string>
     <string name="crm_create_template">Plantilla</string>
     <string name="crm_search_objects_placeholder">Cerca objectes</string>
     <string name="crm_sort_field">Ordena per</string>

@@ -169,7 +169,6 @@
     <string name="projects_list_search_placeholder">ፕሮጀክቶችን ይፈልጉ</string>
     <string name="projects_list_no_matching">ምንም ተዛማጅ ፕሮጀክቶች የሉም</string>
     <string name="projects_list_empty">እስካሁን ምንም ፕሮጀክቶች የሉም</string>
-    <string name="projects_list_add_to_home">ወደ መነሻ ማያ ገጽ ያክሉ</string>
     <string name="projects_find_search_placeholder">ፕሮጀክቶችን ይፈልጉ ወይም URL ይለጥፉ</string>
     <string name="projects_find_search_hint">ለመመዝገብ ፕሮጀክቶችን ይፈልጉ</string>
     <string name="projects_search_objects_placeholder">ነገሮችን ይፈልጉ</string>

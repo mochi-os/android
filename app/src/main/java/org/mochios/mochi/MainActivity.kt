@@ -41,7 +41,7 @@ import org.mochios.android.push.NonceStore
 import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
-import org.mochios.android.push.launcherComponentFor
+import org.mochios.android.launcher.launcherComponentFor
 import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
 import org.mochios.android.ui.AppBootstrapHost
@@ -77,6 +77,8 @@ import org.mochios.projects.navigation.ProjectsApp
 import org.mochios.projects.navigation.projectsNavGraph
 import org.mochios.settings.navigation.SettingsApp
 import org.mochios.settings.navigation.settingsNavGraph
+import org.mochios.home.navigation.HomeApp
+import org.mochios.home.navigation.homeNavGraph
 import javax.inject.Inject
 
 /**
@@ -190,6 +192,7 @@ open class MainActivity : ComponentActivity() {
                             navController.navigate(SettingsApp.NOTIFICATIONS) { launchSingleTop = true }
                         }
                         NavHost(navController = navController, startDestination = startDestinationFor(hosted)) {
+                            homeNavGraph(onOpenNotifications = openNotifications)
                             feedsNavGraph(
                                 navController,
                                 onLogout = requestLogout,
@@ -940,6 +943,7 @@ open class MainActivity : ComponentActivity() {
     }
 
     private fun startDestinationFor(targetApp: String?): String = when (targetApp) {
+        "home" -> HomeApp.HOME
         "chat" -> ChatApp.HOME
         "forums" -> ForumsApp.HOME
         "projects" -> ProjectsApp.HOME
@@ -960,8 +964,12 @@ open class MainActivity : ComponentActivity() {
         private const val TAG = "MainActivity"
         private const val META_TARGET_APP = "org.mochios.targetApp"
 
-        /** The app a launch lands in when nothing names one. */
-        private const val DEFAULT_APP = "feeds"
+        /**
+         * The app a launch lands in when nothing names one: the home grid,
+         * whose launcher entry is the manifest's first and so the package's
+         * default.
+         */
+        private const val DEFAULT_APP = "home"
 
         /** Intent extra a per-app `XxxListScreen.kt` shortcut sets to skip directory lookup. */
         const val EXTRA_APP_HINT = "app"
@@ -992,6 +1000,6 @@ open class MainActivity : ComponentActivity() {
          * Every bundled app; the bootstrap mints a JWT for each so
          * cross-feature navigation never hits "app token required".
          */
-        private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff", "calendars", "menu")
+        private val MOCHI_APPS = listOf("home", "feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff", "calendars", "menu")
     }
 }

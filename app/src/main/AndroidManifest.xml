@@ -116,6 +116,30 @@
           The org.mochios.targetApp meta-data names the Mochi app each class
           hosts; MainActivity reads it from its own component.
         -->
+        <!--
+          The Mochi icon: the home grid of every app. First, so it is the
+          package's default launcher entry, the one the installer's Open
+          button and getLaunchIntentForPackage resolve to; MainActivity's
+          DEFAULT_APP names it.
+        -->
+        <activity
+            android:name=".MochiHomeLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:launchMode="singleTop"
+            android:taskAffinity="org.mochios.mochi.home"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="home" />
+        </activity>
+
         <activity
             android:name=".MochiFeedsLauncher"
             android:enabled="true"

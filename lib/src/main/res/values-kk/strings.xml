@@ -326,4 +326,5 @@
     <string name="color_picker_custom">Реттелетін</string>
     <string name="color_picker_clear">Тазалау</string>
     <string name="common_refresh">Жаңарту</string>
+    <string name="launcher_add_to_home">Негізгі экранға қосу</string>
 </resources>

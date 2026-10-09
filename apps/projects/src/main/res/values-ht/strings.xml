@@ -164,7 +164,6 @@
     <string name="projects_auth_mfa_unsupported">MFA poko sipòte nan aplikasyon mobil la</string>
     <string name="projects_auth_enter_code_sent">Antre kòd ki voye nan %1$s la</string>
     <string name="projects_auth_create_identity">Kreye idantite ou</string>
-    <string name="projects_list_add_to_home">Ajoute sou ekran akèy la</string>
     <string name="projects_sort_field">Triye pa</string>
     <string name="projects_views_move_up">Monte</string>
     <string name="projects_views_move_down">Desann</string>

@@ -267,4 +267,5 @@
     <string name="rss_revoke_confirm">Widerrufen</string>
     <string name="access_remove">Entfernen</string>
     <string name="common_refresh">Neu laden</string>
+    <string name="launcher_add_to_home">Zum Startbildschirm hinzufügen</string>
 </resources>

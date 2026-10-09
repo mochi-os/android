@@ -138,7 +138,6 @@
     <string name="crm_views_direction_asc">ຈາກໜ້ອຍຫາຫຼາຍ</string>
     <string name="crm_sort_direction_desc">ຈາກຫຼາຍຫາໜ້ອຍ</string>
     <string name="crm_views_direction_desc">ຈາກຫຼາຍຫາໜ້ອຍ</string>
-    <string name="crm_list_add_to_home">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
     <string name="crm_search_objects_placeholder">ຄົ້ນຫາວັດຖຸ</string>
     <string name="crm_links_search_placeholder">ຄົ້ນຫາວັດຖຸ</string>
 

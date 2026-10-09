@@ -28,6 +28,16 @@ class TokenTest {
         encode("""{"alg":"HS256","typ":"JWT"}""") + "." + encode(payload) + ".signature"
 
     @Test
+    fun `an app's token is asked for by its name`() {
+        assertEquals("feeds", Token.path("feeds"))
+    }
+
+    @Test
+    fun `home's token is asked for at the root, where the server serves it`() {
+        assertEquals("", Token.path("home"))
+    }
+
+    @Test
     fun `expiry reads the exp claim in seconds and answers milliseconds`() {
         val token = jwt("""{"app":"feeds","exp":1700086400,"iat":1700000000}""")
         assertEquals(1_700_086_400_000L, Token.expiry(token))

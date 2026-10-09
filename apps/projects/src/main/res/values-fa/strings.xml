@@ -164,7 +164,6 @@
     <string name="projects_auth_mfa_unsupported">احراز هویت چندعاملی هنوز در برنامه موبایل پشتیبانی نمی‌شود</string>
     <string name="projects_auth_enter_code_sent">کدی که به %1$s ارسال شد را وارد کنید</string>
     <string name="projects_auth_create_identity">هویت خود را ایجاد کنید</string>
-    <string name="projects_list_add_to_home">افزودن به صفحه اصلی</string>
     <string name="projects_sort_field">مرتب‌سازی بر اساس</string>
     <string name="projects_views_move_up">انتقال به بالا</string>
     <string name="projects_views_move_down">انتقال به پایین</string>

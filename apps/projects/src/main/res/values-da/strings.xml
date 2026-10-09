@@ -169,7 +169,6 @@
     <string name="projects_list_search_placeholder">Søg i projekter</string>
     <string name="projects_list_no_matching">Ingen matchende projekter</string>
     <string name="projects_list_empty">Ingen projekter endnu</string>
-    <string name="projects_list_add_to_home">Føj til startskærm</string>
     <string name="projects_find_search_placeholder">Søg i projekter eller indsæt URL</string>
     <string name="projects_find_search_hint">Søg efter projekter at abonnere på</string>
     <string name="projects_search_objects_placeholder">Søg i objekter</string>

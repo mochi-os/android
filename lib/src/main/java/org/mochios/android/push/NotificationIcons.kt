@@ -5,8 +5,6 @@
 
 package org.mochios.android.push
 
-import android.content.ComponentName
-import android.content.Context
 import androidx.annotation.DrawableRes
 import org.mochios.android.R
 
@@ -48,34 +46,3 @@ fun notificationIconFor(app: String?): Int = when (app?.lowercase()) {
     "settings" -> R.drawable.ic_notification_settings
     else -> R.drawable.ic_mochi_notification
 }
-
-/**
- * Launcher activity for a slug, so a notification's badge lands on that app's
- * launcher icon only; the implicit `mochi:` intent resolves to MainActivity and
- * badges every Mochi icon. Null for unknown apps.
- */
-fun launcherComponentFor(context: Context, app: String?): ComponentName? {
-    val name = LAUNCHER_ACTIVITIES[app?.lowercase()] ?: return null
-    return ComponentName(context, "${context.packageName}.$name")
-}
-
-/**
- * Every launcher activity in the shell manifest, by slug. A missing entry silently
- * reverts that app to the badge-everything fallback.
- */
-internal val LAUNCHER_ACTIVITIES = mapOf(
-    "feeds" to "MochiFeedsLauncher",
-    "chat" to "MochiChatLauncher",
-    "forums" to "MochiForumsLauncher",
-    "projects" to "MochiProjectsLauncher",
-    "crm" to "MochiCrmLauncher",
-    "people" to "MochiPeopleLauncher",
-    "settings" to "MochiSettingsLauncher",
-    "wikis" to "MochiWikisLauncher",
-    "chess" to "MochiChessLauncher",
-    "go" to "MochiGoLauncher",
-    "words" to "MochiWordsLauncher",
-    "market" to "MochiMarketLauncher",
-    "staff" to "MochiStaffLauncher",
-    "calendars" to "MochiCalendarsLauncher",
-)

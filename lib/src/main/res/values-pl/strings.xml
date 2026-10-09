@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Niestandardowy</string>
     <string name="color_picker_clear">Wyczyść</string>
     <string name="common_refresh">Odśwież</string>
+    <string name="launcher_add_to_home">Dodaj do ekranu głównego</string>
 </resources>

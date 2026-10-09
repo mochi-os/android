@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Користувацький</string>
     <string name="color_picker_clear">Очистити</string>
     <string name="common_refresh">Оновити</string>
+    <string name="launcher_add_to_home">Додати на головний екран</string>
 </resources>

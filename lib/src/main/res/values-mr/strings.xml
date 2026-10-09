@@ -325,4 +325,5 @@
     <string name="color_picker_custom">सानुकूल</string>
     <string name="color_picker_clear">साफ करा</string>
     <string name="common_refresh">रीफ्रेश करा</string>
+    <string name="launcher_add_to_home">होम स्क्रीनवर जोडा</string>
 </resources>

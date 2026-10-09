@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Mataa keetiin</string>
     <string name="color_picker_clear">Cilliisi</string>
     <string name="common_refresh">Haaromsi</string>
+    <string name="launcher_add_to_home">Iskrii manaatti dabali</string>
 </resources>

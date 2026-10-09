@@ -329,4 +329,5 @@
     <string name="color_picker_custom">Personalizzat</string>
     <string name="color_picker_clear">Naddaf</string>
     <string name="common_refresh">Aġġorna</string>
+    <string name="launcher_add_to_home">Żid mal-iskrin tad-dar</string>
 </resources>

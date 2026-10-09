@@ -127,7 +127,6 @@
     <string name="crm_more">Plus</string>
     <string name="crm_comment_send">Envoyer</string>
     <string name="crm_field_position_body">Corps</string>
-    <string name="crm_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="crm_sort_field">Trier par</string>
     <string name="crm_views_move_up">Déplacer vers le haut</string>
     <string name="crm_views_move_down">Déplacer vers le bas</string>

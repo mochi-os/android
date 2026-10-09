@@ -169,7 +169,6 @@
     <string name="projects_list_search_placeholder">প্রকল্প খুঁজুন</string>
     <string name="projects_list_no_matching">কোনো মিলে যাওয়া প্রকল্প নেই</string>
     <string name="projects_list_empty">এখনও কোনো প্রকল্প নেই</string>
-    <string name="projects_list_add_to_home">হোম স্ক্রিনে যোগ করুন</string>
     <string name="projects_find_search_placeholder">প্রকল্প খুঁজুন বা URL পেস্ট করুন</string>
     <string name="projects_find_search_hint">সাবস্ক্রাইব করার জন্য প্রকল্প খুঁজুন</string>
     <string name="projects_search_objects_placeholder">অবজেক্ট অনুসন্ধান করুন</string>

@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Personalitzat</string>
     <string name="color_picker_clear">Esborra</string>
     <string name="common_refresh">Actualitza</string>
+    <string name="launcher_add_to_home">Afegeix a la pantalla d\'inici</string>
 </resources>

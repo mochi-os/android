@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Personalizuar</string>
     <string name="color_picker_clear">Pastro</string>
     <string name="common_refresh">Rifresko</string>
+    <string name="launcher_add_to_home">Shto në ekranin kryesor</string>
 </resources>

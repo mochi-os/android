@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Özel</string>
     <string name="color_picker_clear">Temizle</string>
     <string name="common_refresh">Yenile</string>
+    <string name="launcher_add_to_home">Ana ekrana ekle</string>
 </resources>
