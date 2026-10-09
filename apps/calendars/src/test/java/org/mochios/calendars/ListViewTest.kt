@@ -90,6 +90,8 @@ class ListViewTest {
     /** The events there are, by day and title, and the bounds the server reports. */
     @Volatile private var events = listOf<Pair<LocalDate, String>>()
     @Volatile private var length = 3_600L
+    /** The titles of the events that last all day. */
+    @Volatile private var allday = setOf<String>()
     @Volatile private var first = 0L
     @Volatile private var last = 0L
 
@@ -121,7 +123,7 @@ class ListViewTest {
                             return MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
                         }
                         val listed = events.filter { noon(it.first) in start until finish }.joinToString(",") { (day, title) ->
-                            """{"event": "e-$title", "calendar": "c1", "colour": "#ff0000", "summary": "$title", "start": ${noon(day)}, "finish": ${noon(day) + length}}"""
+                            """{"event": "e-$title", "calendar": "c1", "colour": "#ff0000", "summary": "$title", "start": ${noon(day)}, "finish": ${noon(day) + length}${if (title in allday) ", \"allday\": true, \"date\": \"$day\"" else ""}}"""
                         }
                         ok("""{"instances": [$listed], "truncated": false}""")
                     }
@@ -285,6 +287,28 @@ class ListViewTest {
         val layouts = mutableListOf<TextLayoutResult>()
         node.config[SemanticsActions.GetTextLayoutResult].action?.invoke(layouts)
         assertEquals(2, layouts.first().lineCount)
+    }
+
+    @Test
+    fun `an all-day row is one line, its dot and its title, with no label standing in for a time`() {
+        val day = LocalDate.now(london).plusDays(2)
+        events = listOf(day to "Holiday", day to "Item 1")
+        allday = setOf("Holiday")
+        first = noon(day)
+        last = noon(day)
+        show(open = day)
+        waitFor("Holiday")
+        waitFor("Item 1")
+        assertEquals(0, rule.onAllNodesWithText(context.getString(R.string.calendars_event_allday)).fetchSemanticsNodes().size)
+        // How far below its row's top a text starts: the all-day title on the
+        // row's first line, as high as a timed row's time.
+        val rows = rule.onAllNodesWithTag("row").fetchSemanticsNodes().map { it.boundsInRoot }
+        val drop = { text: String ->
+            val bounds = rule.onNodeWithText(text, useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+            bounds.top - rows.first { it.top <= bounds.top && bounds.bottom <= it.bottom }.top
+        }
+        val time = Format(UserPreferences()).formatClockRange(noon(day), noon(day) + 3_600)
+        assertTrue("all day ${drop("Holiday")}, time ${drop(time)}", drop("Holiday") <= drop(time) + 1f)
     }
 
     @Test

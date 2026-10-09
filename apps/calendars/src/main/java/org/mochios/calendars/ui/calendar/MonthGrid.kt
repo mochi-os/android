@@ -983,10 +983,11 @@ private val PAD = 16.dp
  * One agenda row, as the other views draw an occurrence on two lines: first
  * the [Detail] line, the occurrence's dot, a ring for a tentative one, its
  * time and its marks; its title beneath in a larger type; where it is under
- * that. The time is all day, a span of clock times within its day, or across
- * days its two ends on lines of their own, each with its day written as the
- * headings write one and read in its own zone when the views show events in
- * theirs. A past or cancelled occurrence is faded, and the row is tinted in
+ * that. The time is a span of clock times within its day, or across days its
+ * two ends on lines of their own, each with its day written as the headings
+ * write one and read in its own zone when the views show events in theirs.
+ * An all-day occurrence has no time, and opens with one [Line], its dot,
+ * title and marks, as the other views draw it. A past or cancelled occurrence is faded, and the row is tinted in
  * the primary colour while its summary is open, [chosen]. The [calendar]'s
  * name, when given, goes last. A [divided] row draws a hairline under
  * itself, before the next row of its day.
@@ -1007,7 +1008,7 @@ fun AgendaRow(
     val pattern = phrasing(format)
     val locale = LocalConfiguration.current.locales[0]
     val time = when {
-        instance.allday -> stringResource(R.string.calendars_event_allday)
+        instance.allday -> null
         viewModel.day(instance) == viewModel.finish(instance) ->
             format.formatClockRange(instance.start, instance.finish, opens, closes)
         else -> {
@@ -1037,12 +1038,14 @@ fun AgendaRow(
                 )
                 .padding(horizontal = PAD, vertical = PAD),
         ) {
-            Detail(instance, time, MaterialTheme.typography.bodyMedium, wrapped = true)
-            Name(
-                instance,
-                MaterialTheme.typography.bodyLarge.copy(fontSize = TITLE, lineHeight = TITLE * 1.3f),
-                Modifier.fillMaxWidth(),
-            )
+            val title = MaterialTheme.typography.bodyLarge.copy(fontSize = TITLE, lineHeight = TITLE * 1.3f)
+            if (time == null) {
+                // All day: no time, so one line, as the other views draw it.
+                Line(instance, null, title)
+            } else {
+                Detail(instance, time, MaterialTheme.typography.bodyMedium, wrapped = true)
+                Name(instance, title, Modifier.fillMaxWidth())
+            }
             if (instance.location.isNotBlank()) {
                 Text(
                     text = instance.location,
