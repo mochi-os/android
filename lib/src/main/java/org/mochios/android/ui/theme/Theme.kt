@@ -5,19 +5,15 @@
 
 package org.mochios.android.ui.theme
 
-import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import org.mochios.android.auth.SessionManager
@@ -122,8 +118,8 @@ data class SeedPalette(val hue: Float, val chroma: Float)
  * hue circle, so a warm theme showed magenta, green and violet rows inside
  * it — the identity colours belonged to no palette at all. Reading the hue
  * back off `colorScheme.primary` covers every route the scheme can arrive
- * by: the server's anchors, dynamic colour from the wallpaper, and the
- * hard-coded fallback all land here the same way.
+ * by: the server's anchors and the hard-coded fallback land here the same
+ * way.
  */
 val LocalSeedPalette = compositionLocalOf { SeedPalette(hue = 250f, chroma = 0.13f) }
 
@@ -150,11 +146,6 @@ fun MochiTheme(
                 hueBg = themeAnchors.hueBg,
                 isDark = isDark,
             )
-        }
-        // Android 12+ dynamic color from wallpaper
-        Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (isDark) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
         // Fallback to hardcoded blue
         isDark -> DarkColorScheme
