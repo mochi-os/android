@@ -120,6 +120,20 @@ class AddContactViewModel @Inject constructor(
 
     fun updateSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query)
+        runSearch(query, debounce = true)
+    }
+
+    /** Runs the current query now, skipping the typing debounce. */
+    fun search() {
+        runSearch(_uiState.value.searchQuery, debounce = false)
+    }
+
+    /** Drops the failure of a row action once the screen has shown it. */
+    fun clearActionError() {
+        _uiState.value = _uiState.value.copy(actionError = null)
+    }
+
+    private fun runSearch(query: String, debounce: Boolean) {
         searchJob?.cancel()
         if (query.isBlank()) {
             _uiState.value = _uiState.value.copy(
@@ -130,7 +144,9 @@ class AddContactViewModel @Inject constructor(
             return
         }
         searchJob = viewModelScope.launch {
-            delay(SEARCH_DEBOUNCE)
+            if (debounce) {
+                delay(SEARCH_DEBOUNCE)
+            }
             _uiState.value = _uiState.value.copy(searchLoading = true, searchError = null)
             try {
                 val results = repository.searchDirectory(query)
@@ -151,7 +167,7 @@ class AddContactViewModel @Inject constructor(
     fun retrySearch() {
         val query = _uiState.value.searchQuery
         if (query.isBlank()) return
-        updateSearchQuery(query)
+        search()
     }
 
     /** Opens the profile preview for a tapped result and fetches its details. */

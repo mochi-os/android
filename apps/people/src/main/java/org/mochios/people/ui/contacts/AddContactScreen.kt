@@ -23,6 +23,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -38,6 +40,8 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -45,13 +49,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.HtmlContent
@@ -83,6 +92,8 @@ fun AddContactScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val preview = uiState.preview
+    val snackbarHostState = remember { SnackbarHostState() }
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     LaunchedEffect(uiState.linked) {
         if (uiState.linked) onLinked()
@@ -100,7 +111,16 @@ fun AddContactScreen(
 
     BackHandler { goBack() }
 
+    LaunchedEffect(uiState.actionError, preview) {
+        val failure = uiState.actionError
+        if (failure != null && preview == null) {
+            snackbarHostState.showSnackbar(failure.userMessage())
+            viewModel.clearActionError()
+        }
+    }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {
@@ -165,9 +185,17 @@ fun AddContactScreen(
                     state = uiState,
                     stateOf = viewModel::state,
                     onQueryChange = viewModel::updateSearchQuery,
+                    onSearch = {
+                        keyboardController?.hide()
+                        viewModel.search()
+                    },
                     onRetry = viewModel::retrySearch,
-                    onTapResult = viewModel::openPreview,
+                    onTapResult = { user ->
+                        keyboardController?.hide()
+                        viewModel.openPreview(user)
+                    },
                     onAct = { user ->
+                        keyboardController?.hide()
                         when (viewModel.state(user)) {
                             AddContactState.NONE -> viewModel.addToContacts(user)
                             AddContactState.IN_CONTACTS, AddContactState.PENDING ->
@@ -187,6 +215,7 @@ private fun SearchBody(
     state: AddContactUiState,
     stateOf: (User) -> AddContactState,
     onQueryChange: (String) -> Unit,
+    onSearch: () -> Unit,
     onRetry: () -> Unit,
     onTapResult: (User) -> Unit,
     onAct: (User) -> Unit,
@@ -213,6 +242,18 @@ private fun SearchBody(
             leadingIcon = {
                 Icon(Icons.Default.Search, contentDescription = null)
             },
+            trailingIcon = if (state.searchLoading && state.searchResults.isNotEmpty()) {
+                {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(20.dp),
+                        strokeWidth = 2.dp,
+                    )
+                }
+            } else {
+                null
+            },
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+            keyboardActions = KeyboardActions(onSearch = { onSearch() }),
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
@@ -222,7 +263,7 @@ private fun SearchBody(
                 !hasQuery -> {
                     EmptyHint(title = stringResource(R.string.people_add_contact_search_start))
                 }
-                state.searchLoading -> {
+                state.searchLoading && state.searchResults.isEmpty() -> {
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -236,9 +277,11 @@ private fun SearchBody(
                     InlineErrorState(error = state.searchError, onRetry = onRetry)
                 }
                 state.searchResults.isEmpty() -> {
-                    EmptyHint(
+                    EmptyState(
+                        icon = Icons.Default.Search,
                         title = stringResource(R.string.people_contacts_no_people_found),
-                        description = stringResource(R.string.people_contacts_try_different_search),
+                        subtitle = stringResource(R.string.people_contacts_try_different_search),
+                        verticalArrangement = Arrangement.Top,
                     )
                 }
                 else -> {
@@ -493,27 +536,16 @@ private fun AddContactState.status() = when (this) {
 }
 
 @Composable
-private fun EmptyHint(title: String, description: String? = null) {
-    Column(
+private fun EmptyHint(title: String) {
+    Text(
+        text = title,
+        style = MaterialTheme.typography.bodyMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 16.dp, bottom = 16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        Text(
-            text = title,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        if (description != null) {
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(
-                text = description,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-    }
+            .padding(vertical = 16.dp),
+    )
 }
 
 private fun avatarUrlFor(
