@@ -10,24 +10,19 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.PersonAdd
-import androidx.compose.material3.AssistChip
-import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -35,7 +30,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -44,30 +38,16 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import coil3.compose.AsyncImage
-import coil3.request.ImageRequest
-import coil3.request.crossfade
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.StatusBadge
-import org.mochios.android.ui.components.StatusBadgeSize
-import org.mochios.android.ui.components.StatusTone
-import org.mochios.android.ui.components.parseHexColour
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
 
@@ -163,77 +143,15 @@ private fun PersonBody(
             .fillMaxSize()
             .verticalScroll(rememberScrollState()),
     ) {
-        // ---- Banner + avatar overlay ----
-        Box(modifier = Modifier.fillMaxWidth()) {
-            if (bannerUrl != null && !gated) {
-                AsyncImage(
-                    model = ImageRequest.Builder(LocalContext.current)
-                        .data(bannerUrl)
-                        .crossfade(true)
-                        .build(),
-                    contentDescription = stringResource(
-                        R.string.people_person_banner_alt,
-                        info.name,
-                    ),
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .aspectRatio(3f)
-                        .clip(RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp)),
-                )
-            } else {
-                // Empty surface so the avatar sits at a consistent height even
-                // without a banner. Tint with the accent if there is one.
-                Surface(
-                    color = parseHexColour(accent)?.copy(alpha = 0.12f)
-                        ?: MaterialTheme.colorScheme.surfaceVariant,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(96.dp)
-                        .clip(RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp)),
-                ) {}
-            }
-            EntityAvatar(
-                name = info.name,
-                src = if (gated) null else avatarUrl,
-                seed = info.id,
-                size = 96.dp,
-                accent = accent,
-                modifier = Modifier
-                    .align(Alignment.BottomStart)
-                    .offset(x = 16.dp, y = 48.dp),
-            )
-        }
-
-        Spacer(Modifier.height(56.dp))
-
-        // ---- Name + fingerprint + pill ----
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = info.name,
-                    style = MaterialTheme.typography.headlineMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    color = parseHexColour(accent) ?: MaterialTheme.colorScheme.onSurface,
-                )
-                if (info.fingerprint.isNotBlank()) {
-                    Spacer(Modifier.height(4.dp))
-                    Text(
-                        text = info.fingerprint,
-                        style = MaterialTheme.typography.labelSmall.copy(
-                            fontFamily = FontFamily.Monospace,
-                        ),
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-            FriendStatePill(state = friendState)
-        }
+        PersonHeader(
+            name = info.name,
+            seed = info.id,
+            fingerprint = info.fingerprint,
+            avatarUrl = if (gated) null else avatarUrl,
+            bannerUrl = if (gated) null else bannerUrl,
+            accent = accent,
+            status = friendState.status(),
+        )
 
         Spacer(Modifier.height(16.dp))
 
@@ -289,19 +207,12 @@ private fun PersonBody(
     }
 }
 
-@Composable
-private fun FriendStatePill(state: FriendState) {
-    val (label, tone) = when (state) {
-        FriendState.Friend ->
-            stringResource(R.string.people_person_state_friend) to StatusTone.Positive
-        FriendState.Self -> stringResource(R.string.people_person_state_self) to StatusTone.Neutral
-        FriendState.InvitedThem ->
-            stringResource(R.string.people_person_state_invited) to StatusTone.Waiting
-        FriendState.Contact ->
-            stringResource(R.string.people_person_state_contact) to StatusTone.Neutral
-        is FriendState.InvitedByThem, FriendState.NotFriend -> return
-    }
-    StatusBadge(label = label, tone = tone, size = StatusBadgeSize.Regular)
+private fun FriendState.status() = when (this) {
+    FriendState.Friend -> PersonStatus.FRIEND
+    FriendState.Self -> PersonStatus.SELF
+    FriendState.InvitedThem -> PersonStatus.INVITED
+    FriendState.Contact -> PersonStatus.CONTACT
+    is FriendState.InvitedByThem, FriendState.NotFriend -> null
 }
 
 @Composable

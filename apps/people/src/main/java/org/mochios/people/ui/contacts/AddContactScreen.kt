@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -24,7 +23,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -32,9 +30,11 @@ import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.PersonAddAlt
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -47,18 +47,10 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import coil3.compose.AsyncImage
-import coil3.request.ImageRequest
-import coil3.request.crossfade
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.EntityListRow
@@ -71,7 +63,8 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.User
-import androidx.compose.material.icons.outlined.PersonAddAlt
+import org.mochios.people.ui.person.PersonHeader
+import org.mochios.people.ui.person.PersonStatus
 import org.mochios.android.R as MochiR
 
 /**
@@ -127,7 +120,7 @@ fun AddContactScreen(
             )
         },
         bottomBar = {
-            if (preview != null) {
+            if (preview != null && viewModel.state(preview.targetUser).actionable) {
                 Surface(color = MaterialTheme.colorScheme.surface) {
                     Column(
                         modifier = Modifier
@@ -162,7 +155,11 @@ fun AddContactScreen(
                 .padding(padding),
         ) {
             if (preview != null) {
-                PreviewBody(preview = preview, onRetry = viewModel::retryPreview)
+                PreviewBody(
+                    preview = preview,
+                    status = viewModel.state(preview.targetUser).status(),
+                    onRetry = viewModel::retryPreview,
+                )
             } else {
                 SearchBody(
                     state = uiState,
@@ -354,15 +351,6 @@ private fun PreviewActions(
 ) {
     val fill = Modifier.fillMaxWidth()
     when (state) {
-        AddContactState.SELF -> MochiButton(onClick = {}, enabled = false, modifier = fill) {
-            Text(stringResource(R.string.people_contacts_thats_you))
-        }
-        AddContactState.FRIEND -> MochiButton(onClick = {}, enabled = false, modifier = fill) {
-            Text(stringResource(R.string.people_contacts_friend))
-        }
-        AddContactState.INVITED -> MochiButton(onClick = {}, enabled = false, modifier = fill) {
-            Text(stringResource(R.string.people_contacts_invited))
-        }
         AddContactState.PENDING -> MochiButton(
             onClick = onInvite,
             enabled = ready && !busy,
@@ -372,25 +360,20 @@ private fun PreviewActions(
                 Text(stringResource(R.string.people_contacts_accept))
             }
         }
-        AddContactState.IN_CONTACTS -> Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            MochiOutlinedButton(onClick = {}, enabled = false, modifier = Modifier.weight(1f)) {
-                Text(stringResource(R.string.people_add_contact_in_contacts))
-            }
-            MochiButton(
-                onClick = onInvite,
-                enabled = ready && !busy,
-                modifier = Modifier.weight(1f),
-            ) {
-                ButtonContent(busy = busy, icon = Icons.AutoMirrored.Filled.Send) {
-                    Text(stringResource(R.string.people_contacts_invite))
-                }
+        AddContactState.IN_CONTACTS -> MochiButton(
+            onClick = onInvite,
+            enabled = ready && !busy,
+            modifier = fill,
+        ) {
+            ButtonContent(busy = busy, icon = Icons.AutoMirrored.Filled.Send) {
+                Text(stringResource(R.string.people_contacts_invite))
             }
         }
-        AddContactState.NONE -> Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        AddContactState.NONE -> Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
             MochiButton(
                 onClick = onAdd,
                 enabled = ready && !busy,
-                modifier = Modifier.weight(1f),
+                modifier = fill,
             ) {
                 ButtonContent(busy = busy, icon = Icons.Default.PersonAdd) {
                     Text(stringResource(R.string.people_add_contact_add))
@@ -399,11 +382,12 @@ private fun PreviewActions(
             MochiOutlinedButton(
                 onClick = onInvite,
                 enabled = ready && !busy,
-                modifier = Modifier.weight(1f),
+                modifier = fill,
             ) {
                 Text(stringResource(R.string.people_contacts_invite))
             }
         }
+        else -> Unit
     }
 }
 
@@ -429,31 +413,36 @@ private fun androidx.compose.foundation.layout.RowScope.ButtonContent(
 @Composable
 private fun PreviewBody(
     preview: AddContactPreview,
+    status: PersonStatus?,
     onRetry: () -> Unit,
 ) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(horizontal = 16.dp, vertical = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
+            .verticalScroll(rememberScrollState()),
     ) {
         when {
             preview.isLoading -> {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 40.dp),
+                        .padding(top = 56.dp),
                     contentAlignment = Alignment.Center,
                 ) {
                     CircularProgressIndicator()
                 }
             }
             preview.error != null && preview.information == null -> {
-                InlineErrorState(error = preview.error, onRetry = onRetry)
+                Box(modifier = Modifier.padding(16.dp)) {
+                    InlineErrorState(error = preview.error, onRetry = onRetry)
+                }
             }
             preview.information != null -> {
-                PreviewProfile(user = preview.targetUser, info = preview.information)
+                PreviewProfile(
+                    user = preview.targetUser,
+                    info = preview.information,
+                    status = status,
+                )
             }
         }
     }
@@ -463,66 +452,44 @@ private fun PreviewBody(
 private fun PreviewProfile(
     user: User,
     info: PersonInformation,
+    status: PersonStatus?,
 ) {
-    val avatarUrl = avatarUrlFor(info, user)
-    val bannerUrl = bannerUrlFor(info, user)
-    val accent = info.style.accent
     val displayName = info.name.takeIf { name -> name.isNotBlank() } ?: user.name
     val fingerprint = info.fingerprint.takeIf { value -> value.isNotBlank() }
         ?: user.fingerprintHyphens
 
-    if (bannerUrl != null) {
-        AsyncImage(
-            model = ImageRequest.Builder(LocalContext.current)
-                .data(bannerUrl)
-                .crossfade(true)
-                .build(),
-            contentDescription = stringResource(R.string.people_person_banner_alt, displayName),
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .fillMaxWidth()
-                .aspectRatio(3f)
-                .clip(RoundedCornerShape(8.dp)),
-        )
-    }
-
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        EntityAvatar(
-            name = displayName,
-            src = avatarUrl,
-            seed = info.id.ifBlank { user.id },
-            size = 64.dp,
-            accent = accent,
-        )
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = displayName,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            if (fingerprint.isNotBlank()) {
-                Text(
-                    text = fingerprint,
-                    style = MaterialTheme.typography.labelSmall.copy(
-                        fontFamily = FontFamily.Monospace,
-                    ),
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-    }
+    PersonHeader(
+        name = displayName,
+        seed = info.id.ifBlank { user.id },
+        fingerprint = fingerprint,
+        avatarUrl = avatarUrlFor(info, user),
+        bannerUrl = bannerUrlFor(info, user),
+        accent = info.style.accent,
+        status = status,
+    )
 
     if (info.profile.isNotBlank()) {
-        HtmlContent(html = info.profile)
+        Spacer(Modifier.height(16.dp))
+        HorizontalDivider()
+        Spacer(Modifier.height(16.dp))
+        Box(modifier = Modifier.padding(horizontal = 16.dp)) {
+            HtmlContent(html = info.profile)
+        }
+        Spacer(Modifier.height(24.dp))
     }
+}
+
+private val AddContactState.actionable: Boolean
+    get() = this == AddContactState.NONE ||
+        this == AddContactState.IN_CONTACTS ||
+        this == AddContactState.PENDING
+
+private fun AddContactState.status() = when (this) {
+    AddContactState.FRIEND -> PersonStatus.FRIEND
+    AddContactState.SELF -> PersonStatus.SELF
+    AddContactState.INVITED -> PersonStatus.INVITED
+    AddContactState.IN_CONTACTS -> PersonStatus.CONTACT
+    else -> null
 }
 
 @Composable
