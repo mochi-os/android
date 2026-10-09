@@ -12,10 +12,11 @@ import android.content.Intent
 import android.content.pm.PackageManager
 
 /**
- * Every launcher activity in the shell manifest, by app name. Each hosts one
- * Mochi app in a task of its own. A missing entry silently reverts that app's
- * notifications to the badge-everything fallback and hides it from the home
- * grid.
+ * Every app's activity in the shell manifest, by app name. Each hosts one
+ * Mochi app in a task of its own; only home's is a launcher entry, the
+ * others are opened from the home grid, notifications, forwarded links and
+ * pinned shortcuts. A missing entry hides the app from the home grid and
+ * sends its notifications through the forwarding MainActivity.
  */
 internal val LAUNCHER_ACTIVITIES = mapOf(
     "home" to "MochiHomeLauncher",
@@ -39,10 +40,9 @@ internal val LAUNCHER_ACTIVITIES = mapOf(
 fun launchable(app: String?): Boolean = LAUNCHER_ACTIVITIES.containsKey(app?.lowercase())
 
 /**
- * The launcher activity for an app, so a notification's badge lands on that
- * app's launcher icon only; the implicit `mochi:` intent resolves to
- * MainActivity and badges every Mochi icon. Null for an app the client has no
- * launcher activity for.
+ * The activity that hosts an app, which a notification for it opens directly
+ * rather than through the forwarding MainActivity. Null for an app the client
+ * has no activity for.
  */
 fun launcherComponentFor(context: Context, app: String?): ComponentName? {
     val name = LAUNCHER_ACTIVITIES[app?.lowercase()] ?: return null

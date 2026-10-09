@@ -82,9 +82,10 @@ import org.mochios.home.navigation.homeNavGraph
 import javax.inject.Inject
 
 /**
- * The shell activity. Every launcher icon is a subclass of this (Launchers.kt)
- * whose manifest entry names the Mochi app it hosts and gives it a task of
- * its own, and an instance renders that one app for its whole life. The bare
+ * The shell activity. Every Mochi app has a subclass of this (Launchers.kt)
+ * whose manifest entry names the app it hosts and gives it a task of its own,
+ * and an instance renders that one app for its whole life. Only the home
+ * grid's subclass is a launcher entry. The bare
  * MainActivity hosts nothing: it receives every `mochi:` URI and forwards the
  * launch to the owning app's class - see [onCreate].
  */

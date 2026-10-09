@@ -65,14 +65,21 @@
         android:theme="@style/Theme.Mochi">
 
         <!--
-          One activity class per launcher icon (Launchers.kt), each with its own
-          task affinity, so every Mochi app runs in a task of its own: a tap on
-          its icon resumes that task behind that task's snapshot, or starts a
-          fresh one behind the splash, and never shows another app's last frame.
-          An <activity-alias> cannot do this - taskAffinity is not an alias
-          attribute, an alias inherits its target's - so with aliases every icon
-          shared one task, whose snapshot was whichever app was used last.
-          singleTop keeps state across taps within a task.
+          One activity class per Mochi app (Launchers.kt), each with its own
+          task affinity, so every app runs in a task of its own: opening it
+          from the home grid, a notification or a pinned shortcut resumes that
+          task behind that task's snapshot, or starts a fresh one behind the
+          splash, and never shows another app's last frame. An <activity-alias>
+          cannot do this - taskAffinity is not an alias attribute, an alias
+          inherits its target's - so with aliases every app shared one task,
+          whose snapshot was whichever app was used last. singleTop keeps state
+          across launches within a task.
+
+          Only the Mochi icon, MochiHomeLauncher, is a launcher entry. The
+          per-app classes carry no MAIN/LAUNCHER filter, so the app drawer
+          shows one icon; a user who wants an app on the home screen pins it
+          from the grid. They keep their label and icon, which name each
+          app's task in Recents.
         -->
         <!--
           MainActivity itself has no launcher entry and never draws. It receives
@@ -151,10 +158,6 @@
             android:taskAffinity="org.mochios.mochi.feeds"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="feeds" />
         </activity>
 
@@ -169,10 +172,6 @@
             android:taskAffinity="org.mochios.mochi.chat"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="chat" />
         </activity>
 
@@ -187,10 +186,6 @@
             android:taskAffinity="org.mochios.mochi.forums"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="forums" />
         </activity>
 
@@ -205,10 +200,6 @@
             android:taskAffinity="org.mochios.mochi.projects"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="projects" />
         </activity>
 
@@ -223,10 +214,6 @@
             android:taskAffinity="org.mochios.mochi.crm"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="crm" />
         </activity>
 
@@ -241,10 +228,6 @@
             android:taskAffinity="org.mochios.mochi.people"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="people" />
         </activity>
 
@@ -259,10 +242,6 @@
             android:taskAffinity="org.mochios.mochi.settings"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="settings" />
         </activity>
 
@@ -277,10 +256,6 @@
             android:taskAffinity="org.mochios.mochi.wikis"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
         </activity>
 
@@ -295,10 +270,6 @@
             android:taskAffinity="org.mochios.mochi.chess"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="chess" />
         </activity>
 
@@ -313,10 +284,6 @@
             android:taskAffinity="org.mochios.mochi.go"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="go" />
         </activity>
 
@@ -331,10 +298,6 @@
             android:taskAffinity="org.mochios.mochi.words"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="words" />
         </activity>
 
@@ -349,18 +312,15 @@
             android:taskAffinity="org.mochios.mochi.market"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="market" />
         </activity>
 
         <!--
-          Staff (operator console) launcher. Hidden by default - only flipped
-          to enabled at runtime by StaffAccessController once the bound
-          identity passes a `staffApi.me()` check. Disappears again on
-          sign-out, role revocation, or any 401/403 from a staff endpoint.
+          Staff (operator console). Off by default, so it cannot be started -
+          switched on at runtime by StaffAccessController once the bound
+          identity passes a `staffApi.me()` check, or by the home grid when the
+          server lists Staff for the user. Switched off again on sign-out, role
+          revocation, or any 401/403 from a staff endpoint.
         -->
         <activity
             android:name=".MochiStaffLauncher"
@@ -373,10 +333,6 @@
             android:taskAffinity="org.mochios.mochi.staff"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="staff" />
         </activity>
 
@@ -391,10 +347,6 @@
             android:taskAffinity="org.mochios.mochi.calendars"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Mochi">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data android:name="org.mochios.targetApp" android:value="calendars" />
         </activity>
 
