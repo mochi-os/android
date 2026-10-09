@@ -69,7 +69,9 @@ import javax.inject.Inject
 /**
  * The calendar screen. [anchor] is the date the view is built around,
  * [focus] the day the user last chose, which the date panel circles and a new
- * event lands on, and [hidden] the calendars this device does not show,
+ * event lands on, [listed] the day atop the list view as it scrolls, which
+ * its title names and a new event there lands on instead, until the anchor
+ * changes, and [hidden] the calendars this device does not show,
  * which is a viewing choice and never leaves the phone. [instances] is
  * everything the server returned for the range, unfiltered, so flipping a
  * checkbox redraws without a fetch.
@@ -78,6 +80,7 @@ data class CalendarUiState(
     val view: String = CalendarsSection.MONTH,
     val anchor: LocalDate = LocalDate.now(),
     val focus: LocalDate = LocalDate.now(),
+    val listed: LocalDate? = null,
     val calendars: List<Calendar> = emptyList(),
     val hidden: Set<String> = emptySet(),
     val instances: List<Instance> = emptyList(),
@@ -629,8 +632,14 @@ class CalendarViewModel @Inject constructor(
             focus(date)
             return
         }
-        _uiState.value = _uiState.value.copy(anchor = date, focus = date)
+        _uiState.value = _uiState.value.copy(anchor = date, focus = date, listed = null)
         load()
+    }
+
+    /** The day atop the list view as it scrolls, which the list tells as it is drawn. */
+    fun listed(day: LocalDate) {
+        if (day == _uiState.value.listed) return
+        _uiState.value = _uiState.value.copy(listed = day)
     }
 
     /**
@@ -1117,13 +1126,14 @@ class CalendarViewModel @Inject constructor(
 
     /**
      * Where a new event with no time of its own starts, in epoch seconds: on
-     * [day] when a day cell was tapped, and otherwise on the day the user last
-     * chose, which is today until they pick, tap or page to another.
+     * [day] when a day cell was tapped; in the list on the day it has scrolled
+     * to, as its title names; and otherwise on the day the user last chose,
+     * which is today until they pick, tap or page to another.
      */
     fun creation(day: LocalDate? = null, state: CalendarUiState = _uiState.value): Long {
         val now = ZonedDateTime.now(zone)
         val today = now.toLocalDate()
-        val chosen = day ?: state.focus
+        val chosen = day ?: state.listed.takeIf { state.view == CalendarsSection.LIST } ?: state.focus
         return defaultStart(chosen, today, now.toLocalTime(), state.preferences.hours).atZone(zone).toEpochSecond()
     }
 

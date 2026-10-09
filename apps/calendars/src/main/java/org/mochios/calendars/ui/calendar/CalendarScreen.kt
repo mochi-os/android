@@ -172,7 +172,6 @@ fun CalendarScreen(
     var selected by remember { mutableStateOf<Instance?>(null) }
     var picking by remember { mutableStateOf(false) }
     var searching by remember { mutableStateOf(false) }
-    var listed by remember { mutableStateOf<LocalDate?>(null) }
     LaunchedEffect(uiState.view) {
         if (uiState.view != CalendarsSection.LIST && searching) {
             searching = false
@@ -334,7 +333,7 @@ fun CalendarScreen(
                     title = monthTitle(
                         when {
                             picking -> uiState.focus
-                            uiState.view == CalendarsSection.LIST -> listed ?: uiState.anchor
+                            uiState.view == CalendarsSection.LIST -> uiState.listed ?: uiState.anchor
                             else -> viewModel.first(uiState)
                         },
                     ),
@@ -433,7 +432,7 @@ fun CalendarScreen(
                                     onMoveDay = { instance, day ->
                                         request(instance) { scope -> viewModel.move(instance, day, scope) }
                                     },
-                                    onListed = { day -> listed = day },
+                                    onListed = viewModel::listed,
                                 )
                             }
                         }
