@@ -328,4 +328,8 @@
     <string name="color_picker_clear">Ryd</string>
     <string name="common_refresh">Opdater</string>
     <string name="launcher_add_to_home">Føj til startskærm</string>
+    <string name="common_continue">Fortsæt</string>
+    <string name="common_open_settings">Åbn indstillinger</string>
+    <string name="notifications_permission_reason">Mochi skal have tilladelse til at vise notifikationer, så du hører om nye beskeder, svar og påmindelser.</string>
+    <string name="notifications_permission_blocked">Notifikationer er slået fra for Mochi. Du kan slå dem til i appens notifikationsindstillinger.</string>
 </resources>

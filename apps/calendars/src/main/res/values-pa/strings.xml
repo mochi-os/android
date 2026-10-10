@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google ਖਾਤੇ ਸਮਰੱਥ ਕਰੋ</string>
     <string name="calendars_provider_caldav">ਕੈਲੰਡਰ ਸਰਵਰ</string>
+    <string name="calendars_sync_permission_reason">ਸਿੰਕ ਕਰਨ ਨਾਲ ਤੁਹਾਡੇ ਸਮਾਗਮ ਇਸ ਫ਼ੋਨ ਦੀ ਕੈਲੰਡਰ ਐਪ ਵਿੱਚ ਕਾਪੀ ਹੋ ਜਾਂਦੇ ਹਨ, ਇਸ ਲਈ ਇਸ ਨੂੰ ਤੁਹਾਡੇ ਕੈਲੰਡਰਾਂ ਤੱਕ ਪਹੁੰਚ ਦੀ ਲੋੜ ਹੈ।</string>
+    <string name="calendars_sync_permission_blocked">ਇਸ ਐਪ ਲਈ ਕੈਲੰਡਰ ਪਹੁੰਚ ਬੰਦ ਹੈ। ਤੁਸੀਂ ਇਸ ਨੂੰ ਐਪ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤਾਂ ਹੇਠਾਂ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।</string>
 </resources>

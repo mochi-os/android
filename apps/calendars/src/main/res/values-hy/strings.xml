@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Միացնել Google հաշիվները</string>
     <string name="calendars_provider_caldav">Օրացույցի սերվեր</string>
+    <string name="calendars_sync_permission_reason">Համաժամացումը ձեր միջոցառումները պատճենում է այս հեռախոսի օրացույցի հավելված, ուստի դրան անհրաժեշտ է ձեր օրացույցների հասանելիություն։</string>
+    <string name="calendars_sync_permission_blocked">Այս հավելվածի համար օրացույցի հասանելիությունն անջատված է։ Կարող եք այն միացնել հավելվածի կարգավորումների Թույլտվություններ բաժնում։</string>
 </resources>

@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Arassalamak</string>
     <string name="common_refresh">Täzele</string>
     <string name="launcher_add_to_home">Esasy ekrana goş</string>
+    <string name="common_continue">Dowam etmek</string>
+    <string name="common_open_settings">Sazlamalary aç</string>
+    <string name="notifications_permission_reason">Mochi bildirişleri görkezmek üçin rugsat talap edýär, şeýlelikde täze habarlar, jogaplar we ýatlatmalar barada bilersiňiz.</string>
+    <string name="notifications_permission_blocked">Mochi üçin bildirişler öçürilen. Olary programmanyň bildiriş sazlamalarynda açyp bilersiňiz.</string>
 </resources>

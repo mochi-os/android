@@ -326,4 +326,8 @@
     <string name="color_picker_clear">清除</string>
     <string name="common_refresh">刷新</string>
     <string name="launcher_add_to_home">添加到主屏幕</string>
+    <string name="common_continue">继续</string>
+    <string name="common_open_settings">打开设置</string>
+    <string name="notifications_permission_reason">Mochi 需要获得显示通知的权限，以便您及时获知新消息、回复和提醒。</string>
+    <string name="notifications_permission_blocked">Mochi 的通知已关闭。您可以在应用的通知设置中开启通知。</string>
 </resources>

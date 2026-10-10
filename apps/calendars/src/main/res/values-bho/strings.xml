@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google खाता चालू करीं</string>
     <string name="calendars_provider_caldav">कैलेंडर सर्वर</string>
+    <string name="calendars_sync_permission_reason">सिंक कइला से रउआ के कार्यक्रम एह फोन के कैलेंडर ऐप में कॉपी हो जाला, एह से एकरा के रउआ के कैलेंडर तक पहुंच चाहीं।</string>
+    <string name="calendars_sync_permission_blocked">एह ऐप खातिर कैलेंडर के पहुंच बंद बा। रउआ ऐप के सेटिंग में अनुमतियां के तहत एकरा के चालू कर सकेलीं।</string>
 </resources>

@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Έτος</string>
     <string name="people_contact_birthday_clear">Εκκαθάριση</string>
     <string name="people_contact_create">Δημιουργία</string>
+    <string name="people_sync_permission_reason">Ο συγχρονισμός αντιγράφει τους φίλους σας στην εφαρμογή Επαφές αυτού του τηλεφώνου, επομένως χρειάζεται πρόσβαση στις επαφές σας.</string>
+    <string name="people_sync_permission_blocked">Η πρόσβαση στις επαφές είναι απενεργοποιημένη για αυτήν την εφαρμογή. Μπορείτε να την ενεργοποιήσετε στην ενότητα Άδειες, στις ρυθμίσεις της εφαρμογής.</string>
 </resources>

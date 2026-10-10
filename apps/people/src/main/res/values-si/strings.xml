@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">වර්ෂය</string>
     <string name="people_contact_birthday_clear">හිස් කරන්න</string>
     <string name="people_contact_create">නිර්මාණය කරන්න</string>
+    <string name="people_sync_permission_reason">සමමුහුර්ත කිරීම ඔබගේ මිතුරන් මෙම දුරකථනයේ සම්බන්ධතා යෙදුමට පිටපත් කරයි, එබැවින් එයට ඔබගේ සම්බන්ධතා වෙත ප්‍රවේශය අවශ්‍යයි.</string>
+    <string name="people_sync_permission_blocked">මෙම යෙදුම සඳහා සම්බන්ධතා ප්‍රවේශය ක්‍රියාවිරහිත කර ඇත. ඔබට එය යෙදුමේ සැකසුම්හි අවසර යටතේ ක්‍රියාත්මක කළ හැකිය.</string>
 </resources>

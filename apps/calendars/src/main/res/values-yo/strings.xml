@@ -265,4 +265,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Mú àwọn àkáǹtì Google ṣiṣẹ́</string>
     <string name="calendars_provider_caldav">Sáfà kàlẹ́ńdà</string>
+    <string name="calendars_sync_permission_reason">Àmúṣiṣẹ́pọ̀ máa ń da àwọn ìṣẹ̀lẹ̀ rẹ kọ sínú app kàlẹ́ńdà fóònù yìí, nítorí náà ó nílò ìwọlé sí àwọn kàlẹ́ńdà rẹ.</string>
+    <string name="calendars_sync_permission_blocked">A ti pa ìwọlé sí kàlẹ́ńdà fún app yìí. O lè tàn án lábẹ́ Àwọn ìyọ̀ǹda nínú àwọn ìṣètò app náà.</string>
 </resources>

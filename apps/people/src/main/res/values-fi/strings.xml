@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Vuosi</string>
     <string name="people_contact_birthday_clear">Tyhjennä</string>
     <string name="people_contact_create">Luo</string>
+    <string name="people_sync_permission_reason">Synkronointi kopioi kaverisi tämän puhelimen Yhteystiedot-sovellukseen, joten se tarvitsee pääsyn yhteystietoihisi.</string>
+    <string name="people_sync_permission_blocked">Yhteystietojen käyttöoikeus on poissa käytöstä tältä sovellukselta. Voit ottaa sen käyttöön sovelluksen asetusten kohdasta Luvat.</string>
 </resources>

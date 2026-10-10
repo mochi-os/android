@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">ஆண்டு</string>
     <string name="people_contact_birthday_clear">அழி</string>
     <string name="people_contact_create">உருவாக்கு</string>
+    <string name="people_sync_permission_reason">ஒத்திசைவு உங்கள் நண்பர்களை இந்தத் தொலைபேசியின் தொடர்புகள் ஆப்ஸுக்கு நகலெடுக்கிறது, எனவே அதற்கு உங்கள் தொடர்புகளுக்கான அணுகல் தேவை.</string>
+    <string name="people_sync_permission_blocked">இந்த ஆப்ஸுக்கான தொடர்புகள் அணுகல் முடக்கப்பட்டுள்ளது. ஆப்ஸ் அமைப்புகளில் உள்ள அனுமதிகள் என்பதில் அதை இயக்கலாம்.</string>
 </resources>

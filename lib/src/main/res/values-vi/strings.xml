@@ -327,4 +327,8 @@
     <string name="color_picker_clear">Xóa</string>
     <string name="common_refresh">Làm mới</string>
     <string name="launcher_add_to_home">Thêm vào màn hình chính</string>
+    <string name="common_continue">Tiếp tục</string>
+    <string name="common_open_settings">Mở cài đặt</string>
+    <string name="notifications_permission_reason">Mochi cần quyền hiển thị thông báo để bạn biết về tin nhắn mới, câu trả lời và lời nhắc.</string>
+    <string name="notifications_permission_blocked">Thông báo của Mochi đã bị tắt. Bạn có thể bật thông báo trong phần cài đặt thông báo của ứng dụng.</string>
 </resources>

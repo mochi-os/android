@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Shekara</string>
     <string name="people_contact_birthday_clear">Share</string>
     <string name="people_contact_create">Ƙirƙira</string>
+    <string name="people_sync_permission_reason">Daidaitawa na kwafa abokanka zuwa manhajar Lambobin sadarwa ta wannan wayar, don haka tana buƙatar samun damar shiga lambobin sadarwarka.</string>
+    <string name="people_sync_permission_blocked">An kashe damar shiga lambobin sadarwa don wannan manhajar. Za ka iya kunna ta a ƙarƙashin Izini a saitunan manhajar.</string>
 </resources>

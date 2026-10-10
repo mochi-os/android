@@ -264,4 +264,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Aktifkan akun Google</string>
     <string name="calendars_provider_caldav">Server kalender</string>
+    <string name="calendars_sync_permission_reason">Sinkronisasi menyalin acara Anda ke aplikasi kalender di ponsel ini, sehingga memerlukan akses ke kalender Anda.</string>
+    <string name="calendars_sync_permission_blocked">Akses kalender dinonaktifkan untuk aplikasi ini. Anda dapat mengaktifkannya di bagian Izin pada pengaturan aplikasi.</string>
 </resources>

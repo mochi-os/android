@@ -315,4 +315,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Attiva l-kontijiet ta\' Google</string>
     <string name="calendars_provider_caldav">Server tal-kalendarju</string>
+    <string name="calendars_sync_permission_reason">Is-sinkronizzazzjoni tikkopja l-avvenimenti tiegħek fl-app tal-kalendarju ta\' dan it-telefon, għalhekk teħtieġ aċċess għall-kalendarji tiegħek.</string>
+    <string name="calendars_sync_permission_blocked">L-aċċess għall-kalendarju huwa mitfi għal din l-app. Tista\' tixgħlu taħt Permessi fl-issettjar tal-app.</string>
 </resources>

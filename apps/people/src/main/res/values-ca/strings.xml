@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Any</string>
     <string name="people_contact_birthday_clear">Esborra</string>
     <string name="people_contact_create">Crea</string>
+    <string name="people_sync_permission_reason">La sincronització copia els vostres amics a l\'aplicació Contactes d\'aquest telèfon, de manera que necessita accés als vostres contactes.</string>
+    <string name="people_sync_permission_blocked">L\'accés als contactes està desactivat per a aquesta aplicació. El podeu activar a Permisos, a la configuració de l\'aplicació.</string>
 </resources>

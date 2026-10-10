@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Жыл</string>
     <string name="people_contact_birthday_clear">Тазалоо</string>
     <string name="people_contact_create">Түзүү</string>
+    <string name="people_sync_permission_reason">Синхрондоштуруу досторуңузду ушул телефондун Байланыштар колдонмосуна көчүрөт, ошондуктан ага байланыштарыңызга мүмкүнчүлүк керек.</string>
+    <string name="people_sync_permission_blocked">Бул колдонмо үчүн байланыштарга мүмкүнчүлүк өчүрүлгөн. Аны колдонмонун жөндөөлөрүндөгү Уруксаттар бөлүмүнөн күйгүзө аласыз.</string>
 </resources>

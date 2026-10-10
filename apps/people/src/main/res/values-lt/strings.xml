@@ -221,4 +221,6 @@
     <string name="people_contact_birthday_year">Metai</string>
     <string name="people_contact_birthday_clear">Išvalyti</string>
     <string name="people_contact_create">Sukurti</string>
+    <string name="people_sync_permission_reason">Sinchronizuojant jūsų draugai nukopijuojami į šio telefono programą „Kontaktai“, todėl reikia prieigos prie jūsų kontaktų.</string>
+    <string name="people_sync_permission_blocked">Šios programos prieiga prie kontaktų išjungta. Ją galite įjungti programos nustatymų skiltyje „Leidimai“.</string>
 </resources>

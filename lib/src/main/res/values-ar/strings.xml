@@ -330,4 +330,8 @@
     <string name="color_picker_clear">مسح</string>
     <string name="common_refresh">تحديث</string>
     <string name="launcher_add_to_home">إضافة إلى الشاشة الرئيسية</string>
+    <string name="common_continue">متابعة</string>
+    <string name="common_open_settings">فتح الإعدادات</string>
+    <string name="notifications_permission_reason">يحتاج Mochi إلى إذن لعرض الإشعارات، كي تعلم بالرسائل الجديدة والردود والتذكيرات.</string>
+    <string name="notifications_permission_blocked">الإشعارات متوقفة لتطبيق Mochi. يمكنك تشغيلها من إعدادات الإشعارات الخاصة بالتطبيق.</string>
 </resources>

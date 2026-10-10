@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Jaar</string>
     <string name="people_contact_birthday_clear">Maak skoon</string>
     <string name="people_contact_create">Skep</string>
+    <string name="people_sync_permission_reason">Sinkronisering kopieer jou vriende na hierdie foon se Kontakte-app, dus het dit toegang tot jou kontakte nodig.</string>
+    <string name="people_sync_permission_blocked">Kontaktetoegang is vir hierdie app afgeskakel. Jy kan dit onder Toestemmings in die app se instellings aanskakel.</string>
 </resources>

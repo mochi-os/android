@@ -326,4 +326,8 @@
     <string name="color_picker_clear">សម្អាត</string>
     <string name="common_refresh">ផ្ទុកឡើងវិញ</string>
     <string name="launcher_add_to_home">បន្ថែមទៅអេក្រង់ដើម</string>
+    <string name="common_continue">បន្ត</string>
+    <string name="common_open_settings">បើកការកំណត់</string>
+    <string name="notifications_permission_reason">Mochi ត្រូវការការអនុញ្ញាតដើម្បីបង្ហាញការជូនដំណឹង ដើម្បីឱ្យអ្នកដឹងអំពីសារថ្មី ការឆ្លើយតប និងការរំលឹក។</string>
+    <string name="notifications_permission_blocked">ការជូនដំណឹងត្រូវបានបិទសម្រាប់ Mochi។ អ្នកអាចបើកវានៅក្នុងការកំណត់ការជូនដំណឹងរបស់កម្មវិធី។</string>
 </resources>

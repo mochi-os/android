@@ -287,4 +287,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Омогући Google налоге</string>
     <string name="calendars_provider_caldav">Сервер календара</string>
+    <string name="calendars_sync_permission_reason">Синхронизација копира ваше догађаје у апликацију календара на овом телефону, па јој је потребан приступ вашим календарима.</string>
+    <string name="calendars_sync_permission_blocked">Приступ календару је искључен за ову апликацију. Можете да га укључите у одељку Дозволе у подешавањима апликације.</string>
 </resources>

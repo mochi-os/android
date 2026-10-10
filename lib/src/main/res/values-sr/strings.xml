@@ -327,4 +327,8 @@
     <string name="color_picker_clear">Очисти</string>
     <string name="common_refresh">Освежи</string>
     <string name="launcher_add_to_home">Додај на почетни екран</string>
+    <string name="common_continue">Настави</string>
+    <string name="common_open_settings">Отвори подешавања</string>
+    <string name="notifications_permission_reason">Mochi треба дозволу за приказивање обавештења, како бисте сазнавали за нове поруке, одговоре и подсетнике.</string>
+    <string name="notifications_permission_blocked">Обавештења за Mochi су искључена. Можете да их укључите у подешавањима обавештења апликације.</string>
 </resources>

@@ -264,4 +264,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">启用 Google 账户</string>
     <string name="calendars_provider_caldav">日历服务器</string>
+    <string name="calendars_sync_permission_reason">同步会将您的活动复制到此手机的日历应用中，因此需要访问您的日历。</string>
+    <string name="calendars_sync_permission_blocked">此应用的日历访问权限已关闭。您可以在应用设置的“权限”中开启。</string>
 </resources>

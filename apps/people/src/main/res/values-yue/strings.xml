@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">年</string>
     <string name="people_contact_birthday_clear">清除</string>
     <string name="people_contact_create">建立</string>
+    <string name="people_sync_permission_reason">同步會將你嘅朋友複製到呢部手機嘅「聯絡人」應用程式，所以需要存取你嘅聯絡人。</string>
+    <string name="people_sync_permission_blocked">呢個應用程式嘅聯絡人存取權已經關閉。你可以喺應用程式設定嘅「權限」入面開啟。</string>
 </resources>

@@ -301,4 +301,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Omogoči račune Google</string>
     <string name="calendars_provider_caldav">Koledarski strežnik</string>
+    <string name="calendars_sync_permission_reason">Sinhronizacija kopira vaše dogodke v aplikacijo za koledar v tem telefonu, zato potrebuje dostop do vaših koledarjev.</string>
+    <string name="calendars_sync_permission_blocked">Dostop do koledarja je za to aplikacijo izklopljen. Vklopite ga lahko v razdelku Dovoljenja v nastavitvah aplikacije.</string>
 </resources>

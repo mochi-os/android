@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google-fiókok engedélyezése</string>
     <string name="calendars_provider_caldav">Naptárkiszolgáló</string>
+    <string name="calendars_sync_permission_reason">A szinkronizálás átmásolja az eseményeit ennek a telefonnak a naptáralkalmazásába, ezért hozzáférésre van szüksége a naptáraihoz.</string>
+    <string name="calendars_sync_permission_blocked">A naptárhoz való hozzáférés ki van kapcsolva ennél az alkalmazásnál. Az alkalmazás beállításaiban, az Engedélyek részben kapcsolhatja be.</string>
 </resources>

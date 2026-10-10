@@ -264,4 +264,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">បើកគណនី Google</string>
     <string name="calendars_provider_caldav">ម៉ាស៊ីនមេប្រតិទិន</string>
+    <string name="calendars_sync_permission_reason">ការធ្វើសមកាលកម្មចម្លងព្រឹត្តិការណ៍របស់អ្នកទៅកម្មវិធីប្រតិទិនរបស់ទូរសព្ទនេះ ដូច្នេះវាត្រូវការសិទ្ធិចូលប្រើប្រតិទិនរបស់អ្នក។</string>
+    <string name="calendars_sync_permission_blocked">សិទ្ធិចូលប្រើប្រតិទិនត្រូវបានបិទសម្រាប់កម្មវិធីនេះ។ អ្នកអាចបើកវានៅក្រោម ការអនុញ្ញាត នៅក្នុងការកំណត់របស់កម្មវិធី។</string>
 </resources>

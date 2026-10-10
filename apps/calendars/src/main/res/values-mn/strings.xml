@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google бүртгэлүүдийг идэвхжүүлэх</string>
     <string name="calendars_provider_caldav">Хуанлийн сервер</string>
+    <string name="calendars_sync_permission_reason">Синк хийх нь таны үйл явдлуудыг энэ утасны хуанли аппад хуулдаг тул таны хуанлиудад хандах эрх хэрэгтэй.</string>
+    <string name="calendars_sync_permission_blocked">Энэ аппын хуанлид хандах эрх унтраалттай байна. Та үүнийг аппын тохиргооны Зөвшөөрөл хэсгээс асааж болно.</string>
 </resources>

@@ -222,4 +222,6 @@
     <string name="people_contact_birthday_year">Leto</string>
     <string name="people_contact_birthday_clear">Počisti</string>
     <string name="people_contact_create">Ustvari</string>
+    <string name="people_sync_permission_reason">Sinhronizacija kopira vaše prijatelje v aplikacijo Stiki v tem telefonu, zato potrebuje dostop do vaših stikov.</string>
+    <string name="people_sync_permission_blocked">Dostop do stikov je za to aplikacijo izklopljen. Vklopite ga lahko v razdelku Dovoljenja v nastavitvah aplikacije.</string>
 </resources>

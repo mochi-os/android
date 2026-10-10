@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google اکاؤنٹس فعال کریں</string>
     <string name="calendars_provider_caldav">کیلنڈر سرور</string>
+    <string name="calendars_sync_permission_reason">سنک کرنے سے آپ کے ایونٹس اس فون کی کیلنڈر ایپ میں کاپی ہو جاتے ہیں، اس لیے اسے آپ کے کیلنڈرز تک رسائی درکار ہے۔</string>
+    <string name="calendars_sync_permission_blocked">اس ایپ کے لیے کیلنڈر تک رسائی بند ہے۔ آپ اسے ایپ کی سیٹنگز میں اجازتیں کے تحت آن کر سکتے ہیں۔</string>
 </resources>

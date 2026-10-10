@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Ane</string>
     <string name="people_contact_birthday_clear">Efase</string>
     <string name="people_contact_create">Kreye</string>
+    <string name="people_sync_permission_reason">Senkronizasyon an kopye zanmi ou yo nan aplikasyon Kontak telefòn sa a, kidonk li bezwen aksè nan kontak ou yo.</string>
+    <string name="people_sync_permission_blocked">Aksè kontak yo etenn pou aplikasyon sa a. Ou ka limen l nan Pèmisyon, nan paramèt aplikasyon an.</string>
 </resources>

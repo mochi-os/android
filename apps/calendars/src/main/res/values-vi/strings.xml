@@ -265,4 +265,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Bật tài khoản Google</string>
     <string name="calendars_provider_caldav">Máy chủ lịch</string>
+    <string name="calendars_sync_permission_reason">Tính năng đồng bộ sao chép các sự kiện của bạn vào ứng dụng lịch của điện thoại này, vì vậy cần có quyền truy cập vào lịch của bạn.</string>
+    <string name="calendars_sync_permission_blocked">Quyền truy cập lịch đã bị tắt đối với ứng dụng này. Bạn có thể bật trong mục Quyền ở phần cài đặt của ứng dụng.</string>
 </resources>

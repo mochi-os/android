@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">वर्ष</string>
     <string name="people_contact_birthday_clear">साफ करा</string>
     <string name="people_contact_create">तयार करा</string>
+    <string name="people_sync_permission_reason">सिंक केल्याने तुमचे मित्र या फोनच्या संपर्क ॲपमध्ये कॉपी होतात, म्हणून त्यासाठी तुमच्या संपर्कांचा प्रवेश आवश्यक आहे.</string>
+    <string name="people_sync_permission_blocked">या ॲपसाठी संपर्क प्रवेश बंद आहे. तुम्ही तो ॲपच्या सेटिंग्जमधील परवानग्या अंतर्गत चालू करू शकता.</string>
 </resources>

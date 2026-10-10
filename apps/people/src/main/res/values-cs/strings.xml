@@ -221,4 +221,6 @@
     <string name="people_contact_birthday_year">Rok</string>
     <string name="people_contact_birthday_clear">Vymazat</string>
     <string name="people_contact_create">Vytvořit</string>
+    <string name="people_sync_permission_reason">Synchronizace kopíruje vaše přátele do aplikace Kontakty v tomto telefonu, a proto potřebuje přístup k vašim kontaktům.</string>
+    <string name="people_sync_permission_blocked">Přístup ke kontaktům je pro tuto aplikaci vypnutý. Můžete ho zapnout v sekci Oprávnění v nastavení aplikace.</string>
 </resources>

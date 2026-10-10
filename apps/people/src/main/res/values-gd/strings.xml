@@ -222,4 +222,6 @@
     <string name="people_contact_birthday_year">Bliadhna</string>
     <string name="people_contact_birthday_clear">Falamhaich</string>
     <string name="people_contact_create">Cruthaich</string>
+    <string name="people_sync_permission_reason">Nì an sioncronachadh lethbhreac dhe na caraidean agad ann an aplacaid Luchd-aithne an fhòn seo, mar sin feumaidh e inntrigeadh dhan luchd-aithne agad.</string>
+    <string name="people_sync_permission_blocked">Tha inntrigeadh dhan luchd-aithne dheth airson na h-aplacaid seo. \'S urrainn dhut a chur air fo Ceadan ann an roghainnean na h-aplacaid.</string>
 </resources>

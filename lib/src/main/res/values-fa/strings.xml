@@ -326,4 +326,8 @@
     <string name="color_picker_clear">پاک کردن</string>
     <string name="common_refresh">تازه‌سازی</string>
     <string name="launcher_add_to_home">افزودن به صفحه اصلی</string>
+    <string name="common_continue">ادامه</string>
+    <string name="common_open_settings">باز کردن تنظیمات</string>
+    <string name="notifications_permission_reason">Mochi برای نمایش اعلان‌ها به اجازه نیاز دارد تا از پیام‌های جدید، پاسخ‌ها و یادآوری‌ها باخبر شوید.</string>
+    <string name="notifications_permission_blocked">اعلان‌های Mochi خاموش است. می‌توانید آن‌ها را در تنظیمات اعلان برنامه روشن کنید.</string>
 </resources>

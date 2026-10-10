@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">సంవత్సరం</string>
     <string name="people_contact_birthday_clear">క్లియర్ చేయండి</string>
     <string name="people_contact_create">సృష్టించండి</string>
+    <string name="people_sync_permission_reason">సింక్ చేయడం మీ స్నేహితులను ఈ ఫోన్ కాంటాక్ట్‌ల యాప్‌లోకి కాపీ చేస్తుంది, కాబట్టి దానికి మీ కాంటాక్ట్‌లకు యాక్సెస్ అవసరం.</string>
+    <string name="people_sync_permission_blocked">ఈ యాప్‌కు కాంటాక్ట్‌ల యాక్సెస్ ఆఫ్ చేయబడింది. మీరు దాన్ని యాప్ సెట్టింగ్‌లలోని అనుమతులు కింద ఆన్ చేయవచ్చు.</string>
 </resources>

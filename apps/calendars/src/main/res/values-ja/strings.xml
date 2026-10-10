@@ -264,4 +264,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google アカウントを有効にする</string>
     <string name="calendars_provider_caldav">カレンダーサーバー</string>
+    <string name="calendars_sync_permission_reason">同期すると予定がこのスマートフォンのカレンダーアプリにコピーされるため、カレンダーへのアクセスが必要です。</string>
+    <string name="calendars_sync_permission_blocked">このアプリのカレンダーへのアクセスがオフになっています。アプリの設定の「権限」でオンにできます。</string>
 </resources>

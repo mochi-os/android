@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Ary</string>
     <string name="people_contact_birthday_clear">Embopotĩ</string>
     <string name="people_contact_create">Emoheñói</string>
+    <string name="people_sync_permission_reason">Ñembojoja okopia nde angirũnguéra ko pumbyry Contactokuéra app-pe, upévare oikotevẽ jeike nde contactokuérape.</string>
+    <string name="people_sync_permission_blocked">Jeike contactokuérape oñembogue ko app-pe g̃uarã. Ikatu remyendy Ñemoneĩkuéra-pe, app ñembohekópe.</string>
 </resources>

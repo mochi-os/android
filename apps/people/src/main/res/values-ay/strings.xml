@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Mara</string>
     <string name="people_contact_birthday_clear">Q\'umachaña</string>
     <string name="people_contact_create">Luraña</string>
+    <string name="people_sync_permission_reason">Sincronizañax masinakam aka telefonon Contactonaka app ukar copiaraki, ukatwa contactonakamar mantañ munaraki.</string>
+    <string name="people_sync_permission_blocked">Contactonakar mantañax aka app ukatakix jiwt\'ayatawa. App ukan wakichawinakapan Permisos ukan activarakismawa.</string>
 </resources>

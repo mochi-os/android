@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google тіркелгілерін қосу</string>
     <string name="calendars_provider_caldav">Күнтізбе сервері</string>
+    <string name="calendars_sync_permission_reason">Синхрондау іс-шараларыңызды осы телефонның күнтізбе қолданбасына көшіреді, сондықтан оған күнтізбелеріңізге қол жеткізу қажет.</string>
+    <string name="calendars_sync_permission_blocked">Бұл қолданба үшін күнтізбеге қол жеткізу өшірулі. Оны қолданба параметрлеріндегі «Рұқсаттар» бөлімінде қосуға болады.</string>
 </resources>

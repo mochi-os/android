@@ -221,4 +221,6 @@
     <string name="people_contact_birthday_year">Godina</string>
     <string name="people_contact_birthday_clear">Očisti</string>
     <string name="people_contact_create">Stvori</string>
+    <string name="people_sync_permission_reason">Sinkronizacija kopira vaše prijatelje u aplikaciju Kontakti na ovom telefonu, pa joj je potreban pristup vašim kontaktima.</string>
+    <string name="people_sync_permission_blocked">Pristup kontaktima isključen je za ovu aplikaciju. Možete ga uključiti u odjeljku Dopuštenja u postavkama aplikacije.</string>
 </resources>

@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google ఖాతాలను ప్రారంభించండి</string>
     <string name="calendars_provider_caldav">క్యాలెండర్ సర్వర్</string>
+    <string name="calendars_sync_permission_reason">సింక్ చేయడం మీ ఈవెంట్‌లను ఈ ఫోన్ క్యాలెండర్ యాప్‌లోకి కాపీ చేస్తుంది, కాబట్టి దానికి మీ క్యాలెండర్‌లకు యాక్సెస్ అవసరం.</string>
+    <string name="calendars_sync_permission_blocked">ఈ యాప్‌కు క్యాలెండర్ యాక్సెస్ ఆఫ్ చేయబడింది. మీరు దాన్ని యాప్ సెట్టింగ్‌లలోని అనుమతులు కింద ఆన్ చేయవచ్చు.</string>
 </resources>

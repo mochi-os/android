@@ -221,4 +221,6 @@
     <string name="people_contact_birthday_year">Година</string>
     <string name="people_contact_birthday_clear">Очисти</string>
     <string name="people_contact_create">Креирај</string>
+    <string name="people_sync_permission_reason">Синхронизација копира ваше пријатеље у апликацију Контакти на овом телефону, па јој је потребан приступ вашим контактима.</string>
+    <string name="people_sync_permission_blocked">Приступ контактима је искључен за ову апликацију. Можете да га укључите у одељку Дозволе у подешавањима апликације.</string>
 </resources>

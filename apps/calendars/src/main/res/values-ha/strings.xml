@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Kunna asusun Google</string>
     <string name="calendars_provider_caldav">Sabar kalanda</string>
+    <string name="calendars_sync_permission_reason">Daidaitawa na kwafa tarurrukanka zuwa manhajar kalanda ta wannan wayar, don haka tana buƙatar samun damar shiga kalandocinka.</string>
+    <string name="calendars_sync_permission_blocked">An kashe damar shiga kalanda don wannan manhajar. Za ka iya kunna ta a ƙarƙashin Izini a saitunan manhajar.</string>
 </resources>

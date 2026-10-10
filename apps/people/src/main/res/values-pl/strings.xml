@@ -222,4 +222,6 @@
     <string name="people_contact_birthday_year">Rok</string>
     <string name="people_contact_birthday_clear">Wyczyść</string>
     <string name="people_contact_create">Utwórz</string>
+    <string name="people_sync_permission_reason">Synchronizacja kopiuje Twoich znajomych do aplikacji Kontakty na tym telefonie, dlatego potrzebuje dostępu do Twoich kontaktów.</string>
+    <string name="people_sync_permission_blocked">Dostęp do kontaktów jest wyłączony dla tej aplikacji. Możesz go włączyć w sekcji Uprawnienia w ustawieniach aplikacji.</string>
 </resources>

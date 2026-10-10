@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Év</string>
     <string name="people_contact_birthday_clear">Törlés</string>
     <string name="people_contact_create">Létrehozás</string>
+    <string name="people_sync_permission_reason">A szinkronizálás átmásolja a barátait ennek a telefonnak a Névjegyek alkalmazásába, ezért hozzáférésre van szüksége a névjegyeihez.</string>
+    <string name="people_sync_permission_blocked">A névjegyekhez való hozzáférés ki van kapcsolva ennél az alkalmazásnál. Az alkalmazás beállításaiban, az Engedélyek részben kapcsolhatja be.</string>
 </resources>

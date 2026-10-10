@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">နှစ်</string>
     <string name="people_contact_birthday_clear">ရှင်းမည်</string>
     <string name="people_contact_create">ဖန်တီးမည်</string>
+    <string name="people_sync_permission_reason">ထပ်တူပြုခြင်းသည် သင့်သူငယ်ချင်းများကို ဤဖုန်း၏ အဆက်အသွယ်များ အက်ပ်ထဲသို့ ကူးယူသောကြောင့် သင့်အဆက်အသွယ်များကို ဝင်ရောက်ခွင့် လိုအပ်ပါသည်။</string>
+    <string name="people_sync_permission_blocked">ဤအက်ပ်အတွက် အဆက်အသွယ်များ ဝင်ရောက်ခွင့်ကို ပိတ်ထားသည်။ အက်ပ်၏ ဆက်တင်များရှိ ခွင့်ပြုချက်များ အောက်တွင် ၎င်းကို ဖွင့်နိုင်သည်။</string>
 </resources>

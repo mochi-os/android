@@ -328,4 +328,8 @@
     <string name="color_picker_clear">Maak skoon</string>
     <string name="common_refresh">Verfris</string>
     <string name="launcher_add_to_home">Voeg by tuisskerm</string>
+    <string name="common_continue">Gaan voort</string>
+    <string name="common_open_settings">Maak instellings oop</string>
+    <string name="notifications_permission_reason">Mochi het toestemming nodig om kennisgewings te wys, sodat jy van nuwe boodskappe, antwoorde en herinneringe hoor.</string>
+    <string name="notifications_permission_blocked">Kennisgewings is vir Mochi afgeskakel. Jy kan hulle in die app se kennisgewinginstellings aanskakel.</string>
 </resources>

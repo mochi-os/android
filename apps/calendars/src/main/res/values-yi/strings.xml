@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">אַקטיווירן Google קאָנטעס</string>
     <string name="calendars_provider_caldav">קאַלענדאַר־סערווער</string>
+    <string name="calendars_sync_permission_reason">סינכראָניזירן קאָפּירט אײַערע געשעענישן אין דעם טעלעפֿאָנס קאַלענדאַר־אַפּ, דערפֿאַר דאַרף עס צוטריט צו אײַערע קאַלענדאַרן.</string>
+    <string name="calendars_sync_permission_blocked">קאַלענדאַר־צוטריט איז אױסגעשאַלט פֿאַר דער דאָזיקער אַפּ. איר קענט אים אײַנשאַלטן אונטער דערלויבענישן אין די אײַנשטעלונגען פֿון דער אַפּ.</string>
 </resources>

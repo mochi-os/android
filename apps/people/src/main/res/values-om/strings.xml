@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Waggaa</string>
     <string name="people_contact_birthday_clear">Cilliisi</string>
     <string name="people_contact_create">Uumi</string>
+    <string name="people_sync_permission_reason">Walsimsiisuun hiriyoota kee appii Quunnamtiiwwan bilbila kanaatti garagalcha, kanaafuu quunnamtiiwwan kee argachuuf hayyama barbaada.</string>
+    <string name="people_sync_permission_blocked">Quunnamtiiwwan argachuun appii kanaaf cufameera. Qindaa\'inoota appichaa keessatti Hayyamoota jalatti banuu dandeessa.</string>
 </resources>

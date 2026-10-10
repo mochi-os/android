@@ -327,4 +327,8 @@
     <string name="color_picker_clear">Notīrīt</string>
     <string name="common_refresh">Atsvaidzināt</string>
     <string name="launcher_add_to_home">Pievienot sākuma ekrānam</string>
+    <string name="common_continue">Turpināt</string>
+    <string name="common_open_settings">Atvērt iestatījumus</string>
+    <string name="notifications_permission_reason">Mochi nepieciešama atļauja rādīt paziņojumus, lai jūs uzzinātu par jauniem ziņojumiem, atbildēm un atgādinājumiem.</string>
+    <string name="notifications_permission_blocked">Paziņojumi lietotnei Mochi ir izslēgti. Varat tos ieslēgt lietotnes paziņojumu iestatījumos.</string>
 </resources>

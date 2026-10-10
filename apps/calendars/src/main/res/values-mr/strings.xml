@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google खाती सक्षम करा</string>
     <string name="calendars_provider_caldav">कॅलेंडर सर्व्हर</string>
+    <string name="calendars_sync_permission_reason">सिंक केल्याने तुमचे कार्यक्रम या फोनच्या कॅलेंडर ॲपमध्ये कॉपी होतात, म्हणून त्यासाठी तुमच्या कॅलेंडरचा प्रवेश आवश्यक आहे.</string>
+    <string name="calendars_sync_permission_blocked">या ॲपसाठी कॅलेंडर प्रवेश बंद आहे. तुम्ही तो ॲपच्या सेटिंग्जमधील परवानग्या अंतर्गत चालू करू शकता.</string>
 </resources>

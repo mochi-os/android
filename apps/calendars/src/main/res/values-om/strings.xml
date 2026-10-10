@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Akkaawuntiiwwan Google dandeessisi</string>
     <string name="calendars_provider_caldav">Sarvarii kaalaandarii</string>
+    <string name="calendars_sync_permission_reason">Walsimsiisuun taateewwan kee appii kaalandarii bilbila kanaatti garagalcha, kanaafuu kaalandariilee kee argachuuf hayyama barbaada.</string>
+    <string name="calendars_sync_permission_blocked">Kaalandarii argachuun appii kanaaf cufameera. Qindaa\'inoota appichaa keessatti Hayyamoota jalatti banuu dandeessa.</string>
 </resources>

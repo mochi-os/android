@@ -328,4 +328,8 @@
     <string name="color_picker_clear">Vymazat</string>
     <string name="common_refresh">Obnovit</string>
     <string name="launcher_add_to_home">Přidat na domovskou obrazovku</string>
+    <string name="common_continue">Pokračovat</string>
+    <string name="common_open_settings">Otevřít nastavení</string>
+    <string name="notifications_permission_reason">Mochi potřebuje oprávnění zobrazovat oznámení, abyste se dozvěděli o nových zprávách, odpovědích a připomenutích.</string>
+    <string name="notifications_permission_blocked">Oznámení jsou pro Mochi vypnutá. Můžete je zapnout v nastavení oznámení aplikace.</string>
 </resources>

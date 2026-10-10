@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">Năm</string>
     <string name="people_contact_birthday_clear">Xóa</string>
     <string name="people_contact_create">Tạo</string>
+    <string name="people_sync_permission_reason">Tính năng đồng bộ sao chép bạn bè của bạn vào ứng dụng Danh bạ của điện thoại này, vì vậy cần có quyền truy cập vào danh bạ của bạn.</string>
+    <string name="people_sync_permission_blocked">Quyền truy cập danh bạ đã bị tắt đối với ứng dụng này. Bạn có thể bật trong mục Quyền ở phần cài đặt của ứng dụng.</string>
 </resources>

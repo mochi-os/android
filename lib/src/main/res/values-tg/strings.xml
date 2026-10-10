@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Тоза кардан</string>
     <string name="common_refresh">Нав кардан</string>
     <string name="launcher_add_to_home">Ба экрани асосӣ илова кардан</string>
+    <string name="common_continue">Идома</string>
+    <string name="common_open_settings">Кушодани танзимот</string>
+    <string name="notifications_permission_reason">Mochi барои намоиш додани огоҳиномаҳо иҷозат лозим дорад, то шумо дар бораи паёмҳои нав, ҷавобҳо ва ёдовариҳо огоҳ шавед.</string>
+    <string name="notifications_permission_blocked">Огоҳиномаҳо барои Mochi хомӯш карда шудаанд. Шумо метавонед онҳоро дар танзимоти огоҳиномаҳои барнома фаъол кунед.</string>
 </resources>

@@ -317,4 +317,5 @@
     <string name="color_picker_clear">Borrar</string>
     <string name="common_refresh">Actualizar</string>
     <string name="launcher_add_to_home">Agregar a la pantalla de inicio</string>
+    <string name="common_continue">Continuar</string>
 </resources>

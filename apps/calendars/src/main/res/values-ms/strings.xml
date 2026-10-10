@@ -264,4 +264,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Dayakan akaun Google</string>
     <string name="calendars_provider_caldav">Pelayan kalendar</string>
+    <string name="calendars_sync_permission_reason">Penyegerakan menyalin acara anda ke dalam apl kalendar telefon ini, jadi ia memerlukan akses kepada kalendar anda.</string>
+    <string name="calendars_sync_permission_blocked">Akses kalendar dimatikan untuk apl ini. Anda boleh menghidupkannya di bawah Kebenaran dalam tetapan apl.</string>
 </resources>

@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">سال</string>
     <string name="people_contact_birthday_clear">صاف کریں</string>
     <string name="people_contact_create">بنائیں</string>
+    <string name="people_sync_permission_reason">سنک کرنے سے آپ کے دوست اس فون کی روابط ایپ میں کاپی ہو جاتے ہیں، اس لیے اسے آپ کے روابط تک رسائی درکار ہے۔</string>
+    <string name="people_sync_permission_blocked">اس ایپ کے لیے روابط تک رسائی بند ہے۔ آپ اسے ایپ کی سیٹنگز میں اجازتیں کے تحت آن کر سکتے ہیں۔</string>
 </resources>

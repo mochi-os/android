@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">연도</string>
     <string name="people_contact_birthday_clear">지우기</string>
     <string name="people_contact_create">생성</string>
+    <string name="people_sync_permission_reason">동기화하면 친구가 이 휴대전화의 연락처 앱에 복사되므로 연락처에 대한 액세스 권한이 필요합니다.</string>
+    <string name="people_sync_permission_blocked">이 앱의 연락처 액세스가 꺼져 있습니다. 앱 설정의 권한에서 켤 수 있습니다.</string>
 </resources>

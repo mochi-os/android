@@ -221,4 +221,6 @@
     <string name="people_contact_birthday_year">An</string>
     <string name="people_contact_birthday_clear">Golește</string>
     <string name="people_contact_create">Creează</string>
+    <string name="people_sync_permission_reason">Sincronizarea copiază prietenii tăi în aplicația Contacte a acestui telefon, așa că are nevoie de acces la contactele tale.</string>
+    <string name="people_sync_permission_blocked">Accesul la contacte este dezactivat pentru această aplicație. Îl poți activa din Permisiuni, în setările aplicației.</string>
 </resources>

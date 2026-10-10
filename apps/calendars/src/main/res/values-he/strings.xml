@@ -297,4 +297,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">הפעל חשבונות Google</string>
     <string name="calendars_provider_caldav">שרת יומנים</string>
+    <string name="calendars_sync_permission_reason">הסנכרון מעתיק את האירועים שלך לאפליקציית היומן בטלפון הזה, ולכן נדרשת לו גישה ליומנים שלך.</string>
+    <string name="calendars_sync_permission_blocked">הגישה ליומן כבויה עבור האפליקציה הזו. ניתן להפעיל אותה בקטע \'הרשאות\' בהגדרות האפליקציה.</string>
 </resources>

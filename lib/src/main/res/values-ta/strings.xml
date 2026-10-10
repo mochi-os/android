@@ -326,4 +326,8 @@
     <string name="color_picker_clear">அழி</string>
     <string name="common_refresh">புதுப்பி</string>
     <string name="launcher_add_to_home">முகப்புத் திரையில் சேர்</string>
+    <string name="common_continue">தொடர்</string>
+    <string name="common_open_settings">அமைப்புகளைத் திற</string>
+    <string name="notifications_permission_reason">அறிவிப்புகளைக் காட்ட Mochi-க்கு அனுமதி தேவை, அப்போதுதான் புதிய செய்திகள், பதில்கள், நினைவூட்டல்கள் பற்றி உங்களுக்குத் தெரியவரும்.</string>
+    <string name="notifications_permission_blocked">Mochi-க்கான அறிவிப்புகள் முடக்கப்பட்டுள்ளன. ஆப்ஸின் அறிவிப்பு அமைப்புகளில் அவற்றை இயக்கலாம்.</string>
 </resources>

@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Vula ii-akhawunti ze-Google</string>
     <string name="calendars_provider_caldav">Iseva yekhalenda</string>
+    <string name="calendars_sync_permission_reason">Ukungqamanisa kukhuphela iziganeko zakho kwi-app yekhalenda yale fowuni, ngoko kufuna ufikelelo kwiikhalenda zakho.</string>
+    <string name="calendars_sync_permission_blocked">Ufikelelo lwekhalenda lucinyiwe kule app. Ungaluvula phantsi kweeMvume kwiisetingi ze-app.</string>
 </resources>

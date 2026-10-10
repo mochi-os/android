@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Активиране на акаунти в Google</string>
     <string name="calendars_provider_caldav">Сървър за календари</string>
+    <string name="calendars_sync_permission_reason">Синхронизирането копира събитията ви в приложението за календар на този телефон, затова се нуждае от достъп до календарите ви.</string>
+    <string name="calendars_sync_permission_blocked">Достъпът до календара е изключен за това приложение. Можете да го включите от „Разрешения“ в настройките на приложението.</string>
 </resources>

@@ -331,4 +331,8 @@
     <string name="color_picker_clear">Clirio</string>
     <string name="common_refresh">Adnewyddu</string>
     <string name="launcher_add_to_home">Ychwanegu at y sgrin gartref</string>
+    <string name="common_continue">Parhau</string>
+    <string name="common_open_settings">Agor gosodiadau</string>
+    <string name="notifications_permission_reason">Mae angen caniatâd ar Mochi i ddangos hysbysiadau, fel eich bod yn clywed am negeseuon newydd, atebion a nodiadau atgoffa.</string>
+    <string name="notifications_permission_blocked">Mae hysbysiadau wedi\'u diffodd ar gyfer Mochi. Gallwch eu troi ymlaen yng ngosodiadau hysbysiadau\'r ap.</string>
 </resources>

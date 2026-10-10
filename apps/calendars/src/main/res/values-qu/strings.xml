@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google cuentakunata activay</string>
     <string name="calendars_provider_caldav">Calendario servidor</string>
+    <string name="calendars_sync_permission_reason">Sincronizayqa eventoykikunata kay telefonopa calendario appninman copian, chaymi calendarioykikunaman yaykuyta necesitan.</string>
+    <string name="calendars_sync_permission_blocked">Kay app-paq calendarioman yaykuyqa desactivasqa kachkan. App-pa wakichiyninkunapi Permisokuna nisqapi activayta atinki.</string>
 </resources>

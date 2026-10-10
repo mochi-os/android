@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Bersihkeun</string>
     <string name="common_refresh">Seger</string>
     <string name="launcher_add_to_home">Tambihkeun ka layar imah</string>
+    <string name="common_continue">Teruskeun</string>
+    <string name="common_open_settings">Buka setélan</string>
+    <string name="notifications_permission_reason">Mochi peryogi idin pikeun mintonkeun béwara, supados anjeun terang ngeunaan pesen anyar, balesan sareng panginget.</string>
+    <string name="notifications_permission_blocked">Béwara pikeun Mochi dipareuman. Anjeun tiasa ngahurungkeunana dina setélan béwara aplikasi.</string>
 </resources>

@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Taon</string>
     <string name="people_contact_birthday_clear">Burahin</string>
     <string name="people_contact_create">Gumawa</string>
+    <string name="people_sync_permission_reason">Kinokopya ng pag-sync ang iyong mga kaibigan sa app na Mga Contact ng teleponong ito, kaya kailangan nito ng access sa iyong mga contact.</string>
+    <string name="people_sync_permission_blocked">Naka-off ang access sa mga contact para sa app na ito. Maaari mo itong i-on sa ilalim ng Mga Pahintulot sa mga setting ng app.</string>
 </resources>

@@ -327,4 +327,8 @@
     <string name="color_picker_clear">Cancella</string>
     <string name="common_refresh">Aggiorna</string>
     <string name="launcher_add_to_home">Aggiungi alla schermata Home</string>
+    <string name="common_continue">Continua</string>
+    <string name="common_open_settings">Apri impostazioni</string>
+    <string name="notifications_permission_reason">Mochi ha bisogno dell\'autorizzazione per mostrare le notifiche, così sarai informato di nuovi messaggi, risposte e promemoria.</string>
+    <string name="notifications_permission_blocked">Le notifiche sono disattivate per Mochi. Puoi attivarle nelle impostazioni di notifica dell\'app.</string>
 </resources>

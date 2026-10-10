@@ -47,11 +47,20 @@ class CalendarMenuTest {
     }
 
     @Test
-    fun `a calendar of the user's own offers import and export`() {
+    fun `a calendar of the user's own offers only Only this and Settings`() {
         val chosen = open(Calendar(id = "own", name = "Work"))
-        rule.onNodeWithText(export).assertExists()
-        rule.onNodeWithText(import).performClick()
-        assertEquals(listOf(CalendarAction.IMPORT), chosen)
+        for (moved in listOf(
+            R.string.calendars_rename,
+            R.string.calendars_colour,
+            R.string.calendars_link_copy,
+            R.string.calendars_import,
+            R.string.calendars_export,
+            R.string.calendars_delete,
+        )) {
+            rule.onNodeWithText(context.getString(moved)).assertDoesNotExist()
+        }
+        rule.onNodeWithText(context.getString(R.string.calendars_only_this)).performClick()
+        assertEquals(listOf(CalendarAction.ONLY), chosen)
     }
 
     @Test
@@ -62,12 +71,10 @@ class CalendarMenuTest {
     }
 
     @Test
-    fun `Settings sits just above Delete, after Export`() {
+    fun `Settings comes after Only this`() {
         open(Calendar(id = "own", name = "Work"))
         fun top(text: String) = rule.onNodeWithText(text).fetchSemanticsNode().boundsInRoot.top
-        val settings = top(context.getString(MochiR.string.settings_title))
-        assertTrue(top(export) < settings)
-        assertTrue(settings < top(context.getString(R.string.calendars_delete)))
+        assertTrue(top(context.getString(R.string.calendars_only_this)) < top(context.getString(MochiR.string.settings_title)))
     }
 
     @Test
@@ -77,10 +84,27 @@ class CalendarMenuTest {
     }
 
     @Test
-    fun `a linked calendar is written in, so it takes an import`() {
-        open(Calendar(id = "linked", name = "Shared", kind = Calendar.KIND_LINKED))
-        rule.onNodeWithText(import).assertExists()
-        rule.onNodeWithText(export).assertExists()
+    fun `a linked calendar keeps Sync now beside Settings, and imports from Settings`() {
+        val chosen = open(Calendar(id = "linked", name = "Shared", kind = Calendar.KIND_LINKED))
+        rule.onNodeWithText(import).assertDoesNotExist()
+        rule.onNodeWithText(context.getString(R.string.calendars_remove)).assertDoesNotExist()
+        rule.onNodeWithText(context.getString(MochiR.string.settings_title)).assertExists()
+        rule.onNodeWithText(context.getString(R.string.calendars_link_sync)).performClick()
+        assertEquals(listOf(CalendarAction.POLL), chosen)
+    }
+
+    @Test
+    fun `a subscription keeps its own actions in its menu, having no Settings`() {
+        open(Calendar(id = "subscribed", name = "Holidays", kind = Calendar.KIND_SUBSCRIPTION, readonly = true))
+        for (kept in listOf(
+            R.string.calendars_rename,
+            R.string.calendars_colour,
+            R.string.calendars_link_copy,
+            R.string.calendars_export,
+            R.string.calendars_remove,
+        )) {
+            rule.onNodeWithText(context.getString(kept)).assertExists()
+        }
     }
 
     @Test

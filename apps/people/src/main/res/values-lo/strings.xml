@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">ປີ</string>
     <string name="people_contact_birthday_clear">ລ້າງ</string>
     <string name="people_contact_create">ສ້າງ</string>
+    <string name="people_sync_permission_reason">ການຊິງຄ໌ຈະສຳເນົາໝູ່ຂອງທ່ານໄປໃສ່ແອັບຜູ້ຕິດຕໍ່ຂອງໂທລະສັບນີ້, ສະນັ້ນມັນຈຶ່ງຕ້ອງການສິດເຂົ້າເຖິງຜູ້ຕິດຕໍ່ຂອງທ່ານ.</string>
+    <string name="people_sync_permission_blocked">ການເຂົ້າເຖິງຜູ້ຕິດຕໍ່ຖືກປິດໄວ້ສຳລັບແອັບນີ້. ທ່ານສາມາດເປີດມັນໄດ້ໃນສ່ວນ ການອະນຸຍາດ ໃນການຕັ້ງຄ່າຂອງແອັບ.</string>
 </resources>

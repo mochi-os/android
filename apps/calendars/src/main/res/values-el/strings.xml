@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Ενεργοποίηση λογαριασμών Google</string>
     <string name="calendars_provider_caldav">Διακομιστής ημερολογίου</string>
+    <string name="calendars_sync_permission_reason">Ο συγχρονισμός αντιγράφει τα συμβάντα σας στην εφαρμογή ημερολογίου αυτού του τηλεφώνου, επομένως χρειάζεται πρόσβαση στα ημερολόγιά σας.</string>
+    <string name="calendars_sync_permission_blocked">Η πρόσβαση στο ημερολόγιο είναι απενεργοποιημένη για αυτήν την εφαρμογή. Μπορείτε να την ενεργοποιήσετε στην ενότητα Άδειες, στις ρυθμίσεις της εφαρμογής.</string>
 </resources>

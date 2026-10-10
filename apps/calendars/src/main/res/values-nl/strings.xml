@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google-accounts inschakelen</string>
     <string name="calendars_provider_caldav">Agendaserver</string>
+    <string name="calendars_sync_permission_reason">Synchroniseren kopieert je afspraken naar de agenda-app van deze telefoon, dus daarvoor is toegang tot je agenda\'s nodig.</string>
+    <string name="calendars_sync_permission_blocked">Agendatoegang staat uit voor deze app. Je kunt deze aanzetten onder Rechten in de instellingen van de app.</string>
 </resources>

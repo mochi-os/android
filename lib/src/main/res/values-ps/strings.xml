@@ -326,4 +326,8 @@
     <string name="color_picker_clear">پاک کړئ</string>
     <string name="common_refresh">تازه کول</string>
     <string name="launcher_add_to_home">کور پاڼې ته اضافه کړئ</string>
+    <string name="common_continue">دوام ورکړئ</string>
+    <string name="common_open_settings">تنظیمات پرانیزئ</string>
+    <string name="notifications_permission_reason">Mochi د خبرتیاوو ښودلو لپاره اجازې ته اړتیا لري، ترڅو تاسو د نویو پیغامونو، ځوابونو او یادونو په اړه خبر شئ.</string>
+    <string name="notifications_permission_blocked">د Mochi لپاره خبرتیاوې بندې دي. تاسو کولی شئ دوی د اپلیکیشن د خبرتیاوو په تنظیماتو کې چالانې کړئ.</string>
 </resources>

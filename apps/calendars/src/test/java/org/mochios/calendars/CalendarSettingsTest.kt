@@ -33,6 +33,7 @@ import org.mochios.android.i18n.AppContext
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.MenuApi
 import org.mochios.calendars.repository.CalendarsRepository
+import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.settings.CalendarSettingsScreen
 import org.mochios.calendars.ui.settings.CalendarSettingsViewModel
 import org.robolectric.RobolectricTestRunner
@@ -57,6 +58,7 @@ class CalendarSettingsTest {
     private lateinit var server: MockWebServer
     private val asked = ConcurrentLinkedQueue<RecordedRequest>()
     private var saved: Boolean? = null
+    private val actions = mutableListOf<CalendarAction>()
 
     /** Whether the calendar has an address to revoke. */
     @Volatile private var revocable = true
@@ -72,7 +74,9 @@ class CalendarSettingsTest {
                 return when (path) {
                     "-/calendars" -> ok(
                         """{"calendars": [{"id": "c1", "name": "Home", "colour": "#60a5fa",
-                            "default": true}]}""",
+                            "default": true},
+                            {"id": "c2", "name": "Work", "colour": "#f87171"},
+                            {"id": "c3", "name": "Shared", "colour": "#34d399", "kind": "linked"}]}""",
                     )
                     "-/calendars/rename", "-/calendars/colour" -> ok(
                         """{"calendar": {"id": "c1", "name": "Family", "colour": "#60a5fa"}}""",
@@ -109,6 +113,7 @@ class CalendarSettingsTest {
             CalendarSettingsScreen(
                 onBack = {},
                 onSaved = { renamed -> saved = renamed },
+                onAction = { action -> actions += action },
                 viewModel = model,
             )
         }
@@ -153,6 +158,42 @@ class CalendarSettingsTest {
         assertEquals(false, saved)
         assertTrue(paths().any { path -> path.startsWith("-/calendars/colour") })
         assertTrue(paths().none { path -> path.startsWith("-/calendars/rename") })
+    }
+
+    @Test
+    fun `import, export and delete are in the top bar's menu, for the calendar screen to carry out`() {
+        show("c2")
+        waitFor("Work")
+        val menu = context.getString(MochiR.string.common_more_options)
+        for ((label, action) in listOf(
+            R.string.calendars_import to CalendarAction.IMPORT,
+            R.string.calendars_export to CalendarAction.EXPORT,
+            R.string.calendars_delete to CalendarAction.DELETE,
+        )) {
+            rule.onNodeWithContentDescription(menu).performClick()
+            rule.onNodeWithText(context.getString(label)).performClick()
+            assertEquals(action, actions.last())
+        }
+        assertEquals(3, actions.size)
+    }
+
+    @Test
+    fun `the default calendar cannot be deleted`() {
+        show()
+        waitFor("Home")
+        rule.onNodeWithContentDescription(context.getString(MochiR.string.common_more_options)).performClick()
+        rule.onNodeWithText(context.getString(R.string.calendars_export)).assertExists()
+        rule.onNodeWithText(context.getString(R.string.calendars_delete)).assertDoesNotExist()
+    }
+
+    @Test
+    fun `a linked calendar is removed, not deleted`() {
+        show("c3")
+        waitFor("Shared")
+        rule.onNodeWithContentDescription(context.getString(MochiR.string.common_more_options)).performClick()
+        rule.onNodeWithText(context.getString(R.string.calendars_delete)).assertDoesNotExist()
+        rule.onNodeWithText(context.getString(R.string.calendars_remove)).performClick()
+        assertEquals(listOf(CalendarAction.DELETE), actions)
     }
 
     @Test

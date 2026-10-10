@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Activar as contas de Google</string>
     <string name="calendars_provider_caldav">Servidor de calendario</string>
+    <string name="calendars_sync_permission_reason">A sincronización copia os teus eventos na aplicación de calendario deste teléfono, polo que necesita acceso aos teus calendarios.</string>
+    <string name="calendars_sync_permission_blocked">O acceso ao calendario está desactivado para esta aplicación. Podes activalo en Permisos, na configuración da aplicación.</string>
 </resources>

@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Kosongkan</string>
     <string name="common_refresh">Muat semula</string>
     <string name="launcher_add_to_home">Tambah ke skrin utama</string>
+    <string name="common_continue">Teruskan</string>
+    <string name="common_open_settings">Buka tetapan</string>
+    <string name="notifications_permission_reason">Mochi memerlukan kebenaran untuk menunjukkan pemberitahuan, supaya anda tahu tentang mesej baharu, balasan dan peringatan.</string>
+    <string name="notifications_permission_blocked">Pemberitahuan dimatikan untuk Mochi. Anda boleh menghidupkannya dalam tetapan pemberitahuan apl.</string>
 </resources>

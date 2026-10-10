@@ -221,4 +221,6 @@
     <string name="people_contact_birthday_year">שנה</string>
     <string name="people_contact_birthday_clear">נקה</string>
     <string name="people_contact_create">צור</string>
+    <string name="people_sync_permission_reason">הסנכרון מעתיק את החברים שלך לאפליקציית אנשי הקשר בטלפון הזה, ולכן נדרשת לו גישה לאנשי הקשר שלך.</string>
+    <string name="people_sync_permission_blocked">הגישה לאנשי הקשר כבויה עבור האפליקציה הזו. ניתן להפעיל אותה בקטע \'הרשאות\' בהגדרות האפליקציה.</string>
 </resources>

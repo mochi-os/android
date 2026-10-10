@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google аккаунттарын иштетүү</string>
     <string name="calendars_provider_caldav">Календарь сервери</string>
+    <string name="calendars_sync_permission_reason">Синхрондоштуруу иш-чараларыңызды ушул телефондун календарь колдонмосуна көчүрөт, ошондуктан ага календарларыңызга мүмкүнчүлүк керек.</string>
+    <string name="calendars_sync_permission_blocked">Бул колдонмо үчүн календарга мүмкүнчүлүк өчүрүлгөн. Аны колдонмонун жөндөөлөрүндөгү Уруксаттар бөлүмүнөн күйгүзө аласыз.</string>
 </resources>

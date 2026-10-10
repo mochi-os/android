@@ -327,4 +327,8 @@
     <string name="color_picker_clear">Тазалау</string>
     <string name="common_refresh">Жаңарту</string>
     <string name="launcher_add_to_home">Негізгі экранға қосу</string>
+    <string name="common_continue">Жалғастыру</string>
+    <string name="common_open_settings">Параметрлерді ашу</string>
+    <string name="notifications_permission_reason">Mochi хабарландыруларды көрсету үшін рұқсат қажет етеді, сонда сіз жаңа хабарламалар, жауаптар мен еске салғыштар туралы біліп отырасыз.</string>
+    <string name="notifications_permission_blocked">Mochi хабарландырулары өшірулі. Оларды қолданбаның хабарландыру параметрлерінде қосуға болады.</string>
 </resources>

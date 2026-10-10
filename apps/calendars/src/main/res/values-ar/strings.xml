@@ -329,4 +329,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">تفعيل حسابات Google</string>
     <string name="calendars_provider_caldav">خادم تقويم</string>
+    <string name="calendars_sync_permission_reason">تنسخ المزامنة أحداثك إلى تطبيق التقويم على هذا الهاتف، لذا تحتاج إلى الوصول إلى تقويماتك.</string>
+    <string name="calendars_sync_permission_blocked">الوصول إلى التقويم متوقف لهذا التطبيق. يمكنك تشغيله ضمن الأذونات في إعدادات التطبيق.</string>
 </resources>

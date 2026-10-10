@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">ዓመት</string>
     <string name="people_contact_birthday_clear">አጽዳ</string>
     <string name="people_contact_create">ፍጠር</string>
+    <string name="people_sync_permission_reason">ማመሳሰል ጓደኞችዎን ወደዚህ ስልክ የእውቂያዎች መተግበሪያ ይገለብጣል፣ ስለዚህ የእውቂያዎችዎ መዳረሻ ያስፈልገዋል።</string>
+    <string name="people_sync_permission_blocked">ለዚህ መተግበሪያ የእውቂያዎች መዳረሻ ጠፍቷል። በመተግበሪያው ቅንብሮች ውስጥ በፈቃዶች ስር ሊያበሩት ይችላሉ።</string>
 </resources>

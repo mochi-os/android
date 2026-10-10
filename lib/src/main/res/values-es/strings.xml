@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Borrar</string>
     <string name="common_refresh">Actualizar</string>
     <string name="launcher_add_to_home">Añadir a la pantalla de inicio</string>
+    <string name="common_continue">Continuar</string>
+    <string name="common_open_settings">Abrir ajustes</string>
+    <string name="notifications_permission_reason">Mochi necesita permiso para mostrar notificaciones, para que te enteres de los mensajes nuevos, las respuestas y los recordatorios.</string>
+    <string name="notifications_permission_blocked">Las notificaciones de Mochi están desactivadas. Puedes activarlas en los ajustes de notificaciones de la aplicación.</string>
 </resources>

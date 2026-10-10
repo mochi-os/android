@@ -301,4 +301,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Włącz konta Google</string>
     <string name="calendars_provider_caldav">Serwer kalendarza</string>
+    <string name="calendars_sync_permission_reason">Synchronizacja kopiuje Twoje wydarzenia do aplikacji kalendarza na tym telefonie, dlatego potrzebuje dostępu do Twoich kalendarzy.</string>
+    <string name="calendars_sync_permission_blocked">Dostęp do kalendarza jest wyłączony dla tej aplikacji. Możesz go włączyć w sekcji Uprawnienia w ustawieniach aplikacji.</string>
 </resources>

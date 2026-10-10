@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Сол</string>
     <string name="people_contact_birthday_clear">Тоза кардан</string>
     <string name="people_contact_create">Эҷод кардан</string>
+    <string name="people_sync_permission_reason">Ҳамоҳангсозӣ дӯстони шуморо ба барномаи Тамосҳои ин телефон нусхабардорӣ мекунад, бинобар ин ба тамосҳои шумо дастрасӣ лозим аст.</string>
+    <string name="people_sync_permission_blocked">Дастрасӣ ба тамосҳо барои ин барнома хомӯш аст. Шумо метавонед онро дар бахши Иҷозатҳо дар танзимоти барнома фаъол кунед.</string>
 </resources>

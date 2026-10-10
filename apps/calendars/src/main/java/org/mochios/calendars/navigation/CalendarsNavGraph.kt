@@ -16,6 +16,7 @@ import androidx.navigation.navDeepLink
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.ui.calendar.CalendarScreen
+import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.devices.ConnectDeviceScreen
 import org.mochios.calendars.ui.dialogs.CreateCalendarScreen
 import org.mochios.calendars.ui.dialogs.SubscribeCalendarScreen
@@ -125,6 +126,27 @@ object CalendarsApp {
     fun settings(calendar: String): String = "calendars/calendar/$calendar/settings"
 
     /**
+     * What the calendar screen's back-stack entry carries when a calendar's
+     * Settings screen asks it to import into, export or delete that calendar:
+     * the action and the calendar, as "<action>:<calendar>".
+     */
+    const val ACTION = "action"
+
+    /** Hands [action] on [calendar] to the calendar screen beneath, which carries it out. */
+    fun act(navController: NavController, action: CalendarAction, calendar: String) {
+        runCatching { navController.getBackStackEntry(HOME) }.getOrNull()
+            ?.savedStateHandle?.set(ACTION, "${action.name}:$calendar")
+    }
+
+    /** The action and calendar an [ACTION] flag names; null for none or one this version does not know. */
+    fun action(flag: String): Pair<CalendarAction, String>? {
+        val name = flag.substringBefore(":", "")
+        val calendar = flag.substringAfter(":", "")
+        val action = CalendarAction.entries.firstOrNull { it.name == name } ?: return null
+        return if (calendar.isEmpty()) null else action to calendar
+    }
+
+    /**
      * A new event, optionally starting at a moment the user picked out of a
      * grid. [allday] is what the tap chose, timed or all day, and null when
      * nothing did - the screen's own "new event" action - which lets the
@@ -220,6 +242,7 @@ fun NavGraphBuilder.calendarsNavGraph(
         val deleted by entry.savedStateHandle.getStateFlow(CalendarsApp.DELETED, false).collectAsState()
         val saved by entry.savedStateHandle.getStateFlow(CalendarsApp.SAVED, "").collectAsState()
         val reminder by entry.savedStateHandle.getStateFlow(CalendarsApp.REMINDER, "").collectAsState()
+        val action by entry.savedStateHandle.getStateFlow(CalendarsApp.ACTION, "").collectAsState()
         CalendarScreen(
             onCreateCalendar = { navController.navigate(CalendarsApp.CREATE) },
             onSubscribe = { navController.navigate(CalendarsApp.SUBSCRIBE) },
@@ -242,6 +265,8 @@ fun NavGraphBuilder.calendarsNavGraph(
             onSavedShown = { entry.savedStateHandle[CalendarsApp.SAVED] = "" },
             reminder = Reminder.of(reminder),
             onReminderShown = { entry.savedStateHandle[CalendarsApp.REMINDER] = "" },
+            requested = CalendarsApp.action(action),
+            onRequested = { entry.savedStateHandle[CalendarsApp.ACTION] = "" },
         )
     }
 
@@ -275,12 +300,17 @@ fun NavGraphBuilder.calendarsNavGraph(
     composable(
         route = CalendarsApp.CALENDAR_SETTINGS,
         arguments = listOf(navArgument("calendar") { type = NavType.StringType }),
-    ) {
+    ) { entry ->
+        val calendar = entry.arguments?.getString("calendar").orEmpty()
         CalendarSettingsScreen(
             onBack = { navController.popBackStack() },
             onSaved = { renamed ->
                 val flag = if (renamed) CalendarsApp.RENAMED else CalendarsApp.RECOLOURED
                 CalendarsApp.told(navController, flag)
+                navController.popBackStack()
+            },
+            onAction = { action ->
+                CalendarsApp.act(navController, action, calendar)
                 navController.popBackStack()
             },
         )

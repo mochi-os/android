@@ -327,4 +327,8 @@
     <string name="color_picker_clear">Tozalash</string>
     <string name="common_refresh">Yangilash</string>
     <string name="launcher_add_to_home">Bosh ekranga qo‘shish</string>
+    <string name="common_continue">Davom etish</string>
+    <string name="common_open_settings">Sozlamalarni ochish</string>
+    <string name="notifications_permission_reason">Mochi bildirishnomalarni koʻrsatish uchun ruxsat talab qiladi, shunda siz yangi xabarlar, javoblar va eslatmalar haqida xabardor boʻlasiz.</string>
+    <string name="notifications_permission_blocked">Mochi uchun bildirishnomalar oʻchirilgan. Ularni ilovaning bildirishnoma sozlamalarida yoqishingiz mumkin.</string>
 </resources>

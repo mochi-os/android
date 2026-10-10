@@ -34,7 +34,6 @@ import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Smartphone
 import androidx.compose.material.icons.outlined.Sync
-import androidx.compose.material.icons.outlined.Upload
 import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.HorizontalDivider
@@ -166,8 +165,10 @@ fun CalendarDrawer(
  * One calendar: a checkbox in its own colour, its name, the linked marker
  * where the calendar mirrors one on another server, and its overflow menu.
  * The row itself is the checkbox, so a tap anywhere on it shows or hides the
- * calendar. Any calendar can be exported, but only one the user can write in
- * can be imported into.
+ * calendar. A calendar the user can write in keeps its name, colour, address,
+ * import, export and deletion on its Settings screen, so its menu holds only
+ * Only this, Sync now for a linked calendar, and Settings. Any other calendar
+ * has no Settings screen, so its menu keeps what applies to it.
  */
 @Composable
 internal fun CalendarRow(
@@ -177,6 +178,7 @@ internal fun CalendarRow(
     onAction: (CalendarAction) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
+    val settings = !calendar.readonly
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -248,7 +250,7 @@ internal fun CalendarRow(
                 // A subscription or a linked calendar is named here even when
                 // its events cannot be written; only the birthdays calendar
                 // keeps its own name.
-                if (!calendar.birthdays) {
+                if (!settings && !calendar.birthdays) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.calendars_rename)) },
                         leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
@@ -258,14 +260,16 @@ internal fun CalendarRow(
                         },
                     )
                 }
-                MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.calendars_colour)) },
-                    leadingIcon = { Icon(Icons.Outlined.Palette, contentDescription = null) },
-                    onClick = {
-                        expanded = false
-                        onAction(CalendarAction.COLOUR)
-                    },
-                )
+                if (!settings) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.calendars_colour)) },
+                        leadingIcon = { Icon(Icons.Outlined.Palette, contentDescription = null) },
+                        onClick = {
+                            expanded = false
+                            onAction(CalendarAction.COLOUR)
+                        },
+                    )
+                }
                 if (calendar.subscription || calendar.linked) {
                     MochiDropdownMenuItem(
                         text = {
@@ -291,33 +295,25 @@ internal fun CalendarRow(
                         },
                     )
                 }
-                MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.calendars_link_copy)) },
-                    leadingIcon = { Icon(Icons.Outlined.ContentCopy, contentDescription = null) },
-                    onClick = {
-                        expanded = false
-                        onAction(CalendarAction.LINK)
-                    },
-                )
-                if (!calendar.readonly) {
+                if (!settings) {
                     MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.calendars_import)) },
-                        leadingIcon = { Icon(Icons.Outlined.Upload, contentDescription = null) },
+                        text = { Text(stringResource(R.string.calendars_link_copy)) },
+                        leadingIcon = { Icon(Icons.Outlined.ContentCopy, contentDescription = null) },
                         onClick = {
                             expanded = false
-                            onAction(CalendarAction.IMPORT)
+                            onAction(CalendarAction.LINK)
+                        },
+                    )
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.calendars_export)) },
+                        leadingIcon = { Icon(Icons.Outlined.Download, contentDescription = null) },
+                        onClick = {
+                            expanded = false
+                            onAction(CalendarAction.EXPORT)
                         },
                     )
                 }
-                MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.calendars_export)) },
-                    leadingIcon = { Icon(Icons.Outlined.Download, contentDescription = null) },
-                    onClick = {
-                        expanded = false
-                        onAction(CalendarAction.EXPORT)
-                    },
-                )
-                if (!calendar.readonly) {
+                if (settings) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(MochiR.string.settings_title)) },
                         leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
@@ -327,7 +323,7 @@ internal fun CalendarRow(
                         },
                     )
                 }
-                if (!calendar.default && !calendar.birthdays) {
+                if (!settings && !calendar.default && !calendar.birthdays) {
                     MochiDropdownMenuItem(
                         text = {
                             Text(

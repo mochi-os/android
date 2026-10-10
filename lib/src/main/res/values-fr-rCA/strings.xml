@@ -277,4 +277,5 @@
     <string name="access_remove">Supprimer</string>
     <string name="common_refresh">Actualiser</string>
     <string name="launcher_add_to_home">Ajouter à l\'écran d\'accueil</string>
+    <string name="common_continue">Continuer</string>
 </resources>

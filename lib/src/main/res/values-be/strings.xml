@@ -328,4 +328,8 @@
     <string name="color_picker_clear">Ачысціць</string>
     <string name="common_refresh">Абнавіць</string>
     <string name="launcher_add_to_home">Дадаць на галоўны экран</string>
+    <string name="common_continue">Працягнуць</string>
+    <string name="common_open_settings">Адкрыць налады</string>
+    <string name="notifications_permission_reason">Mochi патрэбны дазвол на паказ апавяшчэнняў, каб вы даведваліся пра новыя паведамленні, адказы і напаміны.</string>
+    <string name="notifications_permission_blocked">Апавяшчэнні для Mochi выключаны. Вы можаце ўключыць іх у наладах апавяшчэнняў праграмы.</string>
 </resources>

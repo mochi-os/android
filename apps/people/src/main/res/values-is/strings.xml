@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Ár</string>
     <string name="people_contact_birthday_clear">Hreinsa</string>
     <string name="people_contact_create">Búa til</string>
+    <string name="people_sync_permission_reason">Samstilling afritar vini þína í forritið Tengiliðir í þessum síma og þarf því aðgang að tengiliðunum þínum.</string>
+    <string name="people_sync_permission_blocked">Slökkt er á aðgangi að tengiliðum fyrir þetta forrit. Þú getur kveikt á honum undir Heimildir í stillingum forritsins.</string>
 </resources>

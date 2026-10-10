@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Cima</string>
     <string name="common_refresh">Vuselela</string>
     <string name="launcher_add_to_home">Yongeza kwiskrini yasekhaya</string>
+    <string name="common_continue">Qhubeka</string>
+    <string name="common_open_settings">Vula iisetingi</string>
+    <string name="notifications_permission_reason">I-Mochi ifuna imvume yokubonisa izaziso, ukuze weve ngemiyalezo emitsha, iimpendulo nezikhumbuzo.</string>
+    <string name="notifications_permission_blocked">Izaziso zicinyiwe ku-Mochi. Ungazivula kwiisetingi zezaziso ze-app.</string>
 </resources>

@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google അക്കൗണ്ടുകൾ പ്രവർത്തനക്ഷമമാക്കുക</string>
     <string name="calendars_provider_caldav">കലണ്ടർ സെർവർ</string>
+    <string name="calendars_sync_permission_reason">സിങ്ക് ചെയ്യുന്നത് നിങ്ങളുടെ ഇവന്റുകൾ ഈ ഫോണിലെ കലണ്ടർ ആപ്പിലേക്ക് പകർത്തുന്നു, അതിനാൽ ഇതിന് നിങ്ങളുടെ കലണ്ടറുകളിലേക്ക് ആക്‌സസ് ആവശ്യമാണ്.</string>
+    <string name="calendars_sync_permission_blocked">ഈ ആപ്പിനുള്ള കലണ്ടർ ആക്‌സസ് ഓഫാണ്. ആപ്പിന്റെ ക്രമീകരണങ്ങളിലെ അനുമതികൾ എന്നതിന് കീഴിൽ നിങ്ങൾക്ക് അത് ഓണാക്കാം.</string>
 </resources>

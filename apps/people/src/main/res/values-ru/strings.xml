@@ -222,4 +222,6 @@
     <string name="people_contact_birthday_year">Год</string>
     <string name="people_contact_birthday_clear">Очистить</string>
     <string name="people_contact_create">Создать</string>
+    <string name="people_sync_permission_reason">Синхронизация копирует ваших друзей в приложение «Контакты» на этом телефоне, поэтому ей нужен доступ к вашим контактам.</string>
+    <string name="people_sync_permission_blocked">Доступ к контактам для этого приложения отключён. Его можно включить в разделе «Разрешения» в настройках приложения.</string>
 </resources>

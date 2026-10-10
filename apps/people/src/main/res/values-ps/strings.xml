@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">کال</string>
     <string name="people_contact_birthday_clear">پاک کړئ</string>
     <string name="people_contact_create">جوړ کړئ</string>
+    <string name="people_sync_permission_reason">همغږي ستاسو ملګري د دې موبایل د اړیکو اپلیکیشن ته کاپي کوي، نو دې ته ستاسو اړیکو ته لاسرسی اړین دی.</string>
+    <string name="people_sync_permission_blocked">د دې اپلیکیشن لپاره اړیکو ته لاسرسی بند دی. تاسو کولی شئ دا د اپلیکیشن په تنظیماتو کې د اجازو لاندې چالان کړئ.</string>
 </resources>

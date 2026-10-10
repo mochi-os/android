@@ -222,4 +222,6 @@
     <string name="people_contact_birthday_year">Год</string>
     <string name="people_contact_birthday_clear">Ачысціць</string>
     <string name="people_contact_create">Стварыць</string>
+    <string name="people_sync_permission_reason">Сінхранізацыя капіруе вашых сяброў у праграму «Кантакты» на гэтым тэлефоне, таму ёй патрэбны доступ да вашых кантактаў.</string>
+    <string name="people_sync_permission_blocked">Доступ да кантактаў для гэтай праграмы выключаны. Вы можаце ўключыць яго ў раздзеле «Дазволы» ў наладах праграмы.</string>
 </resources>

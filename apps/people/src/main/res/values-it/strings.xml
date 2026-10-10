@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Anno</string>
     <string name="people_contact_birthday_clear">Cancella</string>
     <string name="people_contact_create">Crea</string>
+    <string name="people_sync_permission_reason">La sincronizzazione copia i tuoi amici nell\'app Contatti di questo telefono, quindi ha bisogno di accedere ai tuoi contatti.</string>
+    <string name="people_sync_permission_blocked">L\'accesso ai contatti è disattivato per questa app. Puoi attivarlo in Autorizzazioni nelle impostazioni dell\'app.</string>
 </resources>

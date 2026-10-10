@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">چالاککردنی هەژمارەکانی Google</string>
     <string name="calendars_provider_caldav">ڕاژەکاری ڕۆژژمێر</string>
+    <string name="calendars_sync_permission_reason">هاوکاتکردن ڕووداوەکانت بۆ ئەپی ڕۆژژمێری ئەم مۆبایلە کۆپی دەکات، بۆیە پێویستی بە دەستڕاگەیشتن بە ڕۆژژمێرەکانت هەیە.</string>
+    <string name="calendars_sync_permission_blocked">دەستڕاگەیشتنی ڕۆژژمێر بۆ ئەم ئەپە ناچالاک کراوە. دەتوانیت لە ڕێکخستنەکانی ئەپەکەدا لە بەشی ڕێگەپێدانەکان چالاکی بکەیتەوە.</string>
 </resources>

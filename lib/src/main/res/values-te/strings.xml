@@ -326,4 +326,8 @@
     <string name="color_picker_clear">క్లియర్ చేయండి</string>
     <string name="common_refresh">రిఫ్రెష్</string>
     <string name="launcher_add_to_home">హోమ్ స్క్రీన్‌కు జోడించండి</string>
+    <string name="common_continue">కొనసాగించండి</string>
+    <string name="common_open_settings">సెట్టింగ్‌లను తెరవండి</string>
+    <string name="notifications_permission_reason">కొత్త మెసేజ్‌లు, రిప్లయిలు, రిమైండర్‌ల గురించి మీకు తెలిసేలా నోటిఫికేషన్‌లను చూపడానికి Mochi కి అనుమతి అవసరం.</string>
+    <string name="notifications_permission_blocked">Mochi కోసం నోటిఫికేషన్‌లు ఆఫ్ చేయబడ్డాయి. మీరు వాటిని యాప్ నోటిఫికేషన్ సెట్టింగ్‌లలో ఆన్ చేయవచ్చు.</string>
 </resources>

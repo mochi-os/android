@@ -329,4 +329,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Galluogi cyfrifon Google</string>
     <string name="calendars_provider_caldav">Gweinydd calendr</string>
+    <string name="calendars_sync_permission_reason">Mae cysoni\'n copïo eich digwyddiadau i ap calendr y ffôn hwn, felly mae angen mynediad at eich calendrau arno.</string>
+    <string name="calendars_sync_permission_blocked">Mae mynediad at y calendr wedi\'i ddiffodd ar gyfer yr ap hwn. Gallwch ei droi ymlaen o dan Caniatâd yng ngosodiadau\'r ap.</string>
 </resources>

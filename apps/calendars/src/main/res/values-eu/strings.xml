@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Gaitu Google kontuak</string>
     <string name="calendars_provider_caldav">Egutegi-zerbitzaria</string>
+    <string name="calendars_sync_permission_reason">Sinkronizazioak zure gertaerak telefono honetako egutegi-aplikaziora kopiatzen ditu; beraz, zure egutegietarako sarbidea behar du.</string>
+    <string name="calendars_sync_permission_blocked">Egutegirako sarbidea desaktibatuta dago aplikazio honetan. Aplikazioaren ezarpenetako Baimenak atalean aktiba dezakezu.</string>
 </resources>

@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">वर्ष</string>
     <string name="people_contact_birthday_clear">खाली गर्नुहोस्</string>
     <string name="people_contact_create">सिर्जना गर्नुहोस्</string>
+    <string name="people_sync_permission_reason">सिङ्क गर्दा तपाईंका साथीहरू यो फोनको सम्पर्क एपमा प्रतिलिपि हुन्छन्, त्यसैले यसलाई तपाईंका सम्पर्कहरूमा पहुँच चाहिन्छ।</string>
+    <string name="people_sync_permission_blocked">यो एपका लागि सम्पर्कहरूमा पहुँच अफ गरिएको छ। तपाईं एपको सेटिङहरूमा अनुमतिहरू अन्तर्गत यसलाई अन गर्न सक्नुहुन्छ।</string>
 </resources>

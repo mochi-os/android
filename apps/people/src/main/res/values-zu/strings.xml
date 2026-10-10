@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Unyaka</string>
     <string name="people_contact_birthday_clear">Sula</string>
     <string name="people_contact_create">Dala</string>
+    <string name="people_sync_permission_reason">Ukuvumelanisa kukopisha abangane bakho ku-app ye-Abathintwayo yale foni, ngakho kudinga ukufinyelela kubathintwayo bakho.</string>
+    <string name="people_sync_permission_blocked">Ukufinyelela kwabathintwayo kuvaliwe kule app. Ungakuvula ngaphansi kokuthi Izimvume kuzilungiselelo ze-app.</string>
 </resources>

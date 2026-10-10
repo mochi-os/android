@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Paganahin ang mga Google account</string>
     <string name="calendars_provider_caldav">Server ng kalendaryo</string>
+    <string name="calendars_sync_permission_reason">Kinokopya ng pag-sync ang iyong mga event sa app ng kalendaryo ng teleponong ito, kaya kailangan nito ng access sa iyong mga kalendaryo.</string>
+    <string name="calendars_sync_permission_blocked">Naka-off ang access sa kalendaryo para sa app na ito. Maaari mo itong i-on sa ilalim ng Mga Pahintulot sa mga setting ng app.</string>
 </resources>

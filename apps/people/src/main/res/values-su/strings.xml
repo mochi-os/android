@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">Taun</string>
     <string name="people_contact_birthday_clear">Bersihkeun</string>
     <string name="people_contact_create">Jieun</string>
+    <string name="people_sync_permission_reason">Sinkronisasi nyalin babaturan anjeun kana aplikasi Kontak di telepon ieu, janten peryogi aksés kana kontak anjeun.</string>
+    <string name="people_sync_permission_blocked">Aksés kontak dipareuman pikeun aplikasi ieu. Anjeun tiasa ngahurungkeunana dina Idin di setélan aplikasi.</string>
 </resources>

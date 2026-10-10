@@ -259,4 +259,6 @@
     <string name="calendars_link_none">呢個日曆冇地址可以撤銷</string>
     <string name="calendars_linked">已連結日曆</string>
     <string name="calendars_subscribed">已訂閱</string>
+    <string name="calendars_sync_permission_reason">同步會將你嘅活動複製到呢部手機嘅日曆應用程式，所以需要存取你嘅日曆。</string>
+    <string name="calendars_sync_permission_blocked">呢個應用程式嘅日曆存取權已經關閉。你可以喺應用程式設定嘅「權限」入面開啟。</string>
 </resources>

@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">Ọdún</string>
     <string name="people_contact_birthday_clear">Pa rẹ́</string>
     <string name="people_contact_create">Dá</string>
+    <string name="people_sync_permission_reason">Àmúṣiṣẹ́pọ̀ máa ń da àwọn ọ̀rẹ́ rẹ kọ sínú app Àwọn olùbásọ̀rọ̀ fóònù yìí, nítorí náà ó nílò ìwọlé sí àwọn olùbásọ̀rọ̀ rẹ.</string>
+    <string name="people_sync_permission_blocked">A ti pa ìwọlé sí àwọn olùbásọ̀rọ̀ fún app yìí. O lè tàn án lábẹ́ Àwọn ìyọ̀ǹda nínú àwọn ìṣètò app náà.</string>
 </resources>

@@ -264,4 +264,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">เปิดใช้งานบัญชี Google</string>
     <string name="calendars_provider_caldav">เซิร์ฟเวอร์ปฏิทิน</string>
+    <string name="calendars_sync_permission_reason">การซิงค์จะคัดลอกกิจกรรมของคุณไปยังแอปปฏิทินของโทรศัพท์เครื่องนี้ จึงต้องได้รับสิทธิ์เข้าถึงปฏิทินของคุณ</string>
+    <string name="calendars_sync_permission_blocked">สิทธิ์เข้าถึงปฏิทินของแอปนี้ปิดอยู่ คุณเปิดได้ในส่วนสิทธิ์ในการตั้งค่าของแอป</string>
 </resources>

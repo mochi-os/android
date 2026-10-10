@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Pa rẹ́</string>
     <string name="common_refresh">Tún kí</string>
     <string name="launcher_add_to_home">Fi sii loju iboju ile</string>
+    <string name="common_continue">Tẹ̀síwájú</string>
+    <string name="common_open_settings">Ṣí àwọn ìṣètò</string>
+    <string name="notifications_permission_reason">Mochi nílò ìyọ̀ǹda láti ṣàfihàn àwọn ìfìtọ́nisí, kí o lè gbọ́ nípa àwọn ìfiránṣẹ́ tuntun, àwọn èsì àti àwọn ìránnilétí.</string>
+    <string name="notifications_permission_blocked">A ti pa àwọn ìfìtọ́nisí fún Mochi. O lè tàn wọ́n nínú àwọn ìṣètò ìfìtọ́nisí app náà.</string>
 </resources>

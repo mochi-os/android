@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">ปี</string>
     <string name="people_contact_birthday_clear">ล้าง</string>
     <string name="people_contact_create">สร้าง</string>
+    <string name="people_sync_permission_reason">การซิงค์จะคัดลอกเพื่อนของคุณไปยังแอปรายชื่อติดต่อของโทรศัพท์เครื่องนี้ จึงต้องได้รับสิทธิ์เข้าถึงรายชื่อติดต่อของคุณ</string>
+    <string name="people_sync_permission_blocked">สิทธิ์เข้าถึงรายชื่อติดต่อของแอปนี้ปิดอยู่ คุณเปิดได้ในส่วนสิทธิ์ในการตั้งค่าของแอป</string>
 </resources>

@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Hesabên Google çalak bike</string>
     <string name="calendars_provider_caldav">Servera salnameyê</string>
+    <string name="calendars_sync_permission_reason">Hevdemkirin bûyerên te li sepana salnameyê ya vê telefonê kopî dike, ji ber vê yekê pêdivî bi gihîştina salnameyên te heye.</string>
+    <string name="calendars_sync_permission_blocked">Gihîştina salnameyê ji bo vê sepanê neçalak e. Tu dikarî wê di mîhengên sepanê de di bin Destûr de çalak bikî.</string>
 </resources>

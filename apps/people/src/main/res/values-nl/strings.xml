@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Jaar</string>
     <string name="people_contact_birthday_clear">Wissen</string>
     <string name="people_contact_create">Aanmaken</string>
+    <string name="people_sync_permission_reason">Synchroniseren kopieert je vrienden naar de Contacten-app van deze telefoon, dus daarvoor is toegang tot je contacten nodig.</string>
+    <string name="people_sync_permission_blocked">Toegang tot contacten staat uit voor deze app. Je kunt deze aanzetten onder Rechten in de instellingen van de app.</string>
 </resources>

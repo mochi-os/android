@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Garbitu</string>
     <string name="common_refresh">Freskatu</string>
     <string name="launcher_add_to_home">Gehitu hasierako pantailara</string>
+    <string name="common_continue">Jarraitu</string>
+    <string name="common_open_settings">Ireki ezarpenak</string>
+    <string name="notifications_permission_reason">Mochik baimena behar du jakinarazpenak erakusteko, mezu berrien, erantzunen eta gogorarazpenen berri izan dezazun.</string>
+    <string name="notifications_permission_blocked">Jakinarazpenak desaktibatuta daude Mochirentzat. Aplikazioaren jakinarazpen-ezarpenetan aktiba ditzakezu.</string>
 </resources>

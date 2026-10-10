@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Ýyl</string>
     <string name="people_contact_birthday_clear">Arassalamak</string>
     <string name="people_contact_create">Döretmek</string>
+    <string name="people_sync_permission_reason">Sinhronlaşdyrma dostlaryňyzy bu telefonyň Kontaktlar programmasyna göçürýär, şonuň üçin oňa kontaktlaryňyza girmäge rugsat gerek.</string>
+    <string name="people_sync_permission_blocked">Bu programma üçin kontaktlara giriş öçürilen. Ony programmanyň sazlamalaryndaky Rugsatlar bölüminde açyp bilersiňiz.</string>
 </resources>

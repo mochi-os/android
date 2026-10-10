@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Burahin</string>
     <string name="common_refresh">I-refresh</string>
     <string name="launcher_add_to_home">Idagdag sa home screen</string>
+    <string name="common_continue">Magpatuloy</string>
+    <string name="common_open_settings">Buksan ang mga setting</string>
+    <string name="notifications_permission_reason">Kailangan ng Mochi ng pahintulot na magpakita ng mga notification, para malaman mo ang mga bagong mensahe, tugon at paalala.</string>
+    <string name="notifications_permission_blocked">Naka-off ang mga notification para sa Mochi. Maaari mong i-on ang mga ito sa mga setting ng notification ng app.</string>
 </resources>

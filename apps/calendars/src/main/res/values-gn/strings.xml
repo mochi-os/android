@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Emyendy Google mba\'etekuéra</string>
     <string name="calendars_provider_caldav">Arapapaha mohendaha</string>
+    <string name="calendars_sync_permission_reason">Ñembojoja okopia nde eventokuéra ko pumbyry arapapaha app-pe, upévare oikotevẽ jeike nde arapapahakuérape.</string>
+    <string name="calendars_sync_permission_blocked">Jeike arapapahápe oñembogue ko app-pe g̃uarã. Ikatu remyendy Ñemoneĩkuéra-pe, app ñembohekópe.</string>
 </resources>

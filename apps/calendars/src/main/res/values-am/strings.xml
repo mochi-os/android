@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">የGoogle መለያዎችን አንቃ</string>
     <string name="calendars_provider_caldav">የቀን መቁጠሪያ አገልጋይ</string>
+    <string name="calendars_sync_permission_reason">ማመሳሰል ክስተቶችዎን ወደዚህ ስልክ የቀን መቁጠሪያ መተግበሪያ ይገለብጣል፣ ስለዚህ የቀን መቁጠሪያዎችዎ መዳረሻ ያስፈልገዋል።</string>
+    <string name="calendars_sync_permission_blocked">ለዚህ መተግበሪያ የቀን መቁጠሪያ መዳረሻ ጠፍቷል። በመተግበሪያው ቅንብሮች ውስጥ በፈቃዶች ስር ሊያበሩት ይችላሉ።</string>
 </resources>

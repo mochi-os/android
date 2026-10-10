@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Տարի</string>
     <string name="people_contact_birthday_clear">Մաքրել</string>
     <string name="people_contact_create">Ստեղծել</string>
+    <string name="people_sync_permission_reason">Համաժամացումը ձեր ընկերներին պատճենում է այս հեռախոսի Կոնտակտներ հավելված, ուստի դրան անհրաժեշտ է ձեր կոնտակտների հասանելիություն։</string>
+    <string name="people_sync_permission_blocked">Այս հավելվածի համար կոնտակտների հասանելիությունն անջատված է։ Կարող եք այն միացնել հավելվածի կարգավորումների Թույլտվություններ բաժնում։</string>
 </resources>

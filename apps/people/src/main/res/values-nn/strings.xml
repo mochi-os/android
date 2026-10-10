@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">År</string>
     <string name="people_contact_birthday_clear">Tøm</string>
     <string name="people_contact_create">Opprett</string>
+    <string name="people_sync_permission_reason">Synkroniseringa kopierer venene dine til Kontaktar-appen på denne telefonen, og treng difor tilgang til kontaktane dine.</string>
+    <string name="people_sync_permission_blocked">Tilgang til kontaktar er slått av for denne appen. Du kan slå han på under Løyve i innstillingane til appen.</string>
 </resources>

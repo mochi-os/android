@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Q\'umachaña</string>
     <string name="common_refresh">Machaqachama</string>
     <string name="launcher_add_to_home">Qallta uñstäwir uchaña</string>
+    <string name="common_continue">Sarantaña</string>
+    <string name="common_open_settings">Wakichawinak jist\'araña</string>
+    <string name="notifications_permission_reason">Mochix yatiyawinak uñacht\'ayañatakix permiso munaraki, ukhamat machaq mensajenaka, jaysawinaka ukat amtayawinak yatiñamataki.</string>
+    <string name="notifications_permission_blocked">Mochitakix yatiyawinakax jiwt\'ayatawa. App ukan yatiyawi wakichawinakapan activarakismawa.</string>
 </resources>

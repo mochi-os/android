@@ -328,4 +328,8 @@
     <string name="color_picker_clear">Išvalyti</string>
     <string name="common_refresh">Atnaujinti</string>
     <string name="launcher_add_to_home">Pridėti į pradinį ekraną</string>
+    <string name="common_continue">Tęsti</string>
+    <string name="common_open_settings">Atidaryti nustatymus</string>
+    <string name="notifications_permission_reason">Mochi reikia leidimo rodyti pranešimus, kad sužinotumėte apie naujas žinutes, atsakymus ir priminimus.</string>
+    <string name="notifications_permission_blocked">Mochi pranešimai išjungti. Juos galite įjungti programos pranešimų nustatymuose.</string>
 </resources>

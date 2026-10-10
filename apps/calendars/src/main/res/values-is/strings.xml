@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Virkja Google-reikninga</string>
     <string name="calendars_provider_caldav">Dagatalsþjónn</string>
+    <string name="calendars_sync_permission_reason">Samstilling afritar viðburðina þína í dagatalsforrit þessa síma og þarf því aðgang að dagatölunum þínum.</string>
+    <string name="calendars_sync_permission_blocked">Slökkt er á aðgangi að dagatali fyrir þetta forrit. Þú getur kveikt á honum undir Heimildir í stillingum forritsins.</string>
 </resources>

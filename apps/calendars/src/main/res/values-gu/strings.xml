@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google ખાતાં સક્ષમ કરો</string>
     <string name="calendars_provider_caldav">કૅલેન્ડર સર્વર</string>
+    <string name="calendars_sync_permission_reason">સિંક કરવાથી તમારા ઇવેન્ટ્સ આ ફોનની કૅલેન્ડર ઍપમાં કૉપિ થાય છે, તેથી તેને તમારા કૅલેન્ડરના ઍક્સેસની જરૂર છે.</string>
+    <string name="calendars_sync_permission_blocked">આ ઍપ માટે કૅલેન્ડર ઍક્સેસ બંધ છે. તમે તેને ઍપના સેટિંગ્સમાં પરવાનગીઓ હેઠળ ચાલુ કરી શકો છો.</string>
 </resources>

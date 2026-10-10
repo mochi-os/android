@@ -326,4 +326,8 @@
     <string name="color_picker_clear">지우기</string>
     <string name="common_refresh">새로고침</string>
     <string name="launcher_add_to_home">홈 화면에 추가</string>
+    <string name="common_continue">계속</string>
+    <string name="common_open_settings">설정 열기</string>
+    <string name="notifications_permission_reason">새 메시지, 답글, 리마인더 소식을 받으려면 Mochi에 알림 표시 권한이 필요합니다.</string>
+    <string name="notifications_permission_blocked">Mochi 알림이 꺼져 있습니다. 앱의 알림 설정에서 켤 수 있습니다.</string>
 </resources>

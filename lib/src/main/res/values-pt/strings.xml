@@ -327,4 +327,8 @@
     <string name="color_picker_clear">Limpar</string>
     <string name="common_refresh">Atualizar</string>
     <string name="launcher_add_to_home">Adicionar ao ecrã principal</string>
+    <string name="common_continue">Continuar</string>
+    <string name="common_open_settings">Abrir definições</string>
+    <string name="notifications_permission_reason">O Mochi precisa de permissão para mostrar notificações, para que saiba de novas mensagens, respostas e lembretes.</string>
+    <string name="notifications_permission_blocked">As notificações estão desativadas para o Mochi. Pode ativá-las nas definições de notificações da aplicação.</string>
 </resources>

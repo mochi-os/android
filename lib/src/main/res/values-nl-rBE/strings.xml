@@ -302,4 +302,5 @@
     <string name="color_picker_clear">Wissen</string>
     <string name="common_refresh">Vernieuwen</string>
     <string name="launcher_add_to_home">Toevoegen aan startscherm</string>
+    <string name="common_continue">Doorgaan</string>
 </resources>

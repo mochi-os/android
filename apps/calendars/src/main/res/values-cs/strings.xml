@@ -293,4 +293,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Povolit účty Google</string>
     <string name="calendars_provider_caldav">Kalendářový server</string>
+    <string name="calendars_sync_permission_reason">Synchronizace kopíruje vaše události do aplikace kalendáře v tomto telefonu, a proto potřebuje přístup k vašim kalendářům.</string>
+    <string name="calendars_sync_permission_blocked">Přístup ke kalendáři je pro tuto aplikaci vypnutý. Můžete ho zapnout v sekci Oprávnění v nastavení aplikace.</string>
 </resources>

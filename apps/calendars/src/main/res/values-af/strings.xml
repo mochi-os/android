@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Aktiveer Google-rekeninge</string>
     <string name="calendars_provider_caldav">Kalenderbediener</string>
+    <string name="calendars_sync_permission_reason">Sinkronisering kopieer jou gebeurtenisse na hierdie foon se kalender-app, dus het dit toegang tot jou kalenders nodig.</string>
+    <string name="calendars_sync_permission_blocked">Kalendertoegang is vir hierdie app afgeskakel. Jy kan dit onder Toestemmings in die app se instellings aanskakel.</string>
 </resources>

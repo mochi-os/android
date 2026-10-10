@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">År</string>
     <string name="people_contact_birthday_clear">Ryd</string>
     <string name="people_contact_create">Opret</string>
+    <string name="people_sync_permission_reason">Synkronisering kopierer dine venner til denne telefons Kontakter-app, så den skal have adgang til dine kontakter.</string>
+    <string name="people_sync_permission_blocked">Adgang til kontakter er slået fra for denne app. Du kan slå den til under Tilladelser i appens indstillinger.</string>
 </resources>

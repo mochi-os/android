@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google hesablarını aktivləşdir</string>
     <string name="calendars_provider_caldav">Təqvim serveri</string>
+    <string name="calendars_sync_permission_reason">Sinxronlaşdırma tədbirlərinizi bu telefonun təqvim tətbiqinə kopyalayır, buna görə də ona təqvimlərinizə giriş lazımdır.</string>
+    <string name="calendars_sync_permission_blocked">Bu tətbiq üçün təqvimə giriş deaktivdir. Onu tətbiqin parametrlərində İcazələr bölməsində aktiv edə bilərsiniz.</string>
 </resources>

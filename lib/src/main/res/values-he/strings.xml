@@ -328,4 +328,8 @@
     <string name="color_picker_clear">נקה</string>
     <string name="common_refresh">רענן</string>
     <string name="launcher_add_to_home">הוספה למסך הבית</string>
+    <string name="common_continue">המשך</string>
+    <string name="common_open_settings">פתיחת ההגדרות</string>
+    <string name="notifications_permission_reason">ל-Mochi נדרשת הרשאה להצגת התראות, כדי שתקבלו עדכון על הודעות חדשות, תשובות ותזכורות.</string>
+    <string name="notifications_permission_blocked">ההתראות של Mochi כבויות. ניתן להפעיל אותן בהגדרות ההתראות של האפליקציה.</string>
 </resources>

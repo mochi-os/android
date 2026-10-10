@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Жил</string>
     <string name="people_contact_birthday_clear">Цэвэрлэх</string>
     <string name="people_contact_create">Үүсгэх</string>
+    <string name="people_sync_permission_reason">Синк хийх нь таны найзуудыг энэ утасны Харилцагчид аппад хуулдаг тул таны харилцагчдад хандах эрх хэрэгтэй.</string>
+    <string name="people_sync_permission_blocked">Энэ аппын харилцагчдад хандах эрх унтраалттай байна. Та үүнийг аппын тохиргооны Зөвшөөрөл хэсгээс асааж болно.</string>
 </resources>

@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google অ্যাকাউন্ট সক্রিয় করুন</string>
     <string name="calendars_provider_caldav">ক্যালেন্ডার সার্ভার</string>
+    <string name="calendars_sync_permission_reason">সিঙ্ক করলে আপনার ইভেন্টগুলি এই ফোনের ক্যালেন্ডার অ্যাপে কপি হয়, তাই এর জন্য আপনার ক্যালেন্ডারে অ্যাক্সেস প্রয়োজন।</string>
+    <string name="calendars_sync_permission_blocked">এই অ্যাপের জন্য ক্যালেন্ডার অ্যাক্সেস বন্ধ করা আছে। আপনি অ্যাপের সেটিংসে অনুমতি বিভাগে এটি চালু করতে পারেন।</string>
 </resources>

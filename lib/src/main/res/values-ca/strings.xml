@@ -328,4 +328,8 @@
     <string name="color_picker_clear">Esborra</string>
     <string name="common_refresh">Actualitza</string>
     <string name="launcher_add_to_home">Afegeix a la pantalla d\'inici</string>
+    <string name="common_continue">Continua</string>
+    <string name="common_open_settings">Obre la configuració</string>
+    <string name="notifications_permission_reason">Mochi necessita permís per mostrar notificacions, perquè us assabenteu dels missatges nous, les respostes i els recordatoris.</string>
+    <string name="notifications_permission_blocked">Les notificacions estan desactivades per a Mochi. Les podeu activar a la configuració de notificacions de l\'aplicació.</string>
 </resources>

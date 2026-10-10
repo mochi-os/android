@@ -326,4 +326,8 @@
     <string name="color_picker_clear">صاف ڪريو</string>
     <string name="common_refresh">ريفريش</string>
     <string name="launcher_add_to_home">هوم اسڪرين تي شامل ڪريو</string>
+    <string name="common_continue">جاري رکو</string>
+    <string name="common_open_settings">سيٽنگون کوليو</string>
+    <string name="notifications_permission_reason">Mochi کي اطلاع ڏيکارڻ جي اجازت گهرجي، ته جيئن توهان کي نون پيغامن، جوابن ۽ ياد دهانين جي خبر پوي.</string>
+    <string name="notifications_permission_blocked">Mochi لاءِ اطلاع بند آهن. توهان انهن کي ايپ جي اطلاع سيٽنگن ۾ چالو ڪري سگهو ٿا.</string>
 </resources>

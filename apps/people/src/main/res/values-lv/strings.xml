@@ -221,4 +221,6 @@
     <string name="people_contact_birthday_year">Gads</string>
     <string name="people_contact_birthday_clear">Notīrīt</string>
     <string name="people_contact_create">Izveidot</string>
+    <string name="people_sync_permission_reason">Sinhronizācija kopē jūsu draugus šī tālruņa lietotnē Kontakti, tāpēc tai nepieciešama piekļuve jūsu kontaktiem.</string>
+    <string name="people_sync_permission_blocked">Piekļuve kontaktiem šai lietotnei ir izslēgta. Varat to ieslēgt lietotnes iestatījumu sadaļā Atļaujas.</string>
 </resources>

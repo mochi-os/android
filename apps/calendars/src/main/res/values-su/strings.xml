@@ -264,4 +264,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Aktipkeun akun Google</string>
     <string name="calendars_provider_caldav">Server kalénder</string>
+    <string name="calendars_sync_permission_reason">Sinkronisasi nyalin acara anjeun kana aplikasi kalénder di telepon ieu, janten peryogi aksés kana kalénder anjeun.</string>
+    <string name="calendars_sync_permission_blocked">Aksés kalénder dipareuman pikeun aplikasi ieu. Anjeun tiasa ngahurungkeunana dina Idin di setélan aplikasi.</string>
 </resources>

@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">سال</string>
     <string name="people_contact_birthday_clear">صاف ڪريو</string>
     <string name="people_contact_create">ٺاهيو</string>
+    <string name="people_sync_permission_reason">سنڪ ڪرڻ توهان جا دوست هن فون جي رابطن واري ايپ ۾ نقل ڪري ٿو، تنهن ڪري ان کي توهان جي رابطن تائين رسائي گهرجي.</string>
+    <string name="people_sync_permission_blocked">هن ايپ لاءِ رابطن تائين رسائي بند آهي. توهان ان کي ايپ جي سيٽنگن ۾ اجازتون هيٺ چالو ڪري سگهو ٿا.</string>
 </resources>

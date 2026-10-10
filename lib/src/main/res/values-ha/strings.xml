@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Share</string>
     <string name="common_refresh">Sabuntawa</string>
     <string name="launcher_add_to_home">Ƙara a allon gida</string>
+    <string name="common_continue">Ci gaba</string>
+    <string name="common_open_settings">Buɗe saituna</string>
+    <string name="notifications_permission_reason">Mochi na buƙatar izini don nuna sanarwa, don ka ji labarin sabbin saƙonni, amsoshi da tunatarwa.</string>
+    <string name="notifications_permission_blocked">An kashe sanarwa don Mochi. Za ka iya kunna su a saitunan sanarwa na manhajar.</string>
 </resources>

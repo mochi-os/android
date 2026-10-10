@@ -224,4 +224,6 @@
     <string name="people_contact_birthday_year">Blwyddyn</string>
     <string name="people_contact_birthday_clear">Clirio</string>
     <string name="people_contact_create">Creu</string>
+    <string name="people_sync_permission_reason">Mae cysoni\'n copïo eich ffrindiau i ap Cysylltiadau\'r ffôn hwn, felly mae angen mynediad at eich cysylltiadau arno.</string>
+    <string name="people_sync_permission_blocked">Mae mynediad at gysylltiadau wedi\'i ddiffodd ar gyfer yr ap hwn. Gallwch ei droi ymlaen o dan Caniatâd yng ngosodiadau\'r ap.</string>
 </resources>

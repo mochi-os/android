@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google கணக்குகளை இயக்கு</string>
     <string name="calendars_provider_caldav">நாட்காட்டி சேவையகம்</string>
+    <string name="calendars_sync_permission_reason">ஒத்திசைவு உங்கள் நிகழ்வுகளை இந்தத் தொலைபேசியின் நாட்காட்டி ஆப்ஸுக்கு நகலெடுக்கிறது, எனவே அதற்கு உங்கள் நாட்காட்டிகளுக்கான அணுகல் தேவை.</string>
+    <string name="calendars_sync_permission_blocked">இந்த ஆப்ஸுக்கான நாட்காட்டி அணுகல் முடக்கப்பட்டுள்ளது. ஆப்ஸ் அமைப்புகளில் உள்ள அனுமதிகள் என்பதில் அதை இயக்கலாம்.</string>
 </resources>

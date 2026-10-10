@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Pastro</string>
     <string name="common_refresh">Rifresko</string>
     <string name="launcher_add_to_home">Shto në ekranin kryesor</string>
+    <string name="common_continue">Vazhdo</string>
+    <string name="common_open_settings">Hap cilësimet</string>
+    <string name="notifications_permission_reason">Mochi ka nevojë për leje për të shfaqur njoftime, që të mësoni për mesazhe të reja, përgjigje dhe përkujtues.</string>
+    <string name="notifications_permission_blocked">Njoftimet janë çaktivizuar për Mochi. Mund t\'i aktivizoni te cilësimet e njoftimeve të aplikacionit.</string>
 </resources>

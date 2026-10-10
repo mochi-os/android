@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">יאָר</string>
     <string name="people_contact_birthday_clear">רייניקן</string>
     <string name="people_contact_create">באַשאַפֿן</string>
+    <string name="people_sync_permission_reason">סינכראָניזירן קאָפּירט אײַערע חברים אין דעם טעלעפֿאָנס קאָנטאַקטן־אַפּ, דערפֿאַר דאַרף עס צוטריט צו אײַערע קאָנטאַקטן.</string>
+    <string name="people_sync_permission_blocked">קאָנטאַקטן־צוטריט איז אױסגעשאַלט פֿאַר דער דאָזיקער אַפּ. איר קענט אים אײַנשאַלטן אונטער דערלויבענישן אין די אײַנשטעלונגען פֿון דער אַפּ.</string>
 </resources>

@@ -224,4 +224,6 @@
     <string name="people_contact_birthday_year">السنة</string>
     <string name="people_contact_birthday_clear">مسح</string>
     <string name="people_contact_create">إنشاء</string>
+    <string name="people_sync_permission_reason">تنسخ المزامنة أصدقاءك إلى تطبيق جهات الاتصال على هذا الهاتف، لذا تحتاج إلى الوصول إلى جهات الاتصال الخاصة بك.</string>
+    <string name="people_sync_permission_blocked">الوصول إلى جهات الاتصال متوقف لهذا التطبيق. يمكنك تشغيله ضمن الأذونات في إعدادات التطبيق.</string>
 </resources>

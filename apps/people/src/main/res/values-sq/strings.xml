@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Viti</string>
     <string name="people_contact_birthday_clear">Pastro</string>
     <string name="people_contact_create">Krijo</string>
+    <string name="people_sync_permission_reason">Sinkronizimi kopjon miqtë tuaj në aplikacionin Kontaktet të këtij telefoni, prandaj ka nevojë për qasje në kontaktet tuaja.</string>
+    <string name="people_sync_permission_blocked">Qasja në kontakte është çaktivizuar për këtë aplikacion. Mund ta aktivizoni te Lejet në cilësimet e aplikacionit.</string>
 </resources>

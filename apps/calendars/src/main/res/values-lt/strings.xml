@@ -297,4 +297,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Įjungti Google paskyras</string>
     <string name="calendars_provider_caldav">Kalendorių serveris</string>
+    <string name="calendars_sync_permission_reason">Sinchronizuojant jūsų įvykiai nukopijuojami į šio telefono kalendoriaus programą, todėl reikia prieigos prie jūsų kalendorių.</string>
+    <string name="calendars_sync_permission_blocked">Šios programos prieiga prie kalendoriaus išjungta. Ją galite įjungti programos nustatymų skiltyje „Leidimai“.</string>
 </resources>

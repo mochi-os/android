@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google खाताहरू सक्षम गर्नुहोस्</string>
     <string name="calendars_provider_caldav">क्यालेन्डर सर्भर</string>
+    <string name="calendars_sync_permission_reason">सिङ्क गर्दा तपाईंका कार्यक्रमहरू यो फोनको पात्रो एपमा प्रतिलिपि हुन्छन्, त्यसैले यसलाई तपाईंका पात्रोहरूमा पहुँच चाहिन्छ।</string>
+    <string name="calendars_sync_permission_blocked">यो एपका लागि पात्रोमा पहुँच अफ गरिएको छ। तपाईं एपको सेटिङहरूमा अनुमतिहरू अन्तर्गत यसलाई अन गर्न सक्नुहुन्छ।</string>
 </resources>

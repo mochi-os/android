@@ -327,4 +327,8 @@
     <string name="color_picker_clear">Golește</string>
     <string name="common_refresh">Reîmprospătează</string>
     <string name="launcher_add_to_home">Adaugă pe ecranul de pornire</string>
+    <string name="common_continue">Continuă</string>
+    <string name="common_open_settings">Deschide setările</string>
+    <string name="notifications_permission_reason">Mochi are nevoie de permisiune pentru a afișa notificări, ca să afli despre mesaje noi, răspunsuri și mementouri.</string>
+    <string name="notifications_permission_blocked">Notificările sunt dezactivate pentru Mochi. Le poți activa din setările de notificări ale aplicației.</string>
 </resources>

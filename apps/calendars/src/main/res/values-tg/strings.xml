@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Фаъол кардани ҳисобҳои Google</string>
     <string name="calendars_provider_caldav">Сервери тақвим</string>
+    <string name="calendars_sync_permission_reason">Ҳамоҳангсозӣ рӯйдодҳои шуморо ба барномаи тақвими ин телефон нусхабардорӣ мекунад, бинобар ин ба тақвимҳои шумо дастрасӣ лозим аст.</string>
+    <string name="calendars_sync_permission_blocked">Дастрасӣ ба тақвим барои ин барнома хомӯш аст. Шумо метавонед онро дар бахши Иҷозатҳо дар танзимоти барнома фаъол кунед.</string>
 </resources>

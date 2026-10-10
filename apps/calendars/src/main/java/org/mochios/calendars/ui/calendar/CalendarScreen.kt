@@ -164,6 +164,8 @@ fun CalendarScreen(
     onSavedShown: () -> Unit = {},
     reminder: Reminder? = null,
     onReminderShown: () -> Unit = {},
+    requested: Pair<CalendarAction, String>? = null,
+    onRequested: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -308,27 +310,38 @@ fun CalendarScreen(
         }
     }
 
+    val act: (CalendarAction, Calendar) -> Unit = { action, calendar ->
+        when (action) {
+            CalendarAction.ONLY -> viewModel.only(calendar.id)
+            CalendarAction.SETTINGS -> onCalendarSettings(calendar.id)
+            CalendarAction.RENAME -> renaming = calendar
+            CalendarAction.COLOUR -> colouring = calendar
+            CalendarAction.LINK -> linking = calendar
+            CalendarAction.POLL -> viewModel.poll(calendar.id)
+            CalendarAction.IMPORT -> {
+                importing = calendar.id
+                picker.launch(Icalendar.ACCEPTED)
+            }
+            CalendarAction.EXPORT -> viewModel.export(calendar)
+            CalendarAction.DELETE -> deleting = calendar
+        }
+    }
+    // An action asked for on a calendar's Settings screen is carried out
+    // here, as the calendar's menu would, once the calendar is in the list.
+    val acting by rememberUpdatedState(act)
+    LaunchedEffect(requested, uiState.calendars) {
+        val (action, id) = requested ?: return@LaunchedEffect
+        val calendar = uiState.calendars.firstOrNull { it.id == id } ?: return@LaunchedEffect
+        onRequested()
+        acting(action, calendar)
+    }
+
     CalendarDrawer(
         drawerState = drawerState,
         calendars = uiState.calendars,
         hidden = uiState.hidden,
         onToggle = viewModel::toggle,
-        onAction = { action, calendar ->
-            when (action) {
-                CalendarAction.ONLY -> viewModel.only(calendar.id)
-                CalendarAction.SETTINGS -> onCalendarSettings(calendar.id)
-                CalendarAction.RENAME -> renaming = calendar
-                CalendarAction.COLOUR -> colouring = calendar
-                CalendarAction.LINK -> linking = calendar
-                CalendarAction.POLL -> viewModel.poll(calendar.id)
-                CalendarAction.IMPORT -> {
-                    importing = calendar.id
-                    picker.launch(Icalendar.ACCEPTED)
-                }
-                CalendarAction.EXPORT -> viewModel.export(calendar)
-                CalendarAction.DELETE -> deleting = calendar
-            }
-        },
+        onAction = { action, calendar -> act(action, calendar) },
         onCreate = onCreateCalendar,
         onSubscribe = onSubscribe,
         onPreferences = onPreferences,

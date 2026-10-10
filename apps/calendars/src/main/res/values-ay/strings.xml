@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google cuentanak activaña</string>
     <string name="calendars_provider_caldav">Calendario servidor</string>
+    <string name="calendars_sync_permission_reason">Sincronizañax luräwinakam aka telefonon calendario app ukar copiaraki, ukatwa calendarionakamar mantañ munaraki.</string>
+    <string name="calendars_sync_permission_blocked">Calendarionakar mantañax aka app ukatakix jiwt\'ayatawa. App ukan wakichawinakapan Permisos ukan activarakismawa.</string>
 </resources>

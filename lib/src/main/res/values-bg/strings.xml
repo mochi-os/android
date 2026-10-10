@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Изчисти</string>
     <string name="common_refresh">Опресни</string>
     <string name="launcher_add_to_home">Добавяне към началния екран</string>
+    <string name="common_continue">Продължи</string>
+    <string name="common_open_settings">Отвори настройките</string>
+    <string name="notifications_permission_reason">Mochi се нуждае от разрешение да показва известия, за да научавате за нови съобщения, отговори и напомняния.</string>
+    <string name="notifications_permission_blocked">Известията за Mochi са изключени. Можете да ги включите от настройките за известия на приложението.</string>
 </resources>

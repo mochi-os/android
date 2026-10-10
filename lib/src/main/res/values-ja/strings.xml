@@ -326,4 +326,8 @@
     <string name="color_picker_clear">クリア</string>
     <string name="common_refresh">更新</string>
     <string name="launcher_add_to_home">ホーム画面に追加</string>
+    <string name="common_continue">続行</string>
+    <string name="common_open_settings">設定を開く</string>
+    <string name="notifications_permission_reason">新しいメッセージ、返信、リマインダーをお知らせできるよう、Mochiには通知を表示する権限が必要です。</string>
+    <string name="notifications_permission_blocked">Mochiの通知がオフになっています。アプリの通知設定でオンにできます。</string>
 </resources>

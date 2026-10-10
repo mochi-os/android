@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">År</string>
     <string name="people_contact_birthday_clear">Rensa</string>
     <string name="people_contact_create">Skapa</string>
+    <string name="people_sync_permission_reason">Synkroniseringen kopierar dina vänner till appen Kontakter på den här telefonen, så den behöver åtkomst till dina kontakter.</string>
+    <string name="people_sync_permission_blocked">Kontaktåtkomst är avstängd för den här appen. Du kan aktivera den under Behörigheter i appens inställningar.</string>
 </resources>

@@ -222,4 +222,6 @@
     <string name="people_contact_birthday_year">Рік</string>
     <string name="people_contact_birthday_clear">Очистити</string>
     <string name="people_contact_create">Створити</string>
+    <string name="people_sync_permission_reason">Синхронізація копіює ваших друзів у застосунок «Контакти» на цьому телефоні, тому їй потрібен доступ до ваших контактів.</string>
+    <string name="people_sync_permission_blocked">Доступ до контактів для цього застосунку вимкнено. Ви можете ввімкнути його в розділі «Дозволи» в налаштуваннях застосунку.</string>
 </resources>

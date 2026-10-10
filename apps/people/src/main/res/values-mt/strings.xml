@@ -223,4 +223,6 @@
     <string name="people_contact_birthday_year">Sena</string>
     <string name="people_contact_birthday_clear">Naddaf</string>
     <string name="people_contact_create">Oħloq</string>
+    <string name="people_sync_permission_reason">Is-sinkronizzazzjoni tikkopja l-ħbieb tiegħek fl-app tal-Kuntatti ta\' dan it-telefon, għalhekk teħtieġ aċċess għall-kuntatti tiegħek.</string>
+    <string name="people_sync_permission_blocked">L-aċċess għall-kuntatti huwa mitfi għal din l-app. Tista\' tixgħlu taħt Permessi fl-issettjar tal-app.</string>
 </resources>

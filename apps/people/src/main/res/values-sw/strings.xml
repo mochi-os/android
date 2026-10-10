@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Mwaka</string>
     <string name="people_contact_birthday_clear">Futa</string>
     <string name="people_contact_create">Unda</string>
+    <string name="people_sync_permission_reason">Kusawazisha kunanakili marafiki zako kwenye programu ya Anwani ya simu hii, kwa hivyo kunahitaji ufikiaji wa anwani zako.</string>
+    <string name="people_sync_permission_blocked">Ufikiaji wa anwani umezimwa kwa programu hii. Unaweza kuuwasha chini ya Ruhusa katika mipangilio ya programu.</string>
 </resources>

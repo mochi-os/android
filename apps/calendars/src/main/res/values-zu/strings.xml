@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Vula ama-akhawunti e-Google</string>
     <string name="calendars_provider_caldav">Iseva yekhalenda</string>
+    <string name="calendars_sync_permission_reason">Ukuvumelanisa kukopisha imicimbi yakho ku-app yekhalenda yale foni, ngakho kudinga ukufinyelela kumakhalenda akho.</string>
+    <string name="calendars_sync_permission_blocked">Ukufinyelela kwekhalenda kuvaliwe kule app. Ungakuvula ngaphansi kokuthi Izimvume kuzilungiselelo ze-app.</string>
 </resources>

@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Yıl</string>
     <string name="people_contact_birthday_clear">Temizle</string>
     <string name="people_contact_create">Oluştur</string>
+    <string name="people_sync_permission_reason">Senkronizasyon, arkadaşlarınızı bu telefonun Kişiler uygulamasına kopyalar; bu nedenle kişilerinize erişmesi gerekir.</string>
+    <string name="people_sync_permission_blocked">Bu uygulama için kişilere erişim kapalı. Uygulama ayarlarındaki İzinler bölümünden açabilirsiniz.</string>
 </resources>

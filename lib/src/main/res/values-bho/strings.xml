@@ -326,4 +326,8 @@
     <string name="color_picker_clear">साफ करीं</string>
     <string name="common_refresh">रिफ्रेश करीं</string>
     <string name="launcher_add_to_home">होम स्क्रीन पर जोड़ीं</string>
+    <string name="common_continue">जारी रखीं</string>
+    <string name="common_open_settings">सेटिंग खोलीं</string>
+    <string name="notifications_permission_reason">Mochi के सूचना देखावे खातिर अनुमति चाहीं, ताकि रउआ के नया संदेश, जवाब आ रिमाइंडर के बारे में पता चलत रहे।</string>
+    <string name="notifications_permission_blocked">Mochi खातिर सूचना बंद बा। रउआ ऐप के सूचना सेटिंग में एकरा के चालू कर सकेलीं।</string>
 </resources>

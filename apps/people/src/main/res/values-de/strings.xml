@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Jahr</string>
     <string name="people_contact_birthday_clear">Leeren</string>
     <string name="people_contact_create">Erstellen</string>
+    <string name="people_sync_permission_reason">Die Synchronisierung kopiert Ihre Freunde in die Kontakte-App dieses Telefons und benötigt daher Zugriff auf Ihre Kontakte.</string>
+    <string name="people_sync_permission_blocked">Der Zugriff auf Kontakte ist für diese App deaktiviert. Sie können ihn in den Einstellungen der App unter „Berechtigungen“ aktivieren.</string>
 </resources>

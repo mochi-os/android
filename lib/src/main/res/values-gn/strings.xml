@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Embopotĩ</string>
     <string name="common_refresh">Embohekopyahu</string>
     <string name="launcher_add_to_home">Embojuaju óga rovetãme</string>
+    <string name="common_continue">Tenonde</string>
+    <string name="common_open_settings">Eipe\'a ñemboheko</string>
+    <string name="notifications_permission_reason">Mochi oikotevẽ ñemoneĩ ohechauka hag̃ua momarandukuéra, reikuaa hag̃ua ñe\'ẽmondo pyahu, mbohovái ha mandu\'arãkuéra rehegua.</string>
+    <string name="notifications_permission_blocked">Momarandukuéra oñembogue Mochi-pe g̃uarã. Ikatu remyendy umíva app momarandu ñembohekópe.</string>
 </resources>

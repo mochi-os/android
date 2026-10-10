@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">साल</string>
     <string name="people_contact_birthday_clear">साफ करीं</string>
     <string name="people_contact_create">बनाईं</string>
+    <string name="people_sync_permission_reason">सिंक कइला से रउआ के दोस्त एह फोन के संपर्क ऐप में कॉपी हो जालें, एह से एकरा के रउआ के संपर्क तक पहुंच चाहीं।</string>
+    <string name="people_sync_permission_blocked">एह ऐप खातिर संपर्क के पहुंच बंद बा। रउआ ऐप के सेटिंग में अनुमतियां के तहत एकरा के चालू कर सकेलीं।</string>
 </resources>

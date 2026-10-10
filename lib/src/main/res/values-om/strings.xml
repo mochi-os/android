@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Cilliisi</string>
     <string name="common_refresh">Haaromsi</string>
     <string name="launcher_add_to_home">Iskrii manaatti dabali</string>
+    <string name="common_continue">Itti fufi</string>
+    <string name="common_open_settings">Qindaa\'inoota bani</string>
+    <string name="notifications_permission_reason">Mochi beeksisaalee agarsiisuuf hayyama barbaada, kunis akka ati waa\'ee ergaawwan haaraa, deebiiwwanii fi yaadachiisawwan beektuuf.</string>
+    <string name="notifications_permission_blocked">Beeksisaaleen Mochiif cufamaniiru. Qindaa\'inoota beeksisaa appichaa keessatti banuu dandeessa.</string>
 </resources>

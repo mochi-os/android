@@ -264,4 +264,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google 계정 활성화</string>
     <string name="calendars_provider_caldav">캘린더 서버</string>
+    <string name="calendars_sync_permission_reason">동기화하면 일정이 이 휴대전화의 캘린더 앱에 복사되므로 캘린더에 대한 액세스 권한이 필요해요.</string>
+    <string name="calendars_sync_permission_blocked">이 앱의 캘린더 액세스가 꺼져 있어요. 앱 설정의 권한에서 켤 수 있어요.</string>
 </resources>

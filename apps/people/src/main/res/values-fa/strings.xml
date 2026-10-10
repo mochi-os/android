@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">سال</string>
     <string name="people_contact_birthday_clear">پاک کردن</string>
     <string name="people_contact_create">ساختن</string>
+    <string name="people_sync_permission_reason">همگام‌سازی دوستان شما را در برنامه مخاطبین این تلفن کپی می‌کند، بنابراین به مخاطبین شما دسترسی لازم دارد.</string>
+    <string name="people_sync_permission_blocked">دسترسی به مخاطبین برای این برنامه خاموش است. می‌توانید آن را در تنظیمات برنامه، در بخش مجوزها روشن کنید.</string>
 </resources>

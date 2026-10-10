@@ -326,4 +326,8 @@
     <string name="color_picker_clear">Tühjenda</string>
     <string name="common_refresh">Värskenda</string>
     <string name="launcher_add_to_home">Lisa avakuvale</string>
+    <string name="common_continue">Jätka</string>
+    <string name="common_open_settings">Ava seaded</string>
+    <string name="notifications_permission_reason">Mochi vajab luba teavituste kuvamiseks, et saaksite teada uutest sõnumitest, vastustest ja meeldetuletustest.</string>
+    <string name="notifications_permission_blocked">Mochi teavitused on välja lülitatud. Saate need sisse lülitada rakenduse teavituste seadetes.</string>
 </resources>

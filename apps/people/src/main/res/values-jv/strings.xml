@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">Taun</string>
     <string name="people_contact_birthday_clear">Resiki</string>
     <string name="people_contact_create">Gawé</string>
+    <string name="people_sync_permission_reason">Sinkronisasi nyalin kanca-kanca panjenengan menyang aplikasi Kontak ing telpon iki, mula butuh akses menyang kontak panjenengan.</string>
+    <string name="people_sync_permission_blocked">Akses kontak dipateni kanggo aplikasi iki. Panjenengan bisa nguripake ing Idin ing setelan aplikasi.</string>
 </resources>

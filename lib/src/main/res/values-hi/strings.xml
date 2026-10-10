@@ -326,4 +326,8 @@
     <string name="color_picker_clear">साफ़ करें</string>
     <string name="common_refresh">रिफ़्रेश</string>
     <string name="launcher_add_to_home">होम स्क्रीन पर जोड़ें</string>
+    <string name="common_continue">जारी रखें</string>
+    <string name="common_open_settings">सेटिंग्स खोलें</string>
+    <string name="notifications_permission_reason">Mochi को सूचनाएँ दिखाने के लिए अनुमति चाहिए, ताकि आपको नए संदेशों, जवाबों और रिमाइंडर के बारे में पता चल सके।</string>
+    <string name="notifications_permission_blocked">Mochi के लिए सूचनाएँ बंद हैं। आप उन्हें ऐप की सूचना सेटिंग्स में चालू कर सकते हैं।</string>
 </resources>

@@ -219,4 +219,6 @@
     <string name="people_contact_birthday_year">Tahun</string>
     <string name="people_contact_birthday_clear">Kosongkan</string>
     <string name="people_contact_create">Cipta</string>
+    <string name="people_sync_permission_reason">Penyegerakan menyalin rakan anda ke dalam apl Kenalan telefon ini, jadi ia memerlukan akses kepada kenalan anda.</string>
+    <string name="people_sync_permission_blocked">Akses kenalan dimatikan untuk apl ini. Anda boleh menghidupkannya di bawah Kebenaran dalam tetapan apl.</string>
 </resources>

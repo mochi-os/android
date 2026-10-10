@@ -326,4 +326,8 @@
     <string name="color_picker_clear">רייניקן</string>
     <string name="common_refresh">דערפֿריש</string>
     <string name="launcher_add_to_home">לייגן צו היים עקראַן</string>
+    <string name="common_continue">ממשיך</string>
+    <string name="common_open_settings">עפֿענען די אײַנשטעלונגען</string>
+    <string name="notifications_permission_reason">Mochi דאַרף דערלויבעניש צו ווײַזן מעלדונגען, כּדי איר זאָלט וויסן וועגן נײַע אָנזאָגן, ענטפֿערס און דערמאָנונגען.</string>
+    <string name="notifications_permission_blocked">מעלדונגען זענען אױסגעשאַלט פֿאַר Mochi. איר קענט זיי אײַנשאַלטן אין די מעלדונג־אײַנשטעלונגען פֿון דער אַפּ.</string>
 </resources>

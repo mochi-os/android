@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Aktiver Google-kontoar</string>
     <string name="calendars_provider_caldav">Kalendertenar</string>
+    <string name="calendars_sync_permission_reason">Synkroniseringa kopierer hendingane dine til kalenderappen på denne telefonen, og treng difor tilgang til kalendrane dine.</string>
+    <string name="calendars_sync_permission_blocked">Tilgang til kalenderen er slått av for denne appen. Du kan slå han på under Løyve i innstillingane til appen.</string>
 </resources>

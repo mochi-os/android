@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Google खाते सक्षम करें</string>
     <string name="calendars_provider_caldav">कैलेंडर सर्वर</string>
+    <string name="calendars_sync_permission_reason">सिंक करने से आपके इवेंट इस फ़ोन के कैलेंडर ऐप में कॉपी हो जाते हैं, इसलिए इसे आपके कैलेंडर का एक्सेस चाहिए।</string>
+    <string name="calendars_sync_permission_blocked">इस ऐप के लिए कैलेंडर एक्सेस बंद है। आप इसे ऐप की सेटिंग्स में अनुमतियाँ के अंतर्गत चालू कर सकते हैं।</string>
 </resources>

@@ -326,4 +326,8 @@
     <string name="color_picker_clear">മായ്ക്കുക</string>
     <string name="common_refresh">പുതുക്കുക</string>
     <string name="launcher_add_to_home">ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക</string>
+    <string name="common_continue">തുടരുക</string>
+    <string name="common_open_settings">ക്രമീകരണങ്ങൾ തുറക്കുക</string>
+    <string name="notifications_permission_reason">അറിയിപ്പുകൾ കാണിക്കാൻ Mochi-യ്ക്ക് അനുമതി ആവശ്യമാണ്, അതുവഴി പുതിയ സന്ദേശങ്ങൾ, മറുപടികൾ, ഓർമ്മപ്പെടുത്തലുകൾ എന്നിവയെക്കുറിച്ച് നിങ്ങൾ അറിയും.</string>
+    <string name="notifications_permission_blocked">Mochi-യുടെ അറിയിപ്പുകൾ ഓഫാണ്. ആപ്പിന്റെ അറിയിപ്പ് ക്രമീകരണങ്ങളിൽ നിങ്ങൾക്ക് അവ ഓണാക്കാം.</string>
 </resources>

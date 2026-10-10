@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Wata</string>
     <string name="people_contact_birthday_clear">Pichay</string>
     <string name="people_contact_create">Kamariy</string>
+    <string name="people_sync_permission_reason">Sincronizayqa masiykikunata kay telefonopa Contactokuna appninman copian, chaymi contactoykikunaman yaykuyta necesitan.</string>
+    <string name="people_sync_permission_blocked">Kay app-paq contactokunaman yaykuyqa desactivasqa kachkan. App-pa wakichiyninkunapi Permisokuna nisqapi activayta atinki.</string>
 </resources>

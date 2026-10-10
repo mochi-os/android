@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">ਸਾਲ</string>
     <string name="people_contact_birthday_clear">ਸਾਫ਼ ਕਰੋ</string>
     <string name="people_contact_create">ਬਣਾਓ</string>
+    <string name="people_sync_permission_reason">ਸਿੰਕ ਕਰਨ ਨਾਲ ਤੁਹਾਡੇ ਦੋਸਤ ਇਸ ਫ਼ੋਨ ਦੀ ਸੰਪਰਕ ਐਪ ਵਿੱਚ ਕਾਪੀ ਹੋ ਜਾਂਦੇ ਹਨ, ਇਸ ਲਈ ਇਸ ਨੂੰ ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਤੱਕ ਪਹੁੰਚ ਦੀ ਲੋੜ ਹੈ।</string>
+    <string name="people_sync_permission_blocked">ਇਸ ਐਪ ਲਈ ਸੰਪਰਕਾਂ ਤੱਕ ਪਹੁੰਚ ਬੰਦ ਹੈ। ਤੁਸੀਂ ਇਸ ਨੂੰ ਐਪ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤਾਂ ਹੇਠਾਂ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।</string>
 </resources>

@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Жыл</string>
     <string name="people_contact_birthday_clear">Тазалау</string>
     <string name="people_contact_create">Құру</string>
+    <string name="people_sync_permission_reason">Синхрондау достарыңызды осы телефонның Контактілер қолданбасына көшіреді, сондықтан оған контактілеріңізге қол жеткізу қажет.</string>
+    <string name="people_sync_permission_blocked">Бұл қолданба үшін контактілерге қол жеткізу өшірулі. Оны қолданба параметрлеріндегі «Рұқсаттар» бөлімінде қосуға болады.</string>
 </resources>

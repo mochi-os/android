@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Sal</string>
     <string name="people_contact_birthday_clear">Paqij bike</string>
     <string name="people_contact_create">Çêbike</string>
+    <string name="people_sync_permission_reason">Hevdemkirin hevalên te li sepana Kontakt a vê telefonê kopî dike, ji ber vê yekê pêdivî bi gihîştina kontaktên te heye.</string>
+    <string name="people_sync_permission_blocked">Gihîştina kontaktan ji bo vê sepanê neçalak e. Tu dikarî wê di mîhengên sepanê de di bin Destûr de çalak bikî.</string>
 </resources>

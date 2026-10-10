@@ -201,15 +201,15 @@
     <string name="push_service_group">पृष्ठभूमि सेवा</string>
     <string name="push_service_title">Mochi सूचनाहरूका लागि सुनिरहेको छ</string>
     <string name="reauth_channel_name">Mochi साइन-इन आवश्यक छ</string>
-    <string name="reauth_channel_description">तपाईंको सत्र अमान्य भएकाले मोचीले तपाईंको सर्भरमा पुग्न नसक्दा देखिन्छ</string>
-    <string name="reauth_signin_title">मोची: फेरि साइन इन गर्नुहोस्</string>
+    <string name="reauth_channel_description">तपाईंको सत्र अमान्य भएकाले Mochi ले तपाईंको सर्भरमा पुग्न नसक्दा देखिन्छ</string>
+    <string name="reauth_signin_title">Mochi: फेरि साइन इन गर्नुहोस्</string>
     <string name="reauth_signin_text">तपाईं फेरि साइन इन नगरेसम्म सूचनाहरू रोकिएका छन्</string>
     <string name="oem_hint_title">पृष्ठभूमिमा पहुँचयोग्य रहनुहोस्</string>
-    <string name="oem_hint_body">सूचनाहरू पुर्‍याउन मोची पृष्ठभूमिमा चल्नुपर्छ। कृपया अर्को स्क्रिनमा यो अनुमति दिनुहोस्, अन्यथा स्क्रिन निभेको बेला तपाईंको फोनले सूचनाहरू रोक्न सक्छ।</string>
+    <string name="oem_hint_body">सूचनाहरू पुर्‍याउन Mochi पृष्ठभूमिमा चल्नुपर्छ। कृपया अर्को स्क्रिनमा यो अनुमति दिनुहोस्, अन्यथा स्क्रिन निभेको बेला तपाईंको फोनले सूचनाहरू रोक्न सक्छ।</string>
     <string name="oem_hint_samsung_note">स्यामसङ फोनहरूमा, सेटिङहरू → उपकरण हेरचाह → सुतिरहेका एपहरू पनि जाँच गर्नुहोस् र सूचीमा भए Mochi लाई हटाउनुहोस्।</string>
     <string name="oem_hint_allow">पृष्ठभूमि अनुमति दिनुहोस्</string>
     <string name="oem_hint_dismiss">फेरि नदेखाउनुहोस्</string>
-    <string name="about_title">मोची क्लाइन्ट</string>
+    <string name="about_title">Mochi क्लाइन्ट</string>
     <string name="about_version">संस्करण %1$s</string>
     <string name="about_check_updates">अपडेटहरू जाँच गर्नुहोस्</string>
     <string name="about_up_to_date">अद्यावधिक छ</string>
@@ -326,4 +326,8 @@
     <string name="color_picker_clear">खाली गर्नुहोस्</string>
     <string name="common_refresh">रिफ्रेस गर्नुहोस्</string>
     <string name="launcher_add_to_home">गृह स्क्रिनमा थप्नुहोस्</string>
+    <string name="common_continue">जारी राख्नुहोस्</string>
+    <string name="common_open_settings">सेटिङहरू खोल्नुहोस्</string>
+    <string name="notifications_permission_reason">तपाईंले नयाँ सन्देश, जवाफ र रिमाइन्डरबारे थाहा पाउन सक्नुहोस् भनेर Mochi लाई सूचनाहरू देखाउने अनुमति चाहिन्छ।</string>
+    <string name="notifications_permission_blocked">Mochi का सूचनाहरू अफ गरिएका छन्। तपाईं एपको सूचना सेटिङहरूमा तिनलाई अन गर्न सक्नुहुन्छ।</string>
 </resources>

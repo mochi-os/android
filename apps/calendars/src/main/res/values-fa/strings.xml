@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">فعال‌سازی حساب‌های Google</string>
     <string name="calendars_provider_caldav">سرور تقویم</string>
+    <string name="calendars_sync_permission_reason">همگام‌سازی رویدادهای شما را در برنامه تقویم این تلفن کپی می‌کند، بنابراین به تقویم‌های شما دسترسی لازم دارد.</string>
+    <string name="calendars_sync_permission_blocked">دسترسی به تقویم برای این برنامه خاموش است. می‌توانید آن را در تنظیمات برنامه، در بخش مجوزها روشن کنید.</string>
 </resources>

@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">د Google حسابونه فعال کړئ</string>
     <string name="calendars_provider_caldav">د کليز سرور</string>
+    <string name="calendars_sync_permission_reason">همغږي ستاسو پېښې د دې موبایل د کليز اپلیکیشن ته کاپي کوي، نو دې ته ستاسو کليزونو ته لاسرسی اړین دی.</string>
+    <string name="calendars_sync_permission_blocked">د دې اپلیکیشن لپاره کليز ته لاسرسی بند دی. تاسو کولی شئ دا د اپلیکیشن په تنظیماتو کې د اجازو لاندې چالان کړئ.</string>
 </resources>

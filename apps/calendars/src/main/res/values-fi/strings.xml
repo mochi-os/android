@@ -273,4 +273,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">Ota Google-tilit käyttöön</string>
     <string name="calendars_provider_caldav">Kalenteripalvelin</string>
+    <string name="calendars_sync_permission_reason">Synkronointi kopioi tapahtumasi tämän puhelimen kalenterisovellukseen, joten se tarvitsee pääsyn kalentereihisi.</string>
+    <string name="calendars_sync_permission_blocked">Kalenterin käyttöoikeus on poissa käytöstä tältä sovellukselta. Voit ottaa sen käyttöön sovelluksen asetusten kohdasta Luvat.</string>
 </resources>

@@ -264,4 +264,6 @@
     </plurals>
     <string name="calendars_subscribe_google_enable_action">啟用 Google 帳戶</string>
     <string name="calendars_provider_caldav">行事曆伺服器</string>
+    <string name="calendars_sync_permission_reason">同步功能會將您的活動複製到此手機的行事曆應用程式，因此需要存取您的行事曆。</string>
+    <string name="calendars_sync_permission_blocked">此應用程式的行事曆存取權已關閉。您可以在應用程式設定的「權限」中開啟。</string>
 </resources>

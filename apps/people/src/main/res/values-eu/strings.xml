@@ -220,4 +220,6 @@
     <string name="people_contact_birthday_year">Urtea</string>
     <string name="people_contact_birthday_clear">Garbitu</string>
     <string name="people_contact_create">Sortu</string>
+    <string name="people_sync_permission_reason">Sinkronizazioak zure lagunak telefono honetako Kontaktuak aplikaziora kopiatzen ditu; beraz, zure kontaktuetarako sarbidea behar du.</string>
+    <string name="people_sync_permission_blocked">Kontaktuetarako sarbidea desaktibatuta dago aplikazio honetan. Aplikazioaren ezarpenetako Baimenak atalean aktiba dezakezu.</string>
 </resources>

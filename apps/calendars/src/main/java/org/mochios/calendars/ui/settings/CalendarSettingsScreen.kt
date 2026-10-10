@@ -15,8 +15,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.ContentCopy
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material.icons.outlined.LinkOff
+import androidx.compose.material.icons.outlined.Upload
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHost
@@ -64,6 +68,7 @@ import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.ui.calendar.AddressDialogs
 import org.mochios.calendars.ui.calendar.LinkState
+import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.dialogs.NAME_MAXIMUM
 import org.mochios.calendars.ui.dialogs.RevokeLinkDialog
 import org.mochios.android.R as MochiR
@@ -279,6 +284,7 @@ class CalendarSettingsViewModel @Inject constructor(
 fun CalendarSettingsScreen(
     onBack: () -> Unit,
     onSaved: (Boolean) -> Unit,
+    onAction: (CalendarAction) -> Unit,
     viewModel: CalendarSettingsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -310,6 +316,7 @@ fun CalendarSettingsScreen(
             onColour = viewModel::colour,
             onCopy = { linking = true },
             onRevoke = { revoking = true },
+            onAction = onAction,
         )
         SnackbarHost(
             hostState = snackbar,
@@ -354,6 +361,7 @@ internal fun CalendarSettingsContent(
     onColour: (String) -> Unit,
     onCopy: () -> Unit,
     onRevoke: () -> Unit,
+    onAction: (CalendarAction) -> Unit,
 ) {
     val calendar = uiState.opened
     var menu by remember { mutableStateOf(false) }
@@ -397,6 +405,50 @@ internal fun CalendarSettingsContent(
                                 onRevoke()
                             },
                         )
+                        // Import, export and deletion are carried out by the
+                        // calendar screen this one returns to, as from the
+                        // menu of a calendar without a Settings screen.
+                        HorizontalDivider()
+                        if (!calendar.readonly) {
+                            MochiDropdownMenuItem(
+                                text = { Text(stringResource(R.string.calendars_import)) },
+                                leadingIcon = { Icon(Icons.Outlined.Upload, contentDescription = null) },
+                                onClick = {
+                                    menu = false
+                                    onAction(CalendarAction.IMPORT)
+                                },
+                            )
+                        }
+                        MochiDropdownMenuItem(
+                            text = { Text(stringResource(R.string.calendars_export)) },
+                            leadingIcon = { Icon(Icons.Outlined.Download, contentDescription = null) },
+                            onClick = {
+                                menu = false
+                                onAction(CalendarAction.EXPORT)
+                            },
+                        )
+                        if (!calendar.default && !calendar.birthdays) {
+                            HorizontalDivider()
+                            MochiDropdownMenuItem(
+                                text = {
+                                    Text(
+                                        stringResource(
+                                            if (calendar.linked || calendar.subscription) {
+                                                R.string.calendars_remove
+                                            } else {
+                                                R.string.calendars_delete
+                                            },
+                                        ),
+                                    )
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                                destructive = true,
+                                onClick = {
+                                    menu = false
+                                    onAction(CalendarAction.DELETE)
+                                },
+                            )
+                        }
                     }
                 }
             }

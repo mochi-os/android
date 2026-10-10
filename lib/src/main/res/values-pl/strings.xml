@@ -328,4 +328,8 @@
     <string name="color_picker_clear">Wyczyść</string>
     <string name="common_refresh">Odśwież</string>
     <string name="launcher_add_to_home">Dodaj do ekranu głównego</string>
+    <string name="common_continue">Kontynuuj</string>
+    <string name="common_open_settings">Otwórz ustawienia</string>
+    <string name="notifications_permission_reason">Mochi potrzebuje uprawnienia do wyświetlania powiadomień, aby informować Cię o nowych wiadomościach, odpowiedziach i przypomnieniach.</string>
+    <string name="notifications_permission_blocked">Powiadomienia z Mochi są wyłączone. Możesz je włączyć w ustawieniach powiadomień aplikacji.</string>
 </resources>
