@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -42,7 +43,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -52,6 +54,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.LinearGradientShader
+import androidx.compose.ui.graphics.Shader
+import androidx.compose.ui.graphics.ShaderBrush
+import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
@@ -65,14 +75,17 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.Hyphens
 import androidx.compose.ui.text.style.LineBreak
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.launcher.openApp
 import org.mochios.android.ui.components.EmptyState
@@ -82,11 +95,26 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.parseHexColour
+import org.mochios.android.ui.theme.oklch
+import org.mochios.android.ui.theme.oklchOf
+import kotlin.math.abs
+import kotlin.math.cos
+import kotlin.math.sin
+import kotlin.math.sqrt
 import org.mochios.home.R
 import org.mochios.home.repository.Tile
 import org.mochios.android.R as MochiR
 
 private const val TAG = "HomeScreen"
+
+/** The glow at the top of the page: its colour's strength, where it fades out, and how far down it reaches. */
+private const val GLOW_STRENGTH = 0.12f
+private const val GLOW_FADE = 0.7f
+private val GLOW_HEIGHT = 420.dp
+private val SQRT2 = sqrt(2f)
+
+/** The wordmark gradient's direction, in degrees clockwise from up. */
+private const val WORDMARK_ANGLE = 165f
 
 /** The side of the square every icon is drawn in, as on the web. */
 private val ICON = 64.dp
@@ -135,28 +163,159 @@ fun HomeScreen(
         viewModel.refresh()
     }
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.home_title)) },
-                actions = { NotificationBell(onClick = onOpenNotifications) },
-            )
-        },
-    ) { padding ->
-        Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-            HomeContent(
-                state = state,
-                pinnable = pinnable,
-                onOpen = { tile ->
-                    if (!openApp(context, tile.name)) {
-                        Log.w(TAG, "No launcher activity could open ${tile.name}")
-                    }
-                },
-                onPin = { tile -> Shortcuts.pin(context, tile.name, tile.label) },
-                onRetry = viewModel::refresh,
-            )
+    HomePage(
+        glow = LocalFormat.current.preferences.background,
+        actions = { NotificationBell(onClick = onOpenNotifications) },
+    ) {
+        HomeContent(
+            state = state,
+            pinnable = pinnable,
+            onOpen = { tile ->
+                if (!openApp(context, tile.name)) {
+                    Log.w(TAG, "No launcher activity could open ${tile.name}")
+                }
+            },
+            onPin = { tile -> Shortcuts.pin(context, tile.name, tile.label) },
+            onRetry = viewModel::refresh,
+        )
+    }
+}
+
+/**
+ * The home page around [content], as the web's on a phone: the "mochi"
+ * wordmark centred in a bar holding [actions], over the page background with
+ * its glow when [glow] is on. Both bar and page are see-through, so the glow
+ * shows behind the wordmark as it does on the web.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+internal fun HomePage(
+    glow: Boolean,
+    actions: @Composable RowScope.() -> Unit,
+    content: @Composable () -> Unit,
+) {
+    HomeBackground(glow = glow) {
+        Scaffold(
+            containerColor = Color.Transparent,
+            // A see-through page cannot imply its text colour, so name it.
+            contentColor = MaterialTheme.colorScheme.onBackground,
+            topBar = {
+                CenterAlignedTopAppBar(
+                    title = { Wordmark() },
+                    actions = actions,
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = Color.Transparent,
+                        scrolledContainerColor = Color.Transparent,
+                    ),
+                )
+            },
+        ) { padding ->
+            Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+                content()
+            }
         }
     }
+}
+
+/**
+ * The page behind the home grid, as the web's: the theme's background, with
+ * the theme's primary colour glowing down from the top when [glow] is on, the
+ * user's background preference.
+ */
+@Composable
+internal fun HomeBackground(glow: Boolean, content: @Composable () -> Unit) {
+    val colours = MaterialTheme.colorScheme
+    val tint = colours.primary.copy(alpha = GLOW_STRENGTH)
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(colours.background)
+            .then(if (glow) Modifier.glow(tint) else Modifier),
+    ) {
+        content()
+    }
+}
+
+/**
+ * The web's `radial-gradient(ellipse at top, primary 12%, transparent 70%)`
+ * over a strip [GLOW_HEIGHT] tall: an ellipse centred on the top edge that
+ * reaches the strip's bottom corners, the colour fading out 70% of the way.
+ */
+private fun Modifier.glow(colour: Color): Modifier = drawBehind {
+    val strip = GLOW_HEIGHT.toPx()
+    val (across, down) = glowRadii(size.width, strip)
+    val top = Offset(size.width / 2, 0f)
+    val brush = Brush.radialGradient(0f to colour, GLOW_FADE to Color.Transparent, center = top, radius = down)
+    // A radial brush is round: squash the drawing across so its circle becomes
+    // the ellipse, and widen the rectangle to cover the strip once squashed.
+    withTransform({ scale(scaleX = across / down, scaleY = 1f, pivot = top) }) {
+        val width = size.width * down / across
+        drawRect(brush, topLeft = Offset(top.x - width / 2, 0f), size = Size(width, minOf(strip, size.height)))
+    }
+}
+
+/**
+ * The radii of CSS's farthest-corner ellipse centred on the top edge of a
+ * [width] by [height] box: its farthest-side radii, half the width and the
+ * height, scaled by root two so the ellipse passes through the bottom corners.
+ */
+internal fun glowRadii(width: Float, height: Float): Pair<Float, Float> =
+    Pair(width / 2 * SQRT2, height * SQRT2)
+
+/**
+ * The wordmark the web shows at the top of its home page: "mochi" in light
+ * type, spaced out, shaded from the theme's primary colour to a lighter one.
+ */
+@Composable
+private fun Wordmark() {
+    val primary = MaterialTheme.colorScheme.primary
+    val brush = remember(primary) { wordmarkBrush(primary) }
+    Text(
+        text = stringResource(R.string.home_title),
+        style = MaterialTheme.typography.headlineMedium.copy(
+            brush = brush,
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Light,
+            letterSpacing = 3.sp,
+        ),
+        maxLines = 1,
+    )
+}
+
+/**
+ * The web's `bg-linear-165 from-primary to-primary-light`: a gradient at 165
+ * degrees from [primary] to the theme's lighter primary, `oklch(0.74, 85% of
+ * the primary's chroma, its hue)`, stretched over whatever it paints.
+ */
+internal fun wordmarkBrush(primary: Color): Brush {
+    val (from, to) = wordmarkColours(primary)
+    return object : ShaderBrush() {
+        override fun createShader(size: Size): Shader {
+            val (start, end) = gradientLine(size.width, size.height, WORDMARK_ANGLE)
+            return LinearGradientShader(start, end, listOf(from, to))
+        }
+    }
+}
+
+/** The wordmark's two colours: [primary], and the web's `--color-primary-light` made from it. */
+internal fun wordmarkColours(primary: Color): Pair<Color, Color> {
+    val (_, chroma, hue) = oklchOf(primary)
+    return Pair(primary, oklch(0.74f, chroma * 0.85f, hue))
+}
+
+/**
+ * Where CSS draws a linear gradient at [degrees] across a [width] by [height]
+ * box: through its centre, pointing [degrees] clockwise from up, and long
+ * enough that its perpendicular ends touch the box's corners.
+ */
+internal fun gradientLine(width: Float, height: Float, degrees: Float): Pair<Offset, Offset> {
+    val angle = Math.toRadians(degrees.toDouble())
+    val across = sin(angle).toFloat()
+    val down = -cos(angle).toFloat()
+    val half = (abs(width * across) + abs(height * down)) / 2
+    val centre = Offset(width / 2, height / 2)
+    val step = Offset(across * half, down * half)
+    return Pair(centre - step, centre + step)
 }
 
 /**

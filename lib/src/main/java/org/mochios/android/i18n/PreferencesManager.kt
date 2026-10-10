@@ -195,6 +195,7 @@ class PreferencesManager @Inject internal constructor(
             radius = Radius.fromString(raw["radius"]),
             font = FontPref.fromString(raw["font"]),
             fontSize = FontSizePref.fromString(raw["font_size"]),
+            background = backgroundOf(raw["background"]),
             flights = Flights.fromString(raw["flights"]),
         )
     }

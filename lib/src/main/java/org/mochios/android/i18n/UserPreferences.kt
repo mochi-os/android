@@ -25,9 +25,17 @@ data class UserPreferences(
     val radius: Radius = Radius.THEME,
     val font: FontPref = FontPref.THEME,
     val fontSize: FontSizePref = FontSizePref.THEME,
+    /**
+     * Whether a page draws the theme's background glow, as the web's pages do;
+     * the server's `background` preference, which turns it off with "off".
+     */
+    val background: Boolean = true,
     /** Where a flight number links to. Maps need no preference here: a location opens in the phone's own map app. */
     val flights: Flights = Flights.FLIGHTRADAR24,
 )
+
+/** The `background` preference as the server sends it: only "off" turns the glow off. */
+fun backgroundOf(value: String?): Boolean = value != "off"
 
 /** The flight tracker a flight number links to; the server's `flights` preference. */
 enum class Flights(val key: String) {
