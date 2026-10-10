@@ -2,7 +2,9 @@
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
     <background android:drawable="@color/ic_launcher_background" />
     <!-- Inset so the glyph clears the round mask and keeps the same ring of
-         space around it as every other Mochi icon. -->
+         space around it as every other Mochi icon. Written by
+         claude/scripts/android-icons.py, which sizes the foreground's glyph
+         for this inset. -->
     <foreground>
         <inset
             android:drawable="@mipmap/ic_feeds_foreground"

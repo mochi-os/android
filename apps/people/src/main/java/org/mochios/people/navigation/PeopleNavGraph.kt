@@ -98,7 +98,6 @@ private const val PEOPLE_ROUTE_PREFIX = "people/"
 
 fun NavGraphBuilder.peopleNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
@@ -107,7 +106,6 @@ fun NavGraphBuilder.peopleNavGraph(
         onOpenAllContacts = { navController.navigateFromDrawer(PeopleApp.contacts()) },
         onSwitchSection = { section -> navController.openPeopleSection(section) },
         onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
-        onLogout = onLogout,
     )
 
     composable(PeopleApp.ROUTER) {
@@ -197,7 +195,13 @@ fun NavGraphBuilder.peopleNavGraph(
     ) {
         ContactEditScreen(
             onBack = { navController.popBackStack() },
-            onSaved = { navController.openContacts() },
+            // The new contact's editor takes this screen's place, so Back from
+            // it lands where the new one was started.
+            onOpen = { id ->
+                navController.navigate(PeopleApp.contactEdit(id)) {
+                    popUpTo(PeopleApp.CONTACT_NEW) { inclusive = true }
+                }
+            },
             onDeleted = { navController.openContacts() },
         )
     }
@@ -209,9 +213,14 @@ fun NavGraphBuilder.peopleNavGraph(
         ContactEditScreen(
             onBack = { navController.popBackStack() },
             onFindPerson = { contact, name -> navController.navigate(PeopleApp.contactsAdd(contact, name)) },
-            // The list behind reloads on the repository's contactsChanged, so
-            // stepping back to it shows the edit.
-            onSaved = { navController.popBackStack() },
+            // A copy, or the contact a merge left standing, takes this
+            // editor's place. The list behind reloads on the repository's
+            // contactsChanged, so stepping back to it shows every edit.
+            onOpen = { id ->
+                navController.navigate(PeopleApp.contactEdit(id)) {
+                    popUpTo(PeopleApp.CONTACT_EDIT) { inclusive = true }
+                }
+            },
             onDeleted = { navController.popBackStack() },
         )
     }

@@ -67,8 +67,8 @@
     <string name="calendars_range">%1$s 至 %2$s</string>
     <string name="calendars_truncated">活动过多，无法全部显示。请选择较短的范围。</string>
     <string name="calendars_list_empty">无活动</string>
-    <string name="calendars_list_nothing">暂无安排。点按即可创建活动。</string>
     <string name="calendars_list_heading">%2$s%1$s</string>
+    <string name="calendars_list_heading_iso">%2$s（%1$s）</string>
     <string name="calendars_untitled">（无标题）</string>
     <string name="calendars_status_cancelled">已取消</string>
     <string name="calendars_status_tentative">暂定</string>

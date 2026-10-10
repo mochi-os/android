@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Fèmen rechèch</string>
     <string name="projects_list_search">Chèche</string>
     <string name="projects_list_find">Jwenn pwojè</string>
-    <string name="projects_list_logout">Dekonekte</string>
     <string name="projects_list_create">Kreye pwojè</string>
     <string name="projects_create_title">Kreye pwojè</string>
     <string name="projects_create_name">Non</string>
@@ -164,7 +163,6 @@
     <string name="projects_auth_mfa_unsupported">MFA poko sipòte nan aplikasyon mobil la</string>
     <string name="projects_auth_enter_code_sent">Antre kòd ki voye nan %1$s la</string>
     <string name="projects_auth_create_identity">Kreye idantite ou</string>
-    <string name="projects_list_add_to_home">Ajoute sou ekran akèy la</string>
     <string name="projects_sort_field">Triye pa</string>
     <string name="projects_views_move_up">Monte</string>
     <string name="projects_views_move_down">Desann</string>

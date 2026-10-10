@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMnaka</string>
     <string name="crm_list_search">Thaqhama</string>
     <string name="crm_list_find">CRMnak jikxataña</string>
-    <string name="crm_list_logout">Mistuña</string>
     <string name="crm_list_create">CRM luraña</string>
     <string name="crm_create_title">CRM luraña</string>
     <string name="crm_create_name">Suti</string>
@@ -131,7 +130,6 @@
     <string name="crm_list_search_placeholder">CRM thaqhaña</string>
     <string name="crm_list_no_matching">Janiw CRM jikxatatakiti</string>
     <string name="crm_list_empty">Janiw CRM utjkiti</string>
-    <string name="crm_list_add_to_home">Qalltäwi uñstäwirux uchaña</string>
     <string name="crm_create_template">Plantilla</string>
     <string name="crm_find_search_placeholder">CRM thaqhaña jan ukax URL pegaña</string>
     <string name="crm_find_search_hint">Suscribiñatakix CRM thaqhaña</string>

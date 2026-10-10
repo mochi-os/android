@@ -179,18 +179,19 @@ class Format(
             return clock.span(timed, epochToMillis(start), epochToMillis(end), opens)
         }
         val pattern = clock.pattern(timed)
-        return apart(
+        return formatRange(
             clock.write(pattern, epochToMillis(start), opens),
             clock.write(pattern, epochToMillis(end), closes),
         )
     }
 
     /**
-     * [from] and [to] joined by the [range] string, as the language joins two
-     * ends written apart. [broken] puts the end on a line of its own, the join
-     * staying with the start: "10:00 PM –" over "6:00 AM".
+     * [from] and [to], each already written, joined by the [range] string, as
+     * the language joins two ends written apart. [broken] puts the end on a
+     * line of its own, the join staying with the start: "10:00 PM –" over
+     * "6:00 AM".
      */
-    private fun apart(from: String, to: String, broken: Boolean = false): String {
+    fun formatRange(from: String, to: String, broken: Boolean = false): String {
         val split = range.indexOf("%2\$s")
         if (split < 0) {
             return range.format(from, to)
@@ -254,10 +255,10 @@ class Format(
         val begins = clock.write(pattern, epochToMillis(start), opens)
         val ends = clock.write(pattern, epochToMillis(end), closes)
         if (sameDay) {
-            return dayTime.format(day, apart(begins, ends))
+            return dayTime.format(day, formatRange(begins, ends))
         }
         val closing = dayTime.format(clock.write(dated, epochToMillis(end), closes), ends)
-        return apart(dayTime.format(day, begins), closing, broken = true)
+        return formatRange(dayTime.format(day, begins), closing, broken = true)
     }
 
     /**

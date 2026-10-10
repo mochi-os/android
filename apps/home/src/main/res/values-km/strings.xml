@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">រកមិនឃើញកម្មវិធី</string>
+    <string name="home_menu_open">បើកម៉ឺនុយ</string>
+    <string name="home_menu_user">អ្នកប្រើប្រាស់</string>
+    <string name="home_menu_empty">មិនមានការជូនដំណឹងដែលមិនទាន់អាន</string>
+    <string name="home_menu_view_all">មើលទាំងអស់</string>
+    <string name="home_menu_no_topic">មិនទាន់មានកំណត់ត្រាប្រធានបទ — សាកល្បងម្តងទៀតបន្ទាប់ពីការជូនដំណឹងលើកក្រោយ។</string>
+    <string name="home_menu_manage_categories">គ្រប់គ្រងប្រភេទ</string>
+</resources>

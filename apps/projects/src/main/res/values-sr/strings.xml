@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Затвори претрагу</string>
     <string name="projects_list_search">Претражи</string>
     <string name="projects_list_find">Пронађи пројекте</string>
-    <string name="projects_list_logout">Одјави се</string>
     <string name="projects_list_create">Креирај пројекат</string>
     <string name="projects_create_title">Креирај пројекат</string>
     <string name="projects_create_name">Назив</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Растуће</string>
     <string name="projects_sort_direction_desc">Опадајуће</string>
     <string name="projects_views_direction_desc">Опадајуће</string>
-    <string name="projects_list_add_to_home">Додај на почетни екран</string>
     <string name="projects_search_objects_placeholder">Претражи објекте</string>
     <string name="projects_links_search_placeholder">Претражи објекте</string>
 

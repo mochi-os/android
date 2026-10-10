@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Saitunan</string>
-    <string name="settings_home_logout">Fita</string>
     <string name="settings_home_account">Asusu</string>
     <string name="settings_home_preferences">Abubuwan da kake so</string>
     <string name="settings_home_display">Nuni</string>

@@ -21,7 +21,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
-import org.mochios.settings.api.DestinationRow
+import org.mochios.android.notifications.DestinationRow
 import org.mochios.settings.api.DestinationsAvailable
 import org.mochios.settings.api.NotificationPrefsApi
 import javax.inject.Inject

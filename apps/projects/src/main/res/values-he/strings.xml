@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">סגור חיפוש</string>
     <string name="projects_list_search">חיפוש</string>
     <string name="projects_list_find">חפש פרויקטים</string>
-    <string name="projects_list_logout">התנתק</string>
     <string name="projects_list_create">צור פרויקט</string>
     <string name="projects_create_title">צור פרויקט</string>
     <string name="projects_create_name">שם</string>
@@ -164,7 +163,6 @@
     <string name="projects_auth_mfa_unsupported">אימות רב-שלבי אינו נתמך עדיין באפליקציה לנייד</string>
     <string name="projects_auth_enter_code_sent">הזינו את הקוד שנשלח אל %1$s</string>
     <string name="projects_auth_create_identity">יצירת הזהות שלכם</string>
-    <string name="projects_list_add_to_home">הוספה למסך הבית</string>
     <string name="projects_sort_field">מיין לפי</string>
     <string name="projects_views_move_up">הזזה למעלה</string>
     <string name="projects_views_move_down">הזזה למטה</string>

@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">Cari</string>
     <string name="crm_list_find">Cari CRM</string>
-    <string name="crm_list_logout">Log keluar</string>
     <string name="crm_list_create">Cipta CRM</string>
     <string name="crm_create_title">Cipta CRM</string>
     <string name="crm_create_name">Nama</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Menaik</string>
     <string name="crm_sort_direction_desc">Menurun</string>
     <string name="crm_views_direction_desc">Menurun</string>
-    <string name="crm_list_add_to_home">Tambah ke skrin utama</string>
     <string name="crm_search_objects_placeholder">Cari objek</string>
     <string name="crm_links_search_placeholder">Cari objek</string>
 

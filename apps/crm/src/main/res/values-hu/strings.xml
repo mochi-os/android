@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-ek</string>
     <string name="crm_list_search">Keresés</string>
     <string name="crm_list_find">CRM-ek keresése</string>
-    <string name="crm_list_logout">Kijelentkezés</string>
     <string name="crm_list_create">CRM létrehozása</string>
     <string name="crm_create_title">CRM létrehozása</string>
     <string name="crm_create_name">Név</string>
@@ -127,7 +126,6 @@
     <string name="crm_more">Több</string>
     <string name="crm_comment_send">Küldés</string>
     <string name="crm_field_position_body">Fő rész</string>
-    <string name="crm_list_add_to_home">Hozzáadás a kezdőképernyőhöz</string>
     <string name="crm_sort_field">Rendezés</string>
     <string name="crm_views_move_up">Mozgatás felfelé</string>
     <string name="crm_views_move_down">Mozgatás lefelé</string>

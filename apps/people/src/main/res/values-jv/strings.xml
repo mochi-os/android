@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Busak %1$s saka kontakmu?</string>
     <string name="people_contacts_delete_friend_confirm">Busak %1$s saka kontakmu? Kekancanmu uga bakal rampung.</string>
     <string name="people_contact_new_title">Kontak anyar</string>
-    <string name="people_contact_copy_title">Salin kontak</string>
     <string name="people_contact_merge">Gabung</string>
     <string name="people_contact_merge_title">Gabung kontak</string>
     <string name="people_contact_edit_title">Owahi kontak</string>
@@ -219,4 +218,5 @@
     <string name="people_contact_birthday_month">Sasi</string>
     <string name="people_contact_birthday_year">Taun</string>
     <string name="people_contact_birthday_clear">Resiki</string>
+    <string name="people_contact_create">Gawé</string>
 </resources>

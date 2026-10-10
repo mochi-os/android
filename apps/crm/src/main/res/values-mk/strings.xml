@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-и</string>
     <string name="crm_list_search">Барај</string>
     <string name="crm_list_find">Најди CRM-и</string>
-    <string name="crm_list_logout">Одјави се</string>
     <string name="crm_list_create">Создај CRM</string>
     <string name="crm_create_title">Создај CRM</string>
     <string name="crm_create_name">Име</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Растечки</string>
     <string name="crm_sort_direction_desc">Опаѓачки</string>
     <string name="crm_views_direction_desc">Опаѓачки</string>
-    <string name="crm_list_add_to_home">Додај на почетен екран</string>
     <string name="crm_search_objects_placeholder">Пребарај објекти</string>
     <string name="crm_links_search_placeholder">Пребарај објекти</string>
 

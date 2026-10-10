@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Barbaadii cufi</string>
     <string name="projects_list_search">Barbaadi</string>
     <string name="projects_list_find">Pirojektota argi</string>
-    <string name="projects_list_logout">Ba\'i</string>
     <string name="projects_list_create">Pirojektii uumi</string>
     <string name="projects_create_title">Pirojektii uumi</string>
     <string name="projects_create_name">Maqaa</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Ol kaʼaa</string>
     <string name="projects_sort_direction_desc">Gad buʼaa</string>
     <string name="projects_views_direction_desc">Gad buʼaa</string>
-    <string name="projects_list_add_to_home">Iskrii manaatti dabali</string>
     <string name="projects_search_objects_placeholder">Wantoota barbaadi</string>
     <string name="projects_links_search_placeholder">Wantoota barbaadi</string>
 

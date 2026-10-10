@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Loka leit</string>
     <string name="projects_list_search">Leita</string>
     <string name="projects_list_find">Finna verkefni</string>
-    <string name="projects_list_logout">Skrá út</string>
     <string name="projects_list_create">Búa til verkefni</string>
     <string name="projects_create_title">Búa til verkefni</string>
     <string name="projects_create_name">Nafn</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Hækkandi</string>
     <string name="projects_sort_direction_desc">Lækkandi</string>
     <string name="projects_views_direction_desc">Lækkandi</string>
-    <string name="projects_list_add_to_home">Bæta við heimaskjá</string>
     <string name="projects_search_objects_placeholder">Leita að hlutum</string>
     <string name="projects_links_search_placeholder">Leita að hlutum</string>
 

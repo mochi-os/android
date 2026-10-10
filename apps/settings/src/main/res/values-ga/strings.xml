@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Socruithe</string>
-    <string name="settings_home_logout">Logáil amach</string>
     <string name="settings_home_account">Cuntas</string>
     <string name="settings_home_preferences">Sainroghanna</string>
     <string name="settings_home_display">Taispeáint</string>

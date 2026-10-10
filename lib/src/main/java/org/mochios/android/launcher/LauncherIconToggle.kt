@@ -14,8 +14,7 @@ import android.util.Log
  * Show or hide a launcher activity at runtime. One gated on a server-side
  * capability check ships `android:enabled="false"` and is enabled
  * here once it passes. Android owns the state across reboots, so apps re-verify
- * on each boot. The icon on screen is one of the activity's colour aliases,
- * which [LauncherTint] shows or hides to follow the activity.
+ * on each boot.
  */
 object LauncherIconToggle {
 
@@ -65,6 +64,5 @@ object LauncherIconToggle {
                 "${if (visible) "ENABLED" else "DISABLED"} (was state=$currentState)",
         )
         pm.setComponentEnabledSetting(component, targetState, PackageManager.DONT_KILL_APP)
-        LauncherTint.refresh(context)
     }
 }

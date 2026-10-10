@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Gnàthaichte</string>
     <string name="color_picker_clear">Falamhaich</string>
     <string name="common_refresh">Ath-nuadhaich</string>
+    <string name="launcher_add_to_home">Cuir ris an sgrìn-dachaigh</string>
 </resources>

@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Верификација није успела</string>
     <string name="forums_list_title">Форуми</string>
     <string name="forums_list_find">Пронађи форуме</string>
-    <string name="forums_list_logout">Одјави се</string>
     <string name="forums_list_unsubscribe">Прекини претплату</string>
     <string name="forums_list_unsubscribe_title">Прекини претплату</string>
     <string name="forums_create_title">Креирај форум</string>

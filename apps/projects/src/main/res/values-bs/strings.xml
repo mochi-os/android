@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Zatvori pretragu</string>
     <string name="projects_list_search">Pretraži</string>
     <string name="projects_list_find">Pronađi projekte</string>
-    <string name="projects_list_logout">Odjavi se</string>
     <string name="projects_list_create">Kreiraj projekt</string>
     <string name="projects_create_title">Kreiraj projekt</string>
     <string name="projects_create_name">Naziv</string>
@@ -169,7 +168,6 @@
     <string name="projects_list_search_placeholder">Pretraži projekte</string>
     <string name="projects_list_no_matching">Nema odgovarajućih projekata</string>
     <string name="projects_list_empty">Još nema projekata</string>
-    <string name="projects_list_add_to_home">Dodaj na početni ekran</string>
     <string name="projects_find_search_placeholder">Pretraži projekte ili zalijepi URL</string>
     <string name="projects_find_search_hint">Pretražite projekte za pretplatu</string>
     <string name="projects_search_objects_placeholder">Pretraži objekte</string>

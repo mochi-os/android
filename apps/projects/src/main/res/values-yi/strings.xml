@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">פֿאַרמאַכן זוכן</string>
     <string name="projects_list_search">זוך</string>
     <string name="projects_list_find">געפֿינען פּראָיעקטן</string>
-    <string name="projects_list_logout">אַרויסקומען</string>
     <string name="projects_list_create">באַשאַפֿן פּראָיעקט</string>
     <string name="projects_create_title">באַשאַפֿן פּראָיעקט</string>
     <string name="projects_create_name">נאָמען</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">אַרויפֿגייענדיק</string>
     <string name="projects_sort_direction_desc">אַראָפּגייענדיק</string>
     <string name="projects_views_direction_desc">אַראָפּגייענדיק</string>
-    <string name="projects_list_add_to_home">לייגן צו היים עקראַן</string>
     <string name="projects_search_objects_placeholder">זוכן אָביעקטן</string>
     <string name="projects_links_search_placeholder">זוכן אָביעקטן</string>
 

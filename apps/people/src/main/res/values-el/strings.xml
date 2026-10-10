@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Διαγραφή του/της %1$s από τις επαφές σας;</string>
     <string name="people_contacts_delete_friend_confirm">Διαγραφή του/της %1$s από τις επαφές σας; Τερματίζεται και η φιλία σας.</string>
     <string name="people_contact_new_title">Νέα επαφή</string>
-    <string name="people_contact_copy_title">Αντιγραφή επαφής</string>
     <string name="people_contact_merge">Συγχώνευση</string>
     <string name="people_contact_merge_title">Συγχώνευση επαφών</string>
     <string name="people_contact_edit_title">Επεξεργασία επαφής</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Μήνας</string>
     <string name="people_contact_birthday_year">Έτος</string>
     <string name="people_contact_birthday_clear">Εκκαθάριση</string>
+    <string name="people_contact_create">Δημιουργία</string>
 </resources>

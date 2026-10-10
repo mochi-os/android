@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Itxi bilaketa</string>
     <string name="projects_list_search">Bilatu</string>
     <string name="projects_list_find">Aurkitu proiektuak</string>
-    <string name="projects_list_logout">Amaitu saioa</string>
     <string name="projects_list_create">Sortu proiektua</string>
     <string name="projects_create_title">Sortu proiektua</string>
     <string name="projects_create_name">Izena</string>
@@ -164,7 +163,6 @@
     <string name="projects_auth_mfa_unsupported">MFA ez da oraindik onartzen aplikazio mugikorrean</string>
     <string name="projects_auth_enter_code_sent">Sartu %1$s helbidera bidalitako kodea</string>
     <string name="projects_auth_create_identity">Sortu zure identitatea</string>
-    <string name="projects_list_add_to_home">Gehitu hasierako pantailara</string>
     <string name="projects_sort_field">Ordenatu honen arabera</string>
     <string name="projects_views_move_up">Eraman gora</string>
     <string name="projects_views_move_down">Eraman behera</string>

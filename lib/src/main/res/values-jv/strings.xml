@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Khusus</string>
     <string name="color_picker_clear">Resiki</string>
     <string name="common_refresh">Muat manèh</string>
+    <string name="launcher_add_to_home">Tambah ing layar utama</string>
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Nu s-au găsit aplicații</string>
+    <string name="home_menu_open">Deschide meniul</string>
+    <string name="home_menu_user">Utilizator</string>
+    <string name="home_menu_empty">Nicio notificare necitită</string>
+    <string name="home_menu_view_all">Vizualizează tot</string>
+    <string name="home_menu_no_topic">Încă nu există înregistrare de subiect — încearcă din nou după următoarea notificare.</string>
+    <string name="home_menu_manage_categories">Gestionează categoriile</string>
+</resources>

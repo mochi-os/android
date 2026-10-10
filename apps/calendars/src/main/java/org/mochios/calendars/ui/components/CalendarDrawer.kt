@@ -20,14 +20,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material.icons.outlined.ErrorOutline
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Palette
@@ -102,8 +100,6 @@ fun CalendarDrawer(
     onSubscribe: () -> Unit,
     onPreferences: () -> Unit,
     onConnectDevice: () -> Unit,
-    onLogout: () -> Unit,
-    onAbout: () -> Unit,
     content: @Composable () -> Unit,
 ) {
     val scope = rememberCoroutineScope()
@@ -156,22 +152,6 @@ fun CalendarDrawer(
                             onClick = {
                                 scope.launch { drawerState.close() }
                                 onPreferences()
-                            },
-                        )
-                        DrawerActionRow(
-                            title = stringResource(MochiR.string.common_logout),
-                            icon = Icons.AutoMirrored.Outlined.Logout,
-                            onClick = {
-                                scope.launch { drawerState.close() }
-                                onLogout()
-                            },
-                        )
-                        DrawerActionRow(
-                            title = stringResource(MochiR.string.about_label),
-                            icon = Icons.Outlined.Info,
-                            onClick = {
-                                scope.launch { drawerState.close() }
-                                onAbout()
                             },
                         )
                     }

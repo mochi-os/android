@@ -105,7 +105,6 @@ import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileSaveLauncher
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -165,7 +164,6 @@ fun CalendarScreen(
     onSavedShown: () -> Unit = {},
     reminder: Reminder? = null,
     onReminderShown: () -> Unit = {},
-    onLogout: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -183,7 +181,6 @@ fun CalendarScreen(
     var selected by remember { mutableStateOf<Instance?>(null) }
     var picking by remember { mutableStateOf(false) }
     var searching by remember { mutableStateOf(false) }
-    var listed by remember { mutableStateOf<LocalDate?>(null) }
     LaunchedEffect(uiState.view) {
         if (uiState.view != CalendarsSection.LIST && searching) {
             searching = false
@@ -196,7 +193,6 @@ fun CalendarScreen(
     var colouring by remember { mutableStateOf<Calendar?>(null) }
     var deleting by remember { mutableStateOf<Calendar?>(null) }
     var linking by remember { mutableStateOf<Calendar?>(null) }
-    var about by remember { mutableStateOf(false) }
     // The calendar a file is being picked for, kept by id so it outlasts the
     // activity being recreated behind the picker.
     var importing by rememberSaveable { mutableStateOf<String?>(null) }
@@ -337,8 +333,6 @@ fun CalendarScreen(
         onSubscribe = onSubscribe,
         onPreferences = onPreferences,
         onConnectDevice = onConnectDevice,
-        onLogout = onLogout,
-        onAbout = { about = true },
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             Scaffold(
@@ -348,7 +342,7 @@ fun CalendarScreen(
                         title = monthTitle(
                             when {
                                 picking -> uiState.focus
-                                uiState.view == CalendarsSection.LIST -> listed ?: uiState.anchor
+                                uiState.view == CalendarsSection.LIST -> uiState.listed ?: uiState.anchor
                                 else -> viewModel.first(uiState)
                             },
                         ),
@@ -449,7 +443,7 @@ fun CalendarScreen(
                                         onMoveDay = { instance, day ->
                                             request(instance) { scope -> viewModel.move(instance, day, scope) }
                                         },
-                                        onListed = { day -> listed = day },
+                                        onListed = viewModel::listed,
                                     )
                                 }
                             }
@@ -585,10 +579,6 @@ fun CalendarScreen(
             },
         )
     }
-    if (about) {
-        AboutDialog(onDismiss = { about = false })
-    }
-
     val tally by viewModel.importing.collectAsState()
     tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport, onRetry = viewModel::retryImport) }
 
@@ -896,7 +886,7 @@ internal fun Page(
         )
         // The list view opens on the anchor day and pages on as the reader
         // scrolls, so it has no range to pick; its search is in the toolbar.
-        else -> AgendaList(state, viewModel, onOpen, selected, onTop = onListed, onCreate = dated)
+        else -> AgendaList(state, viewModel, onOpen, selected, onTop = onListed)
     }
 }
 

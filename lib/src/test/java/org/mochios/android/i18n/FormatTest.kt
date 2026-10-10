@@ -125,6 +125,14 @@ class FormatTest {
     }
 
     @Test
+    fun `two ends written apart are joined as the language joins a range, the end on a line of its own when broken`() {
+        val england = Platform(Locale.ENGLISH, english)
+        assertEquals("Mon 28 – Tue 29", format(TimeFormat.H24, england).formatRange("Mon 28", "Tue 29"))
+        assertEquals("Mon 28 –\nTue 29", format(TimeFormat.H24, england).formatRange("Mon 28", "Tue 29", broken = true))
+        assertEquals("Mon 28～\nTue 29", format(TimeFormat.H24, england, range = wave).formatRange("Mon 28", "Tue 29", broken = true))
+    }
+
+    @Test
     fun `a span across days puts its end on a line of its own after the join`() {
         val england = Platform(Locale.ENGLISH, english)
         val range = format(TimeFormat.H24, england)

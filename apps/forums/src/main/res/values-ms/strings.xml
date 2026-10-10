@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Pengesahan gagal</string>
     <string name="forums_list_title">Forum</string>
     <string name="forums_list_find">Cari forum</string>
-    <string name="forums_list_logout">Log keluar</string>
     <string name="forums_list_unsubscribe">Berhenti melanggan</string>
     <string name="forums_list_unsubscribe_title">Berhenti melanggan</string>
     <string name="forums_create_title">Cipta forum</string>

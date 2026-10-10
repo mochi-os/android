@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Sapankuq</string>
     <string name="color_picker_clear">Pichay</string>
     <string name="common_refresh">Musuqchay</string>
+    <string name="launcher_add_to_home">Wasi pantallaman yapay</string>
 </resources>

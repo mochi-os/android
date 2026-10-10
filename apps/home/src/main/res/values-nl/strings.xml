@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Geen apps gevonden</string>
+    <string name="home_menu_open">Menu openen</string>
+    <string name="home_menu_user">Gebruiker</string>
+    <string name="home_menu_empty">Geen ongelezen meldingen</string>
+    <string name="home_menu_view_all">Alles bekijken</string>
+    <string name="home_menu_no_topic">Nog geen topic-record — probeer het opnieuw na de volgende melding.</string>
+    <string name="home_menu_manage_categories">Categorieën beheren</string>
+</resources>

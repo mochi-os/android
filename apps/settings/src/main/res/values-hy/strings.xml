@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Կարգավորումներ</string>
-    <string name="settings_home_logout">Դուրս գալ</string>
     <string name="settings_home_account">Հաշիվ</string>
     <string name="settings_home_preferences">Նախընտրություններ</string>
     <string name="settings_home_display">Ցուցադրում</string>

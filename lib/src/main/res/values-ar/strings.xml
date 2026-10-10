@@ -329,4 +329,5 @@
     <string name="color_picker_custom">مخصص</string>
     <string name="color_picker_clear">مسح</string>
     <string name="common_refresh">تحديث</string>
+    <string name="launcher_add_to_home">إضافة إلى الشاشة الرئيسية</string>
 </resources>

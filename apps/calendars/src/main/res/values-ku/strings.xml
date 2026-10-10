@@ -67,8 +67,8 @@
     <string name="calendars_range">ji %1$s heta %2$s</string>
     <string name="calendars_truncated">Ji bo nîşandana hemûyan pir bûyer hene. Navbereke kurttir hilbijêre.</string>
     <string name="calendars_list_empty">Tu bûyer tune</string>
-    <string name="calendars_list_nothing">Tiştek nehatiye plankirin. Ji bo çêkirina bûyerekê bitikîne.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Bê sernav)</string>
     <string name="calendars_status_cancelled">Hat betalkirin</string>
     <string name="calendars_status_tentative">Demkî</string>

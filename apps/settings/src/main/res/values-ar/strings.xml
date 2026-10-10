@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">الإعدادات</string>
-    <string name="settings_home_logout">تسجيل الخروج</string>
     <string name="settings_home_account">الحساب</string>
     <string name="settings_home_preferences">التفضيلات</string>
     <string name="settings_home_display">العرض</string>

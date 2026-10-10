@@ -3,7 +3,6 @@
 
     <string name="words_list_title">Parole</string>
     <string name="words_list_menu">Menu</string>
-    <string name="words_list_logout">Esci</string>
     <string name="words_sidebar_completed">Completato</string>
     <string name="words_sidebar_new_game">Nuova partita</string>
     <string name="words_new_game_title">Nuova partita</string>

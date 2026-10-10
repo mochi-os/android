@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">ការផ្ទៀងផ្ទាត់បរាជ័យ</string>
     <string name="forums_list_title">វេទិកា</string>
     <string name="forums_list_find">ស្វែងរកវេទិកា</string>
-    <string name="forums_list_logout">ចាកចេញ</string>
     <string name="forums_list_unsubscribe">ឈប់ជាវ</string>
     <string name="forums_list_unsubscribe_title">ឈប់ជាវ</string>
     <string name="forums_create_title">បង្កើតវេទិកា</string>

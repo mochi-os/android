@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">ڳوليو</string>
     <string name="crm_list_find">CRMs ڳوليو</string>
-    <string name="crm_list_logout">لاگ آئوٽ</string>
     <string name="crm_list_create">CRM ٺاهيو</string>
     <string name="crm_create_title">CRM ٺاهيو</string>
     <string name="crm_create_name">نالو</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">گهٽ کان وڌيڪ</string>
     <string name="crm_sort_direction_desc">وڌيڪ کان گهٽ</string>
     <string name="crm_views_direction_desc">وڌيڪ کان گهٽ</string>
-    <string name="crm_list_add_to_home">هوم اسڪرين تي شامل ڪريو</string>
     <string name="crm_search_objects_placeholder">شيون ڳوليو</string>
     <string name="crm_links_search_placeholder">شيون ڳوليو</string>
 

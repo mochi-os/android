@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Xoá nguồn?</string>
     <string name="feeds_suggested_credibility_accept">Chấp nhận</string>
     <string name="feeds_rss_url_copied">Đã sao chép URL RSS vào clipboard</string>
-    <string name="feeds_logout">Đăng xuất</string>
     <string name="feeds_ai_account_default">Tài khoản mặc định</string>
     <string name="feeds_ai_mode_off">Đã tắt</string>
     <string name="feeds_ai_mode_tag">Gắn thẻ</string>

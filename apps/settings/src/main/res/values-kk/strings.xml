@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Параметрлер</string>
-    <string name="settings_home_logout">Шығу</string>
     <string name="settings_home_account">Тіркелгі</string>
     <string name="settings_home_preferences">Параметрлер</string>
     <string name="settings_home_display">Көрсету</string>

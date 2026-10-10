@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">அரட்டைகள்</string>
     <string name="chat_list_search">தேடு</string>
-    <string name="chat_list_logout">வெளியேறு</string>
     <string name="chat_list_new">புதிய அரட்டை</string>
     <string name="chat_new_title">புதிய அரட்டை</string>
     <string name="chat_new_name">குழு பெயர்</string>

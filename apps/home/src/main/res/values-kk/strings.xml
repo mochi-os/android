@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Қолданбалар табылмады</string>
+    <string name="home_menu_open">Мәзірді ашу</string>
+    <string name="home_menu_user">Пайдаланушы</string>
+    <string name="home_menu_empty">Оқылмаған хабарландырулар жоқ</string>
+    <string name="home_menu_view_all">Барлығын көру</string>
+    <string name="home_menu_no_topic">Тақырып жазбасы әлі жоқ — келесі хабарландырудан кейін қайталап көріңіз.</string>
+    <string name="home_menu_manage_categories">Санаттарды басқару</string>
+</resources>

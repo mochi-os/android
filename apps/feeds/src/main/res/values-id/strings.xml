@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Hapus sumber?</string>
     <string name="feeds_suggested_credibility_accept">Terima</string>
     <string name="feeds_rss_url_copied">URL RSS disalin ke clipboard</string>
-    <string name="feeds_logout">Keluar</string>
     <string name="feeds_ai_account_default">Akun default</string>
     <string name="feeds_ai_mode_off">Dinonaktifkan</string>
     <string name="feeds_ai_mode_tag">Beri tag</string>

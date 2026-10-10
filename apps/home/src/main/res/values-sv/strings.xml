@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Inga appar hittades</string>
+    <string name="home_menu_open">Öppna meny</string>
+    <string name="home_menu_user">Användare</string>
+    <string name="home_menu_empty">Inga olästa aviseringar</string>
+    <string name="home_menu_view_all">Visa alla</string>
+    <string name="home_menu_no_topic">Ingen ämnespost ännu — försök igen efter nästa avisering.</string>
+    <string name="home_menu_manage_categories">Hantera kategorier</string>
+</resources>

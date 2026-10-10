@@ -22,11 +22,11 @@ import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.notifications.MochiNotification
+import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.notifications.NotificationsRepository
 import org.mochios.android.notifications.NotificationsUnreadStore
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
-import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
 import org.mochios.settings.api.NotificationPrefsApi
 import javax.inject.Inject
@@ -40,7 +40,7 @@ data class NotificationsUiState(
     val items: List<MochiNotification> = emptyList(),
     val unreadCount: Int = 0,
     val tab: NotificationsTab = NotificationsTab.UNREAD,
-    val categories: List<NotifCategory> = emptyList(),
+    val categories: List<NotificationCategory> = emptyList(),
     val topics: List<NotifTopic> = emptyList(),
     val error: MochiError? = null,
 ) {

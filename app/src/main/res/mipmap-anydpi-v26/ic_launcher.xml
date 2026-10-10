@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The Mochi icon: the mochi face filling the icon on the launcher blue
+         the app icons are drawn in. Written by claude/scripts/android-icons.py. -->
+    <background android:drawable="@color/ic_launcher_mochi" />
+    <foreground android:drawable="@mipmap/ic_launcher_foreground" />
+</adaptive-icon>

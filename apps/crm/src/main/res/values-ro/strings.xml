@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-uri</string>
     <string name="crm_list_search">Caută</string>
     <string name="crm_list_find">Găsește CRM-uri</string>
-    <string name="crm_list_logout">Deconectează-te</string>
     <string name="crm_list_create">Creează CRM</string>
     <string name="crm_create_title">Creează CRM</string>
     <string name="crm_create_name">Nume</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Crescător</string>
     <string name="crm_sort_direction_desc">Descrescător</string>
     <string name="crm_views_direction_desc">Descrescător</string>
-    <string name="crm_list_add_to_home">Adaugă pe ecranul de pornire</string>
     <string name="crm_search_objects_placeholder">Caută obiecte</string>
     <string name="crm_links_search_placeholder">Caută obiecte</string>
 

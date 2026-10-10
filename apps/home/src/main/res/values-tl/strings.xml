@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Walang nakitang app</string>
+    <string name="home_menu_open">Buksan ang menu</string>
+    <string name="home_menu_user">User</string>
+    <string name="home_menu_empty">Walang hindi pa nababasang notification</string>
+    <string name="home_menu_view_all">Tingnan lahat</string>
+    <string name="home_menu_no_topic">Wala pang topic record — subukan muli pagkatapos ng susunod na notification.</string>
+    <string name="home_menu_manage_categories">I-manage ang mga category</string>
+</resources>

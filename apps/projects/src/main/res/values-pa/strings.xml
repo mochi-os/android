@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">ਖੋਜ ਬੰਦ ਕਰੋ</string>
     <string name="projects_list_search">ਖੋਜ</string>
     <string name="projects_list_find">ਪ੍ਰੋਜੈਕਟ ਲੱਭੋ</string>
-    <string name="projects_list_logout">ਲੌਗ ਆਊਟ</string>
     <string name="projects_list_create">ਪ੍ਰੋਜੈਕਟ ਬਣਾਓ</string>
     <string name="projects_create_title">ਪ੍ਰੋਜੈਕਟ ਬਣਾਓ</string>
     <string name="projects_create_name">ਨਾਮ</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">ਵਧਦੇ ਕ੍ਰਮ ਵਿੱਚ</string>
     <string name="projects_sort_direction_desc">ਘਟਦੇ ਕ੍ਰਮ ਵਿੱਚ</string>
     <string name="projects_views_direction_desc">ਘਟਦੇ ਕ੍ਰਮ ਵਿੱਚ</string>
-    <string name="projects_list_add_to_home">ਹੋਮ ਸਕਰੀਨ ਵਿੱਚ ਜੋੜੋ</string>
     <string name="projects_search_objects_placeholder">ਆਬਜੈਕਟ ਖੋਜੋ</string>
     <string name="projects_links_search_placeholder">ਆਬਜੈਕਟ ਖੋਜੋ</string>
 

@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMـەکان</string>
     <string name="crm_list_search">گەڕان</string>
     <string name="crm_list_find">دۆزینەوەی CRMەکان</string>
-    <string name="crm_list_logout">دەرچوون</string>
     <string name="crm_list_create">دروستکردنی CRM</string>
     <string name="crm_create_title">دروستکردنی CRM</string>
     <string name="crm_create_name">ناو</string>
@@ -131,7 +130,6 @@
     <string name="crm_list_search_placeholder">گەڕان لە CRM</string>
     <string name="crm_list_no_matching">هیچ CRM-ێکی هاوتا نییە</string>
     <string name="crm_list_empty">هێشتا هیچ CRM-ێک نییە</string>
-    <string name="crm_list_add_to_home">زیادکردن بۆ شاشەی سەرەکی</string>
     <string name="crm_create_template">قاڵب</string>
     <string name="crm_find_search_placeholder">گەڕان لە CRM یان URL-ێک بلکێنە</string>
     <string name="crm_find_search_hint">گەڕان بەدوای CRM بۆ بەشداری کردن تێیدا</string>

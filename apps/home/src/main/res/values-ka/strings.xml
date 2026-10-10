@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">აპები ვერ მოიძებნა</string>
+    <string name="home_menu_open">მენიუს გახსნა</string>
+    <string name="home_menu_user">მომხმარებელი</string>
+    <string name="home_menu_empty">წაუკითხავი შეტყობინებები არ არის</string>
+    <string name="home_menu_view_all">ყველას ნახვა</string>
+    <string name="home_menu_no_topic">თემის ჩანაწერი ჯერ არ არის — სცადეთ ხელახლა შემდეგი შეტყობინების შემდეგ.</string>
+    <string name="home_menu_manage_categories">კატეგორიების მართვა</string>
+</resources>

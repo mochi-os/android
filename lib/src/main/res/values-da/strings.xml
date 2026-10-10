@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Brugerdefineret</string>
     <string name="color_picker_clear">Ryd</string>
     <string name="common_refresh">Opdater</string>
+    <string name="launcher_add_to_home">Føj til startskærm</string>
 </resources>

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Tanca la cerca</string>
     <string name="projects_list_search">Cerca</string>
     <string name="projects_list_find">Cerca projectes</string>
-    <string name="projects_list_logout">Tanca la sessió</string>
     <string name="projects_list_create">Crea un projecte</string>
     <string name="projects_create_title">Crea un projecte</string>
     <string name="projects_create_name">Nom</string>
@@ -169,7 +168,6 @@
     <string name="projects_list_search_placeholder">Cerca projectes</string>
     <string name="projects_list_no_matching">No hi ha projectes coincidents</string>
     <string name="projects_list_empty">Encara no hi ha cap projecte</string>
-    <string name="projects_list_add_to_home">Afegeix a la pantalla d\'inici</string>
     <string name="projects_find_search_placeholder">Cerca projectes o enganxa un URL</string>
     <string name="projects_find_search_hint">Cerca projectes als quals subscriure\'t</string>
     <string name="projects_search_objects_placeholder">Cerca objectes</string>

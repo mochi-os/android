@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Pa %1$s rẹ́ kúrò nínú àwọn olùbásọ̀rọ̀ rẹ?</string>
     <string name="people_contacts_delete_friend_confirm">Pa %1$s rẹ́ kúrò nínú àwọn olùbásọ̀rọ̀ rẹ? Ìbáṣepọ̀ ọ̀rẹ́ yín yóò tún dópin.</string>
     <string name="people_contact_new_title">Olùbásọ̀rọ̀ tuntun</string>
-    <string name="people_contact_copy_title">Ṣe àdàkọ olùbásọ̀rọ̀</string>
     <string name="people_contact_merge">Dà pọ̀</string>
     <string name="people_contact_merge_title">Da àwọn olùbásọ̀rọ̀ pọ̀</string>
     <string name="people_contact_edit_title">Ṣàtúnṣe olùbásọ̀rọ̀</string>
@@ -219,4 +218,5 @@
     <string name="people_contact_birthday_month">Oṣù</string>
     <string name="people_contact_birthday_year">Ọdún</string>
     <string name="people_contact_birthday_clear">Pa rẹ́</string>
+    <string name="people_contact_create">Dá</string>
 </resources>

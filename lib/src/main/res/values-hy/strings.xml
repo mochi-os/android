@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Հատուկ</string>
     <string name="color_picker_clear">Մաքրել</string>
     <string name="common_refresh">Թարմացնել</string>
+    <string name="launcher_add_to_home">Ավելացնել գլխավոր էկրանին</string>
 </resources>

@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Quelle entfernen?</string>
     <string name="feeds_suggested_credibility_accept">Annehmen</string>
     <string name="feeds_rss_url_copied">RSS-URL in die Zwischenablage kopiert</string>
-    <string name="feeds_logout">Abmelden</string>
     <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Deaktiviert</string>
     <string name="feeds_ai_mode_tag">Taggen</string>

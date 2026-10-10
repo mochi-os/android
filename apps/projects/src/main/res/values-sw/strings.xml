@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Funga utafutaji</string>
     <string name="projects_list_search">Tafuta</string>
     <string name="projects_list_find">Tafuta miradi</string>
-    <string name="projects_list_logout">Toka</string>
     <string name="projects_list_create">Unda mradi</string>
     <string name="projects_create_title">Unda mradi</string>
     <string name="projects_create_name">Jina</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Kupanda</string>
     <string name="projects_sort_direction_desc">Kushuka</string>
     <string name="projects_views_direction_desc">Kushuka</string>
-    <string name="projects_list_add_to_home">Ongeza kwenye skrini ya nyumbani</string>
     <string name="projects_search_objects_placeholder">Tafuta vitu</string>
     <string name="projects_links_search_placeholder">Tafuta vitu</string>
 

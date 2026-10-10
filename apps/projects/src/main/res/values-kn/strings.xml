@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">ಹುಡುಕಾಟ ಮುಚ್ಚಿ</string>
     <string name="projects_list_search">ಹುಡುಕಿ</string>
     <string name="projects_list_find">ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
-    <string name="projects_list_logout">ಲಾಗ್ ಔಟ್</string>
     <string name="projects_list_create">ಪ್ರಾಜೆಕ್ಟ್ ರಚಿಸಿ</string>
     <string name="projects_create_title">ಪ್ರಾಜೆಕ್ಟ್ ರಚಿಸಿ</string>
     <string name="projects_create_name">ಹೆಸರು</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">ಆರೋಹಣ</string>
     <string name="projects_sort_direction_desc">ಅವರೋಹಣ</string>
     <string name="projects_views_direction_desc">ಅವರೋಹಣ</string>
-    <string name="projects_list_add_to_home">ಮುಖಪುಟಕ್ಕೆ ಸೇರಿಸಿ</string>
     <string name="projects_search_objects_placeholder">ವಸ್ತುಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="projects_links_search_placeholder">ವಸ್ತುಗಳನ್ನು ಹುಡುಕಿ</string>
 

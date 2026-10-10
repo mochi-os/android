@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Vahvistus epäonnistui</string>
     <string name="forums_list_title">Foorumit</string>
     <string name="forums_list_find">Etsi foorumeita</string>
-    <string name="forums_list_logout">Kirjaudu ulos</string>
     <string name="forums_list_unsubscribe">Peru tilaus</string>
     <string name="forums_list_unsubscribe_title">Peru tilaus</string>
     <string name="forums_create_title">Luo foorumi</string>

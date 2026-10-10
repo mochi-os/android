@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">Hledat</string>
     <string name="crm_list_find">Najít CRM</string>
-    <string name="crm_list_logout">Odhlásit se</string>
     <string name="crm_list_create">Vytvořit CRM</string>
     <string name="crm_create_title">Vytvořit CRM</string>
     <string name="crm_create_name">Název</string>
@@ -131,7 +130,6 @@
     <string name="crm_list_search_placeholder">Hledat CRM</string>
     <string name="crm_list_no_matching">Žádný odpovídající CRM</string>
     <string name="crm_list_empty">Zatím žádné CRM</string>
-    <string name="crm_list_add_to_home">Přidat na domovskou obrazovku</string>
     <string name="crm_create_template">Šablona</string>
     <string name="crm_find_search_placeholder">Hledat CRM nebo vložit URL</string>
     <string name="crm_find_search_hint">Vyhledejte CRM k odběru</string>

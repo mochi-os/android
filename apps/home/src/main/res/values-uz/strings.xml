@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Ilovalar topilmadi</string>
+    <string name="home_menu_open">Menyuni ochish</string>
+    <string name="home_menu_user">Foydalanuvchi</string>
+    <string name="home_menu_empty">Oʻqilmagan bildirishnomalar yoʻq</string>
+    <string name="home_menu_view_all">Hammasini koʻrish</string>
+    <string name="home_menu_no_topic">Hozircha mavzu yozuvi yoʻq — keyingi bildirishnomadan keyin qayta urinib koʻring.</string>
+    <string name="home_menu_manage_categories">Toifalarni boshqarish</string>
+</resources>

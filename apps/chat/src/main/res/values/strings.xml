@@ -6,7 +6,6 @@
     <!-- Chat list -->
     <string name="chat_list_title">Chats</string>
     <string name="chat_list_search">Search</string>
-    <string name="chat_list_logout">Log out</string>
     <string name="chat_list_new">New chat</string>
     <string name="chat_list_empty">No chats yet</string>
 

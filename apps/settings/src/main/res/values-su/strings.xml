@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Setélan</string>
-    <string name="settings_home_logout">Kaluar</string>
     <string name="settings_home_account">Akun</string>
     <string name="settings_home_preferences">Préferénsi</string>
     <string name="settings_home_display">Layar</string>

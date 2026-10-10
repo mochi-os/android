@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Heb ddod o hyd i apiau</string>
+    <string name="home_menu_open">Agor dewislen</string>
+    <string name="home_menu_user">Defnyddiwr</string>
+    <string name="home_menu_empty">Dim hysbysiadau heb eu darllen</string>
+    <string name="home_menu_view_all">Gweld pob un</string>
+    <string name="home_menu_no_topic">Dim cofnod pwnc eto — rhowch gynnig arall arni ar ôl yr hysbysiad nesaf.</string>
+    <string name="home_menu_manage_categories">Rheoli categorïau</string>
+</resources>

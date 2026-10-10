@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Verificarea a eșuat</string>
     <string name="forums_list_title">Forumuri</string>
     <string name="forums_list_find">Găsește forumuri</string>
-    <string name="forums_list_logout">Deconectează-te</string>
     <string name="forums_list_unsubscribe">Dezabonează-te</string>
     <string name="forums_list_unsubscribe_title">Dezabonează-te</string>
     <string name="forums_create_title">Creează forum</string>

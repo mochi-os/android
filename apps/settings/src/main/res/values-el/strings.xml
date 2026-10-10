@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Ρυθμίσεις</string>
-    <string name="settings_home_logout">Αποσύνδεση</string>
     <string name="settings_home_account">Λογαριασμός</string>
     <string name="settings_home_preferences">Προτιμήσεις</string>
     <string name="settings_home_display">Εμφάνιση</string>

@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">検索</string>
     <string name="crm_list_find">CRM を検索</string>
-    <string name="crm_list_logout">ログアウト</string>
     <string name="crm_list_create">CRM を作成</string>
     <string name="crm_create_title">CRM を作成</string>
     <string name="crm_create_name">名前</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">昇順</string>
     <string name="crm_sort_direction_desc">降順</string>
     <string name="crm_views_direction_desc">降順</string>
-    <string name="crm_list_add_to_home">ホーム画面に追加</string>
     <string name="crm_search_objects_placeholder">オブジェクトを検索</string>
     <string name="crm_links_search_placeholder">オブジェクトを検索</string>
 

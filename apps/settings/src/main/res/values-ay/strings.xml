@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Wakichawinaka</string>
-    <string name="settings_home_logout">Mistuña</string>
     <string name="settings_home_account">Cuenta</string>
     <string name="settings_home_preferences">Ajllinaka</string>
     <string name="settings_home_display">Uñacht\'awi</string>

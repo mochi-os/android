@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Cài đặt</string>
-    <string name="settings_home_logout">Đăng xuất</string>
     <string name="settings_home_account">Tài khoản</string>
     <string name="settings_home_preferences">Tuỳ chọn</string>
     <string name="settings_home_display">Hiển thị</string>

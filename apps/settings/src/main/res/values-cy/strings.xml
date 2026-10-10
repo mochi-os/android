@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Gosodiadau</string>
-    <string name="settings_home_logout">Allgofnodi</string>
     <string name="settings_home_account">Cyfrif</string>
     <string name="settings_home_preferences">Dewisiadau</string>
     <string name="settings_home_display">Arddangos</string>

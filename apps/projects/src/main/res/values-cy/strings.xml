@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Cau chwiliad</string>
     <string name="projects_list_search">Chwilio</string>
     <string name="projects_list_find">Dod o hyd i brosiectau</string>
-    <string name="projects_list_logout">Allgofnodi</string>
     <string name="projects_list_create">Creu prosiect</string>
     <string name="projects_create_title">Creu prosiect</string>
     <string name="projects_create_name">Enw</string>
@@ -169,7 +168,6 @@
     <string name="projects_list_search_placeholder">Chwilio prosiectau</string>
     <string name="projects_list_no_matching">Dim prosiectau cyfatebol</string>
     <string name="projects_list_empty">Dim prosiectau eto</string>
-    <string name="projects_list_add_to_home">Ychwanegu at y sgrin gartref</string>
     <string name="projects_find_search_placeholder">Chwilio prosiectau neu gludo URL</string>
     <string name="projects_find_search_hint">Chwilio am brosiectau i danysgrifio iddynt</string>
     <string name="projects_search_objects_placeholder">Chwilio gwrthrychau</string>

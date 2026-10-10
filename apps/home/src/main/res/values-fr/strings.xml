@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Aucune application trouvée</string>
+    <string name="home_menu_open">Ouvrir le menu</string>
+    <string name="home_menu_user">Utilisateur</string>
+    <string name="home_menu_empty">Aucune notification non lue</string>
+    <string name="home_menu_view_all">Tout voir</string>
+    <string name="home_menu_no_topic">Aucun enregistrement de sujet pour le moment — réessayez après la prochaine notification.</string>
+    <string name="home_menu_manage_categories">Gérer les catégories</string>
+</resources>

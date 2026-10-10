@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Да го отстраниме изворот?</string>
     <string name="feeds_suggested_credibility_accept">Прифати</string>
     <string name="feeds_rss_url_copied">RSS URL е копиран во клипборд</string>
-    <string name="feeds_logout">Одјави се</string>
     <string name="feeds_ai_account_default">Стандардна сметка</string>
     <string name="feeds_ai_mode_off">Оневозможено</string>
     <string name="feeds_ai_mode_tag">Означи</string>

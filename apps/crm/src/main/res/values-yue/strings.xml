@@ -8,7 +8,6 @@
     <string name="crm_field_name">名稱</string>
     <string name="crm_create_action">建立</string>
     <string name="crm_classes_create">建立</string>
-    <string name="crm_list_logout">登出</string>
     <string name="crm_create_template_none">無</string>
     <string name="crm_settings">設定</string>
     <string name="crm_link">連結</string>
@@ -75,7 +74,6 @@
     <string name="crm_links_title">連結</string>
     <string name="crm_move_position">位置</string>
     <string name="crm_move_position_top">頂部</string>
-    <string name="crm_list_add_to_home">加到主畫面</string>
     <string name="crm_search_objects_placeholder">搜尋對象</string>
     <string name="crm_links_search_placeholder">搜尋對象</string>
     <string name="crm_create_object">建立對象</string>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Δεν βρέθηκαν εφαρμογές</string>
+    <string name="home_menu_open">Άνοιγμα μενού</string>
+    <string name="home_menu_user">Χρήστης</string>
+    <string name="home_menu_empty">Καμία μη αναγνωσμένη ειδοποίηση</string>
+    <string name="home_menu_view_all">Προβολή όλων</string>
+    <string name="home_menu_no_topic">Δεν υπάρχει ακόμη εγγραφή θέματος — προσπαθήστε ξανά μετά την επόμενη ειδοποίηση.</string>
+    <string name="home_menu_manage_categories">Διαχείριση κατηγοριών</string>
+</resources>

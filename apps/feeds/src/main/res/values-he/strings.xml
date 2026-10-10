@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">להסיר מקור?</string>
     <string name="feeds_suggested_credibility_accept">אישור</string>
     <string name="feeds_rss_url_copied">כתובת ה-URL של RSS הועתקה ללוח</string>
-    <string name="feeds_logout">התנתק</string>
     <string name="feeds_ai_account_default">חשבון ברירת מחדל</string>
     <string name="feeds_ai_mode_off">מושבת</string>
     <string name="feeds_ai_mode_tag">תייג</string>

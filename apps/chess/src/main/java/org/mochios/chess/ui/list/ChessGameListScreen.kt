@@ -11,11 +11,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -51,7 +49,6 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LastViewedStore
@@ -79,7 +76,6 @@ import org.mochios.android.R as MochiR
 fun ChessGameListScreen(
     navController: NavController,
     gameId: String,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit,
     viewModel: ChessGameListViewModel = hiltViewModel(),
@@ -90,7 +86,6 @@ fun ChessGameListScreen(
     val drawerScope = rememberCoroutineScope()
     val context = LocalContext.current
     val selectedGameId = gameId.takeUnless { id -> id == LastViewedStore.ALL }.orEmpty()
-    var showAbout by remember { mutableStateOf(false) }
     val openSidebarLabel = stringResource(R.string.chess_open_sidebar)
 
     LaunchedEffect(selectedGameId) {
@@ -138,22 +133,6 @@ fun ChessGameListScreen(
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     navController.navigate(ChessApp.NEW_GAME)
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.common_logout),
-                icon = Icons.AutoMirrored.Outlined.Logout,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onLogout()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
                 },
             )
         },
@@ -208,9 +187,6 @@ fun ChessGameListScreen(
                 }
             }
         }
-    }
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

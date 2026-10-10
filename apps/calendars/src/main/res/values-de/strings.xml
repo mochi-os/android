@@ -66,8 +66,8 @@
     <string name="calendars_range">%1$s bis %2$s</string>
     <string name="calendars_truncated">Zu viele Termine, um alle anzuzeigen. Wähle einen kürzeren Zeitraum.</string>
     <string name="calendars_list_empty">Keine Termine</string>
-    <string name="calendars_list_nothing">Nichts geplant. Tippe, um einen Termin zu erstellen.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Kein Titel)</string>
     <string name="calendars_status_cancelled">Abgesagt</string>
     <string name="calendars_status_tentative">Vorläufig</string>

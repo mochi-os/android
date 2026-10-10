@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Issettjar</string>
-    <string name="settings_home_logout">Oħroġ</string>
     <string name="settings_home_account">Kont</string>
     <string name="settings_home_preferences">Preferenzi</string>
     <string name="settings_home_display">Wiri</string>

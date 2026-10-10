@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Выдаліць %1$s з вашых кантактаў?</string>
     <string name="people_contacts_delete_friend_confirm">Выдаліць %1$s з вашых кантактаў? Ваша сяброўства таксама скончыцца.</string>
     <string name="people_contact_new_title">Новы кантакт</string>
-    <string name="people_contact_copy_title">Скапіраваць кантакт</string>
     <string name="people_contact_merge">Аб\'яднаць</string>
     <string name="people_contact_merge_title">Аб\'яднаць кантакты</string>
     <string name="people_contact_edit_title">Рэдагаваць кантакт</string>
@@ -222,4 +221,5 @@
     <string name="people_contact_birthday_month">Месяц</string>
     <string name="people_contact_birthday_year">Год</string>
     <string name="people_contact_birthday_clear">Ачысціць</string>
+    <string name="people_contact_create">Стварыць</string>
 </resources>

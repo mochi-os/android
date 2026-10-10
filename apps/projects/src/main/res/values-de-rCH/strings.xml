@@ -11,7 +11,6 @@
     <string name="projects_request_create_action">Erstellen</string>
     <string name="projects_classes_create">Erstellen</string>
     <string name="projects_comment_save">Speichern</string>
-    <string name="projects_list_logout">Abmelden</string>
     <string name="projects_find_subscribe">Abonnieren</string>
     <string name="projects_create_template_none">Keine</string>
     <string name="projects_property_option_none">Keine</string>
@@ -59,7 +58,6 @@
     <string name="projects_auth_enter_code_sent">Geben Sie den an %1$s gesendeten Code ein</string>
     <string name="projects_auth_create_identity">Identität erstellen</string>
     <string name="projects_list_title">Projekte</string>
-    <string name="projects_list_add_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="projects_find_recommended">Empfohlen</string>
     <string name="projects_sort_field">Sortieren nach</string>
     <string name="projects_sort_rank">Manuell</string>

@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">ਸਰੋਤ ਹਟਾਈਏ?</string>
     <string name="feeds_suggested_credibility_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="feeds_rss_url_copied">RSS URL ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਹੋ ਗਿਆ</string>
-    <string name="feeds_logout">ਲੌਗ ਆਊਟ</string>
     <string name="feeds_ai_account_default">ਡਿਫਾਲਟ ਖਾਤਾ</string>
     <string name="feeds_ai_mode_off">ਬੰਦ ਕੀਤਾ</string>
     <string name="feeds_ai_mode_tag">ਟੈਗ</string>

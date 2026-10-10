@@ -2,7 +2,6 @@
 <resources>
 
     <string name="crm_list_search">Buscá</string>
-    <string name="crm_list_logout">Cerrá sesión</string>
     <string name="crm_list_create">Creá un CRM</string>
     <string name="crm_create_title">Creá un CRM</string>
     <string name="crm_create_object">Creá un objeto</string>
@@ -59,7 +58,6 @@
     <string name="crm_field_type_number">Número</string>
     <string name="crm_settings_tab_general">General</string>
     <string name="crm_field_position_body">Cuerpo</string>
-    <string name="crm_list_add_to_home">Agregar a la pantalla de inicio</string>
     <string name="crm_find_recommended">Recomendados</string>
     <string name="crm_sort_field">Ordenar por</string>
     <string name="crm_sort_rank">Manual</string>

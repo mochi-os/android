@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMలు</string>
     <string name="crm_list_search">శోధన</string>
     <string name="crm_list_find">CRMలను కనుగొనండి</string>
-    <string name="crm_list_logout">లాగ్ అవుట్</string>
     <string name="crm_list_create">CRMను సృష్టించండి</string>
     <string name="crm_create_title">CRMను సృష్టించండి</string>
     <string name="crm_create_name">పేరు</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">ఆరోహణ</string>
     <string name="crm_sort_direction_desc">అవరోహణ</string>
     <string name="crm_views_direction_desc">అవరోహణ</string>
-    <string name="crm_list_add_to_home">హోమ్ స్క్రీన్‌కు జోడించండి</string>
     <string name="crm_search_objects_placeholder">వస్తువులను శోధించండి</string>
     <string name="crm_links_search_placeholder">వస్తువులను శోధించండి</string>
 

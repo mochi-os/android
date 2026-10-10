@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">קיין אַפּס ניט געפֿונען</string>
+    <string name="home_menu_open">עפֿן מעניו</string>
+    <string name="home_menu_user">באַניצער</string>
+    <string name="home_menu_empty">קיין אומגעלייענטע מעלדונגען</string>
+    <string name="home_menu_view_all">זע אַלץ</string>
+    <string name="home_menu_no_topic">נאָך קיין טעמע רעקאָרד — פּרוּוו ווידער נאָך דער ווײַטערדיקער מעלדונג.</string>
+    <string name="home_menu_manage_categories">פֿאַרוואַלטן קאַטעגאָריעס</string>
+</resources>

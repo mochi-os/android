@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Fechar pesquisa</string>
     <string name="projects_list_search">Pesquisar</string>
     <string name="projects_list_find">Encontrar projetos</string>
-    <string name="projects_list_logout">Sair</string>
     <string name="projects_list_create">Criar projeto</string>
     <string name="projects_create_title">Criar projeto</string>
     <string name="projects_create_name">Nome</string>
@@ -167,7 +166,6 @@
     <string name="projects_views_direction_asc">Crescente</string>
     <string name="projects_sort_direction_desc">Decrescente</string>
     <string name="projects_views_direction_desc">Decrescente</string>
-    <string name="projects_list_add_to_home">Adicionar à tela inicial</string>
     <string name="projects_search_objects_placeholder">Pesquisar objetos</string>
     <string name="projects_links_search_placeholder">Pesquisar objetos</string>
 

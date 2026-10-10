@@ -2,7 +2,6 @@
 <resources>
 
     <string name="chat_list_search">Pesquisar</string>
-    <string name="chat_list_logout">Sair</string>
     <string name="chat_list_new">Nova conversa</string>
     <string name="chat_new_title">Nova conversa</string>
     <string name="chat_new_name">Nome do grupo</string>

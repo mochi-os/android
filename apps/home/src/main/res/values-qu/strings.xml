@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Mana appkuna tarisqachu</string>
+    <string name="home_menu_open">Menúta kichay</string>
+    <string name="home_menu_user">Apaykachaq</string>
+    <string name="home_menu_empty">Mana ñawinchanapaq willaykuna kanchu</string>
+    <string name="home_menu_view_all">Llapanta qhaway</string>
+    <string name="home_menu_no_topic">Manaraq tema registro kanchu — qatiq willaymanta kutimanta ruway.</string>
+    <string name="home_menu_manage_categories">Categoríakunata kamachiy</string>
+</resources>

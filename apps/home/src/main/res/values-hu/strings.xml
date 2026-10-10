@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Nem található alkalmazás</string>
+    <string name="home_menu_open">Menü megnyitása</string>
+    <string name="home_menu_user">Felhasználó</string>
+    <string name="home_menu_empty">Nincsenek olvasatlan értesítések</string>
+    <string name="home_menu_view_all">Összes megtekintése</string>
+    <string name="home_menu_no_topic">Még nincs téma rekord — próbálja újra a következő értesítés után.</string>
+    <string name="home_menu_manage_categories">Kategóriák kezelése</string>
+</resources>

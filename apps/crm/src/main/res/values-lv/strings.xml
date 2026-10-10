@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM saraksts</string>
     <string name="crm_list_search">Meklēt</string>
     <string name="crm_list_find">Atrast CRM</string>
-    <string name="crm_list_logout">Izrakstīties</string>
     <string name="crm_list_create">Izveidot CRM</string>
     <string name="crm_create_title">Izveidot CRM</string>
     <string name="crm_create_name">Nosaukums</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Augošā secībā</string>
     <string name="crm_sort_direction_desc">Dilstošā secībā</string>
     <string name="crm_views_direction_desc">Dilstošā secībā</string>
-    <string name="crm_list_add_to_home">Pievienot sākuma ekrānam</string>
     <string name="crm_search_objects_placeholder">Meklēt objektus</string>
     <string name="crm_links_search_placeholder">Meklēt objektus</string>
 

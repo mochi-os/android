@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Seaded</string>
-    <string name="settings_home_logout">Logi välja</string>
     <string name="settings_home_account">Konto</string>
     <string name="settings_home_preferences">Eelistused</string>
     <string name="settings_home_display">Kuva</string>

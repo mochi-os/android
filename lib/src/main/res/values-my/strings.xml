@@ -325,4 +325,5 @@
     <string name="color_picker_custom">စိတ်ကြိုက်</string>
     <string name="color_picker_clear">ရှင်းမည်</string>
     <string name="common_refresh">ပြန်စစ်ဆေး</string>
+    <string name="launcher_add_to_home">ပင်မစခရင် သို့ ထည့်</string>
 </resources>

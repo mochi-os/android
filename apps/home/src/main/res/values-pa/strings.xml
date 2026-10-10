@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">ਕੋਈ ਐਪ ਨਹੀਂ ਮਿਲੀ</string>
+    <string name="home_menu_open">ਮੇਨੂ ਖੋਲ੍ਹੋ</string>
+    <string name="home_menu_user">ਉਪਭੋਗਤਾ</string>
+    <string name="home_menu_empty">ਕੋਈ ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨਹੀਂ</string>
+    <string name="home_menu_view_all">ਸਭ ਦੇਖੋ</string>
+    <string name="home_menu_no_topic">ਅਜੇ ਕੋਈ ਟੌਪਿਕ ਰਿਕਾਰਡ ਨਹੀਂ — ਅਗਲੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਤੋਂ ਬਾਅਦ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="home_menu_manage_categories">ਸ਼੍ਰੇਣੀਆਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</string>
+</resources>

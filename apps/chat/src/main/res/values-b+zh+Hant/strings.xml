@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">聊天</string>
     <string name="chat_list_search">搜尋</string>
-    <string name="chat_list_logout">登出</string>
     <string name="chat_list_new">新聊天</string>
     <string name="chat_new_title">新聊天</string>
     <string name="chat_new_name">群組名稱</string>

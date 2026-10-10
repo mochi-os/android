@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Instellings</string>
-    <string name="settings_home_logout">Meld af</string>
     <string name="settings_home_account">Rekening</string>
     <string name="settings_home_preferences">Voorkeure</string>
     <string name="settings_home_display">Vertoning</string>

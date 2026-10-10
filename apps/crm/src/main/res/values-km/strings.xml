@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">ស្វែងរក</string>
     <string name="crm_list_find">ស្វែងរក CRMs</string>
-    <string name="crm_list_logout">ចាកចេញ</string>
     <string name="crm_list_create">បង្កើត CRM</string>
     <string name="crm_create_title">បង្កើត CRM</string>
     <string name="crm_create_name">ឈ្មោះ</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">តាមលំដាប់កើន</string>
     <string name="crm_sort_direction_desc">តាមលំដាប់ថយ</string>
     <string name="crm_views_direction_desc">តាមលំដាប់ថយ</string>
-    <string name="crm_list_add_to_home">បន្ថែមទៅអេក្រង់ដើម</string>
     <string name="crm_search_objects_placeholder">ស្វែងរកវត្ថុ</string>
     <string name="crm_links_search_placeholder">ស្វែងរកវត្ថុ</string>
 

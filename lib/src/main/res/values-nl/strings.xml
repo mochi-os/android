@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Aangepast</string>
     <string name="color_picker_clear">Wissen</string>
     <string name="common_refresh">Vernieuwen</string>
+    <string name="launcher_add_to_home">Toevoegen aan startscherm</string>
 </resources>

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Tutup pencarian</string>
     <string name="projects_list_search">Cari</string>
     <string name="projects_list_find">Cari proyek</string>
-    <string name="projects_list_logout">Keluar</string>
     <string name="projects_list_create">Buat proyek</string>
     <string name="projects_create_title">Buat proyek</string>
     <string name="projects_create_name">Nama</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Naik</string>
     <string name="projects_sort_direction_desc">Turun</string>
     <string name="projects_views_direction_desc">Turun</string>
-    <string name="projects_list_add_to_home">Tambahkan ke layar utama</string>
     <string name="projects_search_objects_placeholder">Cari objek</string>
     <string name="projects_links_search_placeholder">Cari objek</string>
 

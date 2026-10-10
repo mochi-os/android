@@ -65,14 +65,21 @@
         android:theme="@style/Theme.Mochi">
 
         <!--
-          One activity class per launcher icon (Launchers.kt), each with its own
-          task affinity, so every Mochi app runs in a task of its own: a tap on
-          its icon resumes that task behind that task's snapshot, or starts a
-          fresh one behind the splash, and never shows another app's last frame.
-          An <activity-alias> cannot do this - taskAffinity is not an alias
-          attribute, an alias inherits its target's - so with aliases every icon
-          shared one task, whose snapshot was whichever app was used last.
-          singleTop keeps state across taps within a task.
+          One activity class per Mochi app (Launchers.kt), each with its own
+          task affinity, so every app runs in a task of its own: opening it
+          from the home grid, a notification or a pinned shortcut resumes that
+          task behind that task's snapshot, or starts a fresh one behind the
+          splash, and never shows another app's last frame. An <activity-alias>
+          cannot do this - taskAffinity is not an alias attribute, an alias
+          inherits its target's - so with aliases every app shared one task,
+          whose snapshot was whichever app was used last. singleTop keeps state
+          across launches within a task.
+
+          Only the Mochi icon, MochiHomeLauncher, is a launcher entry. The
+          per-app classes carry no MAIN/LAUNCHER filter, so the app drawer
+          shows one icon; a user who wants an app on the home screen pins it
+          from the grid. They keep their label and icon, which name each
+          app's task in Recents.
         -->
         <!--
           MainActivity itself has no launcher entry and never draws. It receives
@@ -115,15 +122,31 @@
         <!--
           The org.mochios.targetApp meta-data names the Mochi app each class
           hosts; MainActivity reads it from its own component.
-
-          Each app's icon follows the user's theme: the class itself has no
-          launcher entry, and one alias per server theme carries it, blue on
-          out of the box. LauncherTint enables the alias nearest the theme and
-          disables the rest. An alias launches its class as it is, so each
-          alias repeats the targetApp meta-data for the component it was
-          launched as. Staff's aliases all start off, as its class does, until
-          staff access is confirmed.
         -->
+        <!--
+          The Mochi icon: the home grid of every app. First, so it is the
+          package's default launcher entry, the one the installer's Open
+          button and getLaunchIntentForPackage resolve to; MainActivity's
+          DEFAULT_APP names it.
+        -->
+        <activity
+            android:name=".MochiHomeLauncher"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:launchMode="singleTop"
+            android:taskAffinity="org.mochios.mochi.home"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Mochi">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="org.mochios.targetApp" android:value="home" />
+        </activity>
+
         <activity
             android:name=".MochiFeedsLauncher"
             android:enabled="true"
@@ -137,81 +160,6 @@
             android:theme="@style/Theme.Mochi">
             <meta-data android:name="org.mochios.targetApp" android:value="feeds" />
         </activity>
-
-        <activity-alias
-            android:name=".MochiFeedsLauncherBlue"
-            android:targetActivity=".MochiFeedsLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_feeds"
-            android:icon="@mipmap/ic_feeds"
-            android:roundIcon="@mipmap/ic_feeds_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="feeds" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiFeedsLauncherRose"
-            android:targetActivity=".MochiFeedsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_feeds"
-            android:icon="@mipmap/ic_feeds_rose"
-            android:roundIcon="@mipmap/ic_feeds_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="feeds" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiFeedsLauncherSteel"
-            android:targetActivity=".MochiFeedsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_feeds"
-            android:icon="@mipmap/ic_feeds_steel"
-            android:roundIcon="@mipmap/ic_feeds_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="feeds" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiFeedsLauncherTeal"
-            android:targetActivity=".MochiFeedsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_feeds"
-            android:icon="@mipmap/ic_feeds_teal"
-            android:roundIcon="@mipmap/ic_feeds_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="feeds" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiFeedsLauncherTerracotta"
-            android:targetActivity=".MochiFeedsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_feeds"
-            android:icon="@mipmap/ic_feeds_terracotta"
-            android:roundIcon="@mipmap/ic_feeds_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="feeds" />
-        </activity-alias>
 
         <activity
             android:name=".MochiChatLauncher"
@@ -227,81 +175,6 @@
             <meta-data android:name="org.mochios.targetApp" android:value="chat" />
         </activity>
 
-        <activity-alias
-            android:name=".MochiChatLauncherBlue"
-            android:targetActivity=".MochiChatLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_chat"
-            android:icon="@mipmap/ic_chat"
-            android:roundIcon="@mipmap/ic_chat_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chat" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiChatLauncherRose"
-            android:targetActivity=".MochiChatLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_chat"
-            android:icon="@mipmap/ic_chat_rose"
-            android:roundIcon="@mipmap/ic_chat_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chat" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiChatLauncherSteel"
-            android:targetActivity=".MochiChatLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_chat"
-            android:icon="@mipmap/ic_chat_steel"
-            android:roundIcon="@mipmap/ic_chat_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chat" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiChatLauncherTeal"
-            android:targetActivity=".MochiChatLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_chat"
-            android:icon="@mipmap/ic_chat_teal"
-            android:roundIcon="@mipmap/ic_chat_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chat" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiChatLauncherTerracotta"
-            android:targetActivity=".MochiChatLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_chat"
-            android:icon="@mipmap/ic_chat_terracotta"
-            android:roundIcon="@mipmap/ic_chat_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chat" />
-        </activity-alias>
-
         <activity
             android:name=".MochiForumsLauncher"
             android:enabled="true"
@@ -315,81 +188,6 @@
             android:theme="@style/Theme.Mochi">
             <meta-data android:name="org.mochios.targetApp" android:value="forums" />
         </activity>
-
-        <activity-alias
-            android:name=".MochiForumsLauncherBlue"
-            android:targetActivity=".MochiForumsLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_forums"
-            android:icon="@mipmap/ic_forums"
-            android:roundIcon="@mipmap/ic_forums_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="forums" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiForumsLauncherRose"
-            android:targetActivity=".MochiForumsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_forums"
-            android:icon="@mipmap/ic_forums_rose"
-            android:roundIcon="@mipmap/ic_forums_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="forums" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiForumsLauncherSteel"
-            android:targetActivity=".MochiForumsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_forums"
-            android:icon="@mipmap/ic_forums_steel"
-            android:roundIcon="@mipmap/ic_forums_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="forums" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiForumsLauncherTeal"
-            android:targetActivity=".MochiForumsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_forums"
-            android:icon="@mipmap/ic_forums_teal"
-            android:roundIcon="@mipmap/ic_forums_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="forums" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiForumsLauncherTerracotta"
-            android:targetActivity=".MochiForumsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_forums"
-            android:icon="@mipmap/ic_forums_terracotta"
-            android:roundIcon="@mipmap/ic_forums_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="forums" />
-        </activity-alias>
 
         <activity
             android:name=".MochiProjectsLauncher"
@@ -405,81 +203,6 @@
             <meta-data android:name="org.mochios.targetApp" android:value="projects" />
         </activity>
 
-        <activity-alias
-            android:name=".MochiProjectsLauncherBlue"
-            android:targetActivity=".MochiProjectsLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_projects"
-            android:icon="@mipmap/ic_projects"
-            android:roundIcon="@mipmap/ic_projects_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="projects" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiProjectsLauncherRose"
-            android:targetActivity=".MochiProjectsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_projects"
-            android:icon="@mipmap/ic_projects_rose"
-            android:roundIcon="@mipmap/ic_projects_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="projects" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiProjectsLauncherSteel"
-            android:targetActivity=".MochiProjectsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_projects"
-            android:icon="@mipmap/ic_projects_steel"
-            android:roundIcon="@mipmap/ic_projects_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="projects" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiProjectsLauncherTeal"
-            android:targetActivity=".MochiProjectsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_projects"
-            android:icon="@mipmap/ic_projects_teal"
-            android:roundIcon="@mipmap/ic_projects_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="projects" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiProjectsLauncherTerracotta"
-            android:targetActivity=".MochiProjectsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_projects"
-            android:icon="@mipmap/ic_projects_terracotta"
-            android:roundIcon="@mipmap/ic_projects_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="projects" />
-        </activity-alias>
-
         <activity
             android:name=".MochiCrmLauncher"
             android:enabled="true"
@@ -493,81 +216,6 @@
             android:theme="@style/Theme.Mochi">
             <meta-data android:name="org.mochios.targetApp" android:value="crm" />
         </activity>
-
-        <activity-alias
-            android:name=".MochiCrmLauncherBlue"
-            android:targetActivity=".MochiCrmLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_crm"
-            android:icon="@mipmap/ic_crm"
-            android:roundIcon="@mipmap/ic_crm_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="crm" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiCrmLauncherRose"
-            android:targetActivity=".MochiCrmLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_crm"
-            android:icon="@mipmap/ic_crm_rose"
-            android:roundIcon="@mipmap/ic_crm_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="crm" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiCrmLauncherSteel"
-            android:targetActivity=".MochiCrmLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_crm"
-            android:icon="@mipmap/ic_crm_steel"
-            android:roundIcon="@mipmap/ic_crm_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="crm" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiCrmLauncherTeal"
-            android:targetActivity=".MochiCrmLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_crm"
-            android:icon="@mipmap/ic_crm_teal"
-            android:roundIcon="@mipmap/ic_crm_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="crm" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiCrmLauncherTerracotta"
-            android:targetActivity=".MochiCrmLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_crm"
-            android:icon="@mipmap/ic_crm_terracotta"
-            android:roundIcon="@mipmap/ic_crm_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="crm" />
-        </activity-alias>
 
         <activity
             android:name=".MochiPeopleLauncher"
@@ -583,81 +231,6 @@
             <meta-data android:name="org.mochios.targetApp" android:value="people" />
         </activity>
 
-        <activity-alias
-            android:name=".MochiPeopleLauncherBlue"
-            android:targetActivity=".MochiPeopleLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_people"
-            android:icon="@mipmap/ic_people"
-            android:roundIcon="@mipmap/ic_people_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="people" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiPeopleLauncherRose"
-            android:targetActivity=".MochiPeopleLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_people"
-            android:icon="@mipmap/ic_people_rose"
-            android:roundIcon="@mipmap/ic_people_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="people" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiPeopleLauncherSteel"
-            android:targetActivity=".MochiPeopleLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_people"
-            android:icon="@mipmap/ic_people_steel"
-            android:roundIcon="@mipmap/ic_people_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="people" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiPeopleLauncherTeal"
-            android:targetActivity=".MochiPeopleLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_people"
-            android:icon="@mipmap/ic_people_teal"
-            android:roundIcon="@mipmap/ic_people_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="people" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiPeopleLauncherTerracotta"
-            android:targetActivity=".MochiPeopleLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_people"
-            android:icon="@mipmap/ic_people_terracotta"
-            android:roundIcon="@mipmap/ic_people_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="people" />
-        </activity-alias>
-
         <activity
             android:name=".MochiSettingsLauncher"
             android:enabled="true"
@@ -671,81 +244,6 @@
             android:theme="@style/Theme.Mochi">
             <meta-data android:name="org.mochios.targetApp" android:value="settings" />
         </activity>
-
-        <activity-alias
-            android:name=".MochiSettingsLauncherBlue"
-            android:targetActivity=".MochiSettingsLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_settings"
-            android:icon="@mipmap/ic_settings"
-            android:roundIcon="@mipmap/ic_settings_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="settings" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiSettingsLauncherRose"
-            android:targetActivity=".MochiSettingsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_settings"
-            android:icon="@mipmap/ic_settings_rose"
-            android:roundIcon="@mipmap/ic_settings_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="settings" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiSettingsLauncherSteel"
-            android:targetActivity=".MochiSettingsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_settings"
-            android:icon="@mipmap/ic_settings_steel"
-            android:roundIcon="@mipmap/ic_settings_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="settings" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiSettingsLauncherTeal"
-            android:targetActivity=".MochiSettingsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_settings"
-            android:icon="@mipmap/ic_settings_teal"
-            android:roundIcon="@mipmap/ic_settings_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="settings" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiSettingsLauncherTerracotta"
-            android:targetActivity=".MochiSettingsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_settings"
-            android:icon="@mipmap/ic_settings_terracotta"
-            android:roundIcon="@mipmap/ic_settings_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="settings" />
-        </activity-alias>
 
         <activity
             android:name=".MochiWikisLauncher"
@@ -761,81 +259,6 @@
             <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
         </activity>
 
-        <activity-alias
-            android:name=".MochiWikisLauncherBlue"
-            android:targetActivity=".MochiWikisLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_wikis"
-            android:icon="@mipmap/ic_wikis"
-            android:roundIcon="@mipmap/ic_wikis_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiWikisLauncherRose"
-            android:targetActivity=".MochiWikisLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_wikis"
-            android:icon="@mipmap/ic_wikis_rose"
-            android:roundIcon="@mipmap/ic_wikis_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiWikisLauncherSteel"
-            android:targetActivity=".MochiWikisLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_wikis"
-            android:icon="@mipmap/ic_wikis_steel"
-            android:roundIcon="@mipmap/ic_wikis_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiWikisLauncherTeal"
-            android:targetActivity=".MochiWikisLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_wikis"
-            android:icon="@mipmap/ic_wikis_teal"
-            android:roundIcon="@mipmap/ic_wikis_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiWikisLauncherTerracotta"
-            android:targetActivity=".MochiWikisLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_wikis"
-            android:icon="@mipmap/ic_wikis_terracotta"
-            android:roundIcon="@mipmap/ic_wikis_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="wikis" />
-        </activity-alias>
-
         <activity
             android:name=".MochiChessLauncher"
             android:enabled="true"
@@ -849,81 +272,6 @@
             android:theme="@style/Theme.Mochi">
             <meta-data android:name="org.mochios.targetApp" android:value="chess" />
         </activity>
-
-        <activity-alias
-            android:name=".MochiChessLauncherBlue"
-            android:targetActivity=".MochiChessLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_chess"
-            android:icon="@mipmap/ic_chess"
-            android:roundIcon="@mipmap/ic_chess_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chess" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiChessLauncherRose"
-            android:targetActivity=".MochiChessLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_chess"
-            android:icon="@mipmap/ic_chess_rose"
-            android:roundIcon="@mipmap/ic_chess_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chess" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiChessLauncherSteel"
-            android:targetActivity=".MochiChessLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_chess"
-            android:icon="@mipmap/ic_chess_steel"
-            android:roundIcon="@mipmap/ic_chess_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chess" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiChessLauncherTeal"
-            android:targetActivity=".MochiChessLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_chess"
-            android:icon="@mipmap/ic_chess_teal"
-            android:roundIcon="@mipmap/ic_chess_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chess" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiChessLauncherTerracotta"
-            android:targetActivity=".MochiChessLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_chess"
-            android:icon="@mipmap/ic_chess_terracotta"
-            android:roundIcon="@mipmap/ic_chess_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="chess" />
-        </activity-alias>
 
         <activity
             android:name=".MochiGoLauncher"
@@ -939,81 +287,6 @@
             <meta-data android:name="org.mochios.targetApp" android:value="go" />
         </activity>
 
-        <activity-alias
-            android:name=".MochiGoLauncherBlue"
-            android:targetActivity=".MochiGoLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_go"
-            android:icon="@mipmap/ic_go"
-            android:roundIcon="@mipmap/ic_go_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="go" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiGoLauncherRose"
-            android:targetActivity=".MochiGoLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_go"
-            android:icon="@mipmap/ic_go_rose"
-            android:roundIcon="@mipmap/ic_go_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="go" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiGoLauncherSteel"
-            android:targetActivity=".MochiGoLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_go"
-            android:icon="@mipmap/ic_go_steel"
-            android:roundIcon="@mipmap/ic_go_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="go" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiGoLauncherTeal"
-            android:targetActivity=".MochiGoLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_go"
-            android:icon="@mipmap/ic_go_teal"
-            android:roundIcon="@mipmap/ic_go_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="go" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiGoLauncherTerracotta"
-            android:targetActivity=".MochiGoLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_go"
-            android:icon="@mipmap/ic_go_terracotta"
-            android:roundIcon="@mipmap/ic_go_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="go" />
-        </activity-alias>
-
         <activity
             android:name=".MochiWordsLauncher"
             android:enabled="true"
@@ -1027,81 +300,6 @@
             android:theme="@style/Theme.Mochi">
             <meta-data android:name="org.mochios.targetApp" android:value="words" />
         </activity>
-
-        <activity-alias
-            android:name=".MochiWordsLauncherBlue"
-            android:targetActivity=".MochiWordsLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_words"
-            android:icon="@mipmap/ic_words"
-            android:roundIcon="@mipmap/ic_words_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="words" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiWordsLauncherRose"
-            android:targetActivity=".MochiWordsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_words"
-            android:icon="@mipmap/ic_words_rose"
-            android:roundIcon="@mipmap/ic_words_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="words" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiWordsLauncherSteel"
-            android:targetActivity=".MochiWordsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_words"
-            android:icon="@mipmap/ic_words_steel"
-            android:roundIcon="@mipmap/ic_words_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="words" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiWordsLauncherTeal"
-            android:targetActivity=".MochiWordsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_words"
-            android:icon="@mipmap/ic_words_teal"
-            android:roundIcon="@mipmap/ic_words_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="words" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiWordsLauncherTerracotta"
-            android:targetActivity=".MochiWordsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_words"
-            android:icon="@mipmap/ic_words_terracotta"
-            android:roundIcon="@mipmap/ic_words_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="words" />
-        </activity-alias>
 
         <activity
             android:name=".MochiMarketLauncher"
@@ -1117,86 +315,12 @@
             <meta-data android:name="org.mochios.targetApp" android:value="market" />
         </activity>
 
-        <activity-alias
-            android:name=".MochiMarketLauncherBlue"
-            android:targetActivity=".MochiMarketLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_market"
-            android:icon="@mipmap/ic_market"
-            android:roundIcon="@mipmap/ic_market_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="market" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiMarketLauncherRose"
-            android:targetActivity=".MochiMarketLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_market"
-            android:icon="@mipmap/ic_market_rose"
-            android:roundIcon="@mipmap/ic_market_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="market" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiMarketLauncherSteel"
-            android:targetActivity=".MochiMarketLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_market"
-            android:icon="@mipmap/ic_market_steel"
-            android:roundIcon="@mipmap/ic_market_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="market" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiMarketLauncherTeal"
-            android:targetActivity=".MochiMarketLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_market"
-            android:icon="@mipmap/ic_market_teal"
-            android:roundIcon="@mipmap/ic_market_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="market" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiMarketLauncherTerracotta"
-            android:targetActivity=".MochiMarketLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_market"
-            android:icon="@mipmap/ic_market_terracotta"
-            android:roundIcon="@mipmap/ic_market_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="market" />
-        </activity-alias>
-
         <!--
-          Staff (operator console) launcher. Hidden by default - only flipped
-          to enabled at runtime by StaffAccessController once the bound
-          identity passes a `staffApi.me()` check. Disappears again on
-          sign-out, role revocation, or any 401/403 from a staff endpoint.
+          Staff (operator console). Off by default, so it cannot be started -
+          switched on at runtime by StaffAccessController once the bound
+          identity passes a `staffApi.me()` check, or by the home grid when the
+          server lists Staff for the user. Switched off again on sign-out, role
+          revocation, or any 401/403 from a staff endpoint.
         -->
         <activity
             android:name=".MochiStaffLauncher"
@@ -1212,81 +336,6 @@
             <meta-data android:name="org.mochios.targetApp" android:value="staff" />
         </activity>
 
-        <activity-alias
-            android:name=".MochiStaffLauncherBlue"
-            android:targetActivity=".MochiStaffLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_staff"
-            android:icon="@mipmap/ic_staff"
-            android:roundIcon="@mipmap/ic_staff_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="staff" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiStaffLauncherRose"
-            android:targetActivity=".MochiStaffLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_staff"
-            android:icon="@mipmap/ic_staff_rose"
-            android:roundIcon="@mipmap/ic_staff_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="staff" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiStaffLauncherSteel"
-            android:targetActivity=".MochiStaffLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_staff"
-            android:icon="@mipmap/ic_staff_steel"
-            android:roundIcon="@mipmap/ic_staff_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="staff" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiStaffLauncherTeal"
-            android:targetActivity=".MochiStaffLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_staff"
-            android:icon="@mipmap/ic_staff_teal"
-            android:roundIcon="@mipmap/ic_staff_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="staff" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiStaffLauncherTerracotta"
-            android:targetActivity=".MochiStaffLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_staff"
-            android:icon="@mipmap/ic_staff_terracotta"
-            android:roundIcon="@mipmap/ic_staff_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="staff" />
-        </activity-alias>
-
         <activity
             android:name=".MochiCalendarsLauncher"
             android:enabled="true"
@@ -1300,81 +349,6 @@
             android:theme="@style/Theme.Mochi">
             <meta-data android:name="org.mochios.targetApp" android:value="calendars" />
         </activity>
-
-        <activity-alias
-            android:name=".MochiCalendarsLauncherBlue"
-            android:targetActivity=".MochiCalendarsLauncher"
-            android:enabled="true"
-            android:exported="true"
-            android:label="@string/launcher_calendars"
-            android:icon="@mipmap/ic_calendars"
-            android:roundIcon="@mipmap/ic_calendars_round">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="calendars" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiCalendarsLauncherRose"
-            android:targetActivity=".MochiCalendarsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_calendars"
-            android:icon="@mipmap/ic_calendars_rose"
-            android:roundIcon="@mipmap/ic_calendars_rose">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="calendars" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiCalendarsLauncherSteel"
-            android:targetActivity=".MochiCalendarsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_calendars"
-            android:icon="@mipmap/ic_calendars_steel"
-            android:roundIcon="@mipmap/ic_calendars_steel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="calendars" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiCalendarsLauncherTeal"
-            android:targetActivity=".MochiCalendarsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_calendars"
-            android:icon="@mipmap/ic_calendars_teal"
-            android:roundIcon="@mipmap/ic_calendars_teal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="calendars" />
-        </activity-alias>
-
-        <activity-alias
-            android:name=".MochiCalendarsLauncherTerracotta"
-            android:targetActivity=".MochiCalendarsLauncher"
-            android:enabled="false"
-            android:exported="true"
-            android:label="@string/launcher_calendars"
-            android:icon="@mipmap/ic_calendars_terracotta"
-            android:roundIcon="@mipmap/ic_calendars_terracotta">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <meta-data android:name="org.mochios.targetApp" android:value="calendars" />
-        </activity-alias>
 
         <!--
           UnifiedPush MessagingReceiver for the Android client. Catches

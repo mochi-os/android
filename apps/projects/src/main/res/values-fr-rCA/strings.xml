@@ -10,7 +10,6 @@
     <string name="projects_classes_create">Créer</string>
     <string name="projects_request_close">Fermer</string>
     <string name="projects_comment_save">Enregistrer</string>
-    <string name="projects_list_logout">Déconnexion</string>
     <string name="projects_find_subscribe">S\'abonner</string>
     <string name="projects_create_template_none">Aucun</string>
     <string name="projects_property_option_none">Aucun</string>
@@ -59,7 +58,6 @@
     <string name="projects_auth_create_identity">Créez votre identité</string>
     <string name="projects_list_title">Projets</string>
     <string name="projects_list_close_search">Fermer la recherche</string>
-    <string name="projects_list_add_to_home">Ajouter à l\'écran d\'accueil</string>
     <string name="projects_find_recommended">Recommandés</string>
     <string name="projects_sort_field">Trier par</string>
     <string name="projects_sort_rank">Manuelle</string>

@@ -67,8 +67,8 @@
     <string name="calendars_range">%1$s سے %2$s تک</string>
     <string name="calendars_truncated">سب دکھانے کے لیے ایونٹس بہت زیادہ ہیں۔ چھوٹی حد منتخب کریں۔</string>
     <string name="calendars_list_empty">کوئی ایونٹ نہیں</string>
-    <string name="calendars_list_nothing">کچھ بھی طے شدہ نہیں۔ ایونٹ بنانے کے لیے ٹیپ کریں۔</string>
     <string name="calendars_list_heading">%1$s، %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(کوئی عنوان نہیں)</string>
     <string name="calendars_status_cancelled">منسوخ</string>
     <string name="calendars_status_tentative">عارضی</string>

@@ -49,7 +49,6 @@ import androidx.compose.material.icons.outlined.CheckBox
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Tune
@@ -99,7 +98,6 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
@@ -153,7 +151,6 @@ fun ChatScreen(
     onSettings: (String) -> Unit,
     onChatDeleted: () -> Unit = {},
     onOpenNotifications: () -> Unit = {},
-    onLogout: () -> Unit,
     listViewModel: ChatListViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
@@ -162,7 +159,6 @@ fun ChatScreen(
     )
     val drawerScope = rememberCoroutineScope()
     val listUiState by listViewModel.uiState.collectAsState()
-    var showAbout by remember { mutableStateOf(false) }
     var showPolicy by remember { mutableStateOf(false) }
 
     // Persist last-viewed so the next cold start lands here. Empty id is
@@ -215,22 +211,6 @@ fun ChatScreen(
                     showPolicy = true
                 },
             )
-            DrawerActionRow(
-                title = stringResource(R.string.chat_list_logout),
-                icon = Icons.AutoMirrored.Outlined.Logout,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onLogout()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
         },
     ) {
         if (chatId.isEmpty()) {
@@ -250,9 +230,6 @@ fun ChatScreen(
         }
     }
 
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
     if (showPolicy) {
         ChatPolicyDialog(onDismiss = { showPolicy = false })
     }

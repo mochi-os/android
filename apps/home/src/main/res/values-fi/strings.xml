@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Sovelluksia ei löytynyt</string>
+    <string name="home_menu_open">Avaa valikko</string>
+    <string name="home_menu_user">Käyttäjä</string>
+    <string name="home_menu_empty">Ei lukemattomia ilmoituksia</string>
+    <string name="home_menu_view_all">Näytä kaikki</string>
+    <string name="home_menu_no_topic">Ei vielä aihetietoa — yritä uudelleen seuraavan ilmoituksen jälkeen.</string>
+    <string name="home_menu_manage_categories">Hallitse kategorioita</string>
+</resources>

@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s ကို သင့်အဆက်အသွယ်များမှ ဖျက်မလား။</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ကို သင့်အဆက်အသွယ်များမှ ဖျက်မလား။ သင်တို့၏ မိတ်ဆွေဖြစ်မှုလည်း ပြီးဆုံးပါမည်။</string>
     <string name="people_contact_new_title">အဆက်အသွယ်အသစ်</string>
-    <string name="people_contact_copy_title">အဆက်အသွယ်ကို ကူးမည်</string>
     <string name="people_contact_merge">ပေါင်းစည်းရန်</string>
     <string name="people_contact_merge_title">အဆက်အသွယ်များ ပေါင်းစည်းရန်</string>
     <string name="people_contact_edit_title">အဆက်အသွယ် တည်းဖြတ်မည်</string>
@@ -219,4 +218,5 @@
     <string name="people_contact_birthday_month">လ</string>
     <string name="people_contact_birthday_year">နှစ်</string>
     <string name="people_contact_birthday_clear">ရှင်းမည်</string>
+    <string name="people_contact_create">ဖန်တီးမည်</string>
 </resources>

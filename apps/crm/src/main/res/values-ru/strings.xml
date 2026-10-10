@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">Поиск</string>
     <string name="crm_list_find">Найти CRM</string>
-    <string name="crm_list_logout">Выйти</string>
     <string name="crm_list_create">Создать CRM</string>
     <string name="crm_create_title">Создать CRM</string>
     <string name="crm_create_name">Название</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">По возрастанию</string>
     <string name="crm_sort_direction_desc">По убыванию</string>
     <string name="crm_views_direction_desc">По убыванию</string>
-    <string name="crm_list_add_to_home">Добавить на главный экран</string>
     <string name="crm_search_objects_placeholder">Поиск объектов</string>
     <string name="crm_links_search_placeholder">Поиск объектов</string>
 

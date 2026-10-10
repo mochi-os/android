@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Definições</string>
-    <string name="settings_home_logout">Terminar sessão</string>
     <string name="settings_home_account">Conta</string>
     <string name="settings_home_preferences">Preferências</string>
     <string name="settings_home_display">Apresentação</string>

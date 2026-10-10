@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Zoeken sluiten</string>
     <string name="projects_list_search">Zoeken</string>
     <string name="projects_list_find">Projecten zoeken</string>
-    <string name="projects_list_logout">Uitloggen</string>
     <string name="projects_list_create">Project aanmaken</string>
     <string name="projects_create_title">Project aanmaken</string>
     <string name="projects_create_name">Naam</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Oplopend</string>
     <string name="projects_sort_direction_desc">Aflopend</string>
     <string name="projects_views_direction_desc">Aflopend</string>
-    <string name="projects_list_add_to_home">Toevoegen aan startscherm</string>
     <string name="projects_search_objects_placeholder">Objecten zoeken</string>
     <string name="projects_links_search_placeholder">Objecten zoeken</string>
 

@@ -28,7 +28,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.FormatListBulleted
-import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.ArrowUpward
@@ -46,7 +45,6 @@ import androidx.compose.material.icons.outlined.DragIndicator
 import androidx.compose.material.icons.outlined.FileDownload
 import androidx.compose.material.icons.outlined.FolderOpen
 import androidx.compose.material.icons.outlined.HomeMax
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
@@ -101,7 +99,6 @@ import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.files.shareExportFile
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
@@ -147,7 +144,6 @@ fun CrmScreen(
     onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onCreateObject: (presetValues: Map<String, String>) -> Unit = {},
     onOpenNotifications: () -> Unit = {},
-    onLogout: () -> Unit,
     initialObjectId: String? = null,
     listViewModel: CrmListViewModel = hiltViewModel(),
 ) {
@@ -157,7 +153,6 @@ fun CrmScreen(
     )
     val drawerScope = rememberCoroutineScope()
     val listUiState by listViewModel.uiState.collectAsState()
-    var showAbout by remember { mutableStateOf(false) }
 
     LaunchedEffect(crmId) {
         if (crmId.isNotBlank()) {
@@ -211,22 +206,6 @@ fun CrmScreen(
                     onCreateCrm()
                 },
             )
-            DrawerActionRow(
-                title = stringResource(R.string.crm_list_logout),
-                icon = Icons.AutoMirrored.Outlined.Logout,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onLogout()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
         },
     ) {
         when {
@@ -261,9 +240,6 @@ fun CrmScreen(
         }
     }
 
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -440,7 +416,7 @@ private fun CrmRow(
                     onDismissRequest = { showMenu = false }
                 ) {
                     MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.crm_list_add_to_home)) },
+                        text = { Text(stringResource(MochiR.string.launcher_add_to_home)) },
                         onClick = {
                             showMenu = false
                             // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.

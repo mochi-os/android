@@ -3,7 +3,6 @@
 
     <string name="words_list_title">Wörter</string>
     <string name="words_list_menu">Menü</string>
-    <string name="words_list_logout">Abmelden</string>
     <string name="words_sidebar_completed">Abgeschlossen</string>
     <string name="words_sidebar_new_game">Neues Spiel</string>
     <string name="words_new_game_title">Neues Spiel</string>

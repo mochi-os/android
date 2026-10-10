@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">कोई ऐप नहीं मिले</string>
+    <string name="home_menu_open">मेन्यू खोलें</string>
+    <string name="home_menu_user">यूज़र</string>
+    <string name="home_menu_empty">कोई अनपढ़ी नोटिफ़िकेशन नहीं</string>
+    <string name="home_menu_view_all">सभी देखें</string>
+    <string name="home_menu_no_topic">अभी तक कोई टॉपिक रिकॉर्ड नहीं — अगले नोटिफ़िकेशन के बाद फिर से प्रयास करें।</string>
+    <string name="home_menu_manage_categories">श्रेणियाँ प्रबंधित करें</string>
+</resources>

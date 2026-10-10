@@ -127,7 +127,6 @@ fun WordsGameDetailScreen(
     onBack: () -> Unit,
     onOpenGame: (String) -> Unit,
     onOpenNotifications: () -> Unit = {},
-    @Suppress("UNUSED_PARAMETER") onLogout: () -> Unit = {},
     onOpenDrawer: () -> Unit,
     viewModel: WordsGameViewModel = hiltViewModel(),
 ) {

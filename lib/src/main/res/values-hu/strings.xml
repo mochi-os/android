@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Egyéni</string>
     <string name="color_picker_clear">Törlés</string>
     <string name="common_refresh">Frissítés</string>
+    <string name="launcher_add_to_home">Hozzáadás a kezdőképernyőhöz</string>
 </resources>

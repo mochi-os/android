@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Chats</string>
     <string name="chat_list_search">Søg</string>
-    <string name="chat_list_logout">Log ud</string>
     <string name="chat_list_new">Ny chat</string>
     <string name="chat_new_title">Ny chat</string>
     <string name="chat_new_name">Gruppenavn</string>

@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">An bhfuil fonn ort %1$s a scriosadh ó do theagmhálaithe?</string>
     <string name="people_contacts_delete_friend_confirm">An bhfuil fonn ort %1$s a scriosadh ó do theagmhálaithe? Cuirfear deireadh le bhur gcairdeas freisin.</string>
     <string name="people_contact_new_title">Teagmhálaí nua</string>
-    <string name="people_contact_copy_title">Cóipeáil an teagmhálaí</string>
     <string name="people_contact_merge">Cumaisc</string>
     <string name="people_contact_merge_title">Cumaisc teagmhálacha</string>
     <string name="people_contact_edit_title">Cuir an teagmhálaí in eagar</string>
@@ -223,4 +222,5 @@
     <string name="people_contact_birthday_month">Mí</string>
     <string name="people_contact_birthday_year">Bliain</string>
     <string name="people_contact_birthday_clear">Glan</string>
+    <string name="people_contact_create">Cruthaigh</string>
 </resources>

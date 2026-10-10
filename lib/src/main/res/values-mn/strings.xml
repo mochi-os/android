@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Захиалгат</string>
     <string name="color_picker_clear">Цэвэрлэх</string>
     <string name="common_refresh">Сэргээх</string>
+    <string name="launcher_add_to_home">Үндсэн дэлгэцэнд нэмэх</string>
 </resources>

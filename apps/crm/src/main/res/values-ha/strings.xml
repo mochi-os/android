@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">Bincika</string>
     <string name="crm_list_find">Nemo CRM</string>
-    <string name="crm_list_logout">Fita</string>
     <string name="crm_list_create">Ƙirƙira CRM</string>
     <string name="crm_create_title">Ƙirƙira CRM</string>
     <string name="crm_create_name">Suna</string>
@@ -127,7 +126,6 @@
     <string name="crm_more">Ƙari</string>
     <string name="crm_comment_send">Aika</string>
     <string name="crm_field_position_body">Babban sashe</string>
-    <string name="crm_list_add_to_home">Ƙara a allon gida</string>
     <string name="crm_sort_field">Tsara ta</string>
     <string name="crm_views_move_up">Matsa sama</string>
     <string name="crm_views_move_down">Matsa ƙasa</string>

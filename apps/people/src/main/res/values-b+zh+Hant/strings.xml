@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">要從聯絡人中刪除 %1$s 嗎？</string>
     <string name="people_contacts_delete_friend_confirm">要從聯絡人中刪除 %1$s 嗎？你們的好友關係也會結束。</string>
     <string name="people_contact_new_title">新聯絡人</string>
-    <string name="people_contact_copy_title">複製聯絡人</string>
     <string name="people_contact_merge">合併</string>
     <string name="people_contact_merge_title">合併聯絡人</string>
     <string name="people_contact_edit_title">編輯聯絡人</string>
@@ -219,4 +218,5 @@
     <string name="people_contact_birthday_month">月</string>
     <string name="people_contact_birthday_year">年</string>
     <string name="people_contact_birthday_clear">清除</string>
+    <string name="people_contact_create">建立</string>
 </resources>

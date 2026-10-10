@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">ڪا ايپ نه ملي</string>
+    <string name="home_menu_open">مينيو کوليو</string>
+    <string name="home_menu_user">صارف</string>
+    <string name="home_menu_empty">ڪا اڻ پڙهيل اطلاع نه آهي</string>
+    <string name="home_menu_view_all">سڀ ڏسو</string>
+    <string name="home_menu_no_topic">اڃا ڪو ٽاپڪ رڪارڊ نه آهي — اڳيون اطلاع کان پوءِ ٻيهر ڪوشش ڪريو.</string>
+    <string name="home_menu_manage_categories">زمرن جو انتظام ڪريو</string>
+</resources>

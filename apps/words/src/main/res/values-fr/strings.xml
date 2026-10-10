@@ -3,7 +3,6 @@
 
     <string name="words_list_title">Mots</string>
     <string name="words_list_menu">Menu</string>
-    <string name="words_list_logout">Se déconnecter</string>
     <string name="words_sidebar_completed">Terminé</string>
     <string name="words_sidebar_new_game">Nouvelle partie</string>
     <string name="words_new_game_title">Nouvelle partie</string>

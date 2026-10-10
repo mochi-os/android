@@ -14,7 +14,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.R
-import org.mochios.settings.api.NotifCategory
+import org.mochios.android.notifications.NotificationCategory
 import org.mochios.settings.api.NotifTopic
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
@@ -32,10 +32,10 @@ class CategoryPickerTest {
     @Test
     fun `the menu lists the names shown, in natural order, with No notifications last`() {
         val categories = listOf(
-            NotifCategory(id = "0", label = "No notifications", display = "Keine Benachrichtigungen"),
-            NotifCategory(id = "a", label = "Normal", display = "Wichtig", default = 1),
-            NotifCategory(id = "b", label = "Group 10"),
-            NotifCategory(id = "c", label = "Group 2"),
+            NotificationCategory(id = "0", label = "No notifications", display = "Keine Benachrichtigungen"),
+            NotificationCategory(id = "a", label = "Normal", display = "Wichtig", default = 1),
+            NotificationCategory(id = "b", label = "Group 10"),
+            NotificationCategory(id = "c", label = "Group 2"),
         )
         rule.setContent {
             CategoryPicker(topic = NotifTopic(topic = "post"), categories = categories, onSetCategory = { _, _ -> })

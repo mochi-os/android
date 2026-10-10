@@ -7,7 +7,6 @@
     <string name="crm_field_name">Name</string>
     <string name="crm_create_action">Erstellen</string>
     <string name="crm_classes_create">Erstellen</string>
-    <string name="crm_list_logout">Abmelden</string>
     <string name="crm_create_template_none">Keine</string>
     <string name="crm_settings">Einstellungen</string>
     <string name="crm_link">Link</string>
@@ -34,7 +33,6 @@
     <string name="crm_settings_tab_general">Allgemein</string>
     <string name="crm_field_save">Änderungen speichern</string>
     <string name="crm_field_position_body">Inhalt</string>
-    <string name="crm_list_add_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="crm_find_recommended">Empfohlen</string>
     <string name="crm_sort_field">Sortieren nach</string>
     <string name="crm_sort_rank">Manuell</string>

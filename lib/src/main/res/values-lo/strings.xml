@@ -325,4 +325,5 @@
     <string name="color_picker_custom">ກຳນົດເອງ</string>
     <string name="color_picker_clear">ລ້າງ</string>
     <string name="common_refresh">ໂຫຼດໃໝ່</string>
+    <string name="launcher_add_to_home">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
 </resources>

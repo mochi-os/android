@@ -21,7 +21,6 @@
     <string name="forums_reject_post_server">帖文喺論壇伺服器上儲存唔到</string>
     <string name="forums_reject_comment_server">留言喺論壇伺服器上儲存唔到</string>
     <string name="forums_settings_save">儲存</string>
-    <string name="forums_list_logout">登出</string>
     <string name="forums_find_subscribe">訂閱</string>
     <string name="forums_access_level_view">檢視</string>
     <string name="forums_access_level_vote">投票</string>

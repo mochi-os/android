@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMkuna</string>
     <string name="crm_list_search">Maskay</string>
     <string name="crm_list_find">CRM tariy</string>
-    <string name="crm_list_logout">Lluqsiy</string>
     <string name="crm_list_create">CRM kamariy</string>
     <string name="crm_create_title">CRM kamariy</string>
     <string name="crm_create_name">Suti</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Wicharispa</string>
     <string name="crm_sort_direction_desc">Uraykuspa</string>
     <string name="crm_views_direction_desc">Uraykuspa</string>
-    <string name="crm_list_add_to_home">Wasi pantallaman yapay</string>
     <string name="crm_search_objects_placeholder">Objetokunata maskay</string>
     <string name="crm_links_search_placeholder">Objetokunata maskay</string>
 

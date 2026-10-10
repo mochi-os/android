@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Susa %1$s kothintana nabo?</string>
     <string name="people_contacts_delete_friend_confirm">Susa %1$s kothintana nabo? Nobungane benu buyaphela.</string>
     <string name="people_contact_new_title">Oxhumana naye omusha</string>
-    <string name="people_contact_copy_title">Kopisha oxhumana naye</string>
     <string name="people_contact_merge">Hlanganisa</string>
     <string name="people_contact_merge_title">Hlanganisa oxhumana nabo</string>
     <string name="people_contact_edit_title">Hlela oxhumana naye</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Inyanga</string>
     <string name="people_contact_birthday_year">Unyaka</string>
     <string name="people_contact_birthday_clear">Sula</string>
+    <string name="people_contact_create">Dala</string>
 </resources>

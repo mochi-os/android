@@ -325,4 +325,5 @@
     <string name="color_picker_custom">سفارشی</string>
     <string name="color_picker_clear">پاک کردن</string>
     <string name="common_refresh">تازه‌سازی</string>
+    <string name="launcher_add_to_home">افزودن به صفحه اصلی</string>
 </resources>

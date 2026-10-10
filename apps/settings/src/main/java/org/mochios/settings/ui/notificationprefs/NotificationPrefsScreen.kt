@@ -61,6 +61,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.notifications.NotificationCategory
+import org.mochios.android.notifications.ordered
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
@@ -74,7 +76,6 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.android.R as MochiR
 import org.mochios.settings.api.DestinationsAvailable
-import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.TestResult
 import org.mochios.settings.api.NotifTopic
 
@@ -100,7 +101,7 @@ fun NotificationPrefsScreen(
     }
     val snack = tested?.let { result -> testMessage(result) }
 
-    var deleting by remember { mutableStateOf<NotifCategory?>(null) }
+    var deleting by remember { mutableStateOf<NotificationCategory?>(null) }
 
     val snackbar = remember { SnackbarHostState() }
 
@@ -214,11 +215,11 @@ fun NotificationPrefsScreen(
 
 @Composable
 private fun CategoriesList(
-    categories: List<NotifCategory>,
+    categories: List<NotificationCategory>,
     available: DestinationsAvailable,
-    onEdit: (NotifCategory) -> Unit,
-    onDelete: (NotifCategory) -> Unit,
-    onTest: (NotifCategory) -> Unit,
+    onEdit: (NotificationCategory) -> Unit,
+    onDelete: (NotificationCategory) -> Unit,
+    onTest: (NotificationCategory) -> Unit,
 ) {
     val visible = categories.filter { category -> category.id != "0" }.ordered()
     LazyColumn(
@@ -240,7 +241,7 @@ private fun CategoriesList(
 
 @Composable
 internal fun CategoryCard(
-    category: NotifCategory,
+    category: NotificationCategory,
     available: DestinationsAvailable,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
@@ -368,7 +369,7 @@ private fun DefaultBadge() {
 @Composable
 private fun TopicsList(
     topics: List<NotifTopic>,
-    categories: List<NotifCategory>,
+    categories: List<NotificationCategory>,
     onSetCategory: (NotifTopic, String?) -> Unit,
     onRemove: (NotifTopic) -> Unit,
 ) {
@@ -437,16 +438,6 @@ internal fun testMessage(result: TestResult): String {
 }
 
 /**
- * Categories as every list of them reads: by the name shown, naturally, with
- * the "No notifications" pseudo-category last. The default keeps its place.
- */
-internal fun List<NotifCategory>.ordered(): List<NotifCategory> =
-    sortedWith(
-        compareBy<NotifCategory> { category -> category.id == "0" }
-            .thenBy(NaturalCompare) { category -> category.shown },
-    )
-
-/**
  * Topics grouped by the app they come from, the apps in order of name and each
  * app's topics by what happened, then by which thing.
  */
@@ -491,7 +482,7 @@ internal fun topicTitle(topic: NotifTopic): String {
 @Composable
 private fun TopicRow(
     topic: NotifTopic,
-    categories: List<NotifCategory>,
+    categories: List<NotificationCategory>,
     onSetCategory: (NotifTopic, String?) -> Unit,
     onRemove: (NotifTopic) -> Unit,
 ) {
@@ -543,8 +534,8 @@ private fun TopicRow(
 
 @Composable
 private fun DeleteCategoryDialog(
-    category: NotifCategory,
-    others: List<NotifCategory>,
+    category: NotificationCategory,
+    others: List<NotificationCategory>,
     busy: Boolean,
     onDismiss: () -> Unit,
     onConfirm: (String) -> Unit,

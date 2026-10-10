@@ -66,8 +66,8 @@
     <string name="calendars_range">Od %1$s do %2$s</string>
     <string name="calendars_truncated">Zbyt wiele wydarzeń, aby pokazać wszystkie. Wybierz krótszy zakres.</string>
     <string name="calendars_list_empty">Brak wydarzeń</string>
-    <string name="calendars_list_nothing">Nic nie zaplanowano. Dotknij, aby utworzyć wydarzenie.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Bez tytułu)</string>
     <string name="calendars_status_cancelled">Odwołane</string>
     <string name="calendars_status_tentative">Wstępne</string>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Babu apps da aka samu</string>
+    <string name="home_menu_open">Buɗe menu</string>
+    <string name="home_menu_user">Mai amfani</string>
+    <string name="home_menu_empty">Babu sanarwa marasa karantawa</string>
+    <string name="home_menu_view_all">Kalli duka</string>
+    <string name="home_menu_no_topic">Babu rikodin topic tukuna — sake gwadawa bayan sanarwa ta gaba.</string>
+    <string name="home_menu_manage_categories">Sarrafa rukunoni</string>
+</resources>

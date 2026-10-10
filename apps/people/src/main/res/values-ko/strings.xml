@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s님을 연락처에서 삭제할까요?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s님을 연락처에서 삭제할까요? 친구 관계도 종료됩니다.</string>
     <string name="people_contact_new_title">새 연락처</string>
-    <string name="people_contact_copy_title">연락처 복사</string>
     <string name="people_contact_merge">병합</string>
     <string name="people_contact_merge_title">연락처 병합</string>
     <string name="people_contact_edit_title">연락처 편집</string>
@@ -219,4 +218,5 @@
     <string name="people_contact_birthday_month">월</string>
     <string name="people_contact_birthday_year">연도</string>
     <string name="people_contact_birthday_clear">지우기</string>
+    <string name="people_contact_create">생성</string>
 </resources>

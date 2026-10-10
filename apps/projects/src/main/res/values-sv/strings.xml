@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Stäng sökning</string>
     <string name="projects_list_search">Sök</string>
     <string name="projects_list_find">Hitta projekt</string>
-    <string name="projects_list_logout">Logga ut</string>
     <string name="projects_list_create">Skapa projekt</string>
     <string name="projects_create_title">Skapa projekt</string>
     <string name="projects_create_name">Namn</string>
@@ -92,7 +91,7 @@
     <string name="projects_request_field_draft">Utkast</string>
     <string name="projects_request_create_action">Skapa</string>
     <string name="projects_diff_unified">Enhetlig</string>
-    <string name="projects_diff_split">Dela</string>
+    <string name="projects_diff_split">Sida vid sida</string>
     <string name="projects_diff_empty">Ingen diff tillgänglig</string>
     <string name="projects_board_unset">[ej angivet]</string>
     <string name="projects_board_new">Ny</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Stigande</string>
     <string name="projects_sort_direction_desc">Fallande</string>
     <string name="projects_views_direction_desc">Fallande</string>
-    <string name="projects_list_add_to_home">Lägg till på startskärmen</string>
     <string name="projects_search_objects_placeholder">Sök objekt</string>
     <string name="projects_links_search_placeholder">Sök objekt</string>
 

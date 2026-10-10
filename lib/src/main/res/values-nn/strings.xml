@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Tilpassa</string>
     <string name="color_picker_clear">Tøm</string>
     <string name="common_refresh">Oppdater</string>
+    <string name="launcher_add_to_home">Legg til på startskjermen</string>
 </resources>

@@ -28,6 +28,8 @@ import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.graphics.toPixelMap
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -323,14 +325,17 @@ class TimeGridTest {
     // ---- now ----
 
     @Test
-    fun `the current-time line carries a dot and moves on with the clock`() {
+    fun `today carries no line at the present moment`() {
         show(emptyList())
-        rule.onNodeWithTag("now-dot").assertExists()
-        val before = bounds("now").top
-        now += 3_600
-        rule.mainClock.advanceTimeBy(31_000)
-        val after = bounds("now").top
-        assertEquals(px(HOUR), after - before, 2f)
+        val error = lightColorScheme().error
+        val pixels = rule.onRoot().captureToImage().toPixelMap()
+        var found = 0
+        for (x in 0 until pixels.width) {
+            for (y in 0 until pixels.height) {
+                if (pixels[x, y].toArgb() == error.toArgb()) found++
+            }
+        }
+        assertEquals(0, found)
     }
 
     // ---- new events ----

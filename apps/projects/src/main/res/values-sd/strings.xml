@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">ڳولا بند ڪريو</string>
     <string name="projects_list_search">ڳوليو</string>
     <string name="projects_list_find">پروجيڪٽَ ڳوليو</string>
-    <string name="projects_list_logout">لاگ آئوٽ</string>
     <string name="projects_list_create">پروجيڪٽ ٺاهيو</string>
     <string name="projects_create_title">پروجيڪٽ ٺاهيو</string>
     <string name="projects_create_name">نالو</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">گهٽ کان وڌيڪ</string>
     <string name="projects_sort_direction_desc">وڌيڪ کان گهٽ</string>
     <string name="projects_views_direction_desc">وڌيڪ کان گهٽ</string>
-    <string name="projects_list_add_to_home">هوم اسڪرين تي شامل ڪريو</string>
     <string name="projects_search_objects_placeholder">شيون ڳوليو</string>
     <string name="projects_links_search_placeholder">شيون ڳوليو</string>
 

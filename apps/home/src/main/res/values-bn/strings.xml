@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">কোনো অ্যাপ পাওয়া যায়নি</string>
+    <string name="home_menu_open">মেনু খুলুন</string>
+    <string name="home_menu_user">ব্যবহারকারী</string>
+    <string name="home_menu_empty">কোনো অপঠিত বিজ্ঞপ্তি নেই</string>
+    <string name="home_menu_view_all">সব দেখুন</string>
+    <string name="home_menu_no_topic">এখনও কোনো বিষয়ের রেকর্ড নেই — পরবর্তী বিজ্ঞপ্তির পরে আবার চেষ্টা করুন।</string>
+    <string name="home_menu_manage_categories">ক্যাটেগরি পরিচালনা করুন</string>
+</resources>

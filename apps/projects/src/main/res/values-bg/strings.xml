@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Затвори търсенето</string>
     <string name="projects_list_search">Търсене</string>
     <string name="projects_list_find">Намери проекти</string>
-    <string name="projects_list_logout">Изход</string>
     <string name="projects_list_create">Създай проект</string>
     <string name="projects_create_title">Създай проект</string>
     <string name="projects_create_name">Име</string>
@@ -169,7 +168,6 @@
     <string name="projects_list_search_placeholder">Търсене на проекти</string>
     <string name="projects_list_no_matching">Няма съвпадащи проекти</string>
     <string name="projects_list_empty">Все още няма проекти</string>
-    <string name="projects_list_add_to_home">Добавяне към началния екран</string>
     <string name="projects_find_search_placeholder">Търсене на проекти или поставяне на URL</string>
     <string name="projects_find_search_hint">Търсете проекти, за които да се абонирате</string>
     <string name="projects_search_objects_placeholder">Търсене на обекти</string>

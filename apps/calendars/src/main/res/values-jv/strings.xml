@@ -67,8 +67,8 @@
     <string name="calendars_range">%1$s nganti %2$s</string>
     <string name="calendars_truncated">Acarané kakèhan kanggo ditampilake kabèh. Pilih rentang sing luwih cendhak.</string>
     <string name="calendars_list_empty">Ora ana acara</string>
-    <string name="calendars_list_nothing">Ora ana rencana. Tutul kanggo gawé acara.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Tanpa judul)</string>
     <string name="calendars_status_cancelled">Dibatalaké</string>
     <string name="calendars_status_tentative">Sementara</string>

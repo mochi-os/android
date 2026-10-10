@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Հավելվածներ չեն գտնվել</string>
+    <string name="home_menu_open">Բացել մենյուն</string>
+    <string name="home_menu_user">Օգտատեր</string>
+    <string name="home_menu_empty">Չկարդացված ծանուցումներ չկան</string>
+    <string name="home_menu_view_all">Դիտել բոլորը</string>
+    <string name="home_menu_no_topic">Դեռ թեմայի գրառում չկա — փորձեք նորից հաջորդ ծանուցումից հետո։</string>
+    <string name="home_menu_manage_categories">Կառավարել կատեգորիաները</string>
+</resources>

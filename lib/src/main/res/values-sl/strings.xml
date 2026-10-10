@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Po meri</string>
     <string name="color_picker_clear">Počisti</string>
     <string name="common_refresh">Osveži</string>
+    <string name="launcher_add_to_home">Dodaj na začetni zaslon</string>
 </resources>

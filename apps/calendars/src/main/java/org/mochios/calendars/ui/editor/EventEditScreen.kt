@@ -34,7 +34,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.CalendarMonth
-import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
@@ -74,6 +73,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
@@ -132,49 +132,53 @@ import org.mochios.android.R as MochiR
 
 /**
  * The event editor: Title, Calendar, All day, Start and its zone, End and its
- * zone, Location, Repeat, Reminder, Description, in that order. A recurring
- * event asks whether a save, a delete or a copy is for the one occurrence or
- * the whole series. [onCopy] opens the editor on a copy of the open event,
- * with the occurrence and the scope the user chose; [onCopied] is a saved
- * copy, which [onSaved] is not told of. [onSaved] is told whether the save
- * created the event, so the calendar can say "Event created" or "Event saved".
+ * zone, Location, Repeat, Reminder, Description, in that order. An open event
+ * saves as it goes, as the web's side panel does, and has no Save; a new one
+ * is made by Create. A recurring event asks whether a save, a delete or a
+ * copy is for the one occurrence or the whole series. [onOpen] goes on as
+ * another event's editor: the one a create or a copy made, or the one a save
+ * left the occurrence in, with what was done to make it.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EventEditScreen(
     onBack: () -> Unit,
-    onSaved: (Boolean) -> Unit,
-    onCopied: () -> Unit,
+    onOpen: (event: String, moment: Long, said: Said?) -> Unit,
     onDeleted: () -> Unit,
-    onCopy: (String, Long, Scope) -> Unit,
     viewModel: EventEditViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbar = remember { SnackbarHostState() }
-    // Back and the arrow ask before dropping a changed form, and nothing
-    // leaves while a save is running, as the web editor's close does.
+    val creating = uiState.event == null
+    // A new event asks before something typed is dropped; an open one saves
+    // on the way out, and asks only of a change that cannot be saved.
     val dirty = viewModel.dirty(uiState)
     var leaving by remember { mutableStateOf(false) }
     val close = {
         when {
             uiState.isSaving -> Unit
+            !creating -> viewModel.leave()
             dirty -> leaving = true
             else -> onBack()
         }
     }
-    BackHandler(enabled = dirty || uiState.isSaving) { close() }
+    BackHandler(enabled = !creating || dirty || uiState.isSaving) { close() }
 
-    LaunchedEffect(uiState.saved) {
-        if (uiState.saved) {
-            if (uiState.copying) onCopied() else onSaved(uiState.event == null)
-        }
+    LaunchedEffect(uiState.follow) {
+        uiState.follow?.let { onOpen(it.event, it.moment, it.said) }
     }
+    LaunchedEffect(uiState.left) { if (uiState.left) onBack() }
     LaunchedEffect(uiState.deleted) { if (uiState.deleted) onDeleted() }
-    LaunchedEffect(uiState.copy) {
-        val scope = uiState.copy ?: return@LaunchedEffect
-        val event = uiState.event ?: return@LaunchedEffect
-        viewModel.routed()
-        onCopy(event, uiState.occurrence, scope)
+    // What the editor before this one did, said once as this one opens.
+    val created = stringResource(R.string.calendars_event_created)
+    val copied = stringResource(R.string.calendars_event_copied)
+    val said = rememberCoroutineScope()
+    LaunchedEffect(uiState.said) {
+        val done = uiState.said ?: return@LaunchedEffect
+        // Said from the screen's own scope: hearing it clears the flag, which
+        // restarts this effect, and the message has to outlive it.
+        viewModel.heard()
+        said.launch { snackbar.showSnackbar(if (done == Said.COPIED) copied else created) }
     }
     LaunchedEffect(uiState.error) {
         uiState.error?.let { snackbar.showSnackbar(it.userMessage()) }
@@ -206,8 +210,9 @@ fun EventEditScreen(
                     Text(
                         when {
                             uiState.copying -> stringResource(R.string.calendars_editor_copy_title)
-                            uiState.event == null -> stringResource(R.string.calendars_event_new)
-                            else -> stringResource(R.string.calendars_event_edit)
+                            creating -> stringResource(R.string.calendars_event_new)
+                            else -> uiState.opened?.first?.title?.ifBlank { null }
+                                ?: stringResource(R.string.calendars_event_edit)
                         },
                     )
                 },
@@ -280,8 +285,15 @@ fun EventEditScreen(
                 onDescription = viewModel::description,
                 onLocation = viewModel::location,
                 onUrl = viewModel::url,
-                // The keyboard's action takes the Save button's own path, prompts and all.
-                onSave = { if (uiState.writable) viewModel.save() },
+                // The keyboard's action saves, prompts and all, or makes a new event.
+                onSave = {
+                    when {
+                        !uiState.writable -> Unit
+                        creating || uiState.copying -> viewModel.create()
+                        else -> viewModel.save()
+                    }
+                },
+                onLeave = { if (!creating && uiState.writable) viewModel.save() },
                 select = uiState.copying,
             )
             Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
@@ -348,27 +360,28 @@ fun EventEditScreen(
                 enabled = !uiState.isSaving,
                 onColour = viewModel::colour,
             )
-            MochiButton(
-                onClick = viewModel::save,
-                enabled = !uiState.isSaving && uiState.writable &&
-                    (uiState.event == null || uiState.copying || dirty),
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                if (uiState.isSaving) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(ButtonDefaults.IconSize),
-                        strokeWidth = 2.dp,
-                        color = MaterialTheme.colorScheme.onPrimary,
-                    )
-                } else {
-                    Icon(
-                        Icons.Outlined.Check,
-                        contentDescription = null,
-                        modifier = Modifier.size(ButtonDefaults.IconSize),
-                    )
+            if (creating || uiState.copying) {
+                MochiButton(
+                    onClick = viewModel::create,
+                    enabled = !uiState.isSaving && uiState.writable,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    if (uiState.isSaving) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
+                            strokeWidth = 2.dp,
+                            color = MaterialTheme.colorScheme.onPrimary,
+                        )
+                    } else {
+                        Icon(
+                            Icons.Outlined.Add,
+                            contentDescription = null,
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
+                        )
+                    }
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                    Text(stringResource(R.string.calendars_create_submit))
                 }
-                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                Text(stringResource(MochiR.string.common_save))
             }
             Spacer(Modifier.height(16.dp))
         }
@@ -400,19 +413,31 @@ fun EventEditScreen(
             onConfirm = viewModel::delete,
         )
     }
-    if (leaving) {
+    if (leaving || uiState.discarding) {
         MochiAlertDialog(
-            onDismissRequest = { leaving = false },
+            onDismissRequest = {
+                leaving = false
+                viewModel.keep()
+            },
             title = stringResource(R.string.calendars_discard_title),
             text = stringResource(R.string.calendars_discard_message),
             confirmText = stringResource(R.string.calendars_discard),
             onConfirm = {
                 leaving = false
-                onBack()
+                if (creating) onBack() else viewModel.discard()
             },
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
         )
+    }
+}
+
+/** Calls [left] when this field loses the focus it had. */
+internal fun Modifier.leaving(left: () -> Unit): Modifier = composed {
+    var focused by remember { mutableStateOf(false) }
+    onFocusChanged { state ->
+        if (focused && !state.isFocused) left()
+        focused = state.isFocused
     }
 }
 
@@ -470,6 +495,8 @@ internal fun EventText(
     onLocation: (String) -> Unit,
     onUrl: (String) -> Unit,
     onSave: () -> Unit,
+    /** A field was left: an edit saves it. */
+    onLeave: () -> Unit = {},
     select: Boolean = false,
     asked: Int = 0,
 ) {
@@ -508,7 +535,7 @@ internal fun EventText(
             } else {
                 null
             },
-            modifier = Modifier.fillMaxWidth().bringIntoViewRequester(view).focusRequester(focus),
+            modifier = Modifier.fillMaxWidth().bringIntoViewRequester(view).focusRequester(focus).leaving(onLeave),
         )
         MochiTextField(
             value = description,
@@ -516,7 +543,7 @@ internal fun EventText(
             label = { Text(stringResource(R.string.calendars_event_description)) },
             enabled = enabled,
             minLines = 2,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().leaving(onLeave),
         )
         MochiTextField(
             value = location,
@@ -524,7 +551,7 @@ internal fun EventText(
             label = { Text(stringResource(R.string.calendars_event_location)) },
             singleLine = true,
             enabled = enabled,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().leaving(onLeave),
         )
         MochiTextField(
             value = url,
@@ -533,7 +560,7 @@ internal fun EventText(
             singleLine = true,
             enabled = enabled,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().leaving(onLeave),
         )
     }
 }

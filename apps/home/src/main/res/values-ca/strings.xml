@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">No s\'ha trobat cap aplicació</string>
+    <string name="home_menu_open">Obre el menú</string>
+    <string name="home_menu_user">Usuari</string>
+    <string name="home_menu_empty">Sense notificacions no llegides</string>
+    <string name="home_menu_view_all">Mostra-ho tot</string>
+    <string name="home_menu_no_topic">Encara no hi ha cap registre de tema; torna-ho a provar després de la pròxima notificació.</string>
+    <string name="home_menu_manage_categories">Gestiona les categories</string>
+</resources>

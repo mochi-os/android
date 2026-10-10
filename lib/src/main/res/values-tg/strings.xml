@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Танзимшаванда</string>
     <string name="color_picker_clear">Тоза кардан</string>
     <string name="common_refresh">Нав кардан</string>
+    <string name="launcher_add_to_home">Ба экрани асосӣ илова кардан</string>
 </resources>

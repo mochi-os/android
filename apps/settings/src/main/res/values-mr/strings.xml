@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">सेटिंग्ज</string>
-    <string name="settings_home_logout">लॉग आउट करा</string>
     <string name="settings_home_account">खाते</string>
     <string name="settings_home_preferences">प्राधान्ये</string>
     <string name="settings_home_display">प्रदर्शन</string>

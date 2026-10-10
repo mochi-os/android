@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-үүд</string>
     <string name="crm_list_search">Хайх</string>
     <string name="crm_list_find">CRM хайх</string>
-    <string name="crm_list_logout">Гарах</string>
     <string name="crm_list_create">CRM үүсгэх</string>
     <string name="crm_create_title">CRM үүсгэх</string>
     <string name="crm_create_name">Нэр</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Өсөхөөр</string>
     <string name="crm_sort_direction_desc">Буурахаар</string>
     <string name="crm_views_direction_desc">Буурахаар</string>
-    <string name="crm_list_add_to_home">Үндсэн дэлгэцэнд нэмэх</string>
     <string name="crm_search_objects_placeholder">Объект хайх</string>
     <string name="crm_links_search_placeholder">Объект хайх</string>
 

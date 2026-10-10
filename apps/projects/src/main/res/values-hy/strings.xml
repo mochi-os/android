@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Փակել որոնումը</string>
     <string name="projects_list_search">Որոնել</string>
     <string name="projects_list_find">Գտնել նախագծեր</string>
-    <string name="projects_list_logout">Դուրս գալ</string>
     <string name="projects_list_create">Ստեղծել նախագիծ</string>
     <string name="projects_create_title">Ստեղծել նախագիծ</string>
     <string name="projects_create_name">Անուն</string>
@@ -164,7 +163,6 @@
     <string name="projects_auth_mfa_unsupported">MFA-ն դեռ չի աջակցվում բջջային հավելվածում</string>
     <string name="projects_auth_enter_code_sent">Մուտքագրեք %1$s հասցեին ուղարկված կոդը</string>
     <string name="projects_auth_create_identity">Ստեղծեք ձեր ինքնությունը</string>
-    <string name="projects_list_add_to_home">Ավելացնել գլխավոր էկրանին</string>
     <string name="projects_sort_field">Տեսակավորել ըստ</string>
     <string name="projects_views_move_up">Տեղափոխել վերև</string>
     <string name="projects_views_move_down">Տեղափոխել ներքև</string>

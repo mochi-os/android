@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">هیڅ ایپ ونه موندل شو</string>
+    <string name="home_menu_open">مینو خلاص کړئ</string>
+    <string name="home_menu_user">کاروونکی</string>
+    <string name="home_menu_empty">هیڅ نه لوستل شوې خبرتیاوې نشته</string>
+    <string name="home_menu_view_all">ټول وګورئ</string>
+    <string name="home_menu_no_topic">تر اوسه د موضوع هیڅ ریکارډ نشته — د راتلونکې خبرتیا وروسته بیا هڅه وکړئ.</string>
+    <string name="home_menu_manage_categories">کټګورۍ اداره کړئ</string>
+</resources>

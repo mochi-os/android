@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Roghainnean</string>
-    <string name="settings_home_logout">Clàraich a-mach</string>
     <string name="settings_home_account">Cunntas</string>
     <string name="settings_home_preferences">Roghainnean</string>
     <string name="settings_home_display">Taisbeanadh</string>

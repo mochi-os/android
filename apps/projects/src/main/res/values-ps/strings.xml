@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">لټون وتړئ</string>
     <string name="projects_list_search">لټون</string>
     <string name="projects_list_find">پروژې ومومئ</string>
-    <string name="projects_list_logout">لاګ آوټ</string>
     <string name="projects_list_create">پروژه جوړ کړئ</string>
     <string name="projects_create_title">پروژه جوړ کړئ</string>
     <string name="projects_create_name">نوم</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">د کم څخه ډېر</string>
     <string name="projects_sort_direction_desc">د ډېر څخه کم</string>
     <string name="projects_views_direction_desc">د ډېر څخه کم</string>
-    <string name="projects_list_add_to_home">کور پاڼې ته اضافه کړئ</string>
     <string name="projects_search_objects_placeholder">اشیا لټول</string>
     <string name="projects_links_search_placeholder">اشیا لټول</string>
 

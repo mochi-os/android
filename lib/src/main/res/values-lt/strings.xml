@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Pasirinktinis</string>
     <string name="color_picker_clear">Išvalyti</string>
     <string name="common_refresh">Atnaujinti</string>
+    <string name="launcher_add_to_home">Pridėti į pradinį ekraną</string>
 </resources>

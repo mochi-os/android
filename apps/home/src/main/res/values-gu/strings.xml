@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">કોઈ એપ્સ મળી નથી</string>
+    <string name="home_menu_open">મેનૂ ખોલો</string>
+    <string name="home_menu_user">વપરાશકર્તા</string>
+    <string name="home_menu_empty">કોઈ વાંચ્યા વગરની સૂચનાઓ નથી</string>
+    <string name="home_menu_view_all">બધું જુઓ</string>
+    <string name="home_menu_no_topic">હજુ સુધી કોઈ ટોપિક રેકોર્ડ નથી — પછીની સૂચના પછી ફરી પ્રયાસ કરો.</string>
+    <string name="home_menu_manage_categories">શ્રેણીઓ મેનેજ કરો</string>
+</resources>

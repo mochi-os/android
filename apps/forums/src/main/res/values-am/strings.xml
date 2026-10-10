@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">ማረጋገጫ አልተሳካም</string>
     <string name="forums_list_title">መድረኮች</string>
     <string name="forums_list_find">ፎረሞችን ፈልግ</string>
-    <string name="forums_list_logout">ውጣ</string>
     <string name="forums_list_unsubscribe">ምዝገባ ያቋርጡ</string>
     <string name="forums_list_unsubscribe_title">ምዝገባ ያቋርጡ</string>
     <string name="forums_create_title">መድረክ ፍጠር</string>

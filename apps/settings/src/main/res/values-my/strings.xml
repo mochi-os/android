@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">ဆက်တင်များ</string>
-    <string name="settings_home_logout">ထွက်</string>
     <string name="settings_home_account">အကောင့်</string>
     <string name="settings_home_preferences">ဦးစားပေးချက်များ</string>
     <string name="settings_home_display">ပြသမှု</string>

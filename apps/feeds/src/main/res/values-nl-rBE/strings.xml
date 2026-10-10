@@ -59,7 +59,6 @@
     <string name="feeds_remove_source">Bron verwijderen?</string>
     <string name="feeds_suggested_credibility_accept">Accepteren</string>
     <string name="feeds_rss_url_copied">RSS-URL gekopieerd naar klembord</string>
-    <string name="feeds_logout">Uitloggen</string>
     <string name="feeds_ai_account_default">Standaardaccount</string>
     <string name="feeds_ai_mode_off">Uitgeschakeld</string>
     <string name="feeds_ai_mode_tag">Taggen</string>

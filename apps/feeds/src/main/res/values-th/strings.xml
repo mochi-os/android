@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">ลบแหล่งที่มา?</string>
     <string name="feeds_suggested_credibility_accept">ยอมรับ</string>
     <string name="feeds_rss_url_copied">คัดลอก URL RSS ไปยังคลิปบอร์ดแล้ว</string>
-    <string name="feeds_logout">ออกจากระบบ</string>
     <string name="feeds_ai_account_default">บัญชีเริ่มต้น</string>
     <string name="feeds_ai_mode_off">ปิดใช้งานแล้ว</string>
     <string name="feeds_ai_mode_tag">แท็ก</string>

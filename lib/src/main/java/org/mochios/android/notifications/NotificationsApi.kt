@@ -11,6 +11,7 @@ import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface NotificationsApi {
 
@@ -34,5 +35,26 @@ interface NotificationsApi {
     @POST("-/accounts/remove")
     suspend fun removeAccount(
         @Field("id") id: String,
+    ): Response<ApiResponse<Map<String, Any>>>
+
+    @GET("-/categories/list")
+    suspend fun categories(): Response<ApiResponse<List<NotificationCategory>>>
+
+    /** The topic row for one notification's app, topic and object; null data when none exists yet. */
+    @GET("-/topics/lookup")
+    suspend fun topic(
+        @Query("app") app: String,
+        @Query("topic") topic: String,
+        @Query("object") target: String,
+    ): Response<ApiResponse<NotificationTopic?>>
+
+    /** Moves a topic to [category]; an empty one clears it to unassigned. */
+    @FormUrlEncoded
+    @POST("-/topics/category/set")
+    suspend fun setCategory(
+        @Field("app") app: String,
+        @Field("topic") topic: String,
+        @Field("object") target: String,
+        @Field("category") category: String,
     ): Response<ApiResponse<Map<String, Any>>>
 }

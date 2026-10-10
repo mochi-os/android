@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Thaqhawi jist\'antaña</string>
     <string name="projects_list_search">Thaqhama</string>
     <string name="projects_list_find">Proyectonak jikxataña</string>
-    <string name="projects_list_logout">Mistuña</string>
     <string name="projects_list_create">Proyecto luraña</string>
     <string name="projects_create_title">Proyecto luraña</string>
     <string name="projects_create_name">Suti</string>
@@ -169,7 +168,6 @@
     <string name="projects_list_search_placeholder">Proyectonak thaqhaña</string>
     <string name="projects_list_no_matching">Janiw kikip proyectonakax utjkiti</string>
     <string name="projects_list_empty">Janiw proyectonakax utjkiti</string>
-    <string name="projects_list_add_to_home">Qallta uñstäwir uchaña</string>
     <string name="projects_find_search_placeholder">Proyectonak thaqhaña jan ukax URL pegaña</string>
     <string name="projects_find_search_hint">Suscribiñataki proyectonak thaqhaña</string>
     <string name="projects_search_objects_placeholder">Objetonak thaqhaña</string>

@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Impostazioni</string>
-    <string name="settings_home_logout">Esci</string>
     <string name="settings_home_account">Account</string>
     <string name="settings_home_preferences">Preferenze</string>
     <string name="settings_home_display">Visualizzazione</string>

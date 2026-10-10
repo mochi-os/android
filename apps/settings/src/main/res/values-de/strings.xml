@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Einstellungen</string>
-    <string name="settings_home_logout">Abmelden</string>
     <string name="settings_home_account">Konto</string>
     <string name="settings_home_preferences">Präferenzen</string>
     <string name="settings_home_display">Anzeige</string>

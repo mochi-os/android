@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">ការកំណត់</string>
-    <string name="settings_home_logout">ចាកចេញ</string>
     <string name="settings_home_account">គណនី</string>
     <string name="settings_home_preferences">ចំណូលចិត្ត</string>
     <string name="settings_home_display">ការបង្ហាញ</string>

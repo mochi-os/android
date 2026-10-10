@@ -9,7 +9,7 @@ import com.google.gson.Gson
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
-import org.mochios.settings.api.NotifCategory
+import org.mochios.android.notifications.NotificationCategory
 
 class CategoryLabelTest {
 
@@ -18,14 +18,14 @@ class CategoryLabelTest {
     fun `a category shows its display name`() {
         val category = Gson().fromJson(
             """{"id":"1","label":"Normal","display":"Normale","default":1}""",
-            NotifCategory::class.java,
+            NotificationCategory::class.java,
         )
         assertEquals("Normale", category.shown)
     }
 
     @Test
     fun `a category without a display name shows its label`() {
-        val category = Gson().fromJson("""{"id":"x","label":"Work"}""", NotifCategory::class.java)
+        val category = Gson().fromJson("""{"id":"x","label":"Work"}""", NotificationCategory::class.java)
         assertEquals("Work", category.shown)
     }
 

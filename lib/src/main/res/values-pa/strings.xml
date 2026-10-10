@@ -325,4 +325,5 @@
     <string name="color_picker_custom">ਕਸਟਮ</string>
     <string name="color_picker_clear">ਸਾਫ਼ ਕਰੋ</string>
     <string name="common_refresh">ਰਿਫਰੈਸ਼</string>
+    <string name="launcher_add_to_home">ਹੋਮ ਸਕਰੀਨ ਵਿੱਚ ਜੋੜੋ</string>
 </resources>

@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">চ্যাট</string>
     <string name="chat_list_search">অনুসন্ধান</string>
-    <string name="chat_list_logout">লগ আউট করুন</string>
     <string name="chat_list_new">নতুন চ্যাট</string>
     <string name="chat_new_title">নতুন চ্যাট</string>
     <string name="chat_new_name">গ্রুপের নাম</string>

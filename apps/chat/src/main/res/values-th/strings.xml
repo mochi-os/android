@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">แชท</string>
     <string name="chat_list_search">ค้นหา</string>
-    <string name="chat_list_logout">ออกจากระบบ</string>
     <string name="chat_list_new">แชตใหม่</string>
     <string name="chat_new_title">แชตใหม่</string>
     <string name="chat_new_name">ชื่อกลุ่ม</string>

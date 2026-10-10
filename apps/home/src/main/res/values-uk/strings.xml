@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Додатків не знайдено</string>
+    <string name="home_menu_open">Відкрити меню</string>
+    <string name="home_menu_user">Користувач</string>
+    <string name="home_menu_empty">Немає непрочитаних сповіщень</string>
+    <string name="home_menu_view_all">Переглянути всі</string>
+    <string name="home_menu_no_topic">Запису про тему ще немає — спробуйте ще раз після наступного сповіщення.</string>
+    <string name="home_menu_manage_categories">Керувати категоріями</string>
+</resources>

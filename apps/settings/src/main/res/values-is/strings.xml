@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Stillingar</string>
-    <string name="settings_home_logout">Skrá út</string>
     <string name="settings_home_account">Reikningur</string>
     <string name="settings_home_preferences">Kjörstillingar</string>
     <string name="settings_home_display">Birting</string>

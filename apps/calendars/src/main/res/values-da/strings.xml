@@ -66,8 +66,8 @@
     <string name="calendars_range">%1$s til %2$s</string>
     <string name="calendars_truncated">For mange begivenheder til at vise dem alle. Vælg en kortere periode.</string>
     <string name="calendars_list_empty">Ingen begivenheder</string>
-    <string name="calendars_list_nothing">Intet planlagt. Tryk for at oprette en begivenhed.</string>
     <string name="calendars_list_heading">%1$s %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Ingen titel)</string>
     <string name="calendars_status_cancelled">Aflyst</string>
     <string name="calendars_status_tentative">Foreløbig</string>

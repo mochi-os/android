@@ -327,4 +327,5 @@
     <string name="color_picker_custom">מותאם אישית</string>
     <string name="color_picker_clear">נקה</string>
     <string name="common_refresh">רענן</string>
+    <string name="launcher_add_to_home">הוספה למסך הבית</string>
 </resources>

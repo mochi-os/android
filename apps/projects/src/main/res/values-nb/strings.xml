@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Lukk søk</string>
     <string name="projects_list_search">Søk</string>
     <string name="projects_list_find">Finn prosjekter</string>
-    <string name="projects_list_logout">Logg ut</string>
     <string name="projects_list_create">Opprett prosjekt</string>
     <string name="projects_create_title">Opprett prosjekt</string>
     <string name="projects_create_name">Navn</string>
@@ -92,7 +91,7 @@
     <string name="projects_request_field_draft">Utkast</string>
     <string name="projects_request_create_action">Opprett</string>
     <string name="projects_diff_unified">Samlet</string>
-    <string name="projects_diff_split">Del</string>
+    <string name="projects_diff_split">Side ved side</string>
     <string name="projects_diff_empty">Ingen diff tilgjengelig</string>
     <string name="projects_board_unset">[ikke satt]</string>
     <string name="projects_board_new">Ny</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Stigende</string>
     <string name="projects_sort_direction_desc">Synkende</string>
     <string name="projects_views_direction_desc">Synkende</string>
-    <string name="projects_list_add_to_home">Legg til startskjerm</string>
     <string name="projects_search_objects_placeholder">Søk objekter</string>
     <string name="projects_links_search_placeholder">Søk objekter</string>
 

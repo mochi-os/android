@@ -6,7 +6,6 @@
     <!-- List screen -->
     <string name="words_list_title">Words</string>
     <string name="words_list_menu">Menu</string>
-    <string name="words_list_logout">Log out</string>
 
     <!-- Sidebar -->
     <string name="words_sidebar_active">Active games</string>

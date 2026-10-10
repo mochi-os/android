@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Закрити пошук</string>
     <string name="projects_list_search">Пошук</string>
     <string name="projects_list_find">Знайти проєкти</string>
-    <string name="projects_list_logout">Вийти</string>
     <string name="projects_list_create">Створити проєкт</string>
     <string name="projects_create_title">Створити проєкт</string>
     <string name="projects_create_name">Назва</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">За зростанням</string>
     <string name="projects_sort_direction_desc">За спаданням</string>
     <string name="projects_views_direction_desc">За спаданням</string>
-    <string name="projects_list_add_to_home">Додати на головний екран</string>
     <string name="projects_search_objects_placeholder">Шукати об\'єкти</string>
     <string name="projects_links_search_placeholder">Шукати об\'єкти</string>
 

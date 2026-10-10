@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Provjera nije uspjela</string>
     <string name="forums_list_title">Forumi</string>
     <string name="forums_list_find">Pronađi forume</string>
-    <string name="forums_list_logout">Odjavi se</string>
     <string name="forums_list_unsubscribe">Otkaži pretplatu</string>
     <string name="forums_list_unsubscribe_title">Otkaži pretplatu</string>
     <string name="forums_create_title">Stvori forum</string>

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Закрыть поиск</string>
     <string name="projects_list_search">Поиск</string>
     <string name="projects_list_find">Найти проекты</string>
-    <string name="projects_list_logout">Выйти</string>
     <string name="projects_list_create">Создать проект</string>
     <string name="projects_create_title">Создать проект</string>
     <string name="projects_create_name">Название</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">По возрастанию</string>
     <string name="projects_sort_direction_desc">По убыванию</string>
     <string name="projects_views_direction_desc">По убыванию</string>
-    <string name="projects_list_add_to_home">Добавить на главный экран</string>
     <string name="projects_search_objects_placeholder">Поиск объектов</string>
     <string name="projects_links_search_placeholder">Поиск объектов</string>
 

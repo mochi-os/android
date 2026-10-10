@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Sluit soektog</string>
     <string name="projects_list_search">Soek</string>
     <string name="projects_list_find">Vind projekte</string>
-    <string name="projects_list_logout">Meld af</string>
     <string name="projects_list_create">Skep projek</string>
     <string name="projects_create_title">Skep projek</string>
     <string name="projects_create_name">Naam</string>
@@ -169,7 +168,6 @@
     <string name="projects_list_search_placeholder">Soek projekte</string>
     <string name="projects_list_no_matching">Geen passende projekte nie</string>
     <string name="projects_list_empty">Nog geen projekte nie</string>
-    <string name="projects_list_add_to_home">Voeg by tuisskerm</string>
     <string name="projects_find_search_placeholder">Soek projekte of plak URL</string>
     <string name="projects_find_search_hint">Soek projekte om op in te teken</string>
     <string name="projects_search_objects_placeholder">Soek objekte</string>

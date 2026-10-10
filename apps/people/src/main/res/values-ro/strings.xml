@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Ștergeți %1$s din contactele dvs.?</string>
     <string name="people_contacts_delete_friend_confirm">Ștergeți %1$s din contactele dvs.? Și prietenia se încheie.</string>
     <string name="people_contact_new_title">Contact nou</string>
-    <string name="people_contact_copy_title">Copiază contactul</string>
     <string name="people_contact_merge">Îmbină</string>
     <string name="people_contact_merge_title">Îmbină contactele</string>
     <string name="people_contact_edit_title">Editează contactul</string>
@@ -221,4 +220,5 @@
     <string name="people_contact_birthday_month">Lună</string>
     <string name="people_contact_birthday_year">An</string>
     <string name="people_contact_birthday_clear">Golește</string>
+    <string name="people_contact_create">Creează</string>
 </resources>

@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMau</string>
     <string name="crm_list_search">Chwilio</string>
     <string name="crm_list_find">Dod o hyd i CRMs</string>
-    <string name="crm_list_logout">Allgofnodi</string>
     <string name="crm_list_create">Creu CRM</string>
     <string name="crm_create_title">Creu CRM</string>
     <string name="crm_create_name">Enw</string>
@@ -131,7 +130,6 @@
     <string name="crm_list_search_placeholder">Chwilio CRM</string>
     <string name="crm_list_no_matching">Dim CRM yn cyfateb</string>
     <string name="crm_list_empty">Dim CRM eto</string>
-    <string name="crm_list_add_to_home">Ychwanegu at y sgrin gartref</string>
     <string name="crm_create_template">Templed</string>
     <string name="crm_find_search_placeholder">Chwilio CRM neu gludo URL</string>
     <string name="crm_find_search_hint">Chwilio am CRM i danysgrifio iddo</string>

@@ -67,8 +67,8 @@
     <string name="calendars_range">%1$s uksata %2$s ukakama</string>
     <string name="calendars_truncated">Taqpach uñacht\'ayañatakix sinti walja luräwinakawa. Juk\'a pacha ajllim.</string>
     <string name="calendars_list_empty">Jan luräwinaka</string>
-    <string name="calendars_list_nothing">Janiw kunas amtatäkiti. Machaqa luräwi luraañatakix limt\'am.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Jan títuloni)</string>
     <string name="calendars_status_cancelled">Jaytata</string>
     <string name="calendars_status_tentative">Jan chiqanchata</string>

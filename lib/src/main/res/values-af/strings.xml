@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Pasgemaak</string>
     <string name="color_picker_clear">Maak skoon</string>
     <string name="common_refresh">Verfris</string>
+    <string name="launcher_add_to_home">Voeg by tuisskerm</string>
 </resources>

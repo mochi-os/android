@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.toPixelMap
+import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -24,6 +25,7 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.onRoot
+import androidx.compose.ui.text.TextLayoutResult
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -87,6 +89,9 @@ class ListViewTest {
 
     /** The events there are, by day and title, and the bounds the server reports. */
     @Volatile private var events = listOf<Pair<LocalDate, String>>()
+    @Volatile private var length = 3_600L
+    /** The titles of the events that last all day. */
+    @Volatile private var allday = setOf<String>()
     @Volatile private var first = 0L
     @Volatile private var last = 0L
 
@@ -118,7 +123,7 @@ class ListViewTest {
                             return MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
                         }
                         val listed = events.filter { noon(it.first) in start until finish }.joinToString(",") { (day, title) ->
-                            """{"event": "e-$title", "calendar": "c1", "colour": "#ff0000", "summary": "$title", "start": ${noon(day)}, "finish": ${noon(day) + 3_600}}"""
+                            """{"event": "e-$title", "calendar": "c1", "colour": "#ff0000", "summary": "$title", "start": ${noon(day)}, "finish": ${noon(day) + length}${if (title in allday) ", \"allday\": true, \"date\": \"$day\"" else ""}}"""
                         }
                         ok("""{"instances": [$listed], "truncated": false}""")
                     }
@@ -217,10 +222,48 @@ class ListViewTest {
 
     /** [day]'s heading as the list writes it, its date read in [format]. */
     private fun heading(day: LocalDate, format: Format): String = context.getString(
-        R.string.calendars_list_heading,
+        if (format.preferences.dateFormat == DateFormat.YYYY_MM_DD) {
+            R.string.calendars_list_heading_iso
+        } else {
+            R.string.calendars_list_heading
+        },
         day.dayOfWeek.getDisplayName(TextStyle.SHORT, Locale.getDefault()),
         format.formatDate(day.atTime(12, 0).toEpochSecond(java.time.ZoneOffset.UTC), "UTC"),
     )
+
+    @Test
+    fun `the day the list opens on is headed even when empty, with nothing beneath its heading`() {
+        events = listOf(anchor.plusDays(1) to "Later")
+        first = noon(anchor.plusDays(1))
+        last = noon(anchor.plusDays(1))
+        val format = Format(UserPreferences())
+        show(format = format)
+        waitFor("Later")
+        val opened = rule.onNodeWithText(heading(anchor, format)).fetchSemanticsNode().boundsInRoot
+        val next = rule.onNodeWithText(heading(anchor.plusDays(1), format)).fetchSemanticsNode().boundsInRoot
+        assertTrue("opened $opened, next $next", next.top - opened.bottom < 2f)
+    }
+
+    @Test
+    fun `a year-first date leads its heading, with the short weekday after it`() {
+        events = listOf(anchor to "Item")
+        first = noon(anchor)
+        last = noon(anchor)
+        show()
+        waitFor("Item")
+        waitFor("2026-10-05 Mon")
+    }
+
+    @Test
+    @Config(qualifiers = "+ja")
+    fun `a language that brackets the weekday keeps its brackets after a year-first date`() {
+        events = listOf(anchor to "Item")
+        first = noon(anchor)
+        last = noon(anchor)
+        show()
+        waitFor("Item")
+        waitFor("2026-10-05(月)")
+    }
 
     @Test
     fun `a day is headed by its weekday and its date in the user's date format, once, with no date column`() {
@@ -236,6 +279,66 @@ class ListViewTest {
         // The date column wrote the day's number on its own beside the rows.
         val number = Format(UserPreferences()).formatNumber(anchor.dayOfMonth)
         assertEquals(0, rule.onAllNodesWithText(number).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `an event running into the next day writes each end's day as the headings write one, on lines of their own`() {
+        events = listOf(anchor to "Overnight")
+        length = 24 * 3_600L
+        first = noon(anchor)
+        last = noon(anchor)
+        val format = Format(UserPreferences(dateFormat = DateFormat.DD_SLASH_MM_YYYY))
+        show(format = format)
+        waitFor("Overnight")
+        val start = noon(anchor)
+        val finish = start + length
+        val time = "${heading(anchor, format)} ${format.formatTime(start)} –\n" +
+            "${heading(anchor.plusDays(1), format)} ${format.formatTime(finish)}"
+        assertTrue(time, time.contains("05/10/2026") && time.contains("06/10/2026"))
+        val node = rule.onAllNodesWithText(time, useUnmergedTree = true)[0].assertIsDisplayed().fetchSemanticsNode()
+        // Both ends drawn, not the first line alone.
+        val layouts = mutableListOf<TextLayoutResult>()
+        node.config[SemanticsActions.GetTextLayoutResult].action?.invoke(layouts)
+        assertEquals(2, layouts.first().lineCount)
+    }
+
+    @Test
+    fun `an all-day row is one line, its dot and its title, with no label standing in for a time`() {
+        val day = LocalDate.now(london).plusDays(2)
+        events = listOf(day to "Holiday", day to "Item 1")
+        allday = setOf("Holiday")
+        first = noon(day)
+        last = noon(day)
+        show(open = day)
+        waitFor("Holiday")
+        waitFor("Item 1")
+        assertEquals(0, rule.onAllNodesWithText(context.getString(R.string.calendars_event_allday)).fetchSemanticsNodes().size)
+        // How far below its row's top a text starts: the all-day title on the
+        // row's first line, as high as a timed row's time.
+        val rows = rule.onAllNodesWithTag("row").fetchSemanticsNodes().map { it.boundsInRoot }
+        val drop = { text: String ->
+            val bounds = rule.onNodeWithText(text, useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+            bounds.top - rows.first { it.top <= bounds.top && bounds.bottom <= it.bottom }.top
+        }
+        val time = Format(UserPreferences()).formatClockRange(noon(day), noon(day) + 3_600)
+        assertTrue("all day ${drop("Holiday")}, time ${drop(time)}", drop("Holiday") <= drop(time) + 1f)
+    }
+
+    @Test
+    fun `a row opens with its dot, time and marks on a line of their own and its title beneath, as the other views draw one`() {
+        val day = LocalDate.now(london).plusDays(2)
+        events = listOf(day to "Item 1")
+        first = noon(day)
+        last = noon(day)
+        show(open = day)
+        waitFor("Item 1")
+        val time = Format(UserPreferences()).formatClockRange(noon(day), noon(day) + 3_600)
+        // The row merges its words for a screen reader; each is measured on its own.
+        val clock = rule.onNodeWithText(time, useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        val title = rule.onNodeWithText("Item 1", useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        assertTrue("time $clock, title $title", clock.bottom <= title.top)
+        // The title starts where the dot does, and the time after the dot.
+        assertTrue("time $clock, title $title", title.left < clock.left)
     }
 
     @Test
@@ -327,6 +430,25 @@ class ListViewTest {
             rule.onNodeWithText(heading(day, format)).captureToImage().toPixelMap().let { it[it.width - 2, 2] }.toArgb()
         assertEquals(primary, band(today))
         assertTrue(band(today.plusDays(1)) != primary)
+    }
+
+    @Test
+    fun `today carries no line at the present moment`() {
+        val today = LocalDate.now(london)
+        events = listOf(today to "Now", today.plusDays(1) to "Later")
+        first = noon(today)
+        last = noon(today.plusDays(1))
+        show(open = today)
+        waitFor("Later")
+        val error = lightColorScheme().error.toArgb()
+        val pixels = rule.onRoot().captureToImage().toPixelMap()
+        var found = 0
+        for (x in 0 until pixels.width) {
+            for (y in 0 until pixels.height) {
+                if (pixels[x, y].toArgb() == error) found++
+            }
+        }
+        assertEquals(0, found)
     }
 
     @Test

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Închide căutarea</string>
     <string name="projects_list_search">Caută</string>
     <string name="projects_list_find">Găsește proiecte</string>
-    <string name="projects_list_logout">Deconectează-te</string>
     <string name="projects_list_create">Creează proiect</string>
     <string name="projects_create_title">Creează proiect</string>
     <string name="projects_create_name">Nume</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Crescător</string>
     <string name="projects_sort_direction_desc">Descrescător</string>
     <string name="projects_views_direction_desc">Descrescător</string>
-    <string name="projects_list_add_to_home">Adaugă pe ecranul de pornire</string>
     <string name="projects_search_objects_placeholder">Caută obiecte</string>
     <string name="projects_links_search_placeholder">Caută obiecte</string>
 

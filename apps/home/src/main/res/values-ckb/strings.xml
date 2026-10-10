@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">هیچ ئەپێک نەدۆزرایەوە</string>
+    <string name="home_menu_open">کردنەوەی لیست</string>
+    <string name="home_menu_user">بەکارهێنەر</string>
+    <string name="home_menu_empty">هیچ ئاگادارکردنەوەیەکی نەخوێندراوە نییە</string>
+    <string name="home_menu_view_all">هەمووی ببینە</string>
+    <string name="home_menu_no_topic">هێشتا هیچ تۆمارێکی بابەت نییە — دوای ئاگادارکردنەوەی داهاتوو دووبارە هەوڵ بدەرەوە.</string>
+    <string name="home_menu_manage_categories">بەڕێوەبردنی هاوپۆلەکان</string>
+</resources>

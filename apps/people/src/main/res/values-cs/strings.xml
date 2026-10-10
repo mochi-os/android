@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Smazat %1$s z vašich kontaktů?</string>
     <string name="people_contacts_delete_friend_confirm">Smazat %1$s z vašich kontaktů? Skončí také vaše přátelství.</string>
     <string name="people_contact_new_title">Nový kontakt</string>
-    <string name="people_contact_copy_title">Kopírovat kontakt</string>
     <string name="people_contact_merge">Sloučit</string>
     <string name="people_contact_merge_title">Sloučit kontakty</string>
     <string name="people_contact_edit_title">Upravit kontakt</string>
@@ -221,4 +220,5 @@
     <string name="people_contact_birthday_month">Měsíc</string>
     <string name="people_contact_birthday_year">Rok</string>
     <string name="people_contact_birthday_clear">Vymazat</string>
+    <string name="people_contact_create">Vytvořit</string>
 </resources>

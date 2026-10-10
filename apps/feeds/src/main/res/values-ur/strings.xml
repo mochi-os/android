@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">سورس ہٹائیں؟</string>
     <string name="feeds_suggested_credibility_accept">قبول کریں</string>
     <string name="feeds_rss_url_copied">RSS URL کلپ بورڈ پر کاپی ہو گیا</string>
-    <string name="feeds_logout">لاگ آؤٹ</string>
     <string name="feeds_ai_account_default">ڈیفالٹ اکاؤنٹ</string>
     <string name="feeds_ai_mode_off">غیر فعال</string>
     <string name="feeds_ai_mode_tag">ٹیگ کریں</string>

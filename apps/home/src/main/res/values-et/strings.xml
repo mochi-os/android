@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Rakendusi ei leitud</string>
+    <string name="home_menu_open">Ava menüü</string>
+    <string name="home_menu_user">Kasutaja</string>
+    <string name="home_menu_empty">Lugemata teavitusi pole</string>
+    <string name="home_menu_view_all">Vaata kõiki</string>
+    <string name="home_menu_no_topic">Teemakirjet veel pole — proovi uuesti pärast järgmist teavitust.</string>
+    <string name="home_menu_manage_categories">Halda kategooriaid</string>
+</resources>

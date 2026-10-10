@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Suche schließen</string>
     <string name="projects_list_search">Suchen</string>
     <string name="projects_list_find">Projekte finden</string>
-    <string name="projects_list_logout">Abmelden</string>
     <string name="projects_list_create">Projekt erstellen</string>
     <string name="projects_create_title">Projekt erstellen</string>
     <string name="projects_create_name">Name</string>
@@ -92,7 +91,7 @@
     <string name="projects_request_field_draft">Entwurf</string>
     <string name="projects_request_create_action">Erstellen</string>
     <string name="projects_diff_unified">Vereinheitlicht</string>
-    <string name="projects_diff_split">Teilen</string>
+    <string name="projects_diff_split">Nebeneinander</string>
     <string name="projects_diff_empty">Kein Diff verfügbar</string>
     <string name="projects_board_unset">[nicht gesetzt]</string>
     <string name="projects_board_new">Neu</string>
@@ -164,7 +163,6 @@
     <string name="projects_auth_mfa_unsupported">MFA wird in der mobilen App noch nicht unterstützt</string>
     <string name="projects_auth_enter_code_sent">Geben Sie den an %1$s gesendeten Code ein</string>
     <string name="projects_auth_create_identity">Identität erstellen</string>
-    <string name="projects_list_add_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="projects_search_objects_placeholder">Objekte suchen</string>
     <string name="projects_sort_field">Sortieren nach</string>
     <string name="projects_sort_direction_asc">Aufsteigend</string>

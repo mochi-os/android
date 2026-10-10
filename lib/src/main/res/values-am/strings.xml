@@ -325,4 +325,5 @@
     <string name="color_picker_custom">ብጁ</string>
     <string name="color_picker_clear">አጽዳ</string>
     <string name="common_refresh">አድስ</string>
+    <string name="launcher_add_to_home">ወደ መነሻ ማያ ገጽ ያክሉ</string>
 </resources>

@@ -19,7 +19,6 @@ import okhttp3.OkHttpClient
 import org.mochios.android.api.AssetHttpClient
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
-import org.mochios.android.launcher.LauncherTint
 import org.mochios.android.ui.components.RelativeAssetUrlMapper
 import org.mochios.android.ui.components.VideoFrameFetcher
 import org.mochios.android.i18n.LanguageStore
@@ -77,7 +76,6 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
     override fun onCreate() {
         super.onCreate()
         AppContext.set(this)
-        LauncherTint.watch(this)
         setupFeedsNotificationChannel(this)
         setupChatNotificationChannel(this)
         setupForumsNotificationChannel(this)

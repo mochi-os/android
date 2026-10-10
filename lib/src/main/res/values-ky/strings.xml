@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Ыңгайлаштырылган</string>
     <string name="color_picker_clear">Тазалоо</string>
     <string name="common_refresh">Жаңыртуу</string>
+    <string name="launcher_add_to_home">Башкы экранга кошуу</string>
 </resources>

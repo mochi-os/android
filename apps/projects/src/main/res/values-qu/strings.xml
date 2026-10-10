@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Maskayta wichq\'ay</string>
     <string name="projects_list_search">Maskay</string>
     <string name="projects_list_find">Proyectokunata tariy</string>
-    <string name="projects_list_logout">Lluqsiy</string>
     <string name="projects_list_create">Proyecto kamariy</string>
     <string name="projects_create_title">Proyecto kamariy</string>
     <string name="projects_create_name">Suti</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Wicharispa</string>
     <string name="projects_sort_direction_desc">Uraykuspa</string>
     <string name="projects_views_direction_desc">Uraykuspa</string>
-    <string name="projects_list_add_to_home">Wasi pantallaman yapay</string>
     <string name="projects_search_objects_placeholder">Objetokunata maskay</string>
     <string name="projects_links_search_placeholder">Objetokunata maskay</string>
 

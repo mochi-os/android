@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">فشل التحقق</string>
     <string name="forums_list_title">المنتديات</string>
     <string name="forums_list_find">البحث عن المنتديات</string>
-    <string name="forums_list_logout">تسجيل الخروج</string>
     <string name="forums_list_unsubscribe">إنهاء الاشتراك</string>
     <string name="forums_list_unsubscribe_title">إنهاء الاشتراك</string>
     <string name="forums_create_title">إنشاء منتدى</string>

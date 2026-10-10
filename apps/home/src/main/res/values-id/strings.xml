@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Tidak ada aplikasi yang ditemukan</string>
+    <string name="home_menu_open">Buka menu</string>
+    <string name="home_menu_user">Pengguna</string>
+    <string name="home_menu_empty">Tidak ada notifikasi yang belum dibaca</string>
+    <string name="home_menu_view_all">Lihat semua</string>
+    <string name="home_menu_no_topic">Belum ada catatan topik — coba lagi setelah notifikasi berikutnya.</string>
+    <string name="home_menu_manage_categories">Kelola kategori</string>
+</resources>

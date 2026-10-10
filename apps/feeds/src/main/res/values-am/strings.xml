@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">ምንጭ ይወገድ?</string>
     <string name="feeds_suggested_credibility_accept">ተቀበል</string>
     <string name="feeds_rss_url_copied">RSS ዩአርኤል ወደ ቅንጥብ ሰሌዳ ተቀድቷል</string>
-    <string name="feeds_logout">ውጣ</string>
     <string name="feeds_ai_account_default">ነባሪ መለያ</string>
     <string name="feeds_ai_mode_off">ተሰናክሏል</string>
     <string name="feeds_ai_mode_tag">መለያ መስጠት</string>

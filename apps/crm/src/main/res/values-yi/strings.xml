@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMס</string>
     <string name="crm_list_search">זוך</string>
     <string name="crm_list_find">געפֿינען CRMs</string>
-    <string name="crm_list_logout">אַרויסקומען</string>
     <string name="crm_list_create">באַשאַפֿן CRM</string>
     <string name="crm_create_title">באַשאַפֿן CRM</string>
     <string name="crm_create_name">נאָמען</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">אַרויפֿגייענדיק</string>
     <string name="crm_sort_direction_desc">אַראָפּגייענדיק</string>
     <string name="crm_views_direction_desc">אַראָפּגייענדיק</string>
-    <string name="crm_list_add_to_home">לייגן צו היים עקראַן</string>
     <string name="crm_search_objects_placeholder">זוכן אָביעקטן</string>
     <string name="crm_links_search_placeholder">זוכן אָביעקטן</string>
 

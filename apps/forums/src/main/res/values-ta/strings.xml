@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">சரிபார்ப்பு தோல்வியடைந்தது</string>
     <string name="forums_list_title">ஃபோரங்கள்</string>
     <string name="forums_list_find">ஃபோரங்களைக் கண்டுபிடி</string>
-    <string name="forums_list_logout">வெளியேறு</string>
     <string name="forums_list_unsubscribe">சந்தா நீக்கு</string>
     <string name="forums_list_unsubscribe_title">சந்தா நீக்கு</string>
     <string name="forums_create_title">மன்றம் உருவாக்கு</string>

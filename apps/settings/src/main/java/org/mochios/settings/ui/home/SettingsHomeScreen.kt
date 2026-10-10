@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Article
-import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.AdminPanelSettings
 import androidx.compose.material.icons.filled.Description
@@ -74,7 +73,6 @@ fun SettingsHomeScreen(
     onOpenDomains: () -> Unit,
     onOpenDocument: (String) -> Unit,
     onOpenSystemDocuments: () -> Unit,
-    onLogout: () -> Unit,
 ) {
     var showAbout by remember { mutableStateOf(false) }
     Scaffold(
@@ -303,19 +301,6 @@ fun SettingsHomeScreen(
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
-            }
-            item {
-                ListItem(
-                    modifier = Modifier.clickable(onClick = onLogout),
-                    headlineContent = { Text(stringResource(R.string.settings_home_logout)) },
-                    leadingContent = {
-                        Icon(
-                            Icons.AutoMirrored.Filled.Logout,
-                            contentDescription = null
-                        )
-                    },
-                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
-                )
             }
         }
     }

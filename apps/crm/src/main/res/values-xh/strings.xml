@@ -3,7 +3,6 @@
     <string name="crm_list_title">Ii-CRM</string>
     <string name="crm_list_search">Khangela</string>
     <string name="crm_list_find">Fumana ii-CRM</string>
-    <string name="crm_list_logout">Phuma</string>
     <string name="crm_list_create">Yenza i-CRM</string>
     <string name="crm_create_title">Yenza i-CRM</string>
     <string name="crm_create_name">Igama</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Ukunyuka</string>
     <string name="crm_sort_direction_desc">Ukwehla</string>
     <string name="crm_views_direction_desc">Ukwehla</string>
-    <string name="crm_list_add_to_home">Yongeza kwiskrini yasekhaya</string>
     <string name="crm_search_objects_placeholder">Khangela izinto</string>
     <string name="crm_links_search_placeholder">Khangela izinto</string>
 

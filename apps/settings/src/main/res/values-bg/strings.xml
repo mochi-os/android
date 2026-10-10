@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Настройки</string>
-    <string name="settings_home_logout">Изход</string>
     <string name="settings_home_account">Акаунт</string>
     <string name="settings_home_preferences">Предпочитания</string>
     <string name="settings_home_display">Показване</string>

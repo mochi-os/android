@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Kohandatud</string>
     <string name="color_picker_clear">Tühjenda</string>
     <string name="common_refresh">Värskenda</string>
+    <string name="launcher_add_to_home">Lisa avakuvale</string>
 </resources>

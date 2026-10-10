@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Paramètres</string>
-    <string name="settings_home_logout">Se déconnecter</string>
     <string name="settings_home_account">Compte</string>
     <string name="settings_home_preferences">Préférences</string>
     <string name="settings_home_display">Affichage</string>

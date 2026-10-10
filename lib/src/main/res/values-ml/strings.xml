@@ -325,4 +325,5 @@
     <string name="color_picker_custom">ഇഷ്ടാനുസൃതം</string>
     <string name="color_picker_clear">മായ്ക്കുക</string>
     <string name="common_refresh">പുതുക്കുക</string>
+    <string name="launcher_add_to_home">ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക</string>
 </resources>

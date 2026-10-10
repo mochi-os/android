@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">搜索</string>
     <string name="crm_list_find">查找 CRM</string>
-    <string name="crm_list_logout">退出登录</string>
     <string name="crm_list_create">创建 CRM</string>
     <string name="crm_create_title">创建 CRM</string>
     <string name="crm_create_name">名称</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">升序</string>
     <string name="crm_sort_direction_desc">降序</string>
     <string name="crm_views_direction_desc">降序</string>
-    <string name="crm_list_add_to_home">添加到主屏幕</string>
     <string name="crm_search_objects_placeholder">搜索对象</string>
     <string name="crm_links_search_placeholder">搜索对象</string>
 

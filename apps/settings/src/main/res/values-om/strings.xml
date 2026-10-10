@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Qindaa\'inoota</string>
-    <string name="settings_home_logout">Ba\'i</string>
     <string name="settings_home_account">Akkaawuntii</string>
     <string name="settings_home_preferences">Filannoowwan</string>
     <string name="settings_home_display">Agarsiisa</string>

@@ -14,7 +14,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -50,7 +49,6 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.LastViewedStore
@@ -77,7 +75,6 @@ import org.mochios.android.R as MochiR
 fun GoGameListScreen(
     navController: NavController,
     gameId: String,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
     viewModel: GoGameListViewModel = hiltViewModel(),
@@ -88,7 +85,6 @@ fun GoGameListScreen(
     val drawerScope = rememberCoroutineScope()
     val context = LocalContext.current
     val selectedGameId = gameId.takeUnless { id -> id == LastViewedStore.ALL }.orEmpty()
-    var showAbout by remember { mutableStateOf(false) }
 
     LaunchedEffect(selectedGameId) {
         if (selectedGameId.isNotEmpty()) {
@@ -149,14 +145,6 @@ fun GoGameListScreen(
                     navController.navigate(GoApp.NEW_GAME)
                 },
             )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
         },
     ) {
         if (selectedGameId.isNotEmpty()) {
@@ -209,9 +197,6 @@ fun GoGameListScreen(
                 }
             }
         }
-    }
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

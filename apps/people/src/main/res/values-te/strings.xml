@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s ను మీ పరిచయాల నుండి తొలగించాలా?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ను మీ పరిచయాల నుండి తొలగించాలా? మీ స్నేహం కూడా ముగుస్తుంది.</string>
     <string name="people_contact_new_title">కొత్త పరిచయం</string>
-    <string name="people_contact_copy_title">పరిచయాన్ని కాపీ చేయండి</string>
     <string name="people_contact_merge">విలీనం చేయండి</string>
     <string name="people_contact_merge_title">పరిచయాలను విలీనం చేయండి</string>
     <string name="people_contact_edit_title">పరిచయాన్ని సవరించండి</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">నెల</string>
     <string name="people_contact_birthday_year">సంవత్సరం</string>
     <string name="people_contact_birthday_clear">క్లియర్ చేయండి</string>
+    <string name="people_contact_create">సృష్టించండి</string>
 </resources>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="words_list_logout">Cerrá sesión</string>
     <string name="words_new_game_add_friends">Agregá amigos</string>
     <string name="words_detail_status_you_win">¡Ganaste!</string>
     <string name="words_detail_status_you_resigned">Te rendiste</string>

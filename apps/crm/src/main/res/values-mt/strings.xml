@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMs</string>
     <string name="crm_list_search">Fittex</string>
     <string name="crm_list_find">Sib CRMs</string>
-    <string name="crm_list_logout">Oħroġ</string>
     <string name="crm_list_create">Oħloq CRM</string>
     <string name="crm_create_title">Oħloq CRM</string>
     <string name="crm_create_name">Isem</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Axxendenti</string>
     <string name="crm_sort_direction_desc">Dixxendenti</string>
     <string name="crm_views_direction_desc">Dixxendenti</string>
-    <string name="crm_list_add_to_home">Żid mal-iskrin tad-dar</string>
     <string name="crm_search_objects_placeholder">Fittex oġġetti</string>
     <string name="crm_links_search_placeholder">Fittex oġġetti</string>
 

@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">શોધો</string>
     <string name="crm_list_find">CRMs શોધો</string>
-    <string name="crm_list_logout">લૉગ આઉટ કરો</string>
     <string name="crm_list_create">CRM બનાવો</string>
     <string name="crm_create_title">CRM બનાવો</string>
     <string name="crm_create_name">નામ</string>
@@ -127,7 +126,6 @@
     <string name="crm_more">વધુ</string>
     <string name="crm_comment_send">મોકલો</string>
     <string name="crm_field_position_body">સામગ્રી</string>
-    <string name="crm_list_add_to_home">હોમ સ્ક્રીન પર ઉમેરો</string>
     <string name="crm_sort_field">દ્વારા સૉર્ટ કરો</string>
     <string name="crm_views_move_up">ઉપર ખસેડો</string>
     <string name="crm_views_move_down">નીચે ખસેડો</string>

@@ -67,8 +67,8 @@
     <string name="calendars_range">Од %1$s до %2$s</string>
     <string name="calendars_truncated">Превише догађаја да би се сви приказали. Изаберите краћи опсег.</string>
     <string name="calendars_list_empty">Нема догађаја</string>
-    <string name="calendars_list_nothing">Ништа није планирано. Додирните да направите догађај.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Без наслова)</string>
     <string name="calendars_status_cancelled">Отказано</string>
     <string name="calendars_status_tentative">Непотврђено</string>

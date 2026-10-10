@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Pechar busca</string>
     <string name="projects_list_search">Buscar</string>
     <string name="projects_list_find">Buscar proxectos</string>
-    <string name="projects_list_logout">Pechar sesión</string>
     <string name="projects_list_create">Crear proxecto</string>
     <string name="projects_create_title">Crear proxecto</string>
     <string name="projects_create_name">Nome</string>
@@ -164,7 +163,6 @@
     <string name="projects_auth_mfa_unsupported">MFA aínda non é compatible na aplicación móbil</string>
     <string name="projects_auth_enter_code_sent">Introduce o código enviado a %1$s</string>
     <string name="projects_auth_create_identity">Crea a túa identidade</string>
-    <string name="projects_list_add_to_home">Engadir á pantalla de inicio</string>
     <string name="projects_sort_field">Ordenar por</string>
     <string name="projects_views_move_up">Mover arriba</string>
     <string name="projects_views_move_down">Mover abaixo</string>

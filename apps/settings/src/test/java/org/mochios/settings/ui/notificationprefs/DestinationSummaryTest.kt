@@ -19,10 +19,10 @@ import org.junit.Assert.assertFalse
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.notifications.DestinationRow
+import org.mochios.android.notifications.NotificationCategory
 import org.mochios.settings.api.DestinationFeed
-import org.mochios.settings.api.DestinationRow
 import org.mochios.settings.api.DestinationsAvailable
-import org.mochios.settings.api.NotifCategory
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
@@ -45,7 +45,7 @@ class DestinationSummaryTest {
     private fun card(destinations: List<DestinationRow>) {
         rule.setContent {
             CategoryCard(
-                category = NotifCategory(id = "a", label = "Wichtig", destinations = destinations),
+                category = NotificationCategory(id = "a", label = "Wichtig", destinations = destinations),
                 available = available,
                 onEdit = {},
                 onDelete = {},

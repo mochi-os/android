@@ -273,4 +273,5 @@
     <string name="access_remove">Quitá</string>
     <string name="access_remove_title">¿Quitás el acceso?</string>
     <string name="common_refresh">Actualizá</string>
+    <string name="launcher_add_to_home">Agregar a la pantalla de inicio</string>
 </resources>

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">داخستنی گەڕان</string>
     <string name="projects_list_search">گەڕان</string>
     <string name="projects_list_find">دۆزینەوەی پڕۆژەکان</string>
-    <string name="projects_list_logout">دەرچوون</string>
     <string name="projects_list_create">دروستکردنی پڕۆژە</string>
     <string name="projects_create_title">دروستکردنی پڕۆژە</string>
     <string name="projects_create_name">ناو</string>
@@ -242,7 +241,6 @@
     <string name="projects_auth_mfa_unsupported">MFA لە ئەپی مۆبایلدا هێشتا پشتگیری نەکراوە</string>
     <string name="projects_auth_enter_code_sent">ئەو کۆدە بنووسە کە بۆ %1$s نێردراوە</string>
     <string name="projects_auth_create_identity">ناسنامەکەت دروست بکە</string>
-    <string name="projects_list_add_to_home">زیادکردن بۆ شاشەی سەرەکی</string>
     <string name="projects_search_objects_placeholder">گەڕانی بابەتەکان</string>
     <string name="projects_sort_field">ڕیزکردن بەپێی</string>
     <string name="projects_sort_direction_asc">سەرکەوتوو</string>

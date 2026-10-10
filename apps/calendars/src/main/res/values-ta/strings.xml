@@ -67,8 +67,8 @@
     <string name="calendars_range">%1$s முதல் %2$s வரை</string>
     <string name="calendars_truncated">அனைத்தையும் காட்ட முடியாத அளவுக்கு நிகழ்வுகள் அதிகம். குறுகிய வரம்பைத் தேர்ந்தெடுக்கவும்.</string>
     <string name="calendars_list_empty">நிகழ்வுகள் இல்லை</string>
-    <string name="calendars_list_nothing">எதுவும் திட்டமிடப்படவில்லை. நிகழ்வை உருவாக்க தட்டவும்.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(தலைப்பு இல்லை)</string>
     <string name="calendars_status_cancelled">ரத்துசெய்யப்பட்டது</string>
     <string name="calendars_status_tentative">தற்காலிகம்</string>

@@ -25,7 +25,6 @@ import okhttp3.CookieJar
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.account.MochiAccount
-import org.mochios.android.launcher.LauncherTint
 import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
 import org.mochios.android.util.isServerOrigin
@@ -85,17 +84,12 @@ class SessionManager @Inject constructor(
         ThemeAnchors(hue, chroma, hueBg)
     }
 
-    /**
-     * Stores the theme's OKLCH anchors for `MochiTheme`, and colours the
-     * launcher icons that follow the theme to match.
-     */
     suspend fun saveTheme(hue: Float, chroma: Float, hueBg: Float) {
         dataStore.edit { prefs ->
             prefs[KEY_THEME_HUE] = hue.toString()
             prefs[KEY_THEME_CHROMA] = chroma.toString()
             prefs[KEY_THEME_HUE_BG] = hueBg.toString()
         }
-        LauncherTint.apply(context, hue, chroma)
     }
 
     val serverUrl: Flow<String> = dataStore.data.map { prefs ->
@@ -191,16 +185,11 @@ class SessionManager @Inject constructor(
         }
     }
 
-    /**
-     * Forgets the session on logout. The theme goes with it, so the app draws
-     * in the default blue again, and the launcher icons go back to blue too.
-     */
     suspend fun clearAll() {
         val identity = dataStore.data.first()[KEY_BOUND_IDENTITY]
         dataStore.edit { prefs ->
             prefs.clear()
         }
-        LauncherTint.reset(context)
         // Drop the in-memory cookies too, or the stale `session` rides the next
         // request and the rolling Set-Cookie re-persists what was just cleared.
         cookieStore.clear()

@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">အရင်းအမြစ် ဖယ်ရှားမလား?</string>
     <string name="feeds_suggested_credibility_accept">လက်ခံမည်</string>
     <string name="feeds_rss_url_copied">RSS URL ကို ကလစ်ဘုတ် သို့ ကူးယူပြီးပါပြီ</string>
-    <string name="feeds_logout">ထွက်</string>
     <string name="feeds_ai_account_default">မူရင်း အကောင့်</string>
     <string name="feeds_ai_mode_off">ပိတ်ထားသည်</string>
     <string name="feeds_ai_mode_tag">တက်ဂ်</string>

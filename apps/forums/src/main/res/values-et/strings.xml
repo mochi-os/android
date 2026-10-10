@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Kontrollimine ebaõnnestus</string>
     <string name="forums_list_title">Foorumid</string>
     <string name="forums_list_find">Otsi foorumeid</string>
-    <string name="forums_list_logout">Logi välja</string>
     <string name="forums_list_unsubscribe">Loobu tellimusest</string>
     <string name="forums_list_unsubscribe_title">Loobu tellimusest</string>
     <string name="forums_create_title">Loo foorum</string>

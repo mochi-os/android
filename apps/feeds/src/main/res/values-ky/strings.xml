@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Булакты алып саласызбы?</string>
     <string name="feeds_suggested_credibility_accept">Кабыл алуу</string>
     <string name="feeds_rss_url_copied">RSS URL алмашуу буферине көчүрүлдү</string>
-    <string name="feeds_logout">Чыгуу</string>
     <string name="feeds_ai_account_default">Демейки аккаунт</string>
     <string name="feeds_ai_mode_off">Өчүрүлгөн</string>
     <string name="feeds_ai_mode_tag">Тегдөө</string>

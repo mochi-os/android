@@ -328,4 +328,5 @@
     <string name="color_picker_custom">Saincheaptha</string>
     <string name="color_picker_clear">Glan</string>
     <string name="common_refresh">Athnuaigh</string>
+    <string name="launcher_add_to_home">Cuir leis an scáileán baile</string>
 </resources>

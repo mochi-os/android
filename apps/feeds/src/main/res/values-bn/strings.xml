@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">উৎস সরাবেন?</string>
     <string name="feeds_suggested_credibility_accept">গ্রহণ করুন</string>
     <string name="feeds_rss_url_copied">RSS URL ক্লিপবোর্ডে কপি করা হয়েছে</string>
-    <string name="feeds_logout">লগ আউট করুন</string>
     <string name="feeds_ai_account_default">ডিফল্ট অ্যাকাউন্ট</string>
     <string name="feeds_ai_mode_off">নিষ্ক্রিয়</string>
     <string name="feeds_ai_mode_tag">ট্যাগ</string>

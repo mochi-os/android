@@ -18,6 +18,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
 import org.mochios.android.auth.AuthRepository
+import org.mochios.android.launcher.launcherComponentFor
 import org.mochios.android.sync.SyncSignal
 import org.mochios.android.util.isServerOrigin
 import org.unifiedpush.android.connector.MessagingReceiver

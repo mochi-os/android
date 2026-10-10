@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM:t</string>
     <string name="crm_list_search">Haku</string>
     <string name="crm_list_find">Etsi CRM:iä</string>
-    <string name="crm_list_logout">Kirjaudu ulos</string>
     <string name="crm_list_create">Luo CRM</string>
     <string name="crm_create_title">Luo CRM</string>
     <string name="crm_create_name">Nimi</string>
@@ -127,7 +126,6 @@
     <string name="crm_more">Lisää</string>
     <string name="crm_comment_send">Lähetä</string>
     <string name="crm_field_position_body">Sisältö</string>
-    <string name="crm_list_add_to_home">Lisää aloitusnäytölle</string>
     <string name="crm_sort_field">Lajitteluperuste</string>
     <string name="crm_views_move_up">Siirrä ylös</string>
     <string name="crm_views_move_down">Siirrä alas</string>

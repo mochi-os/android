@@ -258,6 +258,24 @@ class CalendarFlowTest {
         assertEquals(expected, Instant.ofEpochSecond(model.creation()).atZone(london).toLocalDate())
     }
 
+    @Test
+    fun `a new event in the list lands on the day the list has scrolled to, until the anchor changes, and only in the list`() {
+        val model = model()
+        val day = { seconds: Long -> Instant.ofEpochSecond(seconds).atZone(london).toLocalDate() }
+        val today = LocalDate.now(london)
+        model.view(CalendarsSection.LIST)
+        model.anchor(today.minusDays(10))
+        model.listed(today.plusDays(40))
+        assertEquals(today.plusDays(40), day(model.creation()))
+        // A new anchor lets the scrolled day go.
+        model.anchor(today.minusDays(20))
+        assertEquals(today.minusDays(20), day(model.creation()))
+        // Another view has no day atop it, and goes on the day last chosen.
+        model.listed(today.plusDays(40))
+        model.view(CalendarsSection.MONTH)
+        assertEquals(today.minusDays(20), day(model.creation()))
+    }
+
     // ---- search, views and refreshing ----
 
     @Test

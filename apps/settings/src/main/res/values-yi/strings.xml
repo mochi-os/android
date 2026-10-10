@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">אײַנשטעלונגען</string>
-    <string name="settings_home_logout">אַרויסקומען</string>
     <string name="settings_home_account">קאָנטע</string>
     <string name="settings_home_preferences">פֿאָרצוגן</string>
     <string name="settings_home_display">עקראַן</string>

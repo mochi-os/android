@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Xats</string>
     <string name="chat_list_search">Cerca</string>
-    <string name="chat_list_logout">Tanca la sessió</string>
     <string name="chat_list_new">Xat nou</string>
     <string name="chat_new_title">Xat nou</string>
     <string name="chat_new_name">Nom del grup</string>

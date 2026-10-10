@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Chaturi</string>
     <string name="chat_list_search">Caută</string>
-    <string name="chat_list_logout">Deconectează-te</string>
     <string name="chat_list_new">Conversație nouă</string>
     <string name="chat_new_title">Conversație nouă</string>
     <string name="chat_new_name">Numele grupului</string>

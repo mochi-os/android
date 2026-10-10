@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Klepeti</string>
     <string name="chat_list_search">Iskanje</string>
-    <string name="chat_list_logout">Odjava</string>
     <string name="chat_list_new">Nov pogovor</string>
     <string name="chat_new_title">Nov pogovor</string>
     <string name="chat_new_name">Ime skupine</string>

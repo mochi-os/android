@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Níor aimsíodh aon aip</string>
+    <string name="home_menu_open">Oscail roghchlár</string>
+    <string name="home_menu_user">Úsáideoir</string>
+    <string name="home_menu_empty">Níl aon fhógra gan léamh</string>
+    <string name="home_menu_view_all">Féach ar gach ceann</string>
+    <string name="home_menu_no_topic">Níl aon taifead ábhair fós — bain triail eile as tar éis an chéad fhógra eile.</string>
+    <string name="home_menu_manage_categories">Bainistigh catagóirí</string>
+</resources>

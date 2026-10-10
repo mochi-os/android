@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s لە پەیوەندییەکانت بسڕدرێتەوە؟</string>
     <string name="people_contacts_delete_friend_confirm">%1$s لە پەیوەندییەکانت بسڕدرێتەوە؟ هاوڕێیەتییەکەشتان کۆتایی دێت.</string>
     <string name="people_contact_new_title">پەیوەندی نوێ</string>
-    <string name="people_contact_copy_title">کۆپیکردنی پەیوەندی</string>
     <string name="people_contact_merge">تێکەڵکردن</string>
     <string name="people_contact_merge_title">تێکەڵکردنی پەیوەندییەکان</string>
     <string name="people_contact_edit_title">دەستکاری پەیوەندی</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">مانگ</string>
     <string name="people_contact_birthday_year">ساڵ</string>
     <string name="people_contact_birthday_clear">پاککردنەوە</string>
+    <string name="people_contact_create">دروستکردن</string>
 </resources>

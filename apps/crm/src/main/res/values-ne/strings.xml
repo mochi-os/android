@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM हरू</string>
     <string name="crm_list_search">खोज्नुहोस्</string>
     <string name="crm_list_find">CRM खोज्नुहोस्</string>
-    <string name="crm_list_logout">लग आउट</string>
     <string name="crm_list_create">CRM सिर्जना गर्नुहोस्</string>
     <string name="crm_create_title">CRM सिर्जना गर्नुहोस्</string>
     <string name="crm_create_name">नाम</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">बढ्दो क्रम</string>
     <string name="crm_sort_direction_desc">घट्दो क्रम</string>
     <string name="crm_views_direction_desc">घट्दो क्रम</string>
-    <string name="crm_list_add_to_home">गृह स्क्रिनमा थप्नुहोस्</string>
     <string name="crm_search_objects_placeholder">वस्तुहरू खोज्नुहोस्</string>
     <string name="crm_links_search_placeholder">वस्तुहरू खोज्नुहोस्</string>
 

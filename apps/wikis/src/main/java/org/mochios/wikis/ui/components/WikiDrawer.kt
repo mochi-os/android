@@ -8,7 +8,6 @@ package org.mochios.wikis.ui.components
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.MenuBook
 import androidx.compose.material.icons.outlined.Add
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.DrawerState
 import androidx.compose.runtime.Composable
@@ -29,7 +28,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.DrawerTitle
@@ -99,7 +97,6 @@ fun WikiDrawer(
     content: @Composable () -> Unit,
 ) {
     val scope = rememberCoroutineScope()
-    var showAbout by remember { mutableStateOf(false) }
     val items = remember(wikis) {
         wikis.map { wiki ->
             DrawerItem(
@@ -144,21 +141,10 @@ fun WikiDrawer(
                     onCreate()
                 },
             )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    scope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
         },
         content = content,
     )
 
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
 }
 
 /**

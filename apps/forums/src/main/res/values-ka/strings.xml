@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">დადასტურება ვერ მოხერხდა</string>
     <string name="forums_list_title">ფორუმები</string>
     <string name="forums_list_find">ფორუმების ძიება</string>
-    <string name="forums_list_logout">გასვლა</string>
     <string name="forums_list_unsubscribe">გამოწერის შეწყვეტა</string>
     <string name="forums_list_unsubscribe_title">გამოწერის შეწყვეტა</string>
     <string name="forums_create_title">ფორუმის შექმნა</string>

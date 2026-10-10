@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">La verificació ha fallat</string>
     <string name="forums_list_title">Fòrums</string>
     <string name="forums_list_find">Cerca fòrums</string>
-    <string name="forums_list_logout">Tanca la sessió</string>
     <string name="forums_list_unsubscribe">Dona\'t de baixa</string>
     <string name="forums_list_unsubscribe_title">Dona\'t de baixa</string>
     <string name="forums_create_title">Crea un fòrum</string>

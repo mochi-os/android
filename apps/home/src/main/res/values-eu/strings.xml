@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Ez da aplikaziorik aurkitu</string>
+    <string name="home_menu_open">Ireki menua</string>
+    <string name="home_menu_user">Erabiltzailea</string>
+    <string name="home_menu_empty">Irakurri gabeko jakinarazpenik ez</string>
+    <string name="home_menu_view_all">Ikusi guztiak</string>
+    <string name="home_menu_no_topic">Oraindik gairik ez — saiatu berriro hurrengo jakinarazpenaren ondoren.</string>
+    <string name="home_menu_manage_categories">Kudeatu kategoriak</string>
+</resources>

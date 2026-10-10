@@ -92,7 +92,6 @@ object WikisApp {
 
 fun NavGraphBuilder.wikisNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {

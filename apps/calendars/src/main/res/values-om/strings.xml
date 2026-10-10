@@ -67,8 +67,8 @@
     <string name="calendars_range">%1$s hanga %2$s</string>
     <string name="calendars_truncated">Taateewwan hunda agarsiisuuf baay\'eedha. Yeroo gabaabaa filadhu.</string>
     <string name="calendars_list_empty">Taateewwan hin jiran</string>
-    <string name="calendars_list_nothing">Wanti karoorfame hin jiru. Taatee uumuuf tuqi.</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Mata duree hin qabu)</string>
     <string name="calendars_status_cancelled">Haqame</string>
     <string name="calendars_status_tentative">Hin mirkanoofne</string>

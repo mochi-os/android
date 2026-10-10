@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">ค้นหา</string>
     <string name="crm_list_find">ค้นหา CRM</string>
-    <string name="crm_list_logout">ออกจากระบบ</string>
     <string name="crm_list_create">สร้าง CRM</string>
     <string name="crm_create_title">สร้าง CRM</string>
     <string name="crm_create_name">ชื่อ</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">จากน้อยไปมาก</string>
     <string name="crm_sort_direction_desc">จากมากไปน้อย</string>
     <string name="crm_views_direction_desc">จากมากไปน้อย</string>
-    <string name="crm_list_add_to_home">เพิ่มไปยังหน้าจอหลัก</string>
     <string name="crm_search_objects_placeholder">ค้นหาวัตถุ</string>
     <string name="crm_links_search_placeholder">ค้นหาวัตถุ</string>
 

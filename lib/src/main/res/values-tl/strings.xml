@@ -325,4 +325,5 @@
     <string name="color_picker_custom">Pasadya</string>
     <string name="color_picker_clear">Burahin</string>
     <string name="common_refresh">I-refresh</string>
+    <string name="launcher_add_to_home">Idagdag sa home screen</string>
 </resources>

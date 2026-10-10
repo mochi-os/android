@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Alisin ang source?</string>
     <string name="feeds_suggested_credibility_accept">Tanggapin</string>
     <string name="feeds_rss_url_copied">Nakopya ang RSS URL sa clipboard</string>
-    <string name="feeds_logout">Mag-log out</string>
     <string name="feeds_ai_account_default">Default na account</string>
     <string name="feeds_ai_mode_off">Naka-disable</string>
     <string name="feeds_ai_mode_tag">Mag-tag</string>

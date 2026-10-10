@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Не се пронајдени апликации</string>
+    <string name="home_menu_open">Отвори мени</string>
+    <string name="home_menu_user">Корисник</string>
+    <string name="home_menu_empty">Нема непрочитани известувања</string>
+    <string name="home_menu_view_all">Прикажи ги сите</string>
+    <string name="home_menu_no_topic">Сè уште нема запис за темата — обидете се повторно по следното известување.</string>
+    <string name="home_menu_manage_categories">Управувај со категориите</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">کوئی ایپس نہیں ملیں</string>
+    <string name="home_menu_open">مینو کھولیں</string>
+    <string name="home_menu_user">صارف</string>
+    <string name="home_menu_empty">کوئی غیر پڑھی notifications نہیں</string>
+    <string name="home_menu_view_all">سب دیکھیں</string>
+    <string name="home_menu_no_topic">ابھی تک کوئی ٹاپک ریکارڈ نہیں — اگلی اطلاع کے بعد دوبارہ کوشش کریں۔</string>
+    <string name="home_menu_manage_categories">زمروں کا نظم کریں</string>
+</resources>

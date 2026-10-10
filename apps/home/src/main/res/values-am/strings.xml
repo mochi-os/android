@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">ምንም መተግበሪያዎች አልተገኙም</string>
+    <string name="home_menu_open">ምናሌ ክፈት</string>
+    <string name="home_menu_user">ተጠቃሚ</string>
+    <string name="home_menu_empty">ያልተነበቡ ማሳወቂያዎች የሉም</string>
+    <string name="home_menu_view_all">ሁሉንም ይመልከቱ</string>
+    <string name="home_menu_no_topic">እስካሁን የርዕስ መዝገብ የለም — ከቀጣዩ ማሳወቂያ በኋላ እንደገና ይሞክሩ።</string>
+    <string name="home_menu_manage_categories">ምድቦችን ያስተዳድሩ</string>
+</resources>

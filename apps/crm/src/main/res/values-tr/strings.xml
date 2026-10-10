@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM\'ler</string>
     <string name="crm_list_search">Ara</string>
     <string name="crm_list_find">CRM bul</string>
-    <string name="crm_list_logout">Oturumu kapat</string>
     <string name="crm_list_create">CRM oluştur</string>
     <string name="crm_create_title">CRM oluştur</string>
     <string name="crm_create_name">Ad</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Artan</string>
     <string name="crm_sort_direction_desc">Azalan</string>
     <string name="crm_views_direction_desc">Azalan</string>
-    <string name="crm_list_add_to_home">Ana ekrana ekle</string>
     <string name="crm_search_objects_placeholder">Nesneleri ara</string>
     <string name="crm_links_search_placeholder">Nesneleri ara</string>
 

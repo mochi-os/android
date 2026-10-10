@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">යෙදුම් කිසිවක් හමු නොවීය</string>
+    <string name="home_menu_open">මෙනුව විවෘත කරන්න</string>
+    <string name="home_menu_user">පරිශීලකයා</string>
+    <string name="home_menu_empty">නොකියවූ දැනුම්දීම් නැත</string>
+    <string name="home_menu_view_all">සියල්ල බලන්න</string>
+    <string name="home_menu_no_topic">තවම මාතෘකා වාර්තාවක් නැත — ඊළඟ දැනුම්දීමෙන් පසු නැවත උත්සාහ කරන්න.</string>
+    <string name="home_menu_manage_categories">ප්‍රවර්ග කළමනාකරණය කරන්න</string>
+</resources>

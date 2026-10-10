@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Fjern kilde?</string>
     <string name="feeds_suggested_credibility_accept">Accepter</string>
     <string name="feeds_rss_url_copied">RSS-URL kopieret til udklipsholderen</string>
-    <string name="feeds_logout">Log ud</string>
     <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Deaktiveret</string>
     <string name="feeds_ai_mode_tag">Tilføj tags</string>

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">शोध बंद करा</string>
     <string name="projects_list_search">शोधा</string>
     <string name="projects_list_find">प्रोजेक्ट्स शोधा</string>
-    <string name="projects_list_logout">लॉग आउट करा</string>
     <string name="projects_list_create">प्रकल्प तयार करा</string>
     <string name="projects_create_title">प्रकल्प तयार करा</string>
     <string name="projects_create_name">नाव</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">चढत्या क्रमाने</string>
     <string name="projects_sort_direction_desc">उतरत्या क्रमाने</string>
     <string name="projects_views_direction_desc">उतरत्या क्रमाने</string>
-    <string name="projects_list_add_to_home">होम स्क्रीनवर जोडा</string>
     <string name="projects_search_objects_placeholder">वस्तू शोधा</string>
     <string name="projects_links_search_placeholder">वस्तू शोधा</string>
 

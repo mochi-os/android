@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">యాప్‌లు ఏవీ కనుగొనబడలేదు</string>
+    <string name="home_menu_open">మెనుని ఓపెన్ చేయండి</string>
+    <string name="home_menu_user">యూజర్</string>
+    <string name="home_menu_empty">చదవని నోటిఫికేషన్‌లు లేవు</string>
+    <string name="home_menu_view_all">అన్నీ వీక్షించండి</string>
+    <string name="home_menu_no_topic">ఇంకా టాపిక్ రికార్డ్ లేదు — తదుపరి నోటిఫికేషన్ తర్వాత మళ్లీ ప్రయత్నించండి.</string>
+    <string name="home_menu_manage_categories">వర్గాలను నిర్వహించండి</string>
+</resources>

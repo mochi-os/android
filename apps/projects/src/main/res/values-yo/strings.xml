@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Ti àwárí</string>
     <string name="projects_list_search">Wá</string>
     <string name="projects_list_find">Wa àwọn iṣẹ́</string>
-    <string name="projects_list_logout">Jáde</string>
     <string name="projects_list_create">Dá iṣẹ́ àkànṣe</string>
     <string name="projects_create_title">Dá iṣẹ́ àkànṣe</string>
     <string name="projects_create_name">Orúkọ</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Gòkè</string>
     <string name="projects_sort_direction_desc">Sọkalẹ̀</string>
     <string name="projects_views_direction_desc">Sọkalẹ̀</string>
-    <string name="projects_list_add_to_home">Fi sii loju iboju ile</string>
     <string name="projects_search_objects_placeholder">Wa awọn ohun</string>
     <string name="projects_links_search_placeholder">Wa awọn ohun</string>
 

@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">سيٽنگون</string>
-    <string name="settings_home_logout">لاگ آئوٽ</string>
     <string name="settings_home_account">اڪائونٽ</string>
     <string name="settings_home_preferences">ترجيحون</string>
     <string name="settings_home_display">ڊسپلي</string>

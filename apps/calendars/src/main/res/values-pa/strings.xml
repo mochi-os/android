@@ -67,8 +67,8 @@
     <string name="calendars_range">%1$s ਤੋਂ %2$s</string>
     <string name="calendars_truncated">ਸਾਰੇ ਦਿਖਾਉਣ ਲਈ ਬਹੁਤ ਜ਼ਿਆਦਾ ਇਵੈਂਟ ਹਨ। ਛੋਟੀ ਸੀਮਾ ਚੁਣੋ।</string>
     <string name="calendars_list_empty">ਕੋਈ ਇਵੈਂਟ ਨਹੀਂ</string>
-    <string name="calendars_list_nothing">ਕੁਝ ਵੀ ਯੋਜਨਾਬੱਧ ਨਹੀਂ ਹੈ। ਇਵੈਂਟ ਬਣਾਉਣ ਲਈ ਟੈਪ ਕਰੋ।</string>
     <string name="calendars_list_heading">%1$s, %2$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(ਕੋਈ ਸਿਰਲੇਖ ਨਹੀਂ)</string>
     <string name="calendars_status_cancelled">ਰੱਦ</string>
     <string name="calendars_status_tentative">ਆਰਜ਼ੀ</string>

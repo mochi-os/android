@@ -2,7 +2,6 @@
 <resources>
     <string name="words_list_title">Palabras</string>
     <string name="words_list_menu">Menú</string>
-    <string name="words_list_logout">Pechar sesión</string>
     <string name="words_sidebar_completed">Completado</string>
     <string name="words_sidebar_new_game">Nova partida</string>
     <string name="words_new_game_title">Nova partida</string>

@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMها</string>
     <string name="crm_list_search">جست‌وجو</string>
     <string name="crm_list_find">یافتن CRMها</string>
-    <string name="crm_list_logout">خروج</string>
     <string name="crm_list_create">ساخت CRM</string>
     <string name="crm_create_title">ساخت CRM</string>
     <string name="crm_create_name">نام</string>
@@ -127,7 +126,6 @@
     <string name="crm_more">بیشتر</string>
     <string name="crm_comment_send">ارسال</string>
     <string name="crm_field_position_body">بدنه</string>
-    <string name="crm_list_add_to_home">افزودن به صفحه اصلی</string>
     <string name="crm_sort_field">مرتب‌سازی بر اساس</string>
     <string name="crm_views_move_up">انتقال به بالا</string>
     <string name="crm_views_move_down">انتقال به پایین</string>

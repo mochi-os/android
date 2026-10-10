@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-дер</string>
     <string name="crm_list_search">Іздеу</string>
     <string name="crm_list_find">CRM табу</string>
-    <string name="crm_list_logout">Шығу</string>
     <string name="crm_list_create">CRM құру</string>
     <string name="crm_create_title">CRM құру</string>
     <string name="crm_create_name">Атау</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">Өсу реті</string>
     <string name="crm_sort_direction_desc">Кему реті</string>
     <string name="crm_views_direction_desc">Кему реті</string>
-    <string name="crm_list_add_to_home">Негізгі экранға қосу</string>
     <string name="crm_search_objects_placeholder">Объектілерді іздеу</string>
     <string name="crm_links_search_placeholder">Объектілерді іздеу</string>
 

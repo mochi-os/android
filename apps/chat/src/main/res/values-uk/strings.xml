@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Чати</string>
     <string name="chat_list_search">Пошук</string>
-    <string name="chat_list_logout">Вийти</string>
     <string name="chat_list_new">Новий чат</string>
     <string name="chat_new_title">Новий чат</string>
     <string name="chat_new_name">Назва групи</string>

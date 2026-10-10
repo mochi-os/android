@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Verifiering misslyckades</string>
     <string name="forums_list_title">Forum</string>
     <string name="forums_list_find">Hitta forum</string>
-    <string name="forums_list_logout">Logga ut</string>
     <string name="forums_list_unsubscribe">Avsluta prenumeration</string>
     <string name="forums_list_unsubscribe_title">Avsluta prenumeration</string>
     <string name="forums_create_title">Skapa forum</string>

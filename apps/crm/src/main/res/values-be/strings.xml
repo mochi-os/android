@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">Пошук</string>
     <string name="crm_list_find">Знайсці CRM</string>
-    <string name="crm_list_logout">Выйсці</string>
     <string name="crm_list_create">Стварыць CRM</string>
     <string name="crm_create_title">Стварыць CRM</string>
     <string name="crm_create_name">Назва</string>
@@ -131,7 +130,6 @@
     <string name="crm_list_search_placeholder">Пошук CRM</string>
     <string name="crm_list_no_matching">Няма адпаведных CRM</string>
     <string name="crm_list_empty">Пакуль няма CRM</string>
-    <string name="crm_list_add_to_home">Дадаць на галоўны экран</string>
     <string name="crm_create_template">Шаблон</string>
     <string name="crm_find_search_placeholder">Шукаць CRM або ўставіць URL</string>
     <string name="crm_find_search_hint">Знайдзіце CRM, на які трэба падпісацца</string>

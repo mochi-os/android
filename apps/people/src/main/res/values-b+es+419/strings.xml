@@ -166,4 +166,5 @@
     <string name="people_contact_birthday_month">Mes</string>
     <string name="people_contact_birthday_year">Año</string>
     <string name="people_contact_birthday_clear">Borrar</string>
+    <string name="people_contact_create">Crear</string>
 </resources>

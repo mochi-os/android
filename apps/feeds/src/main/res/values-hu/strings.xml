@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Eltávolítja a forrást?</string>
     <string name="feeds_suggested_credibility_accept">Elfogadás</string>
     <string name="feeds_rss_url_copied">RSS URL vágólapra másolva</string>
-    <string name="feeds_logout">Kijelentkezés</string>
     <string name="feeds_ai_account_default">Alapértelmezett fiók</string>
     <string name="feeds_ai_mode_off">Letiltva</string>
     <string name="feeds_ai_mode_tag">Címkézés</string>

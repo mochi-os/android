@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Isara ang paghahanap</string>
     <string name="projects_list_search">Maghanap</string>
     <string name="projects_list_find">Maghanap ng mga project</string>
-    <string name="projects_list_logout">Mag-log out</string>
     <string name="projects_list_create">Gumawa ng project</string>
     <string name="projects_create_title">Gumawa ng project</string>
     <string name="projects_create_name">Pangalan</string>
@@ -91,7 +90,7 @@
     <string name="projects_request_field_description">Paglalarawan</string>
     <string name="projects_request_field_draft">Draft</string>
     <string name="projects_request_create_action">Gumawa</string>
-    <string name="projects_diff_unified">Unified</string>
+    <string name="projects_diff_unified">Pinag-isa</string>
     <string name="projects_diff_split">Hatiin</string>
     <string name="projects_diff_empty">Walang available na diff</string>
     <string name="projects_board_unset">[hindi naitakda]</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Pataas</string>
     <string name="projects_sort_direction_desc">Pababa</string>
     <string name="projects_views_direction_desc">Pababa</string>
-    <string name="projects_list_add_to_home">Idagdag sa home screen</string>
     <string name="projects_search_objects_placeholder">Maghanap ng mga bagay</string>
     <string name="projects_links_search_placeholder">Maghanap ng mga bagay</string>
 

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Aizvērt meklēšanu</string>
     <string name="projects_list_search">Meklēt</string>
     <string name="projects_list_find">Atrast projektus</string>
-    <string name="projects_list_logout">Izrakstīties</string>
     <string name="projects_list_create">Izveidot projektu</string>
     <string name="projects_create_title">Izveidot projektu</string>
     <string name="projects_create_name">Nosaukums</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Augošā secībā</string>
     <string name="projects_sort_direction_desc">Dilstošā secībā</string>
     <string name="projects_views_direction_desc">Dilstošā secībā</string>
-    <string name="projects_list_add_to_home">Pievienot sākuma ekrānam</string>
     <string name="projects_search_objects_placeholder">Meklēt objektus</string>
     <string name="projects_links_search_placeholder">Meklēt objektus</string>
 

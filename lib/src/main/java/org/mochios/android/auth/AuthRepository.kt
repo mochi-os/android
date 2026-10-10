@@ -148,7 +148,7 @@ class AuthRepository @Inject constructor(
             }
         }
         return runCatching {
-            val response = tokenApi.fetchToken(TokenRequest(app)).unwrapRaw()
+            val response = tokenApi.fetchToken(TokenRequest(Token.path(app))).unwrapRaw()
             sessionManager.saveToken(app, response.token)
             response.token
         }

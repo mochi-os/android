@@ -226,8 +226,7 @@ private const val LANDING = "landing"
 
 /**
  * The day and week views: an all-day band above a scrolling time grid of
- * [days] columns. Non-working hours are shaded, today carries the
- * current-time line, which moves on with the clock, and occurrences that
+ * [days] columns. Non-working hours are shaded, and occurrences that
  * overlap share the column's width. A single column draws each block on one
  * line; the week's narrow columns stack the time and marks beneath the
  * title. The band is always there; an all-day occurrence is one bar across
@@ -285,8 +284,7 @@ fun TimeGrid(
     val user = viewModel.timezone()
     val zones = viewModel.zones()
     val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
-    // The current-time line, and which occurrences are over, only have to be
-    // right to the minute.
+    // Which occurrences are over only has to be right to the minute.
     val now by produceState(clock()) {
         while (true) {
             delay(30_000)
@@ -891,7 +889,6 @@ private fun DayColumn(
 ) {
     val format = LocalFormat.current
     val shading = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
-    val line = MaterialTheme.colorScheme.error
     val working = state.preferences.days.contains(day.dayOfWeek.value % 7)
     val zones = viewModel.zones()
     val hourPx = with(LocalDensity.current) { HOUR.toPx() }
@@ -980,29 +977,6 @@ private fun DayColumn(
                     .border(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.6f), corners())
                     .zIndex(1f)
                     .testTag("creating"),
-            )
-        }
-        if (day == today) {
-            val time = Instant.ofEpochSecond(now).atZone(viewModel.timezone())
-            val fraction = time.hour + time.minute / 60f
-            Box(
-                modifier = Modifier
-                    .offset(y = HOUR * fraction)
-                    .fillMaxWidth()
-                    .height(2.dp)
-                    .background(line)
-                    .zIndex(2f)
-                    .testTag("now"),
-            )
-            // The dot at the line's start, half over the column's edge.
-            Box(
-                modifier = Modifier
-                    .offset(x = (-4).dp, y = HOUR * fraction - 3.dp)
-                    .size(8.dp)
-                    .clip(CircleShape)
-                    .background(line)
-                    .zIndex(2f)
-                    .testTag("now-dot"),
             )
         }
     }
@@ -1367,26 +1341,42 @@ internal fun Glyph(mark: Mark, size: Dp) {
  * The line of a two-line entry that is not its title, muted: its [Dot],
  * [time] when there is one, then the marks, all from the start of the line,
  * the dot as far from the time as a one-line entry's is from its title.
+ * [wrapped] lets the time run onto the lines it holds, as a span across days
+ * does in the list, with the dot and the marks level with its first.
  */
 @Composable
-fun Detail(instance: Instance, time: String?, style: TextStyle, modifier: Modifier = Modifier, backwards: Boolean = false) {
+fun Detail(
+    instance: Instance,
+    time: String?,
+    style: TextStyle,
+    modifier: Modifier = Modifier,
+    backwards: Boolean = false,
+    wrapped: Boolean = false,
+) {
+    val line = leading(style)
+    // Centred on the time's first line, when it may have more than one.
+    val level = { size: Dp -> if (wrapped) Modifier.padding(top = ((line - size) / 2).coerceAtLeast(0.dp)) else Modifier }
     Row(
         modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically,
+        verticalAlignment = if (wrapped) Alignment.Top else Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GAP),
     ) {
-        Dot(instance)
+        Box(modifier = level(DOT)) {
+            Dot(instance)
+        }
         if (time != null) {
             Text(
                 text = time,
                 style = style,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                softWrap = false,
+                maxLines = if (wrapped) Int.MAX_VALUE else 1,
+                softWrap = wrapped,
             )
         }
         for (mark in marks(instance, backwards, stacked = true)) {
-            Glyph(mark, GLYPH)
+            Box(modifier = level(GLYPH)) {
+                Glyph(mark, GLYPH)
+            }
         }
     }
 }

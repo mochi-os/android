@@ -7,9 +7,9 @@ package org.mochios.settings.ui.notificationprefs
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
+import org.mochios.android.notifications.DestinationRow
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
-import org.mochios.settings.api.DestinationRow
 import org.mochios.settings.api.DestinationsAvailable
 
 /**

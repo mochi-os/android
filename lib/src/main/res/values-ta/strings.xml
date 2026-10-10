@@ -325,4 +325,5 @@
     <string name="color_picker_custom">தனிப்பயன்</string>
     <string name="color_picker_clear">அழி</string>
     <string name="common_refresh">புதுப்பி</string>
+    <string name="launcher_add_to_home">முகப்புத் திரையில் சேர்</string>
 </resources>

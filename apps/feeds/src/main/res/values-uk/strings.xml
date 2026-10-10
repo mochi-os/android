@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Видалити джерело?</string>
     <string name="feeds_suggested_credibility_accept">Прийняти</string>
     <string name="feeds_rss_url_copied">RSS URL скопійовано в буфер обміну</string>
-    <string name="feeds_logout">Вийти</string>
     <string name="feeds_ai_account_default">Обліковий запис за замовчуванням</string>
     <string name="feeds_ai_mode_off">Вимкнено</string>
     <string name="feeds_ai_mode_tag">Тегувати</string>

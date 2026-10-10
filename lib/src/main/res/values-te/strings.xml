@@ -325,4 +325,5 @@
     <string name="color_picker_custom">అనుకూల</string>
     <string name="color_picker_clear">క్లియర్ చేయండి</string>
     <string name="common_refresh">రిఫ్రెష్</string>
+    <string name="launcher_add_to_home">హోమ్ స్క్రీన్‌కు జోడించండి</string>
 </resources>

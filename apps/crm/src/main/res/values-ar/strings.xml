@@ -3,7 +3,6 @@
     <string name="crm_list_title">أنظمة CRM</string>
     <string name="crm_list_search">بحث</string>
     <string name="crm_list_find">البحث عن أنظمة CRM</string>
-    <string name="crm_list_logout">تسجيل الخروج</string>
     <string name="crm_list_create">إنشاء CRM</string>
     <string name="crm_create_title">إنشاء CRM</string>
     <string name="crm_create_name">الاسم</string>
@@ -131,7 +130,6 @@
     <string name="crm_list_search_placeholder">ابحث في نظام إدارة علاقات العملاء</string>
     <string name="crm_list_no_matching">لا يوجد نظام إدارة علاقات عملاء مطابق</string>
     <string name="crm_list_empty">لا يوجد نظام إدارة علاقات عملاء بعد</string>
-    <string name="crm_list_add_to_home">أضف إلى الشاشة الرئيسية</string>
     <string name="crm_create_template">قالب</string>
     <string name="crm_find_search_placeholder">ابحث في نظام إدارة علاقات العملاء أو الصق الرابط</string>
     <string name="crm_find_search_hint">ابحث عن نظام إدارة علاقات عملاء للاشتراك فيه</string>

@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">การยืนยันไม่สำเร็จ</string>
     <string name="forums_list_title">ฟอรัม</string>
     <string name="forums_list_find">ค้นหาฟอรัม</string>
-    <string name="forums_list_logout">ออกจากระบบ</string>
     <string name="forums_list_unsubscribe">เลิกติดตาม</string>
     <string name="forums_list_unsubscribe_title">เลิกติดตาม</string>
     <string name="forums_create_title">สร้างฟอรัม</string>

@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Verifica non riuscita</string>
     <string name="forums_list_title">Forum</string>
     <string name="forums_list_find">Trova forum</string>
-    <string name="forums_list_logout">Esci</string>
     <string name="forums_list_unsubscribe">Disiscriviti</string>
     <string name="forums_list_unsubscribe_title">Disiscriviti</string>
     <string name="forums_create_title">Crea forum</string>

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Mbyll kërkimin</string>
     <string name="projects_list_search">Kërko</string>
     <string name="projects_list_find">Gjej projekte</string>
-    <string name="projects_list_logout">Dilni</string>
     <string name="projects_list_create">Krijo projekt</string>
     <string name="projects_create_title">Krijo projekt</string>
     <string name="projects_create_name">Emri</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Në rritje</string>
     <string name="projects_sort_direction_desc">Në zbritje</string>
     <string name="projects_views_direction_desc">Në zbritje</string>
-    <string name="projects_list_add_to_home">Shto në ekranin kryesor</string>
     <string name="projects_search_objects_placeholder">Kërko objekte</string>
     <string name="projects_links_search_placeholder">Kërko objekte</string>
 

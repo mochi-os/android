@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">ಯಾವುದೇ ಆಪ್‌ಗಳು ಸಿಗಲಿಲ್ಲ</string>
+    <string name="home_menu_open">ಮೆನು ತೆರೆಯಿರಿ</string>
+    <string name="home_menu_user">ಬಳಕೆದಾರ</string>
+    <string name="home_menu_empty">ಯಾವುದೇ ಓದದ ನೋಟಿಫಿಕೇಶನ್‌ಗಳಿಲ್ಲ</string>
+    <string name="home_menu_view_all">ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ</string>
+    <string name="home_menu_no_topic">ಇನ್ನೂ ಯಾವುದೇ ಟಾಪಿಕ್ ರೆಕಾರ್ಡ್ ಇಲ್ಲ — ಮುಂದಿನ ನೋಟಿಫಿಕೇಶನ್ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="home_menu_manage_categories">ವರ್ಗಗಳನ್ನು ನಿರ್ವಹಿಸಿ</string>
+</resources>

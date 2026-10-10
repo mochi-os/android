@@ -325,4 +325,5 @@
     <string name="color_picker_custom">تایبەت</string>
     <string name="color_picker_clear">پاککردنەوە</string>
     <string name="common_refresh">نوێکردنەوە</string>
+    <string name="launcher_add_to_home">زیادکردن بۆ شاشەی سەرەکی</string>
 </resources>

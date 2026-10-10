@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">האימות נכשל</string>
     <string name="forums_list_title">פורומים</string>
     <string name="forums_list_find">חפש פורומים</string>
-    <string name="forums_list_logout">התנתק</string>
     <string name="forums_list_unsubscribe">בטל הרשמה</string>
     <string name="forums_list_unsubscribe_title">בטל הרשמה</string>
     <string name="forums_create_title">צור פורום</string>

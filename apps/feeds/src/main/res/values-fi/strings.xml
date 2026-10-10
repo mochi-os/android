@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Poistetaanko lähde?</string>
     <string name="feeds_suggested_credibility_accept">Hyväksy</string>
     <string name="feeds_rss_url_copied">RSS-URL kopioitu leikepöydälle</string>
-    <string name="feeds_logout">Kirjaudu ulos</string>
     <string name="feeds_ai_account_default">Oletustili</string>
     <string name="feeds_ai_mode_off">Pois käytöstä</string>
     <string name="feeds_ai_mode_tag">Lisää tunnisteet</string>

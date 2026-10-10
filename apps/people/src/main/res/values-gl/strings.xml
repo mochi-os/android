@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Queres eliminar a %1$s dos teus contactos?</string>
     <string name="people_contacts_delete_friend_confirm">Queres eliminar a %1$s dos teus contactos? A vosa amizade tamén remata.</string>
     <string name="people_contact_new_title">Novo contacto</string>
-    <string name="people_contact_copy_title">Copiar o contacto</string>
     <string name="people_contact_merge">Combinar</string>
     <string name="people_contact_merge_title">Combinar contactos</string>
     <string name="people_contact_edit_title">Editar o contacto</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Mes</string>
     <string name="people_contact_birthday_year">Ano</string>
     <string name="people_contact_birthday_clear">Borrar</string>
+    <string name="people_contact_create">Crear</string>
 </resources>

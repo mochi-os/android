@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Tu app nehatin dîtin</string>
+    <string name="home_menu_open">Menûyê veke</string>
+    <string name="home_menu_user">Bikarhêner</string>
+    <string name="home_menu_empty">Tu agahdariyên nexwendî tune</string>
+    <string name="home_menu_view_all">Hemûyan bibîne</string>
+    <string name="home_menu_no_topic">Hêj tu tomarê mijarê tune — piştî agahdariya pêştir dîsa biceribîne.</string>
+    <string name="home_menu_manage_categories">Kategorîyan bi rêve bibe</string>
+</resources>

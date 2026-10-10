@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Ingen apper funnet</string>
+    <string name="home_menu_open">Åpne meny</string>
+    <string name="home_menu_user">Bruker</string>
+    <string name="home_menu_empty">Ingen uleste varsler</string>
+    <string name="home_menu_view_all">Vis alle</string>
+    <string name="home_menu_no_topic">Ingen emnepost ennå – prøv igjen etter neste varsel.</string>
+    <string name="home_menu_manage_categories">Administrer kategorier</string>
+</resources>

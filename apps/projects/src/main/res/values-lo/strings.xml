@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">ປິດການຄົ້ນຫາ</string>
     <string name="projects_list_search">ຄົ້ນຫາ</string>
     <string name="projects_list_find">ຄົ້ນຫາໂປຣເຈັກ</string>
-    <string name="projects_list_logout">ອອກຈາກລະບົບ</string>
     <string name="projects_list_create">ສ້າງໂຄງການ</string>
     <string name="projects_create_title">ສ້າງໂຄງການ</string>
     <string name="projects_create_name">ຊື່</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">ຈາກໜ້ອຍຫາຫຼາຍ</string>
     <string name="projects_sort_direction_desc">ຈາກຫຼາຍຫາໜ້ອຍ</string>
     <string name="projects_views_direction_desc">ຈາກຫຼາຍຫາໜ້ອຍ</string>
-    <string name="projects_list_add_to_home">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
     <string name="projects_search_objects_placeholder">ຄົ້ນຫາວັດຖຸ</string>
     <string name="projects_links_search_placeholder">ຄົ້ນຫາວັດຖຸ</string>
 

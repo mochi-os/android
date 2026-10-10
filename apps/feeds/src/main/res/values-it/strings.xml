@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Rimuovere la sorgente?</string>
     <string name="feeds_suggested_credibility_accept">Accetta</string>
     <string name="feeds_rss_url_copied">URL RSS copiato negli appunti</string>
-    <string name="feeds_logout">Esci</string>
     <string name="feeds_ai_account_default">Account predefinito</string>
     <string name="feeds_ai_mode_off">Disattivato</string>
     <string name="feeds_ai_mode_tag">Assegna tag</string>

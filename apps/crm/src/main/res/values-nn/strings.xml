@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-ar</string>
     <string name="crm_list_search">Søk</string>
     <string name="crm_list_find">Finn CRM-ar</string>
-    <string name="crm_list_logout">Logg ut</string>
     <string name="crm_list_create">Opprett CRM</string>
     <string name="crm_create_title">Opprett CRM</string>
     <string name="crm_create_name">Namn</string>
@@ -137,7 +136,6 @@
     <string name="crm_views_direction_asc">Stigande</string>
     <string name="crm_sort_direction_desc">Fallande</string>
     <string name="crm_views_direction_desc">Fallande</string>
-    <string name="crm_list_add_to_home">Legg til på startskjermen</string>
     <string name="crm_search_objects_placeholder">Søk objekt</string>
     <string name="crm_links_search_placeholder">Søk objekt</string>
 

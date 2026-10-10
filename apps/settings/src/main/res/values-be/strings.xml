@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Налады</string>
-    <string name="settings_home_logout">Выйсці</string>
     <string name="settings_home_account">Уліковы запіс</string>
     <string name="settings_home_preferences">Налады</string>
     <string name="settings_home_display">Адлюстраванне</string>

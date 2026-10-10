@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Aappiin hin argamne</string>
+    <string name="home_menu_open">Menyuu bani</string>
+    <string name="home_menu_user">Fayyadamaa</string>
+    <string name="home_menu_empty">Beeksisoonni hin dubbifamne hin jiran</string>
+    <string name="home_menu_view_all">Hunda daawwadhu</string>
+    <string name="home_menu_no_topic">Hanga ammaatti galmeen mata duree hin jiru — beeksisa itti aanu booda irra deebi\'ii yaali.</string>
+    <string name="home_menu_manage_categories">Ramaddilee bulchi</string>
+</resources>

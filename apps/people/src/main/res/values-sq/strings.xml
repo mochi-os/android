@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Të fshihet %1$s nga kontaktet tuaja?</string>
     <string name="people_contacts_delete_friend_confirm">Të fshihet %1$s nga kontaktet tuaja? Përfundon edhe miqësia juaj.</string>
     <string name="people_contact_new_title">Kontakt i ri</string>
-    <string name="people_contact_copy_title">Kopjo kontaktin</string>
     <string name="people_contact_merge">Bashko</string>
     <string name="people_contact_merge_title">Bashko kontaktet</string>
     <string name="people_contact_edit_title">Modifiko kontaktin</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Muaji</string>
     <string name="people_contact_birthday_year">Viti</string>
     <string name="people_contact_birthday_clear">Pastro</string>
+    <string name="people_contact_create">Krijo</string>
 </resources>

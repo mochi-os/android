@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s ਨੂੰ ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਵਿੱਚੋਂ ਮਿਟਾਉਣਾ ਹੈ?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ਨੂੰ ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਵਿੱਚੋਂ ਮਿਟਾਉਣਾ ਹੈ? ਤੁਹਾਡੀ ਦੋਸਤੀ ਵੀ ਖ਼ਤਮ ਹੋ ਜਾਵੇਗੀ।</string>
     <string name="people_contact_new_title">ਨਵਾਂ ਸੰਪਰਕ</string>
-    <string name="people_contact_copy_title">ਸੰਪਰਕ ਕਾਪੀ ਕਰੋ</string>
     <string name="people_contact_merge">ਮਿਲਾਓ</string>
     <string name="people_contact_merge_title">ਸੰਪਰਕ ਮਿਲਾਓ</string>
     <string name="people_contact_edit_title">ਸੰਪਰਕ ਸੰਪਾਦਿਤ ਕਰੋ</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">ਮਹੀਨਾ</string>
     <string name="people_contact_birthday_year">ਸਾਲ</string>
     <string name="people_contact_birthday_clear">ਸਾਫ਼ ਕਰੋ</string>
+    <string name="people_contact_create">ਬਣਾਓ</string>
 </resources>

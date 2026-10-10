@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-കൾ</string>
     <string name="crm_list_search">തിരയുക</string>
     <string name="crm_list_find">CRM-കൾ കണ്ടെത്തുക</string>
-    <string name="crm_list_logout">ലോഗ് ഔട്ട്</string>
     <string name="crm_list_create">CRM സൃഷ്ടിക്കുക</string>
     <string name="crm_create_title">CRM സൃഷ്ടിക്കുക</string>
     <string name="crm_create_name">പേര്</string>
@@ -138,7 +137,6 @@
     <string name="crm_views_direction_asc">ആരോഹണ ക്രമം</string>
     <string name="crm_sort_direction_desc">അവരോഹണ ക്രമം</string>
     <string name="crm_views_direction_desc">അവരോഹണ ക്രമം</string>
-    <string name="crm_list_add_to_home">ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക</string>
     <string name="crm_search_objects_placeholder">ഒബ്ജക്റ്റുകൾ തിരയുക</string>
     <string name="crm_links_search_placeholder">ഒബ്ജക്റ്റുകൾ തിരയുക</string>
 

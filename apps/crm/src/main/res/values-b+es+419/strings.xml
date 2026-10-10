@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMs</string>
     <string name="crm_list_search">Buscar</string>
     <string name="crm_list_find">Buscar CRMs</string>
-    <string name="crm_list_logout">Cerrar sesión</string>
     <string name="crm_list_create">Crear CRM</string>
     <string name="crm_create_title">Crear CRM</string>
     <string name="crm_create_name">Nombre</string>
@@ -123,7 +122,6 @@
     <string name="crm_more">Más</string>
     <string name="crm_comment_send">Enviar</string>
     <string name="crm_field_position_body">Cuerpo</string>
-    <string name="crm_list_add_to_home">Agregar a la pantalla de inicio</string>
     <string name="crm_sort_field">Ordenar por</string>
     <string name="crm_views_move_up">Mover arriba</string>
     <string name="crm_views_move_down">Mover abajo</string>

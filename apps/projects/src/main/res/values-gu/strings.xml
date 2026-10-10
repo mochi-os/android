@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">શોધ બંધ કરો</string>
     <string name="projects_list_search">શોધો</string>
     <string name="projects_list_find">પ્રોજેક્ટ્સ શોધો</string>
-    <string name="projects_list_logout">લૉગ આઉટ કરો</string>
     <string name="projects_list_create">પ્રોજેક્ટ બનાવો</string>
     <string name="projects_create_title">પ્રોજેક્ટ બનાવો</string>
     <string name="projects_create_name">નામ</string>
@@ -164,7 +163,6 @@
     <string name="projects_auth_mfa_unsupported">મોબાઇલ ઍપમાં MFA હજુ સમર્થિત નથી</string>
     <string name="projects_auth_enter_code_sent">%1$s પર મોકલેલો કોડ દાખલ કરો</string>
     <string name="projects_auth_create_identity">તમારી ઓળખ બનાવો</string>
-    <string name="projects_list_add_to_home">હોમ સ્ક્રીન પર ઉમેરો</string>
     <string name="projects_sort_field">દ્વારા સૉર્ટ કરો</string>
     <string name="projects_views_move_up">ઉપર ખસેડો</string>
     <string name="projects_views_move_down">નીચે ખસેડો</string>

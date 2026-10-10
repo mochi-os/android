@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Nenašli sa žiadne aplikácie</string>
+    <string name="home_menu_open">Otvoriť menu</string>
+    <string name="home_menu_user">Používateľ</string>
+    <string name="home_menu_empty">Žiadne neprečítané notifikácie</string>
+    <string name="home_menu_view_all">Zobraziť všetko</string>
+    <string name="home_menu_no_topic">Zatiaľ žiadny záznam témy — skúste to znova po ďalšej notifikácii.</string>
+    <string name="home_menu_manage_categories">Spravovať kategórie</string>
+</resources>

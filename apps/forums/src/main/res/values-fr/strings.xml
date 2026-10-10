@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Échec de la vérification</string>
     <string name="forums_list_title">Forums</string>
     <string name="forums_list_find">Trouver des forums</string>
-    <string name="forums_list_logout">Se déconnecter</string>
     <string name="forums_list_unsubscribe">Se désabonner</string>
     <string name="forums_list_unsubscribe_title">Se désabonner</string>
     <string name="forums_create_title">Créer le forum</string>

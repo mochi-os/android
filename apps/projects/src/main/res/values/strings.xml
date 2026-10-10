@@ -20,11 +20,9 @@
     <string name="projects_list_search">Search</string>
     <string name="projects_list_find">Find projects</string>
     <string name="projects_list_more">More</string>
-    <string name="projects_list_logout">Log out</string>
     <string name="projects_list_create">Create project</string>
     <string name="projects_list_no_matching">No matching projects</string>
     <string name="projects_list_empty">No projects yet</string>
-    <string name="projects_list_add_to_home">Add to home screen</string>
 
     <!-- Create project -->
     <string name="projects_create_title">Create project</string>

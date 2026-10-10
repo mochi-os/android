@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">关闭搜索</string>
     <string name="projects_list_search">搜索</string>
     <string name="projects_list_find">查找项目</string>
-    <string name="projects_list_logout">退出登录</string>
     <string name="projects_list_create">创建项目</string>
     <string name="projects_create_title">创建项目</string>
     <string name="projects_create_name">名称</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">升序</string>
     <string name="projects_sort_direction_desc">降序</string>
     <string name="projects_views_direction_desc">降序</string>
-    <string name="projects_list_add_to_home">添加到主屏幕</string>
     <string name="projects_search_objects_placeholder">搜索对象</string>
     <string name="projects_links_search_placeholder">搜索对象</string>
 

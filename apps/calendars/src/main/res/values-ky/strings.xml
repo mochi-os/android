@@ -67,8 +67,8 @@
     <string name="calendars_range">%1$s - %2$s</string>
     <string name="calendars_truncated">Баарын көрсөтүү үчүн иш-чаралар өтө көп. Кыскараак аралыкты тандаңыз.</string>
     <string name="calendars_list_empty">Иш-чаралар жок</string>
-    <string name="calendars_list_nothing">Эч нерсе пландалган жок. Иш-чара түзүү үчүн басыңыз.</string>
     <string name="calendars_list_heading">%2$s, %1$s</string>
+    <string name="calendars_list_heading_iso">%2$s %1$s</string>
     <string name="calendars_untitled">(Аталышы жок)</string>
     <string name="calendars_status_cancelled">Жокко чыгарылды</string>
     <string name="calendars_status_tentative">Алдын ала</string>

@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">ക്രമീകരണങ്ങൾ</string>
-    <string name="settings_home_logout">ലോഗ് ഔട്ട്</string>
     <string name="settings_home_account">അക്കൗണ്ട്</string>
     <string name="settings_home_preferences">മുൻഗണനകൾ</string>
     <string name="settings_home_display">പ്രദർശനം</string>

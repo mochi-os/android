@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">Apps jan jikxatasiti</string>
+    <string name="home_menu_open">Menú jist\'arma</string>
+    <string name="home_menu_user">Apnaqiri</string>
+    <string name="home_menu_empty">Janiw jan ullt\'at yatiyawinakax utjkiti</string>
+    <string name="home_menu_view_all">Taqi uñjaña</string>
+    <string name="home_menu_no_topic">Janïr tema registro utjkiti — jutïr yatiyawit qhipat wasitat yant\'am.</string>
+    <string name="home_menu_manage_categories">Kastanaka apnaqaña</string>
+</resources>

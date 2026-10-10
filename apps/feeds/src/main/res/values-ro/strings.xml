@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Elimini sursa?</string>
     <string name="feeds_suggested_credibility_accept">Acceptă</string>
     <string name="feeds_rss_url_copied">URL RSS copiat în clipboard</string>
-    <string name="feeds_logout">Deconectează-te</string>
     <string name="feeds_ai_account_default">Cont implicit</string>
     <string name="feeds_ai_mode_off">Dezactivat</string>
     <string name="feeds_ai_mode_tag">Etichetează</string>

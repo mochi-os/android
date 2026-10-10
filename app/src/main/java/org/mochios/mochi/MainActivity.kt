@@ -41,8 +41,7 @@ import org.mochios.android.push.NonceStore
 import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
-import org.mochios.android.push.launcherClassFor
-import org.mochios.android.push.launcherComponentFor
+import org.mochios.android.launcher.launcherComponentFor
 import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
 import org.mochios.android.ui.AppBootstrapHost
@@ -78,12 +77,15 @@ import org.mochios.projects.navigation.ProjectsApp
 import org.mochios.projects.navigation.projectsNavGraph
 import org.mochios.settings.navigation.SettingsApp
 import org.mochios.settings.navigation.settingsNavGraph
+import org.mochios.home.navigation.HomeApp
+import org.mochios.home.navigation.homeNavGraph
 import javax.inject.Inject
 
 /**
- * The shell activity. Every launcher icon is a subclass of this (Launchers.kt)
- * whose manifest entry names the Mochi app it hosts and gives it a task of
- * its own, and an instance renders that one app for its whole life. The bare
+ * The shell activity. Every Mochi app has a subclass of this (Launchers.kt)
+ * whose manifest entry names the app it hosts and gives it a task of its own,
+ * and an instance renders that one app for its whole life. Only the home
+ * grid's subclass is a launcher entry. The bare
  * MainActivity hosts nothing: it receives every `mochi:` URI and forwards the
  * launch to the owning app's class - see [onCreate].
  */
@@ -175,8 +177,9 @@ open class MainActivity : ComponentActivity() {
                         onLocaleChangeRequested = { recreate() },
                         prefetchApps = MOCHI_APPS,
                     ) { onLogout ->
-                        // Every feature's logout button routes through here, so a
-                        // single confirmation dialog covers them all.
+                        // Log out is the home page's user menu, and settings signs
+                        // out after closing the account; both route through here,
+                        // so one confirmation dialog covers them.
                         var showLogoutConfirm by remember { mutableStateOf(false) }
                         val requestLogout: () -> Unit = { showLogoutConfirm = true }
                         val navController = rememberNavController()
@@ -191,34 +194,36 @@ open class MainActivity : ComponentActivity() {
                             navController.navigate(SettingsApp.NOTIFICATIONS) { launchSingleTop = true }
                         }
                         NavHost(navController = navController, startDestination = startDestinationFor(hosted)) {
+                            homeNavGraph(
+                                onOpenNotifications = openNotifications,
+                                onLogout = requestLogout,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
+                                onManageCategories = {
+                                    navController.navigate(SettingsApp.NOTIFICATION_PREFS) { launchSingleTop = true }
+                                },
+                            )
                             feedsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             chatNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             forumsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             projectsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             crmsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             peopleNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
@@ -229,25 +234,21 @@ open class MainActivity : ComponentActivity() {
                             )
                             wikisNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             chessNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             goNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             wordsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
@@ -255,7 +256,6 @@ open class MainActivity : ComponentActivity() {
                             staffNavGraph(navController, onOpenNotifications = openNotifications)
                             calendarsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
@@ -380,8 +380,8 @@ open class MainActivity : ComponentActivity() {
      * (clear top, clear task) are kept, as they were meant for the app.
      */
     private fun forward(app: String) {
-        val component = launcherClassFor(this, app)
-            ?: launcherClassFor(this, DEFAULT_APP)
+        val component = launcherComponentFor(this, app)
+            ?: launcherComponentFor(this, DEFAULT_APP)
             ?: return
         val forwarded = Intent(intent ?: Intent(Intent.ACTION_MAIN)).setComponent(component)
         val dropped = Intent.FLAG_ACTIVITY_NO_HISTORY or
@@ -941,6 +941,7 @@ open class MainActivity : ComponentActivity() {
     }
 
     private fun startDestinationFor(targetApp: String?): String = when (targetApp) {
+        "home" -> HomeApp.HOME
         "chat" -> ChatApp.HOME
         "forums" -> ForumsApp.HOME
         "projects" -> ProjectsApp.HOME
@@ -961,8 +962,12 @@ open class MainActivity : ComponentActivity() {
         private const val TAG = "MainActivity"
         private const val META_TARGET_APP = "org.mochios.targetApp"
 
-        /** The app a launch lands in when nothing names one. */
-        private const val DEFAULT_APP = "feeds"
+        /**
+         * The app a launch lands in when nothing names one: the home grid,
+         * whose launcher entry is the manifest's first and so the package's
+         * default.
+         */
+        private const val DEFAULT_APP = "home"
 
         /** Intent extra a per-app `XxxListScreen.kt` shortcut sets to skip directory lookup. */
         const val EXTRA_APP_HINT = "app"
@@ -993,6 +998,6 @@ open class MainActivity : ComponentActivity() {
          * Every bundled app; the bootstrap mints a JWT for each so
          * cross-feature navigation never hits "app token required".
          */
-        private val MOCHI_APPS = listOf("feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff", "calendars", "menu")
+        private val MOCHI_APPS = listOf("home", "feeds", "chat", "forums", "projects", "crm", "people", "settings", "wikis", "chess", "go", "words", "market", "staff", "calendars", "menu")
     }
 }

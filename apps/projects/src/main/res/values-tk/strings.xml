@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Gözlegi ýapmak</string>
     <string name="projects_list_search">Gözle</string>
     <string name="projects_list_find">Taslamalary tap</string>
-    <string name="projects_list_logout">Çyk</string>
     <string name="projects_list_create">Proýekt döretmek</string>
     <string name="projects_create_title">Proýekt döretmek</string>
     <string name="projects_create_name">At</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Artýan tertipde</string>
     <string name="projects_sort_direction_desc">Kemelýän tertipde</string>
     <string name="projects_views_direction_desc">Kemelýän tertipde</string>
-    <string name="projects_list_add_to_home">Esasy ekrana goş</string>
     <string name="projects_search_objects_placeholder">Obýektleri gözle</string>
     <string name="projects_links_search_placeholder">Obýektleri gözle</string>
 

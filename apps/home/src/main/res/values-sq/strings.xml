@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">S\'u gjet asnjë aplikacion</string>
+    <string name="home_menu_open">Hap menynë</string>
+    <string name="home_menu_user">Përdoruesi</string>
+    <string name="home_menu_empty">Asnjë njoftim i palexuar</string>
+    <string name="home_menu_view_all">Shiko të gjitha</string>
+    <string name="home_menu_no_topic">Ende asnjë regjistrim teme — provoni përsëri pas njoftimit tjetër.</string>
+    <string name="home_menu_manage_categories">Menaxho kategoritë</string>
+</resources>

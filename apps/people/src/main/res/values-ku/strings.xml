@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s ji têkiliyên te were jêbirin?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s ji têkiliyên te were jêbirin? Hevaltiya we jî diqede.</string>
     <string name="people_contact_new_title">Têkiliya nû</string>
-    <string name="people_contact_copy_title">Têkiliyê kopî bike</string>
     <string name="people_contact_merge">Yek bike</string>
     <string name="people_contact_merge_title">Têkiliyan yek bike</string>
     <string name="people_contact_edit_title">Têkiliyê sererast bike</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Meh</string>
     <string name="people_contact_birthday_year">Sal</string>
     <string name="people_contact_birthday_clear">Paqij bike</string>
+    <string name="people_contact_create">Çêbike</string>
 </resources>

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Іздеуді жабу</string>
     <string name="projects_list_search">Іздеу</string>
     <string name="projects_list_find">Жобаларды табу</string>
-    <string name="projects_list_logout">Шығу</string>
     <string name="projects_list_create">Жоба құру</string>
     <string name="projects_create_title">Жоба құру</string>
     <string name="projects_create_name">Атау</string>
@@ -171,7 +170,6 @@
     <string name="projects_views_direction_asc">Өсу реті</string>
     <string name="projects_sort_direction_desc">Кему реті</string>
     <string name="projects_views_direction_desc">Кему реті</string>
-    <string name="projects_list_add_to_home">Негізгі экранға қосу</string>
     <string name="projects_search_objects_placeholder">Объектілерді іздеу</string>
     <string name="projects_links_search_placeholder">Объектілерді іздеу</string>
 

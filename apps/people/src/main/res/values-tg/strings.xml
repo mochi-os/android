@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">%1$s аз тамосҳои шумо нест карда шавад?</string>
     <string name="people_contacts_delete_friend_confirm">%1$s аз тамосҳои шумо нест карда шавад? Дӯстии шумо низ ба охир мерасад.</string>
     <string name="people_contact_new_title">Тамоси нав</string>
-    <string name="people_contact_copy_title">Нусхабардории тамос</string>
     <string name="people_contact_merge">Муттаҳид кардан</string>
     <string name="people_contact_merge_title">Муттаҳид кардани тамосҳо</string>
     <string name="people_contact_edit_title">Таҳрири тамос</string>
@@ -220,4 +219,5 @@
     <string name="people_contact_birthday_month">Моҳ</string>
     <string name="people_contact_birthday_year">Сол</string>
     <string name="people_contact_birthday_clear">Тоза кардан</string>
+    <string name="people_contact_create">Эҷод кардан</string>
 </resources>

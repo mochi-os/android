@@ -327,4 +327,5 @@
     <string name="color_picker_custom">Пользовательский</string>
     <string name="color_picker_clear">Очистить</string>
     <string name="common_refresh">Обновить</string>
+    <string name="launcher_add_to_home">Добавить на главный экран</string>
 </resources>

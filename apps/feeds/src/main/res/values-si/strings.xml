@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">මූලාශ්‍රය ඉවත් කරන්නද?</string>
     <string name="feeds_suggested_credibility_accept">පිළිගන්න</string>
     <string name="feeds_rss_url_copied">RSS URL ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී</string>
-    <string name="feeds_logout">ඉවත් වන්න</string>
     <string name="feeds_ai_account_default">පෙරනිමි ගිණුම</string>
     <string name="feeds_ai_mode_off">අක්‍රියයි</string>
     <string name="feeds_ai_mode_tag">ටැග් කරන්න</string>

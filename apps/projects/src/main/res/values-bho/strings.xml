@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">खोज बंद करीं</string>
     <string name="projects_list_search">खोजीं</string>
     <string name="projects_list_find">प्रोजेक्ट खोजीं</string>
-    <string name="projects_list_logout">लॉग आउट</string>
     <string name="projects_list_create">परियोजना बनाईं</string>
     <string name="projects_create_title">परियोजना बनाईं</string>
     <string name="projects_create_name">नाम</string>
@@ -169,7 +168,6 @@
     <string name="projects_list_search_placeholder">परियोजना खोजीं</string>
     <string name="projects_list_no_matching">कवनो मिलत परियोजना नइखे</string>
     <string name="projects_list_empty">अबहीं ले कवनो परियोजना नइखे</string>
-    <string name="projects_list_add_to_home">होम स्क्रीन पर जोड़ीं</string>
     <string name="projects_find_search_placeholder">परियोजना खोजीं भा URL पेस्ट करीं</string>
     <string name="projects_find_search_hint">सदस्यता लेबे खातिर परियोजना खोजीं</string>
     <string name="projects_search_objects_placeholder">वस्तु खोजीं</string>

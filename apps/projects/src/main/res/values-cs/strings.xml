@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Zavřít hledání</string>
     <string name="projects_list_search">Hledat</string>
     <string name="projects_list_find">Najít projekty</string>
-    <string name="projects_list_logout">Odhlásit se</string>
     <string name="projects_list_create">Vytvořit projekt</string>
     <string name="projects_create_title">Vytvořit projekt</string>
     <string name="projects_create_name">Název</string>
@@ -169,7 +168,6 @@
     <string name="projects_list_search_placeholder">Hledat projekty</string>
     <string name="projects_list_no_matching">Žádné odpovídající projekty</string>
     <string name="projects_list_empty">Zatím žádné projekty</string>
-    <string name="projects_list_add_to_home">Přidat na domovskou obrazovku</string>
     <string name="projects_find_search_placeholder">Hledat projekty nebo vložit URL</string>
     <string name="projects_find_search_hint">Hledat projekty k odběru</string>
     <string name="projects_search_objects_placeholder">Hledat objekty</string>

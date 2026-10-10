@@ -308,4 +308,5 @@
     <string name="color_picker_custom">Personalizado</string>
     <string name="color_picker_clear">Limpar</string>
     <string name="common_refresh">Atualizar</string>
+    <string name="launcher_add_to_home">Adicionar à tela inicial</string>
 </resources>

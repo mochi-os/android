@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="settings_home_title">Instellingen</string>
-    <string name="settings_home_logout">Uitloggen</string>
     <string name="settings_home_account">Account</string>
     <string name="settings_home_preferences">Voorkeuren</string>
     <string name="settings_home_display">Weergave</string>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">कौनो app ना मिलल</string>
+    <string name="home_menu_open">मेनू खोलीं</string>
+    <string name="home_menu_user">उपयोगकर्ता</string>
+    <string name="home_menu_empty">कौनो ना पढ़ल सूचना नइखे</string>
+    <string name="home_menu_view_all">सब देखीं</string>
+    <string name="home_menu_no_topic">अबहीं तक कौनो विषय रिकॉर्ड नइखे — अगिला सूचना के बाद फेर कोशिश करीं।</string>
+    <string name="home_menu_manage_categories">श्रेणी सभ के प्रबंधन करीं</string>
+</resources>

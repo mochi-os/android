@@ -325,4 +325,5 @@
     <string name="color_picker_custom">自訂</string>
     <string name="color_picker_clear">清除</string>
     <string name="common_refresh">重新整理</string>
+    <string name="launcher_add_to_home">加到主畫面</string>
 </resources>

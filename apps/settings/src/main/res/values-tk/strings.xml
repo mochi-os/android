@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Sazlamalar</string>
-    <string name="settings_home_logout">Çyk</string>
     <string name="settings_home_account">Hasap</string>
     <string name="settings_home_preferences">Saýlamalar</string>
     <string name="settings_home_display">Görkeziş</string>

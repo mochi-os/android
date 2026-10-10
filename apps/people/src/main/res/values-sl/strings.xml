@@ -156,7 +156,6 @@
     <string name="people_contacts_delete_confirm">Ali želite izbrisati %1$s iz svojih stikov?</string>
     <string name="people_contacts_delete_friend_confirm">Ali želite izbrisati %1$s iz svojih stikov? Tudi vaše prijateljstvo se konča.</string>
     <string name="people_contact_new_title">Nov stik</string>
-    <string name="people_contact_copy_title">Kopiraj stik</string>
     <string name="people_contact_merge">Združi</string>
     <string name="people_contact_merge_title">Združi stike</string>
     <string name="people_contact_edit_title">Uredi stik</string>
@@ -222,4 +221,5 @@
     <string name="people_contact_birthday_month">Mesec</string>
     <string name="people_contact_birthday_year">Leto</string>
     <string name="people_contact_birthday_clear">Počisti</string>
+    <string name="people_contact_create">Ustvari</string>
 </resources>

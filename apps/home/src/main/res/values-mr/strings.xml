@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">अॅप्स सापडले नाहीत</string>
+    <string name="home_menu_open">मेन्यू उघडा</string>
+    <string name="home_menu_user">वापरकर्ता</string>
+    <string name="home_menu_empty">न वाचलेले नोटिफिकेशन्स नाहीत</string>
+    <string name="home_menu_view_all">सर्व पहा</string>
+    <string name="home_menu_no_topic">अद्याप टॉपिक रेकॉर्ड नाही — पुढील नोटिफिकेशननंतर पुन्हा प्रयत्न करा.</string>
+    <string name="home_menu_manage_categories">श्रेणी व्यवस्थापित करा</string>
+</resources>

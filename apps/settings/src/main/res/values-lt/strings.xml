@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Nustatymai</string>
-    <string name="settings_home_logout">Atsijungti</string>
     <string name="settings_home_account">Paskyra</string>
     <string name="settings_home_preferences">Nuostatos</string>
     <string name="settings_home_display">Rodymas</string>

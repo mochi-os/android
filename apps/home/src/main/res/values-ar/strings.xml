@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_empty">لم يتم العثور على تطبيقات</string>
+    <string name="home_menu_open">فتح القائمة</string>
+    <string name="home_menu_user">المستخدم</string>
+    <string name="home_menu_empty">لا توجد إشعارات غير مقروءة</string>
+    <string name="home_menu_view_all">عرض الكل</string>
+    <string name="home_menu_no_topic">لا يوجد سجل موضوع بعد — حاول مرة أخرى بعد الإشعار التالي.</string>
+    <string name="home_menu_manage_categories">إدارة الفئات</string>
+</resources>
