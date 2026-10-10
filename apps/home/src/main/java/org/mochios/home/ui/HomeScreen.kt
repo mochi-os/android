@@ -18,6 +18,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
@@ -59,9 +60,13 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.Hyphens
+import androidx.compose.ui.text.style.LineBreak
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -85,6 +90,13 @@ private const val TAG = "HomeScreen"
 
 /** The side of the square every icon is drawn in, as on the web. */
 private val ICON = 64.dp
+
+/** The narrowest a tile may be, and the space either side of its label. */
+private val TILE = 88.dp
+private val PADDING = 4.dp
+
+/** The space either side of the grid. */
+private val GUTTER = 12.dp
 
 /**
  * The size to draw an app's adaptive foreground at for its glyph to come out
@@ -170,28 +182,57 @@ internal fun HomeContent(
             icon = Icons.Outlined.Apps,
             title = stringResource(R.string.home_empty),
         )
-        else -> LazyVerticalGrid(
-            columns = GridCells.Adaptive(minSize = 88.dp),
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            items(grid.tiles, key = { tile -> tile.name }) { tile ->
-                AppTile(
-                    tile = tile,
-                    mask = grid.mask,
-                    background = grid.background,
-                    onOpen = { onOpen(tile) },
-                    onPin = if (pinnable) {
-                        { onPin(tile) }
-                    } else {
-                        null
-                    },
-                )
+        else -> BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+            // The grid spreads its tiles across the row. A tile also grows to
+            // hold its label's widest word, up to a third of the row, so a word
+            // that could fit on a line is never split.
+            val measurer = rememberTextMeasurer()
+            val style = labelStyle()
+            val density = LocalDensity.current
+            val word = remember(grid.tiles, style, density) {
+                grid.tiles.flatMap { tile -> words(tile.label) }
+                    .maxOfOrNull { word -> measurer.measure(word, style, softWrap = false, maxLines = 1).size.width }
+                    ?: 0
+            }
+            val third = (maxWidth - GUTTER * 2) / 3
+            val minimum = maxOf(TILE, minOf(third, with(density) { word.toDp() } + PADDING * 2))
+            LazyVerticalGrid(
+                columns = GridCells.Adaptive(minSize = minimum),
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = PaddingValues(horizontal = GUTTER, vertical = 16.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+            ) {
+                items(grid.tiles, key = { tile -> tile.name }) { tile ->
+                    AppTile(
+                        tile = tile,
+                        mask = grid.mask,
+                        background = grid.background,
+                        onOpen = { onOpen(tile) },
+                        onPin = if (pinnable) {
+                            { onPin(tile) }
+                        } else {
+                            null
+                        },
+                    )
+                }
             }
         }
     }
 }
+
+/** A label's words, as a line may break between them and after a hyphen. */
+internal fun words(label: String): List<String> =
+    label.split(Regex("\\s+|(?<=-)")).filter { word -> word.isNotEmpty() }
+
+/**
+ * The label's style: a name too long for its tile wraps, hyphenated in the
+ * user's language.
+ */
+@Composable
+private fun labelStyle() = MaterialTheme.typography.labelLarge.copy(
+    hyphens = Hyphens.Auto,
+    lineBreak = LineBreak.Paragraph,
+)
 
 /**
  * One app: its icon over its name. [onPin] is null where the launcher takes
@@ -224,7 +265,7 @@ private fun AppTile(
                         }
                     },
                 )
-                .padding(horizontal = 4.dp, vertical = 8.dp),
+                .padding(horizontal = PADDING, vertical = 8.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Box {
@@ -234,11 +275,14 @@ private fun AppTile(
                 }
             }
             Spacer(modifier = Modifier.height(8.dp))
+            // A name too long for the tile wraps onto up to three lines - the
+            // longest translated app name needs that much - and the row grows
+            // to hold it; the icons stay level along the row.
             Text(
                 text = tile.label,
-                style = MaterialTheme.typography.labelLarge,
+                style = labelStyle(),
                 textAlign = TextAlign.Center,
-                maxLines = 1,
+                maxLines = 3,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.fillMaxWidth(),
             )

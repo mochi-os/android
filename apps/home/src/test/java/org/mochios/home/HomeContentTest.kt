@@ -5,7 +5,9 @@
 
 package org.mochios.home
 
+import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.test.longClick
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -21,9 +23,11 @@ import org.mochios.home.repository.Grid
 import org.mochios.home.repository.Tile
 import org.mochios.home.ui.HomeContent
 import org.mochios.home.ui.HomeUiState
+import org.mochios.home.ui.words
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
+import org.robolectric.annotation.GraphicsMode
 
 /**
  * The home grid's body: a tap opens the app, a long press offers its icon for
@@ -32,6 +36,7 @@ import org.robolectric.annotation.Config
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35])
+@GraphicsMode(GraphicsMode.Mode.NATIVE)
 class HomeContentTest {
 
     @get:Rule
@@ -96,6 +101,39 @@ class HomeContentTest {
         show(HomeUiState(grid = grid.copy(mask = "squircle", background = "#3366cc"), loading = false))
         rule.onNodeWithText("Chat").assertExists()
         rule.onNodeWithText("Feeds").assertExists()
+    }
+
+    @Test
+    fun `a name too long for its tile wraps rather than being cut short`() {
+        // The longest app name in any language, Maltese for Publisher.
+        val name = "Pubblikatur tal-Applikazzjonijiet"
+        show(HomeUiState(grid = Grid(listOf(Tile("chat", name), Tile("feeds", "Feeds"))), loading = false))
+        val layouts = mutableListOf<TextLayoutResult>()
+        rule.onNodeWithText(name).fetchSemanticsNode()
+            .config[SemanticsActions.GetTextLayoutResult].action?.invoke(layouts)
+        val layout = layouts.first()
+        assertTrue("wrapped onto ${layout.lineCount} line(s)", layout.lineCount in 2..3)
+        assertTrue("cut short", !layout.hasVisualOverflow)
+    }
+
+    @Test
+    @Config(qualifiers = "w411dp-h891dp")
+    fun `a tile grows to hold a word too wide for a quarter of the row`() {
+        // German for Settings: wider than a quarter of a 411dp row, narrower
+        // than a third, so it takes three tiles a row rather than split.
+        val word = "Einstellungen"
+        val tiles = listOf(word, "Chat", "Feeds", "Go", "Wikis", "Words", "Chess", "Market")
+            .mapIndexed { index, label -> Tile("app$index", label) }
+        show(HomeUiState(grid = Grid(tiles), loading = false))
+        val layouts = mutableListOf<TextLayoutResult>()
+        rule.onNodeWithText(word).fetchSemanticsNode()
+            .config[SemanticsActions.GetTextLayoutResult].action?.invoke(layouts)
+        assertEquals(1, layouts.first().lineCount)
+    }
+
+    @Test
+    fun `a label breaks into words between words and after hyphens`() {
+        assertEquals(listOf("Pubblikatur", "tal-", "Applikazzjonijiet"), words("Pubblikatur tal-Applikazzjonijiet"))
     }
 
     @Test
