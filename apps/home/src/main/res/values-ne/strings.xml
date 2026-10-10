@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">कुनै एप भेटिएन</string>
+    <string name="home_menu_open">मेनु खोल्नुहोस्</string>
+    <string name="home_menu_user">प्रयोगकर्ता</string>
+    <string name="home_menu_empty">कुनै नपढिएको सूचना छैन</string>
+    <string name="home_menu_view_all">सबै हेर्नुहोस्</string>
+    <string name="home_menu_no_topic">अहिलेसम्म कुनै टपिक रेकर्ड छैन — अर्को सूचना पछि फेरि प्रयास गर्नुहोस्।</string>
+    <string name="home_menu_manage_categories">श्रेणीहरू व्यवस्थापन गर्नुहोस्</string>
 </resources>

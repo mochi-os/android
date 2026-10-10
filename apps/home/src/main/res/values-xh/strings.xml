@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Akukho zinkqubo zifumanekileyo</string>
+    <string name="home_menu_open">Vula imenyu</string>
+    <string name="home_menu_user">Umsebenzisi</string>
+    <string name="home_menu_empty">Akukho zaziso ezingafundwanga</string>
+    <string name="home_menu_view_all">Bonisa konke</string>
+    <string name="home_menu_no_topic">Akukho rekhodi yomxholo okwangoku — zama kwakhona emva kwesaziso esilandelayo.</string>
+    <string name="home_menu_manage_categories">Lawula iindidi</string>
 </resources>

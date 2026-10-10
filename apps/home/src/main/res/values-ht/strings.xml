@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Pa gen aplikasyon ki jwenn</string>
+    <string name="home_menu_open">Ouvri meni</string>
+    <string name="home_menu_user">Itilizatè</string>
+    <string name="home_menu_empty">Pa gen notifikasyon ki pa li</string>
+    <string name="home_menu_view_all">Wè tout</string>
+    <string name="home_menu_no_topic">Poko gen anrejistreman sijè — eseye ankò apre pwochèn notifikasyon an.</string>
+    <string name="home_menu_manage_categories">Jere kategori yo</string>
 </resources>

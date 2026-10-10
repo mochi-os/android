@@ -14,9 +14,23 @@ object HomeApp {
     const val HOME = "home"
 }
 
-/** Wire the home grid into the parent graph. */
-fun NavGraphBuilder.homeNavGraph(onOpenNotifications: () -> Unit = {}) {
+/**
+ * Wire the home grid into the parent graph. The user menu reaches outside it:
+ * to log out, to every notification, to what a notification is about, and to
+ * the notification categories in settings.
+ */
+fun NavGraphBuilder.homeNavGraph(
+    onOpenNotifications: () -> Unit = {},
+    onLogout: () -> Unit = {},
+    onOpenLink: (String) -> Unit = {},
+    onManageCategories: () -> Unit = {},
+) {
     composable(HomeApp.HOME) {
-        HomeScreen(onOpenNotifications = onOpenNotifications)
+        HomeScreen(
+            onOpenNotifications = onOpenNotifications,
+            onLogout = onLogout,
+            onOpenLink = onOpenLink,
+            onManageCategories = onManageCategories,
+        )
     }
 }

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Cha deach aplacaidean a lorg</string>
+    <string name="home_menu_open">Fosgail an clàr-taice</string>
+    <string name="home_menu_user">Cleachdaiche</string>
+    <string name="home_menu_empty">Chan eil brathan gun leughadh</string>
+    <string name="home_menu_view_all">Seall a h-uile</string>
+    <string name="home_menu_no_topic">Chan eil clàradh cuspair ann fhathast — feuch a-rithist às dèidh an ath bhrath.</string>
+    <string name="home_menu_manage_categories">Stiùirich roinnean</string>
 </resources>

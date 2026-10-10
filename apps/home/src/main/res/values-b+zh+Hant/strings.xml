@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">找不到應用程式</string>
+    <string name="home_menu_open">開啟選單</string>
+    <string name="home_menu_user">使用者</string>
+    <string name="home_menu_empty">無未讀通知</string>
+    <string name="home_menu_view_all">檢視全部</string>
+    <string name="home_menu_no_topic">尚無主題記錄 — 請在下次通知後再試一次。</string>
+    <string name="home_menu_manage_categories">管理類別</string>
 </resources>

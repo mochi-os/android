@@ -193,7 +193,14 @@ open class MainActivity : ComponentActivity() {
                             navController.navigate(SettingsApp.NOTIFICATIONS) { launchSingleTop = true }
                         }
                         NavHost(navController = navController, startDestination = startDestinationFor(hosted)) {
-                            homeNavGraph(onOpenNotifications = openNotifications)
+                            homeNavGraph(
+                                onOpenNotifications = openNotifications,
+                                onLogout = requestLogout,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
+                                onManageCategories = {
+                                    navController.navigate(SettingsApp.NOTIFICATION_PREFS) { launchSingleTop = true }
+                                },
+                            )
                             feedsNavGraph(
                                 navController,
                                 onLogout = requestLogout,

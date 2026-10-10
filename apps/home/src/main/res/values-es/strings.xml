@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">No se encontraron aplicaciones</string>
+    <string name="home_menu_open">Abrir menú</string>
+    <string name="home_menu_user">Usuario</string>
+    <string name="home_menu_empty">No hay notificaciones sin leer</string>
+    <string name="home_menu_view_all">Ver todo</string>
+    <string name="home_menu_no_topic">Aún no hay registro del tema; vuelve a intentarlo tras la próxima notificación.</string>
+    <string name="home_menu_manage_categories">Gestionar categorías</string>
 </resources>

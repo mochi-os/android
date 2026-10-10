@@ -38,44 +38,46 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Apps
 import androidx.compose.material.icons.outlined.HomeMax
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.LinearGradientShader
-import androidx.compose.ui.graphics.Shader
-import androidx.compose.ui.graphics.ShaderBrush
-import androidx.compose.ui.graphics.drawscope.withTransform
-import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.LinearGradientShader
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.graphics.Shader
+import androidx.compose.ui.graphics.ShaderBrush
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.Hyphens
 import androidx.compose.ui.text.style.LineBreak
 import androidx.compose.ui.text.style.TextAlign
@@ -85,25 +87,25 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
+import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.launcher.openApp
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.parseHexColour
 import org.mochios.android.ui.theme.oklch
 import org.mochios.android.ui.theme.oklchOf
+import org.mochios.home.R
+import org.mochios.home.repository.Tile
 import kotlin.math.abs
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
-import org.mochios.home.R
-import org.mochios.home.repository.Tile
-import org.mochios.android.R as MochiR
 
 private const val TAG = "HomeScreen"
 
@@ -153,19 +155,33 @@ private val MASKS: Map<String, Shape> = mapOf(
 @Composable
 fun HomeScreen(
     onOpenNotifications: () -> Unit,
+    onLogout: () -> Unit,
+    onOpenLink: (String) -> Unit,
+    onManageCategories: () -> Unit,
     viewModel: HomeViewModel = hiltViewModel(),
+    menu: HomeMenuViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
     val pinnable = remember(context) { Shortcuts.supported(context) }
+    val menuState by menu.state.collectAsState()
+    val count by menu.count.collectAsState()
+    var open by rememberSaveable { mutableStateOf(false) }
 
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
         viewModel.refresh()
     }
+    // The list follows the count while the menu is open, as a notification
+    // arrives or is read elsewhere.
+    LaunchedEffect(open, count) {
+        if (open) menu.refresh()
+    }
 
     HomePage(
         glow = LocalFormat.current.preferences.background,
-        actions = { NotificationBell(onClick = onOpenNotifications) },
+        navigation = {
+            UserButton(name = menuState.name, identity = menuState.identity, count = count) { open = true }
+        },
     ) {
         HomeContent(
             state = state,
@@ -179,19 +195,59 @@ fun HomeScreen(
             onRetry = viewModel::refresh,
         )
     }
+
+    if (open) {
+        val close = {
+            open = false
+            menu.closePicker()
+        }
+        MochiBottomSheet(onDismissRequest = close) {
+            UserMenu(
+                state = menuState,
+                onLogout = {
+                    close()
+                    onLogout()
+                },
+                onReadAll = {
+                    menu.readAll()
+                    close()
+                },
+                onViewAll = {
+                    close()
+                    onOpenNotifications()
+                },
+                onOpen = { notification ->
+                    menu.read(notification)
+                    if (notification.link.isNotBlank()) {
+                        close()
+                        onOpenLink(notification.link)
+                    }
+                },
+                onPick = menu::pick,
+                onClosePicker = menu::closePicker,
+                onCategorise = menu::categorise,
+                onManageCategories = {
+                    close()
+                    onManageCategories()
+                },
+            )
+        }
+    }
 }
 
 /**
  * The home page around [content], as the web's on a phone: the "mochi"
- * wordmark centred in a bar holding [actions], over the page background with
- * its glow when [glow] is on. Both bar and page are see-through, so the glow
- * shows behind the wordmark as it does on the web.
+ * wordmark centred in a bar with [navigation] at its start and [actions] at
+ * its end, over the page background with its glow when [glow] is on. Both bar
+ * and page are see-through, so the glow shows behind the wordmark as it does
+ * on the web.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun HomePage(
     glow: Boolean,
-    actions: @Composable RowScope.() -> Unit,
+    navigation: @Composable () -> Unit = {},
+    actions: @Composable RowScope.() -> Unit = {},
     content: @Composable () -> Unit,
 ) {
     HomeBackground(glow = glow) {
@@ -202,6 +258,7 @@ internal fun HomePage(
             topBar = {
                 CenterAlignedTopAppBar(
                     title = { Wordmark() },
+                    navigationIcon = navigation,
                     actions = actions,
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = Color.Transparent,

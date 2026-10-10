@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">ஆப்கள் எதுவும் கிடைக்கவில்லை</string>
+    <string name="home_menu_open">மெனுவைத் திறக்கவும்</string>
+    <string name="home_menu_user">பயனர்</string>
+    <string name="home_menu_empty">படிக்காத அறிவிப்புகள் இல்லை</string>
+    <string name="home_menu_view_all">அனைத்தையும் காட்டு</string>
+    <string name="home_menu_no_topic">தலைப்புப் பதிவு இன்னும் இல்லை — அடுத்த அறிவிப்புக்குப் பிறகு மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="home_menu_manage_categories">வகைகளை நிர்வகி</string>
 </resources>

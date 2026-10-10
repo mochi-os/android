@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Awekho ama-app atholakele</string>
+    <string name="home_menu_open">Vula imenyu</string>
+    <string name="home_menu_user">Umsebenzisi</string>
+    <string name="home_menu_empty">Azikho izaziso ezingafundiwe</string>
+    <string name="home_menu_view_all">Buka konke</string>
+    <string name="home_menu_no_topic">Awukho umbiko wesihloko okwamanje — zama futhi ngemva kwesaziso esilandelayo.</string>
+    <string name="home_menu_manage_categories">Phatha izigaba</string>
 </resources>

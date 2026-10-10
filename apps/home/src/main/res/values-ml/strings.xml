@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">ആപ്പുകളൊന്നും കണ്ടെത്തിയില്ല</string>
+    <string name="home_menu_open">മെനു തുറക്കുക</string>
+    <string name="home_menu_user">ഉപയോക്താവ്</string>
+    <string name="home_menu_empty">വായിക്കാത്ത അറിയിപ്പുകളൊന്നുമില്ല</string>
+    <string name="home_menu_view_all">എല്ലാം കാണുക</string>
+    <string name="home_menu_no_topic">വിഷയ റെക്കോർഡ് ഇതുവരെയില്ല — അടുത്ത അറിയിപ്പിന് ശേഷം വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="home_menu_manage_categories">വിഭാഗങ്ങൾ നിയന്ത്രിക്കുക</string>
 </resources>

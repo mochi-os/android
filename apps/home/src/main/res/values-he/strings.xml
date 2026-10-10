@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">לא נמצאו אפליקציות</string>
+    <string name="home_menu_open">פתח תפריט</string>
+    <string name="home_menu_user">משתמש</string>
+    <string name="home_menu_empty">אין התראות שלא נקראו</string>
+    <string name="home_menu_view_all">הצג הכל</string>
+    <string name="home_menu_no_topic">עדיין אין רשומת נושא — נסה שוב לאחר ההתראה הבאה.</string>
+    <string name="home_menu_manage_categories">ניהול קטגוריות</string>
 </resources>

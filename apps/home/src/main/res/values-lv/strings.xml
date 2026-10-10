@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Lietotnes nav atrastas</string>
+    <string name="home_menu_open">Atvērt izvēlni</string>
+    <string name="home_menu_user">Lietotājs</string>
+    <string name="home_menu_empty">Nav nelasītu paziņojumu</string>
+    <string name="home_menu_view_all">Skatīt visu</string>
+    <string name="home_menu_no_topic">Vēl nav tēmas ieraksta — mēģiniet vēlreiz pēc nākamā paziņojuma.</string>
+    <string name="home_menu_manage_categories">Pārvaldīt kategorijas</string>
 </resources>

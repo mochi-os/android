@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">ບໍ່ພົບແອັບ</string>
+    <string name="home_menu_open">ເປີດເມນູ</string>
+    <string name="home_menu_user">ຜູ້ໃຊ້</string>
+    <string name="home_menu_empty">ບໍ່ມີການແຈ້ງເຕືອນທີ່ບໍ່ໄດ້ອ່ານ</string>
+    <string name="home_menu_view_all">ເບິ່ງທັງໝົດ</string>
+    <string name="home_menu_no_topic">ຍັງບໍ່ມີບັນທຶກຫົວຂໍ້ — ລອງໃໝ່ຫຼັງຈາກການແຈ້ງເຕືອນຄັ້ງຕໍ່ໄປ.</string>
+    <string name="home_menu_manage_categories">ຈັດການໝວດໝູ່</string>
 </resources>

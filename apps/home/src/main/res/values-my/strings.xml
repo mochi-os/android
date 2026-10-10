@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">app များ မတွေ့ပါ</string>
+    <string name="home_menu_open">မီနူးကို ဖွင့်</string>
+    <string name="home_menu_user">သုံးစွဲသူ</string>
+    <string name="home_menu_empty">ဖတ်မပြီးသေးသော အသိပေးချက်များ မရှိ</string>
+    <string name="home_menu_view_all">အားလုံး ကြည့်ရှုမည်</string>
+    <string name="home_menu_no_topic">ခေါင်းစဉ် မှတ်တမ်း မရှိသေးပါ — နောက်အသိပေးချက်ပြီးနောက် ထပ်စမ်းကြည့်ပါ။</string>
+    <string name="home_menu_manage_categories">အမျိုးအစားများ စီမံရန်</string>
 </resources>

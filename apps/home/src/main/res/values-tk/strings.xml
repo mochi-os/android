@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Programmalar tapylmady</string>
+    <string name="home_menu_open">Menýuny aç</string>
+    <string name="home_menu_user">Ulanyjy</string>
+    <string name="home_menu_empty">Okalmadyk bildirişler ýok</string>
+    <string name="home_menu_view_all">Hemmesini görkez</string>
+    <string name="home_menu_no_topic">Heniz mowzuk ýazgysy ýok — indiki bildirişden soň gaýtadan synanyşyň.</string>
+    <string name="home_menu_manage_categories">Kategoriýalary dolandyr</string>
 </resources>

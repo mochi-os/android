@@ -10,6 +10,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import org.mochios.android.notifications.NotificationCategory
 import org.mochios.settings.api.SettingsRetrofit
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -22,25 +23,6 @@ import javax.inject.Singleton
 // Mirrors apps/settings/web/src/features/user/notifications.tsx. The web app calls
 // the settings app's `-/notifications/{categories,topics,destinations}` endpoints
 // via apiClient; Android hits the same endpoints through the settings retrofit.
-
-data class DestinationRow(
-    val type: String = "",
-    val target: String = "",
-)
-
-data class NotifCategory(
-    val id: String = "",  // base58 uid (server categories.id is text); "0" = "No notifications"
-    /** The stored name. The two seeded categories store English literals. */
-    val label: String = "",
-    /** The name to show: [label], or its translation while a seeded category is unrenamed. */
-    val display: String = "",
-    val default: Int = 0,
-    val created: Long = 0,
-    val destinations: List<DestinationRow> = emptyList(),
-) {
-    /** What the user reads; a server that predates `display` leaves the label. */
-    val shown: String get() = display.ifBlank { label }
-}
 
 data class DestinationAccount(
     val id: String = "",
@@ -97,7 +79,7 @@ data class TestResult(
 
 interface NotificationPrefsApi {
     @GET("settings/-/notifications/categories")
-    suspend fun getCategories(): Response<List<NotifCategory>>
+    suspend fun getCategories(): Response<List<NotificationCategory>>
 
     @GET("settings/-/notifications/topics")
     suspend fun getTopics(): Response<List<NotifTopic>>

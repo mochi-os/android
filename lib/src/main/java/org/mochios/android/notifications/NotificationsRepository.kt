@@ -52,6 +52,37 @@ class NotificationsRepository @Inject constructor(
         }
     }
 
+    suspend fun categories(): List<NotificationCategory> {
+        try {
+            val resp = api.categories()
+            if (resp.isSuccessful) return resp.body()?.data ?: emptyList()
+            throw RuntimeException("HTTP ${resp.code()}")
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    /** The topic [notification] belongs to, or null when the server holds no row for it yet. */
+    suspend fun topic(notification: MochiNotification): NotificationTopic? {
+        try {
+            val resp = api.topic(notification.app, notification.topic, notification.`object`)
+            if (resp.isSuccessful) return resp.body()?.data
+            throw RuntimeException("HTTP ${resp.code()}")
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    /** Moves [notification]'s topic to [category], or back to unassigned when null. */
+    suspend fun setCategory(notification: MochiNotification, category: String?) {
+        try {
+            val resp = api.setCategory(notification.app, notification.topic, notification.`object`, category.orEmpty())
+            if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     suspend fun clearAll() {
         try {
             val resp = api.clearAll()

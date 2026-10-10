@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Hakuna programu zilizopatikana</string>
+    <string name="home_menu_open">Fungua menyu</string>
+    <string name="home_menu_user">Mtumiaji</string>
+    <string name="home_menu_empty">Hakuna arifa ambazo hazijasomwa</string>
+    <string name="home_menu_view_all">Tazama vyote</string>
+    <string name="home_menu_no_topic">Hakuna rekodi ya mada bado — jaribu tena baada ya arifa inayofuata.</string>
+    <string name="home_menu_manage_categories">Dhibiti kategoria</string>
 </resources>

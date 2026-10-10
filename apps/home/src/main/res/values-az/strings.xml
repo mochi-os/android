@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Tətbiq tapılmadı</string>
+    <string name="home_menu_open">Menyunu aç</string>
+    <string name="home_menu_user">İstifadəçi</string>
+    <string name="home_menu_empty">Oxunmamış bildiriş yoxdur</string>
+    <string name="home_menu_view_all">Hamısına bax</string>
+    <string name="home_menu_no_topic">Hələ mövzu qeydi yoxdur — növbəti bildirişdən sonra yenidən cəhd edin.</string>
+    <string name="home_menu_manage_categories">Kateqoriyaları idarə et</string>
 </resources>

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Прыкладанні не знойдзены</string>
+    <string name="home_menu_open">Адкрыць меню</string>
+    <string name="home_menu_user">Карыстальнік</string>
+    <string name="home_menu_empty">Непрачытаных апавяшчэнняў няма</string>
+    <string name="home_menu_view_all">Паглядзець усё</string>
+    <string name="home_menu_no_topic">Запісу тэмы яшчэ няма — паспрабуйце пасля наступнага апавяшчэння.</string>
+    <string name="home_menu_manage_categories">Кіраваць катэгорыямі</string>
 </resources>

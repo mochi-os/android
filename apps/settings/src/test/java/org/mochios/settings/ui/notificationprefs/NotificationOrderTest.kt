@@ -7,7 +7,8 @@ package org.mochios.settings.ui.notificationprefs
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import org.mochios.settings.api.NotifCategory
+import org.mochios.android.notifications.NotificationCategory
+import org.mochios.android.notifications.ordered
 import org.mochios.settings.api.NotifTopic
 import org.mochios.settings.api.NotifTopicApp
 
@@ -15,7 +16,7 @@ import org.mochios.settings.api.NotifTopicApp
 class NotificationOrderTest {
 
     private fun category(id: String, label: String, display: String = "", default: Int = 0) =
-        NotifCategory(id = id, label = label, display = display, default = default)
+        NotificationCategory(id = id, label = label, display = display, default = default)
 
     /** The categories used to read in the order the server happened to return them. */
     @Test

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Ingen appar funne</string>
+    <string name="home_menu_open">Opna meny</string>
+    <string name="home_menu_user">Brukar</string>
+    <string name="home_menu_empty">Ingen ulesne varsel</string>
+    <string name="home_menu_view_all">Vis alle</string>
+    <string name="home_menu_no_topic">Inga emneoppføring enno — prøv igjen etter neste varsel.</string>
+    <string name="home_menu_manage_categories">Handsam kategoriar</string>
 </resources>

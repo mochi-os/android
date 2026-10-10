@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Не са намерени приложения</string>
+    <string name="home_menu_open">Отвори менюто</string>
+    <string name="home_menu_user">Потребител</string>
+    <string name="home_menu_empty">Няма непрочетени известия</string>
+    <string name="home_menu_view_all">Виж всички</string>
+    <string name="home_menu_no_topic">Все още няма запис за темата — опитайте отново след следващото известие.</string>
+    <string name="home_menu_manage_categories">Управление на категориите</string>
 </resources>

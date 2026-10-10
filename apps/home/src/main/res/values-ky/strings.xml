@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Тиркемелер табылган жок</string>
+    <string name="home_menu_open">Менюну ачуу</string>
+    <string name="home_menu_user">Колдонуучу</string>
+    <string name="home_menu_empty">Окулбаган билдирмелер жок</string>
+    <string name="home_menu_view_all">Бардыгын көрүү</string>
+    <string name="home_menu_no_topic">Тема жазуусу азырынча жок — кийинки билдирмеден кийин кайра аракет кылыңыз.</string>
+    <string name="home_menu_manage_categories">Категорияларды башкаруу</string>
 </resources>

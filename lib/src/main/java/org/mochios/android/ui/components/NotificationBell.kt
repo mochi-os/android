@@ -78,7 +78,7 @@ fun NotificationBell(onClick: () -> Unit) {
  * at zero. Align it [Alignment.TopEnd] in a box around the icon's button.
  */
 @Composable
-internal fun CountBadge(
+fun CountBadge(
     count: Int,
     container: Color,
     content: Color,

@@ -3,7 +3,7 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
-package org.mochios.settings.ui.notifications
+package org.mochios.android.ui.components
 
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -35,9 +35,6 @@ class NotificationCountTest {
             ) {
                 NotificationCard(
                     notification = MochiNotification(id = "n", title = "Comment", count = 12345),
-                    topic = null,
-                    categories = emptyList(),
-                    onSetCategory = { _, _ -> },
                     onClick = {},
                 )
             }

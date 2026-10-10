@@ -10,8 +10,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.notifications.DestinationRow
 import org.mochios.settings.api.DestinationFeed
-import org.mochios.settings.api.DestinationRow
 import org.mochios.settings.api.DestinationsAvailable
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config

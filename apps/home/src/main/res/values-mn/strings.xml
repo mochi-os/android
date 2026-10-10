@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Апп олдсонгүй</string>
+    <string name="home_menu_open">Цэс нээх</string>
+    <string name="home_menu_user">Хэрэглэгч</string>
+    <string name="home_menu_empty">Уншаагүй мэдэгдэл алга</string>
+    <string name="home_menu_view_all">Бүгдийг үзэх</string>
+    <string name="home_menu_no_topic">Сэдвийн бичлэг алга — дараагийн мэдэгдлийн дараа дахин оролдоно уу.</string>
+    <string name="home_menu_manage_categories">Ангиллуудыг удирдах</string>
 </resources>

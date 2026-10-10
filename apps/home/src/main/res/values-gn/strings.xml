@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Ndojejuhúi apps</string>
+    <string name="home_menu_open">Eipe\'a menú</string>
+    <string name="home_menu_user">Puruhára</string>
+    <string name="home_menu_empty">Ndaipóri momarandu omoñe\'ẽ\'ỹva</string>
+    <string name="home_menu_view_all">Ehechapa</string>
+    <string name="home_menu_no_topic">Ndaipóri tema marandu gueteri — eha\'ã jey momarandu pyahu rire.</string>
+    <string name="home_menu_manage_categories">Eñangareko categoríakuéra rehe</string>
 </resources>

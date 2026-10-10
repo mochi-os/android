@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Không tìm thấy ứng dụng nào</string>
+    <string name="home_menu_open">Mở menu</string>
+    <string name="home_menu_user">Người dùng</string>
+    <string name="home_menu_empty">Không có thông báo chưa đọc</string>
+    <string name="home_menu_view_all">Xem tất cả</string>
+    <string name="home_menu_no_topic">Chưa có bản ghi chủ đề — hãy thử lại sau thông báo tiếp theo.</string>
+    <string name="home_menu_manage_categories">Quản lý danh mục</string>
 </resources>

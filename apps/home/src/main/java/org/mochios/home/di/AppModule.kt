@@ -14,6 +14,8 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import org.mochios.android.auth.SessionManager
 import org.mochios.home.api.HomeApi
+import org.mochios.home.repository.MenuSource
+import org.mochios.home.repository.ServerMenuSource
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Qualifier
@@ -68,4 +70,7 @@ object AppModule {
     @Singleton
     fun provideHomeApi(@HomeRetrofit retrofit: Retrofit): HomeApi =
         retrofit.create(HomeApi::class.java)
+
+    @Provides
+    fun provideMenuSource(source: ServerMenuSource): MenuSource = source
 }

@@ -55,17 +55,18 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.notifications.MochiNotification
+import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.NotificationCard
+import org.mochios.android.ui.components.NotificationCategoryItems
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
-import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
-import org.mochios.settings.ui.notificationprefs.ordered
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -199,16 +200,25 @@ fun NotificationsScreen(
                             verticalArrangement = Arrangement.spacedBy(6.dp),
                         ) {
                             items(displayItems, key = { it.id }) { n ->
+                                val topic = uiState.topicFor(n)
                                 NotificationCard(
                                     notification = n,
-                                    topic = uiState.topicFor(n),
-                                    categories = uiState.categories,
-                                    onSetCategory = { topic, id -> viewModel.setCategory(topic, id) },
                                     onClick = {
                                         if (n.read == 0L) viewModel.markRead(n.id)
                                         if (n.link.isNotBlank()) onOpenLink(n.link)
                                     },
-                                )
+                                ) {
+                                    // Only offered when the server already holds a topic row: the
+                                    // set-category call requires one and does not create it, so
+                                    // without a row the control could not do anything.
+                                    if (topic != null && uiState.categories.isNotEmpty()) {
+                                        CategoryPicker(
+                                            topic = topic,
+                                            categories = uiState.categories,
+                                            onSetCategory = { row, id -> viewModel.setCategory(row, id) },
+                                        )
+                                    }
+                                }
                             }
                         }
                     }
@@ -233,87 +243,6 @@ fun NotificationsScreen(
     }
 }
 
-@Composable
-internal fun NotificationCard(
-    notification: MochiNotification,
-    topic: NotifTopic?,
-    categories: List<NotifCategory>,
-    onSetCategory: (NotifTopic, String?) -> Unit,
-    onClick: () -> Unit,
-) {
-    val format = LocalFormat.current
-    MochiCard(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick),
-        shape = MaterialTheme.shapes.medium,
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
-    ) {
-        Column(modifier = Modifier.padding(12.dp)) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-            ) {
-                // Always render a leading avatar so rows align: a person photo
-                // when there's a sender, otherwise an app-seeded monogram so the
-                // circle still signals which app the notification came from.
-                val hasSender = notification.sender.isNotBlank()
-                EntityAvatar(
-                    name = if (hasSender) notification.sender else notification.topic,
-                    src = if (hasSender) "/people/${notification.sender}/-/avatar" else null,
-                    seed = if (hasSender) notification.sender else notification.topic,
-                    size = 36.dp,
-                )
-                Column(
-                    modifier = Modifier.weight(1f),
-                    verticalArrangement = Arrangement.spacedBy(6.dp),
-                ) {
-                    Text(
-                        text = notification.title,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.SemiBold
-                    )
-                    Text(
-                        text = notification.content,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                    Text(
-                        text = format.formatRelativeTime(notification.created),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-                if (notification.count > 1) {
-                    Box(
-                        modifier = Modifier
-                            .clip(CircleShape)
-                            .background(MaterialTheme.colorScheme.secondaryContainer)
-                            .padding(horizontal = 6.dp),
-                    ) {
-                        Text(
-                            text = "×${format.formatNumber(notification.count)}",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSecondaryContainer,
-                        )
-                    }
-                }
-                // Only offered when the server already holds a topic row: the
-                // set-category call requires one and does not create it, so
-                // without a row the control could not do anything.
-                if (topic != null && categories.isNotEmpty()) {
-                    CategoryPicker(
-                        topic = topic,
-                        categories = categories,
-                        onSetCategory = onSetCategory,
-                    )
-                }
-            }
-        }
-    }
-}
-
 /**
  * Moves the topic to another category - the same change as the Topics tab of
  * notification preferences.
@@ -321,13 +250,10 @@ internal fun NotificationCard(
 @Composable
 internal fun CategoryPicker(
     topic: NotifTopic,
-    categories: List<NotifCategory>,
+    categories: List<NotificationCategory>,
     onSetCategory: (NotifTopic, String?) -> Unit,
 ) {
     var menu by remember { mutableStateOf(false) }
-    // "No notifications" is the seeded id "0" and belongs at the end as the
-    // opt-out; the rest read alphabetically, which is where a reader looks.
-    val ordered = remember(categories) { categories.ordered() }
     Box {
         MochiIconButton(onClick = { menu = true }) {
             Icon(
@@ -336,23 +262,9 @@ internal fun CategoryPicker(
             )
         }
         MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-            MochiDropdownMenuItem(
-                text = { Text(stringResource(R.string.notifications_category_unassigned)) },
-                onClick = {
-                    menu = false
-                    onSetCategory(topic, null)
-                },
-                selected = topic.category == null,
-            )
-            for (category in ordered) {
-                MochiDropdownMenuItem(
-                    text = { Text(category.shown) },
-                    onClick = {
-                        menu = false
-                        onSetCategory(topic, category.id)
-                    },
-                    selected = topic.category == category.id,
-                )
+            NotificationCategoryItems(categories = categories, current = topic.category) { id ->
+                menu = false
+                onSetCategory(topic, id)
             }
         }
     }

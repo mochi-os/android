@@ -20,8 +20,8 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.notifications.NotificationCategory
 import org.mochios.settings.api.DestinationsAvailable
-import org.mochios.settings.api.NotifCategory
 import org.mochios.settings.api.NotifTopic
 import org.mochios.settings.api.NotificationPrefsApi
 import org.mochios.settings.api.TestResult
@@ -33,7 +33,7 @@ data class NotificationPrefsUiState(
     val isLoading: Boolean = true,
     val topicsLoaded: Boolean = false,
     val tab: NotifTab = NotifTab.CATEGORIES,
-    val categories: List<NotifCategory> = emptyList(),
+    val categories: List<NotificationCategory> = emptyList(),
     val topics: List<NotifTopic> = emptyList(),
     val available: DestinationsAvailable = DestinationsAvailable(),
     val error: MochiError? = null,
@@ -133,7 +133,7 @@ class NotificationPrefsViewModel @Inject constructor(
         api.deleteTopic(app = topic.app.id, topic = topic.topic, obj = topic.`object`).unwrapEmpty()
     }
 
-    fun testCategory(category: NotifCategory) {
+    fun testCategory(category: NotificationCategory) {
         viewModelScope.launch {
             try {
                 val result = api.testCategory(id = category.id).unwrapRaw()

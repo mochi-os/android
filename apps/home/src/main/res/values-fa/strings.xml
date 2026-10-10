@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">برنامه‌ای یافت نشد</string>
+    <string name="home_menu_open">باز کردن منو</string>
+    <string name="home_menu_user">کاربر</string>
+    <string name="home_menu_empty">اعلان خوانده‌نشده‌ای وجود ندارد</string>
+    <string name="home_menu_view_all">نمایش همه</string>
+    <string name="home_menu_no_topic">هنوز هیچ رکوردی برای موضوع وجود ندارد — پس از اعلان بعدی دوباره تلاش کنید.</string>
+    <string name="home_menu_manage_categories">مدیریت دسته‌ها</string>
 </resources>

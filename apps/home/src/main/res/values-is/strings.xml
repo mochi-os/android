@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Engin forrit fundust</string>
+    <string name="home_menu_open">Opna valmynd</string>
+    <string name="home_menu_user">Notandi</string>
+    <string name="home_menu_empty">Engar ólesnar tilkynningar</string>
+    <string name="home_menu_view_all">Skoða allt</string>
+    <string name="home_menu_no_topic">Engin færsla um efni ennþá — reyndu aftur eftir næstu tilkynningu.</string>
+    <string name="home_menu_manage_categories">Stjórna flokkum</string>
 </resources>

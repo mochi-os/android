@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Aplikacij ni mogoče najti</string>
+    <string name="home_menu_open">Odpri meni</string>
+    <string name="home_menu_user">Uporabnik</string>
+    <string name="home_menu_empty">Brez neprebranih obvestil</string>
+    <string name="home_menu_view_all">Prikaži vse</string>
+    <string name="home_menu_no_topic">Še ni zapisa o temi — poskusite znova po naslednjem obvestilu.</string>
+    <string name="home_menu_manage_categories">Upravljanje kategorij</string>
 </resources>

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">アプリが見つかりません</string>
+    <string name="home_menu_open">メニューを開く</string>
+    <string name="home_menu_user">ユーザー</string>
+    <string name="home_menu_empty">未読の通知はありません</string>
+    <string name="home_menu_view_all">すべて表示</string>
+    <string name="home_menu_no_topic">まだトピック記録がありません — 次の通知後にもう一度お試しください。</string>
+    <string name="home_menu_manage_categories">カテゴリを管理</string>
 </resources>

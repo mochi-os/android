@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Programų nerasta</string>
+    <string name="home_menu_open">Atidaryti meniu</string>
+    <string name="home_menu_user">Vartotojas</string>
+    <string name="home_menu_empty">Neperskaitytų pranešimų nėra</string>
+    <string name="home_menu_view_all">Peržiūrėti viską</string>
+    <string name="home_menu_no_topic">Dar nėra temos įrašo — bandykite dar kartą po kito pranešimo.</string>
+    <string name="home_menu_manage_categories">Tvarkyti kategorijas</string>
 </resources>

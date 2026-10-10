@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Ma nstabu l-ebda apps</string>
+    <string name="home_menu_open">Iftaħ menu</string>
+    <string name="home_menu_user">Utent</string>
+    <string name="home_menu_empty">L-ebda notifiki mhux moqrija</string>
+    <string name="home_menu_view_all">Ara kollox</string>
+    <string name="home_menu_no_topic">Għadu m\'hemm l-ebda rekord tat-topic — erġa\' pprova wara n-notifika li jmiss.</string>
+    <string name="home_menu_manage_categories">Immaniġġja l-kategoriji</string>
 </resources>

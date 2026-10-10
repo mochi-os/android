@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Keine Apps gefunden</string>
+    <string name="home_menu_open">Menü öffnen</string>
+    <string name="home_menu_user">Benutzer</string>
+    <string name="home_menu_empty">Keine ungelesenen Benachrichtigungen</string>
+    <string name="home_menu_view_all">Alle anzeigen</string>
+    <string name="home_menu_no_topic">Noch kein Themaeintrag — versuchen Sie es nach der nächsten Benachrichtigung erneut.</string>
+    <string name="home_menu_manage_categories">Kategorien verwalten</string>
 </resources>

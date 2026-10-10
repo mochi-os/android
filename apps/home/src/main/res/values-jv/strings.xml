@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Ora ana app ditemokaké</string>
+    <string name="home_menu_open">Bukak menu</string>
+    <string name="home_menu_user">Panganggo</string>
+    <string name="home_menu_empty">Ora ana notifikasi durung diwaca</string>
+    <string name="home_menu_view_all">Deleng kabeh</string>
+    <string name="home_menu_no_topic">Durung ana cathetan topik — coba manèh sawisé notifikasi sabanjure.</string>
+    <string name="home_menu_manage_categories">Kelola kategori</string>
 </resources>

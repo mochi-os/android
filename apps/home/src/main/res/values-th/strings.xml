@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">ไม่พบแอป</string>
+    <string name="home_menu_open">เปิดเมนู</string>
+    <string name="home_menu_user">ผู้ใช้</string>
+    <string name="home_menu_empty">ไม่มีการแจ้งเตือนที่ยังไม่ได้อ่าน</string>
+    <string name="home_menu_view_all">ดูทั้งหมด</string>
+    <string name="home_menu_no_topic">ยังไม่มีบันทึกหัวข้อ — ลองอีกครั้งหลังการแจ้งเตือนครั้งถัดไป</string>
+    <string name="home_menu_manage_categories">จัดการหมวดหมู่</string>
 </resources>

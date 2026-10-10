@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Geen programme gevind nie</string>
+    <string name="home_menu_open">Maak kieslys oop</string>
+    <string name="home_menu_user">Gebruiker</string>
+    <string name="home_menu_empty">Geen ongeleeste kennisgewings nie</string>
+    <string name="home_menu_view_all">Bekyk alles</string>
+    <string name="home_menu_no_topic">Nog geen onderwerprekord nie — probeer weer na die volgende kennisgewing.</string>
+    <string name="home_menu_manage_categories">Bestuur kategorieë</string>
 </resources>

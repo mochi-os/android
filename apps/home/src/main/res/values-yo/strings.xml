@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">A kò rí àpù kankan</string>
+    <string name="home_menu_open">Ṣí ìtòlẹ́sẹẹsẹ</string>
+    <string name="home_menu_user">Olùmúlò</string>
+    <string name="home_menu_empty">Kò sí ìfìtọ́nisí tí a kò kà</string>
+    <string name="home_menu_view_all">Wo gbogbo</string>
+    <string name="home_menu_no_topic">Kò sí àkọsílẹ̀ kókó síbẹ̀ — gbìyànjú lẹ́ẹ̀kan síi lẹ́yìn ìfìtọ́nisí tó kàn.</string>
+    <string name="home_menu_manage_categories">Ṣàkóso àwọn ẹ̀ka</string>
 </resources>

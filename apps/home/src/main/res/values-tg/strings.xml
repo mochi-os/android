@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_empty">Ягон барнома ёфт нашуд</string>
+    <string name="home_menu_open">Кушодани меню</string>
+    <string name="home_menu_user">Корбар</string>
+    <string name="home_menu_empty">Ягон огоҳиномаи нохонда нест</string>
+    <string name="home_menu_view_all">Ҳамаро дидан</string>
+    <string name="home_menu_no_topic">Ягон сабти мавзӯъ ҳоло нест — пас аз огоҳиномаи навбатӣ боз кӯшиш кунед.</string>
+    <string name="home_menu_manage_categories">Идоракунии категорияҳо</string>
 </resources>
