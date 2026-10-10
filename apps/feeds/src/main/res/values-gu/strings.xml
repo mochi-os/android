@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">સ્ત્રોત દૂર કરો?</string>
     <string name="feeds_suggested_credibility_accept">સ્વીકારો</string>
     <string name="feeds_rss_url_copied">RSS URL ક્લિપબોર્ડ પર કૉપિ થઈ</string>
-    <string name="feeds_logout">લૉગ આઉટ કરો</string>
     <string name="feeds_ai_account_default">ડિફૉલ્ટ ખાતું</string>
     <string name="feeds_ai_mode_off">નિષ્ક્રિય</string>
     <string name="feeds_ai_mode_tag">ટૅગ કરો</string>

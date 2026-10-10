@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">წყაროს წაშლა?</string>
     <string name="feeds_suggested_credibility_accept">მიღება</string>
     <string name="feeds_rss_url_copied">RSS URL დაკოპირდა</string>
-    <string name="feeds_logout">გასვლა</string>
     <string name="feeds_ai_account_default">ნაგულისხმევი ანგარიში</string>
     <string name="feeds_ai_mode_off">გათიშულია</string>
     <string name="feeds_ai_mode_tag">ტეგების მინიჭება</string>

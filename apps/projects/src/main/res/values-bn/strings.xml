@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">অনুসন্ধান বন্ধ করুন</string>
     <string name="projects_list_search">অনুসন্ধান</string>
     <string name="projects_list_find">প্রকল্প খুঁজুন</string>
-    <string name="projects_list_logout">লগ আউট করুন</string>
     <string name="projects_list_create">প্রজেক্ট তৈরি করুন</string>
     <string name="projects_create_title">প্রজেক্ট তৈরি করুন</string>
     <string name="projects_create_name">নাম</string>

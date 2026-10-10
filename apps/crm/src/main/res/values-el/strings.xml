@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">Αναζήτηση</string>
     <string name="crm_list_find">Εύρεση CRM</string>
-    <string name="crm_list_logout">Αποσύνδεση</string>
     <string name="crm_list_create">Δημιουργία CRM</string>
     <string name="crm_create_title">Δημιουργία CRM</string>
     <string name="crm_create_name">Όνομα</string>

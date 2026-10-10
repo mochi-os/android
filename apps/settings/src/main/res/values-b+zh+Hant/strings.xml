@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">設定</string>
-    <string name="settings_home_logout">登出</string>
     <string name="settings_home_account">帳戶</string>
     <string name="settings_home_preferences">偏好設定</string>
     <string name="settings_home_display">顯示</string>

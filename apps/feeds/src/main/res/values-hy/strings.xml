@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Հեռացնե՞լ աղբյուրը։</string>
     <string name="feeds_suggested_credibility_accept">Ընդունել</string>
     <string name="feeds_rss_url_copied">RSS URL-ը պատճենվեց սեղմատախտակին</string>
-    <string name="feeds_logout">Դուրս գալ</string>
     <string name="feeds_ai_account_default">Լռելյայն հաշիվ</string>
     <string name="feeds_ai_mode_off">Անջատված է</string>
     <string name="feeds_ai_mode_tag">Թեգավորել</string>

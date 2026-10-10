@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">ਸੈਟਿੰਗਾਂ</string>
-    <string name="settings_home_logout">ਲੌਗ ਆਊਟ</string>
     <string name="settings_home_account">ਖਾਤਾ</string>
     <string name="settings_home_preferences">ਤਰਜੀਹਾਂ</string>
     <string name="settings_home_display">ਡਿਸਪਲੇ</string>

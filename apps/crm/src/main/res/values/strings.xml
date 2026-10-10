@@ -10,7 +10,6 @@
     <string name="crm_list_search_placeholder">Search CRM</string>
     <string name="crm_list_search">Search</string>
     <string name="crm_list_find">Find CRM</string>
-    <string name="crm_list_logout">Log out</string>
     <string name="crm_list_create">Create CRM</string>
     <string name="crm_list_no_matching">No matching CRM</string>
     <string name="crm_list_empty">No CRM yet</string>

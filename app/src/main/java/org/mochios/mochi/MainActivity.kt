@@ -177,8 +177,9 @@ open class MainActivity : ComponentActivity() {
                         onLocaleChangeRequested = { recreate() },
                         prefetchApps = MOCHI_APPS,
                     ) { onLogout ->
-                        // Every feature's logout button routes through here, so a
-                        // single confirmation dialog covers them all.
+                        // Log out is the home page's user menu, and settings signs
+                        // out after closing the account; both route through here,
+                        // so one confirmation dialog covers them.
                         var showLogoutConfirm by remember { mutableStateOf(false) }
                         val requestLogout: () -> Unit = { showLogoutConfirm = true }
                         val navController = rememberNavController()
@@ -203,32 +204,26 @@ open class MainActivity : ComponentActivity() {
                             )
                             feedsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             chatNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             forumsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             projectsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             crmsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                             )
                             peopleNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
@@ -239,25 +234,21 @@ open class MainActivity : ComponentActivity() {
                             )
                             wikisNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             chessNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             goNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             wordsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )
@@ -265,7 +256,6 @@ open class MainActivity : ComponentActivity() {
                             staffNavGraph(navController, onOpenNotifications = openNotifications)
                             calendarsNavGraph(
                                 navController,
-                                onLogout = requestLogout,
                                 onOpenNotifications = openNotifications,
                                 onOpenLink = { link -> navigateToLink(navController, link) },
                             )

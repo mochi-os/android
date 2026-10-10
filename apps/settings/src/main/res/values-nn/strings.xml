@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Innstillingar</string>
-    <string name="settings_home_logout">Logg ut</string>
     <string name="settings_home_display">Visning</string>
     <string name="settings_home_accounts">Tilkopla kontoar</string>
     <string name="settings_home_interests">Interesser</string>

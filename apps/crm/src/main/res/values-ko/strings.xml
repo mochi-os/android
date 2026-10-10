@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">검색</string>
     <string name="crm_list_find">CRM 찾기</string>
-    <string name="crm_list_logout">로그아웃</string>
     <string name="crm_list_create">CRM 생성</string>
     <string name="crm_create_title">CRM 생성</string>
     <string name="crm_create_name">이름</string>

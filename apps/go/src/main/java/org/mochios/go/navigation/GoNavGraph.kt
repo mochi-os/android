@@ -31,7 +31,6 @@ object GoApp {
  */
 fun NavGraphBuilder.goNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
@@ -64,7 +63,6 @@ fun NavGraphBuilder.goNavGraph(
         GoGameListScreen(
             navController = navController,
             gameId = backStackEntry.arguments?.getString("gameId").orEmpty(),
-            onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
             onOpenLink = onOpenLink,
         )

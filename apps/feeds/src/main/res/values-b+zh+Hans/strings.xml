@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">移除来源？</string>
     <string name="feeds_suggested_credibility_accept">接受</string>
     <string name="feeds_rss_url_copied">RSS URL 已复制到剪贴板</string>
-    <string name="feeds_logout">退出登录</string>
     <string name="feeds_ai_account_default">默认账户</string>
     <string name="feeds_ai_mode_off">已禁用</string>
     <string name="feeds_ai_mode_tag">标记</string>

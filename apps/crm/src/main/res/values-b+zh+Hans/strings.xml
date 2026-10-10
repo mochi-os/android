@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">搜索</string>
     <string name="crm_list_find">查找 CRM</string>
-    <string name="crm_list_logout">退出登录</string>
     <string name="crm_list_create">创建 CRM</string>
     <string name="crm_create_title">创建 CRM</string>
     <string name="crm_create_name">名称</string>

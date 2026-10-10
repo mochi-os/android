@@ -2,7 +2,6 @@
 <resources>
     <string name="words_list_title">Зборови</string>
     <string name="words_list_menu">Мени</string>
-    <string name="words_list_logout">Одјави се</string>
     <string name="words_sidebar_completed">Завршено</string>
     <string name="words_sidebar_new_game">Нова игра</string>
     <string name="words_new_game_title">Нова игра</string>

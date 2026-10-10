@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Chats</string>
     <string name="chat_list_search">Zoeken</string>
-    <string name="chat_list_logout">Uitloggen</string>
     <string name="chat_list_new">Nieuwe chat</string>
     <string name="chat_new_title">Nieuwe chat</string>
     <string name="chat_new_name">Groepsnaam</string>

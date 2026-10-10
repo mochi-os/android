@@ -59,7 +59,6 @@
     <string name="feeds_source_type_feed_memories">Minne</string>
     <string name="feeds_suggested_credibility_accept">Godta</string>
     <string name="feeds_rss_url_copied">RSS-URL kopiert til utklippstavla</string>
-    <string name="feeds_logout">Logg ut</string>
     <string name="feeds_ai_account_default">Standardkonto</string>
     <string name="feeds_ai_mode_off">Deaktivert</string>
     <string name="feeds_ai_mode_tag">Etiketter</string>

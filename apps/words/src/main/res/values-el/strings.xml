@@ -3,7 +3,6 @@
 
     <string name="words_list_title">Λέξεις</string>
     <string name="words_list_menu">Μενού</string>
-    <string name="words_list_logout">Αποσύνδεση</string>
     <string name="words_sidebar_completed">Ολοκληρώθηκε</string>
     <string name="words_sidebar_new_game">Νέο παιχνίδι</string>
     <string name="words_new_game_title">Νέο παιχνίδι</string>

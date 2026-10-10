@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">തിരയൽ അടയ്ക്കുക</string>
     <string name="projects_list_search">തിരയുക</string>
     <string name="projects_list_find">പ്രോജക്റ്റുകൾ കണ്ടെത്തുക</string>
-    <string name="projects_list_logout">ലോഗ് ഔട്ട്</string>
     <string name="projects_list_create">പ്രോജക്റ്റ് സൃഷ്ടിക്കുക</string>
     <string name="projects_create_title">പ്രോജക്റ്റ് സൃഷ്ടിക്കുക</string>
     <string name="projects_create_name">പേര്</string>

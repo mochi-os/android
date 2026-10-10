@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-id</string>
     <string name="crm_list_search">Otsi</string>
     <string name="crm_list_find">Otsi CRM-e</string>
-    <string name="crm_list_logout">Logi välja</string>
     <string name="crm_list_create">Loo CRM</string>
     <string name="crm_create_title">Loo CRM</string>
     <string name="crm_create_name">Nimi</string>

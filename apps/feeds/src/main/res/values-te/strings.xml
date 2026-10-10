@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">సోర్స్‌ను తొలగించాలా?</string>
     <string name="feeds_suggested_credibility_accept">అంగీకరించండి</string>
     <string name="feeds_rss_url_copied">RSS URL క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది</string>
-    <string name="feeds_logout">లాగ్ అవుట్</string>
     <string name="feeds_ai_account_default">డిఫాల్ట్ ఖాతా</string>
     <string name="feeds_ai_mode_off">నిలిపివేయబడింది</string>
     <string name="feeds_ai_mode_tag">ట్యాగ్ చేయండి</string>

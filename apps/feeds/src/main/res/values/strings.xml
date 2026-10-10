@@ -217,7 +217,6 @@
     <string name="feeds_suggested_credibility_accept">Accept</string>
     <string name="feeds_suggested_credibility_keep">Keep current</string>
     <string name="feeds_rss_url_copied">RSS URL copied to clipboard</string>
-    <string name="feeds_logout">Log out</string>
 
     <!-- Settings: AI -->
     <string name="feeds_ai_processing_mode">AI processing mode</string>

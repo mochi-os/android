@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-ներ</string>
     <string name="crm_list_search">Որոնել</string>
     <string name="crm_list_find">Գտնել CRM-ներ</string>
-    <string name="crm_list_logout">Դուրս գալ</string>
     <string name="crm_list_create">Ստեղծել CRM</string>
     <string name="crm_create_title">Ստեղծել CRM</string>
     <string name="crm_create_name">Անուն</string>

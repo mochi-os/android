@@ -23,7 +23,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Chat
 import androidx.compose.material.icons.automirrored.filled.Send
-import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
@@ -36,7 +35,6 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.automirrored.filled.Sort
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Contacts
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -67,7 +65,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EmptyState
@@ -112,7 +109,6 @@ fun ContactsScreen(
     onCreateBook: () -> Unit,
     onSwitchSection: (PeopleSidebarSection) -> Unit,
     onOpenNotifications: () -> Unit,
-    onLogout: () -> Unit,
     onMessage: (String) -> Unit = {},
     onAddContact: () -> Unit = {},
     onConnectDevice: () -> Unit = {},
@@ -121,7 +117,6 @@ fun ContactsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
-    var showAbout by remember { mutableStateOf(false) }
     var showMenu by remember { mutableStateOf(false) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
@@ -190,22 +185,6 @@ fun ContactsScreen(
                 },
             )
             ContactsSyncRows()
-            DrawerActionRow(
-                title = stringResource(MochiR.string.common_logout),
-                icon = Icons.AutoMirrored.Outlined.Logout,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onLogout()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
         },
     ) {
         Scaffold(
@@ -447,9 +426,6 @@ fun ContactsScreen(
         )
     }
 
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
 }
 
 /** Asks before a book goes, with how many contacts go with it, as the user writes numbers. */

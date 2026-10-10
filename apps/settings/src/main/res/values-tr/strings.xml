@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Ayarlar</string>
-    <string name="settings_home_logout">Oturumu kapat</string>
     <string name="settings_home_account">Hesap</string>
     <string name="settings_home_preferences">Tercihler</string>
     <string name="settings_home_display">Görünüm</string>

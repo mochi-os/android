@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Preverjanje ni uspelo</string>
     <string name="forums_list_title">Forumi</string>
     <string name="forums_list_find">Najdi forume</string>
-    <string name="forums_list_logout">Odjava</string>
     <string name="forums_list_unsubscribe">Odjavi se</string>
     <string name="forums_list_unsubscribe_title">Odjavi se</string>
     <string name="forums_create_title">Ustvari forum</string>

@@ -2,7 +2,6 @@
 <resources>
     <string name="words_list_title">Perkataan</string>
     <string name="words_list_menu">Menu</string>
-    <string name="words_list_logout">Log keluar</string>
     <string name="words_sidebar_completed">Selesai</string>
     <string name="words_sidebar_new_game">Permainan baharu</string>
     <string name="words_new_game_title">Permainan baharu</string>

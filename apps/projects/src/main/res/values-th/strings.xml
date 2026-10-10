@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">ปิดการค้นหา</string>
     <string name="projects_list_search">ค้นหา</string>
     <string name="projects_list_find">ค้นหาโปรเจกต์</string>
-    <string name="projects_list_logout">ออกจากระบบ</string>
     <string name="projects_list_create">สร้างโครงการ</string>
     <string name="projects_create_title">สร้างโครงการ</string>
     <string name="projects_create_name">ชื่อ</string>

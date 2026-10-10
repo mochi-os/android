@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM များ</string>
     <string name="crm_list_search">ရှာဖွေ</string>
     <string name="crm_list_find">CRM များ ရှာ</string>
-    <string name="crm_list_logout">ထွက်</string>
     <string name="crm_list_create">CRM ဖန်တီးမည်</string>
     <string name="crm_create_title">CRM ဖန်တီးမည်</string>
     <string name="crm_create_name">အမည်</string>

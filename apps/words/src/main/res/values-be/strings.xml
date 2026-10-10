@@ -2,7 +2,6 @@
 <resources>
     <string name="words_list_title">Словы</string>
     <string name="words_list_menu">Меню</string>
-    <string name="words_list_logout">Выйсці</string>
     <string name="words_sidebar_completed">Завершана</string>
     <string name="words_sidebar_new_game">Новая гульня</string>
     <string name="words_new_game_title">Новая гульня</string>

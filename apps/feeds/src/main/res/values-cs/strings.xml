@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Odebrat zdroj?</string>
     <string name="feeds_suggested_credibility_accept">Přijmout</string>
     <string name="feeds_rss_url_copied">URL RSS zkopírována do schránky</string>
-    <string name="feeds_logout">Odhlásit se</string>
     <string name="feeds_ai_account_default">Výchozí účet</string>
     <string name="feeds_ai_mode_off">Zakázáno</string>
     <string name="feeds_ai_mode_tag">Štítkování</string>

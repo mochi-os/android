@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">سیٹنگز</string>
-    <string name="settings_home_logout">لاگ آؤٹ</string>
     <string name="settings_home_account">اکاؤنٹ</string>
     <string name="settings_home_preferences">ترجیحات</string>
     <string name="settings_home_display">ڈسپلے</string>

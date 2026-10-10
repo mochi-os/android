@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Mga setting</string>
-    <string name="settings_home_logout">Mag-log out</string>
     <string name="settings_home_account">Account</string>
     <string name="settings_home_preferences">Mga kagustuhan</string>
     <string name="settings_home_display">Display</string>

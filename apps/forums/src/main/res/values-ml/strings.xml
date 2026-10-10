@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">സ്ഥിരീകരണം പരാജയപ്പെട്ടു</string>
     <string name="forums_list_title">ഫോറങ്ങൾ</string>
     <string name="forums_list_find">ഫോറങ്ങൾ കണ്ടെത്തുക</string>
-    <string name="forums_list_logout">ലോഗ് ഔട്ട്</string>
     <string name="forums_list_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_list_unsubscribe_title">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_create_title">ഫോറം സൃഷ്ടിക്കുക</string>

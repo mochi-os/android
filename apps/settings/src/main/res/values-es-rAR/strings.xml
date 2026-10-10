@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="settings_home_logout">Cerrá sesión</string>
     <string name="account_passkey_register">Agregá una clave de acceso</string>
     <string name="account_passkey_delete_title">¿Eliminás la clave de acceso?</string>
     <string name="account_totp_setup">Configurá el autenticador</string>

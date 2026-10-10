@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">सेटिङहरू</string>
-    <string name="settings_home_logout">लग आउट</string>
     <string name="settings_home_account">खाता</string>
     <string name="settings_home_preferences">प्राथमिकताहरू</string>
     <string name="settings_home_display">प्रदर्शन</string>

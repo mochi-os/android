@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Tassyklama şowsuz boldy</string>
     <string name="forums_list_title">Forumlar</string>
     <string name="forums_list_find">Forumlary tap</string>
-    <string name="forums_list_logout">Çyk</string>
     <string name="forums_list_unsubscribe">Abunadan çyk</string>
     <string name="forums_list_unsubscribe_title">Abunadan çyk</string>
     <string name="forums_create_title">Forum döretmek</string>

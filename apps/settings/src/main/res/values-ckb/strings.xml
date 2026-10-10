@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">ڕێکخستنەکان</string>
-    <string name="settings_home_logout">دەرچوون</string>
     <string name="settings_home_account">هەژمار</string>
     <string name="settings_home_preferences">پەسەندییەکان</string>
     <string name="settings_home_display">پیشاندان</string>

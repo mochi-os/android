@@ -114,7 +114,6 @@ object ProjectsApp {
 
 fun NavGraphBuilder.projectsNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
 ) {
     composable(ProjectsApp.ROUTER) {
@@ -164,7 +163,6 @@ fun NavGraphBuilder.projectsNavGraph(
                 )
             },
             onOpenNotifications = onOpenNotifications,
-            onLogout = onLogout,
         )
     }
 
@@ -208,7 +206,6 @@ fun NavGraphBuilder.projectsNavGraph(
                     ProjectsApp.createObject(projectId, parent, presetValues)
                 )
             },
-            onLogout = onLogout,
             initialObjectId = backStackEntry.arguments?.getString("objectId"),
         )
     }

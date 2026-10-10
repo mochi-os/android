@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Šalinti šaltinį?</string>
     <string name="feeds_suggested_credibility_accept">Priimti</string>
     <string name="feeds_rss_url_copied">RSS URL nukopijuotas į iškarpinę</string>
-    <string name="feeds_logout">Atsijungti</string>
     <string name="feeds_ai_account_default">Numatytoji paskyra</string>
     <string name="feeds_ai_mode_off">Išjungta</string>
     <string name="feeds_ai_mode_tag">Žymėti</string>

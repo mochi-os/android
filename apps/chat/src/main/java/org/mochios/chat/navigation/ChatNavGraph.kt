@@ -38,7 +38,6 @@ object ChatApp {
 
 fun NavGraphBuilder.chatNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
 ) {
     composable(ChatApp.ROUTER) {
@@ -79,7 +78,6 @@ fun NavGraphBuilder.chatNavGraph(
                 }
             },
             onOpenNotifications = onOpenNotifications,
-            onLogout = onLogout,
         )
     }
 

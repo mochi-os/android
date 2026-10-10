@@ -96,7 +96,6 @@ fun NavGraphBuilder.settingsNavGraph(
             onOpenDomains = { navController.navigate(SettingsApp.DOMAINS) },
             onOpenDocument = { kind -> navController.navigate(SettingsApp.document(kind)) },
             onOpenSystemDocuments = { navController.navigate(SettingsApp.SYSTEM_DOCUMENTS) },
-            onLogout = onLogout,
         )
     }
     composable(SettingsApp.ACCOUNT) {

@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">การตั้งค่า</string>
-    <string name="settings_home_logout">ออกจากระบบ</string>
     <string name="settings_home_account">บัญชี</string>
     <string name="settings_home_preferences">การตั้งค่า</string>
     <string name="settings_home_display">การแสดงผล</string>

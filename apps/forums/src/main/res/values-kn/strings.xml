@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ</string>
     <string name="forums_list_title">ಫೋರಂಗಳು</string>
     <string name="forums_list_find">ಫೋರಮ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
-    <string name="forums_list_logout">ಲಾಗ್ ಔಟ್</string>
     <string name="forums_list_unsubscribe">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="forums_list_unsubscribe_title">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="forums_create_title">ಫೋರಮ್ ರಚಿಸಿ</string>

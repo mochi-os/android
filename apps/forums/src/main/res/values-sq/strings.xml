@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Verifikimi dështoi</string>
     <string name="forums_list_title">Forume</string>
     <string name="forums_list_find">Gjej forume</string>
-    <string name="forums_list_logout">Dilni</string>
     <string name="forums_list_unsubscribe">Çabonohu</string>
     <string name="forums_list_unsubscribe_title">Çabonohu</string>
     <string name="forums_create_title">Krijo forum</string>

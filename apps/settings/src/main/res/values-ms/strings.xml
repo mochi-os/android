@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Tetapan</string>
-    <string name="settings_home_logout">Log keluar</string>
     <string name="settings_home_account">Akaun</string>
     <string name="settings_home_preferences">Keutamaan</string>
     <string name="settings_home_display">Paparan</string>

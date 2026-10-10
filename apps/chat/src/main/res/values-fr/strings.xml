@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Discussions</string>
     <string name="chat_list_search">Rechercher</string>
-    <string name="chat_list_logout">Se déconnecter</string>
     <string name="chat_list_new">Nouveau chat</string>
     <string name="chat_new_title">Nouveau chat</string>
     <string name="chat_new_name">Nom du groupe</string>

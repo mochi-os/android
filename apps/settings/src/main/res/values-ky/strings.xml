@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Жөндөөлөр</string>
-    <string name="settings_home_logout">Чыгуу</string>
     <string name="settings_home_account">Аккаунт</string>
     <string name="settings_home_preferences">Жөндөөлөр</string>
     <string name="settings_home_display">Көрсөтүү</string>

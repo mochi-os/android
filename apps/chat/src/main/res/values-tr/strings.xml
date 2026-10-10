@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Sohbetler</string>
     <string name="chat_list_search">Ara</string>
-    <string name="chat_list_logout">Oturumu kapat</string>
     <string name="chat_list_new">Yeni sohbet</string>
     <string name="chat_new_title">Yeni sohbet</string>
     <string name="chat_new_name">Grup adı</string>

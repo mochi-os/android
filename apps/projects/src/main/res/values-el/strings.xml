@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Κλείσιμο αναζήτησης</string>
     <string name="projects_list_search">Αναζήτηση</string>
     <string name="projects_list_find">Εύρεση έργων</string>
-    <string name="projects_list_logout">Αποσύνδεση</string>
     <string name="projects_list_create">Δημιουργία έργου</string>
     <string name="projects_create_title">Δημιουργία έργου</string>
     <string name="projects_create_name">Όνομα</string>

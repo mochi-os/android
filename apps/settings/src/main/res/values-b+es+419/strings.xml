@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="settings_home_title">Configuración</string>
-    <string name="settings_home_logout">Cerrar sesión</string>
     <string name="settings_home_account">Cuenta</string>
     <string name="settings_home_preferences">Preferencias</string>
     <string name="settings_home_display">Pantalla</string>

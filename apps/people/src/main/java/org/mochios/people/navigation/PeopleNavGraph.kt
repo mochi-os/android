@@ -96,7 +96,6 @@ private fun NavController.openContacts() {
 
 fun NavGraphBuilder.peopleNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
@@ -135,7 +134,6 @@ fun NavGraphBuilder.peopleNavGraph(
             onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
             onSwitchSection = { navController.openPeopleSection(it) },
             onOpenNotifications = onOpenNotifications,
-            onLogout = onLogout,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
             onAddContact = { navController.navigate(PeopleApp.contactsAdd()) },
             onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
@@ -161,7 +159,6 @@ fun NavGraphBuilder.peopleNavGraph(
             onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
             onSwitchSection = { navController.openPeopleSection(it) },
             onOpenNotifications = onOpenNotifications,
-            onLogout = onLogout,
             onMessage = { person -> onOpenLink("chat/new?friend=$person") },
             onAddContact = { navController.navigate(PeopleApp.contactsAdd(book = book)) },
             onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
@@ -253,7 +250,6 @@ fun NavGraphBuilder.peopleNavGraph(
     composable(PeopleApp.PROFILE) {
         ProfileScreen(
             onSwitchSection = { navController.openPeopleSection(it) },
-            onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
         )
     }

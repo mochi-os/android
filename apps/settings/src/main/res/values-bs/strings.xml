@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Postavke</string>
-    <string name="settings_home_logout">Odjavi se</string>
     <string name="settings_home_account">Račun</string>
     <string name="settings_home_preferences">Postavke</string>
     <string name="settings_home_display">Prikaz</string>

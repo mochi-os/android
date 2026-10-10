@@ -3,7 +3,6 @@
 
     <string name="words_list_title">Paraules</string>
     <string name="words_list_menu">Menú</string>
-    <string name="words_list_logout">Tanca la sessió</string>
     <string name="words_sidebar_completed">Completat</string>
     <string name="words_sidebar_new_game">Joc nou</string>
     <string name="words_new_game_title">Joc nou</string>

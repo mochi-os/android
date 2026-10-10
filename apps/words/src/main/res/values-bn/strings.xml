@@ -2,7 +2,6 @@
 <resources>
     <string name="words_list_title">শব্দ</string>
     <string name="words_list_menu">মেনু</string>
-    <string name="words_list_logout">লগ আউট করুন</string>
     <string name="words_sidebar_completed">সম্পন্ন</string>
     <string name="words_sidebar_new_game">নতুন গেম</string>
     <string name="words_new_game_title">নতুন গেম</string>

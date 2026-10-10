@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">ການຢືນຢັນລົ້ມເຫຼວ</string>
     <string name="forums_list_title">ກະດານສົນທະນາ</string>
     <string name="forums_list_find">ຄົ້ນຫາກະດານສົນທະນາ</string>
-    <string name="forums_list_logout">ອອກຈາກລະບົບ</string>
     <string name="forums_list_unsubscribe">ເຊົາຕິດຕາມ</string>
     <string name="forums_list_unsubscribe_title">ເຊົາຕິດຕາມ</string>
     <string name="forums_create_title">ສ້າງກະດານສົນທະນາ</string>

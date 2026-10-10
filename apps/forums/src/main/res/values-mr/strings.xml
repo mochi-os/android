@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">पडताळणी अयशस्वी</string>
     <string name="forums_list_title">फोरम्स</string>
     <string name="forums_list_find">फोरम्स शोधा</string>
-    <string name="forums_list_logout">लॉग आउट करा</string>
     <string name="forums_list_unsubscribe">अनसबस्क्राइब करा</string>
     <string name="forums_list_unsubscribe_title">अनसबस्क्राइब करा</string>
     <string name="forums_create_title">फोरम तयार करा</string>

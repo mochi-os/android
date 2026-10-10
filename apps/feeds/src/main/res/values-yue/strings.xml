@@ -3,7 +3,6 @@
     <string name="feeds_name">名稱</string>
     <string name="feeds_create">建立</string>
     <string name="feeds_save_label">儲存</string>
-    <string name="feeds_logout">登出</string>
     <string name="feeds_settings">設定</string>
     <string name="feeds_send">傳送</string>
     <string name="feeds_remove">移除</string>

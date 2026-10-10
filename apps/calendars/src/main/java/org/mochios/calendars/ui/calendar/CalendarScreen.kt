@@ -99,7 +99,6 @@ import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileSaveLauncher
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -159,7 +158,6 @@ fun CalendarScreen(
     onSavedShown: () -> Unit = {},
     reminder: Reminder? = null,
     onReminderShown: () -> Unit = {},
-    onLogout: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -186,7 +184,6 @@ fun CalendarScreen(
     var linking by remember { mutableStateOf<Calendar?>(null) }
     var revoking by remember { mutableStateOf<Calendar?>(null) }
     var preferences by remember { mutableStateOf(false) }
-    var about by remember { mutableStateOf(false) }
     // The calendar a file is being picked for, kept by id so it outlasts the
     // activity being recreated behind the picker.
     var importing by rememberSaveable { mutableStateOf<String?>(null) }
@@ -323,8 +320,6 @@ fun CalendarScreen(
         onSubscribe = onSubscribe,
         onPreferences = { preferences = true },
         onConnectDevice = onConnectDevice,
-        onLogout = onLogout,
-        onAbout = { about = true },
     ) {
         Scaffold(
             topBar = {
@@ -572,10 +567,6 @@ fun CalendarScreen(
             onConfirm = { viewModel.revokeLink(calendar.id) { revoking = null } },
         )
     }
-    if (about) {
-        AboutDialog(onDismiss = { about = false })
-    }
-
     val tally by viewModel.importing.collectAsState()
     tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport, onRetry = viewModel::retryImport) }
 

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Aramayı kapat</string>
     <string name="projects_list_search">Ara</string>
     <string name="projects_list_find">Proje bul</string>
-    <string name="projects_list_logout">Oturumu kapat</string>
     <string name="projects_list_create">Proje oluştur</string>
     <string name="projects_create_title">Proje oluştur</string>
     <string name="projects_create_name">Ad</string>

@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Ověření selhalo</string>
     <string name="forums_list_title">Fóra</string>
     <string name="forums_list_find">Najít fóra</string>
-    <string name="forums_list_logout">Odhlásit se</string>
     <string name="forums_list_unsubscribe">Odhlásit odběr</string>
     <string name="forums_list_unsubscribe_title">Odhlásit odběr</string>
     <string name="forums_create_title">Vytvořit fórum</string>

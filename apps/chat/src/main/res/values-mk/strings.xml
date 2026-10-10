@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Разговори</string>
     <string name="chat_list_search">Барај</string>
-    <string name="chat_list_logout">Одјави се</string>
     <string name="chat_list_new">Нов разговор</string>
     <string name="chat_new_title">Нов разговор</string>
     <string name="chat_new_name">Име на група</string>

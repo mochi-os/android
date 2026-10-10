@@ -69,7 +69,6 @@ object ForumsApp {
 
 fun NavGraphBuilder.forumsNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
 ) {
     composable(ForumsApp.ROUTER) {
@@ -108,7 +107,6 @@ fun NavGraphBuilder.forumsNavGraph(
             onModeration = { fId -> navController.navigate(ForumsApp.moderation(fId)) },
             onNavigateToSaved = { navController.navigate(ForumsApp.SAVED) },
             onOpenNotifications = onOpenNotifications,
-            onLogout = onLogout,
         )
     }
 

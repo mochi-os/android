@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Дереккөзді жою керек пе?</string>
     <string name="feeds_suggested_credibility_accept">Қабылдау</string>
     <string name="feeds_rss_url_copied">RSS URL алмасу буферіне көшірілді</string>
-    <string name="feeds_logout">Шығу</string>
     <string name="feeds_ai_account_default">Әдепкі тіркелгі</string>
     <string name="feeds_ai_mode_off">Өшірілген</string>
     <string name="feeds_ai_mode_tag">Тегтеу</string>

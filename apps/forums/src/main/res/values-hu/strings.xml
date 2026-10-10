@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Az ellenőrzés sikertelen</string>
     <string name="forums_list_title">Fórumok</string>
     <string name="forums_list_find">Fórumok keresése</string>
-    <string name="forums_list_logout">Kijelentkezés</string>
     <string name="forums_list_unsubscribe">Leiratkozás</string>
     <string name="forums_list_unsubscribe_title">Leiratkozás</string>
     <string name="forums_create_title">Fórum létrehozása</string>

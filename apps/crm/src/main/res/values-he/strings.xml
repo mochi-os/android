@@ -3,7 +3,6 @@
     <string name="crm_list_title">מערכות CRM</string>
     <string name="crm_list_search">חיפוש</string>
     <string name="crm_list_find">חפש CRMים</string>
-    <string name="crm_list_logout">התנתק</string>
     <string name="crm_list_create">צור CRM</string>
     <string name="crm_create_title">צור CRM</string>
     <string name="crm_create_name">שם</string>

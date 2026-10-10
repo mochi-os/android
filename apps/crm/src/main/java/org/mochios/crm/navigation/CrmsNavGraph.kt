@@ -88,7 +88,6 @@ object CrmsApp {
 
 fun NavGraphBuilder.crmsNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
 ) {
     composable(CrmsApp.ROUTER) {
@@ -133,7 +132,6 @@ fun NavGraphBuilder.crmsNavGraph(
                 navController.navigate(CrmsApp.createObject(crmId, presetValues))
             },
             onOpenNotifications = onOpenNotifications,
-            onLogout = onLogout,
         )
     }
 
@@ -172,7 +170,6 @@ fun NavGraphBuilder.crmsNavGraph(
             onCreateObject = { presetValues ->
                 navController.navigate(CrmsApp.createObject(crmId, presetValues))
             },
-            onLogout = onLogout,
             initialObjectId = backStackEntry.arguments?.getString("objectId"),
         )
     }

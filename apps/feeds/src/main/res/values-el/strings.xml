@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Αφαίρεση πηγής;</string>
     <string name="feeds_suggested_credibility_accept">Αποδοχή</string>
     <string name="feeds_rss_url_copied">Το URL του RSS αντιγράφηκε στο πρόχειρο</string>
-    <string name="feeds_logout">Αποσύνδεση</string>
     <string name="feeds_ai_account_default">Προεπιλεγμένος λογαριασμός</string>
     <string name="feeds_ai_mode_off">Απενεργοποιημένο</string>
     <string name="feeds_ai_mode_tag">Προσθήκη ετικετών</string>

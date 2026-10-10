@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">సెట్టింగ్‌లు</string>
-    <string name="settings_home_logout">లాగ్ అవుట్</string>
     <string name="settings_home_account">ఖాతా</string>
     <string name="settings_home_preferences">ప్రాధాన్యతలు</string>
     <string name="settings_home_display">ప్రదర్శన</string>

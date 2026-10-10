@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-të</string>
     <string name="crm_list_search">Kërko</string>
     <string name="crm_list_find">Gjej CRM</string>
-    <string name="crm_list_logout">Dilni</string>
     <string name="crm_list_create">Krijo CRM</string>
     <string name="crm_create_title">Krijo CRM</string>
     <string name="crm_create_name">Emri</string>

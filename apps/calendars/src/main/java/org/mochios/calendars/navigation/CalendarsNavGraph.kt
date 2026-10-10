@@ -193,7 +193,6 @@ object CalendarsApp {
 
 fun NavGraphBuilder.calendarsNavGraph(
     navController: NavController,
-    onLogout: () -> Unit = {},
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
@@ -225,7 +224,6 @@ fun NavGraphBuilder.calendarsNavGraph(
             onSavedShown = { entry.savedStateHandle[CalendarsApp.SAVED] = "" },
             reminder = Reminder.of(reminder),
             onReminderShown = { entry.savedStateHandle[CalendarsApp.REMINDER] = "" },
-            onLogout = onLogout,
         )
     }
 

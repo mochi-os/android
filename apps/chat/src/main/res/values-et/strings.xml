@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Vestlused</string>
     <string name="chat_list_search">Otsi</string>
-    <string name="chat_list_logout">Logi välja</string>
     <string name="chat_list_new">Uus vestlus</string>
     <string name="chat_new_title">Uus vestlus</string>
     <string name="chat_new_name">Grupi nimi</string>

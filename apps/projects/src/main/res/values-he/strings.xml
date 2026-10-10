@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">סגור חיפוש</string>
     <string name="projects_list_search">חיפוש</string>
     <string name="projects_list_find">חפש פרויקטים</string>
-    <string name="projects_list_logout">התנתק</string>
     <string name="projects_list_create">צור פרויקט</string>
     <string name="projects_create_title">צור פרויקט</string>
     <string name="projects_create_name">שם</string>

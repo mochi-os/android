@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">සැකසුම්</string>
-    <string name="settings_home_logout">ඉවත් වන්න</string>
     <string name="settings_home_account">ගිණුම</string>
     <string name="settings_home_preferences">මනාපයන්</string>
     <string name="settings_home_display">සංදර්ශනය</string>

@@ -58,7 +58,6 @@
     <string name="feeds_remove_source">Remover fonte?</string>
     <string name="feeds_suggested_credibility_accept">Aceitar</string>
     <string name="feeds_rss_url_copied">URL RSS copiada para a área de transferência</string>
-    <string name="feeds_logout">Sair</string>
     <string name="feeds_ai_account_default">Conta padrão</string>
     <string name="feeds_ai_mode_off">Desativado</string>
     <string name="feeds_ai_mode_tag_deduplicate">Tag + remover duplicatas</string>

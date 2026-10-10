@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">إغلاق البحث</string>
     <string name="projects_list_search">بحث</string>
     <string name="projects_list_find">البحث عن المشاريع</string>
-    <string name="projects_list_logout">تسجيل الخروج</string>
     <string name="projects_list_create">إنشاء مشروع</string>
     <string name="projects_create_title">إنشاء مشروع</string>
     <string name="projects_create_name">الاسم</string>

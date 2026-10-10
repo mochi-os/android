@@ -56,7 +56,6 @@ import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.DoneAll
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.RssFeed
@@ -128,7 +127,6 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.AttachmentCaptionScrim
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
@@ -193,7 +191,6 @@ fun FeedScreen(
     onNavigateToFindFeeds: () -> Unit,
     onNavigateToCreateFeed: () -> Unit,
     onOpenNotifications: () -> Unit = {},
-    onLogout: () -> Unit,
     viewModel: FeedViewModel = hiltViewModel(),
     feedListViewModel: FeedListViewModel = hiltViewModel(),
 ) {
@@ -307,7 +304,6 @@ fun FeedScreen(
     val isSendingComment by viewModel.isSendingComment.collectAsState()
 
     var showOverflowMenu by remember { mutableStateOf(false) }
-    var showAbout by remember { mutableStateOf(false) }
     // Whether the overflow menu is showing its nested "RSS feed" submenu.
     var showRssSubmenu by remember { mutableStateOf(false) }
     var showNotificationsSubmenu by remember { mutableStateOf(false) }
@@ -443,22 +439,6 @@ fun FeedScreen(
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     onNavigateToCreateFeed()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(R.string.feeds_logout),
-                icon = Icons.AutoMirrored.Outlined.Logout,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onLogout()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
                 },
             )
         },
@@ -1027,9 +1007,6 @@ fun FeedScreen(
                 }
             }
         }
-    }
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

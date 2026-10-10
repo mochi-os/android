@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">ປິດການຄົ້ນຫາ</string>
     <string name="projects_list_search">ຄົ້ນຫາ</string>
     <string name="projects_list_find">ຄົ້ນຫາໂປຣເຈັກ</string>
-    <string name="projects_list_logout">ອອກຈາກລະບົບ</string>
     <string name="projects_list_create">ສ້າງໂຄງການ</string>
     <string name="projects_create_title">ສ້າງໂຄງການ</string>
     <string name="projects_create_name">ຊື່</string>

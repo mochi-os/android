@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRMs</string>
     <string name="crm_list_search">Pesquisar</string>
     <string name="crm_list_find">Encontrar CRMs</string>
-    <string name="crm_list_logout">Terminar sessão</string>
     <string name="crm_list_create">Criar CRM</string>
     <string name="crm_create_title">Criar CRM</string>
     <string name="crm_create_name">Nome</string>

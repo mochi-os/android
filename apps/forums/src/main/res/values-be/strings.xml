@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Праверка не атрымалася</string>
     <string name="forums_list_title">Форумы</string>
     <string name="forums_list_find">Знайсці форумы</string>
-    <string name="forums_list_logout">Выйсці</string>
     <string name="forums_list_unsubscribe">Адпісацца</string>
     <string name="forums_list_unsubscribe_title">Адпісацца</string>
     <string name="forums_create_title">Стварыць форум</string>

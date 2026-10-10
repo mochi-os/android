@@ -2,7 +2,6 @@
 <resources>
     <string name="words_list_title">Hitzak</string>
     <string name="words_list_menu">Menua</string>
-    <string name="words_list_logout">Amaitu saioa</string>
     <string name="words_sidebar_completed">Osatua</string>
     <string name="words_sidebar_new_game">Joko berria</string>
     <string name="words_new_game_title">Joko berria</string>

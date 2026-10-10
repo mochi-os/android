@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">إزالة المصدر؟</string>
     <string name="feeds_suggested_credibility_accept">قبول</string>
     <string name="feeds_rss_url_copied">تم نسخ URL RSS إلى الحافظة</string>
-    <string name="feeds_logout">تسجيل الخروج</string>
     <string name="feeds_ai_account_default">الحساب الافتراضي</string>
     <string name="feeds_ai_mode_off">معطّل</string>
     <string name="feeds_ai_mode_tag">وسم</string>

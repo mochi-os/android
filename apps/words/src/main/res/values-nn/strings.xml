@@ -2,7 +2,6 @@
 <resources>
     <string name="words_list_title">Ord</string>
     <string name="words_list_menu">Meny</string>
-    <string name="words_list_logout">Logg ut</string>
     <string name="words_sidebar_completed">Fullført</string>
     <string name="words_sidebar_new_game">Nytt spel</string>
     <string name="words_new_game_title">Nytt spel</string>

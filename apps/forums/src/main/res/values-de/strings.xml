@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Verifizierung fehlgeschlagen</string>
     <string name="forums_list_title">Foren</string>
     <string name="forums_list_find">Foren finden</string>
-    <string name="forums_list_logout">Abmelden</string>
     <string name="forums_list_unsubscribe">Abbestellen</string>
     <string name="forums_list_unsubscribe_title">Abbestellen</string>
     <string name="forums_create_title">Forum erstellen</string>

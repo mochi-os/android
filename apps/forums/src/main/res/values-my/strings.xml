@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">အတည်ပြုခြင်း မအောင်မြင်ပါ</string>
     <string name="forums_list_title">ဖိုရမ်များ</string>
     <string name="forums_list_find">ဖိုရမ်များ ရှာ</string>
-    <string name="forums_list_logout">ထွက်</string>
     <string name="forums_list_unsubscribe">Subscribe ဖြုတ်မည်</string>
     <string name="forums_list_unsubscribe_title">Subscribe ဖြုတ်မည်</string>
     <string name="forums_create_title">ဖိုရမ် ဖန်တီးမည်</string>

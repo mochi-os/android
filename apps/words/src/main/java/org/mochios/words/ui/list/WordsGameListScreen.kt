@@ -12,11 +12,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -47,7 +45,6 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
@@ -75,7 +72,6 @@ fun WordsGameListScreen(
     onGameClick: (String) -> Unit,
     onGameClosed: () -> Unit,
     onNewGame: () -> Unit,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
     viewModel: WordsGameListViewModel = hiltViewModel(),
@@ -85,7 +81,6 @@ fun WordsGameListScreen(
     val drawerScope = rememberCoroutineScope()
     val context = LocalContext.current
     val selectedGameId = gameId.takeUnless { id -> id == LastViewedStore.ALL }.orEmpty()
-    var showAbout by remember { mutableStateOf(false) }
 
     LaunchedEffect(selectedGameId) {
         if (selectedGameId.isNotEmpty()) {
@@ -122,22 +117,6 @@ fun WordsGameListScreen(
                     onNewGame()
                 },
             )
-            DrawerActionRow(
-                title = stringResource(R.string.words_list_logout),
-                icon = Icons.AutoMirrored.Outlined.Logout,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onLogout()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
         },
         emptyState = {
             Text(
@@ -154,7 +133,6 @@ fun WordsGameListScreen(
                 onBack = onGameClosed,
                 onOpenGame = onGameClick,
                 onOpenNotifications = onOpenNotifications,
-                onLogout = onLogout,
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
             )
         } else {
@@ -202,9 +180,6 @@ fun WordsGameListScreen(
                 }
             }
         }
-    }
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
     }
 }
 

@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM:t</string>
     <string name="crm_list_search">Haku</string>
     <string name="crm_list_find">Etsi CRM:iä</string>
-    <string name="crm_list_logout">Kirjaudu ulos</string>
     <string name="crm_list_create">Luo CRM</string>
     <string name="crm_create_title">Luo CRM</string>
     <string name="crm_create_name">Nimi</string>

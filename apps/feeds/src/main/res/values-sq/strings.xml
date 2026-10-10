@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Të hiqet burimi?</string>
     <string name="feeds_suggested_credibility_accept">Prano</string>
     <string name="feeds_rss_url_copied">URL e RSS u kopjua në clipboard</string>
-    <string name="feeds_logout">Dilni</string>
     <string name="feeds_ai_account_default">Llogaria e parazgjedhur</string>
     <string name="feeds_ai_mode_off">I çaktivizuar</string>
     <string name="feeds_ai_mode_tag">Etiketo</string>

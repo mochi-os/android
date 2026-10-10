@@ -82,7 +82,6 @@ object FeedsApp {
 
 fun NavGraphBuilder.feedsNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
 ) {
     composable(FeedsApp.ROUTER) { entry ->
@@ -136,7 +135,6 @@ fun NavGraphBuilder.feedsNavGraph(
             onNavigateToFindFeeds = { navController.navigate(FeedsApp.findFeeds()) },
             onNavigateToCreateFeed = { navController.navigate(FeedsApp.CREATE_FEED) },
             onOpenNotifications = onOpenNotifications,
-            onLogout = onLogout,
         )
     }
 

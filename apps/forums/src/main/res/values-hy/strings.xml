@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Ստուգումը ձախողվեց</string>
     <string name="forums_list_title">Ֆորումներ</string>
     <string name="forums_list_find">Գտնել ֆորումներ</string>
-    <string name="forums_list_logout">Դուրս գալ</string>
     <string name="forums_list_unsubscribe">Բաժանորդագրությունից հրաժարվել</string>
     <string name="forums_list_unsubscribe_title">Բաժանորդագրությունից հրաժարվել</string>
     <string name="forums_create_title">Ստեղծել ֆորում</string>

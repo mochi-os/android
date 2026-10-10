@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">ค้นหา</string>
     <string name="crm_list_find">ค้นหา CRM</string>
-    <string name="crm_list_logout">ออกจากระบบ</string>
     <string name="crm_list_create">สร้าง CRM</string>
     <string name="crm_create_title">สร้าง CRM</string>
     <string name="crm_create_name">ชื่อ</string>

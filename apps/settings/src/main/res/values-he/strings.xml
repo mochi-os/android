@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">הגדרות</string>
-    <string name="settings_home_logout">התנתק</string>
     <string name="settings_home_account">חשבון</string>
     <string name="settings_home_preferences">העדפות</string>
     <string name="settings_home_display">תצוגה</string>

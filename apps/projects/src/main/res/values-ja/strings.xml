@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">検索を閉じる</string>
     <string name="projects_list_search">検索</string>
     <string name="projects_list_find">プロジェクトを検索</string>
-    <string name="projects_list_logout">ログアウト</string>
     <string name="projects_list_create">プロジェクトを作成</string>
     <string name="projects_create_title">プロジェクトを作成</string>
     <string name="projects_create_name">名前</string>

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Закрыть поиск</string>
     <string name="projects_list_search">Поиск</string>
     <string name="projects_list_find">Найти проекты</string>
-    <string name="projects_list_logout">Выйти</string>
     <string name="projects_list_create">Создать проект</string>
     <string name="projects_create_title">Создать проект</string>
     <string name="projects_create_name">Название</string>

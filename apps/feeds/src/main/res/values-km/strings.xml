@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">យកប្រភពចេញ?</string>
     <string name="feeds_suggested_credibility_accept">ទទួលយក</string>
     <string name="feeds_rss_url_copied">បានចម្លង RSS URL ទៅ ក្ដារតម្បៀតខ្ទាស់</string>
-    <string name="feeds_logout">ចាកចេញ</string>
     <string name="feeds_ai_account_default">គណនីលំនាំដើម</string>
     <string name="feeds_ai_mode_off">បិទ</string>
     <string name="feeds_ai_mode_tag">ដាក់ស្លាក</string>

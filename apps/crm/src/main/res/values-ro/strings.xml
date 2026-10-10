@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-uri</string>
     <string name="crm_list_search">Caută</string>
     <string name="crm_list_find">Găsește CRM-uri</string>
-    <string name="crm_list_logout">Deconectează-te</string>
     <string name="crm_list_create">Creează CRM</string>
     <string name="crm_create_title">Creează CRM</string>
     <string name="crm_create_name">Nume</string>

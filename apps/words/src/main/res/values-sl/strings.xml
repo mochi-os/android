@@ -2,7 +2,6 @@
 <resources>
     <string name="words_list_title">Besede</string>
     <string name="words_list_menu">Meni</string>
-    <string name="words_list_logout">Odjava</string>
     <string name="words_sidebar_completed">Zaključeno</string>
     <string name="words_sidebar_new_game">Nova igra</string>
     <string name="words_new_game_title">Nova igra</string>

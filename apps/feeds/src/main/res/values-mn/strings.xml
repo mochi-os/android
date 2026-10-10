@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Эх сурвалж хасах уу?</string>
     <string name="feeds_suggested_credibility_accept">Зөвшөөрөх</string>
     <string name="feeds_rss_url_copied">RSS URL түр санах ой руу хуулагдсан</string>
-    <string name="feeds_logout">Гарах</string>
     <string name="feeds_ai_account_default">Үндсэн бүртгэл</string>
     <string name="feeds_ai_mode_off">Идэвхгүй</string>
     <string name="feeds_ai_mode_tag">Шошголох</string>

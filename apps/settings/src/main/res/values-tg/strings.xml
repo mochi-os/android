@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Танзимот</string>
-    <string name="settings_home_logout">Баромадан</string>
     <string name="settings_home_account">Ҳисоб</string>
     <string name="settings_home_preferences">Афзалиятҳо</string>
     <string name="settings_home_display">Намоиш</string>

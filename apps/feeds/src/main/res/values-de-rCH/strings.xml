@@ -6,7 +6,6 @@
     <string name="feeds_name">Name</string>
     <string name="feeds_create">Erstellen</string>
     <string name="feeds_save_label">Speichern</string>
-    <string name="feeds_logout">Abmelden</string>
     <string name="feeds_settings">Einstellungen</string>
     <string name="feeds_send">Senden</string>
     <string name="feeds_remove">Entfernen</string>

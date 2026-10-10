@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Indstillinger</string>
-    <string name="settings_home_logout">Log ud</string>
     <string name="settings_home_account">Konto</string>
     <string name="settings_home_preferences">Præferencer</string>
     <string name="settings_home_display">Visning</string>

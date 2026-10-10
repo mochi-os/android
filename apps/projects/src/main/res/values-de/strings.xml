@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Suche schließen</string>
     <string name="projects_list_search">Suchen</string>
     <string name="projects_list_find">Projekte finden</string>
-    <string name="projects_list_logout">Abmelden</string>
     <string name="projects_list_create">Projekt erstellen</string>
     <string name="projects_create_title">Projekt erstellen</string>
     <string name="projects_create_name">Name</string>

@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">அமைப்புகள்</string>
-    <string name="settings_home_logout">வெளியேறு</string>
     <string name="settings_home_account">கணக்கு</string>
     <string name="settings_home_preferences">விருப்பத்தேர்வுகள்</string>
     <string name="settings_home_display">காட்சி</string>

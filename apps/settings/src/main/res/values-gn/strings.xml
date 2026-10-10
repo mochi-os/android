@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Ñemboheko</string>
-    <string name="settings_home_logout">Esẽ</string>
     <string name="settings_home_account">Mba\'ete</string>
     <string name="settings_home_preferences">Jeporavo</string>
     <string name="settings_home_display">Jehechauka</string>

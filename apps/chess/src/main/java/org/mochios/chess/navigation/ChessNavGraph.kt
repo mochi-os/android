@@ -30,7 +30,6 @@ object ChessApp {
 
 fun NavGraphBuilder.chessNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
@@ -63,7 +62,6 @@ fun NavGraphBuilder.chessNavGraph(
         ChessGameListScreen(
             navController = navController,
             gameId = backStackEntry.arguments?.getString("gameId").orEmpty(),
-            onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
             onOpenLink = onOpenLink,
         )

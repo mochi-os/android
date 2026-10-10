@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">¿Eliminar la fuente?</string>
     <string name="feeds_suggested_credibility_accept">Aceptar</string>
     <string name="feeds_rss_url_copied">URL del RSS copiada al portapapeles</string>
-    <string name="feeds_logout">Cerrar sesión</string>
     <string name="feeds_ai_account_default">Cuenta predeterminada</string>
     <string name="feeds_ai_mode_off">Desactivado</string>
     <string name="feeds_ai_mode_tag">Etiquetar</string>

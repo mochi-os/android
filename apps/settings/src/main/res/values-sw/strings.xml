@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Mipangilio</string>
-    <string name="settings_home_logout">Toka</string>
     <string name="settings_home_account">Akaunti</string>
     <string name="settings_home_preferences">Mapendeleo</string>
     <string name="settings_home_display">Onyesho</string>

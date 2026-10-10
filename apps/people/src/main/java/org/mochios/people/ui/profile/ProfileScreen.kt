@@ -109,7 +109,6 @@ import org.mochios.people.ui.router.RememberPeopleSection
 @Composable
 fun ProfileScreen(
     onSwitchSection: (PeopleSidebarSection) -> Unit,
-    @Suppress("unused") onLogout: () -> Unit,
     @Suppress("unused") onOpenNotifications: () -> Unit,
     viewModel: ProfileViewModel = hiltViewModel(),
 ) {

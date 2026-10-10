@@ -60,7 +60,6 @@
     <string name="feeds_remove_source">Ukloniti izvor?</string>
     <string name="feeds_suggested_credibility_accept">Prihvati</string>
     <string name="feeds_rss_url_copied">RSS URL kopiran u međuspremnik</string>
-    <string name="feeds_logout">Odjavi se</string>
     <string name="feeds_ai_account_default">Zadani račun</string>
     <string name="feeds_ai_mode_off">Onemogućeno</string>
     <string name="feeds_ai_mode_tag">Označi</string>

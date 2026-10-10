@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Ezarpenak</string>
-    <string name="settings_home_logout">Amaitu saioa</string>
     <string name="settings_home_account">Kontua</string>
     <string name="settings_home_preferences">Hobespenak</string>
     <string name="settings_home_display">Pantaila</string>

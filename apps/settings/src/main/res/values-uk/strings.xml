@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Налаштування</string>
-    <string name="settings_home_logout">Вийти</string>
     <string name="settings_home_account">Обліковий запис</string>
     <string name="settings_home_preferences">Параметри</string>
     <string name="settings_home_display">Відображення</string>

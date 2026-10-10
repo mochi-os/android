@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Тохиргоо</string>
-    <string name="settings_home_logout">Гарах</string>
     <string name="settings_home_account">Бүртгэл</string>
     <string name="settings_home_preferences">Тохиргоонууд</string>
     <string name="settings_home_display">Дэлгэц</string>

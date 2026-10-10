@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_list_logout">Cerrá sesión</string>
     <string name="forums_create_title">Creá un foro</string>
     <string name="forums_find_subscribe">Suscribite</string>
     <string name="forums_post_edit">Editá el posteo</string>

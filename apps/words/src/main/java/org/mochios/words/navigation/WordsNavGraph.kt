@@ -29,7 +29,6 @@ object WordsApp {
 
 fun NavGraphBuilder.wordsNavGraph(
     navController: NavController,
-    onLogout: () -> Unit,
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
@@ -80,7 +79,6 @@ fun NavGraphBuilder.wordsNavGraph(
                 }
             },
             onNewGame = { navController.navigate(WordsApp.NEW_GAME) },
-            onLogout = onLogout,
             onOpenNotifications = onOpenNotifications,
             onOpenLink = onOpenLink,
         )

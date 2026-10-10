@@ -3,7 +3,6 @@
     <string name="crm_list_title">Mga CRM</string>
     <string name="crm_list_search">Maghanap</string>
     <string name="crm_list_find">Maghanap ng mga CRM</string>
-    <string name="crm_list_logout">Mag-log out</string>
     <string name="crm_list_create">Gumawa ng CRM</string>
     <string name="crm_create_title">Gumawa ng CRM</string>
     <string name="crm_create_name">Pangalan</string>

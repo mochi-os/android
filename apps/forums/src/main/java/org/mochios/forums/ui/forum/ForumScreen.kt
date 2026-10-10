@@ -46,7 +46,6 @@ import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.EmojiEvents
 import androidx.compose.material.icons.outlined.Forum
 import androidx.compose.material.icons.outlined.Gavel
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.RssFeed
@@ -106,7 +105,6 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.RssRevokeDialog
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
@@ -194,7 +192,6 @@ fun ForumScreen(
     onModeration: (String) -> Unit = {},
     onNavigateToSaved: () -> Unit = {},
     onOpenNotifications: () -> Unit = {},
-    onLogout: () -> Unit,
     listViewModel: ForumListViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
@@ -203,7 +200,6 @@ fun ForumScreen(
     )
     val drawerScope = rememberCoroutineScope()
     val listUiState by listViewModel.uiState.collectAsState()
-    var showAbout by remember { mutableStateOf(false) }
 
     LaunchedEffect(forumId) {
         if (forumId.isNotBlank()) {
@@ -262,22 +258,6 @@ fun ForumScreen(
                     onCreateForum()
                 },
             )
-            DrawerActionRow(
-                title = stringResource(R.string.forums_list_logout),
-                icon = Icons.AutoMirrored.Outlined.Logout,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onLogout()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
         },
     ) {
         if (forumId.isEmpty()) {
@@ -304,9 +284,6 @@ fun ForumScreen(
         }
     }
 
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">যাচাইকরণ ব্যর্থ হয়েছে</string>
     <string name="forums_list_title">ফোরামসমূহ</string>
     <string name="forums_list_find">ফোরাম খুঁজুন</string>
-    <string name="forums_list_logout">লগ আউট করুন</string>
     <string name="forums_list_unsubscribe">আনসাবস্ক্রাইব করুন</string>
     <string name="forums_list_unsubscribe_title">আনসাবস্ক্রাইব করুন</string>
     <string name="forums_create_title">ফোরাম তৈরি করুন</string>

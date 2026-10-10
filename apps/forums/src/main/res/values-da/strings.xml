@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Verifikation mislykkedes</string>
     <string name="forums_list_title">Fora</string>
     <string name="forums_list_find">Find fora</string>
-    <string name="forums_list_logout">Log ud</string>
     <string name="forums_list_unsubscribe">Afmeld</string>
     <string name="forums_list_unsubscribe_title">Afmeld</string>
     <string name="forums_create_title">Opret forum</string>

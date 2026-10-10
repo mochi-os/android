@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM saraksts</string>
     <string name="crm_list_search">Meklēt</string>
     <string name="crm_list_find">Atrast CRM</string>
-    <string name="crm_list_logout">Izrakstīties</string>
     <string name="crm_list_create">Izveidot CRM</string>
     <string name="crm_create_title">Izveidot CRM</string>
     <string name="crm_create_name">Nosaukums</string>

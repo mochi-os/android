@@ -3,7 +3,6 @@
     <string name="crm_list_title">أنظمة CRM</string>
     <string name="crm_list_search">بحث</string>
     <string name="crm_list_find">البحث عن أنظمة CRM</string>
-    <string name="crm_list_logout">تسجيل الخروج</string>
     <string name="crm_list_create">إنشاء CRM</string>
     <string name="crm_create_title">إنشاء CRM</string>
     <string name="crm_create_name">الاسم</string>

@@ -3,7 +3,6 @@
 
     <string name="chat_list_title">Συνομιλίες</string>
     <string name="chat_list_search">Αναζήτηση</string>
-    <string name="chat_list_logout">Αποσύνδεση</string>
     <string name="chat_list_new">Νέα συνομιλία</string>
     <string name="chat_new_title">Νέα συνομιλία</string>
     <string name="chat_new_name">Όνομα ομάδας</string>

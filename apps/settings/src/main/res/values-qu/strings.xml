@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Wakichiykuna</string>
-    <string name="settings_home_logout">Lluqsiy</string>
     <string name="settings_home_account">Cuenta</string>
     <string name="settings_home_preferences">Preferenciakuna</string>
     <string name="settings_home_display">Rikuchiy</string>

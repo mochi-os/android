@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Lukk søk</string>
     <string name="projects_list_search">Søk</string>
     <string name="projects_list_find">Finn prosjekter</string>
-    <string name="projects_list_logout">Logg ut</string>
     <string name="projects_list_create">Opprett prosjekt</string>
     <string name="projects_create_title">Opprett prosjekt</string>
     <string name="projects_create_name">Navn</string>

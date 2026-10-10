@@ -2,7 +2,6 @@
 <resources>
 
     <string name="crm_list_search">Buscá</string>
-    <string name="crm_list_logout">Cerrá sesión</string>
     <string name="crm_list_create">Creá un CRM</string>
     <string name="crm_create_title">Creá un CRM</string>
     <string name="crm_create_object">Creá un objeto</string>

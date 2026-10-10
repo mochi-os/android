@@ -3,7 +3,6 @@
 
     <string name="words_list_title">ワーズ</string>
     <string name="words_list_menu">メニュー</string>
-    <string name="words_list_logout">ログアウト</string>
     <string name="words_sidebar_completed">完了</string>
     <string name="words_sidebar_new_game">新しいゲーム</string>
     <string name="words_new_game_title">新しいゲーム</string>

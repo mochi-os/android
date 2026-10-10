@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Nabigo ang beripikasyon</string>
     <string name="forums_list_title">Mga forum</string>
     <string name="forums_list_find">Maghanap ng mga forum</string>
-    <string name="forums_list_logout">Mag-log out</string>
     <string name="forums_list_unsubscribe">Mag-unsubscribe</string>
     <string name="forums_list_unsubscribe_title">Mag-unsubscribe</string>
     <string name="forums_create_title">Gumawa ng forum</string>

@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Подтверждение не удалось</string>
     <string name="forums_list_title">Форумы</string>
     <string name="forums_list_find">Найти форумы</string>
-    <string name="forums_list_logout">Выйти</string>
     <string name="forums_list_unsubscribe">Отписаться</string>
     <string name="forums_list_unsubscribe_title">Отписаться</string>
     <string name="forums_create_title">Создать форум</string>

@@ -6,7 +6,6 @@
     <string name="projects_list_close_search">Keresés bezárása</string>
     <string name="projects_list_search">Keresés</string>
     <string name="projects_list_find">Projektek keresése</string>
-    <string name="projects_list_logout">Kijelentkezés</string>
     <string name="projects_list_create">Projekt létrehozása</string>
     <string name="projects_create_title">Projekt létrehozása</string>
     <string name="projects_create_name">Név</string>

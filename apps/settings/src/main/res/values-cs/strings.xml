@@ -2,7 +2,6 @@
 <resources>
 
     <string name="settings_home_title">Nastavení</string>
-    <string name="settings_home_logout">Odhlásit se</string>
     <string name="settings_home_account">Účet</string>
     <string name="settings_home_preferences">Předvolby</string>
     <string name="settings_home_display">Zobrazení</string>

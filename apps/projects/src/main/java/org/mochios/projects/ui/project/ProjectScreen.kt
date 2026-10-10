@@ -28,7 +28,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.FormatListBulleted
-import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDownward
 import androidx.compose.material.icons.filled.ArrowUpward
@@ -46,7 +45,6 @@ import androidx.compose.material.icons.outlined.DragIndicator
 import androidx.compose.material.icons.outlined.FileDownload
 import androidx.compose.material.icons.outlined.FolderOpen
 import androidx.compose.material.icons.outlined.HomeMax
-import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
@@ -99,7 +97,6 @@ import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.files.shareExportFile
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
@@ -149,7 +146,6 @@ fun ProjectScreen(
     onViewDiff: (String, String, String, String) -> Unit,
     onCreateObject: (parent: String?, presetValues: Map<String, String>) -> Unit = { _, _ -> },
     onOpenNotifications: () -> Unit = {},
-    onLogout: () -> Unit,
     initialObjectId: String? = null,
     listViewModel: ProjectListViewModel = hiltViewModel(),
 ) {
@@ -159,7 +155,6 @@ fun ProjectScreen(
     )
     val drawerScope = rememberCoroutineScope()
     val listUiState by listViewModel.uiState.collectAsState()
-    var showAbout by remember { mutableStateOf(false) }
 
     LaunchedEffect(projectId) {
         if (projectId.isNotBlank()) {
@@ -213,22 +208,6 @@ fun ProjectScreen(
                     onCreateProject()
                 },
             )
-            DrawerActionRow(
-                title = stringResource(R.string.projects_list_logout),
-                icon = Icons.AutoMirrored.Outlined.Logout,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    onLogout()
-                },
-            )
-            DrawerActionRow(
-                title = stringResource(MochiR.string.about_label),
-                icon = Icons.Outlined.Info,
-                onClick = {
-                    drawerScope.launch { drawerState.close() }
-                    showAbout = true
-                },
-            )
         },
     ) {
         when {
@@ -264,9 +243,6 @@ fun ProjectScreen(
         }
     }
 
-    if (showAbout) {
-        AboutDialog(onDismiss = { showAbout = false })
-    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

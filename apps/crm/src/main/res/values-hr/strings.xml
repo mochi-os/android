@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM-ovi</string>
     <string name="crm_list_search">Pretraži</string>
     <string name="crm_list_find">Pronađi CRM-ove</string>
-    <string name="crm_list_logout">Odjavi se</string>
     <string name="crm_list_create">Stvori CRM</string>
     <string name="crm_create_title">Stvori CRM</string>
     <string name="crm_create_name">Naziv</string>

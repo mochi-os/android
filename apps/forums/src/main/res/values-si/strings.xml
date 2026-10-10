@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">සත්‍යාපනය අසාර්ථක විය</string>
     <string name="forums_list_title">සංසද</string>
     <string name="forums_list_find">සභා සොයන්න</string>
-    <string name="forums_list_logout">ඉවත් වන්න</string>
     <string name="forums_list_unsubscribe">දායකත්වය ඉවත් කරන්න</string>
     <string name="forums_list_unsubscribe_title">දායකත්වය ඉවත් කරන්න</string>
     <string name="forums_create_title">සංසදයක් නිර්මාණය කරන්න</string>

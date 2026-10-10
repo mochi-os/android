@@ -3,7 +3,6 @@
     <string name="crm_list_title">CRM</string>
     <string name="crm_list_search">অনুসন্ধান</string>
     <string name="crm_list_find">CRM খুঁজুন</string>
-    <string name="crm_list_logout">লগ আউট করুন</string>
     <string name="crm_list_create">CRM তৈরি করুন</string>
     <string name="crm_create_title">CRM তৈরি করুন</string>
     <string name="crm_create_name">নাম</string>

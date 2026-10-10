@@ -4,7 +4,6 @@
     <string name="settings_home_title">Settings</string>
     <string name="settings_home_account">Account</string>
     <string name="settings_home_preferences">Preferences</string>
-    <string name="settings_home_logout">Log out</string>
     <string name="settings_home_display">Display</string>
     <string name="settings_home_notification_prefs">Notification preferences</string>
     <string name="settings_home_accounts">Connected accounts</string>

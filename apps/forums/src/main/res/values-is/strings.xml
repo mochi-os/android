@@ -5,7 +5,6 @@
     <string name="forums_auth_verification_failed">Sannprófun mistókst</string>
     <string name="forums_list_title">Spjallborð</string>
     <string name="forums_list_find">Finna spjallborð</string>
-    <string name="forums_list_logout">Skrá út</string>
     <string name="forums_list_unsubscribe">Afskrá áskrift</string>
     <string name="forums_list_unsubscribe_title">Afskrá áskrift</string>
     <string name="forums_create_title">Búa til spjallborð</string>
