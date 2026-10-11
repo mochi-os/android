@@ -116,13 +116,15 @@ data class EditorUiState(
      */
     val opened: Pair<EventForm, String>? = null,
     val deleted: Boolean = false,
-    /** An event the screen goes on as: the one a create or a copy made, or a save left the occurrence in. */
+    /** An event the screen goes on as: the one a copy made, or a save left the occurrence in. */
     val follow: Follow? = null,
+    /** A new event was made: the screen goes back to the calendar, which says so. */
+    val created: Boolean = false,
     /** Leaving saved what was pending, so the screen can go. */
     val left: Boolean = false,
     /** Leaving with a change that cannot be saved, no title or an end before the start: ask before it is dropped. */
     val discarding: Boolean = false,
-    /** What the editor that opened this one said it did, once: made, or copied. */
+    /** What the editor that opened this one said it did, once: copied. */
     val said: Said? = null,
 ) {
     val writable: Boolean get() = calendars.firstOrNull { it.id == calendar }?.readonly != true
@@ -140,7 +142,6 @@ data class Follow(val event: String, val moment: Long, val said: Said? = null)
 
 /** What an editor says it did as it hands over to the next one. */
 enum class Said {
-    CREATED,
     COPIED,
 }
 
@@ -631,8 +632,13 @@ class EventEditViewModel @Inject constructor(
                 val made = repository.createEvent(state.calendar, components(form(state), emptyList(), Scope.ALL))
                 VisibilityStore.reveal(context, made.calendar)
                 remember(state)
-                val said = if (state.copying) Said.COPIED else Said.CREATED
-                _uiState.value = _uiState.value.copy(isSaving = false, follow = Follow(made.id, listed(state), said))
+                // A copy, made to be changed, opens; a new event is done with, and
+                // the screen goes back to the calendar it now shows on.
+                _uiState.value = if (state.copying) {
+                    _uiState.value.copy(isSaving = false, follow = Follow(made.id, listed(state), Said.COPIED))
+                } else {
+                    _uiState.value.copy(isSaving = false, created = true)
+                }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
             }

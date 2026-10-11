@@ -196,14 +196,15 @@ class ContactsFlowTest {
     }
 
     @Test
-    fun `a new contact is made by Create, and the editor goes on as it`() {
+    fun `a new contact is made by Create, and the editor goes back to where it was started`() {
         val model = ContactEditViewModel(SavedStateHandle(), repository)
         until { model.uiState.value.books.isNotEmpty() }
         model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
         shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(1500))
         assertEquals(emptyList<String>(), sent("create"))
         model.create()
-        until { model.uiState.value.opened == "c9" }
+        until { model.uiState.value.left }
+        assertEquals(null, model.uiState.value.opened)
         val body = sent("create").single()
         assertTrue(body, body.contains("Ada Lovelace"))
         assertFalse(body, body.contains("\"source\""))

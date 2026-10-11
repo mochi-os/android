@@ -455,6 +455,8 @@ class CalendarFlowTest {
         assertEquals(R.string.calendars_created, CalendarsApp.said(CalendarsApp.CALENDAR))
         assertEquals(R.string.calendars_subscribed, CalendarsApp.said(CalendarsApp.SUBSCRIBED))
         assertEquals(R.string.calendars_linked, CalendarsApp.said(CalendarsApp.LINKED))
+        // So is an event made, which the editor leaves the calendar to say.
+        assertEquals(R.string.calendars_event_created, CalendarsApp.said(CalendarsApp.CREATED))
     }
 
     // ---- reminders ----

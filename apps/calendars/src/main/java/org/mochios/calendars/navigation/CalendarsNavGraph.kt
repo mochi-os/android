@@ -372,7 +372,7 @@ fun NavGraphBuilder.calendarsNavGraph(
     ) {
         EventEditScreen(
             onBack = { navController.popBackStack() },
-            // The event made takes this editor's place, so Back from it lands
+            // A copy made takes this editor's place, so Back from it lands
             // on the calendar.
             onOpen = { event, moment, said ->
                 navController.navigate(CalendarsApp.event(event, moment, said)) {
@@ -380,6 +380,11 @@ fun NavGraphBuilder.calendarsNavGraph(
                 }
             },
             onDeleted = { navController.popBackStack() },
+            // A new event made goes back to the calendar, which says so.
+            onCreated = {
+                CalendarsApp.saved(navController, created = true)
+                navController.popBackStack()
+            },
         )
     }
 
@@ -413,6 +418,8 @@ fun NavGraphBuilder.calendarsNavGraph(
                     .getOrNull()?.savedStateHandle?.set(CalendarsApp.DELETED, true)
                 navController.popBackStack()
             },
+            // An open event is never created, only copied, which opens.
+            onCreated = { navController.popBackStack() },
         )
     }
 }

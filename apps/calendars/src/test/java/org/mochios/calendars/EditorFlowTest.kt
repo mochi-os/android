@@ -85,6 +85,7 @@ class EditorFlowTest {
 
     /** The editor the screen went on as: event, moment, and what was said. */
     private var followed: Triple<String, Long, Said?>? = null
+    private var created = false
     private var left = false
     private var deleted = false
 
@@ -148,6 +149,7 @@ class EditorFlowTest {
                 onBack = { left = true },
                 onOpen = { event, moment, said -> followed = Triple(event, moment, said) },
                 onDeleted = { deleted = true },
+                onCreated = { created = true },
                 viewModel = model,
             )
         }
@@ -277,7 +279,7 @@ class EditorFlowTest {
     }
 
     @Test
-    fun `Create makes the new event, saving nothing before it, and the editor goes on as it`() {
+    fun `Create makes the new event, saving nothing before it, and the editor goes back to the calendar`() {
         respond("-/events/create", event("a", "Lunch"))
         show()
         rule.waitUntil(5_000) { rule.onAllNodes(hasSetTextAction()).fetchSemanticsNodes().isNotEmpty() }
@@ -285,9 +287,8 @@ class EditorFlowTest {
         rest()
         assertFalse(asked.contains("-/events/create"))
         rule.onNodeWithText(string(R.string.calendars_create_submit)).performScrollTo().performClick()
-        answered { followed != null }
-        assertEquals("e1", followed!!.first)
-        assertEquals(Said.CREATED, followed!!.third)
+        answered { created }
+        assertEquals(null, followed)
         assertTrue(bodies["-/events/create"]!!.contains("Lunch"))
     }
 

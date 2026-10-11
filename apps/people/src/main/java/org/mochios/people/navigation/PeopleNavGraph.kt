@@ -194,9 +194,8 @@ fun NavGraphBuilder.peopleNavGraph(
         arguments = listOf(navArgument("book") { type = NavType.StringType; defaultValue = "" }),
     ) {
         ContactEditScreen(
+            // Create goes back here too, to where the new one was started.
             onBack = { navController.popBackStack() },
-            // The new contact's editor takes this screen's place, so Back from
-            // it lands where the new one was started.
             onOpen = { id ->
                 navController.navigate(PeopleApp.contactEdit(id)) {
                     popUpTo(PeopleApp.CONTACT_NEW) { inclusive = true }

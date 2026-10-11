@@ -48,11 +48,11 @@ data class ContactEditUiState(
     val deleted: Boolean = false,
 
     /**
-     * A contact the screen goes on as: the one a create or a copy made, or the
-     * one a merge left standing.
+     * A contact the screen goes on as: the one a copy made, or the one a merge
+     * left standing.
      */
     val opened: String? = null,
-    /** Leaving saved what was pending, so the screen can go. */
+    /** Leaving saved what was pending, or Create made the contact, so the screen can go. */
     val left: Boolean = false,
 
     /** Persons with an invitation out, which is how a pending invite is known. */
@@ -323,18 +323,21 @@ class ContactEditViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(conflict = null)
     }
 
-    /** Saves a new contact; the screen then goes on as its editor. */
+    /**
+     * Saves a new contact; the screen then goes back to where it was started,
+     * as the web's panel closes. A copy, made to be changed, opens instead.
+     */
     fun create() {
         val state = _uiState.value
         if (!creating || !state.form.valid || state.isSaving) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSaving = true, error = null)
             try {
-                val contact = repository.createContact(
+                repository.createContact(
                     properties = state.form.properties(),
                     book = state.form.book.ifBlank { null },
                 )
-                _uiState.value = _uiState.value.copy(isSaving = false, opened = contact.id)
+                _uiState.value = _uiState.value.copy(isSaving = false, left = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
             }

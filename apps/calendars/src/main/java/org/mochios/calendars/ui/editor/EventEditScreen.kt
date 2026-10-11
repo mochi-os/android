@@ -136,8 +136,9 @@ import org.mochios.android.R as MochiR
  * saves as it goes, as the web's side panel does, and has no Save; a new one
  * is made by Create. A recurring event asks whether a save, a delete or a
  * copy is for the one occurrence or the whole series. [onOpen] goes on as
- * another event's editor: the one a create or a copy made, or the one a save
- * left the occurrence in, with what was done to make it.
+ * another event's editor: the one a copy made, or the one a save left the
+ * occurrence in, with what was done to make it. [onCreated] leaves once a new
+ * event is made, for the calendar to say so.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -145,6 +146,7 @@ fun EventEditScreen(
     onBack: () -> Unit,
     onOpen: (event: String, moment: Long, said: Said?) -> Unit,
     onDeleted: () -> Unit,
+    onCreated: () -> Unit,
     viewModel: EventEditViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -168,17 +170,17 @@ fun EventEditScreen(
         uiState.follow?.let { onOpen(it.event, it.moment, it.said) }
     }
     LaunchedEffect(uiState.left) { if (uiState.left) onBack() }
+    LaunchedEffect(uiState.created) { if (uiState.created) onCreated() }
     LaunchedEffect(uiState.deleted) { if (uiState.deleted) onDeleted() }
     // What the editor before this one did, said once as this one opens.
-    val created = stringResource(R.string.calendars_event_created)
     val copied = stringResource(R.string.calendars_event_copied)
     val said = rememberCoroutineScope()
     LaunchedEffect(uiState.said) {
-        val done = uiState.said ?: return@LaunchedEffect
+        uiState.said ?: return@LaunchedEffect
         // Said from the screen's own scope: hearing it clears the flag, which
         // restarts this effect, and the message has to outlive it.
         viewModel.heard()
-        said.launch { snackbar.showSnackbar(if (done == Said.COPIED) copied else created) }
+        said.launch { snackbar.showSnackbar(copied) }
     }
     LaunchedEffect(uiState.error) {
         uiState.error?.let { snackbar.showSnackbar(it.userMessage()) }
