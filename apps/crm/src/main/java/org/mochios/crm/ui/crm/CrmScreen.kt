@@ -461,13 +461,12 @@ private fun CrmContent(
     var showOverflow by remember { mutableStateOf(false) }
     var showSearch by remember { mutableStateOf(false) }
     var showFilters by remember { mutableStateOf(false) }
-    var columnPending by rememberSaveable { mutableStateOf(false) }
-
-    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
-        if (columnPending) {
-            columnPending = false
-            viewModel.refresh()
-        }
+    // A column added or an object created on another screen is read again on
+    // the way back: this screen's view model still holds what it had before.
+    val owe = rememberReturnRefresh { viewModel.refresh() }
+    val create: (Map<String, String>) -> Unit = { values ->
+        owe()
+        onCreateObject(values)
     }
 
     LaunchedEffect(initialObjectId) {
@@ -677,7 +676,7 @@ private fun CrmContent(
                                             val fieldId = activeView.columns
                                             val classId = viewModel.getBoardClass(activeView)
                                             if (classId != null) {
-                                                columnPending = true
+                                                owe()
                                                 onAddColumn(viewModel.crmId, classId, fieldId)
                                             }
                                         },
@@ -756,7 +755,7 @@ private fun CrmContent(
             // as, so the form would open with its Create permanently disabled
             // and no way to tell why. Hidden rather than dead.
             if (details != null && details.classes.isNotEmpty() && !boardHasColumns) {
-                MochiFab(onClick = { onCreateObject(emptyMap()) }) {
+                MochiFab(onClick = { create(emptyMap()) }) {
                     Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_create_object))
                 }
             }
@@ -825,7 +824,7 @@ private fun CrmContent(
                                     viewModel = viewModel,
                                     onObjectClick = { viewModel.selectObject(it) },
                                     onStartCreate = { initialValues ->
-                                        onCreateObject(initialValues)
+                                        create(initialValues)
                                     }
                                 )
                             }
@@ -1062,4 +1061,21 @@ private fun SectionLabel(text: String, modifier: Modifier = Modifier) {
         color = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = modifier,
     )
+}
+
+/**
+ * A refresh owed for something made on another screen, paid when this one
+ * resumes: call what it returns before leaving, and [refresh] runs on the way
+ * back, once.
+ */
+@Composable
+internal fun rememberReturnRefresh(refresh: () -> Unit): () -> Unit {
+    var pending by rememberSaveable { mutableStateOf(false) }
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+        if (pending) {
+            pending = false
+            refresh()
+        }
+    }
+    return { pending = true }
 }

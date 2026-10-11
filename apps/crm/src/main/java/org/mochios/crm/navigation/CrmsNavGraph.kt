@@ -202,17 +202,12 @@ fun NavGraphBuilder.crmsNavGraph(
                 defaultValue = ""
             },
         )
-    ) { backStackEntry ->
-        val crmId = backStackEntry.arguments?.getString("crmId").orEmpty()
+    ) {
         CreateObjectScreen(
             onBack = { navController.popBackStack() },
-            // Navigate rather than pop: the existing CRM entry's view model
-            // still holds the pre-create objects.
-            onCreated = { objectId ->
-                navController.navigate(CrmsApp.crmObject(crmId, objectId)) {
-                    popUpTo(CrmsApp.CREATE_OBJECT) { inclusive = true }
-                }
-            },
+            // Back to the CRM, as Projects and the web's create dialog do; it
+            // reads its objects again on the way back.
+            onCreated = { navController.popBackStack() },
         )
     }
 
