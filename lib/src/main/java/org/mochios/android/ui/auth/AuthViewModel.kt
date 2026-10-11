@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.auth
 
+import android.security.NetworkSecurityPolicy
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -12,6 +13,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.R
 import org.mochios.android.api.MochiError
@@ -178,11 +180,11 @@ class AuthViewModel @Inject constructor(
 
         // Parse before persisting: setServerUrl stores whatever it is given and
         // the request is retargeted from it, so an unparseable entry would
-        // validate against the previously pinned server. An http:// server is
-        // refused here rather than by the platform's cleartext policy at the
-        // first request, which surfaces as an opaque connection failure.
+        // validate against the previously pinned server. An http:// server the
+        // platform's cleartext policy refuses is refused here rather than at
+        // the first request, which surfaces as an opaque connection failure.
         val parsed = url.toHttpUrlOrNull()
-        if (parsed != null && !parsed.isHttps) {
+        if (parsed != null && !permitted(parsed)) {
             _uiState.value = _uiState.value.copy(
                 error = MochiError.Local(R.string.error_server_https)
             )
@@ -473,3 +475,11 @@ class AuthViewModel @Inject constructor(
         }
     }
 }
+
+/**
+ * Whether the app may connect to [url]: always over HTTPS, and over plain HTTP
+ * only where the platform's network security policy allows it - nowhere in a
+ * release build, this machine in a debug build.
+ */
+private fun permitted(url: HttpUrl): Boolean =
+    url.isHttps || NetworkSecurityPolicy.getInstance().isCleartextTrafficPermitted(url.host)
