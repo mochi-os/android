@@ -109,8 +109,12 @@ import kotlin.math.sqrt
 
 private const val TAG = "HomeScreen"
 
-/** The glow at the top of the page: its colour's strength, where it fades out, and how far down it reaches. */
-private const val GLOW_STRENGTH = 0.12f
+/**
+ * The glow at the top of the page: its colour's strength, where it fades out,
+ * and how far down it reaches. The web's is 12%, over a white page; Android's
+ * page is off-white, where 12% reads much fainter, so the glow is stronger.
+ */
+private const val GLOW_STRENGTH = 0.2f
 private const val GLOW_FADE = 0.7f
 private val GLOW_HEIGHT = 420.dp
 private val SQRT2 = sqrt(2f)
@@ -294,9 +298,10 @@ internal fun HomeBackground(glow: Boolean, content: @Composable () -> Unit) {
 }
 
 /**
- * The web's `radial-gradient(ellipse at top, primary 12%, transparent 70%)`
- * over a strip [GLOW_HEIGHT] tall: an ellipse centred on the top edge that
- * reaches the strip's bottom corners, the colour fading out 70% of the way.
+ * The web's `radial-gradient(ellipse at top, primary 12%, transparent 70%)`,
+ * at [GLOW_STRENGTH] here, over a strip [GLOW_HEIGHT] tall: an ellipse
+ * centred on the top edge that reaches the strip's bottom corners, the colour
+ * fading out 70% of the way.
  */
 private fun Modifier.glow(colour: Color): Modifier = drawBehind {
     val strip = GLOW_HEIGHT.toPx()

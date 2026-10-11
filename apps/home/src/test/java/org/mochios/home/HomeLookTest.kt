@@ -75,6 +75,16 @@ class HomeLookTest {
     }
 
     @Test
+    fun `the glow starts at a fifth of the primary, stronger than the web's 12 percent`() {
+        // On Android's off-white page the web's 12% read far fainter than the
+        // web's own glow on white.
+        val (top, _) = pixels(glow = true)
+        val expected = listOf(blue.red, blue.green, blue.blue).map { channel -> 0.2f * channel + 0.8f }
+        val actual = listOf(top.red, top.green, top.blue)
+        expected.zip(actual).forEach { (want, have) -> assertEquals(want, have, 2f / 255) }
+    }
+
+    @Test
     fun `with the background preference off there is no glow`() {
         val (top, _) = pixels(glow = false)
         assertEquals(white, top)
