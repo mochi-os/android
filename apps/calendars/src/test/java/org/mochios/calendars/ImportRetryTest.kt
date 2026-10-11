@@ -110,6 +110,7 @@ class ImportRetryTest {
             retrofit.create(CalendarsApi::class.java),
             retrofit.create(MenuApi::class.java),
             FileStore(context),
+            context,
         )
         return CalendarViewModel(context, repository, London).also { model ->
             until { !model.uiState.value.isLoading }

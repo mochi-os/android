@@ -912,9 +912,15 @@ open class MainActivity : ComponentActivity() {
             }
             "calendars" -> {
                 navController.openAppHome(CalendarsApp.HOME)
-                // A reminder opens the calendar at its event's day, as the
-                // web's does, rather than going straight to an editor.
-                CalendarsApp.linked(path, query)?.let { CalendarsApp.remind(navController, it) }
+                // A shortcut to one calendar shows it on its own. A reminder
+                // opens the calendar at its event's day, as the web's does,
+                // rather than going straight to an editor.
+                val sole = CalendarsApp.sole(path)
+                if (sole != null) {
+                    CalendarsApp.alone(navController, sole)
+                } else {
+                    CalendarsApp.linked(path, query)?.let { CalendarsApp.remind(navController, it) }
+                }
             }
         }
     }

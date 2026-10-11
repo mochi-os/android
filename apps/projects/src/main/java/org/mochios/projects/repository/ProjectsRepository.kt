@@ -5,12 +5,15 @@
 
 package org.mochios.projects.repository
 
+import android.content.Context
 import android.net.Uri
 import com.google.gson.JsonObject
+import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
@@ -47,7 +50,8 @@ import javax.inject.Singleton
 @Singleton
 class ProjectsRepository @Inject constructor(
     private val api: ProjectsApi,
-    fileStore: FileStore
+    fileStore: FileStore,
+    @param:ApplicationContext private val context: Context,
 ) : FileRepository(fileStore) {
     // In-memory cache
     // Concurrent: the view models fill and read these from parallel coroutines.
@@ -77,8 +81,11 @@ class ProjectsRepository @Inject constructor(
 
     // ---- Projects ----
 
+    /** The user's projects, which those pinned to the home screen are brought into line with. */
     suspend fun listProjects(): List<Project> =
-        api.listProjects().unwrap().projects
+        api.listProjects().unwrap().projects.also { projects ->
+            Shortcuts.reconcile(context, "projects", Shortcuts.paths(projects, { it.name }) { listOf(it.id, it.fingerprint) })
+        }
 
     suspend fun createProject(
         name: String,

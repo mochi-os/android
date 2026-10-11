@@ -73,7 +73,7 @@ class MemberOrderTest {
             .build()
         val model = ChatSettingsViewModel(
             SavedStateHandle(mapOf("chatId" to "c1")),
-            ChatRepository(retrofit.create(ChatApi::class.java), FileStore(context)),
+            ChatRepository(retrofit.create(ChatApi::class.java), FileStore(context), context),
         )
         val deadline = System.currentTimeMillis() + 5_000
         while (model.uiState.value.isLoading || model.uiState.value.chat.members.isEmpty()) {

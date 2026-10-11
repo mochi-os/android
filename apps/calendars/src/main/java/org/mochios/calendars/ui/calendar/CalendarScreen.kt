@@ -30,6 +30,7 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
@@ -142,7 +143,9 @@ import org.mochios.calendars.ui.router.CalendarsSection
  * editor deleted something, reported once with Undo and cleared by
  * [onDeletedShown]; [saved] that the editor saved an event,
  * [CalendarsApp.CREATED] or [CalendarsApp.CHANGED], reported once and
- * cleared by [onSavedShown].
+ * cleared by [onSavedShown]. [sole] is a calendar to show on its own, as a
+ * shortcut to it opens, taken once and cleared by [onSoleShown]; while it is
+ * shown, [onNewEvent] is given it, for a new event to land in.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -152,7 +155,7 @@ fun CalendarScreen(
     onConnectDevice: () -> Unit,
     onPreferences: () -> Unit,
     onCalendarSettings: (String) -> Unit,
-    onNewEvent: (Long, Boolean?, Long?) -> Unit,
+    onNewEvent: (Long, Boolean?, Long?, String?) -> Unit,
     onEditEvent: (String, Long) -> Unit,
     onCopyEvent: (String, Long, Scope) -> Unit,
     onCopyOccurrence: (Instance) -> Unit,
@@ -166,6 +169,8 @@ fun CalendarScreen(
     onReminderShown: () -> Unit = {},
     requested: Pair<CalendarAction, String>? = null,
     onRequested: () -> Unit = {},
+    sole: String? = null,
+    onSoleShown: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -263,6 +268,19 @@ fun CalendarScreen(
         viewModel.remind(link.event, link.occurrence, link.date)
     }
 
+    LaunchedEffect(sole) {
+        val calendar = sole ?: return@LaunchedEffect
+        onSoleShown()
+        viewModel.sole(calendar)
+    }
+    // Back from a calendar viewed on its own is the whole calendar.
+    BackHandler(enabled = uiState.sole != null) { viewModel.whole() }
+    val alone = uiState.calendars.firstOrNull { it.id == uiState.sole }
+    // A new event from a calendar viewed on its own lands in that calendar.
+    val create: (Long, Boolean?, Long?) -> Unit = { start, allday, finish ->
+        onNewEvent(start, allday, finish, uiState.sole)
+    }
+
     LaunchedEffect(saved) {
         val message = CalendarsApp.said(saved) ?: return@LaunchedEffect
         onSavedShown()
@@ -346,6 +364,7 @@ fun CalendarScreen(
         onSubscribe = onSubscribe,
         onPreferences = onPreferences,
         onConnectDevice = onConnectDevice,
+        gesturesEnabled = uiState.sole == null,
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             Scaffold(
@@ -360,6 +379,8 @@ fun CalendarScreen(
                             },
                         ),
                         picking = picking,
+                        alone = alone,
+                        onLeave = viewModel::whole,
                         onMenu = { scope.launch { drawerState.open() } },
                         onTitle = { picking = !picking },
                         onToday = viewModel::today,
@@ -381,7 +402,7 @@ fun CalendarScreen(
                 },
                 floatingActionButton = {
                     MochiFab(
-                        onClick = { onNewEvent(viewModel.creation(), null, null) },
+                        onClick = { create(viewModel.creation(), null, null) },
                         modifier = Modifier.offset(y = -fabLift),
                     ) {
                         Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
@@ -449,7 +470,7 @@ fun CalendarScreen(
                                                 viewModel.details(shown)
                                             }
                                         },
-                                        onNewEvent = onNewEvent,
+                                        onNewEvent = create,
                                         onMove = { instance, moved ->
                                             request(instance) { scope -> viewModel.move(instance, moved, scope) }
                                         },
@@ -911,7 +932,9 @@ internal fun Page(
  * which also clears it, and a button to clear what was typed. The title is
  * the month and year of the view's first day, or
  * of the picked day while the panel is open. There are no previous and next arrows:
- * the views page with a swipe, and the panel jumps anywhere further.
+ * the views page with a swipe, and the panel jumps anywhere further. With a
+ * calendar viewed [alone], its name sits over the title and Back, which
+ * [onLeave] answers, takes the drawer's place.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -928,6 +951,8 @@ internal fun Toolbar(
     onSearch: () -> Unit = {},
     onSearchChange: (String) -> Unit = {},
     onSearchClose: () -> Unit = {},
+    alone: Calendar? = null,
+    onLeave: () -> Unit = {},
 ) {
     var views by remember { mutableStateOf(false) }
     if (searching) {
@@ -942,23 +967,41 @@ internal fun Toolbar(
     }
     TopAppBar(
         title = {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .clip(RoundedCornerShape(8.dp))
-                    .clickable(onClick = onTitle)
-                    .padding(horizontal = 8.dp, vertical = 4.dp),
-            ) {
-                Text(text = title, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                Icon(
-                    if (picking) Icons.Default.ArrowDropUp else Icons.Default.ArrowDropDown,
-                    contentDescription = null,
-                )
+            Column {
+                if (alone != null) {
+                    Text(
+                        text = alone.name,
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.padding(horizontal = 8.dp),
+                    )
+                }
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable(onClick = onTitle)
+                        .padding(horizontal = 8.dp, vertical = 4.dp),
+                ) {
+                    Text(text = title, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Icon(
+                        if (picking) Icons.Default.ArrowDropUp else Icons.Default.ArrowDropDown,
+                        contentDescription = null,
+                    )
+                }
             }
         },
         navigationIcon = {
-            MochiIconButton(onClick = onMenu) {
-                Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.calendars_drawer_open))
+            if (alone != null) {
+                MochiIconButton(onClick = onLeave) {
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(MochiR.string.common_back))
+                }
+            } else {
+                MochiIconButton(onClick = onMenu) {
+                    Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.calendars_drawer_open))
+                }
             }
         },
         actions = {

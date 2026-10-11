@@ -31,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.launcher.AddToHomeItem
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -55,6 +56,7 @@ fun PageOverflowMenu(
     permissions: WikiPermissions,
     commentCount: Int,
     canUnsubscribe: Boolean,
+    shortcut: String?,
     onEdit: () -> Unit,
     onRename: () -> Unit,
     onHistory: () -> Unit,
@@ -73,6 +75,8 @@ fun PageOverflowMenu(
     // [wikiId] and [slug] are accepted on the contract so callers can pass
     // the same set as web's overflow, but every callback is already pre-bound
     // by the host — the menu itself doesn't navigate from these arguments.
+    // [shortcut] is the wiki's name when the user holds it, which a shortcut
+    // to the wiki on the home screen takes; null for a wiki only browsed.
 
     // Held outside the menu content, which is disposed on collapse, so the
     // sub-menu is closed again the next time the overflow opens.
@@ -172,6 +176,7 @@ fun PageOverflowMenu(
             label = stringResource(R.string.wikis_page_action_share),
             onClick = onShare,
         )
+        shortcut?.let { name -> AddToHomeItem("wikis", wikiId, name, onDismiss) }
 
         if (canUnsubscribe) {
             MochiDropdownMenuDivider()

@@ -5,12 +5,15 @@
 
 package org.mochios.crm.repository
 
+import android.content.Context
 import android.net.Uri
 import com.google.gson.JsonObject
+import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
@@ -44,7 +47,8 @@ import javax.inject.Singleton
 @Singleton
 class CrmsRepository @Inject constructor(
     private val api: CrmsApi,
-    fileStore: FileStore
+    fileStore: FileStore,
+    @param:ApplicationContext private val context: Context,
 ) : FileRepository(fileStore) {
     // In-memory cache
     // Concurrent: the view models fill and read these from parallel coroutines.
@@ -74,8 +78,11 @@ class CrmsRepository @Inject constructor(
 
     // ---- Crms ----
 
+    /** The user's CRMs, which those pinned to the home screen are brought into line with. */
     suspend fun listCrms(): List<Crm> =
-        api.listCrms().unwrap().crms
+        api.listCrms().unwrap().crms.also { crms ->
+            Shortcuts.reconcile(context, "crm", Shortcuts.paths(crms, { it.name }) { listOf(it.id, it.fingerprint) })
+        }
 
     suspend fun createCrm(
         name: String,

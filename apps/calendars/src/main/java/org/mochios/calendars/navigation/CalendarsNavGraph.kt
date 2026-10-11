@@ -14,6 +14,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.calendars.R
+import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.ui.calendar.CalendarScreen
 import org.mochios.calendars.ui.components.CalendarAction
@@ -74,7 +75,8 @@ object CalendarsApp {
     // carries itself - and is blank for a blank form.
     const val EVENT_NEW = "calendars/events/new?start={start}&source={source}&copy={copy}" +
         "&occurrence={occurrence}&scope={scope}&finish={finish}&allday={allday}&date={date}" +
-        "&summary={summary}&location={location}&description={description}&zones={zones}"
+        "&summary={summary}&location={location}&description={description}&zones={zones}" +
+        "&calendar={calendar}"
     const val EVENT_EDIT = "calendars/events/edit/{event}?occurrence={occurrence}&said={said}"
 
     /** The flag the calendar screen's back-stack entry carries once a copy is saved. */
@@ -152,11 +154,12 @@ object CalendarsApp {
      * nothing did - the screen's own "new event" action - which lets the
      * editor start as the last new event was. [finish] is the end of a span
      * marked out across empty grid, and null for a tap, which takes the
-     * default length.
+     * default length. [calendar] is the one viewed on its own, which the
+     * event lands in when it can be written to.
      */
-    fun newEvent(start: Long = 0, allday: Boolean? = null, finish: Long? = null): String =
+    fun newEvent(start: Long = 0, allday: Boolean? = null, finish: Long? = null, calendar: String? = null): String =
         "calendars/events/new?start=$start" + (allday?.let { "&allday=${if (it) 1 else 0}" } ?: "") +
-            (finish?.let { "&finish=$it" } ?: "")
+            (finish?.let { "&finish=$it" } ?: "") + (calendar?.let { "&calendar=${encoded(it)}" } ?: "")
 
     /**
      * An event's editor. [occurrence] is the occurrence the user opened, epoch
@@ -188,6 +191,25 @@ object CalendarsApp {
 
     /** The flag the calendar screen's back-stack entry carries for a reminder's link to open. */
     const val REMINDER = "reminder"
+
+    /** The flag it carries for a calendar to show on its own, as a shortcut to it opens. */
+    const val SOLE = "sole"
+
+    /**
+     * The calendar a link to one calendar's own view names, as a shortcut to
+     * it on the home screen opens `/calendars/calendar/<id>`; null for any
+     * other link. [path] is the link's path without the leading slash.
+     */
+    fun sole(path: String): String? {
+        val calendar = path.trim('/').split('/').getOrNull(2)?.takeIf { it.isNotBlank() } ?: return null
+        return calendar.takeIf { path.trim('/') == "calendars/" + Calendar.path(calendar) }
+    }
+
+    /** Hands [calendar] to the calendar beneath, which shows it on its own. */
+    fun alone(navController: NavController, calendar: String) {
+        runCatching { navController.getBackStackEntry(HOME) }.getOrNull()
+            ?.savedStateHandle?.set(SOLE, calendar)
+    }
 
     /**
      * Hands a reminder's link to the calendar beneath, which opens it as the
@@ -243,6 +265,7 @@ fun NavGraphBuilder.calendarsNavGraph(
         val saved by entry.savedStateHandle.getStateFlow(CalendarsApp.SAVED, "").collectAsState()
         val reminder by entry.savedStateHandle.getStateFlow(CalendarsApp.REMINDER, "").collectAsState()
         val action by entry.savedStateHandle.getStateFlow(CalendarsApp.ACTION, "").collectAsState()
+        val sole by entry.savedStateHandle.getStateFlow(CalendarsApp.SOLE, "").collectAsState()
         CalendarScreen(
             onCreateCalendar = { navController.navigate(CalendarsApp.CREATE) },
             onSubscribe = { navController.navigate(CalendarsApp.SUBSCRIBE) },
@@ -251,7 +274,9 @@ fun NavGraphBuilder.calendarsNavGraph(
             onCalendarSettings = { calendar ->
                 navController.navigate(CalendarsApp.settings(calendar))
             },
-            onNewEvent = { start, allday, finish -> navController.navigate(CalendarsApp.newEvent(start, allday, finish)) },
+            onNewEvent = { start, allday, finish, calendar ->
+                navController.navigate(CalendarsApp.newEvent(start, allday, finish, calendar))
+            },
             onEditEvent = { event, occurrence -> navController.navigate(CalendarsApp.event(event, occurrence)) },
             onCopyEvent = { event, occurrence, scope ->
                 navController.navigate(CalendarsApp.copyEvent(event, occurrence, scope))
@@ -267,6 +292,8 @@ fun NavGraphBuilder.calendarsNavGraph(
             onReminderShown = { entry.savedStateHandle[CalendarsApp.REMINDER] = "" },
             requested = CalendarsApp.action(action),
             onRequested = { entry.savedStateHandle[CalendarsApp.ACTION] = "" },
+            sole = sole.ifEmpty { null },
+            onSoleShown = { entry.savedStateHandle[CalendarsApp.SOLE] = "" },
         )
     }
 
@@ -335,7 +362,7 @@ fun NavGraphBuilder.calendarsNavGraph(
             },
         ) + listOf(
             "source", "copy", "occurrence", "scope", "finish", "allday", "date",
-            "summary", "location", "description", "zones",
+            "summary", "location", "description", "zones", "calendar",
         ).map { name ->
             navArgument(name) {
                 type = NavType.StringType

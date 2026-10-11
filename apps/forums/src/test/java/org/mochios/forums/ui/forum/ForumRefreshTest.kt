@@ -114,7 +114,7 @@ class ForumRefreshTest {
         })
         model = ForumViewModel(
             SavedStateHandle(mapOf("forumId" to "f1")),
-            ForumsRepository(api, FileStore(context)),
+            ForumsRepository(api, FileStore(context), context),
             SavedRepository(api, Gson()),
             socket,
             session,

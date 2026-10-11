@@ -5,6 +5,7 @@
 
 package org.mochios.calendars
 
+import android.content.pm.ShortcutManager
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
@@ -20,7 +21,9 @@ import org.mochios.calendars.ui.components.CalendarAction
 import org.mochios.calendars.ui.components.CalendarRow
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
+import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
+import org.robolectric.shadows.ShadowShortcutManager
 
 /**
  * A calendar's menu offers Export for every calendar, and Import only for one
@@ -47,7 +50,7 @@ class CalendarMenuTest {
     }
 
     @Test
-    fun `a calendar of the user's own offers only Only this and Settings`() {
+    fun `a calendar of the user's own offers only Only this, Add to home screen and Settings`() {
         val chosen = open(Calendar(id = "own", name = "Work"))
         for (moved in listOf(
             R.string.calendars_rename,
@@ -61,6 +64,19 @@ class CalendarMenuTest {
         }
         rule.onNodeWithText(context.getString(R.string.calendars_only_this)).performClick()
         assertEquals(listOf(CalendarAction.ONLY), chosen)
+    }
+
+    @Test
+    fun `every calendar can go on the home screen, opening it on its own`() {
+        val manager = context.getSystemService(ShortcutManager::class.java)
+        ShadowShortcutManager.reset()
+        shadowOf(manager).setIsRequestPinShortcutSupported(true)
+        open(Calendar(id = "subscribed", name = "Holidays", kind = Calendar.KIND_SUBSCRIPTION, readonly = true))
+        rule.onNodeWithText(context.getString(MochiR.string.launcher_add_to_home)).performClick()
+        val shortcut = manager.pinnedShortcuts.single()
+        assertEquals("mochi:/calendar/subscribed", shortcut.intent?.data.toString())
+        assertEquals("calendars", shortcut.intent?.getStringExtra("app"))
+        assertEquals("Holidays", shortcut.shortLabel.toString())
     }
 
     @Test

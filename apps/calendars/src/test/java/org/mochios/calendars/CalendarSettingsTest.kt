@@ -106,6 +106,7 @@ class CalendarSettingsTest {
             retrofit.create(CalendarsApi::class.java),
             retrofit.create(MenuApi::class.java),
             FileStore(context),
+            context,
         )
         val handle = SavedStateHandle(mapOf("calendar" to calendar))
         val model = CalendarSettingsViewModel(repository, London, handle)

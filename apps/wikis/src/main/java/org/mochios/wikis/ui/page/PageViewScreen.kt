@@ -203,6 +203,10 @@ fun PageViewScreen(
     var isUnsubscribing by remember { mutableStateOf(false) }
 
     val canUnsubscribe = wikiInfo?.source?.isNotBlank() == true
+    val wikis by viewModel.wikis.collectAsState()
+    // Only a wiki the user holds goes on the home screen, as only those are
+    // kept in step with the list.
+    val held = wikis.firstOrNull { wiki -> wiki.id == viewModel.wikiId || wiki.fingerprint == viewModel.wikiId }
 
     // A placeholder WikiInfo stands in until the real one loads: the markdown
     // attachment-URL helper needs only wikiId + serverUrl.
@@ -287,6 +291,7 @@ fun PageViewScreen(
                                 permissions = state.permissions,
                                 commentCount = state.commentCount,
                                 canUnsubscribe = canUnsubscribe,
+                                shortcut = held?.name,
                                 onEdit = {
                                     menuExpanded = false
                                     navController.navigate(

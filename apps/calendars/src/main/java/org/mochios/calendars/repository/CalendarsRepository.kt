@@ -5,7 +5,9 @@
 
 package org.mochios.calendars.repository
 
+import android.content.Context
 import com.google.gson.Gson
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,6 +23,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.sync.EventComponent
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.EventCreateRequest
@@ -83,6 +86,7 @@ class CalendarsRepository @Inject constructor(
     private val api: CalendarsApi,
     private val menuApi: MenuApi,
     fileStore: FileStore,
+    @param:ApplicationContext private val context: Context,
 ) : FileRepository(fileStore) {
 
     private val _calendars = MutableStateFlow<List<Calendar>>(emptyList())
@@ -102,9 +106,13 @@ class CalendarsRepository @Inject constructor(
 
     // ---- calendars ----
 
+    /** The user's calendars, which those pinned to the home screen are brought into line with. */
     suspend fun listCalendars(): List<Calendar> = call {
         api.listCalendars().unwrap().calendars
-    }.also { _calendars.value = it }
+    }.also { calendars ->
+        _calendars.value = calendars
+        Shortcuts.reconcile(context, "calendars", Shortcuts.paths(calendars, { it.name }) { listOf(Calendar.path(it.id)) })
+    }
 
     suspend fun createCalendar(name: String, colour: String): Calendar = call {
         api.createCalendar(name, colour).unwrap().calendar

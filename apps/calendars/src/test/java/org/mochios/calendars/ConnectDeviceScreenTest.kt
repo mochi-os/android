@@ -87,6 +87,7 @@ class ConnectDeviceScreenTest {
             retrofit.create(CalendarsApi::class.java),
             retrofit.create(MenuApi::class.java),
             FileStore(context),
+            context,
         )
         val model = ConnectDeviceViewModel(repository, session)
         rule.setContent { ConnectDeviceScreen(onBack = {}, viewModel = model) }

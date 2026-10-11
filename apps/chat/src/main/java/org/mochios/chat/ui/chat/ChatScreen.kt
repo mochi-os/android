@@ -95,6 +95,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.launcher.AddToHomeItem
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.push.VisibleEntityEffect
@@ -128,6 +129,7 @@ import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.chat.R
+import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.model.heading
@@ -477,6 +479,9 @@ private fun ChatContent(
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                 )
+                                if (pinnable(uiState.chat)) {
+                                    AddToHomeItem("chat", chatId, uiState.chat.name) { menuExpanded = false }
+                                }
                                 if (uiState.chat.status == ChatStatus.ACTIVE) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.chat_settings_leave)) },
@@ -1364,3 +1369,9 @@ private fun DateSeparator(epochSeconds: Long) {
     }
 }
 
+/**
+ * Whether [chat] can go on the home screen: one the user is still in, with a
+ * name for its shortcut. A chat left is still listed, for its history, but
+ * is no place to come back to.
+ */
+internal fun pinnable(chat: ChatDetail): Boolean = chat.status == ChatStatus.ACTIVE && chat.name.isNotEmpty()

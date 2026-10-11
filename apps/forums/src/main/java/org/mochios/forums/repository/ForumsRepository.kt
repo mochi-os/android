@@ -5,7 +5,9 @@
 
 package org.mochios.forums.repository
 
+import android.content.Context
 import android.util.Log
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -15,6 +17,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.launcher.Shortcuts
 import org.mochios.forums.api.AccessResponse
 import org.mochios.forums.api.BannerResponse
 import org.mochios.forums.api.CreateCommentResponse
@@ -47,7 +50,8 @@ import javax.inject.Singleton
 @Singleton
 class ForumsRepository @Inject constructor(
     private val api: ForumsApi,
-    fileStore: FileStore
+    fileStore: FileStore,
+    @param:ApplicationContext private val context: Context,
 ) : FileRepository(fileStore) {
     private val text = "text/plain".toMediaTypeOrNull()
 
@@ -60,13 +64,19 @@ class ForumsRepository @Inject constructor(
     private val _postCreated = MutableSharedFlow<String>(extraBufferCapacity = 1)
     val postCreated: SharedFlow<String> = _postCreated.asSharedFlow()
 
+    /** The user's forums, which those pinned to the home screen are brought into line with. */
     suspend fun listForums(sort: String? = null): ForumListResponse =
-        api.listForums(sort).unwrap()
+        api.listForums(sort).unwrap().also(::pinned)
 
     /** The forum roster plus the account's default sort, without the posts
      *  `-/list` would carry. */
     suspend fun forumsInformation(): ForumListResponse =
-        api.getForumsInfo().unwrap()
+        api.getForumsInfo().unwrap().also(::pinned)
+
+    /** Brings the forums pinned to the home screen into line with a roster just read. */
+    private fun pinned(response: ForumListResponse) {
+        Shortcuts.reconcile(context, "forums", Shortcuts.paths(response.forums, { it.name }) { listOf(it.id, it.fingerprint) })
+    }
 
     suspend fun viewForum(forumId: String, before: Long? = null, sort: String? = null, tag: String? = null): ViewForumResponse =
         api.viewForum(forumId, before = before, sort = sort, tag = tag).unwrap()

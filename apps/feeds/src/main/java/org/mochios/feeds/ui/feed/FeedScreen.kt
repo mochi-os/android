@@ -121,6 +121,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.launcher.AddToHomeItem
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.push.VisibleEntityEffect
@@ -160,6 +161,7 @@ import org.mochios.android.ui.components.VideoPlayer
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.ui.components.rememberServerUrl
 import org.mochios.feeds.R
+import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.component.PostBody
@@ -671,6 +673,13 @@ fun FeedScreen(
                                         },
                                         leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
                                     )
+                                }
+                                // The aggregate is the app's own icon.
+                                val held = heldFeed(drawerFeeds, viewModel.feedId)
+                                if (!viewModel.isAllFeeds && held != null) {
+                                    AddToHomeItem("feeds", viewModel.feedId, held.name) {
+                                        showOverflowMenu = false
+                                    }
                                 }
                                 // Unsubscribe only for member feeds — owners/admins
                                 // manage (and delete) the feed instead.
@@ -2053,6 +2062,15 @@ private fun bannerContentHash(content: String): String {
  * Dismissible feed banner; dismissal is stored per feed keyed by a content
  * hash, so changed text reappears.
  */
+/**
+ * The feed [feed] names among [feeds], those the user holds, owned or
+ * subscribed, as the drawer lists them; null for a feed only browsed. Only a
+ * held feed goes on the home screen, as only those are kept in step with the
+ * list.
+ */
+internal fun heldFeed(feeds: List<Feed>, feed: String): Feed? =
+    feeds.firstOrNull { held -> held.id == feed || (held.fingerprint.isNotEmpty() && held.fingerprint == feed) }
+
 @Composable
 private fun FeedBanner(banner: String, feedId: String) {
     val context = LocalContext.current

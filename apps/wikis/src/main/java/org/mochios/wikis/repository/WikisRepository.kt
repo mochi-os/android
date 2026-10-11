@@ -5,7 +5,9 @@
 
 package org.mochios.wikis.repository
 
+import android.content.Context
 import android.net.Uri
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -16,6 +18,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.launcher.Shortcuts
 import org.mochios.wikis.api.WikisApi
 import org.mochios.wikis.model.RssTokenResponse
 import org.mochios.wikis.model.DirectoryEntry
@@ -84,6 +87,7 @@ data class RenamePageResult(
 class WikisRepository @Inject constructor(
     private val api: WikisApi,
     fileStore: FileStore,
+    @param:ApplicationContext private val context: Context,
 ) : FileRepository(fileStore) {
 
     private val text = "text/plain".toMediaTypeOrNull()
@@ -102,6 +106,8 @@ class WikisRepository @Inject constructor(
         return try {
             api.getClassInfo().unwrap().also { response ->
                 _wikiList.value = response.wikis.orEmpty()
+                // The wikis pinned to the home screen follow the list.
+                Shortcuts.reconcile(context, "wikis", Shortcuts.paths(_wikiList.value, { it.name }) { listOf(it.id, it.fingerprint) })
             }
         } catch (e: Exception) {
             throw e.toMochiError()

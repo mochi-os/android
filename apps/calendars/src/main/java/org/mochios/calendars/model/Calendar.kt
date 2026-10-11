@@ -45,6 +45,12 @@ data class Calendar(
         const val KIND_SUBSCRIPTION = "subscription"
         const val KIND_BIRTHDAYS = "birthdays"
         const val KIND_LINKED = "linked"
+
+        /**
+         * Where [calendar]'s own view is in the app, which a shortcut to it
+         * on the home screen opens as `mochi:/calendar/<id>`.
+         */
+        fun path(calendar: String): String = "calendar/$calendar"
     }
 }
 

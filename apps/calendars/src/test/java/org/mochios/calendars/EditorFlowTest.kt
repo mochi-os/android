@@ -110,6 +110,7 @@ class EditorFlowTest {
             retrofit.create(CalendarsApi::class.java),
             retrofit.create(MenuApi::class.java),
             FileStore(context),
+            context,
         )
         respond("-/calendars", ok("""{"calendars": [{"id": "c1", "name": "Home", "default": true}]}"""))
         respond("-/preferences/get", ok("""{"preferences": {}}"""))

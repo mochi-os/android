@@ -72,7 +72,9 @@ import javax.inject.Inject
  * event lands on, [listed] the day atop the list view as it scrolls, which
  * its title names and a new event there lands on instead, until the anchor
  * changes, and [hidden] the calendars this device does not show,
- * which is a viewing choice and never leaves the phone. [instances] is
+ * which is a viewing choice and never leaves the phone. [sole] is a calendar
+ * shown on its own for this visit, as a shortcut to it opens, when [hidden]
+ * is every other calendar and the saved choice is left as it was. [instances] is
  * everything the server returned for the range, unfiltered, so flipping a
  * checkbox redraws without a fetch.
  */
@@ -83,6 +85,7 @@ data class CalendarUiState(
     val listed: LocalDate? = null,
     val calendars: List<Calendar> = emptyList(),
     val hidden: Set<String> = emptySet(),
+    val sole: String? = null,
     val instances: List<Instance> = emptyList(),
     val truncated: Boolean = false,
     val preferences: Preferences = Preferences(),
@@ -223,6 +226,14 @@ class CalendarViewModel @Inject constructor(
             // An edit must not throw the reader back to the anchor day.
             repository.eventsChanged.collect { load(reset = false) }
         }
+        viewModelScope.launch {
+            // An event saved into another calendar would vanish from a
+            // calendar viewed on its own, so the view widens to show it.
+            VisibilityStore.revealed.collect { calendar ->
+                val sole = _uiState.value.sole
+                if (sole != null && calendar != sole) whole()
+            }
+        }
         reload()
     }
 
@@ -244,10 +255,13 @@ class CalendarViewModel @Inject constructor(
                 val calendars = repository.listCalendars()
                     .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
                 val preferences = repository.getPreferences()
+                // A calendar viewed on its own that has gone ends that view.
+                val sole = _uiState.value.sole?.takeIf { id -> calendars.any { it.id == id } }
                 _uiState.value = _uiState.value.copy(
                     calendars = calendars,
                     preferences = preferences,
-                    hidden = VisibilityStore.hidden(context),
+                    sole = sole,
+                    hidden = concealed(calendars, sole),
                     // On a device that has not been used yet, open on the view
                     // the user chose in the web, which is the same preference.
                     view = if (untouched) calendarsView(preferences.view) else _uiState.value.view,
@@ -331,6 +345,8 @@ class CalendarViewModel @Inject constructor(
         // The link chose the view, so the one the web saved does not replace it.
         untouched = false
         _uiState.value = _uiState.value.copy(
+            sole = null,
+            hidden = VisibilityStore.hidden(context),
             view = CalendarsSection.DAY,
             anchor = date ?: _uiState.value.anchor,
             focus = date ?: _uiState.value.focus,
@@ -699,6 +715,31 @@ class CalendarViewModel @Inject constructor(
         VisibilityStore.only(context, calendar, _uiState.value.calendars.map { it.id })
     }
 
+    /**
+     * Shows [calendar] on its own for this visit, as a shortcut to it on the
+     * home screen opens, leaving the calendars the device shows as they were
+     * for [whole] to come back to.
+     */
+    fun sole(calendar: String) {
+        val state = _uiState.value
+        _uiState.value = state.copy(sole = calendar, hidden = concealed(state.calendars, calendar))
+        load(reset = false)
+    }
+
+    /** Ends a calendar viewed on its own, back to the calendars the device shows. */
+    fun whole() {
+        if (_uiState.value.sole == null) return
+        _uiState.value = _uiState.value.copy(sole = null, hidden = VisibilityStore.hidden(context))
+        load(reset = false)
+    }
+
+    /**
+     * The calendars not drawn: every one of [calendars] but [sole] while it
+     * is viewed on its own, else those the device hides.
+     */
+    private fun concealed(calendars: List<Calendar>, sole: String?): Set<String> =
+        if (sole == null) VisibilityStore.hidden(context) else calendars.map { it.id }.filterNot { it == sole }.toSet()
+
     override fun onCleared() {
         unwatch()
         retained?.delete()
@@ -711,7 +752,8 @@ class CalendarViewModel @Inject constructor(
      * hidden calendar leaves at once.
      */
     private fun shade() {
-        _uiState.value = _uiState.value.copy(hidden = VisibilityStore.hidden(context))
+        val state = _uiState.value
+        _uiState.value = state.copy(hidden = concealed(state.calendars, state.sole))
         load(reset = false)
     }
 

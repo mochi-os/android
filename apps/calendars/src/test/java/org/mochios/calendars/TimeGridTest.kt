@@ -166,6 +166,7 @@ class TimeGridTest {
             retrofit.create(CalendarsApi::class.java),
             retrofit.create(MenuApi::class.java),
             FileStore(context),
+            context,
         )
         return CalendarViewModel(context, repository, London).also { model ->
             val deadline = System.currentTimeMillis() + 5_000

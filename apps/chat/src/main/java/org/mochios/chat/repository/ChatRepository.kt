@@ -5,12 +5,15 @@
 
 package org.mochios.chat.repository
 
+import android.content.Context
 import com.google.gson.Gson
+import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.launcher.Shortcuts
 import org.mochios.chat.api.ChatApi
 import org.mochios.chat.api.CreateChatResponse
 import org.mochios.chat.api.DeleteMessagesResponse
@@ -31,10 +34,14 @@ import javax.inject.Singleton
 @Singleton
 class ChatRepository @Inject constructor(
     private val api: ChatApi,
-    fileStore: FileStore
+    fileStore: FileStore,
+    @param:ApplicationContext private val context: Context,
 ) : FileRepository(fileStore) {
+    /** The user's chats, which those pinned to the home screen are brought into line with. */
     suspend fun listChats(): List<Chat> =
-        api.listChats().unwrap()
+        api.listChats().unwrap().also { chats ->
+            Shortcuts.reconcile(context, "chat", Shortcuts.paths(chats, { it.name }) { listOf(it.id, it.key) })
+        }
 
     suspend fun getNewChatData(): NewChatResponse =
         api.getNewChatData().unwrap()

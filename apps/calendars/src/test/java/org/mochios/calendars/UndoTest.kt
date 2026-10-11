@@ -51,6 +51,7 @@ class UndoTest {
             retrofit.create(CalendarsApi::class.java),
             retrofit.create(MenuApi::class.java),
             FileStore(RuntimeEnvironment.getApplication()),
+            RuntimeEnvironment.getApplication(),
         )
     }
 

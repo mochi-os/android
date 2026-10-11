@@ -15,6 +15,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.R as MochiR
+import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.ui.calendar.CalendarUiState
 import org.mochios.calendars.ui.calendar.Toolbar
 import org.mochios.calendars.ui.router.CalendarsSection
@@ -42,21 +44,45 @@ class ToolbarTest {
     private var titled = 0
     private var searched = 0
 
-    private fun show(view: String, searching: Boolean = false) {
+    private var menus = 0
+    private var left = 0
+
+    private fun show(view: String, searching: Boolean = false, alone: Calendar? = null) {
         rule.setContent {
             Toolbar(
                 state = CalendarUiState(view = view, anchor = day),
                 title = "Oct 2026",
                 picking = false,
-                onMenu = {},
+                onMenu = { menus++ },
                 onTitle = { titled++ },
                 onToday = {},
                 onView = {},
                 onWorkweek = {},
                 searching = searching,
                 onSearch = { searched++ },
+                alone = alone,
+                onLeave = { left++ },
             )
         }
+    }
+
+    @Test
+    fun `a calendar on its own is named over the title, with Back in place of the drawer`() {
+        show(CalendarsSection.MONTH, alone = Calendar(id = "c2", name = "Work"))
+        rule.onNodeWithText("Work").assertExists()
+        rule.onNodeWithText("Oct 2026").assertExists()
+        rule.onNodeWithContentDescription(context.getString(R.string.calendars_drawer_open)).assertDoesNotExist()
+        rule.onNodeWithContentDescription(context.getString(MochiR.string.common_back)).performClick()
+        assertEquals(1, left)
+        assertEquals(0, menus)
+    }
+
+    @Test
+    fun `the whole calendar has the drawer's button`() {
+        show(CalendarsSection.MONTH)
+        rule.onNodeWithContentDescription(context.getString(MochiR.string.common_back)).assertDoesNotExist()
+        rule.onNodeWithContentDescription(context.getString(R.string.calendars_drawer_open)).performClick()
+        assertEquals(1, menus)
     }
 
     @Test

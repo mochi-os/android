@@ -175,6 +175,9 @@ class EventEditViewModel @Inject constructor(
     /** How the editor was opened, which Retry does again after a failure to load. */
     private var opening: () -> Unit = {}
 
+    /** The calendar viewed on its own that a new event was asked for from; empty for none. */
+    private val chosen: String = handle.get<String>("calendar").orEmpty()
+
     init {
         val event = handle.get<String>("event")?.takeIf { it.isNotBlank() && it != "new" }
         val occurrence = handle.get<String>("occurrence")?.toLongOrNull() ?: 0
@@ -406,9 +409,13 @@ class EventEditViewModel @Inject constructor(
         MemoryStore.memory(context, Memory(allday = state.allday, zone = form(state).zone))
     }
 
-    /** The calendar a new event lands in: the one the preferences name, else the built-in default. */
+    /**
+     * The calendar a new event lands in, of [calendars], those it can be
+     * written to: the one viewed on its own that the editor was opened from,
+     * else the one the preferences name, else the built-in default.
+     */
     private fun preferred(calendars: List<Calendar>, preference: String): String =
-        defaultCalendar(calendars, preference)
+        calendars.firstOrNull { it.id == chosen }?.id ?: defaultCalendar(calendars, preference)
 
     /** The form for a loaded event, showing the occurrence the user opened. */
     private fun fill(loaded: Event, moment: Long, calendars: List<Calendar>) {

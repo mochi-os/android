@@ -9,6 +9,7 @@ import android.content.Context
 import android.net.Uri
 import android.util.Log
 import com.google.gson.Gson
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -19,6 +20,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
@@ -134,7 +136,8 @@ class PermissionRequiredException(
 class FeedsRepository @Inject constructor(
     private val api: FeedsApi,
     private val menuApi: MenuApi,
-    fileStore: FileStore
+    fileStore: FileStore,
+    @param:ApplicationContext private val context: Context,
 ) : FileRepository(fileStore) {
 
     // In-memory cache: feedId -> (posts, hasMore, timestamp)
@@ -183,11 +186,13 @@ class FeedsRepository @Inject constructor(
 
     /**
      * Fetch the full class-level feeds overview (`-/info`): feed list, the
-     * user's global default sort, and the server's AI availability.
+     * user's global default sort, and the server's AI availability. The
+     * feeds pinned to the home screen are brought into line with the list.
      */
     suspend fun getFeedsInfo(): FeedsInfoResult {
         return try {
             val response = api.getInfo().unwrap()
+            Shortcuts.reconcile(context, "feeds", Shortcuts.paths(response.feeds, { it.name }) { listOf(it.id, it.fingerprint) })
             FeedsInfoResult(
                 feeds = response.feeds,
                 hasAi = response.hasAi,

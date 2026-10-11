@@ -150,6 +150,7 @@ class ListViewTest {
             retrofit.create(CalendarsApi::class.java),
             retrofit.create(MenuApi::class.java),
             FileStore(context),
+            context,
         )
         val model = CalendarViewModel(context, repository, London)
         model.view(CalendarsSection.LIST)

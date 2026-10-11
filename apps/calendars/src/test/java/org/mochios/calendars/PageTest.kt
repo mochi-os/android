@@ -104,6 +104,7 @@ class PageTest {
             retrofit.create(CalendarsApi::class.java),
             retrofit.create(MenuApi::class.java),
             FileStore(context),
+            context,
         )
         model = CalendarViewModel(context, repository, London)
         val deadline = System.currentTimeMillis() + 5_000

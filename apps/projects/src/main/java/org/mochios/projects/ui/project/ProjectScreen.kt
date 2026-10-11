@@ -44,7 +44,6 @@ import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DragIndicator
 import androidx.compose.material.icons.outlined.FileDownload
 import androidx.compose.material.icons.outlined.FolderOpen
-import androidx.compose.material.icons.outlined.HomeMax
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
@@ -82,10 +81,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import androidx.core.content.pm.ShortcutInfoCompat
-import androidx.core.content.pm.ShortcutManagerCompat
-import androidx.core.graphics.drawable.IconCompat
-import androidx.core.net.toUri
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
@@ -96,6 +91,8 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.files.shareExportFile
+import org.mochios.android.launcher.AddToHomeItem
+import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
@@ -361,7 +358,7 @@ private fun AllProjectsContent(
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun ProjectRow(
+internal fun ProjectRow(
     project: Project,
     onClick: () -> Unit,
     onUnsubscribe: () -> Unit
@@ -371,6 +368,7 @@ private fun ProjectRow(
     var showUnsubscribeConfirm by remember { mutableStateOf(false) }
     val projectId = project.fingerprint.ifEmpty { project.id }
     val canUnsubscribe = project.owner?.local != true
+    val pinnable = remember(context) { Shortcuts.supported(context) }
     val unsubscribeTitle = stringResource(R.string.projects_settings_unsubscribe_title)
     val unsubscribeMessage = stringResource(R.string.projects_settings_unsubscribe_message)
     val unsubscribeLabel = stringResource(R.string.projects_settings_unsubscribe)
@@ -380,7 +378,7 @@ private fun ProjectRow(
     MochiCard(
         modifier = Modifier
             .fillMaxWidth()
-            .combinedClickable(onClick = onClick, onLongClick = { showMenu = true }),
+            .combinedClickable(onClick = onClick, onLongClick = { if (pinnable || canUnsubscribe) showMenu = true }),
     ) {
         Row(
             modifier = Modifier.padding(16.dp),
@@ -409,7 +407,7 @@ private fun ProjectRow(
                     )
                 }
             }
-            Box {
+            if (pinnable || canUnsubscribe) Box {
                 MochiIconButton(onClick = { showMenu = true }) {
                     Icon(
                         Icons.Default.MoreHoriz,
@@ -420,28 +418,7 @@ private fun ProjectRow(
                     expanded = showMenu,
                     onDismissRequest = { showMenu = false }
                 ) {
-                    MochiDropdownMenuItem(
-                        text = { Text(stringResource(MochiR.string.launcher_add_to_home)) },
-                        onClick = {
-                            showMenu = false
-                            // mochi:/<entity> per claude/plans/mochi-uri-scheme.md.
-                            // launch-ok: mochi: deep link this app builds from its own id, not an external URL
-                            val intent = Intent(Intent.ACTION_VIEW, "mochi:/$projectId".toUri()).apply {
-                                setPackage(context.packageName)
-                                flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                                    Intent.FLAG_ACTIVITY_CLEAR_TASK
-                                putExtra("app", "projects")
-                            }
-                            val shortcut = ShortcutInfoCompat.Builder(context, "project_$projectId")
-                                .setShortLabel(project.name)
-                                .setLongLabel(project.name)
-                                .setIcon(IconCompat.createWithResource(context, R.mipmap.ic_projects))
-                                .setIntent(intent)
-                                .build()
-                            ShortcutManagerCompat.requestPinShortcut(context, shortcut, null)
-                        },
-                        leadingIcon = { Icon(Icons.Outlined.HomeMax, contentDescription = null) },
-                    )
+                    AddToHomeItem("projects", projectId, project.name) { showMenu = false }
                     if (canUnsubscribe) {
                         MochiDropdownMenuItem(
                             text = { Text(unsubscribeLabel) },

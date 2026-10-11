@@ -57,6 +57,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
+import org.mochios.android.launcher.AddToHomeItem
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -86,7 +87,8 @@ enum class CalendarAction {
  * always the overlay of the checked calendars, so each row is a checkbox in
  * the calendar's own colour rather than a link. Each row carries an overflow
  * menu; beneath them sit Create, Subscribe, Connect device, the phone-sync
- * switch, Preferences, Log out and About.
+ * switch and Preferences. [gesturesEnabled] is false while a calendar is
+ * viewed on its own, whose bar has Back in place of the drawer's button.
  */
 @Composable
 fun CalendarDrawer(
@@ -99,11 +101,13 @@ fun CalendarDrawer(
     onSubscribe: () -> Unit,
     onPreferences: () -> Unit,
     onConnectDevice: () -> Unit,
+    gesturesEnabled: Boolean = true,
     content: @Composable () -> Unit,
 ) {
     val scope = rememberCoroutineScope()
     ModalNavigationDrawer(
         drawerState = drawerState,
+        gesturesEnabled = gesturesEnabled,
         drawerContent = {
             ModalDrawerSheet {
                 Column(modifier = Modifier.fillMaxHeight()) {
@@ -167,8 +171,9 @@ fun CalendarDrawer(
  * The row itself is the checkbox, so a tap anywhere on it shows or hides the
  * calendar. A calendar the user can write in keeps its name, colour, address,
  * import, export and deletion on its Settings screen, so its menu holds only
- * Only this, Sync now for a linked calendar, and Settings. Any other calendar
- * has no Settings screen, so its menu keeps what applies to it.
+ * Only this, Add to home screen, Sync now for a linked calendar, and
+ * Settings. Any other calendar has no Settings screen, so its menu keeps
+ * what applies to it.
  */
 @Composable
 internal fun CalendarRow(
@@ -247,6 +252,8 @@ internal fun CalendarRow(
                         onAction(CalendarAction.ONLY)
                     },
                 )
+                // The shortcut opens the calendar on its own, for that visit.
+                AddToHomeItem("calendars", Calendar.path(calendar.id), calendar.name) { expanded = false }
                 // A subscription or a linked calendar is named here even when
                 // its events cannot be written; only the birthdays calendar
                 // keeps its own name.

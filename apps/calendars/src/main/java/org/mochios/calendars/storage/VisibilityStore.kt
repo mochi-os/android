@@ -7,6 +7,9 @@ package org.mochios.calendars.storage
 
 import android.content.Context
 import android.content.SharedPreferences
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 
 /**
  * Which calendars the views show, kept per device and never on the server: it
@@ -63,7 +66,17 @@ object VisibilityStore {
     fun reveal(context: Context, calendar: String) {
         val current = hidden(context)
         if (calendar in current) hidden(context, current - calendar)
+        _revealed.tryEmit(calendar)
     }
+
+    private val _revealed = MutableSharedFlow<String>(extraBufferCapacity = 8)
+
+    /**
+     * Each calendar [reveal] is asked to show, whether or not it was hidden:
+     * a calendar viewed on its own leaves that view for one an event was
+     * just saved into, which it does not show.
+     */
+    val revealed: SharedFlow<String> = _revealed.asSharedFlow()
 
     /**
      * Calls [listener] each time the hidden calendars change, from anywhere

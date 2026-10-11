@@ -84,6 +84,9 @@ class PageViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(PageViewUiState())
     val uiState: StateFlow<PageViewUiState> = _uiState.asStateFlow()
 
+    /** The wikis the user holds, owned or subscribed, as the drawer lists them. */
+    val wikis: StateFlow<List<WikiInfo>> = repository.wikiList
+
     private val _events = MutableSharedFlow<PageViewEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<PageViewEvent> = _events.asSharedFlow()
 

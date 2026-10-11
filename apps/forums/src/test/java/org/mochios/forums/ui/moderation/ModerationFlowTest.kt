@@ -65,7 +65,7 @@ class ModerationFlowTest {
             .baseUrl(server.url("/forums/"))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        repository = ForumsRepository(retrofit.create(ForumsApi::class.java), FileStore(context))
+        repository = ForumsRepository(retrofit.create(ForumsApi::class.java), FileStore(context), context)
     }
 
     @After

@@ -99,6 +99,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.launcher.AddToHomeItem
 import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.RssRevokeDialog
@@ -124,6 +125,7 @@ import org.mochios.android.ui.components.RefreshButton
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.forums.R
 import org.mochios.forums.api.NotificationSettings
+import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.components.PostBadges
 import org.mochios.forums.ui.forumlist.ForumListViewModel
@@ -266,6 +268,7 @@ fun ForumScreen(
             )
         } else {
             ForumContent(
+                forums = listUiState.forums,
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                 onPostClick = onPostClick,
                 onNewPost = onNewPost,
@@ -284,9 +287,19 @@ fun ForumScreen(
 
 }
 
+/**
+ * Whether [forum] is among [forums], those the user holds, as the drawer
+ * lists them, rather than one only browsed. Only a held forum goes on the
+ * home screen, as only those are kept in step with the list.
+ */
+internal fun holds(forums: List<Forum>, forum: Forum): Boolean = forums.any { held ->
+    held.id == forum.id || (held.fingerprint.isNotEmpty() && held.fingerprint == forum.fingerprint)
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ForumContent(
+    forums: List<Forum>,
     onOpenDrawer: () -> Unit,
     onPostClick: (String, String) -> Unit,
     onNewPost: (String) -> Unit,
@@ -539,6 +552,12 @@ private fun ForumContent(
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.Settings, contentDescription = null) },
                                 )
+                            }
+                            // The aggregate is the app's own icon.
+                            if (!isAll && holds(forums, uiState.forum) && uiState.forum.id.isNotEmpty()) {
+                                AddToHomeItem("forums", forumIdForCallbacks, uiState.forum.name) {
+                                    showOverflowMenu = false
+                                }
                             }
                             // Managers delete the forum from settings rather
                             // than unsubscribing from something they own.

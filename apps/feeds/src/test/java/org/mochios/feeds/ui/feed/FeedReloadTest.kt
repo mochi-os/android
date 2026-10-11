@@ -144,7 +144,7 @@ class FeedReloadTest {
         })
         model = FeedViewModel(
             SavedStateHandle(mapOf("feedId" to feed)),
-            FeedsRepository(api, retrofit.create(MenuApi::class.java), FileStore(context)),
+            FeedsRepository(api, retrofit.create(MenuApi::class.java), FileStore(context), context),
             SavedRepository(api, Gson()),
             socket,
             session,
