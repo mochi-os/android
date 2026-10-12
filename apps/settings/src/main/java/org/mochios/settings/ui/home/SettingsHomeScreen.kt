@@ -30,6 +30,7 @@ import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.SettingsApplications
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.outlined.Apps
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -47,10 +48,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R as MochiR
+import org.mochios.android.launcher.openApp
 import org.mochios.android.ui.components.AboutDialog
+import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.settings.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -75,10 +79,19 @@ fun SettingsHomeScreen(
     onOpenSystemDocuments: () -> Unit,
 ) {
     var showAbout by remember { mutableStateOf(false) }
+    val context = LocalContext.current
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.settings_home_title)) },
+                navigationIcon = {
+                    MochiIconButton(onClick = { openApp(context, "home") }) {
+                        Icon(
+                            Icons.Outlined.Apps,
+                            contentDescription = stringResource(MochiR.string.drawer_mochi_home),
+                        )
+                    }
+                },
             )
         },
     ) { padding ->
