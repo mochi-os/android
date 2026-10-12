@@ -10,6 +10,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
 import org.mochios.feeds.ui.feed.FeedScreen
 import org.mochios.feeds.ui.feedlist.CreateFeedScreen
@@ -87,15 +88,7 @@ fun NavGraphBuilder.feedsNavGraph(
 ) {
     composable(FeedsApp.ROUTER) { entry ->
         FeedsRouter(onResolve = { feedId ->
-            // A deep link arriving on the same frame pops the router before it
-            // resolves; without this its late navigate pushes a second feed
-            // screen behind the one the link opened - two ViewModels, two
-            // websocket subscriptions and the feed loaded twice.
-            if (navController.currentBackStackEntry?.id == entry.id) {
-                navController.navigate(FeedsApp.feed(feedId)) {
-                    popUpTo(FeedsApp.ROUTER) { inclusive = true }
-                }
-            }
+            navController.leaveRouter(entry, FeedsApp.feed(feedId))
         })
     }
 

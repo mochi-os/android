@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
 import org.mochios.crm.ui.design.ClassDetailScreen
 import org.mochios.crm.ui.design.CreateClassScreen
@@ -91,11 +92,9 @@ fun NavGraphBuilder.crmsNavGraph(
     navController: NavController,
     onOpenNotifications: () -> Unit = {},
 ) {
-    composable(CrmsApp.ROUTER) {
+    composable(CrmsApp.ROUTER) { entry ->
         CrmsRouter(onResolve = { crmId ->
-            navController.navigate(CrmsApp.crm(crmId)) {
-                popUpTo(CrmsApp.ROUTER) { inclusive = true }
-            }
+            navController.leaveRouter(entry, CrmsApp.crm(crmId))
         })
     }
 

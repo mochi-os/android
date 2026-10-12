@@ -11,6 +11,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
 import org.mochios.forums.ui.find.FindForumsScreen
 import org.mochios.forums.ui.forum.ForumScreen
@@ -72,11 +73,9 @@ fun NavGraphBuilder.forumsNavGraph(
     navController: NavController,
     onOpenNotifications: () -> Unit = {},
 ) {
-    composable(ForumsApp.ROUTER) {
+    composable(ForumsApp.ROUTER) { entry ->
         ForumsRouter(onResolve = { forumId ->
-            navController.navigate(ForumsApp.forum(forumId)) {
-                popUpTo(ForumsApp.ROUTER) { inclusive = true }
-            }
+            navController.leaveRouter(entry, ForumsApp.forum(forumId))
         })
     }
 

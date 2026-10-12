@@ -10,6 +10,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import org.mochios.android.util.leaveRouter
 import org.mochios.chess.ui.list.ChessGameListScreen
 import org.mochios.chess.ui.newgame.NewChessGameScreen
 import org.mochios.chess.ui.router.ChessRouter
@@ -33,11 +34,9 @@ fun NavGraphBuilder.chessNavGraph(
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
-    composable(ChessApp.HOME) {
+    composable(ChessApp.HOME) { entry ->
         ChessRouter(onResolve = { gameId ->
-            navController.navigate(ChessApp.gameDetail(gameId)) {
-                popUpTo(ChessApp.HOME) { inclusive = true }
-            }
+            navController.leaveRouter(entry, ChessApp.gameDetail(gameId))
         })
     }
 

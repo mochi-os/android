@@ -12,6 +12,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
 import org.mochios.projects.ui.design.ClassDetailScreen
 import org.mochios.projects.ui.design.CreateClassScreen
@@ -117,11 +118,9 @@ fun NavGraphBuilder.projectsNavGraph(
     navController: NavController,
     onOpenNotifications: () -> Unit = {},
 ) {
-    composable(ProjectsApp.ROUTER) {
+    composable(ProjectsApp.ROUTER) { entry ->
         ProjectsRouter(onResolve = { projectId ->
-            navController.navigate(ProjectsApp.project(projectId)) {
-                popUpTo(ProjectsApp.ROUTER) { inclusive = true }
-            }
+            navController.leaveRouter(entry, ProjectsApp.project(projectId))
         })
     }
 

@@ -11,6 +11,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
 import org.mochios.chat.ui.chat.ChatScreen
 import org.mochios.chat.ui.newchat.NewChatScreen
@@ -41,11 +42,9 @@ fun NavGraphBuilder.chatNavGraph(
     navController: NavController,
     onOpenNotifications: () -> Unit = {},
 ) {
-    composable(ChatApp.ROUTER) {
+    composable(ChatApp.ROUTER) { entry ->
         ChatRouter(onResolve = { chatId ->
-            navController.navigate(ChatApp.chat(chatId)) {
-                popUpTo(ChatApp.ROUTER) { inclusive = true }
-            }
+            navController.leaveRouter(entry, ChatApp.chat(chatId))
         })
     }
 

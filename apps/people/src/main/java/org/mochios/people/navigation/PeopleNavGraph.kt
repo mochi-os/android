@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import android.net.Uri
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
 import org.mochios.people.ui.components.PeopleDrawerNavigation
 import org.mochios.people.ui.components.PeopleSidebarSection
@@ -108,7 +109,7 @@ fun NavGraphBuilder.peopleNavGraph(
         onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
     )
 
-    composable(PeopleApp.ROUTER) {
+    composable(PeopleApp.ROUTER) { entry ->
         PeopleRouter(onResolve = { section ->
             val target = when (section) {
                 PeopleSection.INVITATIONS -> PeopleApp.INVITATIONS
@@ -116,9 +117,7 @@ fun NavGraphBuilder.peopleNavGraph(
                 PeopleSection.PROFILE -> PeopleApp.PROFILE
                 else -> PeopleApp.contacts()
             }
-            navController.navigate(target) {
-                popUpTo(PeopleApp.ROUTER) { inclusive = true }
-            }
+            navController.leaveRouter(entry, target)
         })
     }
 

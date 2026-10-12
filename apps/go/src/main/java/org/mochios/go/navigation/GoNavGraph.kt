@@ -10,6 +10,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import org.mochios.android.util.leaveRouter
 import org.mochios.go.ui.list.GoGameListScreen
 import org.mochios.go.ui.newgame.NewGoGameScreen
 import org.mochios.go.ui.router.GoRouter
@@ -34,11 +35,9 @@ fun NavGraphBuilder.goNavGraph(
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
-    composable(GoApp.HOME) {
+    composable(GoApp.HOME) { entry ->
         GoRouter(onResolve = { gameId ->
-            navController.navigate(GoApp.gameDetail(gameId)) {
-                popUpTo(GoApp.HOME) { inclusive = true }
-            }
+            navController.leaveRouter(entry, GoApp.gameDetail(gameId))
         })
     }
 

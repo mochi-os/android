@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
 import org.mochios.words.ui.list.WordsGameListScreen
 import org.mochios.words.ui.newgame.NewWordsGameScreen
@@ -33,11 +34,9 @@ fun NavGraphBuilder.wordsNavGraph(
     onOpenNotifications: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
 ) {
-    composable(WordsApp.HOME) {
+    composable(WordsApp.HOME) { entry ->
         WordsRouter(onResolve = { gameId ->
-            navController.navigate(WordsApp.gameDetail(gameId)) {
-                popUpTo(WordsApp.HOME) { inclusive = true }
-            }
+            navController.leaveRouter(entry, WordsApp.gameDetail(gameId))
         })
     }
 
