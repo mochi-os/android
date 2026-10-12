@@ -17,6 +17,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Rule
 import org.junit.Test
@@ -55,6 +56,7 @@ class RouterNavigationTest {
                     Text("item ${entry.arguments?.getString("id")}")
                 }
                 composable(OTHER) { Text("other") }
+                composable(MORE) { Text("more") }
             }
         }
         rule.waitForIdle()
@@ -117,10 +119,30 @@ class RouterNavigationTest {
         assertNull(navigation.previousBackStackEntry)
     }
 
+    @Test
+    fun `a screen the router never opens, linked while an item is open, goes back to that item alone`() {
+        start()
+        act { returnToRouter(ROUTER); navigate(OTHER) }
+        assertEquals(OTHER, showing())
+        act { popBackStack() }
+        assertEquals(item(LAST), showing())
+        assertNull(navigation.previousBackStackEntry)
+    }
+
+    @Test
+    fun `a second such link as the app starts replaces the first over the router`() {
+        start { navigate(OTHER) }
+        act { returnToRouter(ROUTER); navigate(MORE) }
+        assertEquals(MORE, showing())
+        assertEquals(ROUTER, navigation.previousBackStackEntry?.destination?.route)
+        assertFalse(navigation.holds(OTHER))
+    }
+
     private companion object {
         const val ROUTER = "app/router"
         const val ITEM = "app/item/{id}"
         const val OTHER = "app/other"
+        const val MORE = "app/more"
         const val LAST = "last"
         const val LINKED = "linked"
 

@@ -55,6 +55,22 @@ fun NavController.openInPlace(router: String, screen: String, route: String) {
 }
 
 /**
+ * Clear the way for a deep link's screen that an app's [router] never opens
+ * itself, such as a new chat or a person's profile, before it opens on top.
+ *
+ * Returns to the router when it is on the stack, as it is when the link
+ * started the app: Back then uncovers it and it opens the last-viewed item.
+ * Otherwise the screen the user came from is beneath already. A router pushed
+ * there would open the last-viewed item on Back, a second copy of a screen
+ * beneath or of the one just left.
+ *
+ * @param router the app's router route.
+ */
+fun NavController.returnToRouter(router: String) {
+    if (holds(router)) popBackStack(router, inclusive = false)
+}
+
+/**
  * Whether [route] already has an entry on the back stack.
  *
  * @param route a destination's route pattern.

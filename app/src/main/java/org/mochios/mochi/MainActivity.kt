@@ -37,6 +37,7 @@ import org.mochios.android.util.entityDeepLink
 import org.mochios.android.util.holds
 import org.mochios.android.util.isAt
 import org.mochios.android.util.openInPlace
+import org.mochios.android.util.returnToRouter
 import org.mochios.android.i18n.FormatProvider
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.push.NonceStore
@@ -731,7 +732,7 @@ open class MainActivity : ComponentActivity() {
             "chat" -> {
                 if (id == "new") {
                     val friendId = parseQueryParam(query, "friend")
-                    navController.openAppHome(ChatApp.HOME)
+                    navController.returnToRouter(ChatApp.ROUTER)
                     navController.navigate(ChatApp.newChat(friendId.orEmpty())) {
                         launchSingleTop = true
                     }
@@ -747,9 +748,14 @@ open class MainActivity : ComponentActivity() {
                 val server = parseQueryParam(query, "server")
                 val route = ForumsApp.linkRoute(id, parts.getOrNull(2), server)
                 if (route != null && navController.isAt(route)) return
-                if (route == null || id == null || !server.isNullOrEmpty()) {
+                if (route == null || id == null) {
                     navController.openAppHome(ForumsApp.HOME)
-                    if (route != null) navController.navigate(route) { launchSingleTop = true }
+                    return
+                }
+                // Discovery, for a forum not held here.
+                if (!server.isNullOrEmpty()) {
+                    navController.returnToRouter(ForumsApp.ROUTER)
+                    navController.navigate(route) { launchSingleTop = true }
                     return
                 }
                 // The forum replaces the router; a post opens over its forum, so
@@ -841,18 +847,19 @@ open class MainActivity : ComponentActivity() {
                     navController.openInPlace(PeopleApp.ROUTER, PeopleApp.CONTACTS, PeopleApp.contacts(action))
                     return
                 }
-                navController.openAppHome(PeopleApp.HOME)
-                when {
-                    id == "contacts" -> parts.getOrNull(2)?.let { contact ->
-                        navController.navigate(PeopleApp.contactEdit(contact)) {
-                            launchSingleTop = true
-                        }
-                    }
+                val screen = when {
+                    id == "contacts" -> parts.getOrNull(2)?.let { contact -> PeopleApp.contactEdit(contact) }
                     // Anything else with an id is a person entity: the profile
                     // link the directory and other apps hand out, which used to
                     // be swallowed here.
-                    id != null ->
-                        navController.navigate(PeopleApp.personView(id)) { launchSingleTop = true }
+                    id != null -> PeopleApp.personView(id)
+                    else -> null
+                }
+                if (screen == null) {
+                    navController.openAppHome(PeopleApp.HOME)
+                } else {
+                    navController.returnToRouter(PeopleApp.ROUTER)
+                    navController.navigate(screen) { launchSingleTop = true }
                 }
             }
             "chess" -> {
