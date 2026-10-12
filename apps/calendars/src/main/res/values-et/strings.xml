@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">Kalendriserver</string>
     <string name="calendars_sync_permission_reason">Sünkroonimine kopeerib teie sündmused selle telefoni kalendrirakendusse, seega vajab see juurdepääsu teie kalendritele.</string>
     <string name="calendars_sync_permission_blocked">Juurdepääs kalendrile on selle rakenduse jaoks välja lülitatud. Saate selle sisse lülitada rakenduse seadete jaotises Load.</string>
+    <string name="calendars_location_map">Näita kaardil</string>
+    <string name="calendars_location_flight">Jälgi lendu</string>
 </resources>

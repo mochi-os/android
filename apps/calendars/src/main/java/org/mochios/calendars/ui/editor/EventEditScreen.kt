@@ -38,8 +38,10 @@ import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Event
+import androidx.compose.material.icons.outlined.Flight
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Palette
+import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material.icons.outlined.Repeat
 import androidx.compose.material.icons.outlined.Schedule
@@ -115,10 +117,12 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.ZonePicker
 import org.mochios.android.util.Zones
+import org.mochios.android.util.flightNumber
 import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Zone
+import org.mochios.calendars.ui.calendar.openLocation
 import org.mochios.calendars.ui.components.DateDialog
 import org.mochios.calendars.ui.dialogs.DeleteEventDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
@@ -547,12 +551,29 @@ internal fun EventText(
             minLines = 2,
             modifier = Modifier.fillMaxWidth().leaving(onLeave),
         )
+        val context = LocalContext.current
+        val format = LocalFormat.current
         MochiTextField(
             value = location,
             onValueChange = onLocation,
             label = { Text(stringResource(R.string.calendars_event_location)) },
             singleLine = true,
             enabled = enabled,
+            // Opens the place on a map, or the flight on the user's tracker, as
+            // the event sheet's location does.
+            trailingIcon = if (location.isBlank()) null else {
+                {
+                    val flight = flightNumber(location) != null
+                    MochiIconButton(onClick = { openLocation(context, location, format.preferences) }) {
+                        Icon(
+                            if (flight) Icons.Outlined.Flight else Icons.Outlined.Place,
+                            contentDescription = stringResource(
+                                if (flight) R.string.calendars_location_flight else R.string.calendars_location_map,
+                            ),
+                        )
+                    }
+                }
+            },
             modifier = Modifier.fillMaxWidth().leaving(onLeave),
         )
         MochiTextField(

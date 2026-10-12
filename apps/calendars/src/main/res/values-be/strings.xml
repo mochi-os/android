@@ -303,4 +303,6 @@
     <string name="calendars_provider_caldav">Сервер календароў</string>
     <string name="calendars_sync_permission_reason">Сінхранізацыя капіруе вашы падзеі ў праграму календара на гэтым тэлефоне, таму ёй патрэбны доступ да вашых календароў.</string>
     <string name="calendars_sync_permission_blocked">Доступ да календара для гэтай праграмы выключаны. Вы можаце ўключыць яго ў раздзеле «Дазволы» ў наладах праграмы.</string>
+    <string name="calendars_location_map">Паказаць на карце</string>
+    <string name="calendars_location_flight">Адсочваць рэйс</string>
 </resources>

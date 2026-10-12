@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">कैलेंडर सर्वर</string>
     <string name="calendars_sync_permission_reason">सिंक कइला से रउआ के कार्यक्रम एह फोन के कैलेंडर ऐप में कॉपी हो जाला, एह से एकरा के रउआ के कैलेंडर तक पहुंच चाहीं।</string>
     <string name="calendars_sync_permission_blocked">एह ऐप खातिर कैलेंडर के पहुंच बंद बा। रउआ ऐप के सेटिंग में अनुमतियां के तहत एकरा के चालू कर सकेलीं।</string>
+    <string name="calendars_location_map">नक्शा पर देखाईं</string>
+    <string name="calendars_location_flight">उड़ान ट्रैक करीं</string>
 </resources>

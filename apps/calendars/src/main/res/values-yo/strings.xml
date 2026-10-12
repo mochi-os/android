@@ -267,4 +267,6 @@
     <string name="calendars_provider_caldav">Sáfà kàlẹ́ńdà</string>
     <string name="calendars_sync_permission_reason">Àmúṣiṣẹ́pọ̀ máa ń da àwọn ìṣẹ̀lẹ̀ rẹ kọ sínú app kàlẹ́ńdà fóònù yìí, nítorí náà ó nílò ìwọlé sí àwọn kàlẹ́ńdà rẹ.</string>
     <string name="calendars_sync_permission_blocked">A ti pa ìwọlé sí kàlẹ́ńdà fún app yìí. O lè tàn án lábẹ́ Àwọn ìyọ̀ǹda nínú àwọn ìṣètò app náà.</string>
+    <string name="calendars_location_map">Fihàn lórí máàpù</string>
+    <string name="calendars_location_flight">Tọpinpin ọkọ̀ òfuurufú</string>
 </resources>

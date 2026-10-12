@@ -9,8 +9,9 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
 import org.mochios.android.i18n.Flights
+import org.mochios.android.i18n.Maps
 
-/** A location that is a flight number, and the tracker page it links to. */
+/** A location that is a flight number and the tracker page it links to, or a place and its map search. */
 class FlightLinksTest {
 
     @Test
@@ -41,5 +42,14 @@ class FlightLinksTest {
     fun `the link follows the tracker preference`() {
         assertEquals("https://www.flightradar24.com/data/flights/ei59", flightLink("EI59", Flights.FLIGHTRADAR24))
         assertEquals("https://www.flightaware.com/live/flight/BA123", flightLink("BA123", Flights.FLIGHTAWARE))
+    }
+
+    @Test
+    fun `a place is searched on the map service the preference names, as the web searches it`() {
+        assertEquals("https://www.openstreetmap.org/search?query=Meeting%20room", mapLink(" Meeting room ", Maps.OPENSTREETMAP))
+        assertEquals(
+            "https://www.google.com/maps/search/?api=1&query=12%20Example%20St%20%26%20Co",
+            mapLink("12 Example St & Co", Maps.GOOGLE),
+        )
     }
 }

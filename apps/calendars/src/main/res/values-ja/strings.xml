@@ -266,4 +266,6 @@
     <string name="calendars_provider_caldav">カレンダーサーバー</string>
     <string name="calendars_sync_permission_reason">同期すると予定がこのスマートフォンのカレンダーアプリにコピーされるため、カレンダーへのアクセスが必要です。</string>
     <string name="calendars_sync_permission_blocked">このアプリのカレンダーへのアクセスがオフになっています。アプリの設定の「権限」でオンにできます。</string>
+    <string name="calendars_location_map">地図で表示</string>
+    <string name="calendars_location_flight">フライトを追跡</string>
 </resources>

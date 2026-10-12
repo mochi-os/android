@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">კალენდრის სერვერი</string>
     <string name="calendars_sync_permission_reason">სინქრონიზაცია თქვენს ღონისძიებებს ამ ტელეფონის კალენდრის აპში აკოპირებს, ამიტომ მას თქვენს კალენდრებზე წვდომა სჭირდება.</string>
     <string name="calendars_sync_permission_blocked">ამ აპისთვის კალენდარზე წვდომა გამორთულია. მისი ჩართვა შეგიძლიათ აპის პარამეტრებში, ნებართვების განყოფილებაში.</string>
+    <string name="calendars_location_map">რუკაზე ჩვენება</string>
+    <string name="calendars_location_flight">რეისის თვალყურის დევნება</string>
 </resources>

@@ -51,4 +51,6 @@
     </plurals>
     <string name="calendars_rule_until">tot %1$s</string>
     <string name="calendars_truncated">Te veel afspraken om ze allemaal te tonen. Kies een korter bereik.</string>
+    <string name="calendars_location_map">Op kaart tonen</string>
+    <string name="calendars_location_flight">Vlucht volgen</string>
 </resources>

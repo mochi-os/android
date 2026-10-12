@@ -271,4 +271,6 @@
     <string name="calendars_provider_caldav">Sèvè kalandriye</string>
     <string name="calendars_sync_permission_reason">Senkronizasyon an kopye evènman ou yo nan aplikasyon kalandriye telefòn sa a, kidonk li bezwen aksè nan kalandriye ou yo.</string>
     <string name="calendars_sync_permission_blocked">Aksè kalandriye a etenn pou aplikasyon sa a. Ou ka limen l nan Pèmisyon, nan paramèt aplikasyon an.</string>
+    <string name="calendars_location_map">Montre sou kat la</string>
+    <string name="calendars_location_flight">Swiv vòl la</string>
 </resources>

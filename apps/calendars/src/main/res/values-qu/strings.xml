@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">Calendario servidor</string>
     <string name="calendars_sync_permission_reason">Sincronizayqa eventoykikunata kay telefonopa calendario appninman copian, chaymi calendarioykikunaman yaykuyta necesitan.</string>
     <string name="calendars_sync_permission_blocked">Kay app-paq calendarioman yaykuyqa desactivasqa kachkan. App-pa wakichiyninkunapi Permisokuna nisqapi activayta atinki.</string>
+    <string name="calendars_location_map">Mapapi rikuchiy</string>
+    <string name="calendars_location_flight">Phawayta qatipay</string>
 </resources>

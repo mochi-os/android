@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">Naptárkiszolgáló</string>
     <string name="calendars_sync_permission_reason">A szinkronizálás átmásolja az eseményeit ennek a telefonnak a naptáralkalmazásába, ezért hozzáférésre van szüksége a naptáraihoz.</string>
     <string name="calendars_sync_permission_blocked">A naptárhoz való hozzáférés ki van kapcsolva ennél az alkalmazásnál. Az alkalmazás beállításaiban, az Engedélyek részben kapcsolhatja be.</string>
+    <string name="calendars_location_map">Megjelenítés a térképen</string>
+    <string name="calendars_location_flight">Járat követése</string>
 </resources>

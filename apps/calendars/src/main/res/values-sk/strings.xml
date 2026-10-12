@@ -299,4 +299,6 @@
     <string name="calendars_provider_caldav">Kalendárový server</string>
     <string name="calendars_sync_permission_reason">Synchronizácia kopíruje vaše udalosti do aplikácie kalendára v tomto telefóne, preto potrebuje prístup k vašim kalendárom.</string>
     <string name="calendars_sync_permission_blocked">Prístup ku kalendáru je pre túto aplikáciu vypnutý. Môžete ho zapnúť v sekcii Povolenia v nastaveniach aplikácie.</string>
+    <string name="calendars_location_map">Zobraziť na mape</string>
+    <string name="calendars_location_flight">Sledovať let</string>
 </resources>

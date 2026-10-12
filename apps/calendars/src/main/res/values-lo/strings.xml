@@ -266,4 +266,6 @@
     <string name="calendars_provider_caldav">ເຊີບເວີປະຕິທິນ</string>
     <string name="calendars_sync_permission_reason">ການຊິງຄ໌ຈະສຳເນົາເຫດການຂອງທ່ານໄປໃສ່ແອັບປະຕິທິນຂອງໂທລະສັບນີ້, ສະນັ້ນມັນຈຶ່ງຕ້ອງການສິດເຂົ້າເຖິງປະຕິທິນຂອງທ່ານ.</string>
     <string name="calendars_sync_permission_blocked">ການເຂົ້າເຖິງປະຕິທິນຖືກປິດໄວ້ສຳລັບແອັບນີ້. ທ່ານສາມາດເປີດມັນໄດ້ໃນສ່ວນ ການອະນຸຍາດ ໃນການຕັ້ງຄ່າຂອງແອັບ.</string>
+    <string name="calendars_location_map">ສະແດງໃນແຜນທີ່</string>
+    <string name="calendars_location_flight">ຕິດຕາມຖ້ຽວບິນ</string>
 </resources>

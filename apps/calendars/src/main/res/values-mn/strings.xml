@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">Хуанлийн сервер</string>
     <string name="calendars_sync_permission_reason">Синк хийх нь таны үйл явдлуудыг энэ утасны хуанли аппад хуулдаг тул таны хуанлиудад хандах эрх хэрэгтэй.</string>
     <string name="calendars_sync_permission_blocked">Энэ аппын хуанлид хандах эрх унтраалттай байна. Та үүнийг аппын тохиргооны Зөвшөөрөл хэсгээс асааж болно.</string>
+    <string name="calendars_location_map">Газрын зураг дээр харуулах</string>
+    <string name="calendars_location_flight">Нислэгийг хянах</string>
 </resources>

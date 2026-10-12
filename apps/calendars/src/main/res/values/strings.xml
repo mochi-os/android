@@ -93,6 +93,8 @@
     <string name="calendars_event_zone_finish">End time zone</string>
     <string name="calendars_event_backwards">Ends before it starts</string>
     <string name="calendars_event_location">Location</string>
+    <string name="calendars_location_map">Show on map</string>
+    <string name="calendars_location_flight">Track flight</string>
     <string name="calendars_event_colour_value">Colour value</string>
     <string name="calendars_discard_title">Discard draft?</string>
     <string name="calendars_discard_message">Your changes will be lost.</string>

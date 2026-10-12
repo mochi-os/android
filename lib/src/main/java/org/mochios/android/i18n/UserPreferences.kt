@@ -30,12 +30,24 @@ data class UserPreferences(
      * the server's `background` preference, which turns it off with "off".
      */
     val background: Boolean = true,
-    /** Where a flight number links to. Maps need no preference here: a location opens in the phone's own map app. */
+    /** Where a flight number links to. */
     val flights: Flights = Flights.FLIGHTRADAR24,
+    /** Where a place is searched when the phone has no map app to open it in. */
+    val maps: Maps = Maps.OPENSTREETMAP,
 )
 
 /** The `background` preference as the server sends it: only "off" turns the glow off. */
 fun backgroundOf(value: String?): Boolean = value != "off"
+
+/** The map service a place is searched on; the server's `maps` preference. */
+enum class Maps(val key: String) {
+    OPENSTREETMAP("openstreetmap"),
+    GOOGLE("google");
+
+    companion object {
+        fun fromString(s: String?): Maps = entries.firstOrNull { it.key == s } ?: OPENSTREETMAP
+    }
+}
 
 /** The flight tracker a flight number links to; the server's `flights` preference. */
 enum class Flights(val key: String) {

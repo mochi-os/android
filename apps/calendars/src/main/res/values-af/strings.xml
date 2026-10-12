@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">Kalenderbediener</string>
     <string name="calendars_sync_permission_reason">Sinkronisering kopieer jou gebeurtenisse na hierdie foon se kalender-app, dus het dit toegang tot jou kalenders nodig.</string>
     <string name="calendars_sync_permission_blocked">Kalendertoegang is vir hierdie app afgeskakel. Jy kan dit onder Toestemmings in die app se instellings aanskakel.</string>
+    <string name="calendars_location_map">Wys op kaart</string>
+    <string name="calendars_location_flight">Volg vlug</string>
 </resources>

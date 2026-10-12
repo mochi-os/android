@@ -266,4 +266,6 @@
     <string name="calendars_provider_caldav">Server kalénder</string>
     <string name="calendars_sync_permission_reason">Sinkronisasi nyalin acara anjeun kana aplikasi kalénder di telepon ieu, janten peryogi aksés kana kalénder anjeun.</string>
     <string name="calendars_sync_permission_blocked">Aksés kalénder dipareuman pikeun aplikasi ieu. Anjeun tiasa ngahurungkeunana dina Idin di setélan aplikasi.</string>
+    <string name="calendars_location_map">Témbongkeun dina peta</string>
+    <string name="calendars_location_flight">Lacak penerbangan</string>
 </resources>

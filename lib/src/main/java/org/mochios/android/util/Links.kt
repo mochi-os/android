@@ -7,6 +7,7 @@ package org.mochios.android.util
 
 import android.net.Uri
 import org.mochios.android.i18n.Flights
+import org.mochios.android.i18n.Maps
 import java.net.URLEncoder
 
 /**
@@ -71,6 +72,18 @@ fun flightNumber(location: String): String? {
     val text = location.trim().uppercase()
     val match = BARE.matchEntire(text) ?: NAMED.matchEntire(text) ?: return null
     return match.groupValues[1] + match.groupValues[2]
+}
+
+/**
+ * A search for a free-text place on the user's map service, as the web's
+ * mapLink() builds it: the encoder's `+` for a space becomes `%20`.
+ */
+fun mapLink(location: String, service: Maps): String {
+    val query = URLEncoder.encode(location.trim(), "UTF-8").replace("+", "%20")
+    return when (service) {
+        Maps.GOOGLE -> "https://www.google.com/maps/search/?api=1&query=$query"
+        Maps.OPENSTREETMAP -> "https://www.openstreetmap.org/search?query=$query"
+    }
 }
 
 /** A flight's page on the user's tracker, by its number as [flightNumber] answers it. */

@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">Takvim sunucusu</string>
     <string name="calendars_sync_permission_reason">Senkronizasyon, etkinliklerinizi bu telefonun takvim uygulamasına kopyalar; bu nedenle takvimlerinize erişmesi gerekir.</string>
     <string name="calendars_sync_permission_blocked">Bu uygulama için takvim erişimi kapalı. Uygulama ayarlarındaki İzinler bölümünden açabilirsiniz.</string>
+    <string name="calendars_location_map">Haritada göster</string>
+    <string name="calendars_location_flight">Uçuşu takip et</string>
 </resources>

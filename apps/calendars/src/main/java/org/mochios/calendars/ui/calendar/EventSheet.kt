@@ -5,13 +5,10 @@
 
 package org.mochios.calendars.ui.calendar
 
-import android.content.Intent
 import android.icu.text.MeasureFormat
 import android.icu.util.Measure
 import android.icu.util.MeasureUnit
-import android.net.Uri
 import androidx.annotation.StringRes
-import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -62,7 +59,6 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
-import java.net.URLEncoder
 import java.time.DayOfWeek
 import java.time.Instant
 import java.time.LocalDate
@@ -77,10 +73,8 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.util.Zones
-import org.mochios.android.util.flightLink
 import org.mochios.android.util.flightNumber
 import org.mochios.android.util.isHtml
-import org.mochios.android.util.webUri
 import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
@@ -331,26 +325,10 @@ fun EventSheet(
                     }
                 }
                 if (instance.location.isNotBlank()) {
-                    // A flight number opens on the user's flight tracker; anything
-                    // else is handed to whichever map app the phone has.
                     val context = LocalContext.current
-                    val flight = flightNumber(instance.location)
                     Detail(
-                        icon = if (flight != null) Icons.Outlined.Flight else Icons.Outlined.Place,
-                        modifier = Modifier.clickable {
-                            if (flight != null) {
-                                webUri(flightLink(flight, format.preferences.flights))?.let { target ->
-                                    runCatching { CustomTabsIntent.Builder().build().launchUrl(context, target) }
-                                }
-                            } else {
-                                try {
-                                    // launch-ok: a geo: URI the phone's own map app answers, not a web URL
-                                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(geo(instance.location))))
-                                } catch (_: Exception) {
-                                    // no map app
-                                }
-                            }
-                        },
+                        icon = if (flightNumber(instance.location) != null) Icons.Outlined.Flight else Icons.Outlined.Place,
+                        modifier = Modifier.clickable { openLocation(context, instance.location, format.preferences) },
                     ) {
                         Text(
                             text = instance.location,
@@ -494,14 +472,6 @@ private fun Detail(
         )
     }
 }
-
-/**
- * A `geo:` URI searching for a free-text location, which the phone's own map
- * app answers; the encoder's `+` for a space becomes `%20`, which every map
- * app reads.
- */
-fun geo(location: String): String =
-    "geo:0,0?q=" + URLEncoder.encode(location.trim(), "UTF-8").replace("+", "%20")
 
 /**
  * The line the summary shows for an occurrence's status: "Cancelled" or

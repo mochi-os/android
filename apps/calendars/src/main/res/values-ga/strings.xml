@@ -317,4 +317,6 @@
     <string name="calendars_provider_caldav">Freastalaí féilire</string>
     <string name="calendars_sync_permission_reason">Cóipeálann an sioncrónú d\'imeachtaí isteach in aip féilire an fhóin seo, mar sin teastaíonn rochtain uaidh ar d\'fhéilirí.</string>
     <string name="calendars_sync_permission_blocked">Tá rochtain ar an bhféilire múchta don aip seo. Is féidir leat í a chasadh air faoi Ceadanna i socruithe na haipe.</string>
+    <string name="calendars_location_map">Taispeáin ar léarscáil</string>
+    <string name="calendars_location_flight">Lean an eitilt</string>
 </resources>

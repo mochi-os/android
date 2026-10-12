@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">Seva ya kalenda</string>
     <string name="calendars_sync_permission_reason">Kusawazisha kunanakili matukio yako kwenye programu ya kalenda ya simu hii, kwa hivyo kunahitaji ufikiaji wa kalenda zako.</string>
     <string name="calendars_sync_permission_blocked">Ufikiaji wa kalenda umezimwa kwa programu hii. Unaweza kuuwasha chini ya Ruhusa katika mipangilio ya programu.</string>
+    <string name="calendars_location_map">Onyesha kwenye ramani</string>
+    <string name="calendars_location_flight">Fuatilia safari ya ndege</string>
 </resources>

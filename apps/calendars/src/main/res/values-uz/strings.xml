@@ -275,4 +275,6 @@
     <string name="calendars_provider_caldav">Kalendar serveri</string>
     <string name="calendars_sync_permission_reason">Sinxronlash tadbirlaringizni bu telefondagi kalendar ilovasiga nusxalaydi, shuning uchun unga kalendarlaringizga kirish ruxsati kerak.</string>
     <string name="calendars_sync_permission_blocked">Bu ilova uchun kalendarga kirish oʻchirilgan. Uni ilova sozlamalaridagi Ruxsatlar boʻlimida yoqishingiz mumkin.</string>
+    <string name="calendars_location_map">Xaritada koʻrsatish</string>
+    <string name="calendars_location_flight">Parvozni kuzatish</string>
 </resources>

@@ -289,4 +289,6 @@
     <string name="calendars_provider_caldav">Kalendarski server</string>
     <string name="calendars_sync_permission_reason">Sinhronizacija kopira vaše događaje u aplikaciju kalendara na ovom telefonu, pa joj je potreban pristup vašim kalendarima.</string>
     <string name="calendars_sync_permission_blocked">Pristup kalendaru je isključen za ovu aplikaciju. Možete ga uključiti pod Odobrenja u postavkama aplikacije.</string>
+    <string name="calendars_location_map">Prikaži na mapi</string>
+    <string name="calendars_location_flight">Prati let</string>
 </resources>

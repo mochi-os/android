@@ -13,6 +13,8 @@
     <string name="calendars_list_search">搜尋</string>
     <string name="calendars_event_title">標題</string>
     <string name="calendars_event_location">位置</string>
+    <string name="calendars_location_map">喺地圖上顯示</string>
+    <string name="calendars_location_flight">追蹤航班</string>
     <string name="calendars_event_url">網址</string>
     <string name="calendars_event_description">描述</string>
     <string name="calendars_repeat_never">唔重複</string>

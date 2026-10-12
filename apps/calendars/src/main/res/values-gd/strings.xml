@@ -303,4 +303,6 @@
     <string name="calendars_provider_caldav">Frithealaiche mhìosachan</string>
     <string name="calendars_sync_permission_reason">Nì an sioncronachadh lethbhreac dhe na tachartasan agad ann an aplacaid mìosachain an fhòn seo, mar sin feumaidh e inntrigeadh dha na mìosachain agad.</string>
     <string name="calendars_sync_permission_blocked">Tha inntrigeadh dhan mhìosachan dheth airson na h-aplacaid seo. \'S urrainn dhut a chur air fo Ceadan ann an roghainnean na h-aplacaid.</string>
+    <string name="calendars_location_map">Seall air mapa</string>
+    <string name="calendars_location_flight">Lean an turas-adhair</string>
 </resources>

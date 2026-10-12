@@ -289,4 +289,6 @@
     <string name="calendars_provider_caldav">Server de calendar</string>
     <string name="calendars_sync_permission_reason">Sincronizarea copiază evenimentele tale în aplicația de calendar a acestui telefon, așa că are nevoie de acces la calendarele tale.</string>
     <string name="calendars_sync_permission_blocked">Accesul la calendar este dezactivat pentru această aplicație. Îl poți activa din Permisiuni, în setările aplicației.</string>
+    <string name="calendars_location_map">Arată pe hartă</string>
+    <string name="calendars_location_flight">Urmărește zborul</string>
 </resources>
