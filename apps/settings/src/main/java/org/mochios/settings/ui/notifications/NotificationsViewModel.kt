@@ -114,7 +114,7 @@ class NotificationsViewModel @Inject constructor(
         try {
             val resp = repository.list()
             _uiState.value = _uiState.value.copy(
-                items = resp.data.sortedByDescending { it.created },
+                items = resp.data,
                 unreadCount = resp.count,
                 isLoading = false,
                 isRefreshing = false,
