@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Hantar mesej</string>
     <string name="people_contacts_no_people_found">Tiada orang dijumpai</string>
     <string name="people_contacts_try_adjusting">Cuba laraskan carian anda</string>
-    <string name="people_contact_section_address">Alamat</string>
     <string name="people_contact_section_detail">Butiran</string>
     <string name="people_contact_name">Nama</string>
     <string name="people_contact_email">E-mel</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Namakan semula</string>
     <string name="people_contacts_sort_name">Nama</string>
     <string name="people_contacts_sort_recent">Baru ditambah</string>
-    <string name="people_contacts_thats_you">Itu anda</string>
     <string name="people_contacts_try_different_search">Cuba istilah carian lain</string>
     <string name="people_contacts_unfriend">Keluarkan rakan</string>
     <string name="people_add_contact_search_placeholder">Taip untuk mencari…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Tiada kenalan ditemui</string>
     <string name="people_contacts_add_to_start">Tambah kenalan untuk mula berhubung</string>
     <string name="people_contacts_actions">Tindakan kenalan</string>
-    <string name="people_contacts_friend">Rakan</string>
     <string name="people_contacts_invite">Jemput</string>
     <string name="people_contacts_unfriend_confirm">%1$s tidak lagi menjadi rakan anda. Kenalan kekal dalam buku alamat anda.</string>
     <string name="people_contacts_delete">Padam kenalan</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kenalan telah berubah</string>
     <string name="people_add_contact_title">Tambah kenalan</string>
     <string name="people_add_contact_add">Tambah ke kenalan</string>
-    <string name="people_add_contact_in_contacts">Dalam kenalan</string>
     <string name="people_books_create">Cipta buku alamat</string>
     <string name="people_books_delete">Padam buku alamat</string>
     <plurals name="people_books_delete_confirm">

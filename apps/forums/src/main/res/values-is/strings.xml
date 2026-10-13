@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Birtingarnafn</string>
-    <string name="forums_auth_verification_failed">Sannprófun mistókst</string>
     <string name="forums_list_title">Spjallborð</string>
     <string name="forums_list_find">Finna spjallborð</string>
     <string name="forums_list_unsubscribe">Afskrá áskrift</string>
     <string name="forums_list_unsubscribe_title">Afskrá áskrift</string>
     <string name="forums_create_title">Búa til spjallborð</string>
     <string name="forums_create_name">Nafn spjallborðs</string>
-    <string name="forums_create_privacy">Friðhelgi</string>
-    <string name="forums_create_private">Einkamál</string>
-    <string name="forums_create_public">Opinbert</string>
     <string name="forums_create_action">Búa til spjallborð</string>
     <string name="forums_find_title">Finna spjallborð</string>
     <string name="forums_find_recommended">Mælt með</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Birta</string>
     <string name="forums_post_edit">Breyta færslu</string>
     <string name="forums_post_edit_title">Breyta færslu</string>
-    <string name="forums_post_edit_title_field">Titill</string>
-    <string name="forums_post_save">Vista</string>
     <string name="forums_post_delete">Eyða færslu</string>
     <string name="forums_post_delete_title">Eyða færslu</string>
     <string name="forums_post_locked">Læst</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Meðlimir</string>
     <string name="forums_tab_banner">Borði</string>
     <string name="forums_tab_ai">Gervigreind</string>
-    <string name="forums_access_target">Notandi eða hópur</string>
-    <string name="forums_access_level_view">Skoða</string>
-    <string name="forums_access_level_vote">Kjósa</string>
-    <string name="forums_access_level_comment">Skrifa athugasemd</string>
-    <string name="forums_access_level_post">Birta</string>
-    <string name="forums_access_level_none">Ekkert</string>
     <string name="forums_members_empty">Engir meðlimir</string>
     <string name="forums_banner_dismiss">Loka borða</string>
     <string name="forums_ai_mode_tag">Merkja</string>
     <string name="forums_ai_account_default">Sjálfgefinn reikningur</string>
-    <string name="forums_ai_prompt_reset">Endurstilla á sjálfgefið</string>
     <string name="forums_settings_unsubscribe">Afskrá áskrift</string>
     <string name="forums_moderation_title">Umsjón</string>
     <string name="forums_moderation_tab_queue">Biðröð</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Utan efnis</string>
     <string name="forums_report_reason_other">Annað</string>
     <string name="forums_post_default_author">Notandi</string>
-    <string name="forums_comments">Athugasemdir</string>
     <string name="forums_no_comments">Engar athugasemdir ennþá</string>
-    <string name="forums_comment_save">Vista</string>
     <string name="forums_comment_edit">Breyta athugasemd</string>
     <string name="forums_comment_edit_title">Breyta athugasemd</string>
-    <string name="forums_comment_edit_attach">Hengja við skrár</string>
     <string name="forums_comment_delete">Eyða athugasemd</string>
     <string name="forums_comment_delete_title">Eyða athugasemd</string>
     <string name="forums_comment_reply">Svara</string>
-    <string name="forums_settings_rename">Endurnefna</string>
-    <string name="forums_settings_save">Vista</string>
     <string name="forums_settings_delete">Eyða spjallþræði</string>
     <string name="forums_settings_delete_title">Eyða spjallþræði</string>
     <string name="forums_forum_not_found">Spjallborð fannst ekki</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Senda</string>
     <string name="forums_post_body_field">Meginmál</string>
-    <string name="forums_post_edit_body_field">Meginmál</string>
     <string name="forums_comment_edit_body_field">Meginmál</string>
-    <string name="forums_tag_clear">Hreinsa síu</string>
-    <string name="forums_post_tag_add">Bæta við merki</string>
     <string name="forums_write_comment">Skrifaðu athugasemd…</string>
-    <string name="forums_auth_login_failed">Innskráning mistókst</string>
 
     <string name="notification_channel_forums">Tilkynningar fyrir spjallborð</string>
-    <string name="forums_auth_brand">Mochi Spjallborð</string>
-    <string name="forums_auth_create_identity_failed">Mistókst að búa til auðkenni</string>
-    <string name="forums_auth_mfa_unsupported">MFA er ekki enn stutt í farsímaforritinu</string>
-    <string name="forums_auth_enter_code_sent">Sláðu inn kóðann sem var sendur til %1$s</string>
-    <string name="forums_auth_create_identity">Búðu til auðkenni þitt</string>
     <string name="forums_list_empty">Engin spjallborð ennþá</string>
     <string name="forums_list_unsubscribe_message">Ertu viss um að þú viljir segja upp áskrift að þessu spjallborði?</string>
     <string name="forums_find_search_placeholder">Leita að spjallborðum eða líma inn vefslóð</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Kjósa niður</string>
     <string name="forums_post_quote">Vitna í í svari</string>
     <string name="forums_comment_quote">Vitna í í svari</string>
-    <string name="forums_post_tag_remove">Fjarlægja merki</string>
     <string name="forums_access_add">Bæta við aðgangsreglu</string>
     <string name="forums_access_empty">Engar reglur ennþá — sjálfgildi gilda</string>
-    <string name="forums_access_target_hint">Auðkenni einingar, @hópur, * (allir), eða + (meðlimir)</string>
-    <string name="forums_access_level">Stig</string>
-    <string name="forums_access_level_moderate">Umsjón</string>
     <string name="forums_members_search">Sía meðlimi</string>
     <string name="forums_banner_description">Markdown sem birtist efst á spjallborðinu.</string>
     <string name="forums_banner_placeholder">Sláðu inn texta borðans (markdown er stutt)…</string>
-    <string name="forums_ai_mode_label">Hamur: %1$s</string>
-    <string name="forums_ai_mode_heading">Gervigreindarhamur</string>
     <string name="forums_ai_mode_off">Slökkt</string>
-    <string name="forums_ai_account">Gervigreindarreikningur</string>
-    <string name="forums_ai_prompt_tag">Hvati fyrir merkingar</string>
-    <string name="forums_ai_prompt_score">Hvati fyrir einkunnagjöf</string>
-    <string name="forums_ai_post_prompt_label">Hvati fyrir færslumerki</string>
-    <string name="forums_ai_comment_prompt_label">Hvati fyrir athugasemdamerki</string>
-    <string name="forums_settings_fingerprint">Fingrafar: %1$s</string>
-    <string name="forums_settings_clear_notifications">Hreinsa tilkynningar</string>
     <string name="forums_moderation_queue_empty">Ekkert í bið</string>
     <string name="forums_moderation_report_details">Nánar: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Leyst af %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Svarar %1$s</string>
     <string name="forums_comment_clear_reply">Hreinsa svar</string>
     <string name="forums_settings_title">Stillingar %1$s</string>
-    <string name="forums_settings_rename_label">Nafn spjallborðs</string>
-    <string name="forums_settings_danger_zone">Hættusvæði</string>
     <string name="forums_settings_delete_message">Þetta mun eyða spjallborðinu og öllum færslum þess varanlega. Þetta er ekki hægt að afturkalla.</string>
 
-    <string name="forums_tag_interest_up">Auka áhuga</string>
-    <string name="forums_tag_interest_down">Minnka áhuga</string>
-    <string name="forums_tag_interest_remove">Fjarlægja áhuga</string>
     <string name="forums_access_tab_users">Notendur</string>
     <string name="forums_access_tab_groups">Hópar</string>
-    <string name="forums_access_tab_manual">Handvirkt</string>
     <string name="forums_access_search_users">Leita að notendum</string>
     <string name="forums_access_no_groups">Engir hópar tiltækir</string>
     <string name="forums_saved_title">Vistað</string>

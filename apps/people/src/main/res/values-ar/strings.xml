@@ -121,7 +121,6 @@
     <string name="people_contacts_message">مراسلة</string>
     <string name="people_contacts_no_people_found">لم يتم العثور على أشخاص</string>
     <string name="people_contacts_try_adjusting">حاول تعديل البحث</string>
-    <string name="people_contact_section_address">العنوان</string>
     <string name="people_contact_section_detail">التفاصيل</string>
     <string name="people_contact_name">الاسم</string>
     <string name="people_contact_email">بريد إلكتروني</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">إعادة تسمية</string>
     <string name="people_contacts_sort_name">الاسم</string>
     <string name="people_contacts_sort_recent">أُضيف مؤخرًا</string>
-    <string name="people_contacts_thats_you">هذا أنت</string>
     <string name="people_contacts_try_different_search">جرب مصطلح بحث مختلف</string>
     <string name="people_contacts_unfriend">إزالة صديق</string>
     <string name="people_add_contact_search_placeholder">اكتب للبحث…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">لم يتم العثور على جهات اتصال</string>
     <string name="people_contacts_add_to_start">أضف جهات اتصال لتبدأ التواصل</string>
     <string name="people_contacts_actions">إجراءات جهة الاتصال</string>
-    <string name="people_contacts_friend">صديق</string>
     <string name="people_contacts_invite">دعوة</string>
     <string name="people_contacts_unfriend_confirm">لن يعود %1$s صديقًا لك. تبقى جهة الاتصال في دفتر عناوينك.</string>
     <string name="people_contacts_delete">حذف جهة الاتصال</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">تغيّرت جهة الاتصال</string>
     <string name="people_add_contact_title">إضافة جهة اتصال</string>
     <string name="people_add_contact_add">إضافة إلى جهات الاتصال</string>
-    <string name="people_add_contact_in_contacts">ضمن جهات الاتصال</string>
     <string name="people_books_create">إنشاء دفتر عناوين</string>
     <string name="people_books_delete">حذف دفتر العناوين</string>
     <plurals name="people_books_delete_confirm">

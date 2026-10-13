@@ -50,7 +50,6 @@
     <string name="go_resign_title">A yi murabus daga wasa?</string>
     <string name="go_sidebar_completed">An kammala</string>
     <string name="go_sidebar_new_game">Sabon wasa</string>
-    <string name="go_status_draw">Canjaras</string>
     <string name="go_status_draw_text">Canjaras</string>
     <string name="go_status_game_over">Wasan ya ƙare</string>
     <string name="go_status_opponent_move">Motsin %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Bude gefe</string>
     <string name="go_sidebar_active">Wasannin da ke kan ci gaba</string>
     <string name="go_empty_active">Babu wasanni masu aiki tukuna.</string>
-    <string name="go_status_resigned">An yi murabus</string>
     <string name="go_new_game_title">Sabon wasan Go</string>
     <string name="go_new_game_no_friends">Kana buƙatar ƙara aboki kafin ka fara wasa.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

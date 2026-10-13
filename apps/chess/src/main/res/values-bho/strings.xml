@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">शतरंज</string>
-    <string name="chess_sidebar_header">शतरंज</string>
     <string name="chess_sidebar_active">सक्रिय खेल</string>
     <string name="chess_sidebar_completed">पूरा कइल गइल</string>
     <string name="chess_sidebar_new_game">नया खेल</string>
-    <string name="chess_section_active">सक्रिय खेल</string>
-    <string name="chess_section_completed">पूरा कइल गइल</string>
-    <string name="chess_new_game">नया खेल</string>
     <string name="chess_empty_title">अबहीं तक कौनो खेल नइखे</string>
     <string name="chess_new_title">नया खेल</string>
     <string name="chess_new_pick_opponent">विरोधी चुनीं</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">शतरंज के चाल, ड्रॉ के प्रस्ताव आउर खेल के नतीजा के बारे में सूचना।</string>
     <string name="chess_open_sidebar">साइडबार खोलीं</string>
-    <string name="chess_empty_subtitle">दोस्त के साथे शतरंज खेले खातिर आपन पहिला खेल शुरू करीं।</string>
-    <string name="chess_empty_start_button">आपन पहिला खेल शुरू करीं</string>
     <string name="chess_detail_unavailable">खेल उपलब्ध नइखे</string>
     <string name="chess_delete_title">खेल मेटाईं?</string>
     <string name="chess_delete_message">ई खेल के रउआ सूची से हटा देला।</string>

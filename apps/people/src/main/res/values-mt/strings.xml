@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Ibgħat messaġġ</string>
     <string name="people_contacts_no_people_found">Ma nstabu l-ebda nies</string>
     <string name="people_contacts_try_adjusting">Ipprova taġġusta t-tfittxija tiegħek</string>
-    <string name="people_contact_section_address">Indirizz</string>
     <string name="people_contact_section_detail">Dettalji</string>
     <string name="people_contact_name">Isem</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Irrinomina</string>
     <string name="people_contacts_sort_name">Isem</string>
     <string name="people_contacts_sort_recent">Miżjud reċentement</string>
-    <string name="people_contacts_thats_you">Dak int</string>
     <string name="people_contacts_try_different_search">Ipprova terminu ta\' tfittxija differenti</string>
     <string name="people_contacts_unfriend">Neħħi ħabib</string>
     <string name="people_add_contact_search_placeholder">Ittajpja biex tfittex…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Ma nstab l-ebda kuntatt</string>
     <string name="people_contacts_add_to_start">Żid kuntatti biex tibda tikkomunika</string>
     <string name="people_contacts_actions">Azzjonijiet tal-kuntatt</string>
-    <string name="people_contacts_friend">Ħabib</string>
     <string name="people_contacts_invite">Stieden</string>
     <string name="people_contacts_unfriend_confirm">%1$s mhux se jibqa\' ħabib tiegħek. Il-kuntatt jibqa\' fil-ktieb tal-indirizzi tiegħek.</string>
     <string name="people_contacts_delete">Ħassar il-kuntatt</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Il-kuntatt inbidel</string>
     <string name="people_add_contact_title">Żid kuntatt</string>
     <string name="people_add_contact_add">Żid mal-kuntatti</string>
-    <string name="people_add_contact_in_contacts">Fil-kuntatti</string>
     <string name="people_books_create">Oħloq ktieb tal-indirizzi</string>
     <string name="people_books_delete">Ħassar il-ktieb tal-indirizzi</string>
     <plurals name="people_books_delete_confirm">

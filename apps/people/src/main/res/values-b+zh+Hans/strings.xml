@@ -121,7 +121,6 @@
     <string name="people_contacts_message">发消息</string>
     <string name="people_contacts_no_people_found">未找到任何人</string>
     <string name="people_contacts_try_adjusting">尝试调整您的搜索</string>
-    <string name="people_contact_section_address">地址</string>
     <string name="people_contact_section_detail">详情</string>
     <string name="people_contact_name">姓名</string>
     <string name="people_contact_email">邮箱</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">重命名</string>
     <string name="people_contacts_sort_name">姓名</string>
     <string name="people_contacts_sort_recent">最近添加</string>
-    <string name="people_contacts_thats_you">那是您</string>
     <string name="people_contacts_try_different_search">尝试其他搜索词</string>
     <string name="people_contacts_unfriend">移除好友</string>
     <string name="people_add_contact_search_placeholder">输入以搜索…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">未找到联系人</string>
     <string name="people_contacts_add_to_start">添加联系人以开始联络</string>
     <string name="people_contacts_actions">联系人操作</string>
-    <string name="people_contacts_friend">好友</string>
     <string name="people_contacts_invite">邀请</string>
     <string name="people_contacts_unfriend_confirm">%1$s 将不再是你的好友。该联系人仍保留在你的通讯录中。</string>
     <string name="people_contacts_delete">删除联系人</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">联系人已更改</string>
     <string name="people_add_contact_title">添加联系人</string>
     <string name="people_add_contact_add">添加到联系人</string>
-    <string name="people_add_contact_in_contacts">已在联系人中</string>
     <string name="people_books_create">创建通讯录</string>
     <string name="people_books_delete">删除通讯录</string>
     <plurals name="people_books_delete_confirm">

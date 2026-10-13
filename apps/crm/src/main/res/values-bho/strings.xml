@@ -19,7 +19,6 @@
     <string name="crm_link">लिंक</string>
     <string name="crm_design">डिज़ाइन</string>
     <string name="crm_export_failed">एक्सपोर्ट सेव ना हो सकल</string>
-    <string name="crm_sort_direction">दिशा</string>
     <string name="crm_sort_rank">मैनुअल</string>
     <string name="crm_sort_created">बनावल गइल</string>
     <string name="crm_sort_updated">अपडेट भइल</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">वर्ग जोड़ीं</string>
     <string name="crm_classes_create">बनाईं</string>
     <string name="crm_class_name">नाम</string>
-    <string name="crm_class_save_name">नाम सहेजीं</string>
     <string name="crm_class_title_field">शीर्षक फ़ील्ड</string>
     <string name="crm_class_fields">फील्ड</string>
     <string name="crm_class_add_field">फील्ड जोड़ीं</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">जरूरी</string>
     <string name="crm_field_position_default">डिफ़ॉल्ट</string>
     <string name="crm_field_position_sidebar">साइडबार</string>
-    <string name="crm_field_save">बदलाव सहेजीं</string>
     <string name="crm_field_options">विकल्प</string>
     <string name="crm_field_add_option">विकल्प जोड़ीं</string>
     <string name="crm_field_delete">फील्ड मेटाईं</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">CRM खोजीं</string>
     <string name="crm_list_no_matching">कवनो मिलत CRM नइखे</string>
     <string name="crm_list_empty">अबहीं ले कवनो CRM नइखे</string>
-    <string name="crm_create_template">टेम्पलेट</string>
     <string name="crm_find_search_placeholder">CRM खोजीं भा URL पेस्ट करीं</string>
     <string name="crm_find_search_hint">सदस्यता लेबे खातिर CRM खोजीं</string>
     <string name="crm_search_objects_placeholder">वस्तु खोजीं</string>

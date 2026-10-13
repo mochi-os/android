@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Isem li jidher</string>
-    <string name="forums_auth_verification_failed">Verifika falliet</string>
     <string name="forums_list_title">Fora</string>
     <string name="forums_list_find">Sib forums</string>
     <string name="forums_list_unsubscribe">Iddiżabbona</string>
     <string name="forums_list_unsubscribe_title">Iddiżabbona</string>
     <string name="forums_create_title">Oħloq forum</string>
     <string name="forums_create_name">Isem tal-forum</string>
-    <string name="forums_create_privacy">Privatezza</string>
-    <string name="forums_create_private">Privat</string>
-    <string name="forums_create_public">Pubbliku</string>
     <string name="forums_create_action">Oħloq forum</string>
     <string name="forums_find_title">Sib forums</string>
     <string name="forums_find_recommended">Rakkomandat</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Ippubblika</string>
     <string name="forums_post_edit">Editja l-post</string>
     <string name="forums_post_edit_title">Editja l-post</string>
-    <string name="forums_post_edit_title_field">Titlu</string>
-    <string name="forums_post_save">Issejvja</string>
     <string name="forums_post_delete">Ħassar post</string>
     <string name="forums_post_delete_title">Ħassar post</string>
     <string name="forums_post_locked">Maqful</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Membri</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Suġġett</string>
-    <string name="forums_access_level_view">Ara</string>
-    <string name="forums_access_level_vote">Ivvota</string>
-    <string name="forums_access_level_comment">Ikkummenta</string>
-    <string name="forums_access_level_post">Ippubblika</string>
-    <string name="forums_access_level_none">Xejn</string>
     <string name="forums_members_empty">L-ebda membri</string>
     <string name="forums_banner_dismiss">Warrab il-banner</string>
     <string name="forums_ai_mode_tag">Ittikkettja</string>
     <string name="forums_ai_account_default">Kont default</string>
-    <string name="forums_ai_prompt_reset">Irriżetta għal default</string>
     <string name="forums_settings_unsubscribe">Iddiżabbona</string>
     <string name="forums_moderation_title">Moderazzjoni</string>
     <string name="forums_moderation_tab_queue">Kju</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Barra mit-tema</string>
     <string name="forums_report_reason_other">Oħra</string>
     <string name="forums_post_default_author">Utent</string>
-    <string name="forums_comments">Kummenti</string>
     <string name="forums_no_comments">L-ebda kummenti s\'issa</string>
-    <string name="forums_comment_save">Issejvja</string>
     <string name="forums_comment_edit">Editja l-kumment</string>
     <string name="forums_comment_edit_title">Editja l-kumment</string>
-    <string name="forums_comment_edit_attach">Ehmeż files</string>
     <string name="forums_comment_delete">Ħassar kumment</string>
     <string name="forums_comment_delete_title">Ħassar kumment</string>
     <string name="forums_comment_reply">Wieġeb</string>
-    <string name="forums_settings_rename">Irrinomina</string>
-    <string name="forums_settings_save">Issejvja</string>
     <string name="forums_settings_delete">Ħassar forum</string>
     <string name="forums_settings_delete_title">Ħassar forum</string>
     <string name="forums_forum_not_found">Il-forum ma nstabx</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Ibgħat</string>
     <string name="forums_post_body_field">Kontenut</string>
-    <string name="forums_post_edit_body_field">Kontenut</string>
     <string name="forums_comment_edit_body_field">Kontenut</string>
-    <string name="forums_tag_clear">Naddaf il-filtru</string>
-    <string name="forums_post_tag_add">Żid tikketta</string>
     <string name="forums_write_comment">Ikteb kumment…</string>
-    <string name="forums_auth_login_failed">Il-login falla</string>
 
     <string name="notification_channel_forums">Notifiki tal-forums</string>
-    <string name="forums_auth_brand">Mochi Fora</string>
-    <string name="forums_auth_create_identity_failed">Falla l-ħolqien tal-identità</string>
-    <string name="forums_auth_mfa_unsupported">L-MFA għadu mhux appoġġjat fl-app mobbli</string>
-    <string name="forums_auth_enter_code_sent">Daħħal il-kodiċi mibgħut lil %1$s</string>
-    <string name="forums_auth_create_identity">Oħloq l-identità tiegħek</string>
     <string name="forums_list_empty">L-ebda forum s\'issa</string>
     <string name="forums_list_unsubscribe_message">Żgur li trid tneħħi l-abbonament minn dan il-forum?</string>
     <string name="forums_find_search_placeholder">Fittex il-forums jew waħħal URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Vot kontra</string>
     <string name="forums_post_quote">Ikkwota fit-tweġiba</string>
     <string name="forums_comment_quote">Ikkwota fit-tweġiba</string>
-    <string name="forums_post_tag_remove">Neħħi t-tikketta</string>
     <string name="forums_access_add">Żid regola tal-aċċess</string>
     <string name="forums_access_empty">L-ebda regola s\'issa — japplikaw id-default</string>
-    <string name="forums_access_target_hint">ID tal-entità, @grupp, * (kulħadd), jew + (membri)</string>
-    <string name="forums_access_level">Livell</string>
-    <string name="forums_access_level_moderate">Moderazzjoni</string>
     <string name="forums_members_search">Iffiltra l-membri</string>
     <string name="forums_banner_description">Markdown muri fuq nett tal-forum.</string>
     <string name="forums_banner_placeholder">Daħħal it-test tal-banner (markdown huwa appoġġjat)…</string>
-    <string name="forums_ai_mode_label">Modalità: %1$s</string>
-    <string name="forums_ai_mode_heading">Modalità tal-AI</string>
     <string name="forums_ai_mode_off">Diżabbiltat</string>
-    <string name="forums_ai_account">Kont tal-AI</string>
-    <string name="forums_ai_prompt_tag">Prompt għat-tikkettar</string>
-    <string name="forums_ai_prompt_score">Prompt għall-iskorjar</string>
-    <string name="forums_ai_post_prompt_label">Prompt għat-tikketti tal-posts</string>
-    <string name="forums_ai_comment_prompt_label">Prompt għat-tikketti tal-kummenti</string>
-    <string name="forums_settings_fingerprint">Marka tas-swaba\': %1$s</string>
-    <string name="forums_settings_clear_notifications">Neħħi n-notifiki</string>
     <string name="forums_moderation_queue_empty">Xejn pendenti</string>
     <string name="forums_moderation_report_details">Dettalji: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Solvut minn %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Twieġeb lil %1$s</string>
     <string name="forums_comment_clear_reply">Neħħi t-tweġiba</string>
     <string name="forums_settings_title">Issettjar ta\' %1$s</string>
-    <string name="forums_settings_rename_label">Isem tal-forum</string>
-    <string name="forums_settings_danger_zone">Żona ta\' periklu</string>
     <string name="forums_settings_delete_message">Dan se jħassar il-forum u l-posts kollha tiegħu b\'mod permanenti. Dan ma jistax jitreġġa\' lura.</string>
 
-    <string name="forums_tag_interest_up">Saħħaħ l-interess</string>
-    <string name="forums_tag_interest_down">Naqqas l-interess</string>
-    <string name="forums_tag_interest_remove">Neħħi interess</string>
     <string name="forums_access_tab_users">Utenti</string>
     <string name="forums_access_tab_groups">Gruppi</string>
-    <string name="forums_access_tab_manual">Manwali</string>
     <string name="forums_access_search_users">Fittex utenti</string>
     <string name="forums_access_no_groups">L-ebda gruppi disponibbli</string>
     <string name="forums_saved_title">Issejvjati</string>

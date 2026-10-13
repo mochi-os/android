@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Schaken</string>
-    <string name="chess_sidebar_header">Schaken</string>
     <string name="chess_sidebar_active">Actieve partijen</string>
     <string name="chess_sidebar_completed">Voltooid</string>
     <string name="chess_sidebar_new_game">Nieuw spel</string>
-    <string name="chess_section_active">Actieve partijen</string>
-    <string name="chess_section_completed">Voltooid</string>
-    <string name="chess_new_game">Nieuw spel</string>
     <string name="chess_empty_title">Nog geen spellen</string>
     <string name="chess_new_title">Nieuw spel</string>
     <string name="chess_new_pick_opponent">Kies tegenstander</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">Verwijdert de partij uit je lijst.</string>
     <string name="chess_delete_title">Spel verwijderen?</string>
     <string name="chess_detail_unavailable">Partij niet beschikbaar</string>
-    <string name="chess_empty_start_button">Begin je eerste partij</string>
-    <string name="chess_empty_subtitle">Begin je eerste partij om met een vriend te schaken.</string>
     <string name="chess_move_capture">%1$s sloeg %2$s</string>
     <string name="chess_open_sidebar">Zijbalk openen</string>
     <string name="chess_ws_connecting">Verbinden…</string>

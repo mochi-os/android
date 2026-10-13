@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chess_app_title">Shah</string>
-    <string name="chess_sidebar_header">Shah</string>
     <string name="chess_sidebar_active">Lojëra aktive</string>
     <string name="chess_sidebar_completed">I përfunduar</string>
     <string name="chess_sidebar_new_game">Lojë e re</string>
-    <string name="chess_section_active">Lojëra aktive</string>
-    <string name="chess_section_completed">I përfunduar</string>
-    <string name="chess_new_game">Lojë e re</string>
     <string name="chess_empty_title">Ende pa lojëra</string>
     <string name="chess_new_title">Lojë e re</string>
     <string name="chess_new_pick_opponent">Zgjidh kundërshtarin</string>
@@ -55,8 +51,6 @@
     <string name="chess_channel_name">Njoftime Shahu</string>
     <string name="chess_channel_description">Njoftime për lëvizjet, ofertat e barazimit dhe rezultatet e ndeshjeve.</string>
     <string name="chess_open_sidebar">Hap shiritin anësor</string>
-    <string name="chess_empty_subtitle">Fillo ndeshjen e parë për të luajtur shah me një mik.</string>
-    <string name="chess_empty_start_button">Fillo ndeshjen e parë</string>
     <string name="chess_detail_unavailable">Ndeshja nuk është e disponueshme</string>
     <string name="chess_delete_title">Të fshihet loja?</string>
     <string name="chess_delete_message">Kjo heq ndeshjen nga lista jote.</string>

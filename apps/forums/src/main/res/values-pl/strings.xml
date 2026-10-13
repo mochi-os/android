@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Nazwa wyświetlana</string>
-    <string name="forums_auth_verification_failed">Weryfikacja nie powiodła się</string>
     <string name="forums_list_title">Fora</string>
     <string name="forums_list_find">Znajdź fora</string>
     <string name="forums_list_unsubscribe">Zrezygnuj z subskrypcji</string>
     <string name="forums_list_unsubscribe_title">Zrezygnuj z subskrypcji</string>
     <string name="forums_create_title">Utwórz forum</string>
     <string name="forums_create_name">Nazwa forum</string>
-    <string name="forums_create_privacy">Prywatność</string>
-    <string name="forums_create_private">Prywatny</string>
-    <string name="forums_create_public">Publiczny</string>
     <string name="forums_create_action">Utwórz forum</string>
     <string name="forums_find_title">Znajdź fora</string>
     <string name="forums_find_recommended">Polecane</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Opublikuj</string>
     <string name="forums_post_edit">Edytuj wpis</string>
     <string name="forums_post_edit_title">Edytuj wpis</string>
-    <string name="forums_post_edit_title_field">Tytuł</string>
-    <string name="forums_post_save">Zapisz</string>
     <string name="forums_post_delete">Usuń post</string>
     <string name="forums_post_delete_title">Usuń post</string>
     <string name="forums_post_locked">Zablokowane</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Członkowie</string>
     <string name="forums_tab_banner">Baner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Użytkownik lub grupa</string>
-    <string name="forums_access_level_view">Zobacz</string>
-    <string name="forums_access_level_vote">Głosuj</string>
-    <string name="forums_access_level_comment">Skomentuj</string>
-    <string name="forums_access_level_post">Opublikuj</string>
-    <string name="forums_access_level_none">Brak</string>
     <string name="forums_members_empty">Brak członków</string>
     <string name="forums_banner_dismiss">Odrzuć baner</string>
     <string name="forums_ai_mode_tag">Taguj</string>
     <string name="forums_ai_account_default">Domyślne konto</string>
-    <string name="forums_ai_prompt_reset">Zresetuj do domyślnych</string>
     <string name="forums_settings_unsubscribe">Zrezygnuj z subskrypcji</string>
     <string name="forums_moderation_title">Moderacja</string>
     <string name="forums_moderation_tab_queue">Kolejka</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Nie na temat</string>
     <string name="forums_report_reason_other">Inne</string>
     <string name="forums_post_default_author">Użytkownik</string>
-    <string name="forums_comments">Komentarze</string>
     <string name="forums_no_comments">Brak komentarzy</string>
-    <string name="forums_comment_save">Zapisz</string>
     <string name="forums_comment_edit">Edytuj komentarz</string>
     <string name="forums_comment_edit_title">Edytuj komentarz</string>
-    <string name="forums_comment_edit_attach">Dołącz pliki</string>
     <string name="forums_comment_delete">Usuń komentarz</string>
     <string name="forums_comment_delete_title">Usuń komentarz</string>
     <string name="forums_comment_reply">Odpowiedz</string>
-    <string name="forums_settings_rename">Zmień nazwę</string>
-    <string name="forums_settings_save">Zapisz</string>
     <string name="forums_settings_delete">Usuń forum</string>
     <string name="forums_settings_delete_title">Usuń forum</string>
     <string name="forums_forum_not_found">Nie znaleziono forum</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Wyślij</string>
     <string name="forums_post_body_field">Treść</string>
-    <string name="forums_post_edit_body_field">Treść</string>
     <string name="forums_comment_edit_body_field">Treść</string>
-    <string name="forums_tag_clear">Wyczyść filtr</string>
-    <string name="forums_post_tag_add">Dodaj tag</string>
     <string name="forums_write_comment">Napisz komentarz…</string>
-    <string name="forums_auth_login_failed">Logowanie nieudane</string>
 
     <string name="notification_channel_forums">Powiadomienia forów</string>
-    <string name="forums_auth_brand">Mochi Fora</string>
-    <string name="forums_auth_create_identity_failed">Nie udało się utworzyć tożsamości</string>
-    <string name="forums_auth_mfa_unsupported">MFA nie jest jeszcze obsługiwane w aplikacji mobilnej</string>
-    <string name="forums_auth_enter_code_sent">Wprowadź kod wysłany na %1$s</string>
-    <string name="forums_auth_create_identity">Utwórz swoją tożsamość</string>
     <string name="forums_list_empty">Brak forów</string>
     <string name="forums_list_unsubscribe_message">Czy na pewno chcesz zrezygnować z subskrypcji tego forum?</string>
     <string name="forums_find_search_placeholder">Szukaj forów lub wklej adres URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Głos w dół</string>
     <string name="forums_post_quote">Cytuj w odpowiedzi</string>
     <string name="forums_comment_quote">Cytuj w odpowiedzi</string>
-    <string name="forums_post_tag_remove">Usuń tag</string>
     <string name="forums_access_add">Dodaj regułę dostępu</string>
     <string name="forums_access_empty">Brak reguł — obowiązują ustawienia domyślne</string>
-    <string name="forums_access_target_hint">Identyfikator encji, @grupa, * (wszyscy) lub + (członkowie)</string>
-    <string name="forums_access_level">Poziom</string>
-    <string name="forums_access_level_moderate">Moderowanie</string>
     <string name="forums_members_search">Filtruj członków</string>
     <string name="forums_banner_description">Markdown wyświetlany na górze forum.</string>
     <string name="forums_banner_placeholder">Wpisz tekst banera (obsługiwany jest Markdown)…</string>
-    <string name="forums_ai_mode_label">Tryb: %1$s</string>
-    <string name="forums_ai_mode_heading">Tryb AI</string>
     <string name="forums_ai_mode_off">Wyłączony</string>
-    <string name="forums_ai_account">Konto AI</string>
-    <string name="forums_ai_prompt_tag">Prompt do tagowania</string>
-    <string name="forums_ai_prompt_score">Prompt do oceniania</string>
-    <string name="forums_ai_post_prompt_label">Prompt dla tagów postów</string>
-    <string name="forums_ai_comment_prompt_label">Prompt dla tagów komentarzy</string>
-    <string name="forums_settings_fingerprint">Odcisk palca: %1$s</string>
-    <string name="forums_settings_clear_notifications">Wyczyść powiadomienia</string>
     <string name="forums_moderation_queue_empty">Brak oczekujących</string>
     <string name="forums_moderation_report_details">Szczegóły: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Rozwiązane przez %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Odpowiadasz na %1$s</string>
     <string name="forums_comment_clear_reply">Wyczyść odpowiedź</string>
     <string name="forums_settings_title">Ustawienia %1$s</string>
-    <string name="forums_settings_rename_label">Nazwa forum</string>
-    <string name="forums_settings_danger_zone">Strefa niebezpieczna</string>
     <string name="forums_settings_delete_message">Spowoduje to trwałe usunięcie forum i wszystkich jego postów. Tej operacji nie można cofnąć.</string>
 
-    <string name="forums_tag_interest_up">Zwiększ zainteresowanie</string>
-    <string name="forums_tag_interest_down">Zmniejsz zainteresowanie</string>
-    <string name="forums_tag_interest_remove">Usuń zainteresowanie</string>
     <string name="forums_access_tab_users">Użytkownicy</string>
     <string name="forums_access_tab_groups">Grupy</string>
-    <string name="forums_access_tab_manual">Ręczny</string>
     <string name="forums_access_search_users">Szukaj użytkowników</string>
     <string name="forums_access_no_groups">Brak dostępnych grup</string>
     <string name="forums_saved_title">Zapisane</string>

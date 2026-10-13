@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">Kas võtta RSS-i juurdepääs ära?</string>
     <string name="rss_revoke_message">Kõik, mis on selle voo tellinud, lakkab seda saamast. Pärast saad kopeerida uue URL-i.</string>
     <string name="rss_revoked">RSS-i juurdepääs võeti ära</string>
-    <string name="rss_revoke_failed">RSS-i juurdepääsu äravõtmine ebaõnnestus</string>
     <string name="game_empty_title">Mänge veel pole</string>
     <string name="game_select_title">Vali mäng</string>
     <string name="game_select_subtitle">Vali külgribalt mäng või alusta uut.</string>

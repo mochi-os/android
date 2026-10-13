@@ -49,7 +49,6 @@
     <string name="go_resign_title">گیم میں ہار مانیں؟</string>
     <string name="go_sidebar_completed">مکمل</string>
     <string name="go_sidebar_new_game">نیا گیم</string>
-    <string name="go_status_draw">برابر</string>
     <string name="go_status_draw_text">برابر</string>
     <string name="go_status_game_over">گیم ختم</string>
     <string name="go_status_opponent_move">%1$s کی چال</string>
@@ -64,7 +63,6 @@
     <string name="go_open_sidebar">سائیڈبار کھولیں</string>
     <string name="go_sidebar_active">فعال گیمز</string>
     <string name="go_empty_active">ابھی کوئی فعال کھیل نہیں۔</string>
-    <string name="go_status_resigned">ہار مان لی</string>
     <string name="go_new_game_title">نیا Go کھیل</string>
     <string name="go_new_game_no_friends">کھیل شروع کرنے سے پہلے آپ کو دوست شامل کرنا ہوگا۔</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

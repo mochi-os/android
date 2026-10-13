@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">שחמט</string>
-    <string name="chess_sidebar_header">שחמט</string>
     <string name="chess_sidebar_active">משחקים פעילים</string>
     <string name="chess_sidebar_completed">הושלם</string>
     <string name="chess_sidebar_new_game">משחק חדש</string>
-    <string name="chess_section_active">משחקים פעילים</string>
-    <string name="chess_section_completed">הושלם</string>
-    <string name="chess_new_game">משחק חדש</string>
     <string name="chess_empty_title">עדיין אין משחקים</string>
     <string name="chess_new_title">משחק חדש</string>
     <string name="chess_new_pick_opponent">בחר יריב</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">התראות שחמט</string>
     <string name="chess_channel_description">התראות על מהלכים, הצעות תיקו ותוצאות משחקים.</string>
     <string name="chess_open_sidebar">פתח סרגל צד</string>
-    <string name="chess_empty_subtitle">התחל את המשחק הראשון שלך כדי לשחק שחמט עם חבר.</string>
-    <string name="chess_empty_start_button">התחל את המשחק הראשון שלך</string>
     <string name="chess_detail_unavailable">המשחק לא זמין</string>
     <string name="chess_delete_title">למחוק את המשחק?</string>
     <string name="chess_delete_message">פעולה זו מסירה את המשחק מהרשימה שלך.</string>

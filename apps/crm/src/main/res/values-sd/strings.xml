@@ -19,7 +19,6 @@
     <string name="crm_link">لنڪ</string>
     <string name="crm_design">ڊزائن</string>
     <string name="crm_export_failed">ايڪسپورٽ محفوظ نه ٿي سگهيو</string>
-    <string name="crm_sort_direction">هدايت</string>
     <string name="crm_sort_rank">دستي</string>
     <string name="crm_sort_created">ٺاهيو ويو</string>
     <string name="crm_sort_updated">اپڊيٽ ٿيو</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">ڪلاس شامل ڪريو</string>
     <string name="crm_classes_create">ٺاهيو</string>
     <string name="crm_class_name">نالو</string>
-    <string name="crm_class_save_name">نالو محفوظ ڪريو</string>
     <string name="crm_class_title_field">عنوان فيلڊ</string>
     <string name="crm_class_fields">فيلڊز</string>
     <string name="crm_class_add_field">فيلڊ شامل ڪريو</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">گهربل</string>
     <string name="crm_field_position_default">ڊفالٽ</string>
     <string name="crm_field_position_sidebar">سائيڊبار</string>
-    <string name="crm_field_save">تبديليون محفوظ ڪريو</string>
     <string name="crm_field_options">اختيار</string>
     <string name="crm_field_add_option">اختيار شامل ڪريو</string>
     <string name="crm_field_delete">فيلڊ ختم ڪريو</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM ڳوليو</string>
     <string name="crm_list_no_matching">ڪوبه ملندڙ CRM ناهي</string>
     <string name="crm_list_empty">اڃا تائين ڪوبه CRM ناهي</string>
-    <string name="crm_create_template">ٽيمپليٽ</string>
     <string name="crm_find_search_placeholder">CRM ڳوليو يا URL پيسٽ ڪريو</string>
     <string name="crm_find_search_hint">سبسڪرائب ڪرڻ لاءِ CRM ڳوليو</string>
     <string name="crm_create_object_parent_none">(ڪوبه نه)</string>

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Koʻrsatish nomi</string>
-    <string name="forums_auth_verification_failed">Tasdiqlash muvaffaqiyatsiz</string>
     <string name="forums_list_title">Forumlar</string>
     <string name="forums_list_find">Forumlarni topish</string>
     <string name="forums_list_unsubscribe">Obunadan chiqish</string>
     <string name="forums_list_unsubscribe_title">Obunadan chiqish</string>
     <string name="forums_create_title">Forum yaratish</string>
     <string name="forums_create_name">Forum nomi</string>
-    <string name="forums_create_privacy">Maxfiylik</string>
-    <string name="forums_create_private">Shaxsiy</string>
-    <string name="forums_create_public">Ommaviy</string>
     <string name="forums_create_action">Forum yaratish</string>
     <string name="forums_find_title">Forumlarni topish</string>
     <string name="forums_find_recommended">Tavsiya etiladi</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Joylash</string>
     <string name="forums_post_edit">Postni tahrirlash</string>
     <string name="forums_post_edit_title">Postni tahrirlash</string>
-    <string name="forums_post_edit_title_field">Sarlavha</string>
-    <string name="forums_post_save">Saqlash</string>
     <string name="forums_post_delete">Postni oʻchirish</string>
     <string name="forums_post_delete_title">Postni oʻchirish</string>
     <string name="forums_post_locked">Qulflangan</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Aʼzolar</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Foydalanuvchi yoki guruh</string>
-    <string name="forums_access_level_view">Koʻrish</string>
-    <string name="forums_access_level_vote">Ovoz berish</string>
-    <string name="forums_access_level_comment">Izoh qoldirish</string>
-    <string name="forums_access_level_post">Joylash</string>
-    <string name="forums_access_level_none">Hech qanday</string>
     <string name="forums_members_empty">Aʼzolar yoʻq</string>
     <string name="forums_banner_dismiss">Bannerni bekor qilish</string>
     <string name="forums_ai_mode_tag">Teglash</string>
     <string name="forums_ai_account_default">Standart hisob</string>
-    <string name="forums_ai_prompt_reset">Standartga qaytarish</string>
     <string name="forums_settings_unsubscribe">Obunadan chiqish</string>
     <string name="forums_moderation_title">Moderatsiya</string>
     <string name="forums_moderation_tab_queue">Navbat</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Mavzudan tashqari</string>
     <string name="forums_report_reason_other">Boshqa</string>
     <string name="forums_post_default_author">Foydalanuvchi</string>
-    <string name="forums_comments">Izohlar</string>
     <string name="forums_no_comments">Hozircha izohlar yoʻq</string>
-    <string name="forums_comment_save">Saqlash</string>
     <string name="forums_comment_edit">Izohni tahrirlash</string>
     <string name="forums_comment_edit_title">Izohni tahrirlash</string>
-    <string name="forums_comment_edit_attach">Fayl biriktirish</string>
     <string name="forums_comment_delete">Izohni oʻchirish</string>
     <string name="forums_comment_delete_title">Izohni oʻchirish</string>
     <string name="forums_comment_reply">Javob</string>
-    <string name="forums_settings_rename">Nomini oʻzgartirish</string>
-    <string name="forums_settings_save">Saqlash</string>
     <string name="forums_settings_delete">Forumni oʻchirish</string>
     <string name="forums_settings_delete_title">Forumni oʻchirish</string>
     <string name="forums_forum_not_found">Forum topilmadi</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Yuborish</string>
     <string name="forums_post_body_field">Matn</string>
-    <string name="forums_post_edit_body_field">Matn</string>
     <string name="forums_comment_edit_body_field">Matn</string>
-    <string name="forums_tag_clear">Filtrni tozalash</string>
-    <string name="forums_post_tag_add">Teg qoʻshish</string>
     <string name="forums_write_comment">Izoh yozing…</string>
-    <string name="forums_auth_login_failed">Kirish bajarilmadi</string>
 
     <string name="notification_channel_forums">Forum bildirishnomalari</string>
-    <string name="forums_auth_brand">Mochi Forumlar</string>
-    <string name="forums_auth_create_identity_failed">Identifikatsiyani yaratib boʻlmadi</string>
-    <string name="forums_auth_mfa_unsupported">MFA mobil ilovada hali qoʻllab-quvvatlanmaydi</string>
-    <string name="forums_auth_enter_code_sent">%1$s ga yuborilgan kodni kiriting</string>
-    <string name="forums_auth_create_identity">Identifikatsiyangizni yarating</string>
     <string name="forums_list_empty">Hali forumlar yoʻq</string>
     <string name="forums_list_unsubscribe_message">Ushbu forumdan obunani bekor qilishni xohlaysizmi?</string>
     <string name="forums_find_search_placeholder">Forumlarni qidiring yoki URL kiriting</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Yoqmadi</string>
     <string name="forums_post_quote">Javobda iqtibos keltirish</string>
     <string name="forums_comment_quote">Javobda iqtibos keltirish</string>
-    <string name="forums_post_tag_remove">Tegni olib tashlash</string>
     <string name="forums_access_add">Ruxsat qoidasi qoʻshish</string>
     <string name="forums_access_empty">Hali qoidalar yoʻq — standart sozlamalar qoʻllaniladi</string>
-    <string name="forums_access_target_hint">Obyekt IDsi, @guruh, * (hamma) yoki + (aʼzolar)</string>
-    <string name="forums_access_level">Daraja</string>
-    <string name="forums_access_level_moderate">Moderatsiya qilish</string>
     <string name="forums_members_search">Aʼzolarni filtrlash</string>
     <string name="forums_banner_description">Forum yuqorisida koʻrsatiladigan Markdown.</string>
     <string name="forums_banner_placeholder">Banner matnini kiriting (Markdown qoʻllab-quvvatlanadi)…</string>
-    <string name="forums_ai_mode_label">Rejim: %1$s</string>
-    <string name="forums_ai_mode_heading">AI rejimi</string>
     <string name="forums_ai_mode_off">Oʻchirilgan</string>
-    <string name="forums_ai_account">AI hisobi</string>
-    <string name="forums_ai_prompt_tag">Teglash uchun soʻrov</string>
-    <string name="forums_ai_prompt_score">Baholash uchun soʻrov</string>
-    <string name="forums_ai_post_prompt_label">Post teglari uchun soʻrov</string>
-    <string name="forums_ai_comment_prompt_label">Izoh teglari uchun soʻrov</string>
-    <string name="forums_settings_fingerprint">Barmoq izi: %1$s</string>
-    <string name="forums_settings_clear_notifications">Bildirishnomalarni tozalash</string>
     <string name="forums_moderation_queue_empty">Kutilayotgan hech narsa yoʻq</string>
     <string name="forums_moderation_report_details">Tafsilotlar: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s tomonidan hal qilindi — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s ga javob bermoqda</string>
     <string name="forums_comment_clear_reply">Javobni tozalash</string>
     <string name="forums_settings_title">%1$s sozlamalari</string>
-    <string name="forums_settings_rename_label">Forum nomi</string>
-    <string name="forums_settings_danger_zone">Xavfli zona</string>
     <string name="forums_settings_delete_message">Bu forumni va uning barcha postlarini butunlay oʻchirib tashlaydi. Bu amalni bekor qilib boʻlmaydi.</string>
 
-    <string name="forums_tag_interest_up">Qiziqishni kuchaytirish</string>
-    <string name="forums_tag_interest_down">Qiziqishni kamaytirish</string>
-    <string name="forums_tag_interest_remove">Qiziqishni olib tashlash</string>
     <string name="forums_access_tab_users">Foydalanuvchilar</string>
     <string name="forums_access_tab_groups">Guruhlar</string>
-    <string name="forums_access_tab_manual">Qoʻlda</string>
     <string name="forums_access_search_users">Foydalanuvchilarni qidirish</string>
     <string name="forums_access_no_groups">Mavjud guruhlar yoʻq</string>
     <string name="forums_saved_title">Saqlanganlar</string>

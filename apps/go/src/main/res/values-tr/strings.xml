@@ -50,7 +50,6 @@
     <string name="go_resign_title">Oyundan çekilsin mi?</string>
     <string name="go_sidebar_completed">Tamamlandı</string>
     <string name="go_sidebar_new_game">Yeni oyun</string>
-    <string name="go_status_draw">Berabere</string>
     <string name="go_status_draw_text">Berabere</string>
     <string name="go_status_game_over">Oyun bitti</string>
     <string name="go_status_opponent_move">%1$s sırası</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Kenar çubuğunu aç</string>
     <string name="go_sidebar_active">Aktif oyunlar</string>
     <string name="go_empty_active">Henüz aktif oyun yok.</string>
-    <string name="go_status_resigned">Çekildi</string>
     <string name="go_new_game_title">Yeni Go oyunu</string>
     <string name="go_new_game_no_friends">Oyuna başlamadan önce bir arkadaş eklemeniz gerekiyor.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

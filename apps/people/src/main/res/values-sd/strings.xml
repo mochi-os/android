@@ -121,7 +121,6 @@
     <string name="people_contacts_message">پيغام موڪليو</string>
     <string name="people_contacts_no_people_found">ڪو ماڻهو نه مليو</string>
     <string name="people_contacts_try_adjusting">پنھنجي ڳولا کي ترتيب ڏيڻ جي ڪوشش ڪريو</string>
-    <string name="people_contact_section_address">پتو</string>
     <string name="people_contact_section_detail">تفصيل</string>
     <string name="people_contact_name">نالو</string>
     <string name="people_contact_email">اي ميل</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">نالو تبديل ڪريو</string>
     <string name="people_contacts_sort_name">نالو</string>
     <string name="people_contacts_sort_recent">تازو شامل ٿيل</string>
-    <string name="people_contacts_thats_you">اھو توھان آھيو</string>
     <string name="people_contacts_try_different_search">ڪا ٻي ڳولا اصطلاح آزمايو</string>
     <string name="people_contacts_unfriend">دوست هٽايو</string>
     <string name="people_add_contact_search_placeholder">ڳولا لاءِ ٽائپ ڪريو…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">ڪوبه رابطو نه مليو</string>
     <string name="people_contacts_add_to_start">ڳنڍجڻ شروع ڪرڻ لاءِ رابطا شامل ڪريو</string>
     <string name="people_contacts_actions">رابطي جا عمل</string>
-    <string name="people_contacts_friend">دوست</string>
     <string name="people_contacts_invite">دعوت ڏيو</string>
     <string name="people_contacts_unfriend_confirm">%1$s هاڻي توهان جو دوست نه رهندو. رابطو توهان جي ائڊريس بڪ ۾ رهندو.</string>
     <string name="people_contacts_delete">رابطو ختم ڪريو</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">رابطو تبديل ٿي ويو</string>
     <string name="people_add_contact_title">رابطو شامل ڪريو</string>
     <string name="people_add_contact_add">رابطن ۾ شامل ڪريو</string>
-    <string name="people_add_contact_in_contacts">رابطن ۾</string>
     <string name="people_books_create">ائڊريس بڪ ٺاهيو</string>
     <string name="people_books_delete">ائڊريس بڪ ڊاهيو</string>
     <plurals name="people_books_delete_confirm">

@@ -49,7 +49,6 @@
     <string name="go_resign_title">Jiuzulu mchezo?</string>
     <string name="go_sidebar_completed">Imekamilika</string>
     <string name="go_sidebar_new_game">Mchezo mpya</string>
-    <string name="go_status_draw">Sare</string>
     <string name="go_status_draw_text">Sare</string>
     <string name="go_status_game_over">Mchezo umeisha</string>
     <string name="go_status_opponent_move">Hamisho la %1$s</string>
@@ -64,7 +63,6 @@
     <string name="go_open_sidebar">Fungua upau wa pembeni</string>
     <string name="go_sidebar_active">Michezo inayoendelea</string>
     <string name="go_empty_active">Bado hakuna michezo inayoendelea.</string>
-    <string name="go_status_resigned">Amejisalimisha</string>
     <string name="go_new_game_title">Mchezo mpya wa Go</string>
     <string name="go_new_game_no_friends">Unahitaji kuongeza rafiki kabla ya kuanza mchezo.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

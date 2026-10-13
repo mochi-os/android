@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">شطرنج</string>
-    <string name="chess_sidebar_header">شطرنج</string>
     <string name="chess_sidebar_active">فعال رانديون</string>
     <string name="chess_sidebar_completed">مڪمل</string>
     <string name="chess_sidebar_new_game">نئين گيم</string>
-    <string name="chess_section_active">فعال رانديون</string>
-    <string name="chess_section_completed">مڪمل</string>
-    <string name="chess_new_game">نئين گيم</string>
     <string name="chess_empty_title">اڃا ڪا گيم نه آهي</string>
     <string name="chess_new_title">نئين گيم</string>
     <string name="chess_new_pick_opponent">مخالف چونڊيو</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">شطرنج جي چالن، برابري جي آڇن ۽ راند جي نتيجن بابت اطلاع.</string>
     <string name="chess_open_sidebar">سائڊبار کوليو</string>
-    <string name="chess_empty_subtitle">دوست سان شطرنج کيڏڻ لاءِ پنهنجي پهرين راند شروع ڪريو.</string>
-    <string name="chess_empty_start_button">پنهنجي پهرين راند شروع ڪريو</string>
     <string name="chess_detail_unavailable">راند موجود ناهي</string>
     <string name="chess_delete_title">گيم ختم ڪجي؟</string>
     <string name="chess_delete_message">هي راند کي توهان جي فهرست مان هٽائي ٿو.</string>

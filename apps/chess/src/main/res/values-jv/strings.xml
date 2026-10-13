@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Catur</string>
-    <string name="chess_sidebar_header">Catur</string>
     <string name="chess_sidebar_active">Game Aktif</string>
     <string name="chess_sidebar_completed">Rampung</string>
     <string name="chess_sidebar_new_game">Game anyar</string>
-    <string name="chess_section_active">Game Aktif</string>
-    <string name="chess_section_completed">Rampung</string>
-    <string name="chess_new_game">Game anyar</string>
     <string name="chess_empty_title">Durung ana game</string>
     <string name="chess_new_title">Game Anyar</string>
     <string name="chess_new_pick_opponent">Pilih lawan</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Kabar babagan langkah bidak, tawaran remis, lan asil dolanan.</string>
     <string name="chess_open_sidebar">Mbukak sidebar</string>
-    <string name="chess_empty_subtitle">Wiwiti dolanan pisanan sampeyan kanggo main bidak karo kanca.</string>
-    <string name="chess_empty_start_button">Wiwiti dolanan pisanan sampeyan</string>
     <string name="chess_detail_unavailable">Dolanan ora kasedhiya</string>
     <string name="chess_delete_title">Busak game?</string>
     <string name="chess_delete_message">Iki mbusak dolanan saka dhaptar sampeyan.</string>

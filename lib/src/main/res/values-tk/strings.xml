@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">RSS elýeterliligi yzyna alynsynmy?</string>
     <string name="rss_revoke_message">Bu akyma ýazylan ähli zat ony almagy bes eder. Soňra täze URL göçürip bilersiňiz.</string>
     <string name="rss_revoked">RSS elýeterliligi yzyna alyndy</string>
-    <string name="rss_revoke_failed">RSS elýeterliligini yzyna almak başartmady</string>
     <string name="game_empty_title">Heniz oýunlar ýok</string>
     <string name="game_select_title">Oýun saýlaň</string>
     <string name="game_select_subtitle">Gapdal panelden oýun saýlaň ýa-da täze oýun başlaň.</string>

@@ -19,7 +19,6 @@
     <string name="crm_link">Пайванд</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Содиротро нигоҳ доштан нашуд</string>
-    <string name="crm_sort_direction">Самт</string>
     <string name="crm_sort_rank">Дастӣ</string>
     <string name="crm_sort_created">Эҷодшуда</string>
     <string name="crm_sort_updated">Навсозӣ шуд</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Иловаи синф</string>
     <string name="crm_classes_create">Эҷод кардан</string>
     <string name="crm_class_name">Ном</string>
-    <string name="crm_class_save_name">Номро нигоҳ доштан</string>
     <string name="crm_class_title_field">Майдони сарлавҳа</string>
     <string name="crm_class_fields">Майдонҳо</string>
     <string name="crm_class_add_field">Иловаи майдон</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Талаб карда мешавад</string>
     <string name="crm_field_position_default">Пешфарз</string>
     <string name="crm_field_position_sidebar">Панели паҳлӯ</string>
-    <string name="crm_field_save">Захираи тағйиротҳо</string>
     <string name="crm_field_options">Вариантҳо</string>
     <string name="crm_field_add_option">Иловаи имкон</string>
     <string name="crm_field_delete">Нест кардани майдон</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Ҷустуҷӯи CRM</string>
     <string name="crm_list_no_matching">Ягон CRM-и мувофиқ нест</string>
     <string name="crm_list_empty">Ҳанӯз ягон CRM нест</string>
-    <string name="crm_create_template">Қолаб</string>
     <string name="crm_find_search_placeholder">CRM-ро ҷустуҷӯ кунед ё URL-ро гузоред</string>
     <string name="crm_find_search_hint">CRM-ро барои обуна шудан ҷустуҷӯ кунед</string>
     <string name="crm_create_object_parent_none">(нест)</string>

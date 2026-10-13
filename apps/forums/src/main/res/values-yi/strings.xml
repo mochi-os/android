@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">ווײַז נאָמען</string>
-    <string name="forums_auth_verification_failed">פֿאַריפֿיקאַציע דורכגעפֿאַלן</string>
     <string name="forums_list_title">פֿאָרומס</string>
     <string name="forums_list_find">געפֿינען פֿאָרומס</string>
     <string name="forums_list_unsubscribe">אַבאַבאָנירן</string>
     <string name="forums_list_unsubscribe_title">אַבאַבאָנירן</string>
     <string name="forums_create_title">באַשאַפֿן פֿאָרום</string>
     <string name="forums_create_name">פֿאָרום־נאָמען</string>
-    <string name="forums_create_privacy">פּריוואַטקײַט</string>
-    <string name="forums_create_private">פּריוואַט</string>
-    <string name="forums_create_public">עפֿנטלעך</string>
     <string name="forums_create_action">באַשאַפֿן פֿאָרום</string>
     <string name="forums_find_title">געפֿינען פֿאָרומס</string>
     <string name="forums_find_recommended">רעקאָמענדירט</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">פֿאַרעפֿנטלעך</string>
     <string name="forums_post_edit">רעדאַקטירן בײַטראָג</string>
     <string name="forums_post_edit_title">רעדאַקטירן בײַטראָג</string>
-    <string name="forums_post_edit_title_field">קעפּל</string>
-    <string name="forums_post_save">היט אויף</string>
     <string name="forums_post_delete">אויסמעקן פּאָסט</string>
     <string name="forums_post_delete_title">אויסמעקן פּאָסט</string>
     <string name="forums_post_locked">פֿאַרשלאָסן</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">מיטגלידער</string>
     <string name="forums_tab_banner">באַנער</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">באַניצער אָדער גרופּע</string>
-    <string name="forums_access_level_view">באַקוקן</string>
-    <string name="forums_access_level_vote">שטים</string>
-    <string name="forums_access_level_comment">קאָמענטיר</string>
-    <string name="forums_access_level_post">פֿאַרעפֿנטלעך</string>
-    <string name="forums_access_level_none">קיינס</string>
     <string name="forums_members_empty">קיין מיטגלידער</string>
     <string name="forums_banner_dismiss">אַראָפּזאָגן באַנער</string>
     <string name="forums_ai_mode_tag">טאַגירן</string>
     <string name="forums_ai_account_default">סטאַנדאַרד קאָנטע</string>
-    <string name="forums_ai_prompt_reset">צוריקזעצן צו פֿאַרשטעלונג</string>
     <string name="forums_settings_unsubscribe">אַבאַבאָנירן</string>
     <string name="forums_moderation_title">מאָדעראַציע</string>
     <string name="forums_moderation_tab_queue">ריי</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">ניט-טעמע</string>
     <string name="forums_report_reason_other">אַנדער</string>
     <string name="forums_post_default_author">באַניצער</string>
-    <string name="forums_comments">קאָמענטאַרן</string>
     <string name="forums_no_comments">נאָך קיין באַמערקונגען</string>
-    <string name="forums_comment_save">היט אויף</string>
     <string name="forums_comment_edit">רעדאַקטירן קאָמענטאַר</string>
     <string name="forums_comment_edit_title">רעדאַקטירן קאָמענטאַר</string>
-    <string name="forums_comment_edit_attach">צוהענקען פֿײַלן</string>
     <string name="forums_comment_delete">אויסמעקן קאָמענטאַר</string>
     <string name="forums_comment_delete_title">אויסמעקן קאָמענטאַר</string>
     <string name="forums_comment_reply">ענטפֿער</string>
-    <string name="forums_settings_rename">איבערטויפֿן</string>
-    <string name="forums_settings_save">היט אויף</string>
     <string name="forums_settings_delete">אויסמעקן פֿאָרום</string>
     <string name="forums_settings_delete_title">אויסמעקן פֿאָרום</string>
     <string name="forums_forum_not_found">פֿאָרום ניט געפֿונען</string>
@@ -122,18 +103,10 @@
 
     <string name="forums_comment_send">שיקן</string>
     <string name="forums_post_body_field">גוף</string>
-    <string name="forums_post_edit_body_field">גוף</string>
     <string name="forums_comment_edit_body_field">גוף</string>
-    <string name="forums_post_tag_add">צולייגן אַ טאַג</string>
     <string name="forums_write_comment">שרײַבט אַ קאָמענטאַר…</string>
-    <string name="forums_auth_login_failed">לאָגין דורכגעפֿאַלן</string>
 
     <string name="notification_channel_forums">פֿאָרומס־מעלדונגען</string>
-    <string name="forums_auth_brand">Mochi פֿאָרומס</string>
-    <string name="forums_auth_create_identity_failed">דורכפֿאַל בײַם שאַפֿן אַן אידענטיטעט</string>
-    <string name="forums_auth_mfa_unsupported">MFA איז נאָך נישט געשטיצט אין דער מאָבילער אַפּ</string>
-    <string name="forums_auth_enter_code_sent">אַרײַנגעבן דעם קאָד וואָס איז געשיקט געוואָרן צו %1$s</string>
-    <string name="forums_auth_create_identity">שאַפֿט אײַער אידענטיטעט</string>
     <string name="forums_list_empty">נאָך קײן פֿאָרומס</string>
     <string name="forums_list_unsubscribe_message">זײַט איר זיכער אַז איר ווילט זיך אָפּמעלדן פֿון דעם פֿאָרום?</string>
     <string name="forums_find_search_placeholder">זוכן פֿאָרומס אָדער אַרײַנקלעפּן URL</string>
@@ -143,26 +116,12 @@
     <string name="forums_post_vote_down">אַראָפּשטים</string>
     <string name="forums_post_quote">ציטירן אין ענטפֿער</string>
     <string name="forums_comment_quote">ציטירן אין ענטפֿער</string>
-    <string name="forums_tag_clear">רייניקן פֿילטער</string>
-    <string name="forums_post_tag_remove">אַראָפּנעמען טאַג</string>
     <string name="forums_access_add">צולײגן צוטריט־כּלל</string>
     <string name="forums_access_empty">נאָך קײן כּללים — די פֿאַרשטאַנדן זײַנען אין קראַפֿט</string>
-    <string name="forums_access_target_hint">ענטיטעט־ID, @גרופּע, * (אַלעמען), אָדער + (מיטגלידער)</string>
-    <string name="forums_access_level">מדרגה</string>
-    <string name="forums_access_level_moderate">מאָדערירן</string>
     <string name="forums_members_search">פֿילטרירן מיטגלידער</string>
     <string name="forums_banner_description">Markdown וואָס ווערט געוויזן אויבן אין פֿאָרום.</string>
     <string name="forums_banner_placeholder">אַרײַנשרײַבן באַנער־טעקסט (markdown ווערט געשטיצט)…</string>
-    <string name="forums_ai_mode_label">מאָדע: %1$s</string>
-    <string name="forums_ai_mode_heading">AI־מאָדע</string>
     <string name="forums_ai_mode_off">אומדערלויבט</string>
-    <string name="forums_ai_account">AI קאָנטע</string>
-    <string name="forums_ai_prompt_tag">טאַגירונג־פּאָדערונג</string>
-    <string name="forums_ai_prompt_score">באַווערטונג־פּאָדערונג</string>
-    <string name="forums_ai_post_prompt_label">פּאָדערונג פֿאַר פּאָסט־טאַגן</string>
-    <string name="forums_ai_comment_prompt_label">פּאָדערונג פֿאַר קאָמענטאַר־טאַגן</string>
-    <string name="forums_settings_fingerprint">פֿינגער־אָפּדרוק: %1$s</string>
-    <string name="forums_settings_clear_notifications">רייניקן מעלדונגען</string>
     <string name="forums_moderation_queue_empty">גאָרנישט וואַרט</string>
     <string name="forums_moderation_report_details">פּרטים: %1$s</string>
     <string name="forums_moderation_report_resolved_by">באַשיידן פֿון %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">ענטפֿערט %1$s</string>
     <string name="forums_comment_clear_reply">רייניקן ענטפֿער</string>
     <string name="forums_settings_title">%1$s איינשטעלונגען</string>
-    <string name="forums_settings_rename_label">פֿאָרום־נאָמען</string>
-    <string name="forums_settings_danger_zone">סכּנה־געגנט</string>
     <string name="forums_settings_delete_message">דאָס וועט תּמיד אויסמעקן דעם פֿאָרום און אַלע זײַנע פּאָסטן. דאָס קען מען נישט אומקערן.</string>
 
-    <string name="forums_tag_interest_up">פֿאַרשטאַרקן אינטערעס</string>
-    <string name="forums_tag_interest_down">פֿאַרמינער אינטערעס</string>
-    <string name="forums_tag_interest_remove">אַראָפּנעמען אינטערעס</string>
     <string name="forums_access_tab_users">באַניצערס</string>
     <string name="forums_access_tab_groups">גרופּעס</string>
-    <string name="forums_access_tab_manual">מאַנואַל</string>
     <string name="forums_access_search_users">זוך באַניצערס</string>
     <string name="forums_access_no_groups">קיין גרופּעס פֿאַראַן</string>
     <string name="forums_saved_title">אויפֿגעהיט</string>

@@ -19,7 +19,6 @@
     <string name="crm_link">Tautan</string>
     <string name="crm_design">Desain</string>
     <string name="crm_export_failed">Ekspor tidak dapat disimpan</string>
-    <string name="crm_sort_direction">Arah</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Dibuat</string>
     <string name="crm_sort_updated">Diperbarui</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Tambah kelas</string>
     <string name="crm_classes_create">Buat</string>
     <string name="crm_class_name">Nama</string>
-    <string name="crm_class_save_name">Simpan nama</string>
     <string name="crm_class_title_field">Bidang judul</string>
     <string name="crm_class_fields">Bidang</string>
     <string name="crm_class_add_field">Tambah field</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Wajib</string>
     <string name="crm_field_position_default">Bawaan</string>
     <string name="crm_field_position_sidebar">Bilah samping</string>
-    <string name="crm_field_save">Simpan perubahan</string>
     <string name="crm_field_options">Opsi</string>
     <string name="crm_field_add_option">Tambah opsi</string>
     <string name="crm_field_delete">Hapus field</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Cari CRM</string>
     <string name="crm_list_no_matching">Tidak ada CRM yang cocok</string>
     <string name="crm_list_empty">Belum ada CRM</string>
-    <string name="crm_create_template">Templat</string>
     <string name="crm_find_search_placeholder">Cari CRM atau tempel URL</string>
     <string name="crm_find_search_hint">Cari CRM untuk berlangganan</string>
     <string name="crm_create_object_parent_none">(tidak ada)</string>

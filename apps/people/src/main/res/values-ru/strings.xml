@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Написать</string>
     <string name="people_contacts_no_people_found">Люди не найдены</string>
     <string name="people_contacts_try_adjusting">Попробуйте изменить параметры поиска</string>
-    <string name="people_contact_section_address">Адрес</string>
     <string name="people_contact_section_detail">Подробности</string>
     <string name="people_contact_name">Имя</string>
     <string name="people_contact_email">Электронная почта</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Переименовать</string>
     <string name="people_contacts_sort_name">Имя</string>
     <string name="people_contacts_sort_recent">Недавно добавленные</string>
-    <string name="people_contacts_thats_you">Это вы</string>
     <string name="people_contacts_try_different_search">Попробуйте другой поисковый запрос</string>
     <string name="people_contacts_unfriend">Удалить друга</string>
     <string name="people_add_contact_search_placeholder">Введите запрос для поиска…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Контакты не найдены</string>
     <string name="people_contacts_add_to_start">Добавьте контакты, чтобы начать общение</string>
     <string name="people_contacts_actions">Действия с контактом</string>
-    <string name="people_contacts_friend">Друг</string>
     <string name="people_contacts_invite">Пригласить</string>
     <string name="people_contacts_unfriend_confirm">%1$s больше не будет вашим другом. Контакт останется в адресной книге.</string>
     <string name="people_contacts_delete">Удалить контакт</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Контакт изменился</string>
     <string name="people_add_contact_title">Добавить контакт</string>
     <string name="people_add_contact_add">Добавить в контакты</string>
-    <string name="people_add_contact_in_contacts">В контактах</string>
     <string name="people_books_create">Создать адресную книгу</string>
     <string name="people_books_delete">Удалить адресную книгу</string>
     <plurals name="people_books_delete_confirm">

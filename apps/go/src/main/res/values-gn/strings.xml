@@ -50,7 +50,6 @@
     <string name="go_resign_title">¿Eñeme\'ẽta?</string>
     <string name="go_sidebar_completed">Oñembohu\'ãma</string>
     <string name="go_sidebar_new_game">Ñembosarái pyahu</string>
-    <string name="go_status_draw">Peteĩcha</string>
     <string name="go_status_draw_text">Peteĩcha</string>
     <string name="go_status_game_over">Ñembosarái opa</string>
     <string name="go_status_opponent_move">%1$s jere</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Eipe\'a yke panel</string>
     <string name="go_sidebar_active">Ñembosarái oikóva</string>
     <string name="go_empty_active">Ndaipóri gueteri ñembosarái oikóva.</string>
-    <string name="go_status_resigned">Oñeme\'ẽ</string>
     <string name="go_new_game_title">Go ñembosarái pyahu</string>
     <string name="go_new_game_no_friends">Embojuaju raẽ peteĩ angirũ reñepyrũ mboyve peteĩ ñembosarái.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

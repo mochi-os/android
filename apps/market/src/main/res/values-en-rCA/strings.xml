@@ -7,5 +7,4 @@
     <string name="market_checkout_address_postcode">Postal code</string>
     <string name="market_checkout_address_region">Province</string>
     <string name="market_editor_zone_region">Province</string>
-    <string name="market_shipping_region">Province</string>
 </resources>

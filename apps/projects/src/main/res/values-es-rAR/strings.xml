@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="projects_list_close_search">Cerrá la búsqueda</string>
     <string name="projects_list_search">Buscá</string>
     <string name="projects_list_create">Creá un proyecto</string>
     <string name="projects_create_title">Creá un proyecto</string>
-    <string name="projects_find_subscribe">Suscribite</string>
     <string name="projects_create_object">Creá un objeto</string>
     <string name="projects_search">Buscá</string>
     <string name="projects_settings_delete_project">Eliminá el proyecto</string>
@@ -13,7 +11,6 @@
     <string name="projects_settings_unsubscribe_message">¿Estás seguro de que querés anular la suscripción a este proyecto?</string>
     <string name="projects_parent_search_placeholder">Buscá</string>
     <string name="projects_links_add">Agregá un enlace</string>
-    <string name="projects_comment_save">Guardá</string>
     <string name="projects_property_remove">Quitá</string>
     <string name="projects_attachment_add">Agregá un adjunto</string>
     <string name="projects_board_rename">Renombrá</string>
@@ -24,7 +21,6 @@
     <string name="projects_class_add_field">Agregá un campo</string>
     <string name="projects_class_delete">Eliminá la clase</string>
     <string name="projects_class_delete_title">Eliminá la clase</string>
-    <string name="projects_field_save">Guardá los cambios</string>
     <string name="projects_field_add_option">Agregá una opción</string>
     <string name="projects_field_delete">Eliminá el campo</string>
     <string name="projects_field_delete_title">Eliminá el campo</string>
@@ -44,12 +40,9 @@
     <string name="projects_classes_create">Crear</string>
     <string name="projects_request_close">Cerrar</string>
     <string name="projects_create_template_none">Ninguno</string>
-    <string name="projects_property_option_none">Ninguno</string>
     <string name="projects_settings">Configuración</string>
     <string name="projects_settings_title">Configuración</string>
-    <string name="projects_list_more">Más</string>
     <string name="projects_more">Más</string>
-    <string name="projects_request_more">Más</string>
     <string name="projects_comment_send">Enviar</string>
     <string name="projects_create_description">Descripción</string>
     <string name="projects_request_field_description">Descripción</string>
@@ -60,13 +53,10 @@
     <string name="projects_request_status_open">Abrir</string>
     <string name="projects_board_new">Nuevo</string>
     <string name="projects_field_type_user">Usuario</string>
-    <string name="projects_create_public">Público</string>
-    <string name="projects_create_private">Privado</string>
     <string name="projects_access_level_owner">Propietario</string>
     <string name="projects_loading">Cargando…</string>
     <string name="projects_field_position_default">Predeterminado</string>
     <string name="projects_settings_tab_people">Personas</string>
-    <string name="projects_sort_label">Ordenar</string>
     <string name="projects_sort_number">Número</string>
     <string name="projects_field_type_number">Número</string>
     <string name="projects_views_sort_number">Número</string>
@@ -74,13 +64,6 @@
     <string name="projects_request_status_draft">Borrador</string>
     <string name="projects_request_field_draft">Borrador</string>
     <string name="projects_field_position_body">Cuerpo</string>
-    <string name="projects_auth_display_name">Nombre visible</string>
-    <string name="projects_auth_login_failed">Error al iniciar sesión</string>
-    <string name="projects_auth_verification_failed">Error de verificación</string>
-    <string name="projects_auth_create_identity_failed">No se pudo crear la identidad</string>
-    <string name="projects_auth_mfa_unsupported">MFA aún no es compatible en la aplicación móvil</string>
-    <string name="projects_auth_enter_code_sent">Ingresá el código enviado a %1$s</string>
-    <string name="projects_auth_create_identity">Creá tu identidad</string>
     <string name="projects_list_title">Proyectos</string>
     <string name="projects_find_recommended">Recomendados</string>
     <string name="projects_sort_field">Ordenar por</string>
@@ -109,7 +92,6 @@
     <string name="projects_views_sort_by">Ordenar por</string>
     <string name="projects_design">Diseño</string>
     <string name="projects_design_title">Diseño</string>
-    <string name="projects_sort_direction">Dirección</string>
     <string name="projects_views_direction">Dirección</string>
     <string name="projects_sort_direction_asc">Ascendente</string>
     <string name="projects_views_direction_asc">Ascendente</string>
@@ -120,9 +102,7 @@
     <string name="projects_sort_updated">Actualizado</string>
     <string name="projects_views_sort_updated">Actualizado</string>
     <string name="projects_object_watch">Seguir</string>
-    <string name="projects_watchers_watch">Seguir</string>
     <string name="projects_object_tab_activity">Actividad</string>
-    <string name="projects_object_tab_links">Enlaces</string>
     <string name="projects_links_title">Enlaces</string>
     <string name="projects_request_merge">Combinar</string>
     <string name="projects_request_merge_dialog_title">Combinar</string>
@@ -148,9 +128,6 @@
     <string name="projects_settings_delete_confirm_message">¿Está seguro de que desea eliminar este proyecto? Todos los objetos, comentarios y configuraciones se eliminarán de forma permanente.</string>
     <string name="projects_object_unwatch">Dejar de seguir</string>
     <string name="projects_object_tab_properties">Propiedades</string>
-    <string name="projects_object_tab_watchers">Seguidores</string>
-    <string name="projects_watchers_empty">Aún no hay seguidores</string>
-    <string name="projects_watchers_unwatch">Dejar de seguir</string>
     <string name="projects_object_delete_title">Eliminar objeto</string>
     <string name="projects_object_delete_message">¿Está seguro de que desea eliminar este objeto? Esta acción no se puede deshacer.</string>
     <string name="projects_parent_none">Sin padre</string>
@@ -167,7 +144,6 @@
     <string name="projects_links_type_duplicates">Duplica</string>
     <string name="projects_links_no_matches">No hay objetos coincidentes</string>
     <string name="projects_links_remove">Quitar enlace</string>
-    <string name="projects_field_type_checkbox">Casilla de verificación</string>
     <string name="projects_comment_placeholder">Agregar un comentario</string>
     <string name="projects_property_pick_date">Elegir fecha</string>
     <string name="projects_property_ok">Aceptar</string>
@@ -176,17 +152,10 @@
     <string name="projects_activity_empty">Sin actividad</string>
     <string name="projects_activity_created">creó este objeto</string>
     <string name="projects_activity_deleted">eliminó este objeto</string>
-    <string name="projects_activity_changed">cambió %1$s: %2$s → %3$s</string>
-    <string name="projects_activity_set">estableció %1$s en %2$s</string>
-    <string name="projects_activity_cleared">borró %1$s</string>
     <string name="projects_activity_updated">actualizó %1$s</string>
     <string name="projects_activity_made_change">realizó un cambio</string>
     <string name="projects_attachment_empty">Sin adjuntos</string>
     <string name="projects_attachment_default_name">adjunto</string>
-    <string name="projects_attachment_size_bytes">%1$s B</string>
-    <string name="projects_attachment_size_kb">%1$s KB</string>
-    <string name="projects_attachment_size_mb">%1$s MB</string>
-    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_empty">No hay solicitudes de fusión</string>
     <string name="projects_request_new">Nueva solicitud de fusión</string>
     <string name="projects_request_status_merged">Fusionada</string>
@@ -213,15 +182,12 @@
     <string name="projects_diff_unified">Unificado</string>
     <string name="projects_diff_split">Dividido</string>
     <string name="projects_diff_empty">No hay diff disponible</string>
-    <string name="projects_tree_collapse">Contraer</string>
-    <string name="projects_tree_expand">Expandir</string>
     <string name="projects_tree_move">Mover</string>
     <string name="projects_tree_move_to_parent">Mover al padre</string>
     <string name="projects_tree_root_level">(Nivel raíz)</string>
     <string name="projects_tree_empty">No hay objetos</string>
     <string name="projects_board_no_columns">No hay columnas configuradas para esta vista</string>
     <string name="projects_board_no_options">No hay opciones configuradas para el campo de columna</string>
-    <string name="projects_board_column_options">Opciones de columna</string>
     <string name="projects_board_nested_count">+%1$s anidados</string>
     <string name="projects_move_to_column">Mover a columna</string>
     <string name="projects_move_to_row">Mover a fila</string>
@@ -229,27 +195,18 @@
     <string name="projects_drag_card">Arrastrar tarjeta</string>
     <string name="projects_drag_row">Arrastrar fila</string>
     <string name="projects_drag_column">Arrastrar columna</string>
-    <string name="projects_drag_hint">Mantené presionado y arrastrá para mover</string>
     <string name="projects_design_more_options">Más opciones</string>
     <string name="projects_design_export">Exportar diseño</string>
     <string name="projects_design_import">Importar diseño</string>
-    <string name="projects_design_clipboard_label">JSON del diseño</string>
-    <string name="projects_design_export_subject">Diseño del proyecto</string>
-    <string name="projects_design_share_chooser">Compartir diseño</string>
-    <string name="projects_design_export_copied">Diseño copiado al portapapeles</string>
     <string name="projects_design_imported">Diseño importado</string>
     <string name="projects_design_tab_classes">Clases</string>
     <string name="projects_design_tab_views">Vistas</string>
     <string name="projects_design_import_dialog_title">Importar diseño</string>
     <string name="projects_design_no_templates">No hay plantillas disponibles</string>
-    <string name="projects_design_or_paste_json">O pegá el JSON</string>
-    <string name="projects_design_paste_placeholder">Pegá el JSON del diseño exportado</string>
-    <string name="projects_design_import_json">Importar JSON</string>
     <string name="projects_design_use">Usar</string>
     <string name="projects_design_replace_title">¿Reemplazar diseño?</string>
     <string name="projects_design_replace_message">Esto reemplazará el diseño actual con %1$s. Se eliminarán todas las clases, campos, opciones y vistas existentes. Los objetos existentes no se eliminarán, pero podrían dejar de aparecer en las vistas.</string>
     <string name="projects_design_replace">Reemplazar</string>
-    <string name="projects_design_pasted_json_label">JSON pegado</string>
     <string name="projects_classes_empty">No hay clases definidas</string>
     <string name="projects_class_label">Clase: %1$s</string>
     <string name="projects_class_title_field">Campo de título</string>
@@ -325,8 +282,6 @@
     <string name="projects_access_select_rule">Selecciona una regla</string>
     <string name="projects_access_authenticated_desc">Cualquier persona que haya iniciado sesión</string>
     <string name="projects_access_anyone_desc">Incluidos los usuarios anónimos</string>
-    <string name="projects_access_target">Destino</string>
-    <string name="projects_access_target_hint">ID de entidad, @grupo, * (todos) o + (miembros)</string>
     <string name="projects_access_selected">Seleccionado: %1$s</string>
     <string name="projects_create_allow_search">Permití que cualquiera busque el proyecto</string>
     <string name="projects_create_upload_json">Subí un archivo .json</string>
@@ -345,7 +300,6 @@
     <string name="projects_create_import_backup">Importar desde copia de seguridad (opcional)</string>
     <string name="projects_settings_not_set">Sin establecer</string>
     <string name="projects_settings_updated">Proyecto actualizado</string>
-    <string name="projects_class_save_name">Guardá el nombre</string>
     <string name="projects_board_add_column">Agregá una columna</string>
     <string name="projects_board_reorder_columns_hint">Mantené presionado el nombre de una columna y después arrastrala</string>
     <string name="projects_option_delete_title">Eliminá la opción</string>

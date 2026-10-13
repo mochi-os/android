@@ -50,7 +50,6 @@
     <string name="go_resign_title">Đầu hàng trận đấu?</string>
     <string name="go_sidebar_completed">Hoàn tất</string>
     <string name="go_sidebar_new_game">Trò chơi mới</string>
-    <string name="go_status_draw">Hòa</string>
     <string name="go_status_draw_text">Hòa</string>
     <string name="go_status_game_over">Hết trò chơi</string>
     <string name="go_status_opponent_move">Lượt của %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Mở thanh bên</string>
     <string name="go_sidebar_active">Ván đang chơi</string>
     <string name="go_empty_active">Chưa có ván cờ đang chơi.</string>
-    <string name="go_status_resigned">Đã đầu hàng</string>
     <string name="go_new_game_title">Ván cờ vây mới</string>
     <string name="go_new_game_no_friends">Bạn cần thêm bạn bè trước khi có thể bắt đầu ván cờ.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

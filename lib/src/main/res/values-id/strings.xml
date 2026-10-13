@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">Cabut akses RSS?</string>
     <string name="rss_revoke_message">Apa pun yang berlangganan umpan ini akan berhenti menerimanya. Anda dapat menyalin URL baru setelahnya.</string>
     <string name="rss_revoked">Akses RSS dicabut</string>
-    <string name="rss_revoke_failed">Gagal mencabut akses RSS</string>
     <string name="game_empty_title">Belum ada permainan</string>
     <string name="game_select_title">Pilih permainan</string>
     <string name="game_select_subtitle">Pilih permainan dari bilah sisi atau mulai yang baru.</string>

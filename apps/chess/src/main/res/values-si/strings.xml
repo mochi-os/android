@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">චෙස්</string>
-    <string name="chess_sidebar_header">චෙස්</string>
     <string name="chess_sidebar_active">සක්‍රීය ක්‍රීඩා</string>
     <string name="chess_sidebar_completed">සම්පූර්ණයි</string>
     <string name="chess_sidebar_new_game">නව ක්‍රීඩාවක්</string>
-    <string name="chess_section_active">සක්‍රීය ක්‍රීඩා</string>
-    <string name="chess_section_completed">සම්පූර්ණයි</string>
-    <string name="chess_new_game">නව ක්‍රීඩාවක්</string>
     <string name="chess_empty_title">තවම ක්‍රීඩා නැත</string>
     <string name="chess_new_title">නව ක්‍රීඩාවක්</string>
     <string name="chess_new_pick_opponent">ප්‍රතිවාදියා තෝරන්න</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">චෙස් චලනයන්, සම තැබීමේ යෝජනා සහ ක්‍රීඩා ප්‍රතිඵල පිළිබඳ දැනුම්දීම්.</string>
     <string name="chess_open_sidebar">පැති තීරුව විවෘත කරන්න</string>
-    <string name="chess_empty_subtitle">මිතුරෙකු සමඟ චෙස් ක්‍රීඩා කිරීමට ඔබේ පළමු ක්‍රීඩාව ආරම්භ කරන්න.</string>
-    <string name="chess_empty_start_button">ඔබේ පළමු ක්‍රීඩාව ආරම්භ කරන්න</string>
     <string name="chess_detail_unavailable">ක්‍රීඩාව නොමැත</string>
     <string name="chess_delete_title">ක්‍රීඩාව මකන්නද?</string>
     <string name="chess_delete_message">මෙය ක්‍රීඩාව ඔබේ ලැයිස්තුවෙන් ඉවත් කරයි.</string>

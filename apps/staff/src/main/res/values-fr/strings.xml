@@ -415,7 +415,6 @@
     <string name="staff_team_add_member">Ajouter un membre</string>
     <string name="staff_team_added_by_label">Ajouté par :</string>
     <string name="staff_team_added_by_system">Système</string>
-    <string name="staff_team_col_added_by">Ajouté par</string>
     <string name="staff_team_dialog_add">Ajouter</string>
     <string name="staff_team_dialog_add_title">Ajouter un membre de l\'équipe</string>
     <string name="staff_team_dialog_adding">Ajout en cours…</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Peyamê bişîne</string>
     <string name="people_contacts_no_people_found">Tu kes nehatin dîtin</string>
     <string name="people_contacts_try_adjusting">Lêgerîna xwe eyar bike</string>
-    <string name="people_contact_section_address">Navnîşan</string>
     <string name="people_contact_section_detail">Hûragahî</string>
     <string name="people_contact_name">Nav</string>
     <string name="people_contact_email">E-name</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Navê biguhere</string>
     <string name="people_contacts_sort_name">Nav</string>
     <string name="people_contacts_sort_recent">Vê dawiyê hatî zêdekirin</string>
-    <string name="people_contacts_thats_you">Ew tu yî</string>
     <string name="people_contacts_try_different_search">Peyveke lêgerînê ya cuda biceribîne</string>
     <string name="people_contacts_unfriend">Hevalê rake</string>
     <string name="people_add_contact_search_placeholder">Ji bo lêgerînê binivîse…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Tu têkilî nehat dîtin</string>
     <string name="people_contacts_add_to_start">Ji bo destpêkirinê têkiliyan lê zêde bike</string>
     <string name="people_contacts_actions">Kiryarên têkiliyê</string>
-    <string name="people_contacts_friend">Heval</string>
     <string name="people_contacts_invite">Vexwîne</string>
     <string name="people_contacts_unfriend_confirm">%1$s êdî ne hevalê te ye. Têkilî di pirtûka navnîşanan de dimîne.</string>
     <string name="people_contacts_delete">Têkiliyê jê bibe</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Têkilî guherî</string>
     <string name="people_add_contact_title">Têkilî zêde bike</string>
     <string name="people_add_contact_add">Li têkiliyan zêde bike</string>
-    <string name="people_add_contact_in_contacts">Di têkiliyan de</string>
     <string name="people_books_create">Pirtûka navnîşanan çêbike</string>
     <string name="people_books_delete">Pirtûka navnîşanan jê bibe</string>
     <plurals name="people_books_delete_confirm">

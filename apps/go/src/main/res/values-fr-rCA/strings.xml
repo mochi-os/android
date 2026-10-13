@@ -14,8 +14,6 @@
     <string name="go_sidebar_completed">Terminées</string>
     <string name="go_sidebar_new_game">Nouvelle partie</string>
     <string name="go_empty_active">Aucune partie en cours.</string>
-    <string name="go_status_draw">Partie nulle</string>
-    <string name="go_status_resigned">Abandon</string>
     <string name="go_detail_title_with_size">%1$s (%2$s×%2$s)</string>
     <string name="go_color_black">Noir</string>
     <string name="go_color_white">Blanc</string>

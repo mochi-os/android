@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">ჭადრაკი</string>
-    <string name="chess_sidebar_header">ჭადრაკი</string>
     <string name="chess_sidebar_active">აქტიური თამაშები</string>
     <string name="chess_sidebar_completed">დასრულდა</string>
     <string name="chess_sidebar_new_game">ახალი თამაში</string>
-    <string name="chess_section_active">აქტიური თამაშები</string>
-    <string name="chess_section_completed">დასრულდა</string>
-    <string name="chess_new_game">ახალი თამაში</string>
     <string name="chess_empty_title">თამაშები ჯერ არ არის</string>
     <string name="chess_new_title">ახალი თამაში</string>
     <string name="chess_new_pick_opponent">აირჩიეთ ოპონენტი</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">შეტყობინებები ჭადრაკის სვლების, ფრეს შეთავაზებებისა და თამაშის შედეგების შესახებ.</string>
     <string name="chess_open_sidebar">გვერდითი პანელის გახსნა</string>
-    <string name="chess_empty_subtitle">დაიწყეთ პირველი თამაში, რომ მეგობართან ერთად ჭადრაკი ითამაშოთ.</string>
-    <string name="chess_empty_start_button">დაიწყეთ პირველი თამაში</string>
     <string name="chess_detail_unavailable">თამაში მიუწვდომელია</string>
     <string name="chess_delete_title">თამაშის წაშლა?</string>
     <string name="chess_delete_message">ეს ამოშლის თამაშს თქვენი სიიდან.</string>

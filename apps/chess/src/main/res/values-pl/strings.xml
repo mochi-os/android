@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Szachy</string>
-    <string name="chess_sidebar_header">Szachy</string>
     <string name="chess_sidebar_active">Aktywne gry</string>
     <string name="chess_sidebar_completed">Zakończone</string>
     <string name="chess_sidebar_new_game">Nowa gra</string>
-    <string name="chess_section_active">Aktywne gry</string>
-    <string name="chess_section_completed">Zakończone</string>
-    <string name="chess_new_game">Nowa gra</string>
     <string name="chess_empty_title">Brak gier</string>
     <string name="chess_new_title">Nowa gra</string>
     <string name="chess_new_pick_opponent">Wybierz przeciwnika</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">Usuwa partię z twojej listy.</string>
     <string name="chess_delete_title">Usunąć grę?</string>
     <string name="chess_detail_unavailable">Partia niedostępna</string>
-    <string name="chess_empty_start_button">Rozpocznij pierwszą partię</string>
-    <string name="chess_empty_subtitle">Rozpocznij pierwszą partię, aby zagrać w szachy z przyjacielem.</string>
     <string name="chess_move_capture">%1$s zbił %2$s</string>
     <string name="chess_open_sidebar">Otwórz panel boczny</string>
     <string name="chess_ws_connecting">Łączenie…</string>

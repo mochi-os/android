@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="projects_auth_display_name">Megjelenítendő név</string>
-    <string name="projects_auth_verification_failed">Az ellenőrzés sikertelen</string>
     <string name="projects_list_title">Projektek</string>
-    <string name="projects_list_close_search">Keresés bezárása</string>
     <string name="projects_list_search">Keresés</string>
     <string name="projects_list_find">Projektek keresése</string>
     <string name="projects_list_create">Projekt létrehozása</string>
@@ -11,22 +8,16 @@
     <string name="projects_create_name">Név</string>
     <string name="projects_create_description">Leírás</string>
     <string name="projects_create_prefix">Előtag</string>
-    <string name="projects_create_privacy">Adatvédelem</string>
-    <string name="projects_create_private">Privát</string>
-    <string name="projects_create_public">Nyilvános</string>
     <string name="projects_create_template_none">Nincs</string>
     <string name="projects_create_action">Létrehozás</string>
     <string name="projects_find_title">Projektek keresése</string>
     <string name="projects_find_recommended">Ajánlott</string>
-    <string name="projects_find_subscribe">Feliratkozás</string>
     <string name="projects_loading">Betöltés…</string>
     <string name="projects_watched">Figyelt</string>
     <string name="projects_create_object">Objektum létrehozása</string>
     <string name="projects_search">Keresés</string>
     <string name="projects_settings">Beállítások</string>
     <string name="projects_design">Tervezés</string>
-    <string name="projects_sort_label">Rendezés</string>
-    <string name="projects_sort_direction">Irány</string>
     <string name="projects_sort_rank">Kézi</string>
     <string name="projects_sort_number">Sorszám</string>
     <string name="projects_sort_created">Létrehozva</string>
@@ -50,10 +41,6 @@
     <string name="projects_object_tab_comments">Megjegyzések (%1$s)</string>
     <string name="projects_object_tab_activity">Tevékenység</string>
     <string name="projects_object_tab_requests">Egyesítési kérések (%1$s)</string>
-    <string name="projects_object_tab_attachments">Mellékletek</string>
-    <string name="projects_object_tab_links">Hivatkozások</string>
-    <string name="projects_watchers_watch">Figyelés</string>
-    <string name="projects_watchers_unwatch">Figyelés leállítása</string>
     <string name="projects_parent_label">Szülő</string>
     <string name="projects_parent_search_placeholder">Keresés</string>
     <string name="projects_links_title">Hivatkozások</string>
@@ -67,12 +54,9 @@
     <string name="projects_links_no_matches">Nincs egyező objektum</string>
     <string name="projects_field_yes">Igen</string>
     <string name="projects_field_no">Nem</string>
-    <string name="projects_field_type_checkbox">Jelölőnégyzet</string>
-    <string name="projects_comment_save">Mentés</string>
     <string name="projects_comment_empty">Még nincsenek hozzászólások</string>
     <string name="projects_comment_attach">Fájlok csatolása</string>
     <string name="projects_property_remove">Eltávolítás</string>
-    <string name="projects_property_option_none">Nincs</string>
     <string name="projects_attachments">Mellékletek</string>
     <string name="projects_attachment_add">Melléklet hozzáadása</string>
     <string name="projects_request_empty">Nincsenek egyesítési kérések</string>
@@ -114,7 +98,6 @@
     <string name="projects_classes_add_dialog_title">Osztály hozzáadása</string>
     <string name="projects_classes_create">Létrehozás</string>
     <string name="projects_class_name">Név</string>
-    <string name="projects_class_save_name">Név mentése</string>
     <string name="projects_class_title_field">Címmező</string>
     <string name="projects_class_merge_requests">Egyesítési kérések</string>
     <string name="projects_class_fields">Mezők</string>
@@ -132,7 +115,6 @@
     <string name="projects_field_required">Kötelező</string>
     <string name="projects_field_position_default">Alapértelmezett</string>
     <string name="projects_field_position_sidebar">Oldalsáv</string>
-    <string name="projects_field_save">Módosítások mentése</string>
     <string name="projects_field_options">Opciók</string>
     <string name="projects_field_add_option">Beállítás hozzáadása</string>
     <string name="projects_field_delete">Mező törlése</string>
@@ -153,16 +135,9 @@
     <string name="projects_views_sort_updated">Frissítve</string>
     <string name="projects_views_sort_rank">Rangsor</string>
     <string name="projects_project_not_found">A projekt nem található</string>
-    <string name="projects_list_more">Több</string>
     <string name="projects_more">Több</string>
-    <string name="projects_request_more">Több</string>
     <string name="projects_comment_send">Küldés</string>
     <string name="projects_field_position_body">Fő rész</string>
-    <string name="projects_auth_login_failed">A bejelentkezés sikertelen</string>
-    <string name="projects_auth_create_identity_failed">Az identitás létrehozása sikertelen</string>
-    <string name="projects_auth_mfa_unsupported">Az MFA még nem támogatott a mobilalkalmazásban</string>
-    <string name="projects_auth_enter_code_sent">Adja meg a(z) %1$s címre küldött kódot</string>
-    <string name="projects_auth_create_identity">Hozza létre identitását</string>
     <string name="projects_sort_field">Rendezés</string>
     <string name="projects_views_move_up">Mozgatás felfelé</string>
     <string name="projects_views_move_down">Mozgatás lefelé</string>
@@ -178,7 +153,6 @@
     <string name="projects_links_search_placeholder">Objektumok keresése</string>
 
     <string name="notification_channel_projects">Projektek értesítései</string>
-    <string name="projects_auth_brand">Mochi Projektek</string>
     <string name="projects_list_search_placeholder">Projektek keresése</string>
     <string name="projects_list_no_matching">Nincs egyező projekt</string>
     <string name="projects_list_empty">Még nincsenek projektek</string>
@@ -190,8 +164,6 @@
     <string name="projects_people_empty">Még senkinek sincs hozzáférése</string>
     <string name="projects_settings_delete_confirm_message">Biztosan törli ezt a projektet? Minden objektum, hozzászólás és beállítás véglegesen eltávolításra kerül.</string>
     <string name="projects_object_unwatch">Figyelés megszüntetése</string>
-    <string name="projects_object_tab_watchers">Figyelők</string>
-    <string name="projects_watchers_empty">Még nincsenek figyelők</string>
     <string name="projects_object_delete_title">Objektum törlése</string>
     <string name="projects_object_delete_message">Biztosan törli ezt az objektumot? Ez a művelet nem vonható vissza.</string>
     <string name="projects_parent_none">Nincs szülő</string>
@@ -211,17 +183,10 @@
     <string name="projects_activity_empty">Nincs tevékenység</string>
     <string name="projects_activity_created">létrehozta ezt az objektumot</string>
     <string name="projects_activity_deleted">törölte ezt az objektumot</string>
-    <string name="projects_activity_changed">módosította: %1$s: %2$s → %3$s</string>
-    <string name="projects_activity_set">beállította: %1$s = %2$s</string>
-    <string name="projects_activity_cleared">törölte: %1$s</string>
     <string name="projects_activity_updated">frissítette: %1$s</string>
     <string name="projects_activity_made_change">módosítást végzett</string>
     <string name="projects_attachment_empty">Nincsenek mellékletek</string>
     <string name="projects_attachment_default_name">melléklet</string>
-    <string name="projects_attachment_size_bytes">%1$s B</string>
-    <string name="projects_attachment_size_kb">%1$s KB</string>
-    <string name="projects_attachment_size_mb">%1$s MB</string>
-    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Új összevonási kérés</string>
     <string name="projects_request_status_closed">Lezárva</string>
     <string name="projects_request_back_to_list">Vissza a listához</string>
@@ -242,15 +207,12 @@
     <string name="projects_request_create_title">Összevonási kérés létrehozása</string>
     <string name="projects_request_field_target">Célág</string>
     <string name="projects_diff_title">Eltérés: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Összecsukás</string>
-    <string name="projects_tree_expand">Kibontás</string>
     <string name="projects_tree_move">Áthelyezés</string>
     <string name="projects_tree_move_to_parent">Áthelyezés szülőbe</string>
     <string name="projects_tree_root_level">(Gyökérszint)</string>
     <string name="projects_tree_empty">Nincsenek objektumok</string>
     <string name="projects_board_no_columns">Ehhez a nézethez nincsenek oszlopok beállítva</string>
     <string name="projects_board_no_options">Az oszlop mezőjéhez nincsenek beállítva opciók</string>
-    <string name="projects_board_column_options">Oszlopbeállítások</string>
     <string name="projects_board_nested_count">+%1$s beágyazott</string>
     <string name="projects_move_to_column">Áthelyezés oszlopba</string>
     <string name="projects_move_to_row">Áthelyezés sorba</string>
@@ -258,19 +220,10 @@
     <string name="projects_drag_card">Kártya húzása</string>
     <string name="projects_drag_row">Sor húzása</string>
     <string name="projects_drag_column">Oszlop húzása</string>
-    <string name="projects_drag_hint">Áthelyezéshez tartsa lenyomva és húzza</string>
     <string name="projects_design_more_options">További lehetőségek</string>
-    <string name="projects_design_clipboard_label">Terv JSON</string>
-    <string name="projects_design_export_subject">Projektterv</string>
-    <string name="projects_design_share_chooser">Terv megosztása</string>
-    <string name="projects_design_export_copied">A terv a vágólapra másolva</string>
     <string name="projects_design_no_templates">Nincs elérhető sablon</string>
-    <string name="projects_design_or_paste_json">Vagy illesszen be JSON-t</string>
-    <string name="projects_design_paste_placeholder">Illessze be az exportált terv JSON-t</string>
-    <string name="projects_design_import_json">JSON importálása</string>
     <string name="projects_design_use">Használat</string>
     <string name="projects_design_replace_message">Ez lecseréli a jelenlegi tervet erre: %1$s. Az összes meglévő osztály, mező, beállítás és nézet törlésre kerül. A meglévő objektumok nem törlődnek, de előfordulhat, hogy a nézetekben már nem jelennek meg.</string>
-    <string name="projects_design_pasted_json_label">beillesztett JSON</string>
     <string name="projects_classes_empty">Nincsenek osztályok megadva</string>
     <string name="projects_class_label">Osztály: %1$s</string>
     <string name="projects_class_title_field_description">Mely mező legyen az ezen osztályba tartozó objektumok megjelenített címe.</string>
@@ -341,8 +294,6 @@
     <string name="projects_access_select_rule">Válasszon szabályt</string>
     <string name="projects_access_authenticated_desc">Bárki, aki be van jelentkezve</string>
     <string name="projects_access_anyone_desc">Beleértve a névtelen felhasználókat is</string>
-    <string name="projects_access_target">Felhasználó vagy csoport</string>
-    <string name="projects_access_target_hint">Entitásazonosító, @csoport, * (mindenki) vagy + (tagok)</string>
     <string name="projects_access_selected">Kiválasztva: %1$s</string>
     <string name="projects_access_role_comment">Megjegyzés és megtekintés</string>
     <string name="projects_access_role_design">Tervezés, létrehozás, szerkesztés, hozzászólás és megtekintés</string>

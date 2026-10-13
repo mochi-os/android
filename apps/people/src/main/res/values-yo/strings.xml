@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Fi ìránṣẹ́ ránṣẹ́</string>
     <string name="people_contacts_no_people_found">A kò rí ènìyàn kankan</string>
     <string name="people_contacts_try_adjusting">Gbìyànjú láti ṣàtúnṣe ìwákiri rẹ</string>
-    <string name="people_contact_section_address">Àdírẹ́sì</string>
     <string name="people_contact_section_detail">Àwọn ẹ̀kúnrẹ́rẹ́</string>
     <string name="people_contact_name">Orúkọ</string>
     <string name="people_contact_email">Ímẹ́ẹ̀lì</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Tún sọ orúkọ</string>
     <string name="people_contacts_sort_name">Orúkọ</string>
     <string name="people_contacts_sort_recent">Tí a ṣẹ̀ṣẹ̀ fi kún</string>
-    <string name="people_contacts_thats_you">Ìwọ nìyẹn</string>
     <string name="people_contacts_try_different_search">Gbìyànjú ọ̀rọ̀ ìwáàrí míràn</string>
     <string name="people_contacts_unfriend">Yọ ọ̀rẹ́ kúrò</string>
     <string name="people_add_contact_search_placeholder">Tẹ̀ láti wá…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Kò sí olùbásọ̀rọ̀ tí a rí</string>
     <string name="people_contacts_add_to_start">Fi àwọn olùbásọ̀rọ̀ kún láti bẹ̀rẹ̀ ìbáṣepọ̀</string>
     <string name="people_contacts_actions">Àwọn ìṣe olùbásọ̀rọ̀</string>
-    <string name="people_contacts_friend">Ọ̀rẹ́</string>
     <string name="people_contacts_invite">Pè</string>
     <string name="people_contacts_unfriend_confirm">%1$s kò ní jẹ́ ọ̀rẹ́ rẹ mọ́. Olùbásọ̀rọ̀ náà yóò wà nínú ìwé àdírẹ́sì rẹ.</string>
     <string name="people_contacts_delete">Pa olùbásọ̀rọ̀ rẹ́</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Olùbásọ̀rọ̀ ti yípadà</string>
     <string name="people_add_contact_title">Fi olùbásọ̀rọ̀ kún</string>
     <string name="people_add_contact_add">Fi kún àwọn olùbásọ̀rọ̀</string>
-    <string name="people_add_contact_in_contacts">Nínú àwọn olùbásọ̀rọ̀</string>
     <string name="people_books_create">Ṣẹ̀dá ìwé àdírẹ́sì</string>
     <string name="people_books_delete">Pa ìwé àdírẹ́sì rẹ́</string>
     <plurals name="people_books_delete_confirm">

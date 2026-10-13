@@ -50,7 +50,6 @@
     <string name="go_resign_title">An leig thu seachad an geama?</string>
     <string name="go_sidebar_completed">Crìochnaichte</string>
     <string name="go_sidebar_new_game">Geama ùr</string>
-    <string name="go_status_draw">Geama ionann</string>
     <string name="go_status_draw_text">Geama ionann</string>
     <string name="go_status_game_over">Tha an geama seachad</string>
     <string name="go_status_opponent_move">Gluasad aig %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Fosgail bàr-taoibh</string>
     <string name="go_sidebar_active">Geamannan gnìomhach</string>
     <string name="go_empty_active">Chan eil geamannan gnìomhach ann fhathast.</string>
-    <string name="go_status_resigned">Air leigeil seachad</string>
     <string name="go_new_game_title">Geama Go ùr</string>
     <string name="go_new_game_no_friends">Feumaidh tu caraid a chur ris mus urrainn dhut geama a thòiseachadh.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

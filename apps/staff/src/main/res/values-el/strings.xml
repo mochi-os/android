@@ -415,7 +415,6 @@
     <string name="staff_team_add_member">Προσθήκη μέλους</string>
     <string name="staff_team_added_by_label">Προστέθηκε από:</string>
     <string name="staff_team_added_by_system">Σύστημα</string>
-    <string name="staff_team_col_added_by">Προστέθηκε από</string>
     <string name="staff_team_dialog_add">Προσθήκη</string>
     <string name="staff_team_dialog_add_title">Προσθήκη μέλους ομάδας</string>
     <string name="staff_team_dialog_adding">Προσθήκη…</string>

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Visningsnavn</string>
-    <string name="forums_auth_verification_failed">Verifiseringen mislyktes</string>
     <string name="forums_list_title">Forumer</string>
     <string name="forums_list_find">Finn forum</string>
     <string name="forums_list_unsubscribe">Avslutt abonnement</string>
     <string name="forums_list_unsubscribe_title">Avslutt abonnement</string>
     <string name="forums_create_title">Opprett forum</string>
     <string name="forums_create_name">Forumnavn</string>
-    <string name="forums_create_privacy">Personvern</string>
-    <string name="forums_create_private">Privat</string>
-    <string name="forums_create_public">Offentlig</string>
     <string name="forums_create_action">Opprett forum</string>
     <string name="forums_find_title">Finn forum</string>
     <string name="forums_find_recommended">Anbefalt</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Publiser</string>
     <string name="forums_post_edit">Rediger innlegg</string>
     <string name="forums_post_edit_title">Rediger innlegg</string>
-    <string name="forums_post_edit_title_field">Tittel</string>
-    <string name="forums_post_save">Lagre</string>
     <string name="forums_post_delete">Slett innlegg</string>
     <string name="forums_post_delete_title">Slett innlegg</string>
     <string name="forums_post_locked">Låst</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Medlemmer</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">KI</string>
-    <string name="forums_access_target">Bruker eller gruppe</string>
-    <string name="forums_access_level_view">Vis</string>
-    <string name="forums_access_level_vote">Stem</string>
-    <string name="forums_access_level_comment">Kommenter</string>
-    <string name="forums_access_level_post">Publiser</string>
-    <string name="forums_access_level_none">Ingen</string>
     <string name="forums_members_empty">Ingen medlemmer</string>
     <string name="forums_banner_dismiss">Lukk banner</string>
     <string name="forums_ai_mode_tag">Merk</string>
     <string name="forums_ai_account_default">Standardkonto</string>
-    <string name="forums_ai_prompt_reset">Tilbakestill til standard</string>
     <string name="forums_settings_unsubscribe">Avslutt abonnement</string>
     <string name="forums_moderation_title">Moderering</string>
     <string name="forums_moderation_tab_queue">Kø</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Utenfor tema</string>
     <string name="forums_report_reason_other">Annet</string>
     <string name="forums_post_default_author">Bruker</string>
-    <string name="forums_comments">Kommentarer</string>
     <string name="forums_no_comments">Ingen kommentarer ennå</string>
-    <string name="forums_comment_save">Lagre</string>
     <string name="forums_comment_edit">Rediger kommentar</string>
     <string name="forums_comment_edit_title">Rediger kommentar</string>
-    <string name="forums_comment_edit_attach">Legg ved filer</string>
     <string name="forums_comment_delete">Slett kommentar</string>
     <string name="forums_comment_delete_title">Slett kommentar</string>
     <string name="forums_comment_reply">Svar</string>
-    <string name="forums_settings_rename">Gi nytt navn</string>
-    <string name="forums_settings_save">Lagre</string>
     <string name="forums_settings_delete">Slett forum</string>
     <string name="forums_settings_delete_title">Slett forum</string>
     <string name="forums_forum_not_found">Fant ikke forum</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Send</string>
     <string name="forums_post_body_field">Innhold</string>
-    <string name="forums_post_edit_body_field">Innhold</string>
     <string name="forums_comment_edit_body_field">Innhold</string>
-    <string name="forums_tag_clear">Tøm filter</string>
-    <string name="forums_post_tag_add">Legg til etikett</string>
     <string name="forums_write_comment">Skriv en kommentar…</string>
-    <string name="forums_auth_login_failed">Innlogging mislyktes</string>
 
     <string name="notification_channel_forums">Forum-varsler</string>
-    <string name="forums_auth_brand">Mochi Forumer</string>
-    <string name="forums_auth_create_identity_failed">Kunne ikke opprette identitet</string>
-    <string name="forums_auth_mfa_unsupported">MFA støttes ikke ennå i mobilappen</string>
-    <string name="forums_auth_enter_code_sent">Skriv inn koden som ble sendt til %1$s</string>
-    <string name="forums_auth_create_identity">Opprett identiteten din</string>
     <string name="forums_list_empty">Ingen forum ennå</string>
     <string name="forums_list_unsubscribe_message">Er du sikker på at du vil avslutte abonnementet på dette forumet?</string>
     <string name="forums_find_search_placeholder">Søk i forum eller lim inn URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Stem ned</string>
     <string name="forums_post_quote">Siter i svar</string>
     <string name="forums_comment_quote">Siter i svar</string>
-    <string name="forums_post_tag_remove">Fjern etikett</string>
     <string name="forums_access_add">Legg til tilgangsregel</string>
     <string name="forums_access_empty">Ingen regler ennå – standardverdier gjelder</string>
-    <string name="forums_access_target_hint">Entitets-ID, @gruppe, * (alle), eller + (medlemmer)</string>
-    <string name="forums_access_level">Nivå</string>
-    <string name="forums_access_level_moderate">Moderer</string>
     <string name="forums_members_search">Filtrer medlemmer</string>
     <string name="forums_banner_description">Markdown vises øverst i forumet.</string>
     <string name="forums_banner_placeholder">Skriv inn bannertekst (markdown støttes)…</string>
-    <string name="forums_ai_mode_label">Modus: %1$s</string>
-    <string name="forums_ai_mode_heading">AI-modus</string>
     <string name="forums_ai_mode_off">Deaktivert</string>
-    <string name="forums_ai_account">KI-konto</string>
-    <string name="forums_ai_prompt_tag">Ledetekst for etikettering</string>
-    <string name="forums_ai_prompt_score">Ledetekst for poenggivning</string>
-    <string name="forums_ai_post_prompt_label">Ledetekst for innleggsetiketter</string>
-    <string name="forums_ai_comment_prompt_label">Ledetekst for kommentaretiketter</string>
-    <string name="forums_settings_fingerprint">Fingeravtrykk: %1$s</string>
-    <string name="forums_settings_clear_notifications">Fjern varsler</string>
     <string name="forums_moderation_queue_empty">Ingenting venter</string>
     <string name="forums_moderation_report_details">Detaljer: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Løst av %1$s – %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Svarer til %1$s</string>
     <string name="forums_comment_clear_reply">Fjern svar</string>
     <string name="forums_settings_title">Innstillinger for %1$s</string>
-    <string name="forums_settings_rename_label">Forumnavn</string>
-    <string name="forums_settings_danger_zone">Faresone</string>
     <string name="forums_settings_delete_message">Dette vil slette forumet og alle innleggene permanent. Dette kan ikke angres.</string>
 
-    <string name="forums_tag_interest_up">Øk interesse</string>
-    <string name="forums_tag_interest_down">Reduser interesse</string>
-    <string name="forums_tag_interest_remove">Fjern interesse</string>
     <string name="forums_access_tab_users">Brukere</string>
     <string name="forums_access_tab_groups">Grupper</string>
-    <string name="forums_access_tab_manual">Manuell</string>
     <string name="forums_access_search_users">Søk i brukere</string>
     <string name="forums_access_no_groups">Ingen grupper tilgjengelig</string>
     <string name="forums_saved_title">Lagrede</string>

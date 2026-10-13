@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">ნაჩვენები სახელი</string>
-    <string name="forums_auth_verification_failed">დადასტურება ვერ მოხერხდა</string>
     <string name="forums_list_title">ფორუმები</string>
     <string name="forums_list_find">ფორუმების ძიება</string>
     <string name="forums_list_unsubscribe">გამოწერის შეწყვეტა</string>
     <string name="forums_list_unsubscribe_title">გამოწერის შეწყვეტა</string>
     <string name="forums_create_title">ფორუმის შექმნა</string>
     <string name="forums_create_name">ფორუმის სახელი</string>
-    <string name="forums_create_privacy">კონფიდენციალურობა</string>
-    <string name="forums_create_private">პირადი</string>
-    <string name="forums_create_public">საჯარო</string>
     <string name="forums_create_action">ფორუმის შექმნა</string>
     <string name="forums_find_title">ფორუმების ძიება</string>
     <string name="forums_find_recommended">რეკომენდებული</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">გამოქვეყნება</string>
     <string name="forums_post_edit">პოსტის რედაქტირება</string>
     <string name="forums_post_edit_title">პოსტის რედაქტირება</string>
-    <string name="forums_post_edit_title_field">სათაური</string>
-    <string name="forums_post_save">შენახვა</string>
     <string name="forums_post_delete">პოსტის წაშლა</string>
     <string name="forums_post_delete_title">პოსტის წაშლა</string>
     <string name="forums_post_locked">დაბლოკილი</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">წევრები</string>
     <string name="forums_tab_banner">ბანერი</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">მომხმარებელი ან ჯგუფი</string>
-    <string name="forums_access_level_view">ნახვა</string>
-    <string name="forums_access_level_vote">ხმის მიცემა</string>
-    <string name="forums_access_level_comment">კომენტირება</string>
-    <string name="forums_access_level_post">გამოქვეყნება</string>
-    <string name="forums_access_level_none">არცერთი</string>
     <string name="forums_members_empty">წევრები არ არის</string>
     <string name="forums_banner_dismiss">ბანერის უარყოფა</string>
     <string name="forums_ai_mode_tag">ტეგების მინიჭება</string>
     <string name="forums_ai_account_default">ნაგულისხმევი ანგარიში</string>
-    <string name="forums_ai_prompt_reset">ნაგულისხმევზე გადაყენება</string>
     <string name="forums_settings_unsubscribe">გამოწერის შეწყვეტა</string>
     <string name="forums_moderation_title">მოდერაცია</string>
     <string name="forums_moderation_tab_queue">რიგი</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">თემის გარეთ</string>
     <string name="forums_report_reason_other">სხვა</string>
     <string name="forums_post_default_author">მომხმარებელი</string>
-    <string name="forums_comments">კომენტარები</string>
     <string name="forums_no_comments">კომენტარები ჯერ არ არის</string>
-    <string name="forums_comment_save">შენახვა</string>
     <string name="forums_comment_edit">კომენტარის რედაქტირება</string>
     <string name="forums_comment_edit_title">კომენტარის რედაქტირება</string>
-    <string name="forums_comment_edit_attach">ფაილების მიმაგრება</string>
     <string name="forums_comment_delete">კომენტარის წაშლა</string>
     <string name="forums_comment_delete_title">კომენტარის წაშლა</string>
     <string name="forums_comment_reply">პასუხი</string>
-    <string name="forums_settings_rename">სახელის შეცვლა</string>
-    <string name="forums_settings_save">შენახვა</string>
     <string name="forums_settings_delete">ფორუმის წაშლა</string>
     <string name="forums_settings_delete_title">ფორუმის წაშლა</string>
     <string name="forums_forum_not_found">ფორუმი ვერ მოიძებნა</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">გაგზავნა</string>
     <string name="forums_post_body_field">შინაარსი</string>
-    <string name="forums_post_edit_body_field">შინაარსი</string>
     <string name="forums_comment_edit_body_field">შინაარსი</string>
-    <string name="forums_tag_clear">ფილტრის გასუფთავება</string>
-    <string name="forums_post_tag_add">ტეგის დამატება</string>
     <string name="forums_write_comment">დაწერეთ კომენტარი…</string>
-    <string name="forums_auth_login_failed">შესვლა ვერ მოხერხდა</string>
 
     <string name="notification_channel_forums">ფორუმის შეტყობინებები</string>
-    <string name="forums_auth_brand">Mochi ფორუმები</string>
-    <string name="forums_auth_create_identity_failed">იდენტობის შექმნა ვერ მოხერხდა</string>
-    <string name="forums_auth_mfa_unsupported">MFA ჯერ არ არის მხარდაჭერილი მობილურ აპში</string>
-    <string name="forums_auth_enter_code_sent">შეიყვანეთ კოდი, რომელიც გაიგზავნა მისამართზე %1$s</string>
-    <string name="forums_auth_create_identity">შექმენით თქვენი იდენტობა</string>
     <string name="forums_list_empty">ფორუმები ჯერ არ არის</string>
     <string name="forums_list_unsubscribe_message">ნამდვილად გსურთ ამ ფორუმის გამოწერის შეწყვეტა?</string>
     <string name="forums_find_search_placeholder">მოძებნეთ ფორუმები ან ჩასვით URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">ხმის მიცემა მოწინააღმდეგე</string>
     <string name="forums_post_quote">ციტირება პასუხში</string>
     <string name="forums_comment_quote">ციტირება პასუხში</string>
-    <string name="forums_post_tag_remove">ტეგის წაშლა</string>
     <string name="forums_access_add">წვდომის წესის დამატება</string>
     <string name="forums_access_empty">წესები ჯერ არ არის — გამოიყენება ნაგულისხმევი</string>
-    <string name="forums_access_target_hint">ერთეულის ID, @ჯგუფი, * (ყველა) ან + (წევრები)</string>
-    <string name="forums_access_level">დონე</string>
-    <string name="forums_access_level_moderate">მოდერაცია</string>
     <string name="forums_members_search">წევრების ფილტრი</string>
     <string name="forums_banner_description">Markdown, რომელიც ნაჩვენებია ფორუმის თავში.</string>
     <string name="forums_banner_placeholder">შეიყვანეთ ბანერის ტექსტი (მხარდაჭერილია Markdown)…</string>
-    <string name="forums_ai_mode_label">რეჟიმი: %1$s</string>
-    <string name="forums_ai_mode_heading">AI რეჟიმი</string>
     <string name="forums_ai_mode_off">გათიშულია</string>
-    <string name="forums_ai_account">AI ანგარიში</string>
-    <string name="forums_ai_prompt_tag">ტეგირების მოთხოვნა</string>
-    <string name="forums_ai_prompt_score">შეფასების მოთხოვნა</string>
-    <string name="forums_ai_post_prompt_label">მოთხოვნა პოსტის ტეგებისთვის</string>
-    <string name="forums_ai_comment_prompt_label">მოთხოვნა კომენტარის ტეგებისთვის</string>
-    <string name="forums_settings_fingerprint">ანაბეჭდი: %1$s</string>
-    <string name="forums_settings_clear_notifications">შეტყობინებების გასუფთავება</string>
     <string name="forums_moderation_queue_empty">მოლოდინში არაფერია</string>
     <string name="forums_moderation_report_details">დეტალები: %1$s</string>
     <string name="forums_moderation_report_resolved_by">გადაჭრა %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">პასუხი %1$s-ს</string>
     <string name="forums_comment_clear_reply">პასუხის გასუფთავება</string>
     <string name="forums_settings_title">%1$s-ის პარამეტრები</string>
-    <string name="forums_settings_rename_label">ფორუმის სახელი</string>
-    <string name="forums_settings_danger_zone">სახიფათო ზონა</string>
     <string name="forums_settings_delete_message">ეს სამუდამოდ წაშლის ფორუმს და მის ყველა პოსტს. ეს ქმედება შეუქცევადია.</string>
 
-    <string name="forums_tag_interest_up">ინტერესის გაძლიერება</string>
-    <string name="forums_tag_interest_down">ინტერესის შემცირება</string>
-    <string name="forums_tag_interest_remove">ინტერესის წაშლა</string>
     <string name="forums_access_tab_users">მომხმარებლები</string>
     <string name="forums_access_tab_groups">ჯგუფები</string>
-    <string name="forums_access_tab_manual">ხელით</string>
     <string name="forums_access_search_users">მომხმარებლების ძიება</string>
     <string name="forums_access_no_groups">ხელმისაწვდომი ჯგუფები არ არის</string>
     <string name="forums_saved_title">შენახული</string>

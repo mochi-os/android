@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Anfon neges</string>
     <string name="people_contacts_no_people_found">Heb ddod o hyd i bobl</string>
     <string name="people_contacts_try_adjusting">Ceisiwch addasu eich chwiliad</string>
-    <string name="people_contact_section_address">Cyfeiriad</string>
     <string name="people_contact_section_detail">Manylion</string>
     <string name="people_contact_name">Enw</string>
     <string name="people_contact_email">E-bost</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Ailenwi</string>
     <string name="people_contacts_sort_name">Enw</string>
     <string name="people_contacts_sort_recent">Ychwanegwyd yn ddiweddar</string>
-    <string name="people_contacts_thats_you">Chi yw hwnna</string>
     <string name="people_contacts_try_different_search">Rhowch gynnig ar derm chwilio gwahanol</string>
     <string name="people_contacts_unfriend">Tynnu ffrind</string>
     <string name="people_add_contact_search_placeholder">Teipiwch i chwilio…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Heb ddod o hyd i gysylltiadau</string>
     <string name="people_contacts_add_to_start">Ychwanegwch gysylltiadau i ddechrau cysylltu</string>
     <string name="people_contacts_actions">Gweithredoedd cysylltiad</string>
-    <string name="people_contacts_friend">Ffrind</string>
     <string name="people_contacts_invite">Gwahodd</string>
     <string name="people_contacts_unfriend_confirm">Ni fydd %1$s yn ffrind i chi mwyach. Mae\'r cysylltiad yn aros yn eich llyfr cyfeiriadau.</string>
     <string name="people_contacts_delete">Dileu cyswllt</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Mae\'r cysylltiad wedi newid</string>
     <string name="people_add_contact_title">Ychwanegu cyswllt</string>
     <string name="people_add_contact_add">Ychwanegu at gysylltiadau</string>
-    <string name="people_add_contact_in_contacts">Yn y cysylltiadau</string>
     <string name="people_books_create">Creu llyfr cyfeiriadau</string>
     <string name="people_books_delete">Dileu\'r llyfr cyfeiriadau</string>
     <plurals name="people_books_delete_confirm">

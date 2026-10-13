@@ -19,7 +19,6 @@
     <string name="crm_link">Link</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Exportul nu a putut fi salvat</string>
-    <string name="crm_sort_direction">Direcție</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Creat</string>
     <string name="crm_sort_updated">Actualizat</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Adaugă clasă</string>
     <string name="crm_classes_create">Creează</string>
     <string name="crm_class_name">Nume</string>
-    <string name="crm_class_save_name">Salvează numele</string>
     <string name="crm_class_title_field">Câmp titlu</string>
     <string name="crm_class_fields">Câmpuri</string>
     <string name="crm_class_add_field">Adaugă câmp</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Obligatoriu</string>
     <string name="crm_field_position_default">Implicit</string>
     <string name="crm_field_position_sidebar">Bară laterală</string>
-    <string name="crm_field_save">Salvează modificările</string>
     <string name="crm_field_options">Opțiuni</string>
     <string name="crm_field_add_option">Adaugă opțiune</string>
     <string name="crm_field_delete">Șterge câmpul</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Căutați CRM</string>
     <string name="crm_list_no_matching">Niciun CRM care să corespundă</string>
     <string name="crm_list_empty">Încă niciun CRM</string>
-    <string name="crm_create_template">Șablon</string>
     <string name="crm_find_search_placeholder">Căutați CRM sau lipiți URL</string>
     <string name="crm_find_search_hint">Căutați CRM la care să vă abonați</string>
     <string name="crm_create_object_parent_none">(niciunul)</string>

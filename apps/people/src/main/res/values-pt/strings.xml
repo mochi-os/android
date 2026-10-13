@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Enviar mensagem</string>
     <string name="people_contacts_no_people_found">Nenhuma pessoa encontrada</string>
     <string name="people_contacts_try_adjusting">Experimente ajustar a sua pesquisa</string>
-    <string name="people_contact_section_address">Endereço</string>
     <string name="people_contact_section_detail">Detalhes</string>
     <string name="people_contact_name">Nome</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Renomear</string>
     <string name="people_contacts_sort_name">Nome</string>
     <string name="people_contacts_sort_recent">Adicionado recentemente</string>
-    <string name="people_contacts_thats_you">Esse és tu</string>
     <string name="people_contacts_try_different_search">Tenta um termo de pesquisa diferente</string>
     <string name="people_contacts_unfriend">Remover amigo</string>
     <string name="people_add_contact_search_placeholder">Escreva para pesquisar…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Não foram encontrados contactos</string>
     <string name="people_contacts_add_to_start">Adicione contactos para começar a ligar-se</string>
     <string name="people_contacts_actions">Ações do contacto</string>
-    <string name="people_contacts_friend">Amigo</string>
     <string name="people_contacts_invite">Convidar</string>
     <string name="people_contacts_unfriend_confirm">%1$s deixará de ser seu amigo. O contacto permanece no seu livro de endereços.</string>
     <string name="people_contacts_delete">Eliminar contacto</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">O contacto mudou</string>
     <string name="people_add_contact_title">Adicionar contacto</string>
     <string name="people_add_contact_add">Adicionar aos contactos</string>
-    <string name="people_add_contact_in_contacts">Nos contactos</string>
     <string name="people_books_create">Criar livro de endereços</string>
     <string name="people_books_delete">Eliminar livro de endereços</string>
     <plurals name="people_books_delete_confirm">

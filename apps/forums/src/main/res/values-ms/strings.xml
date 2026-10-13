@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Nama paparan</string>
-    <string name="forums_auth_verification_failed">Pengesahan gagal</string>
     <string name="forums_list_title">Forum</string>
     <string name="forums_list_find">Cari forum</string>
     <string name="forums_list_unsubscribe">Berhenti melanggan</string>
     <string name="forums_list_unsubscribe_title">Berhenti melanggan</string>
     <string name="forums_create_title">Cipta forum</string>
     <string name="forums_create_name">Nama forum</string>
-    <string name="forums_create_privacy">Privasi</string>
-    <string name="forums_create_private">Peribadi</string>
-    <string name="forums_create_public">Awam</string>
     <string name="forums_create_action">Cipta forum</string>
     <string name="forums_find_title">Cari forum</string>
     <string name="forums_find_recommended">Disyorkan</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Hantar</string>
     <string name="forums_post_edit">Edit catatan</string>
     <string name="forums_post_edit_title">Edit catatan</string>
-    <string name="forums_post_edit_title_field">Tajuk</string>
-    <string name="forums_post_save">Simpan</string>
     <string name="forums_post_delete">Padam pos</string>
     <string name="forums_post_delete_title">Padam pos</string>
     <string name="forums_post_locked">Dikunci</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Ahli</string>
     <string name="forums_tab_banner">Sepanduk</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Pengguna atau kumpulan</string>
-    <string name="forums_access_level_view">Lihat</string>
-    <string name="forums_access_level_vote">Undi</string>
-    <string name="forums_access_level_comment">Komen</string>
-    <string name="forums_access_level_post">Hantar</string>
-    <string name="forums_access_level_none">Tiada</string>
     <string name="forums_members_empty">Tiada ahli</string>
     <string name="forums_banner_dismiss">Tutup sepanduk</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Akaun lalai</string>
-    <string name="forums_ai_prompt_reset">Tetapkan semula kepada lalai</string>
     <string name="forums_settings_unsubscribe">Berhenti melanggan</string>
     <string name="forums_moderation_title">Moderasi</string>
     <string name="forums_moderation_tab_queue">Baris</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Di luar topik</string>
     <string name="forums_report_reason_other">Lain-lain</string>
     <string name="forums_post_default_author">Pengguna</string>
-    <string name="forums_comments">Komen</string>
     <string name="forums_no_comments">Tiada komen lagi</string>
-    <string name="forums_comment_save">Simpan</string>
     <string name="forums_comment_edit">Edit komen</string>
     <string name="forums_comment_edit_title">Edit komen</string>
-    <string name="forums_comment_edit_attach">Lampirkan fail</string>
     <string name="forums_comment_delete">Padam komen</string>
     <string name="forums_comment_delete_title">Padam komen</string>
     <string name="forums_comment_reply">Balas</string>
-    <string name="forums_settings_rename">Namakan semula</string>
-    <string name="forums_settings_save">Simpan</string>
     <string name="forums_settings_delete">Padam forum</string>
     <string name="forums_settings_delete_title">Padam forum</string>
     <string name="forums_forum_not_found">Forum tidak ditemui</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Hantar</string>
     <string name="forums_post_body_field">Kandungan</string>
-    <string name="forums_post_edit_body_field">Kandungan</string>
     <string name="forums_comment_edit_body_field">Kandungan</string>
-    <string name="forums_tag_clear">Kosongkan penapis</string>
-    <string name="forums_post_tag_add">Tambah tag</string>
     <string name="forums_write_comment">Tulis komen…</string>
-    <string name="forums_auth_login_failed">Log masuk gagal</string>
 
     <string name="notification_channel_forums">Pemberitahuan forum</string>
-    <string name="forums_auth_brand">Mochi Forum</string>
-    <string name="forums_auth_create_identity_failed">Gagal mencipta identiti</string>
-    <string name="forums_auth_mfa_unsupported">MFA belum disokong dalam aplikasi mudah alih</string>
-    <string name="forums_auth_enter_code_sent">Masukkan kod yang dihantar ke %1$s</string>
-    <string name="forums_auth_create_identity">Cipta identiti anda</string>
     <string name="forums_list_empty">Belum ada forum</string>
     <string name="forums_list_unsubscribe_message">Adakah anda pasti mahu berhenti melanggan forum ini?</string>
     <string name="forums_find_search_placeholder">Cari forum atau tampal URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Undi turun</string>
     <string name="forums_post_quote">Petik dalam balasan</string>
     <string name="forums_comment_quote">Petik dalam balasan</string>
-    <string name="forums_post_tag_remove">Buang tag</string>
     <string name="forums_access_add">Tambah peraturan akses</string>
     <string name="forums_access_empty">Belum ada peraturan — lalai digunakan</string>
-    <string name="forums_access_target_hint">ID entiti, @kumpulan, * (semua orang), atau + (ahli)</string>
-    <string name="forums_access_level">Tahap</string>
-    <string name="forums_access_level_moderate">Sederhana</string>
     <string name="forums_members_search">Tapis ahli</string>
     <string name="forums_banner_description">Markdown yang dipaparkan di bahagian atas forum.</string>
     <string name="forums_banner_placeholder">Masukkan teks sepanduk (markdown disokong)…</string>
-    <string name="forums_ai_mode_label">Mod: %1$s</string>
-    <string name="forums_ai_mode_heading">Mod AI</string>
     <string name="forums_ai_mode_off">Dilumpuhkan</string>
-    <string name="forums_ai_account">Akaun AI</string>
-    <string name="forums_ai_prompt_tag">Gesaan penandaan</string>
-    <string name="forums_ai_prompt_score">Gesaan pemarkahan</string>
-    <string name="forums_ai_post_prompt_label">Gesaan untuk tag hantaran</string>
-    <string name="forums_ai_comment_prompt_label">Gesaan untuk tag komen</string>
-    <string name="forums_settings_fingerprint">Cap jari: %1$s</string>
-    <string name="forums_settings_clear_notifications">Kosongkan pemberitahuan</string>
     <string name="forums_moderation_queue_empty">Tiada yang menunggu</string>
     <string name="forums_moderation_report_details">Butiran: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Diselesaikan oleh %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Membalas kepada %1$s</string>
     <string name="forums_comment_clear_reply">Kosongkan balasan</string>
     <string name="forums_settings_title">Tetapan %1$s</string>
-    <string name="forums_settings_rename_label">Nama forum</string>
-    <string name="forums_settings_danger_zone">Zon bahaya</string>
     <string name="forums_settings_delete_message">Ini akan memadamkan forum dan semua hantarannya secara kekal. Tindakan ini tidak boleh dibatalkan.</string>
 
-    <string name="forums_tag_interest_up">Tingkatkan minat</string>
-    <string name="forums_tag_interest_down">Kurangkan minat</string>
-    <string name="forums_tag_interest_remove">Alih keluar minat</string>
     <string name="forums_access_tab_users">Pengguna</string>
     <string name="forums_access_tab_groups">Kumpulan</string>
-    <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Cari pengguna</string>
     <string name="forums_access_no_groups">Tiada kumpulan tersedia</string>
     <string name="forums_saved_title">Disimpan</string>

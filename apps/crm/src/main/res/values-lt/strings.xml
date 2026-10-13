@@ -19,7 +19,6 @@
     <string name="crm_link">Nuoroda</string>
     <string name="crm_design">Dizainas</string>
     <string name="crm_export_failed">Nepavyko išsaugoti eksporto</string>
-    <string name="crm_sort_direction">Kryptis</string>
     <string name="crm_sort_rank">Rankinis</string>
     <string name="crm_sort_created">Sukurta</string>
     <string name="crm_sort_updated">Atnaujinta</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Pridėti klasę</string>
     <string name="crm_classes_create">Sukurti</string>
     <string name="crm_class_name">Pavadinimas</string>
-    <string name="crm_class_save_name">Išsaugoti pavadinimą</string>
     <string name="crm_class_title_field">Pavadinimo laukas</string>
     <string name="crm_class_fields">Laukai</string>
     <string name="crm_class_add_field">Pridėti lauką</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Privaloma</string>
     <string name="crm_field_position_default">Numatytasis</string>
     <string name="crm_field_position_sidebar">Šoninė juosta</string>
-    <string name="crm_field_save">Išsaugoti pakeitimus</string>
     <string name="crm_field_options">Parinktys</string>
     <string name="crm_field_add_option">Pridėti parinktį</string>
     <string name="crm_field_delete">Ištrinti lauką</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Ieškoti CRM</string>
     <string name="crm_list_no_matching">Atitinkančių CRM nėra</string>
     <string name="crm_list_empty">CRM dar nėra</string>
-    <string name="crm_create_template">Šablonas</string>
     <string name="crm_find_search_placeholder">Ieškoti CRM arba įklijuoti URL</string>
     <string name="crm_find_search_hint">Ieškokite CRM, kurią prenumeruoti</string>
     <string name="crm_create_object_parent_none">(nėra)</string>

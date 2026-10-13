@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">ชื่อที่แสดง</string>
-    <string name="forums_auth_verification_failed">การยืนยันไม่สำเร็จ</string>
     <string name="forums_list_title">ฟอรัม</string>
     <string name="forums_list_find">ค้นหาฟอรัม</string>
     <string name="forums_list_unsubscribe">เลิกติดตาม</string>
     <string name="forums_list_unsubscribe_title">เลิกติดตาม</string>
     <string name="forums_create_title">สร้างฟอรัม</string>
     <string name="forums_create_name">ชื่อฟอรัม</string>
-    <string name="forums_create_privacy">ความเป็นส่วนตัว</string>
-    <string name="forums_create_private">ส่วนตัว</string>
-    <string name="forums_create_public">สาธารณะ</string>
     <string name="forums_create_action">สร้างฟอรัม</string>
     <string name="forums_find_title">ค้นหาฟอรัม</string>
     <string name="forums_find_recommended">แนะนำ</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">โพสต์</string>
     <string name="forums_post_edit">แก้ไขโพสต์</string>
     <string name="forums_post_edit_title">แก้ไขโพสต์</string>
-    <string name="forums_post_edit_title_field">ชื่อ</string>
-    <string name="forums_post_save">บันทึก</string>
     <string name="forums_post_delete">ลบโพสต์</string>
     <string name="forums_post_delete_title">ลบโพสต์</string>
     <string name="forums_post_locked">ล็อกแล้ว</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">สมาชิก</string>
     <string name="forums_tab_banner">แบนเนอร์</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">ผู้ใช้หรือกลุ่ม</string>
-    <string name="forums_access_level_view">ดู</string>
-    <string name="forums_access_level_vote">โหวต</string>
-    <string name="forums_access_level_comment">แสดงความคิดเห็น</string>
-    <string name="forums_access_level_post">โพสต์</string>
-    <string name="forums_access_level_none">ไม่มี</string>
     <string name="forums_members_empty">ไม่มีสมาชิก</string>
     <string name="forums_banner_dismiss">ปิดแบนเนอร์</string>
     <string name="forums_ai_mode_tag">แท็ก</string>
     <string name="forums_ai_account_default">บัญชีเริ่มต้น</string>
-    <string name="forums_ai_prompt_reset">รีเซ็ตเป็นค่าเริ่มต้น</string>
     <string name="forums_settings_unsubscribe">เลิกติดตาม</string>
     <string name="forums_moderation_title">การกลั่นกรอง</string>
     <string name="forums_moderation_tab_queue">คิว</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">นอกเรื่อง</string>
     <string name="forums_report_reason_other">อื่น ๆ</string>
     <string name="forums_post_default_author">ผู้ใช้</string>
-    <string name="forums_comments">ความคิดเห็น</string>
     <string name="forums_no_comments">ยังไม่มีความคิดเห็น</string>
-    <string name="forums_comment_save">บันทึก</string>
     <string name="forums_comment_edit">แก้ไขความคิดเห็น</string>
     <string name="forums_comment_edit_title">แก้ไขความคิดเห็น</string>
-    <string name="forums_comment_edit_attach">แนบไฟล์</string>
     <string name="forums_comment_delete">ลบความคิดเห็น</string>
     <string name="forums_comment_delete_title">ลบความคิดเห็น</string>
     <string name="forums_comment_reply">ตอบกลับ</string>
-    <string name="forums_settings_rename">เปลี่ยนชื่อ</string>
-    <string name="forums_settings_save">บันทึก</string>
     <string name="forums_settings_delete">ลบฟอรัม</string>
     <string name="forums_settings_delete_title">ลบฟอรัม</string>
     <string name="forums_forum_not_found">ไม่พบฟอรัม</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">ส่ง</string>
     <string name="forums_post_body_field">เนื้อหา</string>
-    <string name="forums_post_edit_body_field">เนื้อหา</string>
     <string name="forums_comment_edit_body_field">เนื้อหา</string>
-    <string name="forums_tag_clear">ล้างตัวกรอง</string>
-    <string name="forums_post_tag_add">เพิ่มแท็ก</string>
     <string name="forums_write_comment">เขียนความคิดเห็น…</string>
-    <string name="forums_auth_login_failed">เข้าสู่ระบบล้มเหลว</string>
 
     <string name="notification_channel_forums">การแจ้งเตือนฟอรัม</string>
-    <string name="forums_auth_brand">Mochi ฟอรัม</string>
-    <string name="forums_auth_create_identity_failed">สร้างตัวตนไม่สำเร็จ</string>
-    <string name="forums_auth_mfa_unsupported">ยังไม่รองรับ MFA ในแอปมือถือ</string>
-    <string name="forums_auth_enter_code_sent">ป้อนรหัสที่ส่งไปยัง %1$s</string>
-    <string name="forums_auth_create_identity">สร้างตัวตนของคุณ</string>
     <string name="forums_list_empty">ยังไม่มีฟอรัม</string>
     <string name="forums_list_unsubscribe_message">คุณแน่ใจหรือไม่ว่าต้องการเลิกติดตามฟอรัมนี้?</string>
     <string name="forums_find_search_placeholder">ค้นหาฟอรัมหรือวาง URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">โหวตลง</string>
     <string name="forums_post_quote">อ้างอิงในการตอบกลับ</string>
     <string name="forums_comment_quote">อ้างอิงในการตอบกลับ</string>
-    <string name="forums_post_tag_remove">ลบแท็ก</string>
     <string name="forums_access_add">เพิ่มกฎการเข้าถึง</string>
     <string name="forums_access_empty">ยังไม่มีกฎ — ใช้ค่าเริ่มต้น</string>
-    <string name="forums_access_target_hint">รหัสเอนทิตี, @กลุ่ม, * (ทุกคน), หรือ + (สมาชิก)</string>
-    <string name="forums_access_level">ระดับ</string>
-    <string name="forums_access_level_moderate">ดูแล</string>
     <string name="forums_members_search">กรองสมาชิก</string>
     <string name="forums_banner_description">Markdown ที่แสดงด้านบนของฟอรัม</string>
     <string name="forums_banner_placeholder">ป้อนข้อความแบนเนอร์ (รองรับ Markdown)…</string>
-    <string name="forums_ai_mode_label">โหมด: %1$s</string>
-    <string name="forums_ai_mode_heading">โหมด AI</string>
     <string name="forums_ai_mode_off">ปิดใช้งานแล้ว</string>
-    <string name="forums_ai_account">บัญชี AI</string>
-    <string name="forums_ai_prompt_tag">พรอมต์การติดแท็ก</string>
-    <string name="forums_ai_prompt_score">พรอมต์การให้คะแนน</string>
-    <string name="forums_ai_post_prompt_label">พรอมต์สำหรับแท็กโพสต์</string>
-    <string name="forums_ai_comment_prompt_label">พรอมต์สำหรับแท็กความคิดเห็น</string>
-    <string name="forums_settings_fingerprint">ลายนิ้วมือ: %1$s</string>
-    <string name="forums_settings_clear_notifications">ล้างการแจ้งเตือน</string>
     <string name="forums_moderation_queue_empty">ไม่มีรายการที่รอดำเนินการ</string>
     <string name="forums_moderation_report_details">รายละเอียด: %1$s</string>
     <string name="forums_moderation_report_resolved_by">แก้ไขโดย %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">กำลังตอบกลับ %1$s</string>
     <string name="forums_comment_clear_reply">ล้างการตอบกลับ</string>
     <string name="forums_settings_title">การตั้งค่า %1$s</string>
-    <string name="forums_settings_rename_label">ชื่อฟอรัม</string>
-    <string name="forums_settings_danger_zone">เขตอันตราย</string>
     <string name="forums_settings_delete_message">การกระทำนี้จะลบฟอรัมและโพสต์ทั้งหมดอย่างถาวร การกระทำนี้ไม่สามารถยกเลิกได้</string>
 
-    <string name="forums_tag_interest_up">เพิ่มความสนใจ</string>
-    <string name="forums_tag_interest_down">ลดความสนใจ</string>
-    <string name="forums_tag_interest_remove">ลบความสนใจ</string>
     <string name="forums_access_tab_users">ผู้ใช้</string>
     <string name="forums_access_tab_groups">กลุ่ม</string>
-    <string name="forums_access_tab_manual">ด้วยตนเอง</string>
     <string name="forums_access_search_users">ค้นหาผู้ใช้</string>
     <string name="forums_access_no_groups">ไม่มีกลุ่มที่ใช้งานได้</string>
     <string name="forums_saved_title">รายการที่บันทึก</string>

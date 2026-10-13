@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">الشطرنج</string>
-    <string name="chess_sidebar_header">الشطرنج</string>
     <string name="chess_sidebar_active">الألعاب النشطة</string>
     <string name="chess_sidebar_completed">مكتمل</string>
     <string name="chess_sidebar_new_game">لعبة جديدة</string>
-    <string name="chess_section_active">الألعاب النشطة</string>
-    <string name="chess_section_completed">مكتمل</string>
-    <string name="chess_new_game">لعبة جديدة</string>
     <string name="chess_empty_title">لا توجد ألعاب بعد</string>
     <string name="chess_new_title">لعبة جديدة</string>
     <string name="chess_new_pick_opponent">اختر الخصم</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">تزيل اللعبة من قائمتك.</string>
     <string name="chess_delete_title">حذف اللعبة؟</string>
     <string name="chess_detail_unavailable">اللعبة غير متاحة</string>
-    <string name="chess_empty_start_button">ابدأ لعبتك الأولى</string>
-    <string name="chess_empty_subtitle">ابدأ لعبتك الأولى للعب الشطرنج مع صديق.</string>
     <string name="chess_move_capture">%1$s أخذ %2$s</string>
     <string name="chess_open_sidebar">فتح الشريط الجانبي</string>
     <string name="chess_ws_connecting">جارٍ الاتصال…</string>

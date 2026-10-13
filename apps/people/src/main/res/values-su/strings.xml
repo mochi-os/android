@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Kirim pesen</string>
     <string name="people_contacts_no_people_found">Teu manggih jalma</string>
     <string name="people_contacts_try_adjusting">Cobian luyukeun pamilarian anjeun</string>
-    <string name="people_contact_section_address">Alamat</string>
     <string name="people_contact_section_detail">Détil</string>
     <string name="people_contact_name">Ngaran</string>
     <string name="people_contact_email">Surélék</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Ganti ngaran</string>
     <string name="people_contacts_sort_name">Ngaran</string>
     <string name="people_contacts_sort_recent">Nembé ditambahkeun</string>
-    <string name="people_contacts_thats_you">Éta anjeun</string>
     <string name="people_contacts_try_different_search">Cobian istilah pamilarian sanésna</string>
     <string name="people_contacts_unfriend">Cabut babaturan</string>
     <string name="people_add_contact_search_placeholder">Ketik pikeun néangan…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Teu aya kontak kapendak</string>
     <string name="people_contacts_add_to_start">Tambihkeun kontak pikeun ngamimitian nyambung</string>
     <string name="people_contacts_actions">Tindakan kontak</string>
-    <string name="people_contacts_friend">Babaturan</string>
     <string name="people_contacts_invite">Ondang</string>
     <string name="people_contacts_unfriend_confirm">%1$s moal jadi babaturan anjeun deui. Kontak tetep aya dina buku alamat anjeun.</string>
     <string name="people_contacts_delete">Hapus kontak</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontak robah</string>
     <string name="people_add_contact_title">Tambah kontak</string>
     <string name="people_add_contact_add">Tambihkeun kana kontak</string>
-    <string name="people_add_contact_in_contacts">Aya dina kontak</string>
     <string name="people_books_create">Jieun buku alamat</string>
     <string name="people_books_delete">Pupus buku alamat</string>
     <plurals name="people_books_delete_confirm">

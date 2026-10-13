@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Ajedrez</string>
-    <string name="chess_sidebar_header">Ajedrez</string>
     <string name="chess_sidebar_active">Kawsachkan pukllaykuna</string>
     <string name="chess_sidebar_completed">Tukusqa</string>
     <string name="chess_sidebar_new_game">Musuq pukllay</string>
-    <string name="chess_section_active">Kawsachkan pukllaykuna</string>
-    <string name="chess_section_completed">Tukusqa</string>
-    <string name="chess_new_game">Musuq pukllay</string>
     <string name="chess_empty_title">Manaraq pukllaykuna kanchu</string>
     <string name="chess_new_title">Musuq pukllay</string>
     <string name="chess_new_pick_opponent">Awqata akllay</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Ajedrez willaykuna</string>
     <string name="chess_channel_description">Ajedrez kuyuykunamanta, empate qoykunamanta hinaspa pukllay tukukuykunamanta willaykuna.</string>
     <string name="chess_open_sidebar">Waqta barrata kichay</string>
-    <string name="chess_empty_subtitle">Masiykiwan ajedrez pukllanaykipaq ñawpaq pukllayniykita qallariy.</string>
-    <string name="chess_empty_start_button">Ñawpaq pukllayniykita qallariy</string>
     <string name="chess_detail_unavailable">Pukllay mana kapunchu</string>
     <string name="chess_delete_title">¿Pukllayta wischunki?</string>
     <string name="chess_delete_message">Kayqa pukllayta listaykimanta qichun.</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">સંદેશ મોકલો</string>
     <string name="people_contacts_no_people_found">કોઈ લોકો મળ્યા નથી</string>
     <string name="people_contacts_try_adjusting">તમારી શોધને સમાયોજિત કરવાનો પ્રયાસ કરો</string>
-    <string name="people_contact_section_address">સરનામું</string>
     <string name="people_contact_section_detail">વિગતો</string>
     <string name="people_contact_name">નામ</string>
     <string name="people_contact_email">ઇમેઇલ</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">નામ બદલો</string>
     <string name="people_contacts_sort_name">નામ</string>
     <string name="people_contacts_sort_recent">તાજેતરમાં ઉમેરાયેલ</string>
-    <string name="people_contacts_thats_you">એ તમે છો</string>
     <string name="people_contacts_try_different_search">અલગ શોધ શબ્દ અજમાવો</string>
     <string name="people_contacts_unfriend">મિત્ર દૂર કરો</string>
     <string name="people_add_contact_search_placeholder">શોધવા માટે લખો…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">કોઈ સંપર્ક મળ્યો નથી</string>
     <string name="people_contacts_add_to_start">જોડાવા માટે સંપર્કો ઉમેરો</string>
     <string name="people_contacts_actions">સંપર્ક ક્રિયાઓ</string>
-    <string name="people_contacts_friend">મિત્ર</string>
     <string name="people_contacts_invite">આમંત્રણ આપો</string>
     <string name="people_contacts_unfriend_confirm">%1$s હવે તમારા મિત્ર રહેશે નહીં. સંપર્ક તમારી સરનામાં પુસ્તિકામાં રહેશે.</string>
     <string name="people_contacts_delete">સંપર્ક કાઢી નાખો</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">સંપર્ક બદલાયો</string>
     <string name="people_add_contact_title">સંપર્ક ઉમેરો</string>
     <string name="people_add_contact_add">સંપર્કોમાં ઉમેરો</string>
-    <string name="people_add_contact_in_contacts">સંપર્કોમાં</string>
     <string name="people_books_create">સરનામાં પુસ્તિકા બનાવો</string>
     <string name="people_books_delete">સરનામાં પુસ્તિકા કાઢી નાખો</string>
     <plurals name="people_books_delete_confirm">

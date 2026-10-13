@@ -19,7 +19,6 @@
     <string name="crm_link">Geessituu</string>
     <string name="crm_design">Boci</string>
     <string name="crm_export_failed">Alergiinsi olkaa\'amuu hin dandeenye</string>
-    <string name="crm_sort_direction">Kallatti</string>
     <string name="crm_sort_rank">Harkaan</string>
     <string name="crm_sort_created">Uumame</string>
     <string name="crm_sort_updated">Haaromfameera</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Kilaasii dabali</string>
     <string name="crm_classes_create">Uumi</string>
     <string name="crm_class_name">Maqaa</string>
-    <string name="crm_class_save_name">Maqaa olkaa\'i</string>
     <string name="crm_class_title_field">Dirree mata duree</string>
     <string name="crm_class_fields">Dirreewwan</string>
     <string name="crm_class_add_field">Dirree dabali</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Barbaachisaa</string>
     <string name="crm_field_position_default">Idilee</string>
     <string name="crm_field_position_sidebar">Cinaa</string>
-    <string name="crm_field_save">Jijjiiramoota olkaa\'i</string>
     <string name="crm_field_options">Filannoowwan</string>
     <string name="crm_field_add_option">Filannoo dabali</string>
     <string name="crm_field_delete">Dirree haqi</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM barbaadi</string>
     <string name="crm_list_no_matching">CRM walsimu hin jiru</string>
     <string name="crm_list_empty">CRM tokko illee hin jiru</string>
-    <string name="crm_create_template">Aakaa</string>
     <string name="crm_find_search_placeholder">CRM barbaadi yookin URL maxxansi</string>
     <string name="crm_find_search_hint">CRM itti gala kaa\'amuuf barbaadi</string>
     <string name="crm_create_object_parent_none">(homaa)</string>

@@ -50,7 +50,6 @@
     <string name="go_resign_title">Vols abandonar la partida?</string>
     <string name="go_sidebar_completed">Completat</string>
     <string name="go_sidebar_new_game">Joc nou</string>
-    <string name="go_status_draw">Taules</string>
     <string name="go_status_draw_text">Taules</string>
     <string name="go_status_game_over">Partida acabada</string>
     <string name="go_status_opponent_move">Torn de %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Obre la barra lateral</string>
     <string name="go_sidebar_active">Partides actives</string>
     <string name="go_empty_active">Encara no hi ha partides actives.</string>
-    <string name="go_status_resigned">Abandonada</string>
     <string name="go_new_game_title">Nova partida de Go</string>
     <string name="go_new_game_no_friends">Necessites afegir un amic abans de poder començar una partida.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

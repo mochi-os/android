@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Saada sõnum</string>
     <string name="people_contacts_no_people_found">Inimesi ei leitud</string>
     <string name="people_contacts_try_adjusting">Proovi otsingut kohandada</string>
-    <string name="people_contact_section_address">Aadress</string>
     <string name="people_contact_section_detail">Üksikasjad</string>
     <string name="people_contact_name">Nimi</string>
     <string name="people_contact_email">E-post</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Nimeta ümber</string>
     <string name="people_contacts_sort_name">Nimi</string>
     <string name="people_contacts_sort_recent">Hiljuti lisatud</string>
-    <string name="people_contacts_thats_you">See oled sina</string>
     <string name="people_contacts_try_different_search">Proovi teist otsingusõna</string>
     <string name="people_contacts_unfriend">Eemalda sõber</string>
     <string name="people_add_contact_search_placeholder">Otsimiseks kirjuta…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Kontakte ei leitud</string>
     <string name="people_contacts_add_to_start">Lisa kontakte, et suhtlemist alustada</string>
     <string name="people_contacts_actions">Kontakti toimingud</string>
-    <string name="people_contacts_friend">Sõber</string>
     <string name="people_contacts_invite">Kutsu</string>
     <string name="people_contacts_unfriend_confirm">%1$s ei ole enam sinu sõber. Kontakt jääb sinu aadressiraamatusse.</string>
     <string name="people_contacts_delete">Kustuta kontakt</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakt on muutunud</string>
     <string name="people_add_contact_title">Lisa kontakt</string>
     <string name="people_add_contact_add">Lisa kontaktidesse</string>
-    <string name="people_add_contact_in_contacts">Kontaktides</string>
     <string name="people_books_create">Loo aadressiraamat</string>
     <string name="people_books_delete">Kustuta aadressiraamat</string>
     <plurals name="people_books_delete_confirm">

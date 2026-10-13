@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Nome a apresentar</string>
-    <string name="forums_auth_verification_failed">Verificação falhou</string>
     <string name="forums_list_title">Fóruns</string>
     <string name="forums_list_find">Encontrar fóruns</string>
     <string name="forums_list_unsubscribe">Anular subscrição</string>
     <string name="forums_list_unsubscribe_title">Anular subscrição</string>
     <string name="forums_create_title">Criar fórum</string>
     <string name="forums_create_name">Nome do fórum</string>
-    <string name="forums_create_privacy">Privacidade</string>
-    <string name="forums_create_private">Privado</string>
-    <string name="forums_create_public">Público</string>
     <string name="forums_create_action">Criar fórum</string>
     <string name="forums_find_title">Encontrar fóruns</string>
     <string name="forums_find_recommended">Recomendado</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Publicar</string>
     <string name="forums_post_edit">Editar publicação</string>
     <string name="forums_post_edit_title">Editar publicação</string>
-    <string name="forums_post_edit_title_field">Título</string>
-    <string name="forums_post_save">Guardar</string>
     <string name="forums_post_delete">Eliminar publicação</string>
     <string name="forums_post_delete_title">Eliminar publicação</string>
     <string name="forums_post_locked">Bloqueado</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Membros</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Utilizador ou grupo</string>
-    <string name="forums_access_level_view">Ver</string>
-    <string name="forums_access_level_vote">Votar</string>
-    <string name="forums_access_level_comment">Comentar</string>
-    <string name="forums_access_level_post">Publicar</string>
-    <string name="forums_access_level_none">Nenhum</string>
     <string name="forums_members_empty">Sem membros</string>
     <string name="forums_banner_dismiss">Dispensar faixa</string>
     <string name="forums_ai_mode_tag">Etiquetar</string>
     <string name="forums_ai_account_default">Conta predefinida</string>
-    <string name="forums_ai_prompt_reset">Repor predefinição</string>
     <string name="forums_settings_unsubscribe">Anular subscrição</string>
     <string name="forums_moderation_title">Moderação</string>
     <string name="forums_moderation_tab_queue">Fila</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Fora do tópico</string>
     <string name="forums_report_reason_other">Outro</string>
     <string name="forums_post_default_author">Utilizador</string>
-    <string name="forums_comments">Comentários</string>
     <string name="forums_no_comments">Ainda não há comentários</string>
-    <string name="forums_comment_save">Guardar</string>
     <string name="forums_comment_edit">Editar comentário</string>
     <string name="forums_comment_edit_title">Editar comentário</string>
-    <string name="forums_comment_edit_attach">Anexar ficheiros</string>
     <string name="forums_comment_delete">Eliminar comentário</string>
     <string name="forums_comment_delete_title">Eliminar comentário</string>
     <string name="forums_comment_reply">Responder</string>
-    <string name="forums_settings_rename">Renomear</string>
-    <string name="forums_settings_save">Guardar</string>
     <string name="forums_settings_delete">Eliminar fórum</string>
     <string name="forums_settings_delete_title">Eliminar fórum</string>
     <string name="forums_forum_not_found">Fórum não encontrado</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Enviar</string>
     <string name="forums_post_body_field">Conteúdo</string>
-    <string name="forums_post_edit_body_field">Conteúdo</string>
     <string name="forums_comment_edit_body_field">Conteúdo</string>
-    <string name="forums_tag_clear">Limpar filtro</string>
-    <string name="forums_post_tag_add">Adicionar etiqueta</string>
     <string name="forums_write_comment">Escreve um comentário…</string>
-    <string name="forums_auth_login_failed">Início de sessão falhou</string>
 
     <string name="notification_channel_forums">Notificações dos fóruns</string>
-    <string name="forums_auth_brand">Mochi Fóruns</string>
-    <string name="forums_auth_create_identity_failed">Falha ao criar identidade</string>
-    <string name="forums_auth_mfa_unsupported">MFA ainda não é suportado no aplicativo móvel</string>
-    <string name="forums_auth_enter_code_sent">Insira o código enviado para %1$s</string>
-    <string name="forums_auth_create_identity">Crie a sua identidade</string>
     <string name="forums_list_empty">Ainda não há fóruns</string>
     <string name="forums_list_unsubscribe_message">Tem a certeza de que pretende anular a subscrição deste fórum?</string>
     <string name="forums_find_search_placeholder">Pesquisar fóruns ou colar URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Voto negativo</string>
     <string name="forums_post_quote">Citar na resposta</string>
     <string name="forums_comment_quote">Citar na resposta</string>
-    <string name="forums_post_tag_remove">Remover etiqueta</string>
     <string name="forums_access_add">Adicionar regra de acesso</string>
     <string name="forums_access_empty">Ainda não há regras — aplicam-se os padrões</string>
-    <string name="forums_access_target_hint">ID da entidade, @grupo, * (todos) ou + (membros)</string>
-    <string name="forums_access_level">Nível</string>
-    <string name="forums_access_level_moderate">Moderar</string>
     <string name="forums_members_search">Filtrar membros</string>
     <string name="forums_banner_description">Markdown exibido no topo do fórum.</string>
     <string name="forums_banner_placeholder">Introduza o texto do banner (suporta Markdown)…</string>
-    <string name="forums_ai_mode_label">Modo: %1$s</string>
-    <string name="forums_ai_mode_heading">Modo de IA</string>
     <string name="forums_ai_mode_off">Desativado</string>
-    <string name="forums_ai_account">Conta de IA</string>
-    <string name="forums_ai_prompt_tag">Prompt de etiquetagem</string>
-    <string name="forums_ai_prompt_score">Prompt de pontuação</string>
-    <string name="forums_ai_post_prompt_label">Prompt para etiquetas de publicações</string>
-    <string name="forums_ai_comment_prompt_label">Prompt para etiquetas de comentários</string>
-    <string name="forums_settings_fingerprint">Impressão digital: %1$s</string>
-    <string name="forums_settings_clear_notifications">Limpar notificações</string>
     <string name="forums_moderation_queue_empty">Nada pendente</string>
     <string name="forums_moderation_report_details">Detalhes: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Resolvido por %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Respondendo a %1$s</string>
     <string name="forums_comment_clear_reply">Limpar resposta</string>
     <string name="forums_settings_title">Definições de %1$s</string>
-    <string name="forums_settings_rename_label">Nome do fórum</string>
-    <string name="forums_settings_danger_zone">Zona de perigo</string>
     <string name="forums_settings_delete_message">Isto excluirá permanentemente o fórum e todas as suas publicações. Esta ação não pode ser desfeita.</string>
 
-    <string name="forums_tag_interest_up">Reforçar interesse</string>
-    <string name="forums_tag_interest_down">Reduzir interesse</string>
-    <string name="forums_tag_interest_remove">Remover interesse</string>
     <string name="forums_access_tab_users">Utilizadores</string>
     <string name="forums_access_tab_groups">Grupos</string>
-    <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Pesquisar utilizadores</string>
     <string name="forums_access_no_groups">Sem grupos disponíveis</string>
     <string name="forums_saved_title">Guardados</string>

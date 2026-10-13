@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Wyślij wiadomość</string>
     <string name="people_contacts_no_people_found">Nie znaleziono osób</string>
     <string name="people_contacts_try_adjusting">Spróbuj dostosować wyszukiwanie</string>
-    <string name="people_contact_section_address">Adres</string>
     <string name="people_contact_section_detail">Szczegóły</string>
     <string name="people_contact_name">Imię i nazwisko</string>
     <string name="people_contact_email">E-mail</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Zmień nazwę</string>
     <string name="people_contacts_sort_name">Imię i nazwisko</string>
     <string name="people_contacts_sort_recent">Niedawno dodane</string>
-    <string name="people_contacts_thats_you">To ty</string>
     <string name="people_contacts_try_different_search">Spróbuj innego wyrażenia wyszukiwania</string>
     <string name="people_contacts_unfriend">Usuń znajomego</string>
     <string name="people_add_contact_search_placeholder">Wpisz, aby wyszukać…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Nie znaleziono kontaktów</string>
     <string name="people_contacts_add_to_start">Dodaj kontakty, aby zacząć się łączyć</string>
     <string name="people_contacts_actions">Działania kontaktu</string>
-    <string name="people_contacts_friend">Znajomy</string>
     <string name="people_contacts_invite">Zaproś</string>
     <string name="people_contacts_unfriend_confirm">%1$s nie będzie już Twoim znajomym. Kontakt pozostanie w Twojej książce adresowej.</string>
     <string name="people_contacts_delete">Usuń kontakt</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakt uległ zmianie</string>
     <string name="people_add_contact_title">Dodaj kontakt</string>
     <string name="people_add_contact_add">Dodaj do kontaktów</string>
-    <string name="people_add_contact_in_contacts">W kontaktach</string>
     <string name="people_books_create">Utwórz książkę adresową</string>
     <string name="people_books_delete">Usuń książkę adresową</string>
     <plurals name="people_books_delete_confirm">

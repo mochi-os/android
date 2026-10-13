@@ -19,7 +19,6 @@
     <string name="crm_link">Шилтеме</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Экспортту сактоо мүмкүн болгон жок</string>
-    <string name="crm_sort_direction">Багыт</string>
     <string name="crm_sort_rank">Кол менен</string>
     <string name="crm_sort_created">Түзүлдү</string>
     <string name="crm_sort_updated">Жаңыланды</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Класс кошуу</string>
     <string name="crm_classes_create">Түзүү</string>
     <string name="crm_class_name">Аты</string>
-    <string name="crm_class_save_name">Атын сактоо</string>
     <string name="crm_class_title_field">Аталыш талаасы</string>
     <string name="crm_class_fields">Талаалар</string>
     <string name="crm_class_add_field">Талаа кошуу</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Талап кылынат</string>
     <string name="crm_field_position_default">Демейки</string>
     <string name="crm_field_position_sidebar">Каптал панель</string>
-    <string name="crm_field_save">Өзгөрүүлөрдү сактоо</string>
     <string name="crm_field_options">Параметрлер</string>
     <string name="crm_field_add_option">Тандоо кошуу</string>
     <string name="crm_field_delete">Талааны жок кылуу</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM издөө</string>
     <string name="crm_list_no_matching">Дал келген CRM жок</string>
     <string name="crm_list_empty">Азырынча CRM жок</string>
-    <string name="crm_create_template">Үлгү</string>
     <string name="crm_find_search_placeholder">CRM издеңиз же URL чаптаңыз</string>
     <string name="crm_find_search_hint">Жазылуу үчүн CRM издеңиз</string>
     <string name="crm_create_object_parent_none">(жок)</string>

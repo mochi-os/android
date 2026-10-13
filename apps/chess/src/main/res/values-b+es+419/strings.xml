@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Ajedrez</string>
-    <string name="chess_sidebar_header">Ajedrez</string>
     <string name="chess_sidebar_active">Juegos activos</string>
     <string name="chess_sidebar_completed">Completado</string>
     <string name="chess_sidebar_new_game">Nueva partida</string>
-    <string name="chess_section_active">Juegos activos</string>
-    <string name="chess_section_completed">Completado</string>
-    <string name="chess_new_game">Nueva partida</string>
     <string name="chess_empty_title">Aún no hay partidas</string>
     <string name="chess_new_title">Nueva partida</string>
     <string name="chess_new_pick_opponent">Elige oponente</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Notificaciones sobre movimientos de ajedrez, ofertas de tablas y resultados de partidas.</string>
     <string name="chess_open_sidebar">Abrir barra lateral</string>
-    <string name="chess_empty_subtitle">Empieza tu primera partida para jugar al ajedrez con un amigo.</string>
-    <string name="chess_empty_start_button">Empieza tu primera partida</string>
     <string name="chess_detail_unavailable">Partida no disponible</string>
     <string name="chess_delete_title">¿Eliminar la partida?</string>
     <string name="chess_delete_message">Esto quita la partida de tu lista.</string>

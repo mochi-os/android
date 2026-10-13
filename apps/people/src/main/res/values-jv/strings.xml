@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Kirim pesen</string>
     <string name="people_contacts_no_people_found">Ora ana wong ditemokaké</string>
     <string name="people_contacts_try_adjusting">Coba nyetel penelusuranmu</string>
-    <string name="people_contact_section_address">Alamat</string>
     <string name="people_contact_section_detail">Rincian</string>
     <string name="people_contact_name">Jeneng</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Owahi jeneng</string>
     <string name="people_contacts_sort_name">Jeneng</string>
     <string name="people_contacts_sort_recent">Lagi wae ditambahake</string>
-    <string name="people_contacts_thats_you">Kuwi sampéyan</string>
     <string name="people_contacts_try_different_search">Coba istilah penelusuran liyané</string>
     <string name="people_contacts_unfriend">Cabut kanca</string>
     <string name="people_add_contact_search_placeholder">Ketik kangge madosi…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Ora ana kontak sing ditemokake</string>
     <string name="people_contacts_add_to_start">Tambahake kontak kanggo wiwit sesambungan</string>
     <string name="people_contacts_actions">Tumindak kontak</string>
-    <string name="people_contacts_friend">Kanca</string>
     <string name="people_contacts_invite">Undang</string>
     <string name="people_contacts_unfriend_confirm">%1$s ora bakal dadi kancamu maneh. Kontak tetep ana ing buku alamatmu.</string>
     <string name="people_contacts_delete">Busak kontak</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontak owah</string>
     <string name="people_add_contact_title">Tambah kontak</string>
     <string name="people_add_contact_add">Tambahake menyang kontak</string>
-    <string name="people_add_contact_in_contacts">Ana ing kontak</string>
     <string name="people_books_create">Gawe buku alamat</string>
     <string name="people_books_delete">Busak buku alamat</string>
     <plurals name="people_books_delete_confirm">

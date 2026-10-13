@@ -50,7 +50,6 @@
     <string name="go_resign_title">认输?</string>
     <string name="go_sidebar_completed">已完成</string>
     <string name="go_sidebar_new_game">新游戏</string>
-    <string name="go_status_draw">和棋</string>
     <string name="go_status_draw_text">和棋</string>
     <string name="go_status_game_over">游戏结束</string>
     <string name="go_status_opponent_move">轮到 %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">打开侧边栏</string>
     <string name="go_sidebar_active">进行中的游戏</string>
     <string name="go_empty_active">暂无进行中的棋局。</string>
-    <string name="go_status_resigned">已认输</string>
     <string name="go_new_game_title">新围棋棋局</string>
     <string name="go_new_game_no_friends">您需要先添加朋友,然后才能开始棋局。</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

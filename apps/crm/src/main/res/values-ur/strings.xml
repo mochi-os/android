@@ -19,7 +19,6 @@
     <string name="crm_link">لنک</string>
     <string name="crm_design">ڈیزائن</string>
     <string name="crm_export_failed">ایکسپورٹ محفوظ نہیں ہو سکا</string>
-    <string name="crm_sort_direction">سمت</string>
     <string name="crm_sort_rank">دستی</string>
     <string name="crm_sort_created">بنایا گیا</string>
     <string name="crm_sort_updated">اپ ڈیٹ ہو گیا</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">کلاس شامل کریں</string>
     <string name="crm_classes_create">بنائیں</string>
     <string name="crm_class_name">نام</string>
-    <string name="crm_class_save_name">نام محفوظ کریں</string>
     <string name="crm_class_title_field">عنوان فیلڈ</string>
     <string name="crm_class_fields">فیلڈز</string>
     <string name="crm_class_add_field">فیلڈ شامل کریں</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">درکار</string>
     <string name="crm_field_position_default">ڈیفالٹ</string>
     <string name="crm_field_position_sidebar">سائڈبار</string>
-    <string name="crm_field_save">تبدیلیاں محفوظ کریں</string>
     <string name="crm_field_options">اختیارات</string>
     <string name="crm_field_add_option">آپشن شامل کریں</string>
     <string name="crm_field_delete">فیلڈ حذف کریں</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM تلاش کریں</string>
     <string name="crm_list_no_matching">کوئی مماثل CRM نہیں</string>
     <string name="crm_list_empty">ابھی تک کوئی CRM نہیں</string>
-    <string name="crm_create_template">ٹیمپلیٹ</string>
     <string name="crm_find_search_placeholder">CRM تلاش کریں یا URL چسپاں کریں</string>
     <string name="crm_find_search_hint">سبسکرائب کرنے کے لیے CRM تلاش کریں</string>
     <string name="crm_create_object_parent_none">(کوئی نہیں)</string>

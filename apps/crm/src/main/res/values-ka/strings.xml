@@ -19,7 +19,6 @@
     <string name="crm_link">ბმული</string>
     <string name="crm_design">დიზაინი</string>
     <string name="crm_export_failed">ექსპორტის შენახვა ვერ მოხერხდა</string>
-    <string name="crm_sort_direction">მიმართულება</string>
     <string name="crm_sort_rank">ხელით</string>
     <string name="crm_sort_created">შექმნილია</string>
     <string name="crm_sort_updated">განახლებულია</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">კლასის დამატება</string>
     <string name="crm_classes_create">შექმნა</string>
     <string name="crm_class_name">სახელი</string>
-    <string name="crm_class_save_name">სახელის შენახვა</string>
     <string name="crm_class_title_field">სათაურის ველი</string>
     <string name="crm_class_fields">ველები</string>
     <string name="crm_class_add_field">ველის დამატება</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">აუცილებელი</string>
     <string name="crm_field_position_default">ნაგულისხმევი</string>
     <string name="crm_field_position_sidebar">გვერდითი პანელი</string>
-    <string name="crm_field_save">ცვლილებების შენახვა</string>
     <string name="crm_field_options">ვარიანტები</string>
     <string name="crm_field_add_option">ვარიანტის დამატება</string>
     <string name="crm_field_delete">ველის წაშლა</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM-ის ძიება</string>
     <string name="crm_list_no_matching">შესაბამისი CRM ვერ მოიძებნა</string>
     <string name="crm_list_empty">CRM ჯერ არ არის</string>
-    <string name="crm_create_template">შაბლონი</string>
     <string name="crm_find_search_placeholder">მოძებნეთ CRM ან ჩასვით URL</string>
     <string name="crm_find_search_hint">მოძებნეთ CRM გამოსაწერად</string>
     <string name="crm_create_object_parent_none">(არცერთი)</string>

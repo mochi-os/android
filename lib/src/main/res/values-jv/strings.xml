@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">Cabut akses RSS?</string>
     <string name="rss_revoke_message">Kabeh sing langganan feed iki bakal mandheg nampa. Sampeyan bisa nyalin URL anyar sawise iku.</string>
     <string name="rss_revoked">Akses RSS dicabut</string>
-    <string name="rss_revoke_failed">Gagal nyabut akses RSS</string>
     <string name="game_empty_title">Durung ana game</string>
     <string name="game_select_title">Pilih game</string>
     <string name="game_select_subtitle">Pilih game saka bilah sisih utawa miwiti game anyar.</string>

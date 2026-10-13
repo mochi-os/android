@@ -22,7 +22,6 @@
     <string name="crm_class_add_field">Agregá un campo</string>
     <string name="crm_class_delete">Eliminá la clase</string>
     <string name="crm_class_delete_title">Eliminá la clase</string>
-    <string name="crm_field_save">Guardá los cambios</string>
     <string name="crm_field_add_option">Agregá una opción</string>
     <string name="crm_field_delete">Eliminá el campo</string>
     <string name="crm_field_delete_title">Eliminá el campo</string>
@@ -85,7 +84,6 @@
     <string name="crm_views_sort_by">Ordenar por</string>
     <string name="crm_design">Diseño</string>
     <string name="crm_design_title">Diseño</string>
-    <string name="crm_sort_direction">Dirección</string>
     <string name="crm_views_direction">Dirección</string>
     <string name="crm_sort_direction_asc">Ascendente</string>
     <string name="crm_views_direction_asc">Ascendente</string>
@@ -106,7 +104,6 @@
     <string name="crm_list_find">Encontrar CRM</string>
     <string name="crm_list_no_matching">Ningún CRM coincide</string>
     <string name="crm_list_empty">Aún no hay CRMs</string>
-    <string name="crm_create_template">Plantilla</string>
     <string name="crm_find_title">Encontrar CRM</string>
     <string name="crm_find_search_placeholder">Buscá un CRM o pegá una URL</string>
     <string name="crm_find_search_hint">Buscá un CRM al que suscribirte</string>
@@ -236,7 +233,6 @@
     <string name="crm_settings_server">Servidor</string>
     <string name="crm_property_select">Seleccionar …</string>
     <string name="crm_access_select_role">Seleccioná un rol</string>
-    <string name="crm_class_save_name">Guardá el nombre</string>
     <string name="crm_create_import_backup">Importar desde copia de seguridad (opcional)</string>
     <string name="crm_create_allow_search">Permití que cualquiera busque el CRM</string>
     <string name="crm_option_delete_title">Eliminá la opción</string>

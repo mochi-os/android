@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Шоҳмот</string>
-    <string name="chess_sidebar_header">Шоҳмот</string>
     <string name="chess_sidebar_active">Бозиҳои фаъол</string>
     <string name="chess_sidebar_completed">Анҷомшуда</string>
     <string name="chess_sidebar_new_game">Бозии нав</string>
-    <string name="chess_section_active">Бозиҳои фаъол</string>
-    <string name="chess_section_completed">Анҷомшуда</string>
-    <string name="chess_new_game">Бозии нав</string>
     <string name="chess_empty_title">То ҳол ягон бозӣ нест</string>
     <string name="chess_new_title">Бозии нав</string>
     <string name="chess_new_pick_opponent">Рақиб интихоб кунед</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Огоҳиномаҳо дар бораи ҳаракатҳои шоҳмот, пешниҳодҳои баробарӣ ва натиҷаҳои бозӣ.</string>
     <string name="chess_open_sidebar">Панели канориро кушодан</string>
-    <string name="chess_empty_subtitle">Барои бо дӯст шоҳмот бозӣ кардан бозии аввалини худро оғоз кунед.</string>
-    <string name="chess_empty_start_button">Бозии аввалини худро оғоз кунед</string>
     <string name="chess_detail_unavailable">Бозӣ дастрас нест</string>
     <string name="chess_delete_title">Бозӣ нест карда шавад?</string>
     <string name="chess_delete_message">Ин бозиро аз рӯйхати шумо нест мекунад.</string>

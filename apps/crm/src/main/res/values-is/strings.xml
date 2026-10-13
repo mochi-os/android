@@ -19,7 +19,6 @@
     <string name="crm_link">Tengill</string>
     <string name="crm_design">Hönnun</string>
     <string name="crm_export_failed">Ekki tókst að vista útflutninginn</string>
-    <string name="crm_sort_direction">Stefna</string>
     <string name="crm_sort_rank">Handvirkt</string>
     <string name="crm_sort_created">Búið til</string>
     <string name="crm_sort_updated">Uppfært</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Bæta við flokki</string>
     <string name="crm_classes_create">Búa til</string>
     <string name="crm_class_name">Nafn</string>
-    <string name="crm_class_save_name">Vista nafn</string>
     <string name="crm_class_title_field">Titilreitur</string>
     <string name="crm_class_fields">Reitir</string>
     <string name="crm_class_add_field">Bæta við sviði</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Nauðsynlegt</string>
     <string name="crm_field_position_default">Sjálfgefið</string>
     <string name="crm_field_position_sidebar">Hliðarstika</string>
-    <string name="crm_field_save">Vista breytingar</string>
     <string name="crm_field_options">Valkostir</string>
     <string name="crm_field_add_option">Bæta við valkosti</string>
     <string name="crm_field_delete">Eyða sviði</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Leita í CRM</string>
     <string name="crm_list_no_matching">Ekkert CRM passar</string>
     <string name="crm_list_empty">Ekkert CRM enn</string>
-    <string name="crm_create_template">Sniðmát</string>
     <string name="crm_find_search_placeholder">Leita í CRM eða líma slóð</string>
     <string name="crm_find_search_hint">Leita að CRM til að gerast áskrifandi</string>
     <string name="crm_create_object_parent_none">(ekkert)</string>

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Rikuchina suti</string>
-    <string name="forums_auth_verification_failed">Takyachiy mana atikurqanchu</string>
     <string name="forums_list_title">Forokuna</string>
     <string name="forums_list_find">Forokunata tariy</string>
     <string name="forums_list_unsubscribe">Suscripcionta qichuy</string>
     <string name="forums_list_unsubscribe_title">Suscripcionta qichuy</string>
     <string name="forums_create_title">Foro kamariy</string>
     <string name="forums_create_name">Foro suti</string>
-    <string name="forums_create_privacy">Privacidad</string>
-    <string name="forums_create_private">Pakasqa</string>
-    <string name="forums_create_public">Público</string>
     <string name="forums_create_action">Foro kamariy</string>
     <string name="forums_find_title">Forokunata tariy</string>
     <string name="forums_find_recommended">Recomendasqa</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Qillqay</string>
     <string name="forums_post_edit">Qillqata hukchay</string>
     <string name="forums_post_edit_title">Qillqata hukchay</string>
-    <string name="forums_post_edit_title_field">Sutinchay</string>
-    <string name="forums_post_save">Waqaychay</string>
     <string name="forums_post_delete">Qillqata wischuy</string>
     <string name="forums_post_delete_title">Qillqata wischuy</string>
     <string name="forums_post_locked">Wisq\'asqa</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Miembrokuna</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Apaykachaq utaq huñu</string>
-    <string name="forums_access_level_view">Qhaway</string>
-    <string name="forums_access_level_vote">Akllay</string>
-    <string name="forums_access_level_comment">Comentay</string>
-    <string name="forums_access_level_post">Qillqay</string>
-    <string name="forums_access_level_none">Mana imapas</string>
     <string name="forums_members_empty">Mana miembrokuna kanchu</string>
     <string name="forums_banner_dismiss">Bannerta wichq\'ay</string>
     <string name="forums_ai_mode_tag">Unanchay</string>
     <string name="forums_ai_account_default">Predeterminado cuenta</string>
-    <string name="forums_ai_prompt_reset">Predeterminadoman kutichiy</string>
     <string name="forums_settings_unsubscribe">Suscripcionta qichuy</string>
     <string name="forums_moderation_title">Moderación</string>
     <string name="forums_moderation_tab_queue">Fila</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Mana temapichu</string>
     <string name="forums_report_reason_other">Huk</string>
     <string name="forums_post_default_author">Apaykachaq</string>
-    <string name="forums_comments">Comentariokuna</string>
     <string name="forums_no_comments">Manaraq comentariokuna kanchu</string>
-    <string name="forums_comment_save">Waqaychay</string>
     <string name="forums_comment_edit">Comentariota hukchay</string>
     <string name="forums_comment_edit_title">Comentariota hukchay</string>
-    <string name="forums_comment_edit_attach">Archivokunata k\'askachiy</string>
     <string name="forums_comment_delete">Comentario wischuy</string>
     <string name="forums_comment_delete_title">Comentario wischuy</string>
     <string name="forums_comment_reply">Kutichiy</string>
-    <string name="forums_settings_rename">Sutinta hukchay</string>
-    <string name="forums_settings_save">Waqaychay</string>
     <string name="forums_settings_delete">Forota wischuy</string>
     <string name="forums_settings_delete_title">Forota wischuy</string>
     <string name="forums_forum_not_found">Foro mana tarisqachu</string>
@@ -122,18 +103,10 @@
 
     <string name="forums_comment_send">Apachiy</string>
     <string name="forums_post_body_field">Qillqa</string>
-    <string name="forums_post_edit_body_field">Qillqa</string>
     <string name="forums_comment_edit_body_field">Qillqa</string>
-    <string name="forums_post_tag_add">Unanchata yapay</string>
     <string name="forums_write_comment">Huk comentariota qillqay…</string>
-    <string name="forums_auth_login_failed">Yaykuy mana atikurqanchu</string>
 
     <string name="notification_channel_forums">Foro willaykuna</string>
-    <string name="forums_auth_brand">Mochi Forokuna</string>
-    <string name="forums_auth_create_identity_failed">Identidadta mana kamariyta atikurqanchu</string>
-    <string name="forums_auth_mfa_unsupported">MFA manaraqmi celular app-pi atikunchu</string>
-    <string name="forums_auth_enter_code_sent">%1$s-man apachisqa códigota qillqay</string>
-    <string name="forums_auth_create_identity">Identidadniykita kamariy</string>
     <string name="forums_list_empty">Manaraq forokuna kanchu</string>
     <string name="forums_list_unsubscribe_message">¿Cheqaqchu kay foromanta suscripcionta qichuyta munanki?</string>
     <string name="forums_find_search_placeholder">Forokunata maskay utaq URL-ta pegay</string>
@@ -143,26 +116,12 @@
     <string name="forums_post_vote_down">Urayman akllay</string>
     <string name="forums_post_quote">Kutichiypi citay</string>
     <string name="forums_comment_quote">Kutichiypi citay</string>
-    <string name="forums_tag_clear">Filtrota pichay</string>
-    <string name="forums_post_tag_remove">Unanchata qichuy</string>
     <string name="forums_access_add">Yaykuy kamachiyta yapay</string>
     <string name="forums_access_empty">Manaraq kamachiykuna kanchu — predeterminadokunam aplicakun</string>
-    <string name="forums_access_target_hint">Entidad ID, @huñu, * (llapan), utaq + (miembrokuna)</string>
-    <string name="forums_access_level">Nivel</string>
-    <string name="forums_access_level_moderate">Moderay</string>
     <string name="forums_members_search">Miembrokunata filtray</string>
     <string name="forums_banner_description">Foropa patanpi rikurin Markdown.</string>
     <string name="forums_banner_placeholder">Banner qillqata qillqay (markdown atikun)…</string>
-    <string name="forums_ai_mode_label">Modo: %1$s</string>
-    <string name="forums_ai_mode_heading">AI modo</string>
     <string name="forums_ai_mode_off">Desactivasqa</string>
-    <string name="forums_ai_account">AI cuenta</string>
-    <string name="forums_ai_prompt_tag">Unanchanapaq prompt</string>
-    <string name="forums_ai_prompt_score">Puntaje prompt</string>
-    <string name="forums_ai_post_prompt_label">Qillqa unanchakunapaq prompt</string>
-    <string name="forums_ai_comment_prompt_label">Comentario unanchakunapaq prompt</string>
-    <string name="forums_settings_fingerprint">Ruk\'ana unancha: %1$s</string>
-    <string name="forums_settings_clear_notifications">Willaykunata pichay</string>
     <string name="forums_moderation_queue_empty">Moderación filaqa ch\'usaqmi</string>
     <string name="forums_moderation_report_details">Detallekuna: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Allichaq %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s-man kutichichkanki</string>
     <string name="forums_comment_clear_reply">Kutichiyta pichay</string>
     <string name="forums_settings_title">%1$s wakichiykuna</string>
-    <string name="forums_settings_rename_label">Foro suti</string>
-    <string name="forums_settings_danger_zone">Manchachikuq k\'iti</string>
     <string name="forums_settings_delete_message">Kayqa forota llapan qillqankunantinta wiñaypaq wischunqa. Kayqa mana kutichiy atikunchu.</string>
 
-    <string name="forums_tag_interest_up">Munay yapay</string>
-    <string name="forums_tag_interest_down">Munayta pisichiy</string>
-    <string name="forums_tag_interest_remove">Munayta qichuy</string>
     <string name="forums_access_tab_users">Apaykachaqkuna</string>
     <string name="forums_access_tab_groups">Huñukuna</string>
-    <string name="forums_access_tab_manual">Makiwan</string>
     <string name="forums_access_search_users">Apaykachaqkunata maskay</string>
     <string name="forums_access_no_groups">Mana huñukuna kanchu</string>
     <string name="forums_saved_title">Waqaychasqa</string>

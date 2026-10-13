@@ -19,7 +19,6 @@
     <string name="crm_link">Girêdan</string>
     <string name="crm_design">Sêwiran</string>
     <string name="crm_export_failed">Nekarî hinardekirin tomar bike</string>
-    <string name="crm_sort_direction">Arasteyî</string>
     <string name="crm_sort_rank">Destî</string>
     <string name="crm_sort_created">Hat çêkirin</string>
     <string name="crm_sort_updated">Nûjen kirin</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Pol zêde bike</string>
     <string name="crm_classes_create">Çêbike</string>
     <string name="crm_class_name">Nav</string>
-    <string name="crm_class_save_name">Navê tomar bike</string>
     <string name="crm_class_title_field">Qada sernav</string>
     <string name="crm_class_fields">Qadan</string>
     <string name="crm_class_add_field">Qad zêde bike</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Pêwîst</string>
     <string name="crm_field_position_default">Standard</string>
     <string name="crm_field_position_sidebar">Milê alî</string>
-    <string name="crm_field_save">Guhertinan tomar bike</string>
     <string name="crm_field_options">Vebijêrk</string>
     <string name="crm_field_add_option">Vebijêrk zêde bike</string>
     <string name="crm_field_delete">Qadê jê bibe</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Li CRM bigere</string>
     <string name="crm_list_no_matching">Tu CRM-ya lihevhatî tune</string>
     <string name="crm_list_empty">Hîna CRM tune</string>
-    <string name="crm_create_template">Şablon</string>
     <string name="crm_find_search_placeholder">Li CRM bigere an URL bilêv bike</string>
     <string name="crm_find_search_hint">Li CRM-yê bigere da ku tê de beşdar bibî</string>
     <string name="crm_create_object_parent_none">(tune)</string>

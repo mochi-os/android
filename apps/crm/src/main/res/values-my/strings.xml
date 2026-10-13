@@ -19,7 +19,6 @@
     <string name="crm_link">လင့်ခ်</string>
     <string name="crm_design">ဒီဇိုင်း</string>
     <string name="crm_export_failed">တင်ပို့မှုကို သိမ်းဆည်း၍မရပါ</string>
-    <string name="crm_sort_direction">ဦးတည်ရာ</string>
     <string name="crm_sort_rank">ကိုယ်တိုင်</string>
     <string name="crm_sort_created">ဖန်တီးပြီး</string>
     <string name="crm_sort_updated">အပ်ဒိတ်လုပ်ပြီး</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">အတန်းအစား ထည့်မည်</string>
     <string name="crm_classes_create">ဖန်တီးမည်</string>
     <string name="crm_class_name">အမည်</string>
-    <string name="crm_class_save_name">အမည် သိမ်းပါ</string>
     <string name="crm_class_title_field">ခေါင်းစဉ် ကွက်လပ်</string>
     <string name="crm_class_fields">အကွက်များ</string>
     <string name="crm_class_add_field">အကွက် ထည့်မည်</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">လိုအပ်</string>
     <string name="crm_field_position_default">မူရင်း</string>
     <string name="crm_field_position_sidebar">ဘေးဘား</string>
-    <string name="crm_field_save">ပြောင်းလဲမှုများ သိမ်းမည်</string>
     <string name="crm_field_options">ရွေးချယ်စရာများ</string>
     <string name="crm_field_add_option">ရွေးချယ်စရာ ထည့်မည်</string>
     <string name="crm_field_delete">အကွက် ဖျက်မည်</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM ရှာဖွေပါ</string>
     <string name="crm_list_no_matching">ကိုက်ညီသော CRM မရှိပါ</string>
     <string name="crm_list_empty">CRM တစ်ခုမှ မရှိသေးပါ</string>
-    <string name="crm_create_template">ပုံစံခွက်</string>
     <string name="crm_find_search_placeholder">CRM ရှာဖွေပါ သို့မဟုတ် URL ကို ကူးထည့်ပါ</string>
     <string name="crm_find_search_hint">စာရင်းသွင်းရန် CRM ကို ရှာဖွေပါ</string>
     <string name="crm_create_object_parent_none">(မရှိ)</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">ส่งข้อความ</string>
     <string name="people_contacts_no_people_found">ไม่พบผู้คน</string>
     <string name="people_contacts_try_adjusting">ลองปรับการค้นหาของคุณ</string>
-    <string name="people_contact_section_address">ที่อยู่</string>
     <string name="people_contact_section_detail">รายละเอียด</string>
     <string name="people_contact_name">ชื่อ</string>
     <string name="people_contact_email">อีเมล</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">เปลี่ยนชื่อ</string>
     <string name="people_contacts_sort_name">ชื่อ</string>
     <string name="people_contacts_sort_recent">เพิ่มเมื่อเร็ว ๆ นี้</string>
-    <string name="people_contacts_thats_you">นั่นคือคุณ</string>
     <string name="people_contacts_try_different_search">ลองคำค้นหาอื่น</string>
     <string name="people_contacts_unfriend">ลบเพื่อน</string>
     <string name="people_add_contact_search_placeholder">พิมพ์เพื่อค้นหา…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">ไม่พบรายชื่อติดต่อ</string>
     <string name="people_contacts_add_to_start">เพิ่มรายชื่อติดต่อเพื่อเริ่มเชื่อมต่อ</string>
     <string name="people_contacts_actions">การดำเนินการกับรายชื่อติดต่อ</string>
-    <string name="people_contacts_friend">เพื่อน</string>
     <string name="people_contacts_invite">เชิญ</string>
     <string name="people_contacts_unfriend_confirm">%1$s จะไม่เป็นเพื่อนของคุณอีกต่อไป รายชื่อติดต่อยังคงอยู่ในสมุดที่อยู่ของคุณ</string>
     <string name="people_contacts_delete">ลบผู้ติดต่อ</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">รายชื่อติดต่อเปลี่ยนแปลง</string>
     <string name="people_add_contact_title">เพิ่มผู้ติดต่อ</string>
     <string name="people_add_contact_add">เพิ่มในรายชื่อติดต่อ</string>
-    <string name="people_add_contact_in_contacts">อยู่ในผู้ติดต่อแล้ว</string>
     <string name="people_books_create">สร้างสมุดที่อยู่</string>
     <string name="people_books_delete">ลบสมุดที่อยู่</string>
     <plurals name="people_books_delete_confirm">

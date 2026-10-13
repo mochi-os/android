@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">காட்சிப் பெயர்</string>
-    <string name="forums_auth_verification_failed">சரிபார்ப்பு தோல்வியடைந்தது</string>
     <string name="forums_list_title">ஃபோரங்கள்</string>
     <string name="forums_list_find">ஃபோரங்களைக் கண்டுபிடி</string>
     <string name="forums_list_unsubscribe">சந்தா நீக்கு</string>
     <string name="forums_list_unsubscribe_title">சந்தா நீக்கு</string>
     <string name="forums_create_title">மன்றம் உருவாக்கு</string>
     <string name="forums_create_name">மன்றத்தின் பெயர்</string>
-    <string name="forums_create_privacy">தனியுரிமை</string>
-    <string name="forums_create_private">தனிப்பட்டது</string>
-    <string name="forums_create_public">பொது</string>
     <string name="forums_create_action">மன்றம் உருவாக்கு</string>
     <string name="forums_find_title">ஃபோரங்களைக் கண்டுபிடி</string>
     <string name="forums_find_recommended">பரிந்துரைக்கப்பட்டது</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">பதிவிடு</string>
     <string name="forums_post_edit">பதிவைத் திருத்து</string>
     <string name="forums_post_edit_title">பதிவைத் திருத்து</string>
-    <string name="forums_post_edit_title_field">தலைப்பு</string>
-    <string name="forums_post_save">சேமி</string>
     <string name="forums_post_delete">பதிவை நீக்கு</string>
     <string name="forums_post_delete_title">பதிவை நீக்கு</string>
     <string name="forums_post_locked">பூட்டப்பட்டது</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">உறுப்பினர்கள்</string>
     <string name="forums_tab_banner">பேனர்</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">பயனர் அல்லது குழு</string>
-    <string name="forums_access_level_view">காட்டு</string>
-    <string name="forums_access_level_vote">வாக்களி</string>
-    <string name="forums_access_level_comment">கருத்திடு</string>
-    <string name="forums_access_level_post">பதிவிடு</string>
-    <string name="forums_access_level_none">ஒன்றுமில்லை</string>
     <string name="forums_members_empty">உறுப்பினர்கள் இல்லை</string>
     <string name="forums_banner_dismiss">பேனரை நிராகரி</string>
     <string name="forums_ai_mode_tag">டேக் செய்</string>
     <string name="forums_ai_account_default">இயல்புநிலை கணக்கு</string>
-    <string name="forums_ai_prompt_reset">இயல்புநிலைக்கு மீட்டமை</string>
     <string name="forums_settings_unsubscribe">சந்தா நீக்கு</string>
     <string name="forums_moderation_title">மட்டுறுத்தல்</string>
     <string name="forums_moderation_tab_queue">வரிசை</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">தலைப்புக்கு வெளியே</string>
     <string name="forums_report_reason_other">மற்றவை</string>
     <string name="forums_post_default_author">பயனர்</string>
-    <string name="forums_comments">கருத்துகள்</string>
     <string name="forums_no_comments">கருத்துகள் இன்னும் இல்லை</string>
-    <string name="forums_comment_save">சேமி</string>
     <string name="forums_comment_edit">கருத்தைத் திருத்து</string>
     <string name="forums_comment_edit_title">கருத்தைத் திருத்து</string>
-    <string name="forums_comment_edit_attach">கோப்புகளை இணை</string>
     <string name="forums_comment_delete">கருத்தை நீக்கு</string>
     <string name="forums_comment_delete_title">கருத்தை நீக்கு</string>
     <string name="forums_comment_reply">பதில்</string>
-    <string name="forums_settings_rename">பெயர் மாற்று</string>
-    <string name="forums_settings_save">சேமி</string>
     <string name="forums_settings_delete">மன்றத்தை நீக்கு</string>
     <string name="forums_settings_delete_title">மன்றத்தை நீக்கு</string>
     <string name="forums_forum_not_found">ஃபோரம் கிடைக்கவில்லை</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">அனுப்பு</string>
     <string name="forums_post_body_field">உள்ளடக்கம்</string>
-    <string name="forums_post_edit_body_field">உள்ளடக்கம்</string>
     <string name="forums_comment_edit_body_field">உள்ளடக்கம்</string>
-    <string name="forums_tag_clear">வடிகட்டியை அழி</string>
-    <string name="forums_post_tag_add">குறிச்சொல் சேர்</string>
     <string name="forums_write_comment">கருத்து எழுது…</string>
-    <string name="forums_auth_login_failed">உள்நுழைவு தோல்வி</string>
 
     <string name="notification_channel_forums">மன்றங்கள் அறிவிப்புகள்</string>
-    <string name="forums_auth_brand">Mochi ஃபோரங்கள்</string>
-    <string name="forums_auth_create_identity_failed">அடையாளத்தை உருவாக்க முடியவில்லை</string>
-    <string name="forums_auth_mfa_unsupported">மொபைல் பயன்பாட்டில் MFA இன்னும் ஆதரிக்கப்படவில்லை</string>
-    <string name="forums_auth_enter_code_sent">%1$s க்கு அனுப்பப்பட்ட குறியீட்டை உள்ளிடவும்</string>
-    <string name="forums_auth_create_identity">உங்கள் அடையாளத்தை உருவாக்கவும்</string>
     <string name="forums_list_empty">இன்னும் மன்றங்கள் எதுவும் இல்லை</string>
     <string name="forums_list_unsubscribe_message">இந்த மன்றத்திலிருந்து குழுசேர நீக்க விரும்புகிறீர்களா?</string>
     <string name="forums_find_search_placeholder">மன்றங்களைத் தேடவும் அல்லது URL ஐ ஒட்டவும்</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">கீழ் வாக்கு</string>
     <string name="forums_post_quote">பதிலில் மேற்கோள் காட்டவும்</string>
     <string name="forums_comment_quote">பதிலில் மேற்கோள் காட்டவும்</string>
-    <string name="forums_post_tag_remove">குறிச்சொல்லை அகற்றவும்</string>
     <string name="forums_access_add">அணுகல் விதியைச் சேர்க்கவும்</string>
     <string name="forums_access_empty">இன்னும் விதிகள் இல்லை — இயல்புநிலைகள் பொருந்தும்</string>
-    <string name="forums_access_target_hint">நிறுவன ID, @group, * (அனைவரும்), அல்லது + (உறுப்பினர்கள்)</string>
-    <string name="forums_access_level">நிலை</string>
-    <string name="forums_access_level_moderate">மட்டுப்படுத்து</string>
     <string name="forums_members_search">உறுப்பினர்களை வடிகட்டவும்</string>
     <string name="forums_banner_description">மன்றத்தின் மேல் காட்டப்படும் மார்க்டவுன்.</string>
     <string name="forums_banner_placeholder">பேனர் உரையை உள்ளிடவும் (மார்க்டவுன் ஆதரிக்கப்படுகிறது)…</string>
-    <string name="forums_ai_mode_label">முறை: %1$s</string>
-    <string name="forums_ai_mode_heading">AI முறை</string>
     <string name="forums_ai_mode_off">முடக்கப்பட்டது</string>
-    <string name="forums_ai_account">AI கணக்கு</string>
-    <string name="forums_ai_prompt_tag">குறிச்சொல் தூண்டுதல்</string>
-    <string name="forums_ai_prompt_score">மதிப்பெண் தூண்டுதல்</string>
-    <string name="forums_ai_post_prompt_label">இடுகைக் குறிச்சொற்களுக்கான தூண்டுதல்</string>
-    <string name="forums_ai_comment_prompt_label">கருத்துக் குறிச்சொற்களுக்கான தூண்டுதல்</string>
-    <string name="forums_settings_fingerprint">கைரேகை: %1$s</string>
-    <string name="forums_settings_clear_notifications">அறிவிப்புகளை அழி</string>
     <string name="forums_moderation_queue_empty">எதுவும் நிலுவையில் இல்லை</string>
     <string name="forums_moderation_report_details">விவரங்கள்: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s ஆல் தீர்க்கப்பட்டது — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s க்கு பதிலளிக்கிறது</string>
     <string name="forums_comment_clear_reply">பதிலை அழி</string>
     <string name="forums_settings_title">%1$s அமைப்புகள்</string>
-    <string name="forums_settings_rename_label">மன்றத்தின் பெயர்</string>
-    <string name="forums_settings_danger_zone">ஆபத்தான பகுதி</string>
     <string name="forums_settings_delete_message">இது மன்றத்தையும் அதன் அனைத்து இடுகைகளையும் நிரந்தரமாக நீக்கும். இதைச் செயல்தவிர்க்க முடியாது.</string>
 
-    <string name="forums_tag_interest_up">ஆர்வத்தை அதிகரி</string>
-    <string name="forums_tag_interest_down">ஆர்வத்தைக் குறைக்கவும்</string>
-    <string name="forums_tag_interest_remove">ஆர்வத்தை அகற்று</string>
     <string name="forums_access_tab_users">பயனர்கள்</string>
     <string name="forums_access_tab_groups">குழுக்கள்</string>
-    <string name="forums_access_tab_manual">கைமுறை</string>
     <string name="forums_access_search_users">பயனர்களைத் தேடு</string>
     <string name="forums_access_no_groups">குழுக்கள் கிடைக்கவில்லை</string>
     <string name="forums_saved_title">சேமித்தவை</string>

@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">西洋棋</string>
-    <string name="chess_sidebar_header">西洋棋</string>
     <string name="chess_sidebar_active">進行中的遊戲</string>
     <string name="chess_sidebar_completed">已完成</string>
     <string name="chess_sidebar_new_game">新遊戲</string>
-    <string name="chess_section_active">進行中的遊戲</string>
-    <string name="chess_section_completed">已完成</string>
-    <string name="chess_new_game">新遊戲</string>
     <string name="chess_empty_title">尚無遊戲</string>
     <string name="chess_new_title">新遊戲</string>
     <string name="chess_new_pick_opponent">選擇對手</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">從你的列表中移除該對局。</string>
     <string name="chess_delete_title">刪除對局？</string>
     <string name="chess_detail_unavailable">對局不可用</string>
-    <string name="chess_empty_start_button">開始你的第一局</string>
-    <string name="chess_empty_subtitle">開始你的第一局，與好友下國際象棋。</string>
     <string name="chess_move_capture">%1$s 吃掉了 %2$s</string>
     <string name="chess_open_sidebar">開啟側邊欄</string>
     <string name="chess_ws_connecting">連線中…</string>

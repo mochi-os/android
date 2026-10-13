@@ -50,7 +50,6 @@
     <string name="go_resign_title">Ойыннан бас тарту керек пе?</string>
     <string name="go_sidebar_completed">Аяқталды</string>
     <string name="go_sidebar_new_game">Жаңа ойын</string>
-    <string name="go_status_draw">Тең ойын</string>
     <string name="go_status_draw_text">Тең ойын</string>
     <string name="go_status_game_over">Ойын аяқталды</string>
     <string name="go_status_opponent_move">%1$s жүрісі</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Бүйір тақтаны ашу</string>
     <string name="go_sidebar_active">Белсенді ойындар</string>
     <string name="go_empty_active">Әзірге белсенді ойындар жоқ.</string>
-    <string name="go_status_resigned">Бас тартты</string>
     <string name="go_new_game_title">Жаңа Go ойыны</string>
     <string name="go_new_game_no_friends">Ойынды бастамас бұрын дос қосу қажет.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

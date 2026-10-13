@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Willakuyta apachiy</string>
     <string name="people_contacts_no_people_found">Mana runakuna tarisqachu</string>
     <string name="people_contacts_try_adjusting">Maskayniykita allichay</string>
-    <string name="people_contact_section_address">Dirección</string>
     <string name="people_contact_section_detail">Detallekuna</string>
     <string name="people_contact_name">Suti</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Sutinta hukchay</string>
     <string name="people_contacts_sort_name">Suti</string>
     <string name="people_contacts_sort_recent">Ñaqha yapasqa</string>
-    <string name="people_contacts_thats_you">Chay qan kanki</string>
     <string name="people_contacts_try_different_search">Huk maskana simiwan kutimanta ruway</string>
     <string name="people_contacts_unfriend">Masita qichuy</string>
     <string name="people_add_contact_search_placeholder">Maskanaykipaq qillqay…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Mana contactokuna tarisqachu</string>
     <string name="people_contacts_add_to_start">T\'inkinakuyta qallarinaykipaq contactokunata yapay</string>
     <string name="people_contacts_actions">Contacto ruwaykuna</string>
-    <string name="people_contacts_friend">Masi</string>
     <string name="people_contacts_invite">Waqyay</string>
     <string name="people_contacts_unfriend_confirm">%1$s manaña masiykichu kanqa. Contactoqa direccion maytuykipi qhipanqa.</string>
     <string name="people_contacts_delete">Contactota wischuy</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Contacto hukchasqa</string>
     <string name="people_add_contact_title">Contactota yapay</string>
     <string name="people_add_contact_add">Contactokunaman yapay</string>
-    <string name="people_add_contact_in_contacts">Contactokunapi</string>
     <string name="people_books_create">Direccion maytuta kamariy</string>
     <string name="people_books_delete">Direccion maytuta wischuy</string>
     <plurals name="people_books_delete_confirm">

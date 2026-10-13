@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Пошаљи поруку</string>
     <string name="people_contacts_no_people_found">Нема пронађених особа</string>
     <string name="people_contacts_try_adjusting">Покушај прилагодити претрагу</string>
-    <string name="people_contact_section_address">Адреса</string>
     <string name="people_contact_section_detail">Детаљи</string>
     <string name="people_contact_name">Име</string>
     <string name="people_contact_email">Е-пошта</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Преименуј</string>
     <string name="people_contacts_sort_name">Име</string>
     <string name="people_contacts_sort_recent">Недавно додато</string>
-    <string name="people_contacts_thats_you">То си ти</string>
     <string name="people_contacts_try_different_search">Покушај другу реч за претрагу</string>
     <string name="people_contacts_unfriend">Уклони пријатеља</string>
     <string name="people_add_contact_search_placeholder">Унесите текст за претрагу…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Није пронађен ниједан контакт</string>
     <string name="people_contacts_add_to_start">Додајте контакте да бисте почели да се повезујете</string>
     <string name="people_contacts_actions">Радње контакта</string>
-    <string name="people_contacts_friend">Пријатељ</string>
     <string name="people_contacts_invite">Позови</string>
     <string name="people_contacts_unfriend_confirm">%1$s више неће бити ваш пријатељ. Контакт остаје у вашем именику.</string>
     <string name="people_contacts_delete">Обриши контакт</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Контакт је промењен</string>
     <string name="people_add_contact_title">Додај контакт</string>
     <string name="people_add_contact_add">Додај у контакте</string>
-    <string name="people_add_contact_in_contacts">У контактима</string>
     <string name="people_books_create">Направи именик</string>
     <string name="people_books_delete">Обриши именик</string>
     <plurals name="people_books_delete_confirm">

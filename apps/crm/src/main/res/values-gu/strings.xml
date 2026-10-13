@@ -19,7 +19,6 @@
     <string name="crm_link">લિંક</string>
     <string name="crm_design">ડિઝાઇન</string>
     <string name="crm_export_failed">નિકાસ સાચવી શકાઈ નથી</string>
-    <string name="crm_sort_direction">દિશા</string>
     <string name="crm_sort_rank">મેન્યુઅલ</string>
     <string name="crm_sort_created">બનાવ્યું</string>
     <string name="crm_sort_updated">અપડેટ કર્યું</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">ક્લાસ ઉમેરો</string>
     <string name="crm_classes_create">બનાવો</string>
     <string name="crm_class_name">નામ</string>
-    <string name="crm_class_save_name">નામ સાચવો</string>
     <string name="crm_class_title_field">શીર્ષક ફીલ્ડ</string>
     <string name="crm_class_fields">ફીલ્ડ્સ</string>
     <string name="crm_class_add_field">ફીલ્ડ ઉમેરો</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">આવશ્યક</string>
     <string name="crm_field_position_default">ડિફૉલ્ટ</string>
     <string name="crm_field_position_sidebar">સાઇડબાર</string>
-    <string name="crm_field_save">ફેરફારો સાચવો</string>
     <string name="crm_field_options">વિકલ્પો</string>
     <string name="crm_field_add_option">વિકલ્પ ઉમેરો</string>
     <string name="crm_field_delete">ફીલ્ડ કાઢી નાખો</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM શોધો</string>
     <string name="crm_list_no_matching">કોઈ મેળ ખાતું CRM નથી</string>
     <string name="crm_list_empty">હજુ સુધી કોઈ CRM નથી</string>
-    <string name="crm_create_template">ટેમ્પલેટ</string>
     <string name="crm_find_search_placeholder">CRM શોધો અથવા URL પેસ્ટ કરો</string>
     <string name="crm_find_search_hint">સબ્સ્ક્રાઇબ કરવા માટે CRM શોધો</string>
     <string name="crm_create_object_parent_none">(કોઈ નહીં)</string>

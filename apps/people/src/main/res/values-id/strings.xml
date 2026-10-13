@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Kirim pesan</string>
     <string name="people_contacts_no_people_found">Tidak ada orang yang ditemukan</string>
     <string name="people_contacts_try_adjusting">Coba sesuaikan pencarian Anda</string>
-    <string name="people_contact_section_address">Alamat</string>
     <string name="people_contact_section_detail">Detail</string>
     <string name="people_contact_name">Nama</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Ubah nama</string>
     <string name="people_contacts_sort_name">Nama</string>
     <string name="people_contacts_sort_recent">Baru ditambahkan</string>
-    <string name="people_contacts_thats_you">Itu Anda</string>
     <string name="people_contacts_try_different_search">Coba istilah pencarian lain</string>
     <string name="people_contacts_unfriend">Hapus teman</string>
     <string name="people_add_contact_search_placeholder">Ketik untuk mencari…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Tidak ada kontak yang ditemukan</string>
     <string name="people_contacts_add_to_start">Tambahkan kontak untuk mulai terhubung</string>
     <string name="people_contacts_actions">Tindakan kontak</string>
-    <string name="people_contacts_friend">Teman</string>
     <string name="people_contacts_invite">Undang</string>
     <string name="people_contacts_unfriend_confirm">%1$s tidak lagi menjadi teman Anda. Kontak tetap ada di buku alamat Anda.</string>
     <string name="people_contacts_delete">Hapus kontak</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontak berubah</string>
     <string name="people_add_contact_title">Tambah kontak</string>
     <string name="people_add_contact_add">Tambahkan ke kontak</string>
-    <string name="people_add_contact_in_contacts">Ada di kontak</string>
     <string name="people_books_create">Buat buku alamat</string>
     <string name="people_books_delete">Hapus buku alamat</string>
     <plurals name="people_books_delete_confirm">

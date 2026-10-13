@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Изпрати съобщение</string>
     <string name="people_contacts_no_people_found">Не са намерени хора</string>
     <string name="people_contacts_try_adjusting">Опитайте да коригирате търсенето си</string>
-    <string name="people_contact_section_address">Адрес</string>
     <string name="people_contact_section_detail">Детайли</string>
     <string name="people_contact_name">Име</string>
     <string name="people_contact_email">Имейл</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Преименувай</string>
     <string name="people_contacts_sort_name">Име</string>
     <string name="people_contacts_sort_recent">Наскоро добавени</string>
-    <string name="people_contacts_thats_you">Това сте вие</string>
     <string name="people_contacts_try_different_search">Опитайте друг термин за търсене</string>
     <string name="people_contacts_unfriend">Премахни приятел</string>
     <string name="people_add_contact_search_placeholder">Пишете, за да търсите…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Няма намерени контакти</string>
     <string name="people_contacts_add_to_start">Добавете контакти, за да започнете да общувате</string>
     <string name="people_contacts_actions">Действия с контакта</string>
-    <string name="people_contacts_friend">Приятел</string>
     <string name="people_contacts_invite">Покани</string>
     <string name="people_contacts_unfriend_confirm">%1$s вече няма да е ваш приятел. Контактът остава в адресната ви книга.</string>
     <string name="people_contacts_delete">Изтриване на контакта</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Контактът е променен</string>
     <string name="people_add_contact_title">Добави контакт</string>
     <string name="people_add_contact_add">Добавяне към контактите</string>
-    <string name="people_add_contact_in_contacts">В контактите</string>
     <string name="people_books_create">Създаване на адресна книга</string>
     <string name="people_books_delete">Изтриване на адресната книга</string>
     <plurals name="people_books_delete_confirm">

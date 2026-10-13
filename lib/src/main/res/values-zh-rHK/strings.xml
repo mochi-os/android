@@ -274,7 +274,6 @@
     <string name="rss_revoke">撤銷存取權</string>
     <string name="rss_revoke_title">撤銷 RSS 存取權？</string>
     <string name="rss_revoked">已撤銷 RSS 存取權</string>
-    <string name="rss_revoke_failed">撤銷 RSS 存取權失敗</string>
     <string name="settings_card">卡片樣式</string>
     <string name="settings_card_theme">跟隨主題</string>
     <string name="settings_card_flat">平面</string>

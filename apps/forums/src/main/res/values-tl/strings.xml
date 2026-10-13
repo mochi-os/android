@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Display name</string>
-    <string name="forums_auth_verification_failed">Nabigo ang beripikasyon</string>
     <string name="forums_list_title">Mga forum</string>
     <string name="forums_list_find">Maghanap ng mga forum</string>
     <string name="forums_list_unsubscribe">Mag-unsubscribe</string>
     <string name="forums_list_unsubscribe_title">Mag-unsubscribe</string>
     <string name="forums_create_title">Gumawa ng forum</string>
     <string name="forums_create_name">Pangalan ng forum</string>
-    <string name="forums_create_privacy">Pagkapribado</string>
-    <string name="forums_create_private">Pribado</string>
-    <string name="forums_create_public">Pampubliko</string>
     <string name="forums_create_action">Gumawa ng forum</string>
     <string name="forums_find_title">Maghanap ng mga forum</string>
     <string name="forums_find_recommended">Inirerekomenda</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">I-post</string>
     <string name="forums_post_edit">I-edit ang post</string>
     <string name="forums_post_edit_title">I-edit ang post</string>
-    <string name="forums_post_edit_title_field">Pamagat</string>
-    <string name="forums_post_save">I-save</string>
     <string name="forums_post_delete">I-delete ang post</string>
     <string name="forums_post_delete_title">I-delete ang post</string>
     <string name="forums_post_locked">Naka-lock</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Mga Miyembro</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">User o grupo</string>
-    <string name="forums_access_level_view">Tingnan</string>
-    <string name="forums_access_level_vote">Bumoto</string>
-    <string name="forums_access_level_comment">Magkomento</string>
-    <string name="forums_access_level_post">I-post</string>
-    <string name="forums_access_level_none">Wala</string>
     <string name="forums_members_empty">Walang miyembro</string>
     <string name="forums_banner_dismiss">I-dismiss ang banner</string>
     <string name="forums_ai_mode_tag">Mag-tag</string>
     <string name="forums_ai_account_default">Default na account</string>
-    <string name="forums_ai_prompt_reset">I-reset sa default</string>
     <string name="forums_settings_unsubscribe">Mag-unsubscribe</string>
     <string name="forums_moderation_title">Moderasyon</string>
     <string name="forums_moderation_tab_queue">Pila</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Wala sa paksa</string>
     <string name="forums_report_reason_other">Iba pa</string>
     <string name="forums_post_default_author">User</string>
-    <string name="forums_comments">Mga komento</string>
     <string name="forums_no_comments">Wala pang komento</string>
-    <string name="forums_comment_save">I-save</string>
     <string name="forums_comment_edit">I-edit ang comment</string>
     <string name="forums_comment_edit_title">I-edit ang comment</string>
-    <string name="forums_comment_edit_attach">Mag-attach ng file</string>
     <string name="forums_comment_delete">I-delete ang komento</string>
     <string name="forums_comment_delete_title">I-delete ang komento</string>
     <string name="forums_comment_reply">Tumugon</string>
-    <string name="forums_settings_rename">Palitan ang pangalan</string>
-    <string name="forums_settings_save">I-save</string>
     <string name="forums_settings_delete">I-delete ang forum</string>
     <string name="forums_settings_delete_title">I-delete ang forum</string>
     <string name="forums_forum_not_found">Hindi nahanap ang forum</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Ipadala</string>
     <string name="forums_post_body_field">Nilalaman</string>
-    <string name="forums_post_edit_body_field">Nilalaman</string>
     <string name="forums_comment_edit_body_field">Nilalaman</string>
-    <string name="forums_tag_clear">Linisin ang filter</string>
-    <string name="forums_post_tag_add">Magdagdag ng tag</string>
     <string name="forums_write_comment">Magsulat ng komento…</string>
-    <string name="forums_auth_login_failed">Hindi nag-login</string>
 
     <string name="notification_channel_forums">Mga abiso sa mga forum</string>
-    <string name="forums_auth_brand">Mochi Mga forum</string>
-    <string name="forums_auth_create_identity_failed">Nabigong gumawa ng pagkakakilanlan</string>
-    <string name="forums_auth_mfa_unsupported">Hindi pa suportado ang MFA sa mobile app</string>
-    <string name="forums_auth_enter_code_sent">Ilagay ang code na ipinadala sa %1$s</string>
-    <string name="forums_auth_create_identity">Gumawa ng iyong pagkakakilanlan</string>
     <string name="forums_list_empty">Wala pang forum</string>
     <string name="forums_list_unsubscribe_message">Sigurado ka bang gusto mong mag-unsubscribe sa forum na ito?</string>
     <string name="forums_find_search_placeholder">Maghanap ng mga forum o i-paste ang URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">I-downvote</string>
     <string name="forums_post_quote">Sipiin sa tugon</string>
     <string name="forums_comment_quote">Sipiin sa tugon</string>
-    <string name="forums_post_tag_remove">Alisin ang tag</string>
     <string name="forums_access_add">Magdagdag ng panuntunan sa pag-access</string>
     <string name="forums_access_empty">Wala pang panuntunan — mananatili ang mga default</string>
-    <string name="forums_access_target_hint">Entity ID, @group, * (lahat), o + (mga miyembro)</string>
-    <string name="forums_access_level">Antas</string>
-    <string name="forums_access_level_moderate">Mag-moderate</string>
     <string name="forums_members_search">I-filter ang mga miyembro</string>
     <string name="forums_banner_description">Markdown na ipinapakita sa itaas ng forum.</string>
     <string name="forums_banner_placeholder">Ilagay ang text ng banner (sinusuportahan ang markdown)…</string>
-    <string name="forums_ai_mode_label">Mode: %1$s</string>
-    <string name="forums_ai_mode_heading">AI mode</string>
     <string name="forums_ai_mode_off">Naka-disable</string>
-    <string name="forums_ai_account">AI account</string>
-    <string name="forums_ai_prompt_tag">Prompt para sa pag-tag</string>
-    <string name="forums_ai_prompt_score">Prompt para sa pagmamarka</string>
-    <string name="forums_ai_post_prompt_label">Prompt para sa mga tag ng post</string>
-    <string name="forums_ai_comment_prompt_label">Prompt para sa mga tag ng komento</string>
-    <string name="forums_settings_fingerprint">Fingerprint: %1$s</string>
-    <string name="forums_settings_clear_notifications">I-clear ang mga abiso</string>
     <string name="forums_moderation_queue_empty">Walang nakabinbin</string>
     <string name="forums_moderation_report_details">Mga detalye: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Niresolba ni %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Tumutugon kay %1$s</string>
     <string name="forums_comment_clear_reply">Burahin ang tugon</string>
     <string name="forums_settings_title">Mga setting ng %1$s</string>
-    <string name="forums_settings_rename_label">Pangalan ng forum</string>
-    <string name="forums_settings_danger_zone">Mapanganib na bahagi</string>
     <string name="forums_settings_delete_message">Permanenteng matatanggal nito ang forum at lahat ng mga post nito. Hindi ito mababawi.</string>
 
-    <string name="forums_tag_interest_up">Palakasin ang interes</string>
-    <string name="forums_tag_interest_down">Bawasan ang interes</string>
-    <string name="forums_tag_interest_remove">Alisin ang interes</string>
     <string name="forums_access_tab_users">Mga user</string>
     <string name="forums_access_tab_groups">Mga group</string>
-    <string name="forums_access_tab_manual">Manwal</string>
     <string name="forums_access_search_users">Maghanap ng user</string>
     <string name="forums_access_no_groups">Walang available na grupo</string>
     <string name="forums_saved_title">Mga na-save</string>

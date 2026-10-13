@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Dara</string>
-    <string name="chess_sidebar_header">Dara</string>
     <string name="chess_sidebar_active">Wasannin da ke kan ci gaba</string>
     <string name="chess_sidebar_completed">An kammala</string>
     <string name="chess_sidebar_new_game">Sabon wasa</string>
-    <string name="chess_section_active">Wasannin da ke kan ci gaba</string>
-    <string name="chess_section_completed">An kammala</string>
-    <string name="chess_new_game">Sabon wasa</string>
     <string name="chess_empty_title">Babu wasanni tukuna</string>
     <string name="chess_new_title">Sabon Wasa</string>
     <string name="chess_new_pick_opponent">Zaɓi abokin gaba</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Sanarwa game da matakan dara, tayin canjaras da sakamakon wasa.</string>
     <string name="chess_open_sidebar">Bude gefe</string>
-    <string name="chess_empty_subtitle">Fara wasanka na farko don yin dara tare da aboki.</string>
-    <string name="chess_empty_start_button">Fara wasanka na farko</string>
     <string name="chess_detail_unavailable">Wasa ba ya samuwa</string>
     <string name="chess_delete_title">A goge wasan?</string>
     <string name="chess_delete_message">Wannan yana cire wasan daga jerinka.</string>

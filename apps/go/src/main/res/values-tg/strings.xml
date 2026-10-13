@@ -50,7 +50,6 @@
     <string name="go_resign_title">Аз бозӣ таслим шудан?</string>
     <string name="go_sidebar_completed">Анҷомшуда</string>
     <string name="go_sidebar_new_game">Бозии нав</string>
-    <string name="go_status_draw">Баробар</string>
     <string name="go_status_draw_text">Баробар</string>
     <string name="go_status_game_over">Бозӣ ба охир расид</string>
     <string name="go_status_opponent_move">Ҳаракати %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Панели канориро кушодан</string>
     <string name="go_sidebar_active">Бозиҳои фаъол</string>
     <string name="go_empty_active">Ҳанӯз бозиҳои фаъол нест.</string>
-    <string name="go_status_resigned">Таслим шуд</string>
     <string name="go_new_game_title">Бозии нави Go</string>
     <string name="go_new_game_no_friends">Пеш аз оғози бозӣ бояд дӯст илова кунед.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

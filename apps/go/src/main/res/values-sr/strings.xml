@@ -50,7 +50,6 @@
     <string name="go_resign_title">Предати игру?</string>
     <string name="go_sidebar_completed">Завршено</string>
     <string name="go_sidebar_new_game">Нова игра</string>
-    <string name="go_status_draw">Реми</string>
     <string name="go_status_draw_text">Реми</string>
     <string name="go_status_game_over">Крај игре</string>
     <string name="go_status_opponent_move">Потез играча %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Отвори бочну траку</string>
     <string name="go_sidebar_active">Активне игре</string>
     <string name="go_empty_active">Још нема активних партија.</string>
-    <string name="go_status_resigned">Предана</string>
     <string name="go_new_game_title">Нова Go партија</string>
     <string name="go_new_game_no_friends">Морате додати пријатеља пре него што можете да покренете партију.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

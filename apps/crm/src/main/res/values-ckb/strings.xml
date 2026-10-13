@@ -19,7 +19,6 @@
     <string name="crm_link">بەستەر</string>
     <string name="crm_design">دیزاین</string>
     <string name="crm_export_failed">نەتوانرا هەناردەکە پاشەکەوت بکرێت</string>
-    <string name="crm_sort_direction">ئاراستە</string>
     <string name="crm_sort_rank">دەستی</string>
     <string name="crm_sort_created">دروستکرا</string>
     <string name="crm_sort_updated">نوێکرایەوە</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">زیادکردنی پۆل</string>
     <string name="crm_classes_create">دروستکردن</string>
     <string name="crm_class_name">ناو</string>
-    <string name="crm_class_save_name">پاشەکەوتکردنی ناو</string>
     <string name="crm_class_title_field">خانەی ناونیشان</string>
     <string name="crm_class_fields">خانەکان</string>
     <string name="crm_class_add_field">زیادکردنی خانە</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">پێویست</string>
     <string name="crm_field_position_default">بنەڕەت</string>
     <string name="crm_field_position_sidebar">لاتەنیشت</string>
-    <string name="crm_field_save">پاشەکەوتکردنی گۆڕانکارییەکان</string>
     <string name="crm_field_options">هەڵبژاردەکان</string>
     <string name="crm_field_add_option">زیادکردنی هەڵبژاردە</string>
     <string name="crm_field_delete">سڕینەوەی خانە</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">گەڕان لە CRM</string>
     <string name="crm_list_no_matching">هیچ CRM-ێکی هاوتا نییە</string>
     <string name="crm_list_empty">هێشتا هیچ CRM-ێک نییە</string>
-    <string name="crm_create_template">قاڵب</string>
     <string name="crm_find_search_placeholder">گەڕان لە CRM یان URL-ێک بلکێنە</string>
     <string name="crm_find_search_hint">گەڕان بەدوای CRM بۆ بەشداری کردن تێیدا</string>
     <string name="crm_search_objects_placeholder">گەڕانی بابەتەکان</string>

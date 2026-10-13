@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Weergavenaam</string>
-    <string name="forums_auth_verification_failed">Verificatie mislukt</string>
     <string name="forums_list_title">Forums</string>
     <string name="forums_list_find">Forums zoeken</string>
     <string name="forums_list_unsubscribe">Abonnement opzeggen</string>
     <string name="forums_list_unsubscribe_title">Abonnement opzeggen</string>
     <string name="forums_create_title">Forum aanmaken</string>
     <string name="forums_create_name">Forumnaam</string>
-    <string name="forums_create_privacy">Privacy</string>
-    <string name="forums_create_private">Privé</string>
-    <string name="forums_create_public">Openbaar</string>
     <string name="forums_create_action">Forum aanmaken</string>
     <string name="forums_find_title">Forums zoeken</string>
     <string name="forums_find_recommended">Aanbevolen</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Plaatsen</string>
     <string name="forums_post_edit">Bericht bewerken</string>
     <string name="forums_post_edit_title">Bericht bewerken</string>
-    <string name="forums_post_edit_title_field">Titel</string>
-    <string name="forums_post_save">Opslaan</string>
     <string name="forums_post_delete">Post verwijderen</string>
     <string name="forums_post_delete_title">Post verwijderen</string>
     <string name="forums_post_locked">Vergrendeld</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Leden</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Gebruiker of groep</string>
-    <string name="forums_access_level_view">Bekijken</string>
-    <string name="forums_access_level_vote">Stemmen</string>
-    <string name="forums_access_level_comment">Reageren</string>
-    <string name="forums_access_level_post">Plaatsen</string>
-    <string name="forums_access_level_none">Geen</string>
     <string name="forums_members_empty">Geen leden</string>
     <string name="forums_banner_dismiss">Banner sluiten</string>
     <string name="forums_ai_mode_tag">Taggen</string>
     <string name="forums_ai_account_default">Standaardaccount</string>
-    <string name="forums_ai_prompt_reset">Resetten naar standaard</string>
     <string name="forums_settings_unsubscribe">Abonnement opzeggen</string>
     <string name="forums_moderation_title">Moderatie</string>
     <string name="forums_moderation_tab_queue">Wachtrij</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Off-topic</string>
     <string name="forums_report_reason_other">Overig</string>
     <string name="forums_post_default_author">Gebruiker</string>
-    <string name="forums_comments">Reacties</string>
     <string name="forums_no_comments">Nog geen reacties</string>
-    <string name="forums_comment_save">Opslaan</string>
     <string name="forums_comment_edit">Reactie bewerken</string>
     <string name="forums_comment_edit_title">Reactie bewerken</string>
-    <string name="forums_comment_edit_attach">Bestanden bijvoegen</string>
     <string name="forums_comment_delete">Reactie verwijderen</string>
     <string name="forums_comment_delete_title">Reactie verwijderen</string>
     <string name="forums_comment_reply">Antwoorden</string>
-    <string name="forums_settings_rename">Hernoemen</string>
-    <string name="forums_settings_save">Opslaan</string>
     <string name="forums_settings_delete">Forum verwijderen</string>
     <string name="forums_settings_delete_title">Forum verwijderen</string>
     <string name="forums_forum_not_found">Forum niet gevonden</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Verzenden</string>
     <string name="forums_post_body_field">Inhoud</string>
-    <string name="forums_post_edit_body_field">Inhoud</string>
     <string name="forums_comment_edit_body_field">Inhoud</string>
-    <string name="forums_tag_clear">Filter wissen</string>
-    <string name="forums_post_tag_add">Tag toevoegen</string>
     <string name="forums_write_comment">Schrijf een opmerking…</string>
-    <string name="forums_auth_login_failed">Aanmelding mislukt</string>
 
     <string name="notification_channel_forums">Forummeldingen</string>
-    <string name="forums_auth_brand">Mochi Forums</string>
-    <string name="forums_auth_create_identity_failed">Identiteit aanmaken mislukt</string>
-    <string name="forums_auth_mfa_unsupported">MFA wordt nog niet ondersteund in de mobiele app</string>
-    <string name="forums_auth_enter_code_sent">Voer de code in die naar %1$s is verzonden</string>
-    <string name="forums_auth_create_identity">Maak je identiteit aan</string>
     <string name="forums_list_empty">Nog geen forums</string>
     <string name="forums_list_unsubscribe_message">Weet je zeker dat je je wilt uitschrijven van dit forum?</string>
     <string name="forums_find_search_placeholder">Zoek forums of plak URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Omlaag stemmen</string>
     <string name="forums_post_quote">Citeren in antwoord</string>
     <string name="forums_comment_quote">Citeren in antwoord</string>
-    <string name="forums_post_tag_remove">Tag verwijderen</string>
     <string name="forums_access_add">Toegangsregel toevoegen</string>
     <string name="forums_access_empty">Nog geen regels — standaardinstellingen zijn van toepassing</string>
-    <string name="forums_access_target_hint">Entiteits-ID, @groep, * (iedereen), of + (leden)</string>
-    <string name="forums_access_level">Niveau</string>
-    <string name="forums_access_level_moderate">Modereren</string>
     <string name="forums_members_search">Leden filteren</string>
     <string name="forums_banner_description">Markdown weergegeven bovenaan het forum.</string>
     <string name="forums_banner_placeholder">Voer bannertekst in (markdown wordt ondersteund)…</string>
-    <string name="forums_ai_mode_label">Modus: %1$s</string>
-    <string name="forums_ai_mode_heading">AI-modus</string>
     <string name="forums_ai_mode_off">Uitgeschakeld</string>
-    <string name="forums_ai_account">AI-account</string>
-    <string name="forums_ai_prompt_tag">Tag-prompt</string>
-    <string name="forums_ai_prompt_score">Scoringsprompt</string>
-    <string name="forums_ai_post_prompt_label">Prompt voor berichttags</string>
-    <string name="forums_ai_comment_prompt_label">Prompt voor reactietags</string>
-    <string name="forums_settings_fingerprint">Vingerafdruk: %1$s</string>
-    <string name="forums_settings_clear_notifications">Meldingen wissen</string>
     <string name="forums_moderation_queue_empty">Niets in behandeling</string>
     <string name="forums_moderation_report_details">Details: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Opgelost door %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Antwoorden op %1$s</string>
     <string name="forums_comment_clear_reply">Antwoord wissen</string>
     <string name="forums_settings_title">Instellingen voor %1$s</string>
-    <string name="forums_settings_rename_label">Forumnaam</string>
-    <string name="forums_settings_danger_zone">Gevarenzone</string>
     <string name="forums_settings_delete_message">Hiermee wordt het forum en alle berichten permanent verwijderd. Dit kan niet ongedaan worden gemaakt.</string>
 
-    <string name="forums_tag_interest_up">Interesse versterken</string>
-    <string name="forums_tag_interest_down">Interesse verminderen</string>
-    <string name="forums_tag_interest_remove">Interesse verwijderen</string>
     <string name="forums_access_tab_users">Gebruikers</string>
     <string name="forums_access_tab_groups">Groepen</string>
-    <string name="forums_access_tab_manual">Handmatig</string>
     <string name="forums_access_search_users">Zoek gebruikers</string>
     <string name="forums_access_no_groups">Geen groepen beschikbaar</string>
     <string name="forums_saved_title">Opgeslagen</string>

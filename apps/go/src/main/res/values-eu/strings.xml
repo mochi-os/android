@@ -49,7 +49,6 @@
     <string name="go_resign_title">Jokoan amore eman?</string>
     <string name="go_sidebar_completed">Osatua</string>
     <string name="go_sidebar_new_game">Joko berria</string>
-    <string name="go_status_draw">Berdinketa</string>
     <string name="go_status_draw_text">Berdinketa</string>
     <string name="go_status_game_over">Jokoa amaituta</string>
     <string name="go_status_opponent_move">%1$s-(r)en mugimendua</string>
@@ -64,7 +63,6 @@
     <string name="go_open_sidebar">Ireki alboko barra</string>
     <string name="go_sidebar_active">Joko aktiboak</string>
     <string name="go_empty_active">Ez dago partida aktiborik oraindik.</string>
-    <string name="go_status_resigned">Errenditua</string>
     <string name="go_new_game_title">Go partida berria</string>
     <string name="go_new_game_no_friends">Lagun bat gehitu behar duzu partida bat hasi aurretik.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

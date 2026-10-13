@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Име за приказ</string>
-    <string name="forums_auth_verification_failed">Верификација није успела</string>
     <string name="forums_list_title">Форуми</string>
     <string name="forums_list_find">Пронађи форуме</string>
     <string name="forums_list_unsubscribe">Прекини претплату</string>
     <string name="forums_list_unsubscribe_title">Прекини претплату</string>
     <string name="forums_create_title">Креирај форум</string>
     <string name="forums_create_name">Назив форума</string>
-    <string name="forums_create_privacy">Приватност</string>
-    <string name="forums_create_private">Приватно</string>
-    <string name="forums_create_public">Јавно</string>
     <string name="forums_create_action">Креирај форум</string>
     <string name="forums_find_title">Пронађи форуме</string>
     <string name="forums_find_recommended">Препоручено</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Постави</string>
     <string name="forums_post_edit">Уреди објаву</string>
     <string name="forums_post_edit_title">Уреди објаву</string>
-    <string name="forums_post_edit_title_field">Наслов</string>
-    <string name="forums_post_save">Сачувај</string>
     <string name="forums_post_delete">Обриши објаву</string>
     <string name="forums_post_delete_title">Обриши објаву</string>
     <string name="forums_post_locked">Закључано</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Чланови</string>
     <string name="forums_tab_banner">Банер</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Корисник или група</string>
-    <string name="forums_access_level_view">Прикажи</string>
-    <string name="forums_access_level_vote">Гласај</string>
-    <string name="forums_access_level_comment">Коментариши</string>
-    <string name="forums_access_level_post">Постави</string>
-    <string name="forums_access_level_none">Ништа</string>
     <string name="forums_members_empty">Нема чланова</string>
     <string name="forums_banner_dismiss">Одбаци банер</string>
     <string name="forums_ai_mode_tag">Означи</string>
     <string name="forums_ai_account_default">Подразумевани налог</string>
-    <string name="forums_ai_prompt_reset">Ресетуј на подразумевано</string>
     <string name="forums_settings_unsubscribe">Прекини претплату</string>
     <string name="forums_moderation_title">Модерација</string>
     <string name="forums_moderation_tab_queue">Ред</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Ван теме</string>
     <string name="forums_report_reason_other">Друго</string>
     <string name="forums_post_default_author">Корисник</string>
-    <string name="forums_comments">Коментари</string>
     <string name="forums_no_comments">Још нема коментара</string>
-    <string name="forums_comment_save">Сачувај</string>
     <string name="forums_comment_edit">Уреди коментар</string>
     <string name="forums_comment_edit_title">Уреди коментар</string>
-    <string name="forums_comment_edit_attach">Приложи датотеке</string>
     <string name="forums_comment_delete">Обриши коментар</string>
     <string name="forums_comment_delete_title">Обриши коментар</string>
     <string name="forums_comment_reply">Одговори</string>
-    <string name="forums_settings_rename">Преименуј</string>
-    <string name="forums_settings_save">Сачувај</string>
     <string name="forums_settings_delete">Обриши форум</string>
     <string name="forums_settings_delete_title">Обриши форум</string>
     <string name="forums_forum_not_found">Форум није пронађен</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Пошаљи</string>
     <string name="forums_post_body_field">Текст</string>
-    <string name="forums_post_edit_body_field">Текст</string>
     <string name="forums_comment_edit_body_field">Текст</string>
-    <string name="forums_tag_clear">Очисти филтер</string>
-    <string name="forums_post_tag_add">Додај ознаку</string>
     <string name="forums_write_comment">Напишите коментар…</string>
-    <string name="forums_auth_login_failed">Пријава неуспешна</string>
 
     <string name="notification_channel_forums">Обавештења форума</string>
-    <string name="forums_auth_brand">Mochi Форуми</string>
-    <string name="forums_auth_create_identity_failed">Креирање идентитета није успело</string>
-    <string name="forums_auth_mfa_unsupported">Вишефакторска аутентификација још није подржана у мобилној апликацији</string>
-    <string name="forums_auth_enter_code_sent">Унесите код послат на %1$s</string>
-    <string name="forums_auth_create_identity">Креирајте свој идентитет</string>
     <string name="forums_list_empty">Још нема форума</string>
     <string name="forums_list_unsubscribe_message">Да ли сте сигурни да желите да се одјавите са овог форума?</string>
     <string name="forums_find_search_placeholder">Претражите форуме или налепите URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Гласај против</string>
     <string name="forums_post_quote">Цитирај у одговору</string>
     <string name="forums_comment_quote">Цитирај у одговору</string>
-    <string name="forums_post_tag_remove">Уклони ознаку</string>
     <string name="forums_access_add">Додај правило приступа</string>
     <string name="forums_access_empty">Још нема правила — примењују се подразумевана</string>
-    <string name="forums_access_target_hint">ID ентитета, @група, * (сви) или + (чланови)</string>
-    <string name="forums_access_level">Ниво</string>
-    <string name="forums_access_level_moderate">Модерација</string>
     <string name="forums_members_search">Филтрирај чланове</string>
     <string name="forums_banner_description">Markdown приказан на врху форума.</string>
     <string name="forums_banner_placeholder">Унесите текст банера (подржан је Markdown)…</string>
-    <string name="forums_ai_mode_label">Режим: %1$s</string>
-    <string name="forums_ai_mode_heading">AI режим</string>
     <string name="forums_ai_mode_off">Онемогућено</string>
-    <string name="forums_ai_account">AI налог</string>
-    <string name="forums_ai_prompt_tag">Упит за означавање</string>
-    <string name="forums_ai_prompt_score">Упит за оцењивање</string>
-    <string name="forums_ai_post_prompt_label">Упит за ознаке објаве</string>
-    <string name="forums_ai_comment_prompt_label">Упит за ознаке коментара</string>
-    <string name="forums_settings_fingerprint">Отисак: %1$s</string>
-    <string name="forums_settings_clear_notifications">Обриши обавештења</string>
     <string name="forums_moderation_queue_empty">Ништа на чекању</string>
     <string name="forums_moderation_report_details">Детаљи: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Решио %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Одговор за %1$s</string>
     <string name="forums_comment_clear_reply">Откажи одговор</string>
     <string name="forums_settings_title">Подешавања за %1$s</string>
-    <string name="forums_settings_rename_label">Назив форума</string>
-    <string name="forums_settings_danger_zone">Опасна зона</string>
     <string name="forums_settings_delete_message">Ово ће трајно обрисати форум и све његове објаве. Ово се не може поништити.</string>
 
-    <string name="forums_tag_interest_up">Појачај интересовање</string>
-    <string name="forums_tag_interest_down">Смањи интересовање</string>
-    <string name="forums_tag_interest_remove">Уклони интересовање</string>
     <string name="forums_access_tab_users">Корисници</string>
     <string name="forums_access_tab_groups">Групе</string>
-    <string name="forums_access_tab_manual">Ручно</string>
     <string name="forums_access_search_users">Претражи кориснике</string>
     <string name="forums_access_no_groups">Нема доступних група</string>
     <string name="forums_saved_title">Сачувано</string>

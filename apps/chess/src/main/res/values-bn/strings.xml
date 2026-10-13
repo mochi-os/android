@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chess_app_title">দাবা</string>
-    <string name="chess_sidebar_header">দাবা</string>
     <string name="chess_sidebar_active">সক্রিয় গেম</string>
     <string name="chess_sidebar_completed">সম্পন্ন</string>
     <string name="chess_sidebar_new_game">নতুন গেম</string>
-    <string name="chess_section_active">সক্রিয় গেম</string>
-    <string name="chess_section_completed">সম্পন্ন</string>
-    <string name="chess_new_game">নতুন গেম</string>
     <string name="chess_empty_title">এখনও কোনো গেম নেই</string>
     <string name="chess_new_title">নতুন গেম</string>
     <string name="chess_new_pick_opponent">প্রতিপক্ষ বেছে নিন</string>
@@ -55,8 +51,6 @@
     <string name="chess_channel_name">দাবা নোটিফিকেশন</string>
     <string name="chess_channel_description">চাল, ড্র অফার এবং গেমের ফলাফল সম্পর্কে নোটিফিকেশন।</string>
     <string name="chess_open_sidebar">সাইডবার খুলুন</string>
-    <string name="chess_empty_subtitle">একজন বন্ধুর সাথে দাবা খেলতে আপনার প্রথম গেম শুরু করুন।</string>
-    <string name="chess_empty_start_button">আপনার প্রথম গেম শুরু করুন</string>
     <string name="chess_detail_unavailable">গেম অনুপলব্ধ</string>
     <string name="chess_delete_title">গেম মুছবেন?</string>
     <string name="chess_delete_message">এটি আপনার তালিকা থেকে গেমটি সরিয়ে দেয়।</string>

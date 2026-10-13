@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">شطرنج</string>
-    <string name="chess_sidebar_header">شطرنج</string>
     <string name="chess_sidebar_active">فعالې لوبې</string>
     <string name="chess_sidebar_completed">بشپړ شو</string>
     <string name="chess_sidebar_new_game">نوې لوبه</string>
-    <string name="chess_section_active">فعالې لوبې</string>
-    <string name="chess_section_completed">بشپړ شو</string>
-    <string name="chess_new_game">نوې لوبه</string>
     <string name="chess_empty_title">تر اوسه هیڅ لوبې نشته</string>
     <string name="chess_new_title">نوې لوبه</string>
     <string name="chess_new_pick_opponent">مخالف وټاکئ</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">د شطرنج د حرکتونو، د مساوي وړاندیزونو او د لوبې د پایلو په اړه خبرتیاوې.</string>
     <string name="chess_open_sidebar">د څنګ بار خلاص کړئ</string>
-    <string name="chess_empty_subtitle">د ملګري سره شطرنج لوبولو لپاره خپله لومړنۍ لوبه پیل کړئ.</string>
-    <string name="chess_empty_start_button">خپله لومړنۍ لوبه پیل کړئ</string>
     <string name="chess_detail_unavailable">لوبه نه لري</string>
     <string name="chess_delete_title">لوبه ړنګه شي؟</string>
     <string name="chess_delete_message">دا لوبه ستاسو له لیست څخه لري کوي.</string>

@@ -415,7 +415,6 @@
     <string name="staff_team_add_member">Üye ekle</string>
     <string name="staff_team_added_by_label">Ekleyen:</string>
     <string name="staff_team_added_by_system">Sistem</string>
-    <string name="staff_team_col_added_by">Ekleyen</string>
     <string name="staff_team_dialog_add">Ekle</string>
     <string name="staff_team_dialog_add_title">Takım üyesi ekle</string>
     <string name="staff_team_dialog_adding">Ekleniyor…</string>

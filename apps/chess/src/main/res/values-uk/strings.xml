@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Шахи</string>
-    <string name="chess_sidebar_header">Шахи</string>
     <string name="chess_sidebar_active">Активні ігри</string>
     <string name="chess_sidebar_completed">Завершено</string>
     <string name="chess_sidebar_new_game">Нова гра</string>
-    <string name="chess_section_active">Активні ігри</string>
-    <string name="chess_section_completed">Завершено</string>
-    <string name="chess_new_game">Нова гра</string>
     <string name="chess_empty_title">Ігор ще немає</string>
     <string name="chess_new_title">Нова гра</string>
     <string name="chess_new_pick_opponent">Виберіть суперника</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Сповіщення Шахи</string>
     <string name="chess_channel_description">Сповіщення про ходи, пропозиції нічиєї та результати партій.</string>
     <string name="chess_open_sidebar">Відкрити бічну панель</string>
-    <string name="chess_empty_subtitle">Розпочніть першу партію, щоб грати в шахи з другом.</string>
-    <string name="chess_empty_start_button">Розпочати першу партію</string>
     <string name="chess_detail_unavailable">Партія недоступна</string>
     <string name="chess_delete_title">Видалити гру?</string>
     <string name="chess_delete_message">Це видаляє партію з вашого списку.</string>

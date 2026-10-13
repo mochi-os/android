@@ -31,7 +31,6 @@
     <string name="crm_settings_tab_people">Personnes</string>
     <string name="crm_field_type_number">Numéro</string>
     <string name="crm_settings_tab_general">Général</string>
-    <string name="crm_field_save">Enregistrer les modifications</string>
     <string name="crm_field_position_body">Contenu</string>
     <string name="crm_find_recommended">Recommandés</string>
     <string name="crm_sort_field">Trier par</string>
@@ -51,7 +50,6 @@
     <string name="crm_board_rename">Renommer</string>
     <string name="crm_move_position_top">Meilleurs</string>
     <string name="crm_move_current">Actuelle</string>
-    <string name="crm_class_save_name">Enregistrer le nom</string>
     <string name="crm_class_move_up">Déplacer vers le haut</string>
     <string name="crm_class_move_down">Déplacer vers le bas</string>
     <string name="crm_field_type_text">Texte</string>
@@ -87,7 +85,6 @@
     <string name="crm_list_no_matching">Aucun CRM correspondant</string>
     <string name="crm_list_empty">Aucun CRM pour le moment</string>
     <string name="crm_create_title">Créer un CRM</string>
-    <string name="crm_create_template">Modèle</string>
     <string name="crm_find_title">Trouver un CRM</string>
     <string name="crm_find_search_placeholder">Rechercher un CRM ou coller une URL</string>
     <string name="crm_find_search_hint">Rechercher un CRM auquel s\'abonner</string>

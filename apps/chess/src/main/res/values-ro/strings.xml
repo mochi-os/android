@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Șah</string>
-    <string name="chess_sidebar_header">Șah</string>
     <string name="chess_sidebar_active">Jocuri active</string>
     <string name="chess_sidebar_completed">Finalizat</string>
     <string name="chess_sidebar_new_game">Joc nou</string>
-    <string name="chess_section_active">Jocuri active</string>
-    <string name="chess_section_completed">Finalizat</string>
-    <string name="chess_new_game">Joc nou</string>
     <string name="chess_empty_title">Încă niciun joc</string>
     <string name="chess_new_title">Joc nou</string>
     <string name="chess_new_pick_opponent">Alege adversarul</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Notificări Șah</string>
     <string name="chess_channel_description">Notificări despre mutări, oferte de remiză și rezultate de partidă.</string>
     <string name="chess_open_sidebar">Deschide bara laterală</string>
-    <string name="chess_empty_subtitle">Începeți prima partidă pentru a juca șah cu un prieten.</string>
-    <string name="chess_empty_start_button">Începeți prima partidă</string>
     <string name="chess_detail_unavailable">Partidă indisponibilă</string>
     <string name="chess_delete_title">Ștergi jocul?</string>
     <string name="chess_delete_message">Aceasta elimină partida din lista dumneavoastră.</string>

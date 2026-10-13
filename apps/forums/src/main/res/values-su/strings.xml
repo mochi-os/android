@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Ngaran tampilan</string>
-    <string name="forums_auth_verification_failed">Verifikasi gagal</string>
     <string name="forums_list_title">Forum</string>
     <string name="forums_list_find">Téangan forum</string>
     <string name="forums_list_unsubscribe">Hentikeun langganan</string>
     <string name="forums_list_unsubscribe_title">Hentikeun langganan</string>
     <string name="forums_create_title">Jieun forum</string>
     <string name="forums_create_name">Ngaran forum</string>
-    <string name="forums_create_privacy">Privasi</string>
-    <string name="forums_create_private">Pribadi</string>
-    <string name="forums_create_public">Publik</string>
     <string name="forums_create_action">Jieun forum</string>
     <string name="forums_find_title">Téangan forum</string>
     <string name="forums_find_recommended">Direkomendasikeun</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Kirim</string>
     <string name="forums_post_edit">Édit pos</string>
     <string name="forums_post_edit_title">Édit pos</string>
-    <string name="forums_post_edit_title_field">Judul</string>
-    <string name="forums_post_save">Simpen</string>
     <string name="forums_post_delete">Hapus pos</string>
     <string name="forums_post_delete_title">Hapus pos</string>
     <string name="forums_post_locked">Dikonci</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Anggota</string>
     <string name="forums_tab_banner">Spanduk</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Pamaké atawa grup</string>
-    <string name="forums_access_level_view">Tingali</string>
-    <string name="forums_access_level_vote">Milih</string>
-    <string name="forums_access_level_comment">Koméntaran</string>
-    <string name="forums_access_level_post">Kirim</string>
-    <string name="forums_access_level_none">Euweuh</string>
     <string name="forums_members_empty">Teu aya anggota</string>
     <string name="forums_banner_dismiss">Pasini banner</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Akun standar</string>
-    <string name="forums_ai_prompt_reset">Setel ulang ka baku</string>
     <string name="forums_settings_unsubscribe">Hentikeun langganan</string>
     <string name="forums_moderation_title">Moderasi</string>
     <string name="forums_moderation_tab_queue">Antrian</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Lain topik</string>
     <string name="forums_report_reason_other">Séjén</string>
     <string name="forums_post_default_author">Pamaké</string>
-    <string name="forums_comments">Koméntar</string>
     <string name="forums_no_comments">Tacan aya koméntar</string>
-    <string name="forums_comment_save">Simpen</string>
     <string name="forums_comment_edit">Édit koméntar</string>
     <string name="forums_comment_edit_title">Édit koméntar</string>
-    <string name="forums_comment_edit_attach">Lampirkeun file</string>
     <string name="forums_comment_delete">Hapus koméntar</string>
     <string name="forums_comment_delete_title">Hapus koméntar</string>
     <string name="forums_comment_reply">Bales</string>
-    <string name="forums_settings_rename">Ganti ngaran</string>
-    <string name="forums_settings_save">Simpen</string>
     <string name="forums_settings_delete">Hapus forum</string>
     <string name="forums_settings_delete_title">Hapus forum</string>
     <string name="forums_forum_not_found">Forum teu kapanggih</string>
@@ -122,18 +103,10 @@
 
     <string name="forums_comment_send">Kirim</string>
     <string name="forums_post_body_field">Eusi</string>
-    <string name="forums_post_edit_body_field">Eusi</string>
     <string name="forums_comment_edit_body_field">Eusi</string>
-    <string name="forums_post_tag_add">Tambah tag</string>
     <string name="forums_write_comment">Tulis koméntar…</string>
-    <string name="forums_auth_login_failed">Login gagal</string>
 
     <string name="notification_channel_forums">Béwara forum</string>
-    <string name="forums_auth_brand">Mochi Forum</string>
-    <string name="forums_auth_create_identity_failed">Gagal nyieun idéntitas</string>
-    <string name="forums_auth_mfa_unsupported">MFA can acan didukung dina aplikasi mobile</string>
-    <string name="forums_auth_enter_code_sent">Asupkeun kode anu dikirim ka %1$s</string>
-    <string name="forums_auth_create_identity">Jieun idéntitas anjeun</string>
     <string name="forums_list_empty">Acan aya forum</string>
     <string name="forums_list_unsubscribe_message">Anjeun yakin hoyong ngabatalkeun langganan tina forum ieu?</string>
     <string name="forums_find_search_placeholder">Téangan forum atawa témpélkeun URL</string>
@@ -143,26 +116,12 @@
     <string name="forums_post_vote_down">Sora handap</string>
     <string name="forums_post_quote">Kutip dina waleran</string>
     <string name="forums_comment_quote">Kutip dina waleran</string>
-    <string name="forums_tag_clear">Hapus saringan</string>
-    <string name="forums_post_tag_remove">Hapus tag</string>
     <string name="forums_access_add">Tambihkeun aturan aksés</string>
     <string name="forums_access_empty">Acan aya aturan — baku diterapkeun</string>
-    <string name="forums_access_target_hint">ID éntitas, @grup, * (sadayana), atawa + (anggota)</string>
-    <string name="forums_access_level">Tingkat</string>
-    <string name="forums_access_level_moderate">Moderasi</string>
     <string name="forums_members_search">Saring anggota</string>
     <string name="forums_banner_description">Markdown anu ditembongkeun di luhureun forum.</string>
     <string name="forums_banner_placeholder">Lebetkeun téks spanduk (ngarojong markdown)…</string>
-    <string name="forums_ai_mode_label">Modeu: %1$s</string>
-    <string name="forums_ai_mode_heading">Modeu AI</string>
     <string name="forums_ai_mode_off">Dipareuman</string>
-    <string name="forums_ai_account">Akun AI</string>
-    <string name="forums_ai_prompt_tag">Pituduh tagging</string>
-    <string name="forums_ai_prompt_score">Pituduh peunteun</string>
-    <string name="forums_ai_post_prompt_label">Pituduh pikeun tag pos</string>
-    <string name="forums_ai_comment_prompt_label">Pituduh pikeun tag koméntar</string>
-    <string name="forums_settings_fingerprint">Sidik ramo: %1$s</string>
-    <string name="forums_settings_clear_notifications">Hapus béwara</string>
     <string name="forums_moderation_queue_empty">Teu aya anu ngantosan</string>
     <string name="forums_moderation_report_details">Rincian: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Direngsekeun ku %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Ngawaler ka %1$s</string>
     <string name="forums_comment_clear_reply">Hapus waleran</string>
     <string name="forums_settings_title">Setélan %1$s</string>
-    <string name="forums_settings_rename_label">Ngaran forum</string>
-    <string name="forums_settings_danger_zone">Wilayah bahaya</string>
     <string name="forums_settings_delete_message">Ieu bakal miceun forum sareng sadaya posna sacara permanén. Ieu teu tiasa dibalikeun deui.</string>
 
-    <string name="forums_tag_interest_up">Tingkatkeun minat</string>
-    <string name="forums_tag_interest_down">Kurangan minat</string>
-    <string name="forums_tag_interest_remove">Cabut minat</string>
     <string name="forums_access_tab_users">Pamaké</string>
     <string name="forums_access_tab_groups">Grup</string>
-    <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Paluruh pamaké</string>
     <string name="forums_access_no_groups">Teu aya grup</string>
     <string name="forums_saved_title">Nu disimpen</string>

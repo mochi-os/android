@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">ໝາກຮຸກ</string>
-    <string name="chess_sidebar_header">ໝາກຮຸກ</string>
     <string name="chess_sidebar_active">ເກມທີ່ໃຊ້ງານຢູ່</string>
     <string name="chess_sidebar_completed">ສຳເລັດແລ້ວ</string>
     <string name="chess_sidebar_new_game">ເກມໃໝ່</string>
-    <string name="chess_section_active">ເກມທີ່ໃຊ້ງານຢູ່</string>
-    <string name="chess_section_completed">ສຳເລັດແລ້ວ</string>
-    <string name="chess_new_game">ເກມໃໝ່</string>
     <string name="chess_empty_title">ຍັງບໍ່ມີເກມ</string>
     <string name="chess_new_title">ເກມໃໝ່</string>
     <string name="chess_new_pick_opponent">ເລືອກຄູ່ຕໍ່ສູ້</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">ການແຈ້ງເຕືອນກ່ຽວກັບການເຄື່ອນຍ້າຍໝາກຮຸກ, ການສະເໜີເສີຍ ແລະ ຜົນການແຂ່ງຂັນ.</string>
     <string name="chess_open_sidebar">ເປີດແຖບຂ້າງ</string>
-    <string name="chess_empty_subtitle">ເລີ່ມການແຂ່ງຂັນຄັ້ງທຳອິດຂອງທ່ານເພື່ອຫຼິ້ນໝາກຮຸກກັບໝູ່.</string>
-    <string name="chess_empty_start_button">ເລີ່ມການແຂ່ງຂັນຄັ້ງທຳອິດຂອງທ່ານ</string>
     <string name="chess_detail_unavailable">ການແຂ່ງຂັນບໍ່ພ້ອມໃຊ້</string>
     <string name="chess_delete_title">ລົບເກມ?</string>
     <string name="chess_delete_message">ນີ້ຈະລຶບການແຂ່ງຂັນອອກຈາກລາຍການຂອງທ່ານ.</string>

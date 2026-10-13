@@ -19,7 +19,6 @@
     <string name="crm_link">Juajuha</string>
     <string name="crm_design">Diseño</string>
     <string name="crm_export_failed">Ndaikatúi oñeñongatu ñemosẽ</string>
-    <string name="crm_sort_direction">Dirección</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Oñemoheñói</string>
     <string name="crm_sort_updated">Oñembohekopyahúma</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Embojuaju clase</string>
     <string name="crm_classes_create">Emoheñói</string>
     <string name="crm_class_name">Téra</string>
-    <string name="crm_class_save_name">Eñongatu téra</string>
     <string name="crm_class_title_field">Teratee campo</string>
     <string name="crm_class_fields">Campokuéra</string>
     <string name="crm_class_add_field">Embojuaju campo</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Oñeikotevẽ</string>
     <string name="crm_field_position_default">Ypygua</string>
     <string name="crm_field_position_sidebar">Yke panel</string>
-    <string name="crm_field_save">Eñongatu ñemoambue</string>
     <string name="crm_field_options">Jeporavorã</string>
     <string name="crm_field_add_option">Embojuaju jeporavorã</string>
     <string name="crm_field_delete">Hundi campo</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Eheka CRM</string>
     <string name="crm_list_no_matching">Ndaipóri CRM ojojoguáva</string>
     <string name="crm_list_empty">Ndaipóri gueteri CRM</string>
-    <string name="crm_create_template">Plantilla</string>
     <string name="crm_find_search_placeholder">Eheka CRM térã emboja URL</string>
     <string name="crm_find_search_hint">Eheka CRM resuscribi hag̃ua</string>
     <string name="crm_create_object_parent_none">(mba\'eve)</string>

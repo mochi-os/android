@@ -19,7 +19,6 @@
     <string name="crm_link">Ligazón</string>
     <string name="crm_design">Deseño</string>
     <string name="crm_export_failed">Non se puido gardar a exportación</string>
-    <string name="crm_sort_direction">Dirección</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Creado</string>
     <string name="crm_sort_updated">Actualizado</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Engadir clase</string>
     <string name="crm_classes_create">Crear</string>
     <string name="crm_class_name">Nome</string>
-    <string name="crm_class_save_name">Gardar o nome</string>
     <string name="crm_class_title_field">Campo de título</string>
     <string name="crm_class_fields">Campos</string>
     <string name="crm_class_add_field">Engadir campo</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Obrigatorio</string>
     <string name="crm_field_position_default">Predeterminado</string>
     <string name="crm_field_position_sidebar">Barra lateral</string>
-    <string name="crm_field_save">Gardar cambios</string>
     <string name="crm_field_options">Opcións</string>
     <string name="crm_field_add_option">Engadir opción</string>
     <string name="crm_field_delete">Eliminar campo</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Buscar CRM</string>
     <string name="crm_list_no_matching">Non hai CRM coincidentes</string>
     <string name="crm_list_empty">Aínda non hai CRM</string>
-    <string name="crm_create_template">Modelo</string>
     <string name="crm_find_search_placeholder">Buscar CRM ou pegar URL</string>
     <string name="crm_find_search_hint">Buscar un CRM ao que subscribirse</string>
     <string name="crm_create_object_parent_none">(ningún)</string>

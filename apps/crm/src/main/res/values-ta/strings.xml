@@ -19,7 +19,6 @@
     <string name="crm_link">இணைப்பு</string>
     <string name="crm_design">வடிவமைப்பு</string>
     <string name="crm_export_failed">ஏற்றுமதியைச் சேமிக்க முடியவில்லை</string>
-    <string name="crm_sort_direction">திசை</string>
     <string name="crm_sort_rank">கைமுறை</string>
     <string name="crm_sort_created">உருவாக்கப்பட்டது</string>
     <string name="crm_sort_updated">புதுப்பிக்கப்பட்டது</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">வகுப்பு சேர்</string>
     <string name="crm_classes_create">உருவாக்கு</string>
     <string name="crm_class_name">பெயர்</string>
-    <string name="crm_class_save_name">பெயரைச் சேமி</string>
     <string name="crm_class_title_field">தலைப்பு புலம்</string>
     <string name="crm_class_fields">புலங்கள்</string>
     <string name="crm_class_add_field">புலம் சேர்</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">தேவை</string>
     <string name="crm_field_position_default">இயல்புநிலை</string>
     <string name="crm_field_position_sidebar">பக்கப்பட்டி</string>
-    <string name="crm_field_save">மாற்றங்களை சேமி</string>
     <string name="crm_field_options">விருப்பங்கள்</string>
     <string name="crm_field_add_option">விருப்பம் சேர்</string>
     <string name="crm_field_delete">புலத்தை நீக்கு</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM ஐத் தேடவும்</string>
     <string name="crm_list_no_matching">பொருந்தும் CRM இல்லை</string>
     <string name="crm_list_empty">இன்னும் CRM இல்லை</string>
-    <string name="crm_create_template">வார்ப்புரு</string>
     <string name="crm_find_search_placeholder">CRM ஐத் தேடவும் அல்லது URL ஐ ஒட்டவும்</string>
     <string name="crm_find_search_hint">சந்தா செலுத்த CRM ஐத் தேடவும்</string>
     <string name="crm_create_object_parent_none">(எதுவுமில்லை)</string>

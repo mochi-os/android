@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Испрати порака</string>
     <string name="people_contacts_no_people_found">Не се пронајдени луѓе</string>
     <string name="people_contacts_try_adjusting">Обидете се да го прилагодите вашето пребарување</string>
-    <string name="people_contact_section_address">Адреса</string>
     <string name="people_contact_section_detail">Детали</string>
     <string name="people_contact_name">Име</string>
     <string name="people_contact_email">Е-пошта</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Преименувај</string>
     <string name="people_contacts_sort_name">Име</string>
     <string name="people_contacts_sort_recent">Неодамна додадено</string>
-    <string name="people_contacts_thats_you">Тоа сте вие</string>
     <string name="people_contacts_try_different_search">Обидете се со различен термин за пребарување</string>
     <string name="people_contacts_unfriend">Отстрани пријател</string>
     <string name="people_add_contact_search_placeholder">Внесете за пребарување…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Не се најдени контакти</string>
     <string name="people_contacts_add_to_start">Додајте контакти за да почнете да се поврзувате</string>
     <string name="people_contacts_actions">Дејства за контактот</string>
-    <string name="people_contacts_friend">Пријател</string>
     <string name="people_contacts_invite">Покани</string>
     <string name="people_contacts_unfriend_confirm">%1$s повеќе нема да ви биде пријател. Контактот останува во вашиот адресар.</string>
     <string name="people_contacts_delete">Избриши контакт</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Контактот е променет</string>
     <string name="people_add_contact_title">Додај контакт</string>
     <string name="people_add_contact_add">Додај во контакти</string>
-    <string name="people_add_contact_in_contacts">Во контакти</string>
     <string name="people_books_create">Создај адресар</string>
     <string name="people_books_delete">Избриши адресар</string>
     <plurals name="people_books_delete_confirm">

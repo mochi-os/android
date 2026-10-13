@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Satranç</string>
-    <string name="chess_sidebar_header">Satranç</string>
     <string name="chess_sidebar_active">Aktif oyunlar</string>
     <string name="chess_sidebar_completed">Tamamlandı</string>
     <string name="chess_sidebar_new_game">Yeni oyun</string>
-    <string name="chess_section_active">Aktif oyunlar</string>
-    <string name="chess_section_completed">Tamamlandı</string>
-    <string name="chess_new_game">Yeni oyun</string>
     <string name="chess_empty_title">Henüz oyun yok</string>
     <string name="chess_new_title">Yeni oyun</string>
     <string name="chess_new_pick_opponent">Rakip seçin</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">Oyunu listenizden kaldırır.</string>
     <string name="chess_delete_title">Oyun silinsin mi?</string>
     <string name="chess_detail_unavailable">Oyun kullanılamıyor</string>
-    <string name="chess_empty_start_button">İlk oyununuzu başlatın</string>
-    <string name="chess_empty_subtitle">Bir arkadaşınızla satranç oynamak için ilk oyununuzu başlatın.</string>
     <string name="chess_move_capture">%1$s, %2$s aldı</string>
     <string name="chess_open_sidebar">Kenar çubuğunu aç</string>
     <string name="chess_ws_connecting">Bağlanıyor…</string>

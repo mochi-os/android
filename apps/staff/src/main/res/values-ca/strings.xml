@@ -415,7 +415,6 @@
     <string name="staff_team_add_member">Afegeix un membre</string>
     <string name="staff_team_added_by_label">Afegit per:</string>
     <string name="staff_team_added_by_system">Sistema</string>
-    <string name="staff_team_col_added_by">Afegit per</string>
     <string name="staff_team_dialog_add">Afegeix</string>
     <string name="staff_team_dialog_add_title">Afegeix un membre de l\'equip</string>
     <string name="staff_team_dialog_adding">Afegint…</string>

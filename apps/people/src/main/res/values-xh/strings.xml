@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Thumela umyalezo</string>
     <string name="people_contacts_no_people_found">Akukho bantu bafumanekileyo</string>
     <string name="people_contacts_try_adjusting">Zama ukulungisa ukhangelo lwakho</string>
-    <string name="people_contact_section_address">Idilesi</string>
     <string name="people_contact_section_detail">Iinkcukacha</string>
     <string name="people_contact_name">Igama</string>
     <string name="people_contact_email">I-imeyili</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Guqula igama</string>
     <string name="people_contacts_sort_name">Igama</string>
     <string name="people_contacts_sort_recent">Kongezwe kutshanje</string>
-    <string name="people_contacts_thats_you">Nguwe lowo</string>
     <string name="people_contacts_try_different_search">Zama elinye igama lokukhangela</string>
     <string name="people_contacts_unfriend">Susa umhlobo</string>
     <string name="people_add_contact_search_placeholder">Chwetheza ukukhangela…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Akukho oqhagamshelana nabo abafunyenweyo</string>
     <string name="people_contacts_add_to_start">Yongeza oqhagamshelana nabo ukuze uqalise</string>
     <string name="people_contacts_actions">Izenzo zoqhagamshelwano</string>
-    <string name="people_contacts_friend">Umhlobo</string>
     <string name="people_contacts_invite">Mema</string>
     <string name="people_contacts_unfriend_confirm">%1$s akasayi kuba ngumhlobo wakho. Uqhagamshelwano luhlala kwincwadi yakho yeedilesi.</string>
     <string name="people_contacts_delete">Cima oqhagamshelwana naye</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Uqhagamshelwano lutshintshile</string>
     <string name="people_add_contact_title">Yongeza oqhagamshelwana naye</string>
     <string name="people_add_contact_add">Yongeza kwabo uqhagamshelana nabo</string>
-    <string name="people_add_contact_in_contacts">Kwabaqhagamshelwana nabo</string>
     <string name="people_books_create">Yenza incwadi yeedilesi</string>
     <string name="people_books_delete">Cima incwadi yeedilesi</string>
     <plurals name="people_books_delete_confirm">

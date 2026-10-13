@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Šahs</string>
-    <string name="chess_sidebar_header">Šahs</string>
     <string name="chess_sidebar_active">Aktīvās spēles</string>
     <string name="chess_sidebar_completed">Pabeigts</string>
     <string name="chess_sidebar_new_game">Jauna spēle</string>
-    <string name="chess_section_active">Aktīvās spēles</string>
-    <string name="chess_section_completed">Pabeigts</string>
-    <string name="chess_new_game">Jauna spēle</string>
     <string name="chess_empty_title">Vēl nav spēļu</string>
     <string name="chess_new_title">Jauna spēle</string>
     <string name="chess_new_pick_opponent">Izvēlies pretinieku</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Šaha paziņojumi</string>
     <string name="chess_channel_description">Paziņojumi par gājieniem, neizšķirtu piedāvājumiem un spēļu rezultātiem.</string>
     <string name="chess_open_sidebar">Atvērt sānu joslu</string>
-    <string name="chess_empty_subtitle">Sāciet savu pirmo spēli, lai spēlētu šahu ar draugu.</string>
-    <string name="chess_empty_start_button">Sāciet savu pirmo spēli</string>
     <string name="chess_detail_unavailable">Spēle nav pieejama</string>
     <string name="chess_delete_title">Dzēst spēli?</string>
     <string name="chess_delete_message">Tas noņem spēli no jūsu saraksta.</string>

@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">หมากรุก</string>
-    <string name="chess_sidebar_header">หมากรุก</string>
     <string name="chess_sidebar_active">เกมที่กำลังเล่น</string>
     <string name="chess_sidebar_completed">เสร็จสมบูรณ์</string>
     <string name="chess_sidebar_new_game">เกมใหม่</string>
-    <string name="chess_section_active">เกมที่กำลังเล่น</string>
-    <string name="chess_section_completed">เสร็จสมบูรณ์</string>
-    <string name="chess_new_game">เกมใหม่</string>
     <string name="chess_empty_title">ยังไม่มีเกม</string>
     <string name="chess_new_title">เกมใหม่</string>
     <string name="chess_new_pick_opponent">เลือกคู่ต่อสู้</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">การแจ้งเตือนหมากรุก</string>
     <string name="chess_channel_description">การแจ้งเตือนเกี่ยวกับการเดิน ข้อเสนอเสมอ และผลการแข่งขัน</string>
     <string name="chess_open_sidebar">เปิดแถบด้านข้าง</string>
-    <string name="chess_empty_subtitle">เริ่มเกมแรกของคุณเพื่อเล่นหมากรุกกับเพื่อน</string>
-    <string name="chess_empty_start_button">เริ่มเกมแรกของคุณ</string>
     <string name="chess_detail_unavailable">เกมไม่พร้อมใช้งาน</string>
     <string name="chess_delete_title">ลบเกม?</string>
     <string name="chess_delete_message">การกระทำนี้จะลบเกมออกจากรายการของคุณ</string>

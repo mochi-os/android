@@ -19,7 +19,6 @@
     <string name="crm_link">連結</string>
     <string name="crm_design">設計</string>
     <string name="crm_export_failed">無法儲存匯出內容</string>
-    <string name="crm_sort_direction">方向</string>
     <string name="crm_sort_rank">手動</string>
     <string name="crm_sort_created">已建立</string>
     <string name="crm_sort_updated">已更新</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">新增類別</string>
     <string name="crm_classes_create">建立</string>
     <string name="crm_class_name">名稱</string>
-    <string name="crm_class_save_name">儲存名稱</string>
     <string name="crm_class_title_field">標題欄位</string>
     <string name="crm_class_fields">欄位</string>
     <string name="crm_class_add_field">新增欄位</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">必填</string>
     <string name="crm_field_position_default">預設</string>
     <string name="crm_field_position_sidebar">側邊欄</string>
-    <string name="crm_field_save">儲存變更</string>
     <string name="crm_field_options">選項</string>
     <string name="crm_field_add_option">新增選項</string>
     <string name="crm_field_delete">刪除欄位</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">搜尋 CRM</string>
     <string name="crm_list_no_matching">沒有符合的 CRM</string>
     <string name="crm_list_empty">尚無 CRM</string>
-    <string name="crm_create_template">範本</string>
     <string name="crm_find_search_placeholder">搜尋 CRM 或貼上網址</string>
     <string name="crm_find_search_hint">搜尋要訂閱的 CRM</string>
     <string name="crm_create_object_parent_none">(無)</string>

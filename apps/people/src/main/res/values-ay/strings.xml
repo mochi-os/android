@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Mensaje apayaña</string>
     <string name="people_contacts_no_people_found">Jaqinak jan jikxatasiti</string>
     <string name="people_contacts_try_adjusting">Thaqhäwim mayjt\'ayañ yant\'am</string>
-    <string name="people_contact_section_address">Dirección</string>
     <string name="people_contact_section_detail">Detallenaka</string>
     <string name="people_contact_name">Suti</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Suti mayjt\'ayaña</string>
     <string name="people_contacts_sort_name">Suti</string>
     <string name="people_contacts_sort_recent">Machaq yapxatata</string>
-    <string name="people_contacts_thats_you">Jumawa</string>
     <string name="people_contacts_try_different_search">Yaqha thaqhañ aru yant\'am</string>
     <string name="people_contacts_unfriend">Masi aparma</string>
     <string name="people_add_contact_search_placeholder">Thaqhañatak qillqam…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Janiw contactonakax jikxatasiti</string>
     <string name="people_contacts_add_to_start">Contactonak yapxatma chikt\'asiñ qalltañataki</string>
     <string name="people_contacts_actions">Contacto lurawinaka</string>
-    <string name="people_contacts_friend">Masi</string>
     <string name="people_contacts_invite">Jawsaña</string>
     <string name="people_contacts_unfriend_confirm">%1$s janiw masimäxaniti. Contactox contactonakaman qhiparakiniwa.</string>
     <string name="people_contacts_delete">Contacto chhaqtayaña</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Contactox mayjt\'ayatawa</string>
     <string name="people_add_contact_title">Contacto yapxataña</string>
     <string name="people_add_contact_add">Contactonakar yapxataña</string>
-    <string name="people_add_contact_in_contacts">Contactonakankiwa</string>
     <string name="people_books_create">Direccionanak libro luraña</string>
     <string name="people_books_delete">Direccionanak libro chhaqtayaña</string>
     <plurals name="people_books_delete_confirm">

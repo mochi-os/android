@@ -19,7 +19,6 @@
     <string name="crm_link">Enlace</string>
     <string name="crm_design">Diseño</string>
     <string name="crm_export_failed">Apsuta janiw imañjamäkiti</string>
-    <string name="crm_sort_direction">Dirección</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Lurata</string>
     <string name="crm_sort_updated">Machaqachatawa</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Clase yapxataña</string>
     <string name="crm_classes_create">Luraña</string>
     <string name="crm_class_name">Suti</string>
-    <string name="crm_class_save_name">Suti imaña</string>
     <string name="crm_class_title_field">Título campo</string>
     <string name="crm_class_fields">Camponaka</string>
     <string name="crm_class_add_field">Campo yapxataña</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Wakisi</string>
     <string name="crm_field_position_default">Nayrïri</string>
     <string name="crm_field_position_sidebar">Thiya panel</string>
-    <string name="crm_field_save">Mayjt\'awinak imaña</string>
     <string name="crm_field_options">Opcionanaka</string>
     <string name="crm_field_add_option">Opción yapxataña</string>
     <string name="crm_field_delete">Campo chhaqtayaña</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">CRM thaqhaña</string>
     <string name="crm_list_no_matching">Janiw CRM jikxatatakiti</string>
     <string name="crm_list_empty">Janiw CRM utjkiti</string>
-    <string name="crm_create_template">Plantilla</string>
     <string name="crm_find_search_placeholder">CRM thaqhaña jan ukax URL pegaña</string>
     <string name="crm_find_search_hint">Suscribiñatakix CRM thaqhaña</string>
     <string name="crm_search_objects_placeholder">Objetonak thaqhaña</string>

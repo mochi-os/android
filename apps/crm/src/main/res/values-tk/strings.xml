@@ -19,7 +19,6 @@
     <string name="crm_link">Salgy</string>
     <string name="crm_design">Dizaýn</string>
     <string name="crm_export_failed">Eksporty saklap bolmady</string>
-    <string name="crm_sort_direction">Ugur</string>
     <string name="crm_sort_rank">El bilen</string>
     <string name="crm_sort_created">Döredildi</string>
     <string name="crm_sort_updated">Täzelendi</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Klass goşmak</string>
     <string name="crm_classes_create">Döretmek</string>
     <string name="crm_class_name">At</string>
-    <string name="crm_class_save_name">Ady ýatda sakla</string>
     <string name="crm_class_title_field">At meýdany</string>
     <string name="crm_class_fields">Meýdanlar</string>
     <string name="crm_class_add_field">Meýdan goşmak</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Talap edilýär</string>
     <string name="crm_field_position_default">Adaty</string>
     <string name="crm_field_position_sidebar">Gapdal panel</string>
-    <string name="crm_field_save">Üýtgeşiklikleri saklaýyş</string>
     <string name="crm_field_options">Wariantlar</string>
     <string name="crm_field_add_option">Wariant goşmak</string>
     <string name="crm_field_delete">Meýdany pozmak</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM gözlemek</string>
     <string name="crm_list_no_matching">Gabat gelýän CRM ýok</string>
     <string name="crm_list_empty">Heniz CRM ýok</string>
-    <string name="crm_create_template">Şablon</string>
     <string name="crm_find_search_placeholder">CRM gözläň ýa-da URL goýuň</string>
     <string name="crm_find_search_hint">Abuna ýazylmak üçin CRM gözläň</string>
     <string name="crm_create_object_parent_none">(ýok)</string>

@@ -50,7 +50,6 @@
     <string name="go_resign_title">¿Atipjayasiñati?</string>
     <string name="go_sidebar_completed">Tukuyata</string>
     <string name="go_sidebar_new_game">Machaqa anata</string>
-    <string name="go_status_draw">Kikpacha</string>
     <string name="go_status_draw_text">Kikpacha</string>
     <string name="go_status_game_over">Anata tukusxiwa</string>
     <string name="go_status_opponent_move">%1$s-n turnopa</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Thiya panel jist\'araña</string>
     <string name="go_sidebar_active">Lurkaski anatanaka</string>
     <string name="go_empty_active">Janïr lurkaski anatanakas utjkiti.</string>
-    <string name="go_status_resigned">Jaytawayi</string>
     <string name="go_new_game_title">Machaq Go anata</string>
     <string name="go_new_game_no_friends">Mä anata qalltañat nayraqat mä masi yapxatañaw wakisi.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">ຊື່ສະແດງ</string>
-    <string name="forums_auth_verification_failed">ການຢືນຢັນລົ້ມເຫຼວ</string>
     <string name="forums_list_title">ກະດານສົນທະນາ</string>
     <string name="forums_list_find">ຄົ້ນຫາກະດານສົນທະນາ</string>
     <string name="forums_list_unsubscribe">ເຊົາຕິດຕາມ</string>
     <string name="forums_list_unsubscribe_title">ເຊົາຕິດຕາມ</string>
     <string name="forums_create_title">ສ້າງກະດານສົນທະນາ</string>
     <string name="forums_create_name">ຊື່ກະດານສົນທະນາ</string>
-    <string name="forums_create_privacy">ຄວາມເປັນສ່ວນຕົວ</string>
-    <string name="forums_create_private">ສ່ວນຕົວ</string>
-    <string name="forums_create_public">ສາທາລະນະ</string>
     <string name="forums_create_action">ສ້າງກະດານສົນທະນາ</string>
     <string name="forums_find_title">ຄົ້ນຫາກະດານສົນທະນາ</string>
     <string name="forums_find_recommended">ແນະນຳ</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">ໂພສ</string>
     <string name="forums_post_edit">ແກ້ໄຂໂພສ</string>
     <string name="forums_post_edit_title">ແກ້ໄຂໂພສ</string>
-    <string name="forums_post_edit_title_field">ຊື່ເລື່ອງ</string>
-    <string name="forums_post_save">ບັນທຶກ</string>
     <string name="forums_post_delete">ລົບໂພສ</string>
     <string name="forums_post_delete_title">ລົບໂພສ</string>
     <string name="forums_post_locked">ລັອກແລ້ວ</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">ສະມາຊິກ</string>
     <string name="forums_tab_banner">ປ້າຍ</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">ຜູ້ໃຊ້ ຫຼື ກຸ່ມ</string>
-    <string name="forums_access_level_view">ເບິ່ງ</string>
-    <string name="forums_access_level_vote">ລົງຄະແນນ</string>
-    <string name="forums_access_level_comment">ສະແດງຄຳເຫັນ</string>
-    <string name="forums_access_level_post">ໂພສ</string>
-    <string name="forums_access_level_none">ບໍ່ມີ</string>
     <string name="forums_members_empty">ບໍ່ມີສະມາຊິກ</string>
     <string name="forums_banner_dismiss">ປິດປ້າຍ</string>
     <string name="forums_ai_mode_tag">ຕິດແທັກ</string>
     <string name="forums_ai_account_default">ບັນຊີເລີ່ມຕົ້ນ</string>
-    <string name="forums_ai_prompt_reset">ຣີເຊັດເປັນຄ່າເລີ່ມຕົ້ນ</string>
     <string name="forums_settings_unsubscribe">ເຊົາຕິດຕາມ</string>
     <string name="forums_moderation_title">ການກວດກາ</string>
     <string name="forums_moderation_tab_queue">ຄິວ</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">ນອກຫົວຂໍ້</string>
     <string name="forums_report_reason_other">ອື່ນໆ</string>
     <string name="forums_post_default_author">ຜູ້ໃຊ້</string>
-    <string name="forums_comments">ຄຳເຫັນ</string>
     <string name="forums_no_comments">ຍັງບໍ່ມີຄຳເຫັນ</string>
-    <string name="forums_comment_save">ບັນທຶກ</string>
     <string name="forums_comment_edit">ແກ້ໄຂຄຳເຫັນ</string>
     <string name="forums_comment_edit_title">ແກ້ໄຂຄຳເຫັນ</string>
-    <string name="forums_comment_edit_attach">ແນບໄຟລ໌</string>
     <string name="forums_comment_delete">ລົບຄຳເຫັນ</string>
     <string name="forums_comment_delete_title">ລົບຄຳເຫັນ</string>
     <string name="forums_comment_reply">ຕອບ</string>
-    <string name="forums_settings_rename">ປ່ຽນຊື່</string>
-    <string name="forums_settings_save">ບັນທຶກ</string>
     <string name="forums_settings_delete">ລົບກະດານສົນທະນາ</string>
     <string name="forums_settings_delete_title">ລົບກະດານສົນທະນາ</string>
     <string name="forums_forum_not_found">ບໍ່ພົບກະດານສົນທະນາ</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">ສົ່ງ</string>
     <string name="forums_post_body_field">ເນື້ອຫາ</string>
-    <string name="forums_post_edit_body_field">ເນື້ອຫາ</string>
     <string name="forums_comment_edit_body_field">ເນື້ອຫາ</string>
-    <string name="forums_tag_clear">ລ້າງຕົວກອງ</string>
-    <string name="forums_post_tag_add">ເພີ່ມແທັກ</string>
     <string name="forums_write_comment">ຂຽນຄຳເຫັນ…</string>
-    <string name="forums_auth_login_failed">ເຂົ້າສູ່ລະບົບລົ້ມເຫລວ</string>
 
     <string name="notification_channel_forums">ການແຈ້ງເຕືອນຂອງກະດານສົນທະນາ</string>
-    <string name="forums_auth_brand">Mochi ກະດານສົນທະນາ</string>
-    <string name="forums_auth_create_identity_failed">ສ້າງຕົວຕົນບໍ່ສຳເລັດ</string>
-    <string name="forums_auth_mfa_unsupported">ຍັງບໍ່ຮອງຮັບ MFA ໃນແອັບມືຖື</string>
-    <string name="forums_auth_enter_code_sent">ປ້ອນລະຫັດທີ່ສົ່ງໄປຫາ %1$s</string>
-    <string name="forums_auth_create_identity">ສ້າງຕົວຕົນຂອງທ່ານ</string>
     <string name="forums_list_empty">ຍັງບໍ່ມີກະດານສົນທະນາ</string>
     <string name="forums_list_unsubscribe_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການເຊົາຕິດຕາມກະດານສົນທະນານີ້?</string>
     <string name="forums_find_search_placeholder">ຄົ້ນຫາກະດານສົນທະນາ ຫຼື ວາງ URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">ໂຫວດບໍ່ເຫັນດີ</string>
     <string name="forums_post_quote">ອ້າງອີງໃນຄຳຕອບ</string>
     <string name="forums_comment_quote">ອ້າງອີງໃນຄຳຕອບ</string>
-    <string name="forums_post_tag_remove">ລຶບແທັກ</string>
     <string name="forums_access_add">ເພີ່ມກົດການເຂົ້າເຖິງ</string>
     <string name="forums_access_empty">ຍັງບໍ່ມີກົດ — ໃຊ້ຄ່າເລີ່ມຕົ້ນ</string>
-    <string name="forums_access_target_hint">ID ຕົວຕົນ, @group, * (ທຸກຄົນ), ຫຼື + (ສະມາຊິກ)</string>
-    <string name="forums_access_level">ລະດັບ</string>
-    <string name="forums_access_level_moderate">ກວດສອບ</string>
     <string name="forums_members_search">ກັ່ນຕອງສະມາຊິກ</string>
     <string name="forums_banner_description">Markdown ທີ່ສະແດງຢູ່ດ້ານເທິງຂອງກະດານສົນທະນາ.</string>
     <string name="forums_banner_placeholder">ປ້ອນຂໍ້ຄວາມປ້າຍ (ຮອງຮັບ Markdown)…</string>
-    <string name="forums_ai_mode_label">ໂໝດ: %1$s</string>
-    <string name="forums_ai_mode_heading">ໂໝດ AI</string>
     <string name="forums_ai_mode_off">ປິດໃຊ້ງານແລ້ວ</string>
-    <string name="forums_ai_account">ບັນຊີ AI</string>
-    <string name="forums_ai_prompt_tag">ພຣອມທ໌ສຳລັບແທັກ</string>
-    <string name="forums_ai_prompt_score">ພຣອມທ໌ສຳລັບການໃຫ້ຄະແນນ</string>
-    <string name="forums_ai_post_prompt_label">ພຣອມທ໌ສຳລັບແທັກໂພສ</string>
-    <string name="forums_ai_comment_prompt_label">ພຣອມທ໌ສຳລັບແທັກຄຳເຫັນ</string>
-    <string name="forums_settings_fingerprint">ລາຍນິ້ວມື: %1$s</string>
-    <string name="forums_settings_clear_notifications">ລ້າງການແຈ້ງເຕືອນ</string>
     <string name="forums_moderation_queue_empty">ບໍ່ມີລາຍການລໍຖ້າ</string>
     <string name="forums_moderation_report_details">ລາຍລະອຽດ: %1$s</string>
     <string name="forums_moderation_report_resolved_by">ແກ້ໄຂໂດຍ %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">ກຳລັງຕອບກັບ %1$s</string>
     <string name="forums_comment_clear_reply">ລ້າງການຕອບກັບ</string>
     <string name="forums_settings_title">ການຕັ້ງຄ່າ %1$s</string>
-    <string name="forums_settings_rename_label">ຊື່ກະດານສົນທະນາ</string>
-    <string name="forums_settings_danger_zone">ເຂດອັນຕະລາຍ</string>
     <string name="forums_settings_delete_message">ການກະທຳນີ້ຈະລຶບກະດານສົນທະນາ ແລະ ໂພສທັງໝົດຢ່າງຖາວອນ. ບໍ່ສາມາດກູ້ຄືນໄດ້.</string>
 
-    <string name="forums_tag_interest_up">ເພີ່ມຄວາມສົນໃຈ</string>
-    <string name="forums_tag_interest_down">ຫຼຸດຄວາມສົນໃຈ</string>
-    <string name="forums_tag_interest_remove">ລຶບຄວາມສົນໃຈ</string>
     <string name="forums_access_tab_users">ຜູ້ໃຊ້</string>
     <string name="forums_access_tab_groups">ກຸ່ມ</string>
-    <string name="forums_access_tab_manual">ດ້ວຍຕົນເອງ</string>
     <string name="forums_access_search_users">ຄົ້ນຫາຜູ້ໃຊ້</string>
     <string name="forums_access_no_groups">ບໍ່ມີກຸ່ມທີ່ມີຢູ່</string>
     <string name="forums_saved_title">ທີ່ບັນທຶກໄວ້</string>

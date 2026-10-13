@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Megjelenítendő név</string>
-    <string name="forums_auth_verification_failed">Az ellenőrzés sikertelen</string>
     <string name="forums_list_title">Fórumok</string>
     <string name="forums_list_find">Fórumok keresése</string>
     <string name="forums_list_unsubscribe">Leiratkozás</string>
     <string name="forums_list_unsubscribe_title">Leiratkozás</string>
     <string name="forums_create_title">Fórum létrehozása</string>
     <string name="forums_create_name">Fórum neve</string>
-    <string name="forums_create_privacy">Adatvédelem</string>
-    <string name="forums_create_private">Privát</string>
-    <string name="forums_create_public">Nyilvános</string>
     <string name="forums_create_action">Fórum létrehozása</string>
     <string name="forums_find_title">Fórumok keresése</string>
     <string name="forums_find_recommended">Ajánlott</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Közzététel</string>
     <string name="forums_post_edit">Bejegyzés szerkesztése</string>
     <string name="forums_post_edit_title">Bejegyzés szerkesztése</string>
-    <string name="forums_post_edit_title_field">Cím</string>
-    <string name="forums_post_save">Mentés</string>
     <string name="forums_post_delete">Bejegyzés törlése</string>
     <string name="forums_post_delete_title">Bejegyzés törlése</string>
     <string name="forums_post_locked">Zárolva</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Tagok</string>
     <string name="forums_tab_banner">Fejléckép</string>
     <string name="forums_tab_ai">MI</string>
-    <string name="forums_access_target">Felhasználó vagy csoport</string>
-    <string name="forums_access_level_view">Megtekintés</string>
-    <string name="forums_access_level_vote">Szavazás</string>
-    <string name="forums_access_level_comment">Megjegyzés</string>
-    <string name="forums_access_level_post">Közzététel</string>
-    <string name="forums_access_level_none">Nincs</string>
     <string name="forums_members_empty">Nincsenek tagok</string>
     <string name="forums_banner_dismiss">Banner elvetése</string>
     <string name="forums_ai_mode_tag">Címkézés</string>
     <string name="forums_ai_account_default">Alapértelmezett fiók</string>
-    <string name="forums_ai_prompt_reset">Visszaállítás alapértelmezettre</string>
     <string name="forums_settings_unsubscribe">Leiratkozás</string>
     <string name="forums_moderation_title">Moderálás</string>
     <string name="forums_moderation_tab_queue">Sor</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Témán kívüli</string>
     <string name="forums_report_reason_other">Egyéb</string>
     <string name="forums_post_default_author">Felhasználó</string>
-    <string name="forums_comments">Megjegyzések</string>
     <string name="forums_no_comments">Még nincsenek hozzászólások</string>
-    <string name="forums_comment_save">Mentés</string>
     <string name="forums_comment_edit">Hozzászólás szerkesztése</string>
     <string name="forums_comment_edit_title">Hozzászólás szerkesztése</string>
-    <string name="forums_comment_edit_attach">Fájlok csatolása</string>
     <string name="forums_comment_delete">Megjegyzés törlése</string>
     <string name="forums_comment_delete_title">Megjegyzés törlése</string>
     <string name="forums_comment_reply">Válasz</string>
-    <string name="forums_settings_rename">Átnevezés</string>
-    <string name="forums_settings_save">Mentés</string>
     <string name="forums_settings_delete">Fórum törlése</string>
     <string name="forums_settings_delete_title">Fórum törlése</string>
     <string name="forums_forum_not_found">Fórum nem található</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Küldés</string>
     <string name="forums_post_body_field">Szöveg</string>
-    <string name="forums_post_edit_body_field">Szöveg</string>
     <string name="forums_comment_edit_body_field">Szöveg</string>
-    <string name="forums_auth_login_failed">A bejelentkezés sikertelen</string>
-    <string name="forums_auth_create_identity_failed">Az identitás létrehozása sikertelen</string>
-    <string name="forums_auth_mfa_unsupported">Az MFA még nem támogatott a mobilalkalmazásban</string>
-    <string name="forums_auth_enter_code_sent">Adja meg a(z) %1$s címre küldött kódot</string>
-    <string name="forums_auth_create_identity">Hozza létre identitását</string>
-    <string name="forums_tag_clear">Szűrő törlése</string>
-    <string name="forums_post_tag_add">Címke hozzáadása</string>
     <string name="forums_write_comment">Megjegyzés írása…</string>
 
     <string name="notification_channel_forums">Fórum értesítések</string>
-    <string name="forums_auth_brand">Mochi Fórumok</string>
     <string name="forums_list_empty">Még nincsenek fórumok</string>
     <string name="forums_list_unsubscribe_message">Biztosan le szeretne iratkozni erről a fórumról?</string>
     <string name="forums_find_search_placeholder">Fórumok keresése vagy URL beillesztése</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Leszavazás</string>
     <string name="forums_post_quote">Idézés válaszban</string>
     <string name="forums_comment_quote">Idézés válaszban</string>
-    <string name="forums_post_tag_remove">Címke eltávolítása</string>
     <string name="forums_access_add">Hozzáférési szabály hozzáadása</string>
     <string name="forums_access_empty">Még nincsenek szabályok — az alapértelmezések érvényesek</string>
-    <string name="forums_access_target_hint">Entitásazonosító, @csoport, * (mindenki) vagy + (tagok)</string>
-    <string name="forums_access_level">Szint</string>
-    <string name="forums_access_level_moderate">Moderálás</string>
     <string name="forums_members_search">Tagok szűrése</string>
     <string name="forums_banner_description">A fórum tetején megjelenő Markdown.</string>
     <string name="forums_banner_placeholder">Adja meg a szalaghirdetés szövegét (Markdown támogatott)…</string>
-    <string name="forums_ai_mode_label">Mód: %1$s</string>
-    <string name="forums_ai_mode_heading">MI mód</string>
     <string name="forums_ai_mode_off">Letiltva</string>
-    <string name="forums_ai_account">MI-fiók</string>
-    <string name="forums_ai_prompt_tag">Címkézési prompt</string>
-    <string name="forums_ai_prompt_score">Pontozási prompt</string>
-    <string name="forums_ai_post_prompt_label">Prompt a bejegyzés címkéihez</string>
-    <string name="forums_ai_comment_prompt_label">Prompt a hozzászólás címkéihez</string>
-    <string name="forums_settings_fingerprint">Ujjlenyomat: %1$s</string>
-    <string name="forums_settings_clear_notifications">Értesítések törlése</string>
     <string name="forums_moderation_queue_empty">Nincs függőben lévő elem</string>
     <string name="forums_moderation_report_details">Részletek: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Megoldotta: %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Válasz neki: %1$s</string>
     <string name="forums_comment_clear_reply">Válasz törlése</string>
     <string name="forums_settings_title">%1$s beállításai</string>
-    <string name="forums_settings_rename_label">Fórum neve</string>
-    <string name="forums_settings_danger_zone">Veszélyzóna</string>
     <string name="forums_settings_delete_message">Ez véglegesen törli a fórumot és minden bejegyzését. Ez a művelet nem vonható vissza.</string>
 
-    <string name="forums_tag_interest_up">Érdeklődés növelése</string>
-    <string name="forums_tag_interest_down">Érdeklődés csökkentése</string>
-    <string name="forums_tag_interest_remove">Érdeklődés eltávolítása</string>
     <string name="forums_access_tab_users">Felhasználók</string>
     <string name="forums_access_tab_groups">Csoportok</string>
-    <string name="forums_access_tab_manual">Kézi</string>
     <string name="forums_access_search_users">Felhasználók keresése</string>
     <string name="forums_access_no_groups">Nincsenek elérhető csoportok</string>
     <string name="forums_saved_title">Mentett elemek</string>

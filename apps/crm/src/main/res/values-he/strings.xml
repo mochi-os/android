@@ -19,7 +19,6 @@
     <string name="crm_link">קישור</string>
     <string name="crm_design">עיצוב</string>
     <string name="crm_export_failed">לא ניתן היה לשמור את הייצוא</string>
-    <string name="crm_sort_direction">כיוון</string>
     <string name="crm_sort_rank">ידני</string>
     <string name="crm_sort_created">נוצר</string>
     <string name="crm_sort_updated">עודכן</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">הוסף מחלקה</string>
     <string name="crm_classes_create">צור</string>
     <string name="crm_class_name">שם</string>
-    <string name="crm_class_save_name">שמור שם</string>
     <string name="crm_class_title_field">שדה כותרת</string>
     <string name="crm_class_fields">שדות</string>
     <string name="crm_class_add_field">הוסף שדה</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">נדרש</string>
     <string name="crm_field_position_default">ברירת מחדל</string>
     <string name="crm_field_position_sidebar">סרגל צד</string>
-    <string name="crm_field_save">שמור שינויים</string>
     <string name="crm_field_options">אפשרויות</string>
     <string name="crm_field_add_option">הוסף אפשרות</string>
     <string name="crm_field_delete">מחק שדה</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">חיפוש CRM</string>
     <string name="crm_list_no_matching">לא נמצא CRM תואם</string>
     <string name="crm_list_empty">אין עדיין CRM</string>
-    <string name="crm_create_template">תבנית</string>
     <string name="crm_find_search_placeholder">חיפוש CRM או הדבקת כתובת URL</string>
     <string name="crm_find_search_hint">חיפוש CRM למינוי</string>
     <string name="crm_create_object_parent_none">(ללא)</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Napsat zprávu</string>
     <string name="people_contacts_no_people_found">Žádní lidé nenalezeni</string>
     <string name="people_contacts_try_adjusting">Zkuste upravit hledaný výraz</string>
-    <string name="people_contact_section_address">Adresa</string>
     <string name="people_contact_section_detail">Podrobnosti</string>
     <string name="people_contact_name">Jméno</string>
     <string name="people_contact_email">E-mail</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Přejmenovat</string>
     <string name="people_contacts_sort_name">Jméno</string>
     <string name="people_contacts_sort_recent">Nedávno přidáno</string>
-    <string name="people_contacts_thats_you">To jste vy</string>
     <string name="people_contacts_try_different_search">Zkuste jiný vyhledávací výraz</string>
     <string name="people_contacts_unfriend">Odebrat přítele</string>
     <string name="people_add_contact_search_placeholder">Pište pro vyhledávání…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Nebyly nalezeny žádné kontakty</string>
     <string name="people_contacts_add_to_start">Přidejte kontakty a začněte se spojovat</string>
     <string name="people_contacts_actions">Akce kontaktu</string>
-    <string name="people_contacts_friend">Přítel</string>
     <string name="people_contacts_invite">Pozvat</string>
     <string name="people_contacts_unfriend_confirm">%1$s už nebude vaším přítelem. Kontakt zůstane ve vašem adresáři.</string>
     <string name="people_contacts_delete">Smazat kontakt</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakt se změnil</string>
     <string name="people_add_contact_title">Přidat kontakt</string>
     <string name="people_add_contact_add">Přidat do kontaktů</string>
-    <string name="people_add_contact_in_contacts">V kontaktech</string>
     <string name="people_books_create">Vytvořit adresář</string>
     <string name="people_books_delete">Smazat adresář</string>
     <plurals name="people_books_delete_confirm">

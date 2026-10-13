@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Enviar mensaje</string>
     <string name="people_contacts_no_people_found">No se encontraron personas</string>
     <string name="people_contacts_try_adjusting">Prueba a ajustar la búsqueda</string>
-    <string name="people_contact_section_address">Dirección</string>
     <string name="people_contact_section_detail">Detalles</string>
     <string name="people_contact_name">Nombre</string>
     <string name="people_contact_email">Correo electrónico</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Renombrar</string>
     <string name="people_contacts_sort_name">Nombre</string>
     <string name="people_contacts_sort_recent">Añadido recientemente</string>
-    <string name="people_contacts_thats_you">Ese eres tú</string>
     <string name="people_contacts_try_different_search">Prueba con otro término de búsqueda</string>
     <string name="people_contacts_unfriend">Eliminar amigo</string>
     <string name="people_add_contact_search_placeholder">Escribe para buscar…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">No se encontraron contactos</string>
     <string name="people_contacts_add_to_start">Añade contactos para empezar a conectar</string>
     <string name="people_contacts_actions">Acciones del contacto</string>
-    <string name="people_contacts_friend">Amigo</string>
     <string name="people_contacts_invite">Invitar</string>
     <string name="people_contacts_unfriend_confirm">%1$s dejará de ser tu amigo. El contacto permanece en tu libreta de direcciones.</string>
     <string name="people_contacts_delete">Eliminar contacto</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">El contacto ha cambiado</string>
     <string name="people_add_contact_title">Añadir contacto</string>
     <string name="people_add_contact_add">Añadir a contactos</string>
-    <string name="people_add_contact_in_contacts">En contactos</string>
     <string name="people_books_create">Crear libreta de direcciones</string>
     <string name="people_books_delete">Eliminar libreta de direcciones</string>
     <plurals name="people_books_delete_confirm">

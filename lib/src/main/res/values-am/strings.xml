@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">የRSS መዳረሻ ይሻር?</string>
     <string name="rss_revoke_message">በዚህ ፊድ የተመዘገበ ማንኛውም ነገር መቀበሉን ያቆማል። ከዚያ በኋላ አዲስ URL መቅዳት ይችላሉ።</string>
     <string name="rss_revoked">የRSS መዳረሻ ተሽሯል</string>
-    <string name="rss_revoke_failed">የRSS መዳረሻን መሻር አልተቻለም</string>
     <string name="game_empty_title">እስካሁን ጨዋታዎች የሉም</string>
     <string name="game_select_title">ጨዋታ ይምረጡ</string>
     <string name="game_select_subtitle">ከጎን አሞሌው ጨዋታ ይምረጡ ወይም አዲስ ጨዋታ ይጀምሩ።</string>

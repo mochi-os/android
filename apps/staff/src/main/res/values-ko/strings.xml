@@ -415,7 +415,6 @@
     <string name="staff_team_add_member">멤버 추가</string>
     <string name="staff_team_added_by_label">추가한 사람:</string>
     <string name="staff_team_added_by_system">시스템</string>
-    <string name="staff_team_col_added_by">추가한 사람</string>
     <string name="staff_team_dialog_add">추가</string>
     <string name="staff_team_dialog_add_title">팀 멤버 추가</string>
     <string name="staff_team_dialog_adding">추가 중…</string>

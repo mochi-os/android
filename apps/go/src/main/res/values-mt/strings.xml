@@ -50,7 +50,6 @@
     <string name="go_resign_title">Tirriżenja l-logħba?</string>
     <string name="go_sidebar_completed">Lest</string>
     <string name="go_sidebar_new_game">Logħba ġdida</string>
-    <string name="go_status_draw">Patta</string>
     <string name="go_status_draw_text">Patta</string>
     <string name="go_status_game_over">Il-logħba ntemmet</string>
     <string name="go_status_opponent_move">Il-mossa ta\' %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Iftaħ il-bar tal-ġenb</string>
     <string name="go_sidebar_active">Logħob attiv</string>
     <string name="go_empty_active">Għad m’hemm l-ebda logħba attiva.</string>
-    <string name="go_status_resigned">Irriżenja</string>
     <string name="go_new_game_title">Logħba Go ġdida</string>
     <string name="go_new_game_no_friends">Trid iżżid ħabib qabel ma tkun tista’ tibda logħba.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

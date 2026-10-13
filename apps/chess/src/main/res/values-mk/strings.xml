@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chess_app_title">Шах</string>
-    <string name="chess_sidebar_header">Шах</string>
     <string name="chess_sidebar_active">Активни игри</string>
     <string name="chess_sidebar_completed">Завршено</string>
     <string name="chess_sidebar_new_game">Нова игра</string>
-    <string name="chess_section_active">Активни игри</string>
-    <string name="chess_section_completed">Завршено</string>
-    <string name="chess_new_game">Нова игра</string>
     <string name="chess_empty_title">Сè уште нема игри</string>
     <string name="chess_new_title">Нова игра</string>
     <string name="chess_new_pick_opponent">Избери противник</string>
@@ -55,8 +51,6 @@
     <string name="chess_channel_name">Шах известувања</string>
     <string name="chess_channel_description">Известувања за потези, понуди за реми и резултати од партии.</string>
     <string name="chess_open_sidebar">Отвори странична лента</string>
-    <string name="chess_empty_subtitle">Започнете ја првата партија за да играте шах со пријател.</string>
-    <string name="chess_empty_start_button">Започнете ја првата партија</string>
     <string name="chess_detail_unavailable">Партијата не е достапна</string>
     <string name="chess_delete_title">Да се избрише играта?</string>
     <string name="chess_delete_message">Ова ја отстранува партијата од вашата листа.</string>

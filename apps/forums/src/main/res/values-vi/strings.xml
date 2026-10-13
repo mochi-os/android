@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Tên hiển thị</string>
-    <string name="forums_auth_verification_failed">Xác minh thất bại</string>
     <string name="forums_list_title">Diễn đàn</string>
     <string name="forums_list_find">Tìm diễn đàn</string>
     <string name="forums_list_unsubscribe">Ngừng đăng ký</string>
     <string name="forums_list_unsubscribe_title">Ngừng đăng ký</string>
     <string name="forums_create_title">Tạo diễn đàn</string>
     <string name="forums_create_name">Tên diễn đàn</string>
-    <string name="forums_create_privacy">Quyền riêng tư</string>
-    <string name="forums_create_private">Riêng tư</string>
-    <string name="forums_create_public">Công khai</string>
     <string name="forums_create_action">Tạo diễn đàn</string>
     <string name="forums_find_title">Tìm diễn đàn</string>
     <string name="forums_find_recommended">Được đề xuất</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Đăng</string>
     <string name="forums_post_edit">Sửa bài đăng</string>
     <string name="forums_post_edit_title">Sửa bài đăng</string>
-    <string name="forums_post_edit_title_field">Tiêu đề</string>
-    <string name="forums_post_save">Lưu</string>
     <string name="forums_post_delete">Xóa bài viết</string>
     <string name="forums_post_delete_title">Xóa bài viết</string>
     <string name="forums_post_locked">Đã khoá</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Thành viên</string>
     <string name="forums_tab_banner">Biểu ngữ</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Người dùng hoặc nhóm</string>
-    <string name="forums_access_level_view">Xem</string>
-    <string name="forums_access_level_vote">Bình chọn</string>
-    <string name="forums_access_level_comment">Bình luận</string>
-    <string name="forums_access_level_post">Đăng</string>
-    <string name="forums_access_level_none">Không có</string>
     <string name="forums_members_empty">Không có thành viên</string>
     <string name="forums_banner_dismiss">Bỏ qua biểu ngữ</string>
     <string name="forums_ai_mode_tag">Gắn thẻ</string>
     <string name="forums_ai_account_default">Tài khoản mặc định</string>
-    <string name="forums_ai_prompt_reset">Đặt lại về mặc định</string>
     <string name="forums_settings_unsubscribe">Ngừng đăng ký</string>
     <string name="forums_moderation_title">Kiểm duyệt</string>
     <string name="forums_moderation_tab_queue">Hàng đợi</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Ngoài chủ đề</string>
     <string name="forums_report_reason_other">Khác</string>
     <string name="forums_post_default_author">Người dùng</string>
-    <string name="forums_comments">Bình luận</string>
     <string name="forums_no_comments">Chưa có bình luận</string>
-    <string name="forums_comment_save">Lưu</string>
     <string name="forums_comment_edit">Sửa bình luận</string>
     <string name="forums_comment_edit_title">Sửa bình luận</string>
-    <string name="forums_comment_edit_attach">Đính kèm tệp</string>
     <string name="forums_comment_delete">Xóa bình luận</string>
     <string name="forums_comment_delete_title">Xóa bình luận</string>
     <string name="forums_comment_reply">Trả lời</string>
-    <string name="forums_settings_rename">Đổi tên</string>
-    <string name="forums_settings_save">Lưu</string>
     <string name="forums_settings_delete">Xóa diễn đàn</string>
     <string name="forums_settings_delete_title">Xóa diễn đàn</string>
     <string name="forums_forum_not_found">Không tìm thấy diễn đàn</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Gửi</string>
     <string name="forums_post_body_field">Nội dung</string>
-    <string name="forums_post_edit_body_field">Nội dung</string>
     <string name="forums_comment_edit_body_field">Nội dung</string>
-    <string name="forums_tag_clear">Xóa bộ lọc</string>
-    <string name="forums_post_tag_add">Thêm thẻ</string>
     <string name="forums_write_comment">Viết bình luận…</string>
-    <string name="forums_auth_login_failed">Đăng nhập thất bại</string>
 
     <string name="notification_channel_forums">Thông báo diễn đàn</string>
-    <string name="forums_auth_brand">Mochi Diễn đàn</string>
-    <string name="forums_auth_create_identity_failed">Không thể tạo danh tính</string>
-    <string name="forums_auth_mfa_unsupported">MFA chưa được hỗ trợ trong ứng dụng di động</string>
-    <string name="forums_auth_enter_code_sent">Nhập mã đã gửi đến %1$s</string>
-    <string name="forums_auth_create_identity">Tạo danh tính của bạn</string>
     <string name="forums_list_empty">Chưa có diễn đàn nào</string>
     <string name="forums_list_unsubscribe_message">Bạn có chắc chắn muốn ngừng đăng ký diễn đàn này không?</string>
     <string name="forums_find_search_placeholder">Tìm kiếm diễn đàn hoặc dán URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Bình chọn phản đối</string>
     <string name="forums_post_quote">Trích dẫn trong phản hồi</string>
     <string name="forums_comment_quote">Trích dẫn trong phản hồi</string>
-    <string name="forums_post_tag_remove">Xóa thẻ</string>
     <string name="forums_access_add">Thêm quy tắc truy cập</string>
     <string name="forums_access_empty">Chưa có quy tắc nào — áp dụng mặc định</string>
-    <string name="forums_access_target_hint">ID thực thể, @group, * (mọi người), hoặc + (thành viên)</string>
-    <string name="forums_access_level">Cấp độ</string>
-    <string name="forums_access_level_moderate">Kiểm duyệt</string>
     <string name="forums_members_search">Lọc thành viên</string>
     <string name="forums_banner_description">Markdown hiển thị ở đầu diễn đàn.</string>
     <string name="forums_banner_placeholder">Nhập văn bản biểu ngữ (hỗ trợ Markdown)…</string>
-    <string name="forums_ai_mode_label">Chế độ: %1$s</string>
-    <string name="forums_ai_mode_heading">Chế độ AI</string>
     <string name="forums_ai_mode_off">Đã tắt</string>
-    <string name="forums_ai_account">Tài khoản AI</string>
-    <string name="forums_ai_prompt_tag">Lời nhắc gắn thẻ</string>
-    <string name="forums_ai_prompt_score">Lời nhắc chấm điểm</string>
-    <string name="forums_ai_post_prompt_label">Lời nhắc cho thẻ bài đăng</string>
-    <string name="forums_ai_comment_prompt_label">Lời nhắc cho thẻ bình luận</string>
-    <string name="forums_settings_fingerprint">Vân tay: %1$s</string>
-    <string name="forums_settings_clear_notifications">Xóa thông báo</string>
     <string name="forums_moderation_queue_empty">Không có gì đang chờ</string>
     <string name="forums_moderation_report_details">Chi tiết: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Đã giải quyết bởi %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Đang trả lời %1$s</string>
     <string name="forums_comment_clear_reply">Xóa trả lời</string>
     <string name="forums_settings_title">Cài đặt %1$s</string>
-    <string name="forums_settings_rename_label">Tên diễn đàn</string>
-    <string name="forums_settings_danger_zone">Khu vực nguy hiểm</string>
     <string name="forums_settings_delete_message">Hành động này sẽ xóa vĩnh viễn diễn đàn và tất cả bài đăng của nó. Không thể hoàn tác.</string>
 
-    <string name="forums_tag_interest_up">Đẩy mạnh sở thích</string>
-    <string name="forums_tag_interest_down">Giảm sự quan tâm</string>
-    <string name="forums_tag_interest_remove">Xoá sở thích</string>
     <string name="forums_access_tab_users">Người dùng</string>
     <string name="forums_access_tab_groups">Nhóm</string>
-    <string name="forums_access_tab_manual">Thủ công</string>
     <string name="forums_access_search_users">Tìm kiếm người dùng</string>
     <string name="forums_access_no_groups">Không có nhóm nào</string>
     <string name="forums_saved_title">Đã lưu</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">సందేశం పంపండి</string>
     <string name="people_contacts_no_people_found">ఎవరూ కనుగొనబడలేదు</string>
     <string name="people_contacts_try_adjusting">మీ శోధనను సర్దుబాటు చేయడం ప్రయత్నించండి</string>
-    <string name="people_contact_section_address">చిరునామా</string>
     <string name="people_contact_section_detail">వివరాలు</string>
     <string name="people_contact_name">పేరు</string>
     <string name="people_contact_email">ఇమెయిల్</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">పేరు మార్చండి</string>
     <string name="people_contacts_sort_name">పేరు</string>
     <string name="people_contacts_sort_recent">ఇటీవల జోడించబడింది</string>
-    <string name="people_contacts_thats_you">అది మీరే</string>
     <string name="people_contacts_try_different_search">వేరే శోధన పదాన్ని ప్రయత్నించండి</string>
     <string name="people_contacts_unfriend">స్నేహితుడిని తీసివేయండి</string>
     <string name="people_add_contact_search_placeholder">వెతకడానికి టైప్ చేయండి…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">పరిచయాలు ఏవీ కనబడలేదు</string>
     <string name="people_contacts_add_to_start">కలవడం ప్రారంభించడానికి పరిచయాలను జోడించండి</string>
     <string name="people_contacts_actions">పరిచయ చర్యలు</string>
-    <string name="people_contacts_friend">స్నేహితుడు</string>
     <string name="people_contacts_invite">ఆహ్వానించండి</string>
     <string name="people_contacts_unfriend_confirm">%1$s ఇకపై మీ స్నేహితుడు కాదు. పరిచయం మీ చిరునామా పుస్తకంలో ఉంటుంది.</string>
     <string name="people_contacts_delete">పరిచయాన్ని తొలగించండి</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">పరిచయం మారింది</string>
     <string name="people_add_contact_title">పరిచయాన్ని జోడించండి</string>
     <string name="people_add_contact_add">పరిచయాలకు జోడించు</string>
-    <string name="people_add_contact_in_contacts">పరిచయాలలో</string>
     <string name="people_books_create">చిరునామా పుస్తకాన్ని సృష్టించు</string>
     <string name="people_books_delete">చిరునామా పుస్తకాన్ని తొలగించు</string>
     <plurals name="people_books_delete_confirm">

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">ప్రదర్శన పేరు</string>
-    <string name="forums_auth_verification_failed">ధృవీకరణ విఫలమైంది</string>
     <string name="forums_list_title">ఫోరమ్‌లు</string>
     <string name="forums_list_find">ఫోరమ్‌లను కనుగొనండి</string>
     <string name="forums_list_unsubscribe">చందా మానివేయండి</string>
     <string name="forums_list_unsubscribe_title">చందా మానివేయండి</string>
     <string name="forums_create_title">ఫోరమ్‌ను సృష్టించండి</string>
     <string name="forums_create_name">ఫోరమ్ పేరు</string>
-    <string name="forums_create_privacy">గోప్యత</string>
-    <string name="forums_create_private">ప్రైవేట్</string>
-    <string name="forums_create_public">పబ్లిక్</string>
     <string name="forums_create_action">ఫోరమ్‌ను సృష్టించండి</string>
     <string name="forums_find_title">ఫోరమ్‌లను కనుగొనండి</string>
     <string name="forums_find_recommended">రికమెండ్ చేయబడింది</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">పోస్ట్ చేయండి</string>
     <string name="forums_post_edit">పోస్ట్‌ను సవరించండి</string>
     <string name="forums_post_edit_title">పోస్ట్‌ను సవరించండి</string>
-    <string name="forums_post_edit_title_field">శీర్షిక</string>
-    <string name="forums_post_save">సేవ్ చేయండి</string>
     <string name="forums_post_delete">పోస్ట్‌ను తొలగించండి</string>
     <string name="forums_post_delete_title">పోస్ట్‌ను తొలగించండి</string>
     <string name="forums_post_locked">లాక్ చేయబడింది</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">సభ్యులు</string>
     <string name="forums_tab_banner">బ్యానర్</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">వినియోగదారు లేదా సమూహం</string>
-    <string name="forums_access_level_view">వీక్షించండి</string>
-    <string name="forums_access_level_vote">ఓటు వేయండి</string>
-    <string name="forums_access_level_comment">వ్యాఖ్యానించండి</string>
-    <string name="forums_access_level_post">పోస్ట్ చేయండి</string>
-    <string name="forums_access_level_none">ఏదీ లేదు</string>
     <string name="forums_members_empty">సభ్యులు లేరు</string>
     <string name="forums_banner_dismiss">బ్యానర్‌ను విస్మరించండి</string>
     <string name="forums_ai_mode_tag">ట్యాగ్ చేయండి</string>
     <string name="forums_ai_account_default">డిఫాల్ట్ ఖాతా</string>
-    <string name="forums_ai_prompt_reset">డిఫాల్ట్‌కు రీసెట్ చేయండి</string>
     <string name="forums_settings_unsubscribe">చందా మానివేయండి</string>
     <string name="forums_moderation_title">మోడరేషన్</string>
     <string name="forums_moderation_tab_queue">క్యూ</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">విషయం వెలుపల</string>
     <string name="forums_report_reason_other">ఇతర</string>
     <string name="forums_post_default_author">యూజర్</string>
-    <string name="forums_comments">వ్యాఖ్యలు</string>
     <string name="forums_no_comments">ఇంకా కామెంట్‌లు లేవు</string>
-    <string name="forums_comment_save">సేవ్ చేయండి</string>
     <string name="forums_comment_edit">వ్యాఖ్యను సవరించండి</string>
     <string name="forums_comment_edit_title">వ్యాఖ్యను సవరించండి</string>
-    <string name="forums_comment_edit_attach">ఫైల్‌లను జతచేయండి</string>
     <string name="forums_comment_delete">వ్యాఖ్యను తొలగించండి</string>
     <string name="forums_comment_delete_title">వ్యాఖ్యను తొలగించండి</string>
     <string name="forums_comment_reply">రిప్లై</string>
-    <string name="forums_settings_rename">పేరు మార్చండి</string>
-    <string name="forums_settings_save">సేవ్ చేయండి</string>
     <string name="forums_settings_delete">ఫోరమ్‌ను తొలగించండి</string>
     <string name="forums_settings_delete_title">ఫోరమ్‌ను తొలగించండి</string>
     <string name="forums_forum_not_found">ఫోరమ్ కనుగొనబడలేదు</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">పంపండి</string>
     <string name="forums_post_body_field">కంటెంట్</string>
-    <string name="forums_post_edit_body_field">కంటెంట్</string>
     <string name="forums_comment_edit_body_field">కంటెంట్</string>
-    <string name="forums_tag_clear">ఫిల్టర్ క్లియర్ చేయి</string>
-    <string name="forums_post_tag_add">ట్యాగ్ జోడించు</string>
     <string name="forums_write_comment">వ్యాఖ్య రాయండి…</string>
-    <string name="forums_auth_login_failed">లాగిన్ విఫలమైంది</string>
 
     <string name="notification_channel_forums">ఫోరమ్‌ల నోటిఫికేషన్‌లు</string>
-    <string name="forums_auth_brand">Mochi ఫోరమ్‌లు</string>
-    <string name="forums_auth_create_identity_failed">గుర్తింపును సృష్టించడంలో విఫలమైంది</string>
-    <string name="forums_auth_mfa_unsupported">మొబైల్ యాప్‌లో MFA ఇంకా మద్దతు ఇవ్వబడలేదు</string>
-    <string name="forums_auth_enter_code_sent">%1$sకి పంపిన కోడ్‌ను నమోదు చేయండి</string>
-    <string name="forums_auth_create_identity">మీ గుర్తింపును సృష్టించండి</string>
     <string name="forums_list_empty">ఇంకా ఫోరమ్‌లు లేవు</string>
     <string name="forums_list_unsubscribe_message">మీరు ఈ ఫోరమ్ నుండి సభ్యత్వాన్ని రద్దు చేసుకోవాలనుకుంటున్నారా?</string>
     <string name="forums_find_search_placeholder">ఫోరమ్‌లను శోధించండి లేదా URLని అతికించండి</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">డౌన్‌వోట్</string>
     <string name="forums_post_quote">ప్రత్యుత్తరంలో ఉటంకించండి</string>
     <string name="forums_comment_quote">ప్రత్యుత్తరంలో ఉటంకించండి</string>
-    <string name="forums_post_tag_remove">ట్యాగ్‌ను తీసివేయండి</string>
     <string name="forums_access_add">యాక్సెస్ నియమాన్ని జోడించండి</string>
     <string name="forums_access_empty">ఇంకా నియమాలు లేవు — డిఫాల్ట్‌లు వర్తిస్తాయి</string>
-    <string name="forums_access_target_hint">ఎంటిటీ ID, @గ్రూప్, * (అందరూ), లేదా + (సభ్యులు)</string>
-    <string name="forums_access_level">స్థాయి</string>
-    <string name="forums_access_level_moderate">మోడరేట్</string>
     <string name="forums_members_search">సభ్యులను ఫిల్టర్ చేయండి</string>
     <string name="forums_banner_description">ఫోరమ్ ఎగువన చూపబడే మార్క్‌డౌన్.</string>
     <string name="forums_banner_placeholder">బ్యానర్ వచనాన్ని నమోదు చేయండి (మార్క్‌డౌన్‌కు మద్దతు ఉంది)…</string>
-    <string name="forums_ai_mode_label">మోడ్: %1$s</string>
-    <string name="forums_ai_mode_heading">AI మోడ్</string>
     <string name="forums_ai_mode_off">నిలిపివేయబడింది</string>
-    <string name="forums_ai_account">AI ఖాతా</string>
-    <string name="forums_ai_prompt_tag">ట్యాగింగ్ ప్రాంప్ట్</string>
-    <string name="forums_ai_prompt_score">స్కోరింగ్ ప్రాంప్ట్</string>
-    <string name="forums_ai_post_prompt_label">పోస్ట్ ట్యాగ్‌ల కోసం ప్రాంప్ట్</string>
-    <string name="forums_ai_comment_prompt_label">వ్యాఖ్య ట్యాగ్‌ల కోసం ప్రాంప్ట్</string>
-    <string name="forums_settings_fingerprint">ఫింగర్‌ప్రింట్: %1$s</string>
-    <string name="forums_settings_clear_notifications">నోటిఫికేషన్‌లను క్లియర్ చేయండి</string>
     <string name="forums_moderation_queue_empty">పెండింగ్‌లో ఏదీ లేదు</string>
     <string name="forums_moderation_report_details">వివరాలు: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s పరిష్కరించారు — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$sకి ప్రత్యుత్తరం ఇస్తున్నారు</string>
     <string name="forums_comment_clear_reply">ప్రత్యుత్తరాన్ని క్లియర్ చేయండి</string>
     <string name="forums_settings_title">%1$s సెట్టింగ్‌లు</string>
-    <string name="forums_settings_rename_label">ఫోరమ్ పేరు</string>
-    <string name="forums_settings_danger_zone">ప్రమాద జోన్</string>
     <string name="forums_settings_delete_message">ఇది ఫోరమ్‌ను మరియు దాని అన్ని పోస్ట్‌లను శాశ్వతంగా తొలగిస్తుంది. దీన్ని తిరిగి పొందలేరు.</string>
 
-    <string name="forums_tag_interest_up">ఆసక్తిని పెంచండి</string>
-    <string name="forums_tag_interest_down">ఆసక్తిని తగ్గించండి</string>
-    <string name="forums_tag_interest_remove">ఆసక్తిని తొలగించండి</string>
     <string name="forums_access_tab_users">యూజర్‌లు</string>
     <string name="forums_access_tab_groups">గ్రూపులు</string>
-    <string name="forums_access_tab_manual">మాన్యువల్</string>
     <string name="forums_access_search_users">యూజర్లను శోధించండి</string>
     <string name="forums_access_no_groups">గ్రూపులు అందుబాటులో లేవు</string>
     <string name="forums_saved_title">సేవ్ చేసినవి</string>

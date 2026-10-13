@@ -19,7 +19,6 @@
     <string name="crm_link">Հղում</string>
     <string name="crm_design">Դիզայն</string>
     <string name="crm_export_failed">Չհաջողվեց պահպանել արտահանումը</string>
-    <string name="crm_sort_direction">Ուղղություն</string>
     <string name="crm_sort_rank">Ձեռքով</string>
     <string name="crm_sort_created">Ստեղծված</string>
     <string name="crm_sort_updated">Թարմացված</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Ավելացնել դաս</string>
     <string name="crm_classes_create">Ստեղծել</string>
     <string name="crm_class_name">Անուն</string>
-    <string name="crm_class_save_name">Պահպանել անունը</string>
     <string name="crm_class_title_field">Վերնագրի դաշտ</string>
     <string name="crm_class_fields">Դաշտեր</string>
     <string name="crm_class_add_field">Ավելացնել դաշտ</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Պարտադիր է</string>
     <string name="crm_field_position_default">Լռելյայն</string>
     <string name="crm_field_position_sidebar">Կողագոտի</string>
-    <string name="crm_field_save">Պահպանել փոփոխությունները</string>
     <string name="crm_field_options">Տարբերակներ</string>
     <string name="crm_field_add_option">Ավելացնել տարբերակ</string>
     <string name="crm_field_delete">Ջնջել դաշտը</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Որոնել CRM</string>
     <string name="crm_list_no_matching">Համապատասխան CRM չկա</string>
     <string name="crm_list_empty">Դեռևս CRM չկա</string>
-    <string name="crm_create_template">Ձևանմուշ</string>
     <string name="crm_find_search_placeholder">Որոնել CRM կամ տեղադրել URL</string>
     <string name="crm_find_search_hint">Որոնել CRM՝ բաժանորդագրվելու համար</string>
     <string name="crm_create_object_parent_none">(ոչ մեկը)</string>

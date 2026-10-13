@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chess_app_title">Catur</string>
-    <string name="chess_sidebar_header">Catur</string>
     <string name="chess_sidebar_active">Permainan Aktif</string>
     <string name="chess_sidebar_completed">Selesai</string>
     <string name="chess_sidebar_new_game">Permainan baharu</string>
-    <string name="chess_section_active">Permainan Aktif</string>
-    <string name="chess_section_completed">Selesai</string>
-    <string name="chess_new_game">Permainan baharu</string>
     <string name="chess_empty_title">Tiada permainan lagi</string>
     <string name="chess_new_title">Permainan Baharu</string>
     <string name="chess_new_pick_opponent">Pilih lawan</string>
@@ -55,8 +51,6 @@
     <string name="chess_channel_name">Pemberitahuan Catur</string>
     <string name="chess_channel_description">Pemberitahuan tentang langkah, tawaran seri dan keputusan permainan.</string>
     <string name="chess_open_sidebar">Buka bar sisi</string>
-    <string name="chess_empty_subtitle">Mulakan permainan pertama anda untuk bermain catur dengan rakan.</string>
-    <string name="chess_empty_start_button">Mulakan permainan pertama anda</string>
     <string name="chess_detail_unavailable">Permainan tidak tersedia</string>
     <string name="chess_delete_title">Padam permainan?</string>
     <string name="chess_delete_message">Ini membuang permainan dari senarai anda.</string>

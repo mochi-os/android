@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Sūtīt ziņu</string>
     <string name="people_contacts_no_people_found">Cilvēki nav atrasti</string>
     <string name="people_contacts_try_adjusting">Mēģiniet pielāgot meklēšanu</string>
-    <string name="people_contact_section_address">Adrese</string>
     <string name="people_contact_section_detail">Detaļas</string>
     <string name="people_contact_name">Vārds</string>
     <string name="people_contact_email">E-pasts</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Pārdēvēt</string>
     <string name="people_contacts_sort_name">Vārds</string>
     <string name="people_contacts_sort_recent">Nesen pievienots</string>
-    <string name="people_contacts_thats_you">Tas esi tu</string>
     <string name="people_contacts_try_different_search">Mēģiniet citu meklēšanas vārdu</string>
     <string name="people_contacts_unfriend">Noņemt draugu</string>
     <string name="people_add_contact_search_placeholder">Rakstiet, lai meklētu…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Kontakti nav atrasti</string>
     <string name="people_contacts_add_to_start">Pievienojiet kontaktus, lai sāktu sazināties</string>
     <string name="people_contacts_actions">Kontakta darbības</string>
-    <string name="people_contacts_friend">Draugs</string>
     <string name="people_contacts_invite">Uzaicināt</string>
     <string name="people_contacts_unfriend_confirm">%1$s vairs nebūs jūsu draugs. Kontakts paliek jūsu adrešu grāmatā.</string>
     <string name="people_contacts_delete">Dzēst kontaktu</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakts ir mainījies</string>
     <string name="people_add_contact_title">Pievienot kontaktu</string>
     <string name="people_add_contact_add">Pievienot kontaktiem</string>
-    <string name="people_add_contact_in_contacts">Kontaktos</string>
     <string name="people_books_create">Izveidot adrešu grāmatu</string>
     <string name="people_books_delete">Dzēst adrešu grāmatu</string>
     <plurals name="people_books_delete_confirm">

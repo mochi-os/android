@@ -3,23 +3,13 @@
     <string name="notification_channel_projects">Projects notifications</string>
 
     <!-- Auth -->
-    <string name="projects_auth_brand">Mochi Projects</string>
-    <string name="projects_auth_display_name">Display name</string>
-    <string name="projects_auth_login_failed">Login failed</string>
-    <string name="projects_auth_verification_failed">Verification failed</string>
-    <string name="projects_auth_create_identity_failed">Failed to create identity</string>
-    <string name="projects_auth_mfa_unsupported">MFA not yet supported in mobile app</string>
-    <string name="projects_auth_enter_code_sent">Enter the code sent to %1$s</string>
-    <string name="projects_auth_create_identity">Create your identity</string>
 
     <!-- Project list -->
     <string name="projects_list_title">Projects</string>
     <string name="projects_all_projects">All projects</string>
     <string name="projects_list_search_placeholder">Search projects</string>
-    <string name="projects_list_close_search">Close search</string>
     <string name="projects_list_search">Search</string>
     <string name="projects_list_find">Find projects</string>
-    <string name="projects_list_more">More</string>
     <string name="projects_list_create">Create project</string>
     <string name="projects_list_no_matching">No matching projects</string>
     <string name="projects_list_empty">No projects yet</string>
@@ -33,9 +23,6 @@
     <string name="projects_create_allow_search">Allow anyone to search for project</string>
     <string name="projects_create_import_backup">Import from backup (optional)</string>
     <string name="projects_create_upload_json">Upload .json file</string>
-    <string name="projects_create_privacy">Privacy</string>
-    <string name="projects_create_private">Private</string>
-    <string name="projects_create_public">Public</string>
     <string name="projects_create_template_none">None</string>
     <string name="projects_create_choose_template">Choose a template</string>
     <string name="projects_create_next">Next</string>
@@ -46,7 +33,6 @@
     <string name="projects_find_search_placeholder">Search projects or paste URL</string>
     <string name="projects_find_recommended">Recommended</string>
     <string name="projects_find_search_hint">Search for projects to subscribe to</string>
-    <string name="projects_find_subscribe">Subscribe</string>
 
     <!-- Project screen -->
     <string name="projects_loading">Loading…</string>
@@ -70,9 +56,7 @@
     <string name="projects_filter_clear_all">Clear all</string>
     <string name="projects_filter_all">All</string>
     <string name="projects_filter_other">Other</string>
-    <string name="projects_sort_label">Sort</string>
     <string name="projects_sort_field">Sort by</string>
-    <string name="projects_sort_direction">Direction</string>
     <string name="projects_sort_direction_asc">Ascending</string>
     <string name="projects_sort_direction_desc">Descending</string>
     <string name="projects_sort_rank">Manual</string>
@@ -137,8 +121,6 @@
     <string name="projects_access_select_rule">Select a rule</string>
     <string name="projects_access_authenticated_desc">Anyone who is logged in</string>
     <string name="projects_access_anyone_desc">Including anonymous users</string>
-    <string name="projects_access_target">Target</string>
-    <string name="projects_access_target_hint">Entity ID, @group, * (everyone), or + (members)</string>
     <string name="projects_access_selected">Selected: %1$s</string>
 
     <!-- Object detail -->
@@ -148,12 +130,6 @@
     <string name="projects_object_tab_comments">Comments (%1$s)</string>
     <string name="projects_object_tab_activity">Activity</string>
     <string name="projects_object_tab_requests">Merge requests (%1$s)</string>
-    <string name="projects_object_tab_attachments">Attachments</string>
-    <string name="projects_object_tab_links">Links</string>
-    <string name="projects_object_tab_watchers">Watchers</string>
-    <string name="projects_watchers_empty">No watchers yet</string>
-    <string name="projects_watchers_watch">Watch</string>
-    <string name="projects_watchers_unwatch">Stop watching</string>
     <string name="projects_object_delete_title">Delete object</string>
     <string name="projects_object_delete_message">Are you sure you want to delete this object? This action cannot be undone.</string>
 
@@ -183,14 +159,12 @@
     <!-- Checkbox field -->
     <string name="projects_field_yes">Yes</string>
     <string name="projects_field_no">No</string>
-    <string name="projects_field_type_checkbox">Checkbox</string>
 
     <!-- Comments -->
     <string name="projects_comment_replying_to">Replying to %1$s</string>
     <string name="projects_comment_clear_reply">Clear reply</string>
     <string name="projects_comment_placeholder">Add a comment</string>
     <string name="projects_comment_send">Send</string>
-    <string name="projects_comment_save">Save</string>
     <string name="projects_comment_empty">No comments yet</string>
     <string name="projects_comment_attach">Attach files</string>
     <string name="projects_comment_remove_attachment">Remove attachment</string>
@@ -201,16 +175,12 @@
     <string name="projects_property_remove">Remove</string>
     <string name="projects_property_add_item">Add item</string>
     <string name="projects_property_required">%1$s is required</string>
-    <string name="projects_property_option_none">None</string>
     <string name="projects_property_select">Select …</string>
 
     <!-- Activity -->
     <string name="projects_activity_empty">No activity</string>
     <string name="projects_activity_created">created this object</string>
     <string name="projects_activity_deleted">deleted this object</string>
-    <string name="projects_activity_changed">changed %1$s: %2$s → %3$s</string>
-    <string name="projects_activity_set">set %1$s to %2$s</string>
-    <string name="projects_activity_cleared">cleared %1$s</string>
     <string name="projects_activity_updated">updated %1$s</string>
     <string name="projects_activity_made_change">made a change</string>
     <string name="projects_activity_attached">attached</string>
@@ -224,15 +194,10 @@
     <string name="projects_attachment_default_name">attachment</string>
     <string name="projects_attachment_delete_confirm_title">Delete attachment?</string>
     <string name="projects_attachment_delete_confirm_message">This attachment will be permanently deleted.</string>
-    <string name="projects_attachment_size_bytes">%1$s B</string>
-    <string name="projects_attachment_size_kb">%1$s KB</string>
-    <string name="projects_attachment_size_mb">%1$s MB</string>
-    <string name="projects_attachment_size_gb">%1$s GB</string>
 
     <!-- Requests -->
     <string name="projects_request_empty">No merge requests</string>
     <string name="projects_request_new">New merge request</string>
-    <string name="projects_request_more">More</string>
     <string name="projects_request_status_draft">Draft</string>
     <string name="projects_request_status_open">Open</string>
     <string name="projects_request_status_merged">Merged</string>
@@ -277,8 +242,6 @@
     <string name="projects_diff_empty">No diff available</string>
 
     <!-- Tree -->
-    <string name="projects_tree_collapse">Collapse</string>
-    <string name="projects_tree_expand">Expand</string>
     <string name="projects_tree_move">Move</string>
     <string name="projects_tree_move_to_parent">Move to parent</string>
     <string name="projects_tree_root_level">(Root level)</string>
@@ -292,7 +255,6 @@
     <string name="projects_board_add_column">Add column</string>
     <string name="projects_board_reorder_columns">Re-order columns</string>
     <string name="projects_board_reorder_columns_hint">Long-press a column\'s name, then drag it</string>
-    <string name="projects_board_column_options">Column options</string>
     <string name="projects_board_rename">Rename</string>
     <string name="projects_board_rename_column">Rename column</string>
     <string name="projects_board_nested_count">+%1$s nested</string>
@@ -309,7 +271,6 @@
     <string name="projects_drag_card">Drag card</string>
     <string name="projects_drag_row">Drag row</string>
     <string name="projects_drag_column">Drag column</string>
-    <string name="projects_drag_hint">Long-press and drag to move</string>
 
 
     <!-- Design -->
@@ -318,10 +279,6 @@
     <string name="projects_design_export">Export design</string>
     <string name="projects_design_export_saved">Design saved</string>
     <string name="projects_design_import">Import design</string>
-    <string name="projects_design_clipboard_label">Design JSON</string>
-    <string name="projects_design_export_subject">Project design</string>
-    <string name="projects_design_share_chooser">Share design</string>
-    <string name="projects_design_export_copied">Design copied to clipboard</string>
     <string name="projects_design_imported">Design imported</string>
     <string name="projects_design_import_failed">Couldn\'t read that file</string>
     <string name="projects_design_tab_classes">Classes</string>
@@ -329,15 +286,11 @@
     <string name="projects_design_import_dialog_title">Import design</string>
     <string name="projects_design_import_choose_template">Choose a template</string>
     <string name="projects_design_no_templates">No templates available</string>
-    <string name="projects_design_or_paste_json">Or paste JSON</string>
-    <string name="projects_design_paste_placeholder">Paste exported design JSON</string>
     <string name="projects_design_or_upload_json">Or upload a file</string>
-    <string name="projects_design_import_json">Import JSON</string>
     <string name="projects_design_use">Use</string>
     <string name="projects_design_replace_title">Replace design?</string>
     <string name="projects_design_replace_message">This will replace the current design with %1$s. All existing classes, fields, options, and views will be deleted. Existing objects will not be deleted but may no longer appear in views.</string>
     <string name="projects_design_replace">Replace</string>
-    <string name="projects_design_pasted_json_label">pasted JSON</string>
 
     <!-- Classes -->
     <string name="projects_classes_empty">No classes defined</string>
@@ -346,7 +299,6 @@
     <string name="projects_classes_create">Create</string>
     <string name="projects_class_label">Class: %1$s</string>
     <string name="projects_class_name">Name</string>
-    <string name="projects_class_save_name">Save name</string>
     <string name="projects_class_title_field">Title field</string>
     <string name="projects_class_title_field_description">Which field to use as the display title for objects of this class.</string>
     <string name="projects_class_title_field_default">Default (readable)</string>
@@ -390,7 +342,6 @@
     <string name="projects_field_max_length">Max length</string>
     <string name="projects_field_pattern">Pattern (regex)</string>
     <string name="projects_field_rows">Rows (textarea height)</string>
-    <string name="projects_field_save">Save changes</string>
     <string name="projects_field_options">Options</string>
     <string name="projects_field_add_option">Add option</string>
     <string name="projects_field_no_options">No options defined</string>

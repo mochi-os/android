@@ -50,7 +50,6 @@
     <string name="go_resign_title">खेल में हार मानीं?</string>
     <string name="go_sidebar_completed">पूरा कइल गइल</string>
     <string name="go_sidebar_new_game">नया खेल</string>
-    <string name="go_status_draw">ड्रॉ</string>
     <string name="go_status_draw_text">ड्रॉ</string>
     <string name="go_status_game_over">खेल खतम</string>
     <string name="go_status_opponent_move">%1$s के चाल</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">साइडबार खोलीं</string>
     <string name="go_sidebar_active">सक्रिय खेल</string>
     <string name="go_empty_active">अबले कवनो सक्रिय खेल नइखे।</string>
-    <string name="go_status_resigned">हार मान लिहलें</string>
     <string name="go_new_game_title">नया Go खेल</string>
     <string name="go_new_game_no_friends">खेल शुरू करे से पहिले रउआ के एगो दोस्त जोड़े के पड़ी।</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

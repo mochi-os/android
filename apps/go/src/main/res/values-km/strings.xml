@@ -50,7 +50,6 @@
     <string name="go_resign_title">ចុះចាញ់ហ្គេម?</string>
     <string name="go_sidebar_completed">បានបញ្ចប់</string>
     <string name="go_sidebar_new_game">ហ្គេមថ្មី</string>
-    <string name="go_status_draw">ស្មើ</string>
     <string name="go_status_draw_text">ស្មើ</string>
     <string name="go_status_game_over">ហ្គេមបញ្ចប់</string>
     <string name="go_status_opponent_move">ការផ្លាស់ទីរបស់ %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">បើករបារចំហៀង</string>
     <string name="go_sidebar_active">ហ្គេមសកម្ម</string>
     <string name="go_empty_active">មិនទាន់មានហ្គេមសកម្មទេ។</string>
-    <string name="go_status_resigned">បានចុះចាញ់</string>
     <string name="go_new_game_title">ហ្គេម Go ថ្មី</string>
     <string name="go_new_game_no_friends">អ្នកត្រូវបន្ថែមមិត្តភក្តិមុនពេលអាចចាប់ផ្តើមហ្គេម។</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

@@ -19,7 +19,6 @@
     <string name="crm_link">አገናኝ</string>
     <string name="crm_design">ንድፍ</string>
     <string name="crm_export_failed">ወደ ውጪ መላኩን ማስቀመጥ አልተቻለም</string>
-    <string name="crm_sort_direction">አቅጣጫ</string>
     <string name="crm_sort_rank">በእጅ</string>
     <string name="crm_sort_created">ተፈጥሯል</string>
     <string name="crm_sort_updated">ተዘምኗል</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">ክፍል ጨምር</string>
     <string name="crm_classes_create">ፍጠር</string>
     <string name="crm_class_name">ስም</string>
-    <string name="crm_class_save_name">ስም አስቀምጥ</string>
     <string name="crm_class_title_field">የርዕስ መስክ</string>
     <string name="crm_class_fields">መስኮች</string>
     <string name="crm_class_add_field">መስክ ጨምር</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">ያስፈልጋል</string>
     <string name="crm_field_position_default">ነባሪ</string>
     <string name="crm_field_position_sidebar">የጎን አሞሌ</string>
-    <string name="crm_field_save">ለውጦችን ያስቀምጡ</string>
     <string name="crm_field_options">አማራጮች</string>
     <string name="crm_field_add_option">አማራጭ ጨምር</string>
     <string name="crm_field_delete">መስክ ሰርዝ</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">CRM ይፈልጉ</string>
     <string name="crm_list_no_matching">ተዛማጅ CRM የለም</string>
     <string name="crm_list_empty">እስካሁን ምንም CRM የለም</string>
-    <string name="crm_create_template">አብነት</string>
     <string name="crm_find_search_placeholder">CRM ይፈልጉ ወይም URL ይለጥፉ</string>
     <string name="crm_find_search_hint">ለመመዝገብ የሚፈልጉትን CRM ይፈልጉ</string>
     <string name="crm_search_objects_placeholder">ነገሮችን ይፈልጉ</string>

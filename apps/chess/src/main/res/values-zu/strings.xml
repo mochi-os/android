@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">I-Chess</string>
-    <string name="chess_sidebar_header">I-Chess</string>
     <string name="chess_sidebar_active">Imidlalo Esebenzayo</string>
     <string name="chess_sidebar_completed">Kuqediwe</string>
     <string name="chess_sidebar_new_game">Umdlalo omusha</string>
-    <string name="chess_section_active">Imidlalo Esebenzayo</string>
-    <string name="chess_section_completed">Kuqediwe</string>
-    <string name="chess_new_game">Umdlalo omusha</string>
     <string name="chess_empty_title">Ayikho imidlalo okwamanje</string>
     <string name="chess_new_title">Umdlalo Omusha</string>
     <string name="chess_new_pick_opponent">Khetha imbangi</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Izaziso mayelana nokunyakaza kwe-chess, iziphakamiso zokulingana nemiphumela yomdlalo.</string>
     <string name="chess_open_sidebar">Vula ibha eseceleni</string>
-    <string name="chess_empty_subtitle">Qala umdlalo wakho wokuqala ukuze udlale i-chess nomngane.</string>
-    <string name="chess_empty_start_button">Qala umdlalo wakho wokuqala</string>
     <string name="chess_detail_unavailable">Umdlalo awutholakali</string>
     <string name="chess_delete_title">Susa umdlalo?</string>
     <string name="chess_delete_message">Lokhu kususa umdlalo ohlwini lwakho.</string>

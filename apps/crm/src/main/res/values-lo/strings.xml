@@ -19,7 +19,6 @@
     <string name="crm_link">ລິ້ງ</string>
     <string name="crm_design">ການອອກແບບ</string>
     <string name="crm_export_failed">ບໍ່ສາມາດບັນທຶກການສົ່ງອອກໄດ້</string>
-    <string name="crm_sort_direction">ທິດທາງ</string>
     <string name="crm_sort_rank">ດ້ວຍຕົນເອງ</string>
     <string name="crm_sort_created">ສ້າງແລ້ວ</string>
     <string name="crm_sort_updated">ອັບເດດແລ້ວ</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">ເພີ່ມຄລາສ</string>
     <string name="crm_classes_create">ສ້າງ</string>
     <string name="crm_class_name">ຊື່</string>
-    <string name="crm_class_save_name">ບັນທຶກຊື່</string>
     <string name="crm_class_title_field">ຊ່ອງຊື່ເລື່ອງ</string>
     <string name="crm_class_fields">ຊ່ອງ</string>
     <string name="crm_class_add_field">ເພີ່ມຊ່ອງຂໍ້ມູນ</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">ຕ້ອງການ</string>
     <string name="crm_field_position_default">ຄ່າເລີ່ມຕົ້ນ</string>
     <string name="crm_field_position_sidebar">ແຖບຂ້າງ</string>
-    <string name="crm_field_save">ບັນທຶກການປ່ຽນແປງ</string>
     <string name="crm_field_options">ຕົວເລືອກ</string>
     <string name="crm_field_add_option">ເພີ່ມຕົວເລືອກ</string>
     <string name="crm_field_delete">ລົບຊ່ອງຂໍ້ມູນ</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">ຄົ້ນຫາ CRM</string>
     <string name="crm_list_no_matching">ບໍ່ມີ CRM ທີ່ກົງກັນ</string>
     <string name="crm_list_empty">ຍັງບໍ່ມີ CRM</string>
-    <string name="crm_create_template">ແມ່ແບບ</string>
     <string name="crm_find_search_placeholder">ຄົ້ນຫາ CRM ຫຼື ວາງ URL</string>
     <string name="crm_find_search_hint">ຄົ້ນຫາ CRM ເພື່ອສະໝັກຮັບ</string>
     <string name="crm_create_object_parent_none">(ບໍ່ມີ)</string>

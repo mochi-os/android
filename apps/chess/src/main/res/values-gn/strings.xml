@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Ajedrez</string>
-    <string name="chess_sidebar_header">Ajedrez</string>
     <string name="chess_sidebar_active">Ñembosarái oikóva</string>
     <string name="chess_sidebar_completed">Oñembohu\'ãma</string>
     <string name="chess_sidebar_new_game">Ñembosarái pyahu</string>
-    <string name="chess_section_active">Ñembosarái oikóva</string>
-    <string name="chess_section_completed">Oñembohu\'ãma</string>
-    <string name="chess_new_game">Ñembosarái pyahu</string>
     <string name="chess_empty_title">Ndaipóri ñembosarái gueteri</string>
     <string name="chess_new_title">Ñembosarái Pyahu</string>
     <string name="chess_new_pick_opponent">Eiporavo mbohovái</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Ajedrez momarandu</string>
     <string name="chess_channel_description">Momarandu ajedrez ñemongu\'e, peteĩcha kuave\'ẽ ha ñembosarái resultado rehegua.</string>
     <string name="chess_open_sidebar">Eipe\'a yke panel</string>
-    <string name="chess_empty_subtitle">Eñepyrũ ne ñembosarái peteĩha rembosarái hag̃ua ajedrez peteĩ angirũ ndive.</string>
-    <string name="chess_empty_start_button">Eñepyrũ ne ñembosarái peteĩha</string>
     <string name="chess_detail_unavailable">Ñembosarái ndaipóri</string>
     <string name="chess_delete_title">Ehundi ñembosarái?</string>
     <string name="chess_delete_message">Kóva oipe\'a ñembosarái ne listagui.</string>

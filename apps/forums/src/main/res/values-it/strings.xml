@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Nome visualizzato</string>
-    <string name="forums_auth_verification_failed">Verifica non riuscita</string>
     <string name="forums_list_title">Forum</string>
     <string name="forums_list_find">Trova forum</string>
     <string name="forums_list_unsubscribe">Disiscriviti</string>
     <string name="forums_list_unsubscribe_title">Disiscriviti</string>
     <string name="forums_create_title">Crea forum</string>
     <string name="forums_create_name">Nome del forum</string>
-    <string name="forums_create_privacy">Privacy</string>
-    <string name="forums_create_private">Privato</string>
-    <string name="forums_create_public">Pubblico</string>
     <string name="forums_create_action">Crea forum</string>
     <string name="forums_find_title">Trova forum</string>
     <string name="forums_find_recommended">Consigliato</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Pubblica</string>
     <string name="forums_post_edit">Modifica post</string>
     <string name="forums_post_edit_title">Modifica post</string>
-    <string name="forums_post_edit_title_field">Titolo</string>
-    <string name="forums_post_save">Salva</string>
     <string name="forums_post_delete">Elimina post</string>
     <string name="forums_post_delete_title">Elimina post</string>
     <string name="forums_post_locked">Bloccato</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Membri</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">IA</string>
-    <string name="forums_access_target">Soggetto</string>
-    <string name="forums_access_level_view">Visualizza</string>
-    <string name="forums_access_level_vote">Vota</string>
-    <string name="forums_access_level_comment">Commenta</string>
-    <string name="forums_access_level_post">Pubblica</string>
-    <string name="forums_access_level_none">Nessuno</string>
     <string name="forums_members_empty">Nessun membro</string>
     <string name="forums_banner_dismiss">Ignora banner</string>
     <string name="forums_ai_mode_tag">Assegna tag</string>
     <string name="forums_ai_account_default">Account predefinito</string>
-    <string name="forums_ai_prompt_reset">Reimposta ai valori predefiniti</string>
     <string name="forums_settings_unsubscribe">Disiscriviti</string>
     <string name="forums_moderation_title">Moderazione</string>
     <string name="forums_moderation_tab_queue">Coda</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Fuori tema</string>
     <string name="forums_report_reason_other">Altro</string>
     <string name="forums_post_default_author">Utente</string>
-    <string name="forums_comments">Commenti</string>
     <string name="forums_no_comments">Ancora nessun commento</string>
-    <string name="forums_comment_save">Salva</string>
     <string name="forums_comment_edit">Modifica commento</string>
     <string name="forums_comment_edit_title">Modifica commento</string>
-    <string name="forums_comment_edit_attach">Allega file</string>
     <string name="forums_comment_delete">Elimina commento</string>
     <string name="forums_comment_delete_title">Elimina commento</string>
     <string name="forums_comment_reply">Rispondi</string>
-    <string name="forums_settings_rename">Rinomina</string>
-    <string name="forums_settings_save">Salva</string>
     <string name="forums_settings_delete">Elimina forum</string>
     <string name="forums_settings_delete_title">Elimina forum</string>
     <string name="forums_forum_not_found">Forum non trovato</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Invia</string>
     <string name="forums_post_body_field">Testo</string>
-    <string name="forums_post_edit_body_field">Testo</string>
     <string name="forums_comment_edit_body_field">Testo</string>
-    <string name="forums_tag_clear">Cancella filtro</string>
-    <string name="forums_post_tag_add">Aggiungi tag</string>
     <string name="forums_write_comment">Scrivi un commento…</string>
-    <string name="forums_auth_login_failed">Accesso non riuscito</string>
 
     <string name="notification_channel_forums">Notifiche dei forum</string>
-    <string name="forums_auth_brand">Mochi Forum</string>
-    <string name="forums_auth_create_identity_failed">Creazione dell\'identità non riuscita</string>
-    <string name="forums_auth_mfa_unsupported">MFA non ancora supportata nell\'app mobile</string>
-    <string name="forums_auth_enter_code_sent">Inserisci il codice inviato a %1$s</string>
-    <string name="forums_auth_create_identity">Crea la tua identità</string>
     <string name="forums_list_empty">Nessun forum ancora</string>
     <string name="forums_list_unsubscribe_message">Vuoi davvero disiscriverti da questo forum?</string>
     <string name="forums_find_search_placeholder">Cerca forum o incolla URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Voto negativo</string>
     <string name="forums_post_quote">Cita nella risposta</string>
     <string name="forums_comment_quote">Cita nella risposta</string>
-    <string name="forums_post_tag_remove">Rimuovi tag</string>
     <string name="forums_access_add">Aggiungi regola di accesso</string>
     <string name="forums_access_empty">Nessuna regola ancora — si applicano le impostazioni predefinite</string>
-    <string name="forums_access_target_hint">ID entità, @gruppo, * (tutti) o + (membri)</string>
-    <string name="forums_access_level">Livello</string>
-    <string name="forums_access_level_moderate">Modera</string>
     <string name="forums_members_search">Filtra membri</string>
     <string name="forums_banner_description">Markdown mostrato in cima al forum.</string>
     <string name="forums_banner_placeholder">Inserisci il testo del banner (supporta Markdown)…</string>
-    <string name="forums_ai_mode_label">Modalità: %1$s</string>
-    <string name="forums_ai_mode_heading">Modalità AI</string>
     <string name="forums_ai_mode_off">Disattivata</string>
-    <string name="forums_ai_account">Account AI</string>
-    <string name="forums_ai_prompt_tag">Prompt per i tag</string>
-    <string name="forums_ai_prompt_score">Prompt per il punteggio</string>
-    <string name="forums_ai_post_prompt_label">Prompt per i tag dei post</string>
-    <string name="forums_ai_comment_prompt_label">Prompt per i tag dei commenti</string>
-    <string name="forums_settings_fingerprint">Impronta: %1$s</string>
-    <string name="forums_settings_clear_notifications">Cancella notifiche</string>
     <string name="forums_moderation_queue_empty">Nessun elemento in sospeso</string>
     <string name="forums_moderation_report_details">Dettagli: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Risolto da %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">In risposta a %1$s</string>
     <string name="forums_comment_clear_reply">Annulla risposta</string>
     <string name="forums_settings_title">Impostazioni di %1$s</string>
-    <string name="forums_settings_rename_label">Nome del forum</string>
-    <string name="forums_settings_danger_zone">Zona pericolosa</string>
     <string name="forums_settings_delete_message">Il forum e tutti i suoi post verranno eliminati definitivamente. L\'operazione non può essere annullata.</string>
 
-    <string name="forums_tag_interest_up">Aumenta l\'interesse</string>
-    <string name="forums_tag_interest_down">Riduci interesse</string>
-    <string name="forums_tag_interest_remove">Rimuovi interesse</string>
     <string name="forums_access_tab_users">Utenti</string>
     <string name="forums_access_tab_groups">Gruppi</string>
-    <string name="forums_access_tab_manual">Manuale</string>
     <string name="forums_access_search_users">Cerca utenti</string>
     <string name="forums_access_no_groups">Nessun gruppo disponibile</string>
     <string name="forums_saved_title">Salvati</string>

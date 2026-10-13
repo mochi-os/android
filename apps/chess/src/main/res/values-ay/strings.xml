@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Ajedrez</string>
-    <string name="chess_sidebar_header">Ajedrez</string>
     <string name="chess_sidebar_active">Lurkaski anatanaka</string>
     <string name="chess_sidebar_completed">Tukuyata</string>
     <string name="chess_sidebar_new_game">Machaqa anata</string>
-    <string name="chess_section_active">Lurkaski anatanaka</string>
-    <string name="chess_section_completed">Tukuyata</string>
-    <string name="chess_new_game">Machaqa anata</string>
     <string name="chess_empty_title">Janïr anatanakax utjkiti</string>
     <string name="chess_new_title">Machaqa anata</string>
     <string name="chess_new_pick_opponent">Awqasiri ajlliña</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Ajedrez yatiyäwinaka</string>
     <string name="chess_channel_description">Ajedrez sarawinakat, kikipa anatañ churawinakat ukat anata tukuyawinakat yatiyawinaka.</string>
     <string name="chess_open_sidebar">Thiya panel jist\'araña</string>
-    <string name="chess_empty_subtitle">Mä masimamp ajedrez anatañatakix nayrïr anatam qalltam.</string>
-    <string name="chess_empty_start_button">Nayrïr anatam qalltam</string>
     <string name="chess_detail_unavailable">Anatax janiw utjkiti</string>
     <string name="chess_delete_title">¿Anata chhaqtayañati?</string>
     <string name="chess_delete_message">Akax anata listamat apsu.</string>

@@ -102,7 +102,6 @@
     <string name="people_contacts_accept">Accepter</string>
     <string name="people_contacts_no_people_found">Aucune personne trouvée</string>
     <string name="people_contacts_try_adjusting">Essayez d\'ajuster votre recherche</string>
-    <string name="people_contact_section_address">Adresse</string>
     <string name="people_contact_section_detail">Détails</string>
     <string name="people_contact_name">Nom</string>
     <string name="people_contact_email">Courriel</string>

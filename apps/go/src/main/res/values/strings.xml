@@ -12,8 +12,6 @@
 
     <!-- Empty / status states -->
     <string name="go_empty_active">No active games yet.</string>
-    <string name="go_status_draw">Draw</string>
-    <string name="go_status_resigned">Resigned</string>
 
     <!-- Game card -->
 

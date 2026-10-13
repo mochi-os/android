@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Хабар жіберу</string>
     <string name="people_contacts_no_people_found">Адамдар табылмады</string>
     <string name="people_contacts_try_adjusting">Іздеуді реттеуді көріңіз</string>
-    <string name="people_contact_section_address">Мекенжай</string>
     <string name="people_contact_section_detail">Мәліметтер</string>
     <string name="people_contact_name">Аты</string>
     <string name="people_contact_email">Электрондық пошта</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Атын өзгерту</string>
     <string name="people_contacts_sort_name">Аты</string>
     <string name="people_contacts_sort_recent">Жақында қосылды</string>
-    <string name="people_contacts_thats_you">Бұл сізсіз</string>
     <string name="people_contacts_try_different_search">Басқа іздеу терминін қолданып көріңіз</string>
     <string name="people_contacts_unfriend">Досты жою</string>
     <string name="people_add_contact_search_placeholder">Іздеу үшін теріңіз…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Контактілер табылмады</string>
     <string name="people_contacts_add_to_start">Байланысу үшін контактілер қосыңыз</string>
     <string name="people_contacts_actions">Контакт әрекеттері</string>
-    <string name="people_contacts_friend">Дос</string>
     <string name="people_contacts_invite">Шақыру</string>
     <string name="people_contacts_unfriend_confirm">%1$s бұдан былай сіздің досыңыз болмайды. Контакт мекенжай кітабыңызда қалады.</string>
     <string name="people_contacts_delete">Контактіні жою</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Контакт өзгерді</string>
     <string name="people_add_contact_title">Контакт қосу</string>
     <string name="people_add_contact_add">Контактілерге қосу</string>
-    <string name="people_add_contact_in_contacts">Контактілерде</string>
     <string name="people_books_create">Мекенжай кітабын жасау</string>
     <string name="people_books_delete">Мекенжай кітабын жою</string>
     <plurals name="people_books_delete_confirm">

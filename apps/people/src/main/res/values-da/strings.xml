@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Send besked</string>
     <string name="people_contacts_no_people_found">Ingen personer fundet</string>
     <string name="people_contacts_try_adjusting">Prøv at justere din søgning</string>
-    <string name="people_contact_section_address">Adresse</string>
     <string name="people_contact_section_detail">Detaljer</string>
     <string name="people_contact_name">Navn</string>
     <string name="people_contact_email">E-mail</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Omdøb</string>
     <string name="people_contacts_sort_name">Navn</string>
     <string name="people_contacts_sort_recent">Tilføjet for nylig</string>
-    <string name="people_contacts_thats_you">Det er dig</string>
     <string name="people_contacts_try_different_search">Prøv et andet søgeord</string>
     <string name="people_contacts_unfriend">Fjern ven</string>
     <string name="people_add_contact_search_placeholder">Skriv for at søge…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Ingen kontakter fundet</string>
     <string name="people_contacts_add_to_start">Tilføj kontakter for at komme i kontakt</string>
     <string name="people_contacts_actions">Kontakthandlinger</string>
-    <string name="people_contacts_friend">Ven</string>
     <string name="people_contacts_invite">Inviter</string>
     <string name="people_contacts_unfriend_confirm">%1$s er ikke længere din ven. Kontakten bliver i din adressebog.</string>
     <string name="people_contacts_delete">Slet kontakt</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakten er ændret</string>
     <string name="people_add_contact_title">Tilføj kontakt</string>
     <string name="people_add_contact_add">Tilføj til kontakter</string>
-    <string name="people_add_contact_in_contacts">I kontakter</string>
     <string name="people_books_create">Opret adressebog</string>
     <string name="people_books_delete">Slet adressebog</string>
     <plurals name="people_books_delete_confirm">

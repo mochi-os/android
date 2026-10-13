@@ -19,7 +19,6 @@
     <string name="crm_link">Bağlantı</string>
     <string name="crm_design">Tasarım</string>
     <string name="crm_export_failed">Dışa aktarma kaydedilemedi</string>
-    <string name="crm_sort_direction">Yön</string>
     <string name="crm_sort_rank">Elle</string>
     <string name="crm_sort_created">Oluşturuldu</string>
     <string name="crm_sort_updated">Güncellendi</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Sınıf ekle</string>
     <string name="crm_classes_create">Oluştur</string>
     <string name="crm_class_name">Ad</string>
-    <string name="crm_class_save_name">Adı kaydet</string>
     <string name="crm_class_title_field">Başlık alanı</string>
     <string name="crm_class_fields">Alanlar</string>
     <string name="crm_class_add_field">Alan ekle</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Gerekli</string>
     <string name="crm_field_position_default">Varsayılan</string>
     <string name="crm_field_position_sidebar">Kenar çubuğu</string>
-    <string name="crm_field_save">Değişiklikleri kaydet</string>
     <string name="crm_field_options">Seçenekler</string>
     <string name="crm_field_add_option">Seçenek ekle</string>
     <string name="crm_field_delete">Alanı sil</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM ara</string>
     <string name="crm_list_no_matching">Eşleşen CRM yok</string>
     <string name="crm_list_empty">Henüz CRM yok</string>
-    <string name="crm_create_template">Şablon</string>
     <string name="crm_find_search_placeholder">CRM ara veya URL yapıştır</string>
     <string name="crm_find_search_hint">Abone olunacak CRM ara</string>
     <string name="crm_create_object_parent_none">(yok)</string>

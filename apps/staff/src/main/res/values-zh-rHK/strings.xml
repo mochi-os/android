@@ -415,7 +415,6 @@
     <string name="staff_status_soft_approved">暫准</string>
     <string name="staff_status_sold">已售出</string>
     <string name="staff_status_support">客戶支援</string>
-    <string name="staff_team_col_added_by">加入者</string>
     <string name="staff_team_dialog_add_title">新增團隊成員</string>
     <string name="staff_team_dialog_adding">正在新增…</string>
     <string name="staff_team_dialog_no_results">找不到任何人</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">ارسال پیام</string>
     <string name="people_contacts_no_people_found">شخصی یافت نشد</string>
     <string name="people_contacts_try_adjusting">جست‌وجوی خود را تنظیم کنید</string>
-    <string name="people_contact_section_address">آدرس</string>
     <string name="people_contact_section_detail">جزئیات</string>
     <string name="people_contact_name">نام</string>
     <string name="people_contact_email">ایمیل</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">تغییر نام</string>
     <string name="people_contacts_sort_name">نام</string>
     <string name="people_contacts_sort_recent">به‌تازگی افزوده‌شده</string>
-    <string name="people_contacts_thats_you">این خودتان هستید</string>
     <string name="people_contacts_try_different_search">عبارت جست‌وجوی دیگری را امتحان کنید</string>
     <string name="people_contacts_unfriend">حذف دوست</string>
     <string name="people_add_contact_search_placeholder">برای جستجو تایپ کنید…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">مخاطبی یافت نشد</string>
     <string name="people_contacts_add_to_start">برای شروع ارتباط، مخاطب اضافه کنید</string>
     <string name="people_contacts_actions">کنش‌های مخاطب</string>
-    <string name="people_contacts_friend">دوست</string>
     <string name="people_contacts_invite">دعوت</string>
     <string name="people_contacts_unfriend_confirm">%1$s دیگر دوست شما نخواهد بود. مخاطب در دفترچه نشانی شما می‌ماند.</string>
     <string name="people_contacts_delete">حذف مخاطب</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">مخاطب تغییر کرد</string>
     <string name="people_add_contact_title">افزودن مخاطب</string>
     <string name="people_add_contact_add">افزودن به مخاطبین</string>
-    <string name="people_add_contact_in_contacts">در مخاطبین</string>
     <string name="people_books_create">ایجاد دفترچه نشانی</string>
     <string name="people_books_delete">حذف دفترچه نشانی</string>
     <plurals name="people_books_delete_confirm">

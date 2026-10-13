@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Shakki</string>
-    <string name="chess_sidebar_header">Shakki</string>
     <string name="chess_sidebar_active">Aktiiviset pelit</string>
     <string name="chess_sidebar_completed">Valmis</string>
     <string name="chess_sidebar_new_game">Uusi peli</string>
-    <string name="chess_section_active">Aktiiviset pelit</string>
-    <string name="chess_section_completed">Valmis</string>
-    <string name="chess_new_game">Uusi peli</string>
     <string name="chess_empty_title">Ei vielä pelejä</string>
     <string name="chess_new_title">Uusi peli</string>
     <string name="chess_new_pick_opponent">Valitse vastustaja</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Shakki-ilmoitukset</string>
     <string name="chess_channel_description">Ilmoitukset siirroista, tasapelitarjouksista ja pelitulokset.</string>
     <string name="chess_open_sidebar">Avaa sivupalkki</string>
-    <string name="chess_empty_subtitle">Aloita ensimmäinen pelisi pelataksesi shakkia ystävän kanssa.</string>
-    <string name="chess_empty_start_button">Aloita ensimmäinen pelisi</string>
     <string name="chess_detail_unavailable">Peli ei käytettävissä</string>
     <string name="chess_delete_title">Poistetaanko peli?</string>
     <string name="chess_delete_message">Tämä poistaa pelin listaltasi.</string>

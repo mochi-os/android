@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">ឈ្មោះបង្ហាញ</string>
-    <string name="forums_auth_verification_failed">ការផ្ទៀងផ្ទាត់បរាជ័យ</string>
     <string name="forums_list_title">វេទិកា</string>
     <string name="forums_list_find">ស្វែងរកវេទិកា</string>
     <string name="forums_list_unsubscribe">ឈប់ជាវ</string>
     <string name="forums_list_unsubscribe_title">ឈប់ជាវ</string>
     <string name="forums_create_title">បង្កើតវេទិកា</string>
     <string name="forums_create_name">ឈ្មោះវេទិកា</string>
-    <string name="forums_create_privacy">ឯកជនភាព</string>
-    <string name="forums_create_private">ឯកជន</string>
-    <string name="forums_create_public">សាធារណៈ</string>
     <string name="forums_create_action">បង្កើតវេទិកា</string>
     <string name="forums_find_title">ស្វែងរកវេទិកា</string>
     <string name="forums_find_recommended">បានណែនាំ</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">ប្រកាស</string>
     <string name="forums_post_edit">កែសម្រួលការបង្ហោះ</string>
     <string name="forums_post_edit_title">កែសម្រួលការបង្ហោះ</string>
-    <string name="forums_post_edit_title_field">ចំណងជើង</string>
-    <string name="forums_post_save">រក្សាទុក</string>
     <string name="forums_post_delete">លុបការបង្ហោះ</string>
     <string name="forums_post_delete_title">លុបការបង្ហោះ</string>
     <string name="forums_post_locked">បានចាក់សោ</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">សមាជិក</string>
     <string name="forums_tab_banner">បដា</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">អ្នកប្រើប្រាស់ ឬក្រុម</string>
-    <string name="forums_access_level_view">មើល</string>
-    <string name="forums_access_level_vote">បោះឆ្នោត</string>
-    <string name="forums_access_level_comment">បញ្ចេញមតិ</string>
-    <string name="forums_access_level_post">ប្រកាស</string>
-    <string name="forums_access_level_none">គ្មាន</string>
     <string name="forums_members_empty">មិនមានសមាជិក</string>
     <string name="forums_banner_dismiss">បិទបដា</string>
     <string name="forums_ai_mode_tag">ដាក់ស្លាក</string>
     <string name="forums_ai_account_default">គណនីលំនាំដើម</string>
-    <string name="forums_ai_prompt_reset">កំណត់ឡើងវិញទៅលំនាំដើម</string>
     <string name="forums_settings_unsubscribe">ឈប់ជាវ</string>
     <string name="forums_moderation_title">ការសម្របសម្រួល</string>
     <string name="forums_moderation_tab_queue">ជួរ</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">ក្រៅប្រធានបទ</string>
     <string name="forums_report_reason_other">ផ្សេងទៀត</string>
     <string name="forums_post_default_author">អ្នកប្រើប្រាស់</string>
-    <string name="forums_comments">មតិយោបល់</string>
     <string name="forums_no_comments">មិនទាន់មានមតិយោបល់</string>
-    <string name="forums_comment_save">រក្សាទុក</string>
     <string name="forums_comment_edit">កែសម្រួលមតិយោបល់</string>
     <string name="forums_comment_edit_title">កែសម្រួលមតិយោបល់</string>
-    <string name="forums_comment_edit_attach">ភ្ជាប់ឯកសារ</string>
     <string name="forums_comment_delete">លុបមតិយោបល់</string>
     <string name="forums_comment_delete_title">លុបមតិយោបល់</string>
     <string name="forums_comment_reply">ឆ្លើយតប</string>
-    <string name="forums_settings_rename">ប្តូរឈ្មោះ</string>
-    <string name="forums_settings_save">រក្សាទុក</string>
     <string name="forums_settings_delete">លុបវេទិកា</string>
     <string name="forums_settings_delete_title">លុបវេទិកា</string>
     <string name="forums_forum_not_found">រកមិនឃើញវេទិកា</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">ផ្ញើ</string>
     <string name="forums_post_body_field">តួអត្ថបទ</string>
-    <string name="forums_post_edit_body_field">តួអត្ថបទ</string>
     <string name="forums_comment_edit_body_field">តួអត្ថបទ</string>
-    <string name="forums_tag_clear">សម្អាតតម្រង</string>
-    <string name="forums_post_tag_add">បន្ថែមស្លាក</string>
     <string name="forums_write_comment">សរសេរមតិយោបល់…</string>
-    <string name="forums_auth_login_failed">ការចូលបានបរាជ័យ</string>
 
     <string name="notification_channel_forums">ការជូនដំណឹងវេទិកា</string>
-    <string name="forums_auth_brand">Mochi វេទិកា</string>
-    <string name="forums_auth_create_identity_failed">បរាជ័យក្នុងការបង្កើតអត្តសញ្ញាណ</string>
-    <string name="forums_auth_mfa_unsupported">MFA មិនទាន់គាំទ្រនៅក្នុងកម្មវិធីទូរស័ព្ទនៅឡើយទេ</string>
-    <string name="forums_auth_enter_code_sent">បញ្ចូលលេខកូដដែលបានផ្ញើទៅ %1$s</string>
-    <string name="forums_auth_create_identity">បង្កើតអត្តសញ្ញាណរបស់អ្នក</string>
     <string name="forums_list_empty">មិនទាន់មានវេទិកាទេ</string>
     <string name="forums_list_unsubscribe_message">តើអ្នកប្រាកដថាចង់ឈប់ជាវវេទិកានេះមែនទេ?</string>
     <string name="forums_find_search_placeholder">ស្វែងរកវេទិកា ឬបិទភ្ជាប់ URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">បោះឆ្នោតមិនយល់ព្រម</string>
     <string name="forums_post_quote">ដកស្រង់ក្នុងការឆ្លើយតប</string>
     <string name="forums_comment_quote">ដកស្រង់ក្នុងការឆ្លើយតប</string>
-    <string name="forums_post_tag_remove">លុបស្លាក</string>
     <string name="forums_access_add">បន្ថែមច្បាប់សិទ្ធិចូលប្រើ</string>
     <string name="forums_access_empty">មិនទាន់មានច្បាប់ទេ — លំនាំដើមត្រូវបានអនុវត្ត</string>
-    <string name="forums_access_target_hint">លេខសម្គាល់អង្គភាព, @group, * (មនុស្សគ្រប់គ្នា), ឬ + (សមាជិក)</string>
-    <string name="forums_access_level">កម្រិត</string>
-    <string name="forums_access_level_moderate">សម្របសម្រួល</string>
     <string name="forums_members_search">ច្រោះសមាជិក</string>
     <string name="forums_banner_description">Markdown ដែលបង្ហាញនៅផ្នែកខាងលើនៃវេទិកា។</string>
     <string name="forums_banner_placeholder">បញ្ចូលអត្ថបទបដា (គាំទ្រ Markdown)…</string>
-    <string name="forums_ai_mode_label">របៀប: %1$s</string>
-    <string name="forums_ai_mode_heading">របៀប AI</string>
     <string name="forums_ai_mode_off">បិទ</string>
-    <string name="forums_ai_account">គណនី AI</string>
-    <string name="forums_ai_prompt_tag">សារជំរុញសម្រាប់ការដាក់ស្លាក</string>
-    <string name="forums_ai_prompt_score">សារជំរុញសម្រាប់ការដាក់ពិន្ទុ</string>
-    <string name="forums_ai_post_prompt_label">សារជំរុញសម្រាប់ស្លាកការប្រកាស</string>
-    <string name="forums_ai_comment_prompt_label">សារជំរុញសម្រាប់ស្លាកមតិយោបល់</string>
-    <string name="forums_settings_fingerprint">ស្នាមម្រាមដៃ: %1$s</string>
-    <string name="forums_settings_clear_notifications">សម្អាតការជូនដំណឹង</string>
     <string name="forums_moderation_queue_empty">គ្មានអ្វីកំពុងរង់ចាំទេ</string>
     <string name="forums_moderation_report_details">ព័ត៌មានលម្អិត: %1$s</string>
     <string name="forums_moderation_report_resolved_by">បានដោះស្រាយដោយ %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">កំពុងឆ្លើយតបទៅ %1$s</string>
     <string name="forums_comment_clear_reply">សម្អាតការឆ្លើយតប</string>
     <string name="forums_settings_title">ការកំណត់ %1$s</string>
-    <string name="forums_settings_rename_label">ឈ្មោះវេទិកា</string>
-    <string name="forums_settings_danger_zone">តំបន់គ្រោះថ្នាក់</string>
     <string name="forums_settings_delete_message">វានឹងលុបវេទិកា និងការប្រកាសទាំងអស់របស់វាជាអចិន្ត្រៃយ៍។ វាមិនអាចត្រឡប់វិញបានទេ។</string>
 
-    <string name="forums_tag_interest_up">បង្កើនចំណាប់អារម្មណ៍</string>
-    <string name="forums_tag_interest_down">កាត់បន្ថយចំណាប់អារម្មណ៍</string>
-    <string name="forums_tag_interest_remove">យកចំណាប់អារម្មណ៍ចេញ</string>
     <string name="forums_access_tab_users">អ្នកប្រើប្រាស់</string>
     <string name="forums_access_tab_groups">ក្រុម</string>
-    <string name="forums_access_tab_manual">ដោយដៃ</string>
     <string name="forums_access_search_users">ស្វែងរកអ្នកប្រើ</string>
     <string name="forums_access_no_groups">មិនមានក្រុម</string>
     <string name="forums_saved_title">ធាតុដែលបានរក្សាទុក</string>

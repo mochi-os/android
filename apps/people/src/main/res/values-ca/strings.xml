@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Envia un missatge</string>
     <string name="people_contacts_no_people_found">No s\'ha trobat ningú</string>
     <string name="people_contacts_try_adjusting">Prova d\'ajustar la cerca</string>
-    <string name="people_contact_section_address">Adreça</string>
     <string name="people_contact_section_detail">Detalls</string>
     <string name="people_contact_name">Nom</string>
     <string name="people_contact_email">Correu electrònic</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Canvia el nom</string>
     <string name="people_contacts_sort_name">Nom</string>
     <string name="people_contacts_sort_recent">Afegit recentment</string>
-    <string name="people_contacts_thats_you">Ets tu</string>
     <string name="people_contacts_try_different_search">Prova un terme de cerca diferent</string>
     <string name="people_contacts_unfriend">Elimina l\'amic</string>
     <string name="people_add_contact_search_placeholder">Escriviu per cercar…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">No s\'ha trobat cap contacte</string>
     <string name="people_contacts_add_to_start">Afegiu contactes per començar a connectar</string>
     <string name="people_contacts_actions">Accions del contacte</string>
-    <string name="people_contacts_friend">Amic</string>
     <string name="people_contacts_invite">Convida</string>
     <string name="people_contacts_unfriend_confirm">%1$s deixarà de ser el vostre amic. El contacte es manté a la vostra llibreta d\'adreces.</string>
     <string name="people_contacts_delete">Suprimeix el contacte</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">El contacte ha canviat</string>
     <string name="people_add_contact_title">Afegeix un contacte</string>
     <string name="people_add_contact_add">Afegeix als contactes</string>
-    <string name="people_add_contact_in_contacts">Als contactes</string>
     <string name="people_books_create">Crea una llibreta d\'adreces</string>
     <string name="people_books_delete">Suprimeix la llibreta d\'adreces</string>
     <plurals name="people_books_delete_confirm">

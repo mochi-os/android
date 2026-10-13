@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Ficheall</string>
-    <string name="chess_sidebar_header">Ficheall</string>
     <string name="chess_sidebar_active">Cluichí Gníomhacha</string>
     <string name="chess_sidebar_completed">Críochnaithe</string>
     <string name="chess_sidebar_new_game">Cluiche nua</string>
-    <string name="chess_section_active">Cluichí Gníomhacha</string>
-    <string name="chess_section_completed">Críochnaithe</string>
-    <string name="chess_new_game">Cluiche nua</string>
     <string name="chess_empty_title">Níl aon chluiche fós</string>
     <string name="chess_new_title">Cluiche Nua</string>
     <string name="chess_new_pick_opponent">Roghnaigh céile comhraic</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Fógraí faoi bhearta fichille, tairiscintí comhscóir agus torthaí cluichí.</string>
     <string name="chess_open_sidebar">Oscail barra taoibh</string>
-    <string name="chess_empty_subtitle">Tosaigh do chéad chluiche chun ficheall a imirt le cara.</string>
-    <string name="chess_empty_start_button">Tosaigh do chéad chluiche</string>
     <string name="chess_detail_unavailable">Cluiche gan fáil</string>
     <string name="chess_delete_title">Scrios an cluiche?</string>
     <string name="chess_delete_message">Baineann sé seo an cluiche de do liosta.</string>

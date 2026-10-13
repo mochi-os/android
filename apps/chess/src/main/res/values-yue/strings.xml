@@ -6,16 +6,10 @@
     <string name="chess_app_title">國際象棋</string>
     <string name="chess_channel_name">國際象棋通知</string>
     <string name="chess_channel_description">關於國際象棋行棋、和棋提議同對局結果嘅通知。</string>
-    <string name="chess_sidebar_header">國際象棋</string>
     <string name="chess_sidebar_active">進行中嘅對局</string>
     <string name="chess_sidebar_completed">已完成</string>
     <string name="chess_sidebar_new_game">新對局</string>
-    <string name="chess_section_active">進行中嘅對局</string>
-    <string name="chess_section_completed">已完成</string>
-    <string name="chess_new_game">新對局</string>
     <string name="chess_empty_title">未有對局</string>
-    <string name="chess_empty_subtitle">開始你嘅第一局,同朋友捉國際象棋。</string>
-    <string name="chess_empty_start_button">開始你嘅第一局</string>
     <string name="chess_new_title">新對局</string>
     <string name="chess_new_pick_opponent">選擇對手</string>
     <string name="chess_new_no_friends_title">未有朋友</string>

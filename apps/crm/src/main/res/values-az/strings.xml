@@ -19,7 +19,6 @@
     <string name="crm_link">Keçid</string>
     <string name="crm_design">Dizayn</string>
     <string name="crm_export_failed">İxrac saxlanıla bilmədi</string>
-    <string name="crm_sort_direction">İstiqamət</string>
     <string name="crm_sort_rank">Əl ilə</string>
     <string name="crm_sort_created">Yaradıldı</string>
     <string name="crm_sort_updated">Yeniləndi</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Sinif əlavə et</string>
     <string name="crm_classes_create">Yarat</string>
     <string name="crm_class_name">Ad</string>
-    <string name="crm_class_save_name">Adı saxla</string>
     <string name="crm_class_title_field">Başlıq sahəsi</string>
     <string name="crm_class_fields">Sahələr</string>
     <string name="crm_class_add_field">Sahə əlavə et</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Tələb olunur</string>
     <string name="crm_field_position_default">Standart</string>
     <string name="crm_field_position_sidebar">Yan panel</string>
-    <string name="crm_field_save">Dəyişiklikləri saxla</string>
     <string name="crm_field_options">Seçimlər</string>
     <string name="crm_field_add_option">Variant əlavə et</string>
     <string name="crm_field_delete">Sahəni sil</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">CRM axtar</string>
     <string name="crm_list_no_matching">Uyğun CRM tapılmadı</string>
     <string name="crm_list_empty">Hələ CRM yoxdur</string>
-    <string name="crm_create_template">Şablon</string>
     <string name="crm_find_search_placeholder">CRM axtar və ya URL yapışdır</string>
     <string name="crm_find_search_hint">Abunə olmaq üçün CRM axtarın</string>
     <string name="crm_search_objects_placeholder">Obyektləri axtar</string>

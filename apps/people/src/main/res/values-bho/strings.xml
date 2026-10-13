@@ -121,7 +121,6 @@
     <string name="people_contacts_message">संदेश भेजीं</string>
     <string name="people_contacts_no_people_found">कौनो लोग ना मिलल</string>
     <string name="people_contacts_try_adjusting">अपना खोज समायोजित करे के कोशिश करीं</string>
-    <string name="people_contact_section_address">पता</string>
     <string name="people_contact_section_detail">विवरण</string>
     <string name="people_contact_name">नाम</string>
     <string name="people_contact_email">ईमेल</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">नाम बदलीं</string>
     <string name="people_contacts_sort_name">नाम</string>
     <string name="people_contacts_sort_recent">हाले में जोड़ल</string>
-    <string name="people_contacts_thats_you">ई आप बानीं</string>
     <string name="people_contacts_try_different_search">अलग खोज शब्द आजमाईं</string>
     <string name="people_contacts_unfriend">दोस्त हटाईं</string>
     <string name="people_add_contact_search_placeholder">खोजे खातिर टाइप करीं…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">कवनो संपर्क ना मिलल</string>
     <string name="people_contacts_add_to_start">जुड़े खातिर संपर्क जोड़ीं</string>
     <string name="people_contacts_actions">संपर्क के काम</string>
-    <string name="people_contacts_friend">दोस्त</string>
     <string name="people_contacts_invite">नेवता दीं</string>
     <string name="people_contacts_unfriend_confirm">%1$s अब रउआ के दोस्त ना रहीहें। संपर्क रउआ पता किताब में बनल रही।</string>
     <string name="people_contacts_delete">संपर्क मेटाईं</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">संपर्क बदल गइल</string>
     <string name="people_add_contact_title">संपर्क जोड़ीं</string>
     <string name="people_add_contact_add">संपर्क में जोड़ीं</string>
-    <string name="people_add_contact_in_contacts">संपर्क में बा</string>
     <string name="people_books_create">पता किताब बनाईं</string>
     <string name="people_books_delete">पता किताब मिटाईं</string>
     <plurals name="people_books_delete_confirm">

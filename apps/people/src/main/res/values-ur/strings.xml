@@ -121,7 +121,6 @@
     <string name="people_contacts_message">پیغام بھیجیں</string>
     <string name="people_contacts_no_people_found">کوئی لوگ نہیں ملے</string>
     <string name="people_contacts_try_adjusting">اپنی تلاش کو تبدیل کرنے کی کوشش کریں</string>
-    <string name="people_contact_section_address">پتہ</string>
     <string name="people_contact_section_detail">تفصیلات</string>
     <string name="people_contact_name">نام</string>
     <string name="people_contact_email">ای میل</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">نام تبدیل کریں</string>
     <string name="people_contacts_sort_name">نام</string>
     <string name="people_contacts_sort_recent">حال ہی میں شامل کیا گیا</string>
-    <string name="people_contacts_thats_you">یہ آپ ہیں</string>
     <string name="people_contacts_try_different_search">مختلف تلاش کی اصطلاح آزمائیں</string>
     <string name="people_contacts_unfriend">دوست ہٹائیں</string>
     <string name="people_add_contact_search_placeholder">تلاش کے لیے ٹائپ کریں…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">کوئی رابطہ نہیں ملا</string>
     <string name="people_contacts_add_to_start">رابطہ شروع کرنے کے لیے رابطے شامل کریں</string>
     <string name="people_contacts_actions">رابطے کے اعمال</string>
-    <string name="people_contacts_friend">دوست</string>
     <string name="people_contacts_invite">دعوت دیں</string>
     <string name="people_contacts_unfriend_confirm">%1$s اب آپ کے دوست نہیں رہیں گے۔ رابطہ آپ کی ایڈریس بک میں رہے گا۔</string>
     <string name="people_contacts_delete">رابطہ حذف کریں</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">رابطہ تبدیل ہو گیا</string>
     <string name="people_add_contact_title">رابطہ شامل کریں</string>
     <string name="people_add_contact_add">رابطوں میں شامل کریں</string>
-    <string name="people_add_contact_in_contacts">رابطوں میں</string>
     <string name="people_books_create">ایڈریس بک بنائیں</string>
     <string name="people_books_delete">ایڈریس بک حذف کریں</string>
     <plurals name="people_books_delete_confirm">

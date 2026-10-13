@@ -19,7 +19,6 @@
     <string name="crm_link">Link</string>
     <string name="crm_design">Projekt</string>
     <string name="crm_export_failed">Nie udało się zapisać eksportu</string>
-    <string name="crm_sort_direction">Kierunek</string>
     <string name="crm_sort_rank">Ręczny</string>
     <string name="crm_sort_created">Utworzone</string>
     <string name="crm_sort_updated">Zaktualizowano</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Dodaj klasę</string>
     <string name="crm_classes_create">Utwórz</string>
     <string name="crm_class_name">Nazwa</string>
-    <string name="crm_class_save_name">Zapisz nazwę</string>
     <string name="crm_class_title_field">Pole tytułu</string>
     <string name="crm_class_fields">Pola</string>
     <string name="crm_class_add_field">Dodaj pole</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Wymagane</string>
     <string name="crm_field_position_default">Domyślny</string>
     <string name="crm_field_position_sidebar">Pasek boczny</string>
-    <string name="crm_field_save">Zapisz zmiany</string>
     <string name="crm_field_options">Opcje</string>
     <string name="crm_field_add_option">Dodaj opcję</string>
     <string name="crm_field_delete">Usuń pole</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Szukaj w CRM</string>
     <string name="crm_list_no_matching">Brak pasujących CRM</string>
     <string name="crm_list_empty">Brak CRM</string>
-    <string name="crm_create_template">Szablon</string>
     <string name="crm_find_search_placeholder">Szukaj CRM lub wklej adres URL</string>
     <string name="crm_find_search_hint">Wyszukaj CRM, do którego chcesz subskrybować</string>
     <string name="crm_create_object_parent_none">(brak)</string>

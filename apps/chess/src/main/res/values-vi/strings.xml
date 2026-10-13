@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Cờ vua</string>
-    <string name="chess_sidebar_header">Cờ vua</string>
     <string name="chess_sidebar_active">Ván đang chơi</string>
     <string name="chess_sidebar_completed">Hoàn tất</string>
     <string name="chess_sidebar_new_game">Trò chơi mới</string>
-    <string name="chess_section_active">Ván đang chơi</string>
-    <string name="chess_section_completed">Hoàn tất</string>
-    <string name="chess_new_game">Trò chơi mới</string>
     <string name="chess_empty_title">Chưa có trò chơi</string>
     <string name="chess_new_title">Trò chơi mới</string>
     <string name="chess_new_pick_opponent">Chọn đối thủ</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">Xoá ván cờ khỏi danh sách của bạn.</string>
     <string name="chess_delete_title">Xóa trận đấu?</string>
     <string name="chess_detail_unavailable">Ván cờ không khả dụng</string>
-    <string name="chess_empty_start_button">Bắt đầu ván đầu tiên</string>
-    <string name="chess_empty_subtitle">Bắt đầu ván đầu tiên để chơi cờ vua với bạn bè.</string>
     <string name="chess_move_capture">%1$s đã ăn %2$s</string>
     <string name="chess_open_sidebar">Mở thanh bên</string>
     <string name="chess_ws_connecting">Đang kết nối…</string>

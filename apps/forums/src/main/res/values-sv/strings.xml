@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Visningsnamn</string>
-    <string name="forums_auth_verification_failed">Verifiering misslyckades</string>
     <string name="forums_list_title">Forum</string>
     <string name="forums_list_find">Hitta forum</string>
     <string name="forums_list_unsubscribe">Avsluta prenumeration</string>
     <string name="forums_list_unsubscribe_title">Avsluta prenumeration</string>
     <string name="forums_create_title">Skapa forum</string>
     <string name="forums_create_name">Forumnamn</string>
-    <string name="forums_create_privacy">Integritet</string>
-    <string name="forums_create_private">Privat</string>
-    <string name="forums_create_public">Offentlig</string>
     <string name="forums_create_action">Skapa forum</string>
     <string name="forums_find_title">Hitta forum</string>
     <string name="forums_find_recommended">Rekommenderad</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Publicera</string>
     <string name="forums_post_edit">Redigera inlägg</string>
     <string name="forums_post_edit_title">Redigera inlägg</string>
-    <string name="forums_post_edit_title_field">Titel</string>
-    <string name="forums_post_save">Spara</string>
     <string name="forums_post_delete">Ta bort inlägg</string>
     <string name="forums_post_delete_title">Ta bort inlägg</string>
     <string name="forums_post_locked">Låst</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Medlemmar</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Användare eller grupp</string>
-    <string name="forums_access_level_view">Visa</string>
-    <string name="forums_access_level_vote">Rösta</string>
-    <string name="forums_access_level_comment">Kommentera</string>
-    <string name="forums_access_level_post">Publicera</string>
-    <string name="forums_access_level_none">Ingen</string>
     <string name="forums_members_empty">Inga medlemmar</string>
     <string name="forums_banner_dismiss">Avfärda banner</string>
     <string name="forums_ai_mode_tag">Tagga</string>
     <string name="forums_ai_account_default">Standardkonto</string>
-    <string name="forums_ai_prompt_reset">Återställ till standard</string>
     <string name="forums_settings_unsubscribe">Avsluta prenumeration</string>
     <string name="forums_moderation_title">Moderering</string>
     <string name="forums_moderation_tab_queue">Kö</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Utanför ämnet</string>
     <string name="forums_report_reason_other">Övrigt</string>
     <string name="forums_post_default_author">Användare</string>
-    <string name="forums_comments">Kommentarer</string>
     <string name="forums_no_comments">Inga kommentarer ännu</string>
-    <string name="forums_comment_save">Spara</string>
     <string name="forums_comment_edit">Redigera kommentar</string>
     <string name="forums_comment_edit_title">Redigera kommentar</string>
-    <string name="forums_comment_edit_attach">Bifoga filer</string>
     <string name="forums_comment_delete">Ta bort kommentar</string>
     <string name="forums_comment_delete_title">Ta bort kommentar</string>
     <string name="forums_comment_reply">Svara</string>
-    <string name="forums_settings_rename">Byt namn</string>
-    <string name="forums_settings_save">Spara</string>
     <string name="forums_settings_delete">Ta bort forum</string>
     <string name="forums_settings_delete_title">Ta bort forum</string>
     <string name="forums_forum_not_found">Forum hittades inte</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Skicka</string>
     <string name="forums_post_body_field">Innehåll</string>
-    <string name="forums_post_edit_body_field">Innehåll</string>
     <string name="forums_comment_edit_body_field">Innehåll</string>
-    <string name="forums_tag_clear">Rensa filter</string>
-    <string name="forums_post_tag_add">Lägg till tagg</string>
     <string name="forums_write_comment">Skriv en kommentar…</string>
-    <string name="forums_auth_login_failed">Inloggning misslyckades</string>
 
     <string name="notification_channel_forums">Forum-aviseringar</string>
-    <string name="forums_auth_brand">Mochi Forum</string>
-    <string name="forums_auth_create_identity_failed">Det gick inte att skapa identiteten</string>
-    <string name="forums_auth_mfa_unsupported">MFA stöds inte ännu i mobilappen</string>
-    <string name="forums_auth_enter_code_sent">Ange koden som skickats till %1$s</string>
-    <string name="forums_auth_create_identity">Skapa din identitet</string>
     <string name="forums_list_empty">Inga forum ännu</string>
     <string name="forums_list_unsubscribe_message">Är du säker på att du vill avprenumerera från det här forumet?</string>
     <string name="forums_find_search_placeholder">Sök forum eller klistra in URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Rösta ned</string>
     <string name="forums_post_quote">Citera i svar</string>
     <string name="forums_comment_quote">Citera i svar</string>
-    <string name="forums_post_tag_remove">Ta bort tagg</string>
     <string name="forums_access_add">Lägg till åtkomstregel</string>
     <string name="forums_access_empty">Inga regler ännu — standardvärden gäller</string>
-    <string name="forums_access_target_hint">Entitets-ID, @grupp, * (alla) eller + (medlemmar)</string>
-    <string name="forums_access_level">Nivå</string>
-    <string name="forums_access_level_moderate">Moderera</string>
     <string name="forums_members_search">Filtrera medlemmar</string>
     <string name="forums_banner_description">Markdown som visas högst upp i forumet.</string>
     <string name="forums_banner_placeholder">Ange bannertext (markdown stöds)…</string>
-    <string name="forums_ai_mode_label">Läge: %1$s</string>
-    <string name="forums_ai_mode_heading">AI-läge</string>
     <string name="forums_ai_mode_off">Inaktiverad</string>
-    <string name="forums_ai_account">AI-konto</string>
-    <string name="forums_ai_prompt_tag">Prompt för taggning</string>
-    <string name="forums_ai_prompt_score">Prompt för poängsättning</string>
-    <string name="forums_ai_post_prompt_label">Prompt för inläggstaggar</string>
-    <string name="forums_ai_comment_prompt_label">Prompt för kommentarstaggar</string>
-    <string name="forums_settings_fingerprint">Fingeravtryck: %1$s</string>
-    <string name="forums_settings_clear_notifications">Rensa aviseringar</string>
     <string name="forums_moderation_queue_empty">Inget väntande</string>
     <string name="forums_moderation_report_details">Detaljer: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Löst av %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Svarar på %1$s</string>
     <string name="forums_comment_clear_reply">Rensa svar</string>
     <string name="forums_settings_title">Inställningar för %1$s</string>
-    <string name="forums_settings_rename_label">Forumnamn</string>
-    <string name="forums_settings_danger_zone">Riskzon</string>
     <string name="forums_settings_delete_message">Detta tar bort forumet och alla dess inlägg permanent. Detta kan inte ångras.</string>
 
-    <string name="forums_tag_interest_up">Öka intresse</string>
-    <string name="forums_tag_interest_down">Minska intresse</string>
-    <string name="forums_tag_interest_remove">Ta bort intresse</string>
     <string name="forums_access_tab_users">Användare</string>
     <string name="forums_access_tab_groups">Grupper</string>
-    <string name="forums_access_tab_manual">Manuell</string>
     <string name="forums_access_search_users">Sök användare</string>
     <string name="forums_access_no_groups">Inga grupper tillgängliga</string>
     <string name="forums_saved_title">Sparade</string>

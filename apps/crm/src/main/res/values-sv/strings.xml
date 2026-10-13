@@ -19,7 +19,6 @@
     <string name="crm_link">Länk</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Exporten kunde inte sparas</string>
-    <string name="crm_sort_direction">Riktning</string>
     <string name="crm_sort_rank">Manuell</string>
     <string name="crm_sort_created">Skapad</string>
     <string name="crm_sort_updated">Uppdaterad</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Lägg till klass</string>
     <string name="crm_classes_create">Skapa</string>
     <string name="crm_class_name">Namn</string>
-    <string name="crm_class_save_name">Spara namn</string>
     <string name="crm_class_title_field">Titelfält</string>
     <string name="crm_class_fields">Fält</string>
     <string name="crm_class_add_field">Lägg till fält</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Obligatorisk</string>
     <string name="crm_field_position_default">Standard</string>
     <string name="crm_field_position_sidebar">Sidofält</string>
-    <string name="crm_field_save">Spara ändringar</string>
     <string name="crm_field_options">Alternativ</string>
     <string name="crm_field_add_option">Lägg till alternativ</string>
     <string name="crm_field_delete">Ta bort fält</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Sök CRM</string>
     <string name="crm_list_no_matching">Inga matchande CRM</string>
     <string name="crm_list_empty">Inga CRM ännu</string>
-    <string name="crm_create_template">Mall</string>
     <string name="crm_find_search_placeholder">Sök CRM eller klistra in URL</string>
     <string name="crm_find_search_hint">Sök efter CRM att prenumerera på</string>
     <string name="crm_create_object_parent_none">(ingen)</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Bericht sturen</string>
     <string name="people_contacts_no_people_found">Geen mensen gevonden</string>
     <string name="people_contacts_try_adjusting">Probeer je zoekopdracht aan te passen</string>
-    <string name="people_contact_section_address">Adres</string>
     <string name="people_contact_section_detail">Details</string>
     <string name="people_contact_name">Naam</string>
     <string name="people_contact_email">E-mail</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Hernoemen</string>
     <string name="people_contacts_sort_name">Naam</string>
     <string name="people_contacts_sort_recent">Onlangs toegevoegd</string>
-    <string name="people_contacts_thats_you">Dat ben jij</string>
     <string name="people_contacts_try_different_search">Probeer een andere zoekterm</string>
     <string name="people_contacts_unfriend">Vriend verwijderen</string>
     <string name="people_add_contact_search_placeholder">Typ om te zoeken…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Geen contacten gevonden</string>
     <string name="people_contacts_add_to_start">Voeg contacten toe om verbinding te maken</string>
     <string name="people_contacts_actions">Contactacties</string>
-    <string name="people_contacts_friend">Vriend</string>
     <string name="people_contacts_invite">Uitnodigen</string>
     <string name="people_contacts_unfriend_confirm">%1$s is niet langer je vriend. Het contact blijft in je adresboek staan.</string>
     <string name="people_contacts_delete">Contact verwijderen</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Contact gewijzigd</string>
     <string name="people_add_contact_title">Contact toevoegen</string>
     <string name="people_add_contact_add">Aan contacten toevoegen</string>
-    <string name="people_add_contact_in_contacts">In contacten</string>
     <string name="people_books_create">Adresboek maken</string>
     <string name="people_books_delete">Adresboek verwijderen</string>
     <plurals name="people_books_delete_confirm">

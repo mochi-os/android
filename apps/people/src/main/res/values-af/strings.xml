@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Stuur boodskap</string>
     <string name="people_contacts_no_people_found">Geen mense gevind nie</string>
     <string name="people_contacts_try_adjusting">Probeer jou soektog aanpas</string>
-    <string name="people_contact_section_address">Adres</string>
     <string name="people_contact_section_detail">Besonderhede</string>
     <string name="people_contact_name">Naam</string>
     <string name="people_contact_email">E-pos</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Hernoem</string>
     <string name="people_contacts_sort_name">Naam</string>
     <string name="people_contacts_sort_recent">Onlangs bygevoeg</string>
-    <string name="people_contacts_thats_you">Dis jy</string>
     <string name="people_contacts_try_different_search">Probeer \'n ander soekterm</string>
     <string name="people_contacts_unfriend">Verwyder vriend</string>
     <string name="people_add_contact_search_placeholder">Tik om te soek…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Geen kontakte gevind nie</string>
     <string name="people_contacts_add_to_start">Voeg kontakte by om te begin verbind</string>
     <string name="people_contacts_actions">Kontakaksies</string>
-    <string name="people_contacts_friend">Vriend</string>
     <string name="people_contacts_invite">Nooi uit</string>
     <string name="people_contacts_unfriend_confirm">%1$s sal nie meer jou vriend wees nie. Die kontak bly in jou adresboek.</string>
     <string name="people_contacts_delete">Verwyder kontak</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontak het verander</string>
     <string name="people_add_contact_title">Voeg kontak by</string>
     <string name="people_add_contact_add">Voeg by kontakte</string>
-    <string name="people_add_contact_in_contacts">In kontakte</string>
     <string name="people_books_create">Skep adresboek</string>
     <string name="people_books_delete">Vee adresboek uit</string>
     <plurals name="people_books_delete_confirm">

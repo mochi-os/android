@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Šah</string>
-    <string name="chess_sidebar_header">Šah</string>
     <string name="chess_sidebar_active">Aktivne igre</string>
     <string name="chess_sidebar_completed">Završeno</string>
     <string name="chess_sidebar_new_game">Nova igra</string>
-    <string name="chess_section_active">Aktivne igre</string>
-    <string name="chess_section_completed">Završeno</string>
-    <string name="chess_new_game">Nova igra</string>
     <string name="chess_empty_title">Još nema igara</string>
     <string name="chess_new_title">Nova igra</string>
     <string name="chess_new_pick_opponent">Odaberite protivnika</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Obavještenja o šahovskim potezima, ponudama remija i ishodima partija.</string>
     <string name="chess_open_sidebar">Otvori bočnu traku</string>
-    <string name="chess_empty_subtitle">Započnite svoju prvu partiju da igrate šah s prijateljem.</string>
-    <string name="chess_empty_start_button">Započnite svoju prvu partiju</string>
     <string name="chess_detail_unavailable">Partija nije dostupna</string>
     <string name="chess_delete_title">Obrisati igru?</string>
     <string name="chess_delete_message">Ovo uklanja partiju s vaše liste.</string>

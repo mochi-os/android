@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Zobrazované meno</string>
-    <string name="forums_auth_verification_failed">Overenie zlyhalo</string>
     <string name="forums_list_title">Fóra</string>
     <string name="forums_list_find">Nájsť fóra</string>
     <string name="forums_list_unsubscribe">Odhlásiť odber</string>
     <string name="forums_list_unsubscribe_title">Odhlásiť odber</string>
     <string name="forums_create_title">Vytvoriť fórum</string>
     <string name="forums_create_name">Názov fóra</string>
-    <string name="forums_create_privacy">Súkromie</string>
-    <string name="forums_create_private">Súkromné</string>
-    <string name="forums_create_public">Verejné</string>
     <string name="forums_create_action">Vytvoriť fórum</string>
     <string name="forums_find_title">Nájsť fóra</string>
     <string name="forums_find_recommended">Odporúčané</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Zverejniť</string>
     <string name="forums_post_edit">Upraviť príspevok</string>
     <string name="forums_post_edit_title">Upraviť príspevok</string>
-    <string name="forums_post_edit_title_field">Názov</string>
-    <string name="forums_post_save">Uložiť</string>
     <string name="forums_post_delete">Odstrániť príspevok</string>
     <string name="forums_post_delete_title">Odstrániť príspevok</string>
     <string name="forums_post_locked">Zamknuté</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Členovia</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Používateľ alebo skupina</string>
-    <string name="forums_access_level_view">Zobraziť</string>
-    <string name="forums_access_level_vote">Hlasovať</string>
-    <string name="forums_access_level_comment">Komentovať</string>
-    <string name="forums_access_level_post">Zverejniť</string>
-    <string name="forums_access_level_none">Žiadne</string>
     <string name="forums_members_empty">Žiadni členovia</string>
     <string name="forums_banner_dismiss">Zatvoriť banner</string>
     <string name="forums_ai_mode_tag">Tagovanie</string>
     <string name="forums_ai_account_default">Predvolený účet</string>
-    <string name="forums_ai_prompt_reset">Obnoviť na predvolené</string>
     <string name="forums_settings_unsubscribe">Odhlásiť odber</string>
     <string name="forums_moderation_title">Moderovanie</string>
     <string name="forums_moderation_tab_queue">Fronta</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Mimo témy</string>
     <string name="forums_report_reason_other">Iné</string>
     <string name="forums_post_default_author">Používateľ</string>
-    <string name="forums_comments">Komentáre</string>
     <string name="forums_no_comments">Zatiaľ žiadne komentáre</string>
-    <string name="forums_comment_save">Uložiť</string>
     <string name="forums_comment_edit">Upraviť komentár</string>
     <string name="forums_comment_edit_title">Upraviť komentár</string>
-    <string name="forums_comment_edit_attach">Pripojiť súbory</string>
     <string name="forums_comment_delete">Odstrániť komentár</string>
     <string name="forums_comment_delete_title">Odstrániť komentár</string>
     <string name="forums_comment_reply">Odpovedať</string>
-    <string name="forums_settings_rename">Premenovať</string>
-    <string name="forums_settings_save">Uložiť</string>
     <string name="forums_settings_delete">Odstrániť fórum</string>
     <string name="forums_settings_delete_title">Odstrániť fórum</string>
     <string name="forums_forum_not_found">Fórum sa nenašlo</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Odoslať</string>
     <string name="forums_post_body_field">Text</string>
-    <string name="forums_post_edit_body_field">Text</string>
     <string name="forums_comment_edit_body_field">Text</string>
-    <string name="forums_tag_clear">Vymazať filter</string>
-    <string name="forums_post_tag_add">Pridať značku</string>
     <string name="forums_write_comment">Napíšte komentár…</string>
-    <string name="forums_auth_login_failed">Prihlásenie zlyhalo</string>
 
     <string name="notification_channel_forums">Upozornenia fór</string>
-    <string name="forums_auth_brand">Mochi Fóra</string>
-    <string name="forums_auth_create_identity_failed">Nepodarilo sa vytvoriť identitu</string>
-    <string name="forums_auth_mfa_unsupported">MFA zatiaľ nie je podporované v mobilnej aplikácii</string>
-    <string name="forums_auth_enter_code_sent">Zadajte kód odoslaný na %1$s</string>
-    <string name="forums_auth_create_identity">Vytvorte si identitu</string>
     <string name="forums_list_empty">Zatiaľ žiadne fóra</string>
     <string name="forums_list_unsubscribe_message">Naozaj sa chcete odhlásiť z tohto fóra?</string>
     <string name="forums_find_search_placeholder">Hľadať fóra alebo vložiť URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Hlasovať proti</string>
     <string name="forums_post_quote">Citovať v odpovedi</string>
     <string name="forums_comment_quote">Citovať v odpovedi</string>
-    <string name="forums_post_tag_remove">Odstrániť značku</string>
     <string name="forums_access_add">Pridať pravidlo prístupu</string>
     <string name="forums_access_empty">Zatiaľ žiadne pravidlá — použijú sa predvolené</string>
-    <string name="forums_access_target_hint">ID entity, @skupina, * (všetci) alebo + (členovia)</string>
-    <string name="forums_access_level">Úroveň</string>
-    <string name="forums_access_level_moderate">Moderovať</string>
     <string name="forums_members_search">Filtrovať členov</string>
     <string name="forums_banner_description">Markdown zobrazený v hornej časti fóra.</string>
     <string name="forums_banner_placeholder">Zadajte text bannera (podporuje Markdown)…</string>
-    <string name="forums_ai_mode_label">Režim: %1$s</string>
-    <string name="forums_ai_mode_heading">Režim AI</string>
     <string name="forums_ai_mode_off">Vypnuté</string>
-    <string name="forums_ai_account">Účet AI</string>
-    <string name="forums_ai_prompt_tag">Pokyn pre značkovanie</string>
-    <string name="forums_ai_prompt_score">Pokyn pre hodnotenie</string>
-    <string name="forums_ai_post_prompt_label">Pokyn pre značky príspevkov</string>
-    <string name="forums_ai_comment_prompt_label">Pokyn pre značky komentárov</string>
-    <string name="forums_settings_fingerprint">Odtlačok: %1$s</string>
-    <string name="forums_settings_clear_notifications">Vymazať oznámenia</string>
     <string name="forums_moderation_queue_empty">Nič nečaká</string>
     <string name="forums_moderation_report_details">Podrobnosti: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Vyriešil %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Odpovedáte používateľovi %1$s</string>
     <string name="forums_comment_clear_reply">Zrušiť odpoveď</string>
     <string name="forums_settings_title">Nastavenia %1$s</string>
-    <string name="forums_settings_rename_label">Názov fóra</string>
-    <string name="forums_settings_danger_zone">Nebezpečná zóna</string>
     <string name="forums_settings_delete_message">Týmto sa natrvalo odstráni fórum a všetky jeho príspevky. Túto akciu nie je možné vrátiť späť.</string>
 
-    <string name="forums_tag_interest_up">Zvýšiť záujem</string>
-    <string name="forums_tag_interest_down">Znížiť záujem</string>
-    <string name="forums_tag_interest_remove">Odstrániť záujem</string>
     <string name="forums_access_tab_users">Používatelia</string>
     <string name="forums_access_tab_groups">Skupiny</string>
-    <string name="forums_access_tab_manual">Manuálne</string>
     <string name="forums_access_search_users">Hľadať používateľov</string>
     <string name="forums_access_no_groups">Nie sú dostupné žiadne skupiny</string>
     <string name="forums_saved_title">Uložené</string>

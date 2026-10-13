@@ -121,7 +121,6 @@
     <string name="people_contacts_message">বার্তা পাঠান</string>
     <string name="people_contacts_no_people_found">কোনো ব্যক্তি পাওয়া যায়নি</string>
     <string name="people_contacts_try_adjusting">আপনার অনুসন্ধান সমন্বয় করার চেষ্টা করুন</string>
-    <string name="people_contact_section_address">ঠিকানা</string>
     <string name="people_contact_section_detail">বিবরণ</string>
     <string name="people_contact_name">নাম</string>
     <string name="people_contact_email">ইমেইল</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">পুনঃনামকরণ করুন</string>
     <string name="people_contacts_sort_name">নাম</string>
     <string name="people_contacts_sort_recent">সম্প্রতি যোগ করা হয়েছে</string>
-    <string name="people_contacts_thats_you">এটি আপনি</string>
     <string name="people_contacts_try_different_search">অন্য একটি অনুসন্ধান শব্দ চেষ্টা করুন</string>
     <string name="people_contacts_unfriend">বন্ধু সরান</string>
     <string name="people_add_contact_search_placeholder">অনুসন্ধান করতে টাইপ করুন…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">কোনো পরিচিতি পাওয়া যায়নি</string>
     <string name="people_contacts_add_to_start">যোগাযোগ শুরু করতে পরিচিতি যোগ করুন</string>
     <string name="people_contacts_actions">পরিচিতির কাজ</string>
-    <string name="people_contacts_friend">বন্ধু</string>
     <string name="people_contacts_invite">আমন্ত্রণ জানান</string>
     <string name="people_contacts_unfriend_confirm">%1$s আর আপনার বন্ধু থাকবেন না। পরিচিতিটি আপনার ঠিকানা বইয়ে থেকে যাবে।</string>
     <string name="people_contacts_delete">পরিচিতি মুছুন</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">পরিচিতি বদলে গেছে</string>
     <string name="people_add_contact_title">পরিচিতি যোগ করুন</string>
     <string name="people_add_contact_add">পরিচিতিতে যোগ করুন</string>
-    <string name="people_add_contact_in_contacts">পরিচিতিতে আছে</string>
     <string name="people_books_create">ঠিকানা বই তৈরি করুন</string>
     <string name="people_books_delete">ঠিকানা বই মুছুন</string>
     <plurals name="people_books_delete_confirm">

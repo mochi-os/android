@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chess_app_title">شطرنج</string>
-    <string name="chess_sidebar_header">شطرنج</string>
     <string name="chess_sidebar_active">فعال گیمز</string>
     <string name="chess_sidebar_completed">مکمل</string>
     <string name="chess_sidebar_new_game">نیا گیم</string>
-    <string name="chess_section_active">فعال گیمز</string>
-    <string name="chess_section_completed">مکمل</string>
-    <string name="chess_new_game">نیا گیم</string>
     <string name="chess_empty_title">ابھی تک کوئی گیمز نہیں</string>
     <string name="chess_new_title">نیا گیم</string>
     <string name="chess_new_pick_opponent">حریف منتخب کریں</string>
@@ -55,8 +51,6 @@
     <string name="chess_channel_name">شطرنج اطلاعات</string>
     <string name="chess_channel_description">چالوں، ڈرا کی پیش کشوں اور کھیل کے نتائج کے بارے میں اطلاعات۔</string>
     <string name="chess_open_sidebar">سائیڈبار کھولیں</string>
-    <string name="chess_empty_subtitle">دوست کے ساتھ شطرنج کھیلنے کے لیے اپنا پہلا کھیل شروع کریں۔</string>
-    <string name="chess_empty_start_button">اپنا پہلا کھیل شروع کریں</string>
     <string name="chess_detail_unavailable">کھیل دستیاب نہیں</string>
     <string name="chess_delete_title">گیم حذف کریں؟</string>
     <string name="chess_delete_message">یہ آپ کی فہرست سے کھیل کو ہٹا دیتا ہے۔</string>

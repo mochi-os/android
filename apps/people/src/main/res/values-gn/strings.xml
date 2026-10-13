@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Emondo ñe\'ẽmondo</string>
     <string name="people_contacts_no_people_found">Ndojejuhúi tapichakuéra</string>
     <string name="people_contacts_try_adjusting">Eha\'ã embohekopyahu ne jeheka</string>
-    <string name="people_contact_section_address">Dirección</string>
     <string name="people_contact_section_detail">Detallekuéra</string>
     <string name="people_contact_name">Téra</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Embohera jey</string>
     <string name="people_contacts_sort_name">Téra</string>
     <string name="people_contacts_sort_recent">Oñembojuaju ramoite</string>
-    <string name="people_contacts_thats_you">Ha\'éko nde</string>
     <string name="people_contacts_try_different_search">Eha\'ã ambue jeheka</string>
     <string name="people_contacts_unfriend">Embogue angirũ</string>
     <string name="people_add_contact_search_placeholder">Ehai reheka hag̃ua…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Ndojejuhúi contacto</string>
     <string name="people_contacts_add_to_start">Embojuaju contactokuéra reñepyrũ hag̃ua reñembojoaju</string>
     <string name="people_contacts_actions">Contacto rembiapo</string>
-    <string name="people_contacts_friend">Angirũ</string>
     <string name="people_contacts_invite">Ehenói</string>
     <string name="people_contacts_unfriend_confirm">%1$s ndaha\'éi véima ne angirũ. Contacto opytáta ne contactokuérape.</string>
     <string name="people_contacts_delete">Ehundi contacto</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Contacto oñemoambue</string>
     <string name="people_add_contact_title">Embojuaju contacto</string>
     <string name="people_add_contact_add">Embojuaju contactokuérape</string>
-    <string name="people_add_contact_in_contacts">Contactokuérape</string>
     <string name="people_books_create">Emoheñói ogarenda kuatia</string>
     <string name="people_books_delete">Ehundi ogarenda kuatia</string>
     <plurals name="people_books_delete_confirm">

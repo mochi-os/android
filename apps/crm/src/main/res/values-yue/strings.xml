@@ -32,7 +32,6 @@
     <string name="crm_settings_tab_people">用戶</string>
     <string name="crm_field_type_number">編號</string>
     <string name="crm_settings_tab_general">一般</string>
-    <string name="crm_field_save">儲存變更</string>
     <string name="crm_field_position_body">內容</string>
     <string name="crm_sort_field">排序方式</string>
     <string name="crm_settings_tab_access">存取權</string>
@@ -44,7 +43,6 @@
     <string name="crm_board_unset">[未設定]</string>
     <string name="crm_board_rename">重新命名</string>
     <string name="crm_move_current">目前</string>
-    <string name="crm_class_save_name">儲存名稱</string>
     <string name="crm_field_type_date">日期</string>
     <string name="crm_field_required">必須</string>
     <string name="crm_views_sort_by">排序方式</string>
@@ -56,7 +54,6 @@
     <string name="crm_design">設計</string>
     <string name="crm_export_failed">無法儲存匯出內容</string>
     <string name="crm_design_title">設計</string>
-    <string name="crm_sort_direction">方向</string>
     <string name="crm_views_direction">方向</string>
     <string name="crm_sort_direction_asc">升序</string>
     <string name="crm_views_direction_asc">升序</string>
@@ -87,7 +84,6 @@
     <string name="crm_list_no_matching">搵唔到符合嘅 CRM</string>
     <string name="crm_list_empty">暫時未有 CRM</string>
     <string name="crm_create_title">建立 CRM</string>
-    <string name="crm_create_template">範本</string>
     <string name="crm_find_title">尋找 CRM</string>
     <string name="crm_find_search_placeholder">搜尋 CRM 或貼上網址</string>
     <string name="crm_find_search_hint">搜尋想訂閱嘅 CRM</string>

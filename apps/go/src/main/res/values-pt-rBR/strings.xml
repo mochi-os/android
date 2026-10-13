@@ -30,7 +30,6 @@
     <string name="go_open_sidebar">Abrir barra lateral</string>
     <string name="go_sidebar_active">Jogos ativos</string>
     <string name="go_empty_active">Ainda sem partidas ativas.</string>
-    <string name="go_status_resigned">Abandonada</string>
     <string name="go_new_game_title">Nova partida de Go</string>
     <string name="go_new_game_no_friends">Você precisa adicionar um amigo antes de poder começar uma partida.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

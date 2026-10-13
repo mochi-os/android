@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">சதுரங்கம்</string>
-    <string name="chess_sidebar_header">சதுரங்கம்</string>
     <string name="chess_sidebar_active">செயலில் உள்ள விளையாட்டுகள்</string>
     <string name="chess_sidebar_completed">முடிந்தது</string>
     <string name="chess_sidebar_new_game">புதிய விளையாட்டு</string>
-    <string name="chess_section_active">செயலில் உள்ள விளையாட்டுகள்</string>
-    <string name="chess_section_completed">முடிந்தது</string>
-    <string name="chess_new_game">புதிய விளையாட்டு</string>
     <string name="chess_empty_title">விளையாட்டுகள் இன்னும் இல்லை</string>
     <string name="chess_new_title">புதிய விளையாட்டு</string>
     <string name="chess_new_pick_opponent">எதிராளியைத் தேர்ந்தெடுக்கவும்</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">சதுரங்க நகர்வுகள், டிரா சலுகைகள் மற்றும் ஆட்ட முடிவுகள் பற்றிய அறிவிப்புகள்.</string>
     <string name="chess_open_sidebar">பக்கப்பட்டியைத் திற</string>
-    <string name="chess_empty_subtitle">நண்பருடன் சதுரங்கம் விளையாட உங்கள் முதல் ஆட்டத்தைத் தொடங்குங்கள்.</string>
-    <string name="chess_empty_start_button">உங்கள் முதல் ஆட்டத்தைத் தொடங்குங்கள்</string>
     <string name="chess_detail_unavailable">ஆட்டம் கிடைக்கவில்லை</string>
     <string name="chess_delete_title">விளையாட்டை நீக்கவா?</string>
     <string name="chess_delete_message">இது ஆட்டத்தை உங்கள் பட்டியலிலிருந்து அகற்றும்.</string>

@@ -19,7 +19,6 @@
     <string name="crm_link">Link</string>
     <string name="crm_design">Disenyo</string>
     <string name="crm_export_failed">Hindi ma-save ang export</string>
-    <string name="crm_sort_direction">Direksyon</string>
     <string name="crm_sort_rank">Manwal</string>
     <string name="crm_sort_created">Nagawa</string>
     <string name="crm_sort_updated">Na-update</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Magdagdag ng class</string>
     <string name="crm_classes_create">Gumawa</string>
     <string name="crm_class_name">Pangalan</string>
-    <string name="crm_class_save_name">I-save ang pangalan</string>
     <string name="crm_class_title_field">Field ng pamagat</string>
     <string name="crm_class_fields">Mga field</string>
     <string name="crm_class_add_field">Magdagdag ng field</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Kinakailangan</string>
     <string name="crm_field_position_default">Default</string>
     <string name="crm_field_position_sidebar">Sidebar</string>
-    <string name="crm_field_save">I-save ang mga pagbabago</string>
     <string name="crm_field_options">Mga Opsyon</string>
     <string name="crm_field_add_option">Magdagdag ng option</string>
     <string name="crm_field_delete">I-delete ang field</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Maghanap ng CRM</string>
     <string name="crm_list_no_matching">Walang tumutugmang CRM</string>
     <string name="crm_list_empty">Wala pang CRM</string>
-    <string name="crm_create_template">Template</string>
     <string name="crm_find_search_placeholder">Maghanap ng CRM o i-paste ang URL</string>
     <string name="crm_find_search_hint">Maghanap ng CRM na sa-subscribe-an</string>
     <string name="crm_create_object_parent_none">(wala)</string>

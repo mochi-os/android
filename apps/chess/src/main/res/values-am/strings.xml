@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">ቼዝ</string>
-    <string name="chess_sidebar_header">ቼዝ</string>
     <string name="chess_sidebar_active">ንቁ ጨዋታዎች</string>
     <string name="chess_sidebar_completed">ተጠናቅቋል</string>
     <string name="chess_sidebar_new_game">አዲስ ጨዋታ</string>
-    <string name="chess_section_active">ንቁ ጨዋታዎች</string>
-    <string name="chess_section_completed">ተጠናቅቋል</string>
-    <string name="chess_new_game">አዲስ ጨዋታ</string>
     <string name="chess_empty_title">እስካሁን ጨዋታዎች የሉም</string>
     <string name="chess_new_title">አዲስ ጨዋታ</string>
     <string name="chess_new_pick_opponent">ተቀናቃኝ ምረጥ</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">ስለ ቼዝ እርምጃዎች፣ የእኩልነት ጥያቄዎች እና የጨዋታ ውጤቶች ማሳወቂያዎች።</string>
     <string name="chess_open_sidebar">የጎን አሞሌ ክፈት</string>
-    <string name="chess_empty_subtitle">ከጓደኛ ጋር ቼዝ ለመጫወት የመጀመሪያ ጨዋታዎን ይጀምሩ።</string>
-    <string name="chess_empty_start_button">የመጀመሪያ ጨዋታዎን ይጀምሩ</string>
     <string name="chess_detail_unavailable">ጨዋታ አይገኝም</string>
     <string name="chess_delete_title">ጨዋታ ይሰረዝ?</string>
     <string name="chess_delete_message">ይህ ጨዋታውን ከዝርዝርዎ ያስወግዳል።</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Nhắn tin</string>
     <string name="people_contacts_no_people_found">Không tìm thấy người nào</string>
     <string name="people_contacts_try_adjusting">Hãy thử điều chỉnh tìm kiếm</string>
-    <string name="people_contact_section_address">Địa chỉ</string>
     <string name="people_contact_section_detail">Chi tiết</string>
     <string name="people_contact_name">Tên</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Đổi tên</string>
     <string name="people_contacts_sort_name">Tên</string>
     <string name="people_contacts_sort_recent">Mới thêm gần đây</string>
-    <string name="people_contacts_thats_you">Đó là bạn</string>
     <string name="people_contacts_try_different_search">Thử cụm từ tìm kiếm khác</string>
     <string name="people_contacts_unfriend">Xóa bạn bè</string>
     <string name="people_add_contact_search_placeholder">Nhập để tìm kiếm…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Không tìm thấy liên hệ nào</string>
     <string name="people_contacts_add_to_start">Thêm liên hệ để bắt đầu kết nối</string>
     <string name="people_contacts_actions">Thao tác liên hệ</string>
-    <string name="people_contacts_friend">Bạn bè</string>
     <string name="people_contacts_invite">Mời</string>
     <string name="people_contacts_unfriend_confirm">%1$s sẽ không còn là bạn của bạn nữa. Liên hệ vẫn ở trong sổ địa chỉ của bạn.</string>
     <string name="people_contacts_delete">Xóa liên hệ</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Liên hệ đã thay đổi</string>
     <string name="people_add_contact_title">Thêm liên hệ</string>
     <string name="people_add_contact_add">Thêm vào danh bạ</string>
-    <string name="people_add_contact_in_contacts">Có trong danh bạ</string>
     <string name="people_books_create">Tạo sổ địa chỉ</string>
     <string name="people_books_delete">Xóa sổ địa chỉ</string>
     <plurals name="people_books_delete_confirm">

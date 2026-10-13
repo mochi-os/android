@@ -50,7 +50,6 @@
     <string name="go_resign_title">Desistir do jogo?</string>
     <string name="go_sidebar_completed">Concluído</string>
     <string name="go_sidebar_new_game">Novo jogo</string>
-    <string name="go_status_draw">Empate</string>
     <string name="go_status_draw_text">Empate</string>
     <string name="go_status_game_over">Fim do jogo</string>
     <string name="go_status_opponent_move">Jogada de %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Abrir barra lateral</string>
     <string name="go_sidebar_active">Jogos ativos</string>
     <string name="go_empty_active">Ainda sem partidas ativas.</string>
-    <string name="go_status_resigned">Abandonada</string>
     <string name="go_new_game_title">Nova partida de Go</string>
     <string name="go_new_game_no_friends">Precisas de adicionar um amigo antes de poderes começar uma partida.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

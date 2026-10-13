@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Cuir teachdaireachd</string>
     <string name="people_contacts_no_people_found">Cha deach daoine a lorg</string>
     <string name="people_contacts_try_adjusting">Feuch ri an lorg agad atharrachadh</string>
-    <string name="people_contact_section_address">Seòladh</string>
     <string name="people_contact_section_detail">Mion-fhiosrachadh</string>
     <string name="people_contact_name">Ainm</string>
     <string name="people_contact_email">Post-d</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Cuir ainm ùr air</string>
     <string name="people_contacts_sort_name">Ainm</string>
     <string name="people_contacts_sort_recent">Air a chur ris o chionn ghoirid</string>
-    <string name="people_contacts_thats_you">\'S e sin thusa</string>
     <string name="people_contacts_try_different_search">Feuch teirm-luirg eadar-dhealaichte</string>
     <string name="people_contacts_unfriend">Thoir an caraid air falbh</string>
     <string name="people_add_contact_search_placeholder">Sgrìobh airson lorg…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Cha deach neach-aithne a lorg</string>
     <string name="people_contacts_add_to_start">Cuir luchd-aithne ris gus tòiseachadh</string>
     <string name="people_contacts_actions">Gnìomhan an neach-aithne</string>
-    <string name="people_contacts_friend">Caraid</string>
     <string name="people_contacts_invite">Thoir cuireadh</string>
     <string name="people_contacts_unfriend_confirm">Cha bhi %1$s na charaid dhut tuilleadh. Fanaidh an neach-aithne san leabhar sheòlaidhean agad.</string>
     <string name="people_contacts_delete">Sguab às an neach-aithne</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Dh\'atharraich an neach-aithne</string>
     <string name="people_add_contact_title">Cuir neach-aithne ris</string>
     <string name="people_add_contact_add">Cuir ris an luchd-aithne</string>
-    <string name="people_add_contact_in_contacts">San luchd-aithne</string>
     <string name="people_books_create">Cruthaich leabhar sheòlaidhean</string>
     <string name="people_books_delete">Sguab às an leabhar sheòlaidhean</string>
     <plurals name="people_books_delete_confirm">

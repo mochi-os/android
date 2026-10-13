@@ -21,7 +21,6 @@
     <string name="crm_create_import_backup">Import from backup (optional)</string>
     <string name="crm_create_upload_json">Upload .zip or .json file</string>
     <string name="crm_create_description">Description</string>
-    <string name="crm_create_template">Template</string>
     <string name="crm_create_template_none">None</string>
     <string name="crm_create_action">Create</string>
 
@@ -59,7 +58,6 @@
     <string name="crm_filter_all">All</string>
     <string name="crm_filter_other">Other</string>
     <string name="crm_sort_field">Sort by</string>
-    <string name="crm_sort_direction">Direction</string>
     <string name="crm_sort_direction_asc">Ascending</string>
     <string name="crm_sort_direction_desc">Descending</string>
     <string name="crm_sort_rank">Manual</string>
@@ -257,7 +255,6 @@
     <string name="crm_classes_create">Create</string>
     <string name="crm_class_label">Class: %1$s</string>
     <string name="crm_class_name">Name</string>
-    <string name="crm_class_save_name">Save name</string>
     <string name="crm_class_title_field">Title field</string>
     <string name="crm_class_title_field_description">Which field to use as the display title for objects of this class.</string>
     <string name="crm_class_title_field_default">Default (readable)</string>
@@ -299,7 +296,6 @@
     <string name="crm_field_max_length">Max length</string>
     <string name="crm_field_pattern">Pattern (regex)</string>
     <string name="crm_field_rows">Rows (textarea height)</string>
-    <string name="crm_field_save">Save changes</string>
     <string name="crm_field_options">Options</string>
     <string name="crm_field_add_option">Add option</string>
     <string name="crm_field_no_options">No options defined</string>

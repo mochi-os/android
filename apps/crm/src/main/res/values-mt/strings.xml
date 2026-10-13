@@ -19,7 +19,6 @@
     <string name="crm_link">Ħolqa</string>
     <string name="crm_design">Disinn</string>
     <string name="crm_export_failed">L-esportazzjoni ma setgħetx tiġi salvata</string>
-    <string name="crm_sort_direction">Direzzjoni</string>
     <string name="crm_sort_rank">Manwali</string>
     <string name="crm_sort_created">Maħluq</string>
     <string name="crm_sort_updated">Aġġornat</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Żid klassi</string>
     <string name="crm_classes_create">Oħloq</string>
     <string name="crm_class_name">Isem</string>
-    <string name="crm_class_save_name">Issejvja l-isem</string>
     <string name="crm_class_title_field">Kamp tat-titlu</string>
     <string name="crm_class_fields">Kampijiet</string>
     <string name="crm_class_add_field">Żid kamp</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Meħtieġ</string>
     <string name="crm_field_position_default">Prestabbilit</string>
     <string name="crm_field_position_sidebar">Barra tal-ġenb</string>
-    <string name="crm_field_save">Issejvja l-bidliet</string>
     <string name="crm_field_options">Għażliet</string>
     <string name="crm_field_add_option">Żid għażla</string>
     <string name="crm_field_delete">Ħassar kamp</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Fittex CRM</string>
     <string name="crm_list_no_matching">L-ebda CRM ma jaqbel</string>
     <string name="crm_list_empty">L-ebda CRM s\'issa</string>
-    <string name="crm_create_template">Mudell</string>
     <string name="crm_find_search_placeholder">Fittex CRM jew waħħal URL</string>
     <string name="crm_find_search_hint">Fittex CRM biex tabbona miegħu</string>
     <string name="crm_create_object_parent_none">(xejn)</string>

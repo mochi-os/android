@@ -50,7 +50,6 @@
     <string name="go_resign_title">Poddać grę?</string>
     <string name="go_sidebar_completed">Zakończone</string>
     <string name="go_sidebar_new_game">Nowa gra</string>
-    <string name="go_status_draw">Remis</string>
     <string name="go_status_draw_text">Remis</string>
     <string name="go_status_game_over">Koniec gry</string>
     <string name="go_status_opponent_move">Ruch gracza %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Otwórz panel boczny</string>
     <string name="go_sidebar_active">Aktywne gry</string>
     <string name="go_empty_active">Brak aktywnych partii.</string>
-    <string name="go_status_resigned">Poddana</string>
     <string name="go_new_game_title">Nowa partia Go</string>
     <string name="go_new_game_no_friends">Musisz dodać znajomego, zanim rozpoczniesz partię.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

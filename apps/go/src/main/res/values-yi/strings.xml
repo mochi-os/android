@@ -50,7 +50,6 @@
     <string name="go_resign_title">רעזיגנירן שפּיל?</string>
     <string name="go_sidebar_completed">פֿאַרענדיקט</string>
     <string name="go_sidebar_new_game">נײַ שפּיל</string>
-    <string name="go_status_draw">תּיקו</string>
     <string name="go_status_draw_text">תּיקו</string>
     <string name="go_status_game_over">שפּיל פֿאַרענדיקט</string>
     <string name="go_status_opponent_move">%1$s׳ס צוג</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">עפֿן זייַטל</string>
     <string name="go_sidebar_active">אַקטיווע שפּילן</string>
     <string name="go_empty_active">נאָך קיין אַקטיווע שפּילן.</string>
-    <string name="go_status_resigned">רעזיגנירט</string>
     <string name="go_new_game_title">נײַע Go־שפּיל</string>
     <string name="go_new_game_no_friends">איר דאַרפֿט צולייגן אַ פֿרײַנד איידער איר קענט אָנהייבן אַ שפּיל.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

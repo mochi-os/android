@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Non afichaj</string>
-    <string name="forums_auth_verification_failed">Verifikasyon echwe</string>
     <string name="forums_list_title">Fowòm</string>
     <string name="forums_list_find">Jwenn fowòm</string>
     <string name="forums_list_unsubscribe">Dezabòne</string>
     <string name="forums_list_unsubscribe_title">Dezabòne</string>
     <string name="forums_create_title">Kreye fowòm</string>
     <string name="forums_create_name">Non fowòm</string>
-    <string name="forums_create_privacy">Konfidansyalite</string>
-    <string name="forums_create_private">Prive</string>
-    <string name="forums_create_public">Piblik</string>
     <string name="forums_create_action">Kreye fowòm</string>
     <string name="forums_find_title">Jwenn fowòm</string>
     <string name="forums_find_recommended">Rekòmande</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Pibliye</string>
     <string name="forums_post_edit">Modifye piblikasyon</string>
     <string name="forums_post_edit_title">Modifye piblikasyon</string>
-    <string name="forums_post_edit_title_field">Tit</string>
-    <string name="forums_post_save">Sove</string>
     <string name="forums_post_delete">Efase piblikasyon</string>
     <string name="forums_post_delete_title">Efase piblikasyon</string>
     <string name="forums_post_locked">Vere</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Manm</string>
     <string name="forums_tab_banner">Banyè</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Itilizatè oswa gwoup</string>
-    <string name="forums_access_level_view">Wè</string>
-    <string name="forums_access_level_vote">Vote</string>
-    <string name="forums_access_level_comment">Kòmante</string>
-    <string name="forums_access_level_post">Pibliye</string>
-    <string name="forums_access_level_none">Okenn</string>
     <string name="forums_members_empty">Pa gen manm</string>
     <string name="forums_banner_dismiss">Rejte banyè</string>
     <string name="forums_ai_mode_tag">Tag</string>
     <string name="forums_ai_account_default">Kont defo</string>
-    <string name="forums_ai_prompt_reset">Reset nan default</string>
     <string name="forums_settings_unsubscribe">Dezabòne</string>
     <string name="forums_moderation_title">Moderasyon</string>
     <string name="forums_moderation_tab_queue">File datant</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Andeyò sijè a</string>
     <string name="forums_report_reason_other">Lòt</string>
     <string name="forums_post_default_author">Itilizatè</string>
-    <string name="forums_comments">Kòmantè</string>
     <string name="forums_no_comments">Poko gen kòmantè</string>
-    <string name="forums_comment_save">Sove</string>
     <string name="forums_comment_edit">Modifye kòmantè</string>
     <string name="forums_comment_edit_title">Modifye kòmantè</string>
-    <string name="forums_comment_edit_attach">Tache fichye</string>
     <string name="forums_comment_delete">Efase kòmantè</string>
     <string name="forums_comment_delete_title">Efase kòmantè</string>
     <string name="forums_comment_reply">Reponn</string>
-    <string name="forums_settings_rename">Rebatize</string>
-    <string name="forums_settings_save">Sove</string>
     <string name="forums_settings_delete">Efase fowòm</string>
     <string name="forums_settings_delete_title">Efase fowòm</string>
     <string name="forums_forum_not_found">Fowòm pa jwenn</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Voye</string>
     <string name="forums_post_body_field">Kontni</string>
-    <string name="forums_post_edit_body_field">Kontni</string>
     <string name="forums_comment_edit_body_field">Kontni</string>
-    <string name="forums_auth_login_failed">Koneksyon echwe</string>
-    <string name="forums_auth_create_identity_failed">Kreyasyon idantite echwe</string>
-    <string name="forums_auth_mfa_unsupported">MFA poko sipòte nan aplikasyon mobil la</string>
-    <string name="forums_auth_enter_code_sent">Antre kòd ki voye nan %1$s la</string>
-    <string name="forums_auth_create_identity">Kreye idantite ou</string>
-    <string name="forums_tag_clear">Netwaye filt la</string>
-    <string name="forums_post_tag_add">Ajoute yon tag</string>
     <string name="forums_write_comment">Ekri yon kòmantè…</string>
 
     <string name="notification_channel_forums">Notifikasyon fowòm</string>
-    <string name="forums_auth_brand">Mochi Fowòm</string>
     <string name="forums_list_empty">Poko gen fowòm</string>
     <string name="forums_list_unsubscribe_message">Èske ou sèten ou vle dezabòne nan fowòm sa a?</string>
     <string name="forums_find_search_placeholder">Chèche fowòm oswa kole URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Vòt kont</string>
     <string name="forums_post_quote">Site nan repons</string>
     <string name="forums_comment_quote">Site nan repons</string>
-    <string name="forums_post_tag_remove">Retire etikèt</string>
     <string name="forums_access_add">Ajoute règ aksè</string>
     <string name="forums_access_empty">Poko gen règ — parametraj defo aplike</string>
-    <string name="forums_access_target_hint">ID antite, @gwoup, * (tout moun), oswa + (manm)</string>
-    <string name="forums_access_level">Nivo</string>
-    <string name="forums_access_level_moderate">Modere</string>
     <string name="forums_members_search">Filtre manm</string>
     <string name="forums_banner_description">Markdown ki parèt anwo fowòm nan.</string>
     <string name="forums_banner_placeholder">Antre tèks banyè a (markdown sipòte)…</string>
-    <string name="forums_ai_mode_label">Mòd: %1$s</string>
-    <string name="forums_ai_mode_heading">Mòd AI</string>
     <string name="forums_ai_mode_off">Dezaktive</string>
-    <string name="forums_ai_account">Kont AI</string>
-    <string name="forums_ai_prompt_tag">Pwòmpt pou etikèt</string>
-    <string name="forums_ai_prompt_score">Pwòmpt pou nòt</string>
-    <string name="forums_ai_post_prompt_label">Pwòmpt pou etikèt piblikasyon</string>
-    <string name="forums_ai_comment_prompt_label">Pwòmpt pou etikèt kòmantè</string>
-    <string name="forums_settings_fingerprint">Anprent: %1$s</string>
-    <string name="forums_settings_clear_notifications">Efase notifikasyon</string>
     <string name="forums_moderation_queue_empty">Pa gen anyen annatant</string>
     <string name="forums_moderation_report_details">Detay: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Rezoud pa %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Reponn %1$s</string>
     <string name="forums_comment_clear_reply">Efase repons</string>
     <string name="forums_settings_title">Paramèt %1$s</string>
-    <string name="forums_settings_rename_label">Non fowòm</string>
-    <string name="forums_settings_danger_zone">Zòn danje</string>
     <string name="forums_settings_delete_message">Sa pral efase fowòm nan ak tout piblikasyon li yo pou tout tan. Sa pa ka defèt.</string>
 
-    <string name="forums_tag_interest_up">Ogmante enterè</string>
-    <string name="forums_tag_interest_down">Diminye enterè</string>
-    <string name="forums_tag_interest_remove">Retire enterè</string>
     <string name="forums_access_tab_users">Itilizatè</string>
     <string name="forums_access_tab_groups">Gwoup</string>
-    <string name="forums_access_tab_manual">Manyèl</string>
     <string name="forums_access_search_users">Chèche itilizatè</string>
     <string name="forums_access_no_groups">Pa gen gwoup disponib</string>
     <string name="forums_saved_title">Sove</string>

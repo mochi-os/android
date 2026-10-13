@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">പ്രദർശന നാമം</string>
-    <string name="forums_auth_verification_failed">സ്ഥിരീകരണം പരാജയപ്പെട്ടു</string>
     <string name="forums_list_title">ഫോറങ്ങൾ</string>
     <string name="forums_list_find">ഫോറങ്ങൾ കണ്ടെത്തുക</string>
     <string name="forums_list_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_list_unsubscribe_title">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_create_title">ഫോറം സൃഷ്ടിക്കുക</string>
     <string name="forums_create_name">ഫോറത്തിന്റെ പേര്</string>
-    <string name="forums_create_privacy">സ്വകാര്യത</string>
-    <string name="forums_create_private">സ്വകാര്യം</string>
-    <string name="forums_create_public">പൊതു</string>
     <string name="forums_create_action">ഫോറം സൃഷ്ടിക്കുക</string>
     <string name="forums_find_title">ഫോറങ്ങൾ കണ്ടെത്തുക</string>
     <string name="forums_find_recommended">ശുപാർശ ചെയ്തത്</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">പോസ്റ്റ് ചെയ്യുക</string>
     <string name="forums_post_edit">പോസ്റ്റ് എഡിറ്റ് ചെയ്യുക</string>
     <string name="forums_post_edit_title">പോസ്റ്റ് എഡിറ്റ് ചെയ്യുക</string>
-    <string name="forums_post_edit_title_field">തലക്കെട്ട്</string>
-    <string name="forums_post_save">സേവ് ചെയ്യുക</string>
     <string name="forums_post_delete">പോസ്റ്റ് ഇല്ലാതാക്കുക</string>
     <string name="forums_post_delete_title">പോസ്റ്റ് ഇല്ലാതാക്കുക</string>
     <string name="forums_post_locked">ലോക്ക് ചെയ്തു</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">അംഗങ്ങൾ</string>
     <string name="forums_tab_banner">ബാനർ</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">ഉപയോക്താവ് അല്ലെങ്കിൽ ഗ്രൂപ്പ്</string>
-    <string name="forums_access_level_view">കാണുക</string>
-    <string name="forums_access_level_vote">വോട്ട് ചെയ്യുക</string>
-    <string name="forums_access_level_comment">അഭിപ്രായമിടുക</string>
-    <string name="forums_access_level_post">പോസ്റ്റ് ചെയ്യുക</string>
-    <string name="forums_access_level_none">ഒന്നുമില്ല</string>
     <string name="forums_members_empty">അംഗങ്ങളാരുമില്ല</string>
     <string name="forums_banner_dismiss">ബാനർ ഒഴിവാക്കുക</string>
     <string name="forums_ai_mode_tag">ടാഗ് ചെയ്യുക</string>
     <string name="forums_ai_account_default">ഡിഫോൾട്ട് അക്കൗണ്ട്</string>
-    <string name="forums_ai_prompt_reset">ഡിഫോൾട്ടിലേക്ക് പുനഃസജ്ജമാക്കുക</string>
     <string name="forums_settings_unsubscribe">അൺസബ്സ്ക്രൈബ് ചെയ്യുക</string>
     <string name="forums_moderation_title">മോഡറേഷൻ</string>
     <string name="forums_moderation_tab_queue">ക്യൂ</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">വിഷയത്തിന് പുറത്ത്</string>
     <string name="forums_report_reason_other">മറ്റുള്ളവ</string>
     <string name="forums_post_default_author">ഉപയോക്താവ്</string>
-    <string name="forums_comments">അഭിപ്രായങ്ങൾ</string>
     <string name="forums_no_comments">അഭിപ്രായങ്ങളൊന്നും ഇതുവരെ ഇല്ല</string>
-    <string name="forums_comment_save">സേവ് ചെയ്യുക</string>
     <string name="forums_comment_edit">അഭിപ്രായം എഡിറ്റ് ചെയ്യുക</string>
     <string name="forums_comment_edit_title">അഭിപ്രായം എഡിറ്റ് ചെയ്യുക</string>
-    <string name="forums_comment_edit_attach">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="forums_comment_delete">അഭിപ്രായം ഇല്ലാതാക്കുക</string>
     <string name="forums_comment_delete_title">അഭിപ്രായം ഇല്ലാതാക്കുക</string>
     <string name="forums_comment_reply">മറുപടി</string>
-    <string name="forums_settings_rename">പുനർനാമകരണം ചെയ്യുക</string>
-    <string name="forums_settings_save">സേവ് ചെയ്യുക</string>
     <string name="forums_settings_delete">ഫോറം ഇല്ലാതാക്കുക</string>
     <string name="forums_settings_delete_title">ഫോറം ഇല്ലാതാക്കുക</string>
     <string name="forums_forum_not_found">ഫോറം കണ്ടെത്തിയില്ല</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">അയയ്ക്കുക</string>
     <string name="forums_post_body_field">ഉള്ളടക്കം</string>
-    <string name="forums_post_edit_body_field">ഉള്ളടക്കം</string>
     <string name="forums_comment_edit_body_field">ഉള്ളടക്കം</string>
-    <string name="forums_tag_clear">ഫിൽട്ടർ മായ്ക്കുക</string>
-    <string name="forums_post_tag_add">ടാഗ് ചേർക്കുക</string>
     <string name="forums_write_comment">ഒരു അഭിപ്രായം എഴുതുക…</string>
-    <string name="forums_auth_login_failed">ലോഗിൻ പരാജയപ്പെട്ടു</string>
 
     <string name="notification_channel_forums">ഫോറം അറിയിപ്പുകൾ</string>
-    <string name="forums_auth_brand">Mochi ഫോറങ്ങൾ</string>
-    <string name="forums_auth_create_identity_failed">ഐഡന്റിറ്റി സൃഷ്ടിക്കാൻ പരാജയപ്പെട്ടു</string>
-    <string name="forums_auth_mfa_unsupported">മൊബൈൽ ആപ്പിൽ MFA ഇതുവരെ പിന്തുണയ്ക്കുന്നില്ല</string>
-    <string name="forums_auth_enter_code_sent">%1$s എന്നതിലേക്ക് അയച്ച കോഡ് നൽകുക</string>
-    <string name="forums_auth_create_identity">നിങ്ങളുടെ ഐഡന്റിറ്റി സൃഷ്ടിക്കുക</string>
     <string name="forums_list_empty">ഇതുവരെ ഫോറങ്ങളൊന്നുമില്ല</string>
     <string name="forums_list_unsubscribe_message">ഈ ഫോറത്തിൽ നിന്ന് അൺസബ്സ്ക്രൈബ് ചെയ്യണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
     <string name="forums_find_search_placeholder">ഫോറങ്ങൾ തിരയുക അല്ലെങ്കിൽ URL ഒട്ടിക്കുക</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">ഡൗൺവോട്ട്</string>
     <string name="forums_post_quote">മറുപടിയിൽ ഉദ്ധരിക്കുക</string>
     <string name="forums_comment_quote">മറുപടിയിൽ ഉദ്ധരിക്കുക</string>
-    <string name="forums_post_tag_remove">ടാഗ് നീക്കം ചെയ്യുക</string>
     <string name="forums_access_add">ആക്സസ് നിയമം ചേർക്കുക</string>
     <string name="forums_access_empty">ഇതുവരെ നിയമങ്ങളൊന്നുമില്ല — സ്ഥിരസ്ഥിതികൾ ബാധകമാണ്</string>
-    <string name="forums_access_target_hint">എന്റിറ്റി ഐഡി, @ഗ്രൂപ്പ്, * (എല്ലാവർക്കും), അല്ലെങ്കിൽ + (അംഗങ്ങൾ)</string>
-    <string name="forums_access_level">നില</string>
-    <string name="forums_access_level_moderate">മോഡറേറ്റ് ചെയ്യുക</string>
     <string name="forums_members_search">അംഗങ്ങളെ ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="forums_banner_description">ഫോറത്തിന്റെ മുകളിൽ കാണിക്കുന്ന മാർക്ക്ഡൗൺ.</string>
     <string name="forums_banner_placeholder">ബാനർ ടെക്സ്റ്റ് നൽകുക (മാർക്ക്ഡൗൺ പിന്തുണയ്ക്കുന്നു)…</string>
-    <string name="forums_ai_mode_label">മോഡ്: %1$s</string>
-    <string name="forums_ai_mode_heading">AI മോഡ്</string>
     <string name="forums_ai_mode_off">പ്രവർത്തനരഹിതം</string>
-    <string name="forums_ai_account">AI അക്കൗണ്ട്</string>
-    <string name="forums_ai_prompt_tag">ടാഗിംഗ് പ്രോംപ്റ്റ്</string>
-    <string name="forums_ai_prompt_score">സ്കോറിംഗ് പ്രോംപ്റ്റ്</string>
-    <string name="forums_ai_post_prompt_label">പോസ്റ്റ് ടാഗുകൾക്കുള്ള പ്രോംപ്റ്റ്</string>
-    <string name="forums_ai_comment_prompt_label">കമന്റ് ടാഗുകൾക്കുള്ള പ്രോംപ്റ്റ്</string>
-    <string name="forums_settings_fingerprint">ഫിംഗർപ്രിന്റ്: %1$s</string>
-    <string name="forums_settings_clear_notifications">അറിയിപ്പുകൾ മായ്ക്കുക</string>
     <string name="forums_moderation_queue_empty">ഒന്നും തീർച്ചപ്പെടുത്താനില്ല</string>
     <string name="forums_moderation_report_details">വിശദാംശങ്ങൾ: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s പരിഹരിച്ചു — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s എന്നയാൾക്ക് മറുപടി നൽകുന്നു</string>
     <string name="forums_comment_clear_reply">മറുപടി മായ്ക്കുക</string>
     <string name="forums_settings_title">%1$s ക്രമീകരണങ്ങൾ</string>
-    <string name="forums_settings_rename_label">ഫോറത്തിന്റെ പേര്</string>
-    <string name="forums_settings_danger_zone">അപകട മേഖല</string>
     <string name="forums_settings_delete_message">ഇത് ഫോറവും അതിന്റെ എല്ലാ പോസ്റ്റുകളും ശാശ്വതമായി ഇല്ലാതാക്കും. ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
 
-    <string name="forums_tag_interest_up">താൽപ്പര്യം വർദ്ധിപ്പിക്കുക</string>
-    <string name="forums_tag_interest_down">താൽപ്പര്യം കുറയ്ക്കുക</string>
-    <string name="forums_tag_interest_remove">താൽപ്പര്യം നീക്കം ചെയ്യുക</string>
     <string name="forums_access_tab_users">ഉപയോക്താക്കൾ</string>
     <string name="forums_access_tab_groups">ഗ്രൂപ്പുകൾ</string>
-    <string name="forums_access_tab_manual">മാനുവൽ</string>
     <string name="forums_access_search_users">ഉപയോക്താക്കളെ തിരയുക</string>
     <string name="forums_access_no_groups">ഗ്രൂപ്പുകളൊന്നും ലഭ്യമല്ല</string>
     <string name="forums_saved_title">സേവ് ചെയ്തവ</string>
