@@ -50,7 +50,6 @@
     <string name="go_resign_title">Ge upp partiet?</string>
     <string name="go_sidebar_completed">Slutförd</string>
     <string name="go_sidebar_new_game">Nytt spel</string>
-    <string name="go_status_draw">Remi</string>
     <string name="go_status_draw_text">Remi</string>
     <string name="go_status_game_over">Spelet är slut</string>
     <string name="go_status_opponent_move">%1$ss drag</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Öppna sidofält</string>
     <string name="go_sidebar_active">Aktiva partier</string>
     <string name="go_empty_active">Inga aktiva partier än.</string>
-    <string name="go_status_resigned">Lagd</string>
     <string name="go_new_game_title">Nytt Go-parti</string>
     <string name="go_new_game_no_friends">Du måste lägga till en vän innan du kan starta ett parti.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

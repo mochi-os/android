@@ -121,7 +121,6 @@
     <string name="people_contacts_message">پەیام بنێرە</string>
     <string name="people_contacts_no_people_found">هیچ کەسێک نەدۆزرایەوە</string>
     <string name="people_contacts_try_adjusting">هەوڵبدە گەڕانەکەت ڕێکبخەیت</string>
-    <string name="people_contact_section_address">ناونیشان</string>
     <string name="people_contact_section_detail">وردەکارییەکان</string>
     <string name="people_contact_name">ناو</string>
     <string name="people_contact_email">ئیمەیڵ</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">ناوگۆڕکردن</string>
     <string name="people_contacts_sort_name">ناو</string>
     <string name="people_contacts_sort_recent">بەم دواییە زیادکراو</string>
-    <string name="people_contacts_thats_you">ئەوە تۆیت</string>
     <string name="people_contacts_try_different_search">وشەیەکی گەڕانی جیاواز هەوڵبدە</string>
     <string name="people_contacts_unfriend">لابردنی هاوڕێ</string>
     <string name="people_add_contact_search_placeholder">بنووسە بۆ گەڕان…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">هیچ پەیوەندییەک نەدۆزرایەوە</string>
     <string name="people_contacts_add_to_start">پەیوەندی زیاد بکە بۆ دەستپێکردنی پەیوەندیکردن</string>
     <string name="people_contacts_actions">کردارەکانی پەیوەندی</string>
-    <string name="people_contacts_friend">هاوڕێ</string>
     <string name="people_contacts_invite">بانگهێشتکردن</string>
     <string name="people_contacts_unfriend_confirm">%1$s چیتر هاوڕێت نابێت. پەیوەندییەکە لە دەفتەری ناونیشانەکانت دەمێنێتەوە.</string>
     <string name="people_contacts_delete">سڕینەوەی پەیوەندی</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">پەیوەندییەکە گۆڕا</string>
     <string name="people_add_contact_title">زیادکردنی پەیوەندی</string>
     <string name="people_add_contact_add">زیادکردن بۆ پەیوەندییەکان</string>
-    <string name="people_add_contact_in_contacts">لە پەیوەندییەکاندا</string>
     <string name="people_books_create">دروستکردنی دەفتەری ناونیشان</string>
     <string name="people_books_delete">سڕینەوەی دەفتەری ناونیشان</string>
     <plurals name="people_books_delete_confirm">

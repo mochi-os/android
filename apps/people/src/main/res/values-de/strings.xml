@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Nachricht senden</string>
     <string name="people_contacts_no_people_found">Keine Personen gefunden</string>
     <string name="people_contacts_try_adjusting">Passen Sie Ihre Suche an</string>
-    <string name="people_contact_section_address">Adresse</string>
     <string name="people_contact_section_detail">Details</string>
     <string name="people_contact_name">Name</string>
     <string name="people_contact_email">E-Mail</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Umbenennen</string>
     <string name="people_contacts_sort_name">Name</string>
     <string name="people_contacts_sort_recent">Kürzlich hinzugefügt</string>
-    <string name="people_contacts_thats_you">Das bist du</string>
     <string name="people_contacts_try_different_search">Probiere einen anderen Suchbegriff</string>
     <string name="people_contacts_unfriend">Freund entfernen</string>
     <string name="people_add_contact_search_placeholder">Zum Suchen tippen…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Keine Kontakte gefunden</string>
     <string name="people_contacts_add_to_start">Fügen Sie Kontakte hinzu, um loszulegen</string>
     <string name="people_contacts_actions">Kontaktaktionen</string>
-    <string name="people_contacts_friend">Freund</string>
     <string name="people_contacts_invite">Einladen</string>
     <string name="people_contacts_unfriend_confirm">%1$s ist dann nicht mehr Ihr Freund. Der Kontakt bleibt in Ihrem Adressbuch.</string>
     <string name="people_contacts_delete">Kontakt löschen</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakt geändert</string>
     <string name="people_add_contact_title">Kontakt hinzufügen</string>
     <string name="people_add_contact_add">Zu Kontakten hinzufügen</string>
-    <string name="people_add_contact_in_contacts">In Kontakten</string>
     <string name="people_books_create">Adressbuch erstellen</string>
     <string name="people_books_delete">Adressbuch löschen</string>
     <plurals name="people_books_delete_confirm">

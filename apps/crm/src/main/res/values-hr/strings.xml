@@ -19,7 +19,6 @@
     <string name="crm_link">Poveznica</string>
     <string name="crm_design">Dizajn</string>
     <string name="crm_export_failed">Izvoz nije moguće spremiti</string>
-    <string name="crm_sort_direction">Smjer</string>
     <string name="crm_sort_rank">Ručno</string>
     <string name="crm_sort_created">Stvoreno</string>
     <string name="crm_sort_updated">Ažurirano</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Dodaj klasu</string>
     <string name="crm_classes_create">Stvori</string>
     <string name="crm_class_name">Naziv</string>
-    <string name="crm_class_save_name">Spremi naziv</string>
     <string name="crm_class_title_field">Polje naslova</string>
     <string name="crm_class_fields">Polja</string>
     <string name="crm_class_add_field">Dodaj polje</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Obavezno</string>
     <string name="crm_field_position_default">Zadano</string>
     <string name="crm_field_position_sidebar">Bočna traka</string>
-    <string name="crm_field_save">Spremi promjene</string>
     <string name="crm_field_options">Opcije</string>
     <string name="crm_field_add_option">Dodaj opciju</string>
     <string name="crm_field_delete">Obriši polje</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Pretraži CRM</string>
     <string name="crm_list_no_matching">Nema odgovarajućeg CRM-a</string>
     <string name="crm_list_empty">Još nema CRM-a</string>
-    <string name="crm_create_template">Predložak</string>
     <string name="crm_find_search_placeholder">Pretraži CRM ili zalijepi URL</string>
     <string name="crm_find_search_hint">Pretraži CRM za pretplatu</string>
     <string name="crm_create_object_parent_none">(nema)</string>

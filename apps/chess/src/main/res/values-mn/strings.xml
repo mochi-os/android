@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Шатар</string>
-    <string name="chess_sidebar_header">Шатар</string>
     <string name="chess_sidebar_active">Идэвхтэй тоглоомууд</string>
     <string name="chess_sidebar_completed">Гүйцэтгэсэн</string>
     <string name="chess_sidebar_new_game">Шинэ тоглоом</string>
-    <string name="chess_section_active">Идэвхтэй тоглоомууд</string>
-    <string name="chess_section_completed">Гүйцэтгэсэн</string>
-    <string name="chess_new_game">Шинэ тоглоом</string>
     <string name="chess_empty_title">Тоглоом алга</string>
     <string name="chess_new_title">Шинэ тоглоом</string>
     <string name="chess_new_pick_opponent">Өрсөлдөгчөө сонгох</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Шатрын хөдөлгөөн, тэнцээ санал болгох, тоглолтын үр дүнгийн талаарх мэдэгдэл.</string>
     <string name="chess_open_sidebar">Хажуугийн самбарыг нээх</string>
-    <string name="chess_empty_subtitle">Найзтайгаа шатар тоглохын тулд анхны тоглолтоо эхлүүлээрэй.</string>
-    <string name="chess_empty_start_button">Анхны тоглолтоо эхлүүлээрэй</string>
     <string name="chess_detail_unavailable">Тоглолт боломжгүй</string>
     <string name="chess_delete_title">Тоглоомыг устгах уу?</string>
     <string name="chess_delete_message">Энэ нь тоглолтыг таны жагсаалтаас устгана.</string>

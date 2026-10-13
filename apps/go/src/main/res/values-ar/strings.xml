@@ -50,7 +50,6 @@
     <string name="go_resign_title">الاستسلام في اللعبة؟</string>
     <string name="go_sidebar_completed">مكتمل</string>
     <string name="go_sidebar_new_game">لعبة جديدة</string>
-    <string name="go_status_draw">تعادل</string>
     <string name="go_status_draw_text">تعادل</string>
     <string name="go_status_game_over">انتهت اللعبة</string>
     <string name="go_status_opponent_move">دور %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">فتح الشريط الجانبي</string>
     <string name="go_sidebar_active">الألعاب النشطة</string>
     <string name="go_empty_active">لا توجد مباريات نشطة بعد.</string>
-    <string name="go_status_resigned">تم الاستسلام</string>
     <string name="go_new_game_title">مباراة Go جديدة</string>
     <string name="go_new_game_no_friends">يجب إضافة صديق قبل بدء المباراة.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

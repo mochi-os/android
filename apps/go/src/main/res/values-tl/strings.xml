@@ -50,7 +50,6 @@
     <string name="go_resign_title">Sumuko sa laro?</string>
     <string name="go_sidebar_completed">Natapos</string>
     <string name="go_sidebar_new_game">Bagong laro</string>
-    <string name="go_status_draw">Tabla</string>
     <string name="go_status_draw_text">Tabla</string>
     <string name="go_status_game_over">Tapos na ang game</string>
     <string name="go_status_opponent_move">Galaw ni %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Buksan ang sidebar</string>
     <string name="go_sidebar_active">Mga aktibong laro</string>
     <string name="go_empty_active">Wala pang aktibong laro.</string>
-    <string name="go_status_resigned">Sumuko</string>
     <string name="go_new_game_title">Bagong laro ng Go</string>
     <string name="go_new_game_no_friends">Kailangan mong magdagdag ng kaibigan bago ka makapagsimula ng laro.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

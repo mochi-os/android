@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">ਸ਼ਤਰੰਜ</string>
-    <string name="chess_sidebar_header">ਸ਼ਤਰੰਜ</string>
     <string name="chess_sidebar_active">ਕਿਰਿਆਸ਼ੀਲ ਖੇਡਾਂ</string>
     <string name="chess_sidebar_completed">ਪੂਰਾ</string>
     <string name="chess_sidebar_new_game">ਨਵੀਂ ਗੇਮ</string>
-    <string name="chess_section_active">ਕਿਰਿਆਸ਼ੀਲ ਖੇਡਾਂ</string>
-    <string name="chess_section_completed">ਪੂਰਾ</string>
-    <string name="chess_new_game">ਨਵੀਂ ਗੇਮ</string>
     <string name="chess_empty_title">ਅਜੇ ਕੋਈ ਗੇਮ ਨਹੀਂ</string>
     <string name="chess_new_title">ਨਵੀਂ ਗੇਮ</string>
     <string name="chess_new_pick_opponent">ਵਿਰੋਧੀ ਚੁਣੋ</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">ਸ਼ਤਰੰਜ ਦੀਆਂ ਚਾਲਾਂ, ਡਰਾਅ ਪੇਸ਼ਕਸ਼ਾਂ ਅਤੇ ਖੇਡ ਦੇ ਨਤੀਜਿਆਂ ਬਾਰੇ ਸੂਚਨਾਵਾਂ।</string>
     <string name="chess_open_sidebar">ਸਾਈਡਬਾਰ ਖੋਲ੍ਹੋ</string>
-    <string name="chess_empty_subtitle">ਕਿਸੇ ਦੋਸਤ ਨਾਲ ਸ਼ਤਰੰਜ ਖੇਡਣ ਲਈ ਆਪਣੀ ਪਹਿਲੀ ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ।</string>
-    <string name="chess_empty_start_button">ਆਪਣੀ ਪਹਿਲੀ ਖੇਡ ਸ਼ੁਰੂ ਕਰੋ</string>
     <string name="chess_detail_unavailable">ਖੇਡ ਉਪਲਬਧ ਨਹੀਂ</string>
     <string name="chess_delete_title">ਗੇਮ ਮਿਟਾਈਏ?</string>
     <string name="chess_delete_message">ਇਹ ਖੇਡ ਨੂੰ ਤੁਹਾਡੀ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾ ਦਿੰਦਾ ਹੈ।</string>

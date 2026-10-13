@@ -50,7 +50,6 @@
     <string name="go_resign_title">Nyerah tina kaulinan?</string>
     <string name="go_sidebar_completed">Réngsé</string>
     <string name="go_sidebar_new_game">Game anyar</string>
-    <string name="go_status_draw">Seri</string>
     <string name="go_status_draw_text">Seri</string>
     <string name="go_status_game_over">Kaulinan réngsé</string>
     <string name="go_status_opponent_move">Lengkah %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Buka sidebar</string>
     <string name="go_sidebar_active">Kaulinan Aktif</string>
     <string name="go_empty_active">Can aya kaulinan aktif.</string>
-    <string name="go_status_resigned">Nyerah</string>
     <string name="go_new_game_title">Kaulinan Go anyar</string>
     <string name="go_new_game_no_friends">Anjeun kudu nambahan babaturan saméméh bisa ngamimitian kaulinan.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

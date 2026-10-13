@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Enviar mensaxe</string>
     <string name="people_contacts_no_people_found">Non se atoparon persoas</string>
     <string name="people_contacts_try_adjusting">Tenta axustar a túa busca</string>
-    <string name="people_contact_section_address">Enderezo</string>
     <string name="people_contact_section_detail">Detalles</string>
     <string name="people_contact_name">Nome</string>
     <string name="people_contact_email">Correo electrónico</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Renomear</string>
     <string name="people_contacts_sort_name">Nome</string>
     <string name="people_contacts_sort_recent">Engadido recentemente</string>
-    <string name="people_contacts_thats_you">Es ti</string>
     <string name="people_contacts_try_different_search">Tenta un termo de busca diferente</string>
     <string name="people_contacts_unfriend">Eliminar amigo</string>
     <string name="people_add_contact_search_placeholder">Escribe para buscar…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Non se atoparon contactos</string>
     <string name="people_contacts_add_to_start">Engade contactos para comezar a conectar</string>
     <string name="people_contacts_actions">Accións do contacto</string>
-    <string name="people_contacts_friend">Amigo</string>
     <string name="people_contacts_invite">Convidar</string>
     <string name="people_contacts_unfriend_confirm">%1$s deixará de ser o teu amigo. O contacto permanece na túa axenda de enderezos.</string>
     <string name="people_contacts_delete">Eliminar o contacto</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">O contacto cambiou</string>
     <string name="people_add_contact_title">Engadir contacto</string>
     <string name="people_add_contact_add">Engadir aos contactos</string>
-    <string name="people_add_contact_in_contacts">Nos contactos</string>
     <string name="people_books_create">Crear axenda de enderezos</string>
     <string name="people_books_delete">Eliminar axenda de enderezos</string>
     <plurals name="people_books_delete_confirm">

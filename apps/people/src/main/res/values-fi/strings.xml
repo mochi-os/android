@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Lähetä viesti</string>
     <string name="people_contacts_no_people_found">Henkilöitä ei löytynyt</string>
     <string name="people_contacts_try_adjusting">Kokeile muuttaa hakuasi</string>
-    <string name="people_contact_section_address">Osoite</string>
     <string name="people_contact_section_detail">Tiedot</string>
     <string name="people_contact_name">Nimi</string>
     <string name="people_contact_email">Sähköposti</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Nimeä uudelleen</string>
     <string name="people_contacts_sort_name">Nimi</string>
     <string name="people_contacts_sort_recent">Äskettäin lisätty</string>
-    <string name="people_contacts_thats_you">Se olet sinä</string>
     <string name="people_contacts_try_different_search">Kokeile toista hakusanaa</string>
     <string name="people_contacts_unfriend">Poista kaveri</string>
     <string name="people_add_contact_search_placeholder">Kirjoita hakeaksesi…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Yhteystietoja ei löytynyt</string>
     <string name="people_contacts_add_to_start">Lisää yhteystietoja päästäksesi alkuun</string>
     <string name="people_contacts_actions">Yhteystiedon toiminnot</string>
-    <string name="people_contacts_friend">Kaveri</string>
     <string name="people_contacts_invite">Kutsu</string>
     <string name="people_contacts_unfriend_confirm">%1$s ei ole enää kaverisi. Yhteystieto säilyy osoitekirjassasi.</string>
     <string name="people_contacts_delete">Poista yhteystieto</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Yhteystieto muuttui</string>
     <string name="people_add_contact_title">Lisää yhteystieto</string>
     <string name="people_add_contact_add">Lisää yhteystietoihin</string>
-    <string name="people_add_contact_in_contacts">Yhteystiedoissa</string>
     <string name="people_books_create">Luo osoitekirja</string>
     <string name="people_books_delete">Poista osoitekirja</string>
     <plurals name="people_books_delete_confirm">

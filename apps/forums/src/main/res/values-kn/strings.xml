@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">ಪ್ರದರ್ಶನ ಹೆಸರು</string>
-    <string name="forums_auth_verification_failed">ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ</string>
     <string name="forums_list_title">ಫೋರಂಗಳು</string>
     <string name="forums_list_find">ಫೋರಮ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="forums_list_unsubscribe">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="forums_list_unsubscribe_title">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="forums_create_title">ಫೋರಮ್ ರಚಿಸಿ</string>
     <string name="forums_create_name">ಫೋರಂ ಹೆಸರು</string>
-    <string name="forums_create_privacy">ಗೌಪ್ಯತೆ</string>
-    <string name="forums_create_private">ಖಾಸಗಿ</string>
-    <string name="forums_create_public">ಸಾರ್ವಜನಿಕ</string>
     <string name="forums_create_action">ಫೋರಮ್ ರಚಿಸಿ</string>
     <string name="forums_find_title">ಫೋರಮ್‌ಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="forums_find_recommended">ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">ಪೋಸ್ಟ್ ಮಾಡಿ</string>
     <string name="forums_post_edit">ಪೋಸ್ಟ್ ಸಂಪಾದಿಸಿ</string>
     <string name="forums_post_edit_title">ಪೋಸ್ಟ್ ಸಂಪಾದಿಸಿ</string>
-    <string name="forums_post_edit_title_field">ಶೀರ್ಷಿಕೆ</string>
-    <string name="forums_post_save">ಉಳಿಸಿ</string>
     <string name="forums_post_delete">ಪೋಸ್ಟ್ ಅಳಿಸಿ</string>
     <string name="forums_post_delete_title">ಪೋಸ್ಟ್ ಅಳಿಸಿ</string>
     <string name="forums_post_locked">ಲಾಕ್ ಮಾಡಲಾಗಿದೆ</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">ಸದಸ್ಯರು</string>
     <string name="forums_tab_banner">ಬ್ಯಾನರ್</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">ಬಳಕೆದಾರ ಅಥವಾ ಗುಂಪು</string>
-    <string name="forums_access_level_view">ವೀಕ್ಷಿಸಿ</string>
-    <string name="forums_access_level_vote">ಮತ ಹಾಕಿ</string>
-    <string name="forums_access_level_comment">ಕಾಮೆಂಟ್ ಮಾಡಿ</string>
-    <string name="forums_access_level_post">ಪೋಸ್ಟ್ ಮಾಡಿ</string>
-    <string name="forums_access_level_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="forums_members_empty">ಯಾವುದೇ ಸದಸ್ಯರಿಲ್ಲ</string>
     <string name="forums_banner_dismiss">ಬ್ಯಾನರ್ ತಿರಸ್ಕರಿಸಿ</string>
     <string name="forums_ai_mode_tag">ಟ್ಯಾಗ್ ಮಾಡಿ</string>
     <string name="forums_ai_account_default">ಡೀಫಾಲ್ಟ್ ಖಾತೆ</string>
-    <string name="forums_ai_prompt_reset">ಡೀಫಾಲ್ಟ್‌ಗೆ ರೀಸೆಟ್ ಮಾಡಿ</string>
     <string name="forums_settings_unsubscribe">ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಿ</string>
     <string name="forums_moderation_title">ಮಾಡರೇಶನ್</string>
     <string name="forums_moderation_tab_queue">ಸರತಿ</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">ವಿಷಯದಿಂದ ಹೊರಗೆ</string>
     <string name="forums_report_reason_other">ಇತರ</string>
     <string name="forums_post_default_author">ಬಳಕೆದಾರ</string>
-    <string name="forums_comments">ಕಾಮೆಂಟ್‌ಗಳು</string>
     <string name="forums_no_comments">ಇನ್ನೂ ಯಾವುದೇ ಕಾಮೆಂಟ್‌ಗಳಿಲ್ಲ</string>
-    <string name="forums_comment_save">ಉಳಿಸಿ</string>
     <string name="forums_comment_edit">ಕಾಮೆಂಟ್ ಸಂಪಾದಿಸಿ</string>
     <string name="forums_comment_edit_title">ಕಾಮೆಂಟ್ ಸಂಪಾದಿಸಿ</string>
-    <string name="forums_comment_edit_attach">ಫೈಲ್‌ಗಳನ್ನು ಲಗತ್ತಿಸಿ</string>
     <string name="forums_comment_delete">ಕಾಮೆಂಟ್ ಅಳಿಸಿ</string>
     <string name="forums_comment_delete_title">ಕಾಮೆಂಟ್ ಅಳಿಸಿ</string>
     <string name="forums_comment_reply">ರಿಪ್ಲೈ</string>
-    <string name="forums_settings_rename">ಮರುಹೆಸರಿಸಿ</string>
-    <string name="forums_settings_save">ಉಳಿಸಿ</string>
     <string name="forums_settings_delete">ಫೋರಮ್ ಅಳಿಸಿ</string>
     <string name="forums_settings_delete_title">ಫೋರಮ್ ಅಳಿಸಿ</string>
     <string name="forums_forum_not_found">ಫೋರಮ್ ಸಿಗಲಿಲ್ಲ</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">ಕಳುಹಿಸಿ</string>
     <string name="forums_post_body_field">ವಿಷಯ</string>
-    <string name="forums_post_edit_body_field">ವಿಷಯ</string>
     <string name="forums_comment_edit_body_field">ವಿಷಯ</string>
-    <string name="forums_tag_clear">ಫಿಲ್ಟರ್ ತೆರವುಗೊಳಿಸಿ</string>
-    <string name="forums_post_tag_add">ಟ್ಯಾಗ್ ಸೇರಿಸಿ</string>
     <string name="forums_write_comment">ಕಾಮೆಂಟ್ ಬರೆಯಿರಿ…</string>
-    <string name="forums_auth_login_failed">ಲಾಗಿನ್ ವಿಫಲವಾಗಿದೆ</string>
 
     <string name="notification_channel_forums">ಫೋರಂಗಳ ಅಧಿಸೂಚನೆಗಳು</string>
-    <string name="forums_auth_brand">Mochi ಫೋರಂಗಳು</string>
-    <string name="forums_auth_create_identity_failed">ಗುರುತನ್ನು ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="forums_auth_mfa_unsupported">ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ MFA ಇನ್ನೂ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ</string>
-    <string name="forums_auth_enter_code_sent">%1$s ಗೆ ಕಳುಹಿಸಿದ ಕೋಡ್ ಅನ್ನು ನಮೂದಿಸಿ</string>
-    <string name="forums_auth_create_identity">ನಿಮ್ಮ ಗುರುತನ್ನು ರಚಿಸಿ</string>
     <string name="forums_list_empty">ಇನ್ನೂ ಫೋರಂಗಳಿಲ್ಲ</string>
     <string name="forums_list_unsubscribe_message">ನೀವು ಈ ಫೋರಂನಿಂದ ಚಂದಾದಾರಿಕೆ ರದ್ದುಗೊಳಿಸಲು ಖಚಿತವೇ?</string>
     <string name="forums_find_search_placeholder">ಫೋರಂಗಳನ್ನು ಹುಡುಕಿ ಅಥವಾ URL ಅಂಟಿಸಿ</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">ಡೌನ್‌ವೋಟ್</string>
     <string name="forums_post_quote">ಪ್ರತ್ಯುತ್ತರದಲ್ಲಿ ಉಲ್ಲೇಖಿಸಿ</string>
     <string name="forums_comment_quote">ಪ್ರತ್ಯುತ್ತರದಲ್ಲಿ ಉಲ್ಲೇಖಿಸಿ</string>
-    <string name="forums_post_tag_remove">ಟ್ಯಾಗ್ ತೆಗೆದುಹಾಕಿ</string>
     <string name="forums_access_add">ಪ್ರವೇಶ ನಿಯಮವನ್ನು ಸೇರಿಸಿ</string>
     <string name="forums_access_empty">ಇನ್ನೂ ನಿಯಮಗಳಿಲ್ಲ — ಪೂರ್ವನಿಯೋಜಿತಗಳು ಅನ್ವಯಿಸುತ್ತವೆ</string>
-    <string name="forums_access_target_hint">ಎಂಟಿಟಿ ID, @group, * (ಎಲ್ಲರೂ), ಅಥವಾ + (ಸದಸ್ಯರು)</string>
-    <string name="forums_access_level">ಮಟ್ಟ</string>
-    <string name="forums_access_level_moderate">ಮಾಡರೇಟ್</string>
     <string name="forums_members_search">ಸದಸ್ಯರನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="forums_banner_description">ಫೋರಂನ ಮೇಲ್ಭಾಗದಲ್ಲಿ ತೋರಿಸಲಾಗುವ ಮಾರ್ಕ್‌ಡೌನ್.</string>
     <string name="forums_banner_placeholder">ಬ್ಯಾನರ್ ಪಠ್ಯವನ್ನು ನಮೂದಿಸಿ (ಮಾರ್ಕ್‌ಡೌನ್ ಬೆಂಬಲಿತ)…</string>
-    <string name="forums_ai_mode_label">ಮೋಡ್: %1$s</string>
-    <string name="forums_ai_mode_heading">AI ಮೋಡ್</string>
     <string name="forums_ai_mode_off">ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
-    <string name="forums_ai_account">AI ಖಾತೆ</string>
-    <string name="forums_ai_prompt_tag">ಟ್ಯಾಗಿಂಗ್ ಪ್ರಾಂಪ್ಟ್</string>
-    <string name="forums_ai_prompt_score">ಸ್ಕೋರಿಂಗ್ ಪ್ರಾಂಪ್ಟ್</string>
-    <string name="forums_ai_post_prompt_label">ಪೋಸ್ಟ್ ಟ್ಯಾಗ್‌ಗಳಿಗಾಗಿ ಪ್ರಾಂಪ್ಟ್</string>
-    <string name="forums_ai_comment_prompt_label">ಕಾಮೆಂಟ್ ಟ್ಯಾಗ್‌ಗಳಿಗಾಗಿ ಪ್ರಾಂಪ್ಟ್</string>
-    <string name="forums_settings_fingerprint">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್: %1$s</string>
-    <string name="forums_settings_clear_notifications">ಅಧಿಸೂಚನೆಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
     <string name="forums_moderation_queue_empty">ಬಾಕಿ ಇರುವುದು ಏನೂ ಇಲ್ಲ</string>
     <string name="forums_moderation_report_details">ವಿವರಗಳು: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s ರಿಂದ ಪರಿಹರಿಸಲಾಗಿದೆ — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s ಗೆ ಪ್ರತ್ಯುತ್ತರಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="forums_comment_clear_reply">ಪ್ರತ್ಯುತ್ತರವನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
     <string name="forums_settings_title">%1$s ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
-    <string name="forums_settings_rename_label">ಫೋರಂ ಹೆಸರು</string>
-    <string name="forums_settings_danger_zone">ಅಪಾಯಕಾರಿ ವಲಯ</string>
     <string name="forums_settings_delete_message">ಇದು ಫೋರಂ ಮತ್ತು ಅದರ ಎಲ್ಲಾ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸುತ್ತದೆ. ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.</string>
 
-    <string name="forums_tag_interest_up">ಆಸಕ್ತಿಯನ್ನು ಹೆಚ್ಚಿಸಿ</string>
-    <string name="forums_tag_interest_down">ಆಸಕ್ತಿ ಕಡಿಮೆಗೊಳಿಸಿ</string>
-    <string name="forums_tag_interest_remove">ಆಸಕ್ತಿ ತೆಗೆದುಹಾಕಿ</string>
     <string name="forums_access_tab_users">ಬಳಕೆದಾರರು</string>
     <string name="forums_access_tab_groups">ಗುಂಪುಗಳು</string>
-    <string name="forums_access_tab_manual">ಮ್ಯಾನುಯಲ್</string>
     <string name="forums_access_search_users">ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಿ</string>
     <string name="forums_access_no_groups">ಯಾವುದೇ ಗ್ರೂಪ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ</string>
     <string name="forums_saved_title">ಉಳಿಸಿದವು</string>

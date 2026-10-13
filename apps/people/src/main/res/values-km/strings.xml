@@ -121,7 +121,6 @@
     <string name="people_contacts_message">ផ្ញើសារ</string>
     <string name="people_contacts_no_people_found">រកមិនឃើញមនុស្ស</string>
     <string name="people_contacts_try_adjusting">សាកល្បងកែតម្រូវការស្វែងរករបស់អ្នក</string>
-    <string name="people_contact_section_address">អាសយដ្ឋាន</string>
     <string name="people_contact_section_detail">ព័ត៌មានលម្អិត</string>
     <string name="people_contact_name">ឈ្មោះ</string>
     <string name="people_contact_email">អ៊ីមែល</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">ប្តូរឈ្មោះ</string>
     <string name="people_contacts_sort_name">ឈ្មោះ</string>
     <string name="people_contacts_sort_recent">បានបន្ថែមថ្មីៗ</string>
-    <string name="people_contacts_thats_you">នោះជាអ្នក</string>
     <string name="people_contacts_try_different_search">សាកល្បងពាក្យស្វែងរកផ្សេង</string>
     <string name="people_contacts_unfriend">យកមិត្តភក្តិចេញ</string>
     <string name="people_add_contact_search_placeholder">វាយដើម្បីស្វែងរក…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">រកមិនឃើញទំនាក់ទំនងទេ</string>
     <string name="people_contacts_add_to_start">បន្ថែមទំនាក់ទំនងដើម្បីចាប់ផ្តើមភ្ជាប់</string>
     <string name="people_contacts_actions">សកម្មភាពទំនាក់ទំនង</string>
-    <string name="people_contacts_friend">មិត្ត</string>
     <string name="people_contacts_invite">អញ្ជើញ</string>
     <string name="people_contacts_unfriend_confirm">%1$s នឹងលែងជាមិត្តរបស់អ្នកទៀតហើយ។ ទំនាក់ទំនងនៅតែមានក្នុងសៀវភៅអាសយដ្ឋានរបស់អ្នក។</string>
     <string name="people_contacts_delete">លុបទំនាក់ទំនង</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">ទំនាក់ទំនងបានផ្លាស់ប្តូរ</string>
     <string name="people_add_contact_title">បន្ថែមទំនាក់ទំនង</string>
     <string name="people_add_contact_add">បន្ថែមទៅទំនាក់ទំនង</string>
-    <string name="people_add_contact_in_contacts">មានក្នុងទំនាក់ទំនង</string>
     <string name="people_books_create">បង្កើតសៀវភៅអាសយដ្ឋាន</string>
     <string name="people_books_delete">លុបសៀវភៅអាសយដ្ឋាន</string>
     <plurals name="people_books_delete_confirm">

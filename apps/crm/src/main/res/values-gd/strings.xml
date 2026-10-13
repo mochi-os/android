@@ -19,7 +19,6 @@
     <string name="crm_link">Ceangal</string>
     <string name="crm_design">Dealbhadh</string>
     <string name="crm_export_failed">Cha b\' urrainn an t-às-phortadh a shàbhaladh</string>
-    <string name="crm_sort_direction">Comhair</string>
     <string name="crm_sort_rank">Le làimh</string>
     <string name="crm_sort_created">Cruthaichte</string>
     <string name="crm_sort_updated">Ùraichte</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Cuir clas ris</string>
     <string name="crm_classes_create">Cruthaich</string>
     <string name="crm_class_name">Ainm</string>
-    <string name="crm_class_save_name">Sàbhail an t-ainm</string>
     <string name="crm_class_title_field">Raon tiotail</string>
     <string name="crm_class_fields">Raointean</string>
     <string name="crm_class_add_field">Cuir raon ris</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Riatanach</string>
     <string name="crm_field_position_default">Bunaiteach</string>
     <string name="crm_field_position_sidebar">Bàr-taoibh</string>
-    <string name="crm_field_save">Sàbhail na h-atharrachaidhean</string>
     <string name="crm_field_options">Roghainnean</string>
     <string name="crm_field_add_option">Cuir roghainn ris</string>
     <string name="crm_field_delete">Sguab às raon</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Lorg CRM</string>
     <string name="crm_list_no_matching">Chan eil CRM a\' maidseadh</string>
     <string name="crm_list_empty">Chan eil CRM ann fhathast</string>
-    <string name="crm_create_template">Teamplaid</string>
     <string name="crm_find_search_placeholder">Lorg CRM no cuir URL ann</string>
     <string name="crm_find_search_hint">Lorg CRM ris an gabh fo-sgrìobhadh</string>
     <string name="crm_create_object_parent_none">(chan eil gin)</string>

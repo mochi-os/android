@@ -49,7 +49,6 @@
     <string name="go_resign_title">Здацца ў гульні?</string>
     <string name="go_sidebar_completed">Завершана</string>
     <string name="go_sidebar_new_game">Новая гульня</string>
-    <string name="go_status_draw">Нічыя</string>
     <string name="go_status_draw_text">Нічыя</string>
     <string name="go_status_game_over">Канец гульні</string>
     <string name="go_status_opponent_move">Ход %1$s</string>
@@ -64,7 +63,6 @@
     <string name="go_open_sidebar">Адкрыць бакавую панэль</string>
     <string name="go_sidebar_active">Актыўныя гульні</string>
     <string name="go_empty_active">Пакуль няма актыўных партый.</string>
-    <string name="go_status_resigned">Здаўся</string>
     <string name="go_new_game_title">Новая Go партыя</string>
     <string name="go_new_game_no_friends">Вам трэба дадаць сябра перад тым, як пачаць партыю.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

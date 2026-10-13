@@ -50,7 +50,6 @@
     <string name="go_resign_title">Dest ji lîstikê berde?</string>
     <string name="go_sidebar_completed">Temam</string>
     <string name="go_sidebar_new_game">Lîstika nû</string>
-    <string name="go_status_draw">Wekhev</string>
     <string name="go_status_draw_text">Wekhev</string>
     <string name="go_status_game_over">Lîstik xilas bû</string>
     <string name="go_status_opponent_move">Tevgera %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Refê kêlekê veke</string>
     <string name="go_sidebar_active">Lîstikên çalak</string>
     <string name="go_empty_active">Hîn tu lîstika çalak tune.</string>
-    <string name="go_status_resigned">Dev jê berda</string>
     <string name="go_new_game_title">Lîstika Go ya nû</string>
     <string name="go_new_game_no_friends">Berî ku tu lîstikê dest pê bikî divê tu hevalek zêde bikî.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Зурвас илгээх</string>
     <string name="people_contacts_no_people_found">Хүн олдсонгүй</string>
     <string name="people_contacts_try_adjusting">Хайлтаа засахыг туршаад үз</string>
-    <string name="people_contact_section_address">Хаяг</string>
     <string name="people_contact_section_detail">Дэлгэрэнгүй</string>
     <string name="people_contact_name">Нэр</string>
     <string name="people_contact_email">Имэйл</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Нэр өөрчлөх</string>
     <string name="people_contacts_sort_name">Нэр</string>
     <string name="people_contacts_sort_recent">Саяхан нэмсэн</string>
-    <string name="people_contacts_thats_you">Энэ бол та</string>
     <string name="people_contacts_try_different_search">Өөр хайлтын үг туршаад үз</string>
     <string name="people_contacts_unfriend">Найз хасах</string>
     <string name="people_add_contact_search_placeholder">Хайхын тулд бичнэ үү…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Харилцагч олдсонгүй</string>
     <string name="people_contacts_add_to_start">Холбоо тогтоохын тулд харилцагч нэмнэ үү</string>
     <string name="people_contacts_actions">Харилцагчийн үйлдлүүд</string>
-    <string name="people_contacts_friend">Найз</string>
     <string name="people_contacts_invite">Урих</string>
     <string name="people_contacts_unfriend_confirm">%1$s цаашид таны найз байхаа болино. Харилцагч таны хаягийн дэвтэрт үлдэнэ.</string>
     <string name="people_contacts_delete">Харилцагч устгах</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Харилцагч өөрчлөгдсөн</string>
     <string name="people_add_contact_title">Харилцагч нэмэх</string>
     <string name="people_add_contact_add">Харилцагчид нэмэх</string>
-    <string name="people_add_contact_in_contacts">Харилцагчдад байна</string>
     <string name="people_books_create">Хаягийн дэвтэр үүсгэх</string>
     <string name="people_books_delete">Хаягийн дэвтэр устгах</string>
     <plurals name="people_books_delete_confirm">

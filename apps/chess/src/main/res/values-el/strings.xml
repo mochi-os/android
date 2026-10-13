@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Σκάκι</string>
-    <string name="chess_sidebar_header">Σκάκι</string>
     <string name="chess_sidebar_active">Ενεργά παιχνίδια</string>
     <string name="chess_sidebar_completed">Ολοκληρώθηκε</string>
     <string name="chess_sidebar_new_game">Νέο παιχνίδι</string>
-    <string name="chess_section_active">Ενεργά παιχνίδια</string>
-    <string name="chess_section_completed">Ολοκληρώθηκε</string>
-    <string name="chess_new_game">Νέο παιχνίδι</string>
     <string name="chess_empty_title">Δεν υπάρχουν ακόμη παιχνίδια</string>
     <string name="chess_new_title">Νέο παιχνίδι</string>
     <string name="chess_new_pick_opponent">Επιλογή αντιπάλου</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Ειδοποιήσεις Σκάκι</string>
     <string name="chess_channel_description">Ειδοποιήσεις σχετικά με κινήσεις, προτάσεις ισοπαλίας και αποτελέσματα παρτίδων.</string>
     <string name="chess_open_sidebar">Άνοιγμα πλευρικής μπάρας</string>
-    <string name="chess_empty_subtitle">Ξεκινήστε την πρώτη παρτίδα σας για να παίξετε σκάκι με έναν φίλο.</string>
-    <string name="chess_empty_start_button">Ξεκινήστε την πρώτη σας παρτίδα</string>
     <string name="chess_detail_unavailable">Παρτίδα μη διαθέσιμη</string>
     <string name="chess_delete_title">Διαγραφή παιχνιδιού;</string>
     <string name="chess_delete_message">Αυτό αφαιρεί την παρτίδα από τη λίστα σας.</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Αποστολή μηνύματος</string>
     <string name="people_contacts_no_people_found">Δεν βρέθηκαν άτομα</string>
     <string name="people_contacts_try_adjusting">Δοκιμάστε να προσαρμόσετε την αναζήτησή σας</string>
-    <string name="people_contact_section_address">Διεύθυνση</string>
     <string name="people_contact_section_detail">Λεπτομέρειες</string>
     <string name="people_contact_name">Όνομα</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Μετονομασία</string>
     <string name="people_contacts_sort_name">Όνομα</string>
     <string name="people_contacts_sort_recent">Προστέθηκαν πρόσφατα</string>
-    <string name="people_contacts_thats_you">Αυτός είσαι εσύ</string>
     <string name="people_contacts_try_different_search">Δοκιμάστε διαφορετικό όρο αναζήτησης</string>
     <string name="people_contacts_unfriend">Αφαίρεση φίλου</string>
     <string name="people_add_contact_search_placeholder">Πληκτρολογήστε για αναζήτηση…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Δεν βρέθηκαν επαφές</string>
     <string name="people_contacts_add_to_start">Προσθέστε επαφές για να ξεκινήσετε</string>
     <string name="people_contacts_actions">Ενέργειες επαφής</string>
-    <string name="people_contacts_friend">Φίλος</string>
     <string name="people_contacts_invite">Πρόσκληση</string>
     <string name="people_contacts_unfriend_confirm">Ο/Η %1$s δεν θα είναι πια φίλος σας. Η επαφή παραμένει στο ευρετήριό σας.</string>
     <string name="people_contacts_delete">Διαγραφή επαφής</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Η επαφή άλλαξε</string>
     <string name="people_add_contact_title">Προσθήκη επαφής</string>
     <string name="people_add_contact_add">Προσθήκη στις επαφές</string>
-    <string name="people_add_contact_in_contacts">Στις επαφές</string>
     <string name="people_books_create">Δημιουργία ευρετηρίου</string>
     <string name="people_books_delete">Διαγραφή ευρετηρίου</string>
     <plurals name="people_books_delete_confirm">

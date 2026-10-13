@@ -121,7 +121,6 @@
     <string name="people_contacts_message">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="people_contacts_no_people_found">ਕੋਈ ਲੋਕ ਨਹੀਂ ਮਿਲੇ</string>
     <string name="people_contacts_try_adjusting">ਆਪਣੀ ਖੋਜ ਠੀਕ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
-    <string name="people_contact_section_address">ਪਤਾ</string>
     <string name="people_contact_section_detail">ਵੇਰਵੇ</string>
     <string name="people_contact_name">ਨਾਮ</string>
     <string name="people_contact_email">ਈਮੇਲ</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">ਨਾਮ ਬਦਲੋ</string>
     <string name="people_contacts_sort_name">ਨਾਮ</string>
     <string name="people_contacts_sort_recent">ਹਾਲ ਹੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ</string>
-    <string name="people_contacts_thats_you">ਉਹ ਤੁਸੀਂ ਹੋ</string>
     <string name="people_contacts_try_different_search">ਵੱਖਰੀ ਖੋਜ ਸ਼ਬਦ ਅਜ਼ਮਾਓ</string>
     <string name="people_contacts_unfriend">ਦੋਸਤ ਹਟਾਓ</string>
     <string name="people_add_contact_search_placeholder">ਖੋਜਣ ਲਈ ਟਾਈਪ ਕਰੋ…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">ਕੋਈ ਸੰਪਰਕ ਨਹੀਂ ਮਿਲਿਆ</string>
     <string name="people_contacts_add_to_start">ਜੁੜਨਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਸੰਪਰਕ ਸ਼ਾਮਲ ਕਰੋ</string>
     <string name="people_contacts_actions">ਸੰਪਰਕ ਕਾਰਵਾਈਆਂ</string>
-    <string name="people_contacts_friend">ਦੋਸਤ</string>
     <string name="people_contacts_invite">ਸੱਦਾ ਦਿਓ</string>
     <string name="people_contacts_unfriend_confirm">%1$s ਹੁਣ ਤੁਹਾਡਾ ਦੋਸਤ ਨਹੀਂ ਰਹੇਗਾ। ਸੰਪਰਕ ਤੁਹਾਡੀ ਪਤਾ ਕਿਤਾਬ ਵਿੱਚ ਰਹੇਗਾ।</string>
     <string name="people_contacts_delete">ਸੰਪਰਕ ਮਿਟਾਓ</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">ਸੰਪਰਕ ਬਦਲ ਗਿਆ</string>
     <string name="people_add_contact_title">ਸੰਪਰਕ ਜੋੜੋ</string>
     <string name="people_add_contact_add">ਸੰਪਰਕਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ</string>
-    <string name="people_add_contact_in_contacts">ਸੰਪਰਕਾਂ ਵਿੱਚ</string>
     <string name="people_books_create">ਪਤਾ ਕਿਤਾਬ ਬਣਾਓ</string>
     <string name="people_books_delete">ਪਤਾ ਕਿਤਾਬ ਮਿਟਾਓ</string>
     <plurals name="people_books_delete_confirm">

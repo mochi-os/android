@@ -50,7 +50,6 @@
     <string name="go_resign_title">دەست لە یاری بکێشیتەوە؟</string>
     <string name="go_sidebar_completed">تەواوبوو</string>
     <string name="go_sidebar_new_game">یاری نوێ</string>
-    <string name="go_status_draw">یەکسانی</string>
     <string name="go_status_draw_text">یەکسانی</string>
     <string name="go_status_game_over">یاری کۆتایی هات</string>
     <string name="go_status_opponent_move">نۆرەی %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">کردنەوەی لاتەنیشت</string>
     <string name="go_sidebar_active">یارییە چالاکەکان</string>
     <string name="go_empty_active">هێشتا هیچ یارییەکی چالاک نییە.</string>
-    <string name="go_status_resigned">وازی هێنا</string>
     <string name="go_new_game_title">یاری نوێی Go</string>
     <string name="go_new_game_no_friends">پێویستە هاوڕێیەک زیاد بکەیت پێش ئەوەی یاری دەست پێ بکەیت.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

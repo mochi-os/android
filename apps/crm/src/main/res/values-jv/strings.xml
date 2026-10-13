@@ -19,7 +19,6 @@
     <string name="crm_link">Tautan</string>
     <string name="crm_design">Desain</string>
     <string name="crm_export_failed">Ekspor ora bisa disimpen</string>
-    <string name="crm_sort_direction">Arah</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Digawé</string>
     <string name="crm_sort_updated">Wis dianyari</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Tambah kelas</string>
     <string name="crm_classes_create">Gawé</string>
     <string name="crm_class_name">Jeneng</string>
-    <string name="crm_class_save_name">Simpen jeneng</string>
     <string name="crm_class_title_field">Kolom judul</string>
     <string name="crm_class_fields">Kolom</string>
     <string name="crm_class_add_field">Tambah field</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Dibutuhaké</string>
     <string name="crm_field_position_default">Standar</string>
     <string name="crm_field_position_sidebar">Bilah sisih</string>
-    <string name="crm_field_save">Simpen owahan</string>
     <string name="crm_field_options">Opsi</string>
     <string name="crm_field_add_option">Tambah pilihan</string>
     <string name="crm_field_delete">Busak field</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Goleki CRM</string>
     <string name="crm_list_no_matching">Ora ana CRM sing cocog</string>
     <string name="crm_list_empty">Durung ana CRM</string>
-    <string name="crm_create_template">Cithakan</string>
     <string name="crm_find_search_placeholder">Goleki CRM utawa tèmplèkaké URL</string>
     <string name="crm_find_search_hint">Goleki CRM kanggo langganan</string>
     <string name="crm_create_object_parent_none">(ora ana)</string>

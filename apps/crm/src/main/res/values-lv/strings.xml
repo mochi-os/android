@@ -19,7 +19,6 @@
     <string name="crm_link">Saite</string>
     <string name="crm_design">Dizains</string>
     <string name="crm_export_failed">Neizdevās saglabāt eksportu</string>
-    <string name="crm_sort_direction">Virziens</string>
     <string name="crm_sort_rank">Manuāls</string>
     <string name="crm_sort_created">Izveidots</string>
     <string name="crm_sort_updated">Atjaunināts</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Pievienot klasi</string>
     <string name="crm_classes_create">Izveidot</string>
     <string name="crm_class_name">Nosaukums</string>
-    <string name="crm_class_save_name">Saglabāt nosaukumu</string>
     <string name="crm_class_title_field">Virsraksta lauks</string>
     <string name="crm_class_fields">Lauki</string>
     <string name="crm_class_add_field">Pievienot lauku</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Obligāts</string>
     <string name="crm_field_position_default">Noklusētais</string>
     <string name="crm_field_position_sidebar">Sānu josla</string>
-    <string name="crm_field_save">Saglabāt izmaiņas</string>
     <string name="crm_field_options">Iespējas</string>
     <string name="crm_field_add_option">Pievienot opciju</string>
     <string name="crm_field_delete">Dzēst lauku</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Meklēt CRM</string>
     <string name="crm_list_no_matching">Nav atbilstoša CRM</string>
     <string name="crm_list_empty">Vēl nav neviena CRM</string>
-    <string name="crm_create_template">Veidne</string>
     <string name="crm_find_search_placeholder">Meklējiet CRM vai ielīmējiet URL</string>
     <string name="crm_find_search_hint">Meklējiet CRM, kam abonēt</string>
     <string name="crm_create_object_parent_none">(nav)</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Invia messaggio</string>
     <string name="people_contacts_no_people_found">Nessuna persona trovata</string>
     <string name="people_contacts_try_adjusting">Prova a modificare la ricerca</string>
-    <string name="people_contact_section_address">Indirizzo</string>
     <string name="people_contact_section_detail">Dettagli</string>
     <string name="people_contact_name">Nome</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Rinomina</string>
     <string name="people_contacts_sort_name">Nome</string>
     <string name="people_contacts_sort_recent">Aggiunto di recente</string>
-    <string name="people_contacts_thats_you">Quello sei tu</string>
     <string name="people_contacts_try_different_search">Prova un altro termine di ricerca</string>
     <string name="people_contacts_unfriend">Rimuovi amico</string>
     <string name="people_add_contact_search_placeholder">Digita per cercare…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Nessun contatto trovato</string>
     <string name="people_contacts_add_to_start">Aggiungi contatti per iniziare a connetterti</string>
     <string name="people_contacts_actions">Azioni contatto</string>
-    <string name="people_contacts_friend">Amico</string>
     <string name="people_contacts_invite">Invita</string>
     <string name="people_contacts_unfriend_confirm">%1$s non sarà più tuo amico. Il contatto rimane nella tua rubrica.</string>
     <string name="people_contacts_delete">Elimina contatto</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Il contatto è cambiato</string>
     <string name="people_add_contact_title">Aggiungi contatto</string>
     <string name="people_add_contact_add">Aggiungi ai contatti</string>
-    <string name="people_add_contact_in_contacts">Nei contatti</string>
     <string name="people_books_create">Crea rubrica</string>
     <string name="people_books_delete">Elimina rubrica</string>
     <plurals name="people_books_delete_confirm">

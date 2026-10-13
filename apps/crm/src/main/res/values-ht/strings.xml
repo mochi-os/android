@@ -19,7 +19,6 @@
     <string name="crm_link">Lyen</string>
     <string name="crm_design">Konsepsyon</string>
     <string name="crm_export_failed">Nou pa t kapab anrejistre ekspòtasyon an</string>
-    <string name="crm_sort_direction">Direksyon</string>
     <string name="crm_sort_rank">Manyèl</string>
     <string name="crm_sort_created">Kreye</string>
     <string name="crm_sort_updated">Mete ajou</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Ajoute klas</string>
     <string name="crm_classes_create">Kreye</string>
     <string name="crm_class_name">Non</string>
-    <string name="crm_class_save_name">Sove non</string>
     <string name="crm_class_title_field">Chan tit</string>
     <string name="crm_class_fields">Chan</string>
     <string name="crm_class_add_field">Ajoute chan</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Obligatwa</string>
     <string name="crm_field_position_default">Defo</string>
     <string name="crm_field_position_sidebar">Ba sou kote</string>
-    <string name="crm_field_save">Sove chanjman</string>
     <string name="crm_field_options">Opsyon</string>
     <string name="crm_field_add_option">Ajoute opsyon</string>
     <string name="crm_field_delete">Efase chan</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Chèche CRM</string>
     <string name="crm_list_no_matching">Pa gen CRM ki koresponn</string>
     <string name="crm_list_empty">Poko gen CRM</string>
-    <string name="crm_create_template">Modèl</string>
     <string name="crm_find_search_placeholder">Chèche CRM oswa kole URL</string>
     <string name="crm_find_search_hint">Chèche CRM pou abòne</string>
     <string name="crm_create_object_parent_none">(okenn)</string>

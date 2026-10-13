@@ -50,7 +50,6 @@
     <string name="go_resign_title">Vzdať hru?</string>
     <string name="go_sidebar_completed">Dokončené</string>
     <string name="go_sidebar_new_game">Nová hra</string>
-    <string name="go_status_draw">Remíza</string>
     <string name="go_status_draw_text">Remíza</string>
     <string name="go_status_game_over">Koniec hry</string>
     <string name="go_status_opponent_move">Ťah %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Otvoriť bočný panel</string>
     <string name="go_sidebar_active">Aktívne hry</string>
     <string name="go_empty_active">Zatiaľ žiadne aktívne partie.</string>
-    <string name="go_status_resigned">Vzdaná</string>
     <string name="go_new_game_title">Nová partia Go</string>
     <string name="go_new_game_no_friends">Pred začatím partie musíte pridať priateľa.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

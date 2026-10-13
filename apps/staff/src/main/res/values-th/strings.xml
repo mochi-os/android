@@ -415,7 +415,6 @@
     <string name="staff_team_add_member">เพิ่มสมาชิก</string>
     <string name="staff_team_added_by_label">เพิ่มโดย:</string>
     <string name="staff_team_added_by_system">ระบบ</string>
-    <string name="staff_team_col_added_by">เพิ่มโดย</string>
     <string name="staff_team_dialog_add">เพิ่ม</string>
     <string name="staff_team_dialog_add_title">เพิ่มสมาชิกทีม</string>
     <string name="staff_team_dialog_adding">กำลังเพิ่ม…</string>

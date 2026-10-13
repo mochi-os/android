@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Rodomas vardas</string>
-    <string name="forums_auth_verification_failed">Patvirtinimas nepavyko</string>
     <string name="forums_list_title">Forumai</string>
     <string name="forums_list_find">Rasti forumus</string>
     <string name="forums_list_unsubscribe">Atsisakyti prenumeratos</string>
     <string name="forums_list_unsubscribe_title">Atsisakyti prenumeratos</string>
     <string name="forums_create_title">Sukurti forumą</string>
     <string name="forums_create_name">Forumo pavadinimas</string>
-    <string name="forums_create_privacy">Privatumas</string>
-    <string name="forums_create_private">Privatus</string>
-    <string name="forums_create_public">Viešas</string>
     <string name="forums_create_action">Sukurti forumą</string>
     <string name="forums_find_title">Rasti forumus</string>
     <string name="forums_find_recommended">Rekomenduojama</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Skelbti</string>
     <string name="forums_post_edit">Redaguoti įrašą</string>
     <string name="forums_post_edit_title">Redaguoti įrašą</string>
-    <string name="forums_post_edit_title_field">Pavadinimas</string>
-    <string name="forums_post_save">Išsaugoti</string>
     <string name="forums_post_delete">Ištrinti įrašą</string>
     <string name="forums_post_delete_title">Ištrinti įrašą</string>
     <string name="forums_post_locked">Užrakintas</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Nariai</string>
     <string name="forums_tab_banner">Reklamjuostė</string>
     <string name="forums_tab_ai">DI</string>
-    <string name="forums_access_target">Vartotojas ar grupė</string>
-    <string name="forums_access_level_view">Peržiūrėti</string>
-    <string name="forums_access_level_vote">Balsuoti</string>
-    <string name="forums_access_level_comment">Komentuoti</string>
-    <string name="forums_access_level_post">Skelbti</string>
-    <string name="forums_access_level_none">Nėra</string>
     <string name="forums_members_empty">Narių nėra</string>
     <string name="forums_banner_dismiss">Atmesti reklamjuostę</string>
     <string name="forums_ai_mode_tag">Žymėti</string>
     <string name="forums_ai_account_default">Numatytoji paskyra</string>
-    <string name="forums_ai_prompt_reset">Atstatyti į numatytąjį</string>
     <string name="forums_settings_unsubscribe">Atsisakyti prenumeratos</string>
     <string name="forums_moderation_title">Moderavimas</string>
     <string name="forums_moderation_tab_queue">Eilė</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Ne tema</string>
     <string name="forums_report_reason_other">Kita</string>
     <string name="forums_post_default_author">Vartotojas</string>
-    <string name="forums_comments">Komentarai</string>
     <string name="forums_no_comments">Dar nėra komentarų</string>
-    <string name="forums_comment_save">Išsaugoti</string>
     <string name="forums_comment_edit">Redaguoti komentarą</string>
     <string name="forums_comment_edit_title">Redaguoti komentarą</string>
-    <string name="forums_comment_edit_attach">Pridėti failus</string>
     <string name="forums_comment_delete">Ištrinti komentarą</string>
     <string name="forums_comment_delete_title">Ištrinti komentarą</string>
     <string name="forums_comment_reply">Atsakyti</string>
-    <string name="forums_settings_rename">Pervadinti</string>
-    <string name="forums_settings_save">Išsaugoti</string>
     <string name="forums_settings_delete">Ištrinti forumą</string>
     <string name="forums_settings_delete_title">Ištrinti forumą</string>
     <string name="forums_forum_not_found">Forumas nerastas</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Siųsti</string>
     <string name="forums_post_body_field">Tekstas</string>
-    <string name="forums_post_edit_body_field">Tekstas</string>
     <string name="forums_comment_edit_body_field">Tekstas</string>
-    <string name="forums_tag_clear">Išvalyti filtrą</string>
-    <string name="forums_post_tag_add">Pridėti žymą</string>
     <string name="forums_write_comment">Parašykite komentarą…</string>
-    <string name="forums_auth_login_failed">Prisijungti nepavyko</string>
 
     <string name="notification_channel_forums">Forumų pranešimai</string>
-    <string name="forums_auth_brand">Mochi Forumai</string>
-    <string name="forums_auth_create_identity_failed">Nepavyko sukurti tapatybės</string>
-    <string name="forums_auth_mfa_unsupported">MFA dar nepalaikomas mobiliojoje programėlėje</string>
-    <string name="forums_auth_enter_code_sent">Įveskite kodą, išsiųstą į %1$s</string>
-    <string name="forums_auth_create_identity">Sukurkite savo tapatybę</string>
     <string name="forums_list_empty">Forumų dar nėra</string>
     <string name="forums_list_unsubscribe_message">Ar tikrai norite atsisakyti prenumeratos šiame forume?</string>
     <string name="forums_find_search_placeholder">Ieškoti forumų arba įklijuoti URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Balsuoti prieš</string>
     <string name="forums_post_quote">Cituoti atsakyme</string>
     <string name="forums_comment_quote">Cituoti atsakyme</string>
-    <string name="forums_post_tag_remove">Pašalinti žymą</string>
     <string name="forums_access_add">Pridėti prieigos taisyklę</string>
     <string name="forums_access_empty">Taisyklių dar nėra — taikomos numatytosios</string>
-    <string name="forums_access_target_hint">Subjekto ID, @grupė, * (visi) arba + (nariai)</string>
-    <string name="forums_access_level">Lygis</string>
-    <string name="forums_access_level_moderate">Moderuoti</string>
     <string name="forums_members_search">Filtruoti narius</string>
     <string name="forums_banner_description">Markdown rodomas forumo viršuje.</string>
     <string name="forums_banner_placeholder">Įveskite reklamjuostės tekstą (palaikomas Markdown)…</string>
-    <string name="forums_ai_mode_label">Režimas: %1$s</string>
-    <string name="forums_ai_mode_heading">DI režimas</string>
     <string name="forums_ai_mode_off">Išjungta</string>
-    <string name="forums_ai_account">DI paskyra</string>
-    <string name="forums_ai_prompt_tag">Žymėjimo užklausa</string>
-    <string name="forums_ai_prompt_score">Vertinimo užklausa</string>
-    <string name="forums_ai_post_prompt_label">Užklausa įrašų žymoms</string>
-    <string name="forums_ai_comment_prompt_label">Užklausa komentarų žymoms</string>
-    <string name="forums_settings_fingerprint">Atspaudas: %1$s</string>
-    <string name="forums_settings_clear_notifications">Išvalyti pranešimus</string>
     <string name="forums_moderation_queue_empty">Nieko nelaukia</string>
     <string name="forums_moderation_report_details">Išsami informacija: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Išsprendė %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Atsakoma į %1$s</string>
     <string name="forums_comment_clear_reply">Išvalyti atsakymą</string>
     <string name="forums_settings_title">%1$s nustatymai</string>
-    <string name="forums_settings_rename_label">Forumo pavadinimas</string>
-    <string name="forums_settings_danger_zone">Pavojaus zona</string>
     <string name="forums_settings_delete_message">Tai visam laikui ištrins forumą ir visus jo įrašus. To atšaukti nebus galima.</string>
 
-    <string name="forums_tag_interest_up">Padidinti susidomėjimą</string>
-    <string name="forums_tag_interest_down">Sumažinti susidomėjimą</string>
-    <string name="forums_tag_interest_remove">Šalinti susidomėjimą</string>
     <string name="forums_access_tab_users">Vartotojai</string>
     <string name="forums_access_tab_groups">Grupės</string>
-    <string name="forums_access_tab_manual">Rankinis</string>
     <string name="forums_access_search_users">Ieškoti vartotojų</string>
     <string name="forums_access_no_groups">Grupių nėra</string>
     <string name="forums_saved_title">Išsaugota</string>

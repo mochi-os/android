@@ -50,7 +50,6 @@
     <string name="go_resign_title">Kas anda mäng alla?</string>
     <string name="go_sidebar_completed">Lõpetatud</string>
     <string name="go_sidebar_new_game">Uus mäng</string>
-    <string name="go_status_draw">Viik</string>
     <string name="go_status_draw_text">Viik</string>
     <string name="go_status_game_over">Mäng on lõppenud</string>
     <string name="go_status_opponent_move">%1$s käik</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Ava külgriba</string>
     <string name="go_sidebar_active">Aktiivsed mängud</string>
     <string name="go_empty_active">Veel pole aktiivseid partiisid.</string>
-    <string name="go_status_resigned">Andis alla</string>
     <string name="go_new_game_title">Uus Go partii</string>
     <string name="go_new_game_no_friends">Enne partii alustamist pead lisama sõbra.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

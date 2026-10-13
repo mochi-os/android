@@ -121,7 +121,6 @@
     <string name="people_contacts_message">メッセージを送信</string>
     <string name="people_contacts_no_people_found">人が見つかりません</string>
     <string name="people_contacts_try_adjusting">検索条件を変えてみてください</string>
-    <string name="people_contact_section_address">住所</string>
     <string name="people_contact_section_detail">詳細</string>
     <string name="people_contact_name">名前</string>
     <string name="people_contact_email">メールアドレス</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">名前を変更</string>
     <string name="people_contacts_sort_name">名前</string>
     <string name="people_contacts_sort_recent">最近追加</string>
-    <string name="people_contacts_thats_you">それはあなたです</string>
     <string name="people_contacts_try_different_search">別の検索語を試してください</string>
     <string name="people_contacts_unfriend">友達を削除</string>
     <string name="people_add_contact_search_placeholder">入力して検索…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">連絡先が見つかりません</string>
     <string name="people_contacts_add_to_start">連絡先を追加してつながりましょう</string>
     <string name="people_contacts_actions">連絡先の操作</string>
-    <string name="people_contacts_friend">友達</string>
     <string name="people_contacts_invite">招待</string>
     <string name="people_contacts_unfriend_confirm">%1$s は友達ではなくなります。連絡先はアドレス帳に残ります。</string>
     <string name="people_contacts_delete">連絡先を削除</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">連絡先が変更されました</string>
     <string name="people_add_contact_title">連絡先を追加</string>
     <string name="people_add_contact_add">連絡先に追加</string>
-    <string name="people_add_contact_in_contacts">連絡先に登録済み</string>
     <string name="people_books_create">アドレス帳を作成</string>
     <string name="people_books_delete">アドレス帳を削除</string>
     <plurals name="people_books_delete_confirm">

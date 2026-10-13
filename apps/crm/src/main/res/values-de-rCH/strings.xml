@@ -31,7 +31,6 @@
     <string name="crm_settings_tab_people">Personen</string>
     <string name="crm_field_type_number">Nummer</string>
     <string name="crm_settings_tab_general">Allgemein</string>
-    <string name="crm_field_save">Änderungen speichern</string>
     <string name="crm_field_position_body">Inhalt</string>
     <string name="crm_find_recommended">Empfohlen</string>
     <string name="crm_sort_field">Sortieren nach</string>
@@ -60,7 +59,6 @@
     <string name="crm_views_sort_by">Sortieren nach</string>
     <string name="crm_design">Design</string>
     <string name="crm_design_title">Design</string>
-    <string name="crm_sort_direction">Richtung</string>
     <string name="crm_views_direction">Richtung</string>
     <string name="crm_sort_direction_asc">Aufsteigend</string>
     <string name="crm_views_direction_asc">Aufsteigend</string>
@@ -85,7 +83,6 @@
     <string name="crm_list_no_matching">Kein passendes CRM</string>
     <string name="crm_list_empty">Noch keine CRMs</string>
     <string name="crm_create_title">CRM erstellen</string>
-    <string name="crm_create_template">Vorlage</string>
     <string name="crm_find_title">CRM finden</string>
     <string name="crm_find_search_placeholder">CRM suchen oder URL einfügen</string>
     <string name="crm_find_search_hint">Nach CRM zum Abonnieren suchen</string>

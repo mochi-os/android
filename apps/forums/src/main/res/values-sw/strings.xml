@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Jina la kuonyesha</string>
-    <string name="forums_auth_verification_failed">Uthibitishaji umeshindwa</string>
     <string name="forums_list_title">Majukwaa</string>
     <string name="forums_list_find">Tafuta majukwaa</string>
     <string name="forums_list_unsubscribe">Jiondoe</string>
     <string name="forums_list_unsubscribe_title">Jiondoe</string>
     <string name="forums_create_title">Unda jukwaa</string>
     <string name="forums_create_name">Jina la jukwaa</string>
-    <string name="forums_create_privacy">Faragha</string>
-    <string name="forums_create_private">Ya faragha</string>
-    <string name="forums_create_public">Ya umma</string>
     <string name="forums_create_action">Unda jukwaa</string>
     <string name="forums_find_title">Tafuta majukwaa</string>
     <string name="forums_find_recommended">Inapendekezwa</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Chapisha</string>
     <string name="forums_post_edit">Hariri chapisho</string>
     <string name="forums_post_edit_title">Hariri chapisho</string>
-    <string name="forums_post_edit_title_field">Kichwa</string>
-    <string name="forums_post_save">Hifadhi</string>
     <string name="forums_post_delete">Futa chapisho</string>
     <string name="forums_post_delete_title">Futa chapisho</string>
     <string name="forums_post_locked">Imefungwa</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Wanachama</string>
     <string name="forums_tab_banner">Bango</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Mtumiaji au kikundi</string>
-    <string name="forums_access_level_view">Tazama</string>
-    <string name="forums_access_level_vote">Piga kura</string>
-    <string name="forums_access_level_comment">Toa maoni</string>
-    <string name="forums_access_level_post">Chapisha</string>
-    <string name="forums_access_level_none">Hakuna</string>
     <string name="forums_members_empty">Hakuna wanachama</string>
     <string name="forums_banner_dismiss">Ondoa bango</string>
     <string name="forums_ai_mode_tag">Weka lebo</string>
     <string name="forums_ai_account_default">Akaunti chaguo-msingi</string>
-    <string name="forums_ai_prompt_reset">Weka upya kwa chaguo-msingi</string>
     <string name="forums_settings_unsubscribe">Jiondoe</string>
     <string name="forums_moderation_title">Udhibiti</string>
     <string name="forums_moderation_tab_queue">Foleni</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Nje ya mada</string>
     <string name="forums_report_reason_other">Nyingine</string>
     <string name="forums_post_default_author">Mtumiaji</string>
-    <string name="forums_comments">Maoni</string>
     <string name="forums_no_comments">Hakuna maoni bado</string>
-    <string name="forums_comment_save">Hifadhi</string>
     <string name="forums_comment_edit">Hariri maoni</string>
     <string name="forums_comment_edit_title">Hariri maoni</string>
-    <string name="forums_comment_edit_attach">Ambatisha faili</string>
     <string name="forums_comment_delete">Futa maoni</string>
     <string name="forums_comment_delete_title">Futa maoni</string>
     <string name="forums_comment_reply">Jibu</string>
-    <string name="forums_settings_rename">Badilisha jina</string>
-    <string name="forums_settings_save">Hifadhi</string>
     <string name="forums_settings_delete">Futa jukwaa</string>
     <string name="forums_settings_delete_title">Futa jukwaa</string>
     <string name="forums_forum_not_found">Jukwaa halikupatikana</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Tuma</string>
     <string name="forums_post_body_field">Mwili</string>
-    <string name="forums_post_edit_body_field">Mwili</string>
     <string name="forums_comment_edit_body_field">Mwili</string>
-    <string name="forums_tag_clear">Futa kichujio</string>
-    <string name="forums_post_tag_add">Ongeza lebo</string>
     <string name="forums_write_comment">Andika maoni…</string>
-    <string name="forums_auth_login_failed">Kuingia kumeshindwa</string>
 
     <string name="notification_channel_forums">Arifa za majukwaa</string>
-    <string name="forums_auth_brand">Mochi Majukwaa</string>
-    <string name="forums_auth_create_identity_failed">Imeshindwa kuunda utambulisho</string>
-    <string name="forums_auth_mfa_unsupported">MFA bado haitumiki katika programu ya simu</string>
-    <string name="forums_auth_enter_code_sent">Weka msimbo uliotumwa kwa %1$s</string>
-    <string name="forums_auth_create_identity">Unda utambulisho wako</string>
     <string name="forums_list_empty">Hakuna majukwaa bado</string>
     <string name="forums_list_unsubscribe_message">Una uhakika unataka kujiondoa kwenye jukwaa hili?</string>
     <string name="forums_find_search_placeholder">Tafuta majukwaa au bandika URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Pigia kura chini</string>
     <string name="forums_post_quote">Nukuu katika jibu</string>
     <string name="forums_comment_quote">Nukuu katika jibu</string>
-    <string name="forums_post_tag_remove">Ondoa lebo</string>
     <string name="forums_access_add">Ongeza sheria ya ufikiaji</string>
     <string name="forums_access_empty">Hakuna sheria bado — chaguomsingi zinatumika</string>
-    <string name="forums_access_target_hint">Kitambulisho cha huluki, @kikundi, * (kila mtu), au + (wanachama)</string>
-    <string name="forums_access_level">Kiwango</string>
-    <string name="forums_access_level_moderate">Simamia</string>
     <string name="forums_members_search">Chuja wanachama</string>
     <string name="forums_banner_description">Markdown inayoonyeshwa juu ya jukwaa.</string>
     <string name="forums_banner_placeholder">Weka maandishi ya bango (markdown inatumika)…</string>
-    <string name="forums_ai_mode_label">Hali: %1$s</string>
-    <string name="forums_ai_mode_heading">Hali ya AI</string>
     <string name="forums_ai_mode_off">Imezimwa</string>
-    <string name="forums_ai_account">Akaunti ya AI</string>
-    <string name="forums_ai_prompt_tag">Kidokezo cha kuweka lebo</string>
-    <string name="forums_ai_prompt_score">Kidokezo cha kutoa alama</string>
-    <string name="forums_ai_post_prompt_label">Kidokezo cha lebo za chapisho</string>
-    <string name="forums_ai_comment_prompt_label">Kidokezo cha lebo za maoni</string>
-    <string name="forums_settings_fingerprint">Alama ya kidole: %1$s</string>
-    <string name="forums_settings_clear_notifications">Futa arifa</string>
     <string name="forums_moderation_queue_empty">Hakuna kinachosubiri</string>
     <string name="forums_moderation_report_details">Maelezo: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Ilitatuliwa na %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Unajibu %1$s</string>
     <string name="forums_comment_clear_reply">Futa jibu</string>
     <string name="forums_settings_title">Mipangilio ya %1$s</string>
-    <string name="forums_settings_rename_label">Jina la jukwaa</string>
-    <string name="forums_settings_danger_zone">Eneo la hatari</string>
     <string name="forums_settings_delete_message">Hii itafuta jukwaa na machapisho yake yote kabisa. Hili haliwezi kutenduliwa.</string>
 
-    <string name="forums_tag_interest_up">Ongeza mvuto</string>
-    <string name="forums_tag_interest_down">Punguza shauku</string>
-    <string name="forums_tag_interest_remove">Ondoa shauku</string>
     <string name="forums_access_tab_users">Watumiaji</string>
     <string name="forums_access_tab_groups">Vikundi</string>
-    <string name="forums_access_tab_manual">Kwa mkono</string>
     <string name="forums_access_search_users">Tafuta watumiaji</string>
     <string name="forums_access_no_groups">Hakuna vikundi vinavyopatikana</string>
     <string name="forums_saved_title">Vilivyohifadhiwa</string>

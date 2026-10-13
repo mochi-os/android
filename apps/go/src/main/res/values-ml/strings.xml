@@ -50,7 +50,6 @@
     <string name="go_resign_title">ഗെയിമിൽ നിന്ന് പിന്മാറണോ?</string>
     <string name="go_sidebar_completed">പൂർത്തിയായി</string>
     <string name="go_sidebar_new_game">പുതിയ ഗെയിം</string>
-    <string name="go_status_draw">സമനില</string>
     <string name="go_status_draw_text">സമനില</string>
     <string name="go_status_game_over">ഗെയിം അവസാനിച്ചു</string>
     <string name="go_status_opponent_move">%1$s-ന്റെ നീക്കം</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">സൈഡ്‌ബാർ തുറക്കുക</string>
     <string name="go_sidebar_active">സജീവ ഗെയിമുകൾ</string>
     <string name="go_empty_active">ഇതുവരെ സജീവ ഗെയിമുകളില്ല.</string>
-    <string name="go_status_resigned">പിന്മാറി</string>
     <string name="go_new_game_title">പുതിയ Go ഗെയിം</string>
     <string name="go_new_game_no_friends">ഗെയിം ആരംഭിക്കുന്നതിന് മുമ്പ് ഒരു സുഹൃത്തിനെ ചേർക്കണം.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

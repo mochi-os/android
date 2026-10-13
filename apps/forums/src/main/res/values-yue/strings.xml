@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_create_privacy">隱私</string>
 
     <string name="forums_create_name">論壇名稱</string>
     <string name="forums_create_action">建立論壇</string>
-    <string name="forums_post_save">儲存</string>
-    <string name="forums_comment_save">儲存</string>
     <string name="forums_reject_post_access">你冇喺呢個論壇發文嘅權限</string>
     <string name="forums_reject_comment_access">你冇喺呢個論壇留言嘅權限</string>
     <string name="forums_reject_post_restricted">你被限制喺呢個論壇發文</string>
@@ -20,11 +17,7 @@
     <string name="forums_reject_forum_missing">論壇已經唔再提供</string>
     <string name="forums_reject_post_server">帖文喺論壇伺服器上儲存唔到</string>
     <string name="forums_reject_comment_server">留言喺論壇伺服器上儲存唔到</string>
-    <string name="forums_settings_save">儲存</string>
     <string name="forums_find_subscribe">訂閱</string>
-    <string name="forums_access_level_view">檢視</string>
-    <string name="forums_access_level_vote">投票</string>
-    <string name="forums_access_level_none">無</string>
     <string name="forums_settings">設定</string>
     <string name="forums_comment_send">傳送</string>
     <string name="forums_post_remove">移除</string>
@@ -32,7 +25,6 @@
     <string name="forums_moderation_restriction_remove">移除</string>
     <string name="forums_moderation_restriction_type">類型</string>
     <string name="forums_post_title_field">標題</string>
-    <string name="forums_post_edit_title_field">標題</string>
     <string name="forums_list_unsubscribe">退訂</string>
     <string name="forums_list_unsubscribe_title">退訂</string>
     <string name="forums_settings_unsubscribe">退訂</string>
@@ -41,21 +33,16 @@
     <string name="forums_moderation_reports_all">全部</string>
     <string name="forums_report_reason">原因</string>
     <string name="forums_report_reason_other">其他</string>
-    <string name="forums_create_public">公開</string>
-    <string name="forums_create_private">私人</string>
     <string name="forums_comment_reply">回覆</string>
-    <string name="forums_access_level_comment">留言</string>
     <string name="forums_loading">載入中…</string>
     <string name="forums_post_removed">已移除</string>
     <string name="forums_tab_members">成員</string>
     <string name="forums_sort_label">排序</string>
     <string name="forums_tab_general">一般</string>
     <string name="forums_post_body_field">內容</string>
-    <string name="forums_post_edit_body_field">內容</string>
     <string name="forums_comment_edit_body_field">內容</string>
     <string name="forums_moderation_report_dismiss">關閉</string>
     <string name="forums_post_create_action">發布</string>
-    <string name="forums_access_level_post">發布</string>
     <string name="forums_post_pending">待處理</string>
     <string name="forums_moderation_reports_pending">待處理</string>
     <string name="forums_sort_interests">興趣</string>
@@ -63,22 +50,14 @@
     <string name="forums_post_attach">附加檔案</string>
     <string name="forums_post_approve">批准</string>
     <string name="forums_comment_approve">批准</string>
-    <string name="forums_post_tag_add">加入標籤</string>
     <string name="forums_post_tag_label">標籤</string>
     <string name="forums_tab_access">存取權</string>
-    <string name="forums_access_target">目標</string>
     <string name="forums_ai_mode_tag">標籤</string>
-    <string name="forums_ai_prompt_reset">重設為預設</string>
-    <string name="forums_comments">留言</string>
     <string name="forums_no_comments">重未有留言</string>
     <string name="forums_write_comment">寫低留言…</string>
-    <string name="forums_comment_edit_attach">附加檔案</string>
     <string name="forums_comment_delete">刪除留言</string>
     <string name="forums_comment_delete_title">刪除留言</string>
-    <string name="forums_settings_rename">重新命名</string>
     <string name="forums_find_recommended">推薦</string>
-    <string name="forums_auth_display_name">顯示名稱</string>
-    <string name="forums_auth_login_failed">登入失敗</string>
     <string name="forums_sort_top">頂部</string>
     <string name="forums_post_restore">還原</string>
     <string name="forums_comment_restore">還原</string>
@@ -86,12 +65,6 @@
     <string name="forums_members_empty">沒有成員</string>
 
     <string name="notification_channel_forums">論壇通知</string>
-    <string name="forums_auth_brand">Mochi 論壇</string>
-    <string name="forums_auth_verification_failed">驗證失敗</string>
-    <string name="forums_auth_create_identity_failed">建立身分失敗</string>
-    <string name="forums_auth_mfa_unsupported">流動應用程式暫時未支援多重身分驗證</string>
-    <string name="forums_auth_enter_code_sent">請輸入傳送到 %1$s 嘅驗證碼</string>
-    <string name="forums_auth_create_identity">建立你嘅身分</string>
     <string name="forums_list_title">論壇</string>
     <string name="forums_list_find">尋找論壇</string>
     <string name="forums_list_empty">暫時未有論壇</string>
@@ -122,30 +95,16 @@
     <string name="forums_post_quote">引用回覆</string>
     <string name="forums_comment_report">舉報</string>
     <string name="forums_comment_quote">引用回覆</string>
-    <string name="forums_tag_clear">清除篩選</string>
-    <string name="forums_post_tag_remove">移除標籤</string>
     <string name="forums_tab_banner">橫額</string>
     <string name="forums_tab_ai">AI</string>
     <string name="forums_access_add">新增存取規則</string>
     <string name="forums_access_empty">暫時未有規則 — 採用預設</string>
-    <string name="forums_access_target_hint">實體 ID、@群組、*(所有人)或 +(成員)</string>
-    <string name="forums_access_level">層級</string>
-    <string name="forums_access_level_moderate">管理員</string>
     <string name="forums_members_search">篩選成員</string>
     <string name="forums_banner_description">顯示喺論壇頂部嘅 Markdown 內容。</string>
     <string name="forums_banner_placeholder">輸入橫額文字（支援 Markdown）…</string>
     <string name="forums_banner_dismiss">關閉橫額</string>
-    <string name="forums_ai_mode_label">模式:%1$s</string>
-    <string name="forums_ai_mode_heading">AI 模式</string>
     <string name="forums_ai_mode_off">已停用</string>
-    <string name="forums_ai_account">AI 帳戶</string>
     <string name="forums_ai_account_default">預設帳戶</string>
-    <string name="forums_ai_prompt_tag">標籤提示語</string>
-    <string name="forums_ai_prompt_score">評分提示語</string>
-    <string name="forums_ai_post_prompt_label">貼文標籤嘅提示語</string>
-    <string name="forums_ai_comment_prompt_label">留言標籤嘅提示語</string>
-    <string name="forums_settings_fingerprint">指紋:%1$s</string>
-    <string name="forums_settings_clear_notifications">清除通知</string>
     <string name="forums_moderation_tab_queue">佇列</string>
     <string name="forums_moderation_tab_reports">舉報</string>
     <string name="forums_moderation_tab_log">紀錄</string>
@@ -189,20 +148,14 @@
     <string name="forums_comment_replying_to">回覆 %1$s</string>
     <string name="forums_comment_clear_reply">清除回覆</string>
     <string name="forums_settings_title">%1$s 設定</string>
-    <string name="forums_settings_rename_label">論壇名稱</string>
-    <string name="forums_settings_danger_zone">危險操作</string>
     <string name="forums_settings_delete">刪除討論區</string>
     <string name="forums_settings_delete_title">刪除討論區</string>
     <string name="forums_settings_delete_message">呢個操作會永久刪除討論區同所有帖文，無法復原。</string>
     <string name="forums_forum_not_found">搵唔到討論區</string>
     <string name="forums_post_not_found">搵唔到帖文</string>
 
-    <string name="forums_tag_interest_up">提升興趣</string>
-    <string name="forums_tag_interest_down">降低興趣</string>
-    <string name="forums_tag_interest_remove">移除興趣</string>
     <string name="forums_access_tab_users">用戶</string>
     <string name="forums_access_tab_groups">群組</string>
-    <string name="forums_access_tab_manual">手動</string>
     <string name="forums_access_search_users">搜尋用戶</string>
     <string name="forums_access_no_groups">冇可用嘅群組</string>
     <string name="forums_saved_title">已儲存</string>

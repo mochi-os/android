@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Харагдах нэр</string>
-    <string name="forums_auth_verification_failed">Баталгаажуулалт амжилтгүй</string>
     <string name="forums_list_title">Форумууд</string>
     <string name="forums_list_find">Форум хайх</string>
     <string name="forums_list_unsubscribe">Захиалгаас гарах</string>
     <string name="forums_list_unsubscribe_title">Захиалгаас гарах</string>
     <string name="forums_create_title">Форум үүсгэх</string>
     <string name="forums_create_name">Форумын нэр</string>
-    <string name="forums_create_privacy">Нууцлал</string>
-    <string name="forums_create_private">Хувийн</string>
-    <string name="forums_create_public">Нийтийн</string>
     <string name="forums_create_action">Форум үүсгэх</string>
     <string name="forums_find_title">Форум хайх</string>
     <string name="forums_find_recommended">Зөвлөмжтэй</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Нийтлэх</string>
     <string name="forums_post_edit">Бичлэг засах</string>
     <string name="forums_post_edit_title">Бичлэг засах</string>
-    <string name="forums_post_edit_title_field">Гарчиг</string>
-    <string name="forums_post_save">Хадгалах</string>
     <string name="forums_post_delete">Бичлэг устгах</string>
     <string name="forums_post_delete_title">Бичлэг устгах</string>
     <string name="forums_post_locked">Түгжигдсэн</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Гишүүд</string>
     <string name="forums_tab_banner">Баннер</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Хэрэглэгч эсвэл бүлэг</string>
-    <string name="forums_access_level_view">Үзэх</string>
-    <string name="forums_access_level_vote">Санал өгөх</string>
-    <string name="forums_access_level_comment">Сэтгэгдэл бичих</string>
-    <string name="forums_access_level_post">Нийтлэх</string>
-    <string name="forums_access_level_none">Алга</string>
     <string name="forums_members_empty">Гишүүн алга</string>
     <string name="forums_banner_dismiss">Баннер хаах</string>
     <string name="forums_ai_mode_tag">Шошголох</string>
     <string name="forums_ai_account_default">Үндсэн бүртгэл</string>
-    <string name="forums_ai_prompt_reset">Анхдагчид буцаах</string>
     <string name="forums_settings_unsubscribe">Захиалгаас гарах</string>
     <string name="forums_moderation_title">Хяналт</string>
     <string name="forums_moderation_tab_queue">Дараалал</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Сэдвийн гадуур</string>
     <string name="forums_report_reason_other">Бусад</string>
     <string name="forums_post_default_author">Хэрэглэгч</string>
-    <string name="forums_comments">Сэтгэгдэлүүд</string>
     <string name="forums_no_comments">Сэтгэгдэл алга</string>
-    <string name="forums_comment_save">Хадгалах</string>
     <string name="forums_comment_edit">Сэтгэгдэл засах</string>
     <string name="forums_comment_edit_title">Сэтгэгдэл засах</string>
-    <string name="forums_comment_edit_attach">Файл хавсаргах</string>
     <string name="forums_comment_delete">Сэтгэгдэл устгах</string>
     <string name="forums_comment_delete_title">Сэтгэгдэл устгах</string>
     <string name="forums_comment_reply">Хариулах</string>
-    <string name="forums_settings_rename">Нэр өөрчлөх</string>
-    <string name="forums_settings_save">Хадгалах</string>
     <string name="forums_settings_delete">Форум устгах</string>
     <string name="forums_settings_delete_title">Форум устгах</string>
     <string name="forums_forum_not_found">Форум олдсонгүй</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Илгээх</string>
     <string name="forums_post_body_field">Агуулга</string>
-    <string name="forums_post_edit_body_field">Агуулга</string>
     <string name="forums_comment_edit_body_field">Агуулга</string>
-    <string name="forums_tag_clear">Шүүлтүүр цэвэрлэх</string>
-    <string name="forums_post_tag_add">Шошго нэмэх</string>
     <string name="forums_write_comment">Сэтгэгдэл бичих…</string>
-    <string name="forums_auth_login_failed">Нэвтрэх амжилтгүй</string>
 
     <string name="notification_channel_forums">Форумын мэдэгдэл</string>
-    <string name="forums_auth_brand">Mochi Форумууд</string>
-    <string name="forums_auth_create_identity_failed">Танилт үүсгэж чадсангүй</string>
-    <string name="forums_auth_mfa_unsupported">MFA-г гар утасны аппад одоогоор дэмжихгүй</string>
-    <string name="forums_auth_enter_code_sent">%1$s руу илгээсэн кодыг оруулна уу</string>
-    <string name="forums_auth_create_identity">Танилтаа үүсгэх</string>
     <string name="forums_list_empty">Одоохондоо форум алга</string>
     <string name="forums_list_unsubscribe_message">Энэ форумаас бүртгэлээ цуцлахдаа итгэлтэй байна уу?</string>
     <string name="forums_find_search_placeholder">Форум хайх эсвэл URL буулгана уу</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Эсрэг санал</string>
     <string name="forums_post_quote">Хариулт дахь ишлэл</string>
     <string name="forums_comment_quote">Хариулт дахь ишлэл</string>
-    <string name="forums_post_tag_remove">Шошго хасах</string>
     <string name="forums_access_add">Хандалтын дүрэм нэмэх</string>
     <string name="forums_access_empty">Дүрэм алга — үндсэн тохиргоо үйлчилнэ</string>
-    <string name="forums_access_target_hint">Бүртгэлийн ID, @бүлэг, * (бүгд), эсвэл + (гишүүд)</string>
-    <string name="forums_access_level">Түвшин</string>
-    <string name="forums_access_level_moderate">Зохицуулах</string>
     <string name="forums_members_search">Гишүүдийг шүүх</string>
     <string name="forums_banner_description">Форумын дээд хэсэгт харуулах Markdown.</string>
     <string name="forums_banner_placeholder">Баннерын текст оруулна уу (Markdown дэмжинэ)…</string>
-    <string name="forums_ai_mode_label">Горим: %1$s</string>
-    <string name="forums_ai_mode_heading">AI горим</string>
     <string name="forums_ai_mode_off">Идэвхгүй</string>
-    <string name="forums_ai_account">AI бүртгэл</string>
-    <string name="forums_ai_prompt_tag">Шошголох заавар</string>
-    <string name="forums_ai_prompt_score">Оноо өгөх заавар</string>
-    <string name="forums_ai_post_prompt_label">Нийтлэлийн шошгоны заавар</string>
-    <string name="forums_ai_comment_prompt_label">Сэтгэгдлийн шошгоны заавар</string>
-    <string name="forums_settings_fingerprint">Хурууны хээ: %1$s</string>
-    <string name="forums_settings_clear_notifications">Мэдэгдлүүдийг арилгах</string>
     <string name="forums_moderation_queue_empty">Хүлээгдэж буй зүйл алга</string>
     <string name="forums_moderation_report_details">Дэлгэрэнгүй: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Шийдвэрлэсэн: %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s-д хариулж байна</string>
     <string name="forums_comment_clear_reply">Хариултыг арилгах</string>
     <string name="forums_settings_title">%1$s тохиргоо</string>
-    <string name="forums_settings_rename_label">Форумын нэр</string>
-    <string name="forums_settings_danger_zone">Аюултай бүс</string>
     <string name="forums_settings_delete_message">Энэ нь форум болон түүний бүх нийтлэлийг бүрмөсөн устгана. Үүнийг буцаах боломжгүй.</string>
 
-    <string name="forums_tag_interest_up">Сонирхлыг идэвхжүүлэх</string>
-    <string name="forums_tag_interest_down">Сонирхлыг бууруулах</string>
-    <string name="forums_tag_interest_remove">Сонирхол хасах</string>
     <string name="forums_access_tab_users">Хэрэглэгчид</string>
     <string name="forums_access_tab_groups">Бүлгүүд</string>
-    <string name="forums_access_tab_manual">Гар аргаар</string>
     <string name="forums_access_search_users">Хэрэглэгчид хайх</string>
     <string name="forums_access_no_groups">Боломжит групп байхгүй</string>
     <string name="forums_saved_title">Хадгалагдсан</string>

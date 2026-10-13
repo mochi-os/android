@@ -19,7 +19,6 @@
     <string name="crm_link">Havola</string>
     <string name="crm_design">Dizayn</string>
     <string name="crm_export_failed">Eksportni saqlab bo\'lmadi</string>
-    <string name="crm_sort_direction">Yoʻnalish</string>
     <string name="crm_sort_rank">Qoʻlda</string>
     <string name="crm_sort_created">Yaratildi</string>
     <string name="crm_sort_updated">Yangilangan</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Sinf qoʻshish</string>
     <string name="crm_classes_create">Yaratish</string>
     <string name="crm_class_name">Nomi</string>
-    <string name="crm_class_save_name">Nomni saqlash</string>
     <string name="crm_class_title_field">Sarlavha maydoni</string>
     <string name="crm_class_fields">Maydonlar</string>
     <string name="crm_class_add_field">Maydon qoʻshish</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Talab qilinadi</string>
     <string name="crm_field_position_default">Standart</string>
     <string name="crm_field_position_sidebar">Yon panel</string>
-    <string name="crm_field_save">Oʻzgarishlarni saqlash</string>
     <string name="crm_field_options">Variantlar</string>
     <string name="crm_field_add_option">Variant qoʻshish</string>
     <string name="crm_field_delete">Maydonni oʻchirish</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM qidirish</string>
     <string name="crm_list_no_matching">Mos keladigan CRM yo\'q</string>
     <string name="crm_list_empty">Hali CRM yo\'q</string>
-    <string name="crm_create_template">Shablon</string>
     <string name="crm_find_search_placeholder">CRM qidiring yoki URL joylang</string>
     <string name="crm_find_search_hint">Obuna bo\'lish uchun CRM qidiring</string>
     <string name="crm_create_object_parent_none">(yo\'q)</string>

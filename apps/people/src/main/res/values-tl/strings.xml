@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Magmensahe</string>
     <string name="people_contacts_no_people_found">Walang nakitang tao</string>
     <string name="people_contacts_try_adjusting">Subukang ayusin ang iyong paghahanap</string>
-    <string name="people_contact_section_address">Address</string>
     <string name="people_contact_section_detail">Mga detalye</string>
     <string name="people_contact_name">Pangalan</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Palitan ang pangalan</string>
     <string name="people_contacts_sort_name">Pangalan</string>
     <string name="people_contacts_sort_recent">Kamakailang idinagdag</string>
-    <string name="people_contacts_thats_you">Ikaw iyan</string>
     <string name="people_contacts_try_different_search">Subukan ang ibang termino sa paghahanap</string>
     <string name="people_contacts_unfriend">Alisin ang kaibigan</string>
     <string name="people_add_contact_search_placeholder">Mag-type para maghanap…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Walang nahanap na contact</string>
     <string name="people_contacts_add_to_start">Magdagdag ng contact para makipag-ugnayan</string>
     <string name="people_contacts_actions">Mga aksyon sa contact</string>
-    <string name="people_contacts_friend">Kaibigan</string>
     <string name="people_contacts_invite">Imbitahan</string>
     <string name="people_contacts_unfriend_confirm">Hindi na magiging kaibigan mo si %1$s. Mananatili ang contact sa iyong address book.</string>
     <string name="people_contacts_delete">I-delete ang contact</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Nagbago ang contact</string>
     <string name="people_add_contact_title">Magdagdag ng contact</string>
     <string name="people_add_contact_add">Idagdag sa mga contact</string>
-    <string name="people_add_contact_in_contacts">Nasa mga contact</string>
     <string name="people_books_create">Gumawa ng address book</string>
     <string name="people_books_delete">Tanggalin ang address book</string>
     <plurals name="people_books_delete_confirm">

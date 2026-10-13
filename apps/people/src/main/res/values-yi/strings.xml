@@ -121,7 +121,6 @@
     <string name="people_contacts_message">שיקן אַ בריוו</string>
     <string name="people_contacts_no_people_found">קיין מענטשן ניט געפֿונען</string>
     <string name="people_contacts_try_adjusting">פּרוּווט באַאַרבעטן אײַער זוך</string>
-    <string name="people_contact_section_address">אַדרעס</string>
     <string name="people_contact_section_detail">פּרטים</string>
     <string name="people_contact_name">נאָמען</string>
     <string name="people_contact_email">בליצפּאָסט</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">איבערטויפֿן</string>
     <string name="people_contacts_sort_name">נאָמען</string>
     <string name="people_contacts_sort_recent">לעצטנס צוגעלייגט</string>
-    <string name="people_contacts_thats_you">דאָס זײַט איר</string>
     <string name="people_contacts_try_different_search">פּרוּווט אַן אַנדער זוך־אויסדרוק</string>
     <string name="people_contacts_unfriend">אַראָפּנעמען פֿרײַנד</string>
     <string name="people_add_contact_search_placeholder">טיפּט צו זוכן…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">קיין קאָנטאַקטן נישט געפֿונען</string>
     <string name="people_contacts_add_to_start">צולייגן קאָנטאַקטן כּדי אָנצוהייבן</string>
     <string name="people_contacts_actions">קאָנטאַקט אַקציעס</string>
-    <string name="people_contacts_friend">פֿרײַנד</string>
     <string name="people_contacts_invite">אײַנלאַדן</string>
     <string name="people_contacts_unfriend_confirm">%1$s וועט מער נישט זײַן אײַער פֿרײַנד. דער קאָנטאַקט בלײַבט אין אײַער אַדרעס־בוך.</string>
     <string name="people_contacts_delete">אויסמעקן קאָנטאַקט</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">דער קאָנטאַקט האָט זיך געענדערט</string>
     <string name="people_add_contact_title">צולייגן קאָנטאַקט</string>
     <string name="people_add_contact_add">צולייגן צו די קאָנטאַקטן</string>
-    <string name="people_add_contact_in_contacts">אין די קאָנטאַקטן</string>
     <string name="people_books_create">שאַפֿן אַדרעס־בוך</string>
     <string name="people_books_delete">אויסמעקן אַדרעס־בוך</string>
     <plurals name="people_books_delete_confirm">

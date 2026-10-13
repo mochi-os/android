@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chess_app_title">Chesi</string>
-    <string name="chess_sidebar_header">Chesi</string>
     <string name="chess_sidebar_active">Michezo Inayoendelea</string>
     <string name="chess_sidebar_completed">Imekamilika</string>
     <string name="chess_sidebar_new_game">Mchezo mpya</string>
-    <string name="chess_section_active">Michezo Inayoendelea</string>
-    <string name="chess_section_completed">Imekamilika</string>
-    <string name="chess_new_game">Mchezo mpya</string>
     <string name="chess_empty_title">Hakuna michezo bado</string>
     <string name="chess_new_title">Mchezo Mpya</string>
     <string name="chess_new_pick_opponent">Chagua mpinzani</string>
@@ -55,8 +51,6 @@
     <string name="chess_channel_name">Arifa za Chess</string>
     <string name="chess_channel_description">Arifa kuhusu hatua, mapendekezo ya sare, na matokeo ya michezo.</string>
     <string name="chess_open_sidebar">Fungua upau wa pembeni</string>
-    <string name="chess_empty_subtitle">Anza mchezo wako wa kwanza kucheza chess na rafiki.</string>
-    <string name="chess_empty_start_button">Anza mchezo wako wa kwanza</string>
     <string name="chess_detail_unavailable">Mchezo haupatikani</string>
     <string name="chess_delete_title">Futa mchezo?</string>
     <string name="chess_delete_message">Hii inaondoa mchezo kutoka kwenye orodha yako.</string>

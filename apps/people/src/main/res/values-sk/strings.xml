@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Napísať správu</string>
     <string name="people_contacts_no_people_found">Nenašli sa žiadni ľudia</string>
     <string name="people_contacts_try_adjusting">Skúste upraviť vyhľadávanie</string>
-    <string name="people_contact_section_address">Adresa</string>
     <string name="people_contact_section_detail">Podrobnosti</string>
     <string name="people_contact_name">Meno</string>
     <string name="people_contact_email">E-mail</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Premenovať</string>
     <string name="people_contacts_sort_name">Meno</string>
     <string name="people_contacts_sort_recent">Nedávno pridané</string>
-    <string name="people_contacts_thats_you">To ste vy</string>
     <string name="people_contacts_try_different_search">Skúste iný hľadaný výraz</string>
     <string name="people_contacts_unfriend">Odstrániť priateľa</string>
     <string name="people_add_contact_search_placeholder">Píšte na vyhľadávanie…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Nenašli sa žiadne kontakty</string>
     <string name="people_contacts_add_to_start">Pridajte kontakty a začnite sa spájať</string>
     <string name="people_contacts_actions">Akcie kontaktu</string>
-    <string name="people_contacts_friend">Priateľ</string>
     <string name="people_contacts_invite">Pozvať</string>
     <string name="people_contacts_unfriend_confirm">%1$s už nebude vaším priateľom. Kontakt zostane vo vašom adresári.</string>
     <string name="people_contacts_delete">Odstrániť kontakt</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakt sa zmenil</string>
     <string name="people_add_contact_title">Pridať kontakt</string>
     <string name="people_add_contact_add">Pridať do kontaktov</string>
-    <string name="people_add_contact_in_contacts">V kontaktoch</string>
     <string name="people_books_create">Vytvoriť adresár</string>
     <string name="people_books_delete">Odstrániť adresár</string>
     <plurals name="people_books_delete_confirm">

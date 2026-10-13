@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Thumela umyalezo</string>
     <string name="people_contacts_no_people_found">Abakho abantu abatholakele</string>
     <string name="people_contacts_try_adjusting">Zama ukulungisa ukusesha kwakho</string>
-    <string name="people_contact_section_address">Ikheli</string>
     <string name="people_contact_section_detail">Imininingwane</string>
     <string name="people_contact_name">Igama</string>
     <string name="people_contact_email">I-imeyili</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Qamba kabusha</string>
     <string name="people_contacts_sort_name">Igama</string>
     <string name="people_contacts_sort_recent">Kwengezwe muva nje</string>
-    <string name="people_contacts_thats_you">Yiwena lowo</string>
     <string name="people_contacts_try_different_search">Zama elinye igama lokusesha</string>
     <string name="people_contacts_unfriend">Susa umngani</string>
     <string name="people_add_contact_search_placeholder">Thayipha ukuze useshe…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Abekho othintana nabo abatholakele</string>
     <string name="people_contacts_add_to_start">Engeza othintana nabo ukuze uqalise</string>
     <string name="people_contacts_actions">Izenzo zoxhumana naye</string>
-    <string name="people_contacts_friend">Umngane</string>
     <string name="people_contacts_invite">Mema</string>
     <string name="people_contacts_unfriend_confirm">%1$s ngeke esaba umngane wakho. Uxhumana naye uhlala encwadini yakho yamakheli.</string>
     <string name="people_contacts_delete">Susa oxhumana naye</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Oxhumana naye ushintshile</string>
     <string name="people_add_contact_title">Engeza oxhumana naye</string>
     <string name="people_add_contact_add">Engeza kothintana nabo</string>
-    <string name="people_add_contact_in_contacts">Koxhumana nabo</string>
     <string name="people_books_create">Dala incwadi yamakheli</string>
     <string name="people_books_delete">Susa incwadi yamakheli</string>
     <plurals name="people_books_delete_confirm">

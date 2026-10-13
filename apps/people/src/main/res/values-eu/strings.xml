@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Bidali mezua</string>
     <string name="people_contacts_no_people_found">Ez da pertsonarik aurkitu</string>
     <string name="people_contacts_try_adjusting">Saiatu zure bilaketa doitzen</string>
-    <string name="people_contact_section_address">Helbidea</string>
     <string name="people_contact_section_detail">Xehetasunak</string>
     <string name="people_contact_name">Izena</string>
     <string name="people_contact_email">Posta elektronikoa</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Aldatu izena</string>
     <string name="people_contacts_sort_name">Izena</string>
     <string name="people_contacts_sort_recent">Duela gutxi gehituta</string>
-    <string name="people_contacts_thats_you">Hori zu zara</string>
     <string name="people_contacts_try_different_search">Saiatu beste bilaketa-termino batekin</string>
     <string name="people_contacts_unfriend">Kendu laguna</string>
     <string name="people_add_contact_search_placeholder">Idatzi bilatzeko…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Ez da kontakturik aurkitu</string>
     <string name="people_contacts_add_to_start">Gehitu kontaktuak konektatzen hasteko</string>
     <string name="people_contacts_actions">Kontaktuaren ekintzak</string>
-    <string name="people_contacts_friend">Laguna</string>
     <string name="people_contacts_invite">Gonbidatu</string>
     <string name="people_contacts_unfriend_confirm">%1$s ez da gehiago zure laguna izango. Kontaktua zure helbide-liburuan geratzen da.</string>
     <string name="people_contacts_delete">Ezabatu kontaktua</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontaktua aldatu da</string>
     <string name="people_add_contact_title">Gehitu kontaktua</string>
     <string name="people_add_contact_add">Gehitu kontaktuetara</string>
-    <string name="people_add_contact_in_contacts">Kontaktuetan</string>
     <string name="people_books_create">Sortu helbide-liburua</string>
     <string name="people_books_delete">Ezabatu helbide-liburua</string>
     <plurals name="people_books_delete_confirm">

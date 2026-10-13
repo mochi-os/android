@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Senda skilaboð</string>
     <string name="people_contacts_no_people_found">Engir notendur fundust</string>
     <string name="people_contacts_try_adjusting">Reyndu að breyta leitinni þinni</string>
-    <string name="people_contact_section_address">Vistfang</string>
     <string name="people_contact_section_detail">Smáatriði</string>
     <string name="people_contact_name">Nafn</string>
     <string name="people_contact_email">Tölvupóstur</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Endurnefna</string>
     <string name="people_contacts_sort_name">Nafn</string>
     <string name="people_contacts_sort_recent">Nýlega bætt við</string>
-    <string name="people_contacts_thats_you">Það ert þú</string>
     <string name="people_contacts_try_different_search">Prófaðu annað leitarorð</string>
     <string name="people_contacts_unfriend">Fjarlægja vin</string>
     <string name="people_add_contact_search_placeholder">Sláðu inn til að leita…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Engir tengiliðir fundust</string>
     <string name="people_contacts_add_to_start">Bættu við tengiliðum til að byrja</string>
     <string name="people_contacts_actions">Aðgerðir tengiliðar</string>
-    <string name="people_contacts_friend">Vinur</string>
     <string name="people_contacts_invite">Bjóða</string>
     <string name="people_contacts_unfriend_confirm">%1$s verður ekki lengur vinur þinn. Tengiliðurinn verður áfram í heimilisfangaskránni þinni.</string>
     <string name="people_contacts_delete">Eyða tengilið</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Tengiliðurinn breyttist</string>
     <string name="people_add_contact_title">Bæta við tengilið</string>
     <string name="people_add_contact_add">Bæta við tengiliði</string>
-    <string name="people_add_contact_in_contacts">Í tengiliðum</string>
     <string name="people_books_create">Búa til heimilisfangaskrá</string>
     <string name="people_books_delete">Eyða heimilisfangaskrá</string>
     <plurals name="people_books_delete_confirm">

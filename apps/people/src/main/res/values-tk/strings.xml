@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Habar iber</string>
     <string name="people_contacts_no_people_found">Adamlar tapylmady</string>
     <string name="people_contacts_try_adjusting">Gözlegiňi düzelt</string>
-    <string name="people_contact_section_address">Salgy</string>
     <string name="people_contact_section_detail">Jikme-jiklikler</string>
     <string name="people_contact_name">At</string>
     <string name="people_contact_email">E-poçta</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Adyny üýtget</string>
     <string name="people_contacts_sort_name">At</string>
     <string name="people_contacts_sort_recent">Ýaňy-ýakynda goşuldy</string>
-    <string name="people_contacts_thats_you">Bu sen</string>
     <string name="people_contacts_try_different_search">Başga gözleg sözüni synanyş</string>
     <string name="people_contacts_unfriend">Dosty aýyr</string>
     <string name="people_add_contact_search_placeholder">Gözlemek üçin ýazyň…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Kontakt tapylmady</string>
     <string name="people_contacts_add_to_start">Aragatnaşyga başlamak üçin kontakt goşuň</string>
     <string name="people_contacts_actions">Kontakt hereketleri</string>
-    <string name="people_contacts_friend">Dost</string>
     <string name="people_contacts_invite">Çagyr</string>
     <string name="people_contacts_unfriend_confirm">%1$s indi siziň dostuňyz bolmaz. Kontakt salgy kitabyňyzda galýar.</string>
     <string name="people_contacts_delete">Kontakty poz</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakt üýtgedi</string>
     <string name="people_add_contact_title">Kontakt goş</string>
     <string name="people_add_contact_add">Kontaktlara goş</string>
-    <string name="people_add_contact_in_contacts">Kontaktlarda</string>
     <string name="people_books_create">Salgy kitabyny döret</string>
     <string name="people_books_delete">Salgy kitabyny poz</string>
     <plurals name="people_books_delete_confirm">

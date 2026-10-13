@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">દર્શાવનાર નામ</string>
-    <string name="forums_auth_verification_failed">ચકાસણી નિષ્ફળ</string>
     <string name="forums_list_title">ફોરમ્સ</string>
     <string name="forums_list_find">ફોરમ્સ શોધો</string>
     <string name="forums_list_unsubscribe">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="forums_list_unsubscribe_title">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="forums_create_title">ફોરમ બનાવો</string>
     <string name="forums_create_name">ફોરમ નામ</string>
-    <string name="forums_create_privacy">ગોપનીયતા</string>
-    <string name="forums_create_private">ખાનગી</string>
-    <string name="forums_create_public">જાહેર</string>
     <string name="forums_create_action">ફોરમ બનાવો</string>
     <string name="forums_find_title">ફોરમ્સ શોધો</string>
     <string name="forums_find_recommended">ભલામણ કરેલ</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">પોસ્ટ કરો</string>
     <string name="forums_post_edit">પોસ્ટ એડિટ કરો</string>
     <string name="forums_post_edit_title">પોસ્ટ એડિટ કરો</string>
-    <string name="forums_post_edit_title_field">શીર્ષક</string>
-    <string name="forums_post_save">સાચવો</string>
     <string name="forums_post_delete">પોસ્ટ કાઢી નાખો</string>
     <string name="forums_post_delete_title">પોસ્ટ કાઢી નાખો</string>
     <string name="forums_post_locked">લૉક કરેલું</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">સભ્યો</string>
     <string name="forums_tab_banner">બૅનર</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">વપરાશકર્તા અથવા ગ્રુપ</string>
-    <string name="forums_access_level_view">જુઓ</string>
-    <string name="forums_access_level_vote">મત આપો</string>
-    <string name="forums_access_level_comment">ટિપ્પણી કરો</string>
-    <string name="forums_access_level_post">પોસ્ટ કરો</string>
-    <string name="forums_access_level_none">કોઈ નહીં</string>
     <string name="forums_members_empty">કોઈ સભ્યો નથી</string>
     <string name="forums_banner_dismiss">બેનર રદ કરો</string>
     <string name="forums_ai_mode_tag">ટૅગ કરો</string>
     <string name="forums_ai_account_default">ડિફૉલ્ટ ખાતું</string>
-    <string name="forums_ai_prompt_reset">ડિફૉલ્ટ પર રીસેટ કરો</string>
     <string name="forums_settings_unsubscribe">અનસબ્સ્ક્રાઇબ કરો</string>
     <string name="forums_moderation_title">મોડરેશન</string>
     <string name="forums_moderation_tab_queue">કતાર</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">વિષય બહાર</string>
     <string name="forums_report_reason_other">અન્ય</string>
     <string name="forums_post_default_author">વપરાશકર્તા</string>
-    <string name="forums_comments">ટિપ્પણીઓ</string>
     <string name="forums_no_comments">હજુ સુધી કોઈ કૉમેન્ટ્સ નથી</string>
-    <string name="forums_comment_save">સાચવો</string>
     <string name="forums_comment_edit">કમેન્ટ એડિટ કરો</string>
     <string name="forums_comment_edit_title">કમેન્ટ એડિટ કરો</string>
-    <string name="forums_comment_edit_attach">ફાઇલો જોડો</string>
     <string name="forums_comment_delete">ટિપ્પણી કાઢી નાખો</string>
     <string name="forums_comment_delete_title">ટિપ્પણી કાઢી નાખો</string>
     <string name="forums_comment_reply">જવાબ આપો</string>
-    <string name="forums_settings_rename">નામ બદલો</string>
-    <string name="forums_settings_save">સાચવો</string>
     <string name="forums_settings_delete">ફોરમ કાઢી નાખો</string>
     <string name="forums_settings_delete_title">ફોરમ કાઢી નાખો</string>
     <string name="forums_forum_not_found">ફોરમ મળ્યું નહીં</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">મોકલો</string>
     <string name="forums_post_body_field">સામગ્રી</string>
-    <string name="forums_post_edit_body_field">સામગ્રી</string>
     <string name="forums_comment_edit_body_field">સામગ્રી</string>
-    <string name="forums_auth_login_failed">લૉગિન નિષ્ફળ</string>
-    <string name="forums_auth_create_identity_failed">ઓળખ બનાવવામાં નિષ્ફળ</string>
-    <string name="forums_auth_mfa_unsupported">મોબાઇલ ઍપમાં MFA હજુ સમર્થિત નથી</string>
-    <string name="forums_auth_enter_code_sent">%1$s પર મોકલેલો કોડ દાખલ કરો</string>
-    <string name="forums_auth_create_identity">તમારી ઓળખ બનાવો</string>
-    <string name="forums_tag_clear">ફિલ્ટર સાફ કરો</string>
-    <string name="forums_post_tag_add">ટૅગ ઉમેરો</string>
     <string name="forums_write_comment">ટિપ્પણી લખો…</string>
 
     <string name="notification_channel_forums">ફોરમ સૂચનાઓ</string>
-    <string name="forums_auth_brand">Mochi ફોરમ્સ</string>
     <string name="forums_list_empty">હજુ સુધી કોઈ ફોરમ નથી</string>
     <string name="forums_list_unsubscribe_message">શું તમે ખરેખર આ ફોરમમાંથી અનસબ્સ્ક્રાઇબ કરવા માંગો છો?</string>
     <string name="forums_find_search_placeholder">ફોરમ શોધો અથવા URL પેસ્ટ કરો</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">ડાઉનવોટ</string>
     <string name="forums_post_quote">જવાબમાં અવતરણ</string>
     <string name="forums_comment_quote">જવાબમાં અવતરણ</string>
-    <string name="forums_post_tag_remove">ટૅગ દૂર કરો</string>
     <string name="forums_access_add">ઍક્સેસ નિયમ ઉમેરો</string>
     <string name="forums_access_empty">હજુ સુધી કોઈ નિયમ નથી — ડિફૉલ્ટ લાગુ થાય છે</string>
-    <string name="forums_access_target_hint">એન્ટિટી ID, @group, * (દરેક), અથવા + (સભ્યો)</string>
-    <string name="forums_access_level">સ્તર</string>
-    <string name="forums_access_level_moderate">મધ્યસ્થી</string>
     <string name="forums_members_search">સભ્યો ફિલ્ટર કરો</string>
     <string name="forums_banner_description">ફોરમની ટોચ પર બતાવેલ Markdown.</string>
     <string name="forums_banner_placeholder">બેનરનો ટેક્સ્ટ દાખલ કરો (Markdown સમર્થિત)…</string>
-    <string name="forums_ai_mode_label">મોડ: %1$s</string>
-    <string name="forums_ai_mode_heading">AI મોડ</string>
     <string name="forums_ai_mode_off">નિષ્ક્રિય</string>
-    <string name="forums_ai_account">AI ખાતું</string>
-    <string name="forums_ai_prompt_tag">ટૅગિંગ પ્રોમ્પ્ટ</string>
-    <string name="forums_ai_prompt_score">સ્કોરિંગ પ્રોમ્પ્ટ</string>
-    <string name="forums_ai_post_prompt_label">પોસ્ટ ટૅગ માટે પ્રોમ્પ્ટ</string>
-    <string name="forums_ai_comment_prompt_label">ટિપ્પણી ટૅગ માટે પ્રોમ્પ્ટ</string>
-    <string name="forums_settings_fingerprint">ફિંગરપ્રિન્ટ: %1$s</string>
-    <string name="forums_settings_clear_notifications">સૂચનાઓ સાફ કરો</string>
     <string name="forums_moderation_queue_empty">કંઈપણ બાકી નથી</string>
     <string name="forums_moderation_report_details">વિગતો: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s દ્વારા ઉકેલાયું — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s ને જવાબ આપી રહ્યા છો</string>
     <string name="forums_comment_clear_reply">જવાબ સાફ કરો</string>
     <string name="forums_settings_title">%1$s સેટિંગ્સ</string>
-    <string name="forums_settings_rename_label">ફોરમ નામ</string>
-    <string name="forums_settings_danger_zone">જોખમ ઝોન</string>
     <string name="forums_settings_delete_message">આ ફોરમ અને તેની બધી પોસ્ટ્સ કાયમી ધોરણે કાઢી નાખશે. આ પૂર્વવત્ કરી શકાતું નથી.</string>
 
-    <string name="forums_tag_interest_up">રુચિ વધારો</string>
-    <string name="forums_tag_interest_down">રસ ઘટાડો</string>
-    <string name="forums_tag_interest_remove">રસ દૂર કરો</string>
     <string name="forums_access_tab_users">વપરાશકર્તાઓ</string>
     <string name="forums_access_tab_groups">ગ્રુપ્સ</string>
-    <string name="forums_access_tab_manual">મેન્યુઅલ</string>
     <string name="forums_access_search_users">વપરાશકર્તાઓ શોધો</string>
     <string name="forums_access_no_groups">કોઈ ગ્રૂપ્સ ઉપલબ્ધ નથી</string>
     <string name="forums_saved_title">સાચવેલ</string>

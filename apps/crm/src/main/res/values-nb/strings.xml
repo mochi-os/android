@@ -19,7 +19,6 @@
     <string name="crm_link">Lenke</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Kunne ikke lagre eksporten</string>
-    <string name="crm_sort_direction">Retning</string>
     <string name="crm_sort_rank">Manuell</string>
     <string name="crm_sort_created">Opprettet</string>
     <string name="crm_sort_updated">Oppdatert</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Legg til klasse</string>
     <string name="crm_classes_create">Opprett</string>
     <string name="crm_class_name">Navn</string>
-    <string name="crm_class_save_name">Lagre navn</string>
     <string name="crm_class_title_field">Tittelfelt</string>
     <string name="crm_class_fields">Felter</string>
     <string name="crm_class_add_field">Legg til felt</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Påkrevd</string>
     <string name="crm_field_position_default">Standard</string>
     <string name="crm_field_position_sidebar">Sidefelt</string>
-    <string name="crm_field_save">Lagre endringer</string>
     <string name="crm_field_options">Valg</string>
     <string name="crm_field_add_option">Legg til alternativ</string>
     <string name="crm_field_delete">Slett felt</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Søk i CRM</string>
     <string name="crm_list_no_matching">Ingen treff i CRM</string>
     <string name="crm_list_empty">Ingen CRM ennå</string>
-    <string name="crm_create_template">Mal</string>
     <string name="crm_find_search_placeholder">Søk i CRM eller lim inn URL</string>
     <string name="crm_find_search_hint">Søk etter CRM å abonnere på</string>
     <string name="crm_create_object_parent_none">(ingen)</string>

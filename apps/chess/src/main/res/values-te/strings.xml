@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">చెస్</string>
-    <string name="chess_sidebar_header">చెస్</string>
     <string name="chess_sidebar_active">క్రియాశీల ఆటలు</string>
     <string name="chess_sidebar_completed">పూర్తయింది</string>
     <string name="chess_sidebar_new_game">కొత్త గేమ్</string>
-    <string name="chess_section_active">క్రియాశీల ఆటలు</string>
-    <string name="chess_section_completed">పూర్తయింది</string>
-    <string name="chess_new_game">కొత్త గేమ్</string>
     <string name="chess_empty_title">ఇంకా గేమ్‌లు లేవు</string>
     <string name="chess_new_title">కొత్త గేమ్</string>
     <string name="chess_new_pick_opponent">ప్రత్యర్థిని ఎంచుకోండి</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">చెస్ ఎత్తుగడలు, డ్రా ఆఫర్లు మరియు ఆట ఫలితాల గురించి నోటిఫికేషన్‌లు.</string>
     <string name="chess_open_sidebar">సైడ్‌బార్ తెరువు</string>
-    <string name="chess_empty_subtitle">స్నేహితుడితో చెస్ ఆడేందుకు మీ మొదటి ఆటను ప్రారంభించండి.</string>
-    <string name="chess_empty_start_button">మీ మొదటి ఆటను ప్రారంభించండి</string>
     <string name="chess_detail_unavailable">ఆట అందుబాటులో లేదు</string>
     <string name="chess_delete_title">గేమ్‌ను తొలగించాలా?</string>
     <string name="chess_delete_message">ఇది ఆటను మీ జాబితా నుండి తీసివేస్తుంది.</string>

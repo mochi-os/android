@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Maqaa mul\'atu</string>
-    <string name="forums_auth_verification_failed">Mirkaneessuun hin milkoofne</string>
     <string name="forums_list_title">Foorumiiwwan</string>
     <string name="forums_list_find">Foramiiwwan argi</string>
     <string name="forums_list_unsubscribe">Galaa\'uu kaasi</string>
     <string name="forums_list_unsubscribe_title">Galaa\'uu kaasi</string>
     <string name="forums_create_title">Marii uumi</string>
     <string name="forums_create_name">Maqaa marichaa</string>
-    <string name="forums_create_privacy">Iccitii</string>
-    <string name="forums_create_private">Dhuunfaa</string>
-    <string name="forums_create_public">Ifa</string>
     <string name="forums_create_action">Marii uumi</string>
     <string name="forums_find_title">Foramiiwwan argi</string>
     <string name="forums_find_recommended">Yaadachifame</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Maxxansi</string>
     <string name="forums_post_edit">Maxxansa sirreessi</string>
     <string name="forums_post_edit_title">Maxxansa sirreessi</string>
-    <string name="forums_post_edit_title_field">Mata duree</string>
-    <string name="forums_post_save">Olkaa\'i</string>
     <string name="forums_post_delete">Maxxansa haqi</string>
     <string name="forums_post_delete_title">Maxxansa haqi</string>
     <string name="forums_post_locked">Cufame</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Miseensota</string>
     <string name="forums_tab_banner">Bannerii</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Fayyadamaa ykn garee</string>
-    <string name="forums_access_level_view">Daawwadhu</string>
-    <string name="forums_access_level_vote">Sagalee kenni</string>
-    <string name="forums_access_level_comment">Yaada kenni</string>
-    <string name="forums_access_level_post">Maxxansi</string>
-    <string name="forums_access_level_none">Tokko illee</string>
     <string name="forums_members_empty">Miseensonni hin jiran</string>
     <string name="forums_banner_dismiss">Bannerii dhiisi</string>
     <string name="forums_ai_mode_tag">Mallatteessi</string>
     <string name="forums_ai_account_default">Akkaawuntii idilee</string>
-    <string name="forums_ai_prompt_reset">Gara durtiitti deebisi</string>
     <string name="forums_settings_unsubscribe">Galaa\'uu kaasi</string>
     <string name="forums_moderation_title">To\'annoo</string>
     <string name="forums_moderation_tab_queue">Tarree</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Ala mata duree</string>
     <string name="forums_report_reason_other">Biraa</string>
     <string name="forums_post_default_author">Fayyadamaa</string>
-    <string name="forums_comments">Yaadawwan</string>
     <string name="forums_no_comments">Hanga ammaatti yaadni hin jiru</string>
-    <string name="forums_comment_save">Olkaa\'i</string>
     <string name="forums_comment_edit">Yaada sirreessi</string>
     <string name="forums_comment_edit_title">Yaada sirreessi</string>
-    <string name="forums_comment_edit_attach">Faayilii hidhi</string>
     <string name="forums_comment_delete">Yaada haqi</string>
     <string name="forums_comment_delete_title">Yaada haqi</string>
     <string name="forums_comment_reply">Deebii</string>
-    <string name="forums_settings_rename">Maqaa jijjiiri</string>
-    <string name="forums_settings_save">Olkaa\'i</string>
     <string name="forums_settings_delete">Marii haqi</string>
     <string name="forums_settings_delete_title">Marii haqi</string>
     <string name="forums_forum_not_found">Foramiin hin argamne</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Ergi</string>
     <string name="forums_post_body_field">Qabiyyee</string>
-    <string name="forums_post_edit_body_field">Qabiyyee</string>
     <string name="forums_comment_edit_body_field">Qabiyyee</string>
-    <string name="forums_tag_clear">Calaltuu qulqulleessuu</string>
-    <string name="forums_post_tag_add">Mallattoo dabali</string>
     <string name="forums_write_comment">Yaada barreessi…</string>
-    <string name="forums_auth_login_failed">Galmaa\'uun hin milkoofne</string>
 
     <string name="notification_channel_forums">Beeksisawwan marii</string>
-    <string name="forums_auth_brand">Mochi Foorumiiwwan</string>
-    <string name="forums_auth_create_identity_failed">Eenyummaa uumuun hin milkoofne</string>
-    <string name="forums_auth_mfa_unsupported">MFA ammaaf appii moobaayilii irratti hin deggeramne</string>
-    <string name="forums_auth_enter_code_sent">Koodii gara %1$s ergame galchi</string>
-    <string name="forums_auth_create_identity">Eenyummaa kee uumi</string>
     <string name="forums_list_empty">Ammaaf mariin hin jiru</string>
     <string name="forums_list_unsubscribe_message">Marii kana irraa galmee haquu barbaaddaa?</string>
     <string name="forums_find_search_placeholder">Marii barbaadi yookaan URL maxxansi</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Gad-sagalee</string>
     <string name="forums_post_quote">Deebii keessatti caqasi</string>
     <string name="forums_comment_quote">Deebii keessatti caqasi</string>
-    <string name="forums_post_tag_remove">Mallattoo haqi</string>
     <string name="forums_access_add">Seera dhaqqabummaa dabali</string>
     <string name="forums_access_empty">Ammaaf seerri hin jiru — kan duraa hojiirra oola</string>
-    <string name="forums_access_target_hint">Eenyummaa qaamaa, @gareen, * (hunda), yookaan + (miseensota)</string>
-    <string name="forums_access_level">Sadarkaa</string>
-    <string name="forums_access_level_moderate">To\'achuu</string>
     <string name="forums_members_search">Miseensota gulaali</string>
     <string name="forums_banner_description">Markdown gubbaa marichaa irratti mul\'atu.</string>
     <string name="forums_banner_placeholder">Barreeffama baanaraa galchi (markdown ni deeggarama)…</string>
-    <string name="forums_ai_mode_label">Haalata: %1$s</string>
-    <string name="forums_ai_mode_heading">Haalata AI</string>
     <string name="forums_ai_mode_off">Cufame</string>
-    <string name="forums_ai_account">Herrega AI</string>
-    <string name="forums_ai_prompt_tag">Ajaja mallattoo kaa\'uu</string>
-    <string name="forums_ai_prompt_score">Ajaja qabxii kennuu</string>
-    <string name="forums_ai_post_prompt_label">Ajaja mallattoo maxxansaa</string>
-    <string name="forums_ai_comment_prompt_label">Ajaja mallattoo yaadaa</string>
-    <string name="forums_settings_fingerprint">Quba mallattoo: %1$s</string>
-    <string name="forums_settings_clear_notifications">Beeksisa qulqulleessi</string>
     <string name="forums_moderation_queue_empty">Wanti hafe hin jiru</string>
     <string name="forums_moderation_report_details">Bal\'ina: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s xumure — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s deebisaa jirta</string>
     <string name="forums_comment_clear_reply">Deebii balleessi</string>
     <string name="forums_settings_title">Qindaa\'ina %1$s</string>
-    <string name="forums_settings_rename_label">Maqaa marichaa</string>
-    <string name="forums_settings_danger_zone">Naannoo balaa qabu</string>
     <string name="forums_settings_delete_message">Kun marichaa fi maxxansa isaa hunda hanga dhumaatti haqa. Kun deebi\'ee fooyya\'uu hin danda\'u.</string>
 
-    <string name="forums_tag_interest_up">Fedhii cimsi</string>
-    <string name="forums_tag_interest_down">Dantaa hir\'isi</string>
-    <string name="forums_tag_interest_remove">Dantaa haqi</string>
     <string name="forums_access_tab_users">Fayyadamtoota</string>
     <string name="forums_access_tab_groups">Garee</string>
-    <string name="forums_access_tab_manual">Harkaan</string>
     <string name="forums_access_search_users">Fayyadamtoota barbaadi</string>
     <string name="forums_access_no_groups">Garreen hin jiran</string>
     <string name="forums_saved_title">Kan olkaa\'aman</string>

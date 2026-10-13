@@ -50,7 +50,6 @@
     <string name="go_resign_title">Fi eré sílẹ̀?</string>
     <string name="go_sidebar_completed">Tí a parí</string>
     <string name="go_sidebar_new_game">Eré tuntun</string>
-    <string name="go_status_draw">Ìdọ́gba</string>
     <string name="go_status_draw_text">Ìdọ́gba</string>
     <string name="go_status_game_over">Eré ti parí</string>
     <string name="go_status_opponent_move">Ìṣíkiri ti %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
     <string name="go_sidebar_active">Àwọn Eré Tó Ń Lọ</string>
     <string name="go_empty_active">Kò sí eré tí ń lọ lọ́wọ́ síbẹ̀.</string>
-    <string name="go_status_resigned">Ti jọ̀wọ́</string>
     <string name="go_new_game_title">Eré Go tuntun</string>
     <string name="go_new_game_no_friends">O gbọ́dọ̀ fi ọ̀rẹ́ kún kí o tó lè bẹ̀rẹ̀ eré.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

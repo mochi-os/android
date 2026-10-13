@@ -19,7 +19,6 @@
     <string name="crm_link">Холбоос</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Экспортыг хадгалж чадсангүй</string>
-    <string name="crm_sort_direction">Чиглэл</string>
     <string name="crm_sort_rank">Гар аргаар</string>
     <string name="crm_sort_created">Үүсгэгдсэн</string>
     <string name="crm_sort_updated">Шинэчлэгдсэн</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Анги нэмэх</string>
     <string name="crm_classes_create">Үүсгэх</string>
     <string name="crm_class_name">Нэр</string>
-    <string name="crm_class_save_name">Нэрийг хадгалах</string>
     <string name="crm_class_title_field">Гарчгийн талбар</string>
     <string name="crm_class_fields">Талбарууд</string>
     <string name="crm_class_add_field">Талбар нэмэх</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Шаардлагатай</string>
     <string name="crm_field_position_default">Үндсэн</string>
     <string name="crm_field_position_sidebar">Хажуугийн самбар</string>
-    <string name="crm_field_save">Өөрчлөлт хадгалах</string>
     <string name="crm_field_options">Сонголтууд</string>
     <string name="crm_field_add_option">Сонголт нэмэх</string>
     <string name="crm_field_delete">Талбар устгах</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM хайх</string>
     <string name="crm_list_no_matching">Тохирох CRM байхгүй</string>
     <string name="crm_list_empty">CRM хараахан байхгүй байна</string>
-    <string name="crm_create_template">Загвар</string>
     <string name="crm_find_search_placeholder">CRM хайх эсвэл URL буулгах</string>
     <string name="crm_find_search_hint">Бүртгүүлэх CRM-ийг хайх</string>
     <string name="crm_create_object_parent_none">(байхгүй)</string>

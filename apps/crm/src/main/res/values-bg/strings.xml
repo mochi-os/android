@@ -19,7 +19,6 @@
     <string name="crm_link">Връзка</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Експортът не можа да се запази</string>
-    <string name="crm_sort_direction">Посока</string>
     <string name="crm_sort_rank">Ръчно</string>
     <string name="crm_sort_created">Създадено</string>
     <string name="crm_sort_updated">Обновено</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Добави клас</string>
     <string name="crm_classes_create">Създай</string>
     <string name="crm_class_name">Име</string>
-    <string name="crm_class_save_name">Запази името</string>
     <string name="crm_class_title_field">Поле за заглавие</string>
     <string name="crm_class_fields">Полета</string>
     <string name="crm_class_add_field">Добави поле</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Задължително</string>
     <string name="crm_field_position_default">По подразбиране</string>
     <string name="crm_field_position_sidebar">Странична лента</string>
-    <string name="crm_field_save">Запази промените</string>
     <string name="crm_field_options">Опции</string>
     <string name="crm_field_add_option">Добави опция</string>
     <string name="crm_field_delete">Изтрий полето</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">Търсене в CRM</string>
     <string name="crm_list_no_matching">Няма съответстващ CRM</string>
     <string name="crm_list_empty">Все още няма CRM</string>
-    <string name="crm_create_template">Шаблон</string>
     <string name="crm_find_search_placeholder">Търсене на CRM или поставете URL</string>
     <string name="crm_find_search_hint">Търсене на CRM за абониране</string>
     <string name="crm_search_objects_placeholder">Търсене на обекти</string>

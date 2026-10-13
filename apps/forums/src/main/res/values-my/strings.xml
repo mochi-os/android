@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">ဖော်ပြချက် အမည်</string>
-    <string name="forums_auth_verification_failed">အတည်ပြုခြင်း မအောင်မြင်ပါ</string>
     <string name="forums_list_title">ဖိုရမ်များ</string>
     <string name="forums_list_find">ဖိုရမ်များ ရှာ</string>
     <string name="forums_list_unsubscribe">Subscribe ဖြုတ်မည်</string>
     <string name="forums_list_unsubscribe_title">Subscribe ဖြုတ်မည်</string>
     <string name="forums_create_title">ဖိုရမ် ဖန်တီးမည်</string>
     <string name="forums_create_name">ဖိုရမ်အမည်</string>
-    <string name="forums_create_privacy">ကိုယ်ရေးကိုယ်တာ</string>
-    <string name="forums_create_private">သီးသန့်</string>
-    <string name="forums_create_public">အများသုံး</string>
     <string name="forums_create_action">ဖိုရမ် ဖန်တီးမည်</string>
     <string name="forums_find_title">ဖိုရမ်များ ရှာ</string>
     <string name="forums_find_recommended">အကြံပြုထား</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">ပို့စ်တင်ရန်</string>
     <string name="forums_post_edit">ပို့စ် တည်းဖြတ်</string>
     <string name="forums_post_edit_title">ပို့စ် တည်းဖြတ်</string>
-    <string name="forums_post_edit_title_field">ခေါင်းစဉ်</string>
-    <string name="forums_post_save">သိမ်းမည်</string>
     <string name="forums_post_delete">ပို့စ် ဖျက်မည်</string>
     <string name="forums_post_delete_title">ပို့စ် ဖျက်မည်</string>
     <string name="forums_post_locked">လော့ခ်ချထား</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">အဖွဲ့ဝင်များ</string>
     <string name="forums_tab_banner">ပိုစတာ</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">သုံးစွဲသူ သို့မဟုတ် အုပ်စု</string>
-    <string name="forums_access_level_view">ကြည့်ရှုမည်</string>
-    <string name="forums_access_level_vote">မဲပေးပါ</string>
-    <string name="forums_access_level_comment">မှတ်ချက်ပေးရန်</string>
-    <string name="forums_access_level_post">ပို့စ်တင်ရန်</string>
-    <string name="forums_access_level_none">မရှိ</string>
     <string name="forums_members_empty">အဖွဲ့ဝင်များ မရှိပါ</string>
     <string name="forums_banner_dismiss">ပိုစတာ ပယ်မည်</string>
     <string name="forums_ai_mode_tag">တက်ဂ်</string>
     <string name="forums_ai_account_default">မူရင်း အကောင့်</string>
-    <string name="forums_ai_prompt_reset">ပုံသေသို့ ပြန်ထား</string>
     <string name="forums_settings_unsubscribe">Subscribe ဖြုတ်မည်</string>
     <string name="forums_moderation_title">စိစစ်မှု</string>
     <string name="forums_moderation_tab_queue">တန်းစီ</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">ခေါင်းစဉ်ပြင်ပ</string>
     <string name="forums_report_reason_other">အခြား</string>
     <string name="forums_post_default_author">သုံးစွဲသူ</string>
-    <string name="forums_comments">မှတ်ချက်များ</string>
     <string name="forums_no_comments">comment များ မရှိသေးပါ</string>
-    <string name="forums_comment_save">သိမ်းမည်</string>
     <string name="forums_comment_edit">မှတ်ချက် တည်းဖြတ်</string>
     <string name="forums_comment_edit_title">မှတ်ချက် တည်းဖြတ်</string>
-    <string name="forums_comment_edit_attach">ဖိုင်များ ပူးတွဲမည်</string>
     <string name="forums_comment_delete">မှတ်ချက် ဖျက်မည်</string>
     <string name="forums_comment_delete_title">မှတ်ချက် ဖျက်မည်</string>
     <string name="forums_comment_reply">ပြန်ကြား</string>
-    <string name="forums_settings_rename">အမည်ပြောင်း</string>
-    <string name="forums_settings_save">သိမ်းမည်</string>
     <string name="forums_settings_delete">ဖိုရမ် ဖျက်မည်</string>
     <string name="forums_settings_delete_title">ဖိုရမ် ဖျက်မည်</string>
     <string name="forums_forum_not_found">ဖိုရမ် မတွေ့ပါ</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">ပို့</string>
     <string name="forums_post_body_field">အကြောင်းအရာ</string>
-    <string name="forums_post_edit_body_field">အကြောင်းအရာ</string>
     <string name="forums_comment_edit_body_field">အကြောင်းအရာ</string>
-    <string name="forums_tag_clear">စစ်ထုတ်မှု ရှင်းပါ</string>
-    <string name="forums_post_tag_add">တက်ဂ် ထည့်ရန်</string>
     <string name="forums_write_comment">မှတ်ချက်ရေးရန်…</string>
-    <string name="forums_auth_login_failed">လော့ဂ်အင် မအောင်မြင်ပါ</string>
 
     <string name="notification_channel_forums">ဖိုရမ် အကြောင်းကြားချက်များ</string>
-    <string name="forums_auth_brand">Mochi ဖိုရမ်များ</string>
-    <string name="forums_auth_create_identity_failed">အထောက်အထား ဖန်တီး၍မရပါ</string>
-    <string name="forums_auth_mfa_unsupported">မိုဘိုင်း အက်ပ်တွင် MFA ကို မပံ့ပိုးသေးပါ</string>
-    <string name="forums_auth_enter_code_sent">%1$s သို့ ပို့လိုက်သော ကုဒ်ကို ထည့်ပါ</string>
-    <string name="forums_auth_create_identity">သင်၏ အထောက်အထားကို ဖန်တီးပါ</string>
     <string name="forums_list_empty">ဖိုရမ် မရှိသေးပါ</string>
     <string name="forums_list_unsubscribe_message">ဤဖိုရမ်မှ စာရင်းသွင်းမှု ဖျက်လိုသည်မှာ သေချာပါသလား?</string>
     <string name="forums_find_search_placeholder">ဖိုရမ်များ ရှာဖွေပါ သို့မဟုတ် URL ကို ကူးထည့်ပါ</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">မဲချပါ</string>
     <string name="forums_post_quote">ပြန်လည်ဖြေကြားရာတွင် ကိုးကားပါ</string>
     <string name="forums_comment_quote">ပြန်လည်ဖြေကြားရာတွင် ကိုးကားပါ</string>
-    <string name="forums_post_tag_remove">တဂ်ကို ဖယ်ရှားပါ</string>
     <string name="forums_access_add">ဝင်ရောက်ခွင့် စည်းမျဉ်း ထည့်ပါ</string>
     <string name="forums_access_empty">စည်းမျဉ်း မရှိသေးပါ — မူရင်းသတ်မှတ်ချက်များ အသုံးပြုပါမည်</string>
-    <string name="forums_access_target_hint">အရာ ID, @group, * (လူတိုင်း), သို့မဟုတ် + (အဖွဲ့ဝင်များ)</string>
-    <string name="forums_access_level">အဆင့်</string>
-    <string name="forums_access_level_moderate">ထိန်းညှိပါ</string>
     <string name="forums_members_search">အဖွဲ့ဝင်များကို စစ်ထုတ်ပါ</string>
     <string name="forums_banner_description">ဖိုရမ်၏ ထိပ်တွင် ပြသမည့် Markdown။</string>
     <string name="forums_banner_placeholder">နဖူးစည်း စာသား ထည့်ပါ (Markdown ပံ့ပိုးသည်)…</string>
-    <string name="forums_ai_mode_label">မုဒ်: %1$s</string>
-    <string name="forums_ai_mode_heading">AI မုဒ်</string>
     <string name="forums_ai_mode_off">ပိတ်ထားသည်</string>
-    <string name="forums_ai_account">AI အကောင့်</string>
-    <string name="forums_ai_prompt_tag">တဂ်တပ်ခြင်း ညွှန်ကြားချက်</string>
-    <string name="forums_ai_prompt_score">အမှတ်ပေးခြင်း ညွှန်ကြားချက်</string>
-    <string name="forums_ai_post_prompt_label">ပို့စ် တဂ်များအတွက် ညွှန်ကြားချက်</string>
-    <string name="forums_ai_comment_prompt_label">မှတ်ချက် တဂ်များအတွက် ညွှန်ကြားချက်</string>
-    <string name="forums_settings_fingerprint">လက်ဗွေ: %1$s</string>
-    <string name="forums_settings_clear_notifications">အကြောင်းကြားချက်များကို ရှင်းလင်းပါ</string>
     <string name="forums_moderation_queue_empty">ဆိုင်းငံ့ထားသည် မရှိပါ</string>
     <string name="forums_moderation_report_details">အသေးစိတ်: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s က ဖြေရှင်းခဲ့သည် — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s သို့ ပြန်လည်ဖြေကြားနေသည်</string>
     <string name="forums_comment_clear_reply">ပြန်ဖြေကြားမှုကို ရှင်းလင်းပါ</string>
     <string name="forums_settings_title">%1$s ဆက်တင်များ</string>
-    <string name="forums_settings_rename_label">ဖိုရမ်အမည်</string>
-    <string name="forums_settings_danger_zone">အန္တရာယ်ဇုန်</string>
     <string name="forums_settings_delete_message">၎င်းသည် ဖိုရမ်နှင့် ၎င်း၏ ပို့စ်အားလုံးကို အပြီးတိုင် ဖျက်ပါမည်။ ၎င်းကို ပြန်လည်ပြုပြင်၍ မရပါ။</string>
 
-    <string name="forums_tag_interest_up">စိတ်ဝင်စားမှု မြှင့်တင်မည်</string>
-    <string name="forums_tag_interest_down">စိတ်ဝင်စားမှု လျှော့ချ</string>
-    <string name="forums_tag_interest_remove">စိတ်ဝင်စားမှု ဖယ်ရှား</string>
     <string name="forums_access_tab_users">သုံးစွဲသူများ</string>
     <string name="forums_access_tab_groups">အုပ်စုများ</string>
-    <string name="forums_access_tab_manual">ကိုယ်တိုင်</string>
     <string name="forums_access_search_users">သုံးစွဲသူများ ရှာဖွေ</string>
     <string name="forums_access_no_groups">အုပ်စုများ မရရှိနိုင်ပါ</string>
     <string name="forums_saved_title">သိမ်းထားသည်များ</string>

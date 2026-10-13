@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Echèk</string>
-    <string name="chess_sidebar_header">Echèk</string>
     <string name="chess_sidebar_active">Jwèt Aktif</string>
     <string name="chess_sidebar_completed">Konplete</string>
     <string name="chess_sidebar_new_game">Nouvo jwèt</string>
-    <string name="chess_section_active">Jwèt Aktif</string>
-    <string name="chess_section_completed">Konplete</string>
-    <string name="chess_new_game">Nouvo jwèt</string>
     <string name="chess_empty_title">Poko gen jwèt</string>
     <string name="chess_new_title">Nouvo Jwèt</string>
     <string name="chess_new_pick_opponent">Chwazi advèsè</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Notifikasyon sou koudpye echèk, òf match nil ak rezilta pati.</string>
     <string name="chess_open_sidebar">Louvri ba bò a</string>
-    <string name="chess_empty_subtitle">Kòmanse premye pati ou pou jwe echèk ak yon zanmi.</string>
-    <string name="chess_empty_start_button">Kòmanse premye pati ou</string>
     <string name="chess_detail_unavailable">Pati pa disponib</string>
     <string name="chess_delete_title">Efase jwèt la?</string>
     <string name="chess_delete_message">Sa retire pati a nan lis ou.</string>

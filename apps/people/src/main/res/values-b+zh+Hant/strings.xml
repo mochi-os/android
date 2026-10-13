@@ -121,7 +121,6 @@
     <string name="people_contacts_message">傳送訊息</string>
     <string name="people_contacts_no_people_found">找不到人員</string>
     <string name="people_contacts_try_adjusting">請嘗試調整您的搜尋</string>
-    <string name="people_contact_section_address">地址</string>
     <string name="people_contact_section_detail">詳細資料</string>
     <string name="people_contact_name">姓名</string>
     <string name="people_contact_email">電子郵件</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">重新命名</string>
     <string name="people_contacts_sort_name">姓名</string>
     <string name="people_contacts_sort_recent">最近新增</string>
-    <string name="people_contacts_thats_you">那是您</string>
     <string name="people_contacts_try_different_search">嘗試其他搜尋字詞</string>
     <string name="people_contacts_unfriend">移除好友</string>
     <string name="people_add_contact_search_placeholder">輸入以搜尋…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">找不到聯絡人</string>
     <string name="people_contacts_add_to_start">新增聯絡人以開始聯繫</string>
     <string name="people_contacts_actions">聯絡人操作</string>
-    <string name="people_contacts_friend">好友</string>
     <string name="people_contacts_invite">邀請</string>
     <string name="people_contacts_unfriend_confirm">%1$s 將不再是你的好友。該聯絡人仍保留在你的通訊錄中。</string>
     <string name="people_contacts_delete">刪除聯絡人</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">聯絡人已變更</string>
     <string name="people_add_contact_title">新增聯絡人</string>
     <string name="people_add_contact_add">加入聯絡人</string>
-    <string name="people_add_contact_in_contacts">已在聯絡人中</string>
     <string name="people_books_create">建立通訊錄</string>
     <string name="people_books_delete">刪除通訊錄</string>
     <plurals name="people_books_delete_confirm">

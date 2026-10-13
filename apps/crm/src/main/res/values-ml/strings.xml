@@ -19,7 +19,6 @@
     <string name="crm_link">ലിങ്ക്</string>
     <string name="crm_design">ഡിസൈൻ</string>
     <string name="crm_export_failed">കയറ്റുമതി സംരക്ഷിക്കാനായില്ല</string>
-    <string name="crm_sort_direction">ദിശ</string>
     <string name="crm_sort_rank">മാനുവൽ</string>
     <string name="crm_sort_created">സൃഷ്ടിച്ചു</string>
     <string name="crm_sort_updated">അപ്ഡേറ്റ് ചെയ്തു</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">ക്ലാസ് ചേർക്കുക</string>
     <string name="crm_classes_create">സൃഷ്ടിക്കുക</string>
     <string name="crm_class_name">പേര്</string>
-    <string name="crm_class_save_name">പേര് സംരക്ഷിക്കുക</string>
     <string name="crm_class_title_field">തലക്കെട്ട് ഫീൽഡ്</string>
     <string name="crm_class_fields">ഫീൽഡുകൾ</string>
     <string name="crm_class_add_field">ഫീൽഡ് ചേർക്കുക</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">ആവശ്യമാണ്</string>
     <string name="crm_field_position_default">ഡിഫോൾട്ട്</string>
     <string name="crm_field_position_sidebar">സൈഡ്ബാർ</string>
-    <string name="crm_field_save">മാറ്റങ്ങൾ സേവ് ചെയ്യുക</string>
     <string name="crm_field_options">ഓപ്ഷനുകൾ</string>
     <string name="crm_field_add_option">ഓപ്ഷൻ ചേർക്കുക</string>
     <string name="crm_field_delete">ഫീൽഡ് ഇല്ലാതാക്കുക</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM തിരയുക</string>
     <string name="crm_list_no_matching">പൊരുത്തപ്പെടുന്ന CRM ഇല്ല</string>
     <string name="crm_list_empty">ഇതുവരെ CRM ഇല്ല</string>
-    <string name="crm_create_template">ടെംപ്ലേറ്റ്</string>
     <string name="crm_find_search_placeholder">CRM തിരയുക അല്ലെങ്കിൽ URL ഒട്ടിക്കുക</string>
     <string name="crm_find_search_hint">സബ്സ്ക്രൈബ് ചെയ്യാൻ CRM തിരയുക</string>
     <string name="crm_create_object_parent_none">(ഒന്നുമില്ല)</string>

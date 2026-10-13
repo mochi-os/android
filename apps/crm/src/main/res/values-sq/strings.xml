@@ -19,7 +19,6 @@
     <string name="crm_link">Lidhje</string>
     <string name="crm_design">Dizajni</string>
     <string name="crm_export_failed">Eksporti nuk u ruajt dot</string>
-    <string name="crm_sort_direction">Drejtimi</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">U krijua</string>
     <string name="crm_sort_updated">U përditësua</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Shto klasë</string>
     <string name="crm_classes_create">Krijo</string>
     <string name="crm_class_name">Emri</string>
-    <string name="crm_class_save_name">Ruaj emrin</string>
     <string name="crm_class_title_field">Fusha e titullit</string>
     <string name="crm_class_fields">Fushat</string>
     <string name="crm_class_add_field">Shto fushë</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">I detyrueshëm</string>
     <string name="crm_field_position_default">I parazgjedhur</string>
     <string name="crm_field_position_sidebar">Shiriti anësor</string>
-    <string name="crm_field_save">Ruaj ndryshimet</string>
     <string name="crm_field_options">Opsione</string>
     <string name="crm_field_add_option">Shto opsion</string>
     <string name="crm_field_delete">Fshi fushën</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Kërko CRM</string>
     <string name="crm_list_no_matching">Asnjë CRM përkatës</string>
     <string name="crm_list_empty">Ende asnjë CRM</string>
-    <string name="crm_create_template">Shabllon</string>
     <string name="crm_find_search_placeholder">Kërko CRM ose ngjit URL-në</string>
     <string name="crm_find_search_hint">Kërko një CRM për t\'u abonuar</string>
     <string name="crm_create_object_parent_none">(asnjë)</string>

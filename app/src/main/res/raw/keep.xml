@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Resources the shrinker cannot see referenced: the home grid and pinned
+  shortcuts look up each app's ic_<app> and ic_<app>_foreground by name
+  (HomeScreen.AppIcon, Shortcuts.icon), and Firebase Messaging looks up the
+  label of its fallback notification channel by name.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@mipmap/ic_*,@string/fcm_fallback_notification_channel_label" />

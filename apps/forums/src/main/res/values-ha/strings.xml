@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Sunan nunawa</string>
-    <string name="forums_auth_verification_failed">Tabbatarwa ya gaza</string>
     <string name="forums_list_title">Tarurruka</string>
     <string name="forums_list_find">Nemo forums</string>
     <string name="forums_list_unsubscribe">Cire subscribe</string>
     <string name="forums_list_unsubscribe_title">Cire subscribe</string>
     <string name="forums_create_title">Ƙirƙira dandali</string>
     <string name="forums_create_name">Sunan taron tattaunawa</string>
-    <string name="forums_create_privacy">Sirri</string>
-    <string name="forums_create_private">Na sirri</string>
-    <string name="forums_create_public">Na jama\'a</string>
     <string name="forums_create_action">Ƙirƙira dandali</string>
     <string name="forums_find_title">Nemo forums</string>
     <string name="forums_find_recommended">An ba da shawara</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Wallafa</string>
     <string name="forums_post_edit">Gyara post</string>
     <string name="forums_post_edit_title">Gyara post</string>
-    <string name="forums_post_edit_title_field">Take</string>
-    <string name="forums_post_save">Adana</string>
     <string name="forums_post_delete">Goge saƙo</string>
     <string name="forums_post_delete_title">Goge saƙo</string>
     <string name="forums_post_locked">An kulle</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Membobi</string>
     <string name="forums_tab_banner">Tuta</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Mai amfani ko ƙungiya</string>
-    <string name="forums_access_level_view">Kalla</string>
-    <string name="forums_access_level_vote">Kada kuri\'a</string>
-    <string name="forums_access_level_comment">Yi sharhi</string>
-    <string name="forums_access_level_post">Wallafa</string>
-    <string name="forums_access_level_none">Babu</string>
     <string name="forums_members_empty">Babu membobi</string>
     <string name="forums_banner_dismiss">Kau da banner</string>
     <string name="forums_ai_mode_tag">Sanya alama</string>
     <string name="forums_ai_account_default">Asusun default</string>
-    <string name="forums_ai_prompt_reset">Mayar zuwa asali</string>
     <string name="forums_settings_unsubscribe">Cire subscribe</string>
     <string name="forums_moderation_title">Daidaitawa</string>
     <string name="forums_moderation_tab_queue">Layi</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Bayan batun</string>
     <string name="forums_report_reason_other">Sauran</string>
     <string name="forums_post_default_author">Mai amfani</string>
-    <string name="forums_comments">Sharhi</string>
     <string name="forums_no_comments">Babu sharhi tukuna</string>
-    <string name="forums_comment_save">Adana</string>
     <string name="forums_comment_edit">Gyara comment</string>
     <string name="forums_comment_edit_title">Gyara comment</string>
-    <string name="forums_comment_edit_attach">Haɗa fayiloli</string>
     <string name="forums_comment_delete">Goge sharhi</string>
     <string name="forums_comment_delete_title">Goge sharhi</string>
     <string name="forums_comment_reply">Amsa</string>
-    <string name="forums_settings_rename">Sake suna</string>
-    <string name="forums_settings_save">Adana</string>
     <string name="forums_settings_delete">Goge forum</string>
     <string name="forums_settings_delete_title">Goge forum</string>
     <string name="forums_forum_not_found">Ba a samu forum ba</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Aika</string>
     <string name="forums_post_body_field">Abun ciki</string>
-    <string name="forums_post_edit_body_field">Abun ciki</string>
     <string name="forums_comment_edit_body_field">Abun ciki</string>
-    <string name="forums_auth_login_failed">Shiga ya gaza</string>
-    <string name="forums_auth_create_identity_failed">An kasa ƙirƙirar shaida</string>
-    <string name="forums_auth_mfa_unsupported">Ba a goyi bayan MFA tukuna a aikace-aikacen wayar hannu ba</string>
-    <string name="forums_auth_enter_code_sent">Shigar da lambar da aka aiko zuwa %1$s</string>
-    <string name="forums_auth_create_identity">Ƙirƙiri shaidarka</string>
-    <string name="forums_tag_clear">Share matatar</string>
-    <string name="forums_post_tag_add">Ƙara alama</string>
     <string name="forums_write_comment">Rubuta sharhi…</string>
 
     <string name="notification_channel_forums">Sanarwar tarukan tattaunawa</string>
-    <string name="forums_auth_brand">Mochi Tarurruka</string>
     <string name="forums_list_empty">Babu tarukan tattaunawa har yanzu</string>
     <string name="forums_list_unsubscribe_message">Kana da tabbacin kana son cire biyan kuɗi daga wannan taron tattaunawa?</string>
     <string name="forums_find_search_placeholder">Bincika tarukan tattaunawa ko liƙa URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Ƙuri\'a ƙasa</string>
     <string name="forums_post_quote">Kawo magana cikin amsa</string>
     <string name="forums_comment_quote">Kawo magana cikin amsa</string>
-    <string name="forums_post_tag_remove">Cire alama</string>
     <string name="forums_access_add">Ƙara dokar shiga</string>
     <string name="forums_access_empty">Babu dokoki har yanzu — tsoffin sun shafi</string>
-    <string name="forums_access_target_hint">ID ɗin mahaɗi, @ƙungiya, * (kowa), ko + (mambobi)</string>
-    <string name="forums_access_level">Matakin</string>
-    <string name="forums_access_level_moderate">Sarrafa</string>
     <string name="forums_members_search">Tace mambobi</string>
     <string name="forums_banner_description">Markdown da ake nunawa a saman taron tattaunawa.</string>
     <string name="forums_banner_placeholder">Shigar da rubutun tuta (ana tallafawa markdown)…</string>
-    <string name="forums_ai_mode_label">Yanayi: %1$s</string>
-    <string name="forums_ai_mode_heading">Yanayin AI</string>
     <string name="forums_ai_mode_off">An kashe</string>
-    <string name="forums_ai_account">Asusun AI</string>
-    <string name="forums_ai_prompt_tag">Umarnin alamta</string>
-    <string name="forums_ai_prompt_score">Umarnin ƙididdigewa</string>
-    <string name="forums_ai_post_prompt_label">Umarni don alamomin saƙo</string>
-    <string name="forums_ai_comment_prompt_label">Umarni don alamomin bayani</string>
-    <string name="forums_settings_fingerprint">Yatsa: %1$s</string>
-    <string name="forums_settings_clear_notifications">Share sanarwa</string>
     <string name="forums_moderation_queue_empty">Babu abin da ke jiran sarrafawa</string>
     <string name="forums_moderation_report_details">Cikakkun bayanai: %1$s</string>
     <string name="forums_moderation_report_resolved_by">An warware ta hanyar %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Ana amsa wa %1$s</string>
     <string name="forums_comment_clear_reply">Share amsa</string>
     <string name="forums_settings_title">Saitunan %1$s</string>
-    <string name="forums_settings_rename_label">Sunan taron tattaunawa</string>
-    <string name="forums_settings_danger_zone">Yankin haɗari</string>
     <string name="forums_settings_delete_message">Wannan zai share taron tattaunawa da dukkan saƙonninsa har abada. Ba za a iya warware wannan ba.</string>
 
-    <string name="forums_tag_interest_up">Ƙara sha\'awa</string>
-    <string name="forums_tag_interest_down">Rage sha\'awa</string>
-    <string name="forums_tag_interest_remove">Cire sha\'awa</string>
     <string name="forums_access_tab_users">Masu amfani</string>
     <string name="forums_access_tab_groups">Ƙungiyoyi</string>
-    <string name="forums_access_tab_manual">Hannu</string>
     <string name="forums_access_search_users">Bincika masu amfani</string>
     <string name="forums_access_no_groups">Babu ƙungiyoyi</string>
     <string name="forums_saved_title">Ajiyayyu</string>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="projects_auth_display_name">ناوی پیشاندان</string>
-    <string name="projects_auth_verification_failed">پشتڕاستکردنەوە سەرکەوتوو نەبوو</string>
     <string name="projects_list_title">پڕۆژەکان</string>
-    <string name="projects_list_close_search">داخستنی گەڕان</string>
     <string name="projects_list_search">گەڕان</string>
     <string name="projects_list_find">دۆزینەوەی پڕۆژەکان</string>
     <string name="projects_list_create">دروستکردنی پڕۆژە</string>
@@ -11,22 +8,16 @@
     <string name="projects_create_name">ناو</string>
     <string name="projects_create_description">وەسف</string>
     <string name="projects_create_prefix">پێشگر</string>
-    <string name="projects_create_privacy">تایبەتمەندی</string>
-    <string name="projects_create_private">تایبەت</string>
-    <string name="projects_create_public">گشتی</string>
     <string name="projects_create_template_none">هیچ</string>
     <string name="projects_create_action">دروستکردن</string>
     <string name="projects_find_title">دۆزینەوەی پڕۆژەکان</string>
     <string name="projects_find_recommended">پێشنیازکراو</string>
-    <string name="projects_find_subscribe">بەشداربە</string>
     <string name="projects_loading">بار دەکرێت…</string>
     <string name="projects_watched">چاودێریکراو</string>
     <string name="projects_create_object">دروستکردنی بابەت</string>
     <string name="projects_search">گەڕان</string>
     <string name="projects_settings">ڕێکخستنەکان</string>
     <string name="projects_design">دیزاین</string>
-    <string name="projects_sort_label">ڕیزکردن</string>
-    <string name="projects_sort_direction">ئاراستە</string>
     <string name="projects_sort_rank">دەستی</string>
     <string name="projects_sort_number">ژمارە</string>
     <string name="projects_sort_created">دروستکرا</string>
@@ -50,10 +41,6 @@
     <string name="projects_object_tab_comments">لێدوانەکان (%1$s)</string>
     <string name="projects_object_tab_activity">چالاکی</string>
     <string name="projects_object_tab_requests">داواکارییەکانی تێکەڵکردن (%1$s)</string>
-    <string name="projects_object_tab_attachments">هاوپێچەکان</string>
-    <string name="projects_object_tab_links">بەستەرەکان</string>
-    <string name="projects_watchers_watch">چاودێری</string>
-    <string name="projects_watchers_unwatch">وازبهێنە لە چاودێری</string>
     <string name="projects_parent_label">باوان</string>
     <string name="projects_parent_search_placeholder">گەڕان</string>
     <string name="projects_links_title">بەستەرەکان</string>
@@ -67,12 +54,9 @@
     <string name="projects_links_no_matches">هیچ تەنێکی هاوسەنگ نییە</string>
     <string name="projects_field_yes">بەڵێ</string>
     <string name="projects_field_no">نەخێر</string>
-    <string name="projects_field_type_checkbox">بۆکسی پشکنین</string>
-    <string name="projects_comment_save">پاشەکەوتکردن</string>
     <string name="projects_comment_empty">هێشتا هیچ بۆچوونێک نییە</string>
     <string name="projects_comment_attach">هاوپێچکردنی پەڕگە</string>
     <string name="projects_property_remove">لابردن</string>
-    <string name="projects_property_option_none">هیچ</string>
     <string name="projects_attachments">هاوپێچەکان</string>
     <string name="projects_attachment_add">زیادکردنی هاوپێچ</string>
     <string name="projects_request_empty">هیچ داواکارییەکی تێکەڵکردن نییە</string>
@@ -114,7 +98,6 @@
     <string name="projects_classes_add_dialog_title">زیادکردنی پۆل</string>
     <string name="projects_classes_create">دروستکردن</string>
     <string name="projects_class_name">ناو</string>
-    <string name="projects_class_save_name">پاشەکەوتکردنی ناو</string>
     <string name="projects_class_title_field">خانەی ناونیشان</string>
     <string name="projects_class_merge_requests">داواکارییەکانی تێکەڵکردن</string>
     <string name="projects_class_fields">خانەکان</string>
@@ -132,7 +115,6 @@
     <string name="projects_field_required">پێویست</string>
     <string name="projects_field_position_default">بنەڕەت</string>
     <string name="projects_field_position_sidebar">لاتەنیشت</string>
-    <string name="projects_field_save">پاشەکەوتکردنی گۆڕانکارییەکان</string>
     <string name="projects_field_options">هەڵبژاردەکان</string>
     <string name="projects_field_add_option">زیادکردنی هەڵبژاردە</string>
     <string name="projects_field_delete">سڕینەوەی خانە</string>
@@ -153,23 +135,18 @@
     <string name="projects_views_sort_updated">نوێکرایەوە</string>
     <string name="projects_views_sort_rank">پلە</string>
     <string name="projects_project_not_found">پڕۆژە نەدۆزرایەوە</string>
-    <string name="projects_list_more">زیاتر</string>
     <string name="projects_more">زیاتر</string>
-    <string name="projects_request_more">زیاتر</string>
     <string name="projects_comment_send">ناردن</string>
 
     <string name="projects_request_create_title">دروستکردنی داواکاری تێکەڵکردن</string>
     <string name="projects_request_field_target">لقی ئامانج</string>
     <string name="projects_diff_title">جیاوازی: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">داپۆشین</string>
-    <string name="projects_tree_expand">فراوانکردن</string>
     <string name="projects_tree_move">گواستنەوە</string>
     <string name="projects_tree_move_to_parent">گواستنەوە بۆ باوان</string>
     <string name="projects_tree_root_level">(ئاستی ڕەگ)</string>
     <string name="projects_tree_empty">هیچ بابەتێک نییە</string>
     <string name="projects_board_no_columns">هیچ ستوونێک بۆ ئەم ڕوانینە دانەنراوە</string>
     <string name="projects_board_no_options">هیچ بژاردەیەک بۆ خانەی ستوون دانەنراوە</string>
-    <string name="projects_board_column_options">بژاردەکانی ستوون</string>
     <string name="projects_board_nested_count">+%1$s هێلانەکراو</string>
     <string name="projects_move_to_column">گواستنەوە بۆ ستوون</string>
     <string name="projects_move_to_row">گواستنەوە بۆ ڕیز</string>
@@ -177,19 +154,10 @@
     <string name="projects_drag_card">ڕاکێشانی کارت</string>
     <string name="projects_drag_row">ڕاکێشانی ڕیز</string>
     <string name="projects_drag_column">ڕاکێشانی ستوون</string>
-    <string name="projects_drag_hint">دوورودرێژ پێبدە و ڕابکێشە بۆ گواستنەوە</string>
     <string name="projects_design_more_options">بژاردەی زیاتر</string>
-    <string name="projects_design_clipboard_label">JSON ی نەخشە</string>
-    <string name="projects_design_export_subject">نەخشەی پڕۆژە</string>
-    <string name="projects_design_share_chooser">هاوبەشکردنی نەخشە</string>
-    <string name="projects_design_export_copied">نەخشە لەبەرگیرایەوە بۆ کلیپبۆرد</string>
     <string name="projects_design_no_templates">هیچ قاڵبێک بەردەست نییە</string>
-    <string name="projects_design_or_paste_json">یان JSON بلکێنە</string>
-    <string name="projects_design_paste_placeholder">JSON ی نەخشەی هەناردەکراو بلکێنە</string>
-    <string name="projects_design_import_json">هاوردەکردنی JSON</string>
     <string name="projects_design_use">بەکارهێنان</string>
     <string name="projects_design_replace_message">ئەمە نەخشەی ئێستا دەگۆڕێت بە %1$s. هەموو پۆل، خانە، بژاردە و ڕوانینە هەبووەکان دەسڕێنەوە. تەنە هەبووەکان ناسڕێنەوە بەڵام لەوانەیە چیتر لە ڕوانینەکاندا دەرنەکەون.</string>
-    <string name="projects_design_pasted_json_label">JSON ی لکێنراو</string>
     <string name="projects_classes_empty">هیچ پۆلێک پێناسە نەکراوە</string>
     <string name="projects_class_label">پۆل: %1$s</string>
     <string name="projects_class_title_field_description">کام خانە بەکاربهێنرێت وەک ناونیشانی پیشاندان بۆ تەنەکانی ئەم پۆلە.</string>
@@ -236,11 +204,6 @@
     <string name="projects_design_preview_no_options">هیچ بژاردەیەک لەسەر خانەی ستوونەکان نییە</string>
     <string name="projects_design_preview_empty">هیچ شتێک بۆ پیشاندان نییە</string>
 
-    <string name="projects_auth_login_failed">چوونەژوورەوە سەرکەوتوو نەبوو</string>
-    <string name="projects_auth_create_identity_failed">دروستکردنی ناسنامە سەرکەوتوو نەبوو</string>
-    <string name="projects_auth_mfa_unsupported">MFA لە ئەپی مۆبایلدا هێشتا پشتگیری نەکراوە</string>
-    <string name="projects_auth_enter_code_sent">ئەو کۆدە بنووسە کە بۆ %1$s نێردراوە</string>
-    <string name="projects_auth_create_identity">ناسنامەکەت دروست بکە</string>
     <string name="projects_search_objects_placeholder">گەڕانی بابەتەکان</string>
     <string name="projects_sort_field">ڕیزکردن بەپێی</string>
     <string name="projects_sort_direction_asc">سەرکەوتوو</string>
@@ -252,8 +215,6 @@
     <string name="projects_views_filter">پاڵاوتن (پاشەکەوتکراوە، هێشتا جێبەجێ نەکراوە)</string>
     <string name="projects_people_empty">هێشتا هیچ کەسێک دەستی پێی ناگات</string>
     <string name="projects_object_unwatch">وازهێنان لە چاودێری</string>
-    <string name="projects_object_tab_watchers">چاودێرەکان</string>
-    <string name="projects_watchers_empty">هێشتا هیچ چاودێرێک نییە</string>
     <string name="projects_object_delete_title">سڕینەوەی بابەت</string>
     <string name="projects_object_delete_message">دڵنیایت لە سڕینەوەی ئەم بابەتە؟ ئەم کردارە ناگەڕێتەوە.</string>
     <string name="projects_parent_none">هیچ باوانێک نییە</string>
@@ -275,17 +236,10 @@
     <string name="projects_activity_empty">هیچ چالاکییەک نییە</string>
     <string name="projects_activity_created">ئەم بابەتەی دروستکرد</string>
     <string name="projects_activity_deleted">ئەم بابەتەی سڕییەوە</string>
-    <string name="projects_activity_changed">گۆڕی %1$s: %2$s → %3$s</string>
-    <string name="projects_activity_set">%1$s دانا بۆ %2$s</string>
-    <string name="projects_activity_cleared">%1$s پاککرایەوە</string>
     <string name="projects_activity_updated">%1$s نوێکرایەوە</string>
     <string name="projects_activity_made_change">گۆڕانکارییەکی کرد</string>
     <string name="projects_attachment_empty">هیچ هاوپێچێک نییە</string>
     <string name="projects_attachment_default_name">هاوپێچ</string>
-    <string name="projects_attachment_size_bytes">%1$s B</string>
-    <string name="projects_attachment_size_kb">%1$s KB</string>
-    <string name="projects_attachment_size_mb">%1$s MB</string>
-    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">داواکاری تێکەڵکردنی نوێ</string>
     <string name="projects_request_status_closed">داخراو</string>
     <string name="projects_request_back_to_list">گەڕانەوە بۆ لیست</string>
@@ -305,7 +259,6 @@
     <string name="projects_request_method_rebase">ڕیبەیس</string>
 
     <string name="notification_channel_projects">ئاگادارکردنەوەکانی پڕۆژەکان</string>
-    <string name="projects_auth_brand">Mochi پڕۆژەکان</string>
     <string name="projects_list_search_placeholder">گەڕان لە پڕۆژەکان</string>
     <string name="projects_list_no_matching">هیچ پڕۆژەیەکی هاوتا نییە</string>
     <string name="projects_list_empty">هێشتا هیچ پڕۆژەیەک نییە</string>
@@ -343,8 +296,6 @@
     <string name="projects_access_select_rule">یاسایەک هەڵبژێرە</string>
     <string name="projects_access_authenticated_desc">هەر کەسێک کە چووەتە ژوورەوە</string>
     <string name="projects_access_anyone_desc">بە بەکارهێنەرە نەناسراوەکانیشەوە</string>
-    <string name="projects_access_target">بەکارهێنەر یان گرووپ</string>
-    <string name="projects_access_target_hint">ناسنامەی بەرکار، @group، * (هەمووان)، یان + (ئەندامان)</string>
     <string name="projects_access_selected">هەڵبژێردراو: %1$s</string>
     <string name="projects_access_role_comment">لێدوان و بینین</string>
     <string name="projects_access_role_design">دیزاین، دروستکردن، دەستکاری، لێدوان، و بینین</string>

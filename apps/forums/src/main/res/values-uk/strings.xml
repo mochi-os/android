@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Відображуване ім\'я</string>
-    <string name="forums_auth_verification_failed">Перевірка не вдалася</string>
     <string name="forums_list_title">Форуми</string>
     <string name="forums_list_find">Знайти форуми</string>
     <string name="forums_list_unsubscribe">Відписатися</string>
     <string name="forums_list_unsubscribe_title">Відписатися</string>
     <string name="forums_create_title">Створити форум</string>
     <string name="forums_create_name">Назва форуму</string>
-    <string name="forums_create_privacy">Приватність</string>
-    <string name="forums_create_private">Приватний</string>
-    <string name="forums_create_public">Публічний</string>
     <string name="forums_create_action">Створити форум</string>
     <string name="forums_find_title">Знайти форуми</string>
     <string name="forums_find_recommended">Рекомендоване</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Опублікувати</string>
     <string name="forums_post_edit">Редагувати допис</string>
     <string name="forums_post_edit_title">Редагувати допис</string>
-    <string name="forums_post_edit_title_field">Заголовок</string>
-    <string name="forums_post_save">Зберегти</string>
     <string name="forums_post_delete">Видалити допис</string>
     <string name="forums_post_delete_title">Видалити допис</string>
     <string name="forums_post_locked">Заблоковано</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Учасники</string>
     <string name="forums_tab_banner">Банер</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Користувач або група</string>
-    <string name="forums_access_level_view">Переглянути</string>
-    <string name="forums_access_level_vote">Голосувати</string>
-    <string name="forums_access_level_comment">Коментувати</string>
-    <string name="forums_access_level_post">Опублікувати</string>
-    <string name="forums_access_level_none">Немає</string>
     <string name="forums_members_empty">Немає учасників</string>
     <string name="forums_banner_dismiss">Закрити банер</string>
     <string name="forums_ai_mode_tag">Тегувати</string>
     <string name="forums_ai_account_default">Обліковий запис за замовчуванням</string>
-    <string name="forums_ai_prompt_reset">Скинути до значення за замовчуванням</string>
     <string name="forums_settings_unsubscribe">Відписатися</string>
     <string name="forums_moderation_title">Модерація</string>
     <string name="forums_moderation_tab_queue">Черга</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Поза темою</string>
     <string name="forums_report_reason_other">Інше</string>
     <string name="forums_post_default_author">Користувач</string>
-    <string name="forums_comments">Коментарі</string>
     <string name="forums_no_comments">Коментарів ще немає</string>
-    <string name="forums_comment_save">Зберегти</string>
     <string name="forums_comment_edit">Редагувати коментар</string>
     <string name="forums_comment_edit_title">Редагувати коментар</string>
-    <string name="forums_comment_edit_attach">Додати файли</string>
     <string name="forums_comment_delete">Видалити коментар</string>
     <string name="forums_comment_delete_title">Видалити коментар</string>
     <string name="forums_comment_reply">Відповісти</string>
-    <string name="forums_settings_rename">Перейменувати</string>
-    <string name="forums_settings_save">Зберегти</string>
     <string name="forums_settings_delete">Видалити форум</string>
     <string name="forums_settings_delete_title">Видалити форум</string>
     <string name="forums_forum_not_found">Форум не знайдено</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Надіслати</string>
     <string name="forums_post_body_field">Текст</string>
-    <string name="forums_post_edit_body_field">Текст</string>
     <string name="forums_comment_edit_body_field">Текст</string>
-    <string name="forums_tag_clear">Очистити фільтр</string>
-    <string name="forums_post_tag_add">Додати тег</string>
     <string name="forums_write_comment">Напишіть коментар…</string>
-    <string name="forums_auth_login_failed">Не вдалося увійти</string>
 
     <string name="notification_channel_forums">Сповіщення форумів</string>
-    <string name="forums_auth_brand">Mochi Форуми</string>
-    <string name="forums_auth_create_identity_failed">Не вдалося створити особистість</string>
-    <string name="forums_auth_mfa_unsupported">MFA ще не підтримується у мобільному застосунку</string>
-    <string name="forums_auth_enter_code_sent">Введіть код, надісланий на %1$s</string>
-    <string name="forums_auth_create_identity">Створіть свою особистість</string>
     <string name="forums_list_empty">Поки немає форумів</string>
     <string name="forums_list_unsubscribe_message">Ви впевнені, що хочете відписатися від цього форуму?</string>
     <string name="forums_find_search_placeholder">Шукати форуми або вставте URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Не підтримати</string>
     <string name="forums_post_quote">Цитувати у відповіді</string>
     <string name="forums_comment_quote">Цитувати у відповіді</string>
-    <string name="forums_post_tag_remove">Видалити мітку</string>
     <string name="forums_access_add">Додати правило доступу</string>
     <string name="forums_access_empty">Правил поки немає — застосовуються типові</string>
-    <string name="forums_access_target_hint">ID сутності, @група, * (всі) або + (учасники)</string>
-    <string name="forums_access_level">Рівень</string>
-    <string name="forums_access_level_moderate">Модерувати</string>
     <string name="forums_members_search">Фільтрувати учасників</string>
     <string name="forums_banner_description">Markdown, що відображається у верхній частині форуму.</string>
     <string name="forums_banner_placeholder">Введіть текст банера (підтримується Markdown)…</string>
-    <string name="forums_ai_mode_label">Режим: %1$s</string>
-    <string name="forums_ai_mode_heading">Режим ШІ</string>
     <string name="forums_ai_mode_off">Вимкнено</string>
-    <string name="forums_ai_account">Обліковий запис ШІ</string>
-    <string name="forums_ai_prompt_tag">Запит для міток</string>
-    <string name="forums_ai_prompt_score">Запит для оцінювання</string>
-    <string name="forums_ai_post_prompt_label">Запит для міток публікацій</string>
-    <string name="forums_ai_comment_prompt_label">Запит для міток коментарів</string>
-    <string name="forums_settings_fingerprint">Відбиток: %1$s</string>
-    <string name="forums_settings_clear_notifications">Очистити сповіщення</string>
     <string name="forums_moderation_queue_empty">Нічого не очікує</string>
     <string name="forums_moderation_report_details">Подробиці: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Вирішено %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Відповідь на %1$s</string>
     <string name="forums_comment_clear_reply">Очистити відповідь</string>
     <string name="forums_settings_title">Налаштування %1$s</string>
-    <string name="forums_settings_rename_label">Назва форуму</string>
-    <string name="forums_settings_danger_zone">Небезпечна зона</string>
     <string name="forums_settings_delete_message">Це назавжди видалить форум та всі його публікації. Цю дію не можна скасувати.</string>
 
-    <string name="forums_tag_interest_up">Підвищити інтерес</string>
-    <string name="forums_tag_interest_down">Зменшити інтерес</string>
-    <string name="forums_tag_interest_remove">Видалити інтерес</string>
     <string name="forums_access_tab_users">Користувачі</string>
     <string name="forums_access_tab_groups">Групи</string>
-    <string name="forums_access_tab_manual">Вручну</string>
     <string name="forums_access_search_users">Пошук користувачів</string>
     <string name="forums_access_no_groups">Немає доступних груп</string>
     <string name="forums_saved_title">Збережене</string>

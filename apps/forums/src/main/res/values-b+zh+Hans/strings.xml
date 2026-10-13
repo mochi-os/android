@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">显示名称</string>
-    <string name="forums_auth_verification_failed">验证失败</string>
     <string name="forums_list_title">论坛</string>
     <string name="forums_list_find">查找论坛</string>
     <string name="forums_list_unsubscribe">退订</string>
     <string name="forums_list_unsubscribe_title">退订</string>
     <string name="forums_create_title">创建论坛</string>
     <string name="forums_create_name">论坛名称</string>
-    <string name="forums_create_privacy">隐私</string>
-    <string name="forums_create_private">私有</string>
-    <string name="forums_create_public">公开</string>
     <string name="forums_create_action">创建论坛</string>
     <string name="forums_find_title">查找论坛</string>
     <string name="forums_find_recommended">推荐</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">发布</string>
     <string name="forums_post_edit">编辑帖子</string>
     <string name="forums_post_edit_title">编辑帖子</string>
-    <string name="forums_post_edit_title_field">标题</string>
-    <string name="forums_post_save">保存</string>
     <string name="forums_post_delete">删除帖子</string>
     <string name="forums_post_delete_title">删除帖子</string>
     <string name="forums_post_locked">已锁定</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">成员</string>
     <string name="forums_tab_banner">横幅</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">对象</string>
-    <string name="forums_access_level_view">查看</string>
-    <string name="forums_access_level_vote">投票</string>
-    <string name="forums_access_level_comment">评论</string>
-    <string name="forums_access_level_post">发布</string>
-    <string name="forums_access_level_none">无</string>
     <string name="forums_members_empty">无成员</string>
     <string name="forums_banner_dismiss">关闭横幅</string>
     <string name="forums_ai_mode_tag">标记</string>
     <string name="forums_ai_account_default">默认账户</string>
-    <string name="forums_ai_prompt_reset">重置为默认</string>
     <string name="forums_settings_unsubscribe">退订</string>
     <string name="forums_moderation_title">审核</string>
     <string name="forums_moderation_tab_queue">队列</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">离题</string>
     <string name="forums_report_reason_other">其他</string>
     <string name="forums_post_default_author">用户</string>
-    <string name="forums_comments">评论</string>
     <string name="forums_no_comments">暂无评论</string>
-    <string name="forums_comment_save">保存</string>
     <string name="forums_comment_edit">编辑评论</string>
     <string name="forums_comment_edit_title">编辑评论</string>
-    <string name="forums_comment_edit_attach">附加文件</string>
     <string name="forums_comment_delete">删除评论</string>
     <string name="forums_comment_delete_title">删除评论</string>
     <string name="forums_comment_reply">回复</string>
-    <string name="forums_settings_rename">重命名</string>
-    <string name="forums_settings_save">保存</string>
     <string name="forums_settings_delete">删除论坛</string>
     <string name="forums_settings_delete_title">删除论坛</string>
     <string name="forums_forum_not_found">论坛未找到</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">发送</string>
     <string name="forums_post_body_field">正文</string>
-    <string name="forums_post_edit_body_field">正文</string>
     <string name="forums_comment_edit_body_field">正文</string>
-    <string name="forums_tag_clear">清除筛选</string>
-    <string name="forums_post_tag_add">添加标签</string>
     <string name="forums_write_comment">写评论…</string>
-    <string name="forums_auth_login_failed">登录失败</string>
 
     <string name="notification_channel_forums">论坛通知</string>
-    <string name="forums_auth_brand">Mochi 论坛</string>
-    <string name="forums_auth_create_identity_failed">创建身份失败</string>
-    <string name="forums_auth_mfa_unsupported">移动应用暂不支持多重身份验证</string>
-    <string name="forums_auth_enter_code_sent">请输入发送至 %1$s 的验证码</string>
-    <string name="forums_auth_create_identity">创建您的身份</string>
     <string name="forums_list_empty">暂无论坛</string>
     <string name="forums_list_unsubscribe_message">确定要退订此论坛吗?</string>
     <string name="forums_find_search_placeholder">搜索论坛或粘贴网址</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">反对</string>
     <string name="forums_post_quote">引用回复</string>
     <string name="forums_comment_quote">引用回复</string>
-    <string name="forums_post_tag_remove">移除标签</string>
     <string name="forums_access_add">添加访问规则</string>
     <string name="forums_access_empty">暂无规则 — 应用默认设置</string>
-    <string name="forums_access_target_hint">实体 ID、@群组、*(所有人)或 +(成员)</string>
-    <string name="forums_access_level">级别</string>
-    <string name="forums_access_level_moderate">审核</string>
     <string name="forums_members_search">筛选成员</string>
     <string name="forums_banner_description">显示在论坛顶部的 Markdown 内容。</string>
     <string name="forums_banner_placeholder">输入横幅文本（支持 Markdown）…</string>
-    <string name="forums_ai_mode_label">模式:%1$s</string>
-    <string name="forums_ai_mode_heading">AI 模式</string>
     <string name="forums_ai_mode_off">已禁用</string>
-    <string name="forums_ai_account">AI 账户</string>
-    <string name="forums_ai_prompt_tag">标签提示词</string>
-    <string name="forums_ai_prompt_score">评分提示词</string>
-    <string name="forums_ai_post_prompt_label">帖子标签的提示词</string>
-    <string name="forums_ai_comment_prompt_label">评论标签的提示词</string>
-    <string name="forums_settings_fingerprint">指纹:%1$s</string>
-    <string name="forums_settings_clear_notifications">清除通知</string>
     <string name="forums_moderation_queue_empty">暂无待处理项</string>
     <string name="forums_moderation_report_details">详情:%1$s</string>
     <string name="forums_moderation_report_resolved_by">由 %1$s 处理 — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">正在回复 %1$s</string>
     <string name="forums_comment_clear_reply">清除回复</string>
     <string name="forums_settings_title">%1$s 设置</string>
-    <string name="forums_settings_rename_label">论坛名称</string>
-    <string name="forums_settings_danger_zone">危险操作区</string>
     <string name="forums_settings_delete_message">这将永久删除该论坛及其所有帖子。此操作无法撤销。</string>
 
-    <string name="forums_tag_interest_up">提升兴趣</string>
-    <string name="forums_tag_interest_down">降低兴趣</string>
-    <string name="forums_tag_interest_remove">移除兴趣</string>
     <string name="forums_access_tab_users">用户</string>
     <string name="forums_access_tab_groups">群组</string>
-    <string name="forums_access_tab_manual">手动</string>
     <string name="forums_access_search_users">搜索用户</string>
     <string name="forums_access_no_groups">无可用群组</string>
     <string name="forums_saved_title">已保存</string>

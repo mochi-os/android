@@ -19,7 +19,6 @@
     <string name="crm_link">链接</string>
     <string name="crm_design">设计</string>
     <string name="crm_export_failed">无法保存导出内容</string>
-    <string name="crm_sort_direction">方向</string>
     <string name="crm_sort_rank">手动</string>
     <string name="crm_sort_created">已创建</string>
     <string name="crm_sort_updated">已更新</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">添加类</string>
     <string name="crm_classes_create">创建</string>
     <string name="crm_class_name">名称</string>
-    <string name="crm_class_save_name">保存名称</string>
     <string name="crm_class_title_field">标题字段</string>
     <string name="crm_class_fields">字段</string>
     <string name="crm_class_add_field">添加字段</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">必填</string>
     <string name="crm_field_position_default">默认</string>
     <string name="crm_field_position_sidebar">侧边栏</string>
-    <string name="crm_field_save">保存更改</string>
     <string name="crm_field_options">选项</string>
     <string name="crm_field_add_option">添加选项</string>
     <string name="crm_field_delete">删除字段</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">搜索 CRM</string>
     <string name="crm_list_no_matching">未找到匹配的 CRM</string>
     <string name="crm_list_empty">暂无 CRM</string>
-    <string name="crm_create_template">模板</string>
     <string name="crm_find_search_placeholder">搜索 CRM 或粘贴 URL</string>
     <string name="crm_find_search_hint">搜索要订阅的 CRM</string>
     <string name="crm_create_object_parent_none">（无）</string>

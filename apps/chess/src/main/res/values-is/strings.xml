@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Skák</string>
-    <string name="chess_sidebar_header">Skák</string>
     <string name="chess_sidebar_active">Virkir leikir</string>
     <string name="chess_sidebar_completed">Lokið</string>
     <string name="chess_sidebar_new_game">Nýr leikur</string>
-    <string name="chess_section_active">Virkir leikir</string>
-    <string name="chess_section_completed">Lokið</string>
-    <string name="chess_new_game">Nýr leikur</string>
     <string name="chess_empty_title">Engir leikir ennþá</string>
     <string name="chess_new_title">Nýr leikur</string>
     <string name="chess_new_pick_opponent">Veldu andstæðing</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Tilkynningar um skákleiki, jafnteflisboð og útkomu skáka.</string>
     <string name="chess_open_sidebar">Opna hliðarstiku</string>
-    <string name="chess_empty_subtitle">Byrjaðu fyrstu skákina þína til að spila skák með vini.</string>
-    <string name="chess_empty_start_button">Byrjaðu fyrstu skákina þína</string>
     <string name="chess_detail_unavailable">Skák ekki í boði</string>
     <string name="chess_delete_title">Eyða leiknum?</string>
     <string name="chess_delete_message">Þetta fjarlægir skákina af listanum þínum.</string>

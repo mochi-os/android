@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Ṣẹ́ẹ̀sì</string>
-    <string name="chess_sidebar_header">Ṣẹ́ẹ̀sì</string>
     <string name="chess_sidebar_active">Àwọn Eré Tó Ń Lọ</string>
     <string name="chess_sidebar_completed">Tí a parí</string>
     <string name="chess_sidebar_new_game">Eré tuntun</string>
-    <string name="chess_section_active">Àwọn Eré Tó Ń Lọ</string>
-    <string name="chess_section_completed">Tí a parí</string>
-    <string name="chess_new_game">Eré tuntun</string>
     <string name="chess_empty_title">Kò sí eré síbẹ̀</string>
     <string name="chess_new_title">Eré Tuntun</string>
     <string name="chess_new_pick_opponent">Yan alátakò</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Àwọn ìfitónilétí nípa ìgbésẹ̀ chess, ìfilọ̀ ìdọ́gba àti àbájáde ìdíje.</string>
     <string name="chess_open_sidebar">Ṣí akọtọ ẹgbẹ</string>
-    <string name="chess_empty_subtitle">Bẹ̀rẹ̀ ìdíje àkọ́kọ́ rẹ láti ṣe chess pẹ̀lú ọ̀rẹ́.</string>
-    <string name="chess_empty_start_button">Bẹ̀rẹ̀ ìdíje àkọ́kọ́ rẹ</string>
     <string name="chess_detail_unavailable">Ìdíje kò sí</string>
     <string name="chess_delete_title">Pa eré náà rẹ́?</string>
     <string name="chess_delete_message">Èyí yọ ìdíje kúrò nínú àkọsílẹ̀ rẹ.</string>

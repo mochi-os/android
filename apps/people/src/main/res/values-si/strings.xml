@@ -121,7 +121,6 @@
     <string name="people_contacts_message">පණිවිඩයක් යවන්න</string>
     <string name="people_contacts_no_people_found">පුද්ගලයන් හමු නොවීය</string>
     <string name="people_contacts_try_adjusting">ඔබේ සෙවීම සකස් කිරීම උත්සාහ කරන්න</string>
-    <string name="people_contact_section_address">ලිපිනය</string>
     <string name="people_contact_section_detail">විස්තර</string>
     <string name="people_contact_name">නම</string>
     <string name="people_contact_email">ඊමේල්</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">නැවත නම් කරන්න</string>
     <string name="people_contacts_sort_name">නම</string>
     <string name="people_contacts_sort_recent">මෑතකදී එක් කළ</string>
-    <string name="people_contacts_thats_you">එය ඔබයි</string>
     <string name="people_contacts_try_different_search">වෙනත් සෙවුම් වචනයක් උත්සාහ කරන්න</string>
     <string name="people_contacts_unfriend">මිතුරා ඉවත් කරන්න</string>
     <string name="people_add_contact_search_placeholder">සෙවීමට ටයිප් කරන්න…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">සම්බන්ධතා හමු නොවීය</string>
     <string name="people_contacts_add_to_start">සම්බන්ධ වීම ආරම්භ කිරීමට සම්බන්ධතා එක් කරන්න</string>
     <string name="people_contacts_actions">සම්බන්ධතා ක්‍රියා</string>
-    <string name="people_contacts_friend">මිතුරා</string>
     <string name="people_contacts_invite">ආරාධනා කරන්න</string>
     <string name="people_contacts_unfriend_confirm">%1$s තවදුරටත් ඔබේ මිතුරෙකු නොවේ. සම්බන්ධතාවය ඔබේ ලිපින පොතේ තිබේ.</string>
     <string name="people_contacts_delete">සම්බන්ධතාවය මකන්න</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">සම්බන්ධතාවය වෙනස් විය</string>
     <string name="people_add_contact_title">සම්බන්ධතාවයක් එක් කරන්න</string>
     <string name="people_add_contact_add">සම්බන්ධතාවලට එක් කරන්න</string>
-    <string name="people_add_contact_in_contacts">සම්බන්ධතාවල</string>
     <string name="people_books_create">ලිපින පොතක් සාදන්න</string>
     <string name="people_books_delete">ලිපින පොත මකන්න</string>
     <plurals name="people_books_delete_confirm">

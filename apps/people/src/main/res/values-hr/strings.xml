@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Pošalji poruku</string>
     <string name="people_contacts_no_people_found">Nije pronađen nijedan korisnik</string>
     <string name="people_contacts_try_adjusting">Pokušajte prilagoditi pretragu</string>
-    <string name="people_contact_section_address">Adresa</string>
     <string name="people_contact_section_detail">Detalji</string>
     <string name="people_contact_name">Ime</string>
     <string name="people_contact_email">E-pošta</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Preimenuj</string>
     <string name="people_contacts_sort_name">Ime</string>
     <string name="people_contacts_sort_recent">Nedavno dodano</string>
-    <string name="people_contacts_thats_you">To si ti</string>
     <string name="people_contacts_try_different_search">Pokušajte s drugim pojmom za pretragu</string>
     <string name="people_contacts_unfriend">Ukloni prijatelja</string>
     <string name="people_add_contact_search_placeholder">Upišite za pretraživanje…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Nema pronađenih kontakata</string>
     <string name="people_contacts_add_to_start">Dodajte kontakte da se počnete povezivati</string>
     <string name="people_contacts_actions">Radnje kontakta</string>
-    <string name="people_contacts_friend">Prijatelj</string>
     <string name="people_contacts_invite">Pozovi</string>
     <string name="people_contacts_unfriend_confirm">%1$s više neće biti vaš prijatelj. Kontakt ostaje u vašem adresaru.</string>
     <string name="people_contacts_delete">Obriši kontakt</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakt je promijenjen</string>
     <string name="people_add_contact_title">Dodaj kontakt</string>
     <string name="people_add_contact_add">Dodaj u kontakte</string>
-    <string name="people_add_contact_in_contacts">U kontaktima</string>
     <string name="people_books_create">Stvori adresar</string>
     <string name="people_books_delete">Izbriši adresar</string>
     <plurals name="people_books_delete_confirm">

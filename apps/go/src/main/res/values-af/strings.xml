@@ -50,7 +50,6 @@
     <string name="go_resign_title">Bedank spel?</string>
     <string name="go_sidebar_completed">Voltooi</string>
     <string name="go_sidebar_new_game">Nuwe spel</string>
-    <string name="go_status_draw">Gelykop</string>
     <string name="go_status_draw_text">Gelykop</string>
     <string name="go_status_game_over">Spel verby</string>
     <string name="go_status_opponent_move">%1$s se skuif</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Open sybalk</string>
     <string name="go_sidebar_active">Aktiewe speletjies</string>
     <string name="go_empty_active">Nog geen aktiewe speletjies nie.</string>
-    <string name="go_status_resigned">Oorgegee</string>
     <string name="go_new_game_title">Nuwe Go-speletjie</string>
     <string name="go_new_game_no_friends">Jy moet ’n vriend byvoeg voordat jy ’n speletjie kan begin.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

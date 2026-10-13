@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Šach</string>
-    <string name="chess_sidebar_header">Šach</string>
     <string name="chess_sidebar_active">Aktívne hry</string>
     <string name="chess_sidebar_completed">Dokončené</string>
     <string name="chess_sidebar_new_game">Nová hra</string>
-    <string name="chess_section_active">Aktívne hry</string>
-    <string name="chess_section_completed">Dokončené</string>
-    <string name="chess_new_game">Nová hra</string>
     <string name="chess_empty_title">Zatiaľ žiadne hry</string>
     <string name="chess_new_title">Nová hra</string>
     <string name="chess_new_pick_opponent">Vyberte súpera</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Oznámenia Šach</string>
     <string name="chess_channel_description">Oznámenia o ťahoch, ponukách remízy a výsledkoch partií.</string>
     <string name="chess_open_sidebar">Otvoriť bočný panel</string>
-    <string name="chess_empty_subtitle">Začnite prvú partiu a hrajte šach s priateľom.</string>
-    <string name="chess_empty_start_button">Začať prvú partiu</string>
     <string name="chess_detail_unavailable">Partia nedostupná</string>
     <string name="chess_delete_title">Odstrániť hru?</string>
     <string name="chess_delete_message">Tým sa partia odstráni zo zoznamu.</string>

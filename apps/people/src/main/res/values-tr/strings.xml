@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Mesaj gönder</string>
     <string name="people_contacts_no_people_found">Kişi bulunamadı</string>
     <string name="people_contacts_try_adjusting">Aramanı ayarlamayı dene</string>
-    <string name="people_contact_section_address">Adres</string>
     <string name="people_contact_section_detail">Ayrıntılar</string>
     <string name="people_contact_name">Ad</string>
     <string name="people_contact_email">E-posta</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Yeniden adlandır</string>
     <string name="people_contacts_sort_name">Ad</string>
     <string name="people_contacts_sort_recent">Yakın zamanda eklendi</string>
-    <string name="people_contacts_thats_you">Bu sensin</string>
     <string name="people_contacts_try_different_search">Farklı bir arama terimi dene</string>
     <string name="people_contacts_unfriend">Arkadaşı kaldır</string>
     <string name="people_add_contact_search_placeholder">Aramak için yazın…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Kişi bulunamadı</string>
     <string name="people_contacts_add_to_start">Bağlantı kurmaya başlamak için kişi ekleyin</string>
     <string name="people_contacts_actions">Kişi işlemleri</string>
-    <string name="people_contacts_friend">Arkadaş</string>
     <string name="people_contacts_invite">Davet et</string>
     <string name="people_contacts_unfriend_confirm">%1$s artık arkadaşınız olmayacak. Kişi adres defterinizde kalır.</string>
     <string name="people_contacts_delete">Kişiyi sil</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kişi değişti</string>
     <string name="people_add_contact_title">Kişi ekle</string>
     <string name="people_add_contact_add">Kişilere ekle</string>
-    <string name="people_add_contact_in_contacts">Kişilerde</string>
     <string name="people_books_create">Adres defteri oluştur</string>
     <string name="people_books_delete">Adres defterini sil</string>
     <plurals name="people_books_delete_confirm">

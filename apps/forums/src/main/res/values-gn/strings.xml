@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Téra ojehechaukáva</string>
-    <string name="forums_auth_verification_failed">Verificación ndoikói</string>
     <string name="forums_list_title">Forokuéra</string>
     <string name="forums_list_find">Eheka foro</string>
     <string name="forums_list_unsubscribe">Edesuscribi</string>
     <string name="forums_list_unsubscribe_title">Edesuscribi</string>
     <string name="forums_create_title">Emoheñói foro</string>
     <string name="forums_create_name">Foro réra</string>
-    <string name="forums_create_privacy">Privacidad</string>
-    <string name="forums_create_private">Ñemiguáva</string>
-    <string name="forums_create_public">Ojeikéva</string>
     <string name="forums_create_action">Emoheñói foro</string>
     <string name="forums_find_title">Eheka foro</string>
     <string name="forums_find_recommended">Ojeporavóva</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Emoherakuã</string>
     <string name="forums_post_edit">Embosako\'i marandu</string>
     <string name="forums_post_edit_title">Embosako\'i marandu</string>
-    <string name="forums_post_edit_title_field">Teratee</string>
-    <string name="forums_post_save">Eñongatu</string>
     <string name="forums_post_delete">Hundi marandu</string>
     <string name="forums_post_delete_title">Hundi marandu</string>
     <string name="forums_post_locked">Oñemboty</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Irũnguéra</string>
     <string name="forums_tab_banner">Banner</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Puruhára térã atypy</string>
-    <string name="forums_access_level_view">Ehecha</string>
-    <string name="forums_access_level_vote">Eporavo</string>
-    <string name="forums_access_level_comment">Ekomenta</string>
-    <string name="forums_access_level_post">Emoherakuã</string>
-    <string name="forums_access_level_none">Mba\'eve</string>
     <string name="forums_members_empty">Ndaipóri irũ</string>
     <string name="forums_banner_dismiss">Emboyke banner</string>
     <string name="forums_ai_mode_tag">Teramoĩ</string>
     <string name="forums_ai_account_default">Mba\'ete ypygua</string>
-    <string name="forums_ai_prompt_reset">Embojevy ypyguápe</string>
     <string name="forums_settings_unsubscribe">Edesuscribi</string>
     <string name="forums_moderation_title">Ñangareko</string>
     <string name="forums_moderation_tab_queue">Fila</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Tema okapegua</string>
     <string name="forums_report_reason_other">Ambue</string>
     <string name="forums_post_default_author">Puruhára</string>
-    <string name="forums_comments">Comentariokuéra</string>
     <string name="forums_no_comments">Ndaipóri comentario gueteri</string>
-    <string name="forums_comment_save">Eñongatu</string>
     <string name="forums_comment_edit">Embosako\'i comentario</string>
     <string name="forums_comment_edit_title">Embosako\'i comentario</string>
-    <string name="forums_comment_edit_attach">Embojuaju archivokuéra</string>
     <string name="forums_comment_delete">Hundi comentario</string>
     <string name="forums_comment_delete_title">Hundi comentario</string>
     <string name="forums_comment_reply">Embohovái</string>
-    <string name="forums_settings_rename">Embohera jey</string>
-    <string name="forums_settings_save">Eñongatu</string>
     <string name="forums_settings_delete">Hundi foro</string>
     <string name="forums_settings_delete_title">Hundi foro</string>
     <string name="forums_forum_not_found">Foro nojetopái</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Emondo</string>
     <string name="forums_post_body_field">Jehaipyre</string>
-    <string name="forums_post_edit_body_field">Jehaipyre</string>
     <string name="forums_comment_edit_body_field">Jehaipyre</string>
-    <string name="forums_auth_login_failed">Ndaikatúi eike</string>
-    <string name="forums_auth_create_identity_failed">Ndaikatúi oñemoheñói identidad</string>
-    <string name="forums_auth_mfa_unsupported">MFA ndoikói gueteri pumbyry app-pe</string>
-    <string name="forums_auth_enter_code_sent">Emoinge código oñemondova\'ekue %1$s-pe</string>
-    <string name="forums_auth_create_identity">Emoheñói ne identidad</string>
-    <string name="forums_tag_clear">Embopotĩ mbogua</string>
-    <string name="forums_post_tag_add">Embojuaju teramoĩ</string>
     <string name="forums_write_comment">Ehai comentario…</string>
 
     <string name="notification_channel_forums">Forokuéra momarandu</string>
-    <string name="forums_auth_brand">Mochi Forokuéra</string>
     <string name="forums_list_empty">Gueteri ndaipóri foro</string>
     <string name="forums_list_unsubscribe_message">Añetehápe piko reipota resẽ ko foro-gui?</string>
     <string name="forums_find_search_placeholder">Eheka foro térã emboja URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Voto yvy gotyo</string>
     <string name="forums_post_quote">Ecita mbohováipe</string>
     <string name="forums_comment_quote">Ecita mbohováipe</string>
-    <string name="forums_post_tag_remove">Embogue teramoĩ</string>
     <string name="forums_access_add">Embojuaju jeike léi</string>
     <string name="forums_access_empty">Gueteri ndaipóri léi — ojeporu ypygua</string>
-    <string name="forums_access_target_hint">Entidad ID, @atypy, * (opavave), térã + (irũnguéra)</string>
-    <string name="forums_access_level">Nivel</string>
-    <string name="forums_access_level_moderate">Eñangareko</string>
     <string name="forums_members_search">Mbogua irũnguéra</string>
     <string name="forums_banner_description">Markdown ojehechaukáva foro ru\'ãme.</string>
     <string name="forums_banner_placeholder">Ehai banner moñe\'ẽrã (oñemoneĩ markdown)…</string>
-    <string name="forums_ai_mode_label">Reko: %1$s</string>
-    <string name="forums_ai_mode_heading">AI reko</string>
     <string name="forums_ai_mode_off">Oñemboty</string>
-    <string name="forums_ai_account">AI mba\'ete</string>
-    <string name="forums_ai_prompt_tag">Teramoĩ prompt</string>
-    <string name="forums_ai_prompt_score">Puntuación prompt</string>
-    <string name="forums_ai_post_prompt_label">Marandu teramoĩ prompt</string>
-    <string name="forums_ai_comment_prompt_label">Comentario teramoĩ prompt</string>
-    <string name="forums_settings_fingerprint">Kuãhũ: %1$s</string>
-    <string name="forums_settings_clear_notifications">Embogue momarandukuéra</string>
     <string name="forums_moderation_queue_empty">Moderación fila nandi</string>
     <string name="forums_moderation_report_details">Detalle: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Omyesakã %1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Rembohováihína %1$s-pe</string>
     <string name="forums_comment_clear_reply">Embogue mbohovái</string>
     <string name="forums_settings_title">%1$s ñemboheko</string>
-    <string name="forums_settings_rename_label">Foro réra</string>
-    <string name="forums_settings_danger_zone">Apañuái renda</string>
     <string name="forums_settings_delete_message">Kóva ombogue tapiaite foro ha opaite imarandukuéra. Kóva ndaikatúi oñembojevy.</string>
 
-    <string name="forums_tag_interest_up">Embotuicha interés</string>
-    <string name="forums_tag_interest_down">Emomichĩ interés</string>
-    <string name="forums_tag_interest_remove">Embogue interés</string>
     <string name="forums_access_tab_users">Puruhárakuéra</string>
     <string name="forums_access_tab_groups">Atypykuéra</string>
-    <string name="forums_access_tab_manual">Manual</string>
     <string name="forums_access_search_users">Eheka puruhárakuéra</string>
     <string name="forums_access_no_groups">Ndaipóri atypy oĩva</string>
     <string name="forums_saved_title">Ñongatupyre</string>

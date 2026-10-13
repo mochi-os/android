@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">Mitätöidäänkö RSS-käyttöoikeus?</string>
     <string name="rss_revoke_message">Kaikki tätä syötettä tilaavat lakkaavat vastaanottamasta sitä. Voit kopioida uuden URL-osoitteen jälkeenpäin.</string>
     <string name="rss_revoked">RSS-käyttöoikeus mitätöity</string>
-    <string name="rss_revoke_failed">RSS-käyttöoikeuden mitätöinti epäonnistui</string>
     <string name="game_empty_title">Ei vielä pelejä</string>
     <string name="game_select_title">Valitse peli</string>
     <string name="game_select_subtitle">Valitse peli sivupalkista tai aloita uusi.</string>

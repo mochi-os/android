@@ -50,7 +50,6 @@
     <string name="go_resign_title">Тоглоомоос тэрсэх үү?</string>
     <string name="go_sidebar_completed">Гүйцэтгэсэн</string>
     <string name="go_sidebar_new_game">Шинэ тоглоом</string>
-    <string name="go_status_draw">Тэнцээ</string>
     <string name="go_status_draw_text">Тэнцээ</string>
     <string name="go_status_game_over">Тоглоом дууссан</string>
     <string name="go_status_opponent_move">%1$s-н нүүдэл</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Хажуугийн самбарыг нээх</string>
     <string name="go_sidebar_active">Идэвхтэй тоглоомууд</string>
     <string name="go_empty_active">Одоогоор идэвхтэй тоглоом байхгүй.</string>
-    <string name="go_status_resigned">Бууж өгсөн</string>
     <string name="go_new_game_title">Шинэ Go тоглоом</string>
     <string name="go_new_game_no_friends">Тоглоом эхлүүлэхийн өмнө найз нэмэх шаардлагатай.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

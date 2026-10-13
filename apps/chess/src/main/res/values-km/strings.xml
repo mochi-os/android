@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">អុកអន្តរជាតិ</string>
-    <string name="chess_sidebar_header">អុកអន្តរជាតិ</string>
     <string name="chess_sidebar_active">ហ្គេមសកម្ម</string>
     <string name="chess_sidebar_completed">បានបញ្ចប់</string>
     <string name="chess_sidebar_new_game">ហ្គេមថ្មី</string>
-    <string name="chess_section_active">ហ្គេមសកម្ម</string>
-    <string name="chess_section_completed">បានបញ្ចប់</string>
-    <string name="chess_new_game">ហ្គេមថ្មី</string>
     <string name="chess_empty_title">មិនទាន់មានហ្គេម</string>
     <string name="chess_new_title">ហ្គេមថ្មី</string>
     <string name="chess_new_pick_opponent">ជ្រើសរើសគូប្រកួត</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">ការជូនដំណឹងអំពីការផ្លាស់ទីអុក ការស្នើសុំស្មើ និងលទ្ធផលនៃការប្រកួត។</string>
     <string name="chess_open_sidebar">បើករបារចំហៀង</string>
-    <string name="chess_empty_subtitle">ចាប់ផ្តើមការប្រកួតដំបូងរបស់អ្នក ដើម្បីលេងអុកជាមួយមិត្ត។</string>
-    <string name="chess_empty_start_button">ចាប់ផ្តើមការប្រកួតដំបូងរបស់អ្នក</string>
     <string name="chess_detail_unavailable">ការប្រកួតមិនអាចប្រើបានទេ</string>
     <string name="chess_delete_title">លុបហ្គេម?</string>
     <string name="chess_delete_message">នេះនឹងលុបការប្រកួតចេញពីបញ្ជីរបស់អ្នក។</string>

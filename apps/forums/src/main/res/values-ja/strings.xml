@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">表示名</string>
-    <string name="forums_auth_verification_failed">確認に失敗しました</string>
     <string name="forums_list_title">フォーラム</string>
     <string name="forums_list_find">フォーラムを検索</string>
     <string name="forums_list_unsubscribe">購読解除</string>
     <string name="forums_list_unsubscribe_title">購読解除</string>
     <string name="forums_create_title">フォーラムを作成</string>
     <string name="forums_create_name">フォーラム名</string>
-    <string name="forums_create_privacy">プライバシー</string>
-    <string name="forums_create_private">非公開</string>
-    <string name="forums_create_public">公開</string>
     <string name="forums_create_action">フォーラムを作成</string>
     <string name="forums_find_title">フォーラムを検索</string>
     <string name="forums_find_recommended">おすすめ</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">投稿</string>
     <string name="forums_post_edit">投稿を編集</string>
     <string name="forums_post_edit_title">投稿を編集</string>
-    <string name="forums_post_edit_title_field">タイトル</string>
-    <string name="forums_post_save">保存</string>
     <string name="forums_post_delete">投稿を削除</string>
     <string name="forums_post_delete_title">投稿を削除</string>
     <string name="forums_post_locked">ロック済み</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">メンバー</string>
     <string name="forums_tab_banner">バナー</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">対象</string>
-    <string name="forums_access_level_view">表示</string>
-    <string name="forums_access_level_vote">投票</string>
-    <string name="forums_access_level_comment">コメント</string>
-    <string name="forums_access_level_post">投稿</string>
-    <string name="forums_access_level_none">なし</string>
     <string name="forums_members_empty">メンバーがいません</string>
     <string name="forums_banner_dismiss">バナーを閉じる</string>
     <string name="forums_ai_mode_tag">タグ付け</string>
     <string name="forums_ai_account_default">デフォルトアカウント</string>
-    <string name="forums_ai_prompt_reset">デフォルトに戻す</string>
     <string name="forums_settings_unsubscribe">購読解除</string>
     <string name="forums_moderation_title">モデレーション</string>
     <string name="forums_moderation_tab_queue">キュー</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">トピック外</string>
     <string name="forums_report_reason_other">その他</string>
     <string name="forums_post_default_author">ユーザー</string>
-    <string name="forums_comments">コメント</string>
     <string name="forums_no_comments">まだコメントがありません</string>
-    <string name="forums_comment_save">保存</string>
     <string name="forums_comment_edit">コメントを編集</string>
     <string name="forums_comment_edit_title">コメントを編集</string>
-    <string name="forums_comment_edit_attach">ファイルを添付</string>
     <string name="forums_comment_delete">コメントを削除</string>
     <string name="forums_comment_delete_title">コメントを削除</string>
     <string name="forums_comment_reply">返信</string>
-    <string name="forums_settings_rename">名前を変更</string>
-    <string name="forums_settings_save">保存</string>
     <string name="forums_settings_delete">フォーラムを削除</string>
     <string name="forums_settings_delete_title">フォーラムを削除</string>
     <string name="forums_forum_not_found">フォーラムが見つかりません</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">送信</string>
     <string name="forums_post_body_field">本文</string>
-    <string name="forums_post_edit_body_field">本文</string>
     <string name="forums_comment_edit_body_field">本文</string>
-    <string name="forums_tag_clear">フィルターをクリア</string>
-    <string name="forums_post_tag_add">タグを追加</string>
     <string name="forums_write_comment">コメントを書く…</string>
-    <string name="forums_auth_login_failed">ログインに失敗しました</string>
 
     <string name="notification_channel_forums">フォーラム通知</string>
-    <string name="forums_auth_brand">Mochi フォーラム</string>
-    <string name="forums_auth_create_identity_failed">アイデンティティの作成に失敗しました</string>
-    <string name="forums_auth_mfa_unsupported">MFA はモバイルアプリでまだサポートされていません</string>
-    <string name="forums_auth_enter_code_sent">%1$s に送信されたコードを入力してください</string>
-    <string name="forums_auth_create_identity">アイデンティティを作成</string>
     <string name="forums_list_empty">フォーラムがまだありません</string>
     <string name="forums_list_unsubscribe_message">このフォーラムの購読を解除してもよろしいですか？</string>
     <string name="forums_find_search_placeholder">フォーラムを検索または URL を貼り付け</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">反対票</string>
     <string name="forums_post_quote">引用して返信</string>
     <string name="forums_comment_quote">引用して返信</string>
-    <string name="forums_post_tag_remove">タグを削除</string>
     <string name="forums_access_add">アクセス規則を追加</string>
     <string name="forums_access_empty">規則がまだありません — デフォルトが適用されます</string>
-    <string name="forums_access_target_hint">エンティティ ID、@グループ、*（全員）、または +（メンバー）</string>
-    <string name="forums_access_level">レベル</string>
-    <string name="forums_access_level_moderate">モデレート</string>
     <string name="forums_members_search">メンバーを絞り込み</string>
     <string name="forums_banner_description">フォーラムの上部に表示される Markdown。</string>
     <string name="forums_banner_placeholder">バナーのテキストを入力（Markdown 対応）…</string>
-    <string name="forums_ai_mode_label">モード: %1$s</string>
-    <string name="forums_ai_mode_heading">AI モード</string>
     <string name="forums_ai_mode_off">無効</string>
-    <string name="forums_ai_account">AI アカウント</string>
-    <string name="forums_ai_prompt_tag">タグ付けプロンプト</string>
-    <string name="forums_ai_prompt_score">スコアリングプロンプト</string>
-    <string name="forums_ai_post_prompt_label">投稿タグのプロンプト</string>
-    <string name="forums_ai_comment_prompt_label">コメントタグのプロンプト</string>
-    <string name="forums_settings_fingerprint">フィンガープリント: %1$s</string>
-    <string name="forums_settings_clear_notifications">通知をクリア</string>
     <string name="forums_moderation_queue_empty">保留中の項目はありません</string>
     <string name="forums_moderation_report_details">詳細: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s が解決 — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s に返信中</string>
     <string name="forums_comment_clear_reply">返信をクリア</string>
     <string name="forums_settings_title">%1$sの設定</string>
-    <string name="forums_settings_rename_label">フォーラム名</string>
-    <string name="forums_settings_danger_zone">危険ゾーン</string>
     <string name="forums_settings_delete_message">フォーラムとすべての投稿が完全に削除されます。この操作は取り消せません。</string>
 
-    <string name="forums_tag_interest_up">関心を高める</string>
-    <string name="forums_tag_interest_down">関心を下げる</string>
-    <string name="forums_tag_interest_remove">関心を削除</string>
     <string name="forums_access_tab_users">ユーザー</string>
     <string name="forums_access_tab_groups">グループ</string>
-    <string name="forums_access_tab_manual">手動</string>
     <string name="forums_access_search_users">ユーザーを検索</string>
     <string name="forums_access_no_groups">利用可能なグループがありません</string>
     <string name="forums_saved_title">保存済み</string>

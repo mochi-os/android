@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">체스</string>
-    <string name="chess_sidebar_header">체스</string>
     <string name="chess_sidebar_active">진행 중인 게임</string>
     <string name="chess_sidebar_completed">완료됨</string>
     <string name="chess_sidebar_new_game">새 게임</string>
-    <string name="chess_section_active">진행 중인 게임</string>
-    <string name="chess_section_completed">완료됨</string>
-    <string name="chess_new_game">새 게임</string>
     <string name="chess_empty_title">아직 게임이 없어요</string>
     <string name="chess_new_title">새 게임</string>
     <string name="chess_new_pick_opponent">상대 선택</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">목록에서 대국을 제거합니다.</string>
     <string name="chess_delete_title">게임을 삭제할까요?</string>
     <string name="chess_detail_unavailable">대국을 사용할 수 없음</string>
-    <string name="chess_empty_start_button">첫 대국 시작</string>
-    <string name="chess_empty_subtitle">친구와 체스를 두려면 첫 대국을 시작하세요.</string>
     <string name="chess_move_capture">%1$s 님이 %2$s 을(를) 잡았습니다</string>
     <string name="chess_open_sidebar">사이드바 열기</string>
     <string name="chess_ws_connecting">연결 중…</string>

@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Շախմատ</string>
-    <string name="chess_sidebar_header">Շախմատ</string>
     <string name="chess_sidebar_active">Ակտիվ խաղեր</string>
     <string name="chess_sidebar_completed">Ավարտված</string>
     <string name="chess_sidebar_new_game">Նոր խաղ</string>
-    <string name="chess_section_active">Ակտիվ խաղեր</string>
-    <string name="chess_section_completed">Ավարտված</string>
-    <string name="chess_new_game">Նոր խաղ</string>
     <string name="chess_empty_title">Դեռ խաղեր չկան</string>
     <string name="chess_new_title">Նոր խաղ</string>
     <string name="chess_new_pick_opponent">Ընտրել հակառակորդ</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Ծանուցումներ շախմատի քայլերի, ոչ-ոքիի առաջարկների և խաղի արդյունքների մասին։</string>
     <string name="chess_open_sidebar">Բացել կողագոտին</string>
-    <string name="chess_empty_subtitle">Սկսեք ձեր առաջին խաղը՝ ընկերոջ հետ շախմատ խաղալու համար։</string>
-    <string name="chess_empty_start_button">Սկսեք ձեր առաջին խաղը</string>
     <string name="chess_detail_unavailable">Խաղը հասանելի չէ</string>
     <string name="chess_delete_title">Ջնջե՞լ խաղը։</string>
     <string name="chess_delete_message">Սա հեռացնում է խաղը ձեր ցանկից։</string>

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">ڏيکاري وارو نالو</string>
-    <string name="forums_auth_verification_failed">تصديق ناڪام ٿي</string>
     <string name="forums_list_title">فورمز</string>
     <string name="forums_list_find">فورمَ ڳوليو</string>
     <string name="forums_list_unsubscribe">ان سبسڪرائب ڪريو</string>
     <string name="forums_list_unsubscribe_title">ان سبسڪرائب ڪريو</string>
     <string name="forums_create_title">فورم ٺاهيو</string>
     <string name="forums_create_name">فورم جو نالو</string>
-    <string name="forums_create_privacy">رازداري</string>
-    <string name="forums_create_private">نجي</string>
-    <string name="forums_create_public">عوامي</string>
     <string name="forums_create_action">فورم ٺاهيو</string>
     <string name="forums_find_title">فورمَ ڳوليو</string>
     <string name="forums_find_recommended">تجويز ڪيل</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">پوسٽ ڪريو</string>
     <string name="forums_post_edit">پوسٽ ۾ ترميم ڪريو</string>
     <string name="forums_post_edit_title">پوسٽ ۾ ترميم ڪريو</string>
-    <string name="forums_post_edit_title_field">عنوان</string>
-    <string name="forums_post_save">محفوظ ڪريو</string>
     <string name="forums_post_delete">پوسٽ ختم ڪريو</string>
     <string name="forums_post_delete_title">پوسٽ ختم ڪريو</string>
     <string name="forums_post_locked">بند ٿيل</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">ميمبر</string>
     <string name="forums_tab_banner">بينر</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">صارف يا گروپ</string>
-    <string name="forums_access_level_view">ڏسو</string>
-    <string name="forums_access_level_vote">ووٽ ڏيو</string>
-    <string name="forums_access_level_comment">تبصرو ڪريو</string>
-    <string name="forums_access_level_post">پوسٽ ڪريو</string>
-    <string name="forums_access_level_none">ڪا به نه</string>
     <string name="forums_members_empty">ڪي ميمبر نه آهن</string>
     <string name="forums_banner_dismiss">بينر رد ڪريو</string>
     <string name="forums_ai_mode_tag">ٽيگ ڪريو</string>
     <string name="forums_ai_account_default">ڊفالٽ اڪائونٽ</string>
-    <string name="forums_ai_prompt_reset">ڊفالٽ تي ري سيٽ ڪريو</string>
     <string name="forums_settings_unsubscribe">ان سبسڪرائب ڪريو</string>
     <string name="forums_moderation_title">نگراني</string>
     <string name="forums_moderation_tab_queue">قطار</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">غير موضوع</string>
     <string name="forums_report_reason_other">ٻيو</string>
     <string name="forums_post_default_author">صارف</string>
-    <string name="forums_comments">تبصرا</string>
     <string name="forums_no_comments">اڃا ڪو تبصرو نه آهي</string>
-    <string name="forums_comment_save">محفوظ ڪريو</string>
     <string name="forums_comment_edit">تبصري ۾ ترميم ڪريو</string>
     <string name="forums_comment_edit_title">تبصري ۾ ترميم ڪريو</string>
-    <string name="forums_comment_edit_attach">فائلون ڳنڍيو</string>
     <string name="forums_comment_delete">تبصرو ختم ڪريو</string>
     <string name="forums_comment_delete_title">تبصرو ختم ڪريو</string>
     <string name="forums_comment_reply">جواب</string>
-    <string name="forums_settings_rename">نالو تبديل ڪريو</string>
-    <string name="forums_settings_save">محفوظ ڪريو</string>
     <string name="forums_settings_delete">فورم ختم ڪريو</string>
     <string name="forums_settings_delete_title">فورم ختم ڪريو</string>
     <string name="forums_forum_not_found">فورم نه مليو</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">موڪليو</string>
     <string name="forums_post_body_field">مواد</string>
-    <string name="forums_post_edit_body_field">مواد</string>
     <string name="forums_comment_edit_body_field">مواد</string>
-    <string name="forums_tag_clear">فلٽر صاف ڪريو</string>
-    <string name="forums_post_tag_add">ٽيگ شامل ڪريو</string>
     <string name="forums_write_comment">تبصرو لکو…</string>
-    <string name="forums_auth_login_failed">لاگ ان ناڪام</string>
 
     <string name="notification_channel_forums">فورمس جون اطلاعون</string>
-    <string name="forums_auth_brand">Mochi فورمز</string>
-    <string name="forums_auth_create_identity_failed">سڃاڻپ ٺاهڻ ۾ ناڪامي</string>
-    <string name="forums_auth_mfa_unsupported">موبائيل ايپ ۾ MFA اڃا تائين سپورٽ ٿيل ناهي</string>
-    <string name="forums_auth_enter_code_sent">%1$s ڏانهن موڪليل ڪوڊ داخل ڪريو</string>
-    <string name="forums_auth_create_identity">پنهنجي سڃاڻپ ٺاهيو</string>
     <string name="forums_list_empty">اڃا تائين ڪوبه فورم ناهي</string>
     <string name="forums_list_unsubscribe_message">ڇا توهان پڪ سان هن فورم مان رڪنيت ختم ڪرڻ چاهيو ٿا؟</string>
     <string name="forums_find_search_placeholder">فورمس ڳوليو يا URL پيسٽ ڪريو</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">ڊائون ووٽ</string>
     <string name="forums_post_quote">جواب ۾ نقل ڪريو</string>
     <string name="forums_comment_quote">جواب ۾ نقل ڪريو</string>
-    <string name="forums_post_tag_remove">ٽيگ هٽايو</string>
     <string name="forums_access_add">رسائي قاعدو شامل ڪريو</string>
     <string name="forums_access_empty">اڃا تائين ڪوبه قاعدو ناهي — ڊفالٽ لاڳو ٿيندو</string>
-    <string name="forums_access_target_hint">اينٽيٽي ID، @گروپ، * (هرڪو)، يا + (ميمبر)</string>
-    <string name="forums_access_level">سطح</string>
-    <string name="forums_access_level_moderate">اعتدال</string>
     <string name="forums_members_search">ميمبر فلٽر ڪريو</string>
     <string name="forums_banner_description">فورم جي مٿان ڏيکاريل مارڪ ڊائون.</string>
     <string name="forums_banner_placeholder">بينر جو متن داخل ڪريو (مارڪ ڊائون جي سهولت آهي)…</string>
-    <string name="forums_ai_mode_label">موڊ: %1$s</string>
-    <string name="forums_ai_mode_heading">AI موڊ</string>
     <string name="forums_ai_mode_off">غيرفعال</string>
-    <string name="forums_ai_account">AI اڪائونٽ</string>
-    <string name="forums_ai_prompt_tag">ٽيگنگ پرامپٽ</string>
-    <string name="forums_ai_prompt_score">اسڪورنگ پرامپٽ</string>
-    <string name="forums_ai_post_prompt_label">پوسٽ ٽيگ لاءِ پرامپٽ</string>
-    <string name="forums_ai_comment_prompt_label">تبصري ٽيگ لاءِ پرامپٽ</string>
-    <string name="forums_settings_fingerprint">فنگر پرنٽ: %1$s</string>
-    <string name="forums_settings_clear_notifications">اطلاعون صاف ڪريو</string>
     <string name="forums_moderation_queue_empty">ڪجهه به زير التوا ناهي</string>
     <string name="forums_moderation_report_details">تفصيل: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s پاران حل ٿيل — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s کي جواب ڏئي رهيا آهيو</string>
     <string name="forums_comment_clear_reply">جواب صاف ڪريو</string>
     <string name="forums_settings_title">%1$s سيٽنگون</string>
-    <string name="forums_settings_rename_label">فورم جو نالو</string>
-    <string name="forums_settings_danger_zone">خطري وارو علائقو</string>
     <string name="forums_settings_delete_message">هي فورم ۽ ان جون سڀ پوسٽون مستقل طور ڊاهي ڇڏيندو. اهو واپس نٿو ٿي سگهي.</string>
 
-    <string name="forums_tag_interest_up">دلچسپي وڌايو</string>
-    <string name="forums_tag_interest_down">دلچسپي گهٽايو</string>
-    <string name="forums_tag_interest_remove">دلچسپي هٽايو</string>
     <string name="forums_access_tab_users">صارف</string>
     <string name="forums_access_tab_groups">گروپ</string>
-    <string name="forums_access_tab_manual">دستي</string>
     <string name="forums_access_search_users">يوزر ڳوليو</string>
     <string name="forums_access_no_groups">ڪو گروپ دستياب ناهي</string>
     <string name="forums_saved_title">محفوظ ٿيل</string>

@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">国际象棋</string>
-    <string name="chess_sidebar_header">国际象棋</string>
     <string name="chess_sidebar_active">进行中的游戏</string>
     <string name="chess_sidebar_completed">已完成</string>
     <string name="chess_sidebar_new_game">新游戏</string>
-    <string name="chess_section_active">进行中的游戏</string>
-    <string name="chess_section_completed">已完成</string>
-    <string name="chess_new_game">新游戏</string>
     <string name="chess_empty_title">暂无游戏</string>
     <string name="chess_new_title">新游戏</string>
     <string name="chess_new_pick_opponent">选择对手</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">从你的列表中移除该对局。</string>
     <string name="chess_delete_title">删除对局？</string>
     <string name="chess_detail_unavailable">对局不可用</string>
-    <string name="chess_empty_start_button">开始你的第一局</string>
-    <string name="chess_empty_subtitle">开始你的第一局，与好友下国际象棋。</string>
     <string name="chess_move_capture">%1$s 吃掉了 %2$s</string>
     <string name="chess_open_sidebar">打开侧边栏</string>
     <string name="chess_ws_connecting">连接中…</string>

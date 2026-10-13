@@ -19,7 +19,6 @@
     <string name="crm_link">ลิงก์</string>
     <string name="crm_design">ออกแบบ</string>
     <string name="crm_export_failed">บันทึกการส่งออกไม่สำเร็จ</string>
-    <string name="crm_sort_direction">ทิศทาง</string>
     <string name="crm_sort_rank">ด้วยตนเอง</string>
     <string name="crm_sort_created">สร้างแล้ว</string>
     <string name="crm_sort_updated">อัปเดตแล้ว</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">เพิ่มคลาส</string>
     <string name="crm_classes_create">สร้าง</string>
     <string name="crm_class_name">ชื่อ</string>
-    <string name="crm_class_save_name">บันทึกชื่อ</string>
     <string name="crm_class_title_field">ฟิลด์ชื่อ</string>
     <string name="crm_class_fields">ฟิลด์</string>
     <string name="crm_class_add_field">เพิ่มฟิลด์</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">จำเป็น</string>
     <string name="crm_field_position_default">ค่าเริ่มต้น</string>
     <string name="crm_field_position_sidebar">แถบด้านข้าง</string>
-    <string name="crm_field_save">บันทึกการเปลี่ยนแปลง</string>
     <string name="crm_field_options">ตัวเลือก</string>
     <string name="crm_field_add_option">เพิ่มตัวเลือก</string>
     <string name="crm_field_delete">ลบฟิลด์</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">ค้นหา CRM</string>
     <string name="crm_list_no_matching">ไม่พบ CRM ที่ตรงกัน</string>
     <string name="crm_list_empty">ยังไม่มี CRM</string>
-    <string name="crm_create_template">เทมเพลต</string>
     <string name="crm_find_search_placeholder">ค้นหา CRM หรือวาง URL</string>
     <string name="crm_find_search_hint">ค้นหา CRM เพื่อสมัครติดตาม</string>
     <string name="crm_create_object_parent_none">(ไม่มี)</string>

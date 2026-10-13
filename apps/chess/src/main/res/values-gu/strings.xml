@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">ચેસ</string>
-    <string name="chess_sidebar_header">ચેસ</string>
     <string name="chess_sidebar_active">સક્રિય રમતો</string>
     <string name="chess_sidebar_completed">પૂર્ણ</string>
     <string name="chess_sidebar_new_game">નવી ગેમ</string>
-    <string name="chess_section_active">સક્રિય રમતો</string>
-    <string name="chess_section_completed">પૂર્ણ</string>
-    <string name="chess_new_game">નવી ગેમ</string>
     <string name="chess_empty_title">હજુ સુધી કોઈ ગેમ્સ નથી</string>
     <string name="chess_new_title">નવી ગેમ</string>
     <string name="chess_new_pick_opponent">પ્રતિસ્પર્ધી પસંદ કરો</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">ચેસની ચાલ, ડ્રો ઓફર અને રમતના પરિણામો વિશે સૂચનાઓ.</string>
     <string name="chess_open_sidebar">સાઇડબાર ખોલો</string>
-    <string name="chess_empty_subtitle">મિત્ર સાથે ચેસ રમવા માટે તમારી પ્રથમ રમત શરૂ કરો.</string>
-    <string name="chess_empty_start_button">તમારી પ્રથમ રમત શરૂ કરો</string>
     <string name="chess_detail_unavailable">રમત ઉપલબ્ધ નથી</string>
     <string name="chess_delete_title">ગેમ કાઢી નાખવી છે?</string>
     <string name="chess_delete_message">આ રમતને તમારી સૂચિમાંથી દૂર કરે છે.</string>

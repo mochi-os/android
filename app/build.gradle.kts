@@ -70,6 +70,7 @@ android {
             // maps by name rather than @SerializedName silently decodes as its
             // default - a release-only data loss that no debug build shows.
             isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",

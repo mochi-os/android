@@ -121,7 +121,6 @@
     <string name="people_contacts_message">ສົ່ງຂໍ້ຄວາມ</string>
     <string name="people_contacts_no_people_found">ບໍ່ພົບຄົນ</string>
     <string name="people_contacts_try_adjusting">ລອງປັບປ່ຽນການຄົ້ນຫາຂອງທ່ານ</string>
-    <string name="people_contact_section_address">ທີ່ຢູ່</string>
     <string name="people_contact_section_detail">ລາຍລະອຽດ</string>
     <string name="people_contact_name">ຊື່</string>
     <string name="people_contact_email">ອີເມວ</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">ປ່ຽນຊື່</string>
     <string name="people_contacts_sort_name">ຊື່</string>
     <string name="people_contacts_sort_recent">ເພີ່ມເມື່ອບໍ່ດົນມານີ້</string>
-    <string name="people_contacts_thats_you">ນັ້ນຄືທ່ານ</string>
     <string name="people_contacts_try_different_search">ລອງຄຳຄົ້ນຫາທີ່ແຕກຕ່າງກັນ</string>
     <string name="people_contacts_unfriend">ລຶບໝູ່</string>
     <string name="people_add_contact_search_placeholder">ພິມເພື່ອຄົ້ນຫາ…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">ບໍ່ພົບຜູ້ຕິດຕໍ່</string>
     <string name="people_contacts_add_to_start">ເພີ່ມຜູ້ຕິດຕໍ່ເພື່ອເລີ່ມເຊື່ອມຕໍ່</string>
     <string name="people_contacts_actions">ການດຳເນີນການຜູ້ຕິດຕໍ່</string>
-    <string name="people_contacts_friend">ໝູ່</string>
     <string name="people_contacts_invite">ເຊີນ</string>
     <string name="people_contacts_unfriend_confirm">%1$s ຈະບໍ່ເປັນໝູ່ຂອງທ່ານອີກຕໍ່ໄປ. ຜູ້ຕິດຕໍ່ຍັງຢູ່ໃນປຶ້ມທີ່ຢູ່ຂອງທ່ານ.</string>
     <string name="people_contacts_delete">ລຶບຜູ້ຕິດຕໍ່</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">ຜູ້ຕິດຕໍ່ປ່ຽນແປງແລ້ວ</string>
     <string name="people_add_contact_title">ເພີ່ມຜູ້ຕິດຕໍ່</string>
     <string name="people_add_contact_add">ເພີ່ມໃສ່ຜູ້ຕິດຕໍ່</string>
-    <string name="people_add_contact_in_contacts">ຢູ່ໃນຜູ້ຕິດຕໍ່</string>
     <string name="people_books_create">ສ້າງປຶ້ມທີ່ຢູ່</string>
     <string name="people_books_delete">ລຶບປຶ້ມທີ່ຢູ່</string>
     <plurals name="people_books_delete_confirm">

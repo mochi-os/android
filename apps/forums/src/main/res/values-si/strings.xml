@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">සංදර්ශන නාමය</string>
-    <string name="forums_auth_verification_failed">සත්‍යාපනය අසාර්ථක විය</string>
     <string name="forums_list_title">සංසද</string>
     <string name="forums_list_find">සභා සොයන්න</string>
     <string name="forums_list_unsubscribe">දායකත්වය ඉවත් කරන්න</string>
     <string name="forums_list_unsubscribe_title">දායකත්වය ඉවත් කරන්න</string>
     <string name="forums_create_title">සංසදයක් නිර්මාණය කරන්න</string>
     <string name="forums_create_name">සංසදයේ නම</string>
-    <string name="forums_create_privacy">පෞද්ගලිකත්වය</string>
-    <string name="forums_create_private">පෞද්ගලික</string>
-    <string name="forums_create_public">ප්‍රසිද්ධ</string>
     <string name="forums_create_action">සංසදයක් නිර්මාණය කරන්න</string>
     <string name="forums_find_title">සභා සොයන්න</string>
     <string name="forums_find_recommended">නිර්දේශිත</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">පළ කරන්න</string>
     <string name="forums_post_edit">පළ කිරීම සංස්කරණය කරන්න</string>
     <string name="forums_post_edit_title">පළ කිරීම සංස්කරණය කරන්න</string>
-    <string name="forums_post_edit_title_field">මාතෘකාව</string>
-    <string name="forums_post_save">සුරකින්න</string>
     <string name="forums_post_delete">පළ කිරීම මකන්න</string>
     <string name="forums_post_delete_title">පළ කිරීම මකන්න</string>
     <string name="forums_post_locked">අගුළු දමා ඇත</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">සාමාජිකයින්</string>
     <string name="forums_tab_banner">බැනරය</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">පරිශීලකයා හෝ කණ්ඩායම</string>
-    <string name="forums_access_level_view">බලන්න</string>
-    <string name="forums_access_level_vote">ඡන්දය දෙන්න</string>
-    <string name="forums_access_level_comment">අදහස් දක්වන්න</string>
-    <string name="forums_access_level_post">පළ කරන්න</string>
-    <string name="forums_access_level_none">කිසිවක් නැත</string>
     <string name="forums_members_empty">සාමාජිකයින් නැත</string>
     <string name="forums_banner_dismiss">බැනරය ඉවත ලන්න</string>
     <string name="forums_ai_mode_tag">ටැග් කරන්න</string>
     <string name="forums_ai_account_default">පෙරනිමි ගිණුම</string>
-    <string name="forums_ai_prompt_reset">පෙරනිමියට යළි සකසන්න</string>
     <string name="forums_settings_unsubscribe">දායකත්වය ඉවත් කරන්න</string>
     <string name="forums_moderation_title">පාලනය</string>
     <string name="forums_moderation_tab_queue">පෙළ</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">මාතෘකාවෙන් බැහැර</string>
     <string name="forums_report_reason_other">වෙනත්</string>
     <string name="forums_post_default_author">පරිශීලකයා</string>
-    <string name="forums_comments">අදහස්</string>
     <string name="forums_no_comments">තවම අදහස් නැත</string>
-    <string name="forums_comment_save">සුරකින්න</string>
     <string name="forums_comment_edit">අදහස සංස්කරණය කරන්න</string>
     <string name="forums_comment_edit_title">අදහස සංස්කරණය කරන්න</string>
-    <string name="forums_comment_edit_attach">ගොනු අමුණන්න</string>
     <string name="forums_comment_delete">අදහස මකන්න</string>
     <string name="forums_comment_delete_title">අදහස මකන්න</string>
     <string name="forums_comment_reply">පිළිතුර</string>
-    <string name="forums_settings_rename">නැවත නම් කරන්න</string>
-    <string name="forums_settings_save">සුරකින්න</string>
     <string name="forums_settings_delete">සංසදය මකන්න</string>
     <string name="forums_settings_delete_title">සංසදය මකන්න</string>
     <string name="forums_forum_not_found">සභාව හමු නොවීය</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">යවන්න</string>
     <string name="forums_post_body_field">අන්තර්ගතය</string>
-    <string name="forums_post_edit_body_field">අන්තර්ගතය</string>
     <string name="forums_comment_edit_body_field">අන්තර්ගතය</string>
-    <string name="forums_tag_clear">පෙරහන හිස් කරන්න</string>
-    <string name="forums_post_tag_add">ටැගයක් එක් කරන්න</string>
     <string name="forums_write_comment">අදහසක් ලියන්න…</string>
-    <string name="forums_auth_login_failed">පුරනය වීම අසාර්ථකයි</string>
 
     <string name="notification_channel_forums">සංසද දැනුම්දීම්</string>
-    <string name="forums_auth_brand">Mochi සංසද</string>
-    <string name="forums_auth_create_identity_failed">අනන්‍යතාව සෑදීමට අසමත් විය</string>
-    <string name="forums_auth_mfa_unsupported">MFA තවම ජංගම යෙදුමේ සහාය නොදක්වයි</string>
-    <string name="forums_auth_enter_code_sent">%1$s වෙත යවන ලද කේතය ඇතුළත් කරන්න</string>
-    <string name="forums_auth_create_identity">ඔබේ අනන්‍යතාව සාදන්න</string>
     <string name="forums_list_empty">තවම සංසද නොමැත</string>
     <string name="forums_list_unsubscribe_message">මෙම සංසදයෙන් දායකත්වය ඉවත් කිරීමට අවශ්‍ය බව ඔබට විශ්වාසද?</string>
     <string name="forums_find_search_placeholder">සංසද සොයන්න හෝ URL අලවන්න</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">පහළ ඡන්දය</string>
     <string name="forums_post_quote">පිළිතුරේ උපුටා දක්වන්න</string>
     <string name="forums_comment_quote">පිළිතුරේ උපුටා දක්වන්න</string>
-    <string name="forums_post_tag_remove">ටැගය ඉවත් කරන්න</string>
     <string name="forums_access_add">ප්‍රවේශ රීතිය එක් කරන්න</string>
     <string name="forums_access_empty">තවම රීති නැත — පෙරනිමි අදාළ වේ</string>
-    <string name="forums_access_target_hint">ආයතන ID, @group, * (සියලුදෙනා), හෝ + (සාමාජිකයන්)</string>
-    <string name="forums_access_level">මට්ටම</string>
-    <string name="forums_access_level_moderate">පාලනය</string>
     <string name="forums_members_search">සාමාජිකයන් පෙරහන් කරන්න</string>
     <string name="forums_banner_description">සංසදයේ ඉහළින් පෙන්වන Markdown.</string>
     <string name="forums_banner_placeholder">බැනර් පෙළ ඇතුළත් කරන්න (Markdown සහාය දක්වයි)…</string>
-    <string name="forums_ai_mode_label">ප්‍රකාරය: %1$s</string>
-    <string name="forums_ai_mode_heading">AI ප්‍රකාරය</string>
     <string name="forums_ai_mode_off">අක්‍රියයි</string>
-    <string name="forums_ai_account">AI ගිණුම</string>
-    <string name="forums_ai_prompt_tag">ටැග් කිරීමේ විමසුම</string>
-    <string name="forums_ai_prompt_score">ලකුණු කිරීමේ විමසුම</string>
-    <string name="forums_ai_post_prompt_label">පළ කිරීමේ ටැග් සඳහා විමසුම</string>
-    <string name="forums_ai_comment_prompt_label">අදහස්වල ටැග් සඳහා විමසුම</string>
-    <string name="forums_settings_fingerprint">ඇඟිලි සලකුණ: %1$s</string>
-    <string name="forums_settings_clear_notifications">දැනුම්දීම් හිස් කරන්න</string>
     <string name="forums_moderation_queue_empty">කිසිවක් අපේක්ෂාවෙන් නැත</string>
     <string name="forums_moderation_report_details">විස්තර: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s විසින් විසඳන ලදී — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s වෙත පිළිතුරු දෙමින්</string>
     <string name="forums_comment_clear_reply">පිළිතුර හිස් කරන්න</string>
     <string name="forums_settings_title">%1$s සැකසුම්</string>
-    <string name="forums_settings_rename_label">සංසදයේ නම</string>
-    <string name="forums_settings_danger_zone">අවදානම් කලාපය</string>
     <string name="forums_settings_delete_message">මෙය සංසදය සහ එහි සියලුම පළ කිරීම් ස්ථිරවම මකා දමයි. මෙය ආපසු හැරවිය නොහැක.</string>
 
-    <string name="forums_tag_interest_up">කැමැත්ත වැඩි කරන්න</string>
-    <string name="forums_tag_interest_down">උනන්දුව අඩු කරන්න</string>
-    <string name="forums_tag_interest_remove">උනන්දුව ඉවත් කරන්න</string>
     <string name="forums_access_tab_users">පරිශීලකයන්</string>
     <string name="forums_access_tab_groups">කණ්ඩායම්</string>
-    <string name="forums_access_tab_manual">අතින්</string>
     <string name="forums_access_search_users">පරිශීලකයින් සොයන්න</string>
     <string name="forums_access_no_groups">කණ්ඩායම් ලබා ගත නොහැක</string>
     <string name="forums_saved_title">සුරැකි</string>

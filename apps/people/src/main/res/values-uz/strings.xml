@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Xabar yuborish</string>
     <string name="people_contacts_no_people_found">Odamlar topilmadi</string>
     <string name="people_contacts_try_adjusting">Qidiruvingizni sozlashga harakat qiling</string>
-    <string name="people_contact_section_address">Manzil</string>
     <string name="people_contact_section_detail">Tafsilotlar</string>
     <string name="people_contact_name">Ism</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Nomini oʻzgartirish</string>
     <string name="people_contacts_sort_name">Ism</string>
     <string name="people_contacts_sort_recent">Yaqinda qo\'shilgan</string>
-    <string name="people_contacts_thats_you">Bu siz</string>
     <string name="people_contacts_try_different_search">Boshqa qidiruv soʻzini sinab koʻring</string>
     <string name="people_contacts_unfriend">Doʻstni olib tashlash</string>
     <string name="people_add_contact_search_placeholder">Qidirish uchun yozing…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Kontaktlar topilmadi</string>
     <string name="people_contacts_add_to_start">Muloqotni boshlash uchun kontakt qo\'shing</string>
     <string name="people_contacts_actions">Kontakt amallari</string>
-    <string name="people_contacts_friend">Doʻst</string>
     <string name="people_contacts_invite">Taklif qilish</string>
     <string name="people_contacts_unfriend_confirm">%1$s endi sizning do\'stingiz bo\'lmaydi. Kontakt manzillar kitobingizda qoladi.</string>
     <string name="people_contacts_delete">Kontaktni oʻchirish</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakt o\'zgardi</string>
     <string name="people_add_contact_title">Kontakt qoʻshish</string>
     <string name="people_add_contact_add">Kontaktlarga qo\'shish</string>
-    <string name="people_add_contact_in_contacts">Kontaktlarda</string>
     <string name="people_books_create">Manzillar kitobi yaratish</string>
     <string name="people_books_delete">Manzillar kitobini o\'chirish</string>
     <plurals name="people_books_delete_confirm">

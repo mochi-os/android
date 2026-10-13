@@ -50,7 +50,6 @@
     <string name="go_resign_title">గేమ్‌ను రిజైన్ చేయాలా?</string>
     <string name="go_sidebar_completed">పూర్తయింది</string>
     <string name="go_sidebar_new_game">కొత్త గేమ్</string>
-    <string name="go_status_draw">డ్రా</string>
     <string name="go_status_draw_text">డ్రా</string>
     <string name="go_status_game_over">ఆట ముగిసింది</string>
     <string name="go_status_opponent_move">%1$s యొక్క మూవ్</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">సైడ్‌బార్ తెరువు</string>
     <string name="go_sidebar_active">క్రియాశీల ఆటలు</string>
     <string name="go_empty_active">ఇంకా క్రియాశీల గేమ్‌లు లేవు.</string>
-    <string name="go_status_resigned">ఓటమిని అంగీకరించారు</string>
     <string name="go_new_game_title">కొత్త Go గేమ్</string>
     <string name="go_new_game_no_friends">గేమ్ ప్రారంభించే ముందు మీరు స్నేహితుడిని జోడించాలి.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

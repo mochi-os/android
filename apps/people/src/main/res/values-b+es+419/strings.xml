@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Enviar mensaje</string>
     <string name="people_contacts_no_people_found">No se encontraron personas</string>
     <string name="people_contacts_try_adjusting">Intenta ajustar tu búsqueda</string>
-    <string name="people_contact_section_address">Dirección</string>
     <string name="people_contact_section_detail">Detalles</string>
     <string name="people_contact_name">Nombre</string>
     <string name="people_contact_email">Correo electrónico</string>
@@ -136,7 +135,6 @@
     <string name="people_books_rename">Renombrar</string>
     <string name="people_contacts_sort_name">Nombre</string>
     <string name="people_contacts_sort_recent">Agregado recientemente</string>
-    <string name="people_contacts_thats_you">Ese eres tú</string>
     <string name="people_contacts_try_different_search">Prueba con otro término de búsqueda</string>
     <string name="people_contacts_unfriend">Eliminar amigo</string>
     <string name="people_add_contact_search_placeholder">Escribe para buscar…</string>

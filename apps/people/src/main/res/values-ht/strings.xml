@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Voye mesaj</string>
     <string name="people_contacts_no_people_found">Pa gen moun ki jwenn</string>
     <string name="people_contacts_try_adjusting">Eseye ajiste rechèch ou</string>
-    <string name="people_contact_section_address">Adrès</string>
     <string name="people_contact_section_detail">Detay</string>
     <string name="people_contact_name">Non</string>
     <string name="people_contact_email">Imèl</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Rebatize</string>
     <string name="people_contacts_sort_name">Non</string>
     <string name="people_contacts_sort_recent">Ajoute dènyèman</string>
-    <string name="people_contacts_thats_you">Sa se ou</string>
     <string name="people_contacts_try_different_search">Eseye yon lòt tèm rechèch</string>
     <string name="people_contacts_unfriend">Retire zanmi</string>
     <string name="people_add_contact_search_placeholder">Tape pou chèche…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Nou pa jwenn okenn kontak</string>
     <string name="people_contacts_add_to_start">Ajoute kontak pou kòmanse konekte</string>
     <string name="people_contacts_actions">Aksyon kontak</string>
-    <string name="people_contacts_friend">Zanmi</string>
     <string name="people_contacts_invite">Envite</string>
     <string name="people_contacts_unfriend_confirm">%1$s p ap zanmi w ankò. Kontak la rete nan kanè adrès ou.</string>
     <string name="people_contacts_delete">Efase kontak</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontak la chanje</string>
     <string name="people_add_contact_title">Ajoute kontak</string>
     <string name="people_add_contact_add">Ajoute nan kontak</string>
-    <string name="people_add_contact_in_contacts">Nan kontak</string>
     <string name="people_books_create">Kreye kanè adrès</string>
     <string name="people_books_delete">Efase kanè adrès</string>
     <plurals name="people_books_delete_confirm">

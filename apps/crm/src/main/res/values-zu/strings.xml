@@ -19,7 +19,6 @@
     <string name="crm_link">Isixhumanisi</string>
     <string name="crm_design">Idizayini</string>
     <string name="crm_export_failed">Ayikwazanga ukulondolozwa okuthunyelwe</string>
-    <string name="crm_sort_direction">Indlela</string>
     <string name="crm_sort_rank">Mathupha</string>
     <string name="crm_sort_created">Kudaliwe</string>
     <string name="crm_sort_updated">Kubuyekeziwe</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Engeza iklasi</string>
     <string name="crm_classes_create">Dala</string>
     <string name="crm_class_name">Igama</string>
-    <string name="crm_class_save_name">Londoloza igama</string>
     <string name="crm_class_title_field">Indawo yesihloko</string>
     <string name="crm_class_fields">Izinkambu</string>
     <string name="crm_class_add_field">Engeza inkambu</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Kuyadingeka</string>
     <string name="crm_field_position_default">Okuzenzakalelayo</string>
     <string name="crm_field_position_sidebar">Ibha eseceleni</string>
-    <string name="crm_field_save">Londoloza izinguquko</string>
     <string name="crm_field_options">Izinketho</string>
     <string name="crm_field_add_option">Engeza inketho</string>
     <string name="crm_field_delete">Susa inkambu</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Sesha i-CRM</string>
     <string name="crm_list_no_matching">Ayikho i-CRM efanayo</string>
     <string name="crm_list_empty">Ayikho i-CRM okwamanje</string>
-    <string name="crm_create_template">Isifanekiso</string>
     <string name="crm_find_search_placeholder">Sesha i-CRM noma namathisela i-URL</string>
     <string name="crm_find_search_hint">Sesha i-CRM ozobhalisela kuyo</string>
     <string name="crm_create_object_parent_none">(lutho)</string>

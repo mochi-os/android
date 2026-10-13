@@ -415,7 +415,6 @@
     <string name="staff_team_add_member">Legg til medlem</string>
     <string name="staff_team_added_by_label">Lagt til av:</string>
     <string name="staff_team_added_by_system">System</string>
-    <string name="staff_team_col_added_by">Lagt til av</string>
     <string name="staff_team_dialog_add">Legg til</string>
     <string name="staff_team_dialog_add_title">Legg til teammedlem</string>
     <string name="staff_team_dialog_adding">Legger til…</string>

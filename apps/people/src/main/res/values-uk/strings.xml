@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Написати</string>
     <string name="people_contacts_no_people_found">Людей не знайдено</string>
     <string name="people_contacts_try_adjusting">Спробуйте змінити пошуковий запит</string>
-    <string name="people_contact_section_address">Адреса</string>
     <string name="people_contact_section_detail">Деталі</string>
     <string name="people_contact_name">Ім\'я</string>
     <string name="people_contact_email">Електронна пошта</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Перейменувати</string>
     <string name="people_contacts_sort_name">Ім\'я</string>
     <string name="people_contacts_sort_recent">Нещодавно додані</string>
-    <string name="people_contacts_thats_you">Це ви</string>
     <string name="people_contacts_try_different_search">Спробуйте інший пошуковий запит</string>
     <string name="people_contacts_unfriend">Видалити друга</string>
     <string name="people_add_contact_search_placeholder">Введіть для пошуку…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Контактів не знайдено</string>
     <string name="people_contacts_add_to_start">Додайте контакти, щоб почати спілкування</string>
     <string name="people_contacts_actions">Дії з контактом</string>
-    <string name="people_contacts_friend">Друг</string>
     <string name="people_contacts_invite">Запросити</string>
     <string name="people_contacts_unfriend_confirm">%1$s більше не буде вашим другом. Контакт залишиться у вашій адресній книзі.</string>
     <string name="people_contacts_delete">Видалити контакт</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Контакт змінився</string>
     <string name="people_add_contact_title">Додати контакт</string>
     <string name="people_add_contact_add">Додати до контактів</string>
-    <string name="people_add_contact_in_contacts">У контактах</string>
     <string name="people_books_create">Створити адресну книгу</string>
     <string name="people_books_delete">Видалити адресну книгу</string>
     <plurals name="people_books_delete_confirm">

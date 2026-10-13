@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Көрсетілетін атау</string>
-    <string name="forums_auth_verification_failed">Тексеру сәтсіз</string>
     <string name="forums_list_title">Форумдар</string>
     <string name="forums_list_find">Форумдарды табу</string>
     <string name="forums_list_unsubscribe">Жазылудан бас тарту</string>
     <string name="forums_list_unsubscribe_title">Жазылудан бас тарту</string>
     <string name="forums_create_title">Форум құру</string>
     <string name="forums_create_name">Форум атауы</string>
-    <string name="forums_create_privacy">Құпиялылық</string>
-    <string name="forums_create_private">Жеке</string>
-    <string name="forums_create_public">Қоғамдық</string>
     <string name="forums_create_action">Форум құру</string>
     <string name="forums_find_title">Форумдарды табу</string>
     <string name="forums_find_recommended">Ұсынылған</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Жариялау</string>
     <string name="forums_post_edit">Жазбаны өңдеу</string>
     <string name="forums_post_edit_title">Жазбаны өңдеу</string>
-    <string name="forums_post_edit_title_field">Тақырып</string>
-    <string name="forums_post_save">Сақтау</string>
     <string name="forums_post_delete">Жазбаны жою</string>
     <string name="forums_post_delete_title">Жазбаны жою</string>
     <string name="forums_post_locked">Құлыпталған</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Мүшелер</string>
     <string name="forums_tab_banner">Баннер</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">Пайдаланушы немесе топ</string>
-    <string name="forums_access_level_view">Көру</string>
-    <string name="forums_access_level_vote">Дауыс беру</string>
-    <string name="forums_access_level_comment">Пікір қалдыру</string>
-    <string name="forums_access_level_post">Жариялау</string>
-    <string name="forums_access_level_none">Жоқ</string>
     <string name="forums_members_empty">Мүшелер жоқ</string>
     <string name="forums_banner_dismiss">Баннерді жабу</string>
     <string name="forums_ai_mode_tag">Тегтеу</string>
     <string name="forums_ai_account_default">Әдепкі тіркелгі</string>
-    <string name="forums_ai_prompt_reset">Әдепкіге қайтару</string>
     <string name="forums_settings_unsubscribe">Жазылудан бас тарту</string>
     <string name="forums_moderation_title">Модерация</string>
     <string name="forums_moderation_tab_queue">Кезек</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Тақырыптан тыс</string>
     <string name="forums_report_reason_other">Басқа</string>
     <string name="forums_post_default_author">Пайдаланушы</string>
-    <string name="forums_comments">Пікірлер</string>
     <string name="forums_no_comments">Әлі пікірлер жоқ</string>
-    <string name="forums_comment_save">Сақтау</string>
     <string name="forums_comment_edit">Пікірді өңдеу</string>
     <string name="forums_comment_edit_title">Пікірді өңдеу</string>
-    <string name="forums_comment_edit_attach">Файлдар тіркеу</string>
     <string name="forums_comment_delete">Пікірді жою</string>
     <string name="forums_comment_delete_title">Пікірді жою</string>
     <string name="forums_comment_reply">Жауап беру</string>
-    <string name="forums_settings_rename">Атын өзгерту</string>
-    <string name="forums_settings_save">Сақтау</string>
     <string name="forums_settings_delete">Форумды жою</string>
     <string name="forums_settings_delete_title">Форумды жою</string>
     <string name="forums_forum_not_found">Форум табылмады</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Жіберу</string>
     <string name="forums_post_body_field">Мәтін</string>
-    <string name="forums_post_edit_body_field">Мәтін</string>
     <string name="forums_comment_edit_body_field">Мәтін</string>
-    <string name="forums_tag_clear">Сүзгіні тазалау</string>
-    <string name="forums_post_tag_add">Тег қосу</string>
     <string name="forums_write_comment">Пікір жазыңыз…</string>
-    <string name="forums_auth_login_failed">Кіру сәтсіз аяқталды</string>
 
     <string name="notification_channel_forums">Форум хабарландырулары</string>
-    <string name="forums_auth_brand">Mochi Форумдар</string>
-    <string name="forums_auth_create_identity_failed">Бірегейлікті жасау сәтсіз аяқталды</string>
-    <string name="forums_auth_mfa_unsupported">MFA мобильді қолданбада әзірге қолдау таппайды</string>
-    <string name="forums_auth_enter_code_sent">%1$s мекенжайына жіберілген кодты енгізіңіз</string>
-    <string name="forums_auth_create_identity">Бірегейлігіңізді жасаңыз</string>
     <string name="forums_list_empty">Әзірге форумдар жоқ</string>
     <string name="forums_list_unsubscribe_message">Бұл форумнан жазылудан бас тартқыңыз келетініне сенімдісіз бе?</string>
     <string name="forums_find_search_placeholder">Форумдарды іздеу немесе URL қойыңыз</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Қарсы дауыс</string>
     <string name="forums_post_quote">Жауапта дәйексөз келтіру</string>
     <string name="forums_comment_quote">Жауапта дәйексөз келтіру</string>
-    <string name="forums_post_tag_remove">Тегті жою</string>
     <string name="forums_access_add">Қатынау ережесін қосу</string>
     <string name="forums_access_empty">Әзірге ережелер жоқ — әдепкі мәндер қолданылады</string>
-    <string name="forums_access_target_hint">Нысан идентификаторы, @топ, * (барлығы) немесе + (мүшелер)</string>
-    <string name="forums_access_level">Деңгей</string>
-    <string name="forums_access_level_moderate">Модерациялау</string>
     <string name="forums_members_search">Мүшелерді сүзу</string>
     <string name="forums_banner_description">Форумның жоғарғы жағында көрсетілетін Markdown.</string>
     <string name="forums_banner_placeholder">Баннер мәтінін енгізіңіз (Markdown қолдау көрсетіледі)…</string>
-    <string name="forums_ai_mode_label">Режим: %1$s</string>
-    <string name="forums_ai_mode_heading">AI режимі</string>
     <string name="forums_ai_mode_off">Өшірілген</string>
-    <string name="forums_ai_account">AI тіркелгісі</string>
-    <string name="forums_ai_prompt_tag">Тегтеу нұсқауы</string>
-    <string name="forums_ai_prompt_score">Бағалау нұсқауы</string>
-    <string name="forums_ai_post_prompt_label">Жазба тегтері үшін нұсқау</string>
-    <string name="forums_ai_comment_prompt_label">Пікір тегтері үшін нұсқау</string>
-    <string name="forums_settings_fingerprint">Қысқа идентификатор: %1$s</string>
-    <string name="forums_settings_clear_notifications">Хабарландыруларды тазалау</string>
     <string name="forums_moderation_queue_empty">Күтудегі ештеңе жоқ</string>
     <string name="forums_moderation_report_details">Мәліметтер: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s шешті — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s пайдаланушысына жауап беру</string>
     <string name="forums_comment_clear_reply">Жауапты тазалау</string>
     <string name="forums_settings_title">%1$s параметрлері</string>
-    <string name="forums_settings_rename_label">Форум атауы</string>
-    <string name="forums_settings_danger_zone">Қауіпті аймақ</string>
     <string name="forums_settings_delete_message">Бұл форумды және оның барлық жазбаларын біржола жояды. Мұны қайтару мүмкін емес.</string>
 
-    <string name="forums_tag_interest_up">Қызығушылықты арттыру</string>
-    <string name="forums_tag_interest_down">Қызығушылықты азайту</string>
-    <string name="forums_tag_interest_remove">Қызығушылықты жою</string>
     <string name="forums_access_tab_users">Пайдаланушылар</string>
     <string name="forums_access_tab_groups">Топтар</string>
-    <string name="forums_access_tab_manual">Қолмен</string>
     <string name="forums_access_search_users">Қолданушыларды іздеу</string>
     <string name="forums_access_no_groups">Топтар қолжетімсіз</string>
     <string name="forums_saved_title">Сақталғандар</string>

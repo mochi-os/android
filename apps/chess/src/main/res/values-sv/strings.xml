@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Schack</string>
-    <string name="chess_sidebar_header">Schack</string>
     <string name="chess_sidebar_active">Aktiva partier</string>
     <string name="chess_sidebar_completed">Slutförd</string>
     <string name="chess_sidebar_new_game">Nytt spel</string>
-    <string name="chess_section_active">Aktiva partier</string>
-    <string name="chess_section_completed">Slutförd</string>
-    <string name="chess_new_game">Nytt spel</string>
     <string name="chess_empty_title">Inga spel ännu</string>
     <string name="chess_new_title">Nytt spel</string>
     <string name="chess_new_pick_opponent">Välj motståndare</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Schack-aviseringar</string>
     <string name="chess_channel_description">Aviseringar om drag, remierbjudanden och partiresultat.</string>
     <string name="chess_open_sidebar">Öppna sidofält</string>
-    <string name="chess_empty_subtitle">Starta ditt första parti för att spela schack med en vän.</string>
-    <string name="chess_empty_start_button">Starta ditt första parti</string>
     <string name="chess_detail_unavailable">Parti otillgängligt</string>
     <string name="chess_delete_title">Ta bort partiet?</string>
     <string name="chess_delete_message">Detta tar bort partiet från din lista.</string>

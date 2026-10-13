@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">ဆက်စ်</string>
-    <string name="chess_sidebar_header">ဆက်စ်</string>
     <string name="chess_sidebar_active">လက်ရှိ ဂိမ်းများ</string>
     <string name="chess_sidebar_completed">ပြီးစီးပြီး</string>
     <string name="chess_sidebar_new_game">ဂိမ်းအသစ်</string>
-    <string name="chess_section_active">လက်ရှိ ဂိမ်းများ</string>
-    <string name="chess_section_completed">ပြီးစီးပြီး</string>
-    <string name="chess_new_game">ဂိမ်းအသစ်</string>
     <string name="chess_empty_title">ဂိမ်းများ မရှိသေးပါ</string>
     <string name="chess_new_title">ဂိမ်းအသစ်</string>
     <string name="chess_new_pick_opponent">ပြိုင်ဘက် ရွေးချယ်ပါ</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">စစ်တုရင်ရွေ့ကွက်များ၊ သရေကမ်းလှမ်းချက်များနှင့် ပွဲရလဒ်များအကြောင်း အကြောင်းကြားချက်များ။</string>
     <string name="chess_open_sidebar">ဘေးဘားကို ဖွင့်ပါ</string>
-    <string name="chess_empty_subtitle">သူငယ်ချင်းနှင့် စစ်တုရင်ကစားရန် သင့်ပထမပွဲကို စတင်ပါ။</string>
-    <string name="chess_empty_start_button">သင့်ပထမပွဲကို စတင်ပါ</string>
     <string name="chess_detail_unavailable">ပွဲ မရရှိနိုင်ပါ</string>
     <string name="chess_delete_title">ဂိမ်းကို ဖျက်မလား?</string>
     <string name="chess_delete_message">ဤသည် ပွဲကို သင့်စာရင်းမှ ဖယ်ရှားပါမည်။</string>

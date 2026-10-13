@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Üzenet küldése</string>
     <string name="people_contacts_no_people_found">Nem találhatók személyek</string>
     <string name="people_contacts_try_adjusting">Próbálja módosítani a keresést</string>
-    <string name="people_contact_section_address">Cím</string>
     <string name="people_contact_section_detail">Részletek</string>
     <string name="people_contact_name">Név</string>
     <string name="people_contact_email">E-mail</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Átnevezés</string>
     <string name="people_contacts_sort_name">Név</string>
     <string name="people_contacts_sort_recent">Nemrég hozzáadva</string>
-    <string name="people_contacts_thats_you">Ez te vagy</string>
     <string name="people_contacts_try_different_search">Próbálj meg másik keresési kifejezést</string>
     <string name="people_contacts_unfriend">Barát eltávolítása</string>
     <string name="people_add_contact_search_placeholder">Gépeljen a kereséshez…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Nincs találat a névjegyek között</string>
     <string name="people_contacts_add_to_start">Vegyen fel névjegyeket a kapcsolatfelvételhez</string>
     <string name="people_contacts_actions">Névjegyműveletek</string>
-    <string name="people_contacts_friend">Barát</string>
     <string name="people_contacts_invite">Meghívás</string>
     <string name="people_contacts_unfriend_confirm">%1$s a továbbiakban nem lesz az ismerőse. A névjegy a címjegyzékében marad.</string>
     <string name="people_contacts_delete">Névjegy törlése</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">A névjegy megváltozott</string>
     <string name="people_add_contact_title">Névjegy hozzáadása</string>
     <string name="people_add_contact_add">Hozzáadás a névjegyekhez</string>
-    <string name="people_add_contact_in_contacts">A névjegyek között</string>
     <string name="people_books_create">Címjegyzék létrehozása</string>
     <string name="people_books_delete">Címjegyzék törlése</string>
     <plurals name="people_books_delete_confirm">

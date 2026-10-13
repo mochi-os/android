@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Билдирүү жөнөтүү</string>
     <string name="people_contacts_no_people_found">Адамдар табылган жок</string>
     <string name="people_contacts_try_adjusting">Издөөңүздү тууралап көрүңүз</string>
-    <string name="people_contact_section_address">Дарек</string>
     <string name="people_contact_section_detail">Деталдар</string>
     <string name="people_contact_name">Аты</string>
     <string name="people_contact_email">Электрондук почта</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Атын өзгөртүү</string>
     <string name="people_contacts_sort_name">Аты</string>
     <string name="people_contacts_sort_recent">Жакында кошулган</string>
-    <string name="people_contacts_thats_you">Бул сиз</string>
     <string name="people_contacts_try_different_search">Башка издөө сөзүн колдонуп көрүңүз</string>
     <string name="people_contacts_unfriend">Досту алуу</string>
     <string name="people_add_contact_search_placeholder">Издөө үчүн жазыңыз…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Байланыш табылган жок</string>
     <string name="people_contacts_add_to_start">Баарлашууну баштоо үчүн байланыш кошуңуз</string>
     <string name="people_contacts_actions">Байланыш аракеттери</string>
-    <string name="people_contacts_friend">Дос</string>
     <string name="people_contacts_invite">Чакыруу</string>
     <string name="people_contacts_unfriend_confirm">%1$s мындан ары сиздин досуңуз болбойт. Байланыш дарек китепчеңизде калат.</string>
     <string name="people_contacts_delete">Байланышты өчүрүү</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Байланыш өзгөрдү</string>
     <string name="people_add_contact_title">Байланыш кошуу</string>
     <string name="people_add_contact_add">Байланыштарга кошуу</string>
-    <string name="people_add_contact_in_contacts">Байланыштарда</string>
     <string name="people_books_create">Дарек китепчесин түзүү</string>
     <string name="people_books_delete">Дарек китепчесин өчүрүү</string>
     <plurals name="people_books_delete_confirm">

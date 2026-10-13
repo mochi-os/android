@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Skicka meddelande</string>
     <string name="people_contacts_no_people_found">Inga personer hittades</string>
     <string name="people_contacts_try_adjusting">Försök justera din sökning</string>
-    <string name="people_contact_section_address">Adress</string>
     <string name="people_contact_section_detail">Detaljer</string>
     <string name="people_contact_name">Namn</string>
     <string name="people_contact_email">E-post</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Byt namn</string>
     <string name="people_contacts_sort_name">Namn</string>
     <string name="people_contacts_sort_recent">Nyligen tillagd</string>
-    <string name="people_contacts_thats_you">Det är du</string>
     <string name="people_contacts_try_different_search">Prova en annan sökterm</string>
     <string name="people_contacts_unfriend">Ta bort vän</string>
     <string name="people_add_contact_search_placeholder">Skriv för att söka…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Inga kontakter hittades</string>
     <string name="people_contacts_add_to_start">Lägg till kontakter för att komma igång</string>
     <string name="people_contacts_actions">Kontaktåtgärder</string>
-    <string name="people_contacts_friend">Vän</string>
     <string name="people_contacts_invite">Bjud in</string>
     <string name="people_contacts_unfriend_confirm">%1$s är inte längre din vän. Kontakten finns kvar i din adressbok.</string>
     <string name="people_contacts_delete">Ta bort kontakt</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakten har ändrats</string>
     <string name="people_add_contact_title">Lägg till kontakt</string>
     <string name="people_add_contact_add">Lägg till i kontakter</string>
-    <string name="people_add_contact_in_contacts">I kontakter</string>
     <string name="people_books_create">Skapa adressbok</string>
     <string name="people_books_delete">Ta bort adressbok</string>
     <plurals name="people_books_delete_confirm">

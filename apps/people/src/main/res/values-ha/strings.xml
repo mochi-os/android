@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Aika saƙo</string>
     <string name="people_contacts_no_people_found">Babu mutane da aka samu</string>
     <string name="people_contacts_try_adjusting">Gwada gyara binciken ku</string>
-    <string name="people_contact_section_address">Adireshi</string>
     <string name="people_contact_section_detail">Cikakkun bayanai</string>
     <string name="people_contact_name">Suna</string>
     <string name="people_contact_email">Imel</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Sake suna</string>
     <string name="people_contacts_sort_name">Suna</string>
     <string name="people_contacts_sort_recent">An ƙara kwanan nan</string>
-    <string name="people_contacts_thats_you">Wannan kai ne</string>
     <string name="people_contacts_try_different_search">Gwada wani kalmar bincike</string>
     <string name="people_contacts_unfriend">Cire aboki</string>
     <string name="people_add_contact_search_placeholder">Rubuta don bincike…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Ba a sami wata lamba ba</string>
     <string name="people_contacts_add_to_start">Ƙara lambobin sadarwa don fara haɗuwa</string>
     <string name="people_contacts_actions">Ayyukan lamba</string>
-    <string name="people_contacts_friend">Aboki</string>
     <string name="people_contacts_invite">Gayyata</string>
     <string name="people_contacts_unfriend_confirm">%1$s ba zai ƙara zama abokinka ba. Lambar za ta kasance a littafin adireshinka.</string>
     <string name="people_contacts_delete">Goge lambar sadarwa</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Lambar ta canza</string>
     <string name="people_add_contact_title">Ƙara lambar sadarwa</string>
     <string name="people_add_contact_add">Ƙara cikin lambobin sadarwa</string>
-    <string name="people_add_contact_in_contacts">Cikin lambobin sadarwa</string>
     <string name="people_books_create">Ƙirƙiri littafin adireshi</string>
     <string name="people_books_delete">Share littafin adireshi</string>
     <plurals name="people_books_delete_confirm">

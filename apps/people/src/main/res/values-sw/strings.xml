@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Tuma ujumbe</string>
     <string name="people_contacts_no_people_found">Hakuna watu waliopatikana</string>
     <string name="people_contacts_try_adjusting">Jaribu kurekebisha utafutaji wako</string>
-    <string name="people_contact_section_address">Anwani</string>
     <string name="people_contact_section_detail">Undani</string>
     <string name="people_contact_name">Jina</string>
     <string name="people_contact_email">Barua pepe</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Badilisha jina</string>
     <string name="people_contacts_sort_name">Jina</string>
     <string name="people_contacts_sort_recent">Imeongezwa hivi karibuni</string>
-    <string name="people_contacts_thats_you">Huyo ni wewe</string>
     <string name="people_contacts_try_different_search">Jaribu neno la utafutaji tofauti</string>
     <string name="people_contacts_unfriend">Ondoa rafiki</string>
     <string name="people_add_contact_search_placeholder">Andika ili kutafuta…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Hakuna anwani zilizopatikana</string>
     <string name="people_contacts_add_to_start">Ongeza anwani ili uanze kuungana</string>
     <string name="people_contacts_actions">Vitendo vya anwani</string>
-    <string name="people_contacts_friend">Rafiki</string>
     <string name="people_contacts_invite">Alika</string>
     <string name="people_contacts_unfriend_confirm">%1$s hatakuwa rafiki yako tena. Anwani inabaki kwenye kitabu chako cha anwani.</string>
     <string name="people_contacts_delete">Futa anwani</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Anwani imebadilika</string>
     <string name="people_add_contact_title">Ongeza anwani</string>
     <string name="people_add_contact_add">Ongeza kwenye anwani</string>
-    <string name="people_add_contact_in_contacts">Katika anwani</string>
     <string name="people_books_create">Unda kitabu cha anwani</string>
     <string name="people_books_delete">Futa kitabu cha anwani</string>
     <plurals name="people_books_delete_confirm">

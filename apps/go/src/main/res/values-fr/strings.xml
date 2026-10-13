@@ -50,7 +50,6 @@
     <string name="go_resign_title">Abandonner la partie ?</string>
     <string name="go_sidebar_completed">Terminé</string>
     <string name="go_sidebar_new_game">Nouvelle partie</string>
-    <string name="go_status_draw">Match nul</string>
     <string name="go_status_draw_text">Match nul</string>
     <string name="go_status_game_over">Partie terminée</string>
     <string name="go_status_opponent_move">Au tour de %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Ouvrir le panneau latéral</string>
     <string name="go_sidebar_active">Parties en cours</string>
     <string name="go_empty_active">Aucune partie en cours pour le moment.</string>
-    <string name="go_status_resigned">Abandonnée</string>
     <string name="go_new_game_title">Nouvelle partie de Go</string>
     <string name="go_new_game_no_friends">Vous devez ajouter un ami avant de pouvoir commencer une partie.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

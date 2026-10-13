@@ -19,7 +19,6 @@
     <string name="crm_link">رابط</string>
     <string name="crm_design">التصميم</string>
     <string name="crm_export_failed">تعذّر حفظ التصدير</string>
-    <string name="crm_sort_direction">الاتجاه</string>
     <string name="crm_sort_rank">يدوي</string>
     <string name="crm_sort_created">تم الإنشاء</string>
     <string name="crm_sort_updated">تم التحديث</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">إضافة فئة</string>
     <string name="crm_classes_create">إنشاء</string>
     <string name="crm_class_name">الاسم</string>
-    <string name="crm_class_save_name">حفظ الاسم</string>
     <string name="crm_class_title_field">حقل العنوان</string>
     <string name="crm_class_fields">الحقول</string>
     <string name="crm_class_add_field">إضافة حقل</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">مطلوب</string>
     <string name="crm_field_position_default">افتراضي</string>
     <string name="crm_field_position_sidebar">الشريط الجانبي</string>
-    <string name="crm_field_save">حفظ التغييرات</string>
     <string name="crm_field_options">خيارات</string>
     <string name="crm_field_add_option">إضافة خيار</string>
     <string name="crm_field_delete">حذف الحقل</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">ابحث في نظام إدارة علاقات العملاء</string>
     <string name="crm_list_no_matching">لا يوجد نظام إدارة علاقات عملاء مطابق</string>
     <string name="crm_list_empty">لا يوجد نظام إدارة علاقات عملاء بعد</string>
-    <string name="crm_create_template">قالب</string>
     <string name="crm_find_search_placeholder">ابحث في نظام إدارة علاقات العملاء أو الصق الرابط</string>
     <string name="crm_find_search_hint">ابحث عن نظام إدارة علاقات عملاء للاشتراك فيه</string>
     <string name="crm_search_objects_placeholder">البحث في العناصر</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">संदेश पाठवा</string>
     <string name="people_contacts_no_people_found">लोक सापडले नाहीत</string>
     <string name="people_contacts_try_adjusting">तुमचा शोध समायोजित करून पहा</string>
-    <string name="people_contact_section_address">पत्ता</string>
     <string name="people_contact_section_detail">तपशील</string>
     <string name="people_contact_name">नाव</string>
     <string name="people_contact_email">ईमेल</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">पुन्हा नाव द्या</string>
     <string name="people_contacts_sort_name">नाव</string>
     <string name="people_contacts_sort_recent">अलीकडे जोडले</string>
-    <string name="people_contacts_thats_you">तो तुम्ही आहात</string>
     <string name="people_contacts_try_different_search">वेगळा शोध शब्द वापरून पहा</string>
     <string name="people_contacts_unfriend">मित्र काढा</string>
     <string name="people_add_contact_search_placeholder">शोधण्यासाठी टाइप करा…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">कोणताही संपर्क सापडला नाही</string>
     <string name="people_contacts_add_to_start">जोडणी सुरू करण्यासाठी संपर्क जोडा</string>
     <string name="people_contacts_actions">संपर्क क्रिया</string>
-    <string name="people_contacts_friend">मित्र</string>
     <string name="people_contacts_invite">आमंत्रित करा</string>
     <string name="people_contacts_unfriend_confirm">%1$s यापुढे तुमचे मित्र राहणार नाहीत. संपर्क तुमच्या पत्तावहीत राहील.</string>
     <string name="people_contacts_delete">संपर्क हटवा</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">संपर्क बदलला</string>
     <string name="people_add_contact_title">संपर्क जोडा</string>
     <string name="people_add_contact_add">संपर्कांमध्ये जोडा</string>
-    <string name="people_add_contact_in_contacts">संपर्कांमध्ये</string>
     <string name="people_books_create">पत्तावही तयार करा</string>
     <string name="people_books_delete">पत्तावही हटवा</string>
     <plurals name="people_books_delete_confirm">

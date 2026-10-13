@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">שאָך</string>
-    <string name="chess_sidebar_header">שאָך</string>
     <string name="chess_sidebar_active">אַקטיווע שפּילן</string>
     <string name="chess_sidebar_completed">פֿאַרענדיקט</string>
     <string name="chess_sidebar_new_game">נײַ שפּיל</string>
-    <string name="chess_section_active">אַקטיווע שפּילן</string>
-    <string name="chess_section_completed">פֿאַרענדיקט</string>
-    <string name="chess_new_game">נײַ שפּיל</string>
     <string name="chess_empty_title">נאָך קיין שפּילן</string>
     <string name="chess_new_title">נײַ שפּיל</string>
     <string name="chess_new_pick_opponent">קלײַבט קעגנער</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">מעלדונגען וועגן שאָך־צוגן, גלײַך־פֿאָרשלאָגן און שפּיל־רעזולטאַטן.</string>
     <string name="chess_open_sidebar">עפֿן זייַטל</string>
-    <string name="chess_empty_subtitle">הייבט אָן אײַער ערשט שפּיל צו שפּילן שאָך מיט אַ פֿרײַנד.</string>
-    <string name="chess_empty_start_button">הייבט אָן אײַער ערשט שפּיל</string>
     <string name="chess_detail_unavailable">שפּיל נישט פֿאַראַן</string>
     <string name="chess_delete_title">אויסמעקן דעם שפּיל?</string>
     <string name="chess_delete_message">דאָס נעמט אַרויס דאָס שפּיל פֿון אײַער רשימה.</string>

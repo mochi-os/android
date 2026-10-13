@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">دسترسی RSS ابطال شود؟</string>
     <string name="rss_revoke_message">هر چیزی که مشترک این خوراک است دیگر آن را دریافت نمی‌کند. پس از آن می‌توانید نشانی جدیدی کپی کنید.</string>
     <string name="rss_revoked">دسترسی RSS ابطال شد</string>
-    <string name="rss_revoke_failed">ابطال دسترسی RSS ناموفق بود</string>
     <string name="game_empty_title">هنوز بازی‌ای وجود ندارد</string>
     <string name="game_select_title">یک بازی انتخاب کنید</string>
     <string name="game_select_subtitle">از نوار کناری یک بازی انتخاب کنید یا بازی جدیدی شروع کنید.</string>

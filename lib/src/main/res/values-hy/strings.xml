@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">Հետ վերցնե՞լ RSS մուտքը</string>
     <string name="rss_revoke_message">Այս հոսքին բաժանորդագրված ամեն ինչ կդադարի ստանալ այն։ Դրանից հետո կարող եք պատճենել նոր URL։</string>
     <string name="rss_revoked">RSS մուտքը հետ է վերցվել</string>
-    <string name="rss_revoke_failed">Չհաջողվեց հետ վերցնել RSS մուտքը</string>
     <string name="game_empty_title">Դեռ խաղեր չկան</string>
     <string name="game_select_title">Ընտրեք խաղ</string>
     <string name="game_select_subtitle">Ընտրեք խաղ կողային վահանակից կամ սկսեք նորը։</string>

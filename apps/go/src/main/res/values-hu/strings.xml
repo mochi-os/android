@@ -50,7 +50,6 @@
     <string name="go_resign_title">Feladja a játékot?</string>
     <string name="go_sidebar_completed">Teljesítve</string>
     <string name="go_sidebar_new_game">Új játék</string>
-    <string name="go_status_draw">Döntetlen</string>
     <string name="go_status_draw_text">Döntetlen</string>
     <string name="go_status_game_over">Játék vége</string>
     <string name="go_status_opponent_move">%1$s lépése</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Oldalsáv megnyitása</string>
     <string name="go_sidebar_active">Aktív játékok</string>
     <string name="go_empty_active">Még nincsenek aktív játszmák.</string>
-    <string name="go_status_resigned">Feladva</string>
     <string name="go_new_game_title">Új Go játszma</string>
     <string name="go_new_game_no_friends">Hozzá kell adnia egy barátot, mielőtt játszmát indíthatna.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

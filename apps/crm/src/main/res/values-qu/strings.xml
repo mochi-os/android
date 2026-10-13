@@ -19,7 +19,6 @@
     <string name="crm_link">T\'inki</string>
     <string name="crm_design">Diseño</string>
     <string name="crm_export_failed">Exportasqata mana waqaychayta atikurqanchu</string>
-    <string name="crm_sort_direction">Sentido</string>
     <string name="crm_sort_rank">Makiwan</string>
     <string name="crm_sort_created">Kamarisqa</string>
     <string name="crm_sort_updated">Musuqchasqa</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Clase yapay</string>
     <string name="crm_classes_create">Kamariy</string>
     <string name="crm_class_name">Suti</string>
-    <string name="crm_class_save_name">Sutita waqaychay</string>
     <string name="crm_class_title_field">Sutinchay campo</string>
     <string name="crm_class_fields">Campokuna</string>
     <string name="crm_class_add_field">Campo yapay</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Necesitasqa</string>
     <string name="crm_field_position_default">Predeterminado</string>
     <string name="crm_field_position_sidebar">Waqta barra</string>
-    <string name="crm_field_save">Hukchaykunata waqaychay</string>
     <string name="crm_field_options">Akllanakuna</string>
     <string name="crm_field_add_option">Akllana yapay</string>
     <string name="crm_field_delete">Campo wischuy</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM-ta maskay</string>
     <string name="crm_list_no_matching">Manam tupaq CRM kanchu</string>
     <string name="crm_list_empty">Manaraqmi CRM kanchu</string>
-    <string name="crm_create_template">Plantilla</string>
     <string name="crm_find_search_placeholder">CRM-ta maskay utaq URL-ta pegay</string>
     <string name="crm_find_search_hint">Suscribinaykipaq CRM-ta maskay</string>
     <string name="crm_create_object_parent_none">(mana imapas)</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Seol teachtaireacht</string>
     <string name="people_contacts_no_people_found">Níor aimsíodh aon duine</string>
     <string name="people_contacts_try_adjusting">Bain triail as do chuardach a choigeartú</string>
-    <string name="people_contact_section_address">Seoladh</string>
     <string name="people_contact_section_detail">Sonraí</string>
     <string name="people_contact_name">Ainm</string>
     <string name="people_contact_email">Ríomhphost</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Athainmnigh</string>
     <string name="people_contacts_sort_name">Ainm</string>
     <string name="people_contacts_sort_recent">Curtha leis le déanaí</string>
-    <string name="people_contacts_thats_you">Sin tusa</string>
     <string name="people_contacts_try_different_search">Bain triail as téarma cuardaigh difriúil</string>
     <string name="people_contacts_unfriend">Bain cara</string>
     <string name="people_add_contact_search_placeholder">Clóscríobh chun cuardach a dhéanamh…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Níor aimsíodh aon teagmhálaí</string>
     <string name="people_contacts_add_to_start">Cuir teagmhálaithe leis chun tosú</string>
     <string name="people_contacts_actions">Gníomhartha teagmhálaí</string>
-    <string name="people_contacts_friend">Cara</string>
     <string name="people_contacts_invite">Tabhair cuireadh</string>
     <string name="people_contacts_unfriend_confirm">Ní bheidh %1$s ina chara agat a thuilleadh. Fanann an teagmhálaí i do leabhar seoltaí.</string>
     <string name="people_contacts_delete">Scrios an teagmhálaí</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Athraíodh an teagmhálaí</string>
     <string name="people_add_contact_title">Cuir teagmhálaí leis</string>
     <string name="people_add_contact_add">Cuir leis na teagmhálaithe</string>
-    <string name="people_add_contact_in_contacts">Sna teagmhálaithe</string>
     <string name="people_books_create">Cruthaigh leabhar seoltaí</string>
     <string name="people_books_delete">Scrios an leabhar seoltaí</string>
     <plurals name="people_books_delete_confirm">

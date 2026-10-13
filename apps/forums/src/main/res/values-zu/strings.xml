@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">Igama lokubonisa</string>
-    <string name="forums_auth_verification_failed">Ukuqinisekiswa kuhlulekile</string>
     <string name="forums_list_title">Amaforamu</string>
     <string name="forums_list_find">Thola izinkundla</string>
     <string name="forums_list_unsubscribe">Susa ukubhalisa</string>
     <string name="forums_list_unsubscribe_title">Susa ukubhalisa</string>
     <string name="forums_create_title">Dala i-forum</string>
     <string name="forums_create_name">Igama lenkundla</string>
-    <string name="forums_create_privacy">Ubumfihlo</string>
-    <string name="forums_create_private">Okuyimfihlo</string>
-    <string name="forums_create_public">Emphakathini</string>
     <string name="forums_create_action">Dala i-forum</string>
     <string name="forums_find_title">Thola izinkundla</string>
     <string name="forums_find_recommended">Kunconywayo</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">Thumela</string>
     <string name="forums_post_edit">Hlela okuthunyelwe</string>
     <string name="forums_post_edit_title">Hlela okuthunyelwe</string>
-    <string name="forums_post_edit_title_field">Isihloko</string>
-    <string name="forums_post_save">Londoloza</string>
     <string name="forums_post_delete">Susa okuthunyelwe</string>
     <string name="forums_post_delete_title">Susa okuthunyelwe</string>
     <string name="forums_post_locked">Kukhiyiwe</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">Amalungu</string>
     <string name="forums_tab_banner">Ibhena</string>
     <string name="forums_tab_ai">I-AI</string>
-    <string name="forums_access_target">Umsebenzisi noma iqembu</string>
-    <string name="forums_access_level_view">Buka</string>
-    <string name="forums_access_level_vote">Vota</string>
-    <string name="forums_access_level_comment">Phawula</string>
-    <string name="forums_access_level_post">Thumela</string>
-    <string name="forums_access_level_none">Lutho</string>
     <string name="forums_members_empty">Awekho amalungu</string>
     <string name="forums_banner_dismiss">Cashisa ibhana</string>
     <string name="forums_ai_mode_tag">Faka amathegi</string>
     <string name="forums_ai_account_default">I-akhawunti ezenzakalelayo</string>
-    <string name="forums_ai_prompt_reset">Setha kabusha kokuzenzakalelayo</string>
     <string name="forums_settings_unsubscribe">Susa ukubhalisa</string>
     <string name="forums_moderation_title">Ukulawula</string>
     <string name="forums_moderation_tab_queue">Ulayini</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">Ngaphandle kwesihloko</string>
     <string name="forums_report_reason_other">Okunye</string>
     <string name="forums_post_default_author">Umsebenzisi</string>
-    <string name="forums_comments">Imibono</string>
     <string name="forums_no_comments">Awekho amazwana okwamanje</string>
-    <string name="forums_comment_save">Londoloza</string>
     <string name="forums_comment_edit">Hlela ukuphawula</string>
     <string name="forums_comment_edit_title">Hlela ukuphawula</string>
-    <string name="forums_comment_edit_attach">Namathisela amafayela</string>
     <string name="forums_comment_delete">Susa umbono</string>
     <string name="forums_comment_delete_title">Susa umbono</string>
     <string name="forums_comment_reply">Phendula</string>
-    <string name="forums_settings_rename">Qamba kabusha</string>
-    <string name="forums_settings_save">Londoloza</string>
     <string name="forums_settings_delete">Susa i-forum</string>
     <string name="forums_settings_delete_title">Susa i-forum</string>
     <string name="forums_forum_not_found">Inkundla ayitholakalanga</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">Thumela</string>
     <string name="forums_post_body_field">Okuqukethwe</string>
-    <string name="forums_post_edit_body_field">Okuqukethwe</string>
     <string name="forums_comment_edit_body_field">Okuqukethwe</string>
-    <string name="forums_tag_clear">Sula isihlungi</string>
-    <string name="forums_post_tag_add">Engeza ithegi</string>
     <string name="forums_write_comment">Bhala amazwana…</string>
-    <string name="forums_auth_login_failed">Ukungena akuphumelelanga</string>
 
     <string name="notification_channel_forums">Izaziso zezinkundla</string>
-    <string name="forums_auth_brand">Mochi Amaforamu</string>
-    <string name="forums_auth_create_identity_failed">Kuhlulekile ukudala ubunikazi</string>
-    <string name="forums_auth_mfa_unsupported">I-MFA ayikasekelwa kuhlelo lokusebenza lwefoni</string>
-    <string name="forums_auth_enter_code_sent">Faka ikhodi ethunyelwe ku-%1$s</string>
-    <string name="forums_auth_create_identity">Dala ubunikazi bakho</string>
     <string name="forums_list_empty">Azikho izinkundla okwamanje</string>
     <string name="forums_list_unsubscribe_message">Uqinisekile ukuthi ufuna ukukhansela ukubhalisa kule nkundla?</string>
     <string name="forums_find_search_placeholder">Sesha izinkundla noma namathisela i-URL</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">Vota phansi</string>
     <string name="forums_post_quote">Caphuna empendulweni</string>
     <string name="forums_comment_quote">Caphuna empendulweni</string>
-    <string name="forums_post_tag_remove">Susa ithegi</string>
     <string name="forums_access_add">Engeza umthetho wokufinyelela</string>
     <string name="forums_access_empty">Ayikho imithetho okwamanje — kusebenza okuzenzakalelayo</string>
-    <string name="forums_access_target_hint">I-ID yonhlangothi, @iqembu, * (wonke umuntu), noma + (amalungu)</string>
-    <string name="forums_access_level">Izinga</string>
-    <string name="forums_access_level_moderate">Lawula</string>
     <string name="forums_members_search">Hlunga amalungu</string>
     <string name="forums_banner_description">I-Markdown eboniswa phezulu kwenkundla.</string>
     <string name="forums_banner_placeholder">Faka umbhalo webhena (i-markdown iyasekelwa)…</string>
-    <string name="forums_ai_mode_label">Imodi: %1$s</string>
-    <string name="forums_ai_mode_heading">Imodi ye-AI</string>
     <string name="forums_ai_mode_off">Kuvinjelwe</string>
-    <string name="forums_ai_account">I-akhawunti ye-AI</string>
-    <string name="forums_ai_prompt_tag">Isikhuthazi sokuthegisha</string>
-    <string name="forums_ai_prompt_score">Isikhuthazi sokubala amaphuzu</string>
-    <string name="forums_ai_post_prompt_label">Isikhuthazi samathegi okuthunyelwe</string>
-    <string name="forums_ai_comment_prompt_label">Isikhuthazi samathegi okuphawula</string>
-    <string name="forums_settings_fingerprint">Izigxivizo zeminwe: %1$s</string>
-    <string name="forums_settings_clear_notifications">Sula izaziso</string>
     <string name="forums_moderation_queue_empty">Akukho okulindile</string>
     <string name="forums_moderation_report_details">Imininingwane: %1$s</string>
     <string name="forums_moderation_report_resolved_by">Kuxazululwe ngu-%1$s — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">Uphendula u-%1$s</string>
     <string name="forums_comment_clear_reply">Sula impendulo</string>
     <string name="forums_settings_title">Izilungiselelo ze-%1$s</string>
-    <string name="forums_settings_rename_label">Igama lenkundla</string>
-    <string name="forums_settings_danger_zone">Indawo eyingozi</string>
     <string name="forums_settings_delete_message">Lokhu kuzosusa unaphakade inkundla nakho konke okuthunyelwe kuyo. Lokhu ngeke kubuyiselwe.</string>
 
-    <string name="forums_tag_interest_up">Khulisa intshisekelo</string>
-    <string name="forums_tag_interest_down">Yehlisa intshisekelo</string>
-    <string name="forums_tag_interest_remove">Khipha intshisekelo</string>
     <string name="forums_access_tab_users">Abasebenzisi</string>
     <string name="forums_access_tab_groups">Amaqembu</string>
-    <string name="forums_access_tab_manual">Mathupha</string>
     <string name="forums_access_search_users">Sesha abasebenzisi</string>
     <string name="forums_access_no_groups">Awekho amaqembu atholakalayo</string>
     <string name="forums_saved_title">Okulondoloziwe</string>

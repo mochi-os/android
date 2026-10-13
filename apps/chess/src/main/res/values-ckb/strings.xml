@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">شەترەنج</string>
-    <string name="chess_sidebar_header">شەترەنج</string>
     <string name="chess_sidebar_active">یارییە چالاکەکان</string>
     <string name="chess_sidebar_completed">تەواوبوو</string>
     <string name="chess_sidebar_new_game">یاری نوێ</string>
-    <string name="chess_section_active">یارییە چالاکەکان</string>
-    <string name="chess_section_completed">تەواوبوو</string>
-    <string name="chess_new_game">یاری نوێ</string>
     <string name="chess_empty_title">هێشتا هیچ یارییەک نییە</string>
     <string name="chess_new_title">یاری نوێ</string>
     <string name="chess_new_pick_opponent">بەرامبەر هەڵبژێرە</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">ئاگادارکردنەوە دەربارەی جوڵەکانی شەترەنج، پێشکەشکردنی یەکسانی و ئەنجامی یاری.</string>
     <string name="chess_open_sidebar">کردنەوەی لاتەنیشت</string>
-    <string name="chess_empty_subtitle">یاریی یەکەمت دەست پێبکە بۆ یاریکردنی شەترەنج لەگەڵ هاوڕێیەک.</string>
-    <string name="chess_empty_start_button">یاریی یەکەمت دەست پێبکە</string>
     <string name="chess_detail_unavailable">یاری بەردەست نییە</string>
     <string name="chess_delete_title">یارییەکە بسڕدرێتەوە؟</string>
     <string name="chess_delete_message">ئەمە یارییەکە لە لیستەکەت لادەبات.</string>

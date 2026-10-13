@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Trimite mesaj</string>
     <string name="people_contacts_no_people_found">Nu s-au găsit persoane</string>
     <string name="people_contacts_try_adjusting">Încearcă să ajustezi căutarea</string>
-    <string name="people_contact_section_address">Adresă</string>
     <string name="people_contact_section_detail">Detalii</string>
     <string name="people_contact_name">Nume</string>
     <string name="people_contact_email">Email</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Redenumește</string>
     <string name="people_contacts_sort_name">Nume</string>
     <string name="people_contacts_sort_recent">Adăugat recent</string>
-    <string name="people_contacts_thats_you">Acela ești tu</string>
     <string name="people_contacts_try_different_search">Încearcă un alt termen de căutare</string>
     <string name="people_contacts_unfriend">Elimină prietenul</string>
     <string name="people_add_contact_search_placeholder">Tastați pentru a căuta…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Nu s-au găsit contacte</string>
     <string name="people_contacts_add_to_start">Adăugați contacte pentru a începe</string>
     <string name="people_contacts_actions">Acțiuni pentru contact</string>
-    <string name="people_contacts_friend">Prieten</string>
     <string name="people_contacts_invite">Invită</string>
     <string name="people_contacts_unfriend_confirm">%1$s nu va mai fi prietenul dvs. Contactul rămâne în agenda dvs.</string>
     <string name="people_contacts_delete">Șterge contactul</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Contactul s-a schimbat</string>
     <string name="people_add_contact_title">Adaugă contact</string>
     <string name="people_add_contact_add">Adaugă la contacte</string>
-    <string name="people_add_contact_in_contacts">În contacte</string>
     <string name="people_books_create">Creează agendă</string>
     <string name="people_books_delete">Șterge agenda</string>
     <plurals name="people_books_delete_confirm">

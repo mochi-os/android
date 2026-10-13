@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="projects_auth_display_name">Weergavenaam</string>
-    <string name="projects_auth_verification_failed">Verificatie mislukt</string>
-    <string name="projects_list_close_search">Zoekopdracht sluiten</string>
     <string name="projects_list_search">Zoeken</string>
     <string name="projects_list_find">Projecten zoeken</string>
     <string name="projects_list_create">Project aanmaken</string>
@@ -10,22 +7,16 @@
     <string name="projects_create_name">Naam</string>
     <string name="projects_create_description">Beschrijving</string>
     <string name="projects_create_prefix">Prefix</string>
-    <string name="projects_create_privacy">Privacy</string>
-    <string name="projects_create_private">Privé</string>
-    <string name="projects_create_public">Publiek</string>
     <string name="projects_create_template_none">Geen</string>
     <string name="projects_create_action">Aanmaken</string>
     <string name="projects_find_title">Projecten zoeken</string>
     <string name="projects_find_recommended">Aanbevolen</string>
-    <string name="projects_find_subscribe">Abonneren</string>
     <string name="projects_loading">Laden…</string>
     <string name="projects_watched">Gevolgd</string>
     <string name="projects_create_object">Object aanmaken</string>
     <string name="projects_search">Zoeken</string>
     <string name="projects_settings">Instellingen</string>
     <string name="projects_design">Ontwerp</string>
-    <string name="projects_sort_label">Sorteren</string>
-    <string name="projects_sort_direction">Richting</string>
     <string name="projects_sort_rank">Handmatig</string>
     <string name="projects_sort_number">Nummer</string>
     <string name="projects_sort_created">Aangemaakt</string>
@@ -48,10 +39,6 @@
     <string name="projects_object_tab_comments">Reacties (%1$s)</string>
     <string name="projects_object_tab_activity">Activiteit</string>
     <string name="projects_object_tab_requests">Merge-aanvragen (%1$s)</string>
-    <string name="projects_object_tab_attachments">Bijlagen</string>
-    <string name="projects_object_tab_links">Links</string>
-    <string name="projects_watchers_watch">Volgen</string>
-    <string name="projects_watchers_unwatch">Stoppen met volgen</string>
     <string name="projects_parent_label">Bovenliggend</string>
     <string name="projects_parent_search_placeholder">Zoeken</string>
     <string name="projects_links_title">Links</string>
@@ -65,12 +52,9 @@
     <string name="projects_links_no_matches">Geen overeenkomende objecten</string>
     <string name="projects_field_yes">Ja</string>
     <string name="projects_field_no">Nee</string>
-    <string name="projects_field_type_checkbox">Selectievakje</string>
-    <string name="projects_comment_save">Opslaan</string>
     <string name="projects_comment_empty">Nog geen reacties</string>
     <string name="projects_comment_attach">Bestanden bijvoegen</string>
     <string name="projects_property_remove">Verwijderen</string>
-    <string name="projects_property_option_none">Geen</string>
     <string name="projects_attachments">Bijlagen</string>
     <string name="projects_attachment_add">Bijlage toevoegen</string>
     <string name="projects_request_empty">Geen merge requests</string>
@@ -108,7 +92,6 @@
     <string name="projects_classes_add_dialog_title">Klasse toevoegen</string>
     <string name="projects_classes_create">Aanmaken</string>
     <string name="projects_class_name">Naam</string>
-    <string name="projects_class_save_name">Naam opslaan</string>
     <string name="projects_class_title_field">Titelveld</string>
     <string name="projects_class_merge_requests">Merge requests</string>
     <string name="projects_class_fields">Velden</string>
@@ -126,7 +109,6 @@
     <string name="projects_field_required">Verplicht</string>
     <string name="projects_field_position_default">Standaard</string>
     <string name="projects_field_position_sidebar">Zijbalk</string>
-    <string name="projects_field_save">Wijzigingen opslaan</string>
     <string name="projects_field_options">Opties</string>
     <string name="projects_field_add_option">Optie toevoegen</string>
     <string name="projects_field_delete">Veld verwijderen</string>
@@ -147,12 +129,9 @@
     <string name="projects_views_sort_updated">Bijgewerkt</string>
     <string name="projects_views_sort_rank">Rang</string>
     <string name="projects_project_not_found">Project niet gevonden</string>
-    <string name="projects_list_more">Meer</string>
     <string name="projects_more">Meer</string>
-    <string name="projects_request_more">Meer</string>
     <string name="projects_comment_send">Verzenden</string>
     <string name="projects_field_position_body">Inhoud</string>
-    <string name="projects_auth_login_failed">Aanmelding mislukt</string>
     <string name="projects_views_move_up">Omhoog verplaatsen</string>
     <string name="projects_class_move_up">Omhoog verplaatsen</string>
     <string name="projects_views_move_down">Omlaag verplaatsen</string>
@@ -167,10 +146,6 @@
     <string name="projects_views_sort_by">Sorteren op</string>
 
     <string name="notification_channel_projects">Projectmeldingen</string>
-    <string name="projects_auth_create_identity_failed">Aanmaken van identiteit mislukt</string>
-    <string name="projects_auth_mfa_unsupported">MFA wordt nog niet ondersteund in de mobiele app</string>
-    <string name="projects_auth_enter_code_sent">Voer de code in die naar %1$s is verzonden</string>
-    <string name="projects_auth_create_identity">Maak uw identiteit aan</string>
     <string name="projects_list_search_placeholder">Projecten zoeken</string>
     <string name="projects_list_no_matching">Geen overeenkomende projecten</string>
     <string name="projects_list_empty">Nog geen projecten</string>
@@ -183,8 +158,6 @@
     <string name="projects_people_empty">Nog niemand heeft toegang</string>
     <string name="projects_settings_delete_confirm_message">Weet u zeker dat u dit project wilt verwijderen? Alle objecten, opmerkingen en instellingen worden permanent verwijderd.</string>
     <string name="projects_object_unwatch">Niet meer volgen</string>
-    <string name="projects_object_tab_watchers">Volgers</string>
-    <string name="projects_watchers_empty">Nog geen volgers</string>
     <string name="projects_object_delete_title">Object verwijderen</string>
     <string name="projects_object_delete_message">Weet u zeker dat u dit object wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</string>
     <string name="projects_parent_none">Geen bovenliggend item</string>
@@ -204,17 +177,10 @@
     <string name="projects_activity_empty">Geen activiteit</string>
     <string name="projects_activity_created">heeft dit object aangemaakt</string>
     <string name="projects_activity_deleted">heeft dit object verwijderd</string>
-    <string name="projects_activity_changed">heeft %1$s gewijzigd: %2$s → %3$s</string>
-    <string name="projects_activity_set">heeft %1$s ingesteld op %2$s</string>
-    <string name="projects_activity_cleared">heeft %1$s gewist</string>
     <string name="projects_activity_updated">heeft %1$s bijgewerkt</string>
     <string name="projects_activity_made_change">heeft een wijziging aangebracht</string>
     <string name="projects_attachment_empty">Geen bijlagen</string>
     <string name="projects_attachment_default_name">bijlage</string>
-    <string name="projects_attachment_size_bytes">%1$s B</string>
-    <string name="projects_attachment_size_kb">%1$s KB</string>
-    <string name="projects_attachment_size_mb">%1$s MB</string>
-    <string name="projects_attachment_size_gb">%1$s GB</string>
     <string name="projects_request_new">Nieuwe merge request</string>
     <string name="projects_request_status_closed">Gesloten</string>
     <string name="projects_request_back_to_list">Terug naar lijst</string>
@@ -235,15 +201,12 @@
     <string name="projects_request_create_title">Merge request aanmaken</string>
     <string name="projects_request_field_target">Doelbranch</string>
     <string name="projects_diff_title">Diff: %1$s -&gt; %2$s</string>
-    <string name="projects_tree_collapse">Inklappen</string>
-    <string name="projects_tree_expand">Uitklappen</string>
     <string name="projects_tree_move">Verplaatsen</string>
     <string name="projects_tree_move_to_parent">Naar bovenliggend item verplaatsen</string>
     <string name="projects_tree_root_level">(Hoofdniveau)</string>
     <string name="projects_tree_empty">Geen objecten</string>
     <string name="projects_board_no_columns">Geen kolommen geconfigureerd voor deze weergave</string>
     <string name="projects_board_no_options">Geen opties geconfigureerd voor kolomveld</string>
-    <string name="projects_board_column_options">Kolomopties</string>
     <string name="projects_board_nested_count">+%1$s genest</string>
     <string name="projects_move_to_column">Verplaatsen naar kolom</string>
     <string name="projects_move_to_row">Verplaatsen naar rij</string>
@@ -251,19 +214,10 @@
     <string name="projects_drag_card">Kaart slepen</string>
     <string name="projects_drag_row">Rij slepen</string>
     <string name="projects_drag_column">Kolom slepen</string>
-    <string name="projects_drag_hint">Lang indrukken en slepen om te verplaatsen</string>
     <string name="projects_design_more_options">Meer opties</string>
-    <string name="projects_design_clipboard_label">Ontwerp-JSON</string>
-    <string name="projects_design_export_subject">Projectontwerp</string>
-    <string name="projects_design_share_chooser">Ontwerp delen</string>
-    <string name="projects_design_export_copied">Ontwerp gekopieerd naar het klembord</string>
     <string name="projects_design_no_templates">Geen sjablonen beschikbaar</string>
-    <string name="projects_design_or_paste_json">Of plak JSON</string>
-    <string name="projects_design_paste_placeholder">Plak het geëxporteerde ontwerp-JSON</string>
-    <string name="projects_design_import_json">JSON importeren</string>
     <string name="projects_design_use">Gebruiken</string>
     <string name="projects_design_replace_message">Hiermee wordt het huidige ontwerp vervangen door %1$s. Alle bestaande klassen, velden, opties en weergaven worden verwijderd. Bestaande objecten worden niet verwijderd, maar verschijnen mogelijk niet meer in weergaven.</string>
-    <string name="projects_design_pasted_json_label">geplakte JSON</string>
     <string name="projects_classes_empty">Geen klassen gedefinieerd</string>
     <string name="projects_class_label">Klasse: %1$s</string>
     <string name="projects_class_title_field_description">Welk veld als weergavetitel moet worden gebruikt voor objecten van deze klasse.</string>
@@ -333,8 +287,6 @@
     <string name="projects_access_select_rule">Selecteer een regel</string>
     <string name="projects_access_authenticated_desc">Iedereen die aangemeld is</string>
     <string name="projects_access_anyone_desc">Inclusief anonieme gebruikers</string>
-    <string name="projects_access_target">Gebruiker of groep</string>
-    <string name="projects_access_target_hint">Entiteits-ID, @groep, * (iedereen) of + (leden)</string>
     <string name="projects_access_selected">Geselecteerd: %1$s</string>
     <string name="projects_access_role_comment">Reageren en bekijken</string>
     <string name="projects_access_role_design">Ontwerpen, aanmaken, bewerken, reageren en bekijken</string>

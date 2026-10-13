@@ -19,7 +19,6 @@
     <string name="crm_link">לינק</string>
     <string name="crm_design">אויסזען</string>
     <string name="crm_export_failed">מ׳האָט נישט געקענט אויפֿהיטן דעם עקספּאָרט</string>
-    <string name="crm_sort_direction">ריכטונג</string>
     <string name="crm_sort_rank">מאַנואַל</string>
     <string name="crm_sort_created">באַשאַפֿן</string>
     <string name="crm_sort_updated">באַנײַט</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">צולייגן קלאַס</string>
     <string name="crm_classes_create">באַשאַפֿן</string>
     <string name="crm_class_name">נאָמען</string>
-    <string name="crm_class_save_name">אָפּהיטן נאָמען</string>
     <string name="crm_class_title_field">קעפּל־פֿעלד</string>
     <string name="crm_class_fields">פֿעלדער</string>
     <string name="crm_class_add_field">צולייגן פֿעלד</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">נייטיק</string>
     <string name="crm_field_position_default">סטאַנדאַרד</string>
     <string name="crm_field_position_sidebar">זײַטנשטאַנג</string>
-    <string name="crm_field_save">היט ענדערונגען</string>
     <string name="crm_field_options">אָפּציעס</string>
     <string name="crm_field_add_option">צולייגן אָפּציע</string>
     <string name="crm_field_delete">אויסמעקן פֿעלד</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">זוכן CRM</string>
     <string name="crm_list_no_matching">קײן פּאַסיקער CRM</string>
     <string name="crm_list_empty">נאָך קײן CRM</string>
-    <string name="crm_create_template">מוסטער</string>
     <string name="crm_find_search_placeholder">זוכן CRM אָדער אַרײַנקלעפּן URL</string>
     <string name="crm_find_search_hint">זוכן אַ CRM צו אַבאָנירן</string>
     <string name="crm_create_object_parent_none">(קײנער)</string>

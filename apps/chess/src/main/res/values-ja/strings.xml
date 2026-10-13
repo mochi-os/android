@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">チェス</string>
-    <string name="chess_sidebar_header">チェス</string>
     <string name="chess_sidebar_active">進行中のゲーム</string>
     <string name="chess_sidebar_completed">完了</string>
     <string name="chess_sidebar_new_game">新しいゲーム</string>
-    <string name="chess_section_active">進行中のゲーム</string>
-    <string name="chess_section_completed">完了</string>
-    <string name="chess_new_game">新しいゲーム</string>
     <string name="chess_empty_title">まだゲームがありません</string>
     <string name="chess_new_title">新しいゲーム</string>
     <string name="chess_new_pick_opponent">対戦相手を選ぶ</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">対局を一覧から削除します。</string>
     <string name="chess_delete_title">ゲームを削除しますか？</string>
     <string name="chess_detail_unavailable">対局を利用できません</string>
-    <string name="chess_empty_start_button">最初の対局を始める</string>
-    <string name="chess_empty_subtitle">友達とチェスをするには、最初の対局を始めましょう。</string>
     <string name="chess_move_capture">%1$s が %2$s を取りました</string>
     <string name="chess_open_sidebar">サイドバーを開く</string>
     <string name="chess_ws_connecting">接続中…</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Ergaa ergi</string>
     <string name="people_contacts_no_people_found">Namoonni hin argamne</string>
     <string name="people_contacts_try_adjusting">Barbaacha kee sirreessuu yaali</string>
-    <string name="people_contact_section_address">Teessoo</string>
     <string name="people_contact_section_detail">Bal\'inaan</string>
     <string name="people_contact_name">Maqaa</string>
     <string name="people_contact_email">Imeelii</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Maqaa jijjiiri</string>
     <string name="people_contacts_sort_name">Maqaa</string>
     <string name="people_contacts_sort_recent">Dhiheenya dabalame</string>
-    <string name="people_contacts_thats_you">Sun siidha</string>
     <string name="people_contacts_try_different_search">Jecha barbaaccha biraa yaali</string>
     <string name="people_contacts_unfriend">Hiriyaa haqi</string>
     <string name="people_add_contact_search_placeholder">Barbaaduuf barreessi…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Quunnamtiin hin argamne</string>
     <string name="people_contacts_add_to_start">Walqunnamuu jalqabuuf quunnamtiiwwan dabali</string>
     <string name="people_contacts_actions">Gochawwan quunnamtii</string>
-    <string name="people_contacts_friend">Hiriyaa</string>
     <string name="people_contacts_invite">Affeeri</string>
     <string name="people_contacts_unfriend_confirm">%1$s siif hiriyaa hin ta\'u. Quunnamtiin kitaaba teessoo kee keessatti hafa.</string>
     <string name="people_contacts_delete">Quunnamtii haqi</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Quunnamtiin jijjiirameera</string>
     <string name="people_add_contact_title">Quunnamtii dabali</string>
     <string name="people_add_contact_add">Gara quunnamtiiwwanitti dabali</string>
-    <string name="people_add_contact_in_contacts">Quunnamtiiwwan keessa</string>
     <string name="people_books_create">Kitaaba teessoo uumi</string>
     <string name="people_books_delete">Kitaaba teessoo haqi</string>
     <plurals name="people_books_delete_confirm">

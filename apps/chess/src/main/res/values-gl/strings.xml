@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chess_app_title">Xadrez</string>
-    <string name="chess_sidebar_header">Xadrez</string>
     <string name="chess_sidebar_active">Partidas activas</string>
     <string name="chess_sidebar_completed">Completado</string>
     <string name="chess_sidebar_new_game">Nova partida</string>
-    <string name="chess_section_active">Partidas activas</string>
-    <string name="chess_section_completed">Completado</string>
-    <string name="chess_new_game">Nova partida</string>
     <string name="chess_empty_title">Aínda non hai xogos</string>
     <string name="chess_new_title">Nova partida</string>
     <string name="chess_new_pick_opponent">Escoller oponente</string>
@@ -55,8 +51,6 @@
     <string name="chess_channel_name">Notificacións de Xadrez</string>
     <string name="chess_channel_description">Notificacións sobre xogadas, ofertas de táboas e resultados de partidas.</string>
     <string name="chess_open_sidebar">Abrir barra lateral</string>
-    <string name="chess_empty_subtitle">Comeza a túa primeira partida para xogar ao xadrez cun amigo.</string>
-    <string name="chess_empty_start_button">Comeza a túa primeira partida</string>
     <string name="chess_detail_unavailable">Partida non dispoñible</string>
     <string name="chess_delete_title">Eliminar a partida?</string>
     <string name="chess_delete_message">Isto elimina a partida da túa lista.</string>

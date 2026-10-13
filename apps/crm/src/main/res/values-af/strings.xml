@@ -19,7 +19,6 @@
     <string name="crm_link">Skakel</string>
     <string name="crm_design">Ontwerp</string>
     <string name="crm_export_failed">Kon nie die uitvoer stoor nie</string>
-    <string name="crm_sort_direction">Rigting</string>
     <string name="crm_sort_rank">Handmatig</string>
     <string name="crm_sort_created">Geskep</string>
     <string name="crm_sort_updated">Opgedateer</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Voeg klas by</string>
     <string name="crm_classes_create">Skep</string>
     <string name="crm_class_name">Naam</string>
-    <string name="crm_class_save_name">Stoor naam</string>
     <string name="crm_class_title_field">Titelveld</string>
     <string name="crm_class_fields">Velde</string>
     <string name="crm_class_add_field">Voeg veld by</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Vereis</string>
     <string name="crm_field_position_default">Verstek</string>
     <string name="crm_field_position_sidebar">Sybalk</string>
-    <string name="crm_field_save">Stoor veranderinge</string>
     <string name="crm_field_options">Opsies</string>
     <string name="crm_field_add_option">Voeg opsie by</string>
     <string name="crm_field_delete">Verwyder veld</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">Soek CRM</string>
     <string name="crm_list_no_matching">Geen passende CRM nie</string>
     <string name="crm_list_empty">Nog geen CRM nie</string>
-    <string name="crm_create_template">Sjabloon</string>
     <string name="crm_find_search_placeholder">Soek CRM of plak URL</string>
     <string name="crm_find_search_hint">Soek na CRM om op in te teken</string>
     <string name="crm_search_objects_placeholder">Soek objekte</string>

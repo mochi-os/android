@@ -121,7 +121,6 @@
     <string name="people_contacts_message">메시지 보내기</string>
     <string name="people_contacts_no_people_found">사람을 찾을 수 없어요</string>
     <string name="people_contacts_try_adjusting">검색을 조정해 보세요</string>
-    <string name="people_contact_section_address">주소</string>
     <string name="people_contact_section_detail">세부 정보</string>
     <string name="people_contact_name">이름</string>
     <string name="people_contact_email">이메일</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">이름 변경</string>
     <string name="people_contacts_sort_name">이름</string>
     <string name="people_contacts_sort_recent">최근 추가됨</string>
-    <string name="people_contacts_thats_you">그건 본인입니다</string>
     <string name="people_contacts_try_different_search">다른 검색어를 시도하세요</string>
     <string name="people_contacts_unfriend">친구 제거</string>
     <string name="people_add_contact_search_placeholder">검색하려면 입력하세요…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">연락처를 찾을 수 없습니다</string>
     <string name="people_contacts_add_to_start">연락처를 추가해 소통을 시작하세요</string>
     <string name="people_contacts_actions">연락처 작업</string>
-    <string name="people_contacts_friend">친구</string>
     <string name="people_contacts_invite">초대</string>
     <string name="people_contacts_unfriend_confirm">%1$s님은 더 이상 친구가 아닙니다. 연락처는 주소록에 남습니다.</string>
     <string name="people_contacts_delete">연락처 삭제</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">연락처가 변경됨</string>
     <string name="people_add_contact_title">연락처 추가</string>
     <string name="people_add_contact_add">연락처에 추가</string>
-    <string name="people_add_contact_in_contacts">연락처에 있음</string>
     <string name="people_books_create">주소록 만들기</string>
     <string name="people_books_delete">주소록 삭제</string>
     <plurals name="people_books_delete_confirm">

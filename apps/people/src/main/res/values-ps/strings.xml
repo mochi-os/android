@@ -121,7 +121,6 @@
     <string name="people_contacts_message">پیغام ولېږئ</string>
     <string name="people_contacts_no_people_found">هیڅ خلک ونه موندل شول</string>
     <string name="people_contacts_try_adjusting">خپل لټون سمول هڅه وکړئ</string>
-    <string name="people_contact_section_address">پته</string>
     <string name="people_contact_section_detail">تفصیلات</string>
     <string name="people_contact_name">نوم</string>
     <string name="people_contact_email">بریښنالیک</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">بیا نومول</string>
     <string name="people_contacts_sort_name">نوم</string>
     <string name="people_contacts_sort_recent">پدې وروستیو کې اضافه شوی</string>
-    <string name="people_contacts_thats_you">دا تاسو یاست</string>
     <string name="people_contacts_try_different_search">بل د لټون اصطلاح هڅه وکړئ</string>
     <string name="people_contacts_unfriend">ملګری لرې کړئ</string>
     <string name="people_add_contact_search_placeholder">د لټون لپاره ولیکئ…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">هیڅ اړیکه ونه موندل شوه</string>
     <string name="people_contacts_add_to_start">د نښلولو پیل لپاره اړیکې ورزیاتې کړئ</string>
     <string name="people_contacts_actions">د اړیکې کړنې</string>
-    <string name="people_contacts_friend">ملګری</string>
     <string name="people_contacts_invite">بلنه ورکړئ</string>
     <string name="people_contacts_unfriend_confirm">%1$s به نور ستاسو ملګری نه وي. اړیکه ستاسو په پته کتاب کې پاتې کیږي.</string>
     <string name="people_contacts_delete">اړیکه ړنګه کړئ</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">اړیکه بدله شوه</string>
     <string name="people_add_contact_title">اړیکه اضافه کړئ</string>
     <string name="people_add_contact_add">اړیکو ته ورزیات کړئ</string>
-    <string name="people_add_contact_in_contacts">په اړیکو کې</string>
     <string name="people_books_create">د پتو کتاب جوړ کړئ</string>
     <string name="people_books_delete">د پتو کتاب ړنګ کړئ</string>
     <plurals name="people_books_delete_confirm">

@@ -19,7 +19,6 @@
     <string name="crm_link">Hivatkozás</string>
     <string name="crm_design">Tervezés</string>
     <string name="crm_export_failed">Az exportálást nem sikerült menteni</string>
-    <string name="crm_sort_direction">Irány</string>
     <string name="crm_sort_rank">Kézi</string>
     <string name="crm_sort_created">Létrehozva</string>
     <string name="crm_sort_updated">Frissítve</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Osztály hozzáadása</string>
     <string name="crm_classes_create">Létrehozás</string>
     <string name="crm_class_name">Név</string>
-    <string name="crm_class_save_name">Név mentése</string>
     <string name="crm_class_title_field">Címmező</string>
     <string name="crm_class_fields">Mezők</string>
     <string name="crm_class_add_field">Mező hozzáadása</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Kötelező</string>
     <string name="crm_field_position_default">Alapértelmezett</string>
     <string name="crm_field_position_sidebar">Oldalsáv</string>
-    <string name="crm_field_save">Módosítások mentése</string>
     <string name="crm_field_options">Opciók</string>
     <string name="crm_field_add_option">Beállítás hozzáadása</string>
     <string name="crm_field_delete">Mező törlése</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM keresése</string>
     <string name="crm_list_no_matching">Nincs találat</string>
     <string name="crm_list_empty">Még nincs CRM</string>
-    <string name="crm_create_template">Sablon</string>
     <string name="crm_find_search_placeholder">Keressen CRM-et vagy illesszen be URL-t</string>
     <string name="crm_find_search_hint">Keressen feliratkozható CRM-et</string>
     <string name="crm_create_object_parent_none">(nincs)</string>

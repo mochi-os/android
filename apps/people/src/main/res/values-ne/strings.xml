@@ -121,7 +121,6 @@
     <string name="people_contacts_message">सन्देश पठाउनुहोस्</string>
     <string name="people_contacts_no_people_found">कुनै व्यक्ति भेटिएन</string>
     <string name="people_contacts_try_adjusting">आफ्नो खोज समायोजन गर्ने प्रयास गर्नुहोस्</string>
-    <string name="people_contact_section_address">ठेगाना</string>
     <string name="people_contact_section_detail">विवरणहरू</string>
     <string name="people_contact_name">नाम</string>
     <string name="people_contact_email">इमेल</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">नाम परिवर्तन गर्नुहोस्</string>
     <string name="people_contacts_sort_name">नाम</string>
     <string name="people_contacts_sort_recent">भर्खरै थपिएको</string>
-    <string name="people_contacts_thats_you">त्यो तपाईं हुनुहुन्छ</string>
     <string name="people_contacts_try_different_search">फरक खोजी शब्द प्रयास गर्नुहोस्</string>
     <string name="people_contacts_unfriend">साथी हटाउनुहोस्</string>
     <string name="people_add_contact_search_placeholder">खोज्न टाइप गर्नुहोस्…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">कुनै सम्पर्क फेला परेन</string>
     <string name="people_contacts_add_to_start">जोडिन सुरु गर्न सम्पर्कहरू थप्नुहोस्</string>
     <string name="people_contacts_actions">सम्पर्क कार्यहरू</string>
-    <string name="people_contacts_friend">साथी</string>
     <string name="people_contacts_invite">निमन्त्रणा दिनुहोस्</string>
     <string name="people_contacts_unfriend_confirm">%1$s अब तपाईंको साथी हुनुहुने छैन। सम्पर्क तपाईंको ठेगाना पुस्तिकामा रहनेछ।</string>
     <string name="people_contacts_delete">सम्पर्क मेटाउनुहोस्</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">सम्पर्क परिवर्तन भयो</string>
     <string name="people_add_contact_title">सम्पर्क थप्नुहोस्</string>
     <string name="people_add_contact_add">सम्पर्कहरूमा थप्नुहोस्</string>
-    <string name="people_add_contact_in_contacts">सम्पर्कहरूमा</string>
     <string name="people_books_create">ठेगाना पुस्तिका सिर्जना गर्नुहोस्</string>
     <string name="people_books_delete">ठेगाना पुस्तिका मेट्नुहोस्</string>
     <plurals name="people_books_delete_confirm">

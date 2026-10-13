@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Напісаць</string>
     <string name="people_contacts_no_people_found">Людзі не знойдзены</string>
     <string name="people_contacts_try_adjusting">Паспрабуйце наладзіць пошук</string>
-    <string name="people_contact_section_address">Адрас</string>
     <string name="people_contact_section_detail">Дэталі</string>
     <string name="people_contact_name">Імя</string>
     <string name="people_contact_email">Эл. пошта</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Перайменаваць</string>
     <string name="people_contacts_sort_name">Імя</string>
     <string name="people_contacts_sort_recent">Нядаўна дададзена</string>
-    <string name="people_contacts_thats_you">Гэта вы</string>
     <string name="people_contacts_try_different_search">Паспрабуйце іншы пошукавы запыт</string>
     <string name="people_contacts_unfriend">Выдаліць сябра</string>
     <string name="people_add_contact_search_placeholder">Пачніце ўводзіць для пошуку…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Кантакты не знойдзены</string>
     <string name="people_contacts_add_to_start">Дадайце кантакты, каб пачаць мець зносіны</string>
     <string name="people_contacts_actions">Дзеянні з кантактам</string>
-    <string name="people_contacts_friend">Сябар</string>
     <string name="people_contacts_invite">Запрасіць</string>
     <string name="people_contacts_unfriend_confirm">%1$s больш не будзе вашым сябрам. Кантакт застанецца ў вашай адраснай кнізе.</string>
     <string name="people_contacts_delete">Выдаліць кантакт</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Кантакт зменены</string>
     <string name="people_add_contact_title">Дадаць кантакт</string>
     <string name="people_add_contact_add">Дадаць у кантакты</string>
-    <string name="people_add_contact_in_contacts">У кантактах</string>
     <string name="people_books_create">Стварыць адрасную кнігу</string>
     <string name="people_books_delete">Выдаліць адрасную кнігу</string>
     <plurals name="people_books_delete_confirm">

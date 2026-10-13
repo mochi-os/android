@@ -19,7 +19,6 @@
     <string name="crm_link">តំណ</string>
     <string name="crm_design">រចនា</string>
     <string name="crm_export_failed">មិនអាចរក្សាទុកការនាំចេញបានទេ</string>
-    <string name="crm_sort_direction">ទិស</string>
     <string name="crm_sort_rank">ដោយដៃ</string>
     <string name="crm_sort_created">បានបង្កើត</string>
     <string name="crm_sort_updated">បានធ្វើបច្ចុប្បន្នភាព</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">បន្ថែមថ្នាក់</string>
     <string name="crm_classes_create">បង្កើត</string>
     <string name="crm_class_name">ឈ្មោះ</string>
-    <string name="crm_class_save_name">រក្សាទុកឈ្មោះ</string>
     <string name="crm_class_title_field">វាលចំណងជើង</string>
     <string name="crm_class_fields">វាល</string>
     <string name="crm_class_add_field">បន្ថែមប្រអប់</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">ត្រូវការ</string>
     <string name="crm_field_position_default">លំនាំដើម</string>
     <string name="crm_field_position_sidebar">របារចំហៀង</string>
-    <string name="crm_field_save">រក្សាទុកការផ្លាស់ប្តូរ</string>
     <string name="crm_field_options">ជម្រើស</string>
     <string name="crm_field_add_option">បន្ថែមជម្រើស</string>
     <string name="crm_field_delete">លុបប្រអប់</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">ស្វែងរក CRM</string>
     <string name="crm_list_no_matching">មិនមាន CRM ដែលត្រូវគ្នាទេ</string>
     <string name="crm_list_empty">មិនទាន់មាន CRM ទេ</string>
-    <string name="crm_create_template">គំរូ</string>
     <string name="crm_find_search_placeholder">ស្វែងរក CRM ឬបិទភ្ជាប់ URL</string>
     <string name="crm_find_search_hint">ស្វែងរក CRM ដើម្បីជាវ</string>
     <string name="crm_create_object_parent_none">(គ្មាន)</string>

@@ -19,7 +19,6 @@
     <string name="crm_link">Ссылка</string>
     <string name="crm_design">Дизайн</string>
     <string name="crm_export_failed">Не удалось сохранить экспорт</string>
-    <string name="crm_sort_direction">Направление</string>
     <string name="crm_sort_rank">Вручную</string>
     <string name="crm_sort_created">Создано</string>
     <string name="crm_sort_updated">Обновлено</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Добавить класс</string>
     <string name="crm_classes_create">Создать</string>
     <string name="crm_class_name">Название</string>
-    <string name="crm_class_save_name">Сохранить название</string>
     <string name="crm_class_title_field">Поле заголовка</string>
     <string name="crm_class_fields">Поля</string>
     <string name="crm_class_add_field">Добавить поле</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Обязательно</string>
     <string name="crm_field_position_default">По умолчанию</string>
     <string name="crm_field_position_sidebar">Боковая панель</string>
-    <string name="crm_field_save">Сохранить изменения</string>
     <string name="crm_field_options">Параметры</string>
     <string name="crm_field_add_option">Добавить вариант</string>
     <string name="crm_field_delete">Удалить поле</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">Поиск CRM</string>
     <string name="crm_list_no_matching">Подходящих CRM нет</string>
     <string name="crm_list_empty">Пока нет CRM</string>
-    <string name="crm_create_template">Шаблон</string>
     <string name="crm_find_search_placeholder">Поиск CRM или вставьте URL</string>
     <string name="crm_find_search_hint">Найдите CRM для подписки</string>
     <string name="crm_create_object_parent_none">(нет)</string>

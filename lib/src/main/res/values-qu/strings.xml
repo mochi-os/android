@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">¿RSS yaykuyta qichunkichu?</string>
     <string name="rss_revoke_message">Kay feed-ta suscribisqa tukuy imapas manaña chaskinqachu. Chaymanta musuq URL-ta copiayta atinki.</string>
     <string name="rss_revoked">RSS yaykuy qichusqa</string>
-    <string name="rss_revoke_failed">RSS yaykuyta mana qichuyta atikurqanchu</string>
     <string name="game_empty_title">Manaraq pukllaykuna kanchu</string>
     <string name="game_select_title">Huk pukllayta akllay</string>
     <string name="game_select_subtitle">Huk pukllayta waqta barramanta akllay utaq musuqta qallariy.</string>

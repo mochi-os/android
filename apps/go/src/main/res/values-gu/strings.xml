@@ -50,7 +50,6 @@
     <string name="go_resign_title">ગેમ રિઝાઇન કરો?</string>
     <string name="go_sidebar_completed">પૂર્ણ</string>
     <string name="go_sidebar_new_game">નવી ગેમ</string>
-    <string name="go_status_draw">ડ્રો</string>
     <string name="go_status_draw_text">ડ્રો</string>
     <string name="go_status_game_over">ગેમ સમાપ્ત</string>
     <string name="go_status_opponent_move">%1$s ની ચાલ</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">સાઇડબાર ખોલો</string>
     <string name="go_sidebar_active">સક્રિય રમતો</string>
     <string name="go_empty_active">હજી સુધી કોઈ સક્રિય રમત નથી.</string>
-    <string name="go_status_resigned">હાર સ્વીકારી</string>
     <string name="go_new_game_title">નવી Go રમત</string>
     <string name="go_new_game_no_friends">રમત શરૂ કરતા પહેલા તમારે મિત્ર ઉમેરવો પડશે.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="forums_auth_display_name">표시 이름</string>
-    <string name="forums_auth_verification_failed">확인에 실패했어요</string>
     <string name="forums_list_title">포럼</string>
     <string name="forums_list_find">포럼 찾기</string>
     <string name="forums_list_unsubscribe">구독 해지</string>
     <string name="forums_list_unsubscribe_title">구독 해지</string>
     <string name="forums_create_title">포럼 생성</string>
     <string name="forums_create_name">포럼 이름</string>
-    <string name="forums_create_privacy">개인정보</string>
-    <string name="forums_create_private">비공개</string>
-    <string name="forums_create_public">공개</string>
     <string name="forums_create_action">포럼 생성</string>
     <string name="forums_find_title">포럼 찾기</string>
     <string name="forums_find_recommended">추천됨</string>
@@ -32,8 +27,6 @@
     <string name="forums_post_create_action">게시</string>
     <string name="forums_post_edit">게시물 편집</string>
     <string name="forums_post_edit_title">게시물 편집</string>
-    <string name="forums_post_edit_title_field">제목</string>
-    <string name="forums_post_save">저장</string>
     <string name="forums_post_delete">게시물 삭제</string>
     <string name="forums_post_delete_title">게시물 삭제</string>
     <string name="forums_post_locked">잠김</string>
@@ -58,17 +51,10 @@
     <string name="forums_tab_members">멤버</string>
     <string name="forums_tab_banner">배너</string>
     <string name="forums_tab_ai">AI</string>
-    <string name="forums_access_target">대상</string>
-    <string name="forums_access_level_view">보기</string>
-    <string name="forums_access_level_vote">투표</string>
-    <string name="forums_access_level_comment">댓글 달기</string>
-    <string name="forums_access_level_post">게시</string>
-    <string name="forums_access_level_none">없음</string>
     <string name="forums_members_empty">멤버가 없어요</string>
     <string name="forums_banner_dismiss">배너 닫기</string>
     <string name="forums_ai_mode_tag">태그</string>
     <string name="forums_ai_account_default">기본 계정</string>
-    <string name="forums_ai_prompt_reset">기본값으로 재설정</string>
     <string name="forums_settings_unsubscribe">구독 해지</string>
     <string name="forums_moderation_title">모더레이션</string>
     <string name="forums_moderation_tab_queue">대기열</string>
@@ -104,17 +90,12 @@
     <string name="forums_report_reason_offtopic">주제와 무관</string>
     <string name="forums_report_reason_other">기타</string>
     <string name="forums_post_default_author">사용자</string>
-    <string name="forums_comments">댓글</string>
     <string name="forums_no_comments">아직 댓글이 없어요</string>
-    <string name="forums_comment_save">저장</string>
     <string name="forums_comment_edit">댓글 편집</string>
     <string name="forums_comment_edit_title">댓글 편집</string>
-    <string name="forums_comment_edit_attach">파일 첨부</string>
     <string name="forums_comment_delete">댓글 삭제</string>
     <string name="forums_comment_delete_title">댓글 삭제</string>
     <string name="forums_comment_reply">답글</string>
-    <string name="forums_settings_rename">이름 변경</string>
-    <string name="forums_settings_save">저장</string>
     <string name="forums_settings_delete">포럼 삭제</string>
     <string name="forums_settings_delete_title">포럼 삭제</string>
     <string name="forums_forum_not_found">포럼을 찾을 수 없어요</string>
@@ -122,19 +103,10 @@
 
     <string name="forums_comment_send">보내기</string>
     <string name="forums_post_body_field">본문</string>
-    <string name="forums_post_edit_body_field">본문</string>
     <string name="forums_comment_edit_body_field">본문</string>
-    <string name="forums_tag_clear">필터 지우기</string>
-    <string name="forums_post_tag_add">태그 추가</string>
     <string name="forums_write_comment">댓글 작성…</string>
-    <string name="forums_auth_login_failed">로그인 실패</string>
 
     <string name="notification_channel_forums">포럼 알림</string>
-    <string name="forums_auth_brand">Mochi 포럼</string>
-    <string name="forums_auth_create_identity_failed">신원을 생성하지 못했습니다</string>
-    <string name="forums_auth_mfa_unsupported">모바일 앱에서는 MFA가 아직 지원되지 않습니다</string>
-    <string name="forums_auth_enter_code_sent">%1$s(으)로 전송된 코드를 입력하세요</string>
-    <string name="forums_auth_create_identity">신원 만들기</string>
     <string name="forums_list_empty">아직 포럼이 없습니다</string>
     <string name="forums_list_unsubscribe_message">이 포럼의 구독을 해지하시겠습니까?</string>
     <string name="forums_find_search_placeholder">포럼을 검색하거나 URL을 붙여넣으세요</string>
@@ -144,25 +116,12 @@
     <string name="forums_post_vote_down">비추천</string>
     <string name="forums_post_quote">답글에 인용</string>
     <string name="forums_comment_quote">답글에 인용</string>
-    <string name="forums_post_tag_remove">태그 제거</string>
     <string name="forums_access_add">접근 규칙 추가</string>
     <string name="forums_access_empty">아직 규칙이 없습니다 — 기본값이 적용됩니다</string>
-    <string name="forums_access_target_hint">엔티티 ID, @그룹, * (모두), 또는 + (구성원)</string>
-    <string name="forums_access_level">수준</string>
-    <string name="forums_access_level_moderate">모더레이션</string>
     <string name="forums_members_search">구성원 필터</string>
     <string name="forums_banner_description">포럼 상단에 표시되는 Markdown입니다.</string>
     <string name="forums_banner_placeholder">배너 텍스트 입력(Markdown 지원)…</string>
-    <string name="forums_ai_mode_label">모드: %1$s</string>
-    <string name="forums_ai_mode_heading">AI 모드</string>
     <string name="forums_ai_mode_off">비활성화됨</string>
-    <string name="forums_ai_account">AI 계정</string>
-    <string name="forums_ai_prompt_tag">태그 지정 프롬프트</string>
-    <string name="forums_ai_prompt_score">점수 매기기 프롬프트</string>
-    <string name="forums_ai_post_prompt_label">게시물 태그용 프롬프트</string>
-    <string name="forums_ai_comment_prompt_label">댓글 태그용 프롬프트</string>
-    <string name="forums_settings_fingerprint">지문: %1$s</string>
-    <string name="forums_settings_clear_notifications">알림 지우기</string>
     <string name="forums_moderation_queue_empty">대기 중인 항목이 없습니다</string>
     <string name="forums_moderation_report_details">세부 정보: %1$s</string>
     <string name="forums_moderation_report_resolved_by">%1$s에 의해 해결됨 — %2$s</string>
@@ -179,16 +138,10 @@
     <string name="forums_comment_replying_to">%1$s에게 답글 작성 중</string>
     <string name="forums_comment_clear_reply">답글 지우기</string>
     <string name="forums_settings_title">%1$s 설정</string>
-    <string name="forums_settings_rename_label">포럼 이름</string>
-    <string name="forums_settings_danger_zone">위험 구역</string>
     <string name="forums_settings_delete_message">포럼과 모든 게시물이 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.</string>
 
-    <string name="forums_tag_interest_up">관심도 부스트</string>
-    <string name="forums_tag_interest_down">관심사 줄이기</string>
-    <string name="forums_tag_interest_remove">관심사 제거</string>
     <string name="forums_access_tab_users">사용자</string>
     <string name="forums_access_tab_groups">그룹</string>
-    <string name="forums_access_tab_manual">수동</string>
     <string name="forums_access_search_users">사용자 검색</string>
     <string name="forums_access_no_groups">이용 가능한 그룹이 없어요</string>
     <string name="forums_saved_title">저장됨</string>

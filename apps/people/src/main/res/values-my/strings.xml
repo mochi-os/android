@@ -121,7 +121,6 @@
     <string name="people_contacts_message">မက်ဆေ့ပို့မည်</string>
     <string name="people_contacts_no_people_found">လူများ မတွေ့ပါ</string>
     <string name="people_contacts_try_adjusting">သင်၏ ရှာဖွေမှုကို ပြင်ဆင်ကြည့်ပါ</string>
-    <string name="people_contact_section_address">လိပ်စာ</string>
     <string name="people_contact_section_detail">အသေးစိတ်များ</string>
     <string name="people_contact_name">အမည်</string>
     <string name="people_contact_email">အီးမေးလ်</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">အမည်ပြောင်း</string>
     <string name="people_contacts_sort_name">အမည်</string>
     <string name="people_contacts_sort_recent">မကြာသေးမီက ထည့်ထားသည်</string>
-    <string name="people_contacts_thats_you">သင်ပါပဲ</string>
     <string name="people_contacts_try_different_search">ရှာဖွေစကားလုံး အခြားတစ်ခု စမ်းကြည့်ပါ</string>
     <string name="people_contacts_unfriend">သူငယ်ချင်း ဖယ်ရှား</string>
     <string name="people_add_contact_search_placeholder">ရှာဖွေရန် ရိုက်ထည့်ပါ…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">အဆက်အသွယ် မတွေ့ပါ</string>
     <string name="people_contacts_add_to_start">ဆက်သွယ်မှုစတင်ရန် အဆက်အသွယ်များ ထည့်ပါ</string>
     <string name="people_contacts_actions">အဆက်အသွယ် လုပ်ဆောင်ချက်များ</string>
-    <string name="people_contacts_friend">သူငယ်ချင်း</string>
     <string name="people_contacts_invite">ဖိတ်ကြားမည်</string>
     <string name="people_contacts_unfriend_confirm">%1$s သည် သင့်သူငယ်ချင်း မဟုတ်တော့ပါ။ အဆက်အသွယ်သည် သင့်လိပ်စာစာအုပ်တွင် ကျန်ရှိနေမည်။</string>
     <string name="people_contacts_delete">အဆက်အသွယ် ဖျက်မည်</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">အဆက်အသွယ် ပြောင်းလဲသွားသည်</string>
     <string name="people_add_contact_title">အဆက်အသွယ် ထည့်မည်</string>
     <string name="people_add_contact_add">အဆက်အသွယ်များထဲ ထည့်ရန်</string>
-    <string name="people_add_contact_in_contacts">အဆက်အသွယ်များတွင်</string>
     <string name="people_books_create">လိပ်စာစာအုပ် ဖန်တီးရန်</string>
     <string name="people_books_delete">လိပ်စာစာအုပ် ဖျက်ရန်</string>
     <plurals name="people_books_delete_confirm">

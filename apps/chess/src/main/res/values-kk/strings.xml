@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Шахмат</string>
-    <string name="chess_sidebar_header">Шахмат</string>
     <string name="chess_sidebar_active">Белсенді ойындар</string>
     <string name="chess_sidebar_completed">Аяқталды</string>
     <string name="chess_sidebar_new_game">Жаңа ойын</string>
-    <string name="chess_section_active">Белсенді ойындар</string>
-    <string name="chess_section_completed">Аяқталды</string>
-    <string name="chess_new_game">Жаңа ойын</string>
     <string name="chess_empty_title">Ойындар әлі жоқ</string>
     <string name="chess_new_title">Жаңа ойын</string>
     <string name="chess_new_pick_opponent">Қарсыласты таңдау</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Шахмат жүрістері, тең ойын ұсыныстары және ойын нәтижелері туралы хабарландырулар.</string>
     <string name="chess_open_sidebar">Бүйір тақтаны ашу</string>
-    <string name="chess_empty_subtitle">Досыңызбен шахмат ойнау үшін бірінші ойыныңызды бастаңыз.</string>
-    <string name="chess_empty_start_button">Бірінші ойыныңызды бастаңыз</string>
     <string name="chess_detail_unavailable">Ойын қолжетімсіз</string>
     <string name="chess_delete_title">Ойын жойылсын ба?</string>
     <string name="chess_delete_message">Бұл ойынды тізіміңізден жояды.</string>

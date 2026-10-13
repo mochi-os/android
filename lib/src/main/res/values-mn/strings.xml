@@ -306,7 +306,6 @@
     <string name="rss_revoke_title">RSS хандалтыг хүчингүй болгох уу?</string>
     <string name="rss_revoke_message">Энэ хангамжид бүртгүүлсэн бүх зүйл хүлээн авахаа болино. Дараа нь та шинэ URL хуулж болно.</string>
     <string name="rss_revoked">RSS хандалтыг хүчингүй болголоо</string>
-    <string name="rss_revoke_failed">RSS хандалтыг хүчингүй болгож чадсангүй</string>
     <string name="game_empty_title">Тоглоом алга</string>
     <string name="game_select_title">Тоглоом сонгох</string>
     <string name="game_select_subtitle">Хажуугийн самбараас тоглоом сонгох эсвэл шинийг эхлүүлнэ үү.</string>

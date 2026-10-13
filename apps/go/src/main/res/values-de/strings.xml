@@ -50,7 +50,6 @@
     <string name="go_resign_title">Spiel aufgeben?</string>
     <string name="go_sidebar_completed">Abgeschlossen</string>
     <string name="go_sidebar_new_game">Neues Spiel</string>
-    <string name="go_status_draw">Unentschieden</string>
     <string name="go_status_draw_text">Unentschieden</string>
     <string name="go_status_game_over">Spiel beendet</string>
     <string name="go_status_opponent_move">Zug von %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Seitenleiste öffnen</string>
     <string name="go_sidebar_active">Aktive Spiele</string>
     <string name="go_empty_active">Noch keine aktiven Partien.</string>
-    <string name="go_status_resigned">Aufgegeben</string>
     <string name="go_new_game_title">Neue Go-Partie</string>
     <string name="go_new_game_no_friends">Du musst einen Freund hinzufügen, bevor du eine Partie starten kannst.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

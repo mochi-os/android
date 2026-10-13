@@ -50,7 +50,6 @@
     <string name="go_resign_title">認輸?</string>
     <string name="go_sidebar_completed">已完成</string>
     <string name="go_sidebar_new_game">新遊戲</string>
-    <string name="go_status_draw">和局</string>
     <string name="go_status_draw_text">和局</string>
     <string name="go_status_game_over">遊戲結束</string>
     <string name="go_status_opponent_move">輪到 %1$s</string>

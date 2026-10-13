@@ -19,7 +19,6 @@
     <string name="crm_link">Enllaç</string>
     <string name="crm_design">Disseny</string>
     <string name="crm_export_failed">No s\'ha pogut desar l\'exportació</string>
-    <string name="crm_sort_direction">Direcció</string>
     <string name="crm_sort_rank">Manual</string>
     <string name="crm_sort_created">Creat</string>
     <string name="crm_sort_updated">Actualitzat</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Afegeix una classe</string>
     <string name="crm_classes_create">Crea</string>
     <string name="crm_class_name">Nom</string>
-    <string name="crm_class_save_name">Desa el nom</string>
     <string name="crm_class_title_field">Camp de títol</string>
     <string name="crm_class_fields">Camps</string>
     <string name="crm_class_add_field">Afegeix un camp</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Obligatori</string>
     <string name="crm_field_position_default">Per defecte</string>
     <string name="crm_field_position_sidebar">Barra lateral</string>
-    <string name="crm_field_save">Desa els canvis</string>
     <string name="crm_field_options">Opcions</string>
     <string name="crm_field_add_option">Afegeix una opció</string>
     <string name="crm_field_delete">Suprimeix el camp</string>
@@ -188,7 +185,6 @@
     <string name="crm_design_preview_no_options">No hi ha opcions al camp de columnes</string>
     <string name="crm_design_preview_empty">Res a mostrar</string>
 
-    <string name="crm_create_template">Plantilla</string>
     <string name="crm_search_objects_placeholder">Cerca objectes</string>
     <string name="crm_sort_field">Ordena per</string>
     <string name="crm_sort_direction_asc">Ascendent</string>

@@ -50,7 +50,6 @@
     <string name="go_resign_title">Nyerah game?</string>
     <string name="go_sidebar_completed">Rampung</string>
     <string name="go_sidebar_new_game">Game anyar</string>
-    <string name="go_status_draw">Imbang</string>
     <string name="go_status_draw_text">Imbang</string>
     <string name="go_status_game_over">Game rampung</string>
     <string name="go_status_opponent_move">Langkah %1$s</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">Mbukak sidebar</string>
     <string name="go_sidebar_active">Game Aktif</string>
     <string name="go_empty_active">Durung ana dolanan aktif.</string>
-    <string name="go_status_resigned">Nyerah</string>
     <string name="go_new_game_title">Dolanan Go anyar</string>
     <string name="go_new_game_no_friends">Sampeyan kudu nambah kanca sadurunge bisa miwiti dolanan.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

@@ -121,7 +121,6 @@
     <string name="people_contacts_message">訊息</string>
     <string name="people_contacts_no_people_found">搵唔到任何人</string>
     <string name="people_contacts_try_adjusting">試吓調整搜尋條件</string>
-    <string name="people_contact_section_address">地址</string>
     <string name="people_contact_section_detail">詳情</string>
     <string name="people_contact_name">姓名</string>
     <string name="people_contact_email">電郵</string>
@@ -143,7 +142,6 @@
     <string name="people_contacts_empty">搵唔到聯絡人</string>
     <string name="people_contacts_add_to_start">加聯絡人開始聯繫</string>
     <string name="people_contacts_actions">聯絡人操作</string>
-    <string name="people_contacts_friend">朋友</string>
     <string name="people_contact_friend">Mochi 好友</string>
     <string name="people_contacts_invite">邀請</string>
     <string name="people_contacts_unfriend_confirm">%1$s 唔會再係你嘅朋友。聯絡人仍然留喺你嘅通訊錄入面。</string>
@@ -171,7 +169,6 @@
     <string name="people_contact_conflict">聯絡人已更改</string>
     <string name="people_add_contact_title">加聯絡人</string>
     <string name="people_add_contact_add">加入聯絡人</string>
-    <string name="people_add_contact_in_contacts">喺聯絡人中</string>
     <string name="people_books_create">建立通訊錄</string>
     <string name="people_books_delete">刪除通訊錄</string>
     <plurals name="people_books_delete_confirm">
@@ -181,7 +178,6 @@
     <string name="people_person_state_contact">喺聯絡人中</string>
     <string name="people_contacts_sort_name">姓名</string>
     <string name="people_contacts_sort_recent">最近加入</string>
-    <string name="people_contacts_thats_you">呢個係你</string>
     <string name="people_contacts_try_different_search">試下第個搜尋字詞</string>
     <string name="people_contact_phone">電話</string>
     <string name="people_contact_title">職銜</string>

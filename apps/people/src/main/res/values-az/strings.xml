@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Mesaj göndər</string>
     <string name="people_contacts_no_people_found">İnsan tapılmadı</string>
     <string name="people_contacts_try_adjusting">Axtarış terminlərinizi tənzimləməyə cəhd edin</string>
-    <string name="people_contact_section_address">Ünvan</string>
     <string name="people_contact_section_detail">Təfərrüatlar</string>
     <string name="people_contact_name">Ad</string>
     <string name="people_contact_email">E-poçt</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Adı dəyiş</string>
     <string name="people_contacts_sort_name">Ad</string>
     <string name="people_contacts_sort_recent">Yeni əlavə edilmiş</string>
-    <string name="people_contacts_thats_you">Bu sizsiniz</string>
     <string name="people_contacts_try_different_search">Başqa axtarış sözü sınayın</string>
     <string name="people_contacts_unfriend">Dostu sil</string>
     <string name="people_add_contact_search_placeholder">Axtarmaq üçün yazın…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Kontakt tapılmadı</string>
     <string name="people_contacts_add_to_start">Əlaqə qurmaq üçün kontakt əlavə edin</string>
     <string name="people_contacts_actions">Kontakt əməliyyatları</string>
-    <string name="people_contacts_friend">Dost</string>
     <string name="people_contacts_invite">Dəvət et</string>
     <string name="people_contacts_unfriend_confirm">%1$s artıq dostunuz olmayacaq. Kontakt ünvan kitabçanızda qalır.</string>
     <string name="people_contacts_delete">Kontaktı sil</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontakt dəyişdi</string>
     <string name="people_add_contact_title">Kontakt əlavə et</string>
     <string name="people_add_contact_add">Kontaktlara əlavə et</string>
-    <string name="people_add_contact_in_contacts">Kontaktlarda</string>
     <string name="people_books_create">Ünvan kitabçası yarat</string>
     <string name="people_books_delete">Ünvan kitabçasını sil</string>
     <plurals name="people_books_delete_confirm">

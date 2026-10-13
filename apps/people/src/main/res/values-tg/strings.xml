@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Паём фиристодан</string>
     <string name="people_contacts_no_people_found">Ягон шахс ёфт нашуд</string>
     <string name="people_contacts_try_adjusting">Ҷустуҷӯи худро танзим кунед</string>
-    <string name="people_contact_section_address">Суроға</string>
     <string name="people_contact_section_detail">Тафсилот</string>
     <string name="people_contact_name">Ном</string>
     <string name="people_contact_email">Имейл</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Тағйири ном</string>
     <string name="people_contacts_sort_name">Ном</string>
     <string name="people_contacts_sort_recent">Ба наздикӣ илова шуд</string>
-    <string name="people_contacts_thats_you">Ин шумо ҳастед</string>
     <string name="people_contacts_try_different_search">Истилоҳи дигари ҷустуҷӯро санҷед</string>
     <string name="people_contacts_unfriend">Хориҷ кардани дӯст</string>
     <string name="people_add_contact_search_placeholder">Барои ҷустуҷӯ нависед…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Тамос ёфт нашуд</string>
     <string name="people_contacts_add_to_start">Барои оғози муошират тамос илова кунед</string>
     <string name="people_contacts_actions">Амалҳои тамос</string>
-    <string name="people_contacts_friend">Дӯст</string>
     <string name="people_contacts_invite">Даъват кардан</string>
     <string name="people_contacts_unfriend_confirm">%1$s дигар дӯсти шумо намешавад. Тамос дар китоби суроғаи шумо мемонад.</string>
     <string name="people_contacts_delete">Нест кардани тамос</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Тамос тағйир ёфт</string>
     <string name="people_add_contact_title">Илова кардани тамос</string>
     <string name="people_add_contact_add">Ба тамосҳо илова кардан</string>
-    <string name="people_add_contact_in_contacts">Дар тамосҳо</string>
     <string name="people_books_create">Сохтани китоби суроға</string>
     <string name="people_books_delete">Нест кардани китоби суроға</string>
     <plurals name="people_books_delete_confirm">

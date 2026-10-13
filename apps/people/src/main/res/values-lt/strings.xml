@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Rašyti žinutę</string>
     <string name="people_contacts_no_people_found">Žmonių nerasta</string>
     <string name="people_contacts_try_adjusting">Pabandykite koreguoti paiešką</string>
-    <string name="people_contact_section_address">Adresas</string>
     <string name="people_contact_section_detail">Detalės</string>
     <string name="people_contact_name">Vardas</string>
     <string name="people_contact_email">El. paštas</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Pervadinti</string>
     <string name="people_contacts_sort_name">Vardas</string>
     <string name="people_contacts_sort_recent">Neseniai pridėta</string>
-    <string name="people_contacts_thats_you">Tai jūs</string>
     <string name="people_contacts_try_different_search">Pabandykite kitą paieškos terminą</string>
     <string name="people_contacts_unfriend">Šalinti draugą</string>
     <string name="people_add_contact_search_placeholder">Įveskite, kad ieškotumėte…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Kontaktų nerasta</string>
     <string name="people_contacts_add_to_start">Pridėkite kontaktų, kad pradėtumėte bendrauti</string>
     <string name="people_contacts_actions">Kontakto veiksmai</string>
-    <string name="people_contacts_friend">Draugas</string>
     <string name="people_contacts_invite">Pakviesti</string>
     <string name="people_contacts_unfriend_confirm">%1$s nebebus jūsų draugas. Kontaktas lieka jūsų adresų knygelėje.</string>
     <string name="people_contacts_delete">Ištrinti kontaktą</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Kontaktas pasikeitė</string>
     <string name="people_add_contact_title">Pridėti kontaktą</string>
     <string name="people_add_contact_add">Pridėti prie kontaktų</string>
-    <string name="people_add_contact_in_contacts">Kontaktuose</string>
     <string name="people_books_create">Sukurti adresų knygelę</string>
     <string name="people_books_delete">Ištrinti adresų knygelę</string>
     <plurals name="people_books_delete_confirm">

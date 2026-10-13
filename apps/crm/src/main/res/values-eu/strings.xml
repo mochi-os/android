@@ -19,7 +19,6 @@
     <string name="crm_link">Esteka</string>
     <string name="crm_design">Diseinua</string>
     <string name="crm_export_failed">Ezin izan da esportazioa gorde</string>
-    <string name="crm_sort_direction">Norabidea</string>
     <string name="crm_sort_rank">Eskuz</string>
     <string name="crm_sort_created">Sortua</string>
     <string name="crm_sort_updated">Eguneratuta</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Gehitu klasea</string>
     <string name="crm_classes_create">Sortu</string>
     <string name="crm_class_name">Izena</string>
-    <string name="crm_class_save_name">Gorde izena</string>
     <string name="crm_class_title_field">Izenburu eremua</string>
     <string name="crm_class_fields">Eremuak</string>
     <string name="crm_class_add_field">Gehitu eremua</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Beharrezkoa</string>
     <string name="crm_field_position_default">Lehenetsia</string>
     <string name="crm_field_position_sidebar">Alboko barra</string>
-    <string name="crm_field_save">Gorde aldaketak</string>
     <string name="crm_field_options">Aukerak</string>
     <string name="crm_field_add_option">Gehitu aukera</string>
     <string name="crm_field_delete">Ezabatu eremua</string>
@@ -146,7 +143,6 @@
     <string name="crm_list_search_placeholder">Bilatu CRMa</string>
     <string name="crm_list_no_matching">Ez dago bat datorren CRMrik</string>
     <string name="crm_list_empty">Oraindik ez dago CRMrik</string>
-    <string name="crm_create_template">Txantiloia</string>
     <string name="crm_find_search_placeholder">Bilatu CRMa edo itsatsi URLa</string>
     <string name="crm_find_search_hint">Bilatu harpidetzeko CRMa</string>
     <string name="crm_create_object_parent_none">(bat ere ez)</string>

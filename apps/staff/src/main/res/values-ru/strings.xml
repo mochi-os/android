@@ -415,7 +415,6 @@
     <string name="staff_team_add_member">Добавить участника</string>
     <string name="staff_team_added_by_label">Добавил:</string>
     <string name="staff_team_added_by_system">Система</string>
-    <string name="staff_team_col_added_by">Добавил</string>
     <string name="staff_team_dialog_add">Добавить</string>
     <string name="staff_team_dialog_add_title">Добавить участника команды</string>
     <string name="staff_team_dialog_adding">Добавление…</string>

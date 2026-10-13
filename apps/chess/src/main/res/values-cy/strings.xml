@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Gwyddbwyll</string>
-    <string name="chess_sidebar_header">Gwyddbwyll</string>
     <string name="chess_sidebar_active">Gemau gweithredol</string>
     <string name="chess_sidebar_completed">Wedi cwblhau</string>
     <string name="chess_sidebar_new_game">Gêm newydd</string>
-    <string name="chess_section_active">Gemau gweithredol</string>
-    <string name="chess_section_completed">Wedi cwblhau</string>
-    <string name="chess_new_game">Gêm newydd</string>
     <string name="chess_empty_title">Dim gemau eto</string>
     <string name="chess_new_title">Gêm Newydd</string>
     <string name="chess_new_pick_opponent">Dewiswch wrthwynebydd</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Hysbysiadau am symudiadau gwyddbwyll, cynigion gêm gyfartal a chanlyniadau gemau.</string>
     <string name="chess_open_sidebar">Agor y bar ochr</string>
-    <string name="chess_empty_subtitle">Dechreuwch eich gêm gyntaf i chwarae gwyddbwyll gyda ffrind.</string>
-    <string name="chess_empty_start_button">Dechreuwch eich gêm gyntaf</string>
     <string name="chess_detail_unavailable">Gêm ddim ar gael</string>
     <string name="chess_delete_title">Dileu\'r gêm?</string>
     <string name="chess_delete_message">Mae hyn yn tynnu’r gêm o’ch rhestr.</string>

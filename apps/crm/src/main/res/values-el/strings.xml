@@ -19,7 +19,6 @@
     <string name="crm_link">Σύνδεσμος</string>
     <string name="crm_design">Σχεδιασμός</string>
     <string name="crm_export_failed">Δεν ήταν δυνατή η αποθήκευση της εξαγωγής</string>
-    <string name="crm_sort_direction">Κατεύθυνση</string>
     <string name="crm_sort_rank">Χειροκίνητο</string>
     <string name="crm_sort_created">Δημιουργήθηκε</string>
     <string name="crm_sort_updated">Ενημερώθηκε</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Προσθήκη κλάσης</string>
     <string name="crm_classes_create">Δημιουργία</string>
     <string name="crm_class_name">Όνομα</string>
-    <string name="crm_class_save_name">Αποθήκευση ονόματος</string>
     <string name="crm_class_title_field">Πεδίο τίτλου</string>
     <string name="crm_class_fields">Πεδία</string>
     <string name="crm_class_add_field">Προσθήκη πεδίου</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Υποχρεωτικό</string>
     <string name="crm_field_position_default">Προεπιλογή</string>
     <string name="crm_field_position_sidebar">Πλευρική μπάρα</string>
-    <string name="crm_field_save">Αποθήκευση αλλαγών</string>
     <string name="crm_field_options">Επιλογές</string>
     <string name="crm_field_add_option">Προσθήκη επιλογής</string>
     <string name="crm_field_delete">Διαγραφή πεδίου</string>
@@ -146,7 +143,6 @@
     <string name="crm_list_search_placeholder">Αναζήτηση CRM</string>
     <string name="crm_list_no_matching">Δεν βρέθηκε αντίστοιχο CRM</string>
     <string name="crm_list_empty">Δεν υπάρχει ακόμη CRM</string>
-    <string name="crm_create_template">Πρότυπο</string>
     <string name="crm_find_search_placeholder">Αναζήτηση CRM ή επικόλληση URL</string>
     <string name="crm_find_search_hint">Αναζητήστε CRM για εγγραφή</string>
     <string name="crm_create_object_parent_none">(κανένα)</string>

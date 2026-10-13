@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Ուղարկել հաղորդագրություն</string>
     <string name="people_contacts_no_people_found">Մարդիկ չեն գտնվել</string>
     <string name="people_contacts_try_adjusting">Փորձեք ճշգրտել ձեր որոնումը</string>
-    <string name="people_contact_section_address">Հասցե</string>
     <string name="people_contact_section_detail">Մանրամասներ</string>
     <string name="people_contact_name">Անուն</string>
     <string name="people_contact_email">Էլ․ փոստ</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Վերանվանել</string>
     <string name="people_contacts_sort_name">Անուն</string>
     <string name="people_contacts_sort_recent">Վերջերս ավելացված</string>
-    <string name="people_contacts_thats_you">Դա դուք եք</string>
     <string name="people_contacts_try_different_search">Փորձեք այլ որոնման տերմին</string>
     <string name="people_contacts_unfriend">Հեռացնել ընկերոջը</string>
     <string name="people_add_contact_search_placeholder">Մուտքագրեք որոնման համար…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Կոնտակտներ չեն գտնվել</string>
     <string name="people_contacts_add_to_start">Ավելացրեք կոնտակտներ՝ կապ հաստատելու համար</string>
     <string name="people_contacts_actions">Կոնտակտի գործողություններ</string>
-    <string name="people_contacts_friend">Ընկեր</string>
     <string name="people_contacts_invite">Հրավիրել</string>
     <string name="people_contacts_unfriend_confirm">%1$s այլևս ձեր ընկերը չի լինի։ Կոնտակտը մնում է ձեր հասցեագրքում։</string>
     <string name="people_contacts_delete">Ջնջել կոնտակտը</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Կոնտակտը փոխվել է</string>
     <string name="people_add_contact_title">Ավելացնել կոնտակտ</string>
     <string name="people_add_contact_add">Ավելացնել կոնտակտներում</string>
-    <string name="people_add_contact_in_contacts">Կոնտակտներում</string>
     <string name="people_books_create">Ստեղծել հասցեագիրք</string>
     <string name="people_books_delete">Ջնջել հասցեագիրքը</string>
     <plurals name="people_books_delete_confirm">

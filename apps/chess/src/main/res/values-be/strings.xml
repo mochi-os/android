@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="chess_app_title">Шахматы</string>
-    <string name="chess_sidebar_header">Шахматы</string>
     <string name="chess_sidebar_active">Актыўныя гульні</string>
     <string name="chess_sidebar_completed">Завершана</string>
     <string name="chess_sidebar_new_game">Новая гульня</string>
-    <string name="chess_section_active">Актыўныя гульні</string>
-    <string name="chess_section_completed">Завершана</string>
-    <string name="chess_new_game">Новая гульня</string>
     <string name="chess_empty_title">Пакуль няма гульняў</string>
     <string name="chess_new_title">Новая гульня</string>
     <string name="chess_new_pick_opponent">Выберыце суперніка</string>
@@ -55,8 +51,6 @@
     <string name="chess_channel_name">Шахматы апавяшчэнні</string>
     <string name="chess_channel_description">Апавяшчэнні аб хадах, прапановах нічыёй і выніках партый.</string>
     <string name="chess_open_sidebar">Адкрыць бакавую панэль</string>
-    <string name="chess_empty_subtitle">Пачніце сваю першую партыю, каб згуляць у шахматы з сябрам.</string>
-    <string name="chess_empty_start_button">Пачаць першую партыю</string>
     <string name="chess_detail_unavailable">Партыя недаступная</string>
     <string name="chess_delete_title">Выдаліць гульню?</string>
     <string name="chess_delete_message">Гэта выдаліць партыю з вашага спіса.</string>

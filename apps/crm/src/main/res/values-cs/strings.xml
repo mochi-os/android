@@ -19,7 +19,6 @@
     <string name="crm_link">Odkaz</string>
     <string name="crm_design">Design</string>
     <string name="crm_export_failed">Export se nepodařilo uložit</string>
-    <string name="crm_sort_direction">Směr</string>
     <string name="crm_sort_rank">Ručně</string>
     <string name="crm_sort_created">Vytvořeno</string>
     <string name="crm_sort_updated">Aktualizováno</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Přidat třídu</string>
     <string name="crm_classes_create">Vytvořit</string>
     <string name="crm_class_name">Název</string>
-    <string name="crm_class_save_name">Uložit název</string>
     <string name="crm_class_title_field">Pole názvu</string>
     <string name="crm_class_fields">Pole</string>
     <string name="crm_class_add_field">Přidat pole</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Povinné</string>
     <string name="crm_field_position_default">Výchozí</string>
     <string name="crm_field_position_sidebar">Postranní panel</string>
-    <string name="crm_field_save">Uložit změny</string>
     <string name="crm_field_options">Možnosti</string>
     <string name="crm_field_add_option">Přidat možnost</string>
     <string name="crm_field_delete">Smazat pole</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">Hledat CRM</string>
     <string name="crm_list_no_matching">Žádný odpovídající CRM</string>
     <string name="crm_list_empty">Zatím žádné CRM</string>
-    <string name="crm_create_template">Šablona</string>
     <string name="crm_find_search_placeholder">Hledat CRM nebo vložit URL</string>
     <string name="crm_find_search_hint">Vyhledejte CRM k odběru</string>
     <string name="crm_search_objects_placeholder">Hledat objekty</string>

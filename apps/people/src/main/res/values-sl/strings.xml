@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Pošlji sporočilo</string>
     <string name="people_contacts_no_people_found">Oseb ni mogoče najti</string>
     <string name="people_contacts_try_adjusting">Poskusi prilagoditi iskanje</string>
-    <string name="people_contact_section_address">Naslov</string>
     <string name="people_contact_section_detail">Podrobnosti</string>
     <string name="people_contact_name">Ime</string>
     <string name="people_contact_email">E-pošta</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Preimenuj</string>
     <string name="people_contacts_sort_name">Ime</string>
     <string name="people_contacts_sort_recent">Nedavno dodano</string>
-    <string name="people_contacts_thats_you">To si ti</string>
     <string name="people_contacts_try_different_search">Poskusi z drugačnim iskalnim izrazom</string>
     <string name="people_contacts_unfriend">Odstrani prijatelja</string>
     <string name="people_add_contact_search_placeholder">Vnesite za iskanje…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Ni najdenih stikov</string>
     <string name="people_contacts_add_to_start">Dodajte stike in začnite povezovanje</string>
     <string name="people_contacts_actions">Dejanja stika</string>
-    <string name="people_contacts_friend">Prijatelj</string>
     <string name="people_contacts_invite">Povabi</string>
     <string name="people_contacts_unfriend_confirm">%1$s ne bo več vaš prijatelj. Stik ostane v vašem imeniku.</string>
     <string name="people_contacts_delete">Izbriši stik</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Stik se je spremenil</string>
     <string name="people_add_contact_title">Dodaj stik</string>
     <string name="people_add_contact_add">Dodaj med stike</string>
-    <string name="people_add_contact_in_contacts">Med stiki</string>
     <string name="people_books_create">Ustvari imenik</string>
     <string name="people_books_delete">Izbriši imenik</string>
     <plurals name="people_books_delete_confirm">

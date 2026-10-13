@@ -49,7 +49,6 @@
     <string name="go_resign_title">গেম থেকে পদত্যাগ করবেন?</string>
     <string name="go_sidebar_completed">সম্পন্ন</string>
     <string name="go_sidebar_new_game">নতুন গেম</string>
-    <string name="go_status_draw">ড্র</string>
     <string name="go_status_draw_text">ড্র</string>
     <string name="go_status_game_over">গেম শেষ</string>
     <string name="go_status_opponent_move">%1$s-এর চাল</string>
@@ -64,7 +63,6 @@
     <string name="go_open_sidebar">সাইডবার খুলুন</string>
     <string name="go_sidebar_active">সক্রিয় গেম</string>
     <string name="go_empty_active">এখনো কোনো সক্রিয় গেম নেই।</string>
-    <string name="go_status_resigned">ছেড়ে দিয়েছে</string>
     <string name="go_new_game_title">নতুন Go গেম</string>
     <string name="go_new_game_no_friends">গেম শুরু করার আগে আপনাকে একজন বন্ধু যোগ করতে হবে।</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

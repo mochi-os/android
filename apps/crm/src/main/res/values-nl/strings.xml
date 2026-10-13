@@ -19,7 +19,6 @@
     <string name="crm_link">Link</string>
     <string name="crm_design">Ontwerp</string>
     <string name="crm_export_failed">De export kon niet worden opgeslagen</string>
-    <string name="crm_sort_direction">Richting</string>
     <string name="crm_sort_rank">Handmatig</string>
     <string name="crm_sort_created">Aangemaakt</string>
     <string name="crm_sort_updated">Bijgewerkt</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Klasse toevoegen</string>
     <string name="crm_classes_create">Aanmaken</string>
     <string name="crm_class_name">Naam</string>
-    <string name="crm_class_save_name">Naam opslaan</string>
     <string name="crm_class_title_field">Titelveld</string>
     <string name="crm_class_fields">Velden</string>
     <string name="crm_class_add_field">Veld toevoegen</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Verplicht</string>
     <string name="crm_field_position_default">Standaard</string>
     <string name="crm_field_position_sidebar">Zijbalk</string>
-    <string name="crm_field_save">Wijzigingen opslaan</string>
     <string name="crm_field_options">Opties</string>
     <string name="crm_field_add_option">Optie toevoegen</string>
     <string name="crm_field_delete">Veld verwijderen</string>
@@ -144,7 +141,6 @@
     <string name="crm_list_search_placeholder">CRM zoeken</string>
     <string name="crm_list_no_matching">Geen overeenkomende CRM</string>
     <string name="crm_list_empty">Nog geen CRM</string>
-    <string name="crm_create_template">Sjabloon</string>
     <string name="crm_find_search_placeholder">CRM zoeken of URL plakken</string>
     <string name="crm_find_search_hint">Zoek naar een CRM om u op te abonneren</string>
     <string name="crm_create_object_parent_none">(geen)</string>

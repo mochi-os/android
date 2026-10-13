@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Tàileasg</string>
-    <string name="chess_sidebar_header">Tàileasg</string>
     <string name="chess_sidebar_active">Geamannan gnìomhach</string>
     <string name="chess_sidebar_completed">Crìochnaichte</string>
     <string name="chess_sidebar_new_game">Geama ùr</string>
-    <string name="chess_section_active">Geamannan gnìomhach</string>
-    <string name="chess_section_completed">Crìochnaichte</string>
-    <string name="chess_new_game">Geama ùr</string>
     <string name="chess_empty_title">Chan eil geamannan ann fhathast</string>
     <string name="chess_new_title">Geama Ùr</string>
     <string name="chess_new_pick_opponent">Tagh nàmhaid</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Brathan mu ghluasadan tàileisg, tairgsean geama ionann agus toraidhean geama.</string>
     <string name="chess_open_sidebar">Fosgail bàr-taoibh</string>
-    <string name="chess_empty_subtitle">Tòisich a’ chiad gheama agad airson tàileasg a chluich le caraid.</string>
-    <string name="chess_empty_start_button">Tòisich a’ chiad gheama agad</string>
     <string name="chess_detail_unavailable">Chan eil an geama ri làimh</string>
     <string name="chess_delete_title">A bheil thu airson an geama a sguabadh às?</string>
     <string name="chess_delete_message">Bheir seo an geama far do liosta.</string>

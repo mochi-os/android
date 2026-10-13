@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Tapha shaaxixii</string>
-    <string name="chess_sidebar_header">Tapha shaaxixii</string>
     <string name="chess_sidebar_active">Taphoota Hojii Irra Jiran</string>
     <string name="chess_sidebar_completed">Xumurame</string>
     <string name="chess_sidebar_new_game">Taphaa haaraa</string>
-    <string name="chess_section_active">Taphoota Hojii Irra Jiran</string>
-    <string name="chess_section_completed">Xumurame</string>
-    <string name="chess_new_game">Taphaa haaraa</string>
     <string name="chess_empty_title">Hanga ammaatti taphaaleen hin jiran</string>
     <string name="chess_new_title">Taphaa Haaraa</string>
     <string name="chess_new_pick_opponent">Mormituu filadhu</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">Beeksisa waa’ee sochii sadarkaa, dhiyeessii walqixxee fi bu’aa taphaa.</string>
     <string name="chess_open_sidebar">Saaree banuu</string>
-    <string name="chess_empty_subtitle">Michuu waliin sadarkaa taphachuuf tapha jalqabaa keessan jalqabaa.</string>
-    <string name="chess_empty_start_button">Tapha jalqabaa keessan jalqabaa</string>
     <string name="chess_detail_unavailable">Taphni hin argamu</string>
     <string name="chess_delete_title">Taphicha haqi?</string>
     <string name="chess_delete_message">Kun tapha tarree keessan irraa haqa.</string>

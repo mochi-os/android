@@ -50,7 +50,6 @@
     <string name="go_resign_title">ゲームを投了しますか?</string>
     <string name="go_sidebar_completed">完了</string>
     <string name="go_sidebar_new_game">新しいゲーム</string>
-    <string name="go_status_draw">引き分け</string>
     <string name="go_status_draw_text">引き分け</string>
     <string name="go_status_game_over">ゲーム終了</string>
     <string name="go_status_opponent_move">%1$sの番です</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">サイドバーを開く</string>
     <string name="go_sidebar_active">進行中のゲーム</string>
     <string name="go_empty_active">まだ進行中のゲームはありません。</string>
-    <string name="go_status_resigned">投了</string>
     <string name="go_new_game_title">新しい囲碁ゲーム</string>
     <string name="go_new_game_no_friends">ゲームを始めるには、まず友達を追加する必要があります。</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

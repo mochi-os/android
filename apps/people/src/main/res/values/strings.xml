@@ -19,7 +19,6 @@
     <string name="people_contacts_sort_name">Name</string>
     <string name="people_contacts_sort_recent">Recently added</string>
     <string name="people_contacts_actions">Contact actions</string>
-    <string name="people_contacts_friend">Friend</string>
     <string name="people_contact_friend">Mochi friend</string>
     <string name="people_contacts_invite">Invite</string>
     <string name="people_contacts_invited">Invited</string>
@@ -30,7 +29,6 @@
     <string name="people_contacts_delete">Delete contact</string>
     <string name="people_contacts_delete_confirm">Delete %1$s from your contacts?</string>
     <string name="people_contacts_delete_friend_confirm">Delete %1$s from your contacts? Your friendship ends as well.</string>
-    <string name="people_contacts_thats_you">That\'s you</string>
     <string name="people_contacts_no_people_found">No people found</string>
     <string name="people_contacts_try_different_search">Try a different search term</string>
     <string name="people_contacts_try_adjusting">Try adjusting your search</string>
@@ -41,7 +39,6 @@
     <string name="people_contact_merge">Merge</string>
     <string name="people_contact_merge_title">Merge contacts</string>
     <string name="people_contact_edit_title">Edit contact</string>
-    <string name="people_contact_section_address">Address</string>
     <string name="people_contact_section_detail">Details</string>
     <string name="people_contact_name">Name</string>
     <string name="people_contact_given">Forename</string>
@@ -78,7 +75,6 @@
     <!-- Add contact -->
     <string name="people_add_contact_title">Add contact</string>
     <string name="people_add_contact_add">Add to contacts</string>
-    <string name="people_add_contact_in_contacts">In contacts</string>
     <string name="people_add_contact_search_placeholder">Type to search…</string>
     <string name="people_add_contact_search_start">Start typing to search for users</string>
 

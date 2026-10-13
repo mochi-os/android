@@ -19,7 +19,6 @@
     <string name="crm_link">Link</string>
     <string name="crm_design">Disain</string>
     <string name="crm_export_failed">Eksporti salvestamine ebaõnnestus</string>
-    <string name="crm_sort_direction">Suund</string>
     <string name="crm_sort_rank">Käsitsi</string>
     <string name="crm_sort_created">Loodud</string>
     <string name="crm_sort_updated">Uuendatud</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Lisa klass</string>
     <string name="crm_classes_create">Loo</string>
     <string name="crm_class_name">Nimi</string>
-    <string name="crm_class_save_name">Salvesta nimi</string>
     <string name="crm_class_title_field">Pealkirja väli</string>
     <string name="crm_class_fields">Väljad</string>
     <string name="crm_class_add_field">Lisa väli</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Kohustuslik</string>
     <string name="crm_field_position_default">Vaikimisi</string>
     <string name="crm_field_position_sidebar">Külgriba</string>
-    <string name="crm_field_save">Salvesta muudatused</string>
     <string name="crm_field_options">Valikud</string>
     <string name="crm_field_add_option">Lisa valik</string>
     <string name="crm_field_delete">Kustuta väli</string>
@@ -146,7 +143,6 @@
     <string name="crm_list_search_placeholder">Otsi CRM-i</string>
     <string name="crm_list_no_matching">Sobivat CRM-i ei leitud</string>
     <string name="crm_list_empty">CRM-e veel pole</string>
-    <string name="crm_create_template">Mall</string>
     <string name="crm_find_search_placeholder">Otsi CRM-i või kleebi URL</string>
     <string name="crm_find_search_hint">Otsi CRM-i, millega liituda</string>
     <string name="crm_create_object_parent_none">(puudub)</string>

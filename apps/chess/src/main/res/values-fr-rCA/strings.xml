@@ -7,12 +7,9 @@
     <string name="chess_move_subject_you">Vous</string>
     <string name="chess_open_sidebar">Ouvrir la barre latérale</string>
     <string name="chess_sidebar_completed">Terminé</string>
-    <string name="chess_section_completed">Terminé</string>
     <string name="chess_draw_accept">Accepter</string>
     <string name="chess_app_title">Échecs</string>
-    <string name="chess_sidebar_header">Échecs</string>
     <string name="chess_sidebar_new_game">Nouvelle partie</string>
-    <string name="chess_new_game">Nouvelle partie</string>
     <string name="chess_empty_title">Aucune partie pour le moment</string>
     <string name="chess_new_no_friends_title">Aucun ami pour le moment</string>
     <string name="chess_new_add_friends">Ajouter des amis</string>
@@ -43,9 +40,6 @@
     <string name="chess_channel_name">Notifications d\'échecs</string>
     <string name="chess_channel_description">Notifications sur les coups d\'échecs, les offres de nulle et les résultats des parties.</string>
     <string name="chess_sidebar_active">Parties en cours</string>
-    <string name="chess_section_active">Parties en cours</string>
-    <string name="chess_empty_subtitle">Commencez votre première partie pour jouer aux échecs avec un ami.</string>
-    <string name="chess_empty_start_button">Commencer votre première partie</string>
     <string name="chess_new_title">Nouvelle partie</string>
     <string name="chess_new_pick_opponent">Choisir un adversaire</string>
     <string name="chess_detail_unavailable">Partie indisponible</string>

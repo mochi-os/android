@@ -50,7 +50,6 @@
     <string name="go_resign_title">ጨዋታ ይለቀቅ?</string>
     <string name="go_sidebar_completed">ተጠናቅቋል</string>
     <string name="go_sidebar_new_game">አዲስ ጨዋታ</string>
-    <string name="go_status_draw">አቻ</string>
     <string name="go_status_draw_text">አቻ</string>
     <string name="go_status_game_over">ጨዋታው አልቋል</string>
     <string name="go_status_opponent_move">የ%1$s እንቅስቃሴ</string>
@@ -66,7 +65,6 @@
     <string name="go_open_sidebar">የጎን አሞሌ ክፈት</string>
     <string name="go_sidebar_active">ንቁ ጨዋታዎች</string>
     <string name="go_empty_active">እስካሁን ንቁ ጨዋታዎች የሉም።</string>
-    <string name="go_status_resigned">እጅ ሰጥቷል</string>
     <string name="go_new_game_title">አዲስ የGo ጨዋታ</string>
     <string name="go_new_game_no_friends">ጨዋታ ከመጀመርዎ በፊት ጓደኛ ማከል አለብዎት።</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

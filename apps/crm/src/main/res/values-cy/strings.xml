@@ -19,7 +19,6 @@
     <string name="crm_link">Dolen</string>
     <string name="crm_design">Dyluniad</string>
     <string name="crm_export_failed">Methwyd cadw\'r allforio</string>
-    <string name="crm_sort_direction">Cyfeiriad</string>
     <string name="crm_sort_rank">Â llaw</string>
     <string name="crm_sort_created">Wedi\'i greu</string>
     <string name="crm_sort_updated">Wedi\'i ddiweddaru</string>
@@ -86,7 +85,6 @@
     <string name="crm_classes_add_dialog_title">Ychwanegu dosbarth</string>
     <string name="crm_classes_create">Creu</string>
     <string name="crm_class_name">Enw</string>
-    <string name="crm_class_save_name">Cadw’r enw</string>
     <string name="crm_class_title_field">Maes teitl</string>
     <string name="crm_class_fields">Meysydd</string>
     <string name="crm_class_add_field">Ychwanegu maes</string>
@@ -103,7 +101,6 @@
     <string name="crm_field_required">Gofynnol</string>
     <string name="crm_field_position_default">Diofyn</string>
     <string name="crm_field_position_sidebar">Bar ochr</string>
-    <string name="crm_field_save">Cadw newidiadau</string>
     <string name="crm_field_options">Opsiynau</string>
     <string name="crm_field_add_option">Ychwanegu opsiwn</string>
     <string name="crm_field_delete">Dileu maes</string>
@@ -130,7 +127,6 @@
     <string name="crm_list_search_placeholder">Chwilio CRM</string>
     <string name="crm_list_no_matching">Dim CRM yn cyfateb</string>
     <string name="crm_list_empty">Dim CRM eto</string>
-    <string name="crm_create_template">Templed</string>
     <string name="crm_find_search_placeholder">Chwilio CRM neu gludo URL</string>
     <string name="crm_find_search_hint">Chwilio am CRM i danysgrifio iddo</string>
     <string name="crm_search_objects_placeholder">Chwilio gwrthrychau</string>

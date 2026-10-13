@@ -49,7 +49,6 @@
     <string name="go_resign_title">Letak jawatan permainan?</string>
     <string name="go_sidebar_completed">Selesai</string>
     <string name="go_sidebar_new_game">Permainan baharu</string>
-    <string name="go_status_draw">Seri</string>
     <string name="go_status_draw_text">Seri</string>
     <string name="go_status_game_over">Permainan tamat</string>
     <string name="go_status_opponent_move">Giliran %1$s</string>
@@ -64,7 +63,6 @@
     <string name="go_open_sidebar">Buka bar sisi</string>
     <string name="go_sidebar_active">Permainan aktif</string>
     <string name="go_empty_active">Tiada permainan aktif lagi.</string>
-    <string name="go_status_resigned">Menyerah</string>
     <string name="go_new_game_title">Permainan Go baharu</string>
     <string name="go_new_game_no_friends">Anda perlu menambah rakan sebelum boleh memulakan permainan.</string>
     <string name="go_new_game_board_size_value">%1$s×%2$s</string>

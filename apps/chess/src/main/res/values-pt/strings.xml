@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Xadrez</string>
-    <string name="chess_sidebar_header">Xadrez</string>
     <string name="chess_sidebar_active">Jogos ativos</string>
     <string name="chess_sidebar_completed">Concluído</string>
     <string name="chess_sidebar_new_game">Novo jogo</string>
-    <string name="chess_section_active">Jogos ativos</string>
-    <string name="chess_section_completed">Concluído</string>
-    <string name="chess_new_game">Novo jogo</string>
     <string name="chess_empty_title">Ainda não há jogos</string>
     <string name="chess_new_title">Novo Jogo</string>
     <string name="chess_new_pick_opponent">Escolher adversário</string>
@@ -60,8 +56,6 @@
     <string name="chess_delete_message">Remove o jogo da sua lista.</string>
     <string name="chess_delete_title">Eliminar o jogo?</string>
     <string name="chess_detail_unavailable">Jogo indisponível</string>
-    <string name="chess_empty_start_button">Começar o primeiro jogo</string>
-    <string name="chess_empty_subtitle">Comece o seu primeiro jogo para jogar xadrez com um amigo.</string>
     <string name="chess_move_capture">%1$s capturou %2$s</string>
     <string name="chess_open_sidebar">Abrir barra lateral</string>
     <string name="chess_ws_connecting">A ligar…</string>

@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">Sjakk</string>
-    <string name="chess_sidebar_header">Sjakk</string>
     <string name="chess_sidebar_active">Aktive spill</string>
     <string name="chess_sidebar_completed">Fullført</string>
     <string name="chess_sidebar_new_game">Nytt spill</string>
-    <string name="chess_section_active">Aktive spill</string>
-    <string name="chess_section_completed">Fullført</string>
-    <string name="chess_new_game">Nytt spill</string>
     <string name="chess_empty_title">Ingen spill ennå</string>
     <string name="chess_new_title">Nytt spill</string>
     <string name="chess_new_pick_opponent">Velg motstander</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Sjakk-varsler</string>
     <string name="chess_channel_description">Varsler om trekk, remistilbud og partiresultater.</string>
     <string name="chess_open_sidebar">Åpne sidefelt</string>
-    <string name="chess_empty_subtitle">Start ditt første parti for å spille sjakk med en venn.</string>
-    <string name="chess_empty_start_button">Start ditt første parti</string>
     <string name="chess_detail_unavailable">Parti utilgjengelig</string>
     <string name="chess_delete_title">Slette spillet?</string>
     <string name="chess_delete_message">Dette fjerner partiet fra listen din.</string>

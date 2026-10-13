@@ -62,6 +62,7 @@ import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiHomeRow
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.calendars.R
 import org.mochios.android.R as MochiR
@@ -111,6 +112,8 @@ fun CalendarDrawer(
         drawerContent = {
             ModalDrawerSheet {
                 Column(modifier = Modifier.fillMaxHeight()) {
+                    MochiHomeRow(drawerState)
+                    HorizontalDivider()
                     DrawerTitle(stringResource(R.string.calendars_drawer_title))
                     LazyColumn(modifier = Modifier.fillMaxWidth().weight(1f)) {
                         items(calendars, key = { it.id }) { calendar ->

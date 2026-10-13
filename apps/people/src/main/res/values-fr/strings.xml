@@ -121,7 +121,6 @@
     <string name="people_contacts_message">Envoyer un message</string>
     <string name="people_contacts_no_people_found">Aucune personne trouvée</string>
     <string name="people_contacts_try_adjusting">Essayez d\'ajuster votre recherche</string>
-    <string name="people_contact_section_address">Adresse</string>
     <string name="people_contact_section_detail">Détails</string>
     <string name="people_contact_name">Nom</string>
     <string name="people_contact_email">E-mail</string>
@@ -137,7 +136,6 @@
     <string name="people_books_rename">Renommer</string>
     <string name="people_contacts_sort_name">Nom</string>
     <string name="people_contacts_sort_recent">Ajouté récemment</string>
-    <string name="people_contacts_thats_you">C\'est vous</string>
     <string name="people_contacts_try_different_search">Essayez un autre terme de recherche</string>
     <string name="people_contacts_unfriend">Retirer un ami</string>
     <string name="people_add_contact_search_placeholder">Saisissez pour rechercher…</string>
@@ -149,7 +147,6 @@
     <string name="people_contacts_empty">Aucun contact trouvé</string>
     <string name="people_contacts_add_to_start">Ajoutez des contacts pour commencer à échanger</string>
     <string name="people_contacts_actions">Actions du contact</string>
-    <string name="people_contacts_friend">Ami</string>
     <string name="people_contacts_invite">Inviter</string>
     <string name="people_contacts_unfriend_confirm">%1$s ne sera plus votre ami. Le contact reste dans votre carnet d\'adresses.</string>
     <string name="people_contacts_delete">Supprimer le contact</string>
@@ -176,7 +173,6 @@
     <string name="people_contact_conflict">Le contact a changé</string>
     <string name="people_add_contact_title">Ajouter un contact</string>
     <string name="people_add_contact_add">Ajouter aux contacts</string>
-    <string name="people_add_contact_in_contacts">Dans les contacts</string>
     <string name="people_books_create">Créer un carnet d\'adresses</string>
     <string name="people_books_delete">Supprimer le carnet d\'adresses</string>
     <plurals name="people_books_delete_confirm">

@@ -415,7 +415,6 @@
     <string name="staff_team_add_member">新增成員</string>
     <string name="staff_team_added_by_label">新增者：</string>
     <string name="staff_team_added_by_system">系統</string>
-    <string name="staff_team_col_added_by">新增者</string>
     <string name="staff_team_dialog_add">新增</string>
     <string name="staff_team_dialog_add_title">新增團隊成員</string>
     <string name="staff_team_dialog_adding">新增中…</string>

@@ -2,13 +2,9 @@
 <resources>
 
     <string name="chess_app_title">बुद्धिबळ</string>
-    <string name="chess_sidebar_header">बुद्धिबळ</string>
     <string name="chess_sidebar_active">सक्रिय खेळ</string>
     <string name="chess_sidebar_completed">पूर्ण केले</string>
     <string name="chess_sidebar_new_game">नवीन गेम</string>
-    <string name="chess_section_active">सक्रिय खेळ</string>
-    <string name="chess_section_completed">पूर्ण केले</string>
-    <string name="chess_new_game">नवीन गेम</string>
     <string name="chess_empty_title">अद्याप गेम्स नाहीत</string>
     <string name="chess_new_title">नवीन गेम</string>
     <string name="chess_new_pick_opponent">प्रतिस्पर्धी निवडा</string>
@@ -57,8 +53,6 @@
     <string name="chess_channel_name">Chess notifications</string>
     <string name="chess_channel_description">बुद्धिबळाच्या चाली, बरोबरीचे प्रस्ताव आणि खेळाच्या निकालांबद्दल सूचना.</string>
     <string name="chess_open_sidebar">साइडबार उघडा</string>
-    <string name="chess_empty_subtitle">मित्रासोबत बुद्धिबळ खेळण्यासाठी तुमचा पहिला खेळ सुरू करा.</string>
-    <string name="chess_empty_start_button">तुमचा पहिला खेळ सुरू करा</string>
     <string name="chess_detail_unavailable">खेळ उपलब्ध नाही</string>
     <string name="chess_delete_title">गेम हटवायचा?</string>
     <string name="chess_delete_message">हे खेळ तुमच्या यादीतून काढून टाकते.</string>
