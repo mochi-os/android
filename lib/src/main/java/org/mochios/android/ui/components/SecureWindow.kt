@@ -49,7 +49,8 @@ fun SecureWindow() {
     }
 }
 
-private fun Context.activity(): Activity? {
+/** The activity [this] context belongs to, unwrapping any wrappers; null when there is none. */
+internal fun Context.activity(): Activity? {
     var context: Context? = this
     while (context is ContextWrapper) {
         if (context is Activity) return context

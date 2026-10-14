@@ -10,6 +10,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import org.mochios.android.ui.components.activity
 
 /**
  * Every app's activity in the shell manifest, by app name. Each hosts one
@@ -99,5 +100,17 @@ fun openApp(context: Context, app: String): Boolean {
         false
     } catch (_: SecurityException) {
         false
+    }
+}
+
+/**
+ * Brings the home grid forward from an app and sends the app's task to the
+ * back, behind the phone's launcher. Left in front of it, Back on the grid
+ * would return to the app, and leaving the app would show the grid a second
+ * time. The app keeps its place in Recents.
+ */
+fun openHome(context: Context) {
+    if (openApp(context, "home")) {
+        context.activity()?.moveTaskToBack(true)
     }
 }

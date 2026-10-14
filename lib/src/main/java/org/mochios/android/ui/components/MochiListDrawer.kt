@@ -51,7 +51,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 import org.mochios.android.R
-import org.mochios.android.launcher.openApp
+import org.mochios.android.launcher.openHome
 
 /**
  * Universal drawer entry each app adapts its own row type into, so one
@@ -197,7 +197,7 @@ fun MochiHomeRow(drawerState: DrawerState) {
         icon = Icons.Outlined.Apps,
         onClick = {
             scope.launch { drawerState.close() }
-            openApp(context, "home")
+            openHome(context)
         },
     )
 }
