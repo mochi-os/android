@@ -9,7 +9,6 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.ScrollState
@@ -24,7 +23,6 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
@@ -63,7 +61,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -83,9 +80,7 @@ import androidx.compose.ui.input.key.key
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.CustomAccessibilityAction
@@ -109,7 +104,6 @@ import org.mochios.android.files.rememberFileSaveLauncher
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiSearchTopBar
 import org.mochios.android.util.Zones
@@ -176,11 +170,6 @@ fun CalendarScreen(
     val uiState by viewModel.uiState.collectAsState()
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val snackbar = remember { SnackbarHostState() }
-    var snackbarHeight by remember { mutableIntStateOf(0) }
-    val fabLift by animateDpAsState(
-        targetValue = with(LocalDensity.current) { snackbarHeight.toDp() },
-        label = "fabLift",
-    )
     val scope = rememberCoroutineScope()
     val lifecycle = LocalLifecycleOwner.current
     val resources = LocalResources.current
@@ -386,6 +375,7 @@ fun CalendarScreen(
                         onToday = viewModel::today,
                         onView = viewModel::view,
                         onWorkweek = { viewModel.workweek(!uiState.workweek) },
+                        onCreate = { create(viewModel.creation(), null, null) },
                         searching = searching,
                         onSearch = {
                             // Results are listed, so a search from another view
@@ -399,14 +389,6 @@ fun CalendarScreen(
                             viewModel.search("")
                         },
                     )
-                },
-                floatingActionButton = {
-                    MochiFab(
-                        onClick = { create(viewModel.creation(), null, null) },
-                        modifier = Modifier.offset(y = -fabLift),
-                    ) {
-                        Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
-                    }
                 },
             ) { padding ->
                 Column(modifier = Modifier.fillMaxSize().padding(padding)) {
@@ -501,8 +483,7 @@ fun CalendarScreen(
                 snackbar,
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
-                    .navigationBarsPadding()
-                    .onSizeChanged { size -> snackbarHeight = size.height },
+                    .navigationBarsPadding(),
             )
         }
     }
@@ -925,9 +906,10 @@ internal fun Page(
 }
 
 /**
- * The title, which opens and closes the date panel under it, today, and the
- * view switcher, with a search button before them in every view, which
- * searches in the list view as the web's box does. While
+ * The title, which opens and closes the date panel under it, today, a new
+ * event, which [onCreate] answers, and the view switcher, with a search
+ * button before them in every view, which searches in the list view as the
+ * web's box does. While
  * [searching], the bar is a search field instead, with back to close it,
  * which also clears it, and a button to clear what was typed. The title is
  * the month and year of the view's first day, or
@@ -947,6 +929,7 @@ internal fun Toolbar(
     onToday: () -> Unit,
     onView: (String) -> Unit,
     onWorkweek: () -> Unit,
+    onCreate: () -> Unit,
     searching: Boolean = false,
     onSearch: () -> Unit = {},
     onSearchChange: (String) -> Unit = {},
@@ -1013,6 +996,9 @@ internal fun Toolbar(
             }
             MochiIconButton(onClick = onToday) {
                 Icon(Icons.Outlined.Today, contentDescription = stringResource(R.string.calendars_today))
+            }
+            MochiIconButton(onClick = onCreate) {
+                Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
             }
             Box {
                 MochiIconButton(onClick = { views = true }) {

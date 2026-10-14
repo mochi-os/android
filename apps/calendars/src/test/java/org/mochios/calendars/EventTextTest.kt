@@ -17,6 +17,7 @@ import androidx.compose.ui.test.assertIsNotFocused
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.performImeAction
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.unit.dp
@@ -27,10 +28,14 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.calendars.ui.editor.EventText
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 
-/** The editor's title and description, in a phone's width. */
+/**
+ * The editor's title, description, location and link, in a phone's width:
+ * fields drawn on the page with no box, each named by what it holds.
+ */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "w400dp-h800dp")
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
@@ -42,6 +47,7 @@ class EventTextTest {
     private var description by mutableStateOf("")
     private var asked by mutableStateOf(0)
     private var saves = 0
+    private val context = RuntimeEnvironment.getApplication()
 
     private fun show(select: Boolean = false) {
         rule.setContent {
@@ -69,6 +75,25 @@ class EventTextTest {
     /** The title's, description's, location's and link's fields, top to bottom. */
     private fun fields() = rule.onAllNodes(hasSetTextAction()).fetchSemanticsNodes()
         .map { it.boundsInRoot }
+
+    @Test
+    fun `each field shows no label, filled or not, and is named for screen readers`() {
+        show()
+        val names = fields().indices.map { index ->
+            rule.onAllNodes(hasSetTextAction())[index].fetchSemanticsNode()
+                .config.getOrElseNullable(SemanticsProperties.ContentDescription) { null }?.single()
+        }
+        val expected = listOf(
+            R.string.calendars_event_title,
+            R.string.calendars_event_description,
+            R.string.calendars_event_location,
+            R.string.calendars_event_url,
+        ).map(context::getString)
+        assertEquals(expected, names)
+        // The empty description shows its name in its place; the filled title does not.
+        assertEquals(1, rule.onAllNodesWithText(expected[1]).fetchSemanticsNodes().size)
+        assertEquals(0, rule.onAllNodesWithText(expected[0]).fetchSemanticsNodes().size)
+    }
 
     @Test
     fun `the description sits straight below the title, then the location and the link`() {

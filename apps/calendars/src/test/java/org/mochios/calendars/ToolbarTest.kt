@@ -27,9 +27,9 @@ import org.robolectric.annotation.GraphicsMode
 import java.time.LocalDate
 
 /**
- * The calendar's toolbar: a month title that opens the date panel, today, the
- * view switcher, and search from every view, as the web's box is, with no
- * arrows, the views paging by a swipe.
+ * The calendar's toolbar: a month title that opens the date panel, today, a
+ * new event, the view switcher, and search from every view, as the web's box
+ * is, with no arrows, the views paging by a swipe.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "en-rGB-w400dp-h800dp")
@@ -43,6 +43,7 @@ class ToolbarTest {
     private val day = LocalDate.of(2026, 10, 3)
     private var titled = 0
     private var searched = 0
+    private var created = 0
 
     private var menus = 0
     private var left = 0
@@ -58,6 +59,7 @@ class ToolbarTest {
                 onToday = {},
                 onView = {},
                 onWorkweek = {},
+                onCreate = { created++ },
                 searching = searching,
                 onSearch = { searched++ },
                 alone = alone,
@@ -83,6 +85,20 @@ class ToolbarTest {
         rule.onNodeWithContentDescription(context.getString(MochiR.string.common_back)).assertDoesNotExist()
         rule.onNodeWithContentDescription(context.getString(R.string.calendars_drawer_open)).performClick()
         assertEquals(1, menus)
+    }
+
+    @Test
+    fun `a new event is offered in the bar`() {
+        show(CalendarsSection.WEEK)
+        rule.onNodeWithContentDescription(context.getString(R.string.calendars_event_new)).performClick()
+        assertEquals(1, created)
+    }
+
+    @Test
+    fun `a calendar on its own offers a new event too`() {
+        show(CalendarsSection.MONTH, alone = Calendar(id = "c2", name = "Work"))
+        rule.onNodeWithContentDescription(context.getString(R.string.calendars_event_new)).performClick()
+        assertEquals(1, created)
     }
 
     @Test
