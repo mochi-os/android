@@ -92,12 +92,13 @@ internal fun UserMenu(
     onClosePicker: () -> Unit,
     onCategorise: (MochiNotification, String?) -> Unit,
     onManageCategories: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     val format = LocalFormat.current
     val count = state.unread.size
     // Nothing unread: the header says so and the empty list below it goes.
     val empty = !state.loading && count == 0
-    Column(modifier = Modifier.fillMaxWidth()) {
+    Column(modifier = modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 8.dp, bottom = 4.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -162,6 +163,7 @@ internal fun UserMenu(
                 CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
             }
             else -> LazyColumn(
+                modifier = Modifier.weight(1f),
                 contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
                 verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {

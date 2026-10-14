@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -45,6 +46,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -205,9 +207,13 @@ fun HomeScreen(
             open = false
             menu.closePicker()
         }
-        MochiBottomSheet(onDismissRequest = close) {
+        MochiBottomSheet(
+            onDismissRequest = close,
+            sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        ) {
             UserMenu(
                 state = menuState,
+                modifier = Modifier.fillMaxHeight(),
                 onLogout = {
                     close()
                     onLogout()
