@@ -628,12 +628,12 @@ interface MarketApi {
         @Field("body") body: String,
     ): Response<ApiResponse<Message>>
 
-    /** Mark all messages in a thread as read by the current identity. */
+    /** Mark all messages in a thread as read by the current identity; `data` is null. */
     @FormUrlEncoded
     @POST("-/messages/read")
     suspend fun markMessagesRead(
         @Field("thread") thread: String,
-    ): Response<ApiResponse<OkResponse>>
+    ): Response<ApiResponse<Unit>>
 
     // ---- Reviews ----
 

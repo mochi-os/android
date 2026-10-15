@@ -185,11 +185,12 @@ typealias AssetListResponse = List<Asset>
 
 /**
  * Result of `subscriptions/create` — Stripe Checkout URL plus the pending
- * subscription row.
+ * subscription row. The server names the URL `checkout`, as the web reads it.
  */
 data class SubscriptionCreateResponse(
     val subscription: Subscription = Subscription(),
-    @SerializedName("checkout_url") val checkoutUrl: String = "",
+    @SerializedName(value = "checkout", alternate = ["checkout_url"])
+    val checkoutUrl: String = "",
 )
 
 /** Result of `subscriptions/mine` and `subscriptions/subscribers`. */
@@ -260,9 +261,13 @@ data class AuditListResponse(
 
 /**
  * Result of `accounts/stripe/onboarding`. The SPA must navigate the top
- * window (not the sandboxed iframe) to this URL.
+ * window (not the sandboxed iframe) to this URL, which the server names
+ * `redirect`.
  */
-data class StripeOnboardingResponse(val url: String = "")
+data class StripeOnboardingResponse(
+    @SerializedName(value = "redirect", alternate = ["url"])
+    val url: String = "",
+)
 
 /** Result of `-/accounts/stripe/oauth/complete`: whether the account is now linked. */
 data class StripeOauthCompletion(val connected: Boolean = false)

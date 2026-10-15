@@ -16,6 +16,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.market.api.MarketApi
@@ -738,7 +739,7 @@ class MarketRepository @Inject constructor(
 
     suspend fun markMessagesRead(thread: String) {
         try {
-            api.markMessagesRead(thread.toString()).unwrap()
+            api.markMessagesRead(thread).unwrapEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
