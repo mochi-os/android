@@ -41,6 +41,7 @@ import org.mochios.market.model.ReviewsListResponse
 import org.mochios.market.model.SavedListResponse
 import org.mochios.market.model.SavedToggleResponse
 import org.mochios.market.model.SentReviewListResponse
+import org.mochios.market.model.ShippingOption
 import org.mochios.market.model.StripeOauthCompletion
 import org.mochios.market.model.StripeOnboardingResponse
 import org.mochios.market.model.StripeStatus
@@ -316,14 +317,15 @@ interface MarketApi {
     // ---- Shipping ----
 
     /**
-     * Set a listing's shipping options. `options` is a JSON-encoded array.
+     * Set a listing's shipping options. `options` is a JSON-encoded array; the
+     * server answers with the options as saved.
      */
     @FormUrlEncoded
     @POST("-/shipping/set")
     suspend fun setShipping(
         @Field("listing") listing: String,
         @Field("options") optionsJson: String,
-    ): Response<ApiResponse<OkResponse>>
+    ): Response<ApiResponse<List<ShippingOption>>>
 
     // ---- Photos ----
 
