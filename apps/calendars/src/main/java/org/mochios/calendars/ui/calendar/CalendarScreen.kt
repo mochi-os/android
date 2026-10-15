@@ -70,6 +70,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
@@ -90,6 +91,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.isSpecified
+import androidx.compose.ui.unit.takeOrElse
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -699,14 +702,19 @@ private fun View(
         }
 
         val timed = state.view == CalendarsSection.DAY || state.view == CalendarsSection.WEEK
-        var top by remember { mutableStateOf(0.dp) }
+        var top by remember { mutableStateOf(Dp.Unspecified) }
         val seamed = state.view == CalendarsSection.MONTH || state.view == CalendarsSection.MULTIWEEK
         val seam = MaterialTheme.colorScheme.outlineVariant
         val previous = stringResource(R.string.calendars_previous)
         val next = stringResource(R.string.calendars_next)
         Row(modifier = Modifier.fillMaxSize()) {
             if (timed) {
-                HourGutter(top, scroll, zone = if (viewModel.zones()) Zones.offset(viewModel.timezone().id) else null)
+                HourGutter(
+                    top.takeOrElse { 0.dp },
+                    scroll,
+                    modifier = Modifier.alpha(if (top.isSpecified) 1f else 0f),
+                    zone = if (viewModel.zones()) Zones.offset(viewModel.timezone().id) else null,
+                )
             }
             // With no arrows on screen, TalkBack offers Previous and Next as
             // actions on the pager and a keyboard pages it with the arrow and

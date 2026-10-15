@@ -664,10 +664,11 @@ fun HourGutter(top: Dp, scroll: ScrollState, modifier: Modifier = Modifier, zone
  */
 @Composable
 fun rememberHourScroll(start: Int): ScrollState {
-    val scroll = rememberScrollState()
     val density = LocalDensity.current
-    LaunchedEffect(start) {
-        scroll.scrollTo(with(density) { (HOUR * start.coerceIn(0, 23)).roundToPx() })
+    val offset = with(density) { (HOUR * start.coerceIn(0, 23)).roundToPx() }
+    val scroll = rememberScrollState(offset)
+    LaunchedEffect(offset) {
+        scroll.scrollTo(offset)
     }
     return scroll
 }

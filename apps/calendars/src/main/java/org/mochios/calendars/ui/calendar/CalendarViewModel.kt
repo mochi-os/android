@@ -194,6 +194,9 @@ class CalendarViewModel @Inject constructor(
 
     private var loading: Job? = null
 
+    /** True once the calendars and preferences have been read, so a range can be fetched. */
+    private var ready = false
+
     private var detailing: Job? = null
 
     /** The zone every range is measured in: the user's, not the device's. */
@@ -266,6 +269,7 @@ class CalendarViewModel @Inject constructor(
                     // the user chose in the web, which is the same preference.
                     view = if (untouched) calendarsView(preferences.view) else _uiState.value.view,
                 )
+                ready = true
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, isRefreshing = false, error = e.toMochiError())
                 return@launch
@@ -278,9 +282,14 @@ class CalendarViewModel @Inject constructor(
      * The occurrences the current view covers. [reset] is false for a refresh
      * that must not move the reader — coming back from the editor, or the
      * screen resuming — which in the list view keeps the pages already
-     * scrolled to rather than dropping back to the anchor day.
+     * scrolled to rather than dropping back to the anchor day. Until the first
+     * [reload] has read the calendars and preferences there is nothing to
+     * fetch by, so the call is skipped and that reload loads the range itself.
      */
     fun load(refreshing: Boolean = false, reset: Boolean = true) {
+        if (!ready) {
+            return
+        }
         loading?.cancel()
         loading = viewModelScope.launch {
             val state = _uiState.value
