@@ -8,6 +8,7 @@ package org.mochios.calendars
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mochios.calendars.model.Hours
+import org.mochios.calendars.ui.editor.beneath
 import org.mochios.calendars.ui.editor.defaultStart
 import org.mochios.calendars.ui.editor.picked
 import java.time.LocalDate
@@ -41,16 +42,35 @@ class NewEventTest {
     fun `a run of days picked on the grid spans the working hours' start on its first day to the default length on its last`() {
         val london = java.time.ZoneId.of("Europe/London")
         val tuesday = LocalDate.of(2026, 10, 6)
-        val (start, finish) = picked(tuesday, tuesday.plusDays(2), HOURS, 90, london)
+        val (start, finish) = picked(tuesday, tuesday.plusDays(2), HOURS, 90, london, TODAY.atTime(14, 37))
         assertEquals(tuesday.atTime(8, 0).atZone(london).toEpochSecond(), start)
         assertEquals(tuesday.plusDays(2).atTime(9, 30).atZone(london).toEpochSecond(), finish)
+    }
+
+    @Test
+    fun `a run of days picked from today starts at the next whole hour, as a new event does`() {
+        val london = java.time.ZoneId.of("Europe/London")
+        val (start, finish) = picked(TODAY, TODAY.plusDays(2), HOURS, 60, london, TODAY.atTime(14, 37))
+        assertEquals(TODAY.atTime(15, 0).atZone(london).toEpochSecond(), start)
+        assertEquals(TODAY.plusDays(2).atTime(16, 0).atZone(london).toEpochSecond(), finish)
+    }
+
+    @Test
+    fun `beneath an all-day event lie the times a new event on its first day would have`() {
+        assertEquals(15 * 60 to 16 * 60, beneath(TODAY, TODAY, LocalTime.of(14, 37), HOURS, 60))
+        val friday = LocalDate.of(2026, 10, 2)
+        assertEquals(8 * 60 to 9 * 60 + 30, beneath(friday, TODAY, LocalTime.of(14, 37), HOURS, 90))
+        // The day never moves: late today, the working hours on it.
+        assertEquals(8 * 60 to 9 * 60, beneath(TODAY, TODAY, LocalTime.of(23, 10), HOURS, 60))
+        // The end stops at the day's last minute.
+        assertEquals(23 * 60 to 24 * 60 - 1, beneath(TODAY, TODAY, LocalTime.of(22, 5), HOURS, 120))
     }
 
     @Test
     fun `a picked run's last day ends no later than its last minute`() {
         val london = java.time.ZoneId.of("Europe/London")
         val tuesday = LocalDate.of(2026, 10, 6)
-        val (_, finish) = picked(tuesday, tuesday, Hours(start = 23, finish = 23), 120, london)
+        val (_, finish) = picked(tuesday, tuesday, Hours(start = 23, finish = 23), 120, london, TODAY.atTime(14, 37))
         assertEquals(tuesday.atTime(23, 59).atZone(london).toEpochSecond(), finish)
     }
 }

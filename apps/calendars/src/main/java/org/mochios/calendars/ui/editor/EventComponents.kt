@@ -634,16 +634,34 @@ fun defaultStart(day: LocalDate, today: LocalDate, now: LocalTime, hours: Hours)
 }
 
 /**
- * The span a run of days picked on the grid, [first] to [last], opens the
- * editor with, epoch seconds in [zone]: from the start of the working
- * [hours] on the first day to [duration] minutes later on the last, held to
- * the last minute of that day. The editor shows it all day across the days;
- * the times are what turning all day off gives. The web client picks a run
- * of days the same way.
+ * The times an all-day event starting on [day] holds beneath it, which
+ * turning all day off gives it, in minutes past midnight: where a new event
+ * on that day would start, and [duration] minutes later on its last day, held
+ * to that day's last minute. Its days never move, so today with no whole hour
+ * left starts at the working [hours]. The web client gives the same.
  */
-fun picked(first: LocalDate, last: LocalDate, hours: Hours, duration: Int, zone: ZoneId): Pair<Long, Long> {
-    val from = hours.start.coerceIn(0, 23) * 60
-    val to = minOf(from + duration, 24 * 60 - 1)
+fun beneath(day: LocalDate, today: LocalDate, now: LocalTime, hours: Hours, duration: Int): Pair<Int, Int> {
+    val start = defaultStart(day, today, now, hours)
+    val from = start.hour * 60 + start.minute
+    return from to minOf(from + duration, 24 * 60 - 1)
+}
+
+/**
+ * The span a run of days picked on the grid, [first] to [last], opens the
+ * editor with, epoch seconds in [zone]: the times [beneath] the first day,
+ * [now] being the user's clock, from the first day to the last. The editor
+ * shows it all day across the days; the times are what turning all day off
+ * gives. The web client picks a run of days the same way.
+ */
+fun picked(
+    first: LocalDate,
+    last: LocalDate,
+    hours: Hours,
+    duration: Int,
+    zone: ZoneId,
+    now: LocalDateTime = LocalDateTime.now(zone),
+): Pair<Long, Long> {
+    val (from, to) = beneath(first, now.toLocalDate(), now.toLocalTime(), hours, duration)
     return first.atTime(from / 60, from % 60).atZone(zone).toEpochSecond() to
         last.atTime(to / 60, to % 60).atZone(zone).toEpochSecond()
 }

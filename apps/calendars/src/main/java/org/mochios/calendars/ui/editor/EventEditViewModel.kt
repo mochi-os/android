@@ -12,6 +12,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -29,6 +30,7 @@ import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Event
 import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Instance
+import org.mochios.calendars.model.Preferences
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.di.Viewer
 import org.mochios.calendars.model.defaultCalendar
@@ -38,6 +40,7 @@ import org.mochios.calendars.storage.Memory
 import org.mochios.calendars.storage.MemoryStore
 import org.mochios.calendars.storage.VisibilityStore
 import java.time.Instant
+import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.ZoneOffset
 import javax.inject.Inject
@@ -173,6 +176,13 @@ class EventEditViewModel @Inject constructor(
     val zone: String
         get() = viewer.zone()
 
+    /** The user's preferences as last read, which turning all day off starts from. */
+    private var preferences = Preferences()
+
+    /** Reads the user's preferences, keeping them for later; null when they cannot be read. */
+    private suspend fun read(): Preferences? =
+        runCatching { repository.getPreferences() }.getOrNull()?.also { preferences = it }
+
     /** How the editor was opened, which Retry does again after a failure to load. */
     private var opening: () -> Unit = {}
 
@@ -267,7 +277,7 @@ class EventEditViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null, failure = null)
             val calendars = calendars() ?: return@launch
             if (event == null) {
-                val preferences = runCatching { repository.getPreferences() }.getOrNull()
+                val preferences = read()
                 val memory = remembered(MemoryStore.memory(context), zone, start, allday)
                 // A tap keeps the clock time it was made at in the user's
                 // zone, read in whatever zone is remembered; an all-day form
@@ -310,8 +320,12 @@ class EventEditViewModel @Inject constructor(
                 settled()
                 return@launch
             }
+            // Read beside the event, for the times turning all day off gives.
+            val preferring = async { read() }
             try {
-                fill(repository.getEvent(event), occurrence, calendars)
+                val loaded = repository.getEvent(event)
+                preferring.await()
+                fill(loaded, occurrence, calendars)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, failure = e.toMochiError())
             }
@@ -331,7 +345,7 @@ class EventEditViewModel @Inject constructor(
             try {
                 val loaded = repository.getEvent(event)
                 val form = copied(loaded.components, occurrence, scope, zone) ?: EventForm()
-                val preference = runCatching { repository.getPreferences().calendar }.getOrNull().orEmpty()
+                val preference = read()?.calendar.orEmpty()
                 open(form, calendars, calendars.firstOrNull { it.id == loaded.calendar }?.id ?: preferred(calendars, preference))
                 create()
             } catch (e: Exception) {
@@ -349,7 +363,7 @@ class EventEditViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null, failure = null)
             val calendars = calendars() ?: return@launch
-            val preferences = runCatching { repository.getPreferences() }.getOrNull()
+            val preferences = read()
             open(copied(instance, zone, preferences?.reminder ?: 15), calendars, preferred(calendars, preferences?.calendar.orEmpty()))
             create()
         }
@@ -510,7 +524,10 @@ class EventEditViewModel @Inject constructor(
 
     fun recurrence(value: Recurrence) = edit { recurred(this, value, this@EventEditViewModel.zone) }
 
-    fun allday(value: Boolean) = edit { toggled(this, value, this@EventEditViewModel.zone) }
+    fun allday(value: Boolean) = edit {
+        val model = this@EventEditViewModel
+        toggled(this, value, model.zone, model.preferences.hours, model.preferences.duration)
+    }
 
     fun start(value: Long) = edit {
         val length = finish - start
@@ -984,10 +1001,18 @@ internal fun recurred(state: EditorUiState, value: Recurrence, user: String): Ed
  * All day on holds each end's day, the last day included, and keeps the times
  * aside; off puts the times back on whatever days the ends now have, as the
  * web editor keeps its dates and times apart. An event that opened all day
- * comes back from midnight to the last minute of its day, as the web's does.
- * A blank zone is the [user]'s.
+ * comes back at the times [beneath] its first day, from the working [hours]
+ * and the default [duration] at [now], the [user]'s own clock, as the web's
+ * does. A blank zone is the [user]'s.
  */
-internal fun toggled(state: EditorUiState, value: Boolean, user: String): EditorUiState {
+internal fun toggled(
+    state: EditorUiState,
+    value: Boolean,
+    user: String,
+    hours: Hours = Hours(),
+    duration: Int = 60,
+    now: LocalDateTime = LocalDateTime.now(shownIn(false, user)),
+): EditorUiState {
     if (value == state.allday) return state
     val begins = shownIn(false, state.zone.start.ifBlank { user })
     val ends = shownIn(false, state.zone.finish.ifBlank { state.zone.start.ifBlank { user } })
@@ -1001,9 +1026,9 @@ internal fun toggled(state: EditorUiState, value: Boolean, user: String): Editor
             clock = (first.hour * 60 + first.minute) to (last.hour * 60 + last.minute),
         )
     }
-    val (from, to) = state.clock ?: (0 to 1_439)
     val first = Instant.ofEpochSecond(state.start).atZone(ZoneOffset.UTC).toLocalDate()
     val last = Instant.ofEpochSecond(state.finish).atZone(ZoneOffset.UTC).toLocalDate().minusDays(1)
+    val (from, to) = state.clock ?: beneath(first, now.toLocalDate(), now.toLocalTime(), hours, duration)
     return state.copy(
         allday = false,
         start = first.atTime(from / 60, from % 60).atZone(begins).toEpochSecond(),

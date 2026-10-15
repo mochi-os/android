@@ -486,6 +486,37 @@ class EditorFlowTest {
     }
 
     @Test
+    fun `an all-day event turned off comes back at the working hours and length the preferences give, on its days`() {
+        respond("-/preferences/get", ok("""{"preferences": {"hours": {"start": 9, "finish": 17}, "duration": 30}}"""))
+        respond(
+            "-/events/get",
+            ok(
+                """{"event": {"id": "e1", "calendar": "c1", "etag": "a", "recurring": false, "components": [
+                    {"name": "VEVENT", "properties": [
+                        {"name": "UID", "params": {}, "value": "uid-1"},
+                        {"name": "SUMMARY", "params": {}, "value": "Trip"},
+                        {"name": "DTSTART", "params": {"VALUE": ["DATE"]}, "value": "20261006"},
+                        {"name": "DTEND", "params": {"VALUE": ["DATE"]}, "value": "20261009"}
+                    ], "components": []}
+                ]}}""",
+            ),
+        )
+        val model = EventEditViewModel(context, repository, London, SavedStateHandle(mapOf("event" to "e1")))
+        val deadline = System.currentTimeMillis() + 5_000
+        while (model.uiState.value.isLoading) {
+            org.robolectric.Shadows.shadowOf(android.os.Looper.getMainLooper()).idle()
+            check(System.currentTimeMillis() < deadline) { "timed out" }
+            Thread.sleep(10)
+        }
+        assertTrue(model.uiState.value.allday)
+        model.allday(false)
+        val london = java.time.ZoneId.of("Europe/London")
+        val tuesday = java.time.LocalDate.of(2026, 10, 6)
+        assertEquals(tuesday.atTime(9, 0).atZone(london).toEpochSecond(), model.uiState.value.start)
+        assertEquals(tuesday.plusDays(2).atTime(9, 30).atZone(london).toEpochSecond(), model.uiState.value.finish)
+    }
+
+    @Test
     fun `copy and delete wait while a save runs`() {
         respond("-/events/get", event("a", "Stand-up"))
         respond("-/events/update", event("b", "Stand-up").setBodyDelay(3, TimeUnit.SECONDS))

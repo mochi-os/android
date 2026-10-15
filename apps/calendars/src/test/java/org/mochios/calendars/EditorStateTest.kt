@@ -10,6 +10,7 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.ui.editor.EditorUiState
 import org.mochios.calendars.ui.editor.Ending
@@ -21,6 +22,7 @@ import org.mochios.calendars.ui.editor.recurrence
 import org.mochios.calendars.ui.editor.repeated
 import org.mochios.calendars.ui.editor.toggled
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
@@ -90,12 +92,35 @@ class EditorStateTest {
         assertEquals(at(6, 10), back.finish)
     }
 
+    // An all-day event over the 2nd and 3rd, with no times of its own.
+    private val opened = EditorUiState(allday = true, start = midnight(2), finish = midnight(4), zone = Zone(york, york))
+
     @Test
-    fun `an event that opened all day comes back from midnight to the end of its last day`() {
-        val opened = EditorUiState(allday = true, start = midnight(2), finish = midnight(4), zone = Zone(york, york))
-        val back = toggled(opened, false, york)
-        assertEquals(at(2, 0), back.start)
-        assertEquals(at(3, 23, 59), back.finish)
+    fun `an event that opened all day comes back at the working hours on another day, for the default length, on its days`() {
+        val back = toggled(opened, false, york, Hours(), 60, LocalDateTime.of(2026, 9, 28, 14, 37))
+        assertEquals(at(2, 8), back.start)
+        assertEquals(at(3, 9), back.finish)
+    }
+
+    @Test
+    fun `an event that opened all day today comes back at the next whole hour, as a new event starts`() {
+        val back = toggled(opened, false, york, Hours(), 60, LocalDateTime.of(2026, 10, 2, 14, 37))
+        assertEquals(at(2, 15), back.start)
+        assertEquals(at(3, 16), back.finish)
+    }
+
+    @Test
+    fun `an event that opened all day keeps its day when today has no whole hour left`() {
+        val back = toggled(opened, false, york, Hours(), 60, LocalDateTime.of(2026, 10, 2, 23, 10))
+        assertEquals(at(2, 8), back.start)
+        assertEquals(at(3, 9), back.finish)
+    }
+
+    @Test
+    fun `an event that opened all day comes back at the working hours and length it is given`() {
+        val back = toggled(opened, false, york, Hours(start = 9, finish = 17), 30, LocalDateTime.of(2026, 9, 28, 14, 37))
+        assertEquals(at(2, 9), back.start)
+        assertEquals(at(3, 9, 30), back.finish)
     }
 
     @Test
