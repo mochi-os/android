@@ -146,9 +146,7 @@
     <string name="calendars_undo">Desegin</string>
     <string name="calendars_event_resize">Aldatu amaiera-ordua</string>
     <string name="calendars_event_copy">Kopiatu</string>
-    <string name="calendars_event_copied">Gertaera kopiatu da</string>
     <string name="calendars_scope_copy">Kopiatu gertaera hau</string>
-    <string name="calendars_editor_copy_title">Kopiatu gertaera</string>
     <string name="calendars_title_required">Izenburua beharrezkoa da</string>
     <string name="calendars_link_submit">Lotu</string>
     <string name="calendars_link_sync">Sinkronizatu orain</string>

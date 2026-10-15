@@ -47,11 +47,10 @@ data class ContactEditUiState(
     val deleteRequested: Boolean = false,
     val deleted: Boolean = false,
 
-    /**
-     * A contact the screen goes on as: the one a copy made, or the one a merge
-     * left standing.
-     */
+    /** A contact the screen goes on as: the one a merge left standing. */
     val opened: String? = null,
+    /** A copy of this contact to open as a new one: the contact it copies. */
+    val copied: String? = null,
     /** Leaving saved what was pending, or Create made the contact, so the screen can go. */
     val left: Boolean = false,
 
@@ -103,6 +102,12 @@ class ContactEditViewModel @Inject constructor(
 
     val creating: Boolean = contactId.isBlank()
 
+    /**
+     * The contact a new one copies, whose card it opens on and starts from,
+     * so what the form does not show comes with it; blank for none.
+     */
+    private val source: String = savedStateHandle.get<String>("copy").orEmpty()
+
     /** The address book a new contact was started from; blank for the default. */
     private val start: String = savedStateHandle.get<String>("book").orEmpty()
 
@@ -119,7 +124,9 @@ class ContactEditViewModel @Inject constructor(
     private var writes = 0
 
     init {
-        if (creating) {
+        if (creating && source.isNotBlank()) {
+            copying()
+        } else if (creating) {
             loadBooks()
         } else {
             load()
@@ -142,6 +149,20 @@ class ContactEditViewModel @Inject constructor(
         etag = contact.etag
         baseline = Baseline(form.properties(), form.book)
         _uiState.value = _uiState.value.copy(contact = contact, form = form)
+    }
+
+    /** Opens the form on the card a copy is made from, as it is stored. */
+    private fun copying() {
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            try {
+                val contact = repository.getContact(source)
+                _uiState.value = _uiState.value.copy(isLoading = false, form = contactForm(contact.card, contact.book))
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+            }
+            fetchBooks()
+        }
     }
 
     fun load() {
@@ -336,6 +357,7 @@ class ContactEditViewModel @Inject constructor(
                 repository.createContact(
                     properties = state.form.properties(),
                     book = state.form.book.ifBlank { null },
+                    source = source.ifBlank { null },
                 )
                 _uiState.value = _uiState.value.copy(isSaving = false, left = true)
             } catch (e: Exception) {
@@ -345,8 +367,9 @@ class ContactEditViewModel @Inject constructor(
     }
 
     /**
-     * Makes a copy of this contact at once, from the card as it stands, so
-     * what the form does not show comes with it, and opens it.
+     * Saves what is pending, then opens a copy of this contact as a new one,
+     * on the card as it now stands, which Create makes, as the web's panel
+     * does.
      */
     fun copy() {
         if (creating || !_uiState.value.form.valid) return
@@ -354,18 +377,7 @@ class ContactEditViewModel @Inject constructor(
         viewModelScope.launch {
             writing.withLock {
                 send()
-                val form = _uiState.value.form
-                _uiState.value = _uiState.value.copy(isSaving = true, error = null)
-                try {
-                    val contact = repository.createContact(
-                        properties = form.properties(),
-                        book = form.book.ifBlank { null },
-                        source = contactId,
-                    )
-                    _uiState.value = _uiState.value.copy(isSaving = false, opened = contact.id)
-                } catch (e: Exception) {
-                    _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
-                }
+                _uiState.value = _uiState.value.copy(copied = contactId)
             }
         }
     }

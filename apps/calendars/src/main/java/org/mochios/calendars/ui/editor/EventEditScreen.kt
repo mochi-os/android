@@ -142,17 +142,17 @@ import org.mochios.android.R as MochiR
  * The event editor: Title, Calendar, All day, Start and its zone, End and its
  * zone, Location, Repeat, Reminder, Description, in that order. An open event
  * saves as it goes, as the web's side panel does, and has no Save; a new one
- * is made by Create. A recurring event asks whether a save, a delete or a
- * copy is for the one occurrence or the whole series. [onOpen] goes on as
- * another event's editor: the one a copy made, or the one a save left the
- * occurrence in, with what was done to make it. [onCreated] leaves once a new
- * event is made, for the calendar to say so.
+ * is made by Create, a copy as any other. A recurring event asks whether a
+ * save, a delete or a copy is for the one occurrence or the whole series.
+ * [onOpen] goes on as another event's editor: the one a save left the
+ * occurrence in. [onCreated] leaves once a new event is made, for the
+ * calendar to say so.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EventEditScreen(
     onBack: () -> Unit,
-    onOpen: (event: String, moment: Long, said: Said?) -> Unit,
+    onOpen: (event: String, moment: Long) -> Unit,
     onDeleted: () -> Unit,
     onCreated: () -> Unit,
     viewModel: EventEditViewModel = hiltViewModel(),
@@ -175,21 +175,11 @@ fun EventEditScreen(
     BackHandler(enabled = !creating || dirty || uiState.isSaving) { close() }
 
     LaunchedEffect(uiState.follow) {
-        uiState.follow?.let { onOpen(it.event, it.moment, it.said) }
+        uiState.follow?.let { onOpen(it.event, it.moment) }
     }
     LaunchedEffect(uiState.left) { if (uiState.left) onBack() }
     LaunchedEffect(uiState.created) { if (uiState.created) onCreated() }
     LaunchedEffect(uiState.deleted) { if (uiState.deleted) onDeleted() }
-    // What the editor before this one did, said once as this one opens.
-    val copied = stringResource(R.string.calendars_event_copied)
-    val said = rememberCoroutineScope()
-    LaunchedEffect(uiState.said) {
-        uiState.said ?: return@LaunchedEffect
-        // Said from the screen's own scope: hearing it clears the flag, which
-        // restarts this effect, and the message has to outlive it.
-        viewModel.heard()
-        said.launch { snackbar.showSnackbar(copied) }
-    }
     LaunchedEffect(uiState.error) {
         uiState.error?.let { snackbar.showSnackbar(it.userMessage()) }
     }
@@ -219,7 +209,6 @@ fun EventEditScreen(
                 title = {
                     Text(
                         when {
-                            uiState.copying -> stringResource(R.string.calendars_editor_copy_title)
                             creating -> stringResource(R.string.calendars_event_new)
                             else -> uiState.opened?.first?.title?.ifBlank { null }
                                 ?: stringResource(R.string.calendars_event_edit)
@@ -298,7 +287,7 @@ fun EventEditScreen(
                 onSave = {
                     when {
                         !uiState.writable -> Unit
-                        creating || uiState.copying -> viewModel.create()
+                        creating -> viewModel.create()
                         else -> viewModel.save()
                     }
                 },
@@ -379,7 +368,7 @@ fun EventEditScreen(
                 enabled = !uiState.isSaving,
                 onColour = viewModel::colour,
             )
-            if (creating || uiState.copying) {
+            if (creating) {
                 Spacer(Modifier.height(16.dp))
                 MochiButton(
                     onClick = viewModel::create,

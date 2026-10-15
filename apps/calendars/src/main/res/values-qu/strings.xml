@@ -146,9 +146,7 @@
     <string name="calendars_undo">Kutichipuy</string>
     <string name="calendars_event_resize">Tukuy pachata tikray</string>
     <string name="calendars_event_copy">Copiay</string>
-    <string name="calendars_event_copied">Evento copiasqa</string>
     <string name="calendars_scope_copy">Kay eventota copiay</string>
-    <string name="calendars_editor_copy_title">Eventota copiay</string>
     <string name="calendars_title_required">Sutinchay necesitakun</string>
     <string name="calendars_link_submit">T\'inkiy</string>
     <string name="calendars_link_sync">Kunan sincronizay</string>

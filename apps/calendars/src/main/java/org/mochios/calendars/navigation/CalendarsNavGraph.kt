@@ -22,7 +22,6 @@ import org.mochios.calendars.ui.devices.ConnectDeviceScreen
 import org.mochios.calendars.ui.dialogs.CreateCalendarScreen
 import org.mochios.calendars.ui.dialogs.SubscribeCalendarScreen
 import org.mochios.calendars.ui.editor.EventEditScreen
-import org.mochios.calendars.ui.editor.Said
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.preferences.PreferencesScreen
 import org.mochios.calendars.ui.settings.CalendarSettingsScreen
@@ -77,10 +76,7 @@ object CalendarsApp {
         "&occurrence={occurrence}&scope={scope}&finish={finish}&allday={allday}&date={date}" +
         "&summary={summary}&location={location}&description={description}&zones={zones}" +
         "&calendar={calendar}"
-    const val EVENT_EDIT = "calendars/events/edit/{event}?occurrence={occurrence}&said={said}"
-
-    /** The flag the calendar screen's back-stack entry carries once a copy is saved. */
-    const val COPIED = "copied"
+    const val EVENT_EDIT = "calendars/events/edit/{event}?occurrence={occurrence}"
 
     /** The flag it carries once the editor deleted something, which it offers to undo. */
     const val DELETED = "deleted"
@@ -165,8 +161,8 @@ object CalendarsApp {
      * An event's editor. [occurrence] is the occurrence the user opened, epoch
      * seconds, which "This event" detaches; 0 for one that does not repeat.
      */
-    fun event(event: String, occurrence: Long = 0, said: Said? = null): String =
-        "calendars/events/edit/$event?occurrence=$occurrence" + (said?.let { "&said=${it.name.lowercase()}" } ?: "")
+    fun event(event: String, occurrence: Long = 0): String =
+        "calendars/events/edit/$event?occurrence=$occurrence"
 
     /**
      * What a notification's link names, or null when it names no event. A
@@ -258,9 +254,6 @@ fun NavGraphBuilder.calendarsNavGraph(
         route = CalendarsApp.HOME,
         deepLinks = listOf(navDeepLink { uriPattern = "mochi://calendars" }),
     ) { entry ->
-        // A saved copy sets the flag on this entry on its way back, and the
-        // screen says so once.
-        val copied by entry.savedStateHandle.getStateFlow(CalendarsApp.COPIED, false).collectAsState()
         val deleted by entry.savedStateHandle.getStateFlow(CalendarsApp.DELETED, false).collectAsState()
         val saved by entry.savedStateHandle.getStateFlow(CalendarsApp.SAVED, "").collectAsState()
         val reminder by entry.savedStateHandle.getStateFlow(CalendarsApp.REMINDER, "").collectAsState()
@@ -282,8 +275,6 @@ fun NavGraphBuilder.calendarsNavGraph(
                 navController.navigate(CalendarsApp.copyEvent(event, occurrence, scope))
             },
             onCopyOccurrence = { instance -> navController.navigate(CalendarsApp.copyOccurrence(instance)) },
-            copied = copied,
-            onCopiedShown = { entry.savedStateHandle[CalendarsApp.COPIED] = false },
             deleted = deleted,
             onDeletedShown = { entry.savedStateHandle[CalendarsApp.DELETED] = false },
             saved = saved,
@@ -372,10 +363,8 @@ fun NavGraphBuilder.calendarsNavGraph(
     ) {
         EventEditScreen(
             onBack = { navController.popBackStack() },
-            // A copy made takes this editor's place, so Back from it lands
-            // on the calendar.
-            onOpen = { event, moment, said ->
-                navController.navigate(CalendarsApp.event(event, moment, said)) {
+            onOpen = { event, moment ->
+                navController.navigate(CalendarsApp.event(event, moment)) {
                     popUpTo(CalendarsApp.EVENT_NEW) { inclusive = true }
                 }
             },
@@ -396,18 +385,14 @@ fun NavGraphBuilder.calendarsNavGraph(
                 type = NavType.StringType
                 defaultValue = "0"
             },
-            navArgument("said") {
-                type = NavType.StringType
-                defaultValue = ""
-            },
         ),
     ) {
         EventEditScreen(
             onBack = { navController.popBackStack() },
-            // A copy, or the event a save left the occurrence in, takes this
-            // editor's place, as the web's side panel moves to it.
-            onOpen = { event, moment, said ->
-                navController.navigate(CalendarsApp.event(event, moment, said)) {
+            // The event a save left the occurrence in takes this editor's
+            // place, as the web's side panel moves to it.
+            onOpen = { event, moment ->
+                navController.navigate(CalendarsApp.event(event, moment)) {
                     popUpTo(CalendarsApp.EVENT_EDIT) { inclusive = true }
                 }
             },
@@ -418,8 +403,12 @@ fun NavGraphBuilder.calendarsNavGraph(
                     .getOrNull()?.savedStateHandle?.set(CalendarsApp.DELETED, true)
                 navController.popBackStack()
             },
-            // An open event is never created, only copied, which opens.
-            onCreated = { navController.popBackStack() },
+            // A copy of the open event, opened here as a new one, goes back
+            // to the calendar once Create makes it, which says so.
+            onCreated = {
+                CalendarsApp.saved(navController, created = true)
+                navController.popBackStack()
+            },
         )
     }
 }

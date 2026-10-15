@@ -142,9 +142,7 @@
     <string name="calendars_undo">撤销</string>
     <string name="calendars_event_resize">更改结束时间</string>
     <string name="calendars_event_copy">复制</string>
-    <string name="calendars_event_copied">活动已复制</string>
     <string name="calendars_scope_copy">复制此活动</string>
-    <string name="calendars_editor_copy_title">复制活动</string>
     <string name="calendars_title_required">标题为必填项</string>
     <string name="calendars_link_submit">关联</string>
     <string name="calendars_link_sync">立即同步</string>

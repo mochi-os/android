@@ -43,7 +43,6 @@ import org.mochios.calendars.di.Viewer
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.ui.editor.EventEditScreen
 import org.mochios.calendars.ui.editor.EventEditViewModel
-import org.mochios.calendars.ui.editor.Said
 import org.robolectric.Shadows.shadowOf
 import java.time.Duration
 import android.os.Looper
@@ -83,8 +82,8 @@ class EditorFlowTest {
     /** The last body sent to each path. */
     private val bodies = ConcurrentHashMap<String, String>()
 
-    /** The editor the screen went on as: event, moment, and what was said. */
-    private var followed: Triple<String, Long, Said?>? = null
+    /** The editor the screen went on as: event and moment. */
+    private var followed: Pair<String, Long>? = null
     private var created = false
     private var left = false
     private var deleted = false
@@ -147,7 +146,7 @@ class EditorFlowTest {
         rule.setContent {
             EventEditScreen(
                 onBack = { left = true },
-                onOpen = { event, moment, said -> followed = Triple(event, moment, said) },
+                onOpen = { event, moment -> followed = event to moment },
                 onDeleted = { deleted = true },
                 onCreated = { created = true },
                 viewModel = model,
@@ -293,13 +292,6 @@ class EditorFlowTest {
     }
 
     @Test
-    fun `an editor handed over says what the one before it did`() {
-        respond("-/events/get", event("a", "Lunch"))
-        show("event" to "e1", "said" to "copied")
-        waitFor(string(R.string.calendars_event_copied))
-    }
-
-    @Test
     fun `a series cut by this and following opens in the editor ending before the cut`() {
         // 11:00 London daily from the 2nd, cut at the 5th's occurrence a second before it.
         respond(
@@ -416,26 +408,68 @@ class EditorFlowTest {
     }
 
     @Test
-    fun `a copy is made as soon as it is read, tentative as its original, and the editor goes on as it`() {
+    fun `a copy opens as a new event, made only by Create, tentative as its original`() {
         respond("-/events/get", event("a", "Stand-up", status = "TENTATIVE"))
         respond("-/events/create", event("c", "Stand-up"))
         show("source" to "event", "copy" to "e1")
-        answered { followed != null }
-        assertEquals(Said.COPIED, followed!!.third)
+        waitFor(string(R.string.calendars_create_submit))
+        rule.onNodeWithText(string(R.string.calendars_event_new)).assertExists()
+        rest()
+        assertFalse(asked.contains("-/events/create"))
+        rule.onNodeWithText(string(R.string.calendars_create_submit)).performScrollTo().performClick()
+        answered { created }
+        assertEquals(null, followed)
         assertEquals(listOf("TENTATIVE"), statuses("-/events/create"))
     }
 
     @Test
-    fun `Copy on an open event makes the copy at once and goes on as it`() {
+    fun `Copy on an open event opens the copy as a new event, made only by Create`() {
         respond("-/events/get", event("a", "Stand-up"))
         respond("-/events/create", event("c", "Stand-up"))
         show("event" to "e1")
         waitFor("Stand-up")
         rule.onNodeWithContentDescription(string(R.string.calendars_event_copy)).performClick()
-        answered { followed != null }
-        assertEquals(Said.COPIED, followed!!.third)
+        waitFor(string(R.string.calendars_create_submit))
+        rule.onNodeWithText(string(R.string.calendars_event_new)).assertExists()
+        rest()
+        assertFalse(asked.contains("-/events/create"))
+        assertFalse(asked.contains("-/events/update"))
+        rule.onNodeWithText(string(R.string.calendars_create_submit)).performScrollTo().performClick()
+        answered { created }
+        assertEquals(null, followed)
         assertTrue(bodies["-/events/create"]!!.contains("Stand-up"))
         assertFalse(asked.contains("-/events/update"))
+    }
+
+    @Test
+    fun `a copy carries a change not yet saved, and leaving asks before it is lost`() {
+        respond("-/events/get", event("a", "Stand-up"))
+        val model = show("event" to "e1")
+        waitFor("Stand-up")
+        title().performTextReplacement("Stand-up, moved")
+        rule.onNodeWithContentDescription(string(R.string.calendars_event_copy)).performClick()
+        waitFor(string(R.string.calendars_create_submit))
+        assertEquals("Stand-up, moved", model.uiState.value.title)
+        assertTrue(model.dirty(model.uiState.value))
+        rest()
+        assertFalse(asked.contains("-/events/update"))
+        rule.onNodeWithContentDescription(string(MochiR.string.common_back)).performClick()
+        waitFor(string(R.string.calendars_discard_title))
+        assertFalse(left)
+    }
+
+    @Test
+    fun `an untouched copy is left without asking, making nothing`() {
+        respond("-/events/get", event("a", "Stand-up"))
+        show("event" to "e1")
+        waitFor("Stand-up")
+        rule.onNodeWithContentDescription(string(R.string.calendars_event_copy)).performClick()
+        waitFor(string(R.string.calendars_create_submit))
+        rule.onNodeWithContentDescription(string(MochiR.string.common_back)).performClick()
+        rule.waitForIdle()
+        assertTrue(left)
+        assertEquals(0, rule.onAllNodesWithText(string(R.string.calendars_discard_title)).fetchSemanticsNodes().size)
+        assertFalse(asked.contains("-/events/create"))
     }
 
     @Test

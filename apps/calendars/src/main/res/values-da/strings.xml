@@ -146,9 +146,7 @@
     <string name="calendars_undo">Fortryd</string>
     <string name="calendars_event_resize">Skift sluttidspunkt</string>
     <string name="calendars_event_copy">Kopier</string>
-    <string name="calendars_event_copied">Begivenhed kopieret</string>
     <string name="calendars_scope_copy">Kopier denne begivenhed</string>
-    <string name="calendars_editor_copy_title">Kopier begivenhed</string>
     <string name="calendars_title_required">Titel er påkrævet</string>
     <string name="calendars_link_submit">Tilknyt</string>
     <string name="calendars_link_sync">Synkronisér nu</string>

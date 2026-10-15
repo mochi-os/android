@@ -146,9 +146,7 @@
     <string name="calendars_undo">ቀልብስ</string>
     <string name="calendars_event_resize">የማብቂያ ሰዓት ይቀይሩ</string>
     <string name="calendars_event_copy">ቅዳ</string>
-    <string name="calendars_event_copied">ክስተት ተቀድቷል</string>
     <string name="calendars_scope_copy">ይህን ክስተት ቅዳ</string>
-    <string name="calendars_editor_copy_title">ክስተት ቅዳ</string>
     <string name="calendars_title_required">ርዕስ ያስፈልጋል</string>
     <string name="calendars_link_submit">ያገናኙ</string>
     <string name="calendars_link_sync">አሁን ያመሳስሉ</string>

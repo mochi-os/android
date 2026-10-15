@@ -146,9 +146,7 @@
     <string name="calendars_undo">Desfés</string>
     <string name="calendars_event_resize">Canvia l\'hora de finalització</string>
     <string name="calendars_event_copy">Copia</string>
-    <string name="calendars_event_copied">S\'ha copiat l\'esdeveniment</string>
     <string name="calendars_scope_copy">Copia aquest esdeveniment</string>
-    <string name="calendars_editor_copy_title">Copia l\'esdeveniment</string>
     <string name="calendars_title_required">El títol és obligatori</string>
     <string name="calendars_link_submit">Enllaça</string>
     <string name="calendars_link_sync">Sincronitza ara</string>

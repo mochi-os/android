@@ -47,8 +47,8 @@ import javax.inject.Inject
 
 /**
  * The event editor. [event] is null for a new event, a copy of another
- * included: [copying] says the form was filled from an original, and saving
- * still creates. [occurrence] is the occurrence the user opened, which "This
+ * included, which Create makes: [copying] says the form was filled from an
+ * original, whose title opens selected to be typed over. [occurrence] is the occurrence the user opened, which "This
  * event" detaches, as the event's tree names it: a timed occurrence's own
  * start, epoch seconds, and the UTC midnight of an all-day one's date;
  * [moment] is the same occurrence's start as the server listed it, which a
@@ -127,8 +127,6 @@ data class EditorUiState(
     val left: Boolean = false,
     /** Leaving with a change that cannot be saved, no title or an end before the start: ask before it is dropped. */
     val discarding: Boolean = false,
-    /** What the editor that opened this one said it did, once: copied. */
-    val said: Said? = null,
 ) {
     val writable: Boolean get() = calendars.firstOrNull { it.id == calendar }?.readonly != true
 
@@ -140,13 +138,8 @@ data class EditorUiState(
     val ordered: Boolean get() = if (allday) finish > start else finish >= start
 }
 
-/** An event to go on as, at the occurrence listed at [moment], and what was done to make it. */
-data class Follow(val event: String, val moment: Long, val said: Said? = null)
-
-/** What an editor says it did as it hands over to the next one. */
-enum class Said {
-    COPIED,
-}
+/** An event to go on as, at the occurrence listed at [moment]. */
+data class Follow(val event: String, val moment: Long)
 
 /** How long typing in a one-time event rests before it is saved. */
 private const val PAUSE = 1_000L
@@ -204,7 +197,6 @@ class EventEditViewModel @Inject constructor(
         val copied = handle.get<String>("copy").orEmpty()
         val scope = Scope.entries.firstOrNull { it.name.equals(handle.get<String>("scope"), ignoreCase = true) } ?: Scope.ALL
         val zones = handle.get<String>("zones").orEmpty().split(",")
-        val said = Said.entries.firstOrNull { it.name.equals(handle.get<String>("said"), ignoreCase = true) }
         val instance = Instance(
             summary = handle.get<String>("summary").orEmpty(),
             location = handle.get<String>("location").orEmpty(),
@@ -227,12 +219,6 @@ class EventEditViewModel @Inject constructor(
             }
         }
         opening()
-        if (said != null) _uiState.value = _uiState.value.copy(said = said)
-    }
-
-    /** The editor has said what the one before it did. */
-    fun heard() {
-        _uiState.value = _uiState.value.copy(said = null)
     }
 
     /** Saves, and everything that writes the event, go one at a time. */
@@ -334,9 +320,9 @@ class EventEditViewModel @Inject constructor(
 
     /**
      * A copy of the stored [event], opened as a new event whose form is the
-     * original's: the occurrence at [occurrence] alone, or the whole series,
-     * as [scope] says. It lands in the original's calendar when that can be
-     * written to, else where a new event would.
+     * original's, which Create makes: the occurrence at [occurrence] alone,
+     * or the whole series, as [scope] says. It lands in the original's
+     * calendar when that can be written to, else where a new event would.
      */
     private fun copy(event: String, occurrence: Long, scope: Scope) {
         viewModelScope.launch {
@@ -347,7 +333,6 @@ class EventEditViewModel @Inject constructor(
                 val form = copied(loaded.components, occurrence, scope, zone) ?: EventForm()
                 val preference = read()?.calendar.orEmpty()
                 open(form, calendars, calendars.firstOrNull { it.id == loaded.calendar }?.id ?: preferred(calendars, preference))
-                create()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, failure = e.toMochiError())
             }
@@ -357,7 +342,7 @@ class EventEditViewModel @Inject constructor(
     /**
      * A copy of an occurrence with no stored event to load - a subscription's
      * or a birthday - opened as a new event from the occurrence as listed,
-     * with the reminder a new event gets.
+     * with the reminder a new event gets, which Create makes.
      */
     private fun copy(instance: Instance) {
         viewModelScope.launch {
@@ -365,14 +350,13 @@ class EventEditViewModel @Inject constructor(
             val calendars = calendars() ?: return@launch
             val preferences = read()
             open(copied(instance, zone, preferences?.reminder ?: 15), calendars, preferred(calendars, preferences?.calendar.orEmpty()))
-            create()
         }
     }
 
     /**
-     * The editor on a copy's [form], in [calendar]: a new event, so saving
-     * creates. [baseline] is what closing measures edits against when the
-     * copy already carries some: the copy as the stored event would give it.
+     * The editor on a copy's [form], in [calendar]: a new event, which Create
+     * makes. [baseline] is what closing measures edits against when the copy
+     * already carries some: the copy as the stored event would give it.
      */
     private fun open(
         form: EventForm,
@@ -489,7 +473,6 @@ class EventEditViewModel @Inject constructor(
             recurring = master?.property("RRULE") != null || master?.property("RDATE") != null,
             series = master?.property("DTSTART")?.let { CalendarsMapping.moment(it) / 1000 } ?: 0,
             isLoading = false,
-            said = _uiState.value.said,
         )
         settled()
     }
@@ -564,7 +547,7 @@ class EventEditViewModel @Inject constructor(
      */
     private fun later() {
         val state = _uiState.value
-        if (state.event == null || state.copying || state.recurring) return
+        if (state.event == null || state.recurring) return
         pause?.cancel()
         pause = viewModelScope.launch {
             delay(PAUSE)
@@ -594,7 +577,7 @@ class EventEditViewModel @Inject constructor(
     fun save(closing: Boolean = false) {
         pause?.cancel()
         val state = _uiState.value
-        if (state.event == null || state.copying || state.prompt != null || refused) return
+        if (state.event == null || state.prompt != null || refused) return
         if (!dirty(state)) {
             if (closing) after(closing = true)
             return
@@ -632,12 +615,12 @@ class EventEditViewModel @Inject constructor(
     }
 
     /**
-     * Makes the new event, as Create asks; the screen then goes on as its
-     * editor. A copy's editor makes its event as soon as the copy is read.
+     * Makes the new event, a copy as any other, as Create asks; the screen
+     * then goes back to the calendar, which says so.
      */
     fun create() {
         val state = _uiState.value
-        if ((state.event != null && !state.copying) || state.isSaving) return
+        if (state.event != null || state.isSaving) return
         if (state.title.isBlank()) {
             _uiState.value = state.copy(untitled = true, asked = state.asked + 1)
             return
@@ -649,13 +632,7 @@ class EventEditViewModel @Inject constructor(
                 val made = repository.createEvent(state.calendar, components(form(state), emptyList(), Scope.ALL))
                 VisibilityStore.reveal(context, made.calendar)
                 remember(state)
-                // A copy, made to be changed, opens; a new event is done with, and
-                // the screen goes back to the calendar it now shows on.
-                _uiState.value = if (state.copying) {
-                    _uiState.value.copy(isSaving = false, follow = Follow(made.id, listed(state), Said.COPIED))
-                } else {
-                    _uiState.value.copy(isSaving = false, created = true)
-                }
+                _uiState.value = _uiState.value.copy(isSaving = false, created = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
             }
@@ -706,37 +683,24 @@ class EventEditViewModel @Inject constructor(
     }
 
     /**
-     * Makes the copy asked for at once and goes on as its editor, as the
-     * web's side panel does: [Scope.ONE] without its repeat, the whole series
-     * moved back to its own start. A change not yet saved goes into the copy
-     * rather than being dropped. It lands in the event's calendar when that
-     * can be written to.
+     * Opens the copy asked for as a new event in this editor, which Create
+     * makes, as the web's side panel does: [Scope.ONE] without its repeat,
+     * the whole series moved back to its own start. A change not yet saved
+     * goes into the copy rather than being dropped, and leaving asks before
+     * it is lost. It lands in the event's calendar when that can be written
+     * to. A save under way finishes first.
      */
     private fun clone(scope: Scope) {
         pause?.cancel()
         viewModelScope.launch {
             writing.withLock {
                 val state = _uiState.value
-                val form = if (dirty(state)) {
-                    duplicate(form(state), scope)
-                } else {
-                    carried?.components?.let { copied(it, state.occurrence, scope, zone) }
-                } ?: return@withLock
+                val plain = carried?.components?.let { copied(it, state.occurrence, scope, zone) }
+                val edited = dirty(state)
+                val form = (if (edited) duplicate(form(state), scope) else plain) ?: return@withLock
                 val calendar = state.calendars.firstOrNull { it.id == state.calendar }?.id
                     ?: state.calendars.firstOrNull()?.id.orEmpty()
-                _uiState.value = _uiState.value.copy(isSaving = true, error = null)
-                try {
-                    // The copy is a new event: nothing of the original's tree goes with it.
-                    val made = repository.createEvent(calendar, components(form, emptyList(), Scope.ALL))
-                    VisibilityStore.reveal(context, made.calendar)
-                    val moment = if (form.recurrence.frequency == Frequency.NEVER) 0 else form.start
-                    _uiState.value = _uiState.value.copy(
-                        isSaving = false,
-                        follow = Follow(made.id, moment, Said.COPIED),
-                    )
-                } catch (e: Exception) {
-                    _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
-                }
+                open(form, state.calendars, calendar, plain?.takeIf { edited }?.let { it to calendar })
             }
         }
     }

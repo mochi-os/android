@@ -78,14 +78,16 @@ import org.mochios.android.R as MochiR
 
 /**
  * The contact editor, in create mode when the route names no contact and edit
- * mode when it does. An edit saves as it goes and has no Save; a new contact
- * is saved by Create, after which the screen goes on as its editor.
+ * mode when it does. An edit saves as it goes and has no Save; a new contact,
+ * a copy as any other, is made by Create, after which the screen goes back.
  */
 @Composable
 fun ContactEditScreen(
     onBack: () -> Unit,
-    /** Goes on as another contact: the one made, copied, or merged into. */
+    /** Goes on as another contact: the one a merge left standing. */
     onOpen: (String) -> Unit,
+    /** Opens a copy of the contact named, as a new contact. */
+    onCopy: (String) -> Unit = {},
     onDeleted: () -> Unit,
     /** Opens the directory search to link this card to the person it finds. */
     onFindPerson: (contact: String, name: String) -> Unit = { _, _ -> },
@@ -96,6 +98,9 @@ fun ContactEditScreen(
 
     LaunchedEffect(uiState.opened) {
         uiState.opened?.let(onOpen)
+    }
+    LaunchedEffect(uiState.copied) {
+        uiState.copied?.let(onCopy)
     }
     LaunchedEffect(uiState.left) {
         if (uiState.left) onBack()

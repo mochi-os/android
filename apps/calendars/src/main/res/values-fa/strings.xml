@@ -146,9 +146,7 @@
     <string name="calendars_undo">واگرد</string>
     <string name="calendars_event_resize">تغییر زمان پایان</string>
     <string name="calendars_event_copy">کپی</string>
-    <string name="calendars_event_copied">رویداد کپی شد</string>
     <string name="calendars_scope_copy">کپی این رویداد</string>
-    <string name="calendars_editor_copy_title">کپی رویداد</string>
     <string name="calendars_title_required">عنوان الزامی است</string>
     <string name="calendars_link_submit">پیوند دادن</string>
     <string name="calendars_link_sync">همگام‌سازی اکنون</string>

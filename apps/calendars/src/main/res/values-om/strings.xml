@@ -146,9 +146,7 @@
     <string name="calendars_undo">Duubatti deebisi</string>
     <string name="calendars_event_resize">Yeroo xumuraa jijjiiri</string>
     <string name="calendars_event_copy">Garagalchi</string>
-    <string name="calendars_event_copied">Taateen garagalfame</string>
     <string name="calendars_scope_copy">Taatee kana garagalchi</string>
-    <string name="calendars_editor_copy_title">Taatee garagalchi</string>
     <string name="calendars_title_required">Mata dureen barbaachisaa dha</string>
     <string name="calendars_link_submit">Walqabsiisi</string>
     <string name="calendars_link_sync">Amma walsimsiisi</string>

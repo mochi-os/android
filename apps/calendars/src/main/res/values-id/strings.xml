@@ -142,9 +142,7 @@
     <string name="calendars_undo">Urungkan</string>
     <string name="calendars_event_resize">Ubah waktu selesai</string>
     <string name="calendars_event_copy">Salin</string>
-    <string name="calendars_event_copied">Acara disalin</string>
     <string name="calendars_scope_copy">Salin acara ini</string>
-    <string name="calendars_editor_copy_title">Salin acara</string>
     <string name="calendars_title_required">Judul wajib diisi</string>
     <string name="calendars_link_submit">Tautkan</string>
     <string name="calendars_link_sync">Sinkronkan sekarang</string>

@@ -143,9 +143,7 @@
     <string name="calendars_undo">Anile</string>
     <string name="calendars_event_resize">Chanje lè fen an</string>
     <string name="calendars_event_copy">Kopye</string>
-    <string name="calendars_event_copied">Evènman kopye</string>
     <string name="calendars_scope_copy">Kopye evènman sa a</string>
-    <string name="calendars_editor_copy_title">Kopye evènman</string>
     <string name="calendars_title_required">Tit obligatwa</string>
     <string name="calendars_link_submit">Konekte</string>
     <string name="calendars_link_sync">Sinkronize kounye a</string>

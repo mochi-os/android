@@ -132,9 +132,8 @@ import org.mochios.calendars.ui.router.CalendarsSection
  * redraw and not a fetch of a different shape. [onCopyEvent] opens the
  * editor on a copy of a stored event's occurrence, with how far the copy
  * reaches; [onCopyOccurrence] on a copy of one the editor cannot load, a
- * subscription's or a birthday. [copied] says a copy was just saved, which
- * the screen reports once and [onCopiedShown] clears; [deleted] that the
- * editor deleted something, reported once with Undo and cleared by
+ * subscription's or a birthday; either is made by the editor's Create, as
+ * a new event is. [deleted] says the editor deleted something, reported once with Undo and cleared by
  * [onDeletedShown]; [saved] that the editor saved an event,
  * [CalendarsApp.CREATED] or [CalendarsApp.CHANGED], reported once and
  * cleared by [onSavedShown]. [sole] is a calendar to show on its own, as a
@@ -153,8 +152,6 @@ fun CalendarScreen(
     onEditEvent: (String, Long) -> Unit,
     onCopyEvent: (String, Long, Scope) -> Unit,
     onCopyOccurrence: (Instance) -> Unit,
-    copied: Boolean = false,
-    onCopiedShown: () -> Unit = {},
     deleted: Boolean = false,
     onDeletedShown: () -> Unit = {},
     saved: String = "",
@@ -239,15 +236,6 @@ fun CalendarScreen(
                     is CalendarEvent.Done -> snackbar.showSnackbar(resources.getString(event.message))
                 }
             }
-        }
-    }
-
-    LaunchedEffect(copied) {
-        // Said from the screen's own scope: the flag clears at once, and the
-        // message outlives this effect.
-        if (copied) {
-            onCopiedShown()
-            scope.launch { snackbar.showSnackbar(resources.getString(R.string.calendars_event_copied)) }
         }
     }
 

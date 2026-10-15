@@ -146,9 +146,7 @@
     <string name="calendars_undo">بېرته راګرځول</string>
     <string name="calendars_event_resize">د پای وخت بدل کړئ</string>
     <string name="calendars_event_copy">کاپي کړئ</string>
-    <string name="calendars_event_copied">پېښه کاپي شوه</string>
     <string name="calendars_scope_copy">دا پېښه کاپي کړئ</string>
-    <string name="calendars_editor_copy_title">پېښه کاپي کړئ</string>
     <string name="calendars_title_required">سرلیک ته اړتیا ده</string>
     <string name="calendars_link_submit">وتړئ</string>
     <string name="calendars_link_sync">اوس همغږي کړئ</string>

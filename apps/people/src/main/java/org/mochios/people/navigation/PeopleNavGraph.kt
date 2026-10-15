@@ -38,7 +38,7 @@ object PeopleApp {
 
     const val CONTACTS = "people/contacts?action={action}"
     const val CONTACTS_ADD = "people/contacts/add?contact={contact}&name={name}&book={book}"
-    const val CONTACT_NEW = "people/contacts/new?book={book}"
+    const val CONTACT_NEW = "people/contacts/new?book={book}&copy={copy}"
     const val CONTACT_EDIT = "people/contacts/{id}"
     const val BOOK_CREATE = "people/books/create"
     const val BOOK = "people/books/{id}"
@@ -61,6 +61,9 @@ object PeopleApp {
 
     /** A new contact, in [book] when it was started from one. */
     fun contactNew(book: String = ""): String = "people/contacts/new?book=${Uri.encode(book)}"
+
+    /** A new contact copying [contact], made by its Create. */
+    fun contactCopy(contact: String): String = "people/contacts/new?copy=${Uri.encode(contact)}"
 
     fun groupDetail(id: String) = "people/groups/$id"
     fun groupAddMember(id: String) = "people/groups/$id/add-member"
@@ -190,7 +193,10 @@ fun NavGraphBuilder.peopleNavGraph(
     // Registered ahead of CONTACT_EDIT so "new" is not read as a contact id.
     composable(
         route = PeopleApp.CONTACT_NEW,
-        arguments = listOf(navArgument("book") { type = NavType.StringType; defaultValue = "" }),
+        arguments = listOf(
+            navArgument("book") { type = NavType.StringType; defaultValue = "" },
+            navArgument("copy") { type = NavType.StringType; defaultValue = "" },
+        ),
     ) {
         ContactEditScreen(
             // Create goes back here too, to where the new one was started.
@@ -211,11 +217,17 @@ fun NavGraphBuilder.peopleNavGraph(
         ContactEditScreen(
             onBack = { navController.popBackStack() },
             onFindPerson = { contact, name -> navController.navigate(PeopleApp.contactsAdd(contact, name)) },
-            // A copy, or the contact a merge left standing, takes this
-            // editor's place. The list behind reloads on the repository's
-            // contactsChanged, so stepping back to it shows every edit.
+            // The contact a merge left standing, or a copy to make, takes this
+            // editor's place, so Back from it lands on the list. The list
+            // reloads on the repository's contactsChanged, so stepping back to
+            // it shows every edit.
             onOpen = { id ->
                 navController.navigate(PeopleApp.contactEdit(id)) {
+                    popUpTo(PeopleApp.CONTACT_EDIT) { inclusive = true }
+                }
+            },
+            onCopy = { id ->
+                navController.navigate(PeopleApp.contactCopy(id)) {
                     popUpTo(PeopleApp.CONTACT_EDIT) { inclusive = true }
                 }
             },

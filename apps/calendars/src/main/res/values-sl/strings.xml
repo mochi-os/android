@@ -154,9 +154,7 @@
     <string name="calendars_undo">Razveljavi</string>
     <string name="calendars_event_resize">Spremeni čas konca</string>
     <string name="calendars_event_copy">Kopiraj</string>
-    <string name="calendars_event_copied">Dogodek kopiran</string>
     <string name="calendars_scope_copy">Kopiraj ta dogodek</string>
-    <string name="calendars_editor_copy_title">Kopiraj dogodek</string>
     <string name="calendars_title_required">Naslov je obvezen</string>
     <string name="calendars_link_submit">Poveži</string>
     <string name="calendars_link_sync">Sinhroniziraj zdaj</string>

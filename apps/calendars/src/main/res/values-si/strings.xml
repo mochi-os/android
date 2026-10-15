@@ -146,9 +146,7 @@
     <string name="calendars_undo">අහෝසි කරන්න</string>
     <string name="calendars_event_resize">අවසන් වේලාව වෙනස් කරන්න</string>
     <string name="calendars_event_copy">පිටපත් කරන්න</string>
-    <string name="calendars_event_copied">සිදුවීම පිටපත් කරන ලදී</string>
     <string name="calendars_scope_copy">මෙම සිදුවීම පිටපත් කරන්න</string>
-    <string name="calendars_editor_copy_title">සිදුවීම පිටපත් කරන්න</string>
     <string name="calendars_title_required">මාතෘකාව අවශ්‍යයි</string>
     <string name="calendars_link_submit">සම්බන්ධ කරන්න</string>
     <string name="calendars_link_sync">දැන් සමමුහුර්ත කරන්න</string>

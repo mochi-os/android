@@ -146,9 +146,7 @@
     <string name="calendars_undo">واپس کریں</string>
     <string name="calendars_event_resize">اختتامی وقت تبدیل کریں</string>
     <string name="calendars_event_copy">کاپی کریں</string>
-    <string name="calendars_event_copied">ایونٹ کاپی ہو گیا</string>
     <string name="calendars_scope_copy">یہ ایونٹ کاپی کریں</string>
-    <string name="calendars_editor_copy_title">ایونٹ کاپی کریں</string>
     <string name="calendars_title_required">عنوان درکار ہے</string>
     <string name="calendars_link_submit">لنک کریں</string>
     <string name="calendars_link_sync">ابھی سنک کریں</string>

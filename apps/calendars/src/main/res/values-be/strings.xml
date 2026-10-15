@@ -154,9 +154,7 @@
     <string name="calendars_undo">Адмяніць</string>
     <string name="calendars_event_resize">Змяніць час заканчэння</string>
     <string name="calendars_event_copy">Капіраваць</string>
-    <string name="calendars_event_copied">Падзея скапіравана</string>
     <string name="calendars_scope_copy">Скапіраваць гэтую падзею</string>
-    <string name="calendars_editor_copy_title">Скапіраваць падзею</string>
     <string name="calendars_title_required">Назва абавязковая</string>
     <string name="calendars_link_submit">Звязаць</string>
     <string name="calendars_link_sync">Сінхранізаваць цяпер</string>

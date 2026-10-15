@@ -146,9 +146,7 @@
     <string name="calendars_undo">Kutt\'ayaña</string>
     <string name="calendars_event_resize">Tukuyaña pacha mayjt\'ayaña</string>
     <string name="calendars_event_copy">Copiaña</string>
-    <string name="calendars_event_copied">Luräwi copiatawa</string>
     <string name="calendars_scope_copy">Aka luräwi copiaña</string>
-    <string name="calendars_editor_copy_title">Luräwi copiaña</string>
     <string name="calendars_title_required">Título wakisiwa</string>
     <string name="calendars_link_submit">Chinuña</string>
     <string name="calendars_link_sync">Jichha sincronizaña</string>

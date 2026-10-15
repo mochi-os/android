@@ -142,9 +142,7 @@
     <string name="calendars_undo">復原</string>
     <string name="calendars_event_resize">變更結束時間</string>
     <string name="calendars_event_copy">複製</string>
-    <string name="calendars_event_copied">已複製活動</string>
     <string name="calendars_scope_copy">複製此活動</string>
-    <string name="calendars_editor_copy_title">複製活動</string>
     <string name="calendars_title_required">標題為必填</string>
     <string name="calendars_link_submit">連結</string>
     <string name="calendars_link_sync">立即同步</string>

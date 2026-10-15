@@ -142,9 +142,7 @@
     <string name="calendars_undo">元に戻す</string>
     <string name="calendars_event_resize">終了時刻を変更</string>
     <string name="calendars_event_copy">コピー</string>
-    <string name="calendars_event_copied">予定をコピーしました</string>
     <string name="calendars_scope_copy">この予定をコピー</string>
-    <string name="calendars_editor_copy_title">予定をコピー</string>
     <string name="calendars_title_required">タイトルが必要です</string>
     <string name="calendars_link_submit">リンク</string>
     <string name="calendars_link_sync">今すぐ同期</string>

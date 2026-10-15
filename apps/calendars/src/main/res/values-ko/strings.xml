@@ -142,9 +142,7 @@
     <string name="calendars_undo">실행 취소</string>
     <string name="calendars_event_resize">종료 시간 변경</string>
     <string name="calendars_event_copy">복사</string>
-    <string name="calendars_event_copied">일정이 복사되었어요</string>
     <string name="calendars_scope_copy">이 일정 복사</string>
-    <string name="calendars_editor_copy_title">일정 복사</string>
     <string name="calendars_title_required">제목은 필수예요</string>
     <string name="calendars_link_submit">연결</string>
     <string name="calendars_link_sync">지금 동기화</string>

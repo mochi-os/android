@@ -211,14 +211,29 @@ class ContactsFlowTest {
     }
 
     @Test
-    fun `a copy is made at once from the card as it stands, and opened`() {
+    fun `Copy saves what is pending, then opens the copy as a new contact, making nothing`() {
         val model = editor()
         model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
         model.copy()
-        until { model.uiState.value.opened == "c9" }
+        until { model.uiState.value.copied == "c1" }
+        assertTrue(sent("update").single().contains("Ada Lovelace"))
+        assertEquals(emptyList<String>(), sent("create"))
+        assertEquals(null, model.uiState.value.opened)
+    }
+
+    @Test
+    fun `a copy opens on the card it copies, and Create makes it from that card`() {
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("copy" to "c1")), repository)
+        until { model.uiState.value.form.name == "Ada" && model.uiState.value.books.isNotEmpty() }
+        assertEquals("b1", model.uiState.value.form.book)
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(1500))
+        assertEquals(emptyList<String>(), sent("create"))
+        model.create()
+        until { model.uiState.value.left }
         val body = sent("create").single()
         assertTrue(body, body.contains("\"source\":\"c1\""))
-        assertTrue(body, body.contains("Ada Lovelace"))
+        assertTrue(body, body.contains("Ada"))
+        assertTrue(body, body.contains("\"book\":\"b1\""))
     }
 
     @get:Rule
@@ -227,18 +242,19 @@ class ContactsFlowTest {
     @Test
     fun `an open contact has no Save, and its menu's Copy opens the copy`() {
         val model = editor()
-        val opened = mutableListOf<String>()
+        val copies = mutableListOf<String>()
         rule.setContent {
-            ContactEditScreen(onBack = {}, onOpen = { opened += it }, onDeleted = {}, viewModel = model)
+            ContactEditScreen(onBack = {}, onOpen = {}, onCopy = { copies += it }, onDeleted = {}, viewModel = model)
         }
         // Titled with the contact's name rather than "Edit contact".
         rule.onNodeWithText("Edit contact").assertDoesNotExist()
         rule.onNodeWithContentDescription("Save").assertDoesNotExist()
         rule.onNodeWithContentDescription("Contact actions").performClick()
         rule.onNodeWithText("Copy").performClick()
-        until { model.uiState.value.opened == "c9" }
+        until { model.uiState.value.copied == "c1" }
         rule.waitForIdle()
-        assertEquals(listOf("c9"), opened)
+        assertEquals(listOf("c1"), copies)
+        assertEquals(emptyList<String>(), sent("create"))
     }
 
     @Test

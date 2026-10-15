@@ -158,9 +158,7 @@
     <string name="calendars_undo">Cealaigh</string>
     <string name="calendars_event_resize">Athraigh an t-am críochnaithe</string>
     <string name="calendars_event_copy">Cóipeáil</string>
-    <string name="calendars_event_copied">Imeacht cóipeáilte</string>
     <string name="calendars_scope_copy">Cóipeáil an t-imeacht seo</string>
-    <string name="calendars_editor_copy_title">Cóipeáil imeacht</string>
     <string name="calendars_title_required">Teideal de dhíth</string>
     <string name="calendars_link_submit">Nasc</string>
     <string name="calendars_link_sync">Sioncronaigh anois</string>

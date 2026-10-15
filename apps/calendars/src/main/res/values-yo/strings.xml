@@ -142,9 +142,7 @@
     <string name="calendars_undo">Dá padà</string>
     <string name="calendars_event_resize">Yí àkókò ìparí padà</string>
     <string name="calendars_event_copy">Ṣe àdàkọ</string>
-    <string name="calendars_event_copied">A ti ṣe àdàkọ ìṣẹ̀lẹ̀</string>
     <string name="calendars_scope_copy">Ṣe àdàkọ ìṣẹ̀lẹ̀ yìí</string>
-    <string name="calendars_editor_copy_title">Ṣe àdàkọ ìṣẹ̀lẹ̀</string>
     <string name="calendars_title_required">Àkọlé ṣe pàtàkì</string>
     <string name="calendars_link_submit">So pọ̀</string>
     <string name="calendars_link_sync">Ṣe àmúṣiṣẹ́pọ̀ báyìí</string>
