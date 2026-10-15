@@ -37,11 +37,9 @@ import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
-import androidx.compose.material.icons.outlined.Event
 import androidx.compose.material.icons.outlined.Flight
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Palette
-import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material.icons.outlined.Repeat
 import androidx.compose.material.icons.outlined.Schedule
@@ -104,17 +102,11 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.FieldLabel
-import org.mochios.android.ui.components.LabeledSelectField
-import org.mochios.android.ui.components.LabeledSwitchRow
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextButton
-import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.ZonePicker
 import org.mochios.android.util.Zones
 import org.mochios.android.util.flightNumber
@@ -127,6 +119,18 @@ import org.mochios.calendars.ui.components.DateDialog
 import org.mochios.calendars.ui.dialogs.DeleteEventDialog
 import org.mochios.calendars.ui.dialogs.ScopeDialog
 import org.mochios.calendars.ui.dialogs.reminderChoices
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.material.icons.automirrored.outlined.Notes
+import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.LocationOn
+import androidx.compose.material.icons.outlined.Map
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Switch
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.text.style.TextAlign
 import java.time.Instant
 import java.time.LocalDate
 import java.time.LocalTime
@@ -271,8 +275,7 @@ fun EventEditScreen(
                 .consumeWindowInsets(padding)
                 .imePadding()
                 .verticalScroll(rememberScrollState())
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+                .padding(horizontal = 16.dp, vertical = 8.dp),
         ) {
             CalendarField(
                 calendars = uiState.calendars,
@@ -302,24 +305,31 @@ fun EventEditScreen(
                 onLeave = { if (!creating && uiState.writable) viewModel.save() },
                 select = uiState.copying,
             )
-            Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                Box(modifier = Modifier.weight(1f)) {
-                    LabeledSwitchRow(
-                        icon = Icons.Outlined.Schedule,
-                        label = stringResource(R.string.calendars_event_allday),
-                        checked = uiState.allday,
-                        onCheckedChange = viewModel::allday,
-                        enabled = !uiState.isSaving,
+            EditorDivider()
+            EditorRow(icon = Icons.Outlined.Schedule) {
+                Row(modifier = Modifier.weight(1f), verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = stringResource(R.string.calendars_event_allday),
+                        style = MaterialTheme.typography.bodyLarge,
+                        modifier = Modifier.weight(1f).padding(end = 8.dp),
                     )
+                    Switch(checked = uiState.allday, onCheckedChange = viewModel::allday, enabled = !uiState.isSaving)
                 }
-                Box(modifier = Modifier.weight(1f)) {
-                    LabeledSwitchRow(
-                        icon = Dashed,
-                        label = stringResource(R.string.calendars_status_tentative),
-                        checked = uiState.tentative,
-                        onCheckedChange = viewModel::tentative,
-                        enabled = !uiState.isSaving,
+                Spacer(Modifier.width(16.dp))
+                Row(modifier = Modifier.weight(1f), verticalAlignment = Alignment.CenterVertically) {
+                    Icon(
+                        Dashed,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(18.dp),
                     )
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        text = stringResource(R.string.calendars_status_tentative),
+                        style = MaterialTheme.typography.bodyLarge,
+                        modifier = Modifier.weight(1f).padding(end = 8.dp),
+                    )
+                    Switch(checked = uiState.tentative, onCheckedChange = viewModel::tentative, enabled = !uiState.isSaving)
                 }
             }
             EventMoments(
@@ -343,30 +353,34 @@ fun EventEditScreen(
                 onCustom = viewModel::custom,
                 onChange = viewModel::recurrence,
             )
-            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                FieldLabel(
-                    text = stringResource(R.string.calendars_event_reminder),
-                    icon = Icons.Outlined.Notifications,
+            EditorDivider()
+            // The bell leads the first reminder, or Add reminder when there is none.
+            uiState.reminders.forEachIndexed { index, minutes ->
+                ReminderRow(
+                    minutes = minutes,
+                    first = index == 0,
+                    onSelect = { viewModel.reminder(index, it) },
+                    onRemove = { viewModel.removeReminder(index) },
                 )
-                uiState.reminders.forEachIndexed { index, minutes ->
-                    ReminderRow(
-                        minutes = minutes,
-                        onSelect = { viewModel.reminder(index, it) },
-                        onRemove = { viewModel.removeReminder(index) },
-                    )
-                }
-                MochiTextButton(onClick = viewModel::addReminder) {
-                    Icon(Icons.Outlined.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
-                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                    Text(stringResource(R.string.calendars_reminder_add))
-                }
             }
+            EditorRow(
+                icon = if (uiState.reminders.isEmpty()) Icons.Outlined.Notifications else null,
+                modifier = Modifier.clickable(onClick = viewModel::addReminder),
+            ) {
+                Text(
+                    text = stringResource(R.string.calendars_reminder_add),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            EditorDivider()
             EventColour(
                 colour = uiState.colour,
                 enabled = !uiState.isSaving,
                 onColour = viewModel::colour,
             )
             if (creating || uiState.copying) {
+                Spacer(Modifier.height(16.dp))
                 MochiButton(
                     onClick = viewModel::create,
                     enabled = !uiState.isSaving && uiState.writable,
@@ -447,6 +461,163 @@ internal fun Modifier.leaving(left: () -> Unit): Modifier = composed {
     }
 }
 
+/** The width of the column the editor's glyphs sit in, before what each row holds. */
+private val GLYPH = 40.dp
+
+/** The least height of one of the editor's rows: a touch target. */
+private val ROW = 48.dp
+
+/**
+ * One of the editor's rows: [icon] in the start column, level with the first
+ * line, then [content]. A row with no icon keeps the column empty, so all the
+ * form holds starts on one line, as a phone's calendar lays its editor out.
+ */
+@Composable
+internal fun EditorRow(
+    icon: ImageVector?,
+    modifier: Modifier = Modifier,
+    content: @Composable RowScope.() -> Unit,
+) {
+    Row(modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.Top) {
+        Box(modifier = Modifier.width(GLYPH).heightIn(min = ROW), contentAlignment = Alignment.CenterStart) {
+            if (icon != null) {
+                Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+        Row(
+            modifier = Modifier.weight(1f).heightIn(min = ROW),
+            verticalAlignment = Alignment.CenterVertically,
+            content = content,
+        )
+    }
+}
+
+/** The rule between the editor's groups of rows. */
+@Composable
+private fun EditorDivider() {
+    HorizontalDivider(
+        modifier = Modifier.padding(vertical = 8.dp),
+        color = MaterialTheme.colorScheme.outlineVariant,
+    )
+}
+
+/**
+ * A field drawn on the page, with no box: what is typed, or [placeholder]
+ * where nothing is, in the row's own column. The field's name is its
+ * placeholder and its row's glyph, and is read out from [placeholder]
+ * whatever it holds.
+ */
+@Composable
+private fun PlainField(
+    value: TextFieldValue,
+    onValueChange: (TextFieldValue) -> Unit,
+    placeholder: String,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    singleLine: Boolean = false,
+    minLines: Int = 1,
+    style: androidx.compose.ui.text.TextStyle = MaterialTheme.typography.bodyLarge,
+    error: Boolean = false,
+    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+    keyboardActions: KeyboardActions = KeyboardActions.Default,
+) {
+    val colours = MaterialTheme.colorScheme
+    BasicTextField(
+        value = value,
+        onValueChange = onValueChange,
+        modifier = modifier.semantics { contentDescription = placeholder },
+        enabled = enabled,
+        singleLine = singleLine,
+        minLines = minLines,
+        maxLines = if (singleLine) 1 else Int.MAX_VALUE,
+        textStyle = style.copy(color = if (enabled) colours.onSurface else colours.onSurface.copy(alpha = 0.38f)),
+        keyboardOptions = keyboardOptions,
+        keyboardActions = keyboardActions,
+        cursorBrush = SolidColor(colours.primary),
+        decorationBox = { field ->
+            Box(modifier = Modifier.padding(vertical = 12.dp), contentAlignment = Alignment.CenterStart) {
+                if (value.text.isEmpty()) {
+                    Text(
+                        text = placeholder,
+                        style = style,
+                        color = if (error) colours.error else colours.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+                field()
+            }
+        },
+    )
+}
+
+/** [PlainField] for a plain string, the cursor kept across what is typed. */
+@Composable
+private fun PlainField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    placeholder: String,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    singleLine: Boolean = false,
+    minLines: Int = 1,
+    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+) {
+    var field by remember { mutableStateOf(TextFieldValue(value, TextRange(value.length))) }
+    // A value set from outside the field replaces it.
+    if (field.text != value) field = TextFieldValue(value, TextRange(value.length))
+    PlainField(
+        value = field,
+        onValueChange = { typed ->
+            field = typed
+            if (typed.text != value) onValueChange(typed.text)
+        },
+        placeholder = placeholder,
+        modifier = modifier,
+        enabled = enabled,
+        singleLine = singleLine,
+        minLines = minLines,
+        keyboardOptions = keyboardOptions,
+    )
+}
+
+/**
+ * Text on the page that opens a picker, as a date, a time or a choice is
+ * shown: the value in the body style, with the press shown across it.
+ */
+@Composable
+private fun Choice(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    align: TextAlign = TextAlign.Start,
+    trailing: Boolean = false,
+) {
+    Row(
+        modifier = modifier
+            .clip(RoundedCornerShape(8.dp))
+            .clickable(onClick = onClick)
+            .heightIn(min = ROW),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            text = text,
+            style = MaterialTheme.typography.bodyLarge,
+            textAlign = align,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f, fill = true),
+        )
+        if (trailing) {
+            Icon(
+                Icons.Default.ArrowDropDown,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+}
+
 /**
  * The event's own colour: the compact picker, and above it a text box for a
  * colour written as something other than #rrggbb, such as a CSS name, which
@@ -454,26 +625,27 @@ internal fun Modifier.leaving(left: () -> Unit): Modifier = composed {
  */
 @Composable
 internal fun EventColour(colour: String, enabled: Boolean, onColour: (String) -> Unit) {
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        FieldLabel(text = stringResource(R.string.calendars_colour), icon = Icons.Outlined.Palette)
-        val hex = HEX.matches(colour)
-        if (colour.isNotEmpty() && !hex) {
-            val label = stringResource(R.string.calendars_event_colour_value)
-            MochiTextField(
-                value = colour,
-                onValueChange = onColour,
-                singleLine = true,
-                enabled = enabled,
-                modifier = Modifier.fillMaxWidth().semantics { contentDescription = label },
+    EditorRow(icon = Icons.Outlined.Palette) {
+        Column(modifier = Modifier.weight(1f).padding(vertical = 8.dp)) {
+            val hex = HEX.matches(colour)
+            if (colour.isNotEmpty() && !hex) {
+                PlainField(
+                    value = colour,
+                    onValueChange = onColour,
+                    placeholder = stringResource(R.string.calendars_event_colour_value),
+                    singleLine = true,
+                    enabled = enabled,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+            ColorPicker(
+                hex = if (hex) colour else "",
+                onHexChange = onColour,
+                collapsible = true,
+                onClear = { onColour("") },
+                modifier = Modifier.fillMaxWidth(),
             )
         }
-        ColorPicker(
-            hex = if (hex) colour else "",
-            onHexChange = onColour,
-            collapsible = true,
-            onClear = { onColour("") },
-            modifier = Modifier.fillMaxWidth(),
-        )
     }
 }
 
@@ -523,68 +695,81 @@ internal fun EventText(
             focus.requestFocus()
         }
     }
-    Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        MochiTextField(
-            value = field,
-            onValueChange = { value ->
-                field = value
-                if (value.text != title) onTitle(value.text)
-            },
-            label = { Text(stringResource(R.string.calendars_event_title)) },
-            singleLine = true,
-            enabled = enabled,
-            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
-            keyboardActions = KeyboardActions(onDone = { onSave() }),
-            isError = untitled,
-            supportingText = if (untitled) {
-                { Text(stringResource(R.string.calendars_title_required)) }
-            } else {
-                null
-            },
-            modifier = Modifier.fillMaxWidth().bringIntoViewRequester(view).focusRequester(focus).leaving(onLeave),
-        )
-        MochiTextField(
-            value = description,
-            onValueChange = onDescription,
-            label = { Text(stringResource(R.string.calendars_event_description)) },
-            enabled = enabled,
-            minLines = 2,
-            modifier = Modifier.fillMaxWidth().leaving(onLeave),
-        )
+    Column {
+        EditorRow(icon = null) {
+            Column(modifier = Modifier.weight(1f)) {
+                PlainField(
+                    value = field,
+                    onValueChange = { value ->
+                        field = value
+                        if (value.text != title) onTitle(value.text)
+                    },
+                    placeholder = stringResource(R.string.calendars_event_title),
+                    style = MaterialTheme.typography.headlineSmall,
+                    singleLine = true,
+                    enabled = enabled,
+                    error = untitled,
+                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                    keyboardActions = KeyboardActions(onDone = { onSave() }),
+                    modifier = Modifier.fillMaxWidth().bringIntoViewRequester(view).focusRequester(focus).leaving(onLeave),
+                )
+                if (untitled) {
+                    Text(
+                        text = stringResource(R.string.calendars_title_required),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.error,
+                        modifier = Modifier.padding(bottom = 8.dp),
+                    )
+                }
+            }
+        }
+        EditorDivider()
+        EditorRow(icon = Icons.AutoMirrored.Outlined.Notes) {
+            PlainField(
+                value = description,
+                onValueChange = onDescription,
+                placeholder = stringResource(R.string.calendars_event_description),
+                enabled = enabled,
+                minLines = 2,
+                modifier = Modifier.weight(1f).leaving(onLeave),
+            )
+        }
         val context = LocalContext.current
         val format = LocalFormat.current
-        MochiTextField(
-            value = location,
-            onValueChange = onLocation,
-            label = { Text(stringResource(R.string.calendars_event_location)) },
-            singleLine = true,
-            enabled = enabled,
+        EditorRow(icon = Icons.Outlined.LocationOn) {
+            PlainField(
+                value = location,
+                onValueChange = onLocation,
+                placeholder = stringResource(R.string.calendars_event_location),
+                singleLine = true,
+                enabled = enabled,
+                modifier = Modifier.weight(1f).leaving(onLeave),
+            )
             // Opens the place on a map, or the flight on the user's tracker, as
             // the event sheet's location does.
-            trailingIcon = if (location.isBlank()) null else {
-                {
-                    val flight = flightNumber(location) != null
-                    MochiIconButton(onClick = { openLocation(context, location, format.preferences) }) {
-                        Icon(
-                            if (flight) Icons.Outlined.Flight else Icons.Outlined.Place,
-                            contentDescription = stringResource(
-                                if (flight) R.string.calendars_location_flight else R.string.calendars_location_map,
-                            ),
-                        )
-                    }
+            if (location.isNotBlank()) {
+                val flight = flightNumber(location) != null
+                MochiIconButton(onClick = { openLocation(context, location, format.preferences) }) {
+                    Icon(
+                        if (flight) Icons.Outlined.Flight else Icons.Outlined.Map,
+                        contentDescription = stringResource(
+                            if (flight) R.string.calendars_location_flight else R.string.calendars_location_map,
+                        ),
+                    )
                 }
-            },
-            modifier = Modifier.fillMaxWidth().leaving(onLeave),
-        )
-        MochiTextField(
-            value = url,
-            onValueChange = onUrl,
-            label = { Text(stringResource(R.string.calendars_event_url)) },
-            singleLine = true,
-            enabled = enabled,
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
-            modifier = Modifier.fillMaxWidth().leaving(onLeave),
-        )
+            }
+        }
+        EditorRow(icon = Icons.Outlined.Link) {
+            PlainField(
+                value = url,
+                onValueChange = onUrl,
+                placeholder = stringResource(R.string.calendars_event_url),
+                singleLine = true,
+                enabled = enabled,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
+                modifier = Modifier.weight(1f).leaving(onLeave),
+            )
+        }
     }
 }
 
@@ -610,32 +795,25 @@ private fun MomentField(
     val id = remember(zone, allday) { shownIn(allday, zone) }
     val local = remember(moment, id) { Instant.ofEpochSecond(moment).atZone(id) }
 
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        FieldLabel(text = label, icon = Icons.Outlined.Event)
+    Column {
+        Caption(label)
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-            Box(modifier = Modifier.weight(1f)) {
-                MochiTextField(
-                    value = format.formatDate(moment, id.id),
-                    onValueChange = {},
-                    readOnly = true,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-                Box(modifier = Modifier.matchParentSize().clickable { picking = true })
-            }
+            Choice(
+                text = format.formatDate(moment, id.id),
+                onClick = { picking = true },
+                modifier = Modifier.weight(1f),
+            )
             if (allday) {
                 // The time's room stays, so turning All day on hides the time
                 // without widening the date.
                 Spacer(Modifier.width(TIME))
             } else {
-                Box(modifier = Modifier.width(TIME)) {
-                    MochiTextField(
-                        value = format.formatTime(moment, id.id),
-                        onValueChange = {},
-                        readOnly = true,
-                        modifier = Modifier.fillMaxWidth(),
-                    )
-                    Box(modifier = Modifier.matchParentSize().clickable { timing = true })
-                }
+                Choice(
+                    text = format.formatTime(moment, id.id),
+                    onClick = { timing = true },
+                    align = TextAlign.End,
+                    modifier = Modifier.width(TIME),
+                )
             }
         }
     }
@@ -699,43 +877,47 @@ internal fun EventMoments(
 ) {
     val begins = zone.start.ifBlank { own }
     val ends = zone.finish.ifBlank { begins }
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        MomentField(
-            label = stringResource(R.string.calendars_event_start),
-            moment = start,
-            allday = allday,
-            zone = if (allday) own else begins,
-            onChange = onStart,
-        )
-        if (!allday) {
-            ZoneField(
-                label = stringResource(R.string.calendars_event_zone_start),
-                zone = begins,
-                onChange = { onZone(follow(zone, it)) },
+    EditorRow(icon = null) {
+        Column(modifier = Modifier.weight(1f)) {
+            MomentField(
+                label = stringResource(R.string.calendars_event_start),
+                moment = start,
+                allday = allday,
+                zone = if (allday) own else begins,
+                onChange = onStart,
             )
+            if (!allday) {
+                ZoneField(
+                    label = stringResource(R.string.calendars_event_zone_start),
+                    zone = begins,
+                    onChange = { onZone(follow(zone, it)) },
+                )
+            }
         }
     }
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        MomentField(
-            label = stringResource(R.string.calendars_event_finish),
-            moment = if (allday) finish - DAY else finish,
-            allday = allday,
-            zone = if (allday) own else ends,
-            onChange = { onFinish(if (allday) it + DAY else it) },
-        )
-        if (!ordered) {
-            Text(
-                text = stringResource(R.string.calendars_event_backwards),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.error,
+    EditorRow(icon = null) {
+        Column(modifier = Modifier.weight(1f)) {
+            MomentField(
+                label = stringResource(R.string.calendars_event_finish),
+                moment = if (allday) finish - DAY else finish,
+                allday = allday,
+                zone = if (allday) own else ends,
+                onChange = { onFinish(if (allday) it + DAY else it) },
             )
-        }
-        if (!allday) {
-            ZoneField(
-                label = stringResource(R.string.calendars_event_zone_finish),
-                zone = ends,
-                onChange = { onZone(zone.copy(finish = it)) },
-            )
+            if (!ordered) {
+                Text(
+                    text = stringResource(R.string.calendars_event_backwards),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.error,
+                )
+            }
+            if (!allday) {
+                ZoneField(
+                    label = stringResource(R.string.calendars_event_zone_finish),
+                    zone = ends,
+                    onChange = { onZone(zone.copy(finish = it)) },
+                )
+            }
         }
     }
 }
@@ -754,23 +936,21 @@ internal fun CalendarField(
     var expanded by rememberSaveable { mutableStateOf(false) }
     val name = stringResource(R.string.calendars_event_calendar)
     Box {
-        MochiOutlinedButton(
-            onClick = { expanded = true },
-            modifier = Modifier.fillMaxWidth().semantics { contentDescription = name },
+        EditorRow(
+            icon = Icons.Outlined.CalendarMonth,
+            modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
+                .clickable { expanded = true }
+                .semantics { contentDescription = name },
         ) {
-            Icon(
-                Icons.Outlined.CalendarMonth,
-                contentDescription = null,
-                modifier = Modifier.size(ButtonDefaults.IconSize),
-            )
-            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
             Text(
                 text = calendars.firstOrNull { it.id == selected }?.name.orEmpty(),
+                style = MaterialTheme.typography.bodyLarge,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.weight(1f),
             )
-            Icon(Icons.Default.ArrowDropDown, contentDescription = null)
+            Icon(Icons.Default.ArrowDropDown, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             calendars.forEach { calendar ->
@@ -864,21 +1044,43 @@ internal fun RepeatField(
         Frequency.YEARLY.name to stringResource(R.string.calendars_repeat_yearly),
         CUSTOM to stringResource(R.string.calendars_repeat_custom),
     )
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        LabeledSelectField(
-            label = stringResource(R.string.calendars_event_repeat),
-            icon = Icons.Outlined.Repeat,
-            placeholder = "",
-            options = options,
-            selected = selected,
-            onSelect = { chosen ->
-                when {
-                    chosen == selected -> Unit
-                    chosen == CUSTOM -> onCustom()
-                    else -> onRepeat(Frequency.valueOf(chosen))
+    Column {
+        var expanded by rememberSaveable { mutableStateOf(false) }
+        val name = stringResource(R.string.calendars_event_repeat)
+        Box {
+            EditorRow(
+                icon = Icons.Outlined.Repeat,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .clickable { expanded = true }
+                    .semantics { contentDescription = name },
+            ) {
+                Text(
+                    text = options.firstOrNull { it.first == selected }?.second.orEmpty(),
+                    style = MaterialTheme.typography.bodyLarge,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                Icon(Icons.Default.ArrowDropDown, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+            MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+                options.forEach { (value, label) ->
+                    MochiDropdownMenuItem(
+                        text = { Text(label) },
+                        onClick = {
+                            expanded = false
+                            when {
+                                value == selected -> Unit
+                                value == CUSTOM -> onCustom()
+                                else -> onRepeat(Frequency.valueOf(value))
+                            }
+                        },
+                        selected = value == selected,
+                    )
                 }
-            },
-        )
+            }
+        }
         if (kept) {
             val format = LocalFormat.current
             val resources = LocalContext.current.resources
@@ -887,15 +1089,21 @@ internal fun RepeatField(
                 ruleSummary(recurrence.rule.orEmpty(), resources, format, locale)
             }
             if (summary != null) {
-                Text(
-                    text = summary,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.testTag("kept-rule"),
-                )
+                EditorRow(icon = null) {
+                    Text(
+                        text = summary,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.weight(1f).testTag("kept-rule"),
+                    )
+                }
             }
         } else if (custom) {
-            CustomRepeat(recurrence = recurrence, start = start, allday = allday, zone = zone, onChange = onChange)
+            EditorRow(icon = null) {
+                Box(modifier = Modifier.weight(1f).padding(vertical = 8.dp)) {
+                    CustomRepeat(recurrence = recurrence, start = start, allday = allday, zone = zone, onChange = onChange)
+                }
+            }
         }
     }
 }
@@ -903,7 +1111,12 @@ internal fun RepeatField(
 /** The Repeat field's value for the Custom choice. */
 private const val CUSTOM = "CUSTOM"
 
-/** The custom repeat settings, in a frame beneath the Repeat field. */
+/**
+ * The custom repeat settings beneath the Repeat field, as the rest of the
+ * editor is: each choice under its caption, and the numbers typed into
+ * outlined boxes, which, with the weekday chips, are what takes typing or
+ * toggling here.
+ */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun CustomRepeat(
@@ -916,18 +1129,11 @@ private fun CustomRepeat(
     val format = LocalFormat.current
     val locale = LocalConfiguration.current.locales[0]
     var picking by remember { mutableStateOf(false) }
-    Column(
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-        modifier = Modifier
-            .fillMaxWidth()
-            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, MaterialTheme.shapes.medium)
-            .padding(12.dp),
-    ) {
-        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+        Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             Box(Modifier.weight(1f)) {
-                LabeledSelectField(
+                Select(
                     label = stringResource(R.string.calendars_repeat_frequency),
-                    placeholder = "",
                     options = listOf(
                         Frequency.DAILY.name to stringResource(R.string.calendars_repeat_daily),
                         Frequency.WEEKLY.name to stringResource(R.string.calendars_repeat_weekly),
@@ -966,11 +1172,10 @@ private fun CustomRepeat(
                 }
             }
         }
-        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             Box(Modifier.weight(1f)) {
-                LabeledSelectField(
+                Select(
                     label = stringResource(R.string.calendars_repeat_ends),
-                    placeholder = "",
                     options = listOf(
                         Ending.NEVER.name to stringResource(R.string.calendars_repeat_end_never),
                         Ending.UNTIL.name to stringResource(R.string.calendars_repeat_until),
@@ -982,21 +1187,16 @@ private fun CustomRepeat(
             }
             Box(Modifier.weight(1f)) {
                 when (recurrence.ending) {
-                    Ending.UNTIL -> Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Ending.UNTIL -> Column {
                         val label = stringResource(R.string.calendars_repeat_last)
-                        FieldLabel(text = label)
+                        Caption(label)
                         val day = recurrence.until
                             ?: Instant.ofEpochSecond(start).atZone(shownIn(allday, zone)).toLocalDate()
-                        Box {
-                            MochiTextField(
-                                value = format.formatDate(day.atTime(12, 0).toEpochSecond(ZoneOffset.UTC), "UTC"),
-                                onValueChange = {},
-                                readOnly = true,
-                                singleLine = true,
-                                modifier = Modifier.fillMaxWidth().semantics { contentDescription = label },
-                            )
-                            Box(modifier = Modifier.matchParentSize().clickable { picking = true })
-                        }
+                        Choice(
+                            text = format.formatDate(day.atTime(12, 0).toEpochSecond(ZoneOffset.UTC), "UTC"),
+                            onClick = { picking = true },
+                            modifier = Modifier.fillMaxWidth().semantics { contentDescription = label },
+                        )
                         if (picking) {
                             DateDialog(
                                 day = day,
@@ -1021,51 +1221,102 @@ private fun CustomRepeat(
     }
 }
 
+/** A field's name above it, small and quiet, as the editor's captions are. */
+@Composable
+private fun Caption(text: String) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.padding(top = 8.dp),
+    )
+}
+
+/** A choice among [options] under its [label], its menu opened from the choice. */
+@Composable
+private fun Select(label: String, options: List<Pair<String, String>>, selected: String, onSelect: (String) -> Unit) {
+    var expanded by rememberSaveable { mutableStateOf(false) }
+    Column {
+        Caption(label)
+        Box {
+            Choice(
+                text = options.firstOrNull { it.first == selected }?.second.orEmpty(),
+                onClick = { expanded = true },
+                trailing = true,
+                modifier = Modifier.fillMaxWidth(),
+            )
+            MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+                options.forEach { (value, text) ->
+                    MochiDropdownMenuItem(
+                        text = { Text(text) },
+                        onClick = {
+                            expanded = false
+                            onSelect(value)
+                        },
+                        selected = value == selected,
+                    )
+                }
+            }
+        }
+    }
+}
+
 /**
- * A whole number from 1 to [maximum], typed. What is typed may be cleared to
- * type another; a number in range is taken as it is typed, one past
- * [maximum] as [maximum], and the field shows the value again once it loses
- * the focus.
+ * A whole number from 1 to [maximum], typed into an outlined box under its
+ * caption. What is typed may be cleared to type another; a number in range is
+ * taken as it is typed, one past [maximum] as [maximum], and the box shows the
+ * value again once it loses the focus.
  */
 @Composable
 private fun CountField(label: String, value: Int, maximum: Int, onChange: (Int) -> Unit) {
     var text by remember { mutableStateOf<String?>(null) }
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        FieldLabel(text = label)
-        MochiTextField(
+    var focused by remember { mutableStateOf(false) }
+    Column {
+        Caption(label)
+        PlainField(
             value = text ?: value.toString(),
             onValueChange = { typed ->
                 text = typed
                 val number = typed.trim().toIntOrNull()
                 if (number != null && number >= 1) onChange(minOf(maximum, number))
             },
+            placeholder = label,
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier
+                .padding(top = 4.dp)
                 .fillMaxWidth()
-                .semantics { contentDescription = label }
-                .onFocusChanged { if (!it.isFocused) text = null },
+                .border(
+                    width = if (focused) 2.dp else 1.dp,
+                    color = if (focused) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
+                    shape = RoundedCornerShape(8.dp),
+                )
+                .padding(horizontal = 12.dp)
+                .onFocusChanged { state ->
+                    focused = state.isFocused
+                    if (!state.isFocused) text = null
+                },
         )
     }
 }
 
 
-/** One of an event's reminders: its choice, and a button that removes it. */
+/**
+ * One of an event's reminders: its choice, and a button that removes it. The
+ * [first] is led by the bell.
+ */
 @Composable
-private fun ReminderRow(minutes: Int, onSelect: (Int) -> Unit, onRemove: () -> Unit) {
+private fun ReminderRow(minutes: Int, first: Boolean, onSelect: (Int) -> Unit, onRemove: () -> Unit) {
     var expanded by rememberSaveable { mutableStateOf(false) }
     val choices = reminderChoices(minutes)
-    Row(verticalAlignment = Alignment.CenterVertically) {
+    EditorRow(icon = if (first) Icons.Outlined.Notifications else null) {
         Box(Modifier.weight(1f)) {
-            MochiOutlinedButton(onClick = { expanded = true }, modifier = Modifier.fillMaxWidth()) {
-                Text(
-                    text = choices.firstOrNull { it.first == minutes.toString() }?.second.orEmpty(),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.weight(1f),
-                )
-                Icon(Icons.Default.ArrowDropDown, contentDescription = null)
-            }
+            Choice(
+                text = choices.firstOrNull { it.first == minutes.toString() }?.second.orEmpty(),
+                onClick = { expanded = true },
+                trailing = true,
+                modifier = Modifier.fillMaxWidth(),
+            )
             MochiDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
                 choices.forEach { (value, label) ->
                     MochiDropdownMenuItem(
@@ -1080,7 +1331,11 @@ private fun ReminderRow(minutes: Int, onSelect: (Int) -> Unit, onRemove: () -> U
             }
         }
         MochiIconButton(onClick = onRemove) {
-            Icon(Icons.Outlined.Close, contentDescription = stringResource(R.string.calendars_reminder_remove))
+            Icon(
+                Icons.Outlined.Close,
+                contentDescription = stringResource(R.string.calendars_reminder_remove),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
         }
     }
 }
