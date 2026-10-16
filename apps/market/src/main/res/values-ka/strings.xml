@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">მიმდინარეობს დაბრუნება…</string>
     <string name="market_report_dialog_details_label">დეტალები (არასავალდებულო)</string>
     <string name="market_report_dialog_submitting">იგზავნება</string>
+    <string name="market_reviews_awaiting_response">პასუხის მოლოდინში</string>
     <string name="market_reviews_empty_received_subtitle">მყიდველებსა და გამყიდველებს შეუძლიათ ერთმანეთის შეფასება დასრულებული შეკვეთის შემდეგ.</string>
     <string name="market_reviews_empty_sent_subtitle">გახსენით დასრულებული შეკვეთა მიმოხილვის დასატოვებლად.</string>
     <string name="market_reviews_empty_sent_title">თქვენ ჯერ არ დაგიწერიათ მიმოხილვა</string>

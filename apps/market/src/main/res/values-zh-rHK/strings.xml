@@ -230,6 +230,7 @@
     <string name="market_report_dialog_submitting">提交中</string>
     <string name="market_report_reason_counterfeit">偽造品</string>
     <string name="market_report_reason_prohibited">禁止物品</string>
+    <string name="market_reviews_awaiting_response">等待回覆</string>
     <string name="market_reviews_empty_received_subtitle">買家和賣家可以在訂單完成後互相評論。</string>
     <string name="market_reviews_empty_sent_subtitle">開啟已完成的訂單留下評論。</string>
     <string name="market_reviews_empty_sent_title">你尚未撰寫任何評論</string>

@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Á aisíoc…</string>
     <string name="market_report_dialog_details_label">Sonraí (roghnach)</string>
     <string name="market_report_dialog_submitting">Á chur isteach</string>
+    <string name="market_reviews_awaiting_response">Ag fanacht le freagra</string>
     <string name="market_reviews_empty_received_subtitle">Is féidir le ceannaitheoirí agus díoltóirí léirmheas a dhéanamh ar a chéile tar éis ordú críochnaithe.</string>
     <string name="market_reviews_empty_sent_subtitle">Oscail ordú críochnaithe chun léirmheas a fhágáil.</string>
     <string name="market_reviews_empty_sent_title">Níor scríobh tú aon léirmheas</string>

@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Վերադարձվում է…</string>
     <string name="market_report_dialog_details_label">Մանրամասներ (ըստ ցանկության)</string>
     <string name="market_report_dialog_submitting">Ներկայացվում է</string>
+    <string name="market_reviews_awaiting_response">Սպասում է պատասխանի</string>
     <string name="market_reviews_empty_received_subtitle">Գնորդները և վաճառողները կարող են գնահատել միմյանց ավարտված պատվերից հետո։</string>
     <string name="market_reviews_empty_sent_subtitle">Բացեք ավարտված պատվեր՝ կարծիք թողնելու համար։</string>
     <string name="market_reviews_empty_sent_title">Դուք դեռ կարծիք չեք գրել</string>

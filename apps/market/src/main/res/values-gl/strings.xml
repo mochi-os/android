@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Reembolsando…</string>
     <string name="market_report_dialog_details_label">Detalles (opcional)</string>
     <string name="market_report_dialog_submitting">Enviando</string>
+    <string name="market_reviews_awaiting_response">Agardando resposta</string>
     <string name="market_reviews_empty_received_subtitle">Os compradores e vendedores poden reseñarse mutuamente despois dun pedido completado.</string>
     <string name="market_reviews_empty_sent_subtitle">Abre un pedido completado para deixar unha reseña.</string>
     <string name="market_reviews_empty_sent_title">Aínda non escribiches ningunha reseña</string>

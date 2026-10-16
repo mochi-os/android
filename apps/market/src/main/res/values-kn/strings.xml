@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">ಮರುಪಾವತಿಸಲಾಗುತ್ತಿದೆ…</string>
     <string name="market_report_dialog_details_label">ವಿವರಗಳು (ಐಚ್ಛಿಕ)</string>
     <string name="market_report_dialog_submitting">ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="market_reviews_awaiting_response">ಪ್ರತಿಕ್ರಿಯೆಗಾಗಿ ಕಾಯಲಾಗುತ್ತಿದೆ</string>
     <string name="market_reviews_empty_received_subtitle">ಪೂರ್ಣಗೊಂಡ ಆದೇಶದ ನಂತರ ಖರೀದಿದಾರರು ಮತ್ತು ಮಾರಾಟಗಾರರು ಪರಸ್ಪರ ವಿಮರ್ಶಿಸಬಹುದು.</string>
     <string name="market_reviews_empty_sent_subtitle">ವಿಮರ್ಶೆ ಬರೆಯಲು ಪೂರ್ಣಗೊಂಡ ಆದೇಶವನ್ನು ತೆರೆಯಿರಿ.</string>
     <string name="market_reviews_empty_sent_title">ನೀವು ಯಾವುದೇ ವಿಮರ್ಶೆಗಳನ್ನು ಬರೆದಿಲ್ಲ</string>

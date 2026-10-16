@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">واپس ڪجي رهيو آهي…</string>
     <string name="market_report_dialog_details_label">تفصيل (اختياري)</string>
     <string name="market_report_dialog_submitting">جمع ڪجي رهيو آهي</string>
+    <string name="market_reviews_awaiting_response">جواب جو انتظار</string>
     <string name="market_reviews_empty_received_subtitle">خريدار ۽ وڪرو ڪندڙ مڪمل ٿيل آرڊر کان پوءِ هڪ ٻئي جو جائزو وٺي سگهن ٿا.</string>
     <string name="market_reviews_empty_sent_subtitle">جائزو ڇڏڻ لاءِ مڪمل ٿيل آرڊر کوليو.</string>
     <string name="market_reviews_empty_sent_title">توهان ڪو به جائزو نه لکيو آهي</string>

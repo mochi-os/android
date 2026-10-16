@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Qaytarilmoqda…</string>
     <string name="market_report_dialog_details_label">Tafsilotlar (ixtiyoriy)</string>
     <string name="market_report_dialog_submitting">Yuborilmoqda</string>
+    <string name="market_reviews_awaiting_response">Javob kutilmoqda</string>
     <string name="market_reviews_empty_received_subtitle">Xaridorlar va sotuvchilar yakunlangan buyurtmadan keyin bir-birini baholashi mumkin.</string>
     <string name="market_reviews_empty_sent_subtitle">Sharh qoldirish uchun yakunlangan buyurtmani oching.</string>
     <string name="market_reviews_empty_sent_title">Siz hali sharh yozmagansiz</string>

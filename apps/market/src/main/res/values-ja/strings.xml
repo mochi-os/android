@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">送信中</string>
     <string name="market_report_reason_counterfeit">偽造品</string>
     <string name="market_report_reason_prohibited">禁止商品</string>
+    <string name="market_reviews_awaiting_response">返信待ち</string>
     <string name="market_reviews_empty_received_subtitle">注文が完了すると、購入者と販売者が互いにレビューできます。</string>
     <string name="market_reviews_empty_sent_subtitle">完了した注文を開いてレビューを書いてください。</string>
     <string name="market_reviews_empty_sent_title">まだレビューを書いていません</string>

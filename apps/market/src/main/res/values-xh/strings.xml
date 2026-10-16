@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Kubuyiselwa imali…</string>
     <string name="market_report_dialog_details_label">Iinkcukacha (ezikhethwayo)</string>
     <string name="market_report_dialog_submitting">Kungeniswa</string>
+    <string name="market_reviews_awaiting_response">Ilinde impendulo</string>
     <string name="market_reviews_empty_received_subtitle">Abathengi nabathengisi banokuphononongana emva kwe-oda eligqityiweyo.</string>
     <string name="market_reviews_empty_sent_subtitle">Vula i-oda eligqityiweyo ukushiya uphononongo.</string>
     <string name="market_reviews_empty_sent_title">Akukabhali nawuphi na uphononongo</string>

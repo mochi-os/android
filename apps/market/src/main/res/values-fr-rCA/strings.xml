@@ -457,6 +457,7 @@
     <string name="market_report_dialog_title">Signaler l\'annonce</string>
     <string name="market_report_reason_counterfeit">Contrefaçon</string>
     <string name="market_report_reason_prohibited">Article interdit</string>
+    <string name="market_reviews_awaiting_response">En attente de réponse</string>
     <string name="market_reviews_empty_received_subtitle">Les acheteurs et les vendeurs peuvent s\'évaluer mutuellement après une commande terminée.</string>
     <string name="market_reviews_empty_received_title">Aucune évaluation pour l\'instant</string>
     <string name="market_reviews_empty_sent_subtitle">Ouvrez une commande terminée pour laisser une évaluation.</string>

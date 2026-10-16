@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Слање</string>
     <string name="market_report_reason_counterfeit">Фалсификат</string>
     <string name="market_report_reason_prohibited">Забрањена ставка</string>
+    <string name="market_reviews_awaiting_response">Чека се одговор</string>
     <string name="market_reviews_empty_received_subtitle">Купци и продавци могу да оцењују једни друге након завршене наруџбине.</string>
     <string name="market_reviews_empty_sent_subtitle">Отворите завршену наруџбину да бисте оставили рецензију.</string>
     <string name="market_reviews_empty_sent_title">Нисте написали ниједну рецензију</string>

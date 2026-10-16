@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Endurgreiði…</string>
     <string name="market_report_dialog_details_label">Nánari upplýsingar (valfrjálst)</string>
     <string name="market_report_dialog_submitting">Sendi</string>
+    <string name="market_reviews_awaiting_response">Bíður svars</string>
     <string name="market_reviews_empty_received_subtitle">Kaupendur og seljendur geta gefið hver öðrum umsögn eftir kláraða pöntun.</string>
     <string name="market_reviews_empty_sent_subtitle">Opnaðu kláraða pöntun til að skilja eftir umsögn.</string>
     <string name="market_reviews_empty_sent_title">Þú hefur ekki skrifað neinar umsagnir</string>

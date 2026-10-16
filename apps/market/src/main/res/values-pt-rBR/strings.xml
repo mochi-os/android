@@ -506,6 +506,7 @@
     <string name="market_report_dialog_submitting">Enviando</string>
     <string name="market_report_reason_counterfeit">Falsificado</string>
     <string name="market_report_reason_prohibited">Item proibido</string>
+    <string name="market_reviews_awaiting_response">Aguardando resposta</string>
     <string name="market_reviews_empty_received_subtitle">Compradores e vendedores podem se avaliar após um pedido concluído.</string>
     <string name="market_reviews_empty_sent_subtitle">Abra um pedido concluído para deixar uma avaliação.</string>
     <string name="market_reviews_empty_sent_title">Você ainda não escreveu nenhuma avaliação</string>

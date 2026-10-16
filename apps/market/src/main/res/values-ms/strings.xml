@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Menghantar</string>
     <string name="market_report_reason_counterfeit">Tiruan</string>
     <string name="market_report_reason_prohibited">Item dilarang</string>
+    <string name="market_reviews_awaiting_response">Menunggu respons</string>
     <string name="market_reviews_empty_received_subtitle">Pembeli dan penjual boleh mengulas satu sama lain selepas pesanan selesai.</string>
     <string name="market_reviews_empty_sent_subtitle">Buka pesanan yang telah selesai untuk meninggalkan ulasan.</string>
     <string name="market_reviews_empty_sent_title">Anda belum menulis sebarang ulasan</string>

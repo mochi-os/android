@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Надсилання</string>
     <string name="market_report_reason_counterfeit">Підробка</string>
     <string name="market_report_reason_prohibited">Заборонений товар</string>
+    <string name="market_reviews_awaiting_response">Очікує відповіді</string>
     <string name="market_reviews_empty_received_subtitle">Покупці та продавці можуть залишати відгуки один одному після завершеного замовлення.</string>
     <string name="market_reviews_empty_sent_subtitle">Відкрийте завершене замовлення, щоб залишити відгук.</string>
     <string name="market_reviews_empty_sent_title">Ви ще не написали жодного відгуку</string>

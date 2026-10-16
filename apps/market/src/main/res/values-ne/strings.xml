@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">फिर्ता गर्दै…</string>
     <string name="market_report_dialog_details_label">विवरण (वैकल्पिक)</string>
     <string name="market_report_dialog_submitting">पेस गर्दै</string>
+    <string name="market_reviews_awaiting_response">जवाफको प्रतीक्षामा</string>
     <string name="market_reviews_empty_received_subtitle">अर्डर पूरा भएपछि खरिदकर्ता र बिक्रेताले एकअर्कालाई समीक्षा गर्न सक्छन्।</string>
     <string name="market_reviews_empty_sent_subtitle">समीक्षा छोड्न पूरा भएको अर्डर खोल्नुहोस्।</string>
     <string name="market_reviews_empty_sent_title">तपाईंले कुनै समीक्षा लेख्नुभएको छैन</string>

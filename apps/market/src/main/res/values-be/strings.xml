@@ -427,6 +427,7 @@
     <string name="market_report_reason_other">Іншае</string>
     <string name="market_report_reason_prohibited">Забаронены тавар</string>
     <string name="market_report_reason_spam">Спам</string>
+    <string name="market_reviews_awaiting_response">Чакае адказу</string>
     <string name="market_reviews_empty_received_subtitle">Пакупнікі і прадаўцы могуць пісаць водгукі адзін аднаму пасля завершанага заказу.</string>
     <string name="market_reviews_empty_received_title">Пакуль няма водгукаў</string>
     <string name="market_reviews_empty_sent_subtitle">Адкрыйце завершаны заказ, каб пакінуць водгук.</string>

@@ -439,6 +439,7 @@
     <string name="market_report_dialog_submitting">জমা দেওয়া হচ্ছে</string>
     <string name="market_report_reason_counterfeit">নকল</string>
     <string name="market_report_reason_prohibited">নিষিদ্ধ পণ্য</string>
+    <string name="market_reviews_awaiting_response">উত্তরের অপেক্ষায়</string>
     <string name="market_reviews_empty_received_subtitle">অর্ডার সম্পূর্ণ হওয়ার পর ক্রেতা এবং বিক্রেতারা একে অপরকে পর্যালোচনা করতে পারেন।</string>
     <string name="market_reviews_empty_sent_subtitle">পর্যালোচনা দিতে একটি সম্পূর্ণ হওয়া অর্ডার খুলুন।</string>
     <string name="market_reviews_empty_sent_title">আপনি এখনও কোনো পর্যালোচনা লেখেননি</string>

@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">திருப்பித் தருகிறது…</string>
     <string name="market_report_dialog_details_label">விவரங்கள் (விருப்பத்தேர்வு)</string>
     <string name="market_report_dialog_submitting">சமர்ப்பிக்கிறது</string>
+    <string name="market_reviews_awaiting_response">பதிலுக்காக காத்திருக்கிறது</string>
     <string name="market_reviews_empty_received_subtitle">முடிக்கப்பட்ட ஆர்டருக்குப் பிறகு வாங்குபவர்களும் விற்பனையாளர்களும் ஒருவரையொருவர் மதிப்பாய்வு செய்யலாம்.</string>
     <string name="market_reviews_empty_sent_subtitle">மதிப்பாய்வு எழுத ஒரு முடிக்கப்பட்ட ஆர்டரைத் திறக்கவும்.</string>
     <string name="market_reviews_empty_sent_title">நீங்கள் எந்த மதிப்பாய்வும் எழுதவில்லை</string>

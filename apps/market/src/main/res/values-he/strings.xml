@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">שולח</string>
     <string name="market_report_reason_counterfeit">מזויף</string>
     <string name="market_report_reason_prohibited">פריט אסור</string>
+    <string name="market_reviews_awaiting_response">ממתין לתגובה</string>
     <string name="market_reviews_empty_received_subtitle">קונים ומוכרים יכולים לסקור זה את זה לאחר השלמת הזמנה.</string>
     <string name="market_reviews_empty_sent_subtitle">פתח הזמנה שהושלמה כדי לכתוב ביקורת.</string>
     <string name="market_reviews_empty_sent_title">לא כתבת ביקורות</string>

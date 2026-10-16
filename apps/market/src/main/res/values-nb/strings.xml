@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Sender inn</string>
     <string name="market_report_reason_counterfeit">Forfalskning</string>
     <string name="market_report_reason_prohibited">Forbudt vare</string>
+    <string name="market_reviews_awaiting_response">Venter på svar</string>
     <string name="market_reviews_empty_received_subtitle">Kjøpere og selgere kan vurdere hverandre etter en fullført bestilling.</string>
     <string name="market_reviews_empty_sent_subtitle">Åpne en fullført bestilling for å legge igjen en anmeldelse.</string>
     <string name="market_reviews_empty_sent_title">Du har ikke skrevet noen anmeldelser</string>

@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Indsender</string>
     <string name="market_report_reason_counterfeit">Forfalskning</string>
     <string name="market_report_reason_prohibited">Forbudt vare</string>
+    <string name="market_reviews_awaiting_response">Afventer svar</string>
     <string name="market_reviews_empty_received_subtitle">Købere og sælgere kan anmelde hinanden efter en gennemført ordre.</string>
     <string name="market_reviews_empty_sent_subtitle">Åbn en gennemført ordre for at skrive en anmeldelse.</string>
     <string name="market_reviews_empty_sent_title">Du har ikke skrevet nogen anmeldelser</string>

@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">ပြန်အမ်းနေသည်…</string>
     <string name="market_report_dialog_details_label">အသေးစိတ် (ရွေးချယ်နိုင်)</string>
     <string name="market_report_dialog_submitting">တင်သွင်းနေသည်</string>
+    <string name="market_reviews_awaiting_response">တုံ့ပြန်ချက်ကို စောင့်နေသည်</string>
     <string name="market_reviews_empty_received_subtitle">မှာယူမှု ပြီးစီးပြီးနောက် ဝယ်သူနှင့် ရောင်းသူသည် တစ်ဦးကိုတစ်ဦး သုံးသပ်နိုင်သည်။</string>
     <string name="market_reviews_empty_sent_subtitle">သုံးသပ်ချက်ရေးရန် ပြီးစီးပြီးသော မှာယူမှုကို ဖွင့်ပါ။</string>
     <string name="market_reviews_empty_sent_title">သင်သည် သုံးသပ်ချက် တစ်ခုမှ မရေးရသေးပါ</string>

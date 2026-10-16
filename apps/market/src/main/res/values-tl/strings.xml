@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Nire-refund…</string>
     <string name="market_report_dialog_details_label">Mga detalye (opsyonal)</string>
     <string name="market_report_dialog_submitting">Isinusumite</string>
+    <string name="market_reviews_awaiting_response">Naghihintay ng tugon</string>
     <string name="market_reviews_empty_received_subtitle">Maaaring mag-review ang mga bumibili at nagbebenta sa isa\'t isa pagkatapos ng kumpletong order.</string>
     <string name="market_reviews_empty_sent_subtitle">Buksan ang isang kumpletong order para mag-iwan ng review.</string>
     <string name="market_reviews_empty_sent_title">Wala ka pang naisulat na review</string>

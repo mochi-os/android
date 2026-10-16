@@ -427,6 +427,7 @@
     <string name="market_report_reason_other">Bestelakoa</string>
     <string name="market_report_reason_prohibited">Debekatutako artikulua</string>
     <string name="market_report_reason_spam">Spam-a</string>
+    <string name="market_reviews_awaiting_response">Erantzunaren zain</string>
     <string name="market_reviews_empty_received_subtitle">Erosleak eta saltzaileak elkar baloratu dezakete eskaera burutu ondoren.</string>
     <string name="market_reviews_empty_received_title">Oraindik iritzirik ez</string>
     <string name="market_reviews_empty_sent_subtitle">Ireki burututako eskaera bat iritzia uzteko.</string>

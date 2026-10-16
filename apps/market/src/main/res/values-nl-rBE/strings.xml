@@ -502,6 +502,7 @@
     <string name="market_report_dialog_submitting">Bezig met indienen</string>
     <string name="market_report_reason_counterfeit">Namaak</string>
     <string name="market_report_reason_prohibited">Verboden artikel</string>
+    <string name="market_reviews_awaiting_response">Wacht op reactie</string>
     <string name="market_reviews_empty_received_subtitle">Kopers en verkopers kunnen elkaar beoordelen na een voltooide bestelling.</string>
     <string name="market_reviews_empty_sent_subtitle">Open een voltooide bestelling om een beoordeling achter te laten.</string>
     <string name="market_reviews_empty_sent_title">U hebt nog geen beoordelingen geschreven</string>

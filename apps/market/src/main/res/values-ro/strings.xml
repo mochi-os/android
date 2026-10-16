@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Se trimite</string>
     <string name="market_report_reason_counterfeit">Contrafăcut</string>
     <string name="market_report_reason_prohibited">Articol interzis</string>
+    <string name="market_reviews_awaiting_response">În așteptarea răspunsului</string>
     <string name="market_reviews_empty_received_subtitle">Cumpărătorii și vânzătorii se pot recenza reciproc după o comandă finalizată.</string>
     <string name="market_reviews_empty_sent_subtitle">Deschideți o comandă finalizată pentru a lăsa o recenzie.</string>
     <string name="market_reviews_empty_sent_title">Nu ați scris nicio recenzie</string>

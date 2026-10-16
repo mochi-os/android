@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">भेजा जा रहा है</string>
     <string name="market_report_reason_counterfeit">नकली</string>
     <string name="market_report_reason_prohibited">निषिद्ध वस्तु</string>
+    <string name="market_reviews_awaiting_response">जवाब की प्रतीक्षा है</string>
     <string name="market_reviews_empty_received_subtitle">ऑर्डर पूरा होने के बाद खरीदार और विक्रेता एक-दूसरे की समीक्षा कर सकते हैं।</string>
     <string name="market_reviews_empty_sent_subtitle">समीक्षा छोड़ने के लिए कोई पूरा हुआ ऑर्डर खोलें।</string>
     <string name="market_reviews_empty_sent_title">आपने कोई समीक्षा नहीं लिखी है</string>

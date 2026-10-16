@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">റീഫണ്ട് ചെയ്യുന്നു…</string>
     <string name="market_report_dialog_details_label">വിശദാംശങ്ങൾ (ഓപ്ഷണൽ)</string>
     <string name="market_report_dialog_submitting">സമർപ്പിക്കുന്നു</string>
+    <string name="market_reviews_awaiting_response">മറുപടിക്കായി കാത്തിരിക്കുന്നു</string>
     <string name="market_reviews_empty_received_subtitle">പൂർത്തിയായ ഓർഡറിന് ശേഷം വാങ്ങുന്നവർക്കും വിൽപ്പനക്കാർക്കും പരസ്പരം അവലോകനം ചെയ്യാം.</string>
     <string name="market_reviews_empty_sent_subtitle">ഒരു അവലോകനം നൽകാൻ പൂർത്തിയായ ഓർഡർ തുറക്കുക.</string>
     <string name="market_reviews_empty_sent_title">നിങ്ങൾ അവലോകനങ്ങളൊന്നും എഴുതിയിട്ടില്ല</string>

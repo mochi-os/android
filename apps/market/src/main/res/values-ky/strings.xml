@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Кайтарылууда…</string>
     <string name="market_report_dialog_details_label">Кошумча маалымат (милдеттүү эмес)</string>
     <string name="market_report_dialog_submitting">Жөнөтүлүүдө</string>
+    <string name="market_reviews_awaiting_response">Жооп күтүлүүдө</string>
     <string name="market_reviews_empty_received_subtitle">Сатып алуучулар жана сатуучулар буйрутма аякталгандан кийин бири-бирин баалай алышат.</string>
     <string name="market_reviews_empty_sent_subtitle">Баалоо калтыруу үчүн аякталган буйрутманы ачыңыз.</string>
     <string name="market_reviews_empty_sent_title">Сиз эч кандай баалоо жазган жоксуз</string>

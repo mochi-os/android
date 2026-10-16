@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">ආපසු ගෙවමින්…</string>
     <string name="market_report_dialog_details_label">විස්තර (විකල්ප)</string>
     <string name="market_report_dialog_submitting">ඉදිරිපත් කරමින්</string>
+    <string name="market_reviews_awaiting_response">ප්‍රතිචාරයක් බලාපොරොත්තුවෙන්</string>
     <string name="market_reviews_empty_received_subtitle">සම්පූර්ණ කළ ඇණවුමකින් පසු ගැනුම්කරුවන්ට සහ විකුණුම්කරුවන්ට එකිනෙකා සමාලෝචනය කළ හැකිය.</string>
     <string name="market_reviews_empty_sent_subtitle">සමාලෝචනයක් තැබීමට සම්පූර්ණ කළ ඇණවුමක් විවෘත කරන්න.</string>
     <string name="market_reviews_empty_sent_title">ඔබ කිසිදු සමාලෝචනයක් ලියා නැත</string>

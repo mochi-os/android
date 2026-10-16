@@ -427,6 +427,7 @@
     <string name="market_report_reason_other">Бусад</string>
     <string name="market_report_reason_prohibited">Хориглосон бараа</string>
     <string name="market_report_reason_spam">Спам</string>
+    <string name="market_reviews_awaiting_response">Хариу хүлээж байна</string>
     <string name="market_reviews_empty_received_subtitle">Худалдан авагч ба худалдагч захиалга дууссаны дараа бие биеэ үнэлж болно.</string>
     <string name="market_reviews_empty_received_title">Шүүмж алга</string>
     <string name="market_reviews_empty_sent_subtitle">Үнэлгээ үлдээхийн тулд дууссан захиалгыг нээнэ үү.</string>

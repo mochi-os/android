@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">正在提交</string>
     <string name="market_report_reason_counterfeit">假冒商品</string>
     <string name="market_report_reason_prohibited">违禁商品</string>
+    <string name="market_reviews_awaiting_response">等待回复</string>
     <string name="market_reviews_empty_received_subtitle">订单完成后,买家和卖家可以互相评价。</string>
     <string name="market_reviews_empty_sent_subtitle">打开已完成的订单以发表评价。</string>
     <string name="market_reviews_empty_sent_title">你尚未发表任何评价</string>

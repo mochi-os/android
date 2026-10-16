@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">ਵਾਪਸ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="market_report_dialog_details_label">ਵੇਰਵੇ (ਵਿਕਲਪਿਕ)</string>
     <string name="market_report_dialog_submitting">ਜਮ੍ਹਾਂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
+    <string name="market_reviews_awaiting_response">ਜਵਾਬ ਦੀ ਉਡੀਕ ਹੈ</string>
     <string name="market_reviews_empty_received_subtitle">ਖਰੀਦਦਾਰ ਅਤੇ ਵਿਕਰੇਤਾ ਪੂਰੇ ਹੋਏ ਆਰਡਰ ਤੋਂ ਬਾਅਦ ਇੱਕ ਦੂਜੇ ਦੀ ਸਮੀਖਿਆ ਕਰ ਸਕਦੇ ਹਨ।</string>
     <string name="market_reviews_empty_sent_subtitle">ਸਮੀਖਿਆ ਛੱਡਣ ਲਈ ਪੂਰਾ ਹੋਇਆ ਆਰਡਰ ਖੋਲ੍ਹੋ।</string>
     <string name="market_reviews_empty_sent_title">ਤੁਸੀਂ ਕੋਈ ਸਮੀਖਿਆ ਨਹੀਂ ਲਿਖੀ</string>

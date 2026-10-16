@@ -516,6 +516,7 @@
     <string name="market_report_dialog_submitting">Υποβολή</string>
     <string name="market_report_reason_counterfeit">Πλαστό</string>
     <string name="market_report_reason_prohibited">Απαγορευμένο αντικείμενο</string>
+    <string name="market_reviews_awaiting_response">Αναμονή απάντησης</string>
     <string name="market_reviews_empty_received_subtitle">Αγοραστές και πωλητές μπορούν να αξιολογήσουν ο ένας τον άλλον μετά από ολοκληρωμένη παραγγελία.</string>
     <string name="market_reviews_empty_sent_subtitle">Ανοίξτε μια ολοκληρωμένη παραγγελία για να γράψετε κριτική.</string>
     <string name="market_reviews_empty_sent_title">Δεν έχετε γράψει καμία κριτική</string>

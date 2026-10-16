@@ -427,6 +427,7 @@
     <string name="market_report_reason_other">Digər</string>
     <string name="market_report_reason_prohibited">Qadağan edilmiş məhsul</string>
     <string name="market_report_reason_spam">Spam</string>
+    <string name="market_reviews_awaiting_response">Cavab gözlənilir</string>
     <string name="market_reviews_empty_received_subtitle">Alıcılar və satıcılar tamamlanan sifarişdən sonra bir-birinə rəy verə bilərlər.</string>
     <string name="market_reviews_empty_received_title">Hələ rəy yoxdur</string>
     <string name="market_reviews_empty_sent_subtitle">Rəy yazmaq üçün tamamlanmış sifarişi açın.</string>

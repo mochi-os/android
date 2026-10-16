@@ -449,6 +449,7 @@
     <string name="market_refund_dialog_submitting">वापस कइल जा रहल बा…</string>
     <string name="market_report_dialog_details_label">विवरण (वैकल्पिक)</string>
     <string name="market_report_dialog_submitting">जमा कइल जा रहल बा</string>
+    <string name="market_reviews_awaiting_response">जवाब के इंतजार बा</string>
     <string name="market_reviews_empty_received_subtitle">ऑर्डर पूरा होखला के बाद खरीददार आ बिक्रेता एक दूसरा के समीक्षा कर सकेलें।</string>
     <string name="market_reviews_empty_sent_subtitle">समीक्षा छोड़े खातिर कवनो पूरा भइल ऑर्डर खोलीं।</string>
     <string name="market_reviews_empty_sent_title">रउरा कवनो समीक्षा नइखीं लिखले</string>

@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Po rimbursohet…</string>
     <string name="market_report_dialog_details_label">Detaje (opsionale)</string>
     <string name="market_report_dialog_submitting">Po dërgohet</string>
+    <string name="market_reviews_awaiting_response">Në pritje të përgjigjes</string>
     <string name="market_reviews_empty_received_subtitle">Blerësit dhe shitësit mund të vlerësojnë njëri-tjetrin pasi të përfundojë një porosi.</string>
     <string name="market_reviews_empty_sent_subtitle">Hapni një porosi të përfunduar për të lënë një vlerësim.</string>
     <string name="market_reviews_empty_sent_title">Nuk keni shkruar asnjë vlerësim</string>

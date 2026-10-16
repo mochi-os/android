@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">తిరిగి చెల్లిస్తోంది…</string>
     <string name="market_report_dialog_details_label">వివరాలు (ఐచ్ఛికం)</string>
     <string name="market_report_dialog_submitting">సమర్పిస్తోంది</string>
+    <string name="market_reviews_awaiting_response">ప్రతిస్పందన కోసం వేచి ఉంది</string>
     <string name="market_reviews_empty_received_subtitle">పూర్తయిన ఆర్డర్ తర్వాత కొనుగోలుదారులు మరియు విక్రేతలు ఒకరినొకరు సమీక్షించుకోవచ్చు.</string>
     <string name="market_reviews_empty_sent_subtitle">సమీక్షను పంపడానికి పూర్తయిన ఆర్డర్‌ను తెరవండి.</string>
     <string name="market_reviews_empty_sent_title">మీరు ఏ సమీక్షలు వ్రాయలేదు</string>

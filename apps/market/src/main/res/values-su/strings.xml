@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Mulangkeun…</string>
     <string name="market_report_dialog_details_label">Rincian (opsional)</string>
     <string name="market_report_dialog_submitting">Ngirimkeun</string>
+    <string name="market_reviews_awaiting_response">Ngantosan waleran</string>
     <string name="market_reviews_empty_received_subtitle">Pameuli sareng padagang tiasa silih tinjau saatos pesenan réngsé.</string>
     <string name="market_reviews_empty_sent_subtitle">Buka pesenan nu parantos réngsé pikeun ninggalkeun tinjauan.</string>
     <string name="market_reviews_empty_sent_title">Anjeun tacan nyerat tinjauan naon-naon</string>

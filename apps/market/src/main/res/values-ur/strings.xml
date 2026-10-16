@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">جمع کیا جا رہا ہے</string>
     <string name="market_report_reason_counterfeit">جعلی</string>
     <string name="market_report_reason_prohibited">ممنوعہ شے</string>
+    <string name="market_reviews_awaiting_response">جواب کا انتظار ہے</string>
     <string name="market_reviews_empty_received_subtitle">خریدار اور بیچنے والے مکمل آرڈر کے بعد ایک دوسرے کا جائزہ لے سکتے ہیں۔</string>
     <string name="market_reviews_empty_sent_subtitle">جائزہ چھوڑنے کے لیے مکمل آرڈر کھولیں۔</string>
     <string name="market_reviews_empty_sent_title">آپ نے کوئی جائزہ نہیں لکھا</string>

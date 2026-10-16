@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Ranbouse…</string>
     <string name="market_report_dialog_details_label">Detay (opsyonèl)</string>
     <string name="market_report_dialog_submitting">Voye</string>
+    <string name="market_reviews_awaiting_response">N ap tann repons</string>
     <string name="market_reviews_empty_received_subtitle">Achtè ak vandè kapab evalye youn lòt apre yon kòmand fini.</string>
     <string name="market_reviews_empty_sent_subtitle">Ouvri yon kòmand ki fini pou kite yon revizyon.</string>
     <string name="market_reviews_empty_sent_title">Ou poko ekri okenn revizyon</string>

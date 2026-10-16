@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">بیرته ورکول کیږي…</string>
     <string name="market_report_dialog_details_label">تفصیلات (اختیاري)</string>
     <string name="market_report_dialog_submitting">وړاندې کیږي</string>
+    <string name="market_reviews_awaiting_response">د ځواب په تمه</string>
     <string name="market_reviews_empty_received_subtitle">پېرودونکي او پلورونکي کولی شي د بشپړ شوي امر وروسته یو بل وارزوي.</string>
     <string name="market_reviews_empty_sent_subtitle">د بیاکتنې د پرېښودلو لپاره یو بشپړ شوی امر خلاص کړئ.</string>
     <string name="market_reviews_empty_sent_title">تاسو کومه بیاکتنه نه ده لیکلې</string>

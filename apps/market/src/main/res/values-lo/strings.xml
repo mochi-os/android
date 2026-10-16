@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">ກຳລັງຄືນເງິນ…</string>
     <string name="market_report_dialog_details_label">ລາຍລະອຽດ (ທາງເລືອກ)</string>
     <string name="market_report_dialog_submitting">ກຳລັງສົ່ງ</string>
+    <string name="market_reviews_awaiting_response">ລໍຖ້າການຕອບກັບ</string>
     <string name="market_reviews_empty_received_subtitle">ຜູ້ຊື້ແລະຜູ້ຂາຍສາມາດວິຈານກັນແລະກັນຫຼັງຈາກການສັ່ງຊື້ສຳເລັດ.</string>
     <string name="market_reviews_empty_sent_subtitle">ເປີດການສັ່ງຊື້ທີ່ສຳເລັດເພື່ອຂຽນການວິຈານ.</string>
     <string name="market_reviews_empty_sent_title">ທ່ານຍັງບໍ່ໄດ້ຂຽນການວິຈານໃດໆ</string>

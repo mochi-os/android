@@ -516,6 +516,7 @@
     <string name="market_report_dialog_submitting">Sender inn</string>
     <string name="market_report_reason_counterfeit">Forfalsking</string>
     <string name="market_report_reason_prohibited">Forboden vare</string>
+    <string name="market_reviews_awaiting_response">Ventar på svar</string>
     <string name="market_reviews_empty_received_subtitle">Kjøparar og seljarar kan vurdera kvarandre etter ei fullført tinging.</string>
     <string name="market_reviews_empty_sent_subtitle">Opna ei fullført tinging for å leggja att ei vurdering.</string>
     <string name="market_reviews_empty_sent_title">Du har ikkje skrive nokon vurderingar</string>

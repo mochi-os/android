@@ -513,6 +513,7 @@
     <string name="market_report_dialog_submitting">Odesílání</string>
     <string name="market_report_reason_counterfeit">Padělek</string>
     <string name="market_report_reason_prohibited">Zakázaná položka</string>
+    <string name="market_reviews_awaiting_response">Čeká na odpověď</string>
     <string name="market_reviews_empty_received_subtitle">Kupující a prodávající si mohou po dokončené objednávce navzájem napsat recenzi.</string>
     <string name="market_reviews_empty_sent_subtitle">Otevřete dokončenou objednávku a napište recenzi.</string>
     <string name="market_reviews_empty_sent_title">Zatím jste nenapsali žádnou recenzi</string>

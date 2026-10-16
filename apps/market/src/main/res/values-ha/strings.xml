@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Ana mayar da kuɗi…</string>
     <string name="market_report_dialog_details_label">Cikakkun bayanai (na zaɓi)</string>
     <string name="market_report_dialog_submitting">Ana aikawa</string>
+    <string name="market_reviews_awaiting_response">Ana jiran amsa</string>
     <string name="market_reviews_empty_received_subtitle">Masu siye da masu sayarwa za su iya bita juna bayan an kammala oda.</string>
     <string name="market_reviews_empty_sent_subtitle">Buɗe odar da aka kammala don barin bita.</string>
     <string name="market_reviews_empty_sent_title">Ba ku rubuta wani bita ba tukuna</string>

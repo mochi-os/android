@@ -427,6 +427,7 @@
     <string name="market_report_reason_other">Arall</string>
     <string name="market_report_reason_prohibited">Eitem wedi\'i gwahardd</string>
     <string name="market_report_reason_spam">Sbam</string>
+    <string name="market_reviews_awaiting_response">Yn aros am ymateb</string>
     <string name="market_reviews_empty_received_subtitle">Gall prynwyr a gwerthwyr adolygu ei gilydd ar ôl archeb gyflawn.</string>
     <string name="market_reviews_empty_received_title">Dim adolygiadau eto</string>
     <string name="market_reviews_empty_sent_subtitle">Agorwch archeb gyflawn i adael adolygiad.</string>

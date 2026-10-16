@@ -427,6 +427,7 @@
     <string name="market_report_reason_other">Друго</string>
     <string name="market_report_reason_prohibited">Забранет предмет</string>
     <string name="market_report_reason_spam">Спам</string>
+    <string name="market_reviews_awaiting_response">Се чека одговор</string>
     <string name="market_reviews_empty_received_subtitle">Купувачите и продавачите можат да се оценуваат еден со друг по завршена нарачка.</string>
     <string name="market_reviews_empty_received_title">Сè уште нема прегледи</string>
     <string name="market_reviews_empty_sent_subtitle">Отворете завршена нарачка за да оставите критика.</string>

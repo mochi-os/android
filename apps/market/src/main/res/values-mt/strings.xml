@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Qed jirrifondi…</string>
     <string name="market_report_dialog_details_label">Dettalji (mhux obbligatorju)</string>
     <string name="market_report_dialog_submitting">Qed jissottometti</string>
+    <string name="market_reviews_awaiting_response">Qed jistenna tweġiba</string>
     <string name="market_reviews_empty_received_subtitle">Ix-xerrejja u l-bejjiegħa jistgħu jirrevedu lil xulxin wara ordni mlestija.</string>
     <string name="market_reviews_empty_sent_subtitle">Iftaħ ordni mlestija biex tħalli reviżjoni.</string>
     <string name="market_reviews_empty_sent_title">Ma ktibtx l-ebda reviżjoni</string>

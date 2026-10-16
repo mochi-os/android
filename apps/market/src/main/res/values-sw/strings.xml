@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Inawasilisha</string>
     <string name="market_report_reason_counterfeit">Bandia</string>
     <string name="market_report_reason_prohibited">Bidhaa iliyozuiliwa</string>
+    <string name="market_reviews_awaiting_response">Inasubiri jibu</string>
     <string name="market_reviews_empty_received_subtitle">Wanunuzi na wauzaji wanaweza kuhakikiana baada ya agizo kukamilika.</string>
     <string name="market_reviews_empty_sent_subtitle">Fungua agizo lililokamilika ili kuandika hakiki.</string>
     <string name="market_reviews_empty_sent_title">Hujaandika hakiki yoyote</string>

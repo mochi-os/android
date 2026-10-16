@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Viru oñembojevyhína…</string>
     <string name="market_report_dialog_details_label">Detallekuéra (ndaha\'éi mbaretépe)</string>
     <string name="market_report_dialog_submitting">Oñemondo hína</string>
+    <string name="market_reviews_awaiting_response">Oha\'arõ mbohovái</string>
     <string name="market_reviews_empty_received_subtitle">Ojoguávakuéra ha ñemuhárakuéra ikatu ohai reseña ojupe peteĩ pedido opa rire.</string>
     <string name="market_reviews_empty_sent_subtitle">Eipe\'a peteĩ pedido opámava rehai hag̃ua reseña.</string>
     <string name="market_reviews_empty_sent_title">Nderehaíri gueteri mba\'eveichagua reseña</string>

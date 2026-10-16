@@ -523,6 +523,7 @@
     <string name="market_refund_dialog_submitting">Kutt\'ayasa…</string>
     <string name="market_report_dialog_details_label">Detallenaka (opcional)</string>
     <string name="market_report_dialog_submitting">Apayaskiwa</string>
+    <string name="market_reviews_awaiting_response">Jaysäwi suyt\'aski</string>
     <string name="market_reviews_empty_received_subtitle">Alasirinakampi aljirinakampix mä pedido tukuyatat qhipatx maynit maynikam reseña qillqapxaspawa.</string>
     <string name="market_reviews_empty_sent_subtitle">Reseña qillqañatakix mä tukuyat pedido jist\'aram.</string>
     <string name="market_reviews_empty_sent_title">Janiw kuna reseñas qillqktati</string>

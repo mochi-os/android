@@ -386,6 +386,7 @@
     <string name="market_report_dialog_title">Inserat melden</string>
     <string name="market_report_reason_counterfeit">Fälschung</string>
     <string name="market_report_reason_prohibited">Verbotener Artikel</string>
+    <string name="market_reviews_awaiting_response">Antwort ausstehend</string>
     <string name="market_reviews_empty_received_subtitle">Käufer und Verkäufer können sich nach Abschluss einer Bestellung gegenseitig bewerten.</string>
     <string name="market_reviews_empty_received_title">Noch keine Bewertungen</string>
     <string name="market_reviews_empty_sent_subtitle">Öffnen Sie eine abgeschlossene Bestellung, um eine Bewertung abzugeben.</string>

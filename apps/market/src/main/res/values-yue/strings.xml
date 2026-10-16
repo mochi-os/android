@@ -456,6 +456,7 @@
     <string name="market_report_reason_misleading">描述具誤導性</string>
     <string name="market_report_reason_prohibited">禁售物品</string>
     <string name="market_report_reason_spam">垃圾訊息</string>
+    <string name="market_reviews_awaiting_response">等緊回覆</string>
     <string name="market_reviews_empty_received_subtitle">買家同賣家可以喺訂單完成之後互相評價。</string>
     <string name="market_reviews_empty_received_title">暫時未有評價</string>
     <string name="market_reviews_empty_sent_subtitle">打開已完成嘅訂單就可以撰寫評價。</string>

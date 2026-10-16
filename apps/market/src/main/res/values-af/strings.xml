@@ -427,6 +427,7 @@
     <string name="market_report_reason_other">Ander</string>
     <string name="market_report_reason_prohibited">Verbode item</string>
     <string name="market_report_reason_spam">Strooipos</string>
+    <string name="market_reviews_awaiting_response">Wag op antwoord</string>
     <string name="market_reviews_empty_received_subtitle">Kopers en verkopers kan mekaar resenseer nadat \'n bestelling voltooi is.</string>
     <string name="market_reviews_empty_received_title">Nog geen resensies nie</string>
     <string name="market_reviews_empty_sent_subtitle">Maak \'n voltooide bestelling oop om \'n resensie te laat.</string>

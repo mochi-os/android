@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">צוריקצאָלן…</string>
     <string name="market_report_dialog_details_label">פּרטים (אָפּציאָנעל)</string>
     <string name="market_report_dialog_submitting">אַרײַנגעבן</string>
+    <string name="market_reviews_awaiting_response">ווארט אויף ענטפער</string>
     <string name="market_reviews_empty_received_subtitle">קויפֿערס און פֿאַרקויפֿערס קענען איינער דעם אַנדערן רעצענזירן נאָך אַ פֿאַרענדיקטער באַשטעלונג.</string>
     <string name="market_reviews_empty_sent_subtitle">עפֿנט אַ פֿאַרענדיקטע באַשטעלונג צו איבערלאָזן אַ רעצענזיע.</string>
     <string name="market_reviews_empty_sent_title">איר האָט נישט געשריבן קיין רעצענזיעס</string>

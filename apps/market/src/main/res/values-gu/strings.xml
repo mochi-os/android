@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">રિફંડ કરી રહ્યું છે…</string>
     <string name="market_report_dialog_details_label">વિગતો (વૈકલ્પિક)</string>
     <string name="market_report_dialog_submitting">સબમિટ કરી રહ્યું છે</string>
+    <string name="market_reviews_awaiting_response">જવાબની રાહ જોવાઈ રહી છે</string>
     <string name="market_reviews_empty_received_subtitle">ઓર્ડર પૂર્ણ થયા પછી ખરીદનાર અને વિક્રેતા એકબીજાની સમીક્ષા કરી શકે છે.</string>
     <string name="market_reviews_empty_sent_subtitle">સમીક્ષા લખવા માટે પૂર્ણ થયેલો ઓર્ડર ખોલો.</string>
     <string name="market_reviews_empty_sent_title">તમે કોઈ સમીક્ષા લખી નથી</string>

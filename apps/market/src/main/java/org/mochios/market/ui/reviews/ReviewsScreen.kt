@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -21,7 +20,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -37,15 +35,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatRelativeTime
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiButton
@@ -53,10 +48,10 @@ import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
-import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.RatingStars
+import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.ReviewCard
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -69,11 +64,20 @@ fun ReviewsScreen(
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
-            if (event is ReviewsEvent.Error) {
-                snackbarHostState.showSnackbar(event.error.userMessage())
+            when (event) {
+                is ReviewsEvent.Error -> snackbarHostState.showSnackbar(event.error.userMessage())
+                is ReviewsEvent.OpenListing ->
+                    navController.navigate(MarketApp.listingDetail(event.listingId))
             }
         }
     }
+
+    val openProfile = { account: String ->
+        if (account.isNotEmpty()) {
+            navController.navigate(MarketApp.publicProfile(account))
+        }
+    }
+    val openListing = viewModel::openListing
 
     MarketLayout(
         navController = navController,
@@ -103,6 +107,8 @@ fun ReviewsScreen(
                             onRetry = viewModel::retry,
                             onDraftChange = { id, v -> viewModel.setResponseDraft(id, v) },
                             onSubmit = viewModel::submitResponse,
+                            onProfileTap = openProfile,
+                            onListingTap = openListing,
                         )
                     }
                     ReviewsTab.SENT -> {
@@ -110,13 +116,8 @@ fun ReviewsScreen(
                             state = state.sent,
                             onLoadMore = { viewModel.loadMore(ReviewsTab.SENT) },
                             onRetry = viewModel::retry,
-                            onListingTap = { listingId ->
-                                if (listingId.isNotEmpty()) {
-                                    navController.navigate(
-                                        MarketApp.listingDetail(listingId),
-                                    )
-                                }
-                            },
+                            onProfileTap = openProfile,
+                            onListingTap = openListing,
                         )
                     }
                 }
@@ -132,6 +133,8 @@ private fun ReceivedTab(
     onRetry: () -> Unit,
     onDraftChange: (String, String) -> Unit,
     onSubmit: (String) -> Unit,
+    onProfileTap: (String) -> Unit,
+    onListingTap: (String) -> Unit,
 ) {
     EmptyOrError(state, R.string.market_reviews_empty_received_title, R.string.market_reviews_empty_received_subtitle, onRetry) {
         InfiniteList(
@@ -145,8 +148,9 @@ private fun ReceivedTab(
                 draft = state.responseDrafts[review.id].orEmpty(),
                 onDraftChange = { onDraftChange(review.id, it) },
                 onSubmit = { onSubmit(review.id) },
+                onProfileTap = onProfileTap,
+                onListingTap = onListingTap,
             )
-            HorizontalDivider()
         }
     }
 }
@@ -156,6 +160,7 @@ private fun SentTab(
     state: ReviewsTabState,
     onLoadMore: () -> Unit,
     onRetry: () -> Unit,
+    onProfileTap: (String) -> Unit,
     onListingTap: (String) -> Unit,
 ) {
     EmptyOrError(state, R.string.market_reviews_empty_sent_title, R.string.market_reviews_empty_sent_subtitle, onRetry) {
@@ -165,8 +170,11 @@ private fun SentTab(
             hasMore = state.hasMore,
             onLoadMore = onLoadMore,
         ) { review ->
-            SentReviewCard(review = review, onListingTap = onListingTap)
-            HorizontalDivider()
+            SentReviewCard(
+                review = review,
+                onProfileTap = onProfileTap,
+                onListingTap = onListingTap,
+            )
         }
     }
 }
@@ -212,57 +220,22 @@ private fun ReceivedReviewCard(
     draft: String,
     onDraftChange: (String) -> Unit,
     onSubmit: () -> Unit,
+    onProfileTap: (String) -> Unit,
+    onListingTap: (String) -> Unit,
 ) {
-    val format = LocalFormat.current
-    val name = review.reviewerName.orEmpty().ifBlank { review.reviewer }
-    val avatarUrl = review.reviewer.takeIf { it.isNotBlank() }?.let {
-        "/market/-/user/$it/asset/avatar"
-    }
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ReviewCard(
+        review = review,
+        modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
+        responseLabel = stringResource(R.string.market_sale_review_response_label),
+        heading = {
+            ReviewerName(
+                name = review.reviewerName.orEmpty().ifBlank { review.reviewer },
+                onClick = { onProfileTap(review.reviewer) },
+            )
+        },
+        onListing = { onListingTap(review.order) },
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(name = name, src = avatarUrl, seed = review.reviewer, size = 36.dp)
-            Spacer(modifier = Modifier.width(10.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = name,
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
-                )
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    RatingStars(rating = review.rating.toFloat(), showCount = false)
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(
-                        text = format.formatRelativeTime(review.created),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-        }
-        if (review.text.isNotEmpty()) {
-            Text(text = review.text, style = MaterialTheme.typography.bodyMedium)
-        }
-
-        if (review.response.isNotEmpty()) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 16.dp, top = 4.dp),
-            ) {
-                Text(
-                    text = stringResource(R.string.market_reviews_response_label),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                Text(text = review.response, style = MaterialTheme.typography.bodyMedium)
-            }
-        } else {
-            // Compose: response sub-form
+        if (review.response.isEmpty()) {
             MochiTextField(
                 value = draft,
                 onValueChange = onDraftChange,
@@ -293,63 +266,39 @@ private fun ReceivedReviewCard(
 @Composable
 private fun SentReviewCard(
     review: Review,
+    onProfileTap: (String) -> Unit,
     onListingTap: (String) -> Unit,
 ) {
-    val format = LocalFormat.current
-    val name = review.subjectName.orEmpty().ifBlank { review.subject }
-    val avatarUrl = review.subject.takeIf { it.isNotBlank() }?.let {
-        "/market/-/user/$it/asset/avatar"
-    }
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ReviewCard(
+        review = review,
+        modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
+        responseLabel = stringResource(R.string.market_reviews_response_label),
+        heading = {
+            ReviewerName(
+                name = review.subjectName.orEmpty().ifBlank { review.subject },
+                onClick = { onProfileTap(review.subject) },
+            )
+        },
+        onListing = { onListingTap(review.order) },
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            EntityAvatar(name = name, src = avatarUrl, seed = review.subject, size = 36.dp)
-            Spacer(modifier = Modifier.width(10.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = name,
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
-                )
-                val listingTitle = review.listingTitle.orEmpty()
-                if (listingTitle.isNotEmpty()) {
-                    Text(
-                        text = listingTitle,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.primary,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.clickable { onListingTap(review.order) },
-                    )
-                }
-            }
+        if (review.response.isEmpty()) {
             Text(
-                text = format.formatRelativeTime(review.created),
+                text = stringResource(R.string.market_reviews_awaiting_response),
                 style = MaterialTheme.typography.bodySmall,
+                fontStyle = FontStyle.Italic,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-        RatingStars(rating = review.rating.toFloat(), showCount = false)
-        if (review.text.isNotEmpty()) {
-            Text(text = review.text, style = MaterialTheme.typography.bodyMedium)
-        }
-        if (review.response.isNotEmpty()) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 16.dp, top = 4.dp),
-            ) {
-                Text(
-                    text = stringResource(R.string.market_reviews_response_label),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                Text(text = review.response, style = MaterialTheme.typography.bodyMedium)
-            }
-        }
     }
+}
+
+/** The other party's name over a review card, underlined as a link to their profile. */
+@Composable
+private fun ReviewerName(name: String, onClick: () -> Unit) {
+    Text(
+        text = name,
+        style = MaterialTheme.typography.titleMedium,
+        textDecoration = TextDecoration.Underline,
+        modifier = Modifier.clickable(onClick = onClick),
+    )
 }

@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Saadan</string>
     <string name="market_report_reason_counterfeit">Võltsing</string>
     <string name="market_report_reason_prohibited">Keelatud kaup</string>
+    <string name="market_reviews_awaiting_response">Ootab vastust</string>
     <string name="market_reviews_empty_received_subtitle">Ostjad ja müüjad saavad teineteist arvustada pärast lõpetatud tellimust.</string>
     <string name="market_reviews_empty_sent_subtitle">Arvustuse kirjutamiseks avage lõpetatud tellimus.</string>
     <string name="market_reviews_empty_sent_title">Te pole ühtegi arvustust kirjutanud</string>

@@ -516,6 +516,7 @@
     <string name="market_report_dialog_submitting">Đang gửi</string>
     <string name="market_report_reason_counterfeit">Hàng giả</string>
     <string name="market_report_reason_prohibited">Mặt hàng bị cấm</string>
+    <string name="market_reviews_awaiting_response">Đang chờ phản hồi</string>
     <string name="market_reviews_empty_received_subtitle">Người mua và người bán có thể đánh giá lẫn nhau sau khi đơn hàng hoàn tất.</string>
     <string name="market_reviews_empty_sent_subtitle">Mở một đơn hàng đã hoàn tất để viết đánh giá.</string>
     <string name="market_reviews_empty_sent_title">Bạn chưa viết đánh giá nào</string>

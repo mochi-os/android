@@ -457,6 +457,7 @@
     <string name="market_report_dialog_title">Denunciar publicación</string>
     <string name="market_report_reason_counterfeit">Falsificación</string>
     <string name="market_report_reason_prohibited">Artículo prohibido</string>
+    <string name="market_reviews_awaiting_response">Esperando respuesta</string>
     <string name="market_reviews_empty_received_subtitle">Compradores y vendedores pueden reseñarse mutuamente después de un pedido completado.</string>
     <string name="market_reviews_empty_received_title">Aún no hay reseñas</string>
     <string name="market_reviews_empty_sent_subtitle">Abrí un pedido completado para dejar una reseña.</string>

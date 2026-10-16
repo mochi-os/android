@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Pošiljanje</string>
     <string name="market_report_reason_counterfeit">Ponaredek</string>
     <string name="market_report_reason_prohibited">Prepovedan izdelek</string>
+    <string name="market_reviews_awaiting_response">Čaka na odgovor</string>
     <string name="market_reviews_empty_received_subtitle">Kupci in prodajalci lahko ocenjujejo drug drugega po zaključenem naročilu.</string>
     <string name="market_reviews_empty_sent_subtitle">Odprite zaključeno naročilo, da pustite mnenje.</string>
     <string name="market_reviews_empty_sent_title">Niste še napisali nobenega mnenja</string>

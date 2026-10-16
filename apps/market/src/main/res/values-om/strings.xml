@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Deebisaa jira…</string>
     <string name="market_report_dialog_details_label">Ibsa (filannoo)</string>
     <string name="market_report_dialog_submitting">Ergamaa jira</string>
+    <string name="market_reviews_awaiting_response">Deebii eegaa jira</string>
     <string name="market_reviews_empty_received_subtitle">Bitaa fi gurgurtaan booda ajajni xumuramee booda walii isaanii madaaluu danda\'u.</string>
     <string name="market_reviews_empty_sent_subtitle">Madaallii kennuuf ajaja xumurame bani.</string>
     <string name="market_reviews_empty_sent_title">Madaallii tokko illee hin barreessine</string>

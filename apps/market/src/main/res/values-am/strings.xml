@@ -427,6 +427,7 @@
     <string name="market_report_reason_other">ሌላ</string>
     <string name="market_report_reason_prohibited">የተከለከለ ንጥል</string>
     <string name="market_report_reason_spam">ስፓም</string>
+    <string name="market_reviews_awaiting_response">ምላሽ በመጠባበቅ ላይ</string>
     <string name="market_reviews_empty_received_subtitle">ገዢዎች እና ሻጮች ከተጠናቀቀ ትዕዛዝ በኋላ እርስ በርስ መገምገም ይችላሉ።</string>
     <string name="market_reviews_empty_received_title">እስካሁን ግምገማዎች የሉም</string>
     <string name="market_reviews_empty_sent_subtitle">ግምገማ ለማስቀመጥ የተጠናቀቀ ትዕዛዝ ይክፈቱ።</string>

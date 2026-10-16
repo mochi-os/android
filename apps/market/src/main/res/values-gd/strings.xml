@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Ag ath-dhìoladh…</string>
     <string name="market_report_dialog_details_label">Mion-fhiosrachadh (roghainneil)</string>
     <string name="market_report_dialog_submitting">\'Ga chur a-null</string>
+    <string name="market_reviews_awaiting_response">A\' feitheamh ri freagairt</string>
     <string name="market_reviews_empty_received_subtitle">\'S urrainn do cheannaichean is reiceadairean lèirmheas a sgrìobhadh air a chèile às dèidh òrduigh choileanta.</string>
     <string name="market_reviews_empty_sent_subtitle">Fosgail òrdugh coileanta gus lèirmheas fhàgail.</string>
     <string name="market_reviews_empty_sent_title">Cha do sgrìobh thu lèirmheas sam bith</string>

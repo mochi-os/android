@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">កំពុងសងវិញ…</string>
     <string name="market_report_dialog_details_label">ព័ត៌មានលម្អិត (ស្រេចចិត្ត)</string>
     <string name="market_report_dialog_submitting">កំពុងដាក់ស្នើ</string>
+    <string name="market_reviews_awaiting_response">កំពុងរង់ចាំការឆ្លើយតប</string>
     <string name="market_reviews_empty_received_subtitle">អ្នកទិញ និងអ្នកលក់អាចវាយតម្លៃគ្នាបន្ទាប់ពីការបញ្ជាទិញបានបញ្ចប់។</string>
     <string name="market_reviews_empty_sent_subtitle">បើកការបញ្ជាទិញដែលបានបញ្ចប់ដើម្បីផ្ដល់ការវាយតម្លៃ។</string>
     <string name="market_reviews_empty_sent_title">អ្នកមិនបានសរសេរការវាយតម្លៃណាមួយឡើយ</string>

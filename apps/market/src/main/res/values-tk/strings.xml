@@ -520,6 +520,7 @@
     <string name="market_refund_dialog_submitting">Yzyna gaýtarylýar…</string>
     <string name="market_report_dialog_details_label">Jikme-jiklikler (hökmany däl)</string>
     <string name="market_report_dialog_submitting">Iberilýär</string>
+    <string name="market_reviews_awaiting_response">Jogap garaşylýar</string>
     <string name="market_reviews_empty_received_subtitle">Alyjylar we satyjylar tamamlanan sargytdan soň biri-birine baha berip bilerler.</string>
     <string name="market_reviews_empty_sent_subtitle">Synag galdyrmak üçin tamamlanan sargyt açyň.</string>
     <string name="market_reviews_empty_sent_title">Hiç hili synag ýazmadyňyz</string>

@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Фиристода шуда истодааст</string>
     <string name="market_report_reason_counterfeit">Қалбакӣ</string>
     <string name="market_report_reason_prohibited">Ашёи манъшуда</string>
+    <string name="market_reviews_awaiting_response">Интизори ҷавоб</string>
     <string name="market_reviews_empty_received_subtitle">Харидорон ва фурӯшандагон пас аз анҷоми фармоиш метавонанд якдигарро баррасӣ кунанд.</string>
     <string name="market_reviews_empty_sent_subtitle">Барои гузоштани баррасӣ фармоиши анҷомёфтаро кушоед.</string>
     <string name="market_reviews_empty_sent_title">Шумо ягон баррасӣ нанавиштаед</string>

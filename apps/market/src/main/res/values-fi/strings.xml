@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Lähetetään</string>
     <string name="market_report_reason_counterfeit">Väärennös</string>
     <string name="market_report_reason_prohibited">Kielletty tuote</string>
+    <string name="market_reviews_awaiting_response">Odottaa vastausta</string>
     <string name="market_reviews_empty_received_subtitle">Ostajat ja myyjät voivat arvostella toisensa valmiin tilauksen jälkeen.</string>
     <string name="market_reviews_empty_sent_subtitle">Avaa valmis tilaus jättääksesi arvostelun.</string>
     <string name="market_reviews_empty_sent_title">Et ole kirjoittanut arvosteluja</string>

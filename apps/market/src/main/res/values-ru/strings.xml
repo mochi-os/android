@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Отправка</string>
     <string name="market_report_reason_counterfeit">Подделка</string>
     <string name="market_report_reason_prohibited">Запрещённый товар</string>
+    <string name="market_reviews_awaiting_response">Ожидает ответа</string>
     <string name="market_reviews_empty_received_subtitle">Покупатели и продавцы могут оставлять отзывы друг о друге после завершения заказа.</string>
     <string name="market_reviews_empty_sent_subtitle">Откройте завершённый заказ, чтобы оставить отзыв.</string>
     <string name="market_reviews_empty_sent_title">Вы ещё не написали ни одного отзыва</string>

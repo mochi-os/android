@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">Odosielam</string>
     <string name="market_report_reason_counterfeit">Falzifikát</string>
     <string name="market_report_reason_prohibited">Zakázaná položka</string>
+    <string name="market_reviews_awaiting_response">Čaká na odpoveď</string>
     <string name="market_reviews_empty_received_subtitle">Kupujúci a predávajúci môžu po dokončenej objednávke navzájom napísať recenziu.</string>
     <string name="market_reviews_empty_sent_subtitle">Otvorte dokončenú objednávku a napíšte recenziu.</string>
     <string name="market_reviews_empty_sent_title">Nenapísali ste žiadne recenzie</string>

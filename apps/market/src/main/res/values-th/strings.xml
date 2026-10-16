@@ -514,6 +514,7 @@
     <string name="market_report_dialog_submitting">กำลังส่ง</string>
     <string name="market_report_reason_counterfeit">ของปลอม</string>
     <string name="market_report_reason_prohibited">สินค้าต้องห้าม</string>
+    <string name="market_reviews_awaiting_response">รอการตอบกลับ</string>
     <string name="market_reviews_empty_received_subtitle">ผู้ซื้อและผู้ขายสามารถรีวิวกันได้หลังจากคำสั่งซื้อเสร็จสมบูรณ์</string>
     <string name="market_reviews_empty_sent_subtitle">เปิดคำสั่งซื้อที่เสร็จสมบูรณ์เพื่อเขียนรีวิว</string>
     <string name="market_reviews_empty_sent_title">คุณยังไม่ได้เขียนรีวิวใดๆ</string>

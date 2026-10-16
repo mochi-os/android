@@ -513,6 +513,7 @@
     <string name="market_report_dialog_submitting">Enviant</string>
     <string name="market_report_reason_counterfeit">Falsificació</string>
     <string name="market_report_reason_prohibited">Article prohibit</string>
+    <string name="market_reviews_awaiting_response">Pendent de resposta</string>
     <string name="market_reviews_empty_received_subtitle">Compradors i venedors es poden ressenyar mútuament després d\'una comanda completada.</string>
     <string name="market_reviews_empty_sent_subtitle">Obriu una comanda completada per deixar una ressenya.</string>
     <string name="market_reviews_empty_sent_title">No heu escrit cap ressenya</string>

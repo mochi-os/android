@@ -513,6 +513,7 @@
     <string name="market_report_dialog_submitting">جارٍ الإرسال</string>
     <string name="market_report_reason_counterfeit">مقلّد</string>
     <string name="market_report_reason_prohibited">عنصر محظور</string>
+    <string name="market_reviews_awaiting_response">بانتظار الرد</string>
     <string name="market_reviews_empty_received_subtitle">يمكن للمشترين والبائعين تقييم بعضهم بعد إتمام الطلب.</string>
     <string name="market_reviews_empty_sent_subtitle">افتح طلبًا مكتملًا لكتابة تقييم.</string>
     <string name="market_reviews_empty_sent_title">لم تكتب أي تقييمات بعد</string>
