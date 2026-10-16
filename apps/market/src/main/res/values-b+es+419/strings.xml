@@ -221,7 +221,10 @@
     <string name="market_listings_action_relist">Volver a publicar</string>
     <string name="market_listings_action_share">Compartir</string>
     <string name="market_listings_action_view">Ver</string>
+    <string name="market_listings_appeal">Apelar</string>
+    <string name="market_listings_clear">Quitar de mis publicaciones</string>
     <string name="market_listings_delete_confirm">Eliminar</string>
+    <string name="market_listings_delete_draft">Eliminar borrador</string>
     <string name="market_listings_empty_title">Aún no hay anuncios</string>
     <string name="market_listings_filter_active">Activo</string>
     <string name="market_listings_filter_all">Todo</string>
@@ -694,6 +697,7 @@
     <string name="market_audit_subscription_reactivated">Reactivado</string>
     <string name="market_audit_subscription_resumed">Reanudado</string>
     <string name="market_listings_remove_confirm">Eliminar</string>
+    <string name="market_listings_remove_listing">Quitar publicación</string>
     <string name="market_listings_remove_message">El anuncio se ocultará a los compradores. Esto no se puede deshacer, pero puedes volver a publicarlo más tarde como un nuevo borrador.</string>
     <string name="market_listings_remove_message_auction">Esto cancelará la subasta. El anuncio se ocultará de los compradores; puedes volver a publicarlo más tarde como un nuevo borrador.</string>
     <string name="market_listings_remove_title">¿Retirar este anuncio?</string>

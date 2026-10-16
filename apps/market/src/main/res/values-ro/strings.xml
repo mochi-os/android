@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Editează</string>
     <string name="market_listings_action_relist">Republică</string>
     <string name="market_listings_action_view">Vizualizează</string>
+    <string name="market_listings_appeal">Contestă</string>
+    <string name="market_listings_clear">Elimină din anunțurile mele</string>
     <string name="market_listings_delete_confirm">Șterge</string>
+    <string name="market_listings_delete_draft">Șterge ciorna</string>
     <string name="market_listings_empty_title">Încă niciun anunț</string>
     <string name="market_listings_filter_active">Activ</string>
     <string name="market_listings_filter_all">Toate</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Reactivat</string>
     <string name="market_audit_subscription_resumed">Reluat</string>
     <string name="market_listings_remove_confirm">Elimină</string>
+    <string name="market_listings_remove_listing">Elimină anunțul</string>
     <string name="market_listings_remove_message">Anunțul va fi ascuns de cumpărători. Această acțiune nu poate fi anulată, dar îl poți relista mai târziu ca o nouă schiță.</string>
     <string name="market_listings_remove_message_auction">Aceasta va anula licitația. Anunțul va fi ascuns de cumpărători; îl poți relista mai târziu ca o nouă schiță.</string>
     <string name="market_listings_remove_title">Elimini acest anunț?</string>

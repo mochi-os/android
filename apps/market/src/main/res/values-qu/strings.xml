@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Yapamanta listapi churay</string>
     <string name="market_listings_action_share">Rakiy</string>
     <string name="market_listings_action_view">Qhaway</string>
+    <string name="market_listings_appeal">Mañakuy</string>
+    <string name="market_listings_clear">Willakuyniykunamanta qichuy</string>
     <string name="market_listings_delete_confirm">Wischuy</string>
+    <string name="market_listings_delete_draft">Borradorta qulluy</string>
     <string name="market_listings_empty_title">Manaraq listadokuna kanchu</string>
     <string name="market_listings_filter_active">Kawsachkan</string>
     <string name="market_listings_filter_all">Llapan</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Kutimanta activasqa</string>
     <string name="market_audit_subscription_resumed">Kutimanta qallarisqa</string>
     <string name="market_listings_remove_confirm">Qichuy</string>
+    <string name="market_listings_remove_listing">Willakuyta qichuy</string>
     <string name="market_listings_remove_message">Listadoqa rantiqkunamanta pakasqa kanqa. Kayqa mana kutichiy atikunchu, ichaqa qhipaman musuq borrador hina yapamanta listapi churayta atinki.</string>
     <string name="market_listings_remove_message_auction">Kayqa subastata chinkachinqa. Listadoqa rantiqkunamanta pakasqa kanqa; qhipaman musuq borrador hina yapamanta listapi churayta atinki.</string>
     <string name="market_listings_remove_title">¿Kay listadota qichunkichu?</string>

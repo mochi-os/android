@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">ફરી લિસ્ટ કરો</string>
     <string name="market_listings_action_share">શેર</string>
     <string name="market_listings_action_view">જુઓ</string>
+    <string name="market_listings_appeal">અપીલ</string>
+    <string name="market_listings_clear">મારી લિસ્ટિંગમાંથી દૂર કરો</string>
     <string name="market_listings_delete_confirm">કાઢી નાખો</string>
+    <string name="market_listings_delete_draft">ડ્રાફ્ટ કાઢી નાખો</string>
     <string name="market_listings_empty_title">હજુ સુધી કોઈ લિસ્ટિંગ્સ નથી</string>
     <string name="market_listings_filter_active">સક્રિય</string>
     <string name="market_listings_filter_all">બધા</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">ફરી સક્રિય થયું</string>
     <string name="market_audit_subscription_resumed">ફરી શરૂ કર્યું</string>
     <string name="market_listings_remove_confirm">દૂર કરો</string>
+    <string name="market_listings_remove_listing">લિસ્ટિંગ દૂર કરો</string>
     <string name="market_listings_remove_message">યાદી ખરીદદારોથી છુપાવવામાં આવશે. આ પૂર્વવત્ કરી શકાતું નથી, પરંતુ તમે પછીથી તેને નવા ડ્રાફ્ટ તરીકે ફરીથી યાદી કરી શકો છો.</string>
     <string name="market_listings_remove_message_auction">આ હરાજી રદ કરશે. યાદી ખરીદદારોથી છુપાવવામાં આવશે; તમે પછીથી તેને નવા ડ્રાફ્ટ તરીકે ફરીથી સૂચિબદ્ધ કરી શકો છો.</string>
     <string name="market_listings_remove_title">આ યાદી દૂર કરશો?</string>

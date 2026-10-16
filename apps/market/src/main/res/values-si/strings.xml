@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">නැවත ලැයිස්තුගත කරන්න</string>
     <string name="market_listings_action_share">බෙදා ගන්න</string>
     <string name="market_listings_action_view">බලන්න</string>
+    <string name="market_listings_appeal">අභියාචනය</string>
+    <string name="market_listings_clear">මගේ ලැයිස්තුවලින් ඉවත් කරන්න</string>
     <string name="market_listings_delete_confirm">මකන්න</string>
+    <string name="market_listings_delete_draft">කෙටුම්පත මකන්න</string>
     <string name="market_listings_empty_title">තවම ලැයිස්තුගත කිරීම් නැත</string>
     <string name="market_listings_filter_active">සක්‍රීය</string>
     <string name="market_listings_filter_all">සියල්ල</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">නැවත සක්‍රිය කරන ලදී</string>
     <string name="market_audit_subscription_resumed">නැවත ආරම්භ කරන ලදී</string>
     <string name="market_listings_remove_confirm">ඉවත් කරන්න</string>
+    <string name="market_listings_remove_listing">ලැයිස්තුව ඉවත් කරන්න</string>
     <string name="market_listings_remove_message">ලැයිස්තුව මිලදී ගන්නන්ගෙන් සඟවනු ලැබේ. මෙය අහෝසි කළ නොහැක, නමුත් පසුව එය නව කෙටුම්පතක් ලෙස නැවත ලැයිස්තුගත කළ හැක.</string>
     <string name="market_listings_remove_message_auction">මෙය වෙන්දේසිය අවලංගු කරයි. ලැයිස්තුව ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ; ඔබට පසුව එය නව කෙටුම්පතක් ලෙස නැවත ලැයිස්තුගත කළ හැකිය.</string>
     <string name="market_listings_remove_title">මෙම ලැයිස්තුව ඉවත් කරන්නද?</string>

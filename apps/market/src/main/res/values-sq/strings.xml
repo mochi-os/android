@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Rilisto</string>
     <string name="market_listings_action_share">Ndaj</string>
     <string name="market_listings_action_view">Shiko</string>
+    <string name="market_listings_appeal">Apelo</string>
+    <string name="market_listings_clear">Hiq nga njoftimet e mia</string>
     <string name="market_listings_delete_confirm">Fshi</string>
+    <string name="market_listings_delete_draft">Fshi draftin</string>
     <string name="market_listings_empty_title">Ende pa listime</string>
     <string name="market_listings_filter_active">Aktiv</string>
     <string name="market_listings_filter_all">Të gjitha</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">I riaktivizuar</string>
     <string name="market_audit_subscription_resumed">I rifilluar</string>
     <string name="market_listings_remove_confirm">Hiq</string>
+    <string name="market_listings_remove_listing">Hiq njoftimin</string>
     <string name="market_listings_remove_message">Shpallja do të fshihet nga blerësit. Kjo nuk mund të zhbëhet, por mund ta rilistosh më vonë si një draft të ri.</string>
     <string name="market_listings_remove_message_auction">Kjo do të anulojë ankandin. Shpallja do të fshihet nga blerësit; mund ta rilistosh më vonë si një draft të ri.</string>
     <string name="market_listings_remove_title">Të hiqet ky listim?</string>

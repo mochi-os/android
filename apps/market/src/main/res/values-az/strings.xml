@@ -297,7 +297,10 @@
     <string name="market_listings_action_relist">Yenidən sat</string>
     <string name="market_listings_action_share">Paylaş</string>
     <string name="market_listings_action_view">Bax</string>
+    <string name="market_listings_appeal">Apellyasiya</string>
+    <string name="market_listings_clear">Elanlarımdan təmizlə</string>
     <string name="market_listings_delete_confirm">Sil</string>
+    <string name="market_listings_delete_draft">Qaralamanı sil</string>
     <string name="market_listings_delete_failed">Elan silinmədi</string>
     <string name="market_listings_delete_message">Bu, qaralamanı hesabınızdan qalıcı olaraq silir.</string>
     <string name="market_listings_delete_title">Elan silinsin?</string>
@@ -698,6 +701,7 @@
     <string name="market_audit_subscription_reactivated">Yenidən aktivləşdirildi</string>
     <string name="market_audit_subscription_resumed">Davam etdirildi</string>
     <string name="market_listings_remove_confirm">Sil</string>
+    <string name="market_listings_remove_listing">Elanı sil</string>
     <string name="market_listings_remove_message">Elan alıcılardan gizlədiləcək. Bunu geri qaytarmaq olmaz, lakin sonra onu yeni qaralama kimi yenidən elan edə bilərsiniz.</string>
     <string name="market_listings_remove_message_auction">Bu, hərracı ləğv edəcək. Elan alıcılardan gizlədiləcək; onu sonra yeni qaralama kimi yenidən yerləşdirə bilərsiniz.</string>
     <string name="market_listings_remove_title">Bu elanı silək?</string>

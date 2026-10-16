@@ -297,7 +297,10 @@
     <string name="market_listings_action_relist">Berriro zerrendatu</string>
     <string name="market_listings_action_share">Partekatu</string>
     <string name="market_listings_action_view">Ikusi</string>
+    <string name="market_listings_appeal">Helegitea</string>
+    <string name="market_listings_clear">Kendu nire iragarkietatik</string>
     <string name="market_listings_delete_confirm">Ezabatu</string>
+    <string name="market_listings_delete_draft">Ezabatu zirriborroa</string>
     <string name="market_listings_delete_failed">Ezin izan da zerrenda ezabatu</string>
     <string name="market_listings_delete_message">Honek zirriborroa zure kontutik betiko kentzen du.</string>
     <string name="market_listings_delete_title">Zerrenda ezabatu?</string>
@@ -698,6 +701,7 @@
     <string name="market_audit_subscription_reactivated">Berraktibatu da</string>
     <string name="market_audit_subscription_resumed">Berriro hasita</string>
     <string name="market_listings_remove_confirm">Kendu</string>
+    <string name="market_listings_remove_listing">Kendu iragarkia</string>
     <string name="market_listings_remove_message">Zerrenda erosleengandik ezkutatuko da. Hau ezin da desegin, baina geroago zirriborro berri gisa berriro zerrendatu dezakezu.</string>
     <string name="market_listings_remove_message_auction">Honek enkantea bertan behera utziko du. Zerrenda erosleengandik ezkutatuko da; geroago zirriborro berri gisa berriro zerrendatu dezakezu.</string>
     <string name="market_listings_remove_title">Zerrenda hau kendu?</string>

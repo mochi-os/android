@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Изменить</string>
     <string name="market_listings_action_relist">Переопубликовать</string>
     <string name="market_listings_action_view">Просмотр</string>
+    <string name="market_listings_appeal">Обжаловать</string>
+    <string name="market_listings_clear">Убрать из моих объявлений</string>
     <string name="market_listings_delete_confirm">Удалить</string>
+    <string name="market_listings_delete_draft">Удалить черновик</string>
     <string name="market_listings_empty_title">Объявлений пока нет</string>
     <string name="market_listings_filter_active">Активно</string>
     <string name="market_listings_filter_all">Все</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Реактивировано</string>
     <string name="market_audit_subscription_resumed">Возобновлено</string>
     <string name="market_listings_remove_confirm">Удалить</string>
+    <string name="market_listings_remove_listing">Снять объявление</string>
     <string name="market_listings_remove_message">Объявление будет скрыто от покупателей. Это нельзя отменить, но позже вы можете разместить его заново как новый черновик.</string>
     <string name="market_listings_remove_message_auction">Это отменит аукцион. Объявление будет скрыто от покупателей; вы сможете опубликовать его позже как новый черновик.</string>
     <string name="market_listings_remove_title">Удалить это объявление?</string>

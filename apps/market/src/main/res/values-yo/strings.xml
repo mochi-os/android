@@ -226,7 +226,10 @@
     <string name="market_listings_action_relist">Tún tò</string>
     <string name="market_listings_action_share">Pín</string>
     <string name="market_listings_action_view">Wo</string>
+    <string name="market_listings_appeal">Pè ẹjọ́</string>
+    <string name="market_listings_clear">Yọ kúrò nínú àwọn ìpolówó mi</string>
     <string name="market_listings_delete_confirm">Pa rẹ́</string>
+    <string name="market_listings_delete_draft">Pa àkọsílẹ̀ rẹ́</string>
     <string name="market_listings_empty_title">Kò sí ìtòlẹ́ síbẹ̀</string>
     <string name="market_listings_filter_active">Ó ń ṣiṣẹ́</string>
     <string name="market_listings_filter_all">Gbogbo</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Ti tún mú ṣiṣẹ́</string>
     <string name="market_audit_subscription_resumed">Ti tẹ̀síwájú</string>
     <string name="market_listings_remove_confirm">Yọ kúrò</string>
+    <string name="market_listings_remove_listing">Yọ ìpolówó kúrò</string>
     <string name="market_listings_remove_message">A yóò fi àkójọ pamọ́ kúrò lọ́dọ̀ àwọn olúrà. Èyí kò ṣeé yípadà, ṣùgbọ́n o lè tún un ṣe lẹ́yìn náà gẹ́gẹ́ bí àyàwòlé tuntun.</string>
     <string name="market_listings_remove_message_auction">Eyi yoo fagilee titaja naa. Atokọ naa yoo farapamọ kuro lọdọ awọn olura; o le tun ṣe atokọ rẹ nigbamii bi akọsilẹ tuntun.</string>
     <string name="market_listings_remove_title">Yọ àkójọ yìí kuro?</string>

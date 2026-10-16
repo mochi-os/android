@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">ပြန်တင်</string>
     <string name="market_listings_action_share">မျှဝေ</string>
     <string name="market_listings_action_view">ကြည့်ရှုမည်</string>
+    <string name="market_listings_appeal">အယူခံ</string>
+    <string name="market_listings_clear">ကျွန်ုပ်၏စာရင်းမှ ရှင်းလင်းရန်</string>
     <string name="market_listings_delete_confirm">ဖျက်မည်</string>
+    <string name="market_listings_delete_draft">မူကြမ်း ဖျက်ရန်</string>
     <string name="market_listings_empty_title">စာရင်းများ မရှိသေးပါ</string>
     <string name="market_listings_filter_active">လက်ရှိ</string>
     <string name="market_listings_filter_all">အားလုံး</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">ပြန်ဖွင့်ပြီး</string>
     <string name="market_audit_subscription_resumed">ဆက်လုပ်ပြီး</string>
     <string name="market_listings_remove_confirm">ဖယ်ရှား</string>
+    <string name="market_listings_remove_listing">စာရင်း ဖယ်ရှားရန်</string>
     <string name="market_listings_remove_message">ဝယ်သူများထံမှ စာရင်းသွင်းပစ္စည်းကို ဝှက်ထားမည်။ ၎င်းကို ပြန်ပြန်လည်လုပ်၍ မရတော့ပါ၊ သို့သော် နောက်မှ မူကြမ်း အသစ်အဖြစ် ပြန်တင်နိုင်သည်။</string>
     <string name="market_listings_remove_message_auction">၎င်းသည် လေလံ ကို ပယ်ဖျက်ပါမည်။ စာရင်းသွင်းပစ္စည်းကို ဝယ်သူများထံမှ ဝှက်ထားပါမည်; နောက်မှ မူကြမ်း အသစ်အဖြစ် ပြန်တင်နိုင်သည်။</string>
     <string name="market_listings_remove_title">ဤစာရင်းကို ဖယ်ရှားမလား?</string>

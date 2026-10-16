@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Uredi</string>
     <string name="market_listings_action_relist">Ponovno objavi</string>
     <string name="market_listings_action_view">Poglej</string>
+    <string name="market_listings_appeal">Pritožba</string>
+    <string name="market_listings_clear">Odstrani iz mojih oglasov</string>
     <string name="market_listings_delete_confirm">Izbriši</string>
+    <string name="market_listings_delete_draft">Izbriši osnutek</string>
     <string name="market_listings_empty_title">Še ni oglasov</string>
     <string name="market_listings_filter_active">Aktivno</string>
     <string name="market_listings_filter_all">Vse</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Ponovno aktivirano</string>
     <string name="market_audit_subscription_resumed">Nadaljevano</string>
     <string name="market_listings_remove_confirm">Odstrani</string>
+    <string name="market_listings_remove_listing">Odstrani oglas</string>
     <string name="market_listings_remove_message">Oglas bo skrit pred kupci. Tega ni mogoče razveljaviti, lahko pa ga kasneje znova objavite kot nov osnutek.</string>
     <string name="market_listings_remove_message_auction">S tem boste preklicali dražbo. Oglas bo skrit pred kupci; lahko ga znova objavite kasneje kot nov osnutek.</string>
     <string name="market_listings_remove_title">Odstrani ta oglas?</string>

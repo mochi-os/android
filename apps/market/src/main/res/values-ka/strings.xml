@@ -220,7 +220,10 @@
     <string name="market_listings_action_relist">ხელახალი განცხადება</string>
     <string name="market_listings_action_share">გაზიარება</string>
     <string name="market_listings_action_view">ნახვა</string>
+    <string name="market_listings_appeal">გასაჩივრება</string>
+    <string name="market_listings_clear">ჩემი განცხადებებიდან წაშლა</string>
     <string name="market_listings_delete_confirm">წაშლა</string>
+    <string name="market_listings_delete_draft">მონახაზის წაშლა</string>
     <string name="market_listings_empty_title">განცხადებები ჯერ არ არის</string>
     <string name="market_listings_filter_active">აქტიური</string>
     <string name="market_listings_filter_all">ყველა</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">რეაქტივირებული</string>
     <string name="market_audit_subscription_resumed">გაგრძელებული</string>
     <string name="market_listings_remove_confirm">წაშლა</string>
+    <string name="market_listings_remove_listing">განცხადების წაშლა</string>
     <string name="market_listings_remove_message">ლისტინგი დაიმალება მყიდველებისგან. ეს ვერ გაუქმდება, მაგრამ შეგიძლიათ მოგვიანებით ხელახლა ჩამოთვალოთ ახალ დრაფტად.</string>
     <string name="market_listings_remove_message_auction">ეს გააუქმებს აუქციონს. ლისტინგი დაიმალება მყიდველებისგან; შეგიძლიათ მოგვიანებით ხელახლა ჩამოთვალოთ ახალ დრაფტად.</string>
     <string name="market_listings_remove_title">წავშალოთ ეს განცხადება?</string>

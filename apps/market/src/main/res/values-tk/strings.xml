@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Gaýtadan sanaw döret</string>
     <string name="market_listings_action_share">Paýlaş</string>
     <string name="market_listings_action_view">Görkez</string>
+    <string name="market_listings_appeal">Şikaýat et</string>
+    <string name="market_listings_clear">Bildirişlerimden aýyr</string>
     <string name="market_listings_delete_confirm">Pozmak</string>
+    <string name="market_listings_delete_draft">Garalamany poz</string>
     <string name="market_listings_empty_title">Heniz sanawlar ýok</string>
     <string name="market_listings_filter_active">Aktiw</string>
     <string name="market_listings_filter_all">Hemmesi</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Gaýtadan işjeňleşdirildi</string>
     <string name="market_audit_subscription_resumed">Dowam edildi</string>
     <string name="market_listings_remove_confirm">Aýyr</string>
+    <string name="market_listings_remove_listing">Bildirişi aýyr</string>
     <string name="market_listings_remove_message">Sanaw alyjylardan gizleniler. Bu yza gaýtaryp bolmaz, ýöne soň ony täze çernowik hökmünde täzeden sanawlap bolar.</string>
     <string name="market_listings_remove_message_auction">Bu auksiýony ýatyrar. Sanaw alyjylardan gizleniler; soň ony täze çernowik hökmünde täzeden sanawlap bolar.</string>
     <string name="market_listings_remove_title">Bu sanawy aýyrmak?</string>

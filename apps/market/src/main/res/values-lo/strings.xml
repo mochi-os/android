@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">ວາງລາຍການຂາຍໃໝ່</string>
     <string name="market_listings_action_share">ແບ່ງປັນ</string>
     <string name="market_listings_action_view">ເບິ່ງ</string>
+    <string name="market_listings_appeal">ອຸທອນ</string>
+    <string name="market_listings_clear">ລຶບອອກຈາກລາຍການຂອງຂ້ອຍ</string>
     <string name="market_listings_delete_confirm">ລົບ</string>
+    <string name="market_listings_delete_draft">ລຶບສະບັບຮ່າງ</string>
     <string name="market_listings_empty_title">ຍັງບໍ່ມີລາຍການຂາຍ</string>
     <string name="market_listings_filter_active">ໃຊ້ງານຢູ່</string>
     <string name="market_listings_filter_all">ທັງໝົດ</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">ເປີດໃຊ້ງານໃໝ່ແລ້ວ</string>
     <string name="market_audit_subscription_resumed">ສືບຕໍ່ແລ້ວ</string>
     <string name="market_listings_remove_confirm">ລຶບອອກ</string>
+    <string name="market_listings_remove_listing">ລຶບລາຍການ</string>
     <string name="market_listings_remove_message">ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້. ການກະທຳນີ້ຄືນບໍ່ໄດ້, ແຕ່ທ່ານສາມາດລະບຸໃໝ່ພາຍຫຼັງເປັນສະບັບຮ່າງໃໝ່.</string>
     <string name="market_listings_remove_message_auction">ນີ້ຈະຍົກເລີກການປະມູນ. ລາຍການຈະຖືກເຊື່ອງຈາກຜູ້ຊື້; ທ່ານສາມາດລະບຸໃໝ່ພາຍຫຼັງເປັນສະບັບຮ່າງໃໝ່.</string>
     <string name="market_listings_remove_title">ລຶບລາຍການຂາຍນີ້?</string>

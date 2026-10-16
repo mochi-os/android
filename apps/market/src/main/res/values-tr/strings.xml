@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Düzenle</string>
     <string name="market_listings_action_relist">Yeniden listele</string>
     <string name="market_listings_action_view">Görüntüle</string>
+    <string name="market_listings_appeal">İtiraz et</string>
+    <string name="market_listings_clear">İlanlarımdan kaldır</string>
     <string name="market_listings_delete_confirm">Sil</string>
+    <string name="market_listings_delete_draft">Taslağı sil</string>
     <string name="market_listings_empty_title">Henüz ilan yok</string>
     <string name="market_listings_filter_active">Etkin</string>
     <string name="market_listings_filter_all">Tümü</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Yeniden etkinleştirildi</string>
     <string name="market_audit_subscription_resumed">Sürdürüldü</string>
     <string name="market_listings_remove_confirm">Kaldır</string>
+    <string name="market_listings_remove_listing">İlanı kaldır</string>
     <string name="market_listings_remove_message">İlan alıcılardan gizlenecek. Bu geri alınamaz, ancak daha sonra yeni bir taslak olarak yeniden listeleyebilirsin.</string>
     <string name="market_listings_remove_message_auction">Bu işlem açık artırmayı iptal edecek. İlan alıcılardan gizlenecek; daha sonra yeni bir taslak olarak yeniden listeleyebilirsin.</string>
     <string name="market_listings_remove_title">Bu ilan kaldırılsın mı?</string>

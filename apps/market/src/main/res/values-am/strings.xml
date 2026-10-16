@@ -297,7 +297,10 @@
     <string name="market_listings_action_relist">እንደገና ዘርዝር</string>
     <string name="market_listings_action_share">አጋራ</string>
     <string name="market_listings_action_view">ይመልከቱ</string>
+    <string name="market_listings_appeal">ይግባኝ</string>
+    <string name="market_listings_clear">ከዝርዝሮቼ አጽዳ</string>
     <string name="market_listings_delete_confirm">ሰርዝ</string>
+    <string name="market_listings_delete_draft">ረቂቅ ሰርዝ</string>
     <string name="market_listings_delete_failed">ዝርዝሩን መሰረዝ አልተሳካም</string>
     <string name="market_listings_delete_message">ይህ ረቂቁን ከመለያዎ በቋሚነት ያስወግዳል።</string>
     <string name="market_listings_delete_title">ዝርዝር ይሰረዝ?</string>
@@ -698,6 +701,7 @@
     <string name="market_audit_subscription_reactivated">እንደገና ነቅቷል</string>
     <string name="market_audit_subscription_resumed">ቀጥሏል</string>
     <string name="market_listings_remove_confirm">አስወግድ</string>
+    <string name="market_listings_remove_listing">ዝርዝሩን አስወግድ</string>
     <string name="market_listings_remove_message">ዝርዝሩ ከገዢዎች ይደበቃል። ይህ መቀልበስ አይቻልም፣ ነገር ግን በኋላ እንደ አዲስ ረቂቅ መልሰው መዘርዘር ይችላሉ።</string>
     <string name="market_listings_remove_message_auction">ይህ ጨረታውን ይሰርዛል። ዝርዝሩ ከገዢዎች ይደበቃል፣ በኋላ እንደ አዲስ ረቂቅ እንደገና መዘርዘር ይችላሉ።</string>
     <string name="market_listings_remove_title">ይህን ዝርዝር ያስወግዱ?</string>

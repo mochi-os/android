@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Modifica</string>
     <string name="market_listings_action_relist">Rimetti in vendita</string>
     <string name="market_listings_action_view">Visualizza</string>
+    <string name="market_listings_appeal">Ricorso</string>
+    <string name="market_listings_clear">Rimuovi dai miei annunci</string>
     <string name="market_listings_delete_confirm">Elimina</string>
+    <string name="market_listings_delete_draft">Elimina bozza</string>
     <string name="market_listings_empty_title">Ancora nessun annuncio</string>
     <string name="market_listings_filter_active">Attivo</string>
     <string name="market_listings_filter_all">Tutti</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Riattivato</string>
     <string name="market_audit_subscription_resumed">Ripreso</string>
     <string name="market_listings_remove_confirm">Rimuovi</string>
+    <string name="market_listings_remove_listing">Rimuovi annuncio</string>
     <string name="market_listings_remove_message">L\'annuncio sarà nascosto agli acquirenti. Questa azione non può essere annullata, ma potrai ripubblicarlo più tardi come una nuova bozza.</string>
     <string name="market_listings_remove_message_auction">Questo annullerà l\'asta. L\'inserzione sarà nascosta agli acquirenti; potrai riproporla in seguito come nuova bozza.</string>
     <string name="market_listings_remove_title">Rimuovere questo annuncio?</string>

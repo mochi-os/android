@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">بیا لیست</string>
     <string name="market_listings_action_share">شریک کړئ</string>
     <string name="market_listings_action_view">وګورئ</string>
+    <string name="market_listings_appeal">استیناف</string>
+    <string name="market_listings_clear">زما له لیستونو پاک کړئ</string>
     <string name="market_listings_delete_confirm">ړنګ کړئ</string>
+    <string name="market_listings_delete_draft">مسوده ړنګه کړئ</string>
     <string name="market_listings_empty_title">تر اوسه هیڅ لیستونه نشته</string>
     <string name="market_listings_filter_active">فعال</string>
     <string name="market_listings_filter_all">ټول</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">بیا فعال شوی</string>
     <string name="market_audit_subscription_resumed">بیا پیل شوی</string>
     <string name="market_listings_remove_confirm">لرې کول</string>
+    <string name="market_listings_remove_listing">لیست لرې کړئ</string>
     <string name="market_listings_remove_message">لیست به د پیرودونکو څخه پټ شي. دا نشي بېرته راګرځیدلی، خو تاسو یې وروسته د نوې مسودې په توګه بیا لیست کولی شئ.</string>
     <string name="market_listings_remove_message_auction">دا به نیلام لغوه کړي. لیست به د پیرودونکو څخه پټ شي؛ تاسو یې وروسته د نوې مسودې په توګه بیا لیست کولی شئ.</string>
     <string name="market_listings_remove_title">دا لیست لرې کړو؟</string>

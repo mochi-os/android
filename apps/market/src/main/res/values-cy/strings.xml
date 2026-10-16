@@ -297,7 +297,10 @@
     <string name="market_listings_action_relist">Ailrestru</string>
     <string name="market_listings_action_share">Rhannu</string>
     <string name="market_listings_action_view">Gweld</string>
+    <string name="market_listings_appeal">Apelio</string>
+    <string name="market_listings_clear">Clirio o fy rhestriadau</string>
     <string name="market_listings_delete_confirm">Dileu</string>
+    <string name="market_listings_delete_draft">Dileu drafft</string>
     <string name="market_listings_delete_failed">Methwyd dileu\'r rhestriad</string>
     <string name="market_listings_delete_message">Mae hyn yn dileu\'r drafft yn barhaol o\'ch cyfrif.</string>
     <string name="market_listings_delete_title">Dileu rhestriad?</string>
@@ -698,6 +701,7 @@
     <string name="market_audit_subscription_reactivated">Wedi\'i ailweithredu</string>
     <string name="market_audit_subscription_resumed">Wedi\'i ailddechrau</string>
     <string name="market_listings_remove_confirm">Tynnu</string>
+    <string name="market_listings_remove_listing">Tynnu rhestriad</string>
     <string name="market_listings_remove_message">Bydd y rhestriad yn cael ei guddio rhag prynwyr. Ni ellir dadwneud hyn, ond gallwch ei ailrestru\'n ddiweddarach fel drafft newydd.</string>
     <string name="market_listings_remove_message_auction">Bydd hyn yn canslo\'r arwerthiant. Bydd y rhestriad yn cael ei guddio rhag prynwyr; gallwch ei ailrestru\'n ddiweddarach fel drafft newydd.</string>
     <string name="market_listings_remove_title">Tynnu\'r rhestriad hwn?</string>

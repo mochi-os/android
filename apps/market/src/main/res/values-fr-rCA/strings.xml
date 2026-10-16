@@ -38,10 +38,13 @@
     <string name="market_listings_action_edit">Modifier</string>
     <string name="market_listings_action_delete">Supprimer</string>
     <string name="market_listings_delete_confirm">Supprimer</string>
+    <string name="market_listings_delete_draft">Supprimer le brouillon</string>
     <string name="market_checkout_subscribe_button">S\'abonner</string>
     <string name="market_checkout_subscribe_title">S\'abonner</string>
     <string name="market_listing_detail_subscribe">S\'abonner</string>
     <string name="market_listings_action_view">Voir</string>
+    <string name="market_listings_appeal">Faire appel</string>
+    <string name="market_listings_clear">Retirer de mes annonces</string>
     <string name="market_sidebar_settings">Paramètres</string>
     <string name="market_messages_send">Envoyer</string>
     <string name="market_editor_description">Description</string>
@@ -678,4 +681,5 @@
     <string name="market_audit_subscription_reactivated">Réactivé</string>
     <string name="market_audit_subscription_resumed">Repris</string>
     <string name="market_listings_remove_confirm">Supprimer</string>
+    <string name="market_listings_remove_listing">Retirer l\'annonce</string>
 </resources>

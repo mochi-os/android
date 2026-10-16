@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Daptarkeun deui</string>
     <string name="market_listings_action_share">Bagikeun</string>
     <string name="market_listings_action_view">Tingali</string>
+    <string name="market_listings_appeal">Banding</string>
+    <string name="market_listings_clear">Hapus tina daptar abdi</string>
     <string name="market_listings_delete_confirm">Hapus</string>
+    <string name="market_listings_delete_draft">Hapus draf</string>
     <string name="market_listings_empty_title">Tacan aya daptaran</string>
     <string name="market_listings_filter_active">Aktif</string>
     <string name="market_listings_filter_all">Sadaya</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Diaktipkeun deui</string>
     <string name="market_audit_subscription_resumed">Diteruskeun</string>
     <string name="market_listings_remove_confirm">Pupus</string>
+    <string name="market_listings_remove_listing">Hapus daptar</string>
     <string name="market_listings_remove_message">Listing bakal disumputkeun ti pembeli. Ieu teu tiasa dibatalkeun, tapi anjeun tiasa ngadaptarkeun deui salaku draf anyar.</string>
     <string name="market_listings_remove_message_auction">Ieu bakal ngabatalkeun lélang. Listing bakal disumputkeun ti pembeli; anjeun tiasa ngadaptarkeun deui salaku draf anyar.</string>
     <string name="market_listings_remove_title">Cabut daptaran ieu?</string>

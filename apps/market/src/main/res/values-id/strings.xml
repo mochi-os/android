@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Edit</string>
     <string name="market_listings_action_relist">Daftarkan ulang</string>
     <string name="market_listings_action_view">Lihat</string>
+    <string name="market_listings_appeal">Ajukan banding</string>
+    <string name="market_listings_clear">Hapus dari listing saya</string>
     <string name="market_listings_delete_confirm">Hapus</string>
+    <string name="market_listings_delete_draft">Hapus draf</string>
     <string name="market_listings_empty_title">Belum ada listing</string>
     <string name="market_listings_filter_active">Aktif</string>
     <string name="market_listings_filter_all">Semua</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Diaktifkan kembali</string>
     <string name="market_audit_subscription_resumed">Dilanjutkan</string>
     <string name="market_listings_remove_confirm">Hapus</string>
+    <string name="market_listings_remove_listing">Hapus listing</string>
     <string name="market_listings_remove_message">Daftar akan disembunyikan dari pembeli. Ini tidak dapat dibatalkan, tetapi Anda dapat mendaftarkannya kembali nanti sebagai draf baru.</string>
     <string name="market_listings_remove_message_auction">Ini akan membatalkan lelang. Daftar akan disembunyikan dari pembeli; Anda dapat mendaftarkannya kembali nanti sebagai draf baru.</string>
     <string name="market_listings_remove_title">Hapus daftar ini?</string>

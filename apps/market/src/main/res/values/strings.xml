@@ -386,8 +386,11 @@
     <string name="market_listings_action_relist">Relist</string>
     <string name="market_listings_action_share">Share</string>
     <string name="market_listings_action_view">View</string>
+    <string name="market_listings_appeal">Appeal</string>
+    <string name="market_listings_clear">Clear from my listings</string>
     <string name="market_listings_create">Create</string>
     <string name="market_listings_delete_confirm">Delete</string>
+    <string name="market_listings_delete_draft">Delete draft</string>
     <string name="market_listings_delete_failed">Failed to delete listing</string>
     <string name="market_listings_delete_message">This permanently removes the draft from your account.</string>
     <string name="market_listings_delete_title">Delete listing?</string>
@@ -405,6 +408,7 @@
     <string name="market_listings_new">New listing</string>
     <string name="market_listings_relist_failed">Failed to relist</string>
     <string name="market_listings_remove_confirm">Remove</string>
+    <string name="market_listings_remove_listing">Remove listing</string>
     <string name="market_listings_remove_message">The listing will be hidden from buyers. This cannot be undone, but you can relist it later as a new draft.</string>
     <string name="market_listings_remove_message_auction">This will cancel the auction. The listing will be hidden from buyers; you can relist it later as a new draft.</string>
     <string name="market_listings_remove_title">Remove this listing?</string>

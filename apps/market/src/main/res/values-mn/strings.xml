@@ -297,7 +297,10 @@
     <string name="market_listings_action_relist">Дахин жагсаах</string>
     <string name="market_listings_action_share">Хуваалцах</string>
     <string name="market_listings_action_view">Үзэх</string>
+    <string name="market_listings_appeal">Давж заалдах</string>
+    <string name="market_listings_clear">Миний заруудаас арилгах</string>
     <string name="market_listings_delete_confirm">Устгах</string>
+    <string name="market_listings_delete_draft">Ноорог устгах</string>
     <string name="market_listings_delete_failed">Зар устгаж чадсангүй</string>
     <string name="market_listings_delete_message">Энэ нь ноорогийг таны бүртгэлээс бүрэн арилгана.</string>
     <string name="market_listings_delete_title">Зар устгах уу?</string>
@@ -698,6 +701,7 @@
     <string name="market_audit_subscription_reactivated">Дахин идэвхжүүлсэн</string>
     <string name="market_audit_subscription_resumed">Үргэлжилсэн</string>
     <string name="market_listings_remove_confirm">Хасах</string>
+    <string name="market_listings_remove_listing">Зар устгах</string>
     <string name="market_listings_remove_message">Зар худалдан авагчдаас далдлагдана. Үүнийг буцаах боломжгүй ч дараа нь шинэ ноорог болгон дахин зарлаж болно.</string>
     <string name="market_listings_remove_message_auction">Энэ нь дуудлага худалдааг цуцална. Зар худалдан авагчдаас далдлагдах ба дараа нь шинэ ноорог болгон дахин зарлаж болно.</string>
     <string name="market_listings_remove_title">Энэ зарыг хасах уу?</string>

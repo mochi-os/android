@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">I-relist</string>
     <string name="market_listings_action_share">Ibahagi</string>
     <string name="market_listings_action_view">Tingnan</string>
+    <string name="market_listings_appeal">Mag-apela</string>
+    <string name="market_listings_clear">Alisin sa aking mga listing</string>
     <string name="market_listings_delete_confirm">I-delete</string>
+    <string name="market_listings_delete_draft">Burahin ang draft</string>
     <string name="market_listings_empty_title">Wala pang listing</string>
     <string name="market_listings_filter_active">Aktibo</string>
     <string name="market_listings_filter_all">Lahat</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Na-reaktibo</string>
     <string name="market_audit_subscription_resumed">Ipinagpatuloy</string>
     <string name="market_listings_remove_confirm">Alisin</string>
+    <string name="market_listings_remove_listing">Alisin ang listing</string>
     <string name="market_listings_remove_message">Itatago ang listahan sa mga mamimili. Hindi ito mababawi, ngunit maaari mo itong ilista muli mamaya bilang bagong draft.</string>
     <string name="market_listings_remove_message_auction">Kakanselahin nito ang auction. Ang listahan ay itatago mula sa mga mamimili; maaari mo itong i-relist mamaya bilang bagong draft.</string>
     <string name="market_listings_remove_title">Alisin ang listahang ito?</string>

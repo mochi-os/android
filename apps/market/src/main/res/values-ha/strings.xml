@@ -230,7 +230,10 @@
     <string name="market_listings_action_relist">Sake listing</string>
     <string name="market_listings_action_share">Raba</string>
     <string name="market_listings_action_view">Kalla</string>
+    <string name="market_listings_appeal">Daukaka kara</string>
+    <string name="market_listings_clear">Share daga tallace-tallacena</string>
     <string name="market_listings_delete_confirm">Goge</string>
+    <string name="market_listings_delete_draft">Share daftari</string>
     <string name="market_listings_empty_title">Babu listings tukuna</string>
     <string name="market_listings_filter_active">Aiki</string>
     <string name="market_listings_filter_all">Duk</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">An sake kunnawa</string>
     <string name="market_audit_subscription_resumed">An ci gaba</string>
     <string name="market_listings_remove_confirm">Cire</string>
+    <string name="market_listings_remove_listing">Cire talla</string>
     <string name="market_listings_remove_message">Za a ɓoye jeri daga masu siye. Wannan ba zai iya juyowa ba, amma za ka iya sake jera shi daga baya a matsayin sabon daftari.</string>
     <string name="market_listings_remove_message_auction">Wannan zai soke gwanjon. Za a ɓoye jeren daga masu siye; za ka iya sake jera shi daga baya a matsayin sabon daftari.</string>
     <string name="market_listings_remove_title">Cire wannan jeri?</string>

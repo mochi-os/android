@@ -26,6 +26,7 @@
     <string name="market_listing_detail_subscribe">Suscribite</string>
     <string name="market_listings_action_delete">Eliminá</string>
     <string name="market_listings_delete_confirm">Eliminá</string>
+    <string name="market_listings_delete_draft">Eliminar borrador</string>
     <string name="market_open_sidebar">Abrí el menú</string>
     <string name="market_purchase_confirm_delivery">Confirmá la recepción</string>
     <string name="market_purchase_download_section">Tu compra está lista</string>
@@ -59,6 +60,8 @@
     <string name="market_back">Atrás</string>
     <string name="market_editor_back">Atrás</string>
     <string name="market_listings_action_view">Ver</string>
+    <string name="market_listings_appeal">Apelar</string>
+    <string name="market_listings_clear">Quitar de mis publicaciones</string>
     <string name="market_sidebar_settings">Configuración</string>
     <string name="market_messages_send">Enviar</string>
     <string name="market_editor_description">Descripción</string>
@@ -606,6 +609,7 @@
     <string name="market_listings_create">Crear</string>
     <string name="market_asset_no_app">Ninguna app puede abrir este archivo</string>
     <string name="market_listings_remove_confirm">Quitá</string>
+    <string name="market_listings_remove_listing">Quitar publicación</string>
     <string name="market_listings_remove_title">¿Quitás este aviso?</string>
     <string name="market_account_stripe_connected">Stripe conectado</string>
     <string name="market_audit_account_banned">Baneada</string>

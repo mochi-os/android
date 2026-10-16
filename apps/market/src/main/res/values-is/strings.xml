@@ -224,7 +224,10 @@
     <string name="market_listings_action_relist">Endurskrá</string>
     <string name="market_listings_action_share">Deila</string>
     <string name="market_listings_action_view">Skoða</string>
+    <string name="market_listings_appeal">Áfrýja</string>
+    <string name="market_listings_clear">Fjarlægja úr auglýsingunum mínum</string>
     <string name="market_listings_delete_confirm">Eyða</string>
+    <string name="market_listings_delete_draft">Eyða drögum</string>
     <string name="market_listings_empty_title">Engar skráningar ennþá</string>
     <string name="market_listings_filter_active">Virkur</string>
     <string name="market_listings_filter_all">Allt</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Endurvirkjað</string>
     <string name="market_audit_subscription_resumed">Haldið áfram</string>
     <string name="market_listings_remove_confirm">Fjarlægja</string>
+    <string name="market_listings_remove_listing">Fjarlægja auglýsingu</string>
     <string name="market_listings_remove_message">Auglýsingin verður falin fyrir kaupendum. Þetta er ekki hægt að afturkalla, en þú getur endurskráð hana síðar sem ný drög.</string>
     <string name="market_listings_remove_message_auction">Þetta mun hætta við uppboðið. Skráningin verður falin fyrir kaupendum; þú getur skráð hana aftur síðar sem nýja drög.</string>
     <string name="market_listings_remove_title">Fjarlægja þessa auglýsingu?</string>

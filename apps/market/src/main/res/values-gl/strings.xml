@@ -224,7 +224,10 @@
     <string name="market_listings_action_relist">Volver listar</string>
     <string name="market_listings_action_share">Compartir</string>
     <string name="market_listings_action_view">Ver</string>
+    <string name="market_listings_appeal">Apelar</string>
+    <string name="market_listings_clear">Retirar dos meus anuncios</string>
     <string name="market_listings_delete_confirm">Eliminar</string>
+    <string name="market_listings_delete_draft">Eliminar borrador</string>
     <string name="market_listings_empty_title">Aínda non hai listaxes</string>
     <string name="market_listings_filter_active">Activo</string>
     <string name="market_listings_filter_all">Todos</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Reactivado</string>
     <string name="market_audit_subscription_resumed">Retomado</string>
     <string name="market_listings_remove_confirm">Eliminar</string>
+    <string name="market_listings_remove_listing">Retirar anuncio</string>
     <string name="market_listings_remove_message">A listaxe será ocultada dos compradores. Isto non se pode desfacer, pero podes volver listala máis tarde como un novo borrador.</string>
     <string name="market_listings_remove_message_auction">Isto cancelará a poxa. A listaxe será ocultada dos compradores; podes volver listala máis tarde como un novo borrador.</string>
     <string name="market_listings_remove_title">Eliminar esta listaxe?</string>

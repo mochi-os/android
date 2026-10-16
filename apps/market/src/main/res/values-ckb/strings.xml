@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">دووبارە لیستکردن</string>
     <string name="market_listings_action_share">هاوبەشی</string>
     <string name="market_listings_action_view">بینین</string>
+    <string name="market_listings_appeal">تانەوە</string>
+    <string name="market_listings_clear">لابردن لە ڕیکلامەکانم</string>
     <string name="market_listings_delete_confirm">سڕینەوە</string>
+    <string name="market_listings_delete_draft">سڕینەوەی ڕەشنووس</string>
     <string name="market_listings_empty_title">هێشتا هیچ لیستێک نییە</string>
     <string name="market_listings_filter_active">چالاک</string>
     <string name="market_listings_filter_all">هەموو</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">چالاککرایەوە</string>
     <string name="market_audit_subscription_resumed">بەردەوامکرایەوە</string>
     <string name="market_listings_remove_confirm">لابردن</string>
+    <string name="market_listings_remove_listing">لابردنی ڕیکلام</string>
     <string name="market_listings_remove_message">لیست لە کڕیاران شاردراوەتەوە. ئەمە ناتوانرێت بگەڕێنرێتەوە، بەڵام دەتوانیت دواتر وەک ڕەشنووسێکی نوێ دیسان لیستی بکەیت.</string>
     <string name="market_listings_remove_message_auction">ئەمە مەزاد هەڵدەوەشێنێتەوە. لیست لە کڕیاران شاراوە دەبێت؛ دەتوانیت دواتر وەک ڕەشنووسێکی نوێ دیسان لیستی بکەیتەوە.</string>
     <string name="market_listings_remove_title">ئەم لیستە لاببەیت؟</string>

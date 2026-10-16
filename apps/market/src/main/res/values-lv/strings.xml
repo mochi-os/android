@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Rediģēt</string>
     <string name="market_listings_action_relist">Atkārtoti publicēt</string>
     <string name="market_listings_action_view">Skatīt</string>
+    <string name="market_listings_appeal">Pārsūdzēt</string>
+    <string name="market_listings_clear">Noņemt no maniem sludinājumiem</string>
     <string name="market_listings_delete_confirm">Dzēst</string>
+    <string name="market_listings_delete_draft">Dzēst melnrakstu</string>
     <string name="market_listings_empty_title">Vēl nav sludinājumu</string>
     <string name="market_listings_filter_active">Aktīvs</string>
     <string name="market_listings_filter_all">Visi</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Atkārtoti aktivizēts</string>
     <string name="market_audit_subscription_resumed">Atsākts</string>
     <string name="market_listings_remove_confirm">Noņemt</string>
+    <string name="market_listings_remove_listing">Noņemt sludinājumu</string>
     <string name="market_listings_remove_message">Sludinājums tiks paslēpts no pircējiem. To nevar atsaukt, bet vēlāk to varat atkārtoti uzskaitīt kā jaunu melnrakstu.</string>
     <string name="market_listings_remove_message_auction">Tas atcels izsoli. Sludinājums tiks paslēpts no pircējiem; vēlāk to varat atkārtoti uzskaitīt kā jaunu melnrakstu.</string>
     <string name="market_listings_remove_title">Noņemt šo sludinājumu?</string>

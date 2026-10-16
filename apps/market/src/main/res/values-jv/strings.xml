@@ -222,7 +222,10 @@
     <string name="market_listings_action_relist">Daftar manèh</string>
     <string name="market_listings_action_share">Bagi</string>
     <string name="market_listings_action_view">Deleng</string>
+    <string name="market_listings_appeal">Banding</string>
+    <string name="market_listings_clear">Busak saka dhaptarku</string>
     <string name="market_listings_delete_confirm">Busak</string>
+    <string name="market_listings_delete_draft">Busak draf</string>
     <string name="market_listings_empty_title">Durung ana listing</string>
     <string name="market_listings_filter_active">Aktif</string>
     <string name="market_listings_filter_all">Kabèh</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Diaktifaké manèh</string>
     <string name="market_audit_subscription_resumed">Wis dilanjutaké</string>
     <string name="market_listings_remove_confirm">Cabut</string>
+    <string name="market_listings_remove_listing">Busak dhaptar</string>
     <string name="market_listings_remove_message">Listing bakal didhelikaké saka sing tuku. Iki ora bisa dibatalaké, nanging sampéyan bisa nge-list manèh mengko dadi konsep anyar.</string>
     <string name="market_listings_remove_message_auction">Iki bakal mbatalaké lelang. Listing bakal didhelikaké saka sing tuku; sampéyan bisa nge-list manèh mengko dadi konsep anyar.</string>
     <string name="market_listings_remove_title">Cabut listing iki?</string>

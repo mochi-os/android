@@ -212,7 +212,10 @@
     <string name="market_listings_action_relist">Emoĩ jey listape</string>
     <string name="market_listings_action_share">Emboja\'o</string>
     <string name="market_listings_action_view">Ehecha</string>
+    <string name="market_listings_appeal">Ñembohovái</string>
+    <string name="market_listings_clear">Mbogue che ñemuhágui</string>
     <string name="market_listings_delete_confirm">Hundi</string>
+    <string name="market_listings_delete_draft">Mboguete borrador</string>
     <string name="market_listings_empty_title">Ndaipóri listado gueteri</string>
     <string name="market_listings_filter_active">Oikóva</string>
     <string name="market_listings_filter_all">Opaite</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Oñemyendy jeýma</string>
     <string name="market_audit_subscription_resumed">Oñepyrũ jey</string>
     <string name="market_listings_remove_confirm">Embogue</string>
+    <string name="market_listings_remove_listing">Mbogue ñemuha</string>
     <string name="market_listings_remove_message">Listado oñeñomíta ojoguávakuéragui. Kóva ndaikatúi oñembojevy, ha katu ikatu emoĩ jey listape upéi borrador pyahúramo.</string>
     <string name="market_listings_remove_message_auction">Kóva ombotýta subasta. Listado oñeñomíta ojoguávakuéragui; upéi ikatu remoĩ jey listape borrador pyahúramo.</string>
     <string name="market_listings_remove_title">¿Embogue ko listado?</string>

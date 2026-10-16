@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Muokkaa</string>
     <string name="market_listings_action_relist">Listaa uudelleen</string>
     <string name="market_listings_action_view">Näytä</string>
+    <string name="market_listings_appeal">Valita</string>
+    <string name="market_listings_clear">Poista omista ilmoituksistani</string>
     <string name="market_listings_delete_confirm">Poista</string>
+    <string name="market_listings_delete_draft">Poista luonnos</string>
     <string name="market_listings_empty_title">Ei vielä ilmoituksia</string>
     <string name="market_listings_filter_active">Aktiivinen</string>
     <string name="market_listings_filter_all">Kaikki</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Aktivoitu uudelleen</string>
     <string name="market_audit_subscription_resumed">Jatkettu</string>
     <string name="market_listings_remove_confirm">Poista</string>
+    <string name="market_listings_remove_listing">Poista ilmoitus</string>
     <string name="market_listings_remove_message">Ilmoitus piilotetaan ostajilta. Tätä ei voi peruuttaa, mutta voit listata sen myöhemmin uutena luonnoksena.</string>
     <string name="market_listings_remove_message_auction">Tämä peruuttaa huutokaupan. Ilmoitus piilotetaan ostajilta; voit listata sen myöhemmin uutena luonnoksena.</string>
     <string name="market_listings_remove_title">Poista tämä ilmoitus?</string>

@@ -172,7 +172,10 @@
     <string name="market_listings_action_edit">Rediger</string>
     <string name="market_listings_action_relist">Annonser på nytt</string>
     <string name="market_listings_action_view">Vis</string>
+    <string name="market_listings_appeal">Klag</string>
+    <string name="market_listings_clear">Fjern frå annonsane mine</string>
     <string name="market_listings_delete_confirm">Slett</string>
+    <string name="market_listings_delete_draft">Slett utkast</string>
     <string name="market_listings_empty_title">Ingen annonsar enno</string>
     <string name="market_listings_filter_active">Aktiv</string>
     <string name="market_listings_filter_all">Alle</string>
@@ -701,6 +704,7 @@
     <string name="market_audit_subscription_reactivated">Reaktivert</string>
     <string name="market_audit_subscription_resumed">Halde fram</string>
     <string name="market_listings_remove_confirm">Fjern</string>
+    <string name="market_listings_remove_listing">Fjern annonse</string>
     <string name="market_listings_remove_message">Oppføringa vil bli skjult for kjøparar. Dette kan ikkje gjerast om, men du kan liste han på nytt seinare som eit nytt utkast.</string>
     <string name="market_listings_remove_message_auction">Dette vil avbryte auksjonen. Oppføringa vert skjult for kjøparar; du kan liste han på nytt seinare som eit nytt utkast.</string>
     <string name="market_listings_remove_title">Fjern denne annonsen?</string>

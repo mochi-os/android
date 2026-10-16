@@ -297,7 +297,10 @@
     <string name="market_listings_action_relist">Қайта тізімдеу</string>
     <string name="market_listings_action_share">Бөлісу</string>
     <string name="market_listings_action_view">Көру</string>
+    <string name="market_listings_appeal">Шағымдану</string>
+    <string name="market_listings_clear">Менің хабарландыруларымнан алып тастау</string>
     <string name="market_listings_delete_confirm">Жою</string>
+    <string name="market_listings_delete_draft">Жобаны жою</string>
     <string name="market_listings_delete_failed">Хабарландыруды жою сәтсіз</string>
     <string name="market_listings_delete_message">Бұл жобаны аккаунтыңыздан біржола жояды.</string>
     <string name="market_listings_delete_title">Хабарландыру жойылсын ба?</string>
@@ -698,6 +701,7 @@
     <string name="market_audit_subscription_reactivated">Қайта белсендірілді</string>
     <string name="market_audit_subscription_resumed">Жалғастырылды</string>
     <string name="market_listings_remove_confirm">Жою</string>
+    <string name="market_listings_remove_listing">Хабарландыруды алып тастау</string>
     <string name="market_listings_remove_message">Тізім сатып алушылардан жасырылады. Бұл әрекетті қайтаруға болмайды, бірақ оны кейінірек жаңа жоба ретінде қайта тізімге қосуға болады.</string>
     <string name="market_listings_remove_message_auction">Бұл аукционды болдырмайды. Тізім сатып алушылардан жасырылады; оны кейінірек жаңа жоба ретінде қайта тізімге қосуға болады.</string>
     <string name="market_listings_remove_title">Бұл хабарландыруды жою керек пе?</string>

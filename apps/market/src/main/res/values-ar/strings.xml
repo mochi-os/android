@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">تعديل</string>
     <string name="market_listings_action_relist">إعادة إدراج</string>
     <string name="market_listings_action_view">عرض</string>
+    <string name="market_listings_appeal">استئناف</string>
+    <string name="market_listings_clear">إزالة من قوائمي</string>
     <string name="market_listings_delete_confirm">حذف</string>
+    <string name="market_listings_delete_draft">حذف المسودة</string>
     <string name="market_listings_empty_title">لا توجد إعلانات بعد</string>
     <string name="market_listings_filter_active">نشط</string>
     <string name="market_listings_filter_all">الكل</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">تم إعادة التنشيط</string>
     <string name="market_audit_subscription_resumed">تم الاستئناف</string>
     <string name="market_listings_remove_confirm">إزالة</string>
+    <string name="market_listings_remove_listing">إزالة القائمة</string>
     <string name="market_listings_remove_message">ستُخفى القائمة عن المشترين. لا يمكن التراجع عن هذا، لكن يمكنك إعادة إدراجها لاحقًا كمسودة جديدة.</string>
     <string name="market_listings_remove_message_auction">سيؤدي هذا إلى إلغاء المزاد. سيتم إخفاء الإعلان من المشترين؛ يمكنك إعادة إدراجه لاحقًا كمسودة جديدة.</string>
     <string name="market_listings_remove_title">هل تزيل هذه القائمة؟</string>

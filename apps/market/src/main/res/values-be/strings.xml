@@ -297,7 +297,10 @@
     <string name="market_listings_action_relist">Перавыставіць</string>
     <string name="market_listings_action_share">Падзяліцца</string>
     <string name="market_listings_action_view">Прагляд</string>
+    <string name="market_listings_appeal">Абскардзіць</string>
+    <string name="market_listings_clear">Прыбраць з маіх аб\'яў</string>
     <string name="market_listings_delete_confirm">Выдаліць</string>
+    <string name="market_listings_delete_draft">Выдаліць чарнавік</string>
     <string name="market_listings_delete_failed">Не ўдалося выдаліць аб’яву</string>
     <string name="market_listings_delete_message">Гэта незваротна выдаліць чарнавік з вашага ўліковага запісу.</string>
     <string name="market_listings_delete_title">Выдаліць аб’яву?</string>
@@ -698,6 +701,7 @@
     <string name="market_audit_subscription_reactivated">Рэактывавана</string>
     <string name="market_audit_subscription_resumed">Аднаўлена</string>
     <string name="market_listings_remove_confirm">Выдаліць</string>
+    <string name="market_listings_remove_listing">Выдаліць аб\'яву</string>
     <string name="market_listings_remove_message">Аб\'ява будзе схавана ад пакупнікоў. Гэта незваротна, але вы можаце пазней апублікаваць яе зноў як новы чарнавік.</string>
     <string name="market_listings_remove_message_auction">Гэта адменіць аўкцыён. Аб\'ява будзе схавана ад пакупнікоў; вы можаце пазней апублікаваць яе зноў як новы чарнавік.</string>
     <string name="market_listings_remove_title">Выдаліць гэту аб\'яву?</string>

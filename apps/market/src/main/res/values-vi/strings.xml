@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Sửa</string>
     <string name="market_listings_action_relist">Đăng lại</string>
     <string name="market_listings_action_view">Xem</string>
+    <string name="market_listings_appeal">Kháng nghị</string>
+    <string name="market_listings_clear">Xóa khỏi tin đăng của tôi</string>
     <string name="market_listings_delete_confirm">Xóa</string>
+    <string name="market_listings_delete_draft">Xóa bản nháp</string>
     <string name="market_listings_empty_title">Chưa có tin đăng</string>
     <string name="market_listings_filter_active">Đang hoạt động</string>
     <string name="market_listings_filter_all">Tất cả</string>
@@ -701,6 +704,7 @@
     <string name="market_audit_subscription_reactivated">Đã kích hoạt lại</string>
     <string name="market_audit_subscription_resumed">Đã tiếp tục</string>
     <string name="market_listings_remove_confirm">Xoá</string>
+    <string name="market_listings_remove_listing">Gỡ tin đăng</string>
     <string name="market_listings_remove_message">Tin đăng sẽ bị ẩn khỏi người mua. Hành động này không thể hoàn tác, nhưng bạn có thể đăng lại sau dưới dạng bản nháp mới.</string>
     <string name="market_listings_remove_message_auction">Việc này sẽ hủy phiên đấu giá. Tin đăng sẽ bị ẩn khỏi người mua; bạn có thể đăng lại sau dưới dạng bản nháp mới.</string>
     <string name="market_listings_remove_title">Gỡ tin đăng này?</string>

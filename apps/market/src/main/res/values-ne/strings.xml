@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">पुन: सूचीबद्ध गर्नुहोस्</string>
     <string name="market_listings_action_share">साझेदारी</string>
     <string name="market_listings_action_view">हेर्नुहोस्</string>
+    <string name="market_listings_appeal">पुनरावेदन</string>
+    <string name="market_listings_clear">मेरो सूचीबाट हटाउनुहोस्</string>
     <string name="market_listings_delete_confirm">मेटाउनुहोस्</string>
+    <string name="market_listings_delete_draft">मस्यौदा मेटाउनुहोस्</string>
     <string name="market_listings_empty_title">अहिलेसम्म कुनै लिस्टिङ छैन</string>
     <string name="market_listings_filter_active">सक्रिय</string>
     <string name="market_listings_filter_all">सबै</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">पुन: सक्रिय गरियो</string>
     <string name="market_audit_subscription_resumed">पुनः सुरु गरियो</string>
     <string name="market_listings_remove_confirm">हटाउनुहोस्</string>
+    <string name="market_listings_remove_listing">सूची हटाउनुहोस्</string>
     <string name="market_listings_remove_message">सूची क्रेताहरूबाट लुकाइनेछ। यो पूर्ववत् गर्न सकिन्न, तर तपाईं पछि यसलाई नयाँ मस्यौदाको रूपमा पुन: सूचीबद्ध गर्न सक्नुहुन्छ।</string>
     <string name="market_listings_remove_message_auction">यसले लिलामी रद्द गर्नेछ। सूची खरिदकर्ताबाट लुकाइनेछ; तपाईं पछि यसलाई नयाँ मस्यौदाको रूपमा फेरि सूचीबद्ध गर्न सक्नुहुन्छ।</string>
     <string name="market_listings_remove_title">यो सूची हटाउने?</string>

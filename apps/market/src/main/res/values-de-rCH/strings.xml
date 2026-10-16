@@ -39,10 +39,13 @@
     <string name="market_listings_action_edit">Bearbeiten</string>
     <string name="market_listings_action_delete">Löschen</string>
     <string name="market_listings_delete_confirm">Löschen</string>
+    <string name="market_listings_delete_draft">Entwurf löschen</string>
     <string name="market_checkout_subscribe_button">Abonnieren</string>
     <string name="market_checkout_subscribe_title">Abonnieren</string>
     <string name="market_listing_detail_subscribe">Abonnieren</string>
     <string name="market_listings_action_view">Anzeigen</string>
+    <string name="market_listings_appeal">Einspruch</string>
+    <string name="market_listings_clear">Aus meinen Angeboten entfernen</string>
     <string name="market_sidebar_settings">Einstellungen</string>
     <string name="market_messages_send">Senden</string>
     <string name="market_editor_description">Beschreibung</string>
@@ -679,4 +682,5 @@
     <string name="market_audit_subscription_resumed">Fortgesetzt</string>
     <string name="market_filter_delivery_download">Herunterladen</string>
     <string name="market_listings_remove_confirm">Entfernen</string>
+    <string name="market_listings_remove_listing">Angebot entfernen</string>
 </resources>

@@ -235,7 +235,10 @@
     <string name="market_listings_action_relist">Wasitat uñstayaña</string>
     <string name="market_listings_action_share">Compartiña</string>
     <string name="market_listings_action_view">Uñjaña</string>
+    <string name="market_listings_appeal">Mayiwi</string>
+    <string name="market_listings_clear">Listanakajat apsuña</string>
     <string name="market_listings_delete_confirm">Chhaqtayaña</string>
+    <string name="market_listings_delete_draft">Borrador chhaqtayaña</string>
     <string name="market_listings_delete_title">¿Listado chhaqtayañati?</string>
     <string name="market_listings_empty_title">Janïr listadonakax utjkiti</string>
     <string name="market_listings_filter_active">Lurkaski</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Wasitat activata</string>
     <string name="market_audit_subscription_resumed">Sarantayata</string>
     <string name="market_listings_remove_confirm">Aparma</string>
+    <string name="market_listings_remove_listing">Listado apsuña</string>
     <string name="market_listings_remove_message">Listadox alasirinakat imantatäniwa. Akax janiw kutt\'ayañjamäkiti, ukampis qhipat machaq borradorjam wasitat uñstayasmawa.</string>
     <string name="market_listings_remove_message_auction">Akax subasta jaytaniwa. Listadox alasirinakat imantatäniwa; qhipat machaq borradorjam wasitat uñstayasmawa.</string>
     <string name="market_listings_remove_title">¿Aka listado aparañati?</string>

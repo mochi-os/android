@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">แก้ไข</string>
     <string name="market_listings_action_relist">ลงรายการใหม่</string>
     <string name="market_listings_action_view">ดู</string>
+    <string name="market_listings_appeal">อุทธรณ์</string>
+    <string name="market_listings_clear">ล้างออกจากรายการของฉัน</string>
     <string name="market_listings_delete_confirm">ลบ</string>
+    <string name="market_listings_delete_draft">ลบฉบับร่าง</string>
     <string name="market_listings_empty_title">ยังไม่มีรายการ</string>
     <string name="market_listings_filter_active">ใช้งานอยู่</string>
     <string name="market_listings_filter_all">ทั้งหมด</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">เปิดใช้งานอีกครั้งแล้ว</string>
     <string name="market_audit_subscription_resumed">ดำเนินการต่อแล้ว</string>
     <string name="market_listings_remove_confirm">ลบ</string>
+    <string name="market_listings_remove_listing">นำรายการออก</string>
     <string name="market_listings_remove_message">รายการจะถูกซ่อนจากผู้ซื้อ การดำเนินการนี้ไม่สามารถยกเลิกได้ แต่คุณสามารถลงรายการใหม่ภายหลังเป็นฉบับร่างใหม่ได้</string>
     <string name="market_listings_remove_message_auction">การดำเนินการนี้จะยกเลิกการประมูล รายการจะถูกซ่อนจากผู้ซื้อ; คุณสามารถลงรายการใหม่ในภายหลังเป็นแบบร่างใหม่ได้</string>
     <string name="market_listings_remove_title">ลบรายการนี้?</string>

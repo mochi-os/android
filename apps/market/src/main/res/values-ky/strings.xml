@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Кайра жарнамалоо</string>
     <string name="market_listings_action_share">Бөлүшүү</string>
     <string name="market_listings_action_view">Көрүү</string>
+    <string name="market_listings_appeal">Даттануу</string>
+    <string name="market_listings_clear">Менин жарнамаларымдан алып салуу</string>
     <string name="market_listings_delete_confirm">Жок кылуу</string>
+    <string name="market_listings_delete_draft">Долбоорду өчүрүү</string>
     <string name="market_listings_empty_title">Жарнамалар азырынча жок</string>
     <string name="market_listings_filter_active">Активдүү</string>
     <string name="market_listings_filter_all">Баары</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Кайра иштетилди</string>
     <string name="market_audit_subscription_resumed">Уланды</string>
     <string name="market_listings_remove_confirm">Алуу</string>
+    <string name="market_listings_remove_listing">Жарнаманы алып салуу</string>
     <string name="market_listings_remove_message">Тизме сатып алуучулардан жашырылат. Бул кайтарылбайт, бирок аны кийин жаңы долбоор катары кайра тизмелөө мүмкүн.</string>
     <string name="market_listings_remove_message_auction">Бул аукционду жокко чыгарат. Тизме сатып алуучулардан жашырылат; кийин аны жаңы долбоор катары кайра тизмелесе болот.</string>
     <string name="market_listings_remove_title">Бул жарнаманы аласызбы?</string>

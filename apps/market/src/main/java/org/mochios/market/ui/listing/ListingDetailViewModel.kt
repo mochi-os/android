@@ -117,6 +117,11 @@ class ListingDetailViewModel @Inject constructor(
     private val _navigateToEdit = MutableSharedFlow<String>(extraBufferCapacity = 1)
     val navigateToEdit: SharedFlow<String> = _navigateToEdit.asSharedFlow()
 
+    private val _closed = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+
+    /** Fires once the listing is deleted, so the screen leaves it. */
+    val closed: SharedFlow<Unit> = _closed.asSharedFlow()
+
     private var currentId: String = ""
 
     init {
@@ -331,6 +336,27 @@ class ListingDetailViewModel @Inject constructor(
                 _snackbar.emit(
                     ListingDetailSnackbar(
                         org.mochios.market.R.string.market_listing_detail_relist_failed,
+                    )
+                )
+            }
+        }
+    }
+
+    /**
+     * Deletes the listing: a draft outright, a live one removed from sale, a
+     * rejected one cleared from the seller's list. [closed] fires once done.
+     */
+    fun deleteListing() {
+        val id = currentId
+        if (id.isEmpty()) return
+        viewModelScope.launch {
+            try {
+                repository.deleteListing(id)
+                _closed.emit(Unit)
+            } catch (e: Exception) {
+                _snackbar.emit(
+                    ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_listings_delete_failed,
                     )
                 )
             }

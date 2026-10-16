@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Редактиране</string>
     <string name="market_listings_action_relist">Публикувай отново</string>
     <string name="market_listings_action_view">Преглед</string>
+    <string name="market_listings_appeal">Обжалване</string>
+    <string name="market_listings_clear">Изчисти от моите обяви</string>
     <string name="market_listings_delete_confirm">Изтрий</string>
+    <string name="market_listings_delete_draft">Изтрий черновата</string>
     <string name="market_listings_empty_title">Все още няма обяви</string>
     <string name="market_listings_filter_active">Активно</string>
     <string name="market_listings_filter_all">Всички</string>
@@ -701,6 +704,7 @@
     <string name="market_audit_subscription_reactivated">Реактивиран</string>
     <string name="market_audit_subscription_resumed">Възобновен</string>
     <string name="market_listings_remove_confirm">Премахни</string>
+    <string name="market_listings_remove_listing">Премахни обявата</string>
     <string name="market_listings_remove_message">Обявата ще бъде скрита от купувачите. Това не може да се отмени, но можете да я обявите по-късно като нова чернова.</string>
     <string name="market_listings_remove_message_auction">Това ще отмени търга. Обявата ще бъде скрита от купувачите; можете да я обявите по-късно като нова чернова.</string>
     <string name="market_listings_remove_title">Да премахна ли тази обява?</string>

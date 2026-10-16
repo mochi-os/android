@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Hariri</string>
     <string name="market_listings_action_relist">Orodhesha tena</string>
     <string name="market_listings_action_view">Tazama</string>
+    <string name="market_listings_appeal">Kata rufaa</string>
+    <string name="market_listings_clear">Ondoa kwenye matangazo yangu</string>
     <string name="market_listings_delete_confirm">Futa</string>
+    <string name="market_listings_delete_draft">Futa rasimu</string>
     <string name="market_listings_empty_title">Hakuna orodha bado</string>
     <string name="market_listings_filter_active">Inayotumika</string>
     <string name="market_listings_filter_all">Vyote</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Imewezeshwa tena</string>
     <string name="market_audit_subscription_resumed">Imeendelezwa</string>
     <string name="market_listings_remove_confirm">Ondoa</string>
+    <string name="market_listings_remove_listing">Ondoa tangazo</string>
     <string name="market_listings_remove_message">Orodha itafichwa kutoka kwa wanunuzi. Hii haiwezi kutenduliwa, lakini unaweza kuiorodhesha tena baadaye kama rasimu mpya.</string>
     <string name="market_listings_remove_message_auction">Hii itaghairi mnada. Orodha itafichwa kutoka kwa wanunuzi; unaweza kuiorodhesha tena baadaye kama rasimu mpya.</string>
     <string name="market_listings_remove_title">Ondoa orodha hii?</string>

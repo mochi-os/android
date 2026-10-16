@@ -305,10 +305,13 @@
     <string name="market_listings_action_edit">編輯</string>
     <string name="market_listings_action_delete">刪除</string>
     <string name="market_listings_delete_confirm">刪除</string>
+    <string name="market_listings_delete_draft">刪除草稿</string>
     <string name="market_checkout_subscribe_button">訂閱</string>
     <string name="market_checkout_subscribe_title">訂閱</string>
     <string name="market_listing_detail_subscribe">訂閱</string>
     <string name="market_listings_action_view">檢視</string>
+    <string name="market_listings_appeal">申訴</string>
+    <string name="market_listings_clear">從我的商品中清除</string>
     <string name="market_sidebar_settings">設定</string>
     <string name="market_editor_description">描述</string>
     <string name="market_refund_dialog_description_label">描述</string>
@@ -703,6 +706,7 @@
     <string name="market_audit_subscription_resumed">已恢復</string>
     <string name="market_editor_section_tags">標籤</string>
     <string name="market_listings_remove_confirm">移除</string>
+    <string name="market_listings_remove_listing">移除商品</string>
     <plurals name="market_listings_remove_message_bidders">
         <item quantity="one">這將取消拍賣，並通知 %1$s 位活躍出價者。商品將對買家隱藏；您可以稍後將其作為新的草稿重新發佈。</item>
         <item quantity="other">這將取消拍賣，並通知 %1$s 位活躍出價者。商品將對買家隱藏；您可以稍後將其作為新的草稿重新發佈。</item>

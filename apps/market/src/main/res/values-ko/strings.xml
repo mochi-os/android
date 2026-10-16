@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">편집</string>
     <string name="market_listings_action_relist">다시 등록</string>
     <string name="market_listings_action_view">보기</string>
+    <string name="market_listings_appeal">이의 제기</string>
+    <string name="market_listings_clear">내 판매글에서 지우기</string>
     <string name="market_listings_delete_confirm">삭제</string>
+    <string name="market_listings_delete_draft">임시저장 삭제</string>
     <string name="market_listings_empty_title">아직 상품이 없어요</string>
     <string name="market_listings_filter_active">활성</string>
     <string name="market_listings_filter_all">전체</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">재활성화되었어요</string>
     <string name="market_audit_subscription_resumed">재개됨</string>
     <string name="market_listings_remove_confirm">제거</string>
+    <string name="market_listings_remove_listing">판매글 삭제</string>
     <string name="market_listings_remove_message">상품이 구매자에게 숨겨집니다. 이 작업은 취소할 수 없지만, 나중에 새 초안으로 다시 게시할 수 있습니다.</string>
     <string name="market_listings_remove_message_auction">이 작업을 수행하면 경매가 취소됩니다. 상품은 구매자에게 숨겨지며, 나중에 새 초안으로 다시 등록할 수 있습니다.</string>
     <string name="market_listings_remove_title">이 상품을 제거하시겠습니까?</string>

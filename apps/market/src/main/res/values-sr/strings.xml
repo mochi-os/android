@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Уреди</string>
     <string name="market_listings_action_relist">Поново огласи</string>
     <string name="market_listings_action_view">Прикажи</string>
+    <string name="market_listings_appeal">Жалба</string>
+    <string name="market_listings_clear">Уклони из мојих огласа</string>
     <string name="market_listings_delete_confirm">Обриши</string>
+    <string name="market_listings_delete_draft">Избриши нацрт</string>
     <string name="market_listings_empty_title">Још нема огласа</string>
     <string name="market_listings_filter_active">Активно</string>
     <string name="market_listings_filter_all">Све</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Поново активирано</string>
     <string name="market_audit_subscription_resumed">Настављено</string>
     <string name="market_listings_remove_confirm">Уклони</string>
+    <string name="market_listings_remove_listing">Уклони оглас</string>
     <string name="market_listings_remove_message">Оглас ће бити сакривен од купаца. Ово се не може опозвати, али га можеш касније поново објавити као нову скицу.</string>
     <string name="market_listings_remove_message_auction">Ово ће отказати аукцију. Оглас ће бити сакривен од купаца; можеш га касније поново објавити као нову скицу.</string>
     <string name="market_listings_remove_title">Уклонити овај оглас?</string>

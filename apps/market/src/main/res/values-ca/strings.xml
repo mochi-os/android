@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Edita</string>
     <string name="market_listings_action_relist">Torna a publicar</string>
     <string name="market_listings_action_view">Visualitza</string>
+    <string name="market_listings_appeal">Apel·lar</string>
+    <string name="market_listings_clear">Treu dels meus anuncis</string>
     <string name="market_listings_delete_confirm">Suprimeix</string>
+    <string name="market_listings_delete_draft">Elimina l\'esborrany</string>
     <string name="market_listings_empty_title">Encara no hi ha anuncis</string>
     <string name="market_listings_filter_active">Actiu</string>
     <string name="market_listings_filter_all">Tot</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Reactivat</string>
     <string name="market_audit_subscription_resumed">Reprès</string>
     <string name="market_listings_remove_confirm">Elimina</string>
+    <string name="market_listings_remove_listing">Retira l\'anunci</string>
     <string name="market_listings_remove_message">L\'anunci s\'amagarà als compradors. Això no es pot desfer, però pots tornar-lo a publicar més tard com a nou esborrany.</string>
     <string name="market_listings_remove_message_auction">Això cancel·larà la subhasta. L\'anunci s\'amagarà als compradors; pots tornar-lo a publicar més tard com a nou esborrany.</string>
     <string name="market_listings_remove_title">Vols eliminar aquest anunci?</string>

@@ -297,7 +297,10 @@
     <string name="market_listings_action_relist">Релистирај</string>
     <string name="market_listings_action_share">Сподели</string>
     <string name="market_listings_action_view">Прикажи</string>
+    <string name="market_listings_appeal">Жалба</string>
+    <string name="market_listings_clear">Отстрани од моите огласи</string>
     <string name="market_listings_delete_confirm">Избриши</string>
+    <string name="market_listings_delete_draft">Избриши нацрт</string>
     <string name="market_listings_delete_failed">Не успеа бришењето на огласот</string>
     <string name="market_listings_delete_message">Ова трајно ќе го отстрани нацртот од вашата сметка.</string>
     <string name="market_listings_delete_title">Да се избрише огласот?</string>
@@ -698,6 +701,7 @@
     <string name="market_audit_subscription_reactivated">Повторно активирано</string>
     <string name="market_audit_subscription_resumed">Продолжено</string>
     <string name="market_listings_remove_confirm">Отстрани</string>
+    <string name="market_listings_remove_listing">Отстрани оглас</string>
     <string name="market_listings_remove_message">Огласот ќе биде скриен од купувачите. Ова не може да се поништи, но можете повторно да го наведете подоцна како нова скица.</string>
     <string name="market_listings_remove_message_auction">Ова ќе ја откаже аукцијата. Огласот ќе биде скриен од купувачите; можете повторно да го наведете подоцна како нова скица.</string>
     <string name="market_listings_remove_title">Да го отстраниме овој оглас?</string>

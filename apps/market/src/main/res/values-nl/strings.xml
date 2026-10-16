@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Bewerken</string>
     <string name="market_listings_action_relist">Opnieuw plaatsen</string>
     <string name="market_listings_action_view">Bekijken</string>
+    <string name="market_listings_appeal">Bezwaar maken</string>
+    <string name="market_listings_clear">Uit mijn advertenties verwijderen</string>
     <string name="market_listings_delete_confirm">Verwijderen</string>
+    <string name="market_listings_delete_draft">Concept verwijderen</string>
     <string name="market_listings_empty_title">Nog geen advertenties</string>
     <string name="market_listings_filter_active">Actief</string>
     <string name="market_listings_filter_all">Alles</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Geheractiveerd</string>
     <string name="market_audit_subscription_resumed">Hervat</string>
     <string name="market_listings_remove_confirm">Verwijderen</string>
+    <string name="market_listings_remove_listing">Advertentie verwijderen</string>
     <string name="market_listings_remove_message">De advertentie wordt verborgen voor kopers. Dit kan niet ongedaan worden gemaakt, maar je kunt het later opnieuw als nieuw concept aanbieden.</string>
     <string name="market_listings_remove_message_auction">Hiermee wordt de veiling geannuleerd. De advertentie wordt verborgen voor kopers; je kunt deze later opnieuw plaatsen als een nieuw concept.</string>
     <string name="market_listings_remove_title">Deze advertentie verwijderen?</string>

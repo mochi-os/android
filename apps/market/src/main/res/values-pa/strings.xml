@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">ਮੁੜ-ਸੂਚੀਬੱਧ ਕਰੋ</string>
     <string name="market_listings_action_share">ਸਾਂਝਾ ਕਰੋ</string>
     <string name="market_listings_action_view">ਦੇਖੋ</string>
+    <string name="market_listings_appeal">ਅਪੀਲ</string>
+    <string name="market_listings_clear">ਮੇਰੀਆਂ ਸੂਚੀਆਂ ਵਿੱਚੋਂ ਹਟਾਓ</string>
     <string name="market_listings_delete_confirm">ਮਿਟਾਓ</string>
+    <string name="market_listings_delete_draft">ਡਰਾਫਟ ਮਿਟਾਓ</string>
     <string name="market_listings_empty_title">ਅਜੇ ਕੋਈ ਲਿਸਟਿੰਗ ਨਹੀਂ</string>
     <string name="market_listings_filter_active">ਕਿਰਿਆਸ਼ੀਲ</string>
     <string name="market_listings_filter_all">ਸਾਰੇ</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">ਮੁੜ-ਸਰਗਰਮ ਕੀਤਾ ਗਿਆ</string>
     <string name="market_audit_subscription_resumed">ਮੁੜ ਸ਼ੁਰੂ ਕੀਤਾ</string>
     <string name="market_listings_remove_confirm">ਹਟਾਓ</string>
+    <string name="market_listings_remove_listing">ਸੂਚੀ ਹਟਾਓ</string>
     <string name="market_listings_remove_message">ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾਈ ਜਾਵੇਗੀ। ਇਸਨੂੰ ਪੂਰਵ-ਅਵਸਥਾ ਵਿੱਚ ਨਹੀਂ ਲਿਆਂਦਾ ਜਾ ਸਕਦਾ, ਪਰ ਤੁਸੀਂ ਬਾਅਦ ਵਿੱਚ ਇਸਨੂੰ ਨਵੇਂ ਡਰਾਫਟ ਵਜੋਂ ਮੁੜ ਸੂਚੀਬੱਧ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="market_listings_remove_message_auction">ਇਹ ਨਿਲਾਮੀ ਨੂੰ ਰੱਦ ਕਰ ਦੇਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ; ਤੁਸੀਂ ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਨਵੇਂ ਡਰਾਫਟ ਵਜੋਂ ਮੁੜ ਸੂਚੀਬੱਧ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="market_listings_remove_title">ਇਹ ਸੂਚੀ ਹਟਾਉਣੀ ਹੈ?</string>

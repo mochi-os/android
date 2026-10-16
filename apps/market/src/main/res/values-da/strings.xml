@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Redigér</string>
     <string name="market_listings_action_relist">Genopslå</string>
     <string name="market_listings_action_view">Vis</string>
+    <string name="market_listings_appeal">Appellér</string>
+    <string name="market_listings_clear">Fjern fra mine annoncer</string>
     <string name="market_listings_delete_confirm">Slet</string>
+    <string name="market_listings_delete_draft">Slet kladde</string>
     <string name="market_listings_empty_title">Ingen annoncer endnu</string>
     <string name="market_listings_filter_active">Aktiv</string>
     <string name="market_listings_filter_all">Alle</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Genaktiveret</string>
     <string name="market_audit_subscription_resumed">Genoptaget</string>
     <string name="market_listings_remove_confirm">Fjern</string>
+    <string name="market_listings_remove_listing">Fjern annonce</string>
     <string name="market_listings_remove_message">Annoncen skjules for købere. Dette kan ikke fortrydes, men du kan genannoncere den senere som et nyt udkast.</string>
     <string name="market_listings_remove_message_auction">Dette annullerer auktionen. Annoncen skjules for købere; du kan genoplade den senere som et nyt udkast.</string>
     <string name="market_listings_remove_title">Fjern denne annonce?</string>

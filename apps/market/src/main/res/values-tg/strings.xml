@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Таҳрир</string>
     <string name="market_listings_action_relist">Аз нав эълон</string>
     <string name="market_listings_action_view">Намоиш</string>
+    <string name="market_listings_appeal">Шикоят</string>
+    <string name="market_listings_clear">Аз эълонҳои ман тоза кардан</string>
     <string name="market_listings_delete_confirm">Нест кардан</string>
+    <string name="market_listings_delete_draft">Нусхаи сиёҳро нест кардан</string>
     <string name="market_listings_empty_title">То ҳол ягон эълон нест</string>
     <string name="market_listings_filter_active">Фаъол</string>
     <string name="market_listings_filter_all">Ҳама</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Аз нав фаъол шуд</string>
     <string name="market_audit_subscription_resumed">Идомаёфта</string>
     <string name="market_listings_remove_confirm">Хориҷ кардан</string>
+    <string name="market_listings_remove_listing">Эълонро хориҷ кардан</string>
     <string name="market_listings_remove_message">Рӯйхат аз харидорон пинҳон карда мешавад. Ин амалро ботил кардан мумкин нест, аммо шумо метавонед баъдтар онро ҳамчун сиёҳнависи нав дубора рӯйхат кунед.</string>
     <string name="market_listings_remove_message_auction">Ин аукционро бекор мекунад. Рӯйхат аз харидорон пинҳон карда мешавад; шумо метавонед баъдтар онро ҳамчун сиёҳнависи нав дубора рӯйхат кунед.</string>
     <string name="market_listings_remove_title">Ин эълонро хориҷ кардан?</string>

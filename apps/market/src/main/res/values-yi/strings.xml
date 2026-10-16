@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">צוריקליסטן</string>
     <string name="market_listings_action_share">טייל</string>
     <string name="market_listings_action_view">באַקוקן</string>
+    <string name="market_listings_appeal">אַפּעלירן</string>
+    <string name="market_listings_clear">אַוועקנעמען פֿון מײַנע אַנאָנסן</string>
     <string name="market_listings_delete_confirm">אויסמעקן</string>
+    <string name="market_listings_delete_draft">אויסמעקן פּלאַן</string>
     <string name="market_listings_empty_title">נאָך קיין ליסטיגקײַטן</string>
     <string name="market_listings_filter_active">אַקטיוו</string>
     <string name="market_listings_filter_all">אַלע</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">צוריק אַקטיווירט</string>
     <string name="market_audit_subscription_resumed">פֿאָרגעזעצט</string>
     <string name="market_listings_remove_confirm">אַראָפּנעמען</string>
+    <string name="market_listings_remove_listing">אַוועקנעמען אַנאָנס</string>
     <string name="market_listings_remove_message">דער אַנאָנס וועט ווערן באַהאַלטן פֿון קויפֿערס. דאָס קען נישט ווערן צוריקגעקערט, אָבער איר קאָנט אים שפּעטער ווידער אַרויסשטעלן ווי אַ נײַע דראַפֿט.</string>
     <string name="market_listings_remove_message_auction">דאָס וועט אַנולירן די אַויקציע. דער אַנאָנס וועט ווערן באַהאַלטן פֿון קויפֿערס; איר קאָנט אים שפּעטער ווידער אַרויסשטעלן ווי אַ נײַע דראַפֿט.</string>
     <string name="market_listings_remove_title">אַראָפּנעמען די ליסטיגקײַט?</string>

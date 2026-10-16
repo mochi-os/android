@@ -6,6 +6,7 @@
 package org.mochios.market.ui.listing
 
 import android.content.Intent
+import androidx.annotation.StringRes
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -31,9 +32,10 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Message
-import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.filled.Inventory
 import androidx.compose.material.icons.filled.LocalShipping
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Refresh
@@ -43,6 +45,9 @@ import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.outlined.BookmarkBorder
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -87,6 +92,7 @@ import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EmptyState
@@ -94,6 +100,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LoadingState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
@@ -125,29 +132,31 @@ import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.AuctionBidHistory
 import org.mochios.market.ui.components.AuditTimeline
 import org.mochios.market.ui.components.DigitalAssetsList
+import org.mochios.market.ui.components.ListingStatusBadge
 import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.PhotoCarousel
 import org.mochios.market.ui.components.PriceDisplay
 import org.mochios.market.ui.components.PricingFill
+import org.mochios.market.ui.components.RatingStarGold
+import org.mochios.market.ui.components.RatingStars
+import org.mochios.market.ui.components.SellerReviewsSection
+import org.mochios.market.ui.components.ShippingOptionsTable
+import org.mochios.market.ui.components.VerifiedGreen
+import org.mochios.market.ui.components.WarningsSection
 import org.mochios.market.ui.components.conditionBadgeColor
 import org.mochios.market.ui.components.conditionLabel
 import org.mochios.market.ui.components.pricingLabel
-import org.mochios.market.ui.components.RatingStarGold
-import org.mochios.market.ui.components.RatingStars
-import org.mochios.market.ui.components.VerifiedGreen
-import org.mochios.market.ui.components.SellerReviewsSection
-import org.mochios.market.ui.components.ShippingOptionsTable
-import org.mochios.market.ui.components.WarningsSection
+import org.mochios.market.ui.components.shownStatus
+import org.mochios.market.ui.dialog.AppealRemovalDialog
 import org.mochios.market.ui.dialog.PlaceBidDialog
 import org.mochios.market.ui.dialog.ReportListingDialog
-import androidx.compose.material.icons.filled.Inventory
-import androidx.compose.material.icons.outlined.Flag
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ListingDetailScreen(
     listingId: String,
     navController: NavController,
+    initialTitle: String = "",
     viewModel: ListingDetailViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
@@ -174,6 +183,13 @@ fun ListingDetailScreen(
             navController.navigate(MarketApp.listingEdit(newId.toString()))
         }
     }
+    LaunchedEffect(viewModel) {
+        viewModel.closed.collect {
+            navController.popBackStack()
+        }
+    }
+    var deleteOpen by remember { mutableStateOf(false) }
+    var appealOpen by remember { mutableStateOf(false) }
 
     val isSaved by viewModel.isSaved().collectAsState(initial = false)
     val isReported by viewModel.isReported().collectAsState(initial = false)
@@ -247,7 +263,7 @@ fun ListingDetailScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = listingTitle.ifBlank {
+                        text = listingTitle.ifBlank { initialTitle }.ifBlank {
                             stringResource(R.string.market_listing_detail_title)
                         },
                         maxLines = 1,
@@ -373,6 +389,12 @@ fun ListingDetailScreen(
                             }
                         },
                         onRelist = { viewModel.relistListing() },
+                        onEdit = {
+                            navController.navigate(MarketApp.listingEdit(listing.id))
+                        },
+                        onDelete = { deleteOpen = true },
+                        onClear = { viewModel.deleteListing() },
+                        onAppeal = { appealOpen = true },
                         onCancelReservation = { viewModel.cancelReservation() },
                         cancellingReservation = state.cancellingReservation,
                         // Through the authenticated client, not a browser: the
@@ -398,6 +420,36 @@ fun ListingDetailScreen(
                 onDismiss = { lightboxOpen = false },
             )
         }
+    }
+
+    if (deleteOpen) {
+        val draft = state.listing?.listing?.status == ListingStatus.DRAFT
+        MochiAlertDialog(
+            onDismissRequest = { deleteOpen = false },
+            title = stringResource(
+                if (draft) R.string.market_listings_delete_title else R.string.market_listings_remove_title,
+            ),
+            text = stringResource(
+                if (draft) R.string.market_listings_delete_message else R.string.market_listings_remove_message,
+            ),
+            confirmText = stringResource(
+                if (draft) R.string.market_listings_delete_confirm else R.string.market_listings_remove_confirm,
+            ),
+            onConfirm = {
+                deleteOpen = false
+                viewModel.deleteListing()
+            },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+        )
+    }
+    if (appealOpen) {
+        AppealRemovalDialog(
+            open = true,
+            listingId = listingId,
+            onDismiss = { appealOpen = false },
+            onSuccess = { viewModel.load(listingId) },
+        )
     }
 
     ReportListingDialog(
@@ -461,6 +513,10 @@ private fun ListingDetailContent(
     onPrimaryCta: () -> Unit,
     onBuyNow: () -> Unit,
     onRelist: () -> Unit,
+    onEdit: () -> Unit,
+    onDelete: () -> Unit,
+    onClear: () -> Unit,
+    onAppeal: () -> Unit,
     onCancelReservation: () -> Unit,
     cancellingReservation: Boolean,
     onAssetDownload: (Asset) -> Unit,
@@ -516,7 +572,7 @@ private fun ListingDetailContent(
             modifier = Modifier.fillMaxWidth(),
         ) {
             listing.condition?.let { ConditionChip(condition = it) }
-            listing.status?.let { StatusChip(status = it.name.lowercase()) }
+            ListingStatusBadge(listing = listing, size = StatusBadgeSize.Regular)
             DeliveryMethodChips(listing = listing)
             if (showAppealPending) {
                 AppealPendingPill()
@@ -772,22 +828,15 @@ private fun ListingDetailContent(
                         }
                     }
 
-                    val showRelist = listing.status == ListingStatus.SOLD ||
-                            listing.status == ListingStatus.EXPIRED
-                    if (showRelist) {
-                        MochiOutlinedButton(
-                            onClick = onRelist,
-                            modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(10.dp),
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Refresh,
-                                contentDescription = null,
-                                modifier = Modifier.size(16.dp),
-                            )
-                            Spacer(Modifier.width(4.dp))
-                            Text(stringResource(R.string.market_listing_detail_relist))
-                        }
+                    if (isOwner) {
+                        OwnerActions(
+                            listing = listing,
+                            onEdit = onEdit,
+                            onDelete = onDelete,
+                            onRelist = onRelist,
+                            onClear = onClear,
+                            onAppeal = onAppeal,
+                        )
                     }
                 }
             }
@@ -947,9 +996,55 @@ private fun DeliveryMethodChips(listing: Listing) {
     }
 }
 
+/**
+ * The owner's actions on their listing, the same as the ⋯ menu on My
+ * listings: a draft is edited or deleted; a rejected one is cleared from the
+ * list or appealed; anything else is relisted or, unless already removed,
+ * removed.
+ */
 @Composable
-private fun StatusChip(status: String) {
-    MarketStatusBadge(status = status, size = StatusBadgeSize.Regular)
+private fun OwnerActions(
+    listing: Listing,
+    onEdit: () -> Unit,
+    onDelete: () -> Unit,
+    onRelist: () -> Unit,
+    onClear: () -> Unit,
+    onAppeal: () -> Unit,
+) {
+    val status = listing.shownStatus()
+    when {
+        status == ListingStatus.DRAFT -> {
+            OwnerAction(Icons.Outlined.Edit, R.string.market_listings_action_edit, onEdit)
+            OwnerAction(Icons.Outlined.Delete, R.string.market_listings_delete_draft, onDelete)
+        }
+        status == ListingStatus.REJECTED -> {
+            OwnerAction(Icons.Outlined.Delete, R.string.market_listings_clear, onClear)
+            OwnerAction(Icons.Outlined.Flag, R.string.market_listings_appeal, onAppeal)
+        }
+        else -> {
+            OwnerAction(Icons.Default.Refresh, R.string.market_listings_action_relist, onRelist)
+            if (listing.status != ListingStatus.REMOVED) {
+                OwnerAction(Icons.Outlined.Delete, R.string.market_listings_remove_listing, onDelete)
+            }
+        }
+    }
+}
+
+@Composable
+private fun OwnerAction(icon: ImageVector, @StringRes label: Int, onClick: () -> Unit) {
+    MochiOutlinedButton(
+        onClick = onClick,
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(10.dp),
+    ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            modifier = Modifier.size(16.dp),
+        )
+        Spacer(Modifier.width(4.dp))
+        Text(stringResource(label))
+    }
 }
 
 /** Condition chip — ListingCard colours at the shared [DetailBadgeChip] size. */

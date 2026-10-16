@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Erġa\' ġib għall-bejgħ</string>
     <string name="market_listings_action_share">Aqsam</string>
     <string name="market_listings_action_view">Ara</string>
+    <string name="market_listings_appeal">Appell</string>
+    <string name="market_listings_clear">Neħħi mir-reklami tiegħi</string>
     <string name="market_listings_delete_confirm">Ħassar</string>
+    <string name="market_listings_delete_draft">Ħassar l-abbozz</string>
     <string name="market_listings_empty_title">L-ebda listings s\'issa</string>
     <string name="market_listings_filter_active">Attiv</string>
     <string name="market_listings_filter_all">Kollha</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Reattivat</string>
     <string name="market_audit_subscription_resumed">Komplut</string>
     <string name="market_listings_remove_confirm">Neħħi</string>
+    <string name="market_listings_remove_listing">Neħħi r-reklam</string>
     <string name="market_listings_remove_message">Il-listing se tinħeba mix-xerrejja. Dan ma jistax jitreġġa\' lura, imma tista\' tilistjaha mill-ġdid aktar tard bħala abbozz ġdid.</string>
     <string name="market_listings_remove_message_auction">Dan se jikkanċella l-irkant. Il-listing se tinħeba mix-xerrejja; tista\' tilistjaha mill-ġdid aktar tard bħala abbozz ġdid.</string>
     <string name="market_listings_remove_title">Tneħħi din il-listing?</string>

@@ -220,7 +220,10 @@
     <string name="market_listings_action_relist">Կրկին ցուցակագրել</string>
     <string name="market_listings_action_share">Կիսվել</string>
     <string name="market_listings_action_view">Դիտել</string>
+    <string name="market_listings_appeal">Բողոքարկել</string>
+    <string name="market_listings_clear">Հեռացնել իմ հայտարարություններից</string>
     <string name="market_listings_delete_confirm">Ջնջել</string>
+    <string name="market_listings_delete_draft">Ջնջել սևագիրը</string>
     <string name="market_listings_empty_title">Դեռ հայտարարություններ չկան</string>
     <string name="market_listings_filter_active">Ակտիվ</string>
     <string name="market_listings_filter_all">Բոլորը</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Կրկին ակտիվացվեց</string>
     <string name="market_audit_subscription_resumed">Շարունակվել է</string>
     <string name="market_listings_remove_confirm">Հեռացնել</string>
+    <string name="market_listings_remove_listing">Հեռացնել հայտարարությունը</string>
     <string name="market_listings_remove_message">Ցանկը կթաքցվի գնորդներից: Սա հնարավոր չէ չեղարկել, բայց կարող եք այն հետագայում նորից տեղադրել որպես նոր սևագիր:</string>
     <string name="market_listings_remove_message_auction">Սա կչեղարկի աճուրդը: Ցանկը կթաքցվի գնորդներից, կարող եք այն հետագայում նորից տեղադրել որպես նոր սևագիր:</string>
     <string name="market_listings_remove_title">Հեռացնե՞լ այս հայտարարությունը։</string>

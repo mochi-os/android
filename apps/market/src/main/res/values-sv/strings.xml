@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Redigera</string>
     <string name="market_listings_action_relist">Lägg upp igen</string>
     <string name="market_listings_action_view">Visa</string>
+    <string name="market_listings_appeal">Överklaga</string>
+    <string name="market_listings_clear">Ta bort från mina annonser</string>
     <string name="market_listings_delete_confirm">Ta bort</string>
+    <string name="market_listings_delete_draft">Radera utkast</string>
     <string name="market_listings_empty_title">Inga annonser ännu</string>
     <string name="market_listings_filter_active">Aktiv</string>
     <string name="market_listings_filter_all">Alla</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Återaktiverad</string>
     <string name="market_audit_subscription_resumed">Återupptagen</string>
     <string name="market_listings_remove_confirm">Ta bort</string>
+    <string name="market_listings_remove_listing">Ta bort annons</string>
     <string name="market_listings_remove_message">Annonsen döljs för köpare. Detta kan inte ångras, men du kan annonsera om den senare som ett nytt utkast.</string>
     <string name="market_listings_remove_message_auction">Detta kommer att avbryta auktionen. Annonsen döljs för köpare; du kan lägga ut den igen senare som ett nytt utkast.</string>
     <string name="market_listings_remove_title">Ta bort denna annons?</string>

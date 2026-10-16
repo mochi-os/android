@@ -77,7 +77,8 @@ fun BidStatusBadge(status: BidStatus?, modifier: Modifier = Modifier) {
 internal fun statusTone(key: String): StatusTone = when (key) {
     "active", "paid", "shipped", "delivered", "completed" -> StatusTone.Positive
     "pending", "paused" -> StatusTone.Waiting
-    "disputed", "cancelled", "past_due" -> StatusTone.Negative
+    "disputed", "cancelled", "past_due", "rejected", "removed" -> StatusTone.Negative
+    "sold" -> StatusTone.Info
     else -> StatusTone.Neutral
 }
 

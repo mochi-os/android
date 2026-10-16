@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Qayta eʼlon qilish</string>
     <string name="market_listings_action_share">Ulashish</string>
     <string name="market_listings_action_view">Koʻrish</string>
+    <string name="market_listings_appeal">Shikoyat qilish</string>
+    <string name="market_listings_clear">E\'lonlarimdan olib tashlash</string>
     <string name="market_listings_delete_confirm">Oʻchirish</string>
+    <string name="market_listings_delete_draft">Qoralamani o\'chirish</string>
     <string name="market_listings_empty_title">Hozircha eʼlonlar yoʻq</string>
     <string name="market_listings_filter_active">Faol</string>
     <string name="market_listings_filter_all">Hammasi</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Qayta faollashtirildi</string>
     <string name="market_audit_subscription_resumed">Davom ettirildi</string>
     <string name="market_listings_remove_confirm">Olib tashlash</string>
+    <string name="market_listings_remove_listing">E\'lonni olib tashlash</string>
     <string name="market_listings_remove_message">Eʼlon xaridorlardan yashiriladi. Buni bekor qilib boʻlmaydi, lekin uni keyinroq yangi qoralama sifatida qayta eʼlon qilishingiz mumkin.</string>
     <string name="market_listings_remove_message_auction">Bu auksionni bekor qiladi. Eʼlon xaridorlardan yashiriladi; uni keyinroq yangi qoralama sifatida qayta eʼlon qilishingiz mumkin.</string>
     <string name="market_listings_remove_title">Bu eʼlonni olib tashlasinmi?</string>

@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">עריכה</string>
     <string name="market_listings_action_relist">רשום מחדש</string>
     <string name="market_listings_action_view">הצג</string>
+    <string name="market_listings_appeal">ערעור</string>
+    <string name="market_listings_clear">הסרה מהמודעות שלי</string>
     <string name="market_listings_delete_confirm">מחק</string>
+    <string name="market_listings_delete_draft">מחיקת טיוטה</string>
     <string name="market_listings_empty_title">עדיין אין רישומים</string>
     <string name="market_listings_filter_active">פעיל</string>
     <string name="market_listings_filter_all">הכול</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">הופעל מחדש</string>
     <string name="market_audit_subscription_resumed">חודש</string>
     <string name="market_listings_remove_confirm">הסר</string>
+    <string name="market_listings_remove_listing">הסרת מודעה</string>
     <string name="market_listings_remove_message">הרישום יוסתר מקונים. לא ניתן לבטל זאת, אך תוכל לפרסם אותו מאוחר יותר כטיוטה חדשה.</string>
     <string name="market_listings_remove_message_auction">פעולה זו תבטל את המכירה הפומבית. הרישום יוסתר מקונים; תוכל לרשום אותו שוב מאוחר יותר כטיוטה חדשה.</string>
     <string name="market_listings_remove_title">להסיר רישום זה?</string>

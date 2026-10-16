@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">编辑</string>
     <string name="market_listings_action_relist">重新上架</string>
     <string name="market_listings_action_view">查看</string>
+    <string name="market_listings_appeal">申诉</string>
+    <string name="market_listings_clear">从我的商品中清除</string>
     <string name="market_listings_delete_confirm">删除</string>
+    <string name="market_listings_delete_draft">删除草稿</string>
     <string name="market_listings_empty_title">暂无商品</string>
     <string name="market_listings_filter_active">活跃</string>
     <string name="market_listings_filter_all">全部</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">已重新激活</string>
     <string name="market_audit_subscription_resumed">已继续</string>
     <string name="market_listings_remove_confirm">移除</string>
+    <string name="market_listings_remove_listing">移除商品</string>
     <string name="market_listings_remove_message">商品将对买家隐藏。此操作无法撤消,但您可以稍后将其作为新草稿重新发布。</string>
     <string name="market_listings_remove_message_auction">这将取消拍卖。商品将对买家隐藏;您可以稍后将其作为新的草稿重新发布。</string>
     <string name="market_listings_remove_title">移除此商品?</string>

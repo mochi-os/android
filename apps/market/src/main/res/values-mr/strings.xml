@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">पुन्हा लिस्ट करा</string>
     <string name="market_listings_action_share">शेअर करा</string>
     <string name="market_listings_action_view">पहा</string>
+    <string name="market_listings_appeal">अपील</string>
+    <string name="market_listings_clear">माझ्या लिस्टिंगमधून काढा</string>
     <string name="market_listings_delete_confirm">हटवा</string>
+    <string name="market_listings_delete_draft">मसुदा हटवा</string>
     <string name="market_listings_empty_title">अद्याप लिस्टिंग्स नाहीत</string>
     <string name="market_listings_filter_active">सक्रिय</string>
     <string name="market_listings_filter_all">सर्व</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">पुन्हा सक्रिय केले</string>
     <string name="market_audit_subscription_resumed">पुन्हा सुरू केले</string>
     <string name="market_listings_remove_confirm">काढा</string>
+    <string name="market_listings_remove_listing">लिस्टिंग काढा</string>
     <string name="market_listings_remove_message">सूची खरेदीदारांपासून लपवली जाईल. हे रद्द करता येणार नाही, परंतु आपण ती नंतर नवीन मसुदा म्हणून पुन्हा सूचीबद्ध करू शकता.</string>
     <string name="market_listings_remove_message_auction">हे लिलाव रद्द करेल. यादी खरेदीदारांपासून लपवली जाईल; तुम्ही ती नंतर नवीन ड्राफ्ट म्हणून पुन्हा सूचीबद्ध करू शकता.</string>
     <string name="market_listings_remove_title">ही सूची काढून टाकायची?</string>

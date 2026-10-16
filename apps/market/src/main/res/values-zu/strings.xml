@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Faka kabusha</string>
     <string name="market_listings_action_share">Yabelana</string>
     <string name="market_listings_action_view">Buka</string>
+    <string name="market_listings_appeal">Dlulisa icala</string>
+    <string name="market_listings_clear">Susa ezinhlwini zami</string>
     <string name="market_listings_delete_confirm">Susa</string>
+    <string name="market_listings_delete_draft">Susa okusalungiswa</string>
     <string name="market_listings_empty_title">Akukho okufakiwe okwamanje</string>
     <string name="market_listings_filter_active">Iyasebenza</string>
     <string name="market_listings_filter_all">Konke</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Kuvuselelwe</string>
     <string name="market_audit_subscription_resumed">Kuqhutshekiwe</string>
     <string name="market_listings_remove_confirm">Khipha</string>
+    <string name="market_listings_remove_listing">Susa uhlu</string>
     <string name="market_listings_remove_message">Uhlu luzofihlwa kubathengi. Lokhu akunakushintshwa, kodwa ungalubuyekeza kamuva njengohlaka olusha.</string>
     <string name="market_listings_remove_message_auction">Lokhu kuzokhansela indali. Uhlu luzofihlwa kubathengi; ungaluphinda ulufake kamuva njengohlaka olusha.</string>
     <string name="market_listings_remove_title">Susa lolu hlu?</string>

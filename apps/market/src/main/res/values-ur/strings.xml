@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">ترمیم</string>
     <string name="market_listings_action_relist">دوبارہ list کریں</string>
     <string name="market_listings_action_view">دیکھیں</string>
+    <string name="market_listings_appeal">اپیل</string>
+    <string name="market_listings_clear">میری فہرستوں سے ہٹائیں</string>
     <string name="market_listings_delete_confirm">حذف کریں</string>
+    <string name="market_listings_delete_draft">مسودہ حذف کریں</string>
     <string name="market_listings_empty_title">ابھی تک کوئی لسٹنگز نہیں</string>
     <string name="market_listings_filter_active">فعال</string>
     <string name="market_listings_filter_all">تمام</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">دوبارہ فعال ہو گیا</string>
     <string name="market_audit_subscription_resumed">دوبارہ شروع ہو گیا</string>
     <string name="market_listings_remove_confirm">ہٹائیں</string>
+    <string name="market_listings_remove_listing">فہرست ہٹائیں</string>
     <string name="market_listings_remove_message">فہرست خریداروں سے چھپا دی جائے گی۔ اسے واپس نہیں کیا جا سکتا، لیکن آپ بعد میں اسے ایک نئے مسودے کے طور پر دوبارہ فہرست میں شامل کر سکتے ہیں۔</string>
     <string name="market_listings_remove_message_auction">اس سے نیلامی منسوخ ہو جائے گی۔ فہرست خریداروں سے چھپا دی جائے گی؛ آپ بعد میں اسے نئے مسودے کے طور پر دوبارہ درج کر سکتے ہیں۔</string>
     <string name="market_listings_remove_title">یہ فہرست ہٹائیں؟</string>

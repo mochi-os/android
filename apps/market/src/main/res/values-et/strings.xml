@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Muuda</string>
     <string name="market_listings_action_relist">Pane uuesti müüki</string>
     <string name="market_listings_action_view">Vaata</string>
+    <string name="market_listings_appeal">Vaidlusta</string>
+    <string name="market_listings_clear">Eemalda minu kuulutustest</string>
     <string name="market_listings_delete_confirm">Kustuta</string>
+    <string name="market_listings_delete_draft">Kustuta mustand</string>
     <string name="market_listings_empty_title">Kuulutusi veel pole</string>
     <string name="market_listings_filter_active">Aktiivne</string>
     <string name="market_listings_filter_all">Kõik</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Reaktiveeritud</string>
     <string name="market_audit_subscription_resumed">Jätkatud</string>
     <string name="market_listings_remove_confirm">Eemalda</string>
+    <string name="market_listings_remove_listing">Eemalda kuulutus</string>
     <string name="market_listings_remove_message">Kuulutus peidetakse ostjate eest. Seda ei saa tagasi võtta, kuid saad selle hiljem uue mustandina uuesti üles panna.</string>
     <string name="market_listings_remove_message_auction">See tühistab oksjoni. Kuulutus peidetakse ostjate eest; saad selle hiljem uue mustandina uuesti üles panna.</string>
     <string name="market_listings_remove_title">Kas eemaldada see kuulutus?</string>

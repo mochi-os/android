@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">संपादित करें</string>
     <string name="market_listings_action_relist">फिर से लिस्ट करें</string>
     <string name="market_listings_action_view">देखें</string>
+    <string name="market_listings_appeal">अपील</string>
+    <string name="market_listings_clear">मेरी लिस्टिंग से हटाएँ</string>
     <string name="market_listings_delete_confirm">हटाएँ</string>
+    <string name="market_listings_delete_draft">ड्राफ़्ट हटाएँ</string>
     <string name="market_listings_empty_title">अभी तक कोई लिस्टिंग नहीं</string>
     <string name="market_listings_filter_active">सक्रिय</string>
     <string name="market_listings_filter_all">सभी</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">पुनः सक्रिय किया गया</string>
     <string name="market_audit_subscription_resumed">फिर से शुरू किया गया</string>
     <string name="market_listings_remove_confirm">हटाएँ</string>
+    <string name="market_listings_remove_listing">लिस्टिंग हटाएँ</string>
     <string name="market_listings_remove_message">लिस्टिंग खरीदारों से छिपा दी जाएगी। यह पूर्ववत नहीं किया जा सकता, लेकिन आप इसे बाद में नए ड्राफ्ट के रूप में फिर से सूचीबद्ध कर सकते हैं।</string>
     <string name="market_listings_remove_message_auction">यह नीलामी रद्द कर देगा। लिस्टिंग खरीदारों से छिपी रहेगी; आप इसे बाद में नए ड्राफ्ट के रूप में फिर से सूचीबद्ध कर सकते हैं।</string>
     <string name="market_listings_remove_title">यह लिस्टिंग हटाएँ?</string>

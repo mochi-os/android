@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">編集</string>
     <string name="market_listings_action_relist">再出品</string>
     <string name="market_listings_action_view">表示</string>
+    <string name="market_listings_appeal">異議申し立て</string>
+    <string name="market_listings_clear">自分の出品から消去</string>
     <string name="market_listings_delete_confirm">削除</string>
+    <string name="market_listings_delete_draft">下書きを削除</string>
     <string name="market_listings_empty_title">まだリスティングがありません</string>
     <string name="market_listings_filter_active">アクティブ</string>
     <string name="market_listings_filter_all">すべて</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">再アクティブ化</string>
     <string name="market_audit_subscription_resumed">再開</string>
     <string name="market_listings_remove_confirm">削除</string>
+    <string name="market_listings_remove_listing">出品を取り下げる</string>
     <string name="market_listings_remove_message">出品は購入者から非表示になります。元に戻すことはできませんが、後で新しい下書きとして再出品できます。</string>
     <string name="market_listings_remove_message_auction">オークションがキャンセルされます。出品は購入者から非表示になりますが、後で新しい下書きとして再出品できます。</string>
     <string name="market_listings_remove_title">この出品を削除しますか？</string>

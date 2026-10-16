@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Ji nû ve lîste bike</string>
     <string name="market_listings_action_share">Parve bike</string>
     <string name="market_listings_action_view">Bibîne</string>
+    <string name="market_listings_appeal">Îtîraz</string>
+    <string name="market_listings_clear">Ji lîsteyên min rake</string>
     <string name="market_listings_delete_confirm">Jê bibe</string>
+    <string name="market_listings_delete_draft">Pêşnûmeyê jê bibe</string>
     <string name="market_listings_empty_title">Hêj tu lîste tune</string>
     <string name="market_listings_filter_active">Çalak</string>
     <string name="market_listings_filter_all">Hemû</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Ji nû ve çalak hate kirin</string>
     <string name="market_audit_subscription_resumed">Hate domandin</string>
     <string name="market_listings_remove_confirm">Rake</string>
+    <string name="market_listings_remove_listing">Lîsteyê rake</string>
     <string name="market_listings_remove_message">Lîste dê ji kirroxan veşartî bibe. Ev nayê vegerandin, lê tu dikarî wê paşê wek pêşnîvîseke nû ji nû ve lîste bikî.</string>
     <string name="market_listings_remove_message_auction">Ev dê mezadê betal bike. Lîste dê ji kirroxan veşartî bibe; tu dikarî wê paşê wek pêşnîvîseke nû ji nû ve lîste bikî.</string>
     <string name="market_listings_remove_title">Vê lîsteyê rake?</string>

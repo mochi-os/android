@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Ath-liostaich</string>
     <string name="market_listings_action_share">Co-roinn</string>
     <string name="market_listings_action_view">Seall</string>
+    <string name="market_listings_appeal">Tagair</string>
+    <string name="market_listings_clear">Falamhaich às na liostaichean agam</string>
     <string name="market_listings_delete_confirm">Sguab às</string>
+    <string name="market_listings_delete_draft">Sguab às dreachd</string>
     <string name="market_listings_empty_title">Chan eil liostaidhean ann fhathast</string>
     <string name="market_listings_filter_active">Gnìomhach</string>
     <string name="market_listings_filter_all">Na h-uile</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Air ath-ghnìomhachadh</string>
     <string name="market_audit_subscription_resumed">Air ath-thòiseachadh</string>
     <string name="market_listings_remove_confirm">Thoir air falbh</string>
+    <string name="market_listings_remove_listing">Thoir air falbh an liosta</string>
     <string name="market_listings_remove_message">Thèid an liostachadh fhalach bho luchd-ceannach. Chan urrainn seo a thoirt air ais, ach \'s urrainn dhut ath-liostadh nas fhaide air adhart mar dhreachd ùr.</string>
     <string name="market_listings_remove_message_auction">Sguiridh seo dhen ròp. Thèid an liostachadh fhalach bho luchd-ceannach; \'s urrainn dhut ath-liostadh nas fhaide air adhart mar dhreachd ùr.</string>
     <string name="market_listings_remove_title">Thoir an liostadh seo air falbh?</string>

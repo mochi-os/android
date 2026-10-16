@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">ٻيهر فهرست ڪريو</string>
     <string name="market_listings_action_share">شيئر ڪريو</string>
     <string name="market_listings_action_view">ڏسو</string>
+    <string name="market_listings_appeal">اپيل</string>
+    <string name="market_listings_clear">منهنجي لسٽنگ مان صاف ڪريو</string>
     <string name="market_listings_delete_confirm">ختم ڪريو</string>
+    <string name="market_listings_delete_draft">مسودو ختم ڪريو</string>
     <string name="market_listings_empty_title">اڃا ڪا فهرست نه آهي</string>
     <string name="market_listings_filter_active">فعال</string>
     <string name="market_listings_filter_all">سڀ</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">ٻيهر فعال ٿيو</string>
     <string name="market_audit_subscription_resumed">ٻيهر شروع ٿيو</string>
     <string name="market_listings_remove_confirm">هٽايو</string>
+    <string name="market_listings_remove_listing">لسٽنگ هٽايو</string>
     <string name="market_listings_remove_message">لسٽ خريد ڪندڙن کان لڪايو ويندو. اھو واپس نه ٿو ٿي سگھي، پر توھان ان کي بعد ۾ نئون ڊرافٽ طور لسٽ ڪري سگھو ٿا.</string>
     <string name="market_listings_remove_message_auction">ھي نيلامي منسوخ ڪندو. لسٽ خريد ڪندڙن کان لڪائي ويندي؛ توھان ان کي بعد ۾ نئون ڊرافٽ طور لسٽ ڪري سگھو ٿا.</string>
     <string name="market_listings_remove_title">هن فهرست کي هٽائجي؟</string>

@@ -297,7 +297,10 @@
     <string name="market_listings_action_relist">Hernoteer</string>
     <string name="market_listings_action_share">Deel</string>
     <string name="market_listings_action_view">Bekyk</string>
+    <string name="market_listings_appeal">Appèl</string>
+    <string name="market_listings_clear">Verwyder uit my advertensies</string>
     <string name="market_listings_delete_confirm">Verwyder</string>
+    <string name="market_listings_delete_draft">Skrap konsep</string>
     <string name="market_listings_delete_failed">Kon nie lys uitvee nie</string>
     <string name="market_listings_delete_message">Dit verwyder die konsep permanent uit jou rekening.</string>
     <string name="market_listings_delete_title">Lys uitvee?</string>
@@ -698,6 +701,7 @@
     <string name="market_audit_subscription_reactivated">Heraktiveer</string>
     <string name="market_audit_subscription_resumed">Hervat</string>
     <string name="market_listings_remove_confirm">Verwyder</string>
+    <string name="market_listings_remove_listing">Verwyder advertensie</string>
     <string name="market_listings_remove_message">Die lys sal vir kopers verberg word. Dit kan nie ongedaan gemaak word nie, maar jy kan dit later as \'n nuwe konsep weer lys.</string>
     <string name="market_listings_remove_message_auction">Hierdie sal die veiling kanselleer. Die lys sal versteek word vir kopers; jy kan dit later as \'n nuwe konsep her-lys.</string>
     <string name="market_listings_remove_title">Verwyder hierdie lys?</string>

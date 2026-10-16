@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Edit</string>
     <string name="market_listings_action_relist">Senaraikan semula</string>
     <string name="market_listings_action_view">Lihat</string>
+    <string name="market_listings_appeal">Rayuan</string>
+    <string name="market_listings_clear">Kosongkan daripada penyenaraian saya</string>
     <string name="market_listings_delete_confirm">Padam</string>
+    <string name="market_listings_delete_draft">Padam draf</string>
     <string name="market_listings_empty_title">Tiada penyenaraian lagi</string>
     <string name="market_listings_filter_active">Aktif</string>
     <string name="market_listings_filter_all">Semua</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Diaktifkan semula</string>
     <string name="market_audit_subscription_resumed">Disambung semula</string>
     <string name="market_listings_remove_confirm">Alih keluar</string>
+    <string name="market_listings_remove_listing">Alih keluar penyenaraian</string>
     <string name="market_listings_remove_message">Penyenaraian akan disembunyikan daripada pembeli. Ini tidak boleh dibatalkan, tetapi anda boleh menyenaraikannya semula kemudian sebagai draf baharu.</string>
     <string name="market_listings_remove_message_auction">Ini akan membatalkan lelongan. Penyenaraian akan disembunyikan daripada pembeli; anda boleh menyenaraikannya semula kemudian sebagai draf baharu.</string>
     <string name="market_listings_remove_title">Keluarkan penyenaraian ini?</string>

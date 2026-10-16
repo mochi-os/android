@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">വീണ്ടും ലിസ്റ്റ് ചെയ്യുക</string>
     <string name="market_listings_action_share">പങ്കിടുക</string>
     <string name="market_listings_action_view">കാണുക</string>
+    <string name="market_listings_appeal">അപ്പീൽ</string>
+    <string name="market_listings_clear">എന്റെ ലിസ്റ്റിംഗുകളിൽ നിന്ന് നീക്കുക</string>
     <string name="market_listings_delete_confirm">ഇല്ലാതാക്കുക</string>
+    <string name="market_listings_delete_draft">ഡ്രാഫ്റ്റ് ഇല്ലാതാക്കുക</string>
     <string name="market_listings_empty_title">ലിസ്റ്റിങ്ങുകളൊന്നും ഇതുവരെ ഇല്ല</string>
     <string name="market_listings_filter_active">സജീവം</string>
     <string name="market_listings_filter_all">എല്ലാം</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">വീണ്ടും സജീവമാക്കി</string>
     <string name="market_audit_subscription_resumed">പുനരാരംഭിച്ചു</string>
     <string name="market_listings_remove_confirm">നീക്കം ചെയ്യുക</string>
+    <string name="market_listings_remove_listing">ലിസ്റ്റിംഗ് നീക്കം ചെയ്യുക</string>
     <string name="market_listings_remove_message">ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും. ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല, എന്നാൽ പിന്നീട് ഒരു പുതിയ ഡ്രാഫ്റ്റായി വീണ്ടും ലിസ്റ്റ് ചെയ്യാം.</string>
     <string name="market_listings_remove_message_auction">ഇത് ലേലം റദ്ദാക്കും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും; നിങ്ങൾക്ക് ഇത് പിന്നീട് ഒരു പുതിയ ഡ്രാഫ്റ്റായി വീണ്ടും ലിസ്റ്റ് ചെയ്യാം.</string>
     <string name="market_listings_remove_title">ഈ ലിസ്റ്റിംഗ് നീക്കം ചെയ്യണോ?</string>

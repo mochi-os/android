@@ -63,7 +63,7 @@ object MarketApp {
         "market/account/seller?code={code}&state={state}&error={error}&error_description={error_description}"
 
     // ---- Detail route patterns ----
-    const val LISTING_DETAIL = "market/listing/{id}"
+    const val LISTING_DETAIL = "market/listing/{id}?title={title}"
     const val LISTING_EDIT = "market/listing/{id}/edit"
     const val CREATE_LISTING = "market/listings/create"
     const val NEW_LISTING = "market/listings/new?title={title}"
@@ -75,7 +75,10 @@ object MarketApp {
     const val SUBSCRIPTION_DETAIL = "market/subscriptions/{id}"
 
     // ---- Detail route builders ----
-    fun listingDetail(id: String) = "market/listing/$id"
+    fun listingDetail(id: String, title: String? = null): String {
+        val query = title?.takeIf { text -> text.isNotBlank() }?.let { text -> "?title=${Uri.encode(text)}" }
+        return "market/listing/$id${query.orEmpty()}"
+    }
     fun listingEdit(id: String) = "market/listing/$id/edit"
     // Title comes from CreateListingScreen; the editor seeds its state with it
     // and still creates the listing row lazily on first save.
@@ -158,10 +161,21 @@ fun NavGraphBuilder.marketNavGraph(
     ) { EditListingScreen(navController = navController) }
     composable(
         route = MarketApp.LISTING_DETAIL,
-        arguments = listOf(navArgument("id") { type = NavType.StringType }),
+        arguments = listOf(
+            navArgument("id") { type = NavType.StringType },
+            navArgument("title") {
+                type = NavType.StringType
+                nullable = true
+                defaultValue = null
+            },
+        ),
     ) { entry ->
         val id = entry.arguments?.getString("id").orEmpty()
-        ListingDetailScreen(listingId = id, navController = navController)
+        ListingDetailScreen(
+            listingId = id,
+            navController = navController,
+            initialTitle = entry.arguments?.getString("title").orEmpty(),
+        )
     }
     composable(
         route = MarketApp.LISTING_EDIT,

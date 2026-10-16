@@ -222,7 +222,10 @@
     <string name="market_listings_action_relist">Athliostáil</string>
     <string name="market_listings_action_share">Roinn</string>
     <string name="market_listings_action_view">Féach</string>
+    <string name="market_listings_appeal">Achomharc</string>
+    <string name="market_listings_clear">Glan ó mo liostuithe</string>
     <string name="market_listings_delete_confirm">Scrios</string>
+    <string name="market_listings_delete_draft">Scrios dréacht</string>
     <string name="market_listings_empty_title">Níl aon liostáil fós</string>
     <string name="market_listings_filter_active">Gníomhach</string>
     <string name="market_listings_filter_all">Uile</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Athghníomhachtaithe</string>
     <string name="market_audit_subscription_resumed">Atosaithe</string>
     <string name="market_listings_remove_confirm">Bain</string>
+    <string name="market_listings_remove_listing">Bain an liostú</string>
     <string name="market_listings_remove_message">Beidh an liosta i bhfolach ó cheannaitheoirí. Ní féidir é seo a chealú, ach is féidir leat é a athliostú níos déanaí mar dhréacht nua.</string>
     <string name="market_listings_remove_message_auction">Cuirfidh sé seo an ceant ar ceal. Beidh an liosta i bhfolach ó cheannaitheoirí; is féidir leat é a athliostú níos déanaí mar dhréacht nua.</string>
     <string name="market_listings_remove_title">Bain an liostáil seo?</string>

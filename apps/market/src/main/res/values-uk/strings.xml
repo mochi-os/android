@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Редагувати</string>
     <string name="market_listings_action_relist">Повторно виставити</string>
     <string name="market_listings_action_view">Переглянути</string>
+    <string name="market_listings_appeal">Оскаржити</string>
+    <string name="market_listings_clear">Прибрати з моїх оголошень</string>
     <string name="market_listings_delete_confirm">Видалити</string>
+    <string name="market_listings_delete_draft">Видалити чернетку</string>
     <string name="market_listings_empty_title">Оголошень ще немає</string>
     <string name="market_listings_filter_active">Активний</string>
     <string name="market_listings_filter_all">Усі</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Реактивовано</string>
     <string name="market_audit_subscription_resumed">Відновлено</string>
     <string name="market_listings_remove_confirm">Видалити</string>
+    <string name="market_listings_remove_listing">Зняти оголошення</string>
     <string name="market_listings_remove_message">Оголошення буде приховано від покупців. Цю дію не можна скасувати, але пізніше ви можете опублікувати його знову як нову чернетку.</string>
     <string name="market_listings_remove_message_auction">Це скасує аукціон. Оголошення буде приховано від покупців; ви можете опублікувати його пізніше як новий чернетку.</string>
     <string name="market_listings_remove_title">Видалити це оголошення?</string>

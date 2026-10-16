@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Szerkesztés</string>
     <string name="market_listings_action_relist">Újrahirdetés</string>
     <string name="market_listings_action_view">Megtekintés</string>
+    <string name="market_listings_appeal">Fellebbezés</string>
+    <string name="market_listings_clear">Eltávolítás a hirdetéseim közül</string>
     <string name="market_listings_delete_confirm">Törlés</string>
+    <string name="market_listings_delete_draft">Piszkozat törlése</string>
     <string name="market_listings_empty_title">Még nincsenek hirdetések</string>
     <string name="market_listings_filter_active">Aktív</string>
     <string name="market_listings_filter_all">Összes</string>
@@ -701,6 +704,7 @@
     <string name="market_audit_subscription_reactivated">Újraaktiválva</string>
     <string name="market_audit_subscription_resumed">Folytatva</string>
     <string name="market_listings_remove_confirm">Eltávolítás</string>
+    <string name="market_listings_remove_listing">Hirdetés eltávolítása</string>
     <string name="market_listings_remove_message">A hirdetés el lesz rejtve a vásárlók elől. Ez nem vonható vissza, de később új vázlatként újra meghirdetheted.</string>
     <string name="market_listings_remove_message_auction">Ez törli az árverést. A hirdetés el lesz rejtve a vásárlók elől; később új vázlatként újra meghirdetheti.</string>
     <string name="market_listings_remove_title">Eltávolítod ezt a hirdetést?</string>

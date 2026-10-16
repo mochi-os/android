@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Edytuj</string>
     <string name="market_listings_action_relist">Wystaw ponownie</string>
     <string name="market_listings_action_view">Zobacz</string>
+    <string name="market_listings_appeal">Odwołaj się</string>
+    <string name="market_listings_clear">Usuń z moich ogłoszeń</string>
     <string name="market_listings_delete_confirm">Usuń</string>
+    <string name="market_listings_delete_draft">Usuń szkic</string>
     <string name="market_listings_empty_title">Brak ofert</string>
     <string name="market_listings_filter_active">Aktywne</string>
     <string name="market_listings_filter_all">Wszystko</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Aktywowano ponownie</string>
     <string name="market_audit_subscription_resumed">Wznowiono</string>
     <string name="market_listings_remove_confirm">Usuń</string>
+    <string name="market_listings_remove_listing">Usuń ogłoszenie</string>
     <string name="market_listings_remove_message">Oferta zostanie ukryta przed kupującymi. Tego nie można cofnąć, ale możesz ją wystawić ponownie jako nowy szkic.</string>
     <string name="market_listings_remove_message_auction">Spowoduje to anulowanie aukcji. Ogłoszenie zostanie ukryte przed kupującymi; możesz je później wystawić ponownie jako nowy szkic.</string>
     <string name="market_listings_remove_title">Usunąć tę ofertę?</string>

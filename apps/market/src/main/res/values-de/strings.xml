@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Bearbeiten</string>
     <string name="market_listings_action_relist">Erneut anbieten</string>
     <string name="market_listings_action_view">Anzeigen</string>
+    <string name="market_listings_appeal">Einspruch</string>
+    <string name="market_listings_clear">Aus meinen Angeboten entfernen</string>
     <string name="market_listings_delete_confirm">Löschen</string>
+    <string name="market_listings_delete_draft">Entwurf löschen</string>
     <string name="market_listings_empty_title">Noch keine Angebote</string>
     <string name="market_listings_filter_active">Aktiv</string>
     <string name="market_listings_filter_all">Alle</string>
@@ -701,6 +704,7 @@
     <string name="market_audit_subscription_reactivated">Reaktiviert</string>
     <string name="market_audit_subscription_resumed">Fortgesetzt</string>
     <string name="market_listings_remove_confirm">Entfernen</string>
+    <string name="market_listings_remove_listing">Angebot entfernen</string>
     <string name="market_listings_remove_message">Das Angebot wird vor Käufern ausgeblendet. Dies kann nicht rückgängig gemacht werden, aber Sie können es später als neuen Entwurf wieder einstellen.</string>
     <string name="market_listings_remove_message_auction">Dadurch wird die Auktion abgebrochen. Das Inserat wird vor Käufern verborgen; du kannst es später als neuen Entwurf wieder einstellen.</string>
     <string name="market_listings_remove_title">Dieses Angebot entfernen?</string>

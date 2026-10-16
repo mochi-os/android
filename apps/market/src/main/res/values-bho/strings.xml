@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">फेर लिस्ट करीं</string>
     <string name="market_listings_action_share">साझा करीं</string>
     <string name="market_listings_action_view">देखीं</string>
+    <string name="market_listings_appeal">अपील</string>
+    <string name="market_listings_clear">हमार लिस्टिंग से हटाईं</string>
     <string name="market_listings_delete_confirm">मेटाईं</string>
+    <string name="market_listings_delete_draft">मसौदा मिटाईं</string>
     <string name="market_listings_empty_title">अबहीं तक कौनो लिस्टिंग नइखे</string>
     <string name="market_listings_filter_active">सक्रिय</string>
     <string name="market_listings_filter_all">सब</string>
@@ -701,6 +704,7 @@
     <string name="market_audit_subscription_reactivated">फेर सक्रिय भइल</string>
     <string name="market_audit_subscription_resumed">जारी भइल</string>
     <string name="market_listings_remove_confirm">हटाईं</string>
+    <string name="market_listings_remove_listing">लिस्टिंग हटाईं</string>
     <string name="market_listings_remove_message">लिस्टिंग खरीददारन से छिप जाई। एकरा के पूर्ववत ना कइल जा सके, बाकी आप एकरा के बाद में नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकेनीं।</string>
     <string name="market_listings_remove_message_auction">ई नीलामी रद्द कर दी। लिस्टिंग खरीददारन से छिप जाई; आप एकरा के बाद में नया ड्राफ्ट के रूप में फेर से लिस्ट कर सकेनीं।</string>
     <string name="market_listings_remove_title">ए लिस्टिंग के हटाईं?</string>

@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">Deebisanii tarreessi</string>
     <string name="market_listings_action_share">Qoodi</string>
     <string name="market_listings_action_view">Daawwadhu</string>
+    <string name="market_listings_appeal">Ol iyyannoo</string>
+    <string name="market_listings_clear">Tarree koo irraa haqi</string>
     <string name="market_listings_delete_confirm">Haqi</string>
+    <string name="market_listings_delete_draft">Wixinaa haqi</string>
     <string name="market_listings_empty_title">Hanga ammaatti tarreeffamni hin jiru</string>
     <string name="market_listings_filter_active">Hojii irra jira</string>
     <string name="market_listings_filter_all">Hunda</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Deebi\'ee sochoofame</string>
     <string name="market_audit_subscription_resumed">Itti fufame</string>
     <string name="market_listings_remove_confirm">Haqi</string>
+    <string name="market_listings_remove_listing">Tarree haqi</string>
     <string name="market_listings_remove_message">Tarreeffamni bittootaarraa dhokfama. Kun deebi\'ee hin sirreessamu, garuu boodaa akka qabxii haaraatti irra deebitee tarreessuu dandeessa.</string>
     <string name="market_listings_remove_message_auction">Kun caalbaasii dhaabsisa. Tarreeffamni bittootarraa dhokfama; ati boodaa irra deebitee akka qabxii haaraatti tarreessuu dandeessa.</string>
     <string name="market_listings_remove_title">Tarreeffama kana haquuf?</string>

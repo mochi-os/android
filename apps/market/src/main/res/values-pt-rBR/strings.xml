@@ -171,7 +171,10 @@
     <string name="market_listings_action_edit">Editar</string>
     <string name="market_listings_action_relist">Reanunciar</string>
     <string name="market_listings_action_view">Visualizar</string>
+    <string name="market_listings_appeal">Recorrer</string>
+    <string name="market_listings_clear">Remover dos meus anúncios</string>
     <string name="market_listings_delete_confirm">Excluir</string>
+    <string name="market_listings_delete_draft">Excluir rascunho</string>
     <string name="market_listings_empty_title">Ainda não há anúncios</string>
     <string name="market_listings_filter_active">Ativo</string>
     <string name="market_listings_filter_all">Todos</string>
@@ -690,6 +693,7 @@
     <string name="market_audit_subscription_reactivated">Reativado</string>
     <string name="market_audit_subscription_resumed">Retomado</string>
     <string name="market_listings_remove_confirm">Remover</string>
+    <string name="market_listings_remove_listing">Remover anúncio</string>
     <string name="market_listings_remove_message">O anúncio será ocultado dos compradores. Isso não pode ser desfeito, mas você pode republicá-lo depois como um novo rascunho.</string>
     <string name="market_listings_remove_message_auction">Isso cancelará o leilão. O anúncio ficará oculto dos compradores; você pode publicá-lo novamente depois como um novo rascunho.</string>
     <string name="market_listings_remove_title">Remover este anúncio?</string>

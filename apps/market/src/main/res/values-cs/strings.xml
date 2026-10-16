@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Upravit</string>
     <string name="market_listings_action_relist">Znovu vystavit</string>
     <string name="market_listings_action_view">Zobrazit</string>
+    <string name="market_listings_appeal">Odvolat se</string>
+    <string name="market_listings_clear">Odstranit z mých inzerátů</string>
     <string name="market_listings_delete_confirm">Smazat</string>
+    <string name="market_listings_delete_draft">Smazat koncept</string>
     <string name="market_listings_empty_title">Zatím žádné inzeráty</string>
     <string name="market_listings_filter_active">Aktivní</string>
     <string name="market_listings_filter_all">Vše</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Znovu aktivováno</string>
     <string name="market_audit_subscription_resumed">Pokračování obnoveno</string>
     <string name="market_listings_remove_confirm">Odebrat</string>
+    <string name="market_listings_remove_listing">Odebrat inzerát</string>
     <string name="market_listings_remove_message">Nabídka bude skryta před kupujícími. Toto nelze vrátit, ale později ji můžete znovu zveřejnit jako nový koncept.</string>
     <string name="market_listings_remove_message_auction">Tímto se zruší aukce. Inzerát bude skryt před kupujícími; můžete jej později znovu zveřejnit jako nový koncept.</string>
     <string name="market_listings_remove_title">Odstranit tuto nabídku?</string>

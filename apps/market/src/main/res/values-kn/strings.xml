@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">ಮರು-ಲಿಸ್ಟ್ ಮಾಡಿ</string>
     <string name="market_listings_action_share">ಹಂಚಿಕೊಳ್ಳಿ</string>
     <string name="market_listings_action_view">ವೀಕ್ಷಿಸಿ</string>
+    <string name="market_listings_appeal">ಮೇಲ್ಮನವಿ</string>
+    <string name="market_listings_clear">ನನ್ನ ಪಟ್ಟಿಗಳಿಂದ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="market_listings_delete_confirm">ಅಳಿಸಿ</string>
+    <string name="market_listings_delete_draft">ಕರಡು ಅಳಿಸಿ</string>
     <string name="market_listings_empty_title">ಇನ್ನೂ ಯಾವುದೇ ಲಿಸ್ಟಿಂಗ್‌ಗಳಿಲ್ಲ</string>
     <string name="market_listings_filter_active">ಸಕ್ರಿಯ</string>
     <string name="market_listings_filter_all">ಎಲ್ಲಾ</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">ಮರುಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="market_audit_subscription_resumed">ಮುಂದುವರಿಸಲಾಗಿದೆ</string>
     <string name="market_listings_remove_confirm">ತೆಗೆದುಹಾಕಿ</string>
+    <string name="market_listings_remove_listing">ಪಟ್ಟಿಯನ್ನು ತೆಗೆದುಹಾಕಿ</string>
     <string name="market_listings_remove_message">ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ. ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗದು, ಆದರೆ ನೀವು ನಂತರ ಹೊಸ ಡ್ರಾಫ್ಟ್ ಆಗಿ ಮರು-ಪಟ್ಟಿ ಮಾಡಬಹುದು.</string>
     <string name="market_listings_remove_message_auction">ಇದು ಹರಾಜನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ; ನೀವು ಇದನ್ನು ನಂತರ ಹೊಸ ಡ್ರಾಫ್ಟ್‌ ಆಗಿ ಮರು-ಪಟ್ಟಿ ಮಾಡಬಹುದು.</string>
     <string name="market_listings_remove_title">ಈ ಪಟ್ಟಿ ತೆಗೆದುಹಾಕುವುದೇ?</string>

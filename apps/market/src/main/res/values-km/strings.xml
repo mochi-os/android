@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">ចុះបញ្ជីឡើងវិញ</string>
     <string name="market_listings_action_share">ចែករំលែក</string>
     <string name="market_listings_action_view">មើល</string>
+    <string name="market_listings_appeal">ប្តឹងឧទ្ធរណ៍</string>
+    <string name="market_listings_clear">សម្អាតចេញពីការផ្សាយរបស់ខ្ញុំ</string>
     <string name="market_listings_delete_confirm">លុប</string>
+    <string name="market_listings_delete_draft">លុបសេចក្តីព្រាង</string>
     <string name="market_listings_empty_title">មិនទាន់មានបញ្ជីលក់</string>
     <string name="market_listings_filter_active">សកម្ម</string>
     <string name="market_listings_filter_all">ទាំងអស់</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">បានធ្វើឱ្យសកម្មឡើងវិញ</string>
     <string name="market_audit_subscription_resumed">បានបន្ត</string>
     <string name="market_listings_remove_confirm">យកចេញ</string>
+    <string name="market_listings_remove_listing">ដកការផ្សាយចេញ</string>
     <string name="market_listings_remove_message">បញ្ជីនឹងត្រូវលាក់ពីអ្នកទិញ។ មិនអាចមិនធ្វើវិញបានទេ ប៉ុន្តែអ្នកអាចចុះបញ្ជីវាម្តងទៀតក្រោយជាសេចក្តីព្រាងថ្មី។</string>
     <string name="market_listings_remove_message_auction">នេះនឹងបោះបង់ការដេញថ្លៃ។ បញ្ជីនឹងត្រូវលាក់ពីអ្នកទិញ; អ្នកអាចចុះបញ្ជីវាម្តងទៀតក្រោយជាសេចក្តីព្រាងថ្មី។</string>
     <string name="market_listings_remove_title">យកបញ្ជីលក់នេះចេញ?</string>

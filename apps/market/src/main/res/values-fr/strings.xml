@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Modifier</string>
     <string name="market_listings_action_relist">Republier</string>
     <string name="market_listings_action_view">Voir</string>
+    <string name="market_listings_appeal">Faire appel</string>
+    <string name="market_listings_clear">Retirer de mes annonces</string>
     <string name="market_listings_delete_confirm">Supprimer</string>
+    <string name="market_listings_delete_draft">Supprimer le brouillon</string>
     <string name="market_listings_empty_title">Aucune annonce pour le moment</string>
     <string name="market_listings_filter_active">Actif</string>
     <string name="market_listings_filter_all">Tout</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Réactivé</string>
     <string name="market_audit_subscription_resumed">Repris</string>
     <string name="market_listings_remove_confirm">Retirer</string>
+    <string name="market_listings_remove_listing">Retirer l\'annonce</string>
     <string name="market_listings_remove_message">L\'annonce sera masquée aux acheteurs. Cela ne peut pas être annulé, mais vous pourrez la republier plus tard sous forme d\'un nouveau brouillon.</string>
     <string name="market_listings_remove_message_auction">Cela annulera l\'enchère. L\'annonce sera masquée aux acheteurs ; vous pourrez la republier ultérieurement comme nouveau brouillon.</string>
     <string name="market_listings_remove_title">Retirer cette annonce ?</string>

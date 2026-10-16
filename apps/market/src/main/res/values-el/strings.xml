@@ -176,7 +176,10 @@
     <string name="market_listings_action_edit">Επεξεργασία</string>
     <string name="market_listings_action_relist">Επανακαταχώρηση</string>
     <string name="market_listings_action_view">Προβολή</string>
+    <string name="market_listings_appeal">Ένσταση</string>
+    <string name="market_listings_clear">Αφαίρεση από τις αγγελίες μου</string>
     <string name="market_listings_delete_confirm">Διαγραφή</string>
+    <string name="market_listings_delete_draft">Διαγραφή πρόχειρου</string>
     <string name="market_listings_empty_title">Δεν υπάρχουν ακόμη αγγελίες</string>
     <string name="market_listings_filter_active">Ενεργό</string>
     <string name="market_listings_filter_all">Όλα</string>
@@ -701,6 +704,7 @@
     <string name="market_audit_subscription_reactivated">Επανενεργοποιήθηκε</string>
     <string name="market_audit_subscription_resumed">Συνεχίστηκε</string>
     <string name="market_listings_remove_confirm">Αφαίρεση</string>
+    <string name="market_listings_remove_listing">Αφαίρεση αγγελίας</string>
     <string name="market_listings_remove_message">Η αγγελία θα κρυφτεί από τους αγοραστές. Αυτό δεν μπορεί να ανατραπεί, αλλά μπορείτε να την επαναδημοσιεύσετε αργότερα ως νέο πρόχειρο.</string>
     <string name="market_listings_remove_message_auction">Αυτό θα ακυρώσει τη δημοπρασία. Η καταχώριση θα κρυφτεί από τους αγοραστές· μπορείτε να την επανακαταχωρίσετε αργότερα ως νέο πρόχειρο.</string>
     <string name="market_listings_remove_title">Αφαίρεση αυτής της αγγελίας;</string>

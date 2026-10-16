@@ -219,7 +219,10 @@
     <string name="market_listings_action_relist">மறுபட்டியலிடு</string>
     <string name="market_listings_action_share">பகிர்</string>
     <string name="market_listings_action_view">காட்டு</string>
+    <string name="market_listings_appeal">மேல்முறையீடு</string>
+    <string name="market_listings_clear">எனது பட்டியல்களிலிருந்து அழி</string>
     <string name="market_listings_delete_confirm">நீக்கு</string>
+    <string name="market_listings_delete_draft">வரைவை நீக்கு</string>
     <string name="market_listings_empty_title">பட்டியல்கள் இன்னும் இல்லை</string>
     <string name="market_listings_filter_active">செயலில்</string>
     <string name="market_listings_filter_all">அனைத்தும்</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">மறுசெயல்படுத்தப்பட்டது</string>
     <string name="market_audit_subscription_resumed">தொடரப்பட்டது</string>
     <string name="market_listings_remove_confirm">அகற்று</string>
+    <string name="market_listings_remove_listing">பட்டியலை அகற்று</string>
     <string name="market_listings_remove_message">பட்டியல் வாங்குவோரிடமிருந்து மறைக்கப்படும். இதை செயல்தவிர்க்க முடியாது, ஆனால் நீங்கள் பின்னர் புதிய வரைவாக மீண்டும் பட்டியலிடலாம்.</string>
     <string name="market_listings_remove_message_auction">இது ஏலத்தை ரத்து செய்யும். பட்டியல் வாங்குபவர்களிடமிருந்து மறைக்கப்படும்; நீங்கள் பின்னர் அதை புதிய வரைவாக மீண்டும் பட்டியலிடலாம்.</string>
     <string name="market_listings_remove_title">இந்த பட்டியலை அகற்றவா?</string>

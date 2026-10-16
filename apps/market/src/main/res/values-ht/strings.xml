@@ -230,7 +230,10 @@
     <string name="market_listings_action_relist">Re-mete sou lis</string>
     <string name="market_listings_action_share">Pataje</string>
     <string name="market_listings_action_view">Wè</string>
+    <string name="market_listings_appeal">Fè apèl</string>
+    <string name="market_listings_clear">Retire nan anons mwen yo</string>
     <string name="market_listings_delete_confirm">Efase</string>
+    <string name="market_listings_delete_draft">Efase bouyon</string>
     <string name="market_listings_empty_title">Poko gen lis</string>
     <string name="market_listings_filter_active">Aktif</string>
     <string name="market_listings_filter_all">Tout</string>
@@ -699,6 +702,7 @@
     <string name="market_audit_subscription_reactivated">Reyaktive</string>
     <string name="market_audit_subscription_resumed">Repran</string>
     <string name="market_listings_remove_confirm">Retire</string>
+    <string name="market_listings_remove_listing">Retire anons</string>
     <string name="market_listings_remove_message">Lis la pral kache nan men acheteur. Sa pa ka anile, men ou ka relis li pita kòm yon nouvo bouyon.</string>
     <string name="market_listings_remove_message_auction">Sa pral anile vant lan. Lis la pral kache nan men acheteur; ou ka relis li pita kòm yon nouvo bouyon.</string>
     <string name="market_listings_remove_title">Retire lis sa a?</string>
