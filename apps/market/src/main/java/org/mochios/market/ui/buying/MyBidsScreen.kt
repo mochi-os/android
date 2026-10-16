@@ -92,8 +92,8 @@ fun MyBidsScreen(
                     ) { bid ->
                         BidRow(
                             bid = bid,
-                            onClick = { id ->
-                                navController.navigate(MarketApp.listingDetail(id.toString()))
+                            onClick = { id, title ->
+                                navController.navigate(MarketApp.listingDetail(id, title))
                             },
                             onCompletePurchase = { listingId ->
                                 navController.navigate(MarketApp.checkout(listingId.toString()))
@@ -126,7 +126,7 @@ private fun BidsTabRow(active: BidsFilter, onSelected: (BidsFilter) -> Unit) {
 @Composable
 private fun BidRow(
     bid: Bid,
-    onClick: (String) -> Unit,
+    onClick: (String, String?) -> Unit,
     onCompletePurchase: (String) -> Unit,
 ) {
     val format = LocalFormat.current
@@ -138,7 +138,7 @@ private fun BidRow(
             .padding(horizontal = 12.dp, vertical = 6.dp)
             .clip(RoundedCornerShape(10.dp))
             .background(MaterialTheme.colorScheme.surface)
-            .clickable { bid.listing?.let { onClick(it) } }
+            .clickable { bid.listing?.let { listing -> onClick(listing, bid.title) } }
             .padding(12.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {

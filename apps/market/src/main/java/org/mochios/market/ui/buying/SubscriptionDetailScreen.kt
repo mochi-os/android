@@ -128,7 +128,10 @@ fun SubscriptionDetailScreen(
                             onListingTap = state.listing?.let { listing ->
                                 {
                                     navController.navigate(
-                                        MarketApp.listingDetail(listing.id.toString()),
+                                        MarketApp.listingDetail(
+                                            listing.id.toString(),
+                                            listing.title,
+                                        ),
                                     )
                                 }
                             },

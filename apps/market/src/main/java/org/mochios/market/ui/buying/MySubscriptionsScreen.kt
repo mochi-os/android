@@ -110,7 +110,9 @@ fun MySubscriptionsScreen(
                         mutating = state.mutatingId == sub.id,
                         onTap = {
                             if (sub.listing.isNotBlank()) {
-                                navController.navigate(MarketApp.listingDetail(sub.listing))
+                                navController.navigate(
+                                    MarketApp.listingDetail(sub.listing, sub.title),
+                                )
                             }
                         },
                         onResubscribe = {

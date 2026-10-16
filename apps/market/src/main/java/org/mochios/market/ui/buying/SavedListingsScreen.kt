@@ -115,7 +115,7 @@ fun SavedListingsScreen(
                             saved = true,
                             onClick = {
                                 navController.navigate(
-                                    MarketApp.listingDetail(listing.id.toString()),
+                                    MarketApp.listingDetail(listing.id.toString(), listing.title),
                                 )
                             },
                             onToggleSave = viewModel::toggleSave,

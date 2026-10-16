@@ -67,7 +67,7 @@ fun ReviewsScreen(
             when (event) {
                 is ReviewsEvent.Error -> snackbarHostState.showSnackbar(event.error.userMessage())
                 is ReviewsEvent.OpenListing ->
-                    navController.navigate(MarketApp.listingDetail(event.listingId))
+                    navController.navigate(MarketApp.listingDetail(event.listingId, event.title))
             }
         }
     }

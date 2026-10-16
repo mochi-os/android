@@ -169,7 +169,7 @@ fun MessageThreadScreen(
                 onClick = {
                     if (viewModel.listingId.isNotBlank()) {
                         navController.navigate(
-                            MarketApp.listingDetail(viewModel.listingId),
+                            MarketApp.listingDetail(viewModel.listingId, state.listing.title),
                         )
                     }
                 },

@@ -47,7 +47,7 @@ sealed interface ReviewsEvent {
     data class Error(val error: MochiError) : ReviewsEvent
 
     /** The listing a review's order was for, read so its title can open it. */
-    data class OpenListing(val listingId: String) : ReviewsEvent
+    data class OpenListing(val listingId: String, val title: String) : ReviewsEvent
 }
 
 @HiltViewModel
@@ -157,9 +157,9 @@ class ReviewsViewModel @Inject constructor(
         }
         viewModelScope.launch {
             try {
-                val listing = repo.getOrder(order).listing.id
-                if (listing.isNotEmpty()) {
-                    _events.send(ReviewsEvent.OpenListing(listing))
+                val listing = repo.getOrder(order).listing
+                if (listing.id.isNotEmpty()) {
+                    _events.send(ReviewsEvent.OpenListing(listing.id, listing.title))
                 }
             } catch (e: Exception) {
                 _events.send(ReviewsEvent.Error(e.toMochiError()))
