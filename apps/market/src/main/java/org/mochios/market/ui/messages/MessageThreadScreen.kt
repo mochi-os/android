@@ -183,7 +183,7 @@ fun MessageThreadScreen(
                         )
                     }
                     else -> {
-                        val mine = state.thread?.buyer.orEmpty()
+                        val mine = state.me.ifEmpty { state.thread?.buyer.orEmpty() }
                         // Reverse the list once so `reverseLayout = true`
                         // keeps the newest visible at the bottom of the
                         // viewport.

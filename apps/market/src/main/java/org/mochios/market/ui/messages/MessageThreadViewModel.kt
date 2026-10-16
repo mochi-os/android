@@ -13,10 +13,12 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.market.model.Message
 import org.mochios.market.model.ThreadListingPreview
 import org.mochios.market.model.MarketThread
@@ -25,12 +27,14 @@ import javax.inject.Inject
 
 /**
  * [messages] are oldest first; the screen reverses them for its reverseLayout
- * list.
+ * list. [me] is the signed-in identity, whose messages sit on the right
+ * whether they are the buyer or the seller.
  */
 data class MessageThreadUiState(
     val thread: MarketThread? = null,
     val listing: ThreadListingPreview = ThreadListingPreview(),
     val messages: List<Message> = emptyList(),
+    val me: String = "",
     val draft: String = "",
     val isLoading: Boolean = true,
     val isSending: Boolean = false,
@@ -46,6 +50,7 @@ sealed interface MessageThreadEvent {
 class MessageThreadViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repo: MarketRepository,
+    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     val listingId: String = savedStateHandle.get<String>("listingId").orEmpty()
@@ -78,8 +83,10 @@ class MessageThreadViewModel @Inject constructor(
                     resolvedThreadId = repo.createThread(listing).id
                 }
                 val response = repo.getThread(resolvedThreadId)
+                val me = sessionManager.boundIdentity.first().orEmpty()
                 _state.value = _state.value.copy(
                     thread = response.thread,
+                    me = me,
                     listing = response.listing,
                     messages = response.messages,
                     isLoading = false,
