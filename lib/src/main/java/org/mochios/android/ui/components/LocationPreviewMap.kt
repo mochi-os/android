@@ -52,6 +52,7 @@ fun LocationPreviewMap(
     val lifecycleOwner = LocalLifecycleOwner.current
 
     val mapView = remember {
+        configureOsmdroid(context)
         MapView(context).apply {
             setTileSource(TileSourceFactory.MAPNIK)
             setMultiTouchControls(true)
