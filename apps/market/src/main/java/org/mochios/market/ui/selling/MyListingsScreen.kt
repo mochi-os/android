@@ -7,7 +7,6 @@ package org.mochios.market.ui.selling
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -37,11 +36,9 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -55,7 +52,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -68,7 +64,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -84,7 +79,10 @@ import org.mochios.market.navigation.MarketApp
 import org.mochios.market.repository.MarketRepository
 import org.mochios.market.ui.components.ListingStatusBadge
 import org.mochios.market.ui.components.MarketLayout
-import org.mochios.market.ui.components.MarketStatusBadge
+import org.mochios.market.ui.components.MarketListPadding
+import org.mochios.market.ui.components.MarketListPrice
+import org.mochios.market.ui.components.MarketListRow
+import org.mochios.market.ui.components.MarketListSpacing
 import org.mochios.market.ui.components.StripeOnboardingBanner
 import org.mochios.market.ui.components.shownStatus
 import org.mochios.market.ui.dialog.AppealRemovalDialog
@@ -158,8 +156,8 @@ fun MyListingsScreen(
 
             LazyColumn(
                 state = listState,
-                contentPadding = PaddingValues(12.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+                contentPadding = MarketListPadding,
+                verticalArrangement = MarketListSpacing,
                 modifier = Modifier.fillMaxSize(),
             ) {
                 // Header span: Stripe banner + fee disclosure.
@@ -304,7 +302,9 @@ private fun FilterRow(
     onSearchChange: (String) -> Unit,
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 8.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -369,68 +369,46 @@ private fun ListingRow(
     onAppeal: () -> Unit,
 ) {
     val format = LocalFormat.current
-    MochiCard(
+    MarketListRow(
+        title = listing.title,
         onClick = onClick,
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(12.dp),
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 16.dp, top = 12.dp, bottom = 12.dp, end = 4.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = listing.title,
-                    style = MaterialTheme.typography.titleMedium,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                Text(
-                    text = format.formatDateTime(listing.created),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                Row(
-                    modifier = Modifier.padding(top = 6.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+        subtitle = format.formatDateTime(listing.created),
+        badges = {
+            ListingStatusBadge(listing = listing)
+            if (listing.status == ListingStatus.REJECTED || listing.status == ListingStatus.REMOVED) {
+                MochiOutlinedButton(
+                    onClick = onAppeal,
+                    shape = RoundedCornerShape(8.dp),
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                    modifier = Modifier.height(32.dp),
                 ) {
-                    ListingStatusBadge(listing = listing)
-                    if (listing.status == ListingStatus.REJECTED || listing.status == ListingStatus.REMOVED) {
-                        MochiOutlinedButton(
-                            onClick = onAppeal,
-                            shape = RoundedCornerShape(8.dp),
-                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
-                            modifier = Modifier.height(32.dp),
-                        ) {
-                            Icon(
-                                Icons.Outlined.Flag,
-                                contentDescription = null,
-                                modifier = Modifier.size(16.dp),
-                            )
-                            Spacer(Modifier.width(6.dp))
-                            Text(stringResource(R.string.market_listings_appeal))
-                        }
-                    }
+                    Icon(
+                        Icons.Outlined.Flag,
+                        contentDescription = null,
+                        modifier = Modifier.size(16.dp),
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    Text(stringResource(R.string.market_listings_appeal))
                 }
             }
-            if (listing.price > 0) {
-                Text(
+        },
+        trailing = if (listing.price > 0) {
+            {
+                MarketListPrice(
                     text = formatPrice(listing.price, listing.currency ?: Currency.GBP),
-                    style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier.padding(start = 8.dp),
                 )
             }
-            ListingMenu(
-                listing = listing,
-                onEdit = onEdit,
-                onDelete = onDelete,
-                onRelist = onRelist,
-                onClear = onClear,
-            )
-        }
+        } else {
+            null
+        },
+    ) {
+        ListingMenu(
+            listing = listing,
+            onEdit = onEdit,
+            onDelete = onDelete,
+            onRelist = onRelist,
+            onClear = onClear,
+        )
     }
 }
 

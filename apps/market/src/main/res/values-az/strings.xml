@@ -46,7 +46,6 @@
     <string name="market_bid_dialog_title">Təklif ver</string>
     <string name="market_bid_ended">Hərrac başa çatdı</string>
     <string name="market_bid_ends_in">%1$s-də bitir</string>
-    <string name="market_bids_current_bid">Hazırkı: %1$s</string>
     <string name="market_bids_empty">Təklif yoxdur</string>
     <string name="market_bids_ended">Hərrac başa çatdı</string>
     <string name="market_bids_ends_in">%1$s-də bitir</string>
@@ -453,9 +452,9 @@
     <string name="market_sale_ship_failed">Göndərilmiş kimi işarələmək alınmadı</string>
     <string name="market_sale_ship_submitting">İşarələnir…</string>
     <string name="market_sale_ship_success">Göndərilmiş kimi işarələndi</string>
+    <string name="market_sale_title">Satış</string>
     <string name="market_audit_history">Tarixçə</string>
     <string name="market_sale_review_of_buyer">Alıcı haqqında rəyiniz</string>
-    <string name="market_sale_title">Satış</string>
     <string name="market_sale_tracking_label">İzləmə nömrəsi</string>
     <string name="market_sale_tracking_url_label">İzləmə URL (istəyə bağlı)</string>
     <string name="market_sales_empty_subtitle">Dərc edilmiş elanlarınızdan sifarişlər burada görünür.</string>

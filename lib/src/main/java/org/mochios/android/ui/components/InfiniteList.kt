@@ -5,7 +5,9 @@
 
 package org.mochios.android.ui.components
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -31,6 +33,8 @@ fun <T> InfiniteList(
     onLoadMore: () -> Unit,
     modifier: Modifier = Modifier,
     listState: LazyListState = rememberLazyListState(),
+    contentPadding: PaddingValues = PaddingValues(0.dp),
+    verticalArrangement: Arrangement.Vertical = Arrangement.Top,
     emptyContent: @Composable () -> Unit = {},
     itemContent: @Composable (T) -> Unit
 ) {
@@ -59,6 +63,8 @@ fun <T> InfiniteList(
 
     LazyColumn(
         state = listState,
+        contentPadding = contentPadding,
+        verticalArrangement = verticalArrangement,
         modifier = modifier.fillMaxSize()
     ) {
         itemsIndexed(items) { _, item ->

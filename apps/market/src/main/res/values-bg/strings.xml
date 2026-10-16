@@ -364,7 +364,6 @@
     <string name="market_bid_dialog_no_bids_yet">Все още няма оферти — начална оферта %1$s</string>
     <string name="market_bid_dialog_submitting">Поставяне на оферта</string>
     <string name="market_bid_ends_in">Завършва след %1$s</string>
-    <string name="market_bids_current_bid">Текуща: %1$s</string>
     <string name="market_bids_ends_in">Завършва след %1$s</string>
     <string name="market_bids_your_bid">Вашата оферта: %1$s</string>
     <string name="market_carousel_main">Снимка %1$s от %2$s</string>

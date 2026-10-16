@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Ставок пока нет — начальная ставка %1$s</string>
     <string name="market_bid_dialog_submitting">Размещение ставки</string>
     <string name="market_bid_ends_in">Завершится через %1$s</string>
-    <string name="market_bids_current_bid">Текущая: %1$s</string>
     <string name="market_bids_ends_in">Завершится через %1$s</string>
     <string name="market_bids_your_bid">Ваша ставка: %1$s</string>
     <string name="market_carousel_main">Фото %1$s из %2$s</string>

@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">ਅਜੇ ਕੋਈ ਬੋਲੀ ਨਹੀਂ — ਸ਼ੁਰੂਆਤੀ ਬੋਲੀ %1$s</string>
     <string name="market_bid_dialog_submitting">ਬੋਲੀ ਲਗਾਈ ਜਾ ਰਹੀ ਹੈ</string>
     <string name="market_bid_ends_in">%1$s ਵਿੱਚ ਖਤਮ</string>
-    <string name="market_bids_current_bid">ਮੌਜੂਦਾ: %1$s</string>
     <string name="market_bids_ends_in">%1$s ਵਿੱਚ ਖਤਮ</string>
     <string name="market_bids_your_bid">ਤੁਹਾਡੀ ਬੋਲੀ: %1$s</string>
     <string name="market_carousel_thumbnail">ਥੰਬਨੇਲ %1$s</string>

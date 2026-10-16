@@ -425,7 +425,6 @@
     <string name="market_bid_dialog_no_bids_yet">Ende pa oferta — oferta fillestare %1$s</string>
     <string name="market_bid_dialog_submitting">Po vendoset oferta</string>
     <string name="market_bid_ends_in">Përfundon për %1$s</string>
-    <string name="market_bids_current_bid">Aktuale: %1$s</string>
     <string name="market_bids_ends_in">Përfundon për %1$s</string>
     <string name="market_bids_your_bid">Oferta juaj: %1$s</string>
     <string name="market_carousel_thumbnail">Miniaturë %1$s</string>

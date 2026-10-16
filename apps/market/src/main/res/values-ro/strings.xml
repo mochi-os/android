@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Nicio ofertă încă — ofertă inițială %1$s</string>
     <string name="market_bid_dialog_submitting">Se plasează oferta</string>
     <string name="market_bid_ends_in">Se încheie în %1$s</string>
-    <string name="market_bids_current_bid">Curentă: %1$s</string>
     <string name="market_bids_ends_in">Se încheie în %1$s</string>
     <string name="market_bids_your_bid">Oferta dvs.: %1$s</string>
     <string name="market_carousel_main">Fotografia %1$s din %2$s</string>

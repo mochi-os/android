@@ -46,7 +46,6 @@
     <string name="market_bid_dialog_title">Поднеси понуда</string>
     <string name="market_bid_ended">Аукцијата заврши</string>
     <string name="market_bid_ends_in">Завршува за %1$s</string>
-    <string name="market_bids_current_bid">Тековно: %1$s</string>
     <string name="market_bids_empty">Нема понуди</string>
     <string name="market_bids_ended">Аукцијата заврши</string>
     <string name="market_bids_ends_in">Завршува за %1$s</string>
@@ -453,9 +452,9 @@
     <string name="market_sale_ship_failed">Неуспешно означување како испратено</string>
     <string name="market_sale_ship_submitting">Се означува…</string>
     <string name="market_sale_ship_success">Означено како испратено</string>
+    <string name="market_sale_title">Продажба</string>
     <string name="market_audit_history">Историја</string>
     <string name="market_sale_review_of_buyer">Вашата рецензија за купувачот</string>
-    <string name="market_sale_title">Продажба</string>
     <string name="market_sale_tracking_label">Број за следење</string>
     <string name="market_sale_tracking_url_label">URL за следење (опционално)</string>
     <string name="market_sales_empty_subtitle">Нарачките од вашите објавени огласи се појавуваат овде.</string>

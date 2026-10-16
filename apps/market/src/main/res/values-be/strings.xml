@@ -46,7 +46,6 @@
     <string name="market_bid_dialog_title">Зрабіць стаўку</string>
     <string name="market_bid_ended">Аўкцыён скончаны</string>
     <string name="market_bid_ends_in">Заканчваецца праз %1$s</string>
-    <string name="market_bids_current_bid">Цяпер: %1$s</string>
     <string name="market_bids_empty">Стаўкі адсутнічаюць</string>
     <string name="market_bids_ended">Аўкцыён скончаны</string>
     <string name="market_bids_ends_in">Заканчваецца праз %1$s</string>
@@ -453,9 +452,9 @@
     <string name="market_sale_ship_failed">Не ўдалося адзначыць як адпраўлена</string>
     <string name="market_sale_ship_submitting">Адзначэнне…</string>
     <string name="market_sale_ship_success">Адзначана як адпраўлена</string>
+    <string name="market_sale_title">Продаж</string>
     <string name="market_audit_history">Гісторыя</string>
     <string name="market_sale_review_of_buyer">Ваш водгук пра пакупніка</string>
-    <string name="market_sale_title">Продаж</string>
     <string name="market_sale_tracking_label">Нумар адсочвання</string>
     <string name="market_sale_tracking_url_label">URL адсочвання (неабавязкова)</string>
     <string name="market_sales_empty_subtitle">Заказы па вашых апублікаваных аб’явах паяўляюцца тут.</string>

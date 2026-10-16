@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Še ni ponudb — začetna ponudba %1$s</string>
     <string name="market_bid_dialog_submitting">Oddajanje ponudbe</string>
     <string name="market_bid_ends_in">Konča se čez %1$s</string>
-    <string name="market_bids_current_bid">Trenutna: %1$s</string>
     <string name="market_bids_ends_in">Konča se čez %1$s</string>
     <string name="market_bids_your_bid">Vaša ponudba: %1$s</string>
     <string name="market_carousel_main">Fotografija %1$s od %2$s</string>

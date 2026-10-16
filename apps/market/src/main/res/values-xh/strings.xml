@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">Akukabikho zibhidi — ibhidi yokuqala %1$s</string>
     <string name="market_bid_dialog_submitting">Kubekwa ibhidi</string>
     <string name="market_bid_ends_in">Iphela nge-%1$s</string>
-    <string name="market_bids_current_bid">Yangoku: %1$s</string>
     <string name="market_bids_ends_in">Iphela nge-%1$s</string>
     <string name="market_bids_your_bid">Ibhidi yakho: %1$s</string>
     <string name="market_carousel_thumbnail">Umfanekiso omncinci %1$s</string>

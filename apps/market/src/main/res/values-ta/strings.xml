@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">இதுவரை ஏலம் இல்லை — தொடக்க ஏலம் %1$s</string>
     <string name="market_bid_dialog_submitting">ஏலம் வைக்கப்படுகிறது</string>
     <string name="market_bid_ends_in">%1$s இல் முடிகிறது</string>
-    <string name="market_bids_current_bid">தற்போதைய: %1$s</string>
     <string name="market_bids_ends_in">%1$s இல் முடிகிறது</string>
     <string name="market_bids_your_bid">உங்கள் ஏலம்: %1$s</string>
     <string name="market_carousel_thumbnail">சிறுபடம் %1$s</string>

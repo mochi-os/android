@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">아직 입찰 없음 — 시작 가격 %1$s</string>
     <string name="market_bid_dialog_submitting">입찰 중</string>
     <string name="market_bid_ends_in">%1$s 후 종료</string>
-    <string name="market_bids_current_bid">현재: %1$s</string>
     <string name="market_bids_ends_in">%1$s 후 종료</string>
     <string name="market_bids_your_bid">내 입찰가: %1$s</string>
     <string name="market_carousel_main">사진 %1$s / %2$s</string>

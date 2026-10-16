@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">ابھی کوئی بولی نہیں — ابتدائی بولی %1$s</string>
     <string name="market_bid_dialog_submitting">بولی لگائی جا رہی ہے</string>
     <string name="market_bid_ends_in">%1$s میں ختم ہوگی</string>
-    <string name="market_bids_current_bid">موجودہ: %1$s</string>
     <string name="market_bids_ends_in">%1$s میں ختم ہوگی</string>
     <string name="market_bids_your_bid">آپ کی بولی: %1$s</string>
     <string name="market_carousel_main">تصویر %1$s از %2$s</string>

@@ -429,7 +429,6 @@
     <string name="market_bid_dialog_no_bids_yet">Babu tayi tukuna — tayin farawa %1$s</string>
     <string name="market_bid_dialog_submitting">Ana yin tayi</string>
     <string name="market_bid_ends_in">Yana ƙarewa cikin %1$s</string>
-    <string name="market_bids_current_bid">Na yanzu: %1$s</string>
     <string name="market_bids_ends_in">Yana ƙarewa cikin %1$s</string>
     <string name="market_bids_your_bid">Tayin ku: %1$s</string>
     <string name="market_carousel_thumbnail">Ƙaramin hoto %1$s</string>

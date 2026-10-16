@@ -496,7 +496,6 @@
     <string name="market_bid_dialog_no_bids_yet">এখনও কোনো বিড নেই — প্রারম্ভিক বিড %1$s</string>
     <string name="market_bid_dialog_submitting">বিড স্থাপন করা হচ্ছে</string>
     <string name="market_bid_ends_in">শেষ হবে %1$s-এ</string>
-    <string name="market_bids_current_bid">বর্তমান: %1$s</string>
     <string name="market_bids_ends_in">শেষ হবে %1$s-এ</string>
     <string name="market_bids_your_bid">আপনার বিড: %1$s</string>
     <string name="market_carousel_main">%2$s টির মধ্যে %1$s নম্বর ফটো</string>

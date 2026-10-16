@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">ఇంకా బిడ్‌లు లేవు — ప్రారంభ బిడ్ %1$s</string>
     <string name="market_bid_dialog_submitting">బిడ్ ఉంచుతోంది</string>
     <string name="market_bid_ends_in">%1$s లో ముగుస్తుంది</string>
-    <string name="market_bids_current_bid">ప్రస్తుతం: %1$s</string>
     <string name="market_bids_ends_in">%1$s లో ముగుస్తుంది</string>
     <string name="market_bids_your_bid">మీ బిడ్: %1$s</string>
     <string name="market_carousel_thumbnail">థంబ్‌నెయిల్ %1$s</string>

@@ -365,7 +365,6 @@
     <string name="market_bid_dialog_no_bids_yet">Ainda não há lances — lance inicial %1$s</string>
     <string name="market_bid_dialog_submitting">Enviando lance</string>
     <string name="market_bid_ends_in">Termina em %1$s</string>
-    <string name="market_bids_current_bid">Atual: %1$s</string>
     <string name="market_bids_ends_in">Termina em %1$s</string>
     <string name="market_bids_your_bid">Seu lance: %1$s</string>
     <string name="market_carousel_main">Foto %1$s de %2$s</string>

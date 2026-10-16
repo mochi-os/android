@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">尚無出價 — 起標價 %1$s</string>
     <string name="market_bid_dialog_submitting">正在出價</string>
     <string name="market_bid_ends_in">%1$s 後結束</string>
-    <string name="market_bids_current_bid">目前:%1$s</string>
     <string name="market_bids_ends_in">%1$s 後結束</string>
     <string name="market_bids_your_bid">您的出價:%1$s</string>
     <string name="market_carousel_main">第 %1$s 張相片,共 %2$s 張</string>

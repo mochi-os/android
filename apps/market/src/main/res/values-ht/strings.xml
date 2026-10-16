@@ -431,7 +431,6 @@
     <string name="market_bid_dialog_no_bids_yet">Pa gen òf ankò — òf depa %1$s</string>
     <string name="market_bid_dialog_submitting">Ap plase òf</string>
     <string name="market_bid_ends_in">Fini nan %1$s</string>
-    <string name="market_bids_current_bid">Aktyèl: %1$s</string>
     <string name="market_bids_ends_in">Fini nan %1$s</string>
     <string name="market_bids_your_bid">Òf ou: %1$s</string>
     <string name="market_carousel_thumbnail">Imaj miniati %1$s</string>

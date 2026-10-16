@@ -370,7 +370,6 @@
     <string name="market_bid_dialog_no_bids_yet">Ҳанӯз пешниҳоде нест — пешниҳоди ибтидоӣ %1$s</string>
     <string name="market_bid_dialog_submitting">Пешниҳод пешкаш карда мешавад</string>
     <string name="market_bid_ends_in">Дар %1$s ба охир мерасад</string>
-    <string name="market_bids_current_bid">Ҷорӣ: %1$s</string>
     <string name="market_bids_ends_in">Дар %1$s ба охир мерасад</string>
     <string name="market_bids_your_bid">Пешниҳоди шумо: %1$s</string>
     <string name="market_carousel_main">Сурати %1$s аз %2$s</string>

@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">ಇನ್ನೂ ಯಾವುದೇ ಬಿಡ್‌ಗಳಿಲ್ಲ — ಆರಂಭಿಕ ಬಿಡ್ %1$s</string>
     <string name="market_bid_dialog_submitting">ಬಿಡ್ ಇಡಲಾಗುತ್ತಿದೆ</string>
     <string name="market_bid_ends_in">%1$s ನಲ್ಲಿ ಮುಗಿಯುತ್ತದೆ</string>
-    <string name="market_bids_current_bid">ಪ್ರಸ್ತುತ: %1$s</string>
     <string name="market_bids_ends_in">%1$s ನಲ್ಲಿ ಮುಗಿಯುತ್ತದೆ</string>
     <string name="market_bids_your_bid">ನಿಮ್ಮ ಬಿಡ್: %1$s</string>
     <string name="market_carousel_thumbnail">ಥಂಬ್‌ನೈಲ್ %1$s</string>

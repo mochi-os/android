@@ -425,7 +425,6 @@
     <string name="market_bid_dialog_no_bids_yet">Wala pang bid — panimulang bid %1$s</string>
     <string name="market_bid_dialog_submitting">Naglalagay ng bid</string>
     <string name="market_bid_ends_in">Magtatapos sa %1$s</string>
-    <string name="market_bids_current_bid">Kasalukuyan: %1$s</string>
     <string name="market_bids_ends_in">Magtatapos sa %1$s</string>
     <string name="market_bids_your_bid">Iyong bid: %1$s</string>
     <string name="market_carousel_thumbnail">Thumbnail %1$s</string>

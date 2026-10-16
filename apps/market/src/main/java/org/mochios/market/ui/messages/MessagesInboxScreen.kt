@@ -5,49 +5,40 @@
 
 package org.mochios.market.ui.messages
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material3.Badge
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
-import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
-import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.model.MarketThread
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketListNote
+import org.mochios.market.ui.components.MarketListPadding
+import org.mochios.market.ui.components.MarketListRow
+import org.mochios.market.ui.components.MarketListSpacing
+import org.mochios.market.ui.components.PersonThumbnail
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -83,6 +74,8 @@ fun MessagesInboxScreen(
                         isLoading = state.isLoading,
                         hasMore = state.hasMore,
                         onLoadMore = viewModel::loadMore,
+                        contentPadding = MarketListPadding,
+                        verticalArrangement = MarketListSpacing,
                     ) { thread ->
                         InboxRow(
                             thread = thread,
@@ -95,7 +88,6 @@ fun MessagesInboxScreen(
                                 )
                             },
                         )
-                        HorizontalDivider(thickness = 0.5.dp)
                     }
                 }
             }
@@ -141,76 +133,25 @@ private fun InboxRow(
 ) {
     val otherEntity = thread.otherEntityId()
     val otherName = thread.otherName.orEmpty().ifBlank { otherEntity.orEmpty() }
-    val avatarUrl = otherEntity?.let { "/market/-/user/$it/asset/avatar" }
     val unread = (thread.unread ?: 0L).toInt()
-    val format = LocalFormat.current
     val timestamp = thread.lastMessageTime ?: thread.updated
-    val timeLabel = format.formatRelativeTime(timestamp)
-
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        EntityAvatar(
-            name = otherName,
-            src = avatarUrl,
-            seed = otherEntity,
-            size = 40.dp,
-        )
-        Spacer(modifier = Modifier.width(12.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = otherName,
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.weight(1f, fill = false),
-                )
-                if (timeLabel.isNotEmpty()) {
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(
-                        text = timeLabel,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
+    val timeLabel = LocalFormat.current.formatRelativeTime(timestamp)
+    MarketListRow(
+        title = otherName,
+        onClick = onClick,
+        leading = { PersonThumbnail(name = otherName, account = otherEntity) },
+        subtitle = thread.title,
+        preview = thread.lastMessage,
+        bold = unread > 0,
+        trailing = {
+            if (timeLabel.isNotEmpty()) {
+                MarketListNote(text = timeLabel)
             }
-            val title = thread.title.orEmpty()
-            if (title.isNotEmpty()) {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
+            if (unread > 0) {
+                Badge { Text(text = unread.toString()) }
             }
-            val preview = thread.lastMessage.orEmpty()
-            if (preview.isNotEmpty()) {
-                Spacer(modifier = Modifier.height(2.dp))
-                Text(
-                    text = preview,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = if (unread > 0) {
-                        MaterialTheme.colorScheme.onSurface
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-        if (unread > 0) {
-            Spacer(modifier = Modifier.width(8.dp))
-            Badge { Text(text = unread.toString()) }
-        }
-    }
+        },
+    )
 }
 
 /**

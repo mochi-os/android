@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">ഇതുവരെ ബിഡുകളൊന്നുമില്ല — ആരംഭ ബിഡ് %1$s</string>
     <string name="market_bid_dialog_submitting">ബിഡ് സമർപ്പിക്കുന്നു</string>
     <string name="market_bid_ends_in">%1$s-ൽ അവസാനിക്കുന്നു</string>
-    <string name="market_bids_current_bid">നിലവിലെ: %1$s</string>
     <string name="market_bids_ends_in">%1$s-ൽ അവസാനിക്കുന്നു</string>
     <string name="market_bids_your_bid">നിങ്ങളുടെ ബിഡ്: %1$s</string>
     <string name="market_carousel_thumbnail">തംബ്നെയിൽ %1$s</string>

@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Nog geen biedingen — startbod %1$s</string>
     <string name="market_bid_dialog_submitting">Bod plaatsen</string>
     <string name="market_bid_ends_in">Eindigt over %1$s</string>
-    <string name="market_bids_current_bid">Huidig: %1$s</string>
     <string name="market_bids_ends_in">Eindigt over %1$s</string>
     <string name="market_bids_your_bid">Uw bod: %1$s</string>
     <string name="market_carousel_main">Foto %1$s van %2$s</string>

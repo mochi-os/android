@@ -46,7 +46,6 @@
     <string name="market_bid_dialog_title">Egin eskaintza</string>
     <string name="market_bid_ended">Enkantea amaitu da</string>
     <string name="market_bid_ends_in">Amaitzen da %1$s</string>
-    <string name="market_bids_current_bid">Unekoa: %1$s</string>
     <string name="market_bids_empty">Eskaintzarik ez</string>
     <string name="market_bids_ended">Enkantea amaitu da</string>
     <string name="market_bids_ends_in">Amaitzen da %1$s</string>
@@ -453,9 +452,9 @@
     <string name="market_sale_ship_failed">Ezin izan da bidalitzat markatu</string>
     <string name="market_sale_ship_submitting">Markatzen…</string>
     <string name="market_sale_ship_success">Bidalitzat markatuta</string>
+    <string name="market_sale_title">Salmenta</string>
     <string name="market_audit_history">Historia</string>
     <string name="market_sale_review_of_buyer">Erosleari buruzko zure iritzia</string>
-    <string name="market_sale_title">Salmenta</string>
     <string name="market_sale_tracking_label">Jarraipen-zenbakia</string>
     <string name="market_sale_tracking_url_label">Jarraipen URLa (aukerakoa)</string>
     <string name="market_sales_empty_subtitle">Argitaratutako zerrenden eskaerak hemen agertzen dira.</string>

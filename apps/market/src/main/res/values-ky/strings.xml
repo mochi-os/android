@@ -424,7 +424,6 @@
     <string name="market_bid_dialog_no_bids_yet">Азырынча сунуш жок — баштапкы сунуш %1$s</string>
     <string name="market_bid_dialog_submitting">Сунуш коюлууда</string>
     <string name="market_bid_ends_in">%1$s ичинде аяктайт</string>
-    <string name="market_bids_current_bid">Учурдагы: %1$s</string>
     <string name="market_bids_ends_in">%1$s ичинде аяктайт</string>
     <string name="market_bids_your_bid">Сиздин сунушуңуз: %1$s</string>
     <string name="market_carousel_thumbnail">Эскиз %1$s</string>

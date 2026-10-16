@@ -424,7 +424,6 @@
     <string name="market_bid_dialog_no_bids_yet">Kò sí ìdíje kankan síbẹ̀ — ìdíje ìbẹ̀rẹ̀ %1$s</string>
     <string name="market_bid_dialog_submitting">Ń fi ìdíje sílẹ̀</string>
     <string name="market_bid_ends_in">Yóò parí ní %1$s</string>
-    <string name="market_bids_current_bid">Lọ́wọ́lọ́wọ́: %1$s</string>
     <string name="market_bids_ends_in">Yóò parí ní %1$s</string>
     <string name="market_bids_your_bid">Ìdíje rẹ: %1$s</string>
     <string name="market_carousel_thumbnail">Àwòrán kékeré %1$s</string>

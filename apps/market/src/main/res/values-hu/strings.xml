@@ -490,7 +490,6 @@
     <string name="market_bid_dialog_no_bids_yet">Még nincs ajánlat — kezdő ajánlat %1$s</string>
     <string name="market_bid_dialog_submitting">Ajánlat leadása</string>
     <string name="market_bid_ends_in">Vége: %1$s múlva</string>
-    <string name="market_bids_current_bid">Jelenlegi: %1$s</string>
     <string name="market_bids_ends_in">Vége: %1$s múlva</string>
     <string name="market_bids_your_bid">Az ön ajánlata: %1$s</string>
     <string name="market_carousel_main">%1$s / %2$s fénykép</string>

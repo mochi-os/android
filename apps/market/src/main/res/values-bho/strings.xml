@@ -494,7 +494,6 @@
     <string name="market_bid_dialog_no_bids_yet">अभिन ले कवनो बोली नइखे — शुरुआती बोली %1$s</string>
     <string name="market_bid_dialog_submitting">बोली लगावल जा रहल बा</string>
     <string name="market_bid_ends_in">%1$s में खतम होई</string>
-    <string name="market_bids_current_bid">अभिन: %1$s</string>
     <string name="market_bids_ends_in">%1$s में खतम होई</string>
     <string name="market_bids_your_bid">रउआ बोली: %1$s</string>
     <string name="market_carousel_thumbnail">थंबनेल %1$s</string>

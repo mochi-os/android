@@ -364,7 +364,6 @@
     <string name="market_bid_dialog_no_bids_yet">Encara no hi ha ofertes — oferta inicial %1$s</string>
     <string name="market_bid_dialog_submitting">S\'està fent l\'oferta</string>
     <string name="market_bid_ends_in">Acaba en %1$s</string>
-    <string name="market_bids_current_bid">Actual: %1$s</string>
     <string name="market_bids_ends_in">Acaba en %1$s</string>
     <string name="market_bids_your_bid">La vostra oferta: %1$s</string>
     <string name="market_carousel_main">Foto %1$s de %2$s</string>

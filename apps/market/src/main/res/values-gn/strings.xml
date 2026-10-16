@@ -421,7 +421,6 @@
     <string name="market_bid_dialog_no_bids_yet">Ndaipóri gueteri oferta — oferta ñepyrũ %1$s</string>
     <string name="market_bid_dialog_submitting">Oñemoĩhína oferta</string>
     <string name="market_bid_ends_in">Opa %1$s rire</string>
-    <string name="market_bids_current_bid">Ko\'ágã: %1$s</string>
     <string name="market_bids_ends_in">Opa %1$s rire</string>
     <string name="market_bids_your_bid">Ne oferta: %1$s</string>
     <string name="market_carousel_thumbnail">Ta\'angamirĩ %1$s</string>

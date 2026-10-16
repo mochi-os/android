@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Belum ada bidaan — bidaan permulaan %1$s</string>
     <string name="market_bid_dialog_submitting">Membuat bidaan</string>
     <string name="market_bid_ends_in">Berakhir dalam %1$s</string>
-    <string name="market_bids_current_bid">Semasa: %1$s</string>
     <string name="market_bids_ends_in">Berakhir dalam %1$s</string>
     <string name="market_bids_your_bid">Bidaan anda: %1$s</string>
     <string name="market_carousel_main">Foto %1$s daripada %2$s</string>

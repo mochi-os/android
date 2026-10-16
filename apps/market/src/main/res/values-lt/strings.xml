@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Dar nėra pasiūlymų — pradinis pasiūlymas %1$s</string>
     <string name="market_bid_dialog_submitting">Pateikiamas pasiūlymas</string>
     <string name="market_bid_ends_in">Baigiasi po %1$s</string>
-    <string name="market_bids_current_bid">Dabartinis: %1$s</string>
     <string name="market_bids_ends_in">Baigiasi po %1$s</string>
     <string name="market_bids_your_bid">Jūsų pasiūlymas: %1$s</string>
     <string name="market_carousel_main">Nuotrauka %1$s iš %2$s</string>

@@ -425,7 +425,6 @@
     <string name="market_bid_dialog_no_bids_yet">Aínda non hai poxas — poxa inicial %1$s</string>
     <string name="market_bid_dialog_submitting">Facendo a poxa</string>
     <string name="market_bid_ends_in">Remata en %1$s</string>
-    <string name="market_bids_current_bid">Actual: %1$s</string>
     <string name="market_bids_ends_in">Remata en %1$s</string>
     <string name="market_bids_your_bid">A túa poxa: %1$s</string>
     <string name="market_carousel_thumbnail">Miniatura %1$s</string>

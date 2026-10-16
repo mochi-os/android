@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">තවම ලංසු නැත — ආරම්භක ලංසුව %1$s</string>
     <string name="market_bid_dialog_submitting">ලංසු තබමින්</string>
     <string name="market_bid_ends_in">අවසන් වන්නේ %1$s කින්</string>
-    <string name="market_bids_current_bid">වර්තමාන: %1$s</string>
     <string name="market_bids_ends_in">අවසන් වන්නේ %1$s කින්</string>
     <string name="market_bids_your_bid">ඔබේ ලංසුව: %1$s</string>
     <string name="market_carousel_thumbnail">සිඟිති රූපය %1$s</string>

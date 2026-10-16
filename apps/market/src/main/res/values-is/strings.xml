@@ -425,7 +425,6 @@
     <string name="market_bid_dialog_no_bids_yet">Engin boð enn — byrjunarboð %1$s</string>
     <string name="market_bid_dialog_submitting">Legg inn boð</string>
     <string name="market_bid_ends_in">Lýkur eftir %1$s</string>
-    <string name="market_bids_current_bid">Núverandi: %1$s</string>
     <string name="market_bids_ends_in">Lýkur eftir %1$s</string>
     <string name="market_bids_your_bid">Þitt boð: %1$s</string>
     <string name="market_carousel_thumbnail">Smámynd %1$s</string>

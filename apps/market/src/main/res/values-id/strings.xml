@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Belum ada tawaran — tawaran awal %1$s</string>
     <string name="market_bid_dialog_submitting">Memasang tawaran</string>
     <string name="market_bid_ends_in">Berakhir dalam %1$s</string>
-    <string name="market_bids_current_bid">Saat ini: %1$s</string>
     <string name="market_bids_ends_in">Berakhir dalam %1$s</string>
     <string name="market_bids_your_bid">Tawaran Anda: %1$s</string>
     <string name="market_carousel_main">Foto %1$s dari %2$s</string>

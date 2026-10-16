@@ -5,24 +5,17 @@
 
 package org.mochios.market.ui.buying
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -33,9 +26,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -46,13 +37,18 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.market.R
-import org.mochios.market.ui.components.MarketLayout
-import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Order
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketListNote
+import org.mochios.market.ui.components.MarketListPadding
+import org.mochios.market.ui.components.MarketListPrice
+import org.mochios.market.ui.components.MarketListRow
+import org.mochios.market.ui.components.MarketListSpacing
+import org.mochios.market.ui.components.MarketStatusBadge
 
 @Composable
 fun MyPurchasesScreen(
@@ -113,6 +109,8 @@ private fun PurchasesList(
         isLoading = state.isLoadingMore,
         hasMore = state.orders.size < state.total,
         onLoadMore = onLoadMore,
+        contentPadding = MarketListPadding,
+        verticalArrangement = MarketListSpacing,
     ) { row ->
         when (row) {
             is PurchasesRow.WonBid -> WonBidRow(row.bid, onCompletePurchase)
@@ -130,92 +128,62 @@ private sealed interface PurchasesRow {
 private fun WonBidRow(bid: Bid, onCompletePurchase: (String) -> Unit) {
     val listingId = bid.listing ?: return
     val currency = bid.currency ?: Currency.GBP
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.tertiaryContainer)
-            .clickable { onCompletePurchase(listingId) }
-            .padding(12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Icon(
-            Icons.Default.Gavel,
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onTertiaryContainer,
-        )
-        Spacer(Modifier.padding(end = 8.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = bid.title
-                    ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: ""),
-                style = MaterialTheme.typography.titleSmall,
-                color = MaterialTheme.colorScheme.onTertiaryContainer,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            Text(
-                stringResource(R.string.market_purchases_won_for, formatPrice(bid.amount, currency)),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onTertiaryContainer,
-            )
-        }
-        MochiButton(onClick = { onCompletePurchase(listingId) }) {
-            Icon(
-                Icons.Default.ShoppingCart,
-                contentDescription = null,
-                modifier = Modifier.size(ButtonDefaults.IconSize),
-            )
-            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-            Text(stringResource(R.string.market_purchases_complete_purchase))
-        }
-    }
+    MarketListRow(
+        title = bid.title
+            ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: ""),
+        onClick = { onCompletePurchase(listingId) },
+        subtitle = stringResource(
+            R.string.market_purchases_won_for,
+            formatPrice(bid.amount, currency),
+        ),
+        containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+        contentColor = MaterialTheme.colorScheme.onTertiaryContainer,
+        badges = {
+            MochiButton(
+                onClick = { onCompletePurchase(listingId) },
+                shape = RoundedCornerShape(8.dp),
+                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                modifier = Modifier.height(32.dp),
+            ) {
+                Icon(
+                    Icons.Default.ShoppingCart,
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp),
+                )
+                Spacer(Modifier.width(6.dp))
+                Text(stringResource(R.string.market_purchases_complete_purchase))
+            }
+        },
+    )
 }
 
 @Composable
 private fun OrderRowCard(order: Order, onClick: (String) -> Unit) {
     val format = LocalFormat.current
     val currency = order.currency ?: Currency.GBP
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .clickable { onClick(order.id) }
-            .padding(12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                order.title ?: stringResource(R.string.market_purchases_order_label, order.id),
-                style = MaterialTheme.typography.titleSmall,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            val sellerLabel = order.sellerName?.takeIf { it.isNotBlank() }
-                ?: order.sellerFingerprint.orEmpty()
-            Text(
-                "$sellerLabel · ${format.formatTimestamp(order.created)}",
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-        }
-        Column(horizontalAlignment = Alignment.End) {
-            Text(formatPrice(order.total, currency))
+    val seller = order.sellerName?.takeIf { name -> name.isNotBlank() }
+        ?: order.sellerFingerprint.orEmpty()
+    val subtitle = listOf(seller, format.formatTimestamp(order.created))
+        .filter { part -> part.isNotBlank() }
+        .joinToString(" · ")
+    MarketListRow(
+        title = order.title ?: stringResource(R.string.market_purchases_order_label, order.id),
+        onClick = { onClick(order.id) },
+        subtitle = subtitle,
+        badges = order.status?.let { status ->
+            { MarketStatusBadge(status = status.name.lowercase()) }
+        },
+        trailing = {
+            MarketListPrice(text = formatPrice(order.total, currency))
             if (order.refunded > 0 && order.refunded < order.total) {
-                Text(
-                    stringResource(R.string.market_purchases_refunded_partial, formatPrice(order.refunded, currency)),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                MarketListNote(
+                    text = stringResource(
+                        R.string.market_purchases_refunded_partial,
+                        formatPrice(order.refunded, currency),
+                    ),
                 )
             }
-            Spacer(Modifier.height(4.dp))
-            MarketStatusBadge(status = order.status?.name?.lowercase() ?: "")
-        }
-    }
+        },
+    )
 }
 

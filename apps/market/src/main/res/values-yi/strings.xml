@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">נאָך קיין אָפֿערטן — אָנהייב אָפֿערט %1$s</string>
     <string name="market_bid_dialog_submitting">אַרײַנגעבן די אָפֿערט</string>
     <string name="market_bid_ends_in">ענדיקט זיך אין %1$s</string>
-    <string name="market_bids_current_bid">איצטיק: %1$s</string>
     <string name="market_bids_ends_in">ענדיקט זיך אין %1$s</string>
     <string name="market_bids_your_bid">אײַער אָפֿערט: %1$s</string>
     <string name="market_carousel_thumbnail">מיניאַטור %1$s</string>

@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">अभी तक कोई बोली नहीं — प्रारंभिक बोली %1$s</string>
     <string name="market_bid_dialog_submitting">बोली लगाई जा रही है</string>
     <string name="market_bid_ends_in">%1$s में समाप्त</string>
-    <string name="market_bids_current_bid">वर्तमान: %1$s</string>
     <string name="market_bids_ends_in">%1$s में समाप्त</string>
     <string name="market_bids_your_bid">आपकी बोली: %1$s</string>
     <string name="market_carousel_main">%2$s में से फ़ोटो %1$s</string>

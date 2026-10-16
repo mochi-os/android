@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">اڃا تائين ڪا بِڊ ناهي — شروعاتي بِڊ %1$s</string>
     <string name="market_bid_dialog_submitting">بِڊ لڳائي پئي وڃي</string>
     <string name="market_bid_ends_in">%1$s ۾ ختم ٿيندي</string>
-    <string name="market_bids_current_bid">موجوده: %1$s</string>
     <string name="market_bids_ends_in">%1$s ۾ ختم ٿيندي</string>
     <string name="market_bids_your_bid">توهان جي بِڊ: %1$s</string>
     <string name="market_carousel_thumbnail">ٿمب نيل %1$s</string>

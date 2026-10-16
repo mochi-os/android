@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">មិនទាន់មានការដេញថ្លៃនៅឡើយ — ការដេញថ្លៃចាប់ផ្តើម %1$s</string>
     <string name="market_bid_dialog_submitting">កំពុងដាក់ការដេញថ្លៃ</string>
     <string name="market_bid_ends_in">បញ្ចប់ក្នុង %1$s</string>
-    <string name="market_bids_current_bid">បច្ចុប្បន្ន៖ %1$s</string>
     <string name="market_bids_ends_in">បញ្ចប់ក្នុង %1$s</string>
     <string name="market_bids_your_bid">ការដេញថ្លៃរបស់អ្នក៖ %1$s</string>
     <string name="market_carousel_thumbnail">រូបភាពតូច %1$s</string>

@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">Manaraq pujakuna kanchu — qallariy puja %1$s</string>
     <string name="market_bid_dialog_submitting">Pujata churachkan</string>
     <string name="market_bid_ends_in">%1$s-pi tukunqa</string>
-    <string name="market_bids_current_bid">Kunan: %1$s</string>
     <string name="market_bids_ends_in">%1$s-pi tukunqa</string>
     <string name="market_bids_your_bid">Pujayki: %1$s</string>
     <string name="market_carousel_thumbnail">Huch\'uy imagen %1$s</string>

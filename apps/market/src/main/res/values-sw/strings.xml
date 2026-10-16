@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Hakuna zabuni bado — zabuni ya kuanzia %1$s</string>
     <string name="market_bid_dialog_submitting">Inaweka zabuni</string>
     <string name="market_bid_ends_in">Inaisha baada ya %1$s</string>
-    <string name="market_bids_current_bid">Sasa: %1$s</string>
     <string name="market_bids_ends_in">Inaisha baada ya %1$s</string>
     <string name="market_bids_your_bid">Zabuni yako: %1$s</string>
     <string name="market_carousel_main">Picha %1$s kati ya %2$s</string>

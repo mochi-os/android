@@ -424,7 +424,6 @@
     <string name="market_bid_dialog_no_bids_yet">Gun tairgse fhathast — tairgse-tòiseachaidh %1$s</string>
     <string name="market_bid_dialog_submitting">A\' cur a-steach tairgse</string>
     <string name="market_bid_ends_in">A\' crìochnachadh an ceann %1$s</string>
-    <string name="market_bids_current_bid">Làithreach: %1$s</string>
     <string name="market_bids_ends_in">A\' crìochnachadh an ceann %1$s</string>
     <string name="market_bids_your_bid">An tairgse agad: %1$s</string>
     <string name="market_carousel_thumbnail">Dealbhag %1$s</string>

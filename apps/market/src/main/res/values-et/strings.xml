@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Pakkumisi veel pole — alghind %1$s</string>
     <string name="market_bid_dialog_submitting">Pakkumise esitamine</string>
     <string name="market_bid_ends_in">Lõpeb %1$s pärast</string>
-    <string name="market_bids_current_bid">Praegune: %1$s</string>
     <string name="market_bids_ends_in">Lõpeb %1$s pärast</string>
     <string name="market_bids_your_bid">Teie pakkumine: %1$s</string>
     <string name="market_carousel_main">Foto %1$s/%2$s</string>

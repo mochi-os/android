@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">Hîn pêşniyar nîne — pêşniyara destpêkê %1$s</string>
     <string name="market_bid_dialog_submitting">Pêşniyar tê danîn</string>
     <string name="market_bid_ends_in">Bi dawî dibe di %1$s de</string>
-    <string name="market_bids_current_bid">Heyî: %1$s</string>
     <string name="market_bids_ends_in">Bi dawî dibe di %1$s de</string>
     <string name="market_bids_your_bid">Pêşniyara te: %1$s</string>
     <string name="market_carousel_thumbnail">Wêneya biçûk %1$s</string>

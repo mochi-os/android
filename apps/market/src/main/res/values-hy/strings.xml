@@ -425,7 +425,6 @@
     <string name="market_bid_dialog_no_bids_yet">Դեռ հայտեր չկան — սկզբնական հայտը՝ %1$s</string>
     <string name="market_bid_dialog_submitting">Հայտը ներկայացվում է</string>
     <string name="market_bid_ends_in">Ավարտվում է %1$s-ից</string>
-    <string name="market_bids_current_bid">Ընթացիկ՝ %1$s</string>
     <string name="market_bids_ends_in">Ավարտվում է %1$s-ից</string>
     <string name="market_bids_your_bid">Ձեր հայտը՝ %1$s</string>
     <string name="market_carousel_thumbnail">Մանրապատկեր %1$s</string>

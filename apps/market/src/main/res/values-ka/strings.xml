@@ -424,7 +424,6 @@
     <string name="market_bid_dialog_no_bids_yet">ფსონები ჯერ არ არის — საწყისი ფსონი %1$s</string>
     <string name="market_bid_dialog_submitting">ფსონის განთავსება</string>
     <string name="market_bid_ends_in">სრულდება: %1$s</string>
-    <string name="market_bids_current_bid">მიმდინარე: %1$s</string>
     <string name="market_bids_ends_in">სრულდება: %1$s</string>
     <string name="market_bids_your_bid">თქვენი ფსონი: %1$s</string>
     <string name="market_carousel_thumbnail">მინიატურა %1$s</string>

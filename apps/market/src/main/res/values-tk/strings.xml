@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">Heniz teklip ýok — başlangyç teklip %1$s</string>
     <string name="market_bid_dialog_submitting">Teklip goýulýar</string>
     <string name="market_bid_ends_in">Tamamlanmagyna %1$s</string>
-    <string name="market_bids_current_bid">Şu wagt: %1$s</string>
     <string name="market_bids_ends_in">Tamamlanmagyna %1$s</string>
     <string name="market_bids_your_bid">Siziň tekibiňiz: %1$s</string>
     <string name="market_carousel_thumbnail">Kiçi surat %1$s</string>

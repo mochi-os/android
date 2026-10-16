@@ -425,7 +425,6 @@
     <string name="market_bid_dialog_no_bids_yet">Gan tairiscintí go fóill — tairiscint tosaigh %1$s</string>
     <string name="market_bid_dialog_submitting">Tairiscint á cur isteach</string>
     <string name="market_bid_ends_in">Críochnaíonn i gceann %1$s</string>
-    <string name="market_bids_current_bid">Reatha: %1$s</string>
     <string name="market_bids_ends_in">Críochnaíonn i gceann %1$s</string>
     <string name="market_bids_your_bid">Do thairiscint: %1$s</string>
     <string name="market_carousel_thumbnail">Mionsamhail %1$s</string>

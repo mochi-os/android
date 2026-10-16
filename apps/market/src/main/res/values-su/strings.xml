@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">Teu acan aya tawaran — tawaran mimiti %1$s</string>
     <string name="market_bid_dialog_submitting">Nempatkeun tawaran</string>
     <string name="market_bid_ends_in">Réngsé dina %1$s</string>
-    <string name="market_bids_current_bid">Ayeuna: %1$s</string>
     <string name="market_bids_ends_in">Réngsé dina %1$s</string>
     <string name="market_bids_your_bid">Tawaran anjeun: %1$s</string>
     <string name="market_carousel_thumbnail">Gambar leutik %1$s</string>

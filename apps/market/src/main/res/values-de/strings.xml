@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Noch keine Gebote — Startgebot %1$s</string>
     <string name="market_bid_dialog_submitting">Gebot wird abgegeben</string>
     <string name="market_bid_ends_in">Endet in %1$s</string>
-    <string name="market_bids_current_bid">Aktuell: %1$s</string>
     <string name="market_bids_ends_in">Endet in %1$s</string>
     <string name="market_bids_your_bid">Ihr Gebot: %1$s</string>
     <string name="market_carousel_main">Foto %1$s von %2$s</string>

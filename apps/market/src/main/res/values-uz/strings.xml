@@ -424,7 +424,6 @@
     <string name="market_bid_dialog_no_bids_yet">Hozircha takliflar yo\'q — boshlang\'ich taklif %1$s</string>
     <string name="market_bid_dialog_submitting">Taklif joylashtirilmoqda</string>
     <string name="market_bid_ends_in">%1$s dan keyin tugaydi</string>
-    <string name="market_bids_current_bid">Joriy: %1$s</string>
     <string name="market_bids_ends_in">%1$s dan keyin tugaydi</string>
     <string name="market_bids_your_bid">Sizning taklifingiz: %1$s</string>
     <string name="market_carousel_thumbnail">Eskiz %1$s</string>

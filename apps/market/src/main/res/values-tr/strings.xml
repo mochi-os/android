@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Henüz teklif yok — başlangıç teklifi %1$s</string>
     <string name="market_bid_dialog_submitting">Teklif veriliyor</string>
     <string name="market_bid_ends_in">Bitişe %1$s</string>
-    <string name="market_bids_current_bid">Mevcut: %1$s</string>
     <string name="market_bids_ends_in">Bitişe %1$s</string>
     <string name="market_bids_your_bid">Teklifiniz: %1$s</string>
     <string name="market_carousel_main">Fotoğraf %1$s / %2$s</string>

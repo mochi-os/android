@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Nessuna offerta — offerta iniziale %1$s</string>
     <string name="market_bid_dialog_submitting">Invio offerta</string>
     <string name="market_bid_ends_in">Termina tra %1$s</string>
-    <string name="market_bids_current_bid">Attuale: %1$s</string>
     <string name="market_bids_ends_in">Termina tra %1$s</string>
     <string name="market_bids_your_bid">La tua offerta: %1$s</string>
     <string name="market_carousel_main">Foto %1$s di %2$s</string>

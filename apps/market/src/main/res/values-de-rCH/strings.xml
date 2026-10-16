@@ -490,7 +490,6 @@
     <string name="market_bid_dialog_submitting">Gebot wird abgegeben</string>
     <string name="market_bid_dialog_title">Gebot abgeben</string>
     <string name="market_bid_ends_in">Endet in %1$s</string>
-    <string name="market_bids_current_bid">Aktuell: %1$s</string>
     <string name="market_bids_empty">Keine Gebote</string>
     <string name="market_bids_ends_in">Endet in %1$s</string>
     <string name="market_bids_tab_lost">Verloren</string>

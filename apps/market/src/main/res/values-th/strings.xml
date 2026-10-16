@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">ยังไม่มีการประมูล — ราคาเริ่มต้น %1$s</string>
     <string name="market_bid_dialog_submitting">กำลังวางการประมูล</string>
     <string name="market_bid_ends_in">สิ้นสุดใน %1$s</string>
-    <string name="market_bids_current_bid">ปัจจุบัน: %1$s</string>
     <string name="market_bids_ends_in">สิ้นสุดใน %1$s</string>
     <string name="market_bids_your_bid">การประมูลของคุณ: %1$s</string>
     <string name="market_carousel_main">รูปภาพ %1$s จาก %2$s</string>

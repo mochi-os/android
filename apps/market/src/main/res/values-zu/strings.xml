@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">Awekho amanani okwamanje — inani lokuqala %1$s</string>
     <string name="market_bid_dialog_submitting">Kufakwa inani</string>
     <string name="market_bid_ends_in">Iphela ngo-%1$s</string>
-    <string name="market_bids_current_bid">Okwamanje: %1$s</string>
     <string name="market_bids_ends_in">Iphela ngo-%1$s</string>
     <string name="market_bids_your_bid">Inani lakho: %1$s</string>
     <string name="market_carousel_thumbnail">Isithombe esincane %1$s</string>

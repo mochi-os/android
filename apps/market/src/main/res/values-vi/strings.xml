@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Chưa có lượt đặt giá nào — giá khởi điểm %1$s</string>
     <string name="market_bid_dialog_submitting">Đang đặt giá</string>
     <string name="market_bid_ends_in">Kết thúc sau %1$s</string>
-    <string name="market_bids_current_bid">Hiện tại: %1$s</string>
     <string name="market_bids_ends_in">Kết thúc sau %1$s</string>
     <string name="market_bids_your_bid">Mức đặt giá của bạn: %1$s</string>
     <string name="market_carousel_main">Ảnh %1$s trên %2$s</string>

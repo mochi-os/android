@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">ຍັງບໍ່ມີການປະມູນ — ລາຄາເລີ່ມຕົ້ນ %1$s</string>
     <string name="market_bid_dialog_submitting">ກຳລັງປະມູນ</string>
     <string name="market_bid_ends_in">ສິ້ນສຸດໃນ %1$s</string>
-    <string name="market_bids_current_bid">ປັດຈຸບັນ: %1$s</string>
     <string name="market_bids_ends_in">ສິ້ນສຸດໃນ %1$s</string>
     <string name="market_bids_your_bid">ການປະມູນຂອງທ່ານ: %1$s</string>
     <string name="market_carousel_thumbnail">ຮູບຫຍໍ້ %1$s</string>

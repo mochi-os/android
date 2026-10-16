@@ -421,7 +421,6 @@
     <string name="market_bid_dialog_no_bids_yet">હજુ સુધી કોઈ બોલી નથી — શરૂઆતની બોલી %1$s</string>
     <string name="market_bid_dialog_submitting">બોલી મૂકાઈ રહી છે</string>
     <string name="market_bid_ends_in">%1$s માં સમાપ્ત થાય છે</string>
-    <string name="market_bids_current_bid">વર્તમાન: %1$s</string>
     <string name="market_bids_ends_in">%1$s માં સમાપ્ત થાય છે</string>
     <string name="market_bids_your_bid">તમારી બોલી: %1$s</string>
     <string name="market_carousel_thumbnail">થંબનેઇલ %1$s</string>

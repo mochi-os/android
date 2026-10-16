@@ -417,7 +417,6 @@
     <string name="market_bid_dialog_no_bids_yet">هێشتا هیچ نرخێک نییە — نرخی دەستپێک %1$s</string>
     <string name="market_bid_dialog_submitting">دانانی نرخ</string>
     <string name="market_bid_ends_in">کۆتایی دێت لە %1$s</string>
-    <string name="market_bids_current_bid">ئێستا: %1$s</string>
     <string name="market_bids_ends_in">کۆتایی دێت لە %1$s</string>
     <string name="market_bids_your_bid">نرخی تۆ: %1$s</string>
     <string name="market_carousel_thumbnail">وێنۆچکە %1$s</string>

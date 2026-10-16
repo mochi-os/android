@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">まだ入札がありません — 開始価格 %1$s</string>
     <string name="market_bid_dialog_submitting">入札中</string>
     <string name="market_bid_ends_in">終了まで %1$s</string>
-    <string name="market_bids_current_bid">現在: %1$s</string>
     <string name="market_bids_ends_in">終了まで %1$s</string>
     <string name="market_bids_your_bid">あなたの入札: %1$s</string>
     <string name="market_carousel_main">写真 %1$s / %2$s</string>

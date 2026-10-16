@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Καμία προσφορά ακόμη — αρχική προσφορά %1$s</string>
     <string name="market_bid_dialog_submitting">Υποβολή προσφοράς</string>
     <string name="market_bid_ends_in">Λήγει σε %1$s</string>
-    <string name="market_bids_current_bid">Τρέχουσα: %1$s</string>
     <string name="market_bids_ends_in">Λήγει σε %1$s</string>
     <string name="market_bids_your_bid">Η προσφορά σας: %1$s</string>
     <string name="market_carousel_main">Φωτογραφία %1$s από %2$s</string>

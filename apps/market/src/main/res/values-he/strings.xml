@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">אין הצעות עדיין — הצעת פתיחה %1$s</string>
     <string name="market_bid_dialog_submitting">מגיש הצעה</string>
     <string name="market_bid_ends_in">מסתיים בעוד %1$s</string>
-    <string name="market_bids_current_bid">נוכחי: %1$s</string>
     <string name="market_bids_ends_in">מסתיים בעוד %1$s</string>
     <string name="market_bids_your_bid">ההצעה שלך: %1$s</string>
     <string name="market_carousel_main">תמונה %1$s מתוך %2$s</string>

@@ -422,7 +422,6 @@
     <string name="market_bid_dialog_no_bids_yet">تر اوسه هیڅ وړاندیز نشته — د پیل وړاندیز %1$s</string>
     <string name="market_bid_dialog_submitting">د وړاندیز سپارل</string>
     <string name="market_bid_ends_in">په %1$s کې پای ته رسیږي</string>
-    <string name="market_bids_current_bid">اوسنی: %1$s</string>
     <string name="market_bids_ends_in">په %1$s کې پای ته رسیږي</string>
     <string name="market_bids_your_bid">ستاسو وړاندیز: %1$s</string>
     <string name="market_carousel_thumbnail">کوچنی انځور %1$s</string>

@@ -364,7 +364,6 @@
     <string name="market_bid_dialog_no_bids_yet">لا توجد مزايدات بعد — المزايدة الافتتاحية %1$s</string>
     <string name="market_bid_dialog_submitting">جارٍ تقديم المزايدة</string>
     <string name="market_bid_ends_in">تنتهي خلال %1$s</string>
-    <string name="market_bids_current_bid">الحالية: %1$s</string>
     <string name="market_bids_ends_in">تنتهي خلال %1$s</string>
     <string name="market_bids_your_bid">مزايدتك: %1$s</string>
     <string name="market_carousel_main">الصورة %1$s من %2$s</string>

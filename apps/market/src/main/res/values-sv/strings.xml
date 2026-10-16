@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">Inga bud ännu — utgångsbud %1$s</string>
     <string name="market_bid_dialog_submitting">Lägger bud</string>
     <string name="market_bid_ends_in">Slutar om %1$s</string>
-    <string name="market_bids_current_bid">Nuvarande: %1$s</string>
     <string name="market_bids_ends_in">Slutar om %1$s</string>
     <string name="market_bids_your_bid">Ditt bud: %1$s</string>
     <string name="market_carousel_main">Foto %1$s av %2$s</string>

@@ -424,7 +424,6 @@
     <string name="market_bid_dialog_no_bids_yet">L-ebda offerta s\'issa — offerta tal-bidu %1$s</string>
     <string name="market_bid_dialog_submitting">Qed titqiegħed l-offerta</string>
     <string name="market_bid_ends_in">Tintemm f\'%1$s</string>
-    <string name="market_bids_current_bid">Attwali: %1$s</string>
     <string name="market_bids_ends_in">Tintemm f\'%1$s</string>
     <string name="market_bids_your_bid">L-offerta tiegħek: %1$s</string>
     <string name="market_carousel_thumbnail">Minjatura %1$s</string>

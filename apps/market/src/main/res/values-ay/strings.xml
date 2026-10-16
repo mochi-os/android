@@ -429,7 +429,6 @@
     <string name="market_bid_dialog_invalid_amount">Jichha pujat sipan jila qullqi qillqam</string>
     <string name="market_bid_dialog_no_bids_yet">Janïr pujanakax utjkiti — qalltir puja %1$s</string>
     <string name="market_bid_dialog_submitting">Puja uchaskiwa</string>
-    <string name="market_bids_current_bid">Jichha: %1$s</string>
     <string name="market_bids_ends_in">Tukuyaniwa %1$s ukana</string>
     <string name="market_bids_your_bid">Pujama: %1$s</string>
     <string name="market_carousel_thumbnail">Jisk\'a jamuqa %1$s</string>

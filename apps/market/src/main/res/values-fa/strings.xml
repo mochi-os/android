@@ -372,7 +372,6 @@
     <string name="market_bid_dialog_no_bids_yet">هنوز پیشنهادی ثبت نشده — پیشنهاد آغازین %1$s</string>
     <string name="market_bid_dialog_submitting">در حال ثبت پیشنهاد</string>
     <string name="market_bid_ends_in">پایان در %1$s</string>
-    <string name="market_bids_current_bid">فعلی: %1$s</string>
     <string name="market_bids_ends_in">پایان در %1$s</string>
     <string name="market_bids_your_bid">پیشنهاد شما: %1$s</string>
     <string name="market_carousel_main">عکس %1$s از %2$s</string>
