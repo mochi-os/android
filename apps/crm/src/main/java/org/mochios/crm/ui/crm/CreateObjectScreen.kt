@@ -25,6 +25,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.CircularProgressIndicator
@@ -56,6 +57,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.LoadingState
@@ -101,13 +103,24 @@ fun CreateObjectScreen(
         }
     }
 
-    // The opening class is the first the view asks for that can be created,
-    // else the first creatable class.
-    val initialClassId = remember(creatable, uiState.activeView) {
+    // The object a copy is made from, once the objects are in: its class,
+    // parent and values open the form, as the web's Copy opens its dialog.
+    val source = remember(objects) {
+        viewModel.copyOf?.let { id -> objects.firstOrNull { obj -> obj.id == id } }
+    }
+    val preset = remember(source) {
+        source?.let { obj -> obj.values.keys.associateWith { field -> obj.stringValue(field) } }
+            ?: viewModel.presetValues
+    }
+
+    // The opening class is a copy's own, else the first the view asks for that
+    // can be created, else the first creatable class.
+    val initialClassId = remember(source, creatable, uiState.activeView) {
         // Only classes the CRM still defines: a view may name a deleted class.
+        val copied = source?.objectClass?.let { id -> creatable.find { cls -> cls.id == id } }
         val preferred = uiState.activeView?.classes.orEmpty()
             .mapNotNull { id -> creatable.find { cls -> cls.id == id } }
-        (preferred + creatable).firstOrNull()?.id.orEmpty()
+        (listOfNotNull(copied) + preferred + creatable).firstOrNull()?.id.orEmpty()
     }
 
     // Held rather than derived, because the type picker below writes to it. The
@@ -149,6 +162,10 @@ fun CreateObjectScreen(
     // parent the new class cannot take — falls back to the first candidate,
     // the one the picker lists at the top.
     val required = parentRequired(hierarchy, selectedClassId)
+    // A copy opens under its original's parent, while its class can take it.
+    LaunchedEffect(source) {
+        if (selectedParentId == null) selectedParentId = source?.parent?.takeIf { id -> id.isNotBlank() }
+    }
     LaunchedEffect(selectedClassId, parentCandidates) {
         selectedParentId = parentChoice(selectedParentId, parentCandidates, required)
     }
@@ -163,6 +180,16 @@ fun CreateObjectScreen(
 
     // Files picked to attach on create.
     val pendingFiles = remember { mutableStateListOf<Uri>() }
+    // The attachments a copy carries over, which Create copies; any may be
+    // taken off first.
+    val copies = remember { mutableStateListOf<Attachment>() }
+    var copiesSeeded by remember { mutableStateOf(false) }
+    LaunchedEffect(uiState.copied) {
+        if (!copiesSeeded && uiState.copied.isNotEmpty()) {
+            copies.addAll(uiState.copied)
+            copiesSeeded = true
+        }
+    }
     val defaultName = stringResource(R.string.crm_attachment_default_name)
     val filePicker = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetMultipleContents()
@@ -174,11 +201,12 @@ fun CreateObjectScreen(
     // auto-select the first option of required enumerated fields. The grouping
     // field is deliberately not pre-filled - a board column's "+" sets it via
     // presetValues.
-    LaunchedEffect(selectedClassId) {
+    LaunchedEffect(selectedClassId, preset) {
         fieldValues.clear()
-        // Presets first (a board column's "+" sets its stage); the
-        // required-field defaults below fill only what they left blank.
-        viewModel.presetValues.forEach { (fieldId, value) ->
+        // Presets first (a board column's "+" sets its stage, a copy every
+        // value); the required-field defaults below fill only what they left
+        // blank.
+        preset.forEach { (fieldId, value) ->
             if (viewModel.usableValue(selectedClassId, fieldId, value)) {
                 fieldValues[fieldId] = value
             }
@@ -262,6 +290,7 @@ fun CreateObjectScreen(
                                     parent = selectedParentId,
                                     initialValues = initialValues,
                                     uris = pendingFiles.toList(),
+                                    copies = copies.map { attachment -> attachment.id },
                                 )
                             },
                             enabled = canCreate,
@@ -471,6 +500,38 @@ fun CreateObjectScreen(
                                 )
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Text(stringResource(R.string.crm_attachment_add))
+                            }
+                        }
+                        copies.forEachIndexed { index, attachment ->
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            ) {
+                                Icon(
+                                    Icons.Default.AttachFile,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(18.dp),
+                                )
+                                Text(
+                                    text = attachment.name,
+                                    style = MaterialTheme.typography.bodySmall,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    modifier = Modifier.weight(1f),
+                                )
+                                MochiIconButton(
+                                    onClick = { copies.removeAt(index) },
+                                    enabled = !uiState.isCreating,
+                                ) {
+                                    Icon(
+                                        Icons.Default.Close,
+                                        contentDescription = stringResource(
+                                            R.string.crm_attachment_remove
+                                        ),
+                                        tint = MaterialTheme.colorScheme.error,
+                                    )
+                                }
                             }
                         }
                         pendingFiles.forEachIndexed { index, uri ->

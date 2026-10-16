@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.model.Attachment
 import org.mochios.android.model.User
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.model.Person
@@ -35,6 +36,8 @@ data class CreateObjectUiState(
     val isCreating: Boolean = false,
     val createError: MochiError? = null,
     val createdObjectId: String? = null,
+    /** The attachments of the object a copy is made from, which Create copies. */
+    val copied: List<Attachment> = emptyList(),
 )
 
 /** Drives the create-object screen. */
@@ -53,6 +56,14 @@ class CreateObjectViewModel @Inject constructor(
      * on. Null from the FAB.
      */
     val presetParent: String? = savedStateHandle.get<String>("parent")
+        ?.takeIf { id -> id.isNotBlank() }
+
+    /**
+     * The object a new one copies, as the web's Copy opens its form: its
+     * class, parent and values fill the form, and Create copies its
+     * attachments. Null for a plain new object.
+     */
+    val copyOf: String? = savedStateHandle.get<String>("copy")
         ?.takeIf { id -> id.isNotBlank() }
 
     /**
@@ -81,6 +92,7 @@ class CreateObjectViewModel @Inject constructor(
                 val objects = repository.getObjects(projectId)
                 val people = runCatching { repository.getPeople(projectId) }
                     .getOrDefault(emptyList())
+                val copied = copyOf?.let { id -> repository.getAttachments(projectId, id) }.orEmpty()
                 val remembered = activeViewStore.get(projectId)
                 val activeView = details.views.firstOrNull { view -> view.id == remembered }
                     ?: details.views.firstOrNull()
@@ -89,6 +101,7 @@ class CreateObjectViewModel @Inject constructor(
                     objects = objects,
                     people = people,
                     activeView = activeView,
+                    copied = copied,
                     isLoading = false,
                 )
             } catch (e: Exception) {
@@ -122,13 +135,18 @@ class CreateObjectViewModel @Inject constructor(
     /** The picked file's real name, for labelling a draft attachment. */
     suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
-    /** Creates an object and reports its id back through [CreateObjectUiState]. */
+    /**
+     * Creates an object and reports its id back through [CreateObjectUiState];
+     * [copies] are attachments of the object a copy is made from, copied onto
+     * the new one.
+     */
     fun createObject(
         classId: String,
         title: String,
         parent: String? = null,
         initialValues: Map<String, String> = emptyMap(),
         uris: List<Uri> = emptyList(),
+        copies: List<String> = emptyList(),
     ) {
         if (classId.isBlank() || _uiState.value.isCreating) return
         viewModelScope.launch {
@@ -150,6 +168,11 @@ class CreateObjectViewModel @Inject constructor(
                     runCatching { repository.createAttachment(projectId, objectId, file) }
                 }
                 repository.discardStaged(files)
+                // A copy's attachments are copied by the server, which holds
+                // the bytes; like an upload, a failure loses no object.
+                if (copies.isNotEmpty()) {
+                    runCatching { repository.copyAttachments(projectId, objectId, copies) }
+                }
                 // The list the form returns to may read the cache, which does
                 // not hold the new object.
                 repository.invalidateCache(projectId)

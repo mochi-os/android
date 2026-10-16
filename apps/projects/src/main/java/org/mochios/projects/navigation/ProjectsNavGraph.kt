@@ -61,7 +61,7 @@ object ProjectsApp {
     // Deliberately not `projects/project/{projectId}/object/create`, which the
     // PROJECT_OBJECT pattern above also matches, with objectId='create'.
     const val CREATE_OBJECT =
-        "projects/project/{projectId}/create-object?parent={parent}&field={field}&value={value}"
+        "projects/project/{projectId}/create-object?parent={parent}&field={field}&value={value}&copy={copy}"
 
     fun project(projectId: String) = "projects/project/$projectId"
     fun projectObject(projectId: String, objectId: String) = "projects/project/$projectId/object/$objectId"
@@ -98,19 +98,21 @@ object ProjectsApp {
 
     /**
      * Create-object route; only the first [presetValues] entry survives, the
-     * one a board column's "+" carries.
+     * one a board column's "+" carries. [copy] is the object a copy is made
+     * from, whose class, parent and values the form opens on.
      */
     fun createObject(
         projectId: String,
         parent: String? = null,
         presetValues: Map<String, String> = emptyMap(),
+        copy: String? = null,
     ): String {
         val preset = presetValues.entries.firstOrNull()
         val parentArg = Uri.encode(parent.orEmpty())
         val field = Uri.encode(preset?.key.orEmpty())
         val value = Uri.encode(preset?.value.orEmpty())
         return "projects/project/$projectId/create-object" +
-            "?parent=$parentArg&field=$field&value=$value"
+            "?parent=$parentArg&field=$field&value=$value&copy=${Uri.encode(copy.orEmpty())}"
     }
 }
 
@@ -156,6 +158,9 @@ fun NavGraphBuilder.projectsNavGraph(
                     ProjectsApp.createObject(projectId, parent, presetValues)
                 )
             },
+            onCopyObject = { id ->
+                navController.navigate(ProjectsApp.createObject(projectId, copy = id))
+            },
             onOpenNotifications = onOpenNotifications,
         )
     }
@@ -193,6 +198,9 @@ fun NavGraphBuilder.projectsNavGraph(
                 navController.navigate(
                     ProjectsApp.createObject(projectId, parent, presetValues)
                 )
+            },
+            onCopyObject = { id ->
+                navController.navigate(ProjectsApp.createObject(projectId, copy = id))
             },
             initialObjectId = backStackEntry.arguments?.getString("objectId"),
         )
@@ -239,6 +247,10 @@ fun NavGraphBuilder.projectsNavGraph(
                 defaultValue = ""
             },
             navArgument("value") {
+                type = NavType.StringType
+                defaultValue = ""
+            },
+            navArgument("copy") {
                 type = NavType.StringType
                 defaultValue = ""
             },

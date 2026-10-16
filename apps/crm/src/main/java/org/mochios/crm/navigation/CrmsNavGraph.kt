@@ -55,7 +55,7 @@ object CrmsApp {
     const val CRM_DESIGN_FIELD = "crm/crm/{crmId}/design/class/{classId}/field/{fieldId}"
     // Deliberately not `crm/crm/{crmId}/object/create`, which the CRM_OBJECT
     // pattern above also matches, with objectId='create'.
-    const val CREATE_OBJECT = "crm/crm/{crmId}/create-object?field={field}&value={value}"
+    const val CREATE_OBJECT = "crm/crm/{crmId}/create-object?field={field}&value={value}&copy={copy}"
 
     fun crm(crmId: String) = "crm/crm/$crmId"
     fun crmObject(crmId: String, objectId: String) = "crm/crm/$crmId/object/$objectId"
@@ -80,11 +80,11 @@ object CrmsApp {
      * Create-object route for [crmId], seeded with the one field value a board
      * column's "+" carries.
      */
-    fun createObject(crmId: String, presetValues: Map<String, String>): String {
+    fun createObject(crmId: String, presetValues: Map<String, String>, copy: String? = null): String {
         val preset = presetValues.entries.firstOrNull()
         val field = Uri.encode(preset?.key.orEmpty())
         val value = Uri.encode(preset?.value.orEmpty())
-        return "crm/crm/$crmId/create-object?field=$field&value=$value"
+        return "crm/crm/$crmId/create-object?field=$field&value=$value&copy=${Uri.encode(copy.orEmpty())}"
     }
 }
 
@@ -125,6 +125,9 @@ fun NavGraphBuilder.crmsNavGraph(
             onCreateObject = { presetValues ->
                 navController.navigate(CrmsApp.createObject(crmId, presetValues))
             },
+            onCopyObject = { id ->
+                navController.navigate(CrmsApp.createObject(crmId, emptyMap(), copy = id))
+            },
             onOpenNotifications = onOpenNotifications,
         )
     }
@@ -157,6 +160,9 @@ fun NavGraphBuilder.crmsNavGraph(
             },
             onCreateObject = { presetValues ->
                 navController.navigate(CrmsApp.createObject(crmId, presetValues))
+            },
+            onCopyObject = { id ->
+                navController.navigate(CrmsApp.createObject(crmId, emptyMap(), copy = id))
             },
             initialObjectId = backStackEntry.arguments?.getString("objectId"),
         )
@@ -197,6 +203,10 @@ fun NavGraphBuilder.crmsNavGraph(
                 defaultValue = ""
             },
             navArgument("value") {
+                type = NavType.StringType
+                defaultValue = ""
+            },
+            navArgument("copy") {
                 type = NavType.StringType
                 defaultValue = ""
             },

@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -70,6 +71,8 @@ fun ObjectDetailSheet(
     onViewDiff: (String, String, String, String) -> Unit,
     onNavigateToObject: (String) -> Unit = {},
     onAddChild: (parent: String) -> Unit = {},
+    /** Opens a copy of this object in the new-object form, which its Create makes. */
+    onCopy: () -> Unit = {},
     viewModel: ObjectDetailViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -175,6 +178,16 @@ fun ObjectDetailSheet(
                                     expanded = showOverflow,
                                     onDismissRequest = { showOverflow = false }
                                 ) {
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(MochiR.string.common_copy)) },
+                                        onClick = {
+                                            showOverflow = false
+                                            onCopy()
+                                        },
+                                        leadingIcon = {
+                                            Icon(Icons.Outlined.ContentCopy, contentDescription = null)
+                                        },
+                                    )
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(MochiR.string.common_delete)) },
                                         onClick = {

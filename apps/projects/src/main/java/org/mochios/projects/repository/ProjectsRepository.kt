@@ -312,6 +312,10 @@ class ProjectsRepository @Inject constructor(
         api.deleteAttachment(projectId, objectId, attachmentId).unwrap()
     }
 
+    /** Copies [attachments] of other objects in the project onto [objectId], as a copy's Create does. */
+    suspend fun copyAttachments(projectId: String, objectId: String, attachments: List<String>): List<Attachment> =
+        api.copyAttachments(projectId, objectId, attachments.joinToString(",")).unwrap().attachments
+
     // ---- Merge Requests ----
 
     suspend fun getRequests(projectId: String, objectId: String): List<MergeRequest> =

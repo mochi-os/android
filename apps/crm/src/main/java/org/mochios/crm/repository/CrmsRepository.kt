@@ -278,6 +278,10 @@ class CrmsRepository @Inject constructor(
         api.deleteAttachment(crmId, objectId, attachmentId).unwrap()
     }
 
+    /** Copies [attachments] of other objects in the CRM onto [objectId], as a copy's Create does. */
+    suspend fun copyAttachments(crmId: String, objectId: String, attachments: List<String>): List<Attachment> =
+        api.copyAttachments(crmId, objectId, attachments.joinToString(",")).unwrap().attachments
+
     // ---- Activity ----
 
     suspend fun getActivity(crmId: String, objectId: String): List<Activity> =

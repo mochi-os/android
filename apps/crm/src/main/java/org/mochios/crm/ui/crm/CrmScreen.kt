@@ -140,6 +140,7 @@ fun CrmScreen(
     onDesign: (String) -> Unit,
     onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onCreateObject: (presetValues: Map<String, String>) -> Unit = {},
+    onCopyObject: (String) -> Unit = {},
     onOpenNotifications: () -> Unit = {},
     initialObjectId: String? = null,
     listViewModel: CrmListViewModel = hiltViewModel(),
@@ -230,6 +231,7 @@ fun CrmScreen(
                     onDesign = onDesign,
                     onAddColumn = onAddColumn,
                     onCreateObject = onCreateObject,
+                    onCopyObject = onCopyObject,
                     onOpenNotifications = onOpenNotifications,
                     initialObjectId = initialObjectId,
                 )
@@ -453,6 +455,7 @@ private fun CrmContent(
     onDesign: (String) -> Unit,
     onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onCreateObject: (presetValues: Map<String, String>) -> Unit,
+    onCopyObject: (String) -> Unit,
     onOpenNotifications: () -> Unit,
     initialObjectId: String? = null,
     viewModel: CrmViewModel = hiltViewModel()
@@ -862,6 +865,14 @@ private fun CrmContent(
             // refreshes — so this must not pre-clear the selection it needs.
             onDeleteObject = { viewModel.deleteObject(uiState.selectedObjectId!!) },
             onNavigateToObject = { id -> viewModel.selectObject(id) },
+            // The sheet gives way to the new-object form, filled from this
+            // object; the return refreshes, as for any new object.
+            onCopy = {
+                val id = uiState.selectedObjectId!!
+                viewModel.selectObject(null)
+                owe()
+                onCopyObject(id)
+            },
         )
     }
 

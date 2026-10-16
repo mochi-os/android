@@ -416,6 +416,15 @@ interface ProjectsApi {
         @Part file: MultipartBody.Part
     ): Response<ApiResponse<AttachmentListResponse>>
 
+    /** Copies attachments of other objects in the project onto this one; [attachments] comma-separated. */
+    @FormUrlEncoded
+    @POST("{projectId}/-/objects/{objectId}/attachments/copy")
+    suspend fun copyAttachments(
+        @Path("projectId") projectId: String,
+        @Path("objectId") objectId: String,
+        @Field("attachments") attachments: String
+    ): Response<ApiResponse<AttachmentListResponse>>
+
     @POST("{projectId}/-/objects/{objectId}/attachments/{attachmentId}/delete")
     suspend fun deleteAttachment(
         @Path("projectId") projectId: String,

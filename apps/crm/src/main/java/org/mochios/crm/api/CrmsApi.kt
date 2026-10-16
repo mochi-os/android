@@ -356,6 +356,15 @@ interface CrmsApi {
         @Part file: MultipartBody.Part
     ): Response<ApiResponse<AttachmentListResponse>>
 
+    /** Copies attachments of other objects in the CRM onto this one; [attachments] comma-separated. */
+    @FormUrlEncoded
+    @POST("{crmId}/-/objects/{objectId}/attachments/copy")
+    suspend fun copyAttachments(
+        @Path("crmId") crmId: String,
+        @Path("objectId") objectId: String,
+        @Field("attachments") attachments: String
+    ): Response<ApiResponse<AttachmentListResponse>>
+
     @POST("{crmId}/-/objects/{objectId}/attachments/{attachmentId}/delete")
     suspend fun deleteAttachment(
         @Path("crmId") crmId: String,

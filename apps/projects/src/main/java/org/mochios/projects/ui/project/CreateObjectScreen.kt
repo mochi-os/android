@@ -25,6 +25,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.CircularProgressIndicator
@@ -55,6 +56,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.LoadingState
@@ -96,6 +98,17 @@ fun CreateObjectScreen(
     val activeView = uiState.activeView
     val presetParent = viewModel.presetParent
 
+    // The object a copy is made from, once the objects are in: its class,
+    // parent and values open the form, as the web's Copy opens its dialog.
+    val source = remember(objects) {
+        viewModel.copyOf?.let { id -> objects.firstOrNull { obj -> obj.id == id } }
+    }
+    val preset = remember(source) {
+        source?.let { obj -> obj.values.keys.associateWith { field -> obj.stringValue(field) } }
+            ?: viewModel.presetValues
+    }
+    val openingParent = presetParent ?: source?.parent?.takeIf { id -> id.isNotBlank() }
+
     // A class that needs a parent is only offered once one exists to put it
     // under; the server refuses it anywhere else.
     val creatable = remember(classes, hierarchy, objects) {
@@ -109,16 +122,17 @@ fun CreateObjectScreen(
         }
     }
 
-    val presetParentObj = remember(presetParent, objects) {
-        presetParent?.let { id -> objects.firstOrNull { obj -> obj.id == id } }
+    val presetParentObj = remember(openingParent, objects) {
+        openingParent?.let { id -> objects.firstOrNull { obj -> obj.id == id } }
     }
-    val initialClassId = remember(presetParentObj, activeView, creatable, hierarchy) {
-        initialClass(
-            creatable,
-            hierarchy,
-            presetParentObj?.objectClass,
-            activeView?.classes.orEmpty(),
-        )
+    val initialClassId = remember(source, presetParentObj, activeView, creatable, hierarchy) {
+        source?.objectClass?.takeIf { cls -> creatable.any { creatableClass -> creatableClass.id == cls } }
+            ?: initialClass(
+                creatable,
+                hierarchy,
+                presetParentObj?.objectClass,
+                activeView?.classes.orEmpty(),
+            )
     }
 
     // Held rather than derived, because the type picker below writes to it. The
@@ -151,7 +165,7 @@ fun CreateObjectScreen(
     // The parent that opened the form, once the objects it belongs to are in.
     // Changing class clears it, since the new class may not take it.
     LaunchedEffect(initialClassId) {
-        selectedParentId = presetParent.takeIf {
+        selectedParentId = openingParent.takeIf {
             presetParentObj != null &&
                 presetParentObj.objectClass in hierarchy[initialClassId].orEmpty()
         }
@@ -161,7 +175,7 @@ fun CreateObjectScreen(
     // the user picks a parent it has one picked for it.
     val required = parentRequired(hierarchy, selectedClassId)
     val parentId = selectedParentId ?: if (required) {
-        defaultParent(parentCandidates, viewModel.presetValues)?.id
+        defaultParent(parentCandidates, preset)?.id
     } else {
         null
     }
@@ -177,16 +191,26 @@ fun CreateObjectScreen(
     val titleFieldId = classes.firstOrNull { cls -> cls.id == selectedClassId }?.title.orEmpty()
     // The board's column field: an object blank there would land in
     // "Unassigned", so the form seeds the first column unless the caller
-    // named one (the tapped column header).
-    val column = activeView?.takeIf { view -> view.viewtype == "board" }?.columns.orEmpty()
-    LaunchedEffect(selectedClassId, classFields, classOptions) {
-        val next = formValues(classFields, classOptions, fieldValues.toMap(), viewModel.presetValues, column)
+    // named one (the tapped column header). A copy keeps the original's.
+    val column = activeView?.takeIf { view -> view.viewtype == "board" && source == null }?.columns.orEmpty()
+    LaunchedEffect(selectedClassId, classFields, classOptions, preset) {
+        val next = formValues(classFields, classOptions, fieldValues.toMap(), preset, column)
         fieldValues.clear()
         fieldValues.putAll(next)
     }
 
     // Files picked to attach, uploaded once the object exists.
     val pendingFiles = remember { mutableStateListOf<Uri>() }
+    // The attachments a copy carries over, which Create copies; any may be
+    // taken off first.
+    val copies = remember { mutableStateListOf<Attachment>() }
+    var copiesSeeded by remember { mutableStateOf(false) }
+    LaunchedEffect(uiState.copied) {
+        if (!copiesSeeded && uiState.copied.isNotEmpty()) {
+            copies.addAll(uiState.copied)
+            copiesSeeded = true
+        }
+    }
     val defaultName = stringResource(R.string.projects_attachment_default_name)
     val filePicker = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetMultipleContents()
@@ -247,6 +271,7 @@ fun CreateObjectScreen(
                                     parent = parentId,
                                     initialValues = initialValues,
                                     uris = pendingFiles.toList(),
+                                    copies = copies.map { attachment -> attachment.id },
                                 )
                             },
                             enabled = canCreate,
@@ -460,6 +485,38 @@ fun CreateObjectScreen(
                                 )
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Text(stringResource(R.string.projects_attachment_add))
+                            }
+                        }
+                        copies.forEachIndexed { index, attachment ->
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            ) {
+                                Icon(
+                                    Icons.Default.AttachFile,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(18.dp),
+                                )
+                                Text(
+                                    text = attachment.name,
+                                    style = MaterialTheme.typography.bodySmall,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    modifier = Modifier.weight(1f),
+                                )
+                                MochiIconButton(
+                                    onClick = { copies.removeAt(index) },
+                                    enabled = !uiState.isCreating,
+                                ) {
+                                    Icon(
+                                        Icons.Default.Close,
+                                        contentDescription = stringResource(
+                                            R.string.projects_attachment_remove
+                                        ),
+                                        tint = MaterialTheme.colorScheme.error,
+                                    )
+                                }
                             }
                         }
                         pendingFiles.forEachIndexed { index, uri ->

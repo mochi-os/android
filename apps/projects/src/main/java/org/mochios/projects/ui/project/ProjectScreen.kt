@@ -142,6 +142,7 @@ fun ProjectScreen(
     onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
     onCreateObject: (parent: String?, presetValues: Map<String, String>) -> Unit = { _, _ -> },
+    onCopyObject: (String) -> Unit = {},
     onOpenNotifications: () -> Unit = {},
     initialObjectId: String? = null,
     listViewModel: ProjectListViewModel = hiltViewModel(),
@@ -233,6 +234,7 @@ fun ProjectScreen(
                     onAddColumn = onAddColumn,
                     onViewDiff = onViewDiff,
                     onCreateObject = onCreateObject,
+                    onCopyObject = onCopyObject,
                     onOpenNotifications = onOpenNotifications,
                     initialObjectId = initialObjectId,
                 )
@@ -459,6 +461,7 @@ private fun ProjectContent(
     onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onViewDiff: (String, String, String, String) -> Unit,
     onCreateObject: (parent: String?, presetValues: Map<String, String>) -> Unit,
+    onCopyObject: (String) -> Unit,
     onOpenNotifications: () -> Unit,
     initialObjectId: String? = null,
     viewModel: ProjectViewModel = hiltViewModel()
@@ -854,6 +857,14 @@ private fun ProjectContent(
                 // class to one that permits this parent.
                 viewModel.selectObject(null)
                 createObject(parentId, emptyMap())
+            },
+            // The sheet gives way to the new-object form, filled from this
+            // object; the return refreshes, as for any new object.
+            onCopy = {
+                val id = uiState.selectedObjectId!!
+                viewModel.selectObject(null)
+                refreshPending = true
+                onCopyObject(id)
             },
         )
     }
