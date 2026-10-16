@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Тыныгуу</string>
     <string name="market_subscriptions_action_reactivate">Кайра иштетүү</string>
     <string name="market_subscriptions_action_resume">Улантуу</string>
+    <string name="market_subscriptions_action_resubscribe">Кайра жазылуу</string>
     <string name="market_subscriptions_cancel_body">Бул жазылууңузду жокко чыгарат. Учурдагы эсептик мезгилдин аягында мүмкүнчүлүгүңүздү жоготосуз.</string>
     <string name="market_subscriptions_cancel_confirm">Жазылууну жокко чыгаруу</string>
     <string name="market_subscriptions_cancel_title">Жазылууну жокко чыгаруу</string>

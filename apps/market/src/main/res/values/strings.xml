@@ -681,6 +681,7 @@
     <string name="market_subscriptions_action_pause">Pause</string>
     <string name="market_subscriptions_action_reactivate">Reactivate</string>
     <string name="market_subscriptions_action_resume">Resume</string>
+    <string name="market_subscriptions_action_resubscribe">Resubscribe</string>
     <string name="market_subscriptions_actions_label">Subscription actions</string>
     <string name="market_subscriptions_cancel_body">This will cancel your subscription. You will lose access at the end of your current billing period.</string>
     <string name="market_subscriptions_cancel_confirm">Cancel subscription</string>

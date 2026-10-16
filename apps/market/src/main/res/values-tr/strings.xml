@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Duraklat</string>
     <string name="market_subscriptions_action_reactivate">Yeniden etkinleştir</string>
     <string name="market_subscriptions_action_resume">Sürdür</string>
+    <string name="market_subscriptions_action_resubscribe">Yeniden abone ol</string>
     <string name="market_subscriptions_cancel_body">Bu işlem aboneliğini iptal edecek. Mevcut faturalama döneminin sonunda erişimini kaybedeceksin.</string>
     <string name="market_subscriptions_cancel_confirm">Aboneliği iptal et</string>
     <string name="market_subscriptions_cancel_title">Aboneliği iptal et</string>

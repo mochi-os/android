@@ -547,6 +547,7 @@
     <string name="market_subscriptions_action_pause">Pouseer</string>
     <string name="market_subscriptions_action_reactivate">Heraktiveer</string>
     <string name="market_subscriptions_action_resume">Hervat</string>
+    <string name="market_subscriptions_action_resubscribe">Teken weer in</string>
     <string name="market_subscriptions_actions_label">Intekening-aksies</string>
     <string name="market_subscriptions_cancel_body">Dit sal jou intekening kanselleer. Jy sal aan die einde van jou huidige rekeningperiode toegang verloor.</string>
     <string name="market_subscriptions_cancel_confirm">Kanselleer inskrywing</string>

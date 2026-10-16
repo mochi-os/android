@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Ndalo</string>
     <string name="market_subscriptions_action_reactivate">Riaktivizo</string>
     <string name="market_subscriptions_action_resume">Vazhdo</string>
+    <string name="market_subscriptions_action_resubscribe">Abonohu përsëri</string>
     <string name="market_subscriptions_cancel_body">Kjo do të anulojë abonimin tënd. Do të humbasësh aksesin në fund të periudhës aktuale të faturimit.</string>
     <string name="market_subscriptions_cancel_confirm">Anulo abonimin</string>
     <string name="market_subscriptions_cancel_title">Anulo abonimin</string>

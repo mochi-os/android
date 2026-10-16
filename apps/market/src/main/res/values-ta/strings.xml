@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">இடைநிறுத்து</string>
     <string name="market_subscriptions_action_reactivate">மறுசெயல்படுத்தவும்</string>
     <string name="market_subscriptions_action_resume">தொடர்</string>
+    <string name="market_subscriptions_action_resubscribe">மீண்டும் சந்தா செலுத்து</string>
     <string name="market_subscriptions_cancel_body">இது உங்கள் சந்தாவை ரத்து செய்யும். உங்கள் தற்போதைய பில்லிங் காலத்தின் முடிவில் நீங்கள் அணுகலை இழப்பீர்கள்.</string>
     <string name="market_subscriptions_cancel_confirm">சந்தாவை ரத்துசெய்</string>
     <string name="market_subscriptions_cancel_title">சந்தாவை ரத்துசெய்</string>

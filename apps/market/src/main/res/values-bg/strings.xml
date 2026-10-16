@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Пауза</string>
     <string name="market_subscriptions_action_reactivate">Реактивирай</string>
     <string name="market_subscriptions_action_resume">Възобнови</string>
+    <string name="market_subscriptions_action_resubscribe">Абонирай се отново</string>
     <string name="market_subscriptions_cancel_body">Това ще отмени вашия абонамент. Ще загубите достъп в края на текущия период на таксуване.</string>
     <string name="market_subscriptions_cancel_confirm">Отказ от абонамента</string>
     <string name="market_subscriptions_cancel_title">Отказ от абонамента</string>

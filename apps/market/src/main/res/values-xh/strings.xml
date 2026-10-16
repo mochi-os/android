@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Misa okwethutyana</string>
     <string name="market_subscriptions_action_reactivate">Vuselela</string>
     <string name="market_subscriptions_action_resume">Qhubeka</string>
+    <string name="market_subscriptions_action_resubscribe">Bhalisa kwakhona</string>
     <string name="market_subscriptions_cancel_body">Oku kuya kurhoxisa ubhaliso lwakho. Uyakuphulukana nokufikelela ekupheleni kwexesha lakho lokuhlawula langoku.</string>
     <string name="market_subscriptions_cancel_confirm">Rhoxisa ukurhuma</string>
     <string name="market_subscriptions_cancel_title">Rhoxisa ukurhuma</string>

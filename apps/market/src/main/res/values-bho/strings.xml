@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">रोकीं</string>
     <string name="market_subscriptions_action_reactivate">फेर सक्रिय करीं</string>
     <string name="market_subscriptions_action_resume">जारी राखीं</string>
+    <string name="market_subscriptions_action_resubscribe">फेर से सदस्यता लीं</string>
     <string name="market_subscriptions_cancel_body">ई आपके सदस्यता रद्द कर दी। आप अपना वर्तमान बिलिंग अवधि के अंत में पहुँच खो दीं।</string>
     <string name="market_subscriptions_cancel_confirm">सदस्यता रद्द करीं</string>
     <string name="market_subscriptions_cancel_title">सदस्यता रद्द करीं</string>

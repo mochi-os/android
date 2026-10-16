@@ -420,6 +420,7 @@
     <string name="market_subscriptions_action_pause">Sayt\'ayaña</string>
     <string name="market_subscriptions_action_reactivate">Wasitat activaña</string>
     <string name="market_subscriptions_action_resume">Sarantayaña</string>
+    <string name="market_subscriptions_action_resubscribe">Wasitat suscribirxañani</string>
     <string name="market_subscriptions_cancel_body">Akax suscripcionamax jaytanuqaniwa. Jichha pagaña tukuyanx mantañax chhaqtaniwa.</string>
     <string name="market_subscriptions_cancel_confirm">Suscripción jaytaña</string>
     <string name="market_subscriptions_cancel_title">Suscripción jaytaña</string>

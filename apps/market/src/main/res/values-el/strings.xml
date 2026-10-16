@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Παύση</string>
     <string name="market_subscriptions_action_reactivate">Επανενεργοποίηση</string>
     <string name="market_subscriptions_action_resume">Συνέχιση</string>
+    <string name="market_subscriptions_action_resubscribe">Νέα συνδρομή</string>
     <string name="market_subscriptions_cancel_body">Αυτό θα ακυρώσει τη συνδρομή σας. Θα χάσετε την πρόσβαση στο τέλος της τρέχουσας περιόδου χρέωσης.</string>
     <string name="market_subscriptions_cancel_confirm">Ακύρωση συνδρομής</string>
     <string name="market_subscriptions_cancel_title">Ακύρωση συνδρομής</string>

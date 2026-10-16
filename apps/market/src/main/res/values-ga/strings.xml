@@ -401,6 +401,7 @@
     <string name="market_subscriptions_action_pause">Cuir ar sos</string>
     <string name="market_subscriptions_action_reactivate">Athghníomhachtaigh</string>
     <string name="market_subscriptions_action_resume">Lean ar aghaidh</string>
+    <string name="market_subscriptions_action_resubscribe">Liostáil arís</string>
     <string name="market_subscriptions_cancel_body">Cuirfidh sé seo do shíntiús ar ceal. Caillfidh tú rochtain ag deireadh do thréimhse billeála reatha.</string>
     <string name="market_subscriptions_cancel_confirm">Cealaigh síntiús</string>
     <string name="market_subscriptions_cancel_title">Cealaigh síntiús</string>

@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">השהה</string>
     <string name="market_subscriptions_action_reactivate">הפעל מחדש</string>
     <string name="market_subscriptions_action_resume">המשך</string>
+    <string name="market_subscriptions_action_resubscribe">הירשם מחדש</string>
     <string name="market_subscriptions_cancel_body">פעולה זו תבטל את המנוי שלך. תאבד גישה בסוף תקופת החיוב הנוכחית.</string>
     <string name="market_subscriptions_cancel_confirm">בטל מינוי</string>
     <string name="market_subscriptions_cancel_title">בטל מינוי</string>

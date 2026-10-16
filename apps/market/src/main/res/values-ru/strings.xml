@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Пауза</string>
     <string name="market_subscriptions_action_reactivate">Реактивировать</string>
     <string name="market_subscriptions_action_resume">Возобновить</string>
+    <string name="market_subscriptions_action_resubscribe">Подписаться снова</string>
     <string name="market_subscriptions_cancel_body">Это отменит вашу подписку. Вы потеряете доступ в конце текущего расчётного периода.</string>
     <string name="market_subscriptions_cancel_confirm">Отменить подписку</string>
     <string name="market_subscriptions_cancel_title">Отменить подписку</string>

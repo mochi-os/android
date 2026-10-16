@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Cuir \'na stad</string>
     <string name="market_subscriptions_action_reactivate">Ath-ghnìomhaich</string>
     <string name="market_subscriptions_action_resume">Lean ort</string>
+    <string name="market_subscriptions_action_resubscribe">Fo-sgrìobh a-rithist</string>
     <string name="market_subscriptions_cancel_body">Cuiridh seo às dhan fho-sgrìobhadh agad. Caillidh tu inntrigeadh aig deireadh na h-ùine cunntas-bhile làithreach agad.</string>
     <string name="market_subscriptions_cancel_confirm">Sguir den fho-sgrìobhadh</string>
     <string name="market_subscriptions_cancel_title">Sguir den fho-sgrìobhadh</string>

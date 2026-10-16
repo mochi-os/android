@@ -409,6 +409,7 @@
     <string name="market_subscriptions_action_pause">Dakata</string>
     <string name="market_subscriptions_action_reactivate">Sake kunnawa</string>
     <string name="market_subscriptions_action_resume">Ci gaba</string>
+    <string name="market_subscriptions_action_resubscribe">Sake yin rajista</string>
     <string name="market_subscriptions_cancel_body">Wannan zai soke biyan kuɗinka. Za ka rasa damar shiga a ƙarshen lokacin biyan ka na yanzu.</string>
     <string name="market_subscriptions_cancel_confirm">Soke biyan kuɗi</string>
     <string name="market_subscriptions_cancel_title">Soke biyan kuɗi</string>

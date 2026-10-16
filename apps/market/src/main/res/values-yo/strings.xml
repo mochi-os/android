@@ -405,6 +405,7 @@
     <string name="market_subscriptions_action_pause">Dáwọ́ dúró</string>
     <string name="market_subscriptions_action_reactivate">Tún mú ṣiṣẹ́</string>
     <string name="market_subscriptions_action_resume">Tẹ̀síwájú</string>
+    <string name="market_subscriptions_action_resubscribe">Tún ṣe àbápín</string>
     <string name="market_subscriptions_cancel_body">Èyí yóò pa ìforúkọsílẹ̀ rẹ. Iwọ yóò pàdánù wíwọlé ní ìpẹ̀kun àkókò ìsanwó rẹ lọ́wọ́lọ́wọ́.</string>
     <string name="market_subscriptions_cancel_confirm">Fagilé ìforúkọsílẹ̀</string>
     <string name="market_subscriptions_cancel_title">Fagilé ìforúkọsílẹ̀</string>

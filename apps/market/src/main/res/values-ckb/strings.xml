@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">وەستان</string>
     <string name="market_subscriptions_action_reactivate">چالاککردنەوە</string>
     <string name="market_subscriptions_action_resume">بەردەوامبوون</string>
+    <string name="market_subscriptions_action_resubscribe">دووبارە بەشداربوون</string>
     <string name="market_subscriptions_cancel_body">ئەمە بەشدارییەکەت هەڵدەوەشێنێتەوە. لە کۆتایی ماوەی پسوولەی ئێستات دەستڕاگەیشتنت لەدەست دەدەیت.</string>
     <string name="market_subscriptions_cancel_confirm">هەڵوەشاندنەوەی بەشداری</string>
     <string name="market_subscriptions_cancel_title">هەڵوەشاندنەوەی بەشداری</string>

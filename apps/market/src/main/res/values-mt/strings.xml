@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Pawża</string>
     <string name="market_subscriptions_action_reactivate">Erġa\' attiva</string>
     <string name="market_subscriptions_action_resume">Kompli</string>
+    <string name="market_subscriptions_action_resubscribe">Erġa\' abbona</string>
     <string name="market_subscriptions_cancel_body">Dan se jikkanċella l-abbonament tiegħek. Se titlef l-aċċess fl-aħħar tal-perjodu attwali tal-fatturazzjoni.</string>
     <string name="market_subscriptions_cancel_confirm">Ikkanċella s-sottoskrizzjoni</string>
     <string name="market_subscriptions_cancel_title">Ikkanċella s-sottoskrizzjoni</string>

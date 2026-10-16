@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Simamisha</string>
     <string name="market_subscriptions_action_reactivate">Wezesha tena</string>
     <string name="market_subscriptions_action_resume">Endelea</string>
+    <string name="market_subscriptions_action_resubscribe">Jiandikishe tena</string>
     <string name="market_subscriptions_cancel_body">Hii itakata usajili wako. Utapoteza ufikiaji mwishoni mwa kipindi chako cha sasa cha bili.</string>
     <string name="market_subscriptions_cancel_confirm">Ghairi usajili</string>
     <string name="market_subscriptions_cancel_title">Ghairi usajili</string>

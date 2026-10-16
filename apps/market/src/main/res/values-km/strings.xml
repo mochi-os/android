@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">ផ្អាក</string>
     <string name="market_subscriptions_action_reactivate">ធ្វើឱ្យសកម្មឡើងវិញ</string>
     <string name="market_subscriptions_action_resume">បន្ត</string>
+    <string name="market_subscriptions_action_resubscribe">ជាវម្តងទៀត</string>
     <string name="market_subscriptions_cancel_body">នេះនឹងបោះបង់ការជាវរបស់អ្នក។ អ្នកនឹងបាត់បង់សិទ្ធិចូលប្រើនៅចុងបញ្ចប់នៃរយៈពេលវិក្កយបត្របច្ចុប្បន្នរបស់អ្នក។</string>
     <string name="market_subscriptions_cancel_confirm">បោះបង់ការជាវ</string>
     <string name="market_subscriptions_cancel_title">បោះបង់ការជាវ</string>

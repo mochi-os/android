@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">روکیں</string>
     <string name="market_subscriptions_action_reactivate">دوبارہ فعال کریں</string>
     <string name="market_subscriptions_action_resume">دوبارہ شروع کریں</string>
+    <string name="market_subscriptions_action_resubscribe">دوبارہ سبسکرائب کریں</string>
     <string name="market_subscriptions_cancel_body">یہ آپ کی سبسکرپشن منسوخ کر دے گا۔ آپ اپنے موجودہ بلنگ دور کے اختتام پر رسائی کھو دیں گے۔</string>
     <string name="market_subscriptions_cancel_confirm">سبسکرپشن منسوخ کریں</string>
     <string name="market_subscriptions_cancel_title">سبسکرپشن منسوخ کریں</string>

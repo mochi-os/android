@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Wstrzymaj</string>
     <string name="market_subscriptions_action_reactivate">Aktywuj ponownie</string>
     <string name="market_subscriptions_action_resume">Wznów</string>
+    <string name="market_subscriptions_action_resubscribe">Subskrybuj ponownie</string>
     <string name="market_subscriptions_cancel_body">Spowoduje to anulowanie subskrypcji. Stracisz dostęp na koniec bieżącego okresu rozliczeniowego.</string>
     <string name="market_subscriptions_cancel_confirm">Anuluj subskrypcję</string>
     <string name="market_subscriptions_cancel_title">Anuluj subskrypcję</string>

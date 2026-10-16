@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">หยุดชั่วคราว</string>
     <string name="market_subscriptions_action_reactivate">เปิดใช้งานอีกครั้ง</string>
     <string name="market_subscriptions_action_resume">ดำเนินการต่อ</string>
+    <string name="market_subscriptions_action_resubscribe">สมัครสมาชิกอีกครั้ง</string>
     <string name="market_subscriptions_cancel_body">การกระทำนี้จะยกเลิกการสมัครสมาชิกของคุณ คุณจะสูญเสียการเข้าถึงเมื่อสิ้นสุดรอบการเรียกเก็บเงินปัจจุบัน</string>
     <string name="market_subscriptions_cancel_confirm">ยกเลิกการสมัครสมาชิก</string>
     <string name="market_subscriptions_cancel_title">ยกเลิกการสมัครสมาชิก</string>

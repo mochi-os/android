@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Pause</string>
     <string name="market_subscriptions_action_reactivate">Genaktivér</string>
     <string name="market_subscriptions_action_resume">Genoptag</string>
+    <string name="market_subscriptions_action_resubscribe">Abonnér igen</string>
     <string name="market_subscriptions_cancel_body">Dette vil opsige dit abonnement. Du mister adgang ved udgangen af din nuværende faktureringsperiode.</string>
     <string name="market_subscriptions_cancel_confirm">Annuller abonnement</string>
     <string name="market_subscriptions_cancel_title">Annuller abonnement</string>

@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">روڪيو</string>
     <string name="market_subscriptions_action_reactivate">ٻيهر فعال ڪريو</string>
     <string name="market_subscriptions_action_resume">ٻيهر شروع ڪريو</string>
+    <string name="market_subscriptions_action_resubscribe">ٻيهر رڪنيت وٺو</string>
     <string name="market_subscriptions_cancel_body">ھي توھان جي سبسڪرپشن منسوخ ڪندو. توھان پنھنجي موجوده بل واري دور جي آخر ۾ رسائي وڃائي ويھندا.</string>
     <string name="market_subscriptions_cancel_confirm">سبسڪرپشن منسوخ ڪريو</string>
     <string name="market_subscriptions_cancel_title">سبسڪرپشن منسوخ ڪريو</string>

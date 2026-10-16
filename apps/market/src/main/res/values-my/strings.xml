@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">ခေတ္တရပ်</string>
     <string name="market_subscriptions_action_reactivate">ပြန်ဖွင့်</string>
     <string name="market_subscriptions_action_resume">ဆက်လုပ်</string>
+    <string name="market_subscriptions_action_resubscribe">ပြန်လည်စာရင်းသွင်းရန်</string>
     <string name="market_subscriptions_cancel_body">၎င်းသည် သင်၏ စာရင်းသွင်းမှု ကို ပယ်ဖျက်ပါမည်။ လက်ရှိ ငွေတောင်းခံကာလ ကုန်ဆုံးချိန်တွင် ဝင်ရောက်ခွင့် ဆုံးရှုံးပါမည်။</string>
     <string name="market_subscriptions_cancel_confirm">စာရင်းသွင်းမှု ဖျက်သိမ်းမည်</string>
     <string name="market_subscriptions_cancel_title">စာရင်းသွင်းမှု ဖျက်သိမ်းမည်</string>

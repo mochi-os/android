@@ -547,6 +547,7 @@
     <string name="market_subscriptions_action_pause">Прыпыніць</string>
     <string name="market_subscriptions_action_reactivate">Рэактываваць</string>
     <string name="market_subscriptions_action_resume">Працягнуць</string>
+    <string name="market_subscriptions_action_resubscribe">Падпісацца зноў</string>
     <string name="market_subscriptions_actions_label">Дзеянні падпіскі</string>
     <string name="market_subscriptions_cancel_body">Гэта адменіць вашу падпіску. Вы страціце доступ у канцы бягучага білінгавага перыяду.</string>
     <string name="market_subscriptions_cancel_confirm">Адмяніць падпіску</string>

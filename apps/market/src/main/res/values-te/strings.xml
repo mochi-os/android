@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">పాజ్</string>
     <string name="market_subscriptions_action_reactivate">రీయాక్టివేట్ చేయండి</string>
     <string name="market_subscriptions_action_resume">తిరిగి ప్రారంభించండి</string>
+    <string name="market_subscriptions_action_resubscribe">మళ్లీ సబ్‌స్క్రైబ్ చేయండి</string>
     <string name="market_subscriptions_cancel_body">ఇది మీ చందాను రద్దు చేస్తుంది. మీ ప్రస్తుత బిల్లింగ్ కాలం చివరిలో మీరు యాక్సెస్ కోల్పోతారు.</string>
     <string name="market_subscriptions_cancel_confirm">చందాను రద్దు చేయండి</string>
     <string name="market_subscriptions_cancel_title">చందాను రద్దు చేయండి</string>

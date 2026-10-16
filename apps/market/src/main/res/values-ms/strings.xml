@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Jeda</string>
     <string name="market_subscriptions_action_reactivate">Aktifkan semula</string>
     <string name="market_subscriptions_action_resume">Sambung semula</string>
+    <string name="market_subscriptions_action_resubscribe">Langgan semula</string>
     <string name="market_subscriptions_cancel_body">Ini akan membatalkan langganan anda. Anda akan kehilangan akses di akhir tempoh pengebilan semasa.</string>
     <string name="market_subscriptions_cancel_confirm">Batal langganan</string>
     <string name="market_subscriptions_cancel_title">Batal langganan</string>

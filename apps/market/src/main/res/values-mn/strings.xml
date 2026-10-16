@@ -547,6 +547,7 @@
     <string name="market_subscriptions_action_pause">Түр зогсоох</string>
     <string name="market_subscriptions_action_reactivate">Дахин идэвхжүүлэх</string>
     <string name="market_subscriptions_action_resume">Үргэлжлүүлэх</string>
+    <string name="market_subscriptions_action_resubscribe">Дахин бүртгүүлэх</string>
     <string name="market_subscriptions_actions_label">Бүртгэлийн үйлдэл</string>
     <string name="market_subscriptions_cancel_body">Энэ нь таны захиалгыг цуцална. Та одоогийн төлбөрийн үеийн төгсгөлд нэвтрэх эрхээ алдана.</string>
     <string name="market_subscriptions_cancel_confirm">Захиалгыг цуцлах</string>

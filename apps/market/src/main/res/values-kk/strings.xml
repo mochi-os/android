@@ -547,6 +547,7 @@
     <string name="market_subscriptions_action_pause">Кідірту</string>
     <string name="market_subscriptions_action_reactivate">Қайта белсендіру</string>
     <string name="market_subscriptions_action_resume">Жалғастыру</string>
+    <string name="market_subscriptions_action_resubscribe">Қайта жазылу</string>
     <string name="market_subscriptions_actions_label">Жазылым әрекеттері</string>
     <string name="market_subscriptions_cancel_body">Бұл жазылымыңызды болдырмайды. Ағымдағы есеп айырысу кезеңінің соңында қолжетімділікті жоғалтасыз.</string>
     <string name="market_subscriptions_cancel_confirm">Жазылымды болдырмау</string>

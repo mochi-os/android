@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Misa okwesikhashana</string>
     <string name="market_subscriptions_action_reactivate">Vuselela</string>
     <string name="market_subscriptions_action_resume">Qhubeka</string>
+    <string name="market_subscriptions_action_resubscribe">Bhalisela futhi</string>
     <string name="market_subscriptions_cancel_body">Lokhu kuyokhansela ukubhalisela kwakho. Uzolahlekelwa ukufinyelela ekupheleni kwesikhathi sakho samanje sokukhokhisa.</string>
     <string name="market_subscriptions_cancel_confirm">Khansela ukubhalisa</string>
     <string name="market_subscriptions_cancel_title">Khansela ukubhalisa</string>

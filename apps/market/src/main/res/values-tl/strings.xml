@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">I-pause</string>
     <string name="market_subscriptions_action_reactivate">I-reaktibo</string>
     <string name="market_subscriptions_action_resume">Ipagpatuloy</string>
+    <string name="market_subscriptions_action_resubscribe">Mag-subscribe muli</string>
     <string name="market_subscriptions_cancel_body">Kakanselahin nito ang iyong subscription. Mawawala ang iyong access sa katapusan ng iyong kasalukuyang panahon ng billing.</string>
     <string name="market_subscriptions_cancel_confirm">Kanselahin ang subscription</string>
     <string name="market_subscriptions_cancel_title">Kanselahin ang subscription</string>

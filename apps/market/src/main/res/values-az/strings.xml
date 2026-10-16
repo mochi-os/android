@@ -547,6 +547,7 @@
     <string name="market_subscriptions_action_pause">Pauza</string>
     <string name="market_subscriptions_action_reactivate">Yenidən aktivləşdir</string>
     <string name="market_subscriptions_action_resume">Davam et</string>
+    <string name="market_subscriptions_action_resubscribe">Yenidən abunə ol</string>
     <string name="market_subscriptions_actions_label">Abunə əməliyyatları</string>
     <string name="market_subscriptions_cancel_body">Bu, abunəliyinizi ləğv edəcək. Cari hesablaşma dövrünün sonunda girişinizi itirəcəksiniz.</string>
     <string name="market_subscriptions_cancel_confirm">Abunəliyi ləğv et</string>

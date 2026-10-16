@@ -397,6 +397,7 @@
     <string name="market_subscriptions_action_pause">થોભાવો</string>
     <string name="market_subscriptions_action_reactivate">ફરી સક્રિય કરો</string>
     <string name="market_subscriptions_action_resume">ફરી શરૂ કરો</string>
+    <string name="market_subscriptions_action_resubscribe">ફરી સબ્સ્ક્રાઇબ કરો</string>
     <string name="market_subscriptions_cancel_body">આ તમારું સબ્સ્ક્રિપ્શન રદ કરશે. તમારા વર્તમાન બિલિંગ સમયગાળાના અંતે તમે ઍક્સેસ ગુમાવશો.</string>
     <string name="market_subscriptions_cancel_confirm">સબ્સ્ક્રિપ્શન રદ કરો</string>
     <string name="market_subscriptions_cancel_title">સબ્સ્ક્રિપ્શન રદ કરો</string>

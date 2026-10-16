@@ -547,6 +547,7 @@
     <string name="market_subscriptions_action_pause">Seibio</string>
     <string name="market_subscriptions_action_reactivate">Ailweithredu</string>
     <string name="market_subscriptions_action_resume">Ailddechrau</string>
+    <string name="market_subscriptions_action_resubscribe">Tanysgrifio eto</string>
     <string name="market_subscriptions_actions_label">Gweithredoedd tanysgrifiad</string>
     <string name="market_subscriptions_cancel_body">Bydd hyn yn canslo eich tanysgrifiad. Byddwch yn colli mynediad ar ddiwedd eich cyfnod bilio cyfredol.</string>
     <string name="market_subscriptions_cancel_confirm">Canslo tanysgrifiad</string>

@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Peata</string>
     <string name="market_subscriptions_action_reactivate">Reaktiveeri</string>
     <string name="market_subscriptions_action_resume">Jätka</string>
+    <string name="market_subscriptions_action_resubscribe">Telli uuesti</string>
     <string name="market_subscriptions_cancel_body">See tühistab sinu tellimuse. Kaotad juurdepääsu oma praeguse arveldusperioodi lõpus.</string>
     <string name="market_subscriptions_cancel_confirm">Tühista tellimus</string>
     <string name="market_subscriptions_cancel_title">Tühista tellimus</string>

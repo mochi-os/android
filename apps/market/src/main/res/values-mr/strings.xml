@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">विराम</string>
     <string name="market_subscriptions_action_reactivate">पुन्हा सक्रिय करा</string>
     <string name="market_subscriptions_action_resume">पुन्हा सुरू करा</string>
+    <string name="market_subscriptions_action_resubscribe">पुन्हा सदस्यता घ्या</string>
     <string name="market_subscriptions_cancel_body">हे तुमची सदस्यता रद्द करेल. तुमच्या सध्याच्या बिलिंग कालावधीच्या शेवटी तुम्ही प्रवेश गमावाल.</string>
     <string name="market_subscriptions_cancel_confirm">सबस्क्रिप्शन रद्द करा</string>
     <string name="market_subscriptions_cancel_title">सबस्क्रिप्शन रद्द करा</string>

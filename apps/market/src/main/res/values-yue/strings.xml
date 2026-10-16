@@ -552,6 +552,7 @@
     <string name="market_subscriptions_action_pause">暫停</string>
     <string name="market_subscriptions_action_reactivate">重新啟用</string>
     <string name="market_subscriptions_action_resume">繼續</string>
+    <string name="market_subscriptions_action_resubscribe">重新訂閱</string>
     <string name="market_subscriptions_actions_label">訂閱操作</string>
     <string name="market_subscriptions_cancel_body">呢個操作會取消你嘅訂閱。你會喺今期計費結束時失去使用權限。</string>
     <string name="market_subscriptions_cancel_confirm">取消訂閱</string>

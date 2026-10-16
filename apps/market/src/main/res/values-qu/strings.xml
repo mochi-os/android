@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Sayachiy</string>
     <string name="market_subscriptions_action_reactivate">Kutimanta activay</string>
     <string name="market_subscriptions_action_resume">Kutimanta qallariy</string>
+    <string name="market_subscriptions_action_resubscribe">Yapamanta suscribikuy</string>
     <string name="market_subscriptions_cancel_body">Kayqa suscripcionniykita chinkachinqa. Kunan facturación períodoykipa tukukuyninpi yaykuyniykita chinkachinki.</string>
     <string name="market_subscriptions_cancel_confirm">Suscripción mana ruway</string>
     <string name="market_subscriptions_cancel_title">Suscripción mana ruway</string>

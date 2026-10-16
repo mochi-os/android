@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Pozastavit</string>
     <string name="market_subscriptions_action_reactivate">Znovu aktivovat</string>
     <string name="market_subscriptions_action_resume">Pokračovat</string>
+    <string name="market_subscriptions_action_resubscribe">Znovu předplatit</string>
     <string name="market_subscriptions_cancel_body">Tímto se zruší vaše předplatné. Přístup ztratíte na konci aktuálního zúčtovacího období.</string>
     <string name="market_subscriptions_cancel_confirm">Zrušit předplatné</string>
     <string name="market_subscriptions_cancel_title">Zrušit předplatné</string>

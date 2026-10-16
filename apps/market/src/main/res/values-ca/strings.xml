@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Pausa</string>
     <string name="market_subscriptions_action_reactivate">Reactiva</string>
     <string name="market_subscriptions_action_resume">Reprèn</string>
+    <string name="market_subscriptions_action_resubscribe">Torna a subscriure\'t</string>
     <string name="market_subscriptions_cancel_body">Això cancel·larà la teva subscripció. Perdràs l\'accés al final del teu període de facturació actual.</string>
     <string name="market_subscriptions_cancel_confirm">Cancel·la la subscripció</string>
     <string name="market_subscriptions_cancel_title">Cancel·la la subscripció</string>

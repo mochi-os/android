@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Pauza</string>
     <string name="market_subscriptions_action_reactivate">Qayta faollashtirish</string>
     <string name="market_subscriptions_action_resume">Davom etish</string>
+    <string name="market_subscriptions_action_resubscribe">Qayta obuna bo\'lish</string>
     <string name="market_subscriptions_cancel_body">Bu obunangizni bekor qiladi. Joriy hisob-kitob davringiz oxirida kirish huquqini yoʻqotasiz.</string>
     <string name="market_subscriptions_cancel_confirm">Obunani bekor qilish</string>
     <string name="market_subscriptions_cancel_title">Obunani bekor qilish</string>

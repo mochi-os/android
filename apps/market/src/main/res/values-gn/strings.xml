@@ -390,6 +390,7 @@
     <string name="market_subscriptions_action_pause">Embopytu\'u</string>
     <string name="market_subscriptions_action_reactivate">Emyendy jey</string>
     <string name="market_subscriptions_action_resume">Eñepyrũ jey</string>
+    <string name="market_subscriptions_action_resubscribe">Eñemboheraguapy jey</string>
     <string name="market_subscriptions_cancel_body">Kóva ombotýta nde suscripción. Ndereguerekovéima jeike ne facturación período ag̃agua opávo.</string>
     <string name="market_subscriptions_cancel_confirm">Heja suscripción</string>
     <string name="market_subscriptions_cancel_title">Heja suscripción</string>

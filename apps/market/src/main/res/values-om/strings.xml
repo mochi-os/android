@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Dhaabsisi</string>
     <string name="market_subscriptions_action_reactivate">Deebisanii sochoosi</string>
     <string name="market_subscriptions_action_resume">Itti fufi</string>
+    <string name="market_subscriptions_action_resubscribe">Irra deebiin galmaa\'i</string>
     <string name="market_subscriptions_cancel_body">Kun galaa\'iinsa kee dhaabsisa. Yeroo kaffaltii ammaa dhumarratti ittigaltee dhabda.</string>
     <string name="market_subscriptions_cancel_confirm">Soraa haquu</string>
     <string name="market_subscriptions_cancel_title">Soraa haquu</string>

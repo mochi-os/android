@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">一時停止</string>
     <string name="market_subscriptions_action_reactivate">再開</string>
     <string name="market_subscriptions_action_resume">再開</string>
+    <string name="market_subscriptions_action_resubscribe">再登録</string>
     <string name="market_subscriptions_cancel_body">サブスクリプションをキャンセルします。現在の請求期間の終わりにアクセスを失います。</string>
     <string name="market_subscriptions_cancel_confirm">サブスクリプションをキャンセル</string>
     <string name="market_subscriptions_cancel_title">サブスクリプションをキャンセル</string>

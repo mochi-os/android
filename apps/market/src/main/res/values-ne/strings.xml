@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">रोक्नुहोस्</string>
     <string name="market_subscriptions_action_reactivate">पुन: सक्रिय गर्नुहोस्</string>
     <string name="market_subscriptions_action_resume">पुनः सुरु गर्नुहोस्</string>
+    <string name="market_subscriptions_action_resubscribe">फेरि सदस्यता लिनुहोस्</string>
     <string name="market_subscriptions_cancel_body">यसले तपाईंको सदस्यता रद्द गर्नेछ। तपाईंले हालको बिलिङ अवधिको अन्त्यमा पहुँच गुमाउनुहुनेछ।</string>
     <string name="market_subscriptions_cancel_confirm">सदस्यता रद्द गर्नुहोस्</string>
     <string name="market_subscriptions_cancel_title">सदस्यता रद्द गर्नुहोस्</string>

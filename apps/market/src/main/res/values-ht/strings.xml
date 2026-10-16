@@ -409,6 +409,7 @@
     <string name="market_subscriptions_action_pause">Pòz</string>
     <string name="market_subscriptions_action_reactivate">Reyaktive</string>
     <string name="market_subscriptions_action_resume">Repran</string>
+    <string name="market_subscriptions_action_resubscribe">Abòne ankò</string>
     <string name="market_subscriptions_cancel_body">Sa pral anile abònman w lan. W ap pèdi aksè nan fen peryòd faktirasyon w aktyèl la.</string>
     <string name="market_subscriptions_cancel_confirm">Anile abònman</string>
     <string name="market_subscriptions_cancel_title">Anile abònman</string>

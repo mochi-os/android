@@ -109,9 +109,16 @@ fun MySubscriptionsScreen(
                         sub = sub,
                         mutating = state.mutatingId == sub.id,
                         onTap = {
-                            navController.navigate(
-                                MarketApp.subscriptionDetail(sub.id.toString()),
-                            )
+                            if (sub.listing.isNotBlank()) {
+                                navController.navigate(MarketApp.listingDetail(sub.listing))
+                            }
+                        },
+                        onResubscribe = {
+                            if (sub.listing.isNotBlank()) {
+                                navController.navigate(
+                                    "${MarketApp.checkout(sub.listing)}?subscription=true",
+                                )
+                            }
                         },
                         onPause = { viewModel.pause(sub.id) },
                         onResume = { viewModel.resume(sub.id) },
@@ -147,6 +154,7 @@ private fun SubscriptionRow(
     onPause: () -> Unit,
     onResume: () -> Unit,
     onReactivate: () -> Unit,
+    onResubscribe: () -> Unit,
     onCancelRequested: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -192,8 +200,11 @@ private fun SubscriptionRow(
                     color = MaterialTheme.colorScheme.tertiary,
                 )
             }
+            MarketStatusBadge(
+                status = sub.status?.name?.lowercase() ?: "",
+                modifier = Modifier.padding(top = 6.dp),
+            )
         }
-        MarketStatusBadge(status = sub.status?.name?.lowercase() ?: "")
         Box {
             var menu by remember { mutableStateOf(false) }
             MochiIconButton(onClick = { menu = true }, enabled = !mutating) {
@@ -223,7 +234,16 @@ private fun SubscriptionRow(
                         onClick = { menu = false; onReactivate() },
                         leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
                     )
-                } else if (sub.status != SubscriptionStatus.CANCELLED && sub.cancelled == 0L) {
+                } else if (sub.status == SubscriptionStatus.CANCELLED) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.market_subscriptions_action_resubscribe)) },
+                        onClick = {
+                            menu = false
+                            onResubscribe()
+                        },
+                        leadingIcon = { Icon(Icons.Default.Repeat, contentDescription = null) },
+                    )
+                } else if (sub.cancelled == 0L) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.market_subscriptions_action_cancel)) },
                         onClick = { menu = false; onCancelRequested() },

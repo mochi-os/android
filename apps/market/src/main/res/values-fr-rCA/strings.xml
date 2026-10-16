@@ -541,6 +541,7 @@
     <string name="market_subscriptions_action_pause">Mettre en pause</string>
     <string name="market_subscriptions_action_reactivate">Réactiver</string>
     <string name="market_subscriptions_action_resume">Reprendre</string>
+    <string name="market_subscriptions_action_resubscribe">Se réabonner</string>
     <string name="market_subscriptions_actions_label">Actions sur l\'abonnement</string>
     <string name="market_subscriptions_cancel_body">Ceci annulera votre abonnement. Vous perdrez l\'accès à la fin de votre période de facturation actuelle.</string>
     <string name="market_subscriptions_cancel_confirm">Annuler l\'abonnement</string>

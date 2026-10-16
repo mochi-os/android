@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">বিরতি</string>
     <string name="market_subscriptions_action_reactivate">পুনরায় সক্রিয় করুন</string>
     <string name="market_subscriptions_action_resume">পুনরায় শুরু করুন</string>
+    <string name="market_subscriptions_action_resubscribe">আবার সাবস্ক্রাইব করুন</string>
     <string name="market_subscriptions_cancel_body">এটি আপনার সাবস্ক্রিপশন বাতিল করবে। আপনার বর্তমান বিলিং সময়ের শেষে আপনি অ্যাক্সেস হারাবেন।</string>
     <string name="market_subscriptions_cancel_confirm">সাবস্ক্রিপশন বাতিল করুন</string>
     <string name="market_subscriptions_cancel_title">সাবস্ক্রিপশন বাতিল করুন</string>

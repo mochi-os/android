@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">暫停</string>
     <string name="market_subscriptions_action_reactivate">重新啟用</string>
     <string name="market_subscriptions_action_resume">恢復</string>
+    <string name="market_subscriptions_action_resubscribe">重新訂閱</string>
     <string name="market_subscriptions_cancel_body">這將取消您的訂閱。您將在當前帳單週期結束時失去存取權限。</string>
     <string name="market_subscriptions_cancel_confirm">取消訂閱</string>
     <string name="market_subscriptions_cancel_title">取消訂閱</string>

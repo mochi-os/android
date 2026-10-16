@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Pauziraj</string>
     <string name="market_subscriptions_action_reactivate">Reaktiviraj</string>
     <string name="market_subscriptions_action_resume">Nastavi</string>
+    <string name="market_subscriptions_action_resubscribe">Ponovo se pretplati</string>
     <string name="market_subscriptions_cancel_body">Ovo će otkazati vašu pretplatu. Izgubit ćete pristup na kraju trenutnog perioda naplate.</string>
     <string name="market_subscriptions_cancel_confirm">Otkaži pretplatu</string>
     <string name="market_subscriptions_cancel_title">Otkaži pretplatu</string>

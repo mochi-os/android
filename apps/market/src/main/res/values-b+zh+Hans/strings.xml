@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">暂停</string>
     <string name="market_subscriptions_action_reactivate">重新激活</string>
     <string name="market_subscriptions_action_resume">继续</string>
+    <string name="market_subscriptions_action_resubscribe">重新订阅</string>
     <string name="market_subscriptions_cancel_body">这将取消您的订阅。您将在当前账单周期结束时失去访问权限。</string>
     <string name="market_subscriptions_cancel_confirm">取消订阅</string>
     <string name="market_subscriptions_cancel_title">取消订阅</string>

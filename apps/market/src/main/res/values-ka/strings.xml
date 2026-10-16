@@ -399,6 +399,7 @@
     <string name="market_subscriptions_action_pause">შეჩერება</string>
     <string name="market_subscriptions_action_reactivate">რეაქტივაცია</string>
     <string name="market_subscriptions_action_resume">გაგრძელება</string>
+    <string name="market_subscriptions_action_resubscribe">ხელახლა გამოწერა</string>
     <string name="market_subscriptions_cancel_body">ეს გააუქმებს თქვენს გამოწერას. დაკარგავთ წვდომას მიმდინარე ბილინგ პერიოდის ბოლოს.</string>
     <string name="market_subscriptions_cancel_confirm">ხელმოწერის გაუქმება</string>
     <string name="market_subscriptions_cancel_title">ხელმოწერის გაუქმება</string>

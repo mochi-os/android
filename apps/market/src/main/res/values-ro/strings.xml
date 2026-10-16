@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Pauză</string>
     <string name="market_subscriptions_action_reactivate">Reactivează</string>
     <string name="market_subscriptions_action_resume">Reia</string>
+    <string name="market_subscriptions_action_resubscribe">Reabonează-te</string>
     <string name="market_subscriptions_cancel_body">Aceasta va anula abonamentul tău. Vei pierde accesul la sfârșitul perioadei curente de facturare.</string>
     <string name="market_subscriptions_cancel_confirm">Anulează abonamentul</string>
     <string name="market_subscriptions_cancel_title">Anulează abonamentul</string>

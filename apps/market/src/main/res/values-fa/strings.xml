@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">توقف</string>
     <string name="market_subscriptions_action_reactivate">فعال‌سازی مجدد</string>
     <string name="market_subscriptions_action_resume">ازسرگیری</string>
+    <string name="market_subscriptions_action_resubscribe">اشتراک دوباره</string>
     <string name="market_subscriptions_cancel_body">این کار اشتراک شما را لغو می‌کند. در پایان دوره صورتحساب فعلی، دسترسی خود را از دست می‌دهید.</string>
     <string name="market_subscriptions_cancel_confirm">لغو اشتراک</string>
     <string name="market_subscriptions_cancel_title">لغو اشتراک</string>

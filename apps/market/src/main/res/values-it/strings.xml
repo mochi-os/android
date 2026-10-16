@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Metti in pausa</string>
     <string name="market_subscriptions_action_reactivate">Riattiva</string>
     <string name="market_subscriptions_action_resume">Riprendi</string>
+    <string name="market_subscriptions_action_resubscribe">Abbonati di nuovo</string>
     <string name="market_subscriptions_cancel_body">Questo annullerà il tuo abbonamento. Perderai l\'accesso al termine del periodo di fatturazione corrente.</string>
     <string name="market_subscriptions_cancel_confirm">Annulla abbonamento</string>
     <string name="market_subscriptions_cancel_title">Annulla abbonamento</string>

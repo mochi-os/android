@@ -403,6 +403,7 @@
     <string name="market_subscriptions_action_pause">Gera hlé</string>
     <string name="market_subscriptions_action_reactivate">Endurvirkja</string>
     <string name="market_subscriptions_action_resume">Halda áfram</string>
+    <string name="market_subscriptions_action_resubscribe">Gerast áskrifandi aftur</string>
     <string name="market_subscriptions_cancel_body">Þetta hættir áskriftinni þinni. Þú missir aðgang í lok yfirstandandi reikningstímabils.</string>
     <string name="market_subscriptions_cancel_confirm">Segja upp áskrift</string>
     <string name="market_subscriptions_cancel_title">Segja upp áskrift</string>

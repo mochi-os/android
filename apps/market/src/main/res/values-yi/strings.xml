@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">פּויזע</string>
     <string name="market_subscriptions_action_reactivate">אַקטיווירן צוריק</string>
     <string name="market_subscriptions_action_resume">פֿאָרזעצן</string>
+    <string name="market_subscriptions_action_resubscribe">אַבאָנירן ווידער</string>
     <string name="market_subscriptions_cancel_body">דאָס וועט אַנולירן אײַער אַבאָנעמענט. איר וועט פֿאַרלירן צוטריט אין סוף פֿון אײַער איצטיקן בילינג־פּעריאָד.</string>
     <string name="market_subscriptions_cancel_confirm">אָפּזאָגן אַבאָנעמענט</string>
     <string name="market_subscriptions_cancel_title">אָפּזאָגן אַבאָנעמענט</string>

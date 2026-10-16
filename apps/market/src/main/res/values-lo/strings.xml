@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">ຢຸດຊົ່ວຄາວ</string>
     <string name="market_subscriptions_action_reactivate">ເປີດໃຊ້ງານໃໝ່</string>
     <string name="market_subscriptions_action_resume">ສືບຕໍ່</string>
+    <string name="market_subscriptions_action_resubscribe">ສະໝັກຄືນໃໝ່</string>
     <string name="market_subscriptions_cancel_body">ນີ້ຈະຍົກເລີກການສະໝັກສະມາຊິກຂອງທ່ານ. ທ່ານຈະສູນເສຍການເຂົ້າເຖິງເມື່ອສິ້ນສຸດໄລຍະການຮຽກເກັບເງິນປັດຈຸບັນ.</string>
     <string name="market_subscriptions_cancel_confirm">ຍົກເລີກການສະໝັກສະມາຊິກ</string>
     <string name="market_subscriptions_cancel_title">ຍົກເລີກການສະໝັກສະມາຊິກ</string>

@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Tạm dừng</string>
     <string name="market_subscriptions_action_reactivate">Kích hoạt lại</string>
     <string name="market_subscriptions_action_resume">Tiếp tục</string>
+    <string name="market_subscriptions_action_resubscribe">Đăng ký lại</string>
     <string name="market_subscriptions_cancel_body">Điều này sẽ hủy đăng ký của bạn. Bạn sẽ mất quyền truy cập vào cuối kỳ thanh toán hiện tại.</string>
     <string name="market_subscriptions_cancel_confirm">Hủy đăng ký</string>
     <string name="market_subscriptions_cancel_title">Hủy đăng ký</string>

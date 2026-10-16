@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">විරාම කරන්න</string>
     <string name="market_subscriptions_action_reactivate">නැවත සක්‍රිය කරන්න</string>
     <string name="market_subscriptions_action_resume">නැවත ආරම්භ කරන්න</string>
+    <string name="market_subscriptions_action_resubscribe">නැවත දායක වන්න</string>
     <string name="market_subscriptions_cancel_body">මෙය ඔබේ දායකත්වය අවලංගු කරයි. ඔබේ වත්මන් බිල්පත් කාලයේ අවසානයේ ඔබට ප්‍රවේශ අහිමි වේ.</string>
     <string name="market_subscriptions_cancel_confirm">දායකත්වය අවලංගු කරන්න</string>
     <string name="market_subscriptions_cancel_title">දායකත්වය අවලංගු කරන්න</string>

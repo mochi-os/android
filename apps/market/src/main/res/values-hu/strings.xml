@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Szünet</string>
     <string name="market_subscriptions_action_reactivate">Újraaktiválás</string>
     <string name="market_subscriptions_action_resume">Folytatás</string>
+    <string name="market_subscriptions_action_resubscribe">Újra előfizetés</string>
     <string name="market_subscriptions_cancel_body">Ez lemondja az előfizetésedet. Az aktuális számlázási időszak végén elveszíted a hozzáférést.</string>
     <string name="market_subscriptions_cancel_confirm">Előfizetés lemondása</string>
     <string name="market_subscriptions_cancel_title">Előfizetés lemondása</string>

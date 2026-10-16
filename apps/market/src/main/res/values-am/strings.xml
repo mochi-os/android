@@ -547,6 +547,7 @@
     <string name="market_subscriptions_action_pause">አቁም</string>
     <string name="market_subscriptions_action_reactivate">እንደገና አንቃ</string>
     <string name="market_subscriptions_action_resume">ይቀጥሉ</string>
+    <string name="market_subscriptions_action_resubscribe">እንደገና ይመዝገቡ</string>
     <string name="market_subscriptions_actions_label">የምዝገባ እርምጃዎች</string>
     <string name="market_subscriptions_cancel_body">ይህ ምዝገባዎን ይሰርዛል። በወቅቱ የክፍያ ጊዜ መጨረሻ መዳረሻ ያጣሉ።</string>
     <string name="market_subscriptions_cancel_confirm">ምዝገባ ሰርዝ</string>

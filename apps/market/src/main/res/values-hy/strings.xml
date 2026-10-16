@@ -399,6 +399,7 @@
     <string name="market_subscriptions_action_pause">Դադարեցնել</string>
     <string name="market_subscriptions_action_reactivate">Կրկին ակտիվացնել</string>
     <string name="market_subscriptions_action_resume">Շարունակել</string>
+    <string name="market_subscriptions_action_resubscribe">Կրկին բաժանորդագրվել</string>
     <string name="market_subscriptions_cancel_body">Սա կչեղարկի ձեր բաժանորդագրությունը: Դուք կկորցնեք մուտքը ձեր ընթացիկ վճարային ժամկետի վերջում:</string>
     <string name="market_subscriptions_cancel_confirm">Չեղարկել բաժանորդագրությունը</string>
     <string name="market_subscriptions_cancel_title">Չեղարկել բաժանորդագրությունը</string>

@@ -401,6 +401,7 @@
     <string name="market_subscriptions_action_pause">Jeda</string>
     <string name="market_subscriptions_action_reactivate">Aktifaké manèh</string>
     <string name="market_subscriptions_action_resume">Lanjutaké</string>
+    <string name="market_subscriptions_action_resubscribe">Langganan maneh</string>
     <string name="market_subscriptions_cancel_body">Iki bakal mbatalaké langgananmu. Sampéyan bakal kelangan akses ing pungkasan periode penagihan saiki.</string>
     <string name="market_subscriptions_cancel_confirm">Batal langganan</string>
     <string name="market_subscriptions_cancel_title">Batal langganan</string>

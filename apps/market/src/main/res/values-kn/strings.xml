@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">ವಿರಾಮಗೊಳಿಸಿ</string>
     <string name="market_subscriptions_action_reactivate">ಮರುಸಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="market_subscriptions_action_resume">ಮುಂದುವರಿಸಿ</string>
+    <string name="market_subscriptions_action_resubscribe">ಮತ್ತೆ ಚಂದಾದಾರರಾಗಿ</string>
     <string name="market_subscriptions_cancel_body">ಇದು ನಿಮ್ಮ ಚಂದಾದಾರಿಕೆಯನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಬಿಲ್ಲಿಂಗ್ ಅವಧಿಯ ಕೊನೆಯಲ್ಲಿ ನೀವು ಪ್ರವೇಶವನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ.</string>
     <string name="market_subscriptions_cancel_confirm">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಷನ್ ರದ್ದುಮಾಡಿ</string>
     <string name="market_subscriptions_cancel_title">ಸಬ್‌ಸ್ಕ್ರಿಪ್ಷನ್ ರದ್ದುಮಾಡಿ</string>

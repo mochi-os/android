@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Rawestîne</string>
     <string name="market_subscriptions_action_reactivate">Ji nû ve çalak bike</string>
     <string name="market_subscriptions_action_resume">Bidomîne</string>
+    <string name="market_subscriptions_action_resubscribe">Dîsa abone bibe</string>
     <string name="market_subscriptions_cancel_body">Ev dê abonetiya te betal bike. Tu dê di dawiya heyama fatûreya xwe ya niha de gihîştinê winda bikî.</string>
     <string name="market_subscriptions_cancel_confirm">Abonetiyê betal bike</string>
     <string name="market_subscriptions_cancel_title">Abonetiyê betal bike</string>

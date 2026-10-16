@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Pristabdyti</string>
     <string name="market_subscriptions_action_reactivate">Reaktyvuoti</string>
     <string name="market_subscriptions_action_resume">Tęsti</string>
+    <string name="market_subscriptions_action_resubscribe">Prenumeruoti iš naujo</string>
     <string name="market_subscriptions_cancel_body">Tai atšauks jūsų prenumeratą. Prarasite prieigą dabartinio atsiskaitymo laikotarpio pabaigoje.</string>
     <string name="market_subscriptions_cancel_confirm">Atšaukti prenumeratą</string>
     <string name="market_subscriptions_cancel_title">Atšaukti prenumeratą</string>

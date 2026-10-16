@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Pausar</string>
     <string name="market_subscriptions_action_reactivate">Reativar</string>
     <string name="market_subscriptions_action_resume">Retomar</string>
+    <string name="market_subscriptions_action_resubscribe">Voltar a subscrever</string>
     <string name="market_subscriptions_cancel_body">Isto cancelará a tua subscrição. Perderás o acesso no final do teu período de faturação atual.</string>
     <string name="market_subscriptions_cancel_confirm">Cancelar subscrição</string>
     <string name="market_subscriptions_cancel_title">Cancelar subscrição</string>

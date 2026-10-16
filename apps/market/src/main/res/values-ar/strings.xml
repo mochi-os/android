@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">إيقاف مؤقت</string>
     <string name="market_subscriptions_action_reactivate">إعادة التنشيط</string>
     <string name="market_subscriptions_action_resume">استئناف</string>
+    <string name="market_subscriptions_action_resubscribe">إعادة الاشتراك</string>
     <string name="market_subscriptions_cancel_body">سيؤدي هذا إلى إلغاء اشتراكك. ستفقد الوصول في نهاية فترة الفوترة الحالية.</string>
     <string name="market_subscriptions_cancel_confirm">إلغاء الاشتراك</string>
     <string name="market_subscriptions_cancel_title">إلغاء الاشتراك</string>

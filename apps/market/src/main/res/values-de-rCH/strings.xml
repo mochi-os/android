@@ -466,6 +466,7 @@
     <string name="market_subscriptions_action_pause">Pausieren</string>
     <string name="market_subscriptions_action_reactivate">Reaktivieren</string>
     <string name="market_subscriptions_action_resume">Fortsetzen</string>
+    <string name="market_subscriptions_action_resubscribe">Erneut abonnieren</string>
     <string name="market_subscriptions_actions_label">Abonnement-Aktionen</string>
     <string name="market_subscriptions_cancel_body">Damit wird Ihr Abonnement gekündigt. Sie verlieren den Zugriff am Ende Ihres aktuellen Abrechnungszeitraums.</string>
     <string name="market_subscriptions_cancel_confirm">Abonnement kündigen</string>

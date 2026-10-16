@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">താൽക്കാലികമായി നിർത്തുക</string>
     <string name="market_subscriptions_action_reactivate">വീണ്ടും സജീവമാക്കുക</string>
     <string name="market_subscriptions_action_resume">പുനരാരംഭിക്കുക</string>
+    <string name="market_subscriptions_action_resubscribe">വീണ്ടും സബ്‌സ്‌ക്രൈബ് ചെയ്യുക</string>
     <string name="market_subscriptions_cancel_body">ഇത് നിങ്ങളുടെ സബ്സ്‌ക്രിപ്ഷൻ റദ്ദാക്കും. നിങ്ങളുടെ നിലവിലെ ബില്ലിംഗ് കാലയളവിന്റെ അവസാനം നിങ്ങൾക്ക് ആക്സസ് നഷ്ടപ്പെടും.</string>
     <string name="market_subscriptions_cancel_confirm">സബ്സ്ക്രിപ്ഷൻ റദ്ദാക്കുക</string>
     <string name="market_subscriptions_cancel_title">സബ്സ്ക്രിപ്ഷൻ റദ്ദാക്കുക</string>

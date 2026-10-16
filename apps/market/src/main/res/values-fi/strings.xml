@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Keskeytä</string>
     <string name="market_subscriptions_action_reactivate">Aktivoi uudelleen</string>
     <string name="market_subscriptions_action_resume">Jatka</string>
+    <string name="market_subscriptions_action_resubscribe">Tilaa uudelleen</string>
     <string name="market_subscriptions_cancel_body">Tämä peruuttaa tilauksesi. Menetät pääsyn nykyisen laskutusjakson lopussa.</string>
     <string name="market_subscriptions_cancel_confirm">Peruuta tilaus</string>
     <string name="market_subscriptions_cancel_title">Peruuta tilaus</string>

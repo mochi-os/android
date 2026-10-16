@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Таваққуф</string>
     <string name="market_subscriptions_action_reactivate">Аз нав фаъолсозӣ</string>
     <string name="market_subscriptions_action_resume">Идома додан</string>
+    <string name="market_subscriptions_action_resubscribe">Аз нав обуна шудан</string>
     <string name="market_subscriptions_cancel_body">Ин обунаи шуморо бекор мекунад. Шумо дар охири давраи ҷории ҳисобкуниятон дастрасиро гум мекунед.</string>
     <string name="market_subscriptions_cancel_confirm">Бекор кардани обуна</string>
     <string name="market_subscriptions_cancel_title">Бекор кардани обуна</string>

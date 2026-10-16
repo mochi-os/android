@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Eureunkeun</string>
     <string name="market_subscriptions_action_reactivate">Aktipkeun deui</string>
     <string name="market_subscriptions_action_resume">Tuluykeun</string>
+    <string name="market_subscriptions_action_resubscribe">Langganan deui</string>
     <string name="market_subscriptions_cancel_body">Ieu bakal ngabatalkeun langganan anjeun. Anjeun bakal kaleungitan aksés dina ahir periode tagihan ayeuna.</string>
     <string name="market_subscriptions_cancel_confirm">Batalkeun langganan</string>
     <string name="market_subscriptions_cancel_title">Batalkeun langganan</string>

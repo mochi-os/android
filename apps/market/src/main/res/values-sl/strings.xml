@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Premor</string>
     <string name="market_subscriptions_action_reactivate">Ponovno aktiviraj</string>
     <string name="market_subscriptions_action_resume">Nadaljuj</string>
+    <string name="market_subscriptions_action_resubscribe">Znova se naroči</string>
     <string name="market_subscriptions_cancel_body">S tem boste preklicali svojo naročnino. Dostop boste izgubili ob koncu trenutnega obračunskega obdobja.</string>
     <string name="market_subscriptions_cancel_confirm">Prekliči naročnino</string>
     <string name="market_subscriptions_cancel_title">Prekliči naročnino</string>

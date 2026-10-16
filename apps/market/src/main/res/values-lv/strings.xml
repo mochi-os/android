@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Apturēt</string>
     <string name="market_subscriptions_action_reactivate">Atkārtoti aktivizēt</string>
     <string name="market_subscriptions_action_resume">Atsākt</string>
+    <string name="market_subscriptions_action_resubscribe">Abonēt vēlreiz</string>
     <string name="market_subscriptions_cancel_body">Tas atcels jūsu abonementu. Jūs zaudēsiet piekļuvi pašreizējā norēķinu perioda beigās.</string>
     <string name="market_subscriptions_cancel_confirm">Atcelt abonēšanu</string>
     <string name="market_subscriptions_cancel_title">Atcelt abonēšanu</string>

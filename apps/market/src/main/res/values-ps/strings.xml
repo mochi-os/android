@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">ودرول</string>
     <string name="market_subscriptions_action_reactivate">بیا فعالول</string>
     <string name="market_subscriptions_action_resume">بیا پیلول</string>
+    <string name="market_subscriptions_action_resubscribe">بیا ګډون وکړئ</string>
     <string name="market_subscriptions_cancel_body">دا به ستاسو ګډون لغوه کړي. تاسو به د خپلې اوسنۍ بیلینګ مودې په پای کې لاسرسی له لاسه ورکړئ.</string>
     <string name="market_subscriptions_cancel_confirm">ګډون لغوه کړه</string>
     <string name="market_subscriptions_cancel_title">ګډون لغوه کړه</string>

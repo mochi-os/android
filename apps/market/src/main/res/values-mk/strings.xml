@@ -547,6 +547,7 @@
     <string name="market_subscriptions_action_pause">Пауза</string>
     <string name="market_subscriptions_action_reactivate">Повторно активирај</string>
     <string name="market_subscriptions_action_resume">Продолжи</string>
+    <string name="market_subscriptions_action_resubscribe">Претплати се повторно</string>
     <string name="market_subscriptions_actions_label">Дејства на претплата</string>
     <string name="market_subscriptions_cancel_body">Ова ќе ја откаже вашата претплата. Ќе го изгубите пристапот на крајот на тековниот период за наплата.</string>
     <string name="market_subscriptions_cancel_confirm">Откажи претплата</string>

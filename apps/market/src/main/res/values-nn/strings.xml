@@ -320,6 +320,7 @@
     <string name="market_subscriptions_action_pause">Pause</string>
     <string name="market_subscriptions_action_reactivate">Reaktiver</string>
     <string name="market_subscriptions_action_resume">Hald fram</string>
+    <string name="market_subscriptions_action_resubscribe">Abonner på nytt</string>
     <string name="market_subscriptions_cancel_body">Dette vil avbryte abonnementet ditt. Du mistar tilgangen ved slutten av gjeldande faktureringsperiode.</string>
     <string name="market_subscriptions_cancel_confirm">Sei opp abonnement</string>
     <string name="market_subscriptions_cancel_title">Sei opp abonnement</string>

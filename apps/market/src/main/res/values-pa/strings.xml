@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">ਰੋਕੋ</string>
     <string name="market_subscriptions_action_reactivate">ਮੁੜ-ਸਰਗਰਮ ਕਰੋ</string>
     <string name="market_subscriptions_action_resume">ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="market_subscriptions_action_resubscribe">ਮੁੜ ਸਬਸਕ੍ਰਾਈਬ ਕਰੋ</string>
     <string name="market_subscriptions_cancel_body">ਇਹ ਤੁਹਾਡੀ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰ ਦੇਵੇਗਾ। ਤੁਸੀਂ ਆਪਣੇ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਪੀਰੀਅਡ ਦੇ ਅੰਤ \'ਤੇ ਪਹੁੰਚ ਗੁਆ ਦਿਓਗੇ।</string>
     <string name="market_subscriptions_cancel_confirm">ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰੋ</string>
     <string name="market_subscriptions_cancel_title">ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰੋ</string>

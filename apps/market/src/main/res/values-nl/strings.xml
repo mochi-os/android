@@ -336,6 +336,7 @@
     <string name="market_subscriptions_action_pause">Pauzeren</string>
     <string name="market_subscriptions_action_reactivate">Heractiveren</string>
     <string name="market_subscriptions_action_resume">Hervatten</string>
+    <string name="market_subscriptions_action_resubscribe">Opnieuw abonneren</string>
     <string name="market_subscriptions_cancel_body">Hiermee wordt je abonnement opgezegd. Je verliest toegang aan het einde van je huidige factureringsperiode.</string>
     <string name="market_subscriptions_cancel_confirm">Abonnement opzeggen</string>
     <string name="market_subscriptions_cancel_title">Abonnement opzeggen</string>

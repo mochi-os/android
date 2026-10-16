@@ -547,6 +547,7 @@
     <string name="market_subscriptions_action_pause">Pausatu</string>
     <string name="market_subscriptions_action_reactivate">Berraktibatu</string>
     <string name="market_subscriptions_action_resume">Berriro hasi</string>
+    <string name="market_subscriptions_action_resubscribe">Harpidetu berriro</string>
     <string name="market_subscriptions_actions_label">Harpidetza ekintzak</string>
     <string name="market_subscriptions_cancel_body">Honek zure harpidetza bertan behera utziko du. Egungo fakturazio-aldiaren amaieran galduko duzu sarbidea.</string>
     <string name="market_subscriptions_cancel_confirm">Utzi harpidetza</string>

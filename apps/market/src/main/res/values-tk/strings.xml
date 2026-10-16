@@ -398,6 +398,7 @@
     <string name="market_subscriptions_action_pause">Saklat</string>
     <string name="market_subscriptions_action_reactivate">Gaýtadan işjeňleşdir</string>
     <string name="market_subscriptions_action_resume">Dowam et</string>
+    <string name="market_subscriptions_action_resubscribe">Täzeden ýazyl</string>
     <string name="market_subscriptions_cancel_body">Bu abunaňy ýatyrar. Häzirki tölegli döwrüň ahyrynda elýetersiz bolar.</string>
     <string name="market_subscriptions_cancel_confirm">Abunalygy ýatyrmak</string>
     <string name="market_subscriptions_cancel_title">Abunalygy ýatyrmak</string>
