@@ -104,7 +104,6 @@
     <string name="market_dispute_dialog_evidence_role_seller">賣家</string>
     <string name="market_listing_detail_seller_heading">賣家</string>
     <string name="market_purchase_seller">賣家</string>
-    <string name="market_subscription_detail_seller">賣家</string>
     <string name="market_dispute_dialog_submit">提交</string>
     <string name="market_report_dialog_submit">提交</string>
     <string name="market_editor_saved">已儲存</string>
@@ -124,7 +123,6 @@
     <string name="market_profile_verified">已驗證</string>
     <string name="market_search_clear">清除搜尋</string>
     <string name="market_section_categories">瀏覽類別</string>
-    <string name="market_subscription_detail_title">訂閱</string>
     <string name="market_account_location_label">位置</string>
     <string name="market_editor_section_location">位置</string>
     <string name="market_listing_detail_listed">上架於 %1$s</string>
@@ -522,15 +520,7 @@
     <string name="market_subscribers_interval_year">/ 年</string>
     <string name="market_subscribers_load_failed">載入訂閱者失敗</string>
     <string name="market_subscribers_title">我嘅訂閱者</string>
-    <string name="market_subscription_detail_billing_history">帳單記錄</string>
-    <string name="market_subscription_detail_billing_history_empty">暫時未有任何收費。</string>
-    <string name="market_subscription_detail_billing_info">帳單</string>
-    <string name="market_subscription_detail_cancelled_on">已於 %1$s 取消</string>
-    <string name="market_subscription_detail_charge_amount">最近收費:%1$s</string>
     <string name="market_subscription_detail_next_billing">下次扣款日期:%1$s</string>
-    <string name="market_subscription_detail_not_found">搵唔到呢個訂閱</string>
-    <string name="market_subscription_detail_pending_cancel">取消處理緊</string>
-    <string name="market_subscription_detail_started">%1$s 開始</string>
     <string name="market_subscriptions_action_pause">暫停</string>
     <string name="market_subscriptions_action_reactivate">重新啟用</string>
     <string name="market_subscriptions_action_resume">繼續</string>
@@ -543,8 +533,6 @@
     <string name="market_subscriptions_cancels_period_end">今期結束時取消</string>
     <string name="market_subscriptions_empty">冇訂閱</string>
     <string name="market_subscriptions_empty_body">訂閱係定期購買 — 賣家會用每月或每年嘅價錢上架。</string>
-    <string name="market_subscriptions_per_month">每月 %1$s</string>
-    <string name="market_subscriptions_per_year">每年 %1$s</string>
     <string name="market_subscriptions_title">訂閱</string>
     <string name="market_warnings_title">警告</string>
 

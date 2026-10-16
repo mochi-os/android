@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ ខែ</string>
     <string name="market_subscribers_interval_year">/ ឆ្នាំ</string>
     <string name="market_subscribers_load_failed">បរាជ័យក្នុងការផ្ទុកអ្នកជាវ</string>
-    <string name="market_subscription_detail_billing_history">ប្រវត្តិវិក្កយបត្រ</string>
-    <string name="market_subscription_detail_billing_history_empty">មិនទាន់មានការគិតថ្លៃទេ។</string>
-    <string name="market_subscription_detail_billing_info">វិក្កយបត្រ</string>
-    <string name="market_subscription_detail_cancelled_on">បានបោះបង់នៅ %1$s</string>
-    <string name="market_subscription_detail_charge_amount">ការគិតប្រាក់ចុងក្រោយ៖ %1$s</string>
     <string name="market_subscription_detail_next_billing">កាលបរិច្ឆេទចេញវិក្កយបត្របន្ទាប់៖ %1$s</string>
-    <string name="market_subscription_detail_not_found">រកមិនឃើញការជាវ</string>
-    <string name="market_subscription_detail_pending_cancel">ការបោះបង់កំពុងរង់ចាំ</string>
-    <string name="market_subscription_detail_seller">អ្នកលក់</string>
-    <string name="market_subscription_detail_started">បានចាប់ផ្ដើម %1$s</string>
-    <string name="market_subscription_detail_title">ការជាវ</string>
     <string name="market_subscriptions_action_cancel">បោះបង់</string>
     <string name="market_subscriptions_action_pause">ផ្អាក</string>
     <string name="market_subscriptions_action_reactivate">ធ្វើឱ្យសកម្មឡើងវិញ</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">អ្នកជាវរបស់ខ្ញុំ</string>
     <string name="market_subscriptions_actions_label">សកម្មភាពនៃការជាវ</string>
     <string name="market_subscriptions_cancels_on">បោះបង់នៅថ្ងៃ %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s ក្នុងមួយខែ</string>
-    <string name="market_subscriptions_per_year">%1$s ក្នុងមួយឆ្នាំ</string>
 
     <string name="market_account_address_desc">បំពេញជាមុននៅពេលទូទាត់លើកក្រោយ បន្ទាប់ពីបន្ថែមការភ្ជាប់ការទូទាត់។</string>
     <string name="market_account_address_title">អាសយដ្ឋានដឹកជញ្ជូនលំនាំដើម</string>

@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ மாதம்</string>
     <string name="market_subscribers_interval_year">/ வருடம்</string>
     <string name="market_subscribers_load_failed">சந்தாதாரர்களை ஏற்ற முடியவில்லை</string>
-    <string name="market_subscription_detail_billing_history">பில்லிங் வரலாறு</string>
-    <string name="market_subscription_detail_billing_history_empty">இதுவரை கட்டணங்கள் இல்லை.</string>
-    <string name="market_subscription_detail_billing_info">பில்லிங்</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s அன்று ரத்துசெய்யப்பட்டது</string>
-    <string name="market_subscription_detail_charge_amount">சமீபத்திய கட்டணம்: %1$s</string>
     <string name="market_subscription_detail_next_billing">அடுத்த கட்டண தேதி: %1$s</string>
-    <string name="market_subscription_detail_not_found">குழுசேர்வு காணப்படவில்லை</string>
-    <string name="market_subscription_detail_pending_cancel">ரத்துசெய்தல் நிலுவையில் உள்ளது</string>
-    <string name="market_subscription_detail_seller">விற்பனையாளர்</string>
-    <string name="market_subscription_detail_started">%1$s அன்று தொடங்கப்பட்டது</string>
-    <string name="market_subscription_detail_title">சந்தா</string>
     <string name="market_subscriptions_action_cancel">ரத்துசெய்</string>
     <string name="market_subscriptions_action_pause">இடைநிறுத்து</string>
     <string name="market_subscriptions_action_reactivate">மறுசெயல்படுத்தவும்</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">எனது சந்தாதாரர்கள்</string>
     <string name="market_subscriptions_actions_label">சந்தா செயல்கள்</string>
     <string name="market_subscriptions_cancels_on">%1$s அன்று ரத்து செய்யப்படும்</string>
-    <string name="market_subscriptions_per_month">மாதத்திற்கு %1$s</string>
-    <string name="market_subscriptions_per_year">ஆண்டிற்கு %1$s</string>
 
     <string name="market_account_address_desc">செக்அவுட் ஒருங்கிணைப்பு சேர்க்கப்பட்டவுடன் எதிர்கால செக்அவுட்களில் தானாக நிரப்பப்படும்.</string>
     <string name="market_account_address_title">இயல்புநிலை அனுப்புதல் முகவரி</string>

@@ -386,17 +386,7 @@
     <string name="market_subscribers_interval_month">/ oṣù</string>
     <string name="market_subscribers_interval_year">/ ọdún</string>
     <string name="market_subscribers_load_failed">Kò lè ṣí àwọn alábàápín lọ̀</string>
-    <string name="market_subscription_detail_billing_history">Ìtàn ìsanwó</string>
-    <string name="market_subscription_detail_billing_history_empty">Kò sí owó tí a ti gbà.</string>
-    <string name="market_subscription_detail_billing_info">Ìsanwó</string>
-    <string name="market_subscription_detail_cancelled_on">A fagilé ní %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Ìsanwó tó kẹ́yìn: %1$s</string>
     <string name="market_subscription_detail_next_billing">Ọjọ́ ìsanwó tó ń bọ̀: %1$s</string>
-    <string name="market_subscription_detail_not_found">A kò rí ìforúkọsílẹ̀</string>
-    <string name="market_subscription_detail_pending_cancel">Ìfagilé ń dúró</string>
-    <string name="market_subscription_detail_seller">Olùtà</string>
-    <string name="market_subscription_detail_started">Bẹ̀rẹ̀ ní %1$s</string>
-    <string name="market_subscription_detail_title">Ìforúkọsílẹ̀</string>
     <string name="market_subscriptions_action_cancel">Fagilé</string>
     <string name="market_subscriptions_action_pause">Dáwọ́ dúró</string>
     <string name="market_subscriptions_action_reactivate">Tún mú ṣiṣẹ́</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Àwọn alábàápín mi</string>
     <string name="market_subscriptions_actions_label">Àwọn ìṣe ìforúkọsílẹ̀</string>
     <string name="market_subscriptions_cancels_on">Yóò fagílé ní %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s lóṣooṣù</string>
-    <string name="market_subscriptions_per_year">%1$s lọ́dọọdún</string>
 
     <string name="market_account_address_desc">Yóò kún ara rẹ̀ ní ìsanwó ọjọ́ iwájú nígbà tí a bá fi ìsopọ̀ ìsanwó kún un.</string>
     <string name="market_account_address_title">Àdírẹ́sì ìfiránṣẹ́ àìyípadà</string>

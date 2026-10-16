@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ חודש</string>
     <string name="market_subscribers_interval_year">/ יאָר</string>
     <string name="market_subscribers_load_failed">ניט געלונגען צו לאָדן אַבאָנענטן</string>
-    <string name="market_subscription_detail_billing_history">באַצאָלונג־היסטאָריע</string>
-    <string name="market_subscription_detail_billing_history_empty">נאָך קיין באַלאַסטונגען.</string>
-    <string name="market_subscription_detail_billing_info">באַצאָלונג</string>
-    <string name="market_subscription_detail_cancelled_on">אָפּגעזאָגט דעם %1$s</string>
-    <string name="market_subscription_detail_charge_amount">לעצטע באַצאָלונג: %1$s</string>
     <string name="market_subscription_detail_next_billing">ווײַטערדיקער בילינג־דאַטע: %1$s</string>
-    <string name="market_subscription_detail_not_found">אבאנעמענט נישט געפונען</string>
-    <string name="market_subscription_detail_pending_cancel">אָפּזאָגונג וואַרט</string>
-    <string name="market_subscription_detail_seller">פֿאַרקויפֿער</string>
-    <string name="market_subscription_detail_started">אָנגעהויבן %1$s</string>
-    <string name="market_subscription_detail_title">אַבאָנעמענט</string>
     <string name="market_subscriptions_action_cancel">אָפּזאָגן</string>
     <string name="market_subscriptions_action_pause">פּויזע</string>
     <string name="market_subscriptions_action_reactivate">אַקטיווירן צוריק</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">מײַנע אַבאָנענטן</string>
     <string name="market_subscriptions_actions_label">אַבאָנעמענט אַקציעס</string>
     <string name="market_subscriptions_cancels_on">גייט אָפּ דעם %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s אַ חודש</string>
-    <string name="market_subscriptions_per_year">%1$s אַ יאָר</string>
 
     <string name="market_account_address_desc">ווערט אויטאָמאַטיש אויסגעפֿילט בײַ צוקונפֿטיקע קאַסעס ווען די קאַסע אינטעגראַציע ווערט צוגעלייגט.</string>
     <string name="market_account_address_title">פֿאַרגלײַבט שיקונג אַדרעס</string>

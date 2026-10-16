@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ mesiac</string>
     <string name="market_subscribers_interval_year">/ rok</string>
     <string name="market_subscribers_load_failed">Nepodarilo sa načítať odberateľov</string>
-    <string name="market_subscription_detail_billing_history">História fakturácie</string>
-    <string name="market_subscription_detail_billing_history_empty">Zatiaľ žiadne platby.</string>
-    <string name="market_subscription_detail_billing_info">Fakturácia</string>
-    <string name="market_subscription_detail_cancelled_on">Zrušené %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Posledná platba: %1$s</string>
     <string name="market_subscription_detail_next_billing">Ďalší dátum fakturácie: %1$s</string>
-    <string name="market_subscription_detail_not_found">Predplatné sa nenašlo</string>
-    <string name="market_subscription_detail_pending_cancel">Zrušenie čaká na vybavenie</string>
-    <string name="market_subscription_detail_seller">Predajca</string>
-    <string name="market_subscription_detail_started">Začiatok: %1$s</string>
-    <string name="market_subscription_detail_title">Predplatné</string>
     <string name="market_subscriptions_action_cancel">Zrušiť</string>
     <string name="market_subscriptions_action_pause">Pozastaviť</string>
     <string name="market_subscriptions_action_reactivate">Reaktivovať</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Moji predplatitelia</string>
     <string name="market_subscriptions_actions_label">Akcie predplatného</string>
     <string name="market_subscriptions_cancels_on">Ruší sa %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s mesačne</string>
-    <string name="market_subscriptions_per_year">%1$s ročne</string>
     <string name="market_warnings_title">Upozornenia</string>
 
     <string name="market_account_address_desc">Po pridaní integrácie pokladne sa automaticky vyplní pri budúcich objednávkach.</string>

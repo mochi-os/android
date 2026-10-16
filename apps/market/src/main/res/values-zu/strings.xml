@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ inyanga</string>
     <string name="market_subscribers_interval_year">/ unyaka</string>
     <string name="market_subscribers_load_failed">Kuhlulekile ukulayisha ababhalisile</string>
-    <string name="market_subscription_detail_billing_history">Umlando wokukhokhisa</string>
-    <string name="market_subscription_detail_billing_history_empty">Azikho izintela okwamanje.</string>
-    <string name="market_subscription_detail_billing_info">Ukukhokhisa</string>
-    <string name="market_subscription_detail_cancelled_on">Kukhanselwe ngo-%1$s</string>
-    <string name="market_subscription_detail_charge_amount">Inkokhelo yakamuva: %1$s</string>
     <string name="market_subscription_detail_next_billing">Usuku olulandelayo lokukhokha: %1$s</string>
-    <string name="market_subscription_detail_not_found">Ukubhalisa akutholakali</string>
-    <string name="market_subscription_detail_pending_cancel">Ukukhansela kulindile</string>
-    <string name="market_subscription_detail_seller">Umthengisi</string>
-    <string name="market_subscription_detail_started">Kuqale ngo-%1$s</string>
-    <string name="market_subscription_detail_title">Ukubhalisa</string>
     <string name="market_subscriptions_action_cancel">Khansela</string>
     <string name="market_subscriptions_action_pause">Misa okwesikhashana</string>
     <string name="market_subscriptions_action_reactivate">Vuselela</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Ababhalisi bami</string>
     <string name="market_subscriptions_actions_label">Izenzo zokubhalisa</string>
     <string name="market_subscriptions_cancels_on">Kuyakhanseleka ngo-%1$s</string>
-    <string name="market_subscriptions_per_month">%1$s ngenyanga</string>
-    <string name="market_subscriptions_per_year">%1$s ngonyaka</string>
 
     <string name="market_account_address_desc">Igcwalisa ngokuzenzakalelayo ezinkokhelweni ezizayo lapho kungezwa ukuhlanganiswa kokukhokha.</string>
     <string name="market_account_address_title">Ikheli lokuthumela elizenzakalelayo</string>

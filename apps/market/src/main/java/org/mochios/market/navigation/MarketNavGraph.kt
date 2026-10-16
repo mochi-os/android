@@ -21,7 +21,6 @@ import org.mochios.market.ui.buying.MyPurchasesScreen
 import org.mochios.market.ui.buying.MySubscriptionsScreen
 import org.mochios.market.ui.buying.PurchaseDetailScreen
 import org.mochios.market.ui.buying.SavedListingsScreen
-import org.mochios.market.ui.buying.SubscriptionDetailScreen
 import org.mochios.market.ui.checkout.CheckoutScreen
 import org.mochios.market.ui.editor.EditListingScreen
 import org.mochios.market.ui.listing.ListingDetailScreen
@@ -72,7 +71,6 @@ object MarketApp {
     const val SALE_DETAIL = "market/sales/{orderId}"
     const val MESSAGE_THREAD = "market/messages/{listingId}/{threadId}"
     const val PROFILE_PATTERN = "market/account/{accountId}"
-    const val SUBSCRIPTION_DETAIL = "market/subscriptions/{id}"
 
     // ---- Detail route builders ----
     fun listingDetail(id: String, title: String? = null): String {
@@ -89,7 +87,6 @@ object MarketApp {
     fun messageThread(listingId: String, threadId: String) =
         "market/messages/$listingId/$threadId"
     fun publicProfile(accountId: String) = "market/account/$accountId"
-    fun subscriptionDetail(id: String) = "market/subscriptions/$id"
 
     /** Seller settings carrying Stripe's OAuth return, for the deep-link handler. */
     fun sellerSettings(code: String?, state: String?, error: String?, errorDescription: String?): String {
@@ -204,8 +201,4 @@ fun NavGraphBuilder.marketNavGraph(
         route = MarketApp.PROFILE_PATTERN,
         arguments = listOf(navArgument("accountId") { type = NavType.StringType }),
     ) { PublicProfileScreen(navController = navController) }
-    composable(
-        route = MarketApp.SUBSCRIPTION_DETAIL,
-        arguments = listOf(navArgument("id") { type = NavType.StringType }),
-    ) { SubscriptionDetailScreen(navController = navController) }
 }

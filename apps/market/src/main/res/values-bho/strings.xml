@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ महीना</string>
     <string name="market_subscribers_interval_year">/ साल</string>
     <string name="market_subscribers_load_failed">सब्सक्राइबर लोड करे में विफल</string>
-    <string name="market_subscription_detail_billing_history">बिलिंग इतिहास</string>
-    <string name="market_subscription_detail_billing_history_empty">अबले कवनो चार्ज नइखे।</string>
-    <string name="market_subscription_detail_billing_info">बिलिंग</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s के रद्द भइल</string>
-    <string name="market_subscription_detail_charge_amount">हालिया शुल्क: %1$s</string>
     <string name="market_subscription_detail_next_billing">अगिला बिलिंग तारीख: %1$s</string>
-    <string name="market_subscription_detail_not_found">सदस्यता ना मिलल</string>
-    <string name="market_subscription_detail_pending_cancel">रद्दीकरण बाकी बा</string>
-    <string name="market_subscription_detail_seller">विक्रेता</string>
-    <string name="market_subscription_detail_started">%1$s के शुरू भइल</string>
-    <string name="market_subscription_detail_title">सदस्यता</string>
     <string name="market_subscriptions_action_cancel">रद्द करीं</string>
     <string name="market_subscriptions_action_pause">रोकीं</string>
     <string name="market_subscriptions_action_reactivate">फेर सक्रिय करीं</string>
@@ -474,8 +464,6 @@
     <string name="market_subscribers_title">हमार सब्सक्राइबर</string>
     <string name="market_subscriptions_actions_label">सब्सक्रिप्शन के कार्य</string>
     <string name="market_subscriptions_cancels_on">%1$s के रद्द होई</string>
-    <string name="market_subscriptions_per_month">%1$s प्रति महीना</string>
-    <string name="market_subscriptions_per_year">%1$s प्रति साल</string>
 
     <string name="market_checkout_subscribing">सदस्यता लिहल जा रहल बा…</string>
     <string name="market_editor_delete_confirm_title">लिस्टिंग मेटाईं?</string>

@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ เดือน</string>
     <string name="market_subscribers_interval_year">/ ปี</string>
     <string name="market_subscribers_load_failed">ไม่สามารถโหลดผู้ติดตามได้</string>
-    <string name="market_subscription_detail_billing_history">ประวัติการเรียกเก็บเงิน</string>
-    <string name="market_subscription_detail_billing_history_empty">ยังไม่มีการเรียกเก็บเงิน</string>
-    <string name="market_subscription_detail_billing_info">การเรียกเก็บเงิน</string>
-    <string name="market_subscription_detail_cancelled_on">ยกเลิกเมื่อ %1$s</string>
-    <string name="market_subscription_detail_charge_amount">ค่าใช้จ่ายล่าสุด: %1$s</string>
     <string name="market_subscription_detail_next_billing">วันที่เรียกเก็บถัดไป: %1$s</string>
-    <string name="market_subscription_detail_not_found">ไม่พบการสมัครสมาชิก</string>
-    <string name="market_subscription_detail_pending_cancel">รอการยกเลิก</string>
-    <string name="market_subscription_detail_seller">ผู้ขาย</string>
-    <string name="market_subscription_detail_started">เริ่ม %1$s</string>
-    <string name="market_subscription_detail_title">การสมัครสมาชิก</string>
     <string name="market_subscriptions_action_cancel">ยกเลิก</string>
     <string name="market_subscriptions_action_pause">หยุดชั่วคราว</string>
     <string name="market_subscriptions_action_reactivate">เปิดใช้งานอีกครั้ง</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">ผู้สมัครสมาชิกของฉัน</string>
     <string name="market_subscriptions_actions_label">การดำเนินการสมัครสมาชิก</string>
     <string name="market_subscriptions_cancels_on">ยกเลิกในวันที่ %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s ต่อเดือน</string>
-    <string name="market_subscriptions_per_year">%1$s ต่อปี</string>
     <string name="market_warnings_title">คำเตือน</string>
 
     <string name="market_account_address_desc">กรอกข้อมูลล่วงหน้าในการชำระเงินครั้งถัดไปเมื่อเพิ่มการเชื่อมต่อการชำระเงินแล้ว</string>

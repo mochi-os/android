@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ aý</string>
     <string name="market_subscribers_interval_year">/ ýyl</string>
     <string name="market_subscribers_load_failed">Abunaçylar ýüklenmedi</string>
-    <string name="market_subscription_detail_billing_history">Hasaplaşyk taryhy</string>
-    <string name="market_subscription_detail_billing_history_empty">Entek töleg ýok.</string>
-    <string name="market_subscription_detail_billing_info">Hasaplaşyk</string>
-    <string name="market_subscription_detail_cancelled_on">Ýatyryldy: %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Soňky töleg: %1$s</string>
     <string name="market_subscription_detail_next_billing">Indiki tölegiň senesi: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abuna tapylmady</string>
-    <string name="market_subscription_detail_pending_cancel">Ýatyrylmagyna garaşylýar</string>
-    <string name="market_subscription_detail_seller">Satyjy</string>
-    <string name="market_subscription_detail_started">Başlandy: %1$s</string>
-    <string name="market_subscription_detail_title">Abuna ýazgy</string>
     <string name="market_subscriptions_action_cancel">Ýatyrmak</string>
     <string name="market_subscriptions_action_pause">Saklat</string>
     <string name="market_subscriptions_action_reactivate">Gaýtadan işjeňleşdir</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Meniň abonentlerim</string>
     <string name="market_subscriptions_actions_label">Abonement hereketleri</string>
     <string name="market_subscriptions_cancels_on">%1$s senesinde ýatyrylýar</string>
-    <string name="market_subscriptions_per_month">Aýyna %1$s</string>
-    <string name="market_subscriptions_per_year">Ýylyna %1$s</string>
 
     <string name="market_account_address_desc">Töleg integrasiýasy goşulandan soň geljekki töleglerde awtomatiki doldurylar.</string>
     <string name="market_account_address_title">Adaty eltip beriş salgysy</string>

@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ ай</string>
     <string name="market_subscribers_interval_year">/ жыл</string>
     <string name="market_subscribers_load_failed">Жазылуучуларды жүктөө ишке ашкан жок</string>
-    <string name="market_subscription_detail_billing_history">Төлөмдөр тарыхы</string>
-    <string name="market_subscription_detail_billing_history_empty">Азырынча төлөмдөр жок.</string>
-    <string name="market_subscription_detail_billing_info">Эсептешүү</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s күнү жокко чыгарылды</string>
-    <string name="market_subscription_detail_charge_amount">Акыркы төлөм: %1$s</string>
     <string name="market_subscription_detail_next_billing">Кийинки төлөм күнү: %1$s</string>
-    <string name="market_subscription_detail_not_found">Жазылуу табылган жок</string>
-    <string name="market_subscription_detail_pending_cancel">Жокко чыгаруу күтүлүүдө</string>
-    <string name="market_subscription_detail_seller">Сатуучу</string>
-    <string name="market_subscription_detail_started">Башталган: %1$s</string>
-    <string name="market_subscription_detail_title">Жазылуу</string>
     <string name="market_subscriptions_action_cancel">Жокко чыгаруу</string>
     <string name="market_subscriptions_action_pause">Тыныгуу</string>
     <string name="market_subscriptions_action_reactivate">Кайра иштетүү</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Менин жазылуучуларым</string>
     <string name="market_subscriptions_actions_label">Жазылуу аракеттери</string>
     <string name="market_subscriptions_cancels_on">%1$s күнү жокко чыгарылат</string>
-    <string name="market_subscriptions_per_month">%1$s айына</string>
-    <string name="market_subscriptions_per_year">%1$s жылына</string>
 
     <string name="market_account_address_desc">Төлөм интеграциясы кошулгандан кийин келечектеги төлөмдөрдө автоматтык толтурулат.</string>
     <string name="market_account_address_title">Демейки жеткирүү дареги</string>

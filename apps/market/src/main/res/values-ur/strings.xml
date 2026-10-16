@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ ماہ</string>
     <string name="market_subscribers_interval_year">/ سال</string>
     <string name="market_subscribers_load_failed">سبسکرائبرز لوڈ کرنے میں ناکامی</string>
-    <string name="market_subscription_detail_billing_history">بلنگ ہسٹری</string>
-    <string name="market_subscription_detail_billing_history_empty">ابھی تک کوئی چارج نہیں۔</string>
-    <string name="market_subscription_detail_billing_info">بلنگ</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s کو منسوخ کیا گیا</string>
-    <string name="market_subscription_detail_charge_amount">تازہ ترین چارج: %1$s</string>
     <string name="market_subscription_detail_next_billing">اگلی بلنگ تاریخ: %1$s</string>
-    <string name="market_subscription_detail_not_found">سبسکرپشن نہیں ملی</string>
-    <string name="market_subscription_detail_pending_cancel">منسوخی زیر التوا</string>
-    <string name="market_subscription_detail_seller">بیچنے والا</string>
-    <string name="market_subscription_detail_started">%1$s کو شروع ہوا</string>
-    <string name="market_subscription_detail_title">سبسکرپشن</string>
     <string name="market_subscriptions_action_cancel">منسوخ کریں</string>
     <string name="market_subscriptions_action_pause">روکیں</string>
     <string name="market_subscriptions_action_reactivate">دوبارہ فعال کریں</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">میرے سبسکرائبرز</string>
     <string name="market_subscriptions_actions_label">سبسکرپشن کے اقدامات</string>
     <string name="market_subscriptions_cancels_on">%1$s کو منسوخ ہوگا</string>
-    <string name="market_subscriptions_per_month">%1$s فی ماہ</string>
-    <string name="market_subscriptions_per_year">%1$s فی سال</string>
     <string name="market_warnings_title">انتباہات</string>
 
     <string name="market_account_address_desc">چیک آؤٹ انضمام شامل ہونے کے بعد مستقبل کے چیک آؤٹ میں خود بخود بھر جاتا ہے۔</string>

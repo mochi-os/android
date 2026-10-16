@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ Monat</string>
     <string name="market_subscribers_interval_year">/ Jahr</string>
     <string name="market_subscribers_load_failed">Abonnenten konnten nicht geladen werden</string>
-    <string name="market_subscription_detail_billing_history">Abrechnungsverlauf</string>
-    <string name="market_subscription_detail_billing_history_empty">Noch keine Abbuchungen.</string>
-    <string name="market_subscription_detail_billing_info">Abrechnung</string>
-    <string name="market_subscription_detail_cancelled_on">Gekündigt am %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Letzte Abbuchung: %1$s</string>
     <string name="market_subscription_detail_next_billing">Nächste Abrechnung: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonnement nicht gefunden</string>
-    <string name="market_subscription_detail_pending_cancel">Kündigung steht aus</string>
-    <string name="market_subscription_detail_seller">Verkäufer</string>
-    <string name="market_subscription_detail_started">Begonnen %1$s</string>
-    <string name="market_subscription_detail_title">Abonnement</string>
     <string name="market_subscriptions_action_cancel">Kündigen</string>
     <string name="market_subscriptions_action_pause">Pausieren</string>
     <string name="market_subscriptions_action_reactivate">Reaktivieren</string>
@@ -475,8 +465,6 @@
     <string name="market_subscribers_title">Meine Abonnenten</string>
     <string name="market_subscriptions_actions_label">Abonnementaktionen</string>
     <string name="market_subscriptions_cancels_on">Wird gekündigt am %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s pro Monat</string>
-    <string name="market_subscriptions_per_year">%1$s pro Jahr</string>
     <string name="market_warnings_title">Warnungen</string>
 
 

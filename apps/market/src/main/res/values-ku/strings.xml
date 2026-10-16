@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ meh</string>
     <string name="market_subscribers_interval_year">/ sal</string>
     <string name="market_subscribers_load_failed">Barkirina abonan neserkeftî bû</string>
-    <string name="market_subscription_detail_billing_history">Dîroka fatûrekirinê</string>
-    <string name="market_subscription_detail_billing_history_empty">Hîn tu heq nehatiye girtin.</string>
-    <string name="market_subscription_detail_billing_info">Fatûrekirin</string>
-    <string name="market_subscription_detail_cancelled_on">Di %1$s de hat betalkirin</string>
-    <string name="market_subscription_detail_charge_amount">Heqê dawîn: %1$s</string>
     <string name="market_subscription_detail_next_billing">Dîroka fatûreya bê: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonetî nehat dîtin</string>
-    <string name="market_subscription_detail_pending_cancel">Betalkirin li bendê ye</string>
-    <string name="market_subscription_detail_seller">Firoşker</string>
-    <string name="market_subscription_detail_started">Destpêk: %1$s</string>
-    <string name="market_subscription_detail_title">Abonetî</string>
     <string name="market_subscriptions_action_cancel">Betal bike</string>
     <string name="market_subscriptions_action_pause">Rawestîne</string>
     <string name="market_subscriptions_action_reactivate">Ji nû ve çalak bike</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Aboneyên min</string>
     <string name="market_subscriptions_actions_label">Çalakiyên abonetiyê</string>
     <string name="market_subscriptions_cancels_on">Di %1$s de tê betalkirin</string>
-    <string name="market_subscriptions_per_month">%1$s di mehê de</string>
-    <string name="market_subscriptions_per_year">%1$s di salê de</string>
 
     <string name="market_account_address_desc">Piştî zêdekirina yekkirina dravdanê, di dravdanên pêşerojê de bi xweber tê tijîkirin.</string>
     <string name="market_account_address_title">Navnîşana barkirinê ya berdest</string>

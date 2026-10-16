@@ -514,17 +514,7 @@
     <string name="market_subscribers_interval_year">/ година</string>
     <string name="market_subscribers_load_failed">Неуспешно вчитување на претплатници</string>
     <string name="market_subscribers_title">Мои претплатници</string>
-    <string name="market_subscription_detail_billing_history">Историја на наплата</string>
-    <string name="market_subscription_detail_billing_history_empty">Сè уште нема наплати.</string>
-    <string name="market_subscription_detail_billing_info">Наплата</string>
-    <string name="market_subscription_detail_cancelled_on">Откажано на %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Последна наплата: %1$s</string>
     <string name="market_subscription_detail_next_billing">Следен датум за наплата: %1$s</string>
-    <string name="market_subscription_detail_not_found">Претплатата не е пронајдена</string>
-    <string name="market_subscription_detail_pending_cancel">Откажувањето во тек</string>
-    <string name="market_subscription_detail_seller">Продавач</string>
-    <string name="market_subscription_detail_started">Започнато %1$s</string>
-    <string name="market_subscription_detail_title">Претплата</string>
     <string name="market_subscriptions_action_cancel">Откажи</string>
     <string name="market_subscriptions_action_pause">Пауза</string>
     <string name="market_subscriptions_action_reactivate">Повторно активирај</string>
@@ -538,8 +528,6 @@
     <string name="market_subscriptions_cancels_period_end">Се откажува на крајот на тековниот период</string>
     <string name="market_subscriptions_empty">Нема претплати</string>
     <string name="market_subscriptions_empty_body">Претплатите се повторливи купувања — продавачите ги наведуваат со месечни или годишни цени.</string>
-    <string name="market_subscriptions_per_month">%1$s месечно</string>
-    <string name="market_subscriptions_per_year">%1$s годишно</string>
     <string name="market_subscriptions_title">Претплати</string>
     <string name="market_title">Маркет</string>
     <string name="market_warnings_title">Предупредувања</string>

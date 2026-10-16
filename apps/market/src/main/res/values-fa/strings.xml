@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ ماه</string>
     <string name="market_subscribers_interval_year">/ سال</string>
     <string name="market_subscribers_load_failed">بارگذاری مشترکان ناموفق بود</string>
-    <string name="market_subscription_detail_billing_history">تاریخچه صورت‌حساب</string>
-    <string name="market_subscription_detail_billing_history_empty">هنوز هیچ هزینه‌ای ثبت نشده است.</string>
-    <string name="market_subscription_detail_billing_info">صورت‌حساب</string>
-    <string name="market_subscription_detail_cancelled_on">لغو شده در %1$s</string>
-    <string name="market_subscription_detail_charge_amount">آخرین پرداخت: %1$s</string>
     <string name="market_subscription_detail_next_billing">تاریخ صورتحساب بعدی: %1$s</string>
-    <string name="market_subscription_detail_not_found">اشتراک یافت نشد</string>
-    <string name="market_subscription_detail_pending_cancel">در انتظار لغو</string>
-    <string name="market_subscription_detail_seller">فروشنده</string>
-    <string name="market_subscription_detail_started">آغاز شده در %1$s</string>
-    <string name="market_subscription_detail_title">اشتراک</string>
     <string name="market_subscriptions_action_cancel">لغو</string>
     <string name="market_subscriptions_action_pause">توقف</string>
     <string name="market_subscriptions_action_reactivate">فعال‌سازی مجدد</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">مشترکان من</string>
     <string name="market_subscriptions_actions_label">اقدامات اشتراک</string>
     <string name="market_subscriptions_cancels_on">لغو در %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s در ماه</string>
-    <string name="market_subscriptions_per_year">%1$s در سال</string>
     <string name="market_warnings_title">هشدارها</string>
 
     <string name="market_account_address_desc">پس از افزودن یکپارچه‌سازی پرداخت، در پرداخت‌های آینده به‌طور خودکار پر می‌شود.</string>

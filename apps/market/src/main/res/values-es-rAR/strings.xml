@@ -44,17 +44,7 @@
     <string name="market_onboarding_body">Activa tu cuenta para empezar a comprar y vender.</string>
     <string name="market_onboarding_dismiss">Descartar</string>
     <string name="market_onboarding_title">Te damos la bienvenida al mercado</string>
-    <string name="market_subscription_detail_billing_history">Historial de facturación</string>
-    <string name="market_subscription_detail_billing_history_empty">Aún no hay cargos.</string>
-    <string name="market_subscription_detail_billing_info">Facturación</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelado el %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Último cargo: %1$s</string>
     <string name="market_subscription_detail_next_billing">Próxima facturación: %1$s</string>
-    <string name="market_subscription_detail_not_found">Suscripción no encontrada</string>
-    <string name="market_subscription_detail_pending_cancel">Cancelación pendiente</string>
-    <string name="market_subscription_detail_seller">Vendedor</string>
-    <string name="market_subscription_detail_started">Iniciado %1$s</string>
-    <string name="market_subscription_detail_title">Suscripción</string>
     <string name="market_checkout_address_name">Nombre</string>
     <string name="market_back">Atrás</string>
     <string name="market_editor_back">Atrás</string>
@@ -521,8 +511,6 @@
     <string name="market_subscriptions_cancels_period_end">Se cancela al final del período actual</string>
     <string name="market_subscriptions_empty">No hay suscripciones</string>
     <string name="market_subscriptions_empty_body">Las suscripciones son compras recurrentes — los vendedores las publican con precios mensuales o anuales.</string>
-    <string name="market_subscriptions_per_month">%1$s por mes</string>
-    <string name="market_subscriptions_per_year">%1$s por año</string>
     <string name="market_subscriptions_title">Suscripciones</string>
     <string name="market_warnings_title">Advertencias</string>
 

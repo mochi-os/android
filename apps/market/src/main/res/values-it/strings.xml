@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ mese</string>
     <string name="market_subscribers_interval_year">/ anno</string>
     <string name="market_subscribers_load_failed">Impossibile caricare gli iscritti</string>
-    <string name="market_subscription_detail_billing_history">Cronologia fatturazione</string>
-    <string name="market_subscription_detail_billing_history_empty">Nessun addebito al momento.</string>
-    <string name="market_subscription_detail_billing_info">Fatturazione</string>
-    <string name="market_subscription_detail_cancelled_on">Cancellato il %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Ultimo addebito: %1$s</string>
     <string name="market_subscription_detail_next_billing">Prossima fatturazione: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abbonamento non trovato</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellazione in sospeso</string>
-    <string name="market_subscription_detail_seller">Venditore</string>
-    <string name="market_subscription_detail_started">Iniziato %1$s</string>
-    <string name="market_subscription_detail_title">Abbonamento</string>
     <string name="market_subscriptions_action_cancel">Annulla</string>
     <string name="market_subscriptions_action_pause">Metti in pausa</string>
     <string name="market_subscriptions_action_reactivate">Riattiva</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">I miei iscritti</string>
     <string name="market_subscriptions_actions_label">Azioni di abbonamento</string>
     <string name="market_subscriptions_cancels_on">Si annulla il %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s al mese</string>
-    <string name="market_subscriptions_per_year">%1$s all\'anno</string>
     <string name="market_warnings_title">Avvisi</string>
 
     <string name="market_account_address_desc">Si compilerà automaticamente nei prossimi pagamenti una volta aggiunta l\'integrazione del checkout.</string>

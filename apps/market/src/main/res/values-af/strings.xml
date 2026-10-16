@@ -514,17 +514,7 @@
     <string name="market_subscribers_interval_year">/ jaar</string>
     <string name="market_subscribers_load_failed">Kon nie intekenare laai nie</string>
     <string name="market_subscribers_title">My intekenaars</string>
-    <string name="market_subscription_detail_billing_history">Faktureringsgeskiedenis</string>
-    <string name="market_subscription_detail_billing_history_empty">Nog geen heffings nie.</string>
-    <string name="market_subscription_detail_billing_info">Fakturering</string>
-    <string name="market_subscription_detail_cancelled_on">Gekanselleer op %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Jongste heffing: %1$s</string>
     <string name="market_subscription_detail_next_billing">Volgende faktuurdatum: %1$s</string>
-    <string name="market_subscription_detail_not_found">Intekening nie gevind nie</string>
-    <string name="market_subscription_detail_pending_cancel">Kansellasie hangende</string>
-    <string name="market_subscription_detail_seller">Verkoper</string>
-    <string name="market_subscription_detail_started">Begin op %1$s</string>
-    <string name="market_subscription_detail_title">Intekening</string>
     <string name="market_subscriptions_action_cancel">Kanselleer</string>
     <string name="market_subscriptions_action_pause">Pouseer</string>
     <string name="market_subscriptions_action_reactivate">Heraktiveer</string>
@@ -538,8 +528,6 @@
     <string name="market_subscriptions_cancels_period_end">Kanselleer aan die einde van die huidige tydperk</string>
     <string name="market_subscriptions_empty">Geen intekeninge</string>
     <string name="market_subscriptions_empty_body">Intekenings is herhalende aankope — verkopers lys hulle met maandelikse of jaarlikse pryse.</string>
-    <string name="market_subscriptions_per_month">%1$s per maand</string>
-    <string name="market_subscriptions_per_year">%1$s per jaar</string>
     <string name="market_subscriptions_title">Intekenings</string>
     <string name="market_title">Mark</string>
     <string name="market_warnings_title">Waarskuwings</string>

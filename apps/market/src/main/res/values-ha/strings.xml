@@ -390,17 +390,7 @@
     <string name="market_subscribers_interval_month">/ wata</string>
     <string name="market_subscribers_interval_year">/ shekara</string>
     <string name="market_subscribers_load_failed">An gaza loading subscribers</string>
-    <string name="market_subscription_detail_billing_history">Tarihin biyan kuɗi</string>
-    <string name="market_subscription_detail_billing_history_empty">Babu wani caji tukuna.</string>
-    <string name="market_subscription_detail_billing_info">Biyan kuɗi</string>
-    <string name="market_subscription_detail_cancelled_on">An soke a %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Biyan kuɗi na ƙarshe: %1$s</string>
     <string name="market_subscription_detail_next_billing">Ranar biyan kuɗi ta gaba: %1$s</string>
-    <string name="market_subscription_detail_not_found">Ba a sami biyan kuɗi ba</string>
-    <string name="market_subscription_detail_pending_cancel">Ana jiran sokewa</string>
-    <string name="market_subscription_detail_seller">Mai sayarwa</string>
-    <string name="market_subscription_detail_started">An fara %1$s</string>
-    <string name="market_subscription_detail_title">Biyan kuɗi</string>
     <string name="market_subscriptions_action_cancel">Soke</string>
     <string name="market_subscriptions_action_pause">Dakata</string>
     <string name="market_subscriptions_action_reactivate">Sake kunnawa</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Masu biyan kuɗina</string>
     <string name="market_subscriptions_actions_label">Ayyukan biyan kuɗi</string>
     <string name="market_subscriptions_cancels_on">Yana sokewa a kan %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s a kowane wata</string>
-    <string name="market_subscriptions_per_year">%1$s a kowace shekara</string>
 
     <string name="market_account_address_desc">Yana cika kai tsaye a biyan kuɗi na gaba idan an ƙara haɗin biyan kuɗi.</string>
     <string name="market_account_address_title">Adireshin tura kaya na asali</string>

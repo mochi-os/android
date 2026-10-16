@@ -514,17 +514,7 @@
     <string name="market_subscribers_interval_year">/ blwyddyn</string>
     <string name="market_subscribers_load_failed">Methwyd llwytho tanysgrifwyr</string>
     <string name="market_subscribers_title">Fy nhanysgrifwyr</string>
-    <string name="market_subscription_detail_billing_history">Hanes bilio</string>
-    <string name="market_subscription_detail_billing_history_empty">Dim taliadau eto.</string>
-    <string name="market_subscription_detail_billing_info">Bilio</string>
-    <string name="market_subscription_detail_cancelled_on">Canslwyd ar %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Tâl diweddaraf: %1$s</string>
     <string name="market_subscription_detail_next_billing">Dyddiad bilio nesaf: %1$s</string>
-    <string name="market_subscription_detail_not_found">Ni chanfuwyd y tanysgrifiad</string>
-    <string name="market_subscription_detail_pending_cancel">Canslo ar y gweill</string>
-    <string name="market_subscription_detail_seller">Gwerthwr</string>
-    <string name="market_subscription_detail_started">Dechreuwyd %1$s</string>
-    <string name="market_subscription_detail_title">Tanysgrifiad</string>
     <string name="market_subscriptions_action_cancel">Canslo</string>
     <string name="market_subscriptions_action_pause">Seibio</string>
     <string name="market_subscriptions_action_reactivate">Ailweithredu</string>
@@ -538,8 +528,6 @@
     <string name="market_subscriptions_cancels_period_end">Yn canslo ar ddiwedd y cyfnod cyfredol</string>
     <string name="market_subscriptions_empty">Dim tanysgrifiadau</string>
     <string name="market_subscriptions_empty_body">Mae tanysgrifiadau yn bryniannau cylchol — mae gwerthwyr yn eu rhestru gyda phrisio misol neu flynyddol.</string>
-    <string name="market_subscriptions_per_month">%1$s y mis</string>
-    <string name="market_subscriptions_per_year">%1$s y flwyddyn</string>
     <string name="market_subscriptions_title">Tanysgrifiadau</string>
     <string name="market_title">Marchnad</string>
     <string name="market_warnings_title">Rhybuddion</string>

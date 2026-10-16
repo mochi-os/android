@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ kk</string>
     <string name="market_subscribers_interval_year">/ vuosi</string>
     <string name="market_subscribers_load_failed">Tilaajien lataus epäonnistui</string>
-    <string name="market_subscription_detail_billing_history">Laskutushistoria</string>
-    <string name="market_subscription_detail_billing_history_empty">Ei vielä veloituksia.</string>
-    <string name="market_subscription_detail_billing_info">Laskutus</string>
-    <string name="market_subscription_detail_cancelled_on">Peruttu %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Viimeisin veloitus: %1$s</string>
     <string name="market_subscription_detail_next_billing">Seuraava laskutuspäivä: %1$s</string>
-    <string name="market_subscription_detail_not_found">Tilausta ei löytynyt</string>
-    <string name="market_subscription_detail_pending_cancel">Peruutus odottaa</string>
-    <string name="market_subscription_detail_seller">Myyjä</string>
-    <string name="market_subscription_detail_started">Alkoi %1$s</string>
-    <string name="market_subscription_detail_title">Tilaus</string>
     <string name="market_subscriptions_action_cancel">Peruuta</string>
     <string name="market_subscriptions_action_pause">Keskeytä</string>
     <string name="market_subscriptions_action_reactivate">Aktivoi uudelleen</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Omat tilaajat</string>
     <string name="market_subscriptions_actions_label">Tilauksen toiminnot</string>
     <string name="market_subscriptions_cancels_on">Päättyy %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s kuukaudessa</string>
-    <string name="market_subscriptions_per_year">%1$s vuodessa</string>
     <string name="market_warnings_title">Varoitukset</string>
 
     <string name="market_account_address_desc">Täyttyy automaattisesti tulevissa kassatapahtumissa, kun kassaintegraatio on lisätty.</string>

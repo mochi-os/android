@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ kuus</string>
     <string name="market_subscribers_interval_year">/ aastas</string>
     <string name="market_subscribers_load_failed">Tellijate laadimine ebaõnnestus</string>
-    <string name="market_subscription_detail_billing_history">Arveldusajalugu</string>
-    <string name="market_subscription_detail_billing_history_empty">Makseid pole veel.</string>
-    <string name="market_subscription_detail_billing_info">Arveldus</string>
-    <string name="market_subscription_detail_cancelled_on">Tühistatud %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Viimane makse: %1$s</string>
     <string name="market_subscription_detail_next_billing">Järgmine arvelduskuupäev: %1$s</string>
-    <string name="market_subscription_detail_not_found">Tellimust ei leitud</string>
-    <string name="market_subscription_detail_pending_cancel">Tühistamine ootel</string>
-    <string name="market_subscription_detail_seller">Müüja</string>
-    <string name="market_subscription_detail_started">Alustatud %1$s</string>
-    <string name="market_subscription_detail_title">Tellimus</string>
     <string name="market_subscriptions_action_cancel">Tühista</string>
     <string name="market_subscriptions_action_pause">Peata</string>
     <string name="market_subscriptions_action_reactivate">Reaktiveeri</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Minu tellijad</string>
     <string name="market_subscriptions_actions_label">Tellimuse toimingud</string>
     <string name="market_subscriptions_cancels_on">Tühistatakse %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s kuus</string>
-    <string name="market_subscriptions_per_year">%1$s aastas</string>
     <string name="market_warnings_title">Hoiatused</string>
 
     <string name="market_account_address_desc">Täidetakse tulevastel ostudel automaatselt, kui ostuprotsessi integratsioon on lisatud.</string>

@@ -390,17 +390,7 @@
     <string name="market_subscribers_interval_month">/ mwa</string>
     <string name="market_subscribers_interval_year">/ ane</string>
     <string name="market_subscribers_load_failed">Echwe pou chaje abone</string>
-    <string name="market_subscription_detail_billing_history">Istwa faktirasyon</string>
-    <string name="market_subscription_detail_billing_history_empty">Poko gen okenn frè.</string>
-    <string name="market_subscription_detail_billing_info">Faktirasyon</string>
-    <string name="market_subscription_detail_cancelled_on">Anile nan dat %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Dènye chaj: %1$s</string>
     <string name="market_subscription_detail_next_billing">Pwochen dat faktirasyon: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abònman pa jwenn</string>
-    <string name="market_subscription_detail_pending_cancel">Anilasyon an ap tann</string>
-    <string name="market_subscription_detail_seller">Vandè</string>
-    <string name="market_subscription_detail_started">Kòmanse %1$s</string>
-    <string name="market_subscription_detail_title">Abònman</string>
     <string name="market_subscriptions_action_cancel">Anile</string>
     <string name="market_subscriptions_action_pause">Pòz</string>
     <string name="market_subscriptions_action_reactivate">Reyaktive</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Abone mwen yo</string>
     <string name="market_subscriptions_actions_label">Aksyon abònman</string>
     <string name="market_subscriptions_cancels_on">Anile %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s pa mwa</string>
-    <string name="market_subscriptions_per_year">%1$s pa ane</string>
 
     <string name="market_account_address_desc">L ap ranpli otomatikman nan achtè k ap vini yo lè entegrasyon pèyman an ajoute.</string>
     <string name="market_account_address_title">Adrès livrezon pa defo</string>

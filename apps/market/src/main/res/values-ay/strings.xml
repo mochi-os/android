@@ -398,17 +398,7 @@
     <string name="market_subscribers_interval_month">/ phaxsi</string>
     <string name="market_subscribers_interval_year">/ mara</string>
     <string name="market_subscribers_load_failed">Janiw suscriptornak apaqaña atkiti</string>
-    <string name="market_subscription_detail_billing_history">Facturación sarawi</string>
-    <string name="market_subscription_detail_billing_history_empty">Janïr kuna cobrowsa utjkiti.</string>
-    <string name="market_subscription_detail_billing_info">Facturación</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s urun jaytata</string>
-    <string name="market_subscription_detail_charge_amount">Qhipïr cobro: %1$s</string>
     <string name="market_subscription_detail_next_billing">Jutïr pagañ uru: %1$s</string>
-    <string name="market_subscription_detail_not_found">Suscripcionax jan jikxatatäkiti</string>
-    <string name="market_subscription_detail_pending_cancel">Jaytaña suyt\'aski</string>
-    <string name="market_subscription_detail_seller">Aljiri</string>
-    <string name="market_subscription_detail_started">Qalltata %1$s</string>
-    <string name="market_subscription_detail_title">Suscripción</string>
     <string name="market_subscriptions_action_cancel">Jaytaña</string>
     <string name="market_subscriptions_action_pause">Sayt\'ayaña</string>
     <string name="market_subscriptions_action_reactivate">Wasitat activaña</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Suscriptoranakaxa</string>
     <string name="market_subscriptions_actions_label">Suscripción lurawinaka</string>
     <string name="market_subscriptions_cancels_on">%1$s urun jaytawi</string>
-    <string name="market_subscriptions_per_month">%1$s sapa phaxsi</string>
-    <string name="market_subscriptions_per_year">%1$s sapa mara</string>
 
     <string name="market_account_address_desc">Jutïr alañanakanxa pachpaki phuqhasini qullqi phuqhañ chinjäwi yapxatata ukhaxa.</string>
     <string name="market_account_address_title">Nayrïr apayañ dirección</string>

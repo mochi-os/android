@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ လ</string>
     <string name="market_subscribers_interval_year">/ နှစ်</string>
     <string name="market_subscribers_load_failed">စာရင်းသွင်းသူများ တင်၍ မရပါ</string>
-    <string name="market_subscription_detail_billing_history">ငွေတောင်းခံမှု မှတ်တမ်း</string>
-    <string name="market_subscription_detail_billing_history_empty">ကောက်ခံမှု မရှိသေးပါ။</string>
-    <string name="market_subscription_detail_billing_info">ငွေတောင်းခံမှု</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s တွင် ပယ်ဖျက်ခဲ့သည်</string>
-    <string name="market_subscription_detail_charge_amount">နောက်ဆုံး ကောက်ခံငွေ: %1$s</string>
     <string name="market_subscription_detail_next_billing">နောက်ငွေတောင်းခံမည့်ရက်: %1$s</string>
-    <string name="market_subscription_detail_not_found">စာရင်းသွင်းမှု ရှာမတွေ့ပါ</string>
-    <string name="market_subscription_detail_pending_cancel">ပယ်ဖျက်မှု ဆိုင်းငံ့ထားသည်</string>
-    <string name="market_subscription_detail_seller">ရောင်းသူ</string>
-    <string name="market_subscription_detail_started">%1$s တွင် စတင်ခဲ့သည်</string>
-    <string name="market_subscription_detail_title">စာရင်းသွင်းမှု</string>
     <string name="market_subscriptions_action_cancel">ပယ်ဖျက်မည်</string>
     <string name="market_subscriptions_action_pause">ခေတ္တရပ်</string>
     <string name="market_subscriptions_action_reactivate">ပြန်ဖွင့်</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">ကျွန်ုပ်၏ စာရင်းသွင်းသူများ</string>
     <string name="market_subscriptions_actions_label">စာရင်းသွင်းခြင်း လုပ်ဆောင်ချက်များ</string>
     <string name="market_subscriptions_cancels_on">%1$s တွင် ပယ်ဖျက်မည်</string>
-    <string name="market_subscriptions_per_month">တစ်လလျှင် %1$s</string>
-    <string name="market_subscriptions_per_year">တစ်နှစ်လျှင် %1$s</string>
 
     <string name="market_account_address_desc">ငွေပေးချေမှု ပေါင်းစပ်မှု ထည့်သွင်းပြီးနောက် နောင်ငွေရှင်းမှုများတွင် ကြိုတင်ဖြည့်ပေးပါမည်။</string>
     <string name="market_account_address_title">မူရင်းပို့ဆောင်ရေး လိပ်စာ</string>

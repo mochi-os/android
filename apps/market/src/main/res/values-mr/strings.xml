@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ महिना</string>
     <string name="market_subscribers_interval_year">/ वर्ष</string>
     <string name="market_subscribers_load_failed">सबस्क्रायबर लोड करण्यात अयशस्वी</string>
-    <string name="market_subscription_detail_billing_history">बिलिंग इतिहास</string>
-    <string name="market_subscription_detail_billing_history_empty">अद्याप कोणतेही शुल्क नाही.</string>
-    <string name="market_subscription_detail_billing_info">बिलिंग</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s रोजी रद्द केले</string>
-    <string name="market_subscription_detail_charge_amount">नवीनतम शुल्क: %1$s</string>
     <string name="market_subscription_detail_next_billing">पुढील बिलिंग तारीख: %1$s</string>
-    <string name="market_subscription_detail_not_found">सदस्यता सापडली नाही</string>
-    <string name="market_subscription_detail_pending_cancel">रद्दीकरण प्रलंबित</string>
-    <string name="market_subscription_detail_seller">विक्रेता</string>
-    <string name="market_subscription_detail_started">%1$s रोजी सुरू झाले</string>
-    <string name="market_subscription_detail_title">सबस्क्रिप्शन</string>
     <string name="market_subscriptions_action_cancel">रद्द करा</string>
     <string name="market_subscriptions_action_pause">विराम</string>
     <string name="market_subscriptions_action_reactivate">पुन्हा सक्रिय करा</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">माझे सदस्य</string>
     <string name="market_subscriptions_actions_label">सदस्यता क्रिया</string>
     <string name="market_subscriptions_cancels_on">%1$s रोजी रद्द होईल</string>
-    <string name="market_subscriptions_per_month">%1$s दरमहा</string>
-    <string name="market_subscriptions_per_year">%1$s दरवर्षी</string>
 
     <string name="market_account_address_desc">चेकआउट एकीकरण जोडल्यानंतर भविष्यातील चेकआउटमध्ये आपोआप भरले जाते.</string>
     <string name="market_account_address_title">डीफॉल्ट शिपिंग पत्ता</string>

@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ ತಿಂಗಳು</string>
     <string name="market_subscribers_interval_year">/ ವರ್ಷ</string>
     <string name="market_subscribers_load_failed">ಚಂದಾದಾರರನ್ನು ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
-    <string name="market_subscription_detail_billing_history">ಬಿಲ್ಲಿಂಗ್ ಇತಿಹಾಸ</string>
-    <string name="market_subscription_detail_billing_history_empty">ಇನ್ನೂ ಯಾವುದೇ ಶುಲ್ಕಗಳಿಲ್ಲ.</string>
-    <string name="market_subscription_detail_billing_info">ಬಿಲ್ಲಿಂಗ್</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s ರಂದು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
-    <string name="market_subscription_detail_charge_amount">ಇತ್ತೀಚಿನ ಶುಲ್ಕ: %1$s</string>
     <string name="market_subscription_detail_next_billing">ಮುಂದಿನ ಬಿಲ್ಲಿಂಗ್ ದಿನಾಂಕ: %1$s</string>
-    <string name="market_subscription_detail_not_found">ಚಂದಾದಾರಿಕೆ ಸಿಗಲಿಲ್ಲ</string>
-    <string name="market_subscription_detail_pending_cancel">ರದ್ದತಿ ಬಾಕಿ ಇದೆ</string>
-    <string name="market_subscription_detail_seller">ಮಾರಾಟಗಾರ</string>
-    <string name="market_subscription_detail_started">%1$s ರಂದು ಪ್ರಾರಂಭವಾಯಿತು</string>
-    <string name="market_subscription_detail_title">ಚಂದಾ</string>
     <string name="market_subscriptions_action_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="market_subscriptions_action_pause">ವಿರಾಮಗೊಳಿಸಿ</string>
     <string name="market_subscriptions_action_reactivate">ಮರುಸಕ್ರಿಯಗೊಳಿಸಿ</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">ನನ್ನ ಚಂದಾದಾರರು</string>
     <string name="market_subscriptions_actions_label">ಚಂದಾದಾರಿಕೆ ಕ್ರಿಯೆಗಳು</string>
     <string name="market_subscriptions_cancels_on">%1$s ರಂದು ರದ್ದಾಗುತ್ತದೆ</string>
-    <string name="market_subscriptions_per_month">ತಿಂಗಳಿಗೆ %1$s</string>
-    <string name="market_subscriptions_per_year">ವರ್ಷಕ್ಕೆ %1$s</string>
 
     <string name="market_account_address_desc">ಚೆಕ್‌ಔಟ್ ಏಕೀಕರಣ ಸೇರಿಸಿದ ನಂತರ ಭವಿಷ್ಯದ ಚೆಕ್‌ಔಟ್‌ಗಳಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ತುಂಬುತ್ತದೆ.</string>
     <string name="market_account_address_title">ಡೀಫಾಲ್ಟ್ ಶಿಪ್ಪಿಂಗ್ ವಿಳಾಸ</string>

@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ месяц</string>
     <string name="market_subscribers_interval_year">/ год</string>
     <string name="market_subscribers_load_failed">Не удалось загрузить подписчиков</string>
-    <string name="market_subscription_detail_billing_history">История списаний</string>
-    <string name="market_subscription_detail_billing_history_empty">Списаний пока нет.</string>
-    <string name="market_subscription_detail_billing_info">Списания</string>
-    <string name="market_subscription_detail_cancelled_on">Отменено %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Последнее списание: %1$s</string>
     <string name="market_subscription_detail_next_billing">Следующее списание: %1$s</string>
-    <string name="market_subscription_detail_not_found">Подписка не найдена</string>
-    <string name="market_subscription_detail_pending_cancel">Отмена ожидает</string>
-    <string name="market_subscription_detail_seller">Продавец</string>
-    <string name="market_subscription_detail_started">Начато %1$s</string>
-    <string name="market_subscription_detail_title">Подписка</string>
     <string name="market_subscriptions_action_cancel">Отменить</string>
     <string name="market_subscriptions_action_pause">Пауза</string>
     <string name="market_subscriptions_action_reactivate">Реактивировать</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Мои подписчики</string>
     <string name="market_subscriptions_actions_label">Действия с подпиской</string>
     <string name="market_subscriptions_cancels_on">Отменяется %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s в месяц</string>
-    <string name="market_subscriptions_per_year">%1$s в год</string>
     <string name="market_warnings_title">Предупреждения</string>
 
     <string name="market_account_address_desc">Будет автоматически подставляться при будущих оформлениях заказа после добавления интеграции оформления.</string>

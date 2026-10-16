@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ mjesec</string>
     <string name="market_subscribers_interval_year">/ godina</string>
     <string name="market_subscribers_load_failed">Učitavanje pretplatnika nije uspjelo</string>
-    <string name="market_subscription_detail_billing_history">Historija naplate</string>
-    <string name="market_subscription_detail_billing_history_empty">Još nema naplata.</string>
-    <string name="market_subscription_detail_billing_info">Naplata</string>
-    <string name="market_subscription_detail_cancelled_on">Otkazano %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Posljednja naplata: %1$s</string>
     <string name="market_subscription_detail_next_billing">Sljedeći datum naplate: %1$s</string>
-    <string name="market_subscription_detail_not_found">Pretplata nije pronađena</string>
-    <string name="market_subscription_detail_pending_cancel">Otkazivanje na čekanju</string>
-    <string name="market_subscription_detail_seller">Prodavač</string>
-    <string name="market_subscription_detail_started">Započeto %1$s</string>
-    <string name="market_subscription_detail_title">Pretplata</string>
     <string name="market_subscriptions_action_cancel">Otkaži</string>
     <string name="market_subscriptions_action_pause">Pauziraj</string>
     <string name="market_subscriptions_action_reactivate">Reaktiviraj</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Moji pretplatnici</string>
     <string name="market_subscriptions_actions_label">Radnje pretplate</string>
     <string name="market_subscriptions_cancels_on">Otkazuje se %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s mjesečno</string>
-    <string name="market_subscriptions_per_year">%1$s godišnje</string>
     <string name="market_warnings_title">Upozorenja</string>
 
     <string name="market_account_address_desc">Automatski će se popuniti pri budućim narudžbama nakon dodavanja integracije naplate.</string>

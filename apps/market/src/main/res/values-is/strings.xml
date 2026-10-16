@@ -384,17 +384,7 @@
     <string name="market_subscribers_interval_month">/ mánuði</string>
     <string name="market_subscribers_interval_year">/ ári</string>
     <string name="market_subscribers_load_failed">Tókst ekki að hlaða áskrifendum</string>
-    <string name="market_subscription_detail_billing_history">Innheimtusaga</string>
-    <string name="market_subscription_detail_billing_history_empty">Engar færslur enn.</string>
-    <string name="market_subscription_detail_billing_info">Innheimta</string>
-    <string name="market_subscription_detail_cancelled_on">Sagt upp %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Síðasta gjaldfærsla: %1$s</string>
     <string name="market_subscription_detail_next_billing">Næsti innheimtudagur: %1$s</string>
-    <string name="market_subscription_detail_not_found">Áskrift fannst ekki</string>
-    <string name="market_subscription_detail_pending_cancel">Uppsögn í bið</string>
-    <string name="market_subscription_detail_seller">Seljandi</string>
-    <string name="market_subscription_detail_started">Hófst %1$s</string>
-    <string name="market_subscription_detail_title">Áskrift</string>
     <string name="market_subscriptions_action_cancel">Hætta við</string>
     <string name="market_subscriptions_action_pause">Gera hlé</string>
     <string name="market_subscriptions_action_reactivate">Endurvirkja</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Mínir áskrifendur</string>
     <string name="market_subscriptions_actions_label">Aðgerðir áskriftar</string>
     <string name="market_subscriptions_cancels_on">Lýkur %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s á mánuði</string>
-    <string name="market_subscriptions_per_year">%1$s á ári</string>
 
     <string name="market_account_address_desc">Fyllist sjálfkrafa út við framtíðargreiðslur þegar greiðsluferli hefur verið bætt við.</string>
     <string name="market_account_address_title">Sjálfgefið sendingarfang</string>

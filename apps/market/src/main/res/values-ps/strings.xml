@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ میاشت</string>
     <string name="market_subscribers_interval_year">/ کال</string>
     <string name="market_subscribers_load_failed">د ګډونوالو د بار کولو پاتې راغلل</string>
-    <string name="market_subscription_detail_billing_history">د بلونو تاریخچه</string>
-    <string name="market_subscription_detail_billing_history_empty">تر اوسه هیڅ لګښت نشته.</string>
-    <string name="market_subscription_detail_billing_info">بلونه</string>
-    <string name="market_subscription_detail_cancelled_on">په %1$s لغوه شو</string>
-    <string name="market_subscription_detail_charge_amount">وروستۍ تادیه: %1$s</string>
     <string name="market_subscription_detail_next_billing">راتلونکې د بل نېټه: %1$s</string>
-    <string name="market_subscription_detail_not_found">ګډون ونه موندل شو</string>
-    <string name="market_subscription_detail_pending_cancel">لغوه کول په تمه دي</string>
-    <string name="market_subscription_detail_seller">خرڅوونکی</string>
-    <string name="market_subscription_detail_started">په %1$s پیل شو</string>
-    <string name="market_subscription_detail_title">ګډون</string>
     <string name="market_subscriptions_action_cancel">لغوه کول</string>
     <string name="market_subscriptions_action_pause">ودرول</string>
     <string name="market_subscriptions_action_reactivate">بیا فعالول</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">زما ګډونوال</string>
     <string name="market_subscriptions_actions_label">د ګډون کړنې</string>
     <string name="market_subscriptions_cancels_on">په %1$s لغوه کیږي</string>
-    <string name="market_subscriptions_per_month">%1$s په میاشت کې</string>
-    <string name="market_subscriptions_per_year">%1$s په کال کې</string>
 
     <string name="market_account_address_desc">د چیک آوټ یوځای کیدو په اضافه کیدو سره به په راتلونکو چیک آوټونو کې په اتومات ډول ډک شي.</string>
     <string name="market_account_address_title">د لېږد اصلي پته</string>

@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ місяць</string>
     <string name="market_subscribers_interval_year">/ рік</string>
     <string name="market_subscribers_load_failed">Не вдалося завантажити підписників</string>
-    <string name="market_subscription_detail_billing_history">Історія платежів</string>
-    <string name="market_subscription_detail_billing_history_empty">Платежів поки немає.</string>
-    <string name="market_subscription_detail_billing_info">Платежі</string>
-    <string name="market_subscription_detail_cancelled_on">Скасовано %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Останній платіж: %1$s</string>
     <string name="market_subscription_detail_next_billing">Наступна дата платежу: %1$s</string>
-    <string name="market_subscription_detail_not_found">Підписку не знайдено</string>
-    <string name="market_subscription_detail_pending_cancel">Очікується скасування</string>
-    <string name="market_subscription_detail_seller">Продавець</string>
-    <string name="market_subscription_detail_started">Розпочато %1$s</string>
-    <string name="market_subscription_detail_title">Підписка</string>
     <string name="market_subscriptions_action_cancel">Скасувати</string>
     <string name="market_subscriptions_action_pause">Пауза</string>
     <string name="market_subscriptions_action_reactivate">Реактивувати</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Мої підписники</string>
     <string name="market_subscriptions_actions_label">Дії з підпискою</string>
     <string name="market_subscriptions_cancels_on">Скасовується %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s на місяць</string>
-    <string name="market_subscriptions_per_year">%1$s на рік</string>
     <string name="market_warnings_title">Попередження</string>
 
     <string name="market_account_address_desc">Заповнюватиметься автоматично під час майбутніх оформлень замовлень після додавання інтеграції оформлення.</string>

@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ నెల</string>
     <string name="market_subscribers_interval_year">/ సంవత్సరం</string>
     <string name="market_subscribers_load_failed">చందాదారులను లోడ్ చేయడంలో విఫలమైంది</string>
-    <string name="market_subscription_detail_billing_history">బిల్లింగ్ చరిత్ర</string>
-    <string name="market_subscription_detail_billing_history_empty">ఇంకా ఛార్జీలు లేవు.</string>
-    <string name="market_subscription_detail_billing_info">బిల్లింగ్</string>
-    <string name="market_subscription_detail_cancelled_on">%1$sన రద్దు చేయబడింది</string>
-    <string name="market_subscription_detail_charge_amount">తాజా ఛార్జ్: %1$s</string>
     <string name="market_subscription_detail_next_billing">తదుపరి బిల్లింగ్ తేదీ: %1$s</string>
-    <string name="market_subscription_detail_not_found">చందా కనుగొనబడలేదు</string>
-    <string name="market_subscription_detail_pending_cancel">రద్దు పెండింగ్‌లో ఉంది</string>
-    <string name="market_subscription_detail_seller">విక్రేత</string>
-    <string name="market_subscription_detail_started">%1$sన ప్రారంభమైంది</string>
-    <string name="market_subscription_detail_title">చందా</string>
     <string name="market_subscriptions_action_cancel">రద్దు చేయండి</string>
     <string name="market_subscriptions_action_pause">పాజ్</string>
     <string name="market_subscriptions_action_reactivate">రీయాక్టివేట్ చేయండి</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">నా చందాదారులు</string>
     <string name="market_subscriptions_actions_label">చందా చర్యలు</string>
     <string name="market_subscriptions_cancels_on">%1$s నాడు రద్దు అవుతుంది</string>
-    <string name="market_subscriptions_per_month">నెలకు %1$s</string>
-    <string name="market_subscriptions_per_year">సంవత్సరానికి %1$s</string>
 
     <string name="market_account_address_desc">చెక్‌అవుట్ ఏకీకరణ జోడించిన తర్వాత భవిష్యత్ చెక్‌అవుట్‌లలో స్వయంచాలకంగా నింపబడుతుంది.</string>
     <string name="market_account_address_title">డిఫాల్ట్ షిప్పింగ్ చిరునామా</string>

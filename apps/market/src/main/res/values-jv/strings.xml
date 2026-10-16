@@ -382,17 +382,7 @@
     <string name="market_subscribers_interval_month">/ sasi</string>
     <string name="market_subscribers_interval_year">/ taun</string>
     <string name="market_subscribers_load_failed">Gagal mbukak pelanggan</string>
-    <string name="market_subscription_detail_billing_history">Riwayat tagihan</string>
-    <string name="market_subscription_detail_billing_history_empty">Durung ana tagihan.</string>
-    <string name="market_subscription_detail_billing_info">Tagihan</string>
-    <string name="market_subscription_detail_cancelled_on">Dibatalaké tanggal %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Tagihan pungkasan: %1$s</string>
     <string name="market_subscription_detail_next_billing">Tanggal tagihan sabanjuré: %1$s</string>
-    <string name="market_subscription_detail_not_found">Langganan ora ketemu</string>
-    <string name="market_subscription_detail_pending_cancel">Pambatalan ditundha</string>
-    <string name="market_subscription_detail_seller">Sing dodol</string>
-    <string name="market_subscription_detail_started">Diwiwiti %1$s</string>
-    <string name="market_subscription_detail_title">Langganan</string>
     <string name="market_subscriptions_action_cancel">Batalaké</string>
     <string name="market_subscriptions_action_pause">Jeda</string>
     <string name="market_subscriptions_action_reactivate">Aktifaké manèh</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Pelanggan kula</string>
     <string name="market_subscriptions_actions_label">Tindakan langganan</string>
     <string name="market_subscriptions_cancels_on">Dibatalake tanggal %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s saben sasi</string>
-    <string name="market_subscriptions_per_year">%1$s saben taun</string>
 
     <string name="market_account_address_desc">Diisi luwih dhisik ing checkout sabanjure sawise integrasi checkout ditambahake.</string>
     <string name="market_account_address_title">Alamat pangiriman gawan</string>

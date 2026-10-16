@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ חודש</string>
     <string name="market_subscribers_interval_year">/ שנה</string>
     <string name="market_subscribers_load_failed">טעינת המנויים נכשלה</string>
-    <string name="market_subscription_detail_billing_history">היסטוריית חיובים</string>
-    <string name="market_subscription_detail_billing_history_empty">אין חיובים עדיין.</string>
-    <string name="market_subscription_detail_billing_info">חיוב</string>
-    <string name="market_subscription_detail_cancelled_on">בוטל ב-%1$s</string>
-    <string name="market_subscription_detail_charge_amount">החיוב האחרון: %1$s</string>
     <string name="market_subscription_detail_next_billing">תאריך החיוב הבא: %1$s</string>
-    <string name="market_subscription_detail_not_found">המנוי לא נמצא</string>
-    <string name="market_subscription_detail_pending_cancel">ביטול ממתין</string>
-    <string name="market_subscription_detail_seller">מוכר</string>
-    <string name="market_subscription_detail_started">התחיל ב-%1$s</string>
-    <string name="market_subscription_detail_title">מנוי</string>
     <string name="market_subscriptions_action_cancel">בטל</string>
     <string name="market_subscriptions_action_pause">השהה</string>
     <string name="market_subscriptions_action_reactivate">הפעל מחדש</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">המנויים שלי</string>
     <string name="market_subscriptions_actions_label">פעולות מנוי</string>
     <string name="market_subscriptions_cancels_on">מתבטל ב-%1$s</string>
-    <string name="market_subscriptions_per_month">%1$s לחודש</string>
-    <string name="market_subscriptions_per_year">%1$s לשנה</string>
     <string name="market_warnings_title">אזהרות</string>
 
     <string name="market_account_address_desc">ימולא מראש בתשלומים עתידיים לאחר הוספת שילוב התשלום.</string>

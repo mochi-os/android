@@ -380,17 +380,7 @@
     <string name="market_subscribers_interval_month">/ ամիս</string>
     <string name="market_subscribers_interval_year">/ տարի</string>
     <string name="market_subscribers_load_failed">Չհաջողվեց բեռնել բաժանորդներին</string>
-    <string name="market_subscription_detail_billing_history">Վճարումների պատմություն</string>
-    <string name="market_subscription_detail_billing_history_empty">Դեռ վճարումներ չկան։</string>
-    <string name="market_subscription_detail_billing_info">Վճարումներ</string>
-    <string name="market_subscription_detail_cancelled_on">Չեղարկվել է %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Վերջին գանձումը՝ %1$s</string>
     <string name="market_subscription_detail_next_billing">Հաջորդ վճարման ամսաթիվը՝ %1$s</string>
-    <string name="market_subscription_detail_not_found">Բաժանորդագրությունը չի գտնվել</string>
-    <string name="market_subscription_detail_pending_cancel">Չեղարկումը սպասման մեջ է</string>
-    <string name="market_subscription_detail_seller">Վաճառող</string>
-    <string name="market_subscription_detail_started">Սկսվել է %1$s</string>
-    <string name="market_subscription_detail_title">Բաժանորդագրություն</string>
     <string name="market_subscriptions_action_cancel">Չեղարկել</string>
     <string name="market_subscriptions_action_pause">Դադարեցնել</string>
     <string name="market_subscriptions_action_reactivate">Կրկին ակտիվացնել</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Իմ բաժանորդները</string>
     <string name="market_subscriptions_actions_label">Բաժանորդագրության գործողություններ</string>
     <string name="market_subscriptions_cancels_on">Չեղարկվում է %1$s-ին</string>
-    <string name="market_subscriptions_per_month">%1$s ամսական</string>
-    <string name="market_subscriptions_per_year">%1$s տարեկան</string>
 
     <string name="market_account_address_desc">Վճարման ինտեգրումն ավելացնելուց հետո ապագա վճարումներում ինքնաշխատ լրացվում է։</string>
     <string name="market_account_address_title">Առաքման լռելյայն հասցե</string>

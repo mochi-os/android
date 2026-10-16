@@ -649,17 +649,7 @@
     <string name="market_subscribers_interval_year">/ year</string>
     <string name="market_subscribers_load_failed">Failed to load subscribers</string>
     <string name="market_subscribers_title">My subscribers</string>
-    <string name="market_subscription_detail_billing_history">Billing history</string>
-    <string name="market_subscription_detail_billing_history_empty">No charges yet.</string>
-    <string name="market_subscription_detail_billing_info">Billing</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelled on %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Latest charge: %1$s</string>
     <string name="market_subscription_detail_next_billing">Next billing date: %1$s</string>
-    <string name="market_subscription_detail_not_found">Subscription not found</string>
-    <string name="market_subscription_detail_pending_cancel">Cancellation pending</string>
-    <string name="market_subscription_detail_seller">Seller</string>
-    <string name="market_subscription_detail_started">Started %1$s</string>
-    <string name="market_subscription_detail_title">Subscription</string>
     <string name="market_subscriptions_action_cancel">Cancel</string>
     <string name="market_subscriptions_action_pause">Pause</string>
     <string name="market_subscriptions_action_reactivate">Reactivate</string>
@@ -673,8 +663,6 @@
     <string name="market_subscriptions_cancels_period_end">Cancels at the end of the current period</string>
     <string name="market_subscriptions_empty">No subscriptions</string>
     <string name="market_subscriptions_empty_body">Subscriptions are recurring purchases — sellers list them with monthly or yearly pricing.</string>
-    <string name="market_subscriptions_per_month">%1$s per month</string>
-    <string name="market_subscriptions_per_year">%1$s per year</string>
     <string name="market_subscriptions_title">Subscriptions</string>
     <string name="market_title">Market</string>
     <string name="market_warnings_title">Warnings</string>

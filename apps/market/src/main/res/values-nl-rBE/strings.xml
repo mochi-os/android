@@ -309,17 +309,7 @@
     <string name="market_subscribers_interval_month">/ maand</string>
     <string name="market_subscribers_interval_year">/ jaar</string>
     <string name="market_subscribers_load_failed">Abonnees laden mislukt</string>
-    <string name="market_subscription_detail_billing_history">Factuurgeschiedenis</string>
-    <string name="market_subscription_detail_billing_history_empty">Nog geen kosten.</string>
-    <string name="market_subscription_detail_billing_info">Facturering</string>
-    <string name="market_subscription_detail_cancelled_on">Geannuleerd op %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Laatste afschrijving: %1$s</string>
     <string name="market_subscription_detail_next_billing">Volgende factuurdatum: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonnement niet gevonden</string>
-    <string name="market_subscription_detail_pending_cancel">Opzegging in behandeling</string>
-    <string name="market_subscription_detail_seller">Verkoper</string>
-    <string name="market_subscription_detail_started">Gestart %1$s</string>
-    <string name="market_subscription_detail_title">Abonnement</string>
     <string name="market_subscriptions_action_cancel">Annuleren</string>
     <string name="market_subscriptions_action_pause">Pauzeren</string>
     <string name="market_subscriptions_action_reactivate">Heractiveren</string>
@@ -528,8 +518,6 @@
     <string name="market_subscribers_title">Mijn abonnees</string>
     <string name="market_subscriptions_actions_label">Abonnementsacties</string>
     <string name="market_subscriptions_cancels_on">Geannuleerd op %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s per maand</string>
-    <string name="market_subscriptions_per_year">%1$s per jaar</string>
     <string name="market_warnings_title">Waarschuwingen</string>
 
     <string name="market_account_address_desc">Wordt bij toekomstige afrekeningen automatisch ingevuld zodra de afrekenintegratie is toegevoegd.</string>

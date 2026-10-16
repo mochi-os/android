@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ mēnesī</string>
     <string name="market_subscribers_interval_year">/ gadā</string>
     <string name="market_subscribers_load_failed">Neizdevās ielādēt abonentus</string>
-    <string name="market_subscription_detail_billing_history">Norēķinu vēsture</string>
-    <string name="market_subscription_detail_billing_history_empty">Vēl nav maksājumu.</string>
-    <string name="market_subscription_detail_billing_info">Norēķini</string>
-    <string name="market_subscription_detail_cancelled_on">Atcelts %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Pēdējais maksājums: %1$s</string>
     <string name="market_subscription_detail_next_billing">Nākamais norēķinu datums: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonements nav atrasts</string>
-    <string name="market_subscription_detail_pending_cancel">Gaida atcelšanu</string>
-    <string name="market_subscription_detail_seller">Pārdevējs</string>
-    <string name="market_subscription_detail_started">Sākts %1$s</string>
-    <string name="market_subscription_detail_title">Abonements</string>
     <string name="market_subscriptions_action_cancel">Atcelt</string>
     <string name="market_subscriptions_action_pause">Apturēt</string>
     <string name="market_subscriptions_action_reactivate">Atkārtoti aktivizēt</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Mani abonenti</string>
     <string name="market_subscriptions_actions_label">Abonementa darbības</string>
     <string name="market_subscriptions_cancels_on">Tiek atcelts %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s mēnesī</string>
-    <string name="market_subscriptions_per_year">%1$s gadā</string>
     <string name="market_warnings_title">Brīdinājumi</string>
 
     <string name="market_account_address_desc">Automātiski aizpildās nākamajos norēķinos, tiklīdz tiek pievienota norēķinu integrācija.</string>

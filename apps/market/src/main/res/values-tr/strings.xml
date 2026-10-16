@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ ay</string>
     <string name="market_subscribers_interval_year">/ yıl</string>
     <string name="market_subscribers_load_failed">Aboneler yüklenemedi</string>
-    <string name="market_subscription_detail_billing_history">Faturalandırma geçmişi</string>
-    <string name="market_subscription_detail_billing_history_empty">Henüz tahsilat yok.</string>
-    <string name="market_subscription_detail_billing_info">Faturalandırma</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s tarihinde iptal edildi</string>
-    <string name="market_subscription_detail_charge_amount">Son tahsilat: %1$s</string>
     <string name="market_subscription_detail_next_billing">Sonraki faturalandırma: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonelik bulunamadı</string>
-    <string name="market_subscription_detail_pending_cancel">İptal beklemede</string>
-    <string name="market_subscription_detail_seller">Satıcı</string>
-    <string name="market_subscription_detail_started">Başlama %1$s</string>
-    <string name="market_subscription_detail_title">Abonelik</string>
     <string name="market_subscriptions_action_cancel">İptal et</string>
     <string name="market_subscriptions_action_pause">Duraklat</string>
     <string name="market_subscriptions_action_reactivate">Yeniden etkinleştir</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Abonelerim</string>
     <string name="market_subscriptions_actions_label">Abonelik işlemleri</string>
     <string name="market_subscriptions_cancels_on">%1$s tarihinde iptal edilir</string>
-    <string name="market_subscriptions_per_month">Aylık %1$s</string>
-    <string name="market_subscriptions_per_year">Yıllık %1$s</string>
     <string name="market_warnings_title">Uyarılar</string>
 
     <string name="market_account_address_desc">Ödeme entegrasyonu eklendiğinde gelecekteki ödemelerde otomatik doldurulur.</string>

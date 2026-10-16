@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/月</string>
     <string name="market_subscribers_interval_year">/年</string>
     <string name="market_subscribers_load_failed">購読者の読み込みに失敗しました</string>
-    <string name="market_subscription_detail_billing_history">請求履歴</string>
-    <string name="market_subscription_detail_billing_history_empty">まだ請求はありません。</string>
-    <string name="market_subscription_detail_billing_info">請求</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s にキャンセル</string>
-    <string name="market_subscription_detail_charge_amount">最近の請求: %1$s</string>
     <string name="market_subscription_detail_next_billing">次回請求日: %1$s</string>
-    <string name="market_subscription_detail_not_found">サブスクリプションが見つかりません</string>
-    <string name="market_subscription_detail_pending_cancel">キャンセル待ち</string>
-    <string name="market_subscription_detail_seller">販売者</string>
-    <string name="market_subscription_detail_started">開始 %1$s</string>
-    <string name="market_subscription_detail_title">サブスクリプション</string>
     <string name="market_subscriptions_action_cancel">キャンセル</string>
     <string name="market_subscriptions_action_pause">一時停止</string>
     <string name="market_subscriptions_action_reactivate">再開</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">購読者一覧</string>
     <string name="market_subscriptions_actions_label">サブスクリプション操作</string>
     <string name="market_subscriptions_cancels_on">%1$s に解約予定</string>
-    <string name="market_subscriptions_per_month">月額 %1$s</string>
-    <string name="market_subscriptions_per_year">年額 %1$s</string>
     <string name="market_warnings_title">警告</string>
 
     <string name="market_account_address_desc">チェックアウト連携が追加されると、今後の購入手続きに自動入力されます。</string>

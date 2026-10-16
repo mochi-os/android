@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ mois</string>
     <string name="market_subscribers_interval_year">/ an</string>
     <string name="market_subscribers_load_failed">Échec du chargement des abonnés</string>
-    <string name="market_subscription_detail_billing_history">Historique de facturation</string>
-    <string name="market_subscription_detail_billing_history_empty">Aucune facturation pour l\'instant.</string>
-    <string name="market_subscription_detail_billing_info">Facturation</string>
-    <string name="market_subscription_detail_cancelled_on">Annulé le %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Dernier paiement : %1$s</string>
     <string name="market_subscription_detail_next_billing">Prochaine facturation : %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonnement introuvable</string>
-    <string name="market_subscription_detail_pending_cancel">Annulation en attente</string>
-    <string name="market_subscription_detail_seller">Vendeur</string>
-    <string name="market_subscription_detail_started">Démarré %1$s</string>
-    <string name="market_subscription_detail_title">Abonnement</string>
     <string name="market_subscriptions_action_cancel">Annuler</string>
     <string name="market_subscriptions_action_pause">Pause</string>
     <string name="market_subscriptions_action_reactivate">Réactiver</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Mes abonnés</string>
     <string name="market_subscriptions_actions_label">Actions d\'abonnement</string>
     <string name="market_subscriptions_cancels_on">Annulation le %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s par mois</string>
-    <string name="market_subscriptions_per_year">%1$s par an</string>
     <string name="market_warnings_title">Avertissements</string>
 
     <string name="market_account_address_desc">Se remplit automatiquement lors des prochains paiements une fois l\'intégration de paiement ajoutée.</string>

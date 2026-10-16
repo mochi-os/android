@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ killa</string>
     <string name="market_subscribers_interval_year">/ wata</string>
     <string name="market_subscribers_load_failed">Mana suscriptorkunata cargayta atinchu</string>
-    <string name="market_subscription_detail_billing_history">Facturación historial</string>
-    <string name="market_subscription_detail_billing_history_empty">Manaraq cobrokuna kanchu.</string>
-    <string name="market_subscription_detail_billing_info">Facturación</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s p\'unchawpi chinkachisqa</string>
-    <string name="market_subscription_detail_charge_amount">Qhipa cobro: %1$s</string>
     <string name="market_subscription_detail_next_billing">Qatiq facturación p\'unchaw: %1$s</string>
-    <string name="market_subscription_detail_not_found">Suscripcionqa mana tarikunchu</string>
-    <string name="market_subscription_detail_pending_cancel">Chinkachiy suyachkan</string>
-    <string name="market_subscription_detail_seller">Qhatuq</string>
-    <string name="market_subscription_detail_started">Qallarisqa %1$s</string>
-    <string name="market_subscription_detail_title">Suscripción</string>
     <string name="market_subscriptions_action_cancel">Mana ruway</string>
     <string name="market_subscriptions_action_pause">Sayachiy</string>
     <string name="market_subscriptions_action_reactivate">Kutimanta activay</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Suscriptorniykuna</string>
     <string name="market_subscriptions_actions_label">Suscripción ruwaykuna</string>
     <string name="market_subscriptions_cancels_on">%1$s p\'unchawpi chinkachikunqa</string>
-    <string name="market_subscriptions_per_month">%1$s sapa killa</string>
-    <string name="market_subscriptions_per_year">%1$s sapa wata</string>
 
     <string name="market_account_address_desc">Hamuq pagokunapi kikinmanta hunt\'akunqa pago integración yapasqa kaptin.</string>
     <string name="market_account_address_title">Apachina dirección predeterminado</string>

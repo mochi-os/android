@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ μήνα</string>
     <string name="market_subscribers_interval_year">/ έτος</string>
     <string name="market_subscribers_load_failed">Αποτυχία φόρτωσης συνδρομητών</string>
-    <string name="market_subscription_detail_billing_history">Ιστορικό χρεώσεων</string>
-    <string name="market_subscription_detail_billing_history_empty">Καμία χρέωση ακόμη.</string>
-    <string name="market_subscription_detail_billing_info">Χρέωση</string>
-    <string name="market_subscription_detail_cancelled_on">Ακυρώθηκε στις %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Τελευταία χρέωση: %1$s</string>
     <string name="market_subscription_detail_next_billing">Επόμενη ημερομηνία χρέωσης: %1$s</string>
-    <string name="market_subscription_detail_not_found">Η συνδρομή δεν βρέθηκε</string>
-    <string name="market_subscription_detail_pending_cancel">Εκκρεμεί ακύρωση</string>
-    <string name="market_subscription_detail_seller">Πωλητής</string>
-    <string name="market_subscription_detail_started">Ξεκίνησε στις %1$s</string>
-    <string name="market_subscription_detail_title">Συνδρομή</string>
     <string name="market_subscriptions_action_cancel">Ακύρωση</string>
     <string name="market_subscriptions_action_pause">Παύση</string>
     <string name="market_subscriptions_action_reactivate">Επανενεργοποίηση</string>
@@ -542,8 +532,6 @@
     <string name="market_subscribers_title">Οι συνδρομητές μου</string>
     <string name="market_subscriptions_actions_label">Ενέργειες συνδρομής</string>
     <string name="market_subscriptions_cancels_on">Ακυρώνεται στις %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s ανά μήνα</string>
-    <string name="market_subscriptions_per_year">%1$s ανά έτος</string>
     <string name="market_warnings_title">Προειδοποιήσεις</string>
 
     <string name="market_account_address_desc">Συμπληρώνεται αυτόματα σε μελλοντικές ολοκληρώσεις αγοράς μόλις προστεθεί η ενσωμάτωση ολοκλήρωσης αγοράς.</string>

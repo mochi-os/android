@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ lună</string>
     <string name="market_subscribers_interval_year">/ an</string>
     <string name="market_subscribers_load_failed">Încărcarea abonaților a eșuat</string>
-    <string name="market_subscription_detail_billing_history">Istoric facturare</string>
-    <string name="market_subscription_detail_billing_history_empty">Încă nu există debitări.</string>
-    <string name="market_subscription_detail_billing_info">Facturare</string>
-    <string name="market_subscription_detail_cancelled_on">Anulat pe %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Ultima debitare: %1$s</string>
     <string name="market_subscription_detail_next_billing">Următoarea dată de facturare: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonamentul nu a fost găsit</string>
-    <string name="market_subscription_detail_pending_cancel">Anulare în așteptare</string>
-    <string name="market_subscription_detail_seller">Vânzător</string>
-    <string name="market_subscription_detail_started">Început pe %1$s</string>
-    <string name="market_subscription_detail_title">Abonament</string>
     <string name="market_subscriptions_action_cancel">Anulează</string>
     <string name="market_subscriptions_action_pause">Pauză</string>
     <string name="market_subscriptions_action_reactivate">Reactivează</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Abonații mei</string>
     <string name="market_subscriptions_actions_label">Acțiuni abonament</string>
     <string name="market_subscriptions_cancels_on">Se anulează pe %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s pe lună</string>
-    <string name="market_subscriptions_per_year">%1$s pe an</string>
     <string name="market_warnings_title">Avertismente</string>
 
     <string name="market_account_address_desc">Se va completa automat la achizițiile viitoare după ce se adaugă integrarea de plată.</string>

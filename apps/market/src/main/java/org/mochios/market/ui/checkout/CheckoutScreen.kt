@@ -168,7 +168,7 @@ private fun SubscriptionBody(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        MochiCard(shape = RoundedCornerShape(10.dp)) {
+        MochiCard(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(10.dp)) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
                     stringResource(R.string.market_checkout_subscribe_intro),
@@ -180,9 +180,9 @@ private fun SubscriptionBody(
                     Text(formatPrice(listing.price, currency), style = MaterialTheme.typography.headlineSmall)
                     Spacer(Modifier.width(4.dp))
                     val unit = if (listing.interval == org.mochios.market.model.Interval.YEARLY) {
-                        stringResource(R.string.market_price_per_year, "").replace("%1\$s", "").trim()
+                        stringResource(R.string.market_subscribers_interval_year)
                     } else {
-                        stringResource(R.string.market_price_per_month, "").replace("%1\$s", "").trim()
+                        stringResource(R.string.market_subscribers_interval_month)
                     }
                     Text(
                         unit,

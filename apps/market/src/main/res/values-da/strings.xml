@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ måned</string>
     <string name="market_subscribers_interval_year">/ år</string>
     <string name="market_subscribers_load_failed">Kunne ikke indlæse abonnenter</string>
-    <string name="market_subscription_detail_billing_history">Faktureringshistorik</string>
-    <string name="market_subscription_detail_billing_history_empty">Ingen opkrævninger endnu.</string>
-    <string name="market_subscription_detail_billing_info">Fakturering</string>
-    <string name="market_subscription_detail_cancelled_on">Opsagt den %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Seneste opkrævning: %1$s</string>
     <string name="market_subscription_detail_next_billing">Næste faktureringsdato: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonnement ikke fundet</string>
-    <string name="market_subscription_detail_pending_cancel">Opsigelse afventer</string>
-    <string name="market_subscription_detail_seller">Sælger</string>
-    <string name="market_subscription_detail_started">Startet %1$s</string>
-    <string name="market_subscription_detail_title">Abonnement</string>
     <string name="market_subscriptions_action_cancel">Annuller</string>
     <string name="market_subscriptions_action_pause">Pause</string>
     <string name="market_subscriptions_action_reactivate">Genaktivér</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Mine abonnenter</string>
     <string name="market_subscriptions_actions_label">Abonnementshandlinger</string>
     <string name="market_subscriptions_cancels_on">Annulleres den %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s om måneden</string>
-    <string name="market_subscriptions_per_year">%1$s om året</string>
     <string name="market_warnings_title">Advarsler</string>
 
     <string name="market_account_address_desc">Udfyldes automatisk ved fremtidige betalinger, når checkout-integrationen er tilføjet.</string>

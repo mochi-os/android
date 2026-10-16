@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ tháng</string>
     <string name="market_subscribers_interval_year">/ năm</string>
     <string name="market_subscribers_load_failed">Không tải người đăng ký được</string>
-    <string name="market_subscription_detail_billing_history">Lịch sử thanh toán</string>
-    <string name="market_subscription_detail_billing_history_empty">Chưa có khoản tính phí nào.</string>
-    <string name="market_subscription_detail_billing_info">Thanh toán</string>
-    <string name="market_subscription_detail_cancelled_on">Đã hủy vào %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Khoản phí gần nhất: %1$s</string>
     <string name="market_subscription_detail_next_billing">Ngày thanh toán tiếp theo: %1$s</string>
-    <string name="market_subscription_detail_not_found">Không tìm thấy đăng ký</string>
-    <string name="market_subscription_detail_pending_cancel">Đang chờ hủy</string>
-    <string name="market_subscription_detail_seller">Người bán</string>
-    <string name="market_subscription_detail_started">Bắt đầu %1$s</string>
-    <string name="market_subscription_detail_title">Gói đăng ký</string>
     <string name="market_subscriptions_action_cancel">Hủy</string>
     <string name="market_subscriptions_action_pause">Tạm dừng</string>
     <string name="market_subscriptions_action_reactivate">Kích hoạt lại</string>
@@ -542,8 +532,6 @@
     <string name="market_subscribers_title">Người đăng ký của tôi</string>
     <string name="market_subscriptions_actions_label">Hành động đăng ký</string>
     <string name="market_subscriptions_cancels_on">Hủy vào %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s mỗi tháng</string>
-    <string name="market_subscriptions_per_year">%1$s mỗi năm</string>
     <string name="market_warnings_title">Cảnh báo</string>
 
     <string name="market_account_address_desc">Tự động điền ở các lần thanh toán sau khi tích hợp thanh toán được thêm vào.</string>

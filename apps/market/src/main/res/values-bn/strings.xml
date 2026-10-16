@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ মাস</string>
     <string name="market_subscribers_interval_year">/ বছর</string>
     <string name="market_subscribers_load_failed">সাবস্ক্রাইবারদের লোড করতে ব্যর্থ</string>
-    <string name="market_subscription_detail_billing_history">বিলিংয়ের ইতিহাস</string>
-    <string name="market_subscription_detail_billing_history_empty">এখনও কোনও চার্জ নেই।</string>
-    <string name="market_subscription_detail_billing_info">বিলিং</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s তারিখে বাতিল করা হয়েছে</string>
-    <string name="market_subscription_detail_charge_amount">সর্বশেষ চার্জ: %1$s</string>
     <string name="market_subscription_detail_next_billing">পরবর্তী বিলিং তারিখ: %1$s</string>
-    <string name="market_subscription_detail_not_found">সাবস্ক্রিপশন পাওয়া যায়নি</string>
-    <string name="market_subscription_detail_pending_cancel">বাতিলকরণ মুলতুবি</string>
-    <string name="market_subscription_detail_seller">বিক্রেতা</string>
-    <string name="market_subscription_detail_started">শুরু: %1$s</string>
-    <string name="market_subscription_detail_title">সাবস্ক্রিপশন</string>
     <string name="market_subscriptions_action_cancel">বাতিল করুন</string>
     <string name="market_subscriptions_action_pause">বিরতি</string>
     <string name="market_subscriptions_action_reactivate">পুনরায় সক্রিয় করুন</string>
@@ -467,8 +457,6 @@
     <string name="market_subscribers_title">আমার গ্রাহকরা</string>
     <string name="market_subscriptions_actions_label">সাবস্ক্রিপশন ক্রিয়াকলাপ</string>
     <string name="market_subscriptions_cancels_on">%1$s-এ বাতিল হবে</string>
-    <string name="market_subscriptions_per_month">%1$s প্রতি মাসে</string>
-    <string name="market_subscriptions_per_year">%1$s প্রতি বছরে</string>
     <string name="market_warnings_title">সতর্কতা</string>
 
     <string name="market_appeal_dialog_submitting">জমা দেওয়া হচ্ছে…</string>

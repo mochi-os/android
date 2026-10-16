@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ mes</string>
     <string name="market_subscribers_interval_year">/ any</string>
     <string name="market_subscribers_load_failed">No s\'han pogut carregar els subscriptors</string>
-    <string name="market_subscription_detail_billing_history">Historial de facturació</string>
-    <string name="market_subscription_detail_billing_history_empty">Encara no hi ha cap càrrec.</string>
-    <string name="market_subscription_detail_billing_info">Facturació</string>
-    <string name="market_subscription_detail_cancelled_on">Cancel·lada el %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Últim càrrec: %1$s</string>
     <string name="market_subscription_detail_next_billing">Data de facturació següent: %1$s</string>
-    <string name="market_subscription_detail_not_found">No s\'ha trobat la subscripció</string>
-    <string name="market_subscription_detail_pending_cancel">Cancel·lació pendent</string>
-    <string name="market_subscription_detail_seller">Venedor</string>
-    <string name="market_subscription_detail_started">Iniciada el %1$s</string>
-    <string name="market_subscription_detail_title">Subscripció</string>
     <string name="market_subscriptions_action_cancel">Cancel·la</string>
     <string name="market_subscriptions_action_pause">Pausa</string>
     <string name="market_subscriptions_action_reactivate">Reactiva</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Els meus subscriptors</string>
     <string name="market_subscriptions_actions_label">Accions de subscripció</string>
     <string name="market_subscriptions_cancels_on">Es cancel·la el %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s al mes</string>
-    <string name="market_subscriptions_per_year">%1$s a l\'any</string>
     <string name="market_warnings_title">Avisos</string>
 
     <string name="market_account_address_desc">S\'emplenarà automàticament en compres futures un cop s\'afegeixi la integració de pagament.</string>

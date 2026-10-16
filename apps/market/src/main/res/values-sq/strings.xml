@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ muaj</string>
     <string name="market_subscribers_interval_year">/ vit</string>
     <string name="market_subscribers_load_failed">Ngarkimi i abonentëve dështoi</string>
-    <string name="market_subscription_detail_billing_history">Historiku i faturimit</string>
-    <string name="market_subscription_detail_billing_history_empty">Ende nuk ka tarifa.</string>
-    <string name="market_subscription_detail_billing_info">Faturimi</string>
-    <string name="market_subscription_detail_cancelled_on">Anuluar më %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Pagesa e fundit: %1$s</string>
     <string name="market_subscription_detail_next_billing">Data tjetër e faturimit: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonimi nuk u gjet</string>
-    <string name="market_subscription_detail_pending_cancel">Anulimi në pritje</string>
-    <string name="market_subscription_detail_seller">Shitësi</string>
-    <string name="market_subscription_detail_started">Filloi më %1$s</string>
-    <string name="market_subscription_detail_title">Abonimi</string>
     <string name="market_subscriptions_action_cancel">Anulo</string>
     <string name="market_subscriptions_action_pause">Ndalo</string>
     <string name="market_subscriptions_action_reactivate">Riaktivizo</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Pajtimtarët e mi</string>
     <string name="market_subscriptions_actions_label">Veprimet e pajtimit</string>
     <string name="market_subscriptions_cancels_on">Anulohet më %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s në muaj</string>
-    <string name="market_subscriptions_per_year">%1$s në vit</string>
 
     <string name="market_account_address_desc">Plotësohet automatikisht në arkëtimet e ardhshme pasi të shtohet integrimi i arkëtimit.</string>
     <string name="market_account_address_title">Adresa e parazgjedhur e dërgesës</string>

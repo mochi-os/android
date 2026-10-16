@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ ji\'a</string>
     <string name="market_subscribers_interval_year">/ waggaa</string>
     <string name="market_subscribers_load_failed">Garagaltoota fe\'achuu hin dandeenye</string>
-    <string name="market_subscription_detail_billing_history">Seenaa kaffaltii</string>
-    <string name="market_subscription_detail_billing_history_empty">Amma kaffaltiin hin jiru.</string>
-    <string name="market_subscription_detail_billing_info">Herrega kaffaltii</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s irratti haqame</string>
-    <string name="market_subscription_detail_charge_amount">Kaffaltii dhumaa: %1$s</string>
     <string name="market_subscription_detail_next_billing">Guyyaa kaffaltii itti aanu: %1$s</string>
-    <string name="market_subscription_detail_not_found">Galmaaʼuun hin argamne</string>
-    <string name="market_subscription_detail_pending_cancel">Haquun eegamaa jira</string>
-    <string name="market_subscription_detail_seller">Gurguraa</string>
-    <string name="market_subscription_detail_started">%1$s jalqabame</string>
-    <string name="market_subscription_detail_title">Galaa\'iinsa</string>
     <string name="market_subscriptions_action_cancel">Addaan kuti</string>
     <string name="market_subscriptions_action_pause">Dhaabsisi</string>
     <string name="market_subscriptions_action_reactivate">Deebisanii sochoosi</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Miseensota koo</string>
     <string name="market_subscriptions_actions_label">Gochaalee miseensummaa</string>
     <string name="market_subscriptions_cancels_on">Guyyaa %1$s irratti ni dhaabbata</string>
-    <string name="market_subscriptions_per_month">%1$s ji\'aatti</string>
-    <string name="market_subscriptions_per_year">%1$s waggaatti</string>
 
     <string name="market_account_address_desc">Yeroo walitti makamni kaffaltii dabalamu kaffaltii gara fuulduraa keessatti ofumaan guuta.</string>
     <string name="market_account_address_title">Teessoo ergaa durtii</string>

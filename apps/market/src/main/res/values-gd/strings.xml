@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ mìos</string>
     <string name="market_subscribers_interval_year">/ bliadhna</string>
     <string name="market_subscribers_load_failed">Cha b\' urrainn an luchd-fo-sgrìobhaidh a luchdadh</string>
-    <string name="market_subscription_detail_billing_history">Eachdraidh a\' bhileachaidh</string>
-    <string name="market_subscription_detail_billing_history_empty">Chan eil tàillean ann fhathast.</string>
-    <string name="market_subscription_detail_billing_info">Bileachadh</string>
-    <string name="market_subscription_detail_cancelled_on">Chaidh sgur dheth %1$s</string>
-    <string name="market_subscription_detail_charge_amount">A\' chosgais mu dheireadh: %1$s</string>
     <string name="market_subscription_detail_next_billing">An ath cheann-latha bileachaidh: %1$s</string>
-    <string name="market_subscription_detail_not_found">Cha deach am fo-sgrìobhadh a lorg</string>
-    <string name="market_subscription_detail_pending_cancel">A\' feitheamh ri sgur</string>
-    <string name="market_subscription_detail_seller">Reiceadair</string>
-    <string name="market_subscription_detail_started">Air tòiseachadh %1$s</string>
-    <string name="market_subscription_detail_title">Fo-sgrìobhadh</string>
     <string name="market_subscriptions_action_cancel">Sguir dheth</string>
     <string name="market_subscriptions_action_pause">Cuir \'na stad</string>
     <string name="market_subscriptions_action_reactivate">Ath-ghnìomhaich</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">M\' fho-sgrìobhaichean</string>
     <string name="market_subscriptions_actions_label">Gnìomhan fo-sgrìobhaidh</string>
     <string name="market_subscriptions_cancels_on">Sguir e air %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s gach mìos</string>
-    <string name="market_subscriptions_per_year">%1$s gach bliadhna</string>
 
     <string name="market_account_address_desc">Lìonaidh e gu fèin-obrachail aig pàighidhean san àm ri teachd nuair a thèid amalachadh pàighidh a chur ris.</string>
     <string name="market_account_address_title">Seòladh luingeis bunaiteach</string>

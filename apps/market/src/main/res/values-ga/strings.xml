@@ -382,17 +382,7 @@
     <string name="market_subscribers_interval_month">/ mhí</string>
     <string name="market_subscribers_interval_year">/ bhliain</string>
     <string name="market_subscribers_load_failed">Theip ar luchtú síntiúsóirí</string>
-    <string name="market_subscription_detail_billing_history">Stair bhilleála</string>
-    <string name="market_subscription_detail_billing_history_empty">Níl aon mhuirir ann fós.</string>
-    <string name="market_subscription_detail_billing_info">Billeáil</string>
-    <string name="market_subscription_detail_cancelled_on">Cealaithe ar %1$s</string>
-    <string name="market_subscription_detail_charge_amount">An muirear is déanaí: %1$s</string>
     <string name="market_subscription_detail_next_billing">An chéad dáta billeála eile: %1$s</string>
-    <string name="market_subscription_detail_not_found">Síntiús gan aimsiú</string>
-    <string name="market_subscription_detail_pending_cancel">Cealú ar feitheamh</string>
-    <string name="market_subscription_detail_seller">Díoltóir</string>
-    <string name="market_subscription_detail_started">Tosaithe %1$s</string>
-    <string name="market_subscription_detail_title">Síntiús</string>
     <string name="market_subscriptions_action_cancel">Cealaigh</string>
     <string name="market_subscriptions_action_pause">Cuir ar sos</string>
     <string name="market_subscriptions_action_reactivate">Athghníomhachtaigh</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Mo shíntiúsóirí</string>
     <string name="market_subscriptions_actions_label">Gníomhaíochtaí síntiúis</string>
     <string name="market_subscriptions_cancels_on">Cealaítear ar %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s in aghaidh na míosa</string>
-    <string name="market_subscriptions_per_year">%1$s in aghaidh na bliana</string>
 
     <string name="market_account_address_desc">Líonann sé go huathoibríoch ag seiceálacha amach amach anseo nuair a chuirtear comhtháthú na seiceála amach leis.</string>
     <string name="market_account_address_title">Seoladh seachadta réamhshocraithe</string>

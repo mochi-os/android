@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/月</string>
     <string name="market_subscribers_interval_year">/年</string>
     <string name="market_subscribers_load_failed">加载订阅者失败</string>
-    <string name="market_subscription_detail_billing_history">账单记录</string>
-    <string name="market_subscription_detail_billing_history_empty">暂无扣费。</string>
-    <string name="market_subscription_detail_billing_info">账单</string>
-    <string name="market_subscription_detail_cancelled_on">于 %1$s 取消</string>
-    <string name="market_subscription_detail_charge_amount">最近扣费:%1$s</string>
     <string name="market_subscription_detail_next_billing">下一次账单日期:%1$s</string>
-    <string name="market_subscription_detail_not_found">未找到订阅</string>
-    <string name="market_subscription_detail_pending_cancel">待取消</string>
-    <string name="market_subscription_detail_seller">卖家</string>
-    <string name="market_subscription_detail_started">开始于 %1$s</string>
-    <string name="market_subscription_detail_title">订阅</string>
     <string name="market_subscriptions_action_cancel">取消</string>
     <string name="market_subscriptions_action_pause">暂停</string>
     <string name="market_subscriptions_action_reactivate">重新激活</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">我的订阅者</string>
     <string name="market_subscriptions_actions_label">订阅操作</string>
     <string name="market_subscriptions_cancels_on">于 %1$s 取消</string>
-    <string name="market_subscriptions_per_month">每月 %1$s</string>
-    <string name="market_subscriptions_per_year">每年 %1$s</string>
     <string name="market_warnings_title">警告</string>
 
     <string name="market_account_address_desc">添加结账集成后，将在未来结账时自动填充。</string>

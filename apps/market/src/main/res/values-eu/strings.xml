@@ -514,17 +514,7 @@
     <string name="market_subscribers_interval_year">/ urtea</string>
     <string name="market_subscribers_load_failed">Ezin izan dira harpidedunak kargatu</string>
     <string name="market_subscribers_title">Nire harpidedunak</string>
-    <string name="market_subscription_detail_billing_history">Fakturazio-historia</string>
-    <string name="market_subscription_detail_billing_history_empty">Oraindik ez dago karguak.</string>
-    <string name="market_subscription_detail_billing_info">Fakturazioa</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s-(e)an bertan behera utzia</string>
-    <string name="market_subscription_detail_charge_amount">Azken kobrantza: %1$s</string>
     <string name="market_subscription_detail_next_billing">Hurrengo fakturazio-data: %1$s</string>
-    <string name="market_subscription_detail_not_found">Ez da harpidetza aurkitu</string>
-    <string name="market_subscription_detail_pending_cancel">Bertan behera uztea zain</string>
-    <string name="market_subscription_detail_seller">Saltzailea</string>
-    <string name="market_subscription_detail_started">Hasiera: %1$s</string>
-    <string name="market_subscription_detail_title">Harpidetza</string>
     <string name="market_subscriptions_action_cancel">Ezeztatu</string>
     <string name="market_subscriptions_action_pause">Pausatu</string>
     <string name="market_subscriptions_action_reactivate">Berraktibatu</string>
@@ -538,8 +528,6 @@
     <string name="market_subscriptions_cancels_period_end">Uneko aldiaren amaieran utziko da</string>
     <string name="market_subscriptions_empty">Harpidetzarik ez</string>
     <string name="market_subscriptions_empty_body">Harpidetzak errepikari diren erosketak dira — saltzaileek hilabeteko edo urteko prezioarekin zerrendatzen dituzte.</string>
-    <string name="market_subscriptions_per_month">%1$s hileko</string>
-    <string name="market_subscriptions_per_year">%1$s urteko</string>
     <string name="market_subscriptions_title">Harpidetzak</string>
     <string name="market_title">Merkatua</string>
     <string name="market_warnings_title">Abisuak</string>

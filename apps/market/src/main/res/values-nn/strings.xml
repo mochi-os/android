@@ -312,8 +312,6 @@
     <string name="market_subscribers_interval_month">/ månad</string>
     <string name="market_subscribers_interval_year">/ år</string>
     <string name="market_subscribers_load_failed">Klarte ikkje lasta abonnentar</string>
-    <string name="market_subscription_detail_seller">Seljar</string>
-    <string name="market_subscription_detail_title">Abonnement</string>
     <string name="market_subscriptions_action_cancel">Kanseller</string>
     <string name="market_subscriptions_action_pause">Pause</string>
     <string name="market_subscriptions_action_reactivate">Reaktiver</string>
@@ -331,15 +329,7 @@
     <string name="market_onboarding_activate">Aktiver</string>
     <string name="market_onboarding_body">Aktiver kontoen din for å byrje å kjøpe og selje.</string>
     <string name="market_onboarding_title">Velkomen til Market</string>
-    <string name="market_subscription_detail_billing_history">Faktureringshistorikk</string>
-    <string name="market_subscription_detail_billing_history_empty">Ingen belastningar enno.</string>
-    <string name="market_subscription_detail_billing_info">Fakturering</string>
-    <string name="market_subscription_detail_cancelled_on">Avslutta %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Siste belasting: %1$s</string>
     <string name="market_subscription_detail_next_billing">Neste faktureringsdato: %1$s</string>
-    <string name="market_subscription_detail_not_found">Fann ikkje abonnementet</string>
-    <string name="market_subscription_detail_pending_cancel">Oppseiing ventar</string>
-    <string name="market_subscription_detail_started">Starta %1$s</string>
     <string name="market_messages_send">Send</string>
     <string name="market_appeal_dialog_submitting">Sender…</string>
     <string name="market_dispute_dialog_submitting">Sender…</string>
@@ -542,8 +532,6 @@
     <string name="market_subscribers_title">Abonnentane mine</string>
     <string name="market_subscriptions_actions_label">Abonnementshandlingar</string>
     <string name="market_subscriptions_cancels_on">Vert avslutta %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s per månad</string>
-    <string name="market_subscriptions_per_year">%1$s per år</string>
     <string name="market_warnings_title">Åtvaringar</string>
 
     <string name="market_account_address_desc">Fylles ut automatisk ved fremtidige betalinger når kasseintegrasjonen er lagt til.</string>

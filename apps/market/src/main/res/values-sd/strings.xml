@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ مهينو</string>
     <string name="market_subscribers_interval_year">/ سال</string>
     <string name="market_subscribers_load_failed">سبسڪرائيبر لوڊ ڪرڻ ۾ ناڪام</string>
-    <string name="market_subscription_detail_billing_history">بلنگ جي تاريخ</string>
-    <string name="market_subscription_detail_billing_history_empty">اڃا ڪوبه چارج ناهي.</string>
-    <string name="market_subscription_detail_billing_info">بلنگ</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s تي منسوخ ٿيو</string>
-    <string name="market_subscription_detail_charge_amount">تازو چارج: %1$s</string>
     <string name="market_subscription_detail_next_billing">ايندڙ بلنگ تاريخ: %1$s</string>
-    <string name="market_subscription_detail_not_found">رڪنيت نه ملي</string>
-    <string name="market_subscription_detail_pending_cancel">منسوخي باقي آهي</string>
-    <string name="market_subscription_detail_seller">وڪرو ڪندڙ</string>
-    <string name="market_subscription_detail_started">%1$s تي شروع ٿيو</string>
-    <string name="market_subscription_detail_title">سبسڪرپشن</string>
     <string name="market_subscriptions_action_cancel">منسوخ ڪريو</string>
     <string name="market_subscriptions_action_pause">روڪيو</string>
     <string name="market_subscriptions_action_reactivate">ٻيهر فعال ڪريو</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">منهنجا سبسڪرائبر</string>
     <string name="market_subscriptions_actions_label">سبسڪرپشن جون ڪاررواين</string>
     <string name="market_subscriptions_cancels_on">%1$s تي منسوخ ٿيندي</string>
-    <string name="market_subscriptions_per_month">%1$s في مهيني</string>
-    <string name="market_subscriptions_per_year">%1$s في سال</string>
 
     <string name="market_account_address_desc">چيڪ آئوٽ انضمام شامل ٿيڻ کان پوءِ مستقبل جي چيڪ آئوٽن ۾ خودبخود ڀرجي ويندو.</string>
     <string name="market_account_address_title">ڊفالٽ ترسيل جو پتو</string>

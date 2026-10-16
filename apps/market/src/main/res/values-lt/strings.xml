@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ mėn.</string>
     <string name="market_subscribers_interval_year">/ metai</string>
     <string name="market_subscribers_load_failed">Nepavyko įkelti prenumeratorių</string>
-    <string name="market_subscription_detail_billing_history">Atsiskaitymų istorija</string>
-    <string name="market_subscription_detail_billing_history_empty">Kol kas mokėjimų nėra.</string>
-    <string name="market_subscription_detail_billing_info">Atsiskaitymas</string>
-    <string name="market_subscription_detail_cancelled_on">Atšaukta %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Paskutinis mokėjimas: %1$s</string>
     <string name="market_subscription_detail_next_billing">Kita sąskaitos data: %1$s</string>
-    <string name="market_subscription_detail_not_found">Prenumerata nerasta</string>
-    <string name="market_subscription_detail_pending_cancel">Laukiama atšaukimo</string>
-    <string name="market_subscription_detail_seller">Pardavėjas</string>
-    <string name="market_subscription_detail_started">Pradėta %1$s</string>
-    <string name="market_subscription_detail_title">Prenumerata</string>
     <string name="market_subscriptions_action_cancel">Atšaukti</string>
     <string name="market_subscriptions_action_pause">Pristabdyti</string>
     <string name="market_subscriptions_action_reactivate">Reaktyvuoti</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Mano prenumeratoriai</string>
     <string name="market_subscriptions_actions_label">Prenumeratos veiksmai</string>
     <string name="market_subscriptions_cancels_on">Atšaukiama %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s per mėnesį</string>
-    <string name="market_subscriptions_per_year">%1$s per metus</string>
     <string name="market_warnings_title">Įspėjimai</string>
 
     <string name="market_account_address_desc">Užpildoma automatiškai būsimuose atsiskaitymuose, kai pridedama atsiskaitymo integracija.</string>

@@ -514,17 +514,7 @@
     <string name="market_subscribers_interval_year">/ год</string>
     <string name="market_subscribers_load_failed">Не ўдалося загрузіць падпісчыкаў</string>
     <string name="market_subscribers_title">Мае падпісчыкі</string>
-    <string name="market_subscription_detail_billing_history">Гісторыя плацяжоў</string>
-    <string name="market_subscription_detail_billing_history_empty">Пакуль няма плацяжоў.</string>
-    <string name="market_subscription_detail_billing_info">Плацяжы</string>
-    <string name="market_subscription_detail_cancelled_on">Скасавана %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Апошні плацёж: %1$s</string>
     <string name="market_subscription_detail_next_billing">Дата наступнай аплаты: %1$s</string>
-    <string name="market_subscription_detail_not_found">Падпіска не знойдзена</string>
-    <string name="market_subscription_detail_pending_cancel">Скасаванне ў чаканні</string>
-    <string name="market_subscription_detail_seller">Прадавец</string>
-    <string name="market_subscription_detail_started">Пачата %1$s</string>
-    <string name="market_subscription_detail_title">Падпіска</string>
     <string name="market_subscriptions_action_cancel">Адмяніць</string>
     <string name="market_subscriptions_action_pause">Прыпыніць</string>
     <string name="market_subscriptions_action_reactivate">Рэактываваць</string>
@@ -538,8 +528,6 @@
     <string name="market_subscriptions_cancels_period_end">Адменіцца ў канцы бягучага перыяду</string>
     <string name="market_subscriptions_empty">Падпісак няма</string>
     <string name="market_subscriptions_empty_body">Падпіскі — гэта паўторныя пакупкі — прадаўцы прапануюць іх з месячнай або гадавой цаной.</string>
-    <string name="market_subscriptions_per_month">%1$s у месяц</string>
-    <string name="market_subscriptions_per_year">%1$s у год</string>
     <string name="market_subscriptions_title">Падпіскі</string>
     <string name="market_title">Кірмаш</string>
     <string name="market_warnings_title">Папярэджанні</string>

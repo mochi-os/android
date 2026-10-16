@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ моҳ</string>
     <string name="market_subscribers_interval_year">/ сол</string>
     <string name="market_subscribers_load_failed">Боркунии муштариён ба анҷом нарасид</string>
-    <string name="market_subscription_detail_billing_history">Таърихи пардохтҳо</string>
-    <string name="market_subscription_detail_billing_history_empty">Ҳанӯз пардохт нест.</string>
-    <string name="market_subscription_detail_billing_info">Пардохт</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s бекор карда шуд</string>
-    <string name="market_subscription_detail_charge_amount">Пардохти охирин: %1$s</string>
     <string name="market_subscription_detail_next_billing">Санаи навбатии пардохт: %1$s</string>
-    <string name="market_subscription_detail_not_found">Обуна ёфт нашуд</string>
-    <string name="market_subscription_detail_pending_cancel">Бекоркунӣ дар интизор</string>
-    <string name="market_subscription_detail_seller">Фурӯшанда</string>
-    <string name="market_subscription_detail_started">Оғоз: %1$s</string>
-    <string name="market_subscription_detail_title">Обуна</string>
     <string name="market_subscriptions_action_cancel">Бекор кардан</string>
     <string name="market_subscriptions_action_pause">Таваққуф</string>
     <string name="market_subscriptions_action_reactivate">Аз нав фаъолсозӣ</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Муштариёни обунаи ман</string>
     <string name="market_subscriptions_actions_label">Амалҳои обуна</string>
     <string name="market_subscriptions_cancels_on">%1$s бекор мешавад</string>
-    <string name="market_subscriptions_per_month">%1$s дар як моҳ</string>
-    <string name="market_subscriptions_per_year">%1$s дар як сол</string>
     <string name="market_warnings_title">Огоҳиҳо</string>
 
     <string name="market_account_address_desc">Пас аз илова шудани ҳамгироии пардохт дар пардохтҳои оянда худкор пур мешавад.</string>

@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ මාසයකට</string>
     <string name="market_subscribers_interval_year">/ වසරකට</string>
     <string name="market_subscribers_load_failed">දායකයන් පූරණය කිරීමට අසමත් විය</string>
-    <string name="market_subscription_detail_billing_history">බිල්පත් ඉතිහාසය</string>
-    <string name="market_subscription_detail_billing_history_empty">තවම ගාස්තු නොමැත.</string>
-    <string name="market_subscription_detail_billing_info">බිල්පත්</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s දින අවලංගු කරන ලදී</string>
-    <string name="market_subscription_detail_charge_amount">නවතම අයකිරීම: %1$s</string>
     <string name="market_subscription_detail_next_billing">ඊළඟ බිල්පත් දිනය: %1$s</string>
-    <string name="market_subscription_detail_not_found">දායකත්වය හමු නොවීය</string>
-    <string name="market_subscription_detail_pending_cancel">අවලංගු කිරීම පොරොත්තුවෙන්</string>
-    <string name="market_subscription_detail_seller">විකුණුම්කරු</string>
-    <string name="market_subscription_detail_started">ආරම්භය: %1$s</string>
-    <string name="market_subscription_detail_title">දායකත්වය</string>
     <string name="market_subscriptions_action_cancel">අවලංගු කරන්න</string>
     <string name="market_subscriptions_action_pause">විරාම කරන්න</string>
     <string name="market_subscriptions_action_reactivate">නැවත සක්‍රිය කරන්න</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">මගේ දායකයින්</string>
     <string name="market_subscriptions_actions_label">දායකත්ව ක්‍රියා</string>
     <string name="market_subscriptions_cancels_on">%1$s දින අවලංගු වේ</string>
-    <string name="market_subscriptions_per_month">මසකට %1$s</string>
-    <string name="market_subscriptions_per_year">වසරකට %1$s</string>
 
     <string name="market_account_address_desc">චෙක්අවුට් ඒකාබද්ධ කිරීම එක් කළ පසු අනාගත චෙක්අවුට් වලදී ස්වයංක්‍රීයව පුරවයි.</string>
     <string name="market_account_address_title">පෙරනිමි නැව්ගත කිරීමේ ලිපිනය</string>

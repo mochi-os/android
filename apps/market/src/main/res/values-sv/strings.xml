@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ månad</string>
     <string name="market_subscribers_interval_year">/ år</string>
     <string name="market_subscribers_load_failed">Kunde inte läsa in prenumeranter</string>
-    <string name="market_subscription_detail_billing_history">Faktureringshistorik</string>
-    <string name="market_subscription_detail_billing_history_empty">Inga debiteringar ännu.</string>
-    <string name="market_subscription_detail_billing_info">Fakturering</string>
-    <string name="market_subscription_detail_cancelled_on">Avslutad %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Senaste debitering: %1$s</string>
     <string name="market_subscription_detail_next_billing">Nästa faktureringsdatum: %1$s</string>
-    <string name="market_subscription_detail_not_found">Prenumerationen hittades inte</string>
-    <string name="market_subscription_detail_pending_cancel">Uppsägning väntar</string>
-    <string name="market_subscription_detail_seller">Säljare</string>
-    <string name="market_subscription_detail_started">Startad %1$s</string>
-    <string name="market_subscription_detail_title">Prenumeration</string>
     <string name="market_subscriptions_action_cancel">Avbryt</string>
     <string name="market_subscriptions_action_pause">Pausa</string>
     <string name="market_subscriptions_action_reactivate">Återaktivera</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Mina prenumeranter</string>
     <string name="market_subscriptions_actions_label">Prenumerationsåtgärder</string>
     <string name="market_subscriptions_cancels_on">Avslutas %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s per månad</string>
-    <string name="market_subscriptions_per_year">%1$s per år</string>
     <string name="market_warnings_title">Varningar</string>
 
     <string name="market_account_address_desc">Fylls i automatiskt vid framtida utcheckningar när utcheckningsintegrationen har lagts till.</string>

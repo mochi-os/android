@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ 월</string>
     <string name="market_subscribers_interval_year">/ 년</string>
     <string name="market_subscribers_load_failed">구독자 불러오기에 실패했어요</string>
-    <string name="market_subscription_detail_billing_history">결제 내역</string>
-    <string name="market_subscription_detail_billing_history_empty">아직 결제가 없습니다.</string>
-    <string name="market_subscription_detail_billing_info">결제</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s에 취소됨</string>
-    <string name="market_subscription_detail_charge_amount">최근 결제: %1$s</string>
     <string name="market_subscription_detail_next_billing">다음 결제일: %1$s</string>
-    <string name="market_subscription_detail_not_found">구독을 찾을 수 없습니다</string>
-    <string name="market_subscription_detail_pending_cancel">취소 보류 중</string>
-    <string name="market_subscription_detail_seller">판매자</string>
-    <string name="market_subscription_detail_started">시작 %1$s</string>
-    <string name="market_subscription_detail_title">구독</string>
     <string name="market_subscriptions_action_cancel">취소</string>
     <string name="market_subscriptions_action_pause">일시 정지</string>
     <string name="market_subscriptions_action_reactivate">재활성화</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">내 구독자</string>
     <string name="market_subscriptions_actions_label">구독 작업</string>
     <string name="market_subscriptions_cancels_on">%1$s에 취소됨</string>
-    <string name="market_subscriptions_per_month">월 %1$s</string>
-    <string name="market_subscriptions_per_year">연 %1$s</string>
     <string name="market_warnings_title">경고</string>
 
     <string name="market_account_address_desc">결제 연동이 추가되면 향후 결제 시 자동으로 입력됩니다.</string>

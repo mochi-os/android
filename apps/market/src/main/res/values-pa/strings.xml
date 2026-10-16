@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ ਮਹੀਨਾ</string>
     <string name="market_subscribers_interval_year">/ ਸਾਲ</string>
     <string name="market_subscribers_load_failed">ਗਾਹਕ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
-    <string name="market_subscription_detail_billing_history">ਬਿਲਿੰਗ ਇਤਿਹਾਸ</string>
-    <string name="market_subscription_detail_billing_history_empty">ਹਾਲੇ ਕੋਈ ਚਾਰਜ ਨਹੀਂ।</string>
-    <string name="market_subscription_detail_billing_info">ਬਿਲਿੰਗ</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s ਨੂੰ ਰੱਦ ਕੀਤਾ ਗਿਆ</string>
-    <string name="market_subscription_detail_charge_amount">ਨਵੀਨਤਮ ਚਾਰਜ: %1$s</string>
     <string name="market_subscription_detail_next_billing">ਅਗਲੀ ਬਿਲਿੰਗ ਤਾਰੀਖ: %1$s</string>
-    <string name="market_subscription_detail_not_found">ਮੈਂਬਰਸ਼ਿਪ ਨਹੀਂ ਮਿਲੀ</string>
-    <string name="market_subscription_detail_pending_cancel">ਰੱਦ ਕਰਨਾ ਬਕਾਇਆ</string>
-    <string name="market_subscription_detail_seller">ਵੇਚਣ ਵਾਲਾ</string>
-    <string name="market_subscription_detail_started">ਸ਼ੁਰੂ: %1$s</string>
-    <string name="market_subscription_detail_title">ਗਾਹਕੀ</string>
     <string name="market_subscriptions_action_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="market_subscriptions_action_pause">ਰੋਕੋ</string>
     <string name="market_subscriptions_action_reactivate">ਮੁੜ-ਸਰਗਰਮ ਕਰੋ</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">ਮੇਰੇ ਗਾਹਕ</string>
     <string name="market_subscriptions_actions_label">ਗਾਹਕੀ ਕਾਰਵਾਈਆਂ</string>
     <string name="market_subscriptions_cancels_on">%1$s ਨੂੰ ਰੱਦ ਹੋਵੇਗੀ</string>
-    <string name="market_subscriptions_per_month">%1$s ਪ੍ਰਤੀ ਮਹੀਨਾ</string>
-    <string name="market_subscriptions_per_year">%1$s ਪ੍ਰਤੀ ਸਾਲ</string>
 
     <string name="market_account_address_desc">ਚੈੱਕਆਊਟ ਏਕੀਕਰਨ ਜੋੜਨ ਤੋਂ ਬਾਅਦ ਭਵਿੱਖ ਦੇ ਚੈੱਕਆਊਟ ਵਿੱਚ ਆਪਣੇ-ਆਪ ਭਰ ਜਾਂਦਾ ਹੈ।</string>
     <string name="market_account_address_title">ਮੂਲ ਸ਼ਿਪਿੰਗ ਪਤਾ</string>

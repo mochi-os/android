@@ -312,17 +312,7 @@
     <string name="market_subscribers_interval_month">/ mês</string>
     <string name="market_subscribers_interval_year">/ ano</string>
     <string name="market_subscribers_load_failed">Falha ao carregar assinantes</string>
-    <string name="market_subscription_detail_billing_history">Histórico de faturamento</string>
-    <string name="market_subscription_detail_billing_history_empty">Nenhuma cobrança ainda.</string>
-    <string name="market_subscription_detail_billing_info">Faturamento</string>
-    <string name="market_subscription_detail_cancelled_on">Cancelado em %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Última cobrança: %1$s</string>
     <string name="market_subscription_detail_next_billing">Próxima cobrança: %1$s</string>
-    <string name="market_subscription_detail_not_found">Assinatura não encontrada</string>
-    <string name="market_subscription_detail_pending_cancel">Cancelamento pendente</string>
-    <string name="market_subscription_detail_seller">Vendedor</string>
-    <string name="market_subscription_detail_started">Iniciado em %1$s</string>
-    <string name="market_subscription_detail_title">Assinatura</string>
     <string name="market_subscriptions_action_cancel">Cancelar</string>
     <string name="market_subscriptions_action_pause">Pausar</string>
     <string name="market_subscriptions_action_reactivate">Reativar</string>
@@ -532,8 +522,6 @@
     <string name="market_subscribers_title">Meus assinantes</string>
     <string name="market_subscriptions_actions_label">Ações da assinatura</string>
     <string name="market_subscriptions_cancels_on">Cancela em %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s por mês</string>
-    <string name="market_subscriptions_per_year">%1$s por ano</string>
     <string name="market_warnings_title">Avisos</string>
 
     <string name="market_account_address_desc">Será preenchido automaticamente em compras futuras assim que a integração de checkout for adicionada.</string>

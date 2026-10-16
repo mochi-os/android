@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ hónap</string>
     <string name="market_subscribers_interval_year">/ év</string>
     <string name="market_subscribers_load_failed">Nem sikerült betölteni a feliratkozókat</string>
-    <string name="market_subscription_detail_billing_history">Számlázási előzmények</string>
-    <string name="market_subscription_detail_billing_history_empty">Még nincsenek terhelések.</string>
-    <string name="market_subscription_detail_billing_info">Számlázás</string>
-    <string name="market_subscription_detail_cancelled_on">Lemondva: %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Legutóbbi terhelés: %1$s</string>
     <string name="market_subscription_detail_next_billing">Következő számlázási dátum: %1$s</string>
-    <string name="market_subscription_detail_not_found">Az előfizetés nem található</string>
-    <string name="market_subscription_detail_pending_cancel">Lemondás folyamatban</string>
-    <string name="market_subscription_detail_seller">Eladó</string>
-    <string name="market_subscription_detail_started">Kezdés: %1$s</string>
-    <string name="market_subscription_detail_title">Előfizetés</string>
     <string name="market_subscriptions_action_cancel">Lemondás</string>
     <string name="market_subscriptions_action_pause">Szünet</string>
     <string name="market_subscriptions_action_reactivate">Újraaktiválás</string>
@@ -467,8 +457,6 @@
     <string name="market_subscribers_title">Feliratkozóim</string>
     <string name="market_subscriptions_actions_label">Előfizetési műveletek</string>
     <string name="market_subscriptions_cancels_on">Lemondás dátuma: %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s havonta</string>
-    <string name="market_subscriptions_per_year">%1$s évente</string>
     <string name="market_warnings_title">Figyelmeztetések</string>
 
 

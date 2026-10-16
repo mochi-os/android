@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ ngenyanga</string>
     <string name="market_subscribers_interval_year">/ ngonyaka</string>
     <string name="market_subscribers_load_failed">Ayiphumelelanga ukulayisha abarhumi</string>
-    <string name="market_subscription_detail_billing_history">Imbali yokubhatala</string>
-    <string name="market_subscription_detail_billing_history_empty">Akukho zintlawulo okwangoku.</string>
-    <string name="market_subscription_detail_billing_info">Ukubhatala</string>
-    <string name="market_subscription_detail_cancelled_on">Kurhoxisiwe ngo-%1$s</string>
-    <string name="market_subscription_detail_charge_amount">Intlawulo yakutsha nje: %1$s</string>
     <string name="market_subscription_detail_next_billing">Umhla olandelayo wokubhatala: %1$s</string>
-    <string name="market_subscription_detail_not_found">Ukubhalisa akufumaneki</string>
-    <string name="market_subscription_detail_pending_cancel">Ukurhoxisa kulindile</string>
-    <string name="market_subscription_detail_seller">Umthengisi</string>
-    <string name="market_subscription_detail_started">Kuqaliswe ngo-%1$s</string>
-    <string name="market_subscription_detail_title">Urhumo</string>
     <string name="market_subscriptions_action_cancel">Rhoxisa</string>
     <string name="market_subscriptions_action_pause">Misa okwethutyana</string>
     <string name="market_subscriptions_action_reactivate">Vuselela</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Ababhalisi bam</string>
     <string name="market_subscriptions_actions_label">Izenzo zorhwebo</string>
     <string name="market_subscriptions_cancels_on">Iyarhoxiswa ngo-%1$s</string>
-    <string name="market_subscriptions_per_month">%1$s ngenyanga</string>
-    <string name="market_subscriptions_per_year">%1$s ngonyaka</string>
 
     <string name="market_account_address_desc">Izalisa ngokuzenzekelayo kwiintlawulo ezizayo nje ukuba kongezwe undibaniso lokuhlawula.</string>
     <string name="market_account_address_title">Idilesi yokuthumela emiselweyo</string>

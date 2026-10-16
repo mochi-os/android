@@ -514,17 +514,7 @@
     <string name="market_subscribers_interval_year">/ ዓመት</string>
     <string name="market_subscribers_load_failed">ተመዝጋቢዎችን መጫን አልተሳካም</string>
     <string name="market_subscribers_title">የእኔ ተመዝጋቢዎች</string>
-    <string name="market_subscription_detail_billing_history">የክፍያ ታሪክ</string>
-    <string name="market_subscription_detail_billing_history_empty">ገና ምንም ክፍያዎች የሉም።</string>
-    <string name="market_subscription_detail_billing_info">ክፍያ</string>
-    <string name="market_subscription_detail_cancelled_on">በ%1$s ተሰርዟል</string>
-    <string name="market_subscription_detail_charge_amount">የቅርብ ጊዜ ክፍያ፦ %1$s</string>
     <string name="market_subscription_detail_next_billing">የቀጣይ ክፍያ ቀን፦ %1$s</string>
-    <string name="market_subscription_detail_not_found">ምዝገባ አልተገኘም</string>
-    <string name="market_subscription_detail_pending_cancel">የመሰረዝ ሁኔታ ላይ</string>
-    <string name="market_subscription_detail_seller">ሻጭ</string>
-    <string name="market_subscription_detail_started">ጀምሯል %1$s</string>
-    <string name="market_subscription_detail_title">ምዝገባ</string>
     <string name="market_subscriptions_action_cancel">ይሰርዙ</string>
     <string name="market_subscriptions_action_pause">አቁም</string>
     <string name="market_subscriptions_action_reactivate">እንደገና አንቃ</string>
@@ -538,8 +528,6 @@
     <string name="market_subscriptions_cancels_period_end">በወቅቱ መጨረሻ ይሰረዛል</string>
     <string name="market_subscriptions_empty">ምንም ምዝገባዎች የሉም</string>
     <string name="market_subscriptions_empty_body">ምዝገባዎች ተደጋጋሚ ግዢዎች ናቸው — ሻጮች በወርሃዊ ወይም በዓመታዊ ዋጋ ይዘረዝሯቸዋል።</string>
-    <string name="market_subscriptions_per_month">%1$s በወር</string>
-    <string name="market_subscriptions_per_year">%1$s በዓመት</string>
     <string name="market_subscriptions_title">ምዝገባዎች</string>
     <string name="market_title">ገበያ</string>
     <string name="market_warnings_title">ማስጠንቀቂያዎች</string>

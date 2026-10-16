@@ -514,17 +514,7 @@
     <string name="market_subscribers_interval_year">/ жил</string>
     <string name="market_subscribers_load_failed">Захиалагчдыг ачаалж чадсангүй</string>
     <string name="market_subscribers_title">Миний бүртгэлчид</string>
-    <string name="market_subscription_detail_billing_history">Төлбөрийн түүх</string>
-    <string name="market_subscription_detail_billing_history_empty">Одоогоор төлбөр байхгүй.</string>
-    <string name="market_subscription_detail_billing_info">Төлбөр тооцоо</string>
-    <string name="market_subscription_detail_cancelled_on">Цуцалсан: %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Сүүлийн төлбөр: %1$s</string>
     <string name="market_subscription_detail_next_billing">Дараагийн төлбөрийн огноо: %1$s</string>
-    <string name="market_subscription_detail_not_found">Захиалга олдсонгүй</string>
-    <string name="market_subscription_detail_pending_cancel">Цуцлалт хүлээгдэж байна</string>
-    <string name="market_subscription_detail_seller">Худалдагч</string>
-    <string name="market_subscription_detail_started">Эхэлсэн: %1$s</string>
-    <string name="market_subscription_detail_title">Захиалга</string>
     <string name="market_subscriptions_action_cancel">Цуцлах</string>
     <string name="market_subscriptions_action_pause">Түр зогсоох</string>
     <string name="market_subscriptions_action_reactivate">Дахин идэвхжүүлэх</string>
@@ -538,8 +528,6 @@
     <string name="market_subscriptions_cancels_period_end">Одоогийн мөчлөгийн төгсгөлд цуцлагдана</string>
     <string name="market_subscriptions_empty">Захиалга алга</string>
     <string name="market_subscriptions_empty_body">Захиалга нь давтагдах худалдан авалт юм — худалдагчид сар бүрийн эсвэл жилийн үнээр зар тавьдаг.</string>
-    <string name="market_subscriptions_per_month">%1$s сард</string>
-    <string name="market_subscriptions_per_year">%1$s жилд</string>
     <string name="market_subscriptions_title">Захиалгууд</string>
     <string name="market_title">Зах зээл</string>
     <string name="market_warnings_title">Анхааруулга</string>

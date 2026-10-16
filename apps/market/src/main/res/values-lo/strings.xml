@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ ເດືອນ</string>
     <string name="market_subscribers_interval_year">/ ປີ</string>
     <string name="market_subscribers_load_failed">ໂຫຼດຜູ້ຕິດຕາມລົ້ມເຫຼວ</string>
-    <string name="market_subscription_detail_billing_history">ປະຫວັດການເກັບເງິນ</string>
-    <string name="market_subscription_detail_billing_history_empty">ຍັງບໍ່ມີການເກັບເງິນ.</string>
-    <string name="market_subscription_detail_billing_info">ການເກັບເງິນ</string>
-    <string name="market_subscription_detail_cancelled_on">ຍົກເລີກເມື່ອ %1$s</string>
-    <string name="market_subscription_detail_charge_amount">ການເກັບເງິນຫຼ້າສຸດ: %1$s</string>
     <string name="market_subscription_detail_next_billing">ວັນທີ່ຮຽກເກັບເງິນຄັ້ງຕໍ່ໄປ: %1$s</string>
-    <string name="market_subscription_detail_not_found">ບໍ່ພົບການສະໝັກ</string>
-    <string name="market_subscription_detail_pending_cancel">ລໍຖ້າການຍົກເລີກ</string>
-    <string name="market_subscription_detail_seller">ຜູ້ຂາຍ</string>
-    <string name="market_subscription_detail_started">ເລີ່ມ %1$s</string>
-    <string name="market_subscription_detail_title">ການສະໝັກສະມາຊິກ</string>
     <string name="market_subscriptions_action_cancel">ຍົກເລີກ</string>
     <string name="market_subscriptions_action_pause">ຢຸດຊົ່ວຄາວ</string>
     <string name="market_subscriptions_action_reactivate">ເປີດໃຊ້ງານໃໝ່</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">ຜູ້ສະໝັກສະມາຊິກຂອງຂ້ອຍ</string>
     <string name="market_subscriptions_actions_label">ການກະທຳການສະໝັກສະມາຊິກ</string>
     <string name="market_subscriptions_cancels_on">ຍົກເລີກໃນ %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s ຕໍ່ເດືອນ</string>
-    <string name="market_subscriptions_per_year">%1$s ຕໍ່ປີ</string>
 
     <string name="market_account_address_desc">ຕື່ມຂໍ້ມູນລ່ວງໜ້າໃນການຊໍາລະເງິນຄັ້ງຕໍ່ໄປເມື່ອເພີ່ມການເຊື່ອມຕໍ່ການຊໍາລະເງິນແລ້ວ.</string>
     <string name="market_account_address_title">ທີ່ຢູ່ຈັດສົ່ງເລີ່ມຕົ້ນ</string>

@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ buwan</string>
     <string name="market_subscribers_interval_year">/ taon</string>
     <string name="market_subscribers_load_failed">Nabigong i-load ang mga subscriber</string>
-    <string name="market_subscription_detail_billing_history">Kasaysayan ng pagsingil</string>
-    <string name="market_subscription_detail_billing_history_empty">Wala pang mga singil.</string>
-    <string name="market_subscription_detail_billing_info">Pagsingil</string>
-    <string name="market_subscription_detail_cancelled_on">Kinansela noong %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Pinakabagong singil: %1$s</string>
     <string name="market_subscription_detail_next_billing">Susunod na petsa ng pagsingil: %1$s</string>
-    <string name="market_subscription_detail_not_found">Hindi natagpuan ang subscription</string>
-    <string name="market_subscription_detail_pending_cancel">Nakabinbin ang pagkansela</string>
-    <string name="market_subscription_detail_seller">Nagbebenta</string>
-    <string name="market_subscription_detail_started">Nagsimula noong %1$s</string>
-    <string name="market_subscription_detail_title">Subscription</string>
     <string name="market_subscriptions_action_cancel">Kanselahin</string>
     <string name="market_subscriptions_action_pause">I-pause</string>
     <string name="market_subscriptions_action_reactivate">I-reaktibo</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">Aking mga subscriber</string>
     <string name="market_subscriptions_actions_label">Mga aksyon sa subscription</string>
     <string name="market_subscriptions_cancels_on">Magka-cancel sa %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s kada buwan</string>
-    <string name="market_subscriptions_per_year">%1$s kada taon</string>
 
     <string name="market_account_address_desc">Awtomatikong mapupunan sa mga susunod na checkout kapag naidagdag na ang checkout integration.</string>
     <string name="market_account_address_title">Default na shipping address</string>

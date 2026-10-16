@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ مانگ</string>
     <string name="market_subscribers_interval_year">/ ساڵ</string>
     <string name="market_subscribers_load_failed">بارکردنی بەشداربووان سەرکەوتوو نەبوو</string>
-    <string name="market_subscription_detail_billing_history">مێژووی پسوولەکردن</string>
-    <string name="market_subscription_detail_billing_history_empty">هێشتا هیچ بڕە پارەیەک نییە.</string>
-    <string name="market_subscription_detail_billing_info">پسوولەکردن</string>
-    <string name="market_subscription_detail_cancelled_on">لە %1$s هەڵوەشێنرایەوە</string>
-    <string name="market_subscription_detail_charge_amount">دوایین پارەدان: %1$s</string>
     <string name="market_subscription_detail_next_billing">ڕێکەوتی داهاتووی پسوولە: %1$s</string>
-    <string name="market_subscription_detail_not_found">بەشداری نەدۆزرایەوە</string>
-    <string name="market_subscription_detail_pending_cancel">هەڵوەشاندنەوە چاوەڕوانە</string>
-    <string name="market_subscription_detail_seller">فرۆشیار</string>
-    <string name="market_subscription_detail_started">دەستیپێکرد لە %1$s</string>
-    <string name="market_subscription_detail_title">بەشداری</string>
     <string name="market_subscriptions_action_cancel">هەڵوەشاندنەوە</string>
     <string name="market_subscriptions_action_pause">وەستان</string>
     <string name="market_subscriptions_action_reactivate">چالاککردنەوە</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">بەشداربووانم</string>
     <string name="market_subscriptions_actions_label">کردارەکانی بەشداریبوون</string>
     <string name="market_subscriptions_cancels_on">هەڵدەوەشێتەوە لە %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s بۆ هەر مانگێک</string>
-    <string name="market_subscriptions_per_year">%1$s بۆ هەر ساڵێک</string>
 
     <string name="market_account_address_desc">دوای زیادکردنی یەکخستنی پارەدان، لە پارەدانە داهاتووەکاندا بەخۆکارانە پڕدەکرێتەوە.</string>
     <string name="market_account_address_title">ناونیشانی گەیاندنی بنەڕەتی</string>

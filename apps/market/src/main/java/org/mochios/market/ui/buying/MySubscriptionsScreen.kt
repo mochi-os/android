@@ -173,10 +173,19 @@ private fun SubscriptionRow(
     } else {
         ""
     }
+    val renews = sub.ends > 0L && sub.cancelled == 0L &&
+        (sub.status == SubscriptionStatus.ACTIVE || sub.status == SubscriptionStatus.PAST_DUE)
     MarketListRow(
         title = sub.title ?: "Subscription #${sub.id}",
         onClick = onTap,
-        subtitle = format.formatTimestamp(sub.created),
+        subtitle = if (renews) {
+            stringResource(
+                R.string.market_subscription_detail_next_billing,
+                format.formatTimestamp(sub.ends),
+            )
+        } else {
+            format.formatTimestamp(sub.created)
+        },
         preview = cancelNote,
         badges = { MarketStatusBadge(status = sub.status?.name?.lowercase() ?: "") },
         trailing = {

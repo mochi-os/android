@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ mesec</string>
     <string name="market_subscribers_interval_year">/ leto</string>
     <string name="market_subscribers_load_failed">Neuspešno nalaganje naročnikov</string>
-    <string name="market_subscription_detail_billing_history">Zgodovina obračunov</string>
-    <string name="market_subscription_detail_billing_history_empty">Zaenkrat ni bremenitev.</string>
-    <string name="market_subscription_detail_billing_info">Obračun</string>
-    <string name="market_subscription_detail_cancelled_on">Preklicano %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Zadnja bremenitev: %1$s</string>
     <string name="market_subscription_detail_next_billing">Naslednji datum obračuna: %1$s</string>
-    <string name="market_subscription_detail_not_found">Naročnina ni najdena</string>
-    <string name="market_subscription_detail_pending_cancel">Preklic v teku</string>
-    <string name="market_subscription_detail_seller">Prodajalec</string>
-    <string name="market_subscription_detail_started">Začeto %1$s</string>
-    <string name="market_subscription_detail_title">Naročnina</string>
     <string name="market_subscriptions_action_cancel">Prekliči</string>
     <string name="market_subscriptions_action_pause">Premor</string>
     <string name="market_subscriptions_action_reactivate">Ponovno aktiviraj</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Moji naročniki</string>
     <string name="market_subscriptions_actions_label">Dejanja naročnine</string>
     <string name="market_subscriptions_cancels_on">Prekliče se %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s na mesec</string>
-    <string name="market_subscriptions_per_year">%1$s na leto</string>
     <string name="market_warnings_title">Opozorila</string>
 
     <string name="market_account_address_desc">Po dodani integraciji blagajne se bo samodejno izpolnilo pri prihodnjih naročilih.</string>

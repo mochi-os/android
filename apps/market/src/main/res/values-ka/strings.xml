@@ -380,17 +380,7 @@
     <string name="market_subscribers_interval_month">/ თვეში</string>
     <string name="market_subscribers_interval_year">/ წელიწადში</string>
     <string name="market_subscribers_load_failed">გამომწერების ჩატვირთვა ვერ მოხერხდა</string>
-    <string name="market_subscription_detail_billing_history">ბილინგის ისტორია</string>
-    <string name="market_subscription_detail_billing_history_empty">ჯერ არ არის გადახდები.</string>
-    <string name="market_subscription_detail_billing_info">ბილინგი</string>
-    <string name="market_subscription_detail_cancelled_on">გაუქმდა %1$s</string>
-    <string name="market_subscription_detail_charge_amount">ბოლო გადახდა: %1$s</string>
     <string name="market_subscription_detail_next_billing">შემდეგი ანგარიშსწორების თარიღი: %1$s</string>
-    <string name="market_subscription_detail_not_found">გამოწერა ვერ მოიძებნა</string>
-    <string name="market_subscription_detail_pending_cancel">გაუქმება მოლოდინშია</string>
-    <string name="market_subscription_detail_seller">გამყიდველი</string>
-    <string name="market_subscription_detail_started">დაიწყო %1$s</string>
-    <string name="market_subscription_detail_title">გამოწერა</string>
     <string name="market_subscriptions_action_cancel">გაუქმება</string>
     <string name="market_subscriptions_action_pause">შეჩერება</string>
     <string name="market_subscriptions_action_reactivate">რეაქტივაცია</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">ჩემი გამომწერები</string>
     <string name="market_subscriptions_actions_label">გამოწერის მოქმედებები</string>
     <string name="market_subscriptions_cancels_on">გაუქმდება %1$s-ს</string>
-    <string name="market_subscriptions_per_month">%1$s თვეში</string>
-    <string name="market_subscriptions_per_year">%1$s წელიწადში</string>
 
     <string name="market_account_address_desc">გადახდის ინტეგრაციის დამატების შემდეგ ავტომატურად ივსება სამომავლო გადახდებზე.</string>
     <string name="market_account_address_title">მიწოდების ნაგულისხმევი მისამართი</string>

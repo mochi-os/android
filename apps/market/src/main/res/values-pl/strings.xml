@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ miesiąc</string>
     <string name="market_subscribers_interval_year">/ rok</string>
     <string name="market_subscribers_load_failed">Nie udało się załadować subskrybentów</string>
-    <string name="market_subscription_detail_billing_history">Historia rozliczeń</string>
-    <string name="market_subscription_detail_billing_history_empty">Brak jeszcze obciążeń.</string>
-    <string name="market_subscription_detail_billing_info">Rozliczenia</string>
-    <string name="market_subscription_detail_cancelled_on">Anulowano %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Ostatnia płatność: %1$s</string>
     <string name="market_subscription_detail_next_billing">Następna płatność: %1$s</string>
-    <string name="market_subscription_detail_not_found">Nie znaleziono subskrypcji</string>
-    <string name="market_subscription_detail_pending_cancel">Anulowanie oczekujące</string>
-    <string name="market_subscription_detail_seller">Sprzedający</string>
-    <string name="market_subscription_detail_started">Rozpoczęto %1$s</string>
-    <string name="market_subscription_detail_title">Subskrypcja</string>
     <string name="market_subscriptions_action_cancel">Anuluj</string>
     <string name="market_subscriptions_action_pause">Wstrzymaj</string>
     <string name="market_subscriptions_action_reactivate">Aktywuj ponownie</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Moi subskrybenci</string>
     <string name="market_subscriptions_actions_label">Akcje subskrypcji</string>
     <string name="market_subscriptions_cancels_on">Anulowanie dnia %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s miesięcznie</string>
-    <string name="market_subscriptions_per_year">%1$s rocznie</string>
     <string name="market_warnings_title">Ostrzeżenia</string>
 
     <string name="market_account_address_desc">Będzie wstępnie uzupełniane przy przyszłych zamówieniach po dodaniu integracji realizacji zamówień.</string>

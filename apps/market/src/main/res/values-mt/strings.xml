@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ xahar</string>
     <string name="market_subscribers_interval_year">/ sena</string>
     <string name="market_subscribers_load_failed">Ma rnexxiex jitgħabbew l-abbonati</string>
-    <string name="market_subscription_detail_billing_history">Storja tal-fatturazzjoni</string>
-    <string name="market_subscription_detail_billing_history_empty">Għad m’hemm l-ebda ħlas.</string>
-    <string name="market_subscription_detail_billing_info">Fatturazzjoni</string>
-    <string name="market_subscription_detail_cancelled_on">Ikkanċellat fi %1$s</string>
-    <string name="market_subscription_detail_charge_amount">L-aħħar ħlas: %1$s</string>
     <string name="market_subscription_detail_next_billing">Id-data tal-kontijiet li jmiss: %1$s</string>
-    <string name="market_subscription_detail_not_found">L-abbonament ma nstabx</string>
-    <string name="market_subscription_detail_pending_cancel">Kanċellazzjoni pendenti</string>
-    <string name="market_subscription_detail_seller">Bejjiegħ</string>
-    <string name="market_subscription_detail_started">Beda %1$s</string>
-    <string name="market_subscription_detail_title">Abbonament</string>
     <string name="market_subscriptions_action_cancel">Ikkanċella</string>
     <string name="market_subscriptions_action_pause">Pawża</string>
     <string name="market_subscriptions_action_reactivate">Erġa\' attiva</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">L-abbonati tiegħi</string>
     <string name="market_subscriptions_actions_label">Azzjonijiet tal-abbonament</string>
     <string name="market_subscriptions_cancels_on">Jitħassar fi %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s fix-xahar</string>
-    <string name="market_subscriptions_per_year">%1$s fis-sena</string>
 
     <string name="market_account_address_desc">Jimtela awtomatikament fil-checkouts futuri ladarba tiżdied l-integrazzjoni tal-checkout.</string>
     <string name="market_account_address_title">Indirizz tal-konsenja awtomatiku</string>

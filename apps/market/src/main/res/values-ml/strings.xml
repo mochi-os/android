@@ -379,17 +379,7 @@
     <string name="market_subscribers_interval_month">/ മാസം</string>
     <string name="market_subscribers_interval_year">/ വർഷം</string>
     <string name="market_subscribers_load_failed">വരിക്കാരെ ലോഡുചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="market_subscription_detail_billing_history">ബില്ലിംഗ് ചരിത്രം</string>
-    <string name="market_subscription_detail_billing_history_empty">ഇതുവരെ ചാർജുകളൊന്നുമില്ല.</string>
-    <string name="market_subscription_detail_billing_info">ബില്ലിംഗ്</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s-ന് റദ്ദാക്കി</string>
-    <string name="market_subscription_detail_charge_amount">ഏറ്റവും പുതിയ ചാർജ്: %1$s</string>
     <string name="market_subscription_detail_next_billing">അടുത്ത ബില്ലിംഗ് തീയതി: %1$s</string>
-    <string name="market_subscription_detail_not_found">സബ്സ്ക്രിപ്ഷൻ കണ്ടെത്തിയില്ല</string>
-    <string name="market_subscription_detail_pending_cancel">റദ്ദാക്കൽ തീർപ്പാക്കാനുണ്ട്</string>
-    <string name="market_subscription_detail_seller">വിൽപ്പനക്കാരൻ</string>
-    <string name="market_subscription_detail_started">%1$s-ന് ആരംഭിച്ചു</string>
-    <string name="market_subscription_detail_title">സബ്സ്ക്രിപ്ഷൻ</string>
     <string name="market_subscriptions_action_cancel">റദ്ദാക്കുക</string>
     <string name="market_subscriptions_action_pause">താൽക്കാലികമായി നിർത്തുക</string>
     <string name="market_subscriptions_action_reactivate">വീണ്ടും സജീവമാക്കുക</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">എന്റെ വരിക്കാർ</string>
     <string name="market_subscriptions_actions_label">സബ്സ്ക്രിപ്ഷൻ പ്രവർത്തനങ്ങൾ</string>
     <string name="market_subscriptions_cancels_on">%1$s-ന് റദ്ദാക്കുന്നു</string>
-    <string name="market_subscriptions_per_month">പ്രതിമാസം %1$s</string>
-    <string name="market_subscriptions_per_year">പ്രതിവർഷം %1$s</string>
 
     <string name="market_account_address_desc">ചെക്ക്ഔട്ട് ഏകീകരണം ചേർത്തുകഴിഞ്ഞാൽ ഭാവിയിലെ ചെക്ക്ഔട്ടുകളിൽ സ്വയമേവ പൂരിപ്പിക്കും.</string>
     <string name="market_account_address_title">ഡിഫോൾട്ട് ഷിപ്പിംഗ് വിലാസം</string>

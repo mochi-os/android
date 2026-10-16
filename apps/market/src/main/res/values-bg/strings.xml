@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ месец</string>
     <string name="market_subscribers_interval_year">/ година</string>
     <string name="market_subscribers_load_failed">Неуспешно зареждане на абонати</string>
-    <string name="market_subscription_detail_billing_history">История на плащанията</string>
-    <string name="market_subscription_detail_billing_history_empty">Все още няма плащания.</string>
-    <string name="market_subscription_detail_billing_info">Фактуриране</string>
-    <string name="market_subscription_detail_cancelled_on">Отказан на %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Последно плащане: %1$s</string>
     <string name="market_subscription_detail_next_billing">Следваща дата за плащане: %1$s</string>
-    <string name="market_subscription_detail_not_found">Абонаментът не е намерен</string>
-    <string name="market_subscription_detail_pending_cancel">Предстои отказване</string>
-    <string name="market_subscription_detail_seller">Продавач</string>
-    <string name="market_subscription_detail_started">Започнат на %1$s</string>
-    <string name="market_subscription_detail_title">Абонамент</string>
     <string name="market_subscriptions_action_cancel">Анулирай</string>
     <string name="market_subscriptions_action_pause">Пауза</string>
     <string name="market_subscriptions_action_reactivate">Реактивирай</string>
@@ -475,8 +465,6 @@
     <string name="market_subscribers_title">Моите абонати</string>
     <string name="market_subscriptions_actions_label">Действия за абонамента</string>
     <string name="market_subscriptions_cancels_on">Отменя се на %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s на месец</string>
-    <string name="market_subscriptions_per_year">%1$s на година</string>
     <string name="market_warnings_title">Предупреждения</string>
 
     <string name="market_fee_preview_mochi_fee">Такса на Mochi</string>

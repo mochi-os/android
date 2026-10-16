@@ -319,17 +319,7 @@
     <string name="market_subscribers_interval_month">/ mwezi</string>
     <string name="market_subscribers_interval_year">/ mwaka</string>
     <string name="market_subscribers_load_failed">Imeshindwa kupakia wafuasi</string>
-    <string name="market_subscription_detail_billing_history">Historia ya malipo</string>
-    <string name="market_subscription_detail_billing_history_empty">Bado hakuna malipo.</string>
-    <string name="market_subscription_detail_billing_info">Utozaji</string>
-    <string name="market_subscription_detail_cancelled_on">Imeghairiwa tarehe %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Malipo ya hivi karibuni: %1$s</string>
     <string name="market_subscription_detail_next_billing">Tarehe ijayo ya malipo: %1$s</string>
-    <string name="market_subscription_detail_not_found">Usajili haukupatikana</string>
-    <string name="market_subscription_detail_pending_cancel">Ughairi unasubiri</string>
-    <string name="market_subscription_detail_seller">Muuzaji</string>
-    <string name="market_subscription_detail_started">Ilianza %1$s</string>
-    <string name="market_subscription_detail_title">Usajili</string>
     <string name="market_subscriptions_action_cancel">Ghairi</string>
     <string name="market_subscriptions_action_pause">Simamisha</string>
     <string name="market_subscriptions_action_reactivate">Wezesha tena</string>
@@ -540,8 +530,6 @@
     <string name="market_subscribers_title">Wajiandikishaji wangu</string>
     <string name="market_subscriptions_actions_label">Vitendo vya usajili</string>
     <string name="market_subscriptions_cancels_on">Inaghairi tarehe %1$s</string>
-    <string name="market_subscriptions_per_month">%1$s kwa mwezi</string>
-    <string name="market_subscriptions_per_year">%1$s kwa mwaka</string>
     <string name="market_warnings_title">Maonyo</string>
 
     <string name="market_account_address_desc">Hujaza kiotomatiki katika malipo yajayo mara unganishaji wa malipo unapoongezwa.</string>

@@ -378,17 +378,7 @@
     <string name="market_subscribers_interval_month">/ મહિનો</string>
     <string name="market_subscribers_interval_year">/ વર્ષ</string>
     <string name="market_subscribers_load_failed">સબ્સ્ક્રાઇબર્સ લોડ કરવામાં નિષ્ફળ</string>
-    <string name="market_subscription_detail_billing_history">બિલિંગ ઇતિહાસ</string>
-    <string name="market_subscription_detail_billing_history_empty">હજી સુધી કોઈ ચાર્જ નથી.</string>
-    <string name="market_subscription_detail_billing_info">બિલિંગ</string>
-    <string name="market_subscription_detail_cancelled_on">%1$s ના રોજ રદ કર્યું</string>
-    <string name="market_subscription_detail_charge_amount">તાજેતરનો ચાર્જ: %1$s</string>
     <string name="market_subscription_detail_next_billing">આગામી બિલિંગ તારીખ: %1$s</string>
-    <string name="market_subscription_detail_not_found">સબ્સ્ક્રિપ્શન મળ્યું નથી</string>
-    <string name="market_subscription_detail_pending_cancel">રદ કરવાનું બાકી</string>
-    <string name="market_subscription_detail_seller">વિક્રેતા</string>
-    <string name="market_subscription_detail_started">%1$s ના રોજ શરૂ થયું</string>
-    <string name="market_subscription_detail_title">સબ્સ્ક્રિપ્શન</string>
     <string name="market_subscriptions_action_cancel">રદ કરો</string>
     <string name="market_subscriptions_action_pause">થોભાવો</string>
     <string name="market_subscriptions_action_reactivate">ફરી સક્રિય કરો</string>
@@ -541,8 +531,6 @@
     <string name="market_subscribers_title">મારા સબ્સ્ક્રાઇબર્સ</string>
     <string name="market_subscriptions_actions_label">સબ્સ્ક્રિપ્શન ક્રિયાઓ</string>
     <string name="market_subscriptions_cancels_on">%1$s ના રોજ રદ થાય છે</string>
-    <string name="market_subscriptions_per_month">દર મહિને %1$s</string>
-    <string name="market_subscriptions_per_year">દર વર્ષે %1$s</string>
 
     <string name="market_account_address_desc">ચેકઆઉટ એકીકરણ ઉમેરાયા પછી ભવિષ્યના ચેકઆઉટમાં આપમેળે ભરાય છે.</string>
     <string name="market_account_address_title">ડિફૉલ્ટ શિપિંગ સરનામું</string>

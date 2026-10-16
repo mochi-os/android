@@ -7,17 +7,7 @@
     <string name="market_onboarding_activate">Aktivieren</string>
     <string name="market_onboarding_body">Aktivieren Sie Ihr Konto, um zu kaufen und zu verkaufen.</string>
     <string name="market_onboarding_title">Willkommen bei Market</string>
-    <string name="market_subscription_detail_billing_history">Abrechnungsverlauf</string>
-    <string name="market_subscription_detail_billing_history_empty">Noch keine Abbuchungen.</string>
-    <string name="market_subscription_detail_billing_info">Abrechnung</string>
-    <string name="market_subscription_detail_cancelled_on">Gekündigt am %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Letzte Abbuchung: %1$s</string>
     <string name="market_subscription_detail_next_billing">Nächste Abrechnung: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonnement nicht gefunden</string>
-    <string name="market_subscription_detail_pending_cancel">Kündigung steht aus</string>
-    <string name="market_subscription_detail_seller">Verkäufer</string>
-    <string name="market_subscription_detail_started">Begonnen %1$s</string>
-    <string name="market_subscription_detail_title">Abonnement</string>
     <string name="market_checkout_address_name">Name</string>
     <string name="market_back">Zurück</string>
     <string name="market_editor_back">Zurück</string>
@@ -458,8 +448,6 @@
     <string name="market_subscriptions_cancels_period_end">Wird am Ende des aktuellen Zeitraums gekündigt</string>
     <string name="market_subscriptions_empty">Keine Abonnements</string>
     <string name="market_subscriptions_empty_body">Abonnements sind wiederkehrende Käufe – Verkäufer bieten sie mit monatlicher oder jährlicher Bezahlung an.</string>
-    <string name="market_subscriptions_per_month">%1$s pro Monat</string>
-    <string name="market_subscriptions_per_year">%1$s pro Jahr</string>
     <string name="market_subscriptions_title">Abonnements</string>
     <string name="market_warnings_title">Warnungen</string>
 
