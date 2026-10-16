@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">Seenaa iyyannoo</string>
     <string name="market_listing_detail_buy">Bituu</string>
     <string name="market_listing_detail_buy_now">Amma bitadhu</string>
-    <string name="market_listing_detail_edit">Sirreessi</string>
     <string name="market_listing_detail_information_heading">Odeeffannoo geejjibaa</string>
     <string name="market_listing_detail_listed">Tarreeffame %1$s</string>
     <string name="market_listing_detail_message">Ergaa ergi</string>
     <string name="market_listing_detail_not_found">Tarreeffamni hin argamne</string>
     <string name="market_listing_detail_place_bid">Caalbaasii kenni</string>
-    <string name="market_listing_detail_relist">Deebisanii tarreessi</string>
     <string name="market_listing_detail_report">Tarreeffama gabaasi</string>
     <string name="market_listing_detail_save">Olkaa\'i</string>
     <string name="market_listing_detail_seller_heading">Gurguraa</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">Mirkanaa\'eera</string>
     <string name="market_listing_no_photo">Suuraa hin jiru</string>
     <string name="market_listing_save">Tarree olkaa\'i</string>
-    <string name="market_listings_action_delete">Haqi</string>
     <string name="market_listings_action_edit">Sirreessi</string>
     <string name="market_listings_action_relist">Deebisanii tarreessi</string>
-    <string name="market_listings_action_share">Qoodi</string>
-    <string name="market_listings_action_view">Daawwadhu</string>
     <string name="market_listings_appeal">Ol iyyannoo</string>
     <string name="market_listings_clear">Tarree koo irraa haqi</string>
     <string name="market_listings_delete_confirm">Haqi</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">Dhorkame</string>
     <string name="market_profile_status_suspended">Hidhameera</string>
     <string name="market_profile_verified">Mirkanaa\'eera</string>
-    <string name="market_purchase_audit_section">Sochii</string>
     <string name="market_purchase_confirm_delivery">Fudhachuu mirkaneessi</string>
     <string name="market_purchase_delivery">Geejjiba</string>
     <string name="market_purchase_dispute_details">Bal\'ina kee</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">Bittaa</string>
     <string name="market_sale_carrier_label">Geessaa</string>
     <string name="market_sale_carrier_other">Biraa</string>
-    <string name="market_sale_completed_label">Xumurame</string>
     <string name="market_sale_dispute_respond">Deebii kenni</string>
     <string name="market_sale_load_failed">Ajaja fe\'achuu hin dandeenye</string>
     <string name="market_sale_message_buyer">Bittaa ergaaf ergi</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">Deebii keessan</string>
     <string name="market_sale_review_response_submit">Deebii galchaa</string>
     <string name="market_sale_section_dispute">Mormii</string>
-    <string name="market_sale_section_refund">Deebii baasii</string>
-    <string name="market_sale_section_shipping">Geejjiba</string>
     <string name="market_sale_ship_action">Erge jechuu mallatteessi</string>
     <string name="market_sale_ship_failed">Erge jechuu mallatteessuu hin dandeenye</string>
     <string name="market_sale_ship_success">Erge jechuu mallatteeffame</string>
-    <string name="market_sale_shipped_label">Ergame</string>
     <string name="market_sale_title">Gurguraa</string>
+    <string name="market_audit_history">Seenaa</string>
+    <string name="market_sale_review_of_buyer">Madaallii kee waa\'ee bitataa</string>
     <string name="market_sale_tracking_label">Lakkoofsa hordoffii</string>
     <string name="market_sales_title">Gurgurtaa koo</string>
     <string name="market_saved_title">Kan olkaa\'aman</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">Ergamaa jira…</string>
     <string name="market_checkout_subscribing">Galmaa\'aa jira…</string>
     <string name="market_filter_remove">Calaltuu balleessuu</string>
-    <string name="market_listings_action_appeal">Komii balleessuu</string>
     <string name="market_listings_share_chooser">Tarree qoodi</string>
     <string name="market_refund_dialog_amount_label">Hammama</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">Gadi\'aanaa %1$s</string>
     <string name="market_filter_sort_rating">Madaallii ol\'aanaa</string>
     <string name="market_listing_detail_appeal_pending">Iyyannoon eegumsa irra jira</string>
-    <string name="market_listing_detail_audit_hide">Yeroo dhoksi</string>
-    <string name="market_listing_detail_audit_show">Yeroo agarsiisi</string>
     <string name="market_listing_detail_relist_failed">Deebisanii tarreessuu hin dandeenye</string>
     <string name="market_listing_detail_sales_count">Gurgurtaa %1$s</string>
     <string name="market_listing_detail_seller_banned_banner">Gurgurtaan kun dhorkameera. Ajajawwan haaraa kennuun hin danda\'amu.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">Madaallii kennuuf ajaja xumurame bani.</string>
     <string name="market_reviews_empty_sent_title">Madaallii tokko illee hin barreessine</string>
     <string name="market_reviews_response_placeholder">Deebii barreessi…</string>
-    <string name="market_sale_audit_collapse">Sochii dhoksi</string>
-    <string name="market_sale_audit_expand">Sochii agarsiisi</string>
     <string name="market_sale_carrier_custom_label">Maqaa geejjibsiisaa</string>
     <string name="market_sale_dispute_evidence_due">Ragaan kan dhihaatu %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Sababii chaargii deebi\'e Stripe: %1$s</string>
-    <string name="market_sale_fee_gross">Walumaa galatti</string>
-    <string name="market_sale_fee_mochi">Kaffaltii Mochi</string>
-    <string name="market_sale_fee_payout">Kaffaltii dhumaa</string>
-    <string name="market_sale_fee_stripe_note">Kaffaltiiwwan adeemsa Stripe daashboordii Stripe kee irratti mul\'atu.</string>
-    <string name="market_sale_order_id_label">ID Ajajaa</string>
-    <string name="market_sale_ordered_label">Ajajame</string>
-    <string name="market_sale_review_no_response_yet">Yeroo tokko qofa deebisuu dandeessa. Deebiin uummataaf banaa dha.</string>
-    <string name="market_sale_section_fees">Bal\'ina kaffaltii</string>
     <string name="market_sale_ship_submitting">Mallatteessaa jira…</string>
     <string name="market_sale_tracking_url_label">URL hordoffii (filannoo)</string>
     <string name="market_sales_empty_subtitle">Ajajawwan tarreeffamoota kee maxxanfaman irraa dhufan asitti mul\'atu.</string>

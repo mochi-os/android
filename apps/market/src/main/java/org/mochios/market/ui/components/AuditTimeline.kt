@@ -6,12 +6,14 @@
 package org.mochios.market.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -22,10 +24,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.components.MochiCard
 import org.mochios.market.R
 import org.mochios.market.model.AuditEvent
 
@@ -102,59 +106,89 @@ fun auditActionLabel(action: String): String {
     return if (resource != null) stringResource(resource) else action
 }
 
+/**
+ * [events] in a card under a History heading, newest first as the server sends
+ * them; draws nothing when there are none, since a viewer without read access
+ * gets an empty list.
+ */
+@Composable
+fun AuditHistoryCard(
+    events: List<AuditEvent>,
+    modifier: Modifier = Modifier,
+) {
+    if (events.isEmpty()) {
+        return
+    }
+    MochiCard(modifier = modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = stringResource(R.string.market_audit_history),
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold,
+            )
+            Spacer(modifier = Modifier.height(12.dp))
+            AuditTimeline(events = events)
+        }
+    }
+}
+
+/**
+ * [events] as a timeline: a dot per event with a line joining it to the next,
+ * the action's label beside it and the time and actor under that.
+ */
 @Composable
 fun AuditTimeline(
     events: List<AuditEvent>,
     modifier: Modifier = Modifier,
 ) {
-    if (events.isEmpty()) return
-    Column(
-        modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(4.dp),
-    ) {
-        events.forEach { event ->
-            // Precomputed in composable scope — formatTimestamp is @Composable
-            // and can't be called inside the buildString lambda below.
+    if (events.isEmpty()) {
+        return
+    }
+    val format = LocalFormat.current
+    Column(modifier = modifier) {
+        events.forEachIndexed { index, event ->
+            val last = index == events.lastIndex
             val timestampText = if (event.timestamp > 0L) {
-                LocalFormat.current.formatTimestamp(event.timestamp)
+                format.formatTimestamp(event.timestamp)
             } else {
                 ""
             }
-            Row(
-                modifier = Modifier.padding(vertical = 4.dp),
-                verticalAlignment = Alignment.Top,
-            ) {
+            val sub = listOf(timestampText, event.actorName)
+                .filter { part -> part.isNotBlank() }
+                .joinToString(" · ")
+            Row(modifier = Modifier.height(IntrinsicSize.Min)) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier.padding(end = 12.dp),
+                    modifier = Modifier
+                        .width(10.dp)
+                        .fillMaxHeight(),
                 ) {
+                    Spacer(modifier = Modifier.height(5.dp))
                     Box(
                         modifier = Modifier
                             .size(10.dp)
                             .clip(CircleShape)
                             .background(MaterialTheme.colorScheme.primary),
                     )
-                    Spacer(modifier = Modifier.padding(top = 2.dp))
-                    Box(
-                        modifier = Modifier
-                            .width(2.dp)
-                            .fillMaxHeight()
-                            .background(MaterialTheme.colorScheme.outlineVariant),
-                    )
+                    if (!last) {
+                        Box(
+                            modifier = Modifier
+                                .padding(top = 4.dp)
+                                .width(1.dp)
+                                .weight(1f)
+                                .background(MaterialTheme.colorScheme.outlineVariant),
+                        )
+                    }
                 }
-
-                Column(modifier = Modifier.weight(1f)) {
+                Column(
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(start = 12.dp, bottom = if (last) 0.dp else 16.dp),
+                ) {
                     Text(
                         text = auditActionLabel(event.action),
                         style = MaterialTheme.typography.bodyMedium,
                     )
-                    val sub = buildString {
-                        if (event.actorName.isNotBlank()) append(event.actorName)
-                        if (timestampText.isNotEmpty()) {
-                            if (isNotEmpty()) append(" · ")
-                            append(timestampText)
-                        }
-                    }
                     if (sub.isNotEmpty()) {
                         Text(
                             text = sub,

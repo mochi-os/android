@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">ബിഡ് ചരിത്രം</string>
     <string name="market_listing_detail_buy">വാങ്ങുക</string>
     <string name="market_listing_detail_buy_now">ഇപ്പോൾ വാങ്ങുക</string>
-    <string name="market_listing_detail_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="market_listing_detail_information_heading">ഡെലിവറി വിവരങ്ങൾ</string>
     <string name="market_listing_detail_listed">ലിസ്റ്റ് ചെയ്തു %1$s</string>
     <string name="market_listing_detail_message">സന്ദേശം അയയ്ക്കുക</string>
     <string name="market_listing_detail_not_found">ലിസ്റ്റിംഗ് കണ്ടെത്തിയില്ല</string>
     <string name="market_listing_detail_place_bid">ബിഡ് ഇടുക</string>
-    <string name="market_listing_detail_relist">വീണ്ടും ലിസ്റ്റ് ചെയ്യുക</string>
     <string name="market_listing_detail_report">ലിസ്റ്റിംഗ് റിപ്പോർട്ട് ചെയ്യുക</string>
     <string name="market_listing_detail_save">സേവ് ചെയ്യുക</string>
     <string name="market_listing_detail_seller_heading">വിൽപ്പനക്കാരൻ</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">സ്ഥിരീകരിച്ചു</string>
     <string name="market_listing_no_photo">ഫോട്ടോയില്ല</string>
     <string name="market_listing_save">ലിസ്റ്റിംഗ് സംരക്ഷിക്കുക</string>
-    <string name="market_listings_action_delete">ഇല്ലാതാക്കുക</string>
     <string name="market_listings_action_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="market_listings_action_relist">വീണ്ടും ലിസ്റ്റ് ചെയ്യുക</string>
-    <string name="market_listings_action_share">പങ്കിടുക</string>
-    <string name="market_listings_action_view">കാണുക</string>
     <string name="market_listings_appeal">അപ്പീൽ</string>
     <string name="market_listings_clear">എന്റെ ലിസ്റ്റിംഗുകളിൽ നിന്ന് നീക്കുക</string>
     <string name="market_listings_delete_confirm">ഇല്ലാതാക്കുക</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">വിലക്കി</string>
     <string name="market_profile_status_suspended">സസ്പെൻഡ് ചെയ്തു</string>
     <string name="market_profile_verified">സ്ഥിരീകരിച്ചു</string>
-    <string name="market_purchase_audit_section">പ്രവർത്തനം</string>
     <string name="market_purchase_confirm_delivery">രസീത് സ്ഥിരീകരിക്കുക</string>
     <string name="market_purchase_delivery">ഡെലിവറി</string>
     <string name="market_purchase_dispute_details">നിങ്ങളുടെ വിശദാംശങ്ങൾ</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">വാങ്ങുന്നയാൾ</string>
     <string name="market_sale_carrier_label">കാരിയർ</string>
     <string name="market_sale_carrier_other">മറ്റുള്ളവ</string>
-    <string name="market_sale_completed_label">പൂർത്തിയായി</string>
     <string name="market_sale_dispute_respond">പ്രതികരിക്കുക</string>
     <string name="market_sale_load_failed">ഓർഡർ ലോഡുചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_sale_message_buyer">വാങ്ങുന്നയാൾക്ക് സന്ദേശം അയയ്ക്കുക</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">നിങ്ങളുടെ പ്രതികരണം</string>
     <string name="market_sale_review_response_submit">പ്രതികരണം സമർപ്പിക്കുക</string>
     <string name="market_sale_section_dispute">തർക്കം</string>
-    <string name="market_sale_section_refund">തിരികെ നൽകൽ</string>
-    <string name="market_sale_section_shipping">ഷിപ്പിംഗ്</string>
     <string name="market_sale_ship_action">ഷിപ്പ് ചെയ്തതായി അടയാളപ്പെടുത്തുക</string>
     <string name="market_sale_ship_failed">ഷിപ്പ് ചെയ്തതായി അടയാളപ്പെടുത്തുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_sale_ship_success">ഷിപ്പ് ചെയ്തതായി അടയാളപ്പെടുത്തി</string>
-    <string name="market_sale_shipped_label">ഷിപ്പ് ചെയ്തു</string>
     <string name="market_sale_title">വിൽപ്പന</string>
+    <string name="market_audit_history">ചരിത്രം</string>
+    <string name="market_sale_review_of_buyer">വാങ്ങുന്നയാളെക്കുറിച്ചുള്ള നിങ്ങളുടെ അവലോകനം</string>
     <string name="market_sale_tracking_label">ട്രാക്കിംഗ് നമ്പർ</string>
     <string name="market_sales_title">എന്റെ വിൽപ്പന</string>
     <string name="market_saved_title">സേവ് ചെയ്തവ</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">സമർപ്പിക്കുന്നു…</string>
     <string name="market_checkout_subscribing">സബ്സ്ക്രൈബ് ചെയ്യുന്നു…</string>
     <string name="market_filter_remove">ഫിൽട്ടർ നീക്കം ചെയ്യുക</string>
-    <string name="market_listings_action_appeal">നീക്കം ചെയ്യൽ അപ്പീൽ</string>
     <string name="market_listings_share_chooser">ലിസ്റ്റിംഗ് പങ്കിടുക</string>
     <string name="market_refund_dialog_amount_label">തുക</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">കുറഞ്ഞത് %1$s</string>
     <string name="market_filter_sort_rating">ഏറ്റവും ഉയർന്ന റേറ്റിംഗ്</string>
     <string name="market_listing_detail_appeal_pending">അപ്പീൽ തീർപ്പുകൽപ്പിക്കാത്തത്</string>
-    <string name="market_listing_detail_audit_hide">ടൈംലൈൻ മറയ്ക്കുക</string>
-    <string name="market_listing_detail_audit_show">ടൈംലൈൻ കാണിക്കുക</string>
     <string name="market_listing_detail_relist_failed">വീണ്ടും ലിസ്റ്റ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_listing_detail_sales_count">%1$s വിൽപ്പനകൾ</string>
     <string name="market_listing_detail_seller_banned_banner">ഈ വിൽപ്പനക്കാരനെ വിലക്കിയിരിക്കുന്നു. പുതിയ ഓർഡറുകൾ നൽകാൻ കഴിയില്ല.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">ഒരു അവലോകനം നൽകാൻ പൂർത്തിയായ ഓർഡർ തുറക്കുക.</string>
     <string name="market_reviews_empty_sent_title">നിങ്ങൾ അവലോകനങ്ങളൊന്നും എഴുതിയിട്ടില്ല</string>
     <string name="market_reviews_response_placeholder">ഒരു പ്രതികരണം എഴുതുക…</string>
-    <string name="market_sale_audit_collapse">പ്രവർത്തനം മറയ്ക്കുക</string>
-    <string name="market_sale_audit_expand">പ്രവർത്തനം കാണിക്കുക</string>
     <string name="market_sale_carrier_custom_label">കാരിയറുടെ പേര്</string>
     <string name="market_sale_dispute_evidence_due">തെളിവ് %1$s നകം</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ചാർജ്ബാക്ക് കാരണം: %1$s</string>
-    <string name="market_sale_fee_gross">മൊത്തം</string>
-    <string name="market_sale_fee_mochi">Mochi ഫീസ്</string>
-    <string name="market_sale_fee_payout">നെറ്റ് പേഔട്ട്</string>
-    <string name="market_sale_fee_stripe_note">Stripe പ്രോസസർ ഫീസ് നിങ്ങളുടെ Stripe ഡാഷ്ബോർഡിൽ കാണിക്കുന്നു.</string>
-    <string name="market_sale_order_id_label">ഓർഡർ ID</string>
-    <string name="market_sale_ordered_label">ഓർഡർ ചെയ്തു</string>
-    <string name="market_sale_review_no_response_yet">നിങ്ങൾക്ക് ഒരിക്കൽ പ്രതികരിക്കാം. മറുപടികൾ പൊതുവായതാണ്.</string>
-    <string name="market_sale_section_fees">ഫീസ് വിശദാംശം</string>
     <string name="market_sale_ship_submitting">അടയാളപ്പെടുത്തുന്നു…</string>
     <string name="market_sale_tracking_url_label">ട്രാക്കിംഗ് URL (ഓപ്ഷണൽ)</string>
     <string name="market_sales_empty_subtitle">നിങ്ങളുടെ പ്രസിദ്ധീകരിച്ച ലിസ്റ്റിംഗുകളിൽ നിന്നുള്ള ഓർഡറുകൾ ഇവിടെ ദൃശ്യമാകും.</string>

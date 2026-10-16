@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">ஏல வரலாறு</string>
     <string name="market_listing_detail_buy">வாங்கு</string>
     <string name="market_listing_detail_buy_now">இப்போதே வாங்கு</string>
-    <string name="market_listing_detail_edit">திருத்து</string>
     <string name="market_listing_detail_information_heading">விநியோக தகவல்</string>
     <string name="market_listing_detail_listed">பட்டியலிடப்பட்டது %1$s</string>
     <string name="market_listing_detail_message">செய்தி அனுப்பு</string>
     <string name="market_listing_detail_not_found">பட்டியல் கிடைக்கவில்லை</string>
     <string name="market_listing_detail_place_bid">ஏலம் கொடு</string>
-    <string name="market_listing_detail_relist">மறுபட்டியலிடு</string>
     <string name="market_listing_detail_report">பட்டியலைப் பற்றி புகாரளிக்கவும்</string>
     <string name="market_listing_detail_save">சேமி</string>
     <string name="market_listing_detail_seller_heading">விற்பனையாளர்</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">சரிபார்க்கப்பட்டது</string>
     <string name="market_listing_no_photo">புகைப்படம் இல்லை</string>
     <string name="market_listing_save">பட்டியலை சேமி</string>
-    <string name="market_listings_action_delete">நீக்கு</string>
     <string name="market_listings_action_edit">திருத்து</string>
     <string name="market_listings_action_relist">மறுபட்டியலிடு</string>
-    <string name="market_listings_action_share">பகிர்</string>
-    <string name="market_listings_action_view">காட்டு</string>
     <string name="market_listings_appeal">மேல்முறையீடு</string>
     <string name="market_listings_clear">எனது பட்டியல்களிலிருந்து அழி</string>
     <string name="market_listings_delete_confirm">நீக்கு</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">தடைசெய்யப்பட்டது</string>
     <string name="market_profile_status_suspended">இடைநிறுத்தப்பட்டது</string>
     <string name="market_profile_verified">சரிபார்க்கப்பட்டது</string>
-    <string name="market_purchase_audit_section">செயல்பாடு</string>
     <string name="market_purchase_confirm_delivery">ரசீதை உறுதிசெய்</string>
     <string name="market_purchase_delivery">விநியோகம்</string>
     <string name="market_purchase_dispute_details">உங்கள் விவரங்கள்</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">வாங்குபவர்</string>
     <string name="market_sale_carrier_label">எடுத்துச் செல்பவர்</string>
     <string name="market_sale_carrier_other">மற்றவை</string>
-    <string name="market_sale_completed_label">முடிந்தது</string>
     <string name="market_sale_dispute_respond">பதிலளி</string>
     <string name="market_sale_load_failed">ஆர்டரை ஏற்ற முடியவில்லை</string>
     <string name="market_sale_message_buyer">வாங்குபவருக்கு செய்தி அனுப்பு</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">உங்கள் பதில்</string>
     <string name="market_sale_review_response_submit">பதிலை சமர்ப்பி</string>
     <string name="market_sale_section_dispute">சர்ச்சை</string>
-    <string name="market_sale_section_refund">பணம் திரும்ப</string>
-    <string name="market_sale_section_shipping">அனுப்புதல்</string>
     <string name="market_sale_ship_action">அனுப்பப்பட்டதாகக் குறிக்கவும்</string>
     <string name="market_sale_ship_failed">அனுப்பப்பட்டதாகக் குறிக்க முடியவில்லை</string>
     <string name="market_sale_ship_success">அனுப்பப்பட்டதாகக் குறிக்கப்பட்டது</string>
-    <string name="market_sale_shipped_label">அனுப்பப்பட்டது</string>
     <string name="market_sale_title">விற்பனை</string>
+    <string name="market_audit_history">வரலாறு</string>
+    <string name="market_sale_review_of_buyer">வாங்குபவர் பற்றிய உங்கள் மதிப்பாய்வு</string>
     <string name="market_sale_tracking_label">கண்காணிப்பு எண்</string>
     <string name="market_sales_title">எனது விற்பனைகள்</string>
     <string name="market_saved_title">சேமித்தவை</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">சமர்ப்பிக்கிறது…</string>
     <string name="market_checkout_subscribing">சந்தா செலுத்துகிறது…</string>
     <string name="market_filter_remove">வடிகட்டியை அகற்று</string>
-    <string name="market_listings_action_appeal">நீக்கம் மேல்முறையீடு</string>
     <string name="market_listings_share_chooser">பட்டியலை பகிர்</string>
     <string name="market_refund_dialog_amount_label">தொகை</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">குறைந்தபட்சம் %1$s</string>
     <string name="market_filter_sort_rating">உயர்ந்த மதிப்பீடு</string>
     <string name="market_listing_detail_appeal_pending">மேல்முறையீடு நிலுவையில் உள்ளது</string>
-    <string name="market_listing_detail_audit_hide">காலவரிசையை மறை</string>
-    <string name="market_listing_detail_audit_show">காலவரிசையைக் காட்டு</string>
     <string name="market_listing_detail_relist_failed">மீண்டும் பட்டியலிட முடியவில்லை</string>
     <string name="market_listing_detail_sales_count">%1$s விற்பனைகள்</string>
     <string name="market_listing_detail_seller_banned_banner">இந்த விற்பனையாளர் தடைசெய்யப்பட்டுள்ளார். புதிய ஆர்டர்களை இட முடியாது.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">மதிப்பாய்வு எழுத ஒரு முடிக்கப்பட்ட ஆர்டரைத் திறக்கவும்.</string>
     <string name="market_reviews_empty_sent_title">நீங்கள் எந்த மதிப்பாய்வும் எழுதவில்லை</string>
     <string name="market_reviews_response_placeholder">பதிலை எழுதவும்…</string>
-    <string name="market_sale_audit_collapse">செயல்பாட்டை மறை</string>
-    <string name="market_sale_audit_expand">செயல்பாட்டை காட்டு</string>
     <string name="market_sale_carrier_custom_label">கேரியர் பெயர்</string>
     <string name="market_sale_dispute_evidence_due">ஆதாரம் %1$s வரை</string>
     <string name="market_sale_dispute_stripe_reason">Stripe சார்ஜ்பேக் காரணம்: %1$s</string>
-    <string name="market_sale_fee_gross">மொத்தம்</string>
-    <string name="market_sale_fee_mochi">Mochi கட்டணம்</string>
-    <string name="market_sale_fee_payout">நிகர பணம் அனுப்புதல்</string>
-    <string name="market_sale_fee_stripe_note">Stripe செயலாக்க கட்டணங்கள் உங்கள் Stripe டாஷ்போர்டில் காண்பிக்கப்படும்.</string>
-    <string name="market_sale_order_id_label">ஆர்டர் ID</string>
-    <string name="market_sale_ordered_label">ஆர்டர் செய்யப்பட்டது</string>
-    <string name="market_sale_review_no_response_yet">நீங்கள் ஒருமுறை பதிலளிக்கலாம். பதில்கள் பகிரங்கமானவை.</string>
-    <string name="market_sale_section_fees">கட்டண பகுப்பாய்வு</string>
     <string name="market_sale_ship_submitting">குறிக்கிறது…</string>
     <string name="market_sale_tracking_url_label">டிராக்கிங் URL (விருப்பத்தேர்வு)</string>
     <string name="market_sales_empty_subtitle">உங்கள் வெளியிடப்பட்ட பட்டியல்களிலிருந்து வரும் ஆர்டர்கள் இங்கே தோன்றும்.</string>

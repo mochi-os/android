@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">Puja historia</string>
     <string name="market_listing_detail_buy">Rantiy</string>
     <string name="market_listing_detail_buy_now">Kunan rantiy</string>
-    <string name="market_listing_detail_edit">Hukchay</string>
     <string name="market_listing_detail_information_heading">Apachiy willariy</string>
     <string name="market_listing_detail_listed">Listapi churasqa %1$s</string>
     <string name="market_listing_detail_message">Willakuyta apachiy</string>
     <string name="market_listing_detail_not_found">Listado mana tarisqachu</string>
     <string name="market_listing_detail_place_bid">Pujata churay</string>
-    <string name="market_listing_detail_relist">Yapamanta listapi churay</string>
     <string name="market_listing_detail_report">Listadota reportay</string>
     <string name="market_listing_detail_save">Waqaychay</string>
     <string name="market_listing_detail_seller_heading">Qhatuq</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">Takyachisqa</string>
     <string name="market_listing_no_photo">Mana foto</string>
     <string name="market_listing_save">Listadota waqaychay</string>
-    <string name="market_listings_action_delete">Wischuy</string>
     <string name="market_listings_action_edit">Hukchay</string>
     <string name="market_listings_action_relist">Yapamanta listapi churay</string>
-    <string name="market_listings_action_share">Rakiy</string>
-    <string name="market_listings_action_view">Qhaway</string>
     <string name="market_listings_appeal">Mañakuy</string>
     <string name="market_listings_clear">Willakuyniykunamanta qichuy</string>
     <string name="market_listings_delete_confirm">Wischuy</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">Hark\'asqa</string>
     <string name="market_profile_status_suspended">Sayachisqa</string>
     <string name="market_profile_verified">Takyachisqa</string>
-    <string name="market_purchase_audit_section">Kuyuriy</string>
     <string name="market_purchase_confirm_delivery">Chaskisqaykita confirmay</string>
     <string name="market_purchase_delivery">Apachiy</string>
     <string name="market_purchase_dispute_details">Detalleykikuna</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">Rantiq</string>
     <string name="market_sale_carrier_label">Apaq</string>
     <string name="market_sale_carrier_other">Huk</string>
-    <string name="market_sale_completed_label">Tukusqa</string>
     <string name="market_sale_dispute_respond">Kutichiy</string>
     <string name="market_sale_load_failed">Mana pedidota cargayta atinchu</string>
     <string name="market_sale_message_buyer">Rantiqman willakuy</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">Kutichiyniyki</string>
     <string name="market_sale_review_response_submit">Kutichiyta apachiy</string>
     <string name="market_sale_section_dispute">Disputa</string>
-    <string name="market_sale_section_refund">Qullqi kutichiy</string>
-    <string name="market_sale_section_shipping">Apachiy</string>
     <string name="market_sale_ship_action">Apachisqa hina marcay</string>
     <string name="market_sale_ship_failed">Mana apachisqaman churayta atinchu</string>
     <string name="market_sale_ship_success">Apachisqa hina marcasqa</string>
-    <string name="market_sale_shipped_label">Apachisqa</string>
     <string name="market_sale_title">Rantikuy</string>
+    <string name="market_audit_history">Willakuy</string>
+    <string name="market_sale_review_of_buyer">Rantiqmanta qhawariyniyki</string>
     <string name="market_sale_tracking_label">Qatipay yupay</string>
     <string name="market_sales_title">Rantikuyniykuna</string>
     <string name="market_saved_title">Waqaychasqa</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">Apachichkan…</string>
     <string name="market_checkout_subscribing">Suscribichkan…</string>
     <string name="market_filter_remove">Filtrota qichuy</string>
-    <string name="market_listings_action_appeal">Qichuyta apelay</string>
     <string name="market_listings_share_chooser">Listadota rakiy</string>
     <string name="market_refund_dialog_amount_label">Chanin</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">Mínimo %1$s</string>
     <string name="market_filter_sort_rating">Aswan hatun chaninchay</string>
     <string name="market_listing_detail_appeal_pending">Apelación suyakuchkan</string>
-    <string name="market_listing_detail_audit_hide">Pacha siq\'ita pakay</string>
-    <string name="market_listing_detail_audit_show">Pacha siq\'ita rikuchiy</string>
     <string name="market_listing_detail_relist_failed">Yapamanta listapi churayta mana atikurqanchu</string>
     <string name="market_listing_detail_sales_count">%1$s rantikuykuna</string>
     <string name="market_listing_detail_seller_banned_banner">Kay qhatuqqa hark\'asqam. Musuq pedidokunata mana churay atikunchu.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">Tukusqa pedidota kichay reseñata saqinaykipaq.</string>
     <string name="market_reviews_empty_sent_title">Manam ima reseñatapas qillqarqankichu</string>
     <string name="market_reviews_response_placeholder">Kutichiyta qillqay…</string>
-    <string name="market_sale_audit_collapse">Kuyuriyta pakay</string>
-    <string name="market_sale_audit_expand">Kuyuriyta rikuchiy</string>
     <string name="market_sale_carrier_custom_label">Apaqpa sutin</string>
     <string name="market_sale_dispute_evidence_due">Pruebakuna %1$s-kama</string>
     <string name="market_sale_dispute_stripe_reason">Stripe contracargo raykun: %1$s</string>
-    <string name="market_sale_fee_gross">Llapan</string>
-    <string name="market_sale_fee_mochi">Mochi comisión</string>
-    <string name="market_sale_fee_payout">Ch\'uya qullqi chaskina</string>
-    <string name="market_sale_fee_stripe_note">Stripe procesador comisionkunaqa Stripe panelniykipim rikurinku.</string>
-    <string name="market_sale_order_id_label">Pedido ID</string>
-    <string name="market_sale_ordered_label">Pedisqa</string>
-    <string name="market_sale_review_no_response_yet">Hukllatam kutichiyta atinki. Kutichiykunaqa llapanpaqmi.</string>
-    <string name="market_sale_section_fees">Comisionkunapa rakiynin</string>
     <string name="market_sale_ship_submitting">Marcachkan…</string>
     <string name="market_sale_tracking_url_label">Qatipay URL (munaspa)</string>
     <string name="market_sales_empty_subtitle">Publicasqa listadoykikunamanta pedidokuna kaypim rikurinku.</string>

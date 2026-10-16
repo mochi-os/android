@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">Riwayat bid</string>
     <string name="market_listing_detail_buy">Beuli</string>
     <string name="market_listing_detail_buy_now">Beli ayeuna</string>
-    <string name="market_listing_detail_edit">Édit</string>
     <string name="market_listing_detail_information_heading">Inpormasi pangiriman</string>
     <string name="market_listing_detail_listed">Didaptarkeun %1$s</string>
     <string name="market_listing_detail_message">Kirim pesen</string>
     <string name="market_listing_detail_not_found">Listing teu kapanggih</string>
     <string name="market_listing_detail_place_bid">Pasang tawaran</string>
-    <string name="market_listing_detail_relist">Daptarkeun deui</string>
     <string name="market_listing_detail_report">Laporkeun daptaran</string>
     <string name="market_listing_detail_save">Simpen</string>
     <string name="market_listing_detail_seller_heading">Penjual</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">Diverifikasi</string>
     <string name="market_listing_no_photo">Teu aya foto</string>
     <string name="market_listing_save">Teundeun iklan</string>
-    <string name="market_listings_action_delete">Hapus</string>
     <string name="market_listings_action_edit">Édit</string>
     <string name="market_listings_action_relist">Daptarkeun deui</string>
-    <string name="market_listings_action_share">Bagikeun</string>
-    <string name="market_listings_action_view">Tingali</string>
     <string name="market_listings_appeal">Banding</string>
     <string name="market_listings_clear">Hapus tina daptar abdi</string>
     <string name="market_listings_delete_confirm">Hapus</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">Diblokir</string>
     <string name="market_profile_status_suspended">Ditunda</string>
     <string name="market_profile_verified">Diverifikasi</string>
-    <string name="market_purchase_audit_section">Aktivitas</string>
     <string name="market_purchase_confirm_delivery">Konfirmasi panarimaan</string>
     <string name="market_purchase_delivery">Pangiriman</string>
     <string name="market_purchase_dispute_details">Rincian anjeun</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">Pameuli</string>
     <string name="market_sale_carrier_label">Karir</string>
     <string name="market_sale_carrier_other">Séjén</string>
-    <string name="market_sale_completed_label">Réngsé</string>
     <string name="market_sale_dispute_respond">Ngajawab</string>
     <string name="market_sale_load_failed">Gagal mungkahan pesenan</string>
     <string name="market_sale_message_buyer">Pesen ka nu meuli</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">Réspon anjeun</string>
     <string name="market_sale_review_response_submit">Kirim réspon</string>
     <string name="market_sale_section_dispute">Sengketa</string>
-    <string name="market_sale_section_refund">Mulangan duit</string>
-    <string name="market_sale_section_shipping">Pangiriman</string>
     <string name="market_sale_ship_action">Tandaan dikirim</string>
     <string name="market_sale_ship_failed">Gagal nandaan dikirim</string>
     <string name="market_sale_ship_success">Ditandaan dikirim</string>
-    <string name="market_sale_shipped_label">Dikirim</string>
     <string name="market_sale_title">Jualan</string>
+    <string name="market_audit_history">Riwayat</string>
+    <string name="market_sale_review_of_buyer">Ulasan anjeun ngeunaan pembeli</string>
     <string name="market_sale_tracking_label">Nomer pelacakan</string>
     <string name="market_sales_title">Penjualan abdi</string>
     <string name="market_saved_title">Nu disimpen</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">Ngirim…</string>
     <string name="market_checkout_subscribing">Nuju ngalanggan…</string>
     <string name="market_filter_remove">Hapus saringan</string>
-    <string name="market_listings_action_appeal">Banding pamupusan</string>
     <string name="market_listings_share_chooser">Bagikeun iklan</string>
     <string name="market_refund_dialog_amount_label">Jumlah</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">Min %1$s</string>
     <string name="market_filter_sort_rating">Peunteun pangluhurna</string>
     <string name="market_listing_detail_appeal_pending">Banding ngantosan</string>
-    <string name="market_listing_detail_audit_hide">Sumputkeun garis waktos</string>
-    <string name="market_listing_detail_audit_show">Tingalikeun garis waktos</string>
     <string name="market_listing_detail_relist_failed">Teu tiasa daptarkeun deui</string>
     <string name="market_listing_detail_sales_count">%1$s penjualan</string>
     <string name="market_listing_detail_seller_banned_banner">Padagang ieu dilarang. Pesenan anyar henteu tiasa diajukeun.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">Buka pesenan nu parantos réngsé pikeun ninggalkeun tinjauan.</string>
     <string name="market_reviews_empty_sent_title">Anjeun tacan nyerat tinjauan naon-naon</string>
     <string name="market_reviews_response_placeholder">Tulis tanggapan…</string>
-    <string name="market_sale_audit_collapse">Sumputkeun kagiatan</string>
-    <string name="market_sale_audit_expand">Témbongkeun kagiatan</string>
     <string name="market_sale_carrier_custom_label">Nami pangirim</string>
     <string name="market_sale_dispute_evidence_due">Bukti diperyogikeun %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Alesan chargeback Stripe: %1$s</string>
-    <string name="market_sale_fee_gross">Bruto</string>
-    <string name="market_sale_fee_mochi">Biaya Mochi</string>
-    <string name="market_sale_fee_payout">Bayaran bersih</string>
-    <string name="market_sale_fee_stripe_note">Béaya prosésor Stripe ditingalikeun di dasbor Stripe anjeun.</string>
-    <string name="market_sale_order_id_label">ID pesenan</string>
-    <string name="market_sale_ordered_label">Dipesen</string>
-    <string name="market_sale_review_no_response_yet">Anjeun tiasa ngabales sakali. Balesan nu kabuka pikeun umum.</string>
-    <string name="market_sale_section_fees">Rincian béaya</string>
     <string name="market_sale_ship_submitting">Nandaan…</string>
     <string name="market_sale_tracking_url_label">URL pelacakan (opsional)</string>
     <string name="market_sales_empty_subtitle">Pesenan tina daptaran nu parantos diterbitkeun bakal némbongan di dieu.</string>

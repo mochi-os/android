@@ -25,9 +25,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Download
-import androidx.compose.material.icons.filled.ExpandLess
-import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material.icons.filled.Inventory
 import androidx.compose.material.icons.filled.LocalShipping
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -60,7 +57,6 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextButton
@@ -76,7 +72,7 @@ import org.mochios.market.model.Order
 import org.mochios.market.model.OrderStatus
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.AuditTimeline
+import org.mochios.market.ui.components.AuditHistoryCard
 import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.disputeReasonLabel
 import org.mochios.market.ui.dialog.RequestRefundDialog
@@ -92,7 +88,6 @@ fun PurchaseDetailScreen(
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     var refundDialogOpen by remember { mutableStateOf(false) }
-    var auditExpanded by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
@@ -175,11 +170,7 @@ fun PurchaseDetailScreen(
                         WriteReviewForm(submitting = false, submitted = detail.review, onSubmit = { _, _ -> })
                     }
                     detail.peerReview?.let { PeerReviewCard(it) }
-                    AuditCollapsible(
-                        events = state.audit,
-                        expanded = auditExpanded,
-                        onToggle = { auditExpanded = !auditExpanded },
-                    )
+                    AuditHistoryCard(events = state.audit)
                     Spacer(Modifier.height(24.dp))
                 }
             }
@@ -483,40 +474,6 @@ private fun PeerReviewCard(review: Review) {
             )
             if (review.text.isNotBlank()) {
                 Text(review.text, style = MaterialTheme.typography.bodyMedium)
-            }
-        }
-    }
-}
-
-@Composable
-private fun AuditCollapsible(
-    events: List<org.mochios.market.model.AuditEvent>,
-    expanded: Boolean,
-    onToggle: () -> Unit,
-) {
-    if (events.isEmpty()) return
-    MochiCard(shape = RoundedCornerShape(10.dp)) {
-        Column(Modifier.padding(8.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth().padding(8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                Icon(Icons.Default.Inventory, contentDescription = null)
-                Spacer(Modifier.width(8.dp))
-                Text(
-                    stringResource(R.string.market_purchase_audit_section),
-                    style = MaterialTheme.typography.titleSmall,
-                    modifier = Modifier.weight(1f),
-                )
-                MochiIconButton(onClick = onToggle) {
-                    Icon(
-                        imageVector = if (expanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
-                        contentDescription = null,
-                    )
-                }
-            }
-            if (expanded) {
-                AuditTimeline(events = events, modifier = Modifier.padding(horizontal = 8.dp))
             }
         }
     }

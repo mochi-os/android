@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">ලංසු ඉතිහාසය</string>
     <string name="market_listing_detail_buy">මිලදී ගන්න</string>
     <string name="market_listing_detail_buy_now">දැන් මිලදී ගන්න</string>
-    <string name="market_listing_detail_edit">සංස්කරණය කරන්න</string>
     <string name="market_listing_detail_information_heading">බෙදාහැරීමේ තොරතුරු</string>
     <string name="market_listing_detail_listed">ලැයිස්තුගත කළ %1$s</string>
     <string name="market_listing_detail_message">පණිවිඩයක් යවන්න</string>
     <string name="market_listing_detail_not_found">ලැයිස්තුගත කිරීම හමු නොවීය</string>
     <string name="market_listing_detail_place_bid">ලංසුවක් තබන්න</string>
-    <string name="market_listing_detail_relist">නැවත ලැයිස්තුගත කරන්න</string>
     <string name="market_listing_detail_report">ලැයිස්තුගත කිරීම වාර්තා කරන්න</string>
     <string name="market_listing_detail_save">සුරකින්න</string>
     <string name="market_listing_detail_seller_heading">විකුණුම්කරු</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">සත්‍යාපිතයි</string>
     <string name="market_listing_no_photo">ඡායාරූපයක් නැත</string>
     <string name="market_listing_save">ලැයිස්තුව සුරකින්න</string>
-    <string name="market_listings_action_delete">මකන්න</string>
     <string name="market_listings_action_edit">සංස්කරණය කරන්න</string>
     <string name="market_listings_action_relist">නැවත ලැයිස්තුගත කරන්න</string>
-    <string name="market_listings_action_share">බෙදා ගන්න</string>
-    <string name="market_listings_action_view">බලන්න</string>
     <string name="market_listings_appeal">අභියාචනය</string>
     <string name="market_listings_clear">මගේ ලැයිස්තුවලින් ඉවත් කරන්න</string>
     <string name="market_listings_delete_confirm">මකන්න</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">තහනම් කරන ලදී</string>
     <string name="market_profile_status_suspended">අත්හිටුවන ලදී</string>
     <string name="market_profile_verified">සත්‍යාපිතයි</string>
-    <string name="market_purchase_audit_section">ක්‍රියාකාරකම</string>
     <string name="market_purchase_confirm_delivery">ලදුව තහවුරු කරන්න</string>
     <string name="market_purchase_delivery">බෙදාහැරීම</string>
     <string name="market_purchase_dispute_details">ඔබේ විස්තර</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">ගැනුම්කරු</string>
     <string name="market_sale_carrier_label">ප්‍රවාහකයා</string>
     <string name="market_sale_carrier_other">වෙනත්</string>
-    <string name="market_sale_completed_label">සම්පූර්ණයි</string>
     <string name="market_sale_dispute_respond">ප්‍රතිචාර දක්වන්න</string>
     <string name="market_sale_load_failed">ඇණවුම පූරණය කිරීමට අසමත් විය</string>
     <string name="market_sale_message_buyer">ගැනුම්කරු වෙත පණිවිඩයක් යවන්න</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">ඔබේ ප්‍රතිචාරය</string>
     <string name="market_sale_review_response_submit">ප්‍රතිචාරය ඉදිරිපත් කරන්න</string>
     <string name="market_sale_section_dispute">ආරවුල</string>
-    <string name="market_sale_section_refund">මුදල් ආපසු ගෙවීම</string>
-    <string name="market_sale_section_shipping">යැවීම</string>
     <string name="market_sale_ship_action">නැව්ගත කළ ලෙස සලකුණු කරන්න</string>
     <string name="market_sale_ship_failed">නැව්ගත කළ ලෙස සලකුණු කිරීමට අසමත් විය</string>
     <string name="market_sale_ship_success">නැව්ගත කළ ලෙස සලකුණු කර ඇත</string>
-    <string name="market_sale_shipped_label">යවන ලදී</string>
     <string name="market_sale_title">විකිණීම</string>
+    <string name="market_audit_history">ඉතිහාසය</string>
+    <string name="market_sale_review_of_buyer">ගැනුම්කරු පිළිබඳ ඔබේ සමාලෝචනය</string>
     <string name="market_sale_tracking_label">ලුහුබැඳීමේ අංකය</string>
     <string name="market_sales_title">මගේ විකුණුම්</string>
     <string name="market_saved_title">සුරැකි</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">යවමින්…</string>
     <string name="market_checkout_subscribing">දායක වෙමින්…</string>
     <string name="market_filter_remove">පෙරහන ඉවත් කරන්න</string>
-    <string name="market_listings_action_appeal">ඉවත් කිරීමේ අභියාචනය</string>
     <string name="market_listings_share_chooser">ලැයිස්තුව බෙදා ගන්න</string>
     <string name="market_refund_dialog_amount_label">මුදල</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">අවම %1$s</string>
     <string name="market_filter_sort_rating">ඉහළම ශ්‍රේණිගත කිරීම</string>
     <string name="market_listing_detail_appeal_pending">අභියාචනය බලාපොරොත්තුවෙන්</string>
-    <string name="market_listing_detail_audit_hide">කාල රේඛාව සඟවන්න</string>
-    <string name="market_listing_detail_audit_show">කාල රේඛාව පෙන්වන්න</string>
     <string name="market_listing_detail_relist_failed">නැවත ලැයිස්තුගත කිරීමට නොහැකි විය</string>
     <string name="market_listing_detail_sales_count">විකුණුම් %1$s ක්</string>
     <string name="market_listing_detail_seller_banned_banner">මෙම විකුණුම්කරු තහනම් කර ඇත. නව ඇණවුම් කළ නොහැක.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">සමාලෝචනයක් තැබීමට සම්පූර්ණ කළ ඇණවුමක් විවෘත කරන්න.</string>
     <string name="market_reviews_empty_sent_title">ඔබ කිසිදු සමාලෝචනයක් ලියා නැත</string>
     <string name="market_reviews_response_placeholder">ප්‍රතිචාරයක් ලියන්න…</string>
-    <string name="market_sale_audit_collapse">ක්‍රියාකාරකම් සඟවන්න</string>
-    <string name="market_sale_audit_expand">ක්‍රියාකාරකම් පෙන්වන්න</string>
     <string name="market_sale_carrier_custom_label">ප්‍රවාහන සමාගමේ නම</string>
     <string name="market_sale_dispute_evidence_due">සාක්ෂි ඉදිරිපත් කළ යුතු දිනය %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ආපසු අයකිරීමේ හේතුව: %1$s</string>
-    <string name="market_sale_fee_gross">දළ ඉපැයීම</string>
-    <string name="market_sale_fee_mochi">Mochi ගාස්තුව</string>
-    <string name="market_sale_fee_payout">ශුද්ධ ගෙවීම</string>
-    <string name="market_sale_fee_stripe_note">Stripe සැකසුම් ගාස්තු ඔබේ Stripe උපකරණ පුවරුවේ පෙන්වයි.</string>
-    <string name="market_sale_order_id_label">ඇණවුම් හැඳුනුම්පත</string>
-    <string name="market_sale_ordered_label">ඇණවුම් කළේය</string>
-    <string name="market_sale_review_no_response_yet">ඔබට වරක් ප්‍රතිචාර දැක්විය හැකිය. පිළිතුරු ප්‍රසිද්ධ ය.</string>
-    <string name="market_sale_section_fees">ගාස්තු බෙදුම</string>
     <string name="market_sale_ship_submitting">සලකුණු කරමින්…</string>
     <string name="market_sale_tracking_url_label">පසුවිපරම් URL (විකල්ප)</string>
     <string name="market_sales_empty_subtitle">ඔබේ ප්‍රකාශිත ලැයිස්තු වලින් ඇණවුම් මෙහි දිස් වේ.</string>

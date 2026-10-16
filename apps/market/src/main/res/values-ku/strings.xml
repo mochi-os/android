@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">Dîroka pêşkêşan</string>
     <string name="market_listing_detail_buy">Bikirre</string>
     <string name="market_listing_detail_buy_now">Niha bikire</string>
-    <string name="market_listing_detail_edit">Sererast bike</string>
     <string name="market_listing_detail_information_heading">Agahiyên şandinê</string>
     <string name="market_listing_detail_listed">Hate navnîşkirin %1$s</string>
     <string name="market_listing_detail_message">Peyamê bişîne</string>
     <string name="market_listing_detail_not_found">Lîste nehat dîtin</string>
     <string name="market_listing_detail_place_bid">Pêşniyazê bike</string>
-    <string name="market_listing_detail_relist">Ji nû ve lîste bike</string>
     <string name="market_listing_detail_report">Lîsteyê rapor bike</string>
     <string name="market_listing_detail_save">Tomar bike</string>
     <string name="market_listing_detail_seller_heading">Firoşker</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">Verifîkirî</string>
     <string name="market_listing_no_photo">Wêne tune</string>
     <string name="market_listing_save">Lîsteyê tomar bike</string>
-    <string name="market_listings_action_delete">Jê bibe</string>
     <string name="market_listings_action_edit">Sererast bike</string>
     <string name="market_listings_action_relist">Ji nû ve lîste bike</string>
-    <string name="market_listings_action_share">Parve bike</string>
-    <string name="market_listings_action_view">Bibîne</string>
     <string name="market_listings_appeal">Îtîraz</string>
     <string name="market_listings_clear">Ji lîsteyên min rake</string>
     <string name="market_listings_delete_confirm">Jê bibe</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">Astengkirî</string>
     <string name="market_profile_status_suspended">Sekinandî</string>
     <string name="market_profile_verified">Verifîkirî</string>
-    <string name="market_purchase_audit_section">Çalakî</string>
     <string name="market_purchase_confirm_delivery">Wergirtinê piştrast bike</string>
     <string name="market_purchase_delivery">Şandin</string>
     <string name="market_purchase_dispute_details">Hûragahên te</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">Kirîyar</string>
     <string name="market_sale_carrier_label">Vekêşek</string>
     <string name="market_sale_carrier_other">Yên din</string>
-    <string name="market_sale_completed_label">Temam</string>
     <string name="market_sale_dispute_respond">Bersiv bide</string>
     <string name="market_sale_load_failed">Barkirina sîparîşê neserkeftî bû</string>
     <string name="market_sale_message_buyer">Peyamê ji kirîv re bişîne</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">Bersiva te</string>
     <string name="market_sale_review_response_submit">Bersivê bişîne</string>
     <string name="market_sale_section_dispute">Pevçûn</string>
-    <string name="market_sale_section_refund">Vegerandin</string>
-    <string name="market_sale_section_shipping">Şandin</string>
     <string name="market_sale_ship_action">Wek hatî şandin nîşan bike</string>
     <string name="market_sale_ship_failed">Wek hatî şandin nîşankirin neserkeftî bû</string>
     <string name="market_sale_ship_success">Wek hatî şandin hat nîşankirin</string>
-    <string name="market_sale_shipped_label">Şandî</string>
     <string name="market_sale_title">Firotin</string>
+    <string name="market_audit_history">Dîrok</string>
+    <string name="market_sale_review_of_buyer">Nirxandina te ya kiryarê</string>
     <string name="market_sale_tracking_label">Hejmara şopandinê</string>
     <string name="market_sales_title">Firotinên min</string>
     <string name="market_saved_title">Tomarkirî</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">Tê şandin…</string>
     <string name="market_checkout_subscribing">Abone dibe…</string>
     <string name="market_filter_remove">Parzûnê rake</string>
-    <string name="market_listings_action_appeal">Îtîraza derxistinê</string>
     <string name="market_listings_share_chooser">Lîsteyê parve bike</string>
     <string name="market_refund_dialog_amount_label">Mîqdar</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">Herî kêm %1$s</string>
     <string name="market_filter_sort_rating">Nirxandina herî bilind</string>
     <string name="market_listing_detail_appeal_pending">Îtîraz li benda bersivê ye</string>
-    <string name="market_listing_detail_audit_hide">Demjimêrê veşêre</string>
-    <string name="market_listing_detail_audit_show">Demjimêrê nîşan bide</string>
     <string name="market_listing_detail_relist_failed">Nekarî ji nû ve were lîstekirin</string>
     <string name="market_listing_detail_sales_count">%1$s firotin</string>
     <string name="market_listing_detail_seller_banned_banner">Ev firoşkar hatiye qedexekirin. Fermanên nû nayên dayîn.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">Fermanek qediyayî veke da ku nirxandinekê bihêlî.</string>
     <string name="market_reviews_empty_sent_title">Te tu nirxandin nenivîsiye</string>
     <string name="market_reviews_response_placeholder">Bersivekê binivîse…</string>
-    <string name="market_sale_audit_collapse">Çalakiyê veşêre</string>
-    <string name="market_sale_audit_expand">Çalakiyê nîşan bide</string>
     <string name="market_sale_carrier_custom_label">Navê veguhêzer</string>
     <string name="market_sale_dispute_evidence_due">Belge heta %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Sedema vegerandina Stripe: %1$s</string>
-    <string name="market_sale_fee_gross">Giştî</string>
-    <string name="market_sale_fee_mochi">Heqdestê Mochi</string>
-    <string name="market_sale_fee_payout">Tezmînata net</string>
-    <string name="market_sale_fee_stripe_note">Heqên pêvajoyê yên Stripe li panela te ya Stripe têne nîşandan.</string>
-    <string name="market_sale_order_id_label">ID ya fermanê</string>
-    <string name="market_sale_ordered_label">Hate ferman kirin</string>
-    <string name="market_sale_review_no_response_yet">Tu dikarî carekê bersiv bidî. Bersiv giştî ne.</string>
-    <string name="market_sale_section_fees">Veqetandina heqan</string>
     <string name="market_sale_ship_submitting">Tê nîşankirin…</string>
     <string name="market_sale_tracking_url_label">URL ya şopandinê (bijarte)</string>
     <string name="market_sales_empty_subtitle">Fermanên ji lîsteyên te yên weşandî li vir xuya dibin.</string>

@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">ប្រវត្តិការដេញថ្លៃ</string>
     <string name="market_listing_detail_buy">ទិញ</string>
     <string name="market_listing_detail_buy_now">ទិញឥឡូវ</string>
-    <string name="market_listing_detail_edit">កែសម្រួល</string>
     <string name="market_listing_detail_information_heading">ព័ត៌មានដឹកជញ្ជូន</string>
     <string name="market_listing_detail_listed">បានចុះបញ្ជី %1$s</string>
     <string name="market_listing_detail_message">ផ្ញើសារ</string>
     <string name="market_listing_detail_not_found">រកមិនឃើញការដាក់លក់</string>
     <string name="market_listing_detail_place_bid">ដាក់តម្លៃដេញ</string>
-    <string name="market_listing_detail_relist">ចុះបញ្ជីឡើងវិញ</string>
     <string name="market_listing_detail_report">រាយការណ៍បញ្ជីលក់</string>
     <string name="market_listing_detail_save">រក្សាទុក</string>
     <string name="market_listing_detail_seller_heading">អ្នកលក់</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">បានផ្ទៀងផ្ទាត់</string>
     <string name="market_listing_no_photo">មិនមានរូបថត</string>
     <string name="market_listing_save">រក្សាទុក</string>
-    <string name="market_listings_action_delete">លុប</string>
     <string name="market_listings_action_edit">កែសម្រួល</string>
     <string name="market_listings_action_relist">ចុះបញ្ជីឡើងវិញ</string>
-    <string name="market_listings_action_share">ចែករំលែក</string>
-    <string name="market_listings_action_view">មើល</string>
     <string name="market_listings_appeal">ប្តឹងឧទ្ធរណ៍</string>
     <string name="market_listings_clear">សម្អាតចេញពីការផ្សាយរបស់ខ្ញុំ</string>
     <string name="market_listings_delete_confirm">លុប</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">ត្រូវបានហាមឃាត់</string>
     <string name="market_profile_status_suspended">បានផ្អាក</string>
     <string name="market_profile_verified">បានផ្ទៀងផ្ទាត់</string>
-    <string name="market_purchase_audit_section">សកម្មភាព</string>
     <string name="market_purchase_confirm_delivery">បញ្ជាក់ការទទួល</string>
     <string name="market_purchase_delivery">ការដឹកជញ្ជូន</string>
     <string name="market_purchase_dispute_details">ព័ត៌មានលម្អិតរបស់អ្នក</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">អ្នកទិញ</string>
     <string name="market_sale_carrier_label">អ្នកដឹកជញ្ជូន</string>
     <string name="market_sale_carrier_other">ផ្សេងទៀត</string>
-    <string name="market_sale_completed_label">បានបញ្ចប់</string>
     <string name="market_sale_dispute_respond">ឆ្លើយតប</string>
     <string name="market_sale_load_failed">បរាជ័យក្នុងការផ្ទុកការបញ្ជាទិញ</string>
     <string name="market_sale_message_buyer">ផ្ញើសារទៅអ្នកទិញ</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">ការឆ្លើយតបរបស់អ្នក</string>
     <string name="market_sale_review_response_submit">ដាក់ស្នើការឆ្លើយតប</string>
     <string name="market_sale_section_dispute">វិវាទ</string>
-    <string name="market_sale_section_refund">ការសងប្រាក់វិញ</string>
-    <string name="market_sale_section_shipping">ការដឹកជញ្ជូន</string>
     <string name="market_sale_ship_action">សម្គាល់ថាបានដឹកជញ្ជូន</string>
     <string name="market_sale_ship_failed">បរាជ័យក្នុងការសម្គាល់ថាបានដឹកជញ្ជូន</string>
     <string name="market_sale_ship_success">បានសម្គាល់ថាបានដឹកជញ្ជូន</string>
-    <string name="market_sale_shipped_label">បានដឹកជញ្ជូន</string>
     <string name="market_sale_title">ការលក់</string>
+    <string name="market_audit_history">ប្រវត្តិ</string>
+    <string name="market_sale_review_of_buyer">ការវាយតម្លៃរបស់អ្នកលើអ្នកទិញ</string>
     <string name="market_sale_tracking_label">លេខតាមដាន</string>
     <string name="market_sales_title">ការលក់របស់ខ្ញុំ</string>
     <string name="market_saved_title">ធាតុដែលបានរក្សាទុក</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">កំពុងផ្ញើ…</string>
     <string name="market_checkout_subscribing">កំពុងជាវ…</string>
     <string name="market_filter_remove">លុបតម្រង</string>
-    <string name="market_listings_action_appeal">ប្តឹងឧទ្ធរណ៍ការដក</string>
     <string name="market_listings_share_chooser">ចែករំលែកការផ្សាយ</string>
     <string name="market_refund_dialog_amount_label">ចំនួន</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">អប្បបរមា %1$s</string>
     <string name="market_filter_sort_rating">ការវាយតម្លៃខ្ពស់បំផុត</string>
     <string name="market_listing_detail_appeal_pending">ការប្តឹងឧទ្ធរណ៍កំពុងរង់ចាំ</string>
-    <string name="market_listing_detail_audit_hide">លាក់ពេលវេលា</string>
-    <string name="market_listing_detail_audit_show">បង្ហាញពេលវេលា</string>
     <string name="market_listing_detail_relist_failed">មិនអាចចុះបញ្ជីឡើងវិញបានទេ</string>
     <string name="market_listing_detail_sales_count">ការលក់ %1$s</string>
     <string name="market_listing_detail_seller_banned_banner">អ្នកលក់នេះត្រូវបានហាមឃាត់។ មិនអាចដាក់ការបញ្ជាទិញថ្មីបានទេ។</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">បើកការបញ្ជាទិញដែលបានបញ្ចប់ដើម្បីផ្ដល់ការវាយតម្លៃ។</string>
     <string name="market_reviews_empty_sent_title">អ្នកមិនបានសរសេរការវាយតម្លៃណាមួយឡើយ</string>
     <string name="market_reviews_response_placeholder">សរសេរការឆ្លើយតប…</string>
-    <string name="market_sale_audit_collapse">លាក់សកម្មភាព</string>
-    <string name="market_sale_audit_expand">បង្ហាញសកម្មភាព</string>
     <string name="market_sale_carrier_custom_label">ឈ្មោះក្រុមហ៊ុនដឹកជញ្ជូន</string>
     <string name="market_sale_dispute_evidence_due">ភ័ស្តុតាងត្រូវដាក់ត្រឹម %1$s</string>
     <string name="market_sale_dispute_stripe_reason">មូលហេតុទាមទារប្រាក់វិញ Stripe៖ %1$s</string>
-    <string name="market_sale_fee_gross">សរុបដុល</string>
-    <string name="market_sale_fee_mochi">ថ្លៃសេវា Mochi</string>
-    <string name="market_sale_fee_payout">ចំណូលសុទ្ធ</string>
-    <string name="market_sale_fee_stripe_note">ថ្លៃដំណើរការ Stripe ត្រូវបានបង្ហាញនៅក្នុងផ្ទាំងគ្រប់គ្រង Stripe របស់អ្នក។</string>
-    <string name="market_sale_order_id_label">លេខសម្គាល់ការបញ្ជាទិញ</string>
-    <string name="market_sale_ordered_label">បានបញ្ជាទិញ</string>
-    <string name="market_sale_review_no_response_yet">អ្នកអាចឆ្លើយតបបានតែម្ដង។ ការឆ្លើយតបជាសាធារណៈ។</string>
-    <string name="market_sale_section_fees">ការបែងចែកថ្លៃ</string>
     <string name="market_sale_ship_submitting">កំពុងសម្គាល់…</string>
     <string name="market_sale_tracking_url_label">URL តាមដាន (ស្រេចចិត្ត)</string>
     <string name="market_sales_empty_subtitle">ការបញ្ជាទិញពីបញ្ជីដែលបានបោះផ្សាយរបស់អ្នកនឹងបង្ហាញនៅទីនេះ។</string>

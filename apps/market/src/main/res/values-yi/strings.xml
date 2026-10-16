@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">אָפֿערט געשיכטע</string>
     <string name="market_listing_detail_buy">קויף</string>
     <string name="market_listing_detail_buy_now">קויפֿן איצט</string>
-    <string name="market_listing_detail_edit">רעדאַקטירן</string>
     <string name="market_listing_detail_information_heading">ליווערונג אינפֿאָרמאַציע</string>
     <string name="market_listing_detail_listed">ארויפֿגעלייגט %1$s</string>
     <string name="market_listing_detail_message">שיקן אַ בריוו</string>
     <string name="market_listing_detail_not_found">רשימה ניט געפֿונען</string>
     <string name="market_listing_detail_place_bid">שטעלן אַן אָנבאָט</string>
-    <string name="market_listing_detail_relist">צוריקליסטן</string>
     <string name="market_listing_detail_report">באַריכט ליסטיגקײַט</string>
     <string name="market_listing_detail_save">היט אויף</string>
     <string name="market_listing_detail_seller_heading">פֿאַרקויפֿער</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">פֿאַריפֿיצירט</string>
     <string name="market_listing_no_photo">קיין בילד</string>
     <string name="market_listing_save">ראטעווע רעקלאמע</string>
-    <string name="market_listings_action_delete">אויסמעקן</string>
     <string name="market_listings_action_edit">רעדאַקטירן</string>
     <string name="market_listings_action_relist">צוריקליסטן</string>
-    <string name="market_listings_action_share">טייל</string>
-    <string name="market_listings_action_view">באַקוקן</string>
     <string name="market_listings_appeal">אַפּעלירן</string>
     <string name="market_listings_clear">אַוועקנעמען פֿון מײַנע אַנאָנסן</string>
     <string name="market_listings_delete_confirm">אויסמעקן</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">פֿאַרבאָטן</string>
     <string name="market_profile_status_suspended">סוספּענדירט</string>
     <string name="market_profile_verified">פֿאַריפֿיצירט</string>
-    <string name="market_purchase_audit_section">אַקטיוויטעט</string>
     <string name="market_purchase_confirm_delivery">באַשטעטיקן אַרײַננעמונג</string>
     <string name="market_purchase_delivery">צושטעלן</string>
     <string name="market_purchase_dispute_details">אײַערע פּרטים</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">קויפֿער</string>
     <string name="market_sale_carrier_label">טראָגער</string>
     <string name="market_sale_carrier_other">אַנדער</string>
-    <string name="market_sale_completed_label">פֿאַרענדיקט</string>
     <string name="market_sale_dispute_respond">ענטפֿער</string>
     <string name="market_sale_load_failed">ניט געלונגען צו לאָדן באַשטעלונג</string>
     <string name="market_sale_message_buyer">שיקן בריוו צום קויפֿער</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">אײַער ענטפֿער</string>
     <string name="market_sale_review_response_submit">געב אונטער ענטפֿער</string>
     <string name="market_sale_section_dispute">קריגעריי</string>
-    <string name="market_sale_section_refund">רעטור</string>
-    <string name="market_sale_section_shipping">צושטעלונג</string>
     <string name="market_sale_ship_action">צייכענען ווי פֿאַרשיקט</string>
     <string name="market_sale_ship_failed">ניט געלונגען צו צייכענען ווי פֿאַרשיקט</string>
     <string name="market_sale_ship_success">געצייכנט ווי פֿאַרשיקט</string>
-    <string name="market_sale_shipped_label">געשיקט</string>
     <string name="market_sale_title">פֿאַרקויף</string>
+    <string name="market_audit_history">היסטאריע</string>
+    <string name="market_sale_review_of_buyer">דיין רעצענזיע פון דעם קונה</string>
     <string name="market_sale_tracking_label">פֿאַרצייכענונג־נומער</string>
     <string name="market_sales_title">מיינע פארקויפן</string>
     <string name="market_saved_title">אויפֿגעהיט</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">שיקט…</string>
     <string name="market_checkout_subscribing">ווערט אַבאָנירט…</string>
     <string name="market_filter_remove">אַראָפּנעמען פֿילטער</string>
-    <string name="market_listings_action_appeal">אפעל פון ארויסנעמען</string>
     <string name="market_listings_share_chooser">טייל רעקלאמע</string>
     <string name="market_refund_dialog_amount_label">באטראג</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">מין %1$s</string>
     <string name="market_filter_sort_rating">העכסטע באַוואַרטונג</string>
     <string name="market_listing_detail_appeal_pending">אַפּעל וואַרט</string>
-    <string name="market_listing_detail_audit_hide">באַהאַלטן צײַטליניע</string>
-    <string name="market_listing_detail_audit_show">ווײַזן צײַטליניע</string>
     <string name="market_listing_detail_relist_failed">מע האָט נישט געקענט איבער-רשימהן</string>
     <string name="market_listing_detail_sales_count">%1$s פֿאַרקויפֿן</string>
     <string name="market_listing_detail_seller_banned_banner">דער פֿאַרקויפֿער איז פֿאַרווערט. נײַע באַשטעלונגען קענען נישט געלייגט ווערן.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">עפֿנט אַ פֿאַרענדיקטע באַשטעלונג צו איבערלאָזן אַ רעצענזיע.</string>
     <string name="market_reviews_empty_sent_title">איר האָט נישט געשריבן קיין רעצענזיעס</string>
     <string name="market_reviews_response_placeholder">שרײַבט אַן ענטפֿער…</string>
-    <string name="market_sale_audit_collapse">באַהאַלטן אַקטיוויטעט</string>
-    <string name="market_sale_audit_expand">ווײַזן אַקטיוויטעט</string>
     <string name="market_sale_carrier_custom_label">טראָגערס נאָמען</string>
     <string name="market_sale_dispute_evidence_due">באַווײַזן דאַרפֿן ביז %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe צוריקצאָלונג־סיבה: %1$s</string>
-    <string name="market_sale_fee_gross">ברוטאָ</string>
-    <string name="market_sale_fee_mochi">Mochi אָפּצאָל</string>
-    <string name="market_sale_fee_payout">נעטאָ־אויסצאָלונג</string>
-    <string name="market_sale_fee_stripe_note">Stripe באַאַרבעטונג־צאָלונגען ווערן באַוויזן אין אײַער Stripe דאַשבאָרד.</string>
-    <string name="market_sale_order_id_label">באַשטעלונג־ID</string>
-    <string name="market_sale_ordered_label">באַשטעלט</string>
-    <string name="market_sale_review_no_response_yet">איר קענט ענטפֿערן איין מאָל. ענטפֿערס זענען עפֿנטלעך.</string>
-    <string name="market_sale_section_fees">צאָלונגען־צעטיילונג</string>
     <string name="market_sale_ship_submitting">מאַרקירן…</string>
     <string name="market_sale_tracking_url_label">שפּורן־URL (אָפּציאָנעל)</string>
     <string name="market_sales_empty_subtitle">באַשטעלונגען פֿון אײַערע פֿאַרעפֿנטלעכטע ליסטינגס דערשײַנען דאָ.</string>

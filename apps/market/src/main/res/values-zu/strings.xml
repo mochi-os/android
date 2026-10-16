@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">Umlando wokuncintisana</string>
     <string name="market_listing_detail_buy">Thenga</string>
     <string name="market_listing_detail_buy_now">Thenga manje</string>
-    <string name="market_listing_detail_edit">Hlela</string>
     <string name="market_listing_detail_information_heading">Ulwazi lokulethwa</string>
     <string name="market_listing_detail_listed">Kufakwe %1$s</string>
     <string name="market_listing_detail_message">Thumela umyalezo</string>
     <string name="market_listing_detail_not_found">Ushicilelo alutholakalanga</string>
     <string name="market_listing_detail_place_bid">Faka isipho</string>
-    <string name="market_listing_detail_relist">Faka kabusha</string>
     <string name="market_listing_detail_report">Bika okufakiwe</string>
     <string name="market_listing_detail_save">Londoloza</string>
     <string name="market_listing_detail_seller_heading">Umthengisi</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">Kuqinisekisiwe</string>
     <string name="market_listing_no_photo">Asikho isithombe</string>
     <string name="market_listing_save">Londoloza uhlu</string>
-    <string name="market_listings_action_delete">Susa</string>
     <string name="market_listings_action_edit">Hlela</string>
     <string name="market_listings_action_relist">Faka kabusha</string>
-    <string name="market_listings_action_share">Yabelana</string>
-    <string name="market_listings_action_view">Buka</string>
     <string name="market_listings_appeal">Dlulisa icala</string>
     <string name="market_listings_clear">Susa ezinhlwini zami</string>
     <string name="market_listings_delete_confirm">Susa</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">Kuvinjelwe</string>
     <string name="market_profile_status_suspended">Kumisiwe</string>
     <string name="market_profile_verified">Kuqinisekisiwe</string>
-    <string name="market_purchase_audit_section">Umsebenzi</string>
     <string name="market_purchase_confirm_delivery">Qinisekisa ukuthola</string>
     <string name="market_purchase_delivery">Ukulethwa</string>
     <string name="market_purchase_dispute_details">Imininingwane yakho</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">Umthengi</string>
     <string name="market_sale_carrier_label">Umphathi</string>
     <string name="market_sale_carrier_other">Okunye</string>
-    <string name="market_sale_completed_label">Kuqediwe</string>
     <string name="market_sale_dispute_respond">Phendula</string>
     <string name="market_sale_load_failed">Kuhlulekile ukulayisha i-oda</string>
     <string name="market_sale_message_buyer">Thumela umyalezo kumthengi</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">Impendulo yakho</string>
     <string name="market_sale_review_response_submit">Ngenisa impendulo</string>
     <string name="market_sale_section_dispute">Ingxabano</string>
-    <string name="market_sale_section_refund">Imbuyiselo</string>
-    <string name="market_sale_section_shipping">Ukuthumela</string>
     <string name="market_sale_ship_action">Maka njengokuthunyelwe</string>
     <string name="market_sale_ship_failed">Kuhlulekile ukumaka njengokuthunyelwe</string>
     <string name="market_sale_ship_success">Kumakwe njengokuthunyelwe</string>
-    <string name="market_sale_shipped_label">Kuthunyelwe</string>
     <string name="market_sale_title">Ukuthengisa</string>
+    <string name="market_audit_history">Umlando</string>
+    <string name="market_sale_review_of_buyer">Ukubuyekeza kwakho umthengi</string>
     <string name="market_sale_tracking_label">Inombolo yokulandelela</string>
     <string name="market_sales_title">Ukuthengisa kwami</string>
     <string name="market_saved_title">Okulondoloziwe</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">Iyathunyelwa…</string>
     <string name="market_checkout_subscribing">Iyabhalisa…</string>
     <string name="market_filter_remove">Susa isihlungi</string>
-    <string name="market_listings_action_appeal">Isicelo sokususa</string>
     <string name="market_listings_share_chooser">Yabelana ngohlu</string>
     <string name="market_refund_dialog_amount_label">Inani</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">Okuncane %1$s</string>
     <string name="market_filter_sort_rating">Isilinganiso esiphezulu kakhulu</string>
     <string name="market_listing_detail_appeal_pending">Isikhalo silindile</string>
-    <string name="market_listing_detail_audit_hide">Fihla umugqa wesikhathi</string>
-    <string name="market_listing_detail_audit_show">Bonisa umugqa wesikhathi</string>
     <string name="market_listing_detail_relist_failed">Ayikwazanga ukufaka kabusha</string>
     <string name="market_listing_detail_sales_count">%1$s ukuthengiswa</string>
     <string name="market_listing_detail_seller_banned_banner">Lo mthengisi uvinjelwe. Ama-oda amasha ngeke afakwe.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">Vula i-oda eliqediwe ukuze ushiye ukubuyekezwa.</string>
     <string name="market_reviews_empty_sent_title">Awukabhali noma yikuphi ukubuyekezwa</string>
     <string name="market_reviews_response_placeholder">Bhala impendulo…</string>
-    <string name="market_sale_audit_collapse">Fihla umsebenzi</string>
-    <string name="market_sale_audit_expand">Bonisa umsebenzi</string>
     <string name="market_sale_carrier_custom_label">Igama lomthwali</string>
     <string name="market_sale_dispute_evidence_due">Ubufakazi obufunekayo ngo-%1$s</string>
     <string name="market_sale_dispute_stripe_reason">Isizathu sokubuyiselwa kwemali kwe-Stripe: %1$s</string>
-    <string name="market_sale_fee_gross">Isamba</string>
-    <string name="market_sale_fee_mochi">Imali ye-Mochi</string>
-    <string name="market_sale_fee_payout">Inkokhelo eyinhloko</string>
-    <string name="market_sale_fee_stripe_note">Izimali zokucubungula ze-Stripe zikhonjiswa kudeshibhodi yakho ye-Stripe.</string>
-    <string name="market_sale_order_id_label">I-ID ye-oda</string>
-    <string name="market_sale_ordered_label">Kuyaliwe</string>
-    <string name="market_sale_review_no_response_yet">Ungaphendula kanye kuphela. Izimpendulo zibonwa ngumphakathi.</string>
-    <string name="market_sale_section_fees">Ukuhlukaniswa kwezimali</string>
     <string name="market_sale_ship_submitting">Kuphawulwa…</string>
     <string name="market_sale_tracking_url_label">I-URL yokulandelela (okuzikhethelayo)</string>
     <string name="market_sales_empty_subtitle">Ama-oda avela ezinhluweni zakho ezishicilelwe avela lapha.</string>

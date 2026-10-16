@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">بولي جي تاريخ</string>
     <string name="market_listing_detail_buy">خريد ڪريو</string>
     <string name="market_listing_detail_buy_now">ابھي خريد ڪريو</string>
-    <string name="market_listing_detail_edit">ترميم</string>
     <string name="market_listing_detail_information_heading">ترسيل جي معلومات</string>
     <string name="market_listing_detail_listed">فهرست ٿيل %1$s</string>
     <string name="market_listing_detail_message">پيغام موڪليو</string>
     <string name="market_listing_detail_not_found">لسٽنگ نه ملي</string>
     <string name="market_listing_detail_place_bid">بولي ڏيو</string>
-    <string name="market_listing_detail_relist">ٻيهر فهرست ڪريو</string>
     <string name="market_listing_detail_report">فهرست رپورٽ ڪريو</string>
     <string name="market_listing_detail_save">محفوظ ڪريو</string>
     <string name="market_listing_detail_seller_heading">وڪرو ڪندڙ</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">تصديق ٿيل</string>
     <string name="market_listing_no_photo">ڪا تصوير ناهي</string>
     <string name="market_listing_save">اشتهار محفوظ ڪريو</string>
-    <string name="market_listings_action_delete">ختم ڪريو</string>
     <string name="market_listings_action_edit">ترميم</string>
     <string name="market_listings_action_relist">ٻيهر فهرست ڪريو</string>
-    <string name="market_listings_action_share">شيئر ڪريو</string>
-    <string name="market_listings_action_view">ڏسو</string>
     <string name="market_listings_appeal">اپيل</string>
     <string name="market_listings_clear">منهنجي لسٽنگ مان صاف ڪريو</string>
     <string name="market_listings_delete_confirm">ختم ڪريو</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">پابند</string>
     <string name="market_profile_status_suspended">معطل ٿيل</string>
     <string name="market_profile_verified">تصديق ٿيل</string>
-    <string name="market_purchase_audit_section">سرگرمي</string>
     <string name="market_purchase_confirm_delivery">وصولي جي تصديق ڪريو</string>
     <string name="market_purchase_delivery">ترسيل</string>
     <string name="market_purchase_dispute_details">توهان جا تفصيل</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">خريدار</string>
     <string name="market_sale_carrier_label">ڪيريئر</string>
     <string name="market_sale_carrier_other">ٻيو</string>
-    <string name="market_sale_completed_label">مڪمل</string>
     <string name="market_sale_dispute_respond">جواب ڏيو</string>
     <string name="market_sale_load_failed">آرڊر لوڊ ڪرڻ ۾ ناڪام</string>
     <string name="market_sale_message_buyer">خريدار کي پيغام</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">توهان جو جواب</string>
     <string name="market_sale_review_response_submit">جواب جمع ڪريو</string>
     <string name="market_sale_section_dispute">تڪرار</string>
-    <string name="market_sale_section_refund">رقم واپسي</string>
-    <string name="market_sale_section_shipping">شپنگ</string>
     <string name="market_sale_ship_action">موڪليل طور نشانبر ڪريو</string>
     <string name="market_sale_ship_failed">موڪليل طور نشانبر ڪرڻ ۾ ناڪام</string>
     <string name="market_sale_ship_success">موڪليل طور نشانبر ٿيل</string>
-    <string name="market_sale_shipped_label">شپ ٿيل</string>
     <string name="market_sale_title">وڪرو</string>
+    <string name="market_audit_history">تاريخ</string>
+    <string name="market_sale_review_of_buyer">خريدار بابت توهان جو جائزو</string>
     <string name="market_sale_tracking_label">ٽريڪنگ نمبر</string>
     <string name="market_sales_title">منهنجي وڪرو</string>
     <string name="market_saved_title">محفوظ ٿيل</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">موڪليو پيو وڃي…</string>
     <string name="market_checkout_subscribing">سبسڪرائب ٿي رهيو آهي…</string>
     <string name="market_filter_remove">فلٽر ختم ڪريو</string>
-    <string name="market_listings_action_appeal">هٽائڻ خلاف اپيل</string>
     <string name="market_listings_share_chooser">اشتهار حصيداري ڪريو</string>
     <string name="market_refund_dialog_amount_label">مقدار</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">گهٽ ۾ گهٽ %1$s</string>
     <string name="market_filter_sort_rating">سڀ کان وڌيڪ ريٽنگ</string>
     <string name="market_listing_detail_appeal_pending">اپيل زير التوا</string>
-    <string name="market_listing_detail_audit_hide">ٽائيم لائن لڪايو</string>
-    <string name="market_listing_detail_audit_show">ٽائيم لائن ڏيکاريو</string>
     <string name="market_listing_detail_relist_failed">ٻيهر لسٽ نه ٿي سگهيو</string>
     <string name="market_listing_detail_sales_count">%1$s وڪرا</string>
     <string name="market_listing_detail_seller_banned_banner">هي وڪرو ڪندڙ بند ٿيل آهي. نوان آرڊر نه ٿا ڏئي سگھجن.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">جائزو ڇڏڻ لاءِ مڪمل ٿيل آرڊر کوليو.</string>
     <string name="market_reviews_empty_sent_title">توهان ڪو به جائزو نه لکيو آهي</string>
     <string name="market_reviews_response_placeholder">جواب لکو…</string>
-    <string name="market_sale_audit_collapse">سرگرمي لڪايو</string>
-    <string name="market_sale_audit_expand">سرگرمي ڏيکاريو</string>
     <string name="market_sale_carrier_custom_label">ڪيريئر جو نالو</string>
     <string name="market_sale_dispute_evidence_due">ثبوت جي مهلت %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe چارج بيڪ جو سبب: %1$s</string>
-    <string name="market_sale_fee_gross">ڪل</string>
-    <string name="market_sale_fee_mochi">Mochi في</string>
-    <string name="market_sale_fee_payout">خالص ادائگي</string>
-    <string name="market_sale_fee_stripe_note">Stripe پروسيسر فيون توهان جي Stripe ڊيش بورڊ تي ڏيکاريون وڃن ٿيون.</string>
-    <string name="market_sale_order_id_label">آرڊر ID</string>
-    <string name="market_sale_ordered_label">آرڊر ٿيل</string>
-    <string name="market_sale_review_no_response_yet">توهان هڪ ڀيرو جواب ڏئي سگھو ٿا. جواب عوامي آهن.</string>
-    <string name="market_sale_section_fees">فيءَ جي تفصيل</string>
     <string name="market_sale_ship_submitting">نشان لڳائي رهيو آهي…</string>
     <string name="market_sale_tracking_url_label">ٽريڪنگ URL (اختياري)</string>
     <string name="market_sales_empty_subtitle">توهان جي شايع ٿيل لسٽنگن مان آرڊر هتي ظاهر ٿيندا.</string>

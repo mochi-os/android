@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">బిడ్ చరిత్ర</string>
     <string name="market_listing_detail_buy">కొనండి</string>
     <string name="market_listing_detail_buy_now">ఇప్పుడే కొనండి</string>
-    <string name="market_listing_detail_edit">సవరించండి</string>
     <string name="market_listing_detail_information_heading">డెలివరీ సమాచారం</string>
     <string name="market_listing_detail_listed">జాబితా చేయబడింది %1$s</string>
     <string name="market_listing_detail_message">సందేశం పంపండి</string>
     <string name="market_listing_detail_not_found">లిస్టింగ్ కనుగొనబడలేదు</string>
     <string name="market_listing_detail_place_bid">బిడ్ చేయండి</string>
-    <string name="market_listing_detail_relist">రీలిస్ట్</string>
     <string name="market_listing_detail_report">లిస్టింగ్‌ను రిపోర్ట్ చేయండి</string>
     <string name="market_listing_detail_save">సేవ్ చేయండి</string>
     <string name="market_listing_detail_seller_heading">విక్రేత</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">ధృవీకరించబడింది</string>
     <string name="market_listing_no_photo">ఫోటో లేదు</string>
     <string name="market_listing_save">జాబితాను సేవ్ చేయండి</string>
-    <string name="market_listings_action_delete">తొలగించండి</string>
     <string name="market_listings_action_edit">సవరించండి</string>
     <string name="market_listings_action_relist">రీలిస్ట్</string>
-    <string name="market_listings_action_share">షేర్ చేయండి</string>
-    <string name="market_listings_action_view">వీక్షించండి</string>
     <string name="market_listings_appeal">అప్పీల్</string>
     <string name="market_listings_clear">నా లిస్టింగ్‌ల నుండి తీసివేయండి</string>
     <string name="market_listings_delete_confirm">తొలగించండి</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">నిషేధించబడింది</string>
     <string name="market_profile_status_suspended">సస్పెండ్ చేయబడింది</string>
     <string name="market_profile_verified">ధృవీకరించబడింది</string>
-    <string name="market_purchase_audit_section">కార్యకలాపం</string>
     <string name="market_purchase_confirm_delivery">రసీదును నిర్ధారించండి</string>
     <string name="market_purchase_delivery">డెలివరీ</string>
     <string name="market_purchase_dispute_details">మీ వివరాలు</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">కొనుగోలుదారుడు</string>
     <string name="market_sale_carrier_label">క్యారియర్</string>
     <string name="market_sale_carrier_other">ఇతర</string>
-    <string name="market_sale_completed_label">పూర్తయింది</string>
     <string name="market_sale_dispute_respond">ప్రతిస్పందించండి</string>
     <string name="market_sale_load_failed">ఆర్డర్‌ను లోడ్ చేయడంలో విఫలమైంది</string>
     <string name="market_sale_message_buyer">కొనుగోలుదారుకు సందేశం పంపండి</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">మీ ప్రతిస్పందన</string>
     <string name="market_sale_review_response_submit">ప్రతిస్పందన సమర్పించండి</string>
     <string name="market_sale_section_dispute">వివాదం</string>
-    <string name="market_sale_section_refund">రీఫండ్</string>
-    <string name="market_sale_section_shipping">షిప్పింగ్</string>
     <string name="market_sale_ship_action">షిప్ చేసినట్లు గుర్తించండి</string>
     <string name="market_sale_ship_failed">షిప్ చేసినట్లు గుర్తించడంలో విఫలమైంది</string>
     <string name="market_sale_ship_success">షిప్ చేసినట్లు గుర్తించబడింది</string>
-    <string name="market_sale_shipped_label">షిప్ చేయబడింది</string>
     <string name="market_sale_title">విక్రయం</string>
+    <string name="market_audit_history">చరిత్ర</string>
+    <string name="market_sale_review_of_buyer">కొనుగోలుదారుపై మీ సమీక్ష</string>
     <string name="market_sale_tracking_label">ట్రాకింగ్ నంబర్</string>
     <string name="market_sales_title">నా అమ్మకాలు</string>
     <string name="market_saved_title">సేవ్ చేసినవి</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">సమర్పిస్తోంది…</string>
     <string name="market_checkout_subscribing">చందా చేరుతోంది…</string>
     <string name="market_filter_remove">ఫిల్టర్ తొలగించు</string>
-    <string name="market_listings_action_appeal">తొలగింపు అప్పీలు</string>
     <string name="market_listings_share_chooser">జాబితాను షేర్ చేయండి</string>
     <string name="market_refund_dialog_amount_label">మొత్తం</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">కనిష్ఠం %1$s</string>
     <string name="market_filter_sort_rating">అత్యధిక రేటింగ్</string>
     <string name="market_listing_detail_appeal_pending">అప్పీల్ పెండింగ్‌లో ఉంది</string>
-    <string name="market_listing_detail_audit_hide">టైమ్‌లైన్‌ను దాచండి</string>
-    <string name="market_listing_detail_audit_show">టైమ్‌లైన్‌ను చూపించండి</string>
     <string name="market_listing_detail_relist_failed">మళ్లీ జాబితా చేయలేకపోయాము</string>
     <string name="market_listing_detail_sales_count">%1$s విక్రయాలు</string>
     <string name="market_listing_detail_seller_banned_banner">ఈ విక్రేత నిషేధించబడ్డారు. కొత్త ఆర్డర్‌లు ఇవ్వడం సాధ్యం కాదు.</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">సమీక్షను పంపడానికి పూర్తయిన ఆర్డర్‌ను తెరవండి.</string>
     <string name="market_reviews_empty_sent_title">మీరు ఏ సమీక్షలు వ్రాయలేదు</string>
     <string name="market_reviews_response_placeholder">ప్రతిస్పందనను వ్రాయండి…</string>
-    <string name="market_sale_audit_collapse">కార్యకలాపాన్ని దాచండి</string>
-    <string name="market_sale_audit_expand">కార్యకలాపాన్ని చూపండి</string>
     <string name="market_sale_carrier_custom_label">క్యారియర్ పేరు</string>
     <string name="market_sale_dispute_evidence_due">%1$s నాటికి సాక్ష్యం అవసరం</string>
     <string name="market_sale_dispute_stripe_reason">Stripe చార్జ్‌బ్యాక్ కారణం: %1$s</string>
-    <string name="market_sale_fee_gross">స్థూలం</string>
-    <string name="market_sale_fee_mochi">Mochi రుసుము</string>
-    <string name="market_sale_fee_payout">నికర చెల్లింపు</string>
-    <string name="market_sale_fee_stripe_note">Stripe ప్రాసెసర్ రుసుములు మీ Stripe డాష్‌బోర్డ్‌లో చూపబడతాయి.</string>
-    <string name="market_sale_order_id_label">ఆర్డర్ ID</string>
-    <string name="market_sale_ordered_label">ఆర్డర్ చేయబడింది</string>
-    <string name="market_sale_review_no_response_yet">మీరు ఒకసారి మాత్రమే ప్రతిస్పందించవచ్చు. ప్రత్యుత్తరాలు పబ్లిక్‌గా ఉంటాయి.</string>
-    <string name="market_sale_section_fees">రుసుము విభజన</string>
     <string name="market_sale_ship_submitting">గుర్తు పెడుతోంది…</string>
     <string name="market_sale_tracking_url_label">ట్రాకింగ్ URL (ఐచ్ఛికం)</string>
     <string name="market_sales_empty_subtitle">మీ ప్రచురించిన జాబితాల నుండి ఆర్డర్‌లు ఇక్కడ కనిపిస్తాయి.</string>

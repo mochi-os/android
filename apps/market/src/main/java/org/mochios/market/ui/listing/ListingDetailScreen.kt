@@ -105,7 +105,6 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.StatusTone
@@ -130,7 +129,7 @@ import org.mochios.market.model.PricingModel
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.AuctionBidHistory
-import org.mochios.market.ui.components.AuditTimeline
+import org.mochios.market.ui.components.AuditHistoryCard
 import org.mochios.market.ui.components.DigitalAssetsList
 import org.mochios.market.ui.components.ListingStatusBadge
 import org.mochios.market.ui.components.MarketStatusBadge
@@ -249,7 +248,6 @@ fun ListingDetailScreen(
     var lightboxIndex by remember { mutableIntStateOf(0) }
     var reportOpen by remember { mutableStateOf(false) }
     var bidOpen by remember { mutableStateOf(false) }
-    var auditExpanded by remember { mutableStateOf(false) }
     var submittingReport by remember { mutableStateOf(false) }
     var submittingBid by remember { mutableStateOf(false) }
     var bidErrorMessage by remember { mutableStateOf<String?>(null) }
@@ -333,8 +331,6 @@ fun ListingDetailScreen(
                         isOwner = isOwner,
                         isSaved = isSaved,
                         isReported = isReported,
-                        auditExpanded = auditExpanded,
-                        onToggleAudit = { auditExpanded = !auditExpanded },
                         onPhotoTap = { i ->
                             lightboxIndex = i
                             lightboxOpen = true
@@ -503,8 +499,6 @@ private fun ListingDetailContent(
     isOwner: Boolean,
     isSaved: Boolean,
     isReported: Boolean,
-    auditExpanded: Boolean,
-    onToggleAudit: () -> Unit,
     onPhotoTap: (Int) -> Unit,
     onSellerTap: () -> Unit,
     onToggleSave: () -> Unit,
@@ -950,24 +944,7 @@ private fun ListingDetailContent(
             )
         }
 
-        // Buyers without read access get an empty audit list; hide the toggle
-        // rather than show a dead-end button.
-        if (audit.isNotEmpty()) {
-            MochiTextButton(onClick = onToggleAudit) {
-                Text(
-                    text = stringResource(
-                        if (auditExpanded) R.string.market_listing_detail_audit_hide
-                        else R.string.market_listing_detail_audit_show,
-                    ),
-                )
-            }
-            if (auditExpanded) {
-                AuditTimeline(
-                    events = audit,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            }
-        }
+        AuditHistoryCard(events = audit)
 
         Spacer(modifier = Modifier.height(24.dp))
     }

@@ -197,13 +197,11 @@
     <string name="market_listing_detail_bids_heading">ਬੋਲੀ ਇਤਿਹਾਸ</string>
     <string name="market_listing_detail_buy">ਖਰੀਦੋ</string>
     <string name="market_listing_detail_buy_now">ਹੁਣੇ ਖਰੀਦੋ</string>
-    <string name="market_listing_detail_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="market_listing_detail_information_heading">ਡਿਲੀਵਰੀ ਜਾਣਕਾਰੀ</string>
     <string name="market_listing_detail_listed">ਸੂਚੀਬੱਧ %1$s</string>
     <string name="market_listing_detail_message">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="market_listing_detail_not_found">ਲਿਸਟਿੰਗ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="market_listing_detail_place_bid">ਬੋਲੀ ਲਗਾਓ</string>
-    <string name="market_listing_detail_relist">ਮੁੜ-ਸੂਚੀਬੱਧ ਕਰੋ</string>
     <string name="market_listing_detail_report">ਲਿਸਟਿੰਗ ਰਿਪੋਰਟ ਕਰੋ</string>
     <string name="market_listing_detail_save">ਸੰਭਾਲੋ</string>
     <string name="market_listing_detail_seller_heading">ਵੇਚਣ ਵਾਲਾ</string>
@@ -214,11 +212,8 @@
     <string name="market_listing_detail_verified">ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ</string>
     <string name="market_listing_no_photo">ਕੋਈ ਫੋਟੋ ਨਹੀਂ</string>
     <string name="market_listing_save">ਇਸ਼ਤਿਹਾਰ ਸੇਵ ਕਰੋ</string>
-    <string name="market_listings_action_delete">ਮਿਟਾਓ</string>
     <string name="market_listings_action_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="market_listings_action_relist">ਮੁੜ-ਸੂਚੀਬੱਧ ਕਰੋ</string>
-    <string name="market_listings_action_share">ਸਾਂਝਾ ਕਰੋ</string>
-    <string name="market_listings_action_view">ਦੇਖੋ</string>
     <string name="market_listings_appeal">ਅਪੀਲ</string>
     <string name="market_listings_clear">ਮੇਰੀਆਂ ਸੂਚੀਆਂ ਵਿੱਚੋਂ ਹਟਾਓ</string>
     <string name="market_listings_delete_confirm">ਮਿਟਾਓ</string>
@@ -253,7 +248,6 @@
     <string name="market_profile_status_banned">ਪਾਬੰਦੀਸ਼ੁਦਾ</string>
     <string name="market_profile_status_suspended">ਮੁਅੱਤਲ ਕੀਤਾ ਗਿਆ</string>
     <string name="market_profile_verified">ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ</string>
-    <string name="market_purchase_audit_section">ਗਤੀਵਿਧੀ</string>
     <string name="market_purchase_confirm_delivery">ਪ੍ਰਾਪਤੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</string>
     <string name="market_purchase_delivery">ਡਿਲੀਵਰੀ</string>
     <string name="market_purchase_dispute_details">ਤੁਹਾਡੇ ਵੇਰਵੇ</string>
@@ -327,7 +321,6 @@
     <string name="market_sale_buyer_label">ਖਰੀਦਦਾਰ</string>
     <string name="market_sale_carrier_label">ਕੈਰੀਅਰ</string>
     <string name="market_sale_carrier_other">ਹੋਰ</string>
-    <string name="market_sale_completed_label">ਪੂਰਾ</string>
     <string name="market_sale_dispute_respond">ਜਵਾਬ ਦਿਓ</string>
     <string name="market_sale_load_failed">ਆਰਡਰ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_sale_message_buyer">ਖਰੀਦਦਾਰ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜੋ</string>
@@ -338,13 +331,12 @@
     <string name="market_sale_review_response_label">ਤੁਹਾਡਾ ਜਵਾਬ</string>
     <string name="market_sale_review_response_submit">ਜਵਾਬ ਜਮ੍ਹਾਂ ਕਰੋ</string>
     <string name="market_sale_section_dispute">ਵਿਵਾਦ</string>
-    <string name="market_sale_section_refund">ਵਾਪਸੀ</string>
-    <string name="market_sale_section_shipping">ਸ਼ਿਪਿੰਗ</string>
     <string name="market_sale_ship_action">ਸ਼ਿੱਪ ਕੀਤੇ ਵਜੋਂ ਮਾਰਕ ਕਰੋ</string>
     <string name="market_sale_ship_failed">ਸ਼ਿਪ ਕੀਤੇ ਵਜੋਂ ਨਿਸ਼ਾਨਬੱਧ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="market_sale_ship_success">ਸ਼ਿੱਪ ਕੀਤੇ ਵਜੋਂ ਮਾਰਕ ਕੀਤਾ</string>
-    <string name="market_sale_shipped_label">ਭੇਜਿਆ ਗਿਆ</string>
     <string name="market_sale_title">ਵਿਕਰੀ</string>
+    <string name="market_audit_history">ਇਤਿਹਾਸ</string>
+    <string name="market_sale_review_of_buyer">ਖਰੀਦਦਾਰ ਬਾਰੇ ਤੁਹਾਡੀ ਸਮੀਖਿਆ</string>
     <string name="market_sale_tracking_label">ਟਰੈਕਿੰਗ ਨੰਬਰ</string>
     <string name="market_sales_title">ਮੇਰੀਆਂ ਵਿਕਰੀਆਂ</string>
     <string name="market_saved_title">ਸੰਭਾਲੇ ਗਏ</string>
@@ -414,7 +406,6 @@
     <string name="market_sale_review_response_submitting">ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="market_checkout_subscribing">ਸਬਸਕ੍ਰਾਈਬ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="market_filter_remove">ਫਿਲਟਰ ਹਟਾਓ</string>
-    <string name="market_listings_action_appeal">ਹਟਾਉਣ ਦੀ ਅਪੀਲ</string>
     <string name="market_listings_share_chooser">ਇਸ਼ਤਿਹਾਰ ਸਾਂਝਾ ਕਰੋ</string>
     <string name="market_refund_dialog_amount_label">ਰਕਮ</string>
 
@@ -483,8 +474,6 @@
     <string name="market_filter_chip_min">ਘੱਟੋ-ਘੱਟ %1$s</string>
     <string name="market_filter_sort_rating">ਸਭ ਤੋਂ ਉੱਚੀ ਰੇਟਿੰਗ</string>
     <string name="market_listing_detail_appeal_pending">ਅਪੀਲ ਬਕਾਇਆ</string>
-    <string name="market_listing_detail_audit_hide">ਟਾਈਮਲਾਈਨ ਲੁਕਾਓ</string>
-    <string name="market_listing_detail_audit_show">ਟਾਈਮਲਾਈਨ ਦਿਖਾਓ</string>
     <string name="market_listing_detail_relist_failed">ਮੁੜ-ਸੂਚੀਬੱਧ ਨਹੀਂ ਹੋ ਸਕਿਆ</string>
     <string name="market_listing_detail_sales_count">%1$s ਵਿਕਰੀਆਂ</string>
     <string name="market_listing_detail_seller_banned_banner">ਇਹ ਵਿਕਰੇਤਾ ਪਾਬੰਦੀਸ਼ੁਦਾ ਹੈ। ਨਵੇਂ ਆਰਡਰ ਨਹੀਂ ਦਿੱਤੇ ਜਾ ਸਕਦੇ।</string>
@@ -529,19 +518,9 @@
     <string name="market_reviews_empty_sent_subtitle">ਸਮੀਖਿਆ ਛੱਡਣ ਲਈ ਪੂਰਾ ਹੋਇਆ ਆਰਡਰ ਖੋਲ੍ਹੋ।</string>
     <string name="market_reviews_empty_sent_title">ਤੁਸੀਂ ਕੋਈ ਸਮੀਖਿਆ ਨਹੀਂ ਲਿਖੀ</string>
     <string name="market_reviews_response_placeholder">ਇੱਕ ਜਵਾਬ ਲਿਖੋ…</string>
-    <string name="market_sale_audit_collapse">ਗਤੀਵਿਧੀ ਲੁਕਾਓ</string>
-    <string name="market_sale_audit_expand">ਗਤੀਵਿਧੀ ਦਿਖਾਓ</string>
     <string name="market_sale_carrier_custom_label">ਕੈਰੀਅਰ ਦਾ ਨਾਮ</string>
     <string name="market_sale_dispute_evidence_due">ਸਬੂਤ ਦੀ ਮਿਆਦ %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ਚਾਰਜਬੈਕ ਕਾਰਨ: %1$s</string>
-    <string name="market_sale_fee_gross">ਕੁੱਲ</string>
-    <string name="market_sale_fee_mochi">Mochi ਫ਼ੀਸ</string>
-    <string name="market_sale_fee_payout">ਨੈੱਟ ਅਦਾਇਗੀ</string>
-    <string name="market_sale_fee_stripe_note">Stripe ਪ੍ਰੋਸੈਸਰ ਫੀਸਾਂ ਤੁਹਾਡੇ Stripe ਡੈਸ਼ਬੋਰਡ ਵਿੱਚ ਦਿਖਾਈਆਂ ਜਾਂਦੀਆਂ ਹਨ।</string>
-    <string name="market_sale_order_id_label">ਆਰਡਰ ID</string>
-    <string name="market_sale_ordered_label">ਆਰਡਰ ਕੀਤਾ</string>
-    <string name="market_sale_review_no_response_yet">ਤੁਸੀਂ ਇੱਕ ਵਾਰ ਜਵਾਬ ਦੇ ਸਕਦੇ ਹੋ। ਜਵਾਬ ਜਨਤਕ ਹੁੰਦੇ ਹਨ।</string>
-    <string name="market_sale_section_fees">ਫੀਸ ਵੇਰਵਾ</string>
     <string name="market_sale_ship_submitting">ਨਿਸ਼ਾਨਬੱਧ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="market_sale_tracking_url_label">ਟਰੈਕਿੰਗ URL (ਵਿਕਲਪਿਕ)</string>
     <string name="market_sales_empty_subtitle">ਤੁਹਾਡੀਆਂ ਪ੍ਰਕਾਸ਼ਿਤ ਸੂਚੀਆਂ ਤੋਂ ਆਰਡਰ ਇੱਥੇ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।</string>
