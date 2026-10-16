@@ -297,7 +297,7 @@
     <string name="domain_empty_admin">Tidak ada domain yang dikonfigurasi.</string>
     <string name="domain_empty_user">Anda tidak memiliki akses ke domain apa pun.</string>
     <string name="domain_https">HTTPS otomatis</string>
-    <string name="domain_name">Domain</string>
+    <string name="domain_name">Nama domain</string>
     <string name="domain_status_pending">Menunggu verifikasi DNS</string>
     <string name="domain_status_verified">Terverifikasi</string>
     <string name="domain_title">Domain</string>

@@ -297,7 +297,7 @@
     <string name="domain_empty_admin">Ora ana domain sing dikonfigurasi.</string>
     <string name="domain_empty_user">Sampéyan ora duwé akses menyang domain apa wae.</string>
     <string name="domain_https">HTTPS otomatis</string>
-    <string name="domain_name">Domain</string>
+    <string name="domain_name">Jeneng domain</string>
     <string name="domain_status_pending">Verifikasi DNS nunggu</string>
     <string name="domain_status_verified">Diverifikasi</string>
     <string name="domain_title">Domain</string>
