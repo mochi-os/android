@@ -32,7 +32,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.filled.Download
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.LocalShipping
@@ -330,9 +329,13 @@ fun ListingDetailScreen(
                         onToggleSave = { viewModel.toggleSave() },
                         onReport = { reportOpen = true },
                         onMessageSeller = {
-                            navController.navigate(
-                                MarketApp.messageThread(listing.id.toString(), "new"),
-                            )
+                            if (isOwner) {
+                                navController.navigate(MarketApp.MESSAGES)
+                            } else {
+                                navController.navigate(
+                                    MarketApp.messageThread(listing.id.toString(), "new"),
+                                )
+                            }
                         },
                         onBuyNow = {
                             val auc = response.auction
@@ -368,9 +371,6 @@ fun ListingDetailScreen(
                                     )
                                 }
                             }
-                        },
-                        onEdit = {
-                            navController.navigate(MarketApp.listingEdit(listing.id.toString()))
                         },
                         onRelist = { viewModel.relistListing() },
                         onCancelReservation = { viewModel.cancelReservation() },
@@ -460,7 +460,6 @@ private fun ListingDetailContent(
     onMessageSeller: () -> Unit,
     onPrimaryCta: () -> Unit,
     onBuyNow: () -> Unit,
-    onEdit: () -> Unit,
     onRelist: () -> Unit,
     onCancelReservation: () -> Unit,
     cancellingReservation: Boolean,
@@ -671,18 +670,20 @@ private fun ListingDetailContent(
                         }
                     }
 
-                    PrimaryCta(
-                        pricing = listing.pricing,
-                        onClick = onPrimaryCta,
-                        enabled = !sellerSuspended,
-                        modifier = Modifier.fillMaxWidth(),
-                    )
+                    if (!isOwner) {
+                        PrimaryCta(
+                            pricing = listing.pricing,
+                            onClick = onPrimaryCta,
+                            enabled = !sellerSuspended,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    }
 
                     // Auction "Buy it now": when the seller set an instant-buy
                     // price, offer it alongside the bid CTA (mirrors web). A
                     // tap bids at the instant amount, which the server resolves
                     // as an instant win -> checkout.
-                    if (listing.pricing == PricingModel.AUCTION && auction != null && auction.instant > 0 && !sellerSuspended) {
+                    if (!isOwner && listing.pricing == PricingModel.AUCTION && auction != null && auction.instant > 0 && !sellerSuspended) {
                         MochiOutlinedButton(
                             onClick = onBuyNow,
                             modifier = Modifier.fillMaxWidth(),
@@ -704,7 +705,7 @@ private fun ListingDetailContent(
                         }
                     }
 
-                    if (sellerSuspended) {
+                    if (!isOwner && sellerSuspended) {
                         Text(
                             text = stringResource(R.string.market_listing_detail_seller_suspended_cta_hint),
                             style = MaterialTheme.typography.bodySmall,
@@ -739,52 +740,38 @@ private fun ListingDetailContent(
                             Spacer(Modifier.width(8.dp))
                             Text(stringResource(R.string.market_listing_detail_message))
                         }
-                        MochiIconButton(
-                            onClick = onToggleSave,
-                        ) {
-                            Icon(
-                                imageVector = if (isSaved) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
-                                contentDescription = stringResource(
-                                    if (isSaved) R.string.market_listing_detail_unsave
-                                    else R.string.market_listing_detail_save,
+                        if (!isOwner) {
+                            MochiIconButton(
+                                onClick = onToggleSave,
+                            ) {
+                                Icon(
+                                    imageVector = if (isSaved) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
+                                    contentDescription = stringResource(
+                                        if (isSaved) R.string.market_listing_detail_unsave
+                                        else R.string.market_listing_detail_save,
+                                    ),
+                                )
+                            }
+                            OutlinedIconButton(
+                                onClick = onReport,
+                                enabled = !isReported,
+                                shape = RoundedCornerShape(10.dp),
+                                border = BorderStroke(
+                                    width = 1.dp,
+                                    color = MaterialTheme.colorScheme.outlineVariant,
                                 ),
-                            )
-                        }
-                        OutlinedIconButton(
-                            onClick = onReport,
-                            enabled = !isReported,
-                            shape = RoundedCornerShape(10.dp),
-                            border = BorderStroke(
-                                width = 1.dp,
-                                color = MaterialTheme.colorScheme.outlineVariant,
-                            ),
-                        ) {
-                            Icon(
-                                imageVector = Icons.Outlined.Flag,
-                                contentDescription = stringResource(
-                                    if (isReported) R.string.market_listing_detail_already_reported
-                                    else R.string.market_listing_detail_report,
-                                ),
-                            )
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Outlined.Flag,
+                                    contentDescription = stringResource(
+                                        if (isReported) R.string.market_listing_detail_already_reported
+                                        else R.string.market_listing_detail_report,
+                                    ),
+                                )
+                            }
                         }
                     }
 
-                    // Owner controls.
-                    if (isOwner) {
-                        MochiOutlinedButton(
-                            onClick = onEdit,
-                            modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(10.dp),
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Edit,
-                                contentDescription = null,
-                                modifier = Modifier.size(16.dp),
-                            )
-                            Spacer(Modifier.width(4.dp))
-                            Text(stringResource(R.string.market_listing_detail_edit))
-                        }
-                    }
                     val showRelist = listing.status == ListingStatus.SOLD ||
                             listing.status == ListingStatus.EXPIRED
                     if (showRelist) {
