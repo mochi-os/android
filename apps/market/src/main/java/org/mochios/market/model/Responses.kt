@@ -228,6 +228,7 @@ data class ThreadListingPreview(
     val currency: Currency? = null,
     val pricing: PricingModel? = null,
     val status: ListingStatus? = null,
+    val photo: Photo? = null,
 )
 
 // ---- Reviews ------------------------------------------------------------

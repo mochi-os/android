@@ -44,11 +44,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import coil3.compose.AsyncImage
+import coil3.request.ImageRequest
+import coil3.request.crossfade
 import kotlinx.coroutines.flow.collectLatest
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
@@ -160,6 +165,7 @@ fun MessageThreadScreen(
             ListingChip(
                 title = state.listing.title,
                 priceLabel = priceLabel(state.listing.price, state.listing.currency),
+                photo = state.photo,
                 onClick = {
                     if (viewModel.listingId.isNotBlank()) {
                         navController.navigate(
@@ -223,6 +229,7 @@ fun MessageThreadScreen(
 private fun ListingChip(
     title: String,
     priceLabel: String,
+    photo: String,
     onClick: () -> Unit,
 ) {
     if (title.isBlank()) return
@@ -242,7 +249,19 @@ private fun ListingChip(
                     .size(36.dp)
                     .clip(RoundedCornerShape(6.dp))
                     .background(MaterialTheme.colorScheme.surfaceVariant),
-            )
+            ) {
+                if (photo.isNotBlank()) {
+                    AsyncImage(
+                        model = ImageRequest.Builder(LocalContext.current)
+                            .data("/market/-/photo/$photo/thumbnail")
+                            .crossfade(true)
+                            .build(),
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier.fillMaxSize(),
+                    )
+                }
+            }
             Spacer(modifier = Modifier.width(10.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(
