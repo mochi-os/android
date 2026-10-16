@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">Okuvuselelwe</string>
     <string name="market_editor_condition_used">Okusetshenzisiwe</string>
     <string name="market_editor_currency">Imali</string>
+    <string name="market_editor_pricing_model">Imodeli</string>
     <string name="market_editor_days">%1$s izinsuku</string>
     <string name="market_editor_delete">Susa uhlu</string>
     <string name="market_editor_description">Incazelo</string>

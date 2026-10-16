@@ -119,6 +119,7 @@
     <string name="market_editor_condition_refurbished">Refè</string>
     <string name="market_editor_condition_used">Itilize</string>
     <string name="market_editor_currency">Lajan</string>
+    <string name="market_editor_pricing_model">Modèl</string>
     <string name="market_editor_days">%1$s jou</string>
     <string name="market_editor_delete">Efase lis la</string>
     <string name="market_editor_delete_confirm_title">Efase lis la?</string>

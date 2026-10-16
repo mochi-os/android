@@ -143,6 +143,7 @@
     <string name="market_editor_condition_refurbished">Opgeknap</string>
     <string name="market_editor_condition_used">Gebruik</string>
     <string name="market_editor_currency">Geldeenheid</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_days">%1$s dae</string>
     <string name="market_editor_delete">Vee lys uit</string>
     <string name="market_editor_delete_confirm_message">Dit sal die lys permanent uitvee.</string>

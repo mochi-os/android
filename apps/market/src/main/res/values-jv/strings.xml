@@ -116,6 +116,7 @@
     <string name="market_editor_condition_refurbished">Rekondisi</string>
     <string name="market_editor_condition_used">Wis kanggo</string>
     <string name="market_editor_currency">Mata uang</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_days">%1$s dina</string>
     <string name="market_editor_delete">Busak iklan</string>
     <string name="market_editor_description">Katrangan</string>

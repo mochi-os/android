@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Ανακατασκευασμένο</string>
     <string name="market_editor_condition_used">Μεταχειρισμένο</string>
     <string name="market_editor_currency">Νόμισμα</string>
+    <string name="market_editor_pricing_model">Μοντέλο</string>
     <string name="market_editor_description">Περιγραφή</string>
     <string name="market_editor_interval_monthly">Μηνιαία</string>
     <string name="market_editor_interval_yearly">Ετήσια</string>

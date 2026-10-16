@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Renoverat</string>
     <string name="market_editor_condition_used">Begagnat</string>
     <string name="market_editor_currency">Valuta</string>
+    <string name="market_editor_pricing_model">Modell</string>
     <string name="market_editor_description">Beskrivning</string>
     <string name="market_editor_interval_monthly">Månadsvis</string>
     <string name="market_editor_interval_yearly">Årligt</string>

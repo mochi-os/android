@@ -143,6 +143,7 @@
     <string name="market_editor_condition_refurbished">Қалпына келтірілген</string>
     <string name="market_editor_condition_used">Пайдаланылған</string>
     <string name="market_editor_currency">Валюта</string>
+    <string name="market_editor_pricing_model">Үлгі</string>
     <string name="market_editor_days">%1$s күн</string>
     <string name="market_editor_delete">Хабарландыруды жою</string>
     <string name="market_editor_delete_confirm_message">Бұл хабарландыруды біржола жояды.</string>

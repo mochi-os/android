@@ -143,6 +143,7 @@
     <string name="market_editor_condition_refurbished">Berritua</string>
     <string name="market_editor_condition_used">Erabilia</string>
     <string name="market_editor_currency">Moneta</string>
+    <string name="market_editor_pricing_model">Eredua</string>
     <string name="market_editor_days">%1$s egun</string>
     <string name="market_editor_delete">Ezabatu zerrenda</string>
     <string name="market_editor_delete_confirm_message">Honek zerrenda betiko ezabatuko du.</string>

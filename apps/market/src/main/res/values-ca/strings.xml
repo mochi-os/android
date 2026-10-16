@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Reacondicionat</string>
     <string name="market_editor_condition_used">Utilitzat</string>
     <string name="market_editor_currency">Moneda</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_description">Descripció</string>
     <string name="market_editor_interval_monthly">Mensual</string>
     <string name="market_editor_interval_yearly">Anual</string>

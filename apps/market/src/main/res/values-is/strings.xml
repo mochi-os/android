@@ -118,6 +118,7 @@
     <string name="market_editor_condition_refurbished">Endurnýjað</string>
     <string name="market_editor_condition_used">Notað</string>
     <string name="market_editor_currency">Gjaldmiðill</string>
+    <string name="market_editor_pricing_model">Líkan</string>
     <string name="market_editor_days">%1$s daga</string>
     <string name="market_editor_delete">Eyða auglýsingu</string>
     <string name="market_editor_description">Lýsing</string>

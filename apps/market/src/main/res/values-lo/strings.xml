@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">ປັບປຸງໃໝ່</string>
     <string name="market_editor_condition_used">ໃຊ້ແລ້ວ</string>
     <string name="market_editor_currency">ສະກຸນເງິນ</string>
+    <string name="market_editor_pricing_model">ຮູບແບບ</string>
     <string name="market_editor_days">%1$s ມື້</string>
     <string name="market_editor_delete">ລົບລາຍການ</string>
     <string name="market_editor_description">ລາຍລະອຽດ</string>

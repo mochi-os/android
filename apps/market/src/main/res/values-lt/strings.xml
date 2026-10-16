@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Atnaujinta</string>
     <string name="market_editor_condition_used">Naudota</string>
     <string name="market_editor_currency">Valiuta</string>
+    <string name="market_editor_pricing_model">Modelis</string>
     <string name="market_editor_description">Aprašymas</string>
     <string name="market_editor_interval_monthly">Mėnesinis</string>
     <string name="market_editor_interval_yearly">Kasmet</string>

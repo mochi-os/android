@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">بحال شدہ</string>
     <string name="market_editor_condition_used">استعمال شدہ</string>
     <string name="market_editor_currency">کرنسی</string>
+    <string name="market_editor_pricing_model">ماڈل</string>
     <string name="market_editor_description">تفصیل</string>
     <string name="market_editor_interval_monthly">ماہانہ</string>
     <string name="market_editor_interval_yearly">سالانہ</string>

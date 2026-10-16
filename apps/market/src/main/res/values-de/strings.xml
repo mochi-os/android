@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Generalüberholt</string>
     <string name="market_editor_condition_used">Gebraucht</string>
     <string name="market_editor_currency">Währung</string>
+    <string name="market_editor_pricing_model">Modell</string>
     <string name="market_editor_description">Beschreibung</string>
     <string name="market_editor_interval_monthly">Monatlich</string>
     <string name="market_editor_interval_yearly">Jährlich</string>

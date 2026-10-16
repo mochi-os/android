@@ -258,6 +258,7 @@
     <string name="market_editor_condition_refurbished">翻新</string>
     <string name="market_editor_condition_used">二手</string>
     <string name="market_editor_currency">貨幣</string>
+    <string name="market_editor_pricing_model">模式</string>
     <string name="market_editor_delete">刪除刊登</string>
     <string name="market_editor_delete_confirm_message">呢個動作會永久刪除呢個刊登。</string>
     <string name="market_editor_delete_confirm_title">刪除刊登？</string>

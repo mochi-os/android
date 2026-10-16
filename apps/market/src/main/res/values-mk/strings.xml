@@ -143,6 +143,7 @@
     <string name="market_editor_condition_refurbished">Реновирано</string>
     <string name="market_editor_condition_used">Користено</string>
     <string name="market_editor_currency">Валута</string>
+    <string name="market_editor_pricing_model">Модел</string>
     <string name="market_editor_days">%1$s денови</string>
     <string name="market_editor_delete">Избриши оглас</string>
     <string name="market_editor_delete_confirm_message">Ова трајно ќе го избрише огласот.</string>

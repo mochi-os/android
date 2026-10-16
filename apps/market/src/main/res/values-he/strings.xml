@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">מחודש</string>
     <string name="market_editor_condition_used">משומש</string>
     <string name="market_editor_currency">מטבע</string>
+    <string name="market_editor_pricing_model">מודל</string>
     <string name="market_editor_description">תיאור</string>
     <string name="market_editor_interval_monthly">חודשי</string>
     <string name="market_editor_interval_yearly">שנתי</string>

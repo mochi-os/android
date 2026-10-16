@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Kunnostettu</string>
     <string name="market_editor_condition_used">Käytetty</string>
     <string name="market_editor_currency">Valuutta</string>
+    <string name="market_editor_pricing_model">Malli</string>
     <string name="market_editor_description">Kuvaus</string>
     <string name="market_editor_interval_monthly">Kuukausittain</string>
     <string name="market_editor_interval_yearly">Vuosittain</string>

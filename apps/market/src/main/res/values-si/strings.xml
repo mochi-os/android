@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">අලුත් කරන ලද</string>
     <string name="market_editor_condition_used">භාවිතා කළ</string>
     <string name="market_editor_currency">මුදල් වර්ගය</string>
+    <string name="market_editor_pricing_model">ආකෘතිය</string>
     <string name="market_editor_days">%1$s දින</string>
     <string name="market_editor_delete">ලැයිස්තුව මකන්න</string>
     <string name="market_editor_description">විස්තරය</string>

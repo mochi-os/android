@@ -123,6 +123,7 @@
     <string name="market_editor_condition_refurbished">Askichata</string>
     <string name="market_editor_condition_used">Apnaqata</string>
     <string name="market_editor_currency">Qullqi kasta</string>
+    <string name="market_editor_pricing_model">Uñacht\'äwi</string>
     <string name="market_editor_days">%1$s uru</string>
     <string name="market_editor_delete">Listado chhaqtayaña</string>
     <string name="market_editor_delete_confirm_title">¿Listado chhaqtayañati?</string>

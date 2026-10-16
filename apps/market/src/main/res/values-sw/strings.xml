@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Iliyofanyiwa upya</string>
     <string name="market_editor_condition_used">Iliyotumika</string>
     <string name="market_editor_currency">Sarafu</string>
+    <string name="market_editor_pricing_model">Muundo</string>
     <string name="market_editor_description">Maelezo</string>
     <string name="market_editor_interval_monthly">Kila mwezi</string>
     <string name="market_editor_interval_yearly">Kila mwaka</string>

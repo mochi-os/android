@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Барқароршуда</string>
     <string name="market_editor_condition_used">Истифодашуда</string>
     <string name="market_editor_currency">Асъор</string>
+    <string name="market_editor_pricing_model">Модел</string>
     <string name="market_editor_description">Тавсиф</string>
     <string name="market_editor_interval_monthly">Ҳармоҳа</string>
     <string name="market_editor_interval_yearly">Солона</string>

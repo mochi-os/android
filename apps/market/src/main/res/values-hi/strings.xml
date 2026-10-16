@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">नवीनीकृत</string>
     <string name="market_editor_condition_used">इस्तेमाल किया हुआ</string>
     <string name="market_editor_currency">मुद्रा</string>
+    <string name="market_editor_pricing_model">मॉडल</string>
     <string name="market_editor_description">विवरण</string>
     <string name="market_editor_interval_monthly">मासिक</string>
     <string name="market_editor_interval_yearly">वार्षिक</string>

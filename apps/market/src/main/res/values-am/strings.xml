@@ -143,6 +143,7 @@
     <string name="market_editor_condition_refurbished">የታደሰ</string>
     <string name="market_editor_condition_used">ጥቅም ላይ የዋለ</string>
     <string name="market_editor_currency">ምንዛሬ</string>
+    <string name="market_editor_pricing_model">ሞዴል</string>
     <string name="market_editor_days">%1$s ቀናት</string>
     <string name="market_editor_delete">ዝርዝር ሰርዝ</string>
     <string name="market_editor_delete_confirm_message">ይህ ዝርዝሩን ሙሉ ለሙሉ ይሰርዘዋል።</string>

@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Відновлене</string>
     <string name="market_editor_condition_used">Вживане</string>
     <string name="market_editor_currency">Валюта</string>
+    <string name="market_editor_pricing_model">Модель</string>
     <string name="market_editor_description">Опис</string>
     <string name="market_editor_interval_monthly">Щомісяця</string>
     <string name="market_editor_interval_yearly">Щорічно</string>

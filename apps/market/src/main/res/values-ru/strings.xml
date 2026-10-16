@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Восстановленное</string>
     <string name="market_editor_condition_used">Б/у</string>
     <string name="market_editor_currency">Валюта</string>
+    <string name="market_editor_pricing_model">Модель</string>
     <string name="market_editor_description">Описание</string>
     <string name="market_editor_interval_monthly">Ежемесячно</string>
     <string name="market_editor_interval_yearly">Ежегодно</string>

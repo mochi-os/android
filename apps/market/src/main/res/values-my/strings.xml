@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">ပြန်လည်ပြုပြင်ထား</string>
     <string name="market_editor_condition_used">သုံးပြီး</string>
     <string name="market_editor_currency">ငွေကြေး</string>
+    <string name="market_editor_pricing_model">ပုံစံ</string>
     <string name="market_editor_days">%1$s ရက်</string>
     <string name="market_editor_delete">ကြော်ငြာကို ဖျက်ပါ</string>
     <string name="market_editor_description">ဖော်ပြချက်</string>

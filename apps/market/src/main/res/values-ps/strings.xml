@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">بیا جوړ شوی</string>
     <string name="market_editor_condition_used">کارول شوی</string>
     <string name="market_editor_currency">اسعار</string>
+    <string name="market_editor_pricing_model">ماډل</string>
     <string name="market_editor_days">%1$s ورځې</string>
     <string name="market_editor_delete">اعلان حذف کړئ</string>
     <string name="market_editor_description">تفصیل</string>

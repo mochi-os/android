@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">បានកែលម្អ</string>
     <string name="market_editor_condition_used">បានប្រើ</string>
     <string name="market_editor_currency">រូបិយប័ណ្ណ</string>
+    <string name="market_editor_pricing_model">គំរូ</string>
     <string name="market_editor_days">%1$s ថ្ងៃ</string>
     <string name="market_editor_delete">លុបការផ្សាយ</string>
     <string name="market_editor_description">ការពិពណ៌នា</string>

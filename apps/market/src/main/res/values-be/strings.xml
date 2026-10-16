@@ -143,6 +143,7 @@
     <string name="market_editor_condition_refurbished">Адноўлены</string>
     <string name="market_editor_condition_used">Ужываны</string>
     <string name="market_editor_currency">Валюта</string>
+    <string name="market_editor_pricing_model">Мадэль</string>
     <string name="market_editor_days">%1$s дзён</string>
     <string name="market_editor_delete">Выдаліць аб’яву</string>
     <string name="market_editor_delete_confirm_message">Гэта незваротна выдаліць аб’яву.</string>

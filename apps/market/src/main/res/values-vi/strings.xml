@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Tân trang</string>
     <string name="market_editor_condition_used">Đã qua sử dụng</string>
     <string name="market_editor_currency">Tiền tệ</string>
+    <string name="market_editor_pricing_model">Mô hình</string>
     <string name="market_editor_description">Mô tả</string>
     <string name="market_editor_interval_monthly">Hàng tháng</string>
     <string name="market_editor_interval_yearly">Hàng năm</string>

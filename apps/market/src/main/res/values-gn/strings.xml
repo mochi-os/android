@@ -108,6 +108,7 @@
     <string name="market_editor_condition_refurbished">Reformado</string>
     <string name="market_editor_condition_used">Ojeporúva</string>
     <string name="market_editor_currency">Viru</string>
+    <string name="market_editor_pricing_model">Ojegua</string>
     <string name="market_editor_days">%1$s ára</string>
     <string name="market_editor_delete">Embogue listado</string>
     <string name="market_editor_description">Ñemombe\'u</string>

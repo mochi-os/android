@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">ซ่อมแซมใหม่</string>
     <string name="market_editor_condition_used">มือสอง</string>
     <string name="market_editor_currency">สกุลเงิน</string>
+    <string name="market_editor_pricing_model">รูปแบบ</string>
     <string name="market_editor_description">คำอธิบาย</string>
     <string name="market_editor_interval_monthly">รายเดือน</string>
     <string name="market_editor_interval_yearly">รายปี</string>

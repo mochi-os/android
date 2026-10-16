@@ -225,6 +225,7 @@
     <string name="market_editor_condition_refurbished">Refurbished</string>
     <string name="market_editor_condition_used">Used</string>
     <string name="market_editor_currency">Currency</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_days">%1$s days</string>
     <string name="market_editor_delete">Delete listing</string>
     <string name="market_editor_delete_confirm_message">This will permanently delete the listing.</string>

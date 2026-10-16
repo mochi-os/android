@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Repasované</string>
     <string name="market_editor_condition_used">Použité</string>
     <string name="market_editor_currency">Mena</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_description">Popis</string>
     <string name="market_editor_interval_monthly">Mesačne</string>
     <string name="market_editor_interval_yearly">Ročne</string>

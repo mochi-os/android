@@ -143,6 +143,7 @@
     <string name="market_editor_condition_refurbished">Сэргээгдсэн</string>
     <string name="market_editor_condition_used">Хэрэглэсэн</string>
     <string name="market_editor_currency">Валют</string>
+    <string name="market_editor_pricing_model">Загвар</string>
     <string name="market_editor_days">%1$s хоног</string>
     <string name="market_editor_delete">Зар устгах</string>
     <string name="market_editor_delete_confirm_message">Энэ нь зарыг бүрэн устгана.</string>

@@ -260,6 +260,7 @@
     <string name="market_editor_condition_refurbished">Remis à neuf</string>
     <string name="market_editor_condition_used">Usagé</string>
     <string name="market_editor_currency">Devise</string>
+    <string name="market_editor_pricing_model">Modèle</string>
     <string name="market_editor_days">%1$s jours</string>
     <string name="market_editor_delete">Supprimer l\'annonce</string>
     <string name="market_editor_delete_confirm_message">Cette action supprimera définitivement l\'annonce.</string>

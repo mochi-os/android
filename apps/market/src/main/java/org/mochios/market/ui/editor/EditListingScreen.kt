@@ -8,25 +8,24 @@ package org.mochios.market.ui.editor
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Error
-import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -35,7 +34,6 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
@@ -55,13 +53,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.google.gson.Gson
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.model.PlaceData
-import org.mochios.android.R as MochiR
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -71,7 +71,6 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
-import org.mochios.android.ui.components.Section
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
@@ -160,7 +159,7 @@ fun EditListingScreen(
                 .padding(padding)
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp, vertical = 12.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(24.dp),
         ) {
             // Stripe onboarding banner at top if account is not yet onboarded
             // — gated explicitly on `== false` so the banner stays hidden
@@ -170,7 +169,7 @@ fun EditListingScreen(
             }
 
             // ---- Basic info ----
-            Section(title = stringResource(R.string.market_editor_section_basic)) {
+            EditorSection(title = stringResource(R.string.market_editor_section_basic)) {
                 MochiTextField(
                     value = state.title,
                     onValueChange = viewModel::setTitle,
@@ -227,7 +226,7 @@ fun EditListingScreen(
             }
 
             // ---- Pricing ----
-            Section(title = stringResource(R.string.market_editor_section_pricing)) {
+            EditorSection(title = stringResource(R.string.market_editor_section_pricing)) {
                 PricingModelSelector(
                     pricing = state.pricing,
                     currency = state.currency,
@@ -249,7 +248,7 @@ fun EditListingScreen(
             }
 
             // ---- Photos ----
-            Section(title = stringResource(R.string.market_editor_section_photos)) {
+            EditorSection(title = stringResource(R.string.market_editor_section_photos)) {
                 PhotoManager(
                     photos = state.photos,
                     onUpload = { uris ->
@@ -263,7 +262,7 @@ fun EditListingScreen(
 
             // ---- Digital assets (only for digital listings) ----
             if (state.type == ListingType.DIGITAL) {
-                Section(title = stringResource(R.string.market_editor_section_assets)) {
+                EditorSection(title = stringResource(R.string.market_editor_section_assets)) {
                     DigitalAssetsManager(
                         assets = state.assets,
                         onUpload = { uris ->
@@ -278,7 +277,7 @@ fun EditListingScreen(
             }
 
             // ---- Delivery ----
-            Section(title = stringResource(R.string.market_editor_section_delivery)) {
+            EditorSection(title = stringResource(R.string.market_editor_section_delivery)) {
                 DeliveryTypeRadioRow(
                     type = state.type,
                     onChange = viewModel::setType,
@@ -306,7 +305,7 @@ fun EditListingScreen(
 
             // ---- Shipping zones (conditional) ----
             if (state.type == ListingType.PHYSICAL && state.shipping) {
-                Section(title = stringResource(R.string.market_editor_section_shipping_zones)) {
+                EditorSection(title = stringResource(R.string.market_editor_section_shipping_zones)) {
                     ShippingZonesEditor(
                         zones = state.zones,
                         currency = state.currency,
@@ -316,7 +315,7 @@ fun EditListingScreen(
             }
 
             // ---- Location ----
-            Section(title = stringResource(R.string.market_editor_section_location)) {
+            EditorSection(title = stringResource(R.string.market_editor_section_location)) {
                 val parsed = remember(state.location) {
                     parseLocationToPlace(state.location)
                 }
@@ -329,7 +328,7 @@ fun EditListingScreen(
             }
 
             // ---- Tags ----
-            Section(title = stringResource(R.string.market_editor_section_tags)) {
+            EditorSection(title = stringResource(R.string.market_editor_section_tags)) {
                 MochiTextField(
                     value = state.tagsText,
                     onValueChange = viewModel::setTagsText,
@@ -344,7 +343,7 @@ fun EditListingScreen(
                 toMinorUnits(state.priceText, state.currency)
             }
             if (priceMinor > 0L) {
-                Section(title = stringResource(R.string.market_editor_section_fee_preview)) {
+                EditorSection(title = stringResource(R.string.market_editor_section_fee_preview)) {
                     FeePreview(
                         price = priceMinor,
                         currency = state.currency,
@@ -452,6 +451,23 @@ fun EditListingScreen(
             confirmEnabled = reason.isNotBlank(),
             dismissText = stringResource(R.string.market_editor_zone_cancel),
         )
+    }
+}
+
+/**
+ * A titled group of the editor's fields, laid straight on the page at full
+ * width rather than in a card as lib's `Section` draws it.
+ */
+@Composable
+private fun EditorSection(title: String, content: @Composable ColumnScope.() -> Unit) {
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Bold,
+        )
+        Spacer(Modifier.height(12.dp))
+        content()
     }
 }
 

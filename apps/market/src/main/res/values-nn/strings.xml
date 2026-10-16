@@ -93,6 +93,7 @@
     <string name="market_editor_condition_refurbished">Renovert</string>
     <string name="market_editor_condition_used">Brukt</string>
     <string name="market_editor_currency">Valuta</string>
+    <string name="market_editor_pricing_model">Modell</string>
     <string name="market_editor_description">Skildring</string>
     <string name="market_editor_interval_monthly">Månadleg</string>
     <string name="market_editor_interval_yearly">Årleg</string>

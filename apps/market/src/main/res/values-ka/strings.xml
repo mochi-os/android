@@ -114,6 +114,7 @@
     <string name="market_editor_condition_refurbished">აღდგენილი</string>
     <string name="market_editor_condition_used">მეორადი</string>
     <string name="market_editor_currency">ვალუტა</string>
+    <string name="market_editor_pricing_model">მოდელი</string>
     <string name="market_editor_days">%1$s დღე</string>
     <string name="market_editor_delete">განცხადების წაშლა</string>
     <string name="market_editor_description">აღწერა</string>

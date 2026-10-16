@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Obnovljeno</string>
     <string name="market_editor_condition_used">Rabljeno</string>
     <string name="market_editor_currency">Valuta</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_description">Opis</string>
     <string name="market_editor_interval_monthly">Mesečno</string>
     <string name="market_editor_interval_yearly">Letno</string>

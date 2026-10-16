@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Odnowione</string>
     <string name="market_editor_condition_used">Używane</string>
     <string name="market_editor_currency">Waluta</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_description">Opis</string>
     <string name="market_editor_interval_monthly">Miesięcznie</string>
     <string name="market_editor_interval_yearly">Rocznie</string>

@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">ਨਵਿਆਇਆ</string>
     <string name="market_editor_condition_used">ਵਰਤਿਆ</string>
     <string name="market_editor_currency">ਮੁਦਰਾ</string>
+    <string name="market_editor_pricing_model">ਮਾਡਲ</string>
     <string name="market_editor_days">%1$s ਦਿਨ</string>
     <string name="market_editor_delete">ਇਸ਼ਤਿਹਾਰ ਮਿਟਾਓ</string>
     <string name="market_editor_description">ਵੇਰਵਾ</string>

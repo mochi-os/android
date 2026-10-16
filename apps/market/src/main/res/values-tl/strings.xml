@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">Naayos</string>
     <string name="market_editor_condition_used">Gamit na</string>
     <string name="market_editor_currency">Pera</string>
+    <string name="market_editor_pricing_model">Modelo</string>
     <string name="market_editor_days">%1$s araw</string>
     <string name="market_editor_delete">Burahin ang listahan</string>
     <string name="market_editor_description">Paglalarawan</string>

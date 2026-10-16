@@ -116,6 +116,7 @@
     <string name="market_editor_condition_refurbished">Athchóirithe</string>
     <string name="market_editor_condition_used">Úsáidte</string>
     <string name="market_editor_currency">Airgeadra</string>
+    <string name="market_editor_pricing_model">Samhail</string>
     <string name="market_editor_days">%1$s lá</string>
     <string name="market_editor_delete">Scrios an liosta</string>
     <string name="market_editor_description">Cur síos</string>

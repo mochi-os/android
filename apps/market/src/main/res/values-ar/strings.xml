@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">مُجدَّد</string>
     <string name="market_editor_condition_used">مستعمل</string>
     <string name="market_editor_currency">العملة</string>
+    <string name="market_editor_pricing_model">النموذج</string>
     <string name="market_editor_description">الوصف</string>
     <string name="market_editor_interval_monthly">شهريًا</string>
     <string name="market_editor_interval_yearly">سنويًا</string>

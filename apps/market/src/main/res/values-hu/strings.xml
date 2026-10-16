@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Felújított</string>
     <string name="market_editor_condition_used">Használt</string>
     <string name="market_editor_currency">Pénznem</string>
+    <string name="market_editor_pricing_model">Modell</string>
     <string name="market_editor_description">Leírás</string>
     <string name="market_editor_interval_monthly">Havi</string>
     <string name="market_editor_interval_yearly">Évi</string>

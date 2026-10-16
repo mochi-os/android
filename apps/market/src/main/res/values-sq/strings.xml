@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">E rinovuar</string>
     <string name="market_editor_condition_used">E përdorur</string>
     <string name="market_editor_currency">Monedha</string>
+    <string name="market_editor_pricing_model">Modeli</string>
     <string name="market_editor_days">%1$s ditë</string>
     <string name="market_editor_delete">Fshi listimin</string>
     <string name="market_editor_description">Përshkrimi</string>

@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">Калыбына келтирилген</string>
     <string name="market_editor_condition_used">Колдонулган</string>
     <string name="market_editor_currency">Валюта</string>
+    <string name="market_editor_pricing_model">Модель</string>
     <string name="market_editor_days">%1$s күн</string>
     <string name="market_editor_delete">Жарнаманы өчүрүү</string>
     <string name="market_editor_description">Сүрөттөмө</string>

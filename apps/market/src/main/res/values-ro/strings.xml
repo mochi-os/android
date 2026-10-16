@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Recondiționat</string>
     <string name="market_editor_condition_used">Folosit</string>
     <string name="market_editor_currency">Monedă</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_description">Descriere</string>
     <string name="market_editor_interval_monthly">Lunar</string>
     <string name="market_editor_interval_yearly">Anual</string>

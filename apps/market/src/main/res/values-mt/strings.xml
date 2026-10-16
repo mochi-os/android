@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">Rinnovat</string>
     <string name="market_editor_condition_used">Użat</string>
     <string name="market_editor_currency">Munita</string>
+    <string name="market_editor_pricing_model">Mudell</string>
     <string name="market_editor_days">%1$s jiem</string>
     <string name="market_editor_delete">Ħassar l-elenku</string>
     <string name="market_editor_description">Deskrizzjoni</string>

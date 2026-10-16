@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Direkondisi</string>
     <string name="market_editor_condition_used">Terpakai</string>
     <string name="market_editor_currency">Mata wang</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_description">Penerangan</string>
     <string name="market_editor_interval_monthly">Bulanan</string>
     <string name="market_editor_interval_yearly">Tahunan</string>

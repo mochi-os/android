@@ -143,6 +143,7 @@
     <string name="market_editor_condition_refurbished">Yenilənmiş</string>
     <string name="market_editor_condition_used">İşlənmiş</string>
     <string name="market_editor_currency">Valyuta</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_days">%1$s gün</string>
     <string name="market_editor_delete">Elanı sil</string>
     <string name="market_editor_delete_confirm_message">Bu elanı qalıcı olaraq siləcək.</string>

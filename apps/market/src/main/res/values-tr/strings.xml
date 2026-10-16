@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Yenilenmiş</string>
     <string name="market_editor_condition_used">Kullanılmış</string>
     <string name="market_editor_currency">Para birimi</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_description">Açıklama</string>
     <string name="market_editor_interval_monthly">Aylık</string>
     <string name="market_editor_interval_yearly">Yıllık</string>

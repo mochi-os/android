@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">리퍼</string>
     <string name="market_editor_condition_used">중고</string>
     <string name="market_editor_currency">통화</string>
+    <string name="market_editor_pricing_model">모델</string>
     <string name="market_editor_description">설명</string>
     <string name="market_editor_interval_monthly">월간</string>
     <string name="market_editor_interval_yearly">연간</string>

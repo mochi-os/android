@@ -114,6 +114,7 @@
     <string name="market_editor_condition_refurbished">Վերանորոգված</string>
     <string name="market_editor_condition_used">Օգտագործված</string>
     <string name="market_editor_currency">Արժույթ</string>
+    <string name="market_editor_pricing_model">Մոդել</string>
     <string name="market_editor_days">%1$s օր</string>
     <string name="market_editor_delete">Ջնջել ցուցակը</string>
     <string name="market_editor_description">Նկարագրություն</string>

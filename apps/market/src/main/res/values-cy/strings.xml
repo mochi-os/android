@@ -143,6 +143,7 @@
     <string name="market_editor_condition_refurbished">Wedi\'i adnewyddu</string>
     <string name="market_editor_condition_used">Wedi\'i ddefnyddio</string>
     <string name="market_editor_currency">Arian</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_days">%1$s diwrnod</string>
     <string name="market_editor_delete">Dileu rhestriad</string>
     <string name="market_editor_delete_confirm_message">Bydd hyn yn dileu\'r rhestriad yn barhaol.</string>

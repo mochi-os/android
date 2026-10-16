@@ -114,6 +114,7 @@
     <string name="market_editor_condition_refurbished">Air ath-nuadhachadh</string>
     <string name="market_editor_condition_used">Air a chleachdadh</string>
     <string name="market_editor_currency">Airgeadra</string>
+    <string name="market_editor_pricing_model">Modail</string>
     <string name="market_editor_days">%1$s làithean</string>
     <string name="market_editor_delete">Sguab às an liosta</string>
     <string name="market_editor_description">Tuairisgeul</string>

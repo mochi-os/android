@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Ricondizionato</string>
     <string name="market_editor_condition_used">Usato</string>
     <string name="market_editor_currency">Valuta</string>
+    <string name="market_editor_pricing_model">Modello</string>
     <string name="market_editor_description">Descrizione</string>
     <string name="market_editor_interval_monthly">Mensile</string>
     <string name="market_editor_interval_yearly">Annuale</string>

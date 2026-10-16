@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">بحال ٿيل</string>
     <string name="market_editor_condition_used">استعمال ٿيل</string>
     <string name="market_editor_currency">ڪرنسي</string>
+    <string name="market_editor_pricing_model">ماڊل</string>
     <string name="market_editor_days">%1$s ڏينهن</string>
     <string name="market_editor_delete">اشتهار ختم ڪريو</string>
     <string name="market_editor_description">تفصيل</string>

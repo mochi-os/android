@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">Täzelenen</string>
     <string name="market_editor_condition_used">Ulanylan</string>
     <string name="market_editor_currency">Walýuta</string>
+    <string name="market_editor_pricing_model">Model</string>
     <string name="market_editor_days">%1$s gün</string>
     <string name="market_editor_delete">Bildirişi pozmak</string>
     <string name="market_editor_description">Düşündiriş</string>

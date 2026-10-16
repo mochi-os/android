@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">പുതുക്കിയത്</string>
     <string name="market_editor_condition_used">ഉപയോഗിച്ചത്</string>
     <string name="market_editor_currency">കറൻസി</string>
+    <string name="market_editor_pricing_model">മോഡൽ</string>
     <string name="market_editor_days">%1$s ദിവസം</string>
     <string name="market_editor_delete">ലിസ്റ്റിംഗ് ഇല്ലാതാക്കുക</string>
     <string name="market_editor_description">വിവരണം</string>

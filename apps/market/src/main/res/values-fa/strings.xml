@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">بازسازی‌شده</string>
     <string name="market_editor_condition_used">استفاده‌شده</string>
     <string name="market_editor_currency">ارز</string>
+    <string name="market_editor_pricing_model">مدل</string>
     <string name="market_editor_description">توضیحات</string>
     <string name="market_editor_interval_monthly">ماهانه</string>
     <string name="market_editor_interval_yearly">سالانه</string>

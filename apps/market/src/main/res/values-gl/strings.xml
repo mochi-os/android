@@ -118,6 +118,7 @@
     <string name="market_editor_condition_refurbished">Reacondicionado</string>
     <string name="market_editor_condition_used">Usado</string>
     <string name="market_editor_currency">Moeda</string>
+    <string name="market_editor_pricing_model">Modelo</string>
     <string name="market_editor_days">%1$s días</string>
     <string name="market_editor_delete">Eliminar anuncio</string>
     <string name="market_editor_description">Descrición</string>

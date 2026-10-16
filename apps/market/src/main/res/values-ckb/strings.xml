@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">نوێکراوە</string>
     <string name="market_editor_condition_used">بەکارهاتوو</string>
     <string name="market_editor_currency">دراو</string>
+    <string name="market_editor_pricing_model">مۆدێل</string>
     <string name="market_editor_days">%1$s ڕۆژ</string>
     <string name="market_editor_delete">لیست بسڕەوە</string>
     <string name="market_editor_description">وەسف</string>

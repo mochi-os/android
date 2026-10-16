@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">নবায়িত</string>
     <string name="market_editor_condition_used">ব্যবহৃত</string>
     <string name="market_editor_currency">মুদ্রা</string>
+    <string name="market_editor_pricing_model">মডেল</string>
     <string name="market_editor_description">বিবরণ</string>
     <string name="market_editor_interval_monthly">মাসিক</string>
     <string name="market_editor_interval_yearly">বার্ষিক</string>

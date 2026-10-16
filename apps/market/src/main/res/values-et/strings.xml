@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">Taastatud</string>
     <string name="market_editor_condition_used">Kasutatud</string>
     <string name="market_editor_currency">Valuuta</string>
+    <string name="market_editor_pricing_model">Mudel</string>
     <string name="market_editor_description">Kirjeldus</string>
     <string name="market_editor_interval_monthly">Igakuine</string>
     <string name="market_editor_interval_yearly">Aastas</string>

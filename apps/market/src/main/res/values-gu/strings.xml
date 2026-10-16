@@ -113,6 +113,7 @@
     <string name="market_editor_condition_refurbished">નવીનીકૃત</string>
     <string name="market_editor_condition_used">વપરાયેલ</string>
     <string name="market_editor_currency">ચલણ</string>
+    <string name="market_editor_pricing_model">મોડેલ</string>
     <string name="market_editor_days">%1$s દિવસ</string>
     <string name="market_editor_delete">જાહેરાત કાઢો</string>
     <string name="market_editor_description">વર્ણન</string>

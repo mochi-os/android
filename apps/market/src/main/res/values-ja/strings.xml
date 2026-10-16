@@ -95,6 +95,7 @@
     <string name="market_editor_condition_refurbished">整備済み</string>
     <string name="market_editor_condition_used">中古</string>
     <string name="market_editor_currency">通貨</string>
+    <string name="market_editor_pricing_model">モデル</string>
     <string name="market_editor_description">説明</string>
     <string name="market_editor_interval_monthly">月額</string>
     <string name="market_editor_interval_yearly">年額</string>

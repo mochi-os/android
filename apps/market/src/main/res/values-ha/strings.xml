@@ -119,6 +119,7 @@
     <string name="market_editor_condition_refurbished">An sabunta</string>
     <string name="market_editor_condition_used">An yi amfani</string>
     <string name="market_editor_currency">Kuɗi</string>
+    <string name="market_editor_pricing_model">Tsari</string>
     <string name="market_editor_days">%1$s kwana</string>
     <string name="market_editor_delete">Share talla</string>
     <string name="market_editor_delete_confirm_title">Share talla?</string>
