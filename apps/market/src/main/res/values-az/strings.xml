@@ -190,7 +190,7 @@
     <string name="market_editor_title_edit">Elanı redaktə et</string>
     <string name="market_editor_title_new">Yeni elan</string>
     <string name="market_editor_title_required">Şəkil və ya fayl əlavə etməzdən əvvəl başlıq daxil edin</string>
-    <string name="market_editor_type">Elan növü</string>
+    <string name="market_editor_type">Çatdırılma üsulları</string>
     <string name="market_editor_type_digital">Rəqəmsal</string>
     <string name="market_editor_type_physical">Fiziki</string>
     <string name="market_editor_zone_add">Zona əlavə et</string>

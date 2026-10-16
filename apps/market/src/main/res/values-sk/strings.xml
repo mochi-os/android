@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Štítky (oddelené čiarkou)</string>
     <string name="market_editor_title_new">Nový inzerát</string>
     <string name="market_editor_title_required">Pred pridaním fotografií alebo súborov zadajte názov</string>
-    <string name="market_editor_type">Typ inzerátu</string>
+    <string name="market_editor_type">Spôsoby doručenia</string>
     <string name="market_editor_zone_add">Pridať zónu</string>
     <string name="market_editor_zone_country_au">Austrália</string>
     <string name="market_editor_zone_country_ca">Kanada</string>

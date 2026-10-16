@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">Editja l-listing</string>
     <string name="market_editor_title_new">Elenku ġdid</string>
     <string name="market_editor_title_required">Daħħal titlu qabel ma żżid ritratti jew fajls</string>
-    <string name="market_editor_type">Tip ta\' elenku</string>
+    <string name="market_editor_type">Metodi ta\' kunsinna</string>
     <string name="market_editor_type_digital">Diġitali</string>
     <string name="market_editor_type_physical">Fiżiku</string>
     <string name="market_editor_zone_cancel">Ikkanċella</string>

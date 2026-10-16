@@ -94,32 +94,37 @@ fun PricingModelSelector(
 
         when (pricing) {
             PricingModel.FIXED, PricingModel.PWYW -> {
-                CurrencyDropdown(currency = currency, onChange = onCurrencyChange)
-                PriceField(
-                    value = priceText,
-                    onChange = onPriceChange,
-                    currency = currency,
-                    label = stringResource(R.string.market_editor_price),
-                )
+                CurrencyPriceRow(currency = currency, onCurrencyChange = onCurrencyChange) {
+                    PriceField(
+                        value = priceText,
+                        onChange = onPriceChange,
+                        currency = currency,
+                        label = stringResource(R.string.market_editor_price),
+                    )
+                }
             }
             PricingModel.SUBSCRIPTION -> {
-                CurrencyDropdown(currency = currency, onChange = onCurrencyChange)
-                PriceField(
-                    value = priceText,
-                    onChange = onPriceChange,
-                    currency = currency,
-                    label = stringResource(R.string.market_editor_price),
-                )
                 IntervalDropdown(interval = interval, onChange = onIntervalChange)
+                CurrencyPriceRow(currency = currency, onCurrencyChange = onCurrencyChange) {
+                    PriceField(
+                        value = priceText,
+                        onChange = onPriceChange,
+                        currency = currency,
+                        label = stringResource(R.string.market_editor_price),
+                    )
+                }
             }
             PricingModel.AUCTION -> {
-                CurrencyDropdown(currency = currency, onChange = onCurrencyChange)
-                PriceField(
-                    value = reserveText,
-                    onChange = onReserveChange,
-                    currency = currency,
-                    label = stringResource(R.string.market_editor_reserve),
-                )
+                DurationDropdown(days = durationDays, onChange = onDurationChange)
+                StartTimeField(opensAt = opensAt, onChange = onOpensChange)
+                CurrencyPriceRow(currency = currency, onCurrencyChange = onCurrencyChange) {
+                    PriceField(
+                        value = reserveText,
+                        onChange = onReserveChange,
+                        currency = currency,
+                        label = stringResource(R.string.market_editor_reserve),
+                    )
+                }
                 PriceField(
                     value = instantText,
                     onChange = onInstantChange,
@@ -127,9 +132,28 @@ fun PricingModelSelector(
                     label = stringResource(R.string.market_editor_instant),
                     helperText = stringResource(R.string.market_editor_instant_help),
                 )
-                DurationDropdown(days = durationDays, onChange = onDurationChange)
-                StartTimeField(opensAt = opensAt, onChange = onOpensChange)
             }
+        }
+    }
+}
+
+/** [price] and the currency dropdown side by side, the price first and wider. */
+@Composable
+private fun CurrencyPriceRow(
+    currency: Currency,
+    onCurrencyChange: (Currency) -> Unit,
+    price: @Composable () -> Unit,
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.Top,
+    ) {
+        Box(modifier = Modifier.weight(0.6f)) {
+            price()
+        }
+        Box(modifier = Modifier.weight(0.4f)) {
+            CurrencyDropdown(currency = currency, onChange = onCurrencyChange)
         }
     }
 }

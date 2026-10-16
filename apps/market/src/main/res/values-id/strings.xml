@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Tag (dipisahkan koma)</string>
     <string name="market_editor_title_new">Daftar baru</string>
     <string name="market_editor_title_required">Masukkan judul sebelum menambahkan foto atau file</string>
-    <string name="market_editor_type">Tipe daftar</string>
+    <string name="market_editor_type">Metode pengiriman</string>
     <string name="market_editor_zone_add">Tambah zona</string>
     <string name="market_editor_zone_country_au">Australia</string>
     <string name="market_editor_zone_country_ca">Kanada</string>

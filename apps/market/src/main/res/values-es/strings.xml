@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Etiquetas (separadas por comas)</string>
     <string name="market_editor_title_new">Nuevo anuncio</string>
     <string name="market_editor_title_required">Introduce un título antes de añadir fotos o archivos</string>
-    <string name="market_editor_type">Tipo de anuncio</string>
+    <string name="market_editor_type">Métodos de entrega</string>
     <string name="market_editor_zone_add">Añadir zona</string>
     <string name="market_editor_zone_country_au">Australia</string>
     <string name="market_editor_zone_country_ca">Canadá</string>

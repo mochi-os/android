@@ -190,7 +190,7 @@
     <string name="market_editor_title_edit">ዝርዝር አስተካክል</string>
     <string name="market_editor_title_new">አዲስ ዝርዝር</string>
     <string name="market_editor_title_required">ፎቶዎችን ወይም ፋይሎችን ከማከልዎ በፊት ርዕስ ያስገቡ</string>
-    <string name="market_editor_type">የዝርዝር ዓይነት</string>
+    <string name="market_editor_type">የማድረሻ ዘዴዎች</string>
     <string name="market_editor_type_digital">ዲጂታል</string>
     <string name="market_editor_type_physical">አካላዊ</string>
     <string name="market_editor_zone_add">ዞን ጨምር</string>

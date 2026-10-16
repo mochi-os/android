@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Tags (door komma\'s gescheiden)</string>
     <string name="market_editor_title_new">Nieuwe advertentie</string>
     <string name="market_editor_title_required">Voer een titel in voordat je foto\'s of bestanden toevoegt</string>
-    <string name="market_editor_type">Type advertentie</string>
+    <string name="market_editor_type">Bezorgmethoden</string>
     <string name="market_editor_zone_add">Zone toevoegen</string>
     <string name="market_editor_zone_country_au">Australië</string>
     <string name="market_editor_zone_country_ca">Canada</string>

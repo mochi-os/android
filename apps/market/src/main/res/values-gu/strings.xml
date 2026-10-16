@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">લિસ્ટિંગ એડિટ કરો</string>
     <string name="market_editor_title_new">નવી જાહેરાત</string>
     <string name="market_editor_title_required">ફોટા અથવા ફાઇલો ઉમેરતાં પહેલાં શીર્ષક દાખલ કરો</string>
-    <string name="market_editor_type">જાહેરાત પ્રકાર</string>
+    <string name="market_editor_type">ડિલિવરી પદ્ધતિઓ</string>
     <string name="market_editor_type_digital">ડિજિટલ</string>
     <string name="market_editor_type_physical">ભૌતિક</string>
     <string name="market_editor_zone_cancel">રદ કરો</string>

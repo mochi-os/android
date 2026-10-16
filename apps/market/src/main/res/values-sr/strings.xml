@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Ознаке (одвојене зарезом)</string>
     <string name="market_editor_title_new">Нови оглас</string>
     <string name="market_editor_title_required">Унесите наслов пре додавања фотографија или датотека</string>
-    <string name="market_editor_type">Врста огласа</string>
+    <string name="market_editor_type">Начини доставе</string>
     <string name="market_editor_zone_add">Додај зону</string>
     <string name="market_editor_zone_country_au">Аустралија</string>
     <string name="market_editor_zone_country_ca">Канада</string>

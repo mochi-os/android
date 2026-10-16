@@ -542,7 +542,7 @@
     <string name="market_editor_stripe_banner_description">এই তালিকায় পেআউট পেতে একটি Stripe অ্যাকাউন্ট সংযুক্ত করুন।</string>
     <string name="market_editor_stripe_banner_title">Stripe অনবোর্ডিং সম্পূর্ণ করুন</string>
     <string name="market_editor_tags_field">ট্যাগ (কমা দিয়ে পৃথক)</string>
-    <string name="market_editor_type">তালিকার ধরন</string>
+    <string name="market_editor_type">ডেলিভারির পদ্ধতি</string>
     <string name="market_editor_zone_add">অঞ্চল যোগ করুন</string>
     <string name="market_editor_zone_country_au">অস্ট্রেলিয়া</string>
 

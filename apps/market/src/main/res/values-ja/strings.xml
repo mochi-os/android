@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">タグ (カンマ区切り)</string>
     <string name="market_editor_title_new">新規出品</string>
     <string name="market_editor_title_required">写真やファイルを追加する前にタイトルを入力してください</string>
-    <string name="market_editor_type">出品タイプ</string>
+    <string name="market_editor_type">配送方法</string>
     <string name="market_editor_zone_add">ゾーンを追加</string>
     <string name="market_editor_zone_country_au">オーストラリア</string>
     <string name="market_editor_zone_country_ca">カナダ</string>

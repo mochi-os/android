@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Etichete (separate prin virgulă)</string>
     <string name="market_editor_title_new">Anunț nou</string>
     <string name="market_editor_title_required">Introduceți un titlu înainte de a adăuga fotografii sau fișiere</string>
-    <string name="market_editor_type">Tip de anunț</string>
+    <string name="market_editor_type">Metode de livrare</string>
     <string name="market_editor_zone_add">Adăugați zonă</string>
     <string name="market_editor_zone_country_au">Australia</string>
     <string name="market_editor_zone_country_ca">Canada</string>

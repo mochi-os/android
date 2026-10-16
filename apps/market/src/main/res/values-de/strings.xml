@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Schlagwörter (durch Kommas getrennt)</string>
     <string name="market_editor_title_new">Neues Angebot</string>
     <string name="market_editor_title_required">Gib einen Titel ein, bevor du Fotos oder Dateien hinzufügst</string>
-    <string name="market_editor_type">Angebotstyp</string>
+    <string name="market_editor_type">Liefermethoden</string>
     <string name="market_editor_zone_add">Zone hinzufügen</string>
     <string name="market_editor_zone_country_au">Australien</string>
     <string name="market_editor_zone_country_ca">Kanada</string>

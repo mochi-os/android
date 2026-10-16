@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">లిస్టింగ్‌ను సవరించండి</string>
     <string name="market_editor_title_new">కొత్త జాబితా</string>
     <string name="market_editor_title_required">ఫోటోలు లేదా ఫైళ్లను జోడించే ముందు శీర్షికను నమోదు చేయండి</string>
-    <string name="market_editor_type">జాబితా రకం</string>
+    <string name="market_editor_type">డెలివరీ పద్ధతులు</string>
     <string name="market_editor_type_digital">డిజిటల్</string>
     <string name="market_editor_type_physical">ఫిజికల్</string>
     <string name="market_editor_zone_cancel">రద్దు చేయండి</string>

@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Etiketter (kommaseparert)</string>
     <string name="market_editor_title_new">Ny annonse</string>
     <string name="market_editor_title_required">Skriv inn en tittel før du legger til bilder eller filer</string>
-    <string name="market_editor_type">Oppføringstype</string>
+    <string name="market_editor_type">Leveringsmåter</string>
     <string name="market_editor_zone_add">Legg til sone</string>
     <string name="market_editor_zone_country_au">Australia</string>
     <string name="market_editor_zone_country_ca">Canada</string>

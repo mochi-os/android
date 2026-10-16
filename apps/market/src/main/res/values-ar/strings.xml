@@ -415,7 +415,7 @@
     <string name="market_editor_tags_field">الوسوم (مفصولة بفواصل)</string>
     <string name="market_editor_title_new">إعلان جديد</string>
     <string name="market_editor_title_required">أدخل عنوانًا قبل إضافة الصور أو الملفات</string>
-    <string name="market_editor_type">نوع القائمة</string>
+    <string name="market_editor_type">طرق التسليم</string>
     <string name="market_editor_zone_add">إضافة منطقة</string>
     <string name="market_editor_zone_country_au">أستراليا</string>
     <string name="market_editor_zone_country_ca">كندا</string>

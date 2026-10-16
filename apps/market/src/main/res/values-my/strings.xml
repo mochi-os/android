@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">စာရင်း တည်းဖြတ်</string>
     <string name="market_editor_title_new">ကြော်ငြာ အသစ်</string>
     <string name="market_editor_title_required">ဓာတ်ပုံ သို့မဟုတ် ဖိုင်များ မထည့်မီ ခေါင်းစဉ်တစ်ခု ထည့်ပါ</string>
-    <string name="market_editor_type">ကြော်ငြာ အမျိုးအစား</string>
+    <string name="market_editor_type">ပို့ဆောင်မှုနည်းလမ်းများ</string>
     <string name="market_editor_type_digital">ဒစ်ဂျစ်တယ်</string>
     <string name="market_editor_type_physical">ရုပ်ပိုင်း</string>
     <string name="market_editor_zone_cancel">မလုပ်တော့ပါ</string>

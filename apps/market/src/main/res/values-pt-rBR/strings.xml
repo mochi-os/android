@@ -414,7 +414,7 @@
     <string name="market_editor_tags_field">Tags (separadas por vírgula)</string>
     <string name="market_editor_title_new">Novo anúncio</string>
     <string name="market_editor_title_required">Insira um título antes de adicionar fotos ou arquivos</string>
-    <string name="market_editor_type">Tipo de anúncio</string>
+    <string name="market_editor_type">Métodos de entrega</string>
     <string name="market_editor_zone_add">Adicionar zona</string>
     <string name="market_editor_zone_country_au">Austrália</string>
     <string name="market_editor_zone_country_ca">Canadá</string>

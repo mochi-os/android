@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">Édit listing</string>
     <string name="market_editor_title_new">Iklan énggal</string>
     <string name="market_editor_title_required">Asupkeun judul saméméh nambahkeun poto atawa file</string>
-    <string name="market_editor_type">Jinis iklan</string>
+    <string name="market_editor_type">Cara pangiriman</string>
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Fisik</string>
     <string name="market_editor_zone_cancel">Batalkeun</string>

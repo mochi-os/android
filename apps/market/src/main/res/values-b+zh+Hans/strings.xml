@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">标签(以逗号分隔)</string>
     <string name="market_editor_title_new">新商品</string>
     <string name="market_editor_title_required">添加照片或文件前请先输入标题</string>
-    <string name="market_editor_type">商品类型</string>
+    <string name="market_editor_type">配送方式</string>
     <string name="market_editor_zone_add">添加区域</string>
     <string name="market_editor_zone_country_au">澳大利亚</string>
     <string name="market_editor_zone_country_ca">加拿大</string>

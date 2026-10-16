@@ -539,7 +539,7 @@
     <string name="market_editor_tags_field">Címkék (vesszővel elválasztva)</string>
     <string name="market_editor_title_new">Új hirdetés</string>
     <string name="market_editor_title_required">Adjon meg egy címet, mielőtt fényképeket vagy fájlokat adna hozzá</string>
-    <string name="market_editor_type">Hirdetés típusa</string>
+    <string name="market_editor_type">Szállítási módok</string>
     <string name="market_editor_zone_add">Zóna hozzáadása</string>
     <string name="market_editor_zone_country_au">Ausztrália</string>
     <string name="market_editor_zone_country_ca">Kanada</string>

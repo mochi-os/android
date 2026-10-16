@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Žymės (atskirtos kableliais)</string>
     <string name="market_editor_title_new">Naujas skelbimas</string>
     <string name="market_editor_title_required">Prieš pridėdami nuotraukų ar failų, įveskite pavadinimą</string>
-    <string name="market_editor_type">Skelbimo tipas</string>
+    <string name="market_editor_type">Pristatymo būdai</string>
     <string name="market_editor_zone_add">Pridėti zoną</string>
     <string name="market_editor_zone_country_au">Australija</string>
     <string name="market_editor_zone_country_ca">Kanada</string>

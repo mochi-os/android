@@ -422,7 +422,7 @@
     <string name="market_editor_tags_field">Etikettar (skiljde med komma)</string>
     <string name="market_editor_title_new">Ny annonse</string>
     <string name="market_editor_title_required">Skriv inn ein tittel før du legg til bilete eller filer</string>
-    <string name="market_editor_type">Annonsetype</string>
+    <string name="market_editor_type">Leveringsmåtar</string>
     <string name="market_editor_zone_add">Legg til sone</string>
     <string name="market_editor_zone_country_au">Australia</string>
     <string name="market_editor_zone_country_ca">Canada</string>

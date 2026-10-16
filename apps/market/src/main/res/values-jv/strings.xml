@@ -146,7 +146,7 @@
     <string name="market_editor_title_edit">Owahi listing</string>
     <string name="market_editor_title_new">Iklan anyar</string>
     <string name="market_editor_title_required">Lebokna irah-irahan sadurunge nambahake foto utawa file</string>
-    <string name="market_editor_type">Jinis iklan</string>
+    <string name="market_editor_type">Cara pangiriman</string>
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Fisik</string>
     <string name="market_editor_zone_cancel">Batal</string>

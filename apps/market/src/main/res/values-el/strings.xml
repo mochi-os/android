@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Ετικέτες (διαχωρισμένες με κόμμα)</string>
     <string name="market_editor_title_new">Νέα καταχώριση</string>
     <string name="market_editor_title_required">Εισαγάγετε έναν τίτλο πριν προσθέσετε φωτογραφίες ή αρχεία</string>
-    <string name="market_editor_type">Τύπος καταχώρισης</string>
+    <string name="market_editor_type">Τρόποι παράδοσης</string>
     <string name="market_editor_zone_add">Προσθήκη ζώνης</string>
     <string name="market_editor_zone_country_au">Αυστραλία</string>
     <string name="market_editor_zone_country_ca">Καναδάς</string>

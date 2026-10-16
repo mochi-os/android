@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Thẻ (phân tách bằng dấu phẩy)</string>
     <string name="market_editor_title_new">Tin đăng mới</string>
     <string name="market_editor_title_required">Nhập tiêu đề trước khi thêm ảnh hoặc tệp</string>
-    <string name="market_editor_type">Loại danh sách</string>
+    <string name="market_editor_type">Phương thức giao hàng</string>
     <string name="market_editor_zone_add">Thêm khu vực</string>
     <string name="market_editor_zone_country_au">Úc</string>
     <string name="market_editor_zone_country_ca">Canada</string>

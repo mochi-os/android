@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">ਲਿਸਟਿੰਗ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="market_editor_title_new">ਨਵਾਂ ਇਸ਼ਤਿਹਾਰ</string>
     <string name="market_editor_title_required">ਫੋਟੋਆਂ ਜਾਂ ਫਾਈਲਾਂ ਜੋੜਨ ਤੋਂ ਪਹਿਲਾਂ ਸਿਰਲੇਖ ਦਰਜ ਕਰੋ</string>
-    <string name="market_editor_type">ਇਸ਼ਤਿਹਾਰ ਦੀ ਕਿਸਮ</string>
+    <string name="market_editor_type">ਡਿਲੀਵਰੀ ਦੇ ਤਰੀਕੇ</string>
     <string name="market_editor_type_digital">ਡਿਜੀਟਲ</string>
     <string name="market_editor_type_physical">ਭੌਤਿਕ</string>
     <string name="market_editor_zone_cancel">ਰੱਦ ਕਰੋ</string>

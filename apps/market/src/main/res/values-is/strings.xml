@@ -148,7 +148,7 @@
     <string name="market_editor_title_edit">Breyta auglýsingu</string>
     <string name="market_editor_title_new">Ný auglýsing</string>
     <string name="market_editor_title_required">Sláðu inn titil áður en þú bætir við myndum eða skrám</string>
-    <string name="market_editor_type">Auglýsingategund</string>
+    <string name="market_editor_type">Afhendingarmátar</string>
     <string name="market_editor_type_digital">Stafrænt</string>
     <string name="market_editor_type_physical">Áþreifanlegt</string>
     <string name="market_editor_zone_cancel">Hætta við</string>

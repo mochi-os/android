@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Oznake (ločene z vejicami)</string>
     <string name="market_editor_title_new">Nova ponudba</string>
     <string name="market_editor_title_required">Pred dodajanjem fotografij ali datotek vnesite naslov</string>
-    <string name="market_editor_type">Vrsta ponudbe</string>
+    <string name="market_editor_type">Načini dostave</string>
     <string name="market_editor_zone_add">Dodaj območje</string>
     <string name="market_editor_zone_country_au">Avstralija</string>
     <string name="market_editor_zone_country_ca">Kanada</string>

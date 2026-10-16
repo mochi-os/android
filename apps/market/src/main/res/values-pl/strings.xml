@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Tagi (oddzielone przecinkami)</string>
     <string name="market_editor_title_new">Nowa oferta</string>
     <string name="market_editor_title_required">Wprowadź tytuł przed dodaniem zdjęć lub plików</string>
-    <string name="market_editor_type">Typ oferty</string>
+    <string name="market_editor_type">Metody dostawy</string>
     <string name="market_editor_zone_add">Dodaj strefę</string>
     <string name="market_editor_zone_country_au">Australia</string>
     <string name="market_editor_zone_country_ca">Kanada</string>

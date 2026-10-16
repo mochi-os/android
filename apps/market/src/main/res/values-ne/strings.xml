@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">सूची सम्पादन गर्नुहोस्</string>
     <string name="market_editor_title_new">नयाँ विज्ञापन</string>
     <string name="market_editor_title_required">फोटो वा फाइलहरू थप्नु अघि शीर्षक प्रविष्ट गर्नुहोस्</string>
-    <string name="market_editor_type">विज्ञापन प्रकार</string>
+    <string name="market_editor_type">डेलिभरी विधिहरू</string>
     <string name="market_editor_type_digital">डिजिटल</string>
     <string name="market_editor_type_physical">भौतिक</string>
     <string name="market_editor_zone_cancel">रद्द गर्नुहोस्</string>

@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Теги (через запятую)</string>
     <string name="market_editor_title_new">Новое объявление</string>
     <string name="market_editor_title_required">Введите название, прежде чем добавлять фото или файлы</string>
-    <string name="market_editor_type">Тип объявления</string>
+    <string name="market_editor_type">Способы доставки</string>
     <string name="market_editor_zone_add">Добавить зону</string>
     <string name="market_editor_zone_country_au">Австралия</string>
     <string name="market_editor_zone_country_ca">Канада</string>

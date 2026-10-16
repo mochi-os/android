@@ -415,7 +415,7 @@
     <string name="market_editor_tags_field">Štítky (oddělené čárkou)</string>
     <string name="market_editor_title_new">Nová nabídka</string>
     <string name="market_editor_title_required">Před přidáním fotografií nebo souborů zadejte název</string>
-    <string name="market_editor_type">Typ nabídky</string>
+    <string name="market_editor_type">Způsoby doručení</string>
     <string name="market_editor_zone_add">Přidat zónu</string>
     <string name="market_editor_zone_country_au">Austrálie</string>
     <string name="market_editor_zone_country_ca">Kanada</string>

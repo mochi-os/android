@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">लिस्टिंग संपादित करा</string>
     <string name="market_editor_title_new">नवीन जाहिरात</string>
     <string name="market_editor_title_required">फोटो किंवा फाइल्स जोडण्यापूर्वी शीर्षक प्रविष्ट करा</string>
-    <string name="market_editor_type">जाहिरात प्रकार</string>
+    <string name="market_editor_type">डिलिव्हरी पद्धती</string>
     <string name="market_editor_type_digital">डिजिटल</string>
     <string name="market_editor_type_physical">भौतिक</string>
     <string name="market_editor_zone_cancel">रद्द करा</string>

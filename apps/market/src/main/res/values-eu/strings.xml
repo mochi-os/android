@@ -190,7 +190,7 @@
     <string name="market_editor_title_edit">Editatu zerrendapena</string>
     <string name="market_editor_title_new">Zerrenda berria</string>
     <string name="market_editor_title_required">Sartu izenburu bat argazkiak edo fitxategiak gehitu aurretik</string>
-    <string name="market_editor_type">Zerrenda mota</string>
+    <string name="market_editor_type">Entrega-metodoak</string>
     <string name="market_editor_type_digital">Digitala</string>
     <string name="market_editor_type_physical">Fisikoa</string>
     <string name="market_editor_zone_add">Gehitu eremua</string>

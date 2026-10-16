@@ -190,7 +190,7 @@
     <string name="market_editor_title_edit">Рэдагаваць аб\'яву</string>
     <string name="market_editor_title_new">Новая аб’ява</string>
     <string name="market_editor_title_required">Увядзіце назву, перш чым дадаваць фота ці файлы</string>
-    <string name="market_editor_type">Тып аб’явы</string>
+    <string name="market_editor_type">Спосабы дастаўкі</string>
     <string name="market_editor_type_digital">Лічбавы</string>
     <string name="market_editor_type_physical">Фізічны</string>
     <string name="market_editor_zone_add">Дадаць зону</string>

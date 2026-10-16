@@ -276,7 +276,7 @@
     <string name="market_editor_title_edit">Edit listing</string>
     <string name="market_editor_title_new">New listing</string>
     <string name="market_editor_title_required">Enter a title before adding photos or files</string>
-    <string name="market_editor_type">Listing type</string>
+    <string name="market_editor_type">Delivery methods</string>
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Physical</string>
     <string name="market_editor_zone_add">Add zone</string>

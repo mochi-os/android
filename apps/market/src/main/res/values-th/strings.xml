@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">แท็ก (คั่นด้วยเครื่องหมายจุลภาค)</string>
     <string name="market_editor_title_new">ประกาศใหม่</string>
     <string name="market_editor_title_required">ป้อนชื่อก่อนเพิ่มรูปภาพหรือไฟล์</string>
-    <string name="market_editor_type">ประเภทรายการประกาศ</string>
+    <string name="market_editor_type">วิธีการจัดส่ง</string>
     <string name="market_editor_zone_add">เพิ่มเขต</string>
     <string name="market_editor_zone_country_au">ออสเตรเลีย</string>
     <string name="market_editor_zone_country_ca">แคนาดา</string>

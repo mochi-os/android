@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Tags (kommaadskilte)</string>
     <string name="market_editor_title_new">Ny annonce</string>
     <string name="market_editor_title_required">Angiv en titel, før du tilføjer fotos eller filer</string>
-    <string name="market_editor_type">Annoncetype</string>
+    <string name="market_editor_type">Leveringsmetoder</string>
     <string name="market_editor_zone_add">Tilføj zone</string>
     <string name="market_editor_zone_country_au">Australien</string>
     <string name="market_editor_zone_country_ca">Canada</string>

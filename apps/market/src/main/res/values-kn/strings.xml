@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">ಲಿಸ್ಟಿಂಗ್ ಸಂಪಾದಿಸಿ</string>
     <string name="market_editor_title_new">ಹೊಸ ಪಟ್ಟಿ</string>
     <string name="market_editor_title_required">ಫೋಟೋಗಳು ಅಥವಾ ಫೈಲ್‌ಗಳನ್ನು ಸೇರಿಸುವ ಮೊದಲು ಶೀರ್ಷಿಕೆ ನಮೂದಿಸಿ</string>
-    <string name="market_editor_type">ಪಟ್ಟಿ ಪ್ರಕಾರ</string>
+    <string name="market_editor_type">ವಿತರಣಾ ವಿಧಾನಗಳು</string>
     <string name="market_editor_type_digital">ಡಿಜಿಟಲ್</string>
     <string name="market_editor_type_physical">ಭೌತಿಕ</string>
     <string name="market_editor_zone_cancel">ರದ್ದುಮಾಡಿ</string>

@@ -415,7 +415,7 @@
     <string name="market_editor_tags_field">Етикети (разделени със запетая)</string>
     <string name="market_editor_title_new">Нова обява</string>
     <string name="market_editor_title_required">Въведете заглавие, преди да добавите снимки или файлове</string>
-    <string name="market_editor_type">Тип на обявата</string>
+    <string name="market_editor_type">Начини на доставка</string>
     <string name="market_editor_zone_add">Добави зона</string>
     <string name="market_editor_zone_country_au">Австралия</string>
     <string name="market_purchase_dispute_chargeback">Обратно плащане %1$s</string>

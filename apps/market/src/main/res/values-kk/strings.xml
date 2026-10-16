@@ -190,7 +190,7 @@
     <string name="market_editor_title_edit">Хабарландыруды өңдеу</string>
     <string name="market_editor_title_new">Жаңа хабарландыру</string>
     <string name="market_editor_title_required">Фото немесе файл қоспас бұрын тақырып енгізіңіз</string>
-    <string name="market_editor_type">Хабарландыру түрі</string>
+    <string name="market_editor_type">Жеткізу тәсілдері</string>
     <string name="market_editor_type_digital">Сандық</string>
     <string name="market_editor_type_physical">Физикалық</string>
     <string name="market_editor_zone_add">Аймақ қосу</string>

@@ -190,7 +190,7 @@
     <string name="market_editor_title_edit">Golygu rhestriad</string>
     <string name="market_editor_title_new">Rhestriad newydd</string>
     <string name="market_editor_title_required">Rhowch deitl cyn ychwanegu lluniau neu ffeiliau</string>
-    <string name="market_editor_type">Math o restriad</string>
+    <string name="market_editor_type">Dulliau dosbarthu</string>
     <string name="market_editor_type_digital">Digidol</string>
     <string name="market_editor_type_physical">Corfforol</string>
     <string name="market_editor_zone_add">Ychwanegu parth</string>

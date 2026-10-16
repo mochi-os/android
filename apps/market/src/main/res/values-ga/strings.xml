@@ -146,7 +146,7 @@
     <string name="market_editor_title_edit">Cuir liostú in eagar</string>
     <string name="market_editor_title_new">Liosta nua</string>
     <string name="market_editor_title_required">Cuir teideal isteach sula gcuirfidh tú grianghraif nó comhaid leis</string>
-    <string name="market_editor_type">Cineál liosta</string>
+    <string name="market_editor_type">Modhanna seachadta</string>
     <string name="market_editor_type_digital">Digiteach</string>
     <string name="market_editor_type_physical">Fisiciúil</string>
     <string name="market_editor_zone_cancel">Cealaigh</string>

@@ -415,7 +415,7 @@
     <string name="market_editor_tags_field">Etiquetes (separades per comes)</string>
     <string name="market_editor_title_new">Anunci nou</string>
     <string name="market_editor_title_required">Introduïu un títol abans d\'afegir fotos o fitxers</string>
-    <string name="market_editor_type">Tipus de publicació</string>
+    <string name="market_editor_type">Mètodes de lliurament</string>
     <string name="market_editor_zone_add">Afegeix una zona</string>
     <string name="market_editor_zone_country_au">Austràlia</string>
     <string name="market_editor_zone_country_ca">Canadà</string>

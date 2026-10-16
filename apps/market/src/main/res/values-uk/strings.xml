@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Теги (через кому)</string>
     <string name="market_editor_title_new">Нове оголошення</string>
     <string name="market_editor_title_required">Введіть назву, перш ніж додавати фото чи файли</string>
-    <string name="market_editor_type">Тип оголошення</string>
+    <string name="market_editor_type">Способи доставки</string>
     <string name="market_editor_zone_add">Додати зону</string>
     <string name="market_editor_zone_country_au">Австралія</string>
     <string name="market_editor_zone_country_ca">Канада</string>

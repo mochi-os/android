@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">ലിസ്റ്റിംഗ് എഡിറ്റ് ചെയ്യുക</string>
     <string name="market_editor_title_new">പുതിയ ലിസ്റ്റിംഗ്</string>
     <string name="market_editor_title_required">ഫോട്ടോകളോ ഫയലുകളോ ചേർക്കുന്നതിനു മുമ്പ് ഒരു ശീർഷകം നൽകുക</string>
-    <string name="market_editor_type">ലിസ്റ്റിംഗ് തരം</string>
+    <string name="market_editor_type">ഡെലിവറി രീതികൾ</string>
     <string name="market_editor_type_digital">ഡിജിറ്റൽ</string>
     <string name="market_editor_type_physical">ഫിസിക്കൽ</string>
     <string name="market_editor_zone_cancel">റദ്ദാക്കുക</string>

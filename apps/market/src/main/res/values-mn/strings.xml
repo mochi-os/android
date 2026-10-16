@@ -190,7 +190,7 @@
     <string name="market_editor_title_edit">Зарын мэдээлэл засах</string>
     <string name="market_editor_title_new">Шинэ зар</string>
     <string name="market_editor_title_required">Зураг эсвэл файл нэмэхээс өмнө гарчиг оруулна уу</string>
-    <string name="market_editor_type">Зарын төрөл</string>
+    <string name="market_editor_type">Хүргэлтийн аргууд</string>
     <string name="market_editor_type_digital">Дижитал</string>
     <string name="market_editor_type_physical">Бодит биет</string>
     <string name="market_editor_zone_add">Бүс нэмэх</string>

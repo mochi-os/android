@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Taggar (kommaseparerade)</string>
     <string name="market_editor_title_new">Ny annons</string>
     <string name="market_editor_title_required">Ange en titel innan du lägger till foton eller filer</string>
-    <string name="market_editor_type">Annonstyp</string>
+    <string name="market_editor_type">Leveranssätt</string>
     <string name="market_editor_zone_add">Lägg till zon</string>
     <string name="market_editor_zone_country_au">Australien</string>
     <string name="market_editor_zone_country_ca">Kanada</string>

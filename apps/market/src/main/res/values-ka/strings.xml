@@ -144,7 +144,7 @@
     <string name="market_editor_title_edit">განცხადების რედაქტირება</string>
     <string name="market_editor_title_new">ახალი განცხადება</string>
     <string name="market_editor_title_required">შეიყვანეთ სათაური ფოტოების ან ფაილების დამატებამდე</string>
-    <string name="market_editor_type">განცხადების ტიპი</string>
+    <string name="market_editor_type">მიწოდების მეთოდები</string>
     <string name="market_editor_type_digital">ციფრული</string>
     <string name="market_editor_type_physical">ფიზიკური</string>
     <string name="market_editor_zone_cancel">გაუქმება</string>

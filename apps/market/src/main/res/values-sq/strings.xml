@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">Modifiko shpalljen</string>
     <string name="market_editor_title_new">Listim i ri</string>
     <string name="market_editor_title_required">Shkruani një titull para se të shtoni foto ose skedarë</string>
-    <string name="market_editor_type">Lloji i listimit</string>
+    <string name="market_editor_type">Mënyrat e dorëzimit</string>
     <string name="market_editor_type_digital">Dixhitale</string>
     <string name="market_editor_type_physical">Fizik</string>
     <string name="market_editor_zone_cancel">Anulo</string>

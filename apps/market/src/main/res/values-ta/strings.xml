@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">பட்டியலைத் திருத்து</string>
     <string name="market_editor_title_new">புதிய பட்டியல்</string>
     <string name="market_editor_title_required">புகைப்படங்கள் அல்லது கோப்புகளைச் சேர்ப்பதற்கு முன் தலைப்பை உள்ளிடவும்</string>
-    <string name="market_editor_type">பட்டியல் வகை</string>
+    <string name="market_editor_type">டெலிவரி முறைகள்</string>
     <string name="market_editor_type_digital">டிஜிட்டல்</string>
     <string name="market_editor_type_physical">உடல்நலம்</string>
     <string name="market_editor_zone_cancel">ரத்துசெய்</string>

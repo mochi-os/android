@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">لسٽنگ ۾ ترميم ڪريو</string>
     <string name="market_editor_title_new">نئون اشتهار</string>
     <string name="market_editor_title_required">تصويرون يا فائلون شامل ڪرڻ کان اڳ عنوان داخل ڪريو</string>
-    <string name="market_editor_type">اشتهار جو قسم</string>
+    <string name="market_editor_type">پهچائڻ جا طريقا</string>
     <string name="market_editor_type_digital">ڊجيٽل</string>
     <string name="market_editor_type_physical">جسماني</string>
     <string name="market_editor_zone_cancel">منسوخ ڪريو</string>

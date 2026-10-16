@@ -296,7 +296,7 @@
     <string name="market_editor_title_edit">Modifier l\'annonce</string>
     <string name="market_editor_title_new">Nouvelle annonce</string>
     <string name="market_editor_title_required">Saisissez un titre avant d\'ajouter des photos ou des fichiers</string>
-    <string name="market_editor_type">Type d\'annonce</string>
+    <string name="market_editor_type">Modes de livraison</string>
     <string name="market_editor_zone_add">Ajouter une zone</string>
     <string name="market_editor_zone_country_au">Australie</string>
     <string name="market_editor_zone_country_ca">Canada</string>

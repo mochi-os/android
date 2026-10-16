@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">תגיות (מופרדות בפסיקים)</string>
     <string name="market_editor_title_new">מודעה חדשה</string>
     <string name="market_editor_title_required">יש להזין כותרת לפני הוספת תמונות או קבצים</string>
-    <string name="market_editor_type">סוג מודעה</string>
+    <string name="market_editor_type">שיטות משלוח</string>
     <string name="market_editor_zone_add">הוסף אזור</string>
     <string name="market_editor_zone_country_au">אוסטרליה</string>
     <string name="market_editor_zone_country_ca">קנדה</string>

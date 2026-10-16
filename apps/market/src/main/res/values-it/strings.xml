@@ -421,7 +421,7 @@
     <string name="market_editor_tags_field">Tag (separati da virgola)</string>
     <string name="market_editor_title_new">Nuovo annuncio</string>
     <string name="market_editor_title_required">Inserisci un titolo prima di aggiungere foto o file</string>
-    <string name="market_editor_type">Tipo di annuncio</string>
+    <string name="market_editor_type">Metodi di consegna</string>
     <string name="market_editor_zone_add">Aggiungi zona</string>
     <string name="market_editor_zone_country_au">Australia</string>
     <string name="market_editor_zone_country_ca">Canada</string>

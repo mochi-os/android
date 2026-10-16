@@ -143,7 +143,7 @@
     <string name="market_editor_title_edit">ලැයිස්තුගත කිරීම සංස්කරණය කරන්න</string>
     <string name="market_editor_title_new">නව ලැයිස්තුව</string>
     <string name="market_editor_title_required">ඡායාරූප හෝ ගොනු එක් කිරීමට පෙර මාතෘකාවක් ඇතුළත් කරන්න</string>
-    <string name="market_editor_type">ලැයිස්තු වර්ගය</string>
+    <string name="market_editor_type">බෙදාහැරීමේ ක්‍රම</string>
     <string name="market_editor_type_digital">ඩිජිටල්</string>
     <string name="market_editor_type_physical">භෞතික</string>
     <string name="market_editor_zone_cancel">අවලංගු කරන්න</string>
