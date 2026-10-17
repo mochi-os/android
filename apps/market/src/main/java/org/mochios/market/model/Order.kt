@@ -69,13 +69,12 @@ enum class OrderStatus {
 }
 
 /**
- * `orders/create` / `orders/auction` response; `checkout` is the Stripe
+ * `orders/create` / `orders/auction` response; `checkout_url` is the Stripe
  * Checkout URL, or the success URL when no payment is due.
  */
 data class OrderCreateResponse(
     val order: Order? = null,
-    @SerializedName(value = "checkout", alternate = ["checkout_url"])
-    val checkoutUrl: String = "",
+    @SerializedName("checkout_url") val checkoutUrl: String = "",
 )
 
 data class Tracking(
