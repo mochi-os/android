@@ -976,8 +976,8 @@ private fun DeliveryMethodChips(listing: Listing) {
 /**
  * The owner's actions on their listing, the same as the ⋯ menu on My
  * listings: a draft is edited or deleted; a rejected one is cleared from the
- * list or appealed; anything else is relisted or, unless already removed,
- * removed.
+ * list or appealed; one otherwise removed is cleared from the list; anything
+ * else is relisted or removed.
  */
 @Composable
 private fun OwnerActions(
@@ -998,11 +998,12 @@ private fun OwnerActions(
             OwnerAction(Icons.Outlined.Delete, R.string.market_listings_clear, onClear)
             OwnerAction(Icons.Outlined.Flag, R.string.market_listings_appeal, onAppeal)
         }
+        status == ListingStatus.REMOVED -> {
+            OwnerAction(Icons.Outlined.Delete, R.string.market_listings_clear, onClear)
+        }
         else -> {
             OwnerAction(Icons.Default.Refresh, R.string.market_listings_action_relist, onRelist)
-            if (listing.status != ListingStatus.REMOVED) {
-                OwnerAction(Icons.Outlined.Delete, R.string.market_listings_remove_listing, onDelete)
-            }
+            OwnerAction(Icons.Outlined.Delete, R.string.market_listings_remove_listing, onDelete)
         }
     }
 }

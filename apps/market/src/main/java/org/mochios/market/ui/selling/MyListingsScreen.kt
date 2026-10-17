@@ -355,7 +355,7 @@ private fun FilterRow(
 
 /**
  * A listing as a row of the web's listings table: its title over when it was
- * listed, then its price, its status, Appeal while it is rejected or removed,
+ * listed, then its price, its status, Appeal while moderation has rejected it,
  * and a menu of what can be done with it in that state.
  */
 @Composable
@@ -375,7 +375,7 @@ private fun ListingRow(
         subtitle = format.formatDateTime(listing.created),
         badges = {
             ListingStatusBadge(listing = listing)
-            if (listing.status == ListingStatus.REJECTED || listing.status == ListingStatus.REMOVED) {
+            if (listing.shownStatus() == ListingStatus.REJECTED) {
                 MochiOutlinedButton(
                     onClick = onAppeal,
                     shape = RoundedCornerShape(8.dp),
@@ -414,8 +414,8 @@ private fun ListingRow(
 
 /**
  * The web's menu for a listing: a draft is edited or deleted; one moderation
- * rejected is cleared from the seller's list; anything else is relisted as a
- * new draft or, unless already removed, removed.
+ * rejected or otherwise removed is cleared from the seller's list; anything
+ * else is relisted as a new draft or removed.
  */
 @Composable
 private fun ListingMenu(
@@ -454,7 +454,10 @@ private fun ListingMenu(
                     },
                     leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                 )
-            } else if (listing.shownStatus() == ListingStatus.REJECTED) {
+            } else if (
+                listing.shownStatus() == ListingStatus.REJECTED ||
+                listing.status == ListingStatus.REMOVED
+            ) {
                 MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.market_listings_clear)) },
                     onClick = {
@@ -472,16 +475,14 @@ private fun ListingMenu(
                     },
                     leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
                 )
-                if (listing.status != ListingStatus.REMOVED) {
-                    MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.market_listings_remove_listing)) },
-                        onClick = {
-                            expanded = false
-                            onDelete()
-                        },
-                        leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
-                    )
-                }
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.market_listings_remove_listing)) },
+                    onClick = {
+                        expanded = false
+                        onDelete()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                )
             }
         }
     }
