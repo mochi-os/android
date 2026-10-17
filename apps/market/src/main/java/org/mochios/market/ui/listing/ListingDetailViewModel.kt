@@ -35,6 +35,7 @@ import org.mochios.market.model.Category
 import org.mochios.market.model.Currency
 import org.mochios.market.model.ListingDetailResponse
 import org.mochios.market.model.Photo
+import org.mochios.market.model.RemovalCheck
 import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
 import org.mochios.market.repository.SavedRepository
@@ -360,6 +361,22 @@ class ListingDetailViewModel @Inject constructor(
                     )
                 )
             }
+        }
+    }
+
+    /**
+     * What removing the listing would cut off (live bidders, subscribers), or
+     * null when the server can't say.
+     */
+    suspend fun removalCheck(): RemovalCheck? {
+        val id = currentId
+        if (id.isEmpty()) {
+            return null
+        }
+        return try {
+            repository.listingRemovalCheck(id)
+        } catch (e: Exception) {
+            null
         }
     }
 

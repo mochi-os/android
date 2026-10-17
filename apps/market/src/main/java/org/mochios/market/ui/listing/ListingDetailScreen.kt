@@ -92,7 +92,6 @@ import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import org.mochios.android.R as MochiR
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EmptyState
@@ -100,7 +99,6 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LoadingState
-import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
@@ -126,6 +124,7 @@ import org.mochios.market.model.ListingStatus
 import org.mochios.market.model.ListingType
 import org.mochios.market.model.Photo
 import org.mochios.market.model.PricingModel
+import org.mochios.market.model.RemovalCheck
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.AuctionBidHistory
@@ -147,6 +146,7 @@ import org.mochios.market.ui.components.conditionLabel
 import org.mochios.market.ui.components.pricingLabel
 import org.mochios.market.ui.components.shownStatus
 import org.mochios.market.ui.dialog.AppealRemovalDialog
+import org.mochios.market.ui.dialog.RemoveListingDialog
 import org.mochios.market.ui.dialog.PlaceBidDialog
 import org.mochios.market.ui.dialog.ReportListingDialog
 
@@ -418,26 +418,28 @@ fun ListingDetailScreen(
         }
     }
 
-    if (deleteOpen) {
-        val draft = state.listing?.listing?.status == ListingStatus.DRAFT
-        MochiAlertDialog(
-            onDismissRequest = { deleteOpen = false },
-            title = stringResource(
-                if (draft) R.string.market_listings_delete_title else R.string.market_listings_remove_title,
-            ),
-            text = stringResource(
-                if (draft) R.string.market_listings_delete_message else R.string.market_listings_remove_message,
-            ),
-            confirmText = stringResource(
-                if (draft) R.string.market_listings_delete_confirm else R.string.market_listings_remove_confirm,
-            ),
-            onConfirm = {
-                deleteOpen = false
-                viewModel.deleteListing()
-            },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
-        )
+    val deleting = state.listing?.listing
+    if (deleteOpen && deleting != null) {
+        val draft = deleting.status == ListingStatus.DRAFT
+        var removal by remember(deleting.id) { mutableStateOf<RemovalCheck?>(null) }
+        var checked by remember(deleting.id) { mutableStateOf(draft) }
+        LaunchedEffect(deleting.id) {
+            if (!draft) {
+                removal = viewModel.removalCheck()
+                checked = true
+            }
+        }
+        if (checked) {
+            RemoveListingDialog(
+                listing = deleting,
+                check = removal,
+                onConfirm = {
+                    deleteOpen = false
+                    viewModel.deleteListing()
+                },
+                onDismiss = { deleteOpen = false },
+            )
+        }
     }
     if (appealOpen) {
         AppealRemovalDialog(
