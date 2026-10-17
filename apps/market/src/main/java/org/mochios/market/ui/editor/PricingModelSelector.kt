@@ -9,11 +9,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.selection.selectable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Clear
@@ -26,7 +23,6 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TimePicker
 import androidx.compose.material3.rememberDatePickerState
@@ -94,58 +90,41 @@ fun PricingModelSelector(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        // Pricing model radio row.
-        PricingModelRow(
-            label = stringResource(R.string.market_editor_pricing_fixed),
-            selected = pricing == PricingModel.FIXED,
-            onSelect = { onPricingChange(PricingModel.FIXED) },
-        )
-        PricingModelRow(
-            label = stringResource(R.string.market_editor_pricing_pwyw),
-            selected = pricing == PricingModel.PWYW,
-            onSelect = { onPricingChange(PricingModel.PWYW) },
-        )
-        PricingModelRow(
-            label = stringResource(R.string.market_editor_pricing_subscription),
-            selected = pricing == PricingModel.SUBSCRIPTION,
-            onSelect = { onPricingChange(PricingModel.SUBSCRIPTION) },
-        )
-        PricingModelRow(
-            label = stringResource(R.string.market_editor_pricing_auction),
-            selected = pricing == PricingModel.AUCTION,
-            onSelect = { onPricingChange(PricingModel.AUCTION) },
-        )
-
-        Spacer(Modifier.height(4.dp))
+        PricingModelDropdown(pricing = pricing, onChange = onPricingChange)
 
         when (pricing) {
             PricingModel.FIXED, PricingModel.PWYW -> {
-                CurrencyDropdown(currency = currency, onChange = onCurrencyChange)
-                PriceField(
-                    value = priceText,
-                    onChange = onPriceChange,
-                    currency = currency,
-                    label = stringResource(R.string.market_editor_price),
-                )
+                CurrencyPriceRow(currency = currency, onCurrencyChange = onCurrencyChange) {
+                    PriceField(
+                        value = priceText,
+                        onChange = onPriceChange,
+                        currency = currency,
+                        label = stringResource(R.string.market_editor_price),
+                    )
+                }
             }
             PricingModel.SUBSCRIPTION -> {
-                CurrencyDropdown(currency = currency, onChange = onCurrencyChange)
-                PriceField(
-                    value = priceText,
-                    onChange = onPriceChange,
-                    currency = currency,
-                    label = stringResource(R.string.market_editor_price),
-                )
                 IntervalDropdown(interval = interval, onChange = onIntervalChange)
+                CurrencyPriceRow(currency = currency, onCurrencyChange = onCurrencyChange) {
+                    PriceField(
+                        value = priceText,
+                        onChange = onPriceChange,
+                        currency = currency,
+                        label = stringResource(R.string.market_editor_price),
+                    )
+                }
             }
             PricingModel.AUCTION -> {
-                CurrencyDropdown(currency = currency, onChange = onCurrencyChange)
-                PriceField(
-                    value = reserveText,
-                    onChange = onReserveChange,
-                    currency = currency,
-                    label = stringResource(R.string.market_editor_reserve),
-                )
+                DurationDropdown(days = durationDays, onChange = onDurationChange)
+                StartTimeField(opensAt = opensAt, onChange = onOpensChange)
+                CurrencyPriceRow(currency = currency, onCurrencyChange = onCurrencyChange) {
+                    PriceField(
+                        value = reserveText,
+                        onChange = onReserveChange,
+                        currency = currency,
+                        label = stringResource(R.string.market_editor_reserve),
+                    )
+                }
                 PriceField(
                     value = instantText,
                     onChange = onInstantChange,
@@ -153,29 +132,76 @@ fun PricingModelSelector(
                     label = stringResource(R.string.market_editor_instant),
                     helperText = stringResource(R.string.market_editor_instant_help),
                 )
-                DurationDropdown(days = durationDays, onChange = onDurationChange)
-                StartTimeField(opensAt = opensAt, onChange = onOpensChange)
             }
         }
     }
 }
 
+/** [price] and the currency dropdown side by side, the price first and wider. */
 @Composable
-private fun PricingModelRow(
-    label: String,
-    selected: Boolean,
-    onSelect: () -> Unit,
+private fun CurrencyPriceRow(
+    currency: Currency,
+    onCurrencyChange: (Currency) -> Unit,
+    price: @Composable () -> Unit,
 ) {
     Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .selectable(selected = selected, onClick = onSelect)
-            .padding(vertical = 4.dp),
-        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.Top,
     ) {
-        RadioButton(selected = selected, onClick = onSelect)
-        Spacer(Modifier.padding(start = 8.dp))
-        Text(label, style = MaterialTheme.typography.bodyLarge)
+        Box(modifier = Modifier.weight(0.6f)) {
+            price()
+        }
+        Box(modifier = Modifier.weight(0.4f)) {
+            CurrencyDropdown(currency = currency, onChange = onCurrencyChange)
+        }
+    }
+}
+
+private fun PricingModel.labelRes(): Int = when (this) {
+    PricingModel.FIXED -> R.string.market_editor_pricing_fixed
+    PricingModel.PWYW -> R.string.market_editor_pricing_pwyw
+    PricingModel.SUBSCRIPTION -> R.string.market_editor_pricing_subscription
+    PricingModel.AUCTION -> R.string.market_editor_pricing_auction
+}
+
+/** The pricing model as a dropdown titled Model, replacing the four radio buttons. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun PricingModelDropdown(
+    pricing: PricingModel,
+    onChange: (PricingModel) -> Unit,
+) {
+    var expanded by remember { mutableStateOf(false) }
+    ExposedDropdownMenuBox(
+        expanded = expanded,
+        onExpandedChange = { open -> expanded = open },
+    ) {
+        MochiTextField(
+            value = stringResource(pricing.labelRes()),
+            onValueChange = {},
+            readOnly = true,
+            label = { Text(stringResource(R.string.market_editor_pricing_model)) },
+            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable),
+        )
+        MochiDropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+        ) {
+            PricingModel.entries.forEach { model ->
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(model.labelRes())) },
+                    onClick = {
+                        onChange(model)
+                        expanded = false
+                    },
+                    selected = pricing == model,
+                )
+            }
+        }
     }
 }
 

@@ -5,20 +5,21 @@
 
 package org.mochios.market.ui.selling
 
-import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.GridItemSpan
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.grid.rememberLazyGridState
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Inventory2
@@ -26,10 +27,8 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
-import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Refresh
-import androidx.compose.material.icons.outlined.Share
-import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
@@ -37,11 +36,9 @@ import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -53,37 +50,41 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import org.mochios.android.api.userMessage
-import org.mochios.android.ui.components.EmptyState
-import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
-import org.mochios.android.ui.components.MochiExtendedFab
-import org.mochios.android.ui.components.MochiIconButton
-import org.mochios.android.ui.components.MochiTextField
-import org.mochios.market.R
-import org.mochios.market.ui.components.MarketLayout
-import org.mochios.market.model.Listing
-import org.mochios.market.model.ListingStatus
-import org.mochios.market.model.RemovalCheck
-import org.mochios.market.navigation.MarketApp
-import org.mochios.market.ui.components.FeeDisclosure
-import org.mochios.market.ui.components.ListingCard
-import org.mochios.market.ui.components.MarketStatusBadge
-import org.mochios.market.ui.components.StripeOnboardingBanner
-import org.mochios.market.ui.dialog.AppealRemovalDialog
-import org.mochios.market.repository.MarketRepository
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
 import org.mochios.android.R as MochiR
+import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextField
+import org.mochios.market.R
+import org.mochios.market.lib.formatPrice
+import org.mochios.market.model.Currency
+import org.mochios.market.model.Listing
+import org.mochios.market.model.ListingStatus
+import org.mochios.market.model.RemovalCheck
+import org.mochios.market.navigation.MarketApp
+import org.mochios.market.repository.MarketRepository
+import org.mochios.market.ui.components.ListingStatusBadge
+import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketListPadding
+import org.mochios.market.ui.components.MarketListPrice
+import org.mochios.market.ui.components.MarketListRow
+import org.mochios.market.ui.components.MarketListSpacing
+import org.mochios.market.ui.components.StripeOnboardingBanner
+import org.mochios.market.ui.components.shownStatus
+import org.mochios.market.ui.dialog.AppealRemovalDialog
+import org.mochios.market.ui.dialog.RemoveListingDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -124,24 +125,25 @@ fun MyListingsScreen(
         navController = navController,
         currentRoute = MarketApp.LISTINGS,
         titleRes = R.string.market_listings_title,
-        floatingActionButton = {
+        actions = {
             // Only sellers fully connected to Stripe can create listings.
             val stripe = state.stripeStatus
             if (stripe != null && stripe.chargesEnabled && stripe.payoutsEnabled) {
-                MochiExtendedFab(
-                    onClick = { navController.navigate(MarketApp.CREATE_LISTING) },
-                    icon = { Icon(Icons.Default.Add, contentDescription = null) },
-                    text = { Text(stringResource(R.string.market_listings_new)) },
-                )
+                MochiIconButton(onClick = { navController.navigate(MarketApp.CREATE_LISTING) }) {
+                    Icon(
+                        Icons.Default.Add,
+                        contentDescription = stringResource(R.string.market_listings_new),
+                    )
+                }
             }
         },
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-            val gridState = rememberLazyGridState()
+            val listState = rememberLazyListState()
             val shouldLoadMore by remember {
                 derivedStateOf {
-                    val info = gridState.layoutInfo
+                    val info = listState.layoutInfo
                     val total = info.totalItemsCount
                     val lastVisible = info.visibleItemsInfo.lastOrNull()?.index ?: 0
                     state.hasMore && !state.isLoading && lastVisible >= total - 4
@@ -151,18 +153,16 @@ fun MyListingsScreen(
                 if (shouldLoadMore) viewModel.loadMore()
             }
 
-            LazyVerticalGrid(
-                columns = GridCells.Adaptive(170.dp),
-                state = gridState,
-                contentPadding = PaddingValues(12.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp),
+            LazyColumn(
+                state = listState,
+                contentPadding = MarketListPadding,
+                verticalArrangement = MarketListSpacing,
                 modifier = Modifier.fillMaxSize(),
             ) {
                 // Header span: Stripe banner + fee disclosure.
                 val stripe = state.stripeStatus
                 if (stripe != null && !(stripe.chargesEnabled && stripe.payoutsEnabled)) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
+                    item {
                         StripeOnboardingBanner(
                             repository = marketRepo,
                             returnUrl = "mochi://market/account",
@@ -171,15 +171,8 @@ fun MyListingsScreen(
                         )
                     }
                 }
-                val fees = state.fees
-                if (fees != null) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
-                        FeeDisclosure(platformFeePercent = fees.platform)
-                    }
-                }
-
                 // Filter row.
-                item(span = { GridItemSpan(maxLineSpan) }) {
+                item {
                     FilterRow(
                         statusFilter = state.statusFilter,
                         searchQuery = state.searchQuery,
@@ -190,7 +183,7 @@ fun MyListingsScreen(
 
                 // Listings.
                 if (state.error != null && state.listings.isEmpty()) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
+                    item {
                         Text(
                             text = state.error!!.userMessage()
                                 .ifEmpty { stringResource(R.string.market_listings_load_failed) },
@@ -199,7 +192,7 @@ fun MyListingsScreen(
                         )
                     }
                 } else if (visible.isEmpty() && !state.isLoading) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
+                    item {
                         EmptyState(
                             icon = Icons.Default.Inventory2,
                             title = stringResource(R.string.market_listings_empty_title),
@@ -207,53 +200,25 @@ fun MyListingsScreen(
                         )
                     }
                 } else {
-                    items(visible, key = { it.id }) { listing ->
-                        Column {
-                            Box {
-                                ListingCard(
-                                    listing = listing,
-                                    category = state.categories
-                                        .firstOrNull { it.id == listing.category }?.name,
-                                    onClick = {
-                                        navController.navigate(
-                                            MarketApp.listingDetail(listing.id.toString()),
-                                        )
-                                    },
+                    items(visible, key = { listing -> listing.id }) { listing ->
+                        ListingRow(
+                            listing = listing,
+                            onClick = {
+                                navController.navigate(
+                                    MarketApp.listingDetail(listing.id, listing.title),
                                 )
-                                ListingOverflow(
-                                    listing = listing,
-                                    onEdit = {
-                                        navController.navigate(
-                                            MarketApp.listingEdit(listing.id.toString()),
-                                        )
-                                    },
-                                    onView = {
-                                        navController.navigate(
-                                            MarketApp.listingDetail(listing.id.toString()),
-                                        )
-                                    },
-                                    onShare = { shareListing(context, listing) },
-                                    onDelete = { deleteCandidate = listing },
-                                    onRelist = {
-                                        viewModel.relistListing(listing, relistFailedFallback)
-                                    },
-                                    onAppeal = { appealCandidate = listing },
-                                )
-                            }
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(top = 4.dp),
-                                verticalAlignment = Alignment.CenterVertically,
-                            ) {
-                                listing.status?.let {
-                                    MarketStatusBadge(status = it.wireName())
-                                }
-                            }
-                        }
+                            },
+                            onEdit = {
+                                navController.navigate(MarketApp.listingEdit(listing.id))
+                            },
+                            onDelete = { deleteCandidate = listing },
+                            onRelist = { viewModel.relistListing(listing, relistFailedFallback) },
+                            onClear = { viewModel.deleteListing(listing, deleteFailedFallback) },
+                            onAppeal = { appealCandidate = listing },
+                        )
                     }
                     if (state.isLoading) {
-                        item(span = { GridItemSpan(maxLineSpan) }) {
+                        item {
                             Box(
                                 modifier = Modifier
                                     .fillMaxWidth()
@@ -270,49 +235,29 @@ fun MyListingsScreen(
     }
 
     // Delete confirmation. A draft is simply deleted; for anything else the
-    // server says what removal cuts off (live bidders, subscribers) and the
-    // warning is tailored to it, as web does.
+    // server is asked first what removal cuts off (live bidders, subscribers)
+    // and the dialog opens once it answers, as web does.
     deleteCandidate?.let { candidate ->
         val draft = candidate.status == ListingStatus.DRAFT
         var removal by remember(candidate.id) { mutableStateOf<RemovalCheck?>(null) }
+        var checked by remember(candidate.id) { mutableStateOf(draft) }
         LaunchedEffect(candidate.id) {
             if (!draft) {
                 removal = runCatching { marketRepo.listingRemovalCheck(candidate.id) }.getOrNull()
+                checked = true
             }
         }
-        val check = removal
-        val message = when {
-            draft -> stringResource(R.string.market_listings_delete_message)
-            check?.hasActiveAuction == true && check.activeBidders > 0 -> pluralStringResource(
-                R.plurals.market_listings_remove_message_bidders,
-                check.activeBidders.toInt(),
-                LocalFormat.current.formatNumber(check.activeBidders.toInt()),
+        if (checked) {
+            RemoveListingDialog(
+                listing = candidate,
+                check = removal,
+                onConfirm = {
+                    viewModel.deleteListing(candidate, deleteFailedFallback)
+                    deleteCandidate = null
+                },
+                onDismiss = { deleteCandidate = null },
             )
-            check?.hasActiveAuction == true ->
-                stringResource(R.string.market_listings_remove_message_auction)
-            check != null && check.activeSubscribers > 0 -> pluralStringResource(
-                R.plurals.market_listings_remove_message_subscribers,
-                check.activeSubscribers.toInt(),
-                LocalFormat.current.formatNumber(check.activeSubscribers.toInt()),
-            )
-            else -> stringResource(R.string.market_listings_remove_message)
         }
-        MochiAlertDialog(
-            onDismissRequest = { deleteCandidate = null },
-            title = stringResource(
-                if (draft) R.string.market_listings_delete_title else R.string.market_listings_remove_title,
-            ),
-            text = message,
-            confirmText = stringResource(
-                if (draft) R.string.market_listings_delete_confirm else R.string.market_listings_remove_confirm,
-            ),
-            onConfirm = {
-                viewModel.deleteListing(candidate, deleteFailedFallback)
-                deleteCandidate = null
-            },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
-        )
     }
 
     // Appeal removal dialog.
@@ -336,10 +281,22 @@ private fun FilterRow(
     onSearchChange: (String) -> Unit,
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 8.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
+        MochiTextField(
+            value = searchQuery,
+            onValueChange = onSearchChange,
+            placeholder = {
+                Text(stringResource(R.string.market_listings_search_placeholder))
+            },
+            singleLine = true,
+            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+            modifier = Modifier.weight(0.6f),
+        )
         var open by remember { mutableStateOf(false) }
         val labelRes = statusFilter.labelRes()
         ExposedDropdownMenuBox(
@@ -352,7 +309,6 @@ private fun FilterRow(
                 onValueChange = {},
                 readOnly = true,
                 singleLine = true,
-                label = { Text(stringResource(R.string.market_listings_filter_status)) },
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = open) },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -373,31 +329,83 @@ private fun FilterRow(
                 }
             }
         }
-        MochiTextField(
-            value = searchQuery,
-            onValueChange = onSearchChange,
-            placeholder = {
-                Text(stringResource(R.string.market_listings_search_placeholder))
-            },
-            singleLine = true,
-            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-            modifier = Modifier.weight(0.6f),
+    }
+}
+
+/**
+ * A listing as a row of the web's listings table: its title over when it was
+ * listed, then its price, its status, Appeal while moderation has rejected it,
+ * and a menu of what can be done with it in that state.
+ */
+@Composable
+private fun ListingRow(
+    listing: Listing,
+    onClick: () -> Unit,
+    onEdit: () -> Unit,
+    onDelete: () -> Unit,
+    onRelist: () -> Unit,
+    onClear: () -> Unit,
+    onAppeal: () -> Unit,
+) {
+    val format = LocalFormat.current
+    MarketListRow(
+        title = listing.title,
+        onClick = onClick,
+        subtitle = format.formatDateTime(listing.created),
+        badges = {
+            ListingStatusBadge(listing = listing)
+            if (listing.shownStatus() == ListingStatus.REJECTED) {
+                MochiOutlinedButton(
+                    onClick = onAppeal,
+                    shape = RoundedCornerShape(8.dp),
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                    modifier = Modifier.height(32.dp),
+                ) {
+                    Icon(
+                        Icons.Outlined.Flag,
+                        contentDescription = null,
+                        modifier = Modifier.size(16.dp),
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    Text(stringResource(R.string.market_listings_appeal))
+                }
+            }
+        },
+        trailing = if (listing.price > 0) {
+            {
+                MarketListPrice(
+                    text = formatPrice(listing.price, listing.currency ?: Currency.GBP),
+                )
+            }
+        } else {
+            null
+        },
+    ) {
+        ListingMenu(
+            listing = listing,
+            onEdit = onEdit,
+            onDelete = onDelete,
+            onRelist = onRelist,
+            onClear = onClear,
         )
     }
 }
 
+/**
+ * The web's menu for a listing: a draft is edited or deleted; one moderation
+ * rejected or otherwise removed is cleared from the seller's list; anything
+ * else is relisted as a new draft or removed.
+ */
 @Composable
-private fun ListingOverflow(
+private fun ListingMenu(
     listing: Listing,
     onEdit: () -> Unit,
-    onView: () -> Unit,
-    onShare: () -> Unit,
     onDelete: () -> Unit,
     onRelist: () -> Unit,
-    onAppeal: () -> Unit,
+    onClear: () -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
-    Box(modifier = Modifier.padding(2.dp)) {
+    Box {
         MochiIconButton(onClick = { expanded = true }) {
             Icon(
                 Icons.Default.MoreHoriz,
@@ -408,41 +416,36 @@ private fun ListingOverflow(
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {
-            MochiDropdownMenuItem(
-                text = { Text(stringResource(R.string.market_listings_action_edit)) },
-                onClick = {
-                    expanded = false
-                    onEdit()
-                },
-                leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
-            )
-            MochiDropdownMenuItem(
-                text = { Text(stringResource(R.string.market_listings_action_view)) },
-                onClick = {
-                    expanded = false
-                    onView()
-                },
-                leadingIcon = { Icon(Icons.Outlined.Visibility, contentDescription = null) },
-            )
-            MochiDropdownMenuItem(
-                text = { Text(stringResource(R.string.market_listings_action_share)) },
-                onClick = {
-                    expanded = false
-                    onShare()
-                },
-                leadingIcon = { Icon(Icons.Outlined.Share, contentDescription = null) },
-            )
             if (listing.status == ListingStatus.DRAFT) {
                 MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.market_listings_action_delete)) },
+                    text = { Text(stringResource(R.string.market_listings_action_edit)) },
+                    onClick = {
+                        expanded = false
+                        onEdit()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Edit, contentDescription = null) },
+                )
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.market_listings_delete_draft)) },
                     onClick = {
                         expanded = false
                         onDelete()
                     },
                     leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                 )
-            }
-            if (listing.status == ListingStatus.SOLD || listing.status == ListingStatus.EXPIRED) {
+            } else if (
+                listing.shownStatus() == ListingStatus.REJECTED ||
+                listing.status == ListingStatus.REMOVED
+            ) {
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.market_listings_clear)) },
+                    onClick = {
+                        expanded = false
+                        onClear()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
+                )
+            } else {
                 MochiDropdownMenuItem(
                     text = { Text(stringResource(R.string.market_listings_action_relist)) },
                     onClick = {
@@ -451,33 +454,17 @@ private fun ListingOverflow(
                     },
                     leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
                 )
-            }
-            if (listing.status == ListingStatus.REMOVED) {
                 MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.market_listings_action_appeal)) },
+                    text = { Text(stringResource(R.string.market_listings_remove_listing)) },
                     onClick = {
                         expanded = false
-                        onAppeal()
+                        onDelete()
                     },
-                    leadingIcon = { Icon(Icons.Outlined.Gavel, contentDescription = null) },
+                    leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                 )
             }
         }
     }
-}
-
-private fun shareListing(context: android.content.Context, listing: Listing) {
-    val intent = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_SUBJECT, listing.title)
-        putExtra(Intent.EXTRA_TEXT, "mochi://market/listings/${listing.id}")
-    }
-    val chooser = Intent.createChooser(
-        intent,
-        context.getString(R.string.market_listings_share_chooser),
-    )
-    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(chooser)
 }
 
 private fun ListingsStatusFilter.labelRes(): Int = when (this) {
@@ -488,15 +475,6 @@ private fun ListingsStatusFilter.labelRes(): Int = when (this) {
     ListingsStatusFilter.EXPIRED -> R.string.market_listings_filter_expired
     ListingsStatusFilter.REJECTED -> R.string.market_listings_filter_rejected
     ListingsStatusFilter.REMOVED -> R.string.market_listings_filter_removed
-}
-
-private fun ListingStatus.wireName(): String = when (this) {
-    ListingStatus.DRAFT -> "draft"
-    ListingStatus.ACTIVE -> "active"
-    ListingStatus.SOLD -> "sold"
-    ListingStatus.EXPIRED -> "expired"
-    ListingStatus.REJECTED -> "rejected"
-    ListingStatus.REMOVED -> "removed"
 }
 
 @EntryPoint

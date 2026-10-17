@@ -5,33 +5,17 @@
 
 package org.mochios.market.ui.selling
 
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PointOfSale
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.MochiError
@@ -42,12 +26,16 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
-import org.mochios.market.ui.components.MarketLayout
-import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Order
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketListPadding
+import org.mochios.market.ui.components.MarketListPrice
+import org.mochios.market.ui.components.MarketListRow
+import org.mochios.market.ui.components.MarketListSpacing
+import org.mochios.market.ui.components.MarketStatusBadge
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -87,6 +75,8 @@ fun MySalesScreen(
                         isLoading = state.isLoading,
                         hasMore = state.hasMore,
                         onLoadMore = viewModel::loadMore,
+                        contentPadding = MarketListPadding,
+                        verticalArrangement = MarketListSpacing,
                     ) { order ->
                         SaleRow(
                             order = order,
@@ -96,7 +86,6 @@ fun MySalesScreen(
                                 )
                             },
                         )
-                        HorizontalDivider(thickness = 0.5.dp)
                     }
                 }
             }
@@ -107,56 +96,20 @@ fun MySalesScreen(
 @Composable
 private fun SaleRow(order: Order, onClick: () -> Unit) {
     val format = LocalFormat.current
-    val total = order.currency?.let { formatPrice(order.total, it) }
-        ?: formatPrice(order.total, Currency.GBP)
-    val timestamp = order.updated.takeIf { it > 0L } ?: order.created
-    val timeLabel = if (timestamp > 0L) format.formatRelativeTime(timestamp) else ""
-
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = order.title.orEmpty(),
-                style = MaterialTheme.typography.titleSmall,
-                fontWeight = FontWeight.SemiBold,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            val buyer = order.buyerName.orEmpty()
-            if (buyer.isNotEmpty()) {
-                Text(
-                    text = stringResource(R.string.market_sale_buyer_label) + " · " + buyer,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-            Row(
-                modifier = Modifier.padding(top = 4.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                order.status?.let { MarketStatusBadge(status = it.name.lowercase()) }
-                if (timeLabel.isNotEmpty()) {
-                    Text(
-                        text = timeLabel,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-        }
-        Spacer(modifier = Modifier.width(8.dp))
-        Text(
-            text = total,
-            style = MaterialTheme.typography.titleSmall,
-            fontWeight = FontWeight.SemiBold,
-        )
-    }
+    val timestamp = order.updated.takeIf { time -> time > 0L } ?: order.created
+    val subtitle = listOf(
+        order.buyerName.orEmpty(),
+        if (timestamp > 0L) format.formatRelativeTime(timestamp) else "",
+    ).filter { part -> part.isNotBlank() }.joinToString(" · ")
+    MarketListRow(
+        title = order.title.orEmpty(),
+        onClick = onClick,
+        subtitle = subtitle,
+        badges = order.status?.let { status ->
+            { MarketStatusBadge(status = status.name.lowercase()) }
+        },
+        trailing = {
+            MarketListPrice(text = formatPrice(order.total, order.currency ?: Currency.GBP))
+        },
+    )
 }

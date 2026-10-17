@@ -45,6 +45,9 @@ enum class ReviewsTab { RECEIVED, SENT }
 /** One-shot events for the snackbar host. */
 sealed interface ReviewsEvent {
     data class Error(val error: MochiError) : ReviewsEvent
+
+    /** The listing a review's order was for, read so its title can open it. */
+    data class OpenListing(val listingId: String, val title: String) : ReviewsEvent
 }
 
 @HiltViewModel
@@ -137,6 +140,26 @@ class ReviewsViewModel @Inject constructor(
                     val newDrafts = state.responseDrafts.toMutableMap()
                     newDrafts.remove(reviewId)
                     state.copy(reviews = newList, responseDrafts = newDrafts)
+                }
+            } catch (e: Exception) {
+                _events.send(ReviewsEvent.Error(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Opens the listing a review is on. A review names only its [order], so
+     * the order is read for the listing it was placed on.
+     */
+    fun openListing(order: String) {
+        if (order.isEmpty()) {
+            return
+        }
+        viewModelScope.launch {
+            try {
+                val listing = repo.getOrder(order).listing
+                if (listing.id.isNotEmpty()) {
+                    _events.send(ReviewsEvent.OpenListing(listing.id, listing.title))
                 }
             } catch (e: Exception) {
                 _events.send(ReviewsEvent.Error(e.toMochiError()))

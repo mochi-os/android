@@ -7,17 +7,8 @@
     <string name="market_onboarding_activate">Aktivieren</string>
     <string name="market_onboarding_body">Aktivieren Sie Ihr Konto, um zu kaufen und zu verkaufen.</string>
     <string name="market_onboarding_title">Willkommen bei Market</string>
-    <string name="market_subscription_detail_billing_history">Abrechnungsverlauf</string>
-    <string name="market_subscription_detail_billing_history_empty">Noch keine Abbuchungen.</string>
-    <string name="market_subscription_detail_billing_info">Abrechnung</string>
-    <string name="market_subscription_detail_cancelled_on">Gekündigt am %1$s</string>
-    <string name="market_subscription_detail_charge_amount">Letzte Abbuchung: %1$s</string>
+    <string name="market_sale_shipped_label">Versendet</string>
     <string name="market_subscription_detail_next_billing">Nächste Abrechnung: %1$s</string>
-    <string name="market_subscription_detail_not_found">Abonnement nicht gefunden</string>
-    <string name="market_subscription_detail_pending_cancel">Kündigung steht aus</string>
-    <string name="market_subscription_detail_seller">Verkäufer</string>
-    <string name="market_subscription_detail_started">Begonnen %1$s</string>
-    <string name="market_subscription_detail_title">Abonnement</string>
     <string name="market_checkout_address_name">Name</string>
     <string name="market_back">Zurück</string>
     <string name="market_editor_back">Zurück</string>
@@ -35,14 +26,14 @@
     <string name="market_account_save">Speichern</string>
     <string name="market_editor_save">Speichern</string>
     <string name="market_listing_detail_save">Speichern</string>
-    <string name="market_listing_detail_edit">Bearbeiten</string>
     <string name="market_listings_action_edit">Bearbeiten</string>
-    <string name="market_listings_action_delete">Löschen</string>
     <string name="market_listings_delete_confirm">Löschen</string>
+    <string name="market_listings_delete_draft">Entwurf löschen</string>
     <string name="market_checkout_subscribe_button">Abonnieren</string>
     <string name="market_checkout_subscribe_title">Abonnieren</string>
     <string name="market_listing_detail_subscribe">Abonnieren</string>
-    <string name="market_listings_action_view">Anzeigen</string>
+    <string name="market_listings_appeal">Einspruch</string>
+    <string name="market_listings_clear">Aus meinen Angeboten entfernen</string>
     <string name="market_sidebar_settings">Einstellungen</string>
     <string name="market_messages_send">Senden</string>
     <string name="market_editor_description">Beschreibung</string>
@@ -69,7 +60,6 @@
     <string name="market_status_active">Aktiv</string>
     <string name="market_filter_sort_default">Standard</string>
     <string name="market_listings_filter_removed">Entfernt</string>
-    <string name="market_sale_completed_label">Abgeschlossen</string>
     <string name="market_status_completed">Abgeschlossen</string>
     <string name="market_filter_sort">Sortieren</string>
     <string name="market_chargeback_reason_general">Allgemein</string>
@@ -83,7 +73,6 @@
     <string name="market_editor_shipping">Versand</string>
     <string name="market_filter_delivery_shipping">Versand</string>
     <string name="market_purchase_shipping_line">Versand</string>
-    <string name="market_sale_section_shipping">Versand</string>
     <string name="market_dispute_dialog_evidence_role_seller">Verkäufer</string>
     <string name="market_listing_detail_seller_heading">Verkäufer</string>
     <string name="market_purchase_seller">Verkäufer</string>
@@ -147,7 +136,6 @@
     <string name="market_reviews_tab_sent">Gesendet</string>
     <string name="market_reviews_title">Bewertungen</string>
     <string name="market_sale_buyer_label">Käufer</string>
-    <string name="market_sale_shipped_label">Versendet</string>
     <string name="market_search_clear">Suche löschen</string>
     <string name="market_section_categories">Kategorien durchsuchen</string>
     <string name="market_shipping_days_value">%1$s Tage</string>
@@ -158,7 +146,6 @@
     <string name="market_status_refunded">Erstattet</string>
     <string name="market_status_shipped">Versendet</string>
     <string name="market_title">Markt</string>
-    <string name="market_purchase_audit_section">Aktivität</string>
     <string name="market_account_location_label">Standort</string>
     <string name="market_editor_section_location">Standort</string>
     <string name="market_listing_detail_listed">Eingestellt am %1$s</string>
@@ -195,6 +182,7 @@
     <string name="market_editor_condition_refurbished">Generalüberholt</string>
     <string name="market_editor_condition_used">Gebraucht</string>
     <string name="market_editor_currency">Währung</string>
+    <string name="market_editor_pricing_model">Modell</string>
     <string name="market_editor_days">%1$s Tage</string>
     <string name="market_editor_delete">Inserat löschen</string>
     <string name="market_editor_delete_confirm_message">Dadurch wird das Inserat dauerhaft gelöscht.</string>
@@ -230,7 +218,7 @@
     <string name="market_editor_title_edit">Inserat bearbeiten</string>
     <string name="market_editor_title_new">Neues Inserat</string>
     <string name="market_editor_title_required">Gib einen Titel ein, bevor du Fotos oder Dateien hinzufügst</string>
-    <string name="market_editor_type">Inseratstyp</string>
+    <string name="market_editor_type">Liefermethoden</string>
     <string name="market_editor_zone_add">Zone hinzufügen</string>
     <string name="market_editor_zone_country_au">Australien</string>
     <string name="market_editor_zone_country_ca">Kanada</string>
@@ -286,8 +274,6 @@
     <string name="market_filter_title">Filter</string>
     <string name="market_listing_detail_appeal_pending">Einspruch hängig</string>
     <string name="market_listing_detail_assets_heading">Digitale Inhalte</string>
-    <string name="market_listing_detail_audit_hide">Verlauf ausblenden</string>
-    <string name="market_listing_detail_audit_show">Verlauf anzeigen</string>
     <string name="market_listing_detail_bids_heading">Gebotsverlauf</string>
     <string name="market_listing_detail_buy">Kaufen</string>
     <string name="market_listing_detail_buy_now">Jetzt kaufen</string>
@@ -295,7 +281,6 @@
     <string name="market_listing_detail_message">Nachricht</string>
     <string name="market_listing_detail_not_found">Inserat nicht gefunden</string>
     <string name="market_listing_detail_place_bid">Gebot abgeben</string>
-    <string name="market_listing_detail_relist">Erneut einstellen</string>
     <string name="market_listing_detail_relist_failed">Erneutes Einstellen fehlgeschlagen</string>
     <string name="market_listing_detail_report">Inserat melden</string>
     <string name="market_listing_detail_seller_banned_banner">Dieser Verkäufer ist gesperrt. Neue Bestellungen sind nicht möglich.</string>
@@ -305,9 +290,7 @@
     <string name="market_listing_photo">Inseratsfoto</string>
     <string name="market_listing_save">Inserat speichern</string>
     <string name="market_listing_unsave">Aus Gespeicherten entfernen</string>
-    <string name="market_listings_action_appeal">Entfernung anfechten</string>
     <string name="market_listings_action_relist">Erneut einstellen</string>
-    <string name="market_listings_action_share">Teilen</string>
     <string name="market_listings_delete_failed">Inserat konnte nicht gelöscht werden</string>
     <string name="market_listings_delete_message">Der Entwurf wird damit dauerhaft aus Ihrem Konto entfernt.</string>
     <string name="market_listings_delete_title">Inserat löschen?</string>
@@ -386,6 +369,7 @@
     <string name="market_report_dialog_title">Inserat melden</string>
     <string name="market_report_reason_counterfeit">Fälschung</string>
     <string name="market_report_reason_prohibited">Verbotener Artikel</string>
+    <string name="market_reviews_awaiting_response">Antwort ausstehend</string>
     <string name="market_reviews_empty_received_subtitle">Käufer und Verkäufer können sich nach Abschluss einer Bestellung gegenseitig bewerten.</string>
     <string name="market_reviews_empty_received_title">Noch keine Bewertungen</string>
     <string name="market_reviews_empty_sent_subtitle">Öffnen Sie eine abgeschlossene Bestellung, um eine Bewertung abzugeben.</string>
@@ -393,35 +377,26 @@
     <string name="market_reviews_response_label">Antwort</string>
     <string name="market_reviews_response_placeholder">Antwort schreiben…</string>
     <string name="market_reviews_response_submit">Antwort übermitteln</string>
-    <string name="market_sale_audit_collapse">Aktivität ausblenden</string>
-    <string name="market_sale_audit_expand">Aktivität anzeigen</string>
     <string name="market_sale_carrier_custom_label">Name des Transportunternehmens</string>
     <string name="market_sale_carrier_label">Transportunternehmen</string>
     <string name="market_sale_dispute_evidence_due">Nachweis fällig am %1$s</string>
     <string name="market_sale_dispute_respond">Antworten</string>
     <string name="market_sale_dispute_stripe_reason">Stripe-Rückbuchungsgrund: %1$s</string>
-    <string name="market_sale_fee_gross">Brutto</string>
-    <string name="market_sale_fee_mochi">Mochi-Gebühr</string>
-    <string name="market_sale_fee_payout">Nettoauszahlung</string>
-    <string name="market_sale_fee_stripe_note">Stripe-Verarbeitungsgebühren werden in Ihrem Stripe-Dashboard angezeigt.</string>
     <string name="market_sale_load_failed">Bestellung konnte nicht geladen werden</string>
     <string name="market_sale_message_buyer">Käufer anschreiben</string>
-    <string name="market_sale_order_id_label">Bestellnummer</string>
-    <string name="market_sale_ordered_label">Bestellt</string>
     <string name="market_sale_refund_action">Rückerstattung ausstellen</string>
-    <string name="market_sale_review_no_response_yet">Sie können einmal antworten. Antworten sind öffentlich.</string>
     <string name="market_sale_review_response_existing">Ihre Antwort</string>
     <string name="market_sale_review_response_failed">Antwort konnte nicht übermittelt werden</string>
     <string name="market_sale_review_response_label">Ihre Antwort</string>
     <string name="market_sale_review_response_submit">Antwort übermitteln</string>
     <string name="market_sale_section_dispute">Streitfall</string>
-    <string name="market_sale_section_fees">Gebührenaufstellung</string>
-    <string name="market_sale_section_refund">Rückerstattung</string>
     <string name="market_sale_ship_action">Als versandt markieren</string>
     <string name="market_sale_ship_failed">Markierung als versandt fehlgeschlagen</string>
     <string name="market_sale_ship_submitting">Wird markiert…</string>
     <string name="market_sale_ship_success">Als versandt markiert</string>
     <string name="market_sale_title">Verkauf</string>
+    <string name="market_audit_history">Verlauf</string>
+    <string name="market_sale_review_of_buyer">Ihre Bewertung des Käufers</string>
     <string name="market_sale_tracking_label">Sendungsnummer</string>
     <string name="market_sale_tracking_url_label">Sendungsverfolgungs-URL (optional)</string>
     <string name="market_sales_empty_subtitle">Bestellungen aus Ihren veröffentlichten Inseraten erscheinen hier.</string>
@@ -465,6 +440,7 @@
     <string name="market_subscriptions_action_pause">Pausieren</string>
     <string name="market_subscriptions_action_reactivate">Reaktivieren</string>
     <string name="market_subscriptions_action_resume">Fortsetzen</string>
+    <string name="market_subscriptions_action_resubscribe">Erneut abonnieren</string>
     <string name="market_subscriptions_actions_label">Abonnement-Aktionen</string>
     <string name="market_subscriptions_cancel_body">Damit wird Ihr Abonnement gekündigt. Sie verlieren den Zugriff am Ende Ihres aktuellen Abrechnungszeitraums.</string>
     <string name="market_subscriptions_cancel_confirm">Abonnement kündigen</string>
@@ -473,8 +449,6 @@
     <string name="market_subscriptions_cancels_period_end">Wird am Ende des aktuellen Zeitraums gekündigt</string>
     <string name="market_subscriptions_empty">Keine Abonnements</string>
     <string name="market_subscriptions_empty_body">Abonnements sind wiederkehrende Käufe – Verkäufer bieten sie mit monatlicher oder jährlicher Bezahlung an.</string>
-    <string name="market_subscriptions_per_month">%1$s pro Monat</string>
-    <string name="market_subscriptions_per_year">%1$s pro Jahr</string>
     <string name="market_subscriptions_title">Abonnements</string>
     <string name="market_warnings_title">Warnungen</string>
 
@@ -506,7 +480,6 @@
     <string name="market_bid_dialog_submitting">Gebot wird abgegeben</string>
     <string name="market_bid_dialog_title">Gebot abgeben</string>
     <string name="market_bid_ends_in">Endet in %1$s</string>
-    <string name="market_bids_current_bid">Aktuell: %1$s</string>
     <string name="market_bids_empty">Keine Gebote</string>
     <string name="market_bids_ends_in">Endet in %1$s</string>
     <string name="market_bids_tab_lost">Verloren</string>
@@ -677,4 +650,5 @@
     <string name="market_audit_subscription_resumed">Fortgesetzt</string>
     <string name="market_filter_delivery_download">Herunterladen</string>
     <string name="market_listings_remove_confirm">Entfernen</string>
+    <string name="market_listings_remove_listing">Angebot entfernen</string>
 </resources>

@@ -66,6 +66,14 @@ data class StatusTone(
             Color(0xFFF2B8B8),
         )
 
+        /** Done and over without fault — sold, closed. */
+        val Info = StatusTone(
+            Color(0xFFE2EEFB),
+            Color(0xFF2B4F7A),
+            Color(0xFF1F2E3F),
+            Color(0xFFB8D4F2),
+        )
+
         /** Anything with no state of its own to report. */
         val Neutral = StatusTone(
             Color(0xFFEDEDED),

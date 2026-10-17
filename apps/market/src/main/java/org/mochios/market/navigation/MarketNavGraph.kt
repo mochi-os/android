@@ -21,7 +21,6 @@ import org.mochios.market.ui.buying.MyPurchasesScreen
 import org.mochios.market.ui.buying.MySubscriptionsScreen
 import org.mochios.market.ui.buying.PurchaseDetailScreen
 import org.mochios.market.ui.buying.SavedListingsScreen
-import org.mochios.market.ui.buying.SubscriptionDetailScreen
 import org.mochios.market.ui.checkout.CheckoutScreen
 import org.mochios.market.ui.editor.EditListingScreen
 import org.mochios.market.ui.listing.ListingDetailScreen
@@ -63,7 +62,7 @@ object MarketApp {
         "market/account/seller?code={code}&state={state}&error={error}&error_description={error_description}"
 
     // ---- Detail route patterns ----
-    const val LISTING_DETAIL = "market/listing/{id}"
+    const val LISTING_DETAIL = "market/listing/{id}?title={title}"
     const val LISTING_EDIT = "market/listing/{id}/edit"
     const val CREATE_LISTING = "market/listings/create"
     const val NEW_LISTING = "market/listings/new?title={title}"
@@ -72,10 +71,12 @@ object MarketApp {
     const val SALE_DETAIL = "market/sales/{orderId}"
     const val MESSAGE_THREAD = "market/messages/{listingId}/{threadId}"
     const val PROFILE_PATTERN = "market/account/{accountId}"
-    const val SUBSCRIPTION_DETAIL = "market/subscriptions/{id}"
 
     // ---- Detail route builders ----
-    fun listingDetail(id: String) = "market/listing/$id"
+    fun listingDetail(id: String, title: String? = null): String {
+        val query = title?.takeIf { text -> text.isNotBlank() }?.let { text -> "?title=${Uri.encode(text)}" }
+        return "market/listing/$id${query.orEmpty()}"
+    }
     fun listingEdit(id: String) = "market/listing/$id/edit"
     // Title comes from CreateListingScreen; the editor seeds its state with it
     // and still creates the listing row lazily on first save.
@@ -86,7 +87,6 @@ object MarketApp {
     fun messageThread(listingId: String, threadId: String) =
         "market/messages/$listingId/$threadId"
     fun publicProfile(accountId: String) = "market/account/$accountId"
-    fun subscriptionDetail(id: String) = "market/subscriptions/$id"
 
     /** Seller settings carrying Stripe's OAuth return, for the deep-link handler. */
     fun sellerSettings(code: String?, state: String?, error: String?, errorDescription: String?): String {
@@ -158,10 +158,21 @@ fun NavGraphBuilder.marketNavGraph(
     ) { EditListingScreen(navController = navController) }
     composable(
         route = MarketApp.LISTING_DETAIL,
-        arguments = listOf(navArgument("id") { type = NavType.StringType }),
+        arguments = listOf(
+            navArgument("id") { type = NavType.StringType },
+            navArgument("title") {
+                type = NavType.StringType
+                nullable = true
+                defaultValue = null
+            },
+        ),
     ) { entry ->
         val id = entry.arguments?.getString("id").orEmpty()
-        ListingDetailScreen(listingId = id, navController = navController)
+        ListingDetailScreen(
+            listingId = id,
+            navController = navController,
+            initialTitle = entry.arguments?.getString("title").orEmpty(),
+        )
     }
     composable(
         route = MarketApp.LISTING_EDIT,
@@ -190,8 +201,4 @@ fun NavGraphBuilder.marketNavGraph(
         route = MarketApp.PROFILE_PATTERN,
         arguments = listOf(navArgument("accountId") { type = NavType.StringType }),
     ) { PublicProfileScreen(navController = navController) }
-    composable(
-        route = MarketApp.SUBSCRIPTION_DETAIL,
-        arguments = listOf(navArgument("id") { type = NavType.StringType }),
-    ) { SubscriptionDetailScreen(navController = navController) }
 }

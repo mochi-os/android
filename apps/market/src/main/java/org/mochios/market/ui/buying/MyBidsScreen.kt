@@ -5,15 +5,11 @@
 
 package org.mochios.market.ui.buying
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -22,10 +18,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -36,9 +30,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -52,12 +44,16 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.market.R
-import org.mochios.market.ui.components.BidStatusBadge
-import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.BidStatusBadge
+import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketListPadding
+import org.mochios.market.ui.components.MarketListPrice
+import org.mochios.market.ui.components.MarketListRow
+import org.mochios.market.ui.components.MarketListSpacing
 
 @Composable
 fun MyBidsScreen(
@@ -89,11 +85,13 @@ fun MyBidsScreen(
                         isLoading = state.isLoadingMore,
                         hasMore = state.bids.size < state.total,
                         onLoadMore = { viewModel.loadMore() },
+                        contentPadding = MarketListPadding,
+                        verticalArrangement = MarketListSpacing,
                     ) { bid ->
                         BidRow(
                             bid = bid,
-                            onClick = { id ->
-                                navController.navigate(MarketApp.listingDetail(id.toString()))
+                            onClick = { id, title ->
+                                navController.navigate(MarketApp.listingDetail(id, title))
                             },
                             onCompletePurchase = { listingId ->
                                 navController.navigate(MarketApp.checkout(listingId.toString()))
@@ -126,74 +124,51 @@ private fun BidsTabRow(active: BidsFilter, onSelected: (BidsFilter) -> Unit) {
 @Composable
 private fun BidRow(
     bid: Bid,
-    onClick: (String) -> Unit,
+    onClick: (String, String?) -> Unit,
     onCompletePurchase: (String) -> Unit,
 ) {
     val format = LocalFormat.current
     val currency = bid.currency ?: Currency.GBP
     val title = bid.title ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: "")
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .clickable { bid.listing?.let { onClick(it) } }
-            .padding(12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                title,
-                style = MaterialTheme.typography.titleSmall,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            val current = bid.currentBid
-            val yourBidLine = stringResource(R.string.market_bids_your_bid, formatPrice(bid.amount, currency))
-            Text(
-                buildString {
-                    append(yourBidLine)
-                    if (current != null && current > 0L) {
-                        append(" · ")
-                        append(stringResource(R.string.market_bids_current_bid, formatPrice(current, currency)))
-                    }
-                },
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            val closes = bid.closes ?: 0L
-            if (closes > 0L) {
-                val remaining = remainingLabel(closes)
-                Text(
-                    remaining,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            } else if (bid.created > 0L) {
-                Text(
-                    format.formatTimestamp(bid.created),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-        }
-        Column(horizontalAlignment = Alignment.End) {
+    val current = bid.currentBid
+    val closes = bid.closes ?: 0L
+    val subtitle = listOf(
+        stringResource(R.string.market_bids_your_bid, formatPrice(bid.amount, currency)),
+        when {
+            closes > 0L -> remainingLabel(closes)
+            bid.created > 0L -> format.formatTimestamp(bid.created)
+            else -> ""
+        },
+    ).filter { part -> part.isNotBlank() }.joinToString(" · ")
+    MarketListRow(
+        title = title,
+        onClick = { bid.listing?.let { listing -> onClick(listing, bid.title) } },
+        subtitle = subtitle,
+        badges = {
             BidStatusBadge(status = bid.status)
             if (bid.status == org.mochios.market.model.BidStatus.WON && bid.listing != null) {
-                Spacer(Modifier.height(6.dp))
-                MochiButton(onClick = { onCompletePurchase(bid.listing) }) {
+                MochiButton(
+                    onClick = { onCompletePurchase(bid.listing) },
+                    shape = RoundedCornerShape(8.dp),
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                    modifier = Modifier.height(32.dp),
+                ) {
                     Icon(
                         Icons.Default.ShoppingCart,
                         contentDescription = null,
-                        modifier = Modifier.size(ButtonDefaults.IconSize),
+                        modifier = Modifier.size(16.dp),
                     )
-                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                    Spacer(Modifier.width(6.dp))
                     Text(stringResource(R.string.market_purchases_complete_purchase))
                 }
             }
-        }
-    }
+        },
+        trailing = {
+            MarketListPrice(
+                text = formatPrice(current?.takeIf { amount -> amount > 0L } ?: bid.amount, currency),
+            )
+        },
+    )
 }
 
 @Composable

@@ -35,6 +35,7 @@ fun LocationMapView(
 ) {
     val context = LocalContext.current
     val mapView = remember {
+        configureOsmdroid(context)
         MapView(context).apply {
             setTileSource(TileSourceFactory.MAPNIK)
             setMultiTouchControls(true)

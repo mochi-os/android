@@ -6,6 +6,7 @@
 package org.mochios.market.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiCard
@@ -38,24 +40,34 @@ fun SellerReviewsSection(
     modifier: Modifier = Modifier,
 ) {
     if (reviews.isEmpty()) return
-    val format = LocalFormat.current
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         reviews.forEach { review ->
-            ReviewCard(
-                review = review,
-                createdLabel = format.formatDateTime(review.created),
-            )
+            ReviewCard(review = review)
         }
     }
 }
 
+/**
+ * A review as the web draws it: the stars, when it was written and the
+ * listing it is on, then the review and any reply under [responseLabel].
+ * [heading] goes above the stars, [onListing] makes the listing's title a
+ * link, and [footer] adds what follows the reply.
+ */
 @Composable
-private fun ReviewCard(review: Review, createdLabel: String) {
+internal fun ReviewCard(
+    review: Review,
+    modifier: Modifier = Modifier,
+    responseLabel: String = stringResource(R.string.market_listing_detail_seller_response),
+    heading: (@Composable () -> Unit)? = null,
+    onListing: (() -> Unit)? = null,
+    footer: @Composable () -> Unit = {},
+) {
+    val format = LocalFormat.current
     MochiCard(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
     ) {
         Column(
@@ -64,6 +76,7 @@ private fun ReviewCard(review: Review, createdLabel: String) {
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
+            heading?.invoke()
             Row(verticalAlignment = Alignment.CenterVertically) {
                 RatingStars(
                     rating = review.rating.toFloat(),
@@ -73,10 +86,34 @@ private fun ReviewCard(review: Review, createdLabel: String) {
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    text = createdLabel,
+                    text = format.formatDateTime(review.created),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
+                val listing = review.listingTitle.orEmpty()
+                if (listing.isNotBlank()) {
+                    Text(
+                        text = "  ·  ",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Text(
+                        text = listing,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier
+                            .weight(1f, fill = false)
+                            .then(
+                                if (onListing != null) {
+                                    Modifier.clickable(onClick = onListing)
+                                } else {
+                                    Modifier
+                                },
+                            ),
+                    )
+                }
             }
             if (review.text.isNotBlank()) {
                 Text(
@@ -85,14 +122,15 @@ private fun ReviewCard(review: Review, createdLabel: String) {
                 )
             }
             if (review.response.isNotBlank()) {
-                SellerResponseBlock(response = review.response)
+                ResponseBlock(label = responseLabel, response = review.response)
             }
+            footer()
         }
     }
 }
 
 @Composable
-private fun SellerResponseBlock(response: String) {
+private fun ResponseBlock(label: String, response: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -108,7 +146,7 @@ private fun SellerResponseBlock(response: String) {
         Spacer(modifier = Modifier.width(12.dp))
         Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
             Text(
-                text = stringResource(R.string.market_listing_detail_seller_response),
+                text = label,
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.SemiBold,
             )

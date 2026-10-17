@@ -52,7 +52,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R as MochiR
-import org.mochios.android.launcher.openApp
+import org.mochios.android.launcher.openHome
 import org.mochios.android.ui.components.AboutDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.settings.R
@@ -85,7 +85,7 @@ fun SettingsHomeScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.settings_home_title)) },
                 navigationIcon = {
-                    MochiIconButton(onClick = { openApp(context, "home") }) {
+                    MochiIconButton(onClick = { openHome(context) }) {
                         Icon(
                             Icons.Outlined.Apps,
                             contentDescription = stringResource(MochiR.string.drawer_mochi_home),

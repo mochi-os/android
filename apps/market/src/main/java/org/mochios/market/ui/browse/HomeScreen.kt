@@ -155,7 +155,9 @@ fun HomeScreen(
             onLoadMore = viewModel::loadMore,
             onListingClick = { listing ->
                 viewModel.viewListing(listing)
-                navController.navigate(MarketApp.listingDetail(listing.id.toString()))
+                navController.navigate(
+                    MarketApp.listingDetail(listing.id.toString(), listing.title),
+                )
             },
             onToggleSave = viewModel::toggleSave,
             onCategoryClick = { category ->

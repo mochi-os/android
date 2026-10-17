@@ -5,10 +5,14 @@
 
 package org.mochios.market.ui.selling
 
+import android.content.ActivityNotFoundException
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -20,15 +24,12 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.automirrored.filled.Send
-import androidx.compose.material.icons.filled.ExpandLess
-import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.automirrored.outlined.Chat
 import androidx.compose.material.icons.filled.LocalShipping
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -45,29 +46,31 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLinkStyles
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.withLink
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import coil3.compose.AsyncImage
-import coil3.request.ImageRequest
-import coil3.request.crossfade
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
+import org.mochios.market.model.DeliveryMethod
 import org.mochios.market.model.Dispute
 import org.mochios.market.model.Order
 import org.mochios.market.model.OrderDetailResponse
@@ -75,14 +78,14 @@ import org.mochios.market.model.OrderStatus
 import org.mochios.market.model.Review
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.buying.WriteReviewForm
-import org.mochios.market.ui.components.AuditTimeline
+import org.mochios.market.ui.components.AuditHistoryCard
 import org.mochios.market.ui.components.MarketStatusBadge
+import org.mochios.market.ui.components.RatingStarGold
 import org.mochios.market.ui.components.RatingStars
 import org.mochios.market.ui.components.disputeReasonLabel
 import org.mochios.market.ui.dialog.DisputeResponseDialog
 import org.mochios.market.ui.dialog.IssueRefundDialog
 import org.mochios.market.ui.dialog.ShipOrderDialog
-import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -91,12 +94,10 @@ fun SaleDetailScreen(
     viewModel: SaleDetailViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
-    val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
     var shipDialogOpen by remember { mutableStateOf(false) }
     var refundDialogOpen by remember { mutableStateOf(false) }
     var disputeDialogOpen by remember { mutableStateOf(false) }
-    var auditExpanded by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
@@ -123,7 +124,15 @@ fun SaleDetailScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.market_sale_title)) },
+                title = {
+                    Text(
+                        text = state.order?.listing?.title.orEmpty()
+                            .ifBlank { state.order?.order?.title.orEmpty() }
+                            .ifBlank { stringResource(R.string.market_sale_title) },
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                },
                 navigationIcon = {
                     MochiIconButton(onClick = { navController.popBackStack() }) {
                         Icon(
@@ -150,8 +159,6 @@ fun SaleDetailScreen(
                 detail != null -> SaleDetailBody(
                     detail = detail,
                     state = state,
-                    auditExpanded = auditExpanded,
-                    onToggleAudit = { auditExpanded = !auditExpanded },
                     onOpenShip = { shipDialogOpen = true },
                     onOpenRefund = { refundDialogOpen = true },
                     onOpenDispute = { disputeDialogOpen = true },
@@ -160,6 +167,11 @@ fun SaleDetailScreen(
                     },
                     onSubmitReview = { rating, body ->
                         viewModel.submitReview(rating, body, reviewSubmitFailedFallback)
+                    },
+                    onOpenBuyer = { account ->
+                        if (account.isNotBlank()) {
+                            navController.navigate(MarketApp.publicProfile(account))
+                        }
                     },
                     onMessageBuyer = {
                         navController.navigate(
@@ -223,170 +235,78 @@ fun SaleDetailScreen(
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun SaleDetailBody(
     detail: OrderDetailResponse,
     state: SaleDetailUiState,
-    auditExpanded: Boolean,
-    onToggleAudit: () -> Unit,
     onOpenShip: () -> Unit,
     onOpenRefund: () -> Unit,
     onOpenDispute: () -> Unit,
     onRespondReview: (String) -> Unit,
     onSubmitReview: (Int, String) -> Unit,
+    onOpenBuyer: (String) -> Unit,
     onMessageBuyer: () -> Unit,
 ) {
     val order = detail.order
-    val listing = detail.listing
-    val currency = order.currency ?: Currency.GBP
-    val format = LocalFormat.current
+    val canShip = order.delivery == DeliveryMethod.SHIPPING &&
+        order.status == OrderStatus.PAID
+    val canRefund = order.refunded < order.total && (
+        order.status == OrderStatus.PAID ||
+            order.status == OrderStatus.SHIPPED ||
+            order.status == OrderStatus.DELIVERED ||
+            order.status == OrderStatus.COMPLETED ||
+            order.status == OrderStatus.DISPUTED
+        )
 
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
         modifier = Modifier.fillMaxSize(),
     ) {
-        // ---- Summary ----
         item("summary") {
-            MochiCard(modifier = Modifier.fillMaxWidth()) {
-                Row(
-                    modifier = Modifier.padding(12.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                ) {
-                    val photoId = listing.photo?.id
-                    if (!photoId.isNullOrBlank()) {
-                        AsyncImage(
-                            model = ImageRequest.Builder(LocalContext.current)
-                                .data("/market/-/photo/$photoId/thumbnail")
-                                .crossfade(true)
-                                .build(),
+            SaleSummaryCard(order = order, onOpenBuyer = onOpenBuyer)
+        }
+
+        item("actions") {
+            FlowRow(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                MochiOutlinedButton(onClick = onMessageBuyer) {
+                    Icon(
+                        Icons.AutoMirrored.Outlined.Chat,
+                        contentDescription = null,
+                        modifier = Modifier.size(ButtonDefaults.IconSize),
+                    )
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                    Text(stringResource(R.string.market_sale_message_buyer))
+                }
+                if (canShip) {
+                    MochiButton(onClick = onOpenShip, enabled = !state.shipSubmitting) {
+                        Icon(
+                            Icons.Default.LocalShipping,
                             contentDescription = null,
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier.size(72.dp),
+                            modifier = Modifier.size(ButtonDefaults.IconSize),
                         )
+                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                        Text(stringResource(R.string.market_sale_ship_action))
                     }
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = listing.title.ifBlank { order.title.orEmpty() },
-                            style = MaterialTheme.typography.titleSmall,
-                            fontWeight = FontWeight.SemiBold,
-                            maxLines = 2,
-                            overflow = TextOverflow.Ellipsis,
-                        )
-                        Spacer(modifier = Modifier.size(4.dp))
-                        order.status?.let { MarketStatusBadge(status = it.name.lowercase()) }
-                        Spacer(modifier = Modifier.size(4.dp))
-                        Text(
-                            text = stringResource(R.string.market_sale_buyer_label) + ": " +
-                                order.buyerName.orEmpty(),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                        Text(
-                            text = stringResource(R.string.market_sale_order_id_label) + ": #" +
-                                order.id,
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                        if (order.created > 0L) {
-                            Text(
-                                text = stringResource(R.string.market_sale_ordered_label) + ": " +
-                                    format.formatRelativeTime(order.created),
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
-                        if (order.shipped > 0L) {
-                            Text(
-                                text = stringResource(R.string.market_sale_shipped_label) + ": " +
-                                    format.formatRelativeTime(order.shipped),
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
-                        if (order.completed > 0L) {
-                            Text(
-                                text = stringResource(R.string.market_sale_completed_label) + ": " +
-                                    format.formatRelativeTime(order.completed),
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
+                }
+                if (canRefund) {
+                    MochiOutlinedButton(onClick = onOpenRefund, enabled = !state.refundSubmitting) {
+                        Text(stringResource(R.string.market_sale_refund_action))
                     }
                 }
             }
         }
 
-        // ---- Fees ----
-        item("fees") {
-            FeeBreakdownPanel(order = order, currency = currency)
-        }
-
-        // ---- Shipping actions (physical / shipping deliveries only) ----
-        if (
-            order.delivery == org.mochios.market.model.DeliveryMethod.SHIPPING &&
-            (order.status == OrderStatus.PENDING || order.status == OrderStatus.PAID)
-        ) {
-            item("shipping-actions") {
-                MochiCard(
-                    modifier = Modifier.fillMaxWidth(),
-                ) {
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text(
-                            text = stringResource(R.string.market_sale_section_shipping),
-                            style = MaterialTheme.typography.titleSmall,
-                        )
-                        Spacer(modifier = Modifier.size(8.dp))
-                        MochiButton(
-                            onClick = onOpenShip,
-                            enabled = !state.shipSubmitting,
-                            modifier = Modifier.fillMaxWidth(),
-                        ) {
-                            Icon(
-                                Icons.Default.LocalShipping,
-                                contentDescription = null,
-                                modifier = Modifier.size(ButtonDefaults.IconSize),
-                            )
-                            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                            Text(stringResource(R.string.market_sale_ship_action))
-                        }
-                    }
-                }
+        if (order.delivery == DeliveryMethod.SHIPPING && order.addressLine1.isNotBlank()) {
+            item("address") {
+                ShippingAddressCard(order = order)
             }
         }
 
-        // ---- Refund action ----
-        if (
-            order.status == OrderStatus.PAID ||
-            order.status == OrderStatus.SHIPPED ||
-            order.status == OrderStatus.DELIVERED ||
-            order.status == OrderStatus.COMPLETED ||
-            order.status == OrderStatus.DISPUTED
-        ) {
-            item("refund-action") {
-                MochiCard(
-                    modifier = Modifier.fillMaxWidth(),
-                ) {
-                    Column(modifier = Modifier.padding(16.dp)) {
-                        Text(
-                            text = stringResource(R.string.market_sale_section_refund),
-                            style = MaterialTheme.typography.titleSmall,
-                        )
-                        Spacer(modifier = Modifier.size(8.dp))
-                        MochiOutlinedButton(
-                            onClick = onOpenRefund,
-                            enabled = !state.refundSubmitting,
-                            modifier = Modifier.fillMaxWidth(),
-                        ) {
-                            Text(stringResource(R.string.market_sale_refund_action))
-                        }
-                    }
-                }
-            }
-        }
-
-        // ---- Dispute section ----
         detail.dispute?.let { dispute ->
             item("dispute") {
                 DisputePanel(
@@ -396,129 +316,254 @@ private fun SaleDetailBody(
             }
         }
 
-        // ---- Review section ----
-        // `peer_review` is the buyer's review of this seller, the one a
-        // response can be posted to; `review` is the seller's own review of
-        // the buyer, offered as a form while `can_review` and read-only after.
-        detail.peerReview?.let { review ->
-            item("review") {
-                ReviewPanel(
-                    review = review,
-                    submitting = state.reviewResponseSubmitting,
-                    errorMessage = state.reviewError,
-                    onRespond = onRespondReview,
-                )
+        val ownReview = detail.review
+        if (ownReview != null) {
+            item("review-buyer") {
+                OwnReviewCard(review = ownReview)
             }
-        }
-        if (detail.canReview || detail.review != null) {
+        } else if (detail.canReview) {
             item("review-buyer") {
                 WriteReviewForm(
                     submitting = state.reviewSubmitting,
-                    submitted = detail.review,
                     onSubmit = onSubmitReview,
                 )
             }
         }
 
-        // ---- Audit timeline (collapsible) ----
-        item("audit-toggle") {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable(onClick = onToggleAudit)
-                    .padding(vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                Text(
-                    text = if (auditExpanded) {
-                        stringResource(R.string.market_sale_audit_collapse)
-                    } else {
-                        stringResource(R.string.market_sale_audit_expand)
-                    },
-                    style = MaterialTheme.typography.titleSmall,
-                    modifier = Modifier.weight(1f),
+        detail.peerReview?.let { review ->
+            item("review") {
+                ReviewPanel(
+                    review = review,
+                    buyerName = order.buyerName.orEmpty().ifBlank { review.reviewerName.orEmpty() },
+                    submitting = state.reviewResponseSubmitting,
+                    errorMessage = state.reviewError,
+                    onOpenBuyer = { onOpenBuyer(order.buyer.ifBlank { review.reviewer }) },
+                    onRespond = onRespondReview,
                 )
-                Icon(
-                    imageVector = if (auditExpanded) Icons.Default.ExpandLess
-                    else Icons.Default.ExpandMore,
-                    contentDescription = null,
-                )
-            }
-            if (auditExpanded) {
-                AuditTimeline(events = state.audit)
             }
         }
 
-        // ---- Message buyer ----
-        item("message-buyer") {
-            Spacer(modifier = Modifier.size(8.dp))
-            MochiOutlinedButton(
-                onClick = onMessageBuyer,
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Icon(Icons.AutoMirrored.Filled.Message, contentDescription = null)
-                Spacer(modifier = Modifier.size(8.dp))
-                Text(stringResource(R.string.market_sale_message_buyer))
+        if (state.audit.isNotEmpty()) {
+            item("history") {
+                AuditHistoryCard(events = state.audit)
             }
         }
     }
 }
 
+/**
+ * The order's facts as label and value rows, as the web's sale page lays them
+ * out: status, buyer, total, payout, any refund, delivery and purchase time.
+ */
 @Composable
-private fun FeeBreakdownPanel(order: Order, currency: Currency) {
+private fun SaleSummaryCard(order: Order, onOpenBuyer: (String) -> Unit) {
+    val currency = order.currency ?: Currency.GBP
+    val format = LocalFormat.current
     MochiCard(modifier = Modifier.fillMaxWidth()) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            order.status?.let { status ->
+                SummaryRow(label = stringResource(R.string.market_listings_filter_status)) {
+                    MarketStatusBadge(status = status.name.lowercase())
+                }
+            }
+            val buyer = order.buyerName.orEmpty().ifBlank { order.buyerFingerprint.orEmpty() }
+            if (buyer.isNotBlank()) {
+                SummaryRow(label = stringResource(R.string.market_sale_buyer_label)) {
+                    Text(
+                        text = buyer,
+                        style = MaterialTheme.typography.bodyLarge,
+                        textDecoration = TextDecoration.Underline,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.clickable { onOpenBuyer(order.buyer) },
+                    )
+                }
+            }
+            SummaryRow(label = stringResource(R.string.market_purchase_total)) {
+                Text(
+                    text = formatPrice(order.total, currency),
+                    style = MaterialTheme.typography.titleMedium,
+                )
+            }
+            SummaryRow(label = stringResource(R.string.market_fee_preview_payout)) {
+                Text(
+                    text = formatPrice(order.payout, currency),
+                    style = MaterialTheme.typography.titleMedium,
+                )
+            }
+            if (order.refunded > 0L) {
+                SummaryRow(label = stringResource(R.string.market_purchase_refunded)) {
+                    Text(
+                        text = formatPrice(order.refunded, currency),
+                        style = MaterialTheme.typography.titleMedium,
+                    )
+                }
+            }
+            order.delivery?.let { delivery ->
+                SummaryRow(label = stringResource(R.string.market_purchase_delivery)) {
+                    SummaryValue(text = stringResource(deliveryLabel(delivery)))
+                }
+            }
+            if (order.created > 0L) {
+                SummaryRow(label = stringResource(R.string.market_purchase_purchased)) {
+                    SummaryValue(text = format.formatDateTime(order.created))
+                }
+            }
+            if (order.shipped > 0L) {
+                SummaryRow(label = stringResource(R.string.market_sale_shipped_label)) {
+                    SummaryValue(text = format.formatDateTime(order.shipped))
+                }
+            }
+            if (order.carrier.isNotBlank()) {
+                SummaryRow(label = stringResource(R.string.market_sale_carrier_label)) {
+                    SummaryValue(text = order.carrier)
+                }
+            }
+            TrackingRow(order = order)
+        }
+    }
+}
+
+/**
+ * The order's tracking number, opening the seller's tracking link when it is
+ * a web address; with a link but no number, the link alone as Track package.
+ */
+@Composable
+private fun TrackingRow(order: Order) {
+    val context = LocalContext.current
+    val target = webUri(order.url)
+    val text = order.tracking.ifBlank {
+        if (target != null) {
+            stringResource(R.string.market_purchase_track)
+        } else {
+            ""
+        }
+    }
+    if (text.isBlank()) {
+        return
+    }
+    SummaryRow(label = stringResource(R.string.market_sale_tracking_label)) {
+        if (target == null) {
+            SummaryValue(text = text)
+        } else {
             Text(
-                text = stringResource(R.string.market_sale_section_fees),
-                style = MaterialTheme.typography.titleSmall,
-            )
-            Spacer(modifier = Modifier.size(8.dp))
-            FeeRow(
-                label = stringResource(R.string.market_sale_fee_gross),
-                value = formatPrice(order.total, currency),
-            )
-            FeeRow(
-                label = stringResource(R.string.market_sale_fee_mochi),
-                value = "−" + formatPrice(order.fee, currency),
-            )
-            // Stripe processor fee isn't included on the order row (Stripe's
-            // dashboard owns the canonical number). We surface the gap as a
-            // help line under the breakdown rather than quote a stale figure.
-            HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
-            FeeRow(
-                label = stringResource(R.string.market_sale_fee_payout),
-                value = formatPrice(order.payout, currency),
-                emphasised = true,
-            )
-            Spacer(modifier = Modifier.size(4.dp))
-            Text(
-                text = stringResource(R.string.market_sale_fee_stripe_note),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                text = text,
+                style = MaterialTheme.typography.bodyLarge,
+                textDecoration = TextDecoration.Underline,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.clickable {
+                    try {
+                        CustomTabsIntent.Builder().build().launchUrl(context, target)
+                    } catch (_: ActivityNotFoundException) {
+                    }
+                },
             )
         }
     }
 }
 
 @Composable
-private fun FeeRow(label: String, value: String, emphasised: Boolean = false) {
+private fun SummaryRow(label: String, value: @Composable () -> Unit) {
     Row(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 2.dp),
+        modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         Text(
             text = label,
-            style = if (emphasised) MaterialTheme.typography.titleSmall
-            else MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodyLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.weight(1f),
         )
-        Text(
-            text = value,
-            style = if (emphasised) MaterialTheme.typography.titleSmall
-            else MaterialTheme.typography.bodyMedium,
-            fontWeight = if (emphasised) FontWeight.SemiBold else FontWeight.Normal,
+        value()
+    }
+}
+
+@Composable
+private fun SummaryValue(text: String) {
+    Text(text = text, style = MaterialTheme.typography.bodyLarge)
+}
+
+private fun deliveryLabel(delivery: DeliveryMethod): Int = when (delivery) {
+    DeliveryMethod.SHIPPING -> R.string.market_checkout_delivery_shipping
+    DeliveryMethod.PICKUP -> R.string.market_checkout_delivery_pickup
+    DeliveryMethod.DOWNLOAD -> R.string.market_checkout_delivery_download
+}
+
+@Composable
+private fun ShippingAddressCard(order: Order) {
+    val locality = listOf(order.addressCity, order.addressRegion)
+        .filter { part -> part.isNotBlank() }
+        .joinToString(", ")
+    val lines = listOf(
+        order.addressName,
+        order.addressLine1,
+        order.addressLine2,
+        listOf(locality, order.addressPostcode)
+            .filter { part -> part.isNotBlank() }
+            .joinToString(" "),
+        order.addressCountry,
+    ).filter { line -> line.isNotBlank() }
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
+            Text(
+                text = stringResource(R.string.market_checkout_address_heading),
+                style = MaterialTheme.typography.titleMedium,
+            )
+            lines.forEach { line ->
+                Text(text = line, style = MaterialTheme.typography.bodyLarge)
+            }
+        }
+    }
+}
+
+@Composable
+private fun ReviewHeading(title: @Composable () -> Unit, rating: Long) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Box(modifier = Modifier.weight(1f)) {
+            title()
+        }
+        RatingStars(
+            rating = rating.toFloat(),
+            showCount = false,
+            size = 20.dp,
+            tint = RatingStarGold,
         )
+    }
+}
+
+/** The seller's own review of the buyer, read-only once it is sent. */
+@Composable
+private fun OwnReviewCard(review: Review) {
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            ReviewHeading(
+                title = {
+                    Text(
+                        text = stringResource(R.string.market_sale_review_of_buyer),
+                        style = MaterialTheme.typography.titleMedium,
+                    )
+                },
+                rating = review.rating,
+            )
+            if (review.text.isNotBlank()) {
+                Text(text = review.text, style = MaterialTheme.typography.bodyLarge)
+            }
+        }
     }
 }
 
@@ -587,51 +632,57 @@ private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
     }
 }
 
+/**
+ * The buyer's review of this sale, headed "Review from" with the buyer's name
+ * linking to their profile, and a box to respond to it until a response is sent.
+ */
 @Composable
 private fun ReviewPanel(
     review: Review,
+    buyerName: String,
     submitting: Boolean,
     errorMessage: String?,
+    onOpenBuyer: () -> Unit,
     onRespond: (String) -> Unit,
 ) {
     MochiCard(modifier = Modifier.fillMaxWidth()) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(
-                text = review.reviewerName?.takeIf { it.isNotBlank() }
-                    ?.let { stringResource(R.string.market_purchase_review_from, it) }
-                    ?: stringResource(R.string.market_sale_review_buyer),
-                style = MaterialTheme.typography.titleSmall,
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            ReviewHeading(
+                title = {
+                    if (buyerName.isBlank()) {
+                        Text(
+                            text = stringResource(R.string.market_sale_review_buyer),
+                            style = MaterialTheme.typography.titleMedium,
+                        )
+                    } else {
+                        ReviewFromText(name = buyerName, onClick = onOpenBuyer)
+                    }
+                },
+                rating = review.rating,
             )
-            Spacer(modifier = Modifier.size(4.dp))
-            RatingStars(rating = review.rating.toFloat(), showCount = false)
-            Spacer(modifier = Modifier.size(8.dp))
-            Text(
-                text = review.text,
-                style = MaterialTheme.typography.bodyMedium,
-            )
+            if (review.text.isNotBlank()) {
+                Text(text = review.text, style = MaterialTheme.typography.bodyLarge)
+            }
             if (review.response.isNotBlank()) {
-                Spacer(modifier = Modifier.size(12.dp))
-                Text(
-                    text = stringResource(R.string.market_sale_review_response_existing),
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                Text(
-                    text = review.response,
-                    style = MaterialTheme.typography.bodyMedium,
-                )
+                Column {
+                    Text(
+                        text = stringResource(R.string.market_sale_review_response_existing),
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Text(
+                        text = review.response,
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
+                }
             } else {
                 var draft by remember(review.id) { mutableStateOf("") }
-                Spacer(modifier = Modifier.size(8.dp))
-                Text(
-                    text = stringResource(R.string.market_sale_review_no_response_yet),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                Spacer(modifier = Modifier.size(8.dp))
                 MochiTextField(
                     value = draft,
-                    onValueChange = { draft = it },
+                    onValueChange = { value -> draft = value },
                     label = {
                         Text(stringResource(R.string.market_sale_review_response_label))
                     },
@@ -646,7 +697,6 @@ private fun ReviewPanel(
                         style = MaterialTheme.typography.bodySmall,
                     )
                 }
-                Spacer(modifier = Modifier.size(8.dp))
                 MochiButton(
                     enabled = !submitting && draft.isNotBlank(),
                     onClick = { onRespond(draft.trim()) },
@@ -677,3 +727,33 @@ private fun ReviewPanel(
         }
     }
 }
+
+/** "Review from [name]" with only the name underlined and tappable. */
+@Composable
+private fun ReviewFromText(name: String, onClick: () -> Unit) {
+    val template = stringResource(R.string.market_purchase_review_from, NAME_SLOT)
+    val slot = template.indexOf(NAME_SLOT)
+    val text = buildAnnotatedString {
+        if (slot < 0) {
+            append(template)
+            return@buildAnnotatedString
+        }
+        append(template.substring(0, slot))
+        withLink(
+            LinkAnnotation.Clickable(
+                tag = "buyer",
+                styles = TextLinkStyles(SpanStyle(textDecoration = TextDecoration.Underline)),
+                linkInteractionListener = { _ -> onClick() },
+            ),
+        ) {
+            append(name)
+        }
+        append(template.substring(slot + NAME_SLOT.length))
+    }
+    Text(
+        text = text,
+        style = MaterialTheme.typography.titleMedium,
+    )
+}
+
+private const val NAME_SLOT = "\uE000"

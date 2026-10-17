@@ -5,33 +5,20 @@
 
 package org.mochios.market.ui.selling
 
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.MochiError
@@ -42,13 +29,18 @@ import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
 import org.mochios.market.R
-import org.mochios.market.ui.components.MarketLayout
-import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Interval
 import org.mochios.market.model.Subscription
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketListNote
+import org.mochios.market.ui.components.MarketListPadding
+import org.mochios.market.ui.components.MarketListPrice
+import org.mochios.market.ui.components.MarketListRow
+import org.mochios.market.ui.components.MarketListSpacing
+import org.mochios.market.ui.components.MarketStatusBadge
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -88,6 +80,8 @@ fun MySubscribersScreen(
                         isLoading = state.isLoading,
                         hasMore = state.hasMore,
                         onLoadMore = viewModel::loadMore,
+                        contentPadding = MarketListPadding,
+                        verticalArrangement = MarketListSpacing,
                     ) { sub ->
                         SubscriberRow(
                             subscription = sub,
@@ -99,7 +93,6 @@ fun MySubscribersScreen(
                                 }
                             },
                         )
-                        HorizontalDivider(thickness = 0.5.dp)
                     }
                 }
             }
@@ -115,48 +108,14 @@ private fun SubscriberRow(subscription: Subscription, onClickBuyer: () -> Unit) 
         Interval.YEARLY -> stringResource(R.string.market_subscribers_interval_year)
         else -> stringResource(R.string.market_subscribers_interval_month)
     }
-    val amount = formatPrice(subscription.amount, currency)
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = subscription.buyerName.orEmpty().ifBlank { subscription.buyer },
-                style = MaterialTheme.typography.titleSmall,
-                fontWeight = FontWeight.SemiBold,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier
-                    .weight(1f)
-                    .clickable(onClick = onClickBuyer),
-            )
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                text = "$amount $intervalSuffix",
-                style = MaterialTheme.typography.titleSmall,
-                fontWeight = FontWeight.SemiBold,
-            )
-        }
-        val title = subscription.title.orEmpty()
-        if (title.isNotEmpty()) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-        }
-        Row(
-            modifier = Modifier.padding(top = 4.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            subscription.status?.let {
-                MarketStatusBadge(status = it.name.lowercase())
+    val name = subscription.buyerName.orEmpty().ifBlank { subscription.buyer }
+    MarketListRow(
+        title = name,
+        onClick = onClickBuyer,
+        subtitle = subscription.title,
+        badges = {
+            subscription.status?.let { status ->
+                MarketStatusBadge(status = status.name.lowercase())
             }
             if (subscription.cancelled > 0L) {
                 Text(
@@ -166,8 +125,14 @@ private fun SubscriberRow(subscription: Subscription, onClickBuyer: () -> Unit) 
                     ),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                 )
             }
-        }
-    }
+        },
+        trailing = {
+            MarketListPrice(text = formatPrice(subscription.amount, currency))
+            MarketListNote(text = intervalSuffix)
+        },
+    )
 }

@@ -35,6 +35,7 @@ import org.mochios.market.model.Category
 import org.mochios.market.model.Currency
 import org.mochios.market.model.ListingDetailResponse
 import org.mochios.market.model.Photo
+import org.mochios.market.model.RemovalCheck
 import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
 import org.mochios.market.repository.SavedRepository
@@ -116,6 +117,11 @@ class ListingDetailViewModel @Inject constructor(
     /** Carries the new listing id after a successful relist so the screen can navigate to its editor. */
     private val _navigateToEdit = MutableSharedFlow<String>(extraBufferCapacity = 1)
     val navigateToEdit: SharedFlow<String> = _navigateToEdit.asSharedFlow()
+
+    private val _closed = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+
+    /** Fires once the listing is deleted, so the screen leaves it. */
+    val closed: SharedFlow<Unit> = _closed.asSharedFlow()
 
     private var currentId: String = ""
 
@@ -334,6 +340,43 @@ class ListingDetailViewModel @Inject constructor(
                     )
                 )
             }
+        }
+    }
+
+    /**
+     * Deletes the listing: a draft outright, a live one removed from sale, a
+     * rejected one cleared from the seller's list. [closed] fires once done.
+     */
+    fun deleteListing() {
+        val id = currentId
+        if (id.isEmpty()) return
+        viewModelScope.launch {
+            try {
+                repository.deleteListing(id)
+                _closed.emit(Unit)
+            } catch (e: Exception) {
+                _snackbar.emit(
+                    ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_listings_delete_failed,
+                    )
+                )
+            }
+        }
+    }
+
+    /**
+     * What removing the listing would cut off (live bidders, subscribers), or
+     * null when the server can't say.
+     */
+    suspend fun removalCheck(): RemovalCheck? {
+        val id = currentId
+        if (id.isEmpty()) {
+            return null
+        }
+        return try {
+            repository.listingRemovalCheck(id)
+        } catch (e: Exception) {
+            null
         }
     }
 

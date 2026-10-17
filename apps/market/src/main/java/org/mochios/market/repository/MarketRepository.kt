@@ -16,6 +16,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.market.api.MarketApi
@@ -44,6 +45,7 @@ import org.mochios.market.model.RelistResponse
 import org.mochios.market.model.RemovalCheck
 import org.mochios.market.model.Review
 import org.mochios.market.model.ReviewsListResponse
+import org.mochios.market.model.ShippingOption
 import org.mochios.market.model.ShippingOptionInput
 import org.mochios.market.model.StripeOauthCompletion
 import org.mochios.market.model.StripeOnboardingResponse
@@ -337,9 +339,12 @@ class MarketRepository @Inject constructor(
 
     // ---- Shipping ----
 
-    suspend fun setShipping(listing: String, options: List<ShippingOptionInput>) {
-        try {
-            api.setShipping(listing.toString(), gson.toJson(options)).unwrap()
+    suspend fun setShipping(
+        listing: String,
+        options: List<ShippingOptionInput>,
+    ): List<ShippingOption> {
+        return try {
+            api.setShipping(listing, gson.toJson(options)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -734,7 +739,7 @@ class MarketRepository @Inject constructor(
 
     suspend fun markMessagesRead(thread: String) {
         try {
-            api.markMessagesRead(thread.toString()).unwrap()
+            api.markMessagesRead(thread).unwrapEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

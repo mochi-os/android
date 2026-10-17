@@ -5,16 +5,9 @@
 
 package org.mochios.market.ui.buying
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.Repeat
@@ -24,7 +17,6 @@ import androidx.compose.material.icons.outlined.PlayArrow
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -37,10 +29,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
@@ -54,14 +43,19 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.market.R
-import org.mochios.market.ui.components.MarketLayout
-import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Interval
 import org.mochios.market.model.Subscription
 import org.mochios.market.model.SubscriptionStatus
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.MarketListNote
+import org.mochios.market.ui.components.MarketListPadding
+import org.mochios.market.ui.components.MarketListPrice
+import org.mochios.market.ui.components.MarketListRow
+import org.mochios.market.ui.components.MarketListSpacing
+import org.mochios.market.ui.components.MarketStatusBadge
 
 @Composable
 fun MySubscriptionsScreen(
@@ -104,14 +98,25 @@ fun MySubscriptionsScreen(
                     isLoading = state.isLoadingMore,
                     hasMore = state.subscriptions.size < state.total,
                     onLoadMore = { viewModel.loadMore() },
+                    contentPadding = MarketListPadding,
+                    verticalArrangement = MarketListSpacing,
                 ) { sub ->
                     SubscriptionRow(
                         sub = sub,
                         mutating = state.mutatingId == sub.id,
                         onTap = {
-                            navController.navigate(
-                                MarketApp.subscriptionDetail(sub.id.toString()),
-                            )
+                            if (sub.listing.isNotBlank()) {
+                                navController.navigate(
+                                    MarketApp.listingDetail(sub.listing, sub.title),
+                                )
+                            }
+                        },
+                        onResubscribe = {
+                            if (sub.listing.isNotBlank()) {
+                                navController.navigate(
+                                    "${MarketApp.checkout(sub.listing)}?subscription=true",
+                                )
+                            }
                         },
                         onPause = { viewModel.pause(sub.id) },
                         onResume = { viewModel.resume(sub.id) },
@@ -147,53 +152,47 @@ private fun SubscriptionRow(
     onPause: () -> Unit,
     onResume: () -> Unit,
     onReactivate: () -> Unit,
+    onResubscribe: () -> Unit,
     onCancelRequested: () -> Unit,
 ) {
     val format = LocalFormat.current
     val currency = sub.currency ?: Currency.GBP
     val intervalText = if (sub.interval == Interval.YEARLY) {
-        stringResource(R.string.market_subscriptions_per_year, formatPrice(sub.amount, currency))
+        stringResource(R.string.market_subscribers_interval_year)
     } else {
-        stringResource(R.string.market_subscriptions_per_month, formatPrice(sub.amount, currency))
+        stringResource(R.string.market_subscribers_interval_month)
     }
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surface)
-            .clickable(onClick = onTap)
-            .padding(12.dp),
-        verticalAlignment = Alignment.CenterVertically,
+    val cancelNote = if (sub.cancelled > 0L &&
+        (sub.status == SubscriptionStatus.ACTIVE || sub.status == SubscriptionStatus.PAUSED)
     ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                sub.title ?: "Subscription #${sub.id}",
-                style = MaterialTheme.typography.titleSmall,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            Text(
-                "$intervalText · ${format.formatTimestamp(sub.created)}",
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            if (sub.cancelled > 0L &&
-                (sub.status == SubscriptionStatus.ACTIVE || sub.status == SubscriptionStatus.PAUSED)
-            ) {
-                val msg = if (sub.ends > 0L) {
-                    stringResource(R.string.market_subscriptions_cancels_on, format.formatTimestamp(sub.ends))
-                } else {
-                    stringResource(R.string.market_subscriptions_cancels_period_end)
-                }
-                Text(
-                    msg,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.tertiary,
-                )
-            }
+        if (sub.ends > 0L) {
+            stringResource(R.string.market_subscriptions_cancels_on, format.formatTimestamp(sub.ends))
+        } else {
+            stringResource(R.string.market_subscriptions_cancels_period_end)
         }
-        MarketStatusBadge(status = sub.status?.name?.lowercase() ?: "")
+    } else {
+        ""
+    }
+    val renews = sub.ends > 0L && sub.cancelled == 0L &&
+        (sub.status == SubscriptionStatus.ACTIVE || sub.status == SubscriptionStatus.PAST_DUE)
+    MarketListRow(
+        title = sub.title ?: "Subscription #${sub.id}",
+        onClick = onTap,
+        subtitle = if (renews) {
+            stringResource(
+                R.string.market_subscription_detail_next_billing,
+                format.formatTimestamp(sub.ends),
+            )
+        } else {
+            format.formatTimestamp(sub.created)
+        },
+        preview = cancelNote,
+        badges = { MarketStatusBadge(status = sub.status?.name?.lowercase() ?: "") },
+        trailing = {
+            MarketListPrice(text = formatPrice(sub.amount, currency))
+            MarketListNote(text = intervalText)
+        },
+    ) {
         Box {
             var menu by remember { mutableStateOf(false) }
             MochiIconButton(onClick = { menu = true }, enabled = !mutating) {
@@ -223,7 +222,16 @@ private fun SubscriptionRow(
                         onClick = { menu = false; onReactivate() },
                         leadingIcon = { Icon(Icons.Outlined.Refresh, contentDescription = null) },
                     )
-                } else if (sub.status != SubscriptionStatus.CANCELLED && sub.cancelled == 0L) {
+                } else if (sub.status == SubscriptionStatus.CANCELLED) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(R.string.market_subscriptions_action_resubscribe)) },
+                        onClick = {
+                            menu = false
+                            onResubscribe()
+                        },
+                        leadingIcon = { Icon(Icons.Default.Repeat, contentDescription = null) },
+                    )
+                } else if (sub.cancelled == 0L) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.market_subscriptions_action_cancel)) },
                         onClick = { menu = false; onCancelRequested() },

@@ -104,6 +104,7 @@ fun PlacePicker(
     var suppressSearch by remember { mutableStateOf(false) }
 
     val mapView = remember {
+        configureOsmdroid(context)
         MapView(context).apply {
             // Pin the native view to 250.dp so it can't measure taller than the
             // AndroidView slot and bleed over the surrounding Compose content.

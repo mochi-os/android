@@ -9,28 +9,35 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
+import org.mochios.market.model.MarketThread
 import org.mochios.market.model.Message
 import org.mochios.market.model.ThreadListingPreview
-import org.mochios.market.model.MarketThread
 import org.mochios.market.repository.MarketRepository
-import javax.inject.Inject
 
 /**
  * [messages] are oldest first; the screen reverses them for its reverseLayout
- * list.
+ * list. [me] is the signed-in identity, whose messages sit on the right
+ * whether they are the buyer or the seller. [photo] is the listing's
+ * primary photo id for the header's thumbnail, blank when it has none.
  */
 data class MessageThreadUiState(
     val thread: MarketThread? = null,
     val listing: ThreadListingPreview = ThreadListingPreview(),
     val messages: List<Message> = emptyList(),
+    val me: String = "",
+    val photo: String = "",
     val draft: String = "",
     val isLoading: Boolean = true,
     val isSending: Boolean = false,
@@ -46,6 +53,7 @@ sealed interface MessageThreadEvent {
 class MessageThreadViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repo: MarketRepository,
+    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     val listingId: String = savedStateHandle.get<String>("listingId").orEmpty()
@@ -78,8 +86,13 @@ class MessageThreadViewModel @Inject constructor(
                     resolvedThreadId = repo.createThread(listing).id
                 }
                 val response = repo.getThread(resolvedThreadId)
+                val me = sessionManager.boundIdentity.first().orEmpty()
+                val photo = response.listing.photo?.id.orEmpty()
+                    .ifBlank { listingPhoto(response.listing.id.ifBlank { listingId }) }
                 _state.value = _state.value.copy(
                     thread = response.thread,
+                    me = me,
+                    photo = photo,
                     listing = response.listing,
                     messages = response.messages,
                     isLoading = false,
@@ -91,6 +104,25 @@ class MessageThreadViewModel @Inject constructor(
                     error = e.toMochiError(),
                 )
             }
+        }
+    }
+
+    /**
+     * The first photo of [listing] by rank, read from its photo list when the
+     * thread's preview of it carries none, as the listing page reads them, and
+     * from its detail's primary photo after that; blank when neither has one.
+     */
+    private suspend fun listingPhoto(listing: String): String {
+        if (listing.isBlank()) {
+            return ""
+        }
+        return try {
+            repo.listPhotos(listing).minByOrNull { photo -> photo.rank }?.id.orEmpty()
+                .ifBlank { repo.getListing(listing).listing.photo?.id.orEmpty() }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (_: Exception) {
+            ""
         }
     }
 
