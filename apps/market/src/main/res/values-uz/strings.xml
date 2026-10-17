@@ -683,4 +683,8 @@
         <item quantity="other">Bu joriy toʻlov davri oxirida %1$s faol obunani bekor qiladi. Obunachilarga xabar beriladi. Eʼlon xaridorlardan yashiriladi.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Aktiv oʻchirilsinmi?</string>
+    <string name="market_sale_chargeback_fee">Chargeback toʻlovi</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe tomonidan saqlangan)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s qaytarildi)</string>
+    <string name="market_sale_chargeback_fee_refunded">(qaytarildi)</string>
 </resources>

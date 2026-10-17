@@ -683,4 +683,8 @@
         <item quantity="other">ಇದು ಪ್ರಸ್ತುತ ಬಿಲ್ಲಿಂಗ್ ಅವಧಿಯ ಕೊನೆಯಲ್ಲಿ %1$s ಸಕ್ರಿಯ ಚಂದಾದಾರಿಕೆಗಳನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ. ಚಂದಾದಾರರಿಗೆ ತಿಳಿಸಲಾಗುತ್ತದೆ. ಪಟ್ಟಿಯನ್ನು ಖರೀದಿದಾರರಿಂದ ಮರೆಮಾಡಲಾಗುತ್ತದೆ.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">ಆಸ್ತಿ ಅಳಿಸಬೇಕೆ?</string>
+    <string name="market_sale_chargeback_fee">ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ ಶುಲ್ಕ</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe ಇಂದ ಇರಿಸಲಾಗಿದೆ)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s ಮರುಪಾವತಿ)</string>
+    <string name="market_sale_chargeback_fee_refunded">(ರಿಫಂಡ್ ಮಾಡಲಾಗಿದೆ)</string>
 </resources>

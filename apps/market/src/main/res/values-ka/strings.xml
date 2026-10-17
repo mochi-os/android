@@ -683,4 +683,8 @@
         <item quantity="other">ეს გააუქმებს %1$s აქტიურ გამოწერას მიმდინარე ბილინგის პერიოდის ბოლოს. გამომწერებს ეცნობებათ. განცხადება დაიმალება მყიდველებისგან.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">აქტივის წაშლა?</string>
+    <string name="market_sale_chargeback_fee">გადახდის გასაჩივრების საკომისიო</string>
+    <string name="market_sale_chargeback_fee_kept">(შენარჩუნებულია Stripe-ის მიერ)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s დაბრუნებულია)</string>
+    <string name="market_sale_chargeback_fee_refunded">(დაბრუნებულია)</string>
 </resources>

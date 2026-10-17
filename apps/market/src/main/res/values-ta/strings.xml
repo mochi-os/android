@@ -683,4 +683,8 @@
         <item quantity="other">இது தற்போதைய பில்லிங் காலத்தின் முடிவில் செயலில் உள்ள %1$s சந்தாக்களை ரத்து செய்யும். சந்தாதாரர்களுக்குத் தெரிவிக்கப்படும். பட்டியல் வாங்குபவர்களிடமிருந்து மறைக்கப்படும்.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">சொத்தை நீக்கவா?</string>
+    <string name="market_sale_chargeback_fee">சார்ஜ்பேக் கட்டணம்</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe ஆல் வைக்கப்பட்டது)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s திருப்பப்பட்டது)</string>
+    <string name="market_sale_chargeback_fee_refunded">(திருப்பப்பட்டது)</string>
 </resources>

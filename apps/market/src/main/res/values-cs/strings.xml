@@ -685,4 +685,8 @@
         <item quantity="other">Tím se na konci aktuálního fakturačního období zruší %1$s aktivních předplatných. Odběratelé budou upozorněni. Inzerát bude před kupujícími skryt.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Smazat zdroj?</string>
+    <string name="market_sale_chargeback_fee">Poplatek za chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(zadrženo Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s vráceno)</string>
+    <string name="market_sale_chargeback_fee_refunded">(vráceno)</string>
 </resources>

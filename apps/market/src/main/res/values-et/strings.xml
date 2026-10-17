@@ -683,4 +683,8 @@
         <item quantity="other">See tühistab praeguse arveldusperioodi lõpus %1$s aktiivset tellimust. Tellijaid teavitatakse. Kuulutus peidetakse ostjate eest.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Kustutada vara?</string>
+    <string name="market_sale_chargeback_fee">Tagasinõude tasu</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe\'i hoiul)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s tagastatud)</string>
+    <string name="market_sale_chargeback_fee_refunded">(tagasi makstud)</string>
 </resources>

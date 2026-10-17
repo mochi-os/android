@@ -683,4 +683,8 @@
         <item quantity="other">Iki bakal mbatalake %1$s langganan aktif ing pungkasan periode tagihan saiki. Pelanggan bakal diwenehi kabar. Iklan bakal didhelikake saka sing tuku.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Busak aset?</string>
+    <string name="market_sale_chargeback_fee">Biaya chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(disimpen déning Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s dibalèkaké)</string>
+    <string name="market_sale_chargeback_fee_refunded">(dibalèkaké)</string>
 </resources>

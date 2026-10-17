@@ -683,4 +683,8 @@
         <item quantity="other">Dette avslutter %1$s aktive abonnementer ved slutten av gjeldende faktureringsperiode. Abonnentene blir varslet. Annonsen skjules for kjøpere.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Slette ressurs?</string>
+    <string name="market_sale_chargeback_fee">Tilbakeføringsgebyr</string>
+    <string name="market_sale_chargeback_fee_kept">(beholdt av Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s refundert)</string>
+    <string name="market_sale_chargeback_fee_refunded">(refundert)</string>
 </resources>

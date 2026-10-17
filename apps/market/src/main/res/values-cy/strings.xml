@@ -690,4 +690,8 @@
         <item quantity="other">Bydd hyn yn canslo %1$s tanysgrifiad gweithredol ar ddiwedd y cyfnod bilio presennol. Bydd tanysgrifwyr yn cael eu hysbysu. Bydd y rhestriad yn cael ei guddio rhag prynwyr.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Dileu’r ased?</string>
+    <string name="market_sale_chargeback_fee">Ffi cefnataliad</string>
+    <string name="market_sale_chargeback_fee_kept">(cadwyd gan Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s ad-dalwyd)</string>
+    <string name="market_sale_chargeback_fee_refunded">(wedi\'i ad-dalu)</string>
 </resources>

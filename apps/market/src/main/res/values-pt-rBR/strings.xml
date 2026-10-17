@@ -666,4 +666,8 @@
     <string name="market_listings_remove_message_auction">Isso cancelará o leilão. O anúncio ficará oculto dos compradores; você pode publicá-lo novamente depois como um novo rascunho.</string>
     <string name="market_listings_remove_title">Remover este anúncio?</string>
     <string name="market_editor_asset_delete_confirm_title">Excluir recurso?</string>
+    <string name="market_sale_chargeback_fee">Taxa de chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(retido pela Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s reembolsado)</string>
+    <string name="market_sale_chargeback_fee_refunded">(reembolsado)</string>
 </resources>

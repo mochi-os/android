@@ -691,4 +691,8 @@
         <item quantity="other">سيؤدي هذا إلى إلغاء %1$s من الاشتراكات النشطة في نهاية فترة الفوترة الحالية. سيتم إشعار المشتركين. سيتم إخفاء الإعلان عن المشترين.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">حذف الأصل؟</string>
+    <string name="market_sale_chargeback_fee">رسوم رد المبلغ</string>
+    <string name="market_sale_chargeback_fee_kept">(محتجز من قبل Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s مسترد)</string>
+    <string name="market_sale_chargeback_fee_refunded">(مسترد)</string>
 </resources>

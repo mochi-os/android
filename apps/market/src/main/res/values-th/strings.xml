@@ -683,4 +683,8 @@
         <item quantity="other">การดำเนินการนี้จะยกเลิกการสมัครสมาชิกที่ใช้งานอยู่ %1$s รายการเมื่อสิ้นสุดรอบการเรียกเก็บเงินปัจจุบัน สมาชิกจะได้รับแจ้ง ประกาศจะถูกซ่อนจากผู้ซื้อ</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">ลบสินทรัพย์หรือไม่?</string>
+    <string name="market_sale_chargeback_fee">ค่าธรรมเนียมการเรียกเงินคืน</string>
+    <string name="market_sale_chargeback_fee_kept">(เก็บโดย Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s คืนเงินแล้ว)</string>
+    <string name="market_sale_chargeback_fee_refunded">(คืนเงินแล้ว)</string>
 </resources>

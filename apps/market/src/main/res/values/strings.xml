@@ -531,6 +531,10 @@
     <string name="market_sale_carrier_custom_label">Carrier name</string>
     <string name="market_sale_carrier_label">Carrier</string>
     <string name="market_sale_carrier_other">Other</string>
+    <string name="market_sale_chargeback_fee">Chargeback fee</string>
+    <string name="market_sale_chargeback_fee_kept">(kept by Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s refunded)</string>
+    <string name="market_sale_chargeback_fee_refunded">(refunded)</string>
     <string name="market_sale_dispute_evidence_due">Evidence due %1$s</string>
     <string name="market_sale_dispute_respond">Respond</string>
     <string name="market_sale_dispute_stripe_reason">Stripe chargeback reason: %1$s</string>

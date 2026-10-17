@@ -685,4 +685,8 @@
         <item quantity="other">Αυτό θα ακυρώσει %1$s ενεργές συνδρομές στο τέλος της τρέχουσας περιόδου χρέωσης. Οι συνδρομητές θα ειδοποιηθούν. Η καταχώριση θα κρυφτεί από τους αγοραστές.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Διαγραφή στοιχείου;</string>
+    <string name="market_sale_chargeback_fee">Χρέωση αντιστροφής</string>
+    <string name="market_sale_chargeback_fee_kept">(κρατήθηκε από τη Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s επιστράφηκε)</string>
+    <string name="market_sale_chargeback_fee_refunded">(επιστράφηκε)</string>
 </resources>

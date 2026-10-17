@@ -683,4 +683,8 @@
         <item quantity="other">Tämä peruu %1$s aktiivista tilausta nykyisen laskutuskauden lopussa. Tilaajille ilmoitetaan. Ilmoitus piilotetaan ostajilta.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Poistetaanko resurssi?</string>
+    <string name="market_sale_chargeback_fee">Maksupalautusmaksu</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripen pidättämä)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s palautettu)</string>
+    <string name="market_sale_chargeback_fee_refunded">(hyvitetty)</string>
 </resources>

@@ -683,4 +683,8 @@
         <item quantity="other">၎င်းသည် လက်ရှိငွေတောင်းခံကာလ အဆုံးတွင် တက်ကြွသော စာရင်းသွင်းမှု %1$s ခုကို ပယ်ဖျက်ပါမည်။ စာရင်းသွင်းသူများကို အကြောင်းကြားပါမည်။ စာရင်းကို ဝယ်သူများထံမှ ဖျောက်ထားပါမည်။</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">ပစ္စည်းကို ဖျက်မလား?</string>
+    <string name="market_sale_chargeback_fee">ပြန်အမ်းငွေတောင်းခံမှု ကြေး</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe မှ ထိန်းသိမ်းထားသည်)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s ပြန်အမ်းပြီး)</string>
+    <string name="market_sale_chargeback_fee_refunded">(ပြန်အမ်းပြီး)</string>
 </resources>

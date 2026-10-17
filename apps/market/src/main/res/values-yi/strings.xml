@@ -683,4 +683,8 @@
         <item quantity="other">דאָס וועט אָפּזאָגן %1$s אַקטיווע אַבאָנעמענטן בײַם סוף פֿון דער איצטיקער צאָלונג־תּקופֿה. די אַבאָנענטן וועלן ווערן געמאָלדן. די רשימה וועט זײַן באַהאַלטן פֿון קונים.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">אויסמעקן אַסעט?</string>
+    <string name="market_sale_chargeback_fee">צוריקצאָלונג אָפּצאָל</string>
+    <string name="market_sale_chargeback_fee_kept">(געהאַלטן בײַ Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s אומגעקערט)</string>
+    <string name="market_sale_chargeback_fee_refunded">(אומגעקערט)</string>
 </resources>

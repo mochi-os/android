@@ -685,4 +685,8 @@
         <item quantity="other">Tas pašreizējā norēķinu perioda beigās atcels %1$s aktīvus abonementus. Abonenti tiks informēti. Sludinājums tiks paslēpts no pircējiem.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Dzēst resursu?</string>
+    <string name="market_sale_chargeback_fee">Maksājuma apstrīdēšanas maksa</string>
+    <string name="market_sale_chargeback_fee_kept">(patur Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s atmaksāti)</string>
+    <string name="market_sale_chargeback_fee_refunded">(atmaksāts)</string>
 </resources>

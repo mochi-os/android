@@ -683,4 +683,8 @@
         <item quantity="other">វានឹងបោះបង់ការជាវសកម្ម %1$s នៅចុងបញ្ចប់នៃរយៈពេលចេញវិក្កយបត្របច្ចុប្បន្ន។ អ្នកជាវនឹងទទួលបានការជូនដំណឹង។ ការផ្សាយនឹងត្រូវលាក់ពីអ្នកទិញ។</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">លុបទ្រព្យសម្បត្តិ?</string>
+    <string name="market_sale_chargeback_fee">ថ្លៃការទាមទារប្រាក់វិញ</string>
+    <string name="market_sale_chargeback_fee_kept">(រក្សាទុកដោយ Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s បានសងវិញ)</string>
+    <string name="market_sale_chargeback_fee_refunded">(បានសងវិញ)</string>
 </resources>

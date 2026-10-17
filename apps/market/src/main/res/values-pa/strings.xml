@@ -683,4 +683,8 @@
         <item quantity="other">ਇਸ ਨਾਲ ਮੌਜੂਦਾ ਬਿਲਿੰਗ ਮਿਆਦ ਦੇ ਅੰਤ ਵਿੱਚ %1$s ਸਰਗਰਮ ਸਬਸਕ੍ਰਿਪਸ਼ਨਾਂ ਰੱਦ ਹੋ ਜਾਣਗੀਆਂ। ਸਬਸਕ੍ਰਾਈਬਰਾਂ ਨੂੰ ਸੂਚਿਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਸੂਚੀ ਖਰੀਦਦਾਰਾਂ ਤੋਂ ਲੁਕਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">ਸੰਪਤੀ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="market_sale_chargeback_fee">ਚਾਰਜਬੈਕ ਫੀਸ</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe ਦੁਆਰਾ ਰੱਖਿਆ ਗਿਆ)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s ਵਾਪਸ)</string>
+    <string name="market_sale_chargeback_fee_refunded">(ਰਿਫੰਡ ਕੀਤਾ)</string>
 </resources>

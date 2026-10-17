@@ -683,4 +683,8 @@
         <item quantity="other">这将在当前计费周期结束时取消 %1$s 个有效订阅。订阅者将收到通知。商品将对买家隐藏。</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">删除资源吗?</string>
+    <string name="market_sale_chargeback_fee">拒付手续费</string>
+    <string name="market_sale_chargeback_fee_kept">(由Stripe保留)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s已退款)</string>
+    <string name="market_sale_chargeback_fee_refunded">（已退款）</string>
 </resources>

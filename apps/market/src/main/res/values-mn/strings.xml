@@ -682,4 +682,8 @@
         <item quantity="other">Энэ нь одоогийн төлбөрийн хугацааны төгсгөлд %1$s идэвхтэй захиалгыг цуцална. Захиалагчдад мэдэгдэнэ. Зар худалдан авагчдаас нуугдана.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Хөрөнгийг устгах уу?</string>
+    <string name="market_sale_chargeback_fee">Төлбөр буцаалтын хураамж</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe-д үлдсэн)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s буцаасан)</string>
+    <string name="market_sale_chargeback_fee_refunded">(буцаасан)</string>
 </resources>

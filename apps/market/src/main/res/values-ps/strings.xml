@@ -683,4 +683,8 @@
         <item quantity="other">دا به د اوسنۍ بل ورکولو دورې په پای کې %1$s فعال ګډونونه لغوه کړي. ګډون کوونکو ته به خبر ورکړل شي. اعلان به له پېرودونکو څخه پټ شي.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">شتمنۍ حذف کړئ؟</string>
+    <string name="market_sale_chargeback_fee">د چارج‌بیک فیس</string>
+    <string name="market_sale_chargeback_fee_kept">(د Stripe لخوا ساتل شوی)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s بیرته ورکړل شوی)</string>
+    <string name="market_sale_chargeback_fee_refunded">(بیرته ورکړل شوی)</string>
 </resources>

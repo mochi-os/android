@@ -683,4 +683,8 @@
         <item quantity="other">Սա կչեղարկի %1$s ակտիվ բաժանորդագրություն ընթացիկ վճարման ժամանակաշրջանի վերջում: Բաժանորդները կծանուցվեն: Հայտարարությունը կթաքցվի գնորդներից:</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Ջնջե՞լ ակտիվը։</string>
+    <string name="market_sale_chargeback_fee">Հետգանձման վճար</string>
+    <string name="market_sale_chargeback_fee_kept">(պահված է Stripe-ի կողմից)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s վերադարձված)</string>
+    <string name="market_sale_chargeback_fee_refunded">(վերադարձված)</string>
 </resources>

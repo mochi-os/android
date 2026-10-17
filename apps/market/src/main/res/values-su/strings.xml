@@ -683,4 +683,8 @@
         <item quantity="other">Ieu bakal ngabatalkeun %1$s langganan aktif dina ahir periode tagihan ayeuna. Palanggan bakal dibéjaan. Iklan bakal disumputkeun ti nu meuli.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Pupus aset?</string>
+    <string name="market_sale_chargeback_fee">Béaya chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(disimpen ku Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s dipulangkeun)</string>
+    <string name="market_sale_chargeback_fee_refunded">(dipulangkeun)</string>
 </resources>

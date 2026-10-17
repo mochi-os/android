@@ -683,4 +683,8 @@
         <item quantity="other">Hii itaghairi usajili %1$s unaoendelea mwishoni mwa kipindi cha sasa cha malipo. Wasajili watajulishwa. Tangazo litafichwa kwa wanunuzi.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Futa rasilimali?</string>
+    <string name="market_sale_chargeback_fee">Ada ya mlipuko</string>
+    <string name="market_sale_chargeback_fee_kept">(imehifadhiwa na Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s imerudishwa)</string>
+    <string name="market_sale_chargeback_fee_refunded">(imerejeshwa)</string>
 </resources>

@@ -687,4 +687,8 @@
         <item quantity="other">Это отменит %1$s активных подписок в конце текущего платёжного периода. Подписчики будут уведомлены. Объявление будет скрыто от покупателей.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Удалить ресурс?</string>
+    <string name="market_sale_chargeback_fee">Комиссия за чарджбэк</string>
+    <string name="market_sale_chargeback_fee_kept">(удержано Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s возвращено)</string>
+    <string name="market_sale_chargeback_fee_refunded">(возвращено)</string>
 </resources>

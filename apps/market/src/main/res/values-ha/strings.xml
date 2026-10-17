@@ -683,4 +683,8 @@
         <item quantity="other">Wannan zai soke biyan kuɗin shiga %1$s masu aiki a ƙarshen lokacin biyan kuɗi na yanzu. Za a sanar da masu biyan kuɗin shiga. Za a ɓoye tallar daga masu saye.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Goge asset?</string>
+    <string name="market_sale_chargeback_fee">Kuɗin chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(an riƙe ta Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s an mayar)</string>
+    <string name="market_sale_chargeback_fee_refunded">(an mayar)</string>
 </resources>

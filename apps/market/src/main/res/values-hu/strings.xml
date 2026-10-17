@@ -685,4 +685,8 @@
         <item quantity="other">Ez a jelenlegi számlázási időszak végén megszüntet %1$s aktív előfizetést. Az előfizetők értesítést kapnak. A hirdetés el lesz rejtve a vevők elől.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Törli az erőforrást?</string>
+    <string name="market_sale_chargeback_fee">Visszaterhelési díj</string>
+    <string name="market_sale_chargeback_fee_kept">(a Stripe visszatartja)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s visszatérítve)</string>
+    <string name="market_sale_chargeback_fee_refunded">(visszatérítve)</string>
 </resources>

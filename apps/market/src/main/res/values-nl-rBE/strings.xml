@@ -662,4 +662,8 @@
     <string name="market_listings_remove_message_auction">Hiermee wordt de veiling geannuleerd. De advertentie wordt verborgen voor kopers; je kunt deze later opnieuw plaatsen als een nieuw concept.</string>
     <string name="market_listings_remove_title">Deze advertentie verwijderen?</string>
     <string name="market_editor_asset_delete_confirm_title">Asset verwijderen?</string>
+    <string name="market_sale_chargeback_fee">Chargeback-kosten</string>
+    <string name="market_sale_chargeback_fee_kept">(ingehouden door Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s terugbetaald)</string>
+    <string name="market_sale_chargeback_fee_refunded">(terugbetaald)</string>
 </resources>

@@ -683,4 +683,8 @@
         <item quantity="other">Ini akan membatalkan %1$s langganan aktif pada akhir periode penagihan saat ini. Pelanggan akan diberi tahu. Iklan akan disembunyikan dari pembeli.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Hapus aset?</string>
+    <string name="market_sale_chargeback_fee">Biaya chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(disimpan oleh Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s dikembalikan)</string>
+    <string name="market_sale_chargeback_fee_refunded">(dikembalikan)</string>
 </resources>

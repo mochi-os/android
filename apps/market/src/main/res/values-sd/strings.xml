@@ -683,4 +683,8 @@
         <item quantity="other">اهو موجوده بلنگ مدت جي آخر ۾ %1$s سرگرم رڪنيتون منسوخ ڪندو. رڪنن کي اطلاع ڏنو ويندو. لسٽنگ خريدارن کان لڪائي ويندي.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">اثاثو ختم ڪجي؟</string>
+    <string name="market_sale_chargeback_fee">چارج بيڪ في</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe وٽ رکيل)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s واپس ڪيو ويو)</string>
+    <string name="market_sale_chargeback_fee_refunded">(واپس ڪيل)</string>
 </resources>

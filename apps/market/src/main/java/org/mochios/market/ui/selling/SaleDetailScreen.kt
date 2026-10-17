@@ -235,6 +235,24 @@ fun SaleDetailScreen(
     }
 }
 
+/**
+ * Whether the seller may refund the order, as the server allows: something is
+ * left to refund (a free order has nothing), the order is paid and not yet
+ * refunded or cancelled, and no chargeback is open, since Stripe is already
+ * reclaiming that money and a refund beside it pays the buyer twice.
+ */
+internal fun refundable(detail: OrderDetailResponse): Boolean {
+    val order = detail.order
+    val chargeback = detail.dispute?.let { it.opener == "stripe" && it.status == "open" } == true
+    return order.refunded < order.total && !chargeback && (
+        order.status == OrderStatus.PAID ||
+            order.status == OrderStatus.SHIPPED ||
+            order.status == OrderStatus.DELIVERED ||
+            order.status == OrderStatus.COMPLETED ||
+            order.status == OrderStatus.DISPUTED
+        )
+}
+
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun SaleDetailBody(
@@ -251,13 +269,7 @@ private fun SaleDetailBody(
     val order = detail.order
     val canShip = order.delivery == DeliveryMethod.SHIPPING &&
         order.status == OrderStatus.PAID
-    val canRefund = order.refunded < order.total && (
-        order.status == OrderStatus.PAID ||
-            order.status == OrderStatus.SHIPPED ||
-            order.status == OrderStatus.DELIVERED ||
-            order.status == OrderStatus.COMPLETED ||
-            order.status == OrderStatus.DISPUTED
-        )
+    val canRefund = refundable(detail)
 
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
@@ -311,6 +323,7 @@ private fun SaleDetailBody(
             item("dispute") {
                 DisputePanel(
                     dispute = dispute,
+                    currency = order.currency ?: Currency.GBP,
                     onRespond = onOpenDispute,
                 )
             }
@@ -456,8 +469,12 @@ private fun TrackingRow(order: Order) {
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.clickable {
+                    // The seller supplies this tracking URL and launchUrl
+                    // degrades to ACTION_VIEW, so only a web scheme may leave
+                    // the app.
+                    val link = webUri(order.url) ?: return@clickable
                     try {
-                        CustomTabsIntent.Builder().build().launchUrl(context, target)
+                        CustomTabsIntent.Builder().build().launchUrl(context, link)
                     } catch (_: ActivityNotFoundException) {
                     }
                 },
@@ -567,8 +584,30 @@ private fun OwnReviewCard(review: Review) {
     }
 }
 
+/** What Stripe did with a chargeback's fee, noted beside the amount. */
+internal enum class FeeOutcome { REFUNDED, PARTIAL, KEPT, PENDING }
+
+/**
+ * The outcome of [dispute]'s chargeback fee: refunded in full or in part when
+ * the seller won, kept once the buyer won, or pending while it is undecided;
+ * null when there is no fee to show, as on a buyer's dispute.
+ */
+internal fun feeOutcome(dispute: Dispute): FeeOutcome? = when {
+    dispute.opener != "stripe" || dispute.fee <= 0L -> null
+    dispute.feeRefunded >= dispute.fee -> FeeOutcome.REFUNDED
+    dispute.feeRefunded > 0 -> FeeOutcome.PARTIAL
+    dispute.status == "resolved_buyer" -> FeeOutcome.KEPT
+    else -> FeeOutcome.PENDING
+}
+
+/**
+ * The open dispute on the sale: its status, a chargeback's reason, evidence
+ * deadline and fee, the buyer's case and the seller's answer, and Respond while
+ * a buyer's dispute is open. A chargeback is answered on the Stripe Dashboard,
+ * and the server refuses a response to it or to a closed dispute.
+ */
 @Composable
-private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
+private fun DisputePanel(dispute: Dispute, currency: Currency, onRespond: () -> Unit) {
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -600,6 +639,23 @@ private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
                     color = MaterialTheme.colorScheme.error,
                 )
             }
+            val outcome = feeOutcome(dispute)
+            if (outcome != null) {
+                val note = when (outcome) {
+                    FeeOutcome.REFUNDED -> stringResource(R.string.market_sale_chargeback_fee_refunded)
+                    FeeOutcome.PARTIAL -> stringResource(
+                        R.string.market_sale_chargeback_fee_partial,
+                        formatPrice(dispute.feeRefunded.toLong(), currency),
+                    )
+                    FeeOutcome.KEPT -> stringResource(R.string.market_sale_chargeback_fee_kept)
+                    FeeOutcome.PENDING -> ""
+                }
+                Spacer(modifier = Modifier.size(4.dp))
+                SummaryRow(label = stringResource(R.string.market_sale_chargeback_fee)) {
+                    val amount = formatPrice(dispute.fee, currency)
+                    SummaryValue(text = if (note.isEmpty()) amount else "$amount $note")
+                }
+            }
             if (dispute.description.isNotBlank()) {
                 Spacer(modifier = Modifier.size(4.dp))
                 Text(
@@ -615,18 +671,20 @@ private fun DisputePanel(dispute: Dispute, onRespond: () -> Unit) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
-            Spacer(modifier = Modifier.size(8.dp))
-            MochiButton(
-                onClick = onRespond,
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                Icon(
-                    Icons.AutoMirrored.Filled.Send,
-                    contentDescription = null,
-                    modifier = Modifier.size(ButtonDefaults.IconSize),
-                )
-                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                Text(stringResource(R.string.market_sale_dispute_respond))
+            if (dispute.opener != "stripe" && dispute.status == "open") {
+                Spacer(modifier = Modifier.size(8.dp))
+                MochiButton(
+                    onClick = onRespond,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Icon(
+                        Icons.AutoMirrored.Filled.Send,
+                        contentDescription = null,
+                        modifier = Modifier.size(ButtonDefaults.IconSize),
+                    )
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                    Text(stringResource(R.string.market_sale_dispute_respond))
+                }
             }
         }
     }

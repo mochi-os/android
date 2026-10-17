@@ -683,4 +683,8 @@
         <item quantity="other">Dette annullerer %1$s aktive abonnementer ved udgangen af den nuværende faktureringsperiode. Abonnenterne får besked. Annoncen skjules for købere.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Slet aktiv?</string>
+    <string name="market_sale_chargeback_fee">Gebyr for tilbageførsel</string>
+    <string name="market_sale_chargeback_fee_kept">(beholdt af Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s refunderet)</string>
+    <string name="market_sale_chargeback_fee_refunded">(refunderet)</string>
 </resources>

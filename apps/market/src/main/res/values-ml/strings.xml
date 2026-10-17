@@ -683,4 +683,8 @@
         <item quantity="other">ഇത് നിലവിലെ ബില്ലിംഗ് കാലയളവിന്റെ അവസാനം സജീവമായ %1$s സബ്‌സ്‌ക്രിപ്ഷനുകൾ റദ്ദാക്കും. സബ്‌സ്‌ക്രൈബർമാരെ അറിയിക്കും. ലിസ്റ്റിംഗ് വാങ്ങുന്നവരിൽ നിന്ന് മറയ്ക്കും.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">ആസ്തി ഇല്ലാതാക്കണോ?</string>
+    <string name="market_sale_chargeback_fee">ചാർജ്ബാക്ക് ഫീസ്</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe സൂക്ഷിച്ചിരിക്കുന്നു)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s തിരികെ)</string>
+    <string name="market_sale_chargeback_fee_refunded">(തിരികെ നൽകി)</string>
 </resources>

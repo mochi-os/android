@@ -683,4 +683,8 @@
         <item quantity="other">Hiermee worden %1$s actieve abonnementen aan het einde van de huidige factureringsperiode opgezegd. Abonnees worden op de hoogte gebracht. De advertentie wordt verborgen voor kopers.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Asset verwijderen?</string>
+    <string name="market_sale_chargeback_fee">Chargeback-kosten</string>
+    <string name="market_sale_chargeback_fee_kept">(ingehouden door Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s terugbetaald)</string>
+    <string name="market_sale_chargeback_fee_refunded">(terugbetaald)</string>
 </resources>

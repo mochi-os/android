@@ -683,4 +683,8 @@
         <item quantity="other">આ વર્તમાન બિલિંગ અવધિના અંતે %1$s સક્રિય સબ્સ્ક્રિપ્શન રદ કરશે. સબ્સ્ક્રાઇબર્સને જાણ કરવામાં આવશે. લિસ્ટિંગ ખરીદદારોથી છુપાવવામાં આવશે.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">સંપત્તિ કાઢી નાખવી છે?</string>
+    <string name="market_sale_chargeback_fee">ચાર્જબેક ફી</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe દ્વારા રાખવામાં આવેલ)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s પાછું)</string>
+    <string name="market_sale_chargeback_fee_refunded">(રિફંડ થયું)</string>
 </resources>

@@ -683,4 +683,8 @@
         <item quantity="other">Això cancel·larà %1$s subscripcions actives al final del període de facturació actual. S\'avisarà els subscriptors. L\'anunci s\'amagarà als compradors.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Vols suprimir l’actiu?</string>
+    <string name="market_sale_chargeback_fee">Comissió per reclamació de càrrec</string>
+    <string name="market_sale_chargeback_fee_kept">(retingut per Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s reemborsat)</string>
+    <string name="market_sale_chargeback_fee_refunded">(reemborsat)</string>
 </resources>

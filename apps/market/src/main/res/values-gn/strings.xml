@@ -683,4 +683,8 @@
         <item quantity="other">Kóva ombotýta %1$s suscripción oikóva ko facturación período opávo. Umi suscriptor oñemomarandúta. Listado oñeñomíta ojoguávakuéragui.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Hundi asset?</string>
+    <string name="market_sale_chargeback_fee">Chargeback repykue</string>
+    <string name="market_sale_chargeback_fee_kept">(oñongatu Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s oñembojevýma)</string>
+    <string name="market_sale_chargeback_fee_refunded">(viru oñembojevýma)</string>
 </resources>

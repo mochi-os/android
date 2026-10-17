@@ -683,4 +683,8 @@
         <item quantity="other">این کار %1$s اشتراک فعال را در پایان دوره صورت‌حساب فعلی لغو می‌کند. به مشترکان اطلاع داده می‌شود. آگهی از دید خریداران پنهان می‌شود.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">حذف دارایی؟</string>
+    <string name="market_sale_chargeback_fee">کارمزد مغایرت مالی</string>
+    <string name="market_sale_chargeback_fee_kept">(نزد Stripe می‌ماند)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s بازپرداخت شد)</string>
+    <string name="market_sale_chargeback_fee_refunded">(بازپرداخت‌شده)</string>
 </resources>

@@ -683,4 +683,8 @@
         <item quantity="other">Esto cancelará %1$s suscripciones activas al final del período de facturación actual. Se avisará a los suscriptores. El anuncio se ocultará a los compradores.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">¿Eliminar activo?</string>
+    <string name="market_sale_chargeback_fee">Comisión de contracargo</string>
+    <string name="market_sale_chargeback_fee_kept">(retenido por Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s reembolsado)</string>
+    <string name="market_sale_chargeback_fee_refunded">(reembolsado)</string>
 </resources>

@@ -683,4 +683,8 @@
         <item quantity="other">Kun galmee sochii qaban %1$s dhuma yeroo kaffaltii ammaa irratti haqa. Galmaaʼonni ni beeksifamu. Tarreeffamni bitattoota irraa dhokfama.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Qabeenya haqu?</string>
+    <string name="market_sale_chargeback_fee">Kaffaltii chaargii deebi\'e</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe biratti kuufame)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s deebi\'e)</string>
+    <string name="market_sale_chargeback_fee_refunded">(deebi\'e)</string>
 </resources>

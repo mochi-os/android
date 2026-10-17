@@ -683,4 +683,8 @@
         <item quantity="other">Detta avslutar %1$s aktiva prenumerationer i slutet av den aktuella faktureringsperioden. Prenumeranterna meddelas. Annonsen döljs för köpare.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Ta bort resurs?</string>
+    <string name="market_sale_chargeback_fee">Återkravsavgift</string>
+    <string name="market_sale_chargeback_fee_kept">(behållen av Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s återbetald)</string>
+    <string name="market_sale_chargeback_fee_refunded">(återbetald)</string>
 </resources>

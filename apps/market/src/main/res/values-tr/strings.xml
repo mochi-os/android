@@ -683,4 +683,8 @@
         <item quantity="other">Bu, geçerli fatura döneminin sonunda %1$s etkin aboneliği iptal eder. Aboneler bilgilendirilir. İlan alıcılardan gizlenir.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Varlık silinsin mi?</string>
+    <string name="market_sale_chargeback_fee">Ters ibraz ücreti</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe tarafından tutulur)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s iade edildi)</string>
+    <string name="market_sale_chargeback_fee_refunded">(iade edildi)</string>
 </resources>

@@ -683,4 +683,8 @@
         <item quantity="other">यसले हालको बिलिङ अवधिको अन्त्यमा %1$s सक्रिय सदस्यता रद्द गर्नेछ। सदस्यहरूलाई सूचित गरिनेछ। सूची खरिदकर्ताहरूबाट लुकाइनेछ।</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">सम्पत्ति मेटाउने?</string>
+    <string name="market_sale_chargeback_fee">चार्जब्याक शुल्क</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe द्वारे ठेवले)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s परत केले)</string>
+    <string name="market_sale_chargeback_fee_refunded">(फिर्ता गरियो)</string>
 </resources>

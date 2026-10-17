@@ -683,4 +683,8 @@
         <item quantity="other">現在の請求期間の終了時に %1$s 件の有効なサブスクリプションをキャンセルします。購読者に通知されます。出品は購入者に表示されなくなります。</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">アセットを削除しますか?</string>
+    <string name="market_sale_chargeback_fee">チャージバック手数料</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripeが保持)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s返金済み)</string>
+    <string name="market_sale_chargeback_fee_refunded">(返金済み)</string>
 </resources>

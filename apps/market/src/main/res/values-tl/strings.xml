@@ -683,4 +683,8 @@
         <item quantity="other">Kakanselahin nito ang %1$s aktibong subscription sa pagtatapos ng kasalukuyang panahon ng pagsingil. Aabisuhan ang mga subscriber. Itatago ang listing sa mga mamimili.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Burahin ang asset?</string>
+    <string name="market_sale_chargeback_fee">Bayad sa chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(itinago ng Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s naisauli)</string>
+    <string name="market_sale_chargeback_fee_refunded">(na-refund)</string>
 </resources>

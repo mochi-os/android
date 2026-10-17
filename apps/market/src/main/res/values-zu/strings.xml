@@ -683,4 +683,8 @@
         <item quantity="other">Lokhu kuzokhansela ukubhalisa okusebenzayo okungu-%1$s ekupheleni kwesikhathi samanje sokukhokha. Ababhalisile bazokwaziswa. Uhlu luzofihlwa kubathengi.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Susa impahla?</string>
+    <string name="market_sale_chargeback_fee">Imali ye-chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(igcinwa yi-Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s ibuyisiweyo)</string>
+    <string name="market_sale_chargeback_fee_refunded">(kubuyisiwe)</string>
 </resources>

@@ -685,4 +685,8 @@
         <item quantity="other">Това ще отмени %1$s активни абонамента в края на текущия период на фактуриране. Абонатите ще бъдат уведомени. Обявата ще бъде скрита от купувачите.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Изтриване на ресурса?</string>
+    <string name="market_sale_chargeback_fee">Такса за обратно плащане</string>
+    <string name="market_sale_chargeback_fee_kept">(задържано от Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s възстановено)</string>
+    <string name="market_sale_chargeback_fee_refunded">(възстановено)</string>
 </resources>

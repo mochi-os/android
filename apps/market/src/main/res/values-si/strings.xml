@@ -683,4 +683,8 @@
         <item quantity="other">මෙය වත්මන් බිල්කරණ කාලය අවසානයේ ක්‍රියාකාරී දායකත්ව %1$s ක් අවලංගු කරයි. දායකයින්ට දැනුම් දෙනු ලැබේ. ලැයිස්තුගත කිරීම ගැනුම්කරුවන්ගෙන් සඟවනු ලැබේ.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">වත්කම මකන්නද?</string>
+    <string name="market_sale_chargeback_fee">ආපසු අයකිරීමේ ගාස්තුව</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe විසින් රඳවාගෙන)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s ආපසු)</string>
+    <string name="market_sale_chargeback_fee_refunded">(ආපසු ගෙවන ලදී)</string>
 </resources>

@@ -683,4 +683,8 @@
         <item quantity="other">Bu häzirki töleg döwrüniň ahyrynda %1$s işjeň abunalygy ýatyrar. Abunaçylara habar berler. Bildiriş alyjylardan gizlener.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Aktiwi pozmaly?</string>
+    <string name="market_sale_chargeback_fee">Chargeback töleg</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe tarapyndan saklanýar)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s yzyna gaýtaryldy)</string>
+    <string name="market_sale_chargeback_fee_refunded">(yzyna gaýtaryldy)</string>
 </resources>

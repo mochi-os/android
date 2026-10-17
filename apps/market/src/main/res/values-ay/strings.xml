@@ -683,4 +683,8 @@
         <item quantity="other">Akax jichha pago periodo tukuyanx %1$s lurkaski suscripcionanak jaytaniwa. Suscriptoranakax yatiyatäpxaniwa. Listadox alasirinakat imantatäniwa.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Asset chhaqtayañati?</string>
+    <string name="market_sale_chargeback_fee">Contracargo chani</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe imata)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s kutt\'ayata)</string>
+    <string name="market_sale_chargeback_fee_refunded">(kutt\'ayata)</string>
 </resources>

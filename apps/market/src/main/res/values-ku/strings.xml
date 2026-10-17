@@ -683,4 +683,8 @@
         <item quantity="other">Ev ê di dawiya heyama fatûreyê ya niha de %1$s abonetiyên çalak betal bike. Abone dê bên agahdarkirin. Reklam dê ji kirrûdaran were veşartin.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Mal jê bibe?</string>
+    <string name="market_sale_chargeback_fee">Heqê chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(ji aliyê Stripe ve hatî girtin)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s hat vegerandin)</string>
+    <string name="market_sale_chargeback_fee_refunded">(hat vegerandin)</string>
 </resources>

@@ -683,4 +683,8 @@
         <item quantity="other">Kjo do të anulojë %1$s abonime aktive në fund të periudhës aktuale të faturimit. Abonentët do të njoftohen. Shpallja do të fshihet nga blerësit.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Të fshihet pasuria?</string>
+    <string name="market_sale_chargeback_fee">Tarifa e chargeback</string>
+    <string name="market_sale_chargeback_fee_kept">(mbajtur nga Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s rimbursuar)</string>
+    <string name="market_sale_chargeback_fee_refunded">(i rimbursuar)</string>
 </resources>

@@ -683,4 +683,8 @@
         <item quantity="other">Verranno annullati %1$s abbonamenti attivi al termine del periodo di fatturazione corrente. Gli abbonati verranno avvisati. L’annuncio sarà nascosto agli acquirenti.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Eliminare la risorsa?</string>
+    <string name="market_sale_chargeback_fee">Commissione di storno</string>
+    <string name="market_sale_chargeback_fee_kept">(trattenuto da Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s rimborsato)</string>
+    <string name="market_sale_chargeback_fee_refunded">(rimborsato)</string>
 </resources>

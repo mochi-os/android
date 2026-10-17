@@ -683,4 +683,8 @@
         <item quantity="other">Þetta segir upp %1$s virkum áskriftum í lok núverandi reikningstímabils. Áskrifendur fá tilkynningu. Auglýsingin verður falin fyrir kaupendum.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Eyða eign?</string>
+    <string name="market_sale_chargeback_fee">Endurkröfugjald</string>
+    <string name="market_sale_chargeback_fee_kept">(haldið eftir af Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s endurgreitt)</string>
+    <string name="market_sale_chargeback_fee_refunded">(endurgreitt)</string>
 </resources>

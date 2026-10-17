@@ -683,4 +683,8 @@
         <item quantity="other">Ин дар охири давраи пардохти ҷорӣ %1$s обунаи фаъолро бекор мекунад. Ба обуначиён хабар дода мешавад. Эълон аз харидорон пинҳон карда мешавад.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Активро нест кунем?</string>
+    <string name="market_sale_chargeback_fee">Ҳаққи бозгашти пардохт</string>
+    <string name="market_sale_chargeback_fee_kept">(нигоҳ дошташуда аз ҷониби Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s баргардонида шуд)</string>
+    <string name="market_sale_chargeback_fee_refunded">(баргардонидашуда)</string>
 </resources>

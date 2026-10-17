@@ -683,4 +683,8 @@
         <item quantity="other">Бул учурдагы төлөм мезгилинин аягында %1$s активдүү жазылууну жокко чыгарат. Жазылуучуларга кабарланат. Жарнама сатып алуучулардан жашырылат.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Активди өчүрөбүзбү?</string>
+    <string name="market_sale_chargeback_fee">Чарджбэк акысы</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe тарабынан кармалган)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s кайтарылды)</string>
+    <string name="market_sale_chargeback_fee_refunded">(кайтарылды)</string>
 </resources>

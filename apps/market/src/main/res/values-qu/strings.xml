@@ -683,4 +683,8 @@
         <item quantity="other">Kayqa %1$s kawsachkan suscripcionkunata kunan facturación período tukukuypi chinkachinqa. Suscriptorkunaman willasqa kanqa. Listadoqa rantiqkunamanta pakasqa kanqa.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">¿Assetta wischunki?</string>
+    <string name="market_sale_chargeback_fee">Contracargo comisión</string>
+    <string name="market_sale_chargeback_fee_kept">(Stripe waqaychan)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s kutichisqa)</string>
+    <string name="market_sale_chargeback_fee_refunded">(qullqi kutichisqa)</string>
 </resources>

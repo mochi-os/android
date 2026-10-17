@@ -683,4 +683,8 @@
         <item quantity="other">Cela annulera %1$s abonnements actifs à la fin de la période de facturation en cours. Les abonnés seront prévenus. L’annonce sera masquée aux acheteurs.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Supprimer l’actif ?</string>
+    <string name="market_sale_chargeback_fee">Frais de rétrofacturation</string>
+    <string name="market_sale_chargeback_fee_kept">(retenu par Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s remboursé)</string>
+    <string name="market_sale_chargeback_fee_refunded">(remboursé)</string>
 </resources>

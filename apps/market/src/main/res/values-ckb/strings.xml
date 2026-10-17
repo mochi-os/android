@@ -683,4 +683,8 @@
         <item quantity="other">ئەمە %1$s بەشداریکردنی چالاک لە کۆتایی ماوەی پارەدانی ئێستادا هەڵدەوەشێنێتەوە. بەشداربووان ئاگادار دەکرێنەوە. ڕیزبەندییەکە لە کڕیاران دەشاردرێتەوە.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">سامان بسڕەوە؟</string>
+    <string name="market_sale_chargeback_fee">کرێی گەڕاندنەوەی پارە</string>
+    <string name="market_sale_chargeback_fee_kept">(لەلایەن Stripe پاراست)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s گەڕاوەتەوە)</string>
+    <string name="market_sale_chargeback_fee_refunded">(گەڕێنرایەوە)</string>
 </resources>

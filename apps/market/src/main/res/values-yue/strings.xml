@@ -82,6 +82,10 @@
     <string name="market_refund_reason_other">其他</string>
     <string name="market_report_reason_other">其他</string>
     <string name="market_sale_carrier_other">其他</string>
+    <string name="market_sale_chargeback_fee">拒付費用</string>
+    <string name="market_sale_chargeback_fee_kept">(由 Stripe 保留)</string>
+    <string name="market_sale_chargeback_fee_partial">(已退還 %1$s)</string>
+    <string name="market_sale_chargeback_fee_refunded">(已退還)</string>
     <string name="market_bids_tab_active">使用中</string>
     <string name="market_listings_filter_active">使用中</string>
     <string name="market_status_active">使用中</string>

@@ -686,4 +686,8 @@
         <item quantity="other">Гэта адменіць %1$s актыўных падпісак у канцы бягучага плацежнага перыяду. Падпісчыкі будуць апавешчаны. Аб\'ява будзе схавана ад пакупнікоў.</item>
     </plurals>
     <string name="market_editor_asset_delete_confirm_title">Выдаліць рэсурс?</string>
+    <string name="market_sale_chargeback_fee">Плата за запыт на вяртанне плацяжу</string>
+    <string name="market_sale_chargeback_fee_kept">(утрымана Stripe)</string>
+    <string name="market_sale_chargeback_fee_partial">(%1$s вернута)</string>
+    <string name="market_sale_chargeback_fee_refunded">(вернута)</string>
 </resources>
