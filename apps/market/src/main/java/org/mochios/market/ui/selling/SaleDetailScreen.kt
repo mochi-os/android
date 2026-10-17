@@ -250,7 +250,7 @@ private fun SaleDetailBody(
 ) {
     val order = detail.order
     val canShip = order.delivery == DeliveryMethod.SHIPPING &&
-        (order.status == OrderStatus.PENDING || order.status == OrderStatus.PAID)
+        order.status == OrderStatus.PAID
     val canRefund = order.refunded < order.total && (
         order.status == OrderStatus.PAID ||
             order.status == OrderStatus.SHIPPED ||
