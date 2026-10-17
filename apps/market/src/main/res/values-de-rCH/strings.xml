@@ -7,6 +7,7 @@
     <string name="market_onboarding_activate">Aktivieren</string>
     <string name="market_onboarding_body">Aktivieren Sie Ihr Konto, um zu kaufen und zu verkaufen.</string>
     <string name="market_onboarding_title">Willkommen bei Market</string>
+    <string name="market_sale_shipped_label">Versendet</string>
     <string name="market_subscription_detail_next_billing">Nächste Abrechnung: %1$s</string>
     <string name="market_checkout_address_name">Name</string>
     <string name="market_back">Zurück</string>

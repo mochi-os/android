@@ -277,6 +277,7 @@
     <string name="market_sale_ship_action">Marchează ca expediat</string>
     <string name="market_sale_ship_failed">Marcarea ca expediat a eșuat</string>
     <string name="market_sale_ship_success">Marcat ca expediat</string>
+    <string name="market_sale_shipped_label">Expediat</string>
     <string name="market_sale_title">Vânzare</string>
     <string name="market_audit_history">Istoric</string>
     <string name="market_sale_review_of_buyer">Recenzia ta despre cumpărător</string>

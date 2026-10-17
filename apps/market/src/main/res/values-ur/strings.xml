@@ -277,6 +277,7 @@
     <string name="market_sale_ship_action">بھیج دیا گیا نشان زد کریں</string>
     <string name="market_sale_ship_failed">بھیج دیا گیا نشان زد کرنے میں ناکامی</string>
     <string name="market_sale_ship_success">بھیج دیا گیا نشان زد کر دیا</string>
+    <string name="market_sale_shipped_label">شپ ہو گیا</string>
     <string name="market_sale_title">سیل</string>
     <string name="market_audit_history">تاریخ</string>
     <string name="market_sale_review_of_buyer">خریدار کے بارے میں آپ کا جائزہ</string>

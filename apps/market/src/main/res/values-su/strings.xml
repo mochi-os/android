@@ -335,6 +335,7 @@
     <string name="market_sale_ship_action">Tandaan dikirim</string>
     <string name="market_sale_ship_failed">Gagal nandaan dikirim</string>
     <string name="market_sale_ship_success">Ditandaan dikirim</string>
+    <string name="market_sale_shipped_label">Dikirim</string>
     <string name="market_sale_title">Jualan</string>
     <string name="market_audit_history">Riwayat</string>
     <string name="market_sale_review_of_buyer">Ulasan anjeun ngeunaan pembeli</string>

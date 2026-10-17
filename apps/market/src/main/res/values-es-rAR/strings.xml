@@ -35,6 +35,7 @@
     <string name="market_reviews_response_submit">Enviá la respuesta</string>
     <string name="market_sale_review_response_submit">Enviá la respuesta</string>
     <string name="market_sale_ship_action">Marcá como enviado</string>
+    <string name="market_sale_shipped_label">Enviado</string>
     <string name="market_ship_dialog_title">Marcá como enviado</string>
     <string name="market_sidebar_browse">Explorá</string>
     <string name="market_subscriptions_cancel_confirm">Cancelá la suscripción</string>

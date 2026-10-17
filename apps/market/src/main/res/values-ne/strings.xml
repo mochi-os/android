@@ -335,6 +335,7 @@
     <string name="market_sale_ship_action">सिप गरिएको रूपमा चिन्ह लगाउनुहोस्</string>
     <string name="market_sale_ship_failed">शिप गरिएको रूपमा चिन्ह लगाउन असफल</string>
     <string name="market_sale_ship_success">सिप गरिएको रूपमा चिन्ह लगाइयो</string>
+    <string name="market_sale_shipped_label">पठाइयो</string>
     <string name="market_sale_title">बिक्री</string>
     <string name="market_audit_history">इतिहास</string>
     <string name="market_sale_review_of_buyer">खरिदकर्ताबारे तपाईंको समीक्षा</string>

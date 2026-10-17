@@ -453,6 +453,7 @@
     <string name="market_sale_ship_failed">Göndərilmiş kimi işarələmək alınmadı</string>
     <string name="market_sale_ship_submitting">İşarələnir…</string>
     <string name="market_sale_ship_success">Göndərilmiş kimi işarələndi</string>
+    <string name="market_sale_shipped_label">Göndərildi</string>
     <string name="market_sale_title">Satış</string>
     <string name="market_audit_history">Tarixçə</string>
     <string name="market_sale_review_of_buyer">Alıcı haqqında rəyiniz</string>

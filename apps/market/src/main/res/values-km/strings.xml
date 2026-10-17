@@ -335,6 +335,7 @@
     <string name="market_sale_ship_action">សម្គាល់ថាបានដឹកជញ្ជូន</string>
     <string name="market_sale_ship_failed">បរាជ័យក្នុងការសម្គាល់ថាបានដឹកជញ្ជូន</string>
     <string name="market_sale_ship_success">បានសម្គាល់ថាបានដឹកជញ្ជូន</string>
+    <string name="market_sale_shipped_label">បានដឹកជញ្ជូន</string>
     <string name="market_sale_title">ការលក់</string>
     <string name="market_audit_history">ប្រវត្តិ</string>
     <string name="market_sale_review_of_buyer">ការវាយតម្លៃរបស់អ្នកលើអ្នកទិញ</string>

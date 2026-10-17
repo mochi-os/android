@@ -47,6 +47,7 @@
     <string name="market_refund_dialog_cancel">取消</string>
     <string name="market_report_dialog_cancel">取消</string>
     <string name="market_sale_review_buyer">買家嘅評價</string>
+    <string name="market_sale_shipped_label">已寄出</string>
     <string name="market_ship_dialog_cancel">取消</string>
     <string name="market_subscriptions_action_cancel">取消</string>
     <string name="market_account_save">儲存</string>

@@ -277,6 +277,7 @@
     <string name="market_sale_ship_action">Позначити як відправлене</string>
     <string name="market_sale_ship_failed">Не вдалося позначити як відправлене</string>
     <string name="market_sale_ship_success">Позначено як відправлене</string>
+    <string name="market_sale_shipped_label">Відправлено</string>
     <string name="market_sale_title">Продаж</string>
     <string name="market_audit_history">Історія</string>
     <string name="market_sale_review_of_buyer">Ваш відгук про покупця</string>

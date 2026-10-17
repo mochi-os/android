@@ -7,6 +7,7 @@
     <string name="market_onboarding_body">Activez votre compte pour acheter et vendre.</string>
     <string name="market_onboarding_dismiss">Ignorer</string>
     <string name="market_onboarding_title">Bienvenue sur le marché</string>
+    <string name="market_sale_shipped_label">Expédié</string>
     <string name="market_subscription_detail_next_billing">Prochaine facturation : %1$s</string>
     <string name="market_checkout_address_name">Nom</string>
     <string name="market_back">Retour</string>

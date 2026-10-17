@@ -5,6 +5,8 @@
 
 package org.mochios.market.ui.selling
 
+import android.content.ActivityNotFoundException
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -44,6 +46,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
@@ -63,6 +66,7 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
@@ -408,6 +412,56 @@ private fun SaleSummaryCard(order: Order, onOpenBuyer: (String) -> Unit) {
                     SummaryValue(text = format.formatDateTime(order.created))
                 }
             }
+            if (order.shipped > 0L) {
+                SummaryRow(label = stringResource(R.string.market_sale_shipped_label)) {
+                    SummaryValue(text = format.formatDateTime(order.shipped))
+                }
+            }
+            if (order.carrier.isNotBlank()) {
+                SummaryRow(label = stringResource(R.string.market_sale_carrier_label)) {
+                    SummaryValue(text = order.carrier)
+                }
+            }
+            TrackingRow(order = order)
+        }
+    }
+}
+
+/**
+ * The order's tracking number, opening the seller's tracking link when it is
+ * a web address; with a link but no number, the link alone as Track package.
+ */
+@Composable
+private fun TrackingRow(order: Order) {
+    val context = LocalContext.current
+    val target = webUri(order.url)
+    val text = order.tracking.ifBlank {
+        if (target != null) {
+            stringResource(R.string.market_purchase_track)
+        } else {
+            ""
+        }
+    }
+    if (text.isBlank()) {
+        return
+    }
+    SummaryRow(label = stringResource(R.string.market_sale_tracking_label)) {
+        if (target == null) {
+            SummaryValue(text = text)
+        } else {
+            Text(
+                text = text,
+                style = MaterialTheme.typography.bodyLarge,
+                textDecoration = TextDecoration.Underline,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.clickable {
+                    try {
+                        CustomTabsIntent.Builder().build().launchUrl(context, target)
+                    } catch (_: ActivityNotFoundException) {
+                    }
+                },
+            )
         }
     }
 }

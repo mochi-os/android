@@ -277,6 +277,7 @@
     <string name="market_sale_ship_action">প্রেরিত হিসেবে চিহ্নিত করুন</string>
     <string name="market_sale_ship_failed">পাঠানো হিসেবে চিহ্নিত করতে ব্যর্থ</string>
     <string name="market_sale_ship_success">প্রেরিত হিসেবে চিহ্নিত করা হয়েছে</string>
+    <string name="market_sale_shipped_label">পাঠানো হয়েছে</string>
     <string name="market_sale_title">বিক্রয়</string>
     <string name="market_audit_history">ইতিহাস</string>
     <string name="market_sale_review_of_buyer">ক্রেতা সম্পর্কে আপনার রিভিউ</string>

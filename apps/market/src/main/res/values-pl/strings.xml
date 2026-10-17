@@ -277,6 +277,7 @@
     <string name="market_sale_ship_action">Oznacz jako wysłane</string>
     <string name="market_sale_ship_failed">Nie udało się oznaczyć jako wysłane</string>
     <string name="market_sale_ship_success">Oznaczono jako wysłane</string>
+    <string name="market_sale_shipped_label">Wysłano</string>
     <string name="market_sale_title">Sprzedaż</string>
     <string name="market_audit_history">Historia</string>
     <string name="market_sale_review_of_buyer">Twoja opinia o kupującym</string>

@@ -238,6 +238,7 @@
     <string name="market_sale_review_response_submitting">提交中…</string>
     <string name="market_sale_section_dispute">爭議</string>
     <string name="market_sale_ship_submitting">標記中…</string>
+    <string name="market_sale_shipped_label">已發貨</string>
     <string name="market_sale_tracking_url_label">追蹤 URL (選填)</string>
     <string name="market_sales_empty_subtitle">你已發佈商品的訂單會出現在這裡。</string>
     <string name="market_sales_empty_title">尚無銷售</string>

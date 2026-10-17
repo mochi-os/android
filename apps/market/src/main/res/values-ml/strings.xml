@@ -335,6 +335,7 @@
     <string name="market_sale_ship_action">ഷിപ്പ് ചെയ്തതായി അടയാളപ്പെടുത്തുക</string>
     <string name="market_sale_ship_failed">ഷിപ്പ് ചെയ്തതായി അടയാളപ്പെടുത്തുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_sale_ship_success">ഷിപ്പ് ചെയ്തതായി അടയാളപ്പെടുത്തി</string>
+    <string name="market_sale_shipped_label">ഷിപ്പ് ചെയ്തു</string>
     <string name="market_sale_title">വിൽപ്പന</string>
     <string name="market_audit_history">ചരിത്രം</string>
     <string name="market_sale_review_of_buyer">വാങ്ങുന്നയാളെക്കുറിച്ചുള്ള നിങ്ങളുടെ അവലോകനം</string>
