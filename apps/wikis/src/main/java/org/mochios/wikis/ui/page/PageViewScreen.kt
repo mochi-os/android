@@ -125,6 +125,12 @@ fun PageViewScreen(
     // the delete it confirmed comes back.
     var showDeleteDialog by remember { mutableStateOf(false) }
 
+    // A page reached through a redirect moves to its own address, so what is
+    // done here reaches the page shown rather than its old name.
+    LaunchedEffect(state.page?.slug) {
+        navController.openCanonical(viewModel.wikiId, viewModel.slug, state.page?.slug)
+    }
+
     // Persist the last-viewed wiki and page so a fresh launch lands back here.
     LaunchedEffect(viewModel.wikiId, viewModel.slug) {
         if (viewModel.wikiId.isNotBlank() && viewModel.slug.isNotBlank()) {
@@ -783,4 +789,20 @@ private fun sharePageLink(
     val chooser = Intent.createChooser(send, chooserTitle)
     chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     context.startActivity(chooser)
+}
+
+/**
+ * Replaces page [requested] of wiki [wikiId] with page [canonical] when a
+ * redirect served one for the other, as the web does. The screen acts on the
+ * slug it was opened at, so left there a tag added to the old name answers
+ * "not found" and an edit makes a page under it that the redirect hides, while
+ * the page shown never changes. Nothing happens when the two agree.
+ */
+internal fun NavController.openCanonical(wikiId: String, requested: String, canonical: String?) {
+    if (canonical.isNullOrBlank() || canonical == requested) return
+    // A new entry, not launchSingleTop: that would keep this entry and so its
+    // view model, which holds the old slug.
+    navigate(WikisApp.pageView(wikiId, canonical)) {
+        popUpTo(WikisApp.pageView(wikiId, requested)) { inclusive = true }
+    }
 }
