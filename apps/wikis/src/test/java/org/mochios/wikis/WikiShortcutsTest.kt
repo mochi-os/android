@@ -83,4 +83,14 @@ class WikiShortcutsTest {
         assertEquals(setOf("wikis_w9"), disabled())
         assertEquals("Notes", manager.pinnedShortcuts.first { it.id == "wikis_w1" }.shortLabel.toString())
     }
+
+    @Test
+    fun `a page's shortcut stays on, under its own name, while its wiki is held`() = runBlocking {
+        Shortcuts.pinItem(context, "wikis", "w1/setup", "Setting up")
+        Shortcuts.pinItem(context, "wikis", "fp2/setup", "Other setup")
+        Shortcuts.pinItem(context, "wikis", "w9/setup", "Gone setup")
+        repository().getClassInfo()
+        assertEquals(setOf("wikis_w9/setup"), disabled())
+        assertEquals("Setting up", manager.pinnedShortcuts.first { it.id == "wikis_w1/setup" }.shortLabel.toString())
+    }
 }

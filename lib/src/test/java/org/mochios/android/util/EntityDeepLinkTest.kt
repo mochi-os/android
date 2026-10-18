@@ -39,8 +39,22 @@ class EntityDeepLinkTest {
     }
 
     @Test
+    fun `takes a page named in its own language`() {
+        assertEquals(
+            "/wikis/abc123/trang-chủ",
+            entityDeepLink("wikis", listOf("abc123", "trang-chủ"), apps),
+        )
+        assertEquals("/wikis/abc123/日本語", entityDeepLink("wikis", listOf("abc123", "日本語"), apps))
+    }
+
+    @Test
     fun `refuses a segment that could smuggle a path or query`() {
-        for (bad in listOf("a/b", "a?tab=access", "a#x", "..", "a b", "a%2Fb", "")) {
+        val hidden = listOf(
+            // Look-alike separators, a reversal of the text after it, a null
+            // and a combining mark on its own: not letters or digits.
+            "a／b", "a？b", "a\u202Eb", "a\u0000b", "\u0301",
+        )
+        for (bad in listOf("a/b", "a?tab=access", "a#x", "..", "a b", "a%2Fb", "") + hidden) {
             assertNull("segment ${'$'}bad must be refused", entityDeepLink("feeds", listOf(bad), apps))
             assertNull(
                 "trailing segment ${'$'}bad must be refused",

@@ -291,7 +291,15 @@ fun PageViewScreen(
                                 permissions = state.permissions,
                                 commentCount = state.commentCount,
                                 canUnsubscribe = canUnsubscribe,
-                                shortcut = held?.name,
+                                shortcut = held?.let { wiki ->
+                                    pageShortcut(
+                                        wikiId = viewModel.wikiId,
+                                        wikiName = wiki.name,
+                                        home = state.wiki?.home,
+                                        slug = viewModel.slug,
+                                        title = state.page?.title.orEmpty(),
+                                    )
+                                },
                                 onEdit = {
                                     menuExpanded = false
                                     navController.navigate(

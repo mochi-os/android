@@ -41,6 +41,28 @@ import org.mochios.wikis.model.WikiPermissions
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 
+/** A shortcut "Add to home screen" pins: its place in the wikis app and its name. */
+data class PageShortcut(val path: String, val label: String)
+
+/**
+ * What "Add to home screen" pins from page [slug] of wiki [wikiId]: the wiki
+ * itself, named [wikiName], from its home page [home], as the wiki list's
+ * shortcuts are; and the page, named [title], from any other, so the icon
+ * opens where it was added.
+ */
+fun pageShortcut(wikiId: String, wikiName: String, home: String?, slug: String, title: String): PageShortcut {
+    val opening = home?.takeIf { value -> value.isNotBlank() } ?: DEFAULT_HOME
+    return if (slug.isBlank() || slug == opening) {
+        PageShortcut(wikiId, wikiName)
+    } else {
+        PageShortcut("$wikiId/$slug", title.ifBlank { slug })
+    }
+}
+
+// The page a wiki opens on when its settings name none, as WikiHomeScreen
+// falls back to.
+private const val DEFAULT_HOME = "home"
+
 /**
  * Material3 has no nested-DropdownMenu, so web's RSS fly-out becomes one row
  * that expands its three modes in place — the same shape the wiki list's
@@ -56,7 +78,7 @@ fun PageOverflowMenu(
     permissions: WikiPermissions,
     commentCount: Int,
     canUnsubscribe: Boolean,
-    shortcut: String?,
+    shortcut: PageShortcut?,
     onEdit: () -> Unit,
     onRename: () -> Unit,
     onHistory: () -> Unit,
@@ -75,8 +97,8 @@ fun PageOverflowMenu(
     // [wikiId] and [slug] are accepted on the contract so callers can pass
     // the same set as web's overflow, but every callback is already pre-bound
     // by the host — the menu itself doesn't navigate from these arguments.
-    // [shortcut] is the wiki's name when the user holds it, which a shortcut
-    // to the wiki on the home screen takes; null for a wiki only browsed.
+    // [shortcut] is what "Add to home screen" pins, from [pageShortcut], when
+    // the user holds the wiki; null for a wiki only browsed.
 
     // Held outside the menu content, which is disposed on collapse, so the
     // sub-menu is closed again the next time the overflow opens.
@@ -176,7 +198,7 @@ fun PageOverflowMenu(
             label = stringResource(R.string.wikis_page_action_share),
             onClick = onShare,
         )
-        shortcut?.let { name -> AddToHomeItem("wikis", wikiId, name, onDismiss) }
+        shortcut?.let { target -> AddToHomeItem("wikis", target.path, target.label, onDismiss) }
 
         if (canUnsubscribe) {
             MochiDropdownMenuDivider()

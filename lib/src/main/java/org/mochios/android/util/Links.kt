@@ -30,8 +30,13 @@ fun isWebUrl(url: String): Boolean {
  */
 fun webUri(url: String): Uri? = if (isWebUrl(url)) Uri.parse(url) else null
 
-/** What a `mochi:/<entity>` path segment may contain. See [entityDeepLink]. */
-private val ROUTE_SEGMENT = Regex("[A-Za-z0-9._-]{1,128}")
+/**
+ * What a `mochi:/<entity>` path segment may contain: letters and digits in any
+ * script, since a wiki page's name may be written in its own language, and
+ * `.`, `_` and `-`. Nothing that separates a path or a query, escapes one, or
+ * reorders or hides text gets through. See [entityDeepLink].
+ */
+private val ROUTE_SEGMENT = Regex("[\\p{L}\\p{N}._-]{1,128}")
 
 /**
  * Build the in-app route for a `mochi:/<entity>[/<sub>...]` intent, or null

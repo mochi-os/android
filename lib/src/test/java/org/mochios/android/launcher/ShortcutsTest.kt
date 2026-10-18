@@ -117,6 +117,15 @@ class ShortcutsTest {
     }
 
     @Test
+    fun `a place inside an item stays on while the item is there, under its own name`() {
+        Shortcuts.pinItem(context, "wikis", "notes/setup", "Setting up")
+        Shortcuts.pinItem(context, "wikis", "gone/setup", "Gone")
+        Shortcuts.reconcile(context, "wikis", mapOf("notes" to "House notes"))
+        assertEquals(setOf("wikis_gone/setup"), disabled())
+        assertEquals("Setting up", pinned().first { it.id == "wikis_notes/setup" }.shortLabel.toString())
+    }
+
+    @Test
     fun `a shortcut pinned before items had a shared id is matched by where it goes`() {
         // Projects pinned as project_<id>; the address and the app say which item.
         val intent = Intent(Intent.ACTION_VIEW, "mochi:/p1".toUri())

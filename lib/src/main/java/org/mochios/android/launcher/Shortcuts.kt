@@ -50,12 +50,13 @@ object Shortcuts {
 
     /**
      * Asks the launcher to place a shortcut to one of [app]'s items - a feed,
-     * a forum, a chat - named [label], with the app's icon. [path] is the
-     * item's place in the app, its entity and any segments after it, which
-     * the shortcut opens as `mochi:/<path>` in that app, as a notification's
-     * link would. Asking again for the same item updates its one shortcut,
-     * and turns it back on if [reconcile] had turned it off. Answers whether
-     * the launcher took the request.
+     * a forum, a chat - or to a place inside one, such as a wiki's page, named
+     * [label], with the app's icon. [path] is the item's place in the app, its
+     * entity and any segments after it, which the shortcut opens as
+     * `mochi:/<path>` in that app, as a notification's link would. Asking
+     * again for the same path updates its one shortcut, and turns it back on
+     * if [reconcile] had turned it off. Answers whether the launcher took the
+     * request.
      */
     fun pinItem(context: Context, app: String, path: String, label: String): Boolean {
         if (!supported(context)) {
@@ -81,11 +82,14 @@ object Shortcuts {
     /**
      * Brings [app]'s pinned item shortcuts into line with the items the user
      * has, [items] by path to name. A shortcut to an item still there takes
-     * its current name, and is turned back on if it was off. A shortcut to an
-     * item gone - unsubscribed, left or deleted, here or on another device -
-     * is turned off, so the launcher greys it out rather than opening an item
-     * that is not there. Pass the app's whole list as just read from the
-     * server, never a page of it or a list that failed to load.
+     * its current name, and is turned back on if it was off. A shortcut to a
+     * place inside an item, a path whose first segment is one of [items],
+     * stays on while the item is there and keeps the name it was pinned with,
+     * since the item's name is not its own. A shortcut to an item gone -
+     * unsubscribed, left or deleted, here or on another device - is turned
+     * off, so the launcher greys it out rather than opening an item that is
+     * not there. Pass the app's whole list as just read from the server,
+     * never a page of it or a list that failed to load.
      */
     fun reconcile(context: Context, app: String, items: Map<String, String>) {
         // The list read that calls this never fails for it: on a device
@@ -117,7 +121,11 @@ object Shortcuts {
             val path = pathOf(shortcut, app) ?: continue
             val label = items[path]
             if (label == null) {
-                gone += shortcut.id
+                if ('/' in path && path.substringBefore('/') in items) {
+                    kept += shortcut
+                } else {
+                    gone += shortcut.id
+                }
                 continue
             }
             kept += shortcut
