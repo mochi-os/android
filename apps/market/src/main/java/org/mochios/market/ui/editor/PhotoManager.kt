@@ -36,7 +36,6 @@ import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -55,8 +54,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import org.mochios.android.files.Upload
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.UploadFiles
 import org.mochios.market.R
 import org.mochios.market.model.Photo
 
@@ -71,7 +72,7 @@ fun PhotoManager(
     onUpload: (List<Uri>) -> Unit,
     onDelete: (String) -> Unit,
     onReorder: (List<Photo>) -> Unit,
-    isUploading: Boolean,
+    upload: Upload?,
     modifier: Modifier = Modifier,
 ) {
     val pickPhotos = rememberLauncherForActivityResult(
@@ -169,12 +170,8 @@ fun PhotoManager(
             }
         }
 
-        if (isUploading) {
-            LinearProgressIndicator(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 8.dp),
-            )
+        if (upload != null) {
+            UploadFiles(upload, modifier = Modifier.padding(top = 8.dp))
             Text(
                 text = stringResource(R.string.market_editor_photo_uploading),
                 style = MaterialTheme.typography.bodySmall,

@@ -329,4 +329,7 @@
     <string name="common_open_settings">سيٽنگون کوليو</string>
     <string name="notifications_permission_reason">Mochi کي اطلاع ڏيکارڻ جي اجازت گهرجي، ته جيئن توهان کي نون پيغامن، جوابن ۽ ياد دهانين جي خبر پوي.</string>
     <string name="notifications_permission_blocked">Mochi لاءِ اطلاع بند آهن. توهان انهن کي ايپ جي اطلاع سيٽنگن ۾ چالو ڪري سگهو ٿا.</string>
+    <string name="upload_progress">اپلوڊ جي پيش رفت</string>
+    <string name="upload_processing">پروسيس ٿي رهيو آهي…</string>
+    <string name="upload_sent">%2$s مان %1$s</string>
 </resources>

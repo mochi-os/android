@@ -20,6 +20,8 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.PageFetchResponse
 import org.mochios.wikis.model.WikiInfo
@@ -91,6 +93,11 @@ class PageEditorViewModel @Inject constructor(
         )
     )
     val uiState: StateFlow<PageEditorUiState> = _uiState.asStateFlow()
+
+    private val tracker = UploadTracker()
+
+    /** The files being uploaded from the insert dialog, while they go. */
+    val upload: StateFlow<Upload?> = tracker.state
 
     private val _events = Channel<PageEditorEvent>(Channel.BUFFERED)
     val events = _events.receiveAsFlow()
@@ -303,18 +310,22 @@ class PageEditorViewModel @Inject constructor(
         if (uris.isEmpty()) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isUploading = true)
-            val tempFiles = repository.stageFiles(uris)
-            try {
-                val uploaded = repository.uploadAttachments(wikiId, tempFiles)
-                _uiState.value = _uiState.value.copy(
-                    isUploading = false,
-                    attachments = mergeAttachments(_uiState.value.attachments, uploaded),
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isUploading = false)
-                _events.send(PageEditorEvent.Toast(e.toMochiError().messageOrFallback(uploadFailed)))
-            } finally {
-                repository.discardStaged(tempFiles)
+            tracker.track {
+                try {
+                    val tempFiles = repository.stageFiles(uris)
+                    try {
+                        val uploaded = repository.uploadAttachments(wikiId, tempFiles, tracker)
+                        _uiState.value = _uiState.value.copy(
+                            isUploading = false,
+                            attachments = mergeAttachments(_uiState.value.attachments, uploaded),
+                        )
+                    } finally {
+                        repository.discardStaged(tempFiles)
+                    }
+                } catch (e: Exception) {
+                    _uiState.value = _uiState.value.copy(isUploading = false)
+                    _events.send(PageEditorEvent.Toast(e.toMochiError().messageOrFallback(uploadFailed)))
+                }
             }
         }
     }

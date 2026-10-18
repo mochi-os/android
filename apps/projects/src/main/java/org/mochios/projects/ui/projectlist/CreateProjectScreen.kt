@@ -89,6 +89,7 @@ fun CreateProjectScreen(
     viewModel: CreateProjectViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val upload by viewModel.upload.collectAsState()
 
     var step by remember { mutableStateOf(STEP_DETAILS) }
     var name by remember { mutableStateOf("") }
@@ -185,6 +186,7 @@ fun CreateProjectScreen(
         submitEnabled = canContinue,
         isBusy = uiState.isCreating,
         error = uiState.error,
+        upload = upload,
         onBack = goBack,
         onSubmit = {
             if (goesToTemplate) {

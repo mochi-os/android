@@ -329,4 +329,7 @@
     <string name="common_open_settings">Einstellungen öffnen</string>
     <string name="notifications_permission_reason">Mochi benötigt die Berechtigung, Benachrichtigungen anzuzeigen, damit Sie von neuen Nachrichten, Antworten und Erinnerungen erfahren.</string>
     <string name="notifications_permission_blocked">Benachrichtigungen sind für Mochi deaktiviert. Sie können sie in den Benachrichtigungseinstellungen der App aktivieren.</string>
+    <string name="upload_progress">Upload-Fortschritt</string>
+    <string name="upload_processing">Wird verarbeitet…</string>
+    <string name="upload_sent">%1$s von %2$s</string>
 </resources>

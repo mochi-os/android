@@ -65,6 +65,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.android.util.NaturalCompare
 import org.mochios.projects.R
@@ -87,6 +88,7 @@ fun CreateObjectScreen(
     viewModel: CreateObjectViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val upload by viewModel.upload.collectAsState()
     val details = uiState.details
 
     val classes = details?.classes.orEmpty()
@@ -257,6 +259,10 @@ fun CreateObjectScreen(
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.error
                             )
+                            Spacer(modifier = Modifier.height(8.dp))
+                        }
+                        upload?.let { sending ->
+                            UploadProgress(sending)
                             Spacer(modifier = Modifier.height(8.dp))
                         }
                         MochiButton(

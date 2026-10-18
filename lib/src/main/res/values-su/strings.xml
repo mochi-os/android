@@ -329,4 +329,7 @@
     <string name="common_open_settings">Buka setélan</string>
     <string name="notifications_permission_reason">Mochi peryogi idin pikeun mintonkeun béwara, supados anjeun terang ngeunaan pesen anyar, balesan sareng panginget.</string>
     <string name="notifications_permission_blocked">Béwara pikeun Mochi dipareuman. Anjeun tiasa ngahurungkeunana dina setélan béwara aplikasi.</string>
+    <string name="upload_progress">Kamajuan unggah</string>
+    <string name="upload_processing">Ngolah…</string>
+    <string name="upload_sent">%1$s tina %2$s</string>
 </resources>

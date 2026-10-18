@@ -329,4 +329,7 @@
     <string name="common_open_settings">सेटिङहरू खोल्नुहोस्</string>
     <string name="notifications_permission_reason">तपाईंले नयाँ सन्देश, जवाफ र रिमाइन्डरबारे थाहा पाउन सक्नुहोस् भनेर Mochi लाई सूचनाहरू देखाउने अनुमति चाहिन्छ।</string>
     <string name="notifications_permission_blocked">Mochi का सूचनाहरू अफ गरिएका छन्। तपाईं एपको सूचना सेटिङहरूमा तिनलाई अन गर्न सक्नुहुन्छ।</string>
+    <string name="upload_progress">अपलोड प्रगति</string>
+    <string name="upload_processing">प्रशोधन गर्दै…</string>
+    <string name="upload_sent">%2$sमध्ये %1$s</string>
 </resources>

@@ -330,4 +330,7 @@
     <string name="common_open_settings">Отвори подешавања</string>
     <string name="notifications_permission_reason">Mochi треба дозволу за приказивање обавештења, како бисте сазнавали за нове поруке, одговоре и подсетнике.</string>
     <string name="notifications_permission_blocked">Обавештења за Mochi су искључена. Можете да их укључите у подешавањима обавештења апликације.</string>
+    <string name="upload_progress">Напредак отпремања</string>
+    <string name="upload_processing">Обрада…</string>
+    <string name="upload_sent">%1$s од %2$s</string>
 </resources>

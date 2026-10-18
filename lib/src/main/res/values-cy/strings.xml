@@ -334,4 +334,7 @@
     <string name="common_open_settings">Agor gosodiadau</string>
     <string name="notifications_permission_reason">Mae angen caniatâd ar Mochi i ddangos hysbysiadau, fel eich bod yn clywed am negeseuon newydd, atebion a nodiadau atgoffa.</string>
     <string name="notifications_permission_blocked">Mae hysbysiadau wedi\'u diffodd ar gyfer Mochi. Gallwch eu troi ymlaen yng ngosodiadau hysbysiadau\'r ap.</string>
+    <string name="upload_progress">Cynnydd llwytho i fyny</string>
+    <string name="upload_processing">Wrthi\'n prosesu…</string>
+    <string name="upload_sent">%1$s o %2$s</string>
 </resources>

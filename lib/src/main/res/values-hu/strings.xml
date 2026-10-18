@@ -329,4 +329,7 @@
     <string name="common_open_settings">Beállítások megnyitása</string>
     <string name="notifications_permission_reason">A Mochinak engedélyre van szüksége az értesítések megjelenítéséhez, hogy értesüljön az új üzenetekről, válaszokról és emlékeztetőkről.</string>
     <string name="notifications_permission_blocked">A Mochi értesítései ki vannak kapcsolva. Az alkalmazás értesítési beállításaiban kapcsolhatja be őket.</string>
+    <string name="upload_progress">Feltöltés folyamata</string>
+    <string name="upload_processing">Feldolgozás…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>

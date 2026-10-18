@@ -329,4 +329,7 @@
     <string name="common_open_settings">設定を開く</string>
     <string name="notifications_permission_reason">新しいメッセージ、返信、リマインダーをお知らせできるよう、Mochiには通知を表示する権限が必要です。</string>
     <string name="notifications_permission_blocked">Mochiの通知がオフになっています。アプリの通知設定でオンにできます。</string>
+    <string name="upload_progress">アップロードの進行状況</string>
+    <string name="upload_processing">処理中…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>

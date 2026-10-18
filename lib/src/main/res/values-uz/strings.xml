@@ -330,4 +330,7 @@
     <string name="common_open_settings">Sozlamalarni ochish</string>
     <string name="notifications_permission_reason">Mochi bildirishnomalarni koʻrsatish uchun ruxsat talab qiladi, shunda siz yangi xabarlar, javoblar va eslatmalar haqida xabardor boʻlasiz.</string>
     <string name="notifications_permission_blocked">Mochi uchun bildirishnomalar oʻchirilgan. Ularni ilovaning bildirishnoma sozlamalarida yoqishingiz mumkin.</string>
+    <string name="upload_progress">Yuklash jarayoni</string>
+    <string name="upload_processing">Qayta ishlanmoqda…</string>
+    <string name="upload_sent">%2$s dan %1$s</string>
 </resources>

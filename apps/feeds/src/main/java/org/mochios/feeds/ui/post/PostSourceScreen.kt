@@ -83,6 +83,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.Upload
 import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
@@ -121,6 +122,7 @@ fun PostSourceScreen(
     val commentText by viewModel.commentText.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
     val isSendingComment by viewModel.isSendingComment.collectAsState()
+    val commentUpload by viewModel.commentUpload.collectAsState()
     val replyingTo by viewModel.replyingTo.collectAsState()
     val actionError by viewModel.actionError.collectAsState()
 
@@ -289,6 +291,7 @@ fun PostSourceScreen(
                 onRemoveAttachment = { viewModel.removeCommentAttachment(it) },
                 onSendComment = { viewModel.sendComment() },
                 isSendingComment = isSendingComment,
+                commentUpload = commentUpload,
                 replyingTo = replyingTo,
                 onCancelReply = { viewModel.setReplyingTo(null) },
                 onSearchMembers = { viewModel.searchMembers(it) },
@@ -524,6 +527,7 @@ private fun PostSourceSheet(
     onRemoveAttachment: (android.net.Uri) -> Unit,
     onSendComment: () -> Unit,
     isSendingComment: Boolean,
+    commentUpload: Upload?,
     replyingTo: String?,
     onCancelReply: () -> Unit,
     onSearchMembers: suspend (String) -> List<org.mochios.android.ui.components.MentionSuggestion>,
@@ -605,6 +609,7 @@ private fun PostSourceSheet(
                 onValueChange = onCommentTextChange,
                 onSend = onSendComment,
                 isSending = isSendingComment,
+                upload = commentUpload,
                 sendLabel = stringResource(R.string.feeds_send),
                 attachments = feedsCommentAttachments(
                     attachments = commentAttachments,

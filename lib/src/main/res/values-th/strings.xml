@@ -329,4 +329,7 @@
     <string name="common_open_settings">เปิดการตั้งค่า</string>
     <string name="notifications_permission_reason">Mochi ต้องได้รับสิทธิ์ในการแสดงการแจ้งเตือน เพื่อให้คุณทราบเกี่ยวกับข้อความใหม่ การตอบกลับ และการช่วยเตือน</string>
     <string name="notifications_permission_blocked">การแจ้งเตือนของ Mochi ปิดอยู่ คุณเปิดได้ในการตั้งค่าการแจ้งเตือนของแอป</string>
+    <string name="upload_progress">ความคืบหน้าการอัปโหลด</string>
+    <string name="upload_processing">กำลังประมวลผล…</string>
+    <string name="upload_sent">%1$s จาก %2$s</string>
 </resources>

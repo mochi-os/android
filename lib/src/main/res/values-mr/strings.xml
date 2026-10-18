@@ -329,4 +329,7 @@
     <string name="common_open_settings">सेटिंग्ज उघडा</string>
     <string name="notifications_permission_reason">Mochi ला सूचना दाखवण्यासाठी परवानगी आवश्यक आहे, जेणेकरून तुम्हाला नवीन संदेश, प्रत्युत्तरे आणि स्मरणपत्रांबद्दल कळेल.</string>
     <string name="notifications_permission_blocked">Mochi साठी सूचना बंद आहेत. तुम्ही त्या ॲपच्या सूचना सेटिंग्जमध्ये चालू करू शकता.</string>
+    <string name="upload_progress">अपलोड प्रगती</string>
+    <string name="upload_processing">प्रक्रिया करत आहे…</string>
+    <string name="upload_sent">%2$sपैकी %1$s</string>
 </resources>

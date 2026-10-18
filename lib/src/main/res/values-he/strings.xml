@@ -331,4 +331,7 @@
     <string name="common_open_settings">פתיחת ההגדרות</string>
     <string name="notifications_permission_reason">ל-Mochi נדרשת הרשאה להצגת התראות, כדי שתקבלו עדכון על הודעות חדשות, תשובות ותזכורות.</string>
     <string name="notifications_permission_blocked">ההתראות של Mochi כבויות. ניתן להפעיל אותן בהגדרות ההתראות של האפליקציה.</string>
+    <string name="upload_progress">התקדמות ההעלאה</string>
+    <string name="upload_processing">מעבד…</string>
+    <string name="upload_sent">%1$s מתוך %2$s</string>
 </resources>

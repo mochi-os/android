@@ -331,4 +331,7 @@
     <string name="common_open_settings">Fosgail na roghainnean</string>
     <string name="notifications_permission_reason">Feumaidh Mochi cead gus brathan a shealltainn, gus am faigh thu fios mu theachdaireachdan ùra, freagairtean agus cuimhneachain.</string>
     <string name="notifications_permission_blocked">Tha na brathan dheth airson Mochi. \'S urrainn dhut an cur air ann an roghainnean bhrathan na h-aplacaid.</string>
+    <string name="upload_progress">Adhartas an luchdaidh suas</string>
+    <string name="upload_processing">\'Ga phròiseasadh…</string>
+    <string name="upload_sent">%1$s à %2$s</string>
 </resources>

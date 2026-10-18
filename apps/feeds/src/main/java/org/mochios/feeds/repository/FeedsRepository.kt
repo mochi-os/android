@@ -20,6 +20,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
@@ -484,13 +485,14 @@ class FeedsRepository @Inject constructor(
         captions: List<String> = emptyList(),
         checkin: PlaceData? = null,
         travellingOrigin: PlaceData? = null,
-        travellingDestination: PlaceData? = null
+        travellingDestination: PlaceData? = null,
+        tracker: UploadTracker? = null,
     ) {
         val files = fileStore.cacheFiles(uris)
         try {
             val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
             for (file in files) {
-                multipartBody.addPart(fileStore.filePart("files", file))
+                multipartBody.addPart(fileStore.filePart("files", file, tracker = tracker))
             }
             if (captions.any { it.isNotEmpty() }) {
                 multipartBody.addFormDataPart("captions", Gson().toJson(captions))
@@ -556,7 +558,8 @@ class FeedsRepository @Inject constructor(
         captions: Map<String, String> = emptyMap(),
         checkin: PlaceData? = null,
         travellingOrigin: PlaceData? = null,
-        travellingDestination: PlaceData? = null
+        travellingDestination: PlaceData? = null,
+        tracker: UploadTracker? = null,
     ) {
         val files = fileStore.cacheFiles(newFiles)
         try {
@@ -583,7 +586,7 @@ class FeedsRepository @Inject constructor(
             addEditOrder(builder, order)
 
             for (file in files) {
-                builder.addPart(fileStore.filePart("files", file))
+                builder.addPart(fileStore.filePart("files", file, tracker = tracker))
             }
             if (captions.isNotEmpty()) {
                 builder.addFormDataPart("captions", Gson().toJson(captions))
@@ -642,6 +645,7 @@ class FeedsRepository @Inject constructor(
         files: List<Uri>,
         context: Context,
         attachment: String? = null,
+        tracker: UploadTracker? = null,
     ): Comment {
         val cachedFiles = fileStore.cacheFiles(files)
         return try {
@@ -656,7 +660,7 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("attachment", attachment)
             }
             for (file in cachedFiles) {
-                builder.addPart(fileStore.filePart("files", file))
+                builder.addPart(fileStore.filePart("files", file, tracker = tracker))
             }
             api.createComment(feedId, postId, builder.build()).unwrap().comment
         } catch (e: Exception) {

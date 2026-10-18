@@ -329,4 +329,7 @@
     <string name="common_open_settings">Wakichiykunata kichay</string>
     <string name="notifications_permission_reason">Mochiqa willaykunata rikuchinanpaq permisota necesitan, chhaynapi musuq willakuykunamanta, kutichiykunamanta, yuyarichiykunamantawan yachanaykipaq.</string>
     <string name="notifications_permission_blocked">Mochipaq willaykuna desactivasqa kachkan. App-pa willay wakichiyninkunapi activayta atinki.</string>
+    <string name="upload_progress">Wichachiy puriynin</string>
+    <string name="upload_processing">Ruwakuchkan…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>

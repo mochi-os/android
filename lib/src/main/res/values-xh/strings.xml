@@ -329,4 +329,7 @@
     <string name="common_open_settings">Vula iisetingi</string>
     <string name="notifications_permission_reason">I-Mochi ifuna imvume yokubonisa izaziso, ukuze weve ngemiyalezo emitsha, iimpendulo nezikhumbuzo.</string>
     <string name="notifications_permission_blocked">Izaziso zicinyiwe ku-Mochi. Ungazivula kwiisetingi zezaziso ze-app.</string>
+    <string name="upload_progress">Inkqubela yokulayisha</string>
+    <string name="upload_processing">Iyasetyenzwa…</string>
+    <string name="upload_sent">%1$s kwi-%2$s</string>
 </resources>

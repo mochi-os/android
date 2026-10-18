@@ -26,6 +26,8 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.ui.components.CommentDrafts
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.model.WebSocketEvent
@@ -78,6 +80,19 @@ class ObjectDetailViewModel @Inject constructor(
      * so one survives the sheet closing or its tab changing.
      */
     val drafts = CommentDrafts()
+
+    // Uploads in flight, by object: the sheet can switch object while one is
+    // still going, and the object switched to must not show it.
+    private val attachmentUploads = mutableMapOf<String, UploadTracker>()
+    private val commentUploads = mutableMapOf<String, UploadTracker>()
+
+    /** Attachments being uploaded to [objectId], for its attachments section. */
+    fun attachmentUpload(objectId: String): StateFlow<Upload?> =
+        attachmentUploads.getOrPut(objectId) { UploadTracker() }.state
+
+    /** The files of a comment being sent on [objectId], for its composer. */
+    fun commentUpload(objectId: String): StateFlow<Upload?> =
+        commentUploads.getOrPut(objectId) { UploadTracker() }.state
 
     private var debounceJobs = mutableMapOf<String, Job>()
 
@@ -296,15 +311,33 @@ class ObjectDetailViewModel @Inject constructor(
 
     /** Stages any picked attachments, then posts the comment. */
     fun createComment(content: String, parent: String? = null, uris: List<Uri> = emptyList()) {
+        val projectId = currentProjectId
+        val objectId = currentObjectId
+        val tracker = commentUploads.getOrPut(objectId) { UploadTracker() }
         viewModelScope.launch {
-            val files = repository.stageFiles(uris)
-            try {
-                repository.createComment(currentProjectId, currentObjectId, content, parent, files)
-                refreshSlice("comments") { loadComments() }
-            } catch (e: Exception) {
-                _actionFailed.tryEmit(e.toMochiError())
-            } finally {
-                repository.discardStaged(files)
+            tracker.track(uris) {
+                try {
+                    val files = repository.stageFiles(uris)
+                    try {
+                        repository.createComment(projectId, objectId, content, parent, files, tracker)
+                        // Fetched before the upload ends, so the comment takes
+                        // the place of the files in flight.
+                        val comments = runCatching {
+                            repository.getComments(projectId, objectId)
+                        }.getOrNull()
+                        if (objectId == currentObjectId) {
+                            if (comments != null) {
+                                _uiState.value = _uiState.value.copy(comments = comments)
+                            } else {
+                                refreshSlice("comments") { loadComments() }
+                            }
+                        }
+                    } finally {
+                        repository.discardStaged(files)
+                    }
+                } catch (e: Exception) {
+                    _actionFailed.tryEmit(e.toMochiError())
+                }
             }
         }
     }
@@ -511,17 +544,36 @@ class ObjectDetailViewModel @Inject constructor(
         }
     }
 
-    /** Stages the picked file, then uploads it as an attachment. */
-    fun createAttachment(uri: Uri) {
+    /** Stages the picked files, then uploads them as attachments in one request. */
+    fun createAttachments(uris: List<Uri>) {
+        if (uris.isEmpty()) return
+        val projectId = currentProjectId
+        val objectId = currentObjectId
+        val tracker = attachmentUploads.getOrPut(objectId) { UploadTracker() }
         viewModelScope.launch {
-            val file = repository.stageFile(uri) ?: return@launch
-            try {
-                repository.createAttachment(currentProjectId, currentObjectId, file)
-                refreshSlice("attachments") { loadAttachments() }
-            } catch (e: Exception) {
-                _actionFailed.tryEmit(e.toMochiError())
-            } finally {
-                repository.discardStaged(listOf(file))
+            tracker.track {
+                try {
+                    val files = repository.stageFiles(uris)
+                    try {
+                        repository.createAttachment(projectId, objectId, files, tracker)
+                        // Fetched before the upload ends, so the files go from
+                        // in flight to the gallery with nothing blank between.
+                        val attachments = runCatching {
+                            repository.getAttachments(projectId, objectId)
+                        }.getOrNull()
+                        if (objectId == currentObjectId) {
+                            if (attachments != null) {
+                                _uiState.value = _uiState.value.copy(attachments = attachments)
+                            } else {
+                                refreshSlice("attachments") { loadAttachments() }
+                            }
+                        }
+                    } finally {
+                        repository.discardStaged(files)
+                    }
+                } catch (e: Exception) {
+                    _actionFailed.tryEmit(e.toMochiError())
+                }
             }
         }
     }

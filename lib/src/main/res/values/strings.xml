@@ -395,5 +395,8 @@
     <string name="color_picker_custom">Custom</string>
     <string name="color_picker_clear">Clear</string>
     <string name="launcher_add_to_home">Add to home screen</string>
+    <string name="upload_progress">Upload progress</string>
+    <string name="upload_processing">Processing…</string>
+    <string name="upload_sent">%1$s of %2$s</string>
     <string name="drawer_mochi_home" translatable="false">Mochi</string>
 </resources>

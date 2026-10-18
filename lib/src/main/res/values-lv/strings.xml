@@ -330,4 +330,7 @@
     <string name="common_open_settings">Atvērt iestatījumus</string>
     <string name="notifications_permission_reason">Mochi nepieciešama atļauja rādīt paziņojumus, lai jūs uzzinātu par jauniem ziņojumiem, atbildēm un atgādinājumiem.</string>
     <string name="notifications_permission_blocked">Paziņojumi lietotnei Mochi ir izslēgti. Varat tos ieslēgt lietotnes paziņojumu iestatījumos.</string>
+    <string name="upload_progress">Augšupielādes norise</string>
+    <string name="upload_processing">Apstrādā…</string>
+    <string name="upload_sent">%1$s no %2$s</string>
 </resources>

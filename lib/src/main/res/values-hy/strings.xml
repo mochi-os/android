@@ -329,4 +329,7 @@
     <string name="common_open_settings">Բացել կարգավորումները</string>
     <string name="notifications_permission_reason">Mochi-ին անհրաժեշտ է թույլտվություն ծանուցումներ ցուցադրելու համար, որպեսզի տեղեկանաք նոր հաղորդագրությունների, պատասխանների և հիշեցումների մասին։</string>
     <string name="notifications_permission_blocked">Mochi-ի ծանուցումներն անջատված են։ Կարող եք դրանք միացնել հավելվածի ծանուցումների կարգավորումներում։</string>
+    <string name="upload_progress">Վերբեռնման ընթացքը</string>
+    <string name="upload_processing">Մշակվում է…</string>
+    <string name="upload_sent">%1$s՝ %2$s-ից</string>
 </resources>

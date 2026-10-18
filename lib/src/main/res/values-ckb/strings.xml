@@ -329,4 +329,7 @@
     <string name="common_open_settings">ڕێکخستنەکان بکەرەوە</string>
     <string name="notifications_permission_reason">Mochi پێویستی بە ڕێگەپێدان هەیە بۆ پیشاندانی ئاگادارکردنەوەکان، تا ئاگاداری نامە نوێیەکان، وەڵامەکان و بیرخەرەوەکان بیت.</string>
     <string name="notifications_permission_blocked">ئاگادارکردنەوەکان بۆ Mochi ناچالاک کراون. دەتوانیت لە ڕێکخستنەکانی ئاگادارکردنەوەی ئەپەکەدا چالاکیان بکەیتەوە.</string>
+    <string name="upload_progress">پێشکەوتنی بارکردن</string>
+    <string name="upload_processing">پرۆسەکردن…</string>
+    <string name="upload_sent">%1$s لە %2$s</string>
 </resources>

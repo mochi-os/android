@@ -329,4 +329,7 @@
     <string name="common_open_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ</string>
     <string name="notifications_permission_reason">ಹೊಸ ಸಂದೇಶಗಳು, ಪ್ರತ್ಯುತ್ತರಗಳು ಮತ್ತು ಜ್ಞಾಪನೆಗಳ ಬಗ್ಗೆ ನಿಮಗೆ ತಿಳಿಯುವಂತೆ ಅಧಿಸೂಚನೆಗಳನ್ನು ತೋರಿಸಲು Mochi ಗೆ ಅನುಮತಿಯ ಅಗತ್ಯವಿದೆ.</string>
     <string name="notifications_permission_blocked">Mochi ಗಾಗಿ ಅಧಿಸೂಚನೆಗಳನ್ನು ಆಫ್ ಮಾಡಲಾಗಿದೆ. ಆ್ಯಪ್‌ನ ಅಧಿಸೂಚನೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ನೀವು ಅವುಗಳನ್ನು ಆನ್ ಮಾಡಬಹುದು.</string>
+    <string name="upload_progress">ಅಪ್‌ಲೋಡ್ ಪ್ರಗತಿ</string>
+    <string name="upload_processing">ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="upload_sent">%2$sರಲ್ಲಿ %1$s</string>
 </resources>

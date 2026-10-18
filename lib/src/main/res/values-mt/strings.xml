@@ -333,4 +333,7 @@
     <string name="common_open_settings">Iftaħ l-issettjar</string>
     <string name="notifications_permission_reason">Mochi għandu bżonn permess biex juri n-notifiki, sabiex tkun taf b\'messaġġi ġodda, tweġibiet u tfakkiriet.</string>
     <string name="notifications_permission_blocked">In-notifiki huma mitfija għal Mochi. Tista\' tixgħelhom fl-issettjar tan-notifiki tal-app.</string>
+    <string name="upload_progress">Il-progress tat-tlugħ</string>
+    <string name="upload_processing">Qed jiġi pproċessat…</string>
+    <string name="upload_sent">%1$s minn %2$s</string>
 </resources>

@@ -330,4 +330,7 @@
     <string name="common_open_settings">Параметрлерді ашу</string>
     <string name="notifications_permission_reason">Mochi хабарландыруларды көрсету үшін рұқсат қажет етеді, сонда сіз жаңа хабарламалар, жауаптар мен еске салғыштар туралы біліп отырасыз.</string>
     <string name="notifications_permission_blocked">Mochi хабарландырулары өшірулі. Оларды қолданбаның хабарландыру параметрлерінде қосуға болады.</string>
+    <string name="upload_progress">Жүктеп салу барысы</string>
+    <string name="upload_processing">Өңделуде…</string>
+    <string name="upload_sent">%2$s ішінен %1$s</string>
 </resources>

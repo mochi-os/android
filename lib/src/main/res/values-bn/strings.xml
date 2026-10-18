@@ -329,4 +329,7 @@
     <string name="common_open_settings">সেটিংস খুলুন</string>
     <string name="notifications_permission_reason">বিজ্ঞপ্তি দেখানোর জন্য Mochi-র অনুমতি প্রয়োজন, যাতে আপনি নতুন বার্তা, উত্তর ও রিমাইন্ডারের খবর পান।</string>
     <string name="notifications_permission_blocked">Mochi-র জন্য বিজ্ঞপ্তি বন্ধ করা আছে। আপনি অ্যাপের বিজ্ঞপ্তি সেটিংসে সেগুলি চালু করতে পারেন।</string>
+    <string name="upload_progress">আপলোডের অগ্রগতি</string>
+    <string name="upload_processing">প্রক্রিয়াকরণ চলছে…</string>
+    <string name="upload_sent">%2$s-এর মধ্যে %1$s</string>
 </resources>

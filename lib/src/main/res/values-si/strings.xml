@@ -329,4 +329,7 @@
     <string name="common_open_settings">සැකසුම් විවෘත කරන්න</string>
     <string name="notifications_permission_reason">නව පණිවිඩ, පිළිතුරු සහ සිහිකැඳවීම් ගැන ඔබට දැනගත හැකි වන පරිදි දැනුම්දීම් පෙන්වීමට Mochi හට අවසරය අවශ්‍යයි.</string>
     <string name="notifications_permission_blocked">Mochi සඳහා දැනුම්දීම් ක්‍රියාවිරහිත කර ඇත. ඔබට ඒවා යෙදුමේ දැනුම්දීම් සැකසුම් තුළ ක්‍රියාත්මක කළ හැකිය.</string>
+    <string name="upload_progress">උඩුගත කිරීමේ ප්‍රගතිය</string>
+    <string name="upload_processing">සකසමින්…</string>
+    <string name="upload_sent">%2$sන් %1$s</string>
 </resources>

@@ -19,6 +19,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.files.UploadTracker
 import org.mochios.market.api.MarketApi
 import org.mochios.market.model.Account
 import org.mochios.market.model.AccountFees
@@ -352,10 +353,10 @@ class MarketRepository @Inject constructor(
 
     // ---- Photos ----
 
-    suspend fun uploadPhoto(listing: String, file: File): Photo {
+    suspend fun uploadPhoto(listing: String, file: File, tracker: UploadTracker? = null): Photo {
         return try {
             val listingPart = listing.toString().toRequestBody(text)
-            val filePart = multipart("file", file)
+            val filePart = multipart("file", file, tracker)
             api.uploadPhoto(listingPart, filePart).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -396,10 +397,10 @@ class MarketRepository @Inject constructor(
 
     // ---- Assets ----
 
-    suspend fun uploadAsset(listing: String, file: File): Asset {
+    suspend fun uploadAsset(listing: String, file: File, tracker: UploadTracker? = null): Asset {
         return try {
             val listingPart = listing.toString().toRequestBody(text)
-            val filePart = multipart("file", file)
+            val filePart = multipart("file", file, tracker)
             api.uploadAsset(listingPart, filePart).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -849,8 +850,8 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    private fun multipart(field: String, file: File): MultipartBody.Part =
-        fileStore.filePart(field, file)
+    private fun multipart(field: String, file: File, tracker: UploadTracker? = null): MultipartBody.Part =
+        fileStore.filePart(field, file, tracker = tracker)
 
     companion object {
         private const val ANDROID_PLATFORM = "android"

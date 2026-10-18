@@ -100,6 +100,7 @@ import org.mochios.android.ui.components.MochiSheetPadding
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.TravellingPicker
+import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
@@ -131,6 +132,7 @@ fun CreatePostScreen(
     val travellingOrigin by viewModel.travellingOrigin.collectAsState()
     val travellingDestination by viewModel.travellingDestination.collectAsState()
     val isPosting by viewModel.isPosting.collectAsState()
+    val upload by viewModel.upload.collectAsState()
     val isLoadingFeeds by viewModel.isLoadingFeeds.collectAsState()
     val error by viewModel.error.collectAsState()
     val postSuccess by viewModel.postSuccess.collectAsState()
@@ -201,34 +203,42 @@ fun CreatePostScreen(
             // Posting sits under the thumb rather than in the far corner of the
             // bar, the way the wiki editor saves.
             Surface(color = MaterialTheme.colorScheme.surface) {
-                MochiButton(
-                    onClick = { viewModel.createPost() },
-                    enabled = !isPosting,
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
                         .imePadding()
                         .navigationBarsPadding()
                         .padding(horizontal = 16.dp, vertical = 12.dp),
                 ) {
-                    if (isPosting) {
-                        CircularProgressIndicator(
-                            modifier = Modifier.size(ButtonDefaults.IconSize),
-                            strokeWidth = 2.dp,
-                        )
-                    } else {
-                        Icon(
-                            if (isEditing) Icons.Default.Check else Icons.AutoMirrored.Filled.Send,
-                            contentDescription = null,
-                            modifier = Modifier.size(ButtonDefaults.IconSize),
+                    upload?.let { sending ->
+                        UploadProgress(sending)
+                        Spacer(modifier = Modifier.height(8.dp))
+                    }
+                    MochiButton(
+                        onClick = { viewModel.createPost() },
+                        enabled = !isPosting,
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        if (isPosting) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(ButtonDefaults.IconSize),
+                                strokeWidth = 2.dp,
+                            )
+                        } else {
+                            Icon(
+                                if (isEditing) Icons.Default.Check else Icons.AutoMirrored.Filled.Send,
+                                contentDescription = null,
+                                modifier = Modifier.size(ButtonDefaults.IconSize),
+                            )
+                        }
+                        Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
+                        Text(
+                            stringResource(
+                                if (isEditing) R.string.feeds_save_label
+                                else R.string.feeds_post_action
+                            )
                         )
                     }
-                    Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
-                    Text(
-                        stringResource(
-                            if (isEditing) R.string.feeds_save_label
-                            else R.string.feeds_post_action
-                        )
-                    )
                 }
             }
         },

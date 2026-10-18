@@ -73,6 +73,7 @@ import org.mochios.android.ui.components.MentionTextField
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.forums.R
 
@@ -88,6 +89,7 @@ fun NewPostScreen(
     viewModel: NewPostViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val upload by viewModel.upload.collectAsState()
     val attachments by viewModel.attachments.collectAsState()
     val existingAttachments by viewModel.existingAttachments.collectAsState()
     val removedExistingIds by viewModel.removedExistingIds.collectAsState()
@@ -161,27 +163,35 @@ fun NewPostScreen(
             // Posting sits under the thumb rather than in the far corner of the
             // bar, the way the wiki editor saves.
             Surface(color = MaterialTheme.colorScheme.surface) {
-                MochiButton(
-                    onClick = { viewModel.submit() },
-                    enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting,
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
                         .imePadding()
                         .navigationBarsPadding()
                         .padding(horizontal = 16.dp, vertical = 12.dp),
                 ) {
-                    if (uiState.isPosting) {
-                        CircularProgressIndicator(
-                            modifier = Modifier.size(18.dp),
-                            strokeWidth = 2.dp,
-                        )
-                    } else {
-                        Text(
-                            stringResource(
-                                if (isEditing) MochiR.string.common_save
-                                else R.string.forums_post_create_action
+                    upload?.let { sending ->
+                        UploadProgress(sending)
+                        Spacer(modifier = Modifier.height(8.dp))
+                    }
+                    MochiButton(
+                        onClick = { viewModel.submit() },
+                        enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting,
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        if (uiState.isPosting) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.size(18.dp),
+                                strokeWidth = 2.dp,
                             )
-                        )
+                        } else {
+                            Text(
+                                stringResource(
+                                    if (isEditing) MochiR.string.common_save
+                                    else R.string.forums_post_create_action
+                                )
+                            )
+                        }
                     }
                 }
             }

@@ -329,4 +329,7 @@
     <string name="common_open_settings">Ayarları aç</string>
     <string name="notifications_permission_reason">Mochi\'nin bildirim gösterebilmesi için izne ihtiyacı var; böylece yeni mesajlardan, yanıtlardan ve hatırlatıcılardan haberdar olursunuz.</string>
     <string name="notifications_permission_blocked">Mochi için bildirimler kapalı. Bunları uygulamanın bildirim ayarlarından açabilirsiniz.</string>
+    <string name="upload_progress">Yükleme ilerlemesi</string>
+    <string name="upload_processing">İşleniyor…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>

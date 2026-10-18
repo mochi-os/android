@@ -48,6 +48,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.Upload
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
@@ -70,6 +71,7 @@ fun CommentsScreen(
     viewModel: CommentsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
+    val upload by viewModel.upload.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
 
     // Forward ViewModel events (errors, toasts) onto the snackbar host.
@@ -136,6 +138,7 @@ fun CommentsScreen(
                     CompositionLocalProvider(LocalWikiContext provides wikiCtx) {
                         CommentsBody(
                             state = state,
+                            upload = upload,
                             canCompose = state.permissions.edit,
                             onCreate = { body, uris ->
                                 viewModel.createComment(body = body, parent = null, uris = uris)
@@ -170,6 +173,7 @@ fun CommentsScreen(
 @Composable
 private fun CommentsBody(
     state: CommentsUiState,
+    upload: Upload?,
     canCompose: Boolean,
     onCreate: (body: String, files: List<Uri>?) -> Unit,
     resolveFileName: suspend (Uri) -> String,
@@ -247,6 +251,7 @@ private fun CommentsBody(
                         else R.string.wikis_comment_form_placeholder_new
                     ),
                     autoFocus = replyingTo != null,
+                    upload = upload,
                     banner = target?.let { comment ->
                         {
                             ReplyComposerBanner(

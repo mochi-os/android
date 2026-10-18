@@ -329,4 +329,7 @@
     <string name="common_open_settings">Opna stillingar</string>
     <string name="notifications_permission_reason">Mochi þarf heimild til að sýna tilkynningar svo að þú fáir að vita af nýjum skilaboðum, svörum og áminningum.</string>
     <string name="notifications_permission_blocked">Slökkt er á tilkynningum fyrir Mochi. Þú getur kveikt á þeim í tilkynningastillingum forritsins.</string>
+    <string name="upload_progress">Framvinda upphleðslu</string>
+    <string name="upload_processing">Í vinnslu…</string>
+    <string name="upload_sent">%1$s af %2$s</string>
 </resources>

@@ -17,6 +17,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.res.stringResource
+import org.mochios.android.files.Upload
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
@@ -43,6 +44,8 @@ fun CommentForm(
     windowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
     showDivider: Boolean = true,
     banner: (@Composable () -> Unit)? = null,
+    /** The files of a comment being sent, shown until it is in. */
+    upload: Upload? = null,
 ) {
     val focusRequester = remember { FocusRequester() }
 
@@ -95,6 +98,7 @@ fun CommentForm(
         windowInsets = windowInsets,
         showDivider = showDivider,
         banner = banner,
+        upload = upload,
         trailingContent = onCancel?.let {
             {
                 MochiTextButton(onClick = it) {

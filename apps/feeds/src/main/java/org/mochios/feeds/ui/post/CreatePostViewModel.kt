@@ -17,6 +17,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.PlaceData
 import org.mochios.android.util.NaturalCompare
@@ -91,6 +93,11 @@ class CreatePostViewModel @Inject constructor(
 
     private val _isPosting = MutableStateFlow(false)
     val isPosting: StateFlow<Boolean> = _isPosting.asStateFlow()
+
+    private val tracker = UploadTracker()
+
+    /** The new files of the post being sent, while they go. */
+    val upload: StateFlow<Upload?> = tracker.state
 
     private val _isLoadingFeeds = MutableStateFlow(false)
     val isLoadingFeeds: StateFlow<Boolean> = _isLoadingFeeds.asStateFlow()
@@ -272,30 +279,36 @@ class CreatePostViewModel @Inject constructor(
                                 ?.let { put("new:$index", it) }
                         }
                     }
-                    // Read new files into byte arrays for the repo method
-                    repository.editPost(
-                        feedId = feedId,
-                        postId = postId,
-                        body = bodyText,
-                        order = order,
-                        newFiles = newFileUris,
-                        captions = captions,
-                        context = application,
-                        checkin = _checkin.value,
-                        travellingOrigin = _travellingOrigin.value,
-                        travellingDestination = _travellingDestination.value
-                    )
+                    tracker.track(newFileUris) {
+                        repository.editPost(
+                            feedId = feedId,
+                            postId = postId,
+                            body = bodyText,
+                            order = order,
+                            newFiles = newFileUris,
+                            captions = captions,
+                            context = application,
+                            checkin = _checkin.value,
+                            travellingOrigin = _travellingOrigin.value,
+                            travellingDestination = _travellingDestination.value,
+                            tracker = tracker,
+                        )
+                    }
                 } else {
-                    repository.createPostFromUris(
-                        feedId = feedId,
-                        body = bodyText,
-                        uris = _attachments.value,
-                        captions = _attachments.value.map { _newCaptions.value[it] ?: "" },
-                        context = application,
-                        checkin = _checkin.value,
-                        travellingOrigin = _travellingOrigin.value,
-                        travellingDestination = _travellingDestination.value
-                    )
+                    val uris = _attachments.value
+                    tracker.track(uris) {
+                        repository.createPostFromUris(
+                            feedId = feedId,
+                            body = bodyText,
+                            uris = uris,
+                            captions = uris.map { _newCaptions.value[it] ?: "" },
+                            context = application,
+                            checkin = _checkin.value,
+                            travellingOrigin = _travellingOrigin.value,
+                            travellingDestination = _travellingDestination.value,
+                            tracker = tracker,
+                        )
+                    }
                 }
                 _postSuccess.value = true
             } catch (e: Exception) {

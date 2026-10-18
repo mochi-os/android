@@ -24,6 +24,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.android.util.mergeNewest
@@ -92,6 +94,11 @@ class ChatViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ChatUiState())
     val uiState: StateFlow<ChatUiState> = _uiState.asStateFlow()
+
+    private val tracker = UploadTracker()
+
+    /** The files of the message being sent, for the composer. */
+    val upload: StateFlow<Upload?> = tracker.state
 
     private var subscriptionId: String? = null
     private var searchJob: Job? = null
@@ -531,13 +538,19 @@ class ChatViewModel @Inject constructor(
             try {
                 if (attachments.isEmpty()) {
                     repository.sendMessage(chatId, trimmed, reply = reply)
+                    _uiState.value = _uiState.value.afterSend(sent = true)
+                    refresh()
                 } else {
-                    repository.sendMessageFromUris(
-                        chatId, trimmed, attachments, application, reply = reply,
-                    )
+                    tracker.track {
+                        repository.sendMessageFromUris(
+                            chatId, trimmed, attachments, application, reply = reply, tracker = tracker,
+                        )
+                        _uiState.value = _uiState.value.afterSend(sent = true)
+                        // Inside the upload, so the files in flight give way
+                        // to the message with nothing blank between.
+                        refresh()
+                    }
                 }
-                _uiState.value = _uiState.value.afterSend(sent = true)
-                refresh()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.failed(e.toMochiError())
             } finally {

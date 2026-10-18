@@ -329,4 +329,7 @@
     <string name="common_open_settings">Eipe\'a ñemboheko</string>
     <string name="notifications_permission_reason">Mochi oikotevẽ ñemoneĩ ohechauka hag̃ua momarandukuéra, reikuaa hag̃ua ñe\'ẽmondo pyahu, mbohovái ha mandu\'arãkuéra rehegua.</string>
     <string name="notifications_permission_blocked">Momarandukuéra oñembogue Mochi-pe g̃uarã. Ikatu remyendy umíva app momarandu ñembohekópe.</string>
+    <string name="upload_progress">Jehupi jeku\'e</string>
+    <string name="upload_processing">Oñemba\'apo hína…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>

@@ -331,4 +331,7 @@
     <string name="common_open_settings">Otvoriť nastavenia</string>
     <string name="notifications_permission_reason">Mochi potrebuje povolenie na zobrazovanie notifikácií, aby ste sa dozvedeli o nových správach, odpovediach a pripomienkach.</string>
     <string name="notifications_permission_blocked">Notifikácie sú pre Mochi vypnuté. Môžete ich zapnúť v nastaveniach notifikácií aplikácie.</string>
+    <string name="upload_progress">Priebeh nahrávania</string>
+    <string name="upload_processing">Spracováva sa…</string>
+    <string name="upload_sent">%1$s z %2$s</string>
 </resources>

@@ -330,4 +330,7 @@
     <string name="common_open_settings">Ouvrir les paramètres</string>
     <string name="notifications_permission_reason">Mochi a besoin d\'une autorisation pour afficher des notifications, afin que vous soyez informé des nouveaux messages, réponses et rappels.</string>
     <string name="notifications_permission_blocked">Les notifications sont désactivées pour Mochi. Vous pouvez les activer dans les paramètres de notification de l\'application.</string>
+    <string name="upload_progress">Progression du téléversement</string>
+    <string name="upload_processing">Traitement…</string>
+    <string name="upload_sent">%1$s sur %2$s</string>
 </resources>

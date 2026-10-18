@@ -329,4 +329,7 @@
     <string name="common_open_settings">Parametrləri aç</string>
     <string name="notifications_permission_reason">Yeni mesajlar, cavablar və xatırlatmalar barədə xəbər tutmağınız üçün Mochi-yə bildirişləri göstərmək icazəsi lazımdır.</string>
     <string name="notifications_permission_blocked">Mochi üçün bildirişlər deaktivdir. Onları tətbiqin bildiriş parametrlərində aktiv edə bilərsiniz.</string>
+    <string name="upload_progress">Yükləmə gedişatı</string>
+    <string name="upload_processing">Emal olunur…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>

@@ -21,6 +21,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.feeds.model.Permissions
@@ -69,6 +71,11 @@ class PostDetailViewModel @Inject constructor(
 
     private val _isSendingComment = MutableStateFlow(false)
     val isSendingComment: StateFlow<Boolean> = _isSendingComment.asStateFlow()
+
+    private val commentTracker = UploadTracker()
+
+    /** The files of the comment being sent, for the composer. */
+    val commentUpload: StateFlow<Upload?> = commentTracker.state
 
     private val _replyingTo = MutableStateFlow<String?>(null)
     val replyingTo: StateFlow<String?> = _replyingTo.asStateFlow()
@@ -189,19 +196,25 @@ class PostDetailViewModel @Inject constructor(
             _isSendingComment.value = true
             _actionError.value = null
             try {
-                repository.createComment(
-                    feedId = feedId,
-                    postId = postId,
-                    body = body,
-                    parent = _replyingTo.value,
-                    files = _commentAttachments.value,
-                    context = application,
-                    attachment = anchor,
-                )
-                _commentText.value = ""
-                _commentAttachments.value = emptyList()
-                _replyingTo.value = null
-                refreshPost()
+                val files = _commentAttachments.value
+                commentTracker.track(files) {
+                    repository.createComment(
+                        feedId = feedId,
+                        postId = postId,
+                        body = body,
+                        parent = _replyingTo.value,
+                        files = files,
+                        context = application,
+                        attachment = anchor,
+                        tracker = commentTracker,
+                    )
+                    _commentText.value = ""
+                    _commentAttachments.value = emptyList()
+                    _replyingTo.value = null
+                    // Inside the upload, so the files in flight give way to
+                    // the comment with nothing blank between.
+                    refreshPost()
+                }
             } catch (e: Exception) {
                 _actionError.value = e.toMochiError()
             } finally {

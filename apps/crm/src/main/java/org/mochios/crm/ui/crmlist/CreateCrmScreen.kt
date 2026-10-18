@@ -46,6 +46,7 @@ fun CreateCrmScreen(
     viewModel: CreateCrmViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val upload by viewModel.upload.collectAsState()
 
     var name by remember { mutableStateOf("") }
     // The toggle reads "Allow anyone to search for CRM" — on means public.
@@ -97,6 +98,7 @@ fun CreateCrmScreen(
         submitLabel = stringResource(R.string.crm_create_action),
         submitEnabled = name.isNotBlank() && !uiState.isCreating,
         isBusy = uiState.isCreating,
+        upload = upload,
         error = uiState.error,
         onBack = onBack,
         onSubmit = {

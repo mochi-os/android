@@ -586,7 +586,15 @@ fun CalendarScreen(
         )
     }
     val tally by viewModel.importing.collectAsState()
-    tally?.let { ImportDialog(tally = it, onClose = viewModel::closeImport, onRetry = viewModel::retryImport) }
+    val importUpload by viewModel.importUpload.collectAsState()
+    tally?.let {
+        ImportDialog(
+            tally = it,
+            upload = importUpload,
+            onClose = viewModel::closeImport,
+            onRetry = viewModel::retryImport,
+        )
+    }
 
 }
 

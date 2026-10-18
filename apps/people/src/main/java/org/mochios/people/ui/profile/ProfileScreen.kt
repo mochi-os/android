@@ -84,6 +84,7 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.launch
+import org.mochios.android.files.Upload
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MarkdownToolbar
@@ -93,6 +94,8 @@ import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.UploadProgress
+import org.mochios.android.ui.components.UploadRing
 import org.mochios.android.ui.components.parseHexColour
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
@@ -210,6 +213,7 @@ private fun Editor(
     scope: kotlinx.coroutines.CoroutineScope,
     context: android.content.Context,
 ) {
+    val upload by viewModel.upload.collectAsState()
     val info = state.info ?: return
     var showSizeWarning by remember { mutableStateOf<String?>(null) }
     var showEditName by remember { mutableStateOf(false) }
@@ -253,6 +257,7 @@ private fun Editor(
             accent = accentPreview,
             uploadingAvatar = state.savingSlot == ImageSlot.AVATAR,
             uploadingBanner = state.savingSlot == ImageSlot.BANNER,
+            upload = upload,
             onChangeAvatar = avatarPicker.launch,
             onChangeBanner = bannerPicker.launch,
             onEditName = { showEditName = true },
@@ -269,6 +274,7 @@ private fun Editor(
             FaviconSection(
                 faviconUrl = faviconUrl,
                 uploading = state.savingSlot == ImageSlot.FAVICON,
+                upload = upload.takeIf { state.savingSlot == ImageSlot.FAVICON },
                 onUpload = faviconPicker.launch,
             )
             PrivacySection(state, viewModel)
@@ -316,6 +322,7 @@ private fun PreviewCard(
     accent: String?,
     uploadingAvatar: Boolean,
     uploadingBanner: Boolean,
+    upload: Upload?,
     onChangeAvatar: () -> Unit,
     onChangeBanner: () -> Unit,
     onEditName: () -> Unit,
@@ -367,7 +374,11 @@ private fun PreviewCard(
                         .background(Color.Black.copy(alpha = 0.35f)),
                     contentAlignment = Alignment.Center,
                 ) {
-                    CircularProgressIndicator(color = Color.White)
+                    if (upload != null) {
+                        UploadRing(upload, color = Color.White)
+                    } else {
+                        CircularProgressIndicator(color = Color.White)
+                    }
                 }
             } else {
                 // Text hint — signals the banner is tappable to change.
@@ -436,11 +447,20 @@ private fun PreviewCard(
                                 .background(Color.Black.copy(alpha = 0.35f)),
                             contentAlignment = Alignment.Center,
                         ) {
-                            CircularProgressIndicator(
-                                modifier = Modifier.size(24.dp),
-                                strokeWidth = 2.dp,
-                                color = Color.White,
-                            )
+                            if (upload != null) {
+                                UploadRing(
+                                    upload,
+                                    modifier = Modifier.size(24.dp),
+                                    color = Color.White,
+                                    strokeWidth = 2.dp,
+                                )
+                            } else {
+                                CircularProgressIndicator(
+                                    modifier = Modifier.size(24.dp),
+                                    strokeWidth = 2.dp,
+                                    color = Color.White,
+                                )
+                            }
                         }
                     }
                 }
@@ -648,6 +668,7 @@ private fun AccentSection(
 private fun FaviconSection(
     faviconUrl: String?,
     uploading: Boolean,
+    upload: Upload?,
     onUpload: () -> Unit,
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -700,6 +721,7 @@ private fun FaviconSection(
                 )
             }
         }
+        UploadProgress(upload)
     }
 }
 

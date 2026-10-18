@@ -329,4 +329,7 @@
     <string name="common_open_settings">سیٹنگز کھولیں</string>
     <string name="notifications_permission_reason">Mochi کو اطلاعات دکھانے کے لیے اجازت درکار ہے، تاکہ آپ کو نئے پیغامات، جوابات اور یاد دہانیوں کا پتہ چلتا رہے۔</string>
     <string name="notifications_permission_blocked">Mochi کے لیے اطلاعات بند ہیں۔ آپ انہیں ایپ کی اطلاعات کی سیٹنگز میں آن کر سکتے ہیں۔</string>
+    <string name="upload_progress">اپ لوڈ کی پیش رفت</string>
+    <string name="upload_processing">پروسیس ہو رہا ہے…</string>
+    <string name="upload_sent">%2$s میں سے %1$s</string>
 </resources>

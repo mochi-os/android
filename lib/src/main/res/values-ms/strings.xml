@@ -329,4 +329,7 @@
     <string name="common_open_settings">Buka tetapan</string>
     <string name="notifications_permission_reason">Mochi memerlukan kebenaran untuk menunjukkan pemberitahuan, supaya anda tahu tentang mesej baharu, balasan dan peringatan.</string>
     <string name="notifications_permission_blocked">Pemberitahuan dimatikan untuk Mochi. Anda boleh menghidupkannya dalam tetapan pemberitahuan apl.</string>
+    <string name="upload_progress">Kemajuan muat naik</string>
+    <string name="upload_processing">Memproses…</string>
+    <string name="upload_sent">%1$s daripada %2$s</string>
 </resources>

@@ -331,4 +331,7 @@
     <string name="common_open_settings">Obre la configuració</string>
     <string name="notifications_permission_reason">Mochi necessita permís per mostrar notificacions, perquè us assabenteu dels missatges nous, les respostes i els recordatoris.</string>
     <string name="notifications_permission_blocked">Les notificacions estan desactivades per a Mochi. Les podeu activar a la configuració de notificacions de l\'aplicació.</string>
+    <string name="upload_progress">Progrés de la pujada</string>
+    <string name="upload_processing">S\'està processant…</string>
+    <string name="upload_sent">%1$s de %2$s</string>
 </resources>

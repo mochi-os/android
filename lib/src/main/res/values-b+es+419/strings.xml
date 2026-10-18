@@ -317,4 +317,7 @@
     <string name="common_refresh">Actualizar</string>
     <string name="launcher_add_to_home">Agregar a la pantalla de inicio</string>
     <string name="common_continue">Continuar</string>
+    <string name="upload_progress">Progreso de la subida</string>
+    <string name="upload_processing">Procesando…</string>
+    <string name="upload_sent">%1$s de %2$s</string>
 </resources>

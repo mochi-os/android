@@ -13,6 +13,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.chat.api.ChatApi
 import org.mochios.chat.api.CreateChatResponse
@@ -86,6 +87,7 @@ class ChatRepository @Inject constructor(
         uris: List<android.net.Uri>,
         context: android.content.Context,
         reply: String? = null,
+        tracker: UploadTracker? = null,
     ): String {
         if (uris.isEmpty()) {
             return api.sendMessage(chatId, body, reply).unwrap().id
@@ -94,7 +96,7 @@ class ChatRepository @Inject constructor(
         val replyPart = reply?.toRequestBody("text/plain".toMediaTypeOrNull())
         val files = fileStore.cacheFiles(uris)
         try {
-            val parts = fileStore.fileParts("files", files)
+            val parts = fileStore.fileParts("files", files, tracker)
             return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
         } finally {
             fileStore.deleteAll(files)

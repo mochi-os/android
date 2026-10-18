@@ -330,4 +330,7 @@
     <string name="common_open_settings">Abrir definições</string>
     <string name="notifications_permission_reason">O Mochi precisa de permissão para mostrar notificações, para que saiba de novas mensagens, respostas e lembretes.</string>
     <string name="notifications_permission_blocked">As notificações estão desativadas para o Mochi. Pode ativá-las nas definições de notificações da aplicação.</string>
+    <string name="upload_progress">Progresso do carregamento</string>
+    <string name="upload_processing">A processar…</string>
+    <string name="upload_sent">%1$s de %2$s</string>
 </resources>

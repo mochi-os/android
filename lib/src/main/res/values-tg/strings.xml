@@ -329,4 +329,7 @@
     <string name="common_open_settings">Кушодани танзимот</string>
     <string name="notifications_permission_reason">Mochi барои намоиш додани огоҳиномаҳо иҷозат лозим дорад, то шумо дар бораи паёмҳои нав, ҷавобҳо ва ёдовариҳо огоҳ шавед.</string>
     <string name="notifications_permission_blocked">Огоҳиномаҳо барои Mochi хомӯш карда шудаанд. Шумо метавонед онҳоро дар танзимоти огоҳиномаҳои барнома фаъол кунед.</string>
+    <string name="upload_progress">Рафти боркунӣ</string>
+    <string name="upload_processing">Коркард шуда истодааст…</string>
+    <string name="upload_sent">%1$s аз %2$s</string>
 </resources>

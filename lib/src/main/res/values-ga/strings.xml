@@ -332,4 +332,7 @@
     <string name="common_open_settings">Oscail socruithe</string>
     <string name="notifications_permission_reason">Tá cead ag teastáil ó Mochi chun fógraí a thaispeáint, ionas go gcloisfidh tú faoi theachtaireachtaí nua, freagraí agus meabhrúcháin.</string>
     <string name="notifications_permission_blocked">Tá fógraí múchta do Mochi. Is féidir leat iad a chasadh air i socruithe fógraí na haipe.</string>
+    <string name="upload_progress">Dul chun cinn an uaslódála</string>
+    <string name="upload_processing">Á phróiseáil…</string>
+    <string name="upload_sent">%1$s as %2$s</string>
 </resources>

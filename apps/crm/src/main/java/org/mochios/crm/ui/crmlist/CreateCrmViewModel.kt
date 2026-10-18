@@ -17,6 +17,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.crm.model.Crm
 import org.mochios.crm.repository.CrmsRepository
 import javax.inject.Inject
@@ -57,6 +59,11 @@ class CreateCrmViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(CreateCrmUiState())
     val uiState: StateFlow<CreateCrmUiState> = _uiState.asStateFlow()
+
+    private val tracker = UploadTracker()
+
+    /** The backup being uploaded into the new CRM, while it goes. */
+    val upload: StateFlow<Upload?> = tracker.state
 
     /**
      * Reads the backup file the user picked and pulls the CRM's name out of it,
@@ -139,7 +146,7 @@ class CreateCrmViewModel @Inject constructor(
             if (archive != null) {
                 // The archive carries design, objects and attachment bytes;
                 // one upload restores all three.
-                repository.importArchive(crmId, archive)
+                tracker.track { repository.importArchive(crmId, archive, tracker) }
                 return
             }
             val root = JsonParser.parseString(backupJson).asJsonObject
@@ -151,7 +158,7 @@ class CreateCrmViewModel @Inject constructor(
                 templateVersion = 0
             )
             if (hasData(root)) {
-                repository.importData(crmId, backupJson)
+                tracker.track { repository.importData(crmId, backupJson, tracker) }
             }
         } catch (e: Exception) {
             // delete rejects a fingerprint, so roll back with the canonical id

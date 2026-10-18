@@ -333,4 +333,7 @@
     <string name="common_open_settings">فتح الإعدادات</string>
     <string name="notifications_permission_reason">يحتاج Mochi إلى إذن لعرض الإشعارات، كي تعلم بالرسائل الجديدة والردود والتذكيرات.</string>
     <string name="notifications_permission_blocked">الإشعارات متوقفة لتطبيق Mochi. يمكنك تشغيلها من إعدادات الإشعارات الخاصة بالتطبيق.</string>
+    <string name="upload_progress">تقدّم الرفع</string>
+    <string name="upload_processing">جارٍ المعالجة…</string>
+    <string name="upload_sent">%1$s من %2$s</string>
 </resources>

@@ -22,12 +22,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.Upload
 import org.mochios.android.ui.components.ColorPicker
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.characters
 import org.mochios.calendars.R
@@ -102,6 +104,7 @@ fun ImportDialog(
     tally: Tally,
     onClose: () -> Unit,
     onRetry: () -> Unit,
+    upload: Upload? = null,
 ) {
     val error = tally.error
     val settled = tally.finished || error != null
@@ -127,7 +130,8 @@ fun ImportDialog(
                     )
                     tally.finished -> importCounts(tally).forEach { Text(it) }
                     // The first round's answer brings the file's size; until
-                    // then there is nothing to measure against.
+                    // then the only measure is the file's bytes going up.
+                    tally.total == 0 && upload != null -> UploadProgress(upload)
                     tally.total == 0 -> LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
                     else -> {
                         LinearProgressIndicator(

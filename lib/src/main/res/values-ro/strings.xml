@@ -330,4 +330,7 @@
     <string name="common_open_settings">Deschide setările</string>
     <string name="notifications_permission_reason">Mochi are nevoie de permisiune pentru a afișa notificări, ca să afli despre mesaje noi, răspunsuri și mementouri.</string>
     <string name="notifications_permission_blocked">Notificările sunt dezactivate pentru Mochi. Le poți activa din setările de notificări ale aplicației.</string>
+    <string name="upload_progress">Progresul încărcării</string>
+    <string name="upload_processing">Se procesează…</string>
+    <string name="upload_sent">%1$s din %2$s</string>
 </resources>

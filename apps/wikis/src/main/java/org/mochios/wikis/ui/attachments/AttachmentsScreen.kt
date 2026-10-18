@@ -95,6 +95,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.FileStore
+import org.mochios.android.files.Upload
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.Attachment as MochiAttachment
 import org.mochios.android.model.FileKind
@@ -111,6 +112,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.UploadFiles
 import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.AttachmentOpener
@@ -134,6 +136,7 @@ fun AttachmentsScreen(
     viewModel: AttachmentsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
+    val upload by viewModel.upload.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     val context = LocalContext.current
 
@@ -207,6 +210,7 @@ fun AttachmentsScreen(
             if (state.wiki != null) {
                 UploadBar(
                     isUploading = state.isUploading,
+                    upload = upload,
                     onUpload = { filePicker.launch("*/*") },
                 )
             }
@@ -318,6 +322,7 @@ fun AttachmentsScreen(
 @Composable
 private fun UploadBar(
     isUploading: Boolean,
+    upload: Upload?,
     onUpload: () -> Unit,
 ) {
     Surface(color = MaterialTheme.colorScheme.surface) {
@@ -342,6 +347,7 @@ private fun UploadBar(
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
+                UploadFiles(upload, modifier = Modifier.padding(top = 8.dp))
                 Spacer(Modifier.height(4.dp))
                 MochiButton(
                     onClick = onUpload,

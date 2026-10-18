@@ -331,4 +331,7 @@
     <string name="common_open_settings">Atidaryti nustatymus</string>
     <string name="notifications_permission_reason">Mochi reikia leidimo rodyti pranešimus, kad sužinotumėte apie naujas žinutes, atsakymus ir priminimus.</string>
     <string name="notifications_permission_blocked">Mochi pranešimai išjungti. Juos galite įjungti programos pranešimų nustatymuose.</string>
+    <string name="upload_progress">Įkėlimo eiga</string>
+    <string name="upload_processing">Apdorojama…</string>
+    <string name="upload_sent">%1$s iš %2$s</string>
 </resources>

@@ -329,4 +329,7 @@
     <string name="common_open_settings">Åpne innstillinger</string>
     <string name="notifications_permission_reason">Mochi trenger tillatelse til å vise varsler, slik at du får vite om nye meldinger, svar og påminnelser.</string>
     <string name="notifications_permission_blocked">Varsler er slått av for Mochi. Du kan slå dem på i varselinnstillingene for appen.</string>
+    <string name="upload_progress">Fremdrift for opplasting</string>
+    <string name="upload_processing">Behandler…</string>
+    <string name="upload_sent">%1$s av %2$s</string>
 </resources>

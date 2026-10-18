@@ -57,6 +57,7 @@ internal fun AttachmentComments(
     val commentText by viewModel.commentText.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
     val isSendingComment by viewModel.isSendingComment.collectAsState()
+    val commentUpload by viewModel.commentUpload.collectAsState()
     val replyingTo by viewModel.replyingTo.collectAsState()
 
     var showAll by rememberSaveable(attachmentId) { mutableStateOf(false) }
@@ -119,6 +120,7 @@ internal fun AttachmentComments(
                 onSend = { viewModel.sendComment(anchor = attachmentId) },
                 placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
                 isSending = isSendingComment,
+                upload = commentUpload,
                 sendLabel = stringResource(R.string.feeds_send),
                 attachments = feedsCommentAttachments(
                     attachments = commentAttachments,

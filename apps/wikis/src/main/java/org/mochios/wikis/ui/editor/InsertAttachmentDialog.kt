@@ -45,6 +45,7 @@ import coil3.compose.AsyncImage
 import org.mochios.android.ui.components.FileKindIcon
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.UploadFiles
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -65,6 +66,7 @@ fun InsertAttachmentDialog(
 ) {
     if (!open) return
     val state by viewModel.uiState.collectAsState()
+    val upload by viewModel.upload.collectAsState()
     val wiki = LocalWikiContext.current
     val context = LocalContext.current
 
@@ -118,6 +120,7 @@ fun InsertAttachmentDialog(
                     Box(modifier = Modifier.width(6.dp))
                     Text(stringResource(R.string.wikis_insert_dialog_upload_new))
                 }
+                UploadFiles(upload, modifier = Modifier.padding(top = 12.dp))
 
                 Box(modifier = Modifier.height(12.dp))
 

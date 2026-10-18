@@ -353,7 +353,7 @@ interface CrmsApi {
     suspend fun createAttachment(
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String,
-        @Part file: MultipartBody.Part
+        @Part files: List<MultipartBody.Part>
     ): Response<ApiResponse<AttachmentListResponse>>
 
     /** Copies attachments of other objects in the CRM onto this one; [attachments] comma-separated. */

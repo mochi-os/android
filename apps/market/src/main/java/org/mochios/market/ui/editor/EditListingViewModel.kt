@@ -26,6 +26,8 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.market.R
 import org.mochios.market.lib.minorToMajorText
 import org.mochios.market.lib.toMinorUnits
@@ -95,8 +97,6 @@ data class EditUiState(
     val categories: List<Category> = emptyList(),
     val saveStatus: SaveStatus = SaveStatus.IDLE,
     val publishStatus: SaveStatus = SaveStatus.IDLE,
-    val isUploadingPhoto: Boolean = false,
-    val isUploadingAsset: Boolean = false,
     // True while a delete is in flight; the confirmation stays open until it answers.
     val isDeleting: Boolean = false,
     val isDeletingAsset: Boolean = false,
@@ -137,6 +137,15 @@ class EditListingViewModel @Inject constructor(
         EditUiState(isNew = isNew, listingId = initialId, title = initialTitle),
     )
     val state: StateFlow<EditUiState> = _state.asStateFlow()
+
+    private val photoTracker = UploadTracker()
+    private val assetTracker = UploadTracker()
+
+    /** The photos being uploaded, while they go. */
+    val photoUpload: StateFlow<Upload?> = photoTracker.state
+
+    /** The digital assets being uploaded, while they go. */
+    val assetUpload: StateFlow<Upload?> = assetTracker.state
 
     private val _events = MutableSharedFlow<EditListingEvent>(extraBufferCapacity = 8)
     val events: SharedFlow<EditListingEvent> = _events.asSharedFlow()
@@ -485,18 +494,21 @@ class EditListingViewModel @Inject constructor(
                 if (_state.value.listingId.isEmpty()) return@launch
             }
             val listingId = _state.value.listingId
-            _state.value = _state.value.copy(isUploadingPhoto = true)
-            val temps = repository.stageFiles(uris, fallbackName = "photo")
-            try {
-                for (temp in temps) {
-                    val photo = repository.uploadPhoto(listingId, temp)
-                    _state.value = _state.value.copy(photos = _state.value.photos + photo)
+            photoTracker.track {
+                try {
+                    val temps = repository.stageFiles(uris, fallbackName = "photo")
+                    try {
+                        photoTracker.expect(temps)
+                        for (temp in temps) {
+                            val photo = repository.uploadPhoto(listingId, temp, photoTracker)
+                            _state.value = _state.value.copy(photos = _state.value.photos + photo)
+                        }
+                    } finally {
+                        repository.discardStaged(temps)
+                    }
+                } catch (e: Exception) {
+                    _events.emit(EditListingEvent.Error(e.toMochiError()))
                 }
-            } catch (e: Exception) {
-                _events.emit(EditListingEvent.Error(e.toMochiError()))
-            } finally {
-                repository.discardStaged(temps)
-                _state.value = _state.value.copy(isUploadingPhoto = false)
             }
         }
     }
@@ -543,18 +555,21 @@ class EditListingViewModel @Inject constructor(
                 if (_state.value.listingId.isEmpty()) return@launch
             }
             val listingId = _state.value.listingId
-            _state.value = _state.value.copy(isUploadingAsset = true)
-            val temps = repository.stageFiles(uris)
-            try {
-                for (temp in temps) {
-                    val asset = repository.uploadAsset(listingId, temp)
-                    _state.value = _state.value.copy(assets = _state.value.assets + asset)
+            assetTracker.track {
+                try {
+                    val temps = repository.stageFiles(uris)
+                    try {
+                        assetTracker.expect(temps)
+                        for (temp in temps) {
+                            val asset = repository.uploadAsset(listingId, temp, assetTracker)
+                            _state.value = _state.value.copy(assets = _state.value.assets + asset)
+                        }
+                    } finally {
+                        repository.discardStaged(temps)
+                    }
+                } catch (e: Exception) {
+                    _events.emit(EditListingEvent.Error(e.toMochiError()))
                 }
-            } catch (e: Exception) {
-                _events.emit(EditListingEvent.Error(e.toMochiError()))
-            } finally {
-                repository.discardStaged(temps)
-                _state.value = _state.value.copy(isUploadingAsset = false)
             }
         }
     }

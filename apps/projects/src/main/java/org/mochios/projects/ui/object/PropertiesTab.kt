@@ -237,10 +237,14 @@ fun PropertiesTab(
             Spacer(modifier = Modifier.height(24.dp))
             HorizontalDivider()
             Spacer(modifier = Modifier.height(16.dp))
+            val attachmentUpload by remember(obj.id) {
+                viewModel.attachmentUpload(obj.id)
+            }.collectAsState()
             AttachmentsSection(
                 attachments = uiState.attachments,
                 projectId = projectId,
-                onAddAttachment = { uri -> viewModel.createAttachment(uri) },
+                upload = attachmentUpload,
+                onAddAttachments = { uris -> viewModel.createAttachments(uris) },
                 onDeleteAttachment = { id -> viewModel.deleteAttachment(id) },
             )
 

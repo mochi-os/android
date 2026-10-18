@@ -232,6 +232,9 @@ fun ObjectDetailSheet(
                             crmId = crmId,
                             drafts = viewModel.drafts,
                             target = obj.id,
+                            upload = remember(obj.id) {
+                                viewModel.commentUpload(obj.id)
+                            }.collectAsState().value,
                             onCreateComment = { content, parent, uris ->
                                 viewModel.createComment(content, parent, uris)
                             },

@@ -329,4 +329,7 @@
     <string name="common_open_settings">सेटिंग खोलीं</string>
     <string name="notifications_permission_reason">Mochi के सूचना देखावे खातिर अनुमति चाहीं, ताकि रउआ के नया संदेश, जवाब आ रिमाइंडर के बारे में पता चलत रहे।</string>
     <string name="notifications_permission_blocked">Mochi खातिर सूचना बंद बा। रउआ ऐप के सूचना सेटिंग में एकरा के चालू कर सकेलीं।</string>
+    <string name="upload_progress">अपलोड के प्रगति</string>
+    <string name="upload_processing">प्रोसेस हो रहल बा…</string>
+    <string name="upload_sent">%2$s में से %1$s</string>
 </resources>

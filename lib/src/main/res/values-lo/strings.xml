@@ -329,4 +329,7 @@
     <string name="common_open_settings">ເປີດການຕັ້ງຄ່າ</string>
     <string name="notifications_permission_reason">Mochi ຕ້ອງການສິດເພື່ອສະແດງການແຈ້ງເຕືອນ ເພື່ອໃຫ້ທ່ານຮູ້ກ່ຽວກັບຂໍ້ຄວາມໃໝ່, ການຕອບກັບ ແລະ ການເຕືອນຄວາມຈຳ.</string>
     <string name="notifications_permission_blocked">ການແຈ້ງເຕືອນຖືກປິດໄວ້ສຳລັບ Mochi. ທ່ານສາມາດເປີດມັນໄດ້ໃນການຕັ້ງຄ່າການແຈ້ງເຕືອນຂອງແອັບ.</string>
+    <string name="upload_progress">ຄວາມຄືບໜ້າການອັບໂຫລດ</string>
+    <string name="upload_processing">ກຳລັງປະມວນຜົນ…</string>
+    <string name="upload_sent">%1$s ຈາກ %2$s</string>
 </resources>

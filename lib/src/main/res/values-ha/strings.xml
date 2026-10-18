@@ -329,4 +329,7 @@
     <string name="common_open_settings">Buɗe saituna</string>
     <string name="notifications_permission_reason">Mochi na buƙatar izini don nuna sanarwa, don ka ji labarin sabbin saƙonni, amsoshi da tunatarwa.</string>
     <string name="notifications_permission_blocked">An kashe sanarwa don Mochi. Za ka iya kunna su a saitunan sanarwa na manhajar.</string>
+    <string name="upload_progress">Ci gaban lodawa</string>
+    <string name="upload_processing">Ana sarrafawa…</string>
+    <string name="upload_sent">%1$s cikin %2$s</string>
 </resources>

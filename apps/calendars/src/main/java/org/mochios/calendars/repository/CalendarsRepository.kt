@@ -23,6 +23,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.sync.EventComponent
 import org.mochios.calendars.api.CalendarsApi
@@ -245,12 +246,18 @@ class CalendarsRepository @Inject constructor(
      * file, only the [staged] id the first answered and the [offset] the last
      * round reached.
      */
-    suspend fun importRound(calendar: String, file: File?, staged: String?, offset: Int): ImportResponse = call {
+    suspend fun importRound(
+        calendar: String,
+        file: File?,
+        staged: String?,
+        offset: Int,
+        tracker: UploadTracker? = null,
+    ): ImportResponse = call {
         api.importCalendar(
             calendar = calendar.toRequestBody(TEXT),
             offset = offset.toString().toRequestBody(TEXT),
             staged = staged?.toRequestBody(TEXT),
-            file = file?.let { fileStore.filePart("file", it, Icalendar.TYPE) },
+            file = file?.let { fileStore.filePart("file", it, Icalendar.TYPE, tracker) },
         ).unwrap()
     }
 

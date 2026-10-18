@@ -25,6 +25,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.appendDistinct
@@ -164,6 +166,11 @@ class FeedViewModel @Inject constructor(
 
     private val _isSendingComment = MutableStateFlow(false)
     val isSendingComment: StateFlow<Boolean> = _isSendingComment.asStateFlow()
+
+    private val commentTracker = UploadTracker()
+
+    /** The files of the comment being sent, for the composer. */
+    val commentUpload: StateFlow<Upload?> = commentTracker.state
 
     private val _isLoadingMore = MutableStateFlow(false)
     val isLoadingMore: StateFlow<Boolean> = _isLoadingMore.asStateFlow()
@@ -584,20 +591,30 @@ class FeedViewModel @Inject constructor(
             try {
                 if (target.editCommentId != null) {
                     repository.editComment(target.feedId, target.postId, target.editCommentId, body)
+                    _commentTarget.value = null
+                    _commentDraft.value = ""
+                    _commentAttachments.value = emptyList()
+                    refreshPostQuietly(target.feedId, target.postId)
                 } else {
-                    repository.createComment(
-                        feedId = target.feedId,
-                        postId = target.postId,
-                        body = body,
-                        parent = target.parentId,
-                        files = _commentAttachments.value,
-                        context = context,
-                    )
+                    val files = _commentAttachments.value
+                    commentTracker.track(files) {
+                        repository.createComment(
+                            feedId = target.feedId,
+                            postId = target.postId,
+                            body = body,
+                            parent = target.parentId,
+                            files = files,
+                            context = context,
+                            tracker = commentTracker,
+                        )
+                        _commentTarget.value = null
+                        _commentDraft.value = ""
+                        _commentAttachments.value = emptyList()
+                        // Inside the upload, so the files in flight give way
+                        // to the comment with nothing blank between.
+                        runCatching { refreshPostQuietly(target.feedId, target.postId) }
+                    }
                 }
-                _commentTarget.value = null
-                _commentDraft.value = ""
-                _commentAttachments.value = emptyList()
-                refreshPostQuietly(target.feedId, target.postId)
             } catch (_: Exception) {
                 // Keep the draft so the user can retry.
             } finally {

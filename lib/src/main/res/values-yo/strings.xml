@@ -329,4 +329,7 @@
     <string name="common_open_settings">Ṣí àwọn ìṣètò</string>
     <string name="notifications_permission_reason">Mochi nílò ìyọ̀ǹda láti ṣàfihàn àwọn ìfìtọ́nisí, kí o lè gbọ́ nípa àwọn ìfiránṣẹ́ tuntun, àwọn èsì àti àwọn ìránnilétí.</string>
     <string name="notifications_permission_blocked">A ti pa àwọn ìfìtọ́nisí fún Mochi. O lè tàn wọ́n nínú àwọn ìṣètò ìfìtọ́nisí app náà.</string>
+    <string name="upload_progress">Ìlọsíwájú ìgbéjáde</string>
+    <string name="upload_processing">Ń ṣiṣẹ́ lé e…</string>
+    <string name="upload_sent">%1$s nínú %2$s</string>
 </resources>

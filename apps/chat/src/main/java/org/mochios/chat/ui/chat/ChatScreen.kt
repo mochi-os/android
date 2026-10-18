@@ -248,6 +248,7 @@ private fun ChatContent(
     viewModel: ChatViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val upload by viewModel.upload.collectAsState()
 
     // Clears this chat's tray rows on every return, and keeps a push about it
     // from posting at all while the screen is up - the server's mark-read does
@@ -643,6 +644,7 @@ private fun ChatContent(
                 placeholder = stringResource(R.string.chat_message_placeholder),
                 enabled = uiState.chat.id.isNotEmpty() && uiState.chat.status == ChatStatus.ACTIVE,
                 isSending = uiState.isSending,
+                upload = upload,
                 sendLabel = if (uiState.editing != null) {
                     stringResource(MochiR.string.common_save)
                 } else {

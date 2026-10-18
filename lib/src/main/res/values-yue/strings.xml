@@ -329,4 +329,7 @@
     <string name="common_open_settings">開啟設定</string>
     <string name="notifications_permission_reason">Mochi 需要權限顯示通知，等你可以知道新訊息、回覆同提醒。</string>
     <string name="notifications_permission_blocked">Mochi 嘅通知已經關閉。你可以喺應用程式嘅通知設定入面開啟。</string>
+    <string name="upload_progress">上載進度</string>
+    <string name="upload_processing">處理中…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>

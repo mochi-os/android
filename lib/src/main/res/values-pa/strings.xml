@@ -329,4 +329,7 @@
     <string name="common_open_settings">ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ</string>
     <string name="notifications_permission_reason">Mochi ਨੂੰ ਸੂਚਨਾਵਾਂ ਦਿਖਾਉਣ ਲਈ ਇਜਾਜ਼ਤ ਦੀ ਲੋੜ ਹੈ, ਤਾਂ ਜੋ ਤੁਹਾਨੂੰ ਨਵੇਂ ਸੁਨੇਹਿਆਂ, ਜਵਾਬਾਂ ਅਤੇ ਰਿਮਾਈਂਡਰਾਂ ਬਾਰੇ ਪਤਾ ਲੱਗ ਸਕੇ।</string>
     <string name="notifications_permission_blocked">Mochi ਲਈ ਸੂਚਨਾਵਾਂ ਬੰਦ ਹਨ। ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ ਐਪ ਦੀਆਂ ਸੂਚਨਾ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।</string>
+    <string name="upload_progress">ਅੱਪਲੋਡ ਪ੍ਰਗਤੀ</string>
+    <string name="upload_processing">ਪ੍ਰਕਿਰਿਆ ਜਾਰੀ ਹੈ…</string>
+    <string name="upload_sent">%2$s ਵਿੱਚੋਂ %1$s</string>
 </resources>

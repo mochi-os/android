@@ -16,6 +16,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.User
 import org.mochios.crm.lib.ActiveViewStore
@@ -72,6 +74,11 @@ class CreateObjectViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(CreateObjectUiState())
     val uiState: StateFlow<CreateObjectUiState> = _uiState.asStateFlow()
+
+    private val tracker = UploadTracker()
+
+    /** The attachments picked on the form, while Create uploads them. */
+    val upload: StateFlow<Upload?> = tracker.state
 
     init {
         load()
@@ -175,11 +182,14 @@ class CreateObjectViewModel @Inject constructor(
                 // Upload any attachments picked on the form, mirroring web's
                 // create-then-upload flow. One failure shouldn't lose the object
                 // or the other files, so each upload is isolated.
-                val files = repository.stageFiles(uris)
-                for (file in files) {
-                    runCatching { repository.createAttachment(crmId, obj.id, file) }
+                tracker.track(uris) {
+                    val files = repository.stageFiles(uris)
+                    tracker.expect(files)
+                    for (file in files) {
+                        runCatching { repository.createAttachment(crmId, obj.id, listOf(file), tracker) }
+                    }
+                    repository.discardStaged(files)
                 }
-                repository.discardStaged(files)
                 // A copy's attachments are copied by the server, which holds
                 // the bytes; like an upload, a failure loses no object.
                 if (copies.isNotEmpty()) {

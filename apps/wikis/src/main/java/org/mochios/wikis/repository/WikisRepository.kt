@@ -18,6 +18,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.wikis.api.WikisApi
 import org.mochios.wikis.model.RssTokenResponse
@@ -551,11 +552,12 @@ class WikisRepository @Inject constructor(
         body: String,
         parent: String?,
         files: List<File>?,
+        tracker: UploadTracker? = null,
     ): CommentCreateResponse {
         return try {
             val bodyPart = body.toRequestBody(text)
             val parentPart = parent?.toRequestBody(text)
-            val fileParts = files.orEmpty().map { multipart("files", it) }
+            val fileParts = files.orEmpty().map { multipart("files", it, tracker) }
             api.createComment(
                 wiki = wiki,
                 page = slug,
@@ -602,9 +604,10 @@ class WikisRepository @Inject constructor(
     suspend fun uploadAttachments(
         wiki: String,
         files: List<File>,
+        tracker: UploadTracker? = null,
     ): List<Attachment> {
         return try {
-            val fileParts = files.map { multipart("files", it) }
+            val fileParts = files.map { multipart("files", it, tracker) }
             api.uploadAttachments(wiki, fileParts).unwrap().attachments
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -627,6 +630,6 @@ class WikisRepository @Inject constructor(
         }
     }
 
-    private fun multipart(field: String, file: File): MultipartBody.Part =
-        fileStore.filePart(field, file)
+    private fun multipart(field: String, file: File, tracker: UploadTracker? = null): MultipartBody.Part =
+        fileStore.filePart(field, file, tracker = tracker)
 }

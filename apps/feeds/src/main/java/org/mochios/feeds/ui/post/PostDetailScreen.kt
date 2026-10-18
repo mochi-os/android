@@ -134,6 +134,7 @@ fun PostDetailScreen(
     val commentText by viewModel.commentText.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
     val isSendingComment by viewModel.isSendingComment.collectAsState()
+    val commentUpload by viewModel.commentUpload.collectAsState()
     val replyingTo by viewModel.replyingTo.collectAsState()
     val editingCommentId by viewModel.editingCommentId.collectAsState()
     val editCommentText by viewModel.editCommentText.collectAsState()
@@ -232,6 +233,7 @@ fun PostDetailScreen(
                     onValueChange = { viewModel.setCommentText(it) },
                     onSend = { viewModel.sendComment() },
                     isSending = isSendingComment,
+                    upload = commentUpload,
                     sendLabel = stringResource(R.string.feeds_send),
                     windowInsets = ComposeBarDefaults.WindowInsets,
                     attachments = feedsCommentAttachments(

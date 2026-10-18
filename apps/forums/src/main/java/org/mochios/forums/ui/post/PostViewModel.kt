@@ -21,6 +21,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.R
@@ -74,6 +76,11 @@ class PostViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(PostUiState())
     val uiState: StateFlow<PostUiState> = _uiState.asStateFlow()
+
+    private val commentTracker = UploadTracker()
+
+    /** The files of the comment being sent, for the composer. */
+    val commentUpload: StateFlow<Upload?> = commentTracker.state
 
     private var subscriptionId: String? = null
 
@@ -241,18 +248,22 @@ class PostViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isSending = true)
             try {
                 val parent = _uiState.value.replyTo?.id
-                repository.createCommentFromUris(
-                    forumId = forumId,
-                    postId = postId,
-                    body = trimmed,
-                    parent = parent,
-                    uris = _commentAttachments.value,
-                    context = application,
-                    attachment = anchor,
-                )
-                _commentAttachments.value = emptyList()
-                _uiState.value = _uiState.value.copy(replyTo = null)
-                refresh()
+                val uris = _commentAttachments.value
+                commentTracker.track(uris) {
+                    repository.createCommentFromUris(
+                        forumId = forumId,
+                        postId = postId,
+                        body = trimmed,
+                        parent = parent,
+                        uris = uris,
+                        context = application,
+                        attachment = anchor,
+                        tracker = commentTracker,
+                    )
+                    _commentAttachments.value = emptyList()
+                    _uiState.value = _uiState.value.copy(replyTo = null)
+                    refresh()
+                }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             } finally {

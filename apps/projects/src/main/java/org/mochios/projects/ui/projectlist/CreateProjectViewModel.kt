@@ -17,6 +17,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.NaturalCompare
 import org.mochios.projects.model.Project
 import org.mochios.projects.model.Template
@@ -61,6 +63,11 @@ class CreateProjectViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(CreateProjectUiState())
     val uiState: StateFlow<CreateProjectUiState> = _uiState.asStateFlow()
+
+    private val tracker = UploadTracker()
+
+    /** The backup being uploaded into the new project, while it goes. */
+    val upload: StateFlow<Upload?> = tracker.state
 
     init {
         loadTemplates()
@@ -160,7 +167,7 @@ class CreateProjectViewModel @Inject constructor(
             if (archive != null) {
                 // The archive carries design, objects and attachment bytes;
                 // one upload restores all three.
-                repository.importArchive(projectId, archive)
+                tracker.track { repository.importArchive(projectId, archive, tracker) }
                 return
             }
             val root = JsonParser.parseString(backupJson).asJsonObject
@@ -172,7 +179,7 @@ class CreateProjectViewModel @Inject constructor(
                 templateVersion = 0
             )
             if (hasData(root)) {
-                repository.importData(projectId, backupJson)
+                tracker.track { repository.importData(projectId, backupJson, tracker) }
             }
         } catch (e: Exception) {
             // delete rejects a fingerprint, so roll back with the canonical id

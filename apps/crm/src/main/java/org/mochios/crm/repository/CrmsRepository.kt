@@ -13,6 +13,7 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
@@ -247,12 +248,19 @@ class CrmsRepository @Inject constructor(
     suspend fun getComments(crmId: String, objectId: String): List<Comment> =
         api.getComments(crmId, objectId).unwrap().comments
 
-    suspend fun createComment(crmId: String, objectId: String, content: String, parent: String? = null, files: List<File> = emptyList()): Comment {
+    suspend fun createComment(
+        crmId: String,
+        objectId: String,
+        content: String,
+        parent: String? = null,
+        files: List<File> = emptyList(),
+        tracker: UploadTracker? = null,
+    ): Comment {
         val contentBody = content.toRequestBody("text/plain".toMediaTypeOrNull())
         val parentBody = parent?.toRequestBody("text/plain".toMediaTypeOrNull())
         // The server reads the multipart field "files" (attachment_save);
         // parts named anything else are silently dropped.
-        val fileParts = fileStore.fileParts("files", files)
+        val fileParts = fileStore.fileParts("files", files, tracker)
         return api.createComment(crmId, objectId, contentBody, parentBody, fileParts).unwrap()
     }
 
@@ -269,9 +277,14 @@ class CrmsRepository @Inject constructor(
     suspend fun getAttachments(crmId: String, objectId: String): List<Attachment> =
         api.getAttachments(crmId, objectId).unwrap().attachments
 
-    suspend fun createAttachment(crmId: String, objectId: String, file: File): List<Attachment> {
-        val part = fileStore.filePart("files", file)
-        return api.createAttachment(crmId, objectId, part).unwrap().attachments
+    suspend fun createAttachment(
+        crmId: String,
+        objectId: String,
+        files: List<File>,
+        tracker: UploadTracker? = null,
+    ): List<Attachment> {
+        val parts = fileStore.fileParts("files", files, tracker)
+        return api.createAttachment(crmId, objectId, parts).unwrap().attachments
     }
 
     suspend fun deleteAttachment(crmId: String, objectId: String, attachmentId: String) {
@@ -335,12 +348,13 @@ class CrmsRepository @Inject constructor(
     }
 
     /** Restores the objects held in a backup file, uploaded as a JSON part. */
-    suspend fun importData(crmId: String, backupJson: String) {
+    suspend fun importData(crmId: String, backupJson: String, tracker: UploadTracker? = null) {
         val part = fileStore.bytesPart(
             field = "file",
             fileName = "import.json",
             mimeType = "application/json",
-            bytes = backupJson.toByteArray()
+            bytes = backupJson.toByteArray(),
+            tracker = tracker,
         )
         api.importData(crmId, part).unwrap()
     }
@@ -350,10 +364,10 @@ class CrmsRepository @Inject constructor(
      * server applies the design it carries, then its objects and the
      * attachment bytes. Unwrapping the zip here would drop the attachments.
      */
-    suspend fun importArchive(crmId: String, uri: Uri) {
+    suspend fun importArchive(crmId: String, uri: Uri, tracker: UploadTracker? = null) {
         val file = stageFile(uri, "backup.zip") ?: throw IllegalStateException("cannot read backup")
         try {
-            val part = fileStore.filePart("file", file, "application/zip")
+            val part = fileStore.filePart("file", file, "application/zip", tracker)
             api.importData(crmId, part, "1".toRequestBody("text/plain".toMediaTypeOrNull())).unwrap()
         } finally {
             discardStaged(listOf(file))

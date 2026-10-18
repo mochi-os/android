@@ -28,6 +28,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R as MochiR
+import org.mochios.android.files.Upload
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentActions
 import org.mochios.android.ui.components.CommentItem as SharedCommentItem
@@ -53,6 +54,8 @@ fun CommentsTab(
     onUpdateComment: (String, String) -> Unit,
     onDeleteComment: (String) -> Unit,
     onSearchUsers: (suspend (String) -> List<MentionSuggestion>)? = null,
+    /** The files of a comment being sent, shown in the composer until it is in. */
+    upload: Upload? = null,
     // Builds the avatar proxy path for a commenter. Should return a
     // server-relative path to the crm app's proxy action, e.g.
     // "/crm/<crm>/-/comment/<comment.id>/asset/avatar".
@@ -121,6 +124,7 @@ fun CommentsTab(
                 removeLabel = stringResource(R.string.crm_comment_remove_attachment),
             ),
             onSearchMentions = onSearchUsers,
+            upload = upload,
             banner = replyTarget?.let { comment ->
                 {
                     ReplyComposerBanner(

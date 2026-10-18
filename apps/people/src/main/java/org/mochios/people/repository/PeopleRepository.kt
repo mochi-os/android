@@ -17,6 +17,7 @@ import okhttp3.MultipartBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.sync.ContactProperty
 import org.mochios.people.api.ContactRequest
 import org.mochios.people.api.ContactUpdateRequest
@@ -307,23 +308,23 @@ class PeopleRepository @Inject constructor(
         api.setPrivacy(person, privacy).unwrap()
     }
 
-    suspend fun setAvatar(person: String, file: File) {
-        api.setAvatar(person, multipart(file)).unwrap()
+    suspend fun setAvatar(person: String, file: File, tracker: UploadTracker? = null) {
+        api.setAvatar(person, multipart(file, tracker)).unwrap()
     }
 
-    suspend fun setBanner(person: String, file: File) {
-        api.setBanner(person, multipart(file)).unwrap()
+    suspend fun setBanner(person: String, file: File, tracker: UploadTracker? = null) {
+        api.setBanner(person, multipart(file, tracker)).unwrap()
     }
 
-    suspend fun setFavicon(person: String, file: File) {
-        api.setFavicon(person, multipart(file)).unwrap()
+    suspend fun setFavicon(person: String, file: File, tracker: UploadTracker? = null) {
+        api.setFavicon(person, multipart(file, tracker)).unwrap()
     }
 
     // The picker always re-encodes to JPEG, so the part must declare an image
     // Content-Type — the server rejects "application/octet-stream" with
     // "<slot> must be an image". Field name "file" matches the web upload.
-    private fun multipart(file: File): MultipartBody.Part =
-        fileStore.filePart("file", file, "image/jpeg")
+    private fun multipart(file: File, tracker: UploadTracker?): MultipartBody.Part =
+        fileStore.filePart("file", file, "image/jpeg", tracker)
 
     private fun wireType(type: GroupMemberType): String = when (type) {
         GroupMemberType.USER -> "user"

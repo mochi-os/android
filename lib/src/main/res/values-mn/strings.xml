@@ -329,4 +329,7 @@
     <string name="common_open_settings">Тохиргоог нээх</string>
     <string name="notifications_permission_reason">Та шинэ мессеж, хариу, сануулгын талаар мэдэж байхын тулд Mochi-д мэдэгдэл харуулах зөвшөөрөл хэрэгтэй.</string>
     <string name="notifications_permission_blocked">Mochi-н мэдэгдлүүд унтраалттай байна. Та тэдгээрийг аппын мэдэгдлийн тохиргооноос асааж болно.</string>
+    <string name="upload_progress">Байршуулалтын явц</string>
+    <string name="upload_processing">Боловсруулж байна…</string>
+    <string name="upload_sent">%2$s-с %1$s</string>
 </resources>

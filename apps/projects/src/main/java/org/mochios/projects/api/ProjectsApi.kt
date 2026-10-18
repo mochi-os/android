@@ -413,7 +413,7 @@ interface ProjectsApi {
     suspend fun createAttachment(
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
-        @Part file: MultipartBody.Part
+        @Part files: List<MultipartBody.Part>
     ): Response<ApiResponse<AttachmentListResponse>>
 
     /** Copies attachments of other objects in the project onto this one; [attachments] comma-separated. */

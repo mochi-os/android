@@ -299,6 +299,7 @@ fun FeedScreen(
     val commentDraft by viewModel.commentDraft.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
     val isSendingComment by viewModel.isSendingComment.collectAsState()
+    val commentUpload by viewModel.commentUpload.collectAsState()
 
     var showOverflowMenu by remember { mutableStateOf(false) }
     // Whether the overflow menu is showing its nested "RSS feed" submenu.
@@ -995,6 +996,7 @@ fun FeedScreen(
                         onValueChange = { value -> viewModel.setCommentDraft(value) },
                         onSend = { viewModel.sendComment() },
                         isSending = isSendingComment,
+                        upload = commentUpload,
                         sendLabel = stringResource(R.string.feeds_send),
                         attachments = feedsCommentAttachments(
                             attachments = commentAttachments,

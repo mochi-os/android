@@ -329,4 +329,7 @@
     <string name="common_open_settings">Mîhengan veke</string>
     <string name="notifications_permission_reason">Mochi destûrê hewce dike ku agahdariyan nîşan bide, da ku tu ji peyamên nû, bersiv û bîrxistinan haydar bibî.</string>
     <string name="notifications_permission_blocked">Agahdarî ji bo Mochi neçalak in. Tu dikarî wan di mîhengên agahdariyan ên sepanê de çalak bikî.</string>
+    <string name="upload_progress">Pêşketina barkirinê</string>
+    <string name="upload_processing">Tê pêvajokirin…</string>
+    <string name="upload_sent">%1$s ji %2$s</string>
 </resources>

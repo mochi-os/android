@@ -57,6 +57,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import org.mochios.android.files.Upload
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.FileKind
 
@@ -161,6 +162,10 @@ data class ComposeBarAttachments(
  * @param windowInsets which insets to consume. See [ComposeBarDefaults] — the
  *   default suits a Scaffold, and sheet/lightbox hosts want
  *   [ComposeBarDefaults.NoWindowInsets].
+ * @param upload the send in flight, from the caller's
+ *   [UploadTracker][org.mochios.android.files.UploadTracker]. While it
+ *   is set the files being sent show as chips with their own progress over an
+ *   [UploadProgress] bar, and neither attaching nor sending is possible.
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -185,6 +190,7 @@ fun ComposeBar(
     shadowElevation: Dp = 0.dp,
     windowInsets: WindowInsets = ComposeBarDefaults.WindowInsets,
     showDivider: Boolean = true,
+    upload: Upload? = null,
     banner: (@Composable () -> Unit)? = null,
     trailingContent: (@Composable RowScope.() -> Unit)? = null,
 ) {
@@ -207,7 +213,8 @@ fun ComposeBar(
     val pending = attachments?.pending.orEmpty()
     val hasContent =
         if (requireText) value.text.isNotBlank() else value.text.isNotBlank() || pending.isNotEmpty()
-    val canSend = enabled && !isSending && hasContent
+    val busy = isSending || upload != null
+    val canSend = enabled && !busy && hasContent
 
     Surface(
         modifier = modifier.fillMaxWidth(),
@@ -226,7 +233,17 @@ fun ComposeBar(
                     .windowInsetsPadding(appliedInsets)
                     .padding(horizontal = 8.dp, vertical = 8.dp),
             ) {
-                if (attachments != null && pending.isNotEmpty()) {
+                val sending = upload?.files.orEmpty()
+                if (sending.isNotEmpty()) {
+                    FlowRow(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        sending.forEach { file -> UploadChip(file) }
+                    }
+                    Spacer(modifier = Modifier.height(4.dp))
+                } else if (attachments != null && pending.isNotEmpty()) {
                     FlowRow(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -252,15 +269,20 @@ fun ComposeBar(
                                 onMoveUp = { attachments.onMove?.invoke(uri, -1) },
                                 onMoveDown = { attachments.onMove?.invoke(uri, 1) },
                                 onRemove = { attachments.onRemove(uri) },
+                                enabled = upload == null,
                             )
                         }
                     }
                     Spacer(modifier = Modifier.height(4.dp))
                 }
+                if (upload != null) {
+                    UploadProgress(upload, modifier = Modifier.padding(horizontal = 4.dp))
+                    Spacer(modifier = Modifier.height(4.dp))
+                }
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     if (filePicker != null && attachments != null) {
-                        MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = enabled) {
+                        MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = enabled && upload == null) {
                             Icon(Icons.Default.AttachFile, contentDescription = attachments.addLabel)
                         }
                     }
@@ -313,7 +335,7 @@ fun ComposeBar(
                     trailingContent?.invoke(this)
                     Spacer(modifier = Modifier.width(8.dp))
                     MochiIconButton(onClick = submit, enabled = canSend) {
-                        if (isSending) {
+                        if (busy) {
                             CircularProgressIndicator(modifier = Modifier.padding(4.dp))
                         } else {
                             Icon(Icons.AutoMirrored.Filled.Send, contentDescription = sendLabel)
@@ -365,6 +387,7 @@ fun ComposeBar(
     shadowElevation: Dp = 0.dp,
     windowInsets: WindowInsets = ComposeBarDefaults.WindowInsets,
     showDivider: Boolean = true,
+    upload: Upload? = null,
     banner: (@Composable () -> Unit)? = null,
     trailingContent: (@Composable RowScope.() -> Unit)? = null,
 ) {
@@ -395,6 +418,7 @@ fun ComposeBar(
         shadowElevation = shadowElevation,
         windowInsets = windowInsets,
         showDivider = showDivider,
+        upload = upload,
         banner = banner,
         trailingContent = trailingContent,
     )
@@ -417,9 +441,11 @@ private fun AttachmentChip(
     onMoveUp: () -> Unit,
     onMoveDown: () -> Unit,
     onRemove: () -> Unit,
+    enabled: Boolean = true,
 ) {
     AssistChip(
         onClick = onRemove,
+        enabled = enabled,
         label = { Text(label, style = MaterialTheme.typography.labelSmall) },
         leadingIcon = {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -453,6 +479,25 @@ private fun AttachmentChip(
                 Icons.Default.Close,
                 contentDescription = removeLabel,
                 modifier = Modifier.size(14.dp),
+            )
+        },
+    )
+}
+
+/**
+ * One file of a send in flight: its name, with a ring filling as its bytes
+ * leave the device. Not removable - the bytes are already going.
+ */
+@Composable
+private fun UploadChip(file: Upload.File) {
+    AssistChip(
+        onClick = {},
+        label = { Text(file.name, style = MaterialTheme.typography.labelSmall) },
+        leadingIcon = {
+            CircularProgressIndicator(
+                progress = { file.fraction },
+                modifier = Modifier.size(16.dp),
+                strokeWidth = 2.dp,
             )
         },
     )

@@ -329,4 +329,7 @@
     <string name="common_open_settings">Öppna inställningar</string>
     <string name="notifications_permission_reason">Mochi behöver behörighet att visa aviseringar så att du får veta om nya meddelanden, svar och påminnelser.</string>
     <string name="notifications_permission_blocked">Aviseringar är avstängda för Mochi. Du kan aktivera dem i appens aviseringsinställningar.</string>
+    <string name="upload_progress">Uppladdningsförlopp</string>
+    <string name="upload_processing">Bearbetar…</string>
+    <string name="upload_sent">%1$s av %2$s</string>
 </resources>

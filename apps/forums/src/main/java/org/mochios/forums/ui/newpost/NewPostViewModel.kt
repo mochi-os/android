@@ -17,6 +17,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.forums.repository.ForumsRepository
@@ -51,6 +53,11 @@ class NewPostViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(NewPostUiState())
     val uiState: StateFlow<NewPostUiState> = _uiState.asStateFlow()
+
+    private val tracker = UploadTracker()
+
+    /** The new files of the post being sent, while they go. */
+    val upload: StateFlow<Upload?> = tracker.state
 
     private val _title = MutableStateFlow("")
     val title: StateFlow<String> = _title.asStateFlow()
@@ -192,16 +199,20 @@ class NewPostViewModel @Inject constructor(
                                 ?.let { put("new:$index", it) }
                         }
                     }
-                    repository.editPostFromUris(
-                        forumId = forumId,
-                        postId = postId,
-                        title = title,
-                        body = body,
-                        keptAttachmentIds = keptExisting,
-                        newFileUris = _attachments.value,
-                        captions = captions,
-                        context = application,
-                    )
+                    val uris = _attachments.value
+                    tracker.track(uris) {
+                        repository.editPostFromUris(
+                            forumId = forumId,
+                            postId = postId,
+                            title = title,
+                            body = body,
+                            keptAttachmentIds = keptExisting,
+                            newFileUris = uris,
+                            captions = captions,
+                            context = application,
+                            tracker = tracker,
+                        )
+                    }
                     _uiState.value = _uiState.value.copy(
                         isPosting = false,
                         postSuccess = true,
@@ -209,14 +220,18 @@ class NewPostViewModel @Inject constructor(
                         createdPost = postId
                     )
                 } else {
-                    val r = repository.createPostFromUris(
-                        forumId = forumId,
-                        title = title,
-                        body = body,
-                        uris = _attachments.value,
-                        captions = _attachments.value.map { _newCaptions.value[it] ?: "" },
-                        context = application,
-                    )
+                    val uris = _attachments.value
+                    val r = tracker.track(uris) {
+                        repository.createPostFromUris(
+                            forumId = forumId,
+                            title = title,
+                            body = body,
+                            uris = uris,
+                            captions = uris.map { _newCaptions.value[it] ?: "" },
+                            context = application,
+                            tracker = tracker,
+                        )
+                    }
                     _uiState.value = _uiState.value.copy(
                         isPosting = false,
                         postSuccess = true,

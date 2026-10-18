@@ -329,4 +329,7 @@
     <string name="common_open_settings">Sazlamalary aç</string>
     <string name="notifications_permission_reason">Mochi bildirişleri görkezmek üçin rugsat talap edýär, şeýlelikde täze habarlar, jogaplar we ýatlatmalar barada bilersiňiz.</string>
     <string name="notifications_permission_blocked">Mochi üçin bildirişler öçürilen. Olary programmanyň bildiriş sazlamalarynda açyp bilersiňiz.</string>
+    <string name="upload_progress">Ýükleme ýagdaýy</string>
+    <string name="upload_processing">Işlenýär…</string>
+    <string name="upload_sent">%2$s-den %1$s</string>
 </resources>

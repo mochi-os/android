@@ -29,6 +29,8 @@ import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.files.PendingExport
@@ -1045,6 +1047,11 @@ class CalendarViewModel @Inject constructor(
     /** The import under way, just finished, or failed, while its dialog is open. */
     val importing: StateFlow<Tally?> = _importing.asStateFlow()
 
+    private val importTracker = UploadTracker()
+
+    /** The file of the import's first round, while it goes up. */
+    val importUpload: StateFlow<Upload?> = importTracker.state
+
     /** The staged copy of a file whose import failed, kept while its dialog offers to try again. */
     private var retained: File? = null
 
@@ -1092,7 +1099,15 @@ class CalendarViewModel @Inject constructor(
             rounds(
                 file,
                 start,
-                round = { part, staged, offset -> repository.importRound(start.calendar, part, staged, offset) },
+                round = { part, staged, offset ->
+                    if (part == null) {
+                        repository.importRound(start.calendar, null, staged, offset)
+                    } else {
+                        importTracker.track {
+                            repository.importRound(start.calendar, part, staged, offset, importTracker)
+                        }
+                    }
+                },
                 progress = { _importing.value = it },
             )
         } catch (e: kotlinx.coroutines.CancellationException) {

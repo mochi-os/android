@@ -87,6 +87,8 @@ fun EditListingScreen(
     viewModel: EditListingViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
+    val photoUpload by viewModel.photoUpload.collectAsState()
+    val assetUpload by viewModel.assetUpload.collectAsState()
     val snackbar = remember { SnackbarHostState() }
     val resources = LocalResources.current
 
@@ -256,7 +258,7 @@ fun EditListingScreen(
                     },
                     onDelete = viewModel::deletePhoto,
                     onReorder = viewModel::reorderPhotos,
-                    isUploading = state.isUploadingPhoto,
+                    upload = photoUpload,
                 )
             }
 
@@ -271,7 +273,7 @@ fun EditListingScreen(
                         onDelete = { assetToDelete = it },
                         onReorder = viewModel::reorderAssets,
                         onAddExternal = viewModel::addExternalAsset,
-                        isUploading = state.isUploadingAsset,
+                        upload = assetUpload,
                     )
                 }
             }

@@ -12,8 +12,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -27,30 +29,34 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R as MochiR
+import org.mochios.android.files.Upload
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.UploadFiles
 import org.mochios.crm.R
 
 /**
  * Inline attachments section inside PropertiesTab, matching the web's
- * object-detail-panel (no separate tab).
+ * object-detail-panel (no separate tab). The picker uploads straight away, so
+ * the files of an [upload] in flight show above the gallery until it ends.
  */
 @Composable
 fun AttachmentsSection(
     attachments: List<Attachment>,
     crmId: String,
-    onAddAttachment: (Uri) -> Unit,
+    upload: Upload?,
+    onAddAttachments: (List<Uri>) -> Unit,
     onDeleteAttachment: (String) -> Unit,
 ) {
     var pendingDelete by remember { mutableStateOf<Attachment?>(null) }
 
     val filePicker = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.GetContent()
-    ) { uri: Uri? ->
-        if (uri != null) {
-            onAddAttachment(uri)
+        contract = ActivityResultContracts.GetMultipleContents()
+    ) { uris: List<Uri> ->
+        if (uris.isNotEmpty()) {
+            onAddAttachments(uris)
         }
     }
 
@@ -76,18 +82,24 @@ fun AttachmentsSection(
                 style = MaterialTheme.typography.titleSmall,
                 modifier = Modifier.weight(1f),
             )
-            MochiIconButton(onClick = { filePicker.launch("*/*") }) {
-                Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_attachment_add))
+            MochiIconButton(onClick = { filePicker.launch("*/*") }, enabled = upload == null) {
+                if (upload != null) {
+                    CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
+                } else {
+                    Icon(Icons.Default.Add, contentDescription = stringResource(R.string.crm_attachment_add))
+                }
             }
         }
 
-        if (ordered.isEmpty()) {
+        UploadFiles(upload, modifier = Modifier.padding(vertical = 8.dp))
+
+        if (ordered.isEmpty() && upload == null) {
             Text(
                 stringResource(R.string.crm_attachment_empty),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-        } else {
+        } else if (ordered.isNotEmpty()) {
             AttachmentGallery(
                 attachments = ordered,
                 urlBuilder = urlBuilder,

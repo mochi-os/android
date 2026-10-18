@@ -329,4 +329,7 @@
     <string name="common_open_settings">تنظیمات پرانیزئ</string>
     <string name="notifications_permission_reason">Mochi د خبرتیاوو ښودلو لپاره اجازې ته اړتیا لري، ترڅو تاسو د نویو پیغامونو، ځوابونو او یادونو په اړه خبر شئ.</string>
     <string name="notifications_permission_blocked">د Mochi لپاره خبرتیاوې بندې دي. تاسو کولی شئ دوی د اپلیکیشن د خبرتیاوو په تنظیماتو کې چالانې کړئ.</string>
+    <string name="upload_progress">د پورته کولو پرمختګ</string>
+    <string name="upload_processing">پروسس کیږي…</string>
+    <string name="upload_sent">%1$s له %2$s څخه</string>
 </resources>

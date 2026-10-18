@@ -329,4 +329,7 @@
     <string name="common_open_settings">Άνοιγμα ρυθμίσεων</string>
     <string name="notifications_permission_reason">Το Mochi χρειάζεται άδεια για να εμφανίζει ειδοποιήσεις, ώστε να ενημερώνεστε για νέα μηνύματα, απαντήσεις και υπενθυμίσεις.</string>
     <string name="notifications_permission_blocked">Οι ειδοποιήσεις είναι απενεργοποιημένες για το Mochi. Μπορείτε να τις ενεργοποιήσετε στις ρυθμίσεις ειδοποιήσεων της εφαρμογής.</string>
+    <string name="upload_progress">Πρόοδος μεταφόρτωσης</string>
+    <string name="upload_processing">Γίνεται επεξεργασία…</string>
+    <string name="upload_sent">%1$s από %2$s</string>
 </resources>

@@ -331,4 +331,7 @@
     <string name="common_open_settings">Maak instellings oop</string>
     <string name="notifications_permission_reason">Mochi het toestemming nodig om kennisgewings te wys, sodat jy van nuwe boodskappe, antwoorde en herinneringe hoor.</string>
     <string name="notifications_permission_blocked">Kennisgewings is vir Mochi afgeskakel. Jy kan hulle in die app se kennisgewinginstellings aanskakel.</string>
+    <string name="upload_progress">Oplaaivordering</string>
+    <string name="upload_processing">Verwerk…</string>
+    <string name="upload_sent">%1$s van %2$s</string>
 </resources>

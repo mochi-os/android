@@ -42,6 +42,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.files.Upload
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 
@@ -60,6 +61,7 @@ import org.mochios.android.api.userMessage
  * @param error Last failure, shown above the button; null hides the line.
  * @param onBack Called by the top bar's back button.
  * @param onSubmit Called by the submit button.
+ * @param upload Files the create is sending, drawn as a bar above the button.
  * @param actions The top bar's trailing actions, such as an overflow menu.
  * @param content Screen body, given the scaffold's inner padding.
  */
@@ -73,6 +75,7 @@ fun CreateEntityScaffold(
     error: MochiError?,
     onBack: () -> Unit,
     onSubmit: () -> Unit,
+    upload: Upload? = null,
     actions: @Composable RowScope.() -> Unit = {},
     content: @Composable (PaddingValues) -> Unit
 ) {
@@ -106,6 +109,10 @@ fun CreateEntityScaffold(
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.error
                         )
+                        Spacer(modifier = Modifier.height(8.dp))
+                    }
+                    if (upload != null) {
+                        UploadProgress(upload)
                         Spacer(modifier = Modifier.height(8.dp))
                     }
                     MochiButton(

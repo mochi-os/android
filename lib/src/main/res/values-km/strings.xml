@@ -329,4 +329,7 @@
     <string name="common_open_settings">បើកការកំណត់</string>
     <string name="notifications_permission_reason">Mochi ត្រូវការការអនុញ្ញាតដើម្បីបង្ហាញការជូនដំណឹង ដើម្បីឱ្យអ្នកដឹងអំពីសារថ្មី ការឆ្លើយតប និងការរំលឹក។</string>
     <string name="notifications_permission_blocked">ការជូនដំណឹងត្រូវបានបិទសម្រាប់ Mochi។ អ្នកអាចបើកវានៅក្នុងការកំណត់ការជូនដំណឹងរបស់កម្មវិធី។</string>
+    <string name="upload_progress">វឌ្ឍនភាពនៃការផ្ទុកឡើង</string>
+    <string name="upload_processing">កំពុងដំណើរការ…</string>
+    <string name="upload_sent">%1$s នៃ %2$s</string>
 </resources>

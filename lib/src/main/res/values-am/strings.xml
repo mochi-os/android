@@ -329,4 +329,7 @@
     <string name="common_open_settings">ቅንብሮችን ክፈት</string>
     <string name="notifications_permission_reason">Mochi ስለ አዲስ መልዕክቶች፣ ምላሾች እና አስታዋሾች እንዲያውቁ ማሳወቂያዎችን ለማሳየት ፈቃድ ያስፈልገዋል።</string>
     <string name="notifications_permission_blocked">የMochi ማሳወቂያዎች ጠፍተዋል። በመተግበሪያው የማሳወቂያ ቅንብሮች ውስጥ ሊያበሯቸው ይችላሉ።</string>
+    <string name="upload_progress">የመስቀል ሂደት</string>
+    <string name="upload_processing">በሂደት ላይ…</string>
+    <string name="upload_sent">%1$s ከ %2$s</string>
 </resources>

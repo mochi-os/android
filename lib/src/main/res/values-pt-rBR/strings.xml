@@ -309,4 +309,7 @@
     <string name="common_refresh">Atualizar</string>
     <string name="launcher_add_to_home">Adicionar à tela inicial</string>
     <string name="common_continue">Continuar</string>
+    <string name="upload_progress">Progresso do envio</string>
+    <string name="upload_processing">Processando…</string>
+    <string name="upload_sent">%1$s de %2$s</string>
 </resources>

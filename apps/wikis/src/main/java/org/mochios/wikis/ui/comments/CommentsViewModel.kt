@@ -19,6 +19,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.wikis.model.WikiComment
@@ -78,6 +80,11 @@ class CommentsViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(CommentsUiState())
     val uiState: StateFlow<CommentsUiState> = _uiState.asStateFlow()
+
+    private val tracker = UploadTracker()
+
+    /** The files of the comment being sent, for the composer. */
+    val upload: StateFlow<Upload?> = tracker.state
 
     private val _events = Channel<CommentsEvent>(Channel.BUFFERED)
     val events = _events.receiveAsFlow()
@@ -185,16 +192,21 @@ class CommentsViewModel @Inject constructor(
     fun createComment(body: String, parent: String? = null, uris: List<Uri>? = null) {
         val trimmed = body.trim()
         if (trimmed.isEmpty()) return
+        val picked = uris.orEmpty()
         viewModelScope.launch {
-            val files = repository.stageFiles(uris.orEmpty())
-            try {
-                repository.createComment(wikiId, slug, trimmed, parent, files.ifEmpty { null })
-                if (parent != null) cancelReply()
-                loadComments()
-            } catch (e: Exception) {
-                _events.send(CommentsEvent.Error(e.toMochiError()))
-            } finally {
-                repository.discardStaged(files)
+            tracker.track(picked) {
+                try {
+                    val files = repository.stageFiles(picked)
+                    try {
+                        repository.createComment(wikiId, slug, trimmed, parent, files.ifEmpty { null }, tracker)
+                        if (parent != null) cancelReply()
+                        loadComments()
+                    } finally {
+                        repository.discardStaged(files)
+                    }
+                } catch (e: Exception) {
+                    _events.send(CommentsEvent.Error(e.toMochiError()))
+                }
             }
         }
     }

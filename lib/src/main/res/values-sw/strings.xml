@@ -329,4 +329,7 @@
     <string name="common_open_settings">Fungua mipangilio</string>
     <string name="notifications_permission_reason">Mochi inahitaji ruhusa ili kuonyesha arifa, ili upate habari kuhusu ujumbe mpya, majibu na vikumbusho.</string>
     <string name="notifications_permission_blocked">Arifa zimezimwa kwa Mochi. Unaweza kuziwasha katika mipangilio ya arifa ya programu.</string>
+    <string name="upload_progress">Maendeleo ya upakiaji</string>
+    <string name="upload_processing">Inachakata…</string>
+    <string name="upload_sent">%1$s kati ya %2$s</string>
 </resources>

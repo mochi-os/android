@@ -22,6 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 
@@ -198,31 +199,52 @@ class FileStore @Inject constructor(
 
     /**
      * A multipart part from [file] under form field [field]. [mimeType]
-     * overrides the type inferred from the extension.
+     * overrides the type inferred from the extension. With a [tracker], the
+     * file joins the upload it is showing and its bytes are counted as sent.
      */
-    fun filePart(field: String, file: File, mimeType: String? = null): MultipartBody.Part {
+    fun filePart(
+        field: String,
+        file: File,
+        mimeType: String? = null,
+        tracker: UploadTracker? = null,
+    ): MultipartBody.Part {
         val type = mimeType ?: mimeType(file)
         val body = file.asRequestBody(type.toMediaTypeOrNull())
-        return MultipartBody.Part.createFormData(field, file.name, body)
+        return MultipartBody.Part.createFormData(
+            field,
+            file.name,
+            counted(body, file.name, file.length(), tracker),
+        )
     }
 
     /** [filePart] for each of [files], under the same form [field]. */
-    fun fileParts(field: String, files: List<File>): List<MultipartBody.Part> =
-        files.map { file -> filePart(field, file) }
+    fun fileParts(
+        field: String,
+        files: List<File>,
+        tracker: UploadTracker? = null,
+    ): List<MultipartBody.Part> =
+        files.map { file -> filePart(field, file, tracker = tracker) }
 
     fun bytesPart(
         field: String,
         fileName: String,
         mimeType: String,
-        bytes: ByteArray
-    ): MultipartBody.Part =
-        MultipartBody.Part.createFormData(
+        bytes: ByteArray,
+        tracker: UploadTracker? = null,
+    ): MultipartBody.Part {
+        val body = bytes.toRequestBody(mimeType.toMediaTypeOrNull())
+        return MultipartBody.Part.createFormData(
             field,
             fileName,
-            bytes.toRequestBody(mimeType.toMediaTypeOrNull())
+            counted(body, fileName, bytes.size.toLong(), tracker),
         )
+    }
 
     // ---- Internals ----
+
+    /** [body] counted into [tracker]'s upload as [name], or as it is without one. */
+    private fun counted(body: RequestBody, name: String, size: Long, tracker: UploadTracker?): RequestBody =
+        if (tracker == null) body else CountedBody(body, tracker.add(name, size))
 
     /** True when [stream] starts with a zip's local file header signature. */
     private fun isZip(stream: BufferedInputStream): Boolean {

@@ -97,6 +97,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.Upload
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
@@ -138,6 +139,7 @@ fun PostScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
+    val commentUpload by viewModel.commentUpload.collectAsState()
     // A TextFieldValue rather than a String: quoting has to place the caret, and
     // only the value carries a selection.
     var draft by remember { mutableStateOf(TextFieldValue("")) }
@@ -222,6 +224,7 @@ fun PostScreen(
             replyTo = uiState.replyTo,
             onClearReply = { viewModel.setReplyTo(null) },
             isSending = uiState.isSending,
+            upload = commentUpload,
             attachments = commentAttachments,
             onAddAttachments = { uris -> viewModel.addCommentAttachments(uris) },
             onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
@@ -429,6 +432,7 @@ fun PostScreen(
                             placeholder = stringResource(R.string.forums_write_comment),
                             enabled = !uiState.post.locked,
                             isSending = uiState.isSending,
+                            upload = commentUpload,
                             sendLabel = stringResource(R.string.forums_comment_send),
                             windowInsets = ComposeBarDefaults.WindowInsets,
                             banner = uiState.replyTo?.let { replied ->
@@ -1001,6 +1005,7 @@ private fun AttachmentComments(
     replyTo: ForumComment?,
     onClearReply: () -> Unit,
     isSending: Boolean,
+    upload: Upload?,
     attachments: List<Uri>,
     onAddAttachments: (List<Uri>) -> Unit,
     onRemoveAttachment: (Uri) -> Unit,
@@ -1086,6 +1091,7 @@ private fun AttachmentComments(
                 },
                 placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
                 isSending = isSending,
+                upload = upload,
                 sendLabel = stringResource(R.string.forums_comment_send),
                 attachments = ComposeBarAttachments(
                     pending = attachments,

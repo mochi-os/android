@@ -329,4 +329,7 @@
     <string name="common_open_settings">პარამეტრების გახსნა</string>
     <string name="notifications_permission_reason">Mochi-ს შეტყობინებების საჩვენებლად ნებართვა სჭირდება, რათა შეიტყოთ ახალი შეტყობინებების, პასუხებისა და შეხსენებების შესახებ.</string>
     <string name="notifications_permission_blocked">Mochi-სთვის შეტყობინებები გამორთულია. მათი ჩართვა შეგიძლიათ აპის შეტყობინებების პარამეტრებში.</string>
+    <string name="upload_progress">ატვირთვის მიმდინარეობა</string>
+    <string name="upload_processing">მუშავდება…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>

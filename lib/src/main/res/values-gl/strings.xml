@@ -329,4 +329,7 @@
     <string name="common_open_settings">Abrir a configuración</string>
     <string name="notifications_permission_reason">Mochi necesita permiso para mostrar notificacións, para que te enteres das novas mensaxes, respostas e recordatorios.</string>
     <string name="notifications_permission_blocked">As notificacións están desactivadas para Mochi. Podes activalas na configuración de notificacións da aplicación.</string>
+    <string name="upload_progress">Progreso da subida</string>
+    <string name="upload_processing">Procesando…</string>
+    <string name="upload_sent">%1$s de %2$s</string>
 </resources>

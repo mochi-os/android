@@ -17,6 +17,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.forums.api.AccessResponse
 import org.mochios.forums.api.BannerResponse
@@ -214,10 +215,11 @@ class ForumsRepository @Inject constructor(
         context: android.content.Context,
         // Per-file captions aligned with `uris`; sent only when one is set.
         captions: List<String> = emptyList(),
+        tracker: UploadTracker? = null,
     ): CreatePostResponse {
         val files = fileStore.cacheFiles(uris)
         try {
-            val parts = fileStore.fileParts("files", files)
+            val parts = fileStore.fileParts("files", files, tracker)
             val captionsJson = captions.takeIf { list -> list.any { it.isNotEmpty() } }
                 ?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
             val response = api.createPost(
@@ -249,10 +251,11 @@ class ForumsRepository @Inject constructor(
         context: android.content.Context,
         // Caption edits keyed by attachment id or "new:N" placeholder.
         captions: Map<String, String> = emptyMap(),
+        tracker: UploadTracker? = null,
     ) {
         val files = fileStore.cacheFiles(newFileUris)
         try {
-            val newParts = fileStore.fileParts("files", files)
+            val newParts = fileStore.fileParts("files", files, tracker)
             val order: List<String>? = when {
                 keptAttachmentIds == null && files.isEmpty() -> null
                 else -> keptAttachmentIds.orEmpty() + files.indices.map { index -> "new:$index" }
@@ -326,10 +329,11 @@ class ForumsRepository @Inject constructor(
         uris: List<android.net.Uri>,
         context: android.content.Context,
         attachment: String? = null,
+        tracker: UploadTracker? = null,
     ): CreateCommentResponse {
         val files = fileStore.cacheFiles(uris)
         try {
-            val parts = fileStore.fileParts("files", files)
+            val parts = fileStore.fileParts("files", files, tracker)
             return api.createComment(
                 forumId = forumId,
                 postId = postId,

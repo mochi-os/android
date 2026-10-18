@@ -329,4 +329,7 @@
     <string name="common_open_settings">Buka pengaturan</string>
     <string name="notifications_permission_reason">Mochi memerlukan izin untuk menampilkan notifikasi agar Anda mengetahui pesan baru, balasan, dan pengingat.</string>
     <string name="notifications_permission_blocked">Notifikasi dinonaktifkan untuk Mochi. Anda dapat mengaktifkannya di pengaturan notifikasi aplikasi.</string>
+    <string name="upload_progress">Progres unggahan</string>
+    <string name="upload_processing">Memproses…</string>
+    <string name="upload_sent">%1$s dari %2$s</string>
 </resources>

@@ -329,4 +329,7 @@
     <string name="common_open_settings">Qindaa\'inoota bani</string>
     <string name="notifications_permission_reason">Mochi beeksisaalee agarsiisuuf hayyama barbaada, kunis akka ati waa\'ee ergaawwan haaraa, deebiiwwanii fi yaadachiisawwan beektuuf.</string>
     <string name="notifications_permission_blocked">Beeksisaaleen Mochiif cufamaniiru. Qindaa\'inoota beeksisaa appichaa keessatti banuu dandeessa.</string>
+    <string name="upload_progress">Adeemsa fe\'umsaa</string>
+    <string name="upload_processing">Adeemsifamaa jira…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>

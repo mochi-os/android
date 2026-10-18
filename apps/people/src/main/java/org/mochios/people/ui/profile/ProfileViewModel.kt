@@ -17,6 +17,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Upload
+import org.mochios.android.files.UploadTracker
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.PersonStyle
@@ -57,6 +59,11 @@ class ProfileViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ProfileUiState())
     val uiState: StateFlow<ProfileUiState> = _uiState.asStateFlow()
+
+    private val tracker = UploadTracker()
+
+    /** The image being uploaded into [ProfileUiState.savingSlot], while it goes. */
+    val upload: StateFlow<Upload?> = tracker.state
 
     init { refresh() }
 
@@ -187,10 +194,12 @@ class ProfileViewModel @Inject constructor(
                 file.writeBytes(bytes)
                 val person = sessionManager.getBoundIdentity()
                     ?: throw IllegalStateException("no bound identity")
-                when (slot) {
-                    ImageSlot.AVATAR -> repository.setAvatar(person, file)
-                    ImageSlot.BANNER -> repository.setBanner(person, file)
-                    ImageSlot.FAVICON -> repository.setFavicon(person, file)
+                tracker.track {
+                    when (slot) {
+                        ImageSlot.AVATAR -> repository.setAvatar(person, file, tracker)
+                        ImageSlot.BANNER -> repository.setBanner(person, file, tracker)
+                        ImageSlot.FAVICON -> repository.setFavicon(person, file, tracker)
+                    }
                 }
                 // Refresh to pick up the new attachment id (used in the
                 // avatar/banner cache-busting URLs).

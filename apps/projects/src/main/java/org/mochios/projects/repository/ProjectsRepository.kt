@@ -19,6 +19,7 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
+import org.mochios.android.files.UploadTracker
 import org.mochios.projects.api.ProjectsApi
 import org.mochios.projects.api.SetValueRequest
 import org.mochios.projects.api.SubscribeRequest
@@ -281,12 +282,19 @@ class ProjectsRepository @Inject constructor(
     suspend fun getComments(projectId: String, objectId: String): List<Comment> =
         api.getComments(projectId, objectId).unwrap().comments
 
-    suspend fun createComment(projectId: String, objectId: String, content: String, parent: String? = null, files: List<File> = emptyList()): Comment {
+    suspend fun createComment(
+        projectId: String,
+        objectId: String,
+        content: String,
+        parent: String? = null,
+        files: List<File> = emptyList(),
+        tracker: UploadTracker? = null,
+    ): Comment {
         val contentBody = content.toRequestBody("text/plain".toMediaTypeOrNull())
         val parentBody = parent?.toRequestBody("text/plain".toMediaTypeOrNull())
         // The server reads the multipart field "files" (attachment_save);
         // parts named anything else are silently dropped.
-        val fileParts = fileStore.fileParts("files", files)
+        val fileParts = fileStore.fileParts("files", files, tracker)
         return api.createComment(projectId, objectId, contentBody, parentBody, fileParts).unwrap()
     }
 
@@ -303,9 +311,14 @@ class ProjectsRepository @Inject constructor(
     suspend fun getAttachments(projectId: String, objectId: String): List<Attachment> =
         api.getAttachments(projectId, objectId).unwrap().attachments
 
-    suspend fun createAttachment(projectId: String, objectId: String, file: File): List<Attachment> {
-        val part = fileStore.filePart("files", file)
-        return api.createAttachment(projectId, objectId, part).unwrap().attachments
+    suspend fun createAttachment(
+        projectId: String,
+        objectId: String,
+        files: List<File>,
+        tracker: UploadTracker? = null,
+    ): List<Attachment> {
+        val parts = fileStore.fileParts("files", files, tracker)
+        return api.createAttachment(projectId, objectId, parts).unwrap().attachments
     }
 
     suspend fun deleteAttachment(projectId: String, objectId: String, attachmentId: String) {
@@ -403,12 +416,13 @@ class ProjectsRepository @Inject constructor(
         return body.byteStream().use { stream -> fileStore.writeStream(destination, stream) }
     }
 
-    suspend fun importData(projectId: String, backupJson: String) {
+    suspend fun importData(projectId: String, backupJson: String, tracker: UploadTracker? = null) {
         val part = fileStore.bytesPart(
             field = "file",
             fileName = "import.json",
             mimeType = "application/json",
-            bytes = backupJson.toByteArray()
+            bytes = backupJson.toByteArray(),
+            tracker = tracker,
         )
         api.importData(projectId, part).unwrap()
     }
@@ -418,10 +432,10 @@ class ProjectsRepository @Inject constructor(
      * server applies the design it carries, then its objects and the
      * attachment bytes. Unwrapping the zip here would drop the attachments.
      */
-    suspend fun importArchive(projectId: String, uri: Uri) {
+    suspend fun importArchive(projectId: String, uri: Uri, tracker: UploadTracker? = null) {
         val file = stageFile(uri, "backup.zip") ?: throw IllegalStateException("cannot read backup")
         try {
-            val part = fileStore.filePart("file", file, "application/zip")
+            val part = fileStore.filePart("file", file, "application/zip", tracker)
             api.importData(projectId, part, "1".toRequestBody("text/plain".toMediaTypeOrNull())).unwrap()
         } finally {
             discardStaged(listOf(file))

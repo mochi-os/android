@@ -329,4 +329,7 @@
     <string name="common_open_settings">ဆက်တင်များ ဖွင့်မည်</string>
     <string name="notifications_permission_reason">မက်ဆေ့ဂျ်အသစ်များ၊ ပြန်ကြားချက်များနှင့် သတိပေးချက်များအကြောင်း သင်သိရှိနိုင်ရန် Mochi သည် အကြောင်းကြားချက်များ ပြသရန် ခွင့်ပြုချက် လိုအပ်ပါသည်။</string>
     <string name="notifications_permission_blocked">Mochi အတွက် အကြောင်းကြားချက်များကို ပိတ်ထားသည်။ အက်ပ်၏ အကြောင်းကြားချက် ဆက်တင်များတွင် ၎င်းတို့ကို ဖွင့်နိုင်သည်။</string>
+    <string name="upload_progress">အပ်လုဒ်တိုးတက်မှု</string>
+    <string name="upload_processing">လုပ်ဆောင်နေသည်…</string>
+    <string name="upload_sent">%2$s အနက် %1$s</string>
 </resources>

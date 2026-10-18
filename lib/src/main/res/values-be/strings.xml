@@ -331,4 +331,7 @@
     <string name="common_open_settings">Адкрыць налады</string>
     <string name="notifications_permission_reason">Mochi патрэбны дазвол на паказ апавяшчэнняў, каб вы даведваліся пра новыя паведамленні, адказы і напаміны.</string>
     <string name="notifications_permission_blocked">Апавяшчэнні для Mochi выключаны. Вы можаце ўключыць іх у наладах апавяшчэнняў праграмы.</string>
+    <string name="upload_progress">Ход запампоўкі</string>
+    <string name="upload_processing">Апрацоўка…</string>
+    <string name="upload_sent">%1$s з %2$s</string>
 </resources>

@@ -329,4 +329,7 @@
     <string name="common_open_settings">Avaa asetukset</string>
     <string name="notifications_permission_reason">Mochi tarvitsee luvan näyttää ilmoituksia, jotta kuulet uusista viesteistä, vastauksista ja muistutuksista.</string>
     <string name="notifications_permission_blocked">Mochin ilmoitukset ovat poissa käytöstä. Voit ottaa ne käyttöön sovelluksen ilmoitusasetuksista.</string>
+    <string name="upload_progress">Latauksen edistyminen</string>
+    <string name="upload_processing">Käsitellään…</string>
+    <string name="upload_sent">%1$s / %2$s</string>
 </resources>
