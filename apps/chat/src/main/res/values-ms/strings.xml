@@ -33,7 +33,9 @@
 
     <string name="notification_channel_chat">Pemberitahuan sembang</string>
     <string name="chat_list_empty">Belum ada sembang</string>
-    <string name="chat_new_existing_chat">Buka sembang sedia ada</string>
+    <string name="chat_new_existing_with">Anda sudah mempunyai sembang dengan:</string>
+    <string name="chat_new_open">Buka</string>
+    <string name="chat_new_remove_person">Keluarkan %1$s</string>
     <string name="chat_new_start">Mulakan sembang</string>
     <string name="chat_new_start_group">Mulakan sembang kumpulan</string>
     <string name="chat_messages_loading">Memuatkan mesej…</string>

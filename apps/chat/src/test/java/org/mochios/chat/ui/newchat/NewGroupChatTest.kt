@@ -1,0 +1,47 @@
+// Copyright © 2026 Mochisoft OÜ
+// SPDX-License-Identifier: AGPL-3.0-only
+// This file is part of Mochi, licensed under the GNU AGPL v3 with the
+// Mochi Application Interface Exception - see license.txt and license-exception.md.
+
+package org.mochios.chat.ui.newchat
+
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
+import org.junit.Test
+import org.mochios.chat.model.Friend
+
+class NewGroupChatTest {
+
+    private val picked = listOf(Friend(id = "t", name = "Tien Hoang"), Friend(id = "d", name = "Dung"))
+
+    @Test
+    fun `a group is named after the caller first and then the picked people by name`() {
+        assertEquals("Chin, Dung, Tien Hoang", groupChatName("Chin", picked, fallback = "Chat"))
+    }
+
+    @Test
+    fun `a group without the caller's name still names the picked people`() {
+        assertEquals("Dung, Tien Hoang", groupChatName("", picked, fallback = "Chat"))
+    }
+
+    @Test
+    fun `a group of nameless people falls back to the translated name`() {
+        assertEquals("Chat", groupChatName("", listOf(Friend(id = "x")), fallback = "Chat"))
+    }
+
+    @Test
+    fun `a chat of the caller and exactly the picked people is the same group`() {
+        assertTrue(sameGroup(setOf("me", "t", "d"), setOf("t", "d")))
+    }
+
+    @Test
+    fun `a chat with someone extra is a different group`() {
+        assertFalse(sameGroup(setOf("me", "t", "d", "x"), setOf("t", "d")))
+    }
+
+    @Test
+    fun `a chat missing a picked person is a different group`() {
+        assertFalse(sameGroup(setOf("me", "t", "x"), setOf("t", "d")))
+    }
+}

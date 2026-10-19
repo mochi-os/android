@@ -30,7 +30,9 @@
 
     <string name="notification_channel_chat">Известия за чат</string>
     <string name="chat_list_empty">Все още няма чатове</string>
-    <string name="chat_new_existing_chat">Отваряне на съществуващ чат</string>
+    <string name="chat_new_existing_with">Вече имате чатове с:</string>
+    <string name="chat_new_open">Отвори</string>
+    <string name="chat_new_remove_person">Премахване на %1$s</string>
     <string name="chat_new_start">Започване на чат</string>
     <string name="chat_new_start_group">Започване на групов чат</string>
     <string name="chat_messages_loading">Зареждане на съобщенията…</string>

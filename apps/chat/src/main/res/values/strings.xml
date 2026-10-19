@@ -13,7 +13,9 @@
     <string name="chat_new_title">New chat</string>
     <string name="chat_new_name">Group name</string>
     <string name="chat_new_no_matches">No matching people</string>
-    <string name="chat_new_existing_chat">Open existing chat</string>
+    <string name="chat_new_existing_with">You already have chats with:</string>
+    <string name="chat_new_open">Open</string>
+    <string name="chat_new_remove_person">Remove %1$s</string>
     <string name="chat_new_start">Start chat</string>
     <string name="chat_new_start_group">Start group chat</string>
     <string name="chat_new_fallback_name">Chat</string>

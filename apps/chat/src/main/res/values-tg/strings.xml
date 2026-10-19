@@ -33,7 +33,9 @@
 
     <string name="notification_channel_chat">Огоҳиномаҳои чат</string>
     <string name="chat_list_empty">Ҳанӯз чате нест</string>
-    <string name="chat_new_existing_chat">Кушодани чати мавҷуда</string>
+    <string name="chat_new_existing_with">Шумо аллакай бо инҳо чат доред:</string>
+    <string name="chat_new_open">Кушодан</string>
+    <string name="chat_new_remove_person">Хориҷ кардани %1$s</string>
     <string name="chat_new_start">Оғози чат</string>
     <string name="chat_new_start_group">Оғози чати гурӯҳӣ</string>
     <string name="chat_messages_loading">Боргирии паёмҳо…</string>

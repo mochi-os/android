@@ -33,7 +33,9 @@
 
     <string name="notification_channel_chat">ချတ် အကြောင်းကြားချက်များ</string>
     <string name="chat_list_empty">ချတ်များ မရှိသေးပါ</string>
-    <string name="chat_new_existing_chat">ရှိပြီးသား ချတ်ကို ဖွင့်ပါ</string>
+    <string name="chat_new_existing_with">ဤသူများနှင့် ချတ်များ ရှိပြီးဖြစ်သည်-</string>
+    <string name="chat_new_open">ဖွင့်ရန်</string>
+    <string name="chat_new_remove_person">%1$s ကို ဖယ်ရှားရန်</string>
     <string name="chat_new_start">ချတ် စတင်ပါ</string>
     <string name="chat_new_start_group">အုပ်စု ချတ် စတင်ပါ</string>
     <string name="chat_messages_loading">မက်ဆေ့ဂျ်များ ဖွင့်နေသည်…</string>

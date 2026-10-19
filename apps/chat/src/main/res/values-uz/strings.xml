@@ -33,7 +33,9 @@
 
     <string name="notification_channel_chat">Chat bildirishnomalari</string>
     <string name="chat_list_empty">Hozircha chatlar yo\'q</string>
-    <string name="chat_new_existing_chat">Mavjud chatni ochish</string>
+    <string name="chat_new_existing_with">Sizda allaqachon ular bilan chatlar bor:</string>
+    <string name="chat_new_open">Ochish</string>
+    <string name="chat_new_remove_person">%1$s ni olib tashlash</string>
     <string name="chat_new_start">Chatni boshlash</string>
     <string name="chat_new_start_group">Guruh chatini boshlash</string>
     <string name="chat_messages_loading">Xabarlar yuklanmoqda…</string>

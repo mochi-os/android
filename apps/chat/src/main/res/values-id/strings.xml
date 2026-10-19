@@ -33,7 +33,9 @@
 
     <string name="notification_channel_chat">Notifikasi chat</string>
     <string name="chat_list_empty">Belum ada chat</string>
-    <string name="chat_new_existing_chat">Buka chat yang ada</string>
+    <string name="chat_new_existing_with">Anda sudah punya chat dengan:</string>
+    <string name="chat_new_open">Buka</string>
+    <string name="chat_new_remove_person">Hapus %1$s</string>
     <string name="chat_new_start">Mulai chat</string>
     <string name="chat_new_start_group">Mulai chat grup</string>
     <string name="chat_messages_loading">Memuat pesan…</string>
