@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Chat in arrivo</string>
     <string name="chat_policy_friends">Solo amici</string>
     <string name="chat_policy_anyone">Chiunque</string>
-    <string name="chat_new_search_placeholder">Cerca persone</string>
     <string name="chat_new_no_matches">Nessuna persona corrispondente</string>
-    <string name="chat_new_no_friends">Cerca persone con cui chattare</string>
     <string name="chat_pin">Fissa</string>
     <string name="chat_unpin">Rimuovi dai fissati</string>
     <string name="chat_settings_general">Generale</string>

@@ -69,9 +69,7 @@
     <string name="chat_policy_title">Chat đến</string>
     <string name="chat_policy_friends">Chỉ bạn bè</string>
     <string name="chat_policy_anyone">Bất kỳ ai</string>
-    <string name="chat_new_search_placeholder">Tìm người</string>
     <string name="chat_new_no_matches">Không có người phù hợp</string>
-    <string name="chat_new_no_friends">Tìm người để trò chuyện</string>
     <string name="chat_pin">Ghim</string>
     <string name="chat_unpin">Bỏ ghim</string>
     <string name="chat_settings_general">Chung</string>

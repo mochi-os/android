@@ -68,9 +68,7 @@
     <string name="chat_policy_title">گفتگوهای ورودی</string>
     <string name="chat_policy_friends">فقط دوستان</string>
     <string name="chat_policy_anyone">هر کسی</string>
-    <string name="chat_new_search_placeholder">جستجوی افراد</string>
     <string name="chat_new_no_matches">فرد منطبقی یافت نشد</string>
-    <string name="chat_new_no_friends">افرادی برای گفتگو پیدا کنید</string>
     <string name="chat_pin">سنجاق</string>
     <string name="chat_unpin">برداشتن سنجاق</string>
     <string name="chat_settings_general">عمومی</string>

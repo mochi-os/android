@@ -60,9 +60,7 @@
     <string name="chat_policy_title">Innkomande chattar</string>
     <string name="chat_policy_friends">Berre venner</string>
     <string name="chat_policy_anyone">Alle</string>
-    <string name="chat_new_search_placeholder">Søk etter personar</string>
     <string name="chat_new_no_matches">Ingen samsvarande personar</string>
-    <string name="chat_new_no_friends">Søk etter personar å chatte med</string>
     <string name="chat_pin">Fest</string>
     <string name="chat_unpin">Fjern frå festa</string>
     <string name="chat_settings_general">Generelt</string>

@@ -68,9 +68,7 @@
     <string name="chat_policy_title">راتلونکي چیټونه</string>
     <string name="chat_policy_friends">یوازې ملګري</string>
     <string name="chat_policy_anyone">هر څوک</string>
-    <string name="chat_new_search_placeholder">خلک ولټوئ</string>
     <string name="chat_new_no_matches">هیڅ سمون لرونکي خلک نشته</string>
-    <string name="chat_new_no_friends">د چیټ لپاره خلک ولټوئ</string>
     <string name="chat_pin">پن کول</string>
     <string name="chat_unpin">ناپین کول</string>
     <string name="chat_settings_general">عمومي</string>

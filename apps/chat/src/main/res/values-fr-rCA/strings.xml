@@ -58,9 +58,7 @@
     <string name="chat_policy_title">Chats entrants</string>
     <string name="chat_policy_friends">Amis uniquement</string>
     <string name="chat_policy_anyone">N\'importe qui</string>
-    <string name="chat_new_search_placeholder">Rechercher des personnes</string>
     <string name="chat_new_no_matches">Aucune personne correspondante</string>
-    <string name="chat_new_no_friends">Recherchez des personnes avec qui discuter</string>
     <string name="chat_pin">Épingler</string>
     <string name="chat_unpin">Désépingler</string>
     <string name="chat_settings_general">Général</string>

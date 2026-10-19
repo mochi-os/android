@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Mga papasok na chat</string>
     <string name="chat_policy_friends">Mga kaibigan lang</string>
     <string name="chat_policy_anyone">Kahit sino</string>
-    <string name="chat_new_search_placeholder">Maghanap ng mga tao</string>
     <string name="chat_new_no_matches">Walang tumutugmang tao</string>
-    <string name="chat_new_no_friends">Maghanap ng mga tao para makipag-chat</string>
     <string name="chat_pin">I-pin</string>
     <string name="chat_unpin">I-unpin</string>
     <string name="chat_settings_general">Pangkalahatan</string>

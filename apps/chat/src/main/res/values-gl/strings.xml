@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Chats entrantes</string>
     <string name="chat_policy_friends">Só amigos</string>
     <string name="chat_policy_anyone">Calquera</string>
-    <string name="chat_new_search_placeholder">Buscar persoas</string>
     <string name="chat_new_no_matches">Non hai persoas coincidentes</string>
-    <string name="chat_new_no_friends">Busca persoas coas que conversar</string>
     <string name="chat_pin">Fixar</string>
     <string name="chat_unpin">Desfixar</string>
     <string name="chat_settings_general">Xeral</string>

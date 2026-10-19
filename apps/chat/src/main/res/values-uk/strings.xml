@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Вхідні чати</string>
     <string name="chat_policy_friends">Лише друзі</string>
     <string name="chat_policy_anyone">Будь-хто</string>
-    <string name="chat_new_search_placeholder">Пошук людей</string>
     <string name="chat_new_no_matches">Немає відповідних людей</string>
-    <string name="chat_new_no_friends">Знайдіть людей для спілкування</string>
     <string name="chat_pin">Закріпити</string>
     <string name="chat_unpin">Відкріпити</string>
     <string name="chat_settings_general">Загальні</string>

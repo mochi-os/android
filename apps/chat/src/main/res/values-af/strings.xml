@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Inkomende kletse</string>
     <string name="chat_policy_friends">Slegs vriende</string>
     <string name="chat_policy_anyone">Enigiemand</string>
-    <string name="chat_new_search_placeholder">Soek mense</string>
     <string name="chat_new_no_matches">Geen passende mense</string>
-    <string name="chat_new_no_friends">Soek mense om mee te klets</string>
     <string name="chat_pin">Speld vas</string>
     <string name="chat_unpin">Ontvasspeld</string>
     <string name="chat_settings_general">Algemeen</string>

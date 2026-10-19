@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Chaatii dhufan</string>
     <string name="chat_policy_friends">Hiriyoota qofa</string>
     <string name="chat_policy_anyone">Nama kamiyyuu</string>
-    <string name="chat_new_search_placeholder">Namoota barbaadi</string>
     <string name="chat_new_no_matches">Namoonni walsiman hin jiran</string>
-    <string name="chat_new_no_friends">Namoota haasoftu barbaadi</string>
     <string name="chat_pin">Maxxansi</string>
     <string name="chat_unpin">Sutachuu kaasi</string>
     <string name="chat_settings_general">Waliigalaa</string>

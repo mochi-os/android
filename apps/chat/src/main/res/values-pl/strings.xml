@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Przychodzące czaty</string>
     <string name="chat_policy_friends">Tylko znajomi</string>
     <string name="chat_policy_anyone">Każdy</string>
-    <string name="chat_new_search_placeholder">Szukaj osób</string>
     <string name="chat_new_no_matches">Brak pasujących osób</string>
-    <string name="chat_new_no_friends">Wyszukaj osoby do rozmowy</string>
     <string name="chat_pin">Przypnij</string>
     <string name="chat_unpin">Odepnij</string>
     <string name="chat_settings_general">Ogólne</string>

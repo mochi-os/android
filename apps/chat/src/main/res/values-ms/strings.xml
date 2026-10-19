@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Sembang masuk</string>
     <string name="chat_policy_friends">Rakan sahaja</string>
     <string name="chat_policy_anyone">Sesiapa sahaja</string>
-    <string name="chat_new_search_placeholder">Cari orang</string>
     <string name="chat_new_no_matches">Tiada orang yang sepadan</string>
-    <string name="chat_new_no_friends">Cari orang untuk bersembang</string>
     <string name="chat_pin">Semat</string>
     <string name="chat_unpin">Nyahsemat</string>
     <string name="chat_settings_general">Umum</string>

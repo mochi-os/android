@@ -68,9 +68,7 @@
     <string name="chat_policy_title">உள்வரும் அரட்டைகள்</string>
     <string name="chat_policy_friends">நண்பர்கள் மட்டும்</string>
     <string name="chat_policy_anyone">எவரும்</string>
-    <string name="chat_new_search_placeholder">நபர்களைத் தேடு</string>
     <string name="chat_new_no_matches">பொருந்தும் நபர்கள் இல்லை</string>
-    <string name="chat_new_no_friends">அரட்டையடிக்க நபர்களைத் தேடு</string>
     <string name="chat_pin">பின் செய்</string>
     <string name="chat_unpin">பின் நீக்கு</string>
     <string name="chat_settings_general">பொது</string>

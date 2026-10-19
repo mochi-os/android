@@ -68,9 +68,7 @@
     <string name="chat_policy_title">အဝင်ချတ်များ</string>
     <string name="chat_policy_friends">သူငယ်ချင်းများသာ</string>
     <string name="chat_policy_anyone">မည်သူမဆို</string>
-    <string name="chat_new_search_placeholder">လူများကို ရှာဖွေရန်</string>
     <string name="chat_new_no_matches">ကိုက်ညီသူ မရှိပါ</string>
-    <string name="chat_new_no_friends">ချတ်ရန် လူများကို ရှာဖွေပါ</string>
     <string name="chat_pin">ပင်တွဲရန်</string>
     <string name="chat_unpin">Pin ဖြုတ်မည်</string>
     <string name="chat_settings_general">အထွေထွေ</string>

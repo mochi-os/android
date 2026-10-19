@@ -68,9 +68,7 @@
     <string name="chat_policy_title">收到的聊天</string>
     <string name="chat_policy_friends">仅好友</string>
     <string name="chat_policy_anyone">任何人</string>
-    <string name="chat_new_search_placeholder">搜索用户</string>
     <string name="chat_new_no_matches">没有匹配的用户</string>
-    <string name="chat_new_no_friends">搜索可聊天的用户</string>
     <string name="chat_pin">置顶</string>
     <string name="chat_unpin">取消置顶</string>
     <string name="chat_settings_general">常规</string>

@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Prichádzajúce chaty</string>
     <string name="chat_policy_friends">Iba priatelia</string>
     <string name="chat_policy_anyone">Ktokoľvek</string>
-    <string name="chat_new_search_placeholder">Hľadať ľudí</string>
     <string name="chat_new_no_matches">Žiadni zodpovedajúci ľudia</string>
-    <string name="chat_new_no_friends">Vyhľadajte ľudí na četovanie</string>
     <string name="chat_pin">Pripnúť</string>
     <string name="chat_unpin">Odopnúť</string>
     <string name="chat_settings_general">Všeobecné</string>

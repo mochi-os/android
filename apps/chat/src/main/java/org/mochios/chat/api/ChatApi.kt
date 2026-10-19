@@ -85,16 +85,6 @@ data class ChatPreferencesResponse(
     val policy: String = "friends"
 )
 
-// A directory person for the new-chat picker (non-friends may be addressed
-// when their chat_policy allows it; the sender-side probe at create decides).
-data class PersonResult(
-    val id: String = "",
-    val name: String = "",
-    val fingerprint: String = ""
-)
-
-data class PersonSearchResponse(val results: List<PersonResult> = emptyList())
-
 interface ChatApi {
 
     @GET("-/list")
@@ -111,12 +101,6 @@ interface ChatApi {
     suspend fun setPreferences(
         @Field("policy") policy: String
     ): Response<ApiResponse<SuccessResponse>>
-
-    @FormUrlEncoded
-    @POST("-/person/search")
-    suspend fun personSearch(
-        @Field("search") search: String
-    ): Response<ApiResponse<PersonSearchResponse>>
 
     @FormUrlEncoded
     @POST("-/create")

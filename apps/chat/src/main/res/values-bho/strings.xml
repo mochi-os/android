@@ -68,9 +68,7 @@
     <string name="chat_policy_title">आवे वाला चैट</string>
     <string name="chat_policy_friends">खाली दोस्त</string>
     <string name="chat_policy_anyone">केहू भी</string>
-    <string name="chat_new_search_placeholder">लोग खोजीं</string>
     <string name="chat_new_no_matches">कवनो मेल खात लोग नइखे</string>
-    <string name="chat_new_no_friends">चैट करे खातिर लोग खोजीं</string>
     <string name="chat_pin">पिन</string>
     <string name="chat_unpin">अनपिन करीं</string>
     <string name="chat_settings_general">सामान्य</string>

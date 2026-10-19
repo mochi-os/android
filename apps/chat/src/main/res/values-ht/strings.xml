@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Chat k ap antre</string>
     <string name="chat_policy_friends">Zanmi sèlman</string>
     <string name="chat_policy_anyone">Nenpòt moun</string>
-    <string name="chat_new_search_placeholder">Chèche moun</string>
     <string name="chat_new_no_matches">Pa gen moun ki koresponn</string>
-    <string name="chat_new_no_friends">Chèche moun pou pale ak yo</string>
     <string name="chat_pin">Pini</string>
     <string name="chat_unpin">Detache</string>
     <string name="chat_settings_general">Jeneral</string>

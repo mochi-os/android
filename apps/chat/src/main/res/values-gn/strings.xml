@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Ñomongeta oikéva</string>
     <string name="chat_policy_friends">Angirũnte</string>
     <string name="chat_policy_anyone">Oimeraẽva</string>
-    <string name="chat_new_search_placeholder">Eheka tapicha</string>
     <string name="chat_new_no_matches">Ndaipóri tapicha ojoguáva</string>
-    <string name="chat_new_no_friends">Eheka tapicha reñomongeta hag̃ua</string>
     <string name="chat_pin">Emboja</string>
     <string name="chat_unpin">Embogue jemboja</string>
     <string name="chat_settings_general">General</string>

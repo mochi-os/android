@@ -68,9 +68,7 @@
     <string name="chat_policy_title">受信チャット</string>
     <string name="chat_policy_friends">友達のみ</string>
     <string name="chat_policy_anyone">誰でも</string>
-    <string name="chat_new_search_placeholder">ユーザーを検索</string>
     <string name="chat_new_no_matches">一致するユーザーがいません</string>
-    <string name="chat_new_no_friends">チャットする相手を検索</string>
     <string name="chat_pin">ピン留め</string>
     <string name="chat_unpin">ピン留めを解除</string>
     <string name="chat_settings_general">一般</string>

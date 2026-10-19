@@ -68,9 +68,7 @@
     <string name="chat_policy_title">المحادثات الواردة</string>
     <string name="chat_policy_friends">الأصدقاء فقط</string>
     <string name="chat_policy_anyone">أي شخص</string>
-    <string name="chat_new_search_placeholder">البحث عن أشخاص</string>
     <string name="chat_new_no_matches">لا يوجد أشخاص مطابقون</string>
-    <string name="chat_new_no_friends">ابحث عن أشخاص للدردشة معهم</string>
     <string name="chat_pin">تثبيت</string>
     <string name="chat_unpin">إلغاء التثبيت</string>
     <string name="chat_settings_general">عام</string>

@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Εισερχόμενες συνομιλίες</string>
     <string name="chat_policy_friends">Μόνο φίλοι</string>
     <string name="chat_policy_anyone">Οποιοσδήποτε</string>
-    <string name="chat_new_search_placeholder">Αναζήτηση ατόμων</string>
     <string name="chat_new_no_matches">Δεν βρέθηκαν άτομα</string>
-    <string name="chat_new_no_friends">Αναζητήστε άτομα για συνομιλία</string>
     <string name="chat_pin">Καρφίτσωμα</string>
     <string name="chat_unpin">Ξεκαρφίτσωμα</string>
     <string name="chat_settings_general">Γενικά</string>

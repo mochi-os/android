@@ -68,9 +68,7 @@
     <string name="chat_policy_title">आगमन च्याटहरू</string>
     <string name="chat_policy_friends">साथीहरू मात्र</string>
     <string name="chat_policy_anyone">जोसुकै</string>
-    <string name="chat_new_search_placeholder">मानिसहरू खोज्नुहोस्</string>
     <string name="chat_new_no_matches">मिल्ने मानिसहरू छैनन्</string>
-    <string name="chat_new_no_friends">कुराकानी गर्न मानिसहरू खोज्नुहोस्</string>
     <string name="chat_pin">पिन गर्नुहोस्</string>
     <string name="chat_unpin">अनपिन गर्नुहोस्</string>
     <string name="chat_settings_general">सामान्य</string>

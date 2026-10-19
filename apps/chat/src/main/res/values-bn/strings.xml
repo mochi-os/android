@@ -68,9 +68,7 @@
     <string name="chat_policy_title">আগত চ্যাট</string>
     <string name="chat_policy_friends">শুধুমাত্র বন্ধুরা</string>
     <string name="chat_policy_anyone">যে কেউ</string>
-    <string name="chat_new_search_placeholder">মানুষ খুঁজুন</string>
     <string name="chat_new_no_matches">কোনো মিলে যাওয়া মানুষ নেই</string>
-    <string name="chat_new_no_friends">চ্যাট করার জন্য মানুষ খুঁজুন</string>
     <string name="chat_pin">পিন করুন</string>
     <string name="chat_unpin">আনপিন করুন</string>
     <string name="chat_settings_general">সাধারণ</string>

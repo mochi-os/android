@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Puriri chatanaka</string>
     <string name="chat_policy_friends">Masinakaki</string>
     <string name="chat_policy_anyone">Khitisa</string>
-    <string name="chat_new_search_placeholder">Jaqinak thaqhaña</string>
     <string name="chat_new_no_matches">Janiw kikip jaqinakax utjkiti</string>
-    <string name="chat_new_no_friends">Chat lurañatak jaqinak thaqhaña</string>
     <string name="chat_pin">Ch\'akuntaña</string>
     <string name="chat_unpin">Ch\'akuntat apsuña</string>
     <string name="chat_settings_general">General</string>

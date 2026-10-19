@@ -68,9 +68,7 @@
     <string name="chat_policy_title">ແຊັດຂາເຂົ້າ</string>
     <string name="chat_policy_friends">ໝູ່ເທົ່ານັ້ນ</string>
     <string name="chat_policy_anyone">ໃຜກໍໄດ້</string>
-    <string name="chat_new_search_placeholder">ຄົ້ນຫາຄົນ</string>
     <string name="chat_new_no_matches">ບໍ່ມີຄົນທີ່ກົງກັນ</string>
-    <string name="chat_new_no_friends">ຄົ້ນຫາຄົນເພື່ອສົນທະນາ</string>
     <string name="chat_pin">ປັກໝຸດ</string>
     <string name="chat_unpin">ຖອດປັກ</string>
     <string name="chat_settings_general">ທົ່ວໄປ</string>

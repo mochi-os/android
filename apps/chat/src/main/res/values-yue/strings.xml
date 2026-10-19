@@ -59,9 +59,7 @@
     <string name="chat_policy_title">收到嘅聊天</string>
     <string name="chat_policy_friends">只限好友</string>
     <string name="chat_policy_anyone">任何人</string>
-    <string name="chat_new_search_placeholder">搜尋使用者</string>
     <string name="chat_new_no_matches">冇相符嘅使用者</string>
-    <string name="chat_new_no_friends">搵人傾偈</string>
     <string name="chat_pin">置頂</string>
     <string name="chat_unpin">取消置頂</string>
     <string name="chat_settings_general">一般</string>

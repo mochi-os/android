@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Dolazni razgovori</string>
     <string name="chat_policy_friends">Samo prijatelji</string>
     <string name="chat_policy_anyone">Bilo tko</string>
-    <string name="chat_new_search_placeholder">Pretraži ljude</string>
     <string name="chat_new_no_matches">Nema podudarnih ljudi</string>
-    <string name="chat_new_no_friends">Potražite ljude za razgovor</string>
     <string name="chat_pin">Pričvrsti</string>
     <string name="chat_unpin">Otkvači</string>
     <string name="chat_settings_general">Općenito</string>

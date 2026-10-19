@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Inkomende chats</string>
     <string name="chat_policy_friends">Alleen vrienden</string>
     <string name="chat_policy_anyone">Iedereen</string>
-    <string name="chat_new_search_placeholder">Personen zoeken</string>
     <string name="chat_new_no_matches">Geen overeenkomende personen</string>
-    <string name="chat_new_no_friends">Zoek personen om mee te chatten</string>
     <string name="chat_pin">Vastmaken</string>
     <string name="chat_unpin">Losmaken</string>
     <string name="chat_settings_general">Algemeen</string>

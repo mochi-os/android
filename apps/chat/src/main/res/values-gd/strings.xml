@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Cabadaich a\' tighinn a-steach</string>
     <string name="chat_policy_friends">Caraidean a-mhàin</string>
     <string name="chat_policy_anyone">Duine sam bith</string>
-    <string name="chat_new_search_placeholder">Lorg daoine</string>
     <string name="chat_new_no_matches">Chan eil daoine a\' freagairt</string>
-    <string name="chat_new_no_friends">Lorg daoine airson cabadaich</string>
     <string name="chat_pin">Prìnich</string>
     <string name="chat_unpin">Dì-phrìnich</string>
     <string name="chat_settings_general">Coitcheann</string>

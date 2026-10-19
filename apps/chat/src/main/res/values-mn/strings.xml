@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Ирж буй чатууд</string>
     <string name="chat_policy_friends">Зөвхөн найзууд</string>
     <string name="chat_policy_anyone">Хэн ч</string>
-    <string name="chat_new_search_placeholder">Хүмүүсийг хайх</string>
     <string name="chat_new_no_matches">Тохирох хүн алга</string>
-    <string name="chat_new_no_friends">Чатлах хүмүүсийг хайх</string>
     <string name="chat_pin">Бэхлэх</string>
     <string name="chat_unpin">Хадаас тайлах</string>
     <string name="chat_settings_general">Ерөнхий</string>

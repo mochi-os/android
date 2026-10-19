@@ -69,9 +69,7 @@
     <string name="chat_policy_title">Kiruvchi suhbatlar</string>
     <string name="chat_policy_friends">Faqat do\'stlar</string>
     <string name="chat_policy_anyone">Har kim</string>
-    <string name="chat_new_search_placeholder">Odamlarni qidirish</string>
     <string name="chat_new_no_matches">Mos odamlar yo\'q</string>
-    <string name="chat_new_no_friends">Suhbatlashish uchun odamlarni qidiring</string>
     <string name="chat_pin">Mahkamlash</string>
     <string name="chat_unpin">Mahkamlanmagan</string>
     <string name="chat_settings_general">Umumiy</string>

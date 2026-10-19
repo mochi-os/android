@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Xats entrants</string>
     <string name="chat_policy_friends">Només amics</string>
     <string name="chat_policy_anyone">Qualsevol</string>
-    <string name="chat_new_search_placeholder">Cerca persones</string>
     <string name="chat_new_no_matches">Cap persona coincident</string>
-    <string name="chat_new_no_friends">Cerca persones per xatejar</string>
     <string name="chat_pin">Fixa</string>
     <string name="chat_unpin">Desafixa</string>
     <string name="chat_settings_general">General</string>

@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Iincoko ezingenayo</string>
     <string name="chat_policy_friends">Abahlobo kuphela</string>
     <string name="chat_policy_anyone">Nabani na</string>
-    <string name="chat_new_search_placeholder">Khangela abantu</string>
     <string name="chat_new_no_matches">Akukho bantu bahambelanayo</string>
-    <string name="chat_new_no_friends">Khangela abantu ozathetha nabo</string>
     <string name="chat_pin">Ncamathisa</string>
     <string name="chat_unpin">Susa kwiipini</string>
     <string name="chat_settings_general">Ngokubanzi</string>

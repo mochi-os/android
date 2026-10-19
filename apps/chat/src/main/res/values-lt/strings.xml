@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Gaunami pokalbiai</string>
     <string name="chat_policy_friends">Tik draugai</string>
     <string name="chat_policy_anyone">Bet kas</string>
-    <string name="chat_new_search_placeholder">Ieškoti žmonių</string>
     <string name="chat_new_no_matches">Nėra atitinkančių žmonių</string>
-    <string name="chat_new_no_friends">Ieškokite žmonių pokalbiui</string>
     <string name="chat_pin">Prisegti</string>
     <string name="chat_unpin">Atsegti</string>
     <string name="chat_settings_general">Bendra</string>

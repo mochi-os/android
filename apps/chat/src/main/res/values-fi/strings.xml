@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Saapuvat keskustelut</string>
     <string name="chat_policy_friends">Vain kaverit</string>
     <string name="chat_policy_anyone">Kuka tahansa</string>
-    <string name="chat_new_search_placeholder">Hae henkilöitä</string>
     <string name="chat_new_no_matches">Ei vastaavia henkilöitä</string>
-    <string name="chat_new_no_friends">Etsi henkilöitä keskusteltavaksi</string>
     <string name="chat_pin">Kiinnitä</string>
     <string name="chat_unpin">Poista kiinnitys</string>
     <string name="chat_settings_general">Yleiset</string>

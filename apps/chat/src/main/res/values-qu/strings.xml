@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Chayamuq rimanakuykuna</string>
     <string name="chat_policy_friends">Masikunallam</string>
     <string name="chat_policy_anyone">Pipas</string>
-    <string name="chat_new_search_placeholder">Runakunata maskay</string>
     <string name="chat_new_no_matches">Manam tupaq runakunachu</string>
-    <string name="chat_new_no_friends">Rimanakunapaq runakunata maskay</string>
     <string name="chat_pin">Fijay</string>
     <string name="chat_unpin">Fijayta qichuy</string>
     <string name="chat_settings_general">General</string>

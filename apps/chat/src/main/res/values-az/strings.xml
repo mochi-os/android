@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Gələn söhbətlər</string>
     <string name="chat_policy_friends">Yalnız dostlar</string>
     <string name="chat_policy_anyone">İstənilən şəxs</string>
-    <string name="chat_new_search_placeholder">İnsanları axtar</string>
     <string name="chat_new_no_matches">Uyğun insan yoxdur</string>
-    <string name="chat_new_no_friends">Söhbət etmək üçün insanlar axtarın</string>
     <string name="chat_pin">Sancaqla</string>
     <string name="chat_unpin">Sancağı götür</string>
     <string name="chat_settings_general">Ümumi</string>

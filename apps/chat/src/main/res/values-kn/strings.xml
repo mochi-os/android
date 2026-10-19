@@ -68,9 +68,7 @@
     <string name="chat_policy_title">ಒಳಬರುವ ಚಾಟ್‌ಗಳು</string>
     <string name="chat_policy_friends">ಸ್ನೇಹಿತರು ಮಾತ್ರ</string>
     <string name="chat_policy_anyone">ಯಾರಾದರೂ</string>
-    <string name="chat_new_search_placeholder">ಜನರನ್ನು ಹುಡುಕಿ</string>
     <string name="chat_new_no_matches">ಹೊಂದುವ ಜನರಿಲ್ಲ</string>
-    <string name="chat_new_no_friends">ಚಾಟ್ ಮಾಡಲು ಜನರನ್ನು ಹುಡುಕಿ</string>
     <string name="chat_pin">ಪಿನ್</string>
     <string name="chat_unpin">ಪಿನ್ ತೆಗೆಯಿರಿ</string>
     <string name="chat_settings_general">ಸಾಮಾನ್ಯ</string>

@@ -68,9 +68,7 @@
     <string name="chat_policy_title">ការជជែកចូល</string>
     <string name="chat_policy_friends">តែមិត្តភ័ក្តិប៉ុណ្ណោះ</string>
     <string name="chat_policy_anyone">អ្នកណាក៏បាន</string>
-    <string name="chat_new_search_placeholder">ស្វែងរកមនុស្ស</string>
     <string name="chat_new_no_matches">គ្មានមនុស្សដែលត្រូវគ្នា</string>
-    <string name="chat_new_no_friends">ស្វែងរកមនុស្សដើម្បីជជែក</string>
     <string name="chat_pin">ខ្ទាស់</string>
     <string name="chat_unpin">ដកខ្ទាស់</string>
     <string name="chat_settings_general">ទូទៅ</string>

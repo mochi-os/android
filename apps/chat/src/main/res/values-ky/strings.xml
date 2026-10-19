@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Кирүүчү чаттар</string>
     <string name="chat_policy_friends">Досторго гана</string>
     <string name="chat_policy_anyone">Каалаган адам</string>
-    <string name="chat_new_search_placeholder">Адамдарды издөө</string>
     <string name="chat_new_no_matches">Дал келген адамдар жок</string>
-    <string name="chat_new_no_friends">Маектешүү үчүн адамдарды издеңиз</string>
     <string name="chat_pin">Бекитүү</string>
     <string name="chat_unpin">Бекитүүнү алуу</string>
     <string name="chat_settings_general">Жалпы</string>

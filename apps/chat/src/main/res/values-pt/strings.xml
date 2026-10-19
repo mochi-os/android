@@ -68,9 +68,7 @@
     <string name="chat_policy_title">Conversas recebidas</string>
     <string name="chat_policy_friends">Apenas amigos</string>
     <string name="chat_policy_anyone">Qualquer pessoa</string>
-    <string name="chat_new_search_placeholder">Procurar pessoas</string>
     <string name="chat_new_no_matches">Nenhuma pessoa correspondente</string>
-    <string name="chat_new_no_friends">Procure pessoas para conversar</string>
     <string name="chat_pin">Fixar</string>
     <string name="chat_unpin">Desafixar</string>
     <string name="chat_settings_general">Geral</string>

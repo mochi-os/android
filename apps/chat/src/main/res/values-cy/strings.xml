@@ -69,9 +69,7 @@
     <string name="chat_policy_title">Sgyrsiau sy\'n dod i mewn</string>
     <string name="chat_policy_friends">Ffrindiau yn unig</string>
     <string name="chat_policy_anyone">Unrhyw un</string>
-    <string name="chat_new_search_placeholder">Chwilio am bobl</string>
     <string name="chat_new_no_matches">Dim pobl gyfatebol</string>
-    <string name="chat_new_no_friends">Chwiliwch am bobl i sgwrsio â nhw</string>
     <string name="chat_pin">Pinio</string>
     <string name="chat_unpin">Dadbinio</string>
     <string name="chat_settings_general">Cyffredinol</string>

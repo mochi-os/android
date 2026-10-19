@@ -125,7 +125,7 @@ fun NewChatScreen(
                     MochiTextField(
                         value = uiState.searchQuery,
                         onValueChange = viewModel::updateSearchQuery,
-                        placeholder = { Text(stringResource(R.string.chat_new_search_placeholder)) },
+                        placeholder = { Text(stringResource(R.string.chat_settings_add_member_search)) },
                         singleLine = true,
                         modifier = Modifier
                             .fillMaxWidth()
@@ -151,11 +151,9 @@ fun NewChatScreen(
                             contentAlignment = Alignment.Center
                         ) {
                             when {
-                                uiState.isSearchingDirectory ->
-                                    CircularProgressIndicator(modifier = Modifier.size(24.dp))
                                 uiState.searchQuery.isBlank() && uiState.friends.isEmpty() ->
                                     Text(
-                                        text = stringResource(R.string.chat_new_no_friends),
+                                        text = stringResource(R.string.chat_settings_add_member_no_friends),
                                         color = MaterialTheme.colorScheme.onSurfaceVariant
                                     )
                                 else ->

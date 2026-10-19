@@ -68,9 +68,7 @@
     <string name="chat_policy_title">ايندڙ چيٽ</string>
     <string name="chat_policy_friends">صرف دوست</string>
     <string name="chat_policy_anyone">ڪوبه</string>
-    <string name="chat_new_search_placeholder">ماڻهو ڳوليو</string>
     <string name="chat_new_no_matches">ڪوبه ملندڙ ماڻهو ناهي</string>
-    <string name="chat_new_no_friends">چيٽ ڪرڻ لاءِ ماڻهو ڳوليو</string>
     <string name="chat_pin">پن</string>
     <string name="chat_unpin">ان پن ڪريو</string>
     <string name="chat_settings_general">عام</string>
