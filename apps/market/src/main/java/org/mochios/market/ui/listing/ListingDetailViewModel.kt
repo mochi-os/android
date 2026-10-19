@@ -216,10 +216,15 @@ class ListingDetailViewModel @Inject constructor(
         }
     }
 
+    /**
+     * [onSuccess] and [onFailure] have no defaults, so a caller cannot pass one
+     * trailing lambda and have it land on the wrong outcome.
+     */
     fun reportListing(
         reason: String,
         details: String,
-        onSuccess: () -> Unit = {},
+        onSuccess: () -> Unit,
+        onFailure: (MochiError) -> Unit,
     ) {
         val id = currentId
         if (id.isEmpty()) return
@@ -239,21 +244,23 @@ class ListingDetailViewModel @Inject constructor(
                 )
                 onSuccess()
             } catch (e: Exception) {
-                _state.value = _state.value.copy(error = e.toMochiError())
-                _snackbar.emit(
-                    ListingDetailSnackbar(
-                        org.mochios.market.R.string.market_report_dialog_failed,
-                    )
-                )
+                onFailure(e.toMochiError())
             }
         }
     }
 
+    /**
+     * [onSuccess] runs for every accepted bid, [onInstantWin] additionally
+     * when it met the buy-now price. [onSuccess] and [onFailure] have no
+     * defaults, so a caller passing one trailing lambda fails to compile
+     * instead of binding it to [onInstantWin].
+     */
     fun placeBid(
         amount: Long,
         ceiling: Long?,
         currency: Currency,
-        onSuccess: () -> Unit = {},
+        onSuccess: () -> Unit,
+        onFailure: (MochiError) -> Unit,
         onInstantWin: () -> Unit = {},
     ) {
         val auctionId = _state.value.listing?.auction?.id ?: return
@@ -284,12 +291,7 @@ class ListingDetailViewModel @Inject constructor(
                 load(currentId)
                 onSuccess()
             } catch (e: Exception) {
-                _state.value = _state.value.copy(error = e.toMochiError())
-                _snackbar.emit(
-                    ListingDetailSnackbar(
-                        org.mochios.market.R.string.market_bid_dialog_failed,
-                    )
-                )
+                onFailure(e.toMochiError())
             }
         }
     }

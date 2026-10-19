@@ -92,6 +92,7 @@ import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.mochios.android.api.userMessage
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EmptyState
@@ -120,6 +121,7 @@ import org.mochios.market.model.Bid
 import org.mochios.market.model.Condition
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Listing
+import org.mochios.market.model.ListingDetailResponse
 import org.mochios.market.model.ListingStatus
 import org.mochios.market.model.ListingType
 import org.mochios.market.model.Photo
@@ -248,9 +250,6 @@ fun ListingDetailScreen(
     var lightboxIndex by remember { mutableIntStateOf(0) }
     var reportOpen by remember { mutableStateOf(false) }
     var bidOpen by remember { mutableStateOf(false) }
-    var submittingReport by remember { mutableStateOf(false) }
-    var submittingBid by remember { mutableStateOf(false) }
-    var bidErrorMessage by remember { mutableStateOf<String?>(null) }
 
     val listingTitle = state.listing?.listing?.title.orEmpty()
     val currentListingId = state.listing?.listing?.id
@@ -356,6 +355,15 @@ fun ListingDetailScreen(
                                     amount = auc.instant,
                                     ceiling = null,
                                     currency = listing.currency ?: Currency.GBP,
+                                    onSuccess = {},
+                                    // No dialog to hold the reason, so it
+                                    // goes to the snackbar.
+                                    onFailure = { failure ->
+                                        val text = failure.userMessage().ifEmpty {
+                                            resources.getString(R.string.market_bid_dialog_failed)
+                                        }
+                                        scope.launch { snackbarHostState.showSnackbar(text) }
+                                    },
                                     onInstantWin = {
                                         navController.navigate(
                                             MarketApp.checkout(listing.id.toString()),
@@ -367,7 +375,6 @@ fun ListingDetailScreen(
                         onPrimaryCta = {
                             when (listing.pricing) {
                                 PricingModel.AUCTION -> {
-                                    bidErrorMessage = null
                                     bidOpen = true
                                 }
 
@@ -450,34 +457,96 @@ fun ListingDetailScreen(
         )
     }
 
-    ReportListingDialog(
+    ReportDialogHost(
         open = reportOpen,
-        submitting = submittingReport,
-        onSubmit = { reason, details ->
-            submittingReport = true
-            viewModel.reportListing(reason, details) {
-                submittingReport = false
-                reportOpen = false
-            }
-        },
-        onDismiss = { reportOpen = false },
+        viewModel = viewModel,
+        onClose = { reportOpen = false },
     )
 
-    PlaceBidDialog(
+    BidDialogHost(
         open = bidOpen,
-        auction = state.listing?.auction,
-        startingPrice = state.listing?.listing?.price ?: 0L,
-        currency = state.listing?.listing?.currency ?: Currency.GBP,
-        submitting = submittingBid,
-        errorMessage = bidErrorMessage,
+        detail = state.listing,
+        viewModel = viewModel,
+        onClose = { bidOpen = false },
+    )
+}
+
+/**
+ * The bid dialog and its round trip: an accepted bid closes it, and a refused
+ * one keeps it open on the server's reason with the form usable again.
+ */
+@Composable
+internal fun BidDialogHost(
+    open: Boolean,
+    detail: ListingDetailResponse?,
+    viewModel: ListingDetailViewModel,
+    onClose: () -> Unit,
+) {
+    var submitting by remember(open) { mutableStateOf(false) }
+    var error by remember(open) { mutableStateOf<String?>(null) }
+    val fallback = stringResource(R.string.market_bid_dialog_failed)
+    PlaceBidDialog(
+        open = open,
+        auction = detail?.auction,
+        startingPrice = detail?.listing?.price ?: 0L,
+        currency = detail?.listing?.currency ?: Currency.GBP,
+        submitting = submitting,
+        errorMessage = error,
         onSubmit = { amount, ceiling, currency ->
-            submittingBid = true
-            viewModel.placeBid(amount, ceiling, currency) {
-                submittingBid = false
-                bidOpen = false
-            }
+            submitting = true
+            error = null
+            viewModel.placeBid(
+                amount = amount,
+                ceiling = ceiling,
+                currency = currency,
+                onSuccess = {
+                    submitting = false
+                    onClose()
+                },
+                onFailure = { failure ->
+                    submitting = false
+                    error = failure.userMessage().ifEmpty { fallback }
+                },
+            )
         },
-        onDismiss = { bidOpen = false },
+        onDismiss = onClose,
+    )
+}
+
+/**
+ * The report dialog and its round trip: a filed report closes it, and a
+ * refused one keeps it open on the server's reason.
+ */
+@Composable
+internal fun ReportDialogHost(
+    open: Boolean,
+    viewModel: ListingDetailViewModel,
+    onClose: () -> Unit,
+) {
+    var submitting by remember(open) { mutableStateOf(false) }
+    var error by remember(open) { mutableStateOf<String?>(null) }
+    val fallback = stringResource(R.string.market_report_dialog_failed)
+    ReportListingDialog(
+        open = open,
+        submitting = submitting,
+        errorMessage = error,
+        onSubmit = { reason, details ->
+            submitting = true
+            error = null
+            viewModel.reportListing(
+                reason = reason,
+                details = details,
+                onSuccess = {
+                    submitting = false
+                    onClose()
+                },
+                onFailure = { failure ->
+                    submitting = false
+                    error = failure.userMessage().ifEmpty { fallback }
+                },
+            )
+        },
+        onDismiss = onClose,
     )
 }
 

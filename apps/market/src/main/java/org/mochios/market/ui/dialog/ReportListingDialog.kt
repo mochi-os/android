@@ -13,6 +13,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -51,6 +52,7 @@ private fun ReportReason.wire(): String = name.lowercase()
 fun ReportListingDialog(
     open: Boolean,
     submitting: Boolean = false,
+    errorMessage: String? = null,
     onSubmit: (reason: String, details: String) -> Unit,
     onDismiss: () -> Unit,
 ) {
@@ -119,6 +121,14 @@ fun ReportListingDialog(
                     maxLines = 6,
                     modifier = Modifier.fillMaxWidth(),
                 )
+                if (!errorMessage.isNullOrBlank()) {
+                    Spacer(Modifier.height(8.dp))
+                    Text(
+                        text = errorMessage,
+                        color = MaterialTheme.colorScheme.error,
+                        style = MaterialTheme.typography.bodySmall,
+                    )
+                }
             }
         },
         confirmText = if (submitting) {
