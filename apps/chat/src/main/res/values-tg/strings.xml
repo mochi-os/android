@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Аъзоҳо</string>
     <string name="chat_settings_add_member">Иловаи аъзо</string>
     <string name="chat_settings_add_member_search">Ҷустуҷӯи дӯстон</string>
+    <string name="chat_settings_add_member_no_friends">Шумо ҳоло дӯст надоред. Ба чат танҳо дӯстонро илова кардан мумкин аст.</string>
+    <string name="chat_settings_add_member_all_added">Ҳамаи дӯстони шумо аллакай дар ин чат ҳастанд.</string>
+    <string name="chat_settings_add_member_no_match">Истилоҳи дигари ҷустуҷӯро санҷед</string>
     <string name="chat_settings_remove_member">Хориҷ кардан</string>
     <string name="chat_settings_remove_member_title">Хориҷ кардани аъзо</string>
     <string name="chat_settings_leave">Тарк кардани чат</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Боргирии паёмҳои кӯҳнатар</string>
     <string name="chat_attachment_label">Файл</string>
     <string name="chat_settings_rename">Тағйири номи чат</string>
-    <string name="chat_settings_add_member_empty">Дӯстоне барои илова кардан нест</string>
     <string name="chat_settings_remove_member_message">%1$s-ро аз ин чат хориҷ мекунед?</string>
     <string name="chat_settings_leave_message">Ин чатро тарк мекунед? Аъзои дигар паёмҳои шуморо дигар нахоҳанд дид.</string>
     <string name="chat_settings_leave_and_delete">Тарк кардан ва нест кардан дар ин дастгоҳ</string>

@@ -14,6 +14,9 @@
     <string name="chat_settings_members">ਮੈਂਬਰ</string>
     <string name="chat_settings_add_member">ਮੈਂਬਰ ਜੋੜੋ</string>
     <string name="chat_settings_add_member_search">ਦੋਸਤ ਖੋਜੋ</string>
+    <string name="chat_settings_add_member_no_friends">ਤੁਹਾਡੇ ਅਜੇ ਕੋਈ ਦੋਸਤ ਨਹੀਂ ਹਨ। ਚੈਟ ਵਿੱਚ ਸਿਰਫ਼ ਦੋਸਤਾਂ ਨੂੰ ਹੀ ਜੋੜਿਆ ਜਾ ਸਕਦਾ ਹੈ।</string>
+    <string name="chat_settings_add_member_all_added">ਤੁਹਾਡੇ ਸਾਰੇ ਦੋਸਤ ਪਹਿਲਾਂ ਹੀ ਇਸ ਚੈਟ ਵਿੱਚ ਹਨ।</string>
+    <string name="chat_settings_add_member_no_match">ਵੱਖਰੀ ਖੋਜ ਸ਼ਬਦ ਅਜ਼ਮਾਓ</string>
     <string name="chat_settings_remove_member">ਹਟਾਓ</string>
     <string name="chat_settings_remove_member_title">ਮੈਂਬਰ ਹਟਾਓ</string>
     <string name="chat_settings_leave">ਚੈਟ ਛੱਡੋ</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">ਪੁਰਾਣੇ ਸੁਨੇਹੇ ਲੋਡ ਕਰੋ</string>
     <string name="chat_attachment_label">ਫ਼ਾਈਲ</string>
     <string name="chat_settings_rename">ਚੈਟ ਦਾ ਨਾਮ ਬਦਲੋ</string>
-    <string name="chat_settings_add_member_empty">ਜੋੜਨ ਲਈ ਕੋਈ ਦੋਸਤ ਨਹੀਂ</string>
     <string name="chat_settings_remove_member_message">%1$s ਨੂੰ ਇਸ ਚੈਟ ਵਿੱਚੋਂ ਹਟਾਉਣਾ ਹੈ?</string>
     <string name="chat_settings_leave_message">ਇਹ ਚੈਟ ਛੱਡਣੀ ਹੈ? ਹੋਰ ਮੈਂਬਰ ਤੁਹਾਡੇ ਸੁਨੇਹੇ ਨਹੀਂ ਦੇਖ ਸਕਣਗੇ।</string>
     <string name="chat_settings_leave_and_delete">ਛੱਡੋ ਅਤੇ ਸਥਾਨਕ ਤੌਰ \'ਤੇ ਮਿਟਾਓ</string>

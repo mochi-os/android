@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Membres</string>
     <string name="chat_settings_add_member">Afegeix un membre</string>
     <string name="chat_settings_add_member_search">Cerca amics</string>
+    <string name="chat_settings_add_member_no_friends">Encara no teniu amics. Només es poden afegir amics a un xat.</string>
+    <string name="chat_settings_add_member_all_added">Tots els vostres amics ja són en aquest xat.</string>
+    <string name="chat_settings_add_member_no_match">Prova un terme de cerca diferent</string>
     <string name="chat_settings_remove_member">Elimina</string>
     <string name="chat_settings_remove_member_title">Elimina el membre</string>
     <string name="chat_settings_leave">Surt del xat</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_loading">S\'estan carregant els missatges…</string>
     <string name="chat_messages_empty">Encara no hi ha cap missatge — saluda!</string>
     <string name="chat_settings_rename">Canvia el nom del xat</string>
-    <string name="chat_settings_add_member_empty">No hi ha amics per afegir</string>
     <string name="chat_settings_remove_member_message">Voleu eliminar %1$s d\'aquest xat?</string>
     <string name="chat_settings_leave_message">Voleu abandonar aquest xat? Els altres membres ja no veuran els vostres missatges.</string>
     <string name="chat_settings_leave_and_delete">Abandona i suprimeix localment</string>

@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Membros</string>
     <string name="chat_settings_add_member">Adicionar membro</string>
     <string name="chat_settings_add_member_search">Pesquisar amigos</string>
+    <string name="chat_settings_add_member_no_friends">Ainda não tem amigos. Só é possível adicionar amigos a um chat.</string>
+    <string name="chat_settings_add_member_all_added">Todos os seus amigos já estão neste chat.</string>
+    <string name="chat_settings_add_member_no_match">Tenta um termo de pesquisa diferente</string>
     <string name="chat_settings_remove_member">Remover</string>
     <string name="chat_settings_remove_member_title">Remover membro</string>
     <string name="chat_settings_leave">Sair da conversa</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Carregar mensagens anteriores</string>
     <string name="chat_attachment_label">Ficheiro</string>
     <string name="chat_settings_rename">Renomear chat</string>
-    <string name="chat_settings_add_member_empty">Não há amigos para adicionar</string>
     <string name="chat_settings_remove_member_message">Remover %1$s deste chat?</string>
     <string name="chat_settings_leave_message">Sair deste chat? Os outros membros deixarão de ver as suas mensagens.</string>
     <string name="chat_settings_leave_and_delete">Sair e eliminar localmente</string>

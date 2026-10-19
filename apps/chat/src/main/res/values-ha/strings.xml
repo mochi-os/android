@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Membobi</string>
     <string name="chat_settings_add_member">Ƙara memba</string>
     <string name="chat_settings_add_member_search">Bincika abokai</string>
+    <string name="chat_settings_add_member_no_friends">Ba ka da abokai tukuna. Abokai kaɗai za a iya ƙarawa zuwa tattaunawa.</string>
+    <string name="chat_settings_add_member_all_added">Duk abokanka sun riga sun shiga wannan tattaunawa.</string>
+    <string name="chat_settings_add_member_no_match">Gwada wani kalmar bincike</string>
     <string name="chat_settings_remove_member">Cire</string>
     <string name="chat_settings_remove_member_title">Cire memba</string>
     <string name="chat_settings_leave">Bar chat</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Matsa ƙasa</string>
     <string name="chat_attachment_label">Fayil</string>
     <string name="chat_settings_rename">Sake suna tattaunawa</string>
-    <string name="chat_settings_add_member_empty">Babu abokai da za a ƙara</string>
     <string name="chat_settings_remove_member_message">A cire %1$s daga wannan tattaunawa?</string>
     <string name="chat_settings_leave_message">A bar wannan tattaunawa? Sauran mambobi ba za su ƙara ganin saƙonninka ba.</string>
     <string name="chat_settings_leave_and_delete">Bar kuma share a wannan na\'urar</string>

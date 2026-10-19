@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Miembrokuna</string>
     <string name="chat_settings_add_member">Miembro yapay</string>
     <string name="chat_settings_add_member_search">Masikunata maskay</string>
+    <string name="chat_settings_add_member_no_friends">Manaraqmi masikunayki kanchu. Masikunallatam rimanakuyman yapakuyta atikun.</string>
+    <string name="chat_settings_add_member_all_added">Llapan masikunaykiqa kay rimanakuypiñam kachkanku.</string>
+    <string name="chat_settings_add_member_no_match">Huk maskana simiwan kutimanta ruway</string>
     <string name="chat_settings_remove_member">Qichuy</string>
     <string name="chat_settings_remove_member_title">Miembrota qichuy</string>
     <string name="chat_settings_leave">Rimanakuyta saqiy</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Ñawpaq willakuykunata cargay</string>
     <string name="chat_attachment_label">Archivo</string>
     <string name="chat_settings_rename">Rimanakuypa sutinta hukchay</string>
-    <string name="chat_settings_add_member_empty">Manaña masikuna yapanapaq kanchu</string>
     <string name="chat_settings_remove_member_message">¿%1$s-ta kay rimanakuymanta qichunkichu?</string>
     <string name="chat_settings_leave_message">¿Kay rimanakuymanta lluqsiyta munankichu? Huk miembrokunaqa manañam willakuykikunata rikunqakuchu.</string>
     <string name="chat_settings_leave_and_delete">Lluqsiy hinaspa kay dispositivollapi wischuy</string>

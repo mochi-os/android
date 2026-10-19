@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Baill</string>
     <string name="chat_settings_add_member">Cuir ball leis</string>
     <string name="chat_settings_add_member_search">Cuardaigh cairde</string>
+    <string name="chat_settings_add_member_no_friends">Níl aon chairde agat fós. Ní féidir ach cairde a chur le comhrá.</string>
+    <string name="chat_settings_add_member_all_added">Tá do chairde go léir sa chomhrá seo cheana féin.</string>
+    <string name="chat_settings_add_member_no_match">Bain triail as téarma cuardaigh difriúil</string>
     <string name="chat_settings_remove_member">Bain</string>
     <string name="chat_settings_remove_member_title">Bain ball</string>
     <string name="chat_settings_leave">Fág comhrá</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Bog síos</string>
     <string name="chat_attachment_label">Comhad</string>
     <string name="chat_settings_rename">Athainmnigh an comhrá</string>
-    <string name="chat_settings_add_member_empty">Níl aon chairde le cur leis</string>
     <string name="chat_settings_remove_member_message">Bain %1$s den chomhrá seo?</string>
     <string name="chat_settings_leave_message">Fág an comhrá seo? Ní fheicfidh baill eile do theachtaireachtaí níos mó.</string>
     <string name="chat_settings_leave_and_delete">Fág agus scrios go logánta</string>

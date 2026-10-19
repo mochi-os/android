@@ -14,6 +14,9 @@
     <string name="chat_settings_members">உறுப்பினர்கள்</string>
     <string name="chat_settings_add_member">உறுப்பினர் சேர்</string>
     <string name="chat_settings_add_member_search">நண்பர்களைத் தேடு</string>
+    <string name="chat_settings_add_member_no_friends">உங்களுக்கு இன்னும் நண்பர்கள் இல்லை. அரட்டையில் நண்பர்களை மட்டுமே சேர்க்க முடியும்.</string>
+    <string name="chat_settings_add_member_all_added">உங்கள் நண்பர்கள் அனைவரும் ஏற்கனவே இந்த அரட்டையில் உள்ளனர்.</string>
+    <string name="chat_settings_add_member_no_match">வேறு தேடல் சொல்லை முயற்சிக்கவும்</string>
     <string name="chat_settings_remove_member">அகற்று</string>
     <string name="chat_settings_remove_member_title">உறுப்பினரை அகற்று</string>
     <string name="chat_settings_leave">சாட்டை விட்டு வெளியேறு</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">பழைய செய்திகளை ஏற்றவும்</string>
     <string name="chat_attachment_label">கோப்பு</string>
     <string name="chat_settings_rename">அரட்டையை மறுபெயரிடவும்</string>
-    <string name="chat_settings_add_member_empty">சேர்க்க நண்பர்கள் இல்லை</string>
     <string name="chat_settings_remove_member_message">%1$s-ஐ இந்த அரட்டையிலிருந்து நீக்கவா?</string>
     <string name="chat_settings_leave_message">இந்த அரட்டையிலிருந்து வெளியேறவா? மற்ற உறுப்பினர்கள் உங்கள் செய்திகளை இனி பார்க்க மாட்டார்கள்.</string>
     <string name="chat_settings_leave_and_delete">வெளியேறி உள்ளூரில் நீக்கவும்</string>

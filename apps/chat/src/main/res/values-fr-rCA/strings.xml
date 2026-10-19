@@ -34,7 +34,9 @@
     <string name="chat_settings_members">Membres</string>
     <string name="chat_settings_add_member">Ajouter un membre</string>
     <string name="chat_settings_add_member_search">Rechercher des amis</string>
-    <string name="chat_settings_add_member_empty">Aucun ami à ajouter</string>
+    <string name="chat_settings_add_member_no_friends">Vous n\'avez pas encore d\'amis. Seuls les amis peuvent être ajoutés à un clavardage.</string>
+    <string name="chat_settings_add_member_all_added">Tous vos amis sont déjà dans ce clavardage.</string>
+    <string name="chat_settings_add_member_no_match">Essayez un autre terme de recherche</string>
     <string name="chat_settings_remove_member_title">Retirer un membre</string>
     <string name="chat_settings_remove_member_message">Retirer %1$s de ce clavardage?</string>
     <string name="chat_settings_leave_message">Quitter ce clavardage? Les autres membres ne verront plus vos messages.</string>

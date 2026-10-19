@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Jäsenet</string>
     <string name="chat_settings_add_member">Lisää jäsen</string>
     <string name="chat_settings_add_member_search">Hae kavereita</string>
+    <string name="chat_settings_add_member_no_friends">Sinulla ei ole vielä kavereita. Keskusteluun voi lisätä vain kavereita.</string>
+    <string name="chat_settings_add_member_all_added">Kaikki kaverisi ovat jo tässä keskustelussa.</string>
+    <string name="chat_settings_add_member_no_match">Kokeile toista hakusanaa</string>
     <string name="chat_settings_remove_member">Poista</string>
     <string name="chat_settings_remove_member_title">Poista jäsen</string>
     <string name="chat_settings_leave">Poistu keskustelusta</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Siirrä alas</string>
     <string name="chat_attachment_label">Tiedosto</string>
     <string name="chat_settings_rename">Nimeä keskustelu uudelleen</string>
-    <string name="chat_settings_add_member_empty">Ei lisättäviä ystäviä</string>
     <string name="chat_settings_remove_member_message">Poistetaanko %1$s tästä keskustelusta?</string>
     <string name="chat_settings_leave_message">Poistutaanko tästä keskustelusta? Muut jäsenet eivät enää näe viestejäsi.</string>
     <string name="chat_settings_leave_and_delete">Poistu ja poista paikallisesti</string>

@@ -29,7 +29,9 @@
     <string name="chat_settings_members">Mitglieder</string>
     <string name="chat_settings_add_member">Mitglied hinzufügen</string>
     <string name="chat_settings_add_member_search">Freunde suchen</string>
-    <string name="chat_settings_add_member_empty">Keine Freunde zum Hinzufügen</string>
+    <string name="chat_settings_add_member_no_friends">Sie haben noch keine Freunde. Nur Freunde können zu einem Chat hinzugefügt werden.</string>
+    <string name="chat_settings_add_member_all_added">Alle Ihre Freunde sind bereits in diesem Chat.</string>
+    <string name="chat_settings_add_member_no_match">Probiere einen anderen Suchbegriff</string>
     <string name="chat_settings_remove_member_title">Mitglied entfernen</string>
     <string name="chat_settings_remove_member_message">%1$s aus diesem Chat entfernen?</string>
     <string name="chat_settings_leave">Chat verlassen</string>

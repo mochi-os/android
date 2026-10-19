@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Endam</string>
     <string name="chat_settings_add_member">Endam zêde bike</string>
     <string name="chat_settings_add_member_search">Li hevalan bigere</string>
+    <string name="chat_settings_add_member_no_friends">Hîn hevalên te tune ne. Tenê heval dikarin li chatê werin zêdekirin.</string>
+    <string name="chat_settings_add_member_all_added">Hemû hevalên te jixwe di vê chatê de ne.</string>
+    <string name="chat_settings_add_member_no_match">Peyveke lêgerînê ya cuda biceribîne</string>
     <string name="chat_settings_remove_member">Rake</string>
     <string name="chat_settings_remove_member_title">Endamê rake</string>
     <string name="chat_settings_leave">Ji chatê derkeve</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Peyamên kevntir bar bike</string>
     <string name="chat_attachment_label">Pel</string>
     <string name="chat_settings_rename">Navê chatê biguhêre</string>
-    <string name="chat_settings_add_member_empty">Tu heval tune ku werin lê zêdekirin</string>
     <string name="chat_settings_remove_member_message">%1$s ji vê chatê were rakirin?</string>
     <string name="chat_settings_leave_message">Ji vê chatê derkeve? Endamên din êdî peyamên te nabînin.</string>
     <string name="chat_settings_leave_and_delete">Derkeve û herêmî jêbibe</string>

@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Členové</string>
     <string name="chat_settings_add_member">Přidat člena</string>
     <string name="chat_settings_add_member_search">Hledat přátele</string>
+    <string name="chat_settings_add_member_no_friends">Zatím nemáte žádné přátele. Do chatu lze přidat pouze přátele.</string>
+    <string name="chat_settings_add_member_all_added">Všichni vaši přátelé už jsou v tomto chatu.</string>
+    <string name="chat_settings_add_member_no_match">Zkuste jiný vyhledávací výraz</string>
     <string name="chat_settings_remove_member">Odebrat</string>
     <string name="chat_settings_remove_member_title">Odebrat člena</string>
     <string name="chat_settings_leave">Opustit chat</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Posunout dolů</string>
     <string name="chat_attachment_label">Soubor</string>
     <string name="chat_settings_rename">Přejmenovat chat</string>
-    <string name="chat_settings_add_member_empty">Žádní přátelé k přidání</string>
     <string name="chat_settings_remove_member_message">Odebrat uživatele %1$s z tohoto chatu?</string>
     <string name="chat_settings_leave_message">Opustit tento chat? Ostatní členové již neuvidí vaše zprávy.</string>
     <string name="chat_settings_leave_and_delete">Opustit a smazat lokálně</string>

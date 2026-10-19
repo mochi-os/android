@@ -5,6 +5,7 @@
 
 package org.mochios.chat.ui.settings
 
+import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -44,6 +45,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -85,6 +87,13 @@ fun ChatSettingsScreen(
 
     LaunchedEffect(uiState.chat.name) {
         if (nameDraft.isEmpty()) nameDraft = uiState.chat.name
+    }
+
+    val context = LocalContext.current
+    LaunchedEffect(uiState.notice) {
+        val notice = uiState.notice ?: return@LaunchedEffect
+        Toast.makeText(context, notice.userMessage(), Toast.LENGTH_SHORT).show()
+        viewModel.clearNotice()
     }
 
     LaunchedEffect(uiState.leftOrDeleted) {
@@ -332,6 +341,8 @@ fun ChatSettingsScreen(
         val candidates = uiState.friends.filter { it.id !in existingMemberIds }
         AddMemberDialog(
             friends = candidates,
+            hasFriends = uiState.friends.isNotEmpty(),
+            isLoading = uiState.isLoadingFriends,
             onConfirm = { friendId ->
                 viewModel.addMember(friendId)
                 showAddMember = false
@@ -344,6 +355,8 @@ fun ChatSettingsScreen(
 @Composable
 private fun AddMemberDialog(
     friends: List<org.mochios.chat.model.Friend>,
+    hasFriends: Boolean,
+    isLoading: Boolean,
     onConfirm: (friendId: String) -> Unit,
     onDismiss: () -> Unit,
 ) {
@@ -356,17 +369,36 @@ private fun AddMemberDialog(
         title = stringResource(R.string.chat_settings_add_member),
         content = {
             Column {
-                MochiTextField(
-                    value = query,
-                    onValueChange = { query = it },
-                    placeholder = { Text(stringResource(R.string.chat_settings_add_member_search)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                if (filtered.isEmpty()) {
+                if (friends.isNotEmpty()) {
+                    MochiTextField(
+                        value = query,
+                        onValueChange = { query = it },
+                        placeholder = {
+                            Text(stringResource(R.string.chat_settings_add_member_search))
+                        },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                }
+                if (isLoading && friends.isEmpty()) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 16.dp),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        CircularProgressIndicator()
+                    }
+                } else if (filtered.isEmpty()) {
+                    val message = when {
+                        !hasFriends -> stringResource(R.string.chat_settings_add_member_no_friends)
+                        friends.isEmpty() ->
+                            stringResource(R.string.chat_settings_add_member_all_added)
+                        else -> stringResource(R.string.chat_settings_add_member_no_match)
+                    }
                     Text(
-                        stringResource(R.string.chat_settings_add_member_empty),
+                        message,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 } else {

@@ -14,6 +14,9 @@
     <string name="chat_settings_members">አባላት</string>
     <string name="chat_settings_add_member">አባል ጨምር</string>
     <string name="chat_settings_add_member_search">ጓደኞችን ይፈልጉ</string>
+    <string name="chat_settings_add_member_no_friends">እስካሁን ምንም ጓደኞች የሉዎትም። ወደ ውይይት ሊታከሉ የሚችሉት ጓደኞች ብቻ ናቸው።</string>
+    <string name="chat_settings_add_member_all_added">ሁሉም ጓደኞችዎ አስቀድመው በዚህ ውይይት ውስጥ ናቸው።</string>
+    <string name="chat_settings_add_member_no_match">የተለየ የፍለጋ ቃል ይሞክሩ</string>
     <string name="chat_settings_remove_member">አስወግድ</string>
     <string name="chat_settings_remove_member_title">አባል አስወግድ</string>
     <string name="chat_settings_leave">ውይይትን ለቀህ ውጣ</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">ወደ ታች አንቀሳቅስ</string>
     <string name="chat_attachment_label">ፋይል</string>
     <string name="chat_settings_rename">ውይይቱን ይሰይሙ</string>
-    <string name="chat_settings_add_member_empty">የሚጨመር ጓደኛ የለም</string>
     <string name="chat_settings_remove_member_message">%1$s ከዚህ ውይይት ይወገድ?</string>
     <string name="chat_settings_leave_message">ከዚህ ውይይት ይውጡ? ሌሎች አባላት መልዕክቶችዎን ከእንግዲህ አያዩም።</string>
     <string name="chat_settings_leave_and_delete">ይውጡ እና በአካባቢ ይሰርዙ</string>

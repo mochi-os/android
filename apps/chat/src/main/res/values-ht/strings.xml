@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Manm</string>
     <string name="chat_settings_add_member">Ajoute manm</string>
     <string name="chat_settings_add_member_search">Chèche zanmi</string>
+    <string name="chat_settings_add_member_no_friends">Ou poko gen zanmi. Se sèlman zanmi ki ka ajoute nan yon chat.</string>
+    <string name="chat_settings_add_member_all_added">Tout zanmi ou yo deja nan chat sa a.</string>
+    <string name="chat_settings_add_member_no_match">Eseye yon lòt tèm rechèch</string>
     <string name="chat_settings_remove_member">Retire</string>
     <string name="chat_settings_remove_member_title">Retire manm</string>
     <string name="chat_settings_leave">Kite chat</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Desann</string>
     <string name="chat_attachment_label">Fichye</string>
     <string name="chat_settings_rename">Chanje non chat la</string>
-    <string name="chat_settings_add_member_empty">Pa gen zanmi pou ajoute</string>
     <string name="chat_settings_remove_member_message">Retire %1$s nan chat sa a?</string>
     <string name="chat_settings_leave_message">Kite chat sa a? Lòt manm yo pap wè mesaj ou yo ankò.</string>
     <string name="chat_settings_leave_and_delete">Kite epi efase lokalman</string>

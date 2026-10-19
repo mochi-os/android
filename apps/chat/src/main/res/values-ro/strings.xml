@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Membri</string>
     <string name="chat_settings_add_member">Adaugă membru</string>
     <string name="chat_settings_add_member_search">Caută prieteni</string>
+    <string name="chat_settings_add_member_no_friends">Nu aveți încă prieteni. Doar prietenii pot fi adăugați într-un chat.</string>
+    <string name="chat_settings_add_member_all_added">Toți prietenii dvs. sunt deja în acest chat.</string>
+    <string name="chat_settings_add_member_no_match">Încearcă un alt termen de căutare</string>
     <string name="chat_settings_remove_member">Elimină</string>
     <string name="chat_settings_remove_member_title">Elimină membrul</string>
     <string name="chat_settings_leave">Părăsește conversația</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Încărcați mesaje mai vechi</string>
     <string name="chat_attachment_label">Fișier</string>
     <string name="chat_settings_rename">Redenumiți chatul</string>
-    <string name="chat_settings_add_member_empty">Niciun prieten de adăugat</string>
     <string name="chat_settings_remove_member_message">Eliminați %1$s din acest chat?</string>
     <string name="chat_settings_leave_message">Părăsiți acest chat? Ceilalți membri nu vă vor mai vedea mesajele.</string>
     <string name="chat_settings_leave_and_delete">Părăsiți și ștergeți local</string>

@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Членове</string>
     <string name="chat_settings_add_member">Добави член</string>
     <string name="chat_settings_add_member_search">Търси приятели</string>
+    <string name="chat_settings_add_member_no_friends">Все още нямате приятели. В чат могат да се добавят само приятели.</string>
+    <string name="chat_settings_add_member_all_added">Всичките ви приятели вече са в този чат.</string>
+    <string name="chat_settings_add_member_no_match">Опитайте друг термин за търсене</string>
     <string name="chat_settings_remove_member">Премахни</string>
     <string name="chat_settings_remove_member_title">Премахни член</string>
     <string name="chat_settings_leave">Напусни чата</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Преместване надолу</string>
     <string name="chat_attachment_label">Файл</string>
     <string name="chat_settings_rename">Преименуване на чата</string>
-    <string name="chat_settings_add_member_empty">Няма приятели за добавяне</string>
     <string name="chat_settings_remove_member_message">Да се премахне ли %1$s от този чат?</string>
     <string name="chat_settings_leave_message">Да се напусне ли този чат? Останалите участници вече няма да виждат вашите съобщения.</string>
     <string name="chat_settings_leave_and_delete">Напускане и локално изтриване</string>

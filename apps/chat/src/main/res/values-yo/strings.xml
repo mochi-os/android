@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Àwọn ọmọ ẹgbẹ́</string>
     <string name="chat_settings_add_member">Fi ọmọ ẹgbẹ́ kún</string>
     <string name="chat_settings_add_member_search">Wá àwọn ọ̀rẹ́</string>
+    <string name="chat_settings_add_member_no_friends">O kò tíì ní ọ̀rẹ́ kankan. Àwọn ọ̀rẹ́ nìkan ni a lè fi kún ìjíròrò.</string>
+    <string name="chat_settings_add_member_all_added">Gbogbo àwọn ọ̀rẹ́ rẹ ti wà nínú ìjíròrò yìí tẹ́lẹ̀.</string>
+    <string name="chat_settings_add_member_no_match">Gbìyànjú ọ̀rọ̀ ìwáàrí míràn</string>
     <string name="chat_settings_remove_member">Yọ kúrò</string>
     <string name="chat_settings_remove_member_title">Yọ ọmọ ẹgbẹ́ kúrò</string>
     <string name="chat_settings_leave">Kúrò nínú ìfọ̀rọ̀wérọ̀</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Gbé àwọn ìránṣẹ́ àtijọ́ wọlé</string>
     <string name="chat_attachment_label">Fáìlì</string>
     <string name="chat_settings_rename">Tún ìjíròrò sọ lórúkọ</string>
-    <string name="chat_settings_add_member_empty">Kò sí ọ̀rẹ́ láti fi kún</string>
     <string name="chat_settings_remove_member_message">Yọ %1$s kúrò nínú ìjíròrò yìí?</string>
     <string name="chat_settings_leave_message">Kúrò nínú ìjíròrò yìí? Àwọn mẹ́ńbà yòókù kò ní rí àwọn ìránṣẹ́ rẹ mọ́.</string>
     <string name="chat_settings_leave_and_delete">Kúrò kí o sì pa á rẹ́ ní ibí</string>

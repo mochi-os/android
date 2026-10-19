@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Członkowie</string>
     <string name="chat_settings_add_member">Dodaj członka</string>
     <string name="chat_settings_add_member_search">Szukaj znajomych</string>
+    <string name="chat_settings_add_member_no_friends">Nie masz jeszcze znajomych. Do czatu można dodać tylko znajomych.</string>
+    <string name="chat_settings_add_member_all_added">Wszyscy Twoi znajomi są już w tym czacie.</string>
+    <string name="chat_settings_add_member_no_match">Spróbuj innego wyrażenia wyszukiwania</string>
     <string name="chat_settings_remove_member">Usuń</string>
     <string name="chat_settings_remove_member_title">Usuń członka</string>
     <string name="chat_settings_leave">Opuść czat</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Wczytaj starsze wiadomości</string>
     <string name="chat_attachment_label">Plik</string>
     <string name="chat_settings_rename">Zmień nazwę czatu</string>
-    <string name="chat_settings_add_member_empty">Brak znajomych do dodania</string>
     <string name="chat_settings_remove_member_message">Usunąć %1$s z tego czatu?</string>
     <string name="chat_settings_leave_message">Opuścić ten czat? Pozostali uczestnicy nie będą już widzieć Twoich wiadomości.</string>
     <string name="chat_settings_leave_and_delete">Opuść i usuń lokalnie</string>

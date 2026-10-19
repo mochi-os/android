@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Μέλη</string>
     <string name="chat_settings_add_member">Προσθήκη μέλους</string>
     <string name="chat_settings_add_member_search">Αναζήτηση φίλων</string>
+    <string name="chat_settings_add_member_no_friends">Δεν έχετε ακόμη φίλους. Μόνο φίλοι μπορούν να προστεθούν σε μια συνομιλία.</string>
+    <string name="chat_settings_add_member_all_added">Όλοι οι φίλοι σας είναι ήδη σε αυτήν τη συνομιλία.</string>
+    <string name="chat_settings_add_member_no_match">Δοκιμάστε διαφορετικό όρο αναζήτησης</string>
     <string name="chat_settings_remove_member">Αφαίρεση</string>
     <string name="chat_settings_remove_member_title">Αφαίρεση μέλους</string>
     <string name="chat_settings_leave">Αποχώρηση από τη συνομιλία</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Μετακίνηση κάτω</string>
     <string name="chat_attachment_label">Αρχείο</string>
     <string name="chat_settings_rename">Μετονομασία συνομιλίας</string>
-    <string name="chat_settings_add_member_empty">Δεν υπάρχουν φίλοι για προσθήκη</string>
     <string name="chat_settings_remove_member_message">Αφαίρεση του/της %1$s από αυτήν τη συνομιλία;</string>
     <string name="chat_settings_leave_message">Αποχώρηση από αυτήν τη συνομιλία; Τα άλλα μέλη δεν θα βλέπουν πλέον τα μηνύματά σας.</string>
     <string name="chat_settings_leave_and_delete">Αποχώρηση και τοπική διαγραφή</string>

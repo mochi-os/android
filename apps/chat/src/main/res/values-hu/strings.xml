@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Tagok</string>
     <string name="chat_settings_add_member">Tag hozzáadása</string>
     <string name="chat_settings_add_member_search">Barátok keresése</string>
+    <string name="chat_settings_add_member_no_friends">Még nincsenek barátai. Csevegéshez csak barátok adhatók hozzá.</string>
+    <string name="chat_settings_add_member_all_added">Minden barátja már ebben a csevegésben van.</string>
+    <string name="chat_settings_add_member_no_match">Próbálj meg másik keresési kifejezést</string>
     <string name="chat_settings_remove_member">Eltávolítás</string>
     <string name="chat_settings_remove_member_title">Tag eltávolítása</string>
     <string name="chat_settings_leave">Csevegés elhagyása</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Mozgatás lefelé</string>
     <string name="chat_attachment_label">Fájl</string>
     <string name="chat_settings_rename">Csevegés átnevezése</string>
-    <string name="chat_settings_add_member_empty">Nincs hozzáadható ismerős</string>
     <string name="chat_settings_remove_member_message">Eltávolítja %1$s felhasználót ebből a csevegésből?</string>
     <string name="chat_settings_leave_message">Elhagyja ezt a csevegést? A többi tag többé nem fogja látni az üzeneteit.</string>
     <string name="chat_settings_leave_and_delete">Elhagyás és helyi törlés</string>

@@ -4,6 +4,9 @@
     <string name="chat_settings_save">Guardá</string>
     <string name="chat_settings_add_member">Agregá un miembro</string>
     <string name="chat_settings_add_member_search">Buscá amigos</string>
+    <string name="chat_settings_add_member_no_friends">Todavía no tenés amigos. Solo podés agregar amigos a un chat.</string>
+    <string name="chat_settings_add_member_all_added">Todos tus amigos ya están en este chat.</string>
+    <string name="chat_settings_add_member_no_match">Probá con otro término de búsqueda</string>
     <string name="chat_settings_remove_member">Quitá</string>
     <string name="chat_settings_remove_member_title">Quitá al miembro</string>
     <string name="chat_settings_leave">Salí del chat</string>
@@ -33,7 +36,6 @@
     <string name="chat_settings_rename">Renombrar chat</string>
     <string name="chat_settings_rename_label">Nombre del chat</string>
     <string name="chat_settings_members">Miembros</string>
-    <string name="chat_settings_add_member_empty">No hay amigos para agregar</string>
     <string name="chat_settings_remove_member_message">¿Quitar a %1$s de este chat?</string>
     <string name="chat_settings_leave_message">¿Salir de este chat? Los demás miembros ya no verán tus mensajes.</string>
     <string name="chat_settings_leave_and_delete">Salir y eliminar localmente</string>

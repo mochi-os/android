@@ -14,6 +14,9 @@
     <string name="chat_settings_members">સભ્યો</string>
     <string name="chat_settings_add_member">સભ્ય ઉમેરો</string>
     <string name="chat_settings_add_member_search">મિત્રો શોધો</string>
+    <string name="chat_settings_add_member_no_friends">તમારા હજી કોઈ મિત્રો નથી. ચેટમાં ફક્ત મિત્રોને જ ઉમેરી શકાય છે.</string>
+    <string name="chat_settings_add_member_all_added">તમારા બધા મિત્રો પહેલેથી જ આ ચેટમાં છે.</string>
+    <string name="chat_settings_add_member_no_match">અલગ શોધ શબ્દ અજમાવો</string>
     <string name="chat_settings_remove_member">દૂર કરો</string>
     <string name="chat_settings_remove_member_title">સભ્ય દૂર કરો</string>
     <string name="chat_settings_leave">ચેટ છોડો</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">નીચે ખસેડો</string>
     <string name="chat_attachment_label">ફાઇલ</string>
     <string name="chat_settings_rename">ચેટનું નામ બદલો</string>
-    <string name="chat_settings_add_member_empty">ઉમેરવા માટે કોઈ મિત્રો નથી</string>
     <string name="chat_settings_remove_member_message">%1$s ને આ ચેટમાંથી દૂર કરવા છે?</string>
     <string name="chat_settings_leave_message">આ ચેટ છોડવી છે? અન્ય સભ્યો હવે તમારા સંદેશા જોઈ શકશે નહીં.</string>
     <string name="chat_settings_leave_and_delete">છોડો અને સ્થાનિક રીતે કાઢી નાખો</string>

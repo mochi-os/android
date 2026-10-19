@@ -14,6 +14,9 @@
     <string name="chat_settings_members">الأعضاء</string>
     <string name="chat_settings_add_member">إضافة عضو</string>
     <string name="chat_settings_add_member_search">البحث عن أصدقاء</string>
+    <string name="chat_settings_add_member_no_friends">ليس لديك أصدقاء بعد. يمكن إضافة الأصدقاء فقط إلى الدردشة.</string>
+    <string name="chat_settings_add_member_all_added">جميع أصدقائك موجودون بالفعل في هذه الدردشة.</string>
+    <string name="chat_settings_add_member_no_match">جرب مصطلح بحث مختلف</string>
     <string name="chat_settings_remove_member">إزالة</string>
     <string name="chat_settings_remove_member_title">إزالة العضو</string>
     <string name="chat_settings_leave">مغادرة المحادثة</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">نقل لأسفل</string>
     <string name="chat_attachment_label">ملف</string>
     <string name="chat_settings_rename">إعادة تسمية الدردشة</string>
-    <string name="chat_settings_add_member_empty">لا يوجد أصدقاء لإضافتهم</string>
     <string name="chat_settings_remove_member_message">إزالة %1$s من هذه الدردشة؟</string>
     <string name="chat_settings_leave_message">مغادرة هذه الدردشة؟ لن يرى الأعضاء الآخرون رسائلك بعد الآن.</string>
     <string name="chat_settings_leave_and_delete">المغادرة والحذف محليًا</string>

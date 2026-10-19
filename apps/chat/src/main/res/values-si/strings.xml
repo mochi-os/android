@@ -14,6 +14,9 @@
     <string name="chat_settings_members">සාමාජිකයින්</string>
     <string name="chat_settings_add_member">සාමාජිකයෙකු එක් කරන්න</string>
     <string name="chat_settings_add_member_search">මිතුරන් සොයන්න</string>
+    <string name="chat_settings_add_member_no_friends">ඔබට තවම මිතුරන් නැත. කතාබසකට එක් කළ හැක්කේ මිතුරන් පමණි.</string>
+    <string name="chat_settings_add_member_all_added">ඔබගේ සියලු මිතුරන් දැනටමත් මෙම කතාබසෙහි සිටී.</string>
+    <string name="chat_settings_add_member_no_match">වෙනත් සෙවුම් වචනයක් උත්සාහ කරන්න</string>
     <string name="chat_settings_remove_member">ඉවත් කරන්න</string>
     <string name="chat_settings_remove_member_title">සාමාජිකයා ඉවත් කරන්න</string>
     <string name="chat_settings_leave">කතාබහෙන් ඉවත් වන්න</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">පැරණි පණිවිඩ පූරණය කරන්න</string>
     <string name="chat_attachment_label">ගොනුව</string>
     <string name="chat_settings_rename">කතාබසට නව නමක් දෙන්න</string>
-    <string name="chat_settings_add_member_empty">එක් කිරීමට මිතුරන් නැත</string>
     <string name="chat_settings_remove_member_message">%1$s මෙම කතාබසින් ඉවත් කරන්නද?</string>
     <string name="chat_settings_leave_message">මෙම කතාබසින් ඉවත් වන්නද? අනෙක් සාමාජිකයින්ට තවදුරටත් ඔබගේ පණිවිඩ නොපෙනෙනු ඇත.</string>
     <string name="chat_settings_leave_and_delete">ඉවත් වී දේශීයව මකන්න</string>

@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Agzalar</string>
     <string name="chat_settings_add_member">Agza goşmak</string>
     <string name="chat_settings_add_member_search">Dostlary gözle</string>
+    <string name="chat_settings_add_member_no_friends">Siziň entek dostuňyz ýok. Söhbete diňe dostlary goşup bolýar.</string>
+    <string name="chat_settings_add_member_all_added">Ähli dostlaryňyz eýýäm bu söhbetde.</string>
+    <string name="chat_settings_add_member_no_match">Başga gözleg sözüni synanyş</string>
     <string name="chat_settings_remove_member">Aýyr</string>
     <string name="chat_settings_remove_member_title">Agzany aýyr</string>
     <string name="chat_settings_leave">Çatdan çyk</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Köne habarlary ýükle</string>
     <string name="chat_attachment_label">Faýl</string>
     <string name="chat_settings_rename">Söhbeti at çalyş</string>
-    <string name="chat_settings_add_member_empty">Goşmak üçin dost ýok</string>
     <string name="chat_settings_remove_member_message">%1$s bu söhbetden aýrylsynmy?</string>
     <string name="chat_settings_leave_message">Bu söhbetden çykmakçymy? Beýleki agzalar siziň habarlaryňyzy indi görmez.</string>
     <string name="chat_settings_leave_and_delete">Çyk we ýerli pozulsyn</string>

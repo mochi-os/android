@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Nariai</string>
     <string name="chat_settings_add_member">Pridėti narį</string>
     <string name="chat_settings_add_member_search">Ieškoti draugų</string>
+    <string name="chat_settings_add_member_no_friends">Dar neturite draugų. Į pokalbį galima pridėti tik draugus.</string>
+    <string name="chat_settings_add_member_all_added">Visi jūsų draugai jau yra šiame pokalbyje.</string>
+    <string name="chat_settings_add_member_no_match">Pabandykite kitą paieškos terminą</string>
     <string name="chat_settings_remove_member">Šalinti</string>
     <string name="chat_settings_remove_member_title">Šalinti narį</string>
     <string name="chat_settings_leave">Išeiti iš pokalbio</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Įkelti senesnius pranešimus</string>
     <string name="chat_attachment_label">Failas</string>
     <string name="chat_settings_rename">Pervadinti pokalbį</string>
-    <string name="chat_settings_add_member_empty">Nėra draugų, kuriuos būtų galima pridėti</string>
     <string name="chat_settings_remove_member_message">Pašalinti %1$s iš šio pokalbio?</string>
     <string name="chat_settings_leave_message">Išeiti iš šio pokalbio? Kiti dalyviai nebematys jūsų pranešimų.</string>
     <string name="chat_settings_leave_and_delete">Išeiti ir ištrinti vietoje</string>

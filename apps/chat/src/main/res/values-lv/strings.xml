@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Dalībnieki</string>
     <string name="chat_settings_add_member">Pievienot dalībnieku</string>
     <string name="chat_settings_add_member_search">Meklēt draugus</string>
+    <string name="chat_settings_add_member_no_friends">Jums vēl nav draugu. Tērzēšanai var pievienot tikai draugus.</string>
+    <string name="chat_settings_add_member_all_added">Visi jūsu draugi jau ir šajā tērzēšanā.</string>
+    <string name="chat_settings_add_member_no_match">Mēģiniet citu meklēšanas vārdu</string>
     <string name="chat_settings_remove_member">Noņemt</string>
     <string name="chat_settings_remove_member_title">Noņemt dalībnieku</string>
     <string name="chat_settings_leave">Pamest tērzēšanu</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Ielādēt vecākus ziņojumus</string>
     <string name="chat_attachment_label">Fails</string>
     <string name="chat_settings_rename">Pārdēvēt tērzēšanu</string>
-    <string name="chat_settings_add_member_empty">Nav draugu, ko pievienot</string>
     <string name="chat_settings_remove_member_message">Noņemt %1$s no šīs tērzēšanas?</string>
     <string name="chat_settings_leave_message">Pamest šo tērzēšanu? Citi dalībnieki vairs neredzēs jūsu ziņojumus.</string>
     <string name="chat_settings_leave_and_delete">Pamest un dzēst lokāli</string>

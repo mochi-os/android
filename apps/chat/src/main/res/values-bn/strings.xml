@@ -14,6 +14,9 @@
     <string name="chat_settings_members">সদস্যগণ</string>
     <string name="chat_settings_add_member">সদস্য যোগ করুন</string>
     <string name="chat_settings_add_member_search">বন্ধু অনুসন্ধান করুন</string>
+    <string name="chat_settings_add_member_no_friends">আপনার এখনও কোনো বন্ধু নেই। চ্যাটে শুধু বন্ধুদেরই যোগ করা যায়।</string>
+    <string name="chat_settings_add_member_all_added">আপনার সব বন্ধু ইতিমধ্যে এই চ্যাটে আছে।</string>
+    <string name="chat_settings_add_member_no_match">অন্য একটি অনুসন্ধান শব্দ চেষ্টা করুন</string>
     <string name="chat_settings_remove_member">সরান</string>
     <string name="chat_settings_remove_member_title">সদস্য সরান</string>
     <string name="chat_settings_leave">চ্যাট ছেড়ে দিন</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">নিচে সরান</string>
     <string name="chat_attachment_label">ফাইল</string>
     <string name="chat_settings_rename">চ্যাটের নাম পরিবর্তন করুন</string>
-    <string name="chat_settings_add_member_empty">যোগ করার মতো কোনো বন্ধু নেই</string>
     <string name="chat_settings_remove_member_message">এই চ্যাট থেকে %1$s-কে সরাবেন?</string>
     <string name="chat_settings_leave_message">এই চ্যাট ত্যাগ করবেন? অন্য সদস্যরা আর আপনার বার্তা দেখতে পাবেন না।</string>
     <string name="chat_settings_leave_and_delete">ত্যাগ করুন এবং স্থানীয়ভাবে মুছুন</string>

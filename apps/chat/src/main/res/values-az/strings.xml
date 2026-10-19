@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Üzvlər</string>
     <string name="chat_settings_add_member">Üzv əlavə et</string>
     <string name="chat_settings_add_member_search">Dostları axtar</string>
+    <string name="chat_settings_add_member_no_friends">Hələ dostunuz yoxdur. Söhbətə yalnız dostlar əlavə edilə bilər.</string>
+    <string name="chat_settings_add_member_all_added">Bütün dostlarınız artıq bu söhbətdədir.</string>
+    <string name="chat_settings_add_member_no_match">Başqa axtarış sözü sınayın</string>
     <string name="chat_settings_remove_member">Sil</string>
     <string name="chat_settings_remove_member_title">Üzvü sil</string>
     <string name="chat_settings_leave">Söhbətdən çıx</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Aşağı köçür</string>
     <string name="chat_attachment_label">Fayl</string>
     <string name="chat_settings_rename">Söhbəti adlandırın</string>
-    <string name="chat_settings_add_member_empty">Əlavə ediləcək dost yoxdur</string>
     <string name="chat_settings_remove_member_message">%1$s bu söhbətdən silinsin?</string>
     <string name="chat_settings_leave_message">Bu söhbəti tərk edirsiniz? Digər üzvlər artıq mesajlarınızı görməyəcək.</string>
     <string name="chat_settings_leave_and_delete">Tərk edin və lokal olaraq silin</string>

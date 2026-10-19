@@ -14,6 +14,9 @@
     <string name="chat_settings_members">အဖွဲ့ဝင်များ</string>
     <string name="chat_settings_add_member">အဖွဲ့ဝင် ထည့်မည်</string>
     <string name="chat_settings_add_member_search">သူငယ်ချင်းများ ရှာဖွေ</string>
+    <string name="chat_settings_add_member_no_friends">သင့်တွင် သူငယ်ချင်း မရှိသေးပါ။ ချတ်သို့ သူငယ်ချင်းများကိုသာ ထည့်နိုင်သည်။</string>
+    <string name="chat_settings_add_member_all_added">သင့်သူငယ်ချင်းအားလုံး ဤချတ်တွင် ရှိပြီးဖြစ်သည်။</string>
+    <string name="chat_settings_add_member_no_match">ရှာဖွေစကားလုံး အခြားတစ်ခု စမ်းကြည့်ပါ</string>
     <string name="chat_settings_remove_member">ဖယ်ရှား</string>
     <string name="chat_settings_remove_member_title">အဖွဲ့ဝင် ဖယ်ရှား</string>
     <string name="chat_settings_leave">စကားပြောမှ ထွက်</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">ဟောင်းသော မက်ဆေ့ဂျ်များ ဖွင့်ပါ</string>
     <string name="chat_attachment_label">ဖိုင်</string>
     <string name="chat_settings_rename">ချတ်ကို အမည်ပြောင်းပါ</string>
-    <string name="chat_settings_add_member_empty">ထည့်ရန် မိတ်ဆွေများ မရှိပါ</string>
     <string name="chat_settings_remove_member_message">%1$s ကို ဤချတ်မှ ဖယ်ရှားမည်လား?</string>
     <string name="chat_settings_leave_message">ဤချတ်မှ ထွက်ခွာမည်လား? အခြားအဖွဲ့ဝင်များသည် သင်၏ မက်ဆေ့ဂျ်များကို မမြင်နိုင်တော့ပါ။</string>
     <string name="chat_settings_leave_and_delete">ထွက်ခွာပြီး ဒေသခံ၌ ဖျက်ပါ</string>

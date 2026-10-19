@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Kideak</string>
     <string name="chat_settings_add_member">Gehitu kidea</string>
     <string name="chat_settings_add_member_search">Bilatu lagunak</string>
+    <string name="chat_settings_add_member_no_friends">Oraindik ez duzu lagunik. Lagunak bakarrik gehi daitezke txat batera.</string>
+    <string name="chat_settings_add_member_all_added">Zure lagun guztiak dagoeneko txat honetan daude.</string>
+    <string name="chat_settings_add_member_no_match">Saiatu beste bilaketa-termino batekin</string>
     <string name="chat_settings_remove_member">Kendu</string>
     <string name="chat_settings_remove_member_title">Kendu kidea</string>
     <string name="chat_settings_leave">Irten txatetik</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Eraman behera</string>
     <string name="chat_attachment_label">Fitxategia</string>
     <string name="chat_settings_rename">Berrizendatu txata</string>
-    <string name="chat_settings_add_member_empty">Ez dago gehitzeko lagunik</string>
     <string name="chat_settings_remove_member_message">Kendu %1$s txat honetatik?</string>
     <string name="chat_settings_leave_message">Txat honetatik irten nahi duzu? Gainerako kideek ez dituzte zure mezuak gehiago ikusiko.</string>
     <string name="chat_settings_leave_and_delete">Irten eta ezabatu lokalki</string>

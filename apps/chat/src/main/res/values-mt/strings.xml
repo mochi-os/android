@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Membri</string>
     <string name="chat_settings_add_member">Żid membru</string>
     <string name="chat_settings_add_member_search">Fittex ħbieb</string>
+    <string name="chat_settings_add_member_no_friends">Għad m\'għandekx ħbieb. Ħbieb biss jistgħu jiżdiedu ma\' chat.</string>
+    <string name="chat_settings_add_member_all_added">Il-ħbieb kollha tiegħek diġà qegħdin f\'dan il-chat.</string>
+    <string name="chat_settings_add_member_no_match">Ipprova terminu ta\' tfittxija differenti</string>
     <string name="chat_settings_remove_member">Neħħi</string>
     <string name="chat_settings_remove_member_title">Neħħi membru</string>
     <string name="chat_settings_leave">Itlaq miċ-chat</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Tella\' messaġġi eqdem</string>
     <string name="chat_attachment_label">Fajl</string>
     <string name="chat_settings_rename">Biddel l-isem tal-chat</string>
-    <string name="chat_settings_add_member_empty">Ebda ħabib x\'iżżid</string>
     <string name="chat_settings_remove_member_message">Tneħħi lil %1$s minn dan il-chat?</string>
     <string name="chat_settings_leave_message">Toħroġ minn dan il-chat? Il-membri l-oħra mhux se jibqgħu jaraw il-messaġġi tiegħek.</string>
     <string name="chat_settings_leave_and_delete">Oħroġ u ħassar lokalment</string>

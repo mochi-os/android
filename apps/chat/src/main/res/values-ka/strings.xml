@@ -14,6 +14,9 @@
     <string name="chat_settings_members">წევრები</string>
     <string name="chat_settings_add_member">წევრის დამატება</string>
     <string name="chat_settings_add_member_search">მეგობრების ძიება</string>
+    <string name="chat_settings_add_member_no_friends">ჯერ მეგობრები არ გყავთ. ჩატში მხოლოდ მეგობრების დამატებაა შესაძლებელი.</string>
+    <string name="chat_settings_add_member_all_added">ყველა თქვენი მეგობარი უკვე ამ ჩატშია.</string>
+    <string name="chat_settings_add_member_no_match">სცადეთ სხვა საძიებო სიტყვა</string>
     <string name="chat_settings_remove_member">წაშლა</string>
     <string name="chat_settings_remove_member_title">წევრის წაშლა</string>
     <string name="chat_settings_leave">ჩატის დატოვება</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">ძველი შეტყობინებების ჩატვირთვა</string>
     <string name="chat_attachment_label">ფაილი</string>
     <string name="chat_settings_rename">ჩატის სახელის გადარქმევა</string>
-    <string name="chat_settings_add_member_empty">დასამატებელი მეგობრები არ არის</string>
     <string name="chat_settings_remove_member_message">მოვაშოროთ %1$s ამ ჩატიდან?</string>
     <string name="chat_settings_leave_message">დავტოვოთ ეს ჩატი? სხვა წევრები აღარ ნახავენ თქვენს შეტყობინებებს.</string>
     <string name="chat_settings_leave_and_delete">დატოვება და ლოკალურად წაშლა</string>

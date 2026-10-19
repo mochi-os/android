@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Liikmed</string>
     <string name="chat_settings_add_member">Lisa liige</string>
     <string name="chat_settings_add_member_search">Otsi sõpru</string>
+    <string name="chat_settings_add_member_no_friends">Sul pole veel sõpru. Vestlusse saab lisada ainult sõpru.</string>
+    <string name="chat_settings_add_member_all_added">Kõik su sõbrad on juba selles vestluses.</string>
+    <string name="chat_settings_add_member_no_match">Proovi teist otsingusõna</string>
     <string name="chat_settings_remove_member">Eemalda</string>
     <string name="chat_settings_remove_member_title">Eemalda liige</string>
     <string name="chat_settings_leave">Lahku vestlusest</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Liiguta alla</string>
     <string name="chat_attachment_label">Fail</string>
     <string name="chat_settings_rename">Nimeta vestlus ümber</string>
-    <string name="chat_settings_add_member_empty">Pole sõpru, keda lisada</string>
     <string name="chat_settings_remove_member_message">Kas eemaldada %1$s sellest vestlusest?</string>
     <string name="chat_settings_leave_message">Kas lahkuda sellest vestlusest? Teised liikmed ei näe enam sinu sõnumeid.</string>
     <string name="chat_settings_leave_and_delete">Lahku ja kustuta kohalikult</string>

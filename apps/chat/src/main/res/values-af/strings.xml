@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Lede</string>
     <string name="chat_settings_add_member">Voeg lid by</string>
     <string name="chat_settings_add_member_search">Soek vriende</string>
+    <string name="chat_settings_add_member_no_friends">Jy het nog geen vriende nie. Slegs vriende kan by \'n klets gevoeg word.</string>
+    <string name="chat_settings_add_member_all_added">Al jou vriende is reeds in hierdie klets.</string>
+    <string name="chat_settings_add_member_no_match">Probeer \'n ander soekterm</string>
     <string name="chat_settings_remove_member">Verwyder</string>
     <string name="chat_settings_remove_member_title">Verwyder lid</string>
     <string name="chat_settings_leave">Verlaat geselsie</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Skuif af</string>
     <string name="chat_attachment_label">Lêer</string>
     <string name="chat_settings_rename">Hernoem klets</string>
-    <string name="chat_settings_add_member_empty">Geen vriende om by te voeg nie</string>
     <string name="chat_settings_remove_member_message">Verwyder %1$s uit hierdie klets?</string>
     <string name="chat_settings_leave_message">Verlaat hierdie klets? Ander lede sal nie meer jou boodskappe sien nie.</string>
     <string name="chat_settings_leave_and_delete">Verlaat en plaaslik uitvee</string>

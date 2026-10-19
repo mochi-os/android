@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Amalungu</string>
     <string name="chat_settings_add_member">Yongeza ilungu</string>
     <string name="chat_settings_add_member_search">Khangela abahlobo</string>
+    <string name="chat_settings_add_member_no_friends">Akukabi nabahlobo. Ngabahlobo kuphela abanokongezwa kwincoko.</string>
+    <string name="chat_settings_add_member_all_added">Bonke abahlobo bakho sele bekule ncoko.</string>
+    <string name="chat_settings_add_member_no_match">Zama elinye igama lokukhangela</string>
     <string name="chat_settings_remove_member">Susa</string>
     <string name="chat_settings_remove_member_title">Susa ilungu</string>
     <string name="chat_settings_leave">Shiya incoko</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Layisha imiyalezo emidala</string>
     <string name="chat_attachment_label">Ifayile</string>
     <string name="chat_settings_rename">Thiya kwakhona incoko</string>
-    <string name="chat_settings_add_member_empty">Akukho bahlobo bokongezwa</string>
     <string name="chat_settings_remove_member_message">Susa u-%1$s kule ncoko?</string>
     <string name="chat_settings_leave_message">Shiya le ncoko? Amanye amalungu akasayi kuyibona imiyalezo yakho.</string>
     <string name="chat_settings_leave_and_delete">Shiya kwaye ucime kule sixhobo</string>

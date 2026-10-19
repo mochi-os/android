@@ -14,6 +14,9 @@
     <string name="chat_settings_members">اعضا</string>
     <string name="chat_settings_add_member">افزودن عضو</string>
     <string name="chat_settings_add_member_search">جست‌وجوی دوستان</string>
+    <string name="chat_settings_add_member_no_friends">هنوز دوستی ندارید. فقط دوستان را می‌توان به گفتگو اضافه کرد.</string>
+    <string name="chat_settings_add_member_all_added">همه دوستانتان از قبل در این گفتگو هستند.</string>
+    <string name="chat_settings_add_member_no_match">عبارت جست‌وجوی دیگری را امتحان کنید</string>
     <string name="chat_settings_remove_member">حذف</string>
     <string name="chat_settings_remove_member_title">حذف عضو</string>
     <string name="chat_settings_leave">ترک گفتگو</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">انتقال به پایین</string>
     <string name="chat_attachment_label">فایل</string>
     <string name="chat_settings_rename">تغییر نام گفتگو</string>
-    <string name="chat_settings_add_member_empty">دوستی برای افزودن وجود ندارد</string>
     <string name="chat_settings_remove_member_message">%1$s از این گفتگو حذف شود؟</string>
     <string name="chat_settings_leave_message">از این گفتگو خارج می‌شوید؟ سایر اعضا دیگر پیام‌های شما را نخواهند دید.</string>
     <string name="chat_settings_leave_and_delete">خروج و حذف محلی</string>

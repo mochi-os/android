@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Anggota</string>
     <string name="chat_settings_add_member">Tambah anggota</string>
     <string name="chat_settings_add_member_search">Paluruh babaturan</string>
+    <string name="chat_settings_add_member_no_friends">Anjeun can gaduh babaturan. Ngan babaturan anu tiasa ditambihkeun kana obrolan.</string>
+    <string name="chat_settings_add_member_all_added">Sadaya babaturan anjeun parantos aya dina obrolan ieu.</string>
+    <string name="chat_settings_add_member_no_match">Cobian istilah pamilarian sanésna</string>
     <string name="chat_settings_remove_member">Pupus</string>
     <string name="chat_settings_remove_member_title">Cabut anggota</string>
     <string name="chat_settings_leave">Kaluar tina obrolan</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Muat pesen anu langkung lami</string>
     <string name="chat_attachment_label">Berkas</string>
     <string name="chat_settings_rename">Ganti ngaran obrolan</string>
-    <string name="chat_settings_add_member_empty">Teu aya réréncangan pikeun ditambihkeun</string>
     <string name="chat_settings_remove_member_message">Cabut %1$s tina obrolan ieu?</string>
     <string name="chat_settings_leave_message">Kaluar tina obrolan ieu? Anggota anu sanés moal tiasa ningali pesen anjeun deui.</string>
     <string name="chat_settings_leave_and_delete">Kaluar sareng pupus lokal</string>

@@ -28,7 +28,9 @@
     <string name="chat_settings_rename">重新命名聊天</string>
     <string name="chat_settings_rename_label">聊天名稱</string>
     <string name="chat_settings_add_member_search">搜尋好友</string>
-    <string name="chat_settings_add_member_empty">沒有可加入的好友</string>
+    <string name="chat_settings_add_member_no_friends">你還沒有好友。只能將好友加入聊天。</string>
+    <string name="chat_settings_add_member_all_added">你的所有好友都已在此聊天中。</string>
+    <string name="chat_settings_add_member_no_match">嘗試其他搜尋字詞</string>
     <string name="chat_settings_remove_member_title">移除成員</string>
     <string name="chat_settings_remove_member_message">確定要將 %1$s 從此聊天移除嗎？</string>
     <string name="chat_settings_leave">離開聊天</string>

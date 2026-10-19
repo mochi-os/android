@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Buill</string>
     <string name="chat_settings_add_member">Cuir ball ris</string>
     <string name="chat_settings_add_member_search">Lorg caraidean</string>
+    <string name="chat_settings_add_member_no_friends">Chan eil caraidean agad fhathast. Chan urrainn ach caraidean a chur ri còmhradh.</string>
+    <string name="chat_settings_add_member_all_added">Tha na caraidean agad uile sa chòmhradh seo mu thràth.</string>
+    <string name="chat_settings_add_member_no_match">Feuch teirm-luirg eadar-dhealaichte</string>
     <string name="chat_settings_remove_member">Thoir air falbh</string>
     <string name="chat_settings_remove_member_title">Thoir am ball air falbh</string>
     <string name="chat_settings_leave">Fàg an còmhradh</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Gluais sìos</string>
     <string name="chat_attachment_label">Faidhle</string>
     <string name="chat_settings_rename">Cuir ainm ùr air a\' chòmhradh</string>
-    <string name="chat_settings_add_member_empty">Chan eil caraidean ann ri an cur ris</string>
     <string name="chat_settings_remove_member_message">A bheil thu airson %1$s a thoirt air falbh on chòmhradh seo?</string>
     <string name="chat_settings_leave_message">Fàg an còmhradh seo? Chan fhaic na buill eile na teachdaireachdan agad tuilleadh.</string>
     <string name="chat_settings_leave_and_delete">Fàg agus sguab às gu h-ionadail</string>

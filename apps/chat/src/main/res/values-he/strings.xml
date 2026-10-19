@@ -14,6 +14,9 @@
     <string name="chat_settings_members">חברים</string>
     <string name="chat_settings_add_member">הוסף חבר</string>
     <string name="chat_settings_add_member_search">חפש חברים</string>
+    <string name="chat_settings_add_member_no_friends">עדיין אין לכם חברים. ניתן להוסיף לצ\'אט רק חברים.</string>
+    <string name="chat_settings_add_member_all_added">כל החברים שלכם כבר נמצאים בצ\'אט הזה.</string>
+    <string name="chat_settings_add_member_no_match">נסה מונח חיפוש אחר</string>
     <string name="chat_settings_remove_member">הסר</string>
     <string name="chat_settings_remove_member_title">הסר חבר</string>
     <string name="chat_settings_leave">צא מהצ\'אט</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">הזזה למטה</string>
     <string name="chat_attachment_label">קובץ</string>
     <string name="chat_settings_rename">שינוי שם הצ\'אט</string>
-    <string name="chat_settings_add_member_empty">אין חברים להוספה</string>
     <string name="chat_settings_remove_member_message">להסיר את %1$s מהצ\'אט הזה?</string>
     <string name="chat_settings_leave_message">לעזוב את הצ\'אט הזה? שאר החברים לא יראו עוד את ההודעות שלכם.</string>
     <string name="chat_settings_leave_and_delete">עזיבה ומחיקה מקומית</string>

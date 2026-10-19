@@ -32,7 +32,9 @@
     <string name="chat_settings_rename">重新命名對話</string>
     <string name="chat_settings_rename_label">對話名稱</string>
     <string name="chat_settings_add_member_search">搜尋朋友</string>
-    <string name="chat_settings_add_member_empty">冇朋友可以加入</string>
+    <string name="chat_settings_add_member_no_friends">你仲未有朋友。淨係可以將朋友加入對話。</string>
+    <string name="chat_settings_add_member_all_added">你所有朋友都已經喺呢個對話度。</string>
+    <string name="chat_settings_add_member_no_match">試下第個搜尋字詞</string>
     <string name="chat_settings_remove_member_title">移除成員</string>
     <string name="chat_settings_remove_member_message">要將 %1$s 由呢個對話移除?</string>
     <string name="chat_settings_leave">離開對話</string>

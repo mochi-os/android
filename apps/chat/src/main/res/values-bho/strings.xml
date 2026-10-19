@@ -14,6 +14,9 @@
     <string name="chat_settings_members">सदस्य</string>
     <string name="chat_settings_add_member">सदस्य जोड़ीं</string>
     <string name="chat_settings_add_member_search">दोस्त खोजीं</string>
+    <string name="chat_settings_add_member_no_friends">अबहीं ले रउआ कवनो दोस्त नइखे। चैट में खाली दोस्त के जोड़ल जा सकेला।</string>
+    <string name="chat_settings_add_member_all_added">राउर सगरी दोस्त पहिले से एह चैट में बाड़ें।</string>
+    <string name="chat_settings_add_member_no_match">अलग खोज शब्द आजमाईं</string>
     <string name="chat_settings_remove_member">हटाईं</string>
     <string name="chat_settings_remove_member_title">सदस्य हटाईं</string>
     <string name="chat_settings_leave">चैट छोड़ीं</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">नीचे ले जाईं</string>
     <string name="chat_attachment_label">फाइल</string>
     <string name="chat_settings_rename">चैट के नाम बदलीं</string>
-    <string name="chat_settings_add_member_empty">जोड़े खातिर कवनो दोस्त नइखे</string>
     <string name="chat_settings_remove_member_message">%1$s के एह चैट से हटाईं?</string>
     <string name="chat_settings_leave_message">एह चैट के छोड़ दीं? बाकी सदस्य रउरा संदेस ना देख पइहें।</string>
     <string name="chat_settings_leave_and_delete">छोड़ीं आ स्थानीय रूप से हटाईं</string>

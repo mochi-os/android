@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Medlemmer</string>
     <string name="chat_settings_add_member">Tilføj medlem</string>
     <string name="chat_settings_add_member_search">Søg efter venner</string>
+    <string name="chat_settings_add_member_no_friends">Du har ingen venner endnu. Kun venner kan føjes til en chat.</string>
+    <string name="chat_settings_add_member_all_added">Alle dine venner er allerede i denne chat.</string>
+    <string name="chat_settings_add_member_no_match">Prøv et andet søgeord</string>
     <string name="chat_settings_remove_member">Fjern</string>
     <string name="chat_settings_remove_member_title">Fjern medlem</string>
     <string name="chat_settings_leave">Forlad chat</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Flyt ned</string>
     <string name="chat_attachment_label">Fil</string>
     <string name="chat_settings_rename">Omdøb chat</string>
-    <string name="chat_settings_add_member_empty">Ingen venner at tilføje</string>
     <string name="chat_settings_remove_member_message">Fjern %1$s fra denne chat?</string>
     <string name="chat_settings_leave_message">Forlad denne chat? Andre medlemmer vil ikke længere se dine beskeder.</string>
     <string name="chat_settings_leave_and_delete">Forlad og slet lokalt</string>

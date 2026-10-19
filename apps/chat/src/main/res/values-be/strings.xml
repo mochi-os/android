@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Удзельнікі</string>
     <string name="chat_settings_add_member">Дадаць удзельніка</string>
     <string name="chat_settings_add_member_search">Пошук сяброў</string>
+    <string name="chat_settings_add_member_no_friends">У вас пакуль няма сяброў. Дадаваць у чат можна толькі сяброў.</string>
+    <string name="chat_settings_add_member_all_added">Усе вашы сябры ўжо ў гэтым чаце.</string>
+    <string name="chat_settings_add_member_no_match">Паспрабуйце іншы пошукавы запыт</string>
     <string name="chat_settings_remove_member">Выдаліць</string>
     <string name="chat_settings_remove_member_title">Выдаліць удзельніка</string>
     <string name="chat_settings_leave">Пакінуць чат</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Перамясціць уніз</string>
     <string name="chat_attachment_label">Файл</string>
     <string name="chat_settings_rename">Пераназваць чат</string>
-    <string name="chat_settings_add_member_empty">Няма сяброў для дадання</string>
     <string name="chat_settings_remove_member_message">Выдаліць %1$s з гэтага чата?</string>
     <string name="chat_settings_leave_message">Пакінуць гэты чат? Іншыя ўдзельнікі больш не будуць бачыць вашых паведамленняў.</string>
     <string name="chat_settings_leave_and_delete">Пакінуць і выдаліць лакальна</string>

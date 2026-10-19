@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Medlemmer</string>
     <string name="chat_settings_add_member">Legg til medlem</string>
     <string name="chat_settings_add_member_search">Søk i venner</string>
+    <string name="chat_settings_add_member_no_friends">Du har ingen venner ennå. Bare venner kan legges til i en chat.</string>
+    <string name="chat_settings_add_member_all_added">Alle vennene dine er allerede i denne chatten.</string>
+    <string name="chat_settings_add_member_no_match">Prøv et annet søkeord</string>
     <string name="chat_settings_remove_member">Fjern</string>
     <string name="chat_settings_remove_member_title">Fjern medlem</string>
     <string name="chat_settings_leave">Forlat chat</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Last inn eldre meldinger</string>
     <string name="chat_attachment_label">Fil</string>
     <string name="chat_settings_rename">Gi nytt navn til chat</string>
-    <string name="chat_settings_add_member_empty">Ingen venner å legge til</string>
     <string name="chat_settings_remove_member_message">Fjern %1$s fra denne chatten?</string>
     <string name="chat_settings_leave_message">Forlate denne chatten? Andre medlemmer vil ikke lenger se meldingene dine.</string>
     <string name="chat_settings_leave_and_delete">Forlat og slett lokalt</string>

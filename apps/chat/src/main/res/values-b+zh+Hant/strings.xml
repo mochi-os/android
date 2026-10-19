@@ -14,6 +14,9 @@
     <string name="chat_settings_members">成員</string>
     <string name="chat_settings_add_member">新增成員</string>
     <string name="chat_settings_add_member_search">搜尋朋友</string>
+    <string name="chat_settings_add_member_no_friends">您還沒有朋友。只能將朋友加入聊天。</string>
+    <string name="chat_settings_add_member_all_added">您的所有朋友都已在此聊天中。</string>
+    <string name="chat_settings_add_member_no_match">嘗試其他搜尋字詞</string>
     <string name="chat_settings_remove_member">移除</string>
     <string name="chat_settings_remove_member_title">移除成員</string>
     <string name="chat_settings_leave">離開聊天</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">載入較舊訊息</string>
     <string name="chat_attachment_label">檔案</string>
     <string name="chat_settings_rename">重新命名聊天</string>
-    <string name="chat_settings_add_member_empty">沒有可新增的好友</string>
     <string name="chat_settings_remove_member_message">要將 %1$s 從此聊天中移除嗎?</string>
     <string name="chat_settings_leave_message">要離開此聊天嗎?其他成員將無法再看到您的訊息。</string>
     <string name="chat_settings_leave_and_delete">離開並從本機刪除</string>

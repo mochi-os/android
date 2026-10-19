@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Integrantenaka</string>
     <string name="chat_settings_add_member">Integrante yapxataña</string>
     <string name="chat_settings_add_member_search">Masinak thaqhama</string>
+    <string name="chat_settings_add_member_no_friends">Janiw masinakamax utjkiti. Masinakakiw chatar yapxatasispa.</string>
+    <string name="chat_settings_add_member_all_added">Taqi masinakamax aka chatankapxiw.</string>
+    <string name="chat_settings_add_member_no_match">Yaqha thaqhañ aru yant\'am</string>
     <string name="chat_settings_remove_member">Aparma</string>
     <string name="chat_settings_remove_member_title">Integrante aparma</string>
     <string name="chat_settings_leave">Chatat mistuña</string>
@@ -38,7 +41,6 @@
     <string name="chat_attachment_move_down">Aynachar apaña</string>
     <string name="chat_attachment_label">Archivo</string>
     <string name="chat_settings_rename">Chat suti mayjt\'ayaña</string>
-    <string name="chat_settings_add_member_empty">Janiw yapxatañ masinakax utjkiti</string>
     <string name="chat_settings_remove_member_message">¿%1$s aka chatat apsuñati?</string>
     <string name="chat_settings_leave_message">¿Aka chatat mistuñati? Yaqha integrantenakax janiw mensajenakam uñjxapxaniti.</string>
     <string name="chat_settings_leave_and_delete">Mistuña ukat aka dispositivon chhaqtayaña</string>

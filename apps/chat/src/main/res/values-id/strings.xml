@@ -14,6 +14,9 @@
     <string name="chat_settings_members">Anggota</string>
     <string name="chat_settings_add_member">Tambah anggota</string>
     <string name="chat_settings_add_member_search">Cari teman</string>
+    <string name="chat_settings_add_member_no_friends">Anda belum punya teman. Hanya teman yang dapat ditambahkan ke chat.</string>
+    <string name="chat_settings_add_member_all_added">Semua teman Anda sudah ada di chat ini.</string>
+    <string name="chat_settings_add_member_no_match">Coba istilah pencarian lain</string>
     <string name="chat_settings_remove_member">Hapus</string>
     <string name="chat_settings_remove_member_title">Hapus anggota</string>
     <string name="chat_settings_leave">Keluar dari percakapan</string>
@@ -38,7 +41,6 @@
     <string name="chat_messages_load_more">Muat pesan lama</string>
     <string name="chat_attachment_label">Berkas</string>
     <string name="chat_settings_rename">Ganti nama chat</string>
-    <string name="chat_settings_add_member_empty">Tidak ada teman untuk ditambahkan</string>
     <string name="chat_settings_remove_member_message">Keluarkan %1$s dari chat ini?</string>
     <string name="chat_settings_leave_message">Keluar dari chat ini? Anggota lain tidak akan melihat pesan Anda lagi.</string>
     <string name="chat_settings_leave_and_delete">Keluar dan hapus secara lokal</string>
