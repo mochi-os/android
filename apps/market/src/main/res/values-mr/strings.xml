@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe द्वारे ठेवले)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s परत केले)</string>
     <string name="market_sale_chargeback_fee_refunded">(रिफंड दिला)</string>
+    <string name="market_messages_report">हे संभाषण रिपोर्ट करा</string>
+    <string name="market_report_conversation_title">संभाषण रिपोर्ट करा</string>
 </resources>

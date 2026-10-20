@@ -695,4 +695,6 @@
     <string name="market_sale_chargeback_fee_kept">(محتجز من قبل Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s مسترد)</string>
     <string name="market_sale_chargeback_fee_refunded">(مسترد)</string>
+    <string name="market_messages_report">الإبلاغ عن هذه المحادثة</string>
+    <string name="market_report_conversation_title">الإبلاغ عن المحادثة</string>
 </resources>

@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe biratti kuufame)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s deebi\'e)</string>
     <string name="market_sale_chargeback_fee_refunded">(deebi\'e)</string>
+    <string name="market_messages_report">Marii kana gabaasi</string>
+    <string name="market_report_conversation_title">Marii gabaasi</string>
 </resources>

@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(រក្សាទុកដោយ Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s បានសងវិញ)</string>
     <string name="market_sale_chargeback_fee_refunded">(បានសងវិញ)</string>
+    <string name="market_messages_report">រាយការណ៍ការសន្ទនានេះ</string>
+    <string name="market_report_conversation_title">រាយការណ៍ការសន្ទនា</string>
 </resources>

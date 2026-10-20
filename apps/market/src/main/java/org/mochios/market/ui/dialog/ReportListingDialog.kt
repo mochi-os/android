@@ -35,7 +35,7 @@ import org.mochios.market.model.ReportReason
  * Same order as `useReportReasons` in
  * `apps/market/web/src/config/constants.ts`.
  */
-private val REPORT_REASONS: List<Pair<ReportReason, Int>> = listOf(
+internal val LISTING_REPORT_REASONS: List<Pair<ReportReason, Int>> = listOf(
     ReportReason.PROHIBITED to R.string.market_report_reason_prohibited,
     ReportReason.COUNTERFEIT to R.string.market_report_reason_counterfeit,
     ReportReason.MISLEADING to R.string.market_report_reason_misleading,
@@ -43,6 +43,20 @@ private val REPORT_REASONS: List<Pair<ReportReason, Int>> = listOf(
     ReportReason.SPAM to R.string.market_report_reason_spam,
     ReportReason.OTHER to R.string.market_report_reason_other,
 )
+
+/**
+ * The reasons that fit a conversation, as `useConversationReportReasons` in
+ * `apps/market/web/src/config/constants.ts`.
+ */
+internal val CONVERSATION_REPORT_REASONS: List<Pair<ReportReason, Int>> =
+    LISTING_REPORT_REASONS.filter { (reason, _) ->
+        reason in setOf(
+            ReportReason.PROHIBITED,
+            ReportReason.INAPPROPRIATE,
+            ReportReason.SPAM,
+            ReportReason.OTHER,
+        )
+    }
 
 /** Wire (lowercase) value for a [ReportReason]. */
 private fun ReportReason.wire(): String = name.lowercase()
@@ -53,12 +67,14 @@ fun ReportListingDialog(
     open: Boolean,
     submitting: Boolean = false,
     errorMessage: String? = null,
+    title: String = stringResource(R.string.market_report_dialog_title),
+    reasons: List<Pair<ReportReason, Int>> = LISTING_REPORT_REASONS,
     onSubmit: (reason: String, details: String) -> Unit,
     onDismiss: () -> Unit,
 ) {
     if (!open) return
 
-    var selectedReason by remember { mutableStateOf(REPORT_REASONS.first().first) }
+    var selectedReason by remember { mutableStateOf(reasons.first().first) }
     var details by remember { mutableStateOf("") }
     var expanded by remember { mutableStateOf(false) }
 
@@ -66,7 +82,7 @@ fun ReportListingDialog(
     // doesn't leak across dismissals.
     LaunchedEffect(open) {
         if (open) {
-            selectedReason = REPORT_REASONS.first().first
+            selectedReason = reasons.first().first
             details = ""
             expanded = false
         }
@@ -74,7 +90,7 @@ fun ReportListingDialog(
 
     MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
-        title = stringResource(R.string.market_report_dialog_title),
+        title = title,
         content = {
             Column {
                 ExposedDropdownMenuBox(
@@ -83,7 +99,7 @@ fun ReportListingDialog(
                 ) {
                     MochiTextField(
                         value = stringResource(
-                            REPORT_REASONS.first { it.first == selectedReason }.second,
+                            reasons.first { it.first == selectedReason }.second,
                         ),
                         onValueChange = {},
                         readOnly = true,
@@ -100,7 +116,7 @@ fun ReportListingDialog(
                         expanded = expanded,
                         onDismissRequest = { expanded = false },
                     ) {
-                        REPORT_REASONS.forEach { (reason, labelRes) ->
+                        reasons.forEach { (reason, labelRes) ->
                             MochiDropdownMenuItem(
                                 text = { Text(stringResource(labelRes)) },
                                 onClick = {

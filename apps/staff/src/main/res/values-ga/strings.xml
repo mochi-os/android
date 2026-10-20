@@ -440,4 +440,7 @@
     <string name="staff_config_field_stripe_webhook">Rún sínithe webhook</string>
     <string name="staff_disputes_meta_already_refunded">Aisíoctha cheana féin</string>
     <string name="staff_disputes_refund_exceeds_remaining">Sáraíonn méid an aisíoca an méid in-aisíoctha atá fágtha</string>
+    <string name="staff_reports_conversation">Comhrá</string>
+    <string name="staff_reports_conversation_empty">Níl aon teachtaireacht</string>
+    <string name="staff_reports_conversation_show">Taispeáin an comhrá</string>
 </resources>

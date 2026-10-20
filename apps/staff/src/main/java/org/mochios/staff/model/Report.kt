@@ -10,7 +10,8 @@ import com.google.gson.annotations.SerializedName
 /**
  * Mirrors `Report` in `apps/staff/web/src/types/reports.ts`. `target` is a
  * listing id when `type == "listing"`, else an account id; `listing` and the
- * names and fingerprints are filled server-side.
+ * names and fingerprints are filled server-side. `thread` is the conversation
+ * a user report was filed from, blank for any other.
  */
 data class Report(
     val id: String = "",
@@ -30,6 +31,25 @@ data class Report(
     @SerializedName("seller_fingerprint") val sellerFingerprint: String = "",
     @SerializedName("target_name") val targetName: String = "",
     @SerializedName("target_fingerprint") val targetFingerprint: String = "",
+    val thread: String = "",
+)
+
+/**
+ * One message of a reported conversation. Mirrors `ConversationMessage` in
+ * `apps/staff/web/src/types/reports.ts`.
+ */
+data class ConversationMessage(
+    val id: String = "",
+    val sender: String = "",
+    @SerializedName("sender_name") val senderName: String = "",
+    @SerializedName("sender_fingerprint") val senderFingerprint: String = "",
+    val body: String = "",
+    val created: Long = 0,
+)
+
+/** The `threads/get` answer, oldest message first. */
+data class ConversationResponse(
+    val messages: List<ConversationMessage> = emptyList(),
 )
 
 /**

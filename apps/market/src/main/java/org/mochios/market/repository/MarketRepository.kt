@@ -806,9 +806,10 @@ class MarketRepository @Inject constructor(
         type: String,
         reason: String,
         details: String? = null,
+        thread: String? = null,
     ) {
         try {
-            api.createReport(target, type, reason, details).unwrap()
+            api.createReport(target, type, reason, details, thread).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

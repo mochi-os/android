@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गुप्त</string>
     <string name="staff_disputes_meta_already_refunded">पहले ही वापस किया गया</string>
     <string name="staff_disputes_refund_exceeds_remaining">रिफ़ंड राशि शेष रिफ़ंड योग्य राशि से अधिक है</string>
+    <string name="staff_reports_conversation">बातचीत</string>
+    <string name="staff_reports_conversation_empty">कोई संदेश नहीं</string>
+    <string name="staff_reports_conversation_show">बातचीत दिखाएँ</string>
 </resources>

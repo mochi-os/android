@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook aláírási titok</string>
     <string name="staff_disputes_meta_already_refunded">Már visszatérítve</string>
     <string name="staff_disputes_refund_exceeds_remaining">A visszatérítés összege meghaladja a fennmaradó visszatéríthető összeget</string>
+    <string name="staff_reports_conversation">Beszélgetés</string>
+    <string name="staff_reports_conversation_empty">Nincsenek üzenetek</string>
+    <string name="staff_reports_conversation_show">Beszélgetés megjelenítése</string>
 </resources>

@@ -679,7 +679,10 @@ interface MarketApi {
 
     // ---- Reports ----
 
-    /** File a report against a listing, account, or message. */
+    /**
+     * File a report against a listing or an account. [thread] names the
+     * conversation a user report was filed from.
+     */
     @FormUrlEncoded
     @POST("-/reports/create")
     suspend fun createReport(
@@ -687,6 +690,7 @@ interface MarketApi {
         @Field("type") type: String,
         @Field("reason") reason: String,
         @Field("details") details: String? = null,
+        @Field("thread") thread: String? = null,
     ): Response<ApiResponse<OkResponse>>
 
     // ---- Disputes ----

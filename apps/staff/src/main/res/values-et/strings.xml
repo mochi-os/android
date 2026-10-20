@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhooki allkirjastamise saladus</string>
     <string name="staff_disputes_meta_already_refunded">Juba tagastatud</string>
     <string name="staff_disputes_refund_exceeds_remaining">Tagastussumma ületab allesjäänud tagastatava summa</string>
+    <string name="staff_reports_conversation">Vestlus</string>
+    <string name="staff_reports_conversation_empty">Sõnumeid pole</string>
+    <string name="staff_reports_conversation_show">Näita vestlust</string>
 </resources>

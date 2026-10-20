@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(disimpen déning Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s dibalèkaké)</string>
     <string name="market_sale_chargeback_fee_refunded">(dibalèkaké)</string>
+    <string name="market_messages_report">Laporan obrolan iki</string>
+    <string name="market_report_conversation_title">Laporan obrolan</string>
 </resources>

@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook ഒപ്പിടൽ രഹസ്യം</string>
     <string name="staff_disputes_meta_already_refunded">ഇതിനകം മടക്കിനൽകി</string>
     <string name="staff_disputes_refund_exceeds_remaining">റീഫണ്ട് തുക ബാക്കിയുള്ള റീഫണ്ട് ചെയ്യാവുന്ന തുകയെ കവിയുന്നു</string>
+    <string name="staff_reports_conversation">സംഭാഷണം</string>
+    <string name="staff_reports_conversation_empty">സന്ദേശങ്ങളൊന്നുമില്ല</string>
+    <string name="staff_reports_conversation_show">സംഭാഷണം കാണിക്കുക</string>
 </resources>

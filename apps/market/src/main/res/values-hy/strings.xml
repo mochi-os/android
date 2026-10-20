@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(պահված է Stripe-ի կողմից)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s վերադարձված)</string>
     <string name="market_sale_chargeback_fee_refunded">(վերադարձված)</string>
+    <string name="market_messages_report">Հաղորդել այս զրույցի մասին</string>
+    <string name="market_report_conversation_title">Հաղորդել զրույցի մասին</string>
 </resources>

@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripeが保持)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s返金済み)</string>
     <string name="market_sale_chargeback_fee_refunded">(返金済み)</string>
+    <string name="market_messages_report">この会話を報告</string>
+    <string name="market_report_conversation_title">会話を報告</string>
 </resources>

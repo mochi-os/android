@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe විසින් රඳවාගෙන)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s ආපසු)</string>
     <string name="market_sale_chargeback_fee_refunded">(ආපසු ගෙවන ලදී)</string>
+    <string name="market_messages_report">මෙම සංවාදය වාර්තා කරන්න</string>
+    <string name="market_report_conversation_title">සංවාදය වාර්තා කරන්න</string>
 </resources>

@@ -689,4 +689,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe-এ রাখা)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s ফেরত)</string>
     <string name="market_sale_chargeback_fee_refunded">(রিফান্ড করা হয়েছে)</string>
+    <string name="market_messages_report">এই কথোপকথন রিপোর্ট করুন</string>
+    <string name="market_report_conversation_title">কথোপকথন রিপোর্ট করুন</string>
 </resources>

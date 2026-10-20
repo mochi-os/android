@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Segredo de sinatura do webhook</string>
     <string name="staff_disputes_meta_already_refunded">Xa reembolsado</string>
     <string name="staff_disputes_refund_exceeds_remaining">O importe do reembolso supera o importe reembolsable restante</string>
+    <string name="staff_reports_conversation">Conversa</string>
+    <string name="staff_reports_conversation_empty">Sen mensaxes</string>
+    <string name="staff_reports_conversation_show">Amosar a conversa</string>
 </resources>

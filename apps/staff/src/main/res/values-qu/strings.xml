@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook firmanapaq pakasqa</string>
     <string name="staff_disputes_meta_already_refunded">Ñam qullqi kutichisqa</string>
     <string name="staff_disputes_refund_exceeds_remaining">Kutichinapaq qullqi puchuq kutichina qullqimanta yallin</string>
+    <string name="staff_reports_conversation">Rimanakuy</string>
+    <string name="staff_reports_conversation_empty">Mana willakuykuna kanchu</string>
+    <string name="staff_reports_conversation_show">Rimanakuyta rikuchiy</string>
 </resources>

@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">د Webhook د لاسلیک پټ کلید</string>
     <string name="staff_disputes_meta_already_refunded">مخکې بېرته ورکړل شوی</string>
     <string name="staff_disputes_refund_exceeds_remaining">د بېرته ورکړې مقدار د پاتې بېرته ورکولو وړ مقدار څخه ډېر دی</string>
+    <string name="staff_reports_conversation">خبرې اترې</string>
+    <string name="staff_reports_conversation_empty">هیڅ پیغامونه نشته</string>
+    <string name="staff_reports_conversation_show">خبرې اترې ښکاره کړئ</string>
 </resources>

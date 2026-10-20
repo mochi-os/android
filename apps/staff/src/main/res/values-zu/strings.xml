@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Imfihlo yokusayina i-Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Sekubuyiselwe</string>
     <string name="staff_disputes_refund_exceeds_remaining">Inani lokubuyiselwa lidlula inani elisele elingabuyiselwa</string>
+    <string name="staff_reports_conversation">Ingxoxo</string>
+    <string name="staff_reports_conversation_empty">Ayikho imiyalezo</string>
+    <string name="staff_reports_conversation_show">Bonisa ingxoxo</string>
 </resources>

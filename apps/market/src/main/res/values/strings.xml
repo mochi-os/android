@@ -411,6 +411,7 @@
     <string name="market_messages_inbox_empty_subtitle">When you message a seller (or a buyer messages you) the thread will appear here.</string>
     <string name="market_messages_inbox_empty_title">No conversations yet</string>
     <string name="market_messages_inbox_title">Messages</string>
+    <string name="market_messages_report">Report this conversation</string>
     <string name="market_messages_send">Send</string>
     <string name="market_messages_thread_title">Conversation</string>
     <string name="market_onboarding_activate">Activate</string>
@@ -502,6 +503,7 @@
     <string name="market_refund_reason_unauthorised">Unauthorised</string>
     <string name="market_refund_submit">Request refund</string>
     <string name="market_refund_title">Request refund</string>
+    <string name="market_report_conversation_title">Report conversation</string>
     <string name="market_report_dialog_cancel">Cancel</string>
     <string name="market_report_dialog_details_label">Details (optional)</string>
     <string name="market_report_dialog_failed">Failed to submit report</string>

@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Tajný klíč pro podpis Webhooku</string>
     <string name="staff_disputes_meta_already_refunded">Již vráceno</string>
     <string name="staff_disputes_refund_exceeds_remaining">Částka vrácení překračuje zbývající vratnou částku</string>
+    <string name="staff_reports_conversation">Konverzace</string>
+    <string name="staff_reports_conversation_empty">Žádné zprávy</string>
+    <string name="staff_reports_conversation_show">Zobrazit konverzaci</string>
 </resources>

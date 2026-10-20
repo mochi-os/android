@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(retido por Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s devolto)</string>
     <string name="market_sale_chargeback_fee_refunded">(reembolsado)</string>
+    <string name="market_messages_report">Denunciar esta conversa</string>
+    <string name="market_report_conversation_title">Denunciar conversa</string>
 </resources>

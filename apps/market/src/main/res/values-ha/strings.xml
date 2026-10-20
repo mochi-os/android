@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(an riƙe ta Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s an mayar)</string>
     <string name="market_sale_chargeback_fee_refunded">(an mayar)</string>
+    <string name="market_messages_report">Bayar da rahoton wannan tattaunawa</string>
+    <string name="market_report_conversation_title">Bayar da rahoton tattaunawa</string>
 </resources>

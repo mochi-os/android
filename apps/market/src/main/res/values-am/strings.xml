@@ -686,4 +686,6 @@
     <string name="market_sale_chargeback_fee_kept">(በStripe የተጠበቀ)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s ተመላሽ)</string>
     <string name="market_sale_chargeback_fee_refunded">(ተመላሽ ተደርጓል)</string>
+    <string name="market_messages_report">ይህን ውይይት ሪፖርት አድርግ</string>
+    <string name="market_report_conversation_title">ውይይቱን ሪፖርት አድርግ</string>
 </resources>

@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe тарабынан кармалган)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s кайтарылды)</string>
     <string name="market_sale_chargeback_fee_refunded">(кайтарылды)</string>
+    <string name="market_messages_report">Бул сүйлөшүү тууралуу билдирүү</string>
+    <string name="market_report_conversation_title">Сүйлөшүү тууралуу билдирүү</string>
 </resources>

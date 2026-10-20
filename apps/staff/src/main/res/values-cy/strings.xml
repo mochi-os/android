@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Cyfrinach lofnodi Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Eisoes wedi\'i ad-dalu</string>
     <string name="staff_disputes_refund_exceeds_remaining">Mae\'r swm ad-daliad yn fwy na\'r swm ad-daladwy sy\'n weddill</string>
+    <string name="staff_reports_conversation">Sgwrs</string>
+    <string name="staff_reports_conversation_empty">Dim negeseuon</string>
+    <string name="staff_reports_conversation_show">Dangos y sgwrs</string>
 </resources>

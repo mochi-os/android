@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(kenbe pa Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s ranbouse)</string>
     <string name="market_sale_chargeback_fee_refunded">(ranbouse)</string>
+    <string name="market_messages_report">Rapòte konvèsasyon sa a</string>
+    <string name="market_report_conversation_title">Rapòte konvèsasyon</string>
 </resources>

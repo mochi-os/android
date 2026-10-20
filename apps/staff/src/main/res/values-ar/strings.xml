@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">سر توقيع Webhook</string>
     <string name="staff_disputes_meta_already_refunded">تم استرداده بالفعل</string>
     <string name="staff_disputes_refund_exceeds_remaining">مبلغ الاسترداد يتجاوز المبلغ المتبقي القابل للاسترداد</string>
+    <string name="staff_reports_conversation">المحادثة</string>
+    <string name="staff_reports_conversation_empty">لا توجد رسائل</string>
+    <string name="staff_reports_conversation_show">عرض المحادثة</string>
 </resources>

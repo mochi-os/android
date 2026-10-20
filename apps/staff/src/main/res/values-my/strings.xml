@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook လက်မှတ်ထိုးခြင်း လျှို့ဝှက်ချက်</string>
     <string name="staff_disputes_meta_already_refunded">ပြန်အမ်းပြီး</string>
     <string name="staff_disputes_refund_exceeds_remaining">ပြန်အမ်းငွေ ပမာဏသည် ကျန်ရှိသော ပြန်အမ်းနိုင်သည့် ပမာဏထက် ပိုနေသည်</string>
+    <string name="staff_reports_conversation">စကားဝိုင်း</string>
+    <string name="staff_reports_conversation_empty">မက်ဆေ့ချ်များ မရှိပါ</string>
+    <string name="staff_reports_conversation_show">စကားဝိုင်းကို ပြပါ</string>
 </resources>

@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(itinago ng Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s naisauli)</string>
     <string name="market_sale_chargeback_fee_refunded">(na-refund)</string>
+    <string name="market_messages_report">I-report ang pag-uusap na ito</string>
+    <string name="market_report_conversation_title">I-report ang pag-uusap</string>
 </resources>

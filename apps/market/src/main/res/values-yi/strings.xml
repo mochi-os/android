@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(געהאַלטן בײַ Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s אומגעקערט)</string>
     <string name="market_sale_chargeback_fee_refunded">(אומגעקערט)</string>
+    <string name="market_messages_report">באַריכט דעם שמועס</string>
+    <string name="market_report_conversation_title">באַריכט שמועס</string>
 </resources>

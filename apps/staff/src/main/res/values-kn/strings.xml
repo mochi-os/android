@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook ಸಹಿ ರಹಸ್ಯ</string>
     <string name="staff_disputes_meta_already_refunded">ಈಗಾಗಲೇ ಮರುಪಾವತಿಸಲಾಗಿದೆ</string>
     <string name="staff_disputes_refund_exceeds_remaining">ಮರುಪಾವತಿ ಮೊತ್ತವು ಉಳಿದ ಮರುಪಾವತಿಸಬಹುದಾದ ಮೊತ್ತವನ್ನು ಮೀರಿದೆ</string>
+    <string name="staff_reports_conversation">ಸಂಭಾಷಣೆ</string>
+    <string name="staff_reports_conversation_empty">ಯಾವುದೇ ಸಂದೇಶಗಳಿಲ್ಲ</string>
+    <string name="staff_reports_conversation_show">ಸಂಭಾಷಣೆಯನ್ನು ತೋರಿಸಿ</string>
 </resources>

@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Тајна за потпишување Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Веќе вратено</string>
     <string name="staff_disputes_refund_exceeds_remaining">Износот за враќање го надминува преостанатиот износ за враќање</string>
+    <string name="staff_reports_conversation">Разговор</string>
+    <string name="staff_reports_conversation_empty">Нема пораки</string>
+    <string name="staff_reports_conversation_show">Прикажи разговор</string>
 </resources>

@@ -440,4 +440,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook қолтаңба құпиясы</string>
     <string name="staff_disputes_meta_already_refunded">Қайтарылған</string>
     <string name="staff_disputes_refund_exceeds_remaining">Қайтару сомасы қалған қайтарылатын сомадан асып кетеді</string>
+    <string name="staff_reports_conversation">Сөйлесу</string>
+    <string name="staff_reports_conversation_empty">Хабарламалар жоқ</string>
+    <string name="staff_reports_conversation_show">Сөйлесуді көрсету</string>
 </resources>

@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook parakstīšanas noslēpums</string>
     <string name="staff_disputes_meta_already_refunded">Jau atmaksāts</string>
     <string name="staff_disputes_refund_exceeds_remaining">Atmaksas summa pārsniedz atlikušo atmaksājamo summu</string>
+    <string name="staff_reports_conversation">Saruna</string>
+    <string name="staff_reports_conversation_empty">Nav ziņojumu</string>
+    <string name="staff_reports_conversation_show">Rādīt sarunu</string>
 </resources>

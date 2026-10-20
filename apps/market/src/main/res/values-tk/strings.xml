@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe tarapyndan saklanýar)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s yzyna gaýtaryldy)</string>
     <string name="market_sale_chargeback_fee_refunded">(yzyna gaýtaryldy)</string>
+    <string name="market_messages_report">Bu söhbete şikaýat et</string>
+    <string name="market_report_conversation_title">Söhbete şikaýat et</string>
 </resources>

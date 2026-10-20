@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook firmañ imantat aru</string>
     <string name="staff_disputes_meta_already_refunded">Qullqix kutt\'ayatäxiwa</string>
     <string name="staff_disputes_refund_exceeds_remaining">Kutt\'ayañ qullqix kutt\'ayasiñjam qhiparir qullqit jilawa</string>
+    <string name="staff_reports_conversation">Parlawi</string>
+    <string name="staff_reports_conversation_empty">Jan mensajenak</string>
+    <string name="staff_reports_conversation_show">Parlawi uñacht\'ayaña</string>
 </resources>

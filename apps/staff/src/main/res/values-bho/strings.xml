@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गुप्त कुंजी</string>
     <string name="staff_disputes_meta_already_refunded">पहिलहीं वापसी कइल गइल</string>
     <string name="staff_disputes_refund_exceeds_remaining">वापसी रकम बाँचल वापसी योग्य रकम से बेसी बा</string>
+    <string name="staff_reports_conversation">बातचीत</string>
+    <string name="staff_reports_conversation_empty">कौनो संदेश नइखे</string>
+    <string name="staff_reports_conversation_show">बातचीत देखाईं</string>
 </resources>

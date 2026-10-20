@@ -689,4 +689,6 @@
     <string name="market_sale_chargeback_fee_kept">(patur Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s atmaksāti)</string>
     <string name="market_sale_chargeback_fee_refunded">(atmaksāts)</string>
+    <string name="market_messages_report">Ziņot par šo sarunu</string>
+    <string name="market_report_conversation_title">Ziņot par sarunu</string>
 </resources>

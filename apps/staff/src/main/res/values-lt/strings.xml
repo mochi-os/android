@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook pasirašymo paslaptis</string>
     <string name="staff_disputes_meta_already_refunded">Jau grąžinta</string>
     <string name="staff_disputes_refund_exceeds_remaining">Grąžinimo suma viršija likusią grąžintiną sumą</string>
+    <string name="staff_reports_conversation">Pokalbis</string>
+    <string name="staff_reports_conversation_empty">Žinučių nėra</string>
+    <string name="staff_reports_conversation_show">Rodyti pokalbį</string>
 </resources>

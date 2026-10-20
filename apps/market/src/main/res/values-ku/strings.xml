@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(ji aliyê Stripe ve hatî girtin)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s hat vegerandin)</string>
     <string name="market_sale_chargeback_fee_refunded">(hat vegerandin)</string>
+    <string name="market_messages_report">Vê sohbetê rapor bike</string>
+    <string name="market_report_conversation_title">Sohbetê rapor bike</string>
 </resources>

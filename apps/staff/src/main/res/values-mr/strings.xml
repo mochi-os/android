@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook स्वाक्षरी गुपित</string>
     <string name="staff_disputes_meta_already_refunded">आधीच परत केले</string>
     <string name="staff_disputes_refund_exceeds_remaining">परतावा रक्कम उर्वरित परत करण्यायोग्य रकमेपेक्षा जास्त आहे</string>
+    <string name="staff_reports_conversation">संभाषण</string>
+    <string name="staff_reports_conversation_empty">मेसेजेस नाहीत</string>
+    <string name="staff_reports_conversation_show">संभाषण दाखवा</string>
 </resources>

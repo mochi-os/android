@@ -693,4 +693,6 @@
     <string name="market_sale_chargeback_fee_kept">(coinnithe ag Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s aisíoctha)</string>
     <string name="market_sale_chargeback_fee_refunded">(aisíoctha)</string>
+    <string name="market_messages_report">Tuairiscigh an comhrá seo</string>
+    <string name="market_report_conversation_title">Tuairiscigh comhrá</string>
 </resources>

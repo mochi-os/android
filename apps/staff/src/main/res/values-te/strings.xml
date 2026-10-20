@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook సంతకం రహస్యం</string>
     <string name="staff_disputes_meta_already_refunded">ఇప్పటికే తిరిగి చెల్లించబడింది</string>
     <string name="staff_disputes_refund_exceeds_remaining">రీఫండ్ మొత్తం మిగిలిన రీఫండ్ చేయదగిన మొత్తాన్ని మించిపోయింది</string>
+    <string name="staff_reports_conversation">సంభాషణ</string>
+    <string name="staff_reports_conversation_empty">సందేశాలు లేవు</string>
+    <string name="staff_reports_conversation_show">సంభాషణను చూపించు</string>
 </resources>

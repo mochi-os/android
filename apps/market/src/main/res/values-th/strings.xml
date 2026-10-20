@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(เก็บโดย Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s คืนเงินแล้ว)</string>
     <string name="market_sale_chargeback_fee_refunded">(คืนเงินแล้ว)</string>
+    <string name="market_messages_report">รายงานการสนทนานี้</string>
+    <string name="market_report_conversation_title">รายงานการสนทนา</string>
 </resources>

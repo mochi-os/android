@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Тајни кључ за потписивање webhook-а</string>
     <string name="staff_disputes_meta_already_refunded">Већ враћено</string>
     <string name="staff_disputes_refund_exceeds_remaining">Износ повраћаја прелази преостали износ за повраћај</string>
+    <string name="staff_reports_conversation">Разговор</string>
+    <string name="staff_reports_conversation_empty">Нема порука</string>
+    <string name="staff_reports_conversation_show">Прикажи разговор</string>
 </resources>

@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Rùn soidhnidh webhook</string>
     <string name="staff_disputes_meta_already_refunded">Air ath-phàigheadh mar-thà</string>
     <string name="staff_disputes_refund_exceeds_remaining">Tha an t-suim ath-phàighidh nas motha na an t-suim ath-phàigheach a tha air fhàgail</string>
+    <string name="staff_reports_conversation">Còmhradh</string>
+    <string name="staff_reports_conversation_empty">Gun teachdaireachdan</string>
+    <string name="staff_reports_conversation_show">Seall an còmhradh</string>
 </resources>

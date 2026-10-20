@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(د Stripe لخوا ساتل شوی)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s بیرته ورکړل شوی)</string>
     <string name="market_sale_chargeback_fee_refunded">(بیرته ورکړل شوی)</string>
+    <string name="market_messages_report">د دې خبرو اترو راپور</string>
+    <string name="market_report_conversation_title">د خبرو اترو راپور</string>
 </resources>

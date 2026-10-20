@@ -686,4 +686,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe-д үлдсэн)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s буцаасан)</string>
     <string name="market_sale_chargeback_fee_refunded">(буцаасан)</string>
+    <string name="market_messages_report">Энэ ярианы талаар гомдол гаргах</string>
+    <string name="market_report_conversation_title">Ярианы талаар гомдол гаргах</string>
 </resources>

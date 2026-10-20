@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(imehifadhiwa na Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s imerudishwa)</string>
     <string name="market_sale_chargeback_fee_refunded">(imerejeshwa)</string>
+    <string name="market_messages_report">Ripoti mazungumzo haya</string>
+    <string name="market_report_conversation_title">Ripoti mazungumzo</string>
 </resources>

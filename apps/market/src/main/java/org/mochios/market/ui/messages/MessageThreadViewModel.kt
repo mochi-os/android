@@ -136,6 +136,38 @@ class MessageThreadViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Report the other party in this conversation. The Comptroller works out
+     * who that is from the conversation; the target goes too for one that
+     * predates that. [onSuccess] and [onFailure] have no defaults, so a caller
+     * cannot pass one trailing lambda and have it land on the wrong outcome.
+     */
+    fun reportConversation(
+        reason: String,
+        details: String,
+        onSuccess: () -> Unit,
+        onFailure: (MochiError) -> Unit,
+    ) {
+        val thread = _state.value.thread ?: return
+        val other = if (_state.value.me == thread.buyer) thread.seller else thread.buyer
+        viewModelScope.launch {
+            try {
+                repo.createReport(
+                    target = other,
+                    type = "user",
+                    reason = reason,
+                    details = details.ifBlank { null },
+                    thread = thread.id,
+                )
+                onSuccess()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                onFailure(e.toMochiError())
+            }
+        }
+    }
+
     fun updateDraft(value: String) {
         _state.value = _state.value.copy(draft = value)
     }

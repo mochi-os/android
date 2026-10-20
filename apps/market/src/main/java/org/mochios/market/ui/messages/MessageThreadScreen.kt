@@ -26,6 +26,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -40,7 +41,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -55,6 +59,7 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
@@ -72,6 +77,8 @@ import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Message
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.dialog.CONVERSATION_REPORT_REASONS
+import org.mochios.market.ui.dialog.ReportListingDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -131,6 +138,10 @@ fun MessageThreadScreen(
         stringResource(R.string.market_messages_thread_title)
     }
 
+    var reportOpen by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
+    val filed = stringResource(R.string.market_report_dialog_success)
+
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
@@ -148,6 +159,16 @@ fun MessageThreadScreen(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
                         )
+                    }
+                },
+                actions = {
+                    if (state.thread != null) {
+                        MochiIconButton(onClick = { reportOpen = true }) {
+                            Icon(
+                                Icons.Outlined.Flag,
+                                contentDescription = stringResource(R.string.market_messages_report),
+                            )
+                        }
                     }
                 },
             )
@@ -223,6 +244,55 @@ fun MessageThreadScreen(
             )
         }
     }
+
+    ConversationReportHost(
+        open = reportOpen,
+        viewModel = viewModel,
+        onClose = { reportOpen = false },
+        onFiled = { scope.launch { snackbarHostState.showSnackbar(filed) } },
+    )
+}
+
+/**
+ * The conversation's report dialog and its round trip: a filed report closes
+ * it and runs [onFiled], and a refused one keeps it open on the server's
+ * reason.
+ */
+@Composable
+internal fun ConversationReportHost(
+    open: Boolean,
+    viewModel: MessageThreadViewModel,
+    onClose: () -> Unit,
+    onFiled: () -> Unit,
+) {
+    var submitting by remember(open) { mutableStateOf(false) }
+    var error by remember(open) { mutableStateOf<String?>(null) }
+    val fallback = stringResource(R.string.market_report_dialog_failed)
+    ReportListingDialog(
+        open = open,
+        submitting = submitting,
+        errorMessage = error,
+        title = stringResource(R.string.market_report_conversation_title),
+        reasons = CONVERSATION_REPORT_REASONS,
+        onSubmit = { reason, details ->
+            submitting = true
+            error = null
+            viewModel.reportConversation(
+                reason = reason,
+                details = details,
+                onSuccess = {
+                    submitting = false
+                    onClose()
+                    onFiled()
+                },
+                onFailure = { failure ->
+                    submitting = false
+                    error = failure.userMessage().ifEmpty { fallback }
+                },
+            )
+        },
+        onDismiss = onClose,
+    )
 }
 
 @Composable

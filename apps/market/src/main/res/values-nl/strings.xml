@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(ingehouden door Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s terugbetaald)</string>
     <string name="market_sale_chargeback_fee_refunded">(terugbetaald)</string>
+    <string name="market_messages_report">Dit gesprek melden</string>
+    <string name="market_report_conversation_title">Gesprek melden</string>
 </resources>

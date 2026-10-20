@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe 보유)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s 환불됨)</string>
     <string name="market_sale_chargeback_fee_refunded">(환불됨)</string>
+    <string name="market_messages_report">이 대화 신고</string>
+    <string name="market_report_conversation_title">대화 신고</string>
 </resources>

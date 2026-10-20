@@ -111,6 +111,9 @@ fun ReportsScreen(
             submitting = state.submitting,
             onDismiss = viewModel::dismissAction,
             onSubmit = { action, notes -> viewModel.actionReport(action, notes) },
+            conversation = state.conversation,
+            loadingConversation = state.loadingConversation,
+            onShowConversation = viewModel::showConversation,
             // Already-resolved reports (anything other than the canonical
             // `pending` wire value) drop into the
             // metadata + history read-only view.
