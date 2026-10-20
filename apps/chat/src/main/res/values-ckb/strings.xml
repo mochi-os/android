@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">ئاگادارکردنەوەکانی گفتوگۆ</string>
     <string name="chat_list_empty">هێشتا هیچ گفتوگۆیەک نییە</string>
+    <string name="chat_list_filter_groups">گرووپەکان</string>
+    <string name="chat_list_no_groups">هیچ گفتوگۆی گرووپی نییە</string>
     <string name="chat_new_existing_with">پێشتر گفتوگۆت هەیە لەگەڵ:</string>
     <string name="chat_new_open">کردنەوە</string>
     <string name="chat_new_remove_person">لابردنی %1$s</string>

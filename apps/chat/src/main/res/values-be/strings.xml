@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Апавяшчэнні чата</string>
     <string name="chat_list_empty">Чатаў пакуль няма</string>
+    <string name="chat_list_filter_groups">Групы</string>
+    <string name="chat_list_no_groups">Няма групавых чатаў</string>
     <string name="chat_new_existing_with">У вас ужо ёсць чаты з:</string>
     <string name="chat_new_open">Адкрыць</string>
     <string name="chat_new_remove_person">Выдаліць %1$s</string>

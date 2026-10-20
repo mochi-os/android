@@ -33,6 +33,8 @@
 
     <string name="notification_channel_chat">ချတ် အကြောင်းကြားချက်များ</string>
     <string name="chat_list_empty">ချတ်များ မရှိသေးပါ</string>
+    <string name="chat_list_filter_groups">အုပ်စုများ</string>
+    <string name="chat_list_no_groups">အဖွဲ့ချတ် မရှိပါ</string>
     <string name="chat_new_existing_with">ဤသူများနှင့် ချတ်များ ရှိပြီးဖြစ်သည်-</string>
     <string name="chat_new_open">ဖွင့်ရန်</string>
     <string name="chat_new_remove_person">%1$s ကို ဖယ်ရှားရန်</string>

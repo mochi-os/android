@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Ειδοποιήσεις συνομιλίας</string>
     <string name="chat_list_empty">Δεν υπάρχουν ακόμη συνομιλίες</string>
+    <string name="chat_list_filter_groups">Ομάδες</string>
+    <string name="chat_list_no_groups">Δεν υπάρχουν ομαδικές συνομιλίες</string>
     <string name="chat_new_existing_with">Έχετε ήδη συνομιλίες με:</string>
     <string name="chat_new_open">Άνοιγμα</string>
     <string name="chat_new_remove_person">Αφαίρεση %1$s</string>

@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">ચેટ સૂચનાઓ</string>
     <string name="chat_list_empty">હજુ સુધી કોઈ ચેટ નથી</string>
+    <string name="chat_list_filter_groups">ગ્રુપ્સ</string>
+    <string name="chat_list_no_groups">કોઈ ગ્રૂપ ચેટ નથી</string>
     <string name="chat_new_existing_with">તમારી પાસે પહેલેથી જ આમની સાથે ચેટ છે:</string>
     <string name="chat_new_open">ખોલો</string>
     <string name="chat_new_remove_person">%1$s ને દૂર કરો</string>

@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Fógraí comhrá</string>
     <string name="chat_list_empty">Níl aon chomhrá ann go fóill</string>
+    <string name="chat_list_filter_groups">Grúpaí</string>
+    <string name="chat_list_no_groups">Níl aon chomhráite grúpa</string>
     <string name="chat_new_existing_with">Tá comhráite agat cheana le:</string>
     <string name="chat_new_open">Oscail</string>
     <string name="chat_new_remove_person">Bain %1$s</string>

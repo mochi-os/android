@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Notifications de messagerie</string>
     <string name="chat_list_empty">Aucune conversation pour le moment</string>
+    <string name="chat_list_filter_groups">Groupes</string>
+    <string name="chat_list_no_groups">Aucune conversation de groupe</string>
     <string name="chat_new_existing_with">Vous avez déjà des conversations avec :</string>
     <string name="chat_new_open">Ouvrir</string>
     <string name="chat_new_remove_person">Retirer %1$s</string>

@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Զրույցի ծանուցումներ</string>
     <string name="chat_list_empty">Դեռ զրույցներ չկան</string>
+    <string name="chat_list_filter_groups">Խմբեր</string>
+    <string name="chat_list_no_groups">Խմբային զրույցներ չկան</string>
     <string name="chat_new_existing_with">Դուք արդեն զրույցներ ունեք՝</string>
     <string name="chat_new_open">Բացել</string>
     <string name="chat_new_remove_person">Հեռացնել %1$s-ը</string>

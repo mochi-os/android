@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">চ্যাট বিজ্ঞপ্তি</string>
     <string name="chat_list_empty">এখনও কোনো চ্যাট নেই</string>
+    <string name="chat_list_filter_groups">গ্রুপসমূহ</string>
+    <string name="chat_list_no_groups">কোনো গ্রুপ চ্যাট নেই</string>
     <string name="chat_new_existing_with">এঁদের সাথে আপনার আগে থেকেই চ্যাট আছে:</string>
     <string name="chat_new_open">খুলুন</string>
     <string name="chat_new_remove_person">%1$s কে সরান</string>

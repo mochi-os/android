@@ -34,6 +34,8 @@
 
     <string name="notification_channel_chat">Hysbysiadau sgwrs</string>
     <string name="chat_list_empty">Dim sgyrsiau eto</string>
+    <string name="chat_list_filter_groups">Grwpiau</string>
+    <string name="chat_list_no_groups">Dim sgyrsiau grŵp</string>
     <string name="chat_new_existing_with">Mae gennych chi sgyrsiau eisoes gyda:</string>
     <string name="chat_new_open">Agor</string>
     <string name="chat_new_remove_person">Tynnu %1$s</string>

@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Klets-kennisgewings</string>
     <string name="chat_list_empty">Nog geen kletse nie</string>
+    <string name="chat_list_filter_groups">Groepe</string>
+    <string name="chat_list_no_groups">Geen groepkletse nie</string>
     <string name="chat_new_existing_with">Jy het reeds kletse met:</string>
     <string name="chat_new_open">Maak oop</string>
     <string name="chat_new_remove_person">Verwyder %1$s</string>

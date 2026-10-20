@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Известия за чат</string>
     <string name="chat_list_empty">Все още няма чатове</string>
+    <string name="chat_list_filter_groups">Групи</string>
+    <string name="chat_list_no_groups">Няма групови чатове</string>
     <string name="chat_new_existing_with">Вече имате чатове с:</string>
     <string name="chat_new_open">Отвори</string>
     <string name="chat_new_remove_person">Премахване на %1$s</string>

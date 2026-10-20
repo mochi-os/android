@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Chat-ilmoitukset</string>
     <string name="chat_list_empty">Ei vielä keskusteluja</string>
+    <string name="chat_list_filter_groups">Ryhmät</string>
+    <string name="chat_list_no_groups">Ei ryhmäkeskusteluja</string>
     <string name="chat_new_existing_with">Sinulla on jo keskusteluja näiden kanssa:</string>
     <string name="chat_new_open">Avaa</string>
     <string name="chat_new_remove_person">Poista %1$s</string>

@@ -32,6 +32,8 @@
 
     <string name="notification_channel_chat">Notificações de chat</string>
     <string name="chat_list_empty">Ainda não há chats</string>
+    <string name="chat_list_filter_groups">Grupos</string>
+    <string name="chat_list_no_groups">Nenhum chat em grupo</string>
     <string name="chat_new_existing_with">Você já tem chats com:</string>
     <string name="chat_new_open">Abrir</string>
     <string name="chat_new_remove_person">Remover %1$s</string>

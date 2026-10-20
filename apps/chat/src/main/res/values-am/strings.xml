@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">የውይይት ማሳወቂያዎች</string>
     <string name="chat_list_empty">እስካሁን ውይይቶች የሉም</string>
+    <string name="chat_list_filter_groups">ቡድኖች</string>
+    <string name="chat_list_no_groups">ምንም የቡድን ውይይቶች የሉም</string>
     <string name="chat_new_existing_with">አስቀድመው ውይይቶች ያሉዎት ከ:</string>
     <string name="chat_new_open">ክፈት</string>
     <string name="chat_new_remove_person">%1$sን አስወግድ</string>

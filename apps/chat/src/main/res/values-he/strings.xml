@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">התראות צ\'אט</string>
     <string name="chat_list_empty">אין צ\'אטים עדיין</string>
+    <string name="chat_list_filter_groups">קבוצות</string>
+    <string name="chat_list_no_groups">אין צ\'אטים קבוצתיים</string>
     <string name="chat_new_existing_with">כבר יש לכם צ\'אטים עם:</string>
     <string name="chat_new_open">פתיחה</string>
     <string name="chat_new_remove_person">הסר את %1$s</string>

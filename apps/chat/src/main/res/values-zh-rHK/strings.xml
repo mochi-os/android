@@ -15,6 +15,8 @@
     <string name="chat_list_title">聊天</string>
     <string name="chat_list_new">新聊天</string>
     <string name="chat_list_empty">尚未有聊天</string>
+    <string name="chat_list_filter_groups">群組</string>
+    <string name="chat_list_no_groups">沒有群組聊天</string>
     <string name="chat_new_title">新聊天</string>
     <string name="chat_new_name">群組名稱</string>
     <string name="chat_new_existing_with">你已有以下聊天：</string>

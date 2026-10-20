@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Brathan còmhraidh</string>
     <string name="chat_list_empty">Chan eil còmhradh sam bith ann fhathast</string>
+    <string name="chat_list_filter_groups">Buidhnean</string>
+    <string name="chat_list_no_groups">Chan eil còmhradh buidhinn ann</string>
     <string name="chat_new_existing_with">Tha còmhraidhean agad mu thràth le:</string>
     <string name="chat_new_open">Fosgail</string>
     <string name="chat_new_remove_person">Thoir %1$s air falbh</string>

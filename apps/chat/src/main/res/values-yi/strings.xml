@@ -33,6 +33,8 @@
 
     <string name="notification_channel_chat">שמועס־נאָטיפֿיקאַציעס</string>
     <string name="chat_list_empty">נאָך קיין שמועסן</string>
+    <string name="chat_list_filter_groups">גרופּעס</string>
+    <string name="chat_list_no_groups">קיין גרופּע־שמועסן</string>
     <string name="chat_new_existing_with">איר האָט שוין שמועסן מיט:</string>
     <string name="chat_new_open">עפֿענען</string>
     <string name="chat_new_remove_person">אַראָפּנעמען %1$s</string>

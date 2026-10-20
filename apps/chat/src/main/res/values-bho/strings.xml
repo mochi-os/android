@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">चैट सूचना</string>
     <string name="chat_list_empty">अबहीं कवनो चैट नइखे</string>
+    <string name="chat_list_filter_groups">समूह</string>
+    <string name="chat_list_no_groups">कवनो ग्रुप चैट नइखे</string>
     <string name="chat_new_existing_with">रउआ पहिले से एह लोग से चैट बा:</string>
     <string name="chat_new_open">खोलीं</string>
     <string name="chat_new_remove_person">%1$s के हटाईं</string>

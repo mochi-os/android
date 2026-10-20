@@ -30,6 +30,8 @@
 
     <string name="notification_channel_chat">Notifikasyon chat</string>
     <string name="chat_list_empty">Poko gen chat</string>
+    <string name="chat_list_filter_groups">Gwoup</string>
+    <string name="chat_list_no_groups">Pa gen chat gwoup</string>
     <string name="chat_new_existing_with">Ou deja gen chat avèk:</string>
     <string name="chat_new_open">Louvri</string>
     <string name="chat_new_remove_person">Retire %1$s</string>

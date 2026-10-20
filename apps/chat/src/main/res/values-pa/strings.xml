@@ -33,6 +33,8 @@
 
     <string name="notification_channel_chat">ਚੈਟ ਸੂਚਨਾਵਾਂ</string>
     <string name="chat_list_empty">ਅਜੇ ਕੋਈ ਚੈਟ ਨਹੀਂ</string>
+    <string name="chat_list_filter_groups">ਗਰੁੱਪ</string>
+    <string name="chat_list_no_groups">ਕੋਈ ਗਰੁੱਪ ਚੈਟ ਨਹੀਂ</string>
     <string name="chat_new_existing_with">ਤੁਹਾਡੇ ਪਹਿਲਾਂ ਹੀ ਇਹਨਾਂ ਨਾਲ ਚੈਟ ਹਨ:</string>
     <string name="chat_new_open">ਖੋਲ੍ਹੋ</string>
     <string name="chat_new_remove_person">%1$s ਨੂੰ ਹਟਾਓ</string>

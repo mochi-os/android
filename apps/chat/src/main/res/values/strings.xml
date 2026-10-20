@@ -8,6 +8,8 @@
     <string name="chat_list_search">Search</string>
     <string name="chat_list_new">New chat</string>
     <string name="chat_list_empty">No chats yet</string>
+    <string name="chat_list_filter_groups">Groups</string>
+    <string name="chat_list_no_groups">No group chats</string>
 
     <!-- New chat -->
     <string name="chat_new_title">New chat</string>

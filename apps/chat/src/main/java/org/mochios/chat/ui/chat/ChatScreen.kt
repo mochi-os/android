@@ -106,7 +106,6 @@ import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
@@ -134,6 +133,8 @@ import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.model.heading
 import org.mochios.chat.model.personAvatarUrl
+import org.mochios.chat.ui.chatlist.ChatListHeader
+import org.mochios.chat.ui.chatlist.ChatListNoMatches
 import org.mochios.chat.ui.chatlist.ChatListViewModel
 import org.mochios.chat.ui.chatlist.unreadBadge
 import org.mochios.chat.ui.policy.ChatPolicyDialog
@@ -172,7 +173,7 @@ fun ChatScreen(
         }
     }
     val pinnedChats by listViewModel.pinned.collectAsState()
-    val drawerItems = remember(listUiState.chats, pinnedChats) {
+    val drawerItems = remember(listUiState, pinnedChats) {
         listViewModel.filteredChats().map { chat ->
             val isDirect = chat.members == 2 && chat.other.isNotBlank()
             DrawerItem(
@@ -189,8 +190,20 @@ fun ChatScreen(
 
     MochiListDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.chat_list_title)) },
+        header = {
+            ChatListHeader(
+                query = listUiState.query,
+                filter = listUiState.filter,
+                onQueryChange = listViewModel::setQuery,
+                onFilterChange = listViewModel::setFilter,
+            )
+        },
         items = drawerItems,
+        emptyState = if (listUiState.chats.isNotEmpty()) {
+            { ChatListNoMatches(query = listUiState.query, filter = listUiState.filter) }
+        } else {
+            null
+        },
         selectedId = chatId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
