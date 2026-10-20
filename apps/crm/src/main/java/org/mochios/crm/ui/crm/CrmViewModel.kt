@@ -32,6 +32,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.crm.ui.board.boardClass
 import org.mochios.crm.ui.board.boardOptions
 import org.mochios.crm.lib.ActiveViewStore
+import org.mochios.crm.lib.CollapsedColumnsStore
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmField
@@ -87,13 +88,18 @@ class CrmViewModel @Inject constructor(
     private val repository: CrmsRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
-    private val activeViewStore: ActiveViewStore
+    private val activeViewStore: ActiveViewStore,
+    private val collapsedColumnsStore: CollapsedColumnsStore,
 ) : ViewModel() {
 
     val crmId: String = savedStateHandle.get<String>("crmId") ?: ""
 
     private val _uiState = MutableStateFlow(CrmUiState())
     val uiState: StateFlow<CrmUiState> = _uiState.asStateFlow()
+
+    /** Collapsed board columns, by column field. */
+    private val _collapsedColumns = MutableStateFlow(collapsedColumnsStore.get(crmId))
+    val collapsedColumns: StateFlow<Map<String, Set<String>>> = _collapsedColumns.asStateFlow()
 
     /** Emits the CRM's share link once fetched, for the screen to share. */
     private val _shareLink = MutableSharedFlow<String>()
@@ -664,6 +670,15 @@ class CrmViewModel @Inject constructor(
                 _actionFailed.tryEmit(e.toMochiError())
             }
         }
+    }
+
+    /**
+     * Collapses or expands the board column [optionId] of [fieldId]. Kept on
+     * this device, per CRM and column field.
+     */
+    fun toggleColumnCollapsed(fieldId: String, optionId: String) {
+        val next = collapsedColumnsStore.toggle(crmId, fieldId, optionId)
+        _collapsedColumns.value = _collapsedColumns.value + (fieldId to next)
     }
 
     /**

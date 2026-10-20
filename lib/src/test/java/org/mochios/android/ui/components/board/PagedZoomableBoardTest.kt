@@ -24,6 +24,7 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipe
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.junit.Assert.assertEquals
@@ -64,12 +65,17 @@ class PagedZoomableBoardTest {
     private var pages = 0
     private lateinit var list: LazyListState
 
-    private fun show(count: Int, start: Int = 0) {
+    private fun show(count: Int, start: Int = 0, collapsed: Set<Int> = emptySet()) {
         pages = count
         list = LazyListState(firstVisibleItemIndex = start)
         rule.setContent {
             Box(Modifier.size(360.dp, 640.dp).background(Color.White)) {
-                PagedZoomableBoard(pageCount = count, cardDragState = drag, state = list) { index ->
+                PagedZoomableBoard(
+                    pageCount = count,
+                    cardDragState = drag,
+                    state = list,
+                    collapsed = { index -> index in collapsed },
+                ) { index ->
                     Box(
                         Modifier
                             .fillMaxSize()
@@ -139,6 +145,18 @@ class PagedZoomableBoardTest {
 
     private fun Float.inDp(): Float = with(rule.density) { this@inDp.toDp().value }
 
+    /** Page [index]'s laid-out width in dp, however much of it is in view. */
+    private fun width(index: Int): Float =
+        rule.onAllNodesWithTag("page$index").fetchSemanticsNodes().first().size.width.toFloat().inDp()
+
+    /** A slow swipe from right to left across [distance], released with too little speed to fling on. */
+    private fun swipeBack(distance: Dp) {
+        rule.onRoot().performTouchInput {
+            swipe(point(300.dp, 300.dp), point(300.dp - distance, 300.dp), durationMillis = 1000)
+        }
+        rule.mainClock.advanceTimeBy(2000)
+    }
+
     /**
      * Holds the pointer at the right edge until the board has scrolled well
      * past the card's own column, then drops mid-screen. Returns the page
@@ -207,5 +225,38 @@ class PagedZoomableBoardTest {
         val source = point(100.dp, 20.dp)
         assertEquals("the placeholder, where the card sits", Color.Blue, pixels[source.x.toInt(), source.y.toInt()])
         release()
+    }
+
+    @Test
+    fun `a collapsed column is a narrow strip beside a full-width column`() {
+        show(count = 4, collapsed = setOf(1))
+        assertEquals(312f, width(0), 1f)
+        assertEquals(40f, width(1), 1f)
+    }
+
+    @Test
+    fun `a run of strips is one stop, centred, and the next stop is the column after it`() {
+        show(count = 4, collapsed = setOf(1, 2))
+        // The run is 208dp ahead of the first column's rest: a 200dp swipe
+        // leaves it the nearest stop.
+        swipeBack(200.dp)
+        val run = (bounds(1).left + bounds(2).right) / 2f
+        assertEquals(180f, run.inDp(), 1f)
+        // And as far again on to the column after it, which rests as a column does.
+        swipeBack(200.dp)
+        assertEquals(24f, bounds(3).left.inDp(), 1f)
+    }
+
+    @Test
+    fun `a card dropped on a strip leaves the board resting on the strip, centred`() {
+        show(count = 4, collapsed = setOf(1))
+        press(150.dp, 40.dp)
+        val strip = bounds(1).center
+        move(strip.x.inDp().dp, 300.dp)
+        rule.mainClock.advanceTimeBy(100)
+        release()
+        assertEquals("column:1", dropped)
+        rule.mainClock.advanceTimeBy(1000)
+        assertEquals(180f, bounds(1).center.x.inDp(), 1f)
     }
 }

@@ -8,7 +8,10 @@ package org.mochios.android.ui.components.board
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.gestures.ScrollableDefaults
+import androidx.compose.foundation.gestures.animateScrollBy
 import androidx.compose.foundation.gestures.scrollBy
+import androidx.compose.foundation.gestures.snapping.SnapLayoutInfoProvider
+import androidx.compose.foundation.gestures.snapping.SnapPosition
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,6 +20,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyListLayoutInfo
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -25,6 +29,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
@@ -43,6 +48,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.first
 import org.mochios.android.ui.components.dnd.DragState
 import kotlin.math.abs
 import kotlin.math.roundToInt
@@ -54,6 +60,11 @@ import kotlin.math.roundToInt
  * drawn under the pointer from its ghost, and when the drag ends the board
  * settles on the column the pointer was over. Scale goes through
  * `Modifier.layout`, not `graphicsLayer`, to keep dnd hit-testing aligned.
+ *
+ * A page [collapsed] says is a narrow strip of [collapsedWidth]. Beside a
+ * column only a sliver of it would show, so each run of strips is a stop of
+ * its own: the board comes to rest with the run centred and part of each
+ * neighbouring column in view.
  */
 @Composable
 fun PagedZoomableBoard(
@@ -67,9 +78,12 @@ fun PagedZoomableBoard(
     zoomScale: Float = 0.55f,
     edgeScrollThreshold: Dp = 56.dp,
     edgeScrollSpeedPerFrameDp: Dp = 14.dp,
+    collapsed: (index: Int) -> Boolean = { false },
+    collapsedWidth: Dp = 40.dp,
     page: @Composable (index: Int) -> Unit,
 ) {
     val isDragging = dragOwner(cardDragState, columnDragState) != null
+    val isCollapsed by rememberUpdatedState(collapsed)
 
     val zoom by animateFloatAsState(
         targetValue = if (isDragging) zoomScale else 1f,
@@ -92,7 +106,24 @@ fun PagedZoomableBoard(
                 val ended = previous ?: return@collectLatest
                 previous = null
                 val index = pageAt(state, ended.dragOffset.x - viewport.left) ?: return@collectLatest
-                state.animateScrollToItem(index)
+                if (!isCollapsed(index)) {
+                    state.animateScrollToItem(index)
+                    return@collectLatest
+                }
+                // A strip: centre its run, measured once the board is back at
+                // full size, since the zoom changes every page's width.
+                var first = index
+                while (first > 0 && isCollapsed(first - 1)) first--
+                snapshotFlow { zoom }.first { scale -> scale > 0.999f }
+                if (state.layoutInfo.visibleItemsInfo.none { item -> item.index == first }) {
+                    state.scrollToItem(first)
+                }
+                val info = state.layoutInfo
+                val stop = boardStops(info.visibleItemsInfo.map { item ->
+                    BoardItem(item.index, item.offset, item.size)
+                }, isCollapsed).firstOrNull { candidate -> candidate.first == first }
+                    ?: return@collectLatest
+                state.animateScrollBy(stop.centre - viewportCentre(info))
                 return@collectLatest
             }
             previous = owner
@@ -121,7 +152,17 @@ fun PagedZoomableBoard(
     // Snap-to-page in paged mode, free-scroll in zoom mode. Swapping the
     // fling behavior mid-drag would feel jarring; we only swap when the
     // scale animation has effectively settled to 1.0.
-    val snapFling = rememberSnapFlingBehavior(lazyListState = state)
+    val minimumFling = with(density) { MinimumFlingVelocity.toPx() }
+    val snapFling = rememberSnapFlingBehavior(
+        remember(state) {
+            StopSnapLayoutInfoProvider(
+                state,
+                SnapLayoutInfoProvider(state, SnapPosition.Center),
+                { index -> isCollapsed(index) },
+                { minimumFling },
+            )
+        }
+    )
     val freeFling = ScrollableDefaults.flingBehavior()
 
     BoxWithConstraints(
@@ -153,7 +194,7 @@ fun PagedZoomableBoard(
                 Box(
                     modifier = Modifier
                         .layout { measurable, constraints ->
-                            val width = pageWidth.roundToPx()
+                            val width = (if (isCollapsed(index)) collapsedWidth else pageWidth).roundToPx()
                             val placeable = measurable.measure(
                                 constraints.copy(minWidth = width, maxWidth = width)
                             )
@@ -197,6 +238,86 @@ private fun dragOwner(cardDragState: DragState, columnDragState: DragState?): Dr
     cardDragState.draggingItemId != null -> cardDragState
     columnDragState?.draggingItemId != null -> columnDragState
     else -> null
+}
+
+/** Below this a fling settles on the nearest stop rather than the next one; Compose's own snapping threshold. */
+private val MinimumFlingVelocity = 400.dp
+
+/** A laid-out page, in the list's offsets: [offset] from the start of its content, [size] across. */
+internal data class BoardItem(val index: Int, val offset: Int, val size: Int)
+
+/** Where the board may rest: one column, or a run of strips from [first] to [last], centred on [centre]. */
+internal data class BoardStop(val first: Int, val last: Int, val centre: Float)
+
+/** The stops among [items], in order: each column alone, and each run of collapsed pages together. */
+internal fun boardStops(items: List<BoardItem>, collapsed: (Int) -> Boolean): List<BoardStop> {
+    val stops = mutableListOf<BoardStop>()
+    var run: MutableList<BoardItem>? = null
+    fun close() {
+        val strips = run ?: return
+        val start = strips.first()
+        val end = strips.last()
+        stops.add(BoardStop(start.index, end.index, (start.offset + end.offset + end.size) / 2f))
+        run = null
+    }
+    for (item in items.sortedBy { it.index }) {
+        if (!collapsed(item.index)) {
+            close()
+            stops.add(BoardStop(item.index, item.index, item.offset + item.size / 2f))
+            continue
+        }
+        val strips = run
+        if (strips != null && strips.last().index == item.index - 1) strips.add(item)
+        else {
+            close()
+            run = mutableListOf(item)
+        }
+    }
+    close()
+    return stops
+}
+
+/** The middle of the list's viewport, in the offsets [BoardItem] uses. */
+internal fun viewportCentre(info: LazyListLayoutInfo): Float =
+    (info.viewportStartOffset + info.viewportEndOffset) / 2f
+
+/**
+ * How far to scroll to rest on a stop, given each stop's distance from the
+ * centre: the nearest for a slow release, else the next one in the fling's
+ * direction.
+ */
+internal fun snapDistance(distances: List<Float>, velocity: Float, minimum: Float): Float {
+    val behind = distances.filter { it <= 0f }.maxOrNull()
+    val ahead = distances.filter { it >= 0f }.minOrNull()
+    return when {
+        behind == null -> ahead ?: 0f
+        ahead == null -> behind
+        abs(velocity) < minimum -> if (abs(behind) <= abs(ahead)) behind else ahead
+        velocity > 0f -> ahead
+        else -> behind
+    }
+}
+
+/**
+ * Snapping that rests on [boardStops] rather than on every page, so a run of
+ * strips is one stop, centred, and never leaves a column off-centre. The fling's
+ * approach, the long travel before the final snap, is Compose's own.
+ */
+private class StopSnapLayoutInfoProvider(
+    private val state: LazyListState,
+    private val base: SnapLayoutInfoProvider,
+    private val collapsed: (Int) -> Boolean,
+    private val minimum: () -> Float,
+) : SnapLayoutInfoProvider {
+    override fun calculateApproachOffset(velocity: Float, decayOffset: Float): Float =
+        base.calculateApproachOffset(velocity, decayOffset)
+
+    override fun calculateSnapOffset(velocity: Float): Float {
+        val info = state.layoutInfo
+        val centre = viewportCentre(info)
+        val stops = boardStops(info.visibleItemsInfo.map { BoardItem(it.index, it.offset, it.size) }, collapsed)
+        return snapDistance(stops.map { it.centre - centre }, velocity, minimum())
+    }
 }
 
 /** Side padding that centres a page of [page] width drawn at [scale] in a [viewport]. */

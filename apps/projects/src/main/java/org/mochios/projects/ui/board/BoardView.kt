@@ -32,9 +32,11 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.UnfoldLess
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -45,6 +47,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
@@ -57,6 +60,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.board.CollapsedBoardColumn
 import org.mochios.android.ui.components.board.PagedZoomableBoard
 import org.mochios.android.ui.components.dnd.DragEdge
 import org.mochios.android.ui.components.dnd.DragState
@@ -173,14 +177,34 @@ fun BoardView(
         }
     }
 
+    // Collapsed columns, kept per board and column field. Unassigned has no
+    // menu to collapse it from, as on the web.
+    val collapsedByField by viewModel.collapsedColumns.collectAsState()
+    val collapsedIds = collapsedByField[columnFieldId].orEmpty()
+
     PagedZoomableBoard(
         pageCount = pages.size,
         cardDragState = cardDragState,
         columnDragState = columnDragState,
+        collapsed = { index ->
+            val id = pages.getOrNull(index)?.id.orEmpty()
+            id.isNotBlank() && id in collapsedIds
+        },
     ) { pageIndex ->
         val columnOption = pages[pageIndex]
         val isUnassigned = columnOption.id.isBlank()
         val columnObjects = if (isUnassigned) unassigned else (objectsByColumn[columnOption.id] ?: emptyList())
+        if (!isUnassigned && columnOption.id in collapsedIds) {
+            CollapsedColumn(
+                option = columnOption,
+                objects = columnObjects,
+                visibleIds = visibleIds,
+                viewModel = viewModel,
+                columnFieldId = columnFieldId,
+                cardDragState = cardDragState,
+            )
+            return@PagedZoomableBoard
+        }
         BoardColumn(
             option = columnOption,
             objects = columnObjects,
@@ -221,6 +245,9 @@ fun BoardView(
             onDelete = if (isUnassigned) null else {
                 { viewModel.deleteColumnOption(columnFieldId, columnOption.id) }
             },
+            onCollapse = if (isUnassigned) null else {
+                { viewModel.toggleColumnCollapsed(columnFieldId, columnOption.id) }
+            },
             onCreateInColumn = if (onCreateObject != null && !isUnassigned) {
                 { onCreateObject(mapOf(columnFieldId to columnOption.id)) }
             } else null,
@@ -228,6 +255,49 @@ fun BoardView(
     }
 }
 
+
+/**
+ * A column's card count, as its header and its strip show it. While a filter is
+ * on it reads "shown/total", so the column still tells you how much it holds.
+ */
+private fun columnCount(objects: List<ProjectObject>, visibleIds: Set<String>?): String =
+    if (visibleIds == null) {
+        objects.size.toString()
+    } else {
+        "${objects.count { obj -> obj.id in visibleIds }}/${objects.size}"
+    }
+
+/**
+ * A collapsed column: the shared strip, taking a card dropped on it at the end
+ * of the column, in the card's own lane, as the expanded column's empty space
+ * does. Tapping it expands the column.
+ */
+@Composable
+private fun CollapsedColumn(
+    option: FieldOption,
+    objects: List<ProjectObject>,
+    visibleIds: Set<String>?,
+    viewModel: ProjectViewModel,
+    columnFieldId: String,
+    cardDragState: DragState,
+) {
+    val itemId = "column:${option.id}"
+    CollapsedBoardColumn(
+        name = option.name,
+        count = columnCount(objects, visibleIds),
+        colour = option.colour.takeIf { it.isNotBlank() }?.let { parseColor(it) },
+        highlighted = cardDragState.draggingItemId != null && cardDragState.targetItemId == itemId,
+        onExpand = { viewModel.toggleColumnCollapsed(columnFieldId, option.id) },
+        modifier = Modifier.dropTarget(
+            state = cardDragState,
+            itemId = itemId,
+            orientation = DropOrientation.OnOnly,
+            onDrop = { sourceId, _ ->
+                viewModel.moveObject(sourceId, columnFieldId, option.id, objects.size + 1)
+            },
+        ),
+    )
+}
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -248,6 +318,7 @@ private fun BoardColumn(
     onObjectClick: (String) -> Unit,
     onRename: ((String) -> Unit)? = null,
     onDelete: (() -> Unit)? = null,
+    onCollapse: (() -> Unit)? = null,
     onCreateInColumn: (() -> Unit)? = null
 ) {
     // The whole column is a drop target for "drop on column" — append to end.
@@ -362,19 +433,8 @@ private fun BoardColumn(
                     .background(MaterialTheme.colorScheme.surfaceVariant)
                     .padding(horizontal = 8.dp, vertical = 2.dp)
             ) {
-                // While a filter is on, the pill reads "shown / total" so the
-                // column still tells you how much it really holds.
-                val visibleCount = if (visibleIds == null) {
-                    objects.size
-                } else {
-                    objects.count { obj -> obj.id in visibleIds }
-                }
                 Text(
-                    text = if (visibleIds == null) {
-                        objects.size.toString()
-                    } else {
-                        "$visibleCount/${objects.size}"
-                    },
+                    text = columnCount(objects, visibleIds),
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -387,7 +447,7 @@ private fun BoardColumn(
                     )
                 }
             }
-            if (onRename != null || onDelete != null) {
+            if (onRename != null || onDelete != null || onCollapse != null) {
                 var showMenu by remember { mutableStateOf(false) }
                 var showRenameDialog by remember { mutableStateOf(false) }
                 Box {
@@ -401,6 +461,24 @@ private fun BoardColumn(
                         expanded = showMenu,
                         onDismissRequest = { showMenu = false }
                     ) {
+                        if (onCollapse != null) {
+                            MochiDropdownMenuItem(
+                                text = { Text(stringResource(MochiR.string.common_collapse)) },
+                                onClick = {
+                                    showMenu = false
+                                    onCollapse()
+                                },
+                                // Turned to point across, as the column narrows
+                                // sideways; it reads the same either way round.
+                                leadingIcon = {
+                                    Icon(
+                                        Icons.Outlined.UnfoldLess,
+                                        contentDescription = null,
+                                        modifier = Modifier.rotate(90f),
+                                    )
+                                },
+                            )
+                        }
                         if (onRename != null) {
                             MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.projects_board_rename)) },
