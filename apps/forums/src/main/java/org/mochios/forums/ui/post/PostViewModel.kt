@@ -11,9 +11,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -190,8 +190,9 @@ class PostViewModel @Inject constructor(
                     isRefreshing = false,
                     error = null
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                ensureActive()
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
             }
         }

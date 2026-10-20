@@ -8,6 +8,7 @@ package org.mochios.chat.ui.newchat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -149,6 +150,8 @@ class NewChatViewModel @Inject constructor(
         existingJob = viewModelScope.launch {
             val groups = try {
                 findGroups(picked.map { friend -> friend.id }.toSet())
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 emptyList()
             }

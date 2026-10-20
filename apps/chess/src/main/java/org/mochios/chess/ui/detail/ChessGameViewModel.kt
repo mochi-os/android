@@ -14,9 +14,9 @@ import com.github.bhlangonijr.chesslib.Square
 import com.github.bhlangonijr.chesslib.move.Move
 import com.github.bhlangonijr.chesslib.move.MoveList
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -173,8 +173,9 @@ class ChessGameViewModel @Inject constructor(
                     isRefreshing = false,
                     error = null,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                ensureActive()
                 _uiState.value = _uiState.value.copy(
                     isRefreshing = false,
                     error = e.toMochiError(),

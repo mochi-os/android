@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -850,6 +851,8 @@ class FeedViewModel @Inject constructor(
                     _feedInfo.value = _feedInfo.value?.let { feed ->
                         feed.copy(unread = maxOf(0, feed.unread - idsToMark.size))
                     }
+                } catch (e: CancellationException) {
+                    throw e
                 } catch (e: Exception) {
                     android.util.Log.e("FeedViewModel", "markPostsRead failed for ${idsToMark.size} ids", e)
                 }

@@ -8,9 +8,9 @@ package org.mochios.feeds.ui.feedlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -108,8 +108,9 @@ class FeedListViewModel @Inject constructor(
                     _currentSort.value = info.sort
                 }
                 subscribeToWebSockets(feedList)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                ensureActive()
                 _error.value = e.toMochiError()
             } finally {
                 _isLoading.value = false
@@ -141,8 +142,9 @@ class FeedListViewModel @Inject constructor(
                 _feeds.value = feedList
                 _hasAi.value = info.hasAi
                 subscribeToWebSockets(feedList)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                ensureActive()
                 _error.value = e.toMochiError()
             } finally {
                 _isRefreshing.value = false

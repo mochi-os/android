@@ -8,6 +8,7 @@ package org.mochios.market.ui.selling
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -150,6 +151,8 @@ class MyListingsViewModel @Inject constructor(
                     isRefreshing = false,
                     hasMore = response.listings.size.toLong() < response.total,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
                     isLoading = false,
@@ -187,6 +190,8 @@ class MyListingsViewModel @Inject constructor(
                     isLoading = false,
                     hasMore = merged.size.toLong() < response.total,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
                     isLoading = false,
