@@ -102,6 +102,7 @@ import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
@@ -113,7 +114,6 @@ import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.flattenComments
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.toReactionCounts
-import org.mochios.feeds.ui.feed.PostImage
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -644,8 +644,8 @@ private fun PostContent(
             // tall portraits alike.
             post.data?.rss?.image?.takeIf { it.isNotEmpty() }?.let { imageUrl ->
                 Spacer(modifier = Modifier.height(12.dp))
-                PostImage(
-                    url = imageUrl,
+                MochiImage(
+                    model = imageUrl,
                     contentDescription = stringResource(R.string.feeds_image_preview),
                     modifier = Modifier
                         .fillMaxWidth()

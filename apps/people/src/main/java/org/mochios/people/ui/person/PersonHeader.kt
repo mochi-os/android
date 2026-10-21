@@ -28,10 +28,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.StatusTone
@@ -62,7 +62,7 @@ internal fun PersonHeader(
 ) {
     Box(modifier = Modifier.fillMaxWidth()) {
         if (bannerUrl != null) {
-            AsyncImage(
+            MochiImage(
                 model = ImageRequest.Builder(LocalContext.current)
                     .data(bannerUrl)
                     .crossfade(true)
@@ -73,6 +73,7 @@ internal fun PersonHeader(
                     .fillMaxWidth()
                     .aspectRatio(3f)
                     .clip(RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp)),
+                shape = RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp),
             )
         } else {
             Surface(

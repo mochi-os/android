@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.SavedListLabels
 import org.mochios.android.ui.components.SavedListScaffold
 import org.mochios.android.ui.components.SavedPostCard
@@ -28,7 +29,6 @@ import org.mochios.feeds.R
 import org.mochios.feeds.model.SavedItem
 import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.ui.feed.GalleryMosaic
-import org.mochios.feeds.ui.feed.PostImage
 
 @Composable
 fun SavedScreen(
@@ -109,8 +109,8 @@ private fun SavedPostCardContent(
                     .clip(RoundedCornerShape(8.dp)),
             )
         } else if (heroUrl != null) {
-            PostImage(
-                url = heroUrl,
+            MochiImage(
+                model = heroUrl,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 shape = RoundedCornerShape(8.dp),

@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.FileKindIcon
+import org.mochios.android.ui.components.ImagePlaceholder
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.util.webUri
 import org.mochios.wikis.R
@@ -90,10 +91,20 @@ fun CommentAttachments(
                                 showLightbox = true
                             },
                     ) {
+                        var loaded by remember(img.id) { mutableStateOf(false) }
+                        // The tile takes its width from the image, so until it
+                        // arrives - or when it never does - a square stands in.
+                        if (!loaded) {
+                            ImagePlaceholder(
+                                shape = RoundedCornerShape(6.dp),
+                                modifier = Modifier.size(80.dp),
+                            )
+                        }
                         AsyncImage(
                             model = "${baseURL}attachments/${img.id}/thumbnail",
                             contentDescription = img.name,
                             contentScale = ContentScale.Crop,
+                            onSuccess = { loaded = true },
                             modifier = Modifier.height(80.dp),
                         )
                     }

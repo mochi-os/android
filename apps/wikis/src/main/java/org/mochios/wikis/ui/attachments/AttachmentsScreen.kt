@@ -110,6 +110,7 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.UploadFiles
@@ -1124,7 +1125,7 @@ private fun AttachmentPreview(
     val kind = fileKindOf(attachment.type, attachment.name)
     val label = attachment.caption.ifEmpty { attachment.name }
     when (kind) {
-        FileKind.IMAGE -> AsyncImage(
+        FileKind.IMAGE -> MochiImage(
             model = "${baseURL}attachments/${attachment.id}/thumbnail",
             contentDescription = label,
             contentScale = ContentScale.Crop,
