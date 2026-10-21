@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import org.mochios.android.api.unwrap
+import org.mochios.android.model.Attachment
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.SavedItem
@@ -40,9 +41,11 @@ class SavedRepository @Inject constructor(
      *  bookmark UI degrades gracefully (e.g. before login completes). */
     suspend fun load() {
         try {
-            val res = api.listSaved().unwrap()
-            _saved.value = res.saved
-            _savedIds.value = res.saved.map { it.post.id }.toSet()
+            val saved = api.listSaved().unwrap().saved.map { item ->
+                item.copy(post = item.post.withAttachmentDefaults())
+            }
+            _saved.value = saved
+            _savedIds.value = saved.map { it.post.id }.toSet()
         } catch (_: Exception) {
             // Leave the existing cache untouched on failure.
         }
@@ -122,4 +125,22 @@ internal fun snapshotOf(post: Post): SavedSnapshot = SavedSnapshot(
     data = post.data,
     attachments = post.attachments,
     tags = post.tags,
+)
+
+/**
+ * [this] with each attachment's text fields filled in. A snapshot is written
+ * by whichever client saved the post, and one that leaves a field out - the
+ * web's leaves out an empty caption - comes back from Gson as a null in a
+ * non-null field: [Attachment] has no no-argument constructor for Gson to run
+ * its defaults through. The casts make the null checks real ones.
+ */
+@Suppress("USELESS_CAST")
+internal fun SavedSnapshot.withAttachmentDefaults(): SavedSnapshot = copy(
+    attachments = (attachments as List<Attachment>?).orEmpty().map { attachment ->
+        attachment.copy(
+            name = (attachment.name as String?).orEmpty(),
+            type = (attachment.type as String?).orEmpty(),
+            caption = (attachment.caption as String?).orEmpty(),
+        )
+    },
 )

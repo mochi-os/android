@@ -1441,7 +1441,7 @@ private fun GalleryContent(
 // geometry is final on the first frame (no reflow as bitmaps arrive), the
 // same layout-stability rule the hero image follows. Full-bleed, 2dp gaps.
 @Composable
-private fun GalleryMosaic(
+internal fun GalleryMosaic(
     media: List<Attachment>,
     tileModel: (Attachment) -> Any,
     onTap: (index: Int) -> Unit,

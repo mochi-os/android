@@ -27,6 +27,7 @@ import org.mochios.android.ui.components.SavedPostFooter
 import org.mochios.feeds.R
 import org.mochios.feeds.model.SavedItem
 import org.mochios.feeds.ui.component.PostTitle
+import org.mochios.feeds.ui.feed.GalleryMosaic
 import org.mochios.feeds.ui.feed.PostImage
 
 @Composable
@@ -69,13 +70,14 @@ private fun SavedPostCardContent(
 ) {
     val post = item.post
 
-    // Resolve the title and hero image exactly as the feed's PostCard does: the
-    // RSS title (shown only when the body starts with it), and the first image
-    // attachment's full URL, else the RSS preview image.
+    // Resolve the title and hero image as the feed's PostCard does: the RSS
+    // title (shown only when the body starts with it), and the first image
+    // attachment's full URL, else the RSS preview image. A post of several
+    // images shows them all, as the feed's mosaic in the card's image space.
     val rawTitle = post.data?.rss?.title.orEmpty()
     val displayTitle = rawTitle.trim().takeIf { it.isNotEmpty() && post.body.startsWith(rawTitle) }
-    val attachmentImageUrls = post.attachments
-        .filter { attachment -> attachment.isImage }
+    val images = post.attachments.filter { attachment -> attachment.isImage }
+    val attachmentImageUrls = images
         .map { attachment ->
             attachment.url ?: "/feeds/${post.feedId}/-/attachments/${attachment.id}"
         }
@@ -91,7 +93,22 @@ private fun SavedPostCardContent(
                 truncated = true,
             )
         }
-        if (heroUrl != null) {
+        if (images.size > 1) {
+            GalleryMosaic(
+                media = images,
+                tileModel = { attachment ->
+                    attachment.previewUrl
+                        ?: attachment.thumbnailUrl
+                        ?: "/feeds/${post.feedId}/-/attachments/${attachment.id}/thumbnail"
+                },
+                onTap = { onClick() },
+                modifier = Modifier
+                    .padding(top = 8.dp)
+                    .fillMaxWidth()
+                    .height(180.dp)
+                    .clip(RoundedCornerShape(8.dp)),
+            )
+        } else if (heroUrl != null) {
             PostImage(
                 url = heroUrl,
                 contentDescription = null,
