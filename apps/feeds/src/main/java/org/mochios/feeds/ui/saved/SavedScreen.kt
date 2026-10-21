@@ -19,7 +19,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import coil3.compose.AsyncImage
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.SavedListLabels
 import org.mochios.android.ui.components.SavedListScaffold
@@ -28,6 +27,7 @@ import org.mochios.android.ui.components.SavedPostFooter
 import org.mochios.feeds.R
 import org.mochios.feeds.model.SavedItem
 import org.mochios.feeds.ui.component.PostTitle
+import org.mochios.feeds.ui.feed.PostImage
 
 @Composable
 fun SavedScreen(
@@ -92,10 +92,11 @@ private fun SavedPostCardContent(
             )
         }
         if (heroUrl != null) {
-            AsyncImage(
-                model = heroUrl,
+            PostImage(
+                url = heroUrl,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
+                shape = RoundedCornerShape(8.dp),
                 modifier = Modifier
                     .padding(top = 8.dp)
                     .fillMaxWidth()

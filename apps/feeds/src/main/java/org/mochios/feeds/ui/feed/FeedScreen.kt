@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -93,6 +94,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
@@ -1104,13 +1108,20 @@ private fun Modifier.noRippleClickable(onClick: () -> Unit): Modifier {
     )
 }
 
+/**
+ * A post's image with its in-between states drawn: a grey box with a thin edge
+ * and a spinner while it loads, and a broken-image glyph that retries on tap
+ * when it fails, so a missing image never leaves blank space. [shape] is the
+ * box's outline, matching the caller's own clip.
+ */
 @Composable
-private fun PostImage(
+internal fun PostImage(
     url: String,
     contentDescription: String?,
     modifier: Modifier = Modifier,
     alignment: Alignment = Alignment.Center,
     contentScale: ContentScale = ContentScale.Fit,
+    shape: Shape = RectangleShape,
     onClick: (() -> Unit)? = null,
 ) {
     // The caller fixes the container size: posts carry no image dimensions, so
@@ -1131,10 +1142,12 @@ private fun PostImage(
         contentAlignment = Alignment.Center,
     ) {
         if (!loaded) {
+            val dark = MaterialTheme.colorScheme.surface.luminance() < 0.5f
             Box(
                 modifier = Modifier
                     .matchParentSize()
-                    .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f))
+                    .background(if (dark) PLACEHOLDER_FILL_DARK else PLACEHOLDER_FILL, shape)
+                    .border(1.dp, if (dark) PLACEHOLDER_EDGE_DARK else PLACEHOLDER_EDGE, shape)
             )
         }
         if (state is AsyncImagePainter.State.Error) {
@@ -1171,6 +1184,13 @@ private fun PostImage(
         }
     }
 }
+
+// The web's image placeholder: neutral-100 on a neutral-200 edge, and
+// neutral-800 on neutral-700 in the dark theme.
+private val PLACEHOLDER_FILL = Color(0xFFF5F5F5)
+private val PLACEHOLDER_EDGE = Color(0xFFE5E5E5)
+private val PLACEHOLDER_FILL_DARK = Color(0xFF262626)
+private val PLACEHOLDER_EDGE_DARK = Color(0xFF404040)
 
 // A post is a "gallery" when its media is the content: no RSS article behind
 // it, and at most a caption of text alongside the images/videos.
@@ -1802,6 +1822,7 @@ private fun PostCard(
                                 .fillMaxWidth()
                                 .aspectRatio(16f / 9f)
                                 .clip(RoundedCornerShape(8.dp)),
+                            shape = RoundedCornerShape(8.dp),
                             onClick = { lightboxState = LightboxRequest(listOf(rssImageUrl), emptyList(), 0) },
                         )
                     }
