@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Iccitiroo mallattoo Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Duraan deebi\'eera</string>
     <string name="staff_disputes_refund_exceeds_remaining">Hamma deebii kennamuu danda\'u hafe ni darba</string>
+    <string name="staff_reports_conversation">Marii</string>
+    <string name="staff_reports_conversation_empty">Ergaawwan hin jiran</string>
+    <string name="staff_reports_conversation_show">Marii agarsiisi</string>
 </resources>

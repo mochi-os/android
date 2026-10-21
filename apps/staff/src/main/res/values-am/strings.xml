@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">የWebhook መፈረሚያ ሚስጥር</string>
     <string name="staff_disputes_meta_already_refunded">ቀደም ብሎ ተመላሽ ተደርጓል</string>
     <string name="staff_disputes_refund_exceeds_remaining">የመመለሻ መጠን የቀረውን ሊመለስ የሚችለውን መጠን አልፏል</string>
+    <string name="staff_reports_conversation">ውይይት</string>
+    <string name="staff_reports_conversation_empty">ምንም መልዕክቶች የሉም</string>
+    <string name="staff_reports_conversation_show">ውይይቱን አሳይ</string>
 </resources>

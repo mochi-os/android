@@ -431,4 +431,7 @@
     <string name="staff_config_field_stripe_webhook">Segredo de assinatura do webhook</string>
     <string name="staff_disputes_meta_already_refunded">Já reembolsado</string>
     <string name="staff_disputes_refund_exceeds_remaining">O valor do reembolso excede o valor reembolsável restante</string>
+    <string name="staff_reports_conversation">Conversa</string>
+    <string name="staff_reports_conversation_empty">Sem mensagens</string>
+    <string name="staff_reports_conversation_show">Mostrar conversa</string>
 </resources>

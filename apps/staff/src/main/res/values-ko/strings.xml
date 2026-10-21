@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook 서명 시크릿</string>
     <string name="staff_disputes_meta_already_refunded">이미 환불됨</string>
     <string name="staff_disputes_refund_exceeds_remaining">환불 금액이 남은 환불 가능 금액을 초과합니다</string>
+    <string name="staff_reports_conversation">대화</string>
+    <string name="staff_reports_conversation_empty">메시지가 없어요</string>
+    <string name="staff_reports_conversation_show">대화 보기</string>
 </resources>

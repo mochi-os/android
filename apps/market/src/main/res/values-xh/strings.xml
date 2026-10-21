@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(igcinwe yi-Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s ibuyisiweyo)</string>
     <string name="market_sale_chargeback_fee_refunded">(ibuyisiweyo)</string>
+    <string name="market_messages_report">Xela le ncoko</string>
+    <string name="market_report_conversation_title">Xela incoko</string>
 </resources>

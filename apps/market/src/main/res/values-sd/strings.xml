@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe وٽ رکيل)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s واپس ڪيو ويو)</string>
     <string name="market_sale_chargeback_fee_refunded">(واپس ڪيل)</string>
+    <string name="market_messages_report">هن ڳالهه ٻولهه کي رپورٽ ڪريو</string>
+    <string name="market_report_conversation_title">ڳالهه ٻولهه رپورٽ ڪريو</string>
 </resources>

@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook firma ñemigua</string>
     <string name="staff_disputes_meta_already_refunded">Viru oñembojevýma</string>
     <string name="staff_disputes_refund_exceeds_remaining">Viru ñembojevy repykue ohasa pe ikatúva gueteri oñembojevy</string>
+    <string name="staff_reports_conversation">Ñomongeta</string>
+    <string name="staff_reports_conversation_empty">Ndaipóri ñe\'ẽmondo</string>
+    <string name="staff_reports_conversation_show">Ehechauka ñomongeta</string>
 </resources>

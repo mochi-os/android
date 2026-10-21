@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(behållen av Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s återbetald)</string>
     <string name="market_sale_chargeback_fee_refunded">(återbetald)</string>
+    <string name="market_messages_report">Rapportera denna konversation</string>
+    <string name="market_report_conversation_title">Rapportera konversation</string>
 </resources>

@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe waqaychan)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s kutichisqa)</string>
     <string name="market_sale_chargeback_fee_refunded">(qullqi kutichisqa)</string>
+    <string name="market_messages_report">Kay rimanakuyta reportay</string>
+    <string name="market_report_conversation_title">Rimanakuyta reportay</string>
 </resources>

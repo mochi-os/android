@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe မှ ထိန်းသိမ်းထားသည်)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s ပြန်အမ်းပြီး)</string>
     <string name="market_sale_chargeback_fee_refunded">(ပြန်အမ်းပြီး)</string>
+    <string name="market_messages_report">ဤစကားဝိုင်းကို အစီရင်ခံ</string>
+    <string name="market_report_conversation_title">စကားဝိုင်းကို အစီရင်ခံ</string>
 </resources>

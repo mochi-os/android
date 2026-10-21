@@ -34,6 +34,7 @@ import org.mochios.projects.ui.board.allOptions
 import org.mochios.projects.ui.board.boardClass
 import org.mochios.projects.ui.board.boardOptions
 import org.mochios.projects.lib.ActiveViewStore
+import org.mochios.projects.lib.CollapsedColumnsStore
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectClass
 import org.mochios.projects.model.ProjectDetails
@@ -149,12 +150,17 @@ class ProjectViewModel @Inject constructor(
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
     private val activeViewStore: ActiveViewStore,
+    private val collapsedColumnsStore: CollapsedColumnsStore,
 ) : ViewModel() {
 
     val projectId: String = savedStateHandle.get<String>("projectId") ?: ""
 
     private val _uiState = MutableStateFlow(ProjectUiState())
     val uiState: StateFlow<ProjectUiState> = _uiState.asStateFlow()
+
+    /** Collapsed board columns, by column field. */
+    private val _collapsedColumns = MutableStateFlow(collapsedColumnsStore.get(projectId))
+    val collapsedColumns: StateFlow<Map<String, Set<String>>> = _collapsedColumns.asStateFlow()
 
     /** Emits the project's share link once fetched, for the screen to share. */
     private val _shareLink = MutableSharedFlow<String>()
@@ -769,6 +775,15 @@ class ProjectViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
+    }
+
+    /**
+     * Collapses or expands the board column [optionId] of [fieldId]. Kept on
+     * this device, per project and column field.
+     */
+    fun toggleColumnCollapsed(fieldId: String, optionId: String) {
+        val next = collapsedColumnsStore.toggle(projectId, fieldId, optionId)
+        _collapsedColumns.value = _collapsedColumns.value + (fieldId to next)
     }
 
     /**

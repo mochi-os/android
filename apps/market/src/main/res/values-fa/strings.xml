@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(نزد Stripe می‌ماند)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s بازپرداخت شد)</string>
     <string name="market_sale_chargeback_fee_refunded">(بازپرداخت‌شده)</string>
+    <string name="market_messages_report">این گفت‌وگو را گزارش کنید</string>
+    <string name="market_report_conversation_title">گزارش گفت‌وگو</string>
 </resources>

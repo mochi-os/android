@@ -21,6 +21,7 @@ import org.mochios.staff.model.MetricsOverview
 import org.mochios.staff.model.ModerationLogResponse
 import org.mochios.staff.model.OkResponse
 import org.mochios.staff.model.PendingListingsResponse
+import org.mochios.staff.model.ConversationResponse
 import org.mochios.staff.model.Report
 import org.mochios.staff.model.ReportsListResponse
 import org.mochios.staff.model.Review
@@ -272,6 +273,12 @@ interface StaffApi {
         @Field("action") action: String,
         @Field("notes") notes: String? = null,
     ): Response<ApiResponse<Report>>
+
+    /** The conversation a report was filed from. The Comptroller audits each read. */
+    @GET("-/threads/get")
+    suspend fun getConversation(
+        @Query("id") id: String,
+    ): Response<ApiResponse<ConversationResponse>>
 
     // ---- Disputes ----
 

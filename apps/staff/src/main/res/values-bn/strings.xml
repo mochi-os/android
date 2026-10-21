@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook স্বাক্ষর গোপন কী</string>
     <string name="staff_disputes_meta_already_refunded">ইতিমধ্যে ফেরত দেওয়া হয়েছে</string>
     <string name="staff_disputes_refund_exceeds_remaining">ফেরত দেওয়ার পরিমাণ অবশিষ্ট ফেরতযোগ্য পরিমাণ অতিক্রম করেছে</string>
+    <string name="staff_reports_conversation">কথোপকথন</string>
+    <string name="staff_reports_conversation_empty">কোনো বার্তা নেই</string>
+    <string name="staff_reports_conversation_show">কথোপকথন দেখান</string>
 </resources>

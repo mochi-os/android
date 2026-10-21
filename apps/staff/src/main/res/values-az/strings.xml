@@ -440,4 +440,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook imzalama sirri</string>
     <string name="staff_disputes_meta_already_refunded">Artıq geri qaytarılıb</string>
     <string name="staff_disputes_refund_exceeds_remaining">Geri qaytarma məbləği qalan qaytarıla bilən məbləği aşır</string>
+    <string name="staff_reports_conversation">Söhbət</string>
+    <string name="staff_reports_conversation_empty">Mesaj yoxdur</string>
+    <string name="staff_reports_conversation_show">Söhbəti göstər</string>
 </resources>

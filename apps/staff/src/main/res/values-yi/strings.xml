@@ -436,4 +436,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook סיגנירן סוד</string>
     <string name="staff_disputes_meta_already_refunded">שוין צוריקגעצאלט</string>
     <string name="staff_disputes_refund_exceeds_remaining">די צוריקצאלונג סומע גייט אריבער די פארבליבענע צוריקצאלבארע סומע</string>
+    <string name="staff_reports_conversation">שמועס</string>
+    <string name="staff_reports_conversation_empty">קיין מעלדונגען</string>
+    <string name="staff_reports_conversation_show">ווײַז דעם שמועס</string>
 </resources>

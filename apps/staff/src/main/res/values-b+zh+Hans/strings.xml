@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook 签名密钥</string>
     <string name="staff_disputes_meta_already_refunded">已退款</string>
     <string name="staff_disputes_refund_exceeds_remaining">退款金额超出剩余可退款金额</string>
+    <string name="staff_reports_conversation">对话</string>
+    <string name="staff_reports_conversation_empty">无消息</string>
+    <string name="staff_reports_conversation_show">查看对话</string>
 </resources>

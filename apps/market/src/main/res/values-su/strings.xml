@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(disimpen ku Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s dipulangkeun)</string>
     <string name="market_sale_chargeback_fee_refunded">(dipulangkeun)</string>
+    <string name="market_messages_report">Laporkeun obrolan ieu</string>
+    <string name="market_report_conversation_title">Laporkeun obrolan</string>
 </resources>

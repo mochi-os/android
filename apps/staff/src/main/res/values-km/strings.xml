@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">សម្ងាត់ចុះហត្ថលេខា Webhook</string>
     <string name="staff_disputes_meta_already_refunded">បានសងវិញរួចហើយ</string>
     <string name="staff_disputes_refund_exceeds_remaining">ចំនួនទឹកប្រាក់សងវិញលើសពីចំនួនទឹកប្រាក់ដែលនៅសល់ដែលអាចសងវិញបាន</string>
+    <string name="staff_reports_conversation">ការសន្ទនា</string>
+    <string name="staff_reports_conversation_empty">មិនមានសារ</string>
+    <string name="staff_reports_conversation_show">បង្ហាញការសន្ទនា</string>
 </resources>

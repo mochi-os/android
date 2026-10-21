@@ -440,4 +440,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook гарын үсгийн нууц</string>
     <string name="staff_disputes_meta_already_refunded">Аль хэдийн буцаасан</string>
     <string name="staff_disputes_refund_exceeds_remaining">Буцаах дүн үлдсэн буцаах боломжтой дүнгээс хэтэрсэн</string>
+    <string name="staff_reports_conversation">Яриа</string>
+    <string name="staff_reports_conversation_empty">Зурвас алга</string>
+    <string name="staff_reports_conversation_show">Яриаг харуулах</string>
 </resources>

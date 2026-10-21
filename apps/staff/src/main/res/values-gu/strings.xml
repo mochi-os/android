@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook સહી કરવાનું ગુપ્ત</string>
     <string name="staff_disputes_meta_already_refunded">પહેલેથી જ પાછું આપેલું</string>
     <string name="staff_disputes_refund_exceeds_remaining">રિફંડની રકમ બાકી રિફંડપાત્ર રકમ કરતાં વધી ગઈ છે</string>
+    <string name="staff_reports_conversation">વાતચીત</string>
+    <string name="staff_reports_conversation_empty">કોઈ સંદેશા નથી</string>
+    <string name="staff_reports_conversation_show">વાતચીત બતાવો</string>
 </resources>

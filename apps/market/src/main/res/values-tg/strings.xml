@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(нигоҳ дошташуда аз ҷониби Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s баргардонида шуд)</string>
     <string name="market_sale_chargeback_fee_refunded">(баргардонидашуда)</string>
+    <string name="market_messages_report">Гузориш дар бораи ин сӯҳбат</string>
+    <string name="market_report_conversation_title">Гузориш дар бораи сӯҳбат</string>
 </resources>

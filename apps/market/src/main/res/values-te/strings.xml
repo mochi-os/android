@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe నిల్వ ఉంచింది)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s తిరిగి ఇవ్వబడింది)</string>
     <string name="market_sale_chargeback_fee_refunded">(రీఫండ్ చేయబడింది)</string>
+    <string name="market_messages_report">ఈ సంభాషణను రిపోర్ట్ చేయండి</string>
+    <string name="market_report_conversation_title">సంభాషణను రిపోర్ట్ చేయండి</string>
 </resources>

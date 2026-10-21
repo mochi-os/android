@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe tarafından tutulur)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s iade edildi)</string>
     <string name="market_sale_chargeback_fee_refunded">(iade edildi)</string>
+    <string name="market_messages_report">Bu yazışmayı bildir</string>
+    <string name="market_report_conversation_title">Yazışmayı bildir</string>
 </resources>

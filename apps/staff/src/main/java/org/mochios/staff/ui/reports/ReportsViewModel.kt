@@ -22,6 +22,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.staff.model.ConversationMessage
 import org.mochios.staff.model.Report
 import org.mochios.staff.repository.StaffRepository
 import org.mochios.staff.ws.StaffEvent
@@ -42,6 +43,13 @@ data class ReportsUiState(
     val error: MochiError? = null,
     val actionDialog: Report? = null,
     val submitting: Boolean = false,
+    /**
+     * The open report's conversation, oldest message first. Loaded only when
+     * staff ask, since each read is audited; null until then, and cleared
+     * whenever another report opens.
+     */
+    val conversation: List<ConversationMessage>? = null,
+    val loadingConversation: Boolean = false,
 )
 
 /** One-shot events emitted to the screen (toasts). */
@@ -162,11 +170,44 @@ class ReportsViewModel @Inject constructor(
     }
 
     fun openAction(report: Report) {
-        _state.value = _state.value.copy(actionDialog = report)
+        _state.value = _state.value.copy(
+            actionDialog = report,
+            conversation = null,
+            loadingConversation = false,
+        )
     }
 
     fun dismissAction() {
-        _state.value = _state.value.copy(actionDialog = null, submitting = false)
+        _state.value = _state.value.copy(
+            actionDialog = null,
+            submitting = false,
+            conversation = null,
+            loadingConversation = false,
+        )
+    }
+
+    /** Load the conversation the open report was filed from. */
+    fun showConversation() {
+        val report = _state.value.actionDialog ?: return
+        if (report.thread.isBlank() || _state.value.loadingConversation) return
+        _state.value = _state.value.copy(loadingConversation = true)
+        viewModelScope.launch {
+            try {
+                val messages = repository.getConversation(report.thread)
+                if (_state.value.actionDialog?.id == report.id) {
+                    _state.value = _state.value.copy(
+                        loadingConversation = false,
+                        conversation = messages,
+                    )
+                }
+            } catch (e: Exception) {
+                if (e is CancellationException) throw e
+                if (_state.value.actionDialog?.id == report.id) {
+                    _state.value = _state.value.copy(loadingConversation = false)
+                }
+                _events.tryEmit(ReportsEvent.Toast(e.toMochiError().userMessage()))
+            }
+        }
     }
 
     /**

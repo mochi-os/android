@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook අත්සන් කිරීමේ රහස</string>
     <string name="staff_disputes_meta_already_refunded">දැනටමත් ආපසු ගෙවා ඇත</string>
     <string name="staff_disputes_refund_exceeds_remaining">ආපසු ගෙවීමේ මුදල ඉතිරි ආපසු ගෙවිය හැකි මුදල ඉක්මවයි</string>
+    <string name="staff_reports_conversation">සංවාදය</string>
+    <string name="staff_reports_conversation_empty">පණිවිඩ නැත</string>
+    <string name="staff_reports_conversation_show">සංවාදය පෙන්වන්න</string>
 </resources>

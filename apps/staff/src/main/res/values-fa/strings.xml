@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">راز امضای وب‌هوک</string>
     <string name="staff_disputes_meta_already_refunded">قبلاً بازپرداخت شده</string>
     <string name="staff_disputes_refund_exceeds_remaining">مبلغ بازپرداخت از مبلغ قابل بازپرداخت باقیمانده بیشتر است</string>
+    <string name="staff_reports_conversation">گفت‌وگو</string>
+    <string name="staff_reports_conversation_empty">هیچ پیامی وجود ندارد</string>
+    <string name="staff_reports_conversation_show">نمایش گفت‌وگو</string>
 </resources>

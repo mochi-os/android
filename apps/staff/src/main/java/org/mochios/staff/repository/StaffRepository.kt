@@ -22,6 +22,7 @@ import org.mochios.staff.model.Me
 import org.mochios.staff.model.MetricsOverview
 import org.mochios.staff.model.ModerationLogResponse
 import org.mochios.staff.model.PendingListingsResponse
+import org.mochios.staff.model.ConversationMessage
 import org.mochios.staff.model.Report
 import org.mochios.staff.model.ReportsListResponse
 import org.mochios.staff.model.Review
@@ -300,6 +301,14 @@ class StaffRepository @Inject constructor(
     suspend fun actionReport(id: String, action: String, notes: String? = null): Report {
         return try {
             api.actionReport(id, action, notes).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    suspend fun getConversation(thread: String): List<ConversationMessage> {
+        return try {
+            api.getConversation(thread).unwrap().messages
         } catch (e: Exception) {
             throw e.toMochiError()
         }

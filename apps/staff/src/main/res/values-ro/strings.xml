@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Secret de semnare webhook</string>
     <string name="staff_disputes_meta_already_refunded">Deja rambursat</string>
     <string name="staff_disputes_refund_exceeds_remaining">Suma rambursării depășește suma rambursabilă rămasă</string>
+    <string name="staff_reports_conversation">Conversație</string>
+    <string name="staff_reports_conversation_empty">Niciun mesaj</string>
+    <string name="staff_reports_conversation_show">Afișează conversația</string>
 </resources>

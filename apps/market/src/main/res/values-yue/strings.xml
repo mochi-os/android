@@ -688,4 +688,6 @@
         <item quantity="one">呢個操作會喺目前收費週期結束時取消 %1$s 個有效訂閱。訂閱者會收到通知。刊登會對買家隱藏。</item>
         <item quantity="other">呢個操作會喺目前收費週期結束時取消 %1$s 個有效訂閱。訂閱者會收到通知。刊登會對買家隱藏。</item>
     </plurals>
+    <string name="market_messages_report">舉報呢個對話</string>
+    <string name="market_report_conversation_title">舉報對話</string>
 </resources>

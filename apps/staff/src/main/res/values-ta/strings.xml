@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook கையொப்பமிடும் ரகசியம்</string>
     <string name="staff_disputes_meta_already_refunded">ஏற்கனவே திருப்பித் தரப்பட்டது</string>
     <string name="staff_disputes_refund_exceeds_remaining">திருப்பித் தரும் தொகை மீதமுள்ள திருப்பித் தரக்கூடிய தொகையை மீறுகிறது</string>
+    <string name="staff_reports_conversation">உரையாடல்</string>
+    <string name="staff_reports_conversation_empty">செய்திகள் இல்லை</string>
+    <string name="staff_reports_conversation_show">உரையாடலைக் காட்டு</string>
 </resources>

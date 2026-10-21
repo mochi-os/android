@@ -689,4 +689,6 @@
     <string name="market_sale_chargeback_fee_kept">(ponecháva si Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s vrátené)</string>
     <string name="market_sale_chargeback_fee_refunded">(vrátené)</string>
+    <string name="market_messages_report">Nahlásiť túto konverzáciu</string>
+    <string name="market_report_conversation_title">Nahlásiť konverzáciu</string>
 </resources>

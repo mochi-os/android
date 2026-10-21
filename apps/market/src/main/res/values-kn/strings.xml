@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe ಇಂದ ಇರಿಸಲಾಗಿದೆ)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s ಮರುಪಾವತಿ)</string>
     <string name="market_sale_chargeback_fee_refunded">(ರಿಫಂಡ್ ಮಾಡಲಾಗಿದೆ)</string>
+    <string name="market_messages_report">ಈ ಸಂಭಾಷಣೆಯನ್ನು ರಿಪೋರ್ಟ್ ಮಾಡಿ</string>
+    <string name="market_report_conversation_title">ಸಂಭಾಷಣೆಯನ್ನು ರಿಪೋರ್ಟ್ ಮಾಡಿ</string>
 </resources>

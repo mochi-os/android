@@ -691,4 +691,6 @@
     <string name="market_sale_chargeback_fee_kept">(glèidhte le Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s air ais-dhìoladh)</string>
     <string name="market_sale_chargeback_fee_refunded">(air ath-dhìoladh)</string>
+    <string name="market_messages_report">Aithris air a\' chòmhradh seo</string>
+    <string name="market_report_conversation_title">Aithris air a\' chòmhradh</string>
 </resources>

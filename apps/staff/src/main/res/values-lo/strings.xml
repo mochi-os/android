@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">ຄວາມລັບການເຊັນ Webhook</string>
     <string name="staff_disputes_meta_already_refunded">ຄືນເງິນແລ້ວ</string>
     <string name="staff_disputes_refund_exceeds_remaining">ຈຳນວນເງິນຄືນເກີນຈຳນວນທີ່ສາມາດຄືນໄດ້ທີ່ເຫຼືອ</string>
+    <string name="staff_reports_conversation">ການສົນທະນາ</string>
+    <string name="staff_reports_conversation_empty">ບໍ່ມີຂໍ້ຄວາມ</string>
+    <string name="staff_reports_conversation_show">ສະແດງການສົນທະນາ</string>
 </resources>

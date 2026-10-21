@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhookin allekirjoitussalaisuus</string>
     <string name="staff_disputes_meta_already_refunded">Jo hyvitetty</string>
     <string name="staff_disputes_refund_exceeds_remaining">Hyvityssumma ylittää jäljellä olevan hyvitettävän summan</string>
+    <string name="staff_reports_conversation">Keskustelu</string>
+    <string name="staff_reports_conversation_empty">Ei viestejä</string>
+    <string name="staff_reports_conversation_show">Näytä keskustelu</string>
 </resources>

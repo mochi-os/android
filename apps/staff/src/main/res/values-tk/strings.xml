@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook gol çekiş gizlin açary</string>
     <string name="staff_disputes_meta_already_refunded">Eýýäm yzyna gaýtarylan</string>
     <string name="staff_disputes_refund_exceeds_remaining">Yzyna gaýtaryljak möçber galan yza gaýtaryljak möçberden geçýär</string>
+    <string name="staff_reports_conversation">Söhbet</string>
+    <string name="staff_reports_conversation_empty">Habarlar ýok</string>
+    <string name="staff_reports_conversation_show">Söhbeti görkez</string>
 </resources>

@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(შენარჩუნებულია Stripe-ის მიერ)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s დაბრუნებულია)</string>
     <string name="market_sale_chargeback_fee_refunded">(დაბრუნებულია)</string>
+    <string name="market_messages_report">ამ საუბრის გასაჩივრება</string>
+    <string name="market_report_conversation_title">საუბრის გასაჩივრება</string>
 </resources>

@@ -8,13 +8,18 @@ package org.mochios.staff.ui.dialog
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,21 +30,27 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.MetaRow
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.staff.R
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.format.formatPrice
+import org.mochios.staff.model.ConversationMessage
 import org.mochios.staff.model.Report
 import org.mochios.staff.ui.components.StaffAuditTimeline
 
 /**
  * Moderator dialog for acting on a report. [readOnly] renders metadata and
  * history without the action picker or notes field, for reports that are
- * already resolved.
+ * already resolved. A report filed from a conversation offers to show it:
+ * [conversation] is null until [onShowConversation] has loaded it.
  */
 @Composable
 fun ReportActionDialog(
@@ -47,6 +58,9 @@ fun ReportActionDialog(
     submitting: Boolean,
     onDismiss: () -> Unit,
     onSubmit: (action: String, notes: String) -> Unit,
+    conversation: List<ConversationMessage>?,
+    loadingConversation: Boolean,
+    onShowConversation: () -> Unit,
     readOnly: Boolean = false,
 ) {
     var action by rememberSaveable(report.id) { mutableStateOf("") }
@@ -64,6 +78,14 @@ fun ReportActionDialog(
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 MetadataCard(report = report)
+
+                if (report.thread.isNotBlank()) {
+                    ConversationSection(
+                        messages = conversation,
+                        loading = loadingConversation,
+                        onShow = onShowConversation,
+                    )
+                }
 
                 if (!readOnly) {
                     LabeledSelectField(
@@ -151,6 +173,72 @@ private fun MetadataCard(report: Report) {
                 text = report.details,
                 style = MaterialTheme.typography.bodySmall,
             )
+        }
+    }
+}
+
+@Composable
+internal fun ConversationSection(
+    messages: List<ConversationMessage>?,
+    loading: Boolean,
+    onShow: () -> Unit,
+) {
+    val format = LocalFormat.current
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Text(
+            text = stringResource(R.string.staff_reports_conversation),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        when {
+            messages == null -> MochiOutlinedButton(onClick = onShow, enabled = !loading) {
+                if (loading) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(ButtonDefaults.IconSize),
+                        strokeWidth = 2.dp,
+                    )
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                }
+                Text(stringResource(R.string.staff_reports_conversation_show))
+            }
+            messages.isEmpty() -> Text(
+                text = stringResource(R.string.staff_reports_conversation_empty),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            else -> Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
+                    .padding(12.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                messages.forEach { message ->
+                    Column {
+                        Row {
+                            Text(
+                                text = message.senderName.ifBlank { formatFingerprint(message.senderFingerprint) },
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Medium,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                                modifier = Modifier.weight(1f),
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            Text(
+                                text = format.formatDateTime(message.created),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                        Text(
+                            text = message.body,
+                            style = MaterialTheme.typography.bodySmall,
+                        )
+                    }
+                }
+            }
         }
     }
 }

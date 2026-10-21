@@ -323,6 +323,9 @@
     <string name="staff_reports_any_type">All types</string>
     <string name="staff_reports_cancel">Cancel</string>
     <string name="staff_reports_close">Close</string>
+    <string name="staff_reports_conversation">Conversation</string>
+    <string name="staff_reports_conversation_empty">No messages</string>
+    <string name="staff_reports_conversation_show">Show conversation</string>
     <string name="staff_reports_dialog_title_action">Take action on report</string>
     <string name="staff_reports_dialog_title_view">Report</string>
     <string name="staff_reports_empty">No reports</string>

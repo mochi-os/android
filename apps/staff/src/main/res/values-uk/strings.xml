@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Секрет для підпису Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Уже повернуто</string>
     <string name="staff_disputes_refund_exceeds_remaining">Сума повернення перевищує суму, що залишилася для повернення</string>
+    <string name="staff_reports_conversation">Розмова</string>
+    <string name="staff_reports_conversation_empty">Немає повідомлень</string>
+    <string name="staff_reports_conversation_show">Показати розмову</string>
 </resources>

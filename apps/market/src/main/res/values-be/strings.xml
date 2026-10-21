@@ -690,4 +690,6 @@
     <string name="market_sale_chargeback_fee_kept">(утрымана Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s вернута)</string>
     <string name="market_sale_chargeback_fee_refunded">(вернута)</string>
+    <string name="market_messages_report">Паскардзіцца на гэтую размову</string>
+    <string name="market_report_conversation_title">Паскардзіцца на размову</string>
 </resources>

@@ -689,4 +689,6 @@
     <string name="market_sale_chargeback_fee_kept">(נשמר על ידי Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s הוחזר)</string>
     <string name="market_sale_chargeback_fee_refunded">(הוחזר)</string>
+    <string name="market_messages_report">דווח על השיחה הזו</string>
+    <string name="market_report_conversation_title">דווח על שיחה</string>
 </resources>

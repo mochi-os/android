@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Veşariya îmzekirinê ya Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Berê hate vegerandin</string>
     <string name="staff_disputes_refund_exceeds_remaining">Mîqdara vegerandinê ji mîqdara mayî ya vegerandinê derbas dibe</string>
+    <string name="staff_reports_conversation">Sohbet</string>
+    <string name="staff_reports_conversation_empty">Tu peyam tune</string>
+    <string name="staff_reports_conversation_show">Sohbetê nîşan bide</string>
 </resources>

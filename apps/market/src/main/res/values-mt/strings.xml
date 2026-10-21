@@ -693,4 +693,6 @@
     <string name="market_sale_chargeback_fee_kept">(miżmum minn Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s rifonduti)</string>
     <string name="market_sale_chargeback_fee_refunded">(rifondut)</string>
+    <string name="market_messages_report">Irraporta din il-konversazzjoni</string>
+    <string name="market_report_conversation_title">Irraporta konversazzjoni</string>
 </resources>

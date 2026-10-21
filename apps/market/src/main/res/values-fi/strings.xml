@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripen pidättämä)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s palautettu)</string>
     <string name="market_sale_chargeback_fee_refunded">(hyvitetty)</string>
+    <string name="market_messages_report">Ilmoita tästä keskustelusta</string>
+    <string name="market_report_conversation_title">Ilmoita keskustelusta</string>
 </resources>

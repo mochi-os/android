@@ -691,4 +691,6 @@
     <string name="market_sale_chargeback_fee_kept">(утримано Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s повернено)</string>
     <string name="market_sale_chargeback_fee_refunded">(повернено)</string>
+    <string name="market_messages_report">Поскаржитися на цю розмову</string>
+    <string name="market_report_conversation_title">Поскаржитися на розмову</string>
 </resources>

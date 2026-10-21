@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Таен ключ за подписване на Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Вече възстановена</string>
     <string name="staff_disputes_refund_exceeds_remaining">Сумата за възстановяване надвишава оставащата възстановима сума</string>
+    <string name="staff_reports_conversation">Разговор</string>
+    <string name="staff_reports_conversation_empty">Няма съобщения</string>
+    <string name="staff_reports_conversation_show">Покажи разговора</string>
 </resources>

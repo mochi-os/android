@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook sinatzeko sekretua</string>
     <string name="staff_disputes_meta_already_refunded">Dagoeneko itzulia</string>
     <string name="staff_disputes_refund_exceeds_remaining">Itzulketa zenbatekoa geratzen den itzulketa zenbatekoa gainditzen du</string>
+    <string name="staff_reports_conversation">Elkarrizketa</string>
+    <string name="staff_reports_conversation_empty">Mezurik ez</string>
+    <string name="staff_reports_conversation_show">Erakutsi elkarrizketa</string>
 </resources>

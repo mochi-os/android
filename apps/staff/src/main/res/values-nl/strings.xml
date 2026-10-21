@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook-ondertekeningsgeheim</string>
     <string name="staff_disputes_meta_already_refunded">Al terugbetaald</string>
     <string name="staff_disputes_refund_exceeds_remaining">Het terugbetalingsbedrag overschrijdt het resterende terug te betalen bedrag</string>
+    <string name="staff_reports_conversation">Gesprek</string>
+    <string name="staff_reports_conversation_empty">Geen berichten</string>
+    <string name="staff_reports_conversation_show">Gesprek tonen</string>
 </resources>

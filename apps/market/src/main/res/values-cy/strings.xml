@@ -694,4 +694,6 @@
     <string name="market_sale_chargeback_fee_kept">(cadwyd gan Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s ad-dalwyd)</string>
     <string name="market_sale_chargeback_fee_refunded">(wedi\'i ad-dalu)</string>
+    <string name="market_messages_report">Riportio\'r sgwrs hon</string>
+    <string name="market_report_conversation_title">Riportio sgwrs</string>
 </resources>

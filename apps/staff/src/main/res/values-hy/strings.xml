@@ -440,4 +440,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook-ի ստորագրման գաղտնիք</string>
     <string name="staff_disputes_meta_already_refunded">Արդեն վերադարձված է</string>
     <string name="staff_disputes_refund_exceeds_remaining">Վերադարձի գումարը գերազանցում է մնացած վերադարձելի գումարը</string>
+    <string name="staff_reports_conversation">Զրույց</string>
+    <string name="staff_reports_conversation_empty">Հաղորդագրություններ չկան</string>
+    <string name="staff_reports_conversation_show">Ցույց տալ զրույցը</string>
 </resources>

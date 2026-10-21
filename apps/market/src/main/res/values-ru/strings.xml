@@ -691,4 +691,6 @@
     <string name="market_sale_chargeback_fee_kept">(удержано Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s возвращено)</string>
     <string name="market_sale_chargeback_fee_refunded">(возвращено)</string>
+    <string name="market_messages_report">Пожаловаться на эту переписку</string>
+    <string name="market_report_conversation_title">Пожаловаться на переписку</string>
 </resources>

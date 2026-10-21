@@ -686,4 +686,6 @@
     <string name="market_sale_chargeback_fee_kept">(задржано од Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s вратено)</string>
     <string name="market_sale_chargeback_fee_refunded">(вратено)</string>
+    <string name="market_messages_report">Пријави го овој разговор</string>
+    <string name="market_report_conversation_title">Пријави разговор</string>
 </resources>

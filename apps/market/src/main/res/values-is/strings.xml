@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(haldið eftir af Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s endurgreitt)</string>
     <string name="market_sale_chargeback_fee_refunded">(endurgreitt)</string>
+    <string name="market_messages_report">Tilkynna þetta samtal</string>
+    <string name="market_report_conversation_title">Tilkynna samtal</string>
 </resources>

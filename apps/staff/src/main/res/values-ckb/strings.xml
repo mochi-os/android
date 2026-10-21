@@ -440,4 +440,7 @@
     <string name="staff_config_field_stripe_webhook">نهێنیی واژووکردنی Webhook</string>
     <string name="staff_disputes_meta_already_refunded">پێشتر گەڕێنرایەوە</string>
     <string name="staff_disputes_refund_exceeds_remaining">بڕی گەڕاندنەوە لە بڕی گەڕاندنەوەی ماوەی تێپەڕیووە</string>
+    <string name="staff_reports_conversation">گفتوگۆ</string>
+    <string name="staff_reports_conversation_empty">هیچ پەیامێک نییە</string>
+    <string name="staff_reports_conversation_show">پیشاندانی گفتوگۆ</string>
 </resources>

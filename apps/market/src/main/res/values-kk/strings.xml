@@ -686,4 +686,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe сақтаған)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s қайтарылды)</string>
     <string name="market_sale_chargeback_fee_refunded">(қайтарылды)</string>
+    <string name="market_messages_report">Бұл сөйлесуге шағымдану</string>
+    <string name="market_report_conversation_title">Сөйлесуге шағымдану</string>
 </resources>

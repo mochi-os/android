@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(لەلایەن Stripe پاراست)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s گەڕاوەتەوە)</string>
     <string name="market_sale_chargeback_fee_refunded">(گەڕێنرایەوە)</string>
+    <string name="market_messages_report">ڕاپۆرتکردنی ئەم گفتوگۆیە</string>
+    <string name="market_report_conversation_title">ڕاپۆرتکردنی گفتوگۆ</string>
 </resources>

@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook-Signaturschlüssel</string>
     <string name="staff_disputes_meta_already_refunded">Bereits erstattet</string>
     <string name="staff_disputes_refund_exceeds_remaining">Erstattungsbetrag übersteigt den verbleibenden erstattungsfähigen Betrag</string>
+    <string name="staff_reports_conversation">Gespräch</string>
+    <string name="staff_reports_conversation_empty">Keine Nachrichten</string>
+    <string name="staff_reports_conversation_show">Gespräch anzeigen</string>
 </resources>

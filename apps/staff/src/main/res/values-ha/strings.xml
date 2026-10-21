@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Sirrin sa hannu na webhook</string>
     <string name="staff_disputes_meta_already_refunded">An riga an mayar</string>
     <string name="staff_disputes_refund_exceeds_remaining">Adadin maidawa ya wuce adadin da ya rage da za a iya mayarwa</string>
+    <string name="staff_reports_conversation">Tattaunawa</string>
+    <string name="staff_reports_conversation_empty">Babu saƙonni</string>
+    <string name="staff_reports_conversation_show">Nuna tattaunawa</string>
 </resources>

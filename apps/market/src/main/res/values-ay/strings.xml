@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(Stripe imata)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s kutt\'ayata)</string>
     <string name="market_sale_chargeback_fee_refunded">(kutt\'ayata)</string>
+    <string name="market_messages_report">Aka parlawi reportaña</string>
+    <string name="market_report_conversation_title">Parlawi reportaña</string>
 </resources>

@@ -689,4 +689,6 @@
     <string name="market_sale_chargeback_fee_kept">(păstrat de Stripe)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s rambursat)</string>
     <string name="market_sale_chargeback_fee_refunded">(rambursat)</string>
+    <string name="market_messages_report">Raportează această conversație</string>
+    <string name="market_report_conversation_title">Raportează conversația</string>
 </resources>

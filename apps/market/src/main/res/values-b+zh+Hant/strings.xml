@@ -687,4 +687,6 @@
     <string name="market_sale_chargeback_fee_kept">(由Stripe保留)</string>
     <string name="market_sale_chargeback_fee_partial">(%1$s已退款)</string>
     <string name="market_sale_chargeback_fee_refunded">(已退款)</string>
+    <string name="market_messages_report">檢舉此對話</string>
+    <string name="market_report_conversation_title">檢舉對話</string>
 </resources>

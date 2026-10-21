@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">ਵੈੱਬਹੁੱਕ ਸਾਈਨਿੰਗ ਸੀਕ੍ਰੇਟ</string>
     <string name="staff_disputes_meta_already_refunded">ਪਹਿਲਾਂ ਹੀ ਵਾਪਸ ਕੀਤਾ</string>
     <string name="staff_disputes_refund_exceeds_remaining">ਰਿਫੰਡ ਦੀ ਰਕਮ ਬਾਕੀ ਰਿਫੰਡਯੋਗ ਰਕਮ ਤੋਂ ਵੱਧ ਹੈ</string>
+    <string name="staff_reports_conversation">ਗੱਲਬਾਤ</string>
+    <string name="staff_reports_conversation_empty">ਕੋਈ ਸੁਨੇਹੇ ਨਹੀਂ</string>
+    <string name="staff_reports_conversation_show">ਗੱਲਬਾਤ ਦਿਖਾਓ</string>
 </resources>

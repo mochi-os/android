@@ -438,4 +438,7 @@
     <string name="staff_config_field_stripe_webhook">Webhook imzalama gizli anahtarı</string>
     <string name="staff_disputes_meta_already_refunded">Zaten iade edildi</string>
     <string name="staff_disputes_refund_exceeds_remaining">İade tutarı kalan iade edilebilir tutarı aşıyor</string>
+    <string name="staff_reports_conversation">Yazışma</string>
+    <string name="staff_reports_conversation_empty">Mesaj yok</string>
+    <string name="staff_reports_conversation_show">Yazışmayı göster</string>
 </resources>

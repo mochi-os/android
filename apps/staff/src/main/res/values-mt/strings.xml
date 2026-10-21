@@ -440,4 +440,7 @@
     <string name="staff_config_field_stripe_webhook">Sigriet tal-iffirmar tal-Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Diġà rifondut</string>
     <string name="staff_disputes_refund_exceeds_remaining">L-ammont tar-rifond jaqbeż l-ammont rifondibbli li jifdal</string>
+    <string name="staff_reports_conversation">Konversazzjoni</string>
+    <string name="staff_reports_conversation_empty">L-ebda messaġġi</string>
+    <string name="staff_reports_conversation_show">Uri l-konversazzjoni</string>
 </resources>
