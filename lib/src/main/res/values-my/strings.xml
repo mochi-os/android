@@ -254,6 +254,10 @@
     <string name="common_pause">ခေတ္တရပ်</string>
     <string name="common_opening_file">ဖိုင် ဖွင့်နေသည်…</string>
     <string name="common_no_app_for_file">ဤဖိုင်ကို ဖွင့်နိုင်သော အက်ပ် မရှိပါ</string>
+    <string name="common_file_actions_text">၎င်းကို သင့်စက်တွင် သိမ်းပါ သို့မဟုတ် အခြားအက်ပ်နှင့် မျှဝေပါ။</string>
+    <string name="common_file_save_to_device">စက်တွင် သိမ်းရန်</string>
+    <string name="common_file_share">မျှဝေရန်</string>
+    <string name="common_file_save_failed">ဖိုင်ကို သိမ်း၍မရပါ</string>
     <string name="common_file_open_failed">ဖိုင်ကို ဖွင့်၍ မရပါ</string>
     <string name="reaction_remove">ရှင်းမည်</string>
     <string name="common_logout_confirm_message">ထွက်ရန် သေချာပါသလား။ သင့်အကောင့်ကို ပြန်လည်အသုံးပြုရန် ထပ်မံဝင်ရောက်ရပါမည်။</string>

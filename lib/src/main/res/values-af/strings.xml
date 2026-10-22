@@ -256,6 +256,10 @@
     <string name="common_pause">Pouseer</string>
     <string name="common_opening_file">Maak lêer oop…</string>
     <string name="common_no_app_for_file">Geen app kan hierdie lêer oopmaak nie</string>
+    <string name="common_file_actions_text">Stoor dit op jou toestel of deel dit met \'n ander app.</string>
+    <string name="common_file_save_to_device">Stoor op toestel</string>
+    <string name="common_file_share">Deel</string>
+    <string name="common_file_save_failed">Kon nie die lêer stoor nie</string>
     <string name="common_file_open_failed">Kon nie lêer oopmaak nie</string>
     <string name="reaction_remove">Verwyder</string>
     <string name="common_logout_confirm_message">Is jy seker jy wil afmeld? Jy sal weer moet aanmeld om toegang tot jou rekening te kry.</string>

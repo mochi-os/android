@@ -601,7 +601,6 @@
     <string name="market_recently_viewed_clear">Embopotĩ opaite</string>
     <string name="market_listings_create">Emoheñói</string>
     <string name="market_bid_dialog_ceiling_label">Oferta máxima (ndaha\'éi mbaretépe)</string>
-    <string name="market_asset_no_app">Ndaipóri app ikatúva oipe\'a ko archivo</string>
     <string name="market_asset_download_failed">Ndaikatúi oñemboguejy pe archivo</string>
     <string name="market_listing_checkout_in_progress">Reguereko peteĩ jehepyme\'ẽ oikóva ko listado rehe.</string>
     <string name="market_listing_checkout_cancel">Heja ñehepyme\'ẽ</string>

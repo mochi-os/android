@@ -99,6 +99,10 @@
     <string name="common_pause">Pause</string>
     <string name="common_opening_file">Opening file…</string>
     <string name="common_no_app_for_file">No app can open this file</string>
+    <string name="common_file_actions_text">Save it to your device or share it with another app.</string>
+    <string name="common_file_save_to_device">Save to device</string>
+    <string name="common_file_share">Share</string>
+    <string name="common_file_save_failed">Couldn\'t save the file</string>
     <string name="common_file_open_failed">Couldn\'t open file</string>
     <string name="common_attachment_unavailable">Attachment temporarily unavailable</string>
     <string name="common_unavailable">Unavailable</string>

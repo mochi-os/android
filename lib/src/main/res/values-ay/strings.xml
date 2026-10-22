@@ -254,6 +254,10 @@
     <string name="common_pause">Sayt\'ayaña</string>
     <string name="common_opening_file">Archivo jist\'araski…</string>
     <string name="common_no_app_for_file">Janiw aka archivo jist\'arañ app utjkiti</string>
+    <string name="common_file_actions_text">Dispositivomar imaña jan ukax yaqha appar churaña.</string>
+    <string name="common_file_save_to_device">Dispositivor imaña</string>
+    <string name="common_file_share">Churaña</string>
+    <string name="common_file_save_failed">Janiw archivox imasiykiti</string>
     <string name="common_file_open_failed">Janiw archivo jist\'arañ atkiti</string>
     <string name="reaction_remove">Q\'umachaña</string>
     <string name="common_logout_confirm_message">¿Chiqapunit mistuña munta? Cuentamar mantañatakix wasitat mantañamäniwa.</string>

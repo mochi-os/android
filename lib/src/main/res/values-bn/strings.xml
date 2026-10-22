@@ -254,6 +254,10 @@
     <string name="common_pause">বিরতি</string>
     <string name="common_opening_file">ফাইল খোলা হচ্ছে…</string>
     <string name="common_no_app_for_file">কোনো অ্যাপ এই ফাইলটি খুলতে পারে না</string>
+    <string name="common_file_actions_text">এটি আপনার ডিভাইসে সংরক্ষণ করুন বা অন্য অ্যাপের সাথে শেয়ার করুন।</string>
+    <string name="common_file_save_to_device">ডিভাইসে সংরক্ষণ করুন</string>
+    <string name="common_file_share">শেয়ার করুন</string>
+    <string name="common_file_save_failed">ফাইলটি সংরক্ষণ করা যায়নি</string>
     <string name="common_file_open_failed">ফাইল খোলা যায়নি</string>
     <string name="reaction_remove">মুছে ফেলুন</string>
     <string name="common_logout_confirm_message">আপনি কি নিশ্চিত যে আপনি লগ আউট করতে চান? আপনার অ্যাকাউন্টে প্রবেশ করতে আপনাকে আবার লগ ইন করতে হবে।</string>

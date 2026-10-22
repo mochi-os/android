@@ -601,7 +601,6 @@
     <string name="market_recently_viewed_clear">Մաքրել ամենը</string>
     <string name="market_listings_create">Ստեղծել</string>
     <string name="market_bid_dialog_ceiling_label">Առավելագույն հայտ (ըստ ցանկության)</string>
-    <string name="market_asset_no_app">Ոչ մի հավելված չի կարող բացել այս ֆայլը</string>
     <string name="market_asset_download_failed">Չհաջողվեց ներբեռնել ֆայլը</string>
     <string name="market_listing_checkout_in_progress">Դուք ունեք ընթացքի մեջ գտնվող վճարում այս հայտարարության համար։</string>
     <string name="market_listing_checkout_cancel">Չեղարկել վճարումը</string>

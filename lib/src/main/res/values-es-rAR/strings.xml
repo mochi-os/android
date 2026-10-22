@@ -227,6 +227,10 @@
     <string name="common_pause">Pausar</string>
     <string name="common_opening_file">Abriendo archivo…</string>
     <string name="common_no_app_for_file">Ninguna app puede abrir este archivo</string>
+    <string name="common_file_actions_text">Guardalo en tu dispositivo o compartilo con otra app.</string>
+    <string name="common_file_save_to_device">Guardar en el dispositivo</string>
+    <string name="common_file_share">Compartir</string>
+    <string name="common_file_save_failed">No se pudo guardar el archivo</string>
     <string name="common_file_open_failed">No se pudo abrir el archivo</string>
     <string name="game_system_resign">%1$s abandonó</string>
     <string name="game_system_draw_offer">%1$s ofreció tablas</string>

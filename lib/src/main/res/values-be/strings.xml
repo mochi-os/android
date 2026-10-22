@@ -254,6 +254,10 @@
     <string name="common_pause">Прыпыніць</string>
     <string name="common_opening_file">Адкрыццё файла…</string>
     <string name="common_no_app_for_file">Няма праграмы, якая можа адкрыць гэты файл</string>
+    <string name="common_file_actions_text">Захавайце яго на прыладзе або абагульце з іншай праграмай.</string>
+    <string name="common_file_save_to_device">Захаваць на прыладзе</string>
+    <string name="common_file_share">Абагуліць</string>
+    <string name="common_file_save_failed">Не ўдалося захаваць файл</string>
     <string name="common_file_open_failed">Не ўдалося адкрыць файл</string>
     <string name="reaction_remove">Ачысціць</string>
     <string name="common_logout_confirm_message">Вы сапраўды хочаце выйсці? Каб зноў атрымаць доступ да свайго ўліковага запісу, вам трэба будзе выканаць уваход паўторна.</string>

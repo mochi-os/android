@@ -107,6 +107,7 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.StatusTone
+import org.mochios.android.ui.components.UnopenedFileDialog
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.webUri
 import org.mochios.market.R
@@ -196,6 +197,7 @@ fun ListingDetailScreen(
     val isReported by viewModel.isReported().collectAsState(initial = false)
 
     val snackbarHostState = remember { SnackbarHostState() }
+    var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
     val snackbarContext = LocalContext.current
     val resources = LocalResources.current
     // Surface the view model's one-shot bid / report messages (e.g. instant
@@ -230,15 +232,15 @@ fun ListingDetailScreen(
                         event.fileName,
                         event.mime,
                     )
-                    if (outcome != AttachmentOpener.OpenResult.OPENED) {
+                    if (outcome == AttachmentOpener.OpenResult.NO_APP) {
+                        unopened = AttachmentOpener.unopened(
+                            snackbarContext,
+                            event.fileName,
+                            event.mime,
+                        )
+                    } else if (outcome != AttachmentOpener.OpenResult.OPENED) {
                         snackbarHostState.showSnackbar(
-                            resources.getString(
-                                if (outcome == AttachmentOpener.OpenResult.NO_APP) {
-                                    R.string.market_asset_no_app
-                                } else {
-                                    R.string.market_asset_download_failed
-                                }
-                            )
+                            resources.getString(R.string.market_asset_download_failed)
                         )
                     }
                 }
@@ -253,6 +255,10 @@ fun ListingDetailScreen(
 
     val listingTitle = state.listing?.listing?.title.orEmpty()
     val currentListingId = state.listing?.listing?.id
+
+    unopened?.let { file ->
+        UnopenedFileDialog(file = file, onDismiss = { unopened = null })
+    }
 
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },

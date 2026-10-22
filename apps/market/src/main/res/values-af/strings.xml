@@ -600,7 +600,6 @@
     <string name="market_recently_viewed_clear">Maak alles skoon</string>
     <string name="market_listings_create">Skep</string>
     <string name="market_bid_dialog_ceiling_label">Maksimum bod (opsioneel)</string>
-    <string name="market_asset_no_app">Geen app kan hierdie lêer oopmaak nie</string>
     <string name="market_asset_download_failed">Kon nie die lêer aflaai nie</string>
     <string name="market_listing_checkout_in_progress">Jy het \'n betaling aan die gang vir hierdie lys.</string>
     <string name="market_listing_checkout_cancel">Kanselleer afhandeling</string>

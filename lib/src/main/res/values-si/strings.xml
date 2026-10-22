@@ -254,6 +254,10 @@
     <string name="common_pause">විරාම කරන්න</string>
     <string name="common_opening_file">ගොනුව විවෘත කරමින්…</string>
     <string name="common_no_app_for_file">මෙම ගොනුව විවෘත කළ හැකි යෙදුමක් නැත</string>
+    <string name="common_file_actions_text">එය ඔබගේ උපාංගයේ සුරකින්න හෝ වෙනත් යෙදුමක් සමඟ බෙදා ගන්න.</string>
+    <string name="common_file_save_to_device">උපාංගයේ සුරකින්න</string>
+    <string name="common_file_share">බෙදා ගන්න</string>
+    <string name="common_file_save_failed">ගොනුව සුරැකිය නොහැකි විය</string>
     <string name="common_file_open_failed">ගොනුව විවෘත කළ නොහැකි විය</string>
     <string name="reaction_remove">හිස් කරන්න</string>
     <string name="common_logout_confirm_message">ඔබට ඉවත් වීමට අවශ්‍ය බව විශ්වාසද? ඔබගේ ගිණුමට ප්‍රවේශ වීමට නැවත පිවිසීමට සිදුවේ.</string>

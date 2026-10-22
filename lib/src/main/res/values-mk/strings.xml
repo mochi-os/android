@@ -254,6 +254,10 @@
     <string name="common_pause">Пауза</string>
     <string name="common_opening_file">Се отвора датотека…</string>
     <string name="common_no_app_for_file">Ниедна апликација не може да ја отвори оваа датотека</string>
+    <string name="common_file_actions_text">Зачувајте ја на уредот или споделете ја со друга апликација.</string>
+    <string name="common_file_save_to_device">Зачувај на уредот</string>
+    <string name="common_file_share">Сподели</string>
+    <string name="common_file_save_failed">Датотеката не може да се зачува</string>
     <string name="common_file_open_failed">Датотеката не може да се отвори</string>
     <string name="reaction_remove">Исчисти</string>
     <string name="common_logout_confirm_message">Дали сте сигурни дека сакате да се одјавите? Ќе треба повторно да се најавите за да пристапите до вашата сметка.</string>

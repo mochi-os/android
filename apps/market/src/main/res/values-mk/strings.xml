@@ -600,7 +600,6 @@
     <string name="market_recently_viewed_clear">Исчисти сè</string>
     <string name="market_listings_create">Создај</string>
     <string name="market_bid_dialog_ceiling_label">Максимална понуда (опционално)</string>
-    <string name="market_asset_no_app">Ниедна апликација не може да ја отвори оваа датотека</string>
     <string name="market_asset_download_failed">Датотеката не можеше да се преземе</string>
     <string name="market_listing_checkout_in_progress">Имате плаќање во тек за овој оглас.</string>
     <string name="market_listing_checkout_cancel">Откажи нарачка</string>

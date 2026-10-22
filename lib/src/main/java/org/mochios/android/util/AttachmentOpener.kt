@@ -6,8 +6,10 @@
 package org.mochios.android.util
 
 import android.content.ActivityNotFoundException
+import android.content.ClipData
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.util.Log
 import android.webkit.MimeTypeMap
 import androidx.core.content.FileProvider
@@ -34,8 +36,20 @@ object AttachmentOpener {
 
     private const val CACHE_DIR = "attachments"
 
+    private const val SHARED_DIR = "shared"
+
     /** Outcome of an [open] attempt, so the caller can surface the right message. */
     enum class OpenResult { OPENED, NO_APP, FAILED, UNAVAILABLE }
+
+    /**
+     * A file already cached that no app on the device can open, kept so the
+     * user can still save it or share it on.
+     *
+     * @property file The cached copy.
+     * @property name The name to offer when saving, the attachment's own.
+     * @property mime The type, coerced as for viewing.
+     */
+    data class UnopenedFile(val file: File, val name: String, val mime: String)
 
     /** A download the server answered with a non-success status, kept so [open] can classify it. */
     private class StatusException(val status: Int) : IOException("HTTP " + status)
@@ -117,6 +131,93 @@ object AttachmentOpener {
         val file = File(File(context.cacheDir, CACHE_DIR), safeName(fileName))
         if (!file.exists()) return OpenResult.FAILED
         return launch(context, file, coerceMimeType(mime.orEmpty()))
+    }
+
+    /**
+     * The cached copy [open] left behind for [attachment], to save or share
+     * when no app could open it.
+     */
+    fun unopened(context: Context, attachment: Attachment): UnopenedFile = UnopenedFile(
+        file = File(File(context.cacheDir, CACHE_DIR), cacheName(attachment)),
+        name = attachment.name.ifBlank { attachment.id },
+        mime = mimeType(attachment),
+    )
+
+    /** The copy [cacheBytes] wrote under [fileName], to save or share. */
+    fun unopened(context: Context, fileName: String, mime: String?): UnopenedFile = UnopenedFile(
+        file = File(File(context.cacheDir, CACHE_DIR), safeName(fileName)),
+        name = fileName,
+        mime = coerceMimeType(mime.orEmpty()),
+    )
+
+    /**
+     * Copy [unopened] to [target], a document the user chose in the system's
+     * save picker. Blocking work runs on [Dispatchers.IO].
+     *
+     * @return whether the copy was written.
+     */
+    suspend fun save(context: Context, unopened: UnopenedFile, target: Uri): Boolean =
+        withContext(Dispatchers.IO) {
+            try {
+                val out = context.contentResolver.openOutputStream(target)
+                    ?: return@withContext false
+                out.use { stream ->
+                    unopened.file.inputStream().use { input -> input.copyTo(stream) }
+                }
+                true
+            } catch (e: IOException) {
+                Log.w(TAG, "Failed to save ${unopened.name}: ${e.message}")
+                false
+            } catch (e: SecurityException) {
+                Log.w(TAG, "Not allowed to save ${unopened.name}: ${e.message}")
+                false
+            }
+        }
+
+    /**
+     * Offer [unopened] to the share sheet, so another app can take it - a
+     * cloud drive, mail, or another device. The cache names files after their
+     * id, so a copy under the attachment's own name is what is shared: that
+     * name is what the receiving app shows and keeps. The type stays coerced,
+     * as for viewing.
+     *
+     * @return whether the share sheet opened.
+     */
+    suspend fun share(context: Context, unopened: UnopenedFile): Boolean {
+        val named = try {
+            withContext(Dispatchers.IO) {
+                val dir = File(File(context.cacheDir, CACHE_DIR), SHARED_DIR).apply { mkdirs() }
+                unopened.file.copyTo(File(dir, safeName(unopened.name)), overwrite = true)
+            }
+        } catch (e: IOException) {
+            Log.w(TAG, "Failed to stage ${unopened.name} for sharing: ${e.message}")
+            return false
+        }
+        val uri = try {
+            FileProvider.getUriForFile(
+                context,
+                context.packageName + AUTHORITY_SUFFIX,
+                named,
+            )
+        } catch (e: IllegalArgumentException) {
+            Log.w(TAG, "Not servable through the FileProvider: ${named.name}")
+            return false
+        }
+        val send = Intent(Intent.ACTION_SEND).apply {
+            type = unopened.mime
+            putExtra(Intent.EXTRA_STREAM, uri)
+            clipData = ClipData.newRawUri(unopened.name, uri)
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+        val chooser = Intent.createChooser(send, unopened.name).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+        return try {
+            context.startActivity(chooser)
+            true
+        } catch (e: ActivityNotFoundException) {
+            false
+        }
     }
 
     /**

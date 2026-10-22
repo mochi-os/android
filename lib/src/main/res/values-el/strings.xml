@@ -254,6 +254,10 @@
     <string name="common_pause">Παύση</string>
     <string name="common_opening_file">Άνοιγμα αρχείου…</string>
     <string name="common_no_app_for_file">Καμία εφαρμογή δεν μπορεί να ανοίξει αυτό το αρχείο</string>
+    <string name="common_file_actions_text">Αποθηκεύστε το στη συσκευή σας ή μοιραστείτε το με άλλη εφαρμογή.</string>
+    <string name="common_file_save_to_device">Αποθήκευση στη συσκευή</string>
+    <string name="common_file_share">Κοινοποίηση</string>
+    <string name="common_file_save_failed">Δεν ήταν δυνατή η αποθήκευση του αρχείου</string>
     <string name="common_file_open_failed">Δεν ήταν δυνατό το άνοιγμα του αρχείου</string>
     <string name="reaction_remove">Απαλοιφή</string>
     <string name="common_logout_confirm_message">Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε; Θα χρειαστεί να συνδεθείτε ξανά για να αποκτήσετε πρόσβαση στον λογαριασμό σας.</string>

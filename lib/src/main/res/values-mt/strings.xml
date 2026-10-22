@@ -255,6 +255,10 @@
     <string name="common_pause">Pawża</string>
     <string name="common_opening_file">Qed jinfetaħ il-fajl…</string>
     <string name="common_no_app_for_file">L-ebda app ma tista\' tiftaħ dan il-fajl</string>
+    <string name="common_file_actions_text">Issejvjah fuq it-tagħmir tiegħek jew aqsmu ma\' app oħra.</string>
+    <string name="common_file_save_to_device">Issejvja fuq it-tagħmir</string>
+    <string name="common_file_share">Aqsam</string>
+    <string name="common_file_save_failed">Il-fajl ma setax jiġi ssejvjat</string>
     <string name="common_file_open_failed">Ma rnexxiex jinfetaħ il-fajl</string>
     <string name="reaction_remove">Naddaf</string>
     <string name="common_logout_confirm_message">Żgur li trid toħroġ? Ikollok terġa\' tidħol biex taċċessa l-kont tiegħek.</string>

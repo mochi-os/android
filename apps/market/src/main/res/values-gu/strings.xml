@@ -601,7 +601,6 @@
     <string name="market_recently_viewed_clear">બધું સાફ કરો</string>
     <string name="market_listings_create">બનાવો</string>
     <string name="market_bid_dialog_ceiling_label">મહત્તમ બોલી (વૈકલ્પિક)</string>
-    <string name="market_asset_no_app">કોઈ ઍપ આ ફાઇલ ખોલી શકતી નથી</string>
     <string name="market_asset_download_failed">ફાઇલ ડાઉનલોડ કરી શકાઈ નથી</string>
     <string name="market_listing_checkout_in_progress">આ સૂચિ માટે તમારી પાસે પ્રક્રિયામાં ચૂકવણી છે.</string>
     <string name="market_listing_checkout_cancel">ચેકઆઉટ રદ કરો</string>

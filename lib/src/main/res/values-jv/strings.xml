@@ -254,6 +254,10 @@
     <string name="common_pause">Jeda</string>
     <string name="common_opening_file">Mbukak berkas…</string>
     <string name="common_no_app_for_file">Ora ana app sing bisa mbukak berkas iki</string>
+    <string name="common_file_actions_text">Simpen ing piranti panjenengan utawi bagekaken dhateng aplikasi sanès.</string>
+    <string name="common_file_save_to_device">Simpen ing piranti</string>
+    <string name="common_file_share">Bagekaken</string>
+    <string name="common_file_save_failed">Berkas mboten saged dipunsimpen</string>
     <string name="common_file_open_failed">Ora bisa mbukak berkas</string>
     <string name="reaction_remove">Resiki</string>
     <string name="common_logout_confirm_message">Menapa panjenengan yakin badhe medal? Panjenengan kedah mlebet malih kangge ngakses akun panjenengan.</string>

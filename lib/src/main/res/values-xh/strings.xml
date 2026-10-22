@@ -254,6 +254,10 @@
     <string name="common_pause">Misa okwethutyana</string>
     <string name="common_opening_file">Kuvulwa ifayile…</string>
     <string name="common_no_app_for_file">Akukho app inokuvula le fayile</string>
+    <string name="common_file_actions_text">Yigcine kwisixhobo sakho okanye wabelane ngayo nolunye usetyenziso.</string>
+    <string name="common_file_save_to_device">Gcina kwisixhobo</string>
+    <string name="common_file_share">Yabelana</string>
+    <string name="common_file_save_failed">Ayikwazanga ukugcina ifayile</string>
     <string name="common_file_open_failed">Akukwazekanga ukuvula ifayile</string>
     <string name="reaction_remove">Cima</string>
     <string name="common_logout_confirm_message">Uqinisekile ukuba ufuna ukuphuma? Kuya kufuneka ungene kwakhona ukuze ufikelele kwiakhawunti yakho.</string>

@@ -254,6 +254,10 @@
     <string name="common_pause">ផ្អាក</string>
     <string name="common_opening_file">កំពុងបើកឯកសារ…</string>
     <string name="common_no_app_for_file">គ្មានកម្មវិធីណាអាចបើកឯកសារនេះបានទេ</string>
+    <string name="common_file_actions_text">រក្សាទុកវានៅលើឧបករណ៍របស់អ្នក ឬចែករំលែកវាជាមួយកម្មវិធីផ្សេង។</string>
+    <string name="common_file_save_to_device">រក្សាទុកក្នុងឧបករណ៍</string>
+    <string name="common_file_share">ចែករំលែក</string>
+    <string name="common_file_save_failed">មិនអាចរក្សាទុកឯកសារបានទេ</string>
     <string name="common_file_open_failed">មិនអាចបើកឯកសារបានទេ</string>
     <string name="reaction_remove">សម្អាត</string>
     <string name="common_logout_confirm_message">តើអ្នកប្រាកដថាចង់ចាកចេញមែនទេ? អ្នកនឹងត្រូវចូលម្តងទៀត ដើម្បីប្រើប្រាស់គណនីរបស់អ្នក។</string>

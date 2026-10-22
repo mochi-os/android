@@ -600,7 +600,6 @@
     <string name="market_recently_viewed_clear">Clirio popeth</string>
     <string name="market_listings_create">Creu</string>
     <string name="market_bid_dialog_ceiling_label">Cynnig uchaf (dewisol)</string>
-    <string name="market_asset_no_app">Ni all unrhyw ap agor y ffeil hon</string>
     <string name="market_asset_download_failed">Methwyd lawrlwytho\'r ffeil</string>
     <string name="market_listing_checkout_in_progress">Mae gennych daliad ar y gweill ar gyfer y rhestriad hwn.</string>
     <string name="market_listing_checkout_cancel">Canslo\'r talu</string>
