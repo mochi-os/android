@@ -3,10 +3,16 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+// CommonDataKinds.Im is deprecated since API 31 as a kind some contacts apps
+// do not show; it is still the phone's only kind for a messaging address, and
+// the Contacts apps that show it are the ones a user edits these contacts in.
+@file:Suppress("DEPRECATION")
+
 package org.mochios.android.sync
 
 import android.provider.ContactsContract.CommonDataKinds.Email
 import android.provider.ContactsContract.CommonDataKinds.Event
+import android.provider.ContactsContract.CommonDataKinds.Im
 import android.provider.ContactsContract.CommonDataKinds.Nickname
 import android.provider.ContactsContract.CommonDataKinds.Note
 import android.provider.ContactsContract.CommonDataKinds.Organization
@@ -29,20 +35,30 @@ import java.util.Base64
  * carries inline becomes the contact's photo, but the server accepts no
  * `PHOTO` from an upload, so a photo set on the phone stays on the phone.
  *
+ * `IMPP` became managed after the sync first shipped, so a messaging row
+ * the phone holds may never have reached the server. A download replaces only
+ * the messaging rows it wrote, marked as a photo is, and those the phone
+ * added whose address it now writes back; an upload carries them all.
+ *
  * Column names are the framework's constants, so the rows this builds are
  * the ones the provider stores, and a row read back from the provider maps
  * with the same keys.
  */
 object ContactsMapping {
 
-    /** The vCard properties the phone holds, the same set the server lets a client write. */
-    val MANAGED = setOf("FN", "N", "NICKNAME", "EMAIL", "TEL", "ADR", "BDAY", "ORG", "TITLE", "URL", "NOTE")
+    /**
+     * The vCard properties the phone holds, each of which an upload names as
+     * managed, so the server replaces it even when the phone now has none.
+     * The server keeps the rest, `SOCIALPROFILE` among them.
+     */
+    val MANAGED = setOf("FN", "N", "NICKNAME", "EMAIL", "TEL", "ADR", "BDAY", "ORG", "TITLE", "URL", "NOTE", "IMPP")
 
     /**
-     * `data_sync1` of the photo row a download wrote. A later download
-     * replaces only a marked photo; one the phone set is left alone.
+     * `data_sync1` of a photo or messaging row a download wrote. A later
+     * download replaces only marked rows of those kinds; one the phone set is
+     * left alone.
      */
-    const val PHOTO_MARKER = "mochi"
+    const val MARKER = "mochi"
 
     /** The server refuses a parameter value longer than this. */
     private const val PARAMETER_MAXIMUM = 64
@@ -72,15 +88,42 @@ object ContactsMapping {
      */
     fun managed(row: DataRow): Boolean = when (row.mimetype) {
         Event.CONTENT_ITEM_TYPE -> row.values[Event.TYPE] == Event.TYPE_BIRTHDAY.toString()
-        Photo.CONTENT_ITEM_TYPE -> row.values[Data.SYNC1] == PHOTO_MARKER
+        Photo.CONTENT_ITEM_TYPE, Im.CONTENT_ITEM_TYPE -> row.values[Data.SYNC1] == MARKER
         else -> row.mimetype in KINDS
+    }
+
+    /**
+     * The `Data` rows a download replaces on one raw contact, as a provider
+     * selection to follow `raw_contact_id=? and`, with its arguments: the
+     * kinds replaced whole, the birthday, the marked photo and messaging rows,
+     * and a messaging row the phone added whose address [written] holds -
+     * the upload took it to the server, which now sends it back to be written
+     * marked.
+     */
+    fun replaced(written: List<DataRow>): Pair<String, List<String>> {
+        val addresses = written.filter { it.mimetype == Im.CONTENT_ITEM_TYPE }.map { it.get(Im.DATA) }.distinct()
+        val selection = buildString {
+            append("(${Data.MIMETYPE} in (${KINDS.joinToString(",") { "?" }})")
+            append(" or (${Data.MIMETYPE}=? and ${Event.TYPE}=?)")
+            append(" or (${Data.MIMETYPE} in (?,?) and ${Data.SYNC1}=?)")
+            if (addresses.isNotEmpty()) {
+                append(" or (${Data.MIMETYPE}=? and ${Im.DATA} in (${addresses.joinToString(",") { "?" }})))")
+            } else {
+                append(")")
+            }
+        }
+        val arguments = KINDS.toList() +
+            listOf(Event.CONTENT_ITEM_TYPE, Event.TYPE_BIRTHDAY.toString()) +
+            listOf(Photo.CONTENT_ITEM_TYPE, Im.CONTENT_ITEM_TYPE, MARKER) +
+            (if (addresses.isNotEmpty()) listOf(Im.CONTENT_ITEM_TYPE) + addresses else emptyList())
+        return selection to arguments
     }
 
     /** The kinds a download deletes whole before writing its rows afresh. */
     fun kinds(): Set<String> = KINDS
 
     /** The kinds an upload reads properties from. */
-    fun readable(): Set<String> = KINDS + Event.CONTENT_ITEM_TYPE
+    fun readable(): Set<String> = KINDS + Event.CONTENT_ITEM_TYPE + Im.CONTENT_ITEM_TYPE
 
     // ---- card -> provider ----
 
@@ -122,11 +165,12 @@ object ContactsMapping {
                 "NOTE" -> if (property.value.isNotBlank()) {
                     out.add(DataRow(Note.CONTENT_ITEM_TYPE, mapOf(Note.NOTE to property.value)))
                 }
+                "IMPP" -> messagingRow(property)?.let(out::add)
             }
         }
         out.addAll(organizationRows(properties))
         photo(properties)?.let { bytes ->
-            out.add(DataRow(Photo.CONTENT_ITEM_TYPE, mapOf(Data.SYNC1 to PHOTO_MARKER), bytes))
+            out.add(DataRow(Photo.CONTENT_ITEM_TYPE, mapOf(Data.SYNC1 to MARKER), bytes))
         }
         return out
     }
@@ -160,6 +204,62 @@ object ContactsMapping {
         ).filterValues { it.isNotBlank() }
         if (values.isEmpty()) return null
         return DataRow(StructuredPostal.CONTENT_ITEM_TYPE, values + postalType(property))
+    }
+
+    /**
+     * A messaging address as the phone's instant-messaging row: its network
+     * as the row's protocol - one the phone names, else a custom protocol
+     * named for the network - and the address as the network writes it.
+     * Marked as the sync's own.
+     */
+    private fun messagingRow(property: ContactProperty): DataRow? {
+        val uri = property.value.trim()
+        val colon = uri.indexOf(':')
+        if (colon <= 0 || colon == uri.length - 1) return null
+        val scheme = uri.substring(0, colon).lowercase()
+        val rest = uri.substring(colon + 1)
+        val known = PROTOCOLS.entries.firstOrNull { it.value == scheme }?.key
+        val values = mutableMapOf<String, String?>(Data.SYNC1 to MARKER)
+        when {
+            known != null -> {
+                values[Im.PROTOCOL] = known.toString()
+                values[Im.DATA] = rest
+            }
+            scheme == MATRIX -> {
+                values[Im.PROTOCOL] = Im.PROTOCOL_CUSTOM.toString()
+                values[Im.CUSTOM_PROTOCOL] = "Matrix"
+                values[Im.DATA] = if (rest.startsWith("u/")) "@" + rest.substring(2) else rest
+            }
+            scheme == FEDIVERSE -> {
+                values[Im.PROTOCOL] = Im.PROTOCOL_CUSTOM.toString()
+                values[Im.CUSTOM_PROTOCOL] = "Fediverse"
+                values[Im.DATA] = "@$rest"
+            }
+            else -> {
+                values[Im.PROTOCOL] = Im.PROTOCOL_CUSTOM.toString()
+                if (scheme != GENERIC) values[Im.CUSTOM_PROTOCOL] = scheme
+                values[Im.DATA] = rest
+            }
+        }
+        return DataRow(Im.CONTENT_ITEM_TYPE, values + imType(property))
+    }
+
+    /** A messaging row's address as a URI, the scheme its protocol names; null for one with no address. */
+    private fun messagingUri(row: DataRow): String? {
+        val data = row.get(Im.DATA).trim()
+        if (data.isBlank()) return null
+        val protocol = row.get(Im.PROTOCOL).toIntOrNull()
+        PROTOCOLS[protocol]?.let { scheme -> return "$scheme:" + data.removePrefix("$scheme:") }
+        val name = row.get(Im.CUSTOM_PROTOCOL).trim().lowercase()
+        return when {
+            name == MATRIX -> {
+                val bare = data.removePrefix("$MATRIX:")
+                if (bare.startsWith("@")) "$MATRIX:u/" + bare.substring(1) else "$MATRIX:$bare"
+            }
+            name == "fediverse" || name == "mastodon" -> "$FEDIVERSE:" + data.removePrefix("$FEDIVERSE:").removePrefix("@")
+            Regex("[a-z][a-z0-9+.-]*").matches(name) -> "$name:" + data.removePrefix("$name:")
+            else -> "$GENERIC:$data"
+        }
     }
 
     /**
@@ -296,6 +396,13 @@ object ContactsMapping {
             val note = row.get(Note.NOTE)
             if (note.isNotBlank()) out.add(ContactProperty("NOTE", emptyMap(), note))
         }
+        // A row the phone added and the marked copy a download wrote of it
+        // are one address until the next download drops the first.
+        val addresses = mutableSetOf<String>()
+        for (row in rows.filter { it.mimetype == Im.CONTENT_ITEM_TYPE }) {
+            val uri = messagingUri(row) ?: continue
+            if (addresses.add(uri)) out.add(ContactProperty("IMPP", typeParameter(imLabels(row)), uri))
+        }
         return out
     }
 
@@ -419,6 +526,45 @@ object ContactsMapping {
         StructuredPostal.TYPE_WORK -> listOf(WORK)
         StructuredPostal.TYPE_OTHER -> listOf(OTHER)
         StructuredPostal.TYPE_CUSTOM -> custom(row)
+        else -> emptyList()
+    }
+
+    /** The URI scheme for each protocol the phone names: those vCard writers use for `IMPP`. */
+    private val PROTOCOLS = mapOf(
+        Im.PROTOCOL_AIM to "aim",
+        Im.PROTOCOL_MSN to "msnim",
+        Im.PROTOCOL_YAHOO to "ymsgr",
+        Im.PROTOCOL_SKYPE to "skype",
+        Im.PROTOCOL_QQ to "qq",
+        Im.PROTOCOL_GOOGLE_TALK to "gtalk",
+        Im.PROTOCOL_ICQ to "icq",
+        Im.PROTOCOL_JABBER to "xmpp",
+        Im.PROTOCOL_NETMEETING to "netmeeting",
+    )
+
+    private const val MATRIX = "matrix"
+    private const val FEDIVERSE = "acct"
+
+    /** RFC 3860's scheme for an address on no network the row names. */
+    private const val GENERIC = "im"
+
+    private fun imType(property: ContactProperty): Map<String, String?> {
+        val tokens = tokens(property)
+        val known = tokens.firstNotNullOfOrNull { token ->
+            when (token.lowercase()) {
+                HOME -> Im.TYPE_HOME
+                WORK -> Im.TYPE_WORK
+                OTHER -> Im.TYPE_OTHER
+                else -> null
+            }
+        }
+        return typed(known, tokens, Im.TYPE_OTHER)
+    }
+
+    private fun imLabels(row: DataRow): List<String> = when (row.get(Im.TYPE).toIntOrNull()) {
+        Im.TYPE_HOME -> listOf(HOME)
+        Im.TYPE_WORK -> listOf(WORK)
+        Im.TYPE_CUSTOM -> custom(row)
         else -> emptyList()
     }
 

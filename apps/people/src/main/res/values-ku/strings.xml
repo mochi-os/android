@@ -218,4 +218,10 @@
     <string name="people_contact_create">Çêbike</string>
     <string name="people_sync_permission_reason">Hevdemkirin hevalên te li sepana Kontakt a vê telefonê kopî dike, ji ber vê yekê pêdivî bi gihîştina kontaktên te heye.</string>
     <string name="people_sync_permission_blocked">Gihîştina kontaktan ji bo vê sepanê neçalak e. Tu dikarî wê di mîhengên sepanê de di bin Destûr de çalak bikî.</string>
+    <string name="people_contact_add_handle">Navê bikarhêner zêde bike</string>
+    <string name="people_contact_add_messaging">Navnîşana peyamşandinê zêde bike</string>
+    <string name="people_contact_network">Tor</string>
+    <string name="people_contact_xmpp">Têkiliya XMPP</string>
+    <string name="people_person_forums">Forum</string>
+    <string name="people_contact_network_other">Yên din</string>
 </resources>

@@ -220,4 +220,10 @@
     <string name="people_contact_create">Ustvari</string>
     <string name="people_sync_permission_reason">Sinhronizacija kopira vaše prijatelje v aplikacijo Stiki v tem telefonu, zato potrebuje dostop do vaših stikov.</string>
     <string name="people_sync_permission_blocked">Dostop do stikov je za to aplikacijo izklopljen. Vklopite ga lahko v razdelku Dovoljenja v nastavitvah aplikacije.</string>
+    <string name="people_contact_add_handle">Dodaj vzdevek</string>
+    <string name="people_contact_add_messaging">Dodaj naslov za sporočanje</string>
+    <string name="people_contact_network">Omrežje</string>
+    <string name="people_contact_xmpp">Stik XMPP</string>
+    <string name="people_person_forums">Forumi</string>
+    <string name="people_contact_network_other">Drugo</string>
 </resources>

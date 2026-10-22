@@ -217,4 +217,10 @@
     <string name="people_contact_create">Buat</string>
     <string name="people_sync_permission_reason">Sinkronisasi menyalin teman Anda ke aplikasi Kontak di ponsel ini, sehingga memerlukan akses ke kontak Anda.</string>
     <string name="people_sync_permission_blocked">Akses kontak dinonaktifkan untuk aplikasi ini. Anda dapat mengaktifkannya di bagian Izin pada pengaturan aplikasi.</string>
+    <string name="people_contact_add_handle">Tambah nama pengguna</string>
+    <string name="people_contact_add_messaging">Tambah alamat perpesanan</string>
+    <string name="people_contact_network">Jaringan</string>
+    <string name="people_contact_xmpp">Kontak XMPP</string>
+    <string name="people_person_forums">Forum</string>
+    <string name="people_contact_network_other">Lainnya</string>
 </resources>

@@ -218,4 +218,10 @@
     <string name="people_contact_create">Opprett</string>
     <string name="people_sync_permission_reason">Synkroniseringa kopierer venene dine til Kontaktar-appen på denne telefonen, og treng difor tilgang til kontaktane dine.</string>
     <string name="people_sync_permission_blocked">Tilgang til kontaktar er slått av for denne appen. Du kan slå han på under Løyve i innstillingane til appen.</string>
+    <string name="people_contact_add_handle">Legg til brukarnamn</string>
+    <string name="people_contact_add_messaging">Legg til meldingsadresse</string>
+    <string name="people_contact_network">Nettverk</string>
+    <string name="people_contact_xmpp">XMPP-kontakt</string>
+    <string name="people_person_forums">Forum</string>
+    <string name="people_contact_network_other">Anna</string>
 </resources>

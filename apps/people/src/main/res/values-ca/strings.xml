@@ -218,4 +218,10 @@
     <string name="people_contact_create">Crea</string>
     <string name="people_sync_permission_reason">La sincronització copia els vostres amics a l\'aplicació Contactes d\'aquest telèfon, de manera que necessita accés als vostres contactes.</string>
     <string name="people_sync_permission_blocked">L\'accés als contactes està desactivat per a aquesta aplicació. El podeu activar a Permisos, a la configuració de l\'aplicació.</string>
+    <string name="people_contact_add_handle">Afegeix un identificador</string>
+    <string name="people_contact_add_messaging">Afegeix una adreça de missatgeria</string>
+    <string name="people_contact_network">Xarxa</string>
+    <string name="people_contact_xmpp">Contacte XMPP</string>
+    <string name="people_person_forums">Fòrums</string>
+    <string name="people_contact_network_other">Altres</string>
 </resources>

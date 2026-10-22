@@ -218,4 +218,10 @@
     <string name="people_contact_create">બનાવો</string>
     <string name="people_sync_permission_reason">સિંક કરવાથી તમારા મિત્રો આ ફોનની સંપર્કો ઍપમાં કૉપિ થાય છે, તેથી તેને તમારા સંપર્કોના ઍક્સેસની જરૂર છે.</string>
     <string name="people_sync_permission_blocked">આ ઍપ માટે સંપર્કો ઍક્સેસ બંધ છે. તમે તેને ઍપના સેટિંગ્સમાં પરવાનગીઓ હેઠળ ચાલુ કરી શકો છો.</string>
+    <string name="people_contact_add_handle">હેન્ડલ ઉમેરો</string>
+    <string name="people_contact_add_messaging">મેસેજિંગ સરનામું ઉમેરો</string>
+    <string name="people_contact_network">નેટવર્ક</string>
+    <string name="people_contact_xmpp">XMPP સંપર્ક</string>
+    <string name="people_person_forums">ફોરમ્સ</string>
+    <string name="people_contact_network_other">અન્ય</string>
 </resources>

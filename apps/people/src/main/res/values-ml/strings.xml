@@ -218,4 +218,10 @@
     <string name="people_contact_create">സൃഷ്ടിക്കുക</string>
     <string name="people_sync_permission_reason">സിങ്ക് ചെയ്യുന്നത് നിങ്ങളുടെ സുഹൃത്തുക്കളെ ഈ ഫോണിലെ കോൺടാക്റ്റുകൾ ആപ്പിലേക്ക് പകർത്തുന്നു, അതിനാൽ ഇതിന് നിങ്ങളുടെ കോൺടാക്റ്റുകളിലേക്ക് ആക്‌സസ് ആവശ്യമാണ്.</string>
     <string name="people_sync_permission_blocked">ഈ ആപ്പിനുള്ള കോൺടാക്റ്റുകളുടെ ആക്‌സസ് ഓഫാണ്. ആപ്പിന്റെ ക്രമീകരണങ്ങളിലെ അനുമതികൾ എന്നതിന് കീഴിൽ നിങ്ങൾക്ക് അത് ഓണാക്കാം.</string>
+    <string name="people_contact_add_handle">ഉപയോക്തൃനാമം ചേർക്കുക</string>
+    <string name="people_contact_add_messaging">മെസേജിംഗ് വിലാസം ചേർക്കുക</string>
+    <string name="people_contact_network">നെറ്റ്‌വർക്ക്</string>
+    <string name="people_contact_xmpp">XMPP കോൺടാക്റ്റ്</string>
+    <string name="people_person_forums">ഫോറങ്ങൾ</string>
+    <string name="people_contact_network_other">മറ്റുള്ളവ</string>
 </resources>

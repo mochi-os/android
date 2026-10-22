@@ -220,4 +220,10 @@
     <string name="people_contact_create">Cruthaich</string>
     <string name="people_sync_permission_reason">Nì an sioncronachadh lethbhreac dhe na caraidean agad ann an aplacaid Luchd-aithne an fhòn seo, mar sin feumaidh e inntrigeadh dhan luchd-aithne agad.</string>
     <string name="people_sync_permission_blocked">Tha inntrigeadh dhan luchd-aithne dheth airson na h-aplacaid seo. \'S urrainn dhut a chur air fo Ceadan ann an roghainnean na h-aplacaid.</string>
+    <string name="people_contact_add_handle">Cuir ainm-cleachdaiche ris</string>
+    <string name="people_contact_add_messaging">Cuir seòladh teachdaireachdan ris</string>
+    <string name="people_contact_network">Lìonra</string>
+    <string name="people_contact_xmpp">Luchd-aithne XMPP</string>
+    <string name="people_person_forums">Fòraman</string>
+    <string name="people_contact_network_other">Eile</string>
 </resources>

@@ -3,10 +3,16 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+// CommonDataKinds.Im is deprecated since API 31 as a kind some contacts apps
+// do not show; it is still the phone's only kind for a messaging address, and
+// the Contacts apps that show it are the ones a user edits these contacts in.
+@file:Suppress("DEPRECATION")
+
 package org.mochios.android.sync
 
 import android.provider.ContactsContract.CommonDataKinds.Email
 import android.provider.ContactsContract.CommonDataKinds.Event
+import android.provider.ContactsContract.CommonDataKinds.Im
 import android.provider.ContactsContract.CommonDataKinds.Nickname
 import android.provider.ContactsContract.CommonDataKinds.Note
 import android.provider.ContactsContract.CommonDataKinds.Organization
@@ -60,6 +66,7 @@ class ContactsStructureTest {
         Note.CONTENT_ITEM_TYPE to "note",
         Website.CONTENT_ITEM_TYPE to "website",
         Event.CONTENT_ITEM_TYPE to "event",
+        Im.CONTENT_ITEM_TYPE to "im",
     )
 
     @Test
@@ -138,6 +145,26 @@ class ContactsStructureTest {
                 StructuredPostal.LABEL to "Holiday",
             )))
         })
+    }
+
+    @Test
+    fun `every messaging protocol the editor offers uploads as its own scheme`() {
+        val protocols = mapOf(
+            "aim" to Im.PROTOCOL_AIM, "msn" to Im.PROTOCOL_MSN, "yahoo" to Im.PROTOCOL_YAHOO,
+            "skype" to Im.PROTOCOL_SKYPE, "qq" to Im.PROTOCOL_QQ, "google_talk" to Im.PROTOCOL_GOOGLE_TALK,
+            "icq" to Im.PROTOCOL_ICQ, "jabber" to Im.PROTOCOL_JABBER, "custom" to Im.PROTOCOL_CUSTOM,
+        )
+        val schemes = types("im").map { type ->
+            val protocol = protocols[type.getAttribute("type")]
+            assertNotNull("im protocol ${type.getAttribute("type")}", protocol)
+            val value = ContactsMapping.properties(listOf(DataRow(Im.CONTENT_ITEM_TYPE, mapOf(
+                Im.DATA to "ada",
+                Im.PROTOCOL to protocol.toString(),
+                Im.CUSTOM_PROTOCOL to "Matrix",
+            )))).single { it.name == "IMPP" }.value
+            value.substringBefore(':')
+        }
+        assertEquals("two protocols upload as the same scheme: $schemes", schemes.size, schemes.toSet().size)
     }
 
     private val properties = mapOf(

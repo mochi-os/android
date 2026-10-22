@@ -220,4 +220,10 @@
     <string name="people_contact_create">Створити</string>
     <string name="people_sync_permission_reason">Синхронізація копіює ваших друзів у застосунок «Контакти» на цьому телефоні, тому їй потрібен доступ до ваших контактів.</string>
     <string name="people_sync_permission_blocked">Доступ до контактів для цього застосунку вимкнено. Ви можете ввімкнути його в розділі «Дозволи» в налаштуваннях застосунку.</string>
+    <string name="people_contact_add_handle">Додати псевдонім</string>
+    <string name="people_contact_add_messaging">Додати адресу месенджера</string>
+    <string name="people_contact_network">Мережа</string>
+    <string name="people_contact_xmpp">Контакт XMPP</string>
+    <string name="people_person_forums">Форуми</string>
+    <string name="people_contact_network_other">Інша</string>
 </resources>

@@ -56,6 +56,8 @@ import org.mochios.android.R as MochiR
 fun PersonViewScreen(
     onBack: () -> Unit,
     onMessage: (personId: String, personName: String) -> Unit,
+    /** Opens a link in the app: a forum post from the person's history. */
+    onOpenLink: (String) -> Unit = {},
     viewModel: PersonViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -110,6 +112,7 @@ fun PersonViewScreen(
                     onAccept = viewModel::acceptInvite,
                     onDecline = viewModel::declineInvite,
                     onMessage = viewModel::message,
+                    onOpenLink = onOpenLink,
                     modifier = Modifier.padding(padding),
                 )
             }
@@ -118,7 +121,7 @@ fun PersonViewScreen(
 }
 
 @Composable
-private fun PersonBody(
+internal fun PersonBody(
     info: org.mochios.people.model.PersonInformation,
     friendState: FriendState,
     isMutating: Boolean,
@@ -128,6 +131,7 @@ private fun PersonBody(
     onAccept: () -> Unit,
     onDecline: () -> Unit,
     onMessage: () -> Unit,
+    onOpenLink: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     // Private profile + not a mutual friend → render avatar + name only.
@@ -195,6 +199,8 @@ private fun PersonBody(
             }
             Spacer(Modifier.height(24.dp))
         }
+
+        ProfileNetworks(accounts = info.accounts, history = info.history, onOpenLink = onOpenLink)
 
         if (error != null) {
             Text(

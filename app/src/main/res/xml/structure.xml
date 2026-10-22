@@ -66,5 +66,16 @@
             <Type type="birthday" maxOccurs="1" yearOptional="true" />
         </DataKind>
         <DataKind kind="note" maxOccurs="1" />
+        <DataKind kind="im">
+            <Type type="aim" />
+            <Type type="msn" />
+            <Type type="yahoo" />
+            <Type type="skype" />
+            <Type type="qq" />
+            <Type type="google_talk" />
+            <Type type="icq" />
+            <Type type="jabber" />
+            <Type type="custom" />
+        </DataKind>
     </EditSchema>
 </ContactsAccountType>

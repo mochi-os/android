@@ -218,4 +218,10 @@
     <string name="people_contact_create">Aanmaken</string>
     <string name="people_sync_permission_reason">Synchroniseren kopieert je vrienden naar de Contacten-app van deze telefoon, dus daarvoor is toegang tot je contacten nodig.</string>
     <string name="people_sync_permission_blocked">Toegang tot contacten staat uit voor deze app. Je kunt deze aanzetten onder Rechten in de instellingen van de app.</string>
+    <string name="people_contact_add_handle">Gebruikersnaam toevoegen</string>
+    <string name="people_contact_add_messaging">Chatadres toevoegen</string>
+    <string name="people_contact_network">Netwerk</string>
+    <string name="people_contact_xmpp">XMPP-contact</string>
+    <string name="people_person_forums">Forums</string>
+    <string name="people_contact_network_other">Overig</string>
 </resources>

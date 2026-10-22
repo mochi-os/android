@@ -134,7 +134,7 @@ fun ContactsScreen(
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
-                is ContactsEvent.MessagePerson -> onMessage(event.person)
+                is ContactsEvent.Message -> onMessage(event.link)
                 ContactsEvent.BookDeleted -> drawer.onOpenAllContacts()
             }
         }
@@ -524,7 +524,7 @@ internal fun ContactRow(
         onClick = onTap,
         trailing = {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                if (contact.friend) {
+                if (contact.friend || contact.message != null) {
                     MochiIconButton(onClick = onMessage) {
                         Icon(
                             Icons.AutoMirrored.Filled.Chat,

@@ -38,3 +38,17 @@ fun openWeb(context: Context, url: String) {
         // No browser.
     }
 }
+
+/**
+ * Follow a link a notification or another screen hands over: a path on this
+ * server goes to [route], which opens it in the app; a web link off it - a
+ * post or a person on another network, where a notification from a linked or
+ * hosted account points - opens in the browser.
+ */
+fun followLink(context: Context, link: String, route: (String) -> Unit) {
+    if (isWebUrl(link)) {
+        openWeb(context, link)
+    } else {
+        route(link)
+    }
+}

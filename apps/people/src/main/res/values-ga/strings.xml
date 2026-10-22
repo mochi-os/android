@@ -221,4 +221,10 @@
     <string name="people_contact_create">Cruthaigh</string>
     <string name="people_sync_permission_reason">Cóipeálann an sioncrónú do chairde isteach in aip Teagmhálaithe an fhóin seo, mar sin teastaíonn rochtain uaidh ar do theagmhálaithe.</string>
     <string name="people_sync_permission_blocked">Tá rochtain ar theagmhálaithe múchta don aip seo. Is féidir leat í a chasadh air faoi Ceadanna i socruithe na haipe.</string>
+    <string name="people_contact_add_handle">Cuir ainm úsáideora leis</string>
+    <string name="people_contact_add_messaging">Cuir seoladh teachtaireachtaí leis</string>
+    <string name="people_contact_network">Líonra</string>
+    <string name="people_contact_xmpp">Teagmhálaí XMPP</string>
+    <string name="people_person_forums">Fóraim</string>
+    <string name="people_contact_network_other">Eile</string>
 </resources>

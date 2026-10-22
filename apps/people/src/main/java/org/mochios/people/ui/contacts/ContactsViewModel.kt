@@ -53,8 +53,8 @@ data class ContactsUiState(
 )
 
 sealed class ContactsEvent {
-    /** Open chat with the given person id. */
-    data class MessagePerson(val person: String, val name: String) : ContactsEvent()
+    /** Open chat at [link]: a friend's Mochi chat, or a conversation at a messaging address. */
+    data class Message(val link: String) : ContactsEvent()
 
     /** The book this screen was showing has gone; go back to all contacts. */
     object BookDeleted : ContactsEvent()
@@ -214,9 +214,9 @@ class ContactsViewModel @Inject constructor(
     // ---------------- contact actions ----------------
 
     fun messageContact(contact: Contact) {
-        if (contact.person.isBlank()) return
+        val link = messageLink(contact) ?: return
         viewModelScope.launch {
-            _events.emit(ContactsEvent.MessagePerson(contact.person, contact.name))
+            _events.emit(ContactsEvent.Message(link))
         }
     }
 
@@ -343,4 +343,16 @@ class ContactsViewModel @Inject constructor(
             }
         }
     }
+}
+
+/**
+ * The chat a contact's Message opens: a friend is messaged on Mochi, anyone
+ * else at the messaging address chat can reach, through the account that
+ * reaches it; null where there is neither.
+ */
+internal fun messageLink(contact: Contact): String? {
+    if (contact.friend && contact.person.isNotBlank()) return "chat/new?friend=${contact.person}"
+    val message = contact.message ?: return null
+    fun encode(value: String) = java.net.URLEncoder.encode(value, Charsets.UTF_8.name())
+    return "chat/new?account=${encode(message.account)}&address=${encode(message.address)}&name=${encode(contact.name)}"
 }

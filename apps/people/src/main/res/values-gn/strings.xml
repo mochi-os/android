@@ -218,4 +218,10 @@
     <string name="people_contact_create">Emoheñói</string>
     <string name="people_sync_permission_reason">Ñembojoja okopia nde angirũnguéra ko pumbyry Contactokuéra app-pe, upévare oikotevẽ jeike nde contactokuérape.</string>
     <string name="people_sync_permission_blocked">Jeike contactokuérape oñembogue ko app-pe g̃uarã. Ikatu remyendy Ñemoneĩkuéra-pe, app ñembohekópe.</string>
+    <string name="people_contact_add_handle">Embojuaju puruhára réra</string>
+    <string name="people_contact_add_messaging">Embojuaju dirección ñe\'ẽmondo peguarã</string>
+    <string name="people_contact_network">Ñanduti</string>
+    <string name="people_contact_xmpp">Jokupyty XMPP</string>
+    <string name="people_person_forums">Forokuéra</string>
+    <string name="people_contact_network_other">Ambue</string>
 </resources>

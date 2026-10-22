@@ -217,4 +217,10 @@
     <string name="people_contact_create">建立</string>
     <string name="people_sync_permission_reason">同步會將你嘅朋友複製到呢部手機嘅「聯絡人」應用程式，所以需要存取你嘅聯絡人。</string>
     <string name="people_sync_permission_blocked">呢個應用程式嘅聯絡人存取權已經關閉。你可以喺應用程式設定嘅「權限」入面開啟。</string>
+    <string name="people_contact_add_handle">加帳號代碼</string>
+    <string name="people_contact_add_messaging">加通訊地址</string>
+    <string name="people_contact_network">網絡</string>
+    <string name="people_contact_xmpp">XMPP 聯絡人</string>
+    <string name="people_person_forums">論壇</string>
+    <string name="people_contact_network_other">其他</string>
 </resources>

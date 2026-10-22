@@ -218,4 +218,10 @@
     <string name="people_contact_create">Létrehozás</string>
     <string name="people_sync_permission_reason">A szinkronizálás átmásolja a barátait ennek a telefonnak a Névjegyek alkalmazásába, ezért hozzáférésre van szüksége a névjegyeihez.</string>
     <string name="people_sync_permission_blocked">A névjegyekhez való hozzáférés ki van kapcsolva ennél az alkalmazásnál. Az alkalmazás beállításaiban, az Engedélyek részben kapcsolhatja be.</string>
+    <string name="people_contact_add_handle">Felhasználónév hozzáadása</string>
+    <string name="people_contact_add_messaging">Üzenetküldési cím hozzáadása</string>
+    <string name="people_contact_network">Hálózat</string>
+    <string name="people_contact_xmpp">XMPP-partner</string>
+    <string name="people_person_forums">Fórumok</string>
+    <string name="people_contact_network_other">Egyéb</string>
 </resources>

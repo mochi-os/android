@@ -218,4 +218,10 @@
     <string name="people_contact_create">Skapa</string>
     <string name="people_sync_permission_reason">Synkroniseringen kopierar dina vänner till appen Kontakter på den här telefonen, så den behöver åtkomst till dina kontakter.</string>
     <string name="people_sync_permission_blocked">Kontaktåtkomst är avstängd för den här appen. Du kan aktivera den under Behörigheter i appens inställningar.</string>
+    <string name="people_contact_add_handle">Lägg till alias</string>
+    <string name="people_contact_add_messaging">Lägg till chattadress</string>
+    <string name="people_contact_network">Nätverk</string>
+    <string name="people_contact_xmpp">XMPP-kontakt</string>
+    <string name="people_person_forums">Forum</string>
+    <string name="people_contact_network_other">Övrigt</string>
 </resources>

@@ -218,4 +218,10 @@
     <string name="people_contact_create">Luo</string>
     <string name="people_sync_permission_reason">Synkronointi kopioi kaverisi tämän puhelimen Yhteystiedot-sovellukseen, joten se tarvitsee pääsyn yhteystietoihisi.</string>
     <string name="people_sync_permission_blocked">Yhteystietojen käyttöoikeus on poissa käytöstä tältä sovellukselta. Voit ottaa sen käyttöön sovelluksen asetusten kohdasta Luvat.</string>
+    <string name="people_contact_add_handle">Lisää käyttäjätunnus</string>
+    <string name="people_contact_add_messaging">Lisää pikaviestiosoite</string>
+    <string name="people_contact_network">Verkko</string>
+    <string name="people_contact_xmpp">XMPP-yhteystieto</string>
+    <string name="people_person_forums">Foorumit</string>
+    <string name="people_contact_network_other">Muu</string>
 </resources>

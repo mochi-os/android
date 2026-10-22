@@ -218,4 +218,10 @@
     <string name="people_contact_create">بنائیں</string>
     <string name="people_sync_permission_reason">سنک کرنے سے آپ کے دوست اس فون کی روابط ایپ میں کاپی ہو جاتے ہیں، اس لیے اسے آپ کے روابط تک رسائی درکار ہے۔</string>
     <string name="people_sync_permission_blocked">اس ایپ کے لیے روابط تک رسائی بند ہے۔ آپ اسے ایپ کی سیٹنگز میں اجازتیں کے تحت آن کر سکتے ہیں۔</string>
+    <string name="people_contact_add_handle">ہینڈل شامل کریں</string>
+    <string name="people_contact_add_messaging">پیغام رسانی کا پتہ شامل کریں</string>
+    <string name="people_contact_network">نیٹ ورک</string>
+    <string name="people_contact_xmpp">XMPP رابطہ</string>
+    <string name="people_person_forums">فورمز</string>
+    <string name="people_contact_network_other">دیگر</string>
 </resources>

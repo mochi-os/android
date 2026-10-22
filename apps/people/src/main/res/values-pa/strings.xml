@@ -218,4 +218,10 @@
     <string name="people_contact_create">ਬਣਾਓ</string>
     <string name="people_sync_permission_reason">ਸਿੰਕ ਕਰਨ ਨਾਲ ਤੁਹਾਡੇ ਦੋਸਤ ਇਸ ਫ਼ੋਨ ਦੀ ਸੰਪਰਕ ਐਪ ਵਿੱਚ ਕਾਪੀ ਹੋ ਜਾਂਦੇ ਹਨ, ਇਸ ਲਈ ਇਸ ਨੂੰ ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਤੱਕ ਪਹੁੰਚ ਦੀ ਲੋੜ ਹੈ।</string>
     <string name="people_sync_permission_blocked">ਇਸ ਐਪ ਲਈ ਸੰਪਰਕਾਂ ਤੱਕ ਪਹੁੰਚ ਬੰਦ ਹੈ। ਤੁਸੀਂ ਇਸ ਨੂੰ ਐਪ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤਾਂ ਹੇਠਾਂ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।</string>
+    <string name="people_contact_add_handle">ਉਪਭੋਗਤਾ ਨਾਮ ਜੋੜੋ</string>
+    <string name="people_contact_add_messaging">ਮੈਸੇਜਿੰਗ ਪਤਾ ਜੋੜੋ</string>
+    <string name="people_contact_network">ਨੈੱਟਵਰਕ</string>
+    <string name="people_contact_xmpp">XMPP ਸੰਪਰਕ</string>
+    <string name="people_person_forums">ਫੋਰਮ</string>
+    <string name="people_contact_network_other">ਹੋਰ</string>
 </resources>

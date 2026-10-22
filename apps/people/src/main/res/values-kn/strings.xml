@@ -218,4 +218,10 @@
     <string name="people_contact_create">ರಚಿಸಿ</string>
     <string name="people_sync_permission_reason">ಸಿಂಕ್ ಮಾಡುವಿಕೆಯು ನಿಮ್ಮ ಸ್ನೇಹಿತರನ್ನು ಈ ಫೋನ್‌ನ ಸಂಪರ್ಕಗಳು ಆ್ಯಪ್‌ಗೆ ನಕಲಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಅದಕ್ಕೆ ನಿಮ್ಮ ಸಂಪರ್ಕಗಳಿಗೆ ಪ್ರವೇಶದ ಅಗತ್ಯವಿದೆ.</string>
     <string name="people_sync_permission_blocked">ಈ ಆ್ಯಪ್‌ಗೆ ಸಂಪರ್ಕಗಳ ಪ್ರವೇಶವನ್ನು ಆಫ್ ಮಾಡಲಾಗಿದೆ. ಆ್ಯಪ್‌ನ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಅನುಮತಿಗಳು ಎಂಬಲ್ಲಿ ನೀವು ಅದನ್ನು ಆನ್ ಮಾಡಬಹುದು.</string>
+    <string name="people_contact_add_handle">ಬಳಕೆದಾರಹೆಸರು ಸೇರಿಸಿ</string>
+    <string name="people_contact_add_messaging">ಮೆಸೇಜಿಂಗ್ ವಿಳಾಸ ಸೇರಿಸಿ</string>
+    <string name="people_contact_network">ನೆಟ್‌ವರ್ಕ್</string>
+    <string name="people_contact_xmpp">XMPP ಸಂಪರ್ಕ</string>
+    <string name="people_person_forums">ಫೋರಂಗಳು</string>
+    <string name="people_contact_network_other">ಇತರ</string>
 </resources>

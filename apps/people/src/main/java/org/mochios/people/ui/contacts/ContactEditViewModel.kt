@@ -22,9 +22,11 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.sync.ContactProperty
 import org.mochios.android.util.NaturalCompare
+import org.mochios.people.api.HandleLookup
 import org.mochios.people.api.MergeSource
 import org.mochios.people.model.Book
 import org.mochios.people.model.Contact
+import org.mochios.people.model.XmppContact
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
 
@@ -68,6 +70,12 @@ data class ContactEditUiState(
     val mergePending: String? = null,
     /** Why the list or the merge could not be read, shown in the list. */
     val mergeError: MochiError? = null,
+
+    /**
+     * What the networks show of the handles on the card, by handle as typed;
+     * one the network does not answer for is absent.
+     */
+    val handles: Map<String, HandleLookup> = emptyMap(),
 )
 
 /** What the server holds, as the form writes it: the line a change is measured from. */
@@ -122,6 +130,8 @@ class ContactEditViewModel @Inject constructor(
     private var pause: Job? = null
     /** Counts the saves made, so a read begun before one lands is not taken over it. */
     private var writes = 0
+    /** The handles already asked of their networks. */
+    private val asked = mutableSetOf<String>()
 
     init {
         if (creating && source.isNotBlank()) {
@@ -212,6 +222,43 @@ class ContactEditViewModel @Inject constructor(
         val contact = _uiState.value.contact ?: return
         if (contact.person.isBlank() || contact.friend) return
         toggle { repository.inviteFriend(contact.person, contact.directory.ifBlank { contact.name }) }
+    }
+
+    /**
+     * An XMPP switch: on invites the address through the account, or accepts
+     * its request; off withdraws the invitation or ends the contact there.
+     */
+    fun toggleXmpp(entry: XmppContact, on: Boolean) {
+        val contact = _uiState.value.contact ?: return
+        val person = "xmpp:" + entry.address
+        toggle {
+            if (on) {
+                repository.inviteFriend(person, contact.name, account = entry.account)
+            } else {
+                repository.removeFriend(person, entry.account)
+            }
+        }
+    }
+
+    /**
+     * Asks the network what it shows of [handle], once each: a typo shows as
+     * no one before the card is saved. Too short a handle, or one with a space
+     * in it, is not asked.
+     */
+    fun lookup(handle: String) {
+        val key = handle.trim()
+        if (key.length <= 3 || ' ' in key || !asked.add(key)) return
+        viewModelScope.launch {
+            try {
+                val found = repository.lookupHandle(key)
+                if (found.name.isNotBlank() || found.address.isNotBlank()) {
+                    _uiState.value = _uiState.value.copy(handles = _uiState.value.handles + (key to found))
+                }
+            } catch (_: Exception) {
+                // Asked again the next time it is typed.
+                asked.remove(key)
+            }
+        }
     }
 
     /** The friend switch turned off while the invitation is out: cancel it. */
@@ -305,6 +352,7 @@ class ContactEditViewModel @Inject constructor(
                 etag = etag,
                 properties = properties,
                 book = form.book.ifBlank { null },
+                managed = MANAGED,
             )
             writes++
             etag = contact.etag
@@ -358,6 +406,7 @@ class ContactEditViewModel @Inject constructor(
                     properties = state.form.properties(),
                     book = state.form.book.ifBlank { null },
                     source = source.ifBlank { null },
+                    managed = MANAGED,
                 )
                 _uiState.value = _uiState.value.copy(isSaving = false, left = true)
             } catch (e: Exception) {

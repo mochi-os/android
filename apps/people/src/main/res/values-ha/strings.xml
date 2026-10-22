@@ -218,4 +218,10 @@
     <string name="people_contact_create">Ƙirƙira</string>
     <string name="people_sync_permission_reason">Daidaitawa na kwafa abokanka zuwa manhajar Lambobin sadarwa ta wannan wayar, don haka tana buƙatar samun damar shiga lambobin sadarwarka.</string>
     <string name="people_sync_permission_blocked">An kashe damar shiga lambobin sadarwa don wannan manhajar. Za ka iya kunna ta a ƙarƙashin Izini a saitunan manhajar.</string>
+    <string name="people_contact_add_handle">Ƙara sunan mai amfani</string>
+    <string name="people_contact_add_messaging">Ƙara adireshin aika saƙo</string>
+    <string name="people_contact_network">Hanyar sadarwa</string>
+    <string name="people_contact_xmpp">Abokin hulɗa na XMPP</string>
+    <string name="people_person_forums">Tarurruka</string>
+    <string name="people_contact_network_other">Sauran</string>
 </resources>

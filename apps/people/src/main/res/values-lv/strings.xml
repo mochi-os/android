@@ -219,4 +219,10 @@
     <string name="people_contact_create">Izveidot</string>
     <string name="people_sync_permission_reason">Sinhronizācija kopē jūsu draugus šī tālruņa lietotnē Kontakti, tāpēc tai nepieciešama piekļuve jūsu kontaktiem.</string>
     <string name="people_sync_permission_blocked">Piekļuve kontaktiem šai lietotnei ir izslēgta. Varat to ieslēgt lietotnes iestatījumu sadaļā Atļaujas.</string>
+    <string name="people_contact_add_handle">Pievienot lietotājvārdu</string>
+    <string name="people_contact_add_messaging">Pievienot ziņapmaiņas adresi</string>
+    <string name="people_contact_network">Tīkls</string>
+    <string name="people_contact_xmpp">XMPP kontakts</string>
+    <string name="people_person_forums">Forumi</string>
+    <string name="people_contact_network_other">Cits</string>
 </resources>

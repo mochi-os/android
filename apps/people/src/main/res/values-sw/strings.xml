@@ -218,4 +218,10 @@
     <string name="people_contact_create">Unda</string>
     <string name="people_sync_permission_reason">Kusawazisha kunanakili marafiki zako kwenye programu ya Anwani ya simu hii, kwa hivyo kunahitaji ufikiaji wa anwani zako.</string>
     <string name="people_sync_permission_blocked">Ufikiaji wa anwani umezimwa kwa programu hii. Unaweza kuuwasha chini ya Ruhusa katika mipangilio ya programu.</string>
+    <string name="people_contact_add_handle">Ongeza jina la utani</string>
+    <string name="people_contact_add_messaging">Ongeza anwani ya ujumbe</string>
+    <string name="people_contact_network">Mtandao</string>
+    <string name="people_contact_xmpp">Mwasiliani wa XMPP</string>
+    <string name="people_person_forums">Majukwaa</string>
+    <string name="people_contact_network_other">Nyingine</string>
 </resources>

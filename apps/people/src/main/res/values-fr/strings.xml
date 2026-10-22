@@ -218,4 +218,10 @@
     <string name="people_contact_create">Créer</string>
     <string name="people_sync_permission_reason">La synchronisation copie vos amis dans l\'application Contacts de ce téléphone, elle a donc besoin d\'accéder à vos contacts.</string>
     <string name="people_sync_permission_blocked">L\'accès aux contacts est désactivé pour cette application. Vous pouvez l\'activer sous Autorisations dans les paramètres de l\'application.</string>
+    <string name="people_contact_add_handle">Ajouter un identifiant</string>
+    <string name="people_contact_add_messaging">Ajouter une adresse de messagerie</string>
+    <string name="people_contact_network">Réseau</string>
+    <string name="people_contact_xmpp">Contact XMPP</string>
+    <string name="people_person_forums">Forums</string>
+    <string name="people_contact_network_other">Autre</string>
 </resources>

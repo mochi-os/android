@@ -23,6 +23,8 @@ import org.mochios.people.api.ContactRequest
 import org.mochios.people.api.ContactUpdateRequest
 import org.mochios.people.api.MergeSource
 import org.mochios.people.api.ContactsListResponse
+import org.mochios.people.api.HandleLookup
+import org.mochios.people.api.SearchUsersResponse
 import org.mochios.people.api.PeopleApi
 import org.mochios.people.api.PreferenceResponse
 import org.mochios.people.api.WelcomeResponse
@@ -92,9 +94,10 @@ class PeopleRepository @Inject constructor(
         person: String? = null,
         book: String? = null,
         source: String? = null,
+        managed: List<String>? = null,
     ): Contact {
         val contact = api.createContact(
-            ContactRequest(properties, person, book, source = source),
+            ContactRequest(properties, person, book, source = source, managed = managed),
         ).unwrap().contact
         notifyChanged()
         return contact
@@ -110,9 +113,10 @@ class PeopleRepository @Inject constructor(
         properties: List<ContactProperty>? = null,
         book: String? = null,
         source: MergeSource? = null,
+        managed: List<String>? = null,
     ): Contact {
         val updated = api.updateContact(
-            ContactUpdateRequest(contact, etag, properties, book, source),
+            ContactUpdateRequest(contact, etag, properties, book, source, managed),
         ).unwrap().contact
         notifyChanged()
         return updated
@@ -126,6 +130,14 @@ class PeopleRepository @Inject constructor(
 
     suspend fun searchDirectory(query: String): List<User> =
         api.searchDirectory(query).unwrap().results
+
+    /** The directory's people for [query], and those on other networks the user's accounts find. */
+    suspend fun searchPeople(query: String): SearchUsersResponse =
+        api.searchDirectory(query).unwrap()
+
+    /** What a network shows of [handle]: the person's name, avatar, page and address. */
+    suspend fun lookupHandle(handle: String): HandleLookup =
+        api.lookupHandle(handle).unwrap()
 
     // ---- Address books ----
 
@@ -199,8 +211,9 @@ class PeopleRepository @Inject constructor(
         name: String,
         contact: String? = null,
         book: String? = null,
+        account: String? = null,
     ) {
-        api.inviteFriend(person, name, contact, book).unwrap()
+        api.inviteFriend(person, name, contact, book, account).unwrap()
         notifyChanged()
     }
 
@@ -215,8 +228,8 @@ class PeopleRepository @Inject constructor(
     }
 
     /** Ends the friendship and keeps the contact. */
-    suspend fun removeFriend(person: String) {
-        api.removeFriend(person).unwrap()
+    suspend fun removeFriend(person: String, account: String? = null) {
+        api.removeFriend(person, account).unwrap()
         notifyChanged()
     }
 

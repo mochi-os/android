@@ -219,4 +219,10 @@
     <string name="people_contact_create">Vytvoriť</string>
     <string name="people_sync_permission_reason">Synchronizácia kopíruje vašich priateľov do aplikácie Kontakty v tomto telefóne, preto potrebuje prístup k vašim kontaktom.</string>
     <string name="people_sync_permission_blocked">Prístup ku kontaktom je pre túto aplikáciu vypnutý. Môžete ho zapnúť v sekcii Povolenia v nastaveniach aplikácie.</string>
+    <string name="people_contact_add_handle">Pridať prezývku</string>
+    <string name="people_contact_add_messaging">Pridať adresu komunikátora</string>
+    <string name="people_contact_network">Sieť</string>
+    <string name="people_contact_xmpp">Kontakt XMPP</string>
+    <string name="people_person_forums">Fóra</string>
+    <string name="people_contact_network_other">Iná</string>
 </resources>

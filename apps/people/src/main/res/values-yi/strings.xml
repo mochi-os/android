@@ -218,4 +218,10 @@
     <string name="people_contact_create">באַשאַפֿן</string>
     <string name="people_sync_permission_reason">סינכראָניזירן קאָפּירט אײַערע חברים אין דעם טעלעפֿאָנס קאָנטאַקטן־אַפּ, דערפֿאַר דאַרף עס צוטריט צו אײַערע קאָנטאַקטן.</string>
     <string name="people_sync_permission_blocked">קאָנטאַקטן־צוטריט איז אױסגעשאַלט פֿאַר דער דאָזיקער אַפּ. איר קענט אים אײַנשאַלטן אונטער דערלויבענישן אין די אײַנשטעלונגען פֿון דער אַפּ.</string>
+    <string name="people_contact_add_handle">צולייגן צונאָמען</string>
+    <string name="people_contact_add_messaging">צולייגן מעסעדזש־אַדרעס</string>
+    <string name="people_contact_network">נעץ</string>
+    <string name="people_contact_xmpp">XMPP־קאָנטאַקט</string>
+    <string name="people_person_forums">פֿאָרומס</string>
+    <string name="people_contact_network_other">אַנדער</string>
 </resources>

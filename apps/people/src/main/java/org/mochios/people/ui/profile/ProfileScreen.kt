@@ -98,6 +98,7 @@ import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.UploadRing
 import org.mochios.android.ui.components.parseHexColour
 import org.mochios.people.R
+import org.mochios.people.ui.person.ProfileNetworks
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.ui.components.PeopleDrawer
 import org.mochios.people.ui.components.PeopleDrawerNavigation
@@ -110,6 +111,8 @@ import org.mochios.people.ui.router.RememberPeopleSection
 fun ProfileScreen(
     drawer: PeopleDrawerNavigation,
     @Suppress("unused") onOpenNotifications: () -> Unit,
+    /** Opens a link in the app: a forum post from the user's history. */
+    onOpenLink: (String) -> Unit = {},
     viewModel: ProfileViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
@@ -177,6 +180,10 @@ fun ProfileScreen(
         ProfilePreviewDialog(
             state = state,
             onDismiss = { showPreview = false },
+            onOpenLink = { link ->
+                showPreview = false
+                onOpenLink(link)
+            },
         )
     }
 }
@@ -764,9 +771,10 @@ private fun PrivacySection(
 }
 
 @Composable
-private fun ProfilePreviewDialog(
+internal fun ProfilePreviewDialog(
     state: ProfileUiState,
     onDismiss: () -> Unit,
+    onOpenLink: (String) -> Unit,
 ) {
     val info = state.info ?: return
     val accent = state.accentDraft.trim().takeIf { ProfileViewModel.ACCENT_PATTERN.matches(it) }
@@ -856,6 +864,8 @@ private fun ProfilePreviewDialog(
                         }
                         Spacer(Modifier.height(24.dp))
                     }
+
+                    ProfileNetworks(accounts = info.accounts, history = info.history, onOpenLink = onOpenLink)
                 }
 
                 // ---- Close button (top-right X) ----

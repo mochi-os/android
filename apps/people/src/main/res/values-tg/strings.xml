@@ -218,4 +218,10 @@
     <string name="people_contact_create">Эҷод кардан</string>
     <string name="people_sync_permission_reason">Ҳамоҳангсозӣ дӯстони шуморо ба барномаи Тамосҳои ин телефон нусхабардорӣ мекунад, бинобар ин ба тамосҳои шумо дастрасӣ лозим аст.</string>
     <string name="people_sync_permission_blocked">Дастрасӣ ба тамосҳо барои ин барнома хомӯш аст. Шумо метавонед онро дар бахши Иҷозатҳо дар танзимоти барнома фаъол кунед.</string>
+    <string name="people_contact_add_handle">Илова кардани тахаллус</string>
+    <string name="people_contact_add_messaging">Илова кардани суроғаи паёмрасон</string>
+    <string name="people_contact_network">Шабака</string>
+    <string name="people_contact_xmpp">Тамоси XMPP</string>
+    <string name="people_person_forums">Форумҳо</string>
+    <string name="people_contact_network_other">Дигар</string>
 </resources>

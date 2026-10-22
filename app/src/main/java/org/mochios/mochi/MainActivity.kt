@@ -34,6 +34,7 @@ import org.mochios.android.auth.OAuthReturnKind
 import org.mochios.android.auth.oauthReturnKind
 import org.mochios.android.auth.shouldAcceptOAuthReturn
 import org.mochios.android.util.entityDeepLink
+import org.mochios.android.util.followLink
 import org.mochios.android.util.holds
 import org.mochios.android.util.isAt
 import org.mochios.android.util.openInPlace
@@ -701,7 +702,10 @@ open class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun navigateToLink(navController: NavController, link: String) {
+    private fun navigateToLink(navController: NavController, link: String) =
+        followLink(this, link) { path -> route(navController, path) }
+
+    private fun route(navController: NavController, link: String) {
         // Split off an optional query string before path tokenisation so links
         // like "chat/new?friend=<id>" survive intact for the matcher below.
         val pathAndQuery = link.trimStart('/').split('?', limit = 2)

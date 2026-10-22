@@ -218,4 +218,10 @@
     <string name="people_contact_create">Erstellen</string>
     <string name="people_sync_permission_reason">Die Synchronisierung kopiert Ihre Freunde in die Kontakte-App dieses Telefons und benötigt daher Zugriff auf Ihre Kontakte.</string>
     <string name="people_sync_permission_blocked">Der Zugriff auf Kontakte ist für diese App deaktiviert. Sie können ihn in den Einstellungen der App unter „Berechtigungen“ aktivieren.</string>
+    <string name="people_contact_add_handle">Handle hinzufügen</string>
+    <string name="people_contact_add_messaging">Chatadresse hinzufügen</string>
+    <string name="people_contact_network">Netzwerk</string>
+    <string name="people_contact_xmpp">XMPP-Kontakt</string>
+    <string name="people_person_forums">Foren</string>
+    <string name="people_contact_network_other">Anderes</string>
 </resources>

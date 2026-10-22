@@ -326,13 +326,23 @@ private fun LazyListScope.sentItems(
 /**
  * The line under a received invite's name: the name and photo are the sender's
  * own claim, the fingerprint and the directory's name are what an impersonator
- * cannot copy. The directory's name shows only where it differs.
+ * cannot copy. The directory's name shows only where it differs. A request on
+ * XMPP is known by its address.
  */
 internal fun receivedDetail(invite: FriendInvite, listed: (String) -> String): String {
+    if (invite.address.isNotEmpty()) return invite.address
     val fingerprint = formatFingerprint(invite.fingerprint)
     if (invite.directory.isEmpty() || invite.directory == invite.name) return fingerprint
     return listOf(fingerprint, listed(invite.directory)).filter { it.isNotEmpty() }.joinToString(" · ")
 }
+
+/** The line under a sent invite's name: that it waits, and on XMPP the address it went to. */
+internal fun sentDetail(invite: FriendInvite, pending: String): String =
+    if (invite.address.isEmpty()) pending else "$pending · ${invite.address}"
+
+/** An invite's avatar: a Mochi person's own; someone on XMPP has none here. */
+internal fun inviteAvatar(invite: FriendInvite): String? =
+    if (invite.address.isEmpty()) avatarUrl(invite.id) else null
 
 @Composable
 private fun ReceivedRow(
@@ -340,7 +350,7 @@ private fun ReceivedRow(
     onAccept: () -> Unit,
     onDecline: () -> Unit,
 ) {
-    val avatarSrc = avatarUrl(invite.id)
+    val avatarSrc = inviteAvatar(invite)
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -391,7 +401,7 @@ private fun SentRow(
     invite: FriendInvite,
     onCancel: () -> Unit,
 ) {
-    val avatarSrc = avatarUrl(invite.id)
+    val avatarSrc = inviteAvatar(invite)
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -412,7 +422,7 @@ private fun SentRow(
                 fontWeight = FontWeight.Medium,
             )
             Text(
-                text = stringResource(R.string.people_friends_pending),
+                text = sentDetail(invite, stringResource(R.string.people_friends_pending)),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

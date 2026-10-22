@@ -218,4 +218,10 @@
     <string name="people_contact_create">তৈরি করুন</string>
     <string name="people_sync_permission_reason">সিঙ্ক করলে আপনার বন্ধুরা এই ফোনের পরিচিতি অ্যাপে কপি হয়, তাই এর জন্য আপনার পরিচিতিতে অ্যাক্সেস প্রয়োজন।</string>
     <string name="people_sync_permission_blocked">এই অ্যাপের জন্য পরিচিতি অ্যাক্সেস বন্ধ করা আছে। আপনি অ্যাপের সেটিংসে অনুমতি বিভাগে এটি চালু করতে পারেন।</string>
+    <string name="people_contact_add_handle">হ্যান্ডেল যোগ করুন</string>
+    <string name="people_contact_add_messaging">মেসেজিং ঠিকানা যোগ করুন</string>
+    <string name="people_contact_network">নেটওয়ার্ক</string>
+    <string name="people_contact_xmpp">XMPP পরিচিতি</string>
+    <string name="people_person_forums">ফোরামসমূহ</string>
+    <string name="people_contact_network_other">অন্যান্য</string>
 </resources>
