@@ -16,7 +16,15 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
+import org.mochios.android.api.userMessage
+import org.mochios.android.i18n.AppContext
+import org.mochios.settings.R
 import org.mochios.settings.api.NetworkInfo
+import org.mochios.settings.api.NetworksApi
+import org.mochios.settings.api.SystemNetworks
 import org.mochios.settings.api.PeerEntry
 import org.mochios.settings.api.ServerCounts
 import org.mochios.settings.api.SystemStatusApi
@@ -37,6 +45,10 @@ data class SystemStatusUiState(
     val peers: List<PeerEntry> = emptyList(),
     val network: NetworkInfo? = null,
     val counts: ServerCounts? = null,
+    /** The other networks' states, shown only while the server offers them. */
+    val networks: SystemNetworks? = null,
+    /** The Matrix domain whose server key is being replaced. */
+    val replacing: String? = null,
     val error: MochiError? = null,
     val installError: MochiError? = null,
 )
@@ -44,6 +56,7 @@ data class SystemStatusUiState(
 @HiltViewModel
 class SystemStatusViewModel @Inject constructor(
     private val api: SystemStatusApi,
+    private val networksApi: NetworksApi,
     stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
 
@@ -57,6 +70,10 @@ class SystemStatusViewModel @Inject constructor(
         scope = viewModelScope,
         onError = { e -> _uiState.value = _uiState.value.copy(installError = e.toMochiError()) },
     )
+
+    private val _messages = MutableSharedFlow<String>(extraBufferCapacity = 4)
+    /** Outcomes to show the user once. */
+    val messages: SharedFlow<String> = _messages.asSharedFlow()
 
     init { refresh() }
 
@@ -81,8 +98,16 @@ class SystemStatusViewModel @Inject constructor(
                 } catch (_: Exception) {
                     null
                 }
+                // The other networks are optional too: a server before them
+                // has no such endpoint.
+                val networks = try {
+                    networksApi.system().bodyOrNull()
+                } catch (_: Exception) {
+                    null
+                }
                 _uiState.value = SystemStatusUiState(
                     isLoading = false,
+                    networks = networks,
                     serverVersion = version,
                     serverStarted = started,
                     serverPeerId = settingsData.server.id,
@@ -113,6 +138,36 @@ class SystemStatusViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(isInstalling = false, update = update)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isInstalling = false, installError = e.toMochiError())
+            }
+        }
+    }
+
+    /**
+     * Replace a Matrix domain's signing key: other servers fetch the new one,
+     * and what the old one signed stays valid. Step-up gated, as on the web.
+     */
+    fun replaceServerKey(domain: String) {
+        stepUp.request { token ->
+            _uiState.value = _uiState.value.copy(replacing = domain)
+            try {
+                networksApi.replaceServerKey(domain, token).unwrapEmpty()
+                _messages.emit(AppContext.get().getString(R.string.system_status_key_replaced))
+                val networks = try {
+                    networksApi.system().bodyOrNull()
+                } catch (_: Exception) {
+                    _uiState.value.networks
+                }
+                _uiState.value = _uiState.value.copy(replacing = null, networks = networks)
+            } catch (e: Exception) {
+                val error = e.toMochiError()
+                _uiState.value = _uiState.value.copy(replacing = null)
+                _messages.emit(
+                    if (error is MochiError.Unknown) {
+                        error.message ?: AppContext.get().getString(R.string.system_status_key_failed)
+                    } else {
+                        error.userMessage()
+                    },
+                )
             }
         }
     }

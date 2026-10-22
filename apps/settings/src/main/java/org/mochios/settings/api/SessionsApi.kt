@@ -27,7 +27,34 @@ data class Session(
     val current: Boolean = false,
 )
 
-data class SessionsResponse(val sessions: List<Session> = emptyList())
+/** The app a sign-in by another network's app came from. */
+data class TokenClient(
+    val id: String = "",
+    val name: String = "",
+    val website: String = "",
+)
+
+/**
+ * A sign-in by another network's app, or a password minted for one, with the
+ * account it is for.
+ */
+data class OtherToken(
+    val hash: String = "",
+    val name: String = "",
+    val created: Long = 0,
+    val used: Long = 0,
+    val kind: String = "",
+    val client: TokenClient = TokenClient(),
+    val address: String = "",
+    val network: String = "",
+    val device: String = "",
+)
+
+data class SessionsResponse(
+    val sessions: List<Session> = emptyList(),
+    val signins: List<OtherToken> = emptyList(),
+    val passwords: List<OtherToken> = emptyList(),
+)
 
 interface SessionsApi {
     @GET("settings/-/user/account/sessions")
@@ -36,6 +63,10 @@ interface SessionsApi {
     @FormUrlEncoded
     @POST("settings/-/user/account/session/revoke")
     suspend fun revokeSession(@Field("id") id: String): Response<OkResponse>
+
+    @FormUrlEncoded
+    @POST("settings/-/user/account/token/revoke")
+    suspend fun revokeToken(@Field("hash") hash: String): Response<OkResponse>
 }
 
 @Module

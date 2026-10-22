@@ -328,4 +328,6 @@
     <string name="accounts_provider_url">Externe URL</string>
     <string name="accounts_provider_web">Mochi Web</string>
     <string name="account_data_generate">Passphrase generieren</string>
+    <string name="networks_connected">Verbunden</string>
+    <string name="networks_address">Adresse</string>
 </resources>

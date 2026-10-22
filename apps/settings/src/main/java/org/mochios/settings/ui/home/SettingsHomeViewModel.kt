@@ -13,21 +13,25 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.settings.api.DomainsApi
+import org.mochios.settings.api.NetworksApi
 import javax.inject.Inject
 
 /**
  * Home menu gating: System is administrator-only, Domains needs administrator
- * or a delegation (web's `useFilteredSidebarData`). Both come from the domains
- * endpoint.
+ * or a delegation (web's `useFilteredSidebarData`); both come from the domains
+ * endpoint. Networks, and the owner's Handles, need a server that offers other
+ * networks, which the Networks data says.
  */
 data class SettingsHomeUiState(
     val isAdmin: Boolean = false,
     val hasDomainAccess: Boolean = false,
+    val hasNetworks: Boolean = false,
 )
 
 @HiltViewModel
 class SettingsHomeViewModel @Inject constructor(
     private val domainsApi: DomainsApi,
+    private val networksApi: NetworksApi,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(SettingsHomeUiState())
@@ -59,10 +63,17 @@ class SettingsHomeViewModel @Inject constructor(
                 val resp = domainsApi.getDomains()
                 val data = resp.body()
                 if (resp.isSuccessful && data != null) {
-                    _state.value = SettingsHomeUiState(
+                    _state.value = _state.value.copy(
                         isAdmin = data.admin,
                         hasDomainAccess = data.admin || (data.delegations?.isNotEmpty() == true),
                     )
+                }
+            }
+            runCatching {
+                val resp = networksApi.data()
+                val data = resp.body()
+                if (resp.isSuccessful && data != null) {
+                    _state.value = _state.value.copy(hasNetworks = data.offered)
                 }
             }
         }
