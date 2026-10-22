@@ -25,12 +25,17 @@ import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
+import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
 import org.mochios.feeds.ui.component.applied
+import org.mochios.feeds.ui.component.boostedFrom
+import org.mochios.feeds.ui.component.hostedFediverse
+import org.mochios.feeds.ui.component.repliesElsewhere
 
 @HiltViewModel
 class PostDetailViewModel @Inject constructor(
@@ -92,6 +97,25 @@ class PostDetailViewModel @Inject constructor(
     private val _actionError = MutableStateFlow<MochiError?>(null)
     val actionError: StateFlow<MochiError?> = _actionError.asStateFlow()
 
+    /** What an action that worked says, as a string resource. */
+    private val _actionMessage = MutableStateFlow<Int?>(null)
+    val actionMessage: StateFlow<Int?> = _actionMessage.asStateFlow()
+
+    /**
+     * The user's hosted fediverse accounts, read once a post with a copy there
+     * or from there is shown: a comment may go out from one, and a boost is
+     * made from the first.
+     */
+    private val _hosted = MutableStateFlow<List<PublishAccount>>(emptyList())
+    val hosted: StateFlow<List<PublishAccount>> = _hosted.asStateFlow()
+
+    /** The hosted account a comment also goes out from; empty for none. */
+    private val _replyFrom = MutableStateFlow("")
+    val replyFrom: StateFlow<String> = _replyFrom.asStateFlow()
+
+    private val _voting = MutableStateFlow(false)
+    val voting: StateFlow<Boolean> = _voting.asStateFlow()
+
     // The viewer's own entity id, so comment items can offer edit/delete on the
     // viewer's own comments. Resolved once from the bound session identity.
     private val _currentUserId = MutableStateFlow<String?>(null)
@@ -119,6 +143,7 @@ class PostDetailViewModel @Inject constructor(
                 _post.value = result.post
                 _permissions.value = result.permissions
                 loadTags()
+                loadHosted(result.post)
             } catch (e: Exception) {
                 ensureActive()
                 val err = e.toMochiError()
@@ -207,6 +232,7 @@ class PostDetailViewModel @Inject constructor(
                         context = application,
                         attachment = anchor,
                         tracker = commentTracker,
+                        account = _replyFrom.value,
                     )
                     _commentText.value = ""
                     _commentAttachments.value = emptyList()
@@ -345,6 +371,92 @@ class PostDetailViewModel @Inject constructor(
         _actionError.value = null
     }
 
+    fun clearActionMessage() {
+        _actionMessage.value = null
+    }
+
+    fun setReplyFrom(account: String) {
+        _replyFrom.value = account
+    }
+
+    private fun loadHosted(post: Post) {
+        if (!repliesElsewhere(post) || _hosted.value.isNotEmpty()) return
+        viewModelScope.launch {
+            try {
+                _hosted.value = hostedFediverse(repository.networkAccounts())
+            } catch (_: Exception) {
+                // Without them the post simply offers no account to reply from.
+            }
+        }
+    }
+
+    /** Vote in the post's poll; the poll as recounted replaces the one shown. */
+    fun vote(options: List<Int>) {
+        if (_voting.value || options.isEmpty()) return
+        _voting.value = true
+        viewModelScope.launch {
+            try {
+                val (poll, voted) = repository.votePoll(feedId, postId, options)
+                _post.value = _post.value?.let { current ->
+                    current.copy(
+                        voted = voted.ifEmpty { options },
+                        data = poll?.let { current.data?.copy(poll = it) } ?: current.data,
+                    )
+                }
+            } catch (e: Exception) {
+                _actionError.value = e.toMochiError()
+            } finally {
+                _voting.value = false
+            }
+        }
+    }
+
+    /** Pin the post of the owner's feed, or unpin it. */
+    fun togglePin() {
+        val current = _post.value ?: return
+        viewModelScope.launch {
+            try {
+                val pinned = repository.pinPost(feedId, postId, current.pinned <= 0)
+                _post.value = _post.value?.copy(pinned = pinned)
+                _actionMessage.value = if (pinned > 0) R.string.feeds_post_pinned else R.string.feeds_post_unpinned
+            } catch (e: Exception) {
+                _actionError.value = e.toMochiError()
+            }
+        }
+    }
+
+    /** Boost the post from another network from the first hosted account, or take the boost back. */
+    fun toggleBoost() {
+        val current = _post.value ?: return
+        val account = _hosted.value.firstOrNull() ?: return
+        val boosted = boostedFrom(current, account)
+        viewModelScope.launch {
+            try {
+                val copies = repository.boostPost(feedId, postId, account.id, !boosted)
+                _post.value = _post.value?.copy(copies = copies)
+                _actionMessage.value = if (boosted) R.string.feeds_boost_taken_back else R.string.feeds_boosted
+            } catch (e: Exception) {
+                _actionError.value = e.toMochiError()
+            }
+        }
+    }
+
+    /** Block, mute or report the person on another network behind a comment. */
+    fun moderate(commentId: String, action: String, reason: String = "") {
+        viewModelScope.launch {
+            try {
+                repository.moderateCommenter(feedId, postId, commentId, action, reason.trim())
+                _actionMessage.value = when (action) {
+                    "block" -> R.string.feeds_commenter_blocked
+                    "mute" -> R.string.feeds_commenter_muted
+                    else -> R.string.feeds_commenter_reported
+                }
+            } catch (e: Exception) {
+                _actionError.value = e.toMochiError()
+            }
+        }
+    }
+
     suspend fun searchMembers(query: String): List<org.mochios.android.ui.components.MentionSuggestion> {
         return try {
             repository.searchMembers(feedId, query).map {
@@ -388,6 +500,7 @@ class PostDetailViewModel @Inject constructor(
             val result = repository.getPost(feedId, postId)
             _post.value = result.post
             _permissions.value = result.permissions
+            loadHosted(result.post)
         } catch (_: Exception) {
             // Silent refresh
         }

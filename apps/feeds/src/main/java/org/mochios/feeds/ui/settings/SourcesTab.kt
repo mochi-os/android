@@ -25,7 +25,11 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.automirrored.outlined.ViewList
+import androidx.compose.material.icons.outlined.AlternateEmail
 import androidx.compose.material.icons.outlined.CalendarMonth
+import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.Tag
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Link
@@ -71,7 +75,10 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.mochiDialogCardColors
 import org.mochios.feeds.R
+import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Source
+import org.mochios.feeds.ui.component.hostedFediverse
+import org.mochios.android.util.NaturalCompare
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.R as MochiR
@@ -93,6 +100,9 @@ fun SourcesTab(
     val addSourceError by viewModel.addSourceError.collectAsState()
     val isAddingSource by viewModel.isAddingSource.collectAsState()
     val isSavingSource by viewModel.isSavingSource.collectAsState()
+    val publishAccounts by viewModel.publishAccounts.collectAsState()
+    val networkAccounts by viewModel.networkAccounts.collectAsState()
+    LaunchedEffect(Unit) { viewModel.loadSourceAccounts() }
 
     var showAddDialog by remember { mutableStateOf(false) }
     var showEditDialog by remember { mutableStateOf<Source?>(null) }
@@ -179,13 +189,16 @@ fun SourcesTab(
             hasMemoriesSource = sources.any { it.type == "feed/memories" },
             errorMessage = addSourceError?.userMessage(),
             busy = isAddingSource,
+            accounts = publishAccounts,
+            hosted = hostedFediverse(networkAccounts),
+            bluesky = networkAccounts.filter { it.type == "bluesky" },
             onClearError = { viewModel.clearAddSourceError() },
             onDismiss = {
                 showAddDialog = false
                 viewModel.clearAddSourceError()
             },
-            onAdd = { url, type ->
-                viewModel.addSource(url, type) {
+            onAdd = { url, type, account ->
+                viewModel.addSource(url, type, account) {
                     showAddDialog = false
                 }
             }
@@ -238,7 +251,7 @@ fun SourcesTab(
 }
 
 @Composable
-private fun PermissionRequestDialog(
+internal fun PermissionRequestDialog(
     appId: String,
     permissionName: String,
     onAllow: () -> Unit,
@@ -310,18 +323,16 @@ internal fun SourceCard(
 ) {
     // Leading glyph + human label per source type, mirroring the web client's
     // sources list (calendar for memories, link for a Mochi feed, RSS glyph).
-    val typeIcon = when (source.type) {
-        "rss" -> Icons.Outlined.RssFeed
-        "feed/posts" -> Icons.Outlined.Link
-        "feed/memories" -> Icons.Outlined.CalendarMonth
-        else -> Icons.Outlined.RssFeed
+    val typeIcon = when {
+        source.type == "rss" -> Icons.Outlined.RssFeed
+        source.type == "feed/memories" -> Icons.Outlined.CalendarMonth
+        source.type.startsWith("account/") -> Icons.Outlined.AlternateEmail
+        source.type == "person/posts" -> Icons.Outlined.Person
+        source.type == "tag/posts" -> Icons.Outlined.Tag
+        source.type == "generator/posts" || source.type == "list/posts" -> Icons.AutoMirrored.Outlined.ViewList
+        else -> Icons.Outlined.Link
     }
-    val typeLabel = when (source.type) {
-        "rss" -> stringResource(R.string.feeds_source_type_rss)
-        "feed/posts" -> stringResource(R.string.feeds_source_type_feed_posts)
-        "feed/memories" -> stringResource(R.string.feeds_source_type_feed_memories)
-        else -> source.type
-    }
+    val typeLabel = sourceTypeLabel(source)
     // RSS keeps its brand orange; other source types use the theme accent.
     val typeTint = if (source.type == "rss") RssOrange else MaterialTheme.colorScheme.primary
     // Memories sync on demand, so "Never fetched" reads as an error there —
@@ -349,7 +360,9 @@ internal fun SourceCard(
     // Metadata stacked under the name, one detail per line: the identifier
     // (repeats the URL, shown only when the name isn't already the URL), type,
     // last-checked time, and polling cadence.
-    val showIdentifier = source.name.isNotEmpty() && source.url.isNotEmpty()
+    // An account's or a person's source names them already; its url is an id.
+    val showIdentifier = source.name.isNotEmpty() && source.url.isNotEmpty() &&
+        !source.type.startsWith("account/") && source.type != "person/posts"
     val metadataLines = buildList {
         if (showIdentifier) {
             add(source.url)
@@ -401,6 +414,11 @@ internal fun SourceCard(
                         Spacer(modifier = Modifier.width(8.dp))
                         CredibilityBadge(value = credibilityValue)
                     }
+                    // How a follow through a hosted account stands.
+                    if (source.state == "pending" || source.state == "refused") {
+                        Spacer(modifier = Modifier.width(8.dp))
+                        FollowBadge(refused = source.state == "refused")
+                    }
                 }
                 metadataLines.forEach { line ->
                     Text(
@@ -412,9 +430,9 @@ internal fun SourceCard(
                     )
                 }
             }
-            // RSS and memories sources support an on-demand poll; Mochi feeds
-            // sync on their own schedule, so the refresh action is hidden there.
-            if (source.type == "rss" || source.type == "feed/memories") {
+            // Sources read on a timer support an on-demand poll; Mochi feeds
+            // and follows through an account arrive on their own.
+            if (pollable(source)) {
                 MochiIconButton(onClick = onPoll, modifier = Modifier.size(36.dp)) {
                     Icon(Icons.Outlined.Refresh, contentDescription = stringResource(R.string.feeds_source_poll), modifier = Modifier.size(20.dp))
                 }
@@ -433,19 +451,64 @@ internal fun SourceCard(
     }
 }
 
+/** Whether a source is read on a timer, so may be read now. */
+internal fun pollable(source: Source): Boolean =
+    source.type == "rss" || source.type == "tag/posts" || source.type == "feed/memories" ||
+        (source.type == "person/posts" && source.account.isEmpty())
+
+/** A source's kind in the owner's words. */
+@Composable
+internal fun sourceTypeLabel(source: Source): String = when (source.type) {
+    "rss" -> stringResource(R.string.feeds_source_type_rss)
+    "feed/posts" -> stringResource(R.string.feeds_source_type_feed_posts)
+    "feed/memories" -> stringResource(R.string.feeds_source_type_feed_memories)
+    "account/timeline" -> stringResource(R.string.feeds_source_type_account_timeline)
+    "account/posts" -> stringResource(R.string.feeds_source_type_account_posts)
+    "person/posts" -> stringResource(
+        if (source.account.isNotEmpty()) R.string.feeds_source_type_fediverse_posts else R.string.feeds_source_type_bluesky_posts,
+    )
+    "tag/posts" -> stringResource(R.string.feeds_source_type_hashtag)
+    "generator/posts", "list/posts" -> stringResource(R.string.feeds_source_type_bluesky)
+    else -> stringResource(R.string.feeds_source_type_feed_posts)
+}
+
+@Composable
+private fun FollowBadge(refused: Boolean) {
+    val colour = if (refused) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurfaceVariant
+    Text(
+        text = stringResource(if (refused) R.string.feeds_source_follow_refused else R.string.feeds_source_follow_pending),
+        style = MaterialTheme.typography.labelSmall,
+        fontWeight = FontWeight.Medium,
+        color = colour,
+        modifier = Modifier
+            .background(colour.copy(alpha = 0.1f), RoundedCornerShape(50))
+            .padding(horizontal = 8.dp, vertical = 2.dp)
+    )
+}
+
+/** The kinds of source whose address names an account of the owner's. */
+private val ACCOUNT_TYPES = listOf("account/timeline", "account/posts")
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AddSourceDialog(
     hasMemoriesSource: Boolean,
     errorMessage: String?,
     busy: Boolean,
+    // The feed's publish accounts, an account's timeline or posts is read from;
+    // the hosted fediverse accounts a person is followed through; the Bluesky
+    // accounts a custom feed or list is read through.
+    accounts: List<PublishAccount>,
+    hosted: List<PublishAccount>,
+    bluesky: List<PublishAccount>,
     onClearError: () -> Unit,
     onDismiss: () -> Unit,
-    onAdd: (String, String) -> Unit
+    onAdd: (url: String, type: String, account: String?) -> Unit
 ) {
     var url by remember { mutableStateOf("") }
     var type by remember { mutableStateOf("rss") }
     var typeExpanded by remember { mutableStateOf(false) }
+    var through by remember { mutableStateOf("") }
 
     // On failure the error renders inline under the URL field; drop the keyboard
     // so it's not hidden behind the IME.
@@ -461,16 +524,34 @@ private fun AddSourceDialog(
     val typeOptions = buildList {
         add("rss" to stringResource(R.string.feeds_source_type_rss))
         add("feed/posts" to stringResource(R.string.feeds_source_type_feed_posts))
+        if (accounts.isNotEmpty()) {
+            add("account/timeline" to stringResource(R.string.feeds_source_type_account_timeline))
+            add("account/posts" to stringResource(R.string.feeds_source_type_account_posts))
+        }
+        add("person" to stringResource(R.string.feeds_source_type_person))
+        add("tag" to stringResource(R.string.feeds_source_type_hashtag))
+        add("bluesky" to stringResource(R.string.feeds_source_type_bluesky))
         if (!hasMemoriesSource) {
             add("feed/memories" to stringResource(R.string.feeds_source_type_feed_memories))
         }
     }
     val typeLabel = typeOptions.firstOrNull { it.first == type }?.second ?: type
-    val urlRequired = type != "feed/memories"
+    val chooseAccount = type in ACCOUNT_TYPES
+    val urlRequired = type != "feed/memories" && !chooseAccount
+    // The account a person is followed through or a Bluesky feed read through,
+    // offered where there is more than one to choose.
+    val throughAccounts = when (type) {
+        "person" -> hosted
+        "bluesky" -> bluesky
+        else -> emptyList()
+    }.takeIf { it.size > 1 }.orEmpty()
     // Placeholder mirrors the web client's per-type add dialogs.
     val urlHint = when (type) {
         "rss" -> stringResource(R.string.feeds_source_url_hint_rss)
         "feed/posts" -> stringResource(R.string.feeds_source_url_hint_feed)
+        "person" -> stringResource(R.string.feeds_source_url_hint_person)
+        "tag" -> stringResource(R.string.feeds_source_url_hint_tag)
+        "bluesky" -> stringResource(R.string.feeds_source_url_hint_bluesky)
         else -> ""
     }
 
@@ -523,6 +604,10 @@ private fun AddSourceDialog(
                             MochiDropdownMenuItem(
                                 text = { Text(label) },
                                 onClick = {
+                                    if (value != type) {
+                                        url = ""
+                                        through = ""
+                                    }
                                     type = value
                                     typeExpanded = false
                                 },
@@ -530,15 +615,75 @@ private fun AddSourceDialog(
                         }
                     }
                 }
+
+                if (chooseAccount) {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    AccountPicker(
+                        label = stringResource(R.string.feeds_source_account),
+                        accounts = accounts,
+                        chosen = url,
+                        onChoose = { url = it },
+                    )
+                }
+                if (throughAccounts.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    AccountPicker(
+                        label = stringResource(if (type == "person") R.string.feeds_source_follow_with else R.string.feeds_source_read_with),
+                        accounts = throughAccounts,
+                        chosen = through,
+                        onChoose = { through = it },
+                    )
+                }
             }
         },
         confirmText = stringResource(MochiR.string.common_add),
-        onConfirm = { onAdd(url, type) },
-        confirmEnabled = !urlRequired || url.isNotBlank(),
+        onConfirm = {
+            val address = url.trim().let { value ->
+                if (type == "rss" && !value.startsWith("http://") && !value.startsWith("https://")) "https://$value" else value
+            }
+            onAdd(address, type, through.takeIf { it.isNotEmpty() && throughAccounts.isNotEmpty() })
+        },
+        confirmEnabled = (!urlRequired && !chooseAccount) || url.isNotBlank(),
         confirmLoading = busy,
         dismissText = stringResource(MochiR.string.common_cancel),
         dismissEnabled = !busy,
     )
+}
+
+/** One of the owner's accounts, chosen from a dropdown. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun AccountPicker(
+    label: String,
+    accounts: List<PublishAccount>,
+    chosen: String,
+    onChoose: (String) -> Unit,
+) {
+    var open by remember { mutableStateOf(false) }
+    val sorted = accounts.sortedWith(compareBy(NaturalCompare) { it.identifier })
+    ExposedDropdownMenuBox(expanded = open, onExpandedChange = { open = it }) {
+        MochiTextField(
+            value = sorted.firstOrNull { it.id == chosen }?.identifier.orEmpty(),
+            onValueChange = {},
+            readOnly = true,
+            label = { Text(label) },
+            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = open) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
+        )
+        ExposedDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            sorted.forEach { account ->
+                MochiDropdownMenuItem(
+                    text = { Text(account.identifier) },
+                    onClick = {
+                        onChoose(account.id)
+                        open = false
+                    },
+                )
+            }
+        }
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

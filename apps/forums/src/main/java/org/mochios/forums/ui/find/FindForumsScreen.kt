@@ -66,7 +66,8 @@ import org.mochios.android.R as MochiR
 fun FindForumsScreen(
     onBack: () -> Unit,
     onForumSubscribed: (String) -> Unit,
-    viewModel: FindForumsViewModel = hiltViewModel()
+    viewModel: FindForumsViewModel = hiltViewModel(),
+    communities: CommunitiesViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
@@ -139,6 +140,16 @@ fun FindForumsScreen(
             ) { }
 
             Spacer(Modifier.height(8.dp))
+
+            // Communities on other networks, beside the forums found here.
+            if (uiState.searchQuery.isBlank()) {
+                CommunitiesSections(
+                    viewModel = communities,
+                    onMessage = { message -> snackbarHostState.showSnackbar(message) },
+                    onOpenForum = onForumSubscribed,
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                )
+            }
 
             val probe = uiState.probeResult
             val sourceForums = when {

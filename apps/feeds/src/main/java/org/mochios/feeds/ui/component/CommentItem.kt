@@ -5,12 +5,32 @@
 
 package org.mochios.feeds.ui.component
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.Flag
+import androidx.compose.material.icons.outlined.MoreHoriz
+import androidx.compose.material.icons.automirrored.outlined.VolumeOff
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuItem
+import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.util.isWebUrl
+import org.mochios.android.util.openWeb
+import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentActions
@@ -42,8 +62,13 @@ internal fun CommentItem(
     // Opens the lightbox on the image an anchored comment is about, comments
     // showing; null hides the chip's tap (the chip itself still shows).
     onOpenAttachment: ((String) -> Unit)? = null,
+    // The owner's mute, block or report of the person on another network
+    // behind the comment; null where the viewer may not.
+    onModerate: ((String) -> Unit)? = null,
 ) {
     val anchor = comment.anchor
+    val context = LocalContext.current
+    val page = comment.page.orEmpty()
     SharedCommentItem(
         name = comment.name,
         body = comment.text,
@@ -67,6 +92,7 @@ internal fun CommentItem(
             ?.let { "/feeds/$feedId/-/attachments/$it/thumbnail" },
         anchorCaption = comment.attachmentCaption.orEmpty(),
         onOpenAnchor = onOpenAttachment?.let { open -> { open(anchor) } },
+        onName = if (isWebUrl(page)) ({ openWeb(context, page) }) else null,
     ) {
         // Reactions and the action icons share one row: the ReactionBar
         // (pills + add) followed by reply, and edit/delete when the viewer
@@ -84,6 +110,50 @@ internal fun CommentItem(
                 )
             },
         )
+        if (onModerate != null && outsider(comment)) {
+            CommenterMenu(author = comment.name.ifEmpty { comment.authorId }, onModerate = onModerate)
+        }
+    }
+}
+
+/** The owner's ways with the person on another network behind a comment. */
+@Composable
+private fun CommenterMenu(author: String, onModerate: (String) -> Unit) {
+    var open by remember { mutableStateOf(false) }
+    Box {
+        MochiIconButton(onClick = { open = true }, modifier = Modifier.size(32.dp)) {
+            Icon(
+                Icons.Outlined.MoreHoriz,
+                contentDescription = stringResource(MochiR.string.common_more_options),
+                modifier = Modifier.size(18.dp),
+            )
+        }
+        MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            MochiDropdownMenuItem(
+                text = { Text(stringResource(R.string.feeds_mute_commenter, author)) },
+                leadingIcon = { Icon(Icons.AutoMirrored.Outlined.VolumeOff, contentDescription = null) },
+                onClick = {
+                    open = false
+                    onModerate("mute")
+                },
+            )
+            MochiDropdownMenuItem(
+                text = { Text(stringResource(R.string.feeds_block_commenter, author)) },
+                leadingIcon = { Icon(Icons.Outlined.Block, contentDescription = null) },
+                onClick = {
+                    open = false
+                    onModerate("block")
+                },
+            )
+            MochiDropdownMenuItem(
+                text = { Text(stringResource(R.string.feeds_report_commenter, author)) },
+                leadingIcon = { Icon(Icons.Outlined.Flag, contentDescription = null) },
+                onClick = {
+                    open = false
+                    onModerate("report")
+                },
+            )
+        }
     }
 }
 

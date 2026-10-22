@@ -38,6 +38,7 @@ import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Flight
 import androidx.compose.material.icons.filled.LocationOn
+import androidx.compose.material.icons.filled.Poll
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.ButtonDefaults
@@ -103,6 +104,7 @@ import org.mochios.android.ui.components.TravellingPicker
 import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.feeds.R
+import org.mochios.feeds.ui.component.pollValid
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -136,6 +138,12 @@ fun CreatePostScreen(
     val isLoadingFeeds by viewModel.isLoadingFeeds.collectAsState()
     val error by viewModel.error.collectAsState()
     val postSuccess by viewModel.postSuccess.collectAsState()
+    val publish by viewModel.publish.collectAsState()
+    val publishChosen by viewModel.accounts.collectAsState()
+    val visibility by viewModel.visibility.collectAsState()
+    val warning by viewModel.warning.collectAsState()
+    val sensitive by viewModel.sensitive.collectAsState()
+    val poll by viewModel.poll.collectAsState()
     val isEditing = viewModel.isEditing
 
     var showCheckinSheet by remember { mutableStateOf(false) }
@@ -216,7 +224,7 @@ fun CreatePostScreen(
                     }
                     MochiButton(
                         onClick = { viewModel.createPost() },
-                        enabled = !isPosting,
+                        enabled = !isPosting && pollValid(poll),
                         modifier = Modifier.fillMaxWidth(),
                     ) {
                         if (isPosting) {
@@ -307,6 +315,17 @@ fun CreatePostScreen(
                 Spacer(modifier = Modifier.height(16.dp))
             }
 
+            publish?.let { state ->
+                if (state.accounts.isNotEmpty()) {
+                    PublishSwitches(
+                        accounts = state.accounts,
+                        chosen = publishChosen ?: state.publish,
+                        onToggle = { account, on -> viewModel.setPublishing(account, on) },
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+            }
+
             // Body text area
             Text(
                 text = stringResource(R.string.feeds_post_content),
@@ -346,6 +365,29 @@ fun CreatePostScreen(
                 }
             }
             Spacer(modifier = Modifier.height(16.dp))
+
+            PostFeaturesFields(
+                visibility = visibility,
+                warning = warning,
+                sensitive = sensitive,
+                onVisibility = { viewModel.setVisibility(it) },
+                onWarning = { viewModel.setWarning(it) },
+                onSensitive = { viewModel.setSensitive(it) },
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            poll?.let { draft ->
+                PollEditor(
+                    poll = draft,
+                    onOption = { index, text -> viewModel.setPollOption(index, text) },
+                    onAdd = { viewModel.addPollOption() },
+                    onRemoveOption = { viewModel.removePollOption(it) },
+                    onMultiple = { viewModel.setPollMultiple(it) },
+                    onDuration = { viewModel.setPollDuration(it) },
+                    onRemove = { viewModel.removePoll() },
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+            }
 
             // Preview card of the chosen location, above the action buttons.
             if (checkin != null) {
@@ -395,7 +437,10 @@ fun CreatePostScreen(
             }
 
             // Location: each button opens a bottom sheet to search + confirm.
-            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            FlowRow(
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
                 MochiOutlinedButton(onClick = { showCheckinSheet = true }, tone = MochiButtonTone.Neutral) {
                     Icon(
                         Icons.Default.LocationOn,
@@ -416,6 +461,18 @@ fun CreatePostScreen(
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(stringResource(R.string.feeds_travelling))
+                }
+                // A poll is made with the post; an edit keeps the one it has.
+                if (poll == null && !isEditing) {
+                    MochiOutlinedButton(onClick = { viewModel.startPoll() }, tone = MochiButtonTone.Neutral) {
+                        Icon(
+                            Icons.Default.Poll,
+                            contentDescription = null,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(stringResource(R.string.feeds_poll))
+                    }
                 }
             }
 

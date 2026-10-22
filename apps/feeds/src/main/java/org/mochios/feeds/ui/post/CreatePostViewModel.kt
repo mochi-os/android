@@ -11,6 +11,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -23,8 +24,21 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.model.PlaceData
 import org.mochios.android.util.NaturalCompare
 import org.mochios.feeds.R
+import org.mochios.android.i18n.LanguageStore
 import org.mochios.feeds.model.Feed
+import org.mochios.feeds.model.PollInput
+import org.mochios.feeds.model.PostFeatures
+import org.mochios.feeds.model.PublishState
 import org.mochios.feeds.repository.FeedsRepository
+import org.mochios.feeds.ui.component.POLL_DURATIONS
+import org.mochios.feeds.ui.component.POLL_OPTIONS_MAXIMUM
+import org.mochios.feeds.ui.component.POLL_OPTIONS_MINIMUM
+import org.mochios.feeds.ui.component.POLL_OPTION_MAXIMUM
+import org.mochios.feeds.ui.component.PollDraft
+import org.mochios.feeds.ui.component.VISIBILITIES
+import org.mochios.feeds.ui.component.WARNING_MAXIMUM
+import org.mochios.feeds.ui.component.pollValid
+import java.util.Locale
 import javax.inject.Inject
 
 /**
@@ -108,6 +122,33 @@ class CreatePostViewModel @Inject constructor(
     private val _postSuccess = MutableStateFlow(false)
     val postSuccess: StateFlow<Boolean> = _postSuccess.asStateFlow()
 
+    /**
+     * Where the chosen feed publishes: offered as switches on a public feed the
+     * writer owns, preset from the feed's list. [accounts] is null until the
+     * writer changes a switch, which leaves the choice to the feed.
+     */
+    private val _publish = MutableStateFlow<PublishState?>(null)
+    val publish: StateFlow<PublishState?> = _publish.asStateFlow()
+
+    private val _accounts = MutableStateFlow<List<String>?>(null)
+    val accounts: StateFlow<List<String>?> = _accounts.asStateFlow()
+
+    /** Who may see the post, its content warning and its sensitive flag. */
+    private val _visibility = MutableStateFlow("public")
+    val visibility: StateFlow<String> = _visibility.asStateFlow()
+
+    private val _warning = MutableStateFlow("")
+    val warning: StateFlow<String> = _warning.asStateFlow()
+
+    private val _sensitive = MutableStateFlow(false)
+    val sensitive: StateFlow<Boolean> = _sensitive.asStateFlow()
+
+    /** The poll the post is made with; a post being edited keeps its own. */
+    private val _poll = MutableStateFlow<PollDraft?>(null)
+    val poll: StateFlow<PollDraft?> = _poll.asStateFlow()
+
+    private var publishJob: Job? = null
+
     init {
         loadAvailableFeeds()
         if (isEditing) {
@@ -128,6 +169,7 @@ class CreatePostViewModel @Inject constructor(
                 if (_selectedFeed.value.isEmpty() && feeds.isNotEmpty()) {
                     _selectedFeed.value = feeds.first().fingerprint.ifEmpty { feeds.first().id }
                 }
+                loadPublish()
             } catch (_: Exception) {
             } finally {
                 _isLoadingFeeds.value = false
@@ -147,6 +189,9 @@ class CreatePostViewModel @Inject constructor(
                     .filter { it.caption.isNotEmpty() }
                     .associate { it.id to it.caption }
                 loaded = true
+                _visibility.value = result.post.visibility.ifEmpty { "public" }
+                _warning.value = result.post.warning
+                _sensitive.value = result.post.sensitive != 0
                 // Load location data from post.data if present
                 result.post.data?.checkin?.let { _checkin.value = it }
                 result.post.data?.travelling?.origin?.let { _travellingOrigin.value = it }
@@ -177,6 +222,76 @@ class CreatePostViewModel @Inject constructor(
 
     fun setSelectedFeed(feedId: String) {
         _selectedFeed.value = feedId
+        loadPublish()
+    }
+
+    /** The chosen feed's publish list, for a public feed of a new post. */
+    private fun loadPublish() {
+        publishJob?.cancel()
+        _publish.value = null
+        _accounts.value = null
+        val feedId = _selectedFeed.value
+        val feed = _availableFeeds.value.firstOrNull { it.fingerprint == feedId || it.id == feedId }
+        if (isEditing || feedId.isEmpty() || feed?.privacy != "public") return
+        publishJob = viewModelScope.launch {
+            try {
+                _publish.value = repository.getPublish(feedId)
+            } catch (_: Exception) {
+                // Without it the post goes where the feed's own list says.
+            }
+        }
+    }
+
+    /** Switch publishing to one account on or off for this post alone. */
+    fun setPublishing(account: String, on: Boolean) {
+        val chosen = _accounts.value ?: _publish.value?.publish.orEmpty()
+        _accounts.value = if (on) (chosen + account).distinct() else chosen - account
+    }
+
+    fun setVisibility(value: String) {
+        if (value in VISIBILITIES) _visibility.value = value
+    }
+
+    fun setWarning(value: String) {
+        _warning.value = value.take(WARNING_MAXIMUM)
+    }
+
+    fun setSensitive(value: Boolean) {
+        _sensitive.value = value
+    }
+
+    fun startPoll() {
+        if (_poll.value == null && !isEditing) _poll.value = PollDraft()
+    }
+
+    fun removePoll() {
+        _poll.value = null
+    }
+
+    fun setPollOption(index: Int, text: String) {
+        val poll = _poll.value ?: return
+        if (index !in poll.options.indices) return
+        _poll.value = poll.copy(options = poll.options.toMutableList().also { it[index] = text.take(POLL_OPTION_MAXIMUM) })
+    }
+
+    fun addPollOption() {
+        val poll = _poll.value ?: return
+        if (poll.options.size < POLL_OPTIONS_MAXIMUM) _poll.value = poll.copy(options = poll.options + "")
+    }
+
+    fun removePollOption(index: Int) {
+        val poll = _poll.value ?: return
+        if (poll.options.size > POLL_OPTIONS_MINIMUM && index in poll.options.indices) {
+            _poll.value = poll.copy(options = poll.options.filterIndexed { i, _ -> i != index })
+        }
+    }
+
+    fun setPollMultiple(multiple: Boolean) {
+        _poll.value = _poll.value?.copy(multiple = multiple)
+    }
+
+    fun setPollDuration(duration: Int) {
+        if (duration in POLL_DURATIONS) _poll.value = _poll.value?.copy(duration = duration)
     }
 
     fun setBody(text: String) {
@@ -252,6 +367,14 @@ class CreatePostViewModel @Inject constructor(
             _error.value = MochiError.Local(R.string.feeds_post_empty_content)
             return
         }
+        if (!pollValid(_poll.value)) return
+        val features = PostFeatures(
+            visibility = _visibility.value,
+            warning = _warning.value.trim(),
+            sensitive = _sensitive.value,
+            // The post's language is the writer's own, as the app runs in it.
+            language = if (isEditing) null else writerLanguage(),
+        )
 
         viewModelScope.launch {
             _isPosting.value = true
@@ -292,6 +415,7 @@ class CreatePostViewModel @Inject constructor(
                             travellingOrigin = _travellingOrigin.value,
                             travellingDestination = _travellingDestination.value,
                             tracker = tracker,
+                            features = features,
                         )
                     }
                 } else {
@@ -307,6 +431,15 @@ class CreatePostViewModel @Inject constructor(
                             travellingOrigin = _travellingOrigin.value,
                             travellingDestination = _travellingDestination.value,
                             tracker = tracker,
+                            accounts = _accounts.value,
+                            features = features,
+                            poll = _poll.value?.let { draft ->
+                                PollInput(
+                                    options = draft.options.map { it.trim() },
+                                    multiple = draft.multiple,
+                                    duration = draft.duration,
+                                )
+                            },
                         )
                     }
                 }
@@ -322,6 +455,9 @@ class CreatePostViewModel @Inject constructor(
     fun clearError() {
         _error.value = null
     }
+
+    private fun writerLanguage(): String =
+        (LanguageStore.get(application) ?: Locale.getDefault().toLanguageTag()).substringBefore('-').lowercase()
 
     suspend fun searchMembers(query: String): List<org.mochios.android.ui.components.MentionSuggestion> {
         val feedId = _selectedFeed.value

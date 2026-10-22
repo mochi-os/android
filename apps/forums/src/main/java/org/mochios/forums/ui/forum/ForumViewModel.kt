@@ -579,6 +579,23 @@ class ForumViewModel @Inject constructor(
     }
 
     /** Unsubscribe from this forum, then signal the screen to navigate away. */
+    /**
+     * Block a community joined on another network through a linked account:
+     * the server drops it and the account no longer follows it.
+     */
+    fun blockCommunity() {
+        val forum = _uiState.value.forum
+        if (isAll || forum.id.isBlank()) return
+        viewModelScope.launch {
+            try {
+                repository.addBlock(forum.address.ifEmpty { forum.id })
+                _events.emit(ForumEvent.Unsubscribed)
+            } catch (e: Exception) {
+                _events.emit(ForumEvent.ShowError(e.toMochiError()))
+            }
+        }
+    }
+
     fun unsubscribe() {
         if (forumId.isBlank() || isAll) return
         viewModelScope.launch {

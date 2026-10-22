@@ -233,4 +233,7 @@
     <string name="forums_saved_save">Guardar para más tarde</string>
     <string name="forums_moderation_pending_posts">Publicaciones pendientes (%1$s)</string>
     <string name="forums_moderation_pending_comments">Comentarios pendientes (%1$s)</string>
+    <string name="forums_post_link">Enlace</string>
+    <string name="forums_already_subscribed">Ya estás suscrito a este foro</string>
+    <string name="forums_community_link">Enlace</string>
 </resources>

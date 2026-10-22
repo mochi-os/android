@@ -235,4 +235,6 @@
     <string name="forums_saved_save">Für später speichern</string>
     <string name="forums_moderation_pending_posts">Ausstehende Beiträge (%1$s)</string>
     <string name="forums_moderation_pending_comments">Ausstehende Kommentare (%1$s)</string>
+    <string name="forums_post_link">Link</string>
+    <string name="forums_community_link">Link</string>
 </resources>

@@ -70,6 +70,8 @@ fun CommentItem(
     anchorThumbnailUrl: String? = null,
     anchorCaption: String = "",
     onOpenAnchor: (() -> Unit)? = null,
+    // Opens the author's page, for a comment by a person on another network.
+    onName: (() -> Unit)? = null,
     actions: @Composable RowScope.() -> Unit = {},
 ) {
     // Replies are indented and marked with a coloured vertical bar so nested
@@ -120,7 +122,8 @@ fun CommentItem(
                 Text(
                     text = displayName,
                     style = MaterialTheme.typography.labelMedium,
-                    fontWeight = FontWeight.SemiBold
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = if (onName != null) Modifier.clickable(onClick = onName) else Modifier,
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(

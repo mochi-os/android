@@ -42,6 +42,18 @@ data class Forum(
      *  response without it is a forum with nothing left to wait for. */
     val populated: Int = 1,
     val synced: Long = 0,
+    /**
+     * A community on another network: the linked account it is read and
+     * written through, the server's own id for it, its address on the
+     * fediverse (a forum of ours published as one, or a community joined as
+     * one of the user's hosted accounts) and that hosted account.
+     */
+    val account: String = "",
+    val community: String = "",
+    val address: String = "",
+    val hosted: String = "",
+    /** Whether the forum's posts are all sensitive. */
+    val sensitive: Int = 0,
 )
 
 data class Member(
@@ -88,7 +100,20 @@ data class Post(
     val locked: Boolean = false,
     val pinned: Boolean = false,
     val remover: String = "",
-    val reason: String = ""
+    val reason: String = "",
+    /**
+     * A link post: the link, its thumbnail and the card's words as JSON, and
+     * the post's id on another network.
+     */
+    val url: String = "",
+    val thumbnail: String = "",
+    val embed: String = "",
+    val remote: String = "",
+    /** Whether the post is sensitive and the language it is in. */
+    val sensitive: Int = 0,
+    val language: String = "",
+    /** The other posts here carrying the same link, on a post's own view. */
+    val crossposts: List<Crosspost> = emptyList(),
 )
 
 data class ForumComment(

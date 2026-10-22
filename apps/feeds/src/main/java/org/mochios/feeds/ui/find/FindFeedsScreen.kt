@@ -63,6 +63,11 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
+import org.mochios.feeds.ui.settings.PermissionRequestDialog
+import org.mochios.android.i18n.LocalFormat
+import android.widget.Toast
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -133,6 +138,25 @@ fun FindFeedsContent(
     val subscribedFeeds by viewModel.subscribedFeeds.collectAsState()
     val probeResult by viewModel.probeResult.collectAsState()
     val isProbing by viewModel.isProbing.collectAsState()
+    val lookup by viewModel.lookup.collectAsState()
+    val isLookingUp by viewModel.isLookingUp.collectAsState()
+    val people by viewModel.people.collectAsState()
+    val owned by viewModel.owned.collectAsState()
+    val following by viewModel.following.collectAsState()
+    val pendingPermission by viewModel.pendingPermission.collectAsState()
+    val context = LocalContext.current
+    val resources = LocalResources.current
+    val format = LocalFormat.current
+    LaunchedEffect(viewModel) {
+        viewModel.followed.collect { count ->
+            val message = if (count > 0) {
+                resources.getQuantityString(R.plurals.feeds_source_added_posts, count, format.formatNumber(count))
+            } else {
+                resources.getString(R.string.feeds_settings_source_added)
+            }
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        }
+    }
     // The search field keeps the keyboard up, which covers the snackbar the
     // subscribe result lands in — drop it before the request goes out.
     val keyboardController = LocalSoftwareKeyboardController.current
@@ -151,7 +175,7 @@ fun FindFeedsContent(
                     onExpandedChange = { },
                     placeholder = { Text(stringResource(R.string.feeds_search_placeholder)) },
                     leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                    trailingIcon = if (isSearching || isProbing) {
+                    trailingIcon = if (isSearching || isProbing || isLookingUp) {
                         { CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp) }
                     } else null
                 )
@@ -168,6 +192,21 @@ fun FindFeedsContent(
         ) { }
 
         Spacer(modifier = Modifier.height(8.dp))
+
+        // Someone or something on another network the search names.
+        lookup?.let { found ->
+            LookupResult(
+                lookup = found,
+                query = searchQuery.trim(),
+                feeds = owned,
+                busy = following != null,
+                onFollow = { feed, query ->
+                    keyboardController?.hide()
+                    viewModel.follow(feed, query)
+                },
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+            )
+        }
 
         val probe = probeResult
         val sourceFeeds = if (probe != null) {
@@ -204,7 +243,7 @@ fun FindFeedsContent(
             ) {
                 CircularProgressIndicator()
             }
-        } else if (displayFeeds.isEmpty() && searchQuery.isNotBlank() && !isSearching && !isProbing) {
+        } else if (displayFeeds.isEmpty() && searchQuery.isNotBlank() && !isSearching && !isProbing && lookup == null && !isLookingUp) {
             EmptyState(
                 icon = Icons.Default.Search,
                 title = stringResource(R.string.feeds_no_feeds_found),
@@ -215,6 +254,19 @@ fun FindFeedsContent(
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
+                // People the user knows with a handle elsewhere, beside the
+                // recommendations.
+                if (searchQuery.isBlank() && people.isNotEmpty()) {
+                    item(key = "people") { PeopleHeading() }
+                    items(people, key = { "person/${it.contact}/${it.handle}" }) { person ->
+                        PersonRow(
+                            person = person,
+                            feeds = owned,
+                            busy = following != null,
+                            onFollow = { feed, query -> viewModel.follow(feed, query) },
+                        )
+                    }
+                }
                 items(displayFeeds, key = { it.fingerprint.ifEmpty { it.id } }) { feed ->
                     val feedId = feed.fingerprint.ifEmpty { feed.id }
 
@@ -229,6 +281,15 @@ fun FindFeedsContent(
                 }
             }
         }
+    }
+
+    pendingPermission?.let { pending ->
+        PermissionRequestDialog(
+            appId = pending.app,
+            permissionName = pending.name,
+            onAllow = { viewModel.allowPendingPermission() },
+            onDeny = { viewModel.denyPendingPermission() }
+        )
     }
 }
 

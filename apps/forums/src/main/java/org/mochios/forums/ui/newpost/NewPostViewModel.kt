@@ -21,8 +21,22 @@ import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.MentionSuggestion
+import org.mochios.forums.R
 import org.mochios.forums.repository.ForumsRepository
+import org.mochios.forums.repository.PostMarks
 import javax.inject.Inject
+
+/** The longest link a post may carry, as the web composer holds it. */
+internal const val LINK_MAXIMUM = 2048
+
+/** What is wrong with a post's link, as a string resource; null for none or a good one. */
+internal fun linkError(link: String): Int? {
+    val value = link.trim()
+    if (value.isEmpty()) return null
+    if (value.length > LINK_MAXIMUM) return R.string.forums_link_too_long
+    val web = value.startsWith("http://", ignoreCase = true) || value.startsWith("https://", ignoreCase = true)
+    return if (web) null else R.string.forums_link_not_web
+}
 
 data class NewPostUiState(
     val isPosting: Boolean = false,
@@ -85,6 +99,16 @@ class NewPostViewModel @Inject constructor(
     private val _existingCaptions = MutableStateFlow<Map<String, String>>(emptyMap())
     val existingCaptions: StateFlow<Map<String, String>> = _existingCaptions.asStateFlow()
 
+    /** The link the post carries, whether it is sensitive, and its language ("" for not given). */
+    private val _link = MutableStateFlow("")
+    val link: StateFlow<String> = _link.asStateFlow()
+
+    private val _sensitive = MutableStateFlow(false)
+    val sensitive: StateFlow<Boolean> = _sensitive.asStateFlow()
+
+    private val _language = MutableStateFlow("")
+    val language: StateFlow<String> = _language.asStateFlow()
+
     init {
         if (isEditing) {
             loadExistingPost()
@@ -102,6 +126,9 @@ class NewPostViewModel @Inject constructor(
                 _existingCaptions.value = r.post.attachments
                     .filter { attachment -> attachment.caption.isNotEmpty() }
                     .associate { attachment -> attachment.id to attachment.caption }
+                _link.value = r.post.url
+                _sensitive.value = r.post.sensitive != 0
+                _language.value = r.post.language
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
@@ -114,6 +141,18 @@ class NewPostViewModel @Inject constructor(
 
     fun setBody(value: String) {
         _body.value = value
+    }
+
+    fun setLink(value: String) {
+        _link.value = value
+    }
+
+    fun setSensitive(value: Boolean) {
+        _sensitive.value = value
+    }
+
+    fun setLanguage(value: String) {
+        _language.value = value
     }
 
     fun addAttachments(uris: List<Uri>) {
@@ -181,6 +220,10 @@ class NewPostViewModel @Inject constructor(
     fun submit() {
         val title = _title.value
         val body = _body.value
+        if (linkError(_link.value) != null) return
+        // An edit sends each mark as it stands, so clearing one reaches the
+        // server; a new post sends only what it carries.
+        val marks = PostMarks(url = _link.value.trim(), sensitive = _sensitive.value, language = _language.value)
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isPosting = true, error = null)
             try {
@@ -211,6 +254,7 @@ class NewPostViewModel @Inject constructor(
                             captions = captions,
                             context = application,
                             tracker = tracker,
+                            marks = marks,
                         )
                     }
                     _uiState.value = _uiState.value.copy(
@@ -230,6 +274,7 @@ class NewPostViewModel @Inject constructor(
                             captions = uris.map { _newCaptions.value[it] ?: "" },
                             context = application,
                             tracker = tracker,
+                            marks = marks,
                         )
                     }
                     _uiState.value = _uiState.value.copy(

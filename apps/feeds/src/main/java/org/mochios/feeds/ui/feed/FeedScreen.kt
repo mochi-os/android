@@ -49,6 +49,7 @@ import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material.icons.filled.RssFeed
 import androidx.compose.material.icons.outlined.Add
@@ -57,6 +58,8 @@ import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Notifications
+import androidx.compose.material.icons.outlined.PushPin
+import androidx.compose.material.icons.outlined.Repeat
 import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Settings
@@ -84,6 +87,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
@@ -163,8 +167,16 @@ import org.mochios.android.ui.components.rememberServerUrl
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Post
+import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.component.PostBody
+import org.mochios.feeds.ui.component.PostCopies
+import org.mochios.feeds.ui.component.PostHeadline
+import org.mochios.feeds.ui.component.PostMediaGrid
+import org.mochios.feeds.ui.component.PostPollView
+import org.mochios.feeds.ui.component.PostWarning
+import org.mochios.feeds.ui.component.QuoteCard
+import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.ui.component.countComments
 import org.mochios.feeds.ui.component.currentReactionType
@@ -174,7 +186,10 @@ import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.post.PostTagsButton
 import org.mochios.feeds.ui.post.feedsCommentAttachments
+import org.mochios.feeds.ui.post.feedsComposerBanner
 import org.mochios.feeds.ui.post.feedsReplyBanner
+import org.mochios.feeds.ui.post.replyFromBanner
+import org.mochios.feeds.ui.component.repliesElsewhere
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
 
@@ -239,6 +254,10 @@ fun FeedScreen(
                         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
                     }
                 }
+
+                is FeedActionEvent.Done -> {
+                    Toast.makeText(context, context.getString(event.message), Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
@@ -294,6 +313,10 @@ fun FeedScreen(
     val unreadOnly by viewModel.unreadOnly.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
     val postImages by viewModel.postImages.collectAsState()
+    val hosted by viewModel.hosted.collectAsState()
+    val replyFrom by viewModel.replyFrom.collectAsState()
+    val voting by viewModel.voting.collectAsState()
+    LaunchedEffect(posts) { viewModel.loadHostedIfNeeded(posts) }
     val newPostsCount by viewModel.newPostsCount.collectAsState()
     val commentTarget by viewModel.commentTarget.collectAsState()
     val commentDraft by viewModel.commentDraft.collectAsState()
@@ -892,6 +915,15 @@ fun FeedScreen(
                                                 onNavigateToEditPost(routeFeedId, post.id)
                                             },
                                             onDelete = { pendingDelete = post },
+                                            // The aggregate carries no permissions of its
+                                            // own; the server refuses a vote it may not take.
+                                            canVote = viewModel.isAllFeeds || permissions.react ||
+                                                permissions.comment || permissions.manage,
+                                            voting = voting == post.id,
+                                            onVote = { options -> viewModel.vote(routeFeedId, post.id, options) },
+                                            booster = hosted.firstOrNull()?.takeIf { post.elsewhere },
+                                            onPin = { viewModel.togglePin(routeFeedId, post.id) },
+                                            onBoost = { viewModel.toggleBoost(routeFeedId, post.id) },
                                         )
                                     }
                                     Box(
@@ -1008,7 +1040,15 @@ fun FeedScreen(
                         requireText = true,
                         onSearchMentions = { query -> viewModel.searchMembers(query) },
                         windowInsets = ComposeBarDefaults.NoWindowInsets,
-                        banner = feedsReplyBanner(null, { viewModel.closeCommentComposer() }),
+                        banner = feedsComposerBanner(
+                            replyFromBanner(
+                                accounts = hosted,
+                                shown = posts.any { it.id == target.postId && repliesElsewhere(it) },
+                                chosen = replyFrom,
+                                onChoose = { viewModel.setReplyFrom(it) },
+                            ),
+                            feedsReplyBanner(null, { viewModel.closeCommentComposer() }),
+                        ),
                     )
                 }
             }
@@ -1589,7 +1629,18 @@ private fun PostCard(
     canManage: Boolean,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
+    canVote: Boolean = false,
+    voting: Boolean = false,
+    onVote: (List<Int>) -> Unit = {},
+    // The hosted account a post from another network may be boosted from.
+    booster: PublishAccount? = null,
+    onPin: () -> Unit = {},
+    onBoost: () -> Unit = {},
 ) {
+    // A post behind a content warning shows its warning until the reader asks
+    // for the rest.
+    var revealed by rememberSaveable(post.id) { mutableStateOf(false) }
+    val hidden = post.warning.isNotEmpty() && !revealed
     // Lightbox open-state. Tapping an image populates this; the lightbox
     // dialog renders above the page. Matches web's per-card image-tap
     // behaviour (open lightbox, not navigate to post detail).
@@ -1623,7 +1674,7 @@ private fun PostCard(
     val mediaAttachments = post.attachments.filter { it.isImage || it.isVideo }
     val captionText = remember(post.body) { stripHtml(post.body).trim() }
     val isGallery = post.data?.rss == null && mediaAttachments.isNotEmpty() &&
-        captionText.length <= GALLERY_CAPTION_LIMIT
+        captionText.length <= GALLERY_CAPTION_LIMIT && post.warning.isEmpty()
     // Full-screen playback for a tapped gallery video tile. null = closed.
     var playingVideoUrl by remember { mutableStateOf<String?>(null) }
 
@@ -1650,7 +1701,7 @@ private fun PostCard(
                     .fillMaxWidth(),
             )
         }
-        if (!isGallery && heroUrl != null) {
+        if (!isGallery && heroUrl != null && !hidden) {
             // The hero's height is fixed from the first frame (posts carry no
             // image dimensions): half-screen for attachments, often portrait;
             // 16:9 for RSS. Use aspectRatio, not a computed dp height - integer
@@ -1725,11 +1776,31 @@ private fun PostCard(
                     // then the compact metadata lines.
                     PostByline(post)
 
+                    // Who wrote a post from another network, who boosted it,
+                    // its marks, its warning, where else it is and what it quotes.
+                    PostHeadline(post, modifier = Modifier.padding(top = 8.dp, end = 12.dp))
+                    if (post.warning.isNotEmpty()) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        PostWarning(
+                            warning = post.warning,
+                            revealed = revealed,
+                            onToggle = { revealed = !revealed },
+                            modifier = Modifier.padding(end = 12.dp),
+                        )
+                    }
+                    if (!hidden) {
+                        PostCopies(copies = post.copies, boosts = post.boosts, modifier = Modifier.padding(top = 4.dp))
+                        post.data?.quote?.let { quote ->
+                            Spacer(modifier = Modifier.height(8.dp))
+                            QuoteCard(quote, modifier = Modifier.padding(end = 12.dp))
+                        }
+                    }
+
                     // fillHeight takes the weighted remainder and ellipsises
                     // overflow. passThroughTouches must stay on: the body's
                     // TextView forwards vertical drags to the zero-range
                     // scroll, which hands them to the pager.
-                    if (post.body.isNotEmpty()) {
+                    if (post.body.isNotEmpty() && !hidden) {
                         Spacer(modifier = Modifier.height(8.dp))
                         PostBody(
                             post = post,
@@ -1751,11 +1822,29 @@ private fun PostCard(
                         )
                     }
 
+                    if (!hidden) {
+                        post.data?.media?.takeIf { it.isNotEmpty() }?.let { media ->
+                            Spacer(modifier = Modifier.height(8.dp))
+                            PostMediaGrid(media = media, sensitive = post.sensitive != 0, modifier = Modifier.padding(end = 12.dp))
+                        }
+                        post.data?.poll?.let { poll ->
+                            Spacer(modifier = Modifier.height(8.dp))
+                            PostPollView(
+                                poll = poll,
+                                voted = post.voted,
+                                canVote = canVote,
+                                busy = voting,
+                                onVote = onVote,
+                                modifier = Modifier.padding(end = 12.dp),
+                            )
+                        }
+                    }
+
                     // Remaining attachment images (the first is the hero on top).
                     // Indices are kept aligned to the full list so the lightbox still
                     // spans every image.
                     val gridStartIndex = if (heroFromAttachment) 1 else 0
-                    val gridImages = attachmentImages.drop(gridStartIndex)
+                    val gridImages = attachmentImages.drop(gridStartIndex).takeIf { !hidden }.orEmpty()
                     if (gridImages.isNotEmpty()) {
                         Spacer(modifier = Modifier.height(8.dp))
                         MediaGrid(
@@ -1777,7 +1866,7 @@ private fun PostCard(
                             }
                         )
                     }
-                    if (otherAttachments.isNotEmpty()) {
+                    if (otherAttachments.isNotEmpty() && !hidden) {
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(
                             text = pluralStringResource(
@@ -1793,7 +1882,7 @@ private fun PostCard(
                     // RSS preview image — only when it isn't already the hero on top.
                     // Fixed 16:9 region for the same no-layout-shift reason as the
                     // hero. Tapping opens the lightbox (web parity).
-                    if (rssImageUrl != null && rssImageUrl != heroUrl) {
+                    if (rssImageUrl != null && rssImageUrl != heroUrl && !hidden) {
                         Spacer(modifier = Modifier.height(8.dp))
                         PostImage(
                             url = rssImageUrl,
@@ -1832,6 +1921,11 @@ private fun PostCard(
             onAdjustInterest = onAdjustInterest,
             onEdit = onEdit,
             onDelete = onDelete,
+            pinned = post.pinned > 0,
+            boost = booster?.let { account -> if (boostedFrom(post, account)) null else account.identifier },
+            boosted = booster != null && boostedFrom(post, booster),
+            onPin = onPin,
+            onBoost = onBoost,
         )
     }
 
@@ -1963,7 +2057,15 @@ private fun PostActionBar(
     onAdjustInterest: (Tag, String) -> Unit,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
+    pinned: Boolean = false,
+    // The hosted account a boost would be made from, while the post is not
+    // boosted; [boosted] once it is. Neither for a post of this feed's own.
+    boost: String? = null,
+    boosted: Boolean = false,
+    onPin: () -> Unit = {},
+    onBoost: () -> Unit = {},
 ) {
+    var more by remember { mutableStateOf(false) }
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -2050,6 +2152,44 @@ private fun PostActionBar(
                     .size(24.dp),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
+            // Pinning, and a boost of a post from another network.
+            Box {
+                Icon(
+                    Icons.Default.MoreHoriz,
+                    contentDescription = stringResource(MochiR.string.common_more_options),
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable { more = true }
+                        .padding(horizontal = 8.dp, vertical = 4.dp)
+                        .size(24.dp),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                MochiDropdownMenu(expanded = more, onDismissRequest = { more = false }) {
+                    MochiDropdownMenuItem(
+                        text = { Text(stringResource(if (pinned) R.string.feeds_unpin_post else R.string.feeds_pin_post)) },
+                        leadingIcon = { Icon(Icons.Outlined.PushPin, contentDescription = null) },
+                        onClick = {
+                            more = false
+                            onPin()
+                        },
+                    )
+                    if (boost != null || boosted) {
+                        MochiDropdownMenuItem(
+                            text = {
+                                Text(
+                                    if (boosted) stringResource(R.string.feeds_take_boost_back)
+                                    else stringResource(R.string.feeds_boost_from, boost.orEmpty())
+                                )
+                            },
+                            leadingIcon = { Icon(Icons.Outlined.Repeat, contentDescription = null) },
+                            onClick = {
+                                more = false
+                                onBoost()
+                            },
+                        )
+                    }
+                }
+            }
         }
     }
 }

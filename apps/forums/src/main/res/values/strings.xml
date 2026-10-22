@@ -329,4 +329,56 @@
     <string name="forums_moderation_reason_misinformation">Misinformation</string>
     <string name="forums_moderation_reason_offtopic">Off-topic</string>
     <string name="forums_moderation_reason_other">Other</string>
+    <!-- Other networks: link posts, sensitive posts, sorts, blocks and communities -->
+    <string name="forums_sort_active">Active</string>
+    <string name="forums_sort_scaled">Scaled</string>
+    <string name="forums_sort_controversial">Controversial</string>
+    <string name="forums_sort_old">Old</string>
+    <string name="forums_sort_comments">Most comments</string>
+    <string name="forums_post_link">Link</string>
+    <string name="forums_post_link_hint" translatable="false">https://</string>
+    <string name="forums_link_too_long">The link must be 2048 characters or less</string>
+    <string name="forums_link_not_web">The link must be a web address</string>
+    <string name="forums_post_language">Language</string>
+    <string name="forums_post_language_none">Not given</string>
+    <string name="forums_sensitive">Sensitive</string>
+    <string name="forums_sensitive_cover">This post is marked sensitive</string>
+    <string name="forums_sensitive_show">Show</string>
+    <string name="forums_crossposts">Also posted in</string>
+    <string name="forums_block_author">Block author</string>
+    <string name="forums_block_server">Block server</string>
+    <string name="forums_block_community">Block community</string>
+    <string name="forums_blocked">Blocked</string>
+    <string name="forums_join_community">Join a community elsewhere</string>
+    <string name="forums_community_address">Community address</string>
+    <string name="forums_community_address_hint" translatable="false">!name@example.org</string>
+    <string name="forums_join">Join</string>
+    <string name="forums_joined">Joined</string>
+    <string name="forums_already_subscribed">You are already subscribed to this forum</string>
+    <string name="forums_join_failed">Could not join the community</string>
+    <string name="forums_communities_elsewhere">Your communities elsewhere</string>
+    <string name="forums_import_settings">Import settings</string>
+    <string name="forums_communities_add">Add communities</string>
+    <plurals name="forums_communities_added">
+        <item quantity="one">Added %s community</item>
+        <item quantity="other">Added %s communities</item>
+    </plurals>
+    <string name="forums_communities_add_failed">Could not add the communities</string>
+    <string name="forums_imported_settings">Imported %1$s communities, %2$s blocks and %3$s saved posts</string>
+    <string name="forums_imported_settings_more">Imported %1$s communities, %2$s blocks and %3$s saved posts so far; the rest follow</string>
+    <string name="forums_import_failed">Could not import</string>
+    <string name="forums_community">Community</string>
+    <string name="forums_community_name">Community name</string>
+    <string name="forums_community_name_hint" translatable="false">books</string>
+    <string name="forums_community_domain">Domain</string>
+    <string name="forums_community_publish">Publish</string>
+    <string name="forums_community_published">Forum published as a community</string>
+    <string name="forums_community_publish_failed">Could not publish the forum</string>
+    <string name="forums_community_withdraw">Withdraw</string>
+    <string name="forums_community_withdrawn">Community withdrawn</string>
+    <string name="forums_community_withdraw_failed">Could not withdraw the community</string>
+    <string name="forums_community_address_label">Address</string>
+    <string name="forums_community_link">Link</string>
+    <string name="forums_content">Content</string>
+    <string name="forums_save_failed">Could not save</string>
 </resources>

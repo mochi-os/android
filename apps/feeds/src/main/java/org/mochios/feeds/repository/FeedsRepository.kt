@@ -41,7 +41,18 @@ import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
 import org.mochios.feeds.model.Permissions
+import org.mochios.feeds.model.Lookup
+import org.mochios.feeds.model.Person
+import org.mochios.feeds.model.PollInput
 import org.mochios.feeds.model.Post
+import org.mochios.feeds.model.PostCopy
+import org.mochios.feeds.model.PostFeatures
+import org.mochios.feeds.model.PostPoll
+import org.mochios.feeds.model.PublishAccount
+import org.mochios.feeds.model.PublishSaved
+import org.mochios.feeds.model.PublishState
+import org.mochios.feeds.model.Filter
+import org.mochios.feeds.model.Imported
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.model.User
@@ -114,7 +125,9 @@ internal fun probeFeed(entry: Feed): Feed? = entry.takeIf { it.id.isNotEmpty() }
 
 data class AddSourceResult(
     val source: Source,
-    val suggestedCredibility: Int? = null
+    val suggestedCredibility: Int? = null,
+    /** How many posts the source brought in as it was added. */
+    val ingested: Int = 0,
 )
 
 /** Parsed body of a `permission_required` 403 from `sources/add`. */
@@ -487,6 +500,11 @@ class FeedsRepository @Inject constructor(
         travellingOrigin: PlaceData? = null,
         travellingDestination: PlaceData? = null,
         tracker: UploadTracker? = null,
+        // The accounts on other networks the post goes to, overriding the
+        // feed's list; null leaves it to the feed.
+        accounts: List<String>? = null,
+        features: PostFeatures? = null,
+        poll: PollInput? = null,
     ) {
         val files = fileStore.cacheFiles(uris)
         try {
@@ -496,6 +514,13 @@ class FeedsRepository @Inject constructor(
             }
             if (captions.any { it.isNotEmpty() }) {
                 multipartBody.addFormDataPart("captions", Gson().toJson(captions))
+            }
+            if (accounts != null) {
+                multipartBody.addFormDataPart("accounts", Gson().toJson(accounts))
+            }
+            multipartBody.features(features)
+            if (poll != null) {
+                multipartBody.addFormDataPart("poll", Gson().toJson(poll))
             }
             api.createPost(feedId, multipartBody.build()).unwrap()
         } catch (e: Exception) {
@@ -560,6 +585,7 @@ class FeedsRepository @Inject constructor(
         travellingOrigin: PlaceData? = null,
         travellingDestination: PlaceData? = null,
         tracker: UploadTracker? = null,
+        features: PostFeatures? = null,
     ) {
         val files = fileStore.cacheFiles(newFiles)
         try {
@@ -591,6 +617,7 @@ class FeedsRepository @Inject constructor(
             if (captions.isNotEmpty()) {
                 builder.addFormDataPart("captions", Gson().toJson(captions))
             }
+            builder.features(features)
             api.editPost(feedId, postId, builder.build()).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -646,6 +673,9 @@ class FeedsRepository @Inject constructor(
         context: Context,
         attachment: String? = null,
         tracker: UploadTracker? = null,
+        // The commenter's hosted account the comment also goes out from, as a
+        // reply to the post's copy on that network.
+        account: String? = null,
     ): Comment {
         val cachedFiles = fileStore.cacheFiles(files)
         return try {
@@ -658,6 +688,9 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("parent", parent)
             } else if (!attachment.isNullOrEmpty()) {
                 builder.addFormDataPart("attachment", attachment)
+            }
+            if (!account.isNullOrEmpty()) {
+                builder.addFormDataPart("account", account)
             }
             for (file in cachedFiles) {
                 builder.addPart(fileStore.filePart("files", file, tracker = tracker))
@@ -736,12 +769,12 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun addSource(feedId: String, url: String, type: String): AddSourceResult {
-        val response = api.addSource(feedId, AddSourceRequest(feed = feedId, type = type, url = url))
+    suspend fun addSource(feedId: String, url: String, type: String, account: String? = null): AddSourceResult {
+        val response = api.addSource(feedId, AddSourceRequest(feed = feedId, type = type, url = url, account = account))
         if (response.isSuccessful) {
             val data = response.body()?.data
                 ?: throw MochiError.Unknown()
-            return AddSourceResult(source = data.source, suggestedCredibility = data.suggestedCredibility)
+            return AddSourceResult(source = data.source, suggestedCredibility = data.suggestedCredibility, ingested = data.ingested)
         }
         // A `permission_required` 403 carries the requesting app + permission
         // key in its body — surface it distinctly so the caller can offer to
@@ -970,4 +1003,90 @@ class FeedsRepository @Inject constructor(
         }
     }
 
+    /** Every feed the user holds marked read, for "All feeds". */
+    suspend fun markEveryFeedRead() = mapped { api.markEveryFeedRead().unwrap() }
+
+    // --- Other networks ---
+
+    /** Pin a post of a feed the user owns, or unpin it; answers when it was pinned (0 for not). */
+    suspend fun pinPost(feedId: String, postId: String, pinned: Boolean): Long = mapped {
+        if (pinned) api.pinPost(feedId, postId, postId).unwrap().pinned
+        else api.unpinPost(feedId, postId, postId).unwrap().pinned
+    }
+
+    /** Vote in a post's poll; answers the poll as recounted and the options voted for. */
+    suspend fun votePoll(feedId: String, postId: String, options: List<Int>): Pair<PostPoll?, List<Int>> = mapped {
+        val answer = api.votePoll(feedId, postId, feedId, postId, options).unwrap()
+        answer.poll to answer.voted
+    }
+
+    /** Boost a post from another network from a hosted account, or take the boost back. */
+    suspend fun boostPost(feedId: String, postId: String, account: String, boosted: Boolean): List<PostCopy> = mapped {
+        if (boosted) api.boostPost(feedId, postId, postId, account).unwrap().copies
+        else api.unboostPost(feedId, postId, postId, account).unwrap().copies
+    }
+
+    /** Block, mute or report the person on another network behind a comment. */
+    suspend fun moderateCommenter(feedId: String, postId: String, commentId: String, action: String, reason: String = "") {
+        mapped {
+            when (action) {
+                "block" -> api.blockCommenter(feedId, postId, commentId).unwrap()
+                "mute" -> api.muteCommenter(feedId, postId, commentId).unwrap()
+                else -> api.reportCommenter(feedId, postId, commentId, reason).unwrap()
+            }
+        }
+    }
+
+    suspend fun getFilters(feedId: String): List<Filter> = mapped { api.getFilters(feedId).unwrap().filters }
+
+    suspend fun addFilter(feedId: String, phrase: String): List<Filter> =
+        mapped { api.addFilter(feedId, phrase).unwrap().filters }
+
+    suspend fun removeFilter(feedId: String, filter: String): List<Filter> =
+        mapped { api.removeFilter(feedId, filter).unwrap().filters }
+
+    suspend fun importFollows(feedId: String, addresses: String): Imported =
+        mapped { api.importFollows(feedId, addresses).unwrap() }
+
+    suspend fun people(): List<Person> = mapped { api.getPeople().unwrap().people }
+
+    suspend fun lookup(query: String): Lookup = mapped { api.lookup(query).unwrapRaw() }
+
+    /** The user's accounts on other networks, hosted or linked. */
+    suspend fun networkAccounts(): List<PublishAccount> = mapped { api.listNetworkAccounts().unwrapRaw() }
+
+    suspend fun getPublish(feedId: String): PublishState = mapped { api.getPublish(feedId).unwrapRaw() }
+
+    suspend fun setPublish(feedId: String, accounts: List<String>): PublishSaved =
+        mapped { api.setPublish(feedId, Gson().toJson(accounts)).unwrapRaw() }
+
+    suspend fun forgetCopies(feedId: String, account: String): Int =
+        mapped { api.forgetCopies(feedId, account).unwrapRaw().deleted }
+
+    suspend fun setGenerator(feedId: String, account: String, on: Boolean): Map<String, String> =
+        mapped { api.setGenerator(feedId, account, if (on) "true" else "false").unwrapRaw().generators }
+
+    suspend fun importAccount(feedId: String, account: String, kind: String): Imported =
+        mapped { api.importAccount(feedId, account, kind).unwrapRaw() }
+
+    suspend fun backups(feedId: String, account: String): List<String> =
+        mapped { api.getBackups(feedId, account).unwrapRaw().files }
+
+    private suspend fun <T> mapped(block: suspend () -> T): T = try {
+        block()
+    } catch (e: Exception) {
+        throw e.toMochiError()
+    }
+}
+
+/**
+ * A post's features as the form carries them: each only when the composer set
+ * it, so an edit that says nothing leaves the post's own.
+ */
+internal fun MultipartBody.Builder.features(features: PostFeatures?): MultipartBody.Builder = apply {
+    if (features == null) return@apply
+    features.visibility?.takeIf { it.isNotEmpty() }?.let { addFormDataPart("visibility", it) }
+    features.warning?.let { addFormDataPart("warning", it) }
+    features.sensitive?.let { addFormDataPart("sensitive", if (it) "true" else "false") }
+    features.language?.takeIf { it.isNotEmpty() }?.let { addFormDataPart("language", it) }
 }

@@ -132,6 +132,7 @@ fun NavGraphBuilder.forumsNavGraph(
         PostScreen(
             onBack = { navController.popBackStack() },
             onEditPost = { fId, pId -> navController.navigate(ForumsApp.newPost(fId, pId)) },
+            onOpenPost = { fId, pId -> navController.navigate(ForumsApp.post(fId, pId)) },
         )
     }
 

@@ -56,6 +56,8 @@ data class PostUiState(
     @StringRes val gone: Int? = null,
     /** Whether the user follows the post; null where they cannot. */
     val following: Boolean? = null,
+    /** What an action that worked says, as a string resource. */
+    @StringRes val done: Int? = null,
 )
 
 @HiltViewModel
@@ -347,6 +349,27 @@ class PostViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
+    }
+
+    /**
+     * Block a person on another network by their address, or their server by
+     * its domain: their posts and comments are hidden everywhere after.
+     */
+    fun block(target: String) {
+        if (target.isBlank()) return
+        viewModelScope.launch {
+            try {
+                repository.addBlock(target)
+                _uiState.value = _uiState.value.copy(done = R.string.forums_blocked)
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    fun clearDone() {
+        _uiState.value = _uiState.value.copy(done = null)
     }
 
     private fun moderate(block: suspend () -> Unit) {

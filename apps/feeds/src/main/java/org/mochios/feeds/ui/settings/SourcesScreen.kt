@@ -5,7 +5,19 @@
 
 package org.mochios.feeds.ui.settings
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.icons.outlined.UploadFile
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.size
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.mochios.android.i18n.LocalFormat
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -44,9 +56,46 @@ fun SourcesScreen(
     val feedInfo by viewModel.feedInfo.collectAsState()
     val error by viewModel.error.collectAsState()
     val actionMessage by viewModel.actionMessage.collectAsState()
+    val imported by viewModel.imported.collectAsState()
+    val isImporting by viewModel.isImporting.collectAsState()
 
     val snackbarHostState = remember { SnackbarHostState() }
     val resources = LocalResources.current
+    val format = LocalFormat.current
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+
+    // A Mastodon export of follows (following_accounts.csv), read here and
+    // sent as text: each address becomes a source.
+    val importLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) {
+            scope.launch {
+                val text = withContext(Dispatchers.IO) {
+                    runCatching {
+                        context.contentResolver.openInputStream(uri)?.bufferedReader()?.use { it.readText() }
+                    }.getOrNull()
+                }
+                if (!text.isNullOrBlank()) viewModel.importFollows(text)
+            }
+        }
+    }
+
+    LaunchedEffect(imported) {
+        imported?.let { answer ->
+            snackbarHostState.showSnackbar(
+                if (answer.more) {
+                    resources.getString(
+                        R.string.feeds_follows_importing,
+                        format.formatNumber(answer.total),
+                        format.formatNumber(answer.imported),
+                    )
+                } else {
+                    resources.getQuantityString(R.plurals.feeds_follows_imported, answer.imported, format.formatNumber(answer.imported))
+                },
+            )
+            viewModel.clearImported()
+        }
+    }
 
     LaunchedEffect(Unit) {
         viewModel.loadSources()
@@ -83,6 +132,21 @@ fun SourcesScreen(
                             Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = stringResource(MochiR.string.common_back),
                         )
+                    }
+                },
+                actions = {
+                    MochiIconButton(
+                        onClick = { importLauncher.launch(arrayOf("text/*", "application/csv")) },
+                        enabled = !isImporting,
+                    ) {
+                        if (isImporting) {
+                            CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
+                        } else {
+                            Icon(
+                                Icons.Outlined.UploadFile,
+                                contentDescription = stringResource(R.string.feeds_import_follows),
+                            )
+                        }
                     }
                 },
             )

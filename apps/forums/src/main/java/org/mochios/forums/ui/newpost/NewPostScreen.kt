@@ -97,6 +97,9 @@ fun NewPostScreen(
     val existingCaptions by viewModel.existingCaptions.collectAsState()
     val title by viewModel.title.collectAsState()
     val body by viewModel.body.collectAsState()
+    val link by viewModel.link.collectAsState()
+    val sensitive by viewModel.sensitive.collectAsState()
+    val language by viewModel.language.collectAsState()
     var showPreview by remember { mutableStateOf(false) }
     // The toolbar marks up a selection, so the cursor has to live here rather
     // than inside the field.
@@ -176,7 +179,7 @@ fun NewPostScreen(
                     }
                     MochiButton(
                         onClick = { viewModel.submit() },
-                        enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting,
+                        enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting && linkError(link) == null,
                         modifier = Modifier.fillMaxWidth(),
                     ) {
                         if (uiState.isPosting) {
@@ -211,6 +214,10 @@ fun NewPostScreen(
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth()
             )
+            Spacer(Modifier.height(16.dp))
+
+            // A link post: the link, which the server reads a card for.
+            PostLinkField(link = link, onLink = { viewModel.setLink(it) })
             Spacer(Modifier.height(16.dp))
 
             Text(
@@ -250,6 +257,14 @@ fun NewPostScreen(
                     )
                 }
             }
+            Spacer(Modifier.height(16.dp))
+
+            PostMarksFields(
+                language = language,
+                sensitive = sensitive,
+                onLanguage = { viewModel.setLanguage(it) },
+                onSensitive = { viewModel.setSensitive(it) },
+            )
             Spacer(Modifier.height(16.dp))
 
             if (existingAttachments.isNotEmpty()) {

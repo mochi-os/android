@@ -43,6 +43,7 @@ import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.Block
 import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.CloudOff
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.FormatQuote
@@ -51,6 +52,7 @@ import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material.icons.outlined.LockOpen
 import androidx.compose.material.icons.outlined.NotificationsActive
 import androidx.compose.material.icons.outlined.NotificationsNone
+import androidx.compose.material.icons.outlined.PersonOff
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Report
 import androidx.compose.material.icons.outlined.Restore
@@ -114,6 +116,7 @@ import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
+import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
@@ -129,12 +132,17 @@ import org.mochios.forums.model.Post
 import org.mochios.forums.model.Tag
 import org.mochios.forums.model.countComments
 import org.mochios.forums.ui.components.PostBadges
+import org.mochios.forums.ui.components.Crossposts
+import org.mochios.forums.ui.components.PostLinkCard
+import org.mochios.forums.ui.components.SensitiveBadge
+import org.mochios.forums.ui.components.SensitiveCover
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PostScreen(
     onBack: () -> Unit,
     onEditPost: (forumId: String, postId: String) -> Unit,
+    onOpenPost: (forumId: String, postId: String) -> Unit = { _, _ -> },
     viewModel: PostViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -157,6 +165,11 @@ fun PostScreen(
         val rejected = uiState.rejected ?: return@LaunchedEffect
         snackbar.showSnackbar(resources.getString(rejected))
         viewModel.clearRejected()
+    }
+    LaunchedEffect(uiState.done) {
+        val done = uiState.done ?: return@LaunchedEffect
+        snackbar.showSnackbar(resources.getString(done))
+        viewModel.clearDone()
     }
     var showPostMenu by remember { mutableStateOf(false) }
     val isPostAuthor = uiState.post.member == uiState.identity && uiState.identity.isNotBlank()
@@ -211,6 +224,7 @@ fun PostScreen(
         // themselves replying to.
         onQuote = { comment -> quoteIntoDraft(withoutQuote(comment.body)) },
         onOpenAttachment = { openAttachment = it },
+        onBlock = { target -> viewModel.block(target) },
     )
     val attachmentPanel: @Composable (Attachment) -> Unit = { att ->
         AttachmentComments(
@@ -332,6 +346,7 @@ fun PostScreen(
                                         uiState.post.bodyMarkdown.ifBlank { uiState.post.body }
                                     )
                                 },
+                                onBlock = { target -> viewModel.block(target) },
                             )
                         }
                     }
@@ -395,6 +410,7 @@ fun PostScreen(
                                 onTagInterest = { qid, direction -> viewModel.adjustTagInterest(qid, direction) },
                                 commentCount = attachmentCommentCount,
                                 comments = attachmentPanel,
+                                onOpenPost = onOpenPost,
                             )
                         }
                         // Separates the post from the conversation below it.
@@ -707,6 +723,7 @@ private fun PostActionsMenu(
     onRestore: () -> Unit,
     onReport: () -> Unit,
     onQuote: () -> Unit,
+    onBlock: (String) -> Unit = {},
 ) {
     MochiDropdownMenu(expanded = expanded, onDismissRequest = onDismiss) {
         if (canEdit) {
@@ -783,8 +800,39 @@ private fun PostActionsMenu(
                 leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
             )
         }
+        BlockItems(member = post.member, onDismiss = onDismiss, onBlock = onBlock)
     }
 }
+
+/**
+ * Block the author of a post or comment from another network, whose member id
+ * is their page there, or their whole server.
+ */
+@Composable
+private fun BlockItems(member: String, onDismiss: () -> Unit, onBlock: (String) -> Unit) {
+    if (!remoteMember(member)) return
+    MochiDropdownMenuDivider()
+    MochiDropdownMenuItem(
+        text = { Text(stringResource(R.string.forums_block_author)) },
+        onClick = { onDismiss(); onBlock(member) },
+        leadingIcon = { Icon(Icons.Outlined.PersonOff, contentDescription = null) },
+    )
+    memberServer(member)?.let { server ->
+        MochiDropdownMenuItem(
+            text = { Text(stringResource(R.string.forums_block_server)) },
+            onClick = { onDismiss(); onBlock(server) },
+            leadingIcon = { Icon(Icons.Outlined.CloudOff, contentDescription = null) },
+        )
+    }
+}
+
+/** Whether a member is a person on another network: their id is their page there. */
+internal fun remoteMember(member: String): Boolean =
+    member.startsWith("http://", ignoreCase = true) || member.startsWith("https://", ignoreCase = true)
+
+/** The server a remote member is on, by its domain. */
+internal fun memberServer(member: String): String? =
+    if (remoteMember(member)) runCatching { android.net.Uri.parse(member).host }.getOrNull()?.takeIf { it.isNotEmpty() } else null
 
 @Composable
 private fun PostHeader(
@@ -800,6 +848,7 @@ private fun PostHeader(
     // The lightbox comments slot, per image attachment.
     commentCount: ((Attachment) -> Int)? = null,
     comments: (@Composable (Attachment) -> Unit)? = null,
+    onOpenPost: (forumId: String, postId: String) -> Unit = { _, _ -> },
 ) {
     val format = LocalFormat.current
     Column(
@@ -807,6 +856,15 @@ private fun PostHeader(
             .fillMaxWidth()
             .padding(start = 8.dp, end = 8.dp, bottom = 8.dp)
     ) {
+        if (post.sensitive != 0) {
+            SensitiveBadge(modifier = Modifier.padding(bottom = 8.dp))
+        }
+        // A sensitive post's text, link and attachments wait behind a cover.
+        SensitiveCover(sensitive = post.sensitive != 0, key = post.id) {
+          Column {
+            if (post.url.isNotEmpty()) {
+                PostLinkCard(post = post, modifier = Modifier.padding(bottom = 8.dp))
+            }
         val postMarkdown = post.bodyMarkdown.ifBlank { post.body }
         if (postMarkdown.isNotBlank()) {
             HtmlContent(html = postMarkdown, modifier = Modifier.fillMaxWidth())
@@ -833,6 +891,13 @@ private fun PostHeader(
             )
             Spacer(Modifier.height(6.dp))
         }
+          }
+        }
+        Crossposts(
+            crossposts = post.crossposts,
+            onOpen = { cross -> onOpenPost(cross.fingerprint.ifEmpty { cross.forum }, cross.post) },
+            modifier = Modifier.padding(vertical = 6.dp),
+        )
         // Author on the left, timestamp flush to the trailing edge. The avatar
         // matches the name's line height so the two sit on one baseline.
         Row(
@@ -949,6 +1014,7 @@ private data class CommentActions(
     val onReport: (ForumComment) -> Unit,
     val onQuote: (ForumComment) -> Unit,
     val onOpenAttachment: (String) -> Unit,
+    val onBlock: (String) -> Unit = {},
 )
 
 private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
@@ -980,6 +1046,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
                 onReport = { actions.onReport(c) },
                 onQuote = { actions.onQuote(c) },
                 onOpenAttachment = actions.onOpenAttachment,
+                onBlock = actions.onBlock,
             )
         }
         if (c.children.isNotEmpty()) {
@@ -1132,6 +1199,7 @@ private fun CommentCard(
     onReport: () -> Unit,
     onQuote: () -> Unit,
     onOpenAttachment: (String) -> Unit,
+    onBlock: (String) -> Unit = {},
 ) {
     var showMenu by remember { mutableStateOf(false) }
     val anchor = comment.anchor
@@ -1247,6 +1315,7 @@ private fun CommentCard(
                         leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                     )
                 }
+                BlockItems(member = comment.member, onDismiss = { showMenu = false }, onBlock = onBlock)
             }
         }
     }

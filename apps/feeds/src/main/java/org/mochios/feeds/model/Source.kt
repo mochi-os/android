@@ -14,5 +14,11 @@ data class Source(
     val credibility: Double = 0.0,
     val interval: Int = 0,
     val fetched: Long = 0,
-    val transform: String = ""
+    val transform: String = "",
+    /**
+     * The hosted account a person is followed through, and how the follow
+     * stands: following, pending the other server's acceptance, or refused.
+     */
+    val account: String = "",
+    val state: String = "",
 )

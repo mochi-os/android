@@ -188,7 +188,14 @@ private fun SubscriberSettings(
         confirmTitle = stringResource(R.string.feeds_unsubscribe_confirm),
         confirmMessage = stringResource(R.string.feeds_unsubscribe_confirm_message),
         onUnsubscribe = onUnsubscribe,
-        identity = { FeedIdentitySection(feed = feed, editable = false, onRename = {}) },
+        identity = {
+            FeedIdentitySection(feed = feed, editable = false, onRename = {})
+            // A subscriber's own keyword filters on the feed.
+            val publishing: PublishingViewModel = hiltViewModel()
+            LaunchedEffect(Unit) { publishing.loadFilters() }
+            PublishingEvents(publishing)
+            FiltersSection(publishing)
+        },
         isBusy = isUnsubscribing,
         keepOpen = true
     )
