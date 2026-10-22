@@ -732,8 +732,17 @@ open class MainActivity : ComponentActivity() {
             "chat" -> {
                 if (id == "new") {
                     val friendId = parseQueryParam(query, "friend")
+                    val account = parseQueryParam(query, "account").orEmpty()
+                    val address = parseQueryParam(query, "address").orEmpty()
                     navController.returnToRouter(ChatApp.ROUTER)
-                    navController.navigate(ChatApp.newChat(friendId.orEmpty())) {
+                    // A contact's messaging address on another network goes to
+                    // the account named; a friend to their Mochi chat.
+                    val route = if (account.isNotEmpty() && address.isNotEmpty()) {
+                        ChatApp.newChat(account, address, parseQueryParam(query, "name").orEmpty())
+                    } else {
+                        ChatApp.newChat(friendId.orEmpty())
+                    }
+                    navController.navigate(route) {
                         launchSingleTop = true
                     }
                     return

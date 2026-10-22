@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -68,6 +67,7 @@ import coil3.compose.AsyncImage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.QuoteCard as LibQuoteCard
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.util.isWebUrl
@@ -251,80 +251,18 @@ internal fun PostCopies(copies: List<PostCopy>, boosts: Int, modifier: Modifier 
  */
 @Composable
 internal fun QuoteCard(quote: PostQuote, modifier: Modifier = Modifier) {
-    val context = LocalContext.current
     val author = quote.author
-    val name = author?.label.orEmpty()
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
-            .border(1.dp, MaterialTheme.colorScheme.outlineVariant, RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
-            .then(if (isWebUrl(quote.url)) Modifier.clickable { openWeb(context, quote.url) } else Modifier)
-            .padding(12.dp),
-    ) {
-        if (name.isNotEmpty() || quote.network.isNotEmpty()) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                if (name.isNotEmpty()) {
-                    EntityAvatar(
-                        name = name,
-                        src = author?.avatar?.takeIf { isWebUrl(it) },
-                        seed = author?.id?.ifEmpty { author.address },
-                        size = 20.dp,
-                    )
-                    Spacer(modifier = Modifier.width(6.dp))
-                    Text(
-                        text = name,
-                        style = MaterialTheme.typography.labelMedium,
-                        fontWeight = FontWeight.SemiBold,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.weight(1f, fill = false),
-                    )
-                    if (author?.address?.isNotEmpty() == true && author.name.isNotEmpty()) {
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(
-                            text = author.address,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.weight(1f, fill = false),
-                        )
-                    }
-                }
-                Spacer(modifier = Modifier.weight(1f))
-                if (quote.network.isNotEmpty()) {
-                    Text(
-                        text = providerName(quote.network),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
-            }
-            Spacer(modifier = Modifier.height(4.dp))
-        }
-        if (quote.text.isNotEmpty()) {
-            Text(
-                text = quote.text,
-                style = MaterialTheme.typography.bodyMedium,
-                maxLines = 6,
-                overflow = TextOverflow.Ellipsis,
-            )
-        }
-        if (isWebUrl(quote.image)) {
-            Spacer(modifier = Modifier.height(8.dp))
-            AsyncImage(
-                model = quote.image,
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .heightIn(max = 250.dp)
-                    .clip(RoundedCornerShape(8.dp)),
-            )
-        }
-    }
+    LibQuoteCard(
+        network = quote.network,
+        url = quote.url,
+        text = quote.text,
+        image = quote.image,
+        name = author?.name.orEmpty(),
+        address = author?.address.orEmpty(),
+        avatar = author?.avatar.orEmpty(),
+        seed = author?.id.orEmpty(),
+        modifier = modifier,
+    )
 }
 
 /**

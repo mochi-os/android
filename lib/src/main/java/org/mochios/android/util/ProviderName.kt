@@ -20,6 +20,7 @@ private val PROVIDER_NAMES = mapOf(
     "facebook" to "Facebook",
     "x" to "X",
     "stripe-customer" to "Stripe",
+    "xmpp" to "XMPP",
 )
 
 fun providerName(key: String): String =

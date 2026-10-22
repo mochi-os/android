@@ -10,11 +10,18 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.chat.model.Chat
+import org.mochios.chat.model.ChatAccount
 import org.mochios.chat.model.ChatMember
 import org.mochios.chat.model.ChatMessage
+import org.mochios.chat.model.ChatPreferences
+import org.mochios.chat.model.ChatPresence
+import org.mochios.chat.model.ChatReceipt
 import org.mochios.chat.model.ChatSearchResult
 import org.mochios.chat.model.ChatViewResponse
+import org.mochios.chat.model.EncryptionDevice
+import org.mochios.chat.model.EncryptionOverview
 import org.mochios.chat.model.Friend
+import org.mochios.chat.model.Verification
 import retrofit2.Response
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -33,14 +40,18 @@ data class CreateChatResponse(
 
 data class NewChatResponse(
     val name: String = "",
-    val friends: List<Friend> = emptyList()
+    val friends: List<Friend> = emptyList(),
+    /** The user's accounts on other networks a conversation can be had through. */
+    val accounts: List<ChatAccount> = emptyList(),
 )
 
 data class MessageListResponse(
     val messages: List<ChatMessage> = emptyList(),
     val more: Boolean = false,
     /** The server's opaque keyset cursor for the next (older) page; null on the last. */
-    val cursor: String? = null
+    val cursor: String? = null,
+    /** Each member's delivered and displayed watermarks. */
+    val receipts: List<ChatReceipt> = emptyList(),
 )
 
 data class SendMessageResponse(val id: String = "")
@@ -80,11 +91,6 @@ data class SearchResponse(
     val results: List<ChatSearchResult> = emptyList()
 )
 
-// Whom may start a chat with this user (the policy preference).
-data class ChatPreferencesResponse(
-    val policy: String = "friends"
-)
-
 // A directory person for the new-chat picker (non-friends may be addressed
 // when their chat_policy allows it; the sender-side probe at create decides).
 data class PersonResult(
@@ -95,6 +101,20 @@ data class PersonResult(
 
 data class PersonSearchResponse(val results: List<PersonResult> = emptyList())
 
+/** What accepting an invitation answers: the conversation, now active. */
+data class AcceptResponse(val id: String = "")
+
+data class DeclineResponse(val declined: Boolean = false)
+
+data class DevicesResponse(val devices: List<EncryptionDevice> = emptyList())
+
+data class VerificationsResponse(val verifications: List<Verification> = emptyList())
+
+/** Setting up recovery: the recovery key, shown once, or that the account's password is wanted. */
+data class SetupResponse(val recovery: String = "", val password: Boolean = false)
+
+data class RecoverResponse(val restored: Int = 0)
+
 interface ChatApi {
 
     @GET("-/list")
@@ -104,13 +124,17 @@ interface ChatApi {
     suspend fun getNewChatData(): Response<ApiResponse<NewChatResponse>>
 
     @GET("-/preferences/get")
-    suspend fun getPreferences(): Response<ApiResponse<ChatPreferencesResponse>>
+    suspend fun getPreferences(): Response<ApiResponse<ChatPreferences>>
 
+    // Only what changed is sent; a field left null keeps the user's setting.
     @FormUrlEncoded
     @POST("-/preferences/set")
     suspend fun setPreferences(
-        @Field("policy") policy: String
-    ): Response<ApiResponse<SuccessResponse>>
+        @Field("policy") policy: String? = null,
+        @Field("presence") presence: String? = null,
+        @Field("receipts") receipts: String? = null,
+        @Field("typing") typing: String? = null,
+    ): Response<ApiResponse<Map<String, Any>>>
 
     @FormUrlEncoded
     @POST("-/person/search")
@@ -118,11 +142,13 @@ interface ChatApi {
         @Field("search") search: String
     ): Response<ApiResponse<PersonSearchResponse>>
 
+    // With an account, members are addresses on its network.
     @FormUrlEncoded
     @POST("-/create")
     suspend fun createChat(
         @Field("name") name: String,
-        @Field("members") members: String?
+        @Field("members") members: String?,
+        @Field("account") account: String? = null,
     ): Response<ApiResponse<CreateChatResponse>>
 
     @GET("{chatId}/-/view")
@@ -132,7 +158,8 @@ interface ChatApi {
     suspend fun getMessages(
         @Path("chatId") chatId: String,
         @Query("cursor") cursor: String? = null,
-        @Query("limit") limit: Int? = null
+        @Query("limit") limit: Int? = null,
+        @Query("thread") thread: String? = null,
     ): Response<ApiResponse<MessageListResponse>>
 
     @FormUrlEncoded
@@ -140,7 +167,8 @@ interface ChatApi {
     suspend fun sendMessage(
         @Path("chatId") chatId: String,
         @Field("body") body: String,
-        @Field("reply") reply: String? = null
+        @Field("reply") reply: String? = null,
+        @Field("thread") thread: String? = null,
     ): Response<ApiResponse<SendMessageResponse>>
 
     @Multipart
@@ -149,6 +177,7 @@ interface ChatApi {
         @Path("chatId") chatId: String,
         @Part("body") body: RequestBody,
         @Part("reply") reply: RequestBody? = null,
+        @Part("thread") thread: RequestBody? = null,
         @Part files: List<MultipartBody.Part>
     ): Response<ApiResponse<SendMessageResponse>>
 
@@ -246,4 +275,74 @@ interface ChatApi {
         @Path("chatId") chatId: String,
         @Query("q") query: String
     ): Response<ApiResponse<SearchResponse>>
+
+    // Tell the other members the user is typing; the server sends nothing
+    // where the user has turned typing off.
+    @POST("{chatId}/-/typing")
+    suspend fun typing(@Path("chatId") chatId: String): Response<ApiResponse<Map<String, Any>>>
+
+    // The other member of a one-to-one conversation, or the member named.
+    @GET("{chatId}/-/presence")
+    suspend fun presence(
+        @Path("chatId") chatId: String,
+        @Query("member") member: String? = null,
+    ): Response<ApiResponse<ChatPresence>>
+
+    @POST("{chatId}/-/accept")
+    suspend fun accept(@Path("chatId") chatId: String): Response<ApiResponse<AcceptResponse>>
+
+    @POST("{chatId}/-/decline")
+    suspend fun decline(@Path("chatId") chatId: String): Response<ApiResponse<DeclineResponse>>
+
+    // --- The encryption of a Matrix or XMPP conversation, whose device the server holds ---
+
+    @GET("{chatId}/-/encryption")
+    suspend fun encryption(@Path("chatId") chatId: String): Response<ApiResponse<EncryptionOverview>>
+
+    @GET("{chatId}/-/encryption/devices")
+    suspend fun devices(
+        @Path("chatId") chatId: String,
+        @Query("person") person: String,
+    ): Response<ApiResponse<DevicesResponse>>
+
+    @FormUrlEncoded
+    @POST("{chatId}/-/encryption/trust")
+    suspend fun trust(
+        @Path("chatId") chatId: String,
+        @Field("person") person: String,
+        @Field("device") device: String,
+        @Field("trust") trust: String,
+    ): Response<ApiResponse<Map<String, Any>>>
+
+    @FormUrlEncoded
+    @POST("{chatId}/-/encryption/verify")
+    suspend fun verify(
+        @Path("chatId") chatId: String,
+        @Field("person") person: String,
+    ): Response<ApiResponse<Verification>>
+
+    @FormUrlEncoded
+    @POST("{chatId}/-/encryption/setup")
+    suspend fun setup(
+        @Path("chatId") chatId: String,
+        @Field("password") password: String? = null,
+    ): Response<ApiResponse<SetupResponse>>
+
+    @FormUrlEncoded
+    @POST("{chatId}/-/encryption/recover")
+    suspend fun recover(
+        @Path("chatId") chatId: String,
+        @Field("key") key: String,
+    ): Response<ApiResponse<RecoverResponse>>
+
+    @GET("-/encryption/verifications")
+    suspend fun verifications(): Response<ApiResponse<VerificationsResponse>>
+
+    @FormUrlEncoded
+    @POST("-/encryption/act")
+    suspend fun act(
+        @Field("account") account: String,
+        @Field("flow") flow: String,
+        @Field("action") action: String,
+    ): Response<ApiResponse<Map<String, Any>>>
 }
