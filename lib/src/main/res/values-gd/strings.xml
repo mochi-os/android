@@ -334,4 +334,12 @@
     <string name="upload_progress">Adhartas an luchdaidh suas</string>
     <string name="upload_processing">\'Ga phròiseasadh…</string>
     <string name="upload_sent">%1$s à %2$s</string>
+    <string name="comment_share">Co-roinn</string>
+    <string name="comment_all">Na beachdan uile</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s fhreagairt</item>
+        <item quantity="two">+%1$s barrachd freagairtean</item>
+        <item quantity="few">+%1$s barrachd freagairtean</item>
+        <item quantity="other">+%1$s barrachd freagairtean</item>
+    </plurals>
 </resources>

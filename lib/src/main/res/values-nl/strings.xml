@@ -332,4 +332,10 @@
     <string name="upload_progress">Uploadvoortgang</string>
     <string name="upload_processing">Verwerken…</string>
     <string name="upload_sent">%1$s van %2$s</string>
+    <string name="comment_share">Delen</string>
+    <string name="comment_all">Alle reacties</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s reactie</item>
+        <item quantity="other">+%1$s meer reacties</item>
+    </plurals>
 </resources>

@@ -339,4 +339,5 @@
         <item quantity="one">%s برادري شامل ڪئي وئي</item>
         <item quantity="other">%s برادريون شامل ڪيون ويون</item>
     </plurals>
+    <string name="forums_comment_op">ليکڪ</string>
 </resources>

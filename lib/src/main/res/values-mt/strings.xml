@@ -336,4 +336,13 @@
     <string name="upload_progress">Il-progress tat-tlugħ</string>
     <string name="upload_processing">Qed jiġi pproċessat…</string>
     <string name="upload_sent">%1$s minn %2$s</string>
+    <string name="comment_share">Aqsam</string>
+    <string name="comment_all">Il-kummenti kollha</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s tweġiba</item>
+        <item quantity="two">+%1$s tweġibiet aktar</item>
+        <item quantity="few">+%1$s tweġibiet aktar</item>
+        <item quantity="many">+%1$s tweġiba aktar</item>
+        <item quantity="other">+%1$s tweġiba aktar</item>
+    </plurals>
 </resources>

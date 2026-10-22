@@ -339,4 +339,5 @@
         <item quantity="one">An ƙara al\'umma %s</item>
         <item quantity="other">An ƙara al\'ummomi %s</item>
     </plurals>
+    <string name="forums_comment_op">Marubuci</string>
 </resources>

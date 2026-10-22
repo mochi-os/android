@@ -332,4 +332,10 @@
     <string name="upload_progress">업로드 진행률</string>
     <string name="upload_processing">처리 중…</string>
     <string name="upload_sent">%2$s 중 %1$s</string>
+    <string name="comment_share">공유</string>
+    <string name="comment_all">모든 댓글</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">답글 %1$s개</item>
+        <item quantity="other">답글 +%1$s개 더</item>
+    </plurals>
 </resources>

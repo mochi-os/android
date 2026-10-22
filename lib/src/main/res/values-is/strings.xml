@@ -332,4 +332,10 @@
     <string name="upload_progress">Framvinda upphleðslu</string>
     <string name="upload_processing">Í vinnslu…</string>
     <string name="upload_sent">%1$s af %2$s</string>
+    <string name="comment_share">Deila</string>
+    <string name="comment_all">Allar athugasemdir</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s svar</item>
+        <item quantity="other">+%1$s fleiri svör</item>
+    </plurals>
 </resources>

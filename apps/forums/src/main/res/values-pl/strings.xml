@@ -343,4 +343,5 @@
         <item quantity="many">Dodano %s społeczności</item>
         <item quantity="other">Dodano %s społeczności</item>
     </plurals>
+    <string name="forums_comment_op">Autor</string>
 </resources>

@@ -332,4 +332,10 @@
     <string name="upload_progress">Feltöltés folyamata</string>
     <string name="upload_processing">Feldolgozás…</string>
     <string name="upload_sent">%1$s / %2$s</string>
+    <string name="comment_share">Megosztás</string>
+    <string name="comment_all">Összes megjegyzés</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s válasz</item>
+        <item quantity="other">+%1$s további válasz</item>
+    </plurals>
 </resources>

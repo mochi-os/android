@@ -341,4 +341,5 @@
         <item quantity="one">Pievienota %s kopiena</item>
         <item quantity="other">Pievienotas %s kopienas</item>
     </plurals>
+    <string name="forums_comment_op">Autors</string>
 </resources>

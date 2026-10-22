@@ -11,6 +11,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Reply
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -27,13 +28,15 @@ private val ICON_SIZE = 18.dp
 
 /**
  * What can be done to one comment, in the order every thread in the suite
- * shows them: react, reply, edit, delete. An action with no callback is left
- * out, so a viewer who may not edit sees no pencil.
+ * shows them: react, reply, share, edit, delete. An action with no callback is
+ * left out, so a viewer who may not edit sees no pencil.
  *
- * The labels come from `lib`, which already carries all three, so a thread does
- * not have to supply its own words for the same four things.
+ * The labels come from `lib`, so a thread does not have to supply its own words
+ * for the same things.
  *
  * @param onReply Answer this comment.
+ * @param onShare Hand a link to it to the share sheet. Null where a thread has
+ *   no page of its own to link to.
  * @param onEdit Rewrite it. Null for anyone who may not.
  * @param onDelete Remove it. Null for anyone who may not.
  * @param modifier Modifier for the row.
@@ -44,6 +47,7 @@ private val ICON_SIZE = 18.dp
 fun CommentActions(
     onReply: (() -> Unit)? = null,
     onEdit: (() -> Unit)? = null,
+    onShare: (() -> Unit)? = null,
     onDelete: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
     reactions: (@Composable () -> Unit)? = null,
@@ -55,6 +59,13 @@ fun CommentActions(
                 icon = Icons.AutoMirrored.Outlined.Reply,
                 contentDescription = stringResource(R.string.comment_reply),
                 onClick = onReply,
+            )
+        }
+        if (onShare != null) {
+            CommentAction(
+                icon = Icons.Outlined.Share,
+                contentDescription = stringResource(R.string.comment_share),
+                onClick = onShare,
             )
         }
         if (onEdit != null) {
@@ -74,8 +85,9 @@ fun CommentActions(
     }
 }
 
+/** One action glyph in a comment's row, the size [CommentActions] gives its own. */
 @Composable
-private fun CommentAction(
+fun CommentAction(
     icon: ImageVector,
     contentDescription: String,
     onClick: () -> Unit,

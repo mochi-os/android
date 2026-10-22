@@ -339,4 +339,5 @@
         <item quantity="one">Jumuiya %s imeongezwa</item>
         <item quantity="other">Jumuiya %s zimeongezwa</item>
     </plurals>
+    <string name="forums_comment_op">Mwandishi</string>
 </resources>

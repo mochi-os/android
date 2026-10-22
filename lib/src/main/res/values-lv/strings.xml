@@ -333,4 +333,11 @@
     <string name="upload_progress">Augšupielādes norise</string>
     <string name="upload_processing">Apstrādā…</string>
     <string name="upload_sent">%1$s no %2$s</string>
+    <string name="comment_share">Kopīgot</string>
+    <string name="comment_all">Visi komentāri</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="zero">%1$s atbilžu</item>
+        <item quantity="one">%1$s atbilde</item>
+        <item quantity="other">+%1$s vēl atbildes</item>
+    </plurals>
 </resources>

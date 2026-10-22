@@ -334,4 +334,12 @@
     <string name="upload_progress">Хід завантаження</string>
     <string name="upload_processing">Обробка…</string>
     <string name="upload_sent">%1$s з %2$s</string>
+    <string name="comment_share">Поділитися</string>
+    <string name="comment_all">Усі коментарі</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s відповідь</item>
+        <item quantity="few">ще +%1$s відповіді</item>
+        <item quantity="many">ще +%1$s відповідей</item>
+        <item quantity="other">ще +%1$s відповіді</item>
+    </plurals>
 </resources>

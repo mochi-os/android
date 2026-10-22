@@ -342,4 +342,5 @@
         <item quantity="few">Pridėtos %s bendruomenės</item>
         <item quantity="other">Pridėta %s bendruomenių</item>
     </plurals>
+    <string name="forums_comment_op">Autorius</string>
 </resources>

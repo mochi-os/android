@@ -339,4 +339,5 @@
         <item quantity="one">%s കമ്മ്യൂണിറ്റി ചേർത്തു</item>
         <item quantity="other">%s കമ്മ്യൂണിറ്റികൾ ചേർത്തു</item>
     </plurals>
+    <string name="forums_comment_op">രചയിതാവ്</string>
 </resources>

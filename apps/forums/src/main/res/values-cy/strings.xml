@@ -347,4 +347,5 @@
         <item quantity="many">Ychwanegwyd %s chymuned</item>
         <item quantity="other">Ychwanegwyd %s cymuned</item>
     </plurals>
+    <string name="forums_comment_op">Awdur</string>
 </resources>

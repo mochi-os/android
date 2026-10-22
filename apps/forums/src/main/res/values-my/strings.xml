@@ -337,4 +337,5 @@
     <plurals name="forums_communities_added">
         <item quantity="other">အသိုင်းအဝိုင်း %s ခု ထည့်ပြီးပါပြီ</item>
     </plurals>
+    <string name="forums_comment_op">ရေးသူ</string>
 </resources>

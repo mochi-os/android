@@ -337,4 +337,5 @@
     <plurals name="forums_communities_added">
         <item quantity="other">បានបន្ថែមសហគមន៍ %s</item>
     </plurals>
+    <string name="forums_comment_op">អ្នកនិពន្ធ</string>
 </resources>

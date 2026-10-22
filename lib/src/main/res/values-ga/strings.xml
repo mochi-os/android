@@ -335,4 +335,13 @@
     <string name="upload_progress">Dul chun cinn an uaslódála</string>
     <string name="upload_processing">Á phróiseáil…</string>
     <string name="upload_sent">%1$s as %2$s</string>
+    <string name="comment_share">Comhroinn</string>
+    <string name="comment_all">Gach nóta tráchta</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s fhreagra</item>
+        <item quantity="two">+%1$s fhreagra eile</item>
+        <item quantity="few">+%1$s fhreagraí eile</item>
+        <item quantity="many">+%1$s bhfreagra eile</item>
+        <item quantity="other">+%1$s freagraí eile</item>
+    </plurals>
 </resources>

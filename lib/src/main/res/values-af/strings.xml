@@ -334,4 +334,10 @@
     <string name="upload_progress">Oplaaivordering</string>
     <string name="upload_processing">Verwerk…</string>
     <string name="upload_sent">%1$s van %2$s</string>
+    <string name="comment_share">Deel</string>
+    <string name="comment_all">Alle kommentare</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s antwoord</item>
+        <item quantity="other">+%1$s meer antwoorde</item>
+    </plurals>
 </resources>

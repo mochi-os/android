@@ -339,4 +339,5 @@
         <item quantity="one">დაემატა %s საზოგადოება</item>
         <item quantity="other">დაემატა %s საზოგადოება</item>
     </plurals>
+    <string name="forums_comment_op">ავტორი</string>
 </resources>

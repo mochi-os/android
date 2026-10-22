@@ -341,4 +341,5 @@
         <item quantity="few">%s comunități adăugate</item>
         <item quantity="other">%s de comunități adăugate</item>
     </plurals>
+    <string name="forums_comment_op">Autor</string>
 </resources>

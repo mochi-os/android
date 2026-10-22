@@ -332,4 +332,10 @@
     <string name="upload_progress">پیشرفت بارگذاری</string>
     <string name="upload_processing">در حال پردازش…</string>
     <string name="upload_sent">%1$s از %2$s</string>
+    <string name="comment_share">اشتراک‌گذاری</string>
+    <string name="comment_all">همه نظرها</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s پاسخ</item>
+        <item quantity="other">+%1$s پاسخ دیگر</item>
+    </plurals>
 </resources>

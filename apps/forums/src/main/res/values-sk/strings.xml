@@ -342,4 +342,5 @@
         <item quantity="few">Pridané %s komunity</item>
         <item quantity="other">Pridaných %s komunít</item>
     </plurals>
+    <string name="forums_comment_op">Autor</string>
 </resources>

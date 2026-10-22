@@ -339,4 +339,5 @@
         <item quantity="one">La til %s fellesskap</item>
         <item quantity="other">La til %s fellesskap</item>
     </plurals>
+    <string name="forums_comment_op">Trådstartar</string>
 </resources>

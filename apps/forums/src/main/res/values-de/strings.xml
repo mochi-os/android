@@ -339,4 +339,5 @@
         <item quantity="one">%s Gemeinschaft hinzugefügt</item>
         <item quantity="other">%s Gemeinschaften hinzugefügt</item>
     </plurals>
+    <string name="forums_comment_op">Autor</string>
 </resources>

@@ -339,4 +339,5 @@
         <item quantity="one">Hawaasa %s dabalame</item>
         <item quantity="other">Hawaasota %s dabalaman</item>
     </plurals>
+    <string name="forums_comment_op">Barreessaa</string>
 </resources>

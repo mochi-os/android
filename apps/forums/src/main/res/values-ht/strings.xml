@@ -339,4 +339,5 @@
         <item quantity="one">%s kominote ajoute</item>
         <item quantity="other">%s kominote ajoute</item>
     </plurals>
+    <string name="forums_comment_op">Otè</string>
 </resources>

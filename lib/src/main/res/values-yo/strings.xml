@@ -332,4 +332,10 @@
     <string name="upload_progress">Ìlọsíwájú ìgbéjáde</string>
     <string name="upload_processing">Ń ṣiṣẹ́ lé e…</string>
     <string name="upload_sent">%1$s nínú %2$s</string>
+    <string name="comment_share">Pín</string>
+    <string name="comment_all">Gbogbo àlàyé</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">Ìdáhùn %1$s</item>
+        <item quantity="other">+%1$s àwọn ìdáhùn síi</item>
+    </plurals>
 </resources>

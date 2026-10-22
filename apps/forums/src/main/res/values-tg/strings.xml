@@ -339,4 +339,5 @@
         <item quantity="one">%s ҷомеа илова шуд</item>
         <item quantity="other">%s ҷомеа илова шуд</item>
     </plurals>
+    <string name="forums_comment_op">Муаллиф</string>
 </resources>

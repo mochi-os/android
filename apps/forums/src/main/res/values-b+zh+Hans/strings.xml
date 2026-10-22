@@ -337,4 +337,5 @@
     <plurals name="forums_communities_added">
         <item quantity="other">已添加 %s 个社区</item>
     </plurals>
+    <string name="forums_comment_op">楼主</string>
 </resources>

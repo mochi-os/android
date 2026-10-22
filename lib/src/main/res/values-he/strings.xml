@@ -334,4 +334,12 @@
     <string name="upload_progress">התקדמות ההעלאה</string>
     <string name="upload_processing">מעבד…</string>
     <string name="upload_sent">%1$s מתוך %2$s</string>
+    <string name="comment_share">שתף</string>
+    <string name="comment_all">כל התגובות</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">תגובה אחת</item>
+        <item quantity="two">+%1$s תגובות נוספות</item>
+        <item quantity="many">+%1$s תגובות נוספות</item>
+        <item quantity="other">+%1$s תגובות נוספות</item>
+    </plurals>
 </resources>

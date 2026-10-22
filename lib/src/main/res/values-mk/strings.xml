@@ -332,4 +332,10 @@
     <string name="upload_progress">Напредок на прикачувањето</string>
     <string name="upload_processing">Се обработува…</string>
     <string name="upload_sent">%1$s од %2$s</string>
+    <string name="comment_share">Сподели</string>
+    <string name="comment_all">Сите коментари</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s одговор</item>
+        <item quantity="other">+%1$s повеќе одговори</item>
+    </plurals>
 </resources>

@@ -339,4 +339,5 @@
         <item quantity="one">%s کۆمەڵگە زیادکرا</item>
         <item quantity="other">%s کۆمەڵگە زیادکران</item>
     </plurals>
+    <string name="forums_comment_op">نووسەر</string>
 </resources>

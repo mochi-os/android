@@ -332,4 +332,9 @@
     <string name="upload_progress">上載進度</string>
     <string name="upload_processing">處理中…</string>
     <string name="upload_sent">%1$s / %2$s</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="other">+%1$s 條回覆</item>
+    </plurals>
+    <string name="comment_share">分享</string>
+    <string name="comment_all">所有留言</string>
 </resources>

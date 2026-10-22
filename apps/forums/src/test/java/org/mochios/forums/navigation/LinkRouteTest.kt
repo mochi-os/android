@@ -17,6 +17,17 @@ class LinkRouteTest {
     }
 
     @Test
+    fun `a comment link opens the post on the comment`() {
+        assertEquals("forums/forum/abc/post/p1?comment=c1", ForumsApp.linkRoute("abc", "p1", null, "c1"))
+        assertEquals("forums/forum/abc/post/p1", ForumsApp.linkRoute("abc", "p1", null, ""))
+        // The comment comes from a link, so it cannot add a query of its own.
+        assertEquals(
+            "forums/forum/abc/post/p1?comment=c1%26x%3D1",
+            ForumsApp.linkRoute("abc", "p1", null, "c1&x=1"),
+        )
+    }
+
+    @Test
     fun `a forum link opens the forum`() {
         assertEquals("forums/forum/abc", ForumsApp.linkRoute("abc", null, null))
         assertEquals("forums/forum/abc", ForumsApp.linkRoute("abc", "", ""))

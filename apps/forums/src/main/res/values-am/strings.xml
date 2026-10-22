@@ -339,4 +339,5 @@
         <item quantity="one">%s ማህበረሰብ ታክሏል</item>
         <item quantity="other">%s ማህበረሰቦች ታክለዋል</item>
     </plurals>
+    <string name="forums_comment_op">ደራሲ</string>
 </resources>

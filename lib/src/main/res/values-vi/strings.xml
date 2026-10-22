@@ -333,4 +333,10 @@
     <string name="upload_progress">Tiến trình tải lên</string>
     <string name="upload_processing">Đang xử lý…</string>
     <string name="upload_sent">%1$s trên %2$s</string>
+    <string name="comment_share">Chia sẻ</string>
+    <string name="comment_all">Tất cả bình luận</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s phản hồi</item>
+        <item quantity="other">+%1$s phản hồi nữa</item>
+    </plurals>
 </resources>

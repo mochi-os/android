@@ -716,7 +716,9 @@ open class MainActivity : ComponentActivity() {
         val id = parts.getOrNull(1)
         when (firstSegment) {
             "feeds" -> {
-                val route = FeedsApp.linkRoute(id, parts.getOrNull(2), parseQueryParam(query, "link"))
+                val route = FeedsApp.linkRoute(
+                    id, parts.getOrNull(2), parseQueryParam(query, "link"), parseQueryParam(query, "comment"),
+                )
                 if (route == null || id == null) {
                     navController.navigate(FeedsApp.HOME) { launchSingleTop = true }
                     return
@@ -759,7 +761,7 @@ open class MainActivity : ComponentActivity() {
             }
             "forums" -> {
                 val server = parseQueryParam(query, "server")
-                val route = ForumsApp.linkRoute(id, parts.getOrNull(2), server)
+                val route = ForumsApp.linkRoute(id, parts.getOrNull(2), server, parseQueryParam(query, "comment"))
                 if (route != null && navController.isAt(route)) return
                 if (route == null || id == null) {
                     navController.openAppHome(ForumsApp.HOME)

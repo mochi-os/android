@@ -332,4 +332,10 @@
     <string name="upload_progress">ატვირთვის მიმდინარეობა</string>
     <string name="upload_processing">მუშავდება…</string>
     <string name="upload_sent">%1$s / %2$s</string>
+    <string name="comment_share">გაზიარება</string>
+    <string name="comment_all">ყველა კომენტარი</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s პასუხი</item>
+        <item quantity="other">%1$s პასუხი</item>
+    </plurals>
 </resources>

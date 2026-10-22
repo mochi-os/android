@@ -62,7 +62,7 @@ data class PostUiState(
 
 @HiltViewModel
 class PostViewModel @Inject constructor(
-    savedStateHandle: SavedStateHandle,
+    private val savedStateHandle: SavedStateHandle,
     private val application: android.app.Application,
     private val repository: ForumsRepository,
     private val sessionManager: SessionManager,
@@ -75,6 +75,26 @@ class PostViewModel @Inject constructor(
     val forumId: String = savedStateHandle["forumId"] ?: ""
     val postId: String = savedStateHandle["postId"] ?: ""
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
+
+    /**
+     * The comment the post is opened on, shown alone with its replies, as a
+     * shared link to it opens the post; null for the whole thread.
+     */
+    val focusedComment: StateFlow<String?> = savedStateHandle.getStateFlow(COMMENT, null)
+
+    /** Open the post on [comment] and its replies, or on the whole thread for null. */
+    fun openComment(comment: String?) {
+        savedStateHandle[COMMENT] = comment
+    }
+
+    /**
+     * The web address of one comment, which opens this post on it, as the web
+     * client's Share builds it.
+     */
+    fun commentLink(comment: String): String {
+        val forum = _uiState.value.forum.fingerprint.ifEmpty { forumId }
+        return "$serverUrl/forums/$forum/$postId?comment=${Uri.encode(comment)}"
+    }
 
     private val _uiState = MutableStateFlow(PostUiState())
     val uiState: StateFlow<PostUiState> = _uiState.asStateFlow()
@@ -383,3 +403,6 @@ class PostViewModel @Inject constructor(
         }
     }
 }
+
+/** The post route's argument naming the comment it is opened on. */
+private const val COMMENT = "comment"

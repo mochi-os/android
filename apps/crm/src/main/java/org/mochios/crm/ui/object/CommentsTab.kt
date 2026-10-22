@@ -22,6 +22,11 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -32,6 +37,7 @@ import org.mochios.android.files.Upload
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentActions
 import org.mochios.android.ui.components.CommentItem as SharedCommentItem
+import org.mochios.android.ui.components.replyCount
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
@@ -168,9 +174,13 @@ private fun CommentItem(
     drafts: CommentDrafts,
     onReply: (String, String) -> Unit,
     onEdit: (String, String) -> Unit,
-    onDelete: (String) -> Unit
+    onDelete: (String) -> Unit,
+    // Folds the comment this one replies to, from the thread line beside it.
+    onCollapseParent: (() -> Unit)? = null,
 ) {
     val edit = drafts.edit(comment.id)
+    var collapsed by rememberSaveable(comment.id) { mutableStateOf(false) }
+    val replies = remember(comment) { replyCount(comment) { it.children } }
 
     SharedCommentItem(
         name = comment.name,
@@ -194,7 +204,11 @@ private fun CommentItem(
             drafts.edit(comment.id)?.let { text -> onEdit(comment.id, text) }
             drafts.edit(comment.id, null)
         },
-        onCancelEdit = { drafts.edit(comment.id, null) }
+        onCancelEdit = { drafts.edit(comment.id, null) },
+        collapsed = collapsed,
+        replies = replies,
+        onToggleCollapse = if (replies > 0) ({ collapsed = !collapsed }) else null,
+        onCollapseParent = onCollapseParent,
     ) {
         CommentActions(
             onReply = { onReply(comment.id, comment.name) },
@@ -203,6 +217,7 @@ private fun CommentItem(
         )
     }
 
+    if (collapsed) return
     comment.children.forEach { child ->
         CommentItem(
             comment = child,
@@ -212,7 +227,8 @@ private fun CommentItem(
             drafts = drafts,
             onReply = onReply,
             onEdit = onEdit,
-            onDelete = onDelete
+            onDelete = onDelete,
+            onCollapseParent = { collapsed = true },
         )
     }
 }

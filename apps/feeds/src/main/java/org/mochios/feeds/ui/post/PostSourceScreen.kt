@@ -92,10 +92,12 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.util.shareLink
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.CommentItem
-import org.mochios.feeds.ui.component.flattenComments
+import org.mochios.feeds.ui.component.threadRows
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
@@ -544,7 +546,10 @@ private fun PostSourceSheet(
     val editingCommentId by viewModel.editingCommentId.collectAsState()
     val editCommentText by viewModel.editCommentText.collectAsState()
     val currentUserId by viewModel.currentUserId.collectAsState()
-    val flatComments = flattenComments(post?.comments.orEmpty(), 0)
+    val collapsed = rememberCollapsedComments()
+    val rows = threadRows(post?.comments.orEmpty(), collapsed.ids)
+    val context = LocalContext.current
+    val shareTitle = stringResource(MochiR.string.comment_share)
     Column {
         Row(
             modifier = Modifier
@@ -581,11 +586,11 @@ private fun PostSourceSheet(
                 .fillMaxWidth(),
             contentPadding = PaddingValues(bottom = 8.dp)
         ) {
-            items(flatComments, key = { entry -> entry.first.id }) { entry ->
-                val (comment, depth) = entry
+            items(rows, key = { row -> row.comment.id }) { row ->
+                val comment = row.comment
                 CommentItem(
                     comment = comment,
-                    depth = depth,
+                    depth = row.depth,
                     avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
                     feedId = viewModel.feedId,
                     isEditing = editingCommentId == comment.id,
@@ -599,6 +604,17 @@ private fun PostSourceSheet(
                     onReact = { reaction -> viewModel.reactToComment(comment.id, reaction) },
                     canManage = permissions.manage,
                     isMine = currentUserId != null && comment.authorId == currentUserId,
+                    onShare = {
+                        shareLink(
+                            context,
+                            viewModel.commentLink(comment.id),
+                            post?.feedName?.takeIf { it.isNotEmpty() } ?: shareTitle,
+                        )
+                    },
+                    replies = row.replies,
+                    collapsed = comment.id in collapsed,
+                    onToggleCollapse = if (row.replies > 0) ({ collapsed.toggle(comment.id) }) else null,
+                    onCollapseParent = row.parent?.let { parent -> { collapsed.collapse(parent) } },
                 )
             }
         }

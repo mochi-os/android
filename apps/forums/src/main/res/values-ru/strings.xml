@@ -343,4 +343,5 @@
         <item quantity="many">Добавлено %s сообществ</item>
         <item quantity="other">Добавлено %s сообщества</item>
     </plurals>
+    <string name="forums_comment_op">Автор</string>
 </resources>

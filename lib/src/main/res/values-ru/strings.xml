@@ -334,4 +334,12 @@
     <string name="upload_progress">Ход загрузки</string>
     <string name="upload_processing">Обработка…</string>
     <string name="upload_sent">%1$s из %2$s</string>
+    <string name="comment_share">Поделиться</string>
+    <string name="comment_all">Все комментарии</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s ответ</item>
+        <item quantity="few">ещё +%1$s ответа</item>
+        <item quantity="many">ещё +%1$s ответов</item>
+        <item quantity="other">ещё +%1$s ответа</item>
+    </plurals>
 </resources>

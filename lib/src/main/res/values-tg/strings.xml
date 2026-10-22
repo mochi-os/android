@@ -332,4 +332,10 @@
     <string name="upload_progress">Рафти боркунӣ</string>
     <string name="upload_processing">Коркард шуда истодааст…</string>
     <string name="upload_sent">%1$s аз %2$s</string>
+    <string name="comment_share">Мубодила</string>
+    <string name="comment_all">Ҳамаи шарҳҳо</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s ҷавоб</item>
+        <item quantity="other">+%1$s ҷавоби бештар</item>
+    </plurals>
 </resources>

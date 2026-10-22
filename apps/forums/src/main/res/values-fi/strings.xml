@@ -339,4 +339,5 @@
         <item quantity="one">Lisättiin %s yhteisö</item>
         <item quantity="other">Lisättiin %s yhteisöä</item>
     </plurals>
+    <string name="forums_comment_op">Aloittaja</string>
 </resources>

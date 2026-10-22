@@ -26,6 +26,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -56,6 +58,7 @@ import androidx.compose.material.icons.outlined.PersonOff
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Report
 import androidx.compose.material.icons.outlined.Restore
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material3.AssistChip
@@ -78,6 +81,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -107,7 +111,15 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.AttachmentLightbox
+import org.mochios.android.ui.components.CollapsedComments
+import org.mochios.android.ui.components.CommentAction
 import org.mochios.android.ui.components.CommentItem
+import org.mochios.android.ui.components.CommentRow
+import org.mochios.android.ui.components.CommentThreadBack
+import org.mochios.android.ui.components.commentRows
+import org.mochios.android.ui.components.findInThread
+import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.util.shareLink
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
@@ -136,6 +148,8 @@ import org.mochios.forums.ui.components.Crossposts
 import org.mochios.forums.ui.components.PostLinkCard
 import org.mochios.forums.ui.components.SensitiveBadge
 import org.mochios.forums.ui.components.SensitiveCover
+import androidx.compose.ui.platform.LocalContext
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -203,6 +217,12 @@ fun PostScreen(
     // showing. Hosted at screen level rather than in the gallery, whose lazy
     // item may have scrolled out of composition by the time a chip is tapped.
     var openAttachment by remember { mutableStateOf<String?>(null) }
+    val focusedId by viewModel.focusedComment.collectAsState()
+    val collapsed = rememberCollapsedComments()
+    val listState = rememberLazyListState()
+    val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val shareTitle = stringResource(MochiR.string.comment_share)
 
     // The per-comment actions, shared by the thread below the post and by the
     // lightbox panel, so a comment behaves the same wherever it is drawn.
@@ -225,11 +245,15 @@ fun PostScreen(
         onQuote = { comment -> quoteIntoDraft(withoutQuote(comment.body)) },
         onOpenAttachment = { openAttachment = it },
         onBlock = { target -> viewModel.block(target) },
+        onShare = { comment ->
+            shareLink(context, viewModel.commentLink(comment.id), uiState.post.title.ifBlank { shareTitle })
+        },
     )
     val attachmentPanel: @Composable (Attachment) -> Unit = { att ->
         AttachmentComments(
             attachmentId = att.id,
             comments = uiState.comments,
+            postAuthor = uiState.post.member,
             forumId = viewModel.forumId,
             currentIdentity = uiState.identity,
             canModerate = uiState.canModerate,
@@ -388,8 +412,20 @@ fun PostScreen(
                     )
                 }
                 else -> {
+                    // A post opened on one comment shows it alone with its
+                    // replies, under a way back to them all; one deleted since
+                    // shows them all.
+                    val focused = focusedId?.let { id ->
+                        findInThread(uiState.comments, id, { it.id }, { it.children })
+                    }
+                    // Land on the comment rather than the top of the post: the
+                    // post, then the divider, then the way back.
+                    LaunchedEffect(focused?.id) {
+                        if (focused != null) listState.scrollToItem(2)
+                    }
                     LazyColumn(
                         modifier = Modifier.weight(1f).fillMaxWidth(),
+                        state = listState,
                         contentPadding = PaddingValues(start = 12.dp, end = 12.dp, bottom = 8.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
@@ -428,12 +464,23 @@ fun PostScreen(
                                 }
                             }
                         } else {
+                            if (focused != null) {
+                                item(key = "all_comments") {
+                                    CommentThreadBack(onClick = {
+                                        viewModel.openComment(null)
+                                        scope.launch { listState.scrollToItem(1) }
+                                    })
+                                }
+                            }
                             commentsItems(
-                                comments = uiState.comments,
+                                rows = forumRows(focused?.let { listOf(it) } ?: uiState.comments, collapsed),
                                 forumId = viewModel.forumId,
                                 currentIdentity = uiState.identity,
                                 canModerate = uiState.canModerate,
                                 actions = commentActions,
+                                postAuthor = uiState.post.member,
+                                collapsed = collapsed,
+                                focused = focused?.id,
                             )
                         }
                     }
@@ -1015,23 +1062,31 @@ private data class CommentActions(
     val onQuote: (ForumComment) -> Unit,
     val onOpenAttachment: (String) -> Unit,
     val onBlock: (String) -> Unit = {},
+    val onShare: (ForumComment) -> Unit = {},
 )
 
-private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
-    comments: List<ForumComment>,
+/** A forum thread in reading order, the replies of every folded comment left out. */
+private fun forumRows(comments: List<ForumComment>, collapsed: CollapsedComments) =
+    commentRows(comments, { it.id }, { it.children }, collapsed.ids)
+
+private fun LazyListScope.commentsItems(
+    rows: List<CommentRow<ForumComment>>,
     forumId: String,
     currentIdentity: String,
     canModerate: Boolean,
     actions: CommentActions,
-    depth: Int = 0,
+    postAuthor: String,
+    collapsed: CollapsedComments,
+    focused: String? = null,
 ) {
-    comments.forEach { c ->
+    rows.forEach { row ->
+        val c = row.comment
         item(key = c.id) {
             val isAuthor = c.member == currentIdentity && currentIdentity.isNotBlank()
             val canEditThis = isAuthor || canModerate
             CommentCard(
                 comment = c,
-                depth = depth,
+                depth = row.depth,
                 forumId = forumId,
                 canEdit = canEditThis,
                 canModerate = canModerate,
@@ -1047,10 +1102,14 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
                 onQuote = { actions.onQuote(c) },
                 onOpenAttachment = actions.onOpenAttachment,
                 onBlock = actions.onBlock,
+                onShare = { actions.onShare(c) },
+                op = postAuthor.isNotEmpty() && c.member == postAuthor,
+                replies = row.replies,
+                collapsed = c.id in collapsed,
+                onToggleCollapse = if (row.replies > 0) ({ collapsed.toggle(c.id) }) else null,
+                onCollapseParent = row.parent?.let { parent -> { collapsed.collapse(parent) } },
+                highlighted = c.id == focused,
             )
-        }
-        if (c.children.isNotEmpty()) {
-            commentsItems(c.children, forumId, currentIdentity, canModerate, actions, depth + 1)
         }
     }
 }
@@ -1064,6 +1123,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.commentsItems(
 private fun AttachmentComments(
     attachmentId: String,
     comments: List<ForumComment>,
+    postAuthor: String,
     forumId: String,
     currentIdentity: String,
     canModerate: Boolean,
@@ -1080,6 +1140,7 @@ private fun AttachmentComments(
     onSend: (String) -> Unit,
 ) {
     var showAll by rememberSaveable(attachmentId) { mutableStateOf(false) }
+    val collapsed = rememberCollapsedComments()
     // The panel keeps its own draft. It used to share the post screen's, so a
     // half-typed comment below the post reappeared in the lightbox and the two
     // fields fought over one string. Keyed on the attachment: moving to another
@@ -1118,11 +1179,13 @@ private fun AttachmentComments(
                 }
             }
             commentsItems(
-                comments = shown,
+                rows = forumRows(shown, collapsed),
                 forumId = forumId,
                 currentIdentity = currentIdentity,
                 canModerate = canModerate,
                 actions = panelActions,
+                postAuthor = postAuthor,
+                collapsed = collapsed,
             )
             if (others > 0) {
                 item(key = "toggle") {
@@ -1200,6 +1263,14 @@ private fun CommentCard(
     onQuote: () -> Unit,
     onOpenAttachment: (String) -> Unit,
     onBlock: (String) -> Unit = {},
+    onShare: () -> Unit = {},
+    // Written by the post's author, and marked OP as on the web.
+    op: Boolean = false,
+    replies: Int = 0,
+    collapsed: Boolean = false,
+    onToggleCollapse: (() -> Unit)? = null,
+    onCollapseParent: (() -> Unit)? = null,
+    highlighted: Boolean = false,
 ) {
     var showMenu by remember { mutableStateOf(false) }
     val anchor = comment.anchor
@@ -1221,6 +1292,12 @@ private fun CommentCard(
             ?.let { "/forums/$forumId/-/attachments/$it/thumbnail" },
         anchorCaption = comment.attachmentCaption.orEmpty(),
         onOpenAnchor = anchor.takeIf { it.isNotEmpty() }?.let { { onOpenAttachment(it) } },
+        collapsed = collapsed,
+        replies = replies,
+        onToggleCollapse = onToggleCollapse,
+        onCollapseParent = onCollapseParent,
+        highlighted = highlighted,
+        badge = if (op) stringResource(R.string.forums_comment_op) else null,
     ) {
         PostBadges(status = comment.status)
         // Same reaction row as the post: like · dislike, filled for the viewer's
@@ -1257,6 +1334,11 @@ private fun CommentCard(
                 )
             }
         }
+        CommentAction(
+            icon = Icons.Outlined.Share,
+            contentDescription = stringResource(MochiR.string.comment_share),
+            onClick = onShare,
+        )
         Box {
             MochiIconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
                 Icon(

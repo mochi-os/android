@@ -332,4 +332,9 @@
     <string name="upload_progress">ຄວາມຄືບໜ້າການອັບໂຫລດ</string>
     <string name="upload_processing">ກຳລັງປະມວນຜົນ…</string>
     <string name="upload_sent">%1$s ຈາກ %2$s</string>
+    <string name="comment_share">ແບ່ງປັນ</string>
+    <string name="comment_all">ຄຳເຫັນທັງໝົດ</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="other">+%1$s ຕອບກັບເພີ່ມເຕີມ</item>
+    </plurals>
 </resources>

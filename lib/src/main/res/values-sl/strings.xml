@@ -334,4 +334,12 @@
     <string name="upload_progress">Potek nalaganja</string>
     <string name="upload_processing">Obdelava…</string>
     <string name="upload_sent">%1$s od %2$s</string>
+    <string name="comment_share">Deli</string>
+    <string name="comment_all">Vsi komentarji</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s odgovor</item>
+        <item quantity="two">še +%1$s odgovora</item>
+        <item quantity="few">še +%1$s odgovori</item>
+        <item quantity="other">še +%1$s odgovorov</item>
+    </plurals>
 </resources>

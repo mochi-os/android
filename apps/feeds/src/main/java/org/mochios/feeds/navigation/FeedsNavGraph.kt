@@ -33,7 +33,9 @@ object FeedsApp {
     const val HOME = "feeds/router"
     const val ROUTER = "feeds/router"
     const val FEED = "feeds/feed/{feedId}"
-    const val POST = "feeds/post/{feedId}/{postId}"
+    // [comment] opens the post on one comment and its replies, as a shared
+    // link to that comment does.
+    const val POST = "feeds/post/{feedId}/{postId}?comment={comment}"
     const val POST_SOURCE = "feeds/postSource/{feedId}/{postId}?url={url}&expand={expand}"
     const val CREATE_POST = "feeds/createPost?feedId={feedId}&postId={postId}"
     // [link] is an optional mochi:// share link to resolve on arrival, which is
@@ -52,15 +54,18 @@ object FeedsApp {
     /**
      * The screen a `/feeds/...` notification link opens: discovery for
      * `/feeds/find?link=<share link>` (a feed the user does not hold yet), the
-     * post for `/feeds/<feed>/<post>`, else the feed. Null for the bare app.
+     * post for `/feeds/<feed>/<post>`, opened on one comment when the link
+     * names it with `?comment=`, else the feed. Null for the bare app.
      */
-    fun linkRoute(feedId: String?, postId: String?, link: String?): String? = when {
+    fun linkRoute(feedId: String?, postId: String?, link: String?, comment: String? = null): String? = when {
         feedId == "find" -> findFeeds(link)
         feedId.isNullOrEmpty() -> null
-        !postId.isNullOrEmpty() -> post(feedId, postId)
+        !postId.isNullOrEmpty() -> post(feedId, postId, comment)
         else -> feed(feedId)
     }
-    fun post(feedId: String, postId: String) = "feeds/post/$feedId/$postId"
+    fun post(feedId: String, postId: String, comment: String? = null) =
+        if (comment.isNullOrEmpty()) "feeds/post/$feedId/$postId"
+        else "feeds/post/$feedId/$postId?comment=${URLEncoder.encode(comment, StandardCharsets.UTF_8.name())}"
     fun postSource(feedId: String, postId: String, url: String, expand: Boolean): String {
         val encoded = URLEncoder.encode(url, StandardCharsets.UTF_8.name())
         return "feeds/postSource/$feedId/$postId?url=$encoded&expand=$expand"
@@ -147,7 +152,12 @@ fun NavGraphBuilder.feedsNavGraph(
         route = FeedsApp.POST,
         arguments = listOf(
             navArgument("feedId") { type = NavType.StringType },
-            navArgument("postId") { type = NavType.StringType }
+            navArgument("postId") { type = NavType.StringType },
+            navArgument("comment") {
+                type = NavType.StringType
+                nullable = true
+                defaultValue = null
+            },
         )
     ) {
         PostDetailScreen(

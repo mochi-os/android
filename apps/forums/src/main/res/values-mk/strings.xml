@@ -339,4 +339,5 @@
         <item quantity="one">Додадена %s заедница</item>
         <item quantity="other">Додадени %s заедници</item>
     </plurals>
+    <string name="forums_comment_op">Автор</string>
 </resources>

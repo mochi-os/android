@@ -339,4 +339,5 @@
         <item quantity="one">%s komunitate gehitu da</item>
         <item quantity="other">%s komunitate gehitu dira</item>
     </plurals>
+    <string name="forums_comment_op">Egilea</string>
 </resources>

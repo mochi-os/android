@@ -332,4 +332,10 @@
     <string name="upload_progress">උඩුගත කිරීමේ ප්‍රගතිය</string>
     <string name="upload_processing">සකසමින්…</string>
     <string name="upload_sent">%2$sන් %1$s</string>
+    <string name="comment_share">බෙදාගන්න</string>
+    <string name="comment_all">සියලු අදහස්</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s පිළිතුර</item>
+        <item quantity="other">+%1$s තවත් පිළිතුරු</item>
+    </plurals>
 </resources>

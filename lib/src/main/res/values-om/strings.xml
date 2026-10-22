@@ -332,4 +332,10 @@
     <string name="upload_progress">Adeemsa fe\'umsaa</string>
     <string name="upload_processing">Adeemsifamaa jira…</string>
     <string name="upload_sent">%1$s / %2$s</string>
+    <string name="comment_share">Qoodi</string>
+    <string name="comment_all">Yaadawwan hunda</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">deebii %1$s</item>
+        <item quantity="other">deebii %1$s dabalataa</item>
+    </plurals>
 </resources>

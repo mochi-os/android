@@ -339,4 +339,5 @@
         <item quantity="one">Se añadió %s comunidad</item>
         <item quantity="other">Se añadieron %s comunidades</item>
     </plurals>
+    <string name="forums_comment_op">Autor</string>
 </resources>

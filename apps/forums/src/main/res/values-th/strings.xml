@@ -337,4 +337,5 @@
     <plurals name="forums_communities_added">
         <item quantity="other">เพิ่ม %s ชุมชนแล้ว</item>
     </plurals>
+    <string name="forums_comment_op">เจ้าของกระทู้</string>
 </resources>

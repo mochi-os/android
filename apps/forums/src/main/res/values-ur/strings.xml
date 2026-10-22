@@ -339,4 +339,5 @@
         <item quantity="one">%s کمیونٹی شامل کی گئی</item>
         <item quantity="other">%s کمیونٹیز شامل کی گئیں</item>
     </plurals>
+    <string name="forums_comment_op">مصنف</string>
 </resources>

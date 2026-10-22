@@ -337,4 +337,5 @@
     <plurals name="forums_communities_added">
         <item quantity="other">Đã thêm %s cộng đồng</item>
     </plurals>
+    <string name="forums_comment_op">Tác giả</string>
 </resources>

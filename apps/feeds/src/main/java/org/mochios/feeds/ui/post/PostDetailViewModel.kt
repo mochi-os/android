@@ -39,7 +39,7 @@ import org.mochios.feeds.ui.component.repliesElsewhere
 
 @HiltViewModel
 class PostDetailViewModel @Inject constructor(
-    savedStateHandle: SavedStateHandle,
+    private val savedStateHandle: SavedStateHandle,
     private val repository: FeedsRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
@@ -52,6 +52,26 @@ class PostDetailViewModel @Inject constructor(
     val feedId: String = savedStateHandle.get<String>("feedId") ?: ""
     val postId: String = savedStateHandle.get<String>("postId") ?: ""
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
+
+    /**
+     * The comment the post is opened on, shown alone with its replies, as a
+     * shared link to it opens the post; null for the whole thread.
+     */
+    val focusedComment: StateFlow<String?> = savedStateHandle.getStateFlow(COMMENT, null)
+
+    /** Open the post on [comment] and its replies, or on the whole thread for null. */
+    fun openComment(comment: String?) {
+        savedStateHandle[COMMENT] = comment
+    }
+
+    /**
+     * The web address of one comment, which opens this post on it, as the web
+     * client's Share builds it.
+     */
+    fun commentLink(comment: String): String {
+        val feed = _post.value?.feedFingerprint?.takeIf { it.isNotEmpty() } ?: feedId
+        return "$serverUrl/feeds/$feed/$postId?comment=${Uri.encode(comment)}"
+    }
 
     private val _post = MutableStateFlow<Post?>(null)
     val post: StateFlow<Post?> = _post.asStateFlow()
@@ -511,3 +531,6 @@ class PostDetailViewModel @Inject constructor(
         subscriptionId?.let { webSocket.unsubscribe(it) }
     }
 }
+
+/** The post route's argument naming the comment it is opened on. */
+private const val COMMENT = "comment"

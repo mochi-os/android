@@ -339,4 +339,5 @@
         <item quantity="one">%s civak hat zêdekirin</item>
         <item quantity="other">%s civak hatin zêdekirin</item>
     </plurals>
+    <string name="forums_comment_op">Nivîskar</string>
 </resources>

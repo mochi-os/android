@@ -339,4 +339,5 @@
         <item quantity="one">%s समुदाय जोड़ल गइल</item>
         <item quantity="other">%s समुदाय जोड़ल गइलें</item>
     </plurals>
+    <string name="forums_comment_op">लेखक</string>
 </resources>

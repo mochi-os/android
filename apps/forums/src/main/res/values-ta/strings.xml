@@ -339,4 +339,5 @@
         <item quantity="one">%s சமூகம் சேர்க்கப்பட்டது</item>
         <item quantity="other">%s சமூகங்கள் சேர்க்கப்பட்டன</item>
     </plurals>
+    <string name="forums_comment_op">பதிவர்</string>
 </resources>

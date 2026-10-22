@@ -332,4 +332,10 @@
     <string name="upload_progress">Inqubekela phambili yokulayisha</string>
     <string name="upload_processing">Iyacutshungulwa…</string>
     <string name="upload_sent">%1$s kokungu-%2$s</string>
+    <string name="comment_share">Yabelana</string>
+    <string name="comment_all">Yonke imibono</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">Impendulo %1$s</item>
+        <item quantity="other">+%1$s ezinye izimpendulo</item>
+    </plurals>
 </resources>

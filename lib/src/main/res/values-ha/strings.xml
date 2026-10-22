@@ -332,4 +332,10 @@
     <string name="upload_progress">Ci gaban lodawa</string>
     <string name="upload_processing">Ana sarrafawa…</string>
     <string name="upload_sent">%1$s cikin %2$s</string>
+    <string name="comment_share">Raba</string>
+    <string name="comment_all">Duk sharhi</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">Amsa %1$s</item>
+        <item quantity="other">+%1$s ƙarin amsoshi</item>
+    </plurals>
 </resources>

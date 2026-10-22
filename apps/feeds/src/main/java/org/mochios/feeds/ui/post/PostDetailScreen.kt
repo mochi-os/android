@@ -26,6 +26,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -64,6 +65,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -85,7 +87,10 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
 import org.mochios.android.model.Attachment
 import org.mochios.android.push.VisibleEntityEffect
+import org.mochios.android.ui.components.CommentThreadBack
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.findInThread
+import org.mochios.android.ui.components.rememberCollapsedComments
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.AttachmentLightbox
 import org.mochios.android.ui.components.ComposeBar
@@ -106,6 +111,7 @@ import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.util.shareLink
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
@@ -123,10 +129,11 @@ import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.hasBadges
 import org.mochios.feeds.ui.component.repliesElsewhere
 import org.mochios.feeds.ui.component.currentReactionType
-import org.mochios.feeds.ui.component.flattenComments
+import org.mochios.feeds.ui.component.threadRows
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.android.R as MochiR
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -392,6 +399,12 @@ internal fun PostDetailContent(
     // showing. Hosted here rather than in the gallery, whose lazy item may
     // have scrolled out of composition by the time a chip far down is tapped.
     var openAttachment by remember { mutableStateOf<String?>(null) }
+    val focusedId by viewModel.focusedComment.collectAsState()
+    val collapsed = rememberCollapsedComments()
+    val listState = rememberLazyListState()
+    val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val shareTitle = stringResource(MochiR.string.comment_share)
 
     when {
         isLoading && post == null -> {
@@ -417,8 +430,20 @@ internal fun PostDetailContent(
 
         post != null -> {
             val currentPost = post!!
+            // A post opened on one comment shows it alone with its replies,
+            // under a way back to them all; one deleted since shows them all.
+            val focused = focusedId?.let { id ->
+                findInThread(currentPost.comments, id, { it.id }, { it.children })
+            }
+            val rows = threadRows(focused?.let { listOf(it) } ?: currentPost.comments, collapsed.ids)
+            // Land on the comment rather than the top of the post: the
+            // post, then the comments heading, then the way back.
+            LaunchedEffect(focused?.id) {
+                if (focused != null) listState.scrollToItem(2)
+            }
             LazyColumn(
                 modifier = modifier,
+                state = listState,
                 contentPadding = contentPadding
             ) {
                 item(key = "post_content") {
@@ -462,12 +487,23 @@ internal fun PostDetailContent(
                         )
                     }
 
-                    val flatComments = flattenComments(currentPost.comments, 0)
-                    items(flatComments.size, key = { flatComments[it].first.id }) { index ->
-                        val (comment, depth) = flatComments[index]
+                    if (focused != null) {
+                        item(key = "all_comments") {
+                            CommentThreadBack(
+                                onClick = {
+                                    viewModel.openComment(null)
+                                    scope.launch { listState.scrollToItem(1) }
+                                },
+                                modifier = Modifier.padding(horizontal = 8.dp),
+                            )
+                        }
+                    }
+                    items(rows.size, key = { rows[it].comment.id }) { index ->
+                        val row = rows[index]
+                        val comment = row.comment
                         CommentItem(
                             comment = comment,
-                            depth = depth,
+                            depth = row.depth,
                             avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
                             feedId = viewModel.feedId,
                             isEditing = editingCommentId == comment.id,
@@ -493,6 +529,18 @@ internal fun PostDetailContent(
                             isMine = currentUserId != null && comment.authorId == currentUserId,
                             onOpenAttachment = { openAttachment = it },
                             onModerate = if (permissions.manage) ({ action -> moderating = comment to action }) else null,
+                            onShare = {
+                                shareLink(
+                                    context,
+                                    viewModel.commentLink(comment.id),
+                                    currentPost.feedName.ifEmpty { shareTitle },
+                                )
+                            },
+                            replies = row.replies,
+                            collapsed = comment.id in collapsed,
+                            onToggleCollapse = if (row.replies > 0) ({ collapsed.toggle(comment.id) }) else null,
+                            onCollapseParent = row.parent?.let { parent -> { collapsed.collapse(parent) } },
+                            highlighted = comment.id == focused?.id,
                         )
                     }
                 }

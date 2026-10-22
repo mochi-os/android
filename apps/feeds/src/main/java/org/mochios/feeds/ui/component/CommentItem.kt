@@ -65,6 +65,17 @@ internal fun CommentItem(
     // The owner's mute, block or report of the person on another network
     // behind the comment; null where the viewer may not.
     onModerate: ((String) -> Unit)? = null,
+    // Hands a link to the comment to the share sheet.
+    onShare: (() -> Unit)? = null,
+    // Folding, as the shared row describes it: the replies at every depth,
+    // whether they are folded, and the taps that fold this comment and the
+    // one it replies to.
+    replies: Int = 0,
+    collapsed: Boolean = false,
+    onToggleCollapse: (() -> Unit)? = null,
+    onCollapseParent: (() -> Unit)? = null,
+    // The comment a shared link opens the post on.
+    highlighted: Boolean = false,
 ) {
     val anchor = comment.anchor
     val context = LocalContext.current
@@ -93,12 +104,18 @@ internal fun CommentItem(
         anchorCaption = comment.attachmentCaption.orEmpty(),
         onOpenAnchor = onOpenAttachment?.let { open -> { open(anchor) } },
         onName = if (isWebUrl(page)) ({ openWeb(context, page) }) else null,
+        collapsed = collapsed,
+        replies = replies,
+        onToggleCollapse = onToggleCollapse,
+        onCollapseParent = onCollapseParent,
+        highlighted = highlighted,
     ) {
         // Reactions and the action icons share one row: the ReactionBar
         // (pills + add) followed by reply, and edit/delete when the viewer
         // manages the feed or owns the comment.
         CommentActions(
             onReply = onReply,
+            onShare = onShare,
             onEdit = onEdit.takeIf { canManage || isMine },
             onDelete = onDelete.takeIf { canManage || isMine },
             reactions = {
@@ -158,16 +175,11 @@ private fun CommenterMenu(author: String, onModerate: (String) -> Unit) {
 }
 
 /**
- * Depth-tagged pre-order flattening of a comment tree, for a LazyColumn.
+ * A feeds thread in reading order for a LazyColumn, the replies of every
+ * comment in [collapsed] left out.
  */
-internal fun flattenComments(comments: List<Comment>, depth: Int): List<Pair<Comment, Int>> {
-    val result = mutableListOf<Pair<Comment, Int>>()
-    for (comment in comments) {
-        result.add(comment to depth)
-        result.addAll(flattenComments(comment.children, depth + 1))
-    }
-    return result
-}
+internal fun threadRows(comments: List<Comment>, collapsed: Set<String> = emptySet()) =
+    org.mochios.android.ui.components.commentRows(comments, { it.id }, { it.children }, collapsed)
 
 /**
  * Plain text from a comment body's limited HTML, to seed the edit field.

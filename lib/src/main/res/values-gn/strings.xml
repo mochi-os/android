@@ -332,4 +332,10 @@
     <string name="upload_progress">Jehupi jeku\'e</string>
     <string name="upload_processing">Oñemba\'apo hína…</string>
     <string name="upload_sent">%1$s / %2$s</string>
+    <string name="comment_share">Emboja\'o</string>
+    <string name="comment_all">Opaite comentario</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s ñembohovái</item>
+        <item quantity="other">+%1$s ñembohovái ambue</item>
+    </plurals>
 </resources>

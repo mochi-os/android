@@ -339,4 +339,5 @@
         <item quantity="one">%s samfélagi bætt við</item>
         <item quantity="other">%s samfélögum bætt við</item>
     </plurals>
+    <string name="forums_comment_op">Höfundur</string>
 </resources>

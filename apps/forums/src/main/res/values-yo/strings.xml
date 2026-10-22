@@ -338,4 +338,5 @@
     <plurals name="forums_communities_added">
         <item quantity="other">A fi àwọn àwùjọ %s kún</item>
     </plurals>
+    <string name="forums_comment_op">Òǹkọ̀wé</string>
 </resources>

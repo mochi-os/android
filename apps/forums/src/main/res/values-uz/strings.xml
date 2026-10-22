@@ -339,4 +339,5 @@
         <item quantity="one">%s hamjamiyat qoʻshildi</item>
         <item quantity="other">%s hamjamiyat qoʻshildi</item>
     </plurals>
+    <string name="forums_comment_op">Muallif</string>
 </resources>

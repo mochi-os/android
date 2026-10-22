@@ -341,4 +341,5 @@
         <item quantity="few">Додате %s заједнице</item>
         <item quantity="other">Додато %s заједница</item>
     </plurals>
+    <string name="forums_comment_op">Аутор</string>
 </resources>

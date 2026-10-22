@@ -32,7 +32,9 @@ object ForumsApp {
     // would otherwise match `forums/{forumId}` with forumId='list' and route
     // to the detail screen rendering NotFoundState.
     const val FORUM = "forums/forum/{forumId}"
-    const val POST = "forums/forum/{forumId}/post/{postId}"
+    // [comment] opens the post on one comment and its replies, as a shared
+    // link to that comment does.
+    const val POST = "forums/forum/{forumId}/post/{postId}?comment={comment}"
     // A single route composes and edits: an edit carries the target post's id as
     // an optional query arg, a new post omits it.
     const val NEW_POST = "forums/forum/{forumId}/new?postId={postId}"
@@ -45,7 +47,9 @@ object ForumsApp {
     const val SAVED = "forums/saved"
 
     fun forum(forumId: String) = "forums/forum/$forumId"
-    fun post(forumId: String, postId: String) = "forums/forum/$forumId/post/$postId"
+    fun post(forumId: String, postId: String, comment: String? = null) =
+        if (comment.isNullOrEmpty()) "forums/forum/$forumId/post/$postId"
+        else "forums/forum/$forumId/post/$postId?comment=${URLEncoder.encode(comment, Charsets.UTF_8.name())}"
     fun newPost(forumId: String, postId: String? = null) =
         if (postId.isNullOrEmpty()) "forums/forum/$forumId/new"
         else "forums/forum/$forumId/new?postId=$postId"
@@ -56,13 +60,14 @@ object ForumsApp {
      * The screen a `/forums/<forum>[/<post>][?server=<peer>]` link opens: a
      * forum named with its owner's [server] is one the user does not hold, so
      * discovery resolves it from the share link and offers to subscribe;
-     * otherwise the post when there is one, else the forum. Null for the bare
-     * app link.
+     * otherwise the post when there is one, opened on one comment when the
+     * link names it with `?comment=`, else the forum. Null for the bare app
+     * link.
      */
-    fun linkRoute(forumId: String?, postId: String?, server: String?): String? = when {
+    fun linkRoute(forumId: String?, postId: String?, server: String?, comment: String? = null): String? = when {
         forumId.isNullOrEmpty() -> null
         !server.isNullOrEmpty() -> findForums("mochi://$server/$forumId")
-        !postId.isNullOrEmpty() -> post(forumId, postId)
+        !postId.isNullOrEmpty() -> post(forumId, postId, comment)
         else -> forum(forumId)
     }
     fun forumSettings(forumId: String) = "forums/forum/$forumId/settings"
@@ -120,11 +125,17 @@ fun NavGraphBuilder.forumsNavGraph(
         route = ForumsApp.POST,
         arguments = listOf(
             navArgument("forumId") { type = NavType.StringType },
-            navArgument("postId") { type = NavType.StringType }
+            navArgument("postId") { type = NavType.StringType },
+            navArgument("comment") {
+                type = NavType.StringType
+                nullable = true
+                defaultValue = null
+            },
         ),
         deepLinks = listOf(
-            // What a web user shares is the SPA route, `/forums/<forum>/<post>`.
-            navDeepLink { uriPattern = "https://{host}/forums/{forumId}/{postId}" },
+            // What a web user shares is the SPA route, `/forums/<forum>/<post>`,
+            // with `?comment=` when they share one comment.
+            navDeepLink { uriPattern = "https://{host}/forums/{forumId}/{postId}?comment={comment}" },
             // The `-/` form is what the RSS feed and the server's own links use.
             navDeepLink { uriPattern = "https://{host}/forums/{forumId}/-/{postId}" },
         )

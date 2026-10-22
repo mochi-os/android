@@ -343,4 +343,5 @@
         <item quantity="many">Дададзена %s супольнасцей</item>
         <item quantity="other">Дададзена %s супольнасці</item>
     </plurals>
+    <string name="forums_comment_op">Аўтар</string>
 </resources>

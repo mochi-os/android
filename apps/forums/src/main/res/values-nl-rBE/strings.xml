@@ -323,4 +323,5 @@
     <string name="forums_community_link">Link</string>
     <string name="forums_content">Inhoud</string>
     <string name="forums_save_failed">Opslaan mislukt</string>
+    <string name="forums_comment_op">Topicstarter</string>
 </resources>

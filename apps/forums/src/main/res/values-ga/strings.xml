@@ -345,4 +345,5 @@
         <item quantity="many">Cuireadh %s bpobal leis</item>
         <item quantity="other">Cuireadh %s pobal leis</item>
     </plurals>
+    <string name="forums_comment_op">Údar</string>
 </resources>

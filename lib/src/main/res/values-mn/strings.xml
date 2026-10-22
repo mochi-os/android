@@ -332,4 +332,10 @@
     <string name="upload_progress">Байршуулалтын явц</string>
     <string name="upload_processing">Боловсруулж байна…</string>
     <string name="upload_sent">%2$s-с %1$s</string>
+    <string name="comment_share">Хуваалцах</string>
+    <string name="comment_all">Бүх сэтгэгдэл</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s хариу</item>
+        <item quantity="other">+%1$s илүү хариу</item>
+    </plurals>
 </resources>

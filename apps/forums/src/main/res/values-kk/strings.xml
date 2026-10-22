@@ -339,4 +339,5 @@
         <item quantity="one">%s қауымдастық қосылды</item>
         <item quantity="other">%s қауымдастық қосылды</item>
     </plurals>
+    <string name="forums_comment_op">Автор</string>
 </resources>

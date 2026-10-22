@@ -339,4 +339,5 @@
         <item quantity="one">%s fællesskab tilføjet</item>
         <item quantity="other">%s fællesskaber tilføjet</item>
     </plurals>
+    <string name="forums_comment_op">Trådstarter</string>
 </resources>

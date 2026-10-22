@@ -332,4 +332,10 @@
     <string name="upload_progress">Πρόοδος μεταφόρτωσης</string>
     <string name="upload_processing">Γίνεται επεξεργασία…</string>
     <string name="upload_sent">%1$s από %2$s</string>
+    <string name="comment_share">Κοινοποίηση</string>
+    <string name="comment_all">Όλα τα σχόλια</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s απάντηση</item>
+        <item quantity="other">+%1$s ακόμα απαντήσεις</item>
+    </plurals>
 </resources>

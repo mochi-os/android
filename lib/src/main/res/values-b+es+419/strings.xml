@@ -320,4 +320,10 @@
     <string name="upload_progress">Progreso de la subida</string>
     <string name="upload_processing">Procesando…</string>
     <string name="upload_sent">%1$s de %2$s</string>
+    <string name="comment_share">Compartir</string>
+    <string name="comment_all">Todos los comentarios</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s respuesta</item>
+        <item quantity="other">+%1$s respuestas más</item>
+    </plurals>
 </resources>

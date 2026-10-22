@@ -337,4 +337,5 @@
     <plurals name="forums_communities_added">
         <item quantity="other">%s 件のコミュニティを追加しました</item>
     </plurals>
+    <string name="forums_comment_op">投稿者</string>
 </resources>

@@ -343,4 +343,5 @@
         <item quantity="few">Dodane %s skupnosti</item>
         <item quantity="other">Dodanih %s skupnosti</item>
     </plurals>
+    <string name="forums_comment_op">Avtor</string>
 </resources>

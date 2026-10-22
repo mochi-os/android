@@ -332,4 +332,9 @@
     <string name="upload_progress">វឌ្ឍនភាពនៃការផ្ទុកឡើង</string>
     <string name="upload_processing">កំពុងដំណើរការ…</string>
     <string name="upload_sent">%1$s នៃ %2$s</string>
+    <string name="comment_share">ចែករំលែក</string>
+    <string name="comment_all">មតិយោបល់ទាំងអស់</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="other">+%1$s ការឆ្លើយតបបន្ថែម</item>
+    </plurals>
 </resources>

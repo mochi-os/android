@@ -339,4 +339,5 @@
         <item quantity="one">Kungezwe umphakathi o-%s</item>
         <item quantity="other">Kungezwe imiphakathi engu-%s</item>
     </plurals>
+    <string name="forums_comment_op">Umlobi</string>
 </resources>
