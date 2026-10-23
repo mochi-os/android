@@ -99,8 +99,8 @@ data class Post(
     val status: String = "",
     val locked: Boolean = false,
     val pinned: Boolean = false,
-    val remover: String = "",
-    val reason: String = "",
+    val remover: String? = null,
+    val reason: String? = null,
     /**
      * A link post: the link, its thumbnail and the card's words as JSON, and
      * the post's id on another network.
@@ -134,8 +134,8 @@ data class ForumComment(
     @SerializedName("can_vote") val canVote: Boolean = false,
     @SerializedName("can_comment") val canComment: Boolean = false,
     val status: String = "",
-    val remover: String = "",
-    val reason: String = "",
+    val remover: String? = null,
+    val reason: String? = null,
     // Anchor: the id of one of the post's own attachments this comment is
     // about, with its display name (caption, else file name) and its caption
     // alone (empty when it has none). Empty when unanchored; replies inherit
