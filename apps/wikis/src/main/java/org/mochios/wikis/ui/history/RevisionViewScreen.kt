@@ -178,6 +178,11 @@ fun RevisionViewScreen(
                             previousLoading = state.previousLoading,
                             onToggleDiff = viewModel::toggleDiff,
                             onRevert = { showRevertDialog = true },
+                            onInternalLink = { page ->
+                                navController.navigate(
+                                    WikisApp.pageView(viewModel.wikiId, page)
+                                )
+                            },
                         )
                     }
                 }
@@ -207,6 +212,7 @@ private fun RevisionBody(
     previousLoading: Boolean,
     onToggleDiff: () -> Unit,
     onRevert: () -> Unit,
+    onInternalLink: (slug: String) -> Unit,
 ) {
     val format = LocalFormat.current
     val createdLabel = format.formatTimestamp(revision.created)
@@ -391,6 +397,7 @@ private fun RevisionBody(
             MarkdownContent(
                 content = revision.content,
                 modifier = Modifier.fillMaxWidth(),
+                onInternalLink = onInternalLink,
             )
         }
     }

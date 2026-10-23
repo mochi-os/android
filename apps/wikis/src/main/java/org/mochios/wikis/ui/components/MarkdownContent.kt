@@ -740,6 +740,26 @@ private fun isInternalRelative(href: String): Boolean {
 }
 
 /**
+ * The page a relative link names, read as the web client reads it: against the
+ * page the link sits on, so `changelog`, `./changelog` and `../changelog` all
+ * name the page beside it. A query or fragment is dropped.
+ */
+internal fun linkSlug(link: String): String {
+    val path = link.substringBefore('#').substringBefore('?')
+    val relative = if (path.startsWith("../")) path else "../$path"
+    // The empty segment stands for the page the link sits on.
+    val segments = mutableListOf("")
+    for (segment in relative.split('/')) {
+        when (segment) {
+            ".." -> segments.removeLastOrNull()
+            ".", "" -> {}
+            else -> segments.add(segment)
+        }
+    }
+    return segments.joinToString("/")
+}
+
+/**
  * Routes link taps: relative slugs to [onInternalLink], attachment URLs to
  * [onImageLink] for the lightbox, everything else to a Chrome Custom Tab.
  */
@@ -750,7 +770,7 @@ private class WikiLinkResolver(
 ) : LinkResolver {
     override fun resolve(view: View, link: String) {
         if (isInternalRelative(link)) {
-            val slug = link.substringBefore('#').substringBefore('?')
+            val slug = linkSlug(link)
             if (slug.isNotEmpty()) {
                 onInternalLink(slug)
                 return
