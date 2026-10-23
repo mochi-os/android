@@ -98,6 +98,35 @@ object MarketApp {
 
     /** Browse pre-filtered by category id. */
     fun homeWithCategory(categoryId: String) = "market?category=${Uri.encode(categoryId)}"
+
+    /**
+     * The screens a `/market/...` link opens over the market home, in order,
+     * from the path after `market/` and a reader of its query: a listing
+     * (`listings/<id>` as the server writes it, or `listing/<id>` as this
+     * client's own shortcuts do) with its conversation on top when the link
+     * names one (`listings/<id>/messages/<thread>`), the bids, a purchase or
+     * the purchases, the subscriptions, or the seller settings a Stripe return
+     * carries. Empty for a link that names none of them: the home alone.
+     */
+    fun linkRoutes(parts: List<String>, query: (String) -> String?): List<String> {
+        val id = parts.getOrNull(1)?.takeIf { it.isNotEmpty() }
+        return when (parts.getOrNull(0)) {
+            "listing", "listings" -> {
+                if (id == null) return emptyList()
+                val thread = parts.getOrNull(3)?.takeIf { parts.getOrNull(2) == "messages" && it.isNotEmpty() }
+                listOfNotNull(listingDetail(id), thread?.let { messageThread(id, it) })
+            }
+            "bids" -> listOf(BIDS)
+            "purchases" -> listOf(if (id != null) purchaseDetail(id) else PURCHASES)
+            "subscriptions" -> listOf(SUBSCRIPTIONS)
+            "account" -> if (id == "seller") {
+                listOf(sellerSettings(query("code"), query("state"), query("error"), query("error_description")))
+            } else {
+                emptyList()
+            }
+            else -> emptyList()
+        }
+    }
 }
 
 /**

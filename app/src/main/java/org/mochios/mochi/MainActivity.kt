@@ -46,6 +46,7 @@ import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.launcher.launcherComponentFor
+import org.mochios.android.launcher.openInApp
 import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
 import org.mochios.android.ui.AppBootstrapHost
@@ -201,7 +202,7 @@ open class MainActivity : ComponentActivity() {
                             homeNavGraph(
                                 onOpenNotifications = openNotifications,
                                 onLogout = requestLogout,
-                                onOpenLink = { link -> navigateToLink(navController, link) },
+                                onOpenLink = { link -> openNotificationLink(navController, link) },
                                 onManageCategories = {
                                     navController.navigate(SettingsApp.NOTIFICATION_PREFS) { launchSingleTop = true }
                                 },
@@ -234,7 +235,7 @@ open class MainActivity : ComponentActivity() {
                             settingsNavGraph(
                                 navController,
                                 onLogout = requestLogout,
-                                onOpenLink = { link -> navigateToLink(navController, link) },
+                                onOpenLink = { link -> openNotificationLink(navController, link) },
                             )
                             wikisNavGraph(
                                 navController,
@@ -705,6 +706,16 @@ open class MainActivity : ComponentActivity() {
     private fun navigateToLink(navController: NavController, link: String) =
         followLink(this, link) { path -> route(navController, path) }
 
+    /**
+     * Open a [link] tapped in a notification list. One for another app opens in
+     * that app's own task, as a tapped system notification does; routed here,
+     * its screens would stack inside this app, so Back would walk through them
+     * and the drawer's home row would bring forward whichever task held them.
+     */
+    private fun openNotificationLink(navController: NavController, link: String) {
+        if (!openInApp(this, link, app)) navigateToLink(navController, link)
+    }
+
     private fun route(navController: NavController, link: String) {
         // Split off an optional query string before path tokenisation so links
         // like "chat/new?friend=<id>" survive intact for the matcher below.
@@ -806,32 +817,8 @@ open class MainActivity : ComponentActivity() {
             }
             "market" -> {
                 navController.openAppHome(MarketApp.HOME)
-                when (id) {
-                    "listing" -> parts.getOrNull(2)
-                        ?.let { navController.navigate(MarketApp.listingDetail(it)) { launchSingleTop = true } }
-                    "purchases" -> {
-                        val orderId = parts.getOrNull(2)
-                        if (orderId != null) {
-                            navController.navigate(MarketApp.purchaseDetail(orderId)) {
-                                launchSingleTop = true
-                            }
-                        } else {
-                            navController.navigate(MarketApp.PURCHASES) { launchSingleTop = true }
-                        }
-                    }
-                    "subscriptions" -> navController.navigate(MarketApp.SUBSCRIPTIONS) {
-                        launchSingleTop = true
-                    }
-                    "account" -> if (parts.getOrNull(2) == "seller") {
-                        navController.navigate(
-                            MarketApp.sellerSettings(
-                                code = parseQueryParam(query, "code"),
-                                state = parseQueryParam(query, "state"),
-                                error = parseQueryParam(query, "error"),
-                                errorDescription = parseQueryParam(query, "error_description"),
-                            ),
-                        ) { launchSingleTop = true }
-                    }
+                for (route in MarketApp.linkRoutes(parts.drop(1)) { key -> parseQueryParam(query, key) }) {
+                    navController.navigate(route) { launchSingleTop = true }
                 }
             }
             "wikis" -> {

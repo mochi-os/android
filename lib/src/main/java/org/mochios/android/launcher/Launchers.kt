@@ -10,6 +10,8 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
+import org.mochios.android.push.NonceStore
 import org.mochios.android.ui.components.activity
 
 /**
@@ -99,6 +101,37 @@ fun openApp(context: Context, app: String): Boolean {
     } catch (_: ActivityNotFoundException) {
         false
     } catch (_: SecurityException) {
+        false
+    }
+}
+
+/**
+ * Opens [link], a path on this server, in the task of the app it belongs to
+ * when that is not [current], as a tapped system notification does: the app's
+ * activity receives the same nonce-gated `mochi:notification` URI and routes
+ * the link itself. Opened in place instead, the other app's screens would
+ * stack inside [current]'s task. Answers false, opening nothing, for a link of
+ * [current]'s own, one no app here hosts, or one whose app cannot be started;
+ * the caller then routes it as before.
+ */
+fun openInApp(context: Context, link: String, current: String?): Boolean {
+    val app = link.trimStart('/').substringBefore('/').substringBefore('?').lowercase()
+    if (!launchable(app) || app == current?.lowercase()) return false
+    val component = launcherComponentFor(context, app) ?: return false
+    val nonce = NonceStore(context).issue()
+    val uri = Uri.parse("mochi:notification?link=" + Uri.encode(link) + "&nonce=" + Uri.encode(nonce))
+    // launch-ok: a mochi: URI built here, addressed to this client's own activity
+    val intent = Intent(Intent.ACTION_VIEW, uri)
+        .setComponent(component)
+        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+    return try {
+        context.startActivity(intent)
+        true
+    } catch (_: ActivityNotFoundException) {
+        NonceStore(context).consume(nonce)
+        false
+    } catch (_: SecurityException) {
+        NonceStore(context).consume(nonce)
         false
     }
 }
