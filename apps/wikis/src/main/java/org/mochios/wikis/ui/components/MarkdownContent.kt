@@ -36,6 +36,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -258,8 +260,10 @@ fun MarkdownContent(
                         imageUrls = parsed.imageUrls,
                         wiki = wiki,
                         onTopMeasured = { top ->
-                            segmentTops[idx] = top
-                            publishHeadingPositions()
+                            if (segmentTops[idx] != top) {
+                                segmentTops[idx] = top
+                                publishHeadingPositions()
+                            }
                         },
                         onHeadingOffsetsMeasured = { perHeading ->
                             segmentHeadingOffsets[idx] = perHeading
@@ -278,10 +282,6 @@ fun MarkdownContent(
                         language = seg.language,
                         codeMarkdown = seg.fullMarkdown,
                         codeText = seg.codeText,
-                        onTopMeasured = { top ->
-                            segmentTops[idx] = top
-                            publishHeadingPositions()
-                        },
                     )
                 }
             }
@@ -328,7 +328,6 @@ private fun ProseSegment(
     // removed, and every one of them re-ran the whole heading-offset walk on
     // every layout pass.
     val currentHeadingIds by rememberUpdatedState(headingIds)
-    val currentTopMeasured by rememberUpdatedState(onTopMeasured)
     val currentOffsetsMeasured by rememberUpdatedState(onHeadingOffsetsMeasured)
 
     AndroidView(
@@ -344,14 +343,14 @@ private fun ProseSegment(
                 // OnPreDraw fires on every layout pass, so heading offsets stay
                 // fresh through text-size, configuration and content changes.
                 viewTreeObserver.addOnPreDrawListener {
-                    currentTopMeasured(top)
                     val layout = layout
                     val body = text as? Spannable
                     val ids = currentHeadingIds
                     if (layout != null && body != null && ids.isNotEmpty()) {
                         val perHeading = mutableMapOf<String, Int>()
                         val spans = body.getSpans(0, body.length, HeadingSpan::class.java)
-                            .sortedBy { body.getSpanStart(it) }
+                            .filter { span -> span.level in 2..4 }
+                            .sortedBy { span -> body.getSpanStart(span) }
                         val limit = minOf(spans.size, ids.size)
                         for (i in 0 until limit) {
                             val start = body.getSpanStart(spans[i]).coerceAtLeast(0)
@@ -383,7 +382,11 @@ private fun ProseSegment(
             )
 
         },
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .onGloballyPositioned { coords ->
+                onTopMeasured(coords.positionInParent().y.toInt())
+            },
     )
 }
 
@@ -398,16 +401,11 @@ private fun CodeBlockSegment(
     language: String,
     codeMarkdown: String,
     codeText: String,
-    onTopMeasured: (top: Int) -> Unit,
 ) {
     val spanned = remember(markwon, codeMarkdown) { markwon.toMarkdown(codeMarkdown) }
     // The block sits on surfaceVariant, so its code follows that role rather
     // than the fixed near-black it used to draw in.
     val textColor = MaterialTheme.colorScheme.onSurfaceVariant.toArgb()
-
-    // Attached once in `factory`; `update` runs per recomposition and would
-    // otherwise stack a listener each time with nothing ever removing them.
-    val currentTopMeasured by rememberUpdatedState(onTopMeasured)
 
     Surface(
         modifier = Modifier
@@ -441,10 +439,6 @@ private fun CodeBlockSegment(
                             movementMethod = LinkMovementMethod.getInstance()
                             textSize = 13f
                             setTextColor(textColor)
-                            viewTreeObserver.addOnPreDrawListener {
-                                currentTopMeasured(top)
-                                true
-                            }
                         }
                     },
                     update = { textView ->
