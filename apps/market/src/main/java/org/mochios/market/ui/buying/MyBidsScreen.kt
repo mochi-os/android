@@ -45,6 +45,7 @@ import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
+import org.mochios.market.model.AuctionStatus
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
 import org.mochios.market.navigation.MarketApp
@@ -122,7 +123,7 @@ private fun BidsTabRow(active: BidsFilter, onSelected: (BidsFilter) -> Unit) {
 }
 
 @Composable
-private fun BidRow(
+internal fun BidRow(
     bid: Bid,
     onClick: (String, String?) -> Unit,
     onCompletePurchase: (String) -> Unit,
@@ -132,10 +133,12 @@ private fun BidRow(
     val title = bid.title ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: "")
     val current = bid.currentBid
     val closes = bid.closes ?: 0L
+    // A cancelled auction has no time left, whatever its close time says.
+    val cancelled = bid.auctionStatus == AuctionStatus.CANCELLED
     val subtitle = listOf(
         stringResource(R.string.market_bids_your_bid, formatPrice(bid.amount, currency)),
         when {
-            closes > 0L -> remainingLabel(closes)
+            closes > 0L && !cancelled -> remainingLabel(closes)
             bid.created > 0L -> format.formatTimestamp(bid.created)
             else -> ""
         },
@@ -145,7 +148,7 @@ private fun BidRow(
         onClick = { bid.listing?.let { listing -> onClick(listing, bid.title) } },
         subtitle = subtitle,
         badges = {
-            BidStatusBadge(status = bid.status)
+            BidStatusBadge(status = bid.status, cancelled = cancelled)
             if (bid.status == org.mochios.market.model.BidStatus.WON && bid.listing != null) {
                 MochiButton(
                     onClick = { onCompletePurchase(bid.listing) },

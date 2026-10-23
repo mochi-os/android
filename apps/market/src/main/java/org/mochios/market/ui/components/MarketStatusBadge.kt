@@ -54,8 +54,12 @@ fun MarketStatusBadge(
  * @param status the bid's status; null renders an empty neutral badge.
  */
 @Composable
-fun BidStatusBadge(status: BidStatus?, modifier: Modifier = Modifier) {
-    val (label, tone) = when (status) {
+fun BidStatusBadge(status: BidStatus?, modifier: Modifier = Modifier, cancelled: Boolean = false) {
+    // Cancelling an auction marks its bids lost; they were not, so a bid on a
+    // cancelled auction is labelled by the auction instead.
+    val (label, tone) = if (cancelled) {
+        stringResource(R.string.market_status_cancelled) to StatusTone.Neutral
+    } else when (status) {
         BidStatus.ACTIVE -> stringResource(R.string.market_bids_tab_active) to StatusTone.Waiting
         BidStatus.WON -> stringResource(R.string.market_bids_tab_won) to StatusTone.Positive
         BidStatus.PURCHASED ->
@@ -69,7 +73,7 @@ fun BidStatusBadge(status: BidStatus?, modifier: Modifier = Modifier) {
     StatusBadge(
         label = label,
         tone = tone,
-        icon = if (status == BidStatus.ACTIVE) Icons.Outlined.Gavel else tone.defaultIcon,
+        icon = if (status == BidStatus.ACTIVE && !cancelled) Icons.Outlined.Gavel else tone.defaultIcon,
         modifier = modifier,
     )
 }
