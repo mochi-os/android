@@ -190,7 +190,7 @@ private fun ReportsBody(
 }
 
 @Composable
-private fun ReportRow(
+internal fun ReportRow(
     report: Report,
     onOpenListing: (String) -> Unit,
     onActionClick: () -> Unit,
@@ -254,7 +254,7 @@ private fun ReportRow(
             }
             Spacer(Modifier.height(6.dp))
 
-            // Reason text.
+            // Reason, and the reporter's details when they wrote any.
             Text(
                 text = reasonLabel(report.reason),
                 style = MaterialTheme.typography.bodySmall,
@@ -262,6 +262,16 @@ private fun ReportRow(
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )
+            if (report.details.isNotBlank()) {
+                Spacer(Modifier.height(2.dp))
+                Text(
+                    text = report.details,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
             Spacer(Modifier.height(6.dp))
 
             Text(

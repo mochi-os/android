@@ -130,7 +130,7 @@ fun ReportActionDialog(
 }
 
 @Composable
-private fun MetadataCard(report: Report) {
+internal fun MetadataCard(report: Report) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
