@@ -43,15 +43,18 @@ import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.CheckBox
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Forum
+import androidx.compose.material.icons.outlined.LockOpen
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Settings
-import androidx.compose.material.icons.outlined.Tune
+import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
@@ -73,6 +76,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -131,13 +135,22 @@ import org.mochios.chat.R
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatStatus
+import org.mochios.chat.model.ReceiptState
+import org.mochios.chat.model.active
 import org.mochios.chat.model.heading
 import org.mochios.chat.model.personAvatarUrl
+import org.mochios.chat.model.presence
+import org.mochios.chat.model.receiptState
+import org.mochios.chat.model.receipts
+import org.mochios.chat.model.relayed
+import org.mochios.chat.model.seenBy
+import org.mochios.chat.model.threads
 import org.mochios.chat.ui.chatlist.ChatListHeader
 import org.mochios.chat.ui.chatlist.ChatListNoMatches
 import org.mochios.chat.ui.chatlist.ChatListViewModel
 import org.mochios.chat.ui.chatlist.unreadBadge
-import org.mochios.chat.ui.policy.ChatPolicyDialog
+import org.mochios.chat.ui.encryption.VerificationWatcher
+import org.mochios.chat.ui.privacy.PrivacyDialog
 import org.mochios.chat.ui.router.CHAT_FEATURE
 import org.mochios.android.R as MochiR
 
@@ -173,14 +186,22 @@ fun ChatScreen(
         }
     }
     val pinnedChats by listViewModel.pinned.collectAsState()
-    val drawerItems = remember(listUiState, pinnedChats) {
+    val invitation = stringResource(R.string.chat_invitation)
+    val drawerItems = remember(listUiState, pinnedChats, invitation) {
         listViewModel.filteredChats().map { chat ->
-            val isDirect = chat.members == 2 && chat.other.isNotBlank()
+            // A conversation on another network: its people have no Mochi
+            // avatar, so it shows the network's globe.
+            val isDirect = chat.members == 2 && chat.other.isNotBlank() && chat.account.isEmpty()
             DrawerItem(
                 id = chat.id,
                 title = chat.name,
+                subtitle = if (chat.status == ChatStatus.INVITED) invitation else null,
                 unread = unreadBadge(chat, chatId),
-                icon = if (chat.members > 2) Icons.Default.Groups else Icons.Default.ChatBubbleOutline,
+                icon = when {
+                    chat.account.isNotEmpty() -> Icons.Default.Public
+                    chat.members > 2 -> Icons.Default.Groups
+                    else -> Icons.Default.ChatBubbleOutline
+                },
                 trailingIcon = if (chat.id in pinnedChats) Icons.Outlined.PushPin else null,
                 avatarUrl = if (isDirect) personAvatarUrl(chat.other) else null,
                 seed = chat.id,
@@ -219,8 +240,8 @@ fun ChatScreen(
                 },
             )
             DrawerActionRow(
-                title = stringResource(R.string.chat_policy_title),
-                icon = Icons.Outlined.Tune,
+                title = stringResource(R.string.chat_privacy_title),
+                icon = Icons.Outlined.Shield,
                 onClick = {
                     drawerScope.launch { drawerState.close() }
                     showPolicy = true
@@ -241,13 +262,17 @@ fun ChatScreen(
                 onSettings = onSettings,
                 onChatDeleted = onChatDeleted,
                 onOpenNotifications = onOpenNotifications,
+                onPrivacy = { showPolicy = true },
             )
         }
     }
 
     if (showPolicy) {
-        ChatPolicyDialog(onDismiss = { showPolicy = false })
+        PrivacyDialog(onDismiss = { showPolicy = false })
     }
+
+    // Matrix's emoji verifications, asked while the user has a Matrix conversation.
+    VerificationWatcher(enabled = listUiState.chats.any { it.network == "matrix" })
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -258,10 +283,17 @@ private fun ChatContent(
     onSettings: (String) -> Unit,
     onChatDeleted: () -> Unit,
     onOpenNotifications: () -> Unit,
+    onPrivacy: () -> Unit,
     viewModel: ChatViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val upload by viewModel.upload.collectAsState()
+
+    // A one-to-one conversation asks whether the other person is online while it shows.
+    val asksPresence = uiState.chat.presence()
+    LaunchedEffect(uiState.chat.id, asksPresence) {
+        if (asksPresence) viewModel.watchPresence()
+    }
 
     // Clears this chat's tray rows on every return, and keeps a push about it
     // from posting at all while the screen is up - the server's mark-read does
@@ -352,12 +384,15 @@ private fun ChatContent(
         topBar = {
             val members = uiState.chat.members
             val isGroup = members.size > 2
-            val peer = if (members.size == 2) members.firstOrNull { it.id != uiState.identity } else null
+            val remote = uiState.chat.account.isNotEmpty()
+            val peer = if (members.size == 2 && !remote) members.firstOrNull { it.id != uiState.identity } else null
             val peerAvatarUrl = peer?.let { personAvatarUrl(it.id) }
             val youLabel = stringResource(R.string.chat_members_you)
             val membersSubtitle = remember(members, uiState.identity, youLabel) {
                 members.heading(uiState.identity, youLabel)
             }
+            val standing = standingLine(uiState.chat, uiState.presence)
+            val subtitle = membersSubtitle.ifBlank { standing.orEmpty() }
             if (uiState.searchOpen) {
                 val matchPosition = if (searchMatchIds.isEmpty()) 0 else searchMatchIndex + 1
                 val matchCount = searchMatchIds.size
@@ -407,6 +442,13 @@ private fun ChatContent(
                                     size = 32.dp,
                                 )
                                 Spacer(Modifier.width(8.dp))
+                            } else if (remote) {
+                                EntityIconCircle(
+                                    seed = uiState.chat.id,
+                                    icon = Icons.Default.Public,
+                                    size = 32.dp,
+                                )
+                                Spacer(Modifier.width(8.dp))
                             } else if (isGroup) {
                                 EntityIconCircle(
                                     seed = uiState.chat.id,
@@ -423,9 +465,9 @@ private fun ChatContent(
                                     maxLines = 1,
                                     overflow = TextOverflow.Ellipsis
                                 )
-                                if (membersSubtitle.isNotBlank()) {
+                                if (subtitle.isNotBlank()) {
                                     Text(
-                                        text = membersSubtitle,
+                                        text = subtitle,
                                         style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                         maxLines = 1,
@@ -477,6 +519,16 @@ private fun ChatContent(
                                                 Icons.Outlined.PushPin
                                             }, contentDescription = null) },
                                 )
+                                if (uiState.chat.status == ChatStatus.INVITED) {
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(R.string.chat_invitation_decline)) },
+                                        onClick = {
+                                            menuExpanded = false
+                                            viewModel.decline()
+                                        },
+                                        leadingIcon = { Icon(Icons.Default.Close, contentDescription = null) },
+                                    )
+                                }
                                 MochiDropdownMenuItem(
                                     text = { Text(stringResource(R.string.chat_mark_read)) },
                                     onClick = {
@@ -505,7 +557,7 @@ private fun ChatContent(
                                         },
                                         leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                                     )
-                                } else {
+                                } else if (uiState.chat.status != ChatStatus.INVITED) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.chat_settings_delete)) },
                                         onClick = {
@@ -515,6 +567,14 @@ private fun ChatContent(
                                         leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                                     )
                                 }
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.chat_privacy_title)) },
+                                    onClick = {
+                                        menuExpanded = false
+                                        onPrivacy()
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Shield, contentDescription = null) },
+                                )
                             }
                         }
                     }
@@ -585,6 +645,11 @@ private fun ChatContent(
                     }
                 }
                 else -> {
+                    val showsReceipts = uiState.chat.receipts()
+                    val opensThreads = uiState.chat.threads()
+                    val seen = remember(uiState.messages, uiState.receipts, uiState.identity, isGroupChat(uiState.chat)) {
+                        if (isGroupChat(uiState.chat)) seenBy(uiState.messages, uiState.receipts, uiState.identity) else null
+                    }
                     LazyColumn(
                         state = listState,
                         modifier = Modifier.weight(1f).fillMaxWidth(),
@@ -616,9 +681,21 @@ private fun ChatContent(
                                 }
                                 is MessageListEntry.MessageItem -> {
                                     item(key = entry.message.id) {
+                                        val own = entry.message.member == uiState.identity
                                         MessageBubble(
                                             message = entry.message,
-                                            isOwn = entry.message.member == uiState.identity,
+                                            isOwn = own,
+                                            receipt = if (own && showsReceipts && !entry.message.deleted) {
+                                                receiptState(entry.message.created, uiState.receipts, uiState.identity)
+                                            } else {
+                                                null
+                                            },
+                                            seen = seen?.takeIf { it.id == entry.message.id }?.names,
+                                            onThread = if (opensThreads && !entry.message.deleted) {
+                                                { viewModel.openThread(entry.message) }
+                                            } else {
+                                                null
+                                            },
                                             isGroup = uiState.chat.members.size > 2,
                                             chatId = uiState.chat.id,
                                             selectionMode = uiState.selectionMode,
@@ -644,6 +721,35 @@ private fun ChatContent(
                 }
             }
 
+            if (uiState.chat.status == ChatStatus.INVITED) {
+                InvitationBar(
+                    answering = uiState.answering,
+                    onAccept = viewModel::accept,
+                    onDecline = viewModel::decline,
+                )
+            } else {
+            if (uiState.chat.active() && uiState.chat.relayed()) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 2.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Icon(
+                        Icons.Outlined.LockOpen,
+                        contentDescription = null,
+                        modifier = Modifier.size(14.dp),
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    Text(
+                        text = stringResource(R.string.chat_relayed_unencrypted),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+            if (uiState.chat.active() && uiState.typing.isNotEmpty()) {
+                TypingLine(uiState.typing)
+            }
             ComposeBar(
                 value = uiState.draft,
                 onValueChange = viewModel::setDraft,
@@ -693,6 +799,19 @@ private fun ChatContent(
                     }
                 },
             )
+            }
+
+            uiState.thread?.let { thread ->
+                ThreadSheet(
+                    thread = thread,
+                    chatId = uiState.chat.id,
+                    canWrite = uiState.chat.active(),
+                    onDraft = viewModel::setThreadDraft,
+                    onSend = viewModel::sendThreadReply,
+                    onEarlier = viewModel::loadEarlierReplies,
+                    onDismiss = viewModel::closeThread,
+                )
+            }
 
             if (uiState.forwardMessageIds.isNotEmpty()) {
                 ChatForwardSheet(
@@ -837,9 +956,12 @@ internal fun lastLazyIndex(grouped: List<MessageListEntry>, more: Boolean): Int 
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun MessageBubble(
+internal fun MessageBubble(
     message: ChatMessage,
     isOwn: Boolean,
+    receipt: ReceiptState?,
+    seen: List<String>?,
+    onThread: (() -> Unit)?,
     isGroup: Boolean,
     chatId: String,
     selectionMode: Boolean,
@@ -946,6 +1068,15 @@ private fun MessageBubble(
                             fontStyle = FontStyle.Italic,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
+                    } else if (awaitingKeys(message)) {
+                        // An encrypted message whose keys have not come shows
+                        // no content until they do.
+                        Text(
+                            text = stringResource(R.string.chat_message_encrypted),
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontStyle = FontStyle.Italic,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
                     } else {
                         if (message.body.isNotEmpty()) {
                             Text(
@@ -984,18 +1115,28 @@ private fun MessageBubble(
                                 }
                             )
                         }
+                        message.quote?.let { quote ->
+                            Spacer(modifier = Modifier.height(6.dp))
+                            MessageQuote(quote)
+                        }
                     }
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = if (message.edited > 0) {
-                            format.formatTimestamp(message.created) +
-                                " " + stringResource(R.string.chat_message_edited)
-                        } else {
-                            format.formatTimestamp(message.created)
-                        },
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            text = if (message.edited > 0) {
+                                format.formatTimestamp(message.created) +
+                                    " " + stringResource(R.string.chat_message_edited)
+                            } else {
+                                format.formatTimestamp(message.created)
+                            },
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        if (receipt != null) {
+                            Spacer(Modifier.width(4.dp))
+                            ReceiptTick(receipt)
+                        }
+                    }
                 }
             }
             if (hasMenu && !selectionMode) {
@@ -1019,6 +1160,16 @@ private fun MessageBubble(
                         },
                         leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Reply, contentDescription = null) },
                     )
+                    if (onThread != null) {
+                        MochiDropdownMenuItem(
+                            text = { Text(stringResource(R.string.chat_thread_reply)) },
+                            onClick = {
+                                menuExpanded = false
+                                onThread()
+                            },
+                            leadingIcon = { Icon(Icons.Outlined.Forum, contentDescription = null) },
+                        )
+                    }
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.chat_message_forward)) },
                         onClick = {
@@ -1080,6 +1231,30 @@ private fun MessageBubble(
                     )
                 }
             }
+        }
+        // The thread's count sits under the bubble, clear of the reaction
+        // button that floats over the bubble's lower corner.
+        if (onThread != null && message.replies > 0 && !selectionMode) {
+            Text(
+                text = pluralStringResource(
+                    R.plurals.chat_thread_replies,
+                    message.replies,
+                    format.formatNumber(message.replies),
+                ),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier
+                    .clickable(onClick = onThread)
+                    .padding(horizontal = 4.dp, vertical = 2.dp),
+            )
+        }
+        if (!seen.isNullOrEmpty()) {
+            Text(
+                text = stringResource(R.string.chat_seen_by, LocalFormat.current.formatList(seen)),
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 4.dp),
+            )
         }
     }
 }

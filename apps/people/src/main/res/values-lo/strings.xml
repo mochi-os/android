@@ -217,4 +217,10 @@
     <string name="people_contact_create">ສ້າງ</string>
     <string name="people_sync_permission_reason">ການຊິງຄ໌ຈະສຳເນົາໝູ່ຂອງທ່ານໄປໃສ່ແອັບຜູ້ຕິດຕໍ່ຂອງໂທລະສັບນີ້, ສະນັ້ນມັນຈຶ່ງຕ້ອງການສິດເຂົ້າເຖິງຜູ້ຕິດຕໍ່ຂອງທ່ານ.</string>
     <string name="people_sync_permission_blocked">ການເຂົ້າເຖິງຜູ້ຕິດຕໍ່ຖືກປິດໄວ້ສຳລັບແອັບນີ້. ທ່ານສາມາດເປີດມັນໄດ້ໃນສ່ວນ ການອະນຸຍາດ ໃນການຕັ້ງຄ່າຂອງແອັບ.</string>
+    <string name="people_contact_add_handle">ເພີ່ມຊື່ຜູ້ໃຊ້</string>
+    <string name="people_contact_add_messaging">ເພີ່ມທີ່ຢູ່ສົ່ງຂໍ້ຄວາມ</string>
+    <string name="people_contact_network">ເຄືອຂ່າຍ</string>
+    <string name="people_contact_xmpp">ລາຍຊື່ຕິດຕໍ່ XMPP</string>
+    <string name="people_person_forums">ກະດານສົນທະນາ</string>
+    <string name="people_contact_network_other">ອື່ນໆ</string>
 </resources>

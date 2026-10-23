@@ -336,4 +336,10 @@
     <string name="upload_progress">Жүктөө жүрүшү</string>
     <string name="upload_processing">Иштетилүүдө…</string>
     <string name="upload_sent">%2$s ичинен %1$s</string>
+    <string name="comment_share">Бөлүшүү</string>
+    <string name="comment_all">Бардык комментарийлер</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s жооп</item>
+        <item quantity="other">+%1$s дагы жооп</item>
+    </plurals>
 </resources>

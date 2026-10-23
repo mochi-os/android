@@ -336,4 +336,10 @@
     <string name="upload_progress">Progreso ng pag-upload</string>
     <string name="upload_processing">Pinoproseso…</string>
     <string name="upload_sent">%1$s sa %2$s</string>
+    <string name="comment_share">Ibahagi</string>
+    <string name="comment_all">Lahat ng komento</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s tugon</item>
+        <item quantity="other">+%1$s pang tugon</item>
+    </plurals>
 </resources>

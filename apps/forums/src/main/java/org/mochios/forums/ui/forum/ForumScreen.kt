@@ -28,6 +28,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.Logout
+import androidx.compose.material.icons.automirrored.outlined.ShowChart
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
@@ -42,9 +43,12 @@ import androidx.compose.material.icons.filled.ThumbDown
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.BookmarkBorder
+import androidx.compose.material.icons.outlined.Balance
+import androidx.compose.material.icons.outlined.Block
 import androidx.compose.material.icons.outlined.EmojiEvents
 import androidx.compose.material.icons.outlined.Forum
 import androidx.compose.material.icons.outlined.Gavel
+import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.RssFeed
@@ -55,6 +59,7 @@ import androidx.compose.material.icons.outlined.AutoAwesome
 import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
+import androidx.compose.material.icons.outlined.ThumbsUpDown
 import androidx.compose.material.icons.outlined.Whatshot
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
@@ -128,6 +133,9 @@ import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.components.PostBadges
+import org.mochios.forums.ui.components.PostLinkCard
+import org.mochios.forums.ui.components.SensitiveBadge
+import org.mochios.forums.ui.components.SensitiveCover
 import org.mochios.forums.ui.forumlist.ForumListViewModel
 import org.mochios.forums.ui.router.FORUMS_FEATURE
 import org.mochios.android.R as MochiR
@@ -150,6 +158,12 @@ private val SORT_OPTIONS = listOf(
     SortOption("new", R.string.forums_sort_new, Icons.Outlined.Schedule),
     SortOption("hot", R.string.forums_sort_hot, Icons.Outlined.Whatshot),
     SortOption("top", R.string.forums_sort_top, Icons.Outlined.EmojiEvents),
+    // The sorts communities on other networks offer.
+    SortOption("active", R.string.forums_sort_active, Icons.AutoMirrored.Outlined.ShowChart),
+    SortOption("scaled", R.string.forums_sort_scaled, Icons.Outlined.Balance),
+    SortOption("controversial", R.string.forums_sort_controversial, Icons.Outlined.ThumbsUpDown),
+    SortOption("old", R.string.forums_sort_old, Icons.Outlined.History),
+    SortOption("comments", R.string.forums_sort_comments, Icons.Outlined.Forum),
 )
 
 /** The AI sort, offered only where the server has an AI account to run it. */
@@ -292,6 +306,10 @@ fun ForumScreen(
  * lists them, rather than one only browsed. Only a held forum goes on the
  * home screen, as only those are kept in step with the list.
  */
+/** Whether a forum is a community read through a linked account, which may be blocked there. */
+internal fun blockableCommunity(forum: Forum): Boolean =
+    forum.id.isNotEmpty() && forum.account.isNotEmpty() && forum.address.isNotEmpty() && forum.hosted.isEmpty()
+
 internal fun holds(forums: List<Forum>, forum: Forum): Boolean = forums.any { held ->
     held.id == forum.id || (held.fingerprint.isNotEmpty() && held.fingerprint == forum.fingerprint)
 }
@@ -573,6 +591,18 @@ private fun ForumContent(
                                     leadingIcon = { Icon(Icons.AutoMirrored.Outlined.Logout, contentDescription = null) },
                                 )
                             }
+                            // A community read through a linked account, which
+                            // the user may block on that network.
+                            if (!isAll && blockableCommunity(uiState.forum)) {
+                                MochiDropdownMenuItem(
+                                    text = { Text(stringResource(R.string.forums_block_community)) },
+                                    onClick = {
+                                        showOverflowMenu = false
+                                        viewModel.blockCommunity()
+                                    },
+                                    leadingIcon = { Icon(Icons.Outlined.Block, contentDescription = null) },
+                                )
+                            }
                         }
                     }
                 }
@@ -849,6 +879,9 @@ private fun PostCard(
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )
+                if (post.sensitive != 0) {
+                    SensitiveBadge(modifier = Modifier.padding(start = 8.dp))
+                }
                 // Status rides the title's trailing edge — the first thing read
                 // on a card that isn't live yet.
                 PostBadges(
@@ -856,15 +889,24 @@ private fun PostCard(
                     modifier = Modifier.padding(start = 8.dp),
                 )
             }
-            if (post.body.isNotBlank()) {
-                Spacer(Modifier.height(4.dp))
-                Text(
-                    text = post.body,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 3,
-                    overflow = TextOverflow.Ellipsis
-                )
+            // A sensitive post's text and link wait behind a cover.
+            SensitiveCover(sensitive = post.sensitive != 0, key = post.id) {
+                Column {
+                    if (post.body.isNotBlank()) {
+                        Spacer(Modifier.height(4.dp))
+                        Text(
+                            text = post.body,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            maxLines = 3,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
+                    if (post.url.isNotEmpty()) {
+                        Spacer(Modifier.height(8.dp))
+                        PostLinkCard(post = post, compact = true)
+                    }
+                }
             }
             Spacer(Modifier.height(8.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {

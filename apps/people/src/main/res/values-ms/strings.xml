@@ -217,4 +217,10 @@
     <string name="people_contact_create">Cipta</string>
     <string name="people_sync_permission_reason">Penyegerakan menyalin rakan anda ke dalam apl Kenalan telefon ini, jadi ia memerlukan akses kepada kenalan anda.</string>
     <string name="people_sync_permission_blocked">Akses kenalan dimatikan untuk apl ini. Anda boleh menghidupkannya di bawah Kebenaran dalam tetapan apl.</string>
+    <string name="people_contact_add_handle">Tambah nama pengguna</string>
+    <string name="people_contact_add_messaging">Tambah alamat pemesejan</string>
+    <string name="people_contact_network">Rangkaian</string>
+    <string name="people_contact_xmpp">Kenalan XMPP</string>
+    <string name="people_person_forums">Forum</string>
+    <string name="people_contact_network_other">Lain-lain</string>
 </resources>

@@ -13,6 +13,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -21,6 +22,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.ui.components.BannerSection
 import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.ConfirmActionSection
@@ -71,6 +73,17 @@ fun GeneralTab(
             onDraftChange = { value -> bannerDraft = value },
             onSave = { value -> viewModel.saveBanner(value) }
         )
+
+        // Where a public feed publishes, and the owner's keyword filters.
+        val publishing: PublishingViewModel = hiltViewModel()
+        val privacy = feedInfo?.privacy
+        LaunchedEffect(privacy) {
+            if (privacy == "public") publishing.loadPublish()
+            publishing.loadFilters()
+        }
+        PublishingEvents(publishing)
+        if (privacy == "public") PublishingSection(publishing)
+        FiltersSection(publishing)
 
         ConfirmActionSection(
             title = stringResource(R.string.feeds_delete_feed),

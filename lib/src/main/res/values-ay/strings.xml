@@ -336,4 +336,10 @@
     <string name="upload_progress">Apkatäwi sarantawi</string>
     <string name="upload_processing">Luraskiwa…</string>
     <string name="upload_sent">%1$s / %2$s</string>
+    <string name="comment_share">Compartiña</string>
+    <string name="comment_all">Taqpach comentarionaka</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s jaysawi</item>
+        <item quantity="other">+%1$s juk\'ampi jaysawinaka</item>
+    </plurals>
 </resources>

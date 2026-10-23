@@ -31,6 +31,14 @@ data class WebSocketEvent(
     val name: String? = null,
     val body: String? = null,
     val created: Long? = null,
+    /** A chat message's thread root, empty on the main timeline. */
+    val thread: String? = null,
+    /** A chat receipt: how far the member holds and has read the conversation. */
+    val delivered: Long? = null,
+    val displayed: Long? = null,
+    /** A chat typing event: false where the member stopped, and for how many seconds it holds. */
+    val typing: Boolean? = null,
+    val held: Double? = null,
     // UnifiedPush distributor fields. `account` is the accounts.id the
     // distributor acks the queued row with; subId is only the random
     // subscription token. The live envelope spells it sub_id (core writes that

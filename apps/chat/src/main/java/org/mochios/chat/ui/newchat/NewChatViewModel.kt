@@ -18,8 +18,10 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
 import org.mochios.chat.model.Chat
+import org.mochios.chat.model.ChatAccount
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.model.Friend
+import org.mochios.chat.model.addressList
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
@@ -45,10 +47,18 @@ data class NewChatUiState(
     val isLoading: Boolean = false,
     val isCreating: Boolean = false,
     val error: MochiError? = null,
-    val createdChatId: String? = null
+    val createdChatId: String? = null,
+    /** The user's accounts on other networks a conversation can be had through. */
+    val accounts: List<ChatAccount> = emptyList(),
+    /** The account chosen, with people there by their addresses; empty for Mochi. */
+    val account: String = "",
+    val addresses: String = "",
 ) {
     val selected: Set<String>
         get() = picked.map { friend -> friend.id }.toSet()
+
+    /** The account chosen, when one is. */
+    val chosen: ChatAccount? get() = accounts.firstOrNull { it.id == account }
 }
 
 @HiltViewModel
@@ -59,6 +69,15 @@ class NewChatViewModel @Inject constructor(
 
     /** Friend identity pre-selected via deep-link (mochi://chat/with?friend=X). */
     private val preselectFriend: String = savedStateHandle["friend"] ?: ""
+
+    /**
+     * A contact's messaging address on another network, from people
+     * (mochi://chat/with?account=A&address=B&name=C): the conversation there
+     * already is, or a new one.
+     */
+    private val handoffAccount: String = savedStateHandle["account"] ?: ""
+    private val handoffAddress: String = savedStateHandle["address"] ?: ""
+    private val handoffName: String = savedStateHandle["name"] ?: ""
 
     private val _uiState = MutableStateFlow(NewChatUiState())
     val uiState: StateFlow<NewChatUiState> = _uiState.asStateFlow()
@@ -73,7 +92,27 @@ class NewChatViewModel @Inject constructor(
             try {
                 val data = repository.getNewChatData()
                 val friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(me = data.name)
+                _uiState.value = _uiState.value.copy(me = data.name, accounts = data.accounts)
+
+                if (handoffAccount.isNotBlank() && handoffAddress.isNotBlank()) {
+                    try {
+                        val chatId = repository.createChat(handoffName.trim(), listOf(handoffAddress), handoffAccount).id
+                        _uiState.value = _uiState.value.copy(friends = friends, createdChatId = chatId.ifEmpty { null }, isLoading = chatId.isNotEmpty())
+                    } catch (e: Exception) {
+                        // The picker, on that account with the address filled
+                        // in, so the user can retry.
+                        _uiState.value = _uiState.value.copy(
+                            friends = friends,
+                            isLoading = false,
+                            account = handoffAccount,
+                            addresses = handoffAddress,
+                            groupName = handoffName,
+                            groupNameEdited = handoffName.isNotBlank(),
+                            error = e.toMochiError(),
+                        )
+                    }
+                    return@launch
+                }
 
                 // Deep-link entry with a friend: open or create the 1-on-1
                 // directly. isLoading stays true so the picker never flashes
@@ -182,6 +221,32 @@ class NewChatViewModel @Inject constructor(
 
     fun updateGroupName(name: String) {
         _uiState.value = _uiState.value.copy(groupName = name, groupNameEdited = true)
+    }
+
+    /** Choose the account the conversation is had through; empty for Mochi. */
+    fun selectAccount(account: String) {
+        _uiState.value = _uiState.value.copy(account = account, picked = emptyList())
+        refreshExisting()
+    }
+
+    fun updateAddresses(text: String) {
+        _uiState.value = _uiState.value.copy(addresses = text)
+    }
+
+    /** Start a conversation on the account chosen with the people at the addresses given. */
+    fun createRemote() {
+        val state = _uiState.value
+        val addresses = addressList(state.addresses)
+        if (state.account.isEmpty() || addresses.isEmpty()) return
+        viewModelScope.launch {
+            _uiState.value = state.copy(isCreating = true, error = null)
+            try {
+                val response = repository.createChat(state.groupName.trim(), addresses, state.account)
+                _uiState.value = _uiState.value.copy(isCreating = false, createdChatId = response.id.ifEmpty { null })
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(isCreating = false, error = e.toMochiError())
+            }
+        }
     }
 
     fun updateSearchQuery(query: String) {

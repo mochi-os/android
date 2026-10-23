@@ -336,4 +336,10 @@
     <string name="upload_progress">Latauksen edistyminen</string>
     <string name="upload_processing">Käsitellään…</string>
     <string name="upload_sent">%1$s / %2$s</string>
+    <string name="comment_share">Jaa</string>
+    <string name="comment_all">Kaikki kommentit</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s vastaus</item>
+        <item quantity="other">+%1$s lisävastausta</item>
+    </plurals>
 </resources>

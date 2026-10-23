@@ -344,7 +344,10 @@ internal fun AccountRow(
     val provider = providers.firstOrNull { it.type == account.type }
     val needsVerify = provider?.verify == true && account.verified == 0
     val isAi = account.type == "claude" || account.type == "openai"
-    val notifyCapable = provider?.capabilities?.contains("notify") == true
+    // Notify by default: never on a network's account, whose switch turns the
+    // account itself on or off.
+    val notifyCapable = provider != null && "notify" in provider.capabilities &&
+        "network" !in provider.capabilities
     // An account the user signed in through carries what it has been granted
     // so far, which is the useful thing to say about it: "Sign-in" alone, or
     // "Sign-in and Calendar" once a calendar has been linked through it.

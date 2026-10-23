@@ -32,6 +32,10 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -74,8 +78,13 @@ fun SystemStatusScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    val snackbar = remember { SnackbarHostState() }
+    LaunchedEffect(Unit) {
+        viewModel.messages.collect { snackbar.showSnackbar(it) }
+    }
     StepUpHost(viewModel.stepUp)
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.system_status_title)) },
@@ -203,6 +212,13 @@ fun SystemStatusScreen(
                             installError = state.installError?.userMessage(),
                             onInstall = { viewModel.installUpdate() },
                             onOpen = { openUrl(context, it) },
+                        )
+                    }
+                    state.networks?.let { networks ->
+                        OtherNetworksSections(
+                            networks = networks,
+                            replacing = state.replacing,
+                            onReplace = viewModel::replaceServerKey,
                         )
                     }
                     if (state.peers.isNotEmpty()) {

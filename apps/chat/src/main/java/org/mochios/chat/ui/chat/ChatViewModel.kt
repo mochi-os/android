@@ -7,6 +7,7 @@ package org.mochios.chat.ui.chat
 
 import android.app.Application
 import android.net.Uri
+import android.os.SystemClock
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -35,8 +36,15 @@ import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
+import org.mochios.chat.model.ChatPresence
+import org.mochios.chat.model.ChatReceipt
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.model.Friend
+import org.mochios.chat.model.PRESENCE_INTERVAL
+import org.mochios.chat.model.TYPING_INTERVAL
+import org.mochios.chat.model.Typists
+import org.mochios.chat.model.presence
+import org.mochios.chat.model.typing
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
@@ -74,6 +82,29 @@ data class ChatUiState(
     val selectedIds: Set<String> = emptySet(),
     val isPinned: Boolean = false,
     val chatDeleted: Boolean = false,
+    /** Each member's delivered and displayed watermarks, from the newest page and the receipts since. */
+    val receipts: List<ChatReceipt> = emptyList(),
+    /** The other member's presence in a one-to-one conversation, once asked. */
+    val presence: ChatPresence? = null,
+    /** The names of the members typing now. */
+    val typing: List<String> = emptyList(),
+    /** The thread open over the conversation, null when none is. */
+    val thread: ThreadState? = null,
+    /** An invitation being accepted or declined. */
+    val answering: Boolean = false,
+)
+
+/** A message's thread: the message, its replies, and a reply being written. */
+data class ThreadState(
+    val root: ChatMessage,
+    val replies: List<ChatMessage> = emptyList(),
+    val more: Boolean = false,
+    val cursor: String? = null,
+    val isLoading: Boolean = true,
+    val isLoadingMore: Boolean = false,
+    val draft: String = "",
+    val isSending: Boolean = false,
+    val error: MochiError? = null,
 )
 
 @HiltViewModel
@@ -105,6 +136,13 @@ class ChatViewModel @Inject constructor(
 
     /** The pending or in-flight [refresh]; cancelled when a newer one starts. */
     private var refreshJob: Job? = null
+
+    /** Who is typing, and the job that clears the line as each one lapses. */
+    private val typists = Typists()
+    private var typingJob: Job? = null
+
+    /** When the user's typing was last told, by the uptime clock; null before the first. */
+    private var typingSent: Long? = null
 
     // One-shot toast messages (already localised) — e.g. forward success/failure.
     private val _events = MutableSharedFlow<String>(extraBufferCapacity = 4)
@@ -138,8 +176,26 @@ class ChatViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(notice = null)
     }
 
+    /**
+     * The composer's text. Typing goes to the other members while the user
+     * writes, at most once an interval, as the text grows; of the
+     * conversations on other networks, only a linked XMPP or Matrix one takes it.
+     */
     fun setDraft(text: String) {
+        val previous = _uiState.value.draft
         _uiState.value = _uiState.value.copy(draft = text)
+        if (!_uiState.value.chat.typing() || text.isBlank() || text.length <= previous.length) return
+        val now = SystemClock.uptimeMillis()
+        val last = typingSent
+        if (last != null && now - last < TYPING_INTERVAL) return
+        typingSent = now
+        viewModelScope.launch {
+            try {
+                repository.typing(chatId)
+            } catch (_: Exception) {
+                // Typing is a courtesy; a failure leaves nothing to tell.
+            }
+        }
     }
 
     /**
@@ -188,6 +244,7 @@ class ChatViewModel @Inject constructor(
                     messages = msgs.messages,
                     more = msgs.more,
                     cursor = msgs.cursor,
+                    receipts = msgs.receipts,
                     isLoading = false
                 )
                 subscribeWebSocket(view.chat.key)
@@ -240,6 +297,7 @@ class ChatViewModel @Inject constructor(
                     messages = merged,
                     more = if (stitched) _uiState.value.more else msgs.more,
                     cursor = if (stitched) _uiState.value.cursor else msgs.cursor,
+                    receipts = msgs.receipts,
                     isRefreshing = false,
                     error = null
                 )
@@ -587,6 +645,199 @@ class ChatViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(pendingAttachments = current)
     }
 
+    // ---------------- presence ----------------
+
+    /**
+     * Ask whether the other member of a one-to-one conversation is online,
+     * now and each [PRESENCE_INTERVAL] after, for as long as the caller - the
+     * screen, while it shows the conversation - keeps this running.
+     */
+    suspend fun watchPresence() {
+        while (true) {
+            if (_uiState.value.chat.presence()) {
+                try {
+                    _uiState.value = _uiState.value.copy(presence = repository.presence(chatId))
+                } catch (_: Exception) {
+                    // A presence the server could not ask is shown as none.
+                }
+            }
+            delay(PRESENCE_INTERVAL)
+        }
+    }
+
+    // ---------------- typing ----------------
+
+    /** A typing event: [member] is typing, or with [stopped] has stopped. */
+    internal fun typed(member: String, name: String, stopped: Boolean, held: Double?) {
+        if (member.isEmpty() || member == _uiState.value.identity) return
+        if (stopped) typists.clear(member) else typists.add(member, name, SystemClock.uptimeMillis(), held)
+        showTyping()
+    }
+
+    /** The typing line as it stands, and a clear for when the next typist lapses. */
+    private fun showTyping() {
+        val now = SystemClock.uptimeMillis()
+        _uiState.value = _uiState.value.copy(typing = typists.names(now))
+        typingJob?.cancel()
+        val next = typists.next(now) ?: return
+        typingJob = viewModelScope.launch {
+            delay(next - now)
+            showTyping()
+        }
+    }
+
+    // ---------------- receipts ----------------
+
+    /** A member's watermarks, which only move forward. */
+    internal fun received(member: String, delivered: Long, displayed: Long) {
+        if (member.isEmpty()) return
+        val receipts = _uiState.value.receipts
+        val next = if (receipts.any { it.member == member }) {
+            receipts.map { receipt ->
+                if (receipt.member == member) {
+                    receipt.copy(
+                        delivered = maxOf(receipt.delivered, delivered),
+                        displayed = maxOf(receipt.displayed, displayed),
+                    )
+                } else {
+                    receipt
+                }
+            }
+        } else {
+            receipts + ChatReceipt(member = member, delivered = delivered, displayed = displayed)
+        }
+        _uiState.value = _uiState.value.copy(receipts = next)
+    }
+
+    // ---------------- threads ----------------
+
+    /** Open [root]'s thread: the message, and its replies as the server has them. */
+    fun openThread(root: ChatMessage) {
+        _uiState.value = _uiState.value.copy(thread = ThreadState(root = root))
+        loadThread()
+    }
+
+    fun closeThread() {
+        _uiState.value = _uiState.value.copy(thread = null)
+    }
+
+    /** The newest replies of the open thread, merged with those paged in. */
+    private fun loadThread() {
+        val root = _uiState.value.thread?.root ?: return
+        viewModelScope.launch {
+            try {
+                val page = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE, thread = root.id)
+                val thread = _uiState.value.thread?.takeIf { it.root.id == root.id } ?: return@launch
+                val merged = mergeNewest(
+                    existing = thread.replies,
+                    incoming = page.messages,
+                    id = { message -> message.id },
+                    created = { message -> message.created },
+                )
+                val stitched = merged !== page.messages && thread.replies.isNotEmpty()
+                _uiState.value = _uiState.value.copy(
+                    thread = thread.copy(
+                        replies = merged,
+                        more = if (stitched) thread.more else page.more,
+                        cursor = if (stitched) thread.cursor else page.cursor,
+                        isLoading = false,
+                        error = null,
+                    ),
+                )
+            } catch (e: Exception) {
+                val thread = _uiState.value.thread?.takeIf { it.root.id == root.id } ?: return@launch
+                _uiState.value = _uiState.value.copy(thread = thread.copy(isLoading = false, error = e.toMochiError()))
+            }
+        }
+    }
+
+    /** The open thread's earlier replies. */
+    fun loadEarlierReplies() {
+        val thread = _uiState.value.thread ?: return
+        val cursor = thread.cursor ?: return
+        if (thread.isLoadingMore) return
+        _uiState.value = _uiState.value.copy(thread = thread.copy(isLoadingMore = true))
+        viewModelScope.launch {
+            try {
+                val page = repository.getMessages(chatId, cursor = cursor, limit = MESSAGE_PAGE_SIZE, thread = thread.root.id)
+                val current = _uiState.value.thread?.takeIf { it.root.id == thread.root.id } ?: return@launch
+                _uiState.value = _uiState.value.copy(
+                    thread = current.copy(
+                        replies = (page.messages + current.replies).distinctBy { it.id },
+                        more = page.more,
+                        cursor = page.cursor,
+                        isLoadingMore = false,
+                    ),
+                )
+            } catch (e: Exception) {
+                val current = _uiState.value.thread ?: return@launch
+                _uiState.value = _uiState.value.copy(thread = current.copy(isLoadingMore = false, error = e.toMochiError()))
+            }
+        }
+    }
+
+    fun setThreadDraft(text: String) {
+        val thread = _uiState.value.thread ?: return
+        _uiState.value = _uiState.value.copy(thread = thread.copy(draft = text))
+    }
+
+    /** Reply in the open thread; the draft is only cleared once the server took it. */
+    fun sendThreadReply() {
+        val thread = _uiState.value.thread ?: return
+        val text = thread.draft.trim()
+        if (text.isEmpty() || thread.isSending) return
+        _uiState.value = _uiState.value.copy(thread = thread.copy(isSending = true))
+        viewModelScope.launch {
+            try {
+                repository.sendMessage(chatId, text, thread = thread.root.id)
+                _uiState.value.thread?.let { current ->
+                    _uiState.value = _uiState.value.copy(thread = current.copy(isSending = false, draft = ""))
+                }
+                loadThread()
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value.thread?.let { current ->
+                    _uiState.value = _uiState.value.copy(thread = current.copy(isSending = false))
+                }
+                _uiState.value = _uiState.value.failed(e.toMochiError())
+            }
+        }
+    }
+
+    // ---------------- invitations ----------------
+
+    /** Accept an invitation to a room on another network: the account joins it. */
+    fun accept() {
+        if (_uiState.value.answering) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(answering = true)
+            try {
+                repository.accept(chatId)
+                _uiState.value = _uiState.value.copy(answering = false)
+                _events.emit(application.getString(R.string.chat_invitation_joined))
+                // The conversation as the server now has it, active.
+                load()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(answering = false).failed(e.toMochiError())
+            }
+        }
+    }
+
+    /** Decline an invitation; the conversation goes. */
+    fun decline() {
+        if (_uiState.value.answering) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(answering = true)
+            try {
+                repository.decline(chatId)
+                _events.emit(application.getString(R.string.chat_invitation_declined))
+                _uiState.value = _uiState.value.copy(answering = false, chatDeleted = true)
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(answering = false).failed(e.toMochiError())
+            }
+        }
+    }
+
     private fun subscribeWebSocket(key: String) {
         if (key.isEmpty() || subscriptionId != null) return
         viewModelScope.launch {
@@ -638,9 +889,26 @@ class ChatViewModel @Inject constructor(
                         // A reaction changed on a message — refresh to update counts.
                         refresh()
                     }
-                    ev == null && event.body != null -> {
-                        // Incoming message — refresh
+                    ev == "decrypted" -> {
+                        // A message whose keys came: its text and files are read again.
                         refresh()
+                        if (_uiState.value.thread != null) loadThread()
+                    }
+                    ev == "typing" -> {
+                        typed(event.member.orEmpty(), event.name.orEmpty(), event.typing == false, event.held)
+                    }
+                    ev == "receipt" -> {
+                        received(event.member.orEmpty(), event.delivered ?: 0, event.displayed ?: 0)
+                    }
+                    ev == null && event.body != null -> {
+                        // An incoming message: its sender has stopped typing. A
+                        // reply in a thread stays off the main timeline, whose
+                        // refresh counts it on its root, and joins the thread
+                        // where that thread is open.
+                        event.member?.let { member -> typed(member, "", stopped = true, held = null) }
+                        refresh()
+                        val thread = event.thread.orEmpty()
+                        if (thread.isNotEmpty() && _uiState.value.thread?.root?.id == thread) loadThread()
                     }
                 }
             }

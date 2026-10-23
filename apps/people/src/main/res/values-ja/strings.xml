@@ -217,4 +217,10 @@
     <string name="people_contact_create">作成</string>
     <string name="people_sync_permission_reason">同期すると友だちがこのスマートフォンの連絡帳アプリにコピーされるため、連絡先へのアクセスが必要です。</string>
     <string name="people_sync_permission_blocked">このアプリの連絡先へのアクセスがオフになっています。アプリの設定の「権限」でオンにできます。</string>
+    <string name="people_contact_add_handle">ハンドルを追加</string>
+    <string name="people_contact_add_messaging">メッセージングアドレスを追加</string>
+    <string name="people_contact_network">ネットワーク</string>
+    <string name="people_contact_xmpp">XMPP の連絡先</string>
+    <string name="people_person_forums">フォーラム</string>
+    <string name="people_contact_network_other">その他</string>
 </resources>

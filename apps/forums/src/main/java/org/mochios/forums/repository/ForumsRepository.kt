@@ -39,7 +39,13 @@ import org.mochios.forums.api.SubscribeRequest
 import org.mochios.forums.api.UnsubscribeRequest
 import org.mochios.forums.api.ViewForumResponse
 import org.mochios.forums.api.ViewPostResponse
+import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.model.AiPrompts
+import org.mochios.forums.model.CommunitiesAdded
+import org.mochios.forums.model.CommunitiesImported
+import org.mochios.forums.model.CommunityJoined
+import org.mochios.forums.model.CommunityState
+import org.mochios.forums.model.NetworkAccount
 import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.DirectoryEntry
 import org.mochios.forums.model.Forum
@@ -216,6 +222,7 @@ class ForumsRepository @Inject constructor(
         // Per-file captions aligned with `uris`; sent only when one is set.
         captions: List<String> = emptyList(),
         tracker: UploadTracker? = null,
+        marks: PostMarks = PostMarks(),
     ): CreatePostResponse {
         val files = fileStore.cacheFiles(uris)
         try {
@@ -228,6 +235,10 @@ class ForumsRepository @Inject constructor(
                 body = body.toRequestBody(text),
                 files = parts,
                 captions = captionsJson,
+                // A new post names only what it carries.
+                url = marks.url?.takeIf { it.isNotEmpty() }?.toRequestBody(text),
+                sensitive = if (marks.sensitive == true) "1".toRequestBody(text) else null,
+                language = marks.language?.takeIf { it.isNotEmpty() }?.toRequestBody(text),
             ).unwrap()
             _postCreated.tryEmit(forumId)
             return response
@@ -252,6 +263,7 @@ class ForumsRepository @Inject constructor(
         // Caption edits keyed by attachment id or "new:N" placeholder.
         captions: Map<String, String> = emptyMap(),
         tracker: UploadTracker? = null,
+        marks: PostMarks = PostMarks(),
     ) {
         val files = fileStore.cacheFiles(newFileUris)
         try {
@@ -271,6 +283,10 @@ class ForumsRepository @Inject constructor(
                 order = orderJson,
                 files = newParts,
                 captions = captionsJson,
+                // An edit names each mark it sets; an empty link or language clears it.
+                url = marks.url?.toRequestBody(text),
+                sensitive = marks.sensitive?.let { (if (it) "1" else "0").toRequestBody(text) },
+                language = marks.language?.toRequestBody(text),
             ).unwrap()
         } finally {
             fileStore.deleteAll(files)
@@ -485,4 +501,54 @@ class ForumsRepository @Inject constructor(
 
     suspend fun getForumTags(forumId: String): List<org.mochios.forums.api.ForumTagCount> =
         api.getForumTags(forumId).unwrap().tags
+
+    // --- Other networks ---
+
+    /** The user's hosted fediverse accounts, a community elsewhere is joined as. */
+    suspend fun hostedAccounts(): List<NetworkAccount> =
+        api.listNetworkAccounts("network").unwrapRaw()
+            .filter { it.type == "fediverse" && it.hosted }
+            .sortedWith(compareBy(NaturalCompare) { it.identifier })
+
+    /** The user's linked Lemmy accounts, whose communities and settings are read in. */
+    suspend fun lemmyAccounts(): List<NetworkAccount> =
+        api.listNetworkAccounts("social").unwrapRaw()
+            .filter { it.type == "lemmy" && !it.hosted }
+            .sortedWith(compareBy(NaturalCompare) { it.identifier })
+
+    suspend fun joinCommunity(address: String, account: String): CommunityJoined {
+        val joined = api.joinCommunity(address, account).unwrap()
+        _postCreated.tryEmit(joined.id)
+        return joined
+    }
+
+    suspend fun addCommunities(account: String): CommunitiesAdded = api.addCommunities(account).unwrapRaw()
+
+    suspend fun importCommunities(account: String): CommunitiesImported = api.importCommunities(account).unwrapRaw()
+
+    /** Block a person by their address, a community by its address or a server by its domain. */
+    suspend fun addBlock(target: String) {
+        api.addBlock(target).unwrap()
+    }
+
+    suspend fun getCommunity(forumId: String): CommunityState = api.getCommunity(forumId).unwrap()
+
+    suspend fun publishCommunity(forumId: String, name: String, domain: String): CommunityState =
+        api.publishCommunity(forumId, forumId, name.trim().lowercase(), domain).unwrap()
+
+    suspend fun withdrawCommunity(forumId: String): CommunityState = api.withdrawCommunity(forumId, forumId).unwrap()
+
+    suspend fun setSensitive(forumId: String, sensitive: Boolean): Boolean =
+        api.setSensitive(forumId, forumId, if (sensitive) "1" else "0").unwrap().sensitive != 0
 }
+
+/**
+ * A post's marks beyond its text: the link it carries, whether it is
+ * sensitive, and its language. Null leaves each to the server: a new post
+ * without it, an edit as it was.
+ */
+data class PostMarks(
+    val url: String? = null,
+    val sensitive: Boolean? = null,
+    val language: String? = null,
+)

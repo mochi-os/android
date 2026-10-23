@@ -336,4 +336,10 @@
     <string name="upload_progress">Maendeleo ya upakiaji</string>
     <string name="upload_processing">Inachakata…</string>
     <string name="upload_sent">%1$s kati ya %2$s</string>
+    <string name="comment_share">Shiriki</string>
+    <string name="comment_all">Maoni yote</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">Jibu %1$s</item>
+        <item quantity="other">+%1$s majibu zaidi</item>
+    </plurals>
 </resources>

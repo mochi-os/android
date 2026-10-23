@@ -336,4 +336,10 @@
     <string name="upload_progress">Uppladdningsförlopp</string>
     <string name="upload_processing">Bearbetar…</string>
     <string name="upload_sent">%1$s av %2$s</string>
+    <string name="comment_share">Dela</string>
+    <string name="comment_all">Alla kommentarer</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s svar</item>
+        <item quantity="other">+%1$s fler svar</item>
+    </plurals>
 </resources>

@@ -142,7 +142,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onOpenContact = { id -> navController.navigate(PeopleApp.contactEdit(id)) },
             drawer = drawer,
             onOpenNotifications = onOpenNotifications,
-            onMessage = { person -> onOpenLink("chat/new?friend=$person") },
+            onMessage = onOpenLink,
             onAddContact = { navController.navigate(PeopleApp.contactsAdd()) },
             onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
             initialAction = action.ifBlank { null },
@@ -158,7 +158,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onOpenContact = { id -> navController.navigate(PeopleApp.contactEdit(id)) },
             drawer = drawer,
             onOpenNotifications = onOpenNotifications,
-            onMessage = { person -> onOpenLink("chat/new?friend=$person") },
+            onMessage = onOpenLink,
             onAddContact = { navController.navigate(PeopleApp.contactsAdd(book = book)) },
             onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
         )
@@ -258,6 +258,7 @@ fun NavGraphBuilder.peopleNavGraph(
         ProfileScreen(
             drawer = drawer,
             onOpenNotifications = onOpenNotifications,
+            onOpenLink = onOpenLink,
         )
     }
 
@@ -322,6 +323,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onMessage = { personId, _ ->
                 onOpenLink("chat/new?friend=$personId")
             },
+            onOpenLink = onOpenLink,
         )
     }
 }

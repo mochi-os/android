@@ -222,4 +222,10 @@
     <string name="people_contact_create">إنشاء</string>
     <string name="people_sync_permission_reason">تنسخ المزامنة أصدقاءك إلى تطبيق جهات الاتصال على هذا الهاتف، لذا تحتاج إلى الوصول إلى جهات الاتصال الخاصة بك.</string>
     <string name="people_sync_permission_blocked">الوصول إلى جهات الاتصال متوقف لهذا التطبيق. يمكنك تشغيله ضمن الأذونات في إعدادات التطبيق.</string>
+    <string name="people_contact_add_handle">إضافة معرّف</string>
+    <string name="people_contact_add_messaging">إضافة عنوان مراسلة</string>
+    <string name="people_contact_network">الشبكة</string>
+    <string name="people_contact_xmpp">جهة اتصال XMPP</string>
+    <string name="people_person_forums">المنتديات</string>
+    <string name="people_contact_network_other">أخرى</string>
 </resources>

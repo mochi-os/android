@@ -21,6 +21,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -28,10 +29,12 @@ import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.util.shareLink
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.ui.component.CommentItem
-import org.mochios.feeds.ui.component.flattenComments
+import org.mochios.feeds.ui.component.threadRows
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
@@ -61,11 +64,14 @@ internal fun AttachmentComments(
     val replyingTo by viewModel.replyingTo.collectAsState()
 
     var showAll by rememberSaveable(attachmentId) { mutableStateOf(false) }
+    val collapsed = rememberCollapsedComments()
+    val context = LocalContext.current
+    val shareTitle = stringResource(MochiR.string.comment_share)
 
     // Anchors live on top-level comments; a reply inherits its parent's context.
     val anchored = post.comments.filter { it.anchor == attachmentId }
     val others = post.comments.size - anchored.size
-    val shown = flattenComments(if (showAll) post.comments else anchored, 0)
+    val shown = threadRows(if (showAll) post.comments else anchored, collapsed.ids)
 
     Column(modifier = Modifier.fillMaxWidth()) {
         LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
@@ -79,11 +85,12 @@ internal fun AttachmentComments(
                     )
                 }
             }
-            items(shown.size, key = { shown[it].first.id }) { index ->
-                val (comment, depth) = shown[index]
+            items(shown.size, key = { shown[it].comment.id }) { index ->
+                val row = shown[index]
+                val comment = row.comment
                 CommentItem(
                     comment = comment,
-                    depth = depth,
+                    depth = row.depth,
                     avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
                     feedId = viewModel.feedId,
                     isEditing = editingCommentId == comment.id,
@@ -97,6 +104,13 @@ internal fun AttachmentComments(
                     onReact = { reaction -> viewModel.reactToComment(comment.id, reaction) },
                     canManage = permissions.manage,
                     isMine = currentUserId != null && comment.authorId == currentUserId,
+                    onShare = {
+                        shareLink(context, viewModel.commentLink(comment.id), post.feedName.ifEmpty { shareTitle })
+                    },
+                    replies = row.replies,
+                    collapsed = comment.id in collapsed,
+                    onToggleCollapse = if (row.replies > 0) ({ collapsed.toggle(comment.id) }) else null,
+                    onCollapseParent = row.parent?.let { parent -> { collapsed.collapse(parent) } },
                 )
             }
             if (others > 0) {

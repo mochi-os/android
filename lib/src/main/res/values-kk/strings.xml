@@ -337,4 +337,10 @@
     <string name="upload_progress">Жүктеп салу барысы</string>
     <string name="upload_processing">Өңделуде…</string>
     <string name="upload_sent">%2$s ішінен %1$s</string>
+    <string name="comment_share">Бөлісу</string>
+    <string name="comment_all">Барлық пікірлер</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s жауап</item>
+        <item quantity="other">+%1$s тағы жауап</item>
+    </plurals>
 </resources>

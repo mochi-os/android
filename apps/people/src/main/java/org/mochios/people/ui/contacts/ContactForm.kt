@@ -13,18 +13,20 @@ import org.mochios.android.sync.splitComponents
  * The editor's view of a contact's card, and the mapping between the two.
  *
  * A card is a lossless vCard property list. The editor manages one subset of
- * it — [MANAGED] — and a submission replaces exactly those properties, so
+ * it — [MANAGED] — and a submission names that set, so the server replaces
+ * exactly those properties, a name the form now holds none of included, and
  * everything else a phone or another client stored (photos, X- properties,
- * IMPP, anything) is left alone by never being sent. Inside a managed
- * property the same rule holds component by component: the parts the form has
- * no field for, such as `N`'s prefix or `ADR`'s post-office box, are carried
- * on the form and written back unchanged.
+ * anything) is left alone by never being sent. Inside a managed property the
+ * same rule holds component by component: the parts the form has no field
+ * for, such as `N`'s prefix or `ADR`'s post-office box, are carried on the
+ * form and written back unchanged.
  *
  * Property names and their component order are vCard protocol tokens, so they
  * keep their vCard spelling rather than the project's naming rules.
  */
 val MANAGED = listOf(
     "FN", "N", "NICKNAME", "EMAIL", "TEL", "ADR", "BDAY", "ORG", "TITLE", "URL", "NOTE",
+    "SOCIALPROFILE", "IMPP",
 )
 
 const val TYPE_HOME = "home"
@@ -36,6 +38,18 @@ const val TYPE_OTHER = "other"
 val EMAIL_TYPES = listOf(TYPE_HOME, TYPE_WORK, TYPE_OTHER)
 val PHONE_TYPES = listOf(TYPE_MOBILE, TYPE_HOME, TYPE_WORK, TYPE_OTHER)
 val ADDRESS_TYPES = listOf(TYPE_HOME, TYPE_WORK, TYPE_OTHER)
+
+const val NETWORK_FEDIVERSE = "fediverse"
+const val NETWORK_BLUESKY = "bluesky"
+const val NETWORK_MATRIX = "matrix"
+const val NETWORK_XMPP = "xmpp"
+const val NETWORK_OTHER = "other"
+
+/** The networks a handle may be on, in the order the picker lists them. */
+val HANDLE_NETWORKS = listOf(NETWORK_FEDIVERSE, NETWORK_BLUESKY)
+
+/** The networks a messaging address may be on, in the order the picker lists them. */
+val MESSAGING_NETWORKS = listOf(NETWORK_FEDIVERSE, NETWORK_MATRIX, NETWORK_XMPP, NETWORK_OTHER)
 
 /**
  * One email address, phone number or link. [type] is the editor's choice, one
@@ -73,6 +87,33 @@ data class AddressEntry(
 }
 
 /**
+ * A handle on another network (`SOCIALPROFILE`, RFC 9554): the handle and the
+ * network its `SERVICE-TYPE` names.
+ */
+data class HandleEntry(
+    val value: String = "",
+    val network: String = NETWORK_FEDIVERSE,
+    val params: Map<String, List<String>> = emptyMap(),
+    val group: String? = null,
+)
+
+/**
+ * A messaging address (`IMPP`, RFC 6350): a URI whose scheme names the
+ * network - `acct:` for the fediverse, `matrix:`, `xmpp:` - shown without it,
+ * or whole for any other scheme. [raw] is the URI as the card held it and
+ * [read] the address it read as, so one left alone is written back exactly as
+ * it came.
+ */
+data class MessagingEntry(
+    val value: String = "",
+    val network: String = NETWORK_FEDIVERSE,
+    val params: Map<String, List<String>> = emptyMap(),
+    val group: String? = null,
+    val raw: String = "",
+    val read: String = "",
+)
+
+/**
  * A single-valued property as the card held it: its parameters and group, its
  * value as the form writes it back when left alone, and the value as the card
  * wrote it.
@@ -96,6 +137,8 @@ data class ContactForm(
     val emails: List<TypedEntry> = emptyList(),
     val phones: List<TypedEntry> = emptyList(),
     val addresses: List<AddressEntry> = emptyList(),
+    val handles: List<HandleEntry> = emptyList(),
+    val messaging: List<MessagingEntry> = emptyList(),
     val birthday: String = "",
     val organisation: String = "",
     val title: String = "",
@@ -130,6 +173,8 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
     val emails = mutableListOf<TypedEntry>()
     val phones = mutableListOf<TypedEntry>()
     val addresses = mutableListOf<AddressEntry>()
+    val handles = mutableListOf<HandleEntry>()
+    val messaging = mutableListOf<MessagingEntry>()
     val extras = mutableListOf<ContactProperty>()
     val seen = mutableSetOf<String>()
     for (property in card.orEmpty()) {
@@ -170,6 +215,27 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
                     )
                 )
             }
+            "SOCIALPROFILE" -> handles.add(
+                HandleEntry(
+                    value = property.value,
+                    network = handleNetwork(property.params, property.value),
+                    params = property.params,
+                    group = property.group,
+                )
+            )
+            "IMPP" -> {
+                val (network, value) = messagingRead(property.value)
+                messaging.add(
+                    MessagingEntry(
+                        value = value,
+                        network = network,
+                        params = property.params,
+                        group = property.group,
+                        raw = property.value,
+                        read = value,
+                    )
+                )
+            }
             "BDAY" -> form = form.copy(birthday = birthday(property))
             "ORG" -> form = form.copy(organisation = property.value)
             "TITLE" -> form = form.copy(title = property.value)
@@ -177,7 +243,14 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
             "NOTE" -> form = form.copy(note = property.value)
         }
     }
-    form = form.copy(emails = emails, phones = phones, addresses = addresses, extras = extras)
+    form = form.copy(
+        emails = emails,
+        phones = phones,
+        addresses = addresses,
+        handles = handles,
+        messaging = messaging,
+        extras = extras,
+    )
     val written = form.singles()
     val originals = mutableMapOf<String, Original>()
     for (property in card.orEmpty()) {
@@ -296,6 +369,19 @@ fun ContactForm.properties(): List<ContactProperty> {
             )
         )
     }
+    for (handle in handles) {
+        val value = handle.value.trim()
+        if (value.isBlank()) continue
+        val rest = handle.params.filterKeys { !it.equals("SERVICE-TYPE", ignoreCase = true) }
+        out.add(
+            ContactProperty("SOCIALPROFILE", rest + ("SERVICE-TYPE" to listOf(serviceType(handle.network))), value, handle.group)
+        )
+    }
+    for (entry in messaging) {
+        val uri = messagingUri(entry)
+        if (uri.isBlank()) continue
+        out.add(ContactProperty("IMPP", entry.params, uri, entry.group))
+    }
     single("BDAY")
     single("ORG")
     single("TITLE")
@@ -303,6 +389,59 @@ fun ContactForm.properties(): List<ContactProperty> {
     single("NOTE")
     out.addAll(extras)
     return out
+}
+
+/**
+ * The network a `SOCIALPROFILE` names: its `SERVICE-TYPE` where one is written
+ * (Fediverse or Mastodon, Bluesky), else the handle's own shape - an @ in it
+ * is a fediverse handle, a bare domain a Bluesky one.
+ */
+internal fun handleNetwork(params: Map<String, List<String>>, value: String): String {
+    val service = params.entries
+        .firstOrNull { it.key.equals("SERVICE-TYPE", ignoreCase = true) }?.value?.firstOrNull()?.lowercase()
+    return when (service) {
+        "bluesky" -> NETWORK_BLUESKY
+        "fediverse", "mastodon" -> NETWORK_FEDIVERSE
+        else -> if ('@' in value) NETWORK_FEDIVERSE else NETWORK_BLUESKY
+    }
+}
+
+/** The `SERVICE-TYPE` a handle's network is written as. */
+private fun serviceType(network: String): String =
+    if (network == NETWORK_BLUESKY) "Bluesky" else "Fediverse"
+
+/**
+ * A messaging address as the editor shows it, with its network. A fediverse
+ * address is `acct:` with the handle; a Matrix one is `matrix:u/` with the
+ * user id after its @, or written plainly after `matrix:` as some clients do.
+ */
+internal fun messagingRead(uri: String): Pair<String, String> {
+    val trimmed = uri.trim()
+    val match = Regex("^([a-zA-Z][a-zA-Z0-9+.-]*):(.+)$").matchEntire(trimmed)
+        ?: return NETWORK_OTHER to trimmed
+    val rest = match.groupValues[2]
+    return when (match.groupValues[1].lowercase()) {
+        "acct" -> NETWORK_FEDIVERSE to "@$rest"
+        "xmpp" -> NETWORK_XMPP to rest
+        "matrix" -> NETWORK_MATRIX to if (rest.startsWith("u/")) "@" + rest.substring(2) else rest
+        else -> NETWORK_OTHER to trimmed
+    }
+}
+
+/** The URI a messaging address is written as; empty for none. */
+internal fun messagingUri(entry: MessagingEntry): String {
+    val value = entry.value.trim()
+    if (value.isEmpty()) return ""
+    if (entry.raw.isNotEmpty() && entry.network == messagingRead(entry.raw).first && value == entry.read) {
+        return entry.raw
+    }
+    if (entry.network == NETWORK_OTHER) return value
+    val bare = value.replace(Regex("^(acct|matrix|xmpp):", RegexOption.IGNORE_CASE), "")
+    return when (entry.network) {
+        NETWORK_FEDIVERSE -> "acct:" + bare.removePrefix("@")
+        NETWORK_MATRIX -> if (bare.startsWith("@")) "matrix:u/" + bare.substring(1) else "matrix:$bare"
+        else -> "xmpp:$bare"
+    }
 }
 
 private fun typedEntry(property: ContactProperty, allowed: List<String>) = TypedEntry(

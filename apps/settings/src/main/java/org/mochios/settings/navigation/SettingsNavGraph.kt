@@ -18,9 +18,11 @@ import org.mochios.settings.ui.accounts.ConnectedAccountsScreen
 import org.mochios.settings.ui.display.DisplayScreen
 import org.mochios.settings.ui.document.DocumentScreen
 import org.mochios.settings.ui.domains.DomainsScreen
+import org.mochios.settings.ui.handles.SystemHandlesScreen
 import org.mochios.settings.ui.home.SettingsHomeScreen
 import org.mochios.settings.ui.interests.InterestsScreen
 import org.mochios.settings.ui.login.LoginScreen
+import org.mochios.settings.ui.networks.NetworksScreen
 import org.mochios.settings.ui.notificationprefs.CategoryEditScreen
 import org.mochios.settings.ui.notificationprefs.NotificationPrefsScreen
 import org.mochios.settings.ui.notifications.NotificationsScreen
@@ -56,6 +58,8 @@ object SettingsApp {
     const val DOMAINS = "settings/domains"
     const val DOCUMENT = "settings/document/{kind}"
     const val SYSTEM_DOCUMENTS = "settings/system/documents"
+    const val NETWORKS = "settings/networks"
+    const val SYSTEM_HANDLES = "settings/system/handles"
 
     fun document(kind: String) = "settings/document/$kind"
 
@@ -81,6 +85,7 @@ fun NavGraphBuilder.settingsNavGraph(
         SettingsHomeScreen(
             isAdmin = homeState.isAdmin,
             hasDomainAccess = homeState.hasDomainAccess,
+            hasNetworks = homeState.hasNetworks,
             onOpenAccount = { navController.navigate(SettingsApp.ACCOUNT) },
             onOpenLogin = { navController.navigate(SettingsApp.LOGIN) },
             onOpenPreferences = { navController.navigate(SettingsApp.PREFERENCES) },
@@ -96,6 +101,8 @@ fun NavGraphBuilder.settingsNavGraph(
             onOpenDomains = { navController.navigate(SettingsApp.DOMAINS) },
             onOpenDocument = { kind -> navController.navigate(SettingsApp.document(kind)) },
             onOpenSystemDocuments = { navController.navigate(SettingsApp.SYSTEM_DOCUMENTS) },
+            onOpenNetworks = { navController.navigate(SettingsApp.NETWORKS) },
+            onOpenSystemHandles = { navController.navigate(SettingsApp.SYSTEM_HANDLES) },
         )
     }
     composable(SettingsApp.ACCOUNT) {
@@ -174,6 +181,12 @@ fun NavGraphBuilder.settingsNavGraph(
     }
     composable(SettingsApp.SYSTEM_DOCUMENTS) {
         SystemDocumentsScreen(onBack = { navController.popBackStack() })
+    }
+    composable(SettingsApp.NETWORKS) {
+        NetworksScreen(onBack = { navController.popBackStack() })
+    }
+    composable(SettingsApp.SYSTEM_HANDLES) {
+        SystemHandlesScreen(onBack = { navController.popBackStack() })
     }
 }
 

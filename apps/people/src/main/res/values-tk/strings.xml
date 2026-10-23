@@ -218,4 +218,10 @@
     <string name="people_contact_create">Döretmek</string>
     <string name="people_sync_permission_reason">Sinhronlaşdyrma dostlaryňyzy bu telefonyň Kontaktlar programmasyna göçürýär, şonuň üçin oňa kontaktlaryňyza girmäge rugsat gerek.</string>
     <string name="people_sync_permission_blocked">Bu programma üçin kontaktlara giriş öçürilen. Ony programmanyň sazlamalaryndaky Rugsatlar bölüminde açyp bilersiňiz.</string>
+    <string name="people_contact_add_handle">Lakam goş</string>
+    <string name="people_contact_add_messaging">Habarlaşma salgysyny goş</string>
+    <string name="people_contact_network">Tor</string>
+    <string name="people_contact_xmpp">XMPP kontakty</string>
+    <string name="people_person_forums">Forumlar</string>
+    <string name="people_contact_network_other">Beýleki</string>
 </resources>

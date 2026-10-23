@@ -218,4 +218,10 @@
     <string name="people_contact_create">तयार करा</string>
     <string name="people_sync_permission_reason">सिंक केल्याने तुमचे मित्र या फोनच्या संपर्क ॲपमध्ये कॉपी होतात, म्हणून त्यासाठी तुमच्या संपर्कांचा प्रवेश आवश्यक आहे.</string>
     <string name="people_sync_permission_blocked">या ॲपसाठी संपर्क प्रवेश बंद आहे. तुम्ही तो ॲपच्या सेटिंग्जमधील परवानग्या अंतर्गत चालू करू शकता.</string>
+    <string name="people_contact_add_handle">वापरकर्तानाव जोडा</string>
+    <string name="people_contact_add_messaging">संदेश पत्ता जोडा</string>
+    <string name="people_contact_network">नेटवर्क</string>
+    <string name="people_contact_xmpp">XMPP संपर्क</string>
+    <string name="people_person_forums">फोरम्स</string>
+    <string name="people_contact_network_other">इतर</string>
 </resources>

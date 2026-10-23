@@ -336,4 +336,10 @@
     <string name="upload_progress">اپلوڊ جي پيش رفت</string>
     <string name="upload_processing">پروسيس ٿي رهيو آهي…</string>
     <string name="upload_sent">%2$s مان %1$s</string>
+    <string name="comment_share">شيئر ڪريو</string>
+    <string name="comment_all">سڀ تبصرا</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s جواب</item>
+        <item quantity="other">+%1$s وڌيڪ جواب</item>
+    </plurals>
 </resources>

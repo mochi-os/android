@@ -336,4 +336,10 @@
     <string name="upload_progress">پێشکەوتنی بارکردن</string>
     <string name="upload_processing">پرۆسەکردن…</string>
     <string name="upload_sent">%1$s لە %2$s</string>
+    <string name="comment_share">هاوبەش بکە</string>
+    <string name="comment_all">هەموو لێدوانەکان</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s وەڵام</item>
+        <item quantity="other">+%1$s وەڵامی زیاتر</item>
+    </plurals>
 </resources>

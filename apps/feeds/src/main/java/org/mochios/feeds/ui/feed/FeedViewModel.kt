@@ -38,6 +38,7 @@ import org.mochios.feeds.api.FeedNotificationSettings
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
+import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.repository.FeedsRepository
 import org.mochios.feeds.repository.PostListResult
@@ -45,6 +46,9 @@ import org.mochios.feeds.repository.SavedRepository
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import org.mochios.feeds.ui.component.applied
+import org.mochios.feeds.ui.component.boostedFrom
+import org.mochios.feeds.ui.component.hostedFediverse
+import org.mochios.feeds.ui.component.repliesElsewhere
 
 private const val PREFS = "mochi_feeds"
 private const val KEY_UNREAD_ONLY = "unread_only"
@@ -72,6 +76,9 @@ sealed interface FeedActionEvent {
 
     /** An action failed; [error] carries the user-facing message. */
     data class Failure(val error: MochiError?) : FeedActionEvent
+
+    /** An action worked; [message] says so, as a string resource. */
+    data class Done(val message: Int) : FeedActionEvent
 }
 
 /**
@@ -143,6 +150,26 @@ class FeedViewModel @Inject constructor(
     // One-shot overflow-menu side effects (RSS URL ready, unsubscribed, errors).
     private val _actionEvents = MutableSharedFlow<FeedActionEvent>(extraBufferCapacity = 4)
     val actionEvents: SharedFlow<FeedActionEvent> = _actionEvents.asSharedFlow()
+
+    /**
+     * The user's hosted fediverse accounts, read once a post from or with a
+     * copy on the fediverse is shown: a boost is made from the first.
+     */
+    private val _hosted = MutableStateFlow<List<PublishAccount>>(emptyList())
+    val hosted: StateFlow<List<PublishAccount>> = _hosted.asStateFlow()
+    private var hostedRead = false
+
+    /** The hosted account the comment being written also goes out from; empty for none. */
+    private val _replyFrom = MutableStateFlow("")
+    val replyFrom: StateFlow<String> = _replyFrom.asStateFlow()
+
+    fun setReplyFrom(account: String) {
+        _replyFrom.value = account
+    }
+
+    /** The post whose vote is on its way. */
+    private val _voting = MutableStateFlow<String?>(null)
+    val voting: StateFlow<String?> = _voting.asStateFlow()
 
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
@@ -549,6 +576,7 @@ class FeedViewModel @Inject constructor(
     ) {
         _commentDraft.value = ""
         _commentAttachments.value = emptyList()
+        _replyFrom.value = ""
         _commentTarget.value = CommentTarget(postFeedId, postId, parentId, parentName, parentBody)
     }
 
@@ -607,6 +635,7 @@ class FeedViewModel @Inject constructor(
                             files = files,
                             context = context,
                             tracker = commentTracker,
+                            account = _replyFrom.value,
                         )
                         _commentTarget.value = null
                         _commentDraft.value = ""
@@ -872,6 +901,78 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
+     * Read the hosted accounts once the shown posts include one a boost could
+     * be made of, or a comment could also go out from one on.
+     */
+    fun loadHostedIfNeeded(posts: List<Post>) {
+        if (hostedRead || posts.none { it.elsewhere || repliesElsewhere(it) }) return
+        hostedRead = true
+        viewModelScope.launch {
+            try {
+                _hosted.value = hostedFediverse(repository.networkAccounts())
+            } catch (_: Exception) {
+                hostedRead = false
+            }
+        }
+    }
+
+    /** Vote in a post's poll; [feed] is the post's own feed. */
+    fun vote(feed: String, postId: String, options: List<Int>) {
+        if (_voting.value != null || options.isEmpty()) return
+        _voting.value = postId
+        viewModelScope.launch {
+            try {
+                val (poll, voted) = repository.votePoll(feed, postId, options)
+                _posts.value = _posts.value.map { post ->
+                    if (post.id != postId) post
+                    else post.copy(
+                        voted = voted.ifEmpty { options },
+                        data = poll?.let { post.data?.copy(poll = it) } ?: post.data,
+                    )
+                }
+            } catch (e: Exception) {
+                _actionEvents.tryEmit(FeedActionEvent.Failure(e.toMochiError()))
+            } finally {
+                _voting.value = null
+            }
+        }
+    }
+
+    /** Pin a post of the owner's feed, or unpin it. */
+    fun togglePin(feed: String, postId: String) {
+        val post = _posts.value.firstOrNull { it.id == postId } ?: return
+        viewModelScope.launch {
+            try {
+                val pinned = repository.pinPost(feed, postId, post.pinned <= 0)
+                _posts.value = _posts.value.map { if (it.id == postId) it.copy(pinned = pinned) else it }
+                _actionEvents.tryEmit(
+                    FeedActionEvent.Done(if (pinned > 0) R.string.feeds_post_pinned else R.string.feeds_post_unpinned),
+                )
+            } catch (e: Exception) {
+                _actionEvents.tryEmit(FeedActionEvent.Failure(e.toMochiError()))
+            }
+        }
+    }
+
+    /** Boost a post from another network from the first hosted account, or take the boost back. */
+    fun toggleBoost(feed: String, postId: String) {
+        val post = _posts.value.firstOrNull { it.id == postId } ?: return
+        val account = _hosted.value.firstOrNull() ?: return
+        val boosted = boostedFrom(post, account)
+        viewModelScope.launch {
+            try {
+                val copies = repository.boostPost(feed, postId, account.id, !boosted)
+                _posts.value = _posts.value.map { if (it.id == postId) it.copy(copies = copies) else it }
+                _actionEvents.tryEmit(
+                    FeedActionEvent.Done(if (boosted) R.string.feeds_boost_taken_back else R.string.feeds_boosted),
+                )
+            } catch (e: Exception) {
+                _actionEvents.tryEmit(FeedActionEvent.Failure(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
      * Lazy og:image fetch for an RSS post that arrived without one; the server
      * caches the outcome.
      */
@@ -901,15 +1002,9 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 if (isAllFeeds) {
-                    // No aggregate read-all endpoint exists ("__all__" isn't a
-                    // feed); mark each subscribed feed read, mirroring the
-                    // loadAllFeeds fan-out.
-                    repository.listFeeds().forEach { feed ->
-                        val fid = feed.fingerprint.ifEmpty { feed.id }
-                        if (fid.isNotEmpty()) {
-                            try { repository.markAllRead(fid) } catch (_: Exception) {}
-                        }
-                    }
+                    // "__all__" isn't a feed: the class-level read-all marks
+                    // every feed the user holds at once.
+                    repository.markEveryFeedRead()
                 } else {
                     repository.markAllRead(feedId)
                 }

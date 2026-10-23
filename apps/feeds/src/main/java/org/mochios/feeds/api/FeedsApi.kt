@@ -11,11 +11,24 @@ import org.mochios.android.api.ApiResponse
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
+import org.mochios.feeds.model.Backups
+import org.mochios.feeds.model.Copies
+import org.mochios.feeds.model.CopiesDeleted
 import org.mochios.feeds.model.Feed
+import org.mochios.feeds.model.Filters
+import org.mochios.feeds.model.Generators
 import org.mochios.feeds.model.Group
+import org.mochios.feeds.model.Imported
+import org.mochios.feeds.model.Lookup
 import org.mochios.feeds.model.Member
+import org.mochios.feeds.model.People
 import org.mochios.feeds.model.Permissions
+import org.mochios.feeds.model.Pinned
 import org.mochios.feeds.model.Post
+import org.mochios.feeds.model.PublishAccount
+import org.mochios.feeds.model.PublishSaved
+import org.mochios.feeds.model.PublishState
+import org.mochios.feeds.model.Voted
 import org.mochios.feeds.model.SavedListResponse
 import org.mochios.feeds.model.SavedToggleResponse
 import org.mochios.feeds.model.Source
@@ -125,7 +138,12 @@ data class AccessRevokeRequest(
 data class AddSourceRequest(
     val feed: String,
     val type: String,
-    val url: String
+    val url: String,
+    /**
+     * The account a person on the fediverse is followed through, or a Bluesky
+     * custom feed or list read through; null leaves the choice to the server.
+     */
+    val account: String? = null,
 )
 
 data class RecommendationsResponse(
@@ -157,7 +175,8 @@ data class SourceListResponse(
 data class SourceAddResponse(
     val source: Source,
     @SerializedName("suggested_credibility")
-    val suggestedCredibility: Int? = null
+    val suggestedCredibility: Int? = null,
+    val ingested: Int = 0,
 )
 
 data class TagListResponse(
@@ -617,6 +636,170 @@ interface FeedsApi {
     // settings.sort. Reuse that route with a slim response type.
     @GET("-/info")
     suspend fun getGlobalSortInfo(): Response<ApiResponse<GlobalSortInfoResponse>>
+
+    // Every feed the user holds marked read at once, for "All feeds".
+    @POST("-/read-all")
+    suspend fun markEveryFeedRead(): Response<ApiResponse<Map<String, Any>>>
+
+    // --- Other networks (the federation plan, phases 12 to 19) ---
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/{postId}/pin")
+    suspend fun pinPost(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String,
+        @Field("post") post: String,
+    ): Response<ApiResponse<Pinned>>
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/{postId}/unpin")
+    suspend fun unpinPost(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String,
+        @Field("post") post: String,
+    ): Response<ApiResponse<Pinned>>
+
+    // The chosen options by index, one field each.
+    @FormUrlEncoded
+    @POST("{feedId}/-/{postId}/vote")
+    suspend fun votePoll(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String,
+        @Field("feed") feed: String,
+        @Field("post") post: String,
+        @Field("option") options: List<Int>,
+    ): Response<ApiResponse<Voted>>
+
+    // A post from another network boosted from one of the owner's hosted
+    // accounts, or the boost taken back.
+    @FormUrlEncoded
+    @POST("{feedId}/-/{postId}/boost")
+    suspend fun boostPost(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String,
+        @Field("post") post: String,
+        @Field("account") account: String,
+    ): Response<ApiResponse<Copies>>
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/{postId}/unboost")
+    suspend fun unboostPost(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String,
+        @Field("post") post: String,
+        @Field("account") account: String,
+    ): Response<ApiResponse<Copies>>
+
+    // The owner blocks, mutes or reports the person on another network behind
+    // a comment.
+    @POST("{feedId}/-/{postId}/{commentId}/block")
+    suspend fun blockCommenter(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String,
+        @Path("commentId") commentId: String,
+    ): Response<ApiResponse<Map<String, String>>>
+
+    @POST("{feedId}/-/{postId}/{commentId}/mute")
+    suspend fun muteCommenter(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String,
+        @Path("commentId") commentId: String,
+    ): Response<ApiResponse<Map<String, String>>>
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/{postId}/{commentId}/report")
+    suspend fun reportCommenter(
+        @Path("feedId") feedId: String,
+        @Path("postId") postId: String,
+        @Path("commentId") commentId: String,
+        @Field("reason") reason: String,
+    ): Response<ApiResponse<Map<String, String>>>
+
+    @GET("{feedId}/-/filters")
+    suspend fun getFilters(
+        @Path("feedId") feedId: String,
+    ): Response<ApiResponse<Filters>>
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/filters/add")
+    suspend fun addFilter(
+        @Path("feedId") feedId: String,
+        @Field("phrase") phrase: String,
+    ): Response<ApiResponse<Filters>>
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/filters/remove")
+    suspend fun removeFilter(
+        @Path("feedId") feedId: String,
+        @Field("filter") filter: String,
+    ): Response<ApiResponse<Filters>>
+
+    // A Mastodon export of follows, its text: each address becomes a source.
+    @FormUrlEncoded
+    @POST("{feedId}/-/sources/import")
+    suspend fun importFollows(
+        @Path("feedId") feedId: String,
+        @Field("addresses") addresses: String,
+    ): Response<ApiResponse<Imported>>
+
+    @GET("-/people")
+    suspend fun getPeople(): Response<ApiResponse<People>>
+
+    // The actions below answer bare JSON (no `{data:…}` envelope); decode
+    // with unwrapRaw.
+
+    @GET("-/lookup")
+    suspend fun lookup(
+        @Query("query") query: String,
+    ): Response<Lookup>
+
+    @GET("-/accounts/list")
+    suspend fun listNetworkAccounts(
+        @Query("capability") capability: String = "network",
+    ): Response<List<PublishAccount>>
+
+    @GET("{feedId}/-/publish")
+    suspend fun getPublish(
+        @Path("feedId") feedId: String,
+    ): Response<PublishState>
+
+    // The account ids as one JSON list, so an empty list still reaches the server.
+    @FormUrlEncoded
+    @POST("{feedId}/-/publish/set")
+    suspend fun setPublish(
+        @Path("feedId") feedId: String,
+        @Field("accounts") accounts: String,
+    ): Response<PublishSaved>
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/publish/forget")
+    suspend fun forgetCopies(
+        @Path("feedId") feedId: String,
+        @Field("account") account: String,
+    ): Response<CopiesDeleted>
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/generator/set")
+    suspend fun setGenerator(
+        @Path("feedId") feedId: String,
+        @Field("account") account: String,
+        @Field("on") on: String,
+    ): Response<Generators>
+
+    // kind is posts, bookmarks or follows.
+    @FormUrlEncoded
+    @POST("{feedId}/-/import")
+    suspend fun importAccount(
+        @Path("feedId") feedId: String,
+        @Field("account") account: String,
+        @Field("kind") kind: String,
+    ): Response<Imported>
+
+    @GET("{feedId}/-/backups")
+    suspend fun getBackups(
+        @Path("feedId") feedId: String,
+        @Query("account") account: String,
+    ): Response<Backups>
 }
 
 data class SortResponse(

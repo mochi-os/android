@@ -336,4 +336,10 @@
     <string name="upload_progress">Üleslaadimise edenemine</string>
     <string name="upload_processing">Töötlemine…</string>
     <string name="upload_sent">%1$s / %2$s</string>
+    <string name="comment_share">Jaga</string>
+    <string name="comment_all">Kõik kommentaarid</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s vastus</item>
+        <item quantity="other">+%1$s veel vastust</item>
+    </plurals>
 </resources>

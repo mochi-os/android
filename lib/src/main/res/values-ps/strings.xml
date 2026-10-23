@@ -336,4 +336,10 @@
     <string name="upload_progress">د پورته کولو پرمختګ</string>
     <string name="upload_processing">پروسس کیږي…</string>
     <string name="upload_sent">%1$s له %2$s څخه</string>
+    <string name="comment_share">شریکه کړئ</string>
+    <string name="comment_all">ټولې تبصرې</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s ځواب</item>
+        <item quantity="other">+%1$s نور ځوابونه</item>
+    </plurals>
 </resources>

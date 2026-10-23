@@ -49,6 +49,15 @@
     <string name="people_contact_add_email">Add email</string>
     <string name="people_contact_add_phone">Add telephone</string>
     <string name="people_contact_add_address">Add address</string>
+    <string name="people_contact_add_handle">Add handle</string>
+    <string name="people_contact_add_messaging">Add messaging address</string>
+    <string name="people_contact_network">Network</string>
+    <string name="people_contact_network_other">Other</string>
+    <string name="people_contact_xmpp">XMPP contact</string>
+    <string name="people_contact_example_fediverse" translatable="false">@name@server.example</string>
+    <string name="people_contact_example_bluesky" translatable="false">name.bsky.social</string>
+    <string name="people_contact_example_matrix" translatable="false">@name:server.example</string>
+    <string name="people_contact_example_xmpp" translatable="false">name@server.example</string>
     <string name="people_contact_street">Street</string>
     <string name="people_contact_city">City</string>
     <string name="people_contact_region">Region</string>
@@ -210,6 +219,7 @@
     <string name="people_person_state_self">You</string>
     <string name="people_person_state_invited">Invited</string>
     <string name="people_person_state_contact">In contacts</string>
+    <string name="people_person_forums">Forums</string>
     <string name="people_person_message">Message</string>
     <string name="people_person_accept">Accept</string>
     <string name="people_person_decline">Decline</string>

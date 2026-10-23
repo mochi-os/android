@@ -33,6 +33,10 @@ data class Comment(
     val attachment: String? = null,
     @SerializedName("attachment_name") val attachmentName: String? = null,
     @SerializedName("attachment_caption") val attachmentCaption: String? = null,
+    // A comment from another network: the author's page there and the
+    // comment's id there. Nullable for the Gson reason above.
+    val page: String? = null,
+    val remote: String? = null,
 ) {
     /** The anchored attachment's id, or "" when the comment is not about one. */
     val anchor: String get() = attachment.orEmpty()

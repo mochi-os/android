@@ -24,9 +24,15 @@ import org.mochios.chat.api.MessageListResponse
 import org.mochios.chat.api.NewChatResponse
 import org.mochios.chat.api.ReactResponse
 import org.mochios.chat.api.SearchResponse
+import org.mochios.chat.api.SetupResponse
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatMember
+import org.mochios.chat.model.ChatPreferences
+import org.mochios.chat.model.ChatPresence
 import org.mochios.chat.model.ChatViewResponse
+import org.mochios.chat.model.EncryptionDevice
+import org.mochios.chat.model.EncryptionOverview
+import org.mochios.chat.model.Verification
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -46,35 +52,52 @@ class ChatRepository @Inject constructor(
     suspend fun getNewChatData(): NewChatResponse =
         api.getNewChatData().unwrap()
 
-    suspend fun getChatPolicy(): String =
-        api.getPreferences().unwrap().policy
+    suspend fun getPreferences(): ChatPreferences =
+        api.getPreferences().unwrap()
 
-    suspend fun setChatPolicy(policy: String) {
-        api.setPreferences(policy).unwrap()
+    /** Change what differs from [before]; what does not is left as the user has it. */
+    suspend fun setPreferences(before: ChatPreferences, after: ChatPreferences) {
+        api.setPreferences(
+            policy = after.policy.takeIf { it != before.policy },
+            presence = after.presence.takeIf { it != before.presence }?.toString(),
+            receipts = after.receipts.takeIf { it != before.receipts }?.toString(),
+            typing = after.typing.takeIf { it != before.typing }?.toString(),
+        ).unwrap()
     }
 
-    suspend fun createChat(name: String, members: List<String> = emptyList()): CreateChatResponse =
-        api.createChat(name, members.takeIf { it.isNotEmpty() }?.joinToString(",")).unwrap()
+    /** A chat with Mochi [members], or with people by their addresses on [account]'s network. */
+    suspend fun createChat(name: String, members: List<String> = emptyList(), account: String = ""): CreateChatResponse =
+        api.createChat(name, members.takeIf { it.isNotEmpty() }?.joinToString(","), account.ifEmpty { null }).unwrap()
 
     suspend fun viewChat(chatId: String): ChatViewResponse =
         api.viewChat(chatId).unwrap()
 
-    suspend fun getMessages(chatId: String, cursor: String? = null, limit: Int? = null): MessageListResponse =
-        api.getMessages(chatId, cursor, limit).unwrap()
+    /** The conversation's messages, or with [thread] the replies under that message. */
+    suspend fun getMessages(
+        chatId: String,
+        cursor: String? = null,
+        limit: Int? = null,
+        thread: String? = null,
+    ): MessageListResponse =
+        api.getMessages(chatId, cursor, limit, thread?.ifEmpty { null }).unwrap()
 
+    /** Send a message, into the thread under [thread] where one is named. */
     suspend fun sendMessage(
         chatId: String,
         body: String,
         files: List<File> = emptyList(),
         reply: String? = null,
+        thread: String? = null,
     ): String {
+        val under = thread?.ifEmpty { null }
         if (files.isEmpty()) {
-            return api.sendMessage(chatId, body, reply).unwrap().id
+            return api.sendMessage(chatId, body, reply, under).unwrap().id
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
         val replyPart = reply?.toRequestBody("text/plain".toMediaTypeOrNull())
+        val threadPart = under?.toRequestBody("text/plain".toMediaTypeOrNull())
         val parts = fileStore.fileParts("files", files)
-        return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
+        return api.sendMessageWithFiles(chatId, bodyPart, replyPart, threadPart, parts).unwrap().id
     }
 
     suspend fun sendMessageFromUris(
@@ -93,7 +116,7 @@ class ChatRepository @Inject constructor(
         val files = fileStore.cacheFiles(uris)
         try {
             val parts = fileStore.fileParts("files", files, tracker)
-            return api.sendMessageWithFiles(chatId, bodyPart, replyPart, parts).unwrap().id
+            return api.sendMessageWithFiles(chatId, bodyPart, replyPart, null, parts).unwrap().id
         } finally {
             fileStore.deleteAll(files)
         }
@@ -154,4 +177,47 @@ class ChatRepository @Inject constructor(
 
     suspend fun search(chatId: String, query: String): SearchResponse =
         api.search(chatId, query).unwrap()
+
+    suspend fun typing(chatId: String) {
+        api.typing(chatId).unwrap()
+    }
+
+    suspend fun presence(chatId: String): ChatPresence =
+        api.presence(chatId).unwrap()
+
+    /** Accept an invitation to a room: the account joins it. */
+    suspend fun accept(chatId: String) {
+        api.accept(chatId).unwrap()
+    }
+
+    /** Decline an invitation to a room; the conversation goes. */
+    suspend fun decline(chatId: String) {
+        api.decline(chatId).unwrap()
+    }
+
+    suspend fun encryption(chatId: String): EncryptionOverview =
+        api.encryption(chatId).unwrap()
+
+    suspend fun devices(chatId: String, person: String): List<EncryptionDevice> =
+        api.devices(chatId, person).unwrap().devices
+
+    suspend fun trust(chatId: String, person: String, device: String, trust: String) {
+        api.trust(chatId, person, device, trust).unwrap()
+    }
+
+    suspend fun verify(chatId: String, person: String): Verification =
+        api.verify(chatId, person).unwrap()
+
+    suspend fun setup(chatId: String, password: String): SetupResponse =
+        api.setup(chatId, password.ifEmpty { null }).unwrap()
+
+    suspend fun recover(chatId: String, key: String): Int =
+        api.recover(chatId, key).unwrap().restored
+
+    suspend fun verifications(): List<Verification> =
+        api.verifications().unwrap().verifications
+
+    suspend fun act(account: String, flow: String, action: String) {
+        api.act(account, flow, action).unwrap()
+    }
 }

@@ -3,11 +3,17 @@
 // This file is part of Mochi, licensed under the GNU AGPL v3 with the
 // Mochi Application Interface Exception - see license.txt and license-exception.md.
 
+// CommonDataKinds.Im is deprecated since API 31 as a kind some contacts apps
+// do not show; it is still the phone's only kind for a messaging address, and
+// the Contacts apps that show it are the ones a user edits these contacts in.
+@file:Suppress("DEPRECATION")
+
 package org.mochios.android.sync
 
 import android.provider.ContactsContract.CommonDataKinds.Email
 import android.provider.ContactsContract.CommonDataKinds.Event
 import android.provider.ContactsContract.CommonDataKinds.GroupMembership
+import android.provider.ContactsContract.CommonDataKinds.Im
 import android.provider.ContactsContract.CommonDataKinds.Nickname
 import android.provider.ContactsContract.CommonDataKinds.Note
 import android.provider.ContactsContract.CommonDataKinds.Organization
@@ -50,6 +56,10 @@ class ContactsMappingTest {
         ContactProperty("TITLE", emptyMap(), "Mathematician"),
         ContactProperty("URL", mapOf("TYPE" to listOf("work")), "https://example.org/ada"),
         ContactProperty("NOTE", emptyMap(), "First programmer"),
+        ContactProperty("IMPP", mapOf("TYPE" to listOf("home")), "xmpp:ada@example.org"),
+        ContactProperty("IMPP", emptyMap(), "matrix:u/ada:example.org"),
+        ContactProperty("IMPP", emptyMap(), "acct:ada@example.social"),
+        ContactProperty("IMPP", emptyMap(), "sip:ada@example.org"),
         // Not managed: no row on the phone, kept by the server.
         ContactProperty("PHOTO", mapOf("MEDIATYPE" to listOf("image/jpeg")), "https://example.org/a.jpg"),
         ContactProperty("X-PHONE-WATCH", emptyMap(), "1"),
@@ -111,7 +121,7 @@ class ContactsMappingTest {
         assertEquals("First programmer", rows.of(Note.CONTENT_ITEM_TYPE).single().values[Note.NOTE])
 
         // The unmanaged properties produced nothing.
-        assertEquals(11, rows.size)
+        assertEquals(15, rows.size)
         assertTrue(rows.none { it.mimetype == Photo.CONTENT_ITEM_TYPE })
     }
 
@@ -143,7 +153,7 @@ class ContactsMappingTest {
         assertTrue(ContactsMapping.managed(DataRow(Event.CONTENT_ITEM_TYPE, mapOf(Event.TYPE to Event.TYPE_BIRTHDAY.toString()))))
         assertFalse(ContactsMapping.managed(DataRow(Event.CONTENT_ITEM_TYPE, mapOf(Event.TYPE to Event.TYPE_ANNIVERSARY.toString()))))
         assertFalse(ContactsMapping.managed(DataRow(Photo.CONTENT_ITEM_TYPE, emptyMap())))
-        assertTrue(ContactsMapping.managed(DataRow(Photo.CONTENT_ITEM_TYPE, mapOf(Data.SYNC1 to ContactsMapping.PHOTO_MARKER))))
+        assertTrue(ContactsMapping.managed(DataRow(Photo.CONTENT_ITEM_TYPE, mapOf(Data.SYNC1 to ContactsMapping.MARKER))))
         assertFalse(ContactsMapping.managed(DataRow(GroupMembership.CONTENT_ITEM_TYPE, emptyMap())))
     }
 
@@ -345,7 +355,7 @@ class ContactsMappingTest {
 
         val three = photo(ContactProperty("PHOTO", mapOf("ENCODING" to listOf("b"), "TYPE" to listOf("JPEG")), encoded)).single()
         assertArrayEquals(bytes, three.blob)
-        assertEquals(ContactsMapping.PHOTO_MARKER, three.values[Data.SYNC1])
+        assertEquals(ContactsMapping.MARKER, three.values[Data.SYNC1])
         assertTrue(ContactsMapping.managed(three))
 
         val four = photo(ContactProperty("PHOTO", emptyMap(), "data:image/jpeg;base64,$encoded")).single()
@@ -355,6 +365,94 @@ class ContactsMappingTest {
         assertTrue(photo(ContactProperty("PHOTO", mapOf("ENCODING" to listOf("b")), "not base64 !")).isEmpty())
         // The phone never sends a photo back: the server refuses one.
         assertTrue(ContactsMapping.properties(listOf(three)).none { it.name == "PHOTO" })
+    }
+
+    @Test
+    fun `a messaging address becomes the phone's row for its network, marked as the sync's`() {
+        val rows = ContactsMapping.rows(card).of(Im.CONTENT_ITEM_TYPE)
+        assertEquals(4, rows.size)
+        assertTrue(rows.all { it.values[Data.SYNC1] == ContactsMapping.MARKER })
+
+        assertEquals(Im.PROTOCOL_JABBER.toString(), rows[0].values[Im.PROTOCOL])
+        assertEquals("ada@example.org", rows[0].values[Im.DATA])
+        assertEquals(Im.TYPE_HOME.toString(), rows[0].values[Im.TYPE])
+
+        // The networks the phone has no protocol for are named, and their
+        // addresses written as the network writes them.
+        assertEquals(Im.PROTOCOL_CUSTOM.toString(), rows[1].values[Im.PROTOCOL])
+        assertEquals("Matrix", rows[1].values[Im.CUSTOM_PROTOCOL])
+        assertEquals("@ada:example.org", rows[1].values[Im.DATA])
+        assertEquals("Fediverse", rows[2].values[Im.CUSTOM_PROTOCOL])
+        assertEquals("@ada@example.social", rows[2].values[Im.DATA])
+        assertEquals("sip", rows[3].values[Im.CUSTOM_PROTOCOL])
+        assertEquals("ada@example.org", rows[3].values[Im.DATA])
+    }
+
+    @Test
+    fun `a messaging row the phone added uploads as the address its protocol names`() {
+        fun row(protocol: Int, data: String, custom: String? = null) = DataRow(
+            Im.CONTENT_ITEM_TYPE,
+            mapOf(Im.PROTOCOL to protocol.toString(), Im.DATA to data, Im.TYPE to Im.TYPE_OTHER.toString()) +
+                (if (custom != null) mapOf(Im.CUSTOM_PROTOCOL to custom) else emptyMap()),
+        )
+        val properties = ContactsMapping.properties(listOf(
+            row(Im.PROTOCOL_JABBER, "ada@example.org"),
+            row(Im.PROTOCOL_SKYPE, "ada.lovelace"),
+            row(Im.PROTOCOL_CUSTOM, "@ada:example.org", "Matrix"),
+            row(Im.PROTOCOL_CUSTOM, "@ada@example.social", "Mastodon"),
+            row(Im.PROTOCOL_CUSTOM, "ada", "Telegram"),
+            row(Im.PROTOCOL_CUSTOM, "ada", "My chat"),
+            row(Im.PROTOCOL_CUSTOM, "ada@example.net", null),
+        )).filter { it.name == "IMPP" }
+        assertEquals(
+            listOf(
+                "xmpp:ada@example.org",
+                "skype:ada.lovelace",
+                "matrix:u/ada:example.org",
+                "acct:ada@example.social",
+                "telegram:ada",
+                "im:ada",
+                "im:ada@example.net",
+            ),
+            properties.map { it.value },
+        )
+        // The phone's editor gives every row its "other" type, which is no type on the card.
+        assertTrue(properties.all { it.params.isEmpty() })
+    }
+
+    @Test
+    fun `a row the phone added and the marked copy of it upload as one address`() {
+        val marked = ContactsMapping.rows(listOf(ContactProperty("IMPP", emptyMap(), "xmpp:ada@example.org"))).single()
+        val added = DataRow(Im.CONTENT_ITEM_TYPE, mapOf(
+            Im.PROTOCOL to Im.PROTOCOL_JABBER.toString(),
+            Im.DATA to "ada@example.org",
+        ))
+        assertEquals(
+            listOf("xmpp:ada@example.org"),
+            ContactsMapping.properties(listOf(added, marked)).filter { it.name == "IMPP" }.map { it.value },
+        )
+    }
+
+    @Test
+    fun `a download replaces the messaging rows it wrote and those the phone added that it writes back`() {
+        val marked = DataRow(Im.CONTENT_ITEM_TYPE, mapOf(Data.SYNC1 to ContactsMapping.MARKER, Im.DATA to "a@b.c"))
+        val added = DataRow(Im.CONTENT_ITEM_TYPE, mapOf(Im.DATA to "a@b.c"))
+        assertTrue(ContactsMapping.managed(marked))
+        assertFalse(ContactsMapping.managed(added))
+
+        val written = ContactsMapping.rows(listOf(ContactProperty("IMPP", emptyMap(), "xmpp:ada@example.org")))
+        val (selection, arguments) = ContactsMapping.replaced(written)
+        assertTrue(selection, selection.endsWith("or (mimetype=? and data1 in (?)))"))
+        assertEquals(listOf(Im.CONTENT_ITEM_TYPE, "ada@example.org"), arguments.takeLast(2))
+        assertTrue(selection, "(mimetype in (?,?) and data_sync1=?)" in selection)
+        assertEquals(selection.count { it == '?' }, arguments.size)
+
+        // With no messaging address to write, a row the phone added stays.
+        val (bare, rest) = ContactsMapping.replaced(emptyList())
+        assertTrue(bare, "data1 in" !in bare)
+        assertEquals(bare.count { it == '?' }, rest.size)
+        assertEquals(bare.count { it == '(' }, bare.count { it == ')' })
+        assertEquals(selection.count { it == '(' }, selection.count { it == ')' })
     }
 
     @Test

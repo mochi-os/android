@@ -341,4 +341,14 @@
     <string name="upload_progress">Cynnydd llwytho i fyny</string>
     <string name="upload_processing">Wrthi\'n prosesu…</string>
     <string name="upload_sent">%1$s o %2$s</string>
+    <string name="comment_share">Rhannu</string>
+    <string name="comment_all">Yr holl sylwadau</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="zero">%1$s ateb</item>
+        <item quantity="one">%1$s ateb</item>
+        <item quantity="two">+%1$s ateb arall</item>
+        <item quantity="few">+%1$s ateb arall</item>
+        <item quantity="many">+%1$s ateb arall</item>
+        <item quantity="other">+%1$s ateb arall</item>
+    </plurals>
 </resources>

@@ -217,4 +217,10 @@
     <string name="people_contact_create">Jieun</string>
     <string name="people_sync_permission_reason">Sinkronisasi nyalin babaturan anjeun kana aplikasi Kontak di telepon ieu, janten peryogi aksés kana kontak anjeun.</string>
     <string name="people_sync_permission_blocked">Aksés kontak dipareuman pikeun aplikasi ieu. Anjeun tiasa ngahurungkeunana dina Idin di setélan aplikasi.</string>
+    <string name="people_contact_add_handle">Tambah landihan</string>
+    <string name="people_contact_add_messaging">Tambah alamat olahpesen</string>
+    <string name="people_contact_network">Jaringan</string>
+    <string name="people_contact_xmpp">Kontak XMPP</string>
+    <string name="people_person_forums">Forum</string>
+    <string name="people_contact_network_other">Séjén</string>
 </resources>

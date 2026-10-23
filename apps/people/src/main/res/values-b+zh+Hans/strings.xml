@@ -217,4 +217,10 @@
     <string name="people_contact_create">创建</string>
     <string name="people_sync_permission_reason">同步会将您的好友复制到此手机的“通讯录”应用中，因此需要访问您的通讯录。</string>
     <string name="people_sync_permission_blocked">此应用的通讯录访问权限已关闭。您可以在应用设置的“权限”中开启。</string>
+    <string name="people_contact_add_handle">添加用户识别符</string>
+    <string name="people_contact_add_messaging">添加即时通讯地址</string>
+    <string name="people_contact_network">网络</string>
+    <string name="people_contact_xmpp">XMPP 联系人</string>
+    <string name="people_person_forums">论坛</string>
+    <string name="people_contact_network_other">其他</string>
 </resources>

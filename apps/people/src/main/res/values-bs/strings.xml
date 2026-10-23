@@ -219,4 +219,10 @@
     <string name="people_contact_create">Kreiraj</string>
     <string name="people_sync_permission_reason">Sinhronizacija kopira vaše prijatelje u aplikaciju Kontakti na ovom telefonu, pa joj je potreban pristup vašim kontaktima.</string>
     <string name="people_sync_permission_blocked">Pristup kontaktima je isključen za ovu aplikaciju. Možete ga uključiti pod Odobrenja u postavkama aplikacije.</string>
+    <string name="people_contact_add_handle">Dodaj korisničko ime</string>
+    <string name="people_contact_add_messaging">Dodaj adresu za poruke</string>
+    <string name="people_contact_network">Mreža</string>
+    <string name="people_contact_xmpp">XMPP kontakt</string>
+    <string name="people_person_forums">Forumi</string>
+    <string name="people_contact_network_other">Druga</string>
 </resources>

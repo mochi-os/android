@@ -218,4 +218,10 @@
     <string name="people_contact_create">Búa til</string>
     <string name="people_sync_permission_reason">Samstilling afritar vini þína í forritið Tengiliðir í þessum síma og þarf því aðgang að tengiliðunum þínum.</string>
     <string name="people_sync_permission_blocked">Slökkt er á aðgangi að tengiliðum fyrir þetta forrit. Þú getur kveikt á honum undir Heimildir í stillingum forritsins.</string>
+    <string name="people_contact_add_handle">Bæta við notandanafni</string>
+    <string name="people_contact_add_messaging">Bæta við skilaboðafangi</string>
+    <string name="people_contact_network">Net</string>
+    <string name="people_contact_xmpp">XMPP-tengiliður</string>
+    <string name="people_person_forums">Spjallborð</string>
+    <string name="people_contact_network_other">Annað</string>
 </resources>

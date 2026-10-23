@@ -270,4 +270,146 @@
         <item quantity="one">%s new post</item>
         <item quantity="other">%s new posts</item>
     </plurals>
+    <!-- Other networks: posts from and copies on them, polls, pins and boosts -->
+    <string name="feeds_boosted_by">Boosted by %1$s</string>
+    <string name="feeds_pinned">Pinned</string>
+    <string name="feeds_visibility_followers">Followers only</string>
+    <string name="feeds_visibility_unlisted">Unlisted</string>
+    <string name="feeds_show_more">Show more</string>
+    <string name="feeds_show_less">Show less</string>
+    <string name="feeds_also_on">Also on %1$s</string>
+    <plurals name="feeds_boosted_times">
+        <item quantity="one">Boosted %s time</item>
+        <item quantity="other">Boosted %s times</item>
+    </plurals>
+    <string name="feeds_show_sensitive_media">Show sensitive media</string>
+    <plurals name="feeds_poll_votes">
+        <item quantity="one">%s vote</item>
+        <item quantity="other">%s votes</item>
+    </plurals>
+    <string name="feeds_poll_closed">Closed</string>
+    <string name="feeds_poll_closes">Closes %1$s</string>
+    <string name="feeds_poll_vote">Vote</string>
+    <string name="feeds_reply_from">Also reply from</string>
+    <string name="feeds_reply_from_none">No account</string>
+    <string name="feeds_mute">Mute</string>
+    <string name="feeds_report">Report</string>
+    <string name="feeds_report_reason">Reason</string>
+    <string name="feeds_mute_commenter">Mute %1$s</string>
+    <string name="feeds_block_commenter">Block %1$s</string>
+    <string name="feeds_report_commenter">Report %1$s</string>
+    <string name="feeds_mute_commenter_title">Mute %1$s?</string>
+    <string name="feeds_mute_commenter_message">They can still follow you, but nothing more they send reaches you.</string>
+    <string name="feeds_block_commenter_title">Block %1$s?</string>
+    <string name="feeds_block_commenter_message">They no longer follow you, and nothing more they send reaches you.</string>
+    <string name="feeds_report_commenter_title">Report %1$s?</string>
+    <string name="feeds_report_commenter_message">The report goes to the moderators of their own server, with this comment.</string>
+    <string name="feeds_commenter_muted">Muted</string>
+    <string name="feeds_commenter_blocked">Blocked</string>
+    <string name="feeds_commenter_reported">Reported</string>
+    <string name="feeds_pin_post">Pin post</string>
+    <string name="feeds_unpin_post">Unpin post</string>
+    <string name="feeds_post_pinned">Post pinned</string>
+    <string name="feeds_post_unpinned">Post unpinned</string>
+    <string name="feeds_boost_from">Boost from %1$s</string>
+    <string name="feeds_take_boost_back">Take the boost back</string>
+    <string name="feeds_boosted">Boosted</string>
+    <string name="feeds_boost_taken_back">Boost taken back</string>
+    <!-- The composer's publish switches, features and poll -->
+    <string name="feeds_publish_to">Publish to</string>
+    <string name="feeds_visibility">Visibility</string>
+    <string name="feeds_visibility_public">Public</string>
+    <string name="feeds_content_warning">Content warning</string>
+    <string name="feeds_sensitive_media">Sensitive media</string>
+    <string name="feeds_poll">Poll</string>
+    <string name="feeds_poll_remove">Remove poll</string>
+    <string name="feeds_poll_option">Option %1$s</string>
+    <string name="feeds_poll_option_remove">Remove option %1$s</string>
+    <string name="feeds_poll_option_add">Add option</string>
+    <string name="feeds_poll_multiple">Several choices</string>
+    <string name="feeds_poll_duration">Closes after</string>
+    <plurals name="feeds_poll_minutes">
+        <item quantity="one">%s minute</item>
+        <item quantity="other">%s minutes</item>
+    </plurals>
+    <plurals name="feeds_poll_hours">
+        <item quantity="one">%s hour</item>
+        <item quantity="other">%s hours</item>
+    </plurals>
+    <plurals name="feeds_poll_days">
+        <item quantity="one">%s day</item>
+        <item quantity="other">%s days</item>
+    </plurals>
+    <!-- Sources from other networks -->
+    <string name="feeds_source_type_account_timeline">Account timeline</string>
+    <string name="feeds_source_type_account_posts">Account posts</string>
+    <string name="feeds_source_type_person">Person or community</string>
+    <string name="feeds_source_type_hashtag">Hashtag</string>
+    <string name="feeds_source_type_bluesky">Bluesky feed or list</string>
+    <string name="feeds_source_type_fediverse_posts">Posts on the fediverse</string>
+    <string name="feeds_source_type_bluesky_posts">Posts on Bluesky</string>
+    <string name="feeds_source_url_hint_person" translatable="false">@name@server.example, name.bsky.social, https://...</string>
+    <string name="feeds_source_url_hint_tag" translatable="false">#tag@server.example</string>
+    <string name="feeds_source_url_hint_bluesky" translatable="false">https://bsky.app/profile/name.bsky.social/feed/...</string>
+    <string name="feeds_source_account">Account</string>
+    <string name="feeds_source_follow_with">Follow with</string>
+    <string name="feeds_source_read_with">Read with</string>
+    <string name="feeds_source_follow_pending">Follow pending</string>
+    <string name="feeds_source_follow_refused">Follow refused</string>
+    <string name="feeds_import_follows">Import follows from a file</string>
+    <string name="feeds_follows_importing">Importing %1$s follows; %2$s added so far</string>
+    <plurals name="feeds_follows_imported">
+        <item quantity="one">%s follow imported</item>
+        <item quantity="other">%s follows imported</item>
+    </plurals>
+    <!-- Where a public feed publishes, and keyword filters -->
+    <string name="feeds_publish_to_account">Publish to %1$s</string>
+    <plurals name="feeds_copies">
+        <item quantity="one">%s copy</item>
+        <item quantity="other">%s copies</item>
+    </plurals>
+    <string name="feeds_import_posts">Import posts</string>
+    <string name="feeds_import_bookmarks">Import bookmarks</string>
+    <string name="feeds_import_follows_sources">Import follows as sources</string>
+    <string name="feeds_backups">Backups</string>
+    <string name="feeds_backups_title">Backups of %1$s</string>
+    <string name="feeds_backups_none">No backup has been made yet. One is made each day.</string>
+    <string name="feeds_generator_start">Publish as a Bluesky feed</string>
+    <string name="feeds_generator_stop">Stop publishing as a Bluesky feed</string>
+    <string name="feeds_generator_on">Published as a Bluesky feed</string>
+    <string name="feeds_generator_off">No longer a Bluesky feed</string>
+    <string name="feeds_generator_failed">Could not change the Bluesky feed</string>
+    <string name="feeds_copies_delete_title">Delete the copies on %1$s?</string>
+    <string name="feeds_copies_delete_message">The feed published %1$s posts there. They stay unless you delete them.</string>
+    <string name="feeds_copies_delete">Delete copies</string>
+    <string name="feeds_copies_keep">Keep</string>
+    <plurals name="feeds_copies_deleted">
+        <item quantity="one">Deleted %s copy</item>
+        <item quantity="other">Deleted %s copies</item>
+    </plurals>
+    <string name="feeds_copies_delete_failed">Could not delete the copies</string>
+    <string name="feeds_publish_failed">Could not change where the feed publishes</string>
+    <string name="feeds_import_failed">Could not import</string>
+    <string name="feeds_imported">Imported %1$s</string>
+    <string name="feeds_imported_more">Imported %1$s so far; the rest follow</string>
+    <plurals name="feeds_import_sources">
+        <item quantity="one">Added %s source</item>
+        <item quantity="other">Added %s sources</item>
+    </plurals>
+    <string name="feeds_import_sources_more">Added %1$s sources so far; the rest follow</string>
+    <string name="feeds_filters">Filters</string>
+    <string name="feeds_filter_phrase">Phrase to hide</string>
+    <string name="feeds_filter_remove">Remove %1$s</string>
+    <string name="feeds_filter_add_failed">Could not add the filter</string>
+    <string name="feeds_filter_remove_failed">Could not remove the filter</string>
+    <!-- Finding people and communities on other networks -->
+    <string name="feeds_follow">Follow</string>
+    <string name="feeds_follow_named">Follow %1$s</string>
+    <string name="feeds_following">Following</string>
+    <string name="feeds_community">Community</string>
+    <string name="feeds_people_you_know">People you know</string>
+    <plurals name="feeds_source_added_posts">
+        <item quantity="one">Source added (%s post imported)</item>
+        <item quantity="other">Source added (%s posts imported)</item>
+    </plurals>
 </resources>

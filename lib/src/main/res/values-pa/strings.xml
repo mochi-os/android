@@ -336,4 +336,10 @@
     <string name="upload_progress">ਅੱਪਲੋਡ ਪ੍ਰਗਤੀ</string>
     <string name="upload_processing">ਪ੍ਰਕਿਰਿਆ ਜਾਰੀ ਹੈ…</string>
     <string name="upload_sent">%2$s ਵਿੱਚੋਂ %1$s</string>
+    <string name="comment_share">ਸਾਂਝਾ ਕਰੋ</string>
+    <string name="comment_all">ਸਾਰੀਆਂ ਟਿੱਪਣੀਆਂ</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s ਜਵਾਬ</item>
+        <item quantity="other">+%1$s ਹੋਰ ਜਵਾਬ</item>
+    </plurals>
 </resources>

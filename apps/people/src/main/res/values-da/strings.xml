@@ -218,4 +218,10 @@
     <string name="people_contact_create">Opret</string>
     <string name="people_sync_permission_reason">Synkronisering kopierer dine venner til denne telefons Kontakter-app, så den skal have adgang til dine kontakter.</string>
     <string name="people_sync_permission_blocked">Adgang til kontakter er slået fra for denne app. Du kan slå den til under Tilladelser i appens indstillinger.</string>
+    <string name="people_contact_add_handle">Tilføj brugernavn</string>
+    <string name="people_contact_add_messaging">Tilføj chatadresse</string>
+    <string name="people_contact_network">Netværk</string>
+    <string name="people_contact_xmpp">XMPP-kontakt</string>
+    <string name="people_person_forums">Fora</string>
+    <string name="people_contact_network_other">Andet</string>
 </resources>

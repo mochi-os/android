@@ -199,4 +199,5 @@
     <string name="feeds_saved_empty_title">Rien d\'enregistré pour l\'instant</string>
     <string name="feeds_saved_error_clear">Échec de l\'effacement des publications enregistrées</string>
     <string name="feeds_saved_save">Enregistrer pour plus tard</string>
+    <string name="feeds_source_type_hashtag">Mot-clic</string>
 </resources>

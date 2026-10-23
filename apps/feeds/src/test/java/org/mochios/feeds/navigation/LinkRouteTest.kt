@@ -17,6 +17,19 @@ class LinkRouteTest {
     }
 
     @Test
+    fun `a comment link opens the post on the comment`() {
+        assertEquals("feeds/post/abc/p1?comment=c1", FeedsApp.linkRoute("abc", "p1", null, "c1"))
+        assertEquals("feeds/post/abc/p1", FeedsApp.linkRoute("abc", "p1", null, ""))
+        // The comment comes from a link, so it cannot add a query of its own.
+        assertEquals("feeds/post/abc/p1?comment=c1%26x%3D1", FeedsApp.linkRoute("abc", "p1", null, "c1&x=1"))
+    }
+
+    @Test
+    fun `a comment link without a post opens the feed`() {
+        assertEquals("feeds/feed/abc", FeedsApp.linkRoute("abc", null, null, "c1"))
+    }
+
+    @Test
     fun `a feed link opens the feed`() {
         assertEquals("feeds/feed/abc", FeedsApp.linkRoute("abc", null, null))
         assertEquals("feeds/feed/abc", FeedsApp.linkRoute("abc", "", null))

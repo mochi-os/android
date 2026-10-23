@@ -5,6 +5,11 @@
 
 package org.mochios.settings.ui.accounts
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import org.junit.Rule
@@ -53,5 +58,33 @@ class AccountListTest {
             )
         }
         rule.onNodeWithText("Sign-in and Calendar").assertExists()
+    }
+
+    /**
+     * A network's account can notify, but its switch would turn the account
+     * itself off, so Notify by default is never offered there.
+     */
+    @Test
+    fun `a network's account offers no Notify by default switch, an email one does`() {
+        val providers = listOf(
+            Provider(type = "email", capabilities = listOf("notify")),
+            Provider(type = "matrix", capabilities = listOf("network", "chat", "notify"), flow = "handle"),
+        )
+        var shown by mutableStateOf(ConnectedAccount(id = "m", type = "matrix", identifier = "@ada:example.org", enabled = 1))
+        rule.setContent {
+            AccountRow(
+                account = shown,
+                providers = providers,
+                onVerify = {},
+                onSettings = {},
+                onTest = {},
+                onRemove = {},
+                onToggleNotify = {},
+                onSetAiDefault = {},
+            )
+        }
+        rule.onAllNodes(isToggleable()).assertCountEquals(0)
+        shown = ConnectedAccount(id = "e", type = "email", identifier = "ada@example.org", enabled = 1)
+        rule.onAllNodes(isToggleable()).assertCountEquals(1)
     }
 }

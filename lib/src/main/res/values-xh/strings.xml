@@ -336,4 +336,10 @@
     <string name="upload_progress">Inkqubela yokulayisha</string>
     <string name="upload_processing">Iyasetyenzwa…</string>
     <string name="upload_sent">%1$s kwi-%2$s</string>
+    <string name="comment_share">Yabelana</string>
+    <string name="comment_all">Zonke izimvo</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">Impendulo %1$s</item>
+        <item quantity="other">+%1$s ezinye iimpendulo</item>
+    </plurals>
 </resources>

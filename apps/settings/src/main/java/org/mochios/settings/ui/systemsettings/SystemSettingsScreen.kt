@@ -118,6 +118,19 @@ private val OPERATOR_SETTINGS = listOf(
     "operator_name",
     "operator_email",
     "operator_jurisdiction",
+    "description",
+)
+
+// The other networks: the handle limit first, then the protocol switches in
+// their standard order, with Bluesky's labellers after its switch. The server
+// lists them only while it offers the networks.
+private val NETWORK_SETTINGS = listOf(
+    "handles",
+    "fediverse",
+    "bluesky",
+    "labelers",
+    "xmpp",
+    "matrix",
 )
 private val METHOD_STATE_SLOTS = listOf("disabled", "allowed", "required")
 
@@ -126,6 +139,7 @@ private fun isLogin(name: String) =
 private fun isOauth(name: String) = name.startsWith("oauth_")
 private fun isOperator(name: String) = OPERATOR_SETTINGS.contains(name)
 private fun isPush(name: String) = name.startsWith("fcm.")
+private fun isNetwork(name: String) = NETWORK_SETTINGS.contains(name)
 private fun isUserDefault(name: String) = USER_DEFAULT_SETTINGS.contains(name)
 
 private fun isBoolean(setting: SystemSetting) = setting.pattern == "^(true|false)$"
@@ -195,6 +209,13 @@ private val SETTING_LABEL_RESOURCES: Map<String, Int> = mapOf(
     "operator_email" to R.string.system_setting_operator_email,
     "operator_jurisdiction" to R.string.system_setting_operator_jurisdiction,
     "signup_enabled" to R.string.system_setting_signup_enabled,
+    "description" to R.string.system_setting_description,
+    "handles" to R.string.system_setting_handles,
+    "fediverse" to R.string.system_setting_fediverse,
+    "bluesky" to R.string.system_setting_bluesky,
+    "labelers" to R.string.system_setting_labelers,
+    "xmpp" to R.string.system_setting_xmpp,
+    "matrix" to R.string.system_setting_matrix,
 )
 
 @Composable
@@ -206,7 +227,7 @@ private fun methodStateLabel(slot: String): String = when (slot) {
 }
 
 @Composable
-private fun SystemSettingsContent(
+internal fun SystemSettingsContent(
     state: SystemSettingsUiState,
     onSave: (String, String) -> Unit,
 ) {
@@ -230,11 +251,13 @@ private fun SystemSettingsContent(
     val oauth = all.filter { isOauth(it.name) }
     val userDefaults = all.filter { isUserDefault(it.name) }
     val operator = OPERATOR_SETTINGS.mapNotNull { name -> all.firstOrNull { it.name == name } }
+    val networks = NETWORK_SETTINGS.mapNotNull { name -> all.firstOrNull { it.name == name } }
     val push = all.filter { isPush(it.name) }
     val other = all.filter { setting ->
         !isLogin(setting.name) &&
             !isOauth(setting.name) &&
             !isOperator(setting.name) &&
+            !isNetwork(setting.name) &&
             !isPush(setting.name) &&
             !isUserDefault(setting.name)
     }
@@ -243,6 +266,7 @@ private fun SystemSettingsContent(
     val oauthTitle = stringResource(R.string.system_settings_section_oauth)
     val userDefaultsTitle = stringResource(R.string.system_settings_section_user_defaults)
     val operatorTitle = stringResource(R.string.system_settings_section_operator)
+    val networksTitle = stringResource(R.string.system_status_other_networks)
     val pushTitle = stringResource(R.string.system_settings_section_push)
     val otherTitle = stringResource(R.string.system_settings_section_other)
 
@@ -255,6 +279,7 @@ private fun SystemSettingsContent(
         if (oauth.isNotEmpty()) section(oauthTitle, oauth, state, onSave)
         section(userDefaultsTitle, userDefaults, state, onSave)
         if (operator.isNotEmpty()) section(operatorTitle, operator, state, onSave)
+        if (networks.isNotEmpty()) section(networksTitle, networks, state, onSave)
         if (push.isNotEmpty()) section(pushTitle, push, state, onSave)
         section(otherTitle, other, state, onSave)
     }

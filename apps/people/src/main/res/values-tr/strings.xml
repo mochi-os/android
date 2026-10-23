@@ -218,4 +218,10 @@
     <string name="people_contact_create">Oluştur</string>
     <string name="people_sync_permission_reason">Senkronizasyon, arkadaşlarınızı bu telefonun Kişiler uygulamasına kopyalar; bu nedenle kişilerinize erişmesi gerekir.</string>
     <string name="people_sync_permission_blocked">Bu uygulama için kişilere erişim kapalı. Uygulama ayarlarındaki İzinler bölümünden açabilirsiniz.</string>
+    <string name="people_contact_add_handle">Rumuz ekle</string>
+    <string name="people_contact_add_messaging">Mesajlaşma adresi ekle</string>
+    <string name="people_contact_network">Ağ</string>
+    <string name="people_contact_xmpp">XMPP kişisi</string>
+    <string name="people_person_forums">Forumlar</string>
+    <string name="people_contact_network_other">Diğer</string>
 </resources>

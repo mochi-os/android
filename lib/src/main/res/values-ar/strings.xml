@@ -340,4 +340,14 @@
     <string name="upload_progress">تقدّم الرفع</string>
     <string name="upload_processing">جارٍ المعالجة…</string>
     <string name="upload_sent">%1$s من %2$s</string>
+    <string name="comment_share">مشاركة</string>
+    <string name="comment_all">جميع التعليقات</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="zero">+%1$s رد إضافي</item>
+        <item quantity="one">رد واحد</item>
+        <item quantity="two">+%1$s ردان إضافيان</item>
+        <item quantity="few">+%1$s ردود إضافية</item>
+        <item quantity="many">+%1$s ردًا إضافيًا</item>
+        <item quantity="other">+%1$s رد إضافي</item>
+    </plurals>
 </resources>

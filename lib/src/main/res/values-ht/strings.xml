@@ -336,4 +336,9 @@
     <string name="upload_progress">Pwogrè chajman an</string>
     <string name="upload_processing">Ap trete…</string>
     <string name="upload_sent">%1$s sou %2$s</string>
+    <string name="comment_share">Pataje</string>
+    <string name="comment_all">Tout kòmantè yo</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="other">+%1$s plis repons</item>
+    </plurals>
 </resources>

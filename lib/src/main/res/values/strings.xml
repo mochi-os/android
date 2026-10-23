@@ -121,6 +121,12 @@
     <string name="tags_interest_clear">Stop showing</string>
     <string name="comment_edited">(edited)</string>
     <string name="comment_reply">Reply</string>
+    <string name="comment_share">Share</string>
+    <string name="comment_all">All comments</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s reply</item>
+        <item quantity="other">+%1$s more replies</item>
+    </plurals>
 
     <!-- People picker -->
     <string name="person_picker_search">Search users</string>

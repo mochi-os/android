@@ -337,4 +337,11 @@
     <string name="upload_progress">Напредак отпремања</string>
     <string name="upload_processing">Обрада…</string>
     <string name="upload_sent">%1$s од %2$s</string>
+    <string name="comment_share">Подели</string>
+    <string name="comment_all">Сви коментари</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s одговор</item>
+        <item quantity="few">+%1$s додатна одговора</item>
+        <item quantity="other">+%1$s додатних одговора</item>
+    </plurals>
 </resources>

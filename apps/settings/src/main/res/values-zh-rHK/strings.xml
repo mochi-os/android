@@ -352,4 +352,14 @@
     <string name="accounts_field_token">存取權杖</string>
     <string name="accounts_field_topic">主題</string>
     <string name="accounts_field_secret">簽署密鑰</string>
+    <string name="networks_account_updated">賬戶已更新</string>
+    <string name="networks_connected">已連結</string>
+    <string name="networks_alias_field">其他地方的賬戶</string>
+    <string name="networks_move">遷移到另一個賬戶</string>
+    <string name="networks_move_field">要遷移到的賬戶</string>
+    <string name="networks_move_hint">請先在那邊把 %1$s 加入該賬戶的別名。你的追蹤者會被告知改為追蹤該賬戶。</string>
+    <string name="networks_moved">賬戶已遷移</string>
+    <string name="networks_move_failed">無法遷移賬戶</string>
+    <string name="networks_address">地址</string>
+    <string name="networks_removed">賬戶已移除</string>
 </resources>

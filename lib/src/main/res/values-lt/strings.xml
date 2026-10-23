@@ -338,4 +338,12 @@
     <string name="upload_progress">Įkėlimo eiga</string>
     <string name="upload_processing">Apdorojama…</string>
     <string name="upload_sent">%1$s iš %2$s</string>
+    <string name="comment_share">Bendrinti</string>
+    <string name="comment_all">Visi komentarai</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s atsakymas</item>
+        <item quantity="few">dar +%1$s atsakymai</item>
+        <item quantity="many">dar +%1$s atsakymo</item>
+        <item quantity="other">dar +%1$s atsakymų</item>
+    </plurals>
 </resources>

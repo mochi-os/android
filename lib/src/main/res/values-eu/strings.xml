@@ -336,4 +336,10 @@
     <string name="upload_progress">Igoeraren aurrerapena</string>
     <string name="upload_processing">Prozesatzen…</string>
     <string name="upload_sent">%1$s / %2$s</string>
+    <string name="comment_share">Partekatu</string>
+    <string name="comment_all">Iruzkin guztiak</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s erantzun</item>
+        <item quantity="other">+%1$s erantzun gehiago</item>
+    </plurals>
 </resources>

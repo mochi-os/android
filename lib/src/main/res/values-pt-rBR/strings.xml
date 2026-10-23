@@ -316,4 +316,6 @@
     <string name="upload_progress">Progresso do envio</string>
     <string name="upload_processing">Processando…</string>
     <string name="upload_sent">%1$s de %2$s</string>
+    <string name="comment_share">Compartilhar</string>
+    <string name="comment_all">Todos os comentários</string>
 </resources>

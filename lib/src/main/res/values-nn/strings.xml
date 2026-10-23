@@ -336,4 +336,10 @@
     <string name="upload_progress">Framdrift for opplasting</string>
     <string name="upload_processing">Handsamar…</string>
     <string name="upload_sent">%1$s av %2$s</string>
+    <string name="comment_share">Del</string>
+    <string name="comment_all">Alle kommentarar</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s svar</item>
+        <item quantity="other">+%1$s fleire svar</item>
+    </plurals>
 </resources>

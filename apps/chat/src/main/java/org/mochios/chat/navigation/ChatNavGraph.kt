@@ -5,6 +5,7 @@
 
 package org.mochios.chat.navigation
 
+import android.net.Uri
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
@@ -30,11 +31,15 @@ object ChatApp {
     // would otherwise match `chat/{chatId}` with chatId='list' and route to
     // the detail screen rendering NotFoundState.
     const val CHAT = "chat/chat/{chatId}"
-    const val NEW_CHAT = "chat/new?friend={friend}"
+    const val NEW_CHAT = "chat/new?friend={friend}&account={account}&address={address}&name={name}"
     const val CHAT_SETTINGS = "chat/chat/{chatId}/settings"
 
     fun chat(chatId: String) = "chat/chat/$chatId"
     fun newChat(friendId: String = "") = if (friendId.isEmpty()) "chat/new" else "chat/new?friend=$friendId"
+
+    /** New chat on [account] with the person at [address] there, as people hands a messaging address over. */
+    fun newChat(account: String, address: String, name: String) =
+        "chat/new?account=${Uri.encode(account)}&address=${Uri.encode(address)}&name=${Uri.encode(name)}"
     fun chatSettings(chatId: String) = "chat/chat/$chatId/settings"
 }
 
@@ -78,15 +83,19 @@ fun NavGraphBuilder.chatNavGraph(
         )
     }
 
+    // A friend to chat with, or a contact's messaging address on another
+    // network with the account to reach it through, as people hands it over.
     composable(
         route = ChatApp.NEW_CHAT,
-        arguments = listOf(navArgument("friend") {
-            type = NavType.StringType
-            defaultValue = ""
-            nullable = false
-        }),
+        arguments = listOf("friend", "account", "address", "name").map { name ->
+            navArgument(name) {
+                type = NavType.StringType
+                defaultValue = ""
+                nullable = false
+            }
+        },
         deepLinks = listOf(
-            navDeepLink { uriPattern = "mochi://chat/with?friend={friend}" }
+            navDeepLink { uriPattern = "mochi://chat/with?friend={friend}&account={account}&address={address}&name={name}" }
         )
     ) {
         NewChatScreen(

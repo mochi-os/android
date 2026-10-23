@@ -20,6 +20,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.sync.ContactProperty
 import org.mochios.android.util.SEARCH_DEBOUNCE
+import org.mochios.people.api.NetworkPerson
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.RelationshipStatus
 import org.mochios.people.model.User
@@ -35,6 +36,10 @@ data class AddContactUiState(
     val searchLoading: Boolean = false,
     val searchError: MochiError? = null,
     val searchResults: List<User> = emptyList(),
+    /** People on other networks the search found through the user's accounts. */
+    val networkResults: List<NetworkPerson> = emptyList(),
+    /** Addresses of people on other networks added as contacts this visit. */
+    val addedAddresses: Set<String> = emptySet(),
     val addedUserIds: Set<String> = emptySet(),
     val invitedUserIds: Set<String> = emptySet(),
     val friendedUserIds: Set<String> = emptySet(),
@@ -139,6 +144,7 @@ class AddContactViewModel @Inject constructor(
         if (query.isBlank()) {
             _uiState.value = _uiState.value.copy(
                 searchResults = emptyList(),
+                networkResults = emptyList(),
                 searchLoading = false,
                 searchError = null,
             )
@@ -150,9 +156,10 @@ class AddContactViewModel @Inject constructor(
             }
             _uiState.value = _uiState.value.copy(searchLoading = true, searchError = null)
             try {
-                val results = repository.searchDirectory(query)
+                val results = repository.searchPeople(query)
                 _uiState.value = _uiState.value.copy(
-                    searchResults = results,
+                    searchResults = results.results,
+                    networkResults = results.networks,
                     searchLoading = false,
                 )
             } catch (e: CancellationException) {
@@ -227,6 +234,37 @@ class AddContactViewModel @Inject constructor(
                 addedUserIds = _uiState.value.addedUserIds + user.id,
                 contactsChanged = true,
             )
+        }
+    }
+
+    /** Whether someone on another network is on a contact already, or was added this visit. */
+    fun inContacts(person: NetworkPerson): Boolean =
+        person.contact.isNotBlank() || person.address in _uiState.value.addedAddresses
+
+    /**
+     * Saves someone on another network as a contact: a card with their name
+     * and messaging address, in the book being viewed.
+     */
+    fun addNetworkPerson(person: NetworkPerson) {
+        if (inContacts(person) || person.address.isBlank()) return
+        viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(busyUserId = person.address, actionError = null)
+            try {
+                repository.createContact(
+                    properties = listOf(
+                        ContactProperty("FN", emptyMap(), person.name.ifBlank { person.id }),
+                        ContactProperty("IMPP", emptyMap(), person.address),
+                    ),
+                    book = book.ifBlank { null },
+                )
+                _uiState.value = _uiState.value.copy(
+                    busyUserId = null,
+                    addedAddresses = _uiState.value.addedAddresses + person.address,
+                    contactsChanged = true,
+                )
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(busyUserId = null, actionError = e.toMochiError())
+            }
         }
     }
 

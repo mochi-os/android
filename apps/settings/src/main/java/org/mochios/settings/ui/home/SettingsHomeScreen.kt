@@ -26,7 +26,9 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.PrivacyTip
+import androidx.compose.material.icons.filled.AlternateEmail
 import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.SettingsApplications
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Tune
@@ -62,6 +64,7 @@ import org.mochios.settings.R
 fun SettingsHomeScreen(
     isAdmin: Boolean,
     hasDomainAccess: Boolean,
+    hasNetworks: Boolean,
     onOpenAccount: () -> Unit,
     onOpenLogin: () -> Unit,
     onOpenPreferences: () -> Unit,
@@ -77,6 +80,8 @@ fun SettingsHomeScreen(
     onOpenDomains: () -> Unit,
     onOpenDocument: (String) -> Unit,
     onOpenSystemDocuments: () -> Unit,
+    onOpenNetworks: () -> Unit,
+    onOpenSystemHandles: () -> Unit,
 ) {
     var showAbout by remember { mutableStateOf(false) }
     val context = LocalContext.current
@@ -150,6 +155,18 @@ fun SettingsHomeScreen(
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
+            }
+            // Networks: only where the server offers other networks, as on the web.
+            if (hasNetworks) {
+                item {
+                    ListItem(
+                        modifier = Modifier.clickable(onClick = onOpenNetworks),
+                        headlineContent = { Text(stringResource(R.string.networks_title)) },
+                        leadingContent = { Icon(Icons.Default.Share, contentDescription = null) },
+                        colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                    )
+                    HorizontalDivider()
+                }
             }
             item {
                 ListItem(
@@ -247,6 +264,17 @@ fun SettingsHomeScreen(
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                 )
                 HorizontalDivider()
+            }
+            if (hasNetworks) {
+                item {
+                    ListItem(
+                        modifier = Modifier.clickable(onClick = onOpenSystemHandles),
+                        headlineContent = { Text(stringResource(R.string.handles_title)) },
+                        leadingContent = { Icon(Icons.Default.AlternateEmail, contentDescription = null) },
+                        colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                    )
+                    HorizontalDivider()
+                }
             }
             item {
                 ListItem(

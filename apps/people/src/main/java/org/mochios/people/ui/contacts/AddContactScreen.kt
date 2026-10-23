@@ -72,6 +72,7 @@ import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.User
 import org.mochios.people.ui.person.PersonHeader
+import org.mochios.people.api.NetworkPerson
 import org.mochios.people.ui.person.PersonStatus
 import org.mochios.android.R as MochiR
 
@@ -183,6 +184,14 @@ fun AddContactScreen(
                 SearchBody(
                     state = uiState,
                     stateOf = viewModel::state,
+                    // Linking a card looks for the Mochi person it is; someone
+                    // on another network is not one.
+                    networks = if (viewModel.linking.isBlank()) uiState.networkResults else emptyList(),
+                    inContacts = viewModel::inContacts,
+                    onAddNetwork = { person ->
+                        keyboardController?.hide()
+                        viewModel.addNetworkPerson(person)
+                    },
                     onQueryChange = viewModel::updateSearchQuery,
                     onSearch = {
                         keyboardController?.hide()
@@ -210,9 +219,12 @@ fun AddContactScreen(
 }
 
 @Composable
-private fun SearchBody(
+internal fun SearchBody(
     state: AddContactUiState,
     stateOf: (User) -> AddContactState,
+    networks: List<NetworkPerson>,
+    inContacts: (NetworkPerson) -> Boolean,
+    onAddNetwork: (NetworkPerson) -> Unit,
     onQueryChange: (String) -> Unit,
     onSearch: () -> Unit,
     onRetry: () -> Unit,
@@ -262,7 +274,7 @@ private fun SearchBody(
                 !hasQuery -> {
                     EmptyHint(title = stringResource(R.string.people_add_contact_search_start))
                 }
-                state.searchLoading && state.searchResults.isEmpty() -> {
+                state.searchLoading && state.searchResults.isEmpty() && networks.isEmpty() -> {
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -275,7 +287,7 @@ private fun SearchBody(
                 state.searchError != null -> {
                     InlineErrorState(error = state.searchError, onRetry = onRetry)
                 }
-                state.searchResults.isEmpty() -> {
+                state.searchResults.isEmpty() && networks.isEmpty() -> {
                     EmptyState(
                         icon = Icons.Default.Search,
                         title = stringResource(R.string.people_contacts_no_people_found),
@@ -296,6 +308,14 @@ private fun SearchBody(
                                 busy = state.busyUserId == user.id,
                                 onSelect = { onTapResult(user) },
                                 onAct = { onAct(user) },
+                            )
+                        }
+                        items(networks, key = { person -> "network:" + person.address }) { person ->
+                            NetworkRow(
+                                person = person,
+                                added = inContacts(person),
+                                busy = state.busyUserId == person.address,
+                                onAdd = { onAddNetwork(person) },
                             )
                         }
                     }
@@ -322,6 +342,47 @@ private fun AddContactRow(
         avatarUrl = "/people/${user.id}/-/avatar",
         trailing = {
             RowActionButton(state = state, busy = busy, onClick = onAct)
+        },
+    )
+}
+
+/**
+ * Someone on another network: their name and their identifier there, and
+ * Add, which makes a contact with their messaging address, or that a contact
+ * holds them already.
+ */
+@Composable
+internal fun NetworkRow(
+    person: NetworkPerson,
+    added: Boolean,
+    busy: Boolean,
+    onAdd: () -> Unit,
+) {
+    EntityListRow(
+        name = person.name.ifBlank { person.id },
+        seed = person.address,
+        icon = Icons.Outlined.PersonAddAlt,
+        // There is no profile here to preview; Add is the row's one action.
+        onClick = {},
+        subtitle = person.id.takeIf { it.isNotBlank() && it != person.name },
+        trailing = {
+            if (added) {
+                StatusBadge(
+                    label = stringResource(PersonStatus.CONTACT.label),
+                    tone = PersonStatus.CONTACT.tone,
+                    size = StatusBadgeSize.Compact,
+                )
+            } else {
+                MochiButton(
+                    onClick = onAdd,
+                    enabled = !busy,
+                    contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
+                ) {
+                    ButtonContent(busy = busy, icon = Icons.Default.PersonAdd) {
+                        Text(stringResource(MochiR.string.common_add))
+                    }
+                }
+            }
         },
     )
 }

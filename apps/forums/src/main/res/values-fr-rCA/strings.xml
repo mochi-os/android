@@ -241,4 +241,6 @@
     <string name="forums_moderation_pending_posts">Publications en attente (%1$s)</string>
     <string name="forums_moderation_pending_comments">Commentaires en attente (%1$s)</string>
     <string name="forums_moderation_reason_spam">Pourriel</string>
+    <string name="forums_post_link">Lien</string>
+    <string name="forums_community_link">Lien</string>
 </resources>

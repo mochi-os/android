@@ -337,4 +337,10 @@
     <string name="upload_progress">Yuklash jarayoni</string>
     <string name="upload_processing">Qayta ishlanmoqda…</string>
     <string name="upload_sent">%2$s dan %1$s</string>
+    <string name="comment_share">Ulashish</string>
+    <string name="comment_all">Barcha izohlar</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s javob</item>
+        <item quantity="other">+%1$s koʻproq javoblar</item>
+    </plurals>
 </resources>

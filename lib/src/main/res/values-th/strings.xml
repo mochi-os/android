@@ -336,4 +336,10 @@
     <string name="upload_progress">ความคืบหน้าการอัปโหลด</string>
     <string name="upload_processing">กำลังประมวลผล…</string>
     <string name="upload_sent">%1$s จาก %2$s</string>
+    <string name="comment_share">แชร์</string>
+    <string name="comment_all">ความคิดเห็นทั้งหมด</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s การตอบกลับ</item>
+        <item quantity="other">+%1$s การตอบกลับเพิ่มเติม</item>
+    </plurals>
 </resources>

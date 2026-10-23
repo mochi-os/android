@@ -219,4 +219,10 @@
     <string name="people_contact_create">Sukurti</string>
     <string name="people_sync_permission_reason">Sinchronizuojant jūsų draugai nukopijuojami į šio telefono programą „Kontaktai“, todėl reikia prieigos prie jūsų kontaktų.</string>
     <string name="people_sync_permission_blocked">Šios programos prieiga prie kontaktų išjungta. Ją galite įjungti programos nustatymų skiltyje „Leidimai“.</string>
+    <string name="people_contact_add_handle">Pridėti vartotojo vardą</string>
+    <string name="people_contact_add_messaging">Pridėti susirašinėjimo adresą</string>
+    <string name="people_contact_network">Tinklas</string>
+    <string name="people_contact_xmpp">XMPP kontaktas</string>
+    <string name="people_person_forums">Forumai</string>
+    <string name="people_contact_network_other">Kita</string>
 </resources>

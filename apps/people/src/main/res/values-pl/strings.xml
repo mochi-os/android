@@ -220,4 +220,10 @@
     <string name="people_contact_create">Utwórz</string>
     <string name="people_sync_permission_reason">Synchronizacja kopiuje Twoich znajomych do aplikacji Kontakty na tym telefonie, dlatego potrzebuje dostępu do Twoich kontaktów.</string>
     <string name="people_sync_permission_blocked">Dostęp do kontaktów jest wyłączony dla tej aplikacji. Możesz go włączyć w sekcji Uprawnienia w ustawieniach aplikacji.</string>
+    <string name="people_contact_add_handle">Dodaj pseudonim</string>
+    <string name="people_contact_add_messaging">Dodaj adres komunikatora</string>
+    <string name="people_contact_network">Sieć</string>
+    <string name="people_contact_xmpp">Kontakt XMPP</string>
+    <string name="people_person_forums">Fora</string>
+    <string name="people_contact_network_other">Inna</string>
 </resources>

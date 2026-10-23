@@ -67,8 +67,11 @@ import org.mochios.android.ui.components.Truncate
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatMember
 import org.mochios.chat.model.ChatStatus
+import org.mochios.chat.model.chatLinked
 import org.mochios.chat.model.ordered
+import org.mochios.chat.model.outsider
 import org.mochios.chat.model.personAvatarUrl
+import org.mochios.chat.ui.encryption.EncryptionSection
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -238,14 +241,23 @@ fun ChatSettingsScreen(
                         }
                     }
 
+                    if (chatLinked(uiState.chat.network)) {
+                        item {
+                            EncryptionSection()
+                        }
+                    }
+
                     item {
+                        // A conversation on another network keeps the people it
+                        // began with, who have no Mochi avatar.
+                        val remote = uiState.chat.account.isNotEmpty()
                         Column(
                             modifier = Modifier.padding(top = 12.dp),
                             verticalArrangement = Arrangement.spacedBy(12.dp),
                         ) {
                             SettingsSectionHeader(
                                 title = stringResource(R.string.chat_settings_members),
-                                action = if (uiState.chat.status == ChatStatus.ACTIVE) {
+                                action = if (uiState.chat.status == ChatStatus.ACTIVE && !remote) {
                                     {
                                         MochiOutlinedButton(onClick = {
                                             viewModel.loadFriends()
@@ -269,7 +281,8 @@ fun ChatSettingsScreen(
                                         MemberRow(
                                             member = member,
                                             isMe = member.id == uiState.identity,
-                                            canRemove = uiState.chat.status == ChatStatus.ACTIVE &&
+                                            remote = remote && member.id != uiState.identity,
+                                            canRemove = uiState.chat.status == ChatStatus.ACTIVE && !remote &&
                                                     member.id != uiState.identity,
                                             onRemove = { memberToRemove = member }
                                         )
@@ -343,6 +356,7 @@ fun ChatSettingsScreen(
             friends = candidates,
             hasFriends = uiState.friends.isNotEmpty(),
             isLoading = uiState.isLoadingFriends,
+            members = existingMemberIds,
             onConfirm = { friendId ->
                 viewModel.addMember(friendId)
                 showAddMember = false
@@ -357,31 +371,43 @@ private fun AddMemberDialog(
     friends: List<org.mochios.chat.model.Friend>,
     hasFriends: Boolean,
     isLoading: Boolean,
+    members: Set<String>,
     onConfirm: (friendId: String) -> Unit,
     onDismiss: () -> Unit,
 ) {
     var query by remember { mutableStateOf("") }
     val filtered = if (query.isBlank()) friends
     else friends.filter { it.name.contains(query, ignoreCase = true) }
+    // Someone on Matrix or XMPP, by their address, joins the group through
+    // this member's server, which relays them.
+    val address = outsider(query, members)
 
     MochiAlertDialog(
         onDismissRequest = onDismiss,
         title = stringResource(R.string.chat_settings_add_member),
         content = {
             Column {
-                if (friends.isNotEmpty()) {
-                    MochiTextField(
-                        value = query,
-                        onValueChange = { query = it },
-                        placeholder = {
-                            Text(stringResource(R.string.chat_settings_add_member_search))
-                        },
-                        singleLine = true,
-                        modifier = Modifier.fillMaxWidth(),
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                }
-                if (isLoading && friends.isEmpty()) {
+                MochiTextField(
+                    value = query,
+                    onValueChange = { query = it },
+                    placeholder = { Text(stringResource(R.string.chat_settings_add_member_search)) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                if (address != null) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onConfirm(address) }
+                            .padding(vertical = 6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        EntityAvatar(name = address, src = null, seed = address, size = 24.dp)
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(address)
+                    }
+                } else if (isLoading && friends.isEmpty()) {
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -491,6 +517,7 @@ private fun SettingsFieldRow(
 private fun MemberRow(
     member: ChatMember,
     isMe: Boolean,
+    remote: Boolean,
     canRemove: Boolean,
     onRemove: () -> Unit
 ) {
@@ -500,16 +527,17 @@ private fun MemberRow(
     ) {
         EntityAvatar(
             name = member.name,
-            src = personAvatarUrl(member.id),
+            src = if (remote) null else personAvatarUrl(member.id),
             seed = member.id,
             size = 32.dp,
         )
         Spacer(modifier = Modifier.width(12.dp))
         Column(modifier = Modifier.weight(1f)) {
             Text(text = member.name, style = MaterialTheme.typography.bodyLarge)
-            if (isMe) {
+            val detail = if (isMe) stringResource(R.string.chat_members_you) else roleLabel(member.role)
+            if (detail != null) {
                 Text(
-                    text = stringResource(R.string.chat_members_you),
+                    text = detail,
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -525,4 +553,14 @@ private fun MemberRow(
             }
         }
     }
+}
+
+/** A member's role in a room on another network, in the user's words; none for anyone without one. */
+@Composable
+internal fun roleLabel(role: String): String? = when (role) {
+    "owner" -> stringResource(R.string.chat_role_owner)
+    "admin" -> stringResource(R.string.chat_role_admin)
+    "moderator" -> stringResource(R.string.chat_role_moderator)
+    "visitor" -> stringResource(R.string.chat_role_visitor)
+    else -> null
 }

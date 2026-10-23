@@ -336,4 +336,10 @@
     <string name="upload_progress">பதிவேற்ற முன்னேற்றம்</string>
     <string name="upload_processing">செயலாக்கப்படுகிறது…</string>
     <string name="upload_sent">%2$sஇல் %1$s</string>
+    <string name="comment_share">பகிர்</string>
+    <string name="comment_all">அனைத்து கருத்துகளும்</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s பதில்</item>
+        <item quantity="other">+%1$s கூடுதல் பதில்கள்</item>
+    </plurals>
 </resources>

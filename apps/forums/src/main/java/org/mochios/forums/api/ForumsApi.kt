@@ -10,6 +10,12 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.forums.model.AiPrompts
+import org.mochios.forums.model.CommunitiesAdded
+import org.mochios.forums.model.CommunitiesImported
+import org.mochios.forums.model.CommunityJoined
+import org.mochios.forums.model.CommunityState
+import org.mochios.forums.model.NetworkAccount
+import org.mochios.forums.model.SensitiveState
 import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.DirectoryEntry
 import org.mochios.forums.model.Forum
@@ -357,7 +363,11 @@ interface ForumsApi {
         @Part("body") body: RequestBody,
         @Part files: List<MultipartBody.Part>,
         // JSON array of per-file captions aligned with `files`
-        @Part("captions") captions: RequestBody? = null
+        @Part("captions") captions: RequestBody? = null,
+        // A link post's link; whether the post is sensitive ("1") and its language.
+        @Part("url") url: RequestBody? = null,
+        @Part("sensitive") sensitive: RequestBody? = null,
+        @Part("language") language: RequestBody? = null,
     ): Response<ApiResponse<CreatePostResponse>>
 
     @GET("{forumId}/-/{postId}")
@@ -384,7 +394,11 @@ interface ForumsApi {
         @Part("order") order: RequestBody?,
         @Part files: List<MultipartBody.Part>,
         // JSON object of caption edits keyed by attachment id or "new:N"
-        @Part("captions") captions: RequestBody? = null
+        @Part("captions") captions: RequestBody? = null,
+        // Absent leaves each alone; an empty link or language clears it.
+        @Part("url") url: RequestBody? = null,
+        @Part("sensitive") sensitive: RequestBody? = null,
+        @Part("language") language: RequestBody? = null,
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{forumId}/-/{postId}/delete")
@@ -756,4 +770,76 @@ interface ForumsApi {
 
     @GET("{forumId}/-/tags")
     suspend fun getForumTags(@Path("forumId") forumId: String): Response<ApiResponse<ForumTagsResponse>>
+
+    // --- Other networks (the federation plan, phases 14, 20 and 21) ---
+
+    // The user's accounts by capability: "network" for the hosted fediverse
+    // accounts a community is joined as, "social" for linked Lemmy accounts.
+    // A bare JSON array, as listAccounts.
+    @GET("-/accounts/list")
+    suspend fun listNetworkAccounts(
+        @Query("capability") capability: String,
+    ): Response<List<NetworkAccount>>
+
+    // A community on another server joined as one of the user's hosted
+    // fediverse accounts, by !name@host or its address.
+    @FormUrlEncoded
+    @POST("-/communities/join")
+    suspend fun joinCommunity(
+        @Field("address") address: String,
+        @Field("account") account: String,
+    ): Response<ApiResponse<CommunityJoined>>
+
+    // A linked Lemmy account's subscribed communities read in, and its
+    // settings export imported. Bare JSON.
+    @FormUrlEncoded
+    @POST("-/communities/add")
+    suspend fun addCommunities(
+        @Field("account") account: String,
+    ): Response<CommunitiesAdded>
+
+    @FormUrlEncoded
+    @POST("-/communities/import")
+    suspend fun importCommunities(
+        @Field("account") account: String,
+    ): Response<CommunitiesImported>
+
+    // Block a person by their address, a community by its address or a server
+    // by its domain.
+    @FormUrlEncoded
+    @POST("-/blocks/add")
+    suspend fun addBlock(
+        @Field("target") target: String,
+    ): Response<ApiResponse<Map<String, Any>>>
+
+    // The forum as a community on the fediverse.
+    @GET("{forumId}/-/publish")
+    suspend fun getCommunity(
+        @Path("forumId") forumId: String,
+    ): Response<ApiResponse<CommunityState>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/publish/set")
+    suspend fun publishCommunity(
+        @Path("forumId") forumId: String,
+        @Field("forum") forum: String,
+        @Field("name") name: String,
+        @Field("domain") domain: String,
+    ): Response<ApiResponse<CommunityState>>
+
+    @FormUrlEncoded
+    @POST("{forumId}/-/publish/clear")
+    suspend fun withdrawCommunity(
+        @Path("forumId") forumId: String,
+        @Field("forum") forum: String,
+    ): Response<ApiResponse<CommunityState>>
+
+    // sensitive is "1" or "0".
+    @FormUrlEncoded
+    @POST("{forumId}/-/sensitive/set")
+    suspend fun setSensitive(
+        @Path("forumId") forumId: String,
+        @Field("forum") forum: String,
+        @Field("sensitive") sensitive: String,
+    ): Response<ApiResponse<SensitiveState>>
 }

@@ -217,4 +217,10 @@
     <string name="people_contact_create">បង្កើត</string>
     <string name="people_sync_permission_reason">ការធ្វើសមកាលកម្មចម្លងមិត្តភក្តិរបស់អ្នកទៅកម្មវិធីទំនាក់ទំនងរបស់ទូរសព្ទនេះ ដូច្នេះវាត្រូវការសិទ្ធិចូលប្រើទំនាក់ទំនងរបស់អ្នក។</string>
     <string name="people_sync_permission_blocked">សិទ្ធិចូលប្រើទំនាក់ទំនងត្រូវបានបិទសម្រាប់កម្មវិធីនេះ។ អ្នកអាចបើកវានៅក្រោម ការអនុញ្ញាត នៅក្នុងការកំណត់របស់កម្មវិធី។</string>
+    <string name="people_contact_add_handle">បន្ថែមឈ្មោះអ្នកប្រើ</string>
+    <string name="people_contact_add_messaging">បន្ថែមអាសយដ្ឋានផ្ញើសារ</string>
+    <string name="people_contact_network">បណ្តាញ</string>
+    <string name="people_contact_xmpp">ទំនាក់ទំនង XMPP</string>
+    <string name="people_person_forums">វេទិកា</string>
+    <string name="people_contact_network_other">ផ្សេងទៀត</string>
 </resources>

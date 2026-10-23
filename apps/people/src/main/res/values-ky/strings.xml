@@ -218,4 +218,10 @@
     <string name="people_contact_create">Түзүү</string>
     <string name="people_sync_permission_reason">Синхрондоштуруу досторуңузду ушул телефондун Байланыштар колдонмосуна көчүрөт, ошондуктан ага байланыштарыңызга мүмкүнчүлүк керек.</string>
     <string name="people_sync_permission_blocked">Бул колдонмо үчүн байланыштарга мүмкүнчүлүк өчүрүлгөн. Аны колдонмонун жөндөөлөрүндөгү Уруксаттар бөлүмүнөн күйгүзө аласыз.</string>
+    <string name="people_contact_add_handle">Колдонуучу атын кошуу</string>
+    <string name="people_contact_add_messaging">Мессенжер дарегин кошуу</string>
+    <string name="people_contact_network">Тармак</string>
+    <string name="people_contact_xmpp">XMPP байланышы</string>
+    <string name="people_person_forums">Форумдар</string>
+    <string name="people_contact_network_other">Башка</string>
 </resources>

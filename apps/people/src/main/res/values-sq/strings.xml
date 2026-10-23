@@ -218,4 +218,10 @@
     <string name="people_contact_create">Krijo</string>
     <string name="people_sync_permission_reason">Sinkronizimi kopjon miqtë tuaj në aplikacionin Kontaktet të këtij telefoni, prandaj ka nevojë për qasje në kontaktet tuaja.</string>
     <string name="people_sync_permission_blocked">Qasja në kontakte është çaktivizuar për këtë aplikacion. Mund ta aktivizoni te Lejet në cilësimet e aplikacionit.</string>
+    <string name="people_contact_add_handle">Shto pseudonim</string>
+    <string name="people_contact_add_messaging">Shto adresë mesazhesh</string>
+    <string name="people_contact_network">Rrjeti</string>
+    <string name="people_contact_xmpp">Kontakt XMPP</string>
+    <string name="people_person_forums">Forume</string>
+    <string name="people_contact_network_other">Tjetër</string>
 </resources>

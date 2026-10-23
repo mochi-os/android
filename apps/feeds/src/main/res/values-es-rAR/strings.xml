@@ -188,4 +188,19 @@
     <string name="feeds_saved_empty_title">Todavía no hay nada guardado</string>
     <string name="feeds_saved_error_clear">No se pudieron borrar las publicaciones guardadas</string>
     <string name="feeds_saved_save">Guardar para más tarde</string>
+    <string name="feeds_show_more">Mostrá más</string>
+    <string name="feeds_show_sensitive_media">Mostrá el contenido sensible</string>
+    <string name="feeds_poll_vote">Votá</string>
+    <string name="feeds_pin_post">Fijá el posteo</string>
+    <string name="feeds_unpin_post">Desfijá el posteo</string>
+    <string name="feeds_boost_from">Impulsá desde %1$s</string>
+    <string name="feeds_take_boost_back">Deshacé el impulso</string>
+    <string name="feeds_poll_remove">Quitá la encuesta</string>
+    <string name="feeds_poll_option_remove">Quitá la opción %1$s</string>
+    <string name="feeds_source_type_fediverse_posts">Posteos en el fediverso</string>
+    <string name="feeds_import_follows">Importá seguimientos desde un archivo</string>
+    <string name="feeds_follows_importing">Importando %1$s seguimientos; %2$s agregados hasta ahora</string>
+    <string name="feeds_filter_remove">Quitá %1$s</string>
+    <string name="feeds_filter_add_failed">No se pudo agregar el filtro</string>
+    <string name="feeds_people_you_know">Gente que conocés</string>
 </resources>

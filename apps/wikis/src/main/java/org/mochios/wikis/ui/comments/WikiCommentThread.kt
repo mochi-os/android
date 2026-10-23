@@ -83,6 +83,8 @@ fun WikiCommentThread(
     }
 
     val totalDescendants = remember(comment) { countDescendants(comment) }
+    val collapseLabel = stringResource(MochiR.string.common_collapse)
+    val expandLabel = stringResource(MochiR.string.common_expand)
 
     Column(
         modifier = Modifier
@@ -95,7 +97,7 @@ fun WikiCommentThread(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clickable { collapsed = false }
+                    .clickable(onClickLabel = expandLabel) { collapsed = false }
                     .padding(vertical = 4.dp),
             ) {
                 EntityAvatar(
@@ -148,22 +150,28 @@ fun WikiCommentThread(
                 verticalAlignment = Alignment.Top,
                 modifier = Modifier.fillMaxWidth(),
             ) {
-                // Avatar — tap collapses the thread, matching web's collapse
-                // toggle (the tap surface is the avatar, not a separate icon).
+                // The avatar and the header line fold a comment's replies
+                // away, as a tap on them does on the web; one without replies
+                // has nothing to fold.
+                val fold = if (hasChildren) {
+                    Modifier.clickable(onClickLabel = collapseLabel) { collapsed = true }
+                } else {
+                    Modifier
+                }
                 Column {
                     EntityAvatar(
                         name = displayName,
                         src = avatarSrc,
                         seed = comment.author,
                         size = 28.dp,
-                        modifier = Modifier.clickable { collapsed = true },
+                        modifier = fold,
                     )
                 }
                 Spacer(Modifier.width(8.dp))
 
                 Column(modifier = Modifier.fillMaxWidth()) {
                     // Header row
-                    Row(verticalAlignment = Alignment.CenterVertically) {
+                    Row(verticalAlignment = Alignment.CenterVertically, modifier = fold) {
                         Text(
                             text = displayName,
                             style = MaterialTheme.typography.labelMedium,

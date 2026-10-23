@@ -337,4 +337,10 @@
     <string name="upload_progress">Progression du téléversement</string>
     <string name="upload_processing">Traitement…</string>
     <string name="upload_sent">%1$s sur %2$s</string>
+    <string name="comment_share">Partager</string>
+    <string name="comment_all">Tous les commentaires</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s réponse</item>
+        <item quantity="other">+%1$s autres réponses</item>
+    </plurals>
 </resources>

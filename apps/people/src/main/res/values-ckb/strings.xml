@@ -218,4 +218,10 @@
     <string name="people_contact_create">دروستکردن</string>
     <string name="people_sync_permission_reason">هاوکاتکردن هاوڕێکانت بۆ ئەپی پەیوەندییەکانی ئەم مۆبایلە کۆپی دەکات، بۆیە پێویستی بە دەستڕاگەیشتن بە پەیوەندییەکانت هەیە.</string>
     <string name="people_sync_permission_blocked">دەستڕاگەیشتنی پەیوەندییەکان بۆ ئەم ئەپە ناچالاک کراوە. دەتوانیت لە ڕێکخستنەکانی ئەپەکەدا لە بەشی ڕێگەپێدانەکان چالاکی بکەیتەوە.</string>
+    <string name="people_contact_add_handle">زیادکردنی ناوی بەکارهێنەر</string>
+    <string name="people_contact_add_messaging">زیادکردنی ناونیشانی نامەناردن</string>
+    <string name="people_contact_network">تۆڕ</string>
+    <string name="people_contact_xmpp">پەیوەندیی XMPP</string>
+    <string name="people_person_forums">فۆڕەمەکان</string>
+    <string name="people_contact_network_other">هیتر</string>
 </resources>

@@ -13,11 +13,13 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -65,6 +67,16 @@ fun GeneralTab(
             onDraftChange = { value -> bannerDraft = value },
             onSave = { value -> viewModel.saveBanner(value) }
         )
+
+        // The forum as a community on the fediverse, and its sensitive mark.
+        val community: CommunityViewModel = hiltViewModel()
+        val loaded = uiState.forum.id.isNotEmpty()
+        LaunchedEffect(loaded, uiState.forum.sensitive) {
+            if (loaded) community.load(uiState.forum.sensitive != 0)
+        }
+        CommunityEvents(community)
+        CommunitySection(community)
+        if (loaded) SensitiveSection(community)
 
         ConfirmActionSection(
             title = stringResource(R.string.forums_settings_delete),

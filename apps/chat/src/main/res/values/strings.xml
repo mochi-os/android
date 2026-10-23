@@ -96,4 +96,99 @@
     <string name="chat_unpin">Unpin</string>
     <string name="chat_mark_read">Mark as read</string>
     <string name="chat_marked_read">Marked as read</string>
+    <!-- Privacy: who may start a chat, and what the user shares -->
+    <string name="chat_privacy_title">Privacy</string>
+    <string name="chat_privacy_presence">Show when I\'m online</string>
+    <string name="chat_privacy_receipts">Send read receipts</string>
+    <string name="chat_privacy_typing">Show when I\'m typing</string>
+
+    <!-- Conversations on other networks -->
+    <string name="chat_invitation">Invitation</string>
+    <string name="chat_invitation_message">You are invited to this conversation</string>
+    <string name="chat_invitation_accept">Accept</string>
+    <string name="chat_invitation_decline_short">Decline</string>
+    <string name="chat_invitation_decline">Decline invitation</string>
+    <string name="chat_invitation_joined">Joined</string>
+    <string name="chat_invitation_declined">Invitation declined</string>
+    <string name="chat_relayed_unencrypted">Messages in this chat reach Matrix unencrypted.</string>
+    <string name="chat_as_address">As %1$s</string>
+    <string name="chat_new_network">Network</string>
+    <string name="chat_new_network_mochi" translatable="false">Mochi</string>
+    <string name="chat_new_addresses">Addresses</string>
+    <string name="chat_new_address_fediverse" translatable="false">@name@server.example</string>
+    <string name="chat_new_address_xmpp" translatable="false">name@server.example</string>
+    <string name="chat_new_address_matrix" translatable="false">@name:server.example</string>
+    <string name="chat_role_owner">Owner</string>
+    <string name="chat_role_admin">Administrator</string>
+    <string name="chat_role_moderator">Moderator</string>
+    <string name="chat_role_visitor">Visitor</string>
+
+    <!-- Presence, typing and receipts -->
+    <string name="chat_presence_online">Online</string>
+    <string name="chat_presence_away">Away</string>
+    <string name="chat_presence_busy">Busy</string>
+    <string name="chat_last_seen">Last seen %1$s</string>
+    <string name="chat_typing_one">%1$s is typing...</string>
+    <string name="chat_typing_many">%1$s are typing...</string>
+    <string name="chat_receipt_sent">Sent</string>
+    <string name="chat_receipt_delivered">Delivered</string>
+    <string name="chat_receipt_read">Read</string>
+    <string name="chat_seen_by">Seen by %1$s</string>
+    <string name="chat_message_encrypted">Encrypted message</string>
+
+    <!-- Threads -->
+    <string name="chat_thread_title">Thread</string>
+    <string name="chat_thread_reply">Reply in thread</string>
+    <string name="chat_thread_earlier">Show earlier replies</string>
+    <plurals name="chat_thread_replies">
+        <item quantity="one">%1$s reply</item>
+        <item quantity="other">%1$s replies</item>
+    </plurals>
+
+    <!-- Encryption of Matrix and XMPP conversations, whose device the server holds -->
+    <string name="chat_encryption_title">Encryption</string>
+    <string name="chat_encryption_setup">Set up recovery</string>
+    <string name="chat_encryption_recover">Enter recovery key</string>
+    <string name="chat_encryption_device">This device</string>
+    <string name="chat_encryption_device_omemo">This device (OMEMO)</string>
+    <string name="chat_encryption_device_omemo2">This device (OMEMO 2)</string>
+    <string name="chat_encryption_own">Your other devices</string>
+    <string name="chat_encryption_verified">Verified</string>
+    <string name="chat_encryption_distrusted">Distrusted</string>
+    <string name="chat_encryption_unverified">Not verified</string>
+    <string name="chat_encryption_no_other">No other devices</string>
+    <string name="chat_encryption_none">No devices</string>
+    <string name="chat_encryption_compare">Compare emoji</string>
+    <string name="chat_encryption_device_options">Device options</string>
+    <string name="chat_encryption_matches">The fingerprint matches</string>
+    <string name="chat_encryption_distrust">Distrust</string>
+    <string name="chat_encryption_forget">Forget my decision</string>
+    <string name="chat_encryption_save_failed">Failed to save</string>
+    <string name="chat_encryption_verify_waiting">Waiting for them to accept</string>
+    <string name="chat_encryption_verify_failed">The verification could not be started</string>
+    <string name="chat_encryption_key_title">Your recovery key</string>
+    <string name="chat_encryption_key_keep">Keep this key safe. It is shown once, and your other Matrix clients ask for it to read your encrypted messages.</string>
+    <string name="chat_encryption_password_asked">Your Matrix server asks for your account\'s password.</string>
+    <string name="chat_encryption_password">Password</string>
+    <string name="chat_encryption_password_refused">The password was not accepted</string>
+    <string name="chat_encryption_setup_failed">Recovery could not be set up</string>
+    <string name="chat_encryption_done">Done</string>
+    <string name="chat_encryption_key">Recovery key</string>
+    <string name="chat_encryption_restore">Restore</string>
+    <string name="chat_encryption_recovery_refused">That is not your recovery key</string>
+    <plurals name="chat_encryption_restored">
+        <item quantity="one">%1$s message key restored</item>
+        <item quantity="other">%1$s message keys restored</item>
+    </plurals>
+    <string name="chat_verification_own">Verify your device</string>
+    <string name="chat_verification_title">Verify %1$s</string>
+    <string name="chat_verification_compare">Check that the same emoji appear on the other screen.</string>
+    <string name="chat_verification_requested_own">Another of your devices wants to verify this one.</string>
+    <string name="chat_verification_requested">%1$s wants to verify you.</string>
+    <string name="chat_verification_waiting">Waiting for the other device...</string>
+    <string name="chat_verification_match">They match</string>
+    <string name="chat_verification_mismatch">They don\'t match</string>
+    <string name="chat_verification_mismatched">The emoji did not match, so the verification was cancelled</string>
+    <string name="chat_verification_cancelled">The verification was cancelled</string>
+    <string name="chat_verification_failed">The verification could not go on</string>
 </resources>

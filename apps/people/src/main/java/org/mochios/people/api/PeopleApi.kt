@@ -63,6 +63,8 @@ data class ContactRequest(
     val slug: String? = null,
     /** The contact a copy is made from, whose card the copy starts from. */
     val source: String? = null,
+    /** The managed names [properties] replaces, any it does not carry included. */
+    val managed: List<String>? = null,
 )
 
 /**
@@ -78,6 +80,12 @@ data class ContactUpdateRequest(
     val book: String? = null,
     /** The contact merged into this one and deleted, as it was previewed. */
     val source: MergeSource? = null,
+    /**
+     * The managed names [properties] replaces, any it does not carry
+     * included. Without it the server replaces the names clients managed
+     * before handles and messaging addresses, so it keeps those.
+     */
+    val managed: List<String>? = null,
 )
 
 /** The absorbed side of a merge; a stale [etag] is refused with 412. */
@@ -106,7 +114,34 @@ data class TokenResponse(val token: String = "", val username: String = "")
 /** The body of `-/token/list`: the devices, and the username every device enters. */
 data class TokensResponse(val tokens: List<DeviceToken> = emptyList(), val username: String = "")
 
-data class SearchUsersResponse(val results: List<User> = emptyList())
+data class SearchUsersResponse(
+    val results: List<User> = emptyList(),
+    /** People on other networks the search found through the user's accounts. */
+    val networks: List<NetworkPerson> = emptyList(),
+)
+
+/**
+ * Someone on another network: [address] is their messaging address as a
+ * contact card holds it (vCard `IMPP`), and [contact] the contact already
+ * holding it, empty for none.
+ */
+data class NetworkPerson(
+    val id: String = "",
+    val name: String = "",
+    val address: String = "",
+    val network: String = "",
+    val contact: String = "",
+)
+
+/** What a network shows of a handle; every field empty where it does not answer. */
+data class HandleLookup(
+    val id: String = "",
+    val name: String = "",
+    val avatar: String = "",
+    val page: String = "",
+    val address: String = "",
+    val network: String = "",
+)
 
 data class SearchLocalUsersResponse(val results: List<LocalUser> = emptyList())
 
@@ -167,6 +202,9 @@ interface PeopleApi {
     @POST("-/contacts/search")
     suspend fun searchDirectory(@Field("search") search: String): Response<ApiResponse<SearchUsersResponse>>
 
+    @GET("-/contacts/handle/lookup")
+    suspend fun lookupHandle(@Query("handle") handle: String): Response<ApiResponse<HandleLookup>>
+
     // ---- Contacts sync ----
 
     /** What changed since the cursor [since], "0" for every contact. */
@@ -226,6 +264,8 @@ interface PeopleApi {
         @Field("contact") contact: String? = null,
         /** The address book a contact the invite makes goes in; the default one when null. */
         @Field("book") book: String? = null,
+        /** For an `xmpp:` person, the user's hosted XMPP account it goes through. */
+        @Field("account") account: String? = null,
     ): Response<ApiResponse<EmptyResponse>>
 
     @FormUrlEncoded
@@ -242,7 +282,12 @@ interface PeopleApi {
     @FormUrlEncoded
     @POST("-/friends/remove")
     // contract-ok: the handler reads person through its person_input helper.
-    suspend fun removeFriend(@Field("person") person: String): Response<ApiResponse<EmptyResponse>>
+    suspend fun removeFriend(
+        // contract-ok: the handler reads person through its person_input helper.
+        @Field("person") person: String,
+        /** For an `xmpp:` person, ends it through this account alone; every account when null. */
+        @Field("account") account: String? = null,
+    ): Response<ApiResponse<EmptyResponse>>
 
     // ---- Welcome ----
 

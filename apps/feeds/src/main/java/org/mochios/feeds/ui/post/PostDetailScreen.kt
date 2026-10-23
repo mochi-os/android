@@ -27,6 +27,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -42,6 +43,10 @@ import androidx.compose.material.icons.outlined.Link
 import androidx.compose.material.icons.outlined.LocalOffer
 import androidx.compose.material.icons.outlined.NotificationsActive
 import androidx.compose.material.icons.outlined.NotificationsNone
+import androidx.compose.material.icons.outlined.PushPin
+import androidx.compose.material.icons.outlined.Repeat
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -61,6 +66,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -81,7 +87,10 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.model.Comment
 import org.mochios.android.model.Attachment
 import org.mochios.android.push.VisibleEntityEffect
+import org.mochios.android.ui.components.CommentThreadBack
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.findInThread
+import org.mochios.android.ui.components.rememberCollapsedComments
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.AttachmentLightbox
 import org.mochios.android.ui.components.ComposeBar
@@ -103,6 +112,7 @@ import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.ui.components.MochiImage
+import org.mochios.android.util.shareLink
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
@@ -110,11 +120,21 @@ import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.PostBody
+import org.mochios.feeds.ui.component.PostCopies
+import org.mochios.feeds.ui.component.PostHeadline
+import org.mochios.feeds.ui.component.PostMediaGrid
+import org.mochios.feeds.ui.component.PostPollView
+import org.mochios.feeds.ui.component.PostWarning
+import org.mochios.feeds.ui.component.QuoteCard
+import org.mochios.feeds.ui.component.boostedFrom
+import org.mochios.feeds.ui.component.hasBadges
+import org.mochios.feeds.ui.component.repliesElsewhere
 import org.mochios.feeds.ui.component.currentReactionType
-import org.mochios.feeds.ui.component.flattenComments
+import org.mochios.feeds.ui.component.threadRows
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.android.R as MochiR
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -141,6 +161,9 @@ fun PostDetailScreen(
     val editCommentText by viewModel.editCommentText.collectAsState()
     val tags by viewModel.tags.collectAsState()
     val actionError by viewModel.actionError.collectAsState()
+    val actionMessage by viewModel.actionMessage.collectAsState()
+    val hosted by viewModel.hosted.collectAsState()
+    val replyFrom by viewModel.replyFrom.collectAsState()
 
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showDeleteCommentDialog by remember { mutableStateOf<String?>(null) }
@@ -152,6 +175,14 @@ fun PostDetailScreen(
         actionError?.let {
             snackbarHostState.showSnackbar(it.userMessage())
             viewModel.clearActionError()
+        }
+    }
+
+    val resources = LocalResources.current
+    LaunchedEffect(actionMessage) {
+        actionMessage?.let {
+            snackbarHostState.showSnackbar(resources.getString(it))
+            viewModel.clearActionMessage()
         }
     }
 
@@ -194,10 +225,11 @@ fun PostDetailScreen(
                                 contentDescription = stringResource(MochiR.string.common_delete)
                             )
                         }
-                        // The overflow menu's only entry is Sources, so it
-                        // appears only for posts ingested from a source; RSS
-                        // posts open the article screen instead.
-                        post?.source?.url?.takeIf { it.isNotEmpty() }?.let { sourceUrl ->
+                        // The post's source, pinning, and a boost of a post
+                        // from another network from the first hosted account.
+                        post?.let { current ->
+                            val sourceUrl = current.source?.url?.takeIf { it.isNotEmpty() }
+                            val booster = hosted.firstOrNull()?.takeIf { current.elsewhere }
                             Box {
                                 MochiIconButton(onClick = { showOverflowMenu = true }) {
                                     Icon(
@@ -209,14 +241,44 @@ fun PostDetailScreen(
                                     expanded = showOverflowMenu,
                                     onDismissRequest = { showOverflowMenu = false }
                                 ) {
+                                    if (sourceUrl != null) {
+                                        MochiDropdownMenuItem(
+                                            text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                            onClick = {
+                                                showOverflowMenu = false
+                                                onNavigateToSources(viewModel.feedId, sourceUrl)
+                                            },
+                                            leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
+                                        )
+                                    }
                                     MochiDropdownMenuItem(
-                                        text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                        text = {
+                                            Text(stringResource(if (current.pinned > 0) R.string.feeds_unpin_post else R.string.feeds_pin_post))
+                                        },
                                         onClick = {
                                             showOverflowMenu = false
-                                            onNavigateToSources(viewModel.feedId, sourceUrl)
+                                            viewModel.togglePin()
                                         },
-                                        leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
+                                        leadingIcon = { Icon(Icons.Outlined.PushPin, contentDescription = null) },
                                     )
+                                    if (booster != null) {
+                                        MochiDropdownMenuItem(
+                                            text = {
+                                                Text(
+                                                    if (boostedFrom(current, booster)) {
+                                                        stringResource(R.string.feeds_take_boost_back)
+                                                    } else {
+                                                        stringResource(R.string.feeds_boost_from, booster.identifier)
+                                                    }
+                                                )
+                                            },
+                                            onClick = {
+                                                showOverflowMenu = false
+                                                viewModel.toggleBoost()
+                                            },
+                                            leadingIcon = { Icon(Icons.Outlined.Repeat, contentDescription = null) },
+                                        )
+                                    }
                                 }
                             }
                         }
@@ -246,9 +308,17 @@ fun PostDetailScreen(
                     // A comment needs a body; attachments alone will not do.
                     requireText = true,
                     onSearchMentions = { viewModel.searchMembers(it) },
-                    banner = feedsReplyBanner(
-                        findComment(post?.comments.orEmpty(), replyingTo),
-                        { viewModel.setReplyingTo(null) },
+                    banner = feedsComposerBanner(
+                        replyFromBanner(
+                            accounts = hosted,
+                            shown = post?.let(::repliesElsewhere) == true,
+                            chosen = replyFrom,
+                            onChoose = { viewModel.setReplyFrom(it) },
+                        ),
+                        feedsReplyBanner(
+                            findComment(post?.comments.orEmpty(), replyingTo),
+                            { viewModel.setReplyingTo(null) },
+                        ),
                     ),
                 )
             }
@@ -322,11 +392,20 @@ internal fun PostDetailContent(
     val editCommentText by viewModel.editCommentText.collectAsState()
     val currentUserId by viewModel.currentUserId.collectAsState()
     val tags by viewModel.tags.collectAsState()
+    val voting by viewModel.voting.collectAsState()
+    // The comment whose author the owner is muting, blocking or reporting, and which.
+    var moderating by remember { mutableStateOf<Pair<org.mochios.android.model.Comment, String>?>(null) }
 
     // A comment's chip opens the lightbox on the image it is about, comments
     // showing. Hosted here rather than in the gallery, whose lazy item may
     // have scrolled out of composition by the time a chip far down is tapped.
     var openAttachment by remember { mutableStateOf<String?>(null) }
+    val focusedId by viewModel.focusedComment.collectAsState()
+    val collapsed = rememberCollapsedComments()
+    val listState = rememberLazyListState()
+    val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val shareTitle = stringResource(MochiR.string.comment_share)
 
     when {
         isLoading && post == null -> {
@@ -352,8 +431,20 @@ internal fun PostDetailContent(
 
         post != null -> {
             val currentPost = post!!
+            // A post opened on one comment shows it alone with its replies,
+            // under a way back to them all; one deleted since shows them all.
+            val focused = focusedId?.let { id ->
+                findInThread(currentPost.comments, id, { it.id }, { it.children })
+            }
+            val rows = threadRows(focused?.let { listOf(it) } ?: currentPost.comments, collapsed.ids)
+            // Land on the comment rather than the top of the post: the
+            // post, then the comments heading, then the way back.
+            LaunchedEffect(focused?.id) {
+                if (focused != null) listState.scrollToItem(2)
+            }
             LazyColumn(
                 modifier = modifier,
+                state = listState,
                 contentPadding = contentPadding
             ) {
                 item(key = "post_content") {
@@ -372,6 +463,8 @@ internal fun PostDetailContent(
                             )
                         },
                         showBody = showBody,
+                        voting = voting,
+                        onVote = { viewModel.vote(it) },
                         commentCount = { att -> anchoredCommentCount(currentPost.comments, att.id) },
                         comments = { att ->
                             AttachmentComments(
@@ -395,12 +488,23 @@ internal fun PostDetailContent(
                         )
                     }
 
-                    val flatComments = flattenComments(currentPost.comments, 0)
-                    items(flatComments.size, key = { flatComments[it].first.id }) { index ->
-                        val (comment, depth) = flatComments[index]
+                    if (focused != null) {
+                        item(key = "all_comments") {
+                            CommentThreadBack(
+                                onClick = {
+                                    viewModel.openComment(null)
+                                    scope.launch { listState.scrollToItem(1) }
+                                },
+                                modifier = Modifier.padding(horizontal = 8.dp),
+                            )
+                        }
+                    }
+                    items(rows.size, key = { rows[it].comment.id }) { index ->
+                        val row = rows[index]
+                        val comment = row.comment
                         CommentItem(
                             comment = comment,
-                            depth = depth,
+                            depth = row.depth,
                             avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
                             feedId = viewModel.feedId,
                             isEditing = editingCommentId == comment.id,
@@ -425,6 +529,19 @@ internal fun PostDetailContent(
                             canManage = permissions.manage,
                             isMine = currentUserId != null && comment.authorId == currentUserId,
                             onOpenAttachment = { openAttachment = it },
+                            onModerate = if (permissions.manage) ({ action -> moderating = comment to action }) else null,
+                            onShare = {
+                                shareLink(
+                                    context,
+                                    viewModel.commentLink(comment.id),
+                                    currentPost.feedName.ifEmpty { shareTitle },
+                                )
+                            },
+                            replies = row.replies,
+                            collapsed = comment.id in collapsed,
+                            onToggleCollapse = if (row.replies > 0) ({ collapsed.toggle(comment.id) }) else null,
+                            onCollapseParent = row.parent?.let { parent -> { collapsed.collapse(parent) } },
+                            highlighted = comment.id == focused?.id,
                         )
                     }
                 }
@@ -452,6 +569,18 @@ internal fun PostDetailContent(
                     commentsInitiallyOpen = true,
                 )
             }
+
+            moderating?.let { (comment, action) ->
+                CommenterDialog(
+                    action = action,
+                    author = comment.name.ifEmpty { comment.authorId },
+                    onDismiss = { moderating = null },
+                    onConfirm = { reason ->
+                        moderating = null
+                        viewModel.moderate(comment.id, action, reason)
+                    },
+                )
+            }
         }
     }
 }
@@ -468,11 +597,17 @@ private fun PostContent(
     onAddTag: (String) -> Unit,
     onAdjustInterest: (Tag, String) -> Unit,
     showBody: Boolean = true,
+    voting: Boolean = false,
+    onVote: (List<Int>) -> Unit = {},
     // The lightbox comments slot, per image attachment.
     commentCount: ((Attachment) -> Int)? = null,
     comments: (@Composable (Attachment) -> Unit)? = null,
 ) {
     val context = LocalContext.current
+    // A post behind a content warning shows its warning until the reader asks
+    // for the rest.
+    var revealed by rememberSaveable(post.id) { mutableStateOf(false) }
+    val hidden = post.warning.isNotEmpty() && !revealed
 
     Column(modifier = Modifier.padding(16.dp)) {
         // Author/source + time
@@ -584,6 +719,25 @@ private fun PostContent(
             )
         }
 
+        if (showBody) {
+            if (post.data?.person != null || post.data?.boost != null || hasBadges(post)) {
+                Spacer(modifier = Modifier.height(8.dp))
+                PostHeadline(post)
+            }
+            if (post.warning.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(8.dp))
+                PostWarning(warning = post.warning, revealed = revealed, onToggle = { revealed = !revealed })
+            }
+            if (!hidden && (post.copies.isNotEmpty() || post.boosts > 0)) {
+                Spacer(modifier = Modifier.height(4.dp))
+                PostCopies(copies = post.copies, boosts = post.boosts)
+            }
+            post.data?.quote?.takeIf { !hidden }?.let { quote ->
+                Spacer(modifier = Modifier.height(8.dp))
+                QuoteCard(quote)
+            }
+        }
+
         // RSS-source posts: a body tap opens the article. Body, videos, preview
         // image and source link are hidden inside the source-view sheet, where
         // the WebView already shows the article.
@@ -596,7 +750,7 @@ private fun PostContent(
                 }
             }
         }
-        if (showBody && post.body.isNotEmpty()) {
+        if (showBody && !hidden && post.body.isNotEmpty()) {
             Spacer(modifier = Modifier.height(12.dp))
             PostBody(
                 post = post,
@@ -605,16 +759,30 @@ private fun PostContent(
             )
         }
 
-        if (showBody) {
+        if (showBody && !hidden) {
             val videos = remember(post.body) { extractVideos(post.body) }
             videos.forEach { video ->
                 Spacer(modifier = Modifier.height(8.dp))
                 VideoEmbed(video = video)
             }
+            post.data?.media?.takeIf { it.isNotEmpty() }?.let { media ->
+                Spacer(modifier = Modifier.height(8.dp))
+                PostMediaGrid(media = media, sensitive = post.sensitive != 0)
+            }
+            post.data?.poll?.let { poll ->
+                Spacer(modifier = Modifier.height(8.dp))
+                PostPollView(
+                    poll = poll,
+                    voted = post.voted,
+                    canVote = permissions.react || permissions.comment || permissions.manage,
+                    busy = voting,
+                    onVote = onVote,
+                )
+            }
         }
 
         // Attachments
-        if (post.attachments.isNotEmpty()) {
+        if (!hidden && post.attachments.isNotEmpty()) {
             Spacer(modifier = Modifier.height(12.dp))
             val attachmentFeed = post.feed.ifEmpty { feedId }
             AttachmentGallery(

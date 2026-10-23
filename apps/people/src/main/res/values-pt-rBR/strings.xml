@@ -164,4 +164,10 @@
     <string name="people_contact_birthday_month">Mês</string>
     <string name="people_contact_birthday_year">Ano</string>
     <string name="people_contact_birthday_clear">Limpar</string>
+    <string name="people_contact_add_handle">Adicionar identificador</string>
+    <string name="people_contact_add_messaging">Adicionar endereço de mensagens</string>
+    <string name="people_contact_network">Rede</string>
+    <string name="people_contact_xmpp">Contato XMPP</string>
+    <string name="people_person_forums">Fóruns</string>
+    <string name="people_contact_network_other">Outra</string>
 </resources>

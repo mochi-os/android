@@ -5,6 +5,8 @@
 
 package org.mochios.android.util
 
+import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import org.mochios.android.i18n.Flights
 import org.mochios.android.i18n.Maps
@@ -56,6 +58,22 @@ fun entityDeepLink(app: String?, segments: List<String>, apps: List<String>): St
         append('/').append(app).append('/').append(entity)
         for (s in segments.drop(1)) append('/').append(s)
     }
+}
+
+/**
+ * Hand [link] to the system share sheet, whose targets include Copy, so a
+ * screen needs no copy button of its own. [title] heads the sheet: Android 10
+ * and later ignore the chooser's title and read "Sharing text" without it.
+ */
+fun shareLink(context: Context, link: String, title: String) {
+    val intent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, link)
+        putExtra(Intent.EXTRA_TITLE, title)
+    }
+    val chooser = Intent.createChooser(intent, title)
+    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(chooser)
 }
 
 // A flight number on its own: an airline's two-character code (two letters, or

@@ -16,6 +16,7 @@ import org.mochios.android.api.unwrap
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.sync.ContactProperty
 import org.mochios.android.sync.ContactsChanges
+import org.mochios.android.sync.ContactsMapping
 import org.mochios.android.sync.ContactsSource
 import org.mochios.android.sync.SyncAuthorization
 import org.mochios.android.sync.SyncConflict
@@ -55,7 +56,7 @@ class PeopleContactsSource @Inject constructor(
         call { api.createContact(ContactRequest(properties, slug = slug)) }.contact.synced()
 
     override suspend fun update(id: String, etag: String, properties: List<ContactProperty>): SyncedContact =
-        call { api.updateContact(ContactUpdateRequest(id, etag, properties)) }.contact.synced()
+        call { api.updateContact(syncUpdate(id, etag, properties)) }.contact.synced()
 
     override suspend fun delete(id: String, etag: String) {
         call { api.deleteContact(id, etag) }
@@ -113,3 +114,11 @@ abstract class ContactsSourceModule {
     @Singleton
     abstract fun bindContactsSource(impl: PeopleContactsSource): ContactsSource
 }
+
+/**
+ * The update an upload sends. The phone's set is named, so a kind the phone
+ * now holds none of goes, while what the phone has no row for - a handle on
+ * another network - stays.
+ */
+internal fun syncUpdate(id: String, etag: String, properties: List<ContactProperty>) =
+    ContactUpdateRequest(id, etag, properties, managed = ContactsMapping.MANAGED.toList())

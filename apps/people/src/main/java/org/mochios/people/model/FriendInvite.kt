@@ -21,4 +21,11 @@ data class FriendInvite(
     val updated: Long = 0,
     val fingerprint: String = "",
     val directory: String = "",
+    /**
+     * An invitation on XMPP: the user's [account] it is through, and the
+     * other side's [address], which is how it is known in place of a
+     * fingerprint. Both empty for a Mochi invitation.
+     */
+    val account: String = "",
+    val address: String = "",
 )

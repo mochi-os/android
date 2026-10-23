@@ -222,4 +222,10 @@
     <string name="people_contact_create">Creu</string>
     <string name="people_sync_permission_reason">Mae cysoni\'n copïo eich ffrindiau i ap Cysylltiadau\'r ffôn hwn, felly mae angen mynediad at eich cysylltiadau arno.</string>
     <string name="people_sync_permission_blocked">Mae mynediad at gysylltiadau wedi\'i ddiffodd ar gyfer yr ap hwn. Gallwch ei droi ymlaen o dan Caniatâd yng ngosodiadau\'r ap.</string>
+    <string name="people_contact_add_handle">Ychwanegu enw defnyddiwr</string>
+    <string name="people_contact_add_messaging">Ychwanegu cyfeiriad negeseua</string>
+    <string name="people_contact_network">Rhwydwaith</string>
+    <string name="people_contact_xmpp">Cyswllt XMPP</string>
+    <string name="people_person_forums">Fforymau</string>
+    <string name="people_contact_network_other">Arall</string>
 </resources>

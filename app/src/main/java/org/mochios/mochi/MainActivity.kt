@@ -34,6 +34,7 @@ import org.mochios.android.auth.OAuthReturnKind
 import org.mochios.android.auth.oauthReturnKind
 import org.mochios.android.auth.shouldAcceptOAuthReturn
 import org.mochios.android.util.entityDeepLink
+import org.mochios.android.util.followLink
 import org.mochios.android.util.holds
 import org.mochios.android.util.isAt
 import org.mochios.android.util.openInPlace
@@ -701,7 +702,10 @@ open class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun navigateToLink(navController: NavController, link: String) {
+    private fun navigateToLink(navController: NavController, link: String) =
+        followLink(this, link) { path -> route(navController, path) }
+
+    private fun route(navController: NavController, link: String) {
         // Split off an optional query string before path tokenisation so links
         // like "chat/new?friend=<id>" survive intact for the matcher below.
         val pathAndQuery = link.trimStart('/').split('?', limit = 2)
@@ -712,7 +716,9 @@ open class MainActivity : ComponentActivity() {
         val id = parts.getOrNull(1)
         when (firstSegment) {
             "feeds" -> {
-                val route = FeedsApp.linkRoute(id, parts.getOrNull(2), parseQueryParam(query, "link"))
+                val route = FeedsApp.linkRoute(
+                    id, parts.getOrNull(2), parseQueryParam(query, "link"), parseQueryParam(query, "comment"),
+                )
                 if (route == null || id == null) {
                     navController.navigate(FeedsApp.HOME) { launchSingleTop = true }
                     return
@@ -732,8 +738,17 @@ open class MainActivity : ComponentActivity() {
             "chat" -> {
                 if (id == "new") {
                     val friendId = parseQueryParam(query, "friend")
+                    val account = parseQueryParam(query, "account").orEmpty()
+                    val address = parseQueryParam(query, "address").orEmpty()
                     navController.returnToRouter(ChatApp.ROUTER)
-                    navController.navigate(ChatApp.newChat(friendId.orEmpty())) {
+                    // A contact's messaging address on another network goes to
+                    // the account named; a friend to their Mochi chat.
+                    val route = if (account.isNotEmpty() && address.isNotEmpty()) {
+                        ChatApp.newChat(account, address, parseQueryParam(query, "name").orEmpty())
+                    } else {
+                        ChatApp.newChat(friendId.orEmpty())
+                    }
+                    navController.navigate(route) {
                         launchSingleTop = true
                     }
                     return
@@ -746,7 +761,7 @@ open class MainActivity : ComponentActivity() {
             }
             "forums" -> {
                 val server = parseQueryParam(query, "server")
-                val route = ForumsApp.linkRoute(id, parts.getOrNull(2), server)
+                val route = ForumsApp.linkRoute(id, parts.getOrNull(2), server, parseQueryParam(query, "comment"))
                 if (route != null && navController.isAt(route)) return
                 if (route == null || id == null) {
                     navController.openAppHome(ForumsApp.HOME)

@@ -14,7 +14,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.provider.ContactsContract
-import android.provider.ContactsContract.CommonDataKinds.Event
 import android.provider.ContactsContract.CommonDataKinds.Photo
 import android.provider.ContactsContract.Data
 import android.provider.ContactsContract.RawContacts
@@ -164,24 +163,17 @@ class ProviderContactsStore(
 
     override fun replace(local: Long, contact: SyncedContact) {
         val batch = arrayListOf<ContentProviderOperation>()
-        val kinds = ContactsMapping.kinds().toList()
+        val written = rows(contact)
+        val (selection, arguments) = ContactsMapping.replaced(written)
         batch.add(
             ContentProviderOperation.newDelete(Data.CONTENT_URI.adapter())
                 .withSelection(
-                    "${Data.RAW_CONTACT_ID}=? and (${Data.MIMETYPE} in (${kinds.joinToString(",") { "?" }}) or " +
-                        "(${Data.MIMETYPE}=? and ${Event.TYPE}=?) or (${Data.MIMETYPE}=? and ${Data.SYNC1}=?))",
-                    (
-                        listOf(local.toString()) + kinds + listOf(
-                            Event.CONTENT_ITEM_TYPE,
-                            Event.TYPE_BIRTHDAY.toString(),
-                            Photo.CONTENT_ITEM_TYPE,
-                            ContactsMapping.PHOTO_MARKER,
-                        )
-                    ).toTypedArray(),
+                    "${Data.RAW_CONTACT_ID}=? and $selection",
+                    (listOf(local.toString()) + arguments).toTypedArray(),
                 )
                 .build(),
         )
-        for (row in rows(contact)) {
+        for (row in written) {
             batch.add(
                 ContentProviderOperation.newInsert(Data.CONTENT_URI.adapter())
                     .withValue(Data.RAW_CONTACT_ID, local)

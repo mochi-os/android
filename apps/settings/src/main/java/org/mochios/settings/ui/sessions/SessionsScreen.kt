@@ -53,7 +53,9 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
 import org.mochios.settings.R
+import org.mochios.settings.api.OtherToken
 import org.mochios.settings.api.Session
+import org.mochios.settings.ui.networks.networkLabel
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -69,7 +71,7 @@ fun SessionsScreen(
     // nothing to show, and nothing on it can reach a refresh to clear it.
     LaunchedEffect(state.error) {
         val failure = state.error
-        if (failure != null && state.sessions.isNotEmpty()) {
+        if (failure != null && state.hasContent()) {
             snackbar.showSnackbar(failure.userMessage())
             viewModel.clearError()
         }
@@ -93,20 +95,23 @@ fun SessionsScreen(
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.isLoading -> CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-                state.error != null && state.sessions.isEmpty() -> ErrorState(
+                state.error != null && !state.hasContent() -> ErrorState(
                     error = state.error!!,
                     onRetry = viewModel::refresh,
-                )
-                state.sessions.isEmpty() -> Text(
-                    text = stringResource(R.string.sessions_empty),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.align(Alignment.Center).padding(16.dp),
                 )
                 else -> LazyColumn(
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
+                    if (state.sessions.isEmpty()) {
+                        item("empty") {
+                            Text(
+                                text = stringResource(R.string.sessions_empty),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
                     // The server marks the caller's own session; the list
                     // order says nothing about which one that is.
                     itemsIndexed(state.sessions) { _, session ->
@@ -117,6 +122,8 @@ fun SessionsScreen(
                             onRevoke = { onSuccess -> viewModel.revoke(session.id, onSuccess) },
                         )
                     }
+                    tokens(R.string.sessions_signins, state.signins, state.revoking, viewModel::revokeToken)
+                    tokens(R.string.sessions_passwords, state.passwords, state.revoking, viewModel::revokeToken)
                 }
             }
         }
@@ -193,6 +200,109 @@ private fun SessionRow(
             onDismissRequest = { if (!revoking) confirm = false },
             title = stringResource(R.string.sessions_revoke_title),
             text = stringResource(R.string.sessions_revoke_message),
+            confirmText = stringResource(R.string.sessions_revoke),
+            onConfirm = { onRevoke { confirm = false } },
+            confirmLoading = revoking,
+            destructive = true,
+            dismissText = stringResource(R.string.account_cancel),
+            dismissEnabled = !revoking,
+        )
+    }
+}
+
+private fun SessionsUiState.hasContent() =
+    sessions.isNotEmpty() || signins.isNotEmpty() || passwords.isNotEmpty()
+
+/** A section of sign-ins by other networks' apps, or of minted passwords, under its title. */
+private fun androidx.compose.foundation.lazy.LazyListScope.tokens(
+    title: Int,
+    tokens: List<OtherToken>,
+    revoking: String?,
+    onRevoke: (String, () -> Unit) -> Unit,
+) {
+    if (tokens.isEmpty()) return
+    item("title:$title") {
+        Text(
+            stringResource(title),
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.SemiBold,
+            modifier = Modifier.padding(top = 8.dp),
+        )
+    }
+    itemsIndexed(tokens, key = { _, token -> "token:" + token.hash }) { _, token ->
+        TokenRow(
+            token = token,
+            revoking = revoking == token.hash,
+            onRevoke = { onSuccess -> onRevoke(token.hash, onSuccess) },
+        )
+    }
+}
+
+/**
+ * A sign-in by another network's app, or a password minted for one: the app
+ * or the device, then the account it is for.
+ */
+@Composable
+internal fun TokenRow(
+    token: OtherToken,
+    revoking: Boolean,
+    onRevoke: (onSuccess: () -> Unit) -> Unit,
+) {
+    val format = LocalFormat.current
+    var confirm by remember(token.hash) { mutableStateOf(false) }
+    val signin = token.kind == "signin"
+    val title = if (signin) token.client.name.ifEmpty { token.name } else token.name.ifEmpty { token.device }
+    val never = stringResource(R.string.sessions_never)
+    MochiCard(modifier = Modifier.fillMaxWidth()) {
+        Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(title, fontWeight = FontWeight.SemiBold)
+                if (signin && token.device.isNotEmpty()) {
+                    Text(
+                        token.device,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Text(
+                    token.address + " · " + networkLabel(token.network),
+                    style = MaterialTheme.typography.bodySmall,
+                )
+                Text(
+                    stringResource(
+                        R.string.account_created,
+                        if (token.created > 0) format.formatRelativeTime(token.created) else never,
+                    ),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                Text(
+                    stringResource(
+                        R.string.account_last_used,
+                        if (token.used > 0) format.formatRelativeTime(token.used) else never,
+                    ),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            MochiIconButton(onClick = { confirm = true }) {
+                Icon(
+                    Icons.AutoMirrored.Filled.Logout,
+                    contentDescription = stringResource(R.string.sessions_revoke),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+    }
+    if (confirm) {
+        MochiAlertDialog(
+            onDismissRequest = { if (!revoking) confirm = false },
+            title = stringResource(if (signin) R.string.sessions_revoke_signin_title else R.string.sessions_revoke_password_title),
+            text = if (signin) {
+                stringResource(R.string.sessions_revoke_signin_message, title, token.address)
+            } else {
+                stringResource(R.string.sessions_revoke_password_message, token.address)
+            },
             confirmText = stringResource(R.string.sessions_revoke),
             onConfirm = { onRevoke { confirm = false } },
             confirmLoading = revoking,

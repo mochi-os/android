@@ -218,4 +218,10 @@
     <string name="people_contact_create">बनाईं</string>
     <string name="people_sync_permission_reason">सिंक कइला से रउआ के दोस्त एह फोन के संपर्क ऐप में कॉपी हो जालें, एह से एकरा के रउआ के संपर्क तक पहुंच चाहीं।</string>
     <string name="people_sync_permission_blocked">एह ऐप खातिर संपर्क के पहुंच बंद बा। रउआ ऐप के सेटिंग में अनुमतियां के तहत एकरा के चालू कर सकेलीं।</string>
+    <string name="people_contact_add_handle">हैंडल जोड़ीं</string>
+    <string name="people_contact_add_messaging">मैसेजिंग पता जोड़ीं</string>
+    <string name="people_contact_network">नेटवर्क</string>
+    <string name="people_contact_xmpp">XMPP संपर्क</string>
+    <string name="people_person_forums">फोरम</string>
+    <string name="people_contact_network_other">दोसर</string>
 </resources>

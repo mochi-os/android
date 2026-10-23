@@ -24,8 +24,10 @@ import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
+import org.mochios.feeds.model.Imported
 import org.mochios.feeds.model.Member
 import org.mochios.feeds.model.Permissions
+import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.User
 import org.mochios.feeds.repository.FeedsRepository
@@ -91,6 +93,25 @@ class FeedSettingsViewModel @Inject constructor(
 
     private val _isSavingSource = MutableStateFlow(false)
     val isSavingSource: StateFlow<Boolean> = _isSavingSource.asStateFlow()
+
+    /**
+     * The owner's accounts on other networks, for the kinds of source read
+     * through one: the feed's publish accounts for an account's timeline or
+     * posts, the hosted fediverse accounts a person is followed through, and
+     * the Bluesky accounts a custom feed or list is read through.
+     */
+    private val _publishAccounts = MutableStateFlow<List<PublishAccount>>(emptyList())
+    val publishAccounts: StateFlow<List<PublishAccount>> = _publishAccounts.asStateFlow()
+
+    private val _networkAccounts = MutableStateFlow<List<PublishAccount>>(emptyList())
+    val networkAccounts: StateFlow<List<PublishAccount>> = _networkAccounts.asStateFlow()
+
+    /** What the last follow-list import brought in, for the screen to say. */
+    private val _imported = MutableStateFlow<Imported?>(null)
+    val imported: StateFlow<Imported?> = _imported.asStateFlow()
+
+    private val _isImporting = MutableStateFlow(false)
+    val isImporting: StateFlow<Boolean> = _isImporting.asStateFlow()
 
     // The same for deleting the feed and unsubscribing from it; success leaves
     // the settings screen, which takes the confirmation with it.
@@ -276,13 +297,49 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
-    fun addSource(url: String, type: String, onSuccess: () -> Unit = {}) {
+    /** The accounts the add-source dialog offers, read once the sources show. */
+    fun loadSourceAccounts() {
+        viewModelScope.launch {
+            try {
+                _networkAccounts.value = repository.networkAccounts()
+            } catch (_: Exception) {
+                // Without them the dialog offers no choice of account.
+            }
+            try {
+                _publishAccounts.value = repository.getPublish(feedId).accounts
+            } catch (_: Exception) {
+                // A feed that publishes nowhere still adds every other source.
+            }
+        }
+    }
+
+    /** Follow everyone in a Mastodon export of follows (following_accounts.csv), as sources. */
+    fun importFollows(text: String) {
+        if (_isImporting.value) return
+        _isImporting.value = true
+        viewModelScope.launch {
+            try {
+                _imported.value = repository.importFollows(feedId, text)
+                loadSources()
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+            } finally {
+                _isImporting.value = false
+            }
+        }
+    }
+
+    fun clearImported() {
+        _imported.value = null
+    }
+
+    fun addSource(url: String, type: String, account: String? = null, onSuccess: () -> Unit = {}) {
         if (_isAddingSource.value) return
         _isAddingSource.value = true
         viewModelScope.launch {
             _addSourceError.value = null
             try {
-                val result = repository.addSource(feedId, url, type)
+                val result = repository.addSource(feedId, url, type, account)
                 _actionMessage.value = R.string.feeds_settings_source_added
                 onSuccess()
                 loadSources()
@@ -297,7 +354,7 @@ class FeedSettingsViewModel @Inject constructor(
                 // Not a failure to surface — the add can succeed once the app is
                 // granted the permission. Resolve its human name and stash the
                 // retry details for the approval dialog.
-                handlePermissionRequired(e, url, type)
+                handlePermissionRequired(e, url, type, account)
             } catch (e: Exception) {
                 // Surface inline in the add dialog rather than the snackbar so
                 // the user can correct the URL and retry.
@@ -316,7 +373,8 @@ class FeedSettingsViewModel @Inject constructor(
     private suspend fun handlePermissionRequired(
         error: PermissionRequiredException,
         url: String,
-        type: String
+        type: String,
+        account: String?,
     ) {
         val name = try {
             repository.permissionName(error.permission)
@@ -328,7 +386,8 @@ class FeedSettingsViewModel @Inject constructor(
             permission = error.permission,
             name = name,
             retryUrl = url,
-            retryType = type
+            retryType = type,
+            retryAccount = account,
         )
     }
 
@@ -339,7 +398,7 @@ class FeedSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.grantPermission(pending.app, pending.permission)
-                addSource(pending.retryUrl, pending.retryType)
+                addSource(pending.retryUrl, pending.retryType, pending.retryAccount)
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             }
@@ -669,5 +728,6 @@ data class PendingPermission(
     val permission: String,
     val name: String,
     val retryUrl: String,
-    val retryType: String
+    val retryType: String,
+    val retryAccount: String? = null,
 )

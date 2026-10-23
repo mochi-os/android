@@ -336,4 +336,9 @@
     <string name="upload_progress">အပ်လုဒ်တိုးတက်မှု</string>
     <string name="upload_processing">လုပ်ဆောင်နေသည်…</string>
     <string name="upload_sent">%2$s အနက် %1$s</string>
+    <string name="comment_share">မျှဝေရန်</string>
+    <string name="comment_all">မှတ်ချက်အားလုံး</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="other">+ ပြန်ဖြေချက် %1$s ခု ပိုနေသေးသည်</item>
+    </plurals>
 </resources>

@@ -336,4 +336,10 @@
     <string name="upload_progress">Ecuria e ngarkimit</string>
     <string name="upload_processing">Po përpunohet…</string>
     <string name="upload_sent">%1$s nga %2$s</string>
+    <string name="comment_share">Shpërndaj</string>
+    <string name="comment_all">Të gjitha komentet</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s përgjigje</item>
+        <item quantity="other">+%1$s përgjigje të tjera</item>
+    </plurals>
 </resources>

@@ -219,4 +219,10 @@
     <string name="people_contact_create">Creează</string>
     <string name="people_sync_permission_reason">Sincronizarea copiază prietenii tăi în aplicația Contacte a acestui telefon, așa că are nevoie de acces la contactele tale.</string>
     <string name="people_sync_permission_blocked">Accesul la contacte este dezactivat pentru această aplicație. Îl poți activa din Permisiuni, în setările aplicației.</string>
+    <string name="people_contact_add_handle">Adaugă pseudonim</string>
+    <string name="people_contact_add_messaging">Adaugă adresă de mesagerie</string>
+    <string name="people_contact_network">Rețea</string>
+    <string name="people_contact_xmpp">Contact XMPP</string>
+    <string name="people_person_forums">Forumuri</string>
+    <string name="people_contact_network_other">Alta</string>
 </resources>

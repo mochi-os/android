@@ -218,4 +218,10 @@
     <string name="people_contact_create">جوړ کړئ</string>
     <string name="people_sync_permission_reason">همغږي ستاسو ملګري د دې موبایل د اړیکو اپلیکیشن ته کاپي کوي، نو دې ته ستاسو اړیکو ته لاسرسی اړین دی.</string>
     <string name="people_sync_permission_blocked">د دې اپلیکیشن لپاره اړیکو ته لاسرسی بند دی. تاسو کولی شئ دا د اپلیکیشن په تنظیماتو کې د اجازو لاندې چالان کړئ.</string>
+    <string name="people_contact_add_handle">مستعار نوم اضافه کړئ</string>
+    <string name="people_contact_add_messaging">د پیغام رسولو پته اضافه کړئ</string>
+    <string name="people_contact_network">شبکه</string>
+    <string name="people_contact_xmpp">د XMPP اړیکه</string>
+    <string name="people_person_forums">فورمونه</string>
+    <string name="people_contact_network_other">نور</string>
 </resources>

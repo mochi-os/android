@@ -337,4 +337,11 @@
     <string name="upload_progress">Progresul încărcării</string>
     <string name="upload_processing">Se procesează…</string>
     <string name="upload_sent">%1$s din %2$s</string>
+    <string name="comment_share">Partajează</string>
+    <string name="comment_all">Toate comentariile</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s răspuns</item>
+        <item quantity="few">+%1$s răspunsuri în plus</item>
+        <item quantity="other">+%1$s de răspunsuri în plus</item>
+    </plurals>
 </resources>

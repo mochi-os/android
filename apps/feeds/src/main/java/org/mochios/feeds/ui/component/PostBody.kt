@@ -67,11 +67,13 @@ fun PostBody(
         // drops it for a cleaner preview — the title and body still open the
         // article — while the detail screen keeps it.
         val rssLink = post.data?.rss?.link.orEmpty()
-        if (stripTrailingLink && rssLink.isNotEmpty() && withoutTitle.endsWith(rssLink)) {
+        val text = if (stripTrailingLink && rssLink.isNotEmpty() && withoutTitle.endsWith(rssLink)) {
             withoutTitle.substring(0, withoutTitle.length - rssLink.length).trimEnd('\n', ' ')
         } else {
             withoutTitle
         }
+        // A post from another network names its custom emoji by :name:.
+        withEmoji(text, post.data?.emoji)
     }
     val truncated = fillHeight || maxLines != Int.MAX_VALUE
 

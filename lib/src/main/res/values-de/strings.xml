@@ -336,4 +336,10 @@
     <string name="upload_progress">Upload-Fortschritt</string>
     <string name="upload_processing">Wird verarbeitet…</string>
     <string name="upload_sent">%1$s von %2$s</string>
+    <string name="comment_share">Teilen</string>
+    <string name="comment_all">Alle Kommentare</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s Antwort</item>
+        <item quantity="other">+%1$s weitere Antworten</item>
+    </plurals>
 </resources>

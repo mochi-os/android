@@ -336,4 +336,10 @@
     <string name="upload_progress">የመስቀል ሂደት</string>
     <string name="upload_processing">በሂደት ላይ…</string>
     <string name="upload_sent">%1$s ከ %2$s</string>
+    <string name="comment_share">አጋራ</string>
+    <string name="comment_all">ሁሉም አስተያየቶች</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s ምላሽ</item>
+        <item quantity="other">+%1$s ተጨማሪ ምላሾች</item>
+    </plurals>
 </resources>

@@ -34,11 +34,14 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Phone
 import androidx.compose.material.icons.outlined.Email
+import androidx.compose.material.icons.outlined.AlternateEmail
+import androidx.compose.material.icons.automirrored.outlined.Chat
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.Switch
+import kotlinx.coroutines.delay
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
@@ -61,6 +64,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.CompactTextField
 import org.mochios.android.ui.components.CreateEntityForm
 import org.mochios.android.ui.components.CreateEntityScaffold
+import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -70,8 +74,11 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.providerName
 import org.mochios.people.R
+import org.mochios.people.api.HandleLookup
 import org.mochios.people.model.Contact
+import org.mochios.people.model.XmppContact
 import org.mochios.people.model.friendState
 import org.mochios.people.model.FriendState
 import org.mochios.android.R as MochiR
@@ -126,6 +133,8 @@ fun ContactEditScreen(
                     form = form,
                     books = uiState.books,
                     onChange = viewModel::updateForm,
+                    lookups = uiState.handles,
+                    onLookup = viewModel::lookup,
                 )
             }
         }
@@ -138,6 +147,8 @@ fun ContactEditScreen(
             onCopy = { viewModel.copy() },
             onMerge = { viewModel.openMerge() },
             onChange = viewModel::updateForm,
+            onLookup = viewModel::lookup,
+            onXmppToggle = viewModel::toggleXmpp,
             onFriendToggle = { on ->
                 val contact = uiState.contact ?: return@EditScaffold
                 when {
@@ -331,6 +342,51 @@ private fun FriendSwitch(
     }
 }
 
+/**
+ * The contact on XMPP through one of the user's hosted XMPP accounts: on
+ * while the account sees their presence or has asked to, with "Invited" while
+ * the ask is unanswered, and which address through which account once there
+ * is more than one of either.
+ */
+@Composable
+internal fun XmppSwitch(
+    entry: XmppContact,
+    several: Boolean,
+    enabled: Boolean,
+    onToggle: (Boolean) -> Unit,
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = stringResource(R.string.people_contact_xmpp),
+                style = MaterialTheme.typography.bodyLarge,
+            )
+            if (entry.invited) {
+                Text(
+                    text = stringResource(R.string.people_contacts_invited),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            if (several) {
+                Text(
+                    text = "${entry.address} · ${entry.identifier}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+        Switch(
+            checked = entry.on,
+            enabled = enabled,
+            onCheckedChange = onToggle,
+        )
+    }
+}
+
 @Composable
 private fun EditScaffold(
     state: ContactEditUiState,
@@ -341,6 +397,8 @@ private fun EditScaffold(
     onCopy: () -> Unit,
     onMerge: () -> Unit,
     onChange: (ContactForm) -> Unit,
+    onLookup: (String) -> Unit,
+    onXmppToggle: (XmppContact, Boolean) -> Unit,
     onFriendToggle: (Boolean) -> Unit,
 ) {
     var menuOpen by remember { mutableStateOf(false) }
@@ -411,13 +469,25 @@ private fun EditScaffold(
                         form = state.form,
                         books = state.books,
                         onChange = onChange,
+                        lookups = state.handles,
+                        onLookup = onLookup,
                         action = state.contact?.let { contact ->
                             @Composable {
-                                FriendSwitch(
-                                    state = contact.friendState(state.sent),
-                                    enabled = !state.isToggling,
-                                    onToggle = onFriendToggle,
-                                )
+                                Column {
+                                    FriendSwitch(
+                                        state = contact.friendState(state.sent),
+                                        enabled = !state.isToggling,
+                                        onToggle = onFriendToggle,
+                                    )
+                                    for (entry in contact.xmpp) {
+                                        XmppSwitch(
+                                            entry = entry,
+                                            several = contact.xmpp.size > 1,
+                                            enabled = !state.isToggling,
+                                            onToggle = { on -> onXmppToggle(entry, on) },
+                                        )
+                                    }
+                                }
                             }
                         },
                     )
@@ -447,6 +517,10 @@ internal fun ContactFields(
     books: List<org.mochios.people.model.Book>,
     onChange: (ContactForm) -> Unit,
     action: (@Composable () -> Unit)? = null,
+    /** What the networks show of the handles typed, by handle. */
+    lookups: Map<String, HandleLookup> = emptyMap(),
+    /** Asks the network what it shows of a handle. */
+    onLookup: (String) -> Unit = {},
 ) {
     val emailTypes = EMAIL_TYPES.map { type -> type to stringResource(typeLabel(type)) }
     val phoneTypes = PHONE_TYPES.map { type -> type to stringResource(typeLabel(type)) }
@@ -513,6 +587,16 @@ internal fun ContactFields(
         ) {
             Text(stringResource(R.string.people_contact_add_address))
         }
+        MochiTextButton(
+            onClick = { onChange(form.copy(handles = form.handles + HandleEntry())) },
+        ) {
+            Text(stringResource(R.string.people_contact_add_handle))
+        }
+        MochiTextButton(
+            onClick = { onChange(form.copy(messaging = form.messaging + MessagingEntry())) },
+        ) {
+            Text(stringResource(R.string.people_contact_add_messaging))
+        }
     }
     Column {
         form.emails.forEachIndexed { index, entry ->
@@ -555,6 +639,30 @@ internal fun ContactFields(
                 },
                 onRemove = {
                     onChange(form.copy(addresses = form.addresses.without(index)))
+                },
+            )
+        }
+        form.handles.forEachIndexed { index, handle ->
+            HandleRow(
+                handle = handle,
+                found = lookups[handle.value.trim()],
+                onLookup = onLookup,
+                onChange = { updated ->
+                    onChange(form.copy(handles = form.handles.replaced(index, updated)))
+                },
+                onRemove = {
+                    onChange(form.copy(handles = form.handles.without(index)))
+                },
+            )
+        }
+        form.messaging.forEachIndexed { index, entry ->
+            MessagingRow(
+                entry = entry,
+                onChange = { updated ->
+                    onChange(form.copy(messaging = form.messaging.replaced(index, updated)))
+                },
+                onRemove = {
+                    onChange(form.copy(messaging = form.messaging.without(index)))
                 },
             )
         }
@@ -712,6 +820,135 @@ private fun TypedEntryRow(
         }
     }
 }
+
+/** The example each network's handle field shows, as the network writes one. */
+@Composable
+private fun handleExample(network: String): String = stringResource(
+    if (network == NETWORK_BLUESKY) R.string.people_contact_example_bluesky else R.string.people_contact_example_fediverse,
+)
+
+/**
+ * A handle on another network: the handle, its network, and what the network
+ * shows of the person once the handle resolves, so a typo is seen before the
+ * card is saved. A handle is asked of its network once typing rests.
+ */
+@Composable
+private fun HandleRow(
+    handle: HandleEntry,
+    found: HandleLookup?,
+    onLookup: (String) -> Unit,
+    onChange: (HandleEntry) -> Unit,
+    onRemove: () -> Unit,
+) {
+    LaunchedEffect(handle.value) {
+        delay(LOOKUP_PAUSE)
+        onLookup(handle.value)
+    }
+    Column(modifier = Modifier.padding(vertical = 6.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            KindIcon(Icons.Outlined.AlternateEmail)
+            CompactTextField(
+                value = handle.value,
+                onValueChange = { onChange(handle.copy(value = it)) },
+                placeholder = handleExample(handle.network),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                modifier = Modifier.weight(1f).leaving(),
+            )
+        }
+        if (found != null) {
+            Row(
+                modifier = Modifier.padding(start = 28.dp, top = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                EntityAvatar(name = found.name, src = found.avatar.ifBlank { null }, size = 20.dp)
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    text = listOf(found.name, found.address).filter { it.isNotBlank() }.joinToString(" · "),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                )
+            }
+        }
+        Spacer(modifier = Modifier.height(4.dp))
+        Row(
+            verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Box(modifier = Modifier.weight(1f)) {
+                LabeledSelectField(
+                    label = stringResource(R.string.people_contact_network),
+                    placeholder = stringResource(R.string.people_contact_network),
+                    options = HANDLE_NETWORKS.map { network -> network to providerName(network) },
+                    selected = handle.network,
+                    onSelect = { onChange(handle.copy(network = it)) },
+                )
+            }
+            MochiIconButton(onClick = onRemove) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.people_contact_remove),
+                )
+            }
+        }
+    }
+}
+
+/**
+ * A messaging address: the address, written with the scheme its network
+ * takes, and its network.
+ */
+@Composable
+private fun MessagingRow(
+    entry: MessagingEntry,
+    onChange: (MessagingEntry) -> Unit,
+    onRemove: () -> Unit,
+) {
+    val other = stringResource(R.string.people_contact_network_other)
+    Column(modifier = Modifier.padding(vertical = 6.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            KindIcon(Icons.AutoMirrored.Outlined.Chat)
+            CompactTextField(
+                value = entry.value,
+                onValueChange = { onChange(entry.copy(value = it)) },
+                placeholder = when (entry.network) {
+                    NETWORK_FEDIVERSE -> stringResource(R.string.people_contact_example_fediverse)
+                    NETWORK_MATRIX -> stringResource(R.string.people_contact_example_matrix)
+                    NETWORK_XMPP -> stringResource(R.string.people_contact_example_xmpp)
+                    else -> ""
+                },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                modifier = Modifier.weight(1f).leaving(),
+            )
+        }
+        Spacer(modifier = Modifier.height(4.dp))
+        Row(
+            verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Box(modifier = Modifier.weight(1f)) {
+                LabeledSelectField(
+                    label = stringResource(R.string.people_contact_network),
+                    placeholder = stringResource(R.string.people_contact_network),
+                    options = MESSAGING_NETWORKS.map { network ->
+                        network to if (network == NETWORK_OTHER) other else providerName(network)
+                    },
+                    selected = entry.network,
+                    onSelect = { onChange(entry.copy(network = it)) },
+                )
+            }
+            MochiIconButton(onClick = onRemove) {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.people_contact_remove),
+                )
+            }
+        }
+    }
+}
+
+/** How long typing in a handle rests before it is asked of its network. */
+private const val LOOKUP_PAUSE = 600L
 
 @Composable
 private fun AddressRows(

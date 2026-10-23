@@ -336,4 +336,10 @@
     <string name="upload_progress">Pêşketina barkirinê</string>
     <string name="upload_processing">Tê pêvajokirin…</string>
     <string name="upload_sent">%1$s ji %2$s</string>
+    <string name="comment_share">Parve bike</string>
+    <string name="comment_all">Hemû şîrove</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s bersiv</item>
+        <item quantity="other">+%1$s bersivên zêde</item>
+    </plurals>
 </resources>

@@ -337,4 +337,11 @@
     <string name="upload_progress">Napredak prijenosa</string>
     <string name="upload_processing">Obrada…</string>
     <string name="upload_sent">%1$s od %2$s</string>
+    <string name="comment_share">Podijeli</string>
+    <string name="comment_all">Svi komentari</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s odgovor</item>
+        <item quantity="few">+%1$s još odgovora</item>
+        <item quantity="other">+%1$s još odgovora</item>
+    </plurals>
 </resources>

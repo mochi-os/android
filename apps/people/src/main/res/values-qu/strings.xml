@@ -218,4 +218,10 @@
     <string name="people_contact_create">Kamariy</string>
     <string name="people_sync_permission_reason">Sincronizayqa masiykikunata kay telefonopa Contactokuna appninman copian, chaymi contactoykikunaman yaykuyta necesitan.</string>
     <string name="people_sync_permission_blocked">Kay app-paq contactokunaman yaykuyqa desactivasqa kachkan. App-pa wakichiyninkunapi Permisokuna nisqapi activayta atinki.</string>
+    <string name="people_contact_add_handle">Identificador yapay</string>
+    <string name="people_contact_add_messaging">Willakuy direccionta yapay</string>
+    <string name="people_contact_network">Red</string>
+    <string name="people_contact_xmpp">XMPP riqsisqa</string>
+    <string name="people_person_forums">Forokuna</string>
+    <string name="people_contact_network_other">Huk</string>
 </resources>

@@ -20,9 +20,13 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.feeds.model.Feed
+import org.mochios.feeds.model.Lookup
+import org.mochios.feeds.model.Person
 import org.mochios.feeds.repository.FeedsRepository
+import org.mochios.feeds.repository.PermissionRequiredException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -68,9 +72,42 @@ class FindFeedsViewModel @Inject constructor(
 
     private var searchJob: Job? = null
 
+    /**
+     * A handle or link looked up on another network: a person or community a
+     * feed may follow, or a post there. Null while nothing is found.
+     */
+    private val _lookup = MutableStateFlow<Lookup?>(null)
+    val lookup: StateFlow<Lookup?> = _lookup.asStateFlow()
+
+    private val _isLookingUp = MutableStateFlow(false)
+    val isLookingUp: StateFlow<Boolean> = _isLookingUp.asStateFlow()
+
+    private var lookupJob: Job? = null
+
+    /** The user's contacts with a handle on another network, to follow. */
+    private val _people = MutableStateFlow<List<Person>>(emptyList())
+    val people: StateFlow<List<Person>> = _people.asStateFlow()
+
+    /** The feeds the user owns, one of which follows a person found here. */
+    private val _owned = MutableStateFlow<List<Feed>>(emptyList())
+    val owned: StateFlow<List<Feed>> = _owned.asStateFlow()
+
+    /** The person being followed, by the query that names them. */
+    private val _following = MutableStateFlow<String?>(null)
+    val following: StateFlow<String?> = _following.asStateFlow()
+
+    private val _followed = MutableSharedFlow<Int>(extraBufferCapacity = 1)
+    /** A follow was added, with how many posts it brought in. */
+    val followed: SharedFlow<Int> = _followed.asSharedFlow()
+
+    /** A follow that needs the app allowed a permission first, and what to retry. */
+    private val _pendingPermission = MutableStateFlow<PendingFollow?>(null)
+    val pendingPermission: StateFlow<PendingFollow?> = _pendingPermission.asStateFlow()
+
     init {
         loadRecommendations()
         loadSubscribed()
+        loadPeople()
         // Arriving with a share link resolves it straight away, as if pasted.
         savedStateHandle.get<String>("link")?.takeIf { it.isNotBlank() }?.let { setSearchQuery(it) }
     }
@@ -83,6 +120,7 @@ class FindFeedsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val feeds = repository.listFeeds()
+                _owned.value = feeds.filter { it.owner == 1 }.sortedWith(compareBy(NaturalCompare) { it.name })
                 _subscribedFeeds.value = _subscribedFeeds.value + feeds.flatMap { feed ->
                     listOf(feed.fingerprint, feed.id).filter { handle -> handle.isNotEmpty() }
                 }
@@ -92,9 +130,35 @@ class FindFeedsViewModel @Inject constructor(
         }
     }
 
+    private fun loadPeople() {
+        viewModelScope.launch {
+            try {
+                _people.value = repository.people().sortedWith(compareBy(NaturalCompare) { it.name.ifEmpty { it.handle } })
+            } catch (_: Exception) {
+                // A server without the networks has nobody to offer.
+            }
+        }
+    }
+
     fun setSearchQuery(query: String) {
         _searchQuery.value = query
         searchJob?.cancel()
+        lookupJob?.cancel()
+        _lookup.value = null
+        _isLookingUp.value = false
+        if (looksUpElsewhere(query)) {
+            lookupJob = viewModelScope.launch {
+                delay(SEARCH_DEBOUNCE)
+                _isLookingUp.value = true
+                try {
+                    _lookup.value = repository.lookup(query.trim())
+                } catch (_: Exception) {
+                    // Nothing there by that name.
+                } finally {
+                    _isLookingUp.value = false
+                }
+            }
+        }
         if (query.isBlank()) {
             _searchResults.value = emptyList()
             _probeResult.value = null
@@ -175,6 +239,72 @@ class FindFeedsViewModel @Inject constructor(
     fun clearError() {
         _error.value = null
     }
+
+    /** Follow a person or community on another network into one of the user's feeds. */
+    fun follow(feed: Feed, query: String) {
+        if (_following.value != null || query.isBlank()) return
+        val feedId = feed.fingerprint.ifEmpty { feed.id }
+        _following.value = query
+        viewModelScope.launch {
+            try {
+                val result = repository.addSource(feedId, query, "person")
+                _people.value = _people.value.map { if (it.id == query || it.handle == query) it.copy(followed = true) else it }
+                _followed.emit(result.ingested)
+            } catch (e: PermissionRequiredException) {
+                val name = try {
+                    repository.permissionName(e.permission)
+                } catch (_: Exception) {
+                    e.permission
+                }
+                _pendingPermission.value = PendingFollow(e.app, e.permission, name, feed, query)
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+            } finally {
+                _following.value = null
+            }
+        }
+    }
+
+    /** Grant the permission a follow asked for, then follow again. */
+    fun allowPendingPermission() {
+        val pending = _pendingPermission.value ?: return
+        _pendingPermission.value = null
+        viewModelScope.launch {
+            try {
+                repository.grantPermission(pending.app, pending.permission)
+                follow(pending.feed, pending.query)
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+            }
+        }
+    }
+
+    fun denyPendingPermission() {
+        _pendingPermission.value = null
+    }
+}
+
+/** A follow waiting on a permission: what the app asks for, and the follow to retry. */
+data class PendingFollow(
+    val app: String,
+    val permission: String,
+    val name: String,
+    val feed: Feed,
+    val query: String,
+)
+
+/**
+ * Whether a search names someone or something on another network: a handle,
+ * a did, a link, or a bare domain - never a Mochi share link or a feeds page.
+ */
+internal fun looksUpElsewhere(query: String): Boolean {
+    val q = query.trim()
+    if (q.isEmpty() || q.any { it.isWhitespace() } || q.startsWith("mochi:", ignoreCase = true) || q.contains("/feeds/")) {
+        return false
+    }
+    return Regex("^(https?://|did:|[@!])", RegexOption.IGNORE_CASE).containsMatchIn(q) ||
+        Regex("^[^@/]+@[^@/]+\\.[^@/]+$").matches(q) ||
+        Regex("^[a-z0-9-]+(\\.[a-z0-9-]+)+$", RegexOption.IGNORE_CASE).matches(q)
 }
 
 /** Whether a search is a link to resolve through the probe rather than a name

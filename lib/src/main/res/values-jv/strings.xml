@@ -336,4 +336,9 @@
     <string name="upload_progress">Kemajuan unggahan</string>
     <string name="upload_processing">Ngolah…</string>
     <string name="upload_sent">%1$s saka %2$s</string>
+    <string name="comment_share">Bagekake</string>
+    <string name="comment_all">Kabèh komentar</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="other">+%1$s balesan liyané</item>
+    </plurals>
 </resources>

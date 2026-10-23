@@ -219,4 +219,10 @@
     <string name="people_contact_create">צור</string>
     <string name="people_sync_permission_reason">הסנכרון מעתיק את החברים שלך לאפליקציית אנשי הקשר בטלפון הזה, ולכן נדרשת לו גישה לאנשי הקשר שלך.</string>
     <string name="people_sync_permission_blocked">הגישה לאנשי הקשר כבויה עבור האפליקציה הזו. ניתן להפעיל אותה בקטע \'הרשאות\' בהגדרות האפליקציה.</string>
+    <string name="people_contact_add_handle">הוסף שם משתמש</string>
+    <string name="people_contact_add_messaging">הוספת כתובת הודעות</string>
+    <string name="people_contact_network">רשת</string>
+    <string name="people_contact_xmpp">איש קשר ב-XMPP</string>
+    <string name="people_person_forums">פורומים</string>
+    <string name="people_contact_network_other">אחרת</string>
 </resources>

@@ -15,6 +15,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapRaw
+import org.mochios.settings.api.OtherToken
 import org.mochios.settings.api.SessionsApi
 import org.mochios.settings.api.Session
 import javax.inject.Inject
@@ -24,9 +25,16 @@ data class SessionsUiState(
     val error: MochiError? = null,
     /** Sorted accessed-desc; the server flags the caller's own session. */
     val sessions: List<Session> = emptyList(),
-    /** The session being revoked; its confirmation stays open until the server answers. */
+    /** Sign-ins by other networks' apps and minted passwords, most recently used first. */
+    val signins: List<OtherToken> = emptyList(),
+    val passwords: List<OtherToken> = emptyList(),
+    /** The session or token being revoked; its confirmation stays open until the server answers. */
     val revoking: String? = null,
 )
+
+/** Tokens most recently used first, then most recently made. */
+internal fun recentFirst(tokens: List<OtherToken>): List<OtherToken> =
+    tokens.sortedWith(compareByDescending<OtherToken> { it.used }.thenByDescending { it.created })
 
 @HiltViewModel
 class SessionsViewModel @Inject constructor(
@@ -42,9 +50,13 @@ class SessionsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val sessions = api.listSessions().unwrapRaw().sessions
-                    .sortedByDescending { it.accessed }
-                _uiState.value = SessionsUiState(isLoading = false, sessions = sessions)
+                val answer = api.listSessions().unwrapRaw()
+                _uiState.value = SessionsUiState(
+                    isLoading = false,
+                    sessions = answer.sessions.sortedByDescending { it.accessed },
+                    signins = recentFirst(answer.signins),
+                    passwords = recentFirst(answer.passwords),
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -57,6 +69,22 @@ class SessionsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 api.revokeSession(id).unwrapRaw()
+                _uiState.value = _uiState.value.copy(revoking = null)
+                onSuccess()
+                refresh()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(revoking = null, error = e.toMochiError())
+            }
+        }
+    }
+
+    /** Revoke a sign-in by another app or a minted password. */
+    fun revokeToken(hash: String, onSuccess: () -> Unit) {
+        if (_uiState.value.revoking != null) return
+        _uiState.value = _uiState.value.copy(revoking = hash)
+        viewModelScope.launch {
+            try {
+                api.revokeToken(hash).unwrapRaw()
                 _uiState.value = _uiState.value.copy(revoking = null)
                 onSuccess()
                 refresh()

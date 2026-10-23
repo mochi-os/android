@@ -228,4 +228,10 @@
         <item quantity="other">%s 則新貼文</item>
     </plurals>
     <string name="forums_moderation_target_user">用戶</string>
+    <string name="forums_post_link">連結</string>
+    <string name="forums_sensitive_cover">此帖子已標示為敏感內容</string>
+    <string name="forums_community_address">社群地址</string>
+    <string name="forums_community_published">論壇已作為社群發布</string>
+    <string name="forums_community_publish_failed">無法發布論壇</string>
+    <string name="forums_community_link">連結</string>
 </resources>

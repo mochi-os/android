@@ -163,4 +163,9 @@
     <string name="people_contact_birthday_month">Maand</string>
     <string name="people_contact_birthday_year">Jaar</string>
     <string name="people_contact_birthday_clear">Wissen</string>
+    <string name="people_contact_add_handle">Gebruikersnaam toevoegen</string>
+    <string name="people_contact_add_messaging">Chatadres toevoegen</string>
+    <string name="people_contact_network">Netwerk</string>
+    <string name="people_contact_xmpp">XMPP-contact</string>
+    <string name="people_person_forums">Forums</string>
 </resources>

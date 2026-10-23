@@ -218,4 +218,10 @@
     <string name="people_contact_create">Skep</string>
     <string name="people_sync_permission_reason">Sinkronisering kopieer jou vriende na hierdie foon se Kontakte-app, dus het dit toegang tot jou kontakte nodig.</string>
     <string name="people_sync_permission_blocked">Kontaktetoegang is vir hierdie app afgeskakel. Jy kan dit onder Toestemmings in die app se instellings aanskakel.</string>
+    <string name="people_contact_add_handle">Voeg gebruikersnaam by</string>
+    <string name="people_contact_add_messaging">Voeg boodskapadres by</string>
+    <string name="people_contact_network">Netwerk</string>
+    <string name="people_contact_xmpp">XMPP-kontak</string>
+    <string name="people_person_forums">Forums</string>
+    <string name="people_contact_network_other">Ander</string>
 </resources>

@@ -336,4 +336,10 @@
     <string name="upload_progress">Kemajuan muat naik</string>
     <string name="upload_processing">Memproses…</string>
     <string name="upload_sent">%1$s daripada %2$s</string>
+    <string name="comment_share">Kongsi</string>
+    <string name="comment_all">Semua komen</string>
+    <plurals name="comment_collapsed_replies">
+        <item quantity="one">%1$s balasan</item>
+        <item quantity="other">+%1$s balasan lagi</item>
+    </plurals>
 </resources>
