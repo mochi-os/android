@@ -27,7 +27,10 @@ import org.mochios.chat.model.addressList
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
-/** A chat the picked people already share with the caller, offered instead of a duplicate. */
+/**
+ * A chat the picked people already share with the caller, offered to open
+ * before making another.
+ */
 data class ExistingChat(
     val id: String,
     val name: String,
@@ -44,9 +47,11 @@ data class NewChatUiState(
     val me: String = "",
     val picked: List<Friend> = emptyList(),
     val existing: List<ExistingChat> = emptyList(),
-    /** The picked people already have a chat of exactly these members, so Create stays off. */
+    /**
+     * The one person picked already has a 1:1 chat with the caller, so Create
+     * stays off; a group may share its people with another, as the web allows.
+     */
     val duplicate: Boolean = false,
-    val isCheckingExisting: Boolean = false,
     val groupName: String = "",
     /** Whether the user typed [groupName]; until then the default name follows the picks. */
     val groupNameEdited: Boolean = false,
@@ -185,15 +190,10 @@ class NewChatViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(
                 existing = direct,
                 duplicate = direct.isNotEmpty(),
-                isCheckingExisting = false,
             )
             return
         }
-        _uiState.value = _uiState.value.copy(
-            existing = direct,
-            duplicate = false,
-            isCheckingExisting = true,
-        )
+        _uiState.value = _uiState.value.copy(existing = direct, duplicate = false)
         existingJob = viewModelScope.launch {
             val groups = try {
                 findGroups(picked.map { friend -> friend.id }.toSet())
@@ -202,11 +202,7 @@ class NewChatViewModel @Inject constructor(
             } catch (e: Exception) {
                 emptyList()
             }
-            _uiState.value = _uiState.value.copy(
-                existing = groups + direct,
-                duplicate = groups.isNotEmpty(),
-                isCheckingExisting = false,
-            )
+            _uiState.value = _uiState.value.copy(existing = groups + direct)
         }
     }
 
@@ -316,7 +312,7 @@ class NewChatViewModel @Inject constructor(
     fun createChat(fallbackName: String) {
         viewModelScope.launch {
             val state = _uiState.value
-            if (state.picked.isEmpty() || state.duplicate || state.isCheckingExisting) {
+            if (state.picked.isEmpty() || state.duplicate) {
                 return@launch
             }
             _uiState.value = state.copy(isCreating = true, error = null)
@@ -358,17 +354,15 @@ internal fun fallbackChatName(people: List<Friend>, selected: Set<String>, fallb
 
 /**
  * The default name for a new group as the web gives it: the caller's own [me]
- * first, then the [picked] people by name; [fallback] when none have a name.
+ * and the [picked] people's names, all sorted alphabetically; [fallback] when
+ * none have a name.
  */
-internal fun groupChatName(me: String, picked: List<Friend>, fallback: String): String {
-    val others = picked
-        .map { friend -> friend.name }
+internal fun groupChatName(me: String, picked: List<Friend>, fallback: String): String =
+    (listOf(me) + picked.map { friend -> friend.name })
         .filter { name -> name.isNotBlank() }
         .sortedWith(NaturalCompare)
-    return (listOf(me).filter { name -> name.isNotBlank() } + others)
         .joinToString(", ")
         .ifBlank { fallback }
-}
 
 /**
  * Whether a chat with [members] is exactly the caller plus [people]: every

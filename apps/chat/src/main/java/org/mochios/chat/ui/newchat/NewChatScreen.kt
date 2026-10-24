@@ -90,7 +90,7 @@ fun NewChatScreen(
     val canCreate = if (remote != null) {
         addresses.isNotEmpty() && (!isGroup || uiState.groupName.isNotBlank())
     } else {
-        uiState.picked.isNotEmpty() && !uiState.duplicate && !uiState.isCheckingExisting
+        uiState.picked.isNotEmpty() && !uiState.duplicate
     }
     val fallbackName = stringResource(R.string.chat_new_fallback_name)
     val defaultName = viewModel.selectedFallbackName(fallbackName)

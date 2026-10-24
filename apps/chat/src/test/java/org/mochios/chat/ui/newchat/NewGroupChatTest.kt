@@ -16,8 +16,14 @@ class NewGroupChatTest {
     private val picked = listOf(Friend(id = "t", name = "Tien Hoang"), Friend(id = "d", name = "Dung"))
 
     @Test
-    fun `a group is named after the caller first and then the picked people by name`() {
+    fun `a group is named after the caller and the picked people, all sorted by name`() {
         assertEquals("Chin, Dung, Tien Hoang", groupChatName("Chin", picked, fallback = "Chat"))
+    }
+
+    @Test
+    fun `the caller's name sorts among the others rather than first`() {
+        assertEquals("Dung, Tien Hoang, Zoe", groupChatName("Zoe", picked, fallback = "Chat"))
+        assertEquals("Dung, Lan, Tien Hoang", groupChatName("Lan", picked, fallback = "Chat"))
     }
 
     @Test
