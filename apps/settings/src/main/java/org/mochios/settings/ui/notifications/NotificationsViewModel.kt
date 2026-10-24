@@ -8,6 +8,7 @@ package org.mochios.settings.ui.notifications
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.delay
@@ -119,6 +120,8 @@ class NotificationsViewModel @Inject constructor(
                 isLoading = false,
                 isRefreshing = false,
             )
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             currentCoroutineContext().ensureActive()
             _uiState.value = _uiState.value.copy(

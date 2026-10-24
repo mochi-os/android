@@ -8,6 +8,7 @@ package org.mochios.wikis.ui.find
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
@@ -138,6 +139,8 @@ class FindWikisViewModel @Inject constructor(
                 results = results,
                 isSearching = false,
             )
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             _uiState.value = _uiState.value.copy(
                 isSearching = false,

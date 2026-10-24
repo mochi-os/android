@@ -9,6 +9,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.currentCoroutineContext
@@ -197,6 +198,8 @@ class GoGameViewModel @Inject constructor(
                     error = null,
                 )
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             currentCoroutineContext().ensureActive()
             _state.update {
@@ -244,6 +247,8 @@ class GoGameViewModel @Inject constructor(
                     nextMessageCursor = response.cursor,
                 )
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             currentCoroutineContext().ensureActive()
             _state.update {

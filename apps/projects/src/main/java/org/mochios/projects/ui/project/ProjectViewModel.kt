@@ -10,6 +10,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -264,6 +265,8 @@ class ProjectViewModel @Inject constructor(
                 watched = watched,
                 people = people
             )
+        } catch (e: CancellationException) {
+            throw e
         } catch (_: Exception) {
             // Silent — cached data is still showing
         }
@@ -644,6 +647,8 @@ class ProjectViewModel @Inject constructor(
                 objects = objects,
                 watched = watched
             )
+        } catch (e: CancellationException) {
+            throw e
         } catch (_: Exception) { }
     }
 

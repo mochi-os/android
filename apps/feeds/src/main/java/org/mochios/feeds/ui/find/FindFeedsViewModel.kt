@@ -9,6 +9,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -152,6 +153,8 @@ class FindFeedsViewModel @Inject constructor(
                 _isLookingUp.value = true
                 try {
                     _lookup.value = repository.lookup(query.trim())
+                } catch (e: CancellationException) {
+                    throw e
                 } catch (_: Exception) {
                     // Nothing there by that name.
                 } finally {
@@ -183,6 +186,8 @@ class FindFeedsViewModel @Inject constructor(
         _isSearching.value = true
         try {
             _searchResults.value = repository.searchDirectory(query)
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             _error.value = e.toMochiError()
         } finally {
@@ -195,6 +200,8 @@ class FindFeedsViewModel @Inject constructor(
         try {
             val result = repository.probeUrl(url.trim())
             _probeResult.value = result.feed
+        } catch (e: CancellationException) {
+            throw e
         } catch (_: Exception) {
             _probeResult.value = null
         } finally {

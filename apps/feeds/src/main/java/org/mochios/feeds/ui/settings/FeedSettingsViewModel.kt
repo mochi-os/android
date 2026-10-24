@@ -9,6 +9,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -579,6 +580,8 @@ class FeedSettingsViewModel @Inject constructor(
             try {
                 val results = repository.searchUsers(query)
                 _userSearchResults.value = results
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) {
                 _userSearchResults.value = emptyList()
             }

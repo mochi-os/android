@@ -9,6 +9,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -209,6 +210,8 @@ class CrmSettingsViewModel @Inject constructor(
                 // search writes back the snapshot it started from.
                 val results = repository.searchUsers(query.trim())
                 _uiState.value = _uiState.value.copy(userSearchResults = results)
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) {
                 _uiState.value = _uiState.value.copy(userSearchResults = emptyList())
             }
