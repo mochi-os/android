@@ -347,6 +347,7 @@ private fun ChatContent(
     // A failure over a loaded conversation: the page error would replace
     // nothing on screen, so it is shown once as a snackbar instead.
     val snackbarHostState = remember { SnackbarHostState() }
+    val snackbarScope = rememberCoroutineScope()
     LaunchedEffect(uiState.notice) {
         val notice = uiState.notice ?: return@LaunchedEffect
         snackbarHostState.showSnackbar(notice.userMessage())
@@ -615,7 +616,9 @@ private fun ChatContent(
                     onDelete = {
                         val selected = uiState.messages.filter { it.id in uiState.selectedIds }
                         if (selected.any { it.member != uiState.identity }) {
-                            Toast.makeText(context, deleteOwnOnlyMessage, Toast.LENGTH_SHORT).show()
+                            snackbarScope.launch {
+                                snackbarHostState.showSnackbar(deleteOwnOnlyMessage)
+                            }
                         } else {
                             pendingDelete = uiState.selectedIds.toList()
                         }
