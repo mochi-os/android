@@ -189,8 +189,8 @@ fun ChatScreen(
     }
     val pinnedChats by listViewModel.pinned.collectAsState()
     val invitation = stringResource(R.string.chat_invitation)
-    val drawerItems = remember(listUiState, pinnedChats, invitation) {
-        listViewModel.filteredChats().map { chat ->
+    val drawerItems = remember(listUiState, pinnedChats, invitation, chatId) {
+        listViewModel.filteredChats(open = chatId).map { chat ->
             // A conversation on another network: its people have no Mochi
             // avatar, so it shows the network's globe.
             val isDirect = chat.members == 2 && chat.other.isNotBlank() && chat.account.isEmpty()

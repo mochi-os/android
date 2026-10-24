@@ -17,6 +17,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
 import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.model.Chat
+import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
@@ -80,10 +81,11 @@ class ChatListViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(filter = filter)
     }
 
-    fun filteredChats(): List<Chat> {
+    /** The chats the search and chip leave, keeping [open], the conversation on screen. */
+    fun filteredChats(open: String = ""): List<Chat> {
         val state = _uiState.value
         val filtered = state.chats.filter { chat ->
-            matchesChatFilter(chat, state.query, state.filter)
+            matchesChatFilter(chat, state.query, state.filter, open)
         }
         val pinnedKeys = pinnedStore.pinned.value
         // Pinned chats first, then most recent activity; chats with no activity
@@ -118,16 +120,24 @@ internal fun unreadBadge(chat: Chat, open: String): Int = if (chat.id == open) 0
 
 /**
  * Whether [chat] belongs in the list for the typed [query], matched against
- * its name, and the chosen [filter]: unread messages, or more than two members.
+ * its name, and the chosen [filter], as the web has them: an active chat with
+ * unread messages or the [open] one, or any chat that isn't a 1:1, a group
+ * everyone else has left included.
  */
-internal fun matchesChatFilter(chat: Chat, query: String, filter: ChatFilter): Boolean {
+internal fun matchesChatFilter(
+    chat: Chat,
+    query: String,
+    filter: ChatFilter,
+    open: String = "",
+): Boolean {
     val term = query.trim()
     if (term.isNotEmpty() && !chat.name.contains(term, ignoreCase = true)) {
         return false
     }
     return when (filter) {
         ChatFilter.ALL -> true
-        ChatFilter.UNREAD -> chat.unread > 0
-        ChatFilter.GROUPS -> chat.members > 2
+        ChatFilter.UNREAD ->
+            chat.id == open || (chat.status == ChatStatus.ACTIVE && chat.unread > 0)
+        ChatFilter.GROUPS -> chat.members != 2
     }
 }

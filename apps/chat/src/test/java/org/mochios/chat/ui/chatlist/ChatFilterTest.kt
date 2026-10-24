@@ -9,6 +9,7 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.chat.model.Chat
+import org.mochios.chat.model.ChatStatus
 
 class ChatFilterTest {
 
@@ -28,9 +29,25 @@ class ChatFilterTest {
     }
 
     @Test
-    fun `groups keeps only chats of more than two members`() {
+    fun `unread keeps the open chat once it has been read`() {
+        assertTrue(matchesChatFilter(group, "", ChatFilter.UNREAD, open = "g"))
+    }
+
+    @Test
+    fun `unread skips a chat the user has left`() {
+        val left = direct.copy(status = ChatStatus.LEFT)
+        assertFalse(matchesChatFilter(left, "", ChatFilter.UNREAD))
+    }
+
+    @Test
+    fun `groups keeps every chat that isn't a 1-1`() {
         assertFalse(matchesChatFilter(direct, "", ChatFilter.GROUPS))
         assertTrue(matchesChatFilter(group, "", ChatFilter.GROUPS))
+    }
+
+    @Test
+    fun `groups keeps a group everyone else has left`() {
+        assertTrue(matchesChatFilter(group.copy(members = 1), "", ChatFilter.GROUPS))
     }
 
     @Test

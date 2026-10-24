@@ -26,10 +26,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
@@ -115,9 +113,8 @@ fun MochiImage(
 }
 
 /**
- * The grey box an image shows before it arrives or after it fails: the web's
- * neutral-100 fill on a neutral-200 edge, neutral-800 on neutral-700 in the
- * dark theme.
+ * The box an image shows before it arrives or after it fails: the theme's
+ * muted surface on its faint outline, as the web's bg-muted follows the theme.
  *
  * @param shape The box's outline.
  * @param modifier Usually a size or matchParentSize.
@@ -135,17 +132,11 @@ fun ImagePlaceholder(shape: Shape, modifier: Modifier = Modifier) {
  */
 @Composable
 fun Modifier.imagePlaceholder(shape: Shape): Modifier {
-    // The app picks its theme from its own preference, not only the system's,
-    // so the surface itself says whether this is the dark theme.
-    val dark = MaterialTheme.colorScheme.surface.luminance() < 0.5f
-    return background(if (dark) PLACEHOLDER_FILL_DARK else PLACEHOLDER_FILL, shape)
-        .border(1.dp, if (dark) PLACEHOLDER_EDGE_DARK else PLACEHOLDER_EDGE, shape)
+    val colors = MaterialTheme.colorScheme
+    return background(colors.surfaceVariant, shape)
+        .border(1.dp, colors.outlineVariant, shape)
 }
 
 /** Below this on either side an image is too small for a spinner or glyph. */
 private val COMPACT_SIZE = 48.dp
 
-private val PLACEHOLDER_FILL = Color(0xFFF5F5F5)
-private val PLACEHOLDER_EDGE = Color(0xFFE5E5E5)
-private val PLACEHOLDER_FILL_DARK = Color(0xFF262626)
-private val PLACEHOLDER_EDGE_DARK = Color(0xFF404040)
