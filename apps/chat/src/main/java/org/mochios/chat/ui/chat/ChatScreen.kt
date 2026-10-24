@@ -64,6 +64,8 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
@@ -343,10 +345,11 @@ private fun ChatContent(
     }
 
     // A failure over a loaded conversation: the page error would replace
-    // nothing on screen, so it is shown once as a toast instead.
+    // nothing on screen, so it is shown once as a snackbar instead.
+    val snackbarHostState = remember { SnackbarHostState() }
     LaunchedEffect(uiState.notice) {
         val notice = uiState.notice ?: return@LaunchedEffect
-        Toast.makeText(context, notice.userMessage(), Toast.LENGTH_SHORT).show()
+        snackbarHostState.showSnackbar(notice.userMessage())
         viewModel.clearNotice()
     }
 
@@ -381,6 +384,7 @@ private fun ChatContent(
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             val members = uiState.chat.members
             val isGroup = members.size > 2
