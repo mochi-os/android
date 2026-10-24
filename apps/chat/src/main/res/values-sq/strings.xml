@@ -6,6 +6,8 @@
     <string name="chat_list_new">Bisedë e re</string>
     <string name="chat_new_title">Bisedë e re</string>
     <string name="chat_new_name">Emri i grupit</string>
+    <string name="chat_new_search_placeholder">Kërko persona</string>
+    <string name="chat_new_no_friends">Kërko persona për të biseduar</string>
     <string name="chat_message_placeholder">Mesazhi</string>
     <string name="chat_attachment_add">Bashkëngjit skedarë</string>
     <string name="chat_settings_title">Cilësimet e bisedës</string>

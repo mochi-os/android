@@ -6,6 +6,8 @@
     <string name="chat_list_new">ສົນທະນາໃໝ່</string>
     <string name="chat_new_title">ສົນທະນາໃໝ່</string>
     <string name="chat_new_name">ຊື່ກຸ່ມ</string>
+    <string name="chat_new_search_placeholder">ຄົ້ນຫາຄົນ</string>
+    <string name="chat_new_no_friends">ຄົ້ນຫາຄົນເພື່ອສົນທະນາ</string>
     <string name="chat_message_placeholder">ຂໍ້ຄວາມ</string>
     <string name="chat_attachment_add">ແນບໄຟລ໌</string>
     <string name="chat_settings_title">ການຕັ້ງຄ່າແຊັດ</string>

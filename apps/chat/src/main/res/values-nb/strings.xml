@@ -6,6 +6,8 @@
     <string name="chat_list_new">Ny chat</string>
     <string name="chat_new_title">Ny chat</string>
     <string name="chat_new_name">Gruppenavn</string>
+    <string name="chat_new_search_placeholder">Søk etter personer</string>
+    <string name="chat_new_no_friends">Søk etter personer å chatte med</string>
     <string name="chat_message_placeholder">Melding</string>
     <string name="chat_attachment_add">Legg ved filer</string>
     <string name="chat_settings_title">Chat-innstillinger</string>

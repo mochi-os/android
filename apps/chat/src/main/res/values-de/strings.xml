@@ -6,6 +6,8 @@
     <string name="chat_list_new">Neuer Chat</string>
     <string name="chat_new_title">Neuer Chat</string>
     <string name="chat_new_name">Gruppenname</string>
+    <string name="chat_new_search_placeholder">Personen suchen</string>
+    <string name="chat_new_no_friends">Nach Personen zum Chatten suchen</string>
     <string name="chat_message_placeholder">Nachricht</string>
     <string name="chat_attachment_add">Dateien anhängen</string>
     <string name="chat_settings_title">Chat-Einstellungen</string>

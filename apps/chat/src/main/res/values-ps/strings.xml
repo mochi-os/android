@@ -6,6 +6,8 @@
     <string name="chat_list_new">نوې چټ</string>
     <string name="chat_new_title">نوې چټ</string>
     <string name="chat_new_name">د ګروپ نوم</string>
+    <string name="chat_new_search_placeholder">خلک ولټوئ</string>
+    <string name="chat_new_no_friends">د چیټ لپاره خلک ولټوئ</string>
     <string name="chat_message_placeholder">پیغام</string>
     <string name="chat_attachment_add">فایلونه ضمیمه کړئ</string>
     <string name="chat_settings_title">د چټ ترتیبات</string>

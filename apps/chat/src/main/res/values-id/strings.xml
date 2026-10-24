@@ -6,6 +6,8 @@
     <string name="chat_list_new">Chat baru</string>
     <string name="chat_new_title">Chat baru</string>
     <string name="chat_new_name">Nama grup</string>
+    <string name="chat_new_search_placeholder">Cari orang</string>
+    <string name="chat_new_no_friends">Cari orang untuk diajak mengobrol</string>
     <string name="chat_message_placeholder">Pesan</string>
     <string name="chat_attachment_add">Lampirkan file</string>
     <string name="chat_settings_title">Pengaturan chat</string>

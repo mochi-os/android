@@ -6,6 +6,8 @@
     <string name="chat_list_new">Nový chat</string>
     <string name="chat_new_title">Nový chat</string>
     <string name="chat_new_name">Název skupiny</string>
+    <string name="chat_new_search_placeholder">Hledat lidi</string>
+    <string name="chat_new_no_friends">Vyhledejte lidi k chatování</string>
     <string name="chat_message_placeholder">Zpráva</string>
     <string name="chat_attachment_add">Připojit soubory</string>
     <string name="chat_settings_title">Nastavení chatu</string>

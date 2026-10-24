@@ -6,6 +6,8 @@
     <string name="chat_list_new">Chat ġdid</string>
     <string name="chat_new_title">Chat ġdid</string>
     <string name="chat_new_name">Isem il-grupp</string>
+    <string name="chat_new_search_placeholder">Fittex nies</string>
+    <string name="chat_new_no_friends">Fittex nies biex tiċċettja magħhom</string>
     <string name="chat_message_placeholder">Messaġġ</string>
     <string name="chat_attachment_add">Ehmeż files</string>
     <string name="chat_settings_title">Settings taċ-chat</string>

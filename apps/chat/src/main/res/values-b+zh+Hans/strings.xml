@@ -6,6 +6,8 @@
     <string name="chat_list_new">新聊天</string>
     <string name="chat_new_title">新聊天</string>
     <string name="chat_new_name">群组名称</string>
+    <string name="chat_new_search_placeholder">搜索用户</string>
+    <string name="chat_new_no_friends">搜索可聊天的用户</string>
     <string name="chat_message_placeholder">消息</string>
     <string name="chat_attachment_add">附加文件</string>
     <string name="chat_settings_title">聊天设置</string>

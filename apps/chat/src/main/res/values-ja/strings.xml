@@ -6,6 +6,8 @@
     <string name="chat_list_new">新しいチャット</string>
     <string name="chat_new_title">新しいチャット</string>
     <string name="chat_new_name">グループ名</string>
+    <string name="chat_new_search_placeholder">ユーザーを検索</string>
+    <string name="chat_new_no_friends">チャットする相手を検索</string>
     <string name="chat_message_placeholder">メッセージ</string>
     <string name="chat_attachment_add">ファイルを添付</string>
     <string name="chat_settings_title">チャット設定</string>

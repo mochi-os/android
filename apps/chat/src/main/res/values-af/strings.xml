@@ -6,6 +6,8 @@
     <string name="chat_list_new">Nuwe geselsie</string>
     <string name="chat_new_title">Nuwe geselsie</string>
     <string name="chat_new_name">Groepnaam</string>
+    <string name="chat_new_search_placeholder">Soek mense</string>
+    <string name="chat_new_no_friends">Soek mense om mee te klets</string>
     <string name="chat_message_placeholder">Boodskap</string>
     <string name="chat_attachment_add">Heg lêers aan</string>
     <string name="chat_settings_title">Kletsinstellings</string>

@@ -6,6 +6,8 @@
     <string name="chat_list_new">ချတ်အသစ်</string>
     <string name="chat_new_title">ချတ်အသစ်</string>
     <string name="chat_new_name">အုပ်စု အမည်</string>
+    <string name="chat_new_search_placeholder">လူများကို ရှာဖွေရန်</string>
+    <string name="chat_new_no_friends">ချတ်ရန် လူများကို ရှာဖွေပါ</string>
     <string name="chat_message_placeholder">မက်ဆေ့ဂျ်</string>
     <string name="chat_attachment_add">ဖိုင်များ ပူးတွဲမည်</string>
     <string name="chat_settings_title">စကားပြောခန်း ဆက်တင်များ</string>

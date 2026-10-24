@@ -6,6 +6,8 @@
     <string name="chat_list_new">Txat berria</string>
     <string name="chat_new_title">Txat berria</string>
     <string name="chat_new_name">Taldearen izena</string>
+    <string name="chat_new_search_placeholder">Bilatu pertsonak</string>
+    <string name="chat_new_no_friends">Bilatu pertsonak txateatzeko</string>
     <string name="chat_message_placeholder">Mezua</string>
     <string name="chat_attachment_add">Erantsi fitxategiak</string>
     <string name="chat_settings_title">Txat ezarpenak</string>

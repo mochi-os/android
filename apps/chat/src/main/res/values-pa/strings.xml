@@ -6,6 +6,8 @@
     <string name="chat_list_new">ਨਵੀਂ ਚੈਟ</string>
     <string name="chat_new_title">ਨਵੀਂ ਚੈਟ</string>
     <string name="chat_new_name">ਗਰੁੱਪ ਦਾ ਨਾਮ</string>
+    <string name="chat_new_search_placeholder">ਲੋਕ ਖੋਜੋ</string>
+    <string name="chat_new_no_friends">ਚੈਟ ਕਰਨ ਲਈ ਲੋਕ ਖੋਜੋ</string>
     <string name="chat_message_placeholder">ਸੁਨੇਹਾ</string>
     <string name="chat_attachment_add">ਫਾਈਲਾਂ ਨੱਥੀ ਕਰੋ</string>
     <string name="chat_settings_title">ਚੈਟ ਸੈਟਿੰਗਾਂ</string>

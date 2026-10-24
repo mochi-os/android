@@ -6,6 +6,8 @@
     <string name="chat_list_new">נײַער שמועס</string>
     <string name="chat_new_title">נײַער שמועס</string>
     <string name="chat_new_name">גרופּע־נאָמען</string>
+    <string name="chat_new_search_placeholder">זוך מענטשן</string>
+    <string name="chat_new_no_friends">זוך מענטשן צו שמועסן מיט</string>
     <string name="chat_message_placeholder">בריוו</string>
     <string name="chat_attachment_add">צוהענקען פֿײַלן</string>
     <string name="chat_settings_title">שמועס אײַנשטעלונגען</string>

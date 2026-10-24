@@ -10,6 +10,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -17,6 +18,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatAccount
 import org.mochios.chat.model.ChatStatus
@@ -33,6 +35,11 @@ data class ExistingChat(
 
 data class NewChatUiState(
     val friends: List<Friend> = emptyList(),
+    /**
+     * Directory people matching the search who aren't friends: they can be
+     * added when their chat policy accepts anyone, as the web's picker has it.
+     */
+    val directory: List<Friend> = emptyList(),
     /** The caller's own name, first in a new group's default name as the web has it. */
     val me: String = "",
     val picked: List<Friend> = emptyList(),
@@ -45,6 +52,7 @@ data class NewChatUiState(
     val groupNameEdited: Boolean = false,
     val searchQuery: String = "",
     val isLoading: Boolean = false,
+    val isSearchingDirectory: Boolean = false,
     val isCreating: Boolean = false,
     val error: MochiError? = null,
     val createdChatId: String? = null,
@@ -249,19 +257,48 @@ class NewChatViewModel @Inject constructor(
         }
     }
 
+    private var searchJob: Job? = null
+
     fun updateSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query)
+        searchJob?.cancel()
+        val trimmed = query.trim()
+        if (trimmed.length < 2) {
+            _uiState.value = _uiState.value.copy(directory = emptyList(), isSearchingDirectory = false)
+            return
+        }
+        searchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
+            _uiState.value = _uiState.value.copy(isSearchingDirectory = true)
+            val directory = try {
+                val friendIds = _uiState.value.friends.map { friend -> friend.id }.toSet()
+                repository.personSearch(trimmed)
+                    .filter { person -> person.id !in friendIds }
+                    .map { person ->
+                        Friend(id = person.id, identity = person.id, name = person.name, chat = "")
+                    }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                emptyList()
+            }
+            _uiState.value = _uiState.value.copy(directory = directory, isSearchingDirectory = false)
+        }
     }
 
-    // Only friends can be added to a chat, so the search filters the friend
-    // list on the device and never asks the server's directory.
+    /**
+     * Friends matching the search first, then the directory's matches who
+     * aren't friends; with no search, the friend list unchanged.
+     */
     fun filteredFriends(): List<Friend> {
         val query = _uiState.value.searchQuery.lowercase().trim()
-        return if (query.isEmpty()) {
+        val friends = if (query.isEmpty()) {
             _uiState.value.friends
         } else {
             _uiState.value.friends.filter { friend -> friend.name.lowercase().contains(query) }
         }
+        val seen = friends.map { friend -> friend.id }.toSet()
+        return friends + _uiState.value.directory.filter { person -> person.id !in seen }
     }
 
     private fun allPeople(): List<Friend> = _uiState.value.picked + _uiState.value.friends

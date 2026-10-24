@@ -22,6 +22,7 @@ import org.mochios.chat.api.ForwardResponse
 import org.mochios.chat.api.MemberAddResponse
 import org.mochios.chat.api.MessageListResponse
 import org.mochios.chat.api.NewChatResponse
+import org.mochios.chat.api.PersonResult
 import org.mochios.chat.api.ReactResponse
 import org.mochios.chat.api.SearchResponse
 import org.mochios.chat.api.SetupResponse
@@ -64,6 +65,10 @@ class ChatRepository @Inject constructor(
             typing = after.typing.takeIf { it != before.typing }?.toString(),
         ).unwrap()
     }
+
+    /** People in the directory matching [query], friends or not. */
+    suspend fun personSearch(query: String): List<PersonResult> =
+        api.personSearch(query).unwrap().results
 
     /** A chat with Mochi [members], or with people by their addresses on [account]'s network. */
     suspend fun createChat(name: String, members: List<String> = emptyList(), account: String = ""): CreateChatResponse =

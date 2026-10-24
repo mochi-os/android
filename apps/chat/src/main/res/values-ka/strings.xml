@@ -6,6 +6,8 @@
     <string name="chat_list_new">ახალი ჩატი</string>
     <string name="chat_new_title">ახალი ჩატი</string>
     <string name="chat_new_name">ჯგუფის სახელი</string>
+    <string name="chat_new_search_placeholder">ხალხის ძებნა</string>
+    <string name="chat_new_no_friends">მოძებნეთ ხალხი სასაუბროდ</string>
     <string name="chat_message_placeholder">შეტყობინება</string>
     <string name="chat_attachment_add">ფაილების მიმაგრება</string>
     <string name="chat_settings_title">ჩატის პარამეტრები</string>

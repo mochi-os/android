@@ -105,6 +105,18 @@ data class SetupResponse(val recovery: String = "", val password: Boolean = fals
 
 data class RecoverResponse(val restored: Int = 0)
 
+/**
+ * A directory person for the new-chat picker: non-friends may be addressed
+ * when their chat_policy allows it, which the sender-side probe at create decides.
+ */
+data class PersonResult(
+    val id: String = "",
+    val name: String = "",
+    val fingerprint: String = ""
+)
+
+data class PersonSearchResponse(val results: List<PersonResult> = emptyList())
+
 interface ChatApi {
 
     @GET("-/list")
@@ -125,6 +137,12 @@ interface ChatApi {
         @Field("receipts") receipts: String? = null,
         @Field("typing") typing: String? = null,
     ): Response<ApiResponse<Map<String, Any>>>
+
+    @FormUrlEncoded
+    @POST("-/person/search")
+    suspend fun personSearch(
+        @Field("search") search: String
+    ): Response<ApiResponse<PersonSearchResponse>>
 
     // With an account, members are addresses on its network.
     @FormUrlEncoded

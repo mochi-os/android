@@ -6,6 +6,8 @@
     <string name="chat_list_new">Նոր զրույց</string>
     <string name="chat_new_title">Նոր զրույց</string>
     <string name="chat_new_name">Խմբի անուն</string>
+    <string name="chat_new_search_placeholder">Փնտրել մարդկանց</string>
+    <string name="chat_new_no_friends">Փնտրեք մարդկանց՝ զրուցելու համար</string>
     <string name="chat_message_placeholder">Հաղորդագրություն</string>
     <string name="chat_attachment_add">Կցել պատասխանի ֆայլեր</string>
     <string name="chat_settings_title">Զրույցի կարգավորումներ</string>

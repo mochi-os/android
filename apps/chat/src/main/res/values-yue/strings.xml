@@ -23,6 +23,8 @@
     <string name="chat_list_no_groups">冇群組對話</string>
     <string name="chat_new_title">新對話</string>
     <string name="chat_new_name">群組名稱</string>
+    <string name="chat_new_search_placeholder">搜尋使用者</string>
+    <string name="chat_new_no_friends">搵人傾偈</string>
     <string name="chat_new_existing_with">你已經同以下嘅人有對話:</string>
     <string name="chat_new_open">打開</string>
     <string name="chat_new_remove_person">移除 %1$s</string>

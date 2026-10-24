@@ -6,6 +6,8 @@
     <string name="chat_list_new">Mazungumzo mapya</string>
     <string name="chat_new_title">Mazungumzo mapya</string>
     <string name="chat_new_name">Jina la kikundi</string>
+    <string name="chat_new_search_placeholder">Tafuta watu</string>
+    <string name="chat_new_no_friends">Tafuta watu wa kupiga nao gumzo</string>
     <string name="chat_message_placeholder">Ujumbe</string>
     <string name="chat_attachment_add">Ambatisha faili</string>
     <string name="chat_settings_title">Mipangilio ya gumzo</string>

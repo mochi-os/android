@@ -6,6 +6,8 @@
     <string name="chat_list_new">Шинэ чат</string>
     <string name="chat_new_title">Шинэ чат</string>
     <string name="chat_new_name">Бүлгийн нэр</string>
+    <string name="chat_new_search_placeholder">Хүмүүсийг хайх</string>
+    <string name="chat_new_no_friends">Чатлах хүмүүсийг хайх</string>
     <string name="chat_message_placeholder">Мессеж</string>
     <string name="chat_attachment_add">Файл хавсаргах</string>
     <string name="chat_settings_title">Чатын тохиргоо</string>

@@ -14,6 +14,8 @@
     <!-- New chat -->
     <string name="chat_new_title">New chat</string>
     <string name="chat_new_name">Group name</string>
+    <string name="chat_new_no_friends">Search for people to chat with</string>
+    <string name="chat_new_search_placeholder">Search people</string>
     <string name="chat_new_no_matches">No matching people</string>
     <string name="chat_new_existing_with">You already have chats with:</string>
     <string name="chat_new_open">Open</string>

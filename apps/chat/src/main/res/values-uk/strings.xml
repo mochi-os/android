@@ -6,6 +6,8 @@
     <string name="chat_list_new">Новий чат</string>
     <string name="chat_new_title">Новий чат</string>
     <string name="chat_new_name">Назва групи</string>
+    <string name="chat_new_search_placeholder">Пошук людей</string>
+    <string name="chat_new_no_friends">Знайдіть людей для спілкування</string>
     <string name="chat_message_placeholder">Повідомлення</string>
     <string name="chat_attachment_add">Додати файли</string>
     <string name="chat_settings_title">Налаштування чату</string>

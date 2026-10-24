@@ -23,6 +23,8 @@
     <string name="chat_list_no_groups">No hay chats grupales</string>
     <string name="chat_new_title">Nuevo chat</string>
     <string name="chat_new_name">Nombre del grupo</string>
+    <string name="chat_new_search_placeholder">Buscar personas</string>
+    <string name="chat_new_no_friends">Busca personas con quien chatear</string>
     <string name="chat_new_existing_with">Ya tenés chats con:</string>
     <string name="chat_new_open">Abrir</string>
     <string name="chat_new_remove_person">Eliminar a %1$s</string>

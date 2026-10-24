@@ -6,6 +6,8 @@
     <string name="chat_list_new">புதிய அரட்டை</string>
     <string name="chat_new_title">புதிய அரட்டை</string>
     <string name="chat_new_name">குழு பெயர்</string>
+    <string name="chat_new_search_placeholder">நபர்களைத் தேடு</string>
+    <string name="chat_new_no_friends">அரட்டையடிக்க நபர்களைத் தேடு</string>
     <string name="chat_message_placeholder">செய்தி</string>
     <string name="chat_attachment_add">கோப்புகளை இணை</string>
     <string name="chat_settings_title">அரட்டை அமைப்புகள்</string>

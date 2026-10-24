@@ -6,6 +6,8 @@
     <string name="chat_list_new">Yangi suhbat</string>
     <string name="chat_new_title">Yangi suhbat</string>
     <string name="chat_new_name">Guruh nomi</string>
+    <string name="chat_new_search_placeholder">Odamlarni qidirish</string>
+    <string name="chat_new_no_friends">Suhbatlashish uchun odamlarni qidiring</string>
     <string name="chat_message_placeholder">Xabar</string>
     <string name="chat_attachment_add">Fayl biriktirish</string>
     <string name="chat_settings_title">Suhbat sozlamalari</string>

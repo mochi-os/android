@@ -6,6 +6,8 @@
     <string name="chat_list_new">නව චැට්</string>
     <string name="chat_new_title">නව චැට්</string>
     <string name="chat_new_name">කණ්ඩායම් නාමය</string>
+    <string name="chat_new_search_placeholder">පුද්ගලයන් සොයන්න</string>
+    <string name="chat_new_no_friends">කතාබස් කිරීමට පුද්ගලයන් සොයන්න</string>
     <string name="chat_message_placeholder">පණිවිඩය</string>
     <string name="chat_attachment_add">ගොනු අමුණන්න</string>
     <string name="chat_settings_title">චැට් සැකසීම්</string>

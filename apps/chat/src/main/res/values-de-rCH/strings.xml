@@ -14,6 +14,8 @@
     <string name="chat_list_no_groups">Keine Gruppenchats</string>
     <string name="chat_new_title">Neuer Chat</string>
     <string name="chat_new_name">Gruppenname</string>
+    <string name="chat_new_search_placeholder">Personen suchen</string>
+    <string name="chat_new_no_friends">Nach Personen zum Chatten suchen</string>
     <string name="chat_new_existing_with">Sie haben bereits Chats mit:</string>
     <string name="chat_new_open">Öffnen</string>
     <string name="chat_new_remove_person">%1$s entfernen</string>
