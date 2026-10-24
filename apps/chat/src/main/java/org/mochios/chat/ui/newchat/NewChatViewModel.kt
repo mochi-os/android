@@ -297,15 +297,13 @@ class NewChatViewModel @Inject constructor(
         return friends + _uiState.value.directory.filter { person -> person.id !in seen }
     }
 
-    private fun allPeople(): List<Friend> = _uiState.value.picked + _uiState.value.friends
-
-    // Default chat name from the selected people; [fallback] when none resolve.
+    // Default chat name from the picked people; [fallback] when none resolve.
     fun selectedFallbackName(fallback: String): String {
         val state = _uiState.value
         return if (state.picked.size > 1) {
             groupChatName(state.me, state.picked, fallback)
         } else {
-            fallbackChatName(allPeople(), state.selected, fallback)
+            fallbackChatName(state.picked, state.selected, fallback)
         }
     }
 
@@ -352,17 +350,30 @@ internal fun fallbackChatName(people: List<Friend>, selected: Set<String>, fallb
     return names.ifBlank { fallback }
 }
 
+/** The longest chat name the server accepts, as the web's CHAT_NAME_MAX_LENGTH. */
+internal const val NAME_MAXIMUM = 1000
+
 /**
  * The default name for a new group as the web gives it: the caller's own [me]
  * and the [picked] people's names, all sorted alphabetically; [fallback] when
- * none have a name.
+ * none have a name. A large group's names joined run past [NAME_MAXIMUM], so
+ * they are cut there rather than giving a name the server would refuse.
  */
 internal fun groupChatName(me: String, picked: List<Friend>, fallback: String): String =
-    (listOf(me) + picked.map { friend -> friend.name })
-        .filter { name -> name.isNotBlank() }
-        .sortedWith(NaturalCompare)
-        .joinToString(", ")
-        .ifBlank { fallback }
+    shortened(
+        (listOf(me) + picked.map { friend -> friend.name })
+            .filter { name -> name.isNotBlank() }
+            .sortedWith(NaturalCompare)
+            .joinToString(", ")
+            .ifBlank { fallback }
+    )
+
+/** [name] cut to [NAME_MAXIMUM], never between the two halves of a surrogate pair. */
+private fun shortened(name: String): String {
+    if (name.length <= NAME_MAXIMUM) return name
+    val end = if (name[NAME_MAXIMUM - 1].isHighSurrogate()) NAME_MAXIMUM - 1 else NAME_MAXIMUM
+    return name.substring(0, end)
+}
 
 /**
  * Whether a chat with [members] is exactly the caller plus [people]: every

@@ -80,6 +80,9 @@ class NetworksViewModelsTest {
     @Volatile private var status = "active"
     @Volatile private var key = ""
 
+    /** The friends New chat is offered. */
+    @Volatile private var friends = "[]"
+
     /** The server's side of the conversation's websocket, once the client is connected. */
     @Volatile private var frames: WebSocket? = null
 
@@ -120,7 +123,7 @@ class NetworksViewModelsTest {
                     "/chat/c1/-/decline" -> ok("""{"declined": true}""")
                     "/chat/-/preferences/get" -> ok("""{"policy": "friends", "presence": true, "receipts": true, "typing": true}""")
                     "/chat/-/preferences/set" -> ok("""{}""")
-                    "/chat/-/new" -> ok("""{"name": "Me", "friends": [], "accounts": [{"id": "x1", "identifier": "me@xmpp.example", "network": "xmpp"}]}""")
+                    "/chat/-/new" -> ok("""{"name": "Me", "friends": $friends, "accounts": [{"id": "x1", "identifier": "me@xmpp.example", "network": "xmpp"}]}""")
                     "/chat/-/create" -> ok("""{"id": "n9", "name": "", "members": []}""")
                     "/chat/c1/-/encryption" -> ok("""{"account": "m1", "status": {"network": "matrix", "address": "@me:m.example", "device": "D", "fingerprint": "abc", "signing": false}, "people": [{"id": "@carol:m.example", "name": "Carol"}]}""")
                     "/chat/c1/-/encryption/devices" -> ok("""{"devices": [{"id": "7", "fingerprint": "f", "verified": false, "own": false}, {"id": "D", "fingerprint": "g", "own": true}]}""")
@@ -399,6 +402,15 @@ class NetworksViewModelsTest {
         model.createChat("Friend")
         until("the chat") { model.uiState.value.createdChatId == "n9" }
         assertFalse(sent("/chat/-/create")!!.contains("account"))
+    }
+
+    @Test
+    fun `a friend picked alone names the chat once`() {
+        friends = """[{"id": "friend", "identity": "friend", "name": "Friend", "chat": ""}]"""
+        val model = NewChatViewModel(SavedStateHandle(), repository)
+        until("the friends") { model.uiState.value.friends.isNotEmpty() }
+        model.toggleSelect(model.uiState.value.friends.single())
+        assertEquals("Friend", model.selectedFallbackName("Chat"))
     }
 
     private fun encryption(): EncryptionViewModel {
