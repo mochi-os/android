@@ -30,6 +30,8 @@ data class ChatSettingsUiState(
     val error: MochiError? = null,
     val leftOrDeleted: Boolean = false,
     val friends: List<Friend> = emptyList(),
+    val isLoadingFriends: Boolean = false,
+    val notice: MochiError? = null,
 )
 
 @HiltViewModel
@@ -73,7 +75,7 @@ class ChatSettingsViewModel @Inject constructor(
                     isSaving = false
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(isSaving = false, notice = e.toMochiError())
             }
         }
     }
@@ -84,22 +86,31 @@ class ChatSettingsViewModel @Inject constructor(
                 repository.addMember(chatId, memberId)
                 load()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(notice = e.toMochiError())
             }
         }
     }
 
     fun loadFriends() {
+        _uiState.value = _uiState.value.copy(isLoadingFriends = true)
         viewModelScope.launch {
             try {
                 val data = repository.getNewChatData()
                 _uiState.value = _uiState.value.copy(
-                    friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name })
+                    friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name }),
+                    isLoadingFriends = false,
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(
+                    isLoadingFriends = false,
+                    notice = e.toMochiError(),
+                )
             }
         }
+    }
+
+    fun clearNotice() {
+        _uiState.value = _uiState.value.copy(notice = null)
     }
 
     fun removeMember(member: ChatMember) {
@@ -112,7 +123,7 @@ class ChatSettingsViewModel @Inject constructor(
                     )
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(notice = e.toMochiError())
             }
         }
     }
@@ -123,7 +134,7 @@ class ChatSettingsViewModel @Inject constructor(
                 repository.deleteChat(chatId)
                 _uiState.value = _uiState.value.copy(leftOrDeleted = true)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(notice = e.toMochiError())
             }
         }
     }

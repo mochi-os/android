@@ -64,6 +64,8 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
@@ -110,7 +112,6 @@ import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
-import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
@@ -146,6 +147,8 @@ import org.mochios.chat.model.receipts
 import org.mochios.chat.model.relayed
 import org.mochios.chat.model.seenBy
 import org.mochios.chat.model.threads
+import org.mochios.chat.ui.chatlist.ChatListHeader
+import org.mochios.chat.ui.chatlist.ChatListNoMatches
 import org.mochios.chat.ui.chatlist.ChatListViewModel
 import org.mochios.chat.ui.chatlist.unreadBadge
 import org.mochios.chat.ui.encryption.VerificationWatcher
@@ -186,8 +189,8 @@ fun ChatScreen(
     }
     val pinnedChats by listViewModel.pinned.collectAsState()
     val invitation = stringResource(R.string.chat_invitation)
-    val drawerItems = remember(listUiState.chats, pinnedChats, invitation) {
-        listViewModel.filteredChats().map { chat ->
+    val drawerItems = remember(listUiState, pinnedChats, invitation, chatId) {
+        listViewModel.filteredChats(open = chatId).map { chat ->
             // A conversation on another network: its people have no Mochi
             // avatar, so it shows the network's globe.
             val isDirect = chat.members == 2 && chat.other.isNotBlank() && chat.account.isEmpty()
@@ -210,8 +213,20 @@ fun ChatScreen(
 
     MochiListDrawer(
         drawerState = drawerState,
-        header = { DrawerTitle(stringResource(R.string.chat_list_title)) },
+        header = {
+            ChatListHeader(
+                query = listUiState.query,
+                filter = listUiState.filter,
+                onQueryChange = listViewModel::setQuery,
+                onFilterChange = listViewModel::setFilter,
+            )
+        },
         items = drawerItems,
+        emptyState = if (listUiState.chats.isNotEmpty()) {
+            { ChatListNoMatches(query = listUiState.query, filter = listUiState.filter) }
+        } else {
+            null
+        },
         selectedId = chatId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
@@ -330,10 +345,12 @@ private fun ChatContent(
     }
 
     // A failure over a loaded conversation: the page error would replace
-    // nothing on screen, so it is shown once as a toast instead.
+    // nothing on screen, so it is shown once as a snackbar instead.
+    val snackbarHostState = remember { SnackbarHostState() }
+    val snackbarScope = rememberCoroutineScope()
     LaunchedEffect(uiState.notice) {
         val notice = uiState.notice ?: return@LaunchedEffect
-        Toast.makeText(context, notice.userMessage(), Toast.LENGTH_SHORT).show()
+        snackbarHostState.showSnackbar(notice.userMessage())
         viewModel.clearNotice()
     }
 
@@ -368,6 +385,7 @@ private fun ChatContent(
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             val members = uiState.chat.members
             val isGroup = members.size > 2
@@ -598,7 +616,9 @@ private fun ChatContent(
                     onDelete = {
                         val selected = uiState.messages.filter { it.id in uiState.selectedIds }
                         if (selected.any { it.member != uiState.identity }) {
-                            Toast.makeText(context, deleteOwnOnlyMessage, Toast.LENGTH_SHORT).show()
+                            snackbarScope.launch {
+                                snackbarHostState.showSnackbar(deleteOwnOnlyMessage)
+                            }
                         } else {
                             pendingDelete = uiState.selectedIds.toList()
                         }

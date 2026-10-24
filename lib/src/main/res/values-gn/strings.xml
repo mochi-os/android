@@ -254,6 +254,10 @@
     <string name="common_pause">Embopytu\'u</string>
     <string name="common_opening_file">Ojejuruja archivo…</string>
     <string name="common_no_app_for_file">Ndaipóri app ikatúva oipe\'a ko archivo</string>
+    <string name="common_file_actions_text">Eñongatu ne dispositivo-pe térã emoherakuã ambue app ndive.</string>
+    <string name="common_file_save_to_device">Eñongatu dispositivo-pe</string>
+    <string name="common_file_share">Emoherakuã</string>
+    <string name="common_file_save_failed">Ndaikatúi oñeñongatu archivo</string>
     <string name="common_file_open_failed">Ndaikatúi ojeipe\'a archivo</string>
     <string name="reaction_remove">Mopotĩ</string>
     <string name="common_logout_confirm_message">¿Añetehápe esẽse? Tekotevẽta eike jey eiporu hag̃ua ne mba\'ete.</string>

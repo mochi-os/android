@@ -6,6 +6,8 @@
     <string name="chat_list_new">Жаңа чат</string>
     <string name="chat_new_title">Жаңа чат</string>
     <string name="chat_new_name">Топ атауы</string>
+    <string name="chat_new_search_placeholder">Адамдарды іздеу</string>
+    <string name="chat_new_no_friends">Чат жасау үшін адамдарды іздеңіз</string>
     <string name="chat_message_placeholder">Хабарлама</string>
     <string name="chat_attachment_add">Файлдар тіркеу</string>
     <string name="chat_settings_title">Чат параметрлері</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Мүшелер</string>
     <string name="chat_settings_add_member">Мүше қосу</string>
     <string name="chat_settings_add_member_search">Достарды іздеу</string>
+    <string name="chat_settings_add_member_no_friends">Сізде әлі достар жоқ. Чатқа тек достарды қосуға болады.</string>
+    <string name="chat_settings_add_member_all_added">Барлық достарыңыз осы чатта бар.</string>
+    <string name="chat_settings_add_member_no_match">Басқа іздеу терминін қолданып көріңіз</string>
     <string name="chat_settings_remove_member">Жою</string>
     <string name="chat_settings_remove_member_title">Мүшені жою</string>
     <string name="chat_settings_leave">Чаттан кету</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">Чат хабарландырулары</string>
     <string name="chat_list_empty">Әзірге чаттар жоқ</string>
-    <string name="chat_new_existing_chat">Бар чатты ашу</string>
+    <string name="chat_list_filter_groups">Топтар</string>
+    <string name="chat_list_no_groups">Топтық чаттар жоқ</string>
+    <string name="chat_new_existing_with">Сізде осылармен чаттар бар:</string>
+    <string name="chat_new_open">Ашу</string>
+    <string name="chat_new_remove_person">%1$s жою</string>
     <string name="chat_new_start">Чат бастау</string>
     <string name="chat_new_start_group">Топтық чат бастау</string>
     <string name="chat_messages_loading">Хабарламалар жүктелуде…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">Ескі хабарламаларды жүктеу</string>
     <string name="chat_attachment_label">Файл</string>
     <string name="chat_settings_rename">Чат атын өзгерту</string>
-    <string name="chat_settings_add_member_empty">Қосатын достар жоқ</string>
     <string name="chat_settings_remove_member_message">%1$s пайдаланушысын осы чаттан жоюға бола ма?</string>
     <string name="chat_settings_leave_message">Осы чаттан шығасыз ба? Басқа қатысушылар сіздің хабарламаларыңызды бұдан былай көрмейді.</string>
     <string name="chat_settings_leave_and_delete">Шығу және жергілікті түрде жою</string>
@@ -67,9 +75,7 @@
     <string name="chat_policy_title">Кіріс чаттар</string>
     <string name="chat_policy_friends">Тек достар</string>
     <string name="chat_policy_anyone">Кез келген адам</string>
-    <string name="chat_new_search_placeholder">Адамдарды іздеу</string>
     <string name="chat_new_no_matches">Сәйкес адамдар жоқ</string>
-    <string name="chat_new_no_friends">Чат жасау үшін адамдарды іздеңіз</string>
     <string name="chat_pin">Бекіту</string>
     <string name="chat_unpin">Бекітуді жою</string>
     <string name="chat_settings_general">Жалпы</string>

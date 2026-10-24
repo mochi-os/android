@@ -41,9 +41,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
 import org.mochios.android.ui.components.FileKindIcon
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.UploadFiles
 import org.mochios.wikis.R
@@ -196,7 +196,7 @@ private fun AttachmentTile(
             contentAlignment = Alignment.Center,
         ) {
             if (attachment.isImage && thumbnailUrl != null) {
-                AsyncImage(
+                MochiImage(
                     model = thumbnailUrl,
                     contentDescription = attachment.name,
                     contentScale = ContentScale.Crop,

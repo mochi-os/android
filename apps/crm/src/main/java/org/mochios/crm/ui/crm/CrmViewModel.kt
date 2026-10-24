@@ -10,6 +10,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -203,6 +204,8 @@ class CrmViewModel @Inject constructor(
                 watched = watched,
                 people = people
             )
+        } catch (e: CancellationException) {
+            throw e
         } catch (_: Exception) {
             // Silent — cached data is still showing
         }
@@ -517,6 +520,8 @@ class CrmViewModel @Inject constructor(
                 val objects = repository.getObjects(crmId)
                 val watched = repository.getWatched(crmId)
                 _uiState.value = _uiState.value.copy(objects = objects, watched = watched)
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) { }
         }
     }

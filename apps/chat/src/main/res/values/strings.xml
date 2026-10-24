@@ -8,6 +8,8 @@
     <string name="chat_list_search">Search</string>
     <string name="chat_list_new">New chat</string>
     <string name="chat_list_empty">No chats yet</string>
+    <string name="chat_list_filter_groups">Groups</string>
+    <string name="chat_list_no_groups">No group chats</string>
 
     <!-- New chat -->
     <string name="chat_new_title">New chat</string>
@@ -15,7 +17,9 @@
     <string name="chat_new_no_friends">Search for people to chat with</string>
     <string name="chat_new_search_placeholder">Search people</string>
     <string name="chat_new_no_matches">No matching people</string>
-    <string name="chat_new_existing_chat">Open existing chat</string>
+    <string name="chat_new_existing_with">You already have chats with:</string>
+    <string name="chat_new_open">Open</string>
+    <string name="chat_new_remove_person">Remove %1$s</string>
     <string name="chat_new_start">Start chat</string>
     <string name="chat_new_start_group">Start group chat</string>
     <string name="chat_new_fallback_name">Chat</string>
@@ -62,7 +66,9 @@
     <string name="chat_settings_members">Members</string>
     <string name="chat_settings_add_member">Add member</string>
     <string name="chat_settings_add_member_search">Search friends</string>
-    <string name="chat_settings_add_member_empty">No friends to add</string>
+    <string name="chat_settings_add_member_no_friends">You have no friends yet. Only friends can be added to a chat.</string>
+    <string name="chat_settings_add_member_all_added">All your friends are already in this chat.</string>
+    <string name="chat_settings_add_member_no_match">Try a different search term</string>
     <string name="chat_settings_remove_member">Remove</string>
     <string name="chat_settings_remove_member_title">Remove member</string>
     <string name="chat_settings_remove_member_message">Remove %1$s from this chat?</string>

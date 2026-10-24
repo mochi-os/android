@@ -8,6 +8,7 @@ package org.mochios.chat.ui.newchat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,20 +19,42 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.SEARCH_DEBOUNCE
+import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatAccount
+import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.model.Friend
 import org.mochios.chat.model.addressList
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
 
+/**
+ * A chat the picked people already share with the caller, offered to open
+ * before making another.
+ */
+data class ExistingChat(
+    val id: String,
+    val name: String,
+)
+
 data class NewChatUiState(
     val friends: List<Friend> = emptyList(),
-    // Directory people matching the current query who aren't already friends.
-    // Non-friends may be addressed; the sender-side probe at create decides
-    // whether their policy allows it (mirrors the web picker).
+    /**
+     * Directory people matching the search who aren't friends: they can be
+     * added when their chat policy accepts anyone, as the web's picker has it.
+     */
     val directory: List<Friend> = emptyList(),
-    val selected: Set<String> = emptySet(),
+    /** The caller's own name, first in a new group's default name as the web has it. */
+    val me: String = "",
+    val picked: List<Friend> = emptyList(),
+    val existing: List<ExistingChat> = emptyList(),
+    /**
+     * The one person picked already has a 1:1 chat with the caller, so Create
+     * stays off; a group may share its people with another, as the web allows.
+     */
+    val duplicate: Boolean = false,
     val groupName: String = "",
+    /** Whether the user typed [groupName]; until then the default name follows the picks. */
+    val groupNameEdited: Boolean = false,
     val searchQuery: String = "",
     val isLoading: Boolean = false,
     val isSearchingDirectory: Boolean = false,
@@ -44,6 +67,9 @@ data class NewChatUiState(
     val account: String = "",
     val addresses: String = "",
 ) {
+    val selected: Set<String>
+        get() = picked.map { friend -> friend.id }.toSet()
+
     /** The account chosen, when one is. */
     val chosen: ChatAccount? get() = accounts.firstOrNull { it.id == account }
 }
@@ -79,7 +105,7 @@ class NewChatViewModel @Inject constructor(
             try {
                 val data = repository.getNewChatData()
                 val friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(accounts = data.accounts)
+                _uiState.value = _uiState.value.copy(me = data.name, accounts = data.accounts)
 
                 if (handoffAccount.isNotBlank() && handoffAddress.isNotBlank()) {
                     try {
@@ -94,6 +120,7 @@ class NewChatViewModel @Inject constructor(
                             account = handoffAccount,
                             addresses = handoffAddress,
                             groupName = handoffName,
+                            groupNameEdited = handoffName.isNotBlank(),
                             error = e.toMochiError(),
                         )
                     }
@@ -119,9 +146,10 @@ class NewChatViewModel @Inject constructor(
                         _uiState.value = _uiState.value.copy(
                             friends = friends,
                             isLoading = false,
-                            selected = setOf(target.id),
+                            picked = listOf(target),
                             error = e.toMochiError(),
                         )
+                        refreshExisting()
                     }
                     return@launch
                 }
@@ -136,20 +164,73 @@ class NewChatViewModel @Inject constructor(
         }
     }
 
-    fun toggleSelect(friendId: String) {
-        val current = _uiState.value.selected
+    fun toggleSelect(friend: Friend) {
+        val current = _uiState.value.picked
         _uiState.value = _uiState.value.copy(
-            selected = if (friendId in current) current - friendId else current + friendId
+            picked = if (current.any { picked -> picked.id == friend.id }) {
+                current.filterNot { picked -> picked.id == friend.id }
+            } else {
+                current + friend
+            }
         )
+        refreshExisting()
+    }
+
+    private var chats: List<Chat>? = null
+    private val chatMembers = mutableMapOf<String, Set<String>>()
+    private var existingJob: Job? = null
+
+    private fun refreshExisting() {
+        existingJob?.cancel()
+        val picked = _uiState.value.picked
+        val direct = picked
+            .filter { friend -> friend.chat.isNotBlank() }
+            .map { friend -> ExistingChat(id = friend.chat, name = friend.name) }
+        if (picked.size < 2) {
+            _uiState.value = _uiState.value.copy(
+                existing = direct,
+                duplicate = direct.isNotEmpty(),
+            )
+            return
+        }
+        _uiState.value = _uiState.value.copy(existing = direct, duplicate = false)
+        existingJob = viewModelScope.launch {
+            val groups = try {
+                findGroups(picked.map { friend -> friend.id }.toSet())
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                emptyList()
+            }
+            _uiState.value = _uiState.value.copy(existing = groups + direct)
+        }
+    }
+
+    private suspend fun findGroups(people: Set<String>): List<ExistingChat> {
+        val all = chats ?: repository.listChats().also { list -> chats = list }
+        val candidates = all.filter { chat ->
+            chat.status == ChatStatus.ACTIVE && chat.members == people.size + 1
+        }
+        return candidates
+            .filter { chat ->
+                val members = chatMembers[chat.id]
+                    ?: repository.getMembers(chat.id)
+                        .map { member -> member.id }
+                        .toSet()
+                        .also { ids -> chatMembers[chat.id] = ids }
+                sameGroup(members, people)
+            }
+            .map { chat -> ExistingChat(id = chat.id, name = chat.name) }
     }
 
     fun updateGroupName(name: String) {
-        _uiState.value = _uiState.value.copy(groupName = name)
+        _uiState.value = _uiState.value.copy(groupName = name, groupNameEdited = true)
     }
 
     /** Choose the account the conversation is had through; empty for Mochi. */
     fun selectAccount(account: String) {
-        _uiState.value = _uiState.value.copy(account = account, selected = emptySet())
+        _uiState.value = _uiState.value.copy(account = account, picked = emptyList())
+        refreshExisting()
     }
 
     fun updateAddresses(text: String) {
@@ -185,45 +266,61 @@ class NewChatViewModel @Inject constructor(
         searchJob = viewModelScope.launch {
             delay(SEARCH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isSearchingDirectory = true)
-            try {
-                val friendIds = _uiState.value.friends.map { it.id }.toSet()
-                val results = repository.personSearch(trimmed)
-                    .filter { it.id !in friendIds }
-                    .map { Friend(id = it.id, identity = it.id, name = it.name, chat = "") }
-                _uiState.value = _uiState.value.copy(directory = results, isSearchingDirectory = false)
+            val directory = try {
+                val friendIds = _uiState.value.friends.map { friend -> friend.id }.toSet()
+                repository.personSearch(trimmed)
+                    .filter { person -> person.id !in friendIds }
+                    .map { person ->
+                        Friend(id = person.id, identity = person.id, name = person.name, chat = "")
+                    }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                // A failed directory search leaves the local matches; not fatal.
-                _uiState.value = _uiState.value.copy(directory = emptyList(), isSearchingDirectory = false)
+                emptyList()
             }
+            _uiState.value = _uiState.value.copy(directory = directory, isSearchingDirectory = false)
         }
     }
 
-    // Friends matching the query first, then directory (non-friend) matches -
-    // deduped by id. With no query the picker shows the friend list unchanged.
+    /**
+     * Friends matching the search first, then the directory's matches who
+     * aren't friends; with no search, the friend list unchanged.
+     */
     fun filteredFriends(): List<Friend> {
         val query = _uiState.value.searchQuery.lowercase().trim()
-        val friends = if (query.isEmpty()) _uiState.value.friends
-        else _uiState.value.friends.filter { it.name.lowercase().contains(query) }
-        val seen = friends.map { it.id }.toSet()
-        return friends + _uiState.value.directory.filter { it.id !in seen }
+        val friends = if (query.isEmpty()) {
+            _uiState.value.friends
+        } else {
+            _uiState.value.friends.filter { friend -> friend.name.lowercase().contains(query) }
+        }
+        val seen = friends.map { friend -> friend.id }.toSet()
+        return friends + _uiState.value.directory.filter { person -> person.id !in seen }
     }
 
-    // Every selectable person (friends + current directory results) - used for
-    // resolving selected ids to display names.
-    private fun allPeople(): List<Friend> = _uiState.value.friends + _uiState.value.directory
+    private fun allPeople(): List<Friend> = _uiState.value.picked + _uiState.value.friends
 
-    // Default chat name from the selected people (handles directory picks,
-    // which aren't in the friend list); [fallback] when none resolve.
-    fun selectedFallbackName(fallback: String): String =
-        fallbackChatName(allPeople(), _uiState.value.selected, fallback)
+    // Default chat name from the selected people; [fallback] when none resolve.
+    fun selectedFallbackName(fallback: String): String {
+        val state = _uiState.value
+        return if (state.picked.size > 1) {
+            groupChatName(state.me, state.picked, fallback)
+        } else {
+            fallbackChatName(allPeople(), state.selected, fallback)
+        }
+    }
 
     fun createChat(fallbackName: String) {
         viewModelScope.launch {
             val state = _uiState.value
-            if (state.selected.isEmpty()) return@launch
+            if (state.picked.isEmpty() || state.duplicate) {
+                return@launch
+            }
             _uiState.value = state.copy(isCreating = true, error = null)
             try {
-                val chosenName = state.groupName.ifBlank { fallbackName }
+                val chosenName = state.groupName
+                    .takeIf { state.groupNameEdited }
+                    .orEmpty()
+                    .ifBlank { fallbackName }
                 val response = repository.createChat(chosenName, state.selected.toList())
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,
@@ -254,3 +351,22 @@ internal fun fallbackChatName(people: List<Friend>, selected: Set<String>, fallb
     val names = people.filter { it.id in selected }.joinToString(", ") { it.name }
     return names.ifBlank { fallback }
 }
+
+/**
+ * The default name for a new group as the web gives it: the caller's own [me]
+ * and the [picked] people's names, all sorted alphabetically; [fallback] when
+ * none have a name.
+ */
+internal fun groupChatName(me: String, picked: List<Friend>, fallback: String): String =
+    (listOf(me) + picked.map { friend -> friend.name })
+        .filter { name -> name.isNotBlank() }
+        .sortedWith(NaturalCompare)
+        .joinToString(", ")
+        .ifBlank { fallback }
+
+/**
+ * Whether a chat with [members] is exactly the caller plus [people]: every
+ * picked person is in it and the only one left over is the caller.
+ */
+internal fun sameGroup(members: Set<String>, people: Set<String>): Boolean =
+    members.size == people.size + 1 && members.containsAll(people)

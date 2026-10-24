@@ -92,6 +92,7 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.UploadProgress
@@ -348,7 +349,7 @@ private fun PreviewCard(
             contentAlignment = Alignment.Center,
         ) {
             if (bannerUrl != null) {
-                AsyncImage(
+                MochiImage(
                     model = ImageRequest.Builder(LocalContext.current)
                         .data(bannerUrl)
                         .crossfade(true)
@@ -696,7 +697,7 @@ private fun FaviconSection(
                 shape = RoundedCornerShape(4.dp),
             ) {
                 if (faviconUrl != null) {
-                    AsyncImage(
+                    MochiImage(
                         model = ImageRequest.Builder(LocalContext.current)
                             .data(faviconUrl)
                             .crossfade(true)
@@ -805,7 +806,7 @@ internal fun ProfilePreviewDialog(
                     // ---- Banner + avatar overlay (matches PersonViewScreen) ----
                     Box(modifier = Modifier.fillMaxWidth()) {
                         if (bannerUrl != null) {
-                            AsyncImage(
+                            MochiImage(
                                 model = ImageRequest.Builder(LocalContext.current)
                                     .data(bannerUrl)
                                     .crossfade(true)
@@ -816,6 +817,7 @@ internal fun ProfilePreviewDialog(
                                     .fillMaxWidth()
                                     .aspectRatio(3f)
                                     .clip(RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp)),
+                                shape = RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp),
                             )
                         } else {
                             Surface(

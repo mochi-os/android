@@ -46,12 +46,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.theme.LocalEntityRadius
 import org.mochios.market.R
 import org.mochios.market.lib.ratingStars
@@ -99,7 +99,7 @@ fun ListingCard(
                 NoPhotoPlaceholder(modifier = Modifier.fillMaxSize())
             } else {
                 val context = LocalContext.current
-                AsyncImage(
+                MochiImage(
                     model = ImageRequest.Builder(context)
                         .data(photoUrl)
                         .crossfade(true)

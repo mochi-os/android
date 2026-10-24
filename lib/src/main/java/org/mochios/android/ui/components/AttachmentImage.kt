@@ -5,7 +5,6 @@
 
 package org.mochios.android.ui.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -26,6 +25,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -42,6 +43,8 @@ import org.mochios.android.util.attachmentStatus
  * reached right now (the server retries after a backoff, so tapping the tile
  * retries the load), "Not found" for bytes that are gone. One broken glyph
  * for both was the client contradicting a server that tells them apart.
+ * While it loads, and behind the reason when it fails, the grey placeholder
+ * [MochiImage] draws stands in, outlined by [shape].
  */
 @Composable
 fun AttachmentImage(
@@ -49,8 +52,10 @@ fun AttachmentImage(
     contentDescription: String?,
     modifier: Modifier = Modifier,
     contentScale: ContentScale = ContentScale.Crop,
+    shape: Shape = RectangleShape,
 ) {
     var failure by remember(model) { mutableStateOf<AttachmentFailure?>(null) }
+    var loaded by remember(model) { mutableStateOf(false) }
     var attempt by remember(model) { mutableIntStateOf(0) }
 
     val current = failure
@@ -61,7 +66,8 @@ fun AttachmentImage(
         // (the caller often passes its own) have no reliable winner. Retry
         // rather than showing a viewer onto the same failure; for an
         // unavailable source a later attempt may simply work.
-        Box(modifier = modifier.background(MaterialTheme.colorScheme.surfaceVariant)) {
+        Box(modifier = modifier) {
+        ImagePlaceholder(shape = shape, modifier = Modifier.matchParentSize())
         Column(
             modifier = Modifier
                 .matchParentSize()
@@ -100,15 +106,19 @@ fun AttachmentImage(
 
     // key(attempt) rebuilds the painter on retry; recomposing the same model
     // would replay the remembered failure instead of refetching.
+    // The placeholder rides on the image's own modifier rather than a box
+    // around it: some callers fix only the height and let the width follow
+    // the image, which a wrapping box would collapse.
     key(attempt) {
         AsyncImage(
             model = model,
             contentDescription = contentDescription,
             contentScale = contentScale,
+            onSuccess = { loaded = true },
             onError = { state ->
                 failure = attachmentFailure(attachmentStatus(state.result.throwable))
             },
-            modifier = modifier,
+            modifier = modifier.then(if (loaded) Modifier else Modifier.imagePlaceholder(shape)),
         )
     }
 }

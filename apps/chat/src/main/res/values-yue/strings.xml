@@ -19,9 +19,15 @@
     <string name="chat_list_title">傾偈</string>
     <string name="chat_list_new">新對話</string>
     <string name="chat_list_empty">未有任何對話</string>
+    <string name="chat_list_filter_groups">群組</string>
+    <string name="chat_list_no_groups">冇群組對話</string>
     <string name="chat_new_title">新對話</string>
     <string name="chat_new_name">群組名稱</string>
-    <string name="chat_new_existing_chat">打開現有對話</string>
+    <string name="chat_new_search_placeholder">搜尋使用者</string>
+    <string name="chat_new_no_friends">搵人傾偈</string>
+    <string name="chat_new_existing_with">你已經同以下嘅人有對話:</string>
+    <string name="chat_new_open">打開</string>
+    <string name="chat_new_remove_person">移除 %1$s</string>
     <string name="chat_new_start">開始傾偈</string>
     <string name="chat_new_start_group">開始群組對話</string>
     <string name="chat_messages_loading">正在載入訊息⋯</string>
@@ -32,7 +38,9 @@
     <string name="chat_settings_rename">重新命名對話</string>
     <string name="chat_settings_rename_label">對話名稱</string>
     <string name="chat_settings_add_member_search">搜尋朋友</string>
-    <string name="chat_settings_add_member_empty">冇朋友可以加入</string>
+    <string name="chat_settings_add_member_no_friends">你仲未有朋友。淨係可以將朋友加入對話。</string>
+    <string name="chat_settings_add_member_all_added">你所有朋友都已經喺呢個對話度。</string>
+    <string name="chat_settings_add_member_no_match">試下第個搜尋字詞</string>
     <string name="chat_settings_remove_member_title">移除成員</string>
     <string name="chat_settings_remove_member_message">要將 %1$s 由呢個對話移除?</string>
     <string name="chat_settings_leave">離開對話</string>
@@ -57,9 +65,7 @@
     <string name="chat_policy_title">收到嘅聊天</string>
     <string name="chat_policy_friends">只限好友</string>
     <string name="chat_policy_anyone">任何人</string>
-    <string name="chat_new_search_placeholder">搜尋使用者</string>
     <string name="chat_new_no_matches">冇相符嘅使用者</string>
-    <string name="chat_new_no_friends">搵人傾偈</string>
     <string name="chat_pin">置頂</string>
     <string name="chat_unpin">取消置頂</string>
     <string name="chat_settings_general">一般</string>

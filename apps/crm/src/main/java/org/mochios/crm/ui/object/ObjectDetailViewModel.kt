@@ -165,6 +165,8 @@ class ObjectDetailViewModel @Inject constructor(
                 loadLinks()
                 loadSiblingObjects()
                 loadPeople()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 if (currentCrmId != crmId || currentObjectId != objectId) return@launch
                 _uiState.value = _uiState.value.copy(

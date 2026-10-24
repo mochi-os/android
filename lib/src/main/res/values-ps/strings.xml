@@ -254,6 +254,10 @@
     <string name="common_pause">ودرول</string>
     <string name="common_opening_file">فایل پرانیستل کیږي…</string>
     <string name="common_no_app_for_file">هیڅ اپلیکیشن دا فایل نه شي پرانیستلی</string>
+    <string name="common_file_actions_text">دا په خپل وسیله کې خوندي کړئ یا یې له بل اپ سره شریک کړئ.</string>
+    <string name="common_file_save_to_device">په وسیله کې خوندي کړئ</string>
+    <string name="common_file_share">شریکول</string>
+    <string name="common_file_save_failed">دوتنه خوندي نه شوه</string>
     <string name="common_file_open_failed">فایل پرانیستل ونشول</string>
     <string name="reaction_remove">پاک کړئ</string>
     <string name="common_logout_confirm_message">ایا تاسو ډاډه یاست چې غواړئ ووځئ؟ خپل حساب ته د لاسرسي لپاره به اړ یاست چې بیا ننوځئ.</string>

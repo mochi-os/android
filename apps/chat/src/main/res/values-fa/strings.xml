@@ -6,6 +6,8 @@
     <string name="chat_list_new">گفت‌وگوی جدید</string>
     <string name="chat_new_title">گفت‌وگوی جدید</string>
     <string name="chat_new_name">نام گروه</string>
+    <string name="chat_new_search_placeholder">جستجوی افراد</string>
+    <string name="chat_new_no_friends">افرادی برای گفتگو پیدا کنید</string>
     <string name="chat_message_placeholder">پیام</string>
     <string name="chat_attachment_add">پیوست فایل‌ها</string>
     <string name="chat_settings_title">تنظیمات گفت‌وگو</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">اعضا</string>
     <string name="chat_settings_add_member">افزودن عضو</string>
     <string name="chat_settings_add_member_search">جست‌وجوی دوستان</string>
+    <string name="chat_settings_add_member_no_friends">هنوز دوستی ندارید. فقط دوستان را می‌توان به گفتگو اضافه کرد.</string>
+    <string name="chat_settings_add_member_all_added">همه دوستانتان از قبل در این گفتگو هستند.</string>
+    <string name="chat_settings_add_member_no_match">عبارت جست‌وجوی دیگری را امتحان کنید</string>
     <string name="chat_settings_remove_member">حذف</string>
     <string name="chat_settings_remove_member_title">حذف عضو</string>
     <string name="chat_settings_leave">ترک گفتگو</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">اعلان‌های گفتگو</string>
     <string name="chat_list_empty">هنوز گفتگویی وجود ندارد</string>
-    <string name="chat_new_existing_chat">باز کردن گفتگوی موجود</string>
+    <string name="chat_list_filter_groups">گروه‌ها</string>
+    <string name="chat_list_no_groups">هیچ گفتگوی گروهی وجود ندارد</string>
+    <string name="chat_new_existing_with">از قبل با این افراد گفتگو دارید:</string>
+    <string name="chat_new_open">باز کردن</string>
+    <string name="chat_new_remove_person">حذف %1$s</string>
     <string name="chat_new_start">شروع گفتگو</string>
     <string name="chat_new_start_group">شروع گفتگوی گروهی</string>
     <string name="chat_messages_loading">در حال بارگذاری پیام‌ها…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">انتقال به پایین</string>
     <string name="chat_attachment_label">فایل</string>
     <string name="chat_settings_rename">تغییر نام گفتگو</string>
-    <string name="chat_settings_add_member_empty">دوستی برای افزودن وجود ندارد</string>
     <string name="chat_settings_remove_member_message">%1$s از این گفتگو حذف شود؟</string>
     <string name="chat_settings_leave_message">از این گفتگو خارج می‌شوید؟ سایر اعضا دیگر پیام‌های شما را نخواهند دید.</string>
     <string name="chat_settings_leave_and_delete">خروج و حذف محلی</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">گفتگوهای ورودی</string>
     <string name="chat_policy_friends">فقط دوستان</string>
     <string name="chat_policy_anyone">هر کسی</string>
-    <string name="chat_new_search_placeholder">جستجوی افراد</string>
     <string name="chat_new_no_matches">فرد منطبقی یافت نشد</string>
-    <string name="chat_new_no_friends">افرادی برای گفتگو پیدا کنید</string>
     <string name="chat_pin">سنجاق</string>
     <string name="chat_unpin">برداشتن سنجاق</string>
     <string name="chat_settings_general">عمومی</string>

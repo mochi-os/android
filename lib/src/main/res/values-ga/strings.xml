@@ -254,6 +254,10 @@
     <string name="common_pause">Cuir ar sos</string>
     <string name="common_opening_file">Comhad á oscailt…</string>
     <string name="common_no_app_for_file">Níl aon aip in ann an comhad seo a oscailt</string>
+    <string name="common_file_actions_text">Sábháil ar do ghléas é nó comhroinn é le haip eile.</string>
+    <string name="common_file_save_to_device">Sábháil ar an ngléas</string>
+    <string name="common_file_share">Comhroinn</string>
+    <string name="common_file_save_failed">Níorbh fhéidir an comhad a shábháil</string>
     <string name="common_file_open_failed">Níorbh fhéidir an comhad a oscailt</string>
     <string name="reaction_remove">Glan</string>
     <string name="common_logout_confirm_message">An bhfuil tú cinnte gur mhaith leat logáil amach? Beidh ort logáil isteach arís chun rochtain a fháil ar do chuntas.</string>

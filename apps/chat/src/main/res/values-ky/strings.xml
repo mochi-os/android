@@ -6,6 +6,8 @@
     <string name="chat_list_new">Жаңы чат</string>
     <string name="chat_new_title">Жаңы чат</string>
     <string name="chat_new_name">Топ аты</string>
+    <string name="chat_new_search_placeholder">Адамдарды издөө</string>
+    <string name="chat_new_no_friends">Маектешүү үчүн адамдарды издеңиз</string>
     <string name="chat_message_placeholder">Билдирүү</string>
     <string name="chat_attachment_add">Файлдарды тиркөө</string>
     <string name="chat_settings_title">Чат жөндөөлөрү</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Мүчөлөр</string>
     <string name="chat_settings_add_member">Мүчө кошуу</string>
     <string name="chat_settings_add_member_search">Досторду издөө</string>
+    <string name="chat_settings_add_member_no_friends">Сизде азырынча достор жок. Чатка достор гана кошулат.</string>
+    <string name="chat_settings_add_member_all_added">Бардык досторуңуз бул чатта бар.</string>
+    <string name="chat_settings_add_member_no_match">Башка издөө сөзүн колдонуп көрүңүз</string>
     <string name="chat_settings_remove_member">Алуу</string>
     <string name="chat_settings_remove_member_title">Мүчөнү алуу</string>
     <string name="chat_settings_leave">Чаттан чыгуу</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">Чат билдирмелери</string>
     <string name="chat_list_empty">Азырынча чаттар жок</string>
-    <string name="chat_new_existing_chat">Учурдагы чатты ачуу</string>
+    <string name="chat_list_filter_groups">Топтор</string>
+    <string name="chat_list_no_groups">Топтук чаттар жок</string>
+    <string name="chat_new_existing_with">Сизде буга чейин чаттар бар:</string>
+    <string name="chat_new_open">Ачуу</string>
+    <string name="chat_new_remove_person">%1$s өчүрүү</string>
     <string name="chat_new_start">Чатты баштоо</string>
     <string name="chat_new_start_group">Топтук чатты баштоо</string>
     <string name="chat_messages_loading">Билдирүүлөр жүктөлүүдө…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">Эски билдирүүлөрдү жүктөө</string>
     <string name="chat_attachment_label">Файл</string>
     <string name="chat_settings_rename">Чатты атын өзгөртүү</string>
-    <string name="chat_settings_add_member_empty">Кошо турган достор жок</string>
     <string name="chat_settings_remove_member_message">%1$s бул чаттан чыгарылсынбы?</string>
     <string name="chat_settings_leave_message">Бул чаттан чыгасызбы? Башка катышуучулар сиздин билдирүүлөрүңүздү көрө албай калышат.</string>
     <string name="chat_settings_leave_and_delete">Чыгуу жана жергиликтүү өчүрүү</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Кирүүчү чаттар</string>
     <string name="chat_policy_friends">Досторго гана</string>
     <string name="chat_policy_anyone">Каалаган адам</string>
-    <string name="chat_new_search_placeholder">Адамдарды издөө</string>
     <string name="chat_new_no_matches">Дал келген адамдар жок</string>
-    <string name="chat_new_no_friends">Маектешүү үчүн адамдарды издеңиз</string>
     <string name="chat_pin">Бекитүү</string>
     <string name="chat_unpin">Бекитүүнү алуу</string>
     <string name="chat_settings_general">Жалпы</string>

@@ -6,6 +6,8 @@
     <string name="chat_list_new">Neuer Chat</string>
     <string name="chat_new_title">Neuer Chat</string>
     <string name="chat_new_name">Gruppenname</string>
+    <string name="chat_new_search_placeholder">Personen suchen</string>
+    <string name="chat_new_no_friends">Nach Personen zum Chatten suchen</string>
     <string name="chat_message_placeholder">Nachricht</string>
     <string name="chat_attachment_add">Dateien anhängen</string>
     <string name="chat_settings_title">Chat-Einstellungen</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Mitglieder</string>
     <string name="chat_settings_add_member">Mitglied hinzufügen</string>
     <string name="chat_settings_add_member_search">Freunde suchen</string>
+    <string name="chat_settings_add_member_no_friends">Sie haben noch keine Freunde. Nur Freunde können zu einem Chat hinzugefügt werden.</string>
+    <string name="chat_settings_add_member_all_added">Alle Ihre Freunde sind bereits in diesem Chat.</string>
+    <string name="chat_settings_add_member_no_match">Probiere einen anderen Suchbegriff</string>
     <string name="chat_settings_remove_member">Entfernen</string>
     <string name="chat_settings_remove_member_title">Mitglied entfernen</string>
     <string name="chat_settings_leave">Chat verlassen</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Chat-Benachrichtigungen</string>
     <string name="chat_list_empty">Noch keine Chats</string>
-    <string name="chat_new_existing_chat">Bestehenden Chat öffnen</string>
+    <string name="chat_list_filter_groups">Gruppen</string>
+    <string name="chat_list_no_groups">Keine Gruppenchats</string>
+    <string name="chat_new_existing_with">Sie haben bereits Chats mit:</string>
+    <string name="chat_new_open">Öffnen</string>
+    <string name="chat_new_remove_person">%1$s entfernen</string>
     <string name="chat_new_start">Chat starten</string>
     <string name="chat_new_start_group">Gruppenchat starten</string>
     <string name="chat_messages_loading">Nachrichten werden geladen…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Nach unten verschieben</string>
     <string name="chat_attachment_label">Datei</string>
     <string name="chat_settings_rename">Chat umbenennen</string>
-    <string name="chat_settings_add_member_empty">Keine Freunde zum Hinzufügen</string>
     <string name="chat_settings_remove_member_message">%1$s aus diesem Chat entfernen?</string>
     <string name="chat_settings_leave_message">Diesen Chat verlassen? Andere Mitglieder sehen Ihre Nachrichten nicht mehr.</string>
     <string name="chat_settings_leave_and_delete">Verlassen und lokal löschen</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Eingehende Chats</string>
     <string name="chat_policy_friends">Nur Freunde</string>
     <string name="chat_policy_anyone">Jeder</string>
-    <string name="chat_new_search_placeholder">Personen suchen</string>
     <string name="chat_new_no_matches">Keine passenden Personen</string>
-    <string name="chat_new_no_friends">Nach Personen zum Chatten suchen</string>
     <string name="chat_pin">Anheften</string>
     <string name="chat_unpin">Lösen</string>
     <string name="chat_settings_general">Allgemein</string>

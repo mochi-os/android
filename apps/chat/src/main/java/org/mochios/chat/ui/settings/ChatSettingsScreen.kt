@@ -33,6 +33,8 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -90,11 +92,19 @@ fun ChatSettingsScreen(
         if (nameDraft.isEmpty()) nameDraft = uiState.chat.name
     }
 
+    val snackbarHostState = remember { SnackbarHostState() }
+    LaunchedEffect(uiState.notice) {
+        val notice = uiState.notice ?: return@LaunchedEffect
+        snackbarHostState.showSnackbar(notice.userMessage())
+        viewModel.clearNotice()
+    }
+
     LaunchedEffect(uiState.leftOrDeleted) {
         if (uiState.leftOrDeleted) onChatLeft()
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {
@@ -345,6 +355,8 @@ fun ChatSettingsScreen(
         val candidates = uiState.friends.filter { it.id !in existingMemberIds }
         AddMemberDialog(
             friends = candidates,
+            hasFriends = uiState.friends.isNotEmpty(),
+            isLoading = uiState.isLoadingFriends,
             members = existingMemberIds,
             onConfirm = { friendId ->
                 viewModel.addMember(friendId)
@@ -358,6 +370,8 @@ fun ChatSettingsScreen(
 @Composable
 private fun AddMemberDialog(
     friends: List<org.mochios.chat.model.Friend>,
+    hasFriends: Boolean,
+    isLoading: Boolean,
     members: Set<String>,
     onConfirm: (friendId: String) -> Unit,
     onDismiss: () -> Unit,
@@ -394,9 +408,24 @@ private fun AddMemberDialog(
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(address)
                     }
+                } else if (isLoading && friends.isEmpty()) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 16.dp),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        CircularProgressIndicator()
+                    }
                 } else if (filtered.isEmpty()) {
+                    val message = when {
+                        !hasFriends -> stringResource(R.string.chat_settings_add_member_no_friends)
+                        friends.isEmpty() ->
+                            stringResource(R.string.chat_settings_add_member_all_added)
+                        else -> stringResource(R.string.chat_settings_add_member_no_match)
+                    }
                     Text(
-                        stringResource(R.string.chat_settings_add_member_empty),
+                        message,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 } else {

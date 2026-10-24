@@ -11,6 +11,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -236,6 +237,8 @@ class CreatePostViewModel @Inject constructor(
         publishJob = viewModelScope.launch {
             try {
                 _publish.value = repository.getPublish(feedId)
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) {
                 // Without it the post goes where the feed's own list says.
             }

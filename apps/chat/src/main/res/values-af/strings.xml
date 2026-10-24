@@ -6,6 +6,8 @@
     <string name="chat_list_new">Nuwe geselsie</string>
     <string name="chat_new_title">Nuwe geselsie</string>
     <string name="chat_new_name">Groepnaam</string>
+    <string name="chat_new_search_placeholder">Soek mense</string>
+    <string name="chat_new_no_friends">Soek mense om mee te klets</string>
     <string name="chat_message_placeholder">Boodskap</string>
     <string name="chat_attachment_add">Heg lêers aan</string>
     <string name="chat_settings_title">Kletsinstellings</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Lede</string>
     <string name="chat_settings_add_member">Voeg lid by</string>
     <string name="chat_settings_add_member_search">Soek vriende</string>
+    <string name="chat_settings_add_member_no_friends">Jy het nog geen vriende nie. Slegs vriende kan by \'n klets gevoeg word.</string>
+    <string name="chat_settings_add_member_all_added">Al jou vriende is reeds in hierdie klets.</string>
+    <string name="chat_settings_add_member_no_match">Probeer \'n ander soekterm</string>
     <string name="chat_settings_remove_member">Verwyder</string>
     <string name="chat_settings_remove_member_title">Verwyder lid</string>
     <string name="chat_settings_leave">Verlaat geselsie</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Klets-kennisgewings</string>
     <string name="chat_list_empty">Nog geen kletse nie</string>
-    <string name="chat_new_existing_chat">Open bestaande klets</string>
+    <string name="chat_list_filter_groups">Groepe</string>
+    <string name="chat_list_no_groups">Geen groepkletse nie</string>
+    <string name="chat_new_existing_with">Jy het reeds kletse met:</string>
+    <string name="chat_new_open">Maak oop</string>
+    <string name="chat_new_remove_person">Verwyder %1$s</string>
     <string name="chat_new_start">Begin klets</string>
     <string name="chat_new_start_group">Begin groepklets</string>
     <string name="chat_messages_loading">Boodskappe laai…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Skuif af</string>
     <string name="chat_attachment_label">Lêer</string>
     <string name="chat_settings_rename">Hernoem klets</string>
-    <string name="chat_settings_add_member_empty">Geen vriende om by te voeg nie</string>
     <string name="chat_settings_remove_member_message">Verwyder %1$s uit hierdie klets?</string>
     <string name="chat_settings_leave_message">Verlaat hierdie klets? Ander lede sal nie meer jou boodskappe sien nie.</string>
     <string name="chat_settings_leave_and_delete">Verlaat en plaaslik uitvee</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Inkomende kletse</string>
     <string name="chat_policy_friends">Slegs vriende</string>
     <string name="chat_policy_anyone">Enigiemand</string>
-    <string name="chat_new_search_placeholder">Soek mense</string>
     <string name="chat_new_no_matches">Geen passende mense</string>
-    <string name="chat_new_no_friends">Soek mense om mee te klets</string>
     <string name="chat_pin">Speld vas</string>
     <string name="chat_unpin">Ontvasspeld</string>
     <string name="chat_settings_general">Algemeen</string>

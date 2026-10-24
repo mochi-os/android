@@ -6,6 +6,8 @@
     <string name="chat_list_new">ချတ်အသစ်</string>
     <string name="chat_new_title">ချတ်အသစ်</string>
     <string name="chat_new_name">အုပ်စု အမည်</string>
+    <string name="chat_new_search_placeholder">လူများကို ရှာဖွေရန်</string>
+    <string name="chat_new_no_friends">ချတ်ရန် လူများကို ရှာဖွေပါ</string>
     <string name="chat_message_placeholder">မက်ဆေ့ဂျ်</string>
     <string name="chat_attachment_add">ဖိုင်များ ပူးတွဲမည်</string>
     <string name="chat_settings_title">စကားပြောခန်း ဆက်တင်များ</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">အဖွဲ့ဝင်များ</string>
     <string name="chat_settings_add_member">အဖွဲ့ဝင် ထည့်မည်</string>
     <string name="chat_settings_add_member_search">သူငယ်ချင်းများ ရှာဖွေ</string>
+    <string name="chat_settings_add_member_no_friends">သင့်တွင် သူငယ်ချင်း မရှိသေးပါ။ ချတ်သို့ သူငယ်ချင်းများကိုသာ ထည့်နိုင်သည်။</string>
+    <string name="chat_settings_add_member_all_added">သင့်သူငယ်ချင်းအားလုံး ဤချတ်တွင် ရှိပြီးဖြစ်သည်။</string>
+    <string name="chat_settings_add_member_no_match">ရှာဖွေစကားလုံး အခြားတစ်ခု စမ်းကြည့်ပါ</string>
     <string name="chat_settings_remove_member">ဖယ်ရှား</string>
     <string name="chat_settings_remove_member_title">အဖွဲ့ဝင် ဖယ်ရှား</string>
     <string name="chat_settings_leave">စကားပြောမှ ထွက်</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">ချတ် အကြောင်းကြားချက်များ</string>
     <string name="chat_list_empty">ချတ်များ မရှိသေးပါ</string>
-    <string name="chat_new_existing_chat">ရှိပြီးသား ချတ်ကို ဖွင့်ပါ</string>
+    <string name="chat_list_filter_groups">အုပ်စုများ</string>
+    <string name="chat_list_no_groups">အဖွဲ့ချတ် မရှိပါ</string>
+    <string name="chat_new_existing_with">ဤသူများနှင့် ချတ်များ ရှိပြီးဖြစ်သည်-</string>
+    <string name="chat_new_open">ဖွင့်ရန်</string>
+    <string name="chat_new_remove_person">%1$s ကို ဖယ်ရှားရန်</string>
     <string name="chat_new_start">ချတ် စတင်ပါ</string>
     <string name="chat_new_start_group">အုပ်စု ချတ် စတင်ပါ</string>
     <string name="chat_messages_loading">မက်ဆေ့ဂျ်များ ဖွင့်နေသည်…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">ဟောင်းသော မက်ဆေ့ဂျ်များ ဖွင့်ပါ</string>
     <string name="chat_attachment_label">ဖိုင်</string>
     <string name="chat_settings_rename">ချတ်ကို အမည်ပြောင်းပါ</string>
-    <string name="chat_settings_add_member_empty">ထည့်ရန် မိတ်ဆွေများ မရှိပါ</string>
     <string name="chat_settings_remove_member_message">%1$s ကို ဤချတ်မှ ဖယ်ရှားမည်လား?</string>
     <string name="chat_settings_leave_message">ဤချတ်မှ ထွက်ခွာမည်လား? အခြားအဖွဲ့ဝင်များသည် သင်၏ မက်ဆေ့ဂျ်များကို မမြင်နိုင်တော့ပါ။</string>
     <string name="chat_settings_leave_and_delete">ထွက်ခွာပြီး ဒေသခံ၌ ဖျက်ပါ</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">အဝင်ချတ်များ</string>
     <string name="chat_policy_friends">သူငယ်ချင်းများသာ</string>
     <string name="chat_policy_anyone">မည်သူမဆို</string>
-    <string name="chat_new_search_placeholder">လူများကို ရှာဖွေရန်</string>
     <string name="chat_new_no_matches">ကိုက်ညီသူ မရှိပါ</string>
-    <string name="chat_new_no_friends">ချတ်ရန် လူများကို ရှာဖွေပါ</string>
     <string name="chat_pin">ပင်တွဲရန်</string>
     <string name="chat_unpin">Pin ဖြုတ်မည်</string>
     <string name="chat_settings_general">အထွေထွေ</string>

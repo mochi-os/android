@@ -36,6 +36,7 @@ import org.mochios.chat.api.ChatApi
 import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.model.ChatReceipt
 import org.mochios.chat.model.ChatStatus
+import org.mochios.chat.model.Friend
 import org.mochios.chat.repository.ChatRepository
 import org.mochios.chat.ui.chat.ChatViewModel
 import org.mochios.chat.ui.encryption.EncryptionEvent
@@ -394,7 +395,7 @@ class NetworksViewModelsTest {
     fun `a Mochi chat names no account`() {
         val model = NewChatViewModel(SavedStateHandle(), repository)
         until("the accounts") { model.uiState.value.accounts.isNotEmpty() }
-        model.toggleSelect("friend")
+        model.toggleSelect(Friend(id = "friend", name = "Friend"))
         model.createChat("Friend")
         until("the chat") { model.uiState.value.createdChatId == "n9" }
         assertFalse(sent("/chat/-/create")!!.contains("account"))

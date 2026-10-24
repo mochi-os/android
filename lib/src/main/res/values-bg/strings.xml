@@ -254,6 +254,10 @@
     <string name="common_pause">Пауза</string>
     <string name="common_opening_file">Отваряне на файла…</string>
     <string name="common_no_app_for_file">Няма приложение, което може да отвори този файл</string>
+    <string name="common_file_actions_text">Запазете го на устройството си или го споделете с друго приложение.</string>
+    <string name="common_file_save_to_device">Запазване на устройството</string>
+    <string name="common_file_share">Споделяне</string>
+    <string name="common_file_save_failed">Файлът не можа да бъде запазен</string>
     <string name="common_file_open_failed">Файлът не можа да бъде отворен</string>
     <string name="reaction_remove">Изчистване</string>
     <string name="common_logout_confirm_message">Наистина ли искате да излезете? Ще трябва да влезете отново, за да получите достъп до акаунта си.</string>

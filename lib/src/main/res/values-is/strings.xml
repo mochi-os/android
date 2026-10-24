@@ -254,6 +254,10 @@
     <string name="common_pause">Gera hlé</string>
     <string name="common_opening_file">Opnar skrá…</string>
     <string name="common_no_app_for_file">Ekkert forrit getur opnað þessa skrá</string>
+    <string name="common_file_actions_text">Vistaðu hana í tækinu þínu eða deildu henni með öðru forriti.</string>
+    <string name="common_file_save_to_device">Vista í tæki</string>
+    <string name="common_file_share">Deila</string>
+    <string name="common_file_save_failed">Ekki tókst að vista skrána</string>
     <string name="common_file_open_failed">Ekki tókst að opna skrá</string>
     <string name="reaction_remove">Hreinsa</string>
     <string name="common_logout_confirm_message">Ertu viss um að þú viljir skrá þig út? Þú þarft að skrá þig inn aftur til að fá aðgang að reikningnum þínum.</string>

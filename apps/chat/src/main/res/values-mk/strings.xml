@@ -6,6 +6,8 @@
     <string name="chat_list_new">Нов разговор</string>
     <string name="chat_new_title">Нов разговор</string>
     <string name="chat_new_name">Име на група</string>
+    <string name="chat_new_search_placeholder">Пребарај луѓе</string>
+    <string name="chat_new_no_friends">Побарајте луѓе за разговор</string>
     <string name="chat_message_placeholder">Порака</string>
     <string name="chat_attachment_add">Прикачи датотеки</string>
     <string name="chat_settings_title">Поставки на разговор</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Членови</string>
     <string name="chat_settings_add_member">Додај член</string>
     <string name="chat_settings_add_member_search">Пребарај пријатели</string>
+    <string name="chat_settings_add_member_no_friends">Сè уште немате пријатели. Во разговор може да се додаваат само пријатели.</string>
+    <string name="chat_settings_add_member_all_added">Сите ваши пријатели веќе се во овој разговор.</string>
+    <string name="chat_settings_add_member_no_match">Обидете се со различен термин за пребарување</string>
     <string name="chat_settings_remove_member">Отстрани</string>
     <string name="chat_settings_remove_member_title">Отстрани член</string>
     <string name="chat_settings_leave">Напушти разговор</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">Известувања за разговор</string>
     <string name="chat_list_empty">Сè уште нема разговори</string>
-    <string name="chat_new_existing_chat">Отвори постоечки разговор</string>
+    <string name="chat_list_filter_groups">Групи</string>
+    <string name="chat_list_no_groups">Нема групни разговори</string>
+    <string name="chat_new_existing_with">Веќе имате разговори со:</string>
+    <string name="chat_new_open">Отвори</string>
+    <string name="chat_new_remove_person">Отстрани го %1$s</string>
     <string name="chat_new_start">Започни разговор</string>
     <string name="chat_new_start_group">Започни групен разговор</string>
     <string name="chat_messages_loading">Се вчитуваат пораки…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">Вчитај постари пораки</string>
     <string name="chat_attachment_label">Датотека</string>
     <string name="chat_settings_rename">Преименувај разговор</string>
-    <string name="chat_settings_add_member_empty">Нема пријатели за додавање</string>
     <string name="chat_settings_remove_member_message">Да го отстраните %1$s од овој разговор?</string>
     <string name="chat_settings_leave_message">Да го напуштите овој разговор? Другите членови повеќе нема да ги гледаат вашите пораки.</string>
     <string name="chat_settings_leave_and_delete">Напушти и избриши локално</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Дојдовни разговори</string>
     <string name="chat_policy_friends">Само пријатели</string>
     <string name="chat_policy_anyone">Секој</string>
-    <string name="chat_new_search_placeholder">Пребарај луѓе</string>
     <string name="chat_new_no_matches">Нема совпаѓачки луѓе</string>
-    <string name="chat_new_no_friends">Побарајте луѓе за разговор</string>
     <string name="chat_pin">Закачи</string>
     <string name="chat_unpin">Откачи</string>
     <string name="chat_settings_general">Општо</string>

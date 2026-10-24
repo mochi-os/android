@@ -170,6 +170,8 @@ class ObjectDetailViewModel @Inject constructor(
                 loadLinks()
                 loadSiblingObjects()
                 loadPeople()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 if (currentProjectId != projectId || currentObjectId != objectId) return@launch
                 _uiState.value = _uiState.value.copy(

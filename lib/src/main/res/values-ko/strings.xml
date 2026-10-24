@@ -254,6 +254,10 @@
     <string name="common_pause">일시정지</string>
     <string name="common_opening_file">파일 여는 중…</string>
     <string name="common_no_app_for_file">이 파일을 열 수 있는 앱이 없습니다</string>
+    <string name="common_file_actions_text">기기에 저장하거나 다른 앱과 공유하세요.</string>
+    <string name="common_file_save_to_device">기기에 저장</string>
+    <string name="common_file_share">공유</string>
+    <string name="common_file_save_failed">파일을 저장할 수 없습니다</string>
     <string name="common_file_open_failed">파일을 열 수 없습니다</string>
     <string name="reaction_remove">지우기</string>
     <string name="common_logout_confirm_message">정말 로그아웃하시겠습니까? 계정에 접속하려면 다시 로그인해야 합니다.</string>

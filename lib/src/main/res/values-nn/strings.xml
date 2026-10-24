@@ -238,6 +238,10 @@
     <string name="common_pause">Pause</string>
     <string name="common_opening_file">Opnar fila…</string>
     <string name="common_no_app_for_file">Ingen app kan opne denne fila</string>
+    <string name="common_file_actions_text">Lagra han på eininga di eller del han med ein annan app.</string>
+    <string name="common_file_save_to_device">Lagra på eininga</string>
+    <string name="common_file_share">Del</string>
+    <string name="common_file_save_failed">Kunne ikkje lagra fila</string>
     <string name="common_file_open_failed">Klarte ikkje å opne fila</string>
     <string name="game_system_resign">%1$s ga opp</string>
     <string name="game_system_draw_offer">%1$s tilbød remis</string>

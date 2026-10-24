@@ -6,6 +6,8 @@
     <string name="chat_list_new">Naujas pokalbis</string>
     <string name="chat_new_title">Naujas pokalbis</string>
     <string name="chat_new_name">Grupės pavadinimas</string>
+    <string name="chat_new_search_placeholder">Ieškoti žmonių</string>
+    <string name="chat_new_no_friends">Ieškokite žmonių pokalbiui</string>
     <string name="chat_message_placeholder">Pranešimas</string>
     <string name="chat_attachment_add">Pridėti failus</string>
     <string name="chat_settings_title">Pokalbio nustatymai</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Nariai</string>
     <string name="chat_settings_add_member">Pridėti narį</string>
     <string name="chat_settings_add_member_search">Ieškoti draugų</string>
+    <string name="chat_settings_add_member_no_friends">Dar neturite draugų. Į pokalbį galima pridėti tik draugus.</string>
+    <string name="chat_settings_add_member_all_added">Visi jūsų draugai jau yra šiame pokalbyje.</string>
+    <string name="chat_settings_add_member_no_match">Pabandykite kitą paieškos terminą</string>
     <string name="chat_settings_remove_member">Šalinti</string>
     <string name="chat_settings_remove_member_title">Šalinti narį</string>
     <string name="chat_settings_leave">Išeiti iš pokalbio</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">Pokalbių pranešimai</string>
     <string name="chat_list_empty">Pokalbių dar nėra</string>
-    <string name="chat_new_existing_chat">Atidaryti esamą pokalbį</string>
+    <string name="chat_list_filter_groups">Grupės</string>
+    <string name="chat_list_no_groups">Grupinių pokalbių nėra</string>
+    <string name="chat_new_existing_with">Jau turite pokalbių su:</string>
+    <string name="chat_new_open">Atidaryti</string>
+    <string name="chat_new_remove_person">Pašalinti %1$s</string>
     <string name="chat_new_start">Pradėti pokalbį</string>
     <string name="chat_new_start_group">Pradėti grupinį pokalbį</string>
     <string name="chat_messages_loading">Įkeliami pranešimai…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">Įkelti senesnius pranešimus</string>
     <string name="chat_attachment_label">Failas</string>
     <string name="chat_settings_rename">Pervadinti pokalbį</string>
-    <string name="chat_settings_add_member_empty">Nėra draugų, kuriuos būtų galima pridėti</string>
     <string name="chat_settings_remove_member_message">Pašalinti %1$s iš šio pokalbio?</string>
     <string name="chat_settings_leave_message">Išeiti iš šio pokalbio? Kiti dalyviai nebematys jūsų pranešimų.</string>
     <string name="chat_settings_leave_and_delete">Išeiti ir ištrinti vietoje</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Gaunami pokalbiai</string>
     <string name="chat_policy_friends">Tik draugai</string>
     <string name="chat_policy_anyone">Bet kas</string>
-    <string name="chat_new_search_placeholder">Ieškoti žmonių</string>
     <string name="chat_new_no_matches">Nėra atitinkančių žmonių</string>
-    <string name="chat_new_no_friends">Ieškokite žmonių pokalbiui</string>
     <string name="chat_pin">Prisegti</string>
     <string name="chat_unpin">Atsegti</string>
     <string name="chat_settings_general">Bendra</string>

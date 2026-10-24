@@ -6,6 +6,8 @@
     <string name="chat_list_new">Nouvo chat</string>
     <string name="chat_new_title">Nouvo chat</string>
     <string name="chat_new_name">Non gwoup</string>
+    <string name="chat_new_search_placeholder">Chèche moun</string>
+    <string name="chat_new_no_friends">Chèche moun pou pale ak yo</string>
     <string name="chat_message_placeholder">Mesaj</string>
     <string name="chat_attachment_add">Tache fichye</string>
     <string name="chat_settings_title">Paramèt chat</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Manm</string>
     <string name="chat_settings_add_member">Ajoute manm</string>
     <string name="chat_settings_add_member_search">Chèche zanmi</string>
+    <string name="chat_settings_add_member_no_friends">Ou poko gen zanmi. Se sèlman zanmi ki ka ajoute nan yon chat.</string>
+    <string name="chat_settings_add_member_all_added">Tout zanmi ou yo deja nan chat sa a.</string>
+    <string name="chat_settings_add_member_no_match">Eseye yon lòt tèm rechèch</string>
     <string name="chat_settings_remove_member">Retire</string>
     <string name="chat_settings_remove_member_title">Retire manm</string>
     <string name="chat_settings_leave">Kite chat</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Notifikasyon chat</string>
     <string name="chat_list_empty">Poko gen chat</string>
-    <string name="chat_new_existing_chat">Ouvri chat ki egziste</string>
+    <string name="chat_list_filter_groups">Gwoup</string>
+    <string name="chat_list_no_groups">Pa gen chat gwoup</string>
+    <string name="chat_new_existing_with">Ou deja gen chat avèk:</string>
+    <string name="chat_new_open">Louvri</string>
+    <string name="chat_new_remove_person">Retire %1$s</string>
     <string name="chat_new_start">Kòmanse chat</string>
     <string name="chat_new_start_group">Kòmanse chat gwoup</string>
     <string name="chat_messages_loading">Mesaj yo ap chaje…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Desann</string>
     <string name="chat_attachment_label">Fichye</string>
     <string name="chat_settings_rename">Chanje non chat la</string>
-    <string name="chat_settings_add_member_empty">Pa gen zanmi pou ajoute</string>
     <string name="chat_settings_remove_member_message">Retire %1$s nan chat sa a?</string>
     <string name="chat_settings_leave_message">Kite chat sa a? Lòt manm yo pap wè mesaj ou yo ankò.</string>
     <string name="chat_settings_leave_and_delete">Kite epi efase lokalman</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Chat k ap antre</string>
     <string name="chat_policy_friends">Zanmi sèlman</string>
     <string name="chat_policy_anyone">Nenpòt moun</string>
-    <string name="chat_new_search_placeholder">Chèche moun</string>
     <string name="chat_new_no_matches">Pa gen moun ki koresponn</string>
-    <string name="chat_new_no_friends">Chèche moun pou pale ak yo</string>
     <string name="chat_pin">Pini</string>
     <string name="chat_unpin">Detache</string>
     <string name="chat_settings_general">Jeneral</string>

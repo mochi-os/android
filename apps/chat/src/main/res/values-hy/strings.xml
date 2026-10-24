@@ -6,6 +6,8 @@
     <string name="chat_list_new">Նոր զրույց</string>
     <string name="chat_new_title">Նոր զրույց</string>
     <string name="chat_new_name">Խմբի անուն</string>
+    <string name="chat_new_search_placeholder">Փնտրել մարդկանց</string>
+    <string name="chat_new_no_friends">Փնտրեք մարդկանց՝ զրուցելու համար</string>
     <string name="chat_message_placeholder">Հաղորդագրություն</string>
     <string name="chat_attachment_add">Կցել պատասխանի ֆայլեր</string>
     <string name="chat_settings_title">Զրույցի կարգավորումներ</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Անդամներ</string>
     <string name="chat_settings_add_member">Ավելացնել անդամ</string>
     <string name="chat_settings_add_member_search">Որոնել ընկերներին</string>
+    <string name="chat_settings_add_member_no_friends">Դուք դեռ ընկերներ չունեք: Զրույցին կարելի է ավելացնել միայն ընկերներին:</string>
+    <string name="chat_settings_add_member_all_added">Ձեր բոլոր ընկերներն արդեն այս զրույցում են:</string>
+    <string name="chat_settings_add_member_no_match">Փորձեք այլ որոնման տերմին</string>
     <string name="chat_settings_remove_member">Հեռացնել</string>
     <string name="chat_settings_remove_member_title">Հեռացնել անդամին</string>
     <string name="chat_settings_leave">Լքել զրույցը</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Զրույցի ծանուցումներ</string>
     <string name="chat_list_empty">Դեռ զրույցներ չկան</string>
-    <string name="chat_new_existing_chat">Բացել առկա զրույցը</string>
+    <string name="chat_list_filter_groups">Խմբեր</string>
+    <string name="chat_list_no_groups">Խմբային զրույցներ չկան</string>
+    <string name="chat_new_existing_with">Դուք արդեն զրույցներ ունեք՝</string>
+    <string name="chat_new_open">Բացել</string>
+    <string name="chat_new_remove_person">Հեռացնել %1$s-ը</string>
     <string name="chat_new_start">Սկսել զրույց</string>
     <string name="chat_new_start_group">Սկսել խմբային զրույց</string>
     <string name="chat_messages_loading">Հաղորդագրությունները բեռնվում են…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Տեղափոխել ներքև</string>
     <string name="chat_attachment_label">Ֆայլ</string>
     <string name="chat_settings_rename">Վերանվանել զրույցը</string>
-    <string name="chat_settings_add_member_empty">Չկան ընկերներ՝ ավելացնելու համար</string>
     <string name="chat_settings_remove_member_message">Հեռացնե՞լ %1$s-ին այս զրույցից:</string>
     <string name="chat_settings_leave_message">Լքե՞լ այս զրույցը: Մյուս մասնակիցները այլևս չեն տեսնի ձեր հաղորդագրությունները:</string>
     <string name="chat_settings_leave_and_delete">Լքել և ջնջել տեղականորեն</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Մուտքային զրույցներ</string>
     <string name="chat_policy_friends">Միայն ընկերներ</string>
     <string name="chat_policy_anyone">Ցանկացած ոք</string>
-    <string name="chat_new_search_placeholder">Փնտրել մարդկանց</string>
     <string name="chat_new_no_matches">Համընկնող մարդիկ չկան</string>
-    <string name="chat_new_no_friends">Փնտրեք մարդկանց՝ զրուցելու համար</string>
     <string name="chat_pin">Ամրացնել</string>
     <string name="chat_unpin">Ապամրացնել</string>
     <string name="chat_settings_general">Ընդհանուր</string>

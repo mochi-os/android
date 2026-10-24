@@ -254,6 +254,10 @@
     <string name="common_pause">Duraklat</string>
     <string name="common_opening_file">Dosya açılıyor…</string>
     <string name="common_no_app_for_file">Bu dosyayı açabilecek uygulama yok</string>
+    <string name="common_file_actions_text">Cihazınıza kaydedin veya başka bir uygulamayla paylaşın.</string>
+    <string name="common_file_save_to_device">Cihaza kaydet</string>
+    <string name="common_file_share">Paylaş</string>
+    <string name="common_file_save_failed">Dosya kaydedilemedi</string>
     <string name="common_file_open_failed">Dosya açılamadı</string>
     <string name="reaction_remove">Temizle</string>
     <string name="common_logout_confirm_message">Oturumu kapatmak istediğinizden emin misiniz? Hesabınıza erişmek için tekrar oturum açmanız gerekecek.</string>

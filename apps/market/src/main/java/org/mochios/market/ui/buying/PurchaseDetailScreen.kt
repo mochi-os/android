@@ -60,6 +60,7 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.UnopenedFileDialog
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.webUri
 import org.mochios.market.R
@@ -86,6 +87,7 @@ fun PurchaseDetailScreen(
     val context = LocalContext.current
     val resources = LocalResources.current
     val snackbar = remember { SnackbarHostState() }
+    var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
     val scope = rememberCoroutineScope()
     var refundDialogOpen by remember { mutableStateOf(false) }
 
@@ -102,15 +104,11 @@ fun PurchaseDetailScreen(
                         fileName = event.fileName,
                         mime = event.mime,
                     )
-                    if (outcome != AttachmentOpener.OpenResult.OPENED) {
+                    if (outcome == AttachmentOpener.OpenResult.NO_APP) {
+                        unopened = AttachmentOpener.unopened(context, event.fileName, event.mime)
+                    } else if (outcome != AttachmentOpener.OpenResult.OPENED) {
                         snackbar.showSnackbar(
-                            resources.getString(
-                                if (outcome == AttachmentOpener.OpenResult.NO_APP) {
-                                    R.string.market_asset_no_app
-                                } else {
-                                    R.string.market_asset_download_failed
-                                }
-                            )
+                            resources.getString(R.string.market_asset_download_failed)
                         )
                     }
                 }
@@ -121,6 +119,10 @@ fun PurchaseDetailScreen(
     val detail = state.detail
     val title = detail?.listing?.title
         ?: stringResource(R.string.market_purchase_title)
+
+    unopened?.let { file ->
+        UnopenedFileDialog(file = file, onDismiss = { unopened = null })
+    }
 
     MochiScaffold(title = title, onBack = { navController.popBackStack() }) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {

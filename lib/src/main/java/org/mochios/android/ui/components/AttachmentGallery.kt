@@ -86,6 +86,7 @@ fun AttachmentGallery(
     var viewerIndex by rememberSaveable { mutableIntStateOf(0) }
     var showVideoUrl by remember { mutableStateOf<String?>(null) }
     var downloadingId by remember { mutableStateOf<String?>(null) }
+    var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
 
     val context = LocalContext.current
     val resources = LocalResources.current
@@ -198,9 +199,11 @@ fun AttachmentGallery(
                                         context, resolvedUrl(file), file
                                     )
                                     downloadingId = null
+                                    if (result == AttachmentOpener.OpenResult.NO_APP) {
+                                        unopened = AttachmentOpener.unopened(context, file)
+                                    }
                                     val message = when (result) {
-                                        AttachmentOpener.OpenResult.NO_APP ->
-                                            R.string.common_no_app_for_file
+                                        AttachmentOpener.OpenResult.NO_APP -> null
 
                                         AttachmentOpener.OpenResult.FAILED ->
                                             R.string.common_file_open_failed
@@ -224,6 +227,10 @@ fun AttachmentGallery(
                 }
             }
         }
+    }
+
+    unopened?.let { file ->
+        UnopenedFileDialog(file = file, onDismiss = { unopened = null })
     }
 
     if (showViewer && images.isNotEmpty()) {

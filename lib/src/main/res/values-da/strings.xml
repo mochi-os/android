@@ -256,6 +256,10 @@
     <string name="common_pause">Pause</string>
     <string name="common_opening_file">Åbner fil…</string>
     <string name="common_no_app_for_file">Ingen app kan åbne denne fil</string>
+    <string name="common_file_actions_text">Gem den på din enhed, eller del den med en anden app.</string>
+    <string name="common_file_save_to_device">Gem på enheden</string>
+    <string name="common_file_share">Del</string>
+    <string name="common_file_save_failed">Filen kunne ikke gemmes</string>
     <string name="common_file_open_failed">Kunne ikke åbne filen</string>
     <string name="reaction_remove">Ryd</string>
     <string name="common_logout_confirm_message">Er du sikker på, at du vil logge ud? Du skal logge ind igen for at få adgang til din konto.</string>

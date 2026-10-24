@@ -6,6 +6,8 @@
     <string name="chat_list_new">Nowy czat</string>
     <string name="chat_new_title">Nowy czat</string>
     <string name="chat_new_name">Nazwa grupy</string>
+    <string name="chat_new_search_placeholder">Szukaj osób</string>
+    <string name="chat_new_no_friends">Wyszukaj osoby do rozmowy</string>
     <string name="chat_message_placeholder">Wiadomość</string>
     <string name="chat_attachment_add">Dołącz pliki</string>
     <string name="chat_settings_title">Ustawienia czatu</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Członkowie</string>
     <string name="chat_settings_add_member">Dodaj członka</string>
     <string name="chat_settings_add_member_search">Szukaj znajomych</string>
+    <string name="chat_settings_add_member_no_friends">Nie masz jeszcze znajomych. Do czatu można dodać tylko znajomych.</string>
+    <string name="chat_settings_add_member_all_added">Wszyscy Twoi znajomi są już w tym czacie.</string>
+    <string name="chat_settings_add_member_no_match">Spróbuj innego wyrażenia wyszukiwania</string>
     <string name="chat_settings_remove_member">Usuń</string>
     <string name="chat_settings_remove_member_title">Usuń członka</string>
     <string name="chat_settings_leave">Opuść czat</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">Powiadomienia czatu</string>
     <string name="chat_list_empty">Brak czatów</string>
-    <string name="chat_new_existing_chat">Otwórz istniejący czat</string>
+    <string name="chat_list_filter_groups">Grupy</string>
+    <string name="chat_list_no_groups">Brak czatów grupowych</string>
+    <string name="chat_new_existing_with">Masz już czaty z:</string>
+    <string name="chat_new_open">Otwórz</string>
+    <string name="chat_new_remove_person">Usuń %1$s</string>
     <string name="chat_new_start">Rozpocznij czat</string>
     <string name="chat_new_start_group">Rozpocznij czat grupowy</string>
     <string name="chat_messages_loading">Wczytywanie wiadomości…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">Wczytaj starsze wiadomości</string>
     <string name="chat_attachment_label">Plik</string>
     <string name="chat_settings_rename">Zmień nazwę czatu</string>
-    <string name="chat_settings_add_member_empty">Brak znajomych do dodania</string>
     <string name="chat_settings_remove_member_message">Usunąć %1$s z tego czatu?</string>
     <string name="chat_settings_leave_message">Opuścić ten czat? Pozostali uczestnicy nie będą już widzieć Twoich wiadomości.</string>
     <string name="chat_settings_leave_and_delete">Opuść i usuń lokalnie</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Przychodzące czaty</string>
     <string name="chat_policy_friends">Tylko znajomi</string>
     <string name="chat_policy_anyone">Każdy</string>
-    <string name="chat_new_search_placeholder">Szukaj osób</string>
     <string name="chat_new_no_matches">Brak pasujących osób</string>
-    <string name="chat_new_no_friends">Wyszukaj osoby do rozmowy</string>
     <string name="chat_pin">Przypnij</string>
     <string name="chat_unpin">Odepnij</string>
     <string name="chat_settings_general">Ogólne</string>

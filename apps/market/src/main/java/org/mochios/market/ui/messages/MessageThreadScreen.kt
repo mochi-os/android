@@ -55,7 +55,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.flow.collectLatest
@@ -69,6 +68,7 @@ import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.websocket.StreamWsEvent
 import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.market.R
@@ -321,7 +321,7 @@ private fun ListingChip(
                     .background(MaterialTheme.colorScheme.surfaceVariant),
             ) {
                 if (photo.isNotBlank()) {
-                    AsyncImage(
+                    MochiImage(
                         model = ImageRequest.Builder(LocalContext.current)
                             .data("/market/-/photo/$photo/thumbnail")
                             .crossfade(true)

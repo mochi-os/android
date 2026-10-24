@@ -254,6 +254,10 @@
     <string name="common_pause">Pozastaviť</string>
     <string name="common_opening_file">Otvára sa súbor…</string>
     <string name="common_no_app_for_file">Tento súbor nemožno otvoriť žiadnou aplikáciou</string>
+    <string name="common_file_actions_text">Uložte ho do zariadenia alebo ho zdieľajte s inou aplikáciou.</string>
+    <string name="common_file_save_to_device">Uložiť do zariadenia</string>
+    <string name="common_file_share">Zdieľať</string>
+    <string name="common_file_save_failed">Súbor sa nepodarilo uložiť</string>
     <string name="common_file_open_failed">Súbor sa nepodarilo otvoriť</string>
     <string name="reaction_remove">Vymazať</string>
     <string name="common_logout_confirm_message">Naozaj sa chcete odhlásiť? Na prístup k svojmu účtu sa budete musieť znova prihlásiť.</string>

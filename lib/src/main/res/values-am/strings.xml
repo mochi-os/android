@@ -254,6 +254,10 @@
     <string name="common_pause">አቁም</string>
     <string name="common_opening_file">ፋይል በመክፈት ላይ…</string>
     <string name="common_no_app_for_file">ይህን ፋይል መክፈት የሚችል መተግበሪያ የለም</string>
+    <string name="common_file_actions_text">በመሣሪያዎ ላይ ያስቀምጡት ወይም ለሌላ መተግበሪያ ያጋሩት።</string>
+    <string name="common_file_save_to_device">በመሣሪያ ላይ አስቀምጥ</string>
+    <string name="common_file_share">አጋራ</string>
+    <string name="common_file_save_failed">ፋይሉን ማስቀመጥ አልተቻለም</string>
     <string name="common_file_open_failed">ፋይሉን መክፈት አልተቻለም</string>
     <string name="reaction_remove">አጽዳ</string>
     <string name="common_logout_confirm_message">እርግጠኛ ነዎት መውጣት ይፈልጋሉ? መለያዎን ለመድረስ እንደገና መግባት ያስፈልግዎታል።</string>

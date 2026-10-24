@@ -6,6 +6,8 @@
     <string name="chat_list_new">نئی چیٹ</string>
     <string name="chat_new_title">نئی چیٹ</string>
     <string name="chat_new_name">گروپ کا نام</string>
+    <string name="chat_new_search_placeholder">لوگ تلاش کریں</string>
+    <string name="chat_new_no_friends">چیٹ کرنے کے لیے لوگ تلاش کریں</string>
     <string name="chat_message_placeholder">پیغام</string>
     <string name="chat_attachment_add">فائلیں منسلک کریں</string>
     <string name="chat_settings_title">چیٹ کی ترتیبات</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">ممبران</string>
     <string name="chat_settings_add_member">ممبر شامل کریں</string>
     <string name="chat_settings_add_member_search">دوست تلاش کریں</string>
+    <string name="chat_settings_add_member_no_friends">آپ کے ابھی کوئی دوست نہیں ہیں۔ چیٹ میں صرف دوستوں کو شامل کیا جا سکتا ہے۔</string>
+    <string name="chat_settings_add_member_all_added">آپ کے تمام دوست پہلے ہی اس چیٹ میں ہیں۔</string>
+    <string name="chat_settings_add_member_no_match">مختلف تلاش کی اصطلاح آزمائیں</string>
     <string name="chat_settings_remove_member">ہٹائیں</string>
     <string name="chat_settings_remove_member_title">ممبر ہٹائیں</string>
     <string name="chat_settings_leave">چیٹ چھوڑیں</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">چیٹ کی اطلاعات</string>
     <string name="chat_list_empty">ابھی تک کوئی چیٹ نہیں</string>
-    <string name="chat_new_existing_chat">موجودہ چیٹ کھولیں</string>
+    <string name="chat_list_filter_groups">گروپس</string>
+    <string name="chat_list_no_groups">کوئی گروپ چیٹ نہیں</string>
+    <string name="chat_new_existing_with">آپ کی پہلے سے ان کے ساتھ چیٹس ہیں:</string>
+    <string name="chat_new_open">کھولیں</string>
+    <string name="chat_new_remove_person">%1$s کو ہٹائیں</string>
     <string name="chat_new_start">چیٹ شروع کریں</string>
     <string name="chat_new_start_group">گروپ چیٹ شروع کریں</string>
     <string name="chat_messages_loading">پیغامات لوڈ ہو رہے ہیں…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">پرانے پیغامات لوڈ کریں</string>
     <string name="chat_attachment_label">فائل</string>
     <string name="chat_settings_rename">چیٹ کا نام تبدیل کریں</string>
-    <string name="chat_settings_add_member_empty">شامل کرنے کے لیے کوئی دوست نہیں</string>
     <string name="chat_settings_remove_member_message">%1$s کو اس چیٹ سے ہٹا دیں؟</string>
     <string name="chat_settings_leave_message">اس چیٹ کو چھوڑ دیں؟ دیگر اراکین اب آپ کے پیغامات نہیں دیکھ سکیں گے۔</string>
     <string name="chat_settings_leave_and_delete">چھوڑ کر مقامی طور پر حذف کریں</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">آنے والی چیٹس</string>
     <string name="chat_policy_friends">صرف دوست</string>
     <string name="chat_policy_anyone">کوئی بھی</string>
-    <string name="chat_new_search_placeholder">لوگ تلاش کریں</string>
     <string name="chat_new_no_matches">کوئی مماثل لوگ نہیں</string>
-    <string name="chat_new_no_friends">چیٹ کرنے کے لیے لوگ تلاش کریں</string>
     <string name="chat_pin">پن کریں</string>
     <string name="chat_unpin">ان پن کریں</string>
     <string name="chat_settings_general">عمومی</string>

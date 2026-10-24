@@ -6,6 +6,8 @@
     <string name="chat_list_new">Chat pyahu</string>
     <string name="chat_new_title">Chat pyahu</string>
     <string name="chat_new_name">Atypy téra</string>
+    <string name="chat_new_search_placeholder">Eheka tapicha</string>
+    <string name="chat_new_no_friends">Eheka tapicha reñomongeta hag̃ua</string>
     <string name="chat_message_placeholder">Ñe\'ẽmondo</string>
     <string name="chat_attachment_add">Embojuaju archivokuéra</string>
     <string name="chat_settings_title">Chat ñemboheko</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Irũnguéra</string>
     <string name="chat_settings_add_member">Embojuaju irũ</string>
     <string name="chat_settings_add_member_search">Eheka angirũkuéra</string>
+    <string name="chat_settings_add_member_no_friends">Ndereko gueteri angirũ. Angirũnte ikatu oñembojoapy ñomongetápe.</string>
+    <string name="chat_settings_add_member_all_added">Opavave ne angirũ oĩma ko ñomongetápe.</string>
+    <string name="chat_settings_add_member_no_match">Eha\'ã ambue jeheka</string>
     <string name="chat_settings_remove_member">Embogue</string>
     <string name="chat_settings_remove_member_title">Embogue irũ</string>
     <string name="chat_settings_leave">Esẽ ñomongeta-gui</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Chat momarandu</string>
     <string name="chat_list_empty">Ndaipóri gueteri ñomongeta</string>
-    <string name="chat_new_existing_chat">Eipe\'a ñomongeta oĩmava</string>
+    <string name="chat_list_filter_groups">Atypykuéra</string>
+    <string name="chat_list_no_groups">Ndaipóri ñomongeta aty</string>
+    <string name="chat_new_existing_with">Erekóma ñomongeta ndive:</string>
+    <string name="chat_new_open">Eipe\'a</string>
+    <string name="chat_new_remove_person">Embogue %1$s</string>
     <string name="chat_new_start">Eñepyrũ ñomongeta</string>
     <string name="chat_new_start_group">Eñepyrũ atypy chat</string>
     <string name="chat_messages_loading">Oñemyanyhẽhína ñe\'ẽmondo…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Emongu\'e yvy gotyo</string>
     <string name="chat_attachment_label">Archivo</string>
     <string name="chat_settings_rename">Embohera jey ñomongeta</string>
-    <string name="chat_settings_add_member_empty">Ndaipóri angirũ embojuaju hagua</string>
     <string name="chat_settings_remove_member_message">¿Emosẽta %1$s ko chat-gui?</string>
     <string name="chat_settings_leave_message">¿Esẽta ko ñomongetágui? Ambue irũnguéra ndohecha mo\'ãvéima ne ñe\'ẽmondo.</string>
     <string name="chat_settings_leave_and_delete">Esẽ ha emboguete ko\'ápe</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Ñomongeta oikéva</string>
     <string name="chat_policy_friends">Angirũnte</string>
     <string name="chat_policy_anyone">Oimeraẽva</string>
-    <string name="chat_new_search_placeholder">Eheka tapicha</string>
     <string name="chat_new_no_matches">Ndaipóri tapicha ojoguáva</string>
-    <string name="chat_new_no_friends">Eheka tapicha reñomongeta hag̃ua</string>
     <string name="chat_pin">Emboja</string>
     <string name="chat_unpin">Embogue jemboja</string>
     <string name="chat_settings_general">General</string>

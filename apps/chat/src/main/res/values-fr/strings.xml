@@ -6,6 +6,8 @@
     <string name="chat_list_new">Nouveau chat</string>
     <string name="chat_new_title">Nouveau chat</string>
     <string name="chat_new_name">Nom du groupe</string>
+    <string name="chat_new_search_placeholder">Rechercher des personnes</string>
+    <string name="chat_new_no_friends">Recherchez des personnes avec qui discuter</string>
     <string name="chat_message_placeholder">Message</string>
     <string name="chat_attachment_add">Joindre des fichiers</string>
     <string name="chat_settings_title">Paramètres du chat</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Membres</string>
     <string name="chat_settings_add_member">Ajouter un membre</string>
     <string name="chat_settings_add_member_search">Rechercher des amis</string>
+    <string name="chat_settings_add_member_no_friends">Vous n\'avez pas encore d\'amis. Seuls les amis peuvent être ajoutés à une conversation.</string>
+    <string name="chat_settings_add_member_all_added">Tous vos amis sont déjà dans cette conversation.</string>
+    <string name="chat_settings_add_member_no_match">Essayez un autre terme de recherche</string>
     <string name="chat_settings_remove_member">Retirer</string>
     <string name="chat_settings_remove_member_title">Supprimer le membre</string>
     <string name="chat_settings_leave">Quitter le chat</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Notifications de messagerie</string>
     <string name="chat_list_empty">Aucune conversation pour le moment</string>
-    <string name="chat_new_existing_chat">Ouvrir la conversation existante</string>
+    <string name="chat_list_filter_groups">Groupes</string>
+    <string name="chat_list_no_groups">Aucune conversation de groupe</string>
+    <string name="chat_new_existing_with">Vous avez déjà des conversations avec :</string>
+    <string name="chat_new_open">Ouvrir</string>
+    <string name="chat_new_remove_person">Retirer %1$s</string>
     <string name="chat_new_start">Démarrer la conversation</string>
     <string name="chat_new_start_group">Démarrer une conversation de groupe</string>
     <string name="chat_messages_loading">Chargement des messages…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Déplacer vers le bas</string>
     <string name="chat_attachment_label">Fichier</string>
     <string name="chat_settings_rename">Renommer la conversation</string>
-    <string name="chat_settings_add_member_empty">Aucun ami à ajouter</string>
     <string name="chat_settings_remove_member_message">Retirer %1$s de cette conversation ?</string>
     <string name="chat_settings_leave_message">Quitter cette conversation ? Les autres membres ne verront plus vos messages.</string>
     <string name="chat_settings_leave_and_delete">Quitter et supprimer localement</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Chats entrants</string>
     <string name="chat_policy_friends">Amis uniquement</string>
     <string name="chat_policy_anyone">N\'importe qui</string>
-    <string name="chat_new_search_placeholder">Rechercher des personnes</string>
     <string name="chat_new_no_matches">Aucune personne correspondante</string>
-    <string name="chat_new_no_friends">Recherchez des personnes avec qui discuter</string>
     <string name="chat_pin">Épingler</string>
     <string name="chat_unpin">Désépingler</string>
     <string name="chat_settings_general">Général</string>

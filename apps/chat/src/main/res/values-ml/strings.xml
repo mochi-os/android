@@ -6,6 +6,8 @@
     <string name="chat_list_new">പുതിയ ചാറ്റ്</string>
     <string name="chat_new_title">പുതിയ ചാറ്റ്</string>
     <string name="chat_new_name">ഗ്രൂപ്പ് നാമം</string>
+    <string name="chat_new_search_placeholder">ആളുകളെ തിരയുക</string>
+    <string name="chat_new_no_friends">ചാറ്റ് ചെയ്യാൻ ആളുകളെ തിരയുക</string>
     <string name="chat_message_placeholder">സന്ദേശം</string>
     <string name="chat_attachment_add">ഫയലുകൾ അറ്റാച്ച് ചെയ്യുക</string>
     <string name="chat_settings_title">ചാറ്റ് ക്രമീകരണങ്ങൾ</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">അംഗങ്ങൾ</string>
     <string name="chat_settings_add_member">അംഗത്തെ ചേർക്കുക</string>
     <string name="chat_settings_add_member_search">സുഹൃത്തുക്കളെ തിരയുക</string>
+    <string name="chat_settings_add_member_no_friends">നിങ്ങൾക്ക് ഇതുവരെ സുഹൃത്തുക്കളില്ല. ചാറ്റിലേക്ക് സുഹൃത്തുക്കളെ മാത്രമേ ചേർക്കാനാകൂ.</string>
+    <string name="chat_settings_add_member_all_added">നിങ്ങളുടെ എല്ലാ സുഹൃത്തുക്കളും ഇതിനകം ഈ ചാറ്റിലുണ്ട്.</string>
+    <string name="chat_settings_add_member_no_match">മറ്റൊരു തിരയൽ പദം ശ്രമിക്കുക</string>
     <string name="chat_settings_remove_member">നീക്കം ചെയ്യുക</string>
     <string name="chat_settings_remove_member_title">അംഗത്തെ നീക്കം ചെയ്യുക</string>
     <string name="chat_settings_leave">ചാറ്റ് വിടുക</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">ചാറ്റ് അറിയിപ്പുകൾ</string>
     <string name="chat_list_empty">ഇതുവരെ ചാറ്റുകൾ ഇല്ല</string>
-    <string name="chat_new_existing_chat">നിലവിലുള്ള ചാറ്റ് തുറക്കുക</string>
+    <string name="chat_list_filter_groups">ഗ്രൂപ്പുകൾ</string>
+    <string name="chat_list_no_groups">ഗ്രൂപ്പ് ചാറ്റുകളൊന്നുമില്ല</string>
+    <string name="chat_new_existing_with">ഇവരുമായി നിങ്ങൾക്ക് ഇതിനകം ചാറ്റുകളുണ്ട്:</string>
+    <string name="chat_new_open">തുറക്കുക</string>
+    <string name="chat_new_remove_person">%1$s നെ നീക്കം ചെയ്യുക</string>
     <string name="chat_new_start">ചാറ്റ് ആരംഭിക്കുക</string>
     <string name="chat_new_start_group">ഗ്രൂപ്പ് ചാറ്റ് ആരംഭിക്കുക</string>
     <string name="chat_messages_loading">സന്ദേശങ്ങൾ ലോഡുചെയ്യുന്നു…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">പഴയ സന്ദേശങ്ങൾ ലോഡുചെയ്യുക</string>
     <string name="chat_attachment_label">ഫയൽ</string>
     <string name="chat_settings_rename">ചാറ്റ് പുനർനാമകരണം ചെയ്യുക</string>
-    <string name="chat_settings_add_member_empty">ചേർക്കാൻ സുഹൃത്തുക്കൾ ഇല്ല</string>
     <string name="chat_settings_remove_member_message">ഈ ചാറ്റിൽ നിന്ന് %1$s നെ നീക്കം ചെയ്യണോ?</string>
     <string name="chat_settings_leave_message">ഈ ചാറ്റ് വിടണോ? മറ്റ് അംഗങ്ങൾക്ക് നിങ്ങളുടെ സന്ദേശങ്ങൾ ഇനി കാണാൻ കഴിയില്ല.</string>
     <string name="chat_settings_leave_and_delete">വിട്ടശേഷം പ്രാദേശികമായി ഇല്ലാതാക്കുക</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">ഇൻകമിംഗ് ചാറ്റുകൾ</string>
     <string name="chat_policy_friends">സുഹൃത്തുക്കൾ മാത്രം</string>
     <string name="chat_policy_anyone">ആർക്കും</string>
-    <string name="chat_new_search_placeholder">ആളുകളെ തിരയുക</string>
     <string name="chat_new_no_matches">പൊരുത്തപ്പെടുന്ന ആളുകളില്ല</string>
-    <string name="chat_new_no_friends">ചാറ്റ് ചെയ്യാൻ ആളുകളെ തിരയുക</string>
     <string name="chat_pin">പിൻ ചെയ്യുക</string>
     <string name="chat_unpin">അൺപിൻ ചെയ്യുക</string>
     <string name="chat_settings_general">പൊതുവായവ</string>

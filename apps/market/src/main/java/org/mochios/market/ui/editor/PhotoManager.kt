@@ -53,9 +53,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
 import org.mochios.android.files.Upload
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.UploadFiles
 import org.mochios.market.R
@@ -221,7 +221,7 @@ private fun PhotoCell(
             .aspectRatio(1f),
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
-            AsyncImage(
+            MochiImage(
                 // Authenticated "owned" route: the editor shows photos for the
                 // seller's own draft / moderation-held listings, which the
                 // public route hides. Coil sends the market bearer token via

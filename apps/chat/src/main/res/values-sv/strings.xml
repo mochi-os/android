@@ -6,6 +6,8 @@
     <string name="chat_list_new">Ny chatt</string>
     <string name="chat_new_title">Ny chatt</string>
     <string name="chat_new_name">Gruppnamn</string>
+    <string name="chat_new_search_placeholder">Sök efter personer</string>
+    <string name="chat_new_no_friends">Sök efter personer att chatta med</string>
     <string name="chat_message_placeholder">Meddelande</string>
     <string name="chat_attachment_add">Bifoga filer</string>
     <string name="chat_settings_title">Chattinställningar</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Medlemmar</string>
     <string name="chat_settings_add_member">Lägg till medlem</string>
     <string name="chat_settings_add_member_search">Sök vänner</string>
+    <string name="chat_settings_add_member_no_friends">Du har inga vänner än. Bara vänner kan läggas till i en chatt.</string>
+    <string name="chat_settings_add_member_all_added">Alla dina vänner är redan med i den här chatten.</string>
+    <string name="chat_settings_add_member_no_match">Prova en annan sökterm</string>
     <string name="chat_settings_remove_member">Ta bort</string>
     <string name="chat_settings_remove_member_title">Ta bort medlem</string>
     <string name="chat_settings_leave">Lämna chatt</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">Chattaviseringar</string>
     <string name="chat_list_empty">Inga chattar ännu</string>
-    <string name="chat_new_existing_chat">Öppna befintlig chatt</string>
+    <string name="chat_list_filter_groups">Grupper</string>
+    <string name="chat_list_no_groups">Inga gruppchattar</string>
+    <string name="chat_new_existing_with">Du har redan chattar med:</string>
+    <string name="chat_new_open">Öppna</string>
+    <string name="chat_new_remove_person">Ta bort %1$s</string>
     <string name="chat_new_start">Starta chatt</string>
     <string name="chat_new_start_group">Starta gruppchatt</string>
     <string name="chat_messages_loading">Läser in meddelanden…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">Läs in äldre meddelanden</string>
     <string name="chat_attachment_label">Fil</string>
     <string name="chat_settings_rename">Byt namn på chatt</string>
-    <string name="chat_settings_add_member_empty">Inga vänner att lägga till</string>
     <string name="chat_settings_remove_member_message">Ta bort %1$s från den här chatten?</string>
     <string name="chat_settings_leave_message">Lämna den här chatten? Andra medlemmar kommer inte längre att se dina meddelanden.</string>
     <string name="chat_settings_leave_and_delete">Lämna och radera lokalt</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Inkommande chattar</string>
     <string name="chat_policy_friends">Endast vänner</string>
     <string name="chat_policy_anyone">Vem som helst</string>
-    <string name="chat_new_search_placeholder">Sök efter personer</string>
     <string name="chat_new_no_matches">Inga matchande personer</string>
-    <string name="chat_new_no_friends">Sök efter personer att chatta med</string>
     <string name="chat_pin">Fäst</string>
     <string name="chat_unpin">Ta bort fäst</string>
     <string name="chat_settings_general">Allmänt</string>

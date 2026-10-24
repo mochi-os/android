@@ -255,6 +255,10 @@
     <string name="common_pause">Seibio</string>
     <string name="common_opening_file">Yn agor y ffeil…</string>
     <string name="common_no_app_for_file">Ni all unrhyw ap agor y ffeil hon</string>
+    <string name="common_file_actions_text">Cadwch ef ar eich dyfais neu ei rannu ag ap arall.</string>
+    <string name="common_file_save_to_device">Cadw ar y ddyfais</string>
+    <string name="common_file_share">Rhannu</string>
+    <string name="common_file_save_failed">Methu cadw\'r ffeil</string>
     <string name="common_file_open_failed">Methwyd agor y ffeil</string>
     <string name="reaction_remove">Clirio</string>
     <string name="common_logout_confirm_message">Ydych chi\'n siŵr eich bod am allgofnodi? Bydd angen i chi fewngofnodi eto i gael mynediad at eich cyfrif.</string>

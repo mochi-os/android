@@ -6,6 +6,8 @@
     <string name="chat_list_new">નવી ચેટ</string>
     <string name="chat_new_title">નવી ચેટ</string>
     <string name="chat_new_name">ગ્રુપનું નામ</string>
+    <string name="chat_new_search_placeholder">લોકો શોધો</string>
+    <string name="chat_new_no_friends">ચેટ કરવા માટે લોકો શોધો</string>
     <string name="chat_message_placeholder">સંદેશ</string>
     <string name="chat_attachment_add">ફાઇલો જોડો</string>
     <string name="chat_settings_title">ચેટ સેટિંગ્સ</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">સભ્યો</string>
     <string name="chat_settings_add_member">સભ્ય ઉમેરો</string>
     <string name="chat_settings_add_member_search">મિત્રો શોધો</string>
+    <string name="chat_settings_add_member_no_friends">તમારા હજી કોઈ મિત્રો નથી. ચેટમાં ફક્ત મિત્રોને જ ઉમેરી શકાય છે.</string>
+    <string name="chat_settings_add_member_all_added">તમારા બધા મિત્રો પહેલેથી જ આ ચેટમાં છે.</string>
+    <string name="chat_settings_add_member_no_match">અલગ શોધ શબ્દ અજમાવો</string>
     <string name="chat_settings_remove_member">દૂર કરો</string>
     <string name="chat_settings_remove_member_title">સભ્ય દૂર કરો</string>
     <string name="chat_settings_leave">ચેટ છોડો</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">ચેટ સૂચનાઓ</string>
     <string name="chat_list_empty">હજુ સુધી કોઈ ચેટ નથી</string>
-    <string name="chat_new_existing_chat">હાલની ચેટ ખોલો</string>
+    <string name="chat_list_filter_groups">ગ્રુપ્સ</string>
+    <string name="chat_list_no_groups">કોઈ ગ્રૂપ ચેટ નથી</string>
+    <string name="chat_new_existing_with">તમારી પાસે પહેલેથી જ આમની સાથે ચેટ છે:</string>
+    <string name="chat_new_open">ખોલો</string>
+    <string name="chat_new_remove_person">%1$s ને દૂર કરો</string>
     <string name="chat_new_start">ચેટ શરૂ કરો</string>
     <string name="chat_new_start_group">જૂથ ચેટ શરૂ કરો</string>
     <string name="chat_messages_loading">સંદેશા લોડ થઈ રહ્યા છે…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">નીચે ખસેડો</string>
     <string name="chat_attachment_label">ફાઇલ</string>
     <string name="chat_settings_rename">ચેટનું નામ બદલો</string>
-    <string name="chat_settings_add_member_empty">ઉમેરવા માટે કોઈ મિત્રો નથી</string>
     <string name="chat_settings_remove_member_message">%1$s ને આ ચેટમાંથી દૂર કરવા છે?</string>
     <string name="chat_settings_leave_message">આ ચેટ છોડવી છે? અન્ય સભ્યો હવે તમારા સંદેશા જોઈ શકશે નહીં.</string>
     <string name="chat_settings_leave_and_delete">છોડો અને સ્થાનિક રીતે કાઢી નાખો</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">આવનારી ચેટ્સ</string>
     <string name="chat_policy_friends">ફક્ત મિત્રો</string>
     <string name="chat_policy_anyone">કોઈપણ</string>
-    <string name="chat_new_search_placeholder">લોકો શોધો</string>
     <string name="chat_new_no_matches">કોઈ મેળ ખાતા લોકો નથી</string>
-    <string name="chat_new_no_friends">ચેટ કરવા માટે લોકો શોધો</string>
     <string name="chat_pin">પિન</string>
     <string name="chat_unpin">અનપિન કરો</string>
     <string name="chat_settings_general">સામાન્ય</string>

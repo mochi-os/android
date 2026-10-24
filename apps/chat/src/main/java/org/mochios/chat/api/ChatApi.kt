@@ -91,16 +91,6 @@ data class SearchResponse(
     val results: List<ChatSearchResult> = emptyList()
 )
 
-// A directory person for the new-chat picker (non-friends may be addressed
-// when their chat_policy allows it; the sender-side probe at create decides).
-data class PersonResult(
-    val id: String = "",
-    val name: String = "",
-    val fingerprint: String = ""
-)
-
-data class PersonSearchResponse(val results: List<PersonResult> = emptyList())
-
 /** What accepting an invitation answers: the conversation, now active. */
 data class AcceptResponse(val id: String = "")
 
@@ -114,6 +104,18 @@ data class VerificationsResponse(val verifications: List<Verification> = emptyLi
 data class SetupResponse(val recovery: String = "", val password: Boolean = false)
 
 data class RecoverResponse(val restored: Int = 0)
+
+/**
+ * A directory person for the new-chat picker: non-friends may be addressed
+ * when their chat_policy allows it, which the sender-side probe at create decides.
+ */
+data class PersonResult(
+    val id: String = "",
+    val name: String = "",
+    val fingerprint: String = ""
+)
+
+data class PersonSearchResponse(val results: List<PersonResult> = emptyList())
 
 interface ChatApi {
 

@@ -36,12 +36,12 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.launch
 import org.mochios.market.R
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.MochiImage
 
 @Composable
 fun PhotoCarousel(
@@ -73,7 +73,7 @@ fun PhotoCarousel(
                     .clickable { onPhotoTap(page) },
                 contentAlignment = Alignment.Center,
             ) {
-                AsyncImage(
+                MochiImage(
                     model = ImageRequest.Builder(context)
                         .data(photoUrls[page])
                         .crossfade(true)
@@ -112,7 +112,7 @@ fun PhotoCarousel(
                                 scope.launch { pagerState.animateScrollToPage(index) }
                             },
                     ) {
-                        AsyncImage(
+                        MochiImage(
                             model = ImageRequest.Builder(context)
                                 .data(url)
                                 .crossfade(true)

@@ -254,6 +254,10 @@
     <string name="common_pause">შეჩერება</string>
     <string name="common_opening_file">ფაილის გახსნა…</string>
     <string name="common_no_app_for_file">ამ ფაილის გასახსნელი აპი არ არის</string>
+    <string name="common_file_actions_text">შეინახეთ მოწყობილობაზე ან გააზიარეთ სხვა აპით.</string>
+    <string name="common_file_save_to_device">მოწყობილობაზე შენახვა</string>
+    <string name="common_file_share">გაზიარება</string>
+    <string name="common_file_save_failed">ფაილის შენახვა ვერ მოხერხდა</string>
     <string name="common_file_open_failed">ფაილის გახსნა ვერ მოხერხდა</string>
     <string name="reaction_remove">გასუფთავება</string>
     <string name="common_logout_confirm_message">დარწმუნებული ხართ, რომ გსურთ სისტემიდან გასვლა? ანგარიშზე წვდომისთვის ხელახლა შესვლა დაგჭირდებათ.</string>

@@ -6,6 +6,8 @@
     <string name="chat_list_new">Новы чат</string>
     <string name="chat_new_title">Новы чат</string>
     <string name="chat_new_name">Назва групы</string>
+    <string name="chat_new_search_placeholder">Пошук людзей</string>
+    <string name="chat_new_no_friends">Знайдзіце людзей для чата</string>
     <string name="chat_message_placeholder">Паведамленне</string>
     <string name="chat_attachment_add">Прымацаваць файлы</string>
     <string name="chat_settings_title">Налады чата</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Удзельнікі</string>
     <string name="chat_settings_add_member">Дадаць удзельніка</string>
     <string name="chat_settings_add_member_search">Пошук сяброў</string>
+    <string name="chat_settings_add_member_no_friends">У вас пакуль няма сяброў. Дадаваць у чат можна толькі сяброў.</string>
+    <string name="chat_settings_add_member_all_added">Усе вашы сябры ўжо ў гэтым чаце.</string>
+    <string name="chat_settings_add_member_no_match">Паспрабуйце іншы пошукавы запыт</string>
     <string name="chat_settings_remove_member">Выдаліць</string>
     <string name="chat_settings_remove_member_title">Выдаліць удзельніка</string>
     <string name="chat_settings_leave">Пакінуць чат</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Апавяшчэнні чата</string>
     <string name="chat_list_empty">Чатаў пакуль няма</string>
-    <string name="chat_new_existing_chat">Адкрыць існуючы чат</string>
+    <string name="chat_list_filter_groups">Групы</string>
+    <string name="chat_list_no_groups">Няма групавых чатаў</string>
+    <string name="chat_new_existing_with">У вас ужо ёсць чаты з:</string>
+    <string name="chat_new_open">Адкрыць</string>
+    <string name="chat_new_remove_person">Выдаліць %1$s</string>
     <string name="chat_new_start">Пачаць чат</string>
     <string name="chat_new_start_group">Пачаць групавы чат</string>
     <string name="chat_messages_loading">Загрузка паведамленняў…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Перамясціць уніз</string>
     <string name="chat_attachment_label">Файл</string>
     <string name="chat_settings_rename">Пераназваць чат</string>
-    <string name="chat_settings_add_member_empty">Няма сяброў для дадання</string>
     <string name="chat_settings_remove_member_message">Выдаліць %1$s з гэтага чата?</string>
     <string name="chat_settings_leave_message">Пакінуць гэты чат? Іншыя ўдзельнікі больш не будуць бачыць вашых паведамленняў.</string>
     <string name="chat_settings_leave_and_delete">Пакінуць і выдаліць лакальна</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Уваходныя чаты</string>
     <string name="chat_policy_friends">Толькі сябры</string>
     <string name="chat_policy_anyone">Хто заўгодна</string>
-    <string name="chat_new_search_placeholder">Пошук людзей</string>
     <string name="chat_new_no_matches">Няма адпаведных людзей</string>
-    <string name="chat_new_no_friends">Знайдзіце людзей для чата</string>
     <string name="chat_pin">Замацаваць</string>
     <string name="chat_unpin">Адмацаваць</string>
     <string name="chat_settings_general">Агульныя</string>

@@ -254,6 +254,10 @@
     <string name="common_pause">روکیں</string>
     <string name="common_opening_file">فائل کھولی جا رہی ہے…</string>
     <string name="common_no_app_for_file">کوئی ایپ اس فائل کو نہیں کھول سکتی</string>
+    <string name="common_file_actions_text">اسے اپنے آلے پر محفوظ کریں یا کسی دوسری ایپ کے ساتھ شیئر کریں۔</string>
+    <string name="common_file_save_to_device">آلے پر محفوظ کریں</string>
+    <string name="common_file_share">شیئر کریں</string>
+    <string name="common_file_save_failed">فائل محفوظ نہیں ہو سکی</string>
     <string name="common_file_open_failed">فائل نہیں کھل سکی</string>
     <string name="reaction_remove">صاف کریں</string>
     <string name="common_logout_confirm_message">کیا آپ واقعی لاگ آؤٹ کرنا چاہتے ہیں؟ اپنے اکاؤنٹ تک رسائی کے لیے آپ کو دوبارہ لاگ اِن کرنا ہوگا۔</string>

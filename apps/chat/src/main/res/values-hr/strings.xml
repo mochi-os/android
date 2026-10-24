@@ -6,6 +6,8 @@
     <string name="chat_list_new">Novi razgovor</string>
     <string name="chat_new_title">Novi razgovor</string>
     <string name="chat_new_name">Naziv grupe</string>
+    <string name="chat_new_search_placeholder">Pretraži ljude</string>
+    <string name="chat_new_no_friends">Potražite ljude za razgovor</string>
     <string name="chat_message_placeholder">Poruka</string>
     <string name="chat_attachment_add">Priloži datoteke</string>
     <string name="chat_settings_title">Postavke razgovora</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Članovi</string>
     <string name="chat_settings_add_member">Dodaj člana</string>
     <string name="chat_settings_add_member_search">Pretraži prijatelje</string>
+    <string name="chat_settings_add_member_no_friends">Još nemate prijatelja. U chat se mogu dodati samo prijatelji.</string>
+    <string name="chat_settings_add_member_all_added">Svi vaši prijatelji već su u ovom chatu.</string>
+    <string name="chat_settings_add_member_no_match">Pokušajte s drugim pojmom za pretragu</string>
     <string name="chat_settings_remove_member">Ukloni</string>
     <string name="chat_settings_remove_member_title">Ukloni člana</string>
     <string name="chat_settings_leave">Napusti razgovor</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Obavijesti za chat</string>
     <string name="chat_list_empty">Još nema chatova</string>
-    <string name="chat_new_existing_chat">Otvori postojeći chat</string>
+    <string name="chat_list_filter_groups">Grupe</string>
+    <string name="chat_list_no_groups">Nema grupnih chatova</string>
+    <string name="chat_new_existing_with">Već imate chatove s:</string>
+    <string name="chat_new_open">Otvori</string>
+    <string name="chat_new_remove_person">Ukloni %1$s</string>
     <string name="chat_new_start">Započni chat</string>
     <string name="chat_new_start_group">Započni grupni chat</string>
     <string name="chat_messages_loading">Učitavanje poruka…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Pomakni dolje</string>
     <string name="chat_attachment_label">Datoteka</string>
     <string name="chat_settings_rename">Preimenuj chat</string>
-    <string name="chat_settings_add_member_empty">Nema prijatelja za dodavanje</string>
     <string name="chat_settings_remove_member_message">Ukloniti %1$s iz ovog chata?</string>
     <string name="chat_settings_leave_message">Napustiti ovaj chat? Ostali članovi više neće vidjeti vaše poruke.</string>
     <string name="chat_settings_leave_and_delete">Napusti i izbriši lokalno</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Dolazni razgovori</string>
     <string name="chat_policy_friends">Samo prijatelji</string>
     <string name="chat_policy_anyone">Bilo tko</string>
-    <string name="chat_new_search_placeholder">Pretraži ljude</string>
     <string name="chat_new_no_matches">Nema podudarnih ljudi</string>
-    <string name="chat_new_no_friends">Potražite ljude za razgovor</string>
     <string name="chat_pin">Pričvrsti</string>
     <string name="chat_unpin">Otkvači</string>
     <string name="chat_settings_general">Općenito</string>

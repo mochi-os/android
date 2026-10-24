@@ -6,6 +6,8 @@
     <string name="chat_list_new">Uusi keskustelu</string>
     <string name="chat_new_title">Uusi keskustelu</string>
     <string name="chat_new_name">Ryhmän nimi</string>
+    <string name="chat_new_search_placeholder">Hae henkilöitä</string>
+    <string name="chat_new_no_friends">Etsi henkilöitä keskusteltavaksi</string>
     <string name="chat_message_placeholder">Viesti</string>
     <string name="chat_attachment_add">Liitä tiedostoja</string>
     <string name="chat_settings_title">Chatin asetukset</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Jäsenet</string>
     <string name="chat_settings_add_member">Lisää jäsen</string>
     <string name="chat_settings_add_member_search">Hae kavereita</string>
+    <string name="chat_settings_add_member_no_friends">Sinulla ei ole vielä kavereita. Keskusteluun voi lisätä vain kavereita.</string>
+    <string name="chat_settings_add_member_all_added">Kaikki kaverisi ovat jo tässä keskustelussa.</string>
+    <string name="chat_settings_add_member_no_match">Kokeile toista hakusanaa</string>
     <string name="chat_settings_remove_member">Poista</string>
     <string name="chat_settings_remove_member_title">Poista jäsen</string>
     <string name="chat_settings_leave">Poistu keskustelusta</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Chat-ilmoitukset</string>
     <string name="chat_list_empty">Ei vielä keskusteluja</string>
-    <string name="chat_new_existing_chat">Avaa olemassa oleva keskustelu</string>
+    <string name="chat_list_filter_groups">Ryhmät</string>
+    <string name="chat_list_no_groups">Ei ryhmäkeskusteluja</string>
+    <string name="chat_new_existing_with">Sinulla on jo keskusteluja näiden kanssa:</string>
+    <string name="chat_new_open">Avaa</string>
+    <string name="chat_new_remove_person">Poista %1$s</string>
     <string name="chat_new_start">Aloita keskustelu</string>
     <string name="chat_new_start_group">Aloita ryhmäkeskustelu</string>
     <string name="chat_messages_loading">Ladataan viestejä…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Siirrä alas</string>
     <string name="chat_attachment_label">Tiedosto</string>
     <string name="chat_settings_rename">Nimeä keskustelu uudelleen</string>
-    <string name="chat_settings_add_member_empty">Ei lisättäviä ystäviä</string>
     <string name="chat_settings_remove_member_message">Poistetaanko %1$s tästä keskustelusta?</string>
     <string name="chat_settings_leave_message">Poistutaanko tästä keskustelusta? Muut jäsenet eivät enää näe viestejäsi.</string>
     <string name="chat_settings_leave_and_delete">Poistu ja poista paikallisesti</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Saapuvat keskustelut</string>
     <string name="chat_policy_friends">Vain kaverit</string>
     <string name="chat_policy_anyone">Kuka tahansa</string>
-    <string name="chat_new_search_placeholder">Hae henkilöitä</string>
     <string name="chat_new_no_matches">Ei vastaavia henkilöitä</string>
-    <string name="chat_new_no_friends">Etsi henkilöitä keskusteltavaksi</string>
     <string name="chat_pin">Kiinnitä</string>
     <string name="chat_unpin">Poista kiinnitys</string>
     <string name="chat_settings_general">Yleiset</string>

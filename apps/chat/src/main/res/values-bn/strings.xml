@@ -6,6 +6,8 @@
     <string name="chat_list_new">নতুন চ্যাট</string>
     <string name="chat_new_title">নতুন চ্যাট</string>
     <string name="chat_new_name">গ্রুপের নাম</string>
+    <string name="chat_new_search_placeholder">মানুষ খুঁজুন</string>
+    <string name="chat_new_no_friends">চ্যাট করার জন্য মানুষ খুঁজুন</string>
     <string name="chat_message_placeholder">বার্তা</string>
     <string name="chat_attachment_add">ফাইল সংযুক্ত করুন</string>
     <string name="chat_settings_title">চ্যাট সেটিংস</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">সদস্যগণ</string>
     <string name="chat_settings_add_member">সদস্য যোগ করুন</string>
     <string name="chat_settings_add_member_search">বন্ধু অনুসন্ধান করুন</string>
+    <string name="chat_settings_add_member_no_friends">আপনার এখনও কোনো বন্ধু নেই। চ্যাটে শুধু বন্ধুদেরই যোগ করা যায়।</string>
+    <string name="chat_settings_add_member_all_added">আপনার সব বন্ধু ইতিমধ্যে এই চ্যাটে আছে।</string>
+    <string name="chat_settings_add_member_no_match">অন্য একটি অনুসন্ধান শব্দ চেষ্টা করুন</string>
     <string name="chat_settings_remove_member">সরান</string>
     <string name="chat_settings_remove_member_title">সদস্য সরান</string>
     <string name="chat_settings_leave">চ্যাট ছেড়ে দিন</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">চ্যাট বিজ্ঞপ্তি</string>
     <string name="chat_list_empty">এখনও কোনো চ্যাট নেই</string>
-    <string name="chat_new_existing_chat">বিদ্যমান চ্যাট খুলুন</string>
+    <string name="chat_list_filter_groups">গ্রুপসমূহ</string>
+    <string name="chat_list_no_groups">কোনো গ্রুপ চ্যাট নেই</string>
+    <string name="chat_new_existing_with">এঁদের সাথে আপনার আগে থেকেই চ্যাট আছে:</string>
+    <string name="chat_new_open">খুলুন</string>
+    <string name="chat_new_remove_person">%1$s কে সরান</string>
     <string name="chat_new_start">চ্যাট শুরু করুন</string>
     <string name="chat_new_start_group">গ্রুপ চ্যাট শুরু করুন</string>
     <string name="chat_messages_loading">বার্তা লোড হচ্ছে…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">নিচে সরান</string>
     <string name="chat_attachment_label">ফাইল</string>
     <string name="chat_settings_rename">চ্যাটের নাম পরিবর্তন করুন</string>
-    <string name="chat_settings_add_member_empty">যোগ করার মতো কোনো বন্ধু নেই</string>
     <string name="chat_settings_remove_member_message">এই চ্যাট থেকে %1$s-কে সরাবেন?</string>
     <string name="chat_settings_leave_message">এই চ্যাট ত্যাগ করবেন? অন্য সদস্যরা আর আপনার বার্তা দেখতে পাবেন না।</string>
     <string name="chat_settings_leave_and_delete">ত্যাগ করুন এবং স্থানীয়ভাবে মুছুন</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">আগত চ্যাট</string>
     <string name="chat_policy_friends">শুধুমাত্র বন্ধুরা</string>
     <string name="chat_policy_anyone">যে কেউ</string>
-    <string name="chat_new_search_placeholder">মানুষ খুঁজুন</string>
     <string name="chat_new_no_matches">কোনো মিলে যাওয়া মানুষ নেই</string>
-    <string name="chat_new_no_friends">চ্যাট করার জন্য মানুষ খুঁজুন</string>
     <string name="chat_pin">পিন করুন</string>
     <string name="chat_unpin">আনপিন করুন</string>
     <string name="chat_settings_general">সাধারণ</string>

@@ -6,6 +6,8 @@
     <string name="chat_list_new">Chat anyar</string>
     <string name="chat_new_title">Chat anyar</string>
     <string name="chat_new_name">Jeneng grup</string>
+    <string name="chat_new_search_placeholder">Golek wong</string>
+    <string name="chat_new_no_friends">Golek wong kanggo ngobrol</string>
     <string name="chat_message_placeholder">Pesen</string>
     <string name="chat_attachment_add">Lampirké berkas</string>
     <string name="chat_settings_title">Setèlan chat</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Anggota</string>
     <string name="chat_settings_add_member">Tambah anggota</string>
     <string name="chat_settings_add_member_search">Goleki kanca</string>
+    <string name="chat_settings_add_member_no_friends">Panjenengan dereng gadhah kanca. Namung kanca ingkang saged dipunlebetaken dhateng obrolan.</string>
+    <string name="chat_settings_add_member_all_added">Sedaya kanca panjenengan sampun wonten ing obrolan punika.</string>
+    <string name="chat_settings_add_member_no_match">Coba istilah penelusuran liyané</string>
     <string name="chat_settings_remove_member">Cabut</string>
     <string name="chat_settings_remove_member_title">Cabut anggota</string>
     <string name="chat_settings_leave">Tinggal chat</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">Notifikasi obrolan</string>
     <string name="chat_list_empty">Durung ana obrolan</string>
-    <string name="chat_new_existing_chat">Bukak obrolan sing wis ana</string>
+    <string name="chat_list_filter_groups">Grup</string>
+    <string name="chat_list_no_groups">Mboten wonten obrolan grup</string>
+    <string name="chat_new_existing_with">Panjenengan sampun gadhah obrolan kaliyan:</string>
+    <string name="chat_new_open">Bukak</string>
+    <string name="chat_new_remove_person">Busek %1$s</string>
     <string name="chat_new_start">Wiwiti obrolan</string>
     <string name="chat_new_start_group">Wiwiti obrolan grup</string>
     <string name="chat_messages_loading">Ngemot pesen…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">Muat pesen sing luwih lawas</string>
     <string name="chat_attachment_label">Berkas</string>
     <string name="chat_settings_rename">Ganti jeneng obrolan</string>
-    <string name="chat_settings_add_member_empty">Ora ana kanca kanggo ditambahake</string>
     <string name="chat_settings_remove_member_message">Busak %1$s saka obrolan iki?</string>
     <string name="chat_settings_leave_message">Metu saka obrolan iki? Anggota liyane ora bakal weruh pesen panjenengan maneh.</string>
     <string name="chat_settings_leave_and_delete">Metu lan busak sacara lokal</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Obrolan mlebu</string>
     <string name="chat_policy_friends">Kanca thok</string>
     <string name="chat_policy_anyone">Sapa wae</string>
-    <string name="chat_new_search_placeholder">Golek wong</string>
     <string name="chat_new_no_matches">Ora ana wong sing cocog</string>
-    <string name="chat_new_no_friends">Golek wong kanggo ngobrol</string>
     <string name="chat_pin">Semataké</string>
     <string name="chat_unpin">Lepasaké pin</string>
     <string name="chat_settings_general">Umum</string>

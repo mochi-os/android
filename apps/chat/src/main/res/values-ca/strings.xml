@@ -6,6 +6,8 @@
     <string name="chat_list_new">Xat nou</string>
     <string name="chat_new_title">Xat nou</string>
     <string name="chat_new_name">Nom del grup</string>
+    <string name="chat_new_search_placeholder">Cerca persones</string>
+    <string name="chat_new_no_friends">Cerca persones per xatejar</string>
     <string name="chat_message_placeholder">Missatge</string>
     <string name="chat_attachment_add">Adjunta fitxers</string>
     <string name="chat_settings_title">Configuració del xat</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Membres</string>
     <string name="chat_settings_add_member">Afegeix un membre</string>
     <string name="chat_settings_add_member_search">Cerca amics</string>
+    <string name="chat_settings_add_member_no_friends">Encara no teniu amics. Només es poden afegir amics a un xat.</string>
+    <string name="chat_settings_add_member_all_added">Tots els vostres amics ja són en aquest xat.</string>
+    <string name="chat_settings_add_member_no_match">Prova un terme de cerca diferent</string>
     <string name="chat_settings_remove_member">Elimina</string>
     <string name="chat_settings_remove_member_title">Elimina el membre</string>
     <string name="chat_settings_leave">Surt del xat</string>
@@ -32,13 +37,16 @@
 
     <string name="notification_channel_chat">Notificacions del xat</string>
     <string name="chat_list_empty">Encara no hi ha cap xat</string>
-    <string name="chat_new_existing_chat">Obre el xat existent</string>
+    <string name="chat_list_filter_groups">Grups</string>
+    <string name="chat_list_no_groups">No hi ha xats de grup</string>
+    <string name="chat_new_existing_with">Ja teniu xats amb:</string>
+    <string name="chat_new_open">Obre</string>
+    <string name="chat_new_remove_person">Elimina %1$s</string>
     <string name="chat_new_start">Inicia el xat</string>
     <string name="chat_new_start_group">Inicia un xat de grup</string>
     <string name="chat_messages_loading">S\'estan carregant els missatges…</string>
     <string name="chat_messages_empty">Encara no hi ha cap missatge — saluda!</string>
     <string name="chat_settings_rename">Canvia el nom del xat</string>
-    <string name="chat_settings_add_member_empty">No hi ha amics per afegir</string>
     <string name="chat_settings_remove_member_message">Voleu eliminar %1$s d\'aquest xat?</string>
     <string name="chat_settings_leave_message">Voleu abandonar aquest xat? Els altres membres ja no veuran els vostres missatges.</string>
     <string name="chat_settings_leave_and_delete">Abandona i suprimeix localment</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Xats entrants</string>
     <string name="chat_policy_friends">Només amics</string>
     <string name="chat_policy_anyone">Qualsevol</string>
-    <string name="chat_new_search_placeholder">Cerca persones</string>
     <string name="chat_new_no_matches">Cap persona coincident</string>
-    <string name="chat_new_no_friends">Cerca persones per xatejar</string>
     <string name="chat_pin">Fixa</string>
     <string name="chat_unpin">Desafixa</string>
     <string name="chat_settings_general">General</string>

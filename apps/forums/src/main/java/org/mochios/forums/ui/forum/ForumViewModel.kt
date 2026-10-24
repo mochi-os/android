@@ -10,10 +10,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.currentCoroutineContext
-import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -286,9 +285,10 @@ class ForumViewModel @Inject constructor(
             if (r.posts.size > previousCount) awaitingOwnPost = false
             _newPostsCount.value = 0
             loadTags()
-        } catch (_: Exception) {
+        } catch (e: CancellationException) {
             // Cancelled, a newer refresh has the state now.
-            currentCoroutineContext().ensureActive()
+            throw e
+        } catch (_: Exception) {
             _uiState.value = _uiState.value.copy(isRefreshing = false)
         }
     }
@@ -376,8 +376,9 @@ class ForumViewModel @Inject constructor(
                 // The fresh list incorporates any queued posts — a count left
                 // up would just promise posts the user now has.
                 _newPostsCount.value = 0
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                ensureActive()
                 _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
             }
         }

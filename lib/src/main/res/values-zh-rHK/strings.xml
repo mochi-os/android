@@ -234,6 +234,10 @@
     <string name="common_pause">暫停</string>
     <string name="common_opening_file">正在開啟檔案…</string>
     <string name="common_no_app_for_file">沒有應用程式可以開啟此檔案</string>
+    <string name="common_file_actions_text">可將其儲存到裝置，或分享給其他應用程式。</string>
+    <string name="common_file_save_to_device">儲存到裝置</string>
+    <string name="common_file_share">分享</string>
+    <string name="common_file_save_failed">無法儲存檔案</string>
     <string name="common_file_open_failed">無法開啟檔案</string>
     <string name="game_system_resign">%1$s 認輸</string>
     <string name="game_system_draw_offer">%1$s 提出和棋</string>

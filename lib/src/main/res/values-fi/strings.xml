@@ -254,6 +254,10 @@
     <string name="common_pause">Keskeytä</string>
     <string name="common_opening_file">Avataan tiedostoa…</string>
     <string name="common_no_app_for_file">Mikään sovellus ei voi avata tätä tiedostoa</string>
+    <string name="common_file_actions_text">Tallenna se laitteellesi tai jaa se toiseen sovellukseen.</string>
+    <string name="common_file_save_to_device">Tallenna laitteelle</string>
+    <string name="common_file_share">Jaa</string>
+    <string name="common_file_save_failed">Tiedostoa ei voitu tallentaa</string>
     <string name="common_file_open_failed">Tiedostoa ei voitu avata</string>
     <string name="reaction_remove">Poista</string>
     <string name="common_logout_confirm_message">Haluatko varmasti kirjautua ulos? Sinun on kirjauduttava uudelleen sisään käyttääksesi tiliäsi.</string>

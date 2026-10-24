@@ -12,9 +12,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -302,8 +302,9 @@ class ChatViewModel @Inject constructor(
                     error = null
                 )
                 markRead()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                ensureActive()
                 _uiState.value = _uiState.value.copy(isRefreshing = false).failed(e.toMochiError())
             }
         }
@@ -409,6 +410,8 @@ class ChatViewModel @Inject constructor(
                     .sortedByDescending { result -> result.created }
                     .map { result -> result.id }
                 _uiState.value = _uiState.value.copy(searchMatchIds = ids, searchMatchIndex = 0)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.failed(e.toMochiError())
             }

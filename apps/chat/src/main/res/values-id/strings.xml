@@ -6,6 +6,8 @@
     <string name="chat_list_new">Chat baru</string>
     <string name="chat_new_title">Chat baru</string>
     <string name="chat_new_name">Nama grup</string>
+    <string name="chat_new_search_placeholder">Cari orang</string>
+    <string name="chat_new_no_friends">Cari orang untuk diajak mengobrol</string>
     <string name="chat_message_placeholder">Pesan</string>
     <string name="chat_attachment_add">Lampirkan file</string>
     <string name="chat_settings_title">Pengaturan chat</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Anggota</string>
     <string name="chat_settings_add_member">Tambah anggota</string>
     <string name="chat_settings_add_member_search">Cari teman</string>
+    <string name="chat_settings_add_member_no_friends">Anda belum punya teman. Hanya teman yang dapat ditambahkan ke chat.</string>
+    <string name="chat_settings_add_member_all_added">Semua teman Anda sudah ada di chat ini.</string>
+    <string name="chat_settings_add_member_no_match">Coba istilah pencarian lain</string>
     <string name="chat_settings_remove_member">Hapus</string>
     <string name="chat_settings_remove_member_title">Hapus anggota</string>
     <string name="chat_settings_leave">Keluar dari percakapan</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">Notifikasi chat</string>
     <string name="chat_list_empty">Belum ada chat</string>
-    <string name="chat_new_existing_chat">Buka chat yang ada</string>
+    <string name="chat_list_filter_groups">Grup</string>
+    <string name="chat_list_no_groups">Tidak ada chat grup</string>
+    <string name="chat_new_existing_with">Anda sudah punya chat dengan:</string>
+    <string name="chat_new_open">Buka</string>
+    <string name="chat_new_remove_person">Hapus %1$s</string>
     <string name="chat_new_start">Mulai chat</string>
     <string name="chat_new_start_group">Mulai chat grup</string>
     <string name="chat_messages_loading">Memuat pesan…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">Muat pesan lama</string>
     <string name="chat_attachment_label">Berkas</string>
     <string name="chat_settings_rename">Ganti nama chat</string>
-    <string name="chat_settings_add_member_empty">Tidak ada teman untuk ditambahkan</string>
     <string name="chat_settings_remove_member_message">Keluarkan %1$s dari chat ini?</string>
     <string name="chat_settings_leave_message">Keluar dari chat ini? Anggota lain tidak akan melihat pesan Anda lagi.</string>
     <string name="chat_settings_leave_and_delete">Keluar dan hapus secara lokal</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Obrolan masuk</string>
     <string name="chat_policy_friends">Hanya teman</string>
     <string name="chat_policy_anyone">Siapa saja</string>
-    <string name="chat_new_search_placeholder">Cari orang</string>
     <string name="chat_new_no_matches">Tidak ada orang yang cocok</string>
-    <string name="chat_new_no_friends">Cari orang untuk diajak mengobrol</string>
     <string name="chat_pin">Sematkan</string>
     <string name="chat_unpin">Lepas sematan</string>
     <string name="chat_settings_general">Umum</string>

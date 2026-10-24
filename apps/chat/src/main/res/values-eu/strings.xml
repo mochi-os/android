@@ -6,6 +6,8 @@
     <string name="chat_list_new">Txat berria</string>
     <string name="chat_new_title">Txat berria</string>
     <string name="chat_new_name">Taldearen izena</string>
+    <string name="chat_new_search_placeholder">Bilatu pertsonak</string>
+    <string name="chat_new_no_friends">Bilatu pertsonak txateatzeko</string>
     <string name="chat_message_placeholder">Mezua</string>
     <string name="chat_attachment_add">Erantsi fitxategiak</string>
     <string name="chat_settings_title">Txat ezarpenak</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Kideak</string>
     <string name="chat_settings_add_member">Gehitu kidea</string>
     <string name="chat_settings_add_member_search">Bilatu lagunak</string>
+    <string name="chat_settings_add_member_no_friends">Oraindik ez duzu lagunik. Lagunak bakarrik gehi daitezke txat batera.</string>
+    <string name="chat_settings_add_member_all_added">Zure lagun guztiak dagoeneko txat honetan daude.</string>
+    <string name="chat_settings_add_member_no_match">Saiatu beste bilaketa-termino batekin</string>
     <string name="chat_settings_remove_member">Kendu</string>
     <string name="chat_settings_remove_member_title">Kendu kidea</string>
     <string name="chat_settings_leave">Irten txatetik</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">Txat-jakinarazpenak</string>
     <string name="chat_list_empty">Oraindik ez dago txatik</string>
-    <string name="chat_new_existing_chat">Ireki lehendik dagoen txata</string>
+    <string name="chat_list_filter_groups">Taldeak</string>
+    <string name="chat_list_no_groups">Ez dago talde-txatik</string>
+    <string name="chat_new_existing_with">Dagoeneko baduzu txatik hauekin:</string>
+    <string name="chat_new_open">Ireki</string>
+    <string name="chat_new_remove_person">Kendu %1$s</string>
     <string name="chat_new_start">Hasi txata</string>
     <string name="chat_new_start_group">Hasi talde-txata</string>
     <string name="chat_messages_loading">Mezuak kargatzen…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">Eraman behera</string>
     <string name="chat_attachment_label">Fitxategia</string>
     <string name="chat_settings_rename">Berrizendatu txata</string>
-    <string name="chat_settings_add_member_empty">Ez dago gehitzeko lagunik</string>
     <string name="chat_settings_remove_member_message">Kendu %1$s txat honetatik?</string>
     <string name="chat_settings_leave_message">Txat honetatik irten nahi duzu? Gainerako kideek ez dituzte zure mezuak gehiago ikusiko.</string>
     <string name="chat_settings_leave_and_delete">Irten eta ezabatu lokalki</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Sarrerako txatak</string>
     <string name="chat_policy_friends">Lagunak soilik</string>
     <string name="chat_policy_anyone">Edonor</string>
-    <string name="chat_new_search_placeholder">Bilatu pertsonak</string>
     <string name="chat_new_no_matches">Ez dago bat datorren pertsonarik</string>
-    <string name="chat_new_no_friends">Bilatu pertsonak txateatzeko</string>
     <string name="chat_pin">Finkatu</string>
     <string name="chat_unpin">Desfinkatu</string>
     <string name="chat_settings_general">Orokorra</string>

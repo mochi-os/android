@@ -6,6 +6,8 @@
     <string name="chat_list_new">ការសន្ទនាថ្មី</string>
     <string name="chat_new_title">ការសន្ទនាថ្មី</string>
     <string name="chat_new_name">ឈ្មោះក្រុម</string>
+    <string name="chat_new_search_placeholder">ស្វែងរកមនុស្ស</string>
+    <string name="chat_new_no_friends">ស្វែងរកមនុស្សដើម្បីជជែក</string>
     <string name="chat_message_placeholder">សារ</string>
     <string name="chat_attachment_add">ភ្ជាប់ឯកសារ</string>
     <string name="chat_settings_title">ការកំណត់ជជែក</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">សមាជិក</string>
     <string name="chat_settings_add_member">បន្ថែមសមាជិក</string>
     <string name="chat_settings_add_member_search">ស្វែងរកមិត្តភក្តិ</string>
+    <string name="chat_settings_add_member_no_friends">អ្នកមិនទាន់មានមិត្តភក្តិនៅឡើយទេ។ មានតែមិត្តភក្តិប៉ុណ្ណោះដែលអាចបញ្ចូលទៅក្នុងការជជែកបាន។</string>
+    <string name="chat_settings_add_member_all_added">មិត្តភក្តិទាំងអស់របស់អ្នកមាននៅក្នុងការជជែកនេះរួចហើយ។</string>
+    <string name="chat_settings_add_member_no_match">សាកល្បងពាក្យស្វែងរកផ្សេង</string>
     <string name="chat_settings_remove_member">យកចេញ</string>
     <string name="chat_settings_remove_member_title">យកសមាជិកចេញ</string>
     <string name="chat_settings_leave">ចាកចេញពីការជជែក</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">ការជូនដំណឹងជជែក</string>
     <string name="chat_list_empty">មិនទាន់មានការជជែកទេ</string>
-    <string name="chat_new_existing_chat">បើកការជជែកដែលមានស្រាប់</string>
+    <string name="chat_list_filter_groups">ក្រុម</string>
+    <string name="chat_list_no_groups">គ្មានការជជែកជាក្រុមទេ</string>
+    <string name="chat_new_existing_with">អ្នកមានការជជែកជាមួយពួកគេរួចហើយ៖</string>
+    <string name="chat_new_open">បើក</string>
+    <string name="chat_new_remove_person">លុប %1$s</string>
     <string name="chat_new_start">ចាប់ផ្ដើមការជជែក</string>
     <string name="chat_new_start_group">ចាប់ផ្ដើមការជជែកជាក្រុម</string>
     <string name="chat_messages_loading">កំពុងផ្ទុកសារ…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">ផ្ទុកសារចាស់ៗ</string>
     <string name="chat_attachment_label">ឯកសារ</string>
     <string name="chat_settings_rename">ប្ដូរឈ្មោះការជជែក</string>
-    <string name="chat_settings_add_member_empty">មិនមានមិត្តភក្ដិត្រូវបន្ថែមទេ</string>
     <string name="chat_settings_remove_member_message">ដក %1$s ចេញពីការជជែកនេះ?</string>
     <string name="chat_settings_leave_message">ចាកចេញពីការជជែកនេះ? សមាជិកដទៃទៀតនឹងលែងឃើញសាររបស់អ្នកទៀតហើយ។</string>
     <string name="chat_settings_leave_and_delete">ចាកចេញ និងលុបនៅក្នុងតំបន់</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">ការជជែកចូល</string>
     <string name="chat_policy_friends">តែមិត្តភ័ក្តិប៉ុណ្ណោះ</string>
     <string name="chat_policy_anyone">អ្នកណាក៏បាន</string>
-    <string name="chat_new_search_placeholder">ស្វែងរកមនុស្ស</string>
     <string name="chat_new_no_matches">គ្មានមនុស្សដែលត្រូវគ្នា</string>
-    <string name="chat_new_no_friends">ស្វែងរកមនុស្សដើម្បីជជែក</string>
     <string name="chat_pin">ខ្ទាស់</string>
     <string name="chat_unpin">ដកខ្ទាស់</string>
     <string name="chat_settings_general">ទូទៅ</string>

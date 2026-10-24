@@ -66,6 +66,7 @@ class ChatRepository @Inject constructor(
         ).unwrap()
     }
 
+    /** People in the directory matching [query], friends or not. */
     suspend fun personSearch(query: String): List<PersonResult> =
         api.personSearch(query).unwrap().results
 

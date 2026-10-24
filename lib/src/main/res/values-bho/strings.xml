@@ -254,6 +254,10 @@
     <string name="common_pause">रोकीं</string>
     <string name="common_opening_file">फाइल खुल रहल बा…</string>
     <string name="common_no_app_for_file">ई फाइल खोले वाला कवनो ऐप नइखे</string>
+    <string name="common_file_actions_text">एकरा अपना डिवाइस पर सेव करीं भा कवनो दोसर ऐप से शेयर करीं।</string>
+    <string name="common_file_save_to_device">डिवाइस पर सेव करीं</string>
+    <string name="common_file_share">शेयर करीं</string>
+    <string name="common_file_save_failed">फाइल सेव ना हो पाइल</string>
     <string name="common_file_open_failed">फाइल ना खुल सकल</string>
     <string name="reaction_remove">हटाईं</string>
     <string name="common_logout_confirm_message">का रउआ पक्का लॉग आउट करे के चाहत बानी? आपन खाता में फेर से पहुँचे खातिर रउआ के दोबारा लॉग इन करे के पड़ी।</string>

@@ -6,6 +6,8 @@
     <string name="chat_list_new">ສົນທະນາໃໝ່</string>
     <string name="chat_new_title">ສົນທະນາໃໝ່</string>
     <string name="chat_new_name">ຊື່ກຸ່ມ</string>
+    <string name="chat_new_search_placeholder">ຄົ້ນຫາຄົນ</string>
+    <string name="chat_new_no_friends">ຄົ້ນຫາຄົນເພື່ອສົນທະນາ</string>
     <string name="chat_message_placeholder">ຂໍ້ຄວາມ</string>
     <string name="chat_attachment_add">ແນບໄຟລ໌</string>
     <string name="chat_settings_title">ການຕັ້ງຄ່າແຊັດ</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">ສະມາຊິກ</string>
     <string name="chat_settings_add_member">ເພີ່ມສະມາຊິກ</string>
     <string name="chat_settings_add_member_search">ຄົ້ນຫາໝູ່</string>
+    <string name="chat_settings_add_member_no_friends">ທ່ານຍັງບໍ່ມີໝູ່ເທື່ອ. ສາມາດເພີ່ມໄດ້ສະເພາະໝູ່ເຂົ້າໃນການສົນທະນາ.</string>
+    <string name="chat_settings_add_member_all_added">ໝູ່ທັງໝົດຂອງທ່ານຢູ່ໃນການສົນທະນານີ້ແລ້ວ.</string>
+    <string name="chat_settings_add_member_no_match">ລອງຄຳຄົ້ນຫາທີ່ແຕກຕ່າງກັນ</string>
     <string name="chat_settings_remove_member">ລຶບອອກ</string>
     <string name="chat_settings_remove_member_title">ລຶບສະມາຊິກ</string>
     <string name="chat_settings_leave">ອອກຈາກການສົນທະນາ</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">ການແຈ້ງເຕືອນການສົນທະນາ</string>
     <string name="chat_list_empty">ຍັງບໍ່ມີການສົນທະນາ</string>
-    <string name="chat_new_existing_chat">ເປີດການສົນທະນາທີ່ມີຢູ່</string>
+    <string name="chat_list_filter_groups">ກຸ່ມ</string>
+    <string name="chat_list_no_groups">ບໍ່ມີການສົນທະນາກຸ່ມ</string>
+    <string name="chat_new_existing_with">ທ່ານມີການສົນທະນາກັບຄົນເຫຼົ່ານີ້ແລ້ວ:</string>
+    <string name="chat_new_open">ເປີດ</string>
+    <string name="chat_new_remove_person">ລຶບ %1$s</string>
     <string name="chat_new_start">ເລີ່ມການສົນທະນາ</string>
     <string name="chat_new_start_group">ເລີ່ມການສົນທະນາກຸ່ມ</string>
     <string name="chat_messages_loading">ກຳລັງໂຫຼດຂໍ້ຄວາມ…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">ໂຫຼດຂໍ້ຄວາມເກົ່າກວ່າ</string>
     <string name="chat_attachment_label">ໄຟລ໌</string>
     <string name="chat_settings_rename">ປ່ຽນຊື່ການສົນທະນາ</string>
-    <string name="chat_settings_add_member_empty">ບໍ່ມີໝູ່ໃຫ້ເພີ່ມ</string>
     <string name="chat_settings_remove_member_message">ລຶບ %1$s ອອກຈາກການສົນທະນານີ້ບໍ?</string>
     <string name="chat_settings_leave_message">ອອກຈາກການສົນທະນານີ້ບໍ? ສະມາຊິກຄົນອື່ນຈະບໍ່ເຫັນຂໍ້ຄວາມຂອງທ່ານອີກຕໍ່ໄປ.</string>
     <string name="chat_settings_leave_and_delete">ອອກ ແລະ ລຶບໃນເຄື່ອງ</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">ແຊັດຂາເຂົ້າ</string>
     <string name="chat_policy_friends">ໝູ່ເທົ່ານັ້ນ</string>
     <string name="chat_policy_anyone">ໃຜກໍໄດ້</string>
-    <string name="chat_new_search_placeholder">ຄົ້ນຫາຄົນ</string>
     <string name="chat_new_no_matches">ບໍ່ມີຄົນທີ່ກົງກັນ</string>
-    <string name="chat_new_no_friends">ຄົ້ນຫາຄົນເພື່ອສົນທະນາ</string>
     <string name="chat_pin">ປັກໝຸດ</string>
     <string name="chat_unpin">ຖອດປັກ</string>
     <string name="chat_settings_general">ທົ່ວໄປ</string>

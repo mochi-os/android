@@ -254,6 +254,10 @@
     <string name="common_pause">Pausar</string>
     <string name="common_opening_file">Abrindo o ficheiro…</string>
     <string name="common_no_app_for_file">Ningunha aplicación pode abrir este ficheiro</string>
+    <string name="common_file_actions_text">Gárdao no teu dispositivo ou compárteo con outra aplicación.</string>
+    <string name="common_file_save_to_device">Gardar no dispositivo</string>
+    <string name="common_file_share">Compartir</string>
+    <string name="common_file_save_failed">Non se puido gardar o ficheiro</string>
     <string name="common_file_open_failed">Non se puido abrir o ficheiro</string>
     <string name="reaction_remove">Quitar</string>
     <string name="common_logout_confirm_message">Seguro que quere pechar a sesión? Terá que iniciar sesión de novo para acceder á súa conta.</string>

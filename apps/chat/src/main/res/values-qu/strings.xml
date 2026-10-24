@@ -6,6 +6,8 @@
     <string name="chat_list_new">Musuq rimanakuy</string>
     <string name="chat_new_title">Musuq rimanakuy</string>
     <string name="chat_new_name">Huñu suti</string>
+    <string name="chat_new_search_placeholder">Runakunata maskay</string>
+    <string name="chat_new_no_friends">Rimanakunapaq runakunata maskay</string>
     <string name="chat_message_placeholder">Willakuy</string>
     <string name="chat_attachment_add">Archivokunata k\'askachiy</string>
     <string name="chat_settings_title">Rimanakuy wakichiykuna</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">Miembrokuna</string>
     <string name="chat_settings_add_member">Miembro yapay</string>
     <string name="chat_settings_add_member_search">Masikunata maskay</string>
+    <string name="chat_settings_add_member_no_friends">Manaraqmi masikunayki kanchu. Masikunallatam rimanakuyman yapakuyta atikun.</string>
+    <string name="chat_settings_add_member_all_added">Llapan masikunaykiqa kay rimanakuypiñam kachkanku.</string>
+    <string name="chat_settings_add_member_no_match">Huk maskana simiwan kutimanta ruway</string>
     <string name="chat_settings_remove_member">Qichuy</string>
     <string name="chat_settings_remove_member_title">Miembrota qichuy</string>
     <string name="chat_settings_leave">Rimanakuyta saqiy</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">Rimanakuy willaykuna</string>
     <string name="chat_list_empty">Manaraqmi rimanakuykuna kanchu</string>
-    <string name="chat_new_existing_chat">Kaq rimanakuyta kichay</string>
+    <string name="chat_list_filter_groups">Huñukuna</string>
+    <string name="chat_list_no_groups">Manam huñu rimanakuykuna kanchu</string>
+    <string name="chat_new_existing_with">Ñam rimanakuyniyki kachkan kaykunawan:</string>
+    <string name="chat_new_open">Kichay</string>
+    <string name="chat_new_remove_person">%1$s-ta qichuy</string>
     <string name="chat_new_start">Rimanakuyta qallariy</string>
     <string name="chat_new_start_group">Huñu rimanakuyta qallariy</string>
     <string name="chat_messages_loading">Willakuykunata cargachkan…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">Ñawpaq willakuykunata cargay</string>
     <string name="chat_attachment_label">Archivo</string>
     <string name="chat_settings_rename">Rimanakuypa sutinta hukchay</string>
-    <string name="chat_settings_add_member_empty">Manaña masikuna yapanapaq kanchu</string>
     <string name="chat_settings_remove_member_message">¿%1$s-ta kay rimanakuymanta qichunkichu?</string>
     <string name="chat_settings_leave_message">¿Kay rimanakuymanta lluqsiyta munankichu? Huk miembrokunaqa manañam willakuykikunata rikunqakuchu.</string>
     <string name="chat_settings_leave_and_delete">Lluqsiy hinaspa kay dispositivollapi wischuy</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">Chayamuq rimanakuykuna</string>
     <string name="chat_policy_friends">Masikunallam</string>
     <string name="chat_policy_anyone">Pipas</string>
-    <string name="chat_new_search_placeholder">Runakunata maskay</string>
     <string name="chat_new_no_matches">Manam tupaq runakunachu</string>
-    <string name="chat_new_no_friends">Rimanakunapaq runakunata maskay</string>
     <string name="chat_pin">Fijay</string>
     <string name="chat_unpin">Fijayta qichuy</string>
     <string name="chat_settings_general">General</string>

@@ -6,6 +6,8 @@
     <string name="chat_list_new">புதிய அரட்டை</string>
     <string name="chat_new_title">புதிய அரட்டை</string>
     <string name="chat_new_name">குழு பெயர்</string>
+    <string name="chat_new_search_placeholder">நபர்களைத் தேடு</string>
+    <string name="chat_new_no_friends">அரட்டையடிக்க நபர்களைத் தேடு</string>
     <string name="chat_message_placeholder">செய்தி</string>
     <string name="chat_attachment_add">கோப்புகளை இணை</string>
     <string name="chat_settings_title">அரட்டை அமைப்புகள்</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">உறுப்பினர்கள்</string>
     <string name="chat_settings_add_member">உறுப்பினர் சேர்</string>
     <string name="chat_settings_add_member_search">நண்பர்களைத் தேடு</string>
+    <string name="chat_settings_add_member_no_friends">உங்களுக்கு இன்னும் நண்பர்கள் இல்லை. அரட்டையில் நண்பர்களை மட்டுமே சேர்க்க முடியும்.</string>
+    <string name="chat_settings_add_member_all_added">உங்கள் நண்பர்கள் அனைவரும் ஏற்கனவே இந்த அரட்டையில் உள்ளனர்.</string>
+    <string name="chat_settings_add_member_no_match">வேறு தேடல் சொல்லை முயற்சிக்கவும்</string>
     <string name="chat_settings_remove_member">அகற்று</string>
     <string name="chat_settings_remove_member_title">உறுப்பினரை அகற்று</string>
     <string name="chat_settings_leave">சாட்டை விட்டு வெளியேறு</string>
@@ -30,7 +35,11 @@
 
     <string name="notification_channel_chat">அரட்டை அறிவிப்புகள்</string>
     <string name="chat_list_empty">இதுவரை அரட்டைகள் இல்லை</string>
-    <string name="chat_new_existing_chat">ஏற்கனவே உள்ள அரட்டையைத் திறக்கவும்</string>
+    <string name="chat_list_filter_groups">குழுக்கள்</string>
+    <string name="chat_list_no_groups">குழு அரட்டைகள் இல்லை</string>
+    <string name="chat_new_existing_with">இவர்களுடன் உங்களுக்கு ஏற்கனவே அரட்டைகள் உள்ளன:</string>
+    <string name="chat_new_open">திற</string>
+    <string name="chat_new_remove_person">%1$s ஐ அகற்று</string>
     <string name="chat_new_start">அரட்டையைத் தொடங்கவும்</string>
     <string name="chat_new_start_group">குழு அரட்டையைத் தொடங்கவும்</string>
     <string name="chat_messages_loading">செய்திகள் ஏற்றப்படுகின்றன…</string>
@@ -38,7 +47,6 @@
     <string name="chat_messages_load_more">பழைய செய்திகளை ஏற்றவும்</string>
     <string name="chat_attachment_label">கோப்பு</string>
     <string name="chat_settings_rename">அரட்டையை மறுபெயரிடவும்</string>
-    <string name="chat_settings_add_member_empty">சேர்க்க நண்பர்கள் இல்லை</string>
     <string name="chat_settings_remove_member_message">%1$s-ஐ இந்த அரட்டையிலிருந்து நீக்கவா?</string>
     <string name="chat_settings_leave_message">இந்த அரட்டையிலிருந்து வெளியேறவா? மற்ற உறுப்பினர்கள் உங்கள் செய்திகளை இனி பார்க்க மாட்டார்கள்.</string>
     <string name="chat_settings_leave_and_delete">வெளியேறி உள்ளூரில் நீக்கவும்</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">உள்வரும் அரட்டைகள்</string>
     <string name="chat_policy_friends">நண்பர்கள் மட்டும்</string>
     <string name="chat_policy_anyone">எவரும்</string>
-    <string name="chat_new_search_placeholder">நபர்களைத் தேடு</string>
     <string name="chat_new_no_matches">பொருந்தும் நபர்கள் இல்லை</string>
-    <string name="chat_new_no_friends">அரட்டையடிக்க நபர்களைத் தேடு</string>
     <string name="chat_pin">பின் செய்</string>
     <string name="chat_unpin">பின் நீக்கு</string>
     <string name="chat_settings_general">பொது</string>

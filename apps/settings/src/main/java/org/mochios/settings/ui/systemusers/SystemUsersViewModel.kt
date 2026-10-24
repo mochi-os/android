@@ -8,6 +8,7 @@ package org.mochios.settings.ui.systemusers
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -111,8 +112,12 @@ class SystemUsersViewModel @Inject constructor(
         }
     }
 
+    private var refreshJob: Job? = null
+
+    /** Load the page the current search, sort and offset ask for, dropping any older load. */
     fun refresh() {
-        viewModelScope.launch {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             val s = _uiState.value
             try {
@@ -128,6 +133,8 @@ class SystemUsersViewModel @Inject constructor(
                     users = data.users,
                     count = data.count,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }

@@ -110,8 +110,10 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.UnopenedFileDialog
 import org.mochios.android.ui.components.UploadFiles
 import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.rememberCopier
@@ -740,6 +742,7 @@ private fun AttachmentsGrid(
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
+    var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 12.dp),
@@ -756,7 +759,9 @@ private fun AttachmentsGrid(
                     if (isImage(attachment.type)) {
                         onOpenImageAt(attachment.id)
                     } else {
-                        previewInViewer(scope, context, baseURL, attachment)
+                        previewInViewer(scope, context, baseURL, attachment) { file ->
+                            unopened = file
+                        }
                     }
                 },
                 onDownload = {
@@ -772,6 +777,9 @@ private fun AttachmentsGrid(
                 onRequestCaption = { onRequestCaption(attachment) },
             )
         }
+    }
+    unopened?.let { file ->
+        UnopenedFileDialog(file = file, onDismiss = { unopened = null })
     }
 }
 
@@ -791,6 +799,7 @@ private fun AttachmentsList(
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
+    var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
     LazyColumn(
         contentPadding = PaddingValues(vertical = 4.dp),
         modifier = Modifier.fillMaxSize(),
@@ -815,7 +824,9 @@ private fun AttachmentsList(
                     if (isImage(attachment.type)) {
                         onOpenImageAt(attachment.id)
                     } else {
-                        previewInViewer(scope, context, baseURL, attachment)
+                        previewInViewer(scope, context, baseURL, attachment) { file ->
+                            unopened = file
+                        }
                     }
                 },
                 onDownload = download,
@@ -824,6 +835,9 @@ private fun AttachmentsList(
             )
             HorizontalDivider()
         }
+    }
+    unopened?.let { file ->
+        UnopenedFileDialog(file = file, onDismiss = { unopened = null })
     }
 }
 
@@ -1124,7 +1138,7 @@ private fun AttachmentPreview(
     val kind = fileKindOf(attachment.type, attachment.name)
     val label = attachment.caption.ifEmpty { attachment.name }
     when (kind) {
-        FileKind.IMAGE -> AsyncImage(
+        FileKind.IMAGE -> MochiImage(
             model = "${baseURL}attachments/${attachment.id}/thumbnail",
             contentDescription = label,
             contentScale = ContentScale.Crop,
@@ -1234,12 +1248,14 @@ private fun startAttachmentDownload(
  * @param context Context the viewer is launched from.
  * @param baseURL The wiki's asset base, which the attachment id hangs off.
  * @param attachment The file to show.
+ * @param onNoApp Called with the cached copy when no app on the device can open it.
  */
 private fun previewInViewer(
     scope: CoroutineScope,
     context: Context,
     baseURL: String,
     attachment: Attachment,
+    onNoApp: (AttachmentOpener.UnopenedFile) -> Unit,
 ) {
     Toast.makeText(
         context,
@@ -1247,20 +1263,24 @@ private fun previewInViewer(
         Toast.LENGTH_SHORT,
     ).show()
     scope.launch {
+        val mochiAttachment = MochiAttachment(
+            id = attachment.id,
+            name = attachment.name,
+            size = attachment.size,
+            type = attachment.type,
+            created = attachment.created,
+            caption = attachment.caption,
+        )
         val result = AttachmentOpener.open(
             context,
             "${baseURL}attachments/${attachment.id}",
-            MochiAttachment(
-                id = attachment.id,
-                name = attachment.name,
-                size = attachment.size,
-                type = attachment.type,
-                created = attachment.created,
-                caption = attachment.caption,
-            ),
+            mochiAttachment,
         )
+        if (result == AttachmentOpener.OpenResult.NO_APP) {
+            onNoApp(AttachmentOpener.unopened(context, mochiAttachment))
+        }
         val message = when (result) {
-            AttachmentOpener.OpenResult.NO_APP -> MochiR.string.common_no_app_for_file
+            AttachmentOpener.OpenResult.NO_APP -> null
             AttachmentOpener.OpenResult.FAILED -> MochiR.string.common_file_open_failed
             AttachmentOpener.OpenResult.UNAVAILABLE -> MochiR.string.common_attachment_unavailable
             AttachmentOpener.OpenResult.OPENED -> null

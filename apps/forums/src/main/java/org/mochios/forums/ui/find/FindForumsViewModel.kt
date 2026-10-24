@@ -9,6 +9,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -154,6 +155,8 @@ class FindForumsViewModel @Inject constructor(
                 subscribed = _uiState.value.subscribed + alreadySubscribed,
                 isSearching = false,
             )
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             _uiState.value = _uiState.value.copy(isSearching = false, error = e.toMochiError())
         }
@@ -174,6 +177,8 @@ class FindForumsViewModel @Inject constructor(
                     peer = r.peer.takeIf { peer -> peer.isNotBlank() },
                 ),
             )
+        } catch (e: CancellationException) {
+            throw e
         } catch (_: Exception) {
             // A URL that resolves to nothing is a miss, not an error banner.
             _uiState.value = _uiState.value.copy(isProbing = false, probeResult = null)

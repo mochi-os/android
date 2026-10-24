@@ -40,7 +40,6 @@ import androidx.compose.material.icons.automirrored.outlined.Logout
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
-import androidx.compose.material.icons.filled.BrokenImage
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Close
@@ -83,7 +82,6 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -117,7 +115,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import coil3.compose.AsyncImage
-import coil3.compose.AsyncImagePainter
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
@@ -152,6 +149,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuDivider
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiDropdownSubmenu
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiSheetHeader
@@ -1144,74 +1142,6 @@ private fun Modifier.noRippleClickable(onClick: () -> Unit): Modifier {
     )
 }
 
-@Composable
-private fun PostImage(
-    url: String,
-    contentDescription: String?,
-    modifier: Modifier = Modifier,
-    alignment: Alignment = Alignment.Center,
-    contentScale: ContentScale = ContentScale.Fit,
-    onClick: (() -> Unit)? = null,
-) {
-    // The caller fixes the container size: posts carry no image dimensions, so
-    // space is reserved before the bitmap arrives. The lightbox tap arms only
-    // once the image has loaded.
-    var state by remember(url) {
-        mutableStateOf<AsyncImagePainter.State>(AsyncImagePainter.State.Empty)
-    }
-    // Bumped by tapping the broken-image glyph: recreating the painter under a
-    // new key is what makes Coil re-attempt the fetch — flaky mobile links
-    // stall image loads that a later tap would recover.
-    var retry by remember(url) { mutableIntStateOf(0) }
-    val loaded = state is AsyncImagePainter.State.Success
-    Box(
-        modifier = modifier.then(
-            if (onClick != null && loaded) Modifier.clickable { onClick() } else Modifier
-        ),
-        contentAlignment = Alignment.Center,
-    ) {
-        if (!loaded) {
-            Box(
-                modifier = Modifier
-                    .matchParentSize()
-                    .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f))
-            )
-        }
-        if (state is AsyncImagePainter.State.Error) {
-            Icon(
-                Icons.Default.BrokenImage,
-                contentDescription = contentDescription,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier
-                    .size(48.dp)
-                    .clickable {
-                        state = AsyncImagePainter.State.Empty
-                        retry++
-                    }
-            )
-        } else {
-            key(retry) {
-                AsyncImage(
-                    model = url,
-                    contentDescription = contentDescription,
-                    contentScale = contentScale,
-                    alignment = alignment,
-                    onState = { state = it },
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
-            if (!loaded) {
-                // A bare tint reads as "nothing is coming"; show that the
-                // fetch is still in flight.
-                CircularProgressIndicator(
-                    modifier = Modifier.size(24.dp),
-                    strokeWidth = 2.dp
-                )
-            }
-        }
-    }
-}
-
 // A post is a "gallery" when its media is the content: no RSS article behind
 // it, and at most a caption of text alongside the images/videos.
 private const val GALLERY_CAPTION_LIMIT = 200
@@ -1461,7 +1391,7 @@ private fun GalleryContent(
 // geometry is final on the first frame (no reflow as bitmaps arrive), the
 // same layout-stability rule the hero image follows. Full-bleed, 2dp gaps.
 @Composable
-private fun GalleryMosaic(
+internal fun GalleryMosaic(
     media: List<Attachment>,
     tileModel: (Attachment) -> Any,
     onTap: (index: Int) -> Unit,
@@ -1579,8 +1509,8 @@ internal fun GalleryTile(
                 )
             }
         } else {
-            PostImage(
-                url = model as String,
+            MochiImage(
+                model = model as String,
                 contentDescription = attachment.caption.ifEmpty { attachment.name },
                 contentScale = contentScale,
                 modifier = Modifier.fillMaxSize(),
@@ -1718,8 +1648,9 @@ private fun PostCard(
                     .heightIn(max = (configuration.screenHeightDp / 2).dp)
                     .aspectRatio(16f / 9f)
             }
-            PostImage(
-                url = heroUrl,
+            MochiImage(
+                contentScale = ContentScale.Fit,
+                model = heroUrl,
                 contentDescription = stringResource(R.string.feeds_image_preview),
                 alignment = Alignment.TopCenter,
                 modifier = heroModifier,
@@ -1884,13 +1815,15 @@ private fun PostCard(
                     // hero. Tapping opens the lightbox (web parity).
                     if (rssImageUrl != null && rssImageUrl != heroUrl && !hidden) {
                         Spacer(modifier = Modifier.height(8.dp))
-                        PostImage(
-                            url = rssImageUrl,
+                        MochiImage(
+                            contentScale = ContentScale.Fit,
+                            model = rssImageUrl,
                             contentDescription = stringResource(R.string.feeds_image_preview),
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .aspectRatio(16f / 9f)
                                 .clip(RoundedCornerShape(8.dp)),
+                            shape = RoundedCornerShape(8.dp),
                             onClick = { lightboxState = LightboxRequest(listOf(rssImageUrl), emptyList(), 0) },
                         )
                     }
@@ -2294,13 +2227,14 @@ private fun CommentPreviewRow(
         if (comment.anchor.isNotEmpty()) {
             // The image this comment is about, small, so the preview says so.
             Spacer(modifier = Modifier.width(6.dp))
-            AsyncImage(
+            MochiImage(
                 model = "/feeds/$commentFeedId/-/attachments/${comment.anchor}/thumbnail",
                 contentDescription = stringResource(MochiR.string.comment_anchor_default),
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .size(16.dp)
-                    .clip(RoundedCornerShape(3.dp))
+                    .clip(RoundedCornerShape(3.dp)),
+                shape = RoundedCornerShape(3.dp),
             )
         }
         Spacer(modifier = Modifier.width(6.dp))

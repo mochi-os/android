@@ -6,6 +6,8 @@
     <string name="chat_list_new">گفتوگۆی نوێ</string>
     <string name="chat_new_title">گفتوگۆی نوێ</string>
     <string name="chat_new_name">ناوی گرووپ</string>
+    <string name="chat_new_search_placeholder">گەڕان بۆ کەسان</string>
+    <string name="chat_new_no_friends">بۆ چات کردن بەدوای کەساندا بگەڕێ</string>
     <string name="chat_message_placeholder">پەیام</string>
     <string name="chat_attachment_add">هاوپێچکردنی پەڕگە</string>
     <string name="chat_settings_title">ڕێکخستنی گفتوگۆ</string>
@@ -14,6 +16,9 @@
     <string name="chat_settings_members">ئەندامەکان</string>
     <string name="chat_settings_add_member">زیادکردنی ئەندام</string>
     <string name="chat_settings_add_member_search">گەڕانی هاوڕێیان</string>
+    <string name="chat_settings_add_member_no_friends">هێشتا هیچ هاوڕێیەکت نییە. تەنها هاوڕێیان دەتوانرێن بۆ گفتوگۆ زیاد بکرێن.</string>
+    <string name="chat_settings_add_member_all_added">هەموو هاوڕێکانت پێشتر لەم گفتوگۆیەدان.</string>
+    <string name="chat_settings_add_member_no_match">وشەیەکی گەڕانی جیاواز هەوڵبدە</string>
     <string name="chat_settings_remove_member">لابردن</string>
     <string name="chat_settings_remove_member_title">لابردنی ئەندام</string>
     <string name="chat_settings_leave">بەجێهێشتنی چات</string>
@@ -27,7 +32,11 @@
 
     <string name="notification_channel_chat">ئاگادارکردنەوەکانی گفتوگۆ</string>
     <string name="chat_list_empty">هێشتا هیچ گفتوگۆیەک نییە</string>
-    <string name="chat_new_existing_chat">کردنەوەی گفتوگۆی هەبوو</string>
+    <string name="chat_list_filter_groups">گرووپەکان</string>
+    <string name="chat_list_no_groups">هیچ گفتوگۆی گرووپی نییە</string>
+    <string name="chat_new_existing_with">پێشتر گفتوگۆت هەیە لەگەڵ:</string>
+    <string name="chat_new_open">کردنەوە</string>
+    <string name="chat_new_remove_person">لابردنی %1$s</string>
     <string name="chat_new_start">دەستپێکردنی گفتوگۆ</string>
     <string name="chat_new_start_group">دەستپێکردنی گفتوگۆی گرووپی</string>
     <string name="chat_messages_loading">بارکردنی نامەکان…</string>
@@ -38,7 +47,6 @@
     <string name="chat_attachment_move_down">گواستنەوە بۆ خوارەوە</string>
     <string name="chat_attachment_label">پەڕگە</string>
     <string name="chat_settings_rename">ناولێنانەوەی گفتوگۆ</string>
-    <string name="chat_settings_add_member_empty">هیچ هاوڕێیەک نییە بۆ زیادکردن</string>
     <string name="chat_settings_remove_member_message">%1$s لەم گفتوگۆیە لاببرێت؟</string>
     <string name="chat_settings_leave_message">ئەم گفتوگۆیە بەجێ بهێڵیت؟ ئەندامانی تر چیتر نامەکانت نابینن.</string>
     <string name="chat_settings_leave_and_delete">بەجێهێشتن و سڕینەوەی ناوخۆیی</string>
@@ -66,9 +74,7 @@
     <string name="chat_policy_title">چاتە هاتووەکان</string>
     <string name="chat_policy_friends">تەنها هاوڕێیان</string>
     <string name="chat_policy_anyone">هەر کەسێک</string>
-    <string name="chat_new_search_placeholder">گەڕان بۆ کەسان</string>
     <string name="chat_new_no_matches">هیچ کەسێکی هاوتا نییە</string>
-    <string name="chat_new_no_friends">بۆ چات کردن بەدوای کەساندا بگەڕێ</string>
     <string name="chat_pin">چەسپاندن</string>
     <string name="chat_unpin">لاسەنجاندن</string>
     <string name="chat_settings_general">گشتی</string>

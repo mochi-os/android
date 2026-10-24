@@ -254,6 +254,10 @@
     <string name="common_pause">ຢຸດຊົ່ວຄາວ</string>
     <string name="common_opening_file">ກຳລັງເປີດໄຟລ໌…</string>
     <string name="common_no_app_for_file">ບໍ່ມີແອັບໃດສາມາດເປີດໄຟລ໌ນີ້ໄດ້</string>
+    <string name="common_file_actions_text">ບັນທຶກມັນໄວ້ໃນອຸປະກອນຂອງທ່ານ ຫຼື ແບ່ງປັນກັບແອັບອື່ນ.</string>
+    <string name="common_file_save_to_device">ບັນທຶກໃສ່ອຸປະກອນ</string>
+    <string name="common_file_share">ແບ່ງປັນ</string>
+    <string name="common_file_save_failed">ບໍ່ສາມາດບັນທຶກໄຟລ໌ໄດ້</string>
     <string name="common_file_open_failed">ບໍ່ສາມາດເປີດໄຟລ໌ໄດ້</string>
     <string name="reaction_remove">ລ້າງ</string>
     <string name="common_logout_confirm_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການອອກຈາກລະບົບ? ທ່ານຈະຕ້ອງເຂົ້າສູ່ລະບົບອີກຄັ້ງເພື່ອເຂົ້າເຖິງບັນຊີຂອງທ່ານ.</string>

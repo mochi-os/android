@@ -254,6 +254,10 @@
     <string name="common_pause">Pausieren</string>
     <string name="common_opening_file">Datei wird geöffnet…</string>
     <string name="common_no_app_for_file">Keine App kann diese Datei öffnen</string>
+    <string name="common_file_actions_text">Speichern Sie sie auf Ihrem Gerät oder teilen Sie sie mit einer anderen App.</string>
+    <string name="common_file_save_to_device">Auf Gerät speichern</string>
+    <string name="common_file_share">Teilen</string>
+    <string name="common_file_save_failed">Die Datei konnte nicht gespeichert werden</string>
     <string name="common_file_open_failed">Datei konnte nicht geöffnet werden</string>
     <string name="reaction_remove">Entfernen</string>
     <string name="common_logout_confirm_message">Möchten Sie sich wirklich abmelden? Sie müssen sich erneut anmelden, um auf Ihr Konto zuzugreifen.</string>

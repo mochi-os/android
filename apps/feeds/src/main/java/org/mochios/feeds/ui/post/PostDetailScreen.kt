@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -80,7 +81,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import coil3.compose.AsyncImage
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -111,6 +111,7 @@ import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.files.rememberFileLabel
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.util.shareLink
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
@@ -811,14 +812,16 @@ private fun PostContent(
             // tall portraits alike.
             post.data?.rss?.image?.takeIf { it.isNotEmpty() }?.let { imageUrl ->
                 Spacer(modifier = Modifier.height(12.dp))
-                AsyncImage(
+                MochiImage(
                     model = imageUrl,
                     contentDescription = stringResource(R.string.feeds_image_preview),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(8.dp))
-                        .let { mod -> if (onBodyClick != null) mod.clickable(onClick = onBodyClick) else mod },
-                    contentScale = ContentScale.Fit
+                        .heightIn(min = 160.dp)
+                        .clip(RoundedCornerShape(8.dp)),
+                    contentScale = ContentScale.Fit,
+                    shape = RoundedCornerShape(8.dp),
+                    onClick = onBodyClick,
                 )
             }
         }
