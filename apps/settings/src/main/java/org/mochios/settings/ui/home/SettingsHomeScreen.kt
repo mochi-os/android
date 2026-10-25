@@ -27,6 +27,9 @@ import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.PrivacyTip
 import androidx.compose.material.icons.filled.AlternateEmail
+import androidx.compose.material.icons.filled.Block
+import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.filled.Hub
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.SettingsApplications
@@ -82,6 +85,9 @@ fun SettingsHomeScreen(
     onOpenSystemDocuments: () -> Unit,
     onOpenNetworks: () -> Unit,
     onOpenSystemHandles: () -> Unit,
+    onOpenSystemReports: () -> Unit,
+    onOpenSystemBlocks: () -> Unit,
+    onOpenSystemFederation: () -> Unit,
 ) {
     var showAbout by remember { mutableStateOf(false) }
     val context = LocalContext.current
@@ -271,6 +277,33 @@ fun SettingsHomeScreen(
                         modifier = Modifier.clickable(onClick = onOpenSystemHandles),
                         headlineContent = { Text(stringResource(R.string.handles_title)) },
                         leadingContent = { Icon(Icons.Default.AlternateEmail, contentDescription = null) },
+                        colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                    )
+                    HorizontalDivider()
+                }
+                item {
+                    ListItem(
+                        modifier = Modifier.clickable(onClick = onOpenSystemReports),
+                        headlineContent = { Text(stringResource(R.string.reports_title)) },
+                        leadingContent = { Icon(Icons.Default.Flag, contentDescription = null) },
+                        colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                    )
+                    HorizontalDivider()
+                }
+                item {
+                    ListItem(
+                        modifier = Modifier.clickable(onClick = onOpenSystemBlocks),
+                        headlineContent = { Text(stringResource(R.string.blocks_title)) },
+                        leadingContent = { Icon(Icons.Default.Block, contentDescription = null) },
+                        colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                    )
+                    HorizontalDivider()
+                }
+                item {
+                    ListItem(
+                        modifier = Modifier.clickable(onClick = onOpenSystemFederation),
+                        headlineContent = { Text(stringResource(R.string.federation_title)) },
+                        leadingContent = { Icon(Icons.Default.Hub, contentDescription = null) },
                         colors = ListItemDefaults.colors(containerColor = Color.Transparent),
                     )
                     HorizontalDivider()

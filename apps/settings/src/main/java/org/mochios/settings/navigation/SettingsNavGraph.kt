@@ -19,6 +19,9 @@ import org.mochios.settings.ui.display.DisplayScreen
 import org.mochios.settings.ui.document.DocumentScreen
 import org.mochios.settings.ui.domains.DomainsScreen
 import org.mochios.settings.ui.handles.SystemHandlesScreen
+import org.mochios.settings.ui.moderation.SystemBlocksScreen
+import org.mochios.settings.ui.moderation.SystemFederationScreen
+import org.mochios.settings.ui.moderation.SystemReportsScreen
 import org.mochios.settings.ui.home.SettingsHomeScreen
 import org.mochios.settings.ui.interests.InterestsScreen
 import org.mochios.settings.ui.login.LoginScreen
@@ -60,6 +63,9 @@ object SettingsApp {
     const val SYSTEM_DOCUMENTS = "settings/system/documents"
     const val NETWORKS = "settings/networks"
     const val SYSTEM_HANDLES = "settings/system/handles"
+    const val SYSTEM_REPORTS = "settings/system/reports"
+    const val SYSTEM_BLOCKS = "settings/system/blocks"
+    const val SYSTEM_FEDERATION = "settings/system/federation"
 
     fun document(kind: String) = "settings/document/$kind"
 
@@ -103,6 +109,9 @@ fun NavGraphBuilder.settingsNavGraph(
             onOpenSystemDocuments = { navController.navigate(SettingsApp.SYSTEM_DOCUMENTS) },
             onOpenNetworks = { navController.navigate(SettingsApp.NETWORKS) },
             onOpenSystemHandles = { navController.navigate(SettingsApp.SYSTEM_HANDLES) },
+            onOpenSystemReports = { navController.navigate(SettingsApp.SYSTEM_REPORTS) },
+            onOpenSystemBlocks = { navController.navigate(SettingsApp.SYSTEM_BLOCKS) },
+            onOpenSystemFederation = { navController.navigate(SettingsApp.SYSTEM_FEDERATION) },
         )
     }
     composable(SettingsApp.ACCOUNT) {
@@ -187,6 +196,15 @@ fun NavGraphBuilder.settingsNavGraph(
     }
     composable(SettingsApp.SYSTEM_HANDLES) {
         SystemHandlesScreen(onBack = { navController.popBackStack() })
+    }
+    composable(SettingsApp.SYSTEM_REPORTS) {
+        SystemReportsScreen(onBack = { navController.popBackStack() })
+    }
+    composable(SettingsApp.SYSTEM_BLOCKS) {
+        SystemBlocksScreen(onBack = { navController.popBackStack() })
+    }
+    composable(SettingsApp.SYSTEM_FEDERATION) {
+        SystemFederationScreen(onBack = { navController.popBackStack() })
     }
 }
 

@@ -193,6 +193,9 @@ class OwnerScreensTest {
             onOpenSystemDocuments = {},
             onOpenNetworks = { opened += "networks" },
             onOpenSystemHandles = { opened += "handles" },
+            onOpenSystemReports = { opened += "reports" },
+            onOpenSystemBlocks = { opened += "blocks" },
+            onOpenSystemFederation = { opened += "federation" },
         )
     }
 
@@ -202,7 +205,10 @@ class OwnerScreensTest {
         rule.setContent { home(isAdmin = true, hasNetworks = true, opened = opened) }
         rule.onNodeWithText(text(R.string.networks_title)).performClick()
         rule.onNodeWithText(text(R.string.handles_title)).performScrollTo().performClick()
-        assertEquals(listOf("networks", "handles"), opened)
+        rule.onNodeWithText(text(R.string.reports_title)).performScrollTo().performClick()
+        rule.onNodeWithText(text(R.string.blocks_title)).performScrollTo().performClick()
+        rule.onNodeWithText(text(R.string.federation_title)).performScrollTo().performClick()
+        assertEquals(listOf("networks", "handles", "reports", "blocks", "federation"), opened)
     }
 
     @Test
@@ -210,6 +216,9 @@ class OwnerScreensTest {
         rule.setContent { home(isAdmin = true, hasNetworks = false, opened = mutableListOf()) }
         rule.onNodeWithText(text(R.string.networks_title)).assertDoesNotExist()
         rule.onNodeWithText(text(R.string.handles_title)).assertDoesNotExist()
+        rule.onNodeWithText(text(R.string.reports_title)).assertDoesNotExist()
+        rule.onNodeWithText(text(R.string.blocks_title)).assertDoesNotExist()
+        rule.onNodeWithText(text(R.string.federation_title)).assertDoesNotExist()
     }
 
     @Test
@@ -217,5 +226,6 @@ class OwnerScreensTest {
         rule.setContent { home(isAdmin = false, hasNetworks = true, opened = mutableListOf()) }
         rule.onNodeWithText(text(R.string.networks_title)).assertExists()
         rule.onNodeWithText(text(R.string.handles_title)).assertDoesNotExist()
+        rule.onNodeWithText(text(R.string.reports_title)).assertDoesNotExist()
     }
 }
