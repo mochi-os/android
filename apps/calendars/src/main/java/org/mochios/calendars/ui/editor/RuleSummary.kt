@@ -120,11 +120,12 @@ private fun monthdays(value: String, resources: Resources, format: Format): Stri
 }
 
 /**
- * A month's name as it runs in a sentence, the standalone form the web's
- * month-and-year writing uses; a platform with no standalone names for the
- * language answers a number, and then the plain form is used.
+ * A month's name as it runs in a sentence or heads a month's first day in
+ * the month grid, the standalone form the web's month-and-year writing
+ * uses; a platform with no standalone names for the language answers a
+ * number, and then the plain form is used.
  */
-private fun monthName(month: Month, locale: Locale): String {
+internal fun monthName(month: Month, locale: Locale): String {
     val standalone = month.getDisplayName(TextStyle.FULL_STANDALONE, locale)
     return if (standalone.any { it.isLetter() }) standalone else month.getDisplayName(TextStyle.FULL, locale)
 }

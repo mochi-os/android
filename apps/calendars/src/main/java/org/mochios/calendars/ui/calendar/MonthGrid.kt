@@ -83,6 +83,7 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
@@ -99,6 +100,7 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.util.NaturalCompare
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
+import org.mochios.calendars.ui.editor.monthName
 import java.time.LocalDate
 import java.time.ZoneOffset
 import java.time.format.TextStyle
@@ -460,45 +462,92 @@ private fun Cell(
     ) {
         // Today's number sits inside a band in the primary colour across the
         // top of its cell; every other day's number sits on the cell itself.
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .then(if (current) Modifier.background(MaterialTheme.colorScheme.primary) else Modifier)
-                .padding(horizontal = 2.dp),
-        ) {
+        val header = Modifier
+            .fillMaxWidth()
+            .then(if (current) Modifier.background(MaterialTheme.colorScheme.primary) else Modifier)
+            .padding(horizontal = 2.dp)
+        val ink = when {
+            current -> MaterialTheme.colorScheme.onPrimary
+            outside -> MaterialTheme.colorScheme.onSurfaceVariant
+            else -> MaterialTheme.colorScheme.onSurface
+        }
+        val numeral = MaterialTheme.typography.labelMedium.copy(fontWeight = if (current) FontWeight.Bold else FontWeight.Normal)
+        val small = MaterialTheme.typography.labelSmall
+
+        @Composable
+        fun Number() {
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
                     .clickable(onClick = onDay)
-                    .padding(horizontal = 5.dp, vertical = 1.dp),
+                    .padding(horizontal = NUMBER, vertical = 1.dp),
             ) {
-                Text(
-                    text = day.dayOfMonth.toString(),
-                    style = MaterialTheme.typography.labelMedium,
-                    fontWeight = if (current) FontWeight.Bold else FontWeight.Normal,
-                    color = when {
-                        current -> MaterialTheme.colorScheme.onPrimary
-                        outside -> MaterialTheme.colorScheme.onSurfaceVariant
-                        else -> MaterialTheme.colorScheme.onSurface
-                    },
-                )
+                Text(text = day.dayOfMonth.toString(), style = numeral, color = ink)
             }
-            // The row's week number sits in its first day's corner, opposite
-            // the date, taking no width of its own.
-            if (week != null) {
-                Text(
-                    text = week.toString(),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = if (current) {
-                        MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.8f)
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
-                    modifier = Modifier
-                        .align(Alignment.CenterEnd)
-                        .padding(end = 3.dp)
-                        .testTag("week-number"),
-                )
+        }
+
+        // The row's week number sits in its first day's corner, opposite
+        // the date.
+        @Composable
+        fun Week(number: Int, modifier: Modifier) {
+            Text(
+                text = number.toString(),
+                style = small,
+                color = if (current) {
+                    MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.8f)
+                } else {
+                    MaterialTheme.colorScheme.onSurfaceVariant
+                },
+                modifier = modifier
+                    .padding(end = WEEK)
+                    .testTag("week-number"),
+            )
+        }
+
+        if (day.dayOfMonth == 1) {
+            // A month's first day names the month before its number.
+            BoxWithConstraints(modifier = header) {
+                val locale = LocalConfiguration.current.locales[0]
+                val long = monthName(day.month, locale)
+                val short = shortMonth(day.month, locale)
+                val measurer = rememberTextMeasurer()
+                val density = LocalDensity.current
+                val room = constraints.maxWidth
+                val chosen = remember(measurer, room, long, short, week, numeral, small) {
+                    val px = { dp: Dp -> with(density) { dp.roundToPx() } }
+                    heading(
+                        room = room,
+                        long = long,
+                        short = short,
+                        number = measurer.measure(day.dayOfMonth.toString(), numeral).size.width + px(NUMBER * 2),
+                        week = week?.let { measurer.measure(it.toString(), small).size.width + px(WEEK) },
+                        width = { name -> measurer.measure(name, small).size.width + px(NAME) },
+                    )
+                }
+                Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                    Row(modifier = Modifier.weight(1f), verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            text = chosen.name,
+                            style = small,
+                            color = ink,
+                            maxLines = 1,
+                            softWrap = false,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier
+                                .weight(1f, fill = false)
+                                .padding(start = NAME)
+                                .testTag("month-name"),
+                        )
+                        Number()
+                    }
+                    if (week != null && chosen.week) Week(week, Modifier)
+                }
+            }
+        } else {
+            // The week number takes no width of its own.
+            Box(modifier = header) {
+                Number()
+                if (week != null) Week(week, Modifier.align(Alignment.CenterEnd))
             }
         }
         // The bars and the timed entries stack from the top of the cell in the
@@ -574,6 +623,33 @@ private fun Cell(
             }
         }
     }
+}
+
+/** The space each side of a day's number, which its tap target takes. */
+private val NUMBER = 5.dp
+
+/** The space between a week number and its cell's far edge. */
+private val WEEK = 3.dp
+
+/** The space between a month's name and its cell's near edge. */
+private val NAME = 3.dp
+
+/** How a month's first day heads its cell: the month's [name], and whether the row's week number stays beside it. */
+data class Heading(val name: String, val week: Boolean)
+
+/**
+ * How a month's first day writes its month before its number in [room]
+ * pixels: in full where that fits and abbreviated where it does not. On a
+ * row's first day the [week] number takes its room too, and gives way where
+ * neither form fits beside it; only where even the abbreviation alone is too
+ * wide is it cut short. [number] is the day number's width and [week] the
+ * week number's, null on a row's other days, and [width] measures a name.
+ */
+fun heading(room: Int, long: String, short: String, number: Int, week: Int?, width: (String) -> Int): Heading {
+    val names = listOf(long, short).distinct()
+    val bare = names.map { Heading(it, week = false) }
+    val ways = if (week == null) bare else names.map { Heading(it, week = true) } + bare
+    return ways.firstOrNull { way -> width(way.name) + number + (if (way.week) week ?: 0 else 0) <= room } ?: ways.last()
 }
 
 /**

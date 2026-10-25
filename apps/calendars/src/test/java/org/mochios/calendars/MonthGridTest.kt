@@ -44,7 +44,9 @@ import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.storage.VisibilityStore
 import org.mochios.calendars.ui.calendar.CalendarUiState
 import org.mochios.calendars.ui.calendar.CalendarViewModel
+import org.mochios.calendars.ui.calendar.Heading
 import org.mochios.calendars.ui.calendar.MonthGrid
+import org.mochios.calendars.ui.calendar.heading
 import org.mochios.calendars.ui.calendar.number
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.robolectric.RobolectricTestRunner
@@ -236,6 +238,88 @@ class MonthGridTest {
         assertEquals(41, number(LocalDate.of(2026, 10, 4)))
         assertEquals(41, number(LocalDate.of(2026, 10, 3)))
         assertEquals(41, number(LocalDate.of(2026, 10, 5)))
+    }
+
+    // ---- month names ----
+
+    /** The text of every node tagged [tag], in the order drawn. */
+    private fun texts(tag: String): List<String> =
+        rule.onAllNodesWithTag(tag, useUnmergedTree = true).fetchSemanticsNodes().map {
+            it.config[SemanticsProperties.Text].joinToString { text -> text.text }
+        }
+
+    @Test
+    fun `a month's first day names its month before its number, and no other day does`() {
+        show(emptyList())
+        val cells = listOf("inside", "outside").flatMap { tag ->
+            rule.onAllNodesWithTag(tag, useUnmergedTree = true).fetchSemanticsNodes().map { it.boundsInRoot }
+        }
+        val ones = rule.onAllNodesWithText("1", useUnmergedTree = true).fetchSemanticsNodes().map { it.boundsInRoot }
+        val names = rule.onAllNodesWithTag("month-name", useUnmergedTree = true).fetchSemanticsNodes().map { it.boundsInRoot }
+        // The 1st of October, a Thursday, and of November, a Sunday.
+        assertEquals(2, names.size)
+        for (name in names) {
+            val cell = cells.single { it.contains(name.center) }
+            val one = ones.single { cell.contains(it.center) }
+            assertTrue(name.left - cell.left < px(8.dp))
+            assertTrue(name.right <= one.left)
+            assertEquals(one.center.y, name.center.y, px(2.dp))
+        }
+    }
+
+    @Test
+    @Config(qualifiers = "w1200dp-h800dp")
+    fun `a month's name is written in full where its cell has room`() {
+        show(emptyList())
+        assertEquals(listOf("October", "November"), texts("month-name"))
+    }
+
+    @Test
+    fun `a month's name is abbreviated in a phone's narrow cell`() {
+        show(emptyList())
+        assertEquals(listOf("Oct", "Nov"), texts("month-name"))
+    }
+
+    @Test
+    @Config(qualifiers = "w1200dp-h800dp")
+    fun `a month starting on a row's first day keeps the week number beside its name where there is room`() {
+        // Monday 1 September 2025.
+        shown.value = LocalDate.of(2025, 9, 1)
+        show(emptyList())
+        assertEquals(listOf("September", "October"), texts("month-name"))
+        assertEquals(listOf("36", "37", "38", "39", "40", "41"), texts("week-number"))
+    }
+
+    @Test
+    @Config(qualifiers = "w360dp-h800dp")
+    fun `a month starting on a row's first day takes the week number's place in a phone's narrow cell`() {
+        shown.value = LocalDate.of(2025, 9, 1)
+        show(emptyList())
+        assertEquals(listOf("Sep", "Oct"), texts("month-name"))
+        assertEquals(listOf("37", "38", "39", "40", "41"), texts("week-number"))
+    }
+
+    /** A name six pixels a character wide; "September" is 54 and "Sep" 18. */
+    private fun choose(room: Int, week: Int? = 15, long: String = "September", short: String = "Sep") =
+        heading(room, long, short, number = 16, week = week, width = { it.length * 6 })
+
+    @Test
+    fun `a month's first day takes the fullest way to write its month that fits`() {
+        assertEquals(Heading("September", week = true), choose(85))
+        assertEquals(Heading("Sep", week = true), choose(84))
+        // With the week number gone, the full name if that then fits.
+        assertEquals(Heading("June", week = false), choose(42, long = "June", short = "Jun"))
+        assertEquals(Heading("Sep", week = false), choose(48))
+        assertEquals(Heading("September", week = false), choose(70, week = null))
+        assertEquals(Heading("Sep", week = false), choose(69, week = null))
+    }
+
+    @Test
+    fun `a month's name is cut short only when even its abbreviation alone does not fit`() {
+        assertEquals(Heading("Sep", week = false), choose(10))
+        assertEquals(Heading("Sep", week = false), choose(10, week = null))
+        // A language whose abbreviation is the name itself has one way to write it.
+        assertEquals(Heading("مايو", week = false), choose(10, long = "مايو", short = "مايو"))
     }
 
     // ---- how an entry reads ----

@@ -273,11 +273,12 @@ private fun weekday(weekStart: Int, column: Int): DayOfWeek {
 }
 
 /**
- * [month]'s short name standing on its own, as a chip shows it: Catalan
- * "oct.", not the "d’oct." of a date. A platform with no standalone names
- * for the language answers a number, and then the plain form is used.
+ * [month]'s short name standing on its own, as a chip or a month's first
+ * day in the month grid shows it: Catalan "oct.", not the "d’oct." of a
+ * date. A platform with no standalone names for the language answers a
+ * number, and then the plain form is used.
  */
-private fun shortMonth(month: Month, locale: Locale): String {
+internal fun shortMonth(month: Month, locale: Locale): String {
     val standalone = month.getDisplayName(TextStyle.SHORT_STANDALONE, locale)
     return if (standalone.any { letter -> letter.isLetter() }) {
         standalone
