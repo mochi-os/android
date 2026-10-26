@@ -101,7 +101,6 @@ fun ContactsScreen(
     onOpenNotifications: () -> Unit,
     onMessage: (String) -> Unit = {},
     onAddContact: () -> Unit = {},
-    onConnectDevice: () -> Unit = {},
     initialAction: String? = null,
     viewModel: ContactsViewModel = hiltViewModel(),
 ) {
@@ -176,18 +175,18 @@ fun ContactsScreen(
                         }
                         // The book's own actions belong to the screen showing
                         // it: the drawer's rows carry no menu of their own.
-                        Box {
-                            MochiIconButton(onClick = { showMenu = true }) {
-                                Icon(
-                                    Icons.Default.MoreVert,
-                                    contentDescription = stringResource(MochiR.string.common_more_options),
-                                )
-                            }
-                            MochiDropdownMenu(
-                                expanded = showMenu,
-                                onDismissRequest = { showMenu = false },
-                            ) {
-                                if (book != null) {
+                        if (book != null) {
+                            Box {
+                                MochiIconButton(onClick = { showMenu = true }) {
+                                    Icon(
+                                        Icons.Default.MoreVert,
+                                        contentDescription = stringResource(MochiR.string.common_more_options),
+                                    )
+                                }
+                                MochiDropdownMenu(
+                                    expanded = showMenu,
+                                    onDismissRequest = { showMenu = false },
+                                ) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.people_books_rename)) },
                                         onClick = {
@@ -205,13 +204,6 @@ fun ContactsScreen(
                                         )
                                     }
                                 }
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(R.string.people_device_title)) },
-                                    onClick = {
-                                        showMenu = false
-                                        onConnectDevice()
-                                    },
-                                )
                             }
                         }
                     },

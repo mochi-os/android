@@ -8,6 +8,7 @@ package org.mochios.people.ui.components
 import androidx.activity.compose.LocalActivity
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.Smartphone
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.DrawerValue
 import androidx.compose.runtime.Composable
@@ -37,18 +38,20 @@ import org.mochios.people.ui.sync.ContactsSyncRows
  * @property onOpenAllContacts opens every contact.
  * @property onSwitchSection opens Invitations, Groups or Profile.
  * @property onCreateBook opens the new address book screen.
+ * @property onConnectDevice opens the connected devices screen.
  */
 data class PeopleDrawerNavigation(
     val onOpenBook: (id: String) -> Unit,
     val onOpenAllContacts: () -> Unit,
     val onSwitchSection: (PeopleSidebarSection) -> Unit,
     val onCreateBook: () -> Unit,
+    val onConnectDevice: () -> Unit,
 )
 
 /**
  * The People app's drawer, the same on every screen: All contacts, the address
- * books, Invitations, Groups and Profile, then Create address book, Sync to
- * this phone. [selectedId] is the row of the screen
+ * books, Invitations, Groups and Profile, then Create address book, Connected
+ * devices and Sync to this phone. [selectedId] is the row of the screen
  * showing; tapping it only closes the drawer. The books are marked stale when
  * the app leaves the foreground and fetched again the next time the drawer
  * opens.
@@ -101,6 +104,14 @@ fun PeopleDrawer(
                 onClick = {
                     scope.launch { drawerState.close() }
                     navigation.onCreateBook()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.people_device_title),
+                icon = Icons.Outlined.Smartphone,
+                onClick = {
+                    scope.launch { drawerState.close() }
+                    navigation.onConnectDevice()
                 },
             )
             ContactsSyncRows()
