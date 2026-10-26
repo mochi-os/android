@@ -475,6 +475,7 @@ private fun ContactsContent(
                     items(contacts, key = { it.id }) { contact ->
                         ContactRow(
                             contact = contact,
+                            invited = contact.person in state.sent,
                             onTap = { onOpenContact(contact) },
                             onMessage = { onMessage(contact) },
                             onInvite = { onInvite(contact) },
@@ -511,6 +512,7 @@ internal fun ContactRow(
     onInvite: () -> Unit,
     onUnfriend: () -> Unit,
     onDelete: () -> Unit,
+    invited: Boolean = false,
 ) {
     var menuOpen by remember { mutableStateOf(false) }
     val mochi = contact.person.isNotBlank()
@@ -543,7 +545,7 @@ internal fun ContactRow(
                         expanded = menuOpen,
                         onDismissRequest = { menuOpen = false },
                     ) {
-                        if (mochi && !contact.friend) {
+                        if (mochi && !contact.friend && !invited) {
                             MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.people_contacts_invite)) },
                                 leadingIcon = {
