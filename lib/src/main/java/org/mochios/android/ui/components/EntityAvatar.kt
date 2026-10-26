@@ -146,7 +146,7 @@ private fun initialsOf(name: String): String {
     val parts = trimmed.split(Regex("\\s+")).filter { it.isNotEmpty() }
     return when {
         parts.size >= 2 -> "${parts[0].first()}${parts[1].first()}".uppercase()
-        else -> parts[0].take(2).uppercase()
+        else -> String(Character.toChars(parts[0].codePointAt(0))).uppercase()
     }
 }
 

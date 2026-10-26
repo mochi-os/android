@@ -522,6 +522,7 @@ internal fun ContactRow(
         seed = contact.person.ifBlank { contact.id },
         icon = Icons.Outlined.Person,
         avatarUrl = if (mochi) "/people/${contact.person}/-/avatar" else null,
+        initials = true,
         subtitle = contact.directory.takeIf { it.isNotBlank() && it != contact.name },
         onClick = onTap,
         trailing = {

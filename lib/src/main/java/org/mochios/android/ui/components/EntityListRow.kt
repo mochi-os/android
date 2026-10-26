@@ -37,6 +37,7 @@ import org.mochios.android.ui.theme.LocalEntityRadius
  * Canonical Mochi list row for entity collections (chats, feeds, forums,
  * projects). The leading slot is a colour-seeded circle holding the app's
  * [icon], so a row shows a stable identity colour without per-entity art.
+ * With [initials], a row without [avatarUrl] shows the name's initials instead.
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -50,6 +51,7 @@ fun EntityListRow(
     trailing: (@Composable () -> Unit)? = null,
     onLongClick: (() -> Unit)? = null,
     avatarUrl: String? = null,
+    initials: Boolean = false,
 ) {
     val clickable = if (onLongClick != null) {
         Modifier.combinedClickable(onClick = onClick, onLongClick = onLongClick)
@@ -86,7 +88,7 @@ fun EntityListRow(
                 }
             },
             leadingContent = {
-                if (!avatarUrl.isNullOrBlank()) {
+                if (!avatarUrl.isNullOrBlank() || initials) {
                     EntityAvatar(name = name, src = avatarUrl, seed = seed, size = 40.dp)
                 } else {
                     EntityIconCircle(seed = seed, icon = icon)
