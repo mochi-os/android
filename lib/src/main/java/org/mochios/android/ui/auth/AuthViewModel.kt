@@ -48,8 +48,15 @@ data class AuthUiState(
     val needsIdentity: Boolean = false,
     val serverValidated: Boolean = false,
     val methods: MethodsResponse? = null,
-    val oauthLaunchUrl: String? = null
-)
+    val oauthLaunchUrl: String? = null,
+    /** The method button whose action [isLoading] tracks: `email`, `passkey` or an OAuth
+     *  provider. Null when it tracks the screen's primary button. */
+    val busyMethod: String? = null
+) {
+    /** Whether the primary button shows its spinner, rather than a method button. */
+    val primaryLoading: Boolean
+        get() = isLoading && busyMethod == null
+}
 
 @HiltViewModel
 class AuthViewModel @Inject constructor(
@@ -60,6 +67,8 @@ class AuthViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(AuthUiState())
     val uiState: StateFlow<AuthUiState> = _uiState.asStateFlow()
+
+    private var oauthProvider: String? = null
 
     init {
         viewModelScope.launch {
@@ -146,8 +155,16 @@ class AuthViewModel @Inject constructor(
             identityPrivacy = "public",
             recoveryCode = "",
             needsIdentity = false,
+            isLoading = false,
+            busyMethod = null,
             error = null
         )
+    }
+
+    /** Stop the spinner a finished sign-in left running, once the app has stopped
+     *  starting up without reaching its content. */
+    fun stopLoading() {
+        _uiState.value = _uiState.value.copy(isLoading = false, busyMethod = null)
     }
 
     /** Return from the per-account method step to email entry, keeping the
@@ -198,7 +215,7 @@ class AuthViewModel @Inject constructor(
         }
 
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, busyMethod = null, error = null)
             try {
                 sessionManager.setServerUrl(url)
                 val methods = authRepository.getAvailableMethods()
@@ -226,7 +243,7 @@ class AuthViewModel @Inject constructor(
         }
 
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, busyMethod = null, error = null)
             try {
                 val result = authRepository.beginLogin(email)
                 _uiState.value = _uiState.value.copy(
@@ -250,7 +267,11 @@ class AuthViewModel @Inject constructor(
 
     fun requestEmailCode() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(
+                isLoading = true,
+                busyMethod = "email",
+                error = null
+            )
             try {
                 authRepository.requestCode(_uiState.value.email.trim())
                 _uiState.value = _uiState.value.copy(
@@ -271,7 +292,7 @@ class AuthViewModel @Inject constructor(
         if (code.isBlank()) return
 
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, busyMethod = null, error = null)
             try {
                 handleAuthResult(authRepository.verifyCode(code))
             } catch (e: Exception) {
@@ -288,7 +309,7 @@ class AuthViewModel @Inject constructor(
         if (code.isBlank()) return
 
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, busyMethod = null, error = null)
             try {
                 handleAuthResult(
                     authRepository.verifyTotp(_uiState.value.email.trim(), code)
@@ -308,7 +329,7 @@ class AuthViewModel @Inject constructor(
         val totpCode = _uiState.value.mfaTotpCode.trim().ifBlank { null }
 
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, busyMethod = null, error = null)
             try {
                 handleAuthResult(authRepository.completeMfa(partial, emailCode, totpCode))
             } catch (e: Exception) {
@@ -322,7 +343,11 @@ class AuthViewModel @Inject constructor(
 
     fun beginPasskeyAuth() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(
+                isLoading = true,
+                busyMethod = "passkey",
+                error = null
+            )
             try {
                 val challenge = authRepository.beginPasskey()
                 val credential = passkeyManager.authenticate(challenge.options)
@@ -351,7 +376,7 @@ class AuthViewModel @Inject constructor(
         if (code.isBlank()) return
 
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, busyMethod = null, error = null)
             try {
                 handleAuthResult(
                     authRepository.verifyRecoveryCode(_uiState.value.email.trim(), code)
@@ -376,13 +401,10 @@ class AuthViewModel @Inject constructor(
 
         val privacy = _uiState.value.identityPrivacy
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(isLoading = true, busyMethod = null, error = null)
             try {
                 authRepository.createIdentity(name, privacy)
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    authComplete = true
-                )
+                _uiState.value = _uiState.value.copy(authComplete = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -393,8 +415,13 @@ class AuthViewModel @Inject constructor(
     }
 
     fun startOAuth(provider: String, scheme: String) {
+        oauthProvider = provider
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(
+                isLoading = true,
+                busyMethod = provider,
+                error = null
+            )
             try {
                 val verifier = OAuthPkce.generateVerifier()
                 val challenge = OAuthPkce.challengeFor(verifier)
@@ -431,7 +458,11 @@ class AuthViewModel @Inject constructor(
 
     private fun completeOAuth(code: String) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(
+                isLoading = true,
+                busyMethod = oauthProvider,
+                error = null
+            )
             try {
                 val verifier = sessionManager.consumeOAuthVerifier()
                 if (verifier == null) {
@@ -454,10 +485,7 @@ class AuthViewModel @Inject constructor(
     private fun handleAuthResult(result: AuthResult) {
         when (result) {
             is AuthResult.Success -> {
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    authComplete = true
-                )
+                _uiState.value = _uiState.value.copy(authComplete = true)
             }
             is AuthResult.NeedsIdentity -> {
                 _uiState.value = _uiState.value.copy(

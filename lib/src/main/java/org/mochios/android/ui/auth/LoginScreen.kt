@@ -241,7 +241,7 @@ private fun InitialMethods(
         Spacer(modifier = Modifier.height(16.dp))
         PrimaryButton(
             text = stringResource(R.string.auth_next),
-            isLoading = uiState.isLoading,
+            isLoading = uiState.primaryLoading,
             enabled = uiState.email.isNotBlank(),
             onClick = onBeginLogin
         )
@@ -259,6 +259,7 @@ private fun InitialMethods(
                 text = stringResource(R.string.auth_passkey),
                 iconRes = R.drawable.ic_passkey,
                 enabled = !uiState.isLoading,
+                isLoading = uiState.isLoading && uiState.busyMethod == "passkey",
                 onClick = onBeginPasskey
             )
             Spacer(modifier = Modifier.height(8.dp))
@@ -274,6 +275,7 @@ private fun InitialMethods(
                         null
                     },
                     enabled = !uiState.isLoading,
+                    isLoading = uiState.isLoading && uiState.busyMethod == provider,
                     onClick = { onStartOAuth(provider, oauthScheme) }
                 )
                 Spacer(modifier = Modifier.height(8.dp))
@@ -321,6 +323,7 @@ private fun AccountMethods(
                 text = stringResource(R.string.auth_email_me_a_code),
                 iconVector = Icons.Default.MailOutline,
                 enabled = !uiState.isLoading,
+                isLoading = uiState.isLoading && uiState.busyMethod == "email",
                 onClick = onRequestCode
             )
         } else {
@@ -363,7 +366,7 @@ private fun AccountMethods(
         Spacer(modifier = Modifier.height(16.dp))
         PrimaryButton(
             text = stringResource(R.string.auth_log_in),
-            isLoading = uiState.isLoading,
+            isLoading = uiState.primaryLoading,
             enabled = if (emailActive) {
                 uiState.code.isNotBlank()
             } else {
@@ -385,6 +388,7 @@ private fun AccountMethods(
                 text = stringResource(R.string.auth_use_passkey),
                 iconRes = R.drawable.ic_passkey,
                 enabled = !uiState.isLoading,
+                isLoading = uiState.isLoading && uiState.busyMethod == "passkey",
                 onClick = onBeginPasskey
             )
             if (showOauth) {
@@ -402,6 +406,7 @@ private fun AccountMethods(
                         null
                     },
                     enabled = !uiState.isLoading,
+                    isLoading = uiState.isLoading && uiState.busyMethod == provider,
                     onClick = { onStartOAuth(provider, oauthScheme) }
                 )
                 Spacer(modifier = Modifier.height(8.dp))
@@ -470,7 +475,7 @@ private fun MfaSection(
         Spacer(modifier = Modifier.height(4.dp))
         PrimaryButton(
             text = stringResource(R.string.auth_continue),
-            isLoading = uiState.isLoading,
+            isLoading = uiState.primaryLoading,
             enabled = (!needsEmail || uiState.mfaEmailCode.isNotBlank()) &&
                 (!needsTotp || uiState.mfaTotpCode.length == 6),
             onClick = onComplete
@@ -538,7 +543,7 @@ private fun PrimaryButton(
 
 /**
  * Outlined alternative-method button. Supply exactly one of [iconRes] or
- * [iconVector].
+ * [iconVector]; [isLoading] shows a spinner in the icon's place.
  */
 @Composable
 private fun MethodButton(
@@ -546,7 +551,8 @@ private fun MethodButton(
     enabled: Boolean,
     onClick: () -> Unit,
     iconRes: Int? = null,
-    iconVector: ImageVector? = null
+    iconVector: ImageVector? = null,
+    isLoading: Boolean = false
 ) {
     MochiOutlinedButton(
         onClick = onClick,
@@ -559,6 +565,10 @@ private fun MethodButton(
             verticalAlignment = Alignment.CenterVertically
         ) {
             when {
+                isLoading -> CircularProgressIndicator(
+                    modifier = Modifier.size(20.dp),
+                    strokeWidth = 2.dp
+                )
                 iconRes != null -> Icon(
                     painter = painterResource(iconRes),
                     contentDescription = null,
