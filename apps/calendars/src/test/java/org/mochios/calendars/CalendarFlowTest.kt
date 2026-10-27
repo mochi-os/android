@@ -273,8 +273,45 @@ class CalendarFlowTest {
         assertEquals(today.minusDays(20), day(model.creation()))
         // Another view has no day atop it, and goes on the day last chosen.
         model.listed(today.plusDays(40))
-        model.view(CalendarsSection.MONTH)
+        model.view(CalendarsSection.DAY)
         assertEquals(today.minusDays(20), day(model.creation()))
+    }
+
+    @Test
+    fun `a new event from the toolbar lands on today while the view shows it, whatever day was chosen, as the web's does`() {
+        val model = model()
+        val day = { seconds: Long -> Instant.ofEpochSecond(seconds).atZone(london).toLocalDate() }
+        val today = LocalDate.now(london)
+        // Today's own start may be tomorrow's working hours, late at night.
+        val expected = day(model.creation(today))
+        model.view(CalendarsSection.MONTH)
+        model.today()
+        // A day tapped on the grid yesterday is the chosen one, and today still wins.
+        model.focus(today.minusDays(1))
+        assertEquals(expected, day(model.creation()))
+        model.view(CalendarsSection.WEEK)
+        assertEquals(expected, day(model.creation()))
+        // A view that does not show today goes on the day chosen in it.
+        model.anchor(today.plusWeeks(3))
+        model.focus(today.plusWeeks(3).plusDays(1))
+        assertEquals(today.plusWeeks(3).plusDays(1), day(model.creation()))
+    }
+
+    @Test
+    fun `a view left on today moves on to the new today when the date changes, and one moved elsewhere stays`() {
+        val model = model()
+        val today = LocalDate.now(london)
+        model.view(CalendarsSection.WEEK)
+        model.resume(today.plusDays(1))
+        assertEquals(today.plusDays(1), model.uiState.value.anchor)
+        assertEquals(today.plusDays(1), model.uiState.value.focus)
+        // Paged away, the view stays where it was put.
+        model.anchor(today.minusWeeks(2))
+        model.resume(today.plusDays(2))
+        assertEquals(today.minusWeeks(2), model.uiState.value.anchor)
+        // The same day again reads the range and moves nothing.
+        model.resume(today.plusDays(2))
+        assertEquals(today.minusWeeks(2), model.uiState.value.anchor)
     }
 
     // ---- search, views and refreshing ----

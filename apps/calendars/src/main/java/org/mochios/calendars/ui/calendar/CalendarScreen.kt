@@ -202,7 +202,7 @@ fun CalendarScreen(
     val saver = rememberFileSaveLauncher(Icalendar.TYPE) { uri -> viewModel.save(uri) }
 
     DisposableRefresh(lifecycle) {
-        viewModel.load(reset = false)
+        viewModel.resume()
         viewModel.refresh()
     }
 
@@ -991,18 +991,19 @@ internal fun Toolbar(
                 }
             }
         },
+        // In the web toolbar's order: today, a new event, search, the view.
         actions = {
-            MochiIconButton(onClick = onSearch) {
-                Icon(
-                    Icons.Default.Search,
-                    contentDescription = stringResource(R.string.calendars_list_search),
-                )
-            }
             MochiIconButton(onClick = onToday) {
                 Icon(Icons.Outlined.Today, contentDescription = stringResource(R.string.calendars_today))
             }
             MochiIconButton(onClick = onCreate) {
                 Icon(Icons.Default.Add, contentDescription = stringResource(R.string.calendars_event_new))
+            }
+            MochiIconButton(onClick = onSearch) {
+                Icon(
+                    Icons.Default.Search,
+                    contentDescription = stringResource(R.string.calendars_list_search),
+                )
             }
             Box {
                 MochiIconButton(onClick = { views = true }) {

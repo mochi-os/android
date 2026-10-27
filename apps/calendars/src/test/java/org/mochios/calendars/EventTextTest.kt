@@ -18,7 +18,9 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performImeAction
+import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.unit.dp
 import org.junit.Assert.assertEquals
@@ -145,6 +147,22 @@ class EventTextTest {
         rule.onAllNodes(hasSetTextAction())[0].performImeAction()
         rule.waitForIdle()
         assertEquals(1, saves)
+    }
+
+    @Test
+    fun `the empty description's name sits on its first line, where the cursor is, and goes once anything is typed`() {
+        show()
+        val name = context.getString(R.string.calendars_event_description)
+        val field = rule.onAllNodes(hasSetTextAction())[1]
+        // The field's bounds hold its padding, then two lines; the name is
+        // its own node only in the unmerged tree.
+        val box = field.fetchSemanticsNode().boundsInRoot
+        val shown = rule.onNodeWithText(name, useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        val padding = 12 * context.resources.displayMetrics.density
+        assertEquals(box.top + padding, shown.top, 1f)
+        field.performTextInput("D")
+        rule.waitForIdle()
+        assertEquals(0, rule.onAllNodesWithText(name).fetchSemanticsNodes().size)
     }
 
     @Test
